@@ -56,7 +56,7 @@ graph TB
 Vous pouvez gérer vos **signets de navigateur** avec QOwnNotes ou l'utiliser comme **web clipper**.
 
 ::: tip
-Veuillez visiter [l'extension de navigateur QOwnNotes Web Companion](browser-extension.md) pour plus d'informations.
+The browser extensions works **offline**, no internet connection needed. Please visit [QOwnNotes Web Companion browser extension](browser-extension.md) for more information.
 :::
 
 ## Client de synchronisation de bureau Nextcloud

@@ -56,7 +56,7 @@ graph TB
 U kunt uw **browserbladwijzers** beheren met QOwnNotes of deze gebruiken als **webclipper**.
 
 ::: tip
-Bezoek de [QOwnNotes Web Companion-browserextension](browser-extension.md) voor meer informatie.
+The browser extensions works **offline**, no internet connection needed. Please visit [QOwnNotes Web Companion browser extension](browser-extension.md) for more information.
 :::
 
 ## Nextcloud desktop-synchronisatieclient

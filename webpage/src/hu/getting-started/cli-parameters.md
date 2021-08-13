@@ -12,7 +12,8 @@ Ezeket a paramétereket a parancssori felületen használhatja:
 | `--allow-multiple-instances` | Lehetővé teszi, hogy a QOwnNotes több példányát indítsa, még akkor is, ha a beállításokban nincs engedélyezve                            |
 | `--action <name>`      | Menüműveletet indít el az alkalmazás elindítása után (lásd alább)                                                                        |
 
-::: tip If you run into troubles with your installation of QOwnNotes you may want start the application with fresh settings without losing your current settings by using the `--session` parameter.
+::: tip
+If you run into troubles with your installation of QOwnNotes you may want start the application with fresh settings without losing your current settings by using the `--session` parameter.
 
 ```bash
 QOwnNotes --session test
@@ -37,7 +38,9 @@ Például a Todo lista párbeszédpanel megnyitásához indítás után:
 QOwnNotes --action actionShow_Todo_List
 ```
 
-::: tip A menümű objektumneveit innen szerezheti be [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Csak keresse meg az angol menü címét. Ne feledje, hogy ezek a szövegek idővel változhatnak. :::
+::: tip
+A menümű objektumneveit innen szerezheti be [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Csak keresse meg az angol menü címét. Ne feledje, hogy ezek a szövegek idővel változhatnak.
+:::
 
 A [parancsfájl-műveletek](../scripting/methods-and-objects.md#registering-a-custom-action) elindításához használja a(z) `customAction_` elemet, amelyet az egyéni művelet azonosítója követ. Az egyéni művelet azonosítója a parancsfájl `script.registerCustomAction` hívásának első paramétere.
 
@@ -47,4 +50,6 @@ Például a `myAction` egyéni művelet futtatásához indítsa el a következő
 QOwnNotes --action customAction_myAction
 ```
 
-::: tip Ha másodszor futtatja a QOwnNotes műveleti paramétert, és csak egy alkalmazáspéldányt engedélyezett, akkor a menüművelet első lépésben aktiválódik. :::
+::: tip
+Ha másodszor futtatja a QOwnNotes műveleti paramétert, és csak egy alkalmazáspéldányt engedélyezett, akkor a menüművelet első lépésben aktiválódik.
+:::

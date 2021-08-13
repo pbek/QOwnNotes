@@ -55,15 +55,19 @@ graph TB
 
 Kezelheti a **böngésző könyvjelzőit** a QOwnNotes szolgáltatással, vagy használhatja **webleíró eszközként**.
 
-::: tip További információkért keresse fel a [QOwnNotes Web Companion böngészőbővítményt](browser-extension.md). :::
+::: tip
+The browser extensions works **offline**, no internet connection needed. Please visit [QOwnNotes Web Companion browser extension](browser-extension.md) for more information.
+:::
 
 ## Nextcloud asztali szinkronizáló kliens
 
 **A jegyzetek szinkronizálása** más eszközökkel (asztali és mobil) a [Nextcloud](https://nextcloud.com/) vagy a [ownCloud](https://owncloud.org/) szinkronizálási klienssel a szerverhez.
 
-::: tip Természetesen más megoldások, például a **Dropbox**, a **szinkronizálás**, a **Seafile** vagy a BitTorrent Sync is használhatók a jegyzetek és más fájlok szinkronizálására.
+::: tip
+Természetesen más megoldások, például a **Dropbox**, a **szinkronizálás**, a **Seafile** vagy a BitTorrent Sync is használhatók a jegyzetek és más fájlok szinkronizálására.
 
-A **git** használatával szinkronizálhat olyan eszközökkel is, mint a [gitomatic](https://github.com/muesli/gitomatic/). :::
+A **git** használatával szinkronizálhat olyan eszközökkel is, mint a [gitomatic](https://github.com/muesli/gitomatic/).
+:::
 
 ## Nextcloud szerver
 
@@ -75,19 +79,25 @@ Van egy [közösség által karbantartott Nextcloud szolgáltatók listája](htt
 
 [A Portknox](https://portknox.net) jelentése szerint [a QOwnNotesAPI telepítve van](https://portknox.net/en/app_listing).
 
-::: tip Természetesen más megoldások, például a **Dropbox**, a **szinkronizálás**, a **Seafile** vagy a BitTorrent Sync is használhatók a jegyzetek és más fájlok tárolására. :::
+::: tip
+Természetesen más megoldások, például a **Dropbox**, a **szinkronizálás**, a **Seafile** vagy a BitTorrent Sync is használhatók a jegyzetek és más fájlok tárolására.
+:::
 
 ## QOwnNotesAPI Nextcloud app
 
 A [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) segítségével hozzáférhet a kiszolgálóoldali **kukába helyezett jegyzetek** és **jegyzetek verzióihoz**.
 
-::: tip További információkért keresse fel a [QOwnNotesAPI Nextcloud alkalmazást](qownnotesapi.md). :::
+::: tip
+További információkért keresse fel a [QOwnNotesAPI Nextcloud alkalmazást](qownnotesapi.md).
+:::
 
 ## Nextcloud Notes szerver alkalmazás
 
 A [**Nextcloud Notes**](https://github.com/nextcloud/notes) használatával szerkesztheti a jegyzeteit az **interneten**.
 
-::: warning Ne feledje, hogy a Nextcloud Notes jelenleg csak egy szintű almappákat támogat. :::
+::: warning
+Ne feledje, hogy a Nextcloud Notes jelenleg csak egy szintű almappákat támogat.
+:::
 
 ## Nextcloud Notes mobilalkalmazás
 
@@ -97,7 +107,8 @@ Különböző alkalmazásokat használhat a Nextcloud / ownCloud jegyzetek elér
 
 - [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (harmadik fél)
 
-Használhat bármilyen szinkronizáló eszközt is, például a *Ultimate Synchronize* vagy a *FolderSync* eszközt a jegyzetfájlok szinkronizálásához, és a jegyzetek szerkesztéséhez használhat olyan szoftvereket, mint a *neutriNotes*. :::
+Használhat bármilyen szinkronizáló eszközt is, például a *Ultimate Synchronize* vagy a *FolderSync* eszközt a jegyzetfájlok szinkronizálásához, és a jegyzetek szerkesztéséhez használhat olyan szoftvereket, mint a *neutriNotes*.
+:::
 
 ### iOS
 
@@ -113,10 +124,14 @@ Beszél a GitHub-tal, és megvizsgálja a legújabb kiadást, beszerez egy megfe
 
 Ezenkívül biztosítja a [RSS-kiadás kiadását](http://api.qownnotes.org/rss/app-releases) és a QOwnNotes régebbi verzióinak örökölt frissítési ellenőrző api megvalósítását is.
 
-::: tip Az [api.qownnotes.org](https://api.qownnotes.org) forráskódját a [GitHub](https://github.com/qownnotes/api) oldalon érheti el. :::
+::: tip
+Az [api.qownnotes.org](https://api.qownnotes.org) forráskódját a [GitHub](https://github.com/qownnotes/api) oldalon érheti el.
+:::
 
 ## QOwnNotes webalkalmazás
 
 A mobiltelefonról származó fotókat beillesztheti az asztali QOwnNotes aktuális jegyzetébe az **webalkalmazás** segítségével az [app.qownnotes.org](https://app.qownnotes.org/) oldalon.
 
-::: tip További információkért keresse fel a [QOwnNotes webalkalmazást](web-app.md). :::
+::: tip
+További információkért keresse fel a [QOwnNotes webalkalmazást](web-app.md).
+:::

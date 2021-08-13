@@ -11,7 +11,7 @@ Besuchen Sie den [Chrome Web Store](https://chrome.google.com/webstore/detail/qo
 Sie finden die Erweiterung auch unter [GitHub](https://github.com/qownnotes/web-companion/).
 
 ::: tip Info
-QOwnNotes muss ausgeführt werden, damit die Web Companion-Browsererweiterung funktioniert.
+QOwnNotes muss ausgeführt werden, damit die Web Companion-Browsererweiterung funktioniert. The browser extensions works **offline**, no internet connection needed.
 :::
 
 ## Web clipper
@@ -24,14 +24,16 @@ Der Web Clipper ist auch skriptfähig! Schauen Sie sich den [websocketRawDataHoo
 
 ## Lesezeichen
 
-Standardmäßig zeigt die Browsererweiterung alle **Links der aktuellen Notiz** in einem Popup an, wenn Sie in Ihrem Browser auf das QOwnNotes-Symbol klicken. Diese Links erhalten einen `current` Tag.
+If you want full control over your browser bookmarks and **use them across different browsers and operating systems** then the QOwnNotes browser extension is for you.
 
-Sie können **Ihre Lesezeichen auch in Notizen** mit dem Notiz-Tag `Lesezeichen` verwalten (in den Einstellungen änderbar). Diese Links können auch Tags und eine Beschreibung enthalten, die in der Browsererweiterung angezeigt wird.
+By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
 
-Neue Lesezeichen werden in einer Notiz namens `Lesezeichen` gespeichert (in den Einstellungen änderbar).
+You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
+
+New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
 
 ::: tip
-Sie können Ihre Browser-Lesezeichen auch mit der Web-Companion-Browser-Erweiterung in QOwnNotes importieren!
+You can also import your browser bookmarks into QOwnNotes with the web companion browser extension!
 :::
 
 ### Syntax von Lesezeichen-Links
@@ -44,4 +46,4 @@ Sie können Ihre Browser-Lesezeichen auch mit der Web-Companion-Browser-Erweiter
 * [Name der Webseite] (https://www.example.com) das alternative Listenzeichen funktioniert ebenfalls
 ```
 
-Sie können in der Browsererweiterung nach Namen, URL-Tags oder Beschreibungen suchen.
+You are able to search for name, url tags or description in the browser extension.

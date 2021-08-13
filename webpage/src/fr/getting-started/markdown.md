@@ -179,19 +179,21 @@ Il y a aussi une coloration syntaxique avec des blocs de code dans QOwnNotes.
 ``` bash
 # Je suis un commentaire
 cd Notes
+```
 ~~~
-~~~
-Les langues actuellement prises en charge (et les identificateurs de bloc de code) sont:
-* Script BASh, `bash`
+
+Currently supported languages (and code block identifiers) are:
+
+* BASh scripting, `bash`
 * C, `c`
-* C ++, `cpp`
-* C ++, `cxx`
-* C ++, `c ++`
-* C #, `c #`
+* C++, `cpp`
+* C++, `cxx`
+* C++, `c++`
+* C#, `c#`
 * CMake, `cmake`
-* C #, `csharp`
+* C#, `csharp`
 * CSS, `css`
-* Allez, allez
+* Go, `go`
 * HTML, `html`
 * INI, `ini`
 * Java, `java`
@@ -203,8 +205,8 @@ Les langues actuellement prises en charge (et les identificateurs de bloc de cod
 * Python, `py`
 * Python, `python`
 * QML, `qml`
-* Rouille, `rouille`
-* Scripting shell, `sh`
+* Rust, `rust`
+* Shell scripting, `sh`
 * SQL, `sql`
 * TypeScript, `ts`
 * TypeScript, `typescript`
@@ -214,10 +216,9 @@ Les langues actuellement prises en charge (et les identificateurs de bloc de cod
 * YAML, `yml`
 * YAML, `yaml`
 
+## Tables
 
-## Les tables
-
-Les tableaux ne font pas partie de la spécification Markdown principale, mais l'aperçu de QOwnNotes les prend en charge. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
 ``` démarque
 Les deux points peuvent être utilisés pour aligner les colonnes.

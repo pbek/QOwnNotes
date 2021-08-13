@@ -56,7 +56,7 @@ graph TB
 Sie können Ihre **Browser-Lesezeichen** mit QOwnNotes verwalten oder als **Webclipper** verwenden.
 
 ::: tip
-Weitere Informationen finden Sie unter [QOwnNotes Web Companion-Browsererweiterung](browser-extension.md).
+The browser extensions works **offline**, no internet connection needed. Please visit [QOwnNotes Web Companion browser extension](browser-extension.md) for more information.
 :::
 
 ## Nextcloud Desktop Sync Client

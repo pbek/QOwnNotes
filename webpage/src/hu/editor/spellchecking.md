@@ -2,7 +2,9 @@
 
 Javítsa ki a helyesírási hibákat!
 
-::: tip Info A QOwnNotes beépített **szótárkezelővel** található (a *Szerkesztés* menüben), amely képes szótárakat tölthet le vagy törölhet (ha hiányzik a nyelve, olvassa el alább, hogyan kérheti szótár hozzáadását). Ha manuálisan szeretné letölteni a szótárakat, kövesse az alábbi utasításokat. :::
+::: tip Info
+A QOwnNotes beépített **szótárkezelővel** található (a *Szerkesztés* menüben), amely képes szótárakat tölthet le vagy törölhet (ha hiányzik a nyelve, olvassa el alább, hogyan kérheti szótár hozzáadását). Ha manuálisan szeretné letölteni a szótárakat, kövesse az alábbi utasításokat.
+:::
 
 - A **Linux** alatt telepítheti a nyelvéhez tartozó Hunspell szótárakat a disztribútor pkg kezelőjével.
     - Ha további nyelvi fájlokat kell hozzáadnia, megteheti a `~/.local/share/hunspell` or `/usr/share/hunspell` fájlban.
@@ -16,7 +18,9 @@ A szótárak letölthetők a [QOwnNotes szótárakból](https://github.com/qownn
 
 Ha az Ön nyelvéhez tartozó szótár nincs a **Szótárkezelőben** vagy a fent említett linken, kérjük, keresse meg az interneten, vagy hozzon létre egy problémát. Ha megtaláljuk a szótárt, biztosan felvesszük a QOwnNotes következő kiadásába.
 
-::: tip Info Ha nem találja a nyelvét ebben a táblázatban, akkor sajnos nem létezik szótár a LibreOffice fájlokban - Ha szótárat szeretne létrehozni, lépjen a [Documentfoundation.org szótárak fejlesztése](https://wiki.documentfoundation.org/Development/Dictionaries) oldalra :::
+::: tip Info
+Ha nem találja a nyelvét ebben a táblázatban, akkor sajnos nem létezik szótár a LibreOffice fájlokban - Ha szótárat szeretne létrehozni, lépjen a [Documentfoundation.org szótárak fejlesztése](https://wiki.documentfoundation.org/Development/Dictionaries) oldalra
+:::
 
 | Sr | Nyelvi kód | Nyelv                                  |
 | -- | ---------- | -------------------------------------- |
@@ -73,4 +77,5 @@ Ha az Ön nyelvéhez tartozó szótár nincs a **Szótárkezelőben** vagy a fen
 | 52 | vi         | Vietnámi                               |
 | 53 | zu_ZA      | Zulu (helyesírási szótár nem elérhető) |
 
-::: tip Credits [Szonett](https://github.com/KDE/sonnet) [Hunspell](https://hunspell.github.io/)-lel a helyesírás-ellenőrzéshez
+::: tip
+Credits [Szonett](https://github.com/KDE/sonnet) [Hunspell](https://hunspell.github.io/)-lel a helyesírás-ellenőrzéshez

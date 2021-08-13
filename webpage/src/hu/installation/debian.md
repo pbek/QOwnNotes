@@ -16,7 +16,9 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-::: tip Ha ezt az adattárat más Debian Linux verziókhoz használja, ellenőrizze, hogy **Qt** telepítve van-e legalább az **5.8 verzióra**. :::
+::: tip
+Ha ezt az adattárat más Debian Linux verziókhoz használja, ellenőrizze, hogy **Qt** telepítve van-e legalább az **5.8 verzióra**.
+:::
 
 [Közvetlen letöltés](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Debian_10)
 
@@ -36,7 +38,9 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-::: tip Ha ezt az adattárat más Debian Linux verziókhoz használja, győződjön meg arról, hogy **Qt** telepítve van-e legalább az **5.5 verzióra**. :::
+::: tip
+Ha ezt az adattárat más Debian Linux verziókhoz használja, győződjön meg arról, hogy **Qt** telepítve van-e legalább az **5.5 verzióra**.
+:::
 
 [Közvetlen letöltés](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Debian_9.0)
 
@@ -56,6 +60,8 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-::: tip Ha ezt az adattárat más Debian Linux verziókhoz használja, ellenőrizze, hogy **Qt** telepítve van-e legalább az **5.3 verzióra**. :::
+::: tip
+Ha ezt az adattárat más Debian Linux verziókhoz használja, ellenőrizze, hogy **Qt** telepítve van-e legalább az **5.3 verzióra**.
+:::
 
 [Közvetlen letöltés](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Debian_8.0)

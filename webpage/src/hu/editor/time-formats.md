@@ -45,6 +45,10 @@ Használhatja saját időformátumát, amikor az aktuális időt beszúrja egy j
 | `hh:mm:ss.zzz`     | 14:13:09.042     |
 | `h:m:s ap`         | 2:13:9 pm        |
 
-::: tip Info Tekintse meg a [Qt dokumentációt](http://doc.qt.io/qt-5/qdatetime.html#toString) az időformátumokról. :::
+::: tip Info
+Tekintse meg a [Qt dokumentációt](http://doc.qt.io/qt-5/qdatetime.html#toString) az időformátumokról.
+:::
 
-::: tip Ha bonyolultabb műveleteket kell végrehajtania az aktuális idő kimenetéhez, fontolja meg egy [egyéni művelet](../scripting/methods-and-objects.md#registering-a-custom-action) létrehozását. :::
+::: tip
+Ha bonyolultabb műveleteket kell végrehajtania az aktuális idő kimenetéhez, fontolja meg egy [egyéni művelet](../scripting/methods-and-objects.md#registering-a-custom-action) létrehozását.
+:::

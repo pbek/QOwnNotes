@@ -141,7 +141,8 @@
 
 A [QOwnNotes](https://www.qownnotes.org/) a **nyílt forráskódú** (GPL) sima szövegű fájl **macOS** és **Windows**, amelyek (opcionálisan) együtt működnek a [Nextcloud](https://nextcloud.com/) és az [ownCloud](https://owncloud.org/) [**Notes alkalmazással**](https://github.com/nextcloud/notes).
 
-Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, tanulás és egymással kapcsolatba lépésünk érdekében a QOwnNotes közösséggel. :::
+Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, tanulás és egymással kapcsolatba lépésünk érdekében a QOwnNotes közösséggel.
+:::
 
 [Értse meg a QOwnNotes fogalmát](concept.md)
 

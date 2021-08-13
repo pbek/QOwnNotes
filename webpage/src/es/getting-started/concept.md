@@ -56,7 +56,7 @@ graph TB
 Puede administrar los **marcadores de su navegador** con QOwnNotes o usarlo como **web clipper**.
 
 ::: tip
-Por favor, visita [la extensión para navegadores QOwnNotes Web Companion](browser-extension.md) para más información.
+The browser extensions works **offline**, no internet connection needed. Please visit [QOwnNotes Web Companion browser extension](browser-extension.md) for more information.
 :::
 
 ## Cliente de sincronización de escritorio de Nextcloud

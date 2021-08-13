@@ -181,9 +181,11 @@ http://www.example.com or <http://www.example.com>
 ```بش
 # یک توضیح هستم
 cd Notes
+```
 ~~~
-~~~
-زبان های پشتیبانی شده (و شناسه های کد بلاک) فعلی عبارتند از:
+
+Currently supported languages (and code block identifiers) are:
+
 * BASh scripting, `bash`
 * C, `c`
 * C++, `cpp`
@@ -216,10 +218,9 @@ cd Notes
 * YAML, `yml`
 * YAML, `yaml`
 
+## Tables
 
-## جداول
-
-جداول بخشی از مشخصات مارک داون اصلی نیستند اما پیش نمایش QOwnNotes آنها را پشتیبانی می کند. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
 ```مارک داون
 علامت دو نقطه می تواند برای تراز کردن ستون ها بکار رود.

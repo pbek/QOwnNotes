@@ -5,14 +5,18 @@
 
 A [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) képes kezelni az **hozzáférést** az **kukába helyezett jegyzetekhez** és az **jegyzetek verzióihoz**.
 
-::: tip A QOwnNotesAPI-t közvetlenül engedélyezheti a **Nextcloud** vagy a **ownCloud** példányban, ha a szerver **Apps page** `https://<your-cloud-domain>/settings/apps`.
+::: tip
+A QOwnNotesAPI-t közvetlenül engedélyezheti a **Nextcloud** vagy a **ownCloud** példányban, ha a szerver **Apps page** `https://<your-cloud-domain>/settings/apps`.
 
 - [Nextcloud Apps page](https://apps.nextcloud.com/apps/qownnotesapi)
-- [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi) :::
+- [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
+:::
 
 A jegyzetmegosztás a Nextcloud / ownCloud által biztosított API-n keresztül történik. A feladatokhoz közvetlenül a CalDAV-on keresztül férhet hozzá.
 
-::: tip Használja a **Nextcloud** / **ownCloud** **szinkronizáló klienst** a jegyzetek **szinkronizálásához**, a jegyzetek egyszerű jelölőfájlok. Nem szükséges kétszer feltalálni a kereket. És vannak olyan emberek is, akik különböző szolgáltatásokat használnak a jegyzetfájlok szinkronizálására (például Dropbox, Syncthing vagy Resilio Sync). :::
+::: tip
+Használja a **Nextcloud** / **ownCloud** **szinkronizáló klienst** a jegyzetek **szinkronizálásához**, a jegyzetek egyszerű jelölőfájlok. Nem szükséges kétszer feltalálni a kereket. És vannak olyan emberek is, akik különböző szolgáltatásokat használnak a jegyzetfájlok szinkronizálására (például Dropbox, Syncthing vagy Resilio Sync).
+:::
 
 ## Mit tesz a QOwnNotesAPI
 

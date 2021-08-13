@@ -21,11 +21,15 @@ Then install QOwnNotes with it:
 opi qownnotes
 ```
 
-::: warning Ez az eszköz lekérdezi a teljes OBS szolgáltatást, ezért feltétlenül válassza a `qownnotes` lehetőséget, és ne a `qownnotes-lang` lehetőséget.
+::: warning
+Ez az eszköz lekérdezi a teljes OBS szolgáltatást, ezért feltétlenül válassza a `qownnotes` lehetőséget, és ne a `qownnotes-lang` lehetőséget.
 
-Ellenőrizze azt is, hogy a kiválasztott repo a hivatalos `home:pbek:QOwnNotes` és nem harmadik féltől származik-e. :::
+Ellenőrizze azt is, hogy a kiválasztott repo a hivatalos `home:pbek:QOwnNotes` és nem harmadik féltől származik-e.
+:::
 
-::: tip A frissítések megszerzéséhez ki kell választania a tároló telepítés utáni megőrzését. :::
+::: tip
+A frissítések megszerzéséhez ki kell választania a tároló telepítés utáni megőrzését.
+:::
 
 ## openSUSE 13.2
 

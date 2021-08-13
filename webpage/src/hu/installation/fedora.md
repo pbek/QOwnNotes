@@ -13,7 +13,8 @@ dnf makecache
 dnf install qownnotes
 ```
 
-::: tip Előfordulhat, hogy el kell fogadnia a repo kulcsot, mielőtt letölthet róla.
+::: tip
+Előfordulhat, hogy el kell fogadnia a repo kulcsot, mielőtt letölthet róla.
 
 Ha problémái vannak, akkor a kulcsot maga importálja:
 

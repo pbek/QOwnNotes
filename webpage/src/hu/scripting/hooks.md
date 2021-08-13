@@ -275,7 +275,9 @@ Megvalósíthatja saját jegyzetcímkézési mechanizmusát, például a jegyzet
 
 Érdemes megnézni a példát [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml) saját címkézési mechanizmusának megvalósításához.
 
-::: warning Győződjön meg arról, hogy a ` list ` művelete valóban gyors, mert minden jegyzetnél végrehajtásra kerül, minden alkalommal, amikor a jegyzetmappa újratöltésre kerül! :::
+::: warning
+Győződjön meg arról, hogy a ` list ` művelete valóban gyors, mert minden jegyzetnél végrehajtásra kerül, minden alkalommal, amikor a jegyzetmappa újratöltésre kerül!
+:::
 
 noteTaggingByObjectHook
 ----------------------

@@ -11,7 +11,7 @@ Visita il [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes
 Puoi trovare l'estensione anche su [GitHub](https://github.com/qownnotes/web-companion/).
 
 ::: tip Info
-QOwnNotes deve essere in esecuzione affinché l'estensione del browser Web Companion funzioni.
+QOwnNotes deve essere in esecuzione affinché l'estensione del browser Web Companion funzioni. The browser extensions works **offline**, no internet connection needed.
 :::
 
 ## Web clipper
@@ -24,14 +24,16 @@ Il web clipper è anche scriptabile! Dai un'occhiata a [websocketRawDataHook](..
 
 ## Segnalibri
 
-Per impostazione predefinita, l'estensione del browser mostrerà tutti i **collegamenti della nota corrente** in un popup quando fai clic sull'icona QOwnNotes nel tuo browser. Questi collegamenti avranno l'etichetta `corrente`.
+If you want full control over your browser bookmarks and **use them across different browsers and operating systems** then the QOwnNotes browser extension is for you.
 
-Puoi anche **gestire i tuoi segnalibri nelle note** con l'etichetta `segnalibri` (modificabile nelle impostazioni). Questi collegamenti possono anche avere etichette e una descrizione che verrà mostrata nell'estensione del browser.
+By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
 
-I nuovi segnalibri vengono memorizzati in una nota chiamata `Segnalibri` (anch'essa modificabile nelle impostazioni).
+You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
+
+New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
 
 ::: tip
-Puoi anche importare i segnalibri del tuo browser in QOwnNotes con l'estensione browser web companion!
+You can also import your browser bookmarks into QOwnNotes with the web companion browser extension!
 :::
 
 ### Sintassi dei collegamenti segnalibri
@@ -44,4 +46,4 @@ Puoi anche importare i segnalibri del tuo browser in QOwnNotes con l'estensione 
 * [Nome pagina web](https://www.example.com) funziona anche il carattere lista alternativo
 ```
 
-Puoi cercare nome, etichetta URL o descrizione nell'estensione del browser.
+You are able to search for name, url tags or description in the browser extension.

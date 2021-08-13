@@ -11,7 +11,7 @@ Visite [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-we
 También puede encontrar la extensión en [GitHub](https://github.com/qownnotes/web-companion/).
 
 ::: tip Info
-QOwnNotes debe estar ejecutándose para que funcione la extensión del navegador Web Companion.
+QOwnNotes debe estar ejecutándose para que funcione la extensión del navegador Web Companion. The browser extensions works **offline**, no internet connection needed.
 :::
 
 ## Cortadora web
@@ -24,14 +24,16 @@ Haga clic con el botón derecho en una página web o en el texto seleccionado pa
 
 ## Marcadores
 
-De forma predeterminada, la extensión del navegador mostrará todos los enlaces ** de la nota actual** en una ventana emergente cuando haga clic en el icono QOwnNotes en su navegador. Estos enlaces obtendrán una etiqueta `current`.
+If you want full control over your browser bookmarks and **use them across different browsers and operating systems** then the QOwnNotes browser extension is for you.
 
-También puede **administrar sus marcadores en notas** con la etiqueta de nota `marcadores` (modificable en la configuración). Estos enlaces también pueden tener etiquetas y una descripción que se mostrará en la extensión del navegador.
+By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
 
-Los nuevos marcadores se almacenan en una nota llamada `Marcadore` (también modificable en la configuración).
+You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
+
+New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
 
 ::: tip
-¡También puede importar los marcadores de su navegador a QOwnNotes con la extensión del navegador web complementario!
+You can also import your browser bookmarks into QOwnNotes with the web companion browser extension!
 :::
 
 ### Sintaxis de los enlaces de marcadores
@@ -44,4 +46,4 @@ Los nuevos marcadores se almacenan en una nota llamada `Marcadore` (también mod
 * [Nombre de la página web] (https://www.example.com) el carácter de lista alternativo también funciona
 ```
 
-Puede buscar nombre, etiquetas de URL o descripción en la extensión del navegador.
+You are able to search for name, url tags or description in the browser extension.

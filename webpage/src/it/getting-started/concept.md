@@ -56,7 +56,7 @@ graph TB
 Puoi gestire i **segnalibri del tuo browser** con QOwnNotes o usarlo come **web clipper**.
 
 ::: tip
-Per ulteriori informazioni, visita l'[estensione del browser QOwnNotes Web Companion](browser-extension.md).
+The browser extensions works **offline**, no internet connection needed. Please visit [QOwnNotes Web Companion browser extension](browser-extension.md) for more information.
 :::
 
 ## Client di sincronizzazione desktop Nextcloud

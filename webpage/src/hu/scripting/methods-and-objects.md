@@ -48,7 +48,9 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
 
 Érdemes egy pillantást vetni az [onDetachedProcessCallback](hooks.html#ondetachedprocesscallback) kampóra is.
 
-::: tip Helyi és globális parancsikonokat is rendelhet az egyéni műveletekhez a *Shortcuts settings* részben. :::
+::: tip
+Helyi és globális parancsikonokat is rendelhet az egyéni műveletekhez a *Shortcuts settings* részben.
+:::
 
 Indítson egy külső programot, és várja meg a kimenetet
 ----------------------------------------------------
@@ -266,7 +268,9 @@ script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "/usr
 
 Ezután érdemes használni az azonosítót a function funkcióval `customActionInvoked` egy hasonló szkriptben [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-::: tip Egyéni műveletet is kiválthat az alkalmazás indítása után a(z) `--action customAction_<identifier>` paraméterrel. További információért tekintse meg a(z) [Indítás utáni menüműveletek](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup)et. :::
+::: tip
+Egyéni műveletet is kiválthat az alkalmazás indítása után a(z) `--action customAction_<identifier>` paraméterrel. További információért tekintse meg a(z) [Indítás utáni menüműveletek](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup)et.
+:::
 
 Címke regisztrálása
 -------------------
@@ -340,7 +344,8 @@ script.createNote("My note headline\n===\n\nMy text");
 
 Érdemes megnéznie a [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) példát.
 
-::: tipp Ha kikapcsolta, hogy a jegyzet címsora határozza meg a jegyzet fájlnevét, akkor utána magának kell átneveznie a jegyzetfájlt, így:
+::: tip
+Ha kikapcsolta, hogy a jegyzet címsora határozza meg a jegyzet fájlnevét, akkor utána magának kell átneveznie a jegyzetfájlt, így:
 
 ```js
 var note = script.currentNote();
@@ -720,7 +725,9 @@ script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
 
 Az objektumneveket például a `*.ui` fájlokból szerezheti be [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
 
-::: tip The [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) of [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle) might also be a good reference for styles you can change. :::
+::: tip
+The [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) of [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle) might also be a good reference for styles you can change.
+:::
 
 Tekintse meg a [Stíluslap referencia](http://doc.qt.io/qt-5/stylesheet-reference.html) t, hogy megtudja, milyen stílusok állnak rendelkezésre.
 
@@ -881,7 +888,9 @@ script.jumpToNoteSubFolder("a sub folder");
 script.jumpToNoteSubFolder("a sub folder/sub");
 ```
 
-::: tip Új jegyzetmappát hozhat létre az aktuális almappában a [`mainWindow.createNewNoteSubFolder`](classes.html#example-2) hívásával. :::
+::: tip
+Új jegyzetmappát hozhat létre az aktuális almappában a [`mainWindow.createNewNoteSubFolder`](classes.html#example-2) hívásával.
+:::
 
 Információs üzenetdoboz megjelenítése
 ----------------------------------
@@ -1336,7 +1345,9 @@ script.triggerMenuAction("actionAllow_note_editing", 1);
 
 Érdemes megnézni a példát [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
 
-::: tip A menümű objektumneveit innen szerezheti be [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Csak keresse meg az angol menü címét. Ne feledje, hogy ezek a szövegek idővel változhatnak. :::
+::: tip
+A menümű objektumneveit innen szerezheti be [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Csak keresse meg az angol menü címét. Ne feledje, hogy ezek a szövegek idővel változhatnak.
+:::
 
 Beviteli párbeszédpanel megnyitása egy kiválasztott mezővel
 -----------------------------------------

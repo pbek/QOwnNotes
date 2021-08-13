@@ -179,9 +179,11 @@ Es gibt auch einige Syntaxhervorhebungen mit Codeblöcken in QOwnNotes.
 ```bash
 # Ich bin ein Kommentar
 cd Notes
+```
 ~~~
-~~~
-Derzeit unterstützte Sprachen (und Codeblock-IDs) sind:
+
+Currently supported languages (and code block identifiers) are:
+
 * BASh scripting, `bash`
 * C, `c`
 * C++, `cpp`
@@ -214,9 +216,9 @@ Derzeit unterstützte Sprachen (und Codeblock-IDs) sind:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tabellen
+## Tables
 
-Tabellen sind nicht Teil der Kern-Markdown-Spezifikation, aber die QOwnNotes-Vorschau unterstützt sie. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
 ```markdown
 Doppelpunkte können zum Ausrichten von Spalten verwendet werden.

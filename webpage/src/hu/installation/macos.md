@@ -4,7 +4,9 @@ Töltse le a legújabb **macOS lemezképet** a [QOwnNotes Releases on GitHub web
 
 Amikor először kattintson a jobb egérgombbal az alkalmazásra, és kattintson a **Megnyitás** gombra a QOwnNotes megnyitásához.
 
-::: warning Ha hibaüzenetet kap, a `QOwnNotes.app nem nyitható meg, mert a fejlesztőt nem lehet ellenőrizni` meg kell látogatnia a macOS **biztonsági beállításait** és kattintson a `Megnyitás mindenképp`. :::
+::: warning
+Ha hibaüzenetet kap, a `QOwnNotes.app nem nyitható meg, mert a fejlesztőt nem lehet ellenőrizni` meg kell látogatnia a macOS **biztonsági beállításait** és kattintson a `Megnyitás mindenképp`.
+:::
 
 ## Homebrew
 
