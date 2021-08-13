@@ -190,7 +190,9 @@ There also is some syntax highlighting with code blocks in QOwnNotes.
 cd Notes
 ```
 ~~~
+
 Currently supported languages (and code block identifiers) are:
+
 * BASh scripting, `bash`
 * C, `c`
 * C++, `cpp`
@@ -222,7 +224,6 @@ Currently supported languages (and code block identifiers) are:
 * XML, `xml`
 * YAML, `yml`
 * YAML, `yaml`
-
 
 ## Tables
 
