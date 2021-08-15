@@ -182,7 +182,7 @@ cd Notes
 ```
 ~~~
 
-Currently supported languages (and code block identifiers) are:
+A jelenleg támogatott nyelvek (és kódblokk-azonosítók) a következők:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -216,9 +216,9 @@ Currently supported languages (and code block identifiers) are:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tables
+## Táblázatok
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+A táblázatok nem részei a Markdown alapvető specifikációinak, de a QOwnNotes előnézet támogatja őket. 
 
 ```markdown
 A kettőspontok használhatók az oszlopok igazítására.

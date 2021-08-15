@@ -182,7 +182,7 @@ cd Notes
 ```
 ~~~
 
-Currently supported languages (and code block identifiers) are:
+I linguaggi supportati al momento (e i loro identificativi di blocco) sono:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -216,9 +216,9 @@ Currently supported languages (and code block identifiers) are:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tables
+## Tabelle
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+Le tabelle non sono parte della specifica Markdown originale, ma l'anteprima QOwnNotes le supporta. 
 
 ```markdown
 I due punti possono essere utilizzati per allineare le colonne.
