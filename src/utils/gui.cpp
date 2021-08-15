@@ -628,6 +628,10 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
              maxTextLength = std::max((int)text.count(), maxTextLength);
          }
 
+         // a minimum of 3 headline separator characters are needed for
+         // valid Markdown tables
+         maxTextLength = std::max(3, maxTextLength);
+
          colLength << maxTextLength;
      }
 

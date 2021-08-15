@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.8.5
+- a minimum of 3 headline separator characters are now used to produce valid
+  Markdown tables when pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd> in a table
+  (for [#2206](https://github.com/pbek/QOwnNotes/issues/2206))
+
 ## 21.8.4
 - in Markdown tables you now can also automatically shrink the headline
   separator columns if needed when pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd>
