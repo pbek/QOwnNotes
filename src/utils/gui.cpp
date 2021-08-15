@@ -610,6 +610,11 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
      // for every column, store maximum column length
      for (int col = 1; col < maxColumns; col++) {
          int maxTextLength = 0;
+
+         // a minimum of 3 headline separator characters are needed for
+         // valid Markdown tables
+         int minTextLength = 3;
+
          for (int line = 0; line < lineCount; line++) {
              const QStringList &lineTextList = tableTextList.at(line);
 
@@ -619,18 +624,23 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
 
              const QString &text = lineTextList.at(col).trimmed();
 
-             // don't count the headline separator line, so it can shrink
-             // down to 3 characters if needed
+             // check for columns in the headline separator line
              if (line == 1 && headlineSeparatorRegExp.match(text).hasMatch()) {
+                 // if there are alignment characters in the headline separator
+                 // column we need to add those to the minimum amount of
+                 // characters needed for a valid Markdown table column
+                 minTextLength += text.count(QChar(':'));
+
+                 // don't count the headline separator line to maxTextLength,
+                 // so it can shrink down to 3 characters if needed
                  continue;
              }
 
              maxTextLength = std::max((int)text.count(), maxTextLength);
          }
 
-         // a minimum of 3 headline separator characters are needed for
-         // valid Markdown tables
-         maxTextLength = std::max(3, maxTextLength);
+         // we want to enforce a minimum amount of characters in a column
+         maxTextLength = std::max(minTextLength, maxTextLength);
 
          colLength << maxTextLength;
      }

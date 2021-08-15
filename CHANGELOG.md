@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 21.8.6
+- alignment characters in the headline separator line of a Markdown table are now
+  not counted anymore to the minimum of 3 headline separator characters that are needed
+  to produce a valid Markdown table when pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd>
+  in a table (for [#2206](https://github.com/pbek/QOwnNotes/issues/2206))
+
 ## 21.8.5
 - a minimum of 3 headline separator characters are now used to produce valid
   Markdown tables when pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd> in a table
