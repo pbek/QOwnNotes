@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.8.4
+- in Markdown tables you now can also automatically shrink the headline
+  separator columns if needed when pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd>
+  (for [#2206](https://github.com/pbek/QOwnNotes/issues/2206))
+
 ## 21.8.3
 - UTF-8 problems on Windows with the Joplin note import were fixed
   (for [#2200](https://github.com/pbek/QOwnNotes/issues/2200))

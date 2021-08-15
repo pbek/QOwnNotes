@@ -618,6 +618,13 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
              }
 
              const QString &text = lineTextList.at(col).trimmed();
+
+             // don't count the headline separator line, so it can shrink
+             // down to 3 characters if needed
+             if (line == 1 && headlineSeparatorRegExp.match(text).hasMatch()) {
+                 continue;
+             }
+
              maxTextLength = std::max((int)text.count(), maxTextLength);
          }
 
