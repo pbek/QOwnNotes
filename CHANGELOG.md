@@ -5,6 +5,7 @@
 - fall back to just counting a minimum of 3 headline separator characters in a Markdown
   table when pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd>, because it looks more beautiful
   and no converters seem to have issues with it (for [#2206](https://github.com/pbek/QOwnNotes/issues/2206))
+- added more Polish, Hungarian, Dutch translation (thank you manuelasmiley, rawfreeamy)
 
 ## 21.8.6
 - alignment characters in the headline separator line of a Markdown table are now

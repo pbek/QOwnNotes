@@ -878,12 +878,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>Gebruik FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished">Read .vimrc from location:</translation>
+<translation>Lees .vimrc vanaf locatie:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
@@ -4809,7 +4809,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="28"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+<translation>Notitie-submappen ingeschakeld voor de huidige notitiemap om mappen te kunnen importeren.</translation>
 </message>
 </context>
 <context>
@@ -7504,7 +7504,7 @@ Wiadomość błędu: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2317"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
+<translation>De database is opnieuw geïnitialiseerd. Start de applicatie nu opnieuw!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2328"/>
@@ -8890,7 +8890,7 @@ Nie można tego cofnąć!</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="64"/>
 <source>&amp;Download latest</source>
-<translation type="unfinished">&amp;Download latest</translation>
+<translation>Download de laatste</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="74"/>
@@ -8979,52 +8979,52 @@ Nie można tego cofnąć!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="439"/>
 <location filename="../dialogs/updatedialog.cpp" line="451"/>
 <source>Permission error</source>
-<translation type="unfinished">Permission error</translation>
+<translation>Toestemmingsfout</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="440"/>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
+<translation>Het uitvoerbare bestand '%1' van QOwnNotes is niet beschrijfbaar! Het moet beschrijfbaar zijn door de huidige gebruiker om te kunnen worden bijgewerkt.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="452"/>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
-<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
+<translation>Het tijdelijke bestand '%1' kon niet uitvoerbaar worden gemaakt! U moet '%2' zelf vervangen.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="462"/>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
+<translation>Uw oude uitvoerbare QOwnNotes '%1' kan niet worden verwijderd! U dient deze zelf te vervangen door '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="472"/>
 <source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
+<translation>Uw oude QOwnNotes uitvoerbare bestand '%1' kon niet worden overschreven door het nieuwe bestand '%2'! Die moet je zelf vervangen.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="479"/>
 <source>Restart application</source>
-<translation type="unfinished">Restart application</translation>
+<translation>App opnieuw starten</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="485"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
+<translation>U moet de toepassing nu handmatig opnieuw opstarten om het updateproces te voltooien.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="491"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished">You now can restart the application to complete the update process.</translation>
+<translation>U kunt de toepassing nu opnieuw starten om het updateproces te voltooien.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Restart</source>
-<translation type="unfinished">Restart</translation>
+<translation>Herstarten</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
+<translation>Annuleren</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
