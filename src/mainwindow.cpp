@@ -7802,14 +7802,14 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                     }
                     // only allow image files to be inserted as image
                 } else if (isValidMediaFile(file)) {
-                    showStatusBarMessage(tr("Inserting image"));
+                    showStatusBarMessage(tr("Inserting image"), 0);
 
                     // insert the image
                     insertMedia(file);
 
                     showStatusBarMessage(tr("Done inserting image"), 3000);
                 } else {
-                    showStatusBarMessage(tr("Inserting attachment"));
+                    showStatusBarMessage(tr("Inserting attachment"), 0);
 
                     // inserting the attachment
                     insertAttachment(file);
@@ -7859,7 +7859,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
         QImage image = mimeData->imageData().value<QImage>();
 
         if (!image.isNull()) {
-            showStatusBarMessage(tr("Saving temporary image"));
+            showStatusBarMessage(tr("Saving temporary image"), 0);
 
             QTemporaryFile tempFile(
                 QDir::tempPath() + QDir::separator() +
@@ -7872,7 +7872,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                 // insert media into note
                 auto *file = new QFile(tempFile.fileName());
 
-                showStatusBarMessage(tr("Inserting image"));
+                showStatusBarMessage(tr("Inserting image"), 0);
                 insertMedia(file);
                 delete file;
 
@@ -7916,7 +7916,7 @@ void MainWindow::insertHtmlAsMarkdownIntoCurrentNote(QString html) {
                 continue;
             }
 
-            showStatusBarMessage(tr("Downloading %1").arg(imageUrl.toString()));
+            showStatusBarMessage(tr("Downloading %1").arg(imageUrl.toString()), 0);
 
             // download the image and get the media markdown code for it
             markdownCode = currentNote.downloadUrlToMedia(imageUrl);

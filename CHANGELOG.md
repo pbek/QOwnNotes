@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.8.7
+- fixed a status bar message without timeout
+
 ## 21.8.6
 - alignment characters in the headline separator line of a Markdown table are now
   not counted anymore to the minimum of 3 headline separator characters that are needed
