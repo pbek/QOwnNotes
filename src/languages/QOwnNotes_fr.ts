@@ -4726,7 +4726,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="28"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+<translation>Sous-dossiers de notes activés pour le dossier de notes actuel afin de pouvoir importer des dossiers.</translation>
 </message>
 </context>
 <context>

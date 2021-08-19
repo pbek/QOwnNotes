@@ -79,7 +79,7 @@ zypper install qownnotes
 
 ## openSUSE Leap 15.0
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+Exécutez les commandes shell suivantes en tant que root pour ajouter le référentiel et installer QOwnNotes à partir de là.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_15.0/home:pbek:QOwnNotes.repo
@@ -148,7 +148,7 @@ zypper install qownnotes
 
 ## openSUSE Tumbleweed
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+Exécutez les commandes shell suivantes en tant que root pour ajouter le référentiel et installer QOwnNotes à partir de là.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Tumbleweed/home:pbek:QOwnNotes.repo

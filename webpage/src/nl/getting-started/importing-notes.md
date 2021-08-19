@@ -6,15 +6,15 @@ Er is een Evernote-importdialoog die u kunt bereiken in het menu `Notitie / Impo
 
 ## Joplin
 
-There is a Joplin import dialog you can reach in the `Note / Import` menu.
+Er is een Joplin-importdialoogvenster dat u kunt bereiken in het menu `Opmerking / Import`.
 
 ## Tomboy
 
-You can import your Tomboy Notes using a script called [Trombone](https://github.com/samba/trombone).
+U kunt uw Tomboy-notities importeren met behulp van een script genaamd [Trombone](https://github.com/samba/trombone).
 
-You might install python2 to make the script work. It will convert your Tomboy notes to an Evernote `.enex` file, which then you are able to import to QOwnNotes.
+U zou python2 kunnen installeren om het script te laten werken. Het converteert je Tomboy-notities naar een Evernote `.enex` -bestand, dat je vervolgens kunt importeren in QOwnNotes.
 
-For anyone wanting to do this, first make sure you have Python2 installed and you might want to also install `python-is-python2` (you can remove that later):
+Voor iedereen die dit wil doen, zorg er eerst voor dat Python2 is geïnstalleerd en misschien wil je ook ` python-is-python2 ` installeren (je kunt dat later verwijderen):
 
 ```bash
 sudo apt install python2 python-is-python2
@@ -29,18 +29,18 @@ sudo make
 sudo make install
 ```
 
-Then cd into the folder where your tomboy notes are:
+Cd dan naar de map waar je tomboy-aantekeningen zijn:
 
 ```bash
  cd ~/.local/share/tomboy/
 ```
 
-Then run this:
+Voer dan dit uit:
 
 ```bash
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex
 ```
 
-If you get unicode errors about specific notes, just remove each note and run the conversion again until it gives a message saying `Saving...` . You will have a file called `EXPORT.enex` which can then be imported into QOwnNotes.
+Als u unicode-fouten krijgt over specifieke opmerkingen, verwijdert u gewoon elke notitie en voert u de conversie opnieuw uit totdat er een bericht verschijnt met de melding `Saving...`. Je hebt een bestand met de naam `EXPORT.enex` dat vervolgens kan worden geïmporteerd in QOwnNotes.
 
-During the import into QOwnNotes you might uncheck all of the attributes to import except maybe the creation/modification date, since Tomboy does not have those features.
+Tijdens het importeren in QOwnNotes kunt u alle te importeren attributen uitschakelen, behalve misschien de aanmaak- / wijzigingsdatum, aangezien Tomboy deze functies niet heeft.

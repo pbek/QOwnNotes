@@ -13,7 +13,7 @@ U kunt deze parameters gebruiken op de opdrachtregelinterface:
 | `--action <name>`      | Activeert een menuactie nadat de applicatie is gestart (zie hieronder)                                                              |
 
 ::: tip
-If you run into troubles with your installation of QOwnNotes you may want start the application with fresh settings without losing your current settings by using the `--session` parameter.
+Als u problemen ondervindt met uw installatie van QOwnNotes, wilt u misschien de toepassing starten met nieuwe instellingen zonder uw huidige instellingen te verliezen door de parameter `--session` te gebruiken.
 
 ```bash
 QOwnNotes --session test
@@ -42,14 +42,14 @@ QOwnNotes --action actionShow_Todo_List
 U kunt de objectnamen van de menuactie ophalen van [hoofdvenster.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Zoek gewoon naar de Engelse menutitel. Houd er rekening mee dat deze teksten in de loop van de tijd kunnen veranderen.
 :::
 
-Om [scriptacties](../scripting/methods-and-objects.md#registering-a-custom-action) te activeren, gebruikt u `customAction_` gevolgd door de identifier van de aangepaste actie. The identifier of the custom action is the first parameter of the `script.registerCustomAction` call in the script.
+Om [scriptacties](../scripting/methods-and-objects.md#registering-a-custom-action) te activeren, gebruikt u `customAction_` gevolgd door de identifier van de aangepaste actie. De id van de aangepaste actie is de eerste parameter van de `script.registerCustomAction`-aanroep in het script.
 
-For example to run the custom action `myAction` start QOwnNotes like this:
+Om bijvoorbeeld de aangepaste actie `myAction` uit te voeren, start u QOwnNotes als volgt:
 
 ```bash
 QOwnNotes --action customAction_myAction
 ```
 
 ::: tip
-If you run QOwnNotes a second time with the action parameter and only have allowed one application instance, then the menu action will be triggered in the first instance.
+Als u QOwnNotes een tweede keer uitvoert met de actieparameter en slechts één toepassingsinstantie hebt toegestaan, wordt de menuactie in eerste instantie geactiveerd.
 :::

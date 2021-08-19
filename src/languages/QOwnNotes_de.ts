@@ -4727,7 +4727,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="28"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+<translation>Notizunterordner für den aktuellen Notizordner aktiviert, um Ordner importieren zu können.</translation>
 </message>
 </context>
 <context>

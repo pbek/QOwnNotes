@@ -11,7 +11,7 @@ Bezoekt u het [Chrome Web Store](https://chrome.google.com/webstore/detail/qownn
 U kunt de extensie ook vinden op [ GitHub ](https://github.com/qownnotes/web-companion/).
 
 ::: tip Info
-QOwnNotes moet actief zijn om de browserextensie Web Companion te laten werken. The browser extensions works **offline**, no internet connection needed.
+QOwnNotes moet actief zijn om de browserextensie Web Companion te laten werken. De browserextensies werken **offline**, geen internetverbinding nodig.
 :::
 
 ## Webclipper
@@ -24,16 +24,16 @@ De webclipper is ook scriptbaar! Bekijk de [websocketRawDataHook](../scripting/h
 
 ## Bladwijzers
 
-If you want full control over your browser bookmarks and **use them across different browsers and operating systems** then the QOwnNotes browser extension is for you.
+Als u volledige controle wilt over uw browserbladwijzers en **ze wilt gebruiken in verschillende browsers en besturingssystemen**, dan is de QOwnNotes-browserextensie iets voor u.
 
-By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
+Standaard toont de browserextensie alle **links van de huidige notitie** in een pop-up wanneer u op het QOwnNotes-pictogram in uw browser klikt. Deze links krijgen een tag `current`.
 
-You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
+U kunt ook **uw bladwijzers in notities beheren** met de notitietag `bladwijzers` (wijzigbaar in de instellingen). Deze links kunnen ook tags en een beschrijving hebben die in de browserextensie wordt weergegeven.
 
-New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
+Nieuwe bladwijzers worden opgeslagen in een notitie genaamd `Bladwijzers` (ook te wijzigen in de instellingen).
 
 ::: tip
-You can also import your browser bookmarks into QOwnNotes with the web companion browser extension!
+U kunt ook uw browserbladwijzers importeren in QOwnNotes met de webpartner-browserextensie!
 :::
 
 ### Syntaxis van bladwijzerkoppelingen
@@ -46,4 +46,4 @@ You can also import your browser bookmarks into QOwnNotes with the web companion
 * [Webpaginanaam](https://www.example.com) het alternatieve lijstteken werkt ook
 ```
 
-You are able to search for name, url tags or description in the browser extension.
+U kunt zoeken op naam, url-tags of beschrijving in de browserextensie.

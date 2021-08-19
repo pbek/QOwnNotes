@@ -13,7 +13,7 @@ slackpkg update
 slackpkg install libproxy js185-1.0.0-x86_64-1
 ```
 
-Ezután kiválaszthatja a QOwnNotes slackbuilds adattárat, és elkészítheti az alkalmazást.
+Ezután kiválaszthatja a QOwnNotes Slackbuilds adattárat, és elkészítheti az alkalmazást.
 
 ```bash
 cd /tmp
@@ -33,7 +33,7 @@ cd /tmp wget "http://bear.alienbase.nl/mirrors/people/alien/sbrepos/14.1/x86_64/
 sudo installpkg qt5-5.5.1-x86_64-4alien.txz
 ```
 
-Ezután kiválaszthatja a QOwnNotes slackbuilds adattárat, és elkészítheti az alkalmazást.
+Ezután kiválaszthatja a QOwnNotes Slackbuilds adattárat, és elkészítheti az alkalmazást.
 
 ```bash
 cd /tmp

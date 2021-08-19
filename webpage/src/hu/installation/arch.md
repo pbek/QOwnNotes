@@ -10,7 +10,7 @@ SigLevel = Optional TrustAll
 Server = http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra/$arch
 ```
 
-Futtassa a következő shell parancsokat a lerakat megbízhatóságához:
+Futtassa a következő shell parancsokat az adattár megbízhatóságához:
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra/x86_64/home_pbek_QOwnNotes_Arch_Extra.key -O - | sudo pacman-key --add -
@@ -39,7 +39,7 @@ sudo pacman -Syy qownnotes
 Természetesen ezt az adattárat használhatja más Arch Linux alapú disztribúciókkal is, például a Manjaróval.
 :::
 
-## Arch felhasználói adattár (AUR)
+## Arch Felhasználói Adattár (Arch User Repository, AUR)
 
 Alternatív megoldásként létezik egy hivatalos csomag is az AUR-on lévő QOwnNotes számára, amelyet `qownnotes` -nek hívnak.
 

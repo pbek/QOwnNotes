@@ -23,17 +23,17 @@ rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fed
 ```
 :::
 
-## Legacy install method
+## Méthode d'installation héritée
 
-Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
+Verwenden Sie diese Methode, wenn Ihre Fedora-Version das dnf-Plugin `config-manager` nicht unterstützt, führen Sie diese Befehle als root aus.
 
-Run the following shell commands as root to trust the repository.
+Exécutez les commandes shell suivantes en tant que root pour approuver le référentiel.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
 ```
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+Exécutez les commandes shell suivantes en tant que root pour ajouter le référentiel et installer QOwnNotes à partir de là.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -50,4 +50,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_34) (this example link is for Fedora 34)
+[Téléchargement direct](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_34) (cet exemple de lien concerne Fedora 34)

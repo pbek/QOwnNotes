@@ -599,8 +599,8 @@ bool ScriptingService::platformIsWindows();
 
 ### Példa
 ```js
-if (script.platformIsLinux()) {
-    // only will be executed if under Linux
+if (script.platformIsLinux ()) {
+     // csak akkor lesz végrehajtva, ha Linux alatt fut
 }
 ```
 
@@ -726,7 +726,7 @@ script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
 Az objektumneveket például a `*.ui` fájlokból szerezheti be [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
 
 ::: tip
-The [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) of [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle) might also be a good reference for styles you can change.
+A[style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) a [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle)-ból szintén jó referencia lehet a módosítható stílusokhoz.
 :::
 
 Tekintse meg a [Stíluslap referencia](http://doc.qt.io/qt-5/stylesheet-reference.html) t, hogy megtudja, milyen stílusok állnak rendelkezésre.
@@ -964,7 +964,7 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 
 ### Példa
 ```js
-// show an open file dialog
+// nyitott fájl párbeszédpanel megjelenítése
 var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
 ```
 
@@ -1190,7 +1190,7 @@ bool ScriptingService::clearCacheDir(const QString &subDir) const;
 
 ### Példa
 ```js
-// clear cache directory of my-script-id 
+// törölje a gyorsítótár könyvtárát a my-script-id-ből
 script.clearCacheDir("my-script-id");
 ```
 
@@ -1244,7 +1244,7 @@ Az ösvényelválasztók konvertálása a natívakról
 ```cpp
 /**
   * Visszaadja az elérési utat a '/' fájlelválasztóként.
- * On Windows, for instance, fromNativeDirSeparators("c:\\winnt\\system32")
+ * Windows rendszeren pl. fromNativeDirSeparators("c:\\winnt\\system32")
  * returns "c:/winnt/system32".
  *
  * @param path
@@ -1255,7 +1255,7 @@ QString ScriptingService::fromNativeDirSeparators(QString path);
 
 ### Példa
 ```js
-// will return "c:/winnt/system32" on Windows
+// will return "c:/winnt/system32" a Windows-on
 script.log(script.fromNativeDirSeparators("c:\\winnt\\system32"));
 ```
 
@@ -1274,7 +1274,7 @@ QString ScriptingService :: dirSeparator ();
 
 ### Példa
 ```js
-// will return "\" on Windows
+// will return "\" Windows-on
 script.log(script.dirSeparator());
 ```
 
@@ -1374,7 +1374,7 @@ QString ScriptingService::inputDialogGetItem(
 ### Példa
 ```js
 var result = script.inputDialogGetItem(
-    "combo box", "Please select an item", ["Item 1", "Item 2", "Item 3"]);
+    "combo box", "Kérjük, válasszon egy elemet", ["Item 1", "Item 2", "Item 3"]);
 script.log(result);
 ```
 
@@ -1400,7 +1400,7 @@ QString ScriptingService :: inputDialogGetText (
 ### Példa
 ```js
 var result = script.inputDialogGetText(
-    "line edit", "Please enter a name", "current text");
+    "line edit", "Kérjük, adjon meg egy nevet", "current text");
 script.log(result);
 ```
 
@@ -1410,7 +1410,7 @@ Ellenőrizze, hogy létezik-e fájl
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Check if a file exists
+ * Ellenőrizze, hogy létezik -e fájl
  * @param filePath
  * @return
  */
@@ -1429,7 +1429,7 @@ Szöveg olvasása egy fájlból
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Read text from a file
+ * Szöveg olvasása fájlból
  *
  * @param filePath {QString} path of the file to load
  * @param codec {QString} file encoding (default: UTF-8)
@@ -1453,7 +1453,7 @@ Szöveg írása fájlba
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Writes a text to a file
+ * Szöveget ír egy fájlba
  *
  * @param filePath {QString}
  * @param data {QString}

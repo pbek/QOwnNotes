@@ -182,7 +182,7 @@ cd Notes
 ```
 ~~~
 
-Currently supported languages (and code block identifiers) are:
+Momenteel ondersteunde talen (en codeblok-ID's) zijn:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -218,7 +218,8 @@ Currently supported languages (and code block identifiers) are:
 
 ## Tables
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+Tabellen maken geen deel uit van de belangrijkste Markdown-specificaties, maar de QOwnNotes-preview ondersteunt ze.
+ 
 
 ```markdown
 Colons can be used to align columns.

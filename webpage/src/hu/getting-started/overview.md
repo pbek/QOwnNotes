@@ -163,7 +163,7 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 - [**Estensione del browser**](browser-extension.md) per **aggiungere note dal testo selezionato**, **fare screenshot** o **gestire i tuoi segnalibri**
 - [**Helyesírás-ellenőrzés**](../editor/spellchecking.md) támogatás
 - **Hordozható mód** a QOwnNotes hordozásához USB-meghajtókon
-- **A szkriptek támogatása** és az online [**szkriptek tárháza**](https://github.com/qownnotes/scripts), ahol parancsfájlokat telepíthet az alkalmazásba
+- **A szkriptek támogatása** és az online [**szkripttár**](https://github.com/qownnotes/scripts), ahol parancsfájlokat telepíthet az alkalmazásba
 - **Vim mód**
 - [Webalkalmazás](web-app.md) a **fényképek beillesztéséhez a mobiltelefonról** az asztali QOwnNotes aktuális jegyzetébe
 

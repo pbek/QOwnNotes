@@ -1617,7 +1617,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Importación Joplin</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="48"/>
@@ -1667,7 +1667,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="74"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW - Directorio de exportación de Joplin</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
@@ -1677,7 +1677,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="89"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>Seleccione 'RAW - Directorio de exportación de Joplin' para importar</translation>
 </message>
 </context>
 <context>
@@ -2835,12 +2835,12 @@
 <message>
 <location filename="../mainwindow.ui" line="2670"/>
 <source>Insert &amp;note link</source>
-<translation type="unfinished">Insert &amp;note link</translation>
+<translation>Insertar y anotar enlace</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2673"/>
 <source>Ctrl+Shift+L</source>
-<translation type="unfinished">Ctrl+Shift+L</translation>
+<translation>Ctrl + Mayús + L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2682"/>

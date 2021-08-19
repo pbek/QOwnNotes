@@ -28,12 +28,12 @@ Ellenőrizze azt is, hogy a kiválasztott repo a hivatalos `home:pbek:QOwnNotes`
 :::
 
 ::: tip
-A frissítések megszerzéséhez ki kell választania a tároló telepítés utáni megőrzését.
+A frissítések megszerzéséhez ki kell választania az adattár telepítés utáni megőrzését.
 :::
 
 ## openSUSE 13.2
 
-Futtassa rootként a következő shell parancsokat a lerakat hozzáadásához és a QOwnNotes telepítéséhez onnan.
+Futtassa rootként a következő shell parancsokat az adattár hozzáadásához és a QOwnNotes onnan való telepítéséhez.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_13.2/home:pbek:QOwnNotes.repo
@@ -57,7 +57,7 @@ zypper install qownnotes
 
 ## openSUSE Leap 15.2
 
-Futtassa rootként a következő shell parancsokat a lerakat hozzáadásához és a QOwnNotes telepítéséhez onnan.
+Futtassa rootként a következő shell parancsokat az adattár hozzáadásához és a QOwnNotes telepítéséhez onnan.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_15.2/home:pbek:QOwnNotes.repo
@@ -79,7 +79,7 @@ zypper install qownnotes
 
 ## openSUSE Leap 15.0
 
-Futtassa rootként a következő shell parancsokat a lerakat hozzáadásához és a QOwnNotes telepítéséhez onnan.
+Futtassa rootként a következő shell parancsokat az adattár hozzáadásához és a QOwnNotes onnan való telepítéséhez.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_15.0/home:pbek:QOwnNotes.repo
@@ -91,14 +91,14 @@ zypper install qownnotes
 
 ## openSUSE Leap 42.3
 
-Futtassa a következő shell parancsokat rootként, hogy megbízhasson a tárban.
+Futtassa a következő shell parancsokat rootként, hogy megbízhasson az adattárban.
 
 ```bash
 su -
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_42.3/repodata/repomd.xml.key
 ```
 
-Futtassa rootként a következő shell parancsokat a lerakat hozzáadásához és a QOwnNotes telepítéséhez onnan.
+Futtassa rootként a következő shell parancsokat az adattár hozzáadásához és a QOwnNotes onnan való telepítéséhez.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_42.3/home:pbek:QOwnNotes.repo
@@ -110,14 +110,14 @@ zypper install qownnotes
 
 ## openSUSE Leap 42.2
 
-Futtassa a következő shell parancsokat, hogy megbízhasson a tárban.
+Futtassa a következő shell parancsokat, hogy megbízhasson az adattárban.
 
 ```bash
 su -
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_42.2/repodata/repomd.xml.key
 ```
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+Rootként futtassa a következő shell parancsokat az adattár hozzáadásához és onnan a QOwnNotes telepítéséhez.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_42.2/home:pbek:QOwnNotes.repo
@@ -129,14 +129,14 @@ zypper install qownnotes
 
 ## openSUSE Leap 42.1
 
-Futtassa a következő shell parancsokat rootként, hogy megbízhasson a tárban.
+Futtassa a következő shell parancsokat rootként, hogy megbízhasson az adattárban.
 
 ```bash
 su -
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_42.1/repodata/repomd.xml.key
 ```
 
-Futtassa rootként a következő shell parancsokat a lerakat hozzáadásához és a QOwnNotes telepítéséhez onnan.
+Futtassa rootként a következő shell parancsokat az adattár hozzáadásához és a QOwnNotes onnan való telepítéséhez.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_42.1/home:pbek:QOwnNotes.repo
@@ -148,7 +148,7 @@ zypper install qownnotes
 
 ## openSUSE Tumbleweed
 
-Futtassa rootként a következő shell parancsokat a lerakat hozzáadásához és a QOwnNotes telepítéséhez onnan.
+Futtassa rootként a következő shell parancsokat az adattár hozzáadásához és a QOwnNotes onnan való telepítéséhez.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Tumbleweed/home:pbek:QOwnNotes.repo
@@ -161,7 +161,7 @@ zypper install qownnotes
 
 ## SLE 12 SP3 Hátlapok
 
-Futtassa rootként a következő shell parancsokat a lerakat hozzáadásához és a QOwnNotes telepítéséhez onnan.
+Futtassa rootként a következő shell parancsokat az adattár hozzáadásához és a QOwnNotes onnan való telepítéséhez.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_12_SP3_Backports/home:pbek:QOwnNotes.repo
@@ -173,7 +173,7 @@ zypper install qownnotes
 
 ## SLE 15
 
-Futtassa rootként a következő shell parancsokat a lerakat hozzáadásához és a QOwnNotes telepítéséhez onnan.
+Futtassa rootként a következő shell parancsokat az adattár hozzáadásához és a QOwnNotes onnan való telepítéséhez.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_15/home:pbek:QOwnNotes.repo

@@ -14,9 +14,9 @@ dnf install qownnotes
 ```
 
 ::: tip
-You may need to accept the repo key before you can download from it.
+Tal vez necesite aceptar la clave del repositorio para poder descargar desde este.
 
-If you have troubles import the key yourself with:
+Si tiene problemas, importe la clave usted mismo con:
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
@@ -25,9 +25,9 @@ rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fed
 
 ## Método de instalación heredado
 
-Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
+Utilice este método si su versión de Fedora no admite el complemento `config-manager` de dnf. Ejecute las órdenes siguientes con permisos administrativos.
 
-Run the following shell commands as root to trust the repository.
+Ejecute los siguientes comandos de shell como root para confiar en el repositorio.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
@@ -50,4 +50,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_34) (this example link is for Fedora 34)
+[Descarga directa](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_34) (este enlace de ejemplo es para Fedora 34)

@@ -4,7 +4,7 @@ Vannak QOwnNotes tárak a **Fedora 28 és újabb verziókhoz**.
 
 ## A config-manager dnf beépülő modullal rendelkező rendszereken
 
-Futtassa a következő shell parancsokat rootként a lerakat hozzáadásához.
+Futtassa a következő shell parancsokat rootként az adattár hozzáadásához.
 
 ```bash
 dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
@@ -16,7 +16,7 @@ dnf install qownnotes
 ::: tip
 Előfordulhat, hogy el kell fogadnia a repo kulcsot, mielőtt letölthet róla.
 
-Ha problémái vannak, akkor a kulcsot maga importálja:
+Ha problémái vannak, akkor importálja a kulcsot saját kezüleg:
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
@@ -27,13 +27,13 @@ rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fed
 
 Használja ezt a módszert, ha a Fedora verziója nem támogatja a `config-manager` dnf bővítményt, futtassa ezeket a parancsokat rootként.
 
-Futtassa a következő shell parancsokat rootként, hogy megbízhasson a tárban.
+Futtassa a következő shell parancsokat rootként, hogy megbízhasson az adattárban.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
 ```
 
-Futtassa rootként a következő shell parancsokat a repository hozzáadásához és a QOwnNotes telepítéséhez onnan.
+Futtassa rootként a következő shell parancsokat az adattár hozzáadásához és a QOwnNotes onnan való telepítéséhez.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL

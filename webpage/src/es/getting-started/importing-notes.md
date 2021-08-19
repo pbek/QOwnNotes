@@ -6,7 +6,7 @@ Hay un cuadro de diálogo de importación de Evernote al que puede acceder en el
 
 ## Joplin
 
-There is a Joplin import dialog you can reach in the `Note / Import` menu.
+Hay un diálogo de importación de Joplin al que puede acceder en el menú `Nota / Importar`.
 
 ## Tomboy
 

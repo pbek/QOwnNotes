@@ -12,7 +12,7 @@ Van egy Joplin import párbeszédablak, amelyet a `Jegyzet / Importálás` menü
 
 A Tomboy Notes programot a [Trombone](https://github.com/samba/trombone) nevű szkript segítségével importálhatja.
 
-Lehetséges, hogy telepíti a python2-t a szkript működéséhez. Konvertálja a Tomboy-jegyzeteit egy Evernote `.enex` fájlba, amelyet aztán importálhat a QOwnNotes fájlba.
+Esetleg telepítse a python2-t a szkript működéséhez. Konvertálja a Tomboy-jegyzeteit egy Evernote `.enex` fájlba, amelyet aztán importálhat a QOwnNotes fájlba.
 
 Aki ezt meg akarja tenni, először ellenőrizze, hogy telepítve van-e a Python2, és érdemes lehet a `python-is-python2` -t is telepíteni (ezt később eltávolíthatja):
 

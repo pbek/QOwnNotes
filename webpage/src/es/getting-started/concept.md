@@ -56,7 +56,7 @@ graph TB
 Puede administrar los **marcadores de su navegador** con QOwnNotes o usarlo como **web clipper**.
 
 ::: tip
-The browser extensions works **offline**, no internet connection needed. Please visit [QOwnNotes Web Companion browser extension](browser-extension.md) for more information.
+Las extensiones del navegador funcionan ** sin conexión **, no se necesita conexión a Internet. Visite [QOwnNotes Web Companion extensión del navegador](browser-extension.md) para obtener más información.
 :::
 
 ## Cliente de sincronización de escritorio de Nextcloud
@@ -136,5 +136,5 @@ Puede acceder al código fuente de [api.qownnotes.org](https://api.qownnotes.org
 Puede insertar fotos de su teléfono móvil en la nota actual en QOwnNotes en su escritorio a través de la **aplicación web ** en [app.qownnotes.org](https://app.qownnotes.org/).
 
 ::: tip
-Please visit [QOwnNotes Web App](web-app.md) for more information.
+Visite [Aplicación web QOwnNotes](web-app.md) para obtener más información.
 :::

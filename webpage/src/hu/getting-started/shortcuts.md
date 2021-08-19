@@ -37,7 +37,7 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> elrejti vagy megjeleníti a fő menüsort
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> lehetővé teszi a műveletek keresését
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> manuálisan menti a módosított jegyzeteket
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> megnyitja a Script repository párbeszédpanelt
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> megnyitja a szkripttár párbeszéd panelt
 - <kbd>F4</kbd> a jegyzetszerkesztő panelhez ugrik
 - <kbd>F5</kbd> ugrik a jegyzetlistára
 - <kbd>F6</kbd> a jegyzet almappája panelre ugrik
@@ -153,7 +153,7 @@
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> elrejti vagy megjeleníti a fő menüsort
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> lehetővé teszi a műveletek keresését
 - <kbd>⌘</kbd> + <kbd>S</kbd> manuálisan menti a módosított jegyzeteket
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> megnyitja a Script repository párbeszédpanelt
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> megnyitja a szkripttár párbeszédpanelt
 - <kbd>F4</kbd> a jegyzetszerkesztő panelre ugrik
 - <kbd>F5</kbd> ugrik a jegyzetlistára
 - <kbd>F6</kbd> a jegyzet almappája panelre ugrik
@@ -205,7 +205,7 @@
 - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Left</kbd> visszaugrik a kottatörténetbe
     - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Right</kbd> előreugrik a hangtörténetben
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> jegyzet könyvjelzőt állít be az 1..9 könyvjelző nyílásba
-- <kbd>⌘</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
+- <kbd>⌘</kbd> + <kbd>0..9</kbd> springt zum Notiz-Lesezeichen auf Lesezeichen-Slot 0..9
 - <kbd>⌘</kbd> + <kbd>+</kbd> egy ponttal növeli a jegyzet szövegének betűméretét
 - <kbd>⌘</kbd> + <kbd>-</kbd> egy ponttal csökkenti a jegyzet szövegének betűméretét
 - <kbd>⌘</kbd> + <kbd>0</kbd> visszaállítja a jegyzet szövegének betűméretét

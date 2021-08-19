@@ -16,7 +16,7 @@ features:
   - 
     title: Testreszabás
     details: Erősen testreszabható és szkriptelhető, Ön irányíthatja, hogy miként dolgozzon a jegyzeteivel
-footer: Patrizio Bekerle készítette ❤️-ből
+footer: Patrizio Bekerle készítette ❤️-vel
 ---
 
 <div class="rss-block">

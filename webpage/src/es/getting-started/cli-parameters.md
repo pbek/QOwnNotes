@@ -28,28 +28,28 @@ Puede ejecutar la aplicación en la interfaz de línea de comandos de manera dif
 | macOS             | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes`     |
 | Windows           | `QOwnNotes.exe`                                            |
 
-## Trigger menu actions after startup
+## Activar acciones del menú después del inicio
 
-With the parameter `--action <name>` you can trigger menu actions after the application was started.
+Con el parámetro ` --action <name> ` puede activar acciones de menú después de que se inicie la aplicación.
 
-For example to open the todo list dialog after startup use:
+Por ejemplo, para abrir el cuadro de diálogo de la lista de tareas pendientes después del uso de inicio:
 
 ```bash
 QOwnNotes --action actionShow_Todo_List
 ```
 
 ::: tip
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Just search for the English menu title. Note that these texts can change over time.
+Puede obtener los nombres de los objetos de la acción del menú en [ventana principal.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Simplemente busque el título del menú en inglés. Tenga en cuenta que estos textos pueden cambiar con el tiempo.
 :::
 
-To trigger [scripting actions](../scripting/methods-and-objects.md#registering-a-custom-action) use `customAction_` followed by the identifier of the custom action. The identifier of the custom action is the first parameter of the `script.registerCustomAction` call in the script.
+Para activar [acciones de secuencia de comandos](../scripting/methods-and-objects.md#registering-a-custom-action), utilice `customAction_` seguido del identificador de la acción personalizada. El identificador de la acción personalizada es el primer parámetro de la llamada `script.registerCustomAction` en el script.
 
-For example to run the custom action `myAction` start QOwnNotes like this:
+Por ejemplo, para ejecutar la acción personalizada `myAction`, inicie QOwnNotes así:
 
 ```bash
 QOwnNotes --action customAction_myAction
 ```
 
 ::: tip
-If you run QOwnNotes a second time with the action parameter and only have allowed one application instance, then the menu action will be triggered in the first instance.
+Si ejecuta QOwnNotes por segunda vez con el parámetro de acción y solo ha permitido una instancia de aplicación, la acción del menú se activará en la primera instancia.
 :::

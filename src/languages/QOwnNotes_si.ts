@@ -1029,7 +1029,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>පෙරනිමි: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1573,7 +1573,7 @@
 <message>
 <location filename="../dialogs/imagedialog.ui" line="59"/>
 <source>Title</source>
-<translation>ශීර්ෂය</translation>
+<translation>සිරැසිය</translation>
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="20"/>
@@ -1622,7 +1622,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="48"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>බහාලුම් ආයාත කරන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
@@ -1647,7 +1647,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="115"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>සටහන් ආයාත කරන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
@@ -2845,7 +2845,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2682"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>ජොප්ලින් වෙතින් සටහන් ආයාත කරන්න</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1908"/>
@@ -4379,7 +4379,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../services/owncloudservice.cpp" line="237"/>
 <location filename="../services/owncloudservice.cpp" line="535"/>
 <source>not connected</source>
-<translation type="unfinished">not connected</translation>
+<translation>සම්බන්ධ වී නැත</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="252"/>
@@ -4402,7 +4402,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../services/owncloudservice.cpp" line="508"/>
 <location filename="../services/owncloudservice.cpp" line="526"/>
 <source>ok</source>
-<translation type="unfinished">ok</translation>
+<translation>හරි</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="318"/>
@@ -4435,7 +4435,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../services/owncloudservice.cpp" line="503"/>
 <location filename="../services/owncloudservice.cpp" line="511"/>
 <source>not enabled</source>
-<translation type="unfinished">not enabled</translation>
+<translation>සබල කර නැත</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="585"/>
@@ -4649,7 +4649,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../utils/gui.cpp" line="1025"/>
 <source>&lt;br /&gt;path: %1</source>
-<translation type="unfinished">&lt;br /&gt;path: %1</translation>
+<translation>&lt;br /&gt;මාර්ගය: %1</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="76"/>
@@ -6318,7 +6318,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
 <source>Web application</source>
-<translation type="unfinished">Web application</translation>
+<translation>වියමන යෙදුම</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1418"/>
@@ -6383,12 +6383,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3302"/>
 <source>Local shortcut</source>
-<translation type="unfinished">Local shortcut</translation>
+<translation>ස්ථානීය කෙටිමඟ</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3307"/>
 <source>Global shortcut</source>
-<translation type="unfinished">Global shortcut</translation>
+<translation>ගෝලීය කෙටිමඟ</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3949"/>
@@ -7978,7 +7978,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
 <source>Stored attachments</source>
-<translation type="unfinished">Stored attachments</translation>
+<translation>ගබඩාකළ ඇමුණුම්</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
@@ -8013,37 +8013,37 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="353"/>
 <source>Open &amp;attachment</source>
-<translation type="unfinished">Open &amp;attachment</translation>
+<translation>ඇමුණුම විවෘත කරන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="364"/>
 <source>Open the attachments folder</source>
-<translation type="unfinished">Open the attachments folder</translation>
+<translation>ඇමුණුම් ගොනුව විවෘත කරන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="367"/>
 <source>Open &amp;folder</source>
-<translation type="unfinished">Open &amp;folder</translation>
+<translation>බහාලුම විවෘත කරන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="392"/>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>නැවුම් කරන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="102"/>
 <source>File size:</source>
-<translation type="unfinished">File size:</translation>
+<translation>ගොනුවේ ප්‍රමාණය:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="194"/>
 <source>File type:</source>
-<translation type="unfinished">File type:</translation>
+<translation>ගොනුවේ වර්ගය:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="207"/>
 <source>File path:</source>
-<translation type="unfinished">File path:</translation>
+<translation>ගොනුවේ මාර්ගය:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="86"/>
@@ -8053,7 +8053,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="160"/>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>මාර්ගය: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="200"/>
@@ -8071,7 +8071,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
 <source>&amp;Open attachment</source>
-<translation type="unfinished">&amp;Open attachment</translation>
+<translation>ඇමුණුම විවෘත කරන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
@@ -8091,7 +8091,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
 <source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<translation>ගොනුව නොපවතී</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
@@ -8101,7 +8101,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>ගොනුව පවතී</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
@@ -8121,7 +8121,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>සටහන විවෘත කරන්න</translation>
 </message>
 </context>
 <context>
@@ -8149,7 +8149,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="67"/>
 <source>Open &amp;folder</source>
-<translation type="unfinished">Open &amp;folder</translation>
+<translation>බහාලුම විවෘත කරන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="78"/>
@@ -8204,7 +8204,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="148"/>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>මාර්ගය: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="187"/>
@@ -8222,7 +8222,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
 <source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<translation>ගොනුව නොපවතී</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
@@ -8232,7 +8232,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>ගොනුව පවතී</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="349"/>
@@ -8242,7 +8242,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="359"/>
 <source>File renaming failed</source>
-<translation type="unfinished">File renaming failed</translation>
+<translation>ගොනුව නැවත නම් කිරීමට අසමත්විය</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="360"/>
@@ -8272,7 +8272,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="472"/>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>ගොනුව විවෘතකරන්න</translation>
 </message>
 </context>
 <context>
@@ -8895,7 +8895,7 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="439"/>
 <location filename="../dialogs/updatedialog.cpp" line="451"/>
 <source>Permission error</source>
-<translation type="unfinished">Permission error</translation>
+<translation>අවසර දෝෂයකි</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="440"/>
@@ -8920,7 +8920,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="479"/>
 <source>Restart application</source>
-<translation type="unfinished">Restart application</translation>
+<translation>යෙදුම නැවත අරඹන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="485"/>
@@ -8935,12 +8935,12 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Restart</source>
-<translation type="unfinished">Restart</translation>
+<translation>නැවත අරම්භන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
+<translation>අවලංගු කරන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
@@ -9058,7 +9058,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../services/webappclientservice.cpp" line="127"/>
 <source>Web app warning</source>
-<translation type="unfinished">Web app warning</translation>
+<translation>වියමන යෙදුමේ අවවාදය</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="139"/>

@@ -208,7 +208,7 @@ Actualiza la vista previa de la nota.
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Regenerates the note preview
+ * Regenera la vista previa de la nota
  */
 QString ScriptingService::regenerateNotePreview();
 ```
@@ -412,19 +412,19 @@ QString ScriptingService::noteTextEditSelectedText();
 
 ### Ejemplo
 ```js
-// read the selected text from the note text edit
+// leer el texto seleccionado del texto de la nota editar
 var text = script.noteTextEditSelectedText();
 ```
 
-You might want to look at the custom action `transformTextRot13` in the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Es posible que desee ver la acción personalizada `transformTextRot13` en el ejemplo [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 Seleccionar todo el texto en la edición de texto de la nota
 -------------------------------------
 
 ### Parámetros y llamada al método
 ```cpp
-/**
- * Selects all text in the note text edit
+/ **
+  * Selecciona todo el texto en la edición de texto de la nota
  */
 void ScriptingService::noteTextEditSelectAll();
 ```
@@ -434,7 +434,7 @@ void ScriptingService::noteTextEditSelectAll();
 script.noteTextEditSelectAll();
 ```
 
-You can use this together with `noteTextEditWrite` to overwrite the whole text of the current note.
+Puede usar esto junto con `noteTextEditWrite` para sobrescribir todo el texto de la nota actual.
 
 Seleccione la línea actual en la edición de texto de la nota
 ---------------------------------------------
@@ -484,7 +484,7 @@ void ScriptingService::noteTextEditSetSelection(int start, int end);
 
 ### Ejemplo
 ```js
-// expands the current selection by one character
+// expande la selección actual en un carácter
 script.noteTextEditSetSelection(
     script.noteTextEditSelectionStart() - 1,
     script.noteTextEditSelectionEnd() + 1);
@@ -585,7 +585,7 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 var text = script.noteTextEditCurrentWord();
 ```
 
-You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
+Es posible que desee echar un vistazo al ejemplo [ autocompletado.qml ](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
 
 Compruebe si la plataforma es Linux, OS X o Windows
 ------------------------------------------------
@@ -610,20 +610,20 @@ Etiquetar la nota actual
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Tags the current note with a tag named tagName
- *
- * @param tagName
- */
+  * Etiqueta la nota actual con una etiqueta llamada tagName
+  *
+  * @param tagName
+  */
 void ScriptingService::tagCurrentNote(QString tagName);
 ```
 
 ### Ejemplo
 ```js
-// add a "favorite" tag to the current note
+// agrega una etiqueta de "favorito" a la nota actual
 script.tagCurrentNote("favorite");
 ```
 
-You might want to look at the custom action `favoriteNote` in the example [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml).
+Es posible que desee ver la acción personalizada `favoriteNote` en el ejemplo [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml).
 
 Crear o recuperar una etiqueta por su nombre lista de ruta de navegación
 -------------------------------------------------
@@ -670,7 +670,7 @@ QStringList ScriptingService::searchTagsByName(QString name);
 var tags = script.searchTagsByName("game");
 ```
 
-You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
+Es posible que desee echar un vistazo al ejemplo [ autocompletado.qml ](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
 
 Buscar notas por texto de nota
 -----------------------------
@@ -678,13 +678,13 @@ Buscar notas por texto de nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns a list of note ids of all notes with a certain text in the note text
- *
- * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
- * can only transfer the note ids
- *
- * @return {QList<int>} list of note ids
- */
+  * Devuelve una lista de ID de nota de todas las notas con un texto determinado en el texto de la nota
+  *
+  * Desafortunadamente, no hay una manera fácil de usar QList<NoteApi*> en QML, por lo que
+  * solo se pueden transferir los ID de las notas
+  *
+  * @return {QList<int>} lista de ID de notas
+  */
 QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
 ```
 
@@ -991,14 +991,14 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 var fileName = script.getSaveFileName("Please select HTML file to save", "output.html", "HTML (*.html)");
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Es posible que desee echar un vistazo al ejemplo [exportar notas como uno-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Registro de variables de configuración de script
 -------------------------------------
 
-You need to define your settings variables as properties in your script and register them in a property named `settingsVariables`.
+Debe definir sus variables de configuración como propiedades en su script y registrarlas en una propiedad llamada `settingsVariables`.
 
-The user can then set these properties in the script settings.
+Luego, el usuario puede establecer estas propiedades en la configuración del script.
 
 ### Ejemplo
 ```js
@@ -1051,7 +1051,7 @@ property variant settingsVariables: [
 ];
 ```
 
-In addition you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
+Además, puede anular las `settingsVariables` con una función especial `registerSettingsVariables ()` como esta:
 
 ### Ejemplo
 ```js
@@ -1069,7 +1069,7 @@ function registerSettingsVariables() {
 }
 ```
 
-You may also want to take a look at the example [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
+Quizás también quieras echar un vistazo al ejemplo [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
 
 Almacenar y cargar variables persistentes
 ----------------------------------------
@@ -1108,9 +1108,9 @@ script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "no hay nada todavía"));
 ```
 
-Please make sure to use a meaningful prefix in your key like `PersistentVariablesTest/myVar` because the variables are accessible from all scripts.
+Asegúrese de usar un prefijo significativo en su clave como `PersistentVariablesTest / myVar` porque las variables son accesibles desde todos los scripts.
 
-You may also want to take a look at the example [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
+Quizás también quieras echar un vistazo al ejemplo [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
 
 Cargando variables de configuración de la aplicación
 --------------------------------------
@@ -1134,12 +1134,12 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 script.log(script.getApplicationSettingsVariable ("gitExecutablePath"));
 ```
 
-Keep in mind that settings actually can be empty, you have to take care about that yourself. `defaultValue` is only used if the setting doesn't exist at all.
+Tenga en cuenta que la configuración en realidad puede estar vacía, debe ocuparse de eso usted mismo. `defaultValue` solo se usa si la configuración no existe en absoluto.
 
 Creando un directorio de caché
 --------------------------
 
-You can cache files at the default cache location of your system.
+Puede almacenar en caché los archivos en la ubicación de caché predeterminada de su sistema.
 
 ### Parámetros y llamada al método
 ```cpp
@@ -1161,7 +1161,7 @@ var cacheDirForScript = script.cacheDir("my-script-id");
 Borrar un directorio de caché
 --------------------------
 
-You can clear the cache files of your script by passing its name to clearCacheDir().
+Puede borrar los archivos de caché de su script pasando su nombre a clearCacheDir().
 
 ### Parámetros y llamada al método
 ```cpp
@@ -1183,7 +1183,7 @@ script.clearCacheDir("my-script-id");
 Leer la ruta al directorio de su script
 ------------------------------------------------
 
-If you need to get the path to the directory where your script is placed to for example load other files you have to register a `property string scriptDirPath;`. This property will be set with the path to the script's directory.
+Si necesita obtener la ruta al directorio donde se coloca su script para, por ejemplo, cargar otros archivos, debe registrar un `cadena de propiedad scriptDirPath;`. Esta propiedad se establecerá con la ruta al directorio del script.
 
 ### Ejemplo
 ```js
@@ -1284,7 +1284,7 @@ QStringList ScriptingService::selectedNotesPaths();
 script.log(script.selectedNotesPaths());
 ```
 
-You may want to take a look at the example [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
+Es posible que desee echar un vistazo al ejemplo [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
 
 Obtener una lista de los identificadores de todas las notas seleccionadas
 -----------------------------------------------
@@ -1305,7 +1305,7 @@ QList<int> ScriptingService::selectedNotesIds();
 script.log(script.selectedNotesIds());
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Es posible que desee echar un vistazo al ejemplo [exportar notas como uno-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Activar una acción de menú
 ------------------------
@@ -1331,10 +1331,10 @@ script.triggerMenuAction("actionAllow_note_editing");
 script.triggerMenuAction("actionAllow_note_editing", 1);
 ```
 
-You may want to take a look at the example [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
+Es posible que desee echar un vistazo al ejemplo [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
 
 ::: tip
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Just search for the English menu title. Note that these texts can change over time.
+Puede obtener los nombres de los objetos de la acción del menú en [ventana principal.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Simplemente busque el título del menú en inglés. Tenga en cuenta que estos textos pueden cambiar con el tiempo.
 :::
 
 Opening an input dialog with a select box

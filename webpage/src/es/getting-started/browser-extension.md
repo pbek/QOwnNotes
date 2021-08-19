@@ -11,7 +11,7 @@ Visite [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-we
 También puede encontrar la extensión en [GitHub](https://github.com/qownnotes/web-companion/).
 
 ::: tip Info
-QOwnNotes debe estar ejecutándose para que funcione la extensión del navegador Web Companion. The browser extensions works **offline**, no internet connection needed.
+QOwnNotes debe estar ejecutándose para que funcione la extensión del navegador Web Companion. Las extensiones del navegador funcionan ** sin conexión **, no se necesita conexión a Internet.
 :::
 
 ## Cortadora web
@@ -24,16 +24,16 @@ Haga clic con el botón derecho en una página web o en el texto seleccionado pa
 
 ## Marcadores
 
-If you want full control over your browser bookmarks and **use them across different browsers and operating systems** then the QOwnNotes browser extension is for you.
+Si desea tener un control total sobre los marcadores de su navegador y ** usarlos en diferentes navegadores y sistemas operativos **, entonces la extensión del navegador QOwnNotes es para usted.
 
-By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
+De forma predeterminada, la extensión del navegador mostrará todos los enlaces ** de la nota actual** en una ventana emergente cuando haga clic en el icono QOwnNotes en su navegador. Estos enlaces obtendrán una etiqueta `current`.
 
-You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
+También puede **administrar sus marcadores en notas** con la etiqueta de nota `marcadores` (modificable en la configuración). Estos enlaces también pueden tener etiquetas y una descripción que se mostrará en la extensión del navegador.
 
-New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
+Los nuevos marcadores se almacenan en una nota llamada `Marcadore` (también modificable en la configuración).
 
 ::: tip
-You can also import your browser bookmarks into QOwnNotes with the web companion browser extension!
+¡También puede importar los marcadores de su navegador a QOwnNotes con la extensión del navegador web complementario!
 :::
 
 ### Sintaxis de los enlaces de marcadores
@@ -46,4 +46,4 @@ You can also import your browser bookmarks into QOwnNotes with the web companion
 * [Nombre de la página web] (https://www.example.com) el carácter de lista alternativo también funciona
 ```
 
-You are able to search for name, url tags or description in the browser extension.
+Puede buscar nombre, etiquetas de URL o descripción en la extensión del navegador.

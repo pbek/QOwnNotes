@@ -2,11 +2,11 @@
 
 ## Ubuntu Linux 18.04 vagy újabb, elemi operációs rendszer, Linux Mint 18 vagy újabb
 
-Telepítse a **QOwnNotes** t az **Ubuntu Linux** ra (minimum 18.04) a PPA adattár használatával.
+Telepítse a **QOwnNotes** alkalmazást az **Ubuntu Linux** operációs rendszerre (minimum 18.04) a PPA adattár használatával.
 
-Vegye figyelembe, hogy az ARM számára is vannak csomagok az adattárban, arra az esetre, ha a QOwnNotes alkalmazást egy **Raspberry Pi** n szeretné használni.
+Vegye figyelembe, hogy az ARM számára is vannak csomagok az adattárban, arra az esetre, ha a QOwnNotes alkalmazást egy **Raspberry Pi** rendszeren szeretné használni.
 
-Nyissa meg a terminált, és írja be a következő sorokat a lerakat hozzáadásához és a QOwnNotes telepítéséhez.
+Nyissa meg a terminált, és írja be a következő sorokat az adattár hozzáadásához és a QOwnNotes telepítéséhez.
 
 ```bash
 sudo add-apt-repository ppa:pbek/qownnotes
@@ -30,9 +30,9 @@ Ezután képesnek kell lennie az AppImage futtatására a QOwnNotes futtatásáh
 
 ## OBS adattár
 
-Lehetséges, hogy a QOwnNotes alkalmazást olyan Ubuntu verziókban is használhatja, amelyek már nincsenek frissítve az Ubuntu Launchpad alkalmazásban, majd használhatja a [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) tárházait.
+Lehetséges, hogy a QOwnNotes alkalmazást olyan Ubuntu verziókban is használhatja, amelyek már nincsenek frissítve az Ubuntu Launchpad alkalmazásban, majd használhatja a [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) adattárait.
 
-Az alábbiakban bemutatjuk az xUbuntu 16.10 tárház példahívásait.
+Az alábbiakban bemutatjuk az xUbuntu 16.10 adattár példahívásait.
 
 Futtassa a következő shell parancsot a lerakat megbízhatóságához.
 
@@ -40,7 +40,7 @@ Futtassa a következő shell parancsot a lerakat megbízhatóságához.
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
 ```
 
-Futtassa a következő shell parancsokat a lerakat hozzáadásához és a QOwnNotes telepítéséhez onnan.
+Futtassa a következő shell parancsokat az adattár hozzáadásához és a QOwnNotes onnan való telepítéséhez.
 
 ```bash
 sudo su -

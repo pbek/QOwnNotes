@@ -67,7 +67,7 @@ A szöveg aláhúzásához használhatja a [parancsikont](./shortcuts.md) <kbd>C
 Használhatja az [parancsikon](./shortcuts.md) <kbd>Alt + Shift + S</kbd> a szöveg törléséhez.
 :::
 
-## Lists
+## Listák
 
 A listák létrehozásának számos módja van.
 
@@ -306,16 +306,16 @@ A szóközöket a szerkesztő alapértelmezés szerint kiemeli.
 A jegyzet nem jelenik meg az előnézetben.
 
 ```markdown
-[comment]: # (This comment will not appear in the preview)
+[comment]: # (Ez a megjegyzés nem jelenik meg az előnézetben)
 
-<!-- HTML comments are also hidden -->
+<!-- A HTML megjegyzések is el vannak rejtve -->
 ```
 
 ::: tip
 A jegyzetek vezető html megjegyzésblokkja az automatikus jegyzetfájl-generálás során sem kerül figyelembe.
 :::
 
-## Checkbox lists
+## Jelölőnégyzet -listák
 
 Létrehozhat egyszerű todo listákat jelölőnégyzet listákkal.
 
