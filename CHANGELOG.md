@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 21.8.8
+- highlighting support for numbered list checkboxes was added
+  (for [#134](https://github.com/pbek/qmarkdowntextedit/issues/134), thank you @Waqar144)
+- fixed a problem with strikeout and code inline formatting in the same line
+  (for [#2205](https://github.com/pbek/QOwnNotes/issues/2205), thank you @Waqar144)
+
 ## 21.8.7
 - fixed a status bar message without timeout
 - fall back to just counting a minimum of 3 headline separator characters in a Markdown
