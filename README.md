@@ -12,6 +12,9 @@
 [Telegram Group](https://t.me/QOwnNotes) |
 [IRC Chat](https://web.libera.chat/#qownnotes) |
 [Gitter Chat](https://gitter.im/qownnotes/qownnotes) |
+[Mastodon](https://social.qownnotes.org/@qownnotes) |
+[Twitter](https://twitter.com/QOwnNotes) |
+[Facebook](https://www.facebook.com/QOwnNotes) |
 [QOwnNotes Web Companion Chrome extension](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) |
 [QOwnNotes Web App](https://app.qownnotes.org/)
 
