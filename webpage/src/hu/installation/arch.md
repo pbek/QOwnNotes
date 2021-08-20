@@ -33,7 +33,7 @@ Most szinkronizálhatja a csomagadatbázist, és telepítheti a csomagot a `pacm
 sudo pacman -Syy qownnotes
 ```
 
-[Közvetlen letöltés](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Arch_Extra)
+[Közvetlen letöltés](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra)
 
 ::: tip
 Természetesen ezt az adattárat használhatja más Arch Linux alapú disztribúciókkal is, például a Manjaróval.

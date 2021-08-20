@@ -50,4 +50,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Descarga directa](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_34) (este enlace de ejemplo es para Fedora 34)
+[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34) (este enlace de ejemplo es para Fedora 34)

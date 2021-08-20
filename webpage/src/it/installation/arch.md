@@ -33,7 +33,7 @@ uid           home:pbek OBS Project <home:pbek@build.opensuse.org>
 sudo pacman -Syy qownnotes
 ```
 
-[Download diretto](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Arch_Extra)
+[Download diretto](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra)
 
 ::: tip
 Ovviamente puoi anche usare questo repository con altre distribuzioni basate su Arch Linux, come Manjaro.

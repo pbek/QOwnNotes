@@ -49,4 +49,4 @@ apt-get update
 apt-get install qownnotes
 ```
 
-[Direkter Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/xUbuntu_16.10)
+[Direkter Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)

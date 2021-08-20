@@ -33,7 +33,7 @@ Sie können nun Ihre Paketdatenbank synchronisieren und das Paket mit `pacman` i
 sudo pacman -Syy qownnotes
 ```
 
-[Direkter Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Arch_Extra)
+[Direkter Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra)
 
 ::: tip
 Natürlich können Sie dieses Repository auch mit anderen Arch Linux-basierten Distributionen wie Manjaro verwenden.

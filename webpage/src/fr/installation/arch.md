@@ -33,7 +33,7 @@ Vous pouvez maintenant synchroniser votre base de données de packages et instal
 sudo pacman -Syy qownnotes
 ```
 
-[Téléchargement direct](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Arch_Extra)
+[Téléchargement direct](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra)
 
 ::: tip
 Bien sûr, vous pouvez également utiliser ce référentiel avec d'autres distributions basées sur Arch Linux, comme Manjaro.

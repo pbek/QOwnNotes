@@ -16,7 +16,7 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Descarga Directa](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Raspbian_10)
+[Descarga Directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_10)
 
 ## Raspbian 9.0
 
@@ -35,4 +35,4 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Descarga Directa](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Raspbian_9.0)
+[Descarga Directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_9.0)

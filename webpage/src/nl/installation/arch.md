@@ -33,7 +33,7 @@ U kunt nu uw pakketdatabase synchroniseren en het pakket installeren met `pacman
 sudo pacman -Syy qownnotes
 ```
 
-[Directe download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Arch_Extra)
+[Directe download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra)
 
 ::: tip
 Je kunt deze repository natuurlijk ook gebruiken met andere op Arch Linux gebaseerde distributies, zoals Manjaro.

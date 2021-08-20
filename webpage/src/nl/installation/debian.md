@@ -20,7 +20,7 @@ sudo apt-get install qownnotes
 Als u deze opslagplaats voor andere Debian Linux-versies gebruikt, zorg er dan voor dat u **Qt** op zijn minst **versie 5.8** hebt geïnstalleerd.
 :::
 
-[Directe download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Debian_10)
+[Directe download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10)
 
 ## Debian 9.0
 
@@ -42,7 +42,7 @@ sudo apt-get install qownnotes
 Als u deze opslagplaats voor andere Debian Linux-versies gebruikt, zorg er dan voor dat u **Qt** op zijn minst **versie 5.5** hebt geïnstalleerd.
 :::
 
-[Directe download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Debian_9.0)
+[Directe download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)
 
 ## Debian 8.0
 
@@ -64,4 +64,4 @@ sudo apt-get install qownnotes
 Als u deze opslagplaats voor andere Debian Linux-versies gebruikt, zorg er dan voor dat u **Qt** op zijn minst **versie 5.3** hebt geïnstalleerd.
 :::
 
-[Directe download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Debian_8.0)
+[Directe download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0)

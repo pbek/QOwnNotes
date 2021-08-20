@@ -20,7 +20,7 @@ sudo apt-get install qownnotes
 در صورتی که از این مخزن برای سایر نسخه های لینوکس دبیان استفاده می کنید، لطفاً مطمئن شوید که حداقل **نسخه 5.8** از **Qt** را نصب کرده اید.
 :::
 
-[بارگیری مستقیم](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Debian_10)
+[بارگیری مستقیم](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10)
 
 ## دبیان 9.0
 
@@ -42,7 +42,7 @@ sudo apt-get install qownnotes
 در صورتی که از این مخزن برای سایر نسخه های لینوکس دبیان استفاده می کنید، لطفاً مطمئن شوید که حداقل **نسخه 5.5** از **Qt** را نصب کرده اید.
 :::
 
-[بارگیری مستقیم](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Debian_9.0)
+[بارگیری مستقیم](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)
 
 ## دبیان 8.0
 
@@ -64,4 +64,4 @@ sudo apt-get install qownnotes
 در صورتی که از این مخزن برای سایر نسخه های لینوکس دبیان استفاده می کنید، لطفاً مطمئن شوید که حداقل **نسخه 5.3** از **Qt** را نصب کرده اید.
 :::
 
-[بارگیری مستقیم](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Debian_8.0)
+[بارگیری مستقیم](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0)

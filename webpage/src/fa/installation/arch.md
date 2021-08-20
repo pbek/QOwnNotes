@@ -33,7 +33,7 @@ uid           home:pbek OBS Project <home:pbek@build.opensuse.org>
 sudo pacman -Syy qownnotes
 ```
 
-[بارگیری مستقیم](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Arch_Extra)
+[بارگیری مستقیم](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra)
 
 ::: tip
 البته همچنین می توانید با سایر توزیع های مبتنی بر آرچ لینوکس نظیر مانجارو از این مخزن استفاده نمایید.
