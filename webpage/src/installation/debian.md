@@ -1,5 +1,27 @@
 # Install on Debian Linux
 
+## Debian 11.0
+
+Run the following shell commands to trust the repository.
+
+```bash
+wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_11/Release.key -O - | sudo apt-key add -
+```
+
+Run the following shell commands to add the repository and install QOwnNotes from there.
+
+```bash
+sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_11/ /' >> /etc/apt/sources.list.d/qownnotes.list"
+sudo apt-get update
+sudo apt-get install qownnotes
+```
+
+::: tip
+If you use this repository for other Debian Linux versions please make sure that you have **Qt** installed at least at **version 5.11**.
+:::
+
+[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Debian_11)
+
 ## Debian 10.0
 
 Run the following shell commands to trust the repository.
