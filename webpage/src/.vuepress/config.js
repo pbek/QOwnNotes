@@ -108,6 +108,8 @@ module.exports = {
     ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css' }],
     ['link', { rel: 'alternate', title: 'QOwnNotes Releases RSS', type: 'application/rss+xml', href: 'https://feeds.feedburner.com/QOwnNotesReleases' }],
     ['link', { rel: 'alternate', title: 'QOwnNotes Blog RSS', type: 'application/rss+xml', href: 'https://feeds.feedburner.com/QOwnNotesBlog' }],
+    ['link', { rel: 'me', href: 'https://social.qownnotes.org/@patrizio' }],
+    ['link', { rel: 'me', href: 'https://social.qownnotes.org/@qownnotes' }],
     // ['link', { rel: 'stylesheet', href: `https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css` }],
     // ['script', { src: `https://cdn.jsdelivr.net/npm/vue/dist/vue.js` }],
     // ['script', { src: `https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js` }],
