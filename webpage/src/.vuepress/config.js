@@ -716,5 +716,17 @@ module.exports = {
   ],
   markdown: {
     lineNumbers: true
+  },
+  chainWebpack: (config, isServer) => {
+    config.module.rules.delete('images')
+    config.module
+        .rule('images')
+        .test(/\.(png|jpe?g|gif)(\?.*)?$/)
+        .use('url-loader')
+        .loader('url-loader')
+        .options({
+          limit: 10000,
+          name: `assets/img/[name].[ext]` // we don't want a hash in the image filename, so we can use the image as og:image
+        })
   }
 }
