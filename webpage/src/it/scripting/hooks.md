@@ -104,7 +104,7 @@ insertingFromMimeDataHook
 /**
   * Questa funzione viene chiamata quando html o un file multimediale viene incollato in una nota con `Ctrl + Maiusc + V`
   *
-  * @param text text dell'oggetto QMimeData
+  * @param text testo dell'oggetto QMimeData
   * @param html html dell'oggetto QMimeData
   * @ restituisce la stringa che deve essere inserita al posto del testo dall'oggetto QMimeData
  */
@@ -126,8 +126,8 @@ handleNoteTextFileNameHook
   * Ti permette di modificare il nome del file della nota
   * Tieni presente che devi preoccuparti tu stesso dei nomi duplicati!
  *
-  * Restituisce una stringa vuota se il nome del file della nota dovrebbe
-  * non essere modificato
+  * Restituisce una stringa vuota se il nome del file della nota non deve
+  * essere modificato
   *
   * @param {NoteApi} note - l'oggetto nota della nota memorizzata
   * @return {string} il nome del file della nota
@@ -247,7 +247,7 @@ encryptionHook
 function encryptionHook(text, password, decrypt);
 ```
 
-Puoi dare un'occhiata all'esempio [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml) or [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-rot13.qml).
+Puoi dare un'occhiata all'esempio [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml) o [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-rot13.qml).
 
 noteTaggingHook
 ---------------

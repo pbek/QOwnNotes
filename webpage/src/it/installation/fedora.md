@@ -33,7 +33,7 @@ Esegui i seguenti comandi shell come root per considerare attendibile il reposit
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
 ```
 
-Eseguire i seguenti comandi della shell come root per aggiungere il repository e installare QOwnNotes da lì.
+Esegui i seguenti comandi della shell come root per aggiungere il repository e installare QOwnNotes da lì.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -50,4 +50,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34) (this example link is for Fedora 34)
+[Download diretto](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34) (questo link di esempio è per Fedore 34)

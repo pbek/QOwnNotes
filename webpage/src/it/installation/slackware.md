@@ -13,7 +13,7 @@ slackpkg update
 slackpkg install libproxy js185-1.0.0-x86_64-1
 ```
 
-Quindi puoi controllare il repository slackbuilds di QOwnNotes e creare l'applicazione.
+Quindi puoi recuperare il repository slackbuilds di QOwnNotes e creare l'applicazione.
 
 ```bash
 cd /tmp
@@ -33,7 +33,7 @@ cd /tmp wget "http://bear.alienbase.nl/mirrors/people/alien/sbrepos/14.1/x86_64/
 sudo installpkg qt5-5.5.1-x86_64-4alien.txz
 ```
 
-Quindi puoi controllare il repository slackbuilds di QOwnNotes e creare l'applicazione.
+Quindi puoi recuperare il repository slackbuilds di QOwnNotes e creare l'applicazione.
 
 ```bash
 cd /tmp

@@ -8648,7 +8648,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
 <source>&amp;Insert</source>
-<translation>&amp;ඇතුළු කරන්න</translation>
+<translation>ඇතුළු කරන්න</translation>
 </message>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
@@ -8658,7 +8658,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
 <source>&amp;Remove</source>
-<translation>&amp;ඉවත් කරන්න</translation>
+<translation>ඉවත් කරන්න</translation>
 </message>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
@@ -8732,7 +8732,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="68"/>
 <source>&amp;Cancel</source>
-<translation>&amp;අවලංගු කරන්න</translation>
+<translation>අවලංගු කරන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="190"/>
@@ -8790,7 +8790,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
 <source>%p% downloaded</source>
-<translation>%p% බාගත කර ඇත</translation>
+<translation>%p% බාගත වී ඇත</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="51"/>
@@ -8810,7 +8810,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="74"/>
 <source>&amp;Skip version</source>
-<translation>&amp;අනුවාදය මඟ හරින්න</translation>
+<translation>අනුවාදය මඟහරින්න</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="82"/>
@@ -8825,7 +8825,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="91"/>
 <source>&amp;Cancel</source>
-<translation>&amp;අවලංගු කරන්න</translation>
+<translation>අවලංගු කරන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="244"/>
@@ -8851,7 +8851,7 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="461"/>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
 <source>File error</source>
-<translation>ගොනු දෝෂයකි</translation>
+<translation>ගොනුවේ දෝෂයකි</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="270"/>
@@ -8935,7 +8935,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Restart</source>
-<translation>නැවත අරම්භන්න</translation>
+<translation>නැවත අරඹන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
@@ -9141,7 +9141,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="88"/>
 <source>&amp;Back</source>
-<translation>&amp;ආපසු</translation>
+<translation>ආපසු(&amp;B)</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="99"/>
@@ -9156,13 +9156,13 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="139"/>
 <source>&amp;Cancel</source>
-<translation>&amp;අවලංගු කරන්න</translation>
+<translation>අවලංගු කරන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="168"/>
 <location filename="../dialogs/welcomedialog.cpp" line="219"/>
 <source>Note folder</source>
-<translation>සටහන් ෆෝල්ඩරය</translation>
+<translation>සටහන් බහාලුම</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="191"/>
