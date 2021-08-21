@@ -722,10 +722,9 @@ module.exports = {
     config.module
         .rule('images')
         .test(/\.(png|jpe?g|gif)(\?.*)?$/)
-        .use('url-loader')
-        .loader('url-loader')
+        .use('file-loader')
+        .loader('file-loader')
         .options({
-          limit: 10000,
           name: `assets/img/[name].[ext]` // we don't want a hash in the image filename, so we can use the image as og:image
         })
   }
