@@ -1,6 +1,6 @@
 ---
 title: QOwnNotes Mastodon page
-description: 
+description: QOwnNotes now has its own Mastodon page.
 date: 2021-08-20
 image: /img/blog/mastodon.png
 order: 20210820000001
