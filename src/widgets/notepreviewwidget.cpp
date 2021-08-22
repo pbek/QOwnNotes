@@ -255,8 +255,8 @@ void NotePreviewWidget::contextMenuEvent(QContextMenuEvent *event) {
         menu->addSeparator();
     }
 
-    auto *copyImageAction = new QAction(this);
-    auto *copyLinkLocationAction = new QAction(this);
+    QAction *copyImageAction = nullptr;
+    QAction *copyLinkLocationAction = nullptr;
 
     // check if clicked object was an image
     if (isImageFormat) {
@@ -264,7 +264,7 @@ void NotePreviewWidget::contextMenuEvent(QContextMenuEvent *event) {
         auto *copyImageClipboardAction = menu->addAction(tr("Copy image to clipboard"));
 
         connect(copyImageClipboardAction, &QAction::triggered, this,
-                [this, format]() {
+                [format]() {
                     QString imagePath = format.toImageFormat().name();
                     QUrl imageUrl = QUrl(imagePath);
                     QClipboard *clipboard = QApplication::clipboard();
@@ -314,6 +314,48 @@ void NotePreviewWidget::contextMenuEvent(QContextMenuEvent *event) {
             exportAsHTMLFile();
         }
     }
+}
+
+QVariant NotePreviewWidget::loadResource(int type, const QUrl &file)
+{
+    if (type == QTextDocument::ImageResource && file.isValid()) {
+        QString fileName = file.toLocalFile();
+        int fileSize = QFileInfo(fileName).size();
+
+        // We only use our cache for images > 512KB
+        if (fileSize > (512 * 1000)) {
+            QPixmap pm;
+            if (lookupCache(fileName, pm)) {
+                return pm;
+            }
+
+            pm = QPixmap(fileName);
+            insertInCache(fileName, pm);
+            return pm;
+        }
+    }
+
+    return QTextBrowser::loadResource(type, file);
+}
+
+bool NotePreviewWidget::lookupCache(const QString &key, QPixmap &pm)
+{
+    auto it = std::find_if(_largePixmapCache.begin(), _largePixmapCache.end(), [key](const LargePixmap& l) {
+        return key == l.fileName;
+    });
+    if (it == _largePixmapCache.end())
+        return false;
+    pm = it->pixmap;
+    return true;
+}
+
+void NotePreviewWidget::insertInCache(const QString &key, const QPixmap &pm)
+{
+    _largePixmapCache.push_back({key, std::move(pm)});
+
+    // limit to 6 images
+    while (_largePixmapCache.size() > 6)
+        _largePixmapCache.erase(_largePixmapCache.begin());
 }
 
 void NotePreviewWidget::exportAsHTMLFile() {

@@ -2270,6 +2270,18 @@ static inline int nonOverlapCount(const QString &str, const QChar c = '`') {
     return count;
 }
 
+struct ImageSize {
+    QString fileName;
+    int size;
+};
+static std::vector<ImageSize> *getImageSizeCache()
+{
+    static std::vector<ImageSize> _imageSizesCache;
+    if (_imageSizesCache.size() > 100)
+        _imageSizesCache.erase(_imageSizesCache.begin());
+    return &_imageSizesCache;
+}
+
 /**
  * Converts a markdown string for a note to html
  *
@@ -2561,11 +2573,39 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
         QStringLiteral("<img src=\"(file:\\/\\/[^\"]+)\""));
     i = re.globalMatch(result);
 
+    auto getImageSizeFromCache = [](const QString& image) {
+        auto cache = getImageSizeCache();
+        auto it = std::find_if(cache->begin(), cache->end(), [image](const ImageSize& i){
+            return i.fileName == image;
+        });
+        return it == cache->end() ? -1 : it->size;
+    };
+
     while (i.hasNext()) {
         const QRegularExpressionMatch match = i.next();
         const QString fileUrl = match.captured(1);
         const QString fileName = QUrl(fileUrl).toLocalFile();
-        const QImage image(fileName);
+
+        int imageWidth = 0;
+
+        // If file is greater than 1MB just limit its width already
+        constexpr int OneMB = 1000 * 1000;
+        if (QFileInfo(fileName).size() > OneMB) {
+            imageWidth = maxImageWidth;
+        }
+
+        // try the cache
+        if (imageWidth == 0) {
+            imageWidth = getImageSizeFromCache(fileName);
+        }
+
+        // get image size using QImage and cache it
+        if (imageWidth == -1) {
+            const QImage image(fileName);
+            imageWidth = image.width();
+            getImageSizeCache()->push_back({fileName, imageWidth});
+        }
+
 
         if (forExport) {
             result.replace(
@@ -2578,7 +2618,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
         } else {
             // for preview
             // cap the image width at maxImageWidth (note text view width)
-            const int originalWidth = image.width();
+            const int originalWidth = imageWidth;
             const int displayWidth =
                 (originalWidth > maxImageWidth) ? maxImageWidth : originalWidth;
 
