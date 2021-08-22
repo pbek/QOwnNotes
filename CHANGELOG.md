@@ -2,7 +2,7 @@
 
 ## 21.8.9
 - there now is a new scripting function `script.insertAttachmentFile()` to insert
-  an attachment file into the "attachments" folder (for [#2215](https://github.com/pbek/QOwnNotes/issues/2215))
+  an attachment file into the `attachments` folder (for [#2215](https://github.com/pbek/QOwnNotes/issues/2215))
     - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#inserting-an-attachment-file-into-the-attachmentn-folder)
 
 ## 21.8.8
