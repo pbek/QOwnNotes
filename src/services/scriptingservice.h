@@ -69,6 +69,8 @@ class ScriptingService : public QObject {
                                            bool returnUrlOnly = false);
     Q_INVOKABLE QString insertMediaFile(const QString &mediaFilePath,
                                         bool returnUrlOnly = false);
+    Q_INVOKABLE QString insertAttachmentFile(const QString &attachmentFilePath,
+                                 const QString &fileName, bool returnUrlOnly);
     Q_INVOKABLE void registerCustomAction(
         const QString &identifier, const QString &menuText,
         const QString &buttonText = QString(), const QString &icon = QString(),

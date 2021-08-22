@@ -1459,6 +1459,33 @@ QString ScriptingService::insertMediaFile(const QString &mediaFilePath,
 }
 
 /**
+ * QML wrapper to insert an attachment file into the "attachments" folder and
+ * returning the attachment url or the markdown text of the attachment
+ * relative to the current note
+ *
+ * @param {QString} attachmentFilePath
+ * @param {QString} fileName to use in the markdown
+ * @param {bool} returnUrlOnly if true only the attachment url will be returned
+ * (default false)
+ * @return {QString} the attachment markdown or url
+ */
+QString ScriptingService::insertAttachmentFile(const QString &attachmentFilePath,
+                                               const QString &fileName,
+                                               bool returnUrlOnly) {
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("scripting/") % QString(__func__));
+
+    auto *attachmentFile = new QFile(attachmentFilePath);
+
+    if (!attachmentFile->exists()) {
+        return {};
+    }
+
+    return _currentNote->getInsertAttachmentMarkdown(attachmentFile, fileName,
+                                                     returnUrlOnly);
+}
+
+/**
  * Regenerates the note preview
  */
 void ScriptingService::regenerateNotePreview() const {

@@ -211,6 +211,31 @@ var markdown = script.insertMediaFile("/path/to/your/image.png");
 You may want to take a look at the example
 [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
 
+Inserting an attachment file into the attachments folder
+--------------------------------------------------------
+
+### Method call and parameters
+```cpp
+ * QML wrapper to insert an attachment file into the `attachments` folder and
+ * returning the attachment url or the markdown text of the attachment
+ * relative to the current note
+ *
+ * @param {QString} attachmentFilePath
+ * @param {QString} fileName to use in the markdown
+ * @param {bool} returnUrlOnly if true only the attachment url will be returned
+ * (default false)
+ * @return {QString} the attachment markdown or url
+ */
+QString ScriptingService::insertAttachmentFile(const QString &attachmentFilePath,
+                                               const QString &fileName,
+                                               bool returnUrlOnly);
+```
+
+### Example
+```js
+var markdown = script.insertAttachmentFile("/path/to/your/file.png");
+```
+
 Regenerating the note preview
 -----------------------------
 

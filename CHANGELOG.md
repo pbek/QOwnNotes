@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.8.9
+- there now is a new scripting function `script.insertAttachmentFile()` to insert
+  an attachment file into the "attachments" folder (for [#2215](https://github.com/pbek/QOwnNotes/issues/2215))
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#inserting-an-attachment-file-into-the-attachmentn-folder)
+
 ## 21.8.8
 - highlighting support for numbered list checkboxes was added
   (for [#134](https://github.com/pbek/qmarkdowntextedit/issues/134), thank you @Waqar144)
