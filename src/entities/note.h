@@ -18,7 +18,7 @@ class QSqlQuery;
 
 class Note {
    public:
-    explicit Note();
+    Note();
 
     int getId() const;
 

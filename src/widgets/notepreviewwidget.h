@@ -44,6 +44,11 @@ class NotePreviewWidget : public QTextBrowser {
 
     void contextMenuEvent(QContextMenuEvent *event) override;
 
+    QVariant loadResource(int type, const QUrl& file) override;
+
+    bool lookupCache(const QString &key, QPixmap &pm);
+    void insertInCache(const QString &key, const QPixmap &pm);
+
    public slots:
     void hide();
 
@@ -52,4 +57,11 @@ class NotePreviewWidget : public QTextBrowser {
 
    private:
     QList<QMovie *> _movies;
+    QString _currentFile;
+
+    struct LargePixmap {
+        QString fileName;
+        QPixmap pixmap;
+    };
+    std::vector<LargePixmap> _largePixmapCache;
 };
