@@ -108,7 +108,7 @@ QStringList NotePreviewWidget::extractGifUrls(const QString &text) const {
     QSet<QString> urlSet;
 
 #if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
-    static QRegExp regex(R"(<img[^>]+src=\"(file:\/\/\/[^\"]+\.gif)\")",
+    QRegExp regex(R"(<img[^>]+src=\"(file:\/\/\/[^\"]+\.gif)\")",
                          Qt::CaseInsensitive);
 
     int pos = 0;

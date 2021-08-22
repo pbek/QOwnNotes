@@ -102,8 +102,8 @@ QVector<Node> NavigationWidget::parseDocument(
             (elementType > MarkdownHighlighter::H6)) {
             continue;
         }
-        QString text =
-            block.text().remove(QRegularExpression(QStringLiteral("^#+\\s+")));
+        static const QRegularExpression re(QStringLiteral("^#+\\s+"));
+        QString text = block.text().remove(re);
 
         if (text.isEmpty()) {
             continue;
