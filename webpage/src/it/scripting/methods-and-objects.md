@@ -197,7 +197,32 @@ var markdown = script.insertMediaFile("/path/to/your/image.png");
 
 Puoi dare un'occhiata all'esempio [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
 
-Rigenerazione dell'anteprima della nota
+Inserting an attachment file into the attachments folder
+--------------------------------------------------------
+
+### Chiamata al metodo e parametri
+```cpp
+ * QML wrapper to insert an attachment file into the `attachments` folder and
+ * returning the attachment url or the markdown text of the attachment
+ * relative to the current note
+ *
+ * @param {QString} attachmentFilePath
+ * @param {QString} fileName to use in the markdown
+ * @param {bool} returnUrlOnly if true only the attachment url will be returned
+ * (default false)
+ * @return {QString} the attachment markdown or url
+ */
+QString ScriptingService::insertAttachmentFile(const QString &attachmentFilePath,
+                                               const QString &fileName,
+                                               bool returnUrlOnly);
+```
+
+### Esempio
+```js
+var markdown = script.insertAttachmentFile("/path/to/your/file.png");
+```
+
+Regenerating the note preview
 -----------------------------
 
 Aggiorna l'anteprima della nota.
@@ -205,7 +230,7 @@ Aggiorna l'anteprima della nota.
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Rigenera l'anteprima della nota
+ * Regenerates the note preview
  */
 QString ScriptingService::regenerateNotePreview();
 ```
@@ -217,29 +242,29 @@ script.regenerateNotePreview();
 
 Puoi dare un'occhiata all'esempio [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
 
-Registrazione di un'azione personalizzata
+Registering a custom action
 ---------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
-/ **
-  * Registra un'azione personalizzata
-  *
-  * @param identifier l'identificatore dell'azione
-  * @param menu Inserisce il testo mostrato nel menu
-  * @param button Inserisce il testo mostrato nel pulsante
-  * (nessun pulsante verrà visualizzato se vuoto)
-  * @param icon il percorso del file dell'icona o il nome di un'icona del tema freedesktop
-  * troverai un elenco di icone qui:
-  * https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
-  * @param useInNoteEditContextMenu se true usa l'azione nella modifica della nota
-  * menu contestuale (predefinito: falso)
-  * @param hideButtonInToolbar se true il pulsante non verrà mostrato nel file
-  * barra degli strumenti delle azioni personalizzate (impostazione predefinita: false)
-  * @param useInNoteListContextMenu se true usa l'azione nell'elenco delle note
-  * menu contestuale (predefinito: false)
-  */
-void ScriptingService :: registerCustomAction (identificatore QString,
+/**
+ * Registers a custom action
+ *
+ * @param identifier the identifier of the action
+ * @param menuText the text shown in the menu
+ * @param buttonText the text shown in the button
+ *                   (no button will be viewed if empty)
+ * @param icon the icon file path or the name of a freedesktop theme icon
+ *             you will find a list of icons here:
+ *             https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
+ * @param useInNoteEditContextMenu if true use the action in the note edit
+ *                                 context menu (default: false)
+ * @param hideButtonInToolbar if true the button will not be shown in the
+ *                            custom action toolbar (default: false)
+ * @param useInNoteListContextMenu if true use the action in the note list
+ *                                 context menu (default: false)
+ */
+void ScriptingService::registerCustomAction(QString identifier,
                                             QString menuText,
                                             QString buttonText,
                                             QString icon,
@@ -250,16 +275,16 @@ void ScriptingService :: registerCustomAction (identificatore QString,
 
 ### Esempio
 ```js
-// aggiunge un'azione personalizzata senza un pulsante
+// add a custom action without a button
 script.registerCustomAction("mycustomaction1", "Menu text");
 
-// aggiunge un'azione personalizzata con un pulsante
+// add a custom action with a button
 script.registerCustomAction("mycustomaction1", "Menu text", "Button text");
 
-// aggiungi un'azione personalizzata con un pulsante e un'icona del tema freedesktop
+// add a custom action with a button and freedesktop theme icon
 script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "task-new");
 
-// aggiunge un'azione personalizzata con un pulsante e un'icona da un file
+// add a custom action with a button and an icon from a file
 script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
 ```
 
@@ -269,16 +294,16 @@ script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "/usr
 Puoi anche attivare un'azione personalizzata dopo che l'applicazione è stata avviata con il parametro `--action customAction_<identifier>`. Per maggiori informazioni dai un'occhiata a [Attiva le azioni del menu dopo l'avvio](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
 :::
 
-Registrazione di un'etichetta
+Registering a label
 -------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Registra un'etichetta su cui scrivere
-  *
-  * @param identifier l'identificatore dell'etichetta
-  * @param text il testo mostrato nell'etichetta (opzionale)
+ * Registers a label to write to
+ *
+ * @param identifier the identifier of the label
+ * @param text the text shown in the label (optional)
  */
 void ScriptingService::registerLabel(QString identifier, QString text);
 ```
@@ -298,16 +323,16 @@ Le etichette saranno visibili nel widget del dock di scripting.
 
 Potresti quindi voler dare un'occhiata allo script di esempio [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
 
-Impostazione del testo di un'etichetta registrata
+Setting the text of a registered label
 --------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Imposta il testo di un'etichetta registrata
-  *
-  * @param identifier l'identificatore dell'etichetta
-  * @param text il testo mostrato nell'etichetta
+ * Sets the text of a registered label
+ *
+ * @param identifier the identifier of the label
+ * @param text the text shown in the label
  */
 void ScriptingService::setLabelText(QString identifier, QString text);
 ```
@@ -321,15 +346,15 @@ script.setLabelText("counter-label", "counter text");
 
 Potresti quindi voler dare un'occhiata allo script di esempio [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
 
-Creazione di una nuova nota
+Creating a new note
 -------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Crea una nuova nota
-  *
-  * @param text il testo della nota
+ * Creates a new note
+ *
+ * @param text the note text
  */
 void ScriptingService::createNote(QString text);
 ```
@@ -350,7 +375,7 @@ note.renameNoteFile('your-filename');
 ```
 :::
 
-Accesso agli appunti
+Accessing the clipboard
 -----------------------
 
 ### Chiamata al metodo e parametri
@@ -371,13 +396,13 @@ var clipboardHtml = script.clipboard(true);
 
 Puoi dare un'occhiata all'esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-Scrivi il testo nella finestra di modifica del testo della nota
+Write text to the note text edit
 --------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Scrive il testo nella posizione corrente del cursore nella finestra di modifica del testo della nota
+ * Writes text to the current cursor position in the note text edit
  *
  * @param text
  */
@@ -386,7 +411,7 @@ void ScriptingService::noteTextEditWrite(QString text);
 
 ### Esempio
 ```js
-// scrive il testo nella finestra di modifica del testo della nota
+// write text to the note text edit
 script.noteTextEditWrite("My custom text");
 ```
 
@@ -394,35 +419,34 @@ Potresti voler esaminare l'azione personalizzata  `transformTextRot13` nel file 
 
 Puoi usarlo insieme a `noteTextEditSelectAll` per sovrascrivere l'intero testo della nota corrente.
 
-Leggi il testo selezionato nella finestra di modifica del testo della nota
+Read the selected text in the note text edit
 --------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Legge il testo selezionato nella finestra di modifica del testo della nota
+ * Reads the selected text in the note text edit
  *
  * @return
  */
 QString ScriptingService::noteTextEditSelectedText();
-
 ```
 
 ### Esempio
 ```js
-// legge il testo selezionato nella finestra di modifica del testo della nota
+// read the selected text from the note text edit
 var text = script.noteTextEditSelectedText();
 ```
 
 Potresti voler esaminare l'azione personalizzata  `transformTextRot13` nel file esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-Seleziona tutto il testo nella finestra di modifica del testo della nota
+Select all text in the note text edit
 -------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * Seleziona tutto il testo nella finestra di modifica del testo della nota
+ * Selects all text in the note text edit
  */
 void ScriptingService::noteTextEditSelectAll();
 ```
@@ -434,14 +458,14 @@ script.noteTextEditSelectAll();
 
 Puoi usarlo insieme a `noteTextEditWrite` per sovrascrivere l'intero testo della nota corrente.
 
-Seleziona la riga corrente nella finestra di modifica del testo della nota
+Select the current line in the note text edit
 ---------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Seleziona la riga corrente nella finestra di modifica del testo della nota
-  */
+ * Selects the current line in the note text edit
+ */
 void ScriptingService::noteTextEditSelectCurrentLine();
 ```
 
@@ -450,14 +474,14 @@ void ScriptingService::noteTextEditSelectCurrentLine();
 script.noteTextEditSelectCurrentLine();
 ```
 
-Seleziona la parola corrente nella finestra di modifica del testo della nota
+Select the current word in the note text edit
 ---------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Seleziona la riga corrente nella finestra di modifica del testo della nota
-  */
+ * Selects the current line in the note text edit
+ */
 void ScriptingService::noteTextEditSelectCurrentWord();
 ```
 
@@ -466,13 +490,13 @@ void ScriptingService::noteTextEditSelectCurrentWord();
 script.noteTextEditSelectCurrentWord();
 ```
 
-Imposta il testo attualmente selezionato nella finestra di modifica del testo della nota
+Set the currently selected text in the note text edit
 -----------------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * Imposta il testo selezionato nella finestra di modifica del testo della nota
+ * Sets the currently selected text in the note text edit
  *
  * @param start
  * @param end
@@ -482,20 +506,20 @@ void ScriptingService::noteTextEditSetSelection(int start, int end);
 
 ### Esempio
 ```js
-// espande la selezione corrente di un carattere
+// expands the current selection by one character
 script.noteTextEditSetSelection(
     script.noteTextEditSelectionStart() - 1,
     script.noteTextEditSelectionEnd() + 1);
 ```
 
-Ottieni la posizione iniziale della selezione corrente nella finestra di modifica del testo della nota
+Get the start position of the current selection in the note text edit
 ---------------------------------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Restituisce la posizione iniziale della selezione corrente nella finestra di modifica del testo della nota
-  */
+ * Returns the start position of the current selection in the note text edit
+ */
 int ScriptingService::noteTextEditSelectionStart();
 ```
 
@@ -504,14 +528,14 @@ int ScriptingService::noteTextEditSelectionStart();
 script.log(script.noteTextEditSelectionStart());
 ```
 
-Ottieni la posizione finale della selezione corrente nella finestra di modifica del testo della nota
+Get the end position of the current selection in the note text edit
 -------------------------------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Restituisce la posizione finale della selezione corrente nella finestra di modifica del testo della nota
-  */
+ * Returns the end position of the current selection in the note text edit
+ */
 int ScriptingService::noteTextEditSelectionEnd();
 ```
 
@@ -520,15 +544,15 @@ int ScriptingService::noteTextEditSelectionEnd();
 script.log(script.noteTextEditSelectionEnd());
 ```
 
-Impostare il cursore del testo nella finestra di modifica del testo della nota su una determinata posizione
+Set the text cursor in the note text edit to a certain position
 ---------------------------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * Imposta il cursore del testo nella finestra di modifica del testo nella nota su una determinata posizione
- * 0 è l'inizio della nota
- * caso speciale: -1 è la fine della nota
+ * Sets the text cursor in the note text edit to a certain position
+ * 0 would be the beginning of the note
+ * special case: -1 would be the end of the note
  *
  * @param position
  */
@@ -537,22 +561,22 @@ void ScriptingService::noteTextEditSetCursorPosition(int position);
 
 ### Esempio
 ```js
-// salta all'undicesimo carattere nella nota
+// jump to the 11th character in the note
 script.noteTextEditSetCursorPosition(10);
 
-// salta alla fine della nota
+// jump to the end of the note
 script.noteTextEditSetCursorPosition(-1);
 ```
 
-Ottieni la posizione corrente del cursore del testo nella finestra di modifica del testo della nota
+Get the current position of the text cursor in the note text edit
 -----------------------------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Restituisce la posizione corrente del cursore del testo nella finestra di modifica del testo della nota
-  * 0 sarebbe l'inizio della nota
-  */
+ * Returns the current position of the text cursor in the note text edit
+ * 0 would be the beginning of the note
+ */
 int ScriptingService::noteTextEditCursorPosition();
 ```
 
@@ -561,18 +585,17 @@ int ScriptingService::noteTextEditCursorPosition();
 script.log(script.noteTextEditCursorPosition());
 ```
 
-Leggi la parola corrente dalla finestra di modifica del testo della nota
+Read the current word from the note text edit
 ---------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * Legge la parola corrente dalla finestra di modifica del testo della
- * nota
+ * Reads the current word in the note text edit
  *
- * @param withPreviousCharacters recupera ulteriori caratteri all'inizio,
- *                               per ricevere caratteri come "@" che non
- *                               sono caratteri di parole
+ * @param withPreviousCharacters also get more characters at the beginning
+ *                               to get characters like "@" that are not
+ *                               word-characters
  * @return
  */
 QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
@@ -580,13 +603,13 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 
 ### Esempio
 ```js
-// legge la parola corrente dalla finestra di modifica del testo della nota
+// read the current word in the note text edit
 var text = script.noteTextEditCurrentWord();
 ```
 
 Puoi dare un'occhiata all'esempio [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
 
-Controlla se la piattaforma è Linux, OS X o Windows
+Check whether platform is Linux, OS X or Windows
 ------------------------------------------------
 
 ### Chiamata al metodo e parametri
@@ -599,46 +622,43 @@ bool ScriptingService::platformIsWindows();
 ### Esempio
 ```js
 if (script.platformIsLinux()) {
-    // eseguito solamente in Linux
+    // only will be executed if under Linux
 }
 ```
 
-Contrassegna la nota corrente
+Tag the current note
 --------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Contrassegna la nota corrente con un'entichetta denominata tagName
-  *
-  * @param tagName
-  */
+ * Tags the current note with a tag named tagName
+ *
+ * @param tagName
+ */
 void ScriptingService::tagCurrentNote(QString tagName);
 ```
 
 ### Esempio
 ```js
-// aggiungi un'etichetta "preferito" alla nota corrente
-script.tagCurrentNote("preferito");
+// add a "favorite" tag to the current note
+script.tagCurrentNote("favorite");
 ```
 
 Potresti voler dare un'occhiata all'azione personalizzata `favoriteNote` nell'esempio [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml).
 
-Crea o recupera un'etichetta dal una lista di elementi
+Create or fetch a tag by its name breadcrumb list
 -------------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * Recupera o crea un'etichetta tramite la lista dei suoi nomi
- * L'elemento nameList[0] è il più alto nella gerarchia (con parentId:
- * 0)
+ * Fetches or creates a tag by its "breadcrumb list" of tag names
+ * Element nameList[0] would be highest in the tree (with parentId: 0)
  *
  * @param nameList
- * @param createMissing {bool} se true (default) tutte le etichette
- *                             mancanti vengono create
- * @return TagApi oggetto associateo all'etichetta alla massima
- *                profondità
+ * @param createMissing {bool} if true (default) all missing tags will be created
+ * @return TagApi object of deepest tag of the name breadcrumb list
  */
 TagApi *ScriptingService::getTagByNameBreadcrumbList(
     const QStringList &nameList, bool createMissing);
@@ -646,13 +666,13 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
 
 ### Esempio
 ```js
-// crea tutte le etichette fino al terzo livello e restituisce l'oggetto
-// etichetta associato a "level3" che, nell'albero delle etichette, sarà:
+// creates all tags until the 3rd level and returns the tag object for
+// tag "level3", which would look like that in the tag tree:
 // level1 > level2 > level3
 var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
 ```
 
-Cerca le etichette per nome
+Search for tags by name
 -----------------------
 
 ### Chiamata al metodo e parametri
@@ -674,18 +694,18 @@ var tags = script.searchTagsByName("game");
 
 Puoi dare un'occhiata all'esempio [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
 
-Cerca note in base al testo della nota
+Search for notes by note text
 -----------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Restituisce un elenco di ID nota di tutte le note con un determinato testo nel testo della nota
-  *
-  * Sfortunatamente non esiste un modo semplice per usare una QList<NoteApi*> in QML, quindi noi
-  * può trasferire solo gli ID della nota
-  *
-  * @return {QList<int>} elenco di ID note
+ * Returns a list of note ids of all notes with a certain text in the note text
+ *
+ * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
+ * can only transfer the note ids
+ *
+ * @return {QList<int>} list of note ids
  */
 QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
 ```
@@ -703,13 +723,13 @@ noteIds.forEach(function (noteId){
 
 Puoi dare un'occhiata all'esempio [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/unique-note-id.qml).
 
-Aggiungi un foglio di stile personalizzato
+Add a custom stylesheet
 -----------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Aggiunge un foglio di stile personalizzato all'applicazione
+ * Adds a custom stylesheet to the application
  *
  * @param stylesheet
  */
@@ -734,7 +754,7 @@ Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-referenc
 
 If you want to inject styles into html preview to alter the way notes are previewed please look at [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
-Ricaricamento del motore di scripting
+Reloading the scripting engine
 ------------------------------
 
 ### Chiamata al metodo e parametri
@@ -751,7 +771,7 @@ void ScriptingService::reloadScriptingEngine();
 script.reloadScriptingEngine();
 ```
 
-Recupero di una nota in base al nome del file
+Fetching a note by its file name
 --------------------------------
 
 ### Chiamata al metodo e parametri
@@ -773,7 +793,7 @@ NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
 script.fetchNoteByFileName("my note.md");
 ```
 
-Recupero di una nota dal suo ID
+Fetching a note by its id
 -------------------------
 
 ### Chiamata al metodo e parametri
@@ -795,7 +815,7 @@ script.fetchNoteById(243);
 
 You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Controllo dell'esistenza di una nota tramite il nome del file
+Checking if a note exists by its file name
 ------------------------------------------
 
 ### Chiamata al metodo e parametri
@@ -821,7 +841,7 @@ script.noteExistsByFileName("my note.md", note.id);
 
 You may want to take a look at the example [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).
 
-Copia del testo negli appunti
+Copying text into the clipboard
 -------------------------------
 
 ### Chiamata al metodo e parametri
@@ -843,7 +863,7 @@ script.setClipboardText("text to copy");
 
 You may want to take a look at the example [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).
 
-Saltando a una nota
+Jumping to a note
 -----------------
 
 ### Chiamata al metodo e parametri
@@ -864,7 +884,7 @@ script.setCurrentNote(note);
 
 Puoi dare un'occhiata all'esempio [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
 
-Passaggio a una sottocartella di note
+Jumping to a note subfolder
 ---------------------------
 
 ### Chiamata al metodo e parametri
@@ -893,7 +913,7 @@ script.jumpToNoteSubFolder("a sub folder/sub");
 È possibile creare una nuova sottocartella delle note nella sottocartella corrente chiamando [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
 :::
 
-Visualizzazione di una finestra di messaggio informativo
+Showing an information message box
 ----------------------------------
 
 ### Chiamata al metodo e parametri
@@ -913,7 +933,7 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 script.informationMessageBox("The text I want to show", "Some optional title");
 ```
 
-Visualizzazione di una finestra di messaggio informativo
+Showing a question message box
 ------------------------------
 
 ### Chiamata al metodo e parametri
@@ -947,13 +967,13 @@ Per informazioni sui pulsanti vedere [StandardButton](https://doc.qt.io/qt-5/qme
 
 Potresti anche dare un'occhiata all'esempio [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
-Visualizzazione di una finestra di dialogo Apri file
+Showing an open file dialog
 ---------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Mostra una finestra di dialogo di apertura del file
+ * Shows an open file dialog
  *
  * @param caption (optional)
  * @param dir (optional)
@@ -970,10 +990,10 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
 ```
 
-Visualizzazione di una finestra di dialogo per il salvataggio del file
+Showing a save file dialog
 --------------------------
 
-### Chiamata al metodo e parametri
+### Method call and parameters
 ```cpp
 /**
  * Shows a save file dialog
@@ -995,14 +1015,14 @@ var fileName = script.getSaveFileName("Please select HTML file to save", "output
 
 Puoi dare un'occhiata all'esempio [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Registrazione delle variabili delle impostazioni dello script
+Registering script settings variables
 -------------------------------------
 
 Si prega di impostare le variabili di settaggio nel proprio script e registrarle in una proprietà nominata `settingsVariables`.
 
 L'utente può quindi impostare queste proprietà nelle impostazioni dello script.
 
-### Esempio
+### Example
 ```js
 // you have to define your registered variables so you can access them later
 property string myString;
@@ -1071,10 +1091,10 @@ Inoltre puoi sovrascrivere `settingsVariables` con una funzione speciale `regist
 ### Esempio
 ```js
 /**
-  * Registra nuovamente le variabili di impostazione
-  *
-  * Usa questo metodo se vuoi usare il codice per sovrascrivere le tue variabili, come l'impostazione
-  * i valori predefiniti dipendono dal sistema operativo.
+ * Registers the settings variables again
+ *
+ * Use this method if you want to use code to override your variables, like setting
+ * default values depended on the operating system.
  */
 function registerSettingsVariables() {
     if (script.platformIsWindows()) {
@@ -1086,15 +1106,15 @@ function registerSettingsVariables() {
 
 Potresti anche dare un'occhiata all'esempio [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
 
-Memorizzazione e caricamento di variabili persistenti
+Storing and loading persistent variables
 ----------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Memorizza una variabile persistente
-  * Queste variabili sono accessibili globalmente su tutti gli script
-  * Utilizza un prefisso significativo nella tua chiave come "PersistentVariablesTest / myVar"
+ * Stores a persistent variable
+ * These variables are accessible globally over all scripts
+ * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
  *
  * @param key {QString}
  * @param value {QVariant}
@@ -1102,13 +1122,12 @@ Memorizzazione e caricamento di variabili persistenti
 void ScriptingService::setPersistentVariable(const QString &key,
                                                 const QVariant &value);
 
-
-/ **
-  * Carica una variabile persistente
-  * Queste variabili sono accessibili globalmente su tutti gli script
-  *
+/**
+ * Loads a persistent variable
+ * These variables are accessible globally over all scripts
+ *
  * @param key {QString}
- * @param defaultValue {QVariant} valore di ritorno se l'impostazione non esiste (opzionale)
+ * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
  * @return
  */
 QVariant ScriptingService::getPersistentVariable(const QString &key,
@@ -1128,7 +1147,7 @@ Assicurati di utilizzare un prefisso significativo nella tua chiave come `Persis
 
 Potresti anche dare un'occhiata all'esempio [variabili-persistenti.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
 
-Caricamento delle variabili delle impostazioni dell'applicazione
+Loading application settings variables
 --------------------------------------
 
 ### Chiamata al metodo e parametri
@@ -1152,7 +1171,7 @@ script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
 
 Tieni presente che le impostazioni in realtà possono essere vuote, devi occupartene tu stesso. `defaultValue` is only used if the setting doesn't exist at all.
 
-Creazione di una directory della cache
+Creating a cache directory
 --------------------------
 
 È possibile memorizzare nella cache i file nella posizione cache predefinita del sistema.
@@ -1174,12 +1193,12 @@ QString ScriptingService::cacheDir(const QString &subDir) const;
 var cacheDirForScript = script.cacheDir("my-script-id");
 ```
 
-Cancellazione di una directory della cache
+Clearing a cache directory
 --------------------------
 
 Puoi cancellare i file della cache del tuo script passando il suo nome a clearCacheDir().
 
-### Chiamata al metodo e parametri
+### Method call and parameters
 ```cpp
 /**
  * Clears the cache directory for a script
@@ -1190,13 +1209,13 @@ Puoi cancellare i file della cache del tuo script passando il suo nome a clearCa
 bool ScriptingService::clearCacheDir(const QString &subDir) const;
 ```
 
-### Esempio
+### Example
 ```js
 // clear cache directory of my-script-id 
 script.clearCacheDir("my-script-id");
 ```
 
-Leggere il percorso della directory del tuo script
+Reading the path to the directory of your script
 ------------------------------------------------
 
 Se è necessario ottenere il percorso della directory in cui è posizionato lo script, ad esempio per caricare altri file, è necessario registrare un file `property string scriptDirPath;`. Questa proprietà verrà impostata con il percorso della directory dello script.
@@ -1216,7 +1235,7 @@ Script {
 }
 ```
 
-Conversione dei separatori di percorso in quelli nativi
+Converting path separators to native ones
 -----------------------------------------
 
 ### Chiamata al metodo e parametri
@@ -1240,7 +1259,7 @@ QString ScriptingService::toNativeDirSeparators(QString path);
 script.log(script.toNativeDirSeparators("c:/winnt/system32"));
 ```
 
-Conversione dei separatori di percorso da quelli nativi
+Converting path separators from native ones
 -------------------------------------------
 
 ### Chiamata al metodo e parametri
@@ -1262,7 +1281,7 @@ QString ScriptingService::fromNativeDirSeparators(QString path);
 script.log(script.fromNativeDirSeparators("c:\\winnt\\system32"));
 ```
 
-Recupero del separatore di directory nativo
+Getting the native directory separator
 --------------------------------------
 
 ### Chiamata al metodo e parametri
@@ -1281,7 +1300,7 @@ QString ScriptingService::dirSeparator();
 script.log(script.dirSeparator());
 ```
 
-Ottenere un elenco dei percorsi di tutte le note selezionate
+Getting a list of the paths of all selected notes
 -------------------------------------------------
 
 ### Chiamata al metodo e parametri
@@ -1302,7 +1321,7 @@ script.log(script.selectedNotesPaths());
 
 You may want to take a look at the example [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
 
-Ottenere un elenco degli ID di tutte le note selezionate
+Getting a list of the ids of all selected notes
 -----------------------------------------------
 
 ### Chiamata al metodo e parametri
@@ -1323,7 +1342,7 @@ script.log(script.selectedNotesIds());
 
 You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Attivazione di un'azione di menu
+Triggering a menu action
 ------------------------
 
 ### Chiamata al metodo e parametri
@@ -1353,20 +1372,21 @@ You may want to take a look at the example [disable-readonly-mode.qml](https://g
 You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Just search for the English menu title. Note that these texts can change over time.
 :::
 
-Apertura di una finestra di dialogo di input con una casella di selezione
+Opening an input dialog with a select box
 -----------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Apre una finestra di dialogo di input con una casella di selezione
-  *
-  * @param title {QString} titolo della finestra di dialogo
-  * @param label {QString} testo dell'etichetta della finestra di dialogo
-  * @param items {QStringList} elenco di elementi da selezionare
-  * @param current {int} indice dell'elemento che dovrebbe essere selezionato (predefinito: 0)
-  * @param editable {bool} se true il testo nella finestra di dialogo può essere modificato (impostazione predefinita: false)
-  * @return {QString} testo dell'elemento selezionato
+ * Opens an input dialog with a select box
+ *
+ * @param title {QString} title of the dialog
+ * @param label {QString} label text of the dialog
+ * @param items {QStringList} list of items to select
+ * @param current {int} index of the item that should be selected (default: 0)
+ * @param editable {bool} if true the text in the dialog can be edited (default: false)
+ * @return {QString} text of the selected item
+ */
 QString ScriptingService::inputDialogGetItem(
         const QString &title, const QString &label, const QStringList &items,
         int current, bool editable);
@@ -1381,7 +1401,7 @@ script.log(result);
 
 You may want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
-Apertura di una finestra di dialogo di input con una riga di modifica
+Opening an input dialog with a line edit
 ----------------------------------------
 
 ### Chiamata al metodo e parametri
@@ -1405,7 +1425,7 @@ var result = script.inputDialogGetText(
 script.log(result);
 ```
 
-Verificare se esiste un file
+Checking if a file exists
 -------------------------
 
 ### Chiamata al metodo e parametri
@@ -1424,7 +1444,7 @@ var result = script.fileExists(filePath);
 script.log(result);
 ```
 
-Leggere il testo da un file
+Reading text from a file
 ------------------------
 
 ### Chiamata al metodo e parametri
@@ -1448,13 +1468,13 @@ if(script.fileExists(filePath)){
 ```
 
 
-Scrittura di testo in un file
+Writing text to a file
 ----------------------
 
-### Chiamata al metodo e parametri
+### Method call and parameters
 ```cpp
 /**
-  * Scrive un testo in un file
+ * Writes a text to a file
  *
  * @param filePath {QString}
  * @param data {QString}
@@ -1464,7 +1484,7 @@ Scrittura di testo in un file
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### Esempio
+### Example
 ```js
 var result = script.writeToFile(filePath, html);
 script.log(result);
@@ -1472,7 +1492,7 @@ script.log(result);
 
 Puoi dare un'occhiata all'esempio [esporta-note-come-un-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Lavorare con websocket
+Working with websockets
 -----------------------
 
 È possibile controllare in remoto QOwnNotes utilizzando `WebSocketServer`.
