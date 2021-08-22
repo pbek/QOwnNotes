@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.8.10
+- the performance of notes with (especially large) images was improved massively
+  (for [#2078](https://github.com/pbek/QOwnNotes/issues/2078), thank you @Waqar144)
+    - the general load time of notes was improved as well
+
 ## 21.8.9
 - there now is a new scripting function `script.insertAttachmentFile()` to insert
   an attachment file into the `attachments` folder (for [#2215](https://github.com/pbek/QOwnNotes/issues/2215))
