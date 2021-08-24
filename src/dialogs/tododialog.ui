@@ -318,12 +318,17 @@
           <property name="contextMenuPolicy">
            <enum>Qt::CustomContextMenu</enum>
           </property>
-          <attribute name="headerVisible">
-           <bool>false</bool>
-          </attribute>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
           <column>
            <property name="text">
-            <string notr="true">1</string>
+            <string>Summary</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Due date</string>
            </property>
           </column>
          </widget>
@@ -332,6 +337,16 @@
          <widget class="QComboBox" name="todoListSelector">
           <property name="toolTip">
            <string>select your todo list</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QCheckBox" name="showDueTodayItemsOnlyCheckBox">
+          <property name="toolTip">
+           <string>This doesn't work for sub-items, because they may be hidden by the parent item!</string>
+          </property>
+          <property name="text">
+           <string>Show only items due today</string>
           </property>
          </widget>
         </item>
@@ -357,7 +372,6 @@
   <tabstop>reminderDateTimeEdit</tabstop>
   <tabstop>descriptionEdit</tabstop>
   <tabstop>reloadTodoListButton</tabstop>
-  <tabstop>showCompletedItemsCheckBox</tabstop>
   <tabstop>todoListSelector</tabstop>
   <tabstop>reminderCheckBox</tabstop>
  </tabstops>

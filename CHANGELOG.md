@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 21.8.11
+- a few features were added to the todo dialog (for [#2210](https://github.com/pbek/QOwnNotes/issues/2210))
+    - the due date is now shown in the todo items tree
+    - you can now sort the tree by summary or due date
+    - you can now choose to just view items that are due today
+        - note that this doesn't work for sub-items, because they may
+          be hidden by the parent item
+
 ## 21.8.10
 - the performance of notes with (especially large) images was improved massively
   (for [#2078](https://github.com/pbek/QOwnNotes/issues/2078), thank you @Waqar144)
