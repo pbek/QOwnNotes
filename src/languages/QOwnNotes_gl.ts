@@ -4372,12 +4372,12 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
 <translation>Exportou HTML bruto xerado</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="323"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="365"/>
 <source>HTML files</source>
 <translation>Arquivos HTML</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="324"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="366"/>
 <source>Export preview as raw HTML file</source>
 <translation>Exporta a previsualización como ficheiro HTML en bruto</translation>
 </message>
@@ -4599,17 +4599,17 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
 <translation>Nota</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2600"/>
+<location filename="../entities/note.cpp" line="2640"/>
 <source>Could not read image file: %1</source>
 <translation>Non se puido ler o ficheiro de imaxe: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3221"/>
+<location filename="../entities/note.cpp" line="3261"/>
 <source>Note file path changed</source>
 <translation>Cambiouse o camiño do ficheiro</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3222"/>
+<location filename="../entities/note.cpp" line="3262"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>Detectouse un cambio da ruta de notas. ¿Quere substituír todas as ocorrencias de &lt;strong&gt;%1 &lt;/strong&gt; ligazóns con &lt;strong&gt;%2 &lt;/strong&gt; e ligazóns co nome de ficheiro &lt;strong&gt;%3 &lt;/strong&gt; con &lt;strong&gt;%4 &lt;/strong&gt; &gt; en &lt;strong&gt; %n &lt;/strong&gt; ficheiro de nota?</numerusform>
@@ -4617,7 +4617,7 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3802"/>
+<location filename="../entities/note.cpp" line="3842"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>... e% n nota máis</numerusform>
@@ -4646,24 +4646,24 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
 <translation>Non volvas mostrar!</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="977"/>
+<location filename="../utils/gui.cpp" line="988"/>
 <source>Double-click to unstick note from tab</source>
 <translation>Faga dobre clic para desactivar a nota da lapela
 </translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="978"/>
+<location filename="../utils/gui.cpp" line="989"/>
 <source>Double-click to stick note to tab</source>
 <translation>Faga dobre clic para pegar unha nota na lapela
 </translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1020"/>
+<location filename="../utils/gui.cpp" line="1031"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
 <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1025"/>
+<location filename="../utils/gui.cpp" line="1036"/>
 <source>&lt;br /&gt;path: %1</source>
 <translation type="unfinished">&lt;br /&gt;path: %1</translation>
 </message>
@@ -8452,6 +8452,7 @@ As túas notas permanecerán intactas!</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="157"/>
+<location filename="../dialogs/tododialog.ui" line="326"/>
 <source>Summary</source>
 <translation>Resumo</translation>
 </message>
@@ -8464,6 +8465,16 @@ As túas notas permanecerán intactas!</translation>
 <location filename="../dialogs/tododialog.ui" line="222"/>
 <source>Note…</source>
 <translation>Nota…</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="346"/>
+<source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
+<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="349"/>
+<source>Show only items due today</source>
+<translation type="unfinished">Show only items due today</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="105"/>
@@ -8496,7 +8507,12 @@ As túas notas permanecerán intactas!</translation>
 <translation>Busca ou crea todo o elemento</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.ui" line="334"/>
+<location filename="../dialogs/tododialog.ui" line="331"/>
+<source>Due date</source>
+<translation type="unfinished">Due date</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="339"/>
 <source>select your todo list</source>
 <translation>selecciona a túa lista completa</translation>
 </message>
@@ -8551,34 +8567,34 @@ As túas notas permanecerán intactas!</translation>
 <translation>Limpar o caché do calendario e cargar as tarefas do servidor</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="582"/>
+<location filename="../dialogs/tododialog.cpp" line="606"/>
 <source>Remove todo item</source>
 <translation>Elimina todo o elemento</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="583"/>
+<location filename="../dialogs/tododialog.cpp" line="607"/>
 <source>Remove the selected todo item?
 This cannot be undone!</source>
 <translation>Quite o elemento seleccionado?
 Isto non se pode desfacer!</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="867"/>
+<location filename="../dialogs/tododialog.cpp" line="891"/>
 <source>Create sub-task</source>
 <translation>Crear sub-tarefa</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="874"/>
+<location filename="../dialogs/tododialog.cpp" line="898"/>
 <source>Create new sub-task</source>
 <translation>Crea nova sub tarefa</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="874"/>
+<location filename="../dialogs/tododialog.cpp" line="898"/>
 <source>Name:</source>
 <translation>Nome:</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="875"/>
+<location filename="../dialogs/tododialog.cpp" line="899"/>
 <source>New sub-task</source>
 <translation>Nova sub-tarefa</translation>
 </message>

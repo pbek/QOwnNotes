@@ -4362,12 +4362,12 @@ Sicela ubheke ukucushwa kwakho kwe- &lt;strong&gt; Todo &lt;/strong&gt; kuzilung
 <translation>Ukuthekelisa kukhiqize i-HTML eluhlaza</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="323"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="365"/>
 <source>HTML files</source>
 <translation>Amafayela we-HTML</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="324"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="366"/>
 <source>Export preview as raw HTML file</source>
 <translation>Khipha kuqala ukubuka njengefayela le-HTML eliluhlaza</translation>
 </message>
@@ -4589,17 +4589,17 @@ Sicela ubheke ukucushwa kwakho kwe- &lt;strong&gt; Todo &lt;/strong&gt; kuzilung
 <translation type="unfinished">Note</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2600"/>
+<location filename="../entities/note.cpp" line="2640"/>
 <source>Could not read image file: %1</source>
 <translation>Ayikwazanga ukufunda ifayela lesithombe: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3221"/>
+<location filename="../entities/note.cpp" line="3261"/>
 <source>Note file path changed</source>
 <translation>Indlela yefayela yenothi iguquliwe</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3222"/>
+<location filename="../entities/note.cpp" line="3262"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>Kutholwe ushintsho lwendlela yenothi. Ungathanda ukumiselela konke kuvela kwe &lt;strong&gt;%1 &lt;/strong&gt; izixhumanisi nge &lt;strong&gt;%2 &lt;/strong&gt; nokuxhumeka ngegama lefayela le &lt;strong&gt;%3 &lt;/strong&gt; nge &lt;strong&gt;%4&lt;/strong&gt; &gt; efayilini eli &lt;strong&gt;%n&lt;/strong&gt;?
@@ -4609,7 +4609,7 @@ Sicela ubheke ukucushwa kwakho kwe- &lt;strong&gt; Todo &lt;/strong&gt; kuzilung
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3802"/>
+<location filename="../entities/note.cpp" line="3842"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>… Nenothi eli-%n ngaphezulu
@@ -4639,22 +4639,22 @@ Sicela ubheke ukucushwa kwakho kwe- &lt;strong&gt; Todo &lt;/strong&gt; kuzilung
 <translation>Ungabonisi futhi!</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="977"/>
+<location filename="../utils/gui.cpp" line="988"/>
 <source>Double-click to unstick note from tab</source>
 <translation>Qhafaza kabili ukuze ususe inothi kusuka kuthebhu</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="978"/>
+<location filename="../utils/gui.cpp" line="989"/>
 <source>Double-click to stick note to tab</source>
 <translation>Qhafaza kabili ukunamathela inothi kuthebhu</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1020"/>
+<location filename="../utils/gui.cpp" line="1031"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
 <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1025"/>
+<location filename="../utils/gui.cpp" line="1036"/>
 <source>&lt;br /&gt;path: %1</source>
 <translation type="unfinished">&lt;br /&gt;path: %1</translation>
 </message>
@@ -8448,6 +8448,7 @@ Amanothi akho azohlala ethembekile!</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="157"/>
+<location filename="../dialogs/tododialog.ui" line="326"/>
 <source>Summary</source>
 <translation>Isifinyezo</translation>
 </message>
@@ -8460,6 +8461,16 @@ Amanothi akho azohlala ethembekile!</translation>
 <location filename="../dialogs/tododialog.ui" line="222"/>
 <source>Note…</source>
 <translation>Qaphela…</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="346"/>
+<source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
+<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="349"/>
+<source>Show only items due today</source>
+<translation type="unfinished">Show only items due today</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="105"/>
@@ -8492,7 +8503,12 @@ Amanothi akho azohlala ethembekile!</translation>
 <translation>Sesha noma udale into ye-todo</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.ui" line="334"/>
+<location filename="../dialogs/tododialog.ui" line="331"/>
+<source>Due date</source>
+<translation type="unfinished">Due date</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="339"/>
 <source>select your todo list</source>
 <translation>khetha uhlu lwakho lwe-todo</translation>
 </message>
@@ -8547,34 +8563,34 @@ Amanothi akho azohlala ethembekile!</translation>
 <translation>Sula i-cache yekhalenda bese uphinde ulayishe imisebenzi kusuka kuseva</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="582"/>
+<location filename="../dialogs/tododialog.cpp" line="606"/>
 <source>Remove todo item</source>
 <translation>Susa into ye-todo</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="583"/>
+<location filename="../dialogs/tododialog.cpp" line="607"/>
 <source>Remove the selected todo item?
 This cannot be undone!</source>
 <translation>Susa into ekhethiwe ye-todo?
 Lokhu akukwazi ukuhlehliswa!</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="867"/>
+<location filename="../dialogs/tododialog.cpp" line="891"/>
 <source>Create sub-task</source>
 <translation>Dala umsebenzi omncane</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="874"/>
+<location filename="../dialogs/tododialog.cpp" line="898"/>
 <source>Create new sub-task</source>
 <translation>Dala umsebenzi omncane</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="874"/>
+<location filename="../dialogs/tododialog.cpp" line="898"/>
 <source>Name:</source>
 <translation>Igama:</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="875"/>
+<location filename="../dialogs/tododialog.cpp" line="899"/>
 <source>New sub-task</source>
 <translation>Umsebenzi omncane</translation>
 </message>

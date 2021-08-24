@@ -4396,12 +4396,12 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
 <translation>Izvezi generirani HTML</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="323"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="365"/>
 <source>HTML files</source>
 <translation>HTML datoteke</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="324"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="366"/>
 <source>Export preview as raw HTML file</source>
 <translation>Izvezi pregled u obliku sirove HTML datoteke</translation>
 </message>
@@ -4623,17 +4623,17 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
 <translation>Bilješka</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2600"/>
+<location filename="../entities/note.cpp" line="2640"/>
 <source>Could not read image file: %1</source>
 <translation>Nije moguće pročitati slikovnu datoteku: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3221"/>
+<location filename="../entities/note.cpp" line="3261"/>
 <source>Note file path changed</source>
 <translation>Staza datoteke napomena promijenjena</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3222"/>
+<location filename="../entities/note.cpp" line="3262"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>Otkrivena je promjena putanje bilješke. Želite li zamijeniti sve pojave veza &lt;strong&gt;%1 &lt;/strong&gt; s &lt;strong&gt;%2&lt;/strong&gt; i veze s imenom datoteke%3&lt;/strong&gt; s &lt;strong&gt;%4&lt;/strong&gt; u &lt;strong&gt;%n&lt;/strong&gt; datoteci s napomenama?</numerusform>
@@ -4642,7 +4642,7 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3802"/>
+<location filename="../entities/note.cpp" line="3842"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>… I još %n napomena</numerusform>
@@ -4672,22 +4672,22 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
 <translation>Ne prikaži više!</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="977"/>
+<location filename="../utils/gui.cpp" line="988"/>
 <source>Double-click to unstick note from tab</source>
 <translation>Dvaput kliknite da biste uklonili oznaku s kartice</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="978"/>
+<location filename="../utils/gui.cpp" line="989"/>
 <source>Double-click to stick note to tab</source>
 <translation>Dvaput kliknite da biste zalijepili bilješke na karticu</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1020"/>
+<location filename="../utils/gui.cpp" line="1031"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
 <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1025"/>
+<location filename="../utils/gui.cpp" line="1036"/>
 <source>&lt;br /&gt;path: %1</source>
 <translation type="unfinished">&lt;br /&gt;path: %1</translation>
 </message>
@@ -8476,6 +8476,7 @@ Bilješke će ostati netaknute!</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="157"/>
+<location filename="../dialogs/tododialog.ui" line="326"/>
 <source>Summary</source>
 <translation>Sažetak</translation>
 </message>
@@ -8488,6 +8489,16 @@ Bilješke će ostati netaknute!</translation>
 <location filename="../dialogs/tododialog.ui" line="222"/>
 <source>Note…</source>
 <translation>Bilješka…</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="346"/>
+<source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
+<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="349"/>
+<source>Show only items due today</source>
+<translation type="unfinished">Show only items due today</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="105"/>
@@ -8520,7 +8531,12 @@ Bilješke će ostati netaknute!</translation>
 <translation>Pretražite ili stvorite stavku todo</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.ui" line="334"/>
+<location filename="../dialogs/tododialog.ui" line="331"/>
+<source>Due date</source>
+<translation type="unfinished">Due date</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="339"/>
 <source>select your todo list</source>
 <translation>odaberite svoju listu todoa</translation>
 </message>
@@ -8575,34 +8591,34 @@ Bilješke će ostati netaknute!</translation>
 <translation>Očistite predmemoriju kalendara i ponovno učitajte zadatke s poslužitelja</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="582"/>
+<location filename="../dialogs/tododialog.cpp" line="606"/>
 <source>Remove todo item</source>
 <translation>Uklonite stavku todo</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="583"/>
+<location filename="../dialogs/tododialog.cpp" line="607"/>
 <source>Remove the selected todo item?
 This cannot be undone!</source>
 <translation>Uklonite odabrani todo stavku?
 Ovo se ne može poništiti!</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="867"/>
+<location filename="../dialogs/tododialog.cpp" line="891"/>
 <source>Create sub-task</source>
 <translation>Napravite pot-zadatak</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="874"/>
+<location filename="../dialogs/tododialog.cpp" line="898"/>
 <source>Create new sub-task</source>
 <translation>Kreirajte novi pod zadatak</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="874"/>
+<location filename="../dialogs/tododialog.cpp" line="898"/>
 <source>Name:</source>
 <translation>Ime:</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="875"/>
+<location filename="../dialogs/tododialog.cpp" line="899"/>
 <source>New sub-task</source>
 <translation>Novi pod zadatak</translation>
 </message>

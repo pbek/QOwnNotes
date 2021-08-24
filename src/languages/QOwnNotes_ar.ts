@@ -4496,12 +4496,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>تصدير  HTML الخام الناتجة.</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="323"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="365"/>
 <source>HTML files</source>
 <translation>ملفات HTML</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="324"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="366"/>
 <source>Export preview as raw HTML file</source>
 <translation>معاينة التصدير كملف HTML خام</translation>
 </message>
@@ -4723,17 +4723,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>ملاحظة</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2600"/>
+<location filename="../entities/note.cpp" line="2640"/>
 <source>Could not read image file: %1</source>
 <translation>تعذر قراءة ملف الصورة: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3221"/>
+<location filename="../entities/note.cpp" line="3261"/>
 <source>Note file path changed</source>
 <translation>تغير مسار ملف الملاحظة</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3222"/>
+<location filename="../entities/note.cpp" line="3262"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>تم اكتشاف تغيير في مسار الملاحظة. هل ترغب في استبدال كل تكرارات روابط &lt;strong&gt;%1&lt;/strong&gt; بـ &lt;strong&gt;%2&lt;/strong&gt; والروابط التي تحمل اسم الملف &lt;strong&gt;%3&lt;/strong&gt; بـ &lt;strong&gt;%4&lt;/ strong &gt; في ملف ملاحظة 
@@ -4748,7 +4748,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3802"/>
+<location filename="../entities/note.cpp" line="3842"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>... و %n من الملاحظات الإضافية</numerusform>
@@ -4781,24 +4781,24 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>لا تظهر مرة أخرى!</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="977"/>
+<location filename="../utils/gui.cpp" line="988"/>
 <source>Double-click to unstick note from tab</source>
 <translation>انقر نقرًا مزدوجًا لإلغاء تثبيت الملاحظة من علامة التبويب
 </translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="978"/>
+<location filename="../utils/gui.cpp" line="989"/>
 <source>Double-click to stick note to tab</source>
 <translation>انقر نقرًا مزدوجًا لتثبيت الملاحظة على علامة التبويب
 </translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1020"/>
+<location filename="../utils/gui.cpp" line="1031"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
 <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1025"/>
+<location filename="../utils/gui.cpp" line="1036"/>
 <source>&lt;br /&gt;path: %1</source>
 <translation type="unfinished">&lt;br /&gt;path: %1</translation>
 </message>
@@ -8634,6 +8634,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="157"/>
+<location filename="../dialogs/tododialog.ui" line="326"/>
 <source>Summary</source>
 <translation>ملخص</translation>
 </message>
@@ -8646,6 +8647,16 @@ Your notes will stay intact!</source>
 <location filename="../dialogs/tododialog.ui" line="222"/>
 <source>Note…</source>
 <translation>ملاحظة…</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="346"/>
+<source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
+<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="349"/>
+<source>Show only items due today</source>
+<translation type="unfinished">Show only items due today</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="105"/>
@@ -8678,7 +8689,12 @@ Your notes will stay intact!</source>
 <translation>ابحث عن و أنشئ عنصر قائمة للإنجاز</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.ui" line="334"/>
+<location filename="../dialogs/tododialog.ui" line="331"/>
+<source>Due date</source>
+<translation type="unfinished">Due date</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="339"/>
 <source>select your todo list</source>
 <translation>اختر قائمتك للإنجاز</translation>
 </message>
@@ -8733,33 +8749,33 @@ Your notes will stay intact!</source>
 <translation>امسح ذاكرة التخزين المؤقت للتقويم وأعد تحميل المهام من الخادم</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="582"/>
+<location filename="../dialogs/tododialog.cpp" line="606"/>
 <source>Remove todo item</source>
 <translation>أزل عنصر قائمة للإنجاز</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="583"/>
+<location filename="../dialogs/tododialog.cpp" line="607"/>
 <source>Remove the selected todo item?
 This cannot be undone!</source>
 <translation>هل تريد إزالة عنصر قائمة للإنجاز الحالي؟ لا يمكن التراجع عن هذا!</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="867"/>
+<location filename="../dialogs/tododialog.cpp" line="891"/>
 <source>Create sub-task</source>
 <translation>إنشاء مهمة فرعية</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="874"/>
+<location filename="../dialogs/tododialog.cpp" line="898"/>
 <source>Create new sub-task</source>
 <translation>إنشاء مهمة فرعية جديدة</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="874"/>
+<location filename="../dialogs/tododialog.cpp" line="898"/>
 <source>Name:</source>
 <translation>اسم:</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="875"/>
+<location filename="../dialogs/tododialog.cpp" line="899"/>
 <source>New sub-task</source>
 <translation>مهمة فرعية جديدة</translation>
 </message>

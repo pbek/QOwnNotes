@@ -4363,12 +4363,12 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
 <translation>Ang pag-export ay nabuong HTML</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="323"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="365"/>
 <source>HTML files</source>
 <translation>HTML files</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="324"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="366"/>
 <source>Export preview as raw HTML file</source>
 <translation>I-export ang pag-export bilang hilaw na HTML file</translation>
 </message>
@@ -4590,17 +4590,17 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
 <translation type="unfinished">Note</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2600"/>
+<location filename="../entities/note.cpp" line="2640"/>
 <source>Could not read image file: %1</source>
 <translation>Maaring hindi ma basa ang imahe sa file: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3221"/>
+<location filename="../entities/note.cpp" line="3261"/>
 <source>Note file path changed</source>
 <translation>Nabago ang landas ng file</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3222"/>
+<location filename="../entities/note.cpp" line="3262"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>Ang isang pagbabago ng landas ng tala ay napansin. Nais mo bang palitan ang lahat ng mga naganap na &lt;strong&gt;%1&lt;/strong&gt; na may &lt;strong&gt;%2&lt;/strong&gt; at mga link na may filename &lt;strong&gt;%3&lt;/strong&gt; na may &lt;strong&gt;%4&lt;/strong&gt; sa &lt;strong&gt;%n &lt;/strong&gt; file ng tala?</numerusform>
@@ -4608,7 +4608,7 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3802"/>
+<location filename="../entities/note.cpp" line="3842"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>... at %n higit pang mga tala</numerusform>
@@ -4637,22 +4637,22 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
 <translation>Wag ipakita ulit!</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="977"/>
+<location filename="../utils/gui.cpp" line="988"/>
 <source>Double-click to unstick note from tab</source>
 <translation>I-double-click upang hindi matanggal ang tala mula sa tab</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="978"/>
+<location filename="../utils/gui.cpp" line="989"/>
 <source>Double-click to stick note to tab</source>
 <translation>I-double-click upang ilagay ang tala sa tab</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1020"/>
+<location filename="../utils/gui.cpp" line="1031"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
 <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1025"/>
+<location filename="../utils/gui.cpp" line="1036"/>
 <source>&lt;br /&gt;path: %1</source>
 <translation type="unfinished">&lt;br /&gt;path: %1</translation>
 </message>
@@ -8434,6 +8434,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="157"/>
+<location filename="../dialogs/tododialog.ui" line="326"/>
 <source>Summary</source>
 <translation>Buod</translation>
 </message>
@@ -8446,6 +8447,16 @@ Your notes will stay intact!</source>
 <location filename="../dialogs/tododialog.ui" line="222"/>
 <source>Note…</source>
 <translation>Tandaan…</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="346"/>
+<source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
+<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="349"/>
+<source>Show only items due today</source>
+<translation type="unfinished">Show only items due today</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="105"/>
@@ -8478,7 +8489,12 @@ Your notes will stay intact!</source>
 <translation>Magsaliksik o lumikha todo bagay</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.ui" line="334"/>
+<location filename="../dialogs/tododialog.ui" line="331"/>
+<source>Due date</source>
+<translation type="unfinished">Due date</translation>
+</message>
+<message>
+<location filename="../dialogs/tododialog.ui" line="339"/>
 <source>select your todo list</source>
 <translation>piliin ang iyong mga listahan ng todo</translation>
 </message>
@@ -8533,34 +8549,34 @@ Your notes will stay intact!</source>
 <translation>Linawin ang kalendaryo. cache. at i-reload. ang task sa server</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="582"/>
+<location filename="../dialogs/tododialog.cpp" line="606"/>
 <source>Remove todo item</source>
 <translation>Burahin ang todo itema</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="583"/>
+<location filename="../dialogs/tododialog.cpp" line="607"/>
 <source>Remove the selected todo item?
 This cannot be undone!</source>
 <translation>Alisin ang mga piniling todo itema?
 ito ay hindi ma tapos!</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="867"/>
+<location filename="../dialogs/tododialog.cpp" line="891"/>
 <source>Create sub-task</source>
 <translation>Lumikha ng sub-task</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="874"/>
+<location filename="../dialogs/tododialog.cpp" line="898"/>
 <source>Create new sub-task</source>
 <translation>Lumikha ng bagong sub-task</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="874"/>
+<location filename="../dialogs/tododialog.cpp" line="898"/>
 <source>Name:</source>
 <translation>Pangalan:</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="875"/>
+<location filename="../dialogs/tododialog.cpp" line="899"/>
 <source>New sub-task</source>
 <translation>Bagong sub-gawain</translation>
 </message>

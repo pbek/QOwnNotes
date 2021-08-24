@@ -8,10 +8,10 @@ import QOwnNotesTypes 1.0
 
 Script {
     /**
-        * Will be run when the scripting engine initializes
+        * Sarà eseguito quando il motore di scripting parte
         */
     function init() {
-        script.log("Hello world!");
+        script.log("Ciao mondo!");
     }
 }
 ```

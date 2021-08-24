@@ -7,6 +7,7 @@
     - you can now choose to just view items that are due today
         - note that this doesn't work for sub-items, because they may
           be hidden by the parent item
+- added more Brazilian Portuguese, Italian, Russian translation (thank you marterra, marcoxbresciani, rolayis927)
 
 ## 21.8.10
 - the performance of notes with (especially large) images was improved massively
