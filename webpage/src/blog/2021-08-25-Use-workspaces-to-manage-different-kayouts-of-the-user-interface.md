@@ -28,4 +28,4 @@ Afterwards you can switch between the workspaces in the **workspaces dropdown**.
 
 ![qownnotes-media-cfwfnC](./media/qownnotes-media-cfwfnC.png)
 
-All changes you make to the user interface (enabling and disabling panels, moving panels) are done to the **current workspace**.
+All changes you make to the user interface (enabling and disabling panels, moving panels) are done to the **current workspace**. Switch to another workspace if you want to edit it.
