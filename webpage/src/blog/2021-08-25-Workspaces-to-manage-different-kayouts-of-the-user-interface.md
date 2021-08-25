@@ -18,14 +18,14 @@ If you for example want a view where you can edit notes and one where you just c
 
 Then you can **turn off the panels you don't want** in the *Window / Panels* menu.
 
-![qownnotes-media-KheFEk](media/qownnotes-media-KheFEk.png)
+![qownnotes-media-KheFEk](./media/qownnotes-media-KheFEk.png)
 
 You can also **drag panels around** by enabling *Unlock panels* in the *Window* menu.
 
-![qownnotes-media-NfiQOu](media/qownnotes-media-NfiQOu.png)
+![qownnotes-media-NfiQOu](./media/qownnotes-media-NfiQOu.png)
 
 Afterwards you can switch between the workspaces in the **workspaces dropdown**.
 
-![qownnotes-media-cfwfnC](media/qownnotes-media-cfwfnC.png)
+![qownnotes-media-cfwfnC](./media/qownnotes-media-cfwfnC.png)
 
 All changes you make to the user interface (enabling and disabling panels, moving panels) are done to the **current workspace**.
