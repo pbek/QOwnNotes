@@ -4628,7 +4628,7 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
 <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4269"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4264"/>
 <source>New connection</source>
 <translation>Sambungan baru</translation>
 </message>
@@ -5584,10 +5584,10 @@ Cubalah sendiri jika anda mendapat konflik sync dan tetapkan nilai yang lebih ti
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4386"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2308"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2316"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2303"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4334"/>
 <location filename="../dialogs/settingsdialog.cpp" line="4339"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4344"/>
 <source>Database</source>
 <translation>Pangkalan data</translation>
 </message>
@@ -5608,7 +5608,7 @@ Cubalah sendiri jika anda mendapat konflik sync dan tetapkan nilai yang lebih ti
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4341"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2382"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2377"/>
 <source>Clear app data and exit</source>
 <translation>Hapus data aplikasi dan keluar</translation>
 </message>
@@ -6196,20 +6196,20 @@ Cubalah sendiri jika anda mendapat konflik sync dan tetapkan nilai yang lebih ti
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4170"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4009"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4004"/>
 <source>Reset message boxes</source>
 <translation>Tetapkan semula kotak mesej</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4363"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4075"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4099"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4070"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
 <source>Import settings</source>
 <translation>Tetapan import</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4370"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4041"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4036"/>
 <source>Export settings</source>
 <translation>Tetapan eksport</translation>
 </message>
@@ -6283,6 +6283,11 @@ Pembantu isu Terbuka &lt;/ span&gt; di bahagian bawah. &lt;/ P&gt; &lt;/ body&gt
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
 <source>Web application</source>
 <translation type="unfinished">Web application</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="819"/>
+<source>This also allows note files to be renamed</source>
+<translation type="unfinished">This also allows note files to be renamed</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1418"/>
@@ -6652,11 +6657,6 @@ Pembantu isu Terbuka &lt;/ span&gt; di bahagian bawah. &lt;/ P&gt; &lt;/ body&gt
 <translation>Pasang &lt;a href="%1"&gt; pelanjutan penyemak imbas Web Companion &lt;/a&gt; dari &lt;a href="%2"&gt; Kedai Web Chrome &lt;/a&gt; atau &lt;a href="%3"&gt; Firefox Add- ons page &lt;/a&gt; untuk menggunakan QOwnNotes sebagai web clipper.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="819"/>
-<source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-<translation>Benarkan nama fail nota menjadi berbeza daripada tajuk utama. &lt;br&gt; Berhati-hatilah bahawa sendiriCloud Notes memerlukan nama fail menjadi sama dengan tajuk utama!</translation>
-</message>
-<message>
 <location filename="../dialogs/settingsdialog.ui" line="5736"/>
 <source>Note edit panel</source>
 <translation>Perhatikan panel edit</translation>
@@ -6861,7 +6861,7 @@ Pembantu isu Terbuka &lt;/ span&gt; di bahagian bawah. &lt;/ P&gt; &lt;/ body&gt
 <translation>Memaparkan subfolder nota sebagai pokok penuh</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2924"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2919"/>
 <source>Search script repository</source>
 <translation>Cari repositori skrip</translation>
 </message>
@@ -7312,8 +7312,8 @@ Pembantu isu Terbuka &lt;/ span&gt; di bahagian bawah. &lt;/ P&gt; &lt;/ body&gt
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4453"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2327"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4318"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2322"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4313"/>
 <source>Debug information</source>
 <translation>Maklumat debug</translation>
 </message>
@@ -7328,42 +7328,42 @@ Pembantu isu Terbuka &lt;/ span&gt; di bahagian bawah. &lt;/ P&gt; &lt;/ body&gt
 <translation>&amp;Simpan maklumat debug</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="508"/>
+<location filename="../dialogs/settingsdialog.cpp" line="503"/>
 <source>hostname of proxy server</source>
 <translation>nama pelayan pelayan proksi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="509"/>
+<location filename="../dialogs/settingsdialog.cpp" line="504"/>
 <source>username for proxy server</source>
 <translation>nama pengguna untuk pelayan proksi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="510"/>
+<location filename="../dialogs/settingsdialog.cpp" line="505"/>
 <source>password for proxy server</source>
 <translation>kata laluan untuk pelayan proksi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="512"/>
+<location filename="../dialogs/settingsdialog.cpp" line="507"/>
 <source>HTTP(S) proxy</source>
 <translation>Proksi HTTP(S)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="513"/>
+<location filename="../dialogs/settingsdialog.cpp" line="508"/>
 <source>SOCKS5 proxy</source>
 <translation>Proksi SOCKS5</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1510"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1505"/>
 <source>Automatic (needs restart)</source>
 <translation>Automatik (keperluan semula)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1821"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1816"/>
 <source>Shortcut already assigned</source>
 <translation>Pintasan telah ditetapkan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2024"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2019"/>
 <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -7372,7 +7372,7 @@ Versi pelayan: %1
 Versi QOwnNotesAPI: %2</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2037"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2032"/>
 <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -7383,128 +7383,128 @@ Anda juga perlu mempunyai aplikasi QOwnNotesAPI yang dipasang dan didayakan!
 Mesej ralat sambungan:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2317"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2312"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
 <translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2328"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2323"/>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Tolong jangan gunakan ini dalam pelacak isu, salin teks maklumat debug terus ke dalam isu ini.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2335"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2330"/>
 <source>Markdown files</source>
 <translation>Fail penurunan nilai</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2363"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2358"/>
 <source>Disable usage tracking</source>
 <translation>Lumpuhkan penjejakan penggunaan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2364"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2359"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Data penggunaan tanpa nama membantu menentukan bahagian-bahagian QOwnNotes untuk memperbaiki seterusnya dan untuk mencari dan membetulkan pepijat. &lt;br /&gt; Sila matikan hanya jika anda tidak dapat hidup dengannya. &lt;br /&gt; &lt;br /&gt; Benar-benar melumpuhkan pengesanan penggunaan?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2597"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2592"/>
 <source>new folder</source>
 <translation>Fail baharu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2631"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2626"/>
 <source>Remove note folder</source>
 <translation>Alih keluar folder nota</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2632"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2627"/>
 <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Keluarkan folder nota semasa &lt;strong&gt;%1&lt;/ strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2713"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2708"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>Sila pilih folder di mana nota anda akan disimpan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2748"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2743"/>
 <source>Loading folders from server</source>
 <translation>Memuatkan folder dari pelayan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2763"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2758"/>
 <source>No more folders were found in the current folder</source>
 <translation>Tiada lagi folder yang terdapat dalam folder semasa</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2836"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2831"/>
 <source>Loading folders in '%1' from server</source>
 <translation>Memuatkan folder dalam '%1' dari pelayan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2909"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2904"/>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
 <translation>Lihatlah dokumentasi &lt;a href="%1"&gt; Scripting &lt;/a&gt; untuk bermula dengan cepat.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2913"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2908"/>
 <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
 <translation>Sekiranya anda memerlukan akses kepada fungsi tertentu dalam QOwnNotes sila buka masalah pada halaman isu &lt;a href="%1"&gt; QOwnNotes &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2935"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2930"/>
 <source>Check for script updates</source>
 <translation>Semak kemas kini skrip</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2942"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2937"/>
 <source>Add local script</source>
 <translation>Tambah skrip tempatan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2946"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2941"/>
 <source>Add an existing, local script</source>
 <translation>Tambah skrip setempat yang sedia ada</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4040"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4098"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4035"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
 <source>INI files</source>
 <translation>Fail INI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4076"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4071"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>Adakah anda benar-benar mahu mengimport tetapan? Tetapan semasa anda akan dikeluarkan dan bukan setiap tetapan mungkin dipulihkan, seperti tetapan folder nota dan skrip yang anda gunakan. Anda juga perlu menyesuaikan beberapa tetapan, terutamanya merentas platform, tetapi nota anda akan tetap utuh!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4086"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4081"/>
 <source>The application will be quit after the import.</source>
 <translation>Permohonan akan berhenti selepas import.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4087"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4082"/>
 <source>The application will be restarted after the import.</source>
 <translation>Permohonan akan dimulakan semula selepas import.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4319"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4314"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>Maklumat debug telah disalin ke papan keratan.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4340"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4335"/>
 <source>The integrity of the disk database is valid.</source>
 <translation type="unfinished">The integrity of the disk database is valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4345"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4340"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation type="unfinished">The integrity of the disk database is not valid!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2929"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2924"/>
 <source>Find a script in the script repository</source>
 <translation>Cari skrip dalam repositori skrip</translation>
 </message>
@@ -7519,136 +7519,136 @@ Mesej ralat sambungan:</translation>
 <translation>Paparkan item bar menu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1694"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1746"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1689"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1741"/>
 <source>Undefined shortcut</source>
 <translation>Jalan pintas yang tidak ditentukan
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1698"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1750"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1693"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1745"/>
 <source>Assign a new shortcut</source>
 <translation>Tetapkan jalan pintas baru
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1699"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1751"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1694"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1746"/>
 <source>Reset to default shortcut</source>
 <translation>Tetapkan semula ke jalan pintas lalai
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1717"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1712"/>
 <source>Clear shortcut</source>
 <translation>Jalan pintas yang jelas</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1822"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1817"/>
 <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
 <translation>Pintasan &lt;strong&gt;%1&lt;/ strong&gt; sudah ditetapkan kepada &lt;strong&gt;%2&lt;/ strong&gt;! Adakah anda mahu melompat ke jalan pintas?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3022"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3017"/>
 <source>Remove script</source>
 <translation>Keluarkan skrip</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3023"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3018"/>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Buang skrip semasa &lt;strong&gt;%1&lt;/ strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3073"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3068"/>
 <source>QML files</source>
 <translation>Fail QML</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3074"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3069"/>
 <source>Please select your QML file</source>
 <translation>Sila pilih fail QML anda</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3164"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3159"/>
 <source>Open repository</source>
 <translation>Buka repositori</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3222"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3217"/>
 <source>Your script seems to be valid</source>
 <translation>Skrip anda seolah-olah sah</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3223"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3218"/>
 <source>There were script errors:
 %1</source>
 <translation>Terdapat ralat skrip:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3291"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3286"/>
 <source>File extension</source>
 <translation>Sambungan fail</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3291"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3286"/>
 <source>Enter your custom file extension:</source>
 <translation>Masukkan pelanjutan fail tersuai anda:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3620"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3615"/>
 <source>Calendar cache emptied</source>
 <translation>Cache Kalendar dikosongkan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3621"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3616"/>
 <source>Your calendar cache was emptied.</source>
 <translation>Cache kalendar anda dikosongkan.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3697"/>
 <source>Reset toolbars and exit</source>
 <translation>Tetapkan semula bar alat dan keluar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3703"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3698"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>Adakah anda benar-benar mahu menetapkan semula semua bar alat? Aplikasi ini akan ditutup dalam proses itu, toolbar lalai akan dipulihkan apabila anda memulakannya lagi.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3707"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
 <source>Reset and &amp;exit</source>
 <translation>Tetapkan semula dan &amp;keluar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3865"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3860"/>
 <source>Log file cleared</source>
 <translation>Fail log dikosongkan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3866"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3861"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Fail log &lt;strong&gt;%1&lt;/ strong&gt; telah dibersihkan.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3902"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3897"/>
 <source>Executable files</source>
 <translation>Fail boleh laku</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3903"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3905"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3898"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3900"/>
 <source>All files</source>
 <translation>Semua fail</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3913"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3908"/>
 <source>Please select the path of your git executable</source>
 <translation>Sila pilih laluan git git anda</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4010"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4005"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>Adakah anda benar-benar mahu menetap semula semua kotak mesej?</translation>
 </message>
@@ -7663,52 +7663,52 @@ Mesej ralat sambungan:</translation>
 <translation>Anda boleh memuat turun klien git anda di sini: &lt;a href="%url"&gt; Git untuk Windows &lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="463"/>
+<location filename="../dialogs/settingsdialog.cpp" line="458"/>
 <source>enabled</source>
 <translation>didayakan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="463"/>
+<location filename="../dialogs/settingsdialog.cpp" line="458"/>
 <source>disabled</source>
 <translation>kurang upaya</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="465"/>
+<location filename="../dialogs/settingsdialog.cpp" line="460"/>
 <source>Portable mode is currently:</source>
 <translation>Mod mudah alih kini:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="468"/>
+<location filename="../dialogs/settingsdialog.cpp" line="463"/>
 <source>In portable mode</source>
 <translation>Dalam mod mudah alih</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="469"/>
+<location filename="../dialogs/settingsdialog.cpp" line="464"/>
 <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>pangkalan data sqlite dalaman dan tetapan akan disimpan di dalam folder &lt;code&gt; Data &lt;/ code&gt; di lokasi binari</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="472"/>
+<location filename="../dialogs/settingsdialog.cpp" line="467"/>
 <source>the settings will be stored in an ini file</source>
 <translation>tetapan akan disimpan dalam fail ini</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="474"/>
+<location filename="../dialogs/settingsdialog.cpp" line="469"/>
 <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
 <translation>folder nota, laluan skrip dan laluan ke editor luaran akan disimpan secara automatik berbanding dengan folder &lt;code&gt; Data &lt;/ code&gt; supaya folder catatan, skrip dan editor luaran yang betul akan dimuatkan tanpa menghiraukan tempat pemasangan QOwnNotes anda sedang berada</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="484"/>
+<location filename="../dialogs/settingsdialog.cpp" line="479"/>
 <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
 <translation>Ia akan diaktifkan jika anda menjalankan QOwnNotes dengan parameter &lt;code&gt; - mudah alih &lt;/code&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2336"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2331"/>
 <source>Save debug information</source>
 <translation>Simpan maklumat debug</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2383"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2378"/>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -7717,34 +7717,34 @@ Your notes will stay intact!</source>
 Nota anda akan kekal utuh!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2386"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2381"/>
 <source>Clear and &amp;exit</source>
 <translation>Jelas dan &amp;keluar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2312"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2386"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3707"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2307"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2381"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Batalkan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="490"/>
+<location filename="../dialogs/settingsdialog.cpp" line="485"/>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Anda akan menemui &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; di laluan pelepas anda untuk memulakan QOwnNotes dalam mod mudah alih.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2309"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2304"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Adakah anda benar-benar mahu membersihkan pangkalan data tempatan? Ini juga akan memadam folder nota yang dikonfigurasikan dan item yang disimpan dalam cache anda!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2312"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2307"/>
 <source>Clear &amp;database</source>
 <translation>Jelas &amp;pangkalan data</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2503"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2498"/>
 <source>Select editor application</source>
 <translation>Pilih aplikasi editor</translation>
 </message>

@@ -4,6 +4,7 @@
 - since notes in Nextcloud Notes on the web and on Android now allow renaming of
   notes this also is the new default setting for note folders in QOwnNotes
     - existing note folders will not be modified automatically
+- added more translation (thank you amirkbrpr, mguerra, rakekniven, ihatemyself, rawfreeamy, marterra)
 
 ## 21.8.11
 - a few features were added to the todo dialog (for [#2210](https://github.com/pbek/QOwnNotes/issues/2210))

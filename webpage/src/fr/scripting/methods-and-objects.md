@@ -757,83 +757,83 @@ Jetez un œil à la feuille de style  [Style Sheet Reference](http://doc.qt.io/q
 
 Si vous souhaitez injecter des styles dans l'aperçu html pour modifier la façon dont les notes sont prévisualisées, veuillez consulter [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
-Reloading the scripting engine
+Recharger le moteur de script
 ------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Reloads the scripting engine
- */
-void ScriptingService::reloadScriptingEngine();
+  * Recharge le moteur de script
+  */
+void ScriptingService :: reloadScriptingEngine ();
 ```
 
 ### Exemple
 ```js
-// reload the scripting engine
-script.reloadScriptingEngine();
+// recharger le moteur de script
+script.reloadScriptingEngine ();
 ```
 
-Fetching a note by its file name
+Récupérer une note par son nom de fichier
 --------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Fetches a note by its file name
- *
- * @param fileName string the file name of the note (mandatory)
- * @param noteSubFolderId integer id of the note subfolder
- * @return NoteApi*
- */
-NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
-                                                int noteSubFolderId);
+  * Récupère une note par son nom de fichier
+  *
+  * @param fileName string le nom de fichier de la note (obligatoire)
+  * @param noteSubFolderId ID entier du sous-dossier de notes
+  * @return NoteApi *
+  */
+NoteApi * ScriptingService :: fetchNoteByFileName (QString fileName,
+                                                 int noteSubFolderId);
 ```
 
 ### Exemple
 ```js
-// fetch note by file name
-script.fetchNoteByFileName("my note.md");
+// récupère la note par nom de fichier
+script.fetchNoteByFileName ("ma note.md");
 ```
 
-Fetching a note by its id
+Récupérer une note par son identifiant
 -------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Fetches a note by its id
- *
- * @param id int the id of the note
- * @return NoteApi*
- */
+  * Récupère une note par son identifiant
+  *
+  * @param id int l'identifiant de la note
+  * @return NoteApi *
+  */
 NoteApi* ScriptingService::fetchNoteById(int id);
 ```
 
 ### Exemple
 ```js
-// fetch note by id
-script.fetchNoteById(243);
+// récupère la note par identifiant
+script.fetchNoteById (243);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Checking if a note exists by its file name
+Vérifier si une note existe par son nom de fichier
 ------------------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Checks if a note file exists by its file name
- *
- * @param fileName string the file name of the note (mandatory)
- * @param ignoreNoteId integer id of a note to ignore in the check
- * @param noteSubFolderId integer id of the note subfolder
- * @return bool
- */
-bool ScriptingService::noteExistsByFileName(QString fileName,
-                                            int ignoreNoteId,
-                                            int noteSubFolderId);
+  * Vérifie si un fichier de note existe par son nom de fichier
+  *
+  * @param fileName string le nom de fichier de la note (obligatoire)
+  * @param ignoreNoteId identifiant entier d'une note à ignorer lors de la vérification
+  * @param noteSubFolderId ID entier du sous-dossier de notes
+  * @return booléen
+  */
+booléen ScriptingService :: noteExistsByFileName (QString fileName,
+                                             int ignoreNoteId,
+                                             int noteSubFolderId);
 ```
 
 ### Exemple
@@ -866,7 +866,7 @@ script.setClipboardText("text to copy");
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).
 
-Jumping to a note
+Passer à une note
 -----------------
 
 ### Appel de méthode et paramètres
@@ -916,17 +916,17 @@ script.jumpToNoteSubFolder("a sub folder/sub");
 Vous pouvez créer un nouveau sous-dossier de notes dans le sous-dossier actuel en appelant [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
 :::
 
-Showing an information message box
+Affichage d'une boîte de message d'information
 ----------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Shows an information message box
- *
- * @param text
- * @param title (optional)
- */
+  * Affiche une boîte de message d'information
+  *
+  * @param text
+  * @param title (optional)
+  */
 void ScriptingService::informationMessageBox(QString text, QString title);
 ```
 
@@ -936,7 +936,7 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 script.informationMessageBox("The text I want to show", "Some optional title");
 ```
 
-Showing a question message box
+Affichage d'une boîte de message de question
 ------------------------------
 
 ### Appel de méthode et paramètres
@@ -1262,7 +1262,7 @@ QString ScriptingService::toNativeDirSeparators(QString path);
 script.log(script.toNativeDirSeparators("c:/winnt/system32"));
 ```
 
-Converting path separators from native ones
+Conversion des séparateurs de chemin des séparateurs natifs
 -------------------------------------------
 
 ### Appel de méthode et paramètres
@@ -1324,7 +1324,7 @@ script.log(script.selectedNotesPaths());
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [note-externe-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
 
-Getting a list of the ids of all selected notes
+Obtenir une liste des identifiants de toutes les notes sélectionnées
 -----------------------------------------------
 
 ### Appel de méthode et paramètres
