@@ -816,7 +816,7 @@
                    <item row="7" column="0" colspan="2">
                     <widget class="QCheckBox" name="allowDifferentNoteFileNameCheckBox">
                      <property name="toolTip">
-                      <string>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</string>
+                      <string>This also allows note files to be renamed</string>
                      </property>
                      <property name="text">
                       <string>Allow note file name to be different from headline</string>

@@ -407,11 +407,6 @@ void SettingsDialog::replaceOwnCloudText() const {
         Utils::Misc::replaceOwnCloudText(
             ui->noteFolderRemotePathLineEdit->toolTip()));
 
-    // general settings
-    ui->allowDifferentNoteFileNameCheckBox->setToolTip(
-        Utils::Misc::replaceOwnCloudText(
-            ui->allowDifferentNoteFileNameCheckBox->toolTip()));
-
     // task settings
     ui->defaultOwnCloudCalendarRadioButton->setText(
         Utils::Misc::replaceOwnCloudText(
@@ -2575,7 +2570,7 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
         ui->noteFolderShowSubfoldersCheckBox->setChecked(
             _selectedNoteFolder.isShowSubfolders());
         ui->allowDifferentNoteFileNameCheckBox->setChecked(
-            _selectedNoteFolder.settingsValue(QStringLiteral("allowDifferentNoteFileName")).toBool());
+            _selectedNoteFolder.settingsValue(QStringLiteral("allowDifferentNoteFileName"), true).toBool());
         ui->noteFolderGitCommitCheckBox->setChecked(
             _selectedNoteFolder.isUseGit());
         Utils::Gui::setComboBoxIndexByUserData(
