@@ -16,7 +16,8 @@
 [Twitter](https://twitter.com/QOwnNotes) |
 [Facebook](https://www.facebook.com/QOwnNotes) |
 [QOwnNotes Web Companion Chrome extension](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) |
-[QOwnNotes Web App](https://app.qownnotes.org/)
+[QOwnNotes Web App](https://app.qownnotes.org/) |
+[QOwnNotes Onion](http://qownnoxq6xjlwstj3sxxsojjmt6h6ynfri4zrb24t3dlxbzioq32qfyd.onion/)
 
 [![Build Status GitHub Actions](https://github.com/pbek/QOwnNotes/actions/workflows/build-test.yml/badge.svg)](https://github.com/pbek/QOwnNotes/actions/workflows/build-test.yml)
 [![Build Status Windows](https://ci.appveyor.com/api/projects/status/github/pbek/QOwnNotes)](https://ci.appveyor.com/project/pbek/qownnotes)
