@@ -721,7 +721,7 @@ module.exports = {
     config.module.rules.delete('images')
     config.module
         .rule('images')
-        .test(/\.(png|jpe?g|gif)(\?.*)?$/)
+        .test(/\.(png|jpe?g|gif|webp)(\?.*)?$/)
         .use('file-loader')
         .loader('file-loader')
         .options({
