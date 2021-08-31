@@ -1473,7 +1473,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
 <comment>text that will highlighted in a way that it's barely visible</comment>
-<translation>Отмеченный синтакс</translation>
+<translation>Отмеченный синтаксис</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="242"/>
@@ -2577,7 +2577,7 @@
 <location filename="../mainwindow.ui" line="1990"/>
 <location filename="../mainwindow.ui" line="1993"/>
 <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
-<translation>Откройте  #qownnotes IRC (Kiwi)-канал, вы должны оставаться в сети, чтобы получить ответ. </translation>
+<translation>Откройте #qownnotes IRC (Kiwi)-канал, вы должны оставаться в сети, чтобы получить ответ. </translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2057"/>
@@ -4848,7 +4848,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="107"/>
 <source>Advanced search / replace text</source>
-<translation>Расширенный поиск / замена текса</translation>
+<translation>Расширенный поиск / замена текста</translation>
 </message>
 <message>
 <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="90"/>
@@ -5361,7 +5361,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1224"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Нажните для проверки подключения к серверу ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Нажмите для проверки подключения к серверу ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1335"/>
@@ -5446,7 +5446,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1551"/>
 <source>Proxy server requires authentication</source>
-<translation>Прокси-сервер требует аутентификации</translation>
+<translation>Прокси-сервер требует аутентификацию</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1608"/>
@@ -5768,7 +5768,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1687"/>
 <source>This data includes anonymous information about what features of the app are used.</source>
-<translation>Данные содержать анонимную информацию об используемых частях приложения.</translation>
+<translation>Данные содержат анонимную информацию об используемых частях приложения.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1741"/>
@@ -6498,7 +6498,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4409"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
-<translation>Имейте в виду, что переинициализация базы данных также удалит ваши кэшированные TODO предметы и конфигурированные папки заметок и скриптов!</translation>
+<translation>Имейте в виду, что переинициализация базы данных также удалит ваши кэшированные TODO элементы и настроенные папки заметок и скриптов!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4492"/>
