@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.9.0
+- WebP images are now detected as media file when dropped into the note editor or inserted as data-url
+
 ## 21.8.12
 - since notes in Nextcloud Notes on the web and on Android now allow renaming of
   notes this also is the new default setting for note folders in QOwnNotes

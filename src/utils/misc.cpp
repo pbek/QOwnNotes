@@ -2266,6 +2266,8 @@ QString Utils::Misc::fileExtensionForMimeType(const QString &mimeType) {
         return "png";
     } else if (mimeType == "image/gif") {
         return "gif";
+    } else if (mimeType == "image/webp") {
+        return "webp";
     } else if (mimeType == "application/pdf") {
         return "pdf";
     }

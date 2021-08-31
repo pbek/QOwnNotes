@@ -7955,7 +7955,7 @@ QString MainWindow::getWorkspaceUuid(const QString &workspaceName)
  * Evaluates if file is a media file
  */
 bool MainWindow::isValidMediaFile(QFile *file) {
-    const QStringList mediaExtensions = QStringList({"jpg", "png", "gif"});
+    const QStringList mediaExtensions = QStringList({"jpg", "png", "gif", "webp"});
     const QFileInfo fileInfo(file->fileName());
     const QString extension = fileInfo.suffix();
     return mediaExtensions.contains(extension, Qt::CaseInsensitive);
