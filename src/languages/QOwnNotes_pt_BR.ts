@@ -6315,7 +6315,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
 <source>This also allows note files to be renamed</source>
-<translation type="unfinished">This also allows note files to be renamed</translation>
+<translation>Isto também permite que arquivos de notas possam ser renomeados</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1418"/>

@@ -2,6 +2,7 @@
 
 ## 21.9.0
 - WebP images are now detected as media file when dropped into the note editor or inserted as data-url
+- added more Sinhala, Catalan, Brazilian Portuguese, Turkish translation (thank you helabasa, mguerra, marterra)
 
 ## 21.8.12
 - since notes in Nextcloud Notes on the web and on Android now allow renaming of

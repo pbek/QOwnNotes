@@ -2039,12 +2039,12 @@
 <message>
 <location filename="../mainwindow.ui" line="867"/>
 <source>&amp;Note</source>
-<translation>&amp;සටහන</translation>
+<translation>සටහන (N)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="871"/>
 <source>Note &amp;folders</source>
-<translation>ෆෝල්ඩර සටහන් &amp;කරන්න</translation>
+<translation>බහාලුම් සටහන් කරන්න</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="876"/>
@@ -2054,7 +2054,7 @@
 <message>
 <location filename="../mainwindow.ui" line="989"/>
 <source>&amp;Help</source>
-<translation>&amp;උදව්</translation>
+<translation>උදව් (H)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1148"/>
@@ -2080,12 +2080,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1295"/>
 <source>&amp;Quit</source>
-<translation>&amp;ඉවත්</translation>
+<translation>ඉවත් වන්න</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1310"/>
 <source>&amp;Setup note folders</source>
-<translation>&amp;සටහන් ෆෝල්ඩර සකසන්න</translation>
+<translation>සටහන් බහාලුම් සකසන්න</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1319"/>
@@ -2095,12 +2095,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1331"/>
 <source>&amp;Remove current note</source>
-<translation>&amp;වත්මන් සටහන ඉවත් කරන්න</translation>
+<translation>වත්මන් සටහන ඉවත් කරන්න</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1355"/>
 <source>&amp;New note</source>
-<translation>&amp;නව සටහනක්</translation>
+<translation>නව සටහන (N)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1367"/>
@@ -2135,7 +2135,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1428"/>
 <source>Show note &amp;versions</source>
-<translation>සටහන් අනුවාද &amp;පෙන්වන්න</translation>
+<translation>සටහන් අනුවාදය පෙන්වන්න</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1431"/>
@@ -2156,7 +2156,7 @@
 <message>
 <location filename="../mainwindow.cpp" line="6879"/>
 <source>Insert &amp;link</source>
-<translation>&amp;සබැඳිය ඇතුළු කරන්න</translation>
+<translation>සබැඳිය ඇතුළු කරන්න</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1469"/>
@@ -2181,7 +2181,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1413"/>
 <source>&amp;Settings</source>
-<translation>&amp;සැකසුම්</translation>
+<translation>සැකසුම් (S)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="119"/>
@@ -2243,7 +2243,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1020"/>
 <source>&amp;Edit</source>
-<translation>&amp;සංස්කරණය කරන්න</translation>
+<translation>සංස්කරණය (E)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1024"/>
@@ -8810,12 +8810,12 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="51"/>
 <source>&amp;Update</source>
-<translation>&amp;යාවත්කාලීන කරන්න</translation>
+<translation>යාවත්කාල</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>Just download</source>
-<translation>බාගත කරන්න</translation>
+<translation>බාගන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="64"/>
@@ -8857,7 +8857,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="247"/>
 <source>network error: %1</source>
-<translation>ජාල දෝෂය: %1</translation>
+<translation>ජාලයේ දෝෂය: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="269"/>
