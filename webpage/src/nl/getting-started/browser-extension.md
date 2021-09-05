@@ -4,17 +4,17 @@ image: /img/bookmarks.png
 
 # Browser-extensie QOwnNotes Web Companion
 
-![bookmarks](/img/bookmarks.png)
+Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) or the [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) to install the [**QOwnNotes Web Companion browser extension**](https://github.com/qownnotes/web-companion/).
 
-Bezoekt u het [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) of de [Firefox Add-ons page ](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) om de [**QOwnNotes Web Companion browser extension**](https://github.com/qownnotes/web-companion/) te installeren.
-
-U kunt de extensie ook vinden op [ GitHub ](https://github.com/qownnotes/web-companion/).
+You can also find the extension on [GitHub](https://github.com/qownnotes/web-companion/).
 
 ::: tip Info
-QOwnNotes moet actief zijn om de browserextensie Web Companion te laten werken. De browserextensies werken **offline**, geen internetverbinding nodig.
+QOwnNotes needs to be running for the Web Companion browser extension to work. The browser extensions works **offline**, no internet connection needed.
 :::
 
 ## Webclipper
+
+![web-clipper](/img/web-clipper.png)
 
 Klik met de rechtermuisknop op een webpagina of geselecteerde tekst om de **webclipper** -functionaliteit te gebruiken. Daar kun je ook een nieuwe notitie maken met een **screenshot** van de huidige webpagina.
 
@@ -24,16 +24,18 @@ De webclipper is ook scriptbaar! Bekijk de [websocketRawDataHook](../scripting/h
 
 ## Bladwijzers
 
-Als u volledige controle wilt over uw browserbladwijzers en **ze wilt gebruiken in verschillende browsers en besturingssystemen**, dan is de QOwnNotes-browserextensie iets voor u.
+![bookmarks](/img/bookmarks.png)
 
-Standaard toont de browserextensie alle **links van de huidige notitie** in een pop-up wanneer u op het QOwnNotes-pictogram in uw browser klikt. Deze links krijgen een tag `current`.
+If you want full control over your browser bookmarks and **use them across different browsers and operating systems** then the QOwnNotes browser extension is for you.
 
-U kunt ook **uw bladwijzers in notities beheren** met de notitietag `bladwijzers` (wijzigbaar in de instellingen). Deze links kunnen ook tags en een beschrijving hebben die in de browserextensie wordt weergegeven.
+By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
 
-Nieuwe bladwijzers worden opgeslagen in een notitie genaamd `Bladwijzers` (ook te wijzigen in de instellingen).
+You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
+
+New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
 
 ::: tip
-U kunt ook uw browserbladwijzers importeren in QOwnNotes met de webpartner-browserextensie!
+You can also import your browser bookmarks into QOwnNotes with the web companion browser extension!
 :::
 
 ### Syntaxis van bladwijzerkoppelingen
@@ -46,4 +48,4 @@ U kunt ook uw browserbladwijzers importeren in QOwnNotes met de webpartner-brows
 * [Webpaginanaam](https://www.example.com) het alternatieve lijstteken werkt ook
 ```
 
-U kunt zoeken op naam, url-tags of beschrijving in de browserextensie.
+You are able to search for name, url tags or description in the browser extension.

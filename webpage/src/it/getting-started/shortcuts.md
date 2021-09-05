@@ -80,7 +80,7 @@
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> formatta il testo selezionato in corsivo
 - <kbd>Ctrl</kbd> + <kbd>U</kbd> formatta il testo selezionato in sottolineato (sottolinea il testo selezionato)
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> cancella il testo selezionato
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> scorre i casi del testo selezionato
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> scorre le occorrenze di testo selezionato
 - <kbd>Tab</kbd> fa rientrare il testo selezionato (funziona anche su più righe)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> annulla il rientro del testo selezionato
 - <kbd>Tab</kbd> dopo un carattere di elenco non ordinato fa rientrare l'elemento dell'elenco
@@ -123,7 +123,7 @@
 - <kbd>⌘</kbd> + <kbd>N</kbd> crea una nuova nota con la data e l'ora correnti nel nome
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd> crea una nuova nota in una nuova scheda
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> ti permette di cercare note (nel nome della nota e nel suo contenuto)
-- <kbd>Ctrl</kbd> + <kbd>F</kbd> ti consente di cercare note in tutti i tag / sottocartelle
+- <kbd>Ctrl</kbd> + <kbd>F</kbd> ti consente di cercare note in tutte le etichette / sottocartelle
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> passa all'area di lavoro precedente
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> modifica una nota crittografata
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> rimuove la nota corrente

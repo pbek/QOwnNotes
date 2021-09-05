@@ -6319,7 +6319,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
 <source>This also allows note files to be renamed</source>
-<translation type="unfinished">This also allows note files to be renamed</translation>
+<translation>Questo permette di rinominare i file nota</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1418"/>
@@ -8433,12 +8433,12 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/tododialog.ui" line="346"/>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>Questo non funziona per i sotto-elementi, perché potrebbero essere nascosti dall'elemento padre.</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="349"/>
 <source>Show only items due today</source>
-<translation type="unfinished">Show only items due today</translation>
+<translation>Mostra solo gli elementi in scadenza oggi</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="105"/>
@@ -8473,7 +8473,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/tododialog.ui" line="331"/>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Scadenza</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="339"/>

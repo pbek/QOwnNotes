@@ -4,8 +4,6 @@ image: /img/bookmarks.png
 
 # افزونه مرورگر همراه وب QOwnNotes
 
-![نشانک ها](/img/bookmarks.png)
-
 به منظور نصب [ ** افزونه مرورگر همراه وب QOwnNotes ** ](https://github.com/qownnotes/web-companion/) نگاهی به [ کروم وب استور ](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) یا [ صفحه افزونه های فایرفاکس ](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) بیندازید.
 
 شما می توانید افزونه را در [گیت هاب](https://github.com/qownnotes/web-companion/) نیز پیدا کنید.
@@ -16,6 +14,8 @@ QOwnNote برای کار با افزونه مرورگر همراه وب باید
 
 ## وب کلیپر
 
+![وب کلیپر](/img/web-clipper.png)
+
 به منظور استفاده کارآمد از **وب کلیپر** بر روی یک صفحه وب یا متن منتخب کلیک راست کنید.  علاوه بر این، می توانید یک یادداشت جدید را با **نماگرفتی** از صفحه وب کنونی ایجاد نمایید.
 
 ::: tip
@@ -24,16 +24,18 @@ QOwnNote برای کار با افزونه مرورگر همراه وب باید
 
 ## نشانک ها
 
-در صورت تمایل به کنترل کامل نشانک های مرورگر خود و **استفاده از آنها در مرورگرها و سیستم عامل های مختلف** می‌توانید از افزونه مرورگر QOwnNotes بهره گیرید.
+![نشانک ها](/img/bookmarks.png)
 
-هنگام کلیک روی شمایل QOwnNotes در مرورگرتان، افزونه مرورگر به صورت پیش فرض همه **پیوند های یادداشت کنونی** را در یک پنجره پاپ آپ نشان می دهد. این پیوندها یک برچسب `کنونی` می گیرند.
+If you want full control over your browser bookmarks and **use them across different browsers and operating systems** then the QOwnNotes browser extension is for you.
 
-همچنین می توانید با `نشانک های` برچسب یادداشت (قابل تغییر در تنظیمات) **نشانک های خود را در یادداشت ها مدیریت کنید**. این پیوند ها همچنین برچسب ها و توضیحی دارند که در افزونه مرورگر نشان داده می شود.
+By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
 
-نشانک های جدید در یادداشتی با نام `نشانک ها` ذخیره شده‌اند (همچنین در بخش تنظیمات قابل تغییر هستند).
+You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
+
+New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
 
 ::: tip
-علاوه بر این می توانید نشانک های مرورگر خود را با افزونه مرورگر همراه وب در QOwnNotes وارد نمایید!
+You can also import your browser bookmarks into QOwnNotes with the web companion browser extension!
 :::
 
 ### چیدمان پیوندهای نشانک
@@ -46,4 +48,4 @@ QOwnNote برای کار با افزونه مرورگر همراه وب باید
 * [نام صفحه وب](https://www.example.com) نویسه لیست جایگزین هم کار می کند
 ```
 
-شما این امکان را دارید که نام، URL برچسب ها یا توضیح را در افزونه مرورگر جستجو کنید.
+You are able to search for name, url tags or description in the browser extension.

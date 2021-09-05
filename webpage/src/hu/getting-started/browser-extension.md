@@ -4,17 +4,17 @@ image: /img/bookmarks.png
 
 # QOwnNotes Web Companion böngészőbővítmény
 
-![bookmarks](/img/bookmarks.png)
+Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) or the [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) to install the [**QOwnNotes Web Companion browser extension**](https://github.com/qownnotes/web-companion/).
 
-Látogasson el a [Chrome Internetes áruházba](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) vagy a  [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) a [**QOwnNotes Web Companion böngészőbővítmény**](https://github.com/qownnotes/web-companion/) telepítéséhez.
-
-A kiterjesztést a [GitHub](https://github.com/qownnotes/web-companion/) oldalon is megtalálja.
+You can also find the extension on [GitHub](https://github.com/qownnotes/web-companion/).
 
 ::: tip Info
-A Web Companion böngészőbővítmény működéséhez a QOwnNotes programnak futnia kell. The browser extensions works **offline**, no internet connection needed.
+QOwnNotes needs to be running for the Web Companion browser extension to work. The browser extensions works **offline**, no internet connection needed.
 :::
 
 ## Web clipper
+
+![web-clipper](/img/web-clipper.png)
 
 Kattintson a jobb gombbal egy weboldalra vagy a kiválasztott szövegre a ** web-clipper** funkció használatához. Itt új jegyzetet is létrehozhat az aktuális weboldal **képernyőkép** jével.
 
@@ -23,6 +23,8 @@ A webleíró is szkriptelhető! Vessen egy pillantást a [websocketRawDataHook](
 :::
 
 ## Könyvjelzők
+
+![bookmarks](/img/bookmarks.png)
 
 If you want full control over your browser bookmarks and **use them across different browsers and operating systems** then the QOwnNotes browser extension is for you.
 
