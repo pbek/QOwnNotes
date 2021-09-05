@@ -1187,6 +1187,7 @@ int CalendarItem::countAll() {
 QDebug operator<<(QDebug dbg, const CalendarItem &calendarItem) {
     dbg.nospace() << "CalendarItem: <id>" << calendarItem.id << " <summary>"
                   << calendarItem.summary << " <url>" << calendarItem.url
+                  << " <relatedUid>" << calendarItem.relatedUid
                   << " <calendar>" << calendarItem.calendar;
     return dbg.space();
 }
