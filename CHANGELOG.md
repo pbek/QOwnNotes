@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 21.9.1
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 21.9.0
+  - added a link to the [Web clipper documentation](https://www.qownnotes.org/getting-started/browser-extension.html#web-clipper)
+    to the hamburger menu on the top left to give more exposure to that feature
+  - updated dependencies
+  - added more Sinhala translation
+
 ## 21.9.0
 - WebP images are now detected as media file when dropped into the note editor or inserted as data-url
 - added more Sinhala, Catalan, Brazilian Portuguese, Turkish translation (thank you helabasa, mguerra, marterra)
