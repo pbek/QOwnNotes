@@ -177,6 +177,7 @@ SOURCES += main.cpp\
     widgets/scriptlistwidget.cpp \
     widgets/notefolderlistwidget.cpp \
     widgets/notetreewidgetitem.cpp \
+    widgets/todoitemtreewidget.cpp \
     widgets/layoutwidget.cpp \
     dialogs/serverbookmarksimportdialog.cpp \
     dialogs/websockettokendialog.cpp \
@@ -279,6 +280,7 @@ HEADERS  += mainwindow.h \
     widgets/scriptlistwidget.h \
     widgets/notefolderlistwidget.h \
     widgets/notetreewidgetitem.h \
+    widgets/todoitemtreewidget.h \
     widgets/layoutwidget.h \
     dialogs/serverbookmarksimportdialog.h \
     dialogs/websockettokendialog.h \

@@ -7,6 +7,8 @@
     to the hamburger menu on the top left to give more exposure to that feature
   - updated dependencies
   - added more Sinhala translation
+- you can now move a todo item into another todo item in the todo list dialog
+  (for [#2225](https://github.com/pbek/QOwnNotes/issues/2225))
 
 ## 21.9.0
 - WebP images are now detected as media file when dropped into the note editor or inserted as data-url

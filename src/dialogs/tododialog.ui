@@ -314,9 +314,12 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QTreeWidget" name="todoItemTreeWidget">
+         <widget class="TodoItemTreeWidget" name="todoItemTreeWidget">
           <property name="contextMenuPolicy">
            <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::InternalMove</enum>
           </property>
           <property name="sortingEnabled">
            <bool>true</bool>
@@ -362,6 +365,11 @@
    <class>QOwnNotesMarkdownTextEdit</class>
    <extends>QPlainTextEdit</extends>
    <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TodoItemTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header location="global">widgets/todoitemtreewidget.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

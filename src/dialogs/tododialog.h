@@ -81,6 +81,8 @@ private:
     bool eventFilter(QObject *obj, QEvent *event);
 
     void jumpToTodoListItem();
+   private slots:
+    void updateCalendarItem(CalendarItem item);
 };
 
 #endif    // TODODIALOG_H

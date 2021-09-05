@@ -24,6 +24,9 @@ TodoDialog::TodoDialog(MainWindow *mainWindow, const QString &taskUid,
     ui->setupUi(this);
     setupUi();
 
+    connect(ui->todoItemTreeWidget, &TodoItemTreeWidget::calendarItemUpdated, this,
+            &TodoDialog::updateCalendarItem);
+
     // init the description edit search frame
     ui->descriptionEdit->initSearchFrame(ui->descriptionEditSearchFrame);
 
@@ -38,6 +41,18 @@ TodoDialog::TodoDialog(MainWindow *mainWindow, const QString &taskUid,
     // jump to a task
     if (!taskUid.isEmpty()) {
         jumpToTask(taskUid);
+    }
+}
+
+void TodoDialog::updateCalendarItem(CalendarItem item) {
+    OwnCloudService *ownCloud = OwnCloudService::instance();
+    bool result = ownCloud->updateICSDataOfCalendarItem(&item);
+
+    qDebug() << __func__ << " - 'result': " << result;
+
+    if (result) {
+        // post the calendar item to the server (and reload note tree)
+        ownCloud->postCalendarItemToServer(item, this);
     }
 }
 

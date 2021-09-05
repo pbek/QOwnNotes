@@ -328,6 +328,8 @@ set(SOURCE_FILES
     widgets/layoutwidget.cpp
     widgets/layoutwidget.h
     widgets/layoutwidget.ui
+    widgets/todoitemtreewidget.cpp
+    widgets/todoitemtreewidget.h
     utils/misc.cpp
     utils/misc.h
     utils/git.cpp
