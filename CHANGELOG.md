@@ -1,8 +1,8 @@
 # QOwnNotes Changelog
 
 ## 21.9.2
-- there now is highlighting support for disabled checkboxes `[-]` (that are no markdown standard)
-  in the note editor and preview
+- there now is highlighting and preview support for disabled checkboxes `[-]`
+  (no markdown standard) in the note editor and preview
 
 ## 21.9.1
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
