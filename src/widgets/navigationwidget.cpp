@@ -27,7 +27,7 @@ NavigationWidget::NavigationWidget(QWidget *parent)
     // we want to handle currentItemChanged because it also works with the keyboard
     QObject::connect(this, &NavigationWidget::currentItemChanged, this,
                      &NavigationWidget::onCurrentItemChanged);
-    // we want to handle itemClicked because it alows to click on an item a 2nd time
+    // we want to handle itemClicked because it allows to click on an item a 2nd time
     QObject::connect(this, &NavigationWidget::itemClicked, this,
                      &NavigationWidget::onItemClicked);
 
