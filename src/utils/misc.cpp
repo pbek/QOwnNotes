@@ -915,7 +915,12 @@ void Utils::Misc::restartApplication() {
 
 QByteArray Utils::Misc::friendlyUserAgentString() {
     const auto pattern = QStringLiteral("%1 (QOwnNotes - %2)");
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     const auto userAgent = pattern.arg(QSysInfo::machineHostName(), platform());
+#else
+    const auto userAgent = pattern.arg(QHostInfo::localHostName(), platform());
+#endif
 
     return userAgent.toUtf8();
 }
