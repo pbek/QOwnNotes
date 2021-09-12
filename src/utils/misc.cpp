@@ -46,6 +46,7 @@
 #include <QUuid>
 #include <QtGui/QIcon>
 #include <utility>
+#include <QHttpMultiPart>
 
 #include "build_number.h"
 #include "libraries/sonnet/src/core/speller.h"
@@ -918,7 +919,7 @@ void Utils::Misc::restartApplication() {
  * @param url
  * @return {QByteArray} the content of the downloaded url
  */
-QByteArray Utils::Misc::downloadUrl(const QUrl &url) {
+QByteArray Utils::Misc::downloadUrl(const QUrl &url, bool usePost) {
     auto *manager = new QNetworkAccessManager();
     QEventLoop loop;
     QTimer timer;
@@ -940,7 +941,15 @@ QByteArray Utils::Misc::downloadUrl(const QUrl &url) {
 #endif
 
     QByteArray data;
-    QNetworkReply *reply = manager->get(networkRequest);
+    QNetworkReply *reply;
+
+    if (usePost) {
+        auto *multiPart = new QHttpMultiPart();
+        reply = manager->post(networkRequest, multiPart);
+    } else {
+        reply = manager->get(networkRequest);
+    }
+
     loop.exec();
 
     // if we didn't get a timeout let us return the content

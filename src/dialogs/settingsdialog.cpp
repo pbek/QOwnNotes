@@ -4393,3 +4393,7 @@ void SettingsDialog::on_showQRCodeButton_clicked() {
 void SettingsDialog::on_scriptReloadEngineButton2_clicked() {
     on_scriptReloadEngineButton_clicked();
 }
+
+void SettingsDialog::on_loginFlowButton_clicked() {
+    OwnCloudService::initiateLoginFlowV2(ui->serverUrlEdit->text());
+}

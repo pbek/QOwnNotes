@@ -2247,3 +2247,35 @@ QString OwnCloudService::nextcloudPreviewImageTagToInlineImageTag(
 
     return inlineImageTag;
 }
+
+/**
+ * Initiates the Login flow v2 for Nextcloud
+ * https://docs.nextcloud.com/server/latest/developer_manual/client_apis/LoginFlow/index.html#login-flow-v2
+ *
+ * @param serverUrl
+ */
+void OwnCloudService::initiateLoginFlowV2(const QString &serverUrl) {
+    const QString loginFlowUrl = serverUrl + "/index.php/login/v2";
+    auto data = Utils::Misc::downloadUrl(loginFlowUrl, true);
+    qDebug() << __func__ << " - 'data': " << data;
+
+    if (data.isEmpty() || !data.startsWith('{')) {
+        QMessageBox::warning(nullptr, QObject::tr("Login flow failed"),
+            QObject::tr(
+             "Nextcloud login flow v2 could not be initiated. "
+             "Make sure the server url is correct and you are using a "
+             "Nextcloud server!<br /><br />If your are still having issues "
+             "please create an app password by hand on your server's admin page."));
+
+        return;
+    }
+
+    // TODO: Parse data
+
+    // TODO: Open browser with login url
+//    QDesktopServices::openUrl(url);
+
+    // TODO: Start polling the poll endpoint until a status 200 is received
+
+    // TODO: Stop polling after X minutes
+}

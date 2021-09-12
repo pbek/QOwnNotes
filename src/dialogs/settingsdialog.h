@@ -314,6 +314,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_scriptReloadEngineButton2_clicked();
 
+    void on_loginFlowButton_clicked();
+
 private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;

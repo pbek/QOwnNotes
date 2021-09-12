@@ -96,7 +96,7 @@ QString replaceOwnCloudText(QString text, bool useShortText = false);
 void restartApplication();
 void needRestart();
 bool downloadUrlToFile(const QUrl &url, QFile *file);
-QByteArray downloadUrl(const QUrl &url);
+QByteArray downloadUrl(const QUrl &url, bool usePost = false);
 QString genericCSS();
 QHash<int, SearchEngine> getSearchEnginesHashMap();
 int getDefaultSearchEngineId();

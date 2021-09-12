@@ -94,6 +94,8 @@ class OwnCloudService : public QObject {
     QString nextcloudPreviewImageTagToInlineImageTag(QString imageTag,
                                                      int &imageWidth);
 
+    static void initiateLoginFlowV2(const QString &serverUrl);
+
    private:
     QString serverUrl;
     QString todoCalendarServerUrl;
