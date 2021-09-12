@@ -38,6 +38,8 @@
 #include <QStyleFactory>
 #include <QTextBrowser>
 #include <QToolBar>
+#include <QTimer>
+#include <QJsonDocument>
 #include <utility>
 
 #include "build_number.h"
@@ -93,6 +95,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
         ui->settingsStackedWidget->addWidget(scrollArea);
     }
 
+    ui->loginFlowCancelButton->hide();
     ui->qrCodeWidget->hide();
     ui->connectionTestLabel->hide();
     ui->darkModeInfoLabel->hide();
@@ -4395,5 +4398,67 @@ void SettingsDialog::on_scriptReloadEngineButton2_clicked() {
 }
 
 void SettingsDialog::on_loginFlowButton_clicked() {
-    OwnCloudService::initiateLoginFlowV2(ui->serverUrlEdit->text());
+    QJsonObject pollData;
+
+    // Initiate the Nextcloud Login flow v2
+    if (!OwnCloudService::initiateLoginFlowV2(
+            ui->serverUrlEdit->text(), pollData)) {
+        return;
+    }
+
+    ui->loginFlowButton->hide();
+    ui->loginFlowCancelButton->show();
+
+    auto pollUrl = pollData.value(QStringLiteral("endpoint")).toString();
+    auto token = pollData.value(QStringLiteral("token")).toString();
+
+    auto timer = new QTimer(this);
+    _loginFlowPollCount = 0;
+
+    connect(timer, &QTimer::timeout, this, [this, pollUrl, token, timer] {
+        _loginFlowPollCount++;
+
+        // If the cancel button was hidden by pressing it we want to stop the timer
+        // After 720 retries (one hour) we also stop
+        if (ui->loginFlowCancelButton->isHidden() || _loginFlowPollCount > 720) {
+            timer->stop();
+            delete timer;
+
+            return;
+        }
+
+        auto postData = QString("token=" + token).toLocal8Bit();
+        auto data = Utils::Misc::downloadUrl(pollUrl, true, postData);
+
+//        qDebug() << __func__ << " - 'data': " << data;
+
+        // Wait until there is a JSON result
+        if (!data.startsWith('{')) {
+            return;
+        }
+
+        timer->stop();
+
+        // Parse login data
+        auto jsonObject = QJsonDocument::fromJson(data).object();
+        ui->serverUrlEdit->setText(jsonObject.value(QStringLiteral("server")).toString());
+        ui->userNameEdit->setText(jsonObject.value(QStringLiteral("loginName")).toString());
+        ui->passwordEdit->setText(jsonObject.value(QStringLiteral("appPassword")).toString());
+
+        QMessageBox::information(this, QObject::tr("Login flow succeeded"),
+                             QObject::tr("Username and password were set successfully!"));
+
+        ui->loginFlowButton->show();
+        ui->loginFlowCancelButton->hide();
+        delete timer;
+    });
+
+    // We want to poll for the login data every 5 seconds
+    timer->start(5000);
+}
+
+void SettingsDialog::on_loginFlowCancelButton_clicked() {
+    // Hide the login flow cancel button so the login flow timer will be stopped
+    ui->loginFlowCancelButton->hide();
+    ui->loginFlowButton->show();
 }

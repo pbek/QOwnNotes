@@ -23,6 +23,8 @@
 #include <QStringBuilder>
 #include <QTimer>
 #include <QUrlQuery>
+#include <QDesktopServices>
+#include <QJsonDocument>
 
 // Disabled for Qt-6
 #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
@@ -2254,10 +2256,9 @@ QString OwnCloudService::nextcloudPreviewImageTagToInlineImageTag(
  *
  * @param serverUrl
  */
-void OwnCloudService::initiateLoginFlowV2(const QString &serverUrl) {
+bool OwnCloudService::initiateLoginFlowV2(const QString &serverUrl, QJsonObject &pollData) {
     const QString loginFlowUrl = serverUrl + "/index.php/login/v2";
     auto data = Utils::Misc::downloadUrl(loginFlowUrl, true);
-    qDebug() << __func__ << " - 'data': " << data;
 
     if (data.isEmpty() || !data.startsWith('{')) {
         QMessageBox::warning(nullptr, QObject::tr("Login flow failed"),
@@ -2267,15 +2268,24 @@ void OwnCloudService::initiateLoginFlowV2(const QString &serverUrl) {
              "Nextcloud server!<br /><br />If your are still having issues "
              "please create an app password by hand on your server's admin page."));
 
-        return;
+        return false;
     }
 
-    // TODO: Parse data
+    // Parse data
+    auto jsonObject = QJsonDocument::fromJson(data).object();
+    auto loginUrl = jsonObject.value(QStringLiteral("login")).toString();
 
-    // TODO: Open browser with login url
-//    QDesktopServices::openUrl(url);
+    if (loginUrl.isEmpty()) {
+        QMessageBox::warning(nullptr, QObject::tr("Login flow failed"),
+         QObject::tr("Could not parse login url!"));
 
-    // TODO: Start polling the poll endpoint until a status 200 is received
+        return false;
+    }
 
-    // TODO: Stop polling after X minutes
+    // Open browser with login url
+    QDesktopServices::openUrl(loginUrl);
+
+    pollData = jsonObject.value(QStringLiteral("poll")).toObject();
+
+    return true;
 }

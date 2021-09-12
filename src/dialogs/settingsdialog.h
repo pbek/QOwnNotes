@@ -316,6 +316,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_loginFlowButton_clicked();
 
+    void on_loginFlowCancelButton_clicked();
+
 private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;
@@ -336,6 +338,7 @@ private:
     QCheckBox *_noteNotificationNoneCheckBox;
     QString _newScriptName;
     CloudConnection _selectedCloudConnection;
+    int _loginFlowPollCount = 0;
 
     void storeSettings();
 

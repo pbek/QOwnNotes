@@ -919,7 +919,7 @@ void Utils::Misc::restartApplication() {
  * @param url
  * @return {QByteArray} the content of the downloaded url
  */
-QByteArray Utils::Misc::downloadUrl(const QUrl &url, bool usePost) {
+QByteArray Utils::Misc::downloadUrl(const QUrl &url, bool usePost, QByteArray postData) {
     auto *manager = new QNetworkAccessManager();
     QEventLoop loop;
     QTimer timer;
@@ -944,8 +944,12 @@ QByteArray Utils::Misc::downloadUrl(const QUrl &url, bool usePost) {
     QNetworkReply *reply;
 
     if (usePost) {
-        auto *multiPart = new QHttpMultiPart();
-        reply = manager->post(networkRequest, multiPart);
+        if (postData == nullptr) {
+            postData = QByteArray();
+        }
+
+        networkRequest.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+        reply = manager->post(networkRequest, postData);
     } else {
         reply = manager->get(networkRequest);
     }

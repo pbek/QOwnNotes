@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 21.9.3
+- You can now create an app password for your Nextcloud account automatically to 
+  grant QOwnNotes access to your account by just entering the server url and 
+  clicking on `Login to Nextcloud to grant access` in your *Nextcloud / ownCloud settings*
+  (for [#2233](https://github.com/pbek/QOwnNotes/issues/2233))
+    - then just follow the instructions in your web browser until QOwnNotes can
+      fetch your username and app password in the background
+
 ## 21.9.2
 - there now is highlighting and preview support for disabled checkboxes `[-]`
   (no markdown standard) in the note editor and preview
