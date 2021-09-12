@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.9.4
+- Now a more descriptive user agent is used for the login flow to generate an
+  app password on your Nextcloud server, so you can more easily spot the app
+  password created for QOwnNotes (for [#2233](https://github.com/pbek/QOwnNotes/issues/2233))
+
 ## 21.9.3
 - You can now create an app password for your Nextcloud account automatically to 
   grant QOwnNotes access to your account by just entering the server url and 

@@ -913,6 +913,37 @@ void Utils::Misc::restartApplication() {
     QApplication::quit();
 }
 
+QByteArray Utils::Misc::friendlyUserAgentString() {
+    const auto pattern = QStringLiteral("%1 (QOwnNotes - %2)");
+    const auto userAgent = pattern.arg(QSysInfo::machineHostName(), platform());
+
+    return userAgent.toUtf8();
+}
+
+QLatin1String Utils::Misc::platform() {
+#if defined(Q_OS_WIN)
+    return QLatin1String("Windows");
+#elif defined(Q_OS_MAC)
+    return QLatin1String("macOS");
+#elif defined(Q_OS_LINUX)
+    return QLatin1String("Linux");
+#elif defined(Q_OS_FREEBSD) || defined(Q_OS_FREEBSD_KERNEL)
+    return QLatin1String("FreeBSD");
+#elif defined(Q_OS_NETBSD)
+    return QLatin1String("NetBSD");
+#elif defined(Q_OS_OPENBSD)
+    return QLatin1String("OpenBSD");
+#elif defined(Q_OS_SOLARIS)
+    return QLatin1String("Solaris");
+#else
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    return QSysInfo::productType();
+#else
+    return " Qt " + QString(QT_VERSION_STR);
+#endif
+#endif
+}
+
 /**
  * Downloads an url and returns the data
  *
@@ -934,6 +965,8 @@ QByteArray Utils::Misc::downloadUrl(const QUrl &url, bool usePost, QByteArray po
     timer.start(10000);
 
     QNetworkRequest networkRequest = QNetworkRequest(url);
+    networkRequest.setHeader(QNetworkRequest::UserAgentHeader,
+                             Utils::Misc::friendlyUserAgentString());
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
