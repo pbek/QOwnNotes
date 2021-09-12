@@ -749,7 +749,11 @@ script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
 
 Puoi dare un'occhiata all'esempio [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-stylesheet.qml).
 
-È possibile ottenere i nomi degli oggetti dai file `*.ui`, ad esempio [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
+You can get the widget names from the `*.ui` files, for example the main window is [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
+
+The Qt documentation (for example [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)) can help you to see how the widgets are related to each other (search for `Inherits` on the pages).
+
+The base widget for almost everything is [QWidget](https://doc.qt.io/qt-5/qwidget.html). So just styling `QWidget` with for example `QWidget {background-color: black; color: white;}` would mean everything has a black background color and a white foreground color.
 
 ::: tip
 The [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) of [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle) might also be a good reference for styles you can change.
@@ -758,6 +762,10 @@ The [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qda
 Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) for a reference of what styles are available.
 
 If you want to inject styles into html preview to alter the way notes are previewed please look at [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
+
+::: tip
+If you actually want to see how the dialogs look and what the names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it.
+:::
 
 Ricaricamento del motore di scripting
 ------------------------------
@@ -887,7 +895,7 @@ void ScriptingService::setCurrentNote(NoteApi *note);
 script.setCurrentNote(note);
 ```
 
-Puoi dare un'occhiata all'esempio [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
+You may want to take a look at the example [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
 
 Passaggio a una sottocartella di note
 ---------------------------
@@ -915,7 +923,7 @@ script.jumpToNoteSubFolder("a sub folder/sub");
 ```
 
 ::: tip
-È possibile creare una nuova sottocartella delle note nella sottocartella corrente chiamando [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
+You can create a new note subfolder in the current subfolder by calling [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
 :::
 
 Visualizzazione di una finestra di messaggio informativo
@@ -968,9 +976,9 @@ var result = script.questionMessageBox(
 script.log(result);
 ```
 
-Per informazioni sui pulsanti vedere [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
+For information about buttons see [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
 
-Potresti anche dare un'occhiata all'esempio [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+You may also want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
 Visualizzazione di una finestra di dialogo Apri file
 ---------------------------
@@ -1018,14 +1026,14 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 var fileName = script.getSaveFileName("Please select HTML file to save", "output.html", "HTML (*.html)");
 ```
 
-Puoi dare un'occhiata all'esempio [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Registrazione delle variabili delle impostazioni dello script
 -------------------------------------
 
-Si prega di impostare le variabili di settaggio nel proprio script e registrarle in una proprietà nominata `settingsVariables`.
+You need to define your settings variables as properties in your script and register them in a property named `settingsVariables`.
 
-L'utente può quindi impostare queste proprietà nelle impostazioni dello script.
+The user can then set these properties in the script settings.
 
 ### Esempio
 ```js
@@ -1091,7 +1099,7 @@ property variant settingsVariables: [
 ];
 ```
 
-Inoltre puoi sovrascrivere `settingsVariables` con una funzione speciale `registerSettingsVariables()` come questa:
+In addition you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
 
 ### Esempio
 ```js
@@ -1109,7 +1117,7 @@ function registerSettingsVariables() {
 }
 ```
 
-Potresti anche dare un'occhiata all'esempio [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
+You may also want to take a look at the example [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
 
 Memorizzazione e caricamento di variabili persistenti
 ----------------------------------------
@@ -1148,9 +1156,9 @@ script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothing here yet"));
 ```
 
-Assicurati di utilizzare un prefisso significativo nella tua chiave come `PersistentVariablesTest/myVar` perché le variabili sono accessibili da tutti gli script.
+Please make sure to use a meaningful prefix in your key like `PersistentVariablesTest/myVar` because the variables are accessible from all scripts.
 
-Potresti anche dare un'occhiata all'esempio [variabili-persistenti.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
+You may also want to take a look at the example [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
 
 Caricamento delle variabili delle impostazioni dell'applicazione
 --------------------------------------
@@ -1174,12 +1182,12 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
 ```
 
-Tieni presente che le impostazioni in realtà possono essere vuote, devi occupartene tu stesso. `defaultValue` is only used if the setting doesn't exist at all.
+Keep in mind that settings actually can be empty, you have to take care about that yourself. `defaultValue` is only used if the setting doesn't exist at all.
 
 Creazione di una directory della cache
 --------------------------
 
-È possibile memorizzare nella cache i file nella posizione cache predefinita del sistema.
+You can cache files at the default cache location of your system.
 
 ### Chiamata al metodo e parametri
 ```cpp
@@ -1201,7 +1209,7 @@ var cacheDirForScript = script.cacheDir("my-script-id");
 Cancellazione di una directory della cache
 --------------------------
 
-Puoi cancellare i file della cache del tuo script passando il suo nome a clearCacheDir().
+You can clear the cache files of your script by passing its name to clearCacheDir().
 
 ### Chiamata al metodo e parametri
 ```cpp
@@ -1223,7 +1231,7 @@ script.clearCacheDir("my-script-id");
 Leggere il percorso della directory del tuo script
 ------------------------------------------------
 
-Se è necessario ottenere il percorso della directory in cui è posizionato lo script, ad esempio per caricare altri file, è necessario registrare un file `property string scriptDirPath;`. Questa proprietà verrà impostata con il percorso della directory dello script.
+If you need to get the path to the directory where your script is placed to for example load other files you have to register a `property string scriptDirPath;`. This property will be set with the path to the script's directory.
 
 ### Esempio
 ```js
@@ -1495,15 +1503,15 @@ var result = script.writeToFile(filePath, html);
 script.log(result);
 ```
 
-Puoi dare un'occhiata all'esempio [esporta-note-come-un-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Lavorare con websocket
 -----------------------
 
-È possibile controllare in remoto QOwnNotes utilizzando `WebSocketServer`.
+You can remote control QOwnNotes by using `WebSocketServer`.
 
-Si prega di dare un'occhiata all'esempio [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). Puoi testare il server socket collegandoti ad esso su [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
+Please take a look at the example [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). You can test the socket server by connecting to it on [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
 
-Puoi anche ascoltare i socket con `WebSocket`. Per favore guarda l'esempio [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
+You can also listen to sockets with `WebSocket`. Please take look at the example [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
 
-Keep in mind that you need to have Qt's QML `websocket` library installed to use this. Ad esempio in Ubuntu Linux puoi installare `qml-module-qtwebsockets`.
+Keep in mind that you need to have Qt's QML `websocket` library installed to use this. For example under Ubuntu Linux you can install `qml-module-qtwebsockets`.

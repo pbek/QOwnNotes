@@ -4415,160 +4415,160 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <context>
 <name>OwnCloudService</name>
 <message>
-<location filename="../services/owncloudservice.cpp" line="235"/>
+<location filename="../services/owncloudservice.cpp" line="237"/>
 <source>incorrect</source>
 <translation>incorect</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="237"/>
-<location filename="../services/owncloudservice.cpp" line="535"/>
+<location filename="../services/owncloudservice.cpp" line="239"/>
+<location filename="../services/owncloudservice.cpp" line="537"/>
 <source>not connected</source>
 <translation>neconectat</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="252"/>
+<location filename="../services/owncloudservice.cpp" line="254"/>
 <source>Username / password error</source>
 <translation>Eroare de utilizator și parolă</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="253"/>
+<location filename="../services/owncloudservice.cpp" line="255"/>
 <source>Your calendar username or password is incorrect!</source>
 <translation>Eroare de utilizator și parolă Numele sau parola dvs. de calendar din calendar este incorectă!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="313"/>
 <location filename="../services/owncloudservice.cpp" line="315"/>
-<location filename="../services/owncloudservice.cpp" line="325"/>
+<location filename="../services/owncloudservice.cpp" line="317"/>
 <location filename="../services/owncloudservice.cpp" line="327"/>
-<location filename="../services/owncloudservice.cpp" line="431"/>
-<location filename="../services/owncloudservice.cpp" line="485"/>
-<location filename="../services/owncloudservice.cpp" line="500"/>
-<location filename="../services/owncloudservice.cpp" line="508"/>
-<location filename="../services/owncloudservice.cpp" line="526"/>
+<location filename="../services/owncloudservice.cpp" line="329"/>
+<location filename="../services/owncloudservice.cpp" line="433"/>
+<location filename="../services/owncloudservice.cpp" line="487"/>
+<location filename="../services/owncloudservice.cpp" line="502"/>
+<location filename="../services/owncloudservice.cpp" line="510"/>
+<location filename="../services/owncloudservice.cpp" line="528"/>
 <source>ok</source>
 <translation>ok</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="318"/>
+<location filename="../services/owncloudservice.cpp" line="320"/>
 <source>not correct</source>
 <translation>incorect</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="331"/>
+<location filename="../services/owncloudservice.cpp" line="333"/>
 <source>not detected</source>
 <translation>nedetectat</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="434"/>
-<location filename="../services/owncloudservice.cpp" line="529"/>
+<location filename="../services/owncloudservice.cpp" line="436"/>
+<location filename="../services/owncloudservice.cpp" line="531"/>
 <source>not found</source>
 <translation>inexistent</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="471"/>
 <location filename="../services/owncloudservice.cpp" line="473"/>
+<location filename="../services/owncloudservice.cpp" line="475"/>
 <source>unknown</source>
 <translation>necunoscut</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="482"/>
+<location filename="../services/owncloudservice.cpp" line="484"/>
 <source>version %1 too low</source>
 <translation>versiunea %1 prea scăzut</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="503"/>
-<location filename="../services/owncloudservice.cpp" line="511"/>
+<location filename="../services/owncloudservice.cpp" line="505"/>
+<location filename="../services/owncloudservice.cpp" line="513"/>
 <source>not enabled</source>
 <translation>neactivat</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="585"/>
+<location filename="../services/owncloudservice.cpp" line="587"/>
 <source>API app version too low</source>
 <translation>Aplicația API este prea mică</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="586"/>
+<location filename="../services/owncloudservice.cpp" line="588"/>
 <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
 <translation>Vă recomandăm să vă actualizați aplicația QOwnNotesAPI pe serverul dvs., versiunea aplicației dvs. %1 este prea mică și poate cauza probleme în QOwnNotes.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1199"/>
+<location filename="../services/owncloudservice.cpp" line="1201"/>
 <source>ownCloud server connection error</source>
 <translation>eroare de conectare la serverul propriu</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1204"/>
+<location filename="../services/owncloudservice.cpp" line="1206"/>
 <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
 <translation>eroare de server ownCloud: &lt;strong&gt;%1&lt;/ strong&gt; &lt;br /&gt; Verificați-vă configurația ownCloud.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1224"/>
+<location filename="../services/owncloudservice.cpp" line="1226"/>
 <source>You need to setup your ownCloud server!</source>
 <translation>Trebuie să configurați serverul ownCloud!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1236"/>
+<location filename="../services/owncloudservice.cpp" line="1238"/>
 <source>Open &amp;settings</source>
 <translation>Deschidere &amp;setările</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1236"/>
+<location filename="../services/owncloudservice.cpp" line="1238"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Revocare</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1295"/>
+<location filename="../services/owncloudservice.cpp" line="1297"/>
 <source>Done with loading note versions</source>
 <translation>Făcut cu nota versiuni de încărcare</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1340"/>
+<location filename="../services/owncloudservice.cpp" line="1342"/>
 <source>No versions found</source>
 <translation>Nici versiunile găsite</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1341"/>
+<location filename="../services/owncloudservice.cpp" line="1343"/>
 <source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>Există versiuni pentru această notă sau nota nu a fost gasit pe server.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1361"/>
+<location filename="../services/owncloudservice.cpp" line="1363"/>
 <source>Done with loading trashed notes</source>
 <translation>Cu trashed note de încărcare</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1406"/>
+<location filename="../services/owncloudservice.cpp" line="1408"/>
 <source>No trashed notes</source>
 <translation>Nu note trashed</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1407"/>
+<location filename="../services/owncloudservice.cpp" line="1409"/>
 <source>No trashed notes were found on the server.</source>
 <translation>Nu note trashed s-au găsit pe server.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1429"/>
-<location filename="../services/owncloudservice.cpp" line="1456"/>
+<location filename="../services/owncloudservice.cpp" line="1431"/>
+<location filename="../services/owncloudservice.cpp" line="1458"/>
 <source>Error while loading todo lists!</source>
 <translation>Eroare în timpul încărcării liste de todo!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1430"/>
+<location filename="../services/owncloudservice.cpp" line="1432"/>
 <source>Your CalDAV server didn't reply anything!</source>
 <translation>Server-ul CalDAV nu raspunde nimic!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1457"/>
+<location filename="../services/owncloudservice.cpp" line="1459"/>
 <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>Mesaj de eroare de la server-ul CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2145"/>
+<location filename="../services/owncloudservice.cpp" line="2147"/>
 <source>No bookmarks</source>
 <translation>Nu există marcaje</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2146"/>
+<location filename="../services/owncloudservice.cpp" line="2148"/>
 <source>No bookmarks were found on the server.</source>
 <translation>Nu au fost găsite semne de carte pe server.</translation>
 </message>
@@ -4710,9 +4710,19 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4264"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4267"/>
 <source>New connection</source>
 <translation>Conectare nouă</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="4448"/>
+<source>Login flow succeeded</source>
+<translation type="unfinished">Login flow succeeded</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="4449"/>
+<source>Username and password were set successfully!</source>
+<translation type="unfinished">Username and password were set successfully!</translation>
 </message>
 <message>
 <location filename="../entities/cloudconnection.cpp" line="291"/>
@@ -4781,6 +4791,22 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <location filename="../dialogs/joplinimportdialog.cpp" line="28"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
 <translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+</message>
+<message>
+<location filename="../services/owncloudservice.cpp" line="2264"/>
+<location filename="../services/owncloudservice.cpp" line="2279"/>
+<source>Login flow failed</source>
+<translation type="unfinished">Login flow failed</translation>
+</message>
+<message>
+<location filename="../services/owncloudservice.cpp" line="2265"/>
+<source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
+<translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
+</message>
+<message>
+<location filename="../services/owncloudservice.cpp" line="2280"/>
+<source>Could not parse login url!</source>
+<translation type="unfinished">Could not parse login url!</translation>
 </message>
 </context>
 <context>
@@ -5236,7 +5262,7 @@ Doriți să o instalați oricum?</translation>
 <name>SettingsDialog</name>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="26"/>
-<location filename="../dialogs/settingsdialog.ui" line="4357"/>
+<location filename="../dialogs/settingsdialog.ui" line="4382"/>
 <source>Settings</source>
 <translation>Setările</translation>
 </message>
@@ -5328,7 +5354,7 @@ Doriți să o instalați oricum?</translation>
 <location filename="../dialogs/settingsdialog.ui" line="1325"/>
 <location filename="../dialogs/settingsdialog.ui" line="1342"/>
 <location filename="../dialogs/settingsdialog.ui" line="1359"/>
-<location filename="../dialogs/settingsdialog.cpp" line="337"/>
+<location filename="../dialogs/settingsdialog.cpp" line="340"/>
 <source>unknown</source>
 <translation>necunoscut</translation>
 </message>
@@ -5393,42 +5419,42 @@ Doriți să o instalați oricum?</translation>
 <translation>Reţea</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1452"/>
+<location filename="../dialogs/settingsdialog.ui" line="1477"/>
 <source>Proxy Settings</source>
 <translation>Setări proxy</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1458"/>
+<location filename="../dialogs/settingsdialog.ui" line="1483"/>
 <source>No Proxy</source>
 <translation>Nu există proxy</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1468"/>
+<location filename="../dialogs/settingsdialog.ui" line="1493"/>
 <source>Use system proxy</source>
 <translation>Utilizați proxy-ul de sistem</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1475"/>
+<location filename="../dialogs/settingsdialog.ui" line="1500"/>
 <source>Specify proxy manually as</source>
 <translation>Specificați proxy manual ca</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1500"/>
+<location filename="../dialogs/settingsdialog.ui" line="1525"/>
 <source>Host</source>
 <translation>Gazdă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1551"/>
+<location filename="../dialogs/settingsdialog.ui" line="1576"/>
 <source>Proxy server requires authentication</source>
 <translation>Serverul proxy necesită autentificare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1608"/>
+<location filename="../dialogs/settingsdialog.ui" line="1633"/>
 <source>SSL Settings</source>
 <translation>Setări SSL</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1614"/>
+<location filename="../dialogs/settingsdialog.ui" line="1639"/>
 <source>Ignore SSL errors</source>
 <translation>Ignorați erorile SSL</translation>
 </message>
@@ -5438,7 +5464,7 @@ Doriți să o instalați oricum?</translation>
 <translation>A face</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1869"/>
+<location filename="../dialogs/settingsdialog.ui" line="1894"/>
 <source>Default ownCloud calendar</source>
 <translation>Implicit ownCloud calendar</translation>
 </message>
@@ -5448,65 +5474,65 @@ Doriți să o instalați oricum?</translation>
 <translation>Interfață</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1839"/>
+<location filename="../dialogs/settingsdialog.ui" line="1864"/>
 <source>Other CalDAV server</source>
 <translation>Alt server CalDAV</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3007"/>
+<location filename="../dialogs/settingsdialog.ui" line="3032"/>
 <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
 <translation>Numai anumite culori vor fi adaptate, tema de desktop va controla restul. Trebuie să reporniți aplicația pentru a permite acestor modificări să acționeze.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3010"/>
+<location filename="../dialogs/settingsdialog.ui" line="3035"/>
 <source>Optimize preview colors for dark mode desktop themes</source>
 <translation>Optimizați culorile de previzualizare pentru temele pentru desktop în modul închis</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2997"/>
+<location filename="../dialogs/settingsdialog.ui" line="3022"/>
 <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
 <translation>Aceasta permite modificarea modului întunecat, a interfeței și a icoanelor. Trebuie să reporniți aplicația pentru a permite acestor modificări să acționeze.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3000"/>
+<location filename="../dialogs/settingsdialog.ui" line="3025"/>
 <source>Enable dark mode</source>
 <translation>Activați modul întunecat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3026"/>
-<location filename="../dialogs/settingsdialog.ui" line="3036"/>
-<location filename="../dialogs/settingsdialog.ui" line="3067"/>
-<location filename="../dialogs/settingsdialog.ui" line="3077"/>
+<location filename="../dialogs/settingsdialog.ui" line="3051"/>
+<location filename="../dialogs/settingsdialog.ui" line="3061"/>
+<location filename="../dialogs/settingsdialog.ui" line="3092"/>
+<location filename="../dialogs/settingsdialog.ui" line="3102"/>
 <source>You need to restart the application to let this setting take effect</source>
 <translation>Trebuie să reporniți aplicația pentru ca această setare să aibă efect</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3106"/>
+<location filename="../dialogs/settingsdialog.ui" line="3131"/>
 <source>Item sizes in the main window</source>
 <translation>Dimensiunile articolelor în fereastra principală</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5140"/>
+<location filename="../dialogs/settingsdialog.ui" line="5165"/>
 <source>Markdown highlighting</source>
 <translation>Markdown evidențierea</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5146"/>
+<location filename="../dialogs/settingsdialog.ui" line="5171"/>
 <source>Enable markdown highlighting</source>
 <translation>Activați evidențierea marcajelor</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2163"/>
+<location filename="../dialogs/settingsdialog.ui" line="2188"/>
 <source>Interface language</source>
 <translation>Limba interfeței</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2193"/>
+<location filename="../dialogs/settingsdialog.ui" line="2218"/>
 <source>Automatic</source>
 <translation>Automat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2328"/>
+<location filename="../dialogs/settingsdialog.ui" line="2353"/>
 <source>English</source>
 <translation>Engleză</translation>
 </message>
@@ -5516,121 +5542,121 @@ Doriți să o instalați oricum?</translation>
 <translation>Comenzi rapide</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4595"/>
-<location filename="../dialogs/settingsdialog.ui" line="4888"/>
+<location filename="../dialogs/settingsdialog.ui" line="4620"/>
+<location filename="../dialogs/settingsdialog.ui" line="4913"/>
 <source>Default font:</source>
 <translation>Implicit font:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4637"/>
-<location filename="../dialogs/settingsdialog.ui" line="4829"/>
+<location filename="../dialogs/settingsdialog.ui" line="4662"/>
+<location filename="../dialogs/settingsdialog.ui" line="4854"/>
 <source>Code font:</source>
 <translation>Codul fontului:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3265"/>
+<location filename="../dialogs/settingsdialog.ui" line="3290"/>
 <source>Main window shortcuts</source>
 <translation>Comenzi rapide pentru fereastra principală</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3899"/>
+<location filename="../dialogs/settingsdialog.ui" line="3924"/>
 <source>Do this at your own risk!</source>
 <translation>Faceți acest lucru pe propriul dvs. risc!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3902"/>
+<location filename="../dialogs/settingsdialog.ui" line="3927"/>
 <source>Ignore all external note folder changes</source>
 <translation>Ignorați toate modificările folderului notei externe</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4495"/>
+<location filename="../dialogs/settingsdialog.ui" line="4520"/>
 <source>Use GitHub line breaks</source>
 <translation>Utilizați pauze de linie GitHub</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2306"/>
+<location filename="../dialogs/settingsdialog.ui" line="2331"/>
 <source>German</source>
 <translation>Limba germana</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2383"/>
+<location filename="../dialogs/settingsdialog.ui" line="2408"/>
 <source>French</source>
 <translation>Limba franceza</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2647"/>
+<location filename="../dialogs/settingsdialog.ui" line="2672"/>
 <source>Polish</source>
 <translation>Polonez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2669"/>
+<location filename="../dialogs/settingsdialog.ui" line="2694"/>
 <source>Portuguese</source>
 <translation>Portugheză</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2614"/>
+<location filename="../dialogs/settingsdialog.ui" line="2639"/>
 <source>Dutch</source>
 <translation>Olandeză</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2581"/>
+<location filename="../dialogs/settingsdialog.ui" line="2606"/>
 <source>Hungarian</source>
 <translation>Maghiar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2339"/>
+<location filename="../dialogs/settingsdialog.ui" line="2364"/>
 <source>Spanish</source>
 <translation>Spaniolă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2971"/>
+<location filename="../dialogs/settingsdialog.ui" line="2996"/>
 <source>Dark mode</source>
 <translation>Modul întunecat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1668"/>
+<location filename="../dialogs/settingsdialog.ui" line="1693"/>
 <source>Disable tracking of usage data</source>
 <translation>Dezactivați urmărirea datelor de utilizare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1712"/>
+<location filename="../dialogs/settingsdialog.ui" line="1737"/>
 <source>Usage tracking is done on a private Piwik server.</source>
 <translation>Urmărirea utilizării se face pe un server Piwik privat.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1772"/>
+<location filename="../dialogs/settingsdialog.ui" line="1797"/>
 <source>Disable heartbeat</source>
 <translation>Dezactivați bătăile inimii</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2702"/>
+<location filename="../dialogs/settingsdialog.ui" line="2727"/>
 <source>Russian</source>
 <translation>Rusă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1621"/>
+<location filename="../dialogs/settingsdialog.ui" line="1646"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Poate doriți să luați în considerare obținerea unui certificat SSL gratuit de la &lt;a href="https://letsencrypt.org/"&gt; Să criptați &lt;/a&gt;. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2182"/>
+<location filename="../dialogs/settingsdialog.ui" line="2207"/>
 <source>If you change the language you have to restart the application for the changes to take action.</source>
 <translation>Dacă schimbați limba, trebuie să reporniți aplicația pentru ca modificările să ia măsuri.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3721"/>
-<location filename="../dialogs/settingsdialog.ui" line="3796"/>
+<location filename="../dialogs/settingsdialog.ui" line="3746"/>
+<location filename="../dialogs/settingsdialog.ui" line="3821"/>
 <source>You need to reload the scripting engine if you modify a script file</source>
 <translation>Trebuie să reîncărcați motorul scripting dacă modificați un fișier de script</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3724"/>
-<location filename="../dialogs/settingsdialog.ui" line="3799"/>
+<location filename="../dialogs/settingsdialog.ui" line="3749"/>
+<location filename="../dialogs/settingsdialog.ui" line="3824"/>
 <source>Reload scripting engine</source>
 <translation>Motorul de scriptare reîncărcare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3714"/>
+<location filename="../dialogs/settingsdialog.ui" line="3739"/>
 <source>Validate script</source>
 <translation>Validați scriptul</translation>
 </message>
@@ -5640,122 +5666,122 @@ Doriți să o instalați oricum?</translation>
 <translation>General</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3893"/>
+<location filename="../dialogs/settingsdialog.ui" line="3918"/>
 <source>Notes</source>
 <translation>Notițe</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3919"/>
+<location filename="../dialogs/settingsdialog.ui" line="3944"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Dacă este bifată, veți fi mereu notificat despre modificările externe, chiar dacă nota curentă nu a fost editată în ultimul moment. Recomandată este &lt;span style = "font-style: italic;"&gt; neînchis &lt;/ span&gt;. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4015"/>
-<location filename="../dialogs/settingsdialog.ui" line="5388"/>
-<location filename="../dialogs/settingsdialog.ui" line="5933"/>
+<location filename="../dialogs/settingsdialog.ui" line="4040"/>
+<location filename="../dialogs/settingsdialog.ui" line="5413"/>
+<location filename="../dialogs/settingsdialog.ui" line="5958"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>S-ar putea să aveți probleme de sincronizare cu versiunile mai vechi ale sincronizării propriuCloud atunci când mergeți cu mult sub 10 secunde.
 Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai mare dacă este cazul.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2603"/>
+<location filename="../dialogs/settingsdialog.ui" line="2628"/>
 <source>Japanese</source>
 <translation>Japonez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4019"/>
+<location filename="../dialogs/settingsdialog.ui" line="4044"/>
 <source>note save interval time [sec]</source>
 <translation>notă salva intervalul de timp [sec]</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3922"/>
+<location filename="../dialogs/settingsdialog.ui" line="3947"/>
 <source>Notify about all external modifications of the current note</source>
 <translation>Notificați despre toate modificările externe ale notei curente</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4386"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2303"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2311"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4334"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4339"/>
+<location filename="../dialogs/settingsdialog.ui" line="4411"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2306"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2314"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4337"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4342"/>
 <source>Database</source>
 <translation>Bază de date</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4392"/>
+<location filename="../dialogs/settingsdialog.ui" line="4417"/>
 <source>Reinitialize Database</source>
 <translation>Reinițializați baza de date</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4325"/>
+<location filename="../dialogs/settingsdialog.ui" line="4350"/>
 <source>Clear application data and exit</source>
 <translation>Curățați de cerere şi de ieşire</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4331"/>
+<location filename="../dialogs/settingsdialog.ui" line="4356"/>
 <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
 <translation>Acest buton vă permite să ștergeți toate setările, să eliminați baza de date locale todo și să părăsiți QOwnNotes.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4341"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2377"/>
+<location filename="../dialogs/settingsdialog.ui" line="4366"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2380"/>
 <source>Clear app data and exit</source>
 <translation>Ștergeți datele din aplicație și ieșiți</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4120"/>
+<location filename="../dialogs/settingsdialog.ui" line="4145"/>
 <source>Update dialog</source>
 <translation>Actualizați dialogul</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4200"/>
+<location filename="../dialogs/settingsdialog.ui" line="4225"/>
 <source>Default note file extension</source>
 <translation>Extensie extensie fișier prestabilit</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4285"/>
+<location filename="../dialogs/settingsdialog.ui" line="4310"/>
 <source>External editor</source>
 <translation>Editor extern</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4298"/>
+<location filename="../dialogs/settingsdialog.ui" line="4323"/>
 <source>path to external editor, leave empty for default</source>
 <translation>calea către editorul extern, lăsați goale pentru implicit</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4308"/>
-<location filename="../dialogs/settingsdialog.ui" line="5467"/>
+<location filename="../dialogs/settingsdialog.ui" line="4333"/>
+<location filename="../dialogs/settingsdialog.ui" line="5492"/>
 <source>set external editor</source>
 <translation>setați editorul extern</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1637"/>
+<location filename="../dialogs/settingsdialog.ui" line="1662"/>
 <source>App metrics</source>
 <translation>App metrics</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1655"/>
+<location filename="../dialogs/settingsdialog.ui" line="1680"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>Datele de utilizare anonime ajută la a decide ce părți din QOwnNotes să se îmbunătățească în continuare și să găsească și să remedieze erorile. Dezactivați-o numai dacă nu puteți trăi cu adevărat.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1687"/>
+<location filename="../dialogs/settingsdialog.ui" line="1712"/>
 <source>This data includes anonymous information about what features of the app are used.</source>
 <translation>Aceste date includ informații anonime despre ce caracteristici ale aplicației sunt utilizate.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1741"/>
+<location filename="../dialogs/settingsdialog.ui" line="1766"/>
 <source>App heartbeat</source>
 <translation>Aplicația bătăilor inimii</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1759"/>
+<location filename="../dialogs/settingsdialog.ui" line="1784"/>
 <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
 <translation>O solicitare de batai inima este trimisa periodic in timp ce QOwnNotes ruleaza. Faceți un dezvoltator fericit lăsându-l să știe că cineva utilizează QOwnNotes.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2493"/>
+<location filename="../dialogs/settingsdialog.ui" line="2518"/>
 <source>Italian</source>
 <translation>Italiană</translation>
 </message>
@@ -5765,17 +5791,17 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 <translation>Scripting</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3334"/>
+<location filename="../dialogs/settingsdialog.ui" line="3359"/>
 <source>Your scripts</source>
 <translation>Scripturile tale</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3418"/>
+<location filename="../dialogs/settingsdialog.ui" line="3443"/>
 <source>&amp;Remove script</source>
 <translation>&amp;Eliminați scenariul</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3731"/>
+<location filename="../dialogs/settingsdialog.ui" line="3756"/>
 <source>Click here to select your QML script</source>
 <translation>Click here to select your QML script</translation>
 </message>
@@ -5857,7 +5883,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="785"/>
-<location filename="../dialogs/settingsdialog.ui" line="3665"/>
+<location filename="../dialogs/settingsdialog.ui" line="3690"/>
 <source>Name:</source>
 <translation>Nume:</translation>
 </message>
@@ -5915,7 +5941,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1139"/>
-<location filename="../dialogs/settingsdialog.ui" line="1926"/>
+<location filename="../dialogs/settingsdialog.ui" line="1951"/>
 <source>Username:</source>
 <translation>Nume de utilizator:</translation>
 </message>
@@ -5926,7 +5952,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1174"/>
-<location filename="../dialogs/settingsdialog.ui" line="1961"/>
+<location filename="../dialogs/settingsdialog.ui" line="1986"/>
 <source>Password:</source>
 <translation>Parolă:</translation>
 </message>
@@ -5968,381 +5994,391 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 <translation>Activați aplicația QOwnNotesAPI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1811"/>
+<location filename="../dialogs/settingsdialog.ui" line="1428"/>
+<source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
+<translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="1431"/>
+<source>Login to Nextcloud to grant access</source>
+<translation type="unfinished">Login to Nextcloud to grant access</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="1836"/>
 <source>Todo settings</source>
 <translation>Setări Todo</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1817"/>
+<location filename="../dialogs/settingsdialog.ui" line="1842"/>
 <source>Enable todo calendar support</source>
 <translation>Activați suportul pentru tot calendarul</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2002"/>
+<location filename="../dialogs/settingsdialog.ui" line="2027"/>
 <source>Which cloud connection do you want to use?</source>
 <translation>Ce conexiune la cloud doriți să utilizați?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2014"/>
+<location filename="../dialogs/settingsdialog.ui" line="2039"/>
 <source>Select the calendars you want to use for the Todo list</source>
 <translation>Selectați calendarele pe care doriți să le utilizați pentru lista Todo</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2089"/>
+<location filename="../dialogs/settingsdialog.ui" line="2114"/>
 <source>Todo list settings</source>
 <translation>Setările listei Todo</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2095"/>
+<location filename="../dialogs/settingsdialog.ui" line="2120"/>
 <source>Saving an item also closes the Todo list</source>
 <translation>Salvarea unui element închide de asemenea lista Todo</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2207"/>
+<location filename="../dialogs/settingsdialog.ui" line="2232"/>
 <source>Indonesian</source>
 <translation>Indoneziană</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2229"/>
+<location filename="../dialogs/settingsdialog.ui" line="2254"/>
 <source>Bengali</source>
 <translation>Bengali</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2240"/>
+<location filename="../dialogs/settingsdialog.ui" line="2265"/>
 <source>Bosnian</source>
 <translation>Bosniac</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2251"/>
+<location filename="../dialogs/settingsdialog.ui" line="2276"/>
 <source>Bulgarian</source>
 <translation>Bulgară</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2262"/>
+<location filename="../dialogs/settingsdialog.ui" line="2287"/>
 <source>Catalan</source>
 <translation>Catalan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2273"/>
+<location filename="../dialogs/settingsdialog.ui" line="2298"/>
 <source>Cebuano</source>
 <translation>Cebuano</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2295"/>
+<location filename="../dialogs/settingsdialog.ui" line="2320"/>
 <source>Danish</source>
 <translation>Danez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2317"/>
+<location filename="../dialogs/settingsdialog.ui" line="2342"/>
 <source>Basque</source>
 <translation>Bască</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2350"/>
+<location filename="../dialogs/settingsdialog.ui" line="2375"/>
 <source>Estonian</source>
 <translation>Eston</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2361"/>
+<location filename="../dialogs/settingsdialog.ui" line="2386"/>
 <source>Filipino</source>
 <translation>Filipineză</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2372"/>
+<location filename="../dialogs/settingsdialog.ui" line="2397"/>
 <source>Finnish</source>
 <translation>Finlandeză</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2394"/>
+<location filename="../dialogs/settingsdialog.ui" line="2419"/>
 <source>Irish</source>
 <translation>Irlandez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2405"/>
+<location filename="../dialogs/settingsdialog.ui" line="2430"/>
 <source>Galician</source>
 <translation>Galiciană</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2416"/>
+<location filename="../dialogs/settingsdialog.ui" line="2441"/>
 <source>Greek</source>
 <translation>Greacă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2427"/>
+<location filename="../dialogs/settingsdialog.ui" line="2452"/>
 <source>Hausa</source>
 <translation>Hausa</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2438"/>
+<location filename="../dialogs/settingsdialog.ui" line="2463"/>
 <source>Hebrew</source>
 <translation>Ebraică</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2449"/>
+<location filename="../dialogs/settingsdialog.ui" line="2474"/>
 <source>Hindi</source>
 <translation>Hindi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2471"/>
+<location filename="../dialogs/settingsdialog.ui" line="2496"/>
 <source>Hiligaynon</source>
 <translation>Hiligaynon</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2482"/>
+<location filename="../dialogs/settingsdialog.ui" line="2507"/>
 <source>Icelandic</source>
 <translation>Islandeză</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2504"/>
+<location filename="../dialogs/settingsdialog.ui" line="2529"/>
 <source>Korean</source>
 <translation>Coreeană</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2515"/>
+<location filename="../dialogs/settingsdialog.ui" line="2540"/>
 <source>Kurdish</source>
 <translation>Kurdă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2537"/>
+<location filename="../dialogs/settingsdialog.ui" line="2562"/>
 <source>Latvian</source>
 <translation>Letonă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2548"/>
+<location filename="../dialogs/settingsdialog.ui" line="2573"/>
 <source>Lithuanian</source>
 <translation>Lituanian</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2559"/>
+<location filename="../dialogs/settingsdialog.ui" line="2584"/>
 <source>Macedonian</source>
 <translation>Macedonean</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2592"/>
+<location filename="../dialogs/settingsdialog.ui" line="2617"/>
 <source>Norwegian</source>
 <translation>Norvegian</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2636"/>
+<location filename="../dialogs/settingsdialog.ui" line="2661"/>
 <source>Uzbek</source>
 <translation>Uzbec</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2680"/>
+<location filename="../dialogs/settingsdialog.ui" line="2705"/>
 <source>Punjabi</source>
 <translation>Punjabi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2625"/>
+<location filename="../dialogs/settingsdialog.ui" line="2650"/>
 <source>Persian</source>
 <translation>Persană</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2691"/>
+<location filename="../dialogs/settingsdialog.ui" line="2716"/>
 <source>Romanian</source>
 <translation>Română</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2713"/>
+<location filename="../dialogs/settingsdialog.ui" line="2738"/>
 <source>Serbian</source>
 <translation>Sârb</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2724"/>
+<location filename="../dialogs/settingsdialog.ui" line="2749"/>
 <source>Albanian</source>
 <translation>Albanez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2757"/>
+<location filename="../dialogs/settingsdialog.ui" line="2782"/>
 <source>Slovak</source>
 <translation>Slovacă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2768"/>
+<location filename="../dialogs/settingsdialog.ui" line="2793"/>
 <source>Slovenian</source>
 <translation>Sloven</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2779"/>
+<location filename="../dialogs/settingsdialog.ui" line="2804"/>
 <source>Swedish</source>
 <translation>Suedez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2790"/>
+<location filename="../dialogs/settingsdialog.ui" line="2815"/>
 <source>Tagalog</source>
 <translation>Tagalogă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2823"/>
+<location filename="../dialogs/settingsdialog.ui" line="2848"/>
 <source>Turkish</source>
 <translation>Turc</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2856"/>
+<location filename="../dialogs/settingsdialog.ui" line="2881"/>
 <source>Urdu</source>
 <translation>Urdu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2889"/>
+<location filename="../dialogs/settingsdialog.ui" line="2914"/>
 <source>Chinese Simplified</source>
 <translation>Chineză simplificată</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2900"/>
+<location filename="../dialogs/settingsdialog.ui" line="2925"/>
 <source>Chinese Traditional</source>
 <translation>Tradițional chinezesc</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2980"/>
+<location filename="../dialogs/settingsdialog.ui" line="3005"/>
 <source>Enable dark mode application icon and tray icon</source>
 <translation>Activați pictograma aplicației pentru modul închis și pictograma tavă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2987"/>
+<location filename="../dialogs/settingsdialog.ui" line="3012"/>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
 <translation>De asemenea, poate doriți să alegeți o altă schemă de culori a editorului în setările editorului în modul întunecat.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3090"/>
+<location filename="../dialogs/settingsdialog.ui" line="3115"/>
 <source>Enable dark mode icon theme</source>
 <translation>Activați tema pictogramelor modului întunecat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3020"/>
+<location filename="../dialogs/settingsdialog.ui" line="3045"/>
 <source>System tray</source>
 <translation>Zona de notificare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3029"/>
+<location filename="../dialogs/settingsdialog.ui" line="3054"/>
 <source>Show system tray icon</source>
 <translation>Afișați pictograma tavă sistem</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3039"/>
+<location filename="../dialogs/settingsdialog.ui" line="3064"/>
 <source>Start application hidden</source>
 <translation>Porneste aplicatia ascunsa</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3049"/>
+<location filename="../dialogs/settingsdialog.ui" line="3074"/>
 <source>Interface style</source>
 <translation>Stilul interfeței</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3080"/>
+<location filename="../dialogs/settingsdialog.ui" line="3105"/>
 <source>Enforce system icon theme</source>
 <translation>Aplicați tema pictogramelor sistemului</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3186"/>
+<location filename="../dialogs/settingsdialog.ui" line="3211"/>
 <source>Override interface font size</source>
 <translation>Suprascrie dimensiunea fontului de interfață</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3195"/>
+<location filename="../dialogs/settingsdialog.ui" line="3220"/>
 <source>Interface font size:</source>
 <translation>Dimensiunea fontului de interfață:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3407"/>
+<location filename="../dialogs/settingsdialog.ui" line="3432"/>
 <source>&amp;Add script…</source>
 <translation>&amp;Adăugați scriptul…</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4094"/>
+<location filename="../dialogs/settingsdialog.ui" line="4119"/>
 <source>Use legacy way to link to notes, images and attachments</source>
 <translation>Folosiți un mod moștenit pentru a face legătura cu note, imagini și atașamente</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3939"/>
+<location filename="../dialogs/settingsdialog.ui" line="3964"/>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
 <translation>Când deschideți notele, poziția cursorului din interiorul notei va fi acum restabilită în poziția când nota a fost vizitată ultima dată în sesiunea curentă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3909"/>
+<location filename="../dialogs/settingsdialog.ui" line="3934"/>
 <source>By default the headline will generated automatically</source>
 <translation>Implicit, titlul va fi generat automat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3912"/>
+<location filename="../dialogs/settingsdialog.ui" line="3937"/>
 <source>The shortcut to create a new note asks for a headline</source>
 <translation>Comanda rapidă pentru a crea o notă nouă cere un titlu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3978"/>
+<location filename="../dialogs/settingsdialog.ui" line="4003"/>
 <source>Automatically close the note folder database to prevent problems with sync tools</source>
 <translation>Închideți automat baza de date pentru dosarele de note pentru a preveni problemele cu instrumentele de sincronizare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3981"/>
+<location filename="../dialogs/settingsdialog.ui" line="4006"/>
 <source>Automatically close the note folder database</source>
 <translation>Închideți automat baza de date a dosarelor note</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4142"/>
+<location filename="../dialogs/settingsdialog.ui" line="4167"/>
 <source>Search engine</source>
 <translation>Motor de căutare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4164"/>
+<location filename="../dialogs/settingsdialog.ui" line="4189"/>
 <source>Message boxes</source>
 <translation>Cutii de mesaje</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4170"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4004"/>
+<location filename="../dialogs/settingsdialog.ui" line="4195"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4007"/>
 <source>Reset message boxes</source>
 <translation>Resetați casetele de mesaje</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4363"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4070"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
+<location filename="../dialogs/settingsdialog.ui" line="4388"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4073"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4097"/>
 <source>Import settings</source>
 <translation>Setări de import</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4370"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4036"/>
+<location filename="../dialogs/settingsdialog.ui" line="4395"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4039"/>
 <source>Export settings</source>
 <translation>Exportați setările</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4518"/>
+<location filename="../dialogs/settingsdialog.ui" line="4543"/>
 <source>Open issue assistant</source>
 <translation>Deschide asistentul de emisiune</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4485"/>
+<location filename="../dialogs/settingsdialog.ui" line="4510"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;Html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Cel mai bun mod de a posta probleme este să utilizați asistentul de problemă apăsând &lt;span style = "font-weight: 600;"&gt; Deschideți asistentul de emitere &lt;/ span&gt; în partea de jos. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4750"/>
+<location filename="../dialogs/settingsdialog.ui" line="4775"/>
 <source>Ignore code font size to allow zooming</source>
 <translation>Ignorați dimensiunea fontului pentru a permite zoom</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4744"/>
+<location filename="../dialogs/settingsdialog.ui" line="4769"/>
 <source>Rendering</source>
 <translation>Redare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4764"/>
+<location filename="../dialogs/settingsdialog.ui" line="4789"/>
 <source>Enable underline rendering</source>
 <translation>Activați redarea subliniată</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5174"/>
+<location filename="../dialogs/settingsdialog.ui" line="5199"/>
 <source>Fully highlight blockquotes</source>
 <translation>Evidențiați complet blocurile</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5231"/>
+<location filename="../dialogs/settingsdialog.ui" line="5256"/>
 <source>Note-edit cursor width:</source>
 <translation>Notă: editați lățimea cursorului:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5193"/>
+<location filename="../dialogs/settingsdialog.ui" line="5218"/>
 <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
 <translation>Activați modul Vim (unele comenzi rapide QOwnNotes nu vor funcționa)</translation>
 </message>
@@ -6362,12 +6398,12 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 <translation>Deschideți pagina dvs. Parola aplicației serverului ownCloud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2570"/>
+<location filename="../dialogs/settingsdialog.ui" line="2595"/>
 <source>Māori</source>
 <translation>Maori</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2218"/>
+<location filename="../dialogs/settingsdialog.ui" line="2243"/>
 <source>Malay</source>
 <translation>Malaezian</translation>
 </message>
@@ -6387,615 +6423,620 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 <translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2169"/>
+<location filename="../dialogs/settingsdialog.ui" line="1442"/>
+<source>Cancel Nextcloud login</source>
+<translation type="unfinished">Cancel Nextcloud login</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="2194"/>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Dacă doriți să ajutați la traducerea QOwnNotes sau să actualizați o traducere existentă, vă rugăm să citiți: &lt;a href="%1"&gt; Cum pot ajuta la traducerea QOwnNotes? &lt;/a&gt;
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2526"/>
+<location filename="../dialogs/settingsdialog.ui" line="2551"/>
 <source>Khmer</source>
 <translation>Khmeră</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2735"/>
+<location filename="../dialogs/settingsdialog.ui" line="2760"/>
 <source>Shona</source>
 <translation>Shona</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2746"/>
+<location filename="../dialogs/settingsdialog.ui" line="2771"/>
 <source>Sinhala</source>
 <translation>Singaleză</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2801"/>
+<location filename="../dialogs/settingsdialog.ui" line="2826"/>
 <source>Thai</source>
 <translation>Tailandez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2812"/>
+<location filename="../dialogs/settingsdialog.ui" line="2837"/>
 <source>Vietnamese</source>
 <translation>Vietnameză</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2834"/>
+<location filename="../dialogs/settingsdialog.ui" line="2859"/>
 <source>Xhosa</source>
 <translation>Xhosa</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2867"/>
+<location filename="../dialogs/settingsdialog.ui" line="2892"/>
 <source>Yiddish</source>
 <translation>idiş</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2878"/>
+<location filename="../dialogs/settingsdialog.ui" line="2903"/>
 <source>Zulu</source>
 <translation>Zulu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2934"/>
+<location filename="../dialogs/settingsdialog.ui" line="2959"/>
 <source>Search for language</source>
 <translation>Caută limbă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3297"/>
+<location filename="../dialogs/settingsdialog.ui" line="3322"/>
 <source>Action name</source>
 <translation>Numele acțiunii</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3302"/>
+<location filename="../dialogs/settingsdialog.ui" line="3327"/>
 <source>Local shortcut</source>
 <translation>Comandă rapidă locală</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3307"/>
+<location filename="../dialogs/settingsdialog.ui" line="3332"/>
 <source>Global shortcut</source>
 <translation>Comandă rapidă globală</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3949"/>
+<location filename="../dialogs/settingsdialog.ui" line="3974"/>
 <source>Disable this if you want to launch the application without opening a note</source>
 <translation>ਇਸ ਨੂੰ ਅਯੋਗ ਕਰੋ ਜੇ ਤੁਸੀਂ ਬਿਨਾਂ ਕੋਈ ਨੋਟ ਖੋਲ੍ਹੇ ਐਪਲੀਕੇਸ਼ਨ ਲਾਂਚ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3952"/>
+<location filename="../dialogs/settingsdialog.ui" line="3977"/>
 <source>Open last accessed note at application startup</source>
 <translation>ਐਪਲੀਕੇਸ਼ਨ ਦੀ ਸ਼ੁਰੂਆਤ ਵੇਲੇ ਆਖਰੀ ਐਕਸੈਸ ਕੀਤਾ ਨੋਟ ਖੋਲ੍ਹੋ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4399"/>
+<location filename="../dialogs/settingsdialog.ui" line="4424"/>
 <source>Checks the disk database integrity and fixes problems</source>
 <translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4402"/>
+<location filename="../dialogs/settingsdialog.ui" line="4427"/>
 <source>Check integrity</source>
 <translation type="unfinished">Check integrity</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4409"/>
+<location filename="../dialogs/settingsdialog.ui" line="4434"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
 <translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4492"/>
+<location filename="../dialogs/settingsdialog.ui" line="4517"/>
 <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>GitHub nu are nevoie de două spații la sfârșitul liniei pentru a face o pauză de linie</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4515"/>
+<location filename="../dialogs/settingsdialog.ui" line="4540"/>
 <source>This is the best way to open an issue</source>
 <translation>Acesta este cel mai bun mod de a deschide o problemă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4529"/>
+<location filename="../dialogs/settingsdialog.ui" line="4554"/>
 <source>Please use this in the issue tracker</source>
 <translation>Vă rugăm să utilizați acest lucru în trackerul de probleme</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4532"/>
+<location filename="../dialogs/settingsdialog.ui" line="4557"/>
 <source>&amp;Copy debug information to clipboard</source>
 <translation>&amp;Copiați informațiile de depanare în clipboard</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4543"/>
+<location filename="../dialogs/settingsdialog.ui" line="4568"/>
 <source>Please don't use this in the issue tracker</source>
 <translation>Vă rugăm să nu folosiți acest lucru în trackerul de probleme</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4771"/>
+<location filename="../dialogs/settingsdialog.ui" line="4796"/>
 <source>Use editor highlighting styles also for the preview</source>
 <translation>Utilizați stiluri de evidențiere a editorilor și pentru previzualizare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4794"/>
+<location filename="../dialogs/settingsdialog.ui" line="4819"/>
 <source>Exporting</source>
 <translation>Exportator</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4800"/>
+<location filename="../dialogs/settingsdialog.ui" line="4825"/>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
 <translation>Utilizați stilul de export intern pentru exportul PDF și tipărirea previzualizării</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5108"/>
+<location filename="../dialogs/settingsdialog.ui" line="5133"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Poate doriți să aruncați o privire asupra tuturor &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;formatelor de timp&lt;/a&gt; disponibile.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5207"/>
+<location filename="../dialogs/settingsdialog.ui" line="5232"/>
 <source>Disable cursor blinking</source>
 <translation>Dezactivați cursorul clipește</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5214"/>
+<location filename="../dialogs/settingsdialog.ui" line="5239"/>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>Înlăturați automat spațiile de finalizare din textul notei</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5292"/>
+<location filename="../dialogs/settingsdialog.ui" line="5317"/>
 <source>Show line numbers</source>
 <translation type="unfinished">Show line numbers</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5302"/>
+<location filename="../dialogs/settingsdialog.ui" line="5327"/>
 <source>Tabs and Indents</source>
 <translation>Tabele și liniuțele</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5310"/>
+<location filename="../dialogs/settingsdialog.ui" line="5335"/>
 <source>Use tab character instead of spaces</source>
 <translation>Utilizați caracterele tab-ului în loc de spații</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5317"/>
+<location filename="../dialogs/settingsdialog.ui" line="5342"/>
 <source>Indent:</source>
 <translation>Indentați:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5697"/>
-<location filename="../dialogs/settingsdialog.ui" line="5706"/>
+<location filename="../dialogs/settingsdialog.ui" line="5722"/>
+<location filename="../dialogs/settingsdialog.ui" line="5731"/>
 <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>Expresii regulate ale subfolderelor de notă de ignorat, separate prin ";"
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5700"/>
+<location filename="../dialogs/settingsdialog.ui" line="5725"/>
 <source>Ignored subfolders</source>
 <translation>Subfoldere ignorate
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5716"/>
+<location filename="../dialogs/settingsdialog.ui" line="5741"/>
 <source>Reset ignored subfolders</source>
 <translation>Resetați subfolderele ignorate
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5752"/>
+<location filename="../dialogs/settingsdialog.ui" line="5777"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
 <translation>Restaurați filele de note deschise la pornirea aplicației și atunci când folderele de notă sunt comutate</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5837"/>
+<location filename="../dialogs/settingsdialog.ui" line="5862"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
 <translation>Ascundeți „numărul de note” cu cuvinte cheie (crește performanța)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5873"/>
+<location filename="../dialogs/settingsdialog.ui" line="5898"/>
 <source>Show the number of matches in each note</source>
 <translation>Afișează numărul de potriviri din fiecare notă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6307"/>
+<location filename="../dialogs/settingsdialog.ui" line="6332"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
 <translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6323"/>
+<location filename="../dialogs/settingsdialog.ui" line="6348"/>
 <source>QOwnNotes web application</source>
 <translation type="unfinished">QOwnNotes web application</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6413"/>
+<location filename="../dialogs/settingsdialog.ui" line="6438"/>
 <source>Server URL:</source>
 <translation type="unfinished">Server URL:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6470"/>
+<location filename="../dialogs/settingsdialog.ui" line="6495"/>
 <source>Show QR code</source>
 <translation type="unfinished">Show QR code</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6362"/>
+<location filename="../dialogs/settingsdialog.ui" line="6387"/>
 <source>Security token:</source>
 <translation type="unfinished">Security token:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6420"/>
+<location filename="../dialogs/settingsdialog.ui" line="6445"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
 <translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6352"/>
+<location filename="../dialogs/settingsdialog.ui" line="6377"/>
 <source>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation type="unfinished">A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6430"/>
+<location filename="../dialogs/settingsdialog.ui" line="6455"/>
 <source>Copy security token to clipboard</source>
 <translation type="unfinished">Copy security token to clipboard</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6383"/>
+<location filename="../dialogs/settingsdialog.ui" line="6408"/>
 <source>Generate new security token</source>
 <translation type="unfinished">Generate new security token</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6444"/>
+<location filename="../dialogs/settingsdialog.ui" line="6469"/>
 <source>Reset the URL to default</source>
 <translation type="unfinished">Reset the URL to default</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6273"/>
+<location filename="../dialogs/settingsdialog.ui" line="6298"/>
 <source>QOwnNotes web application support</source>
 <translation type="unfinished">QOwnNotes web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6279"/>
+<location filename="../dialogs/settingsdialog.ui" line="6304"/>
 <source>Enable web application support</source>
 <translation type="unfinished">Enable web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5528"/>
+<location filename="../dialogs/settingsdialog.ui" line="5553"/>
 <source>Note list panel</source>
 <translation>Notă panoul listă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5534"/>
+<location filename="../dialogs/settingsdialog.ui" line="5559"/>
 <source>Show notes in the note list with preview</source>
 <translation>Afișați note din lista de note cu previzualizareScrieți note din lista de note cu previzualizare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5607"/>
+<location filename="../dialogs/settingsdialog.ui" line="5632"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
 <translation>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5883"/>
+<location filename="../dialogs/settingsdialog.ui" line="5908"/>
 <source>Note folder panel</source>
 <translation>Panoul folderului de notițe
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5889"/>
+<location filename="../dialogs/settingsdialog.ui" line="5914"/>
 <source>Show note folders as buttons instead of in a select box</source>
 <translation>Afișează folderele de notă ca butoane în loc de o casetă selectată</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6031"/>
+<location filename="../dialogs/settingsdialog.ui" line="6056"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
 <translation>Panourile pot fi activate și dezactivate în meniul principal &lt;i&gt; Window / Panels &lt;/i&gt; și, de asemenea, puteți configura &lt;i&gt; Workspaces &lt;/i&gt; pentru diferite configurații ale panoului.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6108"/>
+<location filename="../dialogs/settingsdialog.ui" line="6133"/>
 <source>Bookmarks</source>
 <translation>Marcaje</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6114"/>
+<location filename="../dialogs/settingsdialog.ui" line="6139"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
 <translation>Notele cu această etichetă vor fi utilizate pentru a prelua marcajele</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6117"/>
+<location filename="../dialogs/settingsdialog.ui" line="6142"/>
 <source>Tag name for bookmarks notes</source>
 <translation>Numele etichetei pentru notele de marcaje</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6124"/>
+<location filename="../dialogs/settingsdialog.ui" line="6149"/>
 <source>Bookmarks tag:</source>
 <translation>Marca etichetelor:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6131"/>
+<location filename="../dialogs/settingsdialog.ui" line="6156"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>În mod implicit, extensia browserului va afișa toate legăturile notei curente. De asemenea, puteți să arătați link-uri speciale de note de note cu o anumită etichetă. Pentru mai multe informații despre sintaxa link-ului de marcaj, dați clic pe &lt;a href="%1"&gt; aici &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6144"/>
+<location filename="../dialogs/settingsdialog.ui" line="6169"/>
 <source>Bookmarks note name:</source>
 <translation>Marcajul notei de marcaj:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6151"/>
+<location filename="../dialogs/settingsdialog.ui" line="6176"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
 <translation>Această notă va fi utilizată pentru adăugarea de marcaje noi din extensia browserului</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6154"/>
+<location filename="../dialogs/settingsdialog.ui" line="6179"/>
 <source>Note name for adding new bookmarks</source>
 <translation>Notați numele pentru adăugarea de marcaje noi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6164"/>
+<location filename="../dialogs/settingsdialog.ui" line="6189"/>
 <source>Web socket server</source>
 <translation>Web server socket</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6170"/>
+<location filename="../dialogs/settingsdialog.ui" line="6195"/>
 <source>Socket server port:</source>
 <translation>Port port server:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6190"/>
+<location filename="../dialogs/settingsdialog.ui" line="6215"/>
 <source>Reset the socket server port</source>
 <translation type="unfinished">Reset the socket server port</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6204"/>
-<location filename="../dialogs/settingsdialog.ui" line="6369"/>
+<location filename="../dialogs/settingsdialog.ui" line="6229"/>
+<location filename="../dialogs/settingsdialog.ui" line="6394"/>
 <source>Show security token</source>
 <translation>Afișați indicativul de securitate</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6240"/>
+<location filename="../dialogs/settingsdialog.ui" line="6265"/>
 <source>Web socket server support</source>
 <translation>Port port server</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6246"/>
+<location filename="../dialogs/settingsdialog.ui" line="6271"/>
 <source>Enable socket server</source>
 <translation>Activați serverul socket</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6221"/>
+<location filename="../dialogs/settingsdialog.ui" line="6246"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
 <translation>Instalați &lt;a href="%1"&gt; extensia de browser web Companion &lt;/a&gt; din &lt;a href="%2"&gt; Magazinul web Chrome &lt;/a&gt; sau &lt;a href="%3"&gt; Add- ons page &lt;/a&gt; pentru a utiliza QOwnNotes ca web clipper.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5736"/>
+<location filename="../dialogs/settingsdialog.ui" line="5761"/>
 <source>Note edit panel</source>
 <translation>Notați panoul de editare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5742"/>
+<location filename="../dialogs/settingsdialog.ui" line="5767"/>
 <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
 <translation>Dacă aceasta este dezactivată, puteți crea mai multe layout-uri mai complexe ale panourilor, dar toate panourile vor fi redimensionate dacă fereastra este redimensionată</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5745"/>
+<location filename="../dialogs/settingsdialog.ui" line="5770"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
 <translation>Utilizați panoul de editare a notei ca widget central fix pentru a fi redimensionat dacă ferestrele sau alte panouri sunt redimensionate</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5860"/>
+<location filename="../dialogs/settingsdialog.ui" line="5885"/>
 <source>Note search panel</source>
 <translation>Notați panoul de căutare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5866"/>
+<location filename="../dialogs/settingsdialog.ui" line="5891"/>
 <source>Disable auto-completion of previous searches</source>
 <translation>Dezactivați completarea automată a căutărilor anterioare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5762"/>
+<location filename="../dialogs/settingsdialog.ui" line="5787"/>
 <source>Navigation panel</source>
 <translation>Panou de navigare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5768"/>
+<location filename="../dialogs/settingsdialog.ui" line="5793"/>
 <source>Hide navigation item search bar</source>
 <translation>Ascundeți bara de căutare a elementului de navigare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5903"/>
+<location filename="../dialogs/settingsdialog.ui" line="5928"/>
 <source>Local trash settings</source>
 <translation>Setările locale pentru coșul de gunoi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5937"/>
+<location filename="../dialogs/settingsdialog.ui" line="5962"/>
 <source>Remove trashed notes after:</source>
 <translation>Eliminați notele trasate după:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5944"/>
+<location filename="../dialogs/settingsdialog.ui" line="5969"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
 <translation> zi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5963"/>
+<location filename="../dialogs/settingsdialog.ui" line="5988"/>
 <source>Automatically remove trashed notes after a certain time</source>
 <translation>Ștergeți automat notele trasate după o anumită perioadă de timp</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5989"/>
+<location filename="../dialogs/settingsdialog.ui" line="6014"/>
 <source>Local trash support</source>
 <translation>Ștergeți automat notele trasate după o anumită perioadă de timp</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5995"/>
+<location filename="../dialogs/settingsdialog.ui" line="6020"/>
 <source>Enable local trash</source>
 <translation>Activați coșul de gunoi local</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6012"/>
+<location filename="../dialogs/settingsdialog.ui" line="6037"/>
 <source>Layout selector</source>
 <translation>Layout selector</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6018"/>
+<location filename="../dialogs/settingsdialog.ui" line="6043"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
 <translation>Puteți seta un aspect nou aici. Rețineți că puteți modifica întotdeauna poziția panourilor cu butonul &lt;i&gt; Deblocare panouri &lt;/ i&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5255"/>
+<location filename="../dialogs/settingsdialog.ui" line="5280"/>
 <source>Reset the cursor width</source>
 <translation>Resetați lățimea cursorului</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5402"/>
+<location filename="../dialogs/settingsdialog.ui" line="5427"/>
 <source>External git log command to show the git versions of a note</source>
 <translation>Comanda log externă pentru a afișa versiunile Git ale unei note</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5408"/>
+<location filename="../dialogs/settingsdialog.ui" line="5433"/>
 <source>Enter a command to be used to show a git log (like for example "gitk")</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Introduceți o comandă care să fie utilizată pentru a afișa un jurnal git (de exemplu, "gitk")</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5428"/>
+<location filename="../dialogs/settingsdialog.ui" line="5453"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Dacă utilizați această setare, veți primi o nouă intrare de meniu pentru a afișa versiunile git dacă faceți clic dreapta pe o notă.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5548"/>
+<location filename="../dialogs/settingsdialog.ui" line="5573"/>
 <source>Show all notes of a tag including the notes of their children-tags</source>
 <translation>Afișați toate notele de pe o etichetă, inclusiv notele de pe etichetele lor pentru copii</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5541"/>
+<location filename="../dialogs/settingsdialog.ui" line="5566"/>
 <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
 <translation>Afișați toate notele dintr-un dosar, inclusiv subdosarele acestora (funcționează numai dacă sunt activate subfoldere)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5200"/>
+<location filename="../dialogs/settingsdialog.ui" line="5225"/>
 <source>Highlight the current line</source>
 <translation>Evidențiați linia curentă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5495"/>
+<location filename="../dialogs/settingsdialog.ui" line="5520"/>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Nu uitați să activați suportul git pentru dosarele de note și să vă configurați numele și adresa de e-mail pentru clientul dvs. git, de exemplu cu aceste comenzi terminale:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5778"/>
+<location filename="../dialogs/settingsdialog.ui" line="5803"/>
 <source>Tags panel</source>
 <translation>Panoul de etichete</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5581"/>
-<location filename="../dialogs/settingsdialog.ui" line="5660"/>
-<location filename="../dialogs/settingsdialog.ui" line="5807"/>
+<location filename="../dialogs/settingsdialog.ui" line="5606"/>
+<location filename="../dialogs/settingsdialog.ui" line="5685"/>
+<location filename="../dialogs/settingsdialog.ui" line="5832"/>
 <source>Order</source>
 <translation>Ordin</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5590"/>
-<location filename="../dialogs/settingsdialog.ui" line="5666"/>
-<location filename="../dialogs/settingsdialog.ui" line="5813"/>
+<location filename="../dialogs/settingsdialog.ui" line="5615"/>
+<location filename="../dialogs/settingsdialog.ui" line="5691"/>
+<location filename="../dialogs/settingsdialog.ui" line="5838"/>
 <source>Ascending</source>
 <translation>Ascendent</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5597"/>
-<location filename="../dialogs/settingsdialog.ui" line="5673"/>
-<location filename="../dialogs/settingsdialog.ui" line="5820"/>
+<location filename="../dialogs/settingsdialog.ui" line="5622"/>
+<location filename="../dialogs/settingsdialog.ui" line="5698"/>
+<location filename="../dialogs/settingsdialog.ui" line="5845"/>
 <source>Descending</source>
 <translation>Descendentă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5555"/>
-<location filename="../dialogs/settingsdialog.ui" line="5630"/>
-<location filename="../dialogs/settingsdialog.ui" line="5784"/>
+<location filename="../dialogs/settingsdialog.ui" line="5580"/>
+<location filename="../dialogs/settingsdialog.ui" line="5655"/>
+<location filename="../dialogs/settingsdialog.ui" line="5809"/>
 <source>Sort</source>
 <translation>Fel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5241"/>
+<location filename="../dialogs/settingsdialog.ui" line="5266"/>
 <source>Only use editor width setting in distraction free mode</source>
 <translation>Utilizați numai setarea lățimii editorului în modul fără distragere</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5561"/>
-<location filename="../dialogs/settingsdialog.ui" line="5636"/>
-<location filename="../dialogs/settingsdialog.ui" line="5790"/>
+<location filename="../dialogs/settingsdialog.ui" line="5586"/>
+<location filename="../dialogs/settingsdialog.ui" line="5661"/>
+<location filename="../dialogs/settingsdialog.ui" line="5815"/>
 <source>Alphabetical</source>
 <translation>Ordine alfabetică</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5797"/>
+<location filename="../dialogs/settingsdialog.ui" line="5822"/>
 <source>By last change / use</source>
 <translation>De ultima schimbare / utilizare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5830"/>
+<location filename="../dialogs/settingsdialog.ui" line="5855"/>
 <source>Hide 'Find or create tag' search</source>
 <translation>Ascundeți căutarea "Găsiți sau creați etichete"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5617"/>
+<location filename="../dialogs/settingsdialog.ui" line="5642"/>
 <source>Note subfolders panel</source>
 <translation>Notați panoul de subfoldere</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5623"/>
+<location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <source>Show with full path</source>
 <translation>Afișați cu calea completă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5568"/>
-<location filename="../dialogs/settingsdialog.ui" line="5643"/>
+<location filename="../dialogs/settingsdialog.ui" line="5593"/>
+<location filename="../dialogs/settingsdialog.ui" line="5668"/>
 <source>By last change</source>
 <translation>De ultima schimbare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5653"/>
+<location filename="../dialogs/settingsdialog.ui" line="5678"/>
 <source>Show root folder name</source>
 <translation>Afișați numele folderului rădăcină</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5683"/>
+<location filename="../dialogs/settingsdialog.ui" line="5708"/>
 <source>Hide 'Find or create note subfolder' search</source>
 <translation>Ascundeți căutarea "Găsiți sau creați subdirectoare de notă"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5690"/>
+<location filename="../dialogs/settingsdialog.ui" line="5715"/>
 <source>Display note subfolders as full tree</source>
 <translation>Afișați subfolderele de notă ca arbore complet</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2919"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2922"/>
 <source>Search script repository</source>
 <translation>Căutați un depozit de script</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5418"/>
+<location filename="../dialogs/settingsdialog.ui" line="5443"/>
 <source>You optionally can use "%notePath%" for the path of the note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Opțional puteți utiliza "%notePath%" pentru calea notei.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5441"/>
+<location filename="../dialogs/settingsdialog.ui" line="5466"/>
 <source>Git client</source>
 <translation>Git client</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5457"/>
+<location filename="../dialogs/settingsdialog.ui" line="5482"/>
 <source>Path to git executable:</source>
 <translation>Calea spre executabilul git:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5447"/>
+<location filename="../dialogs/settingsdialog.ui" line="5472"/>
 <source>Path to git client, leave empty for default</source>
 <translation>Cale pentru clientul client, lăsați gol pentru implicit</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5366"/>
+<location filename="../dialogs/settingsdialog.ui" line="5391"/>
 <source>Commit interval</source>
 <translation>Interval de angajare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5372"/>
+<location filename="../dialogs/settingsdialog.ui" line="5397"/>
 <source>sec</source>
 <extracomment>seconds</extracomment>
 <translation>sec</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5392"/>
+<location filename="../dialogs/settingsdialog.ui" line="5417"/>
 <source>git commit interval time [sec]</source>
 <translation>git comită interval de timp [sec]</translation>
 </message>
@@ -7015,303 +7056,303 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 <translation>Extensie de browser</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1833"/>
+<location filename="../dialogs/settingsdialog.ui" line="1858"/>
 <source>Which calendar backend do you want to use?</source>
 <translation>Ce backend calendar doriți să utilizați?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1866"/>
+<location filename="../dialogs/settingsdialog.ui" line="1891"/>
 <source>For most current ownCloud and Nextcloud installations</source>
 <translation>Pentru cele mai actuale instalări ownCloud și Nextcloud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1846"/>
+<location filename="../dialogs/settingsdialog.ui" line="1871"/>
 <source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>Pentru versiunile mai vechi ale ownCloud unde setarea implicită nu funcționează</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1849"/>
+<location filename="../dialogs/settingsdialog.ui" line="1874"/>
 <source>Legacy ownCloud calendar</source>
 <translation>Calendarul OwnCloud legacy</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1882"/>
+<location filename="../dialogs/settingsdialog.ui" line="1907"/>
 <source>CalDAV server settings</source>
 <translation>Setările serverului CalDAV</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1891"/>
+<location filename="../dialogs/settingsdialog.ui" line="1916"/>
 <source>Calendar base url:</source>
 <translation>Adresa urlului bazei de date:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1913"/>
+<location filename="../dialogs/settingsdialog.ui" line="1938"/>
 <source>Please enter the CalDAV base url to your calendar.</source>
 <translation>Introduceți url-ul de bază CalDAV în calendar.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1983"/>
+<location filename="../dialogs/settingsdialog.ui" line="2008"/>
 <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
 <translation>Introduceți parola pentru numele de utilizator CalDAV. &lt;br/&gt; În prezent, parola va fi stocată criptată cu celelalte setări, dar nu este foarte sigură.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2284"/>
+<location filename="../dialogs/settingsdialog.ui" line="2309"/>
 <source>Czech</source>
 <translation>Ceh</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2658"/>
+<location filename="../dialogs/settingsdialog.ui" line="2683"/>
 <source>Brazilian Portuguese</source>
 <translation>Brazilian portughez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2845"/>
+<location filename="../dialogs/settingsdialog.ui" line="2870"/>
 <source>Ukrainian</source>
 <translation>Ucrainean</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3850"/>
+<location filename="../dialogs/settingsdialog.ui" line="3875"/>
 <source>The name</source>
 <translation>Numele</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4074"/>
+<location filename="../dialogs/settingsdialog.ui" line="4099"/>
 <source>Maximum height:</source>
 <translation>Inaltime maxima:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4047"/>
+<location filename="../dialogs/settingsdialog.ui" line="4072"/>
 <source>Maximum width:</source>
 <translation>Lățimea maximă:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3988"/>
+<location filename="../dialogs/settingsdialog.ui" line="4013"/>
 <source>Scale images down when inserted into notes</source>
 <translation>Scalarea imaginilor în jos atunci când este inserată în note</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2460"/>
+<location filename="../dialogs/settingsdialog.ui" line="2485"/>
 <source>Croatian</source>
 <translation>Croat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3758"/>
+<location filename="../dialogs/settingsdialog.ui" line="3783"/>
 <source>Path to your QML file</source>
 <translation>Calea către fișierul dvs. QML</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3672"/>
+<location filename="../dialogs/settingsdialog.ui" line="3697"/>
 <source>Script name</source>
 <translation>Numele scripturilor</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3533"/>
+<location filename="../dialogs/settingsdialog.ui" line="3558"/>
 <source>Description:</source>
 <translation>Descriere:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3615"/>
+<location filename="../dialogs/settingsdialog.ui" line="3640"/>
 <source>Version:</source>
 <translation>Versiune:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3576"/>
+<location filename="../dialogs/settingsdialog.ui" line="3601"/>
 <source>Repository:</source>
 <translation>Repository:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3553"/>
+<location filename="../dialogs/settingsdialog.ui" line="3578"/>
 <source>Author(s):</source>
 <translation>Autor(i):</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3995"/>
+<location filename="../dialogs/settingsdialog.ui" line="4020"/>
 <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
 <translation>Bifați această opțiune dacă doriți să acceptați toate modificările externe în timp ce editați nota curentă.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3998"/>
+<location filename="../dialogs/settingsdialog.ui" line="4023"/>
 <source>Accept all external modifications of the current note</source>
 <translation>Acceptați toate modificările externe ale notei curente</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3932"/>
+<location filename="../dialogs/settingsdialog.ui" line="3957"/>
 <source>Use UNIX newline instead of native newline characters</source>
 <translation>Utilizați noua linie UNIX în loc de caractere native noi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3942"/>
+<location filename="../dialogs/settingsdialog.ui" line="3967"/>
 <source>Restore cursor position when opening a note</source>
 <translation>Restaurați poziția cursorului când deschideți o notă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4932"/>
+<location filename="../dialogs/settingsdialog.ui" line="4957"/>
 <source>Apply toolbar configuration</source>
 <translation>Aplică configurația barei de instrumente</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4946"/>
+<location filename="../dialogs/settingsdialog.ui" line="4971"/>
 <source>Reset toolbars</source>
 <translation>Resetați barele de instrumente</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4974"/>
+<location filename="../dialogs/settingsdialog.ui" line="4999"/>
 <source>Enable logging to file</source>
 <translation>Activați înregistrarea în fișier</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4981"/>
+<location filename="../dialogs/settingsdialog.ui" line="5006"/>
 <source>Clear log file</source>
 <translation>Debifați fișierul jurnal</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4992"/>
+<location filename="../dialogs/settingsdialog.ui" line="5017"/>
 <source>Fake old version number to trigger update</source>
 <translation>Numărul de versiune falsă veche pentru a declanșa actualizarea</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5020"/>
+<location filename="../dialogs/settingsdialog.ui" line="5045"/>
 <source>Log file path:</source>
 <translation>Calea fișierului log:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5082"/>
+<location filename="../dialogs/settingsdialog.ui" line="5107"/>
 <source>Here you can set your own time format for inserting the current time into a note.</source>
 <translation>Aici puteți seta propriul format de timp pentru a introduce ora curentă într-o notă.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5085"/>
+<location filename="../dialogs/settingsdialog.ui" line="5110"/>
 <source>Insert current time</source>
 <translation>Aici puteți seta propriul format de timp pentru a introduce ora curentă într-o notă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5091"/>
+<location filename="../dialogs/settingsdialog.ui" line="5116"/>
 <source>Time format:</source>
 <translation>Formatul timpului:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5098"/>
+<location filename="../dialogs/settingsdialog.ui" line="5123"/>
 <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
 <translation>Introduceți formatul dvs. personalizat, cum ar fi "dd.MM.aaaa hh: mm"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5187"/>
+<location filename="../dialogs/settingsdialog.ui" line="5212"/>
 <source>Editor options</source>
 <translation>Opțiunile editorului</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5248"/>
+<location filename="../dialogs/settingsdialog.ui" line="5273"/>
 <source>Enable automatic closing of brackets and markdown formatting characters</source>
 <translation>Activați închiderea automată a parantezelor și caracterele de formatare a marcajelor</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5282"/>
+<location filename="../dialogs/settingsdialog.ui" line="5307"/>
 <source>You have to use the backspace key to remove the opening character</source>
 <translation>Trebuie să utilizați cheia de backspace pentru a elimina caracterul de deschidere</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5285"/>
+<location filename="../dialogs/settingsdialog.ui" line="5310"/>
 <source>Enable automatic removal of matching closing characters</source>
 <translation>Activați eliminarea automată a caracterelor de închidere potrivite</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1916"/>
+<location filename="../dialogs/settingsdialog.ui" line="1941"/>
 <source>Your CalDAV calendar base url</source>
 <translation>Adresa dvs. de bază pentru calendarul CalDAV</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1948"/>
+<location filename="../dialogs/settingsdialog.ui" line="1973"/>
 <source>Please enter the username of your CalDAV server.</source>
 <translation>Introduceți numele de utilizator al serverului dvs. CalDAV.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1951"/>
+<location filename="../dialogs/settingsdialog.ui" line="1976"/>
 <source>Your CalDAV username</source>
 <translation>Numele de utilizator CalDAV</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1989"/>
+<location filename="../dialogs/settingsdialog.ui" line="2014"/>
 <source>Your CalDAV password</source>
 <translation>Parola dvs. CalDAV</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2036"/>
+<location filename="../dialogs/settingsdialog.ui" line="2061"/>
 <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
 <translation>Acest lucru face ca toate elementele listei de obiecte de reîncărcare să fie reîncărcate de pe serverul dvs. la următoarea deschidere a ferestrei de dialog.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2039"/>
+<location filename="../dialogs/settingsdialog.ui" line="2064"/>
 <source>Empty calendar item cache</source>
 <translation>Goliți cache-ul pentru elemente calendar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2062"/>
+<location filename="../dialogs/settingsdialog.ui" line="2087"/>
 <source>Click here to reload the list of calendars from your calendar server.</source>
 <translation>Faceți clic aici pentru a reîncărca lista de calendare de pe serverul de calendar.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2068"/>
+<location filename="../dialogs/settingsdialog.ui" line="2093"/>
 <source>&amp;Reload calendar list</source>
 <translation>&amp;Reîncărcați lista de agendă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2977"/>
-<location filename="../dialogs/settingsdialog.ui" line="3087"/>
+<location filename="../dialogs/settingsdialog.ui" line="3002"/>
+<location filename="../dialogs/settingsdialog.ui" line="3112"/>
 <source>You may need to restart the application to let these changes take effect</source>
 <translation>Este posibil să fie necesar să reporniți aplicația pentru ca aceste modificări să aibă efect</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3122"/>
+<location filename="../dialogs/settingsdialog.ui" line="3147"/>
 <source>Toolbar icon size:</source>
 <translation>Dimensiunea pictogramei barei de instrumente:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3112"/>
+<location filename="../dialogs/settingsdialog.ui" line="3137"/>
 <source>List and tree item height:</source>
 <translation>Lista și înălțimea elementului copac:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3145"/>
+<location filename="../dialogs/settingsdialog.ui" line="3170"/>
 <source>Reset the icon size</source>
 <translation>Resetați dimensiunea pictogramei</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3159"/>
+<location filename="../dialogs/settingsdialog.ui" line="3184"/>
 <source>Reset the item height</source>
 <translation>Resetați înălțimea elementului</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4757"/>
+<location filename="../dialogs/settingsdialog.ui" line="4782"/>
 <source>View text right to left (RTL)</source>
 <translation>Vizualizați textul din stânga (RTL)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3283"/>
+<location filename="../dialogs/settingsdialog.ui" line="3308"/>
 <source>Search for shortcut</source>
 <translation>Căutați comenzi rapide</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2079"/>
+<location filename="../dialogs/settingsdialog.ui" line="2104"/>
 <source>Ignore calendars that don't support todo items</source>
 <translation>Ignorați calendarele care nu acceptă articolele todo</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2911"/>
+<location filename="../dialogs/settingsdialog.ui" line="2936"/>
 <source>Arabic</source>
 <translation>Arabic</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3061"/>
+<location filename="../dialogs/settingsdialog.ui" line="3086"/>
 <source>Icons</source>
 <translation>Icoane</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3070"/>
+<location filename="../dialogs/settingsdialog.ui" line="3095"/>
 <source>Use internal icon theme instead of system icon theme</source>
 <translation>Utilizați tema pictogramă internă în locul temei pentru pictograma sistemului</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3707"/>
+<location filename="../dialogs/settingsdialog.ui" line="3732"/>
 <source>Script path:</source>
 <translation>Calea scriptului:</translation>
 </message>
@@ -7326,79 +7367,79 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 <translation>Permiteți ca numele fișierului de note să fie diferit de titlu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4005"/>
+<location filename="../dialogs/settingsdialog.ui" line="4030"/>
 <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
 <translation>Verificați dacă doriți să ignorați toate modificările externe în timp ce editați nota curentă.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4008"/>
+<location filename="../dialogs/settingsdialog.ui" line="4033"/>
 <source>Ignore all external modifications of the current note</source>
 <translation>Ignorați toate modificările externe ale notei curente</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3929"/>
+<location filename="../dialogs/settingsdialog.ui" line="3954"/>
 <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
 <translation>Puteți utiliza acest lucru, de exemplu, în Windows, dacă aveți probleme cu linii noi în aplicația Notes ownCloud / Nextcloud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4104"/>
+<location filename="../dialogs/settingsdialog.ui" line="4129"/>
 <source>App instance</source>
 <translation>Exemplu de aplicație</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4110"/>
+<location filename="../dialogs/settingsdialog.ui" line="4135"/>
 <source>Only allow one app instance at the same time</source>
 <translation>Permiteți numai o instanță de aplicație în același timp</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4206"/>
+<location filename="../dialogs/settingsdialog.ui" line="4231"/>
 <source>Add a custom file extension</source>
 <translation>Adăugați o extensie de fișier personalizată</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4220"/>
+<location filename="../dialogs/settingsdialog.ui" line="4245"/>
 <source>Remove a custom file extension</source>
 <translation>Eliminați o extensie de fișier personalizată</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4259"/>
+<location filename="../dialogs/settingsdialog.ui" line="4284"/>
 <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
 <translation>Dacă adăugați extensii personalizate, doar tastați extensia, cum ar fi "taskpaper".</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4263"/>
+<location filename="../dialogs/settingsdialog.ui" line="4288"/>
 <source>Text file (txt)</source>
 <translation>Fișier text (txt)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4291"/>
+<location filename="../dialogs/settingsdialog.ui" line="4316"/>
 <source>Path to external editor:</source>
 <translation>Calea către editorul extern:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4126"/>
+<location filename="../dialogs/settingsdialog.ui" line="4151"/>
 <source>Don't show the update dialog automatically</source>
 <translation>Nu afișați automat dialogul de actualizare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4589"/>
-<location filename="../dialogs/settingsdialog.ui" line="4816"/>
+<location filename="../dialogs/settingsdialog.ui" line="4614"/>
+<location filename="../dialogs/settingsdialog.ui" line="4841"/>
 <source>Fonts</source>
 <translation>Fonturi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4612"/>
-<location filename="../dialogs/settingsdialog.ui" line="4654"/>
-<location filename="../dialogs/settingsdialog.ui" line="4839"/>
-<location filename="../dialogs/settingsdialog.ui" line="4867"/>
+<location filename="../dialogs/settingsdialog.ui" line="4637"/>
+<location filename="../dialogs/settingsdialog.ui" line="4679"/>
+<location filename="../dialogs/settingsdialog.ui" line="4864"/>
+<location filename="../dialogs/settingsdialog.ui" line="4892"/>
 <source>Set a new font</source>
 <translation>Setați un font nou</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4623"/>
-<location filename="../dialogs/settingsdialog.ui" line="4668"/>
-<location filename="../dialogs/settingsdialog.ui" line="4853"/>
-<location filename="../dialogs/settingsdialog.ui" line="4898"/>
+<location filename="../dialogs/settingsdialog.ui" line="4648"/>
+<location filename="../dialogs/settingsdialog.ui" line="4693"/>
+<location filename="../dialogs/settingsdialog.ui" line="4878"/>
+<location filename="../dialogs/settingsdialog.ui" line="4923"/>
 <source>Reset font</source>
 <translation>Resetați fontul</translation>
 </message>
@@ -7408,59 +7449,59 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 <translation>Depanare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4453"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2322"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4313"/>
+<location filename="../dialogs/settingsdialog.ui" line="4478"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2325"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4316"/>
 <source>Debug information</source>
 <translation>Debug informații</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4459"/>
+<location filename="../dialogs/settingsdialog.ui" line="4484"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;span style = "font-weight: 600;"&gt; copiați și lipiți &lt;/ span&gt; acest text (sau părți ale acestui text) într-un &lt;span style = "font-weight: 600;"&gt; issue &lt;/ span&gt; pe &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; pagina de probleme QOwnNotes &lt;/a&gt; dacă aveți &lt;span style = "font-weight: 600;"&gt; întrebări sau probleme &lt;/ span&gt; cu QOwnNotes. Datele care sunt prea sensibile sunt ascunse în aceste informații. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4546"/>
+<location filename="../dialogs/settingsdialog.ui" line="4571"/>
 <source>&amp;Save debug information</source>
 <translation>&amp;Salvați informațiile de depanare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="503"/>
+<location filename="../dialogs/settingsdialog.cpp" line="506"/>
 <source>hostname of proxy server</source>
 <translation>numele de gazdă al serverului proxy</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="504"/>
+<location filename="../dialogs/settingsdialog.cpp" line="507"/>
 <source>username for proxy server</source>
 <translation>numele de utilizator pentru serverul proxy</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="505"/>
+<location filename="../dialogs/settingsdialog.cpp" line="508"/>
 <source>password for proxy server</source>
 <translation>parola pentru proxy server</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="507"/>
+<location filename="../dialogs/settingsdialog.cpp" line="510"/>
 <source>HTTP(S) proxy</source>
 <translation>HTTP(S) proxy</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="508"/>
+<location filename="../dialogs/settingsdialog.cpp" line="511"/>
 <source>SOCKS5 proxy</source>
 <translation>SOCKS5 proxy</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1505"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1508"/>
 <source>Automatic (needs restart)</source>
 <translation>Automat (are nevoie de repornire)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1816"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1819"/>
 <source>Shortcut already assigned</source>
 <translation>Comanda rapidă deja atribuită</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2019"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2022"/>
 <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -7469,7 +7510,7 @@ Versiunea serverului:% 1
 Versiunea QOwnNotesAPI:% 2</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2032"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2035"/>
 <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -7480,332 +7521,332 @@ De asemenea, trebuie să aveți instalată și activată aplicația QOwnNotesAPI
 Mesaj de eroare de conectare: </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2312"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2315"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
 <translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2323"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2326"/>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Vă rugăm să nu folosiți acest lucru în următorul de probleme, copiați textul informațiilor de depanare direct în problema.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2330"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2333"/>
 <source>Markdown files</source>
 <translation>Markdown fişiere</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2358"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2361"/>
 <source>Disable usage tracking</source>
 <translation>Dezactivați urmărirea utilizării</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2359"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2362"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Datele de utilizare anonime ajută la a decide ce părți din QOwnNotes să se îmbunătățească în continuare și să găsească și să remedieze erorile. &lt;br /&gt; Vă rugăm să o dezactivați numai dacă într-adevăr nu puteți trăi cu ea. &lt;br /&gt; &lt;br /&gt; Într-adevăr dezactivați urmărirea utilizării?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2592"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2595"/>
 <source>new folder</source>
 <translation>dosar nou</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2626"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2629"/>
 <source>Remove note folder</source>
 <translation>Eliminați dosarul pentru note</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2627"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2630"/>
 <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Eliminați dosarul actual al notei &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2708"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2711"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>Selectați dosarul în care vor fi stocate notele</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2743"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2746"/>
 <source>Loading folders from server</source>
 <translation>Încărcarea dosarelor de pe server</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2758"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2761"/>
 <source>No more folders were found in the current folder</source>
 <translation>Nu s-au găsit mai multe dosare în dosarul curent</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2831"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2834"/>
 <source>Loading folders in '%1' from server</source>
 <translation>Încărcarea folderelor în '%1' de pe server</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2904"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2907"/>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
 <translation>Uitați-vă la &lt;a href="%1"&gt; documentația Scripting &lt;/a&gt; pentru a începe rapid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2908"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2911"/>
 <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
 <translation>Dacă aveți nevoie de acces la o anumită funcție în QOwnNotes, deschideți o problemă pe &lt;a href="%1"&gt; pagina de problemă QOwnNotes &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2930"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2933"/>
 <source>Check for script updates</source>
 <translation>Verificaţi pentru actualizări script</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2937"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2940"/>
 <source>Add local script</source>
 <translation>Adăugați scriptul local</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2941"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2944"/>
 <source>Add an existing, local script</source>
 <translation>Adăugați un script local existent</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4035"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4038"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4096"/>
 <source>INI files</source>
 <translation>Fişiere INI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4071"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4074"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>Chiar doriți să importați setările? Setările dvs. curente vor fi eliminate și nu toate setările pot fi restaurate, cum ar fi setările dosarului de note și scripturile pe care le-ați utilizat. De asemenea, va trebui să ajustați unele setări, în special pe platforme, dar notele dvs. vor rămâne intacte!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4081"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4084"/>
 <source>The application will be quit after the import.</source>
 <translation>Aplicația va fi închisă după import.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4082"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4085"/>
 <source>The application will be restarted after the import.</source>
 <translation>Aplicația va fi reluată după import.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4314"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4317"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>Informațiile de depanare au fost copiate în clipboard.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4335"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4338"/>
 <source>The integrity of the disk database is valid.</source>
 <translation type="unfinished">The integrity of the disk database is valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4340"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4343"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation type="unfinished">The integrity of the disk database is not valid!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2924"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2927"/>
 <source>Find a script in the script repository</source>
 <translation>Găsiți un script în depozitul de script-uri</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="296"/>
+<location filename="../dialogs/settingsdialog.cpp" line="299"/>
 <source>Menu bar</source>
 <translation>Bară de meniu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="297"/>
+<location filename="../dialogs/settingsdialog.cpp" line="300"/>
 <source>Show menu bar item</source>
 <translation>Afișați elementul din bara de meniu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1689"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1741"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1692"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1744"/>
 <source>Undefined shortcut</source>
 <translation>Comandă rapidă nedefinită
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1693"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1745"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1696"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1748"/>
 <source>Assign a new shortcut</source>
 <translation>Atribuie o nouă comandă rapidă
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1694"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1746"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1697"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1749"/>
 <source>Reset to default shortcut</source>
 <translation>Resetați la comanda rapidă
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1712"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1715"/>
 <source>Clear shortcut</source>
 <translation>Ștergeți comanda rapidă</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1817"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1820"/>
 <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
 <translation>Comanda rapidă &lt;strong&gt;%1&lt;/ strong&gt; este deja atribuită &lt;strong&gt;%2&lt;/ strong&gt;! Doriți să treceți la comanda rapidă?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3017"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3020"/>
 <source>Remove script</source>
 <translation>Eliminați scenariul</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3018"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3021"/>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Eliminați scriptul curent &lt;strong&gt;%1&lt;/ strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3068"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3071"/>
 <source>QML files</source>
 <translation>QML files</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3069"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3072"/>
 <source>Please select your QML file</source>
 <translation>Selectați fișierul QML</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3159"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3162"/>
 <source>Open repository</source>
 <translation>Deschideți depozitul</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3217"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3220"/>
 <source>Your script seems to be valid</source>
 <translation>Scriptul dvs. pare să fie valabil</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3218"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3221"/>
 <source>There were script errors:
 %1</source>
 <translation>Au existat erori de script:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3286"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3289"/>
 <source>File extension</source>
 <translation>Extensie de fișier</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3286"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3289"/>
 <source>Enter your custom file extension:</source>
 <translation>Introduceți extensia de fișier personalizată:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3615"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3618"/>
 <source>Calendar cache emptied</source>
 <translation>Cache-ul de calendare golit</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3616"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3619"/>
 <source>Your calendar cache was emptied.</source>
 <translation>Cache-ul dvs. de calendar a fost golit.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3697"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3700"/>
 <source>Reset toolbars and exit</source>
 <translation>Resetați barele de instrumente și ieșiți</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3698"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3701"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>Chiar doriți să resetați toate barele de instrumente? Aplicația va fi închisă în timpul procesului, barele de instrumente implicite vor fi restabilite când îl porniți din nou.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3705"/>
 <source>Reset and &amp;exit</source>
 <translation>Resetați și &amp;ieșiți</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3860"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3863"/>
 <source>Log file cleared</source>
 <translation>Fișierul jurnal a fost șters</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3861"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3864"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Fișierul jurnal &lt;strong&gt;%1&lt;/ strong&gt; a fost șters.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3897"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3900"/>
 <source>Executable files</source>
 <translation>Fisiere executabile</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3898"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3900"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3901"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3903"/>
 <source>All files</source>
 <translation>Toate filele</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3908"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3911"/>
 <source>Please select the path of your git executable</source>
 <translation>Selectați calea executabilului dvs. git</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4005"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4008"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>Chiar doriți să resetați suprascrierea tuturor caselor de mesaje?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="104"/>
+<location filename="../dialogs/settingsdialog.cpp" line="107"/>
 <source>New script</source>
 <translation>Script nou</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="108"/>
+<location filename="../dialogs/settingsdialog.cpp" line="111"/>
 <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
 <translation>Puteți descărca clientul dvs. git aici: &lt;a href="%url"&gt; Git for Windows &lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="458"/>
+<location filename="../dialogs/settingsdialog.cpp" line="461"/>
 <source>enabled</source>
 <translation>activat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="458"/>
+<location filename="../dialogs/settingsdialog.cpp" line="461"/>
 <source>disabled</source>
 <translation>invalid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="460"/>
+<location filename="../dialogs/settingsdialog.cpp" line="463"/>
 <source>Portable mode is currently:</source>
 <translation>Modul portabil este în prezent:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="463"/>
+<location filename="../dialogs/settingsdialog.cpp" line="466"/>
 <source>In portable mode</source>
 <translation>În modul portabil</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="464"/>
+<location filename="../dialogs/settingsdialog.cpp" line="467"/>
 <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>baza de date internă sqlite și setările vor fi stocate într-un director &lt;code&gt; Data &lt;/ code&gt; în locația binar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="467"/>
+<location filename="../dialogs/settingsdialog.cpp" line="470"/>
 <source>the settings will be stored in an ini file</source>
 <translation>setările vor fi stocate într-un fișier ini</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="469"/>
+<location filename="../dialogs/settingsdialog.cpp" line="472"/>
 <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
 <translation>folderele de note, căile de script și calea către un editor extern vor fi stocate automat în raport cu folderul &lt;code&gt; Data &lt;/ code&gt;, astfel încât dosarele corecte de note, scripturile și editorul extern să fie încărcate indiferent unde se află instalarea QOwnNotes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="479"/>
+<location filename="../dialogs/settingsdialog.cpp" line="482"/>
 <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
 <translation>Acesta va fi activat dacă executați QOwnNotes cu parametrul &lt;code&gt; - portabil &lt;/ code&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2331"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2334"/>
 <source>Save debug information</source>
 <translation>Salvați informațiile de depanare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2378"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2381"/>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -7814,34 +7855,34 @@ Your notes will stay intact!</source>
 Notele dvs. vor rămâne intacte!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2381"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2384"/>
 <source>Clear and &amp;exit</source>
 <translation>Șterge și iese</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2307"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2381"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2310"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2384"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3705"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Revocare</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="485"/>
+<location filename="../dialogs/settingsdialog.cpp" line="488"/>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Veți găsi un &lt;code&gt; QOwnNotesPortable.bat &lt;/ code&gt; în calea de eliberare pentru a începe QOwnNotes în modul portabil.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2304"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2307"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Chiar doriți să ștergeți baza de date locală? Acest lucru va elimina, de asemenea, dosarele dvs. de note configurat și obiectele dvs. de cedăr todo!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2307"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2310"/>
 <source>Clear &amp;database</source>
 <translation>Clear &amp;database</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2498"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2501"/>
 <source>Select editor application</source>
 <translation>Selectați aplicația editorului</translation>
 </message>
@@ -8486,7 +8527,7 @@ Notele dvs. vor rămâne intacte!</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="157"/>
-<location filename="../dialogs/tododialog.ui" line="326"/>
+<location filename="../dialogs/tododialog.ui" line="329"/>
 <source>Summary</source>
 <translation>Rezumat</translation>
 </message>
@@ -8501,17 +8542,17 @@ Notele dvs. vor rămâne intacte!</translation>
 <translation>Notă…</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.ui" line="346"/>
+<location filename="../dialogs/tododialog.ui" line="349"/>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
 <translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.ui" line="349"/>
+<location filename="../dialogs/tododialog.ui" line="352"/>
 <source>Show only items due today</source>
 <translation type="unfinished">Show only items due today</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="105"/>
+<location filename="../dialogs/tododialog.cpp" line="120"/>
 <source>Save and insert into note</source>
 <translation>Salvați și inserați în notă</translation>
 </message>
@@ -8541,12 +8582,12 @@ Notele dvs. vor rămâne intacte!</translation>
 <translation>Căutați sau creați elemente todo</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.ui" line="331"/>
+<location filename="../dialogs/tododialog.ui" line="334"/>
 <source>Due date</source>
 <translation type="unfinished">Due date</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.ui" line="339"/>
+<location filename="../dialogs/tododialog.ui" line="342"/>
 <source>select your todo list</source>
 <translation>selectați lista dvs. de todo</translation>
 </message>
@@ -8556,17 +8597,17 @@ Notele dvs. vor rămâne intacte!</translation>
 <translation>Salvați elementul curent todo</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="110"/>
+<location filename="../dialogs/tododialog.cpp" line="125"/>
 <source>Save the current todo item and insert a link to it into the current note</source>
 <translation>Salvați elementul todo curent și inserați o legătură într-o notă curentă</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="119"/>
+<location filename="../dialogs/tododialog.cpp" line="134"/>
 <source>Import the current todo item as new note</source>
 <translation>Importați elementul curent todo ca notă nouă</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="115"/>
+<location filename="../dialogs/tododialog.cpp" line="130"/>
 <source>Import as note</source>
 <translation>Importă ca notă</translation>
 </message>
@@ -8581,54 +8622,54 @@ Notele dvs. vor rămâne intacte!</translation>
 <translation>Elementele de listă todo sunt încărcate de pe server</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="130"/>
+<location filename="../dialogs/tododialog.cpp" line="145"/>
 <source>Reload from server</source>
 <translation>Reîncărcați din server</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="134"/>
+<location filename="../dialogs/tododialog.cpp" line="149"/>
 <source>Reload tasks from server</source>
 <translation>Reîncărcați sarcinile de pe server</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="138"/>
+<location filename="../dialogs/tododialog.cpp" line="153"/>
 <source>Clear cache and reload</source>
 <translation>Ștergeți memoria cache și reîncărcați</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="143"/>
+<location filename="../dialogs/tododialog.cpp" line="158"/>
 <source>Clear calendar cache and reload tasks from server</source>
 <translation>Ștergeți cache-ul de calendare și reîncărcați sarcini de pe server</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="606"/>
+<location filename="../dialogs/tododialog.cpp" line="621"/>
 <source>Remove todo item</source>
 <translation>Eliminați elementul todo</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="607"/>
+<location filename="../dialogs/tododialog.cpp" line="622"/>
 <source>Remove the selected todo item?
 This cannot be undone!</source>
 <translation>Eliminați elementul todo selectat?
 Acest lucru nu poate fi anulat!</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="891"/>
+<location filename="../dialogs/tododialog.cpp" line="906"/>
 <source>Create sub-task</source>
 <translation>Creați sub-sarcină</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="898"/>
+<location filename="../dialogs/tododialog.cpp" line="913"/>
 <source>Create new sub-task</source>
 <translation>Creați o nouă sarcină</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="898"/>
+<location filename="../dialogs/tododialog.cpp" line="913"/>
 <source>Name:</source>
 <translation>Nume:</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="899"/>
+<location filename="../dialogs/tododialog.cpp" line="914"/>
 <source>New sub-task</source>
 <translation>Sub-sarcină nouă</translation>
 </message>

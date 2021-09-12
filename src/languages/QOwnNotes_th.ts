@@ -4335,160 +4335,160 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>OwnCloudService</name>
 <message>
-<location filename="../services/owncloudservice.cpp" line="235"/>
+<location filename="../services/owncloudservice.cpp" line="237"/>
 <source>incorrect</source>
 <translation type="unfinished">incorrect</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="237"/>
-<location filename="../services/owncloudservice.cpp" line="535"/>
+<location filename="../services/owncloudservice.cpp" line="239"/>
+<location filename="../services/owncloudservice.cpp" line="537"/>
 <source>not connected</source>
 <translation type="unfinished">not connected</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="252"/>
+<location filename="../services/owncloudservice.cpp" line="254"/>
 <source>Username / password error</source>
 <translation>ข้อผิดพลาดชื่อผู้ใช้ / รหัสผ่าน</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="253"/>
+<location filename="../services/owncloudservice.cpp" line="255"/>
 <source>Your calendar username or password is incorrect!</source>
 <translation>ชื่อผู้ใช้หรือรหัสผ่านปฏิทินของคุณไม่ถูกต้อง!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="313"/>
 <location filename="../services/owncloudservice.cpp" line="315"/>
-<location filename="../services/owncloudservice.cpp" line="325"/>
+<location filename="../services/owncloudservice.cpp" line="317"/>
 <location filename="../services/owncloudservice.cpp" line="327"/>
-<location filename="../services/owncloudservice.cpp" line="431"/>
-<location filename="../services/owncloudservice.cpp" line="485"/>
-<location filename="../services/owncloudservice.cpp" line="500"/>
-<location filename="../services/owncloudservice.cpp" line="508"/>
-<location filename="../services/owncloudservice.cpp" line="526"/>
+<location filename="../services/owncloudservice.cpp" line="329"/>
+<location filename="../services/owncloudservice.cpp" line="433"/>
+<location filename="../services/owncloudservice.cpp" line="487"/>
+<location filename="../services/owncloudservice.cpp" line="502"/>
+<location filename="../services/owncloudservice.cpp" line="510"/>
+<location filename="../services/owncloudservice.cpp" line="528"/>
 <source>ok</source>
 <translation type="unfinished">ok</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="318"/>
+<location filename="../services/owncloudservice.cpp" line="320"/>
 <source>not correct</source>
 <translation type="unfinished">not correct</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="331"/>
+<location filename="../services/owncloudservice.cpp" line="333"/>
 <source>not detected</source>
 <translation type="unfinished">not detected</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="434"/>
-<location filename="../services/owncloudservice.cpp" line="529"/>
+<location filename="../services/owncloudservice.cpp" line="436"/>
+<location filename="../services/owncloudservice.cpp" line="531"/>
 <source>not found</source>
 <translation type="unfinished">not found</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="471"/>
 <location filename="../services/owncloudservice.cpp" line="473"/>
+<location filename="../services/owncloudservice.cpp" line="475"/>
 <source>unknown</source>
 <translation type="unfinished">unknown</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="482"/>
+<location filename="../services/owncloudservice.cpp" line="484"/>
 <source>version %1 too low</source>
 <translation type="unfinished">version %1 too low</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="503"/>
-<location filename="../services/owncloudservice.cpp" line="511"/>
+<location filename="../services/owncloudservice.cpp" line="505"/>
+<location filename="../services/owncloudservice.cpp" line="513"/>
 <source>not enabled</source>
 <translation type="unfinished">not enabled</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="585"/>
+<location filename="../services/owncloudservice.cpp" line="587"/>
 <source>API app version too low</source>
 <translation>แอป API เวอร์ชันต่ำเกินไป</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="586"/>
+<location filename="../services/owncloudservice.cpp" line="588"/>
 <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
 <translation>โปรดพิจารณาอัปเดตแอป QOwnNotesAPI ของคุณบนเซิร์ฟเวอร์ของคุณแอปเวอร์ชัน% 1 ของคุณต่ำเกินไปและอาจทำให้เกิดปัญหากับ QOwnNotes</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1199"/>
+<location filename="../services/owncloudservice.cpp" line="1201"/>
 <source>ownCloud server connection error</source>
 <translation>ข้อผิดพลาดการเชื่อมต่อเซิร์ฟเวอร์ ownCloud</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1204"/>
+<location filename="../services/owncloudservice.cpp" line="1206"/>
 <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
 <translation>ข้อผิดพลาดของเซิร์ฟเวอร์ ownCloud: &lt;strong&gt;%1 &lt;/strong&gt; &lt;br /&gt; โปรดตรวจสอบการกำหนดค่า ownCloud ของคุณ</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1224"/>
+<location filename="../services/owncloudservice.cpp" line="1226"/>
 <source>You need to setup your ownCloud server!</source>
 <translation>คุณต้องตั้งค่าเซิร์ฟเวอร์ ownCloud ของคุณ!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1236"/>
+<location filename="../services/owncloudservice.cpp" line="1238"/>
 <source>Open &amp;settings</source>
 <translation>เปิด &amp;การตั้งค่า</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1236"/>
+<location filename="../services/owncloudservice.cpp" line="1238"/>
 <source>&amp;Cancel</source>
 <translation>&amp;ยกเลิก</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1295"/>
+<location filename="../services/owncloudservice.cpp" line="1297"/>
 <source>Done with loading note versions</source>
 <translation>เสร็จสิ้นการโหลดเวอร์ชันโน้ต</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1340"/>
+<location filename="../services/owncloudservice.cpp" line="1342"/>
 <source>No versions found</source>
 <translation>ไม่พบรุ่น</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1341"/>
+<location filename="../services/owncloudservice.cpp" line="1343"/>
 <source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>ไม่มีรุ่นสำหรับบันทึกย่อนี้หรือไม่พบบันทึกย่อบนเซิร์ฟเวอร์</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1361"/>
+<location filename="../services/owncloudservice.cpp" line="1363"/>
 <source>Done with loading trashed notes</source>
 <translation>เสร็จสิ้นการโหลดโน้ตที่อยู่ในถังขยะ</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1406"/>
+<location filename="../services/owncloudservice.cpp" line="1408"/>
 <source>No trashed notes</source>
 <translation>ไม่มีโน้ตที่อยู่ในถังขยะ</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1407"/>
+<location filename="../services/owncloudservice.cpp" line="1409"/>
 <source>No trashed notes were found on the server.</source>
 <translation>ไม่พบบันทึกย่อที่อยู่ในเซิร์ฟเวอร์</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1429"/>
-<location filename="../services/owncloudservice.cpp" line="1456"/>
+<location filename="../services/owncloudservice.cpp" line="1431"/>
+<location filename="../services/owncloudservice.cpp" line="1458"/>
 <source>Error while loading todo lists!</source>
 <translation>เกิดข้อผิดพลาดขณะโหลดรายการสิ่งที่ต้องทำ!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1430"/>
+<location filename="../services/owncloudservice.cpp" line="1432"/>
 <source>Your CalDAV server didn't reply anything!</source>
 <translation>เซิร์ฟเวอร์ CalDAV ของคุณไม่ตอบอะไรเลย!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1457"/>
+<location filename="../services/owncloudservice.cpp" line="1459"/>
 <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>ข้อความแสดงข้อผิดพลาดจากเซิร์ฟเวอร์ CalDAV ของคุณ: &lt;strong&gt;%1&lt;/strong&gt;</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2145"/>
+<location filename="../services/owncloudservice.cpp" line="2147"/>
 <source>No bookmarks</source>
 <translation>ไม่มีที่คั่นหนังสือ</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2146"/>
+<location filename="../services/owncloudservice.cpp" line="2148"/>
 <source>No bookmarks were found on the server.</source>
 <translation>ไม่พบบุ๊คมาร์คบนเซิร์ฟเวอร์</translation>
 </message>
@@ -4624,9 +4624,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4264"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4267"/>
 <source>New connection</source>
 <translation>การเชื่อมต่อใหม่</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="4448"/>
+<source>Login flow succeeded</source>
+<translation type="unfinished">Login flow succeeded</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="4449"/>
+<source>Username and password were set successfully!</source>
+<translation type="unfinished">Username and password were set successfully!</translation>
 </message>
 <message>
 <location filename="../entities/cloudconnection.cpp" line="291"/>
@@ -4688,6 +4698,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../dialogs/joplinimportdialog.cpp" line="28"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
 <translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+</message>
+<message>
+<location filename="../services/owncloudservice.cpp" line="2264"/>
+<location filename="../services/owncloudservice.cpp" line="2279"/>
+<source>Login flow failed</source>
+<translation type="unfinished">Login flow failed</translation>
+</message>
+<message>
+<location filename="../services/owncloudservice.cpp" line="2265"/>
+<source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
+<translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
+</message>
+<message>
+<location filename="../services/owncloudservice.cpp" line="2280"/>
+<source>Could not parse login url!</source>
+<translation type="unfinished">Could not parse login url!</translation>
 </message>
 </context>
 <context>
@@ -5141,7 +5167,7 @@ Do you want to install it anyway?</source>
 <name>SettingsDialog</name>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="26"/>
-<location filename="../dialogs/settingsdialog.ui" line="4357"/>
+<location filename="../dialogs/settingsdialog.ui" line="4382"/>
 <source>Settings</source>
 <translation>การตั้งค่า</translation>
 </message>
@@ -5233,7 +5259,7 @@ Do you want to install it anyway?</source>
 <location filename="../dialogs/settingsdialog.ui" line="1325"/>
 <location filename="../dialogs/settingsdialog.ui" line="1342"/>
 <location filename="../dialogs/settingsdialog.ui" line="1359"/>
-<location filename="../dialogs/settingsdialog.cpp" line="337"/>
+<location filename="../dialogs/settingsdialog.cpp" line="340"/>
 <source>unknown</source>
 <translation>ไม่ทราบ</translation>
 </message>
@@ -5298,42 +5324,42 @@ Do you want to install it anyway?</source>
 <translation>เครือข่าย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1452"/>
+<location filename="../dialogs/settingsdialog.ui" line="1477"/>
 <source>Proxy Settings</source>
 <translation>การตั้งค่าพร็อกซี</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1458"/>
+<location filename="../dialogs/settingsdialog.ui" line="1483"/>
 <source>No Proxy</source>
 <translation>ไม่มีพร็อกซี</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1468"/>
+<location filename="../dialogs/settingsdialog.ui" line="1493"/>
 <source>Use system proxy</source>
 <translation>ใช้พร็อกซีระบบ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1475"/>
+<location filename="../dialogs/settingsdialog.ui" line="1500"/>
 <source>Specify proxy manually as</source>
 <translation>ระบุ proxy ด้วยตนเองเป็น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1500"/>
+<location filename="../dialogs/settingsdialog.ui" line="1525"/>
 <source>Host</source>
 <translation>เจ้าภาพ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1551"/>
+<location filename="../dialogs/settingsdialog.ui" line="1576"/>
 <source>Proxy server requires authentication</source>
 <translation>พร็อกซีเซิร์ฟเวอร์ต้องการการรับรองความถูกต้อง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1608"/>
+<location filename="../dialogs/settingsdialog.ui" line="1633"/>
 <source>SSL Settings</source>
 <translation>การตั้งค่า SSL</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1614"/>
+<location filename="../dialogs/settingsdialog.ui" line="1639"/>
 <source>Ignore SSL errors</source>
 <translation>ละเว้นข้อผิดพลาด SSL</translation>
 </message>
@@ -5343,7 +5369,7 @@ Do you want to install it anyway?</source>
 <translation>ทำ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1869"/>
+<location filename="../dialogs/settingsdialog.ui" line="1894"/>
 <source>Default ownCloud calendar</source>
 <translation>ปฏิทิน ownCloud เริ่มต้น</translation>
 </message>
@@ -5353,65 +5379,65 @@ Do you want to install it anyway?</source>
 <translation>อินเตอร์เฟซ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1839"/>
+<location filename="../dialogs/settingsdialog.ui" line="1864"/>
 <source>Other CalDAV server</source>
 <translation>เซิร์ฟเวอร์ CalDAV อื่น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3007"/>
+<location filename="../dialogs/settingsdialog.ui" line="3032"/>
 <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
 <translation>เฉพาะบางสีเท่านั้นที่จะถูกปรับชุดรูปแบบเดสก์ท็อปของคุณจะควบคุมส่วนที่เหลือ คุณต้องรีสตาร์ทแอปพลิเคชันเพื่อให้การเปลี่ยนแปลงเหล่านี้ดำเนินการ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3010"/>
+<location filename="../dialogs/settingsdialog.ui" line="3035"/>
 <source>Optimize preview colors for dark mode desktop themes</source>
 <translation>ปรับสีตัวอย่างให้เหมาะสมที่สุดสำหรับธีมเดสก์ท็อปโหมดมืด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2997"/>
+<location filename="../dialogs/settingsdialog.ui" line="3022"/>
 <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
 <translation>สิ่งนี้ทำให้โหมดมืดส่วนต่อประสานและไอคอนจะได้รับการแก้ไข คุณต้องรีสตาร์ทแอปพลิเคชันเพื่อให้การเปลี่ยนแปลงเหล่านี้ดำเนินการ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3000"/>
+<location filename="../dialogs/settingsdialog.ui" line="3025"/>
 <source>Enable dark mode</source>
 <translation>เปิดใช้งานโหมดมืด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3026"/>
-<location filename="../dialogs/settingsdialog.ui" line="3036"/>
-<location filename="../dialogs/settingsdialog.ui" line="3067"/>
-<location filename="../dialogs/settingsdialog.ui" line="3077"/>
+<location filename="../dialogs/settingsdialog.ui" line="3051"/>
+<location filename="../dialogs/settingsdialog.ui" line="3061"/>
+<location filename="../dialogs/settingsdialog.ui" line="3092"/>
+<location filename="../dialogs/settingsdialog.ui" line="3102"/>
 <source>You need to restart the application to let this setting take effect</source>
 <translation>คุณต้องรีสตาร์ทแอปพลิเคชันเพื่อให้การตั้งค่านี้มีผล</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3106"/>
+<location filename="../dialogs/settingsdialog.ui" line="3131"/>
 <source>Item sizes in the main window</source>
 <translation>ขนาดรายการในหน้าต่างหลัก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5140"/>
+<location filename="../dialogs/settingsdialog.ui" line="5165"/>
 <source>Markdown highlighting</source>
 <translation>Markdown เน้นสี</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5146"/>
+<location filename="../dialogs/settingsdialog.ui" line="5171"/>
 <source>Enable markdown highlighting</source>
 <translation>เปิดใช้งานการเน้นเครื่องหมาย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2163"/>
+<location filename="../dialogs/settingsdialog.ui" line="2188"/>
 <source>Interface language</source>
 <translation>ภาษาอินเตอร์เฟส</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2193"/>
+<location filename="../dialogs/settingsdialog.ui" line="2218"/>
 <source>Automatic</source>
 <translation>อัตโนมัติ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2328"/>
+<location filename="../dialogs/settingsdialog.ui" line="2353"/>
 <source>English</source>
 <translation>อังกฤษ</translation>
 </message>
@@ -5421,121 +5447,121 @@ Do you want to install it anyway?</source>
 <translation>ทางลัด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4595"/>
-<location filename="../dialogs/settingsdialog.ui" line="4888"/>
+<location filename="../dialogs/settingsdialog.ui" line="4620"/>
+<location filename="../dialogs/settingsdialog.ui" line="4913"/>
 <source>Default font:</source>
 <translation>แบบอักษรเริ่มต้น:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4637"/>
-<location filename="../dialogs/settingsdialog.ui" line="4829"/>
+<location filename="../dialogs/settingsdialog.ui" line="4662"/>
+<location filename="../dialogs/settingsdialog.ui" line="4854"/>
 <source>Code font:</source>
 <translation>แบบอักษรของรหัส:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3265"/>
+<location filename="../dialogs/settingsdialog.ui" line="3290"/>
 <source>Main window shortcuts</source>
 <translation>ทางลัดหน้าต่างหลัก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3899"/>
+<location filename="../dialogs/settingsdialog.ui" line="3924"/>
 <source>Do this at your own risk!</source>
 <translation>ทำเช่นนี้ด้วยความเสี่ยงของคุณเอง!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3902"/>
+<location filename="../dialogs/settingsdialog.ui" line="3927"/>
 <source>Ignore all external note folder changes</source>
 <translation>ละเว้นการเปลี่ยนแปลงโฟลเดอร์บันทึกภายนอกทั้งหมด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4495"/>
+<location filename="../dialogs/settingsdialog.ui" line="4520"/>
 <source>Use GitHub line breaks</source>
 <translation>ใช้ตัวแบ่งบรรทัด GitHub</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2306"/>
+<location filename="../dialogs/settingsdialog.ui" line="2331"/>
 <source>German</source>
 <translation>เยอรมัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2383"/>
+<location filename="../dialogs/settingsdialog.ui" line="2408"/>
 <source>French</source>
 <translation>ฝรั่งเศส</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2647"/>
+<location filename="../dialogs/settingsdialog.ui" line="2672"/>
 <source>Polish</source>
 <translation>ขัด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2669"/>
+<location filename="../dialogs/settingsdialog.ui" line="2694"/>
 <source>Portuguese</source>
 <translation>โปรตุเกส</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2614"/>
+<location filename="../dialogs/settingsdialog.ui" line="2639"/>
 <source>Dutch</source>
 <translation>ดัตช์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2581"/>
+<location filename="../dialogs/settingsdialog.ui" line="2606"/>
 <source>Hungarian</source>
 <translation>ฮังการี</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2339"/>
+<location filename="../dialogs/settingsdialog.ui" line="2364"/>
 <source>Spanish</source>
 <translation>สเปน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2971"/>
+<location filename="../dialogs/settingsdialog.ui" line="2996"/>
 <source>Dark mode</source>
 <translation>โหมดมืด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1668"/>
+<location filename="../dialogs/settingsdialog.ui" line="1693"/>
 <source>Disable tracking of usage data</source>
 <translation>ปิดใช้งานการติดตามข้อมูลการใช้งาน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1712"/>
+<location filename="../dialogs/settingsdialog.ui" line="1737"/>
 <source>Usage tracking is done on a private Piwik server.</source>
 <translation>การติดตามการใช้งานเสร็จแล้วบนเซิร์ฟเวอร์ Piwik ส่วนตัว</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1772"/>
+<location filename="../dialogs/settingsdialog.ui" line="1797"/>
 <source>Disable heartbeat</source>
 <translation>ปิดใช้งานการเต้นของหัวใจ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2702"/>
+<location filename="../dialogs/settingsdialog.ui" line="2727"/>
 <source>Russian</source>
 <translation>รัสเซีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1621"/>
+<location filename="../dialogs/settingsdialog.ui" line="1646"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt; &lt;p&gt; คุณอาจต้องการลองรับใบรับรอง SSL ฟรีจาก &lt;a href="https://letsencrypt.org/"&gt; ลองเข้ารหัส &lt;/a&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2182"/>
+<location filename="../dialogs/settingsdialog.ui" line="2207"/>
 <source>If you change the language you have to restart the application for the changes to take action.</source>
 <translation>หากคุณเปลี่ยนภาษาคุณต้องรีสตาร์ทแอปพลิเคชันเพื่อให้การเปลี่ยนแปลงมีผล</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3721"/>
-<location filename="../dialogs/settingsdialog.ui" line="3796"/>
+<location filename="../dialogs/settingsdialog.ui" line="3746"/>
+<location filename="../dialogs/settingsdialog.ui" line="3821"/>
 <source>You need to reload the scripting engine if you modify a script file</source>
 <translation>คุณต้องโหลดเอ็นจิ้นการเขียนสคริปต์ซ้ำหากคุณแก้ไขไฟล์สคริปต์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3724"/>
-<location filename="../dialogs/settingsdialog.ui" line="3799"/>
+<location filename="../dialogs/settingsdialog.ui" line="3749"/>
+<location filename="../dialogs/settingsdialog.ui" line="3824"/>
 <source>Reload scripting engine</source>
 <translation>โหลดเอ็นจิ้นสคริปต์ใหม่</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3714"/>
+<location filename="../dialogs/settingsdialog.ui" line="3739"/>
 <source>Validate script</source>
 <translation>ตรวจสอบสคริปต์</translation>
 </message>
@@ -5545,122 +5571,122 @@ Do you want to install it anyway?</source>
 <translation>ทั่วไป</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3893"/>
+<location filename="../dialogs/settingsdialog.ui" line="3918"/>
 <source>Notes</source>
 <translation>หมายเหตุ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3919"/>
+<location filename="../dialogs/settingsdialog.ui" line="3944"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt; &lt;p&gt; หากเลือกตัวเลือกนี้คุณจะได้รับการแจ้งเตือนเกี่ยวกับการแก้ไขภายนอกแม้ว่าจะไม่ได้รับการแก้ไขบันทึกย่อปัจจุบันในนาทีสุดท้าย สิ่งที่แนะนำคือ &lt;span style = "font-style: italic;"&gt; ไม่ถูกตรวจสอบ &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4015"/>
-<location filename="../dialogs/settingsdialog.ui" line="5388"/>
-<location filename="../dialogs/settingsdialog.ui" line="5933"/>
+<location filename="../dialogs/settingsdialog.ui" line="4040"/>
+<location filename="../dialogs/settingsdialog.ui" line="5413"/>
+<location filename="../dialogs/settingsdialog.ui" line="5958"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>คุณอาจพบปัญหาการซิงค์กับการซิงค์ของ ownCloud รุ่นเก่ากว่าเมื่อไปต่ำกว่า 10 วินาที
 เพียงทดสอบด้วยตัวเองหากคุณได้รับข้อขัดแย้งในการซิงค์และตั้งค่าที่สูงขึ้นหากเป็นเช่นนั้น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2603"/>
+<location filename="../dialogs/settingsdialog.ui" line="2628"/>
 <source>Japanese</source>
 <translation>ญี่ปุ่น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4019"/>
+<location filename="../dialogs/settingsdialog.ui" line="4044"/>
 <source>note save interval time [sec]</source>
 <translation>บันทึกช่วงเวลาที่บันทึก [วินาที]</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3922"/>
+<location filename="../dialogs/settingsdialog.ui" line="3947"/>
 <source>Notify about all external modifications of the current note</source>
 <translation>แจ้งเตือนเกี่ยวกับการแก้ไขภายนอกทั้งหมดของบันทึกปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4386"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2303"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2311"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4334"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4339"/>
+<location filename="../dialogs/settingsdialog.ui" line="4411"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2306"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2314"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4337"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4342"/>
 <source>Database</source>
 <translation>ฐานข้อมูล</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4392"/>
+<location filename="../dialogs/settingsdialog.ui" line="4417"/>
 <source>Reinitialize Database</source>
 <translation>เริ่มต้นฐานข้อมูลใหม่</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4325"/>
+<location filename="../dialogs/settingsdialog.ui" line="4350"/>
 <source>Clear application data and exit</source>
 <translation>ล้างข้อมูลแอปพลิเคชันและออก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4331"/>
+<location filename="../dialogs/settingsdialog.ui" line="4356"/>
 <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
 <translation>ปุ่มนี้อนุญาตให้คุณล้างค่าติดตั้งทั้งหมดลบฐานข้อมูล todo โลคัลและออกจาก QOwnNotes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4341"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2377"/>
+<location filename="../dialogs/settingsdialog.ui" line="4366"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2380"/>
 <source>Clear app data and exit</source>
 <translation>ล้างข้อมูลแอปและออก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4120"/>
+<location filename="../dialogs/settingsdialog.ui" line="4145"/>
 <source>Update dialog</source>
 <translation>กล่องโต้ตอบอัปเดต</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4200"/>
+<location filename="../dialogs/settingsdialog.ui" line="4225"/>
 <source>Default note file extension</source>
 <translation>นามสกุลไฟล์บันทึกย่อเริ่มต้น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4285"/>
+<location filename="../dialogs/settingsdialog.ui" line="4310"/>
 <source>External editor</source>
 <translation>บรรณาธิการภายนอก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4298"/>
+<location filename="../dialogs/settingsdialog.ui" line="4323"/>
 <source>path to external editor, leave empty for default</source>
 <translation>พา ธ ไปยังเอดิเตอร์ภายนอกปล่อยว่างไว้สำหรับค่าดีฟอลต์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4308"/>
-<location filename="../dialogs/settingsdialog.ui" line="5467"/>
+<location filename="../dialogs/settingsdialog.ui" line="4333"/>
+<location filename="../dialogs/settingsdialog.ui" line="5492"/>
 <source>set external editor</source>
 <translation>ตั้งโปรแกรมแก้ไขภายนอก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1637"/>
+<location filename="../dialogs/settingsdialog.ui" line="1662"/>
 <source>App metrics</source>
 <translation>แอพตัวชี้วัด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1655"/>
+<location filename="../dialogs/settingsdialog.ui" line="1680"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>ข้อมูลการใช้งานแบบไม่ระบุชื่อช่วยในการตัดสินใจว่าส่วนใดของ QOwnNotes ที่จะปรับปรุงต่อไปและเพื่อค้นหาและแก้ไขข้อบกพร่อง โปรดปิดการใช้งานเฉพาะเมื่อคุณไม่สามารถใช้งานได้จริง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1687"/>
+<location filename="../dialogs/settingsdialog.ui" line="1712"/>
 <source>This data includes anonymous information about what features of the app are used.</source>
 <translation>ข้อมูลนี้รวมถึงข้อมูลที่ไม่ระบุตัวตนเกี่ยวกับคุณสมบัติของแอพที่ใช้</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1741"/>
+<location filename="../dialogs/settingsdialog.ui" line="1766"/>
 <source>App heartbeat</source>
 <translation>แอพ Heartbeat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1759"/>
+<location filename="../dialogs/settingsdialog.ui" line="1784"/>
 <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
 <translation>คำร้องขอ heartbeat ขนาดเล็กถูกส่งเป็นระยะขณะที่ QOwnNotes กำลังรัน ทำให้ผู้พัฒนามีความสุขด้วยการบอกให้เขารู้ว่ามีใครบางคนกำลังใช้ QOwnNotes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2493"/>
+<location filename="../dialogs/settingsdialog.ui" line="2518"/>
 <source>Italian</source>
 <translation>อิตาลี</translation>
 </message>
@@ -5670,17 +5696,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>การเขียนสคริปต์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3334"/>
+<location filename="../dialogs/settingsdialog.ui" line="3359"/>
 <source>Your scripts</source>
 <translation>สคริปต์ของคุณ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3418"/>
+<location filename="../dialogs/settingsdialog.ui" line="3443"/>
 <source>&amp;Remove script</source>
 <translation>&amp;ลบสคริปต์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3731"/>
+<location filename="../dialogs/settingsdialog.ui" line="3756"/>
 <source>Click here to select your QML script</source>
 <translation>คลิกที่นี่เพื่อเลือกสคริปต์ QML ของคุณ</translation>
 </message>
@@ -5762,7 +5788,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="785"/>
-<location filename="../dialogs/settingsdialog.ui" line="3665"/>
+<location filename="../dialogs/settingsdialog.ui" line="3690"/>
 <source>Name:</source>
 <translation>นามสกุล:</translation>
 </message>
@@ -5820,7 +5846,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1139"/>
-<location filename="../dialogs/settingsdialog.ui" line="1926"/>
+<location filename="../dialogs/settingsdialog.ui" line="1951"/>
 <source>Username:</source>
 <translation>ชื่อผู้ใช้:</translation>
 </message>
@@ -5831,7 +5857,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1174"/>
-<location filename="../dialogs/settingsdialog.ui" line="1961"/>
+<location filename="../dialogs/settingsdialog.ui" line="1986"/>
 <source>Password:</source>
 <translation>รหัสผ่าน:</translation>
 </message>
@@ -5871,381 +5897,391 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>เปิดใช้งานแอป QOwnNotesAPI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1811"/>
+<location filename="../dialogs/settingsdialog.ui" line="1428"/>
+<source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
+<translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="1431"/>
+<source>Login to Nextcloud to grant access</source>
+<translation type="unfinished">Login to Nextcloud to grant access</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="1836"/>
 <source>Todo settings</source>
 <translation>การตั้งค่าสิ่งที่ต้องทำ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1817"/>
+<location filename="../dialogs/settingsdialog.ui" line="1842"/>
 <source>Enable todo calendar support</source>
 <translation>เปิดใช้งานการสนับสนุนปฏิทิน todo</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2002"/>
+<location filename="../dialogs/settingsdialog.ui" line="2027"/>
 <source>Which cloud connection do you want to use?</source>
 <translation>คุณต้องการใช้การเชื่อมต่อคลาวด์ใด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2014"/>
+<location filename="../dialogs/settingsdialog.ui" line="2039"/>
 <source>Select the calendars you want to use for the Todo list</source>
 <translation>เลือกปฏิทินที่คุณต้องการใช้สำหรับรายการสิ่งที่ต้องทำ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2089"/>
+<location filename="../dialogs/settingsdialog.ui" line="2114"/>
 <source>Todo list settings</source>
 <translation>การตั้งค่ารายการสิ่งที่ต้องทำ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2095"/>
+<location filename="../dialogs/settingsdialog.ui" line="2120"/>
 <source>Saving an item also closes the Todo list</source>
 <translation>การบันทึกรายการจะปิดรายการสิ่งที่ต้องทำ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2207"/>
+<location filename="../dialogs/settingsdialog.ui" line="2232"/>
 <source>Indonesian</source>
 <translation>ชาวอินโดนีเซีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2229"/>
+<location filename="../dialogs/settingsdialog.ui" line="2254"/>
 <source>Bengali</source>
 <translation>ประเทศบังคลาเทศ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2240"/>
+<location filename="../dialogs/settingsdialog.ui" line="2265"/>
 <source>Bosnian</source>
 <translation>บอสเนีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2251"/>
+<location filename="../dialogs/settingsdialog.ui" line="2276"/>
 <source>Bulgarian</source>
 <translation>บัลแกเรีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2262"/>
+<location filename="../dialogs/settingsdialog.ui" line="2287"/>
 <source>Catalan</source>
 <translation>คาตาลัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2273"/>
+<location filename="../dialogs/settingsdialog.ui" line="2298"/>
 <source>Cebuano</source>
 <translation type="unfinished">Cebuano</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2295"/>
+<location filename="../dialogs/settingsdialog.ui" line="2320"/>
 <source>Danish</source>
 <translation>เดนมาร์ก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2317"/>
+<location filename="../dialogs/settingsdialog.ui" line="2342"/>
 <source>Basque</source>
 <translation>ชาวแบสค์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2350"/>
+<location filename="../dialogs/settingsdialog.ui" line="2375"/>
 <source>Estonian</source>
 <translation>เอสโตเนีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2361"/>
+<location filename="../dialogs/settingsdialog.ui" line="2386"/>
 <source>Filipino</source>
 <translation>ฟิลิปปินส์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2372"/>
+<location filename="../dialogs/settingsdialog.ui" line="2397"/>
 <source>Finnish</source>
 <translation>ฟินแลนด์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2394"/>
+<location filename="../dialogs/settingsdialog.ui" line="2419"/>
 <source>Irish</source>
 <translation>ไอริช</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2405"/>
+<location filename="../dialogs/settingsdialog.ui" line="2430"/>
 <source>Galician</source>
 <translation>กาลิเซีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2416"/>
+<location filename="../dialogs/settingsdialog.ui" line="2441"/>
 <source>Greek</source>
 <translation>กรีก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2427"/>
+<location filename="../dialogs/settingsdialog.ui" line="2452"/>
 <source>Hausa</source>
 <translation>เฮาซา</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2438"/>
+<location filename="../dialogs/settingsdialog.ui" line="2463"/>
 <source>Hebrew</source>
 <translation>ชาวอิสราเอล</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2449"/>
+<location filename="../dialogs/settingsdialog.ui" line="2474"/>
 <source>Hindi</source>
 <translation>ภาษาฮินดี</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2471"/>
+<location filename="../dialogs/settingsdialog.ui" line="2496"/>
 <source>Hiligaynon</source>
 <translation type="unfinished">Hiligaynon</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2482"/>
+<location filename="../dialogs/settingsdialog.ui" line="2507"/>
 <source>Icelandic</source>
 <translation>ไอซ์แลนด์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2504"/>
+<location filename="../dialogs/settingsdialog.ui" line="2529"/>
 <source>Korean</source>
 <translation>เกาหลี</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2515"/>
+<location filename="../dialogs/settingsdialog.ui" line="2540"/>
 <source>Kurdish</source>
 <translation>เคิร์ด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2537"/>
+<location filename="../dialogs/settingsdialog.ui" line="2562"/>
 <source>Latvian</source>
 <translation>ลัตเวีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2548"/>
+<location filename="../dialogs/settingsdialog.ui" line="2573"/>
 <source>Lithuanian</source>
 <translation>ภาษาลิธัวเนีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2559"/>
+<location filename="../dialogs/settingsdialog.ui" line="2584"/>
 <source>Macedonian</source>
 <translation>มาซิโดเนีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2592"/>
+<location filename="../dialogs/settingsdialog.ui" line="2617"/>
 <source>Norwegian</source>
 <translation>นอร์เวย์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2636"/>
+<location filename="../dialogs/settingsdialog.ui" line="2661"/>
 <source>Uzbek</source>
 <translation>อุซเบก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2680"/>
+<location filename="../dialogs/settingsdialog.ui" line="2705"/>
 <source>Punjabi</source>
 <translation>ปัญจาบ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2625"/>
+<location filename="../dialogs/settingsdialog.ui" line="2650"/>
 <source>Persian</source>
 <translation>เปอร์เซีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2691"/>
+<location filename="../dialogs/settingsdialog.ui" line="2716"/>
 <source>Romanian</source>
 <translation>โรมาเนีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2713"/>
+<location filename="../dialogs/settingsdialog.ui" line="2738"/>
 <source>Serbian</source>
 <translation>เซอร์เบีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2724"/>
+<location filename="../dialogs/settingsdialog.ui" line="2749"/>
 <source>Albanian</source>
 <translation>แอลเบเนีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2757"/>
+<location filename="../dialogs/settingsdialog.ui" line="2782"/>
 <source>Slovak</source>
 <translation>สโลวาเกีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2768"/>
+<location filename="../dialogs/settingsdialog.ui" line="2793"/>
 <source>Slovenian</source>
 <translation>ภาษาสโลเวเนีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2779"/>
+<location filename="../dialogs/settingsdialog.ui" line="2804"/>
 <source>Swedish</source>
 <translation>สวีเดน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2790"/>
+<location filename="../dialogs/settingsdialog.ui" line="2815"/>
 <source>Tagalog</source>
 <translation>ตากาล็อก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2823"/>
+<location filename="../dialogs/settingsdialog.ui" line="2848"/>
 <source>Turkish</source>
 <translation>ตุรกี</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2856"/>
+<location filename="../dialogs/settingsdialog.ui" line="2881"/>
 <source>Urdu</source>
 <translation>ภาษาอูรดู</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2889"/>
+<location filename="../dialogs/settingsdialog.ui" line="2914"/>
 <source>Chinese Simplified</source>
 <translation>จีนตัวย่อ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2900"/>
+<location filename="../dialogs/settingsdialog.ui" line="2925"/>
 <source>Chinese Traditional</source>
 <translation>ภาษาจีนดั้งเดิม</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2980"/>
+<location filename="../dialogs/settingsdialog.ui" line="3005"/>
 <source>Enable dark mode application icon and tray icon</source>
 <translation>เปิดใช้งานไอคอนแอปพลิเคชันโหมดมืดและไอคอนถาด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2987"/>
+<location filename="../dialogs/settingsdialog.ui" line="3012"/>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
 <translation>คุณอาจต้องการเลือกชุดรูปแบบสีตัวแก้ไขอื่นในการตั้งค่าตัวแก้ไขในโหมดมืด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3090"/>
+<location filename="../dialogs/settingsdialog.ui" line="3115"/>
 <source>Enable dark mode icon theme</source>
 <translation>เปิดใช้งานชุดไอคอนชุดรูปแบบมืด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3020"/>
+<location filename="../dialogs/settingsdialog.ui" line="3045"/>
 <source>System tray</source>
 <translation>ถาดระบบ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3029"/>
+<location filename="../dialogs/settingsdialog.ui" line="3054"/>
 <source>Show system tray icon</source>
 <translation>แสดงไอคอนถาดระบบ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3039"/>
+<location filename="../dialogs/settingsdialog.ui" line="3064"/>
 <source>Start application hidden</source>
 <translation>ซ่อนแอปพลิเคชันเริ่มต้น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3049"/>
+<location filename="../dialogs/settingsdialog.ui" line="3074"/>
 <source>Interface style</source>
 <translation>สไตล์อินเตอร์เฟส</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3080"/>
+<location filename="../dialogs/settingsdialog.ui" line="3105"/>
 <source>Enforce system icon theme</source>
 <translation>บังคับใช้ชุดไอคอนของระบบ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3186"/>
+<location filename="../dialogs/settingsdialog.ui" line="3211"/>
 <source>Override interface font size</source>
 <translation>แทนที่ขนาดตัวอักษรของอินเตอร์เฟส</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3195"/>
+<location filename="../dialogs/settingsdialog.ui" line="3220"/>
 <source>Interface font size:</source>
 <translation>ขนาดตัวอักษรส่วนต่อประสาน:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3407"/>
+<location filename="../dialogs/settingsdialog.ui" line="3432"/>
 <source>&amp;Add script…</source>
 <translation>&amp;เพิ่มสคริปต์ ...</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4094"/>
+<location filename="../dialogs/settingsdialog.ui" line="4119"/>
 <source>Use legacy way to link to notes, images and attachments</source>
 <translation>ใช้วิธีการดั้งเดิมเพื่อเชื่อมโยงไปยังบันทึกย่อรูปภาพและสิ่งที่แนบมา</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3939"/>
+<location filename="../dialogs/settingsdialog.ui" line="3964"/>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
 <translation>เมื่อเปิดบันทึกตำแหน่งเคอร์เซอร์ภายในบันทึกย่อจะถูกเรียกคืนสู่ตำแหน่งเมื่อมีการเยี่ยมชมบันทึกย่อล่าสุดในเซสชันปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3909"/>
+<location filename="../dialogs/settingsdialog.ui" line="3934"/>
 <source>By default the headline will generated automatically</source>
 <translation>ตามค่าเริ่มต้นพาดหัวจะสร้างขึ้นโดยอัตโนมัติ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3912"/>
+<location filename="../dialogs/settingsdialog.ui" line="3937"/>
 <source>The shortcut to create a new note asks for a headline</source>
 <translation>ช็อตคัตเพื่อสร้างบันทึกย่อใหม่ขอหัวเรื่อง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3978"/>
+<location filename="../dialogs/settingsdialog.ui" line="4003"/>
 <source>Automatically close the note folder database to prevent problems with sync tools</source>
 <translation>ปิดฐานข้อมูลโฟลเดอร์บันทึกย่อโดยอัตโนมัติเพื่อป้องกันปัญหาเกี่ยวกับเครื่องมือซิงค์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3981"/>
+<location filename="../dialogs/settingsdialog.ui" line="4006"/>
 <source>Automatically close the note folder database</source>
 <translation>ปิดฐานข้อมูลโฟลเดอร์บันทึกโดยอัตโนมัติ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4142"/>
+<location filename="../dialogs/settingsdialog.ui" line="4167"/>
 <source>Search engine</source>
 <translation>เครื่องมือค้นหา</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4164"/>
+<location filename="../dialogs/settingsdialog.ui" line="4189"/>
 <source>Message boxes</source>
 <translation>กล่องข้อความ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4170"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4004"/>
+<location filename="../dialogs/settingsdialog.ui" line="4195"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4007"/>
 <source>Reset message boxes</source>
 <translation>รีเซ็ตกล่องข้อความ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4363"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4070"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
+<location filename="../dialogs/settingsdialog.ui" line="4388"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4073"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4097"/>
 <source>Import settings</source>
 <translation>นำเข้าการตั้งค่า</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4370"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4036"/>
+<location filename="../dialogs/settingsdialog.ui" line="4395"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4039"/>
 <source>Export settings</source>
 <translation>ส่งออกการตั้งค่า</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4518"/>
+<location filename="../dialogs/settingsdialog.ui" line="4543"/>
 <source>Open issue assistant</source>
 <translation>ผู้ช่วยปัญหาเปิด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4485"/>
+<location filename="../dialogs/settingsdialog.ui" line="4510"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4750"/>
+<location filename="../dialogs/settingsdialog.ui" line="4775"/>
 <source>Ignore code font size to allow zooming</source>
 <translation>ละเว้นขนาดแบบอักษรของรหัสเพื่ออนุญาตการย่อ / ขยาย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4744"/>
+<location filename="../dialogs/settingsdialog.ui" line="4769"/>
 <source>Rendering</source>
 <translation>การกระทำ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4764"/>
+<location filename="../dialogs/settingsdialog.ui" line="4789"/>
 <source>Enable underline rendering</source>
 <translation>เปิดใช้งานการขีดเส้นใต้การแสดงผล</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5174"/>
+<location filename="../dialogs/settingsdialog.ui" line="5199"/>
 <source>Fully highlight blockquotes</source>
 <translation>เน้นคำพูดบล็อกอย่างเต็มที่</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5231"/>
+<location filename="../dialogs/settingsdialog.ui" line="5256"/>
 <source>Note-edit cursor width:</source>
 <translation>หมายเหตุความกว้างเคอร์เซอร์แก้ไข:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5193"/>
+<location filename="../dialogs/settingsdialog.ui" line="5218"/>
 <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
 <translation>เปิดใช้งานโหมด Vim (ทางลัด QOwnNotes บางอย่างจะไม่ทำงาน)</translation>
 </message>
@@ -6265,12 +6301,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>เปิดหน้ารหัสผ่านแอปเซิร์ฟเวอร์ ownCloud ของคุณ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2570"/>
+<location filename="../dialogs/settingsdialog.ui" line="2595"/>
 <source>Māori</source>
 <translation>เมารี</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2218"/>
+<location filename="../dialogs/settingsdialog.ui" line="2243"/>
 <source>Malay</source>
 <translation>ภาษามลายู</translation>
 </message>
@@ -6290,610 +6326,615 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2169"/>
+<location filename="../dialogs/settingsdialog.ui" line="1442"/>
+<source>Cancel Nextcloud login</source>
+<translation type="unfinished">Cancel Nextcloud login</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="2194"/>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2526"/>
+<location filename="../dialogs/settingsdialog.ui" line="2551"/>
 <source>Khmer</source>
 <translation>ขอม</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2735"/>
+<location filename="../dialogs/settingsdialog.ui" line="2760"/>
 <source>Shona</source>
 <translation>โชนา</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2746"/>
+<location filename="../dialogs/settingsdialog.ui" line="2771"/>
 <source>Sinhala</source>
 <translation>สิงหล</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2801"/>
+<location filename="../dialogs/settingsdialog.ui" line="2826"/>
 <source>Thai</source>
 <translation type="unfinished">Thai</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2812"/>
+<location filename="../dialogs/settingsdialog.ui" line="2837"/>
 <source>Vietnamese</source>
 <translation>เวียตนาม</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2834"/>
+<location filename="../dialogs/settingsdialog.ui" line="2859"/>
 <source>Xhosa</source>
 <translation>โซซา</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2867"/>
+<location filename="../dialogs/settingsdialog.ui" line="2892"/>
 <source>Yiddish</source>
 <translation type="unfinished">Yiddish</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2878"/>
+<location filename="../dialogs/settingsdialog.ui" line="2903"/>
 <source>Zulu</source>
 <translation>พวกสูลู</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2934"/>
+<location filename="../dialogs/settingsdialog.ui" line="2959"/>
 <source>Search for language</source>
 <translation>ค้นหาภาษา</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3297"/>
+<location filename="../dialogs/settingsdialog.ui" line="3322"/>
 <source>Action name</source>
 <translation>ชื่อการกระทำ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3302"/>
+<location filename="../dialogs/settingsdialog.ui" line="3327"/>
 <source>Local shortcut</source>
 <translation>ทางลัดท้องถิ่น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3307"/>
+<location filename="../dialogs/settingsdialog.ui" line="3332"/>
 <source>Global shortcut</source>
 <translation>ทางลัดส่วนกลาง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3949"/>
+<location filename="../dialogs/settingsdialog.ui" line="3974"/>
 <source>Disable this if you want to launch the application without opening a note</source>
 <translation>ปิดใช้งานสิ่งนี้หากคุณต้องการเปิดแอปพลิเคชันโดยไม่ต้องเปิดบันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3952"/>
+<location filename="../dialogs/settingsdialog.ui" line="3977"/>
 <source>Open last accessed note at application startup</source>
 <translation>เปิดบันทึกย่อที่เข้าถึงล่าสุดเมื่อเริ่มต้นแอปพลิเคชัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4399"/>
+<location filename="../dialogs/settingsdialog.ui" line="4424"/>
 <source>Checks the disk database integrity and fixes problems</source>
 <translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4402"/>
+<location filename="../dialogs/settingsdialog.ui" line="4427"/>
 <source>Check integrity</source>
 <translation type="unfinished">Check integrity</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4409"/>
+<location filename="../dialogs/settingsdialog.ui" line="4434"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
 <translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4492"/>
+<location filename="../dialogs/settingsdialog.ui" line="4517"/>
 <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>GitHub ไม่จำเป็นต้องมีช่องว่างสองช่องที่ท้ายบรรทัดเพื่อทำการแบ่งบรรทัด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4515"/>
+<location filename="../dialogs/settingsdialog.ui" line="4540"/>
 <source>This is the best way to open an issue</source>
 <translation>นี่เป็นวิธีที่ดีที่สุดในการเปิดปัญหา</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4529"/>
+<location filename="../dialogs/settingsdialog.ui" line="4554"/>
 <source>Please use this in the issue tracker</source>
 <translation>โปรดใช้สิ่งนี้ในตัวติดตามปัญหา</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4532"/>
+<location filename="../dialogs/settingsdialog.ui" line="4557"/>
 <source>&amp;Copy debug information to clipboard</source>
 <translation>&amp;คัดลอกข้อมูลดีบักไปยังคลิปบอร์ด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4543"/>
+<location filename="../dialogs/settingsdialog.ui" line="4568"/>
 <source>Please don't use this in the issue tracker</source>
 <translation>โปรดอย่าใช้สิ่งนี้ในตัวติดตามปัญหา</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4771"/>
+<location filename="../dialogs/settingsdialog.ui" line="4796"/>
 <source>Use editor highlighting styles also for the preview</source>
 <translation>ใช้สไตล์การเน้นการแก้ไขเพื่อดูตัวอย่าง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4794"/>
+<location filename="../dialogs/settingsdialog.ui" line="4819"/>
 <source>Exporting</source>
 <translation>การส่งออก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4800"/>
+<location filename="../dialogs/settingsdialog.ui" line="4825"/>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
 <translation>ใช้สไตล์การส่งออกภายในสำหรับการส่งออก PDF และการพิมพ์ตัวอย่าง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5108"/>
+<location filename="../dialogs/settingsdialog.ui" line="5133"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt; &lt;p&gt; คุณอาจต้องการดู &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt; ทั้งหมด รูปแบบเวลา &lt;/a&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5207"/>
+<location filename="../dialogs/settingsdialog.ui" line="5232"/>
 <source>Disable cursor blinking</source>
 <translation>ปิดการใช้งานเคอร์เซอร์กะพริบ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5214"/>
+<location filename="../dialogs/settingsdialog.ui" line="5239"/>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>ลบช่องว่างต่อท้ายในข้อความบันทึกโดยอัตโนมัติ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5292"/>
+<location filename="../dialogs/settingsdialog.ui" line="5317"/>
 <source>Show line numbers</source>
 <translation type="unfinished">Show line numbers</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5302"/>
+<location filename="../dialogs/settingsdialog.ui" line="5327"/>
 <source>Tabs and Indents</source>
 <translation>แท็บและเยื้อง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5310"/>
+<location filename="../dialogs/settingsdialog.ui" line="5335"/>
 <source>Use tab character instead of spaces</source>
 <translation>ใช้อักขระแท็บแทนช่องว่าง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5317"/>
+<location filename="../dialogs/settingsdialog.ui" line="5342"/>
 <source>Indent:</source>
 <translation>เยื้อง:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5697"/>
-<location filename="../dialogs/settingsdialog.ui" line="5706"/>
+<location filename="../dialogs/settingsdialog.ui" line="5722"/>
+<location filename="../dialogs/settingsdialog.ui" line="5731"/>
 <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>นิพจน์ปกติของโฟลเดอร์ย่อยโน้ตที่จะละเว้นโดยคั่นด้วย ";"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5700"/>
+<location filename="../dialogs/settingsdialog.ui" line="5725"/>
 <source>Ignored subfolders</source>
 <translation>โฟลเดอร์ย่อยที่ถูกข้ามไป</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5716"/>
+<location filename="../dialogs/settingsdialog.ui" line="5741"/>
 <source>Reset ignored subfolders</source>
 <translation>รีเซ็ตโฟลเดอร์ย่อยที่ถูกข้าม</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5752"/>
+<location filename="../dialogs/settingsdialog.ui" line="5777"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
 <translation>เรียกคืนแท็บบันทึกที่เปิดเมื่อเริ่มต้นแอปพลิเคชันและเมื่อเปลี่ยนโฟลเดอร์บันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5837"/>
+<location filename="../dialogs/settingsdialog.ui" line="5862"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
 <translation>ซ่อน 'จำนวนบันทึกย่อ' ด้วยแท็ก (เพิ่มประสิทธิภาพ)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5873"/>
+<location filename="../dialogs/settingsdialog.ui" line="5898"/>
 <source>Show the number of matches in each note</source>
 <translation>แสดงจำนวนการแข่งขันในแต่ละโน้ต</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6307"/>
+<location filename="../dialogs/settingsdialog.ui" line="6332"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
 <translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6323"/>
+<location filename="../dialogs/settingsdialog.ui" line="6348"/>
 <source>QOwnNotes web application</source>
 <translation type="unfinished">QOwnNotes web application</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6413"/>
+<location filename="../dialogs/settingsdialog.ui" line="6438"/>
 <source>Server URL:</source>
 <translation type="unfinished">Server URL:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6470"/>
+<location filename="../dialogs/settingsdialog.ui" line="6495"/>
 <source>Show QR code</source>
 <translation type="unfinished">Show QR code</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6362"/>
+<location filename="../dialogs/settingsdialog.ui" line="6387"/>
 <source>Security token:</source>
 <translation type="unfinished">Security token:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6420"/>
+<location filename="../dialogs/settingsdialog.ui" line="6445"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
 <translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6352"/>
+<location filename="../dialogs/settingsdialog.ui" line="6377"/>
 <source>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation type="unfinished">A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6430"/>
+<location filename="../dialogs/settingsdialog.ui" line="6455"/>
 <source>Copy security token to clipboard</source>
 <translation type="unfinished">Copy security token to clipboard</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6383"/>
+<location filename="../dialogs/settingsdialog.ui" line="6408"/>
 <source>Generate new security token</source>
 <translation type="unfinished">Generate new security token</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6444"/>
+<location filename="../dialogs/settingsdialog.ui" line="6469"/>
 <source>Reset the URL to default</source>
 <translation type="unfinished">Reset the URL to default</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6273"/>
+<location filename="../dialogs/settingsdialog.ui" line="6298"/>
 <source>QOwnNotes web application support</source>
 <translation type="unfinished">QOwnNotes web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6279"/>
+<location filename="../dialogs/settingsdialog.ui" line="6304"/>
 <source>Enable web application support</source>
 <translation type="unfinished">Enable web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5528"/>
+<location filename="../dialogs/settingsdialog.ui" line="5553"/>
 <source>Note list panel</source>
 <translation>แผงรายการบันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5534"/>
+<location filename="../dialogs/settingsdialog.ui" line="5559"/>
 <source>Show notes in the note list with preview</source>
 <translation>แสดงบันทึกย่อในรายการบันทึกย่อพร้อมภาพตัวอย่าง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5607"/>
+<location filename="../dialogs/settingsdialog.ui" line="5632"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
 <translation>แทนที่จะใช้รายการบันทึกย่อให้ใช้ต้นไม้บันทึกย่อพร้อมโฟลเดอร์ย่อยทั้งหมด (หากเปิดใช้สำหรับโฟลเดอร์บันทึกย่อ)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5883"/>
+<location filename="../dialogs/settingsdialog.ui" line="5908"/>
 <source>Note folder panel</source>
 <translation>หมายเหตุแผงโฟลเดอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5889"/>
+<location filename="../dialogs/settingsdialog.ui" line="5914"/>
 <source>Show note folders as buttons instead of in a select box</source>
 <translation>แสดงโฟลเดอร์บันทึกย่อเป็นปุ่มแทนในกล่องที่เลือก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6031"/>
+<location filename="../dialogs/settingsdialog.ui" line="6056"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
 <translation>แผงสามารถเปิดและปิดได้ในเมนูหลัก &lt;i&gt; หน้าต่าง / แผง &lt;/i&gt; และคุณยังสามารถกำหนดค่า &lt;i&gt; พื้นที่ทำงาน &lt;/i&gt; สำหรับการกำหนดค่าแผงที่แตกต่างกัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6108"/>
+<location filename="../dialogs/settingsdialog.ui" line="6133"/>
 <source>Bookmarks</source>
 <translation>ที่คั่น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6114"/>
+<location filename="../dialogs/settingsdialog.ui" line="6139"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
 <translation>โน้ตที่มีแท็กนี้จะถูกใช้เพื่อดึงบุ๊คมาร์ค</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6117"/>
+<location filename="../dialogs/settingsdialog.ui" line="6142"/>
 <source>Tag name for bookmarks notes</source>
 <translation>ชื่อแท็กสำหรับบันทึกบุ๊คมาร์ค</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6124"/>
+<location filename="../dialogs/settingsdialog.ui" line="6149"/>
 <source>Bookmarks tag:</source>
 <translation>แท็กบุ๊คมาร์ค:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6131"/>
+<location filename="../dialogs/settingsdialog.ui" line="6156"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>ตามค่าเริ่มต้นส่วนขยายเบราว์เซอร์จะแสดงลิงก์ทั้งหมดของบันทึกย่อปัจจุบัน นอกจากนี้คุณยังสามารถทำให้มันแสดงลิงก์คั่นหน้าพิเศษของบันทึกด้วยแท็กบางอย่าง สำหรับข้อมูลเพิ่มเติมเกี่ยวกับไวยากรณ์ลิงก์บุ๊กมาร์กคลิก &lt;a href="%1"&gt; ที่นี่ &lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6144"/>
+<location filename="../dialogs/settingsdialog.ui" line="6169"/>
 <source>Bookmarks note name:</source>
 <translation>ชื่อบันทึกคั่นหน้า:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6151"/>
+<location filename="../dialogs/settingsdialog.ui" line="6176"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
 <translation>หมายเหตุนี้จะใช้สำหรับเพิ่มบุ๊คมาร์คใหม่จากส่วนขยายของเบราว์เซอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6154"/>
+<location filename="../dialogs/settingsdialog.ui" line="6179"/>
 <source>Note name for adding new bookmarks</source>
 <translation>ชื่อบันทึกย่อสำหรับการเพิ่มบุ๊คมาร์คใหม่</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6164"/>
+<location filename="../dialogs/settingsdialog.ui" line="6189"/>
 <source>Web socket server</source>
 <translation>เว็บเซิร์ฟเวอร์ซ็อกเก็ต</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6170"/>
+<location filename="../dialogs/settingsdialog.ui" line="6195"/>
 <source>Socket server port:</source>
 <translation>พอร์ตเซิร์ฟเวอร์ซ็อกเก็ต:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6190"/>
+<location filename="../dialogs/settingsdialog.ui" line="6215"/>
 <source>Reset the socket server port</source>
 <translation type="unfinished">Reset the socket server port</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6204"/>
-<location filename="../dialogs/settingsdialog.ui" line="6369"/>
+<location filename="../dialogs/settingsdialog.ui" line="6229"/>
+<location filename="../dialogs/settingsdialog.ui" line="6394"/>
 <source>Show security token</source>
 <translation>แสดงโทเค็นความปลอดภัย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6240"/>
+<location filename="../dialogs/settingsdialog.ui" line="6265"/>
 <source>Web socket server support</source>
 <translation>รองรับเว็บซ็อกเก็ตเซิร์ฟเวอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6246"/>
+<location filename="../dialogs/settingsdialog.ui" line="6271"/>
 <source>Enable socket server</source>
 <translation>เปิดใช้งานซ็อกเก็ตเซิร์ฟเวอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6221"/>
+<location filename="../dialogs/settingsdialog.ui" line="6246"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
 <translation>ติดตั้ง &lt;a href="%1"&gt; ส่วนขยายเบราว์เซอร์ของสหายทางเว็บ &lt;/a&gt; จาก &lt;a href="%2"&gt; Chrome เว็บสโตร์ &lt;/a&gt; หรือ &lt;a href="%3"&gt; Firefox Add- หน้าเว็บ &lt;/a&gt; เพื่อใช้ QOwnNotes เป็น web clipper</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5736"/>
+<location filename="../dialogs/settingsdialog.ui" line="5761"/>
 <source>Note edit panel</source>
 <translation>หมายเหตุแผงแก้ไข</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5742"/>
+<location filename="../dialogs/settingsdialog.ui" line="5767"/>
 <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
 <translation>หากสิ่งนี้ถูกปิดใช้งานคุณจะสามารถสร้างเค้าโครงแผงที่ซับซ้อนมากขึ้น แต่แผงควบคุมทั้งหมดจะถูกปรับขนาดถ้ามีการปรับขนาดหน้าต่าง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5745"/>
+<location filename="../dialogs/settingsdialog.ui" line="5770"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
 <translation>ใช้พาเนลการแก้ไขโน้ตเป็นวิดเจ็ตกลางคงที่เพื่อปรับขนาดหากหน้าต่างหรือพาเนลอื่นถูกปรับขนาด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5860"/>
+<location filename="../dialogs/settingsdialog.ui" line="5885"/>
 <source>Note search panel</source>
 <translation>หมายเหตุแผงการค้นหา</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5866"/>
+<location filename="../dialogs/settingsdialog.ui" line="5891"/>
 <source>Disable auto-completion of previous searches</source>
 <translation>ปิดการใช้งานการค้นหาก่อนหน้าโดยอัตโนมัติ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5762"/>
+<location filename="../dialogs/settingsdialog.ui" line="5787"/>
 <source>Navigation panel</source>
 <translation>แผงนำทาง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5768"/>
+<location filename="../dialogs/settingsdialog.ui" line="5793"/>
 <source>Hide navigation item search bar</source>
 <translation>ซ่อนแถบค้นหารายการการนำทาง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5903"/>
+<location filename="../dialogs/settingsdialog.ui" line="5928"/>
 <source>Local trash settings</source>
 <translation>การตั้งค่าถังขยะท้องถิ่น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5937"/>
+<location filename="../dialogs/settingsdialog.ui" line="5962"/>
 <source>Remove trashed notes after:</source>
 <translation>ลบโน้ตที่อยู่ในถังขยะหลังจาก:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5944"/>
+<location filename="../dialogs/settingsdialog.ui" line="5969"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
 <translation>วัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5963"/>
+<location filename="../dialogs/settingsdialog.ui" line="5988"/>
 <source>Automatically remove trashed notes after a certain time</source>
 <translation>ลบบันทึกย่อที่อยู่ในถังขยะโดยอัตโนมัติหลังจากระยะเวลาหนึ่ง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5989"/>
+<location filename="../dialogs/settingsdialog.ui" line="6014"/>
 <source>Local trash support</source>
 <translation>การสนับสนุนถังขยะท้องถิ่น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5995"/>
+<location filename="../dialogs/settingsdialog.ui" line="6020"/>
 <source>Enable local trash</source>
 <translation>เปิดใช้งานถังขยะในท้องถิ่น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6012"/>
+<location filename="../dialogs/settingsdialog.ui" line="6037"/>
 <source>Layout selector</source>
 <translation>ตัวเลือกเค้าโครง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6018"/>
+<location filename="../dialogs/settingsdialog.ui" line="6043"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
 <translation>คุณสามารถกำหนดเลย์เอาต์ใหม่ได้ที่นี่ โปรดทราบว่าคุณสามารถแก้ไขตำแหน่งของแผงควบคุมได้ตลอดเวลาด้วยปุ่ม &lt;i&gt; ปลดล็อคแผงควบคุม &lt;/i&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5255"/>
+<location filename="../dialogs/settingsdialog.ui" line="5280"/>
 <source>Reset the cursor width</source>
 <translation>รีเซ็ตความกว้างของเคอร์เซอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5402"/>
+<location filename="../dialogs/settingsdialog.ui" line="5427"/>
 <source>External git log command to show the git versions of a note</source>
 <translation>คำสั่งบันทึก git ภายนอกเพื่อแสดงบันทึกย่อรุ่น git</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5408"/>
+<location filename="../dialogs/settingsdialog.ui" line="5433"/>
 <source>Enter a command to be used to show a git log (like for example "gitk")</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>ป้อนคำสั่งที่จะใช้เพื่อแสดงบันทึก git (เช่นตัวอย่าง "gitk")</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5428"/>
+<location filename="../dialogs/settingsdialog.ui" line="5453"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>หากคุณใช้การตั้งค่านี้คุณจะได้รับรายการเมนูใหม่เพื่อแสดงเวอร์ชัน git หากคุณคลิกขวาที่บันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5548"/>
+<location filename="../dialogs/settingsdialog.ui" line="5573"/>
 <source>Show all notes of a tag including the notes of their children-tags</source>
 <translation>แสดงบันทึกย่อทั้งหมดของแท็กรวมถึงบันทึกย่อของแท็กย่อย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5541"/>
+<location filename="../dialogs/settingsdialog.ui" line="5566"/>
 <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
 <translation>แสดงบันทึกย่อทั้งหมดในโฟลเดอร์รวมถึงโฟลเดอร์ย่อย (ใช้งานได้เฉพาะเมื่อเปิดโฟลเดอร์ย่อย)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5200"/>
+<location filename="../dialogs/settingsdialog.ui" line="5225"/>
 <source>Highlight the current line</source>
 <translation>เน้นบรรทัดปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5495"/>
+<location filename="../dialogs/settingsdialog.ui" line="5520"/>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>อย่าลืมเปิดใช้งานการสนับสนุน git สำหรับโฟลเดอร์บันทึกย่อของคุณและกำหนดค่าชื่อและที่อยู่อีเมลของคุณสำหรับไคลเอ็นต์ git ของคุณเช่นด้วยคำสั่งเทอร์มินัลเหล่านี้:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5778"/>
+<location filename="../dialogs/settingsdialog.ui" line="5803"/>
 <source>Tags panel</source>
 <translation>แผงแท็ก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5581"/>
-<location filename="../dialogs/settingsdialog.ui" line="5660"/>
-<location filename="../dialogs/settingsdialog.ui" line="5807"/>
+<location filename="../dialogs/settingsdialog.ui" line="5606"/>
+<location filename="../dialogs/settingsdialog.ui" line="5685"/>
+<location filename="../dialogs/settingsdialog.ui" line="5832"/>
 <source>Order</source>
 <translation>ใบสั่ง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5590"/>
-<location filename="../dialogs/settingsdialog.ui" line="5666"/>
-<location filename="../dialogs/settingsdialog.ui" line="5813"/>
+<location filename="../dialogs/settingsdialog.ui" line="5615"/>
+<location filename="../dialogs/settingsdialog.ui" line="5691"/>
+<location filename="../dialogs/settingsdialog.ui" line="5838"/>
 <source>Ascending</source>
 <translation>จากน้อยไปมาก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5597"/>
-<location filename="../dialogs/settingsdialog.ui" line="5673"/>
-<location filename="../dialogs/settingsdialog.ui" line="5820"/>
+<location filename="../dialogs/settingsdialog.ui" line="5622"/>
+<location filename="../dialogs/settingsdialog.ui" line="5698"/>
+<location filename="../dialogs/settingsdialog.ui" line="5845"/>
 <source>Descending</source>
 <translation type="unfinished">Descending</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5555"/>
-<location filename="../dialogs/settingsdialog.ui" line="5630"/>
-<location filename="../dialogs/settingsdialog.ui" line="5784"/>
+<location filename="../dialogs/settingsdialog.ui" line="5580"/>
+<location filename="../dialogs/settingsdialog.ui" line="5655"/>
+<location filename="../dialogs/settingsdialog.ui" line="5809"/>
 <source>Sort</source>
 <translation>ประเภท</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5241"/>
+<location filename="../dialogs/settingsdialog.ui" line="5266"/>
 <source>Only use editor width setting in distraction free mode</source>
 <translation>ใช้การตั้งค่าความกว้างของตัวแก้ไขในโหมดฟรีเท่านั้น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5561"/>
-<location filename="../dialogs/settingsdialog.ui" line="5636"/>
-<location filename="../dialogs/settingsdialog.ui" line="5790"/>
+<location filename="../dialogs/settingsdialog.ui" line="5586"/>
+<location filename="../dialogs/settingsdialog.ui" line="5661"/>
+<location filename="../dialogs/settingsdialog.ui" line="5815"/>
 <source>Alphabetical</source>
 <translation>ตามตัวอักษร</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5797"/>
+<location filename="../dialogs/settingsdialog.ui" line="5822"/>
 <source>By last change / use</source>
 <translation>โดยการเปลี่ยนแปลงครั้งล่าสุด / การใช้งาน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5830"/>
+<location filename="../dialogs/settingsdialog.ui" line="5855"/>
 <source>Hide 'Find or create tag' search</source>
 <translation>ซ่อนการค้นหา 'ค้นหาหรือสร้างแท็ก'</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5617"/>
+<location filename="../dialogs/settingsdialog.ui" line="5642"/>
 <source>Note subfolders panel</source>
 <translation>หมายเหตุพาเนลโฟลเดอร์ย่อย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5623"/>
+<location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <source>Show with full path</source>
 <translation>แสดงด้วยเส้นทางแบบเต็ม</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5568"/>
-<location filename="../dialogs/settingsdialog.ui" line="5643"/>
+<location filename="../dialogs/settingsdialog.ui" line="5593"/>
+<location filename="../dialogs/settingsdialog.ui" line="5668"/>
 <source>By last change</source>
 <translation>โดยการเปลี่ยนแปลงครั้งสุดท้าย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5653"/>
+<location filename="../dialogs/settingsdialog.ui" line="5678"/>
 <source>Show root folder name</source>
 <translation>แสดงชื่อโฟลเดอร์รูท</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5683"/>
+<location filename="../dialogs/settingsdialog.ui" line="5708"/>
 <source>Hide 'Find or create note subfolder' search</source>
 <translation>ซ่อนการค้นหา 'ค้นหาหรือสร้างโฟลเดอร์ย่อยโน้ต'</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5690"/>
+<location filename="../dialogs/settingsdialog.ui" line="5715"/>
 <source>Display note subfolders as full tree</source>
 <translation>แสดงโฟลเดอร์ย่อยของบันทึกย่อเป็นต้นไม้เต็ม</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2919"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2922"/>
 <source>Search script repository</source>
 <translation>ค้นหาที่เก็บสคริปต์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5418"/>
+<location filename="../dialogs/settingsdialog.ui" line="5443"/>
 <source>You optionally can use "%notePath%" for the path of the note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>คุณสามารถเลือกที่จะใช้ "% notePath%" สำหรับเส้นทางของบันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5441"/>
+<location filename="../dialogs/settingsdialog.ui" line="5466"/>
 <source>Git client</source>
 <translation>ลูกค้า Git</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5457"/>
+<location filename="../dialogs/settingsdialog.ui" line="5482"/>
 <source>Path to git executable:</source>
 <translation>เส้นทางไปยังคอมไพล์ปฏิบัติการได้:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5447"/>
+<location filename="../dialogs/settingsdialog.ui" line="5472"/>
 <source>Path to git client, leave empty for default</source>
 <translation>พา ธ ไปยังไคลเอ็นต์ git ปล่อยว่างไว้เป็นค่าเริ่มต้น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5366"/>
+<location filename="../dialogs/settingsdialog.ui" line="5391"/>
 <source>Commit interval</source>
 <translation>กำหนดช่วงเวลา</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5372"/>
+<location filename="../dialogs/settingsdialog.ui" line="5397"/>
 <source>sec</source>
 <extracomment>seconds</extracomment>
 <translation type="unfinished">sec</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5392"/>
+<location filename="../dialogs/settingsdialog.ui" line="5417"/>
 <source>git commit interval time [sec]</source>
 <translation>git ส่งช่วงเวลา [วินาที]</translation>
 </message>
@@ -6913,303 +6954,303 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>ส่วนขยายเบราว์เซอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1833"/>
+<location filename="../dialogs/settingsdialog.ui" line="1858"/>
 <source>Which calendar backend do you want to use?</source>
 <translation>คุณต้องการใช้แบ็กเอนด์ปฏิทินใด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1866"/>
+<location filename="../dialogs/settingsdialog.ui" line="1891"/>
 <source>For most current ownCloud and Nextcloud installations</source>
 <translation>สำหรับการติดตั้ง ownCloud และ Nextcloud ล่าสุด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1846"/>
+<location filename="../dialogs/settingsdialog.ui" line="1871"/>
 <source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>สำหรับ ownCloud เวอร์ชั่นเก่าที่การตั้งค่าเริ่มต้นไม่ทำงาน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1849"/>
+<location filename="../dialogs/settingsdialog.ui" line="1874"/>
 <source>Legacy ownCloud calendar</source>
 <translation>ปฏิทินของ legacy ownCloud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1882"/>
+<location filename="../dialogs/settingsdialog.ui" line="1907"/>
 <source>CalDAV server settings</source>
 <translation>การตั้งค่าเซิร์ฟเวอร์ CalDAV</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1891"/>
+<location filename="../dialogs/settingsdialog.ui" line="1916"/>
 <source>Calendar base url:</source>
 <translation>URL พื้นฐานของปฏิทิน:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1913"/>
+<location filename="../dialogs/settingsdialog.ui" line="1938"/>
 <source>Please enter the CalDAV base url to your calendar.</source>
 <translation>โปรดป้อน URL ฐาน CalDAV ลงในปฏิทินของคุณ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1983"/>
+<location filename="../dialogs/settingsdialog.ui" line="2008"/>
 <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
 <translation>โปรดป้อนรหัสผ่านสำหรับชื่อผู้ใช้ CalDAV ของคุณ &lt;br/&gt; ปัจจุบันรหัสผ่านจะถูกเข้ารหัสด้วยการตั้งค่าอื่น ๆ แต่ไม่ปลอดภัยมาก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2284"/>
+<location filename="../dialogs/settingsdialog.ui" line="2309"/>
 <source>Czech</source>
 <translation>สาธารณรัฐเช็ก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2658"/>
+<location filename="../dialogs/settingsdialog.ui" line="2683"/>
 <source>Brazilian Portuguese</source>
 <translation>โปรตุเกสของบราซิล</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2845"/>
+<location filename="../dialogs/settingsdialog.ui" line="2870"/>
 <source>Ukrainian</source>
 <translation>ยูเครน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3850"/>
+<location filename="../dialogs/settingsdialog.ui" line="3875"/>
 <source>The name</source>
 <translation>ชื่อ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4074"/>
+<location filename="../dialogs/settingsdialog.ui" line="4099"/>
 <source>Maximum height:</source>
 <translation>ความสูงสูงสุด:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4047"/>
+<location filename="../dialogs/settingsdialog.ui" line="4072"/>
 <source>Maximum width:</source>
 <translation>ความกว้างสูงสุด:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3988"/>
+<location filename="../dialogs/settingsdialog.ui" line="4013"/>
 <source>Scale images down when inserted into notes</source>
 <translation>ลดขนาดภาพเมื่อแทรกลงในบันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2460"/>
+<location filename="../dialogs/settingsdialog.ui" line="2485"/>
 <source>Croatian</source>
 <translation>โครเอเชีย</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3758"/>
+<location filename="../dialogs/settingsdialog.ui" line="3783"/>
 <source>Path to your QML file</source>
 <translation>พา ธ ไปยังไฟล์ QML ของคุณ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3672"/>
+<location filename="../dialogs/settingsdialog.ui" line="3697"/>
 <source>Script name</source>
 <translation>ชื่อสคริปต์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3533"/>
+<location filename="../dialogs/settingsdialog.ui" line="3558"/>
 <source>Description:</source>
 <translation>รายละเอียด:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3615"/>
+<location filename="../dialogs/settingsdialog.ui" line="3640"/>
 <source>Version:</source>
 <translation>เวอร์ชัน:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3576"/>
+<location filename="../dialogs/settingsdialog.ui" line="3601"/>
 <source>Repository:</source>
 <translation>พื้นที่เก็บข้อมูล:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3553"/>
+<location filename="../dialogs/settingsdialog.ui" line="3578"/>
 <source>Author(s):</source>
 <translation>ผู้แต่ง:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3995"/>
+<location filename="../dialogs/settingsdialog.ui" line="4020"/>
 <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
 <translation>เลือกตัวเลือกนี้หากคุณต้องการยอมรับการแก้ไขภายนอกทั้งหมดในขณะที่คุณกำลังแก้ไขบันทึกย่อปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3998"/>
+<location filename="../dialogs/settingsdialog.ui" line="4023"/>
 <source>Accept all external modifications of the current note</source>
 <translation>ยอมรับการแก้ไขภายนอกทั้งหมดของบันทึกย่อปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3932"/>
+<location filename="../dialogs/settingsdialog.ui" line="3957"/>
 <source>Use UNIX newline instead of native newline characters</source>
 <translation>ใช้ UNIX ขึ้นบรรทัดใหม่แทนอักขระขึ้นบรรทัดใหม่</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3942"/>
+<location filename="../dialogs/settingsdialog.ui" line="3967"/>
 <source>Restore cursor position when opening a note</source>
 <translation>คืนค่าตำแหน่งเคอร์เซอร์เมื่อเปิดบันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4932"/>
+<location filename="../dialogs/settingsdialog.ui" line="4957"/>
 <source>Apply toolbar configuration</source>
 <translation>ใช้การกำหนดค่าแถบเครื่องมือ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4946"/>
+<location filename="../dialogs/settingsdialog.ui" line="4971"/>
 <source>Reset toolbars</source>
 <translation>รีเซ็ตแถบเครื่องมือ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4974"/>
+<location filename="../dialogs/settingsdialog.ui" line="4999"/>
 <source>Enable logging to file</source>
 <translation>เปิดใช้งานการบันทึกไปยังไฟล์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4981"/>
+<location filename="../dialogs/settingsdialog.ui" line="5006"/>
 <source>Clear log file</source>
 <translation>ล้างไฟล์บันทึก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4992"/>
+<location filename="../dialogs/settingsdialog.ui" line="5017"/>
 <source>Fake old version number to trigger update</source>
 <translation>หมายเลขเวอร์ชันเก่าปลอมเพื่อให้อัปเดต</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5020"/>
+<location filename="../dialogs/settingsdialog.ui" line="5045"/>
 <source>Log file path:</source>
 <translation>เส้นทางของไฟล์บันทึก:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5082"/>
+<location filename="../dialogs/settingsdialog.ui" line="5107"/>
 <source>Here you can set your own time format for inserting the current time into a note.</source>
 <translation>ที่นี่คุณสามารถกำหนดรูปแบบเวลาของคุณเองสำหรับการแทรกเวลาปัจจุบันลงในบันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5085"/>
+<location filename="../dialogs/settingsdialog.ui" line="5110"/>
 <source>Insert current time</source>
 <translation>แทรกเวลาปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5091"/>
+<location filename="../dialogs/settingsdialog.ui" line="5116"/>
 <source>Time format:</source>
 <translation>รูปแบบเวลา:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5098"/>
+<location filename="../dialogs/settingsdialog.ui" line="5123"/>
 <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
 <translation>ป้อนรูปแบบเวลาที่คุณกำหนดเองเช่น "dd.MM.yyyy hh: mm"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5187"/>
+<location filename="../dialogs/settingsdialog.ui" line="5212"/>
 <source>Editor options</source>
 <translation>ตัวเลือกการแก้ไข</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5248"/>
+<location filename="../dialogs/settingsdialog.ui" line="5273"/>
 <source>Enable automatic closing of brackets and markdown formatting characters</source>
 <translation>เปิดใช้งานการปิดวงเล็บอัตโนมัติและการจัดรูปแบบอักขระ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5282"/>
+<location filename="../dialogs/settingsdialog.ui" line="5307"/>
 <source>You have to use the backspace key to remove the opening character</source>
 <translation>คุณต้องใช้ปุ่ม Backspace เพื่อลบอักขระการเปิด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5285"/>
+<location filename="../dialogs/settingsdialog.ui" line="5310"/>
 <source>Enable automatic removal of matching closing characters</source>
 <translation>เปิดใช้งานการลบอักขระการปิดที่จับคู่โดยอัตโนมัติ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1916"/>
+<location filename="../dialogs/settingsdialog.ui" line="1941"/>
 <source>Your CalDAV calendar base url</source>
 <translation>URL ฐานปฏิทิน CalDAV ของคุณ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1948"/>
+<location filename="../dialogs/settingsdialog.ui" line="1973"/>
 <source>Please enter the username of your CalDAV server.</source>
 <translation>โปรดป้อนชื่อผู้ใช้ของเซิร์ฟเวอร์ CalDAV ของคุณ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1951"/>
+<location filename="../dialogs/settingsdialog.ui" line="1976"/>
 <source>Your CalDAV username</source>
 <translation>ชื่อผู้ใช้ CalDAV ของคุณ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1989"/>
+<location filename="../dialogs/settingsdialog.ui" line="2014"/>
 <source>Your CalDAV password</source>
 <translation>รหัสผ่าน CalDAV ของคุณ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2036"/>
+<location filename="../dialogs/settingsdialog.ui" line="2061"/>
 <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
 <translation>สิ่งนี้ทำให้รายการสิ่งที่ต้องทำทั้งหมดถูกโหลดซ้ำจากเซิร์ฟเวอร์ของคุณในครั้งถัดไปที่คุณเปิดกล่องโต้ตอบสิ่งที่ต้องทำ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2039"/>
+<location filename="../dialogs/settingsdialog.ui" line="2064"/>
 <source>Empty calendar item cache</source>
 <translation>ล้างแคชรายการปฏิทิน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2062"/>
+<location filename="../dialogs/settingsdialog.ui" line="2087"/>
 <source>Click here to reload the list of calendars from your calendar server.</source>
 <translation>คลิกที่นี่เพื่อโหลดรายการปฏิทินจากเซิร์ฟเวอร์ปฏิทินของคุณอีกครั้ง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2068"/>
+<location filename="../dialogs/settingsdialog.ui" line="2093"/>
 <source>&amp;Reload calendar list</source>
 <translation>&amp;โหลดรายการปฏิทินซ้ำ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2977"/>
-<location filename="../dialogs/settingsdialog.ui" line="3087"/>
+<location filename="../dialogs/settingsdialog.ui" line="3002"/>
+<location filename="../dialogs/settingsdialog.ui" line="3112"/>
 <source>You may need to restart the application to let these changes take effect</source>
 <translation>คุณอาจต้องรีสตาร์ทแอปพลิเคชันเพื่อให้การเปลี่ยนแปลงเหล่านี้มีผล</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3122"/>
+<location filename="../dialogs/settingsdialog.ui" line="3147"/>
 <source>Toolbar icon size:</source>
 <translation>ขนาดไอคอนแถบเครื่องมือ:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3112"/>
+<location filename="../dialogs/settingsdialog.ui" line="3137"/>
 <source>List and tree item height:</source>
 <translation>รายการและความสูงของรายการต้นไม้:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3145"/>
+<location filename="../dialogs/settingsdialog.ui" line="3170"/>
 <source>Reset the icon size</source>
 <translation>รีเซ็ตขนาดไอคอน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3159"/>
+<location filename="../dialogs/settingsdialog.ui" line="3184"/>
 <source>Reset the item height</source>
 <translation>รีเซ็ตความสูงของรายการ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4757"/>
+<location filename="../dialogs/settingsdialog.ui" line="4782"/>
 <source>View text right to left (RTL)</source>
 <translation>ดูข้อความจากขวาไปซ้าย (RTL)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3283"/>
+<location filename="../dialogs/settingsdialog.ui" line="3308"/>
 <source>Search for shortcut</source>
 <translation>ค้นหาทางลัด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2079"/>
+<location filename="../dialogs/settingsdialog.ui" line="2104"/>
 <source>Ignore calendars that don't support todo items</source>
 <translation>ละเว้นปฏิทินที่ไม่รองรับสิ่งที่ต้องทำ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2911"/>
+<location filename="../dialogs/settingsdialog.ui" line="2936"/>
 <source>Arabic</source>
 <translation>ภาษาอาหรับ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3061"/>
+<location filename="../dialogs/settingsdialog.ui" line="3086"/>
 <source>Icons</source>
 <translation>ไอคอน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3070"/>
+<location filename="../dialogs/settingsdialog.ui" line="3095"/>
 <source>Use internal icon theme instead of system icon theme</source>
 <translation>Use internal icon theme instead of system icon theme</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3707"/>
+<location filename="../dialogs/settingsdialog.ui" line="3732"/>
 <source>Script path:</source>
 <translation>เส้นทางสคริปต์:</translation>
 </message>
@@ -7224,79 +7265,79 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>อนุญาตให้ชื่อไฟล์โน้ตแตกต่างจากบรรทัดแรก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4005"/>
+<location filename="../dialogs/settingsdialog.ui" line="4030"/>
 <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
 <translation>เลือกตัวเลือกนี้หากคุณต้องการละเว้นการแก้ไขภายนอกทั้งหมดในขณะที่คุณกำลังแก้ไขบันทึกย่อปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4008"/>
+<location filename="../dialogs/settingsdialog.ui" line="4033"/>
 <source>Ignore all external modifications of the current note</source>
 <translation>ละเว้นการแก้ไขภายนอกทั้งหมดของบันทึกย่อปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3929"/>
+<location filename="../dialogs/settingsdialog.ui" line="3954"/>
 <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
 <translation>คุณสามารถใช้สิ่งนี้ได้เช่นใน Windows หากคุณมีปัญหากับการขึ้นบรรทัดใหม่ในแอพโน้ตของ ownCloud / Nextcloud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4104"/>
+<location filename="../dialogs/settingsdialog.ui" line="4129"/>
 <source>App instance</source>
 <translation>ตัวอย่างแอพ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4110"/>
+<location filename="../dialogs/settingsdialog.ui" line="4135"/>
 <source>Only allow one app instance at the same time</source>
 <translation>อนุญาตหนึ่งอินสแตนซ์แอปเดียวในเวลาเดียวกัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4206"/>
+<location filename="../dialogs/settingsdialog.ui" line="4231"/>
 <source>Add a custom file extension</source>
 <translation>เพิ่มนามสกุลไฟล์ที่กำหนดเอง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4220"/>
+<location filename="../dialogs/settingsdialog.ui" line="4245"/>
 <source>Remove a custom file extension</source>
 <translation>ลบนามสกุลไฟล์ที่กำหนดเอง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4259"/>
+<location filename="../dialogs/settingsdialog.ui" line="4284"/>
 <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
 <translation>หากคุณเพิ่มส่วนขยายที่กำหนดเองเพียงพิมพ์ในส่วนขยายเช่น "taskpaper"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4263"/>
+<location filename="../dialogs/settingsdialog.ui" line="4288"/>
 <source>Text file (txt)</source>
 <translation>ไฟล์ข้อความ (txt)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4291"/>
+<location filename="../dialogs/settingsdialog.ui" line="4316"/>
 <source>Path to external editor:</source>
 <translation>พา ธ ไปยังเอดิเตอร์ภายนอก:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4126"/>
+<location filename="../dialogs/settingsdialog.ui" line="4151"/>
 <source>Don't show the update dialog automatically</source>
 <translation>อย่าแสดงกล่องโต้ตอบอัพเดตโดยอัตโนมัติ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4589"/>
-<location filename="../dialogs/settingsdialog.ui" line="4816"/>
+<location filename="../dialogs/settingsdialog.ui" line="4614"/>
+<location filename="../dialogs/settingsdialog.ui" line="4841"/>
 <source>Fonts</source>
 <translation>แบบอักษร</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4612"/>
-<location filename="../dialogs/settingsdialog.ui" line="4654"/>
-<location filename="../dialogs/settingsdialog.ui" line="4839"/>
-<location filename="../dialogs/settingsdialog.ui" line="4867"/>
+<location filename="../dialogs/settingsdialog.ui" line="4637"/>
+<location filename="../dialogs/settingsdialog.ui" line="4679"/>
+<location filename="../dialogs/settingsdialog.ui" line="4864"/>
+<location filename="../dialogs/settingsdialog.ui" line="4892"/>
 <source>Set a new font</source>
 <translation>ตั้งแบบอักษรใหม่</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4623"/>
-<location filename="../dialogs/settingsdialog.ui" line="4668"/>
-<location filename="../dialogs/settingsdialog.ui" line="4853"/>
-<location filename="../dialogs/settingsdialog.ui" line="4898"/>
+<location filename="../dialogs/settingsdialog.ui" line="4648"/>
+<location filename="../dialogs/settingsdialog.ui" line="4693"/>
+<location filename="../dialogs/settingsdialog.ui" line="4878"/>
+<location filename="../dialogs/settingsdialog.ui" line="4923"/>
 <source>Reset font</source>
 <translation>รีเซ็ตแบบอักษร</translation>
 </message>
@@ -7306,59 +7347,59 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>ตรวจแก้จุดบกพร่อง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4453"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2322"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4313"/>
+<location filename="../dialogs/settingsdialog.ui" line="4478"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2325"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4316"/>
 <source>Debug information</source>
 <translation>ข้อมูลการดีบัก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4459"/>
+<location filename="../dialogs/settingsdialog.ui" line="4484"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt; &lt;p&gt; คุณสามารถ &lt;span style = "font-weight: 600;"&gt; คัดลอกและวาง &lt;/span&gt; ข้อความนี้ (หรือบางส่วนของข้อความนี้) ใน &lt;span style = "font-weight: 600;"&gt; issue &lt;/span&gt; ใน &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; หน้าปัญหา QOwnNotes &lt;/a&gt; หากคุณมี &lt;span style = "font-weight: 600;"&gt; คำถามหรือปัญหา &lt;/span&gt; ด้วย QOwnNotes ข้อมูลที่ละเอียดอ่อนเกินไปจะถูกซ่อนไว้ในข้อมูลนี้ &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4546"/>
+<location filename="../dialogs/settingsdialog.ui" line="4571"/>
 <source>&amp;Save debug information</source>
 <translation>&amp;บันทึกข้อมูลการดีบัก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="503"/>
+<location filename="../dialogs/settingsdialog.cpp" line="506"/>
 <source>hostname of proxy server</source>
 <translation>ชื่อโฮสต์ของพร็อกซีเซิร์ฟเวอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="504"/>
+<location filename="../dialogs/settingsdialog.cpp" line="507"/>
 <source>username for proxy server</source>
 <translation>ชื่อผู้ใช้สำหรับพร็อกซีเซิร์ฟเวอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="505"/>
+<location filename="../dialogs/settingsdialog.cpp" line="508"/>
 <source>password for proxy server</source>
 <translation>รหัสผ่านสำหรับพร็อกซีเซิร์ฟเวอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="507"/>
+<location filename="../dialogs/settingsdialog.cpp" line="510"/>
 <source>HTTP(S) proxy</source>
 <translation type="unfinished">HTTP(S) proxy</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="508"/>
+<location filename="../dialogs/settingsdialog.cpp" line="511"/>
 <source>SOCKS5 proxy</source>
 <translation>พร็อกซี SOCKS5</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1505"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1508"/>
 <source>Automatic (needs restart)</source>
 <translation>อัตโนมัติ (ต้องรีสตาร์ท)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1816"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1819"/>
 <source>Shortcut already assigned</source>
 <translation>ทางลัดที่กำหนดไว้แล้ว</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2019"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2022"/>
 <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -7367,7 +7408,7 @@ QOwnNotesAPI version: %2</source>
 รุ่น QOwnNotesAPI: %2</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2032"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2035"/>
 <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -7378,329 +7419,329 @@ Connection error message: </source>
 ข้อความแสดงข้อผิดพลาดการเชื่อมต่อ:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2312"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2315"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
 <translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2323"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2326"/>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>โปรดอย่าใช้สิ่งนี้ในตัวติดตามปัญหาคัดลอกข้อความข้อมูลการดีบักลงในปัญหาโดยตรง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2330"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2333"/>
 <source>Markdown files</source>
 <translation>ไฟล์ Markdown</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2358"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2361"/>
 <source>Disable usage tracking</source>
 <translation>ปิดใช้งานการติดตามการใช้งาน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2359"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2362"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>ข้อมูลการใช้งานแบบไม่ระบุชื่อช่วยในการตัดสินใจว่าส่วนใดของ QOwnNotes ที่จะปรับปรุงต่อไปและเพื่อค้นหาและแก้ไขข้อบกพร่อง &lt;br /&gt; โปรดปิดใช้งานเฉพาะในกรณีที่คุณไม่สามารถใช้งานได้จริงๆ &lt;br /&gt; &lt;br /&gt; ปิดใช้งานกาติดตามการใช้งาน ?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2592"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2595"/>
 <source>new folder</source>
 <translation>แฟ้มใหม่</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2626"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2629"/>
 <source>Remove note folder</source>
 <translation>ลบโฟลเดอร์บันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2627"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2630"/>
 <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>ลบโฟลเดอร์โน้ตปัจจุบัน &lt;strong&gt;%1 &lt;/strong&gt; หรือไม่</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2708"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2711"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>โปรดเลือกโฟลเดอร์ที่จะเก็บบันทึกย่อของคุณไว้</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2743"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2746"/>
 <source>Loading folders from server</source>
 <translation>กำลังโหลดโฟลเดอร์จากเซิร์ฟเวอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2758"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2761"/>
 <source>No more folders were found in the current folder</source>
 <translation>ไม่พบโฟลเดอร์เพิ่มเติมในโฟลเดอร์ปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2831"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2834"/>
 <source>Loading folders in '%1' from server</source>
 <translation>กำลังโหลดโฟลเดอร์ใน '%1' จากเซิร์ฟเวอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2904"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2907"/>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
 <translation>ดูที่ &lt;a href="%1"&gt; เอกสารการเขียนสคริปต์ &lt;/a&gt; เพื่อเริ่มต้นอย่างรวดเร็ว</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2908"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2911"/>
 <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
 <translation>หากคุณต้องการเข้าใช้ฟังก์ชันการทำงานบางอย่างใน QOwnNotes โปรดเปิดปัญหาในหน้าปัญหา &lt;a href="%1"&gt; หน้าปัญหา QOwnNotes &lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2930"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2933"/>
 <source>Check for script updates</source>
 <translation>ตรวจสอบการอัปเดตสคริปต์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2937"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2940"/>
 <source>Add local script</source>
 <translation>เพิ่มสคริปต์ท้องถิ่น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2941"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2944"/>
 <source>Add an existing, local script</source>
 <translation>เพิ่มสคริปต์ท้องถิ่นที่มีอยู่</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4035"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4038"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4096"/>
 <source>INI files</source>
 <translation>ไฟล์ INI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4071"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4074"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>คุณต้องการนำเข้าการตั้งค่าหรือไม่ การตั้งค่าปัจจุบันของคุณจะถูกลบและการตั้งค่าบางอย่างอาจไม่สามารถกู้คืนได้เช่นการตั้งค่าโฟลเดอร์บันทึกย่อและสคริปต์ที่คุณใช้ คุณจะต้องปรับการตั้งค่าบางอย่างโดยเฉพาะในแพลตฟอร์ม แต่โน้ตของคุณจะยังคงอยู่!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4081"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4084"/>
 <source>The application will be quit after the import.</source>
 <translation>แอปพลิเคชันจะถูกปิดหลังจากการนำเข้า</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4082"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4085"/>
 <source>The application will be restarted after the import.</source>
 <translation>แอปพลิเคชันจะเริ่มต้นใหม่หลังจากการนำเข้า</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4314"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4317"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>ข้อมูลการดีบักถูกคัดลอกไปยังคลิปบอร์ด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4335"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4338"/>
 <source>The integrity of the disk database is valid.</source>
 <translation type="unfinished">The integrity of the disk database is valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4340"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4343"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation type="unfinished">The integrity of the disk database is not valid!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2924"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2927"/>
 <source>Find a script in the script repository</source>
 <translation>ค้นหาสคริปต์ในที่เก็บสคริปต์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="296"/>
+<location filename="../dialogs/settingsdialog.cpp" line="299"/>
 <source>Menu bar</source>
 <translation>แถบเมนู</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="297"/>
+<location filename="../dialogs/settingsdialog.cpp" line="300"/>
 <source>Show menu bar item</source>
 <translation>แสดงรายการแถบเมนู</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1689"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1741"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1692"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1744"/>
 <source>Undefined shortcut</source>
 <translation>ทางลัดที่ไม่ได้กำหนด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1693"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1745"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1696"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1748"/>
 <source>Assign a new shortcut</source>
 <translation>กำหนดทางลัดใหม่</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1694"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1746"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1697"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1749"/>
 <source>Reset to default shortcut</source>
 <translation>รีเซ็ตเป็นทางลัดเริ่มต้น</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1712"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1715"/>
 <source>Clear shortcut</source>
 <translation>ล้างทางลัด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1817"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1820"/>
 <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
 <translation>ทางลัด &lt;strong&gt;%1 &lt;/strong&gt; ได้รับมอบหมายให้กับ &lt;strong&gt;%2 &lt;/strong&gt; แล้ว! คุณต้องการข้ามไปยังทางลัดหรือไม่</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3017"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3020"/>
 <source>Remove script</source>
 <translation>ลบสคริปต์</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3018"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3021"/>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>ลบสคริปต์ปัจจุบัน &lt;strong&gt;%1 &lt;/strong&gt; หรือไม่</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3068"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3071"/>
 <source>QML files</source>
 <translation>ไฟล์ QML</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3069"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3072"/>
 <source>Please select your QML file</source>
 <translation>โปรดเลือกไฟล์ QML ของคุณ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3159"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3162"/>
 <source>Open repository</source>
 <translation>เปิดที่เก็บ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3217"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3220"/>
 <source>Your script seems to be valid</source>
 <translation>ดูเหมือนว่าสคริปต์ของคุณจะถูกต้อง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3218"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3221"/>
 <source>There were script errors:
 %1</source>
 <translation>มีข้อผิดพลาดของสคริปต์:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3286"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3289"/>
 <source>File extension</source>
 <translation>ไฟล์นามสกุล</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3286"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3289"/>
 <source>Enter your custom file extension:</source>
 <translation>ป้อนนามสกุลไฟล์ที่คุณกำหนดเอง:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3615"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3618"/>
 <source>Calendar cache emptied</source>
 <translation>แคชปฏิทินว่างเปล่า</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3616"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3619"/>
 <source>Your calendar cache was emptied.</source>
 <translation>แคชปฏิทินของคุณว่างเปล่า</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3697"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3700"/>
 <source>Reset toolbars and exit</source>
 <translation>รีเซ็ตแถบเครื่องมือและออก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3698"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3701"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>คุณต้องการรีเซ็ตแถบเครื่องมือทั้งหมดหรือไม่ แอปพลิเคชันจะถูกปิดในกระบวนการแถบเครื่องมือเริ่มต้นจะถูกกู้คืนเมื่อคุณเริ่มต้นอีกครั้ง</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3705"/>
 <source>Reset and &amp;exit</source>
 <translation>รีเซ็ตและ &amp;ออก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3860"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3863"/>
 <source>Log file cleared</source>
 <translation>ล้างไฟล์บันทึกแล้ว</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3861"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3864"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>ล้างไฟล์บันทึก &lt;strong&gt;%1 &lt;/strong&gt; แล้ว</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3897"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3900"/>
 <source>Executable files</source>
 <translation>ไฟล์ปฏิบัติการ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3898"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3900"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3901"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3903"/>
 <source>All files</source>
 <translation>เอกสารทั้งหมด</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3908"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3911"/>
 <source>Please select the path of your git executable</source>
 <translation>โปรดเลือกเส้นทางของการเรียกใช้งานคอมไพล์ของคุณ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4005"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4008"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>คุณต้องการรีเซ็ตการแทนที่ของกล่องข้อความทั้งหมดหรือไม่?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="104"/>
+<location filename="../dialogs/settingsdialog.cpp" line="107"/>
 <source>New script</source>
 <translation>สคริปต์ใหม่</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="108"/>
+<location filename="../dialogs/settingsdialog.cpp" line="111"/>
 <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
 <translation>คุณสามารถดาวน์โหลดไคลเอ็นต์ git ของคุณได้ที่นี่: &lt;a href="%url"&gt; Git สำหรับ Windows &lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="458"/>
+<location filename="../dialogs/settingsdialog.cpp" line="461"/>
 <source>enabled</source>
 <translation>เปิดการใช้งาน</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="458"/>
+<location filename="../dialogs/settingsdialog.cpp" line="461"/>
 <source>disabled</source>
 <translation>พิการ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="460"/>
+<location filename="../dialogs/settingsdialog.cpp" line="463"/>
 <source>Portable mode is currently:</source>
 <translation>ขณะนี้มีโหมดพกพา:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="463"/>
+<location filename="../dialogs/settingsdialog.cpp" line="466"/>
 <source>In portable mode</source>
 <translation>ในโหมดพกพา</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="464"/>
+<location filename="../dialogs/settingsdialog.cpp" line="467"/>
 <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>ฐานข้อมูล sqlite ภายในและการตั้งค่าจะถูกเก็บไว้ในโฟลเดอร์ &lt;code&gt; Data &lt;/code&gt; ที่ตำแหน่งของไบนารี</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="467"/>
+<location filename="../dialogs/settingsdialog.cpp" line="470"/>
 <source>the settings will be stored in an ini file</source>
 <translation>การตั้งค่าจะถูกเก็บไว้ในไฟล์ ini</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="469"/>
+<location filename="../dialogs/settingsdialog.cpp" line="472"/>
 <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
 <translation>โฟลเดอร์โน้ตพา ธ สคริปต์และพา ธ ไปยังเครื่องมือแก้ไขภายนอกจะถูกจัดเก็บโดยอัตโนมัติเมื่อเทียบกับโฟลเดอร์ &lt;code&gt; ข้อมูล &lt;/code&gt; เพื่อให้โฟลเดอร์บันทึกย่อสคริปต์และเครื่องมือแก้ไขภายนอกที่ถูกต้องจะถูกโหลดโดยไม่คำนึงถึงตำแหน่งที่ติดตั้ง QOwnNotes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="479"/>
+<location filename="../dialogs/settingsdialog.cpp" line="482"/>
 <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
 <translation>มันจะเปิดใช้งานถ้าคุณเรียกใช้ QOwnNotes ด้วยพารามิเตอร์ &lt;code&gt; --portable &lt;/code&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2331"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2334"/>
 <source>Save debug information</source>
 <translation>บันทึกข้อมูลการดีบัก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2378"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2381"/>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -7709,34 +7750,34 @@ Your notes will stay intact!</source>
 บันทึกย่อของคุณจะยังคงอยู่!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2381"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2384"/>
 <source>Clear and &amp;exit</source>
 <translation>ล้างและ &amp;ออก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2307"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2381"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2310"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2384"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3705"/>
 <source>&amp;Cancel</source>
 <translation>&amp;ยกเลิก</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="485"/>
+<location filename="../dialogs/settingsdialog.cpp" line="488"/>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>คุณจะพบ &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; ในเส้นทางการปล่อยเพื่อเริ่ม QOwnNotes ในโหมดพกพา</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2304"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2307"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>คุณต้องการล้างฐานข้อมูลท้องถิ่นหรือไม่ นี่จะเป็นการลบโฟลเดอร์บันทึกย่อที่กำหนดค่าไว้และรายการสิ่งที่ต้องทำแคช!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2307"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2310"/>
 <source>Clear &amp;database</source>
 <translation>ล้าง &amp;ฐานข้อมูล</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2498"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2501"/>
 <source>Select editor application</source>
 <translation>เลือกแอปพลิเคชันตัวแก้ไข</translation>
 </message>
@@ -8377,7 +8418,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="157"/>
-<location filename="../dialogs/tododialog.ui" line="326"/>
+<location filename="../dialogs/tododialog.ui" line="329"/>
 <source>Summary</source>
 <translation>สรุป</translation>
 </message>
@@ -8392,17 +8433,17 @@ Your notes will stay intact!</source>
 <translation>ชั้นประถมศึกษาปี ...</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.ui" line="346"/>
+<location filename="../dialogs/tododialog.ui" line="349"/>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
 <translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.ui" line="349"/>
+<location filename="../dialogs/tododialog.ui" line="352"/>
 <source>Show only items due today</source>
 <translation type="unfinished">Show only items due today</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="105"/>
+<location filename="../dialogs/tododialog.cpp" line="120"/>
 <source>Save and insert into note</source>
 <translation>บันทึกและแทรกลงในบันทึกย่อ</translation>
 </message>
@@ -8432,12 +8473,12 @@ Your notes will stay intact!</source>
 <translation>ค้นหาหรือสร้างรายการสิ่งที่ต้องทำ</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.ui" line="331"/>
+<location filename="../dialogs/tododialog.ui" line="334"/>
 <source>Due date</source>
 <translation type="unfinished">Due date</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.ui" line="339"/>
+<location filename="../dialogs/tododialog.ui" line="342"/>
 <source>select your todo list</source>
 <translation>เลือกรายการสิ่งที่ต้องทำ</translation>
 </message>
@@ -8447,17 +8488,17 @@ Your notes will stay intact!</source>
 <translation>บันทึกรายการสิ่งที่ต้องทำในปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="110"/>
+<location filename="../dialogs/tododialog.cpp" line="125"/>
 <source>Save the current todo item and insert a link to it into the current note</source>
 <translation>บันทึกรายการสิ่งที่ต้องทำปัจจุบันและแทรกลิงค์ไปยังบันทึกย่อปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="119"/>
+<location filename="../dialogs/tododialog.cpp" line="134"/>
 <source>Import the current todo item as new note</source>
 <translation>นำเข้ารายการสิ่งที่ต้องทำปัจจุบันเป็นบันทึกย่อใหม่</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="115"/>
+<location filename="../dialogs/tododialog.cpp" line="130"/>
 <source>Import as note</source>
 <translation>นำเข้าเป็นบันทึก</translation>
 </message>
@@ -8472,54 +8513,54 @@ Your notes will stay intact!</source>
 <translation>กำลังโหลดรายการสิ่งที่ต้องทำจากเซิร์ฟเวอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="130"/>
+<location filename="../dialogs/tododialog.cpp" line="145"/>
 <source>Reload from server</source>
 <translation>โหลดซ้ำจากเซิร์ฟเวอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="134"/>
+<location filename="../dialogs/tododialog.cpp" line="149"/>
 <source>Reload tasks from server</source>
 <translation>โหลดงานใหม่จากเซิร์ฟเวอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="138"/>
+<location filename="../dialogs/tododialog.cpp" line="153"/>
 <source>Clear cache and reload</source>
 <translation>ล้างแคชและโหลดซ้ำ</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="143"/>
+<location filename="../dialogs/tododialog.cpp" line="158"/>
 <source>Clear calendar cache and reload tasks from server</source>
 <translation>ล้างแคชปฏิทินและรีโหลดงานจากเซิร์ฟเวอร์</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="606"/>
+<location filename="../dialogs/tododialog.cpp" line="621"/>
 <source>Remove todo item</source>
 <translation>ลบรายการสิ่งที่ต้องทำ</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="607"/>
+<location filename="../dialogs/tododialog.cpp" line="622"/>
 <source>Remove the selected todo item?
 This cannot be undone!</source>
 <translation>ลบรายการสิ่งที่ต้องทำที่เลือกหรือไม่
 ไม่สามารถยกเลิกได้!</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="891"/>
+<location filename="../dialogs/tododialog.cpp" line="906"/>
 <source>Create sub-task</source>
 <translation>สร้างงานย่อย</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="898"/>
+<location filename="../dialogs/tododialog.cpp" line="913"/>
 <source>Create new sub-task</source>
 <translation>สร้างงานย่อยใหม่</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="898"/>
+<location filename="../dialogs/tododialog.cpp" line="913"/>
 <source>Name:</source>
 <translation>นามสกุล:</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="899"/>
+<location filename="../dialogs/tododialog.cpp" line="914"/>
 <source>New sub-task</source>
 <translation>ภารกิจใหม่</translation>
 </message>
