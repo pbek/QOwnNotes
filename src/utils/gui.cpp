@@ -1057,13 +1057,18 @@ bool Utils::Gui::doWindowsDarkModeCheck() {
 
     bool windowsDarkMode = settings.value("AppsUseLightTheme") == 0;
     bool appDarkMode = QSettings().value("darkMode").toBool();
+    QString infoString = "\n\n" + QObject::tr("Keep in mind that if you "
+        "apply this mode change automatically you need to restart the "
+        "application every time after you start the application and the "
+        "Windows mode was changed!");
 
     // Check for Windows dark mode and application default mode
     if (windowsDarkMode && !appDarkMode) {
         if (Utils::Gui::question(
                 nullptr, QObject::tr("Dark mode detected"),
                 QObject::tr("Your Windows system seems to use the dark mode. "
-                            "Do you also want to turn on dark mode in QOwnNotes?"),
+                        "Do you also want to turn on dark mode in QOwnNotes?") +
+                    infoString,
         QStringLiteral("windows-dark-mode")) == QMessageBox::Yes) {
             Utils::Misc::switchToDarkMode();
 
@@ -1076,7 +1081,8 @@ bool Utils::Gui::doWindowsDarkModeCheck() {
         if (Utils::Gui::question(
                 nullptr, QObject::tr("Light mode detected"),
                 QObject::tr("Your Windows system seems to use the light mode. "
-                            "Do you also want to turn off dark mode in QOwnNotes?"),
+                    "Do you also want to turn off dark mode in QOwnNotes?") +
+                    infoString,
                 QStringLiteral("windows-light-mode")) == QMessageBox::Yes) {
             Utils::Misc::switchToLightMode();
 

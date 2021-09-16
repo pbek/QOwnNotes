@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.9.6
+- now the required restart will be mentioned for the automatic mode switch under
+  Windows 10 (for [#2234](https://github.com/pbek/QOwnNotes/issues/2234))
+
 ## 21.9.5
 - under Windows 10 the application will now ask you if you want to turn on 
   dark mode if Windows is in dark mode and the application is not
