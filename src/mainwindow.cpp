@@ -572,6 +572,16 @@ MainWindow::MainWindow(QWidget *parent)
 
     // trigger cli parameter menu action if there was any set
     triggerStartupMenuAction();
+
+#ifdef Q_OS_WIN32
+    if (Utils::Gui::doWindowsDarkModeCheck()) {
+        showRestartNotificationIfNeeded(true);
+
+        // The application doesn't seem to quit in this case after
+        // showRestartNotificationIfNeeded
+        QTimer::singleShot(0, this, []() {QApplication::quit();});
+    }
+#endif
 }
 
 /**
@@ -5275,8 +5285,8 @@ void MainWindow::forceRegenerateNotePreview() {
  *
  * @return true if the applications is restarting
  */
-bool MainWindow::showRestartNotificationIfNeeded() {
-    const bool needsRestart = qApp->property("needsRestart").toBool();
+bool MainWindow::showRestartNotificationIfNeeded(bool force) {
+    const bool needsRestart = qApp->property("needsRestart").toBool() || force;
 
     if (!needsRestart) {
         return false;
@@ -12936,8 +12946,7 @@ void MainWindow::onBackendChanged(QAction *action) {
     QString backend = action->data().toString();
     QSettings settings;
     settings.setValue(QStringLiteral("spellCheckBackend"), backend);
-    Utils::Misc::needRestart();
-    showRestartNotificationIfNeeded();
+    showRestartNotificationIfNeeded(true);
 }
 
 void MainWindow::on_actionManage_dictionaries_triggered() {

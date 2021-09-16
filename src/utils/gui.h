@@ -138,5 +138,6 @@ void updateTabWidgetTabData(QTabWidget *tabWidget, int index, const Note &note);
 void reloadNoteTabs(QTabWidget *tabWidget);
 void setTreeWidgetItemToolTipForNote(QTreeWidgetItem *item, const Note &note,
                                      QDateTime *overrideFileLastModified = nullptr);
+bool doWindowsDarkModeCheck();
 }    // namespace Gui
 }    // namespace Utils

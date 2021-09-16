@@ -1023,7 +1023,7 @@ private:
 
     void handleNoteTreeTagColoringForNote(const Note &note);
 
-    bool showRestartNotificationIfNeeded();
+    bool showRestartNotificationIfNeeded(bool force = false);
 
     void unsetCurrentNote();
 

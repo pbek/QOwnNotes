@@ -2334,3 +2334,22 @@ QString Utils::Misc::fileExtensionForMimeType(const QString &mimeType) {
 
     return "";
 }
+
+void Utils::Misc::switchToDarkOrLightMode(bool darkMode) {
+    QSettings settings;
+    settings.setValue("darkMode", darkMode);
+    settings.setValue("darkModeColors", darkMode);
+    settings.setValue("darkModeIconTheme", darkMode);
+    settings.setValue("darkModeTrayIcon", darkMode);
+    settings.setValue("Editor/CurrentSchemaKey", darkMode ?
+        "EditorColorSchema-cdbf28fc-1ddc-4d13-bb21-6a4043316a2f" :
+        "EditorColorSchema-6033d61b-cb96-46d5-a3a8-20d5172017eb");
+}
+
+void Utils::Misc::switchToDarkMode() {
+    switchToDarkOrLightMode(true);
+}
+
+void Utils::Misc::switchToLightMode() {
+    switchToDarkOrLightMode(false);
+}

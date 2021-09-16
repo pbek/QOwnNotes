@@ -152,6 +152,9 @@ QString removeAcceleratorMarker(const QString &label_);
 QString fileExtensionForMimeType(const QString &mimeType);
 QByteArray friendlyUserAgentString();
 QLatin1String platform();
+void switchToDarkOrLightMode(bool darkMode);
+void switchToDarkMode();
+void switchToLightMode();
 }    // namespace Misc
 }    // namespace Utils
 

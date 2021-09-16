@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 21.9.5
+- under Windows 10 the application will now ask you if you want to turn on 
+  dark mode if Windows is in dark mode and the application is not
+  (for [#2234](https://github.com/pbek/QOwnNotes/issues/2234))
+    - the application will now also ask you if you want to turn off dark mode if
+      Windows is in light mode and the application has dark mode turned on
+    - you can remember those decisions so that the switch will be made
+      automatically next time
+
 ## 21.9.4
 - now a more descriptive user agent is used for the login flow to generate an
   app password on your Nextcloud server, so you can more easily spot the app
