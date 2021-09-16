@@ -2021,7 +2021,7 @@
 <message>
 <location filename="../mainwindow.ui" line="411"/>
 <location filename="../mainwindow.ui" line="912"/>
-<location filename="../mainwindow.cpp" line="946"/>
+<location filename="../mainwindow.cpp" line="956"/>
 <source>Navigation</source>
 <translation>Lundrim</translation>
 </message>
@@ -2032,7 +2032,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="9068"/>
+<location filename="../mainwindow.cpp" line="9078"/>
 <source>Add a tag to the current note</source>
 <translation>Shtoni një etiketë në shënimin aktual</translation>
 </message>
@@ -2068,7 +2068,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1241"/>
-<location filename="../mainwindow.cpp" line="6971"/>
+<location filename="../mainwindow.cpp" line="6981"/>
 <source>Custom actions</source>
 <translation>Veprimet me porosi</translation>
 </message>
@@ -2149,12 +2149,12 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1448"/>
-<location filename="../mainwindow.cpp" line="10745"/>
+<location filename="../mainwindow.cpp" line="10755"/>
 <source>Select &amp;all notes</source>
 <translation>Zgjidhni të &amp;gjitha shënimet</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6879"/>
+<location filename="../mainwindow.cpp" line="6889"/>
 <source>Insert &amp;link</source>
 <translation>Vendos &amp;lidhjen</translation>
 </message>
@@ -2204,7 +2204,7 @@
 <translation>Kërkoni ose krijoni shënim</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9069"/>
+<location filename="../mainwindow.cpp" line="9079"/>
 <source>Add a tag to the selected notes</source>
 <translation>Shtoni një etiketë në shënimet e zgjedhura</translation>
 </message>
@@ -2215,7 +2215,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="886"/>
-<location filename="../mainwindow.cpp" line="6933"/>
+<location filename="../mainwindow.cpp" line="6943"/>
 <source>Export</source>
 <translation>Eksport</translation>
 </message>
@@ -2226,7 +2226,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="929"/>
-<location filename="../mainwindow.cpp" line="6914"/>
+<location filename="../mainwindow.cpp" line="6924"/>
 <source>Print</source>
 <translation>Shtyp</translation>
 </message>
@@ -2297,7 +2297,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1161"/>
-<location filename="../mainwindow.cpp" line="874"/>
+<location filename="../mainwindow.cpp" line="884"/>
 <source>Workspaces</source>
 <translation>Hapësira pune</translation>
 </message>
@@ -2600,7 +2600,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2244"/>
-<location filename="../mainwindow.cpp" line="11866"/>
+<location filename="../mainwindow.cpp" line="11876"/>
 <source>Remove current workspace</source>
 <translation>Hiq hapësirën aktuale të punës</translation>
 </message>
@@ -2642,7 +2642,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2318"/>
-<location filename="../mainwindow.cpp" line="6888"/>
+<location filename="../mainwindow.cpp" line="6898"/>
 <source>Insert block &amp;quote</source>
 <translation>Vendos &amp;kuotën e bllokut</translation>
 </message>
@@ -2669,7 +2669,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2365"/>
-<location filename="../mainwindow.cpp" line="10721"/>
+<location filename="../mainwindow.cpp" line="10731"/>
 <source>Open note in different window</source>
 <translation>Shënim i hapur në një dritare të ndryshme</translation>
 </message>
@@ -2690,7 +2690,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2405"/>
-<location filename="../mainwindow.cpp" line="10729"/>
+<location filename="../mainwindow.cpp" line="10739"/>
 <source>Show note git versions</source>
 <translation>Shfaq versionet e git të shënimeve</translation>
 </message>
@@ -2773,7 +2773,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2567"/>
-<location filename="../mainwindow.cpp" line="12860"/>
+<location filename="../mainwindow.cpp" line="12870"/>
 <source>Automatically detect</source>
 <translation>Zbuloni automatikisht</translation>
 </message>
@@ -2986,22 +2986,22 @@
 <translation>Shënoni importet nga Evernote</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2992"/>
+<location filename="../mainwindow.cpp" line="3002"/>
 <source>Note was removed externally!</source>
 <translation>Shënimi u hoq nga jashtë!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2993"/>
+<location filename="../mainwindow.cpp" line="3003"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>Shënimi aktual u hoq jashtë këtij aplikacioni!
 Rivendosni shënimin aktual?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5618"/>
-<location filename="../mainwindow.cpp" line="5641"/>
-<location filename="../mainwindow.cpp" line="7412"/>
-<location filename="../mainwindow.cpp" line="10811"/>
+<location filename="../mainwindow.cpp" line="5628"/>
+<location filename="../mainwindow.cpp" line="5651"/>
+<location filename="../mainwindow.cpp" line="7422"/>
+<location filename="../mainwindow.cpp" line="10821"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Anuloj</translation>
 </message>
@@ -3013,47 +3013,47 @@ Rivendosni shënimin aktual?</translation>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3233"/>
+<location filename="../mainwindow.cpp" line="3243"/>
 <source>new version %1 available</source>
 <translation>versioni i ri %1 në dispozicion</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3350"/>
+<location filename="../mainwindow.cpp" line="3360"/>
 <source>Abort</source>
 <translation>Ndërprit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3350"/>
+<location filename="../mainwindow.cpp" line="3360"/>
 <source>Loading notes…</source>
 <translation>Po ngarkon shënime…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3564"/>
+<location filename="../mainwindow.cpp" line="3574"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>Heq kopjuar bazën e të dhënave të konfliktuara: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3565"/>
+<location filename="../mainwindow.cpp" line="3575"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>Nuk mund të hiqte bazën e të dhënave të kopjuara të kopjuara: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3571"/>
+<location filename="../mainwindow.cpp" line="3581"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>Hiqet baza e të dhënave e shkrirë e konfliktuar: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3572"/>
+<location filename="../mainwindow.cpp" line="3582"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>Nuk mund të hiqet baza e të dhënave të bashkuara të konfliktuara: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3587"/>
+<location filename="../mainwindow.cpp" line="3597"/>
 <source>Delete conflicted database copies</source>
 <translation>Fshini kopjet e bazës së të dhënave me konflikt</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3610"/>
+<location filename="../mainwindow.cpp" line="3620"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>Ovedshtë hequr %n kopja e bazës së të dhënave me konflikt</numerusform>
@@ -3061,62 +3061,62 @@ Rivendosni shënimin aktual?</translation>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3774"/>
+<location filename="../mainwindow.cpp" line="3784"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>Ju lutemi zgjidhni dosjen ku shënimet tuaja do të ruhen</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3800"/>
+<location filename="../mainwindow.cpp" line="3810"/>
 <source>No folder was selected</source>
 <translation>Asnjë dosje nuk u zgjodh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3802"/>
+<location filename="../mainwindow.cpp" line="3812"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>Ju duhet të zgjidhni dosjen tuaj të shënimeveCloud për ta bërë këtë softuer të funksionojë!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3804"/>
+<location filename="../mainwindow.cpp" line="3814"/>
 <source>&amp;Retry</source>
 <translation>&amp;Rigjykoj</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3804"/>
+<location filename="../mainwindow.cpp" line="3814"/>
 <source>&amp;Exit</source>
 <translation>&amp;Dalje</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4132"/>
+<location filename="../mainwindow.cpp" line="4142"/>
 <source>Remove current note</source>
 <translation>Hiq shënimin aktual</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4133"/>
+<location filename="../mainwindow.cpp" line="4143"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Hiq shënimin aktual: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4492"/>
+<location filename="../mainwindow.cpp" line="4502"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>Ju lutemi shkruani &lt;strong&gt; fjalëkalimin &lt;/strong&gt; të kësaj shënimi të koduar.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4515"/>
+<location filename="../mainwindow.cpp" line="4525"/>
 <source>Note can't be decrypted!</source>
 <translation>Shënimi nuk mund të deshifrohet!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4516"/>
+<location filename="../mainwindow.cpp" line="4526"/>
 <source>It seems that your password is not valid!</source>
 <translation>Duket se fjalëkalimi juaj nuk është i vlefshëm!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4684"/>
+<location filename="../mainwindow.cpp" line="4694"/>
 <source>Remove selected notes</source>
 <translation>Hiq shënimet e zgjedhura</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4686"/>
+<location filename="../mainwindow.cpp" line="4696"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3130,13 +3130,13 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4776"/>
-<location filename="../mainwindow.cpp" line="11034"/>
+<location filename="../mainwindow.cpp" line="4786"/>
+<location filename="../mainwindow.cpp" line="11044"/>
 <source>Remove selected folders</source>
 <translation>Hiqni dosjet e zgjedhura</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4777"/>
+<location filename="../mainwindow.cpp" line="4787"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation>
 <numerusform>Hiq &lt;strong&gt;%n &lt;/strong&gt; dosjen e zgjedhur? &lt;ul&gt; &lt;li&gt;%1&lt;/li&gt; &lt;/ul&gt; Të gjitha skedarët dhe dosjet në këto dosje do të hiqen gjithashtu!</numerusform>
@@ -3144,17 +3144,17 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4788"/>
+<location filename="../mainwindow.cpp" line="4798"/>
 <source>Removed note subfolder: %1</source>
 <translation>Nënfletuesi i shënimit i hequr: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4808"/>
+<location filename="../mainwindow.cpp" line="4818"/>
 <source>Remove selected tags</source>
 <translation>Hiq etiketat e zgjedhura</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4809"/>
+<location filename="../mainwindow.cpp" line="4819"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>Hiq &lt;strong&gt;%n&lt;/strong&gt; etiketën e zgjedhur? Asnjë shënim nuk do të hiqet në këtë proces.</numerusform>
@@ -3162,13 +3162,13 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4861"/>
-<location filename="../mainwindow.cpp" line="9854"/>
+<location filename="../mainwindow.cpp" line="4871"/>
+<location filename="../mainwindow.cpp" line="9864"/>
 <source>Move selected notes</source>
 <translation>Zhvendosni shënimet e zgjedhura</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4862"/>
+<location filename="../mainwindow.cpp" line="4872"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Zhvendosni %n shënime e zgjedhura në &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3176,13 +3176,13 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4967"/>
-<location filename="../mainwindow.cpp" line="9963"/>
+<location filename="../mainwindow.cpp" line="4977"/>
+<location filename="../mainwindow.cpp" line="9973"/>
 <source>Copy selected notes</source>
 <translation>Kopjoni shënimet e zgjedhura</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4968"/>
+<location filename="../mainwindow.cpp" line="4978"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Kopjoni %n shënime e zgjedhura në &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3190,13 +3190,13 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4998"/>
-<location filename="../mainwindow.cpp" line="5147"/>
+<location filename="../mainwindow.cpp" line="5008"/>
+<location filename="../mainwindow.cpp" line="5157"/>
 <source>Done</source>
 <translation>E bërë</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4999"/>
+<location filename="../mainwindow.cpp" line="5009"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n shënimi u kopjua në &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -3204,12 +3204,12 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5012"/>
+<location filename="../mainwindow.cpp" line="5022"/>
 <source>Tag selected notes</source>
 <translation>Tag shënimet e zgjedhura</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5013"/>
+<location filename="../mainwindow.cpp" line="5023"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Shënoni %n shënimin e përzgjedhur me &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3217,42 +3217,42 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5286"/>
+<location filename="../mainwindow.cpp" line="5296"/>
 <source>Restart application</source>
 <translation>Rinisni aplikimin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5292"/>
+<location filename="../mainwindow.cpp" line="5302"/>
 <source>You may need to restart the application manually to let the changes take effect.</source>
 <translation>Ju mund të duhet të rindizni aplikacionin me dorë për të lejuar ndryshimet të hyjnë në fuqi.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5297"/>
+<location filename="../mainwindow.cpp" line="5307"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Ju mund të duhet të rindizni aplikacionin për të lejuar ndryshimet të hyjnë në fuqi.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5299"/>
+<location filename="../mainwindow.cpp" line="5309"/>
 <source>Restart</source>
 <translation>Rifillo</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5530"/>
+<location filename="../mainwindow.cpp" line="5540"/>
 <source>PDF files</source>
 <translation>PDF files</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5614"/>
+<location filename="../mainwindow.cpp" line="5624"/>
 <source>Todo lists disabled!</source>
 <translation>Todo rendit me aftësi të kufizuara!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5615"/>
+<location filename="../mainwindow.cpp" line="5625"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Ju keni çaktivizuar listat e todo. &lt;br/&gt; Ju lutemi kontrolloni konfigurimin tuaj të &lt;strong&gt;Todo &lt;/strong&gt;" në cilësimet!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5867"/>
+<location filename="../mainwindow.cpp" line="5877"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Foundshtë gjetur &lt;strong&gt;%n &lt;/strong&gt; ndodh e çdo termi &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -3260,110 +3260,110 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6443"/>
-<location filename="../mainwindow.cpp" line="6464"/>
+<location filename="../mainwindow.cpp" line="6453"/>
+<location filename="../mainwindow.cpp" line="6474"/>
 <source>Note was not found</source>
 <translation>Shënimi nuk u gjet</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6454"/>
+<location filename="../mainwindow.cpp" line="6464"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Shënimi nuk u gjet, krijoni një shënim të ri &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6503"/>
+<location filename="../mainwindow.cpp" line="6513"/>
 <source>Failed to create note</source>
 <translation type="unfinished">Failed to create note</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6504"/>
+<location filename="../mainwindow.cpp" line="6514"/>
 <source>Note creation failed</source>
 <translation type="unfinished">Note creation failed</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6692"/>
+<location filename="../mainwindow.cpp" line="6702"/>
 <source>Note folders</source>
 <translation>Dosjet e shënimeve</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6815"/>
+<location filename="../mainwindow.cpp" line="6825"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>Versionet e shënimeve aktualisht janë ngarkuar nga serveri ownCloud</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6832"/>
+<location filename="../mainwindow.cpp" line="6842"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Shënimet e plehrave janë ngarkuar aktualisht nga serveri ownCloud</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6898"/>
+<location filename="../mainwindow.cpp" line="6908"/>
 <source>Copy code block</source>
 <translation>Kopjoni bllok kodin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6922"/>
+<location filename="../mainwindow.cpp" line="6932"/>
 <source>Print selected text</source>
 <translation>Shtypni tekstin e zgjedhur</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6928"/>
+<location filename="../mainwindow.cpp" line="6938"/>
 <source>Print selected text (preview)</source>
 <translation>Shtypni tekstin e zgjedhur (vrojtim)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6946"/>
+<location filename="../mainwindow.cpp" line="6956"/>
 <source>Export selected text as PDF</source>
 <translation>Eksportoni tekstin e zgjedhur si PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6952"/>
+<location filename="../mainwindow.cpp" line="6962"/>
 <source>Export selected text as PDF (preview)</source>
 <translation>Eksportoni tekstin e zgjedhur si PDF (vrojtim)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7408"/>
+<location filename="../mainwindow.cpp" line="7418"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>Shënimi juaj do të deshifrohet dhe ruhet si tekst i thjeshtë përsëri. Mbani në mend se shënimi i pakriptuar do të sinkronizohet me serverin tuaj dhe teksti i ndjeshëm mund të ekspozohet! &lt;br /&gt; A doni të deshifroni shënimin tuaj?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7505"/>
+<location filename="../mainwindow.cpp" line="7515"/>
 <source>Markdown files</source>
 <translation>Skedarët e shënimit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7562"/>
+<location filename="../mainwindow.cpp" line="7572"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>Pozicioni i shënuar i shënuar në slot %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7577"/>
+<location filename="../mainwindow.cpp" line="7587"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>U hodh në pozicionin e faqerojtësit në slot %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7805"/>
-<location filename="../mainwindow.cpp" line="7875"/>
+<location filename="../mainwindow.cpp" line="7815"/>
+<location filename="../mainwindow.cpp" line="7885"/>
 <source>Inserting image</source>
 <translation>Vendosja e imazhit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7810"/>
-<location filename="../mainwindow.cpp" line="7879"/>
+<location filename="../mainwindow.cpp" line="7820"/>
+<location filename="../mainwindow.cpp" line="7889"/>
 <source>Done inserting image</source>
 <translation>Mbarimi i futjes së figurës</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7812"/>
+<location filename="../mainwindow.cpp" line="7822"/>
 <source>Inserting attachment</source>
 <translation>Vendosja e bashkëngjitjes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7817"/>
+<location filename="../mainwindow.cpp" line="7827"/>
 <source>Done inserting attachment</source>
 <translation>Bërje e bashkangjitur e bashkëngjitur</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7829"/>
+<location filename="../mainwindow.cpp" line="7839"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>Kopjuar %n shënime në %1</numerusform>
@@ -3371,7 +3371,7 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7839"/>
+<location filename="../mainwindow.cpp" line="7849"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>Nuk arriti të kopjojë %n shënime (ka shumë të ngjarë tashmë ekzistuese)</numerusform>
@@ -3379,7 +3379,7 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7849"/>
+<location filename="../mainwindow.cpp" line="7859"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>Kopjimi i kopjimit të shënimit %n (pa shënjime ose skedar teksti ose nuk lexohet)</numerusform>
@@ -3387,220 +3387,220 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7862"/>
+<location filename="../mainwindow.cpp" line="7872"/>
 <source>Saving temporary image</source>
 <translation>Ruajtja e imazhit të përkohshëm</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7881"/>
+<location filename="../mainwindow.cpp" line="7891"/>
 <source>Temporary file can't be opened</source>
 <translation>Skedari i përkohshëm nuk mund të hapet</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7919"/>
+<location filename="../mainwindow.cpp" line="7929"/>
 <source>Downloading %1</source>
 <translation>Shkarkim %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8114"/>
+<location filename="../mainwindow.cpp" line="8124"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Rivendosni madhësinë e shkronjave në %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9114"/>
+<location filename="../mainwindow.cpp" line="9124"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>Hiq etiketën "%1" nga shënimi aktual</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9115"/>
+<location filename="../mainwindow.cpp" line="9125"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>Hiq etiketën "%1" nga shënimet e zgjedhura</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9346"/>
+<location filename="../mainwindow.cpp" line="9356"/>
 <source>Rename tag</source>
 <translation>Riemërtoni etiketën</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9347"/>
+<location filename="../mainwindow.cpp" line="9357"/>
 <source>Assign color</source>
 <translation>Cakto ngjyrën</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9348"/>
+<location filename="../mainwindow.cpp" line="9358"/>
 <source>Disable color</source>
 <translation>Disaktivizoni ngjyrën</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9352"/>
+<location filename="../mainwindow.cpp" line="9362"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;Zhvendos etiketat në…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9563"/>
+<location filename="../mainwindow.cpp" line="9573"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>Kaloni në rrënjë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10111"/>
+<location filename="../mainwindow.cpp" line="10121"/>
 <source>An url was opened at the current cursor position</source>
 <translation>U url u hap në pozicionin aktual të kursorit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10214"/>
+<location filename="../mainwindow.cpp" line="10224"/>
 <source>No equation was found in front of the cursor</source>
 <translation>Asnjë ekuacion nuk u gjet para kursorit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10234"/>
+<location filename="../mainwindow.cpp" line="10244"/>
 <source>Result for equation: %1 = %2</source>
 <translation>Rezultati për ekuacionin: %1 = %2</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10339"/>
+<location filename="../mainwindow.cpp" line="10349"/>
 <source>The scripting engine was reloaded</source>
 <translation>Motori i skriptimit u ngarkua përsëri</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10373"/>
+<location filename="../mainwindow.cpp" line="10383"/>
 <source>HTML files</source>
 <translation>Skedarët HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10657"/>
+<location filename="../mainwindow.cpp" line="10667"/>
 <source>Jump to the note's subfolder</source>
 <translation>Shko te nën-dosja e shënimit
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10714"/>
+<location filename="../mainwindow.cpp" line="10724"/>
 <source>Open note in tab</source>
 <translation>Shënim i hapur në skedë
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12421"/>
+<location filename="../mainwindow.cpp" line="12431"/>
 <source>A script update was found!</source>
 <translation>U gjet një azhurnim i skenarit!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12427"/>
+<location filename="../mainwindow.cpp" line="12437"/>
 <source>Script updates</source>
 <translation>Përditësimet e skenarit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12428"/>
+<location filename="../mainwindow.cpp" line="12438"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>Përditësimet në skriptet tuaja u gjetën në depon e skenarit! Dëshiron t'i rinovosh ato?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12443"/>
+<location filename="../mainwindow.cpp" line="12453"/>
 <source>No script updates were found</source>
 <translation>Asnjë azhurnim i skriptit nuk u gjet</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13093"/>
+<location filename="../mainwindow.cpp" line="13102"/>
 <source>Toggle note stickiness</source>
 <translation>Ndryshoni ngjitshmërinë e shënimit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13099"/>
+<location filename="../mainwindow.cpp" line="13108"/>
 <source>Close other note tabs</source>
 <translation>Mbyllni skedat e shënimeve të tjera</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10601"/>
-<location filename="../mainwindow.cpp" line="10795"/>
+<location filename="../mainwindow.cpp" line="10611"/>
+<location filename="../mainwindow.cpp" line="10805"/>
 <source>Rename note</source>
 <translation>Riemërtoni shënimin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10603"/>
+<location filename="../mainwindow.cpp" line="10613"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>Ju lejon të riemërtoni emrin e skedarit të shënimit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10617"/>
+<location filename="../mainwindow.cpp" line="10627"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;Zhvendos shënimet në…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10618"/>
+<location filename="../mainwindow.cpp" line="10628"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;Kopjo shënime në…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10661"/>
+<location filename="../mainwindow.cpp" line="10671"/>
 <source>Move notes to subfolder…</source>
 <translation>Zhvendos shënimet në nënfolder…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10665"/>
+<location filename="../mainwindow.cpp" line="10675"/>
 <source>Copy notes to subfolder…</source>
 <translation>Kopjoni shënimet në nën-dosje…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10673"/>
+<location filename="../mainwindow.cpp" line="10683"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;Etiketoni shënimet e zgjedhura me…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10697"/>
+<location filename="../mainwindow.cpp" line="10707"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Hiq etiketën nga shënimet e zgjedhura…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10795"/>
+<location filename="../mainwindow.cpp" line="10805"/>
 <source>Name:</source>
 <translation>Emër:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10807"/>
+<location filename="../mainwindow.cpp" line="10817"/>
 <source>Note renaming not enabled!</source>
 <translation>Shënimi riemërimi nuk është aktivizuar!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11033"/>
+<location filename="../mainwindow.cpp" line="11043"/>
 <source>Rename subfolder</source>
 <translation>Riemërtoni nënfolder</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11638"/>
+<location filename="../mainwindow.cpp" line="11648"/>
 <source>Create new workspace</source>
 <translation>Krijoni hapësirë të re pune</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11639"/>
-<location filename="../mainwindow.cpp" line="11908"/>
+<location filename="../mainwindow.cpp" line="11649"/>
+<location filename="../mainwindow.cpp" line="11918"/>
 <source>Workspace name:</source>
 <translation>Emri i hapësirës së punës:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11757"/>
+<location filename="../mainwindow.cpp" line="11767"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>i plotë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11764"/>
+<location filename="../mainwindow.cpp" line="11774"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>minimal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11867"/>
+<location filename="../mainwindow.cpp" line="11877"/>
 <source>Remove the current workspace?</source>
 <translation>Hiq hapësirën aktuale të punës?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11907"/>
+<location filename="../mainwindow.cpp" line="11917"/>
 <source>Rename workspace</source>
 <translation>Riemërtoni hapësirën e punës</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="12089"/>
+<location filename="../mainwindow.cpp" line="12099"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3609,42 +3609,42 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12360"/>
+<location filename="../mainwindow.cpp" line="12370"/>
 <source>Disallow all note editing</source>
 <translation>Mos lejoni të gjitha redaktimet e shënimeve</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12602"/>
+<location filename="../mainwindow.cpp" line="12612"/>
 <source>Select text files to import</source>
 <translation>Zgjidhni skedarët e tekstit për të importuar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12632"/>
+<location filename="../mainwindow.cpp" line="12642"/>
 <source>Importing: %1</source>
 <translation>Importimi: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12697"/>
+<location filename="../mainwindow.cpp" line="12707"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>Shënimi titulli '%1' u kopjua në klipboard</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12791"/>
+<location filename="../mainwindow.cpp" line="12801"/>
 <source>Leave full-screen mode</source>
 <translation>Lini modalitetin në ekran të plotë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12978"/>
+<location filename="../mainwindow.cpp" line="12987"/>
 <source>Custom editor width</source>
 <translation>Gjerësia e redaktorit të personalizuar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12978"/>
+<location filename="../mainwindow.cpp" line="12987"/>
 <source>Characters:</source>
 <translation>Karakteret:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9088"/>
+<location filename="../mainwindow.cpp" line="9098"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n shënimi i zgjedhur</numerusform>
@@ -3653,7 +3653,7 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2450"/>
-<location filename="../mainwindow.cpp" line="12361"/>
+<location filename="../mainwindow.cpp" line="12371"/>
 <source>Allow all note editing</source>
 <translation>Lejo të gjitha redaktimet e shënimeve</translation>
 </message>
@@ -3663,12 +3663,12 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 <translation>&amp;Etiketë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5087"/>
+<location filename="../mainwindow.cpp" line="5097"/>
 <source>Remove tag from selected notes</source>
 <translation>Hiq etiketën nga shënimet e zgjedhura</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5088"/>
+<location filename="../mainwindow.cpp" line="5098"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>Hiq etiketën &lt;strong&gt;%1&lt;/strong&gt; nga %n shënime e zgjedhura?</numerusform>
@@ -3676,7 +3676,7 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5148"/>
+<location filename="../mainwindow.cpp" line="5158"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>Etiketa &lt;strong&gt;%1 &lt;/strong&gt; u hoq nga %n shënim</numerusform>
@@ -3684,132 +3684,132 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5193"/>
+<location filename="../mainwindow.cpp" line="5203"/>
 <source>Current notes folder: </source>
 <translation>Dosja aktuale e shënimeve: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5196"/>
+<location filename="../mainwindow.cpp" line="5206"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>Vendosni dosjen e shënimeve. Dosja aktuale e shënimeve: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5398"/>
+<location filename="../mainwindow.cpp" line="5408"/>
 <source>Print note</source>
 <translation>Shënim shtypi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5473"/>
+<location filename="../mainwindow.cpp" line="5483"/>
 <source>Letter</source>
 <translation>Letër</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5503"/>
+<location filename="../mainwindow.cpp" line="5513"/>
 <source>Portrait</source>
 <translation>Portret</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5503"/>
+<location filename="../mainwindow.cpp" line="5513"/>
 <source>Landscape</source>
 <translation>Peizazh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5508"/>
+<location filename="../mainwindow.cpp" line="5518"/>
 <source>Orientation</source>
 <translation>Orientim</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5508"/>
+<location filename="../mainwindow.cpp" line="5518"/>
 <source>Orientation:</source>
 <translation>Orientim:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5531"/>
+<location filename="../mainwindow.cpp" line="5541"/>
 <source>Export current note as PDF</source>
 <translation>Eksportoni shënimin aktual si PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5638"/>
+<location filename="../mainwindow.cpp" line="5648"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Ju nuk keni zgjedhur asnjë listë të Todos. &lt;br/&gt; Ju lutemi kontrolloni konfigurimin tuaj të &lt;strong&gt; Todo &lt;/strong&gt; në cilësimet!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6674"/>
+<location filename="../mainwindow.cpp" line="6684"/>
 <source>Open QOwnNotes</source>
 <translation>Hape QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6225"/>
-<location filename="../mainwindow.cpp" line="6724"/>
-<location filename="../mainwindow.cpp" line="10597"/>
-<location filename="../mainwindow.cpp" line="11027"/>
+<location filename="../mainwindow.cpp" line="6235"/>
+<location filename="../mainwindow.cpp" line="6734"/>
+<location filename="../mainwindow.cpp" line="10607"/>
+<location filename="../mainwindow.cpp" line="11037"/>
 <source>New note</source>
 <translation>Shënim i ri</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6741"/>
+<location filename="../mainwindow.cpp" line="6751"/>
 <source>Recent notes</source>
 <translation>Shënime të fundit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6757"/>
+<location filename="../mainwindow.cpp" line="6767"/>
 <source>Show todo lists</source>
 <translation>Shfaq listat e Todos</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6769"/>
+<location filename="../mainwindow.cpp" line="6779"/>
 <source>Recent tasks</source>
 <translation>Detyrat e fundit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6790"/>
+<location filename="../mainwindow.cpp" line="6800"/>
 <source>Quit</source>
 <translation>Lë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8287"/>
+<location filename="../mainwindow.cpp" line="8297"/>
 <source>show notes from all note subfolders (%1)</source>
 <translation>tregojnë shënime nga të gjitha nënfoletat e shënimeve (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8310"/>
+<location filename="../mainwindow.cpp" line="8320"/>
 <source>show notes in note root folder (%1)</source>
 <translation>shfaq shënime në dosjen e rrënjës së shënimeve (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
-<location filename="../mainwindow.cpp" line="918"/>
-<location filename="../mainwindow.cpp" line="2256"/>
-<location filename="../mainwindow.cpp" line="8322"/>
+<location filename="../mainwindow.cpp" line="928"/>
+<location filename="../mainwindow.cpp" line="2266"/>
+<location filename="../mainwindow.cpp" line="8332"/>
 <source>Note folder</source>
 <translation>Dosje shënimesh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9735"/>
-<location filename="../mainwindow.cpp" line="9802"/>
+<location filename="../mainwindow.cpp" line="9745"/>
+<location filename="../mainwindow.cpp" line="9812"/>
 <source>Copy to note folder</source>
 <translation>Kopjo për të shënuar dosjen</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9735"/>
-<location filename="../mainwindow.cpp" line="9803"/>
+<location filename="../mainwindow.cpp" line="9745"/>
+<location filename="../mainwindow.cpp" line="9813"/>
 <source>Move to note folder</source>
 <translation>Kaloni te dosja e shënimeve</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9736"/>
-<location filename="../mainwindow.cpp" line="9804"/>
+<location filename="../mainwindow.cpp" line="9746"/>
+<location filename="../mainwindow.cpp" line="9814"/>
 <source>Copy to this subfolder</source>
 <translation>Kopjojeni këtij nën-dosje</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9737"/>
-<location filename="../mainwindow.cpp" line="9805"/>
+<location filename="../mainwindow.cpp" line="9747"/>
+<location filename="../mainwindow.cpp" line="9815"/>
 <source>Move to this subfolder</source>
 <translation>Kaloni te kjo nën-dosje</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9849"/>
+<location filename="../mainwindow.cpp" line="9859"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Zhvendosni %n shënime e zgjedhura për të shënuar nën-dosjen &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3817,13 +3817,13 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5299"/>
-<location filename="../mainwindow.cpp" line="12616"/>
+<location filename="../mainwindow.cpp" line="5309"/>
+<location filename="../mainwindow.cpp" line="12626"/>
 <source>Cancel</source>
 <translation>Anuloj</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9934"/>
+<location filename="../mainwindow.cpp" line="9944"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n shënim u zhvendos në shënimin e nën-dosjes "%2"</numerusform>
@@ -3831,7 +3831,7 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9958"/>
+<location filename="../mainwindow.cpp" line="9968"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Kopjoni %n shënimin e përzgjedhur për të shënuar nënfolderin &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3839,7 +3839,7 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10025"/>
+<location filename="../mainwindow.cpp" line="10035"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n shënimi u kopjua për nënshkrimin e shënimit "%2"</numerusform>
@@ -3847,118 +3847,118 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10719"/>
+<location filename="../mainwindow.cpp" line="10729"/>
 <source>Open note in external editor</source>
 <translation>Shënim i hapur në redaktorin e jashtëm</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10723"/>
+<location filename="../mainwindow.cpp" line="10733"/>
 <source>Show note in file manager</source>
 <translation>Shfaq shënimin në menaxherin e skedarëve</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10808"/>
+<location filename="../mainwindow.cpp" line="10818"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>Nëse doni të riemërtoni shënimin tuaj, duhet të aktivizoni mundësinë që të lejoni që emri i shënimit të jetë i ndryshëm nga titulli.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11028"/>
+<location filename="../mainwindow.cpp" line="11038"/>
 <source>New subfolder</source>
 <translation>Nënfolder i ri</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11038"/>
+<location filename="../mainwindow.cpp" line="11048"/>
 <source>Show folder in file manager</source>
 <translation>Shfaq dosjen në menaxherin e skedarëve</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11083"/>
+<location filename="../mainwindow.cpp" line="11093"/>
 <source>Create a new folder</source>
 <translation>Krijoni një dosje të re</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11084"/>
+<location filename="../mainwindow.cpp" line="11094"/>
 <source>Folder name:</source>
 <translation>Emri i dosjes:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8246"/>
+<location filename="../mainwindow.cpp" line="8256"/>
 <source>show all untagged notes (%1)</source>
 <translation>tregoni të gjitha shënimet e paqena (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8248"/>
+<location filename="../mainwindow.cpp" line="8258"/>
 <source>Untagged notes</source>
 <translation>Shënime të pasakta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10374"/>
+<location filename="../mainwindow.cpp" line="10384"/>
 <source>Export current note as HTML file</source>
 <translation>Eksportoni shënimin aktual si skedar HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5482"/>
+<location filename="../mainwindow.cpp" line="5492"/>
 <source>Page size</source>
 <translation>Madhësia e faqes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1290"/>
+<location filename="../mainwindow.cpp" line="1300"/>
 <source>quit toolbar</source>
 <translation>lë shiritin e veglave</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5482"/>
+<location filename="../mainwindow.cpp" line="5492"/>
 <source>Page size:</source>
 <translation>Madhësia e faqes:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5599"/>
+<location filename="../mainwindow.cpp" line="5609"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes do të gjurmojë të dhëna anonime të përdorimit, që ndihmojnë të vendosni se cilat pjesë të QOwnNotes për të përmirësuar tjetër dhe për të gjetur dhe rregulluar gabime. Ju mund ta çaktivizoni atë sjellje në cilësimet.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5603"/>
+<location filename="../mainwindow.cpp" line="5613"/>
 <source>&amp;Ok</source>
 <translation>&amp;Ne rregull</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10607"/>
+<location filename="../mainwindow.cpp" line="10617"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;Hiq shënimet</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6879"/>
+<location filename="../mainwindow.cpp" line="6889"/>
 <source>&amp;Link selected text</source>
 <translation>&amp;Lidhni tekstin e zgjedhur</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1216"/>
+<location filename="../mainwindow.cpp" line="1226"/>
 <source>Your tasks are being loaded from your server</source>
 <translation>Detyrat tuaja po ngarkohen nga serveri juaj</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2923"/>
+<location filename="../mainwindow.cpp" line="2933"/>
 <source>Current note was modified externally</source>
 <translation>Shënimi aktual u modifikua nga jashtë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3006"/>
-<location filename="../mainwindow.cpp" line="6163"/>
+<location filename="../mainwindow.cpp" line="3016"/>
+<location filename="../mainwindow.cpp" line="6173"/>
 <source>Stored current note to disk</source>
 <translation>Shënimi aktual i ruajtur në disk</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3024"/>
+<location filename="../mainwindow.cpp" line="3034"/>
 <source>Note was modified externally: %1</source>
 <translation>Shënimi u modifikua nga jashtë: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3046"/>
+<location filename="../mainwindow.cpp" line="3056"/>
 <source>Notes directory was modified externally</source>
 <translation>Drejtoria e shënimeve u modifikua nga jashtë</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3107"/>
+<location filename="../mainwindow.cpp" line="3117"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>U ruajt në shënim %n në disk</numerusform>
@@ -3966,214 +3966,214 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8212"/>
+<location filename="../mainwindow.cpp" line="8222"/>
 <source>show all notes (%1)</source>
 <translation>shfaq të gjitha shënimet (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8215"/>
-<location filename="../mainwindow.cpp" line="8290"/>
+<location filename="../mainwindow.cpp" line="8225"/>
+<location filename="../mainwindow.cpp" line="8300"/>
 <source>All notes</source>
 <translation>Të gjitha shënimet</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9338"/>
+<location filename="../mainwindow.cpp" line="9348"/>
 <source>&amp;Add tag</source>
 <translation>&amp;Shtoni etiketë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9386"/>
+<location filename="../mainwindow.cpp" line="9396"/>
 <source>Tag could not be created!</source>
 <translation>Tag nuk mund të krijohej!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9565"/>
+<location filename="../mainwindow.cpp" line="9575"/>
 <source>Move to this tag</source>
 <translation>Kaloni në këtë etiketë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9600"/>
+<location filename="../mainwindow.cpp" line="9610"/>
 <source>Tag this</source>
 <translation>Shënojeni këtë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9625"/>
+<location filename="../mainwindow.cpp" line="9635"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>Nuk mund të lëviz etiketën "%1" në këtë etiketë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9674"/>
+<location filename="../mainwindow.cpp" line="9684"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>U zhvendos etiketën "%1" në etiketë të re</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8552"/>
+<location filename="../mainwindow.cpp" line="8562"/>
 <source>show all notes tagged with '%1' (%2)</source>
 <translation>shfaq të gjitha shënimet e etiketuara me '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9349"/>
+<location filename="../mainwindow.cpp" line="9359"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;Hiq etiketat</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5637"/>
+<location filename="../mainwindow.cpp" line="5647"/>
 <source>No selected todo lists!</source>
 <translation>Asnjë listë e zgjedhur për todo!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="599"/>
+<location filename="../mainwindow.cpp" line="609"/>
 <source>Action not found!</source>
 <translation type="unfinished">Action not found!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="600"/>
+<location filename="../mainwindow.cpp" line="610"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
 <translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="887"/>
+<location filename="../mainwindow.cpp" line="897"/>
 <source>Subfolders</source>
 <translation>Nëndosjet</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="899"/>
+<location filename="../mainwindow.cpp" line="909"/>
 <source>Tags</source>
 <translation>Etiketat</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="908"/>
+<location filename="../mainwindow.cpp" line="918"/>
 <source>Note search</source>
 <translation>Kërkim shënimesh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="937"/>
+<location filename="../mainwindow.cpp" line="947"/>
 <source>Note list</source>
 <translation>Lista e shënimeve</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="962"/>
+<location filename="../mainwindow.cpp" line="972"/>
 <source>Note edit</source>
 <translation>Shënim redakto</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="974"/>
+<location filename="../mainwindow.cpp" line="984"/>
 <source>Note tags</source>
 <translation>Etiketa shënimesh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="985"/>
+<location filename="../mainwindow.cpp" line="995"/>
 <source>Note preview</source>
 <translation>Paraprakisht e shënimit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="993"/>
+<location filename="../mainwindow.cpp" line="1003"/>
 <source>Log</source>
 <translation>Identifikohu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1002"/>
+<location filename="../mainwindow.cpp" line="1012"/>
 <source>Scripting</source>
 <translation>Shkruar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1257"/>
+<location filename="../mainwindow.cpp" line="1267"/>
 <source>formatting toolbar</source>
 <translation>shiriti i shiritit të veglave</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1266"/>
+<location filename="../mainwindow.cpp" line="1276"/>
 <source>inserting toolbar</source>
 <translation>futja e shiritit të veglave</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1273"/>
+<location filename="../mainwindow.cpp" line="1283"/>
 <source>encryption toolbar</source>
 <translation>shiriti i veglave të kriptimit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1280"/>
+<location filename="../mainwindow.cpp" line="1290"/>
 <source>window toolbar</source>
 <translation>shirita e veglave të dritares</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1285"/>
+<location filename="../mainwindow.cpp" line="1295"/>
 <source>custom action toolbar</source>
 <translation>veprimi me porosi shiriti</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1305"/>
+<location filename="../mainwindow.cpp" line="1315"/>
 <source>Workspace selector</source>
 <translation>Përzgjedhësi i hapësirës së punës</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1455"/>
+<location filename="../mainwindow.cpp" line="1465"/>
 <source>Show %1 panel</source>
 <translation>Shfaq panelin %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1500"/>
+<location filename="../mainwindow.cpp" line="1510"/>
 <source>Show %1</source>
 <translation>Trego %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1827"/>
+<location filename="../mainwindow.cpp" line="1837"/>
 <source>Leave distraction free mode</source>
 <translation>Lini mënyrën e shpërqendrimit të lirë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2017"/>
+<location filename="../mainwindow.cpp" line="2027"/>
 <source>Switch to note folder</source>
 <translation>Kaloni te dosja e shënimeve</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2412"/>
+<location filename="../mainwindow.cpp" line="2422"/>
 <source>show notes in folder '%1' (%2)</source>
 <translation>shfaq shënime në dosjen "%1" (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2629"/>
+<location filename="../mainwindow.cpp" line="2639"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>Shiriti i mjeteve nuk mund të ngarkohet pa emër</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2950"/>
+<location filename="../mainwindow.cpp" line="2960"/>
 <source>Overwriting external changes of: %1</source>
 <translation>Mbikalimi i ndryshimeve të jashtme të: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2971"/>
+<location filename="../mainwindow.cpp" line="2981"/>
 <source>Loading external changes from: %1</source>
 <translation>Duke ngarkuar ndryshimet e jashtme nga: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3007"/>
-<location filename="../mainwindow.cpp" line="6164"/>
+<location filename="../mainwindow.cpp" line="3017"/>
+<location filename="../mainwindow.cpp" line="6174"/>
 <source>Current note could not be stored to disk</source>
 <translation>Shënimi aktual nuk mund të ruhet në disk</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3190"/>
+<location filename="../mainwindow.cpp" line="3200"/>
 <source>Read-only</source>
 <translation>Lexo vetem</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3192"/>
+<location filename="../mainwindow.cpp" line="3202"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>Redaktimi i shënimit është i çaktivizuar, klikoni për të aktivizuar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3209"/>
+<location filename="../mainwindow.cpp" line="3219"/>
 <source>Line numbers</source>
 <translation>Numrat e linjës</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3219"/>
+<location filename="../mainwindow.cpp" line="3229"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Klikoni këtu për të parë se çfarë ka ndryshuar dhe të jeni në gjendje të azhurnoni në versionin e fundit</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3589"/>
+<location filename="../mainwindow.cpp" line="3599"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>Vazhdoni me fshirjen automatike të kopjes së bazës së të dhënave me konflikt &lt;strong&gt;%n &lt;/strong&gt; ë që mund të bllokojë procesin tuaj të sinkronizimit?</numerusform>
@@ -4181,7 +4181,7 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5071"/>
+<location filename="../mainwindow.cpp" line="5081"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n shënimi u etiketua me "%2"</numerusform>
@@ -4189,7 +4189,7 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5863"/>
+<location filename="../mainwindow.cpp" line="5873"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Gjetur &lt;strong&gt;%n &lt;/strong&gt; ndodhja e &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -4197,77 +4197,77 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6225"/>
+<location filename="../mainwindow.cpp" line="6235"/>
 <source>Note headline</source>
 <translation>Titulli i shënimit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6444"/>
+<location filename="../mainwindow.cpp" line="6454"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
 <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6458"/>
+<location filename="../mainwindow.cpp" line="6468"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6885"/>
+<location filename="../mainwindow.cpp" line="6895"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
 <translation>Bllokoni tekstin e zgjedhur të &amp;kuotave</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7931"/>
+<location filename="../mainwindow.cpp" line="7941"/>
 <source>Downloading images finished</source>
 <translation>Shkarkimi i imazheve përfundoi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8086"/>
+<location filename="../mainwindow.cpp" line="8096"/>
 <source>Increased font size to %1 pt</source>
 <translation>Madhësia e rritur e shkronjave në %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8103"/>
+<location filename="../mainwindow.cpp" line="8113"/>
 <source>Decreased font size to %1 pt</source>
 <translation>Ulur madhësinë e shkronjave në %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5603"/>
-<location filename="../mainwindow.cpp" line="5618"/>
-<location filename="../mainwindow.cpp" line="5641"/>
-<location filename="../mainwindow.cpp" line="10811"/>
+<location filename="../mainwindow.cpp" line="5613"/>
+<location filename="../mainwindow.cpp" line="5628"/>
+<location filename="../mainwindow.cpp" line="5651"/>
+<location filename="../mainwindow.cpp" line="10821"/>
 <source>Open &amp;settings</source>
 <translation>Hapni &amp;cilësimet</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1824"/>
-<location filename="../mainwindow.cpp" line="12768"/>
+<location filename="../mainwindow.cpp" line="1834"/>
+<location filename="../mainwindow.cpp" line="12778"/>
 <source>leave</source>
 <translation>lë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7334"/>
+<location filename="../mainwindow.cpp" line="7344"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>Įveskite savo &lt;strong&gt; slaptažodį &lt;/strong&gt;, kad užšifruotumėte užrašą. &lt;br /&gt; Atminkite, kad turite &lt;strong&gt; atsiminti &lt;/strong&gt; savo slaptažodį, kad galėtumėte perskaityti užrašo turinį. &lt;br /&gt; galite &lt;strong&gt; tik &lt;/strong&gt; tai padaryti &lt;strong&gt; QOwnNotes &lt;/strong&gt;!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7407"/>
+<location filename="../mainwindow.cpp" line="7417"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>Dekretoni shënimin dhe ruajeni si tekst të thjeshtë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7412"/>
+<location filename="../mainwindow.cpp" line="7422"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;Dekodojnë</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7437"/>
+<location filename="../mainwindow.cpp" line="7447"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br/&gt;Ju do të jeni në gjendje të redaktoni shënimin tuaj të koduar.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7506"/>
+<location filename="../mainwindow.cpp" line="7516"/>
 <source>Export current note as Markdown file</source>
 <translation>Eksportoni shënimin aktual si skedar Markdown</translation>
 </message>
@@ -4658,6 +4658,26 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 <location filename="../utils/gui.cpp" line="1036"/>
 <source>&lt;br /&gt;path: %1</source>
 <translation type="unfinished">&lt;br /&gt;path: %1</translation>
+</message>
+<message>
+<location filename="../utils/gui.cpp" line="1064"/>
+<source>Dark mode detected</source>
+<translation type="unfinished">Dark mode detected</translation>
+</message>
+<message>
+<location filename="../utils/gui.cpp" line="1065"/>
+<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<location filename="../utils/gui.cpp" line="1077"/>
+<source>Light mode detected</source>
+<translation type="unfinished">Light mode detected</translation>
+</message>
+<message>
+<location filename="../utils/gui.cpp" line="1078"/>
+<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="76"/>

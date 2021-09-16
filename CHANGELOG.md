@@ -8,6 +8,7 @@
       Windows is in light mode and the application has dark mode turned on
     - you can remember those decisions so that the switch will be made
       automatically next time
+- added more Catalan, Brazilian Portuguese translation (thank you mguerra, marterra)
 
 ## 21.9.4
 - now a more descriptive user agent is used for the login flow to generate an
