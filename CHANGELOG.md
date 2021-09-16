@@ -4,6 +4,7 @@
 - now the required restart will be mentioned for the automatic mode switch under
   Windows 10 (for [#2234](https://github.com/pbek/QOwnNotes/issues/2234))
 - the build for Qt < 5.6 is fixed again
+- added more Brazilian Portuguese translation (thank you marterra)
 
 ## 21.9.5
 - under Windows 10 the application will now ask you if you want to turn on 
