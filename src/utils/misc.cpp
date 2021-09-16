@@ -47,6 +47,9 @@
 #include <QtGui/QIcon>
 #include <utility>
 #include <QHttpMultiPart>
+#if (QT_VERSION < QT_VERSION_CHECK(5, 6, 0))
+#include <QHostInfo>
+#endif
 
 #include "build_number.h"
 #include "libraries/sonnet/src/core/speller.h"
