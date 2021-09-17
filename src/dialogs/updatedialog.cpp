@@ -476,22 +476,12 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
         return false;
     }
 
-    const QString title = tr("Restart application");
-    bool singleApplication = qApp->property("singleApplication").toBool();
-
-    if (singleApplication) {
-        QMessageBox::information(
-            this, title,
-            tr("You now need to restart the application manually to complete the update process."));
-
-        qApp->quit();
-    } else {
-        if (QMessageBox::information(
-                this, title,
-                tr("You now can restart the application to complete the update process."),
-                tr("Restart"), tr("Cancel"), QString(), 0, 1) == 0) {
-            Utils::Misc::restartApplication();
-        }
+    if (QMessageBox::information(
+            this, tr("Restart application"),
+            tr("You now can restart the application to complete the update process.") +
+                Utils::Misc::appendSingleAppInstanceTextIfNeeded(),
+            tr("Restart"), tr("Cancel"), QString(), 0, 1) == 0) {
+        Utils::Misc::restartApplication();
     }
 
     // we want to close the update dialog after the last information

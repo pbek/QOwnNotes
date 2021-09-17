@@ -915,7 +915,7 @@ void Utils::Misc::restartApplication() {
     // If only one app instance is allowed force allowing multiple for the
     // next launch, so we can launch the application before we quit the
     // current instance
-    if (QSettings().value("allowOnlyOneAppInstance").toBool() &&
+    if (qApp->property("singleApplication").toBool() &&
         !parameters.contains("--allow-multiple-instances")) {
         parameters.append("--allow-multiple-instances");
     }
@@ -923,6 +923,17 @@ void Utils::Misc::restartApplication() {
     startDetachedProcess(appPath, parameters);
     QApplication::quit();
 }
+
+QString Utils::Misc::appendSingleAppInstanceTextIfNeeded(QString text) {
+    if (QSettings().value("allowOnlyOneAppInstance").toBool()) {
+        text.append(QObject::tr("\n\nNote that for the next launch of "
+            "the application the single app instance mode will be disabled, "
+            "so that the application can be restarted."));
+    }
+
+    return text;
+}
+
 
 QByteArray Utils::Misc::friendlyUserAgentString() {
     const auto pattern = QStringLiteral("%1 (QOwnNotes - %2)");

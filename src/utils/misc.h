@@ -96,6 +96,7 @@ QString logFilePath();
 QString transformLineFeeds(QString text);
 QString replaceOwnCloudText(QString text, bool useShortText = false);
 void restartApplication();
+QString appendSingleAppInstanceTextIfNeeded(QString text = "");
 void needRestart();
 bool downloadUrlToFile(const QUrl &url, QFile *file);
 QByteArray downloadUrl(const QUrl &url, bool usePost = false, QByteArray postData = nullptr);

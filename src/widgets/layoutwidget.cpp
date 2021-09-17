@@ -80,15 +80,12 @@ void LayoutWidget::updateCurrentLayout() {
 }
 
 void LayoutWidget::storeSettings() {
-    bool singleApplication = qApp->property("singleApplication").toBool();
-
     if (_manualSettingsStoring) {
         QString title = tr("Use new layout");
-        QString text = tr("Do you want to use the selected layout?") + "\n\n";
-
-        text += singleApplication
-                    ? tr("The application will be quit afterwards.")
-                    : tr("The application will be restarted afterwards.");
+        QString text = tr("Do you want to use the selected layout?") +
+                       "\n\n" +
+                       tr("The application will be restarted afterwards.") +
+                       Utils::Misc::appendSingleAppInstanceTextIfNeeded();
 
         if (Utils::Gui::question(this, title, text, "layoutwidget-use-layout",
                                   QMessageBox::Yes | QMessageBox::No,
@@ -136,11 +133,7 @@ void LayoutWidget::storeSettings() {
         // make sure no settings get written after quitting
         qApp->setProperty("clearAppDataAndExit", true);
 
-        if (singleApplication) {
-            qApp->quit();
-        } else {
-            Utils::Misc::restartApplication();
-        }
+        Utils::Misc::restartApplication();
     }
 }
 

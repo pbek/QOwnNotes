@@ -4077,12 +4077,9 @@ void SettingsDialog::on_importSettingsButton_clicked() {
                       "scripts you were using. "
                       "You also will need to adjust some settings, especially "
                       "across platforms, but your notes will stay intact!") +
-                   "\n\n";
-    bool singleApplication = qApp->property("singleApplication").toBool();
-
-    text += singleApplication
-                ? tr("The application will be quit after the import.")
-                : tr("The application will be restarted after the import.");
+                   "\n\n" +
+                   tr("The application will be restarted after the import.") +
+                   Utils::Misc::appendSingleAppInstanceTextIfNeeded();
 
     if (QMessageBox::question(this, title, text,
                               QMessageBox::Yes | QMessageBox::No,
@@ -4117,11 +4114,7 @@ void SettingsDialog::on_importSettingsButton_clicked() {
     // make sure no settings get written after quitting
     qApp->setProperty("clearAppDataAndExit", true);
 
-    if (singleApplication) {
-        qApp->quit();
-    } else {
-        Utils::Misc::restartApplication();
-    }
+    Utils::Misc::restartApplication();
 }
 
 void SettingsDialog::on_issueAssistantPushButton_clicked() {
