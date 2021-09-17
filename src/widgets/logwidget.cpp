@@ -152,6 +152,7 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
 
     QString type = logTypeText(logType);
     QColor color = QColor(Qt::black);
+    const bool darkMode = QSettings().value(QStringLiteral("darkMode")).toBool();
 
     switch (logType) {
         case DebugLogType:
@@ -172,7 +173,7 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
             if (!ui->infoCheckBox->isChecked()) {
                 return;
             }
-            color = QColor(Qt::darkBlue);
+            color = QColor(darkMode ? Qt::yellow : Qt::darkBlue);
             break;
         case WarningLogType:
             if (!ui->warningCheckBox->isChecked()) {
@@ -209,7 +210,7 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
                 return;
             }
             // green
-            color = QColor(0, 128, 0);
+            color = QColor(0, darkMode ? 162 : 128, 0);
             break;
         case ScriptingLogType:
             if (!ui->scriptingCheckBox->isChecked()) {

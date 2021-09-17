@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.9.8
+- the colors in the log panel were more adapted for dark mode
+
 ## 21.9.7
 - there now is no need for a restart any more after an automatic dark/light mode switch under
   Windows 10 when the application starts (for [#2234](https://github.com/pbek/QOwnNotes/issues/2234))
