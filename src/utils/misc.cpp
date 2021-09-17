@@ -912,6 +912,14 @@ void Utils::Misc::restartApplication() {
     // we don't want to have our settings cleared again after a restart
     parameters.removeOne(QStringLiteral("--clear-settings"));
 
+    // If only one app instance is allowed force allowing multiple for the
+    // next launch, so we can launch the application before we quit the
+    // current instance
+    if (QSettings().value("allowOnlyOneAppInstance").toBool() &&
+        !parameters.contains("--allow-multiple-instances")) {
+        parameters.append("--allow-multiple-instances");
+    }
+
     startDetachedProcess(appPath, parameters);
     QApplication::quit();
 }

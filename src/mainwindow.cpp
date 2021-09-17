@@ -5283,24 +5283,17 @@ bool MainWindow::showRestartNotificationIfNeeded(bool force) {
     }
 
     qApp->setProperty("needsRestart", false);
-    const QString title = tr("Restart application");
     bool singleApplication = qApp->property("singleApplication").toBool();
 
-    if (singleApplication) {
-        QMessageBox::information(
-            this, title,
-            tr("You may need to restart the application manually to let "
-               "the changes take effect."));
-    } else {
-        if (QMessageBox::information(
-                this, title,
-                tr("You may need to restart the application to let the changes "
-                   "take effect."),
-                tr("Restart"), tr("Cancel"), QString(), 0, 1) == 0) {
-            storeSettings();
-            Utils::Misc::restartApplication();
-            return true;
-        }
+    if (QMessageBox::information(
+            this, tr("Restart application"),
+            tr("You may need to restart the application to let the changes "
+               "take effect."),
+            tr("Restart"), tr("Cancel"), QString(), 0, 1) == 0) {
+        storeSettings();
+        Utils::Misc::restartApplication();
+
+        return true;
     }
 
     return false;
