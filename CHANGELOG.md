@@ -2,6 +2,7 @@
 
 ## 21.9.8
 - the colors in the log panel were more adapted for dark mode
+- added more Persian, Catalan translation (thank you amirkbrpr, MGuerra)
 
 ## 21.9.7
 - there now is no need for a restart any more after an automatic dark/light mode switch under

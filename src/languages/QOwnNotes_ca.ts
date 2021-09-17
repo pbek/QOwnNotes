@@ -4761,9 +4761,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <source>
 
 Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</source>
-<translation type="unfinished">
-
-Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</translation>
+<translation>Estigueu al cas que a la propera arrencada de l'aplicació el mode d'instància única estarà deshabilitat, de manera que l'aplicació es podrà rearrencar.</translation>
 </message>
 </context>
 <context>

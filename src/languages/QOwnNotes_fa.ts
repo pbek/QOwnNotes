@@ -4779,9 +4779,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>
 
 Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</source>
-<translation type="unfinished">
-
-Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</translation>
+<translation>توجه کنید که در راه اندازی بعدی برنامه، برای اینکه بتواند مجدداً راه اندازی شود، تک حالت نمونه برنامه غیر فعال خواهد شد.</translation>
 </message>
 </context>
 <context>
