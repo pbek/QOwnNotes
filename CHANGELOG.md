@@ -5,6 +5,7 @@
   Windows 10 when the application starts (for [#2234](https://github.com/pbek/QOwnNotes/issues/2234))
 - you can now also restart the application automatically in single app instance mode
   when it is required, instead of being forced to do it manually (for [#2235](https://github.com/pbek/QOwnNotes/issues/2235))
+- added more German, Persian, Brazilian Portuguese translation (thank you rakekniven, amirkbrpr, marterra)
 
 ## 21.9.6
 - now the required restart will be mentioned for the automatic dark/light mode switch

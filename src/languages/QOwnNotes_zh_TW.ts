@@ -1688,93 +1688,88 @@
 <translation>請記住，如果啟用了中央窗口小部件，則要求沒有中央窗口小部件的工作區將無法正常工作。</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="86"/>
+<location filename="../widgets/layoutwidget.cpp" line="84"/>
 <source>Use new layout</source>
 <translation>使用新版面配置</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="87"/>
+<location filename="../widgets/layoutwidget.cpp" line="85"/>
 <source>Do you want to use the selected layout?</source>
 <translation>你想使用所選擇的版面配置嗎？</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="90"/>
-<source>The application will be quit afterwards.</source>
-<translation>應用程式將在之後關閉。</translation>
-</message>
-<message>
-<location filename="../widgets/layoutwidget.cpp" line="91"/>
+<location filename="../widgets/layoutwidget.cpp" line="87"/>
 <source>The application will be restarted afterwards.</source>
 <translation>應用程式將在之後重新啟動。</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="158"/>
+<location filename="../widgets/layoutwidget.cpp" line="151"/>
 <source>Minimal</source>
 <comment>Layout name</comment>
 <translation>最小化</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="160"/>
+<location filename="../widgets/layoutwidget.cpp" line="153"/>
 <source>Full</source>
 <comment>Layout name</comment>
 <translation>滿版</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="162"/>
+<location filename="../widgets/layoutwidget.cpp" line="155"/>
 <source>Preview only</source>
 <comment>Layout name</comment>
 <translation>僅預覽</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="164"/>
+<location filename="../widgets/layoutwidget.cpp" line="157"/>
 <source>Full vertical</source>
 <comment>Layout name</comment>
 <translation>垂直滿版</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="166"/>
+<location filename="../widgets/layoutwidget.cpp" line="159"/>
 <source>Single column</source>
 <comment>Layout name</comment>
 <translation>單欄</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="174"/>
+<location filename="../widgets/layoutwidget.cpp" line="167"/>
 <source>The note edit panel is the central widget that will be resized automatically.</source>
 <comment>Layout description</comment>
 <translation>筆記編輯面板是視窗的中心面板，它將會自動調整大小。</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="179"/>
+<location filename="../widgets/layoutwidget.cpp" line="172"/>
 <source>Because of this there is no central widget that will be resized automatically.</source>
 <comment>Layout description</comment>
 <translation>因此，沒有中心面板會被自動調整大小。</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="184"/>
+<location filename="../widgets/layoutwidget.cpp" line="177"/>
 <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
 <comment>Layout description</comment>
 <translation>預設情況下，左側的筆記面板與右側的編輯面板是啟用的。</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="189"/>
+<location filename="../widgets/layoutwidget.cpp" line="182"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
 <comment>Layout description</comment>
 <translation>多數的面板（如左側的筆記列表、標籤面板、中間的編輯面板以及右側預覽面板）預設都是啟用的。</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="195"/>
+<location filename="../widgets/layoutwidget.cpp" line="188"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another workspace to actually edit notes!</source>
 <comment>Layout description</comment>
 <translation>默認情況下，大多數面板（如左側的註釋列表，標籤面板和右側的預覽面板）均處於啟用狀態。 您將需要另一個工作區來實際編輯筆記！</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="201"/>
+<location filename="../widgets/layoutwidget.cpp" line="194"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
 <comment>Layout description</comment>
 <translation>多數的面板（如左側的筆記列表、標籤面板、右側的編輯面板以及頂部預覽面板）預設都是啟用的。</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="208"/>
+<location filename="../widgets/layoutwidget.cpp" line="201"/>
 <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
 <comment>Layout description</comment>
 <translation>包含筆記搜尋、筆記列表以及筆記編輯在頂端的精簡化的單欄版面配置。</translation>
@@ -2012,7 +2007,7 @@
 <message>
 <location filename="../mainwindow.ui" line="411"/>
 <location filename="../mainwindow.ui" line="912"/>
-<location filename="../mainwindow.cpp" line="956"/>
+<location filename="../mainwindow.cpp" line="946"/>
 <source>Navigation</source>
 <translation>導覽</translation>
 </message>
@@ -2023,7 +2018,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="9078"/>
+<location filename="../mainwindow.cpp" line="9061"/>
 <source>Add a tag to the current note</source>
 <translation>為此筆記新增一個標籤</translation>
 </message>
@@ -2059,7 +2054,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1241"/>
-<location filename="../mainwindow.cpp" line="6981"/>
+<location filename="../mainwindow.cpp" line="6964"/>
 <source>Custom actions</source>
 <translation>自訂動作</translation>
 </message>
@@ -2140,12 +2135,12 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1448"/>
-<location filename="../mainwindow.cpp" line="10755"/>
+<location filename="../mainwindow.cpp" line="10738"/>
 <source>Select &amp;all notes</source>
 <translation>選擇所有筆記(&amp;A)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6889"/>
+<location filename="../mainwindow.cpp" line="6872"/>
 <source>Insert &amp;link</source>
 <translation>插入連結(&amp;L)</translation>
 </message>
@@ -2195,7 +2190,7 @@
 <translation>搜尋或新增筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9079"/>
+<location filename="../mainwindow.cpp" line="9062"/>
 <source>Add a tag to the selected notes</source>
 <translation>為選取的筆記新增一個標籤</translation>
 </message>
@@ -2206,7 +2201,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="886"/>
-<location filename="../mainwindow.cpp" line="6943"/>
+<location filename="../mainwindow.cpp" line="6926"/>
 <source>Export</source>
 <translation>匯出</translation>
 </message>
@@ -2217,7 +2212,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="929"/>
-<location filename="../mainwindow.cpp" line="6924"/>
+<location filename="../mainwindow.cpp" line="6907"/>
 <source>Print</source>
 <translation>列印</translation>
 </message>
@@ -2288,7 +2283,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1161"/>
-<location filename="../mainwindow.cpp" line="884"/>
+<location filename="../mainwindow.cpp" line="874"/>
 <source>Workspaces</source>
 <translation>工作空間</translation>
 </message>
@@ -2591,7 +2586,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2244"/>
-<location filename="../mainwindow.cpp" line="11876"/>
+<location filename="../mainwindow.cpp" line="11859"/>
 <source>Remove current workspace</source>
 <translation>移除目前工作空間</translation>
 </message>
@@ -2633,7 +2628,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2318"/>
-<location filename="../mainwindow.cpp" line="6898"/>
+<location filename="../mainwindow.cpp" line="6881"/>
 <source>Insert block &amp;quote</source>
 <translation>插入引言區塊(&amp;Q)</translation>
 </message>
@@ -2660,7 +2655,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2365"/>
-<location filename="../mainwindow.cpp" line="10731"/>
+<location filename="../mainwindow.cpp" line="10714"/>
 <source>Open note in different window</source>
 <translation>在新視窗開啟筆記</translation>
 </message>
@@ -2681,7 +2676,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2405"/>
-<location filename="../mainwindow.cpp" line="10739"/>
+<location filename="../mainwindow.cpp" line="10722"/>
 <source>Show note git versions</source>
 <translation>顯示筆記的Git版本</translation>
 </message>
@@ -2764,7 +2759,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2567"/>
-<location filename="../mainwindow.cpp" line="12870"/>
+<location filename="../mainwindow.cpp" line="12853"/>
 <source>Automatically detect</source>
 <translation>自動檢測</translation>
 </message>
@@ -2975,22 +2970,22 @@
 <translation>從Evernote匯入</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3002"/>
+<location filename="../mainwindow.cpp" line="2992"/>
 <source>Note was removed externally!</source>
 <translation>筆記已被從外部移除！</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3003"/>
+<location filename="../mainwindow.cpp" line="2993"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>目前的筆記被從本程式外移除！
 復原它？</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5628"/>
-<location filename="../mainwindow.cpp" line="5651"/>
-<location filename="../mainwindow.cpp" line="7422"/>
-<location filename="../mainwindow.cpp" line="10821"/>
+<location filename="../mainwindow.cpp" line="5611"/>
+<location filename="../mainwindow.cpp" line="5634"/>
+<location filename="../mainwindow.cpp" line="7405"/>
+<location filename="../mainwindow.cpp" line="10804"/>
 <source>&amp;Cancel</source>
 <translation>取消(&amp;C)</translation>
 </message>
@@ -3001,109 +2996,109 @@ Restore current note?</source>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3243"/>
+<location filename="../mainwindow.cpp" line="3233"/>
 <source>new version %1 available</source>
 <translation>有新版本： %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3360"/>
+<location filename="../mainwindow.cpp" line="3350"/>
 <source>Abort</source>
 <translation>中止</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3360"/>
+<location filename="../mainwindow.cpp" line="3350"/>
 <source>Loading notes…</source>
 <translation>正在載入記事…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3574"/>
+<location filename="../mainwindow.cpp" line="3564"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>刪除重複的衝突數據庫：％1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3575"/>
+<location filename="../mainwindow.cpp" line="3565"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>無法刪除重複的衝突數據庫：％1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3581"/>
+<location filename="../mainwindow.cpp" line="3571"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>刪除了合併的衝突數據庫：％1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3582"/>
+<location filename="../mainwindow.cpp" line="3572"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>無法刪除合併的衝突數據庫：％1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3597"/>
+<location filename="../mainwindow.cpp" line="3587"/>
 <source>Delete conflicted database copies</source>
 <translation>刪除衝突的數據庫副本</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3620"/>
+<location filename="../mainwindow.cpp" line="3610"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>刪除了％n個衝突的數據庫副本</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3784"/>
+<location filename="../mainwindow.cpp" line="3774"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>請選擇資料夾作為您筆記的棲身之地</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3810"/>
+<location filename="../mainwindow.cpp" line="3800"/>
 <source>No folder was selected</source>
 <translation>尚未選取資料夾</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3812"/>
+<location filename="../mainwindow.cpp" line="3802"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>您必須選取一個ownCloud筆記資料夾以便使用本軟體！</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3814"/>
+<location filename="../mainwindow.cpp" line="3804"/>
 <source>&amp;Retry</source>
 <translation>重試(&amp;R)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3814"/>
+<location filename="../mainwindow.cpp" line="3804"/>
 <source>&amp;Exit</source>
 <translation>離開(&amp;E)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4142"/>
+<location filename="../mainwindow.cpp" line="4132"/>
 <source>Remove current note</source>
 <translation>移除目前筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4143"/>
+<location filename="../mainwindow.cpp" line="4133"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>移除目前筆記： &lt;strong&gt;%1&lt;/strong&gt;？</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4502"/>
+<location filename="../mainwindow.cpp" line="4492"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>請輸入這則加密筆記的&lt;strong&gt;密碼&lt;/strong&gt;。</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4525"/>
+<location filename="../mainwindow.cpp" line="4515"/>
 <source>Note can't be decrypted!</source>
 <translation>筆記無法解密！</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4526"/>
+<location filename="../mainwindow.cpp" line="4516"/>
 <source>It seems that your password is not valid!</source>
 <translation>您的密碼似乎不正確！</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4694"/>
+<location filename="../mainwindow.cpp" line="4684"/>
 <source>Remove selected notes</source>
 <translation>移除選取的筆記</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4696"/>
+<location filename="../mainwindow.cpp" line="4686"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3114,465 +3109,460 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4786"/>
-<location filename="../mainwindow.cpp" line="11044"/>
+<location filename="../mainwindow.cpp" line="4776"/>
+<location filename="../mainwindow.cpp" line="11027"/>
 <source>Remove selected folders</source>
 <translation>移除選取的資料夾</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4787"/>
+<location filename="../mainwindow.cpp" line="4777"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation>
 <numerusform>移除所選取的 &lt;strong&gt;%n&lt;/strong&gt; 個資料夾？&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;資料夾裡的所有檔案與子資料夾都將被刪除！</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4798"/>
+<location filename="../mainwindow.cpp" line="4788"/>
 <source>Removed note subfolder: %1</source>
 <translation>已移除筆記子資料夾： %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4818"/>
+<location filename="../mainwindow.cpp" line="4808"/>
 <source>Remove selected tags</source>
 <translation>移除選取的標籤</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4819"/>
+<location filename="../mainwindow.cpp" line="4809"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>移除 &lt;strong&gt;%n&lt;/strong&gt; 個已選標籤？本動作不會刪除筆記本身。</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4871"/>
-<location filename="../mainwindow.cpp" line="9864"/>
+<location filename="../mainwindow.cpp" line="4861"/>
+<location filename="../mainwindow.cpp" line="9847"/>
 <source>Move selected notes</source>
 <translation>移動選取的筆記</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4872"/>
+<location filename="../mainwindow.cpp" line="4862"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>移動 %n 則選取的筆記到「&lt;strong&gt;%2&lt;/strong&gt;」 ?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4977"/>
-<location filename="../mainwindow.cpp" line="9973"/>
+<location filename="../mainwindow.cpp" line="4967"/>
+<location filename="../mainwindow.cpp" line="9956"/>
 <source>Copy selected notes</source>
 <translation>複製選取的筆記</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4978"/>
+<location filename="../mainwindow.cpp" line="4968"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>複製 %n 則選取的筆記到「&lt;strong&gt;%2&lt;/strong&gt;」？</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5008"/>
-<location filename="../mainwindow.cpp" line="5157"/>
+<location filename="../mainwindow.cpp" line="4998"/>
+<location filename="../mainwindow.cpp" line="5147"/>
 <source>Done</source>
 <translation>完成</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5009"/>
+<location filename="../mainwindow.cpp" line="4999"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n 則筆記已複製到「&lt;strong&gt;%2&lt;/strong&gt;」。</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5022"/>
+<location filename="../mainwindow.cpp" line="5012"/>
 <source>Tag selected notes</source>
 <translation>標記選取的筆記</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5023"/>
+<location filename="../mainwindow.cpp" line="5013"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>標記 %n 則選取的筆記為「&lt;strong&gt;%2&lt;/strong&gt;」？</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5296"/>
+<location filename="../mainwindow.cpp" line="5288"/>
 <source>Restart application</source>
 <translation>重新啟動程式</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5302"/>
-<source>You may need to restart the application manually to let the changes take effect.</source>
-<translation>您必須手動重新啟動程式以使修改生效。</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="5307"/>
+<location filename="../mainwindow.cpp" line="5289"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>您必須重新啟動程式以使修改生效。</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5309"/>
+<location filename="../mainwindow.cpp" line="5292"/>
 <source>Restart</source>
 <translation>重新啟動</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5540"/>
+<location filename="../mainwindow.cpp" line="5523"/>
 <source>PDF files</source>
 <translation>PDF檔</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5624"/>
+<location filename="../mainwindow.cpp" line="5607"/>
 <source>Todo lists disabled!</source>
 <translation>待辦事項列表已禁用！</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5625"/>
+<location filename="../mainwindow.cpp" line="5608"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>您已禁用待辦事項列表。&lt;br /&gt;請檢查設置中的&lt;strong&gt; Todo &lt;/ strong&gt;配置！</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5877"/>
+<location filename="../mainwindow.cpp" line="5860"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>發現&lt;strong&gt;％1 &lt;/ strong&gt;的任何項的&lt;strong&gt;％n &lt;/ strong&gt;個發生</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6453"/>
-<location filename="../mainwindow.cpp" line="6474"/>
+<location filename="../mainwindow.cpp" line="6436"/>
+<location filename="../mainwindow.cpp" line="6457"/>
 <source>Note was not found</source>
 <translation>找不到筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6464"/>
+<location filename="../mainwindow.cpp" line="6447"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>找不到「&lt;strong&gt;%1&lt;/strong&gt;」，建立它？</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6513"/>
+<location filename="../mainwindow.cpp" line="6496"/>
 <source>Failed to create note</source>
 <translation>無法創建記事</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6514"/>
+<location filename="../mainwindow.cpp" line="6497"/>
 <source>Note creation failed</source>
 <translation>筆記創建失敗</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6702"/>
+<location filename="../mainwindow.cpp" line="6685"/>
 <source>Note folders</source>
 <translation>筆記資料夾</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6825"/>
+<location filename="../mainwindow.cpp" line="6808"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>筆記版本已從您的ownCloud伺服器載入</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6842"/>
+<location filename="../mainwindow.cpp" line="6825"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>垃圾桶中的筆記已從您的ownCloud伺服器載入</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6908"/>
+<location filename="../mainwindow.cpp" line="6891"/>
 <source>Copy code block</source>
 <translation>複製程式碼區塊</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6932"/>
+<location filename="../mainwindow.cpp" line="6915"/>
 <source>Print selected text</source>
 <translation>列印選取的文字</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6938"/>
+<location filename="../mainwindow.cpp" line="6921"/>
 <source>Print selected text (preview)</source>
 <translation>列印選取的文字（預覽）</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6956"/>
+<location filename="../mainwindow.cpp" line="6939"/>
 <source>Export selected text as PDF</source>
 <translation>將選取的文字匯出為PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6962"/>
+<location filename="../mainwindow.cpp" line="6945"/>
 <source>Export selected text as PDF (preview)</source>
 <translation>將選取的文字匯出為PDF（預覽）</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7418"/>
+<location filename="../mainwindow.cpp" line="7401"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>您的筆記將被解密並存為明文，請留意您解密的筆記很可能被同步到伺服器進而使敏感資訊曝光！您確定要解密您的筆記？</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7515"/>
+<location filename="../mainwindow.cpp" line="7498"/>
 <source>Markdown files</source>
 <translation>Markdown檔</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7572"/>
+<location filename="../mainwindow.cpp" line="7555"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>筆記書籤位置位於 %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7587"/>
+<location filename="../mainwindow.cpp" line="7570"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>移至「%1」書籤位置</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7815"/>
-<location filename="../mainwindow.cpp" line="7885"/>
+<location filename="../mainwindow.cpp" line="7798"/>
+<location filename="../mainwindow.cpp" line="7868"/>
 <source>Inserting image</source>
 <translation>插入圖片</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7820"/>
-<location filename="../mainwindow.cpp" line="7889"/>
+<location filename="../mainwindow.cpp" line="7803"/>
+<location filename="../mainwindow.cpp" line="7872"/>
 <source>Done inserting image</source>
 <translation>圖片插入完成</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7822"/>
+<location filename="../mainwindow.cpp" line="7805"/>
 <source>Inserting attachment</source>
 <translation>夾帶檔案</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7827"/>
+<location filename="../mainwindow.cpp" line="7810"/>
 <source>Done inserting attachment</source>
 <translation>檔案夾帶完成</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7839"/>
+<location filename="../mainwindow.cpp" line="7822"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>已複製 %n 則筆記至「%1」</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7849"/>
+<location filename="../mainwindow.cpp" line="7832"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>複製 %n 則筆記失敗（可能已經存在）</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7859"/>
+<location filename="../mainwindow.cpp" line="7842"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>略過複製 %n 則筆記（非Markdown或文字檔抑或無法讀取）</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7872"/>
+<location filename="../mainwindow.cpp" line="7855"/>
 <source>Saving temporary image</source>
 <translation>正在儲存暫存圖片</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7891"/>
+<location filename="../mainwindow.cpp" line="7874"/>
 <source>Temporary file can't be opened</source>
 <translation>無法開啟暫存檔</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7929"/>
+<location filename="../mainwindow.cpp" line="7912"/>
 <source>Downloading %1</source>
 <translation>下載中 %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8124"/>
+<location filename="../mainwindow.cpp" line="8107"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>重設字型大小為 %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9124"/>
+<location filename="../mainwindow.cpp" line="9107"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>從此筆記移除標籤「%1」</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9125"/>
+<location filename="../mainwindow.cpp" line="9108"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>從已選取的筆記移除標籤「%1」</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9356"/>
+<location filename="../mainwindow.cpp" line="9339"/>
 <source>Rename tag</source>
 <translation>重新命名標籤</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9357"/>
+<location filename="../mainwindow.cpp" line="9340"/>
 <source>Assign color</source>
 <translation>指定色彩</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9358"/>
+<location filename="../mainwindow.cpp" line="9341"/>
 <source>Disable color</source>
 <translation>停用色彩</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9362"/>
+<location filename="../mainwindow.cpp" line="9345"/>
 <source>&amp;Move tags to…</source>
 <translation>移動標籤至…(&amp;M)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9573"/>
+<location filename="../mainwindow.cpp" line="9556"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>移至頂層</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10121"/>
+<location filename="../mainwindow.cpp" line="10104"/>
 <source>An url was opened at the current cursor position</source>
 <translation>於目前游標位置已開啟一個網址</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10224"/>
+<location filename="../mainwindow.cpp" line="10207"/>
 <source>No equation was found in front of the cursor</source>
 <translation>未在游標前找到方程式</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10244"/>
+<location filename="../mainwindow.cpp" line="10227"/>
 <source>Result for equation: %1 = %2</source>
 <translation>方程式計算結果： %1 = %2</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10349"/>
+<location filename="../mainwindow.cpp" line="10332"/>
 <source>The scripting engine was reloaded</source>
 <translation>腳本引擎已重新載入</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10383"/>
+<location filename="../mainwindow.cpp" line="10366"/>
 <source>HTML files</source>
 <translation>HTML檔</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10667"/>
+<location filename="../mainwindow.cpp" line="10650"/>
 <source>Jump to the note's subfolder</source>
 <translation>跳到筆記的子文件夾</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10724"/>
+<location filename="../mainwindow.cpp" line="10707"/>
 <source>Open note in tab</source>
 <translation>在標籤中打開筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12431"/>
+<location filename="../mainwindow.cpp" line="12414"/>
 <source>A script update was found!</source>
 <translation>找到腳本更新！</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12437"/>
+<location filename="../mainwindow.cpp" line="12420"/>
 <source>Script updates</source>
 <translation>腳本更新</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12438"/>
+<location filename="../mainwindow.cpp" line="12421"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>在腳本存儲庫中找到了腳本的更新！ 您要更新嗎？</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12453"/>
+<location filename="../mainwindow.cpp" line="12436"/>
 <source>No script updates were found</source>
 <translation>找不到腳本更新</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13102"/>
+<location filename="../mainwindow.cpp" line="13085"/>
 <source>Toggle note stickiness</source>
 <translation>切換音符粘性</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13108"/>
+<location filename="../mainwindow.cpp" line="13091"/>
 <source>Close other note tabs</source>
 <translation>關閉其他筆記標籤</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10611"/>
-<location filename="../mainwindow.cpp" line="10805"/>
+<location filename="../mainwindow.cpp" line="10594"/>
+<location filename="../mainwindow.cpp" line="10788"/>
 <source>Rename note</source>
 <translation>重新命名筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10613"/>
+<location filename="../mainwindow.cpp" line="10596"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>允許您修改筆記的檔名</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10627"/>
+<location filename="../mainwindow.cpp" line="10610"/>
 <source>&amp;Move notes to…</source>
 <translation>移動筆記至… (&amp;M)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10628"/>
+<location filename="../mainwindow.cpp" line="10611"/>
 <source>&amp;Copy notes to…</source>
 <translation>複製筆記至…(&amp;C)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10671"/>
+<location filename="../mainwindow.cpp" line="10654"/>
 <source>Move notes to subfolder…</source>
 <translation>移動筆記至子資料夾…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10675"/>
+<location filename="../mainwindow.cpp" line="10658"/>
 <source>Copy notes to subfolder…</source>
 <translation>複製筆記至子資料夾…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10683"/>
+<location filename="../mainwindow.cpp" line="10666"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>標記選取的筆記為… (&amp;T)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10707"/>
+<location filename="../mainwindow.cpp" line="10690"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>從選取筆記移除標籤…(&amp;R)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10805"/>
+<location filename="../mainwindow.cpp" line="10788"/>
 <source>Name:</source>
 <translation>名稱：</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10817"/>
+<location filename="../mainwindow.cpp" line="10800"/>
 <source>Note renaming not enabled!</source>
 <translation>筆記改名未啟用！</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11043"/>
+<location filename="../mainwindow.cpp" line="11026"/>
 <source>Rename subfolder</source>
 <translation>重新命名子資料夾</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11648"/>
+<location filename="../mainwindow.cpp" line="11631"/>
 <source>Create new workspace</source>
 <translation>新增工作空間</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11649"/>
-<location filename="../mainwindow.cpp" line="11918"/>
+<location filename="../mainwindow.cpp" line="11632"/>
+<location filename="../mainwindow.cpp" line="11901"/>
 <source>Workspace name:</source>
 <translation>工作空間名稱：</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11767"/>
+<location filename="../mainwindow.cpp" line="11750"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>滿版</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11774"/>
+<location filename="../mainwindow.cpp" line="11757"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>最小化</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11877"/>
+<location filename="../mainwindow.cpp" line="11860"/>
 <source>Remove the current workspace?</source>
 <translation>移除目前工作空間？</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11917"/>
+<location filename="../mainwindow.cpp" line="11900"/>
 <source>Rename workspace</source>
 <translation>重新命名工作空間</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="12099"/>
+<location filename="../mainwindow.cpp" line="12082"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3580,42 +3570,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12370"/>
+<location filename="../mainwindow.cpp" line="12353"/>
 <source>Disallow all note editing</source>
 <translation>禁止所有筆記編輯</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12612"/>
+<location filename="../mainwindow.cpp" line="12595"/>
 <source>Select text files to import</source>
 <translation>選取要匯入的文字檔</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12642"/>
+<location filename="../mainwindow.cpp" line="12625"/>
 <source>Importing: %1</source>
 <translation>匯入：%1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12707"/>
+<location filename="../mainwindow.cpp" line="12690"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>筆記標題「%1」已複製至剪貼簿</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12801"/>
+<location filename="../mainwindow.cpp" line="12784"/>
 <source>Leave full-screen mode</source>
 <translation>退出全屏模式</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12987"/>
+<location filename="../mainwindow.cpp" line="12970"/>
 <source>Custom editor width</source>
 <translation>自定義編輯器寬度</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12987"/>
+<location filename="../mainwindow.cpp" line="12970"/>
 <source>Characters:</source>
 <translation>字符：</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9098"/>
+<location filename="../mainwindow.cpp" line="9081"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n 則筆記已選取</numerusform>
@@ -3623,7 +3613,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2450"/>
-<location filename="../mainwindow.cpp" line="12371"/>
+<location filename="../mainwindow.cpp" line="12354"/>
 <source>Allow all note editing</source>
 <translation>允許所有筆記編輯</translation>
 </message>
@@ -3633,602 +3623,602 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>標籤(&amp;T)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5097"/>
+<location filename="../mainwindow.cpp" line="5087"/>
 <source>Remove tag from selected notes</source>
 <translation>從選取的筆記移除標籤</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5098"/>
+<location filename="../mainwindow.cpp" line="5088"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>從 %n 則選取的筆記移除標籤「&lt;strong&gt;%1&lt;/strong&gt;」？</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5158"/>
+<location filename="../mainwindow.cpp" line="5148"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>標籤「&lt;strong&gt;%1&lt;/strong&gt;」已從 %n 則筆記移除</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5203"/>
+<location filename="../mainwindow.cpp" line="5193"/>
 <source>Current notes folder: </source>
 <translation>目前筆記資料夾：</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5206"/>
+<location filename="../mainwindow.cpp" line="5196"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>設定筆記資料夾。目前資料夾：</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5408"/>
+<location filename="../mainwindow.cpp" line="5391"/>
 <source>Print note</source>
 <translation>列印筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5483"/>
+<location filename="../mainwindow.cpp" line="5466"/>
 <source>Letter</source>
 <translation>美式信紙（US Letter）</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5513"/>
+<location filename="../mainwindow.cpp" line="5496"/>
 <source>Portrait</source>
 <translation>縱向</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5513"/>
+<location filename="../mainwindow.cpp" line="5496"/>
 <source>Landscape</source>
 <translation>橫向</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5518"/>
+<location filename="../mainwindow.cpp" line="5501"/>
 <source>Orientation</source>
 <translation>方向</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5518"/>
+<location filename="../mainwindow.cpp" line="5501"/>
 <source>Orientation:</source>
 <translation>方向：</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5541"/>
+<location filename="../mainwindow.cpp" line="5524"/>
 <source>Export current note as PDF</source>
 <translation>匯出目前筆記為PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5648"/>
+<location filename="../mainwindow.cpp" line="5631"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>您未選擇待辦清單。&lt;br /&gt;請至設定裡檢查&lt;strong&gt;「待辦」&lt;/strong&gt;之設定！</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6684"/>
+<location filename="../mainwindow.cpp" line="6667"/>
 <source>Open QOwnNotes</source>
 <translation>開啟QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6235"/>
-<location filename="../mainwindow.cpp" line="6734"/>
-<location filename="../mainwindow.cpp" line="10607"/>
-<location filename="../mainwindow.cpp" line="11037"/>
+<location filename="../mainwindow.cpp" line="6218"/>
+<location filename="../mainwindow.cpp" line="6717"/>
+<location filename="../mainwindow.cpp" line="10590"/>
+<location filename="../mainwindow.cpp" line="11020"/>
 <source>New note</source>
 <translation>新增筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6751"/>
+<location filename="../mainwindow.cpp" line="6734"/>
 <source>Recent notes</source>
 <translation>最近使用的筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6767"/>
+<location filename="../mainwindow.cpp" line="6750"/>
 <source>Show todo lists</source>
 <translation>顯示待辦清單</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6779"/>
+<location filename="../mainwindow.cpp" line="6762"/>
 <source>Recent tasks</source>
 <translation>最近使用的任務</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6800"/>
+<location filename="../mainwindow.cpp" line="6783"/>
 <source>Quit</source>
 <translation>離開</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8297"/>
+<location filename="../mainwindow.cpp" line="8280"/>
 <source>show notes from all note subfolders (%1)</source>
 <translation>自所有的子資料夾中顯示筆記(%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8320"/>
+<location filename="../mainwindow.cpp" line="8303"/>
 <source>show notes in note root folder (%1)</source>
 <translation>顯示頂層資料夾中的筆記(%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
-<location filename="../mainwindow.cpp" line="928"/>
-<location filename="../mainwindow.cpp" line="2266"/>
-<location filename="../mainwindow.cpp" line="8332"/>
+<location filename="../mainwindow.cpp" line="918"/>
+<location filename="../mainwindow.cpp" line="2256"/>
+<location filename="../mainwindow.cpp" line="8315"/>
 <source>Note folder</source>
 <translation>筆記資料夾</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9745"/>
-<location filename="../mainwindow.cpp" line="9812"/>
+<location filename="../mainwindow.cpp" line="9728"/>
+<location filename="../mainwindow.cpp" line="9795"/>
 <source>Copy to note folder</source>
 <translation>複製到筆記資料夾</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9745"/>
-<location filename="../mainwindow.cpp" line="9813"/>
+<location filename="../mainwindow.cpp" line="9728"/>
+<location filename="../mainwindow.cpp" line="9796"/>
 <source>Move to note folder</source>
 <translation>移至筆記資料夾</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9746"/>
-<location filename="../mainwindow.cpp" line="9814"/>
+<location filename="../mainwindow.cpp" line="9729"/>
+<location filename="../mainwindow.cpp" line="9797"/>
 <source>Copy to this subfolder</source>
 <translation>複製到此子資料夾</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9747"/>
-<location filename="../mainwindow.cpp" line="9815"/>
+<location filename="../mainwindow.cpp" line="9730"/>
+<location filename="../mainwindow.cpp" line="9798"/>
 <source>Move to this subfolder</source>
 <translation>移至此子資料夾</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9859"/>
+<location filename="../mainwindow.cpp" line="9842"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>移動 %n 則筆記至子資料夾「&lt;strong&gt;%2&lt;/strong&gt;」中？</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5309"/>
-<location filename="../mainwindow.cpp" line="12626"/>
+<location filename="../mainwindow.cpp" line="5292"/>
+<location filename="../mainwindow.cpp" line="12609"/>
 <source>Cancel</source>
 <translation>取消</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9944"/>
+<location filename="../mainwindow.cpp" line="9927"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n 則筆記已移至子資料夾「%2」</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9968"/>
+<location filename="../mainwindow.cpp" line="9951"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>複製 %n 則筆記至子資料夾「&lt;strong&gt;%2&lt;/strong&gt;」中？</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10035"/>
+<location filename="../mainwindow.cpp" line="10018"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n 則筆記已複製至子資料夾「%2」</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10729"/>
+<location filename="../mainwindow.cpp" line="10712"/>
 <source>Open note in external editor</source>
 <translation>在外部編輯器開啟筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10733"/>
+<location filename="../mainwindow.cpp" line="10716"/>
 <source>Show note in file manager</source>
 <translation>在檔案管理員中顯示筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10818"/>
+<location filename="../mainwindow.cpp" line="10801"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>若您想改筆記名稱您必須啟用該選項允許檔名與標題不同。</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11038"/>
+<location filename="../mainwindow.cpp" line="11021"/>
 <source>New subfolder</source>
 <translation>新增子資料夾</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11048"/>
+<location filename="../mainwindow.cpp" line="11031"/>
 <source>Show folder in file manager</source>
 <translation>於檔案管理員中顯示資料夾</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11093"/>
+<location filename="../mainwindow.cpp" line="11076"/>
 <source>Create a new folder</source>
 <translation>新增資料夾</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11094"/>
+<location filename="../mainwindow.cpp" line="11077"/>
 <source>Folder name:</source>
 <translation>資料夾名稱：</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8256"/>
+<location filename="../mainwindow.cpp" line="8239"/>
 <source>show all untagged notes (%1)</source>
 <translation>顯示所有無標籤筆記(%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8258"/>
+<location filename="../mainwindow.cpp" line="8241"/>
 <source>Untagged notes</source>
 <translation>無標籤筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10384"/>
+<location filename="../mainwindow.cpp" line="10367"/>
 <source>Export current note as HTML file</source>
 <translation>將目前筆記匯出為HTML檔</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5492"/>
+<location filename="../mainwindow.cpp" line="5475"/>
 <source>Page size</source>
 <translation>頁面大小</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1300"/>
+<location filename="../mainwindow.cpp" line="1290"/>
 <source>quit toolbar</source>
 <translation>離開工具列</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5492"/>
+<location filename="../mainwindow.cpp" line="5475"/>
 <source>Page size:</source>
 <translation>頁面大小：</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5609"/>
+<location filename="../mainwindow.cpp" line="5592"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes會匿名追蹤使用資訊以助改善QOwnNotes一臂之力。您可以在偏好設定中停用它。</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5613"/>
+<location filename="../mainwindow.cpp" line="5596"/>
 <source>&amp;Ok</source>
 <translation>確定(&amp;O)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10617"/>
+<location filename="../mainwindow.cpp" line="10600"/>
 <source>&amp;Remove notes</source>
 <translation>移除筆記(&amp;R)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6889"/>
+<location filename="../mainwindow.cpp" line="6872"/>
 <source>&amp;Link selected text</source>
 <translation>連結選取的文字(&amp;L)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1226"/>
+<location filename="../mainwindow.cpp" line="1216"/>
 <source>Your tasks are being loaded from your server</source>
 <translation>您的任務已從伺服器載入</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2933"/>
+<location filename="../mainwindow.cpp" line="2923"/>
 <source>Current note was modified externally</source>
 <translation>目前的筆記已被從外部修改</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3016"/>
-<location filename="../mainwindow.cpp" line="6173"/>
+<location filename="../mainwindow.cpp" line="3006"/>
+<location filename="../mainwindow.cpp" line="6156"/>
 <source>Stored current note to disk</source>
 <translation>儲存目前筆記至磁碟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3034"/>
+<location filename="../mainwindow.cpp" line="3024"/>
 <source>Note was modified externally: %1</source>
 <translation>筆記已被從外部修改： %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3056"/>
+<location filename="../mainwindow.cpp" line="3046"/>
 <source>Notes directory was modified externally</source>
 <translation>筆記資料夾已被從外部修改</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3117"/>
+<location filename="../mainwindow.cpp" line="3107"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>%n 則筆記已存至磁碟</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8222"/>
+<location filename="../mainwindow.cpp" line="8205"/>
 <source>show all notes (%1)</source>
 <translation>顯示所有筆記(%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8225"/>
-<location filename="../mainwindow.cpp" line="8300"/>
+<location filename="../mainwindow.cpp" line="8208"/>
+<location filename="../mainwindow.cpp" line="8283"/>
 <source>All notes</source>
 <translation>所有筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9348"/>
+<location filename="../mainwindow.cpp" line="9331"/>
 <source>&amp;Add tag</source>
 <translation>新增標籤(&amp;A)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9396"/>
+<location filename="../mainwindow.cpp" line="9379"/>
 <source>Tag could not be created!</source>
 <translation>無法建立標籤！</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9575"/>
+<location filename="../mainwindow.cpp" line="9558"/>
 <source>Move to this tag</source>
 <translation>移至此標籤</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9610"/>
+<location filename="../mainwindow.cpp" line="9593"/>
 <source>Tag this</source>
 <translation>標記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9635"/>
+<location filename="../mainwindow.cpp" line="9618"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>無法移動標籤「%1」至此標籤</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9684"/>
+<location filename="../mainwindow.cpp" line="9667"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>已移動「%1」至新標籤</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8562"/>
+<location filename="../mainwindow.cpp" line="8545"/>
 <source>show all notes tagged with '%1' (%2)</source>
 <translation>顯示所有標記為「%1」(%2)的筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9359"/>
+<location filename="../mainwindow.cpp" line="9342"/>
 <source>&amp;Remove tags</source>
 <translation>移除標籤(&amp;R)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5647"/>
+<location filename="../mainwindow.cpp" line="5630"/>
 <source>No selected todo lists!</source>
 <translation>未選擇待辦清單！</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="609"/>
+<location filename="../mainwindow.cpp" line="599"/>
 <source>Action not found!</source>
 <translation type="unfinished">Action not found!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="610"/>
+<location filename="../mainwindow.cpp" line="600"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
 <translation>找不到菜單操作 &lt;code&gt;%1&lt;/code&gt;！ 拼寫是否正確呢？</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="897"/>
+<location filename="../mainwindow.cpp" line="887"/>
 <source>Subfolders</source>
 <translation>子資料夾</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="909"/>
+<location filename="../mainwindow.cpp" line="899"/>
 <source>Tags</source>
 <translation>標籤</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="918"/>
+<location filename="../mainwindow.cpp" line="908"/>
 <source>Note search</source>
 <translation>筆記搜尋</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="947"/>
+<location filename="../mainwindow.cpp" line="937"/>
 <source>Note list</source>
 <translation>筆記清單</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="972"/>
+<location filename="../mainwindow.cpp" line="962"/>
 <source>Note edit</source>
 <translation>筆記編輯</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="984"/>
+<location filename="../mainwindow.cpp" line="974"/>
 <source>Note tags</source>
 <translation>筆記標籤</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="995"/>
+<location filename="../mainwindow.cpp" line="985"/>
 <source>Note preview</source>
 <translation>筆記預覽</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1003"/>
+<location filename="../mainwindow.cpp" line="993"/>
 <source>Log</source>
 <translation>日誌</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1012"/>
+<location filename="../mainwindow.cpp" line="1002"/>
 <source>Scripting</source>
 <translation>腳本</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1267"/>
+<location filename="../mainwindow.cpp" line="1257"/>
 <source>formatting toolbar</source>
 <translation>格式化工具列</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1276"/>
+<location filename="../mainwindow.cpp" line="1266"/>
 <source>inserting toolbar</source>
 <translation>插入工具列</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1283"/>
+<location filename="../mainwindow.cpp" line="1273"/>
 <source>encryption toolbar</source>
 <translation>加密工具列</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1290"/>
+<location filename="../mainwindow.cpp" line="1280"/>
 <source>window toolbar</source>
 <translation>視窗工具列</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1295"/>
+<location filename="../mainwindow.cpp" line="1285"/>
 <source>custom action toolbar</source>
 <translation>游標動作工具列</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1315"/>
+<location filename="../mainwindow.cpp" line="1305"/>
 <source>Workspace selector</source>
 <translation>工作空間工具列</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1465"/>
+<location filename="../mainwindow.cpp" line="1455"/>
 <source>Show %1 panel</source>
 <translation>顯示 %1 面板</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1510"/>
+<location filename="../mainwindow.cpp" line="1500"/>
 <source>Show %1</source>
 <translation>顯示 %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1837"/>
+<location filename="../mainwindow.cpp" line="1827"/>
 <source>Leave distraction free mode</source>
 <translation>離開無干擾模式</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2027"/>
+<location filename="../mainwindow.cpp" line="2017"/>
 <source>Switch to note folder</source>
 <translation>切換到記事文件夾
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2422"/>
+<location filename="../mainwindow.cpp" line="2412"/>
 <source>show notes in folder '%1' (%2)</source>
 <translation>顯示「%1」 (%2) 內的筆記</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2639"/>
+<location filename="../mainwindow.cpp" line="2629"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>無名工具列無法被載入</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2960"/>
+<location filename="../mainwindow.cpp" line="2950"/>
 <source>Overwriting external changes of: %1</source>
 <translation>覆寫外部修改： %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2981"/>
+<location filename="../mainwindow.cpp" line="2971"/>
 <source>Loading external changes from: %1</source>
 <translation>載入外部修改自： %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3017"/>
-<location filename="../mainwindow.cpp" line="6174"/>
+<location filename="../mainwindow.cpp" line="3007"/>
+<location filename="../mainwindow.cpp" line="6157"/>
 <source>Current note could not be stored to disk</source>
 <translation>此筆記無法存至磁碟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3200"/>
+<location filename="../mainwindow.cpp" line="3190"/>
 <source>Read-only</source>
 <translation>唯讀</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3202"/>
+<location filename="../mainwindow.cpp" line="3192"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>筆記編輯已停用，點此啟用</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3219"/>
+<location filename="../mainwindow.cpp" line="3209"/>
 <source>Line numbers</source>
 <translation>行號</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3229"/>
+<location filename="../mainwindow.cpp" line="3219"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>點此查看修改項目並更新至最新版本</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3599"/>
+<location filename="../mainwindow.cpp" line="3589"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>繼續自動刪除&lt;strong&gt;％n &lt;/ strong&gt;衝突的數據庫副本，這可能會阻止您自己的ownCloud同步過程？</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5081"/>
+<location filename="../mainwindow.cpp" line="5071"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n 則筆記已標為「%2」</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5873"/>
+<location filename="../mainwindow.cpp" line="5856"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>找到&lt;strong&gt;％1 &lt;/ strong&gt;的&lt;strong&gt;％n &lt;/ strong&gt;個事件</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6235"/>
+<location filename="../mainwindow.cpp" line="6218"/>
 <source>Note headline</source>
 <translation>筆記標題</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6454"/>
+<location filename="../mainwindow.cpp" line="6437"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
 <translation>找不到便箋。&lt;br/&gt;由於當前便箋文件夾的子文件夾已禁用，因此無法在該位置自動創建便箋。</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6468"/>
+<location filename="../mainwindow.cpp" line="6451"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>找不到筆記 , 是否在路徑&lt;strong&gt;％2&lt;/strong&gt;上創建新筆記&lt;strong&gt;％1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6895"/>
+<location filename="../mainwindow.cpp" line="6878"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
 <translation>將選定的文字標示為引言區塊</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7941"/>
+<location filename="../mainwindow.cpp" line="7924"/>
 <source>Downloading images finished</source>
 <translation>下載圖片完成</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8096"/>
+<location filename="../mainwindow.cpp" line="8079"/>
 <source>Increased font size to %1 pt</source>
 <translation>放大字體至 %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8113"/>
+<location filename="../mainwindow.cpp" line="8096"/>
 <source>Decreased font size to %1 pt</source>
 <translation>縮小字體至 %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5613"/>
-<location filename="../mainwindow.cpp" line="5628"/>
-<location filename="../mainwindow.cpp" line="5651"/>
-<location filename="../mainwindow.cpp" line="10821"/>
+<location filename="../mainwindow.cpp" line="5596"/>
+<location filename="../mainwindow.cpp" line="5611"/>
+<location filename="../mainwindow.cpp" line="5634"/>
+<location filename="../mainwindow.cpp" line="10804"/>
 <source>Open &amp;settings</source>
 <translation>開啟設定(&amp;S)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1834"/>
-<location filename="../mainwindow.cpp" line="12778"/>
+<location filename="../mainwindow.cpp" line="1824"/>
+<location filename="../mainwindow.cpp" line="12761"/>
 <source>leave</source>
 <translation>離開</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7344"/>
+<location filename="../mainwindow.cpp" line="7327"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>請輸入您的&lt;strong&gt;密碼&lt;/strong&gt;以加密筆記。&lt;br /&gt;請留意您得&lt;strong&gt;記得&lt;/strong&gt;您的密碼才能存取筆記&lt;br /&gt;且您&lt;strong&gt;僅能在QOwnNotes內&lt;/strong&gt;存取！</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7417"/>
+<location filename="../mainwindow.cpp" line="7400"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>解密筆記並存為明文</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7422"/>
+<location filename="../mainwindow.cpp" line="7405"/>
 <source>&amp;Decrypt</source>
 <translation>解密(&amp;D)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7447"/>
+<location filename="../mainwindow.cpp" line="7430"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br /&gt;您將可編輯您的加密筆記。</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7516"/>
+<location filename="../mainwindow.cpp" line="7499"/>
 <source>Export current note as Markdown file</source>
 <translation>將本筆記匯出為Markdown檔</translation>
 </message>
@@ -4621,27 +4611,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>&lt;br /&gt;路徑： %1</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1060"/>
-<source>Keep in mind that if you apply this mode change automatically you need to restart the application every time after you start the application and the Windows mode was changed!</source>
-<translation type="unfinished">Keep in mind that if you apply this mode change automatically you need to restart the application every time after you start the application and the Windows mode was changed!</translation>
-</message>
-<message>
-<location filename="../utils/gui.cpp" line="1068"/>
+<location filename="../utils/gui.cpp" line="1064"/>
 <source>Dark mode detected</source>
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1069"/>
+<location filename="../utils/gui.cpp" line="1065"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
 <translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1082"/>
+<location filename="../utils/gui.cpp" line="1077"/>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1083"/>
+<location filename="../utils/gui.cpp" line="1078"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
 <translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
@@ -4656,17 +4641,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>參數為&lt;code&gt;％2&lt;/code&gt;的命令&lt;code&gt;％1&lt;/code&gt;失敗 !</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4267"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4260"/>
 <source>New connection</source>
 <translation>新連接</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4448"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4441"/>
 <source>Login flow succeeded</source>
 <translation type="unfinished">Login flow succeeded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4449"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4442"/>
 <source>Username and password were set successfully!</source>
 <translation type="unfinished">Username and password were set successfully!</translation>
 </message>
@@ -4676,17 +4661,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>默認</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="263"/>
+<location filename="../main.cpp" line="268"/>
 <source>Note folder not found!</source>
 <translation>找不到記事文件夾！</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="264"/>
+<location filename="../main.cpp" line="269"/>
 <source>Your note folder was not found any more! Do you want to select a new one?</source>
 <translation>找不到您的記事文件夾！ 您要選擇一個新的嗎？</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="271"/>
+<location filename="../main.cpp" line="276"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>請選擇資料夾作為您筆記的棲身之地</translation>
 </message>
@@ -4749,6 +4734,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../services/owncloudservice.cpp" line="2280"/>
 <source>Could not parse login url!</source>
 <translation type="unfinished">Could not parse login url!</translation>
+</message>
+<message>
+<location filename="../utils/misc.cpp" line="929"/>
+<source>
+
+Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</source>
+<translation type="unfinished">
+
+Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</translation>
 </message>
 </context>
 <context>
@@ -5643,8 +5637,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <location filename="../dialogs/settingsdialog.ui" line="4411"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2306"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2314"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4337"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4342"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4330"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4335"/>
 <source>Database</source>
 <translation>資料庫</translation>
 </message>
@@ -6270,7 +6264,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4388"/>
 <location filename="../dialogs/settingsdialog.cpp" line="4073"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4097"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
 <source>Import settings</source>
 <translation>匯入設定</translation>
 </message>
@@ -7385,7 +7379,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4478"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2325"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4316"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4309"/>
 <source>Debug information</source>
 <translation>除錯資訊</translation>
 </message>
@@ -7541,7 +7535,7 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4038"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4096"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
 <source>INI files</source>
 <translation>INI 檔案</translation>
 </message>
@@ -7551,27 +7545,22 @@ Connection error message: </source>
 <translation>您確定要匯入設定嗎？目前的設定將被覆蓋，且並非所有的設定都會回覆，例如資料夾設定以及您所使用的腳本。您同時也得調整某些設定，特別是跨平台的部份，但您的筆記將完好如初。</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4084"/>
-<source>The application will be quit after the import.</source>
-<translation>匯入後應用程式將會關閉。</translation>
-</message>
-<message>
-<location filename="../dialogs/settingsdialog.cpp" line="4085"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4081"/>
 <source>The application will be restarted after the import.</source>
 <translation>匯入後，應用程式將重新啟動。</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4317"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4310"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>調試信息已復製到剪貼板。</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4338"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4331"/>
 <source>The integrity of the disk database is valid.</source>
 <translation type="unfinished">The integrity of the disk database is valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4343"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4336"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation type="unfinished">The integrity of the disk database is not valid!</translation>
 </message>
@@ -8928,12 +8917,12 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="358"/>
-<location filename="../dialogs/updatedialog.cpp" line="518"/>
-<location filename="../dialogs/updatedialog.cpp" line="526"/>
-<location filename="../dialogs/updatedialog.cpp" line="535"/>
+<location filename="../dialogs/updatedialog.cpp" line="508"/>
+<location filename="../dialogs/updatedialog.cpp" line="516"/>
+<location filename="../dialogs/updatedialog.cpp" line="525"/>
+<location filename="../dialogs/updatedialog.cpp" line="534"/>
 <location filename="../dialogs/updatedialog.cpp" line="544"/>
-<location filename="../dialogs/updatedialog.cpp" line="554"/>
-<location filename="../dialogs/updatedialog.cpp" line="563"/>
+<location filename="../dialogs/updatedialog.cpp" line="553"/>
 <source>Error</source>
 <translation>錯誤</translation>
 </message>
@@ -8971,64 +8960,59 @@ This cannot be undone!</source>
 <translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="479"/>
+<location filename="../dialogs/updatedialog.cpp" line="480"/>
 <source>Restart application</source>
 <translation type="unfinished">Restart application</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="485"/>
-<source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
-</message>
-<message>
-<location filename="../dialogs/updatedialog.cpp" line="491"/>
+<location filename="../dialogs/updatedialog.cpp" line="481"/>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="492"/>
+<location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>Restart</source>
 <translation type="unfinished">Restart</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="492"/>
+<location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>Cancel</source>
 <translation type="unfinished">Cancel</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="519"/>
+<location filename="../dialogs/updatedialog.cpp" line="509"/>
 <source>Updater script '%1' doesn't exist!</source>
 <translation>更新程式「%1」並不存在！</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="527"/>
+<location filename="../dialogs/updatedialog.cpp" line="517"/>
 <source>Updater unzip executable '%1' doesn't exist!</source>
 <translation>更新程式 unzip 執行檔「%1」並不存在！</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="536"/>
-<location filename="../dialogs/updatedialog.cpp" line="545"/>
+<location filename="../dialogs/updatedialog.cpp" line="526"/>
+<location filename="../dialogs/updatedialog.cpp" line="535"/>
 <source>Could not copy updater script '%1' to '%2'!</source>
 <translation>無法將更新程式從「%1」複製至「%2」！</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="555"/>
+<location filename="../dialogs/updatedialog.cpp" line="545"/>
 <source>Couldn't find updater script: %1</source>
 <translation>找不到更新程式：%1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="564"/>
+<location filename="../dialogs/updatedialog.cpp" line="554"/>
 <source>Couldn't find unzip executable: %1</source>
 <translation>找不到 unzip 執行檔： %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="341"/>
-<location filename="../dialogs/updatedialog.cpp" line="569"/>
+<location filename="../dialogs/updatedialog.cpp" line="559"/>
 <source>Proceed with update</source>
 <translation>繼續更新</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="570"/>
+<location filename="../dialogs/updatedialog.cpp" line="560"/>
 <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
 <translation>下載已完成。您想更新並重新啟動QOwnNotes嗎？</translation>
 </message>
@@ -9300,47 +9284,47 @@ This cannot be undone!</source>
 <context>
 <name>main</name>
 <message>
-<location filename="../main.cpp" line="96"/>
+<location filename="../main.cpp" line="97"/>
 <source>Runs the application in portable mode.</source>
 <translation>以可攜模式執行本程式</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="102"/>
+<location filename="../main.cpp" line="103"/>
 <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
 <translation>以 GitHub Markdown 輸出一份包含設定以及其他關於應用程式以及環境資訊的訊息並離開程式。</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="111"/>
+<location filename="../main.cpp" line="112"/>
 <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
 <translation>即使設定中部允許，仍允許多個QOwnNotes執行個體啟動。</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="118"/>
+<location filename="../main.cpp" line="119"/>
 <source>Clears the settings and runs the application.</source>
 <translation>清除設定並執行應用程式。</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="124"/>
+<location filename="../main.cpp" line="125"/>
 <source>Runs the application in a different context for settings and internal files.</source>
 <translation>在不同環境設定與內部檔案中執行本程式。</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="133"/>
+<location filename="../main.cpp" line="134"/>
 <source>Triggers a menu action after the application was started.</source>
 <translation type="unfinished">Triggers a menu action after the application was started.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="553"/>
+<location filename="../main.cpp" line="558"/>
 <source>Single application mode is not supported on your system!</source>
 <translation>您的系統不支援使用單執行實體模式！</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="567"/>
+<location filename="../main.cpp" line="572"/>
 <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
 <translation>另一個QOwnNotes已開啟！您可以在設定中關閉單執行實體模式，或採用「--allow-multiple-instances」。</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="618"/>
+<location filename="../main.cpp" line="623"/>
 <source>A second instance of QOwnNotes was attempted to be started!</source>
 <translation>第二個QOwnNotes執行實體正嘗試啟動！</translation>
 </message>
