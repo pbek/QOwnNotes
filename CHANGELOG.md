@@ -5,6 +5,8 @@
   Windows 10 when the application starts (for [#2234](https://github.com/pbek/QOwnNotes/issues/2234))
 - you can now also restart the application automatically in single app instance mode
   when it is required, instead of being forced to do it manually (for [#2235](https://github.com/pbek/QOwnNotes/issues/2235))
+- there now a script `Toggle note list sort order` in the script repository that creates a
+  custom action that toggles the sort order of the note list between `Alphabetical` and `By date`
 - added more German, Persian, Brazilian Portuguese translation (thank you rakekniven, amirkbrpr, marterra)
 
 ## 21.9.6
