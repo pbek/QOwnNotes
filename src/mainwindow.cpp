@@ -572,16 +572,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     // trigger cli parameter menu action if there was any set
     triggerStartupMenuAction();
-
-#ifdef Q_OS_WIN32
-    if (Utils::Gui::doWindowsDarkModeCheck()) {
-        showRestartNotificationIfNeeded(true);
-
-        // The application doesn't seem to quit in this case after
-        // showRestartNotificationIfNeeded
-        QTimer::singleShot(0, this, []() {QApplication::quit();});
-    }
-#endif
 }
 
 /**

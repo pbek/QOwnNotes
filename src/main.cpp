@@ -1,5 +1,6 @@
 #include <services/databaseservice.h>
 #include <services/metricsservice.h>
+#include <utils/gui.h>
 #include <utils/misc.h>
 #include <utils/schema.h>
 #include <widgets/logwidget.h>
@@ -152,6 +153,10 @@ bool mainStartupMisc(const QStringList &arguments) {
     if (!interfaceStyle.isEmpty()) {
         QApplication::setStyle(interfaceStyle);
     }
+
+#ifdef Q_OS_WIN32
+    Utils::Gui::doWindowsDarkModeCheck();
+#endif
 
     bool systemIconTheme =
         settings.value(QStringLiteral("systemIconTheme")).toBool();
