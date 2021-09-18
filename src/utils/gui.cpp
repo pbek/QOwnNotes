@@ -351,7 +351,7 @@ QMessageBox::StandardButton Utils::Gui::showMessageBox(
             msgBox.setDefaultButton(button);
     }
 
-    // set the checkbox in the end so it doesn't get the focus on the dialog.
+    // set the checkbox in the end, so it doesn't get the focus on the dialog
     // this would lead to accidentally checking the checkbox
     msgBox.setCheckBox(checkBox);
 
