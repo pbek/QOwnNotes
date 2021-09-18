@@ -1060,7 +1060,7 @@ bool Utils::Gui::doWindowsDarkModeCheck() {
 
     // Check for Windows dark mode and application default mode
     if (windowsDarkMode && !appDarkMode) {
-        if (Utils::Gui::question(
+        if (Utils::Gui::questionNoSkipOverride(
                 nullptr, QObject::tr("Dark mode detected"),
                 QObject::tr("Your Windows system seems to use the dark mode. "
                         "Do you also want to turn on dark mode in QOwnNotes?"),
@@ -1073,7 +1073,7 @@ bool Utils::Gui::doWindowsDarkModeCheck() {
 
     // Check for Windows light mode and application dark mode
     if (!windowsDarkMode && appDarkMode) {
-        if (Utils::Gui::question(
+        if (Utils::Gui::questionNoSkipOverride(
                 nullptr, QObject::tr("Light mode detected"),
                 QObject::tr("Your Windows system seems to use the light mode. "
                     "Do you also want to turn off dark mode in QOwnNotes?"),

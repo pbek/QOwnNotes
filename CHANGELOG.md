@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.9.9
+- when you answer `No` when asked to automatically switch to dark/light mode
+  under Windows 10 the answer will now really be remembered if you told the 
+  dialog to do so (for [#2234](https://github.com/pbek/QOwnNotes/issues/2234))
+
 ## 21.9.8
 - the colors in the log panel were more adapted for dark mode
 - added more Persian, Catalan translation (thank you amirkbrpr, MGuerra)
