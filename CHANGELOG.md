@@ -4,6 +4,8 @@
 - when you answer `No` when asked to automatically switch to dark/light mode
   under Windows 10 the answer will now really be remembered if you told the 
   dialog to do so (for [#2234](https://github.com/pbek/QOwnNotes/issues/2234))
+- the `Note file extensions` section in the *General settings* has now a better
+  description and a new `list-remove` icon (for [#2236](https://github.com/pbek/QOwnNotes/issues/2236))
 
 ## 21.9.8
 - the colors in the log panel were more adapted for dark mode
