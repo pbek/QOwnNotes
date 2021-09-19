@@ -3783,7 +3783,7 @@ void SettingsDialog::on_searchLineEdit_textChanged(const QString &arg1) {
             }
         }
 
-        // show and hide items according of if index was found in pageIndexList
+        // show and hide items according to if index was found in pageIndexList
         Q_FOREACH (QTreeWidgetItem *item, allItems) {
             // get stored index of list widget item
             int pageIndex = item->whatsThis(0).toInt();
