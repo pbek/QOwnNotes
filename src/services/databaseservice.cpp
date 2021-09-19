@@ -861,6 +861,19 @@ bool DatabaseService::setupTables() {
         version = 36;
     }
 
+    if (version < 37) {
+        // add "txt" and "md" to the note file extensions, so they can also be removed
+        auto extensions = settings.value(
+              QStringLiteral("customNoteFileExtensionList")).toStringList();
+        extensions << "md" << "txt";
+
+        settings.setValue(
+            QStringLiteral("customNoteFileExtensionList"),
+            extensions);
+
+        version = 37;
+    }
+
     if (version != oldVersion) {
         setAppData(QStringLiteral("database_version"),
                    QString::number(version));

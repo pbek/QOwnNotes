@@ -703,7 +703,7 @@ void SettingsDialog::storeSettings() {
                       ui->noteSaveIntervalTime->value());
     settings.setValue(
         QStringLiteral("defaultNoteFileExtension"),
-        getSelectedListWidgetValue(ui->defaultNoteFileExtensionListWidget));
+        ui->defaultNoteFileExtensionListWidget->currentItem()->text());
     settings.setValue(QStringLiteral("localTrash/supportEnabled"),
                       ui->localTrashEnabledCheckBox->isChecked());
     settings.setValue(QStringLiteral("localTrash/autoCleanupEnabled"),
@@ -874,10 +874,9 @@ void SettingsDialog::storeSettings() {
 
     // store the custom note file extensions
     QStringList customNoteFileExtensionList;
-    for (int i = 2; i < ui->defaultNoteFileExtensionListWidget->count(); i++) {
+    for (int i = 0; i < ui->defaultNoteFileExtensionListWidget->count(); i++) {
         QListWidgetItem *item = ui->defaultNoteFileExtensionListWidget->item(i);
-
-        customNoteFileExtensionList.append(item->whatsThis());
+        customNoteFileExtensionList.append(item->text());
     }
     customNoteFileExtensionList.removeDuplicates();
     settings.setValue(QStringLiteral("customNoteFileExtensionList"),
@@ -1389,8 +1388,13 @@ void SettingsDialog::readSettings() {
         addCustomNoteFileExtension(fileExtension);
     }
 
-    selectListWidgetValue(ui->defaultNoteFileExtensionListWidget,
-                          Note::defaultNoteFileExtension());
+    auto noteFileExtensionItems = ui->defaultNoteFileExtensionListWidget->
+              findItems(Note::defaultNoteFileExtension(), Qt::MatchExactly);
+
+    if (noteFileExtensionItems.count() > 0) {
+        ui->defaultNoteFileExtensionListWidget->setCurrentItem(
+            noteFileExtensionItems.at(0));
+    }
 
     bool ignoreSSLErrors =
         settings.value(QStringLiteral("networking/ignoreSSLErrors"), true)
@@ -3286,7 +3290,7 @@ void SettingsDialog::on_addCustomNoteFileExtensionButton_clicked() {
     bool ok;
     QString fileExtension;
     fileExtension = QInputDialog::getText(
-        this, tr("File extension"), tr("Enter your custom file extension:"),
+        this, tr("File extension"), tr("Please enter a new note file extension:"),
         QLineEdit::Normal, fileExtension, &ok);
 
     if (!ok) {
@@ -3308,15 +3312,16 @@ void SettingsDialog::on_addCustomNoteFileExtensionButton_clicked() {
  * Adds a custom note file extension
  */
 QListWidgetItem *SettingsDialog::addCustomNoteFileExtension(
-    const QString &fileExtension) {
-    if (listWidgetValueExists(ui->defaultNoteFileExtensionListWidget,
-                              fileExtension)) {
+    QString fileExtension) {
+    fileExtension = fileExtension.trimmed();
+
+    if (ui->defaultNoteFileExtensionListWidget->findItems(
+            fileExtension, Qt::MatchExactly).count() > 0) {
         return Q_NULLPTR;
     }
 
     auto *item = new QListWidgetItem(fileExtension);
     item->setFlags(item->flags() | Qt::ItemIsEditable);
-    item->setWhatsThis(fileExtension);
     ui->defaultNoteFileExtensionListWidget->addItem(item);
 
     return item;
@@ -3326,7 +3331,12 @@ QListWidgetItem *SettingsDialog::addCustomNoteFileExtension(
  * Removes a custom file extension
  */
 void SettingsDialog::on_removeCustomNoteFileExtensionButton_clicked() {
-    delete (ui->defaultNoteFileExtensionListWidget->currentItem());
+    if (ui->defaultNoteFileExtensionListWidget->count() > 1) {
+        delete (ui->defaultNoteFileExtensionListWidget->currentItem());
+
+        ui->removeCustomNoteFileExtensionButton->setEnabled(
+            ui->defaultNoteFileExtensionListWidget->count() > 1);
+    }
 }
 
 /**
@@ -3336,21 +3346,12 @@ void SettingsDialog::on_defaultNoteFileExtensionListWidget_itemChanged(
     QListWidgetItem *item) {
     // make sure the file extension doesn't start with a point
     QString fileExtension =
-        Utils::Misc::removeIfStartsWith(item->text(), QStringLiteral("."));
+        Utils::Misc::removeIfStartsWith(item->text(), QStringLiteral("."))
+            .trimmed();
 
     if (fileExtension != item->text()) {
         item->setText(fileExtension);
     }
-
-    item->setWhatsThis(fileExtension);
-}
-
-/**
- * Disables the remove custom file extension button for the first two rows
- */
-void SettingsDialog::on_defaultNoteFileExtensionListWidget_currentRowChanged(
-    int currentRow) {
-    ui->removeCustomNoteFileExtensionButton->setEnabled(currentRow > 1);
 }
 
 void SettingsDialog::on_darkModeCheckBox_toggled() {
@@ -4454,4 +4455,16 @@ void SettingsDialog::on_loginFlowCancelButton_clicked() {
     // Hide the login flow cancel button so the login flow timer will be stopped
     ui->loginFlowCancelButton->hide();
     ui->loginFlowButton->show();
+}
+
+/**
+ * Disables the remove custom file extension button is only one item is left
+ *
+ * Needs an additional check when an item is deleted, because that seems to
+ * happen after the selection is changed!
+ */
+void SettingsDialog::on_defaultNoteFileExtensionListWidget_itemSelectionChanged()
+{
+    ui->removeCustomNoteFileExtensionButton->setEnabled(
+        ui->defaultNoteFileExtensionListWidget->count() > 1);
 }

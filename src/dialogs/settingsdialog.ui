@@ -4225,20 +4225,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   <string>Note file extensions</string>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_12">
-                  <item row="2" column="1">
-                   <widget class="QPushButton" name="removeCustomNoteFileExtensionButton">
-                    <property name="toolTip">
-                     <string>Remove a custom file extension</string>
-                    </property>
-                    <property name="text">
-                     <string notr="true"/>
-                    </property>
-                    <property name="icon">
-                     <iconset theme="list-remove" resource="../breeze-qownnotes.qrc">
-                      <normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</iconset>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="1" column="0" colspan="3">
                    <widget class="QListWidget" name="defaultNoteFileExtensionListWidget">
                     <property name="minimumSize">
@@ -4253,38 +4239,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                       <height>16777215</height>
                      </size>
                     </property>
-                    <property name="toolTip">
-                     <string>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>Text file (txt)</string>
-                     </property>
-                     <property name="whatsThis">
-                      <string notr="true">txt</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string notr="true">Markdown (md)</string>
-                     </property>
-                     <property name="whatsThis">
-                      <string notr="true">md</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item row="2" column="0">
-                   <widget class="QPushButton" name="addCustomNoteFileExtensionButton">
-                    <property name="toolTip">
-                     <string>Add a custom file extension</string>
-                    </property>
-                    <property name="text">
-                     <string notr="true"/>
-                    </property>
-                    <property name="icon">
-                     <iconset theme="list-add" resource="../breeze-qownnotes.qrc">
-                      <normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</iconset>
+                    <property name="sortingEnabled">
+                     <bool>true</bool>
                     </property>
                    </widget>
                   </item>
@@ -4304,10 +4260,38 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   <item row="0" column="0" colspan="3">
                    <widget class="QLabel" name="label_33">
                     <property name="text">
-                     <string>Extensions in this list will be recognized as notes, the selected extension will be used for new notes.</string>
+                     <string>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</string>
                     </property>
                     <property name="wordWrap">
                      <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QPushButton" name="addCustomNoteFileExtensionButton">
+                    <property name="toolTip">
+                     <string>Add a new note file extension</string>
+                    </property>
+                    <property name="text">
+                     <string notr="true"/>
+                    </property>
+                    <property name="icon">
+                     <iconset theme="list-add" resource="../breeze-qownnotes.qrc">
+                      <normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QPushButton" name="removeCustomNoteFileExtensionButton">
+                    <property name="toolTip">
+                     <string>Remove selected note file extension</string>
+                    </property>
+                    <property name="text">
+                     <string notr="true"/>
+                    </property>
+                    <property name="icon">
+                     <iconset theme="list-remove" resource="../breeze-qownnotes.qrc">
+                      <normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</iconset>
                     </property>
                    </widget>
                   </item>
@@ -6756,8 +6740,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

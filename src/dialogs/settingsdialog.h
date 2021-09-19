@@ -170,9 +170,6 @@ class SettingsDialog : public MasterDialog {
     void on_defaultNoteFileExtensionListWidget_itemChanged(
         QListWidgetItem *item);
 
-    void on_defaultNoteFileExtensionListWidget_currentRowChanged(
-        int currentRow);
-
     void on_darkModeCheckBox_toggled();
 
     void on_noteFolderShowSubfoldersCheckBox_toggled(bool checked);
@@ -318,6 +315,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_loginFlowCancelButton_clicked();
 
+    void on_defaultNoteFileExtensionListWidget_itemSelectionChanged();
+
 private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;
@@ -379,7 +378,7 @@ private:
 
     void validateCurrentScript();
 
-    QListWidgetItem *addCustomNoteFileExtension(const QString &fileExtension);
+    QListWidgetItem *addCustomNoteFileExtension(QString fileExtension);
 
     void loadShortcutSettings();
 
