@@ -3338,12 +3338,23 @@ QListWidgetItem *SettingsDialog::addCustomNoteFileExtension(
  * Removes a custom file extension
  */
 void SettingsDialog::on_removeCustomNoteFileExtensionButton_clicked() {
-    if (ui->defaultNoteFileExtensionListWidget->count() > 1) {
-        delete (ui->defaultNoteFileExtensionListWidget->currentItem());
-
-        ui->removeCustomNoteFileExtensionButton->setEnabled(
-            ui->defaultNoteFileExtensionListWidget->count() > 1);
+    if (ui->defaultNoteFileExtensionListWidget->count() <= 1) {
+        return;
     }
+
+    auto *item = ui->defaultNoteFileExtensionListWidget->currentItem();
+
+    if (Utils::Gui::question(this, tr("Remove note file extension"),
+             tr("Do you really want to remove the note file extension "
+                                "<strong>%1</strong>?").arg(item->text()),
+            QStringLiteral("remove-note-file-extension")) != QMessageBox::Yes) {
+        return;
+    }
+
+    delete item;
+
+    ui->removeCustomNoteFileExtensionButton->setEnabled(
+        ui->defaultNoteFileExtensionListWidget->count() > 1);
 }
 
 /**

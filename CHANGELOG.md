@@ -1,8 +1,9 @@
 # QOwnNotes Changelog
 
 ## 21.9.10
-- some tooltips were added to the file extensions in the `Note file extensions`
-  section in the *General settings* (for [#2236](https://github.com/pbek/QOwnNotes/issues/2236))
+- some tooltips were added to the file extensions and a removal confirmation
+  dialog was added to the `Note file extensions` section in the *General settings*
+  (for [#2236](https://github.com/pbek/QOwnNotes/issues/2236))
 
 ## 21.9.9
 - when you answer `No` when asked to automatically switch to dark/light mode

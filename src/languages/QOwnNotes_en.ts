@@ -4664,17 +4664,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4268"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4279"/>
         <source>New connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4449"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4460"/>
         <source>Login flow succeeded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4450"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4461"/>
         <source>Username and password were set successfully!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5654,8 +5654,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <location filename="../dialogs/settingsdialog.ui" line="4405"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2310"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2318"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="4338"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="4343"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4349"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4354"/>
         <source>Database</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6269,20 +6269,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4195"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="4015"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4026"/>
         <source>Reset message boxes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4382"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="4081"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="4102"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4092"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4113"/>
         <source>Import settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4389"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="4047"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4058"/>
         <source>Export settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7390,7 +7390,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4472"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2329"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="4317"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4328"/>
         <source>Debug information</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7555,33 +7555,43 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4046"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="4101"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3347"/>
+        <source>Remove note file extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="3348"/>
+        <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="4057"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4112"/>
         <source>INI files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4082"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4093"/>
         <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4089"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4100"/>
         <source>The application will be restarted after the import.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4318"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4329"/>
         <source>The debug information was copied to the clipboard.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4339"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4350"/>
         <source>The integrity of the disk database is valid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4344"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4355"/>
         <source>The integrity of the disk database is not valid!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7670,58 +7680,58 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3626"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3637"/>
         <source>Calendar cache emptied</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3627"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3638"/>
         <source>Your calendar cache was emptied.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3708"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3719"/>
         <source>Reset toolbars and exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3709"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3720"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3713"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3724"/>
         <source>Reset and &amp;exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3871"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3882"/>
         <source>Log file cleared</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3872"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3883"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3908"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3919"/>
         <source>Executable files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3909"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3911"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3920"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3922"/>
         <source>All files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3919"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3930"/>
         <source>Please select the path of your git executable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4016"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4027"/>
         <source>Do you really want to reset the overrides of all message boxes?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7795,7 +7805,7 @@ Your notes will stay intact!</source>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="2314"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2388"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3713"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3724"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
