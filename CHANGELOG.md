@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.9.10
+- some tooltips were added to the file extensions in the `Note file extensions`
+  section in the *General settings* (for [#2236](https://github.com/pbek/QOwnNotes/issues/2236))
+
 ## 21.9.9
 - when you answer `No` when asked to automatically switch to dark/light mode
   under Windows 10 the answer will now really be remembered if you told the 

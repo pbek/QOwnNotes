@@ -3322,6 +3322,13 @@ QListWidgetItem *SettingsDialog::addCustomNoteFileExtension(
 
     auto *item = new QListWidgetItem(fileExtension);
     item->setFlags(item->flags() | Qt::ItemIsEditable);
+
+    if (fileExtension == "md") {
+        item->setToolTip(tr("Markdown file"));
+    } else if (fileExtension == "txt") {
+        item->setToolTip(tr("Plain text file"));
+    }
+
     ui->defaultNoteFileExtensionListWidget->addItem(item);
 
     return item;
