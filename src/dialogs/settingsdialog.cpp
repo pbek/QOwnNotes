@@ -3346,7 +3346,8 @@ void SettingsDialog::on_removeCustomNoteFileExtensionButton_clicked() {
 
     if (Utils::Gui::question(this, tr("Remove note file extension"),
              tr("Do you really want to remove the note file extension "
-                                "<strong>%1</strong>?").arg(item->text()),
+                        "<strong>%1</strong>? You will not see files with this "
+                        "extension in the note list any more!").arg(item->text()),
             QStringLiteral("remove-note-file-extension")) != QMessageBox::Yes) {
         return;
     }
