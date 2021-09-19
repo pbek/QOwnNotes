@@ -1,8 +1,11 @@
 # QOwnNotes Changelog
 
 ## 21.9.10
+- now `md` or `txt` files will not be shown anymore in the note list when they
+  were removed from the list in the `Note file extensions` section of the
+  *General settings* (for [#2236](https://github.com/pbek/QOwnNotes/issues/2236))
 - some tooltips were added to the file extensions and a removal confirmation
-  dialog was added to the `Note file extensions` section in the *General settings*
+  dialog was added to the `Note file extensions` section of the *General settings*
   (for [#2236](https://github.com/pbek/QOwnNotes/issues/2236))
 
 ## 21.9.9

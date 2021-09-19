@@ -3273,13 +3273,10 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 
     QDir notesDir(notePath);
 
-    // only show markdown and text files
-    QStringList filters{"*.txt", "*.md"};
+    // only show certain files
+    auto filters = Note::customNoteFileExtensionList(QStringLiteral("*."));
 
-    // append the custom extensions
-    filters.append(Note::customNoteFileExtensionList(QStringLiteral("*.")));
-
-    // show newest entry first
+    // show the newest entry first
     QStringList files = notesDir.entryList(filters, QDir::Files, QDir::Time);
     //    qDebug() << __func__ << " - 'files': " << files;
 
@@ -7958,11 +7955,7 @@ bool MainWindow::isValidMediaFile(QFile *file) {
  * Evaluates if file is a note file
  */
 bool MainWindow::isValidNoteFile(QFile *file) {
-    QStringList mediaExtensions = QStringList({"txt", "md"});
-
-    // append the custom extensions
-    mediaExtensions.append(Note::customNoteFileExtensionList());
-
+    auto mediaExtensions = Note::customNoteFileExtensionList();
     const QFileInfo fileInfo(file->fileName());
     const QString extension = fileInfo.suffix();
     return mediaExtensions.contains(extension, Qt::CaseInsensitive);
