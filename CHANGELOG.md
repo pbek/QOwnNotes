@@ -9,6 +9,7 @@
 - you are now able to also remove the `md` or `txt` note file extensions in the
   `Note file extensions` section in the *General settings* if you don't want one
   of them to be used to recognize note files in your note folder (for [#2236](https://github.com/pbek/QOwnNotes/issues/2236))
+- added more German, Persian, Brazilian Portuguese translation (thank you amirkbrpr, marterra)
 
 ## 21.9.8
 - the colors in the log panel were more adapted for dark mode
