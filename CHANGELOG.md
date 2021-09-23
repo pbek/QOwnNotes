@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.9.11
+- an issue with the note counts initially not showing up in the *Tags panel* on
+  Windows was fixed (for [#2239](https://github.com/pbek/QOwnNotes/issues/2239))
+
 ## 21.9.10
 - now `md` or `txt` files will not be shown anymore in the note list when they
   were removed from the list in the `Note file extensions` section of the
