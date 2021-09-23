@@ -8184,7 +8184,8 @@ void MainWindow::reloadTagTree() {
     qDebug() << __func__ << " - 'noteSubFolderIds': " << noteSubFolderIds;
 
     QVector<int> noteIdList;
-    int untaggedNoteCount = 0;
+    int untaggedNoteCount = NoteFolder::isCurrentShowSubfolders() ?
+                0 : Note::countAllNotTagged(0);
     // get the notes from the subfolders
     for (int noteSubFolderId : Utils::asConst(noteSubFolderIds)) {
         // get all notes of a note sub folder
@@ -8194,7 +8195,8 @@ void MainWindow::reloadTagTree() {
 
     // create an item to view all notes
     int linkCount =
-        _showNotesFromAllNoteSubFolders ? Note::countAll() : noteIdList.count();
+        _showNotesFromAllNoteSubFolders || !NoteFolder::isCurrentShowSubfolders() ?
+                Note::countAll() : noteIdList.count();
     QString toolTip = tr("show all notes (%1)").arg(QString::number(linkCount));
 
     auto *allItem = new QTreeWidgetItem();
