@@ -3,6 +3,8 @@
 ## 21.9.11
 - an issue with the note counts initially not showing up in the *Tags panel* on
   Windows was fixed (for [#2239](https://github.com/pbek/QOwnNotes/issues/2239))
+- fixed an issue with the application doesn't getting the old cli parameters
+  after a restart by a dialog
 
 ## 21.9.10
 - now `md` or `txt` files will not be shown anymore in the note list when they

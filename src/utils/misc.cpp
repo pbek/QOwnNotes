@@ -906,7 +906,8 @@ void Utils::Misc::needRestart() { qApp->setProperty("needsRestart", true); }
  * Restarts the application
  */
 void Utils::Misc::restartApplication() {
-    QStringList parameters = QApplication::arguments();
+    // QApplication::arguments() didn't contain any parameters!
+    QStringList parameters = qApp->property("arguments").toStringList();
     const QString appPath = parameters.takeFirst();
 
     // we don't want to have our settings cleared again after a restart
