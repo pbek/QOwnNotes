@@ -4672,17 +4672,17 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <translation>Der Befehl &lt;code&gt;%1&lt;/code&gt; mit Argumenten &lt;code&gt;%2&lt;/code&gt; ist fehlgeschlagen!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4261"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4280"/>
 <source>New connection</source>
 <translation>Neue Verbindung</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4442"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4461"/>
 <source>Login flow succeeded</source>
 <translation>Anmeldevorgang abgeschlossen</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4443"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4462"/>
 <source>Username and password were set successfully!</source>
 <translation>Benutzername und Passwort wurden gesetzt!</translation>
 </message>
@@ -4770,9 +4770,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <source>
 
 Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</source>
-<translation type="unfinished">
-
-Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</translation>
+<translation>Beachten Sie, dass beim nächsten Start der Anwendung der Einzel-App-Instanzmodus deaktiviert wird, damit die Anwendung neu gestartet werden kann.</translation>
 </message>
 </context>
 <context>
@@ -5665,8 +5663,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <location filename="../dialogs/settingsdialog.ui" line="4405"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2310"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2318"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4331"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4336"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4350"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4355"/>
 <source>Database</source>
 <translation>Datenbank</translation>
 </message>
@@ -6280,20 +6278,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4195"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4008"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4027"/>
 <source>Reset message boxes</source>
 <translation>Nachrichtenfelder zurücksetzen</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4382"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4074"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4095"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4114"/>
 <source>Import settings</source>
 <translation>Einstellungen importieren</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4389"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4040"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4059"/>
 <source>Export settings</source>
 <translation>Einstellungen exportieren</translation>
 </message>
@@ -6460,22 +6458,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4225"/>
 <source>Note file extensions</source>
-<translation type="unfinished">Note file extensions</translation>
+<translation>Dateierweiterungen beachten</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4263"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
-<translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
+<translation>Dateien mit den aufgelisteten Dateierweiterungen werden als Notizen erkannt, die ausgewählte Dateierweiterung wird für neue Notizen verwendet.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4273"/>
 <source>Add a new note file extension</source>
-<translation type="unfinished">Add a new note file extension</translation>
+<translation>Fügen Sie eine neue Dateierweiterung für Notizen hinzu</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4287"/>
 <source>Remove selected note file extension</source>
-<translation type="unfinished">Remove selected note file extension</translation>
+<translation>Ausgewählte Dateierweiterung für Notizen entfernen</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4418"/>
@@ -7401,7 +7399,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4472"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2329"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4310"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4329"/>
 <source>Debug information</source>
 <translation>Debug Informationen</translation>
 </message>
@@ -7558,36 +7556,51 @@ Fehlermeldung: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3293"/>
 <source>Please enter a new note file extension:</source>
-<translation type="unfinished">Please enter a new note file extension:</translation>
+<translation>Bitte geben Sie eine neue Dateierweiterung für Notizen ein:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4039"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3327"/>
+<source>Markdown file</source>
+<translation>Markdown-Datei</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3329"/>
+<source>Plain text file</source>
+<translation>Klartext-Datei</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3347"/>
+<source>Remove note file extension</source>
+<translation>Notiz-Dateierweiterung entfernen</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="4058"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4113"/>
 <source>INI files</source>
 <translation>INI-Dateien</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4075"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>Möchten Sie wirklich die Einstellungen importieren? Ihre aktuellen Einstellungen werden entfernt und nicht jede Einstellung kann wiederhergestellt werden, wie z. B. die Einstellungen des Notiz-Ordners oder eigene Skripte. Einige Einstellungen, insbesondere auf verschiedenen Plattformen, müssen nachträglich gepasst werden. Ihre Notizen sind aber nicht betroffen und bleiben vollständig erhalten!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4082"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4101"/>
 <source>The application will be restarted after the import.</source>
 <translation>Die Anwendung wird nach dem Import neu gestartet.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4330"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>Die Debug-Informationen wurden in die Zwischenablage kopiert.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4332"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4351"/>
 <source>The integrity of the disk database is valid.</source>
 <translation>Die Integrität der Datenbank ist gültig.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4337"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4356"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation>Die Integrität der Datenbank ist nicht gültig!</translation>
 </message>
@@ -7677,58 +7690,63 @@ Fehlermeldung: </translation>
 <translation>Dateiendung</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3619"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3348"/>
+<source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
+<translation>Möchten Sie die Dateierweiterung &lt;strong&gt;%1&lt;/strong&gt; für Notizen wirklich entfernen? Dateien mit dieser Erweiterung werden in der Notizliste nicht mehr angezeigt!</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3638"/>
 <source>Calendar cache emptied</source>
 <translation>Kalender-Zwischenspeicher gelöscht</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3620"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3639"/>
 <source>Your calendar cache was emptied.</source>
 <translation>Ihr Kalender-Zwischenspeicher wurde geleert.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3701"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3720"/>
 <source>Reset toolbars and exit</source>
 <translation>Symbolleisten zurücksetzen und beenden</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3721"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>Möchten Sie wirklich alle Symbolleisten zurücksetzen? Die Anwendung wird beendet und die Standard-Symbolleisten werden wiederhergestellt.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>Reset and &amp;exit</source>
 <translation>Zurücksetzen und &amp;beenden</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3864"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3883"/>
 <source>Log file cleared</source>
 <translation>Protokoll-Datei gelöscht</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3865"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3884"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Die Protokoll-Datei &lt;strong&gt;%1&lt;/strong&gt; wurde gelöscht.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3901"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3920"/>
 <source>Executable files</source>
 <translation>Ausführbare Git-Dateien</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3902"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3904"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3921"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3923"/>
 <source>All files</source>
 <translation>Alle Dateien</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3912"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3931"/>
 <source>Please select the path of your git executable</source>
 <translation>Bitte wählen Sie den Pfad zu Ihrer ausführbaren Git-Anwendung</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4009"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4028"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>Möchten Sie wirklich die Einstellungen für alle Nachrichten-Boxen zurücksetzen?</translation>
 </message>
@@ -7802,7 +7820,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2314"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2388"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Abbrechen</translation>
 </message>

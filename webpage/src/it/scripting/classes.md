@@ -73,7 +73,7 @@ noteSubFolder.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
 });
 ```
 
-Tag (Etichetta)
+Etichetta (Tag)
 ---
 
 ### Proprietà e metodi

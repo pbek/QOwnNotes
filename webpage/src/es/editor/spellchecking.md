@@ -23,14 +23,14 @@ Si el diccionario para su idioma no está en el **Administrador de diccionarios*
 
 | Sr | Código del lenguaje | Lenguaje                   |
 | -- | ------------------- | -------------------------- |
-| 1  | af_ZA               | Afrikaans (South Africa)   |
-| 2  | an_ES               | Aragonese - Spain (ES)     |
+| 1  | af_ZA               | Afrikáans (Sudáfrica)      |
+| 2  | an_ES               | Aragonés                   |
 | 3  | ar                  | Árabe                      |
 | 4  | be_BY               | Bielorruso                 |
 | 5  | bg_BG               | Búlgaro                    |
 | 6  | bn_BD               | Bengalí                    |
-| 7  | bo                  | Tibetan                    |
-| 8  | br_FR               | Breton - France            |
+| 7  | bo                  | Tibetano                   |
+| 8  | br_FR               | Bretón (Francia)           |
 | 9  | bs_BA               | Bosnio                     |
 | 10 | ca                  | Catalán                    |
 | 11 | cs_CZ               | Checo                      |
@@ -40,13 +40,13 @@ Si el diccionario para su idioma no está en el **Administrador de diccionarios*
 | 15 | en                  | Inglés                     |
 | 16 | es                  | Español                    |
 | 17 | et_EE               | Estonio                    |
-| 18 | gd_GB               | Gaelic                     |
-| 19 | gl                  | Galician                   |
-| 20 | gu_IN               | Gujarati                   |
-| 21 | gug                 | Guarani                    |
-| 22 | he_IL               | Hebrew                     |
+| 18 | gd_GB               | Gaélico                    |
+| 19 | gl                  | Gallego                    |
+| 20 | gu_IN               | Guyaratí                   |
+| 21 | gug                 | Guaraní                    |
+| 22 | he_IL               | Hebreo                     |
 | 23 | hi_IN               | Hindi                      |
-| 24 | hr_HR               | Croatian                   |
+| 24 | hr_HR               | Croata                     |
 | 25 | id                  | Indonesio                  |
 | 26 | it_IT               | Italiano                   |
 | 27 | kmr_Latn            | Kurdo (Turquía)            |

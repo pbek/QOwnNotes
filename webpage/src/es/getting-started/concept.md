@@ -131,7 +131,7 @@ Además, también proporciona [Release RSS Fee](http://api.qownnotes.org/rss/app
 Puede acceder al código fuente de [api.qownnotes.org](https://api.qownnotes.org) en [GitHub](https://github.com/qownnotes/api).
 :::
 
-## QOwnNotes Web App
+## Aplicación web de QOwnNotes
 
 Puede insertar fotos de su teléfono móvil en la nota actual en QOwnNotes en su escritorio a través de la **aplicación web ** en [app.qownnotes.org](https://app.qownnotes.org/).
 

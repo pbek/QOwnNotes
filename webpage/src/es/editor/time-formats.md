@@ -14,8 +14,8 @@ Puede utilizar su propio formato de hora al insertar la hora actual en una nota.
 | `MM`      | el mes como número con cero al principio (01 a 12)                   |
 | `MMM`     | el nombre abreviado del mes traducido (p. ej. `ene` a `dic`).        |
 | `MMMM`    | el nombre completo del mes traducido (p. ej. `enero` a `diciembre`). |
-| `yy`      | el año como número de dos dígitos (00-99)                            |
-| `yyyy`    | el año como número de cuatro dígitos                                 |
+| `aa`      | el año como número de dos dígitos (00-99)                            |
+| `aaaa`    | el año como número de cuatro dígitos                                 |
 
 ## Expresiones por tiempo
 

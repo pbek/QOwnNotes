@@ -202,7 +202,7 @@ var markdown = script.insertMediaFile("/path/to/your/image.png");
 
 Puoi dare un'occhiata all'esempio [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
 
-Inserimento di un file allegato nella cartella allegati.
+Inserimento di un file allegato nella cartella allegati
 --------------------------------------------------------
 
 ### Chiamata al metodo e parametri
@@ -424,7 +424,7 @@ Potresti voler esaminare l'azione personalizzata  `transformTextRot13` nel file 
 
 Puoi usarlo insieme a `noteTextEditSelectAll` per sovrascrivere l'intero testo della nota corrente.
 
-Leggi il testo selezionato nella finestra di modifica del testo della nota
+Read the selected text in the note text edit
 --------------------------------------------
 
 ### Chiamata al metodo e parametri

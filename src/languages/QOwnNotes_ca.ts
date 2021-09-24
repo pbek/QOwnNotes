@@ -872,7 +872,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>Usar FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
@@ -943,57 +943,57 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished">Use smartcase</translation>
+<translation>Usar smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished">Use ignorecase</translation>
+<translation>Usar ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished">Use wrapscan</translation>
+<translation>Usar wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished">Use tildeop</translation>
+<translation>Usar tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished">Show partial command</translation>
+<translation>Mostrar l'ordre parcialment</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>Mostrar números de línia en relació al cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished">Blinking cursor</translation>
+<translation>Cursor pampalluguejant</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished">Scroll offset:</translation>
+<translation>Tamany del desplaçament:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished">Backspace:</translation>
+<translation>Enrera:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished">Keyword characters:</translation>
+<translation>Caràcters de les paraules clau:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished">Use Vim-style Editing</translation>
+<translation>Utilitzar edició a l'estil de Vim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
@@ -1013,7 +1013,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished">Vim tabstop option.</translation>
+<translation>Opció tabstop de Vim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
@@ -1023,7 +1023,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>Per defecte: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1611,12 +1611,12 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Importació de Joplin</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="48"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>Importar carpetes</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
@@ -1626,7 +1626,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="37"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>Seleccionar directori</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="152"/>
@@ -1641,12 +1641,12 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="115"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Importar notes</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>Importar etiquetes</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="182"/>
@@ -4635,7 +4635,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../utils/gui.cpp" line="1064"/>
 <source>Dark mode detected</source>
-<translation type="unfinished">Dark mode detected</translation>
+<translation>Mode fosc detectat</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1065"/>
@@ -4645,7 +4645,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../utils/gui.cpp" line="1077"/>
 <source>Light mode detected</source>
-<translation type="unfinished">Light mode detected</translation>
+<translation>Mode clar detectat</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1078"/>
@@ -4663,17 +4663,17 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <translation>L'ordre &lt;code&gt;%1&lt;/code&gt; amb arguments &lt;code&gt;%2&lt;/code&gt; ha fallat!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4261"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4280"/>
 <source>New connection</source>
 <translation>Nova connexió</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4442"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4461"/>
 <source>Login flow succeeded</source>
 <translation type="unfinished">Login flow succeeded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4443"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4462"/>
 <source>Username and password were set successfully!</source>
 <translation>Nom d'usuari i contrassenya s'han establert correctament.</translation>
 </message>
@@ -5657,8 +5657,8 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
 <location filename="../dialogs/settingsdialog.ui" line="4405"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2310"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2318"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4331"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4336"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4350"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4355"/>
 <source>Database</source>
 <translation>Base de dades</translation>
 </message>
@@ -6272,20 +6272,20 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4195"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4008"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4027"/>
 <source>Reset message boxes</source>
 <translation>Restablir els quadres de missatges</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4382"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4074"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4095"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4114"/>
 <source>Import settings</source>
 <translation>Configuració d'importació</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4389"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4040"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4059"/>
 <source>Export settings</source>
 <translation>Configuració d'exportació</translation>
 </message>
@@ -6452,22 +6452,22 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4225"/>
 <source>Note file extensions</source>
-<translation type="unfinished">Note file extensions</translation>
+<translation>Extensions de fitxer per a notes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4263"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
-<translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
+<translation>Els fitxers amb les extensions llistades es reconeixeran com a notes, i la extensió de fitxer seleccionada s'usarà per noves notes.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4273"/>
 <source>Add a new note file extension</source>
-<translation type="unfinished">Add a new note file extension</translation>
+<translation>Afegir una nova extensió de fitxer per a notes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4287"/>
 <source>Remove selected note file extension</source>
-<translation type="unfinished">Remove selected note file extension</translation>
+<translation>Eliminar l'extensió de fitxer seleccionada per a notes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4418"/>
@@ -7393,7 +7393,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4472"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2329"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4310"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4329"/>
 <source>Debug information</source>
 <translation>Informació de depuració</translation>
 </message>
@@ -7553,33 +7553,48 @@ Missatge de l'error de connexió: </translation>
 <translation type="unfinished">Please enter a new note file extension:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4039"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3327"/>
+<source>Markdown file</source>
+<translation>Fitxer Markdown</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3329"/>
+<source>Plain text file</source>
+<translation>Fitxer de text pla</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3347"/>
+<source>Remove note file extension</source>
+<translation type="unfinished">Remove note file extension</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="4058"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4113"/>
 <source>INI files</source>
 <translation>Arxius INI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4075"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>De veritat voleu importar la configuració? La vostra configuració actual s'eliminarà i pot ser que no totes les configuracions quedin restaurades, com per exemple la configuració de la carpeta de notes i quins scripts hi useu. Necessitareu també ajustar alguns paràmetres, especialment entre plataformes, tot i que les notes quedaran intactes!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4082"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4101"/>
 <source>The application will be restarted after the import.</source>
 <translation>L'aplicació es rearrencarà després de la importació.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4330"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>La informació de depuració s'ha copiat al portaretalls.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4332"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4351"/>
 <source>The integrity of the disk database is valid.</source>
 <translation>La integritat de la base de dades al disk és correcta.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4337"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4356"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation>La integritat de la base de dades al disk no és correcta!</translation>
 </message>
@@ -7669,58 +7684,63 @@ Missatge de l'error de connexió: </translation>
 <translation>Extensió del fitxer</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3619"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3348"/>
+<source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
+<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3638"/>
 <source>Calendar cache emptied</source>
 <translation>Memòria cau del calendari buidada</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3620"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3639"/>
 <source>Your calendar cache was emptied.</source>
 <translation>S'ha buidat la memòria cau del calendari.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3701"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3720"/>
 <source>Reset toolbars and exit</source>
 <translation>Reinicialitza les barres d'eines i surt</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3721"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>Segur que voleu reinicialitzar totes les barres d'eines? Es tancarà l'aplicació i les barres d'eines per defecte es restauraran quan arrenqueu de nou.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>Reset and &amp;exit</source>
 <translation>Reinicialitza i surt</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3864"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3883"/>
 <source>Log file cleared</source>
 <translation>Fitxer de registre netejat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3865"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3884"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Netejat el fitxer de registre &lt;strong&gt;%1&lt;/strong&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3901"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3920"/>
 <source>Executable files</source>
 <translation>Fitxers executables</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3902"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3904"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3921"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3923"/>
 <source>All files</source>
 <translation>Tots els fitxers</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3912"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3931"/>
 <source>Please select the path of your git executable</source>
 <translation>Seleccioneu, si us plau, el camí al vostre executable de git</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4009"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4028"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>Esteu segurs que voleu restaurar les personalitzacions de tots els quadres de missatge?</translation>
 </message>
@@ -7796,7 +7816,7 @@ Les notes seguiran intactes!</translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2314"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2388"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>&amp;Cancel</source>
 <translation>Cancel·la</translation>
 </message>

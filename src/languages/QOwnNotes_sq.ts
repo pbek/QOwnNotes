@@ -4680,17 +4680,17 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4261"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4280"/>
 <source>New connection</source>
 <translation>Lidhje e re</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4442"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4461"/>
 <source>Login flow succeeded</source>
 <translation type="unfinished">Login flow succeeded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4443"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4462"/>
 <source>Username and password were set successfully!</source>
 <translation type="unfinished">Username and password were set successfully!</translation>
 </message>
@@ -5679,8 +5679,8 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
 <location filename="../dialogs/settingsdialog.ui" line="4405"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2310"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2318"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4331"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4336"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4350"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4355"/>
 <source>Database</source>
 <translation>Baza e të dhënave</translation>
 </message>
@@ -6296,20 +6296,20 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4195"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4008"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4027"/>
 <source>Reset message boxes</source>
 <translation>Rivendosni kutitë e mesazheve</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4382"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4074"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4095"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4114"/>
 <source>Import settings</source>
 <translation>Parametrat e importit</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4389"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4040"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4059"/>
 <source>Export settings</source>
 <translation>Cilësimet e eksportit</translation>
 </message>
@@ -7420,7 +7420,7 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4472"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2329"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4310"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4329"/>
 <source>Debug information</source>
 <translation>Informacion për debug</translation>
 </message>
@@ -7580,33 +7580,48 @@ Mesazhi i gabimit në lidhje:</translation>
 <translation type="unfinished">Please enter a new note file extension:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4039"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3327"/>
+<source>Markdown file</source>
+<translation type="unfinished">Markdown file</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3329"/>
+<source>Plain text file</source>
+<translation type="unfinished">Plain text file</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3347"/>
+<source>Remove note file extension</source>
+<translation type="unfinished">Remove note file extension</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="4058"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4113"/>
 <source>INI files</source>
 <translation>Skedarët INI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4075"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>A doni vërtet të importoni cilësimet? Cilësimet e tua të tanishme do të hiqen dhe jo çdo cilësim mund të rikthehet, si cilësimet e dosjes së shënimeve dhe cilat skenare që ke përdorur. Ju gjithashtu do të duhet të rregulloni disa cilësime, veçanërisht nëpër platforma, por shënimet tuaja do të qëndrojnë të paprekura!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4082"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4101"/>
 <source>The application will be restarted after the import.</source>
 <translation>Aplikimi do të rindizet pas importit.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4330"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>Informacioni i korrigjimit u kopjua në klipboard.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4332"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4351"/>
 <source>The integrity of the disk database is valid.</source>
 <translation type="unfinished">The integrity of the disk database is valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4337"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4356"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation type="unfinished">The integrity of the disk database is not valid!</translation>
 </message>
@@ -7696,58 +7711,63 @@ Mesazhi i gabimit në lidhje:</translation>
 <translation>Zgjatja e skedarit</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3619"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3348"/>
+<source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
+<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3638"/>
 <source>Calendar cache emptied</source>
 <translation>Cache i kalendarit zbrazet</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3620"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3639"/>
 <source>Your calendar cache was emptied.</source>
 <translation>Cache-ja juaj e kalendarit u zbraz.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3701"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3720"/>
 <source>Reset toolbars and exit</source>
 <translation>Rivendosni shiritat e veglave dhe dilni</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3721"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>A doni vërtet të rivendosni të gjitha shiritat e veglave? Aplikacioni do të mbyllet gjatë procesit, shiritat e veglave të paracaktuar do të rikthehen kur të filloni përsëri.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>Reset and &amp;exit</source>
 <translation>Rivendosni dhe &amp;dilni</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3864"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3883"/>
 <source>Log file cleared</source>
 <translation>Skedari i logit u pastrua</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3865"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3884"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Dosja e regjistrit &lt;strong&gt;%1&lt;/strong&gt; u pastrua.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3901"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3920"/>
 <source>Executable files</source>
 <translation>Skedarë të ekzekutueshëm</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3902"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3904"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3921"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3923"/>
 <source>All files</source>
 <translation>Te gjitha dokumentet</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3912"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3931"/>
 <source>Please select the path of your git executable</source>
 <translation>Ju lutemi zgjidhni rrugën e git tuaj të ekzekutueshëm</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4009"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4028"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>Me të vërtetë dëshironi të rivendosni tejkalimet e të gjitha kutive të mesazheve?</translation>
 </message>
@@ -7823,7 +7843,7 @@ Shënimet tuaja do të qëndrojnë të paprekura!</translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2314"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2388"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Anuloj</translation>
 </message>

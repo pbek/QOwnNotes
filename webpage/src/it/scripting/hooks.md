@@ -229,7 +229,7 @@ function noteToMarkdownHtmlHook(note, html, forExport);
 
 Puoi dare un'occhiata all'esempio [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) o [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
 
-Fare riferimento al [HTML supportato Documentazione del sottoinsieme](http://doc.qt.io/qt-5/richtext-html-subset.html) per un elenco di tutti gli stili CSS supportati.
+Fai riferimento al documento [Sottoinsieme di HTML supportato](http://doc.qt.io/qt-5/richtext-html-subset.html) per un elenco di tutti gli stili CSS supportati.
 
 encryptionHook
 --------------

@@ -104,7 +104,7 @@ Lo que otras personas dijeron sobre QOwnNotes ...
 - [QOwnNotes - Make Tech Easier Software](https://www.maketecheasier.com/software/qownnotes/)
 - [QOwnNotes 18.11.3 ~ Software182 | Free Download Software Updates !](https://www.software182.com/2018/11/qownnotes.html)
 - [第530回 QOwnNotesでメモを取る：Ubuntu Weekly Recipe｜gihyo.jp … 技術評論社](https://gihyo.jp/admin/serial/01/ubuntu-recipe/0530)
-    - Japanese screenshots
+    - Capturas de pantalla en japonés
 - Article in magazine of [PC Press PC #260](http://pc.pcpress.rs/broj.php?broj=260)
 - [Er zijn veel open source Linux apps om notities te nemen en taken bij te houden. QOwnNotes doet beiden. QOwnNotes slaat notities op in tekstbestanden en ondersteunt de opmaakstandaard Markdown. : PindaNet](https://www.reddit.com/r/PindaNet/comments/acw0sr/er_zijn_veel_open_source_linux_apps_om_notities/)
 - [QownNotes 19.2.5 скачать – менеджер заметок с функцией синхронизацией.](https://zoomexe.net/ofis/organizers/3649-qownnotes.html)
@@ -198,7 +198,7 @@ Lo que otras personas dijeron sobre QOwnNotes ...
 - [Tools to support your markdown authoring · karthik/markdown_science Wiki · GitHub](https://github.com/karthik/markdown_science/wiki/Tools-to-support-your-markdown-authoring)
 - [List of Qt Applications - Manjaro Linux](https://wiki.manjaro.org/index.php?title=List_of_Qt_Applications)
 - [Plain Text and Google keep Is a Killer Combo for Notes and Organization — Nick Janetakis](https://nickjanetakis.com/blog/plain-text-and-google-keep-is-a-killer-combo-for-notes-and-organization)
-    - comment
+    - comentario
 - <https://www.linux.org.ru/search.jsp?q=qownnotes&range=ALL&interval=ALL&user=&_usertopic=on>
 - [Recommended Zettelkasten Method programs for Windows? - Zettelkasten Forum](https://forum.zettelkasten.de/discussion/39/recommended-zettelkasten-method-prog)
 - <http://www.thumbapps.org/2016/07/Evernote-portable-32-64-bit.html>
@@ -243,7 +243,7 @@ Lo que otras personas dijeron sobre QOwnNotes ...
     - Martin Wimpress
 - [Offline Computing – 10 Apps for the Digital Nomad | Snapcraft](https://snapcraft.io/blog/offline-computing-10-apps-for-the-digital-nomad)
     - Alan Pope
-- [LXDE vs LXQT, which is better? - General Discussion - Manjaro Linux Forum](https://forum.manjaro.org/t/lxde-vs-lxqt-which-is-better/76943/8)
+- [Entre LXDE y LXQT, ¿cuál es mejor? - General Discussion - Manjaro Linux Forum](https://forum.manjaro.org/t/lxde-vs-lxqt-which-is-better/76943/8)
 - [QOwnNotes and Markor | Brent Huisman](https://brent.huisman.pl/qownnotes-and-markor/)
 - **[Self-Hosted 18: Ring Doorbell Alternative](https://selfhosted.show/18)***
     - <https://selfhosted.show/18?t=1088> Several minutes about QON

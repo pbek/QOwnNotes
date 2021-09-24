@@ -4823,17 +4823,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>فشل في تنفيذ الأمر &lt;code&gt;%1&lt;/code&gt;  ذي القيمة &lt;code&gt;%2&lt;/code&gt; </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4261"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4280"/>
 <source>New connection</source>
 <translation>اتصال جديد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4442"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4461"/>
 <source>Login flow succeeded</source>
 <translation type="unfinished">Login flow succeeded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4443"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4462"/>
 <source>Username and password were set successfully!</source>
 <translation type="unfinished">Username and password were set successfully!</translation>
 </message>
@@ -5859,8 +5859,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <location filename="../dialogs/settingsdialog.ui" line="4405"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2310"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2318"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4331"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4336"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4350"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4355"/>
 <source>Database</source>
 <translation>قاعدة البيانات</translation>
 </message>
@@ -6477,20 +6477,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4195"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4008"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4027"/>
 <source>Reset message boxes</source>
 <translation>إعادة تعيين مربعات الرسائل</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4382"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4074"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4095"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4114"/>
 <source>Import settings</source>
 <translation>استيراد الإعدادات</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4389"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4040"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4059"/>
 <source>Export settings</source>
 <translation>تصدير الإعدادات</translation>
 </message>
@@ -7610,7 +7610,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4472"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2329"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4310"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4329"/>
 <source>Debug information</source>
 <translation>معلومات التصحيح</translation>
 </message>
@@ -7770,33 +7770,48 @@ Connection error message: </source>
 <translation type="unfinished">Please enter a new note file extension:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4039"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3327"/>
+<source>Markdown file</source>
+<translation type="unfinished">Markdown file</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3329"/>
+<source>Plain text file</source>
+<translation type="unfinished">Plain text file</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3347"/>
+<source>Remove note file extension</source>
+<translation type="unfinished">Remove note file extension</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="4058"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4113"/>
 <source>INI files</source>
 <translation>ملفات INI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4075"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>هل تريد حقًا استيراد الإعدادات؟ ستتم إزالة إعداداتك الحالية ولن تتم استعادة كل الإعدادات، مثل إعدادات مجلد الملاحظات والبرامج النصية التي كنت تستخدمها. ستحتاج أيضًا إلى ضبط بعض الإعدادات، لا سيما عبر الأنظمة الأساسية، ولكن ستبقى ملاحظاتك سليمة!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4082"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4101"/>
 <source>The application will be restarted after the import.</source>
 <translation>سيتم إعادة تشغيل التطبيق بعد الاستيراد.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4330"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>تم نسخ معلومات التصحيح إلى الحافظة.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4332"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4351"/>
 <source>The integrity of the disk database is valid.</source>
 <translation>سلامة قاعدة بيانات القرص صالحة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4337"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4356"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation>سلامة قاعدة بيانات القرص غير صالحة</translation>
 </message>
@@ -7886,58 +7901,63 @@ Connection error message: </source>
 <translation>امتداد الملف</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3619"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3348"/>
+<source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
+<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3638"/>
 <source>Calendar cache emptied</source>
 <translation>تم تفريغ الذاكرة المؤقتة للتقويم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3620"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3639"/>
 <source>Your calendar cache was emptied.</source>
 <translation>لقد تم تفريغ الذاكرة المؤقتة لتقويمك.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3701"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3720"/>
 <source>Reset toolbars and exit</source>
 <translation>أعد تعيين أشرطة الأدوات ثم اخرج</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3721"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>هل تريد حقاً إعادة تعيين جميع أشرطة الأدوات؟ سيتم اغلاق البرنامج خلال العملية، وأشرطة الأدوات الافتراضية ستسعاد حين تقوم بتشغيله مجدداً.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>Reset and &amp;exit</source>
 <translation>أعد التعيين واخرج</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3864"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3883"/>
 <source>Log file cleared</source>
 <translation>تم إخلاء ملف السجل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3865"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3884"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>تم إخلاء ملف السجل &lt;strong&gt;%1&lt;/strong&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3901"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3920"/>
 <source>Executable files</source>
 <translation>الملفات القابلة للتنفيذ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3902"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3904"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3921"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3923"/>
 <source>All files</source>
 <translation>جميع الملفات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3912"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3931"/>
 <source>Please select the path of your git executable</source>
 <translation>يرجى اختيار مسار ملف تنفيذ git الخاص بك </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4009"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4028"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>هل تريد حقًا إعادة تعيين التجاوزات لكافة مربعات الرسائل؟</translation>
 </message>
@@ -8013,7 +8033,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2314"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2388"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>&amp;Cancel</source>
 <translation>ألغ</translation>
 </message>

@@ -4677,17 +4677,17 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
 <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4261"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4280"/>
 <source>New connection</source>
 <translation>Bagong koneksyon</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4442"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4461"/>
 <source>Login flow succeeded</source>
 <translation type="unfinished">Login flow succeeded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4443"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4462"/>
 <source>Username and password were set successfully!</source>
 <translation type="unfinished">Username and password were set successfully!</translation>
 </message>
@@ -5676,8 +5676,8 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
 <location filename="../dialogs/settingsdialog.ui" line="4405"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2310"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2318"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4331"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4336"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4350"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4355"/>
 <source>Database</source>
 <translation>Database</translation>
 </message>
@@ -6293,20 +6293,20 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4195"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4008"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4027"/>
 <source>Reset message boxes</source>
 <translation>I-reset ang mensahe ng mga boxe</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4382"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4074"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4095"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4114"/>
 <source>Import settings</source>
 <translation>Mga setting ng import</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4389"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4040"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4059"/>
 <source>Export settings</source>
 <translation>Mga setting ng pag-export</translation>
 </message>
@@ -7418,7 +7418,7 @@ burahin ang pagbigkas karacter</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4472"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2329"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4310"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4329"/>
 <source>Debug information</source>
 <translation>Debug impormasyon</translation>
 </message>
@@ -7578,33 +7578,48 @@ Linyang error na mensahe: </translation>
 <translation type="unfinished">Please enter a new note file extension:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4039"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3327"/>
+<source>Markdown file</source>
+<translation type="unfinished">Markdown file</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3329"/>
+<source>Plain text file</source>
+<translation type="unfinished">Plain text file</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3347"/>
+<source>Remove note file extension</source>
+<translation type="unfinished">Remove note file extension</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="4058"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4113"/>
 <source>INI files</source>
 <translation>INI na mga file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4075"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>Nais mo bang i-import ang mga setting? Ang iyong kasalukuyang setting ay aalisin at hindi bawat setting ay maaaring maibalik, tulad ng mga setting ng folder ng tala at kung aling mga script ang iyong ginagamit. Kailangan mo ring ayusin ang ilang mga setting, lalo na sa mga platform, ngunit mananatiling buo ang iyong mga tala!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4082"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4101"/>
 <source>The application will be restarted after the import.</source>
 <translation>Ang application ay mai-restart pagkatapos ng pag-import.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4330"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>Ang impormasyon ng debug ay kinopya sa clipboard.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4332"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4351"/>
 <source>The integrity of the disk database is valid.</source>
 <translation type="unfinished">The integrity of the disk database is valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4337"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4356"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation type="unfinished">The integrity of the disk database is not valid!</translation>
 </message>
@@ -7696,58 +7711,63 @@ Linyang error na mensahe: </translation>
 <translation>File extension</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3619"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3348"/>
+<source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
+<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3638"/>
 <source>Calendar cache emptied</source>
 <translation>Cache ng kalendaryo na trash can</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3620"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3639"/>
 <source>Your calendar cache was emptied.</source>
 <translation>Ibinuhos ang laman iyong cache ng kalendaryo.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3701"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3720"/>
 <source>Reset toolbars and exit</source>
 <translation>I-reset ang mga kasangkapang bar at lumabas</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3721"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>Talaga gusto mo bang magreset ng lahat ng kasangkapan bar? Ang application ay isasara sa proseso, ang mga default kasangkapan-bar ay ibabalik kapag muli mong simulan ang mga ito.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>Reset and &amp;exit</source>
 <translation>I-reset ang at &amp; lumabas</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3864"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3883"/>
 <source>Log file cleared</source>
 <translation>Mga file ng log na clear</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3865"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3884"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Nalinis ang log file na &lt;strong&gt;%1&lt;/strong&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3901"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3920"/>
 <source>Executable files</source>
 <translation>Executable file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3902"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3904"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3921"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3923"/>
 <source>All files</source>
 <translation>Lahat ng mga file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3912"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3931"/>
 <source>Please select the path of your git executable</source>
 <translation>Mangyaring piliin ang landas ng iyong git executable</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4009"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4028"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>Gusto mo ba talagang i-reset ang mga Napatungang ng lahat ng mga kahon ng mensahe?</translation>
 </message>
@@ -7821,7 +7841,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2314"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2388"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>&amp;Cancel</source>
 <translation>&amp; Kanselahin</translation>
 </message>

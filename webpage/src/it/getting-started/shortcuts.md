@@ -131,9 +131,9 @@
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> apre l'elenco delle cose da fare
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> apre la nota corrente in un editor esterno
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in a view
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> apre la cartella della nota corrente in Finder
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> enables or disables editing of notes
-- <kbd>Ctrl</kbd> + <kbd>Up</kbd> salta alla nota visibile precedente
+- <kbd>Ctrl</kbd> + <kbd>Up</kbd> vai alla nota vista precedentemente
     - la scorciatoia alternativa è <kbd>⌘</kbd> + <kbd>PgUp</kbd>
 - <kbd>Ctrl</kbd> + <kbd>Down</kbd> passa alla successiva nota visibile
     - la scorciatoia alternativa è <kbd>⌘</kbd> + <kbd>PgDown</kbd>
@@ -141,24 +141,24 @@
 - <kbd>Alt</kbd> + <kbd>PgDn</kbd> passa alla scheda della nota successiva
 - <kbd>⌘</kbd> + <kbd>W</kbd> chiude la scheda della nota corrente
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> attiva / disattiva la modalità senza distrazioni
-    - puoi anche chiuderlo con <kbd>Esc</kbd>
+    - puoi anche chiudere con <kbd>Esc</kbd>
 - <kbd>⌘</kbd> + <kbd>P</kbd> stampa la nota corrente come testo
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> stampa la nota corrente come markdown
 - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>V</kbd> incolla note, immagini e html dagli appunti
 - <kbd>⌘</kbd> + <kbd>,</kbd> apre le impostazioni
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> aggiunge un nuovo tag a una nota
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> aggiunge una nuova etichetta a una nota
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> ricarica la cartella delle note corrente
-- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>F</kbd> consente di selezionare una cartella di note diversa
+- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>F</kbd> consente di scegliere una cartella di note diversa
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> ricarica il motore di scripting
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> nasconde o mostra la barra del menu principale
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> ti consente di cercare azioni
 - <kbd>⌘</kbd> + <kbd>S</kbd> salva manualmente le note modificate
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> apre la finestra di dialogo Repository di script
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> apre la finestra di dialogo dell'archivio script
 - <kbd>F4</kbd> passa al pannello di modifica delle note
-- <kbd>F5</kbd> salta all'elenco delle note
+- <kbd>F5</kbd> vai all'elenco delle note
 - <kbd>F6</kbd> vai al pannello delle sottocartelle delle note
-- <kbd>F7</kbd> vai al pannello dei tag
-- <kbd>F8</kbd> salta al pannello di navigazione
+- <kbd>F7</kbd> vai al pannello delle etichette
+- <kbd>F8</kbd> vai al pannello di navigazione
 - <kbd>F10</kbd> attiva il menu contestuale del widget corrente
 - <kbd>⌘</kbd> + <kbd>F11</kbd> attiva / disattiva la modalità a schermo intero
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copia il titolo della nota corrente

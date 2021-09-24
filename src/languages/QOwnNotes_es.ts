@@ -4643,22 +4643,22 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <location filename="../utils/gui.cpp" line="1064"/>
 <source>Dark mode detected</source>
-<translation type="unfinished">Dark mode detected</translation>
+<translation>Se detectó el modo oscuro</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1065"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>El sistema Windows parece utilizar el modo oscuro. ¿Quiere activarlo también en QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1077"/>
 <source>Light mode detected</source>
-<translation type="unfinished">Light mode detected</translation>
+<translation>Se detectó el modo claro</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1078"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>El sistema Windows parece utilizar el modo claro. ¿Quiere activarlo también en QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="76"/>
@@ -4671,17 +4671,17 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>¡El comando &lt;code&gt;%1&lt;/code&gt; con argumentos &lt;code&gt;%2&lt;/code&gt; falló!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4261"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4280"/>
 <source>New connection</source>
 <translation>Nueva conexión</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4442"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4461"/>
 <source>Login flow succeeded</source>
-<translation type="unfinished">Login flow succeeded</translation>
+<translation>El proceso de acceso se completó exitosamente</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4443"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4462"/>
 <source>Username and password were set successfully!</source>
 <translation type="unfinished">Username and password were set successfully!</translation>
 </message>
@@ -4752,7 +4752,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <location filename="../services/owncloudservice.cpp" line="2264"/>
 <location filename="../services/owncloudservice.cpp" line="2279"/>
 <source>Login flow failed</source>
-<translation type="unfinished">Login flow failed</translation>
+<translation>El proceso de acceso falló</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2265"/>
@@ -4762,7 +4762,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <location filename="../services/owncloudservice.cpp" line="2280"/>
 <source>Could not parse login url!</source>
-<translation type="unfinished">Could not parse login url!</translation>
+<translation>No se pudo procesar el URL de acceso.</translation>
 </message>
 <message>
 <location filename="../utils/misc.cpp" line="929"/>
@@ -5664,8 +5664,8 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <location filename="../dialogs/settingsdialog.ui" line="4405"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2310"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2318"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4331"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4336"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4350"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4355"/>
 <source>Database</source>
 <translation>Base de datos</translation>
 </message>
@@ -6279,20 +6279,20 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4195"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4008"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4027"/>
 <source>Reset message boxes</source>
 <translation>Restablecer cuadros de mensajes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4382"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4074"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4095"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4114"/>
 <source>Import settings</source>
 <translation>Configuración de importación</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4389"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4040"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4059"/>
 <source>Export settings</source>
 <translation>Configuración de exportación</translation>
 </message>
@@ -7400,7 +7400,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4472"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2329"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4310"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4329"/>
 <source>Debug information</source>
 <translation>Información de depuración</translation>
 </message>
@@ -7557,33 +7557,48 @@ Mensaje de error de conexión: </translation>
 <translation type="unfinished">Please enter a new note file extension:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4039"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3327"/>
+<source>Markdown file</source>
+<translation>Archivo Markdown</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3329"/>
+<source>Plain text file</source>
+<translation>Archivo de texto sin formato</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3347"/>
+<source>Remove note file extension</source>
+<translation type="unfinished">Remove note file extension</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="4058"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4113"/>
 <source>INI files</source>
 <translation>Archivos INI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4075"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>¿Deseas realmente importar la configuración? Hacerlo eliminará la configuración actual y puede que no todos los ajustes se restauren, como los ajustes de las carpetas de notas y que scripts estabas usando. También tendrás que ajustar algunos parámetros, especialmente si cambias de plataforma. ¡Pero tus notas permanecerán intactas!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4082"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4101"/>
 <source>The application will be restarted after the import.</source>
 <translation>La aplicación se reiniciará después de la importación.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4330"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>La información de depuración se copió al portapapeles.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4332"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4351"/>
 <source>The integrity of the disk database is valid.</source>
 <translation>La integridad de la base de datos del disco es válida.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4337"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4356"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation>¡La integridad de la base de datos del disco no es válida!</translation>
 </message>
@@ -7673,58 +7688,63 @@ Mensaje de error de conexión: </translation>
 <translation>Extensión de archivo</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3619"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3348"/>
+<source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
+<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3638"/>
 <source>Calendar cache emptied</source>
 <translation>Se vació la caché de calendarios</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3620"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3639"/>
 <source>Your calendar cache was emptied.</source>
 <translation>La caché de calendarios fue vaciada.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3701"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3720"/>
 <source>Reset toolbars and exit</source>
 <translation>Restablecer las barras de herramientas y salir</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3721"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>¿Desea restablecer todas las barras de herramientas? La aplicación se cerrará en el proceso, las barras de herramientas por defecto serán restauradas cuando la inicies otra vez.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>Reset and &amp;exit</source>
 <translation>R&amp;establecer y salir</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3864"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3883"/>
 <source>Log file cleared</source>
 <translation>Se vació el archivo de registro</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3865"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3884"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Se vació el archivo de registro &lt;strong&gt;%1&lt;/strong&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3901"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3920"/>
 <source>Executable files</source>
 <translation>Archivos ejecutables</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3902"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3904"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3921"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3923"/>
 <source>All files</source>
 <translation>Todos los archivos</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3912"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3931"/>
 <source>Please select the path of your git executable</source>
 <translation>Por favor, selecciona la ruta al ejecutable git</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4009"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4028"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>¿Realmente deseas restablecer todas las cajas de mensajes?</translation>
 </message>
@@ -7798,7 +7818,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2314"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2388"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>&amp;Cancel</source>
 <translation>Cancelar</translation>
 </message>
@@ -8518,7 +8538,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tododialog.ui" line="334"/>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Fecha límite</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="342"/>

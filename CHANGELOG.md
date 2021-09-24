@@ -5,6 +5,8 @@
   Windows was fixed (for [#2239](https://github.com/pbek/QOwnNotes/issues/2239))
 - fixed an issue with the application doesn't getting the old cli parameters
   after a restart by a dialog
+- added more translation (thank you mguerra, fitoschido, lucjan, marcoxbresciani,
+  rakekniven, marterra, rawfreeamy, amirkbrpr)
 
 ## 21.9.10
 - now `md` or `txt` files will not be shown anymore in the note list when they

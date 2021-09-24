@@ -4642,22 +4642,22 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../utils/gui.cpp" line="1064"/>
 <source>Dark mode detected</source>
-<translation type="unfinished">Dark mode detected</translation>
+<translation>Modalità scura individuata</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1065"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Il suo sistema Windows sembra essere in modalità scura. Vuoi attivare la modalità scura anche in QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1077"/>
 <source>Light mode detected</source>
-<translation type="unfinished">Light mode detected</translation>
+<translation>Modalità chiara individuata</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1078"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Il suo sistema Windows sembra essere in modalità chiara. Vuoi disattivare la modalità scura anche in QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="76"/>
@@ -4670,19 +4670,19 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <translation>Il comando &lt;code&gt;%1&lt;/code&gt; con argomenti &lt;code&gt;%2&lt;/code&gt; non è riuscito!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4261"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4280"/>
 <source>New connection</source>
 <translation>Nuova connessione</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4442"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4461"/>
 <source>Login flow succeeded</source>
-<translation type="unfinished">Login flow succeeded</translation>
+<translation>Processo di login riuscito</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4443"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4462"/>
 <source>Username and password were set successfully!</source>
-<translation type="unfinished">Username and password were set successfully!</translation>
+<translation>Username e password impostati correttamente!</translation>
 </message>
 <message>
 <location filename="../entities/cloudconnection.cpp" line="291"/>
@@ -4751,26 +4751,24 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <location filename="../services/owncloudservice.cpp" line="2264"/>
 <location filename="../services/owncloudservice.cpp" line="2279"/>
 <source>Login flow failed</source>
-<translation type="unfinished">Login flow failed</translation>
+<translation>Processo di login fallito</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2265"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
+<translation>Impossibile avviare il flusso di accesso Nextcloud v2. Assicurati che l'URL del server sia corretto e che stai utilizzando un server Nextcloud!&lt;br /&gt;&lt;br /&gt;Se hai ancora problemi, crea manualmente una password per l'app nella pagina di amministrazione del tuo server.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2280"/>
 <source>Could not parse login url!</source>
-<translation type="unfinished">Could not parse login url!</translation>
+<translation>Non posso leggere l'url di login!</translation>
 </message>
 <message>
 <location filename="../utils/misc.cpp" line="929"/>
 <source>
 
 Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</source>
-<translation type="unfinished">
-
-Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</translation>
+<translation>Nota che per il prossimo avvio dell'applicazione la modalità istanza singola app sarà disabilitata, in modo che l'applicazione possa essere riavviata.</translation>
 </message>
 </context>
 <context>
@@ -5664,8 +5662,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <location filename="../dialogs/settingsdialog.ui" line="4405"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2310"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2318"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4331"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4336"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4350"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4355"/>
 <source>Database</source>
 <translation>Database</translation>
 </message>
@@ -5950,12 +5948,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1428"/>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
-<translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
+<translation>Il flusso di accesso v2 funziona solo con Nextcloud, non con ownCloud. In caso di problemi, crea manualmente una password per l'app.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1431"/>
 <source>Login to Nextcloud to grant access</source>
-<translation type="unfinished">Login to Nextcloud to grant access</translation>
+<translation>Accedi a Nextcloud per consentire l'accesso</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1836"/>
@@ -6279,20 +6277,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4195"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4008"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4027"/>
 <source>Reset message boxes</source>
 <translation>Ripristina finestre dei messaggi</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4382"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4074"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4095"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4114"/>
 <source>Import settings</source>
 <translation>Importa impostazioni</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4389"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4040"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4059"/>
 <source>Export settings</source>
 <translation>Esporta impostazioni</translation>
 </message>
@@ -6379,7 +6377,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1442"/>
 <source>Cancel Nextcloud login</source>
-<translation type="unfinished">Cancel Nextcloud login</translation>
+<translation>Annulla l'accesso a Nextcloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2194"/>
@@ -6459,22 +6457,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4225"/>
 <source>Note file extensions</source>
-<translation type="unfinished">Note file extensions</translation>
+<translation>Estensioni di file delle note</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4263"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
-<translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
+<translation>I file con le estensioni elencate saranno riconosciuti come note, l'estensione di file selezionata sarà usata per le nuove note.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4273"/>
 <source>Add a new note file extension</source>
-<translation type="unfinished">Add a new note file extension</translation>
+<translation>Aggiungi un'estensione di file note</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4287"/>
 <source>Remove selected note file extension</source>
-<translation type="unfinished">Remove selected note file extension</translation>
+<translation>Rimuovi l'estensione di file note selezionata</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4418"/>
@@ -7400,7 +7398,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4472"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2329"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4310"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4329"/>
 <source>Debug information</source>
 <translation>Informazioni di debug</translation>
 </message>
@@ -7557,36 +7555,51 @@ Messaggio di errore: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3293"/>
 <source>Please enter a new note file extension:</source>
-<translation type="unfinished">Please enter a new note file extension:</translation>
+<translation>Inserisci una nuova estensione per i file note:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4039"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3327"/>
+<source>Markdown file</source>
+<translation>File Markdown</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3329"/>
+<source>Plain text file</source>
+<translation>File di testo</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3347"/>
+<source>Remove note file extension</source>
+<translation>Rimuovi l'estensione del file note</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="4058"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4113"/>
 <source>INI files</source>
 <translation>File INI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4075"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>Si desidera davvero importare le impostazioni? Le impostazioni correnti verranno rimosse e non tutte le impostazioni potrebbero venire ripristinate, come ad esempio le impostazioni delle cartelle delle note e quali script si stavano usando. Potrebbe essere inoltre necessario correggere alcune impostazioni, in particolar modo se provenienti da piattaforme differenti, tuttavia le proprie note rimarranno inalterate!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4082"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4101"/>
 <source>The application will be restarted after the import.</source>
 <translation>L'applicazione verrà riavviata al termine dell'importazione.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4330"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>Le informazioni di debug sono state copiate negli appunti.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4332"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4351"/>
 <source>The integrity of the disk database is valid.</source>
 <translation>L'integrità del disco del database è valida.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4337"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4356"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation>L'integrità del disco del database non è valida.</translation>
 </message>
@@ -7676,58 +7689,63 @@ Messaggio di errore: </translation>
 <translation>Estensione di file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3619"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3348"/>
+<source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
+<translation>Vuoi davvero rimuovere l'estensione del file note &lt;strong&gt;%1&lt;/strong&gt;? Non vedrai più i file con questa estensione nell'elenco delle note!</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="3638"/>
 <source>Calendar cache emptied</source>
 <translation>Cache calendari svuotata</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3620"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3639"/>
 <source>Your calendar cache was emptied.</source>
 <translation>La propria cache dei calendari è stata svuotata.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3701"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3720"/>
 <source>Reset toolbars and exit</source>
 <translation>Reimposta le barre degli strumenti ed esci</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3702"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3721"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>Reimpostare tutte le barre degli strumenti? L'applicazione verrà chiusa durante questo processo: le barre degli strumenti predefinite verranno ripristinate all'avvio successivo.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>Reset and &amp;exit</source>
 <translation>Reimposta ed &amp;esci</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3864"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3883"/>
 <source>Log file cleared</source>
 <translation>File di registro svuotato</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3865"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3884"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Il file di registro &lt;strong&gt;%1&lt;/strong&gt; è stato svuotato.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3901"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3920"/>
 <source>Executable files</source>
 <translation>File eseguibili</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3902"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3904"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3921"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3923"/>
 <source>All files</source>
 <translation>Tutti i file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3912"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3931"/>
 <source>Please select the path of your git executable</source>
 <translation>Selezionare il percorso del proprio eseguibile git</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4009"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4028"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>Reimpostare le personalizzazione di tutte le finestre dei messaggi?</translation>
 </message>
@@ -7803,7 +7821,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2314"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2388"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Annulla</translation>
 </message>
