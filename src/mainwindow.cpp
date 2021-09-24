@@ -8184,13 +8184,17 @@ void MainWindow::reloadTagTree() {
     qDebug() << __func__ << " - 'noteSubFolderIds': " << noteSubFolderIds;
 
     QVector<int> noteIdList;
-    int untaggedNoteCount = NoteFolder::isCurrentShowSubfolders() ?
-                0 : Note::countAllNotTagged(0);
-    // get the notes from the subfolders
-    for (int noteSubFolderId : Utils::asConst(noteSubFolderIds)) {
-        // get all notes of a note sub folder
-        untaggedNoteCount += Note::countAllNotTagged(noteSubFolderId);
-        noteIdList << Note::fetchAllIdsByNoteSubFolderId(noteSubFolderId);
+    int untaggedNoteCount = 0;
+
+    if (NoteFolder::isCurrentShowSubfolders()) {
+        // get the notes from the subfolders
+        for (int noteSubFolderId : Utils::asConst(noteSubFolderIds)) {
+            // get all notes of a note sub folder
+            untaggedNoteCount += Note::countAllNotTagged(noteSubFolderId);
+            noteIdList << Note::fetchAllIdsByNoteSubFolderId(noteSubFolderId);
+        }
+    } else {
+        untaggedNoteCount = Note::countAllNotTagged(0);
     }
 
     // create an item to view all notes
