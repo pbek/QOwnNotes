@@ -22,15 +22,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-16.04, ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest]
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
         qt-version: ['5.9.9', '5.13.2', '5.14.2', '5.15.2']
         experimental: [false]
         exclude:
-          # We only want to built in Qt 5.5.1 of Ubuntu 16.04
-          - os: ubuntu-16.04
           # Failing SSL Tests
           - os: ubuntu-latest
             qt-version: '5.9.9'
@@ -48,9 +46,6 @@ jobs:
 #            qt-version: '5.15.1'
           # botan 32bit error
         include:
-          - os: ubuntu-16.04
-            qt-version: '5.5.1'
-            experimental: false
           - os: ubuntu-latest
             qt-version: '6.2.0'
             experimental: true
@@ -78,18 +73,14 @@ jobs:
       shell: bash
       run: |
         unset DO_BUILD
-        if [ "${{ matrix.os }}" = "ubuntu-16.04" ]; then
-          DO_BUILD='true'
-        else
-          mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
-          for changed_file in "${added_modified_files[@]}"; do
-            if [[ ${changed_file} = src* ]] || [[ ${changed_file} = tests* ]] || [[ ${changed_file} = build-systems/github/* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
-            then
-              echo "'${changed_file}' matches, we will build"
-              DO_BUILD='true'
-            fi
-          done
-        fi
+        mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
+        for changed_file in "${added_modified_files[@]}"; do
+          if [[ ${changed_file} = src* ]] || [[ ${changed_file} = tests* ]] || [[ ${changed_file} = build-systems/github/* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
+          then
+            echo "'${changed_file}' matches, we will build"
+            DO_BUILD='true'
+          fi
+        done
         echo "DO_BUILD: ${DO_BUILD}"
         echo ::set-output name=DO_BUILD::${DO_BUILD}
 
@@ -97,11 +88,7 @@ jobs:
       # Install Qt
       #
 
-    - if: steps.changes.outputs.DO_BUILD && matrix.os == 'ubuntu-16.04'
-      name: Install Qt 5.5.1 on Ubuntu 16.04
-      run: |
-        sudo apt install g++ libc6 qt5-default libqt5qml5 qtdeclarative5-dev qt5-qmake libqt5xml5 libqt5xmlpatterns5 libqt5xmlpatterns5-dev qttools5-dev build-essential libqt5svg5-dev qttools5-dev-tools libqt5websockets5-dev libqt5x11extras5-dev
-    - if: steps.changes.outputs.DO_BUILD && matrix.os != 'ubuntu-16.04'
+    - if: steps.changes.outputs.DO_BUILD
       name: Cache Qt
       id: cache-qt
       uses: actions/cache@v1
@@ -131,7 +118,7 @@ jobs:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: false == contains( matrix.os, 'windows') && matrix.os != 'ubuntu-16.04' && steps.changes.outputs.DO_BUILD
+    - if: false == contains( matrix.os, 'windows') && steps.changes.outputs.DO_BUILD
       name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
@@ -142,7 +129,7 @@ jobs:
       # Do tests
       #
 
-    - if: contains( matrix.os, 'ubuntu') && ( matrix.qt-version != '5.5.1' ) && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'ubuntu') && steps.changes.outputs.DO_BUILD
       name: Do Linux tests
       run: |
         cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
