@@ -882,7 +882,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished">Show position of text marks</translation>
+<translation>Mostrar posicions de les marques de text</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
@@ -897,48 +897,48 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>Inici de línia</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished">Tabulator size:</translation>
+<translation>Tamany del tabulador:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished">Smart tabulators</translation>
+<translation>Tabuladors intel·ligents</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished">Highlight search results</translation>
+<translation>Destacar resultats de cerca</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished">Shift width:</translation>
+<translation>Amplada del desplaçament:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished">Expand tabulators</translation>
+<translation>Expandir tabuladors</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished">Automatic indentation</translation>
+<translation>Indentació automàtica</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished">Incremental search</translation>
+<translation>Cerca incremental</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished">Use search dialog</translation>
+<translation>Usar el diàleg de cerca</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
@@ -1631,7 +1631,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>Importar imatges</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="30"/>
@@ -1666,7 +1666,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>Importar adjuncions</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="89"/>
@@ -2834,7 +2834,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2682"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>Importar notes des de Joplin</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1908"/>
@@ -4640,7 +4640,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../utils/gui.cpp" line="1065"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Sembla que el vostre Windows usa el mode fosc. Voleu habilitar el mode fosc també a QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1077"/>
@@ -4650,7 +4650,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../utils/gui.cpp" line="1078"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Sembla que el vostre Windows usa el mode clar. Voleu deshabilitar el mode fosc a QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="76"/>
@@ -4670,7 +4670,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4461"/>
 <source>Login flow succeeded</source>
-<translation type="unfinished">Login flow succeeded</translation>
+<translation>Procés d'identificació correcte</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4462"/>
@@ -4744,17 +4744,17 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <location filename="../services/owncloudservice.cpp" line="2264"/>
 <location filename="../services/owncloudservice.cpp" line="2279"/>
 <source>Login flow failed</source>
-<translation type="unfinished">Login flow failed</translation>
+<translation>El procés d'identificació ha fallat</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2265"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
+<translation>La v2 del procés d'identificació de Nextcloud no s'ha pogut iniciar. Assegureu-vos que la URL del servidor és correcta i que esteu usant un servidor Nextcloud...&lt;br /&gt;&lt;br /&gt;Si continueu tenint problemes creeu, si us plau, una contrasenya d'aplicació a mà a la pàgina d'administració del vostre servidor.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2280"/>
 <source>Could not parse login url!</source>
-<translation type="unfinished">Could not parse login url!</translation>
+<translation>No es pot analitzar la url d'identificació!</translation>
 </message>
 <message>
 <location filename="../utils/misc.cpp" line="929"/>
@@ -6372,7 +6372,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1442"/>
 <source>Cancel Nextcloud login</source>
-<translation type="unfinished">Cancel Nextcloud login</translation>
+<translation>Cancel·lar la identificació a Nextcloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2194"/>
@@ -7550,7 +7550,7 @@ Missatge de l'error de connexió: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3293"/>
 <source>Please enter a new note file extension:</source>
-<translation type="unfinished">Please enter a new note file extension:</translation>
+<translation>Entreu, si us plau, una nova extensió per als fitxers de notes:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3327"/>
@@ -7565,7 +7565,7 @@ Missatge de l'error de connexió: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3347"/>
 <source>Remove note file extension</source>
-<translation type="unfinished">Remove note file extension</translation>
+<translation>Eliminar l'extensió de fitxer d'usuari</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4058"/>
@@ -7686,7 +7686,7 @@ Missatge de l'error de connexió: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3348"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
-<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+<translation>Esteu segurs que voleu eliminar l'extensió del fitxer de notes &lt;strong&gt;%1&lt;/strong&gt;? No veureu més els fitxers amb aquesta extensió a la llista de notes!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3638"/>
@@ -8994,22 +8994,22 @@ Això no es pot desfer!</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="480"/>
 <source>Restart application</source>
-<translation type="unfinished">Restart application</translation>
+<translation>Rearrencar l'aplicació</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="481"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished">You now can restart the application to complete the update process.</translation>
+<translation>Podeu rearrencar l'aplicació ara per completar el procés d'actualització.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>Restart</source>
-<translation type="unfinished">Restart</translation>
+<translation>Rearrencar</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
+<translation>Cancel·lar</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="509"/>

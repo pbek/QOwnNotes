@@ -6,6 +6,7 @@
 - improved tag delete icon in dark-mode (for [#2243](https://github.com/pbek/QOwnNotes/issues/2243))
 - now links to all file extensions from the list in the `Note file extensions` section
   of the *General settings* are recognized as notes in the note editor and preview
+- added more Persian, Catalan translation (thank you amirkbrpr, mguerra)
 
 ## 21.9.11
 - an issue with the note counts initially not showing up in the *Tags panel* on

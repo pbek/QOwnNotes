@@ -4685,7 +4685,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4461"/>
 <source>Login flow succeeded</source>
-<translation type="unfinished">Login flow succeeded</translation>
+<translation>جریان ورود موفق بود</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4462"/>
@@ -4762,17 +4762,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../services/owncloudservice.cpp" line="2264"/>
 <location filename="../services/owncloudservice.cpp" line="2279"/>
 <source>Login flow failed</source>
-<translation type="unfinished">Login flow failed</translation>
+<translation>جریان ورود ناموفق بود</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2265"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
+<translation>جریان ورود با نکست کلود v2 امکان اجرا نداشت. اطمینان حاصل کنید که URL سرور صحیح بوده و در حال استفاده از سرور نکست کلود هستید!&lt;br /&gt;&lt;br /&gt; در صورتی که هنوز با مشکل مواجه هستید، لطفاً به صورت دستی در صفحه مدیریت سرور خود یک کلمه عبور برای برنامه تعریف کنید.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2280"/>
 <source>Could not parse login url!</source>
-<translation type="unfinished">Could not parse login url!</translation>
+<translation>URL ورود قابل تجزیه و تحلیل نیست!</translation>
 </message>
 <message>
 <location filename="../utils/misc.cpp" line="929"/>
@@ -6471,7 +6471,7 @@ QOwnNotesAPI
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1442"/>
 <source>Cancel Nextcloud login</source>
-<translation type="unfinished">Cancel Nextcloud login</translation>
+<translation>لغو ورود با نکست کلود</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2194"/>
