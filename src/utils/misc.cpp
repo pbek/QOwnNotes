@@ -1462,17 +1462,25 @@ int Utils::Misc::indentSize() {
  * @param html
  * @return
  */
-QString Utils::Misc::unescapeHtml(QString html) {
-    //    html.replace("&lt;","<");
-    //    html.replace("&gt;",">");
-    //    html.replace("&amp;","&");
-    //    return html;
+QString Utils::Misc::unescapeHtml(QString html, bool soft) {
+    // It looks like "text.toPlainText();" also destroys "<a" tags, so we
+    // also want a "soft" un-escaping method
+    if (soft) {
+        html.replace("&lt;","<");
+        html.replace("&gt;",">");
+        html.replace("&amp;","&");
+        html.replace("&quot;","\"");
+        html.replace("&apos;","'");
+
+        return html;
+    }
 
     // text.toPlainText() will remove all line breaks, we don't want that
     html.replace(QStringLiteral("\n"), QStringLiteral("<br>"));
 
     QTextDocument text;
     text.setHtml(html);
+
     return text.toPlainText();
 }
 
