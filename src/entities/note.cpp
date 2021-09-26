@@ -3187,8 +3187,22 @@ bool Note::fileUrlIsNoteInCurrentNoteFolder(const QUrl &url) {
 
     const QString path = url.toLocalFile();
 
-    return path.startsWith(NoteFolder::currentLocalPath()) &&
-           path.endsWith(QLatin1String(".md"), Qt::CaseInsensitive);
+    if (!path.startsWith(NoteFolder::currentLocalPath())) {
+        return false;
+    }
+
+    QListIterator<QString> itr(customNoteFileExtensionList(
+        QStringLiteral(".")));
+
+    while (itr.hasNext()) {
+        const auto fileExtension = itr.next();
+
+        if (path.endsWith(fileExtension, Qt::CaseInsensitive)) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 bool Note::fileUrlIsExistingNoteInCurrentNoteFolder(const QUrl &url) {
