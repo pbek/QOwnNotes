@@ -1477,7 +1477,7 @@ QString Utils::Misc::unescapeHtml(QString html) {
 }
 
 /**
- * Unescapes some html special characters
+ * Escapes some html special characters
  *
  * @param text
  * @return
