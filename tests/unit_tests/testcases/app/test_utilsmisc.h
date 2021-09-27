@@ -19,6 +19,7 @@ class TestUtilsMisc : public QObject {
     void testUnescapeHtml();
     void testHtmlSpecialChars();
     void testToHumanReadableByteSize();
+    void testTransformEvernoteImportCodeBlock();
 };
 
 #endif    // TESTUTILSMISC_H

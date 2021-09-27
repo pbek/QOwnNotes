@@ -72,6 +72,11 @@
 #include <QStandardPaths>
 #endif
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+#include <QXmlQuery>
+#include <QXmlResultItems>
+#endif
+
 enum SearchEngines {
     Google = 0,
     Bing = 1,
@@ -2383,4 +2388,88 @@ void Utils::Misc::switchToDarkMode() {
 
 void Utils::Misc::switchToLightMode() {
     switchToDarkOrLightMode(false);
+}
+
+void Utils::Misc::transformEvernoteImportText(QString &content, bool withCleanup) {
+    content.replace(QStringLiteral("\\\""), QStringLiteral("\""));
+
+    // decode HTML entities
+    content = Utils::Misc::unescapeHtml(std::move(content));
+
+    // add a newline in front of lists
+    //            content.replace(QRegularExpression("<ul.*?>"),
+    //            "\n<ul>");
+    //            content.replace(QRegularExpression("<ol.*?>"),
+    //            "\n<ol>");
+
+    // remove web-clip code
+    //            content.remove("<div
+    //            style=\"-evernote-webclip:true;\">");
+
+    // replace code blocks
+    content.replace(
+        QRegularExpression(
+            QStringLiteral(
+                R"(<div style="box-sizing.+?-en-codeblock:\s*true;"><div>(.+?)<\/div><\/div>)"),
+            QRegularExpression::MultilineOption),
+        QStringLiteral("\n```\n\\1\n```\n"));
+    content.replace(
+        QRegularExpression(
+            QStringLiteral(
+                R"(<div style="-en-codeblock:\s*true;.+?"><div>(.+?)<\/div><\/div>)"),
+            QRegularExpression::MultilineOption),
+        QStringLiteral("\n```\n\\1\n```\n"));
+
+    // add a linebreak instead of div-containers
+    content.replace(QRegularExpression(QStringLiteral("<\\/div>")),
+                    QStringLiteral("\n"));
+
+    // convert remaining special characters
+    content = Utils::Misc::unescapeHtml(std::move(content));
+
+    // convert html tags to markdown
+    content = Utils::Misc::htmlToMarkdown(std::move(content));
+
+    if (withCleanup) {
+        cleanupEvernoteImportText(content);
+    }
+}
+
+void Utils::Misc::cleanupEvernoteImportText(QString &content) {
+    // remove all html tags
+    content.remove(QRegularExpression(QStringLiteral("<.+?>")));
+
+    // remove multiple \n
+    content.replace(QRegularExpression(QStringLiteral("\n\n+")),
+                    QLatin1String("\n\n"));
+    content.replace(QRegularExpression(QStringLiteral("\n\n\\s+")),
+                    QLatin1String("\n\n"));
+}
+
+QString Utils::Misc::testEvernoteImportText(const QString& data) {
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    QXmlQuery query;
+    query.setFocus(data);
+    query.setQuery(QStringLiteral("en-export/note"));
+
+    QXmlResultItems result;
+    if (!query.isValid()) {
+        return "";
+    }
+
+    query.evaluateTo(&result);
+
+    result.next();
+    query.setFocus(result.current());
+
+    QString content;
+    query.setQuery(QStringLiteral("content/text()"));
+
+    // content seems to be html encoded
+    query.evaluateTo(&content);
+
+    Utils::Misc::transformEvernoteImportText(content, true);
+
+    return content.trimmed();
+#endif
 }

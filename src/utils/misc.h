@@ -156,6 +156,9 @@ QLatin1String platform();
 void switchToDarkOrLightMode(bool darkMode);
 void switchToDarkMode();
 void switchToLightMode();
+void transformEvernoteImportText(QString &content, bool withCleanup = false);
+void cleanupEvernoteImportText(QString &content);
+QString testEvernoteImportText(const QString& data);
 }    // namespace Misc
 }    // namespace Utils
 

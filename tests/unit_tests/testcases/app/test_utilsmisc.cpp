@@ -164,3 +164,26 @@ void TestUtilsMisc::testToHumanReadableByteSize() {
     QString expected = "8.31 MB";
     QVERIFY(result == expected);
 }
+
+void TestUtilsMisc::testTransformEvernoteImportCodeBlock() {
+    QString content = R"(<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export2.dtd">
+<en-export export-date="20181021T174838Z" application="Evernote/Windows" version="6.x">
+<note><title>test</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+
+<en-note><div>This is a test note with some code blocks</div><div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;"><div>&lt;?php</div><div><br/></div><div>phpinfo();</div><div><br/></div><div>?&gt;</div></div><div><br/></div></en-note>]]></content><created>20181021T111619Z</created><updated>20181021T111738Z</updated><note-attributes><author>myemail@example.com</author><source>desktop.win</source><source-application>evernote.win32</source-application></note-attributes></note></en-export>
+)";
+
+    qDebug() << testEvernoteImportText(content);
+
+    QCOMPARE(testEvernoteImportText(content), R"(This is a test note with some code blocks
+
+```
+<?php
+
+phpinfo();
+
+?>
+```)");
+}
