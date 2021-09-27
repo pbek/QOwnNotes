@@ -197,7 +197,7 @@ void TestUtilsMisc::testTransformEvernoteImportCodeBlock2() {
 )";
 
     QCOMPARE(testEvernoteImportText(content), R"(```
-/**
+    /**
 
 * Gets the configuration path depending on the operation system
 
