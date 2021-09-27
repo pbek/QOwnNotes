@@ -20,6 +20,8 @@ class TestUtilsMisc : public QObject {
     void testHtmlSpecialChars();
     void testToHumanReadableByteSize();
     void testTransformEvernoteImportCodeBlock();
+    void testTransformEvernoteImportCodeBlock2();
+    void testTransformEvernoteImportRussian();
 };
 
 #endif    // TESTUTILSMISC_H
