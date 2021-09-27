@@ -22,6 +22,7 @@ class TestUtilsMisc : public QObject {
     void testTransformEvernoteImportCodeBlock();
     void testTransformEvernoteImportCodeBlock2();
     void testTransformEvernoteImportRussian();
+    void testTransformEvernoteImportHyperlinks();
 };
 
 #endif    // TESTUTILSMISC_H

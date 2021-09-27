@@ -240,7 +240,25 @@ void TestUtilsMisc::testTransformEvernoteImportRussian() {
 <note><title>15-3.1</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><div>&#1059; &#1084;&#1077;&#1085;&#1103; &#1076;&#1086;&#1084;&#1072; &#1076;&#1074;&#1077; &#1082;&#1086;&#1084;&#1085;&#1072;&#1090;&#1099;, &#1082;&#1091;&#1093;&#1085;&#1103;, &#1090;&#1091;&#1072;&#1083;&#1077;&#1090; &#1080; &#1074;&#1072;&#1085;&#1085;&#1072;.</div></en-note>]]></content><created>20150714T065518Z</created><updated>20150714T073706Z</updated><note-attributes><source>mobile.android</source></note-attributes></note></en-export>
 )";
 
-    qDebug() << testEvernoteImportText(content);
-
     QCOMPARE(testEvernoteImportText(content), R"(У меня дома две комнаты, кухня, туалет и ванна.)");
+}
+
+void TestUtilsMisc::testTransformEvernoteImportHyperlinks() {
+    QString content = R"(<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export2.dtd">
+<en-export export-date="20210924T214029Z" application="Evernote/Windows" version="6.x">
+<note><title>Fwd: Your 4 HIgh Value Trainings Access</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note bgcolor="#FFFFFF" text="#000000">
+    <br clear="none"/>
+    <div><br clear="none"/>
+      <p>
+        <a href="https://seanmize.infusionsoft.com/app/linkClick/24286/45b5a4e4c9f46ab6/13909690/64482e72b8e684a3">4 High Value Trainings Access</a>
+      </p>
+    </div>
+    <br clear="none"/>
+  </en-note>]]></content><created>20151005T190855Z</created><updated>20151005T190915Z</updated><tag>~ Reference</tag><tag>R - Purchases</tag><tag>RP - Sean Mize</tag><tag>RPSM - 4 High Value Trainings</tag><note-attributes><subject-date>20151005T190849Z</subject-date><author>Rick Smith &lt;rick@netguerrilla.org&gt;</author><source>mail.smtp</source><application-data key="mg-post-tier">1</application-data></note-attributes></note></en-export>
+)";
+
+    QCOMPARE(testEvernoteImportText(content), R"([4 High Value Trainings Access](https://seanmize.infusionsoft.com/app/linkClick/24286/45b5a4e4c9f46ab6/13909690/64482e72b8e684a3))");
 }

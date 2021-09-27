@@ -2424,6 +2424,10 @@ void Utils::Misc::transformEvernoteImportText(QString &content, bool withCleanup
     content.replace(QRegularExpression(QStringLiteral("<\\/div>")),
                     QStringLiteral("\n"));
 
+    // preserve hyperlinks
+    content.replace("<a ", "&lt;a ");
+    content.replace("</a>", "&lt;/a&gt;");
+
     // convert remaining special characters
     content = Utils::Misc::unescapeHtml(std::move(content));
 
