@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.9.13
+- now named links can be imported in the *Evernote import* (for [#2242](https://github.com/pbek/QOwnNotes/issues/2242))
+
 ## 21.9.12
 - an issue with showing twice the number of untagged notes in the *Tags panel* after
   creating a new note on Windows was fixed (for [#2241](https://github.com/pbek/QOwnNotes/issues/2241))
