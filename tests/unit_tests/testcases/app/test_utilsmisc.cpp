@@ -175,7 +175,7 @@ void TestUtilsMisc::testTransformEvernoteImportCodeBlock() {
 <en-note><div>This is a test note with some code blocks</div><div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;"><div>&lt;?php</div><div><br/></div><div>phpinfo();</div><div><br/></div><div>?&gt;</div></div><div><br/></div></en-note>]]></content><created>20181021T111619Z</created><updated>20181021T111738Z</updated><note-attributes><author>myemail@example.com</author><source>desktop.win</source><source-application>evernote.win32</source-application></note-attributes></note></en-export>
 )";
 
-    QCOMPARE(testEvernoteImportText(content), R"(This is a test note with some code blocks
+    QVERIFY(testEvernoteImportText(content) == R"(This is a test note with some code blocks
 
 ```
 <?php
@@ -196,7 +196,7 @@ void TestUtilsMisc::testTransformEvernoteImportCodeBlock2() {
 <en-note><div><br/></div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>&nbsp; &nbsp; /**</div><div>&nbsp; &nbsp; &nbsp;* Gets the configuration path depending on the operation system</div><div>&nbsp; &nbsp; &nbsp;*</div><div>&nbsp; &nbsp; &nbsp;* @return bool|string</div><div>&nbsp; &nbsp; &nbsp;*/</div><div>&nbsp; &nbsp; private static function getConfigPath()</div><div>&nbsp; &nbsp; {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; $file_manager = new pm_ServerFileManager();</div><div>&nbsp; &nbsp; &nbsp; &nbsp; if ($file_manager-&gt;fileExists(&apos;/etc/httpd/conf.d/pagespeed.conf&apos;)) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // CentOS</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return &apos;/etc/httpd/conf.d/pagespeed.conf&apos;;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; } elseif ($file_manager-&gt;fileExists(&apos;/etc/apache2/mods-available/pagespeed.conf&apos;)) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Ubuntu</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return &apos;/etc/apache2/mods-available/pagespeed.conf&apos;;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; }</div><div>&nbsp; &nbsp; &nbsp; &nbsp; return false;</div><div>&nbsp; &nbsp; }</div></div><div><br/></div></en-note>]]></content><created>20170703T093015Z</created><updated>20170703T093022Z</updated><note-attributes><author>myemail@domain.com</author><source>desktop.win</source><source-application>evernote.win32</source-application></note-attributes></note></en-export>
 )";
 
-    QCOMPARE(testEvernoteImportText(content), R"(```
+    QVERIFY(testEvernoteImportText(content) == R"(```
     /**
 
 * Gets the configuration path depending on the operation system
@@ -240,7 +240,7 @@ void TestUtilsMisc::testTransformEvernoteImportRussian() {
 <note><title>15-3.1</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><div>&#1059; &#1084;&#1077;&#1085;&#1103; &#1076;&#1086;&#1084;&#1072; &#1076;&#1074;&#1077; &#1082;&#1086;&#1084;&#1085;&#1072;&#1090;&#1099;, &#1082;&#1091;&#1093;&#1085;&#1103;, &#1090;&#1091;&#1072;&#1083;&#1077;&#1090; &#1080; &#1074;&#1072;&#1085;&#1085;&#1072;.</div></en-note>]]></content><created>20150714T065518Z</created><updated>20150714T073706Z</updated><note-attributes><source>mobile.android</source></note-attributes></note></en-export>
 )";
 
-    QCOMPARE(testEvernoteImportText(content), R"(У меня дома две комнаты, кухня, туалет и ванна.)");
+    QVERIFY(testEvernoteImportText(content) == R"(У меня дома две комнаты, кухня, туалет и ванна.)");
 }
 
 void TestUtilsMisc::testTransformEvernoteImportHyperlinks() {
@@ -260,5 +260,5 @@ void TestUtilsMisc::testTransformEvernoteImportHyperlinks() {
   </en-note>]]></content><created>20151005T190855Z</created><updated>20151005T190915Z</updated><tag>~ Reference</tag><tag>R - Purchases</tag><tag>RP - Sean Mize</tag><tag>RPSM - 4 High Value Trainings</tag><note-attributes><subject-date>20151005T190849Z</subject-date><author>Rick Smith &lt;rick@netguerrilla.org&gt;</author><source>mail.smtp</source><application-data key="mg-post-tier">1</application-data></note-attributes></note></en-export>
 )";
 
-    QCOMPARE(testEvernoteImportText(content), R"([4 High Value Trainings Access](https://seanmize.infusionsoft.com/app/linkClick/24286/45b5a4e4c9f46ab6/13909690/64482e72b8e684a3))");
+    QVERIFY(testEvernoteImportText(content) == R"([4 High Value Trainings Access](https://seanmize.infusionsoft.com/app/linkClick/24286/45b5a4e4c9f46ab6/13909690/64482e72b8e684a3))");
 }
