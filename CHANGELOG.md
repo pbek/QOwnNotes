@@ -2,6 +2,8 @@
 
 ## 21.9.13
 - now named links can be imported in the *Evernote import* (for [#2242](https://github.com/pbek/QOwnNotes/issues/2242))
+- there now is a new script [Black mode](https://github.com/qownnotes/scripts/tree/master/black-mode)
+  in the *Script repository* that makes the UI black in dark mode
 
 ## 21.9.12
 - an issue with showing twice the number of untagged notes in the *Tags panel* after
