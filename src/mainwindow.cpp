@@ -5437,7 +5437,7 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
     Utils::Misc::loadPrinterSettings(printer,
                                      QStringLiteral("Printer/NotePDFExport"));
 
-    // under Linux we use the the QPageSetupDialog to change layout
+    // under Linux we use the QPageSetupDialog to change layout
     // settings of the PDF export
     QPageSetupDialog pageSetupDialog(printer, this);
 
