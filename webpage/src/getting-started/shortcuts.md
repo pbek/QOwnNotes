@@ -55,6 +55,7 @@
 
 ### In the note list
 
+- double-click on note to open note in a new tab (keep in mind that there is a scripting hook that can override the double-click action)
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
 - <kbd>Tab</kbd> or <kbd>Return</kbd> lets you edit the current note
 
@@ -175,6 +176,7 @@
 
 ### In the note list
 
+- double-click on note to open note in a new tab (keep in mind that there is a scripting hook that can override the double-click action)
 - <kbd>⌘</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
 - <kbd>Tab</kbd> or <kbd>Return</kbd> lets you edit the current note
 
