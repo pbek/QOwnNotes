@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 21.10.0
+- log messages that are output before the log panel is loaded are now also logged
+  to the log file if logging to file is enabled in the *Debug options* settings
+  (for [#783](https://github.com/pbek/QOwnNotes/issues/783))
+- now the translation files that are loaded are logged to allow better debugging
+  of the translation system (for [#783](https://github.com/pbek/QOwnNotes/issues/783))
+    - you need to enable the log file or run QOwnNotes from the terminal to see
+      those logs, because this happens before the log panel is loaded 
+
 ## 21.9.13
 - now named links can be imported in the *Evernote import* (for [#2242](https://github.com/pbek/QOwnNotes/issues/2242))
 - there now is a new script [Black mode](https://github.com/qownnotes/scripts/tree/master/black-mode)

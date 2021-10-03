@@ -159,6 +159,8 @@ void switchToLightMode();
 void transformEvernoteImportText(QString &content, bool withCleanup = false);
 void cleanupEvernoteImportText(QString &content);
 QString testEvernoteImportText(const QString& data);
+void logToFileIfAllowed(QtMsgType msgType, const QString &msg);
+QString logMsgTypeText(QtMsgType logType);
 }    // namespace Misc
 }    // namespace Utils
 

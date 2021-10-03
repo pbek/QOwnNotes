@@ -24,64 +24,58 @@
 #define QAPPLICATION_CLASS QApplication
 
 /**
+ * Function for loading a translation with debug output
+ */
+void loadTranslation(QTranslator &translator, const QString &fileName,
+                     const QString &directory = QString()) {
+    bool isLoaded = translator.load(fileName, directory);
+    bool isInstalled = QCoreApplication::installTranslator(&translator);
+
+    qDebug() << "Translation " << fileName << "in" << directory << "isLoaded:"
+        << isLoaded << ", isInstalled:" << isInstalled;
+}
+
+/**
  * Function for loading the translations
  */
-template <typename T>
-void loadTranslations(T &app, QTranslator *translator,
-                      const QString &locale) noexcept {
-    translator[0].load("qt_" + QLocale::system().name(),
+void loadTranslations(QTranslator *translator, const QString &locale) {
+    loadTranslation(translator[0], "qt_" + QLocale::system().name(),
                        QLibraryInfo::location(QLibraryInfo::TranslationsPath));
-    app.installTranslator(&translator[0]);
-    translator[1].load("qt_" + locale,
+    loadTranslation(translator[1], "qt_" + locale,
                        QLibraryInfo::location(QLibraryInfo::TranslationsPath));
-    app.installTranslator(&translator[1]);
     QString appPath = QCoreApplication::applicationDirPath();
-    translator[2].load("qt_" + locale, appPath + "/translations");
-    app.installTranslator(&translator[2]);
-    translator[3].load(appPath + "/../src/languages/QOwnNotes_" + locale);
-    app.installTranslator(&translator[3]);
-    translator[4].load(appPath + "/../languages/QOwnNotes_" + locale);
-    app.installTranslator(&translator[4]);
-    translator[5].load(appPath + "/languages/QOwnNotes_" + locale);
-    app.installTranslator(&translator[5]);
-    translator[6].load(appPath + "/QOwnNotes_" + locale);
-    app.installTranslator(&translator[6]);
-    translator[7].load("../src/languages/QOwnNotes_" + locale);
-    app.installTranslator(&translator[7]);
-    translator[8].load("../share/qt5/translations/QOwnNotes_" + locale);
-    app.installTranslator(&translator[8]);
-    translator[9].load(appPath + "/../share/qt5/translations/QOwnNotes_" +
+    loadTranslation(translator[2], "qt_" + locale, appPath + "/translations");
+    loadTranslation(translator[3], appPath + "/../src/languages/QOwnNotes_" + locale);
+    loadTranslation(translator[4], appPath + "/../languages/QOwnNotes_" + locale);
+    loadTranslation(translator[5], appPath + "/languages/QOwnNotes_" + locale);
+    loadTranslation(translator[6], appPath + "/QOwnNotes_" + locale);
+    loadTranslation(translator[7], "../src/languages/QOwnNotes_" + locale);
+    loadTranslation(translator[8], "../share/qt5/translations/QOwnNotes_" + locale);
+    loadTranslation(translator[9], appPath + "/../share/qt5/translations/QOwnNotes_" +
                        locale);
-    app.installTranslator(&translator[9]);
-    translator[10].load("QOwnNotes_" + locale);
-    app.installTranslator(&translator[10]);
+    loadTranslation(translator[10], "QOwnNotes_" + locale);
 }
 
 /**
  * Function for loading the release translations
  */
-template <typename T>
-inline void loadReleaseTranslations(T &app, QTranslator &translatorRelease,
-                                    const QString &locale) noexcept {
-    translatorRelease.load(
+inline void loadReleaseTranslations(QTranslator &translatorRelease,
+                                    const QString &locale) {
+    loadTranslation(translatorRelease,
         "/usr/share/qt5/translations/"
         "QOwnNotes_" +
         locale);
-    app.installTranslator(&translatorRelease);
 }
 
 /**
  * Function for loading the translations on OS X
  */
-template <typename T>
-inline void loadMacTranslations(T &app, QTranslator &translatorOSX,
+inline void loadMacTranslations(QTranslator &translatorOSX,
                                 QTranslator &translatorOSX2,
                                 const QString &appPath,
-                                const QString &locale) noexcept {
-    translatorOSX.load(appPath + "/../Resources/QOwnNotes_" + locale);
-    app.installTranslator(&translatorOSX);
-    translatorOSX2.load("../Resources/QOwnNotes_" + locale);
-    app.installTranslator(&translatorOSX2);
+                                const QString &locale) {
+    loadTranslation(translatorOSX, appPath + "/../Resources/QOwnNotes_" + locale);
+    loadTranslation(translatorOSX2, "../Resources/QOwnNotes_" + locale);
 }
 
 /**
@@ -339,6 +333,10 @@ bool mainStartupMisc(const QStringList &arguments) {
 void tempLogMessageOutput(QtMsgType type, const QMessageLogContext &context,
                           const QString &msg) {
     QByteArray localMsg = msg.toLocal8Bit();
+    auto typeText = Utils::Misc::logMsgTypeText(type);
+    auto message = QStringLiteral("%1 (%2:%3, %4)").arg(
+        msg, context.file, QString::number(context.line), context.function);
+    auto messageWithType = QStringLiteral("%1: %2\n").arg(typeText, message);
 
     switch (type) {
         case QtDebugMsg:
@@ -346,30 +344,24 @@ void tempLogMessageOutput(QtMsgType type, const QMessageLogContext &context,
             // yet if the user wants to see them
 #ifdef QT_DEBUG
             fprintf(stderr, "Debug: %s\n", localMsg.constData());
+            Utils::Misc::logToFileIfAllowed(type, msg);
 #endif
             break;
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
         case QtInfoMsg:
-            fprintf(stderr, "Info: %s (%s:%u, %s)\n", localMsg.constData(),
-                    context.file, context.line, context.function);
+            fprintf(stderr, "%s", messageWithType.toLocal8Bit().constData());
+            Utils::Misc::logToFileIfAllowed(type, message);
             break;
 #endif
         case QtWarningMsg:
-            fprintf(stderr, "Warning: %s (%s:%u, %s)\n", localMsg.constData(),
-                    context.file, context.line, context.function);
-            break;
         case QtCriticalMsg:
-            fprintf(stderr, "Critical: %s (%s:%u, %s)\n", localMsg.constData(),
-                    context.file, context.line, context.function);
-            break;
         case QtFatalMsg:
-            fprintf(stderr, "Fatal: %s (%s:%u, %s)\n", localMsg.constData(),
-                    context.file, context.line, context.function);
+            fprintf(stderr, "%s", messageWithType.toLocal8Bit().constData());
+            Utils::Misc::logToFileIfAllowed(type, message);
     }
 }
 
-template <typename T>
-inline void setAppProperties(T &app, const QString &release,
+inline void setAppProperties(QCoreApplication &app, const QString &release,
                              const QStringList &arguments, bool singleApp,
                              bool snap, bool portable, const QString &action) {
     app.setProperty("release", release);
@@ -587,13 +579,13 @@ int main(int argc, char *argv[]) {
 
         setAppProperties(app, release, arguments, true, snap, portable, action);
 #ifndef QT_DEBUG
-        loadReleaseTranslations(app, translatorRelease, locale);
+        loadReleaseTranslations(translatorRelease, locale);
 #endif
 
-        loadTranslations(app, translators, locale);
+        loadTranslations(translators, locale);
 
 #ifdef Q_OS_MAC
-        loadMacTranslations(app, translatorOSX, translatorOSX2,
+        loadMacTranslations(translatorOSX, translatorOSX2,
                             QCoreApplication::applicationDirPath(), locale);
 #endif
         const bool result = mainStartupMisc(arguments);
@@ -644,13 +636,13 @@ int main(int argc, char *argv[]) {
         setAppProperties(app, release, arguments, false, snap, portable, action);
 
 #ifndef QT_DEBUG
-        loadReleaseTranslations(app, translatorRelease, locale);
+        loadReleaseTranslations(translatorRelease, locale);
 #endif
 
-        loadTranslations(app, translators, locale);
+        loadTranslations(translators, locale);
 
 #ifdef Q_OS_MAC
-        loadMacTranslations(app, translatorOSX, translatorOSX2,
+        loadMacTranslations(translatorOSX, translatorOSX2,
                             QCoreApplication::applicationDirPath(), locale);
 #endif
 

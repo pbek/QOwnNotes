@@ -867,9 +867,7 @@ QString Utils::Misc::appDataPath() {
  * @return
  */
 QString Utils::Misc::logFilePath() {
-    return appDataPath() % QStringLiteral("/") %
-               qAppName().replace(QStringLiteral(" "), QStringLiteral("-")) +
-           QStringLiteral(".log");
+    return appDataPath() % QStringLiteral("/QOwnNotes.log");
 }
 
 /**
@@ -2476,4 +2474,65 @@ QString Utils::Misc::testEvernoteImportText(const QString& data) {
 
     return content.trimmed();
 #endif
+}
+
+/**
+ * Logs to the log file if allowed
+ *
+ * @param msgType
+ * @param msg
+ */
+void Utils::Misc::logToFileIfAllowed(QtMsgType msgType, const QString &msg) {
+    if (!QSettings().value(QStringLiteral("Debug/fileLogging")).toBool()) {
+        return;
+    }
+
+    QFile logFile(Utils::Misc::logFilePath());
+
+    if (logFile.open(QIODevice::WriteOnly | QIODevice::Text |
+                     QIODevice::Append)) {
+        QTextStream out(&logFile);
+        QDateTime dateTime = QDateTime::currentDateTime();
+        QString typeStr = logMsgTypeText(msgType);
+        QString text =
+            QStringLiteral("[%1] [%2]: %3\n")
+                .arg(dateTime.toString(QStringLiteral("MMM dd hh:mm:ss"))
+                         .remove(QStringLiteral(".")),
+                     typeStr, msg);
+        out << text;
+        logFile.close();
+    }
+}
+
+/**
+ * Returns the text for a LogType
+ *
+ * @param logType
+ * @return
+ */
+QString Utils::Misc::logMsgTypeText(QtMsgType logType) {
+    QString type;
+
+    switch (logType) {
+        case QtMsgType::QtDebugMsg:
+            type = QStringLiteral("Debug");
+            break;
+        case QtMsgType::QtInfoMsg:
+            type = QStringLiteral("Info");
+            break;
+        case QtMsgType::QtWarningMsg:
+            type = QStringLiteral("Warning");
+            break;
+        case QtMsgType::QtCriticalMsg:
+            type = QStringLiteral("Critical");
+            break;
+        case QtMsgType::QtFatalMsg:
+            type = QStringLiteral("Fatal");
+            break;
+        default:
+            type = QStringLiteral("Unknown");
+            break;
+    }
+
+    return type;
 }
