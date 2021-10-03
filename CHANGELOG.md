@@ -8,6 +8,7 @@
   of the translation system (for [#783](https://github.com/pbek/QOwnNotes/issues/783))
     - you need to enable the log file or run QOwnNotes from the terminal to see
       those logs, because this happens before the log panel is loaded 
+- added more Lithuanian translation (thank you atvejis)
 
 ## 21.9.13
 - now named links can be imported in the *Evernote import* (for [#2242](https://github.com/pbek/QOwnNotes/issues/2242))

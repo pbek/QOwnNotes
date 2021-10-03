@@ -54,6 +54,7 @@
 
 ### Dans la liste des notes
 
+- double-cliquez sur la note pour ouvrir la note dans un nouvel onglet (n'oubliez pas qu'il existe un crochet de script qui peut remplacer l'action de double-clic)
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> sélectionne toutes les notes (pour les déplacer, les copier ou les supprimer avec un clic droit)
 - <kbd>Tab</kbd> ou <kbd>Retour</kbd> vous permet d'éditer la note actuelle
 
@@ -170,6 +171,7 @@
 
 ### Dans la liste des notes
 
+- double-cliquez sur la note pour ouvrir la note dans un nouvel onglet (n'oubliez pas qu'il existe un crochet de script qui peut remplacer l'action de double-clic)
 - <kbd>⌘</kbd> + <kbd>A</kbd> sélectionne toutes les notes (pour les déplacer, les copier ou les supprimer avec un clic droit)
 - <kbd>Tab</kbd> ou <kbd>Retour</kbd> vous permet d'éditer la note actuelle
 

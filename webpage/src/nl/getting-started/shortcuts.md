@@ -54,6 +54,7 @@
 
 ### In de notitielijst
 
+- dubbelklik op notitie om notitie in een nieuw tabblad te openen (houd er rekening mee dat er een scripting-hook is die de dubbelklikactie kan overschrijven)
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> selecteert alle notities (om ze te verplaatsen, kopiëren of verwijderen met een rechterklik)
 - Met <kbd>Tab</kbd> of <kbd>Return</kbd> kunt u de huidige notitie bewerken
 
@@ -170,8 +171,9 @@
 
 ### In de notitielijst
 
+- dubbelklik op notitie om notitie in een nieuw tabblad te openen (houd er rekening mee dat er een scripting-hook is die de dubbelklikactie kan overschrijven)
 - <kbd>⌘</kbd> + <kbd>A</kbd> selecteert alle notities (om ze te verplaatsen, kopiëren of verwijderen met een rechterklik)
-- <kbd>Tab</kbd> of <kbd>Return</kbd> laat je de huidige notitie bewerken
+- Met <kbd>Tab</kbd> of <kbd>Return</kbd> kunt u de huidige notitie bewerken
 
 ### In het tekstbewerkingspaneel voor notities
 

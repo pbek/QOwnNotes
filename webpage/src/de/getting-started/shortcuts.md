@@ -54,6 +54,7 @@
 
 ### In der Notizliste
 
+- Doppelklicken Sie auf die Notiz, um die Notiz in einem neuen Tab zu öffnen (beachten Sie, dass es einen Skript-Hook gibt, der die Doppelklickaktion überschreiben kann)
 - <kbd>Strg</kbd> + <kbd>A</kbd> wählt alle Notizen aus (um sie mit einem Rechtsklick zu verschieben, zu kopieren oder zu entfernen)
 - Mit <kbd>Tab</kbd> oder <kbd>Return</kbd> können Sie die aktuelle Notiz bearbeiten
 
@@ -170,8 +171,9 @@
 
 ### In der Notizliste
 
+- Doppelklicken Sie auf die Notiz, um die Notiz in einem neuen Tab zu öffnen (beachten Sie, dass es einen Skript-Hook gibt, der die Doppelklickaktion überschreiben kann)
 - <kbd>⌘</kbd> + <kbd>A</kbd> wählt alle Notizen aus (um sie mit einem Rechtsklick zu verschieben, zu kopieren oder zu entfernen)
-- Mit <kbd>Tab</kbd> oder <kbd>Return</kbd> können Sie die aktuelle Notiz bearbeiten
+- Mit <kbd>Tab</kbd> oder <kbd>Enter</kbd> können Sie die aktuelle Notiz bearbeiten
 
 ### Im Notiz-Textbearbeitungsfeld
 

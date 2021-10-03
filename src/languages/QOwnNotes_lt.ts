@@ -1611,7 +1611,7 @@
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
 <source>Minimum 8 characters</source>
-<translation type="unfinished">Minimum 8 characters</translation>
+<translation>Mažiausiai 8 ženklai</translation>
 </message>
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1619,7 +1619,7 @@
 <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
 <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
 <source>Minimum 10 characters</source>
-<translation type="unfinished">Minimum 10 characters</translation>
+<translation>Mažiausiai 10 ženklų</translation>
 </message>
 </context>
 <context>
@@ -1727,7 +1727,7 @@
 <location filename="../widgets/layoutwidget.cpp" line="153"/>
 <source>Full</source>
 <comment>Layout name</comment>
-<translation>Pilna</translation>
+<translation>Išplėstasis</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="155"/>
@@ -2368,7 +2368,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1460"/>
 <source>Ctrl+L</source>
-<translation type="unfinished">Ctrl+L</translation>
+<translation>Ctrl+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1477"/>
@@ -2859,7 +2859,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2673"/>
 <source>Ctrl+Shift+L</source>
-<translation type="unfinished">Ctrl+Shift+L</translation>
+<translation>Ctrl+Shift+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2682"/>
@@ -5730,7 +5730,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="300"/>
 <source>General</source>
-<translation>Generolas</translation>
+<translation>Bendrieji nust.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3918"/>

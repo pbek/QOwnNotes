@@ -54,6 +54,7 @@
 
 ### A jegyzetlistában
 
+- kattintson duplán a jegyzetre a jegyzet új lapon történő megnyitásához (ne feledje, hogy van egy parancsfájl-horog, amely felülírhatja a dupla kattintás műveletet)
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> kijelöli az összes jegyzetet (jobb egérgombbal áthelyezéshez, másoláshoz vagy eltávolításhoz)
 - <kbd>Tab</kbd> or <kbd>Return</kbd> lehetővé teszi az aktuális jegyzet szerkesztését
 
@@ -170,6 +171,7 @@
 
 ### A jegyzetlistában
 
+- kattintson duplán a jegyzetre a jegyzet új lapon történő megnyitásához (ne feledje, hogy van egy parancsfájl-horog, amely felülírhatja a dupla kattintás műveletet)
 - <kbd>⌘</kbd> + <kbd>A</kbd> kijelöli az összes jegyzetet (jobb egérgombbal áthelyezéshez, másoláshoz vagy eltávolításhoz)
 - <kbd>Tab</kbd> or <kbd>Return</kbd> lehetővé teszi az aktuális jegyzet szerkesztését
 

@@ -54,6 +54,7 @@
 
 ### Nell'elenco delle note
 
+- double-click on note to open note in a new tab (keep in mind that there is a scripting hook that can override the double-click action)
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> seleziona tutte le note (per spostarle, copiarle o rimuoverle con un clic destro)
 - <kbd>Tab</kbd> o <kbd>Invio</kbd> consente di modificare la nota corrente
 
@@ -170,8 +171,9 @@
 
 ### Nell'elenco delle note
 
+- double-click on note to open note in a new tab (keep in mind that there is a scripting hook that can override the double-click action)
 - <kbd>⌘</kbd> + <kbd>A</kbd> seleziona tutte le note (per spostarle, copiarle o rimuoverle con un clic destro)
-- <kbd>Tab</kbd> or <kbd>Return</kbd> ti consente di modificare la nota corrente
+- <kbd>Tab</kbd> o <kbd>Invio</kbd> consente di modificare la nota corrente
 
 ### Nel pannello di modifica del testo della nota
 
