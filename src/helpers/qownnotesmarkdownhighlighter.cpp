@@ -74,7 +74,7 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
  */
 void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
     const QString &text) {
-    QRegularExpression regex(QStringLiteral(R"(note:\/\/[^\s\)>]+)"));
+    static const QRegularExpression regex(QStringLiteral(R"(note:\/\/[^\s\)>]+)"));
     QRegularExpressionMatch match = regex.match(text);
 
     if (match.hasMatch()) {    // check legacy note:// links
@@ -94,8 +94,7 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
         }
 
         // check <note file.md> links
-        regex = QRegularExpression(
-            QStringLiteral("<([^\\s`][^`]*?\\.[^`]*?[^\\s`]\\.md)>"));
+        static const QRegularExpression regex1(QStringLiteral("<([^\\s`][^`]*?\\.[^`]*?[^\\s`]\\.md)>"));
         match = regex.match(text);
 
         if (match.hasMatch()) {
@@ -114,8 +113,7 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
                 return;
             }
         } else {    // check [note](note file.md) links
-            regex = QRegularExpression(
-                QStringLiteral(R"(\[[^\[\]]+\]\((\S+\.md|.+?\.md)\)\B)"));
+            static const QRegularExpression regex1(QStringLiteral(R"(\[[^\[\]]+\]\((\S+\.md|.+?\.md)\)\B)"));
             match = regex.match(text);
 
             if (match.hasMatch()) {

@@ -320,7 +320,7 @@ QString Utils::Misc::toSentenceCase(const QString &text) {
     //     whitespace) or
     // (any of [.?!] followed by at least one horizontal or vertical
     //     whitespace)
-    QRegularExpression sentenceSplitter(
+    static const QRegularExpression sentenceSplitter(
         QStringLiteral(R"((^[\s\v]*|[.?!][\s\v]+)\K)"));
 
     QStringList sentences = text.toLower().split(sentenceSplitter);
@@ -341,7 +341,7 @@ QString Utils::Misc::toSentenceCase(const QString &text) {
 QString Utils::Misc::toStartCase(const QString &text) {
     // A word is a string of characters immediately preceded by horizontal or
     // vertical whitespace
-    QRegularExpression wordSplitter(QStringLiteral("(?<=[\\s\\v])"));
+    static const QRegularExpression wordSplitter(QStringLiteral("(?<=[\\s\\v])"));
 
     QStringList words = text.toLower().split(wordSplitter);
 
@@ -526,8 +526,8 @@ QString Utils::Misc::defaultNotesPath() {
     path += Utils::Misc::dirSeparator() % QStringLiteral("Notes");
 
     // remove the snap path for Snapcraft builds
-    path.remove(
-        QRegularExpression(QStringLiteral(R"(snap\/qownnotes\/\w\d+\/)")));
+    static const QRegularExpression re(QStringLiteral(R"(snap\/qownnotes\/\w\d+\/)"));
+    path.remove(re);
 
     return path;
 }
@@ -636,8 +636,8 @@ QString Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(QString path) {
  */
 QString Utils::Misc::htmlToMarkdown(QString text) {
     // replace Windows line breaks
-    text.replace(QRegularExpression(QStringLiteral("\r\n")),
-                 QStringLiteral("\n"));
+    static const QRegularExpression re(QStringLiteral("\r\n"));
+    text.replace(re, QStringLiteral("\n"));
 
     // remove all null characters
     // we can get those from Google Chrome via the clipboard
@@ -760,19 +760,16 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
     // using a css class didn't work because the styling seems to affects the sub-items too
     const auto listTag = QStringLiteral("<li style=\"list-style-type:square\">");
 
+    static const QRegularExpression re1(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[ ?\])"),
+                            QRegularExpression::CaseInsensitiveOption);
+    static const QRegularExpression re2(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[[xX]\])"),
+                            QRegularExpression::CaseInsensitiveOption);
+    static const QRegularExpression re3(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[-\])"),
+                            QRegularExpression::CaseInsensitiveOption);
     if (!clickable) {
-        text.replace(
-            QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[ ?\])"),
-                               QRegularExpression::CaseInsensitiveOption),
-            listTag % QStringLiteral("\\1&#9744;"));
-        text.replace(
-            QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[-\])"),
-                               QRegularExpression::CaseInsensitiveOption),
-            listTag % QStringLiteral("\\1&#10005;"));
-        text.replace(
-            QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[[xX]\])"),
-                               QRegularExpression::CaseInsensitiveOption),
-            listTag % QStringLiteral("\\1&#9745;"));
+        text.replace(re1, listTag % QStringLiteral("\\1&#9744;"));
+        text.replace(re2, listTag % QStringLiteral("\\1&#9745;"));
+        text.replace(re3, listTag % QStringLiteral("\\1&#10005;"));
         return text;
     }
 
@@ -781,23 +778,14 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
     // line numbers of checkboxes in the original markdown text
     // should be provided by the markdown parser
 
-    text.replace(
-        QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[-\])"),
-                           QRegularExpression::CaseInsensitiveOption),
-        listTag % QStringLiteral("\\1&#10005;"));
+    text.replace(re3, listTag % QStringLiteral("\\1&#10005;"));
 
     const QString checkboxStart = QStringLiteral(
         R"(<a class="task-list-item-checkbox" href="checkbox://_)");
-    text.replace(
-        QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[ ?\])"),
-                           QRegularExpression::CaseInsensitiveOption),
-        listTag % QStringLiteral("\\1") % checkboxStart %
-            QStringLiteral("\">&#9744;</a>"));
-    text.replace(
-        QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[[xX]\])"),
-                           QRegularExpression::CaseInsensitiveOption),
-        listTag % QStringLiteral("\\1") % checkboxStart %
-            QStringLiteral("\">&#9745;</a>"));
+    text.replace(re1,
+        listTag % QStringLiteral("\\1") % checkboxStart % QStringLiteral("\">&#9744;</a>"));
+    text.replace(re2,
+        listTag % QStringLiteral("\\1") % checkboxStart % QStringLiteral("\">&#9745;</a>"));
 
     int count = 0;
     int pos = 0;
@@ -877,9 +865,8 @@ QString Utils::Misc::logFilePath() {
  * @return
  */
 QString Utils::Misc::transformLineFeeds(QString text) {
-    return text.replace(
-        QRegularExpression(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")),
-        QStringLiteral("\n"));
+    static const QRegularExpression re(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)"));
+    return text.replace(re, QStringLiteral("\n"));
 }
 
 /**
@@ -1996,11 +1983,10 @@ void Utils::Misc::transformNextcloudPreviewImages(
     QString &html, int maxImageWidth, ExternalImageHash *externalImageHash) {
     OwnCloudService *ownCloud = OwnCloudService::instance();
 
-    QRegularExpression re(
+    static const QRegularExpression re(
         QStringLiteral(
             R"(<img src=\"(\/core\/preview\?fileId=.+#mimetype=[\w\d%]+&.+)\" alt=\".+\"\/?>)"),
-        QRegularExpression::CaseInsensitiveOption |
-            QRegularExpression::MultilineOption);
+        QRegularExpression::CaseInsensitiveOption | QRegularExpression::MultilineOption);
     QRegularExpressionMatchIterator i = re.globalMatch(html);
 
     while (i.hasNext()) {
@@ -2037,11 +2023,11 @@ void Utils::Misc::transformNextcloudPreviewImages(
  */
 void Utils::Misc::transformRemotePreviewImages(
     QString &html, int maxImageWidth, ExternalImageHash *externalImageHash) {
-    QRegularExpression re(
+    static const QRegularExpression re(
         QStringLiteral(R"(<img src=\"(https?:\/\/.+)\".*\/?>)"),
         QRegularExpression::CaseInsensitiveOption |
-            QRegularExpression::MultilineOption |
-            QRegularExpression::InvertedGreedinessOption);
+        QRegularExpression::MultilineOption |
+        QRegularExpression::InvertedGreedinessOption);
     QRegularExpressionMatchIterator i = re.globalMatch(html);
 
     while (i.hasNext()) {
@@ -2081,7 +2067,7 @@ QString Utils::Misc::remotePreviewImageTagToInlineImageTag(QString imageTag,
                                                            int &imageWidth) {
     imageTag.replace(QStringLiteral("&amp;"), QStringLiteral("&"));
 
-    QRegularExpression re(QStringLiteral(R"(<img src=\"(https?:\/\/.+)\")"),
+    static const QRegularExpression re(QStringLiteral(R"(<img src=\"(https?:\/\/.+)\")"),
                           QRegularExpression::CaseInsensitiveOption |
                               QRegularExpression::InvertedGreedinessOption);
 

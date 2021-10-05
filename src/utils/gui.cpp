@@ -52,7 +52,8 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
     QStringList searchList;
 
     if (searchFlags & TreeWidgetSearchFlag::EveryWordSearch) {
-        searchList = text.split(QRegularExpression(QStringLiteral("\\s+")));
+        static const QRegularExpression re(QStringLiteral("\\s+"));
+        searchList = text.split(re);
     } else {
         searchList << text;
     }
@@ -500,10 +501,10 @@ bool Utils::Gui::toggleCheckBoxAtCursor(QPlainTextEdit *textEdit) {
 
     bool result = false;
     auto text = cursor.selectedText();
-    auto reUnchecked = QRegularExpression(R"(([-\+\*]) \[ \])");
-    auto reChecked = QRegularExpression(R"(([-\+\*]) \[x\])");
-    auto reNumberUnchecked = QRegularExpression(R"(([\d+]\.) \[ \])");
-    auto reNumberChecked = QRegularExpression(R"(([\d+]\.) \[x\])");
+    static const auto reUnchecked = QRegularExpression(R"(([-\+\*]) \[ \])");
+    static const auto reChecked = QRegularExpression(R"(([-\+\*]) \[x\])");
+    static const auto reNumberUnchecked = QRegularExpression(R"(([\d+]\.) \[ \])");
+    static const auto reNumberChecked = QRegularExpression(R"(([\d+]\.) \[x\])");
 
     // try to toggle the checkbox
     if (reUnchecked.match(text).hasMatch()) {
@@ -596,7 +597,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
         maxColumns = std::max(maxColumns, (int)stringList.count());
     }
 
-    const QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^(:)?-+(:)?$)"));
+    static const QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^(:)?-+(:)?$)"));
     QString justifiedText;
 
     const int lineCount = tableTextList.size();
@@ -775,10 +776,11 @@ void Utils::Gui::updateInterfaceFontSize(int fontSize) {
             .toBool();
 
     // remove old style
-    QString stylesheet = qApp->styleSheet().remove(QRegularExpression(
+    static const QRegularExpression re(
         QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING) +
         QStringLiteral(".*") +
-        QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING)));
+        QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING));
+    QString stylesheet = qApp->styleSheet().remove(re);
 
     if (overrideInterfaceFontSize) {
         int interfaceFontSize =

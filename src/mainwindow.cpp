@@ -2734,9 +2734,8 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
                            ? QStringLiteral("search-notes-dark.svg")
                            : QStringLiteral("search-notes.svg");
     QString styleSheet = ui->searchLineEdit->styleSheet();
-    styleSheet.replace(
-        QRegularExpression(QStringLiteral("background-image: url\\(:.+\\);")),
-        QStringLiteral("background-image: url(:/images/%1);").arg(fileName));
+    static const QRegularExpression re(QStringLiteral("background-image: url\\(:.+\\);"));
+    styleSheet.replace(re, QStringLiteral("background-image: url(:/images/%1);").arg(fileName));
     ui->searchLineEdit->setStyleSheet(styleSheet);
 
     // initialize the shortcuts for the actions
@@ -2848,9 +2847,10 @@ void MainWindow::updateTreeWidgetItemHeight(QTreeWidget *treeWidget,
     QString styleText = treeWidget->styleSheet();
 
     // remove the old height stylesheet
-    styleText.remove(QRegularExpression(
+    static const QRegularExpression re(
         QStringLiteral("\nQTreeWidget::item \\{height: \\d+px\\}"),
-        QRegularExpression::CaseInsensitiveOption));
+                                    QRegularExpression::CaseInsensitiveOption);
+    styleText.remove(re);
 
     // add the new height stylesheet
     styleText += QStringLiteral("\nQTreeWidget::item {height: %1px}")
@@ -6360,9 +6360,8 @@ void MainWindow::openLocalUrl(QString urlString) {
     const QString scheme = url.scheme();
 
     if (scheme == QStringLiteral("noteid")) {    // jump to a note by note id
-        QRegularExpressionMatch match =
-            QRegularExpression(QStringLiteral(R"(^noteid:\/\/note-(\d+)$)"))
-                .match(urlString);
+        static const QRegularExpression re(QStringLiteral(R"(^noteid:\/\/note-(\d+)$)"));
+        QRegularExpressionMatch match = re.match(urlString);
 
         if (match.hasMatch()) {
             int noteId = match.captured(1).toInt();
@@ -6397,9 +6396,8 @@ void MainWindow::openLocalUrl(QString urlString) {
                 // if the name of the linked note only consists of numbers we cannot
                 // use host() to get the filename, it would get converted to an
                 // ip-address
-                QRegularExpressionMatch match =
-                    QRegularExpression(QStringLiteral(R"(^\w+:\/\/(\d+)$)"))
-                        .match(urlString);
+                static const QRegularExpression re(QStringLiteral(R"(^\w+:\/\/(\d+)$)"));
+                QRegularExpressionMatch match = re.match(urlString);
                 fileName =
                     match.hasMatch() ? match.captured(1) : url.host();
 
@@ -7884,7 +7882,7 @@ void MainWindow::insertHtmlAsMarkdownIntoCurrentNote(QString html) {
     html = Utils::Misc::htmlToMarkdown(std::move(html));
 
     // match image tags
-    QRegularExpression re(QStringLiteral("<img.+?src=[\"'](.+?)[\"'].*?>"),
+    static const QRegularExpression re(QStringLiteral("<img.+?src=[\"'](.+?)[\"'].*?>"),
                           QRegularExpression::CaseInsensitiveOption);
     QRegularExpressionMatchIterator i = re.globalMatch(html);
 
@@ -7921,7 +7919,8 @@ void MainWindow::insertHtmlAsMarkdownIntoCurrentNote(QString html) {
     showStatusBarMessage(tr("Downloading images finished"), 3000);
 
     // remove all html tags
-    html.remove(QRegularExpression(QStringLiteral("<.+?>")));
+    static const QRegularExpression tagRE(QStringLiteral("<.+?>"));
+    html.remove(tagRE);
 
     // unescape some html special characters
     html = Utils::Misc::unescapeHtml(std::move(html)).trimmed();
@@ -10257,7 +10256,7 @@ QString MainWindow::noteTextEditCurrentWord(bool withPreviousCharacters) {
     QString text = c.selectedText();
 
     if (withPreviousCharacters) {
-        QRegularExpression re(QStringLiteral("^[\\s\\n][^\\s]*"));
+        static const QRegularExpression re(QStringLiteral("^[\\s\\n][^\\s]*"));
         do {
             c.movePosition(QTextCursor::Left, QTextCursor::KeepAnchor);
             text = c.selectedText();
