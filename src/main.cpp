@@ -39,8 +39,8 @@ void loadTranslation(QTranslator &translator, const QString &fileName,
  * Function for loading the translations
  */
 void loadTranslations(QTranslator *translator, const QString &locale) {
-    loadTranslation(translator[0], "qt_" + QLocale::system().name(),
-                       QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+//    loadTranslation(translator[0], "qt_" + QLocale::system().name(),
+//                       QLibraryInfo::location(QLibraryInfo::TranslationsPath));
     loadTranslation(translator[1], "qt_" + locale,
                        QLibraryInfo::location(QLibraryInfo::TranslationsPath));
     QString appPath = QCoreApplication::applicationDirPath();
@@ -72,10 +72,14 @@ inline void loadReleaseTranslations(QTranslator &translatorRelease,
  */
 inline void loadMacTranslations(QTranslator &translatorOSX,
                                 QTranslator &translatorOSX2,
+                                QTranslator &translatorOSX3,
+                                QTranslator &translatorOSX4,
                                 const QString &appPath,
                                 const QString &locale) {
     loadTranslation(translatorOSX, appPath + "/../Resources/QOwnNotes_" + locale);
     loadTranslation(translatorOSX2, "../Resources/QOwnNotes_" + locale);
+    loadTranslation(translatorOSX3, appPath + "../Resources/qt_" + locale);
+    loadTranslation(translatorOSX4, "../Resources/qt_" + locale);
 }
 
 /**
@@ -531,6 +535,8 @@ int main(int argc, char *argv[]) {
 #ifdef Q_OS_MAC
     QTranslator translatorOSX;
     QTranslator translatorOSX2;
+    QTranslator translatorOSX3;
+    QTranslator translatorOSX4;
     // we don't need this on macOS
     allowOnlyOneAppInstance = false;
 #else
@@ -585,7 +591,7 @@ int main(int argc, char *argv[]) {
         loadTranslations(translators, locale);
 
 #ifdef Q_OS_MAC
-        loadMacTranslations(translatorOSX, translatorOSX2,
+        loadMacTranslations(translatorOSX, translatorOSX2, translatorOSX3, translatorOSX4,
                             QCoreApplication::applicationDirPath(), locale);
 #endif
         const bool result = mainStartupMisc(arguments);
