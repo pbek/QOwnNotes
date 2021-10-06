@@ -31,6 +31,8 @@ rm -f ${PLIST}-e
 
 # copy translation files to app
 cp languages/*.qm $APP.app/Contents/Resources
+cp ${Qt5_Dir}/translations/qt_*.qm $APP.app/Contents/Resources
+rm $APP.app/Contents/Resources/qt_help_*.qm
 
 # copy updater script to app
 #chmod a+x ../travis/osx/update.command
