@@ -137,8 +137,6 @@ jobs:
     - if: contains( matrix.os, 'macos') && steps.changes.outputs.DO_BUILD
       name: Do macOS tests
       run: |
-#        echo "Search for qm files in ${Qt5_Dir}..."
-#        find ${Qt5_Dir} -iname "*.qm"
         cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
         ../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
     - if: contains( matrix.os, 'windows') && steps.changes.outputs.DO_BUILD
