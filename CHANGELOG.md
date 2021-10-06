@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.10.1
+- when copying notes to another sub-folder now notes will not be copied to the same
+  sub-folder any more (for [#2249](https://github.com/pbek/QOwnNotes/issues/2249))
+
 ## 21.10.0
 - log messages that are output before the log panel is loaded are now also logged
   to the log file if logging to file is enabled in the *Debug options* settings

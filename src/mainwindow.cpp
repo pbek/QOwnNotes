@@ -9974,6 +9974,14 @@ void MainWindow::copySelectedNotesToNoteSubFolder(
             // fetch the tags to tag the note after copying it
             const QVector<Tag> tags = Tag::fetchAllOfNote(note);
 
+            // don't copy note if source and destination paths are the same
+            if (noteSubFolder.fullPath() == note.fullNoteFileDirPath()) {
+                qWarning() << "Note was not copied because source and "
+                    "destination paths were the same:" << note.getName();
+
+                continue;
+            }
+
             // copy note
             const bool result = note.copyToPath(noteSubFolder.fullPath());
             if (result) {
