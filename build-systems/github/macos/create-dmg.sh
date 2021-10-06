@@ -4,9 +4,6 @@
 # creating the QOwnNotes.dmg with Applications link for GitHub Actions
 #
 
-echo "Search for qm files..."
-find ${Qt5_Dir} -iname "*.qm"
-
 APP=QOwnNotes
 # this directory name will also be shown in the title when the DMG is mounted
 TEMPDIR=$APP
