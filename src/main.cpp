@@ -648,7 +648,7 @@ int main(int argc, char *argv[]) {
         loadTranslations(translators, locale);
 
 #ifdef Q_OS_MAC
-        loadMacTranslations(translatorOSX, translatorOSX2,
+        loadMacTranslations(translatorOSX, translatorOSX2, translatorOSX3, translatorOSX4,
                             QCoreApplication::applicationDirPath(), locale);
 #endif
 
