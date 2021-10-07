@@ -344,12 +344,10 @@ void tempLogMessageOutput(QtMsgType type, const QMessageLogContext &context,
 
     switch (type) {
         case QtDebugMsg:
-            // only print debug messages in debug-mode, because we don't know
-            // yet if the user wants to see them
-#ifdef QT_DEBUG
-            fprintf(stderr, "Debug: %s\n", localMsg.constData());
+            if (QSettings().value(QStringLiteral("Debug/fileLogging")).toBool()) {
+                fprintf(stderr, "Debug: %s\n", localMsg.constData());
+            }
             Utils::Misc::logToFileIfAllowed(type, msg);
-#endif
             break;
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
         case QtInfoMsg:
