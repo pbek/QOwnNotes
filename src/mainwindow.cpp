@@ -9870,6 +9870,14 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(
                 continue;
             }
 
+            // don't move note if source and destination paths are the same
+            if (noteSubFolder.fullPath() == note.fullNoteFileDirPath()) {
+                qWarning() << "Note was not moved because source and "
+                              "destination paths were the same:" << note.getName();
+
+                continue;
+            }
+
             // fetch the tags to tag the note after moving it
             const QVector<Tag> tags = Tag::fetchAllOfNote(note);
 
@@ -9971,9 +9979,6 @@ void MainWindow::copySelectedNotesToNoteSubFolder(
                 continue;
             }
 
-            // fetch the tags to tag the note after copying it
-            const QVector<Tag> tags = Tag::fetchAllOfNote(note);
-
             // don't copy note if source and destination paths are the same
             if (noteSubFolder.fullPath() == note.fullNoteFileDirPath()) {
                 qWarning() << "Note was not copied because source and "
@@ -9981,6 +9986,9 @@ void MainWindow::copySelectedNotesToNoteSubFolder(
 
                 continue;
             }
+
+            // fetch the tags to tag the note after copying it
+            const QVector<Tag> tags = Tag::fetchAllOfNote(note);
 
             // copy note
             const bool result = note.copyToPath(noteSubFolder.fullPath());
