@@ -2503,9 +2503,11 @@ QString Utils::Misc::logMsgTypeText(QtMsgType logType) {
         case QtMsgType::QtDebugMsg:
             type = QStringLiteral("Debug");
             break;
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
         case QtMsgType::QtInfoMsg:
             type = QStringLiteral("Info");
             break;
+#endif
         case QtMsgType::QtWarningMsg:
             type = QStringLiteral("Warning");
             break;
