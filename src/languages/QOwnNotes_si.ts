@@ -2790,7 +2790,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2588"/>
 <source>Show/Hide application</source>
-<translation type="unfinished">Show/Hide application</translation>
+<translation>යෙදුම පෙන්වන්න/සඟවන්න</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2597"/>
@@ -5147,7 +5147,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="482"/>
 <source>Cancel</source>
-<translation>අවලංගු කරන්න</translation>
+<translation>අවලංගු</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="489"/>
@@ -6438,7 +6438,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3322"/>
 <source>Action name</source>
-<translation type="unfinished">Action name</translation>
+<translation>ක්‍රියාමාර්ගයේ නම</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3327"/>
@@ -6609,12 +6609,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6342"/>
 <source>QOwnNotes web application</source>
-<translation type="unfinished">QOwnNotes web application</translation>
+<translation>QOwnNotes වියමන යෙදුම</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6432"/>
 <source>Server URL:</source>
-<translation type="unfinished">Server URL:</translation>
+<translation>සේවාදායකයේ ඒ.ස.නි.:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6489"/>
@@ -6694,7 +6694,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6127"/>
 <source>Bookmarks</source>
-<translation>පිටු සලකුණු</translation>
+<translation>පොත්යොමු</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6133"/>
@@ -6816,7 +6816,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <location filename="../dialogs/settingsdialog.ui" line="5963"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
-<translation>දින</translation>
+<translation> දවස්</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5982"/>
@@ -7501,7 +7501,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2599"/>
 <source>new folder</source>
-<translation>නව ෆෝල්ඩරය</translation>
+<translation>නව බහාලුම</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2633"/>
@@ -7768,7 +7768,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="461"/>
 <source>enabled</source>
-<translation>සක්‍රීය කර ඇත</translation>
+<translation>සබල කර ඇත</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="461"/>
@@ -7829,7 +7829,7 @@ Your notes will stay intact!</source>
 <location filename="../dialogs/settingsdialog.cpp" line="2388"/>
 <location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>&amp;Cancel</source>
-<translation>&amp;අවලංගු කරන්න</translation>
+<translation>&amp;අවලංගු</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="488"/>
@@ -8092,7 +8092,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="367"/>
 <source>Open &amp;folder</source>
-<translation>බහාලුම විවෘත කරන්න</translation>
+<translation>බහාලුම &amp;විවෘත කරන්න</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="392"/>
@@ -8190,7 +8190,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
 <source>&amp;Open note</source>
-<translation>සටහන විවෘත කරන්න</translation>
+<translation>&amp;සටහන විවෘත කරන්න</translation>
 </message>
 </context>
 <context>
@@ -8672,7 +8672,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
 <source>New</source>
-<translation>අලුත්</translation>
+<translation>නව</translation>
 </message>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
@@ -9087,7 +9087,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../services/updateservice.cpp" line="255"/>
 <source>No updates</source>
-<translation>යාවත්කාලීන කිරීම් නොමැත</translation>
+<translation>යාවත්කාල නැත</translation>
 </message>
 <message>
 <location filename="../services/updateservice.cpp" line="256"/>
@@ -9120,7 +9120,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/versiondialog.cpp" line="39"/>
 <source>&amp;Cancel</source>
-<translation>&amp;අවලංගු කරන්න</translation>
+<translation>&amp;අවලංගු</translation>
 </message>
 </context>
 <context>

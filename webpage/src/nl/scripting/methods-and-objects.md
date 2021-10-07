@@ -200,7 +200,7 @@ var markdown = script.insertMediaFile("/path/to/your/image.png");
 
 Misschien wilt u het voorbeeld eens bekijken [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
 
-Inserting an attachment file into the attachments folder
+Een bijlagebestand invoegen in de bijlagenmap
 --------------------------------------------------------
 
 ### Methodeaanroep en parameters
@@ -225,7 +225,7 @@ QString ScriptingService::insertAttachmentFile(const QString &attachmentFilePath
 var markdown = script.insertAttachmentFile("/path/to/your/file.png");
 ```
 
-Regenerating the note preview
+Het notitievoorbeeld opnieuw genereren
 -----------------------------
 
 Vernieuwt het notitievoorbeeld.
@@ -349,17 +349,17 @@ U kunt zowel platte tekst als html in de labels gebruiken. De tekst kan worden g
 
 Misschien wilt u het voorbeeld eens bekijken [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
 
-Creating a new note
+Een nieuwe notitie maken
 -------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Creates a new note
- *
- * @param text the note text
- */
-void ScriptingService::createNote(QString text);
+  * Maakt een nieuwe notitie
+  *
+  * @param sms de notitietekst
+  */
+void ScriptingService :: createNote (QString-tekst);
 ```
 
 ### Voorbeeld
@@ -378,7 +378,7 @@ note.renameNoteFile('your-filename');
 ```
 :::
 
-Accessing the clipboard
+Toegang tot het klembord
 -----------------------
 
 ### Methodeaanroep en parameters
@@ -399,59 +399,59 @@ var clipboardHtml = script.clipboard(true);
 
 Misschien wilt u het voorbeeld eens bekijken [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-Write text to the note text edit
+Schrijf tekst naar de tekst van de notitie
 --------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Writes text to the current cursor position in the note text edit
- *
- * @param text
- */
-void ScriptingService::noteTextEditWrite(QString text);
+  * Schrijft tekst naar de huidige cursorpositie in de tekstbewerking van de notitie
+  *
+  * @param tekst
+  */
+void ScriptingService :: noteTextEditWrite (QString-tekst);
 ```
 
 ### Voorbeeld
 ```js
-// write text to the note text edit
-script.noteTextEditWrite("My custom text");
+// schrijf tekst naar de notitie tekst bewerken
+script.noteTextEditWrite ("Mijn aangepaste tekst");
 ```
 
 Misschien wilt u de aangepaste actie `transformTextRot13` bekijken in het voorbeeld [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 U kunt dit samen met `noteTextEditSelectAll` gebruiken om de hele tekst van de huidige notitie te overschrijven.
 
-Read the selected text in the note text edit
+Lees de geselecteerde tekst in de tekstbewerking van de notitie
 --------------------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Reads the selected text in the note text edit
- *
- * @return
- */
-QString ScriptingService::noteTextEditSelectedText();
+  * Leest de geselecteerde tekst in de tekstbewerking van de notitie
+  *
+  * @return
+  */
+QString ScriptingService :: noteTextEditSelectedText ();
 ```
 
 ### Voorbeeld
 ```js
-// read the selected text from the note text edit
-var text = script.noteTextEditSelectedText();
+// lees de geselecteerde tekst uit de notitietekst bewerk 
+var text = script.noteTextEditSelectedText ();
 ```
 
 Misschien wilt u de aangepaste actie `transformTextRot13` bekijken in het voorbeeld [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-Select all text in the note text edit
+Selecteer alle tekst in de tekstbewerking van de notitie
 -------------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Selects all text in the note text edit
- */
-void ScriptingService::noteTextEditSelectAll();
+  * Selecteert alle tekst in de tekstbewerking van de notitie
+  */
+leegte ScriptingService :: noteTextEditSelectAll ();
 ```
 
 ### Voorbeeld
@@ -461,14 +461,14 @@ script.noteTextEditSelectAll();
 
 U kunt dit samen met `noteTextEditWrite` gebruiken om de hele tekst van de huidige notitie te overschrijven.
 
-Select the current line in the note text edit
+Selecteer de huidige regel in de tekstbewerking van de notitie
 ---------------------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Selects the current line in the note text edit
- */
+  * Selecteert de huidige regel in de notitietekst
+  */
 void ScriptingService::noteTextEditSelectCurrentLine();
 ```
 
@@ -477,15 +477,15 @@ void ScriptingService::noteTextEditSelectCurrentLine();
 script.noteTextEditSelectCurrentLine();
 ```
 
-Select the current word in the note text edit
+Selecteer de huidige woord in de tekstbewerking van de notitie
 ---------------------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Selects the current line in the note text edit
- */
-void ScriptingService::noteTextEditSelectCurrentWord();
+  * Selecteert de huidige regel in de tekstbewerking van de notitie
+  */
+void ScriptingService :: noteTextEditSelectCurrentWord ();
 ```
 
 ### Voorbeeld
@@ -493,7 +493,7 @@ void ScriptingService::noteTextEditSelectCurrentWord();
 script.noteTextEditSelectCurrentWord();
 ```
 
-Set the currently selected text in the note text edit
+Stel de momenteel geselecteerde tekst in bij het bewerken van de notitietekst
 -----------------------------------------------------
 
 ### Methodeaanroep en parameters
@@ -515,7 +515,7 @@ script.noteTextEditSetSelection(
     script.noteTextEditSelectionEnd() + 1);
 ```
 
-Get the start position of the current selection in the note text edit
+Verkrijg de startpositie van de huidige selectie in de notitietekst
 ---------------------------------------------------------------------
 
 ### Methodeaanroep en parameters
@@ -531,7 +531,7 @@ int ScriptingService::noteTextEditSelectionStart();
 script.log(script.noteTextEditSelectionStart());
 ```
 
-Get the end position of the current selection in the note text edit
+Haal de eindpositie van de huidige selectie op in de tekstbewerking van de notitie
 -------------------------------------------------------------------
 
 ### Methodeaanroep en parameters
@@ -571,15 +571,15 @@ script.noteTextEditSetCursorPosition(10);
 script.noteTextEditSetCursorPosition(-1);
 ```
 
-Get the current position of the text cursor in the note text edit
+Haal de huidige positie van de tekstcursor op in de tekstbewerking van de notitie
 -----------------------------------------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Returns the current position of the text cursor in the note text edit
- * 0 would be the beginning of the note
- */
+  * Geeft de huidige positie van de tekstcursor terug in de notitietekst
+  * 0 zou het begin van de notitie zijn
+  */
 int ScriptingService::noteTextEditCursorPosition();
 ```
 
@@ -588,7 +588,7 @@ int ScriptingService::noteTextEditCursorPosition();
 script.log(script.noteTextEditCursorPosition());
 ```
 
-Read the current word from the note text edit
+Lees het huidige woord uit de tekst van de notitie
 ---------------------------------------------
 
 ### Methodeaanroep en parameters
@@ -612,7 +612,7 @@ var text = script.noteTextEditCurrentWord();
 
 Misschien wilt u het voorbeeld eens bekijken [automatisch aanvullen.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
 
-Check whether platform is Linux, OS X or Windows
+Controleer of het platform Linux, OS X of Windows is
 ------------------------------------------------
 
 ### Methodeaanroep en parameters
@@ -629,7 +629,7 @@ if (script.platformIsLinux()) {
 }
 ```
 
-Tag the current note
+Tag de huidige notitie
 --------------------
 
 ### Methodeaanroep en parameters
@@ -726,23 +726,23 @@ noteIds.forEach(function (noteId){
 
 Misschien wilt u het voorbeeld eens bekijken [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/unique-note-id.qml).
 
-Add a custom stylesheet
+Voeg een aangepast stylesheet toe
 -----------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Adds a custom stylesheet to the application
- *
- * @param stylesheet
- */
-void ScriptingService::addStyleSheet(QString stylesheet);
+  * Voegt een aangepast stylesheet toe aan de applicatie
+  *
+  * @param stylesheet
+  */
+void ScriptingService :: addStyleSheet (QString-stylesheet);
 ```
 
 ### Voorbeeld
 ```js
-// make the text in the note list bigger
-script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
+// maak de tekst in de notitielijst groter
+script.addStyleSheet("QTreeWidget # noteTreeWidget {font-size: 30px;}");
 ```
 
 Misschien wilt u het voorbeeld eens bekijken [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-stylesheet.qml).
@@ -765,24 +765,24 @@ If you want to inject styles into html preview to alter the way notes are previe
 If you actually want to see how the dialogs look and what the names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it.
 :::
 
-Reloading the scripting engine
+Herladen van de script-engine
 ------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Reloads the scripting engine
- */
+  * Herlaadt de script-engine
+  */
 void ScriptingService::reloadScriptingEngine();
 ```
 
 ### Voorbeeld
 ```js
-// reload the scripting engine
+// herlaad de script-engine
 script.reloadScriptingEngine();
 ```
 
-Fetching a note by its file name
+Een notitie ophalen op basis van de bestandsnaam
 --------------------------------
 
 ### Methodeaanroep en parameters
@@ -1436,16 +1436,16 @@ var result = script.inputDialogGetText(
 script.log(result);
 ```
 
-Checking if a file exists
+Controleren of er een bestand bestaat
 -------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
-/**
- * Check if a file exists
- * @param filePath
- * @return
- */
+**
+  * Controleer of er een bestand bestaat
+  * @param filePath
+  * @return
+  */
 bool ScriptingService::fileExists(QString &filePath);
 ```
 
@@ -1455,7 +1455,7 @@ var result = script.fileExists(filePath);
 script.log(result);
 ```
 
-Reading text from a file
+Tekst uit een bestand lezen
 ------------------------
 
 ### Methodeaanroep en parameters
@@ -1479,10 +1479,10 @@ if(script.fileExists(filePath)){
 ```
 
 
-Writing text to a file
+Tekst naar een bestand schrijven
 ----------------------
 
-### Method call and parameters
+### Methodeaanroep en parameters
 ```cpp
 /**
  * Writes a text to a file
@@ -1495,21 +1495,21 @@ Writing text to a file
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### Example
+### Voorbeeld
 ```js
 var result = script.writeToFile(filePath, html);
 script.log(result);
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Misschien wilt u het voorbeeld eens bekijken [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Working with websockets
+Werken met websockets
 -----------------------
 
-You can remote control QOwnNotes by using `WebSocketServer`.
+U kunt QOwnNotes op afstand bedienen met `WebSocketServer`.
 
-Please take a look at the example [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). You can test the socket server by connecting to it on [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
+Bekijk het voorbeeld eens [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). U kunt de socketserver testen door er verbinding mee te maken op [Websocket-test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
 
-You can also listen to sockets with `WebSocket`. Please take look at the example [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
+U kunt ook naar sockets luisteren met `WebSocket`. Kijk alstublieft naar de voorbeeld [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
 
-Keep in mind that you need to have Qt's QML `websocket` library installed to use this. For example under Ubuntu Linux you can install `qml-module-qtwebsockets`.
+Onthoud dat u Qt's QML `websocket`-bibliotheek moet hebben geïnstalleerd om dit te gebruiken. U kunt bijvoorbeeld onder Ubuntu Linux installeren `qml-module-qtwebsockets`.

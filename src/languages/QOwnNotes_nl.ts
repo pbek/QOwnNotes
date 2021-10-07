@@ -4645,22 +4645,22 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <location filename="../utils/gui.cpp" line="1064"/>
 <source>Dark mode detected</source>
-<translation type="unfinished">Dark mode detected</translation>
+<translation>Donkere modus gedetecteerd</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1065"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Uw Windows-systeem lijkt de donkere modus te gebruiken. Wil je ook de donkere modus inschakelen in QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1077"/>
 <source>Light mode detected</source>
-<translation type="unfinished">Light mode detected</translation>
+<translation>Lichtmodus gedetecteerd</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1078"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Uw Windows-systeem lijkt de lichtmodus te gebruiken. Wil je de donkere modus ook uitschakelen in QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="76"/>
@@ -4680,12 +4680,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4461"/>
 <source>Login flow succeeded</source>
-<translation type="unfinished">Login flow succeeded</translation>
+<translation>Inlogstroom geslaagd</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4462"/>
 <source>Username and password were set successfully!</source>
-<translation type="unfinished">Username and password were set successfully!</translation>
+<translation>Gebruikersnaam en wachtwoord zijn succesvol ingesteld!</translation>
 </message>
 <message>
 <location filename="../entities/cloudconnection.cpp" line="291"/>
@@ -4755,26 +4755,24 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <location filename="../services/owncloudservice.cpp" line="2264"/>
 <location filename="../services/owncloudservice.cpp" line="2279"/>
 <source>Login flow failed</source>
-<translation type="unfinished">Login flow failed</translation>
+<translation>Inlogstroom mislukt</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2265"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
+<translation>Nextcloud-aanmeldingsstroom v2 kan niet worden gestart. Zorg ervoor dat de server-url correct is en dat je een Nextcloud-server gebruikt! &lt;br /&gt;&lt;br /&gt; Als je nog steeds problemen ondervindt, maak dan handmatig een app-wachtwoord aan op de beheerderspagina van je server.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2280"/>
 <source>Could not parse login url!</source>
-<translation type="unfinished">Could not parse login url!</translation>
+<translation>Could not parse login url!</translation>
 </message>
 <message>
 <location filename="../utils/misc.cpp" line="929"/>
 <source>
 
 Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</source>
-<translation type="unfinished">
-
-Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</translation>
+<translation>Merk op dat voor de volgende lancering van de applicatie de enkele app-instantiemodus wordt uitgeschakeld, zodat de applicatie opnieuw kan worden gestart.</translation>
 </message>
 </context>
 <context>
@@ -5955,12 +5953,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1428"/>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
-<translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
+<translation>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1431"/>
 <source>Login to Nextcloud to grant access</source>
-<translation type="unfinished">Login to Nextcloud to grant access</translation>
+<translation>Log in op Nextcloud om toegang te verlenen</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1836"/>
@@ -6374,7 +6372,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
 <source>This also allows note files to be renamed</source>
-<translation type="unfinished">This also allows note files to be renamed</translation>
+<translation>Hierdoor kunnen ook notitiebestanden worden hernoemd</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1418"/>
@@ -6384,7 +6382,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1442"/>
 <source>Cancel Nextcloud login</source>
-<translation type="unfinished">Cancel Nextcloud login</translation>
+<translation>Annuleer aanmelding bij Nextcloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2194"/>
@@ -6465,22 +6463,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4225"/>
 <source>Note file extensions</source>
-<translation type="unfinished">Note file extensions</translation>
+<translation>Notitie bestandsextensies</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4263"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
-<translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
+<translation>Bestanden met de vermelde bestandsextensies worden herkend als notities, de geselecteerde bestandsextensie wordt gebruikt voor nieuwe notities.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4273"/>
 <source>Add a new note file extension</source>
-<translation type="unfinished">Add a new note file extension</translation>
+<translation>Een nieuwe notitiebestandsextensie toevoegen</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4287"/>
 <source>Remove selected note file extension</source>
-<translation type="unfinished">Remove selected note file extension</translation>
+<translation>Geselecteerde notitiebestandsextensie verwijderen</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4418"/>
@@ -7563,22 +7561,22 @@ Verbinding foutbericht: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3293"/>
 <source>Please enter a new note file extension:</source>
-<translation type="unfinished">Please enter a new note file extension:</translation>
+<translation>Voer een nieuwe notitiebestandsextensie in:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3327"/>
 <source>Markdown file</source>
-<translation type="unfinished">Markdown file</translation>
+<translation>Markdown bestand</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3329"/>
 <source>Plain text file</source>
-<translation type="unfinished">Plain text file</translation>
+<translation>Platte tekst bestand</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3347"/>
 <source>Remove note file extension</source>
-<translation type="unfinished">Remove note file extension</translation>
+<translation>Bestandsextensie voor notitie verwijderen</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4058"/>
@@ -7702,7 +7700,7 @@ Verbinding foutbericht: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3348"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
-<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+<translation>Wilt u de notitiebestandsextensie &lt;strong&gt;%1&lt;/strong&gt; echt verwijderen? U ziet geen bestanden met deze extensie meer in de notitielijst!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3638"/>
@@ -8512,12 +8510,12 @@ Je notities zullen intact blijven!</translation>
 <message>
 <location filename="../dialogs/tododialog.ui" line="349"/>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>Dit werkt niet voor sub-items, omdat deze mogelijk verborgen zijn door het bovenliggende item!</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="352"/>
 <source>Show only items due today</source>
-<translation type="unfinished">Show only items due today</translation>
+<translation>Toon alleen items die vandaag inleveren</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="120"/>
@@ -8552,7 +8550,7 @@ Je notities zullen intact blijven!</translation>
 <message>
 <location filename="../dialogs/tododialog.ui" line="334"/>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Opleveringsdatum</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="342"/>

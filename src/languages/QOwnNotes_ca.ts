@@ -1621,7 +1621,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>Seleccioneu, si us plau, el "RAW - Directori d'exportació de Joplin" des d'on voleu importar notes:</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="37"/>
@@ -1636,7 +1636,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="30"/>
 <source>%v of %m file(s) imported</source>
-<translation type="unfinished">%v of %m file(s) imported</translation>
+<translation>%v de %m fitxer(s) importats</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="115"/>
@@ -1651,7 +1651,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="182"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>Si teniu un "JEX - Fitxer d'exportació de Joplin" extraieu el contingut del fitxer a un directori i seleccioneu aquest directori després.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="142"/>
@@ -1661,7 +1661,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="74"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW - Directori d'exportació de Joplin</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
@@ -1671,7 +1671,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="89"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>Seleccioneu 'RAW - Directori d'exportació de Joplin' per a importar</translation>
 </message>
 </context>
 <context>

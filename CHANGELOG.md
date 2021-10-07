@@ -10,6 +10,7 @@
   (for [#2165](https://github.com/pbek/QOwnNotes/issues/2165), thank you @Waqar144)
 - the general performance of handling notes was improved
   (for [#2250](https://github.com/pbek/QOwnNotes/pull/2250), thank you @Waqar144)
+- added more Dutch, Sinhala, Catalan translation (thank you rawfreeamy, helabasa, mguerra)
 
 ## 21.10.0
 - log messages that are output before the log panel is loaded are now also logged
