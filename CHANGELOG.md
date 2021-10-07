@@ -5,6 +5,10 @@
   sub-folder anymore (for [#2249](https://github.com/pbek/QOwnNotes/issues/2249))
 - issues with the translation of the default buttons under Windows and macOS were
   tried to be fixed (for [#783](https://github.com/pbek/QOwnNotes/issues/783))
+- some debug information was added to help reproduce a preview issue
+  (for [#2165](https://github.com/pbek/QOwnNotes/issues/2165), thank you @Waqar144)
+- the general performance of handling notes was improved
+  (for [#2250](https://github.com/pbek/QOwnNotes/pull/2250), thank you @Waqar144)
 
 ## 21.10.0
 - log messages that are output before the log panel is loaded are now also logged
