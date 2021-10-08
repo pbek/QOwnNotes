@@ -917,9 +917,12 @@ void Utils::Misc::restartApplication() {
 
 QString Utils::Misc::appendSingleAppInstanceTextIfNeeded(QString text) {
     if (QSettings().value("allowOnlyOneAppInstance").toBool()) {
-        text.append(QObject::tr("\n\nNote that for the next launch of "
-            "the application the single app instance mode will be disabled, "
-            "so that the application can be restarted."));
+        text.append(QStringLiteral("\n\n") +
+            QObject::tr("You are using the single app instance mode, that "
+                "prevents the application be be started a second time. For the "
+                "next launch of the application the single app instance mode "
+                "will be disabled, so that the application can be restarted "
+                "before quitting this instance."));
     }
 
     return text;
