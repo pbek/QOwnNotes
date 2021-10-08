@@ -773,102 +773,102 @@
 <translation>Sarudza Evernote enex faira yekuunza</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="680"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="636"/>
 <source>Basic attributes</source>
 <translation>Unhu hunokosha</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="681"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="637"/>
 <source>Created date</source>
 <translation>Yakagadzirwa zuva</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="683"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="639"/>
 <source>Updated date</source>
 <translation>Yakagadziriswa zuva</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="686"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="642"/>
 <source>Note attributes</source>
 <translation>Ona hunhu</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="687"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="643"/>
 <source>Subject date</source>
 <translation>Nyaya yenyaya</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="690"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="646"/>
 <source>Latitude</source>
 <translation>Latitude</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="693"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="649"/>
 <source>Longitude</source>
 <translation>Longitude</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="696"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="652"/>
 <source>Altitude</source>
 <translation>Kukura</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="699"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
 <source>Author</source>
 <translation>Munyori</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="702"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="658"/>
 <source>Source</source>
 <translation>Kunobva</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="705"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
 <source>Source URL</source>
 <translation>Kunobva URL</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="709"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
 <source>Source application</source>
 <translation>Source chikumbiro</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="712"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="668"/>
 <source>Reminder order</source>
 <translation>Yeuchidzo kuraira</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="715"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
 <source>Reminder time</source>
 <translation>Yeuchidzo nguva</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="719"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
 <source>Reminder done time</source>
 <translation>Chiyeuchidzo chakaitwa nguva</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="722"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="678"/>
 <source>Place name</source>
 <translation>Nzvimbo yezita</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="725"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="681"/>
 <source>Content class</source>
 <translation>Kirasi yemukati</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="729"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="685"/>
 <source>Application data</source>
 <translation>Data rekushandisa</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="628"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="584"/>
 <source>Attribute</source>
 <translation type="unfinished">Attribute</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="628"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="584"/>
 <source>Value</source>
 <translation>Kukosha</translation>
 </message>
@@ -2030,7 +2030,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="9061"/>
+<location filename="../mainwindow.cpp" line="9059"/>
 <source>Add a tag to the current note</source>
 <translation>Wedzera tag kune icho chino chinyorwa</translation>
 </message>
@@ -2066,7 +2066,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1241"/>
-<location filename="../mainwindow.cpp" line="6964"/>
+<location filename="../mainwindow.cpp" line="6959"/>
 <source>Custom actions</source>
 <translation>Zviito zvetsika</translation>
 </message>
@@ -2147,12 +2147,12 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1448"/>
-<location filename="../mainwindow.cpp" line="10738"/>
+<location filename="../mainwindow.cpp" line="10752"/>
 <source>Select &amp;all notes</source>
 <translation>Sarudza zvinyorw&amp;a zvese</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6872"/>
+<location filename="../mainwindow.cpp" line="6867"/>
 <source>Insert &amp;link</source>
 <translation>Isa &amp;chinongedzo</translation>
 </message>
@@ -2202,7 +2202,7 @@
 <translation>Tsvaga kana gadzira noti</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9062"/>
+<location filename="../mainwindow.cpp" line="9060"/>
 <source>Add a tag to the selected notes</source>
 <translation>Wedzera tag kune mavara akasarudzwa</translation>
 </message>
@@ -2213,7 +2213,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="886"/>
-<location filename="../mainwindow.cpp" line="6926"/>
+<location filename="../mainwindow.cpp" line="6921"/>
 <source>Export</source>
 <translation>Export</translation>
 </message>
@@ -2224,7 +2224,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="929"/>
-<location filename="../mainwindow.cpp" line="6907"/>
+<location filename="../mainwindow.cpp" line="6902"/>
 <source>Print</source>
 <translation>Dhinda</translation>
 </message>
@@ -2598,7 +2598,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2244"/>
-<location filename="../mainwindow.cpp" line="11859"/>
+<location filename="../mainwindow.cpp" line="11873"/>
 <source>Remove current workspace</source>
 <translation>Bvisa ikozvino workspace</translation>
 </message>
@@ -2640,7 +2640,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2318"/>
-<location filename="../mainwindow.cpp" line="6881"/>
+<location filename="../mainwindow.cpp" line="6876"/>
 <source>Insert block &amp;quote</source>
 <translation type="unfinished">Insert block &amp;quote</translation>
 </message>
@@ -2667,7 +2667,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2365"/>
-<location filename="../mainwindow.cpp" line="10714"/>
+<location filename="../mainwindow.cpp" line="10728"/>
 <source>Open note in different window</source>
 <translation>Vhura noti muwindo rakasiyana</translation>
 </message>
@@ -2688,7 +2688,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2405"/>
-<location filename="../mainwindow.cpp" line="10722"/>
+<location filename="../mainwindow.cpp" line="10736"/>
 <source>Show note git versions</source>
 <translation>Ratidza zvinyorwa git</translation>
 </message>
@@ -2771,7 +2771,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2567"/>
-<location filename="../mainwindow.cpp" line="12853"/>
+<location filename="../mainwindow.cpp" line="12867"/>
 <source>Automatically detect</source>
 <translation>Ziva otomatiki</translation>
 </message>
@@ -2991,10 +2991,10 @@ Restore current note?</source>
 Dzosera runyorwa rwezvino?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5611"/>
-<location filename="../mainwindow.cpp" line="5634"/>
-<location filename="../mainwindow.cpp" line="7405"/>
-<location filename="../mainwindow.cpp" line="10804"/>
+<location filename="../mainwindow.cpp" line="5608"/>
+<location filename="../mainwindow.cpp" line="5631"/>
+<location filename="../mainwindow.cpp" line="7400"/>
+<location filename="../mainwindow.cpp" line="10818"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Kanzura</translation>
 </message>
@@ -3011,42 +3011,42 @@ Dzosera runyorwa rwezvino?</translation>
 <translation>shanduro nyowani %1 iripo</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3350"/>
+<location filename="../mainwindow.cpp" line="3347"/>
 <source>Abort</source>
 <translation>Bvisa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3350"/>
+<location filename="../mainwindow.cpp" line="3347"/>
 <source>Loading notes…</source>
 <translation>Kuisa manotsi…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3564"/>
+<location filename="../mainwindow.cpp" line="3561"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>Akabvisa zvakapetwa zvinopesana dhatabhesi: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3565"/>
+<location filename="../mainwindow.cpp" line="3562"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>Haugone kubvisa dheta mbiri dzinopesana: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3571"/>
+<location filename="../mainwindow.cpp" line="3568"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>Yakabviswa yakasanganiswa database yakasarudzika: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3572"/>
+<location filename="../mainwindow.cpp" line="3569"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>Hatina kukwanisa kubvisa database yakasanganiswa: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3587"/>
+<location filename="../mainwindow.cpp" line="3584"/>
 <source>Delete conflicted database copies</source>
 <translation>Delete makopi database anopokana</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3610"/>
+<location filename="../mainwindow.cpp" line="3607"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>Yakabviswa %n inopesana yedhisheni kopi</numerusform>
@@ -3054,62 +3054,62 @@ Dzosera runyorwa rwezvino?</translation>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3774"/>
+<location filename="../mainwindow.cpp" line="3771"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>Ndokumbira sarudza fotera panowanikwa zvinyorwa zvako</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3800"/>
+<location filename="../mainwindow.cpp" line="3797"/>
 <source>No folder was selected</source>
 <translation>Hakuna folda yakasarudzwa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3802"/>
+<location filename="../mainwindow.cpp" line="3799"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>Iwe unofanirwa kusarudza yako ownCloud zvinyorwa folda kuti uite iyi software iite!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3804"/>
+<location filename="../mainwindow.cpp" line="3801"/>
 <source>&amp;Retry</source>
 <translation>&amp;Edza</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3804"/>
+<location filename="../mainwindow.cpp" line="3801"/>
 <source>&amp;Exit</source>
 <translation>&amp;Buda</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4132"/>
+<location filename="../mainwindow.cpp" line="4129"/>
 <source>Remove current note</source>
 <translation>Bvisa chinyorwa chazvino</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4133"/>
+<location filename="../mainwindow.cpp" line="4130"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Bvisa chinyorwa chazvino: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4492"/>
+<location filename="../mainwindow.cpp" line="4489"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>Ndokumbira utore iyo &lt;strong&gt; password &lt;/strong&gt; yeiyi nyorwa yakanyorwa.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4515"/>
+<location filename="../mainwindow.cpp" line="4512"/>
 <source>Note can't be decrypted!</source>
 <translation>Cherechedzo haigone kudhindwa!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4516"/>
+<location filename="../mainwindow.cpp" line="4513"/>
 <source>It seems that your password is not valid!</source>
 <translation>Zvinoita sekuti password yako haisi kushanda!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4684"/>
+<location filename="../mainwindow.cpp" line="4681"/>
 <source>Remove selected notes</source>
 <translation>Bvisa zvinyorwa zvakasarudzwa</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4686"/>
+<location filename="../mainwindow.cpp" line="4683"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3123,13 +3123,13 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4776"/>
-<location filename="../mainwindow.cpp" line="11027"/>
+<location filename="../mainwindow.cpp" line="4773"/>
+<location filename="../mainwindow.cpp" line="11041"/>
 <source>Remove selected folders</source>
 <translation>Bvisa zvakasarudzwa maforodha</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4777"/>
+<location filename="../mainwindow.cpp" line="4774"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation>
 <numerusform>Bvisa &lt;strong&gt;%n&lt;/strong&gt; folda yakasarudzwa?
@@ -3139,17 +3139,17 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4788"/>
+<location filename="../mainwindow.cpp" line="4785"/>
 <source>Removed note subfolder: %1</source>
 <translation>Akabvisa chidimbu chidiki: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4808"/>
+<location filename="../mainwindow.cpp" line="4805"/>
 <source>Remove selected tags</source>
 <translation>Bvisa mabhegi akasarudzwa</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4809"/>
+<location filename="../mainwindow.cpp" line="4806"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>Bvisa &lt;strong&gt;%n&lt;/strong&gt; tiki yakasarudzwa? Hapana zvinyorwa zvichabviswa mukuita uku.</numerusform>
@@ -3157,13 +3157,13 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4861"/>
-<location filename="../mainwindow.cpp" line="9847"/>
+<location filename="../mainwindow.cpp" line="4858"/>
+<location filename="../mainwindow.cpp" line="9845"/>
 <source>Move selected notes</source>
 <translation>Fambisa manotsi akasarudzwa</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4862"/>
+<location filename="../mainwindow.cpp" line="4859"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Fambisa %n yakasarudzwa noti ku &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3171,13 +3171,13 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4967"/>
-<location filename="../mainwindow.cpp" line="9956"/>
+<location filename="../mainwindow.cpp" line="4964"/>
+<location filename="../mainwindow.cpp" line="9962"/>
 <source>Copy selected notes</source>
 <translation>Kopa zvinyorwa zvakasarudzwa</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4968"/>
+<location filename="../mainwindow.cpp" line="4965"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Copy %n yakasarudzwa noti ku &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3185,13 +3185,13 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4998"/>
-<location filename="../mainwindow.cpp" line="5147"/>
+<location filename="../mainwindow.cpp" line="4995"/>
+<location filename="../mainwindow.cpp" line="5144"/>
 <source>Done</source>
 <translation>Zvaitwa</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4999"/>
+<location filename="../mainwindow.cpp" line="4996"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n noti yakateedzerwa ku &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -3199,12 +3199,12 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5012"/>
+<location filename="../mainwindow.cpp" line="5009"/>
 <source>Tag selected notes</source>
 <translation>Maki yakasarudzwa manotsi</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5013"/>
+<location filename="../mainwindow.cpp" line="5010"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Tag %n yakasarudzwa noti na &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3212,37 +3212,37 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5288"/>
+<location filename="../mainwindow.cpp" line="5285"/>
 <source>Restart application</source>
 <translation>Restart application</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5289"/>
+<location filename="../mainwindow.cpp" line="5286"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Ungangoda kutangidza application kurega matanho acho achishanda.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5292"/>
+<location filename="../mainwindow.cpp" line="5289"/>
 <source>Restart</source>
 <translation>Kutangazve</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5523"/>
+<location filename="../mainwindow.cpp" line="5520"/>
 <source>PDF files</source>
 <translation>Faera rePDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5607"/>
+<location filename="../mainwindow.cpp" line="5604"/>
 <source>Todo lists disabled!</source>
 <translation>Rondedzero yeTodo yakaremara!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5608"/>
+<location filename="../mainwindow.cpp" line="5605"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Iwe Akaremara todo mazita. &lt;br /&gt; Tapota bvunza wako &lt;strong&gt; Todo &lt;/strong&gt; configuration mu pazviruva!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5860"/>
+<location filename="../mainwindow.cpp" line="5857"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Yakawanikwa &lt;strong&gt;%n &lt;/strong&gt; kuwanikwa chero enguva ye &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -3250,110 +3250,110 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6436"/>
-<location filename="../mainwindow.cpp" line="6457"/>
+<location filename="../mainwindow.cpp" line="6431"/>
+<location filename="../mainwindow.cpp" line="6452"/>
 <source>Note was not found</source>
 <translation>Cherechedzo haina kuwanikwa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6447"/>
+<location filename="../mainwindow.cpp" line="6442"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Cherechedzo haina kuwanikwa, gadzira chinyowani chitsva &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6496"/>
+<location filename="../mainwindow.cpp" line="6491"/>
 <source>Failed to create note</source>
 <translation type="unfinished">Failed to create note</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6497"/>
+<location filename="../mainwindow.cpp" line="6492"/>
 <source>Note creation failed</source>
 <translation type="unfinished">Note creation failed</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6685"/>
+<location filename="../mainwindow.cpp" line="6680"/>
 <source>Note folders</source>
 <translation>Cherekedza mapepa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6808"/>
+<location filename="../mainwindow.cpp" line="6803"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>Cherechedzo shanduro parizvino dzinotakurirwa kubva kune yako ownCloud server</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6825"/>
+<location filename="../mainwindow.cpp" line="6820"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Akadonhedzwa manotsi parizvino anotakurirwa kubva kune yako ownCloud server</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6891"/>
+<location filename="../mainwindow.cpp" line="6886"/>
 <source>Copy code block</source>
 <translation>Copy kodhi block</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6915"/>
+<location filename="../mainwindow.cpp" line="6910"/>
 <source>Print selected text</source>
 <translation>Prinda mavara akasarudzwa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6921"/>
+<location filename="../mainwindow.cpp" line="6916"/>
 <source>Print selected text (preview)</source>
 <translation>Prinda mavara akasarudzwa (preview)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6939"/>
+<location filename="../mainwindow.cpp" line="6934"/>
 <source>Export selected text as PDF</source>
 <translation>Export zvinyorwa zvakasarudzwa sePDP</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6945"/>
+<location filename="../mainwindow.cpp" line="6940"/>
 <source>Export selected text as PDF (preview)</source>
 <translation>Export zvinyorwa zvakasarudzwa sePDP (preview)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7401"/>
+<location filename="../mainwindow.cpp" line="7396"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>Tsamba yako ichave yakashongedzwa uye ichichengeterwa senge mavara akajeka zvakare. Ramba uchifunga kuti iyo isina kunyorwa tsamba ingangonyorerwe kune yako server uye yakaomarara zvinyorwa inogona kuburitswa!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7498"/>
+<location filename="../mainwindow.cpp" line="7493"/>
 <source>Markdown files</source>
 <translation>Makona mafaera</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7555"/>
+<location filename="../mainwindow.cpp" line="7550"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>Akanyorwa bhaibhurosi nzvimbo pakero %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7570"/>
+<location filename="../mainwindow.cpp" line="7565"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>Yakasvetuka kunzvimbo yekumaka munzvimbo ye slot %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7798"/>
-<location filename="../mainwindow.cpp" line="7868"/>
+<location filename="../mainwindow.cpp" line="7793"/>
+<location filename="../mainwindow.cpp" line="7863"/>
 <source>Inserting image</source>
 <translation>Kuisa mufananidzo</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7803"/>
-<location filename="../mainwindow.cpp" line="7872"/>
+<location filename="../mainwindow.cpp" line="7798"/>
+<location filename="../mainwindow.cpp" line="7867"/>
 <source>Done inserting image</source>
 <translation>Paitwa kuisa mufananidzo</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7805"/>
+<location filename="../mainwindow.cpp" line="7800"/>
 <source>Inserting attachment</source>
 <translation>Kuisa kubatanidza</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7810"/>
+<location filename="../mainwindow.cpp" line="7805"/>
 <source>Done inserting attachment</source>
 <translation>Paitwa kuisa yekubatanidza</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7822"/>
+<location filename="../mainwindow.cpp" line="7817"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>Takopwa %n noti ku %1</numerusform>
@@ -3361,7 +3361,7 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7832"/>
+<location filename="../mainwindow.cpp" line="7827"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>Takopwa %n noti ku %1
@@ -3370,7 +3370,7 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7842"/>
+<location filename="../mainwindow.cpp" line="7837"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>Yakatsemuka kutevedzera kwe %n noti (hapana mamaki kana kana zvinyorwa faira kana kusinga verengi)</numerusform>
@@ -3378,218 +3378,218 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7855"/>
+<location filename="../mainwindow.cpp" line="7850"/>
 <source>Saving temporary image</source>
 <translation>Kuchengetedza chenguva pfupi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7874"/>
+<location filename="../mainwindow.cpp" line="7869"/>
 <source>Temporary file can't be opened</source>
 <translation>Faira yenguva pfupi haigone kuvhurwa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7912"/>
+<location filename="../mainwindow.cpp" line="7907"/>
 <source>Downloading %1</source>
 <translation>Kurodha %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8107"/>
+<location filename="../mainwindow.cpp" line="8099"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Dzosera size yemafonti ku %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9107"/>
+<location filename="../mainwindow.cpp" line="9105"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>Bvisa tag '%1' pane chazvino ziviso</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9108"/>
+<location filename="../mainwindow.cpp" line="9106"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>Bvisa tag '%1' kubva pane zvakasarudzwa zvinyorwa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9339"/>
+<location filename="../mainwindow.cpp" line="9337"/>
 <source>Rename tag</source>
 <translation>Dzorerazve tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9340"/>
+<location filename="../mainwindow.cpp" line="9338"/>
 <source>Assign color</source>
 <translation>Ipa ruvara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9341"/>
+<location filename="../mainwindow.cpp" line="9339"/>
 <source>Disable color</source>
 <translation>Dzivisa mavara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9345"/>
+<location filename="../mainwindow.cpp" line="9343"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;Fambisa mamaki ku…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9556"/>
+<location filename="../mainwindow.cpp" line="9554"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>Enda kumidzi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10104"/>
+<location filename="../mainwindow.cpp" line="10118"/>
 <source>An url was opened at the current cursor position</source>
 <translation>An url was opened at the current cursor position</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10207"/>
+<location filename="../mainwindow.cpp" line="10221"/>
 <source>No equation was found in front of the cursor</source>
 <translation>Hapana kana equation yakawanikwa pamberi peiyo nhume</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10227"/>
+<location filename="../mainwindow.cpp" line="10241"/>
 <source>Result for equation: %1 = %2</source>
 <translation>Mhedzisiro yekuenzaniswa: %1 = %2</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10332"/>
+<location filename="../mainwindow.cpp" line="10346"/>
 <source>The scripting engine was reloaded</source>
 <translation>Injini yekunyora yakadzorerwa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10366"/>
+<location filename="../mainwindow.cpp" line="10380"/>
 <source>HTML files</source>
 <translation>HTML mafaera</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10650"/>
+<location filename="../mainwindow.cpp" line="10664"/>
 <source>Jump to the note's subfolder</source>
 <translation>Svetukira kubhuku retsamba</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10707"/>
+<location filename="../mainwindow.cpp" line="10721"/>
 <source>Open note in tab</source>
 <translation>Vhura noti mu tebhu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12414"/>
+<location filename="../mainwindow.cpp" line="12428"/>
 <source>A script update was found!</source>
 <translation>Iyo script yekuvandudza yakawanikwa!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12420"/>
+<location filename="../mainwindow.cpp" line="12434"/>
 <source>Script updates</source>
 <translation>Zvinyorwa zveScript</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12421"/>
+<location filename="../mainwindow.cpp" line="12435"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>Kwidziridzo kune zvinyorwa zvako zvakawanikwa mune chinyorwa chinyorwa! Iwe unoda kuzvigadziridza here?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12436"/>
+<location filename="../mainwindow.cpp" line="12450"/>
 <source>No script updates were found</source>
 <translation>Hapana zvinyorwa zve script zvakawanikwa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13085"/>
+<location filename="../mainwindow.cpp" line="13099"/>
 <source>Toggle note stickiness</source>
 <translation>Shandura chinyorwa chinonamira</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13091"/>
+<location filename="../mainwindow.cpp" line="13105"/>
 <source>Close other note tabs</source>
 <translation>Vhara mamwe matabhu ekunyorera</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10594"/>
-<location filename="../mainwindow.cpp" line="10788"/>
+<location filename="../mainwindow.cpp" line="10608"/>
+<location filename="../mainwindow.cpp" line="10802"/>
 <source>Rename note</source>
 <translation>Ipa zita rekuti</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10596"/>
+<location filename="../mainwindow.cpp" line="10610"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>Inokutendera kuti utore zita refaira retsitsi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10610"/>
+<location filename="../mainwindow.cpp" line="10624"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;Fambisa zvinyorwa ku…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10611"/>
+<location filename="../mainwindow.cpp" line="10625"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;Copy zvinyorwa ku…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10654"/>
+<location filename="../mainwindow.cpp" line="10668"/>
 <source>Move notes to subfolder…</source>
 <translation>Fambisa zvinyorwa kuti zvinyore pasi ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10658"/>
+<location filename="../mainwindow.cpp" line="10672"/>
 <source>Copy notes to subfolder…</source>
 <translation>Kopa zvinyorwa kune subfolder…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10666"/>
+<location filename="../mainwindow.cpp" line="10680"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;Maki yakasarudzwa manotsi ne…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10690"/>
+<location filename="../mainwindow.cpp" line="10704"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Bvisa tag kubva pane yakasarudzwa manotsi…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10788"/>
+<location filename="../mainwindow.cpp" line="10802"/>
 <source>Name:</source>
 <translation>Zita:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10800"/>
+<location filename="../mainwindow.cpp" line="10814"/>
 <source>Note renaming not enabled!</source>
 <translation>Cherechedzo zita zvekare harigoneswe!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11026"/>
+<location filename="../mainwindow.cpp" line="11040"/>
 <source>Rename subfolder</source>
 <translation>Dzorerazve subfolder</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11631"/>
+<location filename="../mainwindow.cpp" line="11645"/>
 <source>Create new workspace</source>
 <translation>Gadzira nzvimbo itsva yekushanda</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11632"/>
-<location filename="../mainwindow.cpp" line="11901"/>
+<location filename="../mainwindow.cpp" line="11646"/>
+<location filename="../mainwindow.cpp" line="11915"/>
 <source>Workspace name:</source>
 <translation>Workpace zita:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11750"/>
+<location filename="../mainwindow.cpp" line="11764"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>Yazara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11757"/>
+<location filename="../mainwindow.cpp" line="11771"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>Zvishoma</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11860"/>
+<location filename="../mainwindow.cpp" line="11874"/>
 <source>Remove the current workspace?</source>
 <translation>Bvisa ikozvino workspace?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11900"/>
+<location filename="../mainwindow.cpp" line="11914"/>
 <source>Rename workspace</source>
 <translation>Dzorerazve nzvimbo yekushanda</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="12082"/>
+<location filename="../mainwindow.cpp" line="12096"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation type="unfinished">
@@ -3598,42 +3598,42 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12353"/>
+<location filename="../mainwindow.cpp" line="12367"/>
 <source>Disallow all note editing</source>
 <translation>Usatendera zvinyorwa zvese kunyorwa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12595"/>
+<location filename="../mainwindow.cpp" line="12609"/>
 <source>Select text files to import</source>
 <translation>Sarudza mameseji faira kuti uende nawo</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12625"/>
+<location filename="../mainwindow.cpp" line="12639"/>
 <source>Importing: %1</source>
 <translation>Kupinza: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12690"/>
+<location filename="../mainwindow.cpp" line="12704"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>Cherekedza musoro wenyaya '%1' yakateedzerwa kubhodhi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12784"/>
+<location filename="../mainwindow.cpp" line="12798"/>
 <source>Leave full-screen mode</source>
 <translation>Regedza izere-skrini</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12970"/>
+<location filename="../mainwindow.cpp" line="12984"/>
 <source>Custom editor width</source>
 <translation>Tsika yemupendero wedhirama</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12970"/>
+<location filename="../mainwindow.cpp" line="12984"/>
 <source>Characters:</source>
 <translation>Hunhu:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9081"/>
+<location filename="../mainwindow.cpp" line="9079"/>
 <source>%n notes selected</source>
 <translation type="unfinished">
 <numerusform>%n notes selected</numerusform>
@@ -3642,7 +3642,7 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2450"/>
-<location filename="../mainwindow.cpp" line="12354"/>
+<location filename="../mainwindow.cpp" line="12368"/>
 <source>Allow all note editing</source>
 <translation>Bvumidza zvese kunyorwa zvinyorwa</translation>
 </message>
@@ -3652,12 +3652,12 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 <translation type="unfinished">&amp;Tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5087"/>
+<location filename="../mainwindow.cpp" line="5084"/>
 <source>Remove tag from selected notes</source>
 <translation>Bvisa tag kubva pane yakasarudzwa manotsi</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5088"/>
+<location filename="../mainwindow.cpp" line="5085"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>Bvisa teki &lt;strong&gt;%1&lt;/strong&gt; kubva ku %n yakasarudzwa noti?
@@ -3666,7 +3666,7 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5148"/>
+<location filename="../mainwindow.cpp" line="5145"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; yakabviswa pane %n noti
@@ -3675,96 +3675,96 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5193"/>
+<location filename="../mainwindow.cpp" line="5190"/>
 <source>Current notes folder: </source>
 <translation>Yazvino zvinyorwa dhairekitori:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5196"/>
+<location filename="../mainwindow.cpp" line="5193"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>Gadza zvinyorwa. Yazvino zvinyorwa dhairekitori:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5391"/>
+<location filename="../mainwindow.cpp" line="5388"/>
 <source>Print note</source>
 <translation>Dhindaina notsi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5466"/>
+<location filename="../mainwindow.cpp" line="5463"/>
 <source>Letter</source>
 <translation>Tsamba</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5496"/>
+<location filename="../mainwindow.cpp" line="5493"/>
 <source>Portrait</source>
 <translation>Mufananidzo</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5496"/>
+<location filename="../mainwindow.cpp" line="5493"/>
 <source>Landscape</source>
 <translation>Nyika</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5501"/>
+<location filename="../mainwindow.cpp" line="5498"/>
 <source>Orientation</source>
 <translation>Kudzidziswa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5501"/>
+<location filename="../mainwindow.cpp" line="5498"/>
 <source>Orientation:</source>
 <translation>Kuita:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5524"/>
+<location filename="../mainwindow.cpp" line="5521"/>
 <source>Export current note as PDF</source>
 <translation>Export ikozvino runyorwa sePDP</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5631"/>
+<location filename="../mainwindow.cpp" line="5628"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Hauna kusarudza chero rondedzero ye todo. &lt;br /&gt;
 Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumasethingi!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6667"/>
+<location filename="../mainwindow.cpp" line="6662"/>
 <source>Open QOwnNotes</source>
 <translation>Vhura QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6218"/>
-<location filename="../mainwindow.cpp" line="6717"/>
-<location filename="../mainwindow.cpp" line="10590"/>
-<location filename="../mainwindow.cpp" line="11020"/>
+<location filename="../mainwindow.cpp" line="6215"/>
+<location filename="../mainwindow.cpp" line="6712"/>
+<location filename="../mainwindow.cpp" line="10604"/>
+<location filename="../mainwindow.cpp" line="11034"/>
 <source>New note</source>
 <translation>Chinyowani chitsva</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6734"/>
+<location filename="../mainwindow.cpp" line="6729"/>
 <source>Recent notes</source>
 <translation>Recent zvinyorwa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6750"/>
+<location filename="../mainwindow.cpp" line="6745"/>
 <source>Show todo lists</source>
 <translation>Ratidza todo rondedzero</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6762"/>
+<location filename="../mainwindow.cpp" line="6757"/>
 <source>Recent tasks</source>
 <translation>Mabasa achangoburwa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6783"/>
+<location filename="../mainwindow.cpp" line="6778"/>
 <source>Quit</source>
 <translation>Rega</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8280"/>
+<location filename="../mainwindow.cpp" line="8278"/>
 <source>show notes from all note subfolders (%1)</source>
 <translation>ratidza zvinyorwa kubva kune zvese zvinyorwa zvinyorwa (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8303"/>
+<location filename="../mainwindow.cpp" line="8301"/>
 <source>show notes in note root folder (%1)</source>
 <translation>ratidza zvinyorwa mucherechedzo midzi folda (%1)</translation>
 </message>
@@ -3772,36 +3772,36 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 <location filename="../mainwindow.ui" line="316"/>
 <location filename="../mainwindow.cpp" line="918"/>
 <location filename="../mainwindow.cpp" line="2256"/>
-<location filename="../mainwindow.cpp" line="8315"/>
+<location filename="../mainwindow.cpp" line="8313"/>
 <source>Note folder</source>
 <translation>Cherechedzo dura</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9728"/>
-<location filename="../mainwindow.cpp" line="9795"/>
+<location filename="../mainwindow.cpp" line="9726"/>
+<location filename="../mainwindow.cpp" line="9793"/>
 <source>Copy to note folder</source>
 <translation>Kopa kutarisa kunyora</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9728"/>
-<location filename="../mainwindow.cpp" line="9796"/>
+<location filename="../mainwindow.cpp" line="9726"/>
+<location filename="../mainwindow.cpp" line="9794"/>
 <source>Move to note folder</source>
 <translation>Fambisa kunongedza folda</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9729"/>
-<location filename="../mainwindow.cpp" line="9797"/>
+<location filename="../mainwindow.cpp" line="9727"/>
+<location filename="../mainwindow.cpp" line="9795"/>
 <source>Copy to this subfolder</source>
 <translation>Kopa kune ino subfolder</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9730"/>
-<location filename="../mainwindow.cpp" line="9798"/>
+<location filename="../mainwindow.cpp" line="9728"/>
+<location filename="../mainwindow.cpp" line="9796"/>
 <source>Move to this subfolder</source>
 <translation>Enda kune ino pasi</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9842"/>
+<location filename="../mainwindow.cpp" line="9840"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Fambisa %n yakasarudzwa tsamba kuti utarise subfolder &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3809,13 +3809,13 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5292"/>
-<location filename="../mainwindow.cpp" line="12609"/>
+<location filename="../mainwindow.cpp" line="5289"/>
+<location filename="../mainwindow.cpp" line="12623"/>
 <source>Cancel</source>
 <translation>Kanzura</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9927"/>
+<location filename="../mainwindow.cpp" line="9933"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n nota yakamiswa kuti inyore pasi "%2"
@@ -3824,7 +3824,7 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9951"/>
+<location filename="../mainwindow.cpp" line="9957"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Copy %n noti yakasarudzwa kunyora subfolder &lt;strong&gt;%2&lt;/strong&gt;?
@@ -3833,7 +3833,7 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10018"/>
+<location filename="../mainwindow.cpp" line="10032"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n noti yakateedzerwa kunyorera subfolder "%2"
@@ -3842,57 +3842,57 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10712"/>
+<location filename="../mainwindow.cpp" line="10726"/>
 <source>Open note in external editor</source>
 <translation>Vhura noti mumusoro ekunze</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10716"/>
+<location filename="../mainwindow.cpp" line="10730"/>
 <source>Show note in file manager</source>
 <translation>Ratidza chinyorwa mumafaira faira</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10801"/>
+<location filename="../mainwindow.cpp" line="10815"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>Kana iwe uchida kushandura zita rako rezita iwe unofanirwa kugonesa sarudzo yekubvumira zita retaipi zita rakasiyana nemusoro.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11021"/>
+<location filename="../mainwindow.cpp" line="11035"/>
 <source>New subfolder</source>
 <translation>New subfolder</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11031"/>
+<location filename="../mainwindow.cpp" line="11045"/>
 <source>Show folder in file manager</source>
 <translation>Ratidza folda mune faira maneja</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11076"/>
+<location filename="../mainwindow.cpp" line="11090"/>
 <source>Create a new folder</source>
 <translation>Gadzira folda nyowani</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11077"/>
+<location filename="../mainwindow.cpp" line="11091"/>
 <source>Folder name:</source>
 <translation>Folder zita:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8239"/>
+<location filename="../mainwindow.cpp" line="8237"/>
 <source>show all untagged notes (%1)</source>
 <translation>ratidza zvinyorwa zvese zvisina kudzidza (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8241"/>
+<location filename="../mainwindow.cpp" line="8239"/>
 <source>Untagged notes</source>
 <translation>Zvinyorwa zvisingaverengeki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10367"/>
+<location filename="../mainwindow.cpp" line="10381"/>
 <source>Export current note as HTML file</source>
 <translation>Tumira kunze runyorwa se HTML faira</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5475"/>
+<location filename="../mainwindow.cpp" line="5472"/>
 <source>Page size</source>
 <translation>Saizi yemapeji</translation>
 </message>
@@ -3902,27 +3902,27 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 <translation>siya zvishandiso</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5475"/>
+<location filename="../mainwindow.cpp" line="5472"/>
 <source>Page size:</source>
 <translation>Saizi yemapeji:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5592"/>
+<location filename="../mainwindow.cpp" line="5589"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes inoteedzera risingazivikanwe datha yekushandisa, iyo inobatsira kusarudza kuti zvikamu zvipi zveQOwnNotes yekuvandudza inotevera uye kutsvaga nekugadzirisa bugs. Iwe unogona kudzima hunhu iko mune zvigadziro.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5596"/>
+<location filename="../mainwindow.cpp" line="5593"/>
 <source>&amp;Ok</source>
 <translation>&amp;Zvakanaka</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10600"/>
+<location filename="../mainwindow.cpp" line="10614"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;Bvisa zvinyorwa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6872"/>
+<location filename="../mainwindow.cpp" line="6867"/>
 <source>&amp;Link selected text</source>
 <translation>&amp;Batanidza yakasarudzwa mavara</translation>
 </message>
@@ -3938,7 +3938,7 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="3006"/>
-<location filename="../mainwindow.cpp" line="6156"/>
+<location filename="../mainwindow.cpp" line="6153"/>
 <source>Stored current note to disk</source>
 <translation>Yakachengetwa yazvino nothi kudisiki</translation>
 </message>
@@ -3961,58 +3961,58 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8205"/>
+<location filename="../mainwindow.cpp" line="8203"/>
 <source>show all notes (%1)</source>
 <translation>ratidza zvinyorwa zvese (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8208"/>
-<location filename="../mainwindow.cpp" line="8283"/>
+<location filename="../mainwindow.cpp" line="8206"/>
+<location filename="../mainwindow.cpp" line="8281"/>
 <source>All notes</source>
 <translation>Zvese zvinyorwa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9331"/>
+<location filename="../mainwindow.cpp" line="9329"/>
 <source>&amp;Add tag</source>
 <translation>&amp;Wedzera tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9379"/>
+<location filename="../mainwindow.cpp" line="9377"/>
 <source>Tag could not be created!</source>
 <translation>Tag haigone kugadzirwa!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9558"/>
+<location filename="../mainwindow.cpp" line="9556"/>
 <source>Move to this tag</source>
 <translation>Fambisa kune ichi tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9593"/>
+<location filename="../mainwindow.cpp" line="9591"/>
 <source>Tag this</source>
 <translation>Taka izvi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9618"/>
+<location filename="../mainwindow.cpp" line="9616"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>Haikwanisi kufambisa tiketi '%1' kune ichi tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9667"/>
+<location filename="../mainwindow.cpp" line="9665"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>Yakatamiswa tiketi '%1' kune tiki nyowani</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8545"/>
+<location filename="../mainwindow.cpp" line="8543"/>
 <source>show all notes tagged with '%1' (%2)</source>
 <translation>ratidza zvinyorwa zvese zvakanyorwa ne '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9342"/>
+<location filename="../mainwindow.cpp" line="9340"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;Bvisa ma tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5630"/>
+<location filename="../mainwindow.cpp" line="5627"/>
 <source>No selected todo lists!</source>
 <translation>Hapana akasarudzwa todo zvinyorwa!</translation>
 </message>
@@ -4143,7 +4143,7 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="3007"/>
-<location filename="../mainwindow.cpp" line="6157"/>
+<location filename="../mainwindow.cpp" line="6154"/>
 <source>Current note could not be stored to disk</source>
 <translation>Tsamba yazvino haina kukwanisa kuchengetedza diski</translation>
 </message>
@@ -4168,7 +4168,7 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 <translation>Dzvanya apa kuti uone izvo zvachinja uye kukwanisa kuvandudza kune yazvino vhezheni</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3589"/>
+<location filename="../mainwindow.cpp" line="3586"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>Kuenderera mberi nekudzima otomatiki kwe &lt;strong&gt;%n &lt;/strong&gt; kukanganisika dhatabhesi rekopi iyo inogona kuvhara ownCloud sync maitiro?</numerusform>
@@ -4176,7 +4176,7 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5071"/>
+<location filename="../mainwindow.cpp" line="5068"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n noti rakabakwa ne "%2"
@@ -4185,7 +4185,7 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5856"/>
+<location filename="../mainwindow.cpp" line="5853"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Yakawanikwa -&lt;strong&gt;%n&lt;/strong&gt; kuitika kwe &lt;strong&gt;%1&lt;/strong&gt;
@@ -4195,79 +4195,79 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6218"/>
+<location filename="../mainwindow.cpp" line="6215"/>
 <source>Note headline</source>
 <translation>Cherekedza musoro</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6437"/>
+<location filename="../mainwindow.cpp" line="6432"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
 <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6451"/>
+<location filename="../mainwindow.cpp" line="6446"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6878"/>
+<location filename="../mainwindow.cpp" line="6873"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
 <translation>Vimba &amp;chirevo chakasarudzwa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7924"/>
+<location filename="../mainwindow.cpp" line="7919"/>
 <source>Downloading images finished</source>
 <translation>Kurodha mifananidzo yapera</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8079"/>
+<location filename="../mainwindow.cpp" line="8071"/>
 <source>Increased font size to %1 pt</source>
 <translation>Yakawedzera font size kusvika ku %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8096"/>
+<location filename="../mainwindow.cpp" line="8088"/>
 <source>Decreased font size to %1 pt</source>
 <translation>Yakadzikira font size kusvika ku %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5596"/>
-<location filename="../mainwindow.cpp" line="5611"/>
-<location filename="../mainwindow.cpp" line="5634"/>
-<location filename="../mainwindow.cpp" line="10804"/>
+<location filename="../mainwindow.cpp" line="5593"/>
+<location filename="../mainwindow.cpp" line="5608"/>
+<location filename="../mainwindow.cpp" line="5631"/>
+<location filename="../mainwindow.cpp" line="10818"/>
 <source>Open &amp;settings</source>
 <translation>Vhura &amp;masystem</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1824"/>
-<location filename="../mainwindow.cpp" line="12761"/>
+<location filename="../mainwindow.cpp" line="12775"/>
 <source>leave</source>
 <translation>siya</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7327"/>
+<location filename="../mainwindow.cpp" line="7322"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>Ndokumbira utore rako re &lt;strong&gt; password &lt;/strong&gt; kuti ubate iyo kunyora &lt;br /&gt;
 Ramba uchifunga kuti iwe unofanirwa ku ... yeuka &lt;/strong&gt; password yako kuti uverenge zvakanyorwa zvetsitsi &lt;br /&gt;
 uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt; muQOwnNotes &lt;/strong&gt;!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7400"/>
+<location filename="../mainwindow.cpp" line="7395"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>Decrypt noti uye uichengete seyakajeka mavara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7405"/>
+<location filename="../mainwindow.cpp" line="7400"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;Decrypt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7430"/>
+<location filename="../mainwindow.cpp" line="7425"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br /&gt;Iwe unozogona kugadzirisa rako rakanyorwa.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7499"/>
+<location filename="../mainwindow.cpp" line="7494"/>
 <source>Export current note as Markdown file</source>
 <translation>Export ikozvino runyorwa seMarkdown faira</translation>
 </message>
@@ -4571,37 +4571,37 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
 <translation>default</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1309"/>
+<location filename="../entities/note.cpp" line="1310"/>
 <source>Could not store note file: %1 - Error message: %2</source>
 <translation>Haugone kuchengeta chengetedzo faira: %1 - Chikanganiso mharidzo: %2</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1389"/>
+<location filename="../entities/note.cpp" line="1390"/>
 <source>Renamed note-file was removed: %1</source>
 <translation>Yakapihwa zita rekuti-faira rakabviswa: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1397"/>
+<location filename="../entities/note.cpp" line="1398"/>
 <source>Could not remove renamed note-file: %1 - Error message: %2</source>
 <translation>Haugone kubvisa zita rekuti-faira: %1 - Chikanganiso mharidzo: %2</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1539"/>
+<location filename="../entities/note.cpp" line="1540"/>
 <source>Note</source>
 <translation>Cherechedzo</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2640"/>
+<location filename="../entities/note.cpp" line="2639"/>
 <source>Could not read image file: %1</source>
 <translation>Haugone kuverenga faira yemufananidzo: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3261"/>
+<location filename="../entities/note.cpp" line="3273"/>
 <source>Note file path changed</source>
 <translation>Cherechedzo faira nzira yakachinja</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3262"/>
+<location filename="../entities/note.cpp" line="3274"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>Shanduko yenzira yetsotsi yakaonekwa. Ungave iwe unoda kutsiva zvese zvinoitika zve &lt;strong&gt;%1 &lt;/strong&gt; zvabatana ne &lt;strong&gt;%2 &lt;/strong&gt; uye zvinongedzo zvine zita faira &lt;strong&gt;%3 &lt;/strong&gt; ne &lt;strong&gt;%4 &lt;/strong&gt; &gt; mu &lt;strong&gt;%n &lt;/strong&gt; rodha faira?</numerusform>
@@ -4609,7 +4609,7 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3842"/>
+<location filename="../entities/note.cpp" line="3857"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>… Uye %n zvimwe chinyorwa
@@ -4629,52 +4629,52 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
 <translation>Workpace Selector</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="334"/>
+<location filename="../utils/gui.cpp" line="335"/>
 <source>Don't ask again!</source>
 <translation>Usabvunze zvakare!</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="335"/>
+<location filename="../utils/gui.cpp" line="336"/>
 <source>Don't show again!</source>
 <translation>Usaratidza zvakare!</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="988"/>
+<location filename="../utils/gui.cpp" line="990"/>
 <source>Double-click to unstick note from tab</source>
 <translation>Double-click to unstick note from tab</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="989"/>
+<location filename="../utils/gui.cpp" line="991"/>
 <source>Double-click to stick note to tab</source>
 <translation>Tinya kaviri kuti unamate noti kune tab</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1031"/>
+<location filename="../utils/gui.cpp" line="1033"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
 <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1036"/>
+<location filename="../utils/gui.cpp" line="1038"/>
 <source>&lt;br /&gt;path: %1</source>
 <translation type="unfinished">&lt;br /&gt;path: %1</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1064"/>
+<location filename="../utils/gui.cpp" line="1066"/>
 <source>Dark mode detected</source>
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1065"/>
+<location filename="../utils/gui.cpp" line="1067"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
 <translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1077"/>
+<location filename="../utils/gui.cpp" line="1079"/>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1078"/>
+<location filename="../utils/gui.cpp" line="1080"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
 <translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
@@ -4709,17 +4709,17 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
 <translation>Zvisizvo</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="268"/>
+<location filename="../main.cpp" line="266"/>
 <source>Note folder not found!</source>
 <translation>Cherechedzo dura haina kuwanikwa!</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="269"/>
+<location filename="../main.cpp" line="267"/>
 <source>Your note folder was not found any more! Do you want to select a new one?</source>
 <translation>Yako folda chikwangwani haina kuwanikwa futi! Iwe unoda kusarudza imwe nyowani here?</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="276"/>
+<location filename="../main.cpp" line="274"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>Ndokumbira sarudza fotera pane rako zvinyorwa</translation>
 </message>
@@ -4783,13 +4783,9 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
 <translation type="unfinished">Could not parse login url!</translation>
 </message>
 <message>
-<location filename="../utils/misc.cpp" line="929"/>
-<source>
-
-Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</source>
-<translation type="unfinished">
-
-Note that for the next launch of the application the single app instance mode will be disabled, so that the application can be restarted.</translation>
+<location filename="../utils/misc.cpp" line="921"/>
+<source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
+<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
 </message>
 </context>
 <context>
@@ -9365,47 +9361,47 @@ Izvi hazvigone kuitika</translation>
 <context>
 <name>main</name>
 <message>
-<location filename="../main.cpp" line="97"/>
+<location filename="../main.cpp" line="95"/>
 <source>Runs the application in portable mode.</source>
 <translation>Inomhanya chishandiso mune inotakurika modhi.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="103"/>
+<location filename="../main.cpp" line="101"/>
 <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
 <translation>Inopepeta kunze kwekurasa gadziriro uye zvimwe ruzivo nezvekushandiswa uye nharaunda muGitHub Markdown uye inobuda iko kuishandisa.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="112"/>
+<location filename="../main.cpp" line="110"/>
 <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
 <translation>Inotendera akawanda mareti eQOwnNotes kuti atange kunyangwe asina kusarudzika mumasething.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="119"/>
+<location filename="../main.cpp" line="117"/>
 <source>Clears the settings and runs the application.</source>
 <translation>Inobvisa zvigadziro uye inomhanyisa iyo application.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="125"/>
+<location filename="../main.cpp" line="123"/>
 <source>Runs the application in a different context for settings and internal files.</source>
 <translation>Inomhanya chishandiso mune imwe mamiriro ezvakarongeka uye emukati mafaera.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="134"/>
+<location filename="../main.cpp" line="132"/>
 <source>Triggers a menu action after the application was started.</source>
 <translation type="unfinished">Triggers a menu action after the application was started.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="558"/>
+<location filename="../main.cpp" line="554"/>
 <source>Single application mode is not supported on your system!</source>
 <translation>Imwe chete application mode haina kutsigirwa pane yako system!</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="572"/>
+<location filename="../main.cpp" line="568"/>
 <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
 <translation>Imwe muenzaniso weQOwnNotes yakatotangwa! Iwe unogona kudzima iyo yega semuenzaniso modhi mune zvigadziriso kana kushandisa paramende - bvumidza - dzakawanda - zviitiko.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="623"/>
+<location filename="../main.cpp" line="619"/>
 <source>A second instance of QOwnNotes was attempted to be started!</source>
 <translation>Yechipiri chiitiko cheQOwnNotes chakaedzwa kutanga!</translation>
 </message>
