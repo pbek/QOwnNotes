@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.10.2
+- more issues with the translation of the default buttons under macOS were
+  tried to be fixed (for [#783](https://github.com/pbek/QOwnNotes/issues/783))
+
 ## 21.10.1
 - when copying or moving notes to another sub-folder now notes will not be copied
   or moved to the same sub-folder anymore (for [#2249](https://github.com/pbek/QOwnNotes/issues/2249))

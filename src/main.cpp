@@ -78,8 +78,8 @@ inline void loadMacTranslations(QTranslator &translatorOSX,
                                 const QString &locale) {
     loadTranslation(translatorOSX, appPath + "/../Resources/QOwnNotes_" + locale);
     loadTranslation(translatorOSX2, "../Resources/QOwnNotes_" + locale);
-    loadTranslation(translatorOSX3, appPath + "../Resources/qt_" + locale);
-    loadTranslation(translatorOSX4, "../Resources/qt_" + locale);
+    loadTranslation(translatorOSX3, appPath + "/../Resources/qtbase_" + locale);
+    loadTranslation(translatorOSX4, "../Resources/qtbase_" + locale);
 }
 
 /**
