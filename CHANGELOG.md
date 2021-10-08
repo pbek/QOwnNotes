@@ -5,6 +5,7 @@
   tried to be fixed (for [#783](https://github.com/pbek/QOwnNotes/issues/783))
 - the restart information in single app instance mode was improved to make it
   more understandable (for [#2235](https://github.com/pbek/QOwnNotes/issues/2235))
+- the build for Qt <= 5.5 was fixed
 
 ## 21.10.1
 - when copying or moving notes to another sub-folder now notes will not be copied
