@@ -1,9 +1,9 @@
 # QOwnNotes Changelog
 
 ## 21.10.4
-- the current line will now be highlighted again when you manually reload the
-  note folder or the current note is modified externally (if you have enabled
-  it in the settings) (for [#2253](https://github.com/pbek/QOwnNotes/issues/2253))
+- the current line will now also  be highlighted again the current note is
+  modified externally (if you have enabled it in the settings)
+  (for [#2253](https://github.com/pbek/QOwnNotes/issues/2253))
 
 ## 21.10.3
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
