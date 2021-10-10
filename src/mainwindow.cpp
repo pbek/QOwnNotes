@@ -6080,14 +6080,19 @@ void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
         return;
     }
 
+    const QString text = ui->searchLineEdit->text().trimmed();
+
+    // prevent creation of broken note text files
+    if (text.isEmpty()) {
+        return;
+    }
+
     // this doesn't seem to work with note sub folders
     const QSignalBlocker blocker(noteDirectoryWatcher);
     Q_UNUSED(blocker)
 
     // add the current search text to the saved searches
     storeSavedSearch();
-
-    const QString text = ui->searchLineEdit->text().trimmed();
 
     // clear search line edit so all notes will be viewed again and to prevent
     // a brief appearing of the note search widget when creating a new note

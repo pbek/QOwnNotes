@@ -4,6 +4,8 @@
 - the current line will now also  be highlighted again the current note is
   modified externally (if you have enabled it in the settings)
   (for [#2253](https://github.com/pbek/QOwnNotes/issues/2253))
+- now no (broken) note will be created when pressing <kbd>Enter</kbd> in an
+  empty note search text line (for [#2255](https://github.com/pbek/QOwnNotes/issues/2255))
 
 ## 21.10.3
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
