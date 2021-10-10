@@ -2868,7 +2868,7 @@ void MainWindow::updateNoteTextFromDisk(Note note) {
     {
         const QSignalBlocker blocker(this->ui->noteTextEdit);
         Q_UNUSED(blocker)
-        this->setNoteTextFromNote(&note);
+        this->setNoteTextFromNote(&note, false, false, true);
     }
 
     ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
@@ -3915,7 +3915,7 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
         const QSignalBlocker blocker(ui->noteTextEdit);
         Q_UNUSED(blocker)
 
-        this->setNoteTextFromNote(&note);
+        this->setNoteTextFromNote(&note, false, false, true);
 
         // hide the encrypted note text edit by default and show the regular one
         ui->encryptedNoteTextEdit->hide();
@@ -3941,26 +3941,6 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
     //    setenv("QOWNNOTES_CURRENT_NOTE_PATH",
     //           currentNote.fullNoteFilePath().toLatin1().data(),
     //           1);
-
-    QSettings settings;
-
-#ifdef Q_OS_MAC
-    const bool restoreCursorPositionDefault = false;
-#else
-    const bool restoreCursorPositionDefault = true;
-#endif
-
-    const bool restoreCursorPosition =
-        settings
-            .value(QStringLiteral("restoreCursorPosition"),
-                   restoreCursorPositionDefault)
-            .toBool();
-
-    // restore the last position in the note text edit
-    if (restoreCursorPosition) {
-        noteHistory.getLastItemOfNote(note).restoreTextEditPosition(
-            ui->noteTextEdit);
-    }
 
     // add new note to history
     if (addNoteToHistory && note.exists()) {
@@ -4537,15 +4517,22 @@ int MainWindow::getMaxImageWidth() {
  * Sets the note text according to a note
  */
 void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
-                                     bool ignorePreviewVisibility) {
+                                     bool ignorePreviewVisibility, bool allowRestoreCursorPosition) {
     if (note == nullptr) {
         return;
     }
+
+    auto historyItem = noteHistory.getLastItemOfNote(currentNote);
+
     if (!updateNoteTextViewOnly) {
       qobject_cast<QOwnNotesMarkdownHighlighter *>(
           ui->noteTextEdit->highlighter())
           ->updateCurrentNote(note);
       ui->noteTextEdit->setText(note->getNoteText());
+    }
+
+    if (allowRestoreCursorPosition && Utils::Misc::isRestoreCursorPosition()) {
+        historyItem.restoreTextEditPosition(ui->noteTextEdit);
     }
 
     // update the preview text edit if the dock widget is visible
@@ -9231,7 +9218,7 @@ void MainWindow::on_action_Reload_note_folder_triggered() {
     // force build and load
     buildNotesIndexAndLoadNoteDirectoryList(true, true);
     currentNote.refetch();
-    setNoteTextFromNote(&currentNote);
+    setNoteTextFromNote(&currentNote, false, false, true);
 }
 
 /**

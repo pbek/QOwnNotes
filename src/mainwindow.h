@@ -808,7 +808,8 @@ private:
     int openNoteDiffDialog(Note changedNote);
 
     void setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly = false,
-                             bool ignorePreviewVisibility = false);
+                             bool ignorePreviewVisibility = false,
+                             bool allowRestoreCursorPosition = false);
 
     void loadNoteFolderListMenu();
 

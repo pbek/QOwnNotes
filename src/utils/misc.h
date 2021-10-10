@@ -113,6 +113,7 @@ bool isNoteEditingAllowed();
 bool useInternalExportStylingForPreview();
 bool isSocketServerEnabled();
 bool isWebAppSupportEnabled();
+bool isRestoreCursorPosition();
 QString unescapeHtml(QString html, bool soft = false);
 QString htmlspecialchars(QString text);
 void printInfo(const QString &text);

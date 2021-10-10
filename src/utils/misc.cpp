@@ -1390,6 +1390,22 @@ bool Utils::Misc::isWebAppSupportEnabled() {
 }
 
 /**
+ * Returns if "restoreCursorPosition" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::isRestoreCursorPosition() {
+#ifdef Q_OS_MAC
+    const bool defaultValue = false;
+#else
+    const bool defaultValue = true;
+#endif
+
+    return QSettings().value(QStringLiteral("restoreCursorPosition"),
+                             defaultValue).toBool();
+}
+
+/**
  * Returns if "darkModeIconTheme" is turned on
  *
  * @return

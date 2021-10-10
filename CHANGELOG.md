@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 21.10.3
+- the cursor position of the current note is now also restored when you manually
+  reload the note folder or the current note is modified externally (if you have
+  enabled `Restore cursor position when opening a note` in the *General settings*)
+  (for [#2253](https://github.com/pbek/QOwnNotes/issues/2253))
+
 ## 21.10.2
 - more issues with the translation of the default buttons under macOS were
   tried to be fixed (for [#783](https://github.com/pbek/QOwnNotes/issues/783))
