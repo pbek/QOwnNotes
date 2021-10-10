@@ -16,7 +16,7 @@ dnf install qownnotes
 ::: tip
 You may need to accept the repo key before you can download from it.
 
-If you have troubles import the key yourself with:
+Si vous rencontrez des problèmes, importez vous-même la clé avec :
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key

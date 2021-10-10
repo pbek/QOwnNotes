@@ -9,13 +9,13 @@ actionLink: getting-started/overview
 features:
   - 
     title: Besitze deine Notizen
-    details: Alle Notizen werden als Nur-Text-Markdown-Dateien auf Ihrem Computer gespeichert, ohne "Vendor Lock-In".
+    details: All notes are stored as plain-text markdown files on your computer, no "vendor lock-in". Use sync services like Nextcloud to sync notes across devices.
   - 
-    title: Private Cloud-Unterstützung
-    details: Verwenden Sie Nextcloud, ownCloud oder andere Dienste, um online mit Ihren Notizen zu arbeiten oder sie geräteübergreifend zu synchronisieren
+    title: Geringer Platzbedarf
+    details: Native application, optimized for speed and consuming little processor and memory resources.
   - 
     title: Anpassung
-    details: Stark anpassbar und skriptfähig, Sie haben die Kontrolle darüber, wie Sie mit Ihren Notizen arbeiten möchten
+    details: Stark anpassbar und skriptfähig, Sie haben die Kontrolle darüber, wie Sie mit Ihren Notizen arbeiten möchten.
 footer: Erstellt von Patrizio Bekerle mit ❤️
 ---
 

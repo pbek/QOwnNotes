@@ -4777,7 +4777,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../utils/misc.cpp" line="921"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
+<translation>شما در حال استفاده از حالت نمونه برنامه واحد هستید که از شروع به کار برنامه برای بار دوم جلوگیری می کند. برای اجرای بعدی برنامه، حالت نمونه برنامه واحد غیر فعال خواهد شد تا برنامه قادر به راه اندازی مجدد قبل از انصراف از این مورد باشد.</translation>
 </message>
 </context>
 <context>

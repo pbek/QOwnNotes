@@ -4642,22 +4642,22 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <message>
 <location filename="../utils/gui.cpp" line="1066"/>
 <source>Dark mode detected</source>
-<translation type="unfinished">Dark mode detected</translation>
+<translation>Sötét mód észlelve</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1067"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Úgy tűnik, hogy a Windows rendszere sötét módot használ. A sötét módot is be szeretné kapcsolni a QOwnNotes szolgáltatásban?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1079"/>
 <source>Light mode detected</source>
-<translation type="unfinished">Light mode detected</translation>
+<translation>Fénymódot észlelt</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1080"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Úgy tűnik, hogy a Windows rendszere a világos módot használja. A QOwnNotes alkalmazásban is ki szeretné kapcsolni a sötét módot?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="76"/>
@@ -4677,12 +4677,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4461"/>
 <source>Login flow succeeded</source>
-<translation type="unfinished">Login flow succeeded</translation>
+<translation>A bejelentkezési folyamat sikerült</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4462"/>
 <source>Username and password were set successfully!</source>
-<translation type="unfinished">Username and password were set successfully!</translation>
+<translation>A felhasználónév és a jelszó beállítása sikeres!</translation>
 </message>
 <message>
 <location filename="../entities/cloudconnection.cpp" line="291"/>
@@ -4751,22 +4751,22 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <location filename="../services/owncloudservice.cpp" line="2264"/>
 <location filename="../services/owncloudservice.cpp" line="2279"/>
 <source>Login flow failed</source>
-<translation type="unfinished">Login flow failed</translation>
+<translation>A bejelentkezési folyamat nem sikerült</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2265"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
+<translation>A Nextcloud bejelentkezési folyamat v2 nem indítható. Győződjön meg arról, hogy a szerver URL -címe helyes, és Nextcloud -szervert használ! &lt;br/&gt;&lt;br /&gt; Ha továbbra is problémái vannak, kérjük, hozzon létre kézzel egy alkalmazásjelszót a szerver adminisztrációs oldalán.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2280"/>
 <source>Could not parse login url!</source>
-<translation type="unfinished">Could not parse login url!</translation>
+<translation>Nem sikerült elemezni a bejelentkezési URL -t!</translation>
 </message>
 <message>
 <location filename="../utils/misc.cpp" line="921"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
+<translation>Az egyetlen alkalmazáspéldány módot használja, amely megakadályozza, hogy az alkalmazás másodszor is elinduljon. Az alkalmazás következő indításakor az egyetlen alkalmazáspéldány mód le lesz tiltva, így az alkalmazás újraindítható, mielőtt kilép a példányból.</translation>
 </message>
 </context>
 <context>
@@ -5948,12 +5948,12 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1428"/>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
-<translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
+<translation>A bejelentkezési folyamat v2 csak a Nextcloud -al működik, a ownCloud -tal nem. Ha problémái vannak, kézzel kell létrehoznia egy alkalmazásjelszót.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1431"/>
 <source>Login to Nextcloud to grant access</source>
-<translation type="unfinished">Login to Nextcloud to grant access</translation>
+<translation>Belépéshez jelentkezzen be a Nextcloud szolgáltatásba</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1836"/>
@@ -6367,7 +6367,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
 <source>This also allows note files to be renamed</source>
-<translation type="unfinished">This also allows note files to be renamed</translation>
+<translation>Ez lehetővé teszi a jegyzetfájlok átnevezését is</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1418"/>
@@ -6377,7 +6377,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1442"/>
 <source>Cancel Nextcloud login</source>
-<translation type="unfinished">Cancel Nextcloud login</translation>
+<translation>Törölje a Nextcloud bejelentkezést</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2194"/>
@@ -6457,22 +6457,22 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4225"/>
 <source>Note file extensions</source>
-<translation type="unfinished">Note file extensions</translation>
+<translation>Jegyezze meg a fájlkiterjesztéseket</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4263"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
-<translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
+<translation>A felsorolt ​​fájlkiterjesztéssel rendelkező fájlokat jegyzetekként ismeri fel a rendszer, a kiválasztott fájlkiterjesztést új jegyzetekhez használja fel.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4273"/>
 <source>Add a new note file extension</source>
-<translation type="unfinished">Add a new note file extension</translation>
+<translation>Új jegyzetfájl -kiterjesztés hozzáadása</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4287"/>
 <source>Remove selected note file extension</source>
-<translation type="unfinished">Remove selected note file extension</translation>
+<translation>Távolítsa el a kijelölt jegyzetfájl -kiterjesztést</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4418"/>
@@ -7555,22 +7555,22 @@ Kapcsolathiba üzenet: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3293"/>
 <source>Please enter a new note file extension:</source>
-<translation type="unfinished">Please enter a new note file extension:</translation>
+<translation>Kérjük, adjon meg új jegyzetfájl -kiterjesztést:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3327"/>
 <source>Markdown file</source>
-<translation type="unfinished">Markdown file</translation>
+<translation>Markdown-fájl</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3329"/>
 <source>Plain text file</source>
-<translation type="unfinished">Plain text file</translation>
+<translation>Sima szövegfájl</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3347"/>
 <source>Remove note file extension</source>
-<translation type="unfinished">Remove note file extension</translation>
+<translation>Távolítsa el a jegyzet fájlkiterjesztését</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4058"/>
@@ -7690,7 +7690,7 @@ Kapcsolathiba üzenet: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3348"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
-<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+<translation>Valóban el szeretné távolítani a megjegyzésfájl -kiterjesztést &lt;strong&gt;%1&lt;/strong&gt;? Többé nem fog látni ilyen kiterjesztésű fájlokat a jegyzetlistában!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3638"/>
@@ -8500,12 +8500,12 @@ A jegyzetek érintetlenül maradnak!</translation>
 <message>
 <location filename="../dialogs/tododialog.ui" line="349"/>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>Ez nem működik az alelemeknél, mert előfordulhat, hogy a szülő elem elrejti őket!</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="352"/>
 <source>Show only items due today</source>
-<translation type="unfinished">Show only items due today</translation>
+<translation>Csak a ma esedékes tételeket jelenítse meg</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="120"/>
@@ -8540,7 +8540,7 @@ A jegyzetek érintetlenül maradnak!</translation>
 <message>
 <location filename="../dialogs/tododialog.ui" line="334"/>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Esedékesség</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="342"/>

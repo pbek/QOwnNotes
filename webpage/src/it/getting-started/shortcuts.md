@@ -54,7 +54,7 @@
 
 ### Nell'elenco delle note
 
-- double-click on note to open note in a new tab (keep in mind that there is a scripting hook that can override the double-click action)
+- doppio clic su una nota per aprirla in un nuovo tab (ricorda che ci può essere un collegamento cogli script che sovrascrive l'azione di doppio clic
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> seleziona tutte le note (per spostarle, copiarle o rimuoverle con un clic destro)
 - <kbd>Tab</kbd> o <kbd>Invio</kbd> consente di modificare la nota corrente
 
@@ -131,15 +131,15 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> controlla gli aggiornamenti
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> apre l'elenco delle cose da fare
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> apre la nota corrente in un editor esterno
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in a view
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> apre la nota corrente in una vista
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> apre la cartella della nota corrente in Finder
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> enables or disables editing of notes
-- <kbd>Ctrl</kbd> + <kbd>Up</kbd> vai alla nota vista precedentemente
-    - la scorciatoia alternativa è <kbd>⌘</kbd> + <kbd>PgUp</kbd>
-- <kbd>Ctrl</kbd> + <kbd>Down</kbd> passa alla successiva nota visibile
-    - la scorciatoia alternativa è <kbd>⌘</kbd> + <kbd>PgDown</kbd>
-- <kbd>Alt</kbd> + <kbd>PgUp</kbd> jumps to the previous note tab
-- <kbd>Alt</kbd> + <kbd>PgDn</kbd> passa alla scheda della nota successiva
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> abilita o disabilita la modifica delle note
+- <kbd>Ctrl</kbd> + <kbd>Up</kbd> passa alla nota vista precedentemente
+    - la scorciatoia alternativa è <kbd>⌘</kbd> + <kbd>Pag⇧</kbd>
+- <kbd>Ctrl</kbd> + <kbd>Down</kbd> passa alla nota vista successivamente
+    - la scorciatoia alternativa è <kbd>⌘</kbd> + <kbd>Pag⇩</kbd>
+- <kbd>Alt</kbd> + <kbd>PgUp</kbd> passa alla scheda note precedente
+- <kbd>Alt</kbd> + <kbd>PgDn</kbd> passa alla scheda note successiva
 - <kbd>⌘</kbd> + <kbd>W</kbd> chiude la scheda della nota corrente
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> attiva / disattiva la modalità senza distrazioni
     - puoi anche chiudere con <kbd>Esc</kbd>
@@ -156,18 +156,18 @@
 - <kbd>⌘</kbd> + <kbd>S</kbd> salva manualmente le note modificate
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> apre la finestra di dialogo dell'archivio script
 - <kbd>F4</kbd> passa al pannello di modifica delle note
-- <kbd>F5</kbd> vai all'elenco delle note
-- <kbd>F6</kbd> vai al pannello delle sottocartelle delle note
-- <kbd>F7</kbd> vai al pannello delle etichette
-- <kbd>F8</kbd> vai al pannello di navigazione
+- <kbd>F5</kbd> passa all'elenco delle note
+- <kbd>F6</kbd> passa al pannello delle sottocartelle delle note
+- <kbd>F7</kbd> passa al pannello delle etichette
+- <kbd>F8</kbd> passa al pannello di navigazione
 - <kbd>F10</kbd> attiva il menu contestuale del widget corrente
 - <kbd>⌘</kbd> + <kbd>F11</kbd> attiva / disattiva la modalità a schermo intero
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copia il titolo della nota corrente
 
 ### Nella barra di ricerca delle note
 
-- <kbd>Down</kbd> or <kbd>Tab</kbd> imposta lo stato attivo sull'elenco delle note
-- <kbd>Return</kbd> crea una nuova nota con il testo della barra di ricerca come titolo
+- <kbd>⇩</kbd> or <kbd>Tab</kbd> imposta lo stato attivo sull'elenco delle note
+- <kbd>Invio</kbd> crea una nuova nota con il testo della barra di ricerca come titolo
 
 ### Nell'elenco delle note
 

@@ -9,13 +9,13 @@ actionLink: getting-started/overview
 features:
   - 
     title: A jegyzetek tulajdonosa
-    details: Az összes jegyzet egyszerű szöveges markdown-os fájlként kerül tárolásra a számítógépén, nincs "vendor lock-in"
+    details: Az összes jegyzet egyszerű szöveges markdown-os fájlként kerül tárolásra a számítógépén, nincs "vendor lock-in" Használja a szinkronizálási szolgáltatásokat, például a Nextcloud -ot a jegyzetek szinkronizálásához az eszközök között.
   - 
-    title: Privát felhő támogatás
-    details: A Nextcloud, a ownCloud vagy más szolgáltatások segítségével online dolgozhat a jegyzeteivel, vagy szinkronizálhatja azokat az eszközök között
+    title: Kis lábnyom
+    details: Natív alkalmazás, amely a sebességre optimalizált, és kevés processzor- és memória -erőforrást igényel.
   - 
     title: Testreszabás
-    details: Erősen testreszabható és szkriptelhető, Ön irányíthatja, hogy miként dolgozzon a jegyzeteivel
+    details: Erősen testreszabható és szkriptelhető, Ön irányíthatja, hogy miként dolgozzon a jegyzeteivel.
 footer: Patrizio Bekerle készítette ❤️-vel
 ---
 

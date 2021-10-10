@@ -9,13 +9,13 @@ actionLink: getting-started/overview
 features:
   - 
     title: Le note sono in tuo possesso
-    details: Tutte le note sono salvate in formato markdown su file nel tuo computer, nessun "blocco da fornitore"
+    details: Tutte le note sono salvate in formato markdown su file nel tuo computer, nessun "blocco da fornitore" Us servizi di sincronizzazione come Nextcloud per sicronizzare le note tra i dispositivi.
   - 
-    title: Supporto per cloud privati
-    details: Utilizza Nextcloud, ownCloud o altri servizi per lavorare con le tue note online o sincronizzarle tra dispositivi
+    title: Low footprint
+    details: Applicazione nativa, ottimizzata per la velocità e il poco consumo di risorse del processore e della memoria.
   - 
     title: Personalizzazione
-    details: Altamente personalizzabile e scriptabile, hai il pieno controllo su come lavorare con le tue note
+    details: Altamente personalizzabile e scriptabile, hai il pieno controllo su come lavorare con le tue note.
 footer: Fatto con il ❤️ da Patrizio Bekerle
 ---
 

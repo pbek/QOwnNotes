@@ -315,9 +315,9 @@ void ScriptingService::registerLabel(QString identifier, QString text);
 ```js
 script.registerLabel("html-label", "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='https://www.qownnotes.org'>link to a website</a>.");
 
-script.registerLabel("long-label", "another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text that will wrap");
+script.registerLabel ("long-label", "ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, der umbrochen wird ");
 
-script.registerLabel("counter-label");
+script.registerLabel ("counter-label");
 ```
 
 Die Beschriftungen werden im Skript-Dock-Widget angezeigt.
@@ -326,18 +326,18 @@ Sie können sowohl einfachen Text als auch HTML in den Beschriftungen verwenden.
 
 Vielleicht möchten Sie sich dann das Beispielskript ansehen [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
 
-Setting the text of a registered label
+Einstellen des Textes eines registrierten Etiketts
 --------------------------------------
 
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Sets the text of a registered label
- *
- * @param identifier the identifier of the label
- * @param text the text shown in the label
- */
-void ScriptingService::setLabelText(QString identifier, QString text);
+     * Legt den Text eines registrierten Etiketts fest
+     *
+     * @param bezeichner der bezeichner des etiketts
+     * @param text der auf dem Etikett angezeigte Text
+     */
+void ScriptingService::setLabelText (QString-ID, QString-Text);
 ```
 
 ### Beispiel
@@ -349,7 +349,7 @@ Sie können sowohl einfachen Text als auch HTML in den Beschriftungen verwenden.
 
 Vielleicht möchten Sie sich dann das Beispielskript ansehen [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
 
-Creating a new note
+Neue Notiz erstellen
 -------------------
 
 ### Methodenaufruf und Parameter
@@ -378,17 +378,17 @@ note.renameNoteFile('your-filename');
 ```
 :::
 
-Accessing the clipboard
+Zugriff auf die Zwischenablage
 -----------------------
 
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Returns the content of the clipboard as text or html
- *
- * @param asHtml returns the clipboard content as html instead of text
- */
-QString ScriptingService::clipboard(bool asHtml);
+     * Gibt den Inhalt der Zwischenablage als Text oder HTML zurück
+     *
+     * @param asHtml gibt den Inhalt der Zwischenablage als HTML anstelle von Text zurück
+     */
+QString ScriptingService::clipboard (bool asHtml);
 ```
 
 ### Beispiel
@@ -399,13 +399,13 @@ var clipboardHtml = script.clipboard(true);
 
 Vielleicht möchten Sie sich das Beispiel ansehen [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-Write text to the note text edit
+Schreiben Sie Text in die Notiztextbearbeitung
 --------------------------------
 
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Writes text to the current cursor position in the note text edit
+ * Schreibt Text an die aktuelle Cursorposition in der Notiztextbearbeitung
  *
  * @param text
  */
@@ -414,21 +414,21 @@ void ScriptingService::noteTextEditWrite(QString text);
 
 ### Beispiel
 ```js
-// write text to the note text edit
-script.noteTextEditWrite("My custom text");
+/ schreibe Text in die Notiz Textbearbeitung
+script.noteTextEditWrite ("Mein benutzerdefinierter Text");
 ```
 
 Möglicherweise möchten Sie die benutzerdefinierte Aktion `transformTextRot13` im Beispiel [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) anzeigen.
 
 Sie können dies zusammen mit ` noteTextEditSelectAll ` verwenden, um den gesamten Text der aktuellen Notiz zu überschreiben.
 
-Read the selected text in the note text edit
+Lesen Sie den ausgewählten Text in der Notiztextbearbeitung
 --------------------------------------------
 
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Reads the selected text in the note text edit
+ * Liest den ausgewählten Text in der Notiztextbearbeitung
  *
  * @return
  */
@@ -437,19 +437,19 @@ QString ScriptingService::noteTextEditSelectedText();
 
 ### Beispiel
 ```js
-// read the selected text from the note text edit
-var text = script.noteTextEditSelectedText();
+// lese den ausgewählten Text aus der Notiztextbearbeitung
+var text = script.noteTextEditSelectedText ();
 ```
 
 Möglicherweise möchten Sie die benutzerdefinierte Aktion `transformTextRot13` im Beispiel [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) anzeigen.
 
-Select all text in the note text edit
+Wählen Sie den gesamten Text in der Notiztextbearbeitung aus
 -------------------------------------
 
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Selects all text in the note text edit
+ * Wählt den gesamten Text in der Notiztextbearbeitung aus
  */
 void ScriptingService::noteTextEditSelectAll();
 ```
@@ -461,13 +461,13 @@ script.noteTextEditSelectAll();
 
 Sie können dies zusammen mit `noteTextEditWrite` verwenden, um den gesamten Text der aktuellen Notiz zu überschreiben.
 
-Select the current line in the note text edit
+Wählen Sie die aktuelle Zeile in der Notiztextbearbeitung aus
 ---------------------------------------------
 
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Selects the current line in the note text edit
+ * Wählt die aktuelle Zeile in der Notiztextbearbeitung aus
  */
 void ScriptingService::noteTextEditSelectCurrentLine();
 ```
@@ -477,7 +477,7 @@ void ScriptingService::noteTextEditSelectCurrentLine();
 script.noteTextEditSelectCurrentLine();
 ```
 
-Select the current word in the note text edit
+Wählen Sie das aktuelle Wort in der Notiztextbearbeitung aus
 ---------------------------------------------
 
 ### Methodenaufruf und Parameter
@@ -493,7 +493,7 @@ void ScriptingService::noteTextEditSelectCurrentWord();
 script.noteTextEditSelectCurrentWord();
 ```
 
-Set the currently selected text in the note text edit
+Stellen Sie den aktuell ausgewählten Text in der Notiztextbearbeitung ein
 -----------------------------------------------------
 
 ### Methodenaufruf und Parameter
@@ -515,7 +515,7 @@ script.noteTextEditSetSelection(
     script.noteTextEditSelectionEnd() + 1);
 ```
 
-Get the start position of the current selection in the note text edit
+Holen Sie sich die Startposition der aktuellen Auswahl in der Notiztextbearbeitung
 ---------------------------------------------------------------------
 
 ### Methodenaufruf und Parameter
@@ -531,13 +531,13 @@ int ScriptingService::noteTextEditSelectionStart();
 script.log(script.noteTextEditSelectionStart());
 ```
 
-Get the end position of the current selection in the note text edit
+Holen Sie sich die Endposition der aktuellen Auswahl in der Notiztextbearbeitung
 -------------------------------------------------------------------
 
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Returns the end position of the current selection in the note text edit
+ * Gibt die Endposition der aktuellen Auswahl in der Notiztextbearbeitung zurück
  */
 int ScriptingService::noteTextEditSelectionEnd();
 ```
@@ -547,15 +547,15 @@ int ScriptingService::noteTextEditSelectionEnd();
 script.log(script.noteTextEditSelectionEnd());
 ```
 
-Set the text cursor in the note text edit to a certain position
+Setzen Sie den Textcursor in der Notiztextbearbeitung auf eine bestimmte Position
 ---------------------------------------------------------------
 
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Sets the text cursor in the note text edit to a certain position
- * 0 would be the beginning of the note
- * special case: -1 would be the end of the note
+ * Setzt den Textcursor in der Notiztextbearbeitung auf eine bestimmte Position
+ * 0 wäre der Anfang der Notiz
+ * Spezialfall: -1 wäre das Ende der Notiz
  *
  * @param position
  */
@@ -564,23 +564,23 @@ void ScriptingService::noteTextEditSetCursorPosition(int position);
 
 ### Beispiel
 ```js
-// jump to the 11th character in the note
-script.noteTextEditSetCursorPosition(10);
+// springe zum 11. Zeichen in der Notiz
+script.noteTextEditSetCursorPosition (10);
 
-// jump to the end of the note
-script.noteTextEditSetCursorPosition(-1);
+// zum Ende der Notiz springen
+script.noteTextEditSetCursorPosition (-1);
 ```
 
-Get the current position of the text cursor in the note text edit
+Ruft die aktuelle Position des Textcursors in der Notiztextbearbeitung ab
 -----------------------------------------------------------------
 
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Returns the current position of the text cursor in the note text edit
- * 0 would be the beginning of the note
- */
-int ScriptingService::noteTextEditCursorPosition();
+  * Gibt die aktuelle Position des Textcursors in der Notiztextbearbeitung zurück
+  * 0 wäre der Anfang der Notiz
+  */
+int ScriptingService :: noteTextEditCursorPosition ();
 ```
 
 ### Beispiel
@@ -588,31 +588,31 @@ int ScriptingService::noteTextEditCursorPosition();
 script.log(script.noteTextEditCursorPosition());
 ```
 
-Read the current word from the note text edit
+Lesen Sie das aktuelle Wort aus der Notiztextbearbeitung
 ---------------------------------------------
 
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Reads the current word in the note text edit
- *
- * @param withPreviousCharacters also get more characters at the beginning
- *                               to get characters like "@" that are not
- *                               word-characters
- * @return
- */
-QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
+  * Liest das aktuelle Wort in der Notiztextbearbeitung
+  *
+  * @param withPreviousCharacters erhalten am Anfang auch mehr Zeichen
+  *                                    um Zeichen wie "@" zu erhalten, die es nicht sind
+  *                                    Wortzeichen
+  * @return
+  */
+QString ScriptingService::noteTextEditCurrentWord (bool withPreviousCharacters);
 ```
 
 ### Beispiel
 ```js
-// read the current word in the note text edit
-var text = script.noteTextEditCurrentWord();
+// Lies das aktuelle Wort in der Notiztextbearbeitung
+var text = script.noteTextEditCurrentWord ();
 ```
 
 Vielleicht möchten Sie sich das Beispiel ansehen [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
 
-Check whether platform is Linux, OS X or Windows
+Prüfen Sie, ob die Plattform Linux, OS X oder Windows ist
 ------------------------------------------------
 
 ### Methodenaufruf und Parameter
@@ -629,23 +629,23 @@ if (script.platformIsLinux()) {
 }
 ```
 
-Tag the current note
+Verschlagworten Sie die aktuelle Notiz
 --------------------
 
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Tags the current note with a tag named tagName
- *
- * @param tagName
- */
-void ScriptingService::tagCurrentNote(QString tagName);
+     * Markiert die aktuelle Notiz mit einem Tag namens tagName
+     *
+     * @param tagName
+     */
+void ScriptingService::tagCurrentNote (QString tagName);
 ```
 
 ### Beispiel
 ```js
-// add a "favorite" tag to the current note
-script.tagCurrentNote("favorite");
+// fügen Sie der aktuellen Notiz ein "Favorit" -Tag hinzu
+script.tagCurrentNote ("Favorit");
 ```
 
 Vielleicht möchten Sie sich die benutzerdefinierte Aktion `favoriteNote` in der Beispiel [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml).
@@ -850,20 +850,20 @@ bool ScriptingService::noteExistsByFileName(QString fileName,
 script.noteExistsByFileName("my note.md", note.id);
 ```
 
-You may want to take a look at the example [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).
+Vielleicht möchten Sie sich das Beispiel ansehen [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).
 
-Copying text into the clipboard
+Kopieren von Text in die Zwischenablage
 -------------------------------
 
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Copies text into the clipboard as plain text or html mime data
- *
- * @param text string text to put into the clipboard
- * @param asHtml bool if true the text will be set as html mime data
- */
-void ScriptingService::setClipboardText(QString text, bool asHtml);
+     * Kopiert Text als Nur-Text- oder HTML-MIME-Daten in die Zwischenablage
+     *
+     * @param Text String Text, der in die Zwischenablage eingefügt werden soll
+     * @param asHtml bool Wenn true, wird der Text als HTML-MIME-Daten festgelegt
+     */
+void ScriptingService::setClipboardText(QString-Text, bool asHtml);
 ```
 
 ### Beispiel
@@ -872,24 +872,24 @@ void ScriptingService::setClipboardText(QString text, bool asHtml);
 script.setClipboardText("text to copy");
 ```
 
-You may want to take a look at the example [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).
+Vielleicht möchten Sie sich das Beispiel ansehen [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).
 
-Jumping to a note
+Zu einer Notiz springen
 -----------------
 
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Sets the current note if the note is visible in the note list
- *
- * @param note NoteApi note to jump to
- */
+    * Legt die aktuelle Notiz fest, wenn die Notiz in der Notizliste sichtbar ist
+    *
+    * @param note NoteApi note to jump to
+    */
 void ScriptingService::setCurrentNote(NoteApi *note);
 ```
 
 ### Beispiel
 ```js
-// jump to the note
+// zur Notiz springen
 script.setCurrentNote(note);
 ```
 

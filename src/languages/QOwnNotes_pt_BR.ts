@@ -4760,7 +4760,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <location filename="../utils/misc.cpp" line="921"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
+<translation>Você está usando o modo instância única do aplicativo que impede o aplicativo seja iniciado uma segunda vez. Para a próxima inicialização do aplicativo o modo instância única será desabilitado de maneira que o aplicativo posse ser reiniciado antes de encerrar esta instância.</translation>
 </message>
 </context>
 <context>

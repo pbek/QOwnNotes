@@ -4768,7 +4768,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <location filename="../utils/misc.cpp" line="921"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
+<translation>Sie verwenden den Einzel-App-Instanzmodus, der verhindert, dass die Anwendung ein zweites Mal gestartet wird. Beim nächsten Start der Anwendung wird der Einzel-App-Instanzmodus deaktiviert, sodass die Anwendung vor dem Beenden dieser Instanz neu gestartet werden kann.</translation>
 </message>
 </context>
 <context>

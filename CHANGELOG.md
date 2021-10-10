@@ -5,6 +5,7 @@
   reload the note folder or the current note is modified externally (if you have
   enabled `Restore cursor position when opening a note` in the *General settings*)
   (for [#2253](https://github.com/pbek/QOwnNotes/issues/2253))
+- added more translation (thank you marterra, amirkbrpr, rawfreeamy, marcoxbresciani)
 
 ## 21.10.2
 - more issues with the translation of the default buttons under macOS were

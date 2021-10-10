@@ -4766,7 +4766,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../utils/misc.cpp" line="921"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
+<translation>Stai usando l'applicazione in modalità istanza singola, che impedisce all'applicazione di partire una seconda volta. Per il prossimo avvio dell'applicazione, la modalità istanza singola sarà disabilitata, cosicché l'applicazione possa essere riavviata prima di chiudere questa istanza.</translation>
 </message>
 </context>
 <context>
