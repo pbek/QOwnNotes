@@ -1,6 +1,12 @@
 # QOwnNotes Changelog
 
 ## 21.10.3
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 21.10.0
+    - when adding a bookmark and pressing enter to store it, now the 2nd
+      `Add bookmark` dialog, that was triggered, is suppressed
+    - updated dependencies
+    - added a lot more translation
 - the cursor position of the current note is now also restored when you manually
   reload the note folder or the current note is modified externally (if you have
   enabled `Restore cursor position when opening a note` in the *General settings*)
