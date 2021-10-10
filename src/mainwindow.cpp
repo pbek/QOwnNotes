@@ -4533,6 +4533,7 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
 
     if (allowRestoreCursorPosition && Utils::Misc::isRestoreCursorPosition()) {
         historyItem.restoreTextEditPosition(ui->noteTextEdit);
+        ui->noteTextEdit->highlightCurrentLine();
     }
 
     // update the preview text edit if the dock widget is visible
