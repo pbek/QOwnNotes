@@ -147,7 +147,7 @@ jobs:
         echo "#define RELEASE \"AppImage\"" > release.h
         qmake PREFIX=/usr
         lrelease QOwnNotes.pro
-        make -j2
+        make -j 8
         # Create DEB
         #cd ../travis
         #dpkg-deb -x QOwnNotes.deb build
@@ -160,7 +160,7 @@ jobs:
         #dpkg -b build QOwnNotes.deb
         #cd ../src
         # Create AppImage (needs Ubuntu 16.04)
-        make INSTALL_ROOT=appdir -j2 install ; find appdir/
+        make INSTALL_ROOT=appdir -j 8 install ; find appdir/
         wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
         chmod a+x linuxdeployqt-continuous-x86_64.AppImage
         # export VERSION=... # linuxdeployqt uses this for naming the file
@@ -175,7 +175,7 @@ jobs:
         lrelease QOwnNotes.pro
         #ls ${Qt5_Dir}/bin
         qmake
-        make -j2
+        make -j 8
         ../build-systems/github/macos/create-dmg.sh
 
     - if: contains( matrix.os, 'windows')
