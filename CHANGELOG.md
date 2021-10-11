@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.10.5
+- the problem for some people with the block syntax highlighting in the
+  preview panel only working after editing the note was hopefully fixed
+  (for [#2165](https://github.com/pbek/QOwnNotes/issues/2165), thank you @Waqar144)
+
 ## 21.10.4
 - the current line will now also  be highlighted again the current note is
   modified externally (if you have enabled it in the settings)
