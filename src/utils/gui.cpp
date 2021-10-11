@@ -28,7 +28,11 @@
 #include <QSettings>
 #include <QTextBlock>
 #include <QTextCursor>
-
+#include <QComboBox>
+#include <QListWidget>
+#include <QPlainTextEdit>
+#include <QTreeWidgetItem>
+#include <QVBoxLayout>
 /**
  * Checks if there is at least one child that is visible
  */

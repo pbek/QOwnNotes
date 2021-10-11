@@ -23,6 +23,7 @@
 #include <services/databaseservice.h>
 #include <services/owncloudservice.h>
 #include <services/updateservice.h>
+#include <threads/scriptthread.h>
 
 #include <QApplication>
 #include <QCoreApplication>
@@ -47,6 +48,8 @@
 #include <QtGui/QIcon>
 #include <utility>
 #include <QHttpMultiPart>
+#include <QDataStream>
+#include <QPrinter>
 #if (QT_VERSION < QT_VERSION_CHECK(5, 6, 0))
 #include <QHostInfo>
 #endif

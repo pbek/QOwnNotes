@@ -3,6 +3,7 @@
 #include <utils/gui.h>
 
 #include <QMenuBar>
+#include <QKeyEvent>
 #include <QTreeWidgetItem>
 
 #include "ui_actiondialog.h"

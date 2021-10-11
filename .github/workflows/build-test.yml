@@ -158,7 +158,7 @@ jobs:
     - if: steps.changes.outputs.DO_BUILD && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' ))
       name: Build QOwnNotes
       run: |
-        lrelease QOwnNotes.pro && qmake && make
+        lrelease QOwnNotes.pro && qmake && make -j8
 
       #
       # Build QOwnNotes Windows Release and store it as artifact

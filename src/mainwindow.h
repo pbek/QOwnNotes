@@ -72,6 +72,7 @@ class FakeVimHandler;
 class WebSocketServerService;
 class QOwnNotesMarkdownTextEdit;
 class CommandBar;
+struct TagHeader;
 
 // forward declaration because of "xxx does not name a type"
 class TodoDialog;
@@ -205,11 +206,11 @@ class MainWindow : public QMainWindow {
    protected:
     void changeEvent(QEvent *event) override;
 
-    void closeEvent(QCloseEvent *event);
+    void closeEvent(QCloseEvent *event) override;
 
-    bool eventFilter(QObject *obj, QEvent *event);
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
-    void resizeEvent(QResizeEvent *event);
+    void resizeEvent(QResizeEvent *event) override;
 
    public slots:
     void setCurrentNoteFromNoteId(const int noteId);
@@ -325,7 +326,7 @@ class MainWindow : public QMainWindow {
 
     void on_action_Export_note_as_markdown_triggered();
 
-    void showEvent(QShowEvent *event);
+    void showEvent(QShowEvent *event) override;
 
     void on_actionGet_invloved_triggered();
 
@@ -351,9 +352,9 @@ class MainWindow : public QMainWindow {
 
     void dfmEditorWidthActionTriggered(QAction *action);
 
-    void dragEnterEvent(QDragEnterEvent *e);
+    void dragEnterEvent(QDragEnterEvent *e) override;
 
-    void dropEvent(QDropEvent *e);
+    void dropEvent(QDropEvent *e) override;
 
     void on_actionPaste_image_triggered();
 
