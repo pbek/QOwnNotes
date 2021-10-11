@@ -14,7 +14,9 @@ lessThan(QT_MAJOR_VERSION, 6) {
 # Windows and macOS seem to ignore that
 #QT       += quick
 
-CONFIG += with_aspell
+CONFIG += with_aspell precompile_header
+
+PRECOMPILED_HEADER  = pch.h
 
 TARGET = QOwnNotes
 TEMPLATE = app
@@ -187,7 +189,8 @@ SOURCES += main.cpp\
     libraries/fuzzy/kfuzzymatcher.cpp \
     libraries/qr-code-generator/QrCode.cpp
 
-HEADERS  += mainwindow.h \
+HEADERS  += pch.h \
+    mainwindow.h \
     build_number.h \
     dialogs/attachmentdialog.h \
     entities/cloudconnection.h \

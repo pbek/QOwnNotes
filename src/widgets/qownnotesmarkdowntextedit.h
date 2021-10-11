@@ -40,9 +40,9 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     // QOwnNotesMarkdownHighlighter and MarkdownHighlighter instance
     //    QOwnNotesMarkdownHighlighter *_highlighter;
     bool canInsertFromMimeData(const QMimeData *source) const override;
-    void insertFromMimeData(const QMimeData *source);
-    void resizeEvent(QResizeEvent *event);
-    bool eventFilter(QObject *obj, QEvent *event);
+    void insertFromMimeData(const QMimeData *source) override;
+    void resizeEvent(QResizeEvent *event) override;
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
    public slots:
     void highlightCurrentLine();

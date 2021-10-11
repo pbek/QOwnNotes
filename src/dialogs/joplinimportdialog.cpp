@@ -2,6 +2,7 @@
 
 #include <entities/note.h>
 #include <entities/notefolder.h>
+#include <entities/tag.h>
 
 #include <QDebug>
 #include <QFileDialog>

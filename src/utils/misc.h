@@ -14,17 +14,16 @@
 
 #pragma once
 
-#include <QDataStream>
-#include <QHttpMultiPart>
-#include <QPrinter>
 #include <QString>
 #include <QStringList>
 #include <QVector>
-
-#include "threads/scriptthread.h"
+#include <QHash>
+#include <QMetaType>
 
 struct TerminalCmd;
 class QFile;
+class QDataStream;
+class QPrinter;
 
 /*  Miscellaneous functions that can be useful */
 namespace Utils {
@@ -53,6 +52,7 @@ Q_DECLARE_METATYPE(Utils::Misc::ExternalImageHash *)
 
 namespace Utils {
 namespace Misc {
+
 struct SearchEngine {
     QString name;
     QString searchUrl;
