@@ -4759,7 +4759,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../utils/misc.cpp" line="921"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
+<translation>Esteu usant el mode d'instància única de l'aplicació, que prevé que l'aplicació s'arrenqui una segona vegada. A la propera arrencada de l'aplicació el mode d'instància única es deshabilitarà, de manera que espugui rearrencar abans de tancar aquesta instància.</translation>
 </message>
 </context>
 <context>
