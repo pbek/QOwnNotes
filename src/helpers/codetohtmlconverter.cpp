@@ -12,7 +12,7 @@ QHash<QString, CodeToHtmlConverter::Lang>
 CodeToHtmlConverter::CodeToHtmlConverter(const QString &lang) Q_DECL_NOTHROW {
     if (_langStringToEnum.isEmpty()) initCodeLangs();
 
-    _currentLang = _langStringToEnum.value(lang.toLower());
+    _currentLang = _langStringToEnum.value(lang.trimmed().toLower());
     qDebug() << "Code block of lang detected:" << lang << _currentLang;
 }
 
