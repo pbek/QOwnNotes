@@ -3,6 +3,7 @@
 ## 21.10.6
 - the broken link highlighting was fixed (broken in 21.10.1) and support was added for
   the selected default note file extension (for [#2250](https://github.com/pbek/QOwnNotes/pull/2250))
+- added more Hungarian translation (thank you rawfreeamy)
 
 ## 21.10.5
 - the problem for some people with the block syntax highlighting in the

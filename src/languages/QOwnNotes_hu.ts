@@ -3110,9 +3110,9 @@ Restore current note?</source>
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
 <translation>
-<numerusform>Eltávolítja a kijelölt &lt;strong&gt;%n&lt;/strong&gt;jegyzetet? 
+<numerusform>Eltávolítja a kijelölt &lt;strong&gt;%n&lt;/strong&gt; jegyzetet? 
 
-Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</numerusform>
+Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan visszaállítható.</numerusform>
 <numerusform>Eltávolítja a kijelölt &lt;strong&gt;%n&lt;/strong&gt;jegyzetet? 
 
 Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</numerusform>
