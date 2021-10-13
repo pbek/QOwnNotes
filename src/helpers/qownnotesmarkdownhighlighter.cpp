@@ -53,7 +53,7 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     // if we do it afterwards, it overwrites the spellcheck highlighting
     MarkdownHighlighter::highlightMarkdown(text);
     if (text.contains(QLatin1String("note://")) ||
-        text.contains(QLatin1String(".md"))) {
+        text.contains(QChar('.') + Note::defaultNoteFileExtension())) {
         highlightBrokenNotesLink(text);
     }
 
@@ -113,7 +113,11 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
                 return;
             }
         } else {    // check [note](note file.md) links
-            static const QRegularExpression regex1(QStringLiteral(R"(\[[^\[\]]+\]\((\S+\.md|.+?\.md)\)\B)"));
+            const QString ext = Note::defaultNoteFileExtension();
+
+            // Example: R"(\[[^\[\]]+\]\((\S+\.md|.+?\.md)\)\B)")
+            static const QRegularExpression regex(R"(\[[^\[\]]+\]\((\S+\.)" +
+                                                    ext + R"(|.+?\.)" + ext + R"()\)\B)");
             match = regex.match(text);
 
             if (match.hasMatch()) {
