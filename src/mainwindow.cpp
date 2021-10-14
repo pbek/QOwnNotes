@@ -6302,15 +6302,23 @@ void MainWindow::openLocalUrl(QString urlString) {
     }
 
     bool urlWasNotValid = false;
+    QString fragment;
 
     // if urlString is no valid url we will try to convert it into a note file
     // url
     if (!QOwnNotesMarkdownTextEdit::isValidUrl(urlString)) {
+        fragment = Note::getURLFragmentFromFileName(urlString);
         urlString = currentNote.getFileURLFromFileName(urlString, true);
         urlWasNotValid = true;
     }
 
     QUrl url = QUrl(urlString);
+
+    // If url was valid we want to get the fragment directly from the url
+    if (!urlWasNotValid) {
+        fragment = url.fragment();
+    }
+
     const bool isExistingNoteFileUrl = Note::fileUrlIsExistingNoteInCurrentNoteFolder(url);
     const bool isNoteFileUrl = Note::fileUrlIsNoteInCurrentNoteFolder(url);
 
@@ -6381,6 +6389,11 @@ void MainWindow::openLocalUrl(QString urlString) {
         if (note.isFetched()) {
             // set current note
             setCurrentNote(std::move(note));
+
+            // jump to the Markdown heading in the note that is represented by the url fragment
+            if (!fragment.isEmpty()) {
+                doSearchInNote("\"## " + fragment + "\"");
+            }
         } else {
             QString fileName;
             QUrl filePath;

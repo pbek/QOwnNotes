@@ -319,7 +319,10 @@ class Note {
     void resetNoteTextHtmlConversionHash();
 
     QString getFileURLFromFileName(QString fileName,
-                                   bool urlDecodeFileName = false) const;
+                                   bool urlDecodeFileName = false,
+                                   bool withFragment = false) const;
+
+    static QString getURLFragmentFromFileName(const QString& fileName);
 
     static bool fileUrlIsNoteInCurrentNoteFolder(const QUrl &url);
 

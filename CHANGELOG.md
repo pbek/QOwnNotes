@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 21.10.7
+- you can now add an url-encoded heading to a note link as url fragment to
+  attempt to jump to that heading in the linked note when clicking the link
+  (for [#1977](https://github.com/pbek/QOwnNotes/issues/1977))
+    - this works with opening links in the note text edit and the preview 
+    - `[my note](my-note.md#First%20heading)` will attempt to jump to a heading
+      `First heading` in note `my-note.md` (note that `%20` is decoded as space)
+    - the heading will be searched with the in-note search, so for the link
+      `[my note](my-note.md#First%20heading)` there will be searched for the
+      text `## First heading` inside the note
+    - this feature is still *work in progress*
+
 ## 21.10.6
 - the broken link highlighting was fixed (broken in 21.10.1) and support was added for
   the selected default note file extension (for [#2250](https://github.com/pbek/QOwnNotes/pull/2250))

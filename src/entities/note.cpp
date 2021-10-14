@@ -2369,7 +2369,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         const QString fileLink = match.captured(1);
-        const QString url = Note::getFileURLFromFileName(fileLink, true);
+        const QString url = Note::getFileURLFromFileName(fileLink, true, true);
 
         str.replace(match.captured(0), QStringLiteral("[") + fileLink +
                                            QStringLiteral("](") + url +
@@ -2396,7 +2396,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
             continue;
         }
 
-        const QString url = Note::getFileURLFromFileName(fileLink, true);
+        const QString url = Note::getFileURLFromFileName(fileLink, true, true);
 
         str.replace(match.captured(0), QStringLiteral("[") + fileText +
                                            QStringLiteral("](") + url +
@@ -3149,7 +3149,13 @@ const QString Note::getNoteURLFromFileName(const QString &fileName) {
  * @return
  */
 QString Note::getFileURLFromFileName(QString fileName,
-                                     bool urlDecodeFileName) const {
+                                     bool urlDecodeFileName,
+                                     bool withFragment) const {
+    // Remove the url fragment from the filename
+    const auto splitList = fileName.split(QChar('#'));
+    fileName = splitList.at(0);
+    const QString fragment = splitList.count() > 1 ? splitList.at(1) : "";
+
     if (urlDecodeFileName) {
         fileName = urlDecodeNoteUrl(fileName);
     }
@@ -3163,8 +3169,20 @@ QString Note::getFileURLFromFileName(QString fileName,
     }
 
     const QString path = this->getFullFilePathForFile(fileName);
+    QString url = QUrl::fromLocalFile(path).toEncoded();
 
-    return QString(QUrl::fromLocalFile(path).toEncoded());
+    if (withFragment && !fragment.isEmpty()) {
+        url += QStringLiteral("#") + fragment;
+    }
+
+    return url;
+}
+
+QString Note::getURLFragmentFromFileName(const QString& fileName) {
+    const auto splitList = fileName.split(QChar('#'));
+    const QString fragment = splitList.count() > 1 ? splitList.at(1) : "";
+
+    return QUrl::fromPercentEncoding(fragment.toLocal8Bit());
 }
 
 /**
