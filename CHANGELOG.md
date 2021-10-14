@@ -11,6 +11,9 @@
       `[my note](my-note.md#First%20heading)` there will be searched for the
       text `## First heading` inside the note
     - this feature is still *work in progress*
+- links like `www.github.com` (without any url-schema like `http://`) are now
+  also highlighted as links the note text edit and can also be opened there
+  (for [#2260](https://github.com/pbek/QOwnNotes/issues/2260))
 
 ## 21.10.6
 - the broken link highlighting was fixed (broken in 21.10.1) and support was added for
