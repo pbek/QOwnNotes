@@ -6393,6 +6393,7 @@ void MainWindow::openLocalUrl(QString urlString) {
             // jump to the Markdown heading in the note that is represented by the url fragment
             if (!fragment.isEmpty()) {
                 doSearchInNote("\"## " + fragment + "\"");
+                activeNoteTextEdit()->searchWidget()->deactivate();
             }
         } else {
             QString fileName;

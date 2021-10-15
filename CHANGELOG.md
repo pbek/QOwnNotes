@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.10.8
+- more features were added to the heading links feature (for [#1977](https://github.com/pbek/QOwnNotes/issues/1977))
+    - the search panel inside the note is now closed after jumping to the heading
+
 ## 21.10.7
 - you can now add an url-encoded heading to a note link as url fragment to
   attempt to jump to that heading in the linked note when clicking the link
