@@ -5339,7 +5339,7 @@ void MainWindow::handleTextNoteLinking(int page) {
 
                 const QString heading = dialog->getSelectedHeading();
                 const QString headingText = heading.isEmpty() ?
-                              QLatin1String() : QStringLiteral("#") +
+                              QStringLiteral() : QStringLiteral("#") +
                                  QUrl::toPercentEncoding(heading);
 
                 newText = QStringLiteral("[") + noteName +
