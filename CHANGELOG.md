@@ -1,15 +1,16 @@
 # QOwnNotes Changelog
 
 ## 21.10.8
-- more features were added to the heading links feature (for [#1977](https://github.com/pbek/QOwnNotes/issues/1977))
+- more features were added to the **heading links** feature (for [#1977](https://github.com/pbek/QOwnNotes/issues/1977))
     - the search panel inside the note is now closed after jumping to the heading
     - the broken note link checker now also works with links with an url fragment
+    - you can now select a heading to link to in the note link dialog
 - the broken note link checker now also works with links like `<myfile.md>`
   (for [#2250](https://github.com/pbek/QOwnNotes/pull/2250))
 
 ## 21.10.7
 - you can now add an url-encoded heading to a note link as url fragment to
-  attempt to jump to that heading in the linked note when clicking the link
+  attempt to **jump to that heading in the linked note when clicking the link**
   (for [#1977](https://github.com/pbek/QOwnNotes/issues/1977))
     - this works with opening links in the note text edit and the preview 
     - `[my note](my-note.md#First%20heading)` will attempt to jump to a heading

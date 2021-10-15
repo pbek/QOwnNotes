@@ -3910,6 +3910,26 @@ void Note::resetNoteTextHtmlConversionHash() {
 }
 
 /**
+ * Get a list of all headings in a note starting with ##
+ *
+ * @return
+ */
+QStringList Note::getHeadingList() {
+    QStringList headingList;
+
+    static const QRegularExpression re(QStringLiteral(R"(^##+ (.+)$)"),
+                                       QRegularExpression::MultilineOption);
+    QRegularExpressionMatchIterator i = re.globalMatch(_noteText);
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        headingList << match.captured(1);
+    }
+
+    return headingList;
+}
+
+/**
  * Fetches all tags of the note
  */
 // QList<Tag> Note::tags() {

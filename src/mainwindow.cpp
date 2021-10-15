@@ -5337,8 +5337,14 @@ void MainWindow::handleTextNoteLinking(int page) {
                 const QString noteUrl = currentNote.getNoteUrlForLinkingTo(
                     dialog->getSelectedNote());
 
+                const QString heading = dialog->getSelectedHeading();
+                const QString headingText = heading.isEmpty() ?
+                              QLatin1String() : QStringLiteral("#") +
+                                 QUrl::toPercentEncoding(heading);
+
                 newText = QStringLiteral("[") + noteName +
-                          QStringLiteral("](") + noteUrl + QStringLiteral(")");
+                          QStringLiteral("](") + noteUrl + headingText +
+                          QStringLiteral(")");
             }
 
             if (!linkDescription.isEmpty()) {

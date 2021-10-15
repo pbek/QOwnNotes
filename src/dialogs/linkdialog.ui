@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>524</width>
-    <height>365</height>
+    <height>501</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -105,9 +105,6 @@
          </property>
          <item>
           <widget class="QLineEdit" name="searchLineEdit">
-           <property name="toolTip">
-            <string>Search for notes or create new notes by entering text and pressing return</string>
-           </property>
            <property name="styleSheet">
             <string notr="true">QLineEdit {
 	border: 1px solid lightgray;
@@ -129,7 +126,46 @@
           </widget>
          </item>
          <item>
-          <widget class="QListWidget" name="notesListWidget"/>
+          <widget class="QListWidget" name="notesListWidget">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>3</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="headingSearchLineEdit">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+        /* the background image doesn't work without the border definition */
+	border: none;
+	padding: 2px 5px 2px 27px;
+	background-image: url(:/images/search-notes.svg);
+	background-repeat: no-repeat;
+	background-position: center left;
+	margin-right: 0px;
+}
+</string>
+           </property>
+           <property name="placeholderText">
+            <string>Search for a heading to link to</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="headingListWidget">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <QListWidgetItem>
+
 #include "masterdialog.h"
 
 namespace Ui {
@@ -28,6 +30,7 @@ class LinkDialog : public MasterDialog {
     void setLinkName(const QString &text);
     QString getLinkDescription() const;
     static QString getTitleForUrl(const QUrl &url);
+    QString getSelectedHeading() const;
 
    private slots:
     void on_buttonBox_accepted();
@@ -37,10 +40,21 @@ class LinkDialog : public MasterDialog {
     void addFileUrl();
     void addDirectoryUrl();
 
-   private:
+    void on_headingSearchLineEdit_textChanged(const QString &arg1);
+
+    void on_notesListWidget_currentItemChanged(QListWidgetItem *current,
+                                               QListWidgetItem *previous);
+
+    void on_headingListWidget_doubleClicked(const QModelIndex &index);
+
+    void on_tabWidget_currentChanged(int index);
+
+private:
     Ui::LinkDialog *ui;
     int firstVisibleNoteListRow;
     bool eventFilter(QObject *obj, QEvent *event);
     QString selectedNoteText;
     void setupFileUrlMenu();
+    void loadNoteHeadings() const;
+    void doAccept();
 };

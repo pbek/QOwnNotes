@@ -365,6 +365,8 @@ class Note {
 
     static QString removeNameSearchPrefix(QString searchTerm);
 
+    QStringList getHeadingList();
+
    protected:
     int _id;
     int _noteSubFolderId;

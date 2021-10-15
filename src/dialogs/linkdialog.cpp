@@ -1,6 +1,7 @@
 #include "linkdialog.h"
 
 #include <entities/note.h>
+#include <utils/gui.h>
 #include <utils/misc.h>
 
 #include <QClipboard>
@@ -20,7 +21,8 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::LinkDialog) {
     ui->setupUi(this);
     ui->tabWidget->setCurrentIndex(page);
-    ui->urlEdit->setFocus();
+    on_tabWidget_currentChanged(page);
+
     // disallow ] characters, because they will break markdown links
     ui->nameLineEdit->setValidator(new QRegularExpressionValidator(QRegularExpression(R"([^\]]*)")));
     firstVisibleNoteListRow = 0;
@@ -31,6 +33,7 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
 
     QStringList nameList = Note::fetchNoteNames();
     ui->searchLineEdit->installEventFilter(this);
+    ui->headingSearchLineEdit->installEventFilter(this);
 
     Q_FOREACH (Note note, Note::fetchAll()) {
         auto *item = new QListWidgetItem(note.getName());
@@ -98,6 +101,11 @@ Note LinkDialog::getSelectedNote() const {
     return Note::fetch(noteId);
 }
 
+QString LinkDialog::getSelectedHeading() const {
+    return ui->headingListWidget->selectedItems().isEmpty() ?
+             "" : ui->headingListWidget->currentItem()->text();
+}
+
 QString LinkDialog::getURL() const {
     QString url = ui->urlEdit->text().trimmed();
 
@@ -133,7 +141,7 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
             if ((keyEvent->key() == Qt::Key_Down) ||
                 (keyEvent->key() == Qt::Key_Tab)) {
                 // choose another selected item if current item is invisible
-                QListWidgetItem *item = ui->notesListWidget->currentItem();
+                auto item = ui->notesListWidget->currentItem();
                 if ((item != nullptr) &&
                     ui->notesListWidget->currentItem()->isHidden() &&
                     (this->firstVisibleNoteListRow >= 0)) {
@@ -143,6 +151,29 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
 
                 // give the keyboard focus to the notes list widget
                 ui->notesListWidget->setFocus();
+                return true;
+            }
+        }
+        return false;
+    } else if (obj == ui->headingSearchLineEdit) {
+        if (event->type() == QEvent::KeyPress) {
+            auto *keyEvent = static_cast<QKeyEvent *>(event);
+
+            // set focus to the notes list if Key_Down or Key_Tab were pressed
+            // in the search line edit
+            if ((keyEvent->key() == Qt::Key_Down) ||
+                (keyEvent->key() == Qt::Key_Tab)) {
+                // choose another selected item if current item is invisible
+                auto item = ui->headingListWidget->currentItem();
+                if ((item != nullptr) &&
+                    ui->headingListWidget->currentItem()->isHidden() &&
+                    (this->firstVisibleNoteListRow >= 0)) {
+                    ui->headingListWidget->setCurrentRow(
+                        this->firstVisibleNoteListRow);
+                }
+
+                // give the keyboard focus to the heading list widget
+                ui->headingListWidget->setFocus();
                 return true;
             }
         }
@@ -165,11 +196,20 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
     return MasterDialog::eventFilter(obj, event);
 }
 
-void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index) {
-    Q_UNUSED(index)
+void LinkDialog::doAccept() {
     ui->urlEdit->clear();
     this->close();
     this->setResult(QDialog::Accepted);
+}
+
+void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index) {
+    Q_UNUSED(index)
+    doAccept();
+}
+
+void LinkDialog::on_headingListWidget_doubleClicked(const QModelIndex &index) {
+    Q_UNUSED(index)
+    doAccept();
 }
 
 /**
@@ -333,5 +373,32 @@ void LinkDialog::setupFileUrlMenu() {
 void LinkDialog::on_buttonBox_accepted() {
     if (ui->tabWidget->currentWidget() == ui->noteTab) {
         ui->urlEdit->clear();
+    }
+}
+
+void LinkDialog::on_headingSearchLineEdit_textChanged(const QString &arg1) {
+    Utils::Gui::searchForTextInListWidget(ui->headingListWidget, arg1);
+}
+
+void LinkDialog::loadNoteHeadings() const {
+    auto note = getSelectedNote();
+
+    ui->headingListWidget->clear();
+    ui->headingListWidget->addItems(note.getHeadingList());
+}
+
+void LinkDialog::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
+                                                       QListWidgetItem *previous) {
+    Q_UNUSED(current)
+    Q_UNUSED(previous)
+
+    loadNoteHeadings();
+}
+
+void LinkDialog::on_tabWidget_currentChanged(int index) {
+    if (index == 0) {
+        ui->urlEdit->setFocus();
+    } else {
+        ui->searchLineEdit->setFocus();
     }
 }
