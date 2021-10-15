@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 21.10.8
-- more features were added to the **heading links** feature (for [#1977](https://github.com/pbek/QOwnNotes/issues/1977))
+- more features were added to the **linking of note heading** (for [#1977](https://github.com/pbek/QOwnNotes/issues/1977))
     - the search panel inside the note is now closed after jumping to the heading
     - the broken note link checker now also works with links with an url fragment
     - you can now select a heading to link to in the note link dialog
