@@ -93,7 +93,7 @@ QString LinkDialog::getSelectedNoteName() const {
 
 Note LinkDialog::getSelectedNote() const {
     if (ui->notesListWidget->currentRow() == -1) {
-        return Note();
+        return {};
     }
 
     const int noteId =
@@ -135,7 +135,7 @@ QString LinkDialog::getLinkDescription() const {
 bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
     if (obj == ui->searchLineEdit) {
         if (event->type() == QEvent::KeyPress) {
-            auto *keyEvent = static_cast<QKeyEvent *>(event);
+            auto *keyEvent = dynamic_cast<QKeyEvent *>(event);
 
             // set focus to the notes list if Key_Down or Key_Tab were pressed
             // in the search line edit
@@ -158,21 +158,12 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
         return false;
     } else if (obj == ui->headingSearchLineEdit) {
         if (event->type() == QEvent::KeyPress) {
-            auto *keyEvent = static_cast<QKeyEvent *>(event);
+            auto *keyEvent = dynamic_cast<QKeyEvent *>(event);
 
             // set focus to the notes list if Key_Down or Key_Tab were pressed
             // in the search line edit
             if ((keyEvent->key() == Qt::Key_Down) ||
                 (keyEvent->key() == Qt::Key_Tab)) {
-                // choose another selected item if current item is invisible
-                auto item = ui->headingListWidget->currentItem();
-                if ((item != nullptr) &&
-                    ui->headingListWidget->currentItem()->isHidden() &&
-                    (this->firstVisibleNoteListRow >= 0)) {
-                    ui->headingListWidget->setCurrentRow(
-                        this->firstVisibleNoteListRow);
-                }
-
                 // give the keyboard focus to the heading list widget
                 ui->headingListWidget->setFocus();
                 return true;
@@ -181,7 +172,7 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
         return false;
     } else if (obj == ui->notesListWidget) {
         if (event->type() == QEvent::KeyPress) {
-            auto *keyEvent = static_cast<QKeyEvent *>(event);
+            auto *keyEvent = dynamic_cast<QKeyEvent *>(event);
 
             // set focus to the note text edit if Key_Return or Key_Tab
             // were pressed in the notes list
@@ -223,7 +214,7 @@ QString LinkDialog::getTitleForUrl(const QUrl &url) {
     const QString html = Utils::Misc::downloadUrl(url);
 
     if (html.isEmpty()) {
-        return QString();
+        return {};
     }
 
     // parse title from webpage
