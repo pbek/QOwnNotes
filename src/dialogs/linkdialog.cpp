@@ -34,6 +34,7 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     QStringList nameList = Note::fetchNoteNames();
     ui->searchLineEdit->installEventFilter(this);
     ui->headingSearchLineEdit->installEventFilter(this);
+    ui->notesListWidget->installEventFilter(this);
 
     Q_FOREACH (Note note, Note::fetchAll()) {
         auto *item = new QListWidgetItem(note.getName());
@@ -186,7 +187,8 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
             // were pressed in the notes list
             if ((keyEvent->key() == Qt::Key_Return) ||
                 (keyEvent->key() == Qt::Key_Tab)) {
-                // focusNoteTextEdit();
+                ui->headingSearchLineEdit->setFocus();
+
                 return true;
             }
         }
