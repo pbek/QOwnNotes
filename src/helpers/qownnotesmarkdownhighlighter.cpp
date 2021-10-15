@@ -93,8 +93,12 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
             return;
         }
 
+        const QString ext = Note::defaultNoteFileExtension();
+
         // check <note file.md> links
-        static const QRegularExpression regex1(QStringLiteral("<([^\\s`][^`]*?\\.[^`]*?[^\\s`]\\.md)>"));
+        // Example: <([^\s`][^`]*?\.md)>
+        static const QRegularExpression regex(R"(<([^\s`][^`]*?\.)" +
+                                              ext + R"()>)");
         match = regex.match(text);
 
         if (match.hasMatch()) {
@@ -112,12 +116,10 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
             if (note.isFetched()) {
                 return;
             }
-        } else {    // check [note](note file.md) links
-            const QString ext = Note::defaultNoteFileExtension();
-
-            // Example: R"(\[[^\[\]]+\]\((\S+\.md|.+?\.md)\)\B)")
+        } else {    // check [note](note file.md) or [note](note file.md#heading) links
+            // Example: R"(\[[^\[\]]+\]\((\S+\.md|.+?\.md)(#[^\)]+)?\)\B)")
             static const QRegularExpression regex(R"(\[[^\[\]]+\]\((\S+\.)" +
-                                                    ext + R"(|.+?\.)" + ext + R"()\)\B)");
+                                                    ext + R"(|.+?\.)" + ext + R"()(#[^\)]+)?\)\B)");
             match = regex.match(text);
 
             if (match.hasMatch()) {
