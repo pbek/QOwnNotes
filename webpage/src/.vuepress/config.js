@@ -47,6 +47,7 @@ const installationNavItems = [
   'installation/centos',
   'installation/raspberry-pi-os',
   'installation/gentoo',
+  'installation/funtoo',
   'installation/slackware',
   'installation/freebsd',
   'installation/building',
