@@ -5329,11 +5329,6 @@ void MainWindow::handleTextNoteLinking(int page) {
                                     QStringLiteral(")")
                               : QStringLiteral("<") + url + QStringLiteral(">");
             } else {
-                // if user has selected a note
-                if (!chosenLinkName.isEmpty()) {
-                    noteName = chosenLinkName;
-                }
-
                 const QString noteUrl = currentNote.getNoteUrlForLinkingTo(
                     dialog->getSelectedNote());
 
@@ -5341,6 +5336,14 @@ void MainWindow::handleTextNoteLinking(int page) {
                 const QString headingText = heading.isEmpty() ?
                               QStringLiteral() : QStringLiteral("#") +
                                  QUrl::toPercentEncoding(heading);
+
+                // if user has selected a note
+                if (!chosenLinkName.isEmpty()) {
+                    noteName = chosenLinkName;
+                } else if (!heading.isEmpty()) {
+                    // if a note and a heading were selected add heading text to link title
+                    noteName += QStringLiteral(" - ") + heading;
+                }
 
                 newText = QStringLiteral("[") + noteName +
                           QStringLiteral("](") + noteUrl + headingText +
