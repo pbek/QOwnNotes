@@ -1333,7 +1333,7 @@ bool Note::storeNoteTextFileToDisk() {
         handleNoteMoving(oldNote);
     }
 
-    // if we find a decrypted text to encrypt, then we attempt encrypt it
+    // if we find a decrypted text to encrypt, then we attempt to encrypt it
     if (!_decryptedNoteText.isEmpty()) {
         _noteText = _decryptedNoteText;
         encryptNoteText();
