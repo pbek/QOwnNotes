@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 21.10.9
+- there now will be a warning that a restart of the application is needed when
+  changing the default note file extension (for [#2250](https://github.com/pbek/QOwnNotes/pull/2250))
 - more features were added to the **linking of note heading** (for [#1977](https://github.com/pbek/QOwnNotes/issues/1977))
     - if a note and a heading were selected in the note link dialog the heading
       text will be added to the link title by default

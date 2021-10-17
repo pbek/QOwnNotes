@@ -67,6 +67,15 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     _highlightingFinished = true;
 }
 
+void QOwnNotesMarkdownHighlighter::updateCachedRegexes(const QString& newExt)
+{
+    if (newExt == _defaultNoteFileExt)
+        return;
+
+    _regexTagStyleLink = QRegularExpression(R"(<([^\s`][^`]*?\.)" + newExt + R"()>)");
+    _regexBracketLink = QRegularExpression(R"(\[[^\[\]]+\]\((\S+\.)" + newExt + R"(|.+?\.)" + newExt + R"()(#[^\)]+)?\)\B)");
+}
+
 /**
  * Highlight broken note links
  *
@@ -92,14 +101,13 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
         if (_currentNote == nullptr) {
             return;
         }
+        updateCachedRegexes(Note::defaultNoteFileExtension());
 
         const QString ext = Note::defaultNoteFileExtension();
 
         // check <note file.md> links
         // Example: <([^\s`][^`]*?\.md)>
-        static const QRegularExpression regex(R"(<([^\s`][^`]*?\.)" +
-                                              ext + R"()>)");
-        match = regex.match(text);
+        match = _regexTagStyleLink.match(text);
 
         if (match.hasMatch()) {
             const QString fileName = Note::urlDecodeNoteUrl(match.captured(1));
@@ -118,9 +126,7 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
             }
         } else {    // check [note](note file.md) or [note](note file.md#heading) links
             // Example: R"(\[[^\[\]]+\]\((\S+\.md|.+?\.md)(#[^\)]+)?\)\B)")
-            static const QRegularExpression regex(R"(\[[^\[\]]+\]\((\S+\.)" +
-                                                    ext + R"(|.+?\.)" + ext + R"()(#[^\)]+)?\)\B)");
-            match = regex.match(text);
+            match = _regexBracketLink.match(text);
 
             if (match.hasMatch()) {
                 const QString fileName =
