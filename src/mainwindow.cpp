@@ -4331,12 +4331,12 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             if ((keyEvent->key() == Qt::Key_Return) ||
                 (keyEvent->key() == Qt::Key_Tab)) {
                 // focusNoteTextEdit() might cause a crash in
-                // on_noteTreeWidget_itemChanged when
-                // Note::handleNoteRenaming is called, so we don't allow to
-                // call focusNoteTextEdit()
-//                if (!Note::allowDifferentFileName()) {
-                    focusNoteTextEdit();
-//                }
+                // on_noteTreeWidget_itemChanged if Note::allowDifferentFileName()
+                // is true when Note::handleNoteRenaming is called, the
+                // QTimer::singleShot helps with that
+                QTimer::singleShot(150, this,
+                                   SLOT(focusNoteTextEdit()));
+
                 return true;
             } else if ((keyEvent->key() == Qt::Key_Delete) ||
                        (keyEvent->key() == Qt::Key_Backspace)) {

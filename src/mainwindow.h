@@ -179,8 +179,6 @@ class MainWindow : public QMainWindow {
 
     QString noteTextEditCurrentWord(bool withPreviousCharacters = false);
 
-    Q_INVOKABLE void focusNoteTextEdit();
-
     Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = QString());
 
     QString getLogText();
@@ -227,6 +225,8 @@ class MainWindow : public QMainWindow {
     void disallowNoteEditing();
 
     void openCurrentNoteInTab();
+
+    Q_INVOKABLE void focusNoteTextEdit();
 
    private slots:
 
