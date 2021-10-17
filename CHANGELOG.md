@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.10.9
+- there now will be a warning that a restart of the application is needed when
+  changing the default note file extension (for [#2250](https://github.com/pbek/QOwnNotes/pull/2250)) 
+
 ## 21.10.8
 - more features were added to the **linking of note heading** (for [#1977](https://github.com/pbek/QOwnNotes/issues/1977))
     - the search panel inside the note is now closed after jumping to the heading
