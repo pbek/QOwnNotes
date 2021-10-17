@@ -3088,7 +3088,7 @@ QVector<int> Note::findLinkedNoteIds() const {
 
     const auto noteList = Note::fetchAll();
     noteIdList.reserve(noteList.size());
-    // search for links to the relative file path in all note
+    // search for links to the relative file path in all notes
     for (const Note &note : noteList) {
         const int noteId = note.getId();
         if (noteId == getId() || noteIdList.contains(noteId)) {
