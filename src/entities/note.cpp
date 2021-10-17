@@ -1712,7 +1712,14 @@ QString Note::getNoteUrlForLinkingTo(const Note &note, bool forceLegacy) const {
             Note::generateTextForLink(note.getName());
         noteUrl = QStringLiteral("note://") + noteNameForLink;
     } else {
-        noteUrl = urlEncodeNoteUrl(getFilePathRelativeToNote(note));
+        QString notePath = getFilePathRelativeToNote(note);
+
+        // if "note" is the current note we want to use the real filename
+        if (notePath == QChar('.')) {
+            notePath = note.getFileName();
+        }
+
+        noteUrl = urlEncodeNoteUrl(notePath);
 
         // if one of the link characters `<>()` were found in the note url use
         // the legacy way of linking because otherwise the "url" would break the

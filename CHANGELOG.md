@@ -6,6 +6,9 @@
 - more features were added to the **linking of note heading** (for [#1977](https://github.com/pbek/QOwnNotes/issues/1977))
     - if a note and a heading were selected in the note link dialog the heading
       text will be added to the link title by default
+    - if the current note is selected in the note link dialog the correct note
+      file name will be used now instead of `.` to allow links to headings in
+      the current note 
 - the build for very old Qt versions was (hopefully) fixed again
 
 ## 21.10.8
