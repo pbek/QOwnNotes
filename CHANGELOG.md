@@ -8,7 +8,12 @@
       text will be added to the link title by default
     - if the current note is selected in the note link dialog the correct note
       file name will be used now instead of `.` to allow links to headings in
-      the current note 
+      the current note
+    - when a note is renamed or moved to another sub-folder note links with
+      heading fragments can now also be automatically renamed
+        - this also works with note links to the current note
+        - warning: this feature (especially the part with links to the current note)
+          was very complex and might introduce regressions
 - the build for very old Qt versions was (hopefully) fixed again
 - a possible crash was fixed when renaming a note directly in the note list when
   <kbd>Enter</kbd> was pressed (for [#1837](https://github.com/pbek/QOwnNotes/issues/1837))

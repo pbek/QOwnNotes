@@ -3089,10 +3089,11 @@ void MainWindow::storeUpdatedNotesToDisk() {
     // All flushing and syncing didn't help.
     bool currentNoteChanged = false;
     bool noteWasRenamed = false;
+    bool currentNoteTextChanged = false;
 
     // currentNote will be set by this method if the filename has changed
     const int count = Note::storeDirtyNotesToDisk(
-        currentNote, &currentNoteChanged, &noteWasRenamed);
+        currentNote, &currentNoteChanged, &noteWasRenamed, &currentNoteTextChanged);
 
     if (count > 0) {
         _noteViewNeedsUpdate = true;
@@ -3126,6 +3127,11 @@ void MainWindow::storeUpdatedNotesToDisk() {
 //                    Q_UNUSED(blocker2)
 //                    setNoteTextFromNote(&currentNote);
                 }
+            }
+
+            if (currentNoteTextChanged) {
+                // reload the current note if we had to change it during a note rename
+                reloadCurrentNoteByNoteId(true);
             }
 
             // just to make sure everything is up-to-date
@@ -9919,7 +9925,10 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(
 
                 // handle the replacing of all note links from other notes
                 // because the note was moved
-                note.handleNoteMoving(oldNote);
+                if (note.handleNoteMoving(oldNote)) {
+                    // reload the current note if we had to change it
+                    reloadCurrentNoteByNoteId(true);
+                }
 
                 // re-link images
                 const bool mediaFileLinksUpdated =
@@ -10883,7 +10892,10 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
                                                 note.getNoteSubFolder());
 
                 // handle the replacing of all note urls if a note was renamed
-                note.handleNoteMoving(oldNote);
+                if (note.handleNoteMoving(oldNote)) {
+                    // reload the current note if we had to change it
+                    reloadCurrentNoteByNoteId(true);
+                }
 
                 // reload the directory list if note name has changed
                 //                loadNoteDirectoryList();

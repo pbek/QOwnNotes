@@ -90,7 +90,7 @@ class Note {
 
     bool storeNewText(QString text);
 
-    bool storeNoteTextFileToDisk();
+    bool storeNoteTextFileToDisk(bool *currentNoteTextChanged = Q_NULLPTR);
 
     static QString defaultNoteFileExtension();
 
@@ -103,7 +103,8 @@ class Note {
 
     static int storeDirtyNotesToDisk(Note &currentNote,
                                      bool *currentNoteChanged = Q_NULLPTR,
-                                     bool *noteWasRenamed = Q_NULLPTR);
+                                     bool *noteWasRenamed = Q_NULLPTR,
+                                     bool *currentNoteTextChanged = Q_NULLPTR);
 
     bool updateNoteTextFromDisk();
 
@@ -261,7 +262,7 @@ class Note {
 
     QVector<int> findLinkedNoteIds() const;
 
-    void handleNoteMoving(const Note &oldNote) const;
+    bool handleNoteMoving(const Note &oldNote);
 
     static QString createNoteHeader(const QString &name);
 

@@ -1259,8 +1259,11 @@ bool Note::store() {
 /**
  * Stores a note text file to disk
  * The file name will be changed if needed
+ *
+ * @param currentNoteTextChanged true if the note text was changed during a rename
+ * @return true if note was stored
  */
-bool Note::storeNoteTextFileToDisk() {
+bool Note::storeNoteTextFileToDisk(bool *currentNoteTextChanged) {
     const Note oldNote = *this;
     const QString oldName = _name;
     const QString oldNoteFilePath = fullNoteFilePath();
@@ -1330,7 +1333,7 @@ bool Note::storeNoteTextFileToDisk() {
                                         this->getNoteSubFolder());
 
         // handle the replacing of all note urls if a note was renamed
-        handleNoteMoving(oldNote);
+        *currentNoteTextChanged = handleNoteMoving(oldNote);
     }
 
     // if we find a decrypted text to encrypt, then we attempt to encrypt it
@@ -1699,7 +1702,14 @@ QString Note::getFilePathRelativeToNote(const Note &note) const {
 
     // for some reason there is a leading "../" too much
     static const QRegularExpression re(QStringLiteral(R"(^\.\.\/)"));
-    return dir.relativeFilePath(note.fullNoteFilePath()).remove(re);
+    QString path = dir.relativeFilePath(note.fullNoteFilePath()).remove(re);
+
+    // if "note" is the current note we want to use the real filename
+    if (path == QChar('.')) {
+        path = note.getFileName();
+    }
+
+    return path;
 }
 
 QString Note::getNoteUrlForLinkingTo(const Note &note, bool forceLegacy) const {
@@ -1712,14 +1722,7 @@ QString Note::getNoteUrlForLinkingTo(const Note &note, bool forceLegacy) const {
             Note::generateTextForLink(note.getName());
         noteUrl = QStringLiteral("note://") + noteNameForLink;
     } else {
-        QString notePath = getFilePathRelativeToNote(note);
-
-        // if "note" is the current note we want to use the real filename
-        if (notePath == QChar('.')) {
-            notePath = note.getFileName();
-        }
-
-        noteUrl = urlEncodeNoteUrl(notePath);
+        noteUrl = urlEncodeNoteUrl(getFilePathRelativeToNote(note));
 
         // if one of the link characters `<>()` were found in the note url use
         // the legacy way of linking because otherwise the "url" would break the
@@ -1847,10 +1850,12 @@ QUrl Note::fullNoteFileUrl() const {
  * note has changed
  * @param currentNoteChanged true if current note was changed
  * @param noteWasRenamed true if a note was renamed
+ * @param currentNoteTextChanged true if the current note text was changed during a rename
  * @return amount of notes that were saved
  */
 int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
-                                bool *noteWasRenamed) {
+                                bool *noteWasRenamed,
+                                bool *currentNoteTextChanged) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
     ScriptingService *scriptingService = ScriptingService::instance();
@@ -1866,7 +1871,8 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
     for (int r = 0; query.next(); r++) {
         Note note = noteFromQuery(query);
         const QString &oldName = note.getName();
-        const bool noteWasStored = note.storeNoteTextFileToDisk();
+        const bool noteWasStored = note.storeNoteTextFileToDisk(
+            currentNoteTextChanged);
 
         // continue if note couldn't be stored
         if (!noteWasStored) {
@@ -3091,7 +3097,10 @@ QVector<int> Note::findLinkedNoteIds() const {
     // search for links to the relative file path in all notes
     for (const Note &note : noteList) {
         const int noteId = note.getId();
-        if (noteId == getId() || noteIdList.contains(noteId)) {
+
+        // we also want to search in the current note, but we want to skip the
+        // search if we already have found it
+        if (noteIdList.contains(noteId)) {
             continue;
         }
 
@@ -3100,10 +3109,13 @@ QVector<int> Note::findLinkedNoteIds() const {
         const QString noteText = note.getNoteText();
 
         // search for links to the relative file path in note
+        // the "#" is for notes with a fragment (link to heading in note)
         if (noteText.contains(QStringLiteral("<") + relativeFilePath +
                               QStringLiteral(">")) ||
             noteText.contains(QStringLiteral("](") + relativeFilePath +
-                              QStringLiteral(")"))) {
+                              QStringLiteral(")")) ||
+            noteText.contains(QStringLiteral("](") + relativeFilePath +
+                              QStringLiteral("#"))) {
             noteIdList.append(note.getId());
         }
     }
@@ -3282,13 +3294,14 @@ QString Note::relativeFilePath(const QString &path) const {
  * (subfolder)
  *
  * @param oldNote
+ * @return true if we had to change the current note
  */
-void Note::handleNoteMoving(const Note &oldNote) const {
+bool Note::handleNoteMoving(const Note &oldNote) {
     const QVector<int> noteIdList = oldNote.findLinkedNoteIds();
     const int noteCount = noteIdList.count();
 
     if (noteCount == 0) {
-        return;
+        return false;
     }
 
     const QString oldUrl = getNoteURL(oldNote.getName());
@@ -3308,6 +3321,7 @@ void Note::handleNoteMoving(const Note &oldNote) const {
         // replace the urls in all found notes
         for (const int noteId : noteIdList) {
             Note note = Note::fetch(noteId);
+
             if (!note.isFetched()) {
                 continue;
             }
@@ -3320,7 +3334,9 @@ void Note::handleNoteMoving(const Note &oldNote) const {
             text.replace(QStringLiteral("](") + oldUrl + QStringLiteral(")"),
                          QStringLiteral("](") + newUrl + QStringLiteral(")"));
 
+            //
             // replace legacy links with note:// and ending @
+            //
             if (!oldUrl.contains(QLatin1String("@"))) {
                 text.replace(
                     QStringLiteral("<") + oldUrl + QStringLiteral("@>"),
@@ -3335,7 +3351,9 @@ void Note::handleNoteMoving(const Note &oldNote) const {
             const QString relativeFilePath =
                 urlEncodeNoteUrl(note.getFilePathRelativeToNote(*this));
 
+            //
             // replace non-urlencoded relative file links to the note
+            //
             text.replace(
                 QStringLiteral("<") + oldNoteRelativeFilePath +
                     QStringLiteral(">"),
@@ -3344,8 +3362,14 @@ void Note::handleNoteMoving(const Note &oldNote) const {
                 QStringLiteral("](") + oldNoteRelativeFilePath +
                     QStringLiteral(")"),
                 QStringLiteral("](") + relativeFilePath + QStringLiteral(")"));
+            text.replace(
+                QStringLiteral("](") + oldNoteRelativeFilePath +
+                    QStringLiteral("#"),
+                QStringLiteral("](") + relativeFilePath + QStringLiteral("#"));
 
+            //
             // replace url encoded relative file links to the note
+            //
             oldNoteRelativeFilePath = urlEncodeNoteUrl(oldNoteRelativeFilePath);
             text.replace(
                 QStringLiteral("<") + oldNoteRelativeFilePath +
@@ -3355,10 +3379,23 @@ void Note::handleNoteMoving(const Note &oldNote) const {
                 QStringLiteral("](") + oldNoteRelativeFilePath +
                     QStringLiteral(")"),
                 QStringLiteral("](") + relativeFilePath + QStringLiteral(")"));
+            text.replace(
+                QStringLiteral("](") + oldNoteRelativeFilePath +
+                    QStringLiteral("#"),
+                QStringLiteral("](") + relativeFilePath + QStringLiteral("#"));
+
+            // if the current note was changed we need to make sure the
+            // _noteText is updated
+            if (note.getId() == _id) {
+                _noteText = text;
+            }
 
             note.storeNewText(std::move(text));
         }
     }
+
+    // return true if we had to change the current note
+    return noteIdList.contains(_id);
 }
 
 /**
