@@ -10,6 +10,8 @@
       file name will be used now instead of `.` to allow links to headings in
       the current note 
 - the build for very old Qt versions was (hopefully) fixed again
+- added more translation (thank you amirkbrpr, marterra, danilosf, evildeepblue,
+  marcoxbresciani, rawfreeamy)
 
 ## 21.10.8
 - more features were added to the **linking of note heading** (for [#1977](https://github.com/pbek/QOwnNotes/issues/1977))

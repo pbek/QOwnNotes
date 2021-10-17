@@ -1,5 +1,5 @@
 # Installieren Sie unter CentOS Linux
 
-Es gibt von der Community erstellte Pakete für **CentOS 7** von *Jörg Woll* unter [QOwnNotes-Pakete für X86](http://wilhelm949.spdns.org:10443/w3bservice/7/x86_64/w3bservice/Packages/repoview/qownnotes.html) und [QOwnNotes-Pakete für ARM](http://wilhelm949.spdns.org:10443/w3bservice/7/armhfp/w3bservice/Packages/repoview/qownnotes.html).
+There are community-created packages for **CentOS 7 and 8** by *Jörg Woll* at [QOwnNotes packages for X86 for el7](http://wilhelm949.spdns.org:10443/w3bservice/7/x86_64/w3bservice/Packages/repoview/qownnotes.html), [QOwnNotes packages for ARMfor el7](http://wilhelm949.spdns.org:10443/w3bservice/7/armhfp/w3bservice/Packages/repoview/qownnotes.html) and [QOwnNotes packages for X86 for el8](http://wilhelm949.spdns.org:10443/w3bservice/8/x86_64/w3bservice/Packages/repoview/qownnotes.html).
 
 Ein großes Dankeschön an Jörg!
