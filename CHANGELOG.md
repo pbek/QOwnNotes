@@ -6,6 +6,7 @@
 - more features were added to the **linking of note heading** (for [#1977](https://github.com/pbek/QOwnNotes/issues/1977))
     - if a note and a heading were selected in the note link dialog the heading
       text will be added to the link title by default
+- the build for very old Qt versions was (hopefully) fixed again
 
 ## 21.10.8
 - more features were added to the **linking of note heading** (for [#1977](https://github.com/pbek/QOwnNotes/issues/1977))
