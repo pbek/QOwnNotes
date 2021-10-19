@@ -264,8 +264,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
             SLOT(needRestart()));
     connect(ui->webAppTokenLineEdit, SIGNAL(textChanged(QString)), this,
             SLOT(needRestart()));
-    connect(ui->defaultNoteFileExtensionListWidget, SIGNAL(itemSelectionChanged()),
-            this, SLOT(needRestart()));
     //    connect(ui->layoutWidget, SIGNAL(settingsStored()),
     //            this, SLOT(needRestart()));
 

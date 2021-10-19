@@ -41,12 +41,20 @@ class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter {
 
    protected:
     void highlightBlock(const QString &text) Q_DECL_OVERRIDE;
+
+   private:
     void highlightBrokenNotesLink(const QString &text);
 
     // Set the format of a word as misspelled i.e., red wavy underline
     void setMisspelled(const int start, const int count);
     void highlightSpellChecking(const QString &text);
 
+    void updateCachedRegexes(const QString& newExt);
+
    private:
     Note *_currentNote = nullptr;
+
+    QString _defaultNoteFileExt;
+    QRegularExpression _regexTagStyleLink;
+    QRegularExpression _regexBracketLink;
 };
