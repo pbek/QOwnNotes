@@ -14,9 +14,16 @@ lessThan(QT_MAJOR_VERSION, 6) {
 # Windows and macOS seem to ignore that
 #QT       += quick
 
-CONFIG += with_aspell precompile_header
+CONFIG += with_aspell
 
-PRECOMPILED_HEADER  = pch.h
+# enable pch for DEV_MODE
+# put any dev specific options here
+CONFIG(DEV_MODE) {
+    message("[DevMode] PCH Enabled")
+    CONFIG += precompile_header
+    PRECOMPILED_HEADER  = pch.h
+    HEADERS += pch.h
+}
 
 TARGET = QOwnNotes
 TEMPLATE = app
@@ -189,8 +196,7 @@ SOURCES += main.cpp\
     libraries/fuzzy/kfuzzymatcher.cpp \
     libraries/qr-code-generator/QrCode.cpp
 
-HEADERS  += pch.h \
-    mainwindow.h \
+HEADERS  += mainwindow.h \
     build_number.h \
     dialogs/attachmentdialog.h \
     entities/cloudconnection.h \
