@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.10.10
+- no restart of the application is needed anymore when changing the default note file
+  extension (for [#2267](https://github.com/pbek/QOwnNotes/pull/2267), thank you @Waqar144)
+
 ## 21.10.9
 - there now will be a warning that a restart of the application is needed when
   changing the default note file extension (for [#2250](https://github.com/pbek/QOwnNotes/pull/2250))
