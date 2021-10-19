@@ -132,12 +132,12 @@ jobs:
     - if: contains( matrix.os, 'ubuntu') && steps.changes.outputs.DO_BUILD
       name: Do Linux tests
       run: |
-        cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 8
+        cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
         ../bin/tests/tests -platform minimal -txt
     - if: contains( matrix.os, 'macos') && steps.changes.outputs.DO_BUILD
       name: Do macOS tests
       run: |
-        cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 8
+        cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
         ../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
     - if: contains( matrix.os, 'windows') && steps.changes.outputs.DO_BUILD
       name: Do Windows tests
@@ -158,7 +158,7 @@ jobs:
     - if: steps.changes.outputs.DO_BUILD && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' ))
       name: Build QOwnNotes
       run: |
-        lrelease QOwnNotes.pro && qmake && make -j8
+        lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j8
 
       #
       # Build QOwnNotes Windows Release and store it as artifact
