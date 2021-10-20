@@ -90,7 +90,8 @@ class Note {
 
     bool storeNewText(QString text);
 
-    bool storeNoteTextFileToDisk(bool *currentNoteTextChanged = Q_NULLPTR);
+    bool storeNoteTextFileToDisk(bool &currentNoteTextChanged);
+    bool storeNoteTextFileToDisk();
 
     static QString defaultNoteFileExtension();
 

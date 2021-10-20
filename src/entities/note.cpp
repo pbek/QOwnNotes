@@ -1260,10 +1260,25 @@ bool Note::store() {
  * Stores a note text file to disk
  * The file name will be changed if needed
  *
+ * @return true if note was stored
+ */
+bool Note::storeNoteTextFileToDisk() {
+    bool currentNoteTextChanged = false;
+
+    // We couldn't set a default parameter for currentNoteTextChanged, because that
+    // would only work with a pointer and then the app would crash when
+    // currentNoteTextChanged would get assigned a value
+    return storeNoteTextFileToDisk(currentNoteTextChanged);
+}
+
+/**
+ * Stores a note text file to disk
+ * The file name will be changed if needed
+ *
  * @param currentNoteTextChanged true if the note text was changed during a rename
  * @return true if note was stored
  */
-bool Note::storeNoteTextFileToDisk(bool *currentNoteTextChanged) {
+bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged) {
     const Note oldNote = *this;
     const QString oldName = _name;
     const QString oldNoteFilePath = fullNoteFilePath();
@@ -1333,7 +1348,8 @@ bool Note::storeNoteTextFileToDisk(bool *currentNoteTextChanged) {
                                         this->getNoteSubFolder());
 
         // handle the replacing of all note urls if a note was renamed
-        *currentNoteTextChanged = handleNoteMoving(oldNote);
+        // (we couldn't make currentNoteTextChanged a pointer or the app would crash)
+        currentNoteTextChanged = handleNoteMoving(oldNote);
     }
 
     // if we find a decrypted text to encrypt, then we attempt to encrypt it
@@ -1872,7 +1888,7 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
         Note note = noteFromQuery(query);
         const QString &oldName = note.getName();
         const bool noteWasStored = note.storeNoteTextFileToDisk(
-            currentNoteTextChanged);
+            *currentNoteTextChanged);
 
         // continue if note couldn't be stored
         if (!noteWasStored) {
