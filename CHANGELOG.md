@@ -6,6 +6,7 @@
 - a crash was fixed when the note headline was modified by a script in
   `handleNewNoteHeadlineHook` (for [2270](https://github.com/pbek/QOwnNotes/issues/2270))
     - this was a regression introduced in 21.10.9
+- added more Catalan, Portuguese translation (thank you mguerra, smarquespt)
 
 ## 21.10.9
 - there now will be a warning that a restart of the application is needed when

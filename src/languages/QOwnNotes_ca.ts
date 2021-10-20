@@ -1804,7 +1804,7 @@
 <message>
 <location filename="../dialogs/linkdialog.ui" line="153"/>
 <source>Search for a heading to link to</source>
-<translation type="unfinished">Search for a heading to link to</translation>
+<translation>Cerqueu un títol per a enllaçar</translation>
 </message>
 <message>
 <location filename="../dialogs/linkdialog.ui" line="177"/>

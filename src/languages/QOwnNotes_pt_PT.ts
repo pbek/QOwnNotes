@@ -4408,24 +4408,24 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
 <message>
 <location filename="../services/owncloudservice.cpp" line="320"/>
 <source>not correct</source>
-<translation type="unfinished">not correct</translation>
+<translation>não correto</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="333"/>
 <source>not detected</source>
-<translation type="unfinished">not detected</translation>
+<translation>não detetado</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="436"/>
 <location filename="../services/owncloudservice.cpp" line="531"/>
 <source>not found</source>
-<translation type="unfinished">not found</translation>
+<translation>não encontrado</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="473"/>
 <location filename="../services/owncloudservice.cpp" line="475"/>
 <source>unknown</source>
-<translation type="unfinished">unknown</translation>
+<translation>desconhecido</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="484"/>
@@ -4436,7 +4436,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
 <location filename="../services/owncloudservice.cpp" line="505"/>
 <location filename="../services/owncloudservice.cpp" line="513"/>
 <source>not enabled</source>
-<translation type="unfinished">not enabled</translation>
+<translation>não ativado</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="587"/>
@@ -4647,32 +4647,32 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
 <message>
 <location filename="../utils/gui.cpp" line="1037"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;última modificação: %2</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1042"/>
 <source>&lt;br /&gt;path: %1</source>
-<translation type="unfinished">&lt;br /&gt;path: %1</translation>
+<translation>&lt;br /&gt;caminho: %1</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1070"/>
 <source>Dark mode detected</source>
-<translation type="unfinished">Dark mode detected</translation>
+<translation>Detetado modo escuro</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1071"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Parece que o sistema Windows está a utilizar o modo escuro. deseja ativar este modo para QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1083"/>
 <source>Light mode detected</source>
-<translation type="unfinished">Light mode detected</translation>
+<translation>Detetado modo claro</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1084"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Parece que o sistema Windows está a utilizar o modo claro. deseja ativar este modo para QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="76"/>
@@ -4692,12 +4692,12 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4461"/>
 <source>Login flow succeeded</source>
-<translation type="unfinished">Login flow succeeded</translation>
+<translation>Sessão iniciada com sucesso</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4462"/>
 <source>Username and password were set successfully!</source>
-<translation type="unfinished">Username and password were set successfully!</translation>
+<translation>Nome de utilizador e palavra-passe bem definidos!</translation>
 </message>
 <message>
 <location filename="../entities/cloudconnection.cpp" line="291"/>
@@ -8122,32 +8122,32 @@ Suas Notas estarão intactas!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="102"/>
 <source>File size:</source>
-<translation type="unfinished">File size:</translation>
+<translation>Tamanho do ficheiro:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="194"/>
 <source>File type:</source>
-<translation type="unfinished">File type:</translation>
+<translation>Tipo de ficheiro:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="207"/>
 <source>File path:</source>
-<translation type="unfinished">File path:</translation>
+<translation>Caminho do ficheiro:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="86"/>
 <source>Last modified at %1</source>
-<translation type="unfinished">Last modified at %1</translation>
+<translation>Última modificação em %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="160"/>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>Caminho: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="200"/>
 <source>Delete selected files</source>
-<translation type="unfinished">Delete selected files</translation>
+<translation>Eliminar ficheiros selecionados</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
@@ -8190,7 +8190,7 @@ Suas Notas estarão intactas!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>Ficheiro existe</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
