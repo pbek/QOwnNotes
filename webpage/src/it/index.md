@@ -11,7 +11,7 @@ features:
     title: Le note sono in tuo possesso
     details: Tutte le note sono salvate in formato markdown su file nel tuo computer, nessun "blocco da fornitore" Us servizi di sincronizzazione come Nextcloud per sicronizzare le note tra i dispositivi.
   - 
-    title: Low footprint
+    title: Ingombro ridotto
     details: Applicazione nativa, ottimizzata per la velocità e il poco consumo di risorse del processore e della memoria.
   - 
     title: Personalizzazione

@@ -44,7 +44,7 @@ Wenn Sie Ihre Sprache in dieser Tabelle nicht finden können, ist in den LibreOf
 | 18 | gd_GB     | Gälisch                                     |
 | 19 | gl        | Galizisch                                   |
 | 20 | gu_IN     | Gujarati                                    |
-| 21 | gug       | Guarani                                     |
+| 21 | gug       | Guaraní                                     |
 | 22 | he_IL     | Hebräisch                                   |
 | 23 | hi_IN     | Hindi                                       |
 | 24 | hr_HR     | Kroatisch                                   |
@@ -71,7 +71,7 @@ Wenn Sie Ihre Sprache in dieser Tabelle nicht finden können, ist in den LibreOf
 | 45 | sv_SE     | Schwedisch                                  |
 | 46 | sw_TZ     | Kisuaheli                                   |
 | 47 | te_IN     | Telugu                                      |
-| 48 | th_TH     | Thai                                        |
+| 48 | th_TH     | Thailändisch                                |
 | 49 | tr_TR     | Türkisch                                    |
 | 51 | uk_UA     | Ukrainisch                                  |
 | 52 | vi        | Vietnamesisch                               |

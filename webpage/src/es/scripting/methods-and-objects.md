@@ -880,105 +880,105 @@ Jumping to a note
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Sets the current note if the note is visible in the note list
- *
- * @param note NoteApi note to jump to
- */
-void ScriptingService::setCurrentNote(NoteApi *note);
+  * Establece la nota actual si la nota está visible en la lista de notas
+  *
+  * @param note NoteApi nota para saltar
+  */
+void ScriptingService::setCurrentNote (NoteApi *nota);
 ```
 
 ### Ejemplo
 ```js
-// jump to the note
+// saltar a la nota
 script.setCurrentNote(note);
 ```
 
-You may want to take a look at the example [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
+Es posible que desee echar un vistazo al ejemplo [entrada-diario.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
 
-Jumping to a note subfolder
+Saltar a una subcarpeta de notas
 ---------------------------
 
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Jumps to a note subfolder
- *
- * @param noteSubFolderPath {QString} path of the subfolder, relative to the note folder
- * @param separator {QString} separator between parts of the path, default "/"
- * @return true if jump was successful
- */
+  * Salta a una subcarpeta de notas
+  *
+  * @param noteSubFolderPath {QString} ruta de la subcarpeta, relativa a la carpeta de notas
+  * @param separator {QString} separador entre partes de la ruta, predeterminado "/"
+  * @return verdadero si el salto fue exitoso
+  */
 bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
                                             QString separator);
 ```
 
 ### Ejemplo
 ```js
-// jump to the note subfolder "a sub folder"
+// saltar a la subcarpeta de notas "una subcarpeta"
 script.jumpToNoteSubFolder("a sub folder");
 
-// jump to the note subfolder "sub" inside of "a sub folder"
+// saltar a la subcarpeta de notas "sub" dentro de "una subcarpeta"
 script.jumpToNoteSubFolder("a sub folder/sub");
 ```
 
 ::: tip
-You can create a new note subfolder in the current subfolder by calling [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
+Puede crear una nueva subcarpeta de notas en la subcarpeta actual llamando a [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
 :::
 
-Showing an information message box
+Mostrar un cuadro de mensaje de información
 ----------------------------------
 
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Shows an information message box
- *
- * @param text
- * @param title (optional)
- */
+  * Muestra un cuadro de mensaje de información
+  *
+  * @param texto
+  * @param title (opcional)
+  */
 void ScriptingService::informationMessageBox(QString text, QString title);
 ```
 
 ### Ejemplo
 ```js
-// show a information message box
-script.informationMessageBox("The text I want to show", "Some optional title");
+// muestra un cuadro de mensaje de información
+script.informationMessageBox ("El texto que quiero mostrar", "Algún título opcional");
 ```
 
-Showing a question message box
+Mostrando un cuadro de mensaje de pregunta
 ------------------------------
 
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Shows a question message box
- *
- * For information about buttons see:
- * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
- *
- * @param text
- * @param title (optional)
- * @param buttons buttons that should be shown (optional)
- * @param defaultButton default button that will be selected (optional)
- * @return id of pressed button
- */
-int ScriptingService::questionMessageBox(
-        QString text, QString title, int buttons, int defaultButton);
+  * Muestra un cuadro de mensaje de pregunta
+  *
+  * Para obtener información sobre los botones, consulte:
+  * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+  *
+  * @param texto
+  * @param title (opcional)
+  * Botones de @param botones que deben mostrarse (opcional)
+  * @param defaultButton botón predeterminado que se seleccionará (opcional)
+  * @return id del botón presionado
+  */
+int ScriptingService :: questionMessageBox (
+         QString text, QString title, int buttons, int defaultButton);
 ```
 
 ### Ejemplo
 ```js
-// show a question message box with an apply and a help button
-// see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+// mostrar un cuadro de mensaje de pregunta con una solicitud y un botón de ayuda
+// ver: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
 var result = script.questionMessageBox(
-    "The text I want to show", "Some optional title", 0x01000000|0x02000000, 0x02000000);
+"El texto que quiero mostrar", "Algún título opcional", 0x01000000|0x02000000, 0x02000000);
 script.log(result);
 ```
 
-For information about buttons see [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
+Para obtener información sobre los botones, consulte [Botón estándar](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
 
-You may also want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+Quizás también quieras echar un vistazo al ejemplo [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
-Showing an open file dialog
+Mostrar un cuadro de diálogo de archivo abierto
 ---------------------------
 
 ### Parámetros y llamada al método
@@ -1001,10 +1001,10 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
 ```
 
-Showing a save file dialog
+Mostrar un cuadro de diálogo para guardar archivo
 --------------------------
 
-### Method call and parameters
+### Parámetros y llamada al método
 ```cpp
 /**
  * Shows a save file dialog
@@ -1024,16 +1024,16 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 var fileName = script.getSaveFileName("Please select HTML file to save", "output.html", "HTML (*.html)");
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Es posible que desee echar un vistazo al ejemplo [exportar notas como uno-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Registering script settings variables
+Registro de variables de configuración de script
 -------------------------------------
 
-You need to define your settings variables as properties in your script and register them in a property named `settingsVariables`.
+Debe definir sus variables de configuración como propiedades en su script y registrarlas en una propiedad llamada `settingsVariables`.
 
-The user can then set these properties in the script settings.
+Luego, el usuario puede establecer estas propiedades en la configuración del script.
 
-### Example
+### Ejemplo
 ```js
 // you have to define your registered variables so you can access them later
 property string myString;
@@ -1097,7 +1097,7 @@ property variant settingsVariables: [
 ];
 ```
 
-In addition you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
+Además, puede anular las `settingsVariables` con una función especial `registerSettingsVariables ()` como esta:
 
 ### Ejemplo
 ```js
@@ -1115,59 +1115,59 @@ function registerSettingsVariables() {
 }
 ```
 
-You may also want to take a look at the example [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
+Quizás también quieras echar un vistazo al ejemplo [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
 
-Storing and loading persistent variables
+Almacenar y cargar variables persistentes
 ----------------------------------------
 
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Stores a persistent variable
- * These variables are accessible globally over all scripts
- * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
- *
- * @param key {QString}
- * @param value {QVariant}
- */
-void ScriptingService::setPersistentVariable(const QString &key,
-                                                const QVariant &value);
+  * Almacena una variable persistente
+  * Estas variables son accesibles globalmente en todos los scripts
+  * Utilice un prefijo significativo en su clave como "PersistentVariablesTest / myVar"
+  *
+  * @param key {QString}
+  * @param value {QVariant}
+  */
+void ScriptingService :: setPersistentVariable (const QString & clave,
+                                                 const QVariant & value);
 
 /**
  * Loads a persistent variable
  * These variables are accessible globally over all scripts
- *
- * @param key {QString}
- * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
- * @return
- */
+  *
+  * @param key {QString}
+  * @param defaultValue {QVariant} valor de retorno si la configuración no existe (opcional)
+  * @regreso
+  * /
 QVariant ScriptingService::getPersistentVariable(const QString &key,
                                                     const QVariant &defaultValue);
 ```
 
 ### Ejemplo
 ```js
-// store persistent variable
+// almacenar variable persistente
 script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 
-// load and log persistent variable
-script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothing here yet"));
+// cargar y registrar variable persistente
+script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "no hay nada todavía"));
 ```
 
-Please make sure to use a meaningful prefix in your key like `PersistentVariablesTest/myVar` because the variables are accessible from all scripts.
+Asegúrese de usar un prefijo significativo en su clave como `PersistentVariablesTest / myVar` porque las variables son accesibles desde todos los scripts.
 
-You may also want to take a look at the example [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
+Quizás también quieras echar un vistazo al ejemplo [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
 
-Loading application settings variables
+Cargando variables de configuración de la aplicación
 --------------------------------------
 
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Loads an application settings variable
- *
- * @param key {QString}
- * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
+  * Carga una variable de configuración de la aplicación
+  *
+  * @param key {QString}
+  * @param defaultValue {QVariant} valor de retorno si la configuración no existe (opcional)
  * @return
  */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
@@ -1176,48 +1176,48 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 
 ### Ejemplo
 ```js
-// load and log an application settings variable
-script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
+// cargar y registrar una variable de configuración de la aplicación
+script.log(script.getApplicationSettingsVariable ("gitExecutablePath"));
 ```
 
-Keep in mind that settings actually can be empty, you have to take care about that yourself. `defaultValue` is only used if the setting doesn't exist at all.
+Tenga en cuenta que la configuración en realidad puede estar vacía, debe ocuparse de eso usted mismo. `defaultValue` solo se usa si la configuración no existe en absoluto.
 
-Creating a cache directory
+Creando un directorio de caché
 --------------------------
 
-You can cache files at the default cache location of your system.
+Puede almacenar en caché los archivos en la ubicación de caché predeterminada de su sistema.
 
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns a cache directory for a script
- *
- * @param {QString} subDir the subfolder to create and use
- * @return {QString} the cache dir path
- */
+  * Devuelve un directorio de caché para un script
+  *
+  * @param {QString} subDir la subcarpeta para crear y usar
+  * @return {QString} la ruta del directorio de caché
+  */
 QString ScriptingService::cacheDir(const QString &subDir) const;
 ```
 
 ### Ejemplo
 ```js
-// create the cache directory for my-script-id
+// crea el directorio de caché para my-script-id
 var cacheDirForScript = script.cacheDir("my-script-id");
 ```
 
-Clearing a cache directory
+Borrar un directorio de caché
 --------------------------
 
-You can clear the cache files of your script by passing its name to clearCacheDir().
+Puede borrar los archivos de caché de su script pasando su nombre a clearCacheDir().
 
-### Method call and parameters
+### Parámetros y llamada al método
 ```cpp
 /**
- * Clears the cache directory for a script
- *
- * @param {QString} subDir the subfolder to clear
- * @return {bool} true on success
- */
-bool ScriptingService::clearCacheDir(const QString &subDir) const;
+  * Borra el directorio de caché de un script
+  *
+  * @param {QString} subDir la subcarpeta para borrar
+  * @return {bool} verdadero en caso de éxito
+  */
+bool ScriptingService :: clearCacheDir (const QString & subDir) const;
 ```
 
 ### Example
@@ -1455,7 +1455,7 @@ var result = script.fileExists(filePath);
 script.log(result);
 ```
 
-Reading text from a file
+Leer texto de un archivo
 ------------------------
 
 ### Parámetros y llamada al método
@@ -1479,10 +1479,10 @@ if(script.fileExists(filePath)){
 ```
 
 
-Writing text to a file
+Escribir texto en un archivo
 ----------------------
 
-### Method call and parameters
+### Parámetros y llamada al método
 ```cpp
 /**
  * Writes a text to a file
@@ -1495,21 +1495,21 @@ Writing text to a file
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### Example
+### Ejemplo
 ```js
 var result = script.writeToFile(filePath, html);
 script.log(result);
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Es posible que desee echar un vistazo al ejemplo [exportar notas como uno-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Working with websockets
+Trabajando con websockets
 -----------------------
 
-You can remote control QOwnNotes by using `WebSocketServer`.
+Puede controlar QOwnNotes de forma remota utilizando `WebSocketServer`.
 
-Please take a look at the example [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). You can test the socket server by connecting to it on [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
+Por favor, mire el ejemplo [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). Puede probar el servidor de socket conectándose a él en [Websocket prueba](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
 
-You can also listen to sockets with `WebSocket`. Please take look at the example [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
+También puede escuchar sockets con `WebSocket`. Por favor, mira el ejemplo [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
 
-Keep in mind that you need to have Qt's QML `websocket` library installed to use this. For example under Ubuntu Linux you can install `qml-module-qtwebsockets`.
+Tenga en cuenta que debe tener instalada la biblioteca QML `websocket` de Qt para usar esto. Por ejemplo, en Ubuntu Linux puede instalar `módulo-qml-qtwebsockets`.

@@ -76,7 +76,7 @@ Hay muchas formas de crear listas.
 2. Otro articulo
    * Sublista desordenada.
 1. Los números reales no importan, solo que es un número
-   1. Ordered sub-list (only works in the editor, not the preview)
+   1. Sublista ordenada (solo funciona en el editor, no en la vista previa)
 4. Y otro artículo.
 
 * La lista desordenada puede usar asteriscos
@@ -88,7 +88,7 @@ Hay muchas formas de crear listas.
 Si presiona <kbd>Ingrese</kbd> al final de una lista, se creará un nuevo elemento de lista.
 :::
 
-## Links
+## Enlace
 
 Hay muchas formas de crear listas.
 
@@ -113,7 +113,7 @@ Usando <kbd>Ctrl + Shift + X</kbd> aparecerá un diálogo que le ayudará a **in
 Puede presionar <kbd>Ctrl + Espacio</kbd> mientras el cursor está en un enlace en la edición de notas para seguir el enlace.
 :::
 
-### Bookmarks
+### Marcadores
 
 Los marcadores utilizados por la extensión de navegador [QOwnNotes Web Companion](./browser-extension.md) utilizan enlaces en listas.
 
@@ -121,7 +121,7 @@ Los marcadores utilizados por la extensión de navegador [QOwnNotes Web Companio
 - [Webpage name](https://www.example.com) #tag1 #tag2 alguna descripción y etiquetas
 ```
 
-## Images
+## Imagenes
 
 Las imágenes se pueden incrustar en QOwnNotes. Ellas se mostrarán en la vista previa.
 

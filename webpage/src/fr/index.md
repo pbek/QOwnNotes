@@ -1,21 +1,21 @@
 ---
 title: QOwnNotes
-description: Open source markdown note-taking for Linux, macOS and Windows, that works together with Nextcloud Notes
+description: Prise de notes open source pour Linux, macOS et Windows, qui fonctionne avec Nextcloud Notes
 home: true
 heroImage: /screenshots/screenshot.png
-tagline: Free open source plain-text file markdown note-taking with Nextcloud / ownCloud integration
-actionText: Quick Start →
+tagline: Prise de notes de démarquage de fichier en texte brut open source gratuite avec l'intégration Nextcloud / ownCloud
+actionText: Démarrage rapide →
 actionLink: getting-started/overview
 features:
   - 
     title: Possédez vos notes
-    details: All notes are stored as plain-text markdown files on your computer, no "vendor lock-in". Use sync services like Nextcloud to sync notes across devices.
+    details: Toutes les notes sont stockées sous forme de fichiers de démarque en texte brut sur votre ordinateur, pas de "verrouillage du fournisseur". Utilisez des services de synchronisation comme Nextcloud pour synchroniser les notes sur tous les appareils.
   - 
-    title: Low footprint
-    details: Native application, optimized for speed and consuming little processor and memory resources.
+    title: Faible encombrement
+    details: Application native, optimisée pour la vitesse et consommant peu de ressources processeur et mémoire.
   - 
     title: Personnalisation
-    details: Heavily customizable and scriptable, you are in control of on how you want to work with your notes.
+    details: Fortement personnalisable et scriptable, vous contrôlez la façon dont vous souhaitez travailler avec vos notes.
 footer: Fabriqué par Patrizio Bekerle avec ❤️
 ---
 

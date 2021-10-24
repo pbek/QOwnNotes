@@ -179,7 +179,7 @@
 
 - <kbd>⌘</kbd> + <kbd>Click</kbd> su un collegamento per aprirlo
 - <kbd>⌘</kbd> + <kbd>F</kbd> ti permette di cercare nella nota corrente
-    - utilizzare i tasti <kbd>Su</kbd> e <kbd>Giù</kbd> o <kbd>F3</kbd> e <kbd>⇧</kbd> + <kbd>F3</kbd> tasti per passare alla corrispondenza precedente e successiva
+    - usa i tasti <kbd>Su</kbd> e <kbd>Giù</kbd> o i tasti <kbd>F3</kbd> e <kbd>⇧</kbd> + <kbd>F3</kbd> per passare alla corrispondenza precedente e successiva
     - <kbd>Esc</kbd> chiude la barra di ricerca
 - <kbd>⌘</kbd> + <kbd>R</kbd> consente di cercare e sostituire nella nota corrente
 - <kbd>⌘</kbd> + <kbd>D</kbd> duplica la riga corrente o il testo selezionato

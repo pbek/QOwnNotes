@@ -629,7 +629,7 @@ if (script.platformIsLinux()) {
 }
 ```
 
-Tag the current note
+Marquer la note actuelle
 --------------------
 
 ### Appel de méthode et paramètres
@@ -650,7 +650,7 @@ script.tagCurrentNote("favorite");
 
 Vous souhaiterez peut-être consulter l'action personnalisée `favoriteNote` dans l'exemple [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml).
 
-Create or fetch a tag by its name breadcrumb list
+Créer ou récupérer une balise par son nom liste de fil d'Ariane
 -------------------------------------------------
 
 ### Appel de méthode et paramètres
@@ -675,7 +675,7 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
 var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
 ```
 
-Search for tags by name
+Rechercher des tags par nom
 -----------------------
 
 ### Appel de méthode et paramètres
@@ -697,7 +697,7 @@ var tags = script.searchTagsByName("game");
 
 Vous pouvez jeter un œil à l'exemple [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
 
-Search for notes by note text
+Rechercher des notes par texte de note
 -----------------------------
 
 ### Appel de méthode et paramètres
@@ -726,7 +726,7 @@ noteIds.forEach(function (noteId){
 
 Vous pouvez jeter un œil à l'exemple [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/unique-note-id.qml).
 
-Add a custom stylesheet
+Ajouter une feuille de style personnalisée
 -----------------------
 
 ### Appel de méthode et paramètres
@@ -749,9 +749,9 @@ Vous voudrez peut-être jeter un coup d'œil à l'exemple [custom-stylesheet.qml
 
 You can get the widget names from the `*.ui` files, for example the main window is [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
 
-The Qt documentation (for example [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)) can help you to see how the widgets are related to each other (search for `Inherits` on the pages).
+La documentation Qt (par exemple [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)) peut vous aider à voir comment les widgets sont liés les uns aux autres (recherchez `Inherits` sur les pages).
 
-The base widget for almost everything is [QWidget](https://doc.qt.io/qt-5/qwidget.html). So just styling `QWidget` with for example `QWidget {background-color: black; color: white;}` would mean everything has a black background color and a white foreground color.
+Le widget de base pour presque tout est [QWidget](https://doc.qt.io/qt-5/qwidget.html). Donc juste styliser `QWidget` avec par exemple `QWidget {background-color: black; color: white;}` signifierait que tout a une couleur de fond noire et une couleur de premier plan blanche.
 
 ::: tip
 The [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) of [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle) might also be a good reference for styles you can change.
@@ -824,7 +824,7 @@ NoteApi* ScriptingService::fetchNoteById(int id);
 script.fetchNoteById (243);
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Vérifier si une note existe par son nom de fichier
 ------------------------------------------
@@ -846,33 +846,33 @@ booléen ScriptingService :: noteExistsByFileName (QString fileName,
 
 ### Exemple
 ```js
-// check if note exists, but ignore the id of "note"
-script.noteExistsByFileName("my note.md", note.id);
+// vérifie si la note existe, mais ignore l'id de "note"
+script.noteExistsByFileName ("ma note.md", note.id);
 ```
 
-You may want to take a look at the example [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).
 
-Copying text into the clipboard
+Copier du texte dans le presse-papiers
 -------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Copies text into the clipboard as plain text or html mime data
- *
- * @param text string text to put into the clipboard
- * @param asHtml bool if true the text will be set as html mime data
- */
+  * Copie le texte dans le presse-papiers sous forme de texte brut ou de données mime html
+  *
+  * @param text string texte à mettre dans le presse-papiers
+  * @param asHtml bool si true, le texte sera défini en tant que données mime html
+  */
 void ScriptingService::setClipboardText(QString text, bool asHtml);
 ```
 
 ### Exemple
 ```js
-// copy text to the clipboard
-script.setClipboardText("text to copy");
+// copie du texte dans le presse-papiers
+script.setClipboardText ("texte à copier");
 ```
 
-You may want to take a look at the example [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).
 
 Passer à une note
 -----------------
@@ -880,48 +880,48 @@ Passer à une note
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Sets the current note if the note is visible in the note list
- *
- * @param note NoteApi note to jump to
- */
+  * Définit la note actuelle si la note est visible dans la liste des notes
+  *
+  * @param note NoteApi note pour passer à
+  */
 void ScriptingService::setCurrentNote(NoteApi *note);
 ```
 
 ### Exemple
 ```js
-// jump to the note
-script.setCurrentNote(note);
+// sauter à la note
+script.setCurrentNote (note);
 ```
 
-You may want to take a look at the example [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
 
-Jumping to a note subfolder
+Accéder à un sous-dossier de notes
 ---------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Jumps to a note subfolder
- *
- * @param noteSubFolderPath {QString} path of the subfolder, relative to the note folder
- * @param separator {QString} separator between parts of the path, default "/"
- * @return true if jump was successful
- */
+  * Saute dans un sous-dossier de notes
+  *
+  * @param noteSubFolderPath {QString} chemin du sous-dossier, relatif au dossier de notes
+  * @param separator {QString} séparateur entre les parties du chemin, par défaut "/"
+  * @return true si le saut a réussi
+  */
 bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
                                             QString separator);
 ```
 
 ### Exemple
 ```js
-// jump to the note subfolder "a sub folder"
+// passe au sous-dossier de notes "un sous-dossier"
 script.jumpToNoteSubFolder("a sub folder");
 
-// jump to the note subfolder "sub" inside of "a sub folder"
+// passe au sous-dossier de notes "sub" à l'intérieur de "un sous-dossier"
 script.jumpToNoteSubFolder("a sub folder/sub");
 ```
 
 ::: tip
-You can create a new note subfolder in the current subfolder by calling [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
+Vous pouvez créer un nouveau sous-dossier de notes dans le sous-dossier actuel en appelant [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
 :::
 
 Affichage d'une boîte de message d'information
@@ -940,8 +940,8 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 
 ### Exemple
 ```js
-// show a information message box
-script.informationMessageBox("The text I want to show", "Some optional title");
+// affiche une boîte de message d'information
+script.informationMessageBox ("Le texte que je veux afficher", "Un titre facultatif");
 ```
 
 Affichage d'une boîte de message de question
@@ -950,78 +950,78 @@ Affichage d'une boîte de message de question
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Shows a question message box
- *
- * For information about buttons see:
- * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
- *
- * @param text
- * @param title (optional)
- * @param buttons buttons that should be shown (optional)
- * @param defaultButton default button that will be selected (optional)
- * @return id of pressed button
- */
-int ScriptingService::questionMessageBox(
-        QString text, QString title, int buttons, int defaultButton);
+  * Affiche une boîte de message de question
+  *
+  * Pour plus d'informations sur les boutons, voir:
+  * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+  *
+  * @param text
+  * @param title (facultatif)
+  * Boutons @param boutons qui doivent être affichés (facultatif)
+  * @param defaultButton bouton par défaut qui sera sélectionné (facultatif)
+  * @return id du bouton enfoncé
+  */
+int ScriptingService :: questionMessageBox (
+         Texte QString, titre QString, boutons int, int defaultButton);
 ```
 
 ### Exemple
 ```js
-// show a question message box with an apply and a help button
-// see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
-var result = script.questionMessageBox(
-    "The text I want to show", "Some optional title", 0x01000000|0x02000000, 0x02000000);
-script.log(result);
+// affiche une boîte de message de question avec un bouton d'application et un bouton d'aide
+// voir: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+var result = script.questionMessageBox (
+     "Le texte que je veux afficher", "Un titre facultatif", 0x01000000 | 0x02000000, 0x02000000);
+script.log (résultat);
 ```
 
-For information about buttons see [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
+Pour plus d'informations sur les boutons, voir [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
 
-You may also want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+Vous pouvez également jeter un œil à l'exemple [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
-Showing an open file dialog
+Affichage d'une boîte de dialogue de fichier ouvert
 ---------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Shows an open file dialog
- *
- * @param caption (optional)
- * @param dir (optional)
- * @param filter (optional)
- * @return QString
- */
-QString ScriptingService::getOpenFileName(QString caption, QString dir,
-                                            QString filter);
+  * Affiche une boîte de dialogue de fichier ouvert
+  *
+  * @param caption (facultatif)
+  * @param dir (facultatif)
+  * @param filter (facultatif)
+  * @return QString
+  */
+QString ScriptingService :: getOpenFileName (légende QString, répertoire QString,
+                                             Filtre QString);
 ```
 
 ### Exemple
 ```js
-// show an open file dialog
+// affiche une boîte de dialogue de fichier ouvert
 var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
 ```
 
-Showing a save file dialog
+Affichage d'une boîte de dialogue d'enregistrement de fichier
 --------------------------
 
-### Method call and parameters
+### Appel de méthode et paramètres
 ```cpp
 /**
- * Shows a save file dialog
- *
- * @param caption (optional)
- * @param dir (optional)
- * @param filter (optional)
- * @return QString
- */
-QString ScriptingService::getSaveFileName(QString caption, QString dir,
-                                            QString filter);
+  * Affiche une boîte de dialogue d'enregistrement de fichier
+  *
+  * @param caption (facultatif)
+  * @param dir (facultatif)
+  * @param filter (facultatif)
+  * @return QString
+  */
+QString ScriptingService::getSaveFileName (légende QString, répertoire QString,
+                                             Filtre QString);
 ```
 
 ### Exemple
 ```js
-// show a save file dialog
-var fileName = script.getSaveFileName("Please select HTML file to save", "output.html", "HTML (*.html)");
+// affiche une boîte de dialogue de sauvegarde de fichier
+var fileName = script.getSaveFileName ("Veuillez sélectionner le fichier HTML à enregistrer", "output.html", "HTML (*.html)");
 ```
 
 You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
@@ -1246,14 +1246,14 @@ Script {
 }
 ```
 
-Converting path separators to native ones
+Conversion des séparateurs de chemin en séparateurs natifs
 -----------------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Returns path with the '/' separators converted to separators that are
- * appropriate for the underlying operating system.
+  * Renvoie le chemin avec les séparateurs '/' convertis en séparateurs
+  * approprié pour le système d'exploitation sous-jacent.
  *
  * On Windows, toNativeDirSeparators("c:/winnt/system32") returns
  * "c:\winnt\system32".
@@ -1292,7 +1292,7 @@ QString ScriptingService::fromNativeDirSeparators(QString path);
 script.log(script.fromNativeDirSeparators("c:\\winnt\\system32"));
 ```
 
-Getting the native directory separator
+Obtenir le séparateur de répertoire natif
 --------------------------------------
 
 ### Appel de méthode et paramètres
@@ -1311,7 +1311,7 @@ QString ScriptingService::dirSeparator();
 script.log(script.dirSeparator());
 ```
 
-Getting a list of the paths of all selected notes
+Obtenir une liste des chemins de toutes les notes sélectionnées
 -------------------------------------------------
 
 ### Appel de méthode et paramètres
@@ -1330,7 +1330,7 @@ QStringList ScriptingService::selectedNotesPaths();
 script.log(script.selectedNotesPaths());
 ```
 
-You may want to take a look at the example [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [note-externe-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
 
 Obtenir une liste des identifiants de toutes les notes sélectionnées
 -----------------------------------------------
@@ -1351,9 +1351,9 @@ QList<int> ScriptingService::selectedNotesIds();
 script.log(script.selectedNotesIds());
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Triggering a menu action
+Déclencher une action de menu
 ------------------------
 
 ### Appel de méthode et paramètres
@@ -1377,30 +1377,30 @@ script.triggerMenuAction("actionAllow_note_editing");
 script.triggerMenuAction("actionAllow_note_editing", 1);
 ```
 
-You may want to take a look at the example [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
 
 ::: tip
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Just search for the English menu title. Note that these texts can change over time.
+Vous pouvez obtenir les noms d'objet de l'action de menu à partir de [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Recherchez simplement le titre du menu en anglais. Notez que ces textes peuvent changer avec le temps.
 :::
 
-Opening an input dialog with a select box
+Ouverture d'une boîte de dialogue de saisie avec une boîte de sélection
 -----------------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Opens an input dialog with a select box
- *
- * @param title {QString} title of the dialog
- * @param label {QString} label text of the dialog
- * @param items {QStringList} list of items to select
- * @param current {int} index of the item that should be selected (default: 0)
- * @param editable {bool} if true the text in the dialog can be edited (default: false)
- * @return {QString} text of the selected item
- */
-QString ScriptingService::inputDialogGetItem(
-        const QString &title, const QString &label, const QStringList &items,
-        int current, bool editable);
+  * Ouvre une boîte de dialogue de saisie avec une boîte de sélection
+  *
+  * @param title {QString} titre de la boîte de dialogue
+  * @param label {QString} texte de l'étiquette de la boîte de dialogue
+  * @param items {QStringList} liste des éléments à sélectionner
+  * @param current {int} index de l'élément à sélectionner (par défaut: 0)
+  * @param editable {bool} si true, le texte de la boîte de dialogue peut être édité (par défaut: false)
+  * @return {QString} texte de l'élément sélectionné
+  */
+QString ScriptingService :: inputDialogGetItem (
+         const QString & amp; title, const QString & amp; label, const QStringList & amp; items,
+         int courant, booléen modifiable);
 ```
 
 ### Exemple
@@ -1410,9 +1410,9 @@ var result = script.inputDialogGetItem(
 script.log(result);
 ```
 
-You may want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
-Opening an input dialog with a line edit
+Ouverture d'une boîte de dialogue de saisie avec une modification de ligne
 ----------------------------------------
 
 ### Appel de méthode et paramètres
@@ -1436,7 +1436,7 @@ var result = script.inputDialogGetText(
 script.log(result);
 ```
 
-Checking if a file exists
+Vérifier si un fichier existe
 -------------------------
 
 ### Appel de méthode et paramètres
@@ -1455,7 +1455,7 @@ var result = script.fileExists(filePath);
 script.log(result);
 ```
 
-Reading text from a file
+Lire du texte à partir d'un fichier
 ------------------------
 
 ### Appel de méthode et paramètres
@@ -1479,10 +1479,10 @@ if(script.fileExists(filePath)){
 ```
 
 
-Writing text to a file
+Écrire du texte dans un fichier
 ----------------------
 
-### Method call and parameters
+### Appel de méthode et paramètres
 ```cpp
 /**
  * Writes a text to a file
@@ -1495,21 +1495,21 @@ Writing text to a file
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### Example
+### Exemple
 ```js
 var result = script.writeToFile(filePath, html);
 script.log(result);
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Working with websockets
+Travailler avec des Websockets
 -----------------------
 
-You can remote control QOwnNotes by using `WebSocketServer`.
+Vous pouvez contrôler à distance QOwnNotes en utilisant `WebSocketServer`.
 
-Please take a look at the example [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). You can test the socket server by connecting to it on [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
+Veuillez jeter un œil à l'exemple [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). Vous pouvez tester le serveur socket en vous y connectant sur [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
 
-You can also listen to sockets with `WebSocket`. Please take look at the example [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
+Vous pouvez également écouter les sockets avec `WebSocket`. Please take look at the example [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
 
 Keep in mind that you need to have Qt's QML `websocket` library installed to use this. For example under Ubuntu Linux you can install `qml-module-qtwebsockets`.
