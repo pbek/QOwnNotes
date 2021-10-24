@@ -46,6 +46,7 @@ class Settings {
     QVariant getSchemaValue(const QString& key,
                             const QVariant& defaultValue = QVariant(),
                             QString schemaKey = QString()) const;
+    QFont getFont(int index) const;
     QColor getForegroundColor(int index) const;
     QColor getBackgroundColor(int index) const;
 

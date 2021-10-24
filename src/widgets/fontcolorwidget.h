@@ -70,6 +70,10 @@ class FontColorWidget : public QFrame {
 
     void needRestart();
 
+    void on_fontCheckBox_toggled(bool checked);
+
+    void on_fontComboBox_currentFontChanged(const QFont &f);
+
    private:
     Ui::FontColorWidget *ui;
     QStringList _defaultSchemaKeys;
@@ -95,6 +99,8 @@ class FontColorWidget : public QFrame {
     void updateForegroundColorCheckBox(bool checked, bool store = false);
 
     void updateBackgroundColorCheckBox(bool checked, bool store = false);
+
+    void updateFontCheckBox(bool checked, bool store = false);
 
     int textSettingsIndex(QTreeWidgetItem *item = Q_NULLPTR);
 

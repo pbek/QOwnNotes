@@ -65,6 +65,8 @@ FontColorWidget::FontColorWidget(QWidget* parent)
     // are changed
     connect(ui->colorSchemeComboBox, SIGNAL(currentIndexChanged(int)), this,
             SLOT(needRestart()));
+    connect(ui->fontCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
     connect(ui->foregroundColorCheckBox, SIGNAL(toggled(bool)), this,
             SLOT(needRestart()));
     connect(ui->backgroundColorCheckBox, SIGNAL(toggled(bool)), this,
@@ -73,6 +75,8 @@ FontColorWidget::FontColorWidget(QWidget* parent)
             SLOT(needRestart()));
     connect(ui->backgroundColorButton, SIGNAL(clicked()), this,
             SLOT(needRestart()));
+    connect(ui->fontComboBox, SIGNAL(currentFontChanged(QFont)), this,
+            SLOT(needRestart()));
 }
 
 /**
@@ -80,6 +84,8 @@ FontColorWidget::FontColorWidget(QWidget* parent)
  */
 void FontColorWidget::initSchemaSelector() {
     ui->colorSchemeComboBox->clear();
+    ui->fontComboBox->clear();
+    ui->fontComboBox->setEnabled(false);
 
     //
     // load the default schemes
@@ -280,6 +286,12 @@ void FontColorWidget::updateSchemeEditFrame() {
 
     bool enabled = Utils::Schema::schemaSettings
                        ->getSchemaValue(textSettingsKey(
+                           QStringLiteral("FontEnabled")))
+                       .toBool();
+    updateFontCheckBox(enabled);
+
+    enabled = Utils::Schema::schemaSettings
+                       ->getSchemaValue(textSettingsKey(
                            QStringLiteral("ForegroundColorEnabled")))
                        .toBool();
     updateForegroundColorCheckBox(enabled);
@@ -310,6 +322,8 @@ void FontColorWidget::updateSchemeEditFrame() {
                                       !isCurrentLineBackgroundColorIndex);
     ui->fontSizeAdaptionSpinBox->setVisible(index >= 0 &&
                                             !isCurrentLineBackgroundColorIndex);
+    ui->fontCheckBox->setVisible(index >= 0 && !isCurrentLineBackgroundColorIndex);
+    ui->fontComboBox->setVisible(index >= 0 && !isCurrentLineBackgroundColorIndex);
     ui->foregroundColorCheckBox->setVisible(!isCurrentLineBackgroundColorIndex);
     ui->foregroundColorButton->setVisible(!isCurrentLineBackgroundColorIndex);
     ui->label->setVisible(!isCurrentLineBackgroundColorIndex);
@@ -348,6 +362,17 @@ void FontColorWidget::updateSchemeEditFrame() {
                 ->getSchemaValue(
                     textSettingsKey(QStringLiteral("FontSizeAdaption")), 100)
                 .toInt());
+
+        const QSignalBlocker blocker5(ui->fontComboBox);
+        Q_UNUSED(blocker5)
+
+        QFont font = Utils::Schema::schemaSettings
+             ->getSchemaValue(
+             textSettingsKey(QStringLiteral("Font")),
+                     Utils::Schema::schemaSettings->getEditorTextFont())
+             .value<QFont>();
+
+        ui->fontComboBox->setCurrentFont(font);
     }
 }
 
@@ -493,7 +518,7 @@ void FontColorWidget::updateTextItem(QTreeWidgetItem* item) {
     brush.setStyle(Qt::SolidPattern);
     item->setBackground(0, brush);
 
-    QFont font = Utils::Schema::schemaSettings->getEditorFont(index);
+    QFont font = Utils::Schema::schemaSettings->getFont(index);
     font.setBold(Utils::Schema::schemaSettings
                      ->getSchemaValue(textSettingsKey("Bold", item))
                      .toBool());
@@ -821,3 +846,36 @@ void FontColorWidget::on_shareSchemaPushButton_clicked() {
  * Declares that we need a restart
  */
 void FontColorWidget::needRestart() { Utils::Misc::needRestart(); }
+
+void FontColorWidget::on_fontCheckBox_toggled(bool checked) {
+    updateFontCheckBox(checked, true);
+
+    // update the current or all text items, depending on the index
+    updateTextItems(textSettingsIndex());
+
+    // update the scheme edit frame
+    updateSchemeEditFrame();
+
+}
+
+void FontColorWidget::updateFontCheckBox(bool checked, bool store) {
+    const QSignalBlocker blocker(ui->fontCheckBox);
+    Q_UNUSED(blocker)
+
+    ui->fontCheckBox->setChecked(checked);
+    ui->fontComboBox->setEnabled(checked);
+
+    // update the styling of the current text tree widget item
+    updateTextItem();
+
+    if (store && !_currentSchemaIsDefault) {
+        setSchemaValue(textSettingsKey("FontEnabled"), checked);
+    }
+}
+
+void FontColorWidget::on_fontComboBox_currentFontChanged(const QFont &f) {
+    setSchemaValue(textSettingsKey("Font"), f);
+
+    // update the styling of the current text tree widget item
+    updateTextItem();
+}

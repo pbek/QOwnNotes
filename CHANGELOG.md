@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.10.11
+- you can now set a different font for each text format in the *Editor fonts & colors*
+  settings (for [2259](https://github.com/pbek/QOwnNotes/issues/2259))
+
 ## 21.10.10
 - no restart of the application is needed anymore when changing the default note file
   extension (for [#2267](https://github.com/pbek/QOwnNotes/pull/2267), thank you @Waqar144)

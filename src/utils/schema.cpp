@@ -168,6 +168,31 @@ QString Utils::Schema::textSettingsKey(const QString& key, int index) {
 }
 
 /**
+ * Tries to fetch the correct font for an index
+ *
+ * @param index
+ * @return
+ */
+QFont Utils::Schema::Settings::getFont(int index) const {
+    // get the foreground color
+    bool enabled =
+        getSchemaValue(
+            textSettingsKey(QStringLiteral("FontEnabled"), index))
+            .toBool();
+    QFont font = getEditorFont(index);
+
+    // if the font is enabled try to fetch it
+    if (enabled) {
+        QFont overrideFont = getSchemaValue(
+                    textSettingsKey(QStringLiteral("Font"), index))
+                    .value<QFont>();
+        font.setFamily(overrideFont.family());
+    }
+
+    return font;
+}
+
+/**
  * Tries to fetch the correct foreground color for an index
  *
  * @param index
@@ -251,7 +276,7 @@ void Utils::Schema::Settings::setFormatStyle(
     MarkdownHighlighter::HighlighterState index,
     QTextCharFormat& format) const {
     // get the correct font
-    QFont font = getEditorFont(index);
+    QFont font = getFont(index);
 
     // set the font
     format.setFont(font);
