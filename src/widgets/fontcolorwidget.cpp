@@ -84,7 +84,6 @@ FontColorWidget::FontColorWidget(QWidget* parent)
  */
 void FontColorWidget::initSchemaSelector() {
     ui->colorSchemeComboBox->clear();
-    ui->fontComboBox->clear();
     ui->fontComboBox->setEnabled(false);
 
     //
@@ -248,6 +247,10 @@ void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Broken link"), MarkdownHighlighter::BrokenLink);
     addTextTreeWidgetItem(tr("Trailing space"),
                           MarkdownHighlighter::TrailingSpace);
+
+    // jump to the top of the list so that an item is selected
+    auto *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home, Qt::NoModifier);
+    QApplication::postEvent(ui->textTreeWidget, event);
 }
 
 void FontColorWidget::addTextTreeWidgetItem(const QString& text, int index) {

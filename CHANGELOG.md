@@ -1,8 +1,14 @@
 # QOwnNotes Changelog
 
+## 21.10.12
+- the text format item handling in the *Editor fonts & colors* settings was
+  improved (for [#2259](https://github.com/pbek/QOwnNotes/issues/2259))
+- a problem with the text format item font selector under Windows was fixed
+  (for #[2259](https://github.com/pbek/QOwnNotes/issues/2259))
+
 ## 21.10.11
 - you can now set a different font for each text format in the *Editor fonts & colors*
-  settings (for [2259](https://github.com/pbek/QOwnNotes/issues/2259))
+  settings (for [#2259](https://github.com/pbek/QOwnNotes/issues/2259))
 - a PPA for Ubuntu 22.04 (Jammy Jellyfish) was added
 - added more Polish, Spanish translation (thank you rawfreeamy)
 
@@ -10,7 +16,7 @@
 - no restart of the application is needed anymore when changing the default note file
   extension (for [#2267](https://github.com/pbek/QOwnNotes/pull/2267), thank you @Waqar144)
 - a crash was fixed when the note headline was modified by a script in
-  `handleNewNoteHeadlineHook` (for [2270](https://github.com/pbek/QOwnNotes/issues/2270))
+  `handleNewNoteHeadlineHook` (for [#2270](https://github.com/pbek/QOwnNotes/issues/2270))
     - this was a regression introduced in 21.10.9
 - added more Catalan, Portuguese translation (thank you mguerra, smarquespt)
 
