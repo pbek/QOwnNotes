@@ -418,6 +418,14 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     QMarkdownTextEdit::setText(text);
 }
 
+/**
+ * Since spell checking can only be enabled and disabled globally this allows to
+ * disable it in one QOwnNotesMarkdownTextEdit
+ */
+void QOwnNotesMarkdownTextEdit::disableSpellChecking() {
+    _isSpellCheckingDisabled = true;
+}
+
 void QOwnNotesMarkdownTextEdit::setSpellCheckingEnabled(bool enabled) {
     QOwnSpellChecker::instance()->setActive(enabled);
 }
@@ -624,7 +632,7 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
         return false;
     }
 
-    // create the suggesstion menu
+    // create the suggestion menu
     QMenu menu;
     // Add the suggestions to the menu
     const QStringList reps =
@@ -673,7 +681,7 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
 bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
     auto spellchecker = QOwnSpellChecker::instance();
     if (event->type() == QEvent::ContextMenu && spellchecker) {
-        if (spellchecker->isActive())
+        if (spellchecker->isActive() && !_isSpellCheckingDisabled)
             return onContextMenuEvent(static_cast<QContextMenuEvent *>(event));
     }
     if (event->type() == QEvent::KeyPress) {

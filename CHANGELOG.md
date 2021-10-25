@@ -8,6 +8,7 @@
 - the default for new note folders is `Don't allow file name to be different from headline`
   again, because it makes more sense for the way QOwnNotes works (was changed in 21.8.12)
     - existing note folders will not be modified automatically
+- the context menu of the spell checker is now better disabled in the *Log panel*
 - added more translation (thank you marterra, rawfreeamy, mguerra, amirkbrpr)
 
 ## 21.10.11

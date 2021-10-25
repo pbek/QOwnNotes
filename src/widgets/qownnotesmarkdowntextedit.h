@@ -33,6 +33,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void setText(const QString &text);
     static void setSpellCheckingEnabled(bool enabled);
     bool isSpellCheckingEnabled();
+    void disableSpellChecking();
     bool usesMonospacedFont();
 
    protected:
@@ -49,6 +50,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
 
    private:
     MainWindow *mainWindow;
+    bool _isSpellCheckingDisabled = false;
 
     void setFormatStyle(MarkdownHighlighter::HighlighterState index);
 
