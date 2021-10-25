@@ -1291,7 +1291,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="232"/>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>Tipus de lletra:</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="279"/>

@@ -5,6 +5,7 @@
   improved (for [#2259](https://github.com/pbek/QOwnNotes/issues/2259))
 - a problem with the text format item font selector under Windows was fixed
   (for #[2259](https://github.com/pbek/QOwnNotes/issues/2259))
+- added more translation (thank you marterra, rawfreeamy, mguerra, amirkbrpr)
 
 ## 21.10.11
 - you can now set a different font for each text format in the *Editor fonts & colors*

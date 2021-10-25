@@ -1230,7 +1230,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="38"/>
 <source>Text font</source>
-<translation>قلم متن</translation>
+<translation>فونت متن</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="73"/>
@@ -1297,7 +1297,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="232"/>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>فونت:</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="279"/>
@@ -1327,7 +1327,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="215"/>
 <source>Adapt font size:</source>
-<translation>تنظیم اندازه قلم:</translation>
+<translation>تنظیم اندازه فونت:</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="208"/>
@@ -3399,7 +3399,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.cpp" line="8121"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
-<translation>بازنشانی اندازه قلم در pt %1</translation>
+<translation>بازنشانی اندازه فونت در pt %1</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9127"/>
@@ -4218,12 +4218,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="8093"/>
 <source>Increased font size to %1 pt</source>
-<translation>اندازه قلم به %1 pt افزایش یافت</translation>
+<translation>اندازه فونت به %1 pt افزایش یافت</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8110"/>
 <source>Decreased font size to %1 pt</source>
-<translation>اندازه قلم به %1 pt کاهش یافت</translation>
+<translation>اندازه فونت به %1 pt کاهش یافت</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5596"/>
@@ -5572,7 +5572,7 @@ https://cloud.yourserver.com
 <location filename="../dialogs/settingsdialog.ui" line="4656"/>
 <location filename="../dialogs/settingsdialog.ui" line="4848"/>
 <source>Code font:</source>
-<translation>قلم کد:</translation>
+<translation>فونت کد:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3290"/>
@@ -6309,7 +6309,7 @@ QOwnNotesAPI
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3211"/>
 <source>Override interface font size</source>
-<translation>ابطال اندازه قلم رابط کاربری</translation>
+<translation>ابطال اندازه فونت رابط کاربری</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3220"/>
@@ -6404,7 +6404,7 @@ QOwnNotesAPI
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4769"/>
 <source>Ignore code font size to allow zooming</source>
-<translation>چشم پوشی از اندازه قلم کد برای مجاز کردن بزرگ نمایی</translation>
+<translation>چشم پوشی از اندازه فونت کد برای مجاز کردن بزرگ نمایی</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4763"/>
@@ -7506,7 +7506,7 @@ QOwnNotesAPI
 <location filename="../dialogs/settingsdialog.ui" line="4858"/>
 <location filename="../dialogs/settingsdialog.ui" line="4886"/>
 <source>Set a new font</source>
-<translation>تنظیم یک قلم جدید</translation>
+<translation>تنظیم یک فونت جدید</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4642"/>
@@ -7514,7 +7514,7 @@ QOwnNotesAPI
 <location filename="../dialogs/settingsdialog.ui" line="4872"/>
 <location filename="../dialogs/settingsdialog.ui" line="4917"/>
 <source>Reset font</source>
-<translation>بازنشانی قلم</translation>
+<translation>بازنشانی فونت</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="348"/>
