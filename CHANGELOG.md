@@ -13,6 +13,9 @@
   because the search results in the encoded text would be misleading
   (for [#2254](https://github.com/pbek/QOwnNotes/issues/2254))
     - the file names of encrypted notes will still be searched
+- added repositories for **openSUSE Leap 15.4**
+  - please visit the [openSUSE installation page](https://www.qownnotes.org/installation/opensuse.html)
+    for instructions
 - added more translation (thank you marterra, rawfreeamy, mguerra, amirkbrpr)
 
 ## 21.10.11
