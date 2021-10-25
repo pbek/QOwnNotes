@@ -19,4 +19,4 @@ If you click the link you will jump to the heading `Later` of the `Welcome to QO
 
 ![linking](./media/qownnotes-media-PshrOQ.png)
 
-You find more information in feature request [#1977](https://github.com/pbek/QOwnNotes/issues/1977).
+You will find more information in feature request [#1977](https://github.com/pbek/QOwnNotes/issues/1977).
