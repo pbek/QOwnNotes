@@ -1,0 +1,21 @@
+---
+title: Linking of note headings
+description: You can now add an url-encoded heading to a note link as url fragment to attempt to jump to that heading in the linked note when clicking the link.
+image: /assets/img/qownnotes-media-PshrOQ.png
+date: 2021-10-25
+order: 20211025000000
+---
+
+# Linking of note headings
+
+<BlogDate v-bind:fm="$frontmatter" />
+
+You can now add an url-encoded heading to a note link as url fragment to
+attempt to **jump to that heading in the linked note when clicking the link**.
+
+In this example a note link `[Welcome to QOwnNotes - Later](Welcome%20to%20QOwnNotes.md#Later)` will be inserted into the note.
+
+If you click the link you will jump to the heading `Later` of the `Welcome to QOwnNotes` note.
+
+![linking](./media/qownnotes-media-PshrOQ.png)
+
