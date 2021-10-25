@@ -10,7 +10,7 @@ order: 20211025000000
 
 <BlogDate v-bind:fm="$frontmatter" />
 
-You can now add an url-encoded heading to a note link as url fragment to
+Since version 21.10.10 of QOwnNotes you can add an **url-encoded heading** to a note link as url fragment to
 attempt to **jump to that heading in the linked note when clicking the link**.
 
 In this example a note link `[Welcome to QOwnNotes - Later](Welcome%20to%20QOwnNotes.md#Later)` will be inserted into the note.
