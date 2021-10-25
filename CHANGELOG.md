@@ -5,6 +5,9 @@
   improved (for [#2259](https://github.com/pbek/QOwnNotes/issues/2259))
 - a problem with the text format item font selector under Windows was fixed
   (for #[2259](https://github.com/pbek/QOwnNotes/issues/2259))
+- the default for new note folders is `Don't allow file name to be different from headline`
+  again, because it makes more sense for the way QOwnNotes works (was changed in 21.8.12)
+    - existing note folders will not be modified automatically
 - added more translation (thank you marterra, rawfreeamy, mguerra, amirkbrpr)
 
 ## 21.10.11

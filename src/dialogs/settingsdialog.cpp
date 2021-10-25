@@ -2577,7 +2577,7 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
         ui->noteFolderShowSubfoldersCheckBox->setChecked(
             _selectedNoteFolder.isShowSubfolders());
         ui->allowDifferentNoteFileNameCheckBox->setChecked(
-            _selectedNoteFolder.settingsValue(QStringLiteral("allowDifferentNoteFileName"), true).toBool());
+            _selectedNoteFolder.settingsValue(QStringLiteral("allowDifferentNoteFileName")).toBool());
         ui->noteFolderGitCommitCheckBox->setChecked(
             _selectedNoteFolder.isUseGit());
         Utils::Gui::setComboBoxIndexByUserData(
