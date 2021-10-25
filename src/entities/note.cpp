@@ -907,9 +907,11 @@ QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
         const QString queryString = queryStrings[i];
 
         // if we just want to search in the name we use different columns
+        // skip encrypted notes if search term is not found in (file) name of note
         sqlList.append(isNameSearch(queryString) ?
             QStringLiteral("(name LIKE ? OR file_name LIKE ?)") :
-            QStringLiteral("(note_text LIKE ? OR file_name LIKE ?)"));
+            QStringLiteral("((note_text LIKE ? AND note_text NOT LIKE '%\n%1\n%') OR name LIKE ?)")
+                                         .arg(NOTE_TEXT_ENCRYPTION_PRE_STRING));
     }
 
     QString sql;

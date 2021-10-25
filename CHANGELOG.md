@@ -9,6 +9,10 @@
   again, because it makes more sense for the way QOwnNotes works (was changed in 21.8.12)
     - existing note folders will not be modified automatically
 - the context menu of the spell checker is now better disabled in the *Log panel*
+- the note text of encrypted notes will now not be searched in the note search,
+  because the search results in the encoded text would be misleading
+  (for [#2254](https://github.com/pbek/QOwnNotes/issues/2254))
+    - the file names of encrypted notes will still be searched
 - added more translation (thank you marterra, rawfreeamy, mguerra, amirkbrpr)
 
 ## 21.10.11
