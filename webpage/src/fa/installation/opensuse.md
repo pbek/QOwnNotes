@@ -43,7 +43,7 @@ zypper install qownnotes
 
 [بارگیری مستقیم](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_13.2)
 
-## openSUSE Leap 15.4
+## اوپن سوزه لیپ 15.4
 
 فرمان های پوسته ای زیر را برای افزودن مخزن به صورت ریشه اجرا کرده و QOwnNotes را از آنجا نصب کنید.
 
@@ -55,7 +55,7 @@ zypper install qownnotes
 
 [بارگیری مستقیم](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.4)
 
-## openSUSE Leap 15.3
+## اوپن سوزه لیپ 15.3
 
 فرمان های پوسته زیر را برای افزودن مخزن به صورت ریشه اجرا کرده و QOwnNotes را از آنجا نصب کنید.
 
@@ -67,7 +67,7 @@ zypper install qownnotes
 
 [بارگیری مستقیم](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_15.3)
 
-## openSUSE Leap 15.2
+## اوپن سوزه لیپ 15.2
 
 Run the following shell commands as root to add the repository and install QOwnNotes from there.
 
