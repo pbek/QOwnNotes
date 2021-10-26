@@ -512,6 +512,7 @@ void FontColorWidget::updateTextItem(QTreeWidgetItem* item) {
     QColor color = Utils::Schema::schemaSettings->getForegroundColor(index);
     QBrush brush = item->foreground(0);
     brush.setColor(color);
+    brush.setStyle(Qt::BrushStyle::SolidPattern);
     item->setForeground(0, brush);
 
     // set the background color

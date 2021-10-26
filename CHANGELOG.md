@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.10.13
+- the text format items in the *Editor fonts & colors* settings now show their
+  assigned color again (for [#2275](https://github.com/pbek/QOwnNotes/issues/2275))
+
 ## 21.10.12
 - the text format item handling in the *Editor fonts & colors* settings was
   improved (for [#2259](https://github.com/pbek/QOwnNotes/issues/2259))
