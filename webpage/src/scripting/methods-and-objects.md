@@ -337,7 +337,7 @@ Script {
 }
 ```
 
-For more example see: [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+For some more examples please see [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
 You can also trigger a custom action after the application was started with the
