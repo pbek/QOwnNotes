@@ -393,6 +393,10 @@ void SettingsDialog::replaceOwnCloudText() const {
         Utils::Misc::replaceOwnCloudText(ui->installInfoTextLabel2->text()));
     ui->installInfoTextLabel3->setText(
         Utils::Misc::replaceOwnCloudText(ui->installInfoTextLabel3->text()));
+    ui->cloudInfoLabel->setText(
+        Utils::Misc::replaceOwnCloudText(ui->cloudInfoLabel->text()));
+    ui->todoInfoLabel->setText(
+        Utils::Misc::replaceOwnCloudText(ui->todoInfoLabel->text()));
 
     QTreeWidgetItem *item = ui->settingsTreeWidget->topLevelItem(OwnCloudPage);
     item->setText(0, Utils::Misc::replaceOwnCloudText(item->text(0)));

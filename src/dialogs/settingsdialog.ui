@@ -858,6 +858,19 @@
                   </property>
                  </widget>
                 </item>
+                <item>
+                 <widget class="QLabel" name="cloudInfoLabel">
+                  <property name="text">
+                   <string>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</string>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                  <property name="textInteractionFlags">
+                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                  </property>
+                 </widget>
+                </item>
                </layout>
               </widget>
              </item>
@@ -1840,6 +1853,19 @@
                  <widget class="QCheckBox" name="todoCalendarSupportCheckBox">
                   <property name="text">
                    <string>Enable todo calendar support</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="todoInfoLabel">
+                  <property name="text">
+                   <string>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</string>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                  <property name="textInteractionFlags">
+                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
@@ -6011,7 +6037,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <item row="0" column="0">
                  <widget class="QCheckBox" name="localTrashEnabledCheckBox">
                   <property name="text">
-                   <string>Enable local trash</string>
+                   <string>Enable local trash to keep a copy of trashed notes</string>
                   </property>
                   <property name="checked">
                    <bool>true</bool>
@@ -6234,22 +6260,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </layout>
                  </widget>
                 </item>
-                <item row="0" column="0">
-                 <widget class="Label" name="webCompannionLabel">
-                  <property name="text">
-                   <string>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</string>
-                  </property>
-                  <property name="wordWrap">
-                   <bool>true</bool>
-                  </property>
-                  <property name="openExternalLinks">
-                   <bool>true</bool>
-                  </property>
-                  <property name="textInteractionFlags">
-                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
-                  </property>
-                 </widget>
-                </item>
                </layout>
               </widget>
              </item>
@@ -6263,6 +6273,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  <widget class="QCheckBox" name="enableSocketServerCheckBox">
                   <property name="text">
                    <string>Enable socket server</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="Label" name="webCompannionLabel">
+                  <property name="text">
+                   <string>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</string>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                  <property name="openExternalLinks">
+                   <bool>true</bool>
+                  </property>
+                  <property name="textInteractionFlags">
+                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
@@ -6299,6 +6325,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </property>
                  </widget>
                 </item>
+                <item>
+                 <widget class="Label" name="webAppLabel">
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can use the &lt;a href=&quot;%1&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;QOwnNotes Web App&lt;/span&gt;&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                  <property name="openExternalLinks">
+                   <bool>true</bool>
+                  </property>
+                  <property name="textInteractionFlags">
+                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                  </property>
+                 </widget>
+                </item>
                </layout>
               </widget>
              </item>
@@ -6320,22 +6362,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
-                <item row="0" column="0">
-                 <widget class="Label" name="webAppLabel">
-                  <property name="text">
-                   <string>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</string>
-                  </property>
-                  <property name="wordWrap">
-                   <bool>true</bool>
-                  </property>
-                  <property name="openExternalLinks">
-                   <bool>true</bool>
-                  </property>
-                  <property name="textInteractionFlags">
-                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
-                  </property>
-                 </widget>
-                </item>
                 <item row="1" column="0">
                  <widget class="QGroupBox" name="webAppGroupBox">
                   <property name="title">
@@ -6740,8 +6766,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>
