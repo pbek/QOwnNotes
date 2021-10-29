@@ -288,6 +288,13 @@ You can also assign local and global shortcuts to your custom actions
 in the *Shortcuts settings*.
 :::
 
+::: warning
+Keep in mind that freedesktop theme icons are mostly available only under Linux.
+So if you really want to use an icon under macOS or Windows you need to provide one with your script.
+To get the path of your script to set a proper path for your icon you can use the
+[scriptDirPath property](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script).
+:::
+
 ### Example
 
 ```js
