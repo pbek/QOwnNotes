@@ -1,6 +1,6 @@
 # نصب در ووید لینوکس
 
-There is a community-created package for **Void Linux** in [qownnotes srcpkg](https://github.com/void-linux/void-packages/tree/master/srcpkgs/qownnotes) that can be installed in the following way:
+یک بسته ساخت جمعی برای **ووید لینوکس** در [qownnotes srcpkg](https://github.com/void-linux/void-packages/tree/master/srcpkgs/qownnotes) در دسترس قرار دارد که به روش زیر قابل نصب می باشد:
 
 ```bash
 # Synchronize remote repository index files and install QOwnNotes

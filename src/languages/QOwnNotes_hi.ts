@@ -1259,7 +1259,7 @@
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="169"/>
-<location filename="../widgets/fontcolorwidget.cpp" line="714"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="718"/>
 <source>Export schema</source>
 <translation>निर्यात करें स्कीमा</translation>
 </message>
@@ -1285,7 +1285,7 @@
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="141"/>
-<location filename="../widgets/fontcolorwidget.cpp" line="756"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="760"/>
 <source>Import schema</source>
 <translation>आयात स्कीमा</translation>
 </message>
@@ -1335,195 +1335,195 @@
 <translation>रेखांकित करना</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="205"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="204"/>
 <source>Text preset</source>
 <translation>पाठ प्रीसेट</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="206"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="205"/>
 <source>Emphasized text</source>
 <translation>जोरदार पाठ</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="207"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="206"/>
 <source>Strong text</source>
 <translation>मजबूत पाठ</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="241"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="240"/>
 <source>(HTML) Comment</source>
 <translation>(एचटीएमएल) टिप्पणी</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="231"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="230"/>
 <source>Header, level 1</source>
 <translation>हैडर, स्तर 1</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="208"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="207"/>
 <source>Link</source>
 <translation>संपर्क</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="209"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="208"/>
 <source>Image</source>
 <translation>छवि</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="210"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="209"/>
 <source>Code (block)</source>
 <translation>कोड (ब्लॉक)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="211"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="210"/>
 <source>Code (inline)</source>
 <translation>कोड (इनलाइन)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="214"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="213"/>
 <source>Code (keyword)</source>
 <translation>कोड (कीवर्ड)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="216"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="215"/>
 <source>Code (type)</source>
 <translation>कोड (प्रकार)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="217"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="216"/>
 <source>Code (comment)</source>
 <translation>कोड (टिप्पणी)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="219"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="218"/>
 <source>Code (string)</source>
 <translation>कोड (स्ट्रिंग)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="220"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="219"/>
 <source>Code (built in)</source>
 <translation>कोड (में निर्मित)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="222"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="221"/>
 <source>Code (num literal)</source>
 <translation>कोड (संख्या शाब्दिक)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="224"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="223"/>
 <source>Code (other)</source>
 <translation>कोड (अन्य)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="226"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="225"/>
 <source>List item</source>
 <translation>सूचीबद्ध करें सामग्री</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="227"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="226"/>
 <source>Checkbox unchecked</source>
 <translation>चेकबॉक्स अनियंत्रित</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="229"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="228"/>
 <source>Checkbox checked</source>
 <translation>चेकबॉक्स की जाँच की</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="232"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="231"/>
 <source>Header, level 2</source>
 <translation>हैडर, स्तर 2</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="233"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="232"/>
 <source>Header, level 3</source>
 <translation>हैडर, स्तर 3</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="234"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="233"/>
 <source>Header, level 4</source>
 <translation>हैडर, स्तर 4</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="235"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="234"/>
 <source>Header, level 5</source>
 <translation>हैडर, स्तर 5</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="236"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="235"/>
 <source>Header, level 6</source>
 <translation>हैडर, स्तर 6</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="239"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="238"/>
 <source>Block quote</source>
 <translation>ब्लॉक उद्धरण</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="240"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="239"/>
 <source>Table</source>
 <translation>तालिका</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="242"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="241"/>
 <source>Masked syntax</source>
 <comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>नकाबपोश वाक्यविन्यास</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="248"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="247"/>
 <source>Broken link</source>
 <translation>टूटी हुई कड़ी</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="237"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Horizontal rule</source>
 <translation>क्षैतिज नियम</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="246"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="245"/>
 <source>Current line background color</source>
 <translation>वर्तमान रेखा पृष्ठभूमि का रंग</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="249"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="248"/>
 <source>Trailing space</source>
 <translation>पीछे चलने की जगह</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="261"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="264"/>
 <source>This item will be used to preset colors for the other items</source>
 <translation>इस मद का उपयोग अन्य मदों के लिए प्रीसेट रंगों के लिए किया जाएगा</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="544"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="548"/>
 <source>Copy color schema</source>
 <translation>प्रतिलिपि रंग स्कीमा</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="545"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="549"/>
 <source>Color schema name</source>
 <translation>रंग स्कीमा नाम</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="547"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="551"/>
 <source>Copy</source>
 <comment>as noun</comment>
 <translation>कॉपी</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="665"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="669"/>
 <source>Remove schema</source>
 <translation>स्कीमा हटाएं</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="666"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="670"/>
 <source>Remove current schema? This cannot be undone!</source>
 <translation>वर्तमान स्कीमा निकालें? इसे असंपादित नहीं किया जा सकता है!</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="713"/>
-<location filename="../widgets/fontcolorwidget.cpp" line="755"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="717"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="759"/>
 <source>INI files</source>
 <translation>आईएनआई फाइलें</translation>
 </message>
@@ -4574,37 +4574,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>डिफ़ॉल्ट</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1328"/>
+<location filename="../entities/note.cpp" line="1330"/>
 <source>Could not store note file: %1 - Error message: %2</source>
 <translation>नोट फ़ाइल को संग्रहीत नहीं किया जा सका: %1- त्रुटि संदेश: %2</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1409"/>
+<location filename="../entities/note.cpp" line="1411"/>
 <source>Renamed note-file was removed: %1</source>
 <translation>पुनर्नामित नोट-फाइल हटाया गया था: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1417"/>
+<location filename="../entities/note.cpp" line="1419"/>
 <source>Could not remove renamed note-file: %1 - Error message: %2</source>
 <translation>पुनर्नामित नोट-फाइल को नहीं हटाया जा सका: %1-त्रुटि संदेश:%2</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1559"/>
+<location filename="../entities/note.cpp" line="1561"/>
 <source>Note</source>
 <translation>नोट</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2668"/>
+<location filename="../entities/note.cpp" line="2670"/>
 <source>Could not read image file: %1</source>
 <translation>छवि फ़ाइल नहीं पढ़ी जा सकी: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3327"/>
+<location filename="../entities/note.cpp" line="3329"/>
 <source>Note file path changed</source>
 <translation>नोट फ़ाइल पथ परिवर्तित किया गया</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3328"/>
+<location filename="../entities/note.cpp" line="3330"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>नोट पथ के परिवर्तन का पता चला था। क्या आप &lt;strong&gt;%1&lt;/ strong&gt; लिंक को &lt;strong&gt;%2&lt;/ strong&gt; से लिंक करना चाहते हैं और फ़ाइल नाम के साथ लिंक &lt;strong&gt;%3&lt;/ strong&gt; &lt;strong&gt;%4&lt;/ strong&gt; करना चाहते हैं &gt; &lt;strong&gt;%n&lt;/ strong&gt; नोट फ़ाइल में?</numerusform>
@@ -4612,7 +4612,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3935"/>
+<location filename="../entities/note.cpp" line="3937"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>... और %n अधिक ध्यान दें</numerusform>
@@ -4693,17 +4693,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4280"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4284"/>
 <source>New connection</source>
 <translation>नया कनेक्शन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4461"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4465"/>
 <source>Login flow succeeded</source>
 <translation type="unfinished">Login flow succeeded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4462"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4466"/>
 <source>Username and password were set successfully!</source>
 <translation type="unfinished">Username and password were set successfully!</translation>
 </message>
@@ -4798,27 +4798,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="634"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="642"/>
 <source>No suggestions for %1</source>
 <translation>%1 के लिए कोई सुझाव नहीं</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="646"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="654"/>
 <source>Ignore</source>
 <translation>नज़रअंदाज़ करना</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="647"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="655"/>
 <source>Add to Dictionary</source>
 <translation>शब्दकोश में जोड़ें</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="712"/>
 <source>Note editing disabled</source>
 <translation>नोट संपादन अक्षम है</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="705"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="713"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
 <translation>नोट संपादन वर्तमान में अक्षम है, क्या आप फिर से अनुमति देना चाहते हैं?</translation>
 </message>
@@ -5246,7 +5246,7 @@ Do you want to install it anyway?</source>
 <name>SettingsDialog</name>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="26"/>
-<location filename="../dialogs/settingsdialog.ui" line="4376"/>
+<location filename="../dialogs/settingsdialog.ui" line="4402"/>
 <source>Settings</source>
 <translation>सेटिंग्स</translation>
 </message>
@@ -5286,86 +5286,86 @@ Do you want to install it anyway?</source>
 <translation>सक्रिय नोट फ़ोल्डर के रूप में उपयोग करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="874"/>
+<location filename="../dialogs/settingsdialog.ui" line="887"/>
 <source>Your ownCloud server</source>
 <translation>आपका ओनक्लाउड सर्वर</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1101"/>
+<location filename="../dialogs/settingsdialog.ui" line="1114"/>
 <source>ownCloud server url:</source>
 <translation>ओनक्लाउड सर्वर यूआरएल:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1123"/>
+<location filename="../dialogs/settingsdialog.ui" line="1136"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;कृपया दर्ज करें यूआरएल अपने ओनक्लाउड सर्वर का, उदाहरण के लिए: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1161"/>
+<location filename="../dialogs/settingsdialog.ui" line="1174"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;कृपया उपयोगकर्ता नाम दर्ज करें अपने ओनक्लाउड सर्वर पर.&lt;/p&gt;&lt;/body&gt;
 &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1196"/>
+<location filename="../dialogs/settingsdialog.ui" line="1209"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;कृपया अपने उपयोगकर्ता नाम के लिए पासवर्ड दर्ज करें.&lt;br/&gt;
 वर्तमान में पासवर्ड को अन्य सेटिंग्स के साथ एन्क्रिप्टेड संग्रहित किया जाएगा, लेकिन बहुत सुरक्षित नहीं है.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1267"/>
+<location filename="../dialogs/settingsdialog.ui" line="1280"/>
 <source>connection to web server</source>
 <translation>संपर्क वेब सर्वर से</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1284"/>
+<location filename="../dialogs/settingsdialog.ui" line="1297"/>
 <source>ownCloud server detected</source>
 <translation>ओनक्लाउड सर्वर का पता चला</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1318"/>
+<location filename="../dialogs/settingsdialog.ui" line="1331"/>
 <source>connection to QOwnNotesAPI</source>
 <translation>क्यूओननोट्सएपीआई के लिये कनेक्शन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1301"/>
+<location filename="../dialogs/settingsdialog.ui" line="1314"/>
 <source>username and password correct</source>
 <translation>उपयोगकर्ता नाम और पासवर्ड सही</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1257"/>
-<location filename="../dialogs/settingsdialog.ui" line="1274"/>
-<location filename="../dialogs/settingsdialog.ui" line="1291"/>
-<location filename="../dialogs/settingsdialog.ui" line="1308"/>
-<location filename="../dialogs/settingsdialog.ui" line="1325"/>
-<location filename="../dialogs/settingsdialog.ui" line="1342"/>
-<location filename="../dialogs/settingsdialog.ui" line="1359"/>
+<location filename="../dialogs/settingsdialog.ui" line="1270"/>
+<location filename="../dialogs/settingsdialog.ui" line="1287"/>
+<location filename="../dialogs/settingsdialog.ui" line="1304"/>
+<location filename="../dialogs/settingsdialog.ui" line="1321"/>
+<location filename="../dialogs/settingsdialog.ui" line="1338"/>
+<location filename="../dialogs/settingsdialog.ui" line="1355"/>
+<location filename="../dialogs/settingsdialog.ui" line="1372"/>
 <location filename="../dialogs/settingsdialog.cpp" line="340"/>
 <source>unknown</source>
 <translation>अज्ञात</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1224"/>
+<location filename="../dialogs/settingsdialog.ui" line="1237"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;अपने ओनक्लाउड सर्वर से कनेक्शन का परीक्षण करने के लिए यहां क्लिक करें.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1335"/>
+<location filename="../dialogs/settingsdialog.ui" line="1348"/>
 <source>versions app enabled on server</source>
 <translation>संस्करण एप सक्षम सर्वर पर</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1352"/>
+<location filename="../dialogs/settingsdialog.ui" line="1365"/>
 <source>trash app enabled on server</source>
 <translation>ट्रैश एप्लिकेशन को सर्वर पर सक्षम किया गया</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1369"/>
+<location filename="../dialogs/settingsdialog.ui" line="1382"/>
 <source>notes path found on server</source>
 <translation>नोट सर्वर पर पाया पथ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="933"/>
+<location filename="../dialogs/settingsdialog.ui" line="946"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;खोलता है आपका ओनक्लाउड सर्वर &lt;span style=" font-weight:600;"&gt;
 ऐप कॉन्फ़िगरेशन&lt;/span&gt;अपने वेब ब्राउजर में पृष्ठ को क्यूओननोट्सएपीआई को स्थापित या अपडेट करने के लिए और मुख्य ऐप्स को सक्षम करने के लिए &lt;span style=" font-weight:600;"&gt;संस्करण&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;हटाए गए फ़ाइलें&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -5391,12 +5391,12 @@ Do you want to install it anyway?</source>
 <translation>नोट फ़ोल्डर के रूप में अपने सर्वर से चयनित फ़ोल्डर का उपयोग करने के लिए यहां क्लिक करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="901"/>
+<location filename="../dialogs/settingsdialog.ui" line="914"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;आपके पास दो ओनक्लाउड कोर ऐप्स की जरूरत हैं&lt;span style=" font-weight:600;"&gt;संस्करण&lt;/span&gt; तथा&lt;span style=" font-weight:600;"&gt; हटाए गए फ़ाइलें&lt;/span&gt; अपने ओनक्लाउड सर्वर पर सक्षम (यह डिफ़ॉल्ट होना चाहिए).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1001"/>
+<location filename="../dialogs/settingsdialog.ui" line="1014"/>
 <source>Error Message</source>
 <translation>त्रुटि संदेश</translation>
 </message>
@@ -5406,42 +5406,42 @@ Do you want to install it anyway?</source>
 <translation>नेटवर्क</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1477"/>
+<location filename="../dialogs/settingsdialog.ui" line="1490"/>
 <source>Proxy Settings</source>
 <translation>प्रॉक्सी सेटिंग</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1483"/>
+<location filename="../dialogs/settingsdialog.ui" line="1496"/>
 <source>No Proxy</source>
 <translation>कोई प्रॉक्सी नहीं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1493"/>
+<location filename="../dialogs/settingsdialog.ui" line="1506"/>
 <source>Use system proxy</source>
 <translation>सिस्टम प्रॉक्सी का उपयोग करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1500"/>
+<location filename="../dialogs/settingsdialog.ui" line="1513"/>
 <source>Specify proxy manually as</source>
 <translation>प्रॉक्सी मैन्युअल रूप से निर्दिष्ट करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1525"/>
+<location filename="../dialogs/settingsdialog.ui" line="1538"/>
 <source>Host</source>
 <translation>होस्ट</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1576"/>
+<location filename="../dialogs/settingsdialog.ui" line="1589"/>
 <source>Proxy server requires authentication</source>
 <translation>प्रॉक्सी सर्वर को प्रमाणीकरण की आवश्यकता है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1633"/>
+<location filename="../dialogs/settingsdialog.ui" line="1646"/>
 <source>SSL Settings</source>
 <translation>सस्ल सेटिंग्स</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1639"/>
+<location filename="../dialogs/settingsdialog.ui" line="1652"/>
 <source>Ignore SSL errors</source>
 <translation>अनदेखा करें सस्ल त्रुटियोंको</translation>
 </message>
@@ -5451,7 +5451,7 @@ Do you want to install it anyway?</source>
 <translation>कार्यसूची</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1894"/>
+<location filename="../dialogs/settingsdialog.ui" line="1920"/>
 <source>Default ownCloud calendar</source>
 <translation>डिफ़ॉल्ट ओन क्लाउड कैलेंडर</translation>
 </message>
@@ -5461,65 +5461,65 @@ Do you want to install it anyway?</source>
 <translation>अंतराफलक</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1864"/>
+<location filename="../dialogs/settingsdialog.ui" line="1890"/>
 <source>Other CalDAV server</source>
 <translation>अन्य कालदेव सर्वर</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3032"/>
+<location filename="../dialogs/settingsdialog.ui" line="3058"/>
 <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
 <translation>केवल कुछ रंगों को अनुकूलित किया जाएगा, आपका डेस्कटॉप थीम शेष को नियंत्रित करेगा। इन परिवर्तनों को कार्रवाई करने के लिए आपको एप्लिकेशन को पुनरारंभ करना होगा.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3035"/>
+<location filename="../dialogs/settingsdialog.ui" line="3061"/>
 <source>Optimize preview colors for dark mode desktop themes</source>
 <translation>अंधेरे मोड डेस्कटॉप विषयों के लिए पूर्वावलोकन रंग अनुकूलित करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3022"/>
+<location filename="../dialogs/settingsdialog.ui" line="3048"/>
 <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
 <translation>इससे अंधेरे मोड, इंटरफ़ेस और आइकन को संशोधित किया जा सकता है। इन परिवर्तनों को कार्रवाई करने के लिए आपको एप्लिकेशन को पुनरारंभ करना होगा.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3025"/>
+<location filename="../dialogs/settingsdialog.ui" line="3051"/>
 <source>Enable dark mode</source>
 <translation>अंधेरे मोड सक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3051"/>
-<location filename="../dialogs/settingsdialog.ui" line="3061"/>
-<location filename="../dialogs/settingsdialog.ui" line="3092"/>
-<location filename="../dialogs/settingsdialog.ui" line="3102"/>
+<location filename="../dialogs/settingsdialog.ui" line="3077"/>
+<location filename="../dialogs/settingsdialog.ui" line="3087"/>
+<location filename="../dialogs/settingsdialog.ui" line="3118"/>
+<location filename="../dialogs/settingsdialog.ui" line="3128"/>
 <source>You need to restart the application to let this setting take effect</source>
 <translation>इस सेटिंग को प्रभावी होने के लिए आपको एप्लिकेशन को पुनरारंभ करना होगा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3131"/>
+<location filename="../dialogs/settingsdialog.ui" line="3157"/>
 <source>Item sizes in the main window</source>
 <translation>मुख्य विंडो में मद आकार</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5159"/>
+<location filename="../dialogs/settingsdialog.ui" line="5185"/>
 <source>Markdown highlighting</source>
 <translation>मार्कडाउन हाइलाइटिंग</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5165"/>
+<location filename="../dialogs/settingsdialog.ui" line="5191"/>
 <source>Enable markdown highlighting</source>
 <translation>मार्कटाउन हाइलाइटिंग सक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2188"/>
+<location filename="../dialogs/settingsdialog.ui" line="2214"/>
 <source>Interface language</source>
 <translation>अंतरफलक भाषा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2218"/>
+<location filename="../dialogs/settingsdialog.ui" line="2244"/>
 <source>Automatic</source>
 <translation>स्वचालित</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2353"/>
+<location filename="../dialogs/settingsdialog.ui" line="2379"/>
 <source>English</source>
 <translation>अंग्रेज़ी</translation>
 </message>
@@ -5529,121 +5529,121 @@ Do you want to install it anyway?</source>
 <translation>शॉर्टकट</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4614"/>
-<location filename="../dialogs/settingsdialog.ui" line="4907"/>
+<location filename="../dialogs/settingsdialog.ui" line="4640"/>
+<location filename="../dialogs/settingsdialog.ui" line="4933"/>
 <source>Default font:</source>
 <translation>मूलभूत अक्षर:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4656"/>
-<location filename="../dialogs/settingsdialog.ui" line="4848"/>
+<location filename="../dialogs/settingsdialog.ui" line="4682"/>
+<location filename="../dialogs/settingsdialog.ui" line="4874"/>
 <source>Code font:</source>
 <translation>कोड अक्षर:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3290"/>
+<location filename="../dialogs/settingsdialog.ui" line="3316"/>
 <source>Main window shortcuts</source>
 <translation>मुख्य विंडो शॉर्टकट</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3924"/>
+<location filename="../dialogs/settingsdialog.ui" line="3950"/>
 <source>Do this at your own risk!</source>
 <translation>ये काम आप अपनी जोखिम पर करें!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3927"/>
+<location filename="../dialogs/settingsdialog.ui" line="3953"/>
 <source>Ignore all external note folder changes</source>
 <translation>सभी बाह्य नोट फ़ोल्डर परिवर्तनों को अनदेखा करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4514"/>
+<location filename="../dialogs/settingsdialog.ui" line="4540"/>
 <source>Use GitHub line breaks</source>
 <translation>गिटहब लाइन ब्रेक का उपयोग करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2331"/>
+<location filename="../dialogs/settingsdialog.ui" line="2357"/>
 <source>German</source>
 <translation>जर्मन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2408"/>
+<location filename="../dialogs/settingsdialog.ui" line="2434"/>
 <source>French</source>
 <translation>फ्रेंच</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2672"/>
+<location filename="../dialogs/settingsdialog.ui" line="2698"/>
 <source>Polish</source>
 <translation>पोलिश</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2694"/>
+<location filename="../dialogs/settingsdialog.ui" line="2720"/>
 <source>Portuguese</source>
 <translation>पुर्तगाली</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2639"/>
+<location filename="../dialogs/settingsdialog.ui" line="2665"/>
 <source>Dutch</source>
 <translation>डच</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2606"/>
+<location filename="../dialogs/settingsdialog.ui" line="2632"/>
 <source>Hungarian</source>
 <translation>हंगेरी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2364"/>
+<location filename="../dialogs/settingsdialog.ui" line="2390"/>
 <source>Spanish</source>
 <translation>स्पेनिश</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2996"/>
+<location filename="../dialogs/settingsdialog.ui" line="3022"/>
 <source>Dark mode</source>
 <translation>डार्क मोड</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1693"/>
+<location filename="../dialogs/settingsdialog.ui" line="1706"/>
 <source>Disable tracking of usage data</source>
 <translation>उपयोग डेटा पर नज़र रखने को अक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1737"/>
+<location filename="../dialogs/settingsdialog.ui" line="1750"/>
 <source>Usage tracking is done on a private Piwik server.</source>
 <translation>उपयोग ट्रैकिंग निजी पीविक सर्वर पर किया जाता है.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1797"/>
+<location filename="../dialogs/settingsdialog.ui" line="1810"/>
 <source>Disable heartbeat</source>
 <translation>अक्षम करें हार्टबीट</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2727"/>
+<location filename="../dialogs/settingsdialog.ui" line="2753"/>
 <source>Russian</source>
 <translation>रूसी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1646"/>
+<location filename="../dialogs/settingsdialog.ui" line="1659"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; आप एक मुफ्त सस्ल प्रमाणपत्र प्राप्त करने पर विचार करना चाह सकते हैं &lt;a href="https://letsencrypt.org/"&gt;चलो एन्क्रिप्ट करें&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2207"/>
+<location filename="../dialogs/settingsdialog.ui" line="2233"/>
 <source>If you change the language you have to restart the application for the changes to take action.</source>
 <translation>यदि आप उस भाषा को बदलते हैं जिसमें आपको कार्रवाई करने के लिए परिवर्तनों के लिए आवेदन को पुनरारंभ करना है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3746"/>
-<location filename="../dialogs/settingsdialog.ui" line="3821"/>
+<location filename="../dialogs/settingsdialog.ui" line="3772"/>
+<location filename="../dialogs/settingsdialog.ui" line="3847"/>
 <source>You need to reload the scripting engine if you modify a script file</source>
 <translation>यदि आप स्क्रिप्ट फ़ाइल को संशोधित करते हैं तो आपको स्क्रिप्टिंग इंजन को पुनः लोड करना होगा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3749"/>
-<location filename="../dialogs/settingsdialog.ui" line="3824"/>
+<location filename="../dialogs/settingsdialog.ui" line="3775"/>
+<location filename="../dialogs/settingsdialog.ui" line="3850"/>
 <source>Reload scripting engine</source>
 <translation>स्क्रिप्टिंग इंजन को पुनः लोड करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3739"/>
+<location filename="../dialogs/settingsdialog.ui" line="3765"/>
 <source>Validate script</source>
 <translation>स्क्रिप्ट मान्य करें</translation>
 </message>
@@ -5653,117 +5653,117 @@ Do you want to install it anyway?</source>
 <translation>सामान्य</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3918"/>
+<location filename="../dialogs/settingsdialog.ui" line="3944"/>
 <source>Notes</source>
 <translation>नोट्स</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3944"/>
+<location filename="../dialogs/settingsdialog.ui" line="3970"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;यदि चेक किया जाए तो आपको हमेशा बाहरी संशोधनों के बारे में सूचित किया जाएगा, भले ही अंतिम नोट में वर्तमान नोट संपादित नहीं किया गया हो. अनुशंसित है &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4040"/>
-<location filename="../dialogs/settingsdialog.ui" line="5407"/>
-<location filename="../dialogs/settingsdialog.ui" line="5952"/>
+<location filename="../dialogs/settingsdialog.ui" line="4066"/>
+<location filename="../dialogs/settingsdialog.ui" line="5433"/>
+<location filename="../dialogs/settingsdialog.ui" line="5978"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>आप १० सेकंड तक नीचे जा रहे ओनक्लाउड सिंक के पुराने संस्करणों के साथ सिंक मुसीबतों में चल सकते हैं।
 यदि आप सिंक टकराव प्राप्त करते हैं और एक उच्च मूल्य सेट करते हैं, तो स्वयं का परीक्षण करें.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2628"/>
+<location filename="../dialogs/settingsdialog.ui" line="2654"/>
 <source>Japanese</source>
 <translation>जापानवासी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4044"/>
+<location filename="../dialogs/settingsdialog.ui" line="4070"/>
 <source>note save interval time [sec]</source>
 <translation>नोट अंतराल समय बचाओ[सेकंड]</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3947"/>
+<location filename="../dialogs/settingsdialog.ui" line="3973"/>
 <source>Notify about all external modifications of the current note</source>
 <translation>वर्तमान नोट के सभी बाहरी संशोधनों के बारे में सूचित करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4405"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2310"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2318"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4350"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4355"/>
+<location filename="../dialogs/settingsdialog.ui" line="4431"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2314"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2322"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4354"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4359"/>
 <source>Database</source>
 <translation>डेटाबेस</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4411"/>
+<location filename="../dialogs/settingsdialog.ui" line="4437"/>
 <source>Reinitialize Database</source>
 <translation>पुन: आरंभ करें डेटाबेस</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4344"/>
+<location filename="../dialogs/settingsdialog.ui" line="4370"/>
 <source>Clear application data and exit</source>
 <translation>एप्लिकेशन डेटा साफ़ करें और बाहर निकलें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4350"/>
+<location filename="../dialogs/settingsdialog.ui" line="4376"/>
 <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
 <translation>यह बटन आपको सभी सेटिंग्स को साफ़ करने, स्थानीय करार डेटाबेस को निकालने और क्यूओननोट्स से बाहर निकलने की अनुमति देता है।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4360"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2384"/>
+<location filename="../dialogs/settingsdialog.ui" line="4386"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2388"/>
 <source>Clear app data and exit</source>
 <translation>ऐप डेटा साफ़ करें और बाहर निकलें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4145"/>
+<location filename="../dialogs/settingsdialog.ui" line="4171"/>
 <source>Update dialog</source>
 <translation>अद्यतन करें संवाद</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4304"/>
+<location filename="../dialogs/settingsdialog.ui" line="4330"/>
 <source>External editor</source>
 <translation>बाहरी संपादक</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4317"/>
+<location filename="../dialogs/settingsdialog.ui" line="4343"/>
 <source>path to external editor, leave empty for default</source>
 <translation>बाहरी संपादक के लिए पथ, डिफ़ॉल्ट के लिए खाली छोड़ दें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4327"/>
-<location filename="../dialogs/settingsdialog.ui" line="5486"/>
+<location filename="../dialogs/settingsdialog.ui" line="4353"/>
+<location filename="../dialogs/settingsdialog.ui" line="5512"/>
 <source>set external editor</source>
 <translation>बाहरी संपादक सेट करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1662"/>
+<location filename="../dialogs/settingsdialog.ui" line="1675"/>
 <source>App metrics</source>
 <translation>ऐप मैट्रिक्स</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1680"/>
+<location filename="../dialogs/settingsdialog.ui" line="1693"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>बेनामी उपयोग डेटा क्यूओननोट्स के कुछ हिस्सों को अगले में सुधार करने और बग्स को खोजने और ठीक करने का निर्णय करने में मदद करता है। कृपया इसे केवल अक्षम करें यदि आप वास्तव में इसके साथ नहीं रह सकते हैं.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1712"/>
+<location filename="../dialogs/settingsdialog.ui" line="1725"/>
 <source>This data includes anonymous information about what features of the app are used.</source>
 <translation>इस डेटा में अनाम की जानकारी शामिल है कि ऐप की कौन-से विशेषताएं उपयोग की जाती हैं।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1766"/>
+<location filename="../dialogs/settingsdialog.ui" line="1779"/>
 <source>App heartbeat</source>
 <translation>एप्लिकेशन हार्टबीट</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1784"/>
+<location filename="../dialogs/settingsdialog.ui" line="1797"/>
 <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
 <translation>एक छोटे से दिलकीधड़कन का अनुरोध समय-समय पर भेजा जाता है, जबकि क्यूनो नोट्स चल रही हैं। एक डेवलपर खुश करके उन्हें यह बता दें कि कोई व्यक्ति क्यूओननोट्स का उपयोग कर रहा है.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2518"/>
+<location filename="../dialogs/settingsdialog.ui" line="2544"/>
 <source>Italian</source>
 <translation>इतालियन</translation>
 </message>
@@ -5773,17 +5773,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>स्क्रिप्टिंग</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3359"/>
+<location filename="../dialogs/settingsdialog.ui" line="3385"/>
 <source>Your scripts</source>
 <translation>आपकी स्क्रिप्ट</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3443"/>
+<location filename="../dialogs/settingsdialog.ui" line="3469"/>
 <source>&amp;Remove script</source>
 <translation>&amp;स्क्रिप्ट निकालें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3756"/>
+<location filename="../dialogs/settingsdialog.ui" line="3782"/>
 <source>Click here to select your QML script</source>
 <translation>अपनी क्यूमल स्क्रिप्ट का चयन करने के लिए यहां चयन करें</translation>
 </message>
@@ -5865,7 +5865,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="785"/>
-<location filename="../dialogs/settingsdialog.ui" line="3690"/>
+<location filename="../dialogs/settingsdialog.ui" line="3716"/>
 <source>Name:</source>
 <translation>नाम:</translation>
 </message>
@@ -5895,67 +5895,67 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>सक्षम करें ओनक्लाउड समर्थन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="888"/>
+<location filename="../dialogs/settingsdialog.ui" line="901"/>
 <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
 <translation>कृपया नवीनतम संस्करण स्थापित करें&lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;क्यूओननोट्सएपीआई &lt;/span&gt;&lt;/a&gt; (कम से कम संस्करण क्यूओननोट्सएपीआई_
 न्यूनतम _संस्करण) यदि आप चाहते हैं ओनक्लाउड सर्वर पर क्यूओनोट्स नोट संस्करणों और ट्रैश किए नोट्स तक पहुंचने में सक्षम होने के लिए।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="914"/>
+<location filename="../dialogs/settingsdialog.ui" line="927"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; आपको अभी भी &lt;a href="https://owncloud.org/"&gt; &lt;span style="font-weight:600"&gt; ownCloud सिंक क्लाइंट &lt;/span&gt;&lt;/a&gt; (या किसी अन्य डेस्कटॉप सिंक क्लाइंट) को अपने नोट्स सिंक करने के लिए! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1034"/>
+<location filename="../dialogs/settingsdialog.ui" line="1047"/>
 <source>Select a connection to edit</source>
 <translation>संपादित करने के लिए कनेक्शन चुनें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1041"/>
-<location filename="../dialogs/settingsdialog.ui" line="1044"/>
+<location filename="../dialogs/settingsdialog.ui" line="1054"/>
+<location filename="../dialogs/settingsdialog.ui" line="1057"/>
 <source>Add connection</source>
 <translation>कनेक्शन जोड़ें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1055"/>
-<location filename="../dialogs/settingsdialog.ui" line="1058"/>
+<location filename="../dialogs/settingsdialog.ui" line="1068"/>
+<location filename="../dialogs/settingsdialog.ui" line="1071"/>
 <source>Remove connection</source>
 <translation>कनेक्शन निकालें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1139"/>
-<location filename="../dialogs/settingsdialog.ui" line="1951"/>
+<location filename="../dialogs/settingsdialog.ui" line="1152"/>
+<location filename="../dialogs/settingsdialog.ui" line="1977"/>
 <source>Username:</source>
 <translation>उपयोगकर्ता नाम:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1164"/>
+<location filename="../dialogs/settingsdialog.ui" line="1177"/>
 <source>Your ownCloud username</source>
 <translation>अपना ओनक्लाउड उपयोगकर्ता नाम</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1174"/>
-<location filename="../dialogs/settingsdialog.ui" line="1986"/>
+<location filename="../dialogs/settingsdialog.ui" line="1187"/>
+<location filename="../dialogs/settingsdialog.ui" line="2012"/>
 <source>Password:</source>
 <translation>पासवर्ड:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1202"/>
+<location filename="../dialogs/settingsdialog.ui" line="1215"/>
 <source>Your ownCloud password</source>
 <translation>अपने ओनक्लाउड पासवर्ड</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1230"/>
+<location filename="../dialogs/settingsdialog.ui" line="1243"/>
 <source>&amp;Connect to ownCloud server</source>
 <translation>&amp;ओनक्लाउड सर्वर से कनेक्ट करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1250"/>
+<location filename="../dialogs/settingsdialog.ui" line="1263"/>
 <source>Connection status</source>
 <translation>संपर्क स्थिति</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1072"/>
+<location filename="../dialogs/settingsdialog.ui" line="1085"/>
 <source>Connection name:</source>
 <translation>कनेक्शन नाम:</translation>
 </message>
@@ -5972,396 +5972,396 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1405"/>
+<location filename="../dialogs/settingsdialog.ui" line="1418"/>
 <source>Enable QOwnNotesAPI app</source>
 <translation>QOwnNotesAPI ऐप सक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1428"/>
+<location filename="../dialogs/settingsdialog.ui" line="1441"/>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
 <translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1431"/>
+<location filename="../dialogs/settingsdialog.ui" line="1444"/>
 <source>Login to Nextcloud to grant access</source>
 <translation type="unfinished">Login to Nextcloud to grant access</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1836"/>
+<location filename="../dialogs/settingsdialog.ui" line="1849"/>
 <source>Todo settings</source>
 <translation>टोडो सेटिंग्स</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1842"/>
+<location filename="../dialogs/settingsdialog.ui" line="1855"/>
 <source>Enable todo calendar support</source>
 <translation>Todo कैलेंडर समर्थन सक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2027"/>
+<location filename="../dialogs/settingsdialog.ui" line="2053"/>
 <source>Which cloud connection do you want to use?</source>
 <translation>आप किस क्लाउड कनेक्शन का उपयोग करना चाहते हैं?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2039"/>
+<location filename="../dialogs/settingsdialog.ui" line="2065"/>
 <source>Select the calendars you want to use for the Todo list</source>
 <translation>उन कार्य सूची के लिए उपयोग करने वाले कैलेंडर का चयन करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2114"/>
+<location filename="../dialogs/settingsdialog.ui" line="2140"/>
 <source>Todo list settings</source>
 <translation>कार्यसूची सूची सेटिंग्स</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2120"/>
+<location filename="../dialogs/settingsdialog.ui" line="2146"/>
 <source>Saving an item also closes the Todo list</source>
 <translation>किसी आइटम को सहेजने से यह हैकार्यसूची भी बंद हो जाता है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2232"/>
+<location filename="../dialogs/settingsdialog.ui" line="2258"/>
 <source>Indonesian</source>
 <translation>इन्डोनेशियाई</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2254"/>
+<location filename="../dialogs/settingsdialog.ui" line="2280"/>
 <source>Bengali</source>
 <translation>बंगाली</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2265"/>
+<location filename="../dialogs/settingsdialog.ui" line="2291"/>
 <source>Bosnian</source>
 <translation>बोस्नियाई</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2276"/>
+<location filename="../dialogs/settingsdialog.ui" line="2302"/>
 <source>Bulgarian</source>
 <translation>बल्गेरियाई</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2287"/>
+<location filename="../dialogs/settingsdialog.ui" line="2313"/>
 <source>Catalan</source>
 <translation>कैटलन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2298"/>
+<location filename="../dialogs/settingsdialog.ui" line="2324"/>
 <source>Cebuano</source>
 <translation>सिबुआनो</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2320"/>
+<location filename="../dialogs/settingsdialog.ui" line="2346"/>
 <source>Danish</source>
 <translation>डेनिश</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2342"/>
+<location filename="../dialogs/settingsdialog.ui" line="2368"/>
 <source>Basque</source>
 <translation>बस्क</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2375"/>
+<location filename="../dialogs/settingsdialog.ui" line="2401"/>
 <source>Estonian</source>
 <translation>एस्तोनियावासी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2386"/>
+<location filename="../dialogs/settingsdialog.ui" line="2412"/>
 <source>Filipino</source>
 <translation>फिलिपिनो</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2397"/>
+<location filename="../dialogs/settingsdialog.ui" line="2423"/>
 <source>Finnish</source>
 <translation>फिनिश</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2419"/>
+<location filename="../dialogs/settingsdialog.ui" line="2445"/>
 <source>Irish</source>
 <translation>आयरिश</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2430"/>
+<location filename="../dialogs/settingsdialog.ui" line="2456"/>
 <source>Galician</source>
 <translation>गैलिशियन्</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2441"/>
+<location filename="../dialogs/settingsdialog.ui" line="2467"/>
 <source>Greek</source>
 <translation>यूनानी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2452"/>
+<location filename="../dialogs/settingsdialog.ui" line="2478"/>
 <source>Hausa</source>
 <translation>होउसा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2463"/>
+<location filename="../dialogs/settingsdialog.ui" line="2489"/>
 <source>Hebrew</source>
 <translation>यहूदी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2474"/>
+<location filename="../dialogs/settingsdialog.ui" line="2500"/>
 <source>Hindi</source>
 <translation>हिंदी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2496"/>
+<location filename="../dialogs/settingsdialog.ui" line="2522"/>
 <source>Hiligaynon</source>
 <translation>हिलिगेनन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2507"/>
+<location filename="../dialogs/settingsdialog.ui" line="2533"/>
 <source>Icelandic</source>
 <translation>आइसलैंड का</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2529"/>
+<location filename="../dialogs/settingsdialog.ui" line="2555"/>
 <source>Korean</source>
 <translation>कोरियाई</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2540"/>
+<location filename="../dialogs/settingsdialog.ui" line="2566"/>
 <source>Kurdish</source>
 <translation>कुर्द</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2562"/>
+<location filename="../dialogs/settingsdialog.ui" line="2588"/>
 <source>Latvian</source>
 <translation>लात्वीयावासी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2573"/>
+<location filename="../dialogs/settingsdialog.ui" line="2599"/>
 <source>Lithuanian</source>
 <translation>लिथुआनियाई</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2584"/>
+<location filename="../dialogs/settingsdialog.ui" line="2610"/>
 <source>Macedonian</source>
 <translation>मेसीडोनियन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2617"/>
+<location filename="../dialogs/settingsdialog.ui" line="2643"/>
 <source>Norwegian</source>
 <translation>नार्वेजियन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2661"/>
+<location filename="../dialogs/settingsdialog.ui" line="2687"/>
 <source>Uzbek</source>
 <translation>उज़बेक</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2705"/>
+<location filename="../dialogs/settingsdialog.ui" line="2731"/>
 <source>Punjabi</source>
 <translation>पंजाबी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2650"/>
+<location filename="../dialogs/settingsdialog.ui" line="2676"/>
 <source>Persian</source>
 <translation>फ़ारसी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2716"/>
+<location filename="../dialogs/settingsdialog.ui" line="2742"/>
 <source>Romanian</source>
 <translation>रोमानियाई</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2738"/>
+<location filename="../dialogs/settingsdialog.ui" line="2764"/>
 <source>Serbian</source>
 <translation>सर्बियाई</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2749"/>
+<location filename="../dialogs/settingsdialog.ui" line="2775"/>
 <source>Albanian</source>
 <translation>अल्बानियन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2782"/>
+<location filename="../dialogs/settingsdialog.ui" line="2808"/>
 <source>Slovak</source>
 <translation>स्लोवाक</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2793"/>
+<location filename="../dialogs/settingsdialog.ui" line="2819"/>
 <source>Slovenian</source>
 <translation>स्लोवेनियाई</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2804"/>
+<location filename="../dialogs/settingsdialog.ui" line="2830"/>
 <source>Swedish</source>
 <translation>स्वीडिश</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2815"/>
+<location filename="../dialogs/settingsdialog.ui" line="2841"/>
 <source>Tagalog</source>
 <translation>तागालोग</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2848"/>
+<location filename="../dialogs/settingsdialog.ui" line="2874"/>
 <source>Turkish</source>
 <translation>तुर्की</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2881"/>
+<location filename="../dialogs/settingsdialog.ui" line="2907"/>
 <source>Urdu</source>
 <translation>उर्दू</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2914"/>
+<location filename="../dialogs/settingsdialog.ui" line="2940"/>
 <source>Chinese Simplified</source>
 <translation>सरलीकृत चीनी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2925"/>
+<location filename="../dialogs/settingsdialog.ui" line="2951"/>
 <source>Chinese Traditional</source>
 <translation>चीनी पारंपरिक</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3005"/>
+<location filename="../dialogs/settingsdialog.ui" line="3031"/>
 <source>Enable dark mode application icon and tray icon</source>
 <translation>काले मोड एप्लिकेशन आइकन और ट्रे आइकन सक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3012"/>
+<location filename="../dialogs/settingsdialog.ui" line="3038"/>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
 <translation>तुम भी अंधेरे मोड में संपादक सेटिंग्स में एक और संपादक रंग योजना का चयन करना चाह सकते हैं।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3115"/>
+<location filename="../dialogs/settingsdialog.ui" line="3141"/>
 <source>Enable dark mode icon theme</source>
 <translation>डार्क मोड आइकन थीम सक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3045"/>
+<location filename="../dialogs/settingsdialog.ui" line="3071"/>
 <source>System tray</source>
 <translation>सिस्टम ट्रे</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3054"/>
+<location filename="../dialogs/settingsdialog.ui" line="3080"/>
 <source>Show system tray icon</source>
 <translation>सिस्टम ट्रे आइकन दिखाएं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3064"/>
+<location filename="../dialogs/settingsdialog.ui" line="3090"/>
 <source>Start application hidden</source>
 <translation>आवेदन छिपा हुआ शुरू करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3074"/>
+<location filename="../dialogs/settingsdialog.ui" line="3100"/>
 <source>Interface style</source>
 <translation>इंटरफ़ेस शैली</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3105"/>
+<location filename="../dialogs/settingsdialog.ui" line="3131"/>
 <source>Enforce system icon theme</source>
 <translation>सिस्टम आइकन थीम लागू करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3211"/>
+<location filename="../dialogs/settingsdialog.ui" line="3237"/>
 <source>Override interface font size</source>
 <translation>ओवरराइड इंटरफ़ेस फ़ॉन्ट आकार</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3220"/>
+<location filename="../dialogs/settingsdialog.ui" line="3246"/>
 <source>Interface font size:</source>
 <translation>इंटरफ़ेस फ़ॉन्ट आकार:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3432"/>
+<location filename="../dialogs/settingsdialog.ui" line="3458"/>
 <source>&amp;Add script…</source>
 <translation>&amp;स्क्रिप्ट जोड़ें…</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4119"/>
+<location filename="../dialogs/settingsdialog.ui" line="4145"/>
 <source>Use legacy way to link to notes, images and attachments</source>
 <translation>नोट्स, छवियों और अनुलग्नकों से लिंक करने के लिए विरासत तरीके का उपयोग करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3964"/>
+<location filename="../dialogs/settingsdialog.ui" line="3990"/>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
 <translation>नोट खोलते समय नोट के अंदर कर्सर की स्थिति अब उस स्थिति में बहाल हो जाएगी जब नोट को वर्तमान सत्र में अंतिम बार देखा गया था</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3934"/>
+<location filename="../dialogs/settingsdialog.ui" line="3960"/>
 <source>By default the headline will generated automatically</source>
 <translation>डिफ़ॉल्ट रूप से शीर्षक स्वचालित रूप से उत्पन्न होगा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3937"/>
+<location filename="../dialogs/settingsdialog.ui" line="3963"/>
 <source>The shortcut to create a new note asks for a headline</source>
 <translation>एक नया नोट बनाने के लिए शॉर्टकट एक हेडलाइन के लिए पूछता है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4003"/>
+<location filename="../dialogs/settingsdialog.ui" line="4029"/>
 <source>Automatically close the note folder database to prevent problems with sync tools</source>
 <translation>सिंक टूल के साथ समस्याओं को रोकने के लिए नोट फ़ोल्डर डेटाबेस को स्वचालित रूप से बंद करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4006"/>
+<location filename="../dialogs/settingsdialog.ui" line="4032"/>
 <source>Automatically close the note folder database</source>
 <translation>नोट फ़ोल्डर डेटाबेस को स्वचालित रूप से बंद करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4167"/>
+<location filename="../dialogs/settingsdialog.ui" line="4193"/>
 <source>Search engine</source>
 <translation>खोज इंजन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4189"/>
+<location filename="../dialogs/settingsdialog.ui" line="4215"/>
 <source>Message boxes</source>
 <translation>संदेश बक्से</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4195"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4027"/>
+<location filename="../dialogs/settingsdialog.ui" line="4221"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4031"/>
 <source>Reset message boxes</source>
 <translation>संदेश बॉक्स रीसेट करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4382"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4114"/>
+<location filename="../dialogs/settingsdialog.ui" line="4408"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4097"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4118"/>
 <source>Import settings</source>
 <translation>सेटिंग आयात करना</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4389"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4059"/>
+<location filename="../dialogs/settingsdialog.ui" line="4415"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4063"/>
 <source>Export settings</source>
 <translation>निर्यात सेटिंग्स</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4537"/>
+<location filename="../dialogs/settingsdialog.ui" line="4563"/>
 <source>Open issue assistant</source>
 <translation>खुला मुद्दा सहायक</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4504"/>
+<location filename="../dialogs/settingsdialog.ui" line="4530"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; मुद्दों को पोस्ट करने का सबसे अच्छा तरीका है &lt;span style = "font-weight: 600;"&gt; ओपन इश्यू असिस्टेंट &lt;/ span&gt; बटन दबाकर समस्या सहायक का उपयोग करना। नीचे। &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4769"/>
+<location filename="../dialogs/settingsdialog.ui" line="4795"/>
 <source>Ignore code font size to allow zooming</source>
 <translation>ज़ूमिंग की अनुमति देने के लिए कोड फ़ॉन्ट आकार पर ध्यान न दें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4763"/>
+<location filename="../dialogs/settingsdialog.ui" line="4789"/>
 <source>Rendering</source>
 <translation>प्रतिपादन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4783"/>
+<location filename="../dialogs/settingsdialog.ui" line="4809"/>
 <source>Enable underline rendering</source>
 <translation>रेंडरिंग को सक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5193"/>
+<location filename="../dialogs/settingsdialog.ui" line="5219"/>
 <source>Fully highlight blockquotes</source>
 <translation>पूरी तरह से ब्लॉककॉट्स हाइलाइट करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5250"/>
+<location filename="../dialogs/settingsdialog.ui" line="5276"/>
 <source>Note-edit cursor width:</source>
 <translation>कर्सर की चौड़ाई नोट-संपादित करें:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5212"/>
+<location filename="../dialogs/settingsdialog.ui" line="5238"/>
 <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
 <translation>विम मोड सक्षम करें (कुछ QOwnNotes शॉर्टकट काम नहीं करेंगे)</translation>
 </message>
@@ -6371,22 +6371,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Cloud कनेक्शन:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="953"/>
+<location filename="../dialogs/settingsdialog.ui" line="966"/>
 <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
 <translation>अपने ownCloud सर्वर ऐप्स पासवर्ड आपके webbrowser में पेज आवेदन के लिए एक नया एप्लिकेशन पासवर्ड बनाने के लिए खुलता है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="956"/>
+<location filename="../dialogs/settingsdialog.ui" line="969"/>
 <source>Open your ownCloud server App Password page</source>
 <translation>अपना खुद का क्लाड सर्वर ऐप पासवर्ड पेज खोलें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2595"/>
+<location filename="../dialogs/settingsdialog.ui" line="2621"/>
 <source>Māori</source>
 <translation>माओरी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2243"/>
+<location filename="../dialogs/settingsdialog.ui" line="2269"/>
 <source>Malay</source>
 <translation>मलायी</translation>
 </message>
@@ -6401,649 +6401,659 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation type="unfinished">This also allows note files to be renamed</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1418"/>
+<location filename="../dialogs/settingsdialog.ui" line="864"/>
+<source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
+<translation type="unfinished">You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="1431"/>
 <source>If your password doesn't work, create an app password (button on the right)</source>
 <translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1442"/>
+<location filename="../dialogs/settingsdialog.ui" line="1455"/>
 <source>Cancel Nextcloud login</source>
 <translation type="unfinished">Cancel Nextcloud login</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2194"/>
+<location filename="../dialogs/settingsdialog.ui" line="1862"/>
+<source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
+<translation type="unfinished">You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="2220"/>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2551"/>
+<location filename="../dialogs/settingsdialog.ui" line="2577"/>
 <source>Khmer</source>
 <translation>खमेर</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2760"/>
+<location filename="../dialogs/settingsdialog.ui" line="2786"/>
 <source>Shona</source>
 <translation>सोणा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2771"/>
+<location filename="../dialogs/settingsdialog.ui" line="2797"/>
 <source>Sinhala</source>
 <translation>सिंहली</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2826"/>
+<location filename="../dialogs/settingsdialog.ui" line="2852"/>
 <source>Thai</source>
 <translation>थाई</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2837"/>
+<location filename="../dialogs/settingsdialog.ui" line="2863"/>
 <source>Vietnamese</source>
 <translation>वियतनामी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2859"/>
+<location filename="../dialogs/settingsdialog.ui" line="2885"/>
 <source>Xhosa</source>
 <translation>षोसा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2892"/>
+<location filename="../dialogs/settingsdialog.ui" line="2918"/>
 <source>Yiddish</source>
 <translation>यहूदी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2903"/>
+<location filename="../dialogs/settingsdialog.ui" line="2929"/>
 <source>Zulu</source>
 <translation>ज़ुलु</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2959"/>
+<location filename="../dialogs/settingsdialog.ui" line="2985"/>
 <source>Search for language</source>
 <translation>भाषा के लिए खोजें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3322"/>
+<location filename="../dialogs/settingsdialog.ui" line="3348"/>
 <source>Action name</source>
 <translation>भाषा के लिए खोजें...</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3327"/>
+<location filename="../dialogs/settingsdialog.ui" line="3353"/>
 <source>Local shortcut</source>
 <translation>स्थानीय शॉर्टकट</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3332"/>
+<location filename="../dialogs/settingsdialog.ui" line="3358"/>
 <source>Global shortcut</source>
 <translation>स्थानीय शॉर्टकट...</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3974"/>
+<location filename="../dialogs/settingsdialog.ui" line="4000"/>
 <source>Disable this if you want to launch the application without opening a note</source>
 <translation>यदि आप नोट खोले बिना एप्लिकेशन लॉन्च करना चाहते हैं तो इसे अक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3977"/>
+<location filename="../dialogs/settingsdialog.ui" line="4003"/>
 <source>Open last accessed note at application startup</source>
 <translation>एप्लिकेशन स्टार्टअप पर अंतिम एक्सेस नोट खोलें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4225"/>
+<location filename="../dialogs/settingsdialog.ui" line="4251"/>
 <source>Note file extensions</source>
 <translation type="unfinished">Note file extensions</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4263"/>
+<location filename="../dialogs/settingsdialog.ui" line="4289"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
 <translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4273"/>
+<location filename="../dialogs/settingsdialog.ui" line="4299"/>
 <source>Add a new note file extension</source>
 <translation type="unfinished">Add a new note file extension</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4287"/>
+<location filename="../dialogs/settingsdialog.ui" line="4313"/>
 <source>Remove selected note file extension</source>
 <translation type="unfinished">Remove selected note file extension</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4418"/>
+<location filename="../dialogs/settingsdialog.ui" line="4444"/>
 <source>Checks the disk database integrity and fixes problems</source>
 <translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4421"/>
+<location filename="../dialogs/settingsdialog.ui" line="4447"/>
 <source>Check integrity</source>
 <translation type="unfinished">Check integrity</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4428"/>
+<location filename="../dialogs/settingsdialog.ui" line="4454"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
 <translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4511"/>
+<location filename="../dialogs/settingsdialog.ui" line="4537"/>
 <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>GitHub को लाइन ब्रेक करने के लिए लाइन के अंत में दो स्थानों की आवश्यकता नहीं होती है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4534"/>
+<location filename="../dialogs/settingsdialog.ui" line="4560"/>
 <source>This is the best way to open an issue</source>
 <translation>किसी मुद्दे को खोलने का यह सबसे अच्छा तरीका है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4548"/>
+<location filename="../dialogs/settingsdialog.ui" line="4574"/>
 <source>Please use this in the issue tracker</source>
 <translation>कृपया इसका उपयोग समस्या ट्रैकर में करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4551"/>
+<location filename="../dialogs/settingsdialog.ui" line="4577"/>
 <source>&amp;Copy debug information to clipboard</source>
 <translation>&amp;क्लिपबोर्ड पर डिबग जानकारी की प्रतिलिपि बनाएँ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4562"/>
+<location filename="../dialogs/settingsdialog.ui" line="4588"/>
 <source>Please don't use this in the issue tracker</source>
 <translation>कृपया समस्या ट्रैकर में इसका उपयोग न करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4790"/>
+<location filename="../dialogs/settingsdialog.ui" line="4816"/>
 <source>Use editor highlighting styles also for the preview</source>
 <translation>पूर्वावलोकन के लिए भी संपादक हाइलाइटिंग शैलियों का उपयोग करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4813"/>
+<location filename="../dialogs/settingsdialog.ui" line="4839"/>
 <source>Exporting</source>
 <translation>निर्यात</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4819"/>
+<location filename="../dialogs/settingsdialog.ui" line="4845"/>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
 <translation>पीडीएफ निर्यात और पूर्वावलोकन की छपाई के लिए आंतरिक निर्यात स्टाइल का उपयोग करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5127"/>
+<location filename="../dialogs/settingsdialog.ui" line="5153"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;आप सभी उपलब्ध &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt; समय प्रारूपों&lt;/a&gt; पर एक नज़र रखना चाहते हैं.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5226"/>
+<location filename="../dialogs/settingsdialog.ui" line="5252"/>
 <source>Disable cursor blinking</source>
 <translation>कर्सर ब्लिंक करना अक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5233"/>
+<location filename="../dialogs/settingsdialog.ui" line="5259"/>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>नोट पाठ में अनुगामी रिक्त स्थान को स्वचालित रूप से हटा दें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5311"/>
+<location filename="../dialogs/settingsdialog.ui" line="5337"/>
 <source>Show line numbers</source>
 <translation type="unfinished">Show line numbers</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5321"/>
+<location filename="../dialogs/settingsdialog.ui" line="5347"/>
 <source>Tabs and Indents</source>
 <translation>टैब और संकेत</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5329"/>
+<location filename="../dialogs/settingsdialog.ui" line="5355"/>
 <source>Use tab character instead of spaces</source>
 <translation>रिक्त स्थान के बजाय टैब वर्ण का उपयोग करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5336"/>
+<location filename="../dialogs/settingsdialog.ui" line="5362"/>
 <source>Indent:</source>
 <translation>इंडेंट:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5716"/>
-<location filename="../dialogs/settingsdialog.ui" line="5725"/>
+<location filename="../dialogs/settingsdialog.ui" line="5742"/>
+<location filename="../dialogs/settingsdialog.ui" line="5751"/>
 <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>नोट सबफ़ोल्डर्स की नियमित अभिव्यक्तियों को अनदेखा करना, द्वारा अलग किया गया ";"
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5719"/>
+<location filename="../dialogs/settingsdialog.ui" line="5745"/>
 <source>Ignored subfolders</source>
 <translation>उपेक्षित लोगों को नजरअंदाज कर दिया
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5735"/>
+<location filename="../dialogs/settingsdialog.ui" line="5761"/>
 <source>Reset ignored subfolders</source>
 <translation>रीसेट ने सबफ़ोल्डर्स को अनदेखा कर दिया
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5771"/>
+<location filename="../dialogs/settingsdialog.ui" line="5797"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
 <translation>एप्लिकेशन स्टार्टअप पर खुले नोट टैब को पुनर्स्थापित करें और जब नोट फ़ोल्डर स्विच किए जाते हैं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5856"/>
+<location filename="../dialogs/settingsdialog.ui" line="5882"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
 <translation>कीवर्ड के साथ 'नोटों की संख्या' छिपाएँ (प्रदर्शन बढ़ाता है)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5892"/>
+<location filename="../dialogs/settingsdialog.ui" line="5918"/>
 <source>Show the number of matches in each note</source>
 <translation>प्रत्येक नोट में मैचों की संख्या दिखाएं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6326"/>
-<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
+<location filename="../dialogs/settingsdialog.ui" line="6331"/>
+<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
+<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6342"/>
+<location filename="../dialogs/settingsdialog.ui" line="6368"/>
 <source>QOwnNotes web application</source>
 <translation type="unfinished">QOwnNotes web application</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6432"/>
+<location filename="../dialogs/settingsdialog.ui" line="6458"/>
 <source>Server URL:</source>
 <translation type="unfinished">Server URL:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6489"/>
+<location filename="../dialogs/settingsdialog.ui" line="6515"/>
 <source>Show QR code</source>
 <translation type="unfinished">Show QR code</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6381"/>
+<location filename="../dialogs/settingsdialog.ui" line="6407"/>
 <source>Security token:</source>
 <translation type="unfinished">Security token:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6439"/>
+<location filename="../dialogs/settingsdialog.ui" line="6282"/>
+<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
+<translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="6465"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
 <translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6371"/>
+<location filename="../dialogs/settingsdialog.ui" line="6397"/>
 <source>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation type="unfinished">A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6449"/>
+<location filename="../dialogs/settingsdialog.ui" line="6475"/>
 <source>Copy security token to clipboard</source>
 <translation type="unfinished">Copy security token to clipboard</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6402"/>
+<location filename="../dialogs/settingsdialog.ui" line="6428"/>
 <source>Generate new security token</source>
 <translation type="unfinished">Generate new security token</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6463"/>
+<location filename="../dialogs/settingsdialog.ui" line="6489"/>
 <source>Reset the URL to default</source>
 <translation type="unfinished">Reset the URL to default</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6292"/>
+<location filename="../dialogs/settingsdialog.ui" line="6318"/>
 <source>QOwnNotes web application support</source>
 <translation type="unfinished">QOwnNotes web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6298"/>
+<location filename="../dialogs/settingsdialog.ui" line="6324"/>
 <source>Enable web application support</source>
 <translation type="unfinished">Enable web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5547"/>
+<location filename="../dialogs/settingsdialog.ui" line="5573"/>
 <source>Note list panel</source>
 <translation>नोट सूची पैनल</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5553"/>
+<location filename="../dialogs/settingsdialog.ui" line="5579"/>
 <source>Show notes in the note list with preview</source>
 <translation>पूर्वावलोकन के साथ नोट सूची में नोट दिखाएं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5626"/>
+<location filename="../dialogs/settingsdialog.ui" line="5652"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
 <translation>नोट सूची के बजाय सभी सबफ़ोल्डर्स के साथ नोट ट्री का उपयोग करें (यदि वे नोट फ़ोल्डर के लिए चालू हैं)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5902"/>
+<location filename="../dialogs/settingsdialog.ui" line="5928"/>
 <source>Note folder panel</source>
 <translation>नोट फ़ोल्डर पैनल
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5908"/>
+<location filename="../dialogs/settingsdialog.ui" line="5934"/>
 <source>Show note folders as buttons instead of in a select box</source>
 <translation>नोट बॉक्स के बजाय बटन के रूप में नोट फ़ोल्डर दिखाएं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6050"/>
+<location filename="../dialogs/settingsdialog.ui" line="6040"/>
+<source>Enable local trash to keep a copy of trashed notes</source>
+<translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="6076"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
 <translation>पैनलों को &lt;i&gt; विंडो / पैनलों &lt;/ i&gt; मुख्य मेनू में चालू और बंद किया जा सकता है और आप अलग-अलग पैनल कॉन्फ़िगरेशन के लिए अलग &lt;i&gt; कार्यक्षेत्र &lt;/ i&gt; भी कॉन्फ़िगर कर सकते हैं।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6127"/>
+<location filename="../dialogs/settingsdialog.ui" line="6153"/>
 <source>Bookmarks</source>
 <translation>बुकमार्क</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6133"/>
+<location filename="../dialogs/settingsdialog.ui" line="6159"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
 <translation>इस टैग वाले नोटों का उपयोग बुकमार्क लाने के लिए किया जाएगा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6136"/>
+<location filename="../dialogs/settingsdialog.ui" line="6162"/>
 <source>Tag name for bookmarks notes</source>
 <translation>बुकमार्क नोट्स के लिए टैग नाम</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6143"/>
+<location filename="../dialogs/settingsdialog.ui" line="6169"/>
 <source>Bookmarks tag:</source>
 <translation>बुकमार्क टैग:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6150"/>
+<location filename="../dialogs/settingsdialog.ui" line="6176"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>डिफ़ॉल्ट रूप से ब्राउज़र एक्सटेंशन वर्तमान नोट के सभी लिंक दिखाएगा। आप इसे एक निश्चित टैग के साथ नोटों के विशेष बुकमार्क लिंक भी दिखा सकते हैं। बुकमार्क लिंक सिंटैक्स के बारे में अधिक जानकारी के लिए &lt;a href="%1"&gt; यहां &lt;/a&gt; पर क्लिक करें।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6163"/>
+<location filename="../dialogs/settingsdialog.ui" line="6189"/>
 <source>Bookmarks note name:</source>
 <translation>बुकमार्क नोट नाम:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6170"/>
+<location filename="../dialogs/settingsdialog.ui" line="6196"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
 <translation>यह नोट ब्राउज़र एक्सटेंशन से नए बुकमार्क जोड़ने के लिए उपयोग किया जाएगा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6173"/>
+<location filename="../dialogs/settingsdialog.ui" line="6199"/>
 <source>Note name for adding new bookmarks</source>
 <translation>नए बुकमार्क जोड़ने के लिए नोट का नाम</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6183"/>
+<location filename="../dialogs/settingsdialog.ui" line="6209"/>
 <source>Web socket server</source>
 <translation>वेब सॉकेट सर्वर</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6189"/>
+<location filename="../dialogs/settingsdialog.ui" line="6215"/>
 <source>Socket server port:</source>
 <translation>सॉकेट सर्वर पोर्ट:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6209"/>
+<location filename="../dialogs/settingsdialog.ui" line="6235"/>
 <source>Reset the socket server port</source>
 <translation type="unfinished">Reset the socket server port</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6223"/>
-<location filename="../dialogs/settingsdialog.ui" line="6388"/>
+<location filename="../dialogs/settingsdialog.ui" line="6249"/>
+<location filename="../dialogs/settingsdialog.ui" line="6414"/>
 <source>Show security token</source>
 <translation>सुरक्षा टोकन दिखाएं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6259"/>
+<location filename="../dialogs/settingsdialog.ui" line="6269"/>
 <source>Web socket server support</source>
 <translation>वेब सॉकेट सर्वर समर्थन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6265"/>
+<location filename="../dialogs/settingsdialog.ui" line="6275"/>
 <source>Enable socket server</source>
 <translation>सॉकेट सर्वर सक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6240"/>
-<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>&lt;a href="%2"&gt; Chrome वेब स्टोर &lt;/a&gt; या &lt;a href="%3"&gt; फ़ायरफ़ॉक्स ऐड- से &lt;a href="%1"&gt; वेब साथी ब्राउज़र एक्सटेंशन &lt;/a&gt; स्थापित करें वेब क्लिपर के रूप में QOwnNotes का उपयोग करने के लिए पृष्ठ पृष्ठ &lt;/a&gt;</translation>
-</message>
-<message>
-<location filename="../dialogs/settingsdialog.ui" line="5755"/>
+<location filename="../dialogs/settingsdialog.ui" line="5781"/>
 <source>Note edit panel</source>
 <translation>नोट पैनल संपादित करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5761"/>
+<location filename="../dialogs/settingsdialog.ui" line="5787"/>
 <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
 <translation>यदि यह अक्षम है, तो आप अधिक जटिल पैनल लेआउट बनाने में सक्षम हैं, लेकिन विंडो के आकार बदलने पर सभी पैनलों का आकार बदल दिया जाएगा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5764"/>
+<location filename="../dialogs/settingsdialog.ui" line="5790"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
 <translation>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5879"/>
+<location filename="../dialogs/settingsdialog.ui" line="5905"/>
 <source>Note search panel</source>
 <translation>नोट खोज पैनल</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5885"/>
+<location filename="../dialogs/settingsdialog.ui" line="5911"/>
 <source>Disable auto-completion of previous searches</source>
 <translation>पिछली खोजों के स्वतः पूर्ण होने को अक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5781"/>
+<location filename="../dialogs/settingsdialog.ui" line="5807"/>
 <source>Navigation panel</source>
 <translation>नेविगेशन पैनल</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5787"/>
+<location filename="../dialogs/settingsdialog.ui" line="5813"/>
 <source>Hide navigation item search bar</source>
 <translation>नेविगेशन आइटम खोज बार छुपाएं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5922"/>
+<location filename="../dialogs/settingsdialog.ui" line="5948"/>
 <source>Local trash settings</source>
 <translation>स्थानीय कचरा सेटिंग</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5956"/>
+<location filename="../dialogs/settingsdialog.ui" line="5982"/>
 <source>Remove trashed notes after:</source>
 <translation>ट्रैश किए नोट्स को बाद में निकालें:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5963"/>
+<location filename="../dialogs/settingsdialog.ui" line="5989"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
 <translation> दिन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5982"/>
+<location filename="../dialogs/settingsdialog.ui" line="6008"/>
 <source>Automatically remove trashed notes after a certain time</source>
 <translation>किसी निश्चित समय के बाद ट्रैश किए नोट्स को स्वचालित रूप से निकालें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6008"/>
+<location filename="../dialogs/settingsdialog.ui" line="6034"/>
 <source>Local trash support</source>
 <translation>स्थानीय कचरा समर्थन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6014"/>
-<source>Enable local trash</source>
-<translation>स्थानीय कूड़ा सक्षम करें</translation>
-</message>
-<message>
-<location filename="../dialogs/settingsdialog.ui" line="6031"/>
+<location filename="../dialogs/settingsdialog.ui" line="6057"/>
 <source>Layout selector</source>
 <translation>लेआउट चयनकर्ता</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6037"/>
+<location filename="../dialogs/settingsdialog.ui" line="6063"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
 <translation>आप यहां एक नया लेआउट सेट कर सकते हैं। ध्यान रखें कि आप हमेशा पैनल की स्थिति को &lt;i&gt; अनलॉक पैनल &lt;/ i&gt; बटन के साथ संशोधित कर सकते हैं।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5274"/>
+<location filename="../dialogs/settingsdialog.ui" line="5300"/>
 <source>Reset the cursor width</source>
 <translation>कर्सर चौड़ाई रीसेट करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5421"/>
+<location filename="../dialogs/settingsdialog.ui" line="5447"/>
 <source>External git log command to show the git versions of a note</source>
 <translation>बाहरी जीआईटी लॉग कमांड दिखाने के लिए एक नोट के जीआईटी संस्करण</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5427"/>
+<location filename="../dialogs/settingsdialog.ui" line="5453"/>
 <source>Enter a command to be used to show a git log (like for example "gitk")</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>जीआईटी लॉग दिखाने के लिए उपयोग करने के लिए एक कमांड दर्ज करें (उदाहरण के लिए "गीतक ")</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5447"/>
+<location filename="../dialogs/settingsdialog.ui" line="5473"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>यदि आप इस सेटिंग का उपयोग करते हैं, तो आप एक नोट पर राइट-क्लिक करते हैं, तो आपको जीआईटी संस्करण दिखाने के लिए एक नया मेनू एंट्री मिलेगी।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5567"/>
+<location filename="../dialogs/settingsdialog.ui" line="5593"/>
 <source>Show all notes of a tag including the notes of their children-tags</source>
 <translation>टैग के सभी नोट्स को उनके बच्चों के टैग-टैग सहित दिखाएं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5560"/>
+<location filename="../dialogs/settingsdialog.ui" line="5586"/>
 <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
 <translation>फ़ोल्डर में सभी नोट्स को उनके सबफ़ोल्डर सहित दिखाएं (सबफ़ोल्डर्स चालू होने पर काम करता है)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5219"/>
+<location filename="../dialogs/settingsdialog.ui" line="5245"/>
 <source>Highlight the current line</source>
 <translation>वर्तमान रेखा को हाइलाइट करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5514"/>
+<location filename="../dialogs/settingsdialog.ui" line="5540"/>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>अपने नोट फ़ोल्डरों के लिए जीआईटी समर्थन को सक्षम करने और अपने जीआईटी क्लाइंट के लिए अपना नाम और ईमेल पता कॉन्फ़िगर करने के लिए मत भूलना, उदाहरण के लिए इन टर्मिनल कमांडों के साथ:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5797"/>
+<location filename="../dialogs/settingsdialog.ui" line="5823"/>
 <source>Tags panel</source>
 <translation>टैग पैनल</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5600"/>
-<location filename="../dialogs/settingsdialog.ui" line="5679"/>
-<location filename="../dialogs/settingsdialog.ui" line="5826"/>
+<location filename="../dialogs/settingsdialog.ui" line="5626"/>
+<location filename="../dialogs/settingsdialog.ui" line="5705"/>
+<location filename="../dialogs/settingsdialog.ui" line="5852"/>
 <source>Order</source>
 <translation>क्रम</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5609"/>
-<location filename="../dialogs/settingsdialog.ui" line="5685"/>
-<location filename="../dialogs/settingsdialog.ui" line="5832"/>
+<location filename="../dialogs/settingsdialog.ui" line="5635"/>
+<location filename="../dialogs/settingsdialog.ui" line="5711"/>
+<location filename="../dialogs/settingsdialog.ui" line="5858"/>
 <source>Ascending</source>
 <translation>आरोही</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5616"/>
-<location filename="../dialogs/settingsdialog.ui" line="5692"/>
-<location filename="../dialogs/settingsdialog.ui" line="5839"/>
+<location filename="../dialogs/settingsdialog.ui" line="5642"/>
+<location filename="../dialogs/settingsdialog.ui" line="5718"/>
+<location filename="../dialogs/settingsdialog.ui" line="5865"/>
 <source>Descending</source>
 <translation>अवरोही</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5574"/>
-<location filename="../dialogs/settingsdialog.ui" line="5649"/>
-<location filename="../dialogs/settingsdialog.ui" line="5803"/>
+<location filename="../dialogs/settingsdialog.ui" line="5600"/>
+<location filename="../dialogs/settingsdialog.ui" line="5675"/>
+<location filename="../dialogs/settingsdialog.ui" line="5829"/>
 <source>Sort</source>
 <translation>भांति</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5260"/>
+<location filename="../dialogs/settingsdialog.ui" line="5286"/>
 <source>Only use editor width setting in distraction free mode</source>
 <translation>केवल विकर्षण मुक्त मोड में संपादक चौड़ाई सेटिंग का उपयोग करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5580"/>
-<location filename="../dialogs/settingsdialog.ui" line="5655"/>
-<location filename="../dialogs/settingsdialog.ui" line="5809"/>
+<location filename="../dialogs/settingsdialog.ui" line="5606"/>
+<location filename="../dialogs/settingsdialog.ui" line="5681"/>
+<location filename="../dialogs/settingsdialog.ui" line="5835"/>
 <source>Alphabetical</source>
 <translation>वर्णमाला</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5816"/>
+<location filename="../dialogs/settingsdialog.ui" line="5842"/>
 <source>By last change / use</source>
 <translation>अंतिम परिवर्तन / उपयोग के अनुसार</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5849"/>
+<location filename="../dialogs/settingsdialog.ui" line="5875"/>
 <source>Hide 'Find or create tag' search</source>
 <translation>छुपाएं 'टैग खोजें या टैग बनाएं' खोजें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5636"/>
+<location filename="../dialogs/settingsdialog.ui" line="5662"/>
 <source>Note subfolders panel</source>
 <translation>नोट सबफ़ोल्डर्स पैनल</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5642"/>
+<location filename="../dialogs/settingsdialog.ui" line="5668"/>
 <source>Show with full path</source>
 <translation>पूर्ण पथ के साथ दिखाएं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5587"/>
-<location filename="../dialogs/settingsdialog.ui" line="5662"/>
+<location filename="../dialogs/settingsdialog.ui" line="5613"/>
+<location filename="../dialogs/settingsdialog.ui" line="5688"/>
 <source>By last change</source>
 <translation>अंतिम परिवर्तन से</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5672"/>
+<location filename="../dialogs/settingsdialog.ui" line="5698"/>
 <source>Show root folder name</source>
 <translation>रूट फोल्डर नाम दिखाएं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5702"/>
+<location filename="../dialogs/settingsdialog.ui" line="5728"/>
 <source>Hide 'Find or create note subfolder' search</source>
 <translation>छिपाने 'नोट सबफ़ोल्डर खोजें या बनाएं' खोज</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5709"/>
+<location filename="../dialogs/settingsdialog.ui" line="5735"/>
 <source>Display note subfolders as full tree</source>
 <translation>पूरे पेड़ के रूप में नोट नोट सबफ़ोल्डर्स प्रदर्शित करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2926"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2930"/>
 <source>Search script repository</source>
 <translation>खोज स्क्रिप्ट रिपॉजिटरी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5437"/>
+<location filename="../dialogs/settingsdialog.ui" line="5463"/>
 <source>You optionally can use "%notePath%" for the path of the note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>नोट के पथ के लिए आप वैकल्पिक रूप से "%notePath%" का उपयोग कर सकते हैं।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5460"/>
+<location filename="../dialogs/settingsdialog.ui" line="5486"/>
 <source>Git client</source>
 <translation>जीआईटी क्लाइंट</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5476"/>
+<location filename="../dialogs/settingsdialog.ui" line="5502"/>
 <source>Path to git executable:</source>
 <translation>जीआईटी के निष्पादन योग्य पथ:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5466"/>
+<location filename="../dialogs/settingsdialog.ui" line="5492"/>
 <source>Path to git client, leave empty for default</source>
 <translation>जीआईटी क्लाइंट के लिए पथ, डिफ़ॉल्ट के लिए खाली छोड़ दें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5385"/>
+<location filename="../dialogs/settingsdialog.ui" line="5411"/>
 <source>Commit interval</source>
 <translation>कमिट अंतराल</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5391"/>
+<location filename="../dialogs/settingsdialog.ui" line="5417"/>
 <source>sec</source>
 <extracomment>seconds</extracomment>
 <translation>सेकंड</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5411"/>
+<location filename="../dialogs/settingsdialog.ui" line="5437"/>
 <source>git commit interval time [sec]</source>
 <translation>जीआईटी प्रतिबद्ध अंतराल समय [sec]</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="936"/>
+<location filename="../dialogs/settingsdialog.ui" line="949"/>
 <source>Open your ownCloud server &amp;Apps page</source>
 <translation>अपना ओनक्लाउड सर्वर और एप्लिकेशन पृष्ठ खोलें</translation>
 </message>
@@ -7058,303 +7068,303 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>ब्राउज़र एक्सटेंशन</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1858"/>
+<location filename="../dialogs/settingsdialog.ui" line="1884"/>
 <source>Which calendar backend do you want to use?</source>
 <translation>आप किस कैलेंडर बैकएंड का उपयोग करना चाहते हैं?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1891"/>
+<location filename="../dialogs/settingsdialog.ui" line="1917"/>
 <source>For most current ownCloud and Nextcloud installations</source>
 <translation>अधिकांश वर्तमान ओनक्लाउड और नेक्सेक्लुड इंस्टॉलेशन के लिए</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1871"/>
+<location filename="../dialogs/settingsdialog.ui" line="1897"/>
 <source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>ओन क्लाउड के पुराने संस्करणों के लिए जहां डिफ़ॉल्ट सेटिंग काम नहीं करती है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1874"/>
+<location filename="../dialogs/settingsdialog.ui" line="1900"/>
 <source>Legacy ownCloud calendar</source>
 <translation>लीगेसी ओनक्लाउड कैलेंडर</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1907"/>
+<location filename="../dialogs/settingsdialog.ui" line="1933"/>
 <source>CalDAV server settings</source>
 <translation>कालदेव सर्वर सेटिंग्स</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1916"/>
+<location filename="../dialogs/settingsdialog.ui" line="1942"/>
 <source>Calendar base url:</source>
 <translation>कैलेंडर आधार यूआरएल:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1938"/>
+<location filename="../dialogs/settingsdialog.ui" line="1964"/>
 <source>Please enter the CalDAV base url to your calendar.</source>
 <translation>कृपया अपने कैलेंडर में कालदेव आधार यूआरएल दर्ज करें।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2008"/>
+<location filename="../dialogs/settingsdialog.ui" line="2034"/>
 <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
 <translation>कृपया अपने कालदेव उपयोगकर्ता नाम के लिए पासवर्ड दर्ज करें। &lt;br/&gt; वर्तमान में पासवर्ड को अन्य सेटिंग्स के साथ एन्क्रिप्ट किया जाएगा, लेकिन यह बहुत सुरक्षित नहीं है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2309"/>
+<location filename="../dialogs/settingsdialog.ui" line="2335"/>
 <source>Czech</source>
 <translation>चेक</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2683"/>
+<location filename="../dialogs/settingsdialog.ui" line="2709"/>
 <source>Brazilian Portuguese</source>
 <translation>ब्राजिलियन पुर्तगाली</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2870"/>
+<location filename="../dialogs/settingsdialog.ui" line="2896"/>
 <source>Ukrainian</source>
 <translation>यूक्रेनी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3875"/>
+<location filename="../dialogs/settingsdialog.ui" line="3901"/>
 <source>The name</source>
 <translation>नाम</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4099"/>
+<location filename="../dialogs/settingsdialog.ui" line="4125"/>
 <source>Maximum height:</source>
 <translation>अधिकतम ऊँचाई:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4072"/>
+<location filename="../dialogs/settingsdialog.ui" line="4098"/>
 <source>Maximum width:</source>
 <translation>अधिकतम चौड़ाई:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4013"/>
+<location filename="../dialogs/settingsdialog.ui" line="4039"/>
 <source>Scale images down when inserted into notes</source>
 <translation>चित्रों को स्केल करते हुए नीचे नोट्स डालें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2485"/>
+<location filename="../dialogs/settingsdialog.ui" line="2511"/>
 <source>Croatian</source>
 <translation>क्रोएशियाई</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3783"/>
+<location filename="../dialogs/settingsdialog.ui" line="3809"/>
 <source>Path to your QML file</source>
 <translation>आपके क्यू मल फ़ाइल का पथ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3697"/>
+<location filename="../dialogs/settingsdialog.ui" line="3723"/>
 <source>Script name</source>
 <translation>स्क्रिप्ट का नाम</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3558"/>
+<location filename="../dialogs/settingsdialog.ui" line="3584"/>
 <source>Description:</source>
 <translation>विवरण:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3640"/>
+<location filename="../dialogs/settingsdialog.ui" line="3666"/>
 <source>Version:</source>
 <translation>संस्करण:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3601"/>
+<location filename="../dialogs/settingsdialog.ui" line="3627"/>
 <source>Repository:</source>
 <translation>रिपॉजिटरी:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3578"/>
+<location filename="../dialogs/settingsdialog.ui" line="3604"/>
 <source>Author(s):</source>
 <translation>लेखक (ओं):</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4020"/>
+<location filename="../dialogs/settingsdialog.ui" line="4046"/>
 <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
 <translation>अगर आप वर्तमान नोट को संपादित करते समय सभी बाहरी संशोधनों को स्वीकार करना चाहते हैं तो यह जांचें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4023"/>
+<location filename="../dialogs/settingsdialog.ui" line="4049"/>
 <source>Accept all external modifications of the current note</source>
 <translation>वर्तमान नोट के सभी बाहरी संशोधनों को स्वीकार करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3957"/>
+<location filename="../dialogs/settingsdialog.ui" line="3983"/>
 <source>Use UNIX newline instead of native newline characters</source>
 <translation>मूल नई पंक्ति वर्णों के बजाय यूनिक्सनई पंक्ति का उपयोग करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3967"/>
+<location filename="../dialogs/settingsdialog.ui" line="3993"/>
 <source>Restore cursor position when opening a note</source>
 <translation>नोट खोलते समय कर्सर की स्थिति को पुनर्स्थापित करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4951"/>
+<location filename="../dialogs/settingsdialog.ui" line="4977"/>
 <source>Apply toolbar configuration</source>
 <translation>उपकरणपट्टी कॉन्फ़िगरेशन को लागू करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4965"/>
+<location filename="../dialogs/settingsdialog.ui" line="4991"/>
 <source>Reset toolbars</source>
 <translation>रीसेट करें उपकरणपट्टी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4993"/>
+<location filename="../dialogs/settingsdialog.ui" line="5019"/>
 <source>Enable logging to file</source>
 <translation>फ़ाइल में लॉगिंग सक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5000"/>
+<location filename="../dialogs/settingsdialog.ui" line="5026"/>
 <source>Clear log file</source>
 <translation>लॉग फ़ाइल साफ़ करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5011"/>
+<location filename="../dialogs/settingsdialog.ui" line="5037"/>
 <source>Fake old version number to trigger update</source>
 <translation>अद्यतन ट्रिगर करने के लिए नकली पुराने संस्करण संख्या</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5039"/>
+<location filename="../dialogs/settingsdialog.ui" line="5065"/>
 <source>Log file path:</source>
 <translation>लॉग फ़ाइल पथ:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5101"/>
+<location filename="../dialogs/settingsdialog.ui" line="5127"/>
 <source>Here you can set your own time format for inserting the current time into a note.</source>
 <translation>वर्तमान समय को एक नोट में सम्मिलित करने के लिए यहां आप अपना स्वयं का समय प्रारूप सेट कर सकते हैं।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5104"/>
+<location filename="../dialogs/settingsdialog.ui" line="5130"/>
 <source>Insert current time</source>
 <translation>वर्तमान समय सम्मिलित करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5110"/>
+<location filename="../dialogs/settingsdialog.ui" line="5136"/>
 <source>Time format:</source>
 <translation>समय प्रारूप:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5117"/>
+<location filename="../dialogs/settingsdialog.ui" line="5143"/>
 <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
 <translation>अपना कस्टम समय प्रारूप डालें, जैसे "डीडी। एम.एम. य्याय एचएच: एमएम"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5206"/>
+<location filename="../dialogs/settingsdialog.ui" line="5232"/>
 <source>Editor options</source>
 <translation>संपादक विकल्प</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5267"/>
+<location filename="../dialogs/settingsdialog.ui" line="5293"/>
 <source>Enable automatic closing of brackets and markdown formatting characters</source>
 <translation>ब्रैकेट्स और माककडाउन स्वरूपण वर्णों को स्वचालित रूप से बंद करने में सक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5301"/>
+<location filename="../dialogs/settingsdialog.ui" line="5327"/>
 <source>You have to use the backspace key to remove the opening character</source>
 <translation>उद्घाटन चरित्र को निकालने के लिए आपको बैकस्पेस कुंजी का उपयोग करना होगा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5304"/>
+<location filename="../dialogs/settingsdialog.ui" line="5330"/>
 <source>Enable automatic removal of matching closing characters</source>
 <translation>मिलान करने वाले पात्रों के स्वचालित हटाने को सक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1941"/>
+<location filename="../dialogs/settingsdialog.ui" line="1967"/>
 <source>Your CalDAV calendar base url</source>
 <translation>आपका कालदेव कैलेंडर आधार यूआरएल</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1973"/>
+<location filename="../dialogs/settingsdialog.ui" line="1999"/>
 <source>Please enter the username of your CalDAV server.</source>
 <translation>कृपया अपना उपयोगकर्ता नाम दर्ज करें कालदेव सर्वर</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1976"/>
+<location filename="../dialogs/settingsdialog.ui" line="2002"/>
 <source>Your CalDAV username</source>
 <translation>आपका कालडाई उपयोगकर्ता नाम</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2014"/>
+<location filename="../dialogs/settingsdialog.ui" line="2040"/>
 <source>Your CalDAV password</source>
 <translation>आपका कालदेव पासवर्ड</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2061"/>
+<location filename="../dialogs/settingsdialog.ui" line="2087"/>
 <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
 <translation>यह अगली बार जब आप अपने कार्य सूची संवाद को खोलते हैं, तो सभी सारा सूची आइटम आपके सर्वर से पुनः लोड किए जाने का कारण बनता है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2064"/>
+<location filename="../dialogs/settingsdialog.ui" line="2090"/>
 <source>Empty calendar item cache</source>
 <translation>खाली कैलेंडर आइटम कैश</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2087"/>
+<location filename="../dialogs/settingsdialog.ui" line="2113"/>
 <source>Click here to reload the list of calendars from your calendar server.</source>
 <translation>अपने कैलेंडर सर्वर से कैलेंडर की सूची को पुनः लोड करने के लिए यहां क्लिक करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2093"/>
+<location filename="../dialogs/settingsdialog.ui" line="2119"/>
 <source>&amp;Reload calendar list</source>
 <translation>&amp;कैलेंडर सूची पुनः लोड करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3002"/>
-<location filename="../dialogs/settingsdialog.ui" line="3112"/>
+<location filename="../dialogs/settingsdialog.ui" line="3028"/>
+<location filename="../dialogs/settingsdialog.ui" line="3138"/>
 <source>You may need to restart the application to let these changes take effect</source>
 <translation>इन परिवर्तनों को प्रभावी होने के लिए आपको एप्लिकेशन को पुनरारंभ करना पड़ सकता है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3147"/>
+<location filename="../dialogs/settingsdialog.ui" line="3173"/>
 <source>Toolbar icon size:</source>
 <translation>टूलबार आइकन आकार:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3137"/>
+<location filename="../dialogs/settingsdialog.ui" line="3163"/>
 <source>List and tree item height:</source>
 <translation>सूची और पेड़ की मद ऊंचाई:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3170"/>
+<location filename="../dialogs/settingsdialog.ui" line="3196"/>
 <source>Reset the icon size</source>
 <translation>आइकन आकार रीसेट करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3184"/>
+<location filename="../dialogs/settingsdialog.ui" line="3210"/>
 <source>Reset the item height</source>
 <translation>आइटम ऊंचाई रीसेट करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4776"/>
+<location filename="../dialogs/settingsdialog.ui" line="4802"/>
 <source>View text right to left (RTL)</source>
 <translation>टेक्स्ट को दाएं से (आरटीएल) देखें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3308"/>
+<location filename="../dialogs/settingsdialog.ui" line="3334"/>
 <source>Search for shortcut</source>
 <translation>शॉर्टकट के लिए खोजें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2104"/>
+<location filename="../dialogs/settingsdialog.ui" line="2130"/>
 <source>Ignore calendars that don't support todo items</source>
 <translation>उन कैलेंडरों को अनदेखा करें जो कार्यवस्तुओं का समर्थन नहीं करते हैं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2936"/>
+<location filename="../dialogs/settingsdialog.ui" line="2962"/>
 <source>Arabic</source>
 <translation>अरबी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3086"/>
+<location filename="../dialogs/settingsdialog.ui" line="3112"/>
 <source>Icons</source>
 <translation>प्रतीक</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3095"/>
+<location filename="../dialogs/settingsdialog.ui" line="3121"/>
 <source>Use internal icon theme instead of system icon theme</source>
 <translation>सिस्टम आइकन थीम की बजाय आंतरिक आइकन थीम का उपयोग करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3732"/>
+<location filename="../dialogs/settingsdialog.ui" line="3758"/>
 <source>Script path:</source>
 <translation>स्क्रिप्ट पथ:</translation>
 </message>
@@ -7369,59 +7379,59 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>ध्यान दें फ़ाइल का नाम शीर्षक से अलग होने की अनुमति दें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4030"/>
+<location filename="../dialogs/settingsdialog.ui" line="4056"/>
 <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
 <translation>अगर आप वर्तमान नोट को संपादित करते समय सभी बाहरी संशोधनों को अनदेखा करना चाहते हैं तो इसे जांचें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4033"/>
+<location filename="../dialogs/settingsdialog.ui" line="4059"/>
 <source>Ignore all external modifications of the current note</source>
 <translation>वर्तमान नोट के सभी बाहरी संशोधनों को अनदेखा करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3954"/>
+<location filename="../dialogs/settingsdialog.ui" line="3980"/>
 <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
 <translation>आप इसे विंडोज़ के तहत उदाहरण के लिए उपयोग कर सकते हैं यदि आपको अपने क्लाउड / नेक्स्टक्लाइड नोट्स ऐप में नई लाइनों के साथ परेशानी हो रही है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4129"/>
+<location filename="../dialogs/settingsdialog.ui" line="4155"/>
 <source>App instance</source>
 <translation>ऐप का आग्रह</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4135"/>
+<location filename="../dialogs/settingsdialog.ui" line="4161"/>
 <source>Only allow one app instance at the same time</source>
 <translation>केवल एक ही समय में एक ऐप इंस्टेंस की अनुमति दें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4310"/>
+<location filename="../dialogs/settingsdialog.ui" line="4336"/>
 <source>Path to external editor:</source>
 <translation>बाहरी संपादक का पथ:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4151"/>
+<location filename="../dialogs/settingsdialog.ui" line="4177"/>
 <source>Don't show the update dialog automatically</source>
 <translation>अपडेट संवाद को स्वचालित रूप से न दिखाएं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4608"/>
-<location filename="../dialogs/settingsdialog.ui" line="4835"/>
+<location filename="../dialogs/settingsdialog.ui" line="4634"/>
+<location filename="../dialogs/settingsdialog.ui" line="4861"/>
 <source>Fonts</source>
 <translation>फोंट्स</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4631"/>
-<location filename="../dialogs/settingsdialog.ui" line="4673"/>
-<location filename="../dialogs/settingsdialog.ui" line="4858"/>
-<location filename="../dialogs/settingsdialog.ui" line="4886"/>
+<location filename="../dialogs/settingsdialog.ui" line="4657"/>
+<location filename="../dialogs/settingsdialog.ui" line="4699"/>
+<location filename="../dialogs/settingsdialog.ui" line="4884"/>
+<location filename="../dialogs/settingsdialog.ui" line="4912"/>
 <source>Set a new font</source>
 <translation>एक नया फ़ॉन्ट सेट करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4642"/>
-<location filename="../dialogs/settingsdialog.ui" line="4687"/>
-<location filename="../dialogs/settingsdialog.ui" line="4872"/>
-<location filename="../dialogs/settingsdialog.ui" line="4917"/>
+<location filename="../dialogs/settingsdialog.ui" line="4668"/>
+<location filename="../dialogs/settingsdialog.ui" line="4713"/>
+<location filename="../dialogs/settingsdialog.ui" line="4898"/>
+<location filename="../dialogs/settingsdialog.ui" line="4943"/>
 <source>Reset font</source>
 <translation>फ़ॉन्ट रीसेट करें</translation>
 </message>
@@ -7431,59 +7441,59 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>डिबग</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4472"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2329"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4329"/>
+<location filename="../dialogs/settingsdialog.ui" line="4498"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2333"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4333"/>
 <source>Debug information</source>
 <translation>डीबग जानकारी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4478"/>
+<location filename="../dialogs/settingsdialog.ui" line="4504"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;आप कर सकते हैं&lt;span style=" font-weight:600;"&gt;कापी और चिपकाएं&lt;/span&gt; इस पाठ (या इस पाठ के कुछ भाग) में एक&lt;span style=" font-weight:600;"&gt;निर्गम&lt;/span&gt; पर &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;क्यूओननोट्स मुद्दों पृष्ठ&lt;/a&gt; यदि आपके पास &lt;span style=" font-weight:600;"&gt;सवाल या मुसीबत&lt;/span&gt; क्यूओननोट्स को लेकर. यह डेटा बहुत संवेदनशील है जो इस जानकारी में छिपी है।.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4565"/>
+<location filename="../dialogs/settingsdialog.ui" line="4591"/>
 <source>&amp;Save debug information</source>
 <translation>&amp;डिबग जानकारी सहेजें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="506"/>
+<location filename="../dialogs/settingsdialog.cpp" line="510"/>
 <source>hostname of proxy server</source>
 <translation>प्रॉक्सी सर्वर का होस्टनाम</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="507"/>
+<location filename="../dialogs/settingsdialog.cpp" line="511"/>
 <source>username for proxy server</source>
 <translation>प्रॉक्सी सर्वर के लिए उपयोगकर्ता नाम</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="508"/>
+<location filename="../dialogs/settingsdialog.cpp" line="512"/>
 <source>password for proxy server</source>
 <translation>प्रॉक्सी सर्वर के लिए पासवर्ड</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="510"/>
+<location filename="../dialogs/settingsdialog.cpp" line="514"/>
 <source>HTTP(S) proxy</source>
 <translation>एचटीटीपी(एस) प्रॉक्सी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="511"/>
+<location filename="../dialogs/settingsdialog.cpp" line="515"/>
 <source>SOCKS5 proxy</source>
 <translation>सॉक्स५ प्रॉक्सी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1512"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1516"/>
 <source>Automatic (needs restart)</source>
 <translation>स्वचालित (पुनरारंभ की आवश्यकता है)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1823"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1827"/>
 <source>Shortcut already assigned</source>
 <translation>शॉर्टकट पहले से ही असाइन किया गया है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2026"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2030"/>
 <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -7492,7 +7502,7 @@ QOwnNotesAPI version: %2</source>
 क्यूओननोट्सएपीआई संस्करण:%2</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2039"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2043"/>
 <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -7500,143 +7510,143 @@ Connection error message: </source>
 <translation>ओन क्लाउड सर्वर से कनेक्ट करने में त्रुटि हुई थी! आपके पास ओन क्लाउडएपीआई ऐप स्थापित और सक्षम होने की भी आवश्यकता है! </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2319"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2323"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
 <translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2330"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2334"/>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>कृपया समस्या ट्रैकर में इसका उपयोग न करें, डिबग सूचना पाठ को सीधे मुद्दे पर कॉपी करें।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2337"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2341"/>
 <source>Markdown files</source>
 <translation>मार्कडाउन फ़ाइलें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2365"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2369"/>
 <source>Disable usage tracking</source>
 <translation>उपयोग ट्रैकिंग अक्षम करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2366"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2370"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>अज्ञात उपयोग डेटा यह तय करने में मदद करता है कि क्यूनोनोट्स के कुछ हिस्सों में आगे क्या सुधार होगा और बग को खोजने और ठीक करना होगा। &lt;br/&gt; कृपया इसे केवल अक्षम करें यदि आप वास्तव में इसके साथ नहीं रह सकते। &lt;br /&gt; &lt;br/&gt; वास्तव में उपयोग ट्रैकिंग निष्क्रिय करें?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2599"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2603"/>
 <source>new folder</source>
 <translation>नया फोल्डर</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2633"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2637"/>
 <source>Remove note folder</source>
 <translation>नोट फ़ोल्डर निकालें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2634"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2638"/>
 <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>वर्तमान नोट फ़ोल्डर निकालें &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2715"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2719"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>कृपया फ़ोल्डर चुनें जहां आपके नोट्स को संग्रहीत किया जाएगा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2750"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2754"/>
 <source>Loading folders from server</source>
 <translation>सर्वर से फ़ोल्डर्स लोड किए जा रहे हैं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2765"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2769"/>
 <source>No more folders were found in the current folder</source>
 <translation>वर्तमान फ़ोल्डर में और फ़ोल्डर नहीं मिला</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2838"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2842"/>
 <source>Loading folders in '%1' from server</source>
 <translation>सर्वर से '%1' में फ़ोल्डर लोड किए जा रहे हैं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2911"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2915"/>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
 <translation>तेज़ी से आरंभ करने के लिए &lt;a href="%1"&gt; स्क्रिप्टिंग प्रलेखन &lt;/a&gt; पर एक नज़र डालें.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2915"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2919"/>
 <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
 <translation>यदि आपको क्यूओननोट्स में किसी विशिष्ट कार्यक्षमता तक पहुंच की आवश्यकता है, तो कृपया &lt;a href="%1"&gt; क्यूओननोट्स समस्या पृष्ठ &lt;/a&gt; पर कोई समस्या खोलें।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2937"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2941"/>
 <source>Check for script updates</source>
 <translation>स्क्रिप्ट अपडेटों के लिए जांचें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2944"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2948"/>
 <source>Add local script</source>
 <translation>स्थानीय स्क्रिप्ट जोड़ें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2948"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2952"/>
 <source>Add an existing, local script</source>
 <translation>एक मौजूदा, स्थानीय स्क्रिप्ट जोड़ें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3293"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3297"/>
 <source>Please enter a new note file extension:</source>
 <translation type="unfinished">Please enter a new note file extension:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3327"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3331"/>
 <source>Markdown file</source>
 <translation type="unfinished">Markdown file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3329"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3333"/>
 <source>Plain text file</source>
 <translation type="unfinished">Plain text file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3347"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3351"/>
 <source>Remove note file extension</source>
 <translation type="unfinished">Remove note file extension</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4058"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4113"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4062"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4117"/>
 <source>INI files</source>
 <translation>आईएनआई फाइलें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4098"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>क्या आप वास्तव में सेटिंग्स आयात करना चाहते हैं? आपकी वर्तमान सेटिंग्स हटा दी जाएंगी और हर सेटिंग को पुनर्स्थापित नहीं किया जा सकता है, जैसे नोट फ़ोल्डर सेटिंग्स और कौन सी स्क्रिप्ट आप उपयोग कर रहे थे। आपको कुछ सेटिंग्स को समायोजित करने की आवश्यकता होगी, विशेष रूप से प्लेटफार्मों भर में, लेकिन आपके नोट्स बरकरार रहेंगे!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4101"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4105"/>
 <source>The application will be restarted after the import.</source>
 <translation>आयात के बाद आवेदन को फिर से शुरू किया जाएगा।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4330"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4334"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>डिबग जानकारी क्लिपबोर्ड पर कॉपी की गई थी।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4351"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4355"/>
 <source>The integrity of the disk database is valid.</source>
 <translation type="unfinished">The integrity of the disk database is valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4356"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4360"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation type="unfinished">The integrity of the disk database is not valid!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2931"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2935"/>
 <source>Find a script in the script repository</source>
 <translation>स्क्रिप्ट रेपॉजिटरी में एक स्क्रिप्ट खोजें</translation>
 </message>
@@ -7651,133 +7661,133 @@ Connection error message: </source>
 <translation>मेनू पट्टी आइटम दिखाएं</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1696"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1748"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1700"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1752"/>
 <source>Undefined shortcut</source>
 <translation>अपरिभाषित शॉर्टकट</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1700"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1752"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1704"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1756"/>
 <source>Assign a new shortcut</source>
 <translation>एक नया शॉर्टकट असाइन करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1701"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1753"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1705"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1757"/>
 <source>Reset to default shortcut</source>
 <translation>डिफ़ॉल्ट शॉर्टकट पर रीसेट करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1719"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1723"/>
 <source>Clear shortcut</source>
 <translation>शॉर्टकट साफ़ करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1824"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1828"/>
 <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
 <translation>शॉर्टकट &lt;strong&gt;%1 &lt;/ strong&gt; पहले से ही &lt;strong&gt;%2 &lt;/ strong&gt; को असाइन किया गया है! क्या आप शॉर्टकट में कूदना चाहते हैं?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3024"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3028"/>
 <source>Remove script</source>
 <translation>स्क्रिप्ट निकालें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3025"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3029"/>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>मौजूदा स्क्रिप्ट को निकालें&lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3075"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3079"/>
 <source>QML files</source>
 <translation>क्यूमल फाइलें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3076"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3080"/>
 <source>Please select your QML file</source>
 <translation>कृपया अपना क्यूएमएल फ़ाइल चुनें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3166"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3170"/>
 <source>Open repository</source>
 <translation>खोलो रिपॉजिटरी</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3224"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3228"/>
 <source>Your script seems to be valid</source>
 <translation>आपकी स्क्रिप्ट वैध लगती है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3225"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3229"/>
 <source>There were script errors:
 %1</source>
 <translation>स्क्रिप्ट त्रुटियां थीं:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3293"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3297"/>
 <source>File extension</source>
 <translation>दस्तावेज़ विस्तारण</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3348"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3352"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
 <translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3638"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3642"/>
 <source>Calendar cache emptied</source>
 <translation>कैलेंडर कैश खाली किया गया</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3639"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3643"/>
 <source>Your calendar cache was emptied.</source>
 <translation>आपका कैलेंडर कैश रिक्त किया गया था।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3720"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3724"/>
 <source>Reset toolbars and exit</source>
 <translation>उपकरणपट्टी रीसेट करें और बाहर निकलें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3721"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>क्या आप वास्तव में सभी टूलबार रीसेट करना चाहते हैं? एप्लिकेशन को प्रक्रिया में बंद कर दिया जाएगा, जब आप इसे फिर से शुरू करेंगे तो डिफ़ॉल्ट टूलबार बहाल हो जाएगा।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3729"/>
 <source>Reset and &amp;exit</source>
 <translation>रीसेट करें &amp;बाहर निकलें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3883"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3887"/>
 <source>Log file cleared</source>
 <translation>लॉग फ़ाइल साफ़ की गई</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3884"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3888"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>लॉग फ़ाइल &lt;strong&gt;%1&lt;/ strong&gt; साफ़ कर दी गई थी।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3920"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3924"/>
 <source>Executable files</source>
 <translation>निष्पादन योग्य फ़ाइलें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3921"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3923"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3925"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3927"/>
 <source>All files</source>
 <translation>सारे फ़ाइलें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3931"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3935"/>
 <source>Please select the path of your git executable</source>
 <translation>कृपया अपने गिट निष्पादन के पथ का चयन करें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4028"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4032"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>क्या आप वास्तव में सभी संदेश बॉक्स के ओवरराइड को रीसेट करना चाहते हैं?</translation>
 </message>
@@ -7792,86 +7802,86 @@ Connection error message: </source>
 <translation>आप अपने git क्लाइंट को यहां डाउनलोड कर सकते हैं: &lt;a href="%url"&gt; Git for Windows &lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="461"/>
+<location filename="../dialogs/settingsdialog.cpp" line="465"/>
 <source>enabled</source>
 <translation>सक्षम</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="461"/>
+<location filename="../dialogs/settingsdialog.cpp" line="465"/>
 <source>disabled</source>
 <translation>विकलांग</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="463"/>
+<location filename="../dialogs/settingsdialog.cpp" line="467"/>
 <source>Portable mode is currently:</source>
 <translation>पोर्टेबल मोड वर्तमान में है:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="466"/>
+<location filename="../dialogs/settingsdialog.cpp" line="470"/>
 <source>In portable mode</source>
 <translation>पोर्टेबल मोड में</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="467"/>
+<location filename="../dialogs/settingsdialog.cpp" line="471"/>
 <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>आंतरिक sqlite डेटाबेस और सेटिंग्स को बाइनरी के स्थान पर &lt;code&gt; डेटा &lt;/code&gt; फ़ोल्डर के अंदर संग्रहीत किया जाएगा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="470"/>
+<location filename="../dialogs/settingsdialog.cpp" line="474"/>
 <source>the settings will be stored in an ini file</source>
 <translation>सेटिंग्स को आईएनआई फ़ाइल में संग्रहीत किया जाएगा</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="472"/>
+<location filename="../dialogs/settingsdialog.cpp" line="476"/>
 <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
 <translation>नोट फ़ोल्डर, स्क्रिप्ट पथ और बाहरी संपादक का पथ स्वचालित रूप से &lt;code&gt; डेटा &lt;/code&gt; फ़ोल्डर के सापेक्ष संग्रहीत किया जाएगा ताकि सही नोट फ़ोल्डर, स्क्रिप्ट और बाहरी संपादक को लोड किया जाए, भले ही आपका QOwnNotes स्थापना वर्तमान में स्थित है</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="482"/>
+<location filename="../dialogs/settingsdialog.cpp" line="486"/>
 <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
 <translation>यदि आप पैरामीटर &lt;code&gt; - पोर्टेबल &lt;/code&gt; के साथ QOwnNotes चलाते हैं तो यह सक्रिय हो जाएगा।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2338"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2342"/>
 <source>Save debug information</source>
 <translation>डिबग जानकारी सहेजें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2385"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2389"/>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
 <translation>क्या आप सचमुच सभी सेटिंग्स को साफ़ करना चाहते हैं, डाटाबेस निकाल सकते हैं और क्यूओननोट्स से बाहर निकलना चाहते हैं?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2388"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2392"/>
 <source>Clear and &amp;exit</source>
 <translation>साफ़ करें और &amp; बाहर निकलें</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2314"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2388"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3725"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2318"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2392"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3729"/>
 <source>&amp;Cancel</source>
 <translation>&amp;रद्द करना</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="488"/>
+<location filename="../dialogs/settingsdialog.cpp" line="492"/>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>आपको पोर्टेबल मोड में क्यूओननोट्स को शुरू करने के लिए अपने रिलीज पथ में एक &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; मिलेगा।</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2315"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>क्या आप वास्तव में स्थानीय डेटाबेस को साफ़ करना चाहते हैं? यह आपके कॉन्फ़िगर नोट फ़ोल्डर और आपके कैश कार्य आइटम भी निकाल देगा!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2314"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2318"/>
 <source>Clear &amp;database</source>
 <translation>साफ़ करें &amp;डेटाबेस</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2505"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2509"/>
 <source>Select editor application</source>
 <translation>संपादक का चयन करें आवेदन</translation>
 </message>

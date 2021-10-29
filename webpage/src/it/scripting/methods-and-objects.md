@@ -53,10 +53,6 @@ Puoi dare un'occhiata all'esempio [custom-actions.qml](https://github.com/pbek/Q
 
 Potresti anche voler dare un'occhiata all'hook [onDetachedProcessCallback](hooks.html#ondetachedprocesscallback).
 
-::: tip
-Puoi anche assegnare scorciatoie locali e globali alle tue azioni personalizzate nelle *Impostazioni dei collegamenti*.
-:::
-
 Avvio di un programma esterno e attesa dell'output
 ----------------------------------------------------
 
@@ -278,22 +274,60 @@ void ScriptingService::registerCustomAction(QString identifier,
                                             bool useInNoteListContextMenu);
 ```
 
+::: tip
+Puoi anche assegnare scorciatoie locali e globali alle tue azioni personalizzate nelle *Impostazioni dei collegamenti*.
+:::
+
 ### Esempio
+
 ```js
-// add a custom action without a button
-script.registerCustomAction("mycustomaction1", "Menu text");
+import QtQml 2.0
+import QOwnNotesTypes 1.0
 
-// add a custom action with a button
-script.registerCustomAction("mycustomaction1", "Menu text", "Button text");
+Script {
+    /**
+     * Initializes the custom actions
+     */
+    function init() {
+        // add a custom action without a button
+        script.registerCustomAction("mycustomaction1", "Menu text");
 
-// add a custom action with a button and freedesktop theme icon
-script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "task-new");
+        // add a custom action with a button
+        script.registerCustomAction("mycustomaction2", "Menu text", "Button text");
 
-// add a custom action with a button and an icon from a file
-script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
+        // add a custom action with a button and freedesktop theme icon
+        script.registerCustomAction("mycustomaction3", "Menu text", "Button text", "task-new");
+
+        // add a custom action with a button and an icon from a file
+        script.registerCustomAction("mycustomaction4", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
+    }
+
+    /**
+     * This function is invoked when a custom action is triggered
+     * in the menu or via button
+     * 
+     * @param identifier string the identifier defined in registerCustomAction
+     */
+    function customActionInvoked(identifier) {
+        switch (identifier) {
+            case "mycustomaction1":
+                script.log("Action 1");
+            break;
+            case "mycustomaction2":
+                script.log("Action 2");
+            break;
+            case "mycustomaction3":
+                script.log("Action 3");
+            break;
+            case "mycustomaction4":
+                script.log("Action 4");
+            break;
+        }
+    }
+}
 ```
 
-È quindi possibile utilizzare l'identificatore con funzione `customActionInvoked` in a script like [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Per altri esempi guarda [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
 Puoi anche attivare un'azione personalizzata dopo che l'applicazione è stata avviata con il parametro `--action customAction_<identifier>`. Per maggiori informazioni dai un'occhiata a [Attiva le azioni del menu dopo l'avvio](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).

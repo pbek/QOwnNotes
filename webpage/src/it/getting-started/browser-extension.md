@@ -14,7 +14,7 @@ QOwnNotes deve essere in esecuzione affinché l'estensione del browser Web Compa
 
 ## Web clipper
 
-![web-clipper](/img/web-clipper.png)
+![strumento di ritaglio web](/img/web-clipper.png)
 
 Fai clic con il pulsante destro del mouse su una pagina web o sul testo selezionato per utilizzare la funzionalità **web-clipper**. Lì puoi anche creare una nuova nota con uno **screenshot** della pagina web corrente.
 
@@ -24,7 +24,7 @@ Il web clipper è anche scriptabile! Dai un'occhiata a [websocketRawDataHook](..
 
 ## Segnalibri
 
-![bookmarks](/img/bookmarks.png)
+![segnalibri](/img/bookmarks.png)
 
 Se vuoi il pieno controllo dei tuoi segnalibri del browser e **usarli tra diversi browser e sistemi operativi**, allora l'estensione del browser di QOwnNotes fa per te.
 

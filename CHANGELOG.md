@@ -5,6 +5,7 @@
   this should result in fewer note diff dialogs when some external process is
   messing with the current note (for [#2027](https://github.com/pbek/QOwnNotes/issues/2027))
     - this mainly was a problem under macOS
+- added more translation (thank you mguerra, marcoxbresciani, amirkbrpr, marterra)
 
 ## 21.10.14
 - more information about the different optional integrations and services in the

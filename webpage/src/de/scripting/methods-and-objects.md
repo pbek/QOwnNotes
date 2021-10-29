@@ -48,10 +48,6 @@ Vielleicht möchten Sie sich das Beispiel ansehen: [custom-actions.qml](https://
 
 Vielleicht möchten Sie auch einen Blick auf den Hook [onDetachedProcessCallback](hooks.html#ondetachedprocesscallback) werfen.
 
-::: tip
-Sie können Ihren benutzerdefinierten Aktionen auch lokale und globale Verknüpfungen in den *Verknüpfungseinstellungen* zuweisen.
-:::
-
 Starten Sie ein externes Programm und warten Sie auf die Ausgabe
 ----------------------------------------------------
 
@@ -72,7 +68,7 @@ QByteArray startSynchronousProcess (QString ausführbarer Pfad, QStringList-Para
 var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data");
 ```
 
-Vielleicht möchten Sie sich das Beispiel ansehen [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml).
+You may want to take a look at the example [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml).
 
 Abrufen des Pfads des aktuellen Notizordners
 -------------------------------------------
@@ -92,7 +88,7 @@ QString currentNoteFolderPath ();
 var path = script.currentNoteFolderPath();
 ```
 
-Vielleicht möchten Sie sich das Beispiel [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/absolute-media-links.qml) ansehen.
+You may want to take a look at the example [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/absolute-media-links.qml).
 
 Abrufen der aktuellen Notiz
 ------------------------
@@ -112,7 +108,7 @@ NoteApi currentNote ();
 var note = script.currentNote();
 ```
 
-Vielleicht möchten Sie sich das Beispiel ansehen [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 Protokollierung beim Protokoll-Widget
 -------------------------
@@ -151,7 +147,7 @@ QString downloadUrlToString (QUrl url);
 var html = script.downloadUrlToString("https://www.qownnotes.org");
 ```
 
-Vielleicht möchten Sie sich das Beispiel ansehen: [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
+You may want to take a look at the example [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
 
 Herunterladen einer URL in den Medienordner
 --------------------------------------
@@ -174,7 +170,7 @@ QString downloadUrlToMedia (QUrl url, bool returnUrlOnly);
 var markdown = script.downloadUrlToMedia("http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)}");
 ```
 
-Vielleicht möchten Sie sich das Beispiel ansehen [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/paste-latex-image.qml).
+You may want to take a look at the example [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/paste-latex-image.qml).
 
 Einfügen einer Mediendatei in den Medienordner
 --------------------------------------------
@@ -198,7 +194,7 @@ QString ScriptingService::insertMediaFile (QString mediaFilePath,
 var markdown = script.insertMediaFile("/path/to/your/image.png");
 ```
 
-Vielleicht möchten Sie sich das Beispiel ansehen [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
+You may want to take a look at the example [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
 
 Inserting an attachment file into the attachments folder
 --------------------------------------------------------
@@ -228,7 +224,7 @@ var markdown = script.insertAttachmentFile("/path/to/your/file.png");
 Regenerating the note preview
 -----------------------------
 
-Aktualisiert die Notizvorschau.
+Refreshes the note preview.
 
 ### Methodenaufruf und Parameter
 ```cpp
@@ -243,7 +239,7 @@ QString ScriptingService::regenerateNotePreview();
 script.regenerateNotePreview();
 ```
 
-Vielleicht möchten Sie sich das Beispiel ansehen [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
+You may want to take a look at the example [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
 
 Registering a custom action
 ---------------------------
@@ -276,22 +272,60 @@ void ScriptingService::registerCustomAction(QString identifier,
                                             bool useInNoteListContextMenu);
 ```
 
+::: tip
+You can also assign local and global shortcuts to your custom actions in the *Shortcuts settings*.
+:::
+
 ### Beispiel
+
 ```js
-// add a custom action without a button
-script.registerCustomAction("mycustomaction1", "Menu text");
+import QtQml 2.0
+import QOwnNotesTypes 1.0
 
-// add a custom action with a button
-script.registerCustomAction("mycustomaction1", "Menu text", "Button text");
+Script {
+    /**
+     * Initializes the custom actions
+     */
+    function init() {
+        // add a custom action without a button
+        script.registerCustomAction("mycustomaction1", "Menu text");
 
-// add a custom action with a button and freedesktop theme icon
-script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "task-new");
+        // add a custom action with a button
+        script.registerCustomAction("mycustomaction2", "Menu text", "Button text");
 
-// add a custom action with a button and an icon from a file
-script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
+        // add a custom action with a button and freedesktop theme icon
+        script.registerCustomAction("mycustomaction3", "Menu text", "Button text", "task-new");
+
+        // add a custom action with a button and an icon from a file
+        script.registerCustomAction("mycustomaction4", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
+    }
+
+    /**
+     * This function is invoked when a custom action is triggered
+     * in the menu or via button
+     * 
+     * @param identifier string the identifier defined in registerCustomAction
+     */
+    function customActionInvoked(identifier) {
+        switch (identifier) {
+            case "mycustomaction1":
+                script.log("Action 1");
+            break;
+            case "mycustomaction2":
+                script.log("Action 2");
+            break;
+            case "mycustomaction3":
+                script.log("Action 3");
+            break;
+            case "mycustomaction4":
+                script.log("Action 4");
+            break;
+        }
+    }
+}
 ```
 
-Möglicherweise möchten Sie dann den Bezeichner mit Funktion verwenden `customActionInvoked` in einem Skript wie [ custom-action.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+For some more examples please see [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
 Sie können eine benutzerdefinierte Aktion auch nach dem Start der Anwendung mit dem Parameter `--action customAction_<identifier>` auslösen. Weitere Informationen finden Sie unter [Menüaktionen nach dem Start auslösen](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).

@@ -48,10 +48,6 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
 
 همچنین می توانید هوک [onDetachedProcessCallback](hooks.html#ondetachedprocesscallback) را ملاحظه نمایید.
 
-::: tip
-شما قادر به اختصاص میانبرهای محلی و جهانی به فعالیت های سفارشی تان هم در *تنظیمات میانبرها* هستید.
-:::
-
 آغاز یک برنامه خارجی و انتظار برای خروجی
 ----------------------------------------------------
 
@@ -92,7 +88,7 @@ QString currentNoteFolderPath();
 var path = script.currentNoteFolderPath();
 ```
 
-برای مثال می توانید نگاهی به مثال [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/absolute-media-links.qml) بیندازید.
+You may want to take a look at the example [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/absolute-media-links.qml).
 
 دستیابی به یادداشت کنونی
 ------------------------
@@ -112,7 +108,7 @@ NoteApi currentNote();
 var note = script.currentNote();
 ```
 
-شاید بخواهید به مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) نگاهی بیندازید.
+You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 ورود به ابزارک کارنگاری
 -------------------------
@@ -151,7 +147,7 @@ QString downloadUrlToString(QUrl url);
 var html = script.downloadUrlToString("https://www.qownnotes.org");
 ```
 
-به عنوان مثال می توانید نگاهی به [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) بیندازید.
+You may want to take a look at the example [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
 
 بارگیری URL به پوشه رسانه
 --------------------------------------
@@ -174,7 +170,7 @@ QString downloadUrlToMedia(QUrl url, bool returnUrlOnly);
 var markdown = script.downloadUrlToMedia("http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)}");
 ```
 
-به عنوان مثال می توانید به [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/paste-latex-image.qml) مراجعه کنید.
+You may want to take a look at the example [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/paste-latex-image.qml).
 
 درج پرونده رسانه در پوشه رسانه
 --------------------------------------------
@@ -198,7 +194,7 @@ QString ScriptingService::insertMediaFile(QString mediaFilePath,
 var markdown = script.insertMediaFile("/path/to/your/image.png");
 ```
 
-شاید بخواهید به مثال [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml) نگاهی بیندازید.
+You may want to take a look at the example [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
 
 درج پرونده پیوست در پوشه پیوست ها
 --------------------------------------------------------
@@ -228,7 +224,7 @@ var markdown = script.insertAttachmentFile("/path/to/your/file.png");
 بازسازی پیش نمایش یادداشت
 -----------------------------
 
-پیش نمایش یادداشت را نوسازی می کند.
+Refreshes the note preview.
 
 ### فراخوانی شگرد و پارامترها
 ```cpp
@@ -243,7 +239,7 @@ QString ScriptingService::regenerateNotePreview();
 script.regenerateNotePreview();
 ```
 
-شاید بخواهید به مثال [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml) نگاهی بیندازید.
+You may want to take a look at the example [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
 
 Registering a custom action
 ---------------------------
@@ -276,22 +272,60 @@ void ScriptingService::registerCustomAction(QString identifier,
                                             bool useInNoteListContextMenu);
 ```
 
+::: tip
+You can also assign local and global shortcuts to your custom actions in the *Shortcuts settings*.
+:::
+
 ### مثال
+
 ```js
-// add a custom action without a button
-script.registerCustomAction("mycustomaction1", "Menu text");
+import QtQml 2.0
+import QOwnNotesTypes 1.0
 
-// add a custom action with a button
-script.registerCustomAction("mycustomaction1", "Menu text", "Button text");
+Script {
+    /**
+     * Initializes the custom actions
+     */
+    function init() {
+        // add a custom action without a button
+        script.registerCustomAction("mycustomaction1", "Menu text");
 
-// add a custom action with a button and freedesktop theme icon
-script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "task-new");
+        // add a custom action with a button
+        script.registerCustomAction("mycustomaction2", "Menu text", "Button text");
 
-// add a custom action with a button and an icon from a file
-script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
+        // add a custom action with a button and freedesktop theme icon
+        script.registerCustomAction("mycustomaction3", "Menu text", "Button text", "task-new");
+
+        // add a custom action with a button and an icon from a file
+        script.registerCustomAction("mycustomaction4", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
+    }
+
+    /**
+     * This function is invoked when a custom action is triggered
+     * in the menu or via button
+     * 
+     * @param identifier string the identifier defined in registerCustomAction
+     */
+    function customActionInvoked(identifier) {
+        switch (identifier) {
+            case "mycustomaction1":
+                script.log("Action 1");
+            break;
+            case "mycustomaction2":
+                script.log("Action 2");
+            break;
+            case "mycustomaction3":
+                script.log("Action 3");
+            break;
+            case "mycustomaction4":
+                script.log("Action 4");
+            break;
+        }
+    }
+}
 ```
 
-سپس در صورت تمایل می توانید از شناسه با تابع `customActionInvoked`در اسکریپتی نظیر [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) استفاده کنید.
+For some more examples please see [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
 شما همچنین می توانید عملیات سفارشی را پس از شروع به کار برنامه با پارامتر `--action customAction_<identifier>` راه اندازی کنید. برای کسب اطلاعات بیشتر لطفاً به [راه اندازی منو اکشن ها بعد از شروع به کار](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup) مراجعه نمایید.
