@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 21.10.15
-- many ways to be more tolerant with external modified notes were implemented,
+- many ways to be more tolerant with externally modified notes were implemented,
   this should result in fewer note diff dialogs when some external process is
   messing with the current note (for [#2027](https://github.com/pbek/QOwnNotes/issues/2027))
     - this mainly was a problem under macOS
