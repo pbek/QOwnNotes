@@ -2900,10 +2900,17 @@ void MainWindow::notesWereModified(const QString &str) {
                 return;
             }
 
+            const QString oldNoteText = note.getNoteText();
+
             // fetch text of note from disk
             note.updateNoteTextFromDisk();
             const QString noteTextOnDisk =
                 Utils::Misc::transformLineFeeds(note.getNoteText());
+
+            // Check if the old note text is the same as the one on disk
+            if (oldNoteText == noteTextOnDisk) {
+                return;
+            }
 
             const QString noteTextOnDiskHash =
                 QString(QCryptographicHash::hash(noteTextOnDisk.toLocal8Bit(),
