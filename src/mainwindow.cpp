@@ -2908,7 +2908,7 @@ void MainWindow::notesWereModified(const QString &str) {
                 Utils::Misc::transformLineFeeds(note.getNoteText());
 
             // Check if the old note text is the same or similar as the one on disk
-            if (Utils::Misc::isSimilar(oldNoteText, noteTextOnDisk, 5)) {
+            if (Utils::Misc::isSimilar(oldNoteText, noteTextOnDisk, 8)) {
                 return;
             }
 
@@ -2929,7 +2929,7 @@ void MainWindow::notesWereModified(const QString &str) {
 
             // skip dialog if text of note file on disk text from note text
             // edit are equal or similar
-            if (Utils::Misc::isSimilar(noteTextEditText, noteTextOnDisk, 5)) {
+            if (Utils::Misc::isSimilar(noteTextEditText, noteTextOnDisk, 8)) {
                 return;
             }
 
