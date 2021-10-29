@@ -2548,6 +2548,57 @@ QString Utils::Misc::logMsgTypeText(QtMsgType logType) {
 }
 
 /**
+ * Borrowed from https://nasauber.de/blog/2019/levenshtein-distance-and-longest-common-subsequence-in-qt/
+ *
+ * @param source
+ * @param target
+ * @return
+ */
+int levenshteinDistance(const QString &source, const QString &target)
+{
+    if (source == target) {
+        return 0;
+    }
+
+    const int sourceCount = source.count();
+    const int targetCount = target.count();
+
+    if (source.isEmpty()) {
+        return targetCount;
+    }
+
+    if (target.isEmpty()) {
+        return sourceCount;
+    }
+
+    if (sourceCount > targetCount) {
+        return levenshteinDistance(target, source);
+    }
+
+    QVector<int> column;
+    column.fill(0, targetCount + 1);
+    QVector<int> previousColumn;
+    previousColumn.reserve(targetCount + 1);
+    for (int i = 0; i < targetCount + 1; i++) {
+        previousColumn.append(i);
+    }
+
+    for (int i = 0; i < sourceCount; i++) {
+        column[0] = i + 1;
+        for (int j = 0; j < targetCount; j++) {
+            column[j + 1] = std::min({
+                1 + column.at(j),
+                1 + previousColumn.at(1 + j),
+                previousColumn.at(j) + ((source.at(i) == target.at(j)) ? 0 : 1)
+            });
+        }
+        column.swap(previousColumn);
+    }
+
+    return previousColumn.at(targetCount);
+}
+
+/**
  * Returns if two strings are equal or similar
  *
  * @param str1
@@ -2563,6 +2614,11 @@ bool Utils::Misc::isSimilar(const QString &str1, const QString &str2, int thresh
     // Checks if one string contains the other and just a few characters are different
     if ((str1.contains(str2) || str2.contains(str1)) &&
         (abs(str1.length() - str2.length()) <= threshold)) {
+        return true;
+    }
+
+    // Use levenshtein if the middle part of the strings is different
+    if (levenshteinDistance(str1, str2) <= threshold) {
         return true;
     }
 
