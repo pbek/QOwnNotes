@@ -2546,3 +2546,37 @@ QString Utils::Misc::logMsgTypeText(QtMsgType logType) {
 
     return type;
 }
+
+/**
+ * Returns if two strings are equal or similar
+ *
+ * @param str1
+ * @param str2
+ * @param threshold
+ * @return
+ */
+bool Utils::Misc::isSimilar(const QString &str1, const QString &str2, int threshold) {
+    if (str1 == str2) {
+        return true;
+    }
+
+    // Checks if one string contains the other and just a few characters are different
+    if ((str1.contains(str2) || str2.contains(str1)) &&
+        (abs(str1.length() - str2.length()) <= threshold)) {
+        return true;
+    }
+
+    if (str1.length() != str2.length()) {
+        return false;
+    }
+
+    int diff = 0;
+    for (int i = 0; i < str1.length(); i++) {
+        // QChar provides a 16-bit Unicode character, so Emojis will not be detected
+        if (str1[i] != str2[i]) {
+            diff++;
+        }
+    }
+
+    return diff <= threshold;
+}

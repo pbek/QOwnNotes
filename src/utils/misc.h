@@ -162,6 +162,7 @@ void cleanupEvernoteImportText(QString &content);
 QString testEvernoteImportText(const QString& data);
 void logToFileIfAllowed(QtMsgType msgType, const QString &msg);
 QString logMsgTypeText(QtMsgType logType);
+bool isSimilar(const QString &str1, const QString &str2, int threshold = 3);
 }    // namespace Misc
 }    // namespace Utils
 
