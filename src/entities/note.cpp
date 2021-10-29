@@ -1668,6 +1668,11 @@ bool Note::updateNoteTextFromDisk() {
         return false;
     }
 
+    // Update the last modified date
+    QFileInfo fileInfo;
+    fileInfo.setFile(file);
+    this->_fileLastModified = fileInfo.lastModified();
+
     QTextStream in(&file);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     in.setCodec("UTF-8");

@@ -2894,6 +2894,12 @@ void MainWindow::notesWereModified(const QString &str) {
     // load note from disk if current note was changed
     if (note.getFileName() == this->currentNote.getFileName()) {
         if (note.fileExists()) {
+            // If the modified date of the file is the same as the one
+            // from the current note it was a false alarm
+            if (fi.lastModified() == this->currentNote.getFileLastModified()) {
+                return;
+            }
+
             // fetch text of note from disk
             note.updateNoteTextFromDisk();
             const QString noteTextOnDisk =
