@@ -2906,9 +2906,15 @@ void MainWindow::notesWereModified(const QString &str) {
             note.updateNoteTextFromDisk();
             const QString noteTextOnDisk =
                 Utils::Misc::transformLineFeeds(note.getNoteText());
+            const bool isCurrentNoteNotEditedForAWhile =
+                this->currentNoteLastEdited.addSecs(60) <
+                QDateTime::currentDateTime();
+            // If the current note wasn't edited for a while, we want that it is possible
+            // to get updated even with small changes, so we are setting a threshold of 0
+            const int threshold = isCurrentNoteNotEditedForAWhile ? 0 : 8;
 
             // Check if the old note text is the same or similar as the one on disk
-            if (Utils::Misc::isSimilar(oldNoteText, noteTextOnDisk, 8)) {
+            if (Utils::Misc::isSimilar(oldNoteText, noteTextOnDisk, threshold)) {
                 return;
             }
 
@@ -2929,7 +2935,7 @@ void MainWindow::notesWereModified(const QString &str) {
 
             // skip dialog if text of note file on disk text from note text
             // edit are equal or similar
-            if (Utils::Misc::isSimilar(noteTextEditText, noteTextOnDisk, 8)) {
+            if (Utils::Misc::isSimilar(noteTextEditText, noteTextOnDisk, threshold)) {
                 return;
             }
 
@@ -2939,10 +2945,6 @@ void MainWindow::notesWereModified(const QString &str) {
             // if we don't want to get notifications at all
             // external modifications check if we really need one
             if (!this->notifyAllExternalModifications) {
-                bool isCurrentNoteNotEditedForAWhile =
-                    this->currentNoteLastEdited.addSecs(60) <
-                    QDateTime::currentDateTime();
-
                 // reloading the current note text straight away
                 // if we didn't change it for a minute
                 if (!this->currentNote.getHasDirtyData() &&

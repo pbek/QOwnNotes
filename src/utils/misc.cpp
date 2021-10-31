@@ -2611,6 +2611,10 @@ bool Utils::Misc::isSimilar(const QString &str1, const QString &str2, int thresh
         return true;
     }
 
+    if (threshold == 0) {
+        return false;
+    }
+
     // Checks if one string contains the other and just a few characters are different
     if ((str1.contains(str2) || str2.contains(str1)) &&
         (abs(str1.length() - str2.length()) <= threshold)) {

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.11.0
+- if the current note wasn't edited for a while, it is now possible again that it
+  gets updated when there were small changes (for [#2027](https://github.com/pbek/QOwnNotes/issues/2027))
+
 ## 21.10.15
 - many ways to be more tolerant with externally modified notes were implemented,
   this should result in fewer note diff dialogs when some external process is
