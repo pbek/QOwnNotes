@@ -71,6 +71,12 @@ FontColorWidget::FontColorWidget(QWidget* parent)
             SLOT(needRestart()));
     connect(ui->backgroundColorCheckBox, SIGNAL(toggled(bool)), this,
             SLOT(needRestart()));
+    connect(ui->boldCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->italicCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->underlineCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
     connect(ui->foregroundColorButton, SIGNAL(clicked()), this,
             SLOT(needRestart()));
     connect(ui->backgroundColorButton, SIGNAL(clicked()), this,
