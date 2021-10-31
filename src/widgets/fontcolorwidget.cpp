@@ -751,6 +751,8 @@ void FontColorWidget::on_exportSchemeButton_clicked() {
                     Utils::Schema::schemaSettings->getSchemaValue(key);
                 exportSettings.setValue(key, value);
             }
+
+            Utils::Misc::openFolderSelect(fileName);
         }
     }
 }
