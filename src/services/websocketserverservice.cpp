@@ -166,6 +166,8 @@ void WebSocketServerService::processMessage(const QString &message) {
             return;
         }
 
+        const QString pageUrl =
+            jsonObject.value(QStringLiteral("pageUrl")).toString().trimmed();
         const QString contentType =
             jsonObject.value(QStringLiteral("contentType")).toString();
         const QString name =
@@ -173,8 +175,13 @@ void WebSocketServerService::processMessage(const QString &message) {
                 Note::extendedCleanupFileName(
                     jsonObject.value(QStringLiteral("headline")).toString()))
                 .trimmed();
-        const QString text =
+        QString text =
             jsonObject.value(QStringLiteral("text")).toString().trimmed();
+
+        // Attempt to transform links starting with a "/" like "/my-page.html" to
+        // "http://domain.com/my-page.html"
+        text = Utils::Misc::createAbsolutePathsInHtml(text, pageUrl);
+
         const bool contentTypeIsHTML = contentType == QLatin1String("html");
         bool isCreateNewNote = true;
 
@@ -185,9 +192,6 @@ void WebSocketServerService::processMessage(const QString &message) {
                 jsonObject.value(QStringLiteral("requestType"))
                     .toString()
                     .trimmed();
-            const QString pageUrl = jsonObject.value(QStringLiteral("pageUrl"))
-                                        .toString()
-                                        .trimmed();
             const QString pageTitle =
                 jsonObject.value(QStringLiteral("pageTitle"))
                     .toString()

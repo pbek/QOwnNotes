@@ -9,6 +9,9 @@
       opened in the file manager 
     - if the *Bold*, *Italic* or *Underline* settings in *Editor color schema*
       was toggled now there also will be asked for a restart of the application 
+- when capturing webpages with the [Web Companion browser extension](https://www.qownnotes.org/getting-started/browser-extension.html)
+  now an attempt is made to transform links starting with a `/`, like `/my-page.html`,
+  to `http://domain.com/my-page.html` (for [#2285](https://github.com/pbek/QOwnNotes/issues/2285))
 
 ## 21.10.15
 - many ways to be more tolerant with externally modified notes were implemented,

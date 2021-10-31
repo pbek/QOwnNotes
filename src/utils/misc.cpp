@@ -2640,3 +2640,50 @@ bool Utils::Misc::isSimilar(const QString &str1, const QString &str2, int thresh
 
     return diff <= threshold;
 }
+
+/**
+ * Returns the base url from a string
+ * e.g. for "https://www.domain.com/test/page.html" it returns "https://www.domain.com/test/"
+ */
+QString Utils::Misc::getBaseUrlFromUrlString(const QString &urlString) {
+    QUrl url(urlString);
+    QString result = url.scheme() + QStringLiteral("://") + url.host();
+
+    if (url.port() != -1) {
+        result += QStringLiteral(":") + QString::number(url.port());
+    }
+
+    return result;
+}
+
+/**
+ * Attempts to transform links starting with a "/", like "/my-page.html", to
+ * "http://domain.com/my-page.html"
+ *
+ * @param html
+ * @param baseUrl
+ * @return
+ */
+QString Utils::Misc::createAbsolutePathsInHtml(const QString &html, QString baseUrl) {
+    baseUrl = getBaseUrlFromUrlString(baseUrl);
+    QString result = html;
+
+    QRegularExpression regex("(href|src)=\"(?!http)([^\"]+)\"");
+    QRegularExpressionMatchIterator i = regex.globalMatch(html);
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString attribute = match.captured(1);
+        QString value = match.captured(2);
+
+        if (!value.startsWith('/')) {
+            continue;
+        }
+
+        const QString newValue = QStringLiteral("%1=\"%2\"")
+                                     .arg(attribute, baseUrl + value);
+        result.replace(match.captured(0), newValue);
+    }
+
+    return result;
+}
