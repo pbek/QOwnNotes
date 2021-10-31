@@ -1259,7 +1259,7 @@
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="169"/>
-<location filename="../widgets/fontcolorwidget.cpp" line="718"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="725"/>
 <source>Export schema</source>
 <translation>Şemayı dışa aktar</translation>
 </message>
@@ -1285,7 +1285,7 @@
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="141"/>
-<location filename="../widgets/fontcolorwidget.cpp" line="760"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="769"/>
 <source>Import schema</source>
 <translation>Şemayı içe aktar</translation>
 </message>
@@ -1335,195 +1335,200 @@
 <translation>Altıçizili</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="204"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="210"/>
 <source>Text preset</source>
 <translation>Önceden ayarlanmış metin</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="205"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="211"/>
 <source>Emphasized text</source>
 <translation>Vurgulanmış metin</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="206"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="213"/>
 <source>Strong text</source>
 <translation>Güçlü metin</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="240"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="247"/>
 <source>(HTML) Comment</source>
 <translation>(HTML) Yorum</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="230"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="237"/>
 <source>Header, level 1</source>
 <translation>Başlık, Seviye 1</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="207"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="212"/>
+<source>Underlined text</source>
+<translation type="unfinished">Underlined text</translation>
+</message>
+<message>
+<location filename="../widgets/fontcolorwidget.cpp" line="214"/>
 <source>Link</source>
 <translation>Link</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="208"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="215"/>
 <source>Image</source>
 <translation>Görüntü</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="209"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="216"/>
 <source>Code (block)</source>
 <translation>Kod (blok)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="210"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="217"/>
 <source>Code (inline)</source>
 <translation>Kod (satır içi)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="213"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="220"/>
 <source>Code (keyword)</source>
 <translation>Kod (anahtar kelime)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="215"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="222"/>
 <source>Code (type)</source>
 <translation>Kod (tür)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="216"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="223"/>
 <source>Code (comment)</source>
 <translation>Kod (yorum)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="218"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="225"/>
 <source>Code (string)</source>
 <translation>Kod (dize)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="219"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="226"/>
 <source>Code (built in)</source>
 <translation>Kod (yerleşik)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="221"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="228"/>
 <source>Code (num literal)</source>
 <translation>Kod (sayı değişmezi)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="223"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="230"/>
 <source>Code (other)</source>
 <translation>Kod (diğer)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="225"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="232"/>
 <source>List item</source>
 <translation>Liste öğesi</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="226"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="233"/>
 <source>Checkbox unchecked</source>
 <translation>Onay kutusunun işareti kaldırıldı</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="228"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="235"/>
 <source>Checkbox checked</source>
 <translation>Onay kutusu işaretlendi</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="231"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="238"/>
 <source>Header, level 2</source>
 <translation>Başlık, seviye 2</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="232"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="239"/>
 <source>Header, level 3</source>
 <translation>Başlık, seviye 3</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="233"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="240"/>
 <source>Header, level 4</source>
 <translation>Başlık, seviye 4</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="234"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="241"/>
 <source>Header, level 5</source>
 <translation>Başlık, seviye 5</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="235"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="242"/>
 <source>Header, level 6</source>
 <translation>Başlık, seviye 6</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="238"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="245"/>
 <source>Block quote</source>
 <translation>Blok alıntı</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="239"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="246"/>
 <source>Table</source>
 <translation>Tablo</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="241"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="248"/>
 <source>Masked syntax</source>
 <comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>Maskelenmiş sözdizimi</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="247"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="254"/>
 <source>Broken link</source>
 <translation>Kırık link</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="236"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="243"/>
 <source>Horizontal rule</source>
 <translation>Yatay kural</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="245"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="252"/>
 <source>Current line background color</source>
 <translation>Geçerli satır arka plan rengi</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="248"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="255"/>
 <source>Trailing space</source>
 <translation>Sondaki boşluk</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="264"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="271"/>
 <source>This item will be used to preset colors for the other items</source>
 <translation>Bu öğe, diğer öğeler için önceden ayarlanmış renkler kullanacak</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="548"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="555"/>
 <source>Copy color schema</source>
 <translation>Renk şemasını kopyala</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="549"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="556"/>
 <source>Color schema name</source>
 <translation>Renk şeması adı</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="551"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="558"/>
 <source>Copy</source>
 <comment>as noun</comment>
 <translation>Kopyala</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="669"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="676"/>
 <source>Remove schema</source>
 <translation>Şemayı kaldır</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="670"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="677"/>
 <source>Remove current schema? This cannot be undone!</source>
 <translation>Geçerli şema kaldırılsın mı? Bu geri alınamaz!</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="717"/>
-<location filename="../widgets/fontcolorwidget.cpp" line="759"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="724"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="768"/>
 <source>INI files</source>
 <translation>INI dosyaları</translation>
 </message>
@@ -2032,7 +2037,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="9081"/>
+<location filename="../mainwindow.cpp" line="9096"/>
 <source>Add a tag to the current note</source>
 <translation>Geçerli nota bir etiket ekle</translation>
 </message>
@@ -2068,7 +2073,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1241"/>
-<location filename="../mainwindow.cpp" line="6981"/>
+<location filename="../mainwindow.cpp" line="6996"/>
 <source>Custom actions</source>
 <translation>Özel eylemler</translation>
 </message>
@@ -2149,12 +2154,12 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1448"/>
-<location filename="../mainwindow.cpp" line="10777"/>
+<location filename="../mainwindow.cpp" line="10792"/>
 <source>Select &amp;all notes</source>
 <translation>Seç &amp;tüm notlar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6889"/>
+<location filename="../mainwindow.cpp" line="6904"/>
 <source>Insert &amp;link</source>
 <translation>Ekle &amp;link</translation>
 </message>
@@ -2204,7 +2209,7 @@
 <translation>Not ara veya oluştur</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9082"/>
+<location filename="../mainwindow.cpp" line="9097"/>
 <source>Add a tag to the selected notes</source>
 <translation>Seçilen notlara etiket ekle</translation>
 </message>
@@ -2215,7 +2220,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="886"/>
-<location filename="../mainwindow.cpp" line="6943"/>
+<location filename="../mainwindow.cpp" line="6958"/>
 <source>Export</source>
 <translation>Dışa aktar</translation>
 </message>
@@ -2226,7 +2231,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="929"/>
-<location filename="../mainwindow.cpp" line="6924"/>
+<location filename="../mainwindow.cpp" line="6939"/>
 <source>Print</source>
 <translation>Yazdır</translation>
 </message>
@@ -2600,7 +2605,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2244"/>
-<location filename="../mainwindow.cpp" line="11901"/>
+<location filename="../mainwindow.cpp" line="11916"/>
 <source>Remove current workspace</source>
 <translation>Geçerli çalışma alanını kaldır</translation>
 </message>
@@ -2642,7 +2647,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2318"/>
-<location filename="../mainwindow.cpp" line="6898"/>
+<location filename="../mainwindow.cpp" line="6913"/>
 <source>Insert block &amp;quote</source>
 <translation>Blok &amp;alıntı ekle</translation>
 </message>
@@ -2669,7 +2674,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2365"/>
-<location filename="../mainwindow.cpp" line="10753"/>
+<location filename="../mainwindow.cpp" line="10768"/>
 <source>Open note in different window</source>
 <translation>Notu farklı pencerede aç</translation>
 </message>
@@ -2690,7 +2695,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2405"/>
-<location filename="../mainwindow.cpp" line="10761"/>
+<location filename="../mainwindow.cpp" line="10776"/>
 <source>Show note git versions</source>
 <translation>Not git sürümlerini göster</translation>
 </message>
@@ -2773,7 +2778,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2567"/>
-<location filename="../mainwindow.cpp" line="12895"/>
+<location filename="../mainwindow.cpp" line="12910"/>
 <source>Automatically detect</source>
 <translation>Otomatik olarak algıla</translation>
 </message>
@@ -2988,22 +2993,22 @@
 <translation>Evernote'dan notları içe aktar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2992"/>
+<location filename="../mainwindow.cpp" line="3007"/>
 <source>Note was removed externally!</source>
 <translation>Not harici olarak kaldırılmıştır!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2993"/>
+<location filename="../mainwindow.cpp" line="3008"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>Geçerli not bu uygulama dışına kaldırıldı!
 Geçerli not geri yüklensin mi?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5611"/>
-<location filename="../mainwindow.cpp" line="5634"/>
-<location filename="../mainwindow.cpp" line="7422"/>
-<location filename="../mainwindow.cpp" line="10843"/>
+<location filename="../mainwindow.cpp" line="5626"/>
+<location filename="../mainwindow.cpp" line="5649"/>
+<location filename="../mainwindow.cpp" line="7437"/>
+<location filename="../mainwindow.cpp" line="10858"/>
 <source>&amp;Cancel</source>
 <translation>&amp;İptal</translation>
 </message>
@@ -3015,47 +3020,47 @@ Geçerli not geri yüklensin mi?</translation>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3239"/>
+<location filename="../mainwindow.cpp" line="3254"/>
 <source>new version %1 available</source>
 <translation>yeni sürüm %1 mevcut</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3353"/>
+<location filename="../mainwindow.cpp" line="3368"/>
 <source>Abort</source>
 <translation>Iptal etmek</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3353"/>
+<location filename="../mainwindow.cpp" line="3368"/>
 <source>Loading notes…</source>
 <translation>Notlar yükleniyor…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3567"/>
+<location filename="../mainwindow.cpp" line="3582"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>Yinelenen çakışan veritabanı kaldırıldı: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3568"/>
+<location filename="../mainwindow.cpp" line="3583"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>Yinelenen çakışan veritabanı kaldırılamadı: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3574"/>
+<location filename="../mainwindow.cpp" line="3589"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>Birleştirilmiş çakışan veritabanı kaldırıldı: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3575"/>
+<location filename="../mainwindow.cpp" line="3590"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>Birleştirilmiş çakışan veritabanı kaldırılamadı: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3590"/>
+<location filename="../mainwindow.cpp" line="3605"/>
 <source>Delete conflicted database copies</source>
 <translation>Çakışan veritabanı kopyalarını sil</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3613"/>
+<location filename="../mainwindow.cpp" line="3628"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>Kaldırılan %n çakışan veritabanı kopyası</numerusform>
@@ -3063,62 +3068,62 @@ Geçerli not geri yüklensin mi?</translation>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3777"/>
+<location filename="../mainwindow.cpp" line="3792"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>Lütfen notlarınızın saklandığı klasörü seçin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3803"/>
+<location filename="../mainwindow.cpp" line="3818"/>
 <source>No folder was selected</source>
 <translation>Hiçbir klasör seçilmedi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3805"/>
+<location filename="../mainwindow.cpp" line="3820"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>Bu yazılımı çalıştırmak için ownCloud notlar klasörünü seçmelisin!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3807"/>
+<location filename="../mainwindow.cpp" line="3822"/>
 <source>&amp;Retry</source>
 <translation>&amp;Tekrar dene</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3807"/>
+<location filename="../mainwindow.cpp" line="3822"/>
 <source>&amp;Exit</source>
 <translation>&amp;Çıkış</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4115"/>
+<location filename="../mainwindow.cpp" line="4130"/>
 <source>Remove current note</source>
 <translation>Geçerli notu sil</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4116"/>
+<location filename="../mainwindow.cpp" line="4131"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Geçerli notu sil:&lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4475"/>
+<location filename="../mainwindow.cpp" line="4490"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>Lütfen şifrelenmiş notun &lt;strong&gt;şifresini&lt;/strong&gt; girin.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4498"/>
+<location filename="../mainwindow.cpp" line="4513"/>
 <source>Note can't be decrypted!</source>
 <translation>Notun şifresi çözülemez!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4499"/>
+<location filename="../mainwindow.cpp" line="4514"/>
 <source>It seems that your password is not valid!</source>
 <translation>Anlaşılan şifreniz geçerli değil!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4675"/>
+<location filename="../mainwindow.cpp" line="4690"/>
 <source>Remove selected notes</source>
 <translation>Seçili notları kaldır</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4677"/>
+<location filename="../mainwindow.cpp" line="4692"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3132,13 +3137,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4767"/>
-<location filename="../mainwindow.cpp" line="11069"/>
+<location filename="../mainwindow.cpp" line="4782"/>
+<location filename="../mainwindow.cpp" line="11084"/>
 <source>Remove selected folders</source>
 <translation>Seçili klasörleri sil</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4768"/>
+<location filename="../mainwindow.cpp" line="4783"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation>
 <numerusform>Seçilen klasör(ler) &lt;strong&gt;%n&lt;/strong&gt; kaldırılsın mı? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Bu klasörlerdeki tüm dosyalar ve klasörler de kaldırılmış olacak!</numerusform>
@@ -3146,17 +3151,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4779"/>
+<location filename="../mainwindow.cpp" line="4794"/>
 <source>Removed note subfolder: %1</source>
 <translation>Not alt klasörü kaldırıldı: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4799"/>
+<location filename="../mainwindow.cpp" line="4814"/>
 <source>Remove selected tags</source>
 <translation>Seçilen etiketleri kaldır</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4800"/>
+<location filename="../mainwindow.cpp" line="4815"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>Seçilen etiket(ler) &lt;strong&gt;%n&lt;/strong&gt; kaldırılsın mı? Bu süreçte hiçbir not kaldırılmayacaktır.</numerusform>
@@ -3164,13 +3169,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4852"/>
-<location filename="../mainwindow.cpp" line="9867"/>
+<location filename="../mainwindow.cpp" line="4867"/>
+<location filename="../mainwindow.cpp" line="9882"/>
 <source>Move selected notes</source>
 <translation>Seçilen notları kaldır</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4853"/>
+<location filename="../mainwindow.cpp" line="4868"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Seçilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a taşınsın mı?</numerusform>
@@ -3178,13 +3183,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4958"/>
-<location filename="../mainwindow.cpp" line="9987"/>
+<location filename="../mainwindow.cpp" line="4973"/>
+<location filename="../mainwindow.cpp" line="10002"/>
 <source>Copy selected notes</source>
 <translation>Seçilen notları kopyala</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4959"/>
+<location filename="../mainwindow.cpp" line="4974"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Seçilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a kopyalansın mı?</numerusform>
@@ -3192,13 +3197,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4989"/>
-<location filename="../mainwindow.cpp" line="5138"/>
+<location filename="../mainwindow.cpp" line="5004"/>
+<location filename="../mainwindow.cpp" line="5153"/>
 <source>Done</source>
 <translation>Tamam</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4990"/>
+<location filename="../mainwindow.cpp" line="5005"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a kopyalandı.</numerusform>
@@ -3206,12 +3211,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5003"/>
+<location filename="../mainwindow.cpp" line="5018"/>
 <source>Tag selected notes</source>
 <translation>Seçilen notları etiketle</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5004"/>
+<location filename="../mainwindow.cpp" line="5019"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Seşilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt; ile etiketlensin mi?</numerusform>
@@ -3219,37 +3224,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5279"/>
+<location filename="../mainwindow.cpp" line="5294"/>
 <source>Restart application</source>
 <translation>Uygulamayı yeniden başlat</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5280"/>
+<location filename="../mainwindow.cpp" line="5295"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Değişikliklerin etkili olabilmesi için uygulamayı yeniden başlatmanız gerekebilir.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5283"/>
+<location filename="../mainwindow.cpp" line="5298"/>
 <source>Restart</source>
 <translation>Yeniden başlat</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5523"/>
+<location filename="../mainwindow.cpp" line="5538"/>
 <source>PDF files</source>
 <translation>PDF dosyaları</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5607"/>
+<location filename="../mainwindow.cpp" line="5622"/>
 <source>Todo lists disabled!</source>
 <translation>Yapılacaklar listeleri devre dışı bırakıldı!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5608"/>
+<location filename="../mainwindow.cpp" line="5623"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Yapılacaklar listelerini devre dışı bıraktınız. &lt;br /&gt; Lütfen ayarlarda &lt;strong&gt; Yapılacaklar &lt;/strong&gt; yapılandırmanızı kontrol edin!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5860"/>
+<location filename="../mainwindow.cpp" line="5875"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%1&lt;/strong&gt; herhangi bir terimin &lt;strong&gt;%n&lt;/strong&gt; oluşumunu bulundu</numerusform>
@@ -3257,110 +3262,110 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6453"/>
-<location filename="../mainwindow.cpp" line="6474"/>
+<location filename="../mainwindow.cpp" line="6468"/>
+<location filename="../mainwindow.cpp" line="6489"/>
 <source>Note was not found</source>
 <translation>Not bulunamadı</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6464"/>
+<location filename="../mainwindow.cpp" line="6479"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Not bulunamadı, &lt;strong&gt;%1&lt;/strong&gt; 'de yeni not oluştur?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6513"/>
+<location filename="../mainwindow.cpp" line="6528"/>
 <source>Failed to create note</source>
 <translation type="unfinished">Failed to create note</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6514"/>
+<location filename="../mainwindow.cpp" line="6529"/>
 <source>Note creation failed</source>
 <translation type="unfinished">Note creation failed</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6702"/>
+<location filename="../mainwindow.cpp" line="6717"/>
 <source>Note folders</source>
 <translation>Not dosyaları</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6825"/>
+<location filename="../mainwindow.cpp" line="6840"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>Not sürümleri şu anda ownCloud sunucunuzdan yüklenmiştir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6842"/>
+<location filename="../mainwindow.cpp" line="6857"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Çöp kutusundaki notlar şu anda ownCloud sunucunuzdan yüklendi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6908"/>
+<location filename="../mainwindow.cpp" line="6923"/>
 <source>Copy code block</source>
 <translation>Kod bloğunu kopyala</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6932"/>
+<location filename="../mainwindow.cpp" line="6947"/>
 <source>Print selected text</source>
 <translation>Seçili metni yazdır</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6938"/>
+<location filename="../mainwindow.cpp" line="6953"/>
 <source>Print selected text (preview)</source>
 <translation>Seçilen metni yazdır (önizleme)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6956"/>
+<location filename="../mainwindow.cpp" line="6971"/>
 <source>Export selected text as PDF</source>
 <translation>Seçili metni PDF olarak dışa aktar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6962"/>
+<location filename="../mainwindow.cpp" line="6977"/>
 <source>Export selected text as PDF (preview)</source>
 <translation>Seçili metni PDF olarak dışa aktar (önizleme)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7418"/>
+<location filename="../mainwindow.cpp" line="7433"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>Notunuzun şifresi çözülecek ve tekrar düz metin olarak saklanacaktır. Şifrelenmemiş notun muhtemelen sunucunuza senkronize edileceğini ve hassas metinlerin görülebileceğini unutmayın!&lt;br /&gt;Notunuzu şifresini çözmek istiyor musun?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7515"/>
+<location filename="../mainwindow.cpp" line="7530"/>
 <source>Markdown files</source>
 <translation>Markdown dosyaları</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7572"/>
+<location filename="../mainwindow.cpp" line="7587"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>%1 slotundaki yer işaretli not konumu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7587"/>
+<location filename="../mainwindow.cpp" line="7602"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>%1 slotundaki yer işaretine atlandı</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7815"/>
-<location filename="../mainwindow.cpp" line="7885"/>
+<location filename="../mainwindow.cpp" line="7830"/>
+<location filename="../mainwindow.cpp" line="7900"/>
 <source>Inserting image</source>
 <translation>Görüntü ekleniyor</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7820"/>
-<location filename="../mainwindow.cpp" line="7889"/>
+<location filename="../mainwindow.cpp" line="7835"/>
+<location filename="../mainwindow.cpp" line="7904"/>
 <source>Done inserting image</source>
 <translation>Görüntü eklemeyi tamamla</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7822"/>
+<location filename="../mainwindow.cpp" line="7837"/>
 <source>Inserting attachment</source>
 <translation>Ek ekleniyor</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7827"/>
+<location filename="../mainwindow.cpp" line="7842"/>
 <source>Done inserting attachment</source>
 <translation>Ek eklemeyi tamamla</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7839"/>
+<location filename="../mainwindow.cpp" line="7854"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>%n not(lar) %1'a kopyalandı</numerusform>
@@ -3368,7 +3373,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7849"/>
+<location filename="../mainwindow.cpp" line="7864"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>Not(lar) %n kopyalanamadı. (büyük olasılıkla zaten mevcut)</numerusform>
@@ -3376,7 +3381,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7859"/>
+<location filename="../mainwindow.cpp" line="7874"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>Not(lar) ın %n kopyalanması geçildi (işaretleme veya metin dosyası yok veya okunabilir değil)</numerusform>
@@ -3384,225 +3389,225 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7872"/>
+<location filename="../mainwindow.cpp" line="7887"/>
 <source>Saving temporary image</source>
 <translation>Geçici görüntü kaydediliyor</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7891"/>
+<location filename="../mainwindow.cpp" line="7906"/>
 <source>Temporary file can't be opened</source>
 <translation>Geçici dosya açılamıyor</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7929"/>
+<location filename="../mainwindow.cpp" line="7944"/>
 <source>Downloading %1</source>
 <translation>İndiriliyor %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8121"/>
+<location filename="../mainwindow.cpp" line="8136"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Yazı tipi boyutunu %1 puntoya ayarla</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9127"/>
+<location filename="../mainwindow.cpp" line="9142"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>'%1' etiketini mevcut nottan kaldır</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9128"/>
+<location filename="../mainwindow.cpp" line="9143"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>'%1' etiketini seçili notlardan kaldır</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9359"/>
+<location filename="../mainwindow.cpp" line="9374"/>
 <source>Rename tag</source>
 <translation>Etiketi yeniden adlandır</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9360"/>
+<location filename="../mainwindow.cpp" line="9375"/>
 <source>Assign color</source>
 <translation>Renk ata</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9361"/>
+<location filename="../mainwindow.cpp" line="9376"/>
 <source>Disable color</source>
 <translation>Rengi devre dışı bırak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9365"/>
+<location filename="../mainwindow.cpp" line="9380"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;Etiketleri şuraya taşı…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9576"/>
+<location filename="../mainwindow.cpp" line="9591"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>Kök dizine taşı</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10143"/>
+<location filename="../mainwindow.cpp" line="10158"/>
 <source>An url was opened at the current cursor position</source>
 <translation>Mevcut imleç konumunda bir URL açıldı</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10246"/>
+<location filename="../mainwindow.cpp" line="10261"/>
 <source>No equation was found in front of the cursor</source>
 <translation>İmlecin önünde denklem bulunamadı</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10266"/>
+<location filename="../mainwindow.cpp" line="10281"/>
 <source>Result for equation: %1 = %2</source>
 <translation>Denklem için sonuç: %1=%2</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10371"/>
+<location filename="../mainwindow.cpp" line="10386"/>
 <source>The scripting engine was reloaded</source>
 <translation>Komut dosyası motoru yeniden yüklendi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10405"/>
+<location filename="../mainwindow.cpp" line="10420"/>
 <source>HTML files</source>
 <translation>HTML dosyaları</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10689"/>
+<location filename="../mainwindow.cpp" line="10704"/>
 <source>Jump to the note's subfolder</source>
 <translation>Notun alt klasörüne atla
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10746"/>
+<location filename="../mainwindow.cpp" line="10761"/>
 <source>Open note in tab</source>
 <translation>Notu sekmede aç
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12456"/>
+<location filename="../mainwindow.cpp" line="12471"/>
 <source>A script update was found!</source>
 <translation>Bir komut dosyası güncellemesi bulundu!
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12462"/>
+<location filename="../mainwindow.cpp" line="12477"/>
 <source>Script updates</source>
 <translation>Komut dosyası güncellemeleri
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12463"/>
+<location filename="../mainwindow.cpp" line="12478"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>Komut dosyalarınızdaki güncellemeler, komut dosyası deposunda bulundu! Güncellemek ister misiniz?
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12478"/>
+<location filename="../mainwindow.cpp" line="12493"/>
 <source>No script updates were found</source>
 <translation>Komut dosyası güncellemesi bulunamadı
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13127"/>
+<location filename="../mainwindow.cpp" line="13142"/>
 <source>Toggle note stickiness</source>
 <translation>Not yapışkanlığını aç / kapat
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13133"/>
+<location filename="../mainwindow.cpp" line="13148"/>
 <source>Close other note tabs</source>
 <translation>Diğer not sekmelerini kapat</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10633"/>
-<location filename="../mainwindow.cpp" line="10827"/>
+<location filename="../mainwindow.cpp" line="10648"/>
+<location filename="../mainwindow.cpp" line="10842"/>
 <source>Rename note</source>
 <translation>Notu yeniden adlandır</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10635"/>
+<location filename="../mainwindow.cpp" line="10650"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>Notun dosya adını değiştirmenize izin verir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10649"/>
+<location filename="../mainwindow.cpp" line="10664"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;Notları şuraya taşı…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10650"/>
+<location filename="../mainwindow.cpp" line="10665"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;Notları şuraya kopyala…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10693"/>
+<location filename="../mainwindow.cpp" line="10708"/>
 <source>Move notes to subfolder…</source>
 <translation>Notları alt klasöre taşı…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10697"/>
+<location filename="../mainwindow.cpp" line="10712"/>
 <source>Copy notes to subfolder…</source>
 <translation>Notları alt klasöre kopyala…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10705"/>
+<location filename="../mainwindow.cpp" line="10720"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;Seçili notları ile etiketleyin…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10729"/>
+<location filename="../mainwindow.cpp" line="10744"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Seçili notlardaki etiketi kaldır…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10827"/>
+<location filename="../mainwindow.cpp" line="10842"/>
 <source>Name:</source>
 <translation>İsim:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10839"/>
+<location filename="../mainwindow.cpp" line="10854"/>
 <source>Note renaming not enabled!</source>
 <translation>Not yeniden adlandırma etkin değil!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11068"/>
+<location filename="../mainwindow.cpp" line="11083"/>
 <source>Rename subfolder</source>
 <translation>Alt klasörü yeniden adlandır</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11673"/>
+<location filename="../mainwindow.cpp" line="11688"/>
 <source>Create new workspace</source>
 <translation>Yeni çalışma alanı oluştur</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11674"/>
-<location filename="../mainwindow.cpp" line="11943"/>
+<location filename="../mainwindow.cpp" line="11689"/>
+<location filename="../mainwindow.cpp" line="11958"/>
 <source>Workspace name:</source>
 <translation>Çalışma alanı adı:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11792"/>
+<location filename="../mainwindow.cpp" line="11807"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>dolu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11799"/>
+<location filename="../mainwindow.cpp" line="11814"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>en az</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11902"/>
+<location filename="../mainwindow.cpp" line="11917"/>
 <source>Remove the current workspace?</source>
 <translation>Mevcut çalışma alanını kaldırılsın mı?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11942"/>
+<location filename="../mainwindow.cpp" line="11957"/>
 <source>Rename workspace</source>
 <translation>Çalışma alanını yeniden adlandır</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="12124"/>
+<location filename="../mainwindow.cpp" line="12139"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3611,42 +3616,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12395"/>
+<location filename="../mainwindow.cpp" line="12410"/>
 <source>Disallow all note editing</source>
 <translation>Tüm not düzenlemelerine izin verme</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12637"/>
+<location filename="../mainwindow.cpp" line="12652"/>
 <source>Select text files to import</source>
 <translation>Alınacak metin dosyalarını seçin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12667"/>
+<location filename="../mainwindow.cpp" line="12682"/>
 <source>Importing: %1</source>
 <translation>İçe aktarma: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12732"/>
+<location filename="../mainwindow.cpp" line="12747"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>'%1' başlığının panoya kopyalandığını unutmayın</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12826"/>
+<location filename="../mainwindow.cpp" line="12841"/>
 <source>Leave full-screen mode</source>
 <translation>Tam ekran modundan çık</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13012"/>
+<location filename="../mainwindow.cpp" line="13027"/>
 <source>Custom editor width</source>
 <translation>Özel düzenleyici genişliği</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13012"/>
+<location filename="../mainwindow.cpp" line="13027"/>
 <source>Characters:</source>
 <translation>Karakterler:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9101"/>
+<location filename="../mainwindow.cpp" line="9116"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n not seçildi</numerusform>
@@ -3655,7 +3660,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2450"/>
-<location filename="../mainwindow.cpp" line="12396"/>
+<location filename="../mainwindow.cpp" line="12411"/>
 <source>Allow all note editing</source>
 <translation>Tüm not düzenlemelerine izin ver</translation>
 </message>
@@ -3665,12 +3670,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>&amp;Etiket</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5078"/>
+<location filename="../mainwindow.cpp" line="5093"/>
 <source>Remove tag from selected notes</source>
 <translation>Seçilmiş notlardan etiketi kaldır</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5079"/>
+<location filename="../mainwindow.cpp" line="5094"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>Seçilmiş notlardan %n &lt;strong&gt;%1&lt;/strong&gt; etiketi kaldır?</numerusform>
@@ -3678,7 +3683,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5139"/>
+<location filename="../mainwindow.cpp" line="5154"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>Etiket &lt;strong&gt;%1&lt;/strong&gt; %n not(lar) dan kaldırılmış</numerusform>
@@ -3686,95 +3691,95 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5184"/>
+<location filename="../mainwindow.cpp" line="5199"/>
 <source>Current notes folder: </source>
 <translation>Geçerli notlar dosyası: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5187"/>
+<location filename="../mainwindow.cpp" line="5202"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>Notlar dosyasını ayarlayın. Varsayılan notların dosyası: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5391"/>
+<location filename="../mainwindow.cpp" line="5406"/>
 <source>Print note</source>
 <translation>Notu yazdır</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5466"/>
+<location filename="../mainwindow.cpp" line="5481"/>
 <source>Letter</source>
 <translation>Mektup</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5496"/>
+<location filename="../mainwindow.cpp" line="5511"/>
 <source>Portrait</source>
 <translation>Portre</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5496"/>
+<location filename="../mainwindow.cpp" line="5511"/>
 <source>Landscape</source>
 <translation>Manzara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5501"/>
+<location filename="../mainwindow.cpp" line="5516"/>
 <source>Orientation</source>
 <translation>Oryentasyon</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5501"/>
+<location filename="../mainwindow.cpp" line="5516"/>
 <source>Orientation:</source>
 <translation>Oryentasyon:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5524"/>
+<location filename="../mainwindow.cpp" line="5539"/>
 <source>Export current note as PDF</source>
 <translation>Varsayılan notu PDF olarak ihraç et</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5631"/>
+<location filename="../mainwindow.cpp" line="5646"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Herhangi bir yapılacak işler listesi seçmediniz. Lütfen &lt;br /&gt; &lt;strong&gt; yapılacak işler &lt;/strong&gt; yapılandırma ayarlarını gözden geçirin!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6684"/>
+<location filename="../mainwindow.cpp" line="6699"/>
 <source>Open QOwnNotes</source>
 <translation>QOwnNotes'ı açın</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6223"/>
-<location filename="../mainwindow.cpp" line="6734"/>
-<location filename="../mainwindow.cpp" line="10629"/>
-<location filename="../mainwindow.cpp" line="11062"/>
+<location filename="../mainwindow.cpp" line="6238"/>
+<location filename="../mainwindow.cpp" line="6749"/>
+<location filename="../mainwindow.cpp" line="10644"/>
+<location filename="../mainwindow.cpp" line="11077"/>
 <source>New note</source>
 <translation>Yeni not</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6751"/>
+<location filename="../mainwindow.cpp" line="6766"/>
 <source>Recent notes</source>
 <translation>Son notlar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6767"/>
+<location filename="../mainwindow.cpp" line="6782"/>
 <source>Show todo lists</source>
 <translation>Yapılacak işler listesini göster</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6779"/>
+<location filename="../mainwindow.cpp" line="6794"/>
 <source>Recent tasks</source>
 <translation>Son görevler</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6800"/>
+<location filename="../mainwindow.cpp" line="6815"/>
 <source>Quit</source>
 <translation>Çıkış</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8300"/>
+<location filename="../mainwindow.cpp" line="8315"/>
 <source>show notes from all note subfolders (%1)</source>
 <translation>tüm not altdosyalarındaki (%1) notları göster</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8323"/>
+<location filename="../mainwindow.cpp" line="8338"/>
 <source>show notes in note root folder (%1)</source>
 <translation>kaynak dosyadaki (%1) notları göster</translation>
 </message>
@@ -3782,36 +3787,36 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.ui" line="316"/>
 <location filename="../mainwindow.cpp" line="918"/>
 <location filename="../mainwindow.cpp" line="2256"/>
-<location filename="../mainwindow.cpp" line="8335"/>
+<location filename="../mainwindow.cpp" line="8350"/>
 <source>Note folder</source>
 <translation>Not dosyası</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9748"/>
-<location filename="../mainwindow.cpp" line="9815"/>
+<location filename="../mainwindow.cpp" line="9763"/>
+<location filename="../mainwindow.cpp" line="9830"/>
 <source>Copy to note folder</source>
 <translation>Not dosyasına kopyala</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9748"/>
-<location filename="../mainwindow.cpp" line="9816"/>
+<location filename="../mainwindow.cpp" line="9763"/>
+<location filename="../mainwindow.cpp" line="9831"/>
 <source>Move to note folder</source>
 <translation>Not dosyasına taşı</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9749"/>
-<location filename="../mainwindow.cpp" line="9817"/>
+<location filename="../mainwindow.cpp" line="9764"/>
+<location filename="../mainwindow.cpp" line="9832"/>
 <source>Copy to this subfolder</source>
 <translation>Şu altdosyaya kopyala</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9750"/>
-<location filename="../mainwindow.cpp" line="9818"/>
+<location filename="../mainwindow.cpp" line="9765"/>
+<location filename="../mainwindow.cpp" line="9833"/>
 <source>Move to this subfolder</source>
 <translation>Şu altdosyaya taşı</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9862"/>
+<location filename="../mainwindow.cpp" line="9877"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Seçilmiş %n not(lar) not altdosyasına taşınsın mı &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3819,13 +3824,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5283"/>
-<location filename="../mainwindow.cpp" line="12651"/>
+<location filename="../mainwindow.cpp" line="5298"/>
+<location filename="../mainwindow.cpp" line="12666"/>
 <source>Cancel</source>
 <translation>İptal et</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9958"/>
+<location filename="../mainwindow.cpp" line="9973"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n not(lar) not altdosyasına taşındı %2</numerusform>
@@ -3833,7 +3838,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9982"/>
+<location filename="../mainwindow.cpp" line="9997"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Seçilmiş %n not(lar) not altdosyasına kopyalansın mı &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3841,7 +3846,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10057"/>
+<location filename="../mainwindow.cpp" line="10072"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n not(lar) not altdosyasına kopyalandı %2</numerusform>
@@ -3849,57 +3854,57 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10751"/>
+<location filename="../mainwindow.cpp" line="10766"/>
 <source>Open note in external editor</source>
 <translation>Notu harici düzenleyicide aç</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10755"/>
+<location filename="../mainwindow.cpp" line="10770"/>
 <source>Show note in file manager</source>
 <translation>Notu dosya yöneticisinde göster</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10840"/>
+<location filename="../mainwindow.cpp" line="10855"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>Notunuzu yeniden adlandırmak için dosya adını başlıktan farklı olacak şekilde ayarlamanız gerekir.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11063"/>
+<location filename="../mainwindow.cpp" line="11078"/>
 <source>New subfolder</source>
 <translation>Yeni altdosya</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11073"/>
+<location filename="../mainwindow.cpp" line="11088"/>
 <source>Show folder in file manager</source>
 <translation>Dosyayı dosya yöneticisinde göster</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11118"/>
+<location filename="../mainwindow.cpp" line="11133"/>
 <source>Create a new folder</source>
 <translation>Yeni bir dosya oluştur</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11119"/>
+<location filename="../mainwindow.cpp" line="11134"/>
 <source>Folder name:</source>
 <translation>Dosya adı:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8259"/>
+<location filename="../mainwindow.cpp" line="8274"/>
 <source>show all untagged notes (%1)</source>
 <translation>tüm etiketsiz notları göster (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8261"/>
+<location filename="../mainwindow.cpp" line="8276"/>
 <source>Untagged notes</source>
 <translation>Etiketsiz notlar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10406"/>
+<location filename="../mainwindow.cpp" line="10421"/>
 <source>Export current note as HTML file</source>
 <translation>Geçerli notu HTML dosyası olarak dışa aktar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5475"/>
+<location filename="../mainwindow.cpp" line="5490"/>
 <source>Page size</source>
 <translation>Sayfa boyutu</translation>
 </message>
@@ -3909,27 +3914,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>araç çubuğundan çık</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5475"/>
+<location filename="../mainwindow.cpp" line="5490"/>
 <source>Page size:</source>
 <translation>Sayfa boyutu:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5592"/>
+<location filename="../mainwindow.cpp" line="5607"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes anonim kullanım verilerini izleyecek, bu QOwnNotes'un daha sonra hangi bölümlerinin geliştirileceğine karar vermeye ve bulmaya yardımcı oluyor ve bugları düzeltiyor. Bu hareketi ayarlardan devre dışı bırakabilirsiniz.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5596"/>
+<location filename="../mainwindow.cpp" line="5611"/>
 <source>&amp;Ok</source>
 <translation>&amp;Tamam</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10639"/>
+<location filename="../mainwindow.cpp" line="10654"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;Notları kaldır</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6889"/>
+<location filename="../mainwindow.cpp" line="6904"/>
 <source>&amp;Link selected text</source>
 <translation>&amp;Seçili metni linkle</translation>
 </message>
@@ -3939,28 +3944,28 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Görevleriniz sunucunuzdan yükleniyor</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2923"/>
+<location filename="../mainwindow.cpp" line="2942"/>
 <source>Current note was modified externally</source>
 <translation>Geçerli not harici olarak değiştirildi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3006"/>
-<location filename="../mainwindow.cpp" line="6161"/>
+<location filename="../mainwindow.cpp" line="3021"/>
+<location filename="../mainwindow.cpp" line="6176"/>
 <source>Stored current note to disk</source>
 <translation>Diske saklanan geçerli not</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3024"/>
+<location filename="../mainwindow.cpp" line="3039"/>
 <source>Note was modified externally: %1</source>
 <translation>Not harici olarak değiştirildi: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3046"/>
+<location filename="../mainwindow.cpp" line="3061"/>
 <source>Notes directory was modified externally</source>
 <translation>Notlar dizini harici olarak değiştirildi</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3108"/>
+<location filename="../mainwindow.cpp" line="3123"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>Diskte depolanan %n not(lar)</numerusform>
@@ -3968,58 +3973,58 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8225"/>
+<location filename="../mainwindow.cpp" line="8240"/>
 <source>show all notes (%1)</source>
 <translation>tüm notları göster (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8228"/>
-<location filename="../mainwindow.cpp" line="8303"/>
+<location filename="../mainwindow.cpp" line="8243"/>
+<location filename="../mainwindow.cpp" line="8318"/>
 <source>All notes</source>
 <translation>Tüm notlar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9351"/>
+<location filename="../mainwindow.cpp" line="9366"/>
 <source>&amp;Add tag</source>
 <translation>&amp;Etiket ekle</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9399"/>
+<location filename="../mainwindow.cpp" line="9414"/>
 <source>Tag could not be created!</source>
 <translation>Etiket oluşturulamadı!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9578"/>
+<location filename="../mainwindow.cpp" line="9593"/>
 <source>Move to this tag</source>
 <translation>Bu etikete taşı</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9613"/>
+<location filename="../mainwindow.cpp" line="9628"/>
 <source>Tag this</source>
 <translation>Bunu etiketle</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9638"/>
+<location filename="../mainwindow.cpp" line="9653"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>Etiket '%1' bu etikete taşınamıyor</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9687"/>
+<location filename="../mainwindow.cpp" line="9702"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>Yeni etikete taşınan etiket '%1'</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8565"/>
+<location filename="../mainwindow.cpp" line="8580"/>
 <source>show all notes tagged with '%1' (%2)</source>
 <translation>'%1' ile etiketlenen tüm notları göster (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9362"/>
+<location filename="../mainwindow.cpp" line="9377"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;Etiketleri kaldır</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5630"/>
+<location filename="../mainwindow.cpp" line="5645"/>
 <source>No selected todo lists!</source>
 <translation>Seçilen yapılacaklar listesi yok!</translation>
 </message>
@@ -4140,43 +4145,43 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Araç çubuğu isimsiz olarak yüklenemedi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2950"/>
+<location filename="../mainwindow.cpp" line="2965"/>
 <source>Overwriting external changes of: %1</source>
 <translation>Dış değişikliklerinin üzerine yazılıyor: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2971"/>
+<location filename="../mainwindow.cpp" line="2986"/>
 <source>Loading external changes from: %1</source>
 <translation>Dış değişikliklerinden yükleniyor: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3007"/>
-<location filename="../mainwindow.cpp" line="6162"/>
+<location filename="../mainwindow.cpp" line="3022"/>
+<location filename="../mainwindow.cpp" line="6177"/>
 <source>Current note could not be stored to disk</source>
 <translation>Geçerli not diske depolanamadı</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3196"/>
+<location filename="../mainwindow.cpp" line="3211"/>
 <source>Read-only</source>
 <translation>Sadece oku</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3198"/>
+<location filename="../mainwindow.cpp" line="3213"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>Not düzenleme devre dışı, etkinleştirmek için tıklayın</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3215"/>
+<location filename="../mainwindow.cpp" line="3230"/>
 <source>Line numbers</source>
 <translation>Satır numaraları</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3225"/>
+<location filename="../mainwindow.cpp" line="3240"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Nelerin değiştiğini görmek ve en yeni sürümü güncelleyebilmek için buraya tıkla</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3592"/>
+<location filename="../mainwindow.cpp" line="3607"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>OwnCloud senkronizasyon işleminizi engelleyebilecek &lt;strong&gt;%n&lt;/strong&gt; çakışan veritabanı kopyasının otomatik olarak silinmesiyle devam edin?</numerusform>
@@ -4184,7 +4189,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5062"/>
+<location filename="../mainwindow.cpp" line="5077"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n not(lar) "%2" ile etiketlendi</numerusform>
@@ -4192,7 +4197,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5856"/>
+<location filename="../mainwindow.cpp" line="5871"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%1 &lt;/strong&gt; 'in &lt;strong&gt;%n&lt;/strong&gt; oluşumu bulundu</numerusform>
@@ -4200,77 +4205,77 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6223"/>
+<location filename="../mainwindow.cpp" line="6238"/>
 <source>Note headline</source>
 <translation>Not başlığı</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6454"/>
+<location filename="../mainwindow.cpp" line="6469"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
 <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6468"/>
+<location filename="../mainwindow.cpp" line="6483"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6895"/>
+<location filename="../mainwindow.cpp" line="6910"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
 <translation>Blok &amp;alıntı seçili metni</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7941"/>
+<location filename="../mainwindow.cpp" line="7956"/>
 <source>Downloading images finished</source>
 <translation>Görüntü indirme bitti</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8093"/>
+<location filename="../mainwindow.cpp" line="8108"/>
 <source>Increased font size to %1 pt</source>
 <translation>%1 puntoya arttırılan yazı tipi boyutu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8110"/>
+<location filename="../mainwindow.cpp" line="8125"/>
 <source>Decreased font size to %1 pt</source>
 <translation>%1 puntoya azaltılan yazı tipi boyutu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5596"/>
 <location filename="../mainwindow.cpp" line="5611"/>
-<location filename="../mainwindow.cpp" line="5634"/>
-<location filename="../mainwindow.cpp" line="10843"/>
+<location filename="../mainwindow.cpp" line="5626"/>
+<location filename="../mainwindow.cpp" line="5649"/>
+<location filename="../mainwindow.cpp" line="10858"/>
 <source>Open &amp;settings</source>
 <translation>&amp;Ayarları aç</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1824"/>
-<location filename="../mainwindow.cpp" line="12803"/>
+<location filename="../mainwindow.cpp" line="12818"/>
 <source>leave</source>
 <translation>ayrıl</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7344"/>
+<location filename="../mainwindow.cpp" line="7359"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>Lütfen notu şifrelemek için &lt;strong&gt;şifrenizi&lt;/strong&gt; girin. &lt;br /&gt;Not içeriğini okumak için şifrenizi &lt;strong&gt;hatırlamanız&lt;/strong&gt; gerektiği aklınızda bulunsun&lt;br /&gt; ve bunu &lt;strong&gt;sadece&lt;/strong&gt; &lt;strong&gt;QOwnNotes&lt;/strong&gt; içinde yapabileceğiniz!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7417"/>
+<location filename="../mainwindow.cpp" line="7432"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>Not şifresini çöz ve sade metin olarak depola</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7422"/>
+<location filename="../mainwindow.cpp" line="7437"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;Şifre çöz</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7447"/>
+<location filename="../mainwindow.cpp" line="7462"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br /&gt;Şifrelenmiş notunuzu düzenleyebileceksiniz.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7516"/>
+<location filename="../mainwindow.cpp" line="7531"/>
 <source>Export current note as Markdown file</source>
 <translation>Geçerli notu Markdown dosyası olarak dışa aktar</translation>
 </message>
@@ -4596,17 +4601,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Not</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2670"/>
+<location filename="../entities/note.cpp" line="2675"/>
 <source>Could not read image file: %1</source>
 <translation>Resim dosyası okunamadı: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3329"/>
+<location filename="../entities/note.cpp" line="3334"/>
 <source>Note file path changed</source>
 <translation>Not dosya yolu değişti</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3330"/>
+<location filename="../entities/note.cpp" line="3335"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>Not yolunda bir değişiklik algılandı. &lt;strong&gt;%1 &lt;/strong&gt; bağlantılarının tüm tekrarlarını &lt;strong&gt;%2&lt;/strong&gt; ile ve &lt;strong&gt;%3&lt;/strong&gt; dosya adına sahip bağlantıları &lt;strong&gt;%4&lt;/strong&gt; ile değiştirmek ister misiniz?&lt;strong&gt;%n&lt;/strong&gt; not dosyasında?</numerusform>
@@ -4614,7 +4619,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3937"/>
+<location filename="../entities/note.cpp" line="3942"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>... ועוד %n הערה</numerusform>
@@ -4799,27 +4804,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="642"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="643"/>
 <source>No suggestions for %1</source>
 <translation>%1 için öneri yok</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="654"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="655"/>
 <source>Ignore</source>
 <translation>Aldırmamak</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="655"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="656"/>
 <source>Add to Dictionary</source>
 <translation>Sözlüğe Ekle</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="712"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="713"/>
 <source>Note editing disabled</source>
 <translation>Not düzenleme devre dışı</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="713"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="714"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
 <translation>Not düzenleme şu anda devre dışı, tekrar izin vermek istiyor musunuz?</translation>
 </message>

@@ -4,25 +4,36 @@ image: /img/bookmarks.png
 
 # Extensión del navegador QOwnNotes Web Companion
 
-Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) or the [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) to install the [**QOwnNotes Web Companion browser extension**](https://github.com/qownnotes/web-companion/).
+Allows for clipping from a browser page and managing browser bookmarks across browsers and operating systems.
 
-You can also find the extension on [GitHub](https://github.com/qownnotes/web-companion/).
-
-::: tip Info
-QOwnNotes needs to be running for the Web Companion browser extension to work. The browser extensions works **offline**, no internet connection needed.
+::: tip
+Info
+- QOwnNotes must be running for the Web Companion browser extension to work.
+- No internet connection needed. The browser extensions works **offline**.
 :::
 
-## Cortadora web
+## Installation
+
+1. Get the extension
+    - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+    - [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+    - You can also find the extension on [GitHub](https://github.com/qownnotes/web-companion/).
+2. Add the Security Token to configure the extension.
+    - The first time you click on the QOwnNotes browser extension icon you will receive a dialog box with a security token. Copy the token.
+    - Go to your browser's extension management location. Click into the QOwnNotes extension details.
+    - Paste the token into the Security Token field.
+
+## Web clipper
 
 ![web-clipper](/img/web-clipper.png)
 
-Haga clic con el botón derecho en una página web o en el texto seleccionado para usar la funcionalidad **web-clipper**. Allí también puede crear una nueva nota con una ** captura de pantalla** de la página web actual.
+Right-click on a webpage or selected text to use the **web-clipper** functionality. There you can also create a new note with a **screenshot** of the current webpage.
 
 ::: tip
-¡El cortador web también es programable! Eche un vistazo a [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) si desea controlar lo que recorta de las páginas web.
+The web clipper is also scriptable! Take a look at the [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) if you want to control what you clip from webpages.
 :::
 
-## Marcadores
+## Bookmarks
 
 ![bookmarks](/img/bookmarks.png)
 
