@@ -3,6 +3,11 @@
 ## 21.11.0
 - if the current note wasn't edited for a while, it is now possible again that it
   gets updated when there were small changes (for [#2027](https://github.com/pbek/QOwnNotes/issues/2027))
+- there now is a **Editor color schema** for **underlined text** (for [#2283](https://github.com/pbek/QOwnNotes/issues/2283))
+    - if a *Editor color schema* was exported now the exported file will be
+      opened in the file manager 
+    - if the *Bold*, *Italic* or *Underline* settings in *Editor color schema*
+      was toggled now there also will be asked for a restart of the application 
 
 ## 21.10.15
 - many ways to be more tolerant with externally modified notes were implemented,

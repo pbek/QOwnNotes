@@ -209,6 +209,7 @@ void FontColorWidget::updateTextItems(int index) {
 void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Text preset"), Utils::Schema::TextPresetIndex);
     addTextTreeWidgetItem(tr("Emphasized text"), MarkdownHighlighter::Italic);
+    addTextTreeWidgetItem(tr("Underlined text"), MarkdownHighlighter::StUnderline);
     addTextTreeWidgetItem(tr("Strong text"), MarkdownHighlighter::Bold);
     addTextTreeWidgetItem(tr("Link"), MarkdownHighlighter::Link);
     addTextTreeWidgetItem(tr("Image"), MarkdownHighlighter::Image);
