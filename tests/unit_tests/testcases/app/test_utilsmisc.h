@@ -23,6 +23,8 @@ class TestUtilsMisc : public QObject {
     void testTransformEvernoteImportCodeBlock2();
     void testTransformEvernoteImportRussian();
     void testTransformEvernoteImportHyperlinks();
+    void testGetBaseUrlFromUrlString();
+    void testCreateAbsolutePathsInHtml();
 };
 
 #endif    // TESTUTILSMISC_H

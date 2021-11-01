@@ -262,3 +262,20 @@ void TestUtilsMisc::testTransformEvernoteImportHyperlinks() {
 
     QVERIFY(testEvernoteImportText(content) == R"([4 High Value Trainings Access](https://seanmize.infusionsoft.com/app/linkClick/24286/45b5a4e4c9f46ab6/13909690/64482e72b8e684a3))");
 }
+
+void TestUtilsMisc::testGetBaseUrlFromUrlString() {
+    QString url = "https://www.example.com/path/to/file.html";
+    QString baseUrl = "https://www.example.com";
+    QString baseUrlWithBasePath = "https://www.example.com/path/to/";
+
+    QVERIFY(getBaseUrlFromUrlString(url) == baseUrl);
+    QVERIFY(getBaseUrlFromUrlString(url, true) == baseUrlWithBasePath);
+}
+
+void TestUtilsMisc::testCreateAbsolutePathsInHtml() {
+    QString url = "https://www.example.com/path/to/file.html";
+    QString html = R"(<html><head><title>Test</title></head><body><a href="/absolute.html">Link</a> <a href="relative.html">Link</a></body></html>)";
+    QString expectedHtml = R"(<html><head><title>Test</title></head><body><a href="https://www.example.com/absolute.html">Link</a> <a href="https://www.example.com/path/to/relative.html">Link</a></body></html>)";
+
+    QVERIFY(createAbsolutePathsInHtml(html, url) == expectedHtml);
+}
