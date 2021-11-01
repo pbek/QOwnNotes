@@ -2643,9 +2643,12 @@ bool Utils::Misc::isSimilar(const QString &str1, const QString &str2, int thresh
 
 /**
  * Returns the base url from a string
+ * e.g. for "https://www.domain.com/test/page.html" it returns "https://www.domain.com"
+ *
+ * with withBasePath == true:
  * e.g. for "https://www.domain.com/test/page.html" it returns "https://www.domain.com/test/"
  */
-QString Utils::Misc::getBaseUrlFromUrlString(const QString &urlString) {
+QString Utils::Misc::getBaseUrlFromUrlString(const QString &urlString, bool withBasePath) {
     QUrl url(urlString);
     QString result = url.scheme() + QStringLiteral("://") + url.host();
 
@@ -2653,19 +2656,29 @@ QString Utils::Misc::getBaseUrlFromUrlString(const QString &urlString) {
         result += QStringLiteral(":") + QString::number(url.port());
     }
 
+    if (withBasePath) {
+        result += url.path();
+
+        // cut everything after the last slash
+        result = result.left(result.lastIndexOf(QStringLiteral("/")) + 1);
+    }
+
     return result;
 }
 
 /**
- * Attempts to transform links starting with a "/", like "/my-page.html", to
- * "http://domain.com/my-page.html"
+ * Attempts to transform links to the same webpage to absolute links with url
+ * So for an url: https://www.example.com/path/to/file.html
+ * This: <a href="/absolute.html">Link</a> <a href="relative.html">Link</a>
+ * Would get: <a href="https://www.example.com/absolute.html">Link</a> <a href="https://www.example.com/path/to/relative.html">Link</a>
  *
  * @param html
- * @param baseUrl
+ * @param url
  * @return
  */
-QString Utils::Misc::createAbsolutePathsInHtml(const QString &html, QString baseUrl) {
-    baseUrl = getBaseUrlFromUrlString(baseUrl);
+QString Utils::Misc::createAbsolutePathsInHtml(const QString &html, const QString &url) {
+    const QString baseUrl = getBaseUrlFromUrlString(url);
+    const QString baseUrlWithBasePath = getBaseUrlFromUrlString(url, true);
     QString result = html;
 
     QRegularExpression regex("(href|src)=\"(?!http)([^\"]+)\"");
@@ -2673,15 +2686,12 @@ QString Utils::Misc::createAbsolutePathsInHtml(const QString &html, QString base
 
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
-        QString attribute = match.captured(1);
-        QString value = match.captured(2);
-
-        if (!value.startsWith('/')) {
-            continue;
-        }
-
+        const QString attribute = match.captured(1);
+        const QString value = match.captured(2);
+        const QString replaceUrl = value.startsWith('/') ? baseUrl : baseUrlWithBasePath;
         const QString newValue = QStringLiteral("%1=\"%2\"")
-                                     .arg(attribute, baseUrl + value);
+                                     .arg(attribute, replaceUrl + value);
+
         result.replace(match.captured(0), newValue);
     }
 
