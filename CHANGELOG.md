@@ -4,6 +4,7 @@
 - when capturing webpages with the [Web Companion browser extension](https://www.qownnotes.org/getting-started/browser-extension.html)
   now every relative link to the same webpage will be transformed to an absolute
   link with an url (for [#2285](https://github.com/pbek/QOwnNotes/issues/2285))
+- the styling of underlined text was improved (for [#2283](https://github.com/pbek/QOwnNotes/issues/2283))
 
 ## 21.11.0
 - if the current note wasn't edited for a while, it is now possible again that it
