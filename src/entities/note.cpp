@@ -2253,6 +2253,10 @@ static void highlightCode(QString &str, const QString &type, int cbCount) {
         for (int i = 0; i < cbCount; ++i) {
             // find endline
             const int endline = str.indexOf(QChar('\n'), currentCbPos);
+            // something invalid? => just skip it
+            if (endline == -1) {
+                break;
+            }
             const QString lang =
                 str.mid(currentCbPos + 3, endline - (currentCbPos + 3));
             // we skip it because it is inline code and not codeBlock
@@ -2267,6 +2271,9 @@ static void highlightCode(QString &str, const QString &type, int cbCount) {
             currentCbPos = endline + 1;
             // find the codeBlock end
             int next = str.indexOf(type, currentCbPos);
+            if (next == -1) {
+                break;
+            }
             // extract the codeBlock
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 2)
             const QStringRef codeBlock =
