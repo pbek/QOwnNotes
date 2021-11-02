@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.11.2
+- a preview problem (and possibly even a crash) when using `~~~~~~` in a code block was fixed
+  (for [#2288](https://github.com/pbek/QOwnNotes/issues/2288), thank you @Waqar144)
+
 ## 21.11.1
 - when capturing webpages with the [Web Companion browser extension](https://www.qownnotes.org/getting-started/browser-extension.html)
   now every relative link to the same webpage will be transformed to an absolute
