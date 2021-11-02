@@ -5,6 +5,10 @@
   (for [#2288](https://github.com/pbek/QOwnNotes/issues/2288), thank you, @Waqar144)
 - the width of the *Find action* command bar was increased, so it's more likely
   for shortcuts to fit in
+- the highlighting for search results ("search extra selections") in the current
+  note will now (hopefully) now also be removed when closing the search bar on
+  desktop environments where there is an issue with removing them
+  (for [#2287](https://github.com/pbek/QOwnNotes/issues/2287))
 
 ## 21.11.1
 - when capturing webpages with the [Web Companion browser extension](https://www.qownnotes.org/getting-started/browser-extension.html)
