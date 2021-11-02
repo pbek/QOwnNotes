@@ -366,8 +366,8 @@ void CommandBar::updateViewGeometry()
 
     const QSize centralSize = parentWidget()->size();
 
-    // width: 2.4 of editor, height: 1/2 of editor
-    const QSize viewMaxSize(centralSize.width() / 2.4, centralSize.height() / 2);
+    // width: 1/2 of editor, height: 1/2 of editor
+    const QSize viewMaxSize(centralSize.width() / 2, centralSize.height() / 2);
 
     // Position should be central over window
     const int xPos = std::max(0, (centralSize.width() - viewMaxSize.width()) / 2);
