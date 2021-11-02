@@ -2,7 +2,7 @@
 
 ## 21.11.2
 - a preview problem (and possibly even a crash) when using `~~~~~~` in a code block was fixed
-  (for [#2288](https://github.com/pbek/QOwnNotes/issues/2288), thank you @Waqar144)
+  (for [#2288](https://github.com/pbek/QOwnNotes/issues/2288), thank you, @Waqar144)
 - the width of the *Find action* command bar was increased, so it's more likely
   for shortcuts to fit in
 
