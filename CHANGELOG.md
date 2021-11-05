@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.11.3
+- now the search text that was entered in the note search panel will not be
+  highlighted automatically inside the note anymore, when that search text was
+  removed from the search panel (for [#2287](https://github.com/pbek/QOwnNotes/issues/2287))
+
 ## 21.11.2
 - a preview problem (and possibly even a crash) when using `~~~~~~` in a code block was fixed
   (for [#2288](https://github.com/pbek/QOwnNotes/issues/2288), thank you, @Waqar144)

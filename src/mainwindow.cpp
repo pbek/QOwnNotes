@@ -12590,9 +12590,10 @@ void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
         bool currentNoteChanged = currentNote.getId() != noteId;
         setCurrentNote(std::move(note), true, false);
 
-        // let's highlight the text from the search line edit and do a "in note
-        // search" if the current note has changed
-        if (currentNoteChanged) {
+        // Let's highlight the text from the search line edit and do an "in-note
+        // search" if the current note has changed and there is a search term
+        // in the search line edit
+        if (currentNoteChanged && !ui->searchLineEdit->text().isEmpty()) {
             searchForSearchLineTextInNoteTextEdit();
 
             // prevent that the last occurrence of the search term is found
