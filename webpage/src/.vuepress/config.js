@@ -77,6 +77,7 @@ const contributingNavItems = [
 const faqNavItems = [
   'faq/preview-without-edit',
   'faq/references',
+  'faq/metrics',
 ];
 
 const gettingStartedNavItem = '/getting-started/overview';
