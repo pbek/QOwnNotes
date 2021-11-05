@@ -1,6 +1,6 @@
 # Faire un don
 
-QOwnNotes ne génère aucun revenu (à but non lucratif).
+QOwnNotes ne génère aucun revenu (projet à but non lucratif).
 
 Si vous aimez QOwnNotes et que vous souhaitez **faire un don** au projet pour vous aider à payer l'hébergement, le domaine, etc., n'hésitez pas à le faire.
 
@@ -20,7 +20,7 @@ Vous pouvez **faire un don via PayPal** en cliquant sur ce bouton:
 
 Vous pouvez **faire un don via Liberapay** en cliquant sur ce bouton:
 
-<a href="https://liberapay.com/pbek/donate"><img alt="Faites un don avec Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+<a href="https://liberapay.com/pbek/donate"><img alt="Faire un don avec Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 
 ## Bitcoin
 
@@ -38,13 +38,13 @@ qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 
 ## Ethereum
 
-Puede **donar Ethereum ETH** a esta dirección de Ethereum ETH:
+Vous pouvez **faire un don d'Etherium ETH** à cette adresse Etherium ETH:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-Puede **donar Ethereum ETC** a esta dirección de Ethereum ETC:
+Vous pouvez **faire un don Ethereum ETC** à cette adresse ETC Ethereum:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

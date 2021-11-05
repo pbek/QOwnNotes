@@ -32,10 +32,10 @@ Vous pouvez utiliser votre propre format d'heure lors de l'insertion de l'heure 
 | `z`         | les millisecondes sans zéro non-significatif (0 à 999)                          |
 | `zzz`       | les millisecondes avec des zéros non-significatif (000 à 999)                   |
 | `AP` or `A` | utiliser l'affichage AM/PM. A/AP sera remplacé par `AM` ou `PM`.                |
-| `ap` or `a` | utiliser l'affichage am/pm. a/ap will be replaced by either `am` or `pm`.       |
+| `ap` or `a` | utiliser l'affichage am/pm. a/ap sera remplacé par `am` ou `pm`.                |
 | `t`         | le fuseau horaire (par exemple `CEST`)                                          |
 
-## Exemple de chaînes de format
+## Exemple de chaînes de formats
 
 | Format             | Résultat         |
 | ------------------ | ---------------- |

@@ -1,10 +1,10 @@
 # Installer sur Fedora Linux
 
-Il existe des référentiels QOwnNotes pour **Fedora 28 et supérieur**.
+Il existe des dépôts QOwnNotes pour **Fedora 28 et supérieur**.
 
-## On systems with config-manager dnf plugin
+## Systèmes avec greffon config-manager dnf
 
-Run the following shell commands as root to add the repository.
+Exécutez les commandes shell suivantes en tant que root pour ajouter le dépôt.
 
 ```bash
 dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
@@ -14,7 +14,7 @@ dnf install qownnotes
 ```
 
 ::: tip
-You may need to accept the repo key before you can download from it.
+Vous devrez peut-être accepter la clef du dépôt avant de pouvoir y télécharger du contenu.
 
 Si vous rencontrez des problèmes, importez vous-même la clé avec :
 
@@ -23,17 +23,17 @@ rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fed
 ```
 :::
 
-## Méthode d'installation héritée
+## Méthode d'installation obsolète
 
-Verwenden Sie diese Methode, wenn Ihre Fedora-Version das dnf-Plugin `config-manager` nicht unterstützt, führen Sie diese Befehle als root aus.
+Utilisez cette méthode si votre version de Fedora ne comporte pas le greffon dnf `config-manager`.
 
-Exécutez les commandes shell suivantes en tant que root pour approuver le référentiel.
+Exécutez les commandes shell suivantes en tant que root pour approuver le dépôt.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
 ```
 
-Exécutez les commandes shell suivantes en tant que root pour ajouter le référentiel et installer QOwnNotes à partir de là.
+Exécutez les commandes shell suivantes en tant que root pour ajouter le dépôt et installer QOwnNotes à partir de là.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -50,4 +50,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34) (this example link is for Fedora 34)
+[Téléchargement direct](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34) (ce lien d'exemple est pour Fedora 34)

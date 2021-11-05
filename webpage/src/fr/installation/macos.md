@@ -10,9 +10,9 @@ Si vous obtenez un message d'erreur `QOwnNotes.app ne peut pas être ouvert car 
 
 ## Homebrew
 
-Il y a un fût de QOwnNotes maintenu par la communauté à [ Homebrew ](https://formulae.brew.sh/cask/qownnotes).
+Il y a un fût de QOwnNotes maintenu par la communauté à [ Homebrew](https://formulae.brew.sh/cask/qownnotes).
 
-Vous pouvez l'installer avec:
+Vous pouvez l'installer avec :
 
 ```bash
 brew install qownnotes

@@ -277,32 +277,32 @@ function noteTaggingHook (note, action, tagName, newTagName);
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml) pour implémenter votre propre mécanisme de balisage.
 
 ::: warning
-Assurez-vous que votre action `liste` est vraiment rapide, car elle sera exécutée pour chaque note à chaque rechargement du dossier de notes!
+Assurez-vous que votre action `liste` est vraiment rapide car elle sera exécutée pour chaque note à chaque rechargement du dossier de notes !
 :::
 
 noteTaggingByObjectHook
 ----------------------
 
-De la même manière que [noteTaggingHook](#notetagginghook), vous pouvez implémenter votre propre note mécanisme de marquage, mais vous n'êtes pas lié aux noms de balises dans la racine de l'arborescence des balises. De cette façon, vous pouvez utiliser l'intégralité de l'arborescence des balises au lieu d'une seule liste de balises.
+De la même manière que [noteTaggingHook](#notetagginghook), vous pouvez implémenter votre propre mécanisme de balisage de note, mais vous n'êtes pas lié aux noms de balises dans la racine de l'arborescence des balises. De cette façon, vous pouvez utiliser l'intégralité de l'arborescence des balises au lieu d'une seule liste de balises.
 
-Avec `noteTaggingByObjectHook` vous obtenez un objet `TagApi` comme paramètre, au lieu d'un nom de balise. Et comme résultat pour l'action `list`, vous devez fournir une liste d'identifiants de balise.
+Avec `noteTaggingByObjectHook` vous obtenez un objet `TagApi` comme paramètre, au lieu d'un nom de balise. Et comme résultat pour l'action `list`, vous devez fournir une liste d'identifiants de balises.
 
 Cela signifie également que vous devez créer vous-même les balises manquantes pour pouvoir fournir une liste des identifiants de balises déjà existants pour l'action `list`.
 
 ### Appel de méthode et paramètres
 ```js
 / **
-  * Gère le marquage des notes pour une note
-  *
-  * Cette fonction est appelée lorsque des balises sont ajoutées, supprimées ou renommées dans
-  * une note ou les balises d'une note doivent être listées
-  *
-  * @param note
-  * L'action @param peut être "ajouter", "supprimer", "renommer" ou "lister"
-  * Balise @param à ajouter, supprimer ou renommer
-  * @param newTagName nom de la balise à renommer si action = "renommer"
-  * @return note chaîne de texte ou liste de chaînes d'identifiants de balises (si action = "list")
-  * /
+ * Gère le marquage des notes pour une note
+ *
+ * Cette fonction est appelée lorsque des balises sont ajoutées, supprimées ou renommées dans
+ * une note ou que les balises d'une note doivent être listées
+ *
+ * @param note
+ * L'action @param peut être "ajouter", "supprimer", "renommer" ou "lister"
+ * Balise @param à ajouter, supprimer ou renommer
+ * @param newTagName nom de la balise à renommer si action = "renommer"
+ * @return note chaîne de texte ou liste de chaînes d'identifiants de balises (si action = "list")
+ * /
 function noteTaggingByObjectHook(note, action, tag, newTagName);
 ```
 
@@ -311,20 +311,20 @@ Vous voudrez peut-être jeter un coup d'œil à l'exemple [note-tagging-by-objec
 autocompletionHook
 ------------------
 
-Vous pouvez renvoyer une liste de chaînes à ajouter à la liste de saisie semi-automatique lorsqu'elles sont appelées à saisie semi-automatique (par exemple en appuyant sur <kbd>Ctrl + Espace</kbd>).
+Vous pouvez renvoyer une liste de chaînes à ajouter à la liste de saisie semi-automatique lorsque la saisie semi-automatique est invoquée (par exemple en appuyant sur <kbd>Ctrl + Espace</kbd>).
 
 ### Appel de méthode et paramètres
 ```js
 /**
-  * Appelle la fonction autocompletionHook pour tous les composants de script
-  * Cette fonction est appelée lorsque l'auto-complétion est appelée dans une note
-  *
-  * @return QStringListe de texte pour la liste de saisie semi-automatique
-  */
+ * Appelle la fonction autocompletionHook pour tous les composants de script
+ * Cette fonction est appelée lorsque l'auto-complétion est invoquée dans une note
+ *
+ * @return QStringListe de texte pour la liste de saisie semi-automatique
+ */
 function callAutocompletionHook();
 ```
 
-Vous pouvez jeter un œil à l'exemple [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
 
 websocketRawDataHook
 --------------------
@@ -334,13 +334,13 @@ Ce hook est appelé lorsque des données sont envoyées depuis l'extension de na
 ### Appel de méthode et paramètres
 ```js
 /**
-  * @param requestType peut être "page" ou "selection"
-  * @param pageUrl l'url de la page Web sur laquelle la demande a été effectuée
-  * @param pageTitrer le titre de la page Web où la demande a été faite
-  * @param rawData les données qui ont été transmises, html pour requestType "page" ou texte brut pour requestType "selection"
-  * @param screenshotDataUrl l'url des données de la capture d'écran si la page Web où la demande a été faite
-  * @return true si les données ont été gérées par un hook
-  */
+ * @param requestType peut être "page" ou "selection"
+ * @param pageUrl l'url de la page Web sur laquelle la requête a été effectuée
+ * @param pageTitrer le titre de la page Web où la requête a été faite
+ * @param rawData les données qui ont été transmises, html pour requestType "page" ou texte brut pour requestType "selection"
+ * @param screenshotDataUrl l'url des données de la capture d'écran si la page Web où la demande a été faite
+ * @return true si les données ont été gérées par un hook
+ */
 function callHandleWebsocketRawDataHook (requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
 
@@ -355,17 +355,17 @@ Ce hook est appelé lorsqu'un thread de script de [startDetachedProcess](methods
 ```js
 /**
   * Cette fonction est appelée lorsqu'un thread de script est terminé.
- * Astuce: thread[1]==0 aide à déterminer si une grande partie des processus démarrés pour un certain identifiant est effectuée.
+ * Astuce: thread[1]==0 aide à déterminer si un lot de processus démarrés pour un certain identifiant est terminé.
  *
-  * @param {QString} callbackIdentifier - l'identifiant fourni lors de l'appel de startDetachedProcess ()
-  * @param {QString} resultSet - le résultat du processus
-  * @param {QVariantList} cmd - l'ensemble du tableau de commandes [0-executablePath, 1-parameters, 2-exitCode]
-  * @param {QVariantList} thread - le tableau d'informations sur les threads [paramètre de rappel passé à 0, 1 threads restants pour cet identifiant]
-  */
+ * @param {QString} callbackIdentifier - l'identifiant fourni lors de l'appel de startDetachedProcess ()
+ * @param {QString} resultSet - le résultat du processus
+ * @param {QVariantList} cmd - l'ensemble du tableau de commandes [0-executablePath, 1-parameters, 2-exitCode]
+ * @param {QVariantList} thread - le tableau d'information sur les threads [paramètre de rappel passé à 0, 1 threads restants pour cet identifiant]
+ */
 function onDetachedProcessCallback (callbackIdentifier, resultSet, cmd, thread);
 ```
 
-Vous pouvez jeter un œil à l'exemple [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml).
 
 windowStateChangedHook
 --------------
@@ -373,10 +373,10 @@ windowStateChangedHook
 ### Appel de méthode et paramètres
 ```js
 /**
-  * Cette fonction est appelée après le déclenchement d'un événement WindowStateChange
-  *
-  * @param {QString} windowState - le nouvel état de la fenêtre, la valeur du paramètre peut être "minimisée", "maximisée", "plein écran", "active" ou "nostate"
-  */
+ * Cette fonction est appelée après le déclenchement d'un événement WindowStateChange
+ *
+ * @param {QString} windowState - le nouvel état de la fenêtre, la valeur du paramètre peut être "minimized", "maximized", "fullscreen", "active" ou "nostate"
+ */
 function windowStateChangedHook (windowState);
 ```
 

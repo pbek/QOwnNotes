@@ -13,7 +13,7 @@ slackpkg update
 slackpkg install libproxy js185-1.0.0-x86_64-1
 ```
 
-Ensuite, vous pouvez extraire le référentiel slackbuilds de QOwnNotes et créer l'application.
+Vous pouvez ensuite consulter le dépôt slackbuilds de QOwnNotes et compiler l'application.
 
 ```bash
 cd /tmp
@@ -22,7 +22,7 @@ cd qownnotes-slackbuilds/14.2/qownnotes
 ./dobuild.sh
 ```
 
-Après cela, vous pouvez installer le package généré avec `installpkg`.
+Vous pouvez ensuite installer le paquet généré avec `installpkg`.
 
 ## Slackware 14.1
 
@@ -33,7 +33,7 @@ cd /tmp wget "http://bear.alienbase.nl/mirrors/people/alien/sbrepos/14.1/x86_64/
 sudo installpkg qt5-5.5.1-x86_64-4alien.txz
 ```
 
-Ensuite, vous pouvez extraire le référentiel slackbuilds de QOwnNotes et créer l'application.
+Vous pouvez ensuite consulter le dépôt slackbuilds de QOwnNotes et compiler l'application.
 
 ```bash
 cd /tmp
@@ -42,6 +42,6 @@ cd qownnotes-slackbuilds/14.1/qownnotes
 ./dobuild.sh
 ```
 
-Après cela, vous pouvez installer le package généré avec `installpkg`.
+Vous pouvez ensuite installer le paquet généré avec `installpkg`.
 
 [QOwnNotes Slackbuild on GitHub](https://github.com/pbek/qownnotes-slackbuilds/)

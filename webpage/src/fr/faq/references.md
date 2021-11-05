@@ -168,6 +168,17 @@ Ce que d'autres personnes ont dit à propos de QOwnNotes…
     - <https://www.slant.co/topics/6303/~note-taking-apps-for-linux#21>
 - [QOwnNotes - Notepad and todo-list manager with Markdown support and Nextcloud integration : coolgithubprojects](https://www.reddit.com/r/coolgithubprojects/comments/izg63b/qownnotes_notepad_and_todolist_manager_with/)
 - [QQwnNotes - Работа с заметками](https://континентсвободы.рф/%D0%B4%D1%80%D1%83%D0%B3%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/qqwnnotes-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B0%D0%BC%D0%B8.html)
+- [QOwnNotes 21.1.2 download free | macOS | AppKed](https://www.macbed.com/qownnotes/)
+- [QOwnNotes(开源Markdown笔记本) v20.12.9 绿色版 - 果核剥壳](https://www.ghpym.com/qownnotes.html)
+- [Аналоги OneNote в Linux | Losst](https://losst.ru/analogi-onenote-v-linux#4_QOwnNotes)
+- [Brutal Alternativa a Bloc de Notas - Descargar QOwnNotes Gratis Ultima Versión - YouTube](https://youtu.be/U52AQ8I3HHk?t=66)
+- <https://www.makeuseof.com/tag/best-windows-notepad-alternatives/>
+- [QOwnNotes(开源Markdown笔记本) v21.6.0 绿色版 - 果核剥壳](https://www.ghxi.com/qownnotes.html)
+- <https://www.slant.co/topics/6215/viewpoints/31/~simple-text-editors-for-windows~qownnotes>
+- [QOwnNotes - softonic](https://qownnotes.en.softonic.com/)
+- [QOwnNotes绿色版 21.7.12 | 强大的免费笔记软件 – 软件No1](https://www.rjno1.com/qownnotes/)
+- [QOwnNotes is really versatile! - The user friendliest, easy to use Note Taking App! - YouTube](https://www.youtube.com/watch?v=WFoRQf31-h0)
+- [Presentation about QOwnNotes by stevelitt](http://troubleshooters.com/linux/presentations/golug_qownnotes/golug_qownnotes.pdf)
 
 ## Mentions
 
@@ -260,8 +271,19 @@ Ce que d'autres personnes ont dit à propos de QOwnNotes…
 - [Nextcloud Files and Notes for secure and easy file and note sharing and collaboration – Nextcloud](https://nextcloud.com/blog/nextcloud-files-and-notes-for-secure-and-easy-file-and-note-sharing-and-collaboration/)
 - [How do you keep notes? - DEV](https://dev.to/madza/how-do-you-keep-notes-2p48)
     - <https://dev.to/ecognito/comment/12ikk>
+- [The Top 10 Productivity Apps on Desktop - Asian Efficiency](https://www.asianefficiency.com/technology/the-top-10-productivity-apps-on-desktop/)
+- [Tired of note-taking apps | Hacker News](https://news.ycombinator.com/item?id=23888799&p=2)
+- [Mark Text : un éditeur de texte encore jeune, mais très prometteur](https://www.nextinpact.com/article/44807/mark-text-editeur-texte-encore-jeune-mais-tres-prometteur)
+- [Synology Community](https://community.synology.com/enu/forum/1/post/124951)
+- [Trilium Notes - new note taking application : linux](https://www.reddit.com/r/linux/comments/9c34b8/trilium_notes_new_note_taking_application/e581cs1/)
+- <https://github.com/noraj/OSCP-Exam-Report-Template-Markdown>
+- [Inspire Writer - Voxcaster](https://www.vox.me.uk/post/2020/04/inspire-writer)
+- [Programmi Blocco notes alternative al Notepad su Windows - Navigaweb.net](https://www.navigaweb.net/2011/01/programmi-blocco-note-per-sostituire-il.html)
+- [Inspire Writer - Voxcaster](https://www.vox.me.uk/post/2020/04/inspire-writer/)
+- [OneNote für Windows: Microsoft arbeitet an einziger, einheitlicher App](https://stadt-bremerhaven.de/onenote-fuer-windows-microsoft-arbeitet-an-einziger-einheitlicher-app)
+- [Typora es un bonito y potente editor de texto multiplataforma compatible con Markdown y MathJax](https://www.genbeta.com/ofimatica/typora-es-un-bonito-y-potente-editor-de-texto-multiplataforma-compatible-con-markdown-y-mathjax)
 
-## QOwnNotes dans d'autres systèmes d'exploitation
+## QOwnNotes sous d'autres systèmes d'exploitation
 
 - Alpine Linux: <https://pkgs.alpinelinux.org/packages?name=qownnotes&branch=edge>
 - nixos: <https://search.nixos.org/packages?query=qownnotes>

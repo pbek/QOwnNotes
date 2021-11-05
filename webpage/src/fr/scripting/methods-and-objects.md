@@ -12,7 +12,7 @@ Lancer un programme externe en arrière-plan
   * @param executablePath le chemin de l'exécutable
   * @param parameters une liste de chaînes de paramètres
   * @param callbackIdentifier un identifiant à utiliser dans la fonction onDetachedProcessCallback () (optionnel)
-  * @param callbackParameter un paramètre supplémentaire pour les boucles ou autres (facultatif)
+  * @param callbackParameter un paramètre supplémentaire pour les boucles ou assimilés (facultatif)
   * @param processData données écrites dans le processus si le rappel est utilisé (facultatif)
   * @return true en cas de succès, false sinon
   * /
@@ -23,13 +23,13 @@ bool startDetachedProcess (QString executablePath, paramètres QStringList,
 
 ### Exemple
 
-Exemple simple:
+Exemple simple :
 
 ```js
 script.startDetachedProcess("/path/to/my/program", ["my parameter"]);
 ```
 
-Exemple simple:
+Exemple simple :
 
 ```js
 for (var i = 0; i < 100; i++) {
@@ -44,9 +44,9 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
 }
 ```
 
-Vous voudrez peut-être jeter un coup d'œil à l'exemple [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml), [callback.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml) ou [exécution-commande-après-note-update.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/execute-command-after-note-update.qml).
+Vous voudrez peut-être jeter un coup d'œil aux exemples [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml), [callback.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml) ou [exécution-commande-après-note-update.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/execute-command-after-note-update.qml).
 
-Vous pouvez également consulter le hook [onDetachedProcessCallback](hooks.html#ondetachedprocesscallback).
+Vous voudrez peut-être jeter un coup d'œil au hook [onDetachedProcessCallback](hooks.html#ondetachedprocesscallback).
 
 Lancer un programme externe et attendre la sortie
 ----------------------------------------------------
@@ -54,12 +54,12 @@ Lancer un programme externe et attendre la sortie
 ### Appel de méthode et paramètres
 ```cpp
 /**
-  * Wrapper QML pour démarrer un processus synchrone
-  *
-  * @param executablePath le chemin de l'exécutable
-  * @param parameters une liste de chaînes de paramètres
-  * @param data les données qui seront écrites dans le processus (facultatif)
-  * @return le texte qui a été renvoyé par le processus
+ * Wrapper QML pour démarrer un processus synchrone
+ *
+ * @param executablePath le chemin de l'exécutable
+ * @param parameters une liste de chaînes de paramètres
+ * @param data les données qui seront écrites dans le processus (facultatif)
+ * @return le texte qui a été renvoyé par le processus
 QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data);
 ```
 
@@ -68,7 +68,7 @@ QByteArray startSynchronousProcess(QString executablePath, QStringList parameter
 var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data");
 ```
 
-You may want to take a look at the example [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml).
+Vous voudrez peut-être jeter un œil à l'exemple [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml).
 
 Obtenir le chemin du dossier de notes actuel
 -------------------------------------------
@@ -408,7 +408,7 @@ script.createNote("Le titre de ma note\n===\n\nMon texte");
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
-Si vous avez désactivé que le titre de votre note détermine le nom de fichier de la note, vous devrez par la suite renommer votre fichier de note comme ceci :
+Si vous avez désactivé que le titre de votre note détermine le nom de fichier de la note, vous devrez par la suite renommer vous-même votre fichier de note comme ceci :
 
 ```js
 var note = script.currentNote();
@@ -667,13 +667,13 @@ if (script.platformIsLinux()) {
 }
 ```
 
-Marquer la note actuelle
+Étiquetter la note actuelle
 --------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Marque la note courante avec une étiquette nommée tagName
+ * Étiquette la note courante avec une étiquette nommée tagName
  *
  * @param tagName
  */
@@ -686,7 +686,7 @@ void ScriptingService::tagCurrentNote(QString tagName);
 script.tagCurrentNote("favorite");
 ```
 
-You might want to look at the custom action `favoriteNote` in the example [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'action personnalisée `favoriteNote` dans l'exemple [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml).
 
 Créer ou récupérer une balise par son nom liste de fil d'Ariane
 -------------------------------------------------
@@ -735,7 +735,7 @@ var tags = script.searchTagsByName("jeu");
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
 
-Rechercher des notes à partir de texte de note
+Rechercher des notes à partir de texte contenu dans le corps d'une note
 -----------------------------
 
 ### Appel de méthode et paramètres
@@ -809,8 +809,8 @@ Recharger le moteur de script
 ### Appel de méthode et paramètres
 ```cpp
 /**
-  * Recharge le moteur de script
-  */
+ * Recharge le moteur de script
+ */
 void ScriptingService :: reloadScriptingEngine ();
 ```
 
@@ -826,12 +826,12 @@ Récupérer une note par son nom de fichier
 ### Appel de méthode et paramètres
 ```cpp
 /**
-  * Récupère une note par son nom de fichier
-  *
-  * @param fileName string le nom de fichier de la note (obligatoire)
-  * @param noteSubFolderId ID entier du sous-dossier de notes
-  * @return NoteApi *
-  */
+ * Récupère une note par son nom de fichier
+ *
+ * @param fileName string le nom de fichier de la note (obligatoire)
+ * @param noteSubFolderId ID entier du sous-dossier de notes
+ * @return NoteApi *
+ */
 NoteApi * ScriptingService :: fetchNoteByFileName (QString fileName,
                                                  int noteSubFolderId);
 ```
@@ -848,11 +848,11 @@ Récupérer une note par son identifiant
 ### Appel de méthode et paramètres
 ```cpp
 /**
-  * Récupère une note par son identifiant
-  *
-  * @param id int l'identifiant de la note
-  * @return NoteApi *
-  */
+ * Récupère une note par son identifiant
+ *
+ * @param id int l'identifiant de la note
+ * @return NoteApi *
+ */
 NoteApi* ScriptingService::fetchNoteById(int id);
 ```
 
@@ -870,13 +870,13 @@ Vérifier si une note existe par son nom de fichier
 ### Appel de méthode et paramètres
 ```cpp
 /**
-  * Vérifie si un fichier de note existe par son nom de fichier
-  *
-  * @param fileName string le nom de fichier de la note (obligatoire)
-  * @param ignoreNoteId identifiant entier d'une note à ignorer lors de la vérification
-  * @param noteSubFolderId ID entier du sous-dossier de notes
-  * @return booléen
-  */
+ * Vérifie si un fichier de note existe par son nom de fichier
+ *
+ * @param fileName string le nom de fichier de la note (obligatoire)
+ * @param ignoreNoteId identifiant entier d'une note à ignorer lors de la vérification
+ * @param noteSubFolderId ID entier du sous-dossier de notes
+ * @return booléen
+ */
 booléen ScriptingService :: noteExistsByFileName (QString fileName,
                                              int ignoreNoteId,
                                              int noteSubFolderId);
@@ -896,11 +896,11 @@ Copier du texte dans le presse-papiers
 ### Appel de méthode et paramètres
 ```cpp
 /**
-  * Copie le texte dans le presse-papiers sous forme de texte brut ou de données mime html
-  *
-  * @param text string texte à mettre dans le presse-papiers
-  * @param asHtml bool si true, le texte sera défini en tant que données mime html
-  */
+ * Copie du texte dans le presse-papiers sous forme de texte brut ou de données mime html
+ *
+ * @param text string texte à mettre dans le presse-papiers
+ * @param asHtml bool si true, le texte sera défini en tant que données mime html
+ */
 void ScriptingService::setClipboardText(QString text, bool asHtml);
 ```
 
@@ -912,36 +912,36 @@ script.setClipboardText ("texte à copier");
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).
 
-Passer à une note
+Sauter vers une note
 -----------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
-  * Définit la note actuelle si la note est visible dans la liste des notes
-  *
-  * @param note NoteApi note pour passer à
-  */
+ * Définit la note actuelle si la note est visible dans la liste des notes
+ *
+ * @param note NoteApi note pour passer à
+ */
 void ScriptingService::setCurrentNote(NoteApi *note);
 ```
 
 ### Exemple
 ```js
-// sauter à la note
+// sauter vers la note
 script.setCurrentNote (note);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
 
-Accéder à un sous-dossier de notes
+Sauter vers un sous-dossier de notes
 ---------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
-  * Saute dans un sous-dossier de notes
+  * Saute vers un sous-dossier de notes
   *
-  * @param noteSubFolderPath {QString} chemin du sous-dossier, relatif au dossier de notes
+  * @param noteSubFolderPath {QString} chemin du sous-dossier, relativement au dossier de notes
   * @param separator {QString} séparateur entre les parties du chemin, par défaut "/"
   * @return true si le saut a réussi
   */
@@ -951,10 +951,10 @@ bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
 
 ### Exemple
 ```js
-// passe au sous-dossier de notes "un sous-dossier"
+// saute vers le sous-dossier de notes "un sous-dossier"
 script.jumpToNoteSubFolder("un sous-dossier");
 
-// passe au sous-dossier de notes "sub" à l'intérieur de "un sous-dossier"
+// saute vers le sous-dossier de notes "sub" à l'intérieur de "un sous-dossier"
 script.jumpToNoteSubFolder("un sous-dossier/sub");
 ```
 
@@ -990,13 +990,13 @@ Affichage d'une boîte de message de question
 /**
   * Affiche une boîte de message de question
   *
-  * Pour plus d'informations sur les boutons, voir:
+  * Pour plus d'informations sur les boutons, voir :
   * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
   *
   * @param text
   * @param title (facultatif)
   * Boutons @param boutons qui doivent être affichés (facultatif)
-  * @param defaultButton bouton par défaut qui sera sélectionné (facultatif)
+  * @param defaultButton bouton qui sera sélectionné par défaut (facultatif)
   * @return id du bouton enfoncé
   */
 int ScriptingService :: questionMessageBox (
@@ -1005,14 +1005,14 @@ int ScriptingService :: questionMessageBox (
 
 ### Exemple
 ```js
-// affiche une boîte de message de question avec un bouton d'application et un bouton d'aide
-// voir: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+// affiche une boîte de message de question avec un bouton "Appliquer" et un bouton "Aide"
+// voir : https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
 var result = script.questionMessageBox (
      "Le texte que je veux afficher", "Un titre facultatif", 0x01000000 | 0x02000000, 0x02000000);
 script.log (résultat);
 ```
 
-Pour plus d'informations sur les boutons, voir [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
+Pour plus d'informations sur les boutons voir [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
@@ -1135,7 +1135,7 @@ property variant settingsVariables: [
 ];
 ```
 
-Vous pouvez, de plus, outrepasser les `settingsVariables` avec une fonction spéciale `registerSettingsVariables ()` comme ceci :
+De plus, vous pouvez outrepasser les `settingsVariables` avec une fonction spéciale `registerSettingsVariables ()` comme ceci :
 
 ### Exemple
 ```js
@@ -1218,7 +1218,7 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 script.log (script.getApplicationSettingsVariable ("gitExecutablePath"));
 ```
 
-Gardez à l'esprit que les paramètres peuvent être vides, vous devez vous en occuper vous-même. `defaultValue` n'est utilisé que si le paramètre n'existe pas du tout.
+Gardez à l'esprit que les paramètres peuvent être vides, vous devez vous en occuper vous-même. `defaultValue` n'est utilisé que si le paramètre n'existe nulle part.
 
 Créer un répertoire cache
 --------------------------
@@ -1264,7 +1264,7 @@ bool ScriptingService :: clearCacheDir (const QString & subDir) const;
 script.clearCacheDir("mon-id-de-script ");
 ```
 
-Lire le chemin vers le répertoire de votre script
+Lire le chemin d'accès au répertoire de votre script
 ------------------------------------------------
 
 Si vous avez besoin d'obtenir le chemin d'accès au répertoire où votre script est placé pour, par exemple, charger d'autres fichiers, vous devez enregistrer une chaîne de propriété `scriptDirPath;`. Cette propriété sera définie avec le chemin d'accès au répertoire du script.
@@ -1336,7 +1336,7 @@ Obtenir le séparateur de répertoire natif
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Renvoie le séparateur natif de dossier "/" ou "\" sous Windows
+ * Renvoie le séparateur de répertoire natif "/" ou "\" sous Windows
  *
  * @return
  */
@@ -1364,7 +1364,7 @@ QStringList ScriptingService::selectedNotesPaths();
 
 ### Exemple
 ```js
-// renvoie une liste des chemins de toutes les notes sélectionnées
+// renvoie une liste des chemins d'accès de toutes les notes sélectionnées
 script.log(script.selectedNotesPaths());
 ```
 

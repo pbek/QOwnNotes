@@ -50,7 +50,7 @@ Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd>Ctrl + B</kbd> pour met
 Il existe également un paramètre facultatif pour activer le rendu souligné dans les *Paramètres d'aperçu*.
 
 ```markdown
-_underline_
+_souligner_
 ```
 
 ::: tip
@@ -182,16 +182,16 @@ cd Notes
 ```
 ~~~
 
-Currently supported languages (and code block identifiers) are:
+Les languages actuellement pris en charge (et les identificateurs de bloc de code) sont :
 
-* BASh scripting, `bash`
+* Script BASh, `bash`
 * C, `c`
-* C++, `cpp`
-* C++, `cxx`
-* C++, `c++`
-* C#, `c#`
+* C ++, `cpp`
+* C ++, `cxx`
+* C ++, `c ++`
+* C #, `c #`
 * CMake, `cmake`
-* C#, `csharp`
+* C #, `csharp`
 * CSS, `css`
 * Go, `go`
 * HTML, `html`
@@ -206,7 +206,7 @@ Currently supported languages (and code block identifiers) are:
 * Python, `python`
 * QML, `qml`
 * Rust, `rust`
-* Shell scripting, `sh`
+* Scripting shell, `sh`
 * SQL, `sql`
 * TypeScript, `ts`
 * TypeScript, `typescript`
@@ -216,18 +216,19 @@ Currently supported languages (and code block identifiers) are:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tables
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+## Tableaux
 
-``` démarque
+Les tableaux ne font pas partie de la spécification Markdown principale mais l'aperçu de QOwnNotes les prend en charge. 
+
+``` markdown
 Les deux points peuvent être utilisés pour aligner les colonnes.
 
-| Tables | Sont | Cool |
+| Les Tables | Sont | Chouettes |
 | ------------- |: -------------: | -----: |
-| col 3 est | aligné à droite | 1600 $ |
-| col 2 est | centré | 12 $ |
-| rayures zébrées | sont soignés | 1 $ |
+| col 3 est | alignée à droite | 1600 $ |
+| col 2 est | centrée | 12 $ |
+| rayures zébrées | sont soignées | 1 $ |
 
 Il doit y avoir au moins 3 tirets séparant chaque cellule d'en-tête.
 
@@ -324,7 +325,7 @@ Les commentaires ne sont pas affichés dans l'aperçu.
 ```
 
 ::: tip
-Un bloc de commentaire html en tête dans une note sera également ignoré dans la génération automatique du nom de fichier de la note.
+Un bloc de commentaire html en tête d'une note sera également ignoré dans la génération automatique du nom de fichier de la note.
 :::
 
 ## Listes de cases à cocher
@@ -342,15 +343,15 @@ Vous pouvez cocher / décocher les cases dans l'aperçu.
 
 ## Frontmatter
 
-Dans QOwnNotes, vous pouvez utiliser un en-tête (par exemple YAML) pour ajouter des méta-informations supplémentaires. Il ne sera **pas affiché dans l'aperçu** et ne perturbera **pas la génération automatique de nom de fichier de note**.
+Dans QOwnNotes, vous pouvez utiliser un « frontmatter » (par exemple YAML) pour ajouter des méta-informations supplémentaires. Il ne sera **pas affiché dans l'aperçu** et ne perturbera **pas la génération automatique de nom de fichier de note**.
 
 ```markdown
 ---
-title: Un nom
-description: Une description
+title: un nom
+description: une description
 ---
 
-# Remarque le titre commence ici
+# Le titre de la note commence ici
 
 Du texte
 ```

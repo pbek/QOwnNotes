@@ -3,15 +3,15 @@ title: QOwnNotes
 description: Prise de notes open source pour Linux, macOS et Windows, qui fonctionne avec Nextcloud Notes
 home: true
 heroImage: /screenshots/screenshot.png
-tagline: Prise de notes de démarquage de fichier en texte brut open source gratuite avec l'intégration Nextcloud / ownCloud
+tagline: Prise de notes en Markdown dans des fichier en texte brut, open source et gratuite, avec intégration Nextcloud / ownCloud
 actionText: Démarrage rapide →
 actionLink: getting-started/overview
 features:
   - 
-    title: Possédez vos notes
-    details: Toutes les notes sont stockées sous forme de fichiers de démarque en texte brut sur votre ordinateur, pas de "verrouillage du fournisseur". Utilisez des services de synchronisation comme Nextcloud pour synchroniser les notes sur tous les appareils.
+    title: Gardez le contrôle de vos notes
+    details: Toutes les notes sont stockées sous forme de fichiers texte brut en Markdown sur votre ordinateur, pas de « verrouillage par le fournisseur ». Utilisez des services de synchronisation comme Nextcloud pour synchroniser les notes sur différents appareils.
   - 
-    title: Faible encombrement
+    title: Faible empreinte
     details: Application native, optimisée pour la vitesse et consommant peu de ressources processeur et mémoire.
   - 
     title: Personnalisation
@@ -20,8 +20,8 @@ footer: Fabriqué par Patrizio Bekerle avec ❤️
 ---
 
 <div class="rss-block">
-    <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesBlog">Blog RSS</a></v-chip>
-    <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesReleases">Diffuse RSS</a></v-chip>
+    <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesBlog">Flux RSS du blog</a></v-chip>
+    <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesReleases">Flux RSS des versions</a></v-chip>
 </div>
 
 <Poll />

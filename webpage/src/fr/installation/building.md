@@ -1,10 +1,10 @@
-# Bâtiment QOwnNotes
+# Compiler QOwnNotes
 
-## Construire à partir de GitHub
+## Compiler à partir de GitHub
 
-Vous pouvez également créer vous-même QOwnNotes à partir du code source.
+Vous pouvez également compiler vous-même QOwnNotes à partir du code source.
 
-Récupérez le code directement depuis le référentiel git:
+Récupérez le code directement depuis le dépôt git :
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b master
@@ -12,9 +12,9 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Ensuite, téléchargez [Qt Creator](https://www.qt.io/download-open-source), ouvrez le fichier projet `src/QOwnNotes.pro` et cliquez sur **Build** / **Build Project QOwnNotes** .
+Téléchargez ensuite [Qt Creator](https://www.qt.io/download-open-source), ouvrez le fichier projet `src/QOwnNotes.pro` et cliquez sur **Build** / **Build Project QOwnNotes** .
 
-Ou vous pouvez le construire directement dans votre terminal:
+Vous pouvez également compiler directement depuis le terminal :
 
 ```bash
 cd src
@@ -34,6 +34,6 @@ Si vous souhaitez contribuer au code source du projet, veuillez envoyer vos requ
 
 Vous trouverez les archives source de QOwnNotes sur [archive source QOwnNotes](https://download.tuxfamily.org/qownnotes/src/).
 
-Les archives sources seront accessibles comme ça:
+Les archives sources seront accessibles sous cette forme :
 
 `https://download.tuxfamily.org/qownnotes/src/qownnotes-20.10.1.tar.xz`
