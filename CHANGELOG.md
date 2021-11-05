@@ -4,6 +4,12 @@
 - now the search text that was entered in the note search panel will not be
   highlighted automatically inside the note anymore, when that search text was
   removed from the search panel (for [#2287](https://github.com/pbek/QOwnNotes/issues/2287))
+- **note tag assignments** will now **not get removed immediately** when a note
+  folder is opened and a note file wasn't found anymore, instead they merely go
+  stale and will be removed after 10 days, if the note file didn't come back by
+  that time (for [#2292](https://github.com/pbek/QOwnNotes/issues/2292))
+    - this will for example prevent lost tag assignments when note file were not
+      available yet when QOwnNotes was opened or the note folder was switched
 
 ## 21.11.2
 - a preview problem (and possibly even a crash) when using `~~~~~~` in a code block was fixed

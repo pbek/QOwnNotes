@@ -1154,30 +1154,55 @@ void Tag::removeBrokenLinks() {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
+    // Check all note tag links if note is missing to set the link stale
     query.prepare(QStringLiteral("SELECT * FROM notetaglink"));
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            const QString noteFileName =
-                query.value(QStringLiteral("note_file_name")).toString();
-            const QString noteSubFolderPath =
-                query.value(QStringLiteral("note_sub_folder_path")).toString();
+            Note note = getNoteFromNoteTagLinkQuery(query);
 
-            const NoteSubFolder noteSubFolder = NoteSubFolder::fetchByPathData(
-                std::move(noteSubFolderPath), QStringLiteral("/"));
-            const Note note =
-                Note::fetchByName(noteFileName, noteSubFolder.getId());
-
-            // remove note tag link if note doesn't exist
+            // set note tag link stale if note doesn't exist
             if (!note.isFetched()) {
                 const int id = query.value(QStringLiteral("id")).toInt();
-                removeNoteLinkById(id);
+                setNoteLinkByIdStale(id);
             }
         }
     }
 
+    // Check all stale note tag links if note is still missing to remove the
+    // stale date if the note came back
+    query.prepare(QStringLiteral("SELECT * FROM notetaglink WHERE stale_DATE IS NOT NULL"));
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Note note = getNoteFromNoteTagLinkQuery(query);
+
+            // set note tag link to not stale if note exists again
+            if (note.isFetched()) {
+                const int id = query.value(QStringLiteral("id")).toInt();
+                setNoteLinkByIdNotStale(id);
+            }
+        }
+    }
+
+    // Remove all note links that were stale for too long
+    removeExpiredStaleNoteLinkBy();
+
     DatabaseService::closeDatabaseConnection(db, query);
+}
+
+Note Tag::getNoteFromNoteTagLinkQuery(const QSqlQuery &query) {
+    const QString noteFileName =
+        query.value(QStringLiteral("note_file_name")).toString();
+    const QString noteSubFolderPath =
+        query.value(QStringLiteral("note_sub_folder_path")).toString();
+
+    const NoteSubFolder noteSubFolder = NoteSubFolder::fetchByPathData(
+        noteSubFolderPath, QStringLiteral("/"));
+
+    return Note::fetchByName(noteFileName, noteSubFolder.getId());
 }
 
 /**
@@ -1186,11 +1211,83 @@ void Tag::removeBrokenLinks() {
  * @param id
  * @return
  */
-bool Tag::removeNoteLinkById(const int id) {
+bool Tag::removeNoteLinkById(int id) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare(QStringLiteral("DELETE FROM noteTagLink WHERE id = :id"));
     query.bindValue(QStringLiteral(":id"), id);
+
+    if (!query.exec()) {
+        // on error
+        qWarning() << __func__ << ": " << query.lastError();
+
+        DatabaseService::closeDatabaseConnection(db, query);
+        return false;
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+    return true;
+}
+
+/**
+ * Sets a note tag link stale by its id (if it wasn't already stale)
+ *
+ * @param id
+ * @return
+ */
+bool Tag::setNoteLinkByIdStale(int id) {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+    query.prepare(QStringLiteral("UPDATE noteTagLink SET stale_date = :date WHERE id = :id AND stale_date IS NULL"));
+    query.bindValue(QStringLiteral(":id"), id);
+    query.bindValue(QStringLiteral(":date"), QDateTime::currentDateTime());
+
+    if (!query.exec()) {
+        // on error
+        qWarning() << __func__ << ": " << query.lastError();
+
+        DatabaseService::closeDatabaseConnection(db, query);
+        return false;
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+    return true;
+}
+
+/**
+ * Sets a note tag link to not stale by its id
+ *
+ * @param id
+ * @return
+ */
+bool Tag::setNoteLinkByIdNotStale(int id) {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+    query.prepare(QStringLiteral("UPDATE noteTagLink SET stale_date = NULL WHERE id = :id"));
+    query.bindValue(QStringLiteral(":id"), id);
+
+    if (!query.exec()) {
+        // on error
+        qWarning() << __func__ << ": " << query.lastError();
+
+        DatabaseService::closeDatabaseConnection(db, query);
+        return false;
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+    return true;
+}
+
+/**
+ * Remove all note links that were stale for too long (10 days)
+ *
+ * @return
+ */
+bool Tag::removeExpiredStaleNoteLinkBy() {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+    query.prepare(QStringLiteral("DELETE FROM noteTagLink WHERE stale_date < :date"));
+    query.bindValue(QStringLiteral(":date"), QDateTime::currentDateTime().addDays(-10));
 
     if (!query.exec()) {
         // on error

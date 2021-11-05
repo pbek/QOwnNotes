@@ -1,8 +1,9 @@
 #pragma once
 
 #include <QColor>
-#include <QVector>
+#include <QDateTime>
 #include <QSqlQuery>
+#include <QVector>
 
 class Note;
 class NoteSubFolder;
@@ -179,7 +180,11 @@ protected:
 
     QString colorFieldName() const;
 
-    static bool removeNoteLinkById(const int id);
+    static bool removeNoteLinkById(int id);
+    static bool setNoteLinkByIdStale(int id);
+    static bool setNoteLinkByIdNotStale(int id);
+    static bool removeExpiredStaleNoteLinkBy();
+    static Note getNoteFromNoteTagLinkQuery(const QSqlQuery &query);
 };
 
 Q_DECLARE_TYPEINFO(Tag, Q_MOVABLE_TYPE);
