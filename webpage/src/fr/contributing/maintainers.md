@@ -1,4 +1,4 @@
-# Maintainers
+# Mainteneurs
 
 ## Mainteneurs
 

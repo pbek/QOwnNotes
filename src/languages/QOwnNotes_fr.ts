@@ -878,7 +878,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation> Utiliser FakeVim</translation>
+<translation>Utiliser FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
@@ -1297,7 +1297,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="232"/>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>Police:</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="279"/>
@@ -1362,7 +1362,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
 <source>Underlined text</source>
-<translation type="unfinished">Underlined text</translation>
+<translation>Texte souligné</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
@@ -6382,7 +6382,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="864"/>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-<translation type="unfinished">You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</translation>
+<translation>Vous pouvez accéder à votre serveur ownCloud depuis l'application pour - par exemple - gérer les notes mises à la corbeille, les versions ou le partage de notes. Cette intégration ne prend pas en charge la synchronisation de fichiers ; vous devrez installer « ownCloud sync client » pour cela.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1431"/>
@@ -6397,7 +6397,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1862"/>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
-<translation type="unfinished">You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</translation>
+<translation>Vous pouvez accéder à votre serveur own Cloud ou à un serveur générique CalDAV pour gérer vos listes de choses à faire.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2220"/>
@@ -6618,7 +6618,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6331"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
-<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
+<translation>Vous pouvez utiliser l'&lt;a href="%1"&gt;application Web QOwnNotes&lt;/a&gt; pour insérer des photos dans QOwnNotes sur votre bureau depuis votre téléphone mobile, via Internet.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6368"/>
@@ -6643,7 +6643,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6282"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
-<translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
+<translation>Installez &lt;a href="%1"&gt; l'extension de navigateur Web Companion &lt;/a&gt; à partir du &lt;a href="%2"&gt; Chrome Web Store &lt;/a&gt; ou du &lt;a href="%3"&gt; Firefox Add- page ons &lt;/a&gt; pour utiliser QOwnNotes comme web clipper ou pour la gestion de favoris.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6465"/>
@@ -6708,7 +6708,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6040"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
-<translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
+<translation>Activez la Corbeille locale pour garder une copie des notes jetées</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6076"/>

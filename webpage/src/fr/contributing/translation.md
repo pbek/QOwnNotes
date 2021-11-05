@@ -40,7 +40,7 @@ Veuillez prendre en compte quelques éléments lorsque vous travaillez sur le pr
 
    Si` notes trashed` est `gelöschte Dateien` en allemand, vous le traduisez toujours en utilisant cette expression. L'exception serait lorsque vous êtes grammaticalement obligé d'utiliser une alternative, mais restez simple.
 
-   ![screenshot](/img/crowdin/screenshot-7.png)
+   ![copie d'écran](/img/crowdin/screenshot-7.png)
 
    Afin de trouver toutes les expressions identiques, recherchez Crowdin et voyez toutes les occurrences d'un terme
 
@@ -50,19 +50,19 @@ Veuillez prendre en compte quelques éléments lorsque vous travaillez sur le pr
 
 5) Pour le pluriel, veuillez ajouter la traduction appropriée chacun dans le bloc correspondant.
 
-   ![screenshot](/img/crowdin/screenshot-4.png)
+   ![copie d'écran](/img/crowdin/screenshot-4.png)
 
 6) Les balises `%1` doivent être écrites sans espace, dans les langues RTL, vous pouvez soit insérer les balises de l'original, soit les écrire dans votre traduction.
 
-   ![screenshot](/img/crowdin/screenshot-1.png)
+   ![copie d'écran](/img/crowdin/screenshot-1.png)
 
-   ![screenshot](/img/crowdin/screenshot-5.png)
+   ![copie d'écran](/img/crowdin/screenshot-5.png)
 
-   ![screenshot](/img/crowdin/screenshot-3.png)
+   ![copie d'écran](/img/crowdin/screenshot-3.png)
 
 7) Utilisez `&` devant toute lettre qui devrait être utilisée dans un raccourci, peut être la même que dans l'original, mais ce n'est pas obligatoire.
 
-   ![screenshot](/img/crowdin/screenshot-4.png)
+   ![copie d'écran](/img/crowdin/screenshot-4.png)
 
 ## La traduction et la relecture sont amusantes!
 

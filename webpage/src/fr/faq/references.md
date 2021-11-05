@@ -261,7 +261,7 @@ Ce que d'autres personnes ont dit à propos de QOwnNotes…
 - [How do you keep notes? - DEV](https://dev.to/madza/how-do-you-keep-notes-2p48)
     - <https://dev.to/ecognito/comment/12ikk>
 
-## QOwnNotes on other OSes
+## QOwnNotes dans d'autres systèmes d'exploitation
 
 - Alpine Linux: <https://pkgs.alpinelinux.org/packages?name=qownnotes&branch=edge>
 - nixos: <https://search.nixos.org/packages?query=qownnotes>

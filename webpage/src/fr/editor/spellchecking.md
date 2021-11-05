@@ -29,7 +29,7 @@ Si vous ne trouvez pas votre langue dans ce tableau, il n’existe malheureuseme
 | 4  | be_BY          | Biélorusse                        |
 | 5  | bg_BG          | Bulgare                           |
 | 6  | bn_BD          | Bengali                           |
-| 7  | bo             | Tibetan                           |
+| 7  | bo             | Tibétain                          |
 | 8  | br_FR          | Breton - France                   |
 | 9  | bs_BA          | Bosniaque                         |
 | 10 | ca             | Catalan                           |
@@ -62,7 +62,7 @@ Si vous ne trouvez pas votre langue dans ce tableau, il n’existe malheureuseme
 | 37 | pt_PT          | Portugais                         |
 | 38 | ro             | Roumain                           |
 | 39 | ru_RU          | Russe                             |
-| 40 | si_LK          | Sinhalese                         |
+| 40 | si_LK          | Cingalais                         |
 | 41 | sk_SK          | Slovaque                          |
 | 42 | sl_Sl          | Slovène                           |
 | 43 | sq_AL          | Albanais                          |
@@ -76,5 +76,6 @@ Si vous ne trouvez pas votre langue dans ce tableau, il n’existe malheureuseme
 | 52 | vi             | Vietnamien                        |
 | 53 | zu_ZA          | Zulu (orthographe non disponible) |
 
-::: Crédits de pointe [Sonnet](https://github.com/KDE/sonnet) avec [Hunspell](https://hunspell.github.io/) est utilisé pour la vérification orthographique
+::: tip
+Remerciements [Sonnet](https://github.com/KDE/sonnet) avec [Hunspell](https://hunspell.github.io/) est utilisé pour la vérification orthographique
 :::

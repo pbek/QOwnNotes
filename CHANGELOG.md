@@ -10,6 +10,7 @@
   that time (for [#2292](https://github.com/pbek/QOwnNotes/issues/2292))
     - this will for example prevent lost tag assignments when note file were not
       available yet when QOwnNotes was opened or the note folder was switched
+- added more Catalan, French translation (thank you mguerra, chocolatine)
 
 ## 21.11.2
 - a preview problem (and possibly even a crash) when using `~~~~~~` in a code block was fixed
