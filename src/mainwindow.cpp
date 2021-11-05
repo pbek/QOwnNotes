@@ -4412,7 +4412,7 @@ void MainWindow::searchInNoteTextEdit(QString str) {
     QList<QTextEdit::ExtraSelection> extraSelections3;
 
     if (str.count() >= 2) {
-        // do a in-note search
+        // do an in-note search
         doSearchInNote(str);
         ui->noteTextEdit->moveCursor(QTextCursor::Start);
         ui->noteTextView->moveCursor(QTextCursor::Start);
