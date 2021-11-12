@@ -369,6 +369,13 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
     return false;
 }
 
+/**
+ * Exports a note to destinationPath as Markdown file
+ *
+ * @param destinationPath of the note file (with note name and extension)
+ * @param withAttachedFiles if true media files and attachments will be exported too
+ * @return
+ */
 bool Note::exportToPath(const QString &destinationPath, bool withAttachedFiles) {
     auto noteText = getNoteText();
     QFile file(destinationPath);
@@ -498,6 +505,10 @@ QStringList Note::getMediaFileList() {
     return fileList;
 }
 
+bool Note::hasMediaFiles() {
+    return !getMediaFileList().empty();
+}
+
 bool Note::updateRelativeMediaFileLinks() {
     static const QRegularExpression re(QStringLiteral(R"((!\[.*?\])\((.*media/(.+?))\))"));
     QRegularExpressionMatchIterator i = re.globalMatch(_noteText);
@@ -550,6 +561,10 @@ QStringList Note::getAttachmentsFileList() const {
     }
 
     return fileList;
+}
+
+bool Note::hasAttachments() {
+    return !getAttachmentsFileList().empty();
 }
 
 bool Note::updateRelativeAttachmentFileLinks() {

@@ -298,11 +298,15 @@ class Note {
 
     QStringList getMediaFileList();
 
+    bool hasMediaFiles();
+
     static Note fetchByUrlString(const QString &urlString);
 
     static QVector<int> fetchAllIdsByNoteTextPart(const QString &textPart);
 
     QStringList getAttachmentsFileList() const;
+
+    bool hasAttachments();
 
     QString getNotePreviewText(bool asHtml = false, int lines = 3) const;
 

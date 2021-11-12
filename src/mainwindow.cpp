@@ -7540,8 +7540,8 @@ void MainWindow::on_action_Export_note_as_markdown_triggered() {
                 fileName.append(QStringLiteral(".md"));
             }
 
-            bool withAttachedFiles = Utils::Gui::question(this,
-                tr("Export attached files"),
+            bool withAttachedFiles = (currentNote.hasMediaFiles() || currentNote.hasAttachments()) &&
+                 Utils::Gui::question(this, tr("Export attached files"),
                 tr("Do you also want to export media files and attachments of "
                    "the note? Files may be overwritten in the destination folder!"),
                                  QStringLiteral("note-export-attachments")) ==
