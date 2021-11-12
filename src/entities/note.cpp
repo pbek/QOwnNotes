@@ -369,6 +369,97 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
     return false;
 }
 
+bool Note::exportToPath(const QString &destinationPath, bool withAttachedFiles) {
+    auto noteText = getNoteText();
+    QFile file(destinationPath);
+    QFileInfo fileInfo(destinationPath);
+    auto absolutePath = fileInfo.absolutePath();
+
+    if (withAttachedFiles) {
+        // check if there are media files in the note
+        const QStringList mediaFileList = getMediaFileList();
+
+        if (!mediaFileList.empty()) {
+            qDebug() << __func__ << " - 'mediaFileList': " << mediaFileList;
+
+            // copy all images to the destination folder
+            for (const QString &fileName : mediaFileList) {
+                QFile mediaFile(NoteFolder::currentMediaPath() + QDir::separator() +
+                                fileName);
+
+                if (mediaFile.exists()) {
+                    mediaFile.copy(absolutePath + QDir::separator() + fileName);
+                }
+            }
+
+            static const QRegularExpression re(QStringLiteral(R"((!\[.*?\])\(.*media/(.+?)\))"));
+            QRegularExpressionMatchIterator i = re.globalMatch(noteText);
+
+            // remove the "media/" part from the file names in the note text
+            while (i.hasNext()) {
+                QRegularExpressionMatch match = i.next();
+                const QString wholeLinkText = match.captured(0);
+                const QString titlePart = match.captured(1);
+                const QString fileName = match.captured(2);
+
+                noteText.replace(wholeLinkText,
+                                titlePart + QStringLiteral("(./") + fileName + QChar(')'));
+            }
+        }
+
+        // check if there are attachment files in the note
+        const QStringList attachmentFileList = getAttachmentsFileList();
+
+        if (!attachmentFileList.empty()) {
+            qDebug() << __func__ << " - 'attachmentFileList': " << attachmentFileList;
+
+            // copy all attachment to the destination folder
+            for (const QString &fileName : attachmentFileList) {
+                QFile attachmentFile(NoteFolder::currentAttachmentsPath() + QDir::separator() +
+                                fileName);
+
+                if (attachmentFile.exists()) {
+                    attachmentFile.copy(absolutePath + QDir::separator() + fileName);
+                }
+            }
+
+            static const QRegularExpression re(QStringLiteral(R"((\[.*?\])\(.*attachments/(.+?)\))"));
+            QRegularExpressionMatchIterator i = re.globalMatch(noteText);
+
+            // remove the "attachments/" part from the file names in the note text
+            while (i.hasNext()) {
+                QRegularExpressionMatch match = i.next();
+                const QString wholeLinkText = match.captured(0);
+                const QString titlePart = match.captured(1);
+                const QString fileName = match.captured(2);
+
+                noteText.replace(wholeLinkText,
+                                titlePart + QStringLiteral("(./") + fileName + QChar(')'));
+            }
+        }
+    }
+
+    qDebug() << "exporting note file: " << destinationPath;
+
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        qCritical() << file.errorString();
+
+        return false;
+    }
+
+    QTextStream out(&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    out.setCodec("UTF-8");
+#endif
+    out << noteText;
+
+    file.flush();
+    file.close();
+    Utils::Misc::openFolderSelect(destinationPath);
+
+    return true;
+}
+
 /**
  * @brief Moves a note to another path
  *

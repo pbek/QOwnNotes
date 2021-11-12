@@ -145,6 +145,8 @@ class Note {
     bool copyToPath(const QString &destinationPath,
                     QString noteFolderPath = QString());
 
+    bool exportToPath(const QString &destinationPath, bool withAttachedFiles = false);
+
     bool moveToPath(const QString &destinationPath,
                     const QString &noteFolderPath = QString());
 

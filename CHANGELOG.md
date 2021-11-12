@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 21.11.4
+- you can now choose to also **export attached media files and attachments of a note**
+  when **exporting a note as Markdown file** (for [#1634](https://github.com/pbek/QOwnNotes/issues/1634))
+    - the media files and attachments used in the note will be copied to the
+      folder where the note is exported to
+    - this only works for files from the media and attachments folder of the note folder
+    - the links in the exported Markdown file will be updated 
+
 ## 21.11.3
 - now the search text that was entered in the note search panel will not be
   highlighted automatically inside the note anymore, when that search text was

@@ -7540,22 +7540,14 @@ void MainWindow::on_action_Export_note_as_markdown_triggered() {
                 fileName.append(QStringLiteral(".md"));
             }
 
-            QFile file(fileName);
+            bool withAttachedFiles = Utils::Gui::question(this,
+                tr("Export attached files"),
+                tr("Do you also want to export media files and attachments of "
+                   "the note? Files may be overwritten in the destination folder!"),
+                                 QStringLiteral("note-export-attachments")) ==
+                QMessageBox::Yes;
 
-            qDebug() << "exporting note file: " << fileName;
-
-            if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-                qCritical() << file.errorString();
-                return;
-            }
-            QTextStream out(&file);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-            out.setCodec("UTF-8");
-#endif
-            out << ui->noteTextEdit->toPlainText();
-            file.flush();
-            file.close();
-            Utils::Misc::openFolderSelect(fileName);
+            currentNote.exportToPath(fileName, withAttachedFiles);
         }
     }
 }
