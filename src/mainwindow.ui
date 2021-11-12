@@ -1671,7 +1671,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Export note as markdown file</string>
+    <string>&amp;Export note as Markdown file</string>
    </property>
   </action>
   <action name="actionGet_invloved">
