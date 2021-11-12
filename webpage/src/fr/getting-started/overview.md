@@ -5,7 +5,7 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot.png" alt="Capture d'écran de QOwnNotes" />
     <div class="sheet">
-      Modifiez vos notes avec la mise en évidence des démarques, les balises colorées et les sous-dossiers
+      Modifiez vos notes avec la mise en évidence Markdown, les balises colorées et les sous-dossiers
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -17,7 +17,7 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-vertical.png" alt="Vue verticale" />
     <div class="sheet">
-      Affichez vos notes dans une vue de démarque verticale en déplaçant les panneaux
+      Affichez vos notes dans une vue Markdown verticale en déplaçant les panneaux
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -170,9 +170,9 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 
 
 ## Appearance
-- **Mise en évidence de Markdown** des notes et un **mode de prévisualisation de Markdown**
+- **Mise en évidence du Markdown** des notes et un **mode de prévisualisation de Markdown**
 - **Prise en charge du thème du mode sombre**
-- **Prise en charge de la thématisation** pour la mise en évidence de la syntaxe de démarque****
+- **Prise en charge de la thématisation** pour la mise en évidence de la syntaxe Markdown****
 - Tous les panneaux **peuvent être placés où vous voulez**, ils peuvent même **flotter** ou **empiler** (entièrement ancrable)
 - Prise en charge des **icônes de thème freedesktop**, vous pouvez utiliser QOwnNotes avec vos **icônes de bureau natives** et avec votre **thème de bureau sombre préféré**
 - **Distraction free mode**, **Full-screen mode** en **Typewriter mode**

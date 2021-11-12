@@ -875,48 +875,48 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>使用 FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished">Read .vimrc from location:</translation>
+<translation>读取 .vimrc 文件</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished">Show position of text marks</translation>
+<translation>显示下个文本标记的位置</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished">Pass control keys</translation>
+<translation>传输控制键</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished">Pass keys in insert mode</translation>
+<translation>在输入模式传输控制键</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>行首</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished">Tabulator size:</translation>
+<translation>制表符大小</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished">Smart tabulators</translation>
+<translation>智能制表符</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished">Highlight search results</translation>
+<translation>高亮搜索结果</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
@@ -926,67 +926,67 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished">Expand tabulators</translation>
+<translation>展开制表符</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished">Automatic indentation</translation>
+<translation>自动缩进</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished">Incremental search</translation>
+<translation>增量搜索</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished">Use search dialog</translation>
+<translation>使用搜索对话框</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished">Use smartcase</translation>
+<translation>使用智能大小写</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished">Use ignorecase</translation>
+<translation>忽略大小写</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished">Use wrapscan</translation>
+<translation>使用 wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished">Use tildeop</translation>
+<translation>使用 tileop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished">Show partial command</translation>
+<translation>显示部分命令</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>显示相对光标的行号</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished">Blinking cursor</translation>
+<translation>光标闪烁</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished">Scroll offset:</translation>
+<translation>滚动偏移量</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished">Backspace:</translation>
+<translation>退格键</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
@@ -996,37 +996,37 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished">Use Vim-style Editing</translation>
+<translation>使用 vim 风格编辑</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>显示相对包含文本游标的行的行号</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
+<translation>不在 FakeVim 模式中将类似 Ctrl+S 的按键序列转义，而是将它们当作一般的快捷键。这样访问一些核心功能更便捷，但是会失去 FakeVim 的一些特性。</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
+<translation>在插入模式下不要转义某些按键以便能正确完整和展开代码。</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished">Vim tabstop option.</translation>
+<translation>Vim 的 tabstop 选项。</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
+<translation>留空以使用默认路径，例如在 Windows 上是 %USERPROFILE%\_vimrc, 其他系统上是 ~/.vimrc.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>默认: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1066,12 +1066,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>输入 Meta-Shift-Y, Meta-Shift-Y 退出 FakeVim 模式。</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
+<translation>按 Alt-Y, Alt-Y 键退出 FakeVim 模式</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1289,7 +1289,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="232"/>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>字体:</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="279"/>
@@ -1354,7 +1354,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
 <source>Underlined text</source>
-<translation type="unfinished">Underlined text</translation>
+<translation>标下划线的文本</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
@@ -1619,67 +1619,67 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>导入 Joplin</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="48"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>导入文件夹</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>请从你想要导入笔记的文件夹选择 "RAW-Joplin导出文件夹"：</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="37"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>选择目录</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>导入图像</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="30"/>
 <source>%v of %m file(s) imported</source>
-<translation type="unfinished">%v of %m file(s) imported</translation>
+<translation>已导入 %m 个文件中的 %v 个</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="115"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>导入笔记</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>导入标签</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="182"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>如果你有一个 JEX 文件(Joplin 的导出文件)，请将其解压到一个文件夹并选择该文件夹。</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="142"/>
 <source>Import metadata</source>
-<translation type="unfinished">Import metadata</translation>
+<translation>导入元数据</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="74"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW - Joplin 导出目录</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>导入附件</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="90"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>选择 "RAW - Joplin 导出目录" 以导入</translation>
 </message>
 </context>
 <context>
@@ -1812,7 +1812,7 @@
 <message>
 <location filename="../dialogs/linkdialog.ui" line="153"/>
 <source>Search for a heading to link to</source>
-<translation type="unfinished">Search for a heading to link to</translation>
+<translation>搜索要链接到的标题</translation>
 </message>
 <message>
 <location filename="../dialogs/linkdialog.ui" line="177"/>
@@ -2025,7 +2025,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="9096"/>
+<location filename="../mainwindow.cpp" line="9088"/>
 <source>Add a tag to the current note</source>
 <translation>为当前笔记添加标签</translation>
 </message>
@@ -2142,7 +2142,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1448"/>
-<location filename="../mainwindow.cpp" line="10792"/>
+<location filename="../mainwindow.cpp" line="10784"/>
 <source>Select &amp;all notes</source>
 <translation>选择所有笔记(&amp;A)</translation>
 </message>
@@ -2197,7 +2197,7 @@
 <translation>搜索或新建笔记</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9097"/>
+<location filename="../mainwindow.cpp" line="9089"/>
 <source>Add a tag to the selected notes</source>
 <translation>为选定的笔记添加标签</translation>
 </message>
@@ -2343,12 +2343,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1457"/>
 <source>Insert text &amp;link</source>
-<translation type="unfinished">Insert text &amp;link</translation>
+<translation>插入文本和链接</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1460"/>
 <source>Ctrl+L</source>
-<translation type="unfinished">Ctrl+L</translation>
+<translation>Ctrl+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1477"/>
@@ -2435,11 +2435,6 @@
 <location filename="../mainwindow.ui" line="1662"/>
 <source>&amp;Open note in external editor</source>
 <translation>用外部编辑器打开笔记(&amp;O)</translation>
-</message>
-<message>
-<location filename="../mainwindow.ui" line="1674"/>
-<source>&amp;Export note as markdown file</source>
-<translation>导出markdown格式笔记(&amp;E)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1683"/>
@@ -2584,7 +2579,7 @@
 <location filename="../mainwindow.ui" line="2208"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
 <extracomment>"Element" as in the chat service</extracomment>
-<translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
+<translation>打开 QOwnNotes 的 Matrix(Element) 房间</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2235"/>
@@ -2593,7 +2588,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2244"/>
-<location filename="../mainwindow.cpp" line="11916"/>
+<location filename="../mainwindow.cpp" line="11908"/>
 <source>Remove current workspace</source>
 <translation>删除当前工作区</translation>
 </message>
@@ -2662,7 +2657,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2365"/>
-<location filename="../mainwindow.cpp" line="10768"/>
+<location filename="../mainwindow.cpp" line="10760"/>
 <source>Open note in different window</source>
 <translation>在新窗口中打开笔记</translation>
 </message>
@@ -2683,7 +2678,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2405"/>
-<location filename="../mainwindow.cpp" line="10776"/>
+<location filename="../mainwindow.cpp" line="10768"/>
 <source>Show note git versions</source>
 <translation>显示笔记 git 版本</translation>
 </message>
@@ -2721,7 +2716,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2491"/>
 <source>Manage stored attachments</source>
-<translation type="unfinished">Manage stored attachments</translation>
+<translation>管理存储的附件</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2496"/>
@@ -2766,7 +2761,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2567"/>
-<location filename="../mainwindow.cpp" line="12910"/>
+<location filename="../mainwindow.cpp" line="12903"/>
 <source>Automatically detect</source>
 <translation>自动检测</translation>
 </message>
@@ -2823,22 +2818,22 @@
 <message>
 <location filename="../mainwindow.ui" line="2658"/>
 <source>Jump to navigation panel</source>
-<translation type="unfinished">Jump to navigation panel</translation>
+<translation>跳至导航面板</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2670"/>
 <source>Insert &amp;note link</source>
-<translation type="unfinished">Insert &amp;note link</translation>
+<translation>插入笔记链接</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2673"/>
 <source>Ctrl+Shift+L</source>
-<translation type="unfinished">Ctrl+Shift+L</translation>
+<translation>Ctrl+Shift+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2682"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>从 Joplin 导入笔记</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1908"/>
@@ -2879,7 +2874,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2178"/>
 <source>Manage stored image files</source>
-<translation type="unfinished">Manage stored image files</translation>
+<translation>管理保存的图像文件</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2220"/>
@@ -2901,6 +2896,11 @@
 <location filename="../mainwindow.ui" line="1596"/>
 <source>&amp;Print note (preview)</source>
 <translation>打印便笺（预览）(&amp;P)</translation>
+</message>
+<message>
+<location filename="../mainwindow.ui" line="1674"/>
+<source>&amp;Export note as Markdown file</source>
+<translation type="unfinished">&amp;Export note as Markdown file</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1704"/>
@@ -2988,7 +2988,7 @@ Restore current note?</source>
 <location filename="../mainwindow.cpp" line="5626"/>
 <location filename="../mainwindow.cpp" line="5649"/>
 <location filename="../mainwindow.cpp" line="7437"/>
-<location filename="../mainwindow.cpp" line="10858"/>
+<location filename="../mainwindow.cpp" line="10850"/>
 <source>&amp;Cancel</source>
 <translation>取消(&amp;C)</translation>
 </message>
@@ -3111,7 +3111,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4782"/>
-<location filename="../mainwindow.cpp" line="11084"/>
+<location filename="../mainwindow.cpp" line="11076"/>
 <source>Remove selected folders</source>
 <translation>删除所选的目录</translation>
 </message>
@@ -3141,7 +3141,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4867"/>
-<location filename="../mainwindow.cpp" line="9882"/>
+<location filename="../mainwindow.cpp" line="9874"/>
 <source>Move selected notes</source>
 <translation>移动所选的笔记</translation>
 </message>
@@ -3154,7 +3154,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4973"/>
-<location filename="../mainwindow.cpp" line="10002"/>
+<location filename="../mainwindow.cpp" line="9994"/>
 <source>Copy selected notes</source>
 <translation>复制所选的笔记</translation>
 </message>
@@ -3299,271 +3299,281 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Markdown 文件</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7587"/>
+<location filename="../mainwindow.cpp" line="7544"/>
+<source>Export attached files</source>
+<translation type="unfinished">Export attached files</translation>
+</message>
+<message>
+<location filename="../mainwindow.cpp" line="7545"/>
+<source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
+<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+</message>
+<message>
+<location filename="../mainwindow.cpp" line="7579"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>已收藏的笔记位于 %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7602"/>
+<location filename="../mainwindow.cpp" line="7594"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>跳到插槽 %1 书签位置</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7830"/>
-<location filename="../mainwindow.cpp" line="7900"/>
+<location filename="../mainwindow.cpp" line="7822"/>
+<location filename="../mainwindow.cpp" line="7892"/>
 <source>Inserting image</source>
 <translation>插入图像</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7835"/>
-<location filename="../mainwindow.cpp" line="7904"/>
+<location filename="../mainwindow.cpp" line="7827"/>
+<location filename="../mainwindow.cpp" line="7896"/>
 <source>Done inserting image</source>
 <translation>完成插入图像</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7837"/>
+<location filename="../mainwindow.cpp" line="7829"/>
 <source>Inserting attachment</source>
 <translation>插入附件</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7842"/>
+<location filename="../mainwindow.cpp" line="7834"/>
 <source>Done inserting attachment</source>
 <translation>已插入附件</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7854"/>
+<location filename="../mainwindow.cpp" line="7846"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>复制 %n 个笔记到 %1</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7864"/>
+<location filename="../mainwindow.cpp" line="7856"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>未能复制 %n 个笔记（很可能已经存在）</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7874"/>
+<location filename="../mainwindow.cpp" line="7866"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>跳过复制 %n 个笔记 (没有 markdown 或文本文件不可读)</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7887"/>
+<location filename="../mainwindow.cpp" line="7879"/>
 <source>Saving temporary image</source>
 <translation>保存临时图像</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7906"/>
+<location filename="../mainwindow.cpp" line="7898"/>
 <source>Temporary file can't be opened</source>
 <translation>无法打开临时文件</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7944"/>
+<location filename="../mainwindow.cpp" line="7936"/>
 <source>Downloading %1</source>
 <translation>正在下载%1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8136"/>
+<location filename="../mainwindow.cpp" line="8128"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>重置字体大小到 %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9142"/>
+<location filename="../mainwindow.cpp" line="9134"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>从当前笔记中删除标签 '%1'</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9143"/>
+<location filename="../mainwindow.cpp" line="9135"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>从所选笔记中删除标签 '%1'</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9374"/>
+<location filename="../mainwindow.cpp" line="9366"/>
 <source>Rename tag</source>
 <translation>重命名标签</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9375"/>
+<location filename="../mainwindow.cpp" line="9367"/>
 <source>Assign color</source>
 <translation>指定颜色</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9376"/>
+<location filename="../mainwindow.cpp" line="9368"/>
 <source>Disable color</source>
 <translation>禁用颜色</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9380"/>
+<location filename="../mainwindow.cpp" line="9372"/>
 <source>&amp;Move tags to…</source>
 <translation>将标签移到…(&amp;M)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9591"/>
+<location filename="../mainwindow.cpp" line="9583"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>移动到根目录</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10158"/>
+<location filename="../mainwindow.cpp" line="10150"/>
 <source>An url was opened at the current cursor position</source>
 <translation>在当前光标位置已经打开一个地址</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10261"/>
+<location filename="../mainwindow.cpp" line="10253"/>
 <source>No equation was found in front of the cursor</source>
 <translation>光标前没有找到方程式</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10281"/>
+<location filename="../mainwindow.cpp" line="10273"/>
 <source>Result for equation: %1 = %2</source>
 <translation>方程的结果︰ %1 = %2</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10386"/>
+<location filename="../mainwindow.cpp" line="10378"/>
 <source>The scripting engine was reloaded</source>
 <translation>脚本引擎已重新加载</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10420"/>
+<location filename="../mainwindow.cpp" line="10412"/>
 <source>HTML files</source>
 <translation>HTML 文件</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10704"/>
+<location filename="../mainwindow.cpp" line="10696"/>
 <source>Jump to the note's subfolder</source>
 <translation>跳到笔记的子文件夹</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10761"/>
+<location filename="../mainwindow.cpp" line="10753"/>
 <source>Open note in tab</source>
 <translation>在标签页中打开笔记</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12471"/>
+<location filename="../mainwindow.cpp" line="12463"/>
 <source>A script update was found!</source>
 <translation>找到脚本更新！</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12477"/>
+<location filename="../mainwindow.cpp" line="12469"/>
 <source>Script updates</source>
 <translation>脚本更新</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12478"/>
+<location filename="../mainwindow.cpp" line="12470"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>在脚本存储库中找到了脚本的更新！ 您要更新吗？</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12493"/>
+<location filename="../mainwindow.cpp" line="12485"/>
 <source>No script updates were found</source>
 <translation>找不到脚本更新</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13142"/>
+<location filename="../mainwindow.cpp" line="13135"/>
 <source>Toggle note stickiness</source>
 <translation>切换笔记附着性</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13148"/>
+<location filename="../mainwindow.cpp" line="13141"/>
 <source>Close other note tabs</source>
 <translation>关闭其他笔记标签页</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10648"/>
-<location filename="../mainwindow.cpp" line="10842"/>
+<location filename="../mainwindow.cpp" line="10640"/>
+<location filename="../mainwindow.cpp" line="10834"/>
 <source>Rename note</source>
 <translation>重命名笔记</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10650"/>
+<location filename="../mainwindow.cpp" line="10642"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>允许您修改笔记的文件名</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10664"/>
+<location filename="../mainwindow.cpp" line="10656"/>
 <source>&amp;Move notes to…</source>
 <translation>将笔记移到…(&amp;M)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10665"/>
+<location filename="../mainwindow.cpp" line="10657"/>
 <source>&amp;Copy notes to…</source>
 <translation>将笔记复制到…(&amp;M)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10708"/>
+<location filename="../mainwindow.cpp" line="10700"/>
 <source>Move notes to subfolder…</source>
 <translation>将笔记移至子文件夹…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10712"/>
+<location filename="../mainwindow.cpp" line="10704"/>
 <source>Copy notes to subfolder…</source>
 <translation>将笔记复制到子文件夹…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10720"/>
+<location filename="../mainwindow.cpp" line="10712"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>用... 标记所选笔记（&amp;T）</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10744"/>
+<location filename="../mainwindow.cpp" line="10736"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>从所选笔记中删除标签…(&amp;R)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10842"/>
+<location filename="../mainwindow.cpp" line="10834"/>
 <source>Name:</source>
 <translation>名称：</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10854"/>
+<location filename="../mainwindow.cpp" line="10846"/>
 <source>Note renaming not enabled!</source>
 <translation>注意：没有启用重命名 ！</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11083"/>
+<location filename="../mainwindow.cpp" line="11075"/>
 <source>Rename subfolder</source>
 <translation>重命名子文件夹</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11688"/>
+<location filename="../mainwindow.cpp" line="11680"/>
 <source>Create new workspace</source>
 <translation>创建新工作区</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11689"/>
-<location filename="../mainwindow.cpp" line="11958"/>
+<location filename="../mainwindow.cpp" line="11681"/>
+<location filename="../mainwindow.cpp" line="11950"/>
 <source>Workspace name:</source>
 <translation>工作区名称︰</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11807"/>
+<location filename="../mainwindow.cpp" line="11799"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>最大化</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11814"/>
+<location filename="../mainwindow.cpp" line="11806"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>最小化</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11917"/>
+<location filename="../mainwindow.cpp" line="11909"/>
 <source>Remove the current workspace?</source>
 <translation>删除当前工作区？</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11957"/>
+<location filename="../mainwindow.cpp" line="11949"/>
 <source>Rename workspace</source>
 <translation>重命名工作区</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="12139"/>
+<location filename="../mainwindow.cpp" line="12131"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3571,42 +3581,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12410"/>
+<location filename="../mainwindow.cpp" line="12402"/>
 <source>Disallow all note editing</source>
 <translation>禁止所有笔记编辑</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12652"/>
+<location filename="../mainwindow.cpp" line="12645"/>
 <source>Select text files to import</source>
 <translation>选择要导入的文本文件</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12682"/>
+<location filename="../mainwindow.cpp" line="12675"/>
 <source>Importing: %1</source>
 <translation>正在导入：%1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12747"/>
+<location filename="../mainwindow.cpp" line="12740"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>笔记标题 '%1' 已复制到剪贴板</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12841"/>
+<location filename="../mainwindow.cpp" line="12834"/>
 <source>Leave full-screen mode</source>
 <translation>退出全屏模式</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13027"/>
+<location filename="../mainwindow.cpp" line="13020"/>
 <source>Custom editor width</source>
 <translation>自定义编辑器宽度</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13027"/>
+<location filename="../mainwindow.cpp" line="13020"/>
 <source>Characters:</source>
 <translation>字符:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9116"/>
+<location filename="../mainwindow.cpp" line="9108"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>已选择 ％n 个笔记</numerusform>
@@ -3614,7 +3624,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2450"/>
-<location filename="../mainwindow.cpp" line="12411"/>
+<location filename="../mainwindow.cpp" line="12403"/>
 <source>Allow all note editing</source>
 <translation>允许所有笔记编辑</translation>
 </message>
@@ -3700,8 +3710,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="6238"/>
 <location filename="../mainwindow.cpp" line="6749"/>
-<location filename="../mainwindow.cpp" line="10644"/>
-<location filename="../mainwindow.cpp" line="11077"/>
+<location filename="../mainwindow.cpp" line="10636"/>
+<location filename="../mainwindow.cpp" line="11069"/>
 <source>New note</source>
 <translation>新建笔记</translation>
 </message>
@@ -3726,12 +3736,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>退出</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8315"/>
+<location filename="../mainwindow.cpp" line="8307"/>
 <source>show notes from all note subfolders (%1)</source>
 <translation>显示全部子文件夹的笔记 (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8338"/>
+<location filename="../mainwindow.cpp" line="8330"/>
 <source>show notes in note root folder (%1)</source>
 <translation>在根文件夹 (%1) 中显示笔记</translation>
 </message>
@@ -3739,36 +3749,36 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.ui" line="316"/>
 <location filename="../mainwindow.cpp" line="918"/>
 <location filename="../mainwindow.cpp" line="2256"/>
-<location filename="../mainwindow.cpp" line="8350"/>
+<location filename="../mainwindow.cpp" line="8342"/>
 <source>Note folder</source>
 <translation>笔记文件夹</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9763"/>
-<location filename="../mainwindow.cpp" line="9830"/>
+<location filename="../mainwindow.cpp" line="9755"/>
+<location filename="../mainwindow.cpp" line="9822"/>
 <source>Copy to note folder</source>
 <translation>复制到笔记文件夹</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9763"/>
-<location filename="../mainwindow.cpp" line="9831"/>
+<location filename="../mainwindow.cpp" line="9755"/>
+<location filename="../mainwindow.cpp" line="9823"/>
 <source>Move to note folder</source>
 <translation>移动到笔记文件夹</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9764"/>
-<location filename="../mainwindow.cpp" line="9832"/>
+<location filename="../mainwindow.cpp" line="9756"/>
+<location filename="../mainwindow.cpp" line="9824"/>
 <source>Copy to this subfolder</source>
 <translation>复制到此子文件夹</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9765"/>
-<location filename="../mainwindow.cpp" line="9833"/>
+<location filename="../mainwindow.cpp" line="9757"/>
+<location filename="../mainwindow.cpp" line="9825"/>
 <source>Move to this subfolder</source>
 <translation>移动到此子文件夹</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9877"/>
+<location filename="../mainwindow.cpp" line="9869"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>移动 %n 个选定的笔记到子文件夹 &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3776,78 +3786,78 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5298"/>
-<location filename="../mainwindow.cpp" line="12666"/>
+<location filename="../mainwindow.cpp" line="12659"/>
 <source>Cancel</source>
 <translation>取消</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9973"/>
+<location filename="../mainwindow.cpp" line="9965"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n个笔记被移动到子文件夹"%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9997"/>
+<location filename="../mainwindow.cpp" line="9989"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>复制%n个所选笔记到笔记子文件夹&lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10072"/>
+<location filename="../mainwindow.cpp" line="10064"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n个笔记被复制到子文件夹"%2"</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10766"/>
+<location filename="../mainwindow.cpp" line="10758"/>
 <source>Open note in external editor</source>
 <translation>用外部编辑器打开笔记</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10770"/>
+<location filename="../mainwindow.cpp" line="10762"/>
 <source>Show note in file manager</source>
 <translation>在文件管理器中显示笔记</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10855"/>
+<location filename="../mainwindow.cpp" line="10847"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>如果您想要重命名笔记，您必须启用该选项，才能修改笔记的文件名（默认为笔记首行内容）。</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11078"/>
+<location filename="../mainwindow.cpp" line="11070"/>
 <source>New subfolder</source>
 <translation>新建子文件夹</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11088"/>
+<location filename="../mainwindow.cpp" line="11080"/>
 <source>Show folder in file manager</source>
 <translation>在文件管理器显示文件夹</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11133"/>
+<location filename="../mainwindow.cpp" line="11125"/>
 <source>Create a new folder</source>
 <translation>创建一个新文件夹</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11134"/>
+<location filename="../mainwindow.cpp" line="11126"/>
 <source>Folder name:</source>
 <translation>文件夹名称︰</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8274"/>
+<location filename="../mainwindow.cpp" line="8266"/>
 <source>show all untagged notes (%1)</source>
 <translation>显示所有未加标签的笔记 (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8276"/>
+<location filename="../mainwindow.cpp" line="8268"/>
 <source>Untagged notes</source>
 <translation>未加标签的笔记</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10421"/>
+<location filename="../mainwindow.cpp" line="10413"/>
 <source>Export current note as HTML file</source>
 <translation>导出当前笔记为HTML文件</translation>
 </message>
@@ -3877,7 +3887,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>确定(&amp;O)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10654"/>
+<location filename="../mainwindow.cpp" line="10646"/>
 <source>&amp;Remove notes</source>
 <translation>删除笔记(&amp;R)</translation>
 </message>
@@ -3920,53 +3930,53 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8240"/>
+<location filename="../mainwindow.cpp" line="8232"/>
 <source>show all notes (%1)</source>
 <translation>显示所有的笔记 (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8243"/>
-<location filename="../mainwindow.cpp" line="8318"/>
+<location filename="../mainwindow.cpp" line="8235"/>
+<location filename="../mainwindow.cpp" line="8310"/>
 <source>All notes</source>
 <translation>所有的笔记</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9366"/>
+<location filename="../mainwindow.cpp" line="9358"/>
 <source>&amp;Add tag</source>
 <translation>添加标签(&amp;A)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9414"/>
+<location filename="../mainwindow.cpp" line="9406"/>
 <source>Tag could not be created!</source>
 <translation>无法创建标签!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9593"/>
+<location filename="../mainwindow.cpp" line="9585"/>
 <source>Move to this tag</source>
 <translation>移动到此标签</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9628"/>
+<location filename="../mainwindow.cpp" line="9620"/>
 <source>Tag this</source>
 <translation>追加这个标签</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9653"/>
+<location filename="../mainwindow.cpp" line="9645"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>无法将标签 '%1' 移到此标签</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9702"/>
+<location filename="../mainwindow.cpp" line="9694"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>移动标签'%1'到新标签</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8580"/>
+<location filename="../mainwindow.cpp" line="8572"/>
 <source>show all notes tagged with '%1' (%2)</source>
 <translation>显示所有标记为 '%1' (%2) 的笔记</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9377"/>
+<location filename="../mainwindow.cpp" line="9369"/>
 <source>&amp;Remove tags</source>
 <translation>移除标签</translation>
 </message>
@@ -3978,12 +3988,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="599"/>
 <source>Action not found!</source>
-<translation type="unfinished">Action not found!</translation>
+<translation>动作未找到！</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="600"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>无法找到菜单动作&lt;code&gt;%1&lt;/code&gt;! 拼写是否正确？</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="887"/>
@@ -4155,12 +4165,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="6469"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-<translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+<translation>无法找到笔记。&lt;br /&gt;无法自动创建笔记，因为当前笔记文件夹禁用子文件夹。</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6483"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>为找到笔记，在路径 &lt;strong&gt;%2&lt;/strong&gt; 创建笔记 &lt;strong&gt;%1&lt;/strong&gt;？</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6910"/>
@@ -4169,17 +4179,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>块引用选定的文本</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7956"/>
+<location filename="../mainwindow.cpp" line="7948"/>
 <source>Downloading images finished</source>
 <translation>图像下载完成</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8108"/>
+<location filename="../mainwindow.cpp" line="8100"/>
 <source>Increased font size to %1 pt</source>
 <translation>增加字体大小到 %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8125"/>
+<location filename="../mainwindow.cpp" line="8117"/>
 <source>Decreased font size to %1 pt</source>
 <translation>减小字体大小到 %1 pt</translation>
 </message>
@@ -4187,13 +4197,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.cpp" line="5611"/>
 <location filename="../mainwindow.cpp" line="5626"/>
 <location filename="../mainwindow.cpp" line="5649"/>
-<location filename="../mainwindow.cpp" line="10858"/>
+<location filename="../mainwindow.cpp" line="10850"/>
 <source>Open &amp;settings</source>
 <translation>打开设置(&amp;S)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1824"/>
-<location filename="../mainwindow.cpp" line="12818"/>
+<location filename="../mainwindow.cpp" line="12811"/>
 <source>leave</source>
 <translation>离开</translation>
 </message>
@@ -4330,13 +4340,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/owncloudservice.cpp" line="237"/>
 <source>incorrect</source>
-<translation type="unfinished">incorrect</translation>
+<translation>错误</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="239"/>
 <location filename="../services/owncloudservice.cpp" line="537"/>
 <source>not connected</source>
-<translation type="unfinished">not connected</translation>
+<translation>未连接</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="254"/>
@@ -4359,40 +4369,40 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../services/owncloudservice.cpp" line="510"/>
 <location filename="../services/owncloudservice.cpp" line="528"/>
 <source>ok</source>
-<translation type="unfinished">ok</translation>
+<translation>确定</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="320"/>
 <source>not correct</source>
-<translation type="unfinished">not correct</translation>
+<translation>不正确</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="333"/>
 <source>not detected</source>
-<translation type="unfinished">not detected</translation>
+<translation>未检测到</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="436"/>
 <location filename="../services/owncloudservice.cpp" line="531"/>
 <source>not found</source>
-<translation type="unfinished">not found</translation>
+<translation>未找到</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="473"/>
 <location filename="../services/owncloudservice.cpp" line="475"/>
 <source>unknown</source>
-<translation type="unfinished">unknown</translation>
+<translation>未知</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="484"/>
 <source>version %1 too low</source>
-<translation type="unfinished">version %1 too low</translation>
+<translation>版本 %1 太低</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="505"/>
 <location filename="../services/owncloudservice.cpp" line="513"/>
 <source>not enabled</source>
-<translation type="unfinished">not enabled</translation>
+<translation>未启用</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="587"/>
@@ -4522,44 +4532,44 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>默认</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1330"/>
+<location filename="../entities/note.cpp" line="1421"/>
 <source>Could not store note file: %1 - Error message: %2</source>
 <translation>无法存储笔记文件: %1 - 错误消息: %2</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1411"/>
+<location filename="../entities/note.cpp" line="1502"/>
 <source>Renamed note-file was removed: %1</source>
 <translation>重命名的笔记文件已经被删除: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1419"/>
+<location filename="../entities/note.cpp" line="1510"/>
 <source>Could not remove renamed note-file: %1 - Error message: %2</source>
 <translation>无法删除重命名的笔记文件： %1 - 错误消息： %2</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1561"/>
+<location filename="../entities/note.cpp" line="1652"/>
 <source>Note</source>
 <translation>笔记</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2675"/>
+<location filename="../entities/note.cpp" line="2773"/>
 <source>Could not read image file: %1</source>
 <translation>无法读取图像文件: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3334"/>
+<location filename="../entities/note.cpp" line="3432"/>
 <source>Note file path changed</source>
 <translation>笔记文件路径已更改</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3335"/>
+<location filename="../entities/note.cpp" line="3433"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>检测到笔记路径已更改。 您是否要用 &lt;strong&gt;%2&lt;/strong&gt; 替换所有出现的&lt;strong&gt;%1&lt;/strong&gt; 链接 ，并在 &lt;strong&gt;%n&lt;/strong&gt; 个笔记文件中用 &lt;strong&gt;%4&lt;/strong&gt; 替换文件名为 &lt;strong&gt;%3&lt;/strong&gt; 的链接 ？</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3942"/>
+<location filename="../entities/note.cpp" line="4040"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>…以及 ％n 个笔记</numerusform>
@@ -4599,32 +4609,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../utils/gui.cpp" line="1037"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;最近编辑时间: %2</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1042"/>
 <source>&lt;br /&gt;path: %1</source>
-<translation type="unfinished">&lt;br /&gt;path: %1</translation>
+<translation>&lt;br /&gt;路径: %1</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1070"/>
 <source>Dark mode detected</source>
-<translation type="unfinished">Dark mode detected</translation>
+<translation>检测到暗色模式</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1071"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>你的 Windows 系统看起来使用暗色模式。是否将 QOwnNotes 调至暗色模式？</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1083"/>
 <source>Light mode detected</source>
-<translation type="unfinished">Light mode detected</translation>
+<translation>检测到亮色模式</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1084"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>你的 Windows 系统看起来使用亮色模式。是否在 OwnNotes 中关闭暗色模式？</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="76"/>
@@ -4634,7 +4644,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../utils/git.cpp" line="77"/>
 <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
-<translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
+<translation>以 &lt;code&gt;%2&lt;/code&gt; 为参数的命令 &lt;code&gt;%1&lt;/code&gt; 失败！</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4284"/>
@@ -4644,12 +4654,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4465"/>
 <source>Login flow succeeded</source>
-<translation type="unfinished">Login flow succeeded</translation>
+<translation>登录 flow 成功</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4466"/>
 <source>Username and password were set successfully!</source>
-<translation type="unfinished">Username and password were set successfully!</translation>
+<translation>用户名和密码设置成功！</translation>
 </message>
 <message>
 <location filename="../entities/cloudconnection.cpp" line="291"/>
@@ -4691,47 +4701,47 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
 <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
 <source>File name changed</source>
-<translation type="unfinished">File name changed</translation>
+<translation>文件名已改变</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
 <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
+<translation>
+<numerusform>%n 个笔记在使用这个附件。你需要也在这些笔记中重命名这些附件吗?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="376"/>
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
+<translation>
+<numerusform>%n 个笔记在使用这个图像。你需要也在这些笔记中重命名这些图像吗?</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="29"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+<translation>为当前笔记文件夹开启子文件夹功能以导入文件夹。</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2264"/>
 <location filename="../services/owncloudservice.cpp" line="2279"/>
 <source>Login flow failed</source>
-<translation type="unfinished">Login flow failed</translation>
+<translation>登录 flow 失败</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2265"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
+<translation>Nextcloud 登录 flow v2 无法初始化。请确认服务器 url 正确并且是一个 Nextcloud 服务器!&lt;br /&gt;&lt;br /&gt;如果仍然有问题，请在你的服务器管理页面创建一个应用密码。</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2280"/>
 <source>Could not parse login url!</source>
-<translation type="unfinished">Could not parse login url!</translation>
+<translation>无法解析登录 url!</translation>
 </message>
 <message>
 <location filename="../utils/misc.cpp" line="924"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
+<translation>你正在使用单实例模式，这阻止了应用再次启动。下次启动时单实例模式将会被禁用，此后可以在退出实例前重启应用。</translation>
 </message>
 </context>
 <context>
@@ -4958,12 +4968,12 @@ Are the folder and the file writeable?</source>
 <translation>无法打开笔记文件夹数据库</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="929"/>
+<location filename="../services/databaseservice.cpp" line="937"/>
 <source>Cannot open database</source>
 <translation>无法打开数据库</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="930"/>
+<location filename="../services/databaseservice.cpp" line="938"/>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
 <translation>无法与笔记文件夹数据库建立数据库连接以合并'%1'。
@@ -5910,12 +5920,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1441"/>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
-<translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
+<translation>登录 flow v2 仅可用于 Nextcloud 不能用于 ownCloud. 如果遇到问题，你需要手动创建一个应用密码。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1444"/>
 <source>Login to Nextcloud to grant access</source>
-<translation type="unfinished">Login to Nextcloud to grant access</translation>
+<translation>登录 Nextcloud 以授权访问</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1849"/>
@@ -6325,37 +6335,37 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
 <source>Web application</source>
-<translation type="unfinished">Web application</translation>
+<translation>Web 应用</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
 <source>This also allows note files to be renamed</source>
-<translation type="unfinished">This also allows note files to be renamed</translation>
+<translation>这允许笔记文件被重命名</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="864"/>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-<translation type="unfinished">You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</translation>
+<translation>你在应用内可以访问 ownCloud 服务器以管理被删除的笔记或者笔记版本，或者共享笔记。这个集成并不会进行笔记文件同步。你仍然需要安装 ownCloud 同步客户端以同步文件。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1431"/>
 <source>If your password doesn't work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
+<translation>如果你的密码不能用，创建一个应用密码(按钮在右边)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1455"/>
 <source>Cancel Nextcloud login</source>
-<translation type="unfinished">Cancel Nextcloud login</translation>
+<translation>取消 Nextcloud 登录</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1862"/>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
-<translation type="unfinished">You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</translation>
+<translation>你可以通过访问你的 ownCloud 服务器或者通用 CalDAV 服务器来管理你的代办事项。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2220"/>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
+<translation>如果你想要帮助翻译 QOwnNotes 或者更新已有的翻译，请查看&lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2577"/>
@@ -6430,22 +6440,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4251"/>
 <source>Note file extensions</source>
-<translation type="unfinished">Note file extensions</translation>
+<translation>笔记文件扩展名</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4289"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
-<translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
+<translation>扩展名在列表范围内的文件会被识别为笔记，所选的文件扩展名会被用于新建笔记。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4299"/>
 <source>Add a new note file extension</source>
-<translation type="unfinished">Add a new note file extension</translation>
+<translation>添加新的笔记文件扩展名</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4313"/>
 <source>Remove selected note file extension</source>
-<translation type="unfinished">Remove selected note file extension</translation>
+<translation>移除所选的笔记文件扩展名</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4444"/>
@@ -6520,7 +6530,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5337"/>
 <source>Show line numbers</source>
-<translation type="unfinished">Show line numbers</translation>
+<translation>显示行号</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5347"/>
@@ -6571,67 +6581,67 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6331"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
-<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
+<translation>你可以使用 &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; 以通过网络从手机往桌面端的 QOwnNotes 插入图片。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6368"/>
 <source>QOwnNotes web application</source>
-<translation type="unfinished">QOwnNotes web application</translation>
+<translation>QOwnNOtes Web 应用</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6458"/>
 <source>Server URL:</source>
-<translation type="unfinished">Server URL:</translation>
+<translation>服务器 URL:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6515"/>
 <source>Show QR code</source>
-<translation type="unfinished">Show QR code</translation>
+<translation>显示二维码</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6407"/>
 <source>Security token:</source>
-<translation type="unfinished">Security token:</translation>
+<translation>安全 token:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6282"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
-<translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
+<translation>通过 &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; 安装 &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; 或者 &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; 将 QOwnNotes 用作网页剪辑器或者书签管理器。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6465"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
-<translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
+<translation>你需要将这个 token 输入 QOwnNotes Web 应用以和 QOwnNotes 桌面应用对话。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6397"/>
 <source>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation type="unfinished">A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+<translation>一个通往这个服务器的网页 socket 连接会被开启，用作连接 QOwnNotes web 应用和桌面应用的桥梁。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6475"/>
 <source>Copy security token to clipboard</source>
-<translation type="unfinished">Copy security token to clipboard</translation>
+<translation>复制安全 token 到剪贴板</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6428"/>
 <source>Generate new security token</source>
-<translation type="unfinished">Generate new security token</translation>
+<translation>产生新的安全 token</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6489"/>
 <source>Reset the URL to default</source>
-<translation type="unfinished">Reset the URL to default</translation>
+<translation>重设为默认 URL</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6318"/>
 <source>QOwnNotes web application support</source>
-<translation type="unfinished">QOwnNotes web application support</translation>
+<translation>QOwnNOtes Web 应用支持</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6324"/>
 <source>Enable web application support</source>
-<translation type="unfinished">Enable web application support</translation>
+<translation>启用 web 应用</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5573"/>
@@ -6661,7 +6671,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6040"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
-<translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
+<translation>启用本地垃圾桶为已删除的笔记保存一个副本</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6076"/>
@@ -6721,7 +6731,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6235"/>
 <source>Reset the socket server port</source>
-<translation type="unfinished">Reset the socket server port</translation>
+<translation>重设 socket 的服务器端口</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6249"/>
@@ -7438,7 +7448,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
+<translation>数据库重初始化完成。请重启应用！</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2334"/>
@@ -7523,22 +7533,22 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3297"/>
 <source>Please enter a new note file extension:</source>
-<translation type="unfinished">Please enter a new note file extension:</translation>
+<translation>请输入新的笔记文件扩展名：</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3331"/>
 <source>Markdown file</source>
-<translation type="unfinished">Markdown file</translation>
+<translation>Markdown 文件</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3333"/>
 <source>Plain text file</source>
-<translation type="unfinished">Plain text file</translation>
+<translation>纯文本文件</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3351"/>
 <source>Remove note file extension</source>
-<translation type="unfinished">Remove note file extension</translation>
+<translation>移除笔记文件扩展名</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4062"/>
@@ -7569,7 +7579,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4360"/>
 <source>The integrity of the disk database is not valid!</source>
-<translation>磁盘数据库完整性有效。</translation>
+<translation>磁盘数据库完整性无效。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2935"/>
@@ -7658,7 +7668,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3352"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
-<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+<translation>确定移除笔记文件扩展名 &lt;strong&gt;%1&lt;/strong&gt;？ 你将不再在笔记列表中看到此扩展名的文件！</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3642"/>
@@ -7996,159 +8006,159 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="378"/>
 <source>Delete selected attachments</source>
-<translation type="unfinished">Delete selected attachments</translation>
+<translation>删除选定的附件</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="381"/>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>删除</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
 <source>Stored attachments</source>
-<translation type="unfinished">Stored attachments</translation>
+<translation>存储的的附件</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
 <source>Used in notes:</source>
-<translation type="unfinished">Used in notes:</translation>
+<translation>被这些笔记使用：</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="312"/>
 <source>Find attachment</source>
-<translation type="unfinished">Find attachment</translation>
+<translation>查找附件</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
 <source>Only show images that are not used in notes</source>
-<translation type="unfinished">Only show images that are not used in notes</translation>
+<translation>仅显示未在笔记中使用的图像</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
 <source>Only show orphaned attachments</source>
-<translation type="unfinished">Only show orphaned attachments</translation>
+<translation>仅显示孤立的附件</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
 <source>Add selected attachments to the current note</source>
-<translation type="unfinished">Add selected attachments to the current note</translation>
+<translation>将选定的附件添加到当前笔记</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="342"/>
 <source>Add to current note</source>
-<translation type="unfinished">Add to current note</translation>
+<translation>添加到当前笔记</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="353"/>
 <source>Open &amp;attachment</source>
-<translation type="unfinished">Open &amp;attachment</translation>
+<translation>打开附件</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="364"/>
 <source>Open the attachments folder</source>
-<translation type="unfinished">Open the attachments folder</translation>
+<translation>打开附件文件夹</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="367"/>
 <source>Open &amp;folder</source>
-<translation type="unfinished">Open &amp;folder</translation>
+<translation>打开文件夹</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="392"/>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>刷新</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="102"/>
 <source>File size:</source>
-<translation type="unfinished">File size:</translation>
+<translation>文件大小：</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="194"/>
 <source>File type:</source>
-<translation type="unfinished">File type:</translation>
+<translation>文件类型：</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="207"/>
 <source>File path:</source>
-<translation type="unfinished">File path:</translation>
+<translation>文件路径：</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="86"/>
 <source>Last modified at %1</source>
-<translation type="unfinished">Last modified at %1</translation>
+<translation>最近修改时间 %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="160"/>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>路径： %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="200"/>
 <source>Delete selected files</source>
-<translation type="unfinished">Delete selected files</translation>
+<translation>删除所选文件</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-<translation type="unfinished">
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<translation>
+<numerusform>删除 &lt;strong&gt;%n&lt;/strong&gt; 个所选文件吗?</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
 <source>&amp;Open attachment</source>
-<translation type="unfinished">&amp;Open attachment</translation>
+<translation>打开附件</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
 <source>&amp;Rename attachment</source>
-<translation type="unfinished">&amp;Rename attachment</translation>
+<translation>重命名附件</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
 <source>&amp;Delete attachments</source>
-<translation type="unfinished">&amp;Delete attachments</translation>
+<translation>删除附件</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="312"/>
 <source>&amp;Add attachments to current note</source>
-<translation type="unfinished">&amp;Add attachments to current note</translation>
+<translation>添加附件到当前笔记</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
 <source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<translation>文件不存在</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+<translation>文件&lt;strong&gt;%1&lt;/strong&gt; 不存在，无法重命名！</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>文件存在</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-<translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+<translation>文件 &lt;strong&gt;%1&lt;/strong&gt; 已存在，你需要先将其移除才能选择 &lt;strong&gt;%2&lt;/strong&gt; 作为新的文件名！</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
 <source>File renaming failed</source>
-<translation type="unfinished">File renaming failed</translation>
+<translation>文件重命名失败</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+<translation>重命名文件 &lt;strong&gt;%1&lt;/strong&gt; 失败！</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>打开笔记</translation>
 </message>
 </context>
 <context>
@@ -8156,149 +8166,149 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
 <source>Stored images</source>
-<translation type="unfinished">Stored images</translation>
+<translation>存储的图像</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="165"/>
 <source>Find image</source>
-<translation type="unfinished">Find image</translation>
+<translation>查找图像</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="126"/>
 <source>Add selected images to the current note</source>
-<translation type="unfinished">Add selected images to the current note</translation>
+<translation>将选定的图像添加到当前笔记</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="64"/>
 <source>Open the media folder</source>
-<translation type="unfinished">Open the media folder</translation>
+<translation>打开 media 文件夹</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="67"/>
 <source>Open &amp;folder</source>
-<translation type="unfinished">Open &amp;folder</translation>
+<translation>打开文件夹</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="78"/>
 <source>Open image externally</source>
-<translation type="unfinished">Open image externally</translation>
+<translation>通过外部应用打开图像</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="81"/>
 <source>Open image</source>
-<translation type="unfinished">Open image</translation>
+<translation>打开图像</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="129"/>
 <source>Add to current note</source>
-<translation type="unfinished">Add to current note</translation>
+<translation>添加到当前笔记</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="140"/>
 <source>Delete selected images</source>
-<translation type="unfinished">Delete selected images</translation>
+<translation>删除所选图像</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="143"/>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>删除</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="175"/>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>刷新</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="234"/>
 <source>Used in notes:</source>
-<translation type="unfinished">Used in notes:</translation>
+<translation>被这些笔记使用：</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="116"/>
 <source>Only show images that are not used in notes</source>
-<translation type="unfinished">Only show images that are not used in notes</translation>
+<translation>仅显示未在笔记中使用的图像</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="119"/>
 <source>Only show orphaned images</source>
-<translation type="unfinished">Only show orphaned images</translation>
+<translation>仅显示孤立的附件</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="83"/>
 <source>Last modified at %1</source>
-<translation type="unfinished">Last modified at %1</translation>
+<translation>最近修改时间 %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="148"/>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>路径： %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="187"/>
 <source>Delete selected files</source>
-<translation type="unfinished">Delete selected files</translation>
+<translation>删除所选文件</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="188"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-<translation type="unfinished">
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<translation>
+<numerusform>删除 &lt;strong&gt;%n&lt;/strong&gt; 个所选文件吗?</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
 <source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<translation>文件不存在</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+<translation>文件&lt;strong&gt;%1&lt;/strong&gt; 不存在，无法重命名！</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>文件存在</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="349"/>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-<translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+<translation>文件 &lt;strong&gt;%1&lt;/strong&gt; 已存在，你需要先将其移除才能选择 &lt;strong&gt;%2&lt;/strong&gt; 作为新的文件名！</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="359"/>
 <source>File renaming failed</source>
-<translation type="unfinished">File renaming failed</translation>
+<translation>文件重命名失败</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="360"/>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+<translation>重命名文件 &lt;strong&gt;%1&lt;/strong&gt; 失败！</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="436"/>
 <source>&amp;Open image externally</source>
-<translation type="unfinished">&amp;Open image externally</translation>
+<translation>通过外部应用打开图像</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="437"/>
 <source>&amp;Rename image</source>
-<translation type="unfinished">&amp;Rename image</translation>
+<translation>重命名图像</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="438"/>
 <source>&amp;Delete images</source>
-<translation type="unfinished">&amp;Delete images</translation>
+<translation>删除图像</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="439"/>
 <source>&amp;Add images to current note</source>
-<translation type="unfinished">&amp;Add images to current note</translation>
+<translation>添加图像到当前笔记</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="472"/>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>打开笔记</translation>
 </message>
 </context>
 <context>
@@ -8464,12 +8474,12 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tododialog.ui" line="349"/>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>这对子项目无效，因为它们可能被父项目隐藏了！</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="352"/>
 <source>Show only items due today</source>
-<translation type="unfinished">Show only items due today</translation>
+<translation>仅显示今日到期项</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="120"/>
@@ -8504,7 +8514,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tododialog.ui" line="334"/>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>到期日期</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="342"/>
@@ -8827,7 +8837,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
 <source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation type="unfinished">&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+<translation>&lt;a href="%1"&gt;参与 QOwnNotes&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8847,7 +8857,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="64"/>
 <source>&amp;Download latest</source>
-<translation type="unfinished">&amp;Download latest</translation>
+<translation>下载最新版</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="74"/>
@@ -8937,47 +8947,47 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="439"/>
 <location filename="../dialogs/updatedialog.cpp" line="451"/>
 <source>Permission error</source>
-<translation type="unfinished">Permission error</translation>
+<translation>权限错误</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="440"/>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
+<translation>你的 QOwnNotes 可执行文件 '%1' 不可写！它必须对当前用户可写以更新。</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="452"/>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
-<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
+<translation>临时文件 '%1' 无法被设置为可执行！ 你需要自行将其替换为 '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="462"/>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
+<translation>你的旧 QOwnNotes 可执行文件 '%1' 无法被移除！ 你需要手动将其替换为 '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="472"/>
 <source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
+<translation>你的旧 QOwnNotes 可执行文件 '%1' 无法被复写或被新文件 '%2' 替代! 你需要手动替换。</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="480"/>
 <source>Restart application</source>
-<translation type="unfinished">Restart application</translation>
+<translation>重新启动应用程序</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="481"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished">You now can restart the application to complete the update process.</translation>
+<translation>现在可以重启应用以完成更新流程</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>Restart</source>
-<translation type="unfinished">Restart</translation>
+<translation>重新启动</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
+<translation>取消</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="509"/>
@@ -9085,17 +9095,17 @@ This cannot be undone!</source>
 <message>
 <location filename="../services/webappclientservice.cpp" line="102"/>
 <source>QOwnNotes is now connected via websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now connected via websocket to %1</translation>
+<translation>QOwnNotes 现已通过 websocket 连接到 %1</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="111"/>
 <source>QOwnNotes is now disconnected from websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now disconnected from websocket to %1</translation>
+<translation>QOwnNotes 现已与到 %1 的 websocket 断开连接</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="127"/>
 <source>Web app warning</source>
-<translation type="unfinished">Web app warning</translation>
+<translation>Web 应用警告</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="139"/>
@@ -9105,7 +9115,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../services/webappclientservice.cpp" line="140"/>
 <source>Insert image received from QOwnNotes web application?</source>
-<translation>插入从QOwnNotes Web应用程序收到的图像?</translation>
+<translation>插入从QOwnNotes Web应用收到的图像?</translation>
 </message>
 </context>
 <context>
@@ -9126,14 +9136,14 @@ This cannot be undone!</source>
 <translation>%1已连接到 QOwnNotes 服务器！</translation>
 </message>
 <message numerus="yes">
-<location filename="../services/websocketserverservice.cpp" line="238"/>
+<location filename="../services/websocketserverservice.cpp" line="242"/>
 <source>%n bookmark(s) created</source>
 <translation>
 <numerusform>已创建 ％n 个书签</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../services/websocketserverservice.cpp" line="386"/>
+<location filename="../services/websocketserverservice.cpp" line="390"/>
 <source>%1 was disconnected from QOwnNotes server</source>
 <translation>%1已从 QOwnNotes 服务器断开连接</translation>
 </message>
@@ -9311,7 +9321,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../main.cpp" line="132"/>
 <source>Triggers a menu action after the application was started.</source>
-<translation type="unfinished">Triggers a menu action after the application was started.</translation>
+<translation>在应用启动后触发一个菜单动作。</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="554"/>

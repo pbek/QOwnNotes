@@ -27,7 +27,7 @@
 - <kbd> Ctrl </kbd> + <kbd> ⇧ </kbd> + <kbd> D </kbd> bascule le mode sans distraction
     - vous pouvez également le fermer avec <kbd>Esc</kbd>
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> imprime la note actuelle sous forme de texte
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> imprime la note actuelle sous forme de démarque
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> imprime la note actuelle sous forme de Markdown
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> colle des notes, des images et du code HTML à partir du presse-papiers
 - <kbd>Ctrl</kbd> + <kbd>,</kbd> ouvre les paramètres
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> ajoute une nouvelle balise à une note
@@ -102,7 +102,7 @@
 - <kbd>Ctrl</kbd> + <kbd>Down</kbd> fait défiler le contenu vers le bas
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> déplace la ligne actuelle vers le bas
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Up</kbd> déplace la ligne actuelle vers le haut
-- <kbd>⇧</kbd> + <kbd>Return</kbd> ajoute deux espaces et un caractère de nouvelle ligne pour forcer une nouvelle ligne de démarque
+- <kbd>⇧</kbd> + <kbd>Entrée</kbd> ajoute deux espaces et un caractère de retour à la ligne pour forcer une nouvelle ligne en Markdown
 
 ### Dans le panneau d'aperçu de la note
 
@@ -144,7 +144,7 @@
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> bascule le mode sans distraction
     - vous pouvez également le fermer avec <kbd>Esc</kbd>
 - <kbd>⌘</kbd> + <kbd>P</kbd> imprime la note actuelle sous forme de texte
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> imprime la note actuelle sous forme de démarque
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> imprime la note actuelle sous forme de Markdown
 - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>V</kbd> colle des notes, des images et du HTML à partir du presse-papiers
 - <kbd>⌘</kbd> + <kbd>,</kbd> ouvre les paramètres
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> ajoute une nouvelle balise à une note
@@ -217,7 +217,7 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> recherche le texte sélectionné sur le Web
 - <kbd>⌘</kbd> + <kbd>Up</kbd> fait défiler le contenu vers le haut
 - <kbd>⌘</kbd> + <kbd>Down</kbd> fait défiler le contenu vers le bas
-- <kbd>⇧</kbd> + <kbd>Return</kbd> ajoute deux espaces et un caractère de nouvelle ligne pour forcer une nouvelle ligne de démarque
+- <kbd>⇧</kbd> + <kbd>Entrée</kbd> ajoute deux espaces et un caractère de retour à la ligne pour forcer une nouvelle ligne en Markdown
 
 ### Dans le panneau d'aperçu de la note
 

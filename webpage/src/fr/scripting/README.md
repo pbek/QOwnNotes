@@ -1,6 +1,6 @@
 # QOwnNotes Scripting
 
-Un script QOwnNotes est principalement **JavaScript** dans [fichiers Qt QML](https://doc.qt.io/qt-5/qtqml-index.html).
+Un script QOwnNotes est principalement **JavaScript** dans des [fichiers Qt QML](https://doc.qt.io/qt-5/qtqml-index.html).
 
 ```js
 importer QtQml 2.0

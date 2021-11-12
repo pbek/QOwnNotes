@@ -155,13 +155,13 @@ Téléchargement d'une URL dans le dossier multimédia
 ### Appel de méthode et paramètres
 ```cpp
 /**
-  * Wrapper QML pour télécharger une URL dans le dossier multimédia et renvoyer le support
-  * url ou le texte de l'image de démarque du média par rapport à la note actuelle
-  *
-  * @param {QString} url
-  * @param {bool} returnUrlOnly si true, seule l'url du média sera renvoyée (par défaut false)
-  * @return {QString} le markdown ou l'URL du média
-  */
+ * Wrapper QML pour télécharger une URL dans le dossier multimédia et renvoyer le média
+ * url ou le texte Markdown de l'image du média relativement à la note actuelle
+ *
+ * @param {QString} url
+ * @param {bool} returnUrlOnly si true, seule l'URLdu média sera renvoyée (par défaut false)
+ * @return {QString} le Markdown ou l'URL du média
+ */
 QString downloadUrlToMedia (QUrl url, booléen returnUrlOnly);
 ```
 
@@ -178,12 +178,12 @@ Insertion d'un fichier multimédia dans le dossier multimédia
 ### Appel de méthode et paramètres
 ```cpp
 /**
-  * Wrapper QML pour insérer un fichier multimédia dans le dossier multimédia et retourner
-  * l'url du média ou le texte de l'image de démarque du média par rapport à la note actuelle
+  * Wrapper QML pour insérer un fichier multimédia dans le dossier des médias et retourner
+  * l'URL du média ou le texte Markdown de l'image du média relativement à la note actuelle
   *
   * @param {QString} mediaFilePath
-  * @param {bool} returnUrlOnly si true, seule l'url du média sera retournée (par défaut false)
-  * @return {QString} le markdown ou l'url du média
+  * @param {bool} returnUrlOnly si true, seule l'URL du média sera retournée (par défaut false)
+  * @return {QString} le Markdown ou l'URL du média
   */
 QString ScriptingService::insertMediaFile (QString mediaFilePath,
                                          booléen returnUrlOnly);
@@ -247,21 +247,21 @@ Registering a custom action
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Registers a custom action
+ * Enregistre une action personnalisée
  *
- * @param identifier the identifier of the action
- * @param menuText the text shown in the menu
- * @param buttonText the text shown in the button
- *                   (no button will be viewed if empty)
- * @param icon the icon file path or the name of a freedesktop theme icon
- *             you will find a list of icons here:
+ * @param identifier l'identifiant de l'action
+ * @param menuText le texte affiché dans le menu
+ * @param buttonText le texte affiché dans le bouton
+ *                   (aucun bouton vide ne sera affiché)
+ * @param icon le chemin d'accès vers l'icône ou le nom d'un icône du thème freedesktop
+ *             vous trouverez ici une liste des icônes :
  *             https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
- * @param useInNoteEditContextMenu if true use the action in the note edit
+ * @param useInNoteEditContextMenu si true utiilser l'action dans l'éditeur de notes
  *                                 context menu (default: false)
- * @param hideButtonInToolbar if true the button will not be shown in the
- *                            custom action toolbar (default: false)
- * @param useInNoteListContextMenu if true use the action in the note list
- *                                 context menu (default: false)
+ * @param hideButtonInToolbar si true le bouton ne sera pas affiché dans
+ *                            la barre d'outil des actions personnalisées (par défaut : false)
+ * @param useInNoteListContextMenu si true utiliser l'action dans le menu contextuel de
+ *                                 la liste de notes (par défaut : false)
  */
 void ScriptingService::registerCustomAction(QString identifier,
                                             QString menuText,
@@ -351,16 +351,16 @@ void ScriptingService::registerLabel(QString identifier, QString text);
 
 ### Exemple
 ```js
-script.registerLabel("html-label", "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='https://www.qownnotes.org'>link to a website</a>.");
+script.registerLabel("html-label", "<strong>Strong</strong> Texte HTML <br />avec trois lignes<br />et un <a href='https://www.qownnotes.org'>lien vers un site web</a>.");
 
-script.registerLabel("long-label", "another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text that will wrap");
+script.registerLabel("long-label", "encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte avec retour à la ligne");
 
 script.registerLabel("counter-label");
 ```
 
 Les étiquettes seront visibles dans le widget de scripting du dock.
 
-Vous pouvez utiliser à la fois du texte brut ou du html dans les étiquettes. Le texte sera sélectionnable et les liens pourront être cliqués.
+Vous pouvez utiliser à la fois du texte brut ou du HTML dans les étiquettes. Le texte sera sélectionnable et les liens pourront être cliqués.
 
 Vous aurez peut-être envie de jeter un œil à l'exemple de script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
 
@@ -383,7 +383,7 @@ void ScriptingService::setLabelText(QString identifier, QString text);
 script.setLabelText("counter-label", "texte compteur");
 ```
 
-Vous pouvez utiliser à la fois du texte brut ou du html dans les étiquettes. Le texte sera sélectionnable et les liens pourront être cliqués.
+Vous pouvez utiliser à la fois du texte brut ou du HTML dans les étiquettes. Le texte sera sélectionnable et les liens pourront être cliqués.
 
 Vous aurez peut-être envie de jeter un œil à l'exemple de script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
 
@@ -422,9 +422,9 @@ Accéder au presse-papiers
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Retourne le contenu du presse-papier sous forme de texte ou de html
+ * Retourne le contenu du presse-papier sous forme de texte ou de HTML
  *
- * @param asHtml retourne le contenu du presse-papier sous forme de html au lieu de texte
+ * @param asHtml retourne le contenu du presse-papier sous forme de HTML au lieu de texte
  */
 QString ScriptingService::clipboard(bool asHtml);
 ```
@@ -663,7 +663,7 @@ bool ScriptingService::platformIsWindows();
 ### Exemple
 ```js
 if (script.platformIsLinux()) {
-    // only will be executed if under Linux
+   // ne sera exécuté que sous Linux
 }
 ```
 
@@ -797,7 +797,7 @@ Le [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdar
 
 Jetez un œil à [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) en tant que référence des styles disponibles.
 
-Si vous souhaitez injecter des styles dans l'aperçu html pour modifier la façon dont les notes sont prévisualisées, veuillez consulter [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
+Si vous souhaitez injecter des styles dans l'aperçu HTML pour modifier la façon dont les notes sont prévisualisées, veuillez consulter [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
 ::: tip
 Si vous souhaitez voir l'aspect des dialogues et quels sont leurs noms, téléchargez[Qt Creator](https://www.qt.io/product/development-tools) et ouvrez les fichiers `*.ui` qu'il contient.
@@ -896,10 +896,10 @@ Copier du texte dans le presse-papiers
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Copie du texte dans le presse-papiers sous forme de texte brut ou de données mime html
+ * Copie du texte dans le presse-papiers sous forme de texte brut ou de données MIME HTML
  *
  * @param text string texte à mettre dans le presse-papiers
- * @param asHtml bool si true, le texte sera défini en tant que données mime html
+ * @param asHtml bool si true, le texte sera défini en tant que données MIME HTML
  */
 void ScriptingService::setClipboardText(QString text, bool asHtml);
 ```
@@ -1073,7 +1073,7 @@ L'utilisateur peut ensuite définir ces propriétés dans les paramètres du scr
 
 ### Exemple
 ```js
-// vous devez définir vos variables enregistrées pour pouvoir y accéder ensuite
+// vous devez définir les variables enregistrées pour pouvoir y accéder plus tard
 property string myString;
 property bool myBoolean;
 property string myText;
@@ -1081,22 +1081,21 @@ property int myInt;
 property string myFile;
 property string mySelection;
 
-// enregistrez vos variables de paramètres de scripts pour que l'utilisateur puisse les définir dans les paramètres du script
-// utilisez cette propriété si vous n'avez pas besoin de
+// enregistrez vos variables de paramètres pour que l'utilisateur puisse les définir dans les paramètres du script
 //
-// il n'y a malheureusement pas de QVariantHash en Qt, on ne peut utiliser que
-// QVariantMap (qui ne dispose pas de mise en ordre arbitraire) ou QVariantList (qui au
-// moins peut être ordonnée arbitrairement)
+// il n'y a malheureusement pas de QVariantHash dans Qt, nous pouvons seulement utiliser
+// QVariantMap (qui n'a pas de classement arbitraire) or QVariantList (qui
+// peut être ordonné arbitrairement)
 property variant settingsVariables: [
     {
-        "identifier": "maChaîne",
-        "name": "je suis une édition de ligne",
+        "identifier": "myString",
+        "name": "Je suis une édition de ligne",
         "description": "Veuillez entrer une chaîne valide :",
         "type": "string",
         "default": "Ma valeur par défaut",
     },
     {
-        "identifier": "monBooléen",
+        "identifier": "myBoolean",
         "name": "Je suis une case à cocher",
         "description": "Une description",
         "text": "Cochez cette case",
@@ -1104,30 +1103,30 @@ property variant settingsVariables: [
         "default": true,
     },
     {
-        "identifier": "monTexte",
-        "name": "Je suis une zone de texte",
+        "identifier": "myText",
+        "name": "Je suis une boîte de texte",
         "description": "Veuillez entrer votre texte :",
         "type": "text",
-        "default": "Ceci peut être un long texte \ncomportant plusieurs lignes.",
+        "default": "Ceci peut être un très long texte \navec plusieurs lignes.",
     },
     {
-        "identifier": "monIdent",
-        "name": "Je suis un sélecteur de nombre",
-        "description": "Veuillez entrer un nombre :",
+        "identifier": "myInt",
+        "name": "Je suis un sélecteur de chiffres",
+        "description": "Veuillez entrer un chiffre :",
         "type": "integer",
         "default": 42,
     },
     {
-        "identifier": "monFichier",
-        "name": "Je suis un sélecteur de fichier",
+        "identifier": "myFile",
+        "name": "Je suis un sélecteur de fichiers",
         "description": "Veuillez sélectionner un fichier :",
         "type": "file",
         "default": "pandoc",
     },
     {
-        "identifier": "maSélection",
+        "identifier": "mySelection",
         "name": "Je suis un sélecteur d'éléments",
-        "description": "Veuillez sélectionner un élément :",
+        "description": "Veuillez sélectionner un élément:",
         "type": "selection",
         "default": "option2",
         "items": {"option1": "Texte pour option 1", "option2": "Texte pour option 2", "option3": "Texte pour option 3"},

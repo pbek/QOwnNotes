@@ -108,7 +108,7 @@ NoteApi currentNote ();
 var note = script.currentNote();
 ```
 
-You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Vielleicht möchten Sie sich das Beispiel ansehen [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 Protokollierung beim Protokoll-Widget
 -------------------------
@@ -170,7 +170,7 @@ QString downloadUrlToMedia (QUrl url, bool returnUrlOnly);
 var markdown = script.downloadUrlToMedia("http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)}");
 ```
 
-You may want to take a look at the example [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/paste-latex-image.qml).
+Vielleicht möchten Sie sich das Beispiel ansehen [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/paste-latex-image.qml).
 
 Einfügen einer Mediendatei in den Medienordner
 --------------------------------------------
@@ -194,9 +194,9 @@ QString ScriptingService::insertMediaFile (QString mediaFilePath,
 var markdown = script.insertMediaFile("/path/to/your/image.png");
 ```
 
-You may want to take a look at the example [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
+Vielleicht möchten Sie sich das Beispiel ansehen [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
 
-Inserting an attachment file into the attachments folder
+Einfügen einer Anhangsdatei in den Anhangsordner
 --------------------------------------------------------
 
 ### Methodenaufruf und Parameter
@@ -370,12 +370,12 @@ Einstellen des Textes eines registrierten Etiketts
 ### Methodenaufruf und Parameter
 ```cpp
 /**
-     * Legt den Text eines registrierten Etiketts fest
-     *
-     * @param bezeichner der bezeichner des etiketts
-     * @param text der auf dem Etikett angezeigte Text
-     */
-void ScriptingService::setLabelText (QString-ID, QString-Text);
+ * Legt den Text eines registrierten Etiketts fest
+ *
+ * @param identifier the identifier of the label
+ * @param text the text shown in the label
+ */
+void ScriptingService::setLabelText(QString identifier, QString text);
 ```
 
 ### Beispiel
@@ -437,7 +437,7 @@ var clipboardHtml = script.clipboard(true);
 
 You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-Schreiben Sie Text in die Notiztextbearbeitung
+Schreiben Sie Text in die Notiztext-Bearbeitung
 --------------------------------
 
 ### Methodenaufruf und Parameter
@@ -452,8 +452,8 @@ void ScriptingService::noteTextEditWrite(QString text);
 
 ### Beispiel
 ```js
-/ schreibe Text in die Notiz Textbearbeitung
-script.noteTextEditWrite ("Mein benutzerdefinierter Text");
+// schreibe Text in die Notiz Textbearbeitung
+script.noteTextEditWrite("My custom text");
 ```
 
 You might want to look at the custom action `transformTextRot13` in the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
@@ -663,7 +663,7 @@ bool ScriptingService::platformIsWindows();
 ### Beispiel
 ```js
 if (script.platformIsLinux()) {
-    // only will be executed if under Linux
+    // Will be executed only if under Linux
 }
 ```
 
@@ -800,7 +800,7 @@ Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-referenc
 If you want to inject styles into html preview to alter the way notes are previewed please look at [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
 ::: tip
-If you actually want to see how the dialogs look and what the names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it.
+If you actually want to see how the dialogs look and what their names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it.
 :::
 
 Neuladen der Scripting-Engine
@@ -1082,7 +1082,6 @@ property string myFile;
 property string mySelection;
 
 // register your settings variables so the user can set them in the script settings
-// use this property if you don't need
 //
 // unfortunately there is no QVariantHash in Qt, we only can use
 // QVariantMap (that has no arbitrary ordering) or QVariantList (which at
@@ -1139,11 +1138,11 @@ Darüber hinaus können Sie die ` settingsVariables ` mit einer speziellen Funkt
 
 ### Beispiel
 ```js
-/ **
-  * Registriert die Einstellungsvariablen erneut
-  * *
-  * Verwenden Sie diese Methode, wenn Sie Code verwenden möchten, um Ihre Variablen zu überschreiben, z. B. Einstellungen
-  * Standardwerte abhängig vom Betriebssystem.
+/**
+ * Registers the settings variables again
+ *
+ * Use this method if you want to use code to override your variables, like setting
+ * default values depending on the operating system.
  */
 function registerSettingsVariables() {
     if (script.platformIsWindows()) {
@@ -1245,7 +1244,7 @@ var cacheDirForScript = script.cacheDir("my-script-id");
 Löschen eines Cache-Verzeichnisses
 --------------------------
 
-Sie können die Cache-Dateien Ihres Skripts löschen, indem Sie den Namen an clearCacheDir () übergeben.
+You can clear the cache directory of your script by passing its name to clearCacheDir().
 
 ### Methodenaufruf und Parameter
 ```cpp
@@ -1544,7 +1543,7 @@ Vielleicht möchten Sie sich das Beispiel ansehen [export-notes-as-one-html.qml]
 Arbeiten mit Websockets
 -----------------------
 
-Sie können QOwnNotes mithilfe von ` WebSocketServer ` fernsteuern.
+You can remotely control QOwnNotes by using `WebSocketServer`.
 
 Bitte schauen Sie sich das Beispiel an: [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). Du kannst die Socket Server Verbindung testen indem du dich mit [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345) zu ihr verbindest.
 

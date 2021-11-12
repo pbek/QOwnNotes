@@ -57,10 +57,10 @@ Si cette fonction est définie dans plusieurs scripts, le premier script qui ren
 ### Appel de méthode et paramètres
 ```js
 /**
-  * @param fileName string le chemin du fichier du fichier multimédia source avant sa copie dans le dossier multimédia
-  * @param markdownText string le texte de démarque du fichier multimédia, par exemple ! [mon-image] (média / mon-image-4101461585.jpg)
-  * @return string le nouveau texte de démarque du fichier multimédia
-  */
+ * @param fileName string le chemin du fichier du fichier multimédia source avant sa copie dans le dossier multimédia
+ * @param markdownText string le texte en markdown du fichier multimédia, par exemple ![mon-image](média / mon-image-4101461585.jpg)
+ * @return string le nouveau texte Markdown du fichier multimédia
+ */
 function insertMediaHook (fileName, markdownText);
 ```
 
@@ -76,10 +76,10 @@ Si cette fonction est définie dans plusieurs scripts, le premier script qui ren
 ### Appel de méthode et paramètres
 ```js
 /**
-  * @param fileName string le chemin du fichier de la pièce jointe source avant sa copie dans le dossier de la pièce jointe
-  * @param markdownText string le texte de démarque du fichier joint, par exemple [my-file.txt] (pièces jointes / mon-fichier-4245650967.txt)
-  * @return string le nouveau texte de démarque du fichier joint
-  */
+* @param fileName string le chemin du fichier de la pièce jointe source avant sa copie dans le dossier de la pièce jointe
+* @param markdownText string le texte en Markdown du fichier joint, par exemple [my-file.txt](pièces jointes/mon-fichier-4245650967.txt)
+* @return string le nouveau texte en Markdown du fichier joint
+*/
 function insertAttachmentHook (fileName, markdownText);
 ```
 
@@ -91,12 +91,12 @@ insertingFromMimeDataHook
 ### Appel de méthode et paramètres
 ```js
 /**
-  * Cette fonction est appelée lorsque le html ou un fichier multimédia est collé dans une note avec `Ctrl + Maj + V`
-  *
-  * @param text texte de l'objet QMimeData
-  * @param html html de l'objet QMimeData
-  * @ renvoie la chaîne à insérer à la place du texte de l'objet QMimeData
-  */
+ * Cette fonction est appelée lorsque du HTML ou un fichier multimédia est collé dans une note avec `Ctrl + Maj + V`
+ *
+ * @param text texte de l'objet QMimeData
+ * @param html HTML de l'objet QMimeData
+ * @ renvoie la chaîne à insérer à la place du texte de l'objet QMimeData
+ */
 function insertingFromMimeDataHook (text, html);
 ```
 
@@ -176,20 +176,20 @@ preNoteToMarkdownHtmlHook
 ### Appel de méthode et paramètres
 ```js
 /**
-  * Cette fonction est appelée avant la génération du code HTML de démarque d'une note
-  *
-  * Il vous permet de modifier ce qui est passé au convertisseur markdown en html
-  *
-  * La méthode peut par exemple être utilisée dans plusieurs scripts pour rendre du code (comme LaTeX math ou mermaid)
-  * à sa représentation graphique pour l'aperçu
-  *
-  * La note ne sera pas modifiée dans ce processus
-  *
-  * @param {NoteApi} note - l'objet note
-  * @param {string} markdown - le markdown qui est sur le point d'être converti en html
-  * @param {string} forExport - true si le html est utilisé pour une exportation, false pour l'aperçu
-  * @return {string} le markdown modifié ou une chaîne vide si rien ne doit être modifié
-  */
+ * Cette fonction est appelée avant la génération du code HTML Markdown d'une note
+ *
+ * Elle vous permet de modifier ce qui est passé au convertisseur Markdown vers HTML
+ *
+ * La méthode peut par exemple être utilisée dans de multiples scripts pour rendre du code (comme LaTeX math ou mermaid)
+ * dans sa représentation graphique pour l'aperçu
+ *
+ * La note ne sera pas modifiée dans ce processus
+ *
+ * @param {NoteApi} note - l'objet note
+ * @param {string} markdown - le Markdown qui est sur le point d'être converti en HTML
+ * @param {string} forExport - true si le HTML est utilisé pour une exportation, false pour l'aperçu
+ * @return {string} le Markdown modifié ou une chaîne vide si rien ne doit être modifié
+ */
 function preNoteToMarkdownHtmlHook (note, markdown, forExport);
 ```
 
@@ -201,24 +201,24 @@ noteToMarkdownHtmlHook
 ### Appel de méthode et paramètres
 ```js
 /**
-  * Cette fonction est appelée lorsque le code HTML de démarque d'une note est généré
-  *
-  * Il vous permet de modifier ce html
-  * Ceci est par exemple appelé avant par l'aperçu de la note
-  *
-  * La méthode peut être utilisée dans plusieurs scripts pour modifier le html de l'aperçu
-  *
-  * @param {NoteApi} note - l'objet note
-  * @param {string} html - le html qui est sur le point d'être rendu
-  * @param {string} forExport - true si le html est utilisé pour une exportation, false pour l'aperçu
-  * @return {string} le code HTML modifié ou une chaîne vide si rien ne doit être modifié
-  */
+ * Cette fonction est appelée lorsque le code HTML Markdown d'une note est généré
+ *
+ * Il vous permet de modifier ce HTML
+ * Elle est par exemple appelé avant par l'aperçu de la note
+ *
+ * La méthode peut être utilisée dans plusieurs scripts pour modifier le HTML de l'aperçu
+ *
+ * @param {NoteApi} note - l'objet note
+ * @param {string} html - le HTML qui est sur le point d'être rendu
+ * @param {string} forExport - true si le HTML est utilisé pour une exportation, false pour l'aperçu
+ * @return {string} le code HTML modifié ou une chaîne vide si rien ne doit être modifié
+ */
 function noteToMarkdownHtmlHook (note, html, forExport);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [exemple.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) ou [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
 
-Veuillez vous référer au [HTML pris en charge Documentation du sous-ensemble](http://doc.qt.io/qt-5/richtext-html-subset.html) pour une liste de tous les styles css pris en charge.
+Veuillez vous référer à la documentation du [sous-ensemble HTML pris en charge](http://doc.qt.io/qt-5/richtext-html-subset.html) pour une liste de tous les styles CSS pris en charge.
 
 encryptionHook
 --------------
@@ -335,10 +335,10 @@ Ce hook est appelé lorsque des données sont envoyées depuis l'extension de na
 ```js
 /**
  * @param requestType peut être "page" ou "selection"
- * @param pageUrl l'url de la page Web sur laquelle la requête a été effectuée
- * @param pageTitrer le titre de la page Web où la requête a été faite
- * @param rawData les données qui ont été transmises, html pour requestType "page" ou texte brut pour requestType "selection"
- * @param screenshotDataUrl l'url des données de la capture d'écran si la page Web où la demande a été faite
+ * @param pageUrl l'URL de la page Web sur laquelle la demande a été effectuée
+ * @param pageTitrer le titre de la page Web où la demande a été faite
+ * @param rawData les données qui ont été transmises, HTML pour requestType "page" ou texte brut pour requestType "selection"
+ * @param screenshotDataUrl l'URL des données de la capture d'écran si la page Web où la demande a été faite
  * @return true si les données ont été gérées par un hook
  */
 function callHandleWebsocketRawDataHook (requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);

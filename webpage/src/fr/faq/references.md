@@ -168,7 +168,7 @@ Ce que d'autres personnes ont dit à propos de QOwnNotes…
     - <https://www.slant.co/topics/6303/~note-taking-apps-for-linux#21>
 - [QOwnNotes - Notepad and todo-list manager with Markdown support and Nextcloud integration : coolgithubprojects](https://www.reddit.com/r/coolgithubprojects/comments/izg63b/qownnotes_notepad_and_todolist_manager_with/)
 - [QQwnNotes - Работа с заметками](https://континентсвободы.рф/%D0%B4%D1%80%D1%83%D0%B3%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/qqwnnotes-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B0%D0%BC%D0%B8.html)
-- [QOwnNotes 21.1.2 download free | macOS | AppKed](https://www.macbed.com/qownnotes/)
+- [QOwnNotes 21.1.2 téléchargement gratuit | macOS | AppKed](https://www.macbed.com/qownnotes/)
 - [QOwnNotes(开源Markdown笔记本) v20.12.9 绿色版 - 果核剥壳](https://www.ghpym.com/qownnotes.html)
 - [Аналоги OneNote в Linux | Losst](https://losst.ru/analogi-onenote-v-linux#4_QOwnNotes)
 - [Brutal Alternativa a Bloc de Notas - Descargar QOwnNotes Gratis Ultima Versión - YouTube](https://youtu.be/U52AQ8I3HHk?t=66)
@@ -177,8 +177,8 @@ Ce que d'autres personnes ont dit à propos de QOwnNotes…
 - <https://www.slant.co/topics/6215/viewpoints/31/~simple-text-editors-for-windows~qownnotes>
 - [QOwnNotes - softonic](https://qownnotes.en.softonic.com/)
 - [QOwnNotes绿色版 21.7.12 | 强大的免费笔记软件 – 软件No1](https://www.rjno1.com/qownnotes/)
-- [QOwnNotes is really versatile! - The user friendliest, easy to use Note Taking App! - YouTube](https://www.youtube.com/watch?v=WFoRQf31-h0)
-- [Presentation about QOwnNotes by stevelitt](http://troubleshooters.com/linux/presentations/golug_qownnotes/golug_qownnotes.pdf)
+- [QOwnNotes est très versatile ! - L'utilitaire de prise de notes le plus convivial et le plus facile à maîtriser ! - YouTube](https://www.youtube.com/watch?v=WFoRQf31-h0)
+- [Présentation à propos de QOwnNotes par stevelitt](http://troubleshooters.com/linux/presentations/golug_qownnotes/golug_qownnotes.pdf)
 
 ## Mentions
 
@@ -274,7 +274,7 @@ Ce que d'autres personnes ont dit à propos de QOwnNotes…
 - [The Top 10 Productivity Apps on Desktop - Asian Efficiency](https://www.asianefficiency.com/technology/the-top-10-productivity-apps-on-desktop/)
 - [Tired of note-taking apps | Hacker News](https://news.ycombinator.com/item?id=23888799&p=2)
 - [Mark Text : un éditeur de texte encore jeune, mais très prometteur](https://www.nextinpact.com/article/44807/mark-text-editeur-texte-encore-jeune-mais-tres-prometteur)
-- [Synology Community](https://community.synology.com/enu/forum/1/post/124951)
+- [Communauté Synology](https://community.synology.com/enu/forum/1/post/124951)
 - [Trilium Notes - new note taking application : linux](https://www.reddit.com/r/linux/comments/9c34b8/trilium_notes_new_note_taking_application/e581cs1/)
 - <https://github.com/noraj/OSCP-Exam-Report-Template-Markdown>
 - [Inspire Writer - Voxcaster](https://www.vox.me.uk/post/2020/04/inspire-writer)

@@ -35,7 +35,7 @@ graph TB
 
 ## QOwnNotes
 
-- QOwnNotes **stocke les note** dans votre dossier de notes **sous forme de fichiers de démarque**
+- QOwnNotes **stocke les note** dans votre dossier de notes **sous forme de fichiers Markdown**
 - Il peut parler à votre serveur Nextcloud / ownCloud **pour partager publiquement des notes** avec d'autres personnes
 - Vous pouvez également **accéder à l'historique de vos notes et à la corbeille** sur votre serveur Nextcloud / ownCloud via l'application [QOwnNotesApi Nextcloud](#qownnotesapi-nextcloud-app)
 - Les listes Todo sur votre serveur Nextcloud / ownCloud sont accessibles depuis QOwnNotes
@@ -43,7 +43,7 @@ graph TB
     - La synchronisation de fichiers est une entreprise complexe, il existe déjà d'excellentes solutions de synchronisation de fichiers (voir [Client de synchronisation de bureau Nextcloud](#nextcloud-desktop-sync-client))
 
 
-## Fichiers de notes de démarque
+## Fichiers de notes en Markdown
 
 - Vous **possédez** toutes vos notes et fichiers multimédias / pièces jointes!
 - Vos notes sont stockées sous forme de **fichiers Markdown en texte brut** sur votre ordinateur de bureau
@@ -123,7 +123,7 @@ Vous pouvez également utiliser [Notebooks](https://itunes.apple.com/us/app/note
 
 Il s'agit d'un service en ligne fourni par QOwnNotes pour vérifier si une nouvelle version de l'application est disponible.
 
-Il parle à GitHub et vérifie la dernière version, obtient une URL de téléchargement adaptée et compile les modifications du journal des modifications par rapport à la version de QOwnNotes que vous utilisez actuellement en html à afficher dans la boîte de dialogue de mise à jour.
+Il communique avec GitHub et s'enquiert de la dernière version, obtient une URL de téléchargement appropriée et compile les modifications du journal des modifications par rapport à la version de QOwnNotes que vous utilisez actuellement en HTML à afficher dans la boîte de dialogue de mise à jour.
 
 En outre, il fournit également le [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) et une implémentation de l'ancienne API de vérification des mises à jour pour les anciennes versions de QOwnNotes.
 

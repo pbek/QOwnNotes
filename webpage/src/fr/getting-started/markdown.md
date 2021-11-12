@@ -160,7 +160,7 @@ Ajoutez quatre espaces devant votre code pour le marquer comme bloc de code.
 ### Clôture Backtick
 
 Vous pouvez également utiliser trois backticks pour créer un bloc de code.
-~~~ démarque
+~~~markdown
 ```
 Le code va ici
 Le code va ici
@@ -175,7 +175,7 @@ Vous pouvez utiliser le [raccourci] (./ shortcuts.md) <kbd>Ctrl + Maj + C</kbd> 
 
 Il y a aussi une coloration syntaxique avec des blocs de code dans QOwnNotes.
 
-~~~ démarque
+~~~ markdown
 ``` bash
 # Je suis un commentaire
 cd Notes
@@ -325,7 +325,7 @@ Les commentaires ne sont pas affichés dans l'aperçu.
 ```
 
 ::: tip
-Un bloc de commentaire html en tête d'une note sera également ignoré dans la génération automatique du nom de fichier de la note.
+Un bloc de commentaire HTML en tête d'une note sera également ignoré dans la génération automatique du nom de fichier de la note.
 :::
 
 ## Listes de cases à cocher

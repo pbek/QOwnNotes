@@ -15,7 +15,7 @@ Vous pouvez activer QOwnNotesAPI directement dans votre instance **Nextcloud** o
 Le partage des notes se fait via l'API fournie par Nextcloud / ownCloud. Tasks are accessed directly via CalDAV.
 
 ::: tip
-Utilisez votre client de **synchronisation** **Nextcloud** / **ownCloud** pour **synchroniser vos notes**, vos notes sont de simples fichiers de démarque. Il n'est pas nécessaire d'inventer la roue deux fois. Et il y a aussi des personnes qui utilisent différents services pour synchroniser leurs fichiers de notes (comme Dropbox, Syncthing ou Resilio Sync).
+Utilisez votre client de **synchronisation** **Nextcloud** / **ownCloud** pour **synchroniser vos notes** qui sont de simples fichiers Markdown. Il n'est pas nécessaire d'inventer la roue deux fois. Et il y a aussi des personnes qui utilisent différents services pour synchroniser leurs fichiers de notes (comme Dropbox, Syncthing ou Resilio Sync).
 :::
 
 ## Ce que fait QOwnNotesAPI

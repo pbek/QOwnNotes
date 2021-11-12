@@ -7,6 +7,8 @@
       folder where the note is exported to
     - this only works for files from the media and attachments folder of the note folder
     - the links in the exported Markdown file will be updated 
+- added more translation (thank you manuelasmiley, iclementine, rawfreeamy,
+  chocolatine, anastasia_shymkiv38, rakekniven, marterra, mguerra)
 
 ## 21.11.3
 - now the search text that was entered in the note search panel will not be

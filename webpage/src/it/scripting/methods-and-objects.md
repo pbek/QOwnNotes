@@ -665,7 +665,7 @@ bool ScriptingService::platformIsWindows();
 ### Esempio
 ```js
 if (script.platformIsLinux()) {
-    // only will be executed if under Linux
+    // Will be executed only if under Linux
 }
 ```
 
@@ -802,7 +802,7 @@ Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-referenc
 If you want to inject styles into html preview to alter the way notes are previewed please look at [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
 ::: tip
-If you actually want to see how the dialogs look and what the names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it.
+If you actually want to see how the dialogs look and what their names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it.
 :::
 
 Ricaricamento del motore di scripting
@@ -1084,7 +1084,6 @@ property string myFile;
 property string mySelection;
 
 // register your settings variables so the user can set them in the script settings
-// use this property if you don't need
 //
 // unfortunately there is no QVariantHash in Qt, we only can use
 // QVariantMap (that has no arbitrary ordering) or QVariantList (which at
@@ -1145,7 +1144,7 @@ In addition you can override the `settingsVariables` with a special function `re
  * Registers the settings variables again
  *
  * Use this method if you want to use code to override your variables, like setting
- * default values depended on the operating system.
+ * default values depending on the operating system.
  */
 function registerSettingsVariables() {
     if (script.platformIsWindows()) {
@@ -1247,7 +1246,7 @@ var cacheDirForScript = script.cacheDir("my-script-id");
 Cancellazione di una directory della cache
 --------------------------
 
-You can clear the cache files of your script by passing its name to clearCacheDir().
+You can clear the cache directory of your script by passing its name to clearCacheDir().
 
 ### Chiamata al metodo e parametri
 ```cpp
@@ -1546,7 +1545,7 @@ You may want to take a look at the example [export-notes-as-one-html.qml](https:
 Lavorare con websocket
 -----------------------
 
-You can remote control QOwnNotes by using `WebSocketServer`.
+You can remotely control QOwnNotes by using `WebSocketServer`.
 
 Please take a look at the example [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). You can test the socket server by connecting to it on [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
 

@@ -663,7 +663,7 @@ bool ScriptingService::platformIsWindows();
 ### Példa
 ```js
 if (script.platformIsLinux()) {
-    // only will be executed if under Linux
+    // Will be executed only if under Linux
 }
 ```
 
@@ -800,7 +800,7 @@ Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-referenc
 If you want to inject styles into html preview to alter the way notes are previewed please look at [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
 ::: tip
-If you actually want to see how the dialogs look and what the names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it.
+If you actually want to see how the dialogs look and what their names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it.
 :::
 
 Reloading the scripting engine
@@ -1073,7 +1073,7 @@ The user can then set these properties in the script settings.
 
 ### Példa
 ```js
-// meg kell határoznia a regisztrált változókat, hogy később hozzájuk férhessen
+// you have to define your registered variables so you can access them later
 property string myString;
 property bool myBoolean;
 property string myText;
@@ -1081,13 +1081,12 @@ property int myInt;
 property string myFile;
 property string mySelection;
 
-// regisztrálja a beállítási változókat, hogy a felhasználó beállítsa őket a szkript beállításaiban
-// használja ezt a tulajdonságot, ha nincs rá szüksége
+// register your settings variables so the user can set them in the script settings
 //
-// sajnos a Qt-ben nincs QVariantHash, csak használni tudjuk
-// QVariantMap (amelynek nincs önkényes sorrendje) vagy QVariantList (amely a
-// a legkevesebb tetszőlegesen megrendelhető)
-tulajdonságváltozat beállításaiVáltozók: [
+// unfortunately there is no QVariantHash in Qt, we only can use
+// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
+// least can be ordered arbitrarily)
+property variant settingsVariables: [
     {
         "identifier": "myString",
         "name": "I am a line edit",
@@ -1133,7 +1132,6 @@ tulajdonságváltozat beállításaiVáltozók: [
         "items": {"option1": "Text for option 1", "option2": "Text for option 2", "option3": "Text for option 3"},
     }
 ];
-
 ```
 
 In addition you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
@@ -1141,10 +1139,10 @@ In addition you can override the `settingsVariables` with a special function `re
 ### Példa
 ```js
 /**
-  * Újra regisztrálja a beállítási változókat
-  *
-  * Használja ezt a módszert, ha kódot szeretne használni a változók felülírásához, például a beállításhoz
-  * az alapértelmezett értékek az operációs rendszertől függtek.
+ * Registers the settings variables again
+ *
+ * Use this method if you want to use code to override your variables, like setting
+ * default values depending on the operating system.
  */
 function registerSettingsVariables() {
     if (script.platformIsWindows()) {
@@ -1246,7 +1244,7 @@ var cacheDirForScript = script.cacheDir("my-script-id");
 Gyorsítótár könyvtár törlése
 --------------------------
 
-You can clear the cache files of your script by passing its name to clearCacheDir().
+You can clear the cache directory of your script by passing its name to clearCacheDir().
 
 ### Módszerhívás és paraméterek
 ```cpp
@@ -1545,7 +1543,7 @@ You may want to take a look at the example [export-notes-as-one-html.qml](https:
 Webhálózatok használata
 -----------------------
 
-You can remote control QOwnNotes by using `WebSocketServer`.
+You can remotely control QOwnNotes by using `WebSocketServer`.
 
 Please take a look at the example [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). You can test the socket server by connecting to it on [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
 
