@@ -1808,6 +1808,12 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                                                       ? QStringLiteral("yes")
                                                       : QStringLiteral("no"),
                                                   withGitHubLineBreaks);
+            output += prepareDebugInformationLine(QStringLiteral("allowDifferentNoteFileName"),
+                noteFolder.settingsValue(QStringLiteral("allowDifferentNoteFileName"))
+                                                  .toBool()
+                                                      ? QStringLiteral("yes")
+                                                      : QStringLiteral("no"),
+                                                  withGitHubLineBreaks);
             output += prepareDebugInformationLine(
                 QStringLiteral("activeNoteSubFolder name"),
                 noteFolder.getActiveNoteSubFolder().getName(),

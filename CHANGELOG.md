@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.11.5
+- the output of the `allowDifferentNoteFileName` setting of each note folder was added
+  to the *Debug information* (for [#2297](https://github.com/pbek/QOwnNotes/issues/2297))
+
 ## 21.11.4
 - you can now choose to also **export attached media files and attachments of a note**
   when **exporting a note as Markdown file** (for [#1634](https://github.com/pbek/QOwnNotes/issues/1634))
