@@ -10919,6 +10919,9 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
                                    .toInt()));
                     ui->noteTreeWidget->scrollToItem(item);
                 }
+
+                // update the note list tooltip of the note
+                Utils::Gui::setTreeWidgetItemToolTipForNote(item, note);
             }
         }
 

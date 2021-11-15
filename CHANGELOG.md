@@ -1,6 +1,7 @@
 # QOwnNotes Changelog
 
 ## 21.11.5
+- the tooltip of a note in the note list will now be updated after the note was renamed in the note list
 - the output of the `allowDifferentNoteFileName` setting of each note folder was added
   to the *Debug information* (for [#2297](https://github.com/pbek/QOwnNotes/issues/2297))
 
