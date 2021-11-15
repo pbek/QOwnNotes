@@ -2907,7 +2907,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1674"/>
 <source>&amp;Export note as Markdown file</source>
-<translation type="unfinished">&amp;Export note as Markdown file</translation>
+<translation>&amp;Exportar nota como arquivo markdown</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1704"/>
@@ -3321,12 +3321,12 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <location filename="../mainwindow.cpp" line="7544"/>
 <source>Export attached files</source>
-<translation type="unfinished">Export attached files</translation>
+<translation>Exportar arquivos anexados</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7545"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+<translation>Você também quer exportar arquivos de mídia e anexos da nota? Arquivos podem ser substituídos na pasta de destino!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7579"/>

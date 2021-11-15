@@ -2913,7 +2913,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1674"/>
 <source>&amp;Export note as Markdown file</source>
-<translation type="unfinished">&amp;Export note as Markdown file</translation>
+<translation>Notiz als Markdown-Datei &amp;exportieren</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1704"/>
@@ -3329,12 +3329,12 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <location filename="../mainwindow.cpp" line="7544"/>
 <source>Export attached files</source>
-<translation type="unfinished">Export attached files</translation>
+<translation>Angehängte Dateien exportieren</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7545"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+<translation>Möchten Sie auch Mediendateien und Anhänge der Notiz exportieren? Dateien können im Zielordner überschrieben werden!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7579"/>

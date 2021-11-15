@@ -2906,7 +2906,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1674"/>
 <source>&amp;Export note as Markdown file</source>
-<translation type="unfinished">&amp;Export note as Markdown file</translation>
+<translation>&amp;Exporta la nota com un fitxer de Markdown</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1704"/>
@@ -3320,12 +3320,12 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../mainwindow.cpp" line="7544"/>
 <source>Export attached files</source>
-<translation type="unfinished">Export attached files</translation>
+<translation>Exportar fitxers adjunts</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7545"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+<translation>Voleu exportar també els adjunts i els fitxers d'imatges, so, etc. de la nota? Els fitxers es podrien sobreescriure a la carpeta de destí!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7579"/>

@@ -1,8 +1,8 @@
-# Why metrics?
+# Warum Metriken?
 
-## Why are metrics useful?
+## Warum sind Metriken nützlich?
 
-QOwnNotes (as in the application itself) is **developed by one and sometimes two persons in their spare time**.
+QOwnNotes (wie auch die Anwendung selbst) wird **von einer und manchmal auch von zwei Personen in ihrer Freizeit entwickelt**.
 
 Releases are built for a lot of platforms and distributions (often very old versions of them). Keeping them up is a lot of work.
 
@@ -32,12 +32,12 @@ QOwnNotes is free open source software. You can review the metrics all the time 
 
 ## Can I turn metrics off?
 
-You can turn them off upon first start of the application in the welcome dialog or at a later time in the settings dialog.
+Sie können sie beim ersten Start der Anwendung im Willkommensdialog oder zu einem späteren Zeitpunkt im Einstellungsdialog ausschalten.
 
-## Why are metrics not off by default?
+## Warum sind Metriken standardmäßig nicht deaktiviert?
 
-Defaults are king. Turning metrics off by default would result in no meaningful metrics at all.
+Standardwerte sind König. Das standardmäßige Deaktivieren von Metriken würde zu keinen aussagekräftigen Metriken führen.
 
-Most of the people don't care about metrics. Those who care about metrics and don't want to vote with their metrics about what is worked on or what is supported can easily turn them off at the first start of the application.
+Die meisten Leute interessieren sich nicht für Metriken. Wer sich für Metriken interessiert und nicht mit seinen Metriken darüber abstimmen möchte, woran gearbeitet oder was unterstützt wird, kann diese beim ersten Start der Anwendung einfach abschalten.
 
-You will even get a second dialog that will tell you about the metrics, if you finished the welcome dialog too early.
+Sie erhalten sogar einen zweiten Dialog, der Sie über die Metriken informiert, wenn Sie den Begrüßungsdialog zu früh beendet haben.
