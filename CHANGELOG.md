@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 21.11.6
-- pasting of text with newline character at the end into lists, when copied text originates
+- pasting of text with newline character at the end into lists, when the copied text originates
   from inside the application was fixed (for [#16](https://github.com/pbek/qmarkdowntextedit/pull/16))
 - added more Italian, Persian translation (thank you marcoxbresciani, amirkbrpr)
 
