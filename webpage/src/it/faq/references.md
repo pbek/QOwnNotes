@@ -81,7 +81,7 @@ Cosa hanno detto gli altri su QOwnNotes ...
 - [7 Free Evernote Alternatives - Best Note Taking App With Simple Interface](https://www.geckoandfly.com/24387/note-taking-app/)
 - [Scout Archives - QOwnNotes](https://scout.wisc.edu/archives/r49075)
     - [The Scout Report -- Volume 23, Number 49 | Internet Scout](https://scout.wisc.edu/report/2017/1208)
-- [QOwnNotes – App of the Week - ownCloud](https://owncloud.org/news/qownnotes-app-week)
+- [QOwnNotes – App of the Week – ownCloud](https://owncloud.org/news/qownnotes-app-week)
 - [Snapcraft su Twitter: "Get your notes on order! 📝 @QOwnNotes is a fast and beautiful text editor which supports local saving and storage in your own cloud. Install… https://t.co/2yGYmPb7g2"](https://twitter.com/snapcraftio/status/951109910410027010)
 - [Ubuntu su Twitter: "Get your notes on order! 📝 @QOwnNotes is a fast and beautiful text editor which supports local saving and storage in your own cloud. Instal… https://t.co/4W4o9OfdFo"](https://twitter.com/ubuntu/status/951472292495876096)
 - [QOwnNotes - Notizverwaltung auf Nextcloud - Die Welt und ich](https://www.kussaw.de/2017/02/qownnotes-notizen-auf-nextcloud/)

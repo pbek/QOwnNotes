@@ -14,7 +14,7 @@ Puoi iscriverti a [Crowdin](https://crowdin.com/project/qownnotes/invite) e **tr
 
 **[QOwnNotes su Crowdin](https://crowdin.com/project/qownnotes/invite)**
 
-Puoi iscriverti a [Crowdin](https://crowdin.com/profile/pbek) e [tradurre](https://github.com/pbek/QOwnNotes/issues) <1>QOwnNotes</1> nella tua lingua con strumenti semplici.
+Devi solo [mandare un messaggio all'autore del progetto su Crowdin](https://crowdin.com/profile/pbek) o aprire un [problema su GitHub](https://github.com/pbek/QOwnNotes/issues) se vuoi tradurre QOwnNotes in una nuova lingua.
 
 Se desideri aggiungere nuove traduzioni a lingue esistenti, puoi farlo subito.
 

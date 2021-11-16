@@ -3,6 +3,7 @@
 ## 21.11.6
 - pasting of text with newline character at the end into lists, when copied text originates
   from inside the application was fixed (for [#16](https://github.com/pbek/qmarkdowntextedit/pull/16))
+- added more Italian, Persian translation (thank you marcoxbresciani, amirkbrpr)
 
 ## 21.11.5
 - the tooltip of a note in the note list will now be updated after the note was renamed in the note list

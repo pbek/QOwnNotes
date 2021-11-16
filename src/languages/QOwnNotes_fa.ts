@@ -2914,7 +2914,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1674"/>
 <source>&amp;Export note as Markdown file</source>
-<translation type="unfinished">&amp;Export note as Markdown file</translation>
+<translation>&amp;خروج یادداشت به صورت پرونده مارک داون</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1704"/>
@@ -3332,12 +3332,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="7544"/>
 <source>Export attached files</source>
-<translation type="unfinished">Export attached files</translation>
+<translation>خروج پرونده های پیوست شده</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7545"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+<translation>آیا نسبت به خروج پرونده ها و پیوست های رسانه ای یادداشت نیز تمایل دارید؟ پرونده ها ممکن است در پوشه مقصد رونویسی شوند!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7579"/>
@@ -6484,7 +6484,7 @@ QOwnNotesAPI
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="864"/>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-<translation type="unfinished">You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</translation>
+<translation>شما می توانید به سرور اون کلود خود از داخل برنامه دسترسی داشته باشید تا برای مثال بتوانید یادداشت های حذف شده و نسخه های یادداشت را مدیریت کرده یا یادداشت ها را به اشتراک بگذارید. فرایند ادغام همگام سازی پرونده یادداشت را شامل نمی شود. شما همچنان برای همگام سازی پرونده ها نیاز به نصب سرویس گیرنده همگام سازی اون کلود دارید.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1431"/>
@@ -6499,7 +6499,7 @@ QOwnNotesAPI
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1862"/>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
-<translation type="unfinished">You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</translation>
+<translation>شما می توانید برای مدیریت لیست های انجام دادنی به سرور اون کلود خود یا سرور CalDAV عمومی دسترسی داشته باشید.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2220"/>
@@ -6759,7 +6759,18 @@ QOwnNotesAPI
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6282"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
-<translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
+<translation>&lt;a href="%1"&gt;
+افزونه مرورگر همراه وب
+&lt;/a&gt;
+را از
+&lt;a href="%2"&gt;
+کروم وب استور
+&lt;/a&gt;
+یا
+&lt;a href="%3"&gt;
+صفحه افزونه های فایرفاکس
+&lt;/a&gt;
+نصب کنید تا از QOwnNotes به عنوان وب کلیپر یا برای مدیریت نشانک ها استفاده کنید.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6465"/>
@@ -6824,7 +6835,7 @@ QOwnNotesAPI
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6040"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
-<translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
+<translation>فعال سازی سطل زباله محلی برای نگهداری رونوشت یادداشت های حذف شده</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6076"/>
