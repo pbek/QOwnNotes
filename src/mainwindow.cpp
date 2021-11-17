@@ -10577,6 +10577,11 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
 }
 
 void MainWindow::openCurrentNoteInTab() {
+    // first try to jump to the note if there already is a tab for it
+    if (jumpToTab(currentNote)) {
+        return;
+    }
+
     // simulate a newly opened tab by updating the current tab with the last note
     if (_lastNoteId > 0) {
         auto previousNote = Note::fetch(_lastNoteId);

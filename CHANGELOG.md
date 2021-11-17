@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.11.7
+- it was fixed that when switching between notes in the note tab bar and then opening the current note
+  in a new tab again it was possible to get a broken note tab (for [#2298](https://github.com/pbek/QOwnNotes/issues/2298))
+
 ## 21.11.6
 - pasting of text with newline character at the end into lists, when the copied text originates
   from inside the application was fixed (for [#16](https://github.com/pbek/qmarkdowntextedit/pull/16))
