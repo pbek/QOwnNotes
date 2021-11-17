@@ -1,43 +1,43 @@
-# Why metrics?
+# Pourquoi des statistiques d'utilisation ?
 
-## Why are metrics useful?
+## En quoi les statistiques d'utilisation sont-elles utiles ?
 
-QOwnNotes (as in the application itself) is **developed by one and sometimes two persons in their spare time**.
+QOwnNotes (l'application elle-même) est **développée par une ou parfois deux personnes sur leur temps libre**.
 
-Releases are built for a lot of platforms and distributions (often very old versions of them). Keeping them up is a lot of work.
+Les versions sont compilées pour un grand nombre de plate-formes (souvent de très vielles versions de ces dernières). Les garder à jour représente beaucoup de travail.
 
-The metrics are the only real source of information about which versions of platforms and distributions and what features are used by the users, so decisions can be made which versions to retire and which features need more work and which are hardly used.
+Les statistiques d'utilisation sont la seule véritable source d'information permettant de savoir quelles versions des plate-formes et des distributions et quelles fonctionnalités sont utilisées par les utilisateurs. Elles permettent de prendre des décisions concernant les versions à mettre à la retraite, quelles fonctionnalités nécessitent plus de travail et lesquelles sont rarement utilisées.
 
-The same goes for the used languages of the users, which drives the translations of the application and the documentation.
+Les mêmes principes s'appliquent pour les langues utilisées, ce qui guide les traductions de l'application et de sa documentation.
 
-## Where are the metrics stored?
+## Où les statistiques d'utilisation sont-elles stockées ?
 
-The metrics are transmitted to and stored on a self-hosted [Matomo](https://matomo.org/) server. Only the two main developers have access to the data. **No data is shared with 3rd parties.**
+Les statistiques d'utilisation sont transmises et stockées sur un serveur [Matomo](https://matomo.org/) auto-hébergé. Seules les deux développeurs principaux ont accès aux données. **Aucunes données ne sont partagées avec des tierces parties.**
 
-## How are metrics collected?
+## Comment les statistiques d'utilisation sont-elles collectées ?
 
-Metrics are **anonymized** (e.g. ip address stripped out) on the Matomo server after they are received.
+Les statistiques d'utilisation sont **anonymisées** sur le serveur Matomo après réception (l'adresse IP en est, par exemple, ôtée).
 
-No personal information, like text you entered or note names are collected or stored on the server!
+Aucune information personnelle - telle que du texte que vous avez entré ou les noms des notes - ne sont collectées ni stockées sur le serveur !
 
-## What is collected?
+## Qu'est-ce qui est collecté ?
 
-Some basic information like screen resolution, operating system and version of QOwnNotes used is transmitted.
+Sont transmises des informations basiques telles que la résolution de l'écran, le système d'exploitation et la version de QOwnNotes utilisée.
 
-Furthermore, for example events are sent to the server when actions are used in the applications.
+De plus des évènements sont, par exemple, envoyés au serveur quand des actions sont utilisées dans les applications.
 
-QOwnNotes is free open source software. You can review the metrics all the time by searching for example for [sendVisitIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendVisitIfEnabled) and [sendEventIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendEventIfEnabled) in the source code to see what exactly is sent.
+QOwnNotes est un logiciel libre open-source. Vous pouvez contrôler les statistiques d'utilisation à n'importe quel moment en recherchant par exemple [sendVisitIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendVisitIfEnabled) et [sendEventIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendEventIfEnabled) dans le code source pour voir ce qui est envoyé.
 
-**No personal information, like text you entered or note names are collected!**
+**Aucune information personnelle - telle que du texte que vous avez entré ou les noms des notes - ne sont collectées ni stockées sur le serveur !**
 
-## Can I turn metrics off?
+## Puis-je désactiver les statistiques d'utilisation ?
 
-You can turn them off upon first start of the application in the welcome dialog or at a later time in the settings dialog.
+Vous pouvez les désactiver au premier démarrage de l'application dans la boîte de dialogue de bienvenue, ou plus tard dans les paramètres.
 
-## Why are metrics not off by default?
+## Pourquoi les statistiques d’utilisation ne sont-elles pas désactivées par défaut ?
 
-Defaults are king. Turning metrics off by default would result in no meaningful metrics at all.
+Les réglages par défaut sont rois. Désactiver par défaut les statistiques d'utilisation voudrait pour ainsi dire aucunes statistiques utilisables.
 
-Most of the people don't care about metrics. Those who care about metrics and don't want to vote with their metrics about what is worked on or what is supported can easily turn them off at the first start of the application.
+La plupart des gens se fichent des statistiques d'utilisation. Ceux qui se préoccupent des statistiques d'utilisation et ne veulent pas voter avec les leurs concernant ce qui fera l'objet d'un travail ou pris en charge, peuvent facilement les désactiver au premier démarrage de l'application.
 
-You will even get a second dialog that will tell you about the metrics, if you finished the welcome dialog too early.
+Vous verrez même une seconde boîte de dialogue qui vous informera sur les statistiques d’utilisation si vous avez clôt la boîte de dialogue de bienvenue trop tôt.

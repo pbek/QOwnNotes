@@ -292,16 +292,16 @@ Script {
      */
     function init() {
         // ajouter une action personnalisée sans bouton
-        script.registerCustomAction("mycustomaction1", "Menu text");
+        script.registerCustomAction("mycustomaction1", "Texte du menu");
 
         // ajouter une action personnalisée avec un bouton
-        script.registerCustomAction("mycustomaction2", "Menu text", "Button text");
+        script.registerCustomAction("mycustomaction2", "Texte du menu", "Texte du bouton");
 
-        // ajouter une action personnalisée avec un bouton et un icone du thème freedesktop
-        script.registerCustomAction("mycustomaction3", "Menu text", "Button text", "task-new");
+        // ajouter une action personnalisée avec un bouton et un icône du thème freedesktop
+        script.registerCustomAction("mycustomaction3", "Texte du menu", "Texte du bouton", "nouvelle-tâche");
 
-        // ajouter une action personnalisée avec un bouton et un icone venant d'un fichier
-        script.registerCustomAction("mycustomaction4", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
+        // ajouter une action personnalisée avec un bouton et un icône provenant d'un fichier
+        script.registerCustomAction("mycustomaction4", "Texte du menu", "Texte du bouton", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
     }
 
     /**
@@ -353,7 +353,7 @@ void ScriptingService::registerLabel(QString identifier, QString text);
 ```js
 script.registerLabel("html-label", "<strong>Strong</strong> Texte HTML <br />avec trois lignes<br />et un <a href='https://www.qownnotes.org'>lien vers un site web</a>.");
 
-script.registerLabel("long-label", "encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte avec retour à la ligne");
+script.registerLabel("long-label", "encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte, encore un très long texte qui sera renvoyé à la ligne");
 
 script.registerLabel("counter-label");
 ```
@@ -380,7 +380,7 @@ void ScriptingService::setLabelText(QString identifier, QString text);
 
 ### Exemple
 ```js
-script.setLabelText("counter-label", "texte compteur");
+script.setLabelText("étiquette-compteur", "texte compteur");
 ```
 
 Vous pouvez utiliser à la fois du texte brut ou du HTML dans les étiquettes. Le texte sera sélectionnable et les liens pourront être cliqués.
@@ -437,13 +437,13 @@ var clipboardHtml = script.clipboard(true);
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-Write text to the note text edit
+Écrire du texte dans le corps de la note
 --------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Écrit du texte à la position actuelle du curseur dans l'éditeur de texte de la note
+ * Écrit du texte à la position courante du curseur dans le corps de la note
  *
  * @param text
  */
@@ -452,7 +452,7 @@ void ScriptingService::noteTextEditWrite(QString text);
 
 ### Exemple
 ```js
-// écrire texte dans l'éditeur de texte de la note
+// écrire texte dans le corps de la note
 script.noteTextEditWrite("Mon texte à moi");
 ```
 
@@ -460,13 +460,13 @@ Vous voudrez peut-être jeter un œil à l'action personnalisée `transformTextR
 
 Vous pouvez l'utiliser en conjonction avec `noteTextEditSelectAll` pour écraser tout le texte de la note actuelle.
 
-Lire le texte sélectionné dans l'éditeur de texte de la note
+Lire le texte sélectionné dans le corps de la note
 --------------------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Reads the selected text in the note text edit
+ * Lit le texte sélectionné dans le corps de la note
  *
  * @return
  */
@@ -475,19 +475,19 @@ QString ScriptingService::noteTextEditSelectedText();
 
 ### Exemple
 ```js
-// read the selected text from the note text edit
+// lit le texte sélectionné dans le corps de la note
 var text = script.noteTextEditSelectedText();
 ```
 
 Vous voudrez peut-être jeter un œil à l'action personnalisée `transformTextRot13` dans l'exemple [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-Select all text in the note text edit
+Sélectionner l'intégralité du texte de la note
 -------------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Selects all text in the note text edit
+ * Sélectionne l'intégralité du texte de la note
  */
 void ScriptingService::noteTextEditSelectAll();
 ```
@@ -499,13 +499,13 @@ script.noteTextEditSelectAll();
 
 Vous pouvez utiliser ceci en conjonction avec `noteTextEditWrite` pour écraser tout le texte de la note actuelle.
 
-Select the current line in the note text edit
+Sélectionner la ligne actuelle dans le texte de la note
 ---------------------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Selects the current line in the note text edit
+ * Sélectionne la ligne actuelle dans le texte de la note
  */
 void ScriptingService::noteTextEditSelectCurrentLine();
 ```
@@ -515,13 +515,13 @@ void ScriptingService::noteTextEditSelectCurrentLine();
 script.noteTextEditSelectCurrentLine();
 ```
 
-Select the current word in the note text edit
+Sélectionner le mot actuel dans le texte de la note
 ---------------------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Selects the current line in the note text edit
+ * Sélectionne le mot actuel dans le texte de la note
  */
 void ScriptingService::noteTextEditSelectCurrentWord();
 ```
@@ -531,13 +531,13 @@ void ScriptingService::noteTextEditSelectCurrentWord();
 script.noteTextEditSelectCurrentWord();
 ```
 
-Set the currently selected text in the note text edit
+Définir le texte actuellement sélectionné dans le corps de la note
 -----------------------------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Sets the currently selected text in the note text edit
+ *Définit le texte actuellement sélectionné dans le corps de la note
  *
  * @param start
  * @param end
@@ -547,13 +547,13 @@ void ScriptingService::noteTextEditSetSelection(int start, int end);
 
 ### Exemple
 ```js
-// expands the current selection by one character
+// étendre la sélection actuelle d'un caractère
 script.noteTextEditSetSelection(
     script.noteTextEditSelectionStart() - 1,
     script.noteTextEditSelectionEnd() + 1);
 ```
 
-Get the start position of the current selection in the note text edit
+Obtenir la position de départ de la sélection courante dans le texte de la note
 ---------------------------------------------------------------------
 
 ### Appel de méthode et paramètres
@@ -569,7 +569,7 @@ int ScriptingService::noteTextEditSelectionStart();
 script.log(script.noteTextEditSelectionStart());
 ```
 
-Get the end position of the current selection in the note text edit
+Obtenir la position de fin de la sélection courante dans le texte de la note
 -------------------------------------------------------------------
 
 ### Appel de méthode et paramètres
@@ -585,15 +585,15 @@ int ScriptingService::noteTextEditSelectionEnd();
 script.log(script.noteTextEditSelectionEnd());
 ```
 
-Set the text cursor in the note text edit to a certain position
+Placer le curseur à un endroit donné du texte de la note
 ---------------------------------------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Sets the text cursor in the note text edit to a certain position
- * 0 would be the beginning of the note
- * special case: -1 would be the end of the note
+ * Place le curseur à un endroit donné dans le texte de la note
+ * 0 serait le début de la note
+ * cas particulier: -1 serait la fin de la note
  *
  * @param position
  */
@@ -602,21 +602,21 @@ void ScriptingService::noteTextEditSetCursorPosition(int position);
 
 ### Exemple
 ```js
-// jump to the 11th character in the note
+// sauter au 11ème caractère dans la note
 script.noteTextEditSetCursorPosition(10);
 
-// jump to the end of the note
+// sauter à la fin de la note
 script.noteTextEditSetCursorPosition(-1);
 ```
 
-Get the current position of the text cursor in the note text edit
+Obtenir la position actuelle du curseur dans le texte de la note
 -----------------------------------------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Returns the current position of the text cursor in the note text edit
- * 0 would be the beginning of the note
+ * Retourne la position actuelle du curseur dans le texte de la note
+ * 0 serait le début de la note
  */
 int ScriptingService::noteTextEditCursorPosition();
 ```
@@ -626,17 +626,17 @@ int ScriptingService::noteTextEditCursorPosition();
 script.log(script.noteTextEditCursorPosition());
 ```
 
-Read the current word from the note text edit
+Lire le mot actuel dans le texte de la note
 ---------------------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Reads the current word in the note text edit
+ * Lit le mot actuel dans le texte de la note
  *
- * @param withPreviousCharacters also get more characters at the beginning
- *                               to get characters like "@" that are not
- *                               word-characters
+ * @param withPreviousCharacters pour récupérer plus de caractères au début
+ *                               pour récupérer des caractères tels que "@" qui ne sont pas
+ *                              des caractères de mots
  * @return
  */
 QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
@@ -644,7 +644,7 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 
 ### Exemple
 ```js
-// read the current word in the note text edit
+// Lit le mot actuel dans le texte de la note
 var text = script.noteTextEditCurrentWord();
 ```
 
@@ -688,18 +688,18 @@ script.tagCurrentNote("favorite");
 
 Vous voudrez peut-être jeter un coup d'œil à l'action personnalisée `favoriteNote` dans l'exemple [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml).
 
-Créer ou récupérer une balise par son nom liste de fil d'Ariane
+Créer ou récupérer une étiquette par son nom liste de fil d'Ariane
 -------------------------------------------------
 
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Fetches or creates a tag by its "breadcrumb list" of tag names
- * Element nameList[0] would be highest in the tree (with parentId: 0)
+ * Créé ou récupère une étiquette par son nom liste de fil d'Ariane
+ * Element nameList[0] serait le plus élevé dans l'arborescence (with parentId: 0)
  *
  * @param nameList
- * @param createMissing {bool} if true (default) all missing tags will be created
- * @return TagApi object of deepest tag of the name breadcrumb list
+ * @param createMissing {bool} si true (default) toutes les étiquettes manquantes seront créées
+ * @return TagApi object de l'étiquette la plus profonde du nom liste de fil d'Ariane
  */
 TagApi *ScriptingService::getTagByNameBreadcrumbList(
     const QStringList &nameList, bool createMissing);
@@ -707,8 +707,8 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
 
 ### Exemple
 ```js
-// creates all tags until the 3rd level and returns the tag object for
-// tag "level3", which would look like that in the tag tree:
+// crée toutes les étiquettes jusqu'au 3ème niveau et renvoie l'objet étiquette pour la
+// balise "level3", qui ressemblerait à ceci dans l'arborescence des balises:
 // level1 > level2 > level3
 var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
 ```
@@ -741,7 +741,7 @@ Rechercher des notes à partir de texte contenu dans le corps d'une note
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Retourne une list des identifiants de toutes les notes contenant un certain texte dans leur corps.
+ * Retourne une liste des identifiants de toutes les notes contenant un certain texte dans leur corps.
  *
  * Malheureusement il n'y a pas de moyen facile pour utiliser un QList<NoteApi*> en QML, c'est pourquoi on
  * ne peut transférer que les identifiants de notes

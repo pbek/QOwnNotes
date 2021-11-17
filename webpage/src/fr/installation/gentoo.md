@@ -12,4 +12,4 @@ Vous pouvez ensuite installer QOwnNotes de la manière habituelle.
 sudo emerge --sync qownnotes-overlay && sudo emerge -av qownnotes
 ```
 
-[Superposition de QOwnNotes sur GitHub](https://github.com/qownnotes/gentoo-overlay/)
+[Overlay de QOwnNotes sur GitHub](https://github.com/qownnotes/gentoo-overlay/)
