@@ -292,6 +292,7 @@ MainWindow::MainWindow(QWidget *parent)
     initShowHidden();
 
     createSystemTrayIcon();
+
     buildNotesIndexAndLoadNoteDirectoryList(false, false, false);
 
     // setup the update available button
@@ -402,7 +403,9 @@ MainWindow::MainWindow(QWidget *parent)
     this->loadNoteFolderListMenu();
 
     // update panels sort and order
-    updatePanelsSortOrder();
+    QTimer::singleShot(10, this, [this]{
+        updatePanelsSortOrder();
+    });
 
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates(this, UpdateService::AppStart);
@@ -567,8 +570,6 @@ MainWindow::MainWindow(QWidget *parent)
             &MainWindow::on_action_Quit_triggered);
 
     automaticScriptUpdateCheck();
-
-    _commandBar = new CommandBar(this);
 
     // trigger cli parameter menu action if there was any set
     triggerStartupMenuAction();
@@ -1235,7 +1236,6 @@ void MainWindow::initScriptingEngine() {
     //    QQmlEngine::CppOwnership);
     engine->rootContext()->setContextProperty(QStringLiteral("noteTextEdit"),
                                               ui->noteTextEdit);
-    scriptingService->initComponents();
 }
 
 /**
@@ -1665,8 +1665,10 @@ void MainWindow::initStyling() {
                          "{background-color: %1;}")
                          .arg(noteTagFrameColorName);
 
-    qApp->setStyleSheet(appStyleSheet);
-    Utils::Gui::updateInterfaceFontSize();
+//     qApp->setStyleSheet(appStyleSheet);
+    QTimer::singleShot(1, this, []{
+        Utils::Gui::updateInterfaceFontSize();
+    });
 
     if (!isInDistractionFreeMode()) {
         ui->noteTextEdit->setPaperMargins(0);
@@ -2208,12 +2210,12 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
 
 void MainWindow::createSystemTrayIcon() {
     trayIcon = new QSystemTrayIcon(this);
-    trayIcon->setIcon(getSystemTrayIcon());
 
     connect(trayIcon, &QSystemTrayIcon::activated, this,
             &MainWindow::systemTrayIconClicked);
 
     if (showSystemTray) {
+        trayIcon->setIcon(getSystemTrayIcon());
         trayIcon->show();
     }
 }
@@ -2502,8 +2504,10 @@ void MainWindow::readSettings() {
     QSettings settings;
     showSystemTray =
         settings.value(QStringLiteral("ShowSystemTray"), false).toBool();
-    restoreGeometry(
-        settings.value(QStringLiteral("MainWindow/geometry")).toByteArray());
+    QTimer::singleShot(1, this, [this]{
+        restoreGeometry(
+            QSettings().value(QStringLiteral("MainWindow/geometry")).toByteArray());
+    });
     ui->menuBar->restoreGeometry(
         settings.value(QStringLiteral("MainWindow/menuBarGeometry"))
             .toByteArray());
@@ -2606,8 +2610,11 @@ void MainWindow::readSettings() {
 #endif
 
     // load language dicts names into menu
-    _languageGroup = new QActionGroup(ui->menuLanguages);
-    loadDictionaryNames();
+    // Delay loading, loading dictionary names is slow
+    QTimer::singleShot(10, this, [this]{
+        _languageGroup = new QActionGroup(ui->menuLanguages);
+        loadDictionaryNames();
+    });
 }
 
 /**
@@ -12051,9 +12058,10 @@ void MainWindow::on_actionFind_action_triggered() {
         }
     }
 
-    _commandBar->updateBar(actions);
-    _commandBar->show();
-    _commandBar->setFocus();
+    CommandBar commandBar(this);
+    commandBar.updateBar(actions);
+    commandBar.setFocus();
+    commandBar.exec();
 }
 
 /**
