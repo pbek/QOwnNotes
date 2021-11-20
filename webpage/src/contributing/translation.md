@@ -31,6 +31,8 @@ Click here to see if your language is among the translated ones!
 
 Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profile/pbek) and received permission to proofread in your language, you’re ready to go!
 
+## General tips
+
 Please consider a few things while working on the project:
 
 1) Maximal accuracy will create the best user experience.
@@ -68,6 +70,10 @@ Please consider a few things while working on the project:
 7) Use `&` in front of any letter that should be used in a shortcut, can be the same as in original but does not have to.
 
    ![screenshot](/img/crowdin/screenshot-4.png)
+
+8) Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for
+   [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress
+   and shouldn't be translated.
 
 ## Translating and proofreading are fun!
 
