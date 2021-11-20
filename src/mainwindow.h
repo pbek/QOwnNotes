@@ -1123,6 +1123,6 @@ private:
     void closeOrphanedTabs() const;
     void removeNoteTab(int index) const;
     void automaticScriptUpdateCheck();
-
     void updateJumpToActionsAvailability();
+    int getNoteTabIndex(int noteId) const;
 };

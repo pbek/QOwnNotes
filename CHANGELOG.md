@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.11.8
+- fixed a regression from 21.11.7 where notes couldn't be opened in a new tab if
+  there weren't already note tabs open (for [#2298](https://github.com/pbek/QOwnNotes/issues/2298))
+
 ## 21.11.7
 - it was fixed that when switching between notes in the note tab bar and then opening the current note
   in a new tab again it was possible to get a broken note tab (for [#2298](https://github.com/pbek/QOwnNotes/issues/2298))
