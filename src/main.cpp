@@ -375,7 +375,7 @@ inline void setAppProperties(QCoreApplication &app, const QString &release,
 }
 
 int main(int argc, char *argv[]) {
-    // register NoteHistoryItem so we can store it to the settings
+    // register NoteHistoryItem, so we can store it to the settings
     // we need to do that before we are accessing QSettings or the
     // NoteHistoryItem instances in the settings will get destroyed
     qRegisterMetaTypeStreamOperators<NoteHistoryItem>("NoteHistoryItem");
