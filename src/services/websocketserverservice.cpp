@@ -265,6 +265,10 @@ void WebSocketServerService::processMessage(const QString &message) {
         QString jsonText = getBookmarksJsonText();
         pSender->sendTextMessage(jsonText);
 #endif
+    } else if (type == QLatin1String("getCommandSnippets")) {
+#ifndef INTEGRATION_TESTS
+        qDebug() << "TODO: fetch commands";
+#endif
     } else {
         pSender->sendTextMessage("Received: " + message);
     }
