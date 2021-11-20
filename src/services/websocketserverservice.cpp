@@ -35,7 +35,7 @@ QT_USE_NAMESPACE
 
 static QString getIdentifier(QWebSocket *peer) {
     if (peer == Q_NULLPTR) {
-        return QString();
+        return {};
     }
 
     return QStringLiteral("%1:%2").arg(peer->peerAddress().toString(),
@@ -83,7 +83,7 @@ void WebSocketServerService::close() {
     }
 }
 
-quint16 WebSocketServerService::getPort() { return m_port; }
+quint16 WebSocketServerService::getPort() const { return m_port; }
 
 quint16 WebSocketServerService::getSettingsPort() {
     QSettings settings;
@@ -96,13 +96,12 @@ quint16 WebSocketServerService::getSettingsPort() {
 }
 
 quint16 WebSocketServerService::getDefaultPort() {
-    quint16 defaultPort = 22222;
-
+    // use port 22223 in debug mode
 #ifndef QT_NO_DEBUG
-    defaultPort = 22223;
+    return 22223;
+#else
+    return 22222;
 #endif
-
-    return defaultPort;
 }
 
 WebSocketServerService::~WebSocketServerService() {
@@ -285,7 +284,7 @@ QJsonArray WebSocketServerService::createBookmarks(
     }
 
     QString noteText = bookmarksNote.getNoteText().trimmed();
-    const QJsonArray bookmarkList =
+    QJsonArray bookmarkList =
         jsonObject.value(QStringLiteral("data")).toArray();
 
     Q_FOREACH (QJsonValue bookmarkObject, bookmarkList) {
@@ -322,10 +321,10 @@ QJsonArray WebSocketServerService::createBookmarks(
     return bookmarkList;
 }
 
-QString WebSocketServerService::getBookmarksJsonText() const {
+QString WebSocketServerService::getBookmarksJsonText() {
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow == Q_NULLPTR) {
-        return QString();
+        return {};
     }
 
     Tag tag = Tag::fetchByName(getBookmarksTag());
@@ -359,7 +358,7 @@ QString WebSocketServerService::getBookmarksJsonText() const {
  * @return
  */
 QString WebSocketServerService::getNoteFolderSwitchedJsonText(
-    bool switched) const {
+    bool switched) {
     QJsonObject object;
     object.insert(QStringLiteral("type"),
                   QJsonValue::fromVariant("switchedNoteFolder"));
@@ -374,7 +373,7 @@ QString WebSocketServerService::getNoteFolderSwitchedJsonText(
  *
  * @return
  */
-QString WebSocketServerService::getTokenQueryJsonText() const {
+QString WebSocketServerService::getTokenQueryJsonText() {
     QJsonObject object;
     object.insert(QStringLiteral("type"),
                   QJsonValue::fromVariant("tokenQuery"));

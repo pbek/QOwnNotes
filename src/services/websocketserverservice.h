@@ -28,7 +28,7 @@ class WebSocketServerService : public QObject {
                                     QObject *parent = nullptr);
     ~WebSocketServerService() override;
 
-    quint16 getPort();
+    quint16 getPort() const;
 
     static quint16 getSettingsPort();
 
@@ -42,7 +42,7 @@ class WebSocketServerService : public QObject {
 
     static QString getBookmarksNoteName();
 
-    QString flashMessageJsonText(const QString &message);
+    static QString flashMessageJsonText(const QString &message);
 
     static QJsonArray createBookmarks(const QJsonObject &jsonObject);
 
@@ -54,13 +54,13 @@ class WebSocketServerService : public QObject {
    private:
     QWebSocketServer *m_pWebSocketServer;
     QList<QWebSocket *> m_clients;
-    quint16 m_port;
+    quint16 m_port{};
 
-    QString getBookmarksJsonText() const;
+    static QString getBookmarksJsonText() ;
 
-    QString getNoteFolderSwitchedJsonText(bool switched) const;
+    static QString getNoteFolderSwitchedJsonText(bool switched) ;
 
-    QString getTokenQueryJsonText() const;
+    static QString getTokenQueryJsonText() ;
 
 #ifndef INTEGRATION_TESTS
     WebSocketTokenDialog *_webSocketTokenDialog;
