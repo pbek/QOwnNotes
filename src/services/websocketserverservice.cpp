@@ -395,23 +395,17 @@ void WebSocketServerService::socketDisconnected() {
 }
 
 QString WebSocketServerService::getBookmarksTag() {
-    QSettings settings;
-    QString bookmarksTag =
-        settings
+    return QSettings()
             .value(QStringLiteral("webSocketServerService/bookmarksTag"),
                    "bookmarks")
             .toString();
-    return bookmarksTag;
 }
 
 QString WebSocketServerService::getBookmarksNoteName() {
-    QSettings settings;
-    QString bookmarksNoteName =
-        settings
+    return QSettings()
             .value(QStringLiteral("webSocketServerService/bookmarksNoteName"),
                    "Bookmarks")
             .toString();
-    return bookmarksNoteName;
 }
 
 QString WebSocketServerService::flashMessageJsonText(const QString &message) {
