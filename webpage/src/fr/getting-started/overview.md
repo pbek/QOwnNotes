@@ -45,13 +45,13 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note-decrypted.png" alt="Remarque cryptage" />
+    <img src="/screenshots/screenshot-encrypted-note-decrypted.png" alt="Chiffrement de note" />
     <div class="sheet">
       Chiffrement facultatif des notes AES (également scriptable)
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note.png" alt="Note cryptée" />
+    <img src="/screenshots/screenshot-encrypted-note.png" alt="Note chiffrée" />
     <div class="sheet">
       Les notes chiffrées sont toujours du texte
     </div>
@@ -134,12 +134,12 @@
 <v-divider />
 
 **Q** pour le [framework Qt](https://www.qt.io/) utilisé   
-**Posséder** parce que vous possédez vos propres notes   
+**Own** parce que vous possédez ("to own") vos propres notes   
 **Notes** pour les notes que vous prenez
 
 <v-divider />
 
-[QOwnNotes](https://www.qownnotes.org/) est l’application **open source** (GPL) en texte brut **prise de notes de démarquage** pour **GNU / Linux**, **MacOS** et **Windows**, qui fonctionnent (en option) avec [**l'application notes**](https://github.com/nextcloud/notes) de [Nextcloud](https://nextcloud.com/) et [ownCloud](https://owncloud.org/).
+[QOwnNotes](https://www.qownnotes.org/) est une application **open-source** (GPL) de **prise de notes en MarkDown** dans des fichiers en texte brut pour **GNU / Linux**, **MacOS** et **Windows**, qui peut fonctionner (en option) avec [**l'application Notes**](https://github.com/nextcloud/notes) de [Nextcloud](https://nextcloud.com/) et [ownCloud](https://owncloud.org/).
 
 ::: tip
 Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprendre et vous connecter avec la communauté QOwnNotes.
@@ -147,37 +147,37 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 
 [Comprendre le concept de QOwnNotes](concept.md)
 
-## Traits
+## Caractéristiques
 - Vous pouvez utiliser vos **fichiers texte ou markdown existants**, pas besoin d'importer la plupart du temps
-- QOwnNotes is written in C++ and optimized for **low resource consumption** (no CPU and memory-hungry Electron app)
-- **Evernote and Joplin import**
+- QOwnNotes est écrit en C++ et optimisé pour une **faible consommation des ressources** (ce n'est pas une app Electron gourmande en CPU et en mémoire)
+- **Import depuis Evernote et Joplin**
 - **Compatible** avec l'application Notes de **Nextcloud / ownCloud** et **mobile** et Nextcloud Text
 - Prise en charge du **partage de notes** sur votre serveur **ownCloud** / **Nextcloud**
-- Gérez vos **listes de tâches** Nextcloud / ownCloud  (**tâches Nextcloud** ou **tâches Plus** / **calendrier Plus**) ou utilisez un autre **Serveur CalDAV** pour synchroniser vos tâches avec
+- Gérez vos **listes de tâches** Nextcloud / ownCloud (**tâches Nextcloud** ou **Tasks Plus** / **Calendar Plus**) ou utilisez un autre **Serveur CalDAV** avec lequel synchroniser vos tâches
 - Les ** versions** plus anciennes de vos notes peuvent être **restaurées** à partir de votre serveur **Nextcloud / ownCloud**
-- **Les notes mises dans la corbeille** peuvent être **restaurées** depuis votre serveur **Nextcloud / ownCloud**
+- **Les notes mises à la corbeille** peuvent être **restaurées** depuis votre serveur **Nextcloud / ownCloud**
 - **Les modifications externes** des fichiers de notes sont **surveillées** (les notes ou la liste de notes sont rechargées)
 - Prise en charge du **balisage hiérarchique des notes** et **sous-dossiers de notes**
-- Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
-- Le **dossier de notes** peut être **librement choisi**(plusieurs dossiers de notes peuvent être utilisés)
+- **Chiffrement** optionnel des notes. AES-256 est intégré mais vous pouvez également utiliser des méthodes de chiffrement personnalisées telles que **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) ou **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
+- Le **dossier de notes** peut être **librement choisi** (plusieurs dossiers de notes peuvent être utilisés)
 - **La recherche de sous-chaînes** de notes est possible et les résultats de la recherche sont mis en évidence dans les notes
-- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
-- [**Spellchecking**](../editor/spellchecking.md) support
+- [**Extension de navigateur**](browser-extension.md) pour **ajouter des notes à partir du texte sélectionné**, **faire des copies d'écran** ou **gérer vos favoris**
+- Aide à la [**vérification orthographique**](../editor/spellchecking.md)
 - **Mode portable** pour transporter QOwnNotes sur des clés USB
-- **Prise en charge des scripts** et un [**référentiel de scripts**](https://github.com/qownnotes/scripts) en ligne où vous pouvez installer des scripts à l'intérieur de l'application
-- **Vim mode**
-- [Web application](web-app.md) to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
+- **Prise en charge des scripts** et [**dépôt de scripts**](https://github.com/qownnotes/scripts) en ligne depuis lequel vous pouvez installer des scripts dans l'application
+- **Mode Vim**
+- [Application Web](web-app.md) pour **insérer des photos depuis votre téléphone mobile** dans la note courante de QOwnNotes sur votre ordinateur de bureau
 
 
-## Appearance
+## Apparence de l'interface
 - **Mise en évidence du Markdown** des notes et un **mode de prévisualisation de Markdown**
 - **Prise en charge du thème du mode sombre**
 - **Prise en charge de la thématisation** pour la mise en évidence de la syntaxe Markdown****
-- Tous les panneaux **peuvent être placés où vous voulez**, ils peuvent même **flotter** ou **empiler** (entièrement ancrable)
-- Prise en charge des **icônes de thème freedesktop**, vous pouvez utiliser QOwnNotes avec vos **icônes de bureau natives** et avec votre **thème de bureau sombre préféré**
-- **Distraction free mode**, **Full-screen mode** en **Typewriter mode**
-- **Nombre de lignes**
-- **Les différences** entre la note actuelle et la note modifiée de l'extérieur sont **affichées** dans une boîte de dialogue
+- Tous les panneaux **peuvent être placés où vous voulez**, ils peuvent même **flotter** ou **s'empiler** (entièrement ancrable)
+- Prise en charge des **icônes du thème freedesktop**, vous pouvez utiliser QOwnNotes avec vos **icônes de bureau natives** et avec votre **thème de bureau sombre préféré**
+- **Mode sans distractions**, **mode plein écran** et **mode machine à écrire**
+- **Numéros de lignes**
+- **Les différences** entre la note actuelle et la note modifiée depuis l'extérieur sont **affichées** dans une boîte de dialogue
 
 ## Langues
 - **Disponible dans plus de 60 langues différentes** comme l'anglais, l'allemand, le français, le polonais, le chinois, le japonais, le russe, le portugais, le hongrois, le néerlandais et l'espagnol

@@ -83,7 +83,7 @@ Il existe une [liste de fournisseurs Nextcloud gérée par la communauté](https
 Bien sûr, d'autres solutions, comme **Dropbox**, **Syncthing**, **Seafile** ou BitTorrent Sync peuvent également être utilisées pour héberger vos notes et autres fichiers.
 :::
 
-## QOwnNotesAPI Nextcloud app
+## App QOwnNotesAPI Nextcloud
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) vous permet d'accéder à vos **notes mises à la corbeille** et **versions de notes** côté serveur.
 
@@ -99,7 +99,7 @@ Utilisez [**Nextcloud Notes**](https://github.com/nextcloud/notes) pour modifier
 Gardez à l'esprit que Nextcloud Notes ne prend actuellement en charge que jusqu'à un niveau de sous-dossiers.
 :::
 
-## Nextcloud Notes mobile app
+## Application mobile Nextcloud Notes
 
 Pour accéder à vos notes Nextcloud / ownCloud à partir de votre **appareil mobile**, vous pouvez utiliser différentes applications.
 
@@ -113,7 +113,7 @@ Vous pouvez également utiliser n'importe quel outil de synchronisation comme *S
 
 ### iOS
 
-- [CloudNotes for iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (3rd party)
+- [CloudNotes pour iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (tierce partie)
 
 ::: tip
 Vous pouvez également utiliser [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) et synchroniser vos notes via WebDAV, il existe un bon tutoriel sur [Prendre des notes avec Nextcloud, OwnNotes et Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
@@ -131,10 +131,10 @@ En outre, il fournit également le [Release RSS Feed](http://api.qownnotes.org/r
 Vous pouvez accéder au code source de [api.qownnotes.org](https://api.qownnotes.org) sur [GitHub](https://github.com/qownnotes/api).
 :::
 
-## QOwnNotes Web App
+## Web App QOwnNotes
 
-You can insert photos from your mobile phone into the current note in QOwnNotes on your desktop via the **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
+Vous pouvez insérer des photos depuis votre téléphone mobile vers la note courante dans QOwnNotes sur l'application de bureau via l'**application Web** sur [app.qownnotes.org](https://app.qownnotes.org/).
 
 ::: tip
-Please visit [QOwnNotes Web App](web-app.md) for more information.
+Veuillez visiter [QOwnNotes Web App](web-app.md) pour plus d'informations.
 :::

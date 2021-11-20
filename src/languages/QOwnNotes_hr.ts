@@ -2921,7 +2921,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1674"/>
 <source>&amp;Export note as Markdown file</source>
-<translation type="unfinished">&amp;Export note as Markdown file</translation>
+<translation>Izv&amp;ezi bilješku kao Markdown datoteku</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1704"/>
@@ -3344,12 +3344,12 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../mainwindow.cpp" line="7544"/>
 <source>Export attached files</source>
-<translation type="unfinished">Export attached files</translation>
+<translation>Izvezi priložene datoteke</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7545"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+<translation>Želiš li izvesti medijske datoteke i priložene bilješke? Datoteke će se možda prepisati u odredišnoj mapi!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7579"/>

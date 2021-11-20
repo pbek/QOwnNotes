@@ -28,6 +28,8 @@ Clicca qui per vedere se la tua lingua è tra quelle tradotte!
 
 Dopo aver [contattato il proprietario del progetto su Crowdin](https://crowdin.com/profile/pbek) e ottenuto il permesso di correggere le bozze nella tua lingua, sei pronto per partire!
 
+## General tips
+
 Si prega di considerare alcune cose mentre si lavora al progetto:
 
 1) La massima precisione creerà la migliore esperienza utente.
@@ -64,10 +66,12 @@ I tag `%1` vanno scritti senza spazio; in lingue RTL (scritte da destra a sinist
 
    ![screenshot](/img/crowdin/screenshot-4.png)
 
-## Tradurre e correggere è divertente!
+8) Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
 
-Puoi avere a che fare colla lingua parlata da questo software e imparare molto sui termini e sulle parti interne del progetto.
+## Translating and proofreading are fun!
 
-Se sei così pronto ad aiutare la correzione di bozze della traduzione nella tua lingua, [Fabijenna](https://crowdin.com/profile/rawfreeamy), come traduttrice ed editrice da vent'anni, ti dà il benvenuto a un coaching di 30 minuti nella scienza e nella pratica della traduzione e della correzione di bozze, dove puoi porle domande di cui potresti non essere sicuro e ottenere il massimo dalla tua esperienza di correzione.
+You get to deal with the language that this software speaks and learn a lot about terms and the insides of the project.
 
-Grazie mille per il vostro aiuto!
+If you are thus ready to help proofreading the translation of your language, [Fabijenna](https://crowdin.com/profile/rawfreeamy), as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading experience.
+
+Thanks a lot for your help!

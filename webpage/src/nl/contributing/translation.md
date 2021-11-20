@@ -28,6 +28,8 @@ Klik hier om te zien of uw taal een van de vertaalde talen is!
 
 Zodra u [contact heeft opgenomen met de projecteigenaar op Crowdin](https://crowdin.com/profile/pbek) en toestemming heeft gekregen om in uw taal te proeflezen, bent u klaar om te gaan!
 
+## General tips
+
 Overweeg een paar dingen terwijl u aan het project werkt:
 
 1) Maximale nauwkeurigheid zorgt voor de beste gebruikerservaring.
@@ -64,10 +66,12 @@ Overweeg een paar dingen terwijl u aan het project werkt:
 
    ![screenshot](/img/crowdin/screenshot-4.png)
 
-## Vertalen en proeflezen zijn leuk!
+8) Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
 
-Je krijgt te maken met de taal die deze software spreekt en leert veel over termen en de binnenkant van het project.
+## Translating and proofreading are fun!
 
-Als je dus klaar bent om te helpen bij het proeflezen van de vertaling van je taal, [Fabijenna](https://crowdin.com/profile/rawfreeamy), verwelkomt je als vertaler en redacteur van twintig jaar je voor een 30 minuten durende coaching in de wetenschap en de praktijk van vertalen en proeflezen, waar je haar vragen kunt stellen waar je misschien niet zeker van was en het meeste uit je proefleeservaring kunt halen.
+You get to deal with the language that this software speaks and learn a lot about terms and the insides of the project.
 
-Heel erg bedankt voor je hulp!
+If you are thus ready to help proofreading the translation of your language, [Fabijenna](https://crowdin.com/profile/rawfreeamy), as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading experience.
+
+Thanks a lot for your help!

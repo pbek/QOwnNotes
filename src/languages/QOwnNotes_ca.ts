@@ -6676,7 +6676,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6318"/>
 <source>QOwnNotes web application support</source>
-<translation type="unfinished">QOwnNotes web application support</translation>
+<translation>Suport de l'aplicació web de QOwnNotes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6324"/>
@@ -8997,7 +8997,7 @@ Això no es pot desfer!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="439"/>
 <location filename="../dialogs/updatedialog.cpp" line="451"/>
 <source>Permission error</source>
-<translation type="unfinished">Permission error</translation>
+<translation>Error de permisos</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="440"/>

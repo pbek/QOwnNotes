@@ -28,6 +28,8 @@ Cliquez ici pour voir si votre langue fait partie des langues traduites!
 
 Une fois que vous avez [contacté le propriétaire du projet sur Crowdin](https://crowdin.com/profile/pbek) et obtenu l’autorisation de relire dans votre langue, vous êtes prêt à commencer!
 
+## General tips
+
 Veuillez prendre en compte quelques éléments lorsque vous travaillez sur le projet:
 
 1) Une précision maximale créera la meilleure expérience utilisateur.
@@ -64,10 +66,12 @@ Veuillez prendre en compte quelques éléments lorsque vous travaillez sur le pr
 
    ![copie d'écran](/img/crowdin/screenshot-4.png)
 
-## La traduction et la relecture sont amusantes!
+8) Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
 
-Vous apprenez à maîtriser la langue parlée par ce logiciel et à en apprendre beaucoup sur les termes et l'intérieur du projet.
+## Translating and proofreading are fun!
 
-Si vous êtes ainsi prêt à aider à la relecture de la traduction de votre langue, [Fabijenna](https://crowdin.com/profile/rawfreeamy), en tant que traductrice et éditrice de vingt ans, vous accueille pour un coaching de 30 minutes dans la science et la pratique de la traduction et de la relecture, où vous pouvez lui poser des questions dont vous n'êtes peut-être pas sûr et tirer le meilleur parti de votre expérience de relecture.
+You get to deal with the language that this software speaks and learn a lot about terms and the insides of the project.
 
-Merci beaucoup pour votre aide!
+If you are thus ready to help proofreading the translation of your language, [Fabijenna](https://crowdin.com/profile/rawfreeamy), as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading experience.
+
+Thanks a lot for your help!

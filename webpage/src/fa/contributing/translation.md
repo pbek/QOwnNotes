@@ -32,6 +32,10 @@
 
 به محض اینکه [با صاحب پروژه در کراودین تماس بگیرید](https://crowdin.com/profile/pbek) و اجازه تصحیح به زبان خود را دریافت کنید، می توانید کار را شروع کنید!
 
+
+
+## General tips
+
 لطفاً هنگام کار بر روی پروژه چند نکته را در نظر بگیرد:
 
 1) دقت حداکثری بهترین تجربه کاربری را ایجاد خواهد کرد.
@@ -76,12 +80,14 @@ gelöschte Dateien
 
 ![نماگرفت](/img/crowdin/screenshot-4.png)
 
+8) Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
 
 
-## ترجمه و تصحیح جذاب هستند!
 
-باید زبانی که این نرم‌افزار با آن سخن می گوید را بپذیرید و مطالب زیادی در مورد اصطلاحات و درون مایه پروژه بیاموزید.
+## Translating and proofreading are fun!
 
-بنابراین در صورتی که حاضر به کمک به تصحیح و ترجمه زبانتان هستید، [ فابیژنا ](https://crowdin.com/profile/rawfreeamy) به عنوان یک مترجم و ویرایشگر با بیست سال سابقه کار برای یک دوره آموزشی ۳۰ دقیقه‌ای در زمینه علمی و تمرین ترجمه و تصحیح به شما خوش آمد می گوید که در این مرحله شما می‌توانید سوالاتی را که از پاسخ آنها مطمئن نیستید از وی بپرسید و به تجربیات تصحیح خود چیزی اضافه کنید.
+You get to deal with the language that this software speaks and learn a lot about terms and the insides of the project.
 
-از کمک هایتان بی نهایت سپاسگزاریم!
+If you are thus ready to help proofreading the translation of your language, [Fabijenna](https://crowdin.com/profile/rawfreeamy), as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading experience.
+
+Thanks a lot for your help!

@@ -878,7 +878,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation>Utiliser FakeVim</translation>
+<translation> Utiliser FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
@@ -914,7 +914,7 @@
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation>Tabulateurs intelligents</translation>
+<translation>Tabulatrices intelligentes</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
@@ -929,7 +929,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation>Développer les tabulateurs</translation>
+<translation>Développer les tabulatrices</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
@@ -969,12 +969,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation>Show partial command</translation>
+<translation>Montrer commande partielle</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation>Show line numbers relative to cursor</translation>
+<translation>Afficher les numéros de ligne relativement au curseur</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
@@ -1004,7 +1004,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation>Affiche les numéros de ligne relatifs à la ligne contenant le curseur de texte.</translation>
+<translation>Afficher les numéros de ligne relativement à la ligne sur la quelle se trouve le curseur de texte.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
@@ -1024,7 +1024,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation>Gardez vide pour utiliser le chemin par défaut, c'est-à-dire %USERPROFILE%\_vimrc sous Windows, ~/.vimrc sinon.</translation>
+<translation>Laisser vide pour utiliser le chemin par défaut : %USERPROFILE%\_vimrc sous Windows, ~/.vimrc sinon.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
@@ -1297,7 +1297,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="232"/>
 <source>Font:</source>
-<translation>Police:</translation>
+<translation>Police :</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="279"/>
@@ -1667,7 +1667,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="182"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation>Si vous n'avez qu'un "JEX - Joplin Export File", veuillez extraire le contenu de ce fichier dans un répertoire et sélectionnez ce répertoire.</translation>
+<translation>Si vous n'avez qu'un "JEX - Joplin Export File", veuillez extraire le contenu de ce fichier dans un répertoire et sélectionnez ce dernier.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="142"/>
@@ -1682,7 +1682,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
-<translation>Importer les pièces jointes</translation>
+<translation>Importer des pièces jointes</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="90"/>
@@ -3328,12 +3328,12 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <location filename="../mainwindow.cpp" line="7544"/>
 <source>Export attached files</source>
-<translation type="unfinished">Export attached files</translation>
+<translation>Exporter les fichiers joints</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7545"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+<translation>Voulez-vous également exporter les fichiers multimédia et pièces joints à la note ? Des fichiers risquent d'être écrasés à l'emplacement de destination!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7579"/>
@@ -4673,7 +4673,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <location filename="../utils/gui.cpp" line="1083"/>
 <source>Light mode detected</source>
-<translation>Mode lumière détecté</translation>
+<translation>Mode clair détecté</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1084"/>
@@ -4698,7 +4698,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4465"/>
 <source>Login flow succeeded</source>
-<translation>Connexion réussie</translation>
+<translation>Processus de connexion réussi</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4466"/>
@@ -4772,22 +4772,22 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <location filename="../services/owncloudservice.cpp" line="2264"/>
 <location filename="../services/owncloudservice.cpp" line="2279"/>
 <source>Login flow failed</source>
-<translation>Échec de la connexion</translation>
+<translation>Échec du processus de connexion</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2265"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation>La méthode de connexion Nextcloud v2 n'a pas pu être lancée. Assurez-vous que l'URL du serveur est correcte et que vous utilisez un serveur Nextcloud !&lt;br /&gt;&lt;br /&gt;Si vous rencontrez toujours des problèmes, veuillez créer un mot de passe d'application manuellement sur la page d'administration de votre serveur.</translation>
+<translation>Le processus de connexion Nextcloud v2 n'a pas pu être initié. Assurez-vous que l'URL du serveur est correcte et que vous utilisez un serveur Nextcloud !&lt;br /&gt;&lt;br /&gt;Si vous rencontrez toujours des problèmes, veuillez créer un mot de passe d'application manuellement sur la page d'administration de votre serveur.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2280"/>
 <source>Could not parse login url!</source>
-<translation>Impossible d'utiliser l'URL de connexion !</translation>
+<translation>Échec de l'analyse syntaxique de l'URL de connexion !</translation>
 </message>
 <message>
 <location filename="../utils/misc.cpp" line="924"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation>Vous utilisez le mode d'instance d'application unique, qui empêche le démarrage de l'application une deuxième fois. Pour le prochain lancement de l'application, le mode instance d'application unique sera désactivé, afin que l'application puisse être redémarrée avant de quitter cette instance.</translation>
+<translation>Vous utilisez le mode d'instance d'application unique, ce qui empêche son démarrage une deuxième fois. Au prochain lancement de l'application ce mode sera désactivé afin que l'application puisse être redémarrée avant de quitter cette instance.</translation>
 </message>
 </context>
 <context>
@@ -5973,7 +5973,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1444"/>
 <source>Login to Nextcloud to grant access</source>
-<translation>Connectez-vous à Nextcloud pour accorder l'accès</translation>
+<translation>Connectez-vous à Nextcloud pour donner accès</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1849"/>
@@ -6628,7 +6628,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6331"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
-<translation>Vous pouvez utiliser l'&lt;a href="%1"&gt;application Web QOwnNotes&lt;/a&gt; pour insérer des photos dans QOwnNotes sur votre bureau depuis votre téléphone mobile, via Internet.</translation>
+<translation>Vous pouvez utiliser l'&lt;a href="%1"&gt;application Web QOwnNotes&lt;/a&gt; pour insérer des photos dans QOwnNotes sur votre ordinateur de bureau depuis votre téléphone mobile, via Internet.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6368"/>
@@ -8531,7 +8531,7 @@ Vos notes resteront intactes!</translation>
 <message>
 <location filename="../dialogs/tododialog.ui" line="349"/>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation>Cela ne fonctionne pas pour les sous-éléments, car ils peuvent être masqués par l'élément parent !</translation>
+<translation>Cela ne fonctionne pas pour les sous-éléments car ils peuvent être masqués par l'élément parent !</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="352"/>
@@ -9023,7 +9023,7 @@ Cela ne peut être annuler !</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="462"/>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation>Votre ancien exécutable QOwnNotes '%1' n'a pas pu être supprimé ! Vous devez le remplacer vous-même par « %2 ».</translation>
+<translation>Votre ancien exécutable QOwnNotes '%1' n'a pas pu être supprimé ! Vous devez le remplacer vous-même par '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="472"/>

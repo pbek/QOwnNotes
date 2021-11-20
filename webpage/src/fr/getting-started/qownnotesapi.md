@@ -1,21 +1,21 @@
-# QOwnNotesAPI Nextcloud App
+# App QOwnNotesAPI Nextcloud
 
 
 ![qownnotesapi](/img/qownnotesapi.png)
 
-[**Votre aide**](https://github.com/pbek/qownnotesapi) est très appréciée pour améliorer ces traductions ou pour traduire QOwnNotes dans plus de langues
+[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) peut gérer l'**accès** aux **notes mises à la corbeille** et aux **notes de versions** pour vous.
 
 ::: tip
 Vous pouvez activer QOwnNotesAPI directement dans votre instance **Nextcloud** ou **ownCloud** en recherchant `qownnotes` sur la page **Apps** de votre serveur à l'adresse `https://<your-cloud-domain>/settings/apps`.
 
-- [Nextcloud Apps page](https://apps.nextcloud.com/apps/qownnotesapi)
-- [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
+- [Page des Apps de Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
+- [page des Apps d'ownCloud](https://marketplace.owncloud.com/apps/qownnotesapi)
 :::
 
-Le partage des notes se fait via l'API fournie par Nextcloud / ownCloud. Tasks are accessed directly via CalDAV.
+Le partage des notes se fait via l'API fournie par Nextcloud / ownCloud. L'accès aux tâches se fait directement via CalDAV.
 
 ::: tip
-Utilisez votre client de **synchronisation** **Nextcloud** / **ownCloud** pour **synchroniser vos notes** qui sont de simples fichiers Markdown. Il n'est pas nécessaire d'inventer la roue deux fois. Et il y a aussi des personnes qui utilisent différents services pour synchroniser leurs fichiers de notes (comme Dropbox, Syncthing ou Resilio Sync).
+Utilisez votre client de **synchronisation** **Nextcloud** / **ownCloud** pour **synchroniser vos notes** qui sont de simples fichiers Markdown. Il n'est pas nécessaire de réinventer la roue. Et il y a aussi des personnes qui utilisent différents services pour synchroniser leurs fichiers de notes (comme Dropbox, Syncthing ou Resilio Sync).
 :::
 
 ## Ce que fait QOwnNotesAPI
@@ -26,5 +26,5 @@ Utilisez votre client de **synchronisation** **Nextcloud** / **ownCloud** pour *
 ## Ce que QOwnNotesAPI ne fait pas
 
 - Synchroniser vos notes (veuillez utiliser votre client de synchronisation ownCloud / Nextcloud)
-- Partage de notes (qui se fait directement via l'API ownCloud / Nextcloud)
-- Accès aux images depuis [Nextcloud Text](https://github.com/nextcloud/text) (cela se fait directement via l'API Nextcloud)
+- Partager des notes (ceci se fait directement via l'API ownCloud / Nextcloud)
+- Accéder à des images depuis [Nextcloud Text](https://github.com/nextcloud/text) (cela se fait directement via l'API Nextcloud)

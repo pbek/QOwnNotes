@@ -28,6 +28,8 @@ Kattintson ide, hogy lássa, az Ön nyelve a lefordítottak között van-e!
 
 Miután [felvette a kapcsolatot a projekt tulajdonosával a Crowdin-on](https://crowdin.com/profile/pbek) és megkapta az engedélyt az Ön nyelvén történő lektorálásra, startolhat!
 
+## General tips
+
 Kérjük, vegyen figyelembe néhány dolgot a projekt során:
 
 1) A maximális pontosság a legjobb felhasználói élményt nyújtja.
@@ -64,10 +66,12 @@ Kérjük, vegyen figyelembe néhány dolgot a projekt során:
 
    ![screenshot](/img/crowdin/screenshot-4.png)
 
-## A fordítás és a lektorálás szórakoztató!
+8) Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
 
-Meg kell birkóznia a szoftver nyelvével, és sokat megtudhat a kifejezésekről és a projekt mélyebb rétegeiről.
+## Translating and proofreading are fun!
 
-Ha így készen áll arra, hogy segítsen nyelvének fordításának korrektúrájában, [Amy](https://crowdin.com/profile/rawfreeamy), aki húsz éve fordító és szerkesztő, üdvözli Önt egy 30 perces edzésen a fordítás és lektorálás gyakorlatában, ahol olyan kérdéseket tehet fel neki, amelyekben még bizonytalan. Váljon segítségével képesre, a legtöbbet kihozni a fordítás és a lektorálás élményéböl.
+You get to deal with the language that this software speaks and learn a lot about terms and the insides of the project.
 
-Nagyon köszönjük a segítségét!
+If you are thus ready to help proofreading the translation of your language, [Fabijenna](https://crowdin.com/profile/rawfreeamy), as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading experience.
+
+Thanks a lot for your help!

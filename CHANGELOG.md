@@ -3,6 +3,7 @@
 ## 21.11.8
 - fixed a regression from 21.11.7 where notes couldn't be opened in a new tab if
   there weren't already note tabs open (for [#2298](https://github.com/pbek/QOwnNotes/issues/2298))
+- added more Catalan, Croatian, French translation (thank you mguerra, milotype, chocolatine)
 
 ## 21.11.7
 - it was fixed that when switching between notes in the note tab bar and then opening the current note

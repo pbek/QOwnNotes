@@ -28,6 +28,8 @@ Haga clic aquí para ver si su idioma está entre los traducidos.
 
 Una vez que haya [contactado al propietario del proyecto en Crowdin](https://crowdin.com/profile/pbek) y recibido el permiso de revisor en su idioma, estará preparado para contribuir.
 
+## General tips
+
 Tenga en cuenta algunas cosas mientras trabaja en el proyecto:
 
 1) La máxima precisión creará la mejor experiencia de usuario.
@@ -64,10 +66,12 @@ Tenga en cuenta algunas cosas mientras trabaja en el proyecto:
 
    ![captura de pantalla](/img/crowdin/screenshot-4.png)
 
-## ¡Traducir y corregir es divertido!
+8) Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
 
-Puedes lidiar con el idioma que habla este software y aprender mucho sobre los términos y el interior del proyecto.
+## Translating and proofreading are fun!
 
-Si está listo para ayudar a corregir la traducción de su idioma, [Fabijenna](https://crowdin.com/profile/rawfreeamy), como traductor y editor de veinte años, le da la bienvenida a un entrenamiento de 30 minutos en la ciencia y la práctica de la traducción y revisión, donde puede hacerle preguntas de las que quizás no esté seguro y aprovechar al máximo su experiencia de revisión.
+You get to deal with the language that this software speaks and learn a lot about terms and the insides of the project.
 
-¡Muchas gracias por tu ayuda!
+If you are thus ready to help proofreading the translation of your language, [Fabijenna](https://crowdin.com/profile/rawfreeamy), as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading experience.
+
+Thanks a lot for your help!

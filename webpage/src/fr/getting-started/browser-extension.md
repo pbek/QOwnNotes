@@ -4,59 +4,58 @@ image: /img/bookmarks.png
 
 # Extension de navigateur QOwnNotes Web Companion
 
-Allows for clipping from a browser page and managing browser bookmarks across browsers and operating systems.
+Permet de capturer du contenu depuis une page affichée dans un navigateur et de gérer les favoris entre différents navigateurs et systèmes d'exploitation.
 
-::: tip
-Info
-- QOwnNotes must be running for the Web Companion browser extension to work.
-- No internet connection needed. The browser extensions works **offline**.
+::: Astuce Info
+- ::: Astuce Info QOwnNotes doit être en cours d'exécution pour que l'extension de navigateur Web Companion fonctionne.
+- Une connexion Internet n'est pas nécessaire. L'extension de navigateur fonctionne **hors-ligne**.
 :::
 
 ## Installation
 
-1. Get the extension
+1. Obtenir l'extension
     - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
     - [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-    - You can also find the extension on [GitHub](https://github.com/qownnotes/web-companion/).
-2. Add the Security Token to configure the extension.
-    - The first time you click on the QOwnNotes browser extension icon you will receive a dialog box with a security token. Copy the token.
-    - Go to your browser's extension management location. Click into the QOwnNotes extension details.
-    - Paste the token into the Security Token field.
+    - Vous pouvez également trouver l'extension sur [GitHub](https://github.com/qownnotes/web-companion/).
+2. Ajouter le jeton de sécurité pour configurer l'extension.
+    - Une boîte de dialogue contenant un jeton de sécurité sera affichée la première fois que vous cliquerez sur l'extension de navigateur QOwnNotes. Copiez le jeton.
+    - Ouvrez l'emplacement de gestion des extensions de votre navigateur. Cliquez sur les détails de l'extension QOwnNotes.
+    - Copiez le jeton dans le champ "Jeton de sécurité".
 
 ## Web clipper
 
 ![web-clipper](/img/web-clipper.png)
 
-Right-click on a webpage or selected text to use the **web-clipper** functionality. There you can also create a new note with a **screenshot** of the current webpage.
+Cliquez avec le bouton droit sur une page Web ou sur du texte sélectionné pour utiliser la fonctionnalité **web-clipper**. Vous pouvez ici également créer une nouvelle note avec une **capture d'écran** de la page Web actuelle.
 
 ::: tip
-The web clipper is also scriptable! Take a look at the [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) if you want to control what you clip from webpages.
+Le Web Clipper est également scriptable ! Jetez un œil à [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) si vous souhaitez contrôler ce que vous récupérez dans les pages Web.
 :::
 
-## Bookmarks
+## Favoris
 
 ![bookmarks](/img/bookmarks.png)
 
-If you want full control over your browser bookmarks and **use them across different browsers and operating systems** then the QOwnNotes browser extension is for you.
+Si vous souhaitez un contrôle total sur les favoris de votre navigateur et **les utiliser sur différents navigateurs et systèmes d'exploitation**, l'extension de navigateur QOwnNotes est faite pour vous.
 
-By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
+Par défaut, l'extension de navigateur affichera tous les **liens de la note actuelle** dans une fenêtre contextuelle lorsque vous cliquez sur l'icône QOwnNotes dans votre navigateur. Ces liens seront étiquettés `current`.
 
-You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
+Vous pouvez également **gérer vos favoris dans des notes** avec l'étiquette de note `bookmarks` (personnalisable dans les paramètres). Ces liens peuvent également avoir des étiquettes et une description qui seront affichées dans l'extension de navigateur.
 
-New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
+Les nouveaux favoris sont stockés dans une note appelée `Bookmarks` (également perosnnalisable dans les paramètres).
 
 ::: tip
-You can also import your browser bookmarks into QOwnNotes with the web companion browser extension!
+Vous pouvez également importer les favoris de votre navigateur dans QOwnNotes avec Web Compagnon !
 :::
 
-### Syntaxe des liens de signets
+### Syntaxe des liens de favoris
 
 ```markdown
 - [Webpage name](https://www.example.com)
-- [Webpage name](https://www.example.com) #tag1 #tag2
-- [Webpage name](https://www.example.com) some description only
-- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
-* [Webpage name](https://www.example.com) the alternative list character also works
+- [Webpage name](https://www.example.com) #étiquette1 #étiquette2
+- [Webpage name](https://www.example.com) juste une description
+- [Webpage name](https://www.example.com) #étiquette1 #étiquette2 une description et des étiquettes
+* [Webpage name](https://www.example.com) le caractère alternatif pour un élément de liste fonctionne également
 ```
 
-You are able to search for name, url tags or description in the browser extension.
+Il est possible de rechercher un nom, des étiquettes d'URL ou une description dans l'extension de navigateur.

@@ -1,6 +1,6 @@
 # Vérification orthographique
 
-Faites corriger vos fautes d'orthographe!
+Faites corriger vos fautes d'orthographe !
 
 ::: Astuce Info QOwnNotes a un **Gestionnaire de dictionnaires** intégré (dans le menu *Édition*) que vous pouvez utiliser pour télécharger des dictionnaires ou les supprimer (si vous êtes votre langue est manquante, voir ci-dessous comment demander l'ajout d'un dictionnaire). Si vous souhaitez télécharger les dictionnaires manuellement, vous pouvez suivre les instructions ci-dessous.
 :::

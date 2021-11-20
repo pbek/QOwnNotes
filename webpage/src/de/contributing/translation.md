@@ -28,6 +28,8 @@ Klicken Sie hier, um zu sehen, ob Ihre Sprache zu den bereits übersetzten gehö
 
 Sobald Sie den [Projekt-Eigentümer auf Crowdin kontaktiert haben](https://crowdin.com/profile/pbek) und die Erlaubnis zum Korrekturlesen in Ihrer Sprache erhalten haben, können Sie loslegen!
 
+## General tips
+
 Bitte beachten Sie die folgenden Hinweise zu Ihrer Arbeit am Projekt:
 
 1) Maximale Genauigkeit sorgt für die beste Benutzererfahrung.
@@ -64,10 +66,12 @@ Bitte beachten Sie die folgenden Hinweise zu Ihrer Arbeit am Projekt:
 
    ![screenshot](/img/crowdin/screenshot-4.png)
 
-## /img/crowdin/screenshot-4.png
+8) Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
 
-Sie setzen sich mit der Sprache auseinander, die diese Software spricht, und lernen viel über Begriffe und erhalten viel Insider-Wissen über das Projekt.
+## Translating and proofreading are fun!
 
-Wenn Sie also bereit sind, beim Korrekturlesen der Übersetzung Ihrer Sprache zu helfen, begrüßt Sie [Amy Lang](https://crowdin.com/profile/rawfreeamy) als Übersetzerin mit über zehn Jahren Erfahrung zu einem kurzen Coaching in der Praxis und der Welt des Übersetzens und Korrekturlesens. Sie steht bei Fragen gerne bereit und lässt Sie das Beste aus Ihrer Erfahrung mit der QOwnNotes-Übersetzung herausholen.
+You get to deal with the language that this software speaks and learn a lot about terms and the insides of the project.
 
-Vielen Dank für Ihre Hilfe!
+If you are thus ready to help proofreading the translation of your language, [Fabijenna](https://crowdin.com/profile/rawfreeamy), as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading experience.
+
+Thanks a lot for your help!
