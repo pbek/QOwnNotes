@@ -131,6 +131,7 @@ SOURCES += main.cpp\
     entities/tag.cpp \
     entities/script.cpp \
     entities/bookmark.cpp \
+    entities/commandsnippet.cpp \
     services/owncloudservice.cpp \
     services/updateservice.cpp \
     helpers/htmlentities.cpp \
@@ -221,6 +222,7 @@ HEADERS  += mainwindow.h \
     entities/tag.h \
     entities/script.h \
     entities/bookmark.h \
+    entities/commandsnippet.h \
     dialogs/aboutdialog.h \
     dialogs/linkdialog.h \
     dialogs/notediffdialog.h \

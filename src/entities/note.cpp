@@ -24,6 +24,7 @@
 
 #include "api/noteapi.h"
 #include "entities/bookmark.h"
+#include "entities/commandsnippet.h"
 #include "helpers/codetohtmlconverter.h"
 
 #include <botanwrapper.h>
@@ -4083,6 +4084,17 @@ QVector<Bookmark> Note::getParsedBookmarks() const {
     const QString text =
         _decryptedNoteText.isEmpty() ? _noteText : _decryptedNoteText;
     return Bookmark::parseBookmarks(text);
+}
+
+/**
+ * Returns the parsed command snippets of the note
+ *
+ * @return
+ */
+QVector<CommandSnippet> Note::getParsedCommandSnippets() const {
+    const QString text =
+        _decryptedNoteText.isEmpty() ? _noteText : _decryptedNoteText;
+    return CommandSnippet::parseCommandSnippets(text);
 }
 
 void Note::resetNoteTextHtmlConversionHash() {

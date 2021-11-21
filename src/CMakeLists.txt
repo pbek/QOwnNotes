@@ -351,7 +351,8 @@ set(SOURCE_FILES
     services/websocketserverservice.h
     services/webappclientservice.cpp
     services/webappclientservice.h
-    entities/bookmark.h entities/bookmark.cpp)
+    entities/bookmark.h entities/bookmark.cpp
+    entities/commandsnippet.h entities/commandsnippet.cpp)
 
 if(NOT APPLE)
 list(APPEND SOURCE_FILES

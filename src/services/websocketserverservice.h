@@ -42,6 +42,10 @@ class WebSocketServerService : public QObject {
 
     static QString getBookmarksNoteName();
 
+    static QString getCommandSnippetsTag();
+
+    static QString getCommandSnippetsNoteName();
+
     static QString flashMessageJsonText(const QString &message);
 
     static QJsonArray createBookmarks(const QJsonObject &jsonObject);
@@ -57,6 +61,8 @@ class WebSocketServerService : public QObject {
     quint16 m_port{};
 
     static QString getBookmarksJsonText() ;
+
+    static QString getCommandSnippetsJsonText();
 
     static QString getNoteFolderSwitchedJsonText(bool switched) ;
 

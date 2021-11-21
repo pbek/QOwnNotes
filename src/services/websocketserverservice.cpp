@@ -20,6 +20,7 @@
 
 #include "dialogs/websockettokendialog.h"
 #include "entities/bookmark.h"
+#include "entities/commandsnippet.h"
 #include "entities/notefolder.h"
 #include "entities/tag.h"
 #include "metricsservice.h"
@@ -267,7 +268,13 @@ void WebSocketServerService::processMessage(const QString &message) {
 #endif
     } else if (type == QLatin1String("getCommandSnippets")) {
 #ifndef INTEGRATION_TESTS
-        qDebug() << "TODO: fetch commands";
+        QString jsonText = getCommandSnippetsJsonText();
+
+        if (jsonText.isEmpty()) {
+            return;
+        }
+
+        pSender->sendTextMessage(jsonText);
 #endif
     } else {
         pSender->sendTextMessage("Received: " + message);
@@ -355,6 +362,36 @@ QString WebSocketServerService::getBookmarksJsonText() {
     return jsonText;
 }
 
+QString WebSocketServerService::getCommandSnippetsJsonText() {
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow == Q_NULLPTR) {
+        return {};
+    }
+
+    Tag tag = Tag::fetchByName(getCommandSnippetsTag());
+    const QVector<Note> noteList = tag.fetchAllLinkedNotes();
+    QVector<CommandSnippet> commandSnippets;
+
+    // get all command snippet from notes tagged with the command snippets tag
+    for (const Note &note : noteList) {
+        QVector<CommandSnippet> noteCommandSnippets = note.getParsedCommandSnippets();
+
+        // merge command snippet lists
+        CommandSnippet::mergeListInList(noteCommandSnippets, commandSnippets);
+    }
+
+    // extract command snippets from the current note
+    QVector<CommandSnippet> currentNoteCommandSnippets = CommandSnippet::parseCommandSnippets(
+        mainWindow->activeNoteTextEdit()->toPlainText(), true);
+
+    // merge command snippet lists
+    CommandSnippet::mergeListInList(currentNoteCommandSnippets, commandSnippets);
+
+    QString jsonText = CommandSnippet::commandSnippetsWebServiceJsonText(commandSnippets);
+
+    return jsonText;
+}
+
 /**
  * Returns the json text after switching note folders
  *
@@ -409,6 +446,20 @@ QString WebSocketServerService::getBookmarksNoteName() {
     return QSettings()
             .value(QStringLiteral("webSocketServerService/bookmarksNoteName"),
                    "Bookmarks")
+            .toString();
+}
+
+QString WebSocketServerService::getCommandSnippetsTag() {
+    return QSettings()
+            .value(QStringLiteral("webSocketServerService/commandSnippetsTag"),
+                   "commands")
+            .toString();
+}
+
+QString WebSocketServerService::getCommandSnippetsNoteName() {
+    return QSettings()
+            .value(QStringLiteral("webSocketServerService/commandSnippetsNoteName"),
+                   "Commands")
             .toString();
 }
 
