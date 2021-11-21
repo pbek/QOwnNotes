@@ -74,16 +74,17 @@ Please consider a few things while working on the project:
 8) Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for
    [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress
    and shouldn't be translated.
+   
+9) Some segments we don't translate in the Documentation:
 
-## Translating and proofreading can be so exciting!
+   - never translate codes or links, tags must be left as they are (and without added spaces, as some MT does that, those must be deleted)
+   - we don't translate date and time (leave blank)
+   - and we also don't translate references (which QON got in numerous languages), so you can simply skip them
+
+## Translating and proofreading can be exciting!
 
 You will deal with the language of this software, learn new terms and receive a lot of inside information about the project.
 
-If you are thus ready to help proofreading the translation of your language, [Fabijenna](https://crowdin.com/profile/rawfreeamy),
-as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating
-and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading
-experience.
+If you are thus ready to help proofreading the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading, where you can ask her anything to help you having fun contributing. If you have no or only little experience translating, you can book a completely cost free Zoom introduction into translation. 
 
-If you are thus ready to help proofreading the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading, where you can ask her anything to help you having fun contributing.
-
-Thanks a lot for your help!
+Thanks a lot for your help! :-)
