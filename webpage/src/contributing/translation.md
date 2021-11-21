@@ -1,8 +1,8 @@
 # Translation
 
-How can I help to translate QOwnNotes? 
+Thank you for helping out!
 
-Thank you for helping out! 
+How can I help to translate QOwnNotes?
 
 ## Join us on Crowdin to translate QOwnNotes
 
@@ -19,11 +19,11 @@ You can sign up at [Crowdin](https://crowdin.com/project/qownnotes/invite) and
 Just [drop the project owner a message on Crowdin](https://crowdin.com/profile/pbek) or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues)
 if you want to translate QOwnNotes to a new language.
 
-If you want to add new translations to existing languages you can do so right away.
+If you want to add new translations to **existing languages** you can do so right away.
 
 ## Proofreading
 
-If you are a very good speaker of an already translated language that has not been proofread yet, we are grateful for your help making the QOwnNotes experience more reliable and convenient.
+If you are an excellent or even native speaker of an already translated language that has not been proofread yet, we are grateful if you help making the QOwnNotes experience more reliable and convenient by checking and if necessary, correcting unapproved translations. You need to ask the owner for the permission to be a proofreader for your language.
 
 Click here to see if your language is among the translated ones! 
 
@@ -35,22 +35,22 @@ Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profi
 
 Please consider a few things while working on the project:
 
-1) Maximal accuracy will create the best user experience.
+1) Please localize with maximal possible accuracy while caring for fluency in your target langauge.
 
-2) Use your choice of style creatively once your translation met the requirement of picking the most identical match.
+2) The target needs to represent the source exactly and with no ommissions or additions of any part of the string.
 
-3) It makes sense for the translation to be similarly concise and following the same formalities as the original.
+3) If you need more context, or help with a certain string and you happen to know another language, you can change the language and see what other translators made out of the segment, but feel free to leave a message and ask for clarification on the right side of the page.
 
-4) Let's always use the same translations on identical source expressions:
+4) It is necessary to check and use the same translations for the frequently used key terms, for example, "note" must be translated always in the same way. 
 
    If `trashed notes` is `gelöschte Dateien` in German, you would always translate it using this expression.
    Exception would be when you grammatically are bound to use an alternative, but keep it simple.
 
    ![screenshot](/img/crowdin/screenshot-7.png)
 
-   In order to find all the identical expressions, search Crowdin and see all the occurrences of one term
+   In order to find all the identical expressions, search Crowdin to see if all the occurrences of a term indeed have the same translation, if you know better and they don't you may suggest a better translation and vote down (or up) for the better / correct translation.
 
-   Standardize all occurrences as good as you can, so that identical terms get identical translations.
+   Localize all occurrences as identically as you can.
 
    `Note` should definitely always have just one translation.
 
@@ -75,13 +75,15 @@ Please consider a few things while working on the project:
    [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress
    and shouldn't be translated.
 
-## Translating and proofreading are fun!
+## Translating and proofreading can be so exciting!
 
-You get to deal with the language that this software speaks and learn a lot about terms and the insides of the project.
+You will deal with the language of this software, learn new terms and receive a lot of inside information about the project.
 
 If you are thus ready to help proofreading the translation of your language, [Fabijenna](https://crowdin.com/profile/rawfreeamy),
 as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating
 and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading
 experience.
+
+If you are thus ready to help proofreading the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading, where you can ask her anything to help you having fun contributing.
 
 Thanks a lot for your help!
