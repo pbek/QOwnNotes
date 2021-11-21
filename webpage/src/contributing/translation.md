@@ -35,11 +35,11 @@ Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profi
 
 Please consider a few things while working on the project:
 
-1) Please localize with maximal possible accuracy while caring for fluency in your target langauge.
+1) Please localize with maximal possible accuracy while caring for fluency in your target language.
 
-2) The target needs to represent the source exactly and with no ommissions or additions of any part of the string.
+2) The target needs to represent the source exactly and with no omissions or additions of any part of the string.
 
-3) If you need more context, or help with a certain string and you happen to know another language, you can change the language and see what other translators made out of the segment, but feel free to leave a message and ask for clarification on the right side of the page.
+3) If you need more context, or help with a certain string, and you happen to know another language, you can change the language and see what other translators made out of the segment, but feel free to leave a message and ask for clarification on the right side of the page.
 
 4) It is necessary to check and use the same translations for the frequently used key terms, for example, "note" must be translated always in the same way. 
 
@@ -48,7 +48,7 @@ Please consider a few things while working on the project:
 
    ![screenshot](/img/crowdin/screenshot-7.png)
 
-   In order to find all the identical expressions, search Crowdin to see if all the occurrences of a term indeed have the same translation, if you know better and they don't you may suggest a better translation and vote down (or up) for the better / correct translation.
+   In order to find all the identical expressions, search Crowdin to see if all the occurrences of a term indeed have the same translation, if you know better, and they don't you may suggest a better translation and vote down (or up) for the better / correct translation.
 
    Localize all occurrences as identically as you can.
 
@@ -85,6 +85,6 @@ Please consider a few things while working on the project:
 
 You will deal with the language of this software, learn new terms and receive a lot of inside information about the project.
 
-If you are thus ready to help proofreading the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading, where you can ask her anything to help you having fun contributing. If you have no or only little experience translating, you can book a completely cost free Zoom introduction into translation. 
+If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading, where you can ask her anything to help you to have fun contributing. If you have no or only little experience translating, you can book a completely cost free Zoom introduction into translation. 
 
 Thanks a lot for your help! :-)
