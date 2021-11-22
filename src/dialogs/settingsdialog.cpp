@@ -328,6 +328,12 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
         "https://www.qownnotes.org/getting-started/browser-extension.html"));
     ui->helpTranslateLabel->setText(ui->helpTranslateLabel->text().arg(
         "https://www.qownnotes.org/contributing/translation.html"));
+    ui->commandLineSnippetManagerLabel->setText(ui->commandLineSnippetManagerLabel->text().arg(
+        "https://github.com/qownnotes/qc"));
+    ui->commandSnippetTagLabel->setText(ui->commandSnippetTagLabel->text().arg(
+        "https://www.qownnotes.org/getting-started/command-line-snippet-manager.html"));
+    ui->commandSnippetsNoteNameLabel->hide();
+    ui->commandSnippetsNoteNameLineEdit->hide();
 
 #ifndef Q_OS_LINUX
     ui->systemIconThemeCheckBox->setHidden(true);
@@ -956,6 +962,11 @@ void SettingsDialog::storeSettings() {
     settings.setValue(
         QStringLiteral("webSocketServerService/bookmarksNoteName"),
         ui->bookmarksNoteNameLineEdit->text());
+    settings.setValue(QStringLiteral("webSocketServerService/commandSnippetsTag"),
+                      ui->commandSnippetsTagLineEdit->text());
+    settings.setValue(
+        QStringLiteral("webSocketServerService/bookmarksNoteName"),
+        ui->commandSnippetsNoteNameLineEdit->text());
 
     settings.setValue(QStringLiteral("webAppClientService/serverUrl"),
                       ui->webAppServerUrlLineEdit->text());
@@ -1467,6 +1478,10 @@ void SettingsDialog::readSettings() {
         WebSocketServerService::getBookmarksTag());
     ui->bookmarksNoteNameLineEdit->setText(
         WebSocketServerService::getBookmarksNoteName());
+    ui->commandSnippetsTagLineEdit->setText(
+        WebSocketServerService::getCommandSnippetsTag());
+    ui->commandSnippetsNoteNameLineEdit->setText(
+        WebSocketServerService::getCommandSnippetsNoteName());
 
     ui->webAppServerUrlLineEdit->setText(WebAppClientService::getServerUrl());
     ui->webAppTokenLineEdit->setText(WebAppClientService::getOrGenerateToken());

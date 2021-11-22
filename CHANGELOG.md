@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 21.11.9
+- added support for the [QOwnNotes command-line snippet manager](https://github.com/qownnotes/qc)
+  to execute command snippets stored in notes in QOwnNotes from the command line
+  (for [#2304](https://github.com/pbek/QOwnNotes/issues/2304))
+    - you can use notes with a special tag to store command snippets, which you can
+      execute from the command-line snippet manager
+
 ## 21.11.8
 - fixed a regression from 21.11.7 where notes couldn't be opened in a new tab if
   there weren't already note tabs open (for [#2298](https://github.com/pbek/QOwnNotes/issues/2298))
