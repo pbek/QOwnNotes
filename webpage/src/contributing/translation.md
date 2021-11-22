@@ -45,9 +45,7 @@ The target needs to represent the source exactly and with no omissions or additi
 
 ### Context
 
-If you need more context, or help with a certain string, and you happen to know another language,
-you can change the language and see what other translators made out of the segment,
-but feel free to leave a message and ask for clarification on the right side of the page.
+If you need more context, or help with a certain string and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page.
 
 ### Frequently used key terms
 
@@ -59,9 +57,7 @@ Exception would be when you grammatically are bound to use an alternative, but k
 
 ![screenshot](/img/crowdin/screenshot-7.png)
 
-In order to find all the identical expressions, search Crowdin to see if all the occurrences
-of a term indeed have the same translation, if you know better, and they don't you may
-suggest a better translation and vote down (or up) for the better / correct translation.
+In order to find all the identical expressions, search Crowdin to see if all the occurrences of a term indeed have the same translation. You may suggest a better translation and vote on the others.
 
 Localize all occurrences as identically as you can.
 
@@ -109,6 +105,6 @@ Some segments we don't translate in the Documentation:
 
 You will deal with the language of this software, learn new terms and receive a lot of inside information about the project.
 
-If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading, where you can ask her anything to help you to have fun contributing. If you have no or only little experience translating, you can book a completely cost free Zoom introduction into translation. 
+If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading. You can ask anything that helps you enjoy translating QOwnNotes.
 
 Thanks a lot for your help! 🙂
