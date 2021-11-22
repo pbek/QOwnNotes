@@ -16,20 +16,26 @@ You can sign up at [Crowdin](https://crowdin.com/project/qownnotes/invite) and
 
 **[QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/invite)**
 
-Just [drop the project owner a message on Crowdin](https://crowdin.com/profile/pbek) or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues)
-if you want to translate QOwnNotes to a new language.
+Just [drop the project owner a message on Crowdin](https://crowdin.com/profile/pbek)
+or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues) if you want to
+translate QOwnNotes to a new language.
 
 If you want to add new translations to **existing languages** you can do so right away.
 
 ## Proofreading
 
-If you are an excellent or even native speaker of an already translated language that has not been proofread yet, we are grateful if you help making the QOwnNotes experience more reliable and convenient by checking and if necessary, correcting unapproved translations. You need to ask the owner for the permission to be a proofreader for your language.
+If you are an excellent or even native speaker of an already translated language
+that has not been proofread yet, we are grateful if you help to make the QOwnNotes
+experience more reliable and convenient by checking and if necessary, correcting
+unapproved translations. You need to ask the owner for the permission to be a
+proofreader for your language.
 
 Click here to see if your language is among the translated ones! 
 
 [QOwnNotes on Crowdin](https://translate.qownnotes.org/)
 
-Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profile/pbek) and received permission to proofread in your language, you’re ready to go!
+Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profile/pbek)
+and received permission to proofread in your language, you’re ready to go!
 
 ## General tips
 
@@ -45,7 +51,9 @@ The target needs to represent the source exactly and with no omissions or additi
 
 ### Context
 
-If you need more context, or help with a certain string and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page. 
+If you need more context, or help with a certain string, and you happen to know another language,
+you can change the language and see what other translators made out of the segment.
+But feel free to leave a message and ask for clarification on the right side of the page. 
 
 ### Frequently used key terms
 
@@ -107,7 +115,8 @@ Some segments we don't translate in the Documentation:
 
 ## Translating and proofreading can be exciting!
 
-You will deal with the language of this software, learn new terms and receive a lot of inside information about the project.
+You will deal with the language of this software, learn new terms and receive
+a lot of inside information about the project.
 
 If you are thus ready to help to proofread the translation of your language,
 [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short
