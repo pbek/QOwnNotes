@@ -141,15 +141,16 @@
 
 A [QOwnNotes](https://www.qownnotes.org/) a **nyílt forráskódú** (GPL) sima szövegű fájl **macOS** és **Windows**, amelyek (opcionálisan) együtt működnek a [Nextcloud](https://nextcloud.com/) és az [ownCloud](https://owncloud.org/) [**Notes alkalmazással**](https://github.com/nextcloud/notes).
 
+::: tip
 Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, tanulás és egymással kapcsolatba lépésünk érdekében a QOwnNotes közösséggel.
 :::
 
 [Értse meg a QOwnNotes fogalmát](concept.md)
 
 ## Funkciók
-- You can use your **existing text or markdown files**, no need for an import most of the times
-- QOwnNotes is written in C++ and optimized for **low resource consumption** (no CPU and memory-hungry Electron app)
-- **Evernote and Joplin import**
+- Használhatja a **meglévő szöveges vagy jelölőfájljait**, legtöbbször nincs szükség importálásra
+- A QOwnNotes C++ nyelven íródott, és **alacsony erőforrás-fogyasztásra** van optimalizálva (nincs CPU és memóriaéhes Electron alkalmazás)
+- **Evernote és Joplin import**
 - **Kompatibilis** a **Nextcloud / ownCloud** és a **mobile** és a Nextcloud Text Notes alkalmazásával
 - Támogatás a **jegyzetek megosztásához** a **ownCloud** / **Nextcloud** kiszolgálón
 - A Nextcloud / ownCloud **témalistáinak kezelése** (**Nextcloud-feladatok** vagy **Tasks Plus** / **Calendar Plus**) vagy használjon egy másik **CalDAV szervert** a feladatok szinkronizálásához
@@ -168,7 +169,7 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 - [Webalkalmazás](web-app.md) a **fényképek beillesztéséhez a mobiltelefonról** az asztali QOwnNotes aktuális jegyzetébe
 
 
-## Appearance
+## Megjelenés
 - A jegyzetek **jelölésének kiemelése** és egy **jelölés előnézeti mód**
 - **Sötét módú téma támogatás**
 - **Támogatás** a **jelölés szintaxis kiemeléséhez**

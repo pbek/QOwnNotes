@@ -56,7 +56,7 @@ graph TB
 Kezelheti a **böngésző könyvjelzőit** a QOwnNotes szolgáltatással, vagy használhatja **webleíró eszközként**.
 
 ::: tip
-The browser extensions works **offline**, no internet connection needed. Please visit [QOwnNotes Web Companion browser extension](browser-extension.md) for more information.
+A böngészőbővítmények **offline** működnek, nincs szükség internetkapcsolatra. További információért keresse fel a [QOwnNotes Web Companion böngészőbővítményt](browser-extension.md).
 :::
 
 ## Nextcloud asztali szinkronizáló kliens

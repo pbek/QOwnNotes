@@ -8,7 +8,7 @@
 ::: tip
 Sie können QOwnNotesAPI direkt in Ihrer **Nextcloud** - oder **ownCloud** -Instanz aktivieren, indem Sie nach `qownnotes` auf der **Apps-Seite Ihres Servers** unter `https://<your-cloud-domain> /settings/apps` suchen.
 
-- [Nextcloud Apps page](https://apps.nextcloud.com/apps/qownnotesapi)
+- [Nextcloud Apps-Seite](https://apps.nextcloud.com/apps/qownnotesapi)
 - [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
 :::
 

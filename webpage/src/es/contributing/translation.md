@@ -1,8 +1,8 @@
 # Traducción
 
-¿Cómo puedo ayudar a traducir QOwnNotes?
+Thank you for helping out!
 
-¡Gracias por colaborar!
+How can I help to translate QOwnNotes?
 
 ## Únase a nosotros en Crowdin para traducir QOwnNotes
 
@@ -16,11 +16,11 @@ Puede registrarse en [Crowdin](https://crowdin.com/project/qownnotes/invite) y *
 
 Si desea traducir QOwnNotes en un idioma nuevo, basta con que [envíe un mensaje al propietario del proyecto en Crowdin](https://crowdin.com/profile/pbek) o cree un [informe en GitHub](https://github.com/pbek/QOwnNotes/issues).
 
-Si desea agregar nuevas traducciones a idiomas existentes, puede hacerlo de inmediato.
+If you want to add new translations to **existing languages** you can do so right away.
 
 ## Corrección de pruebas
 
-Si habla muy bien un idioma ya traducido que aún no ha sido revisado, le agradecemos su ayuda para hacer que la experiencia de QOwnNotes sea más confiable y conveniente.
+If you are an excellent or even native speaker of an already translated language that has not been proofread yet, we are grateful if you help making the QOwnNotes experience more reliable and convenient by checking and if necessary, correcting unapproved translations. You need to ask the owner for the permission to be a proofreader for your language.
 
 Haga clic aquí para ver si su idioma está entre los traducidos.
 
@@ -30,48 +30,72 @@ Una vez que haya [contactado al propietario del proyecto en Crowdin](https://cro
 
 ## General tips
 
-Tenga en cuenta algunas cosas mientras trabaja en el proyecto:
+Please consider a few things while working on the project.
 
-1) La máxima precisión creará la mejor experiencia de usuario.
+### Accuracy
 
-2) Utilice su elección de estilo de forma creativa una vez que su traducción cumpla con el requisito de elegir la coincidencia más idéntica.
+Please localize with maximal possible accuracy while caring for fluency in your target language.
 
-3) Tiene sentido que la traducción sea igualmente concisa y siga las mismas formalidades que el original.
+### Precision
 
-4) Usemos siempre las mismas traducciones en expresiones fuente idénticas:
+The target needs to represent the source exactly and with no omissions or additions of any part of the string.
 
-   Si `notas en la papelera` es `gelöschte Dateien` en alemán, siempre lo traducirías usando esta expresión. La excepción sería cuando gramaticalmente esté obligado a usar una alternativa, pero manténgalo simple.
+### Context
 
-   ![captura de pantalla](/img/crowdin/screenshot-7.png)
+If you need more context, or help with a certain string and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page.
 
-   Para encontrar todas las expresiones idénticas, efectúe una búsqueda en Crowdin para ver todas las ocurrencias de un término determinado
+### Frequently used key terms
 
-   Estandarice todas las ocurrencias lo mejor que pueda, de modo que los términos idénticos obtengan traducciones idénticas.
+It is necessary to check and use the same translations for the frequently used key terms, for example, "note" must be translated always in the same way.
 
-   `Nota` definitivamente siempre debería tener una sola traducción.
+Si `notas en la papelera` es `gelöschte Dateien` en alemán, siempre lo traducirías usando esta expresión. La excepción sería cuando gramaticalmente esté obligado a usar una alternativa, pero manténgalo simple.
 
-5) Para plural, agregue la traducción correspondiente cada uno en el bloque correspondiente.
+![captura de pantalla](/img/crowdin/screenshot-7.png)
 
-   ![captura de pantalla](/img/crowdin/screenshot-4.png)
+In order to find all the identical expressions, search Crowdin to see if all the occurrences of a term indeed have the same translation, if you know better, and they don't you may suggest a better translation and vote down (or up) for the better / correct translation.
 
-6) Las etiquetas `%1` deben escribirse sin espacios, en los idiomas RTL puede insertar las etiquetas del original o escribirlas en su traducción.
+Localize all occurrences as identically as you can.
 
-   ![captura de pantalla](/img/crowdin/screenshot-1.png)
+`Nota` definitivamente siempre debería tener una sola traducción.
 
-   ![captura de pantalla](/img/crowdin/screenshot-5.png)
+### Plural forms
 
-   ![captura de pantalla](/img/crowdin/screenshot-3.png)
+For plural please add the appropriate translation each in the corresponding block.
 
-7) Use `&` delante de cualquier letra que deba usarse en un atajo, puede ser la misma que en el original pero no es necesario.
+![captura de pantalla](/img/crowdin/screenshot-4.png)
 
-   ![captura de pantalla](/img/crowdin/screenshot-4.png)
+### Variables
 
-8) Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
+The `%1` variables need to be written without a space, in RTL languages you can either insert the variables from the original or write them into your translation.
 
-## Translating and proofreading are fun!
+![captura de pantalla](/img/crowdin/screenshot-1.png)
 
-You get to deal with the language that this software speaks and learn a lot about terms and the insides of the project.
+![captura de pantalla](/img/crowdin/screenshot-5.png)
 
-If you are thus ready to help proofreading the translation of your language, [Fabijenna](https://crowdin.com/profile/rawfreeamy), as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading experience.
+![captura de pantalla](/img/crowdin/screenshot-3.png)
 
-Thanks a lot for your help!
+### Access keys
+
+Use `&` in front of any letter that should be used in a shortcut, can be the same as in original but does not have to.
+
+![captura de pantalla](/img/crowdin/screenshot-4.png)
+
+### Custom containers
+
+Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
+
+### Other strings not to be translated
+
+Some segments we don't translate in the Documentation:
+
+- Never translate codes or links, tags must be left as they are (and without added spaces, as some MT does that, those must be deleted)
+- We don't translate date and time (leave blank)
+- And we also don't translate references (which QON got in numerous languages), so you can simply skip them
+
+## Translating and proofreading can be exciting!
+
+You will deal with the language of this software, learn new terms and receive a lot of inside information about the project.
+
+If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading. You can ask her anything that helps you have fun contributing.
+
+Thanks a lot for your help! 🙂

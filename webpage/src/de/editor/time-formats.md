@@ -41,7 +41,7 @@ Sie können Ihr eigenes Zeitformat verwenden, wenn Sie die aktuelle Zeit in eine
 | ------------------ | ---------------- |
 | `dd.MM.yyyy hh:mm` | 21.05.2001 14:13 |
 | `dd.MM.yyyy`       | 21.05.2001       |
-| `ddd MMMM d yy`    | Tue May 21 01    |
+| `ddd MMMM d yy`    | Di 21. Mai 01    |
 | `hh:mm:ss.zzz`     | 14:13:09.042     |
 | `h:m:s ap`         | 2:13:9 pm        |
 

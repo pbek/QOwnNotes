@@ -68,7 +68,7 @@ QByteArray startSynchronousProcess(QString executablePath, QStringList parameter
 var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data");
 ```
 
-You may want to take a look at the example [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml).
+Érdemes megnézni a példát [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml).
 
 Az aktuális jegyzet mappa elérési útjának lekérése
 -------------------------------------------
@@ -88,7 +88,7 @@ QString currentNoteFolderPath();
 var path = script.currentNoteFolderPath();
 ```
 
-You may want to take a look at the example [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/absolute-media-links.qml).
+Érdemes megnézni a példát [abszolút-media-links.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/absolute-media-links.qml).
 
 Az aktuális jegyzet megszerzése
 ------------------------
@@ -108,7 +108,7 @@ NoteApi currentNote ();
 var note = script.currentNote();
 ```
 
-You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Érdemes megnéznie az [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) példát.
 
 Naplózás a napló widgetbe
 -------------------------
@@ -201,10 +201,10 @@ Mellékletfájl beszúrása a mellékletek mappájába
 
 ### Módszerhívás és paraméterek
 ```cpp
- * QML wrapper to insert an attachment file into the `attachments` folder and
- * returning the attachment url or the markdown text of the attachment
- * relative to the current note
- *
+ * QML-burkoló egy csatolmányfájl beszúrásához a "mellékletek" mappába, és
+  * a melléklet url-jének vagy a melléklet leíró szövegének visszaadása
+  * az aktuális hanghoz képest
+  *
  * @param {QString} attachmentFilePath
  * @param {QString} fileName to use in the markdown
  * @param {bool} returnUrlOnly if true only the attachment url will be returned
@@ -614,9 +614,9 @@ Szerezze be a szövegmutató aktuális helyzetét a jegyzetszöveg szerkesztés�
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Returns the current position of the text cursor in the note text edit
- * 0 would be the beginning of the note
- */
+  * Visszaadja a kurzor aktuális helyzetét a jegyzet szövegszerkesztésében
+  * 0 lenne a hang eleje
+  */
 int ScriptingService::noteTextEditCursorPosition();
 ```
 

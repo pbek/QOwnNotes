@@ -71,7 +71,7 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-freedesktop-theme.png" alt="screenshot-freedesktop-theme" />
     <div class="sheet">
-      Icons via Freedesktop theme
+      Symbole über Freedesktop-Theme
     </div>
   </v-carousel-item>
   <v-carousel-item>

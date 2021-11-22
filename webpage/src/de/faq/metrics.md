@@ -4,33 +4,33 @@
 
 QOwnNotes (wie auch die Anwendung selbst) wird **von einer und manchmal auch von zwei Personen in ihrer Freizeit entwickelt**.
 
-Releases are built for a lot of platforms and distributions (often very old versions of them). Keeping them up is a lot of work.
+Releases werden für viele Plattformen und Distributionen erstellt (oft sehr alte Versionen davon). Sie aufrechtzuerhalten ist viel Arbeit.
 
-The metrics are the only real source of information about which versions of platforms and distributions and what features are used by the users, so decisions can be made which versions to retire and which features need more work and which are hardly used.
+Die Metriken sind die einzige wirkliche Informationsquelle darüber, welche Versionen von Plattformen und Distributionen und welche Funktionen von den Benutzern verwendet werden, sodass Entscheidungen getroffen werden können, welche Versionen eingestellt werden und welche Funktionen mehr Arbeit erfordern und welche kaum verwendet werden.
 
-The same goes for the used languages of the users, which drives the translations of the application and the documentation.
+Gleiches gilt für die verwendeten Sprachen der Benutzer, die die Übersetzungen der Anwendung und der Dokumentation vorantreiben.
 
-## Where are the metrics stored?
+## Wo werden die Metriken gespeichert?
 
-The metrics are transmitted to and stored on a self-hosted [Matomo](https://matomo.org/) server. Only the two main developers have access to the data. **No data is shared with 3rd parties.**
+Die Metriken werden an einen selbst gehosteten [Matomo](https://matomo.org/)-Server übertragen und dort gespeichert. Nur die beiden Hauptentwickler haben Zugriff auf die Daten. **Es werden keine Daten an Dritte weitergegeben.**
 
-## How are metrics collected?
+## Wie werden Metriken erfasst?
 
-Metrics are **anonymized** (e.g. ip address stripped out) on the Matomo server after they are received.
+Metriken werden nach Erhalt auf dem Matomo-Server **anonymisiert** (z. B. IP-Adresse entfernt).
 
-No personal information, like text you entered or note names are collected or stored on the server!
+Es werden keine persönlichen Informationen, wie von Ihnen eingegebene Texte oder Notiznamen gesammelt oder auf dem Server gespeichert!
 
-## What is collected?
+## Was wird gesammelt?
 
-Some basic information like screen resolution, operating system and version of QOwnNotes used is transmitted.
+Dabei werden einige grundlegende Informationen wie Bildschirmauflösung, Betriebssystem und Version von QOwnNotes übertragen.
 
-Furthermore, for example events are sent to the server when actions are used in the applications.
+Darüber hinaus werden beispielsweise Ereignisse an den Server gesendet, wenn Aktionen in den Anwendungen verwendet werden.
 
-QOwnNotes is free open source software. You can review the metrics all the time by searching for example for [sendVisitIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendVisitIfEnabled) and [sendEventIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendEventIfEnabled) in the source code to see what exactly is sent.
+QOwnNotes ist eine kostenlose Open-Source-Software. Sie können die Metriken ständig überprüfen, indem Sie beispielsweise im Quellcode nach [sendVisitIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendVisitIfEnabled) und [sendEventIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendEventIfEnabled) suchen, um zu sehen, was genau gesendet wird.
 
-**No personal information, like text you entered or note names are collected!**
+**Es werden keine persönlichen Informationen, wie eingegebene Texte oder Notiznamen, gesammelt!**
 
-## Can I turn metrics off?
+## Kann ich Metriken deaktivieren?
 
 Sie können sie beim ersten Start der Anwendung im Willkommensdialog oder zu einem späteren Zeitpunkt im Einstellungsdialog ausschalten.
 

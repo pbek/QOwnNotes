@@ -214,10 +214,10 @@
 - <kbd>⌘</kbd> + <kbd>Leerzeichen</kbd> versucht, einfache Gleichungen wie `(4+5)*3=` in der aktuellen Zeile vor dem Cursor zu lösen. Vervollständigt Text oder öffnet URLs
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> fügt eine Überschrift aus dem Dateinamen der Notiz oben in der Notiz ein
 - <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> teilt die aktuelle Notiz an der aktuellen Cursorposition in zwei Notizen auf
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
-- <kbd>⌘</kbd> + <kbd>Up</kbd> scrolls the content up
-- <kbd>⌘</kbd> + <kbd>Down</kbd> scrolls the content down
-- <kbd>⇧</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> sucht im Web nach dem ausgewählten Text
+- <kbd>Strg</kbd> + <kbd>Nach oben</kbd> scrollt den Inhalt nach oben
+- <kbd>⌘</kbd> + <kbd>Nach unten</kbd> scrollt den Inhalt nach unten
+- <kbd>⇧</kbd> + <kbd>Eingabe</kbd> fügt zwei Leerzeichen und ein Zeilenumbruchzeichen hinzu, um einen Markdown-Zeilenumbruch zu erzwingen
 
 ### Im Notizvorschaufenster
 

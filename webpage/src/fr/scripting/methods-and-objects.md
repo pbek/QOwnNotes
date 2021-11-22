@@ -335,7 +335,7 @@ Pour d'autres exemples allez voir [custom-actions.qml](https://github.com/pbek/Q
 Vous pouvez également déclencher une action personnalisée après le démarrage de l'application avec le paramètre `--action customAction_<identifier>`. Pour plus d'information, veuillez consulter [Déclencher des actions de menu après le démarrage](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
 :::
 
-Registering a label
+Enregistrer une étiquette
 -------------------
 
 ### Appel de méthode et paramètres

@@ -4,49 +4,49 @@ image: /img/bookmarks.png
 
 # Browser-extensie QOwnNotes Web Companion
 
-Allows for clipping from a browser page and managing browser bookmarks across browsers and operating systems.
+Maakt het mogelijk om vanaf een browserpagina te knippen en browserbladwijzers te beheren in verschillende browsers en besturingssystemen.
 
 ::: tip
 Info
-- QOwnNotes must be running for the Web Companion browser extension to work.
-- No internet connection needed. The browser extensions works **offline**.
+- QOwnNotes moet actief zijn om de Web Companion-browserextensie te laten werken.
+- Geen internetverbinding nodig. De browserextensies werken **offline**.
 :::
 
-## Installation
+## Installatie
 
-1. Get the extension
-    - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-    - [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-    - You can also find the extension on [GitHub](https://github.com/qownnotes/web-companion/).
-2. Add the Security Token to configure the extension.
-    - The first time you click on the QOwnNotes browser extension icon you will receive a dialog box with a security token. Copy the token.
-    - Go to your browser's extension management location. Click into the QOwnNotes extension details.
-    - Paste the token into the Security Token field.
+1. Verkrijg de extensie
+    - [Chrome webshop](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+    - [Firefox Add-ons-pagina](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+    - U kunt de extensie ook vinden op [ GitHub ](https://github.com/qownnotes/web-companion/).
+2. Voeg het beveiligingstoken toe om de extensie te configureren.
+    - De eerste keer dat u op het QOwnNotes-pictogram voor de browserextensie klikt, ontvangt u een dialoogvenster met een beveiligingstoken. Kopieer de token.
+    - Ga naar de locatie voor extensiebeheer van uw browser. Klik in de details van de QOwnNotes-extensie.
+    - Plak het token in het veld Beveiligingstoken.
 
-## Web clipper
+## Webclipper
 
 ![web-clipper](/img/web-clipper.png)
 
-Right-click on a webpage or selected text to use the **web-clipper** functionality. There you can also create a new note with a **screenshot** of the current webpage.
+Klik met de rechtermuisknop op een webpagina of geselecteerde tekst om de **webclipper** -functionaliteit te gebruiken. Daar kun je ook een nieuwe notitie maken met een **screenshot** van de huidige webpagina.
 
 ::: tip
-The web clipper is also scriptable! Take a look at the [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) if you want to control what you clip from webpages.
+De webclipper is ook scriptbaar! Bekijk de [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) als je wilt bepalen wat je van webpagina's knipt.
 :::
 
-## Bookmarks
+## Bladwijzers
 
 ![bookmarks](/img/bookmarks.png)
 
-If you want full control over your browser bookmarks and **use them across different browsers and operating systems** then the QOwnNotes browser extension is for you.
+Als u volledige controle wilt over uw browserbladwijzers en **ze wilt gebruiken in verschillende browsers en besturingssystemen**, dan is de QOwnNotes-browserextensie iets voor u.
 
-By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
+Standaard toont de browserextensie alle **links van de huidige notitie** in een pop-up wanneer u op het QOwnNotes-pictogram in uw browser klikt. Deze links krijgen een tag `current`.
 
-You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
+U kunt ook **uw bladwijzers in notities beheren** met de notitietag `bladwijzers` (wijzigbaar in de instellingen). Deze links kunnen ook tags en een beschrijving hebben die in de browserextensie wordt weergegeven.
 
-New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
+Nieuwe bladwijzers worden opgeslagen in een notitie genaamd `Bladwijzers` (ook te wijzigen in de instellingen).
 
 ::: tip
-You can also import your browser bookmarks into QOwnNotes with the web companion browser extension!
+U kunt ook uw browserbladwijzers importeren in QOwnNotes met de webpartner-browserextensie!
 :::
 
 ### Syntaxis van bladwijzerkoppelingen

@@ -1,8 +1,8 @@
 # ترجمه
 
-چطور می‌توانم به ترجمه QOwnNotes کمک کنم؟
+Thank you for helping out!
 
-از کمک هایتان سپاسگزاریم!
+How can I help to translate QOwnNotes?
 
 ## برای ترجمه QOwnNotes در کراودین به ما بپیوندید
 
@@ -18,13 +18,13 @@
 
  مسئله گیت هاب </0> ارسال کنید.</p> 
 
-در صورت تمایل به افزودن ترجمه های جدید به زبان های موجود می توانید این کار را به راحتی انجام دهید.
+If you want to add new translations to **existing languages** you can do so right away.
 
 
 
 ## تصحیح
 
-اگر شما در زبان ترجمه شده موجود که هنوز تصحیح نشده است گوینده بسیار خوبی هستید، از شما بابت کمک به قابل اعتمادتر و مناسب تر ساختن تجربه استفاده از QOwnNotes سپاسگزاریم.
+If you are an excellent or even native speaker of an already translated language that has not been proofread yet, we are grateful if you help making the QOwnNotes experience more reliable and convenient by checking and if necessary, correcting unapproved translations. You need to ask the owner for the permission to be a proofreader for your language.
 
 اگر زبان مورد نظرتان در میان موارد ترجمه شده جای دارد برای مشاهده اینجا کلیک کنید! 
 
@@ -36,15 +36,31 @@
 
 ## General tips
 
-لطفاً هنگام کار بر روی پروژه چند نکته را در نظر بگیرد:
+Please consider a few things while working on the project.
 
-1) دقت حداکثری بهترین تجربه کاربری را ایجاد خواهد کرد.
 
-2) سبک انتخابی خود به طور خلاقانه استفاده کنید تا ترجمه شما شرایط مربوط به بیشترین همخوانی را تأمین کند.
 
-3) برای ترجمه منطقی است که به طور مشابهی مختصر بوده و و مؤلفه های رسمی یکسانی را به عنوان نمونه اصلی دنبال کند.
+### Accuracy
 
-4) بیایید همواره از ترجمه های یکسانی برای عبارت های منبع یکسان استفاده کنیم:
+Please localize with maximal possible accuracy while caring for fluency in your target language.
+
+
+
+### Precision
+
+The target needs to represent the source exactly and with no omissions or additions of any part of the string.
+
+
+
+### Context
+
+If you need more context, or help with a certain string and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page. 
+
+
+
+### Frequently used key terms
+
+It is necessary to check and use the same translations for the frequently used key terms, for example, "note" must be translated always in the same way. 
 
 اگر `
 یادداشت حذف شده 
@@ -54,19 +70,27 @@ gelöschte Dateien
 
 ![نماگرفت](/img/crowdin/screenshot-7.png)
 
-به منظور یافتن تمام عبارات یکسان، کراودین را جستجو کرده و همه رخدادهای مربوط به یک اصطلاح را ملاحظه کنید
+In order to find all the identical expressions, search Crowdin to see if all the occurrences of a term indeed have the same translation, if you know better, and they don't you may suggest a better translation and vote down (or up) for the better / correct translation.
 
-تا جایی که می‌توانید همه رخدادها را استاندارد سازی کنید تا اصطلاحات یکسان به ترجمه های یکسان بیانجامد.
+Localize all occurrences as identically as you can.
 
 `
 یادداشت
 ` باید همواره به صورت تعریف شده تنها یک ترجمه داشته باشد.
 
-5) در مجموع لطفاً هر ترجمه مناسب را به بلوک مربوطه اضافه کنید.
+
+
+### Plural forms
+
+For plural please add the appropriate translation each in the corresponding block.
 
 ![نماگرفت](/img/crowdin/screenshot-4.png)
 
-6) `%1` برچسب ها باید بدون فاصله نوشته شوند؛ در زبان های RTL می توانید یا برچسب ها را از نمونه اصلی وارد کنید یا آنها را در ترجمه خود بنویسید.    
+
+
+### Variables
+
+The `%1` variables need to be written without a space, in RTL languages you can either insert the variables from the original or write them into your translation.
 
 ![نماگرفت](/img/crowdin/screenshot-1.png)
 
@@ -74,20 +98,38 @@ gelöschte Dateien
 
 ![نماگرفت](/img/crowdin/screenshot-3.png)
 
-7) در جلوی هر نامه که باید در میانبر استفاده شود `
-&
-` را بکار گیرید که می تواند همان مورد اصلی باشد ولی این کار الزام آور نیست.
+
+
+### Access keys
+
+Use `&` in front of any letter that should be used in a shortcut, can be the same as in original but does not have to.
 
 ![نماگرفت](/img/crowdin/screenshot-4.png)
 
-8) Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
+
+
+### Custom containers
+
+Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
 
 
 
-## Translating and proofreading are fun!
+### Other strings not to be translated
 
-You get to deal with the language that this software speaks and learn a lot about terms and the insides of the project.
+Some segments we don't translate in the Documentation:
 
-If you are thus ready to help proofreading the translation of your language, [Fabijenna](https://crowdin.com/profile/rawfreeamy), as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading experience.
+- Never translate codes or links, tags must be left as they are (and without added spaces, as some MT does that, those must be deleted)
 
-Thanks a lot for your help!
+- We don't translate date and time (leave blank)
+
+- And we also don't translate references (which QON got in numerous languages), so you can simply skip them
+
+
+
+## Translating and proofreading can be exciting!
+
+You will deal with the language of this software, learn new terms and receive a lot of inside information about the project.
+
+If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading. You can ask her anything that helps you have fun contributing.
+
+Thanks a lot for your help! 🙂

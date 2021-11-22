@@ -1,8 +1,8 @@
 # Übersetzung
 
-Wie kann ich bei der Übersetzung von QOwnNotes helfen?
-
 Vielen Dank für Ihre Hilfe!
+
+Wie kann ich bei der Übersetzung von QOwnNotes helfen?
 
 ## Melden Sie sich bei Crowdin an, um QOwnNotes zu übersetzen
 
@@ -16,62 +16,86 @@ Sie können sich unter [Crowdin](https://crowdin.com/project/qownnotes/invite) u
 
 Schreiben Sie dem Projekt-Eigentümer einfach eine Nachricht auf [Crowdin](https://crowdin.com/profile/pbek) oder als [GitHub-Issue](https://github.com/pbek/QOwnNotes/issues), wenn Sie QOwnNotes in eine neue Sprache übersetzen möchten.
 
-Wenn Sie vorhandene Sprachen um neue Übersetzungen erweitern möchten, können Sie dies sofort tun.
+Wenn Sie **vorhandene Sprachen** um neue Übersetzungen erweitern möchten, können Sie dies sofort tun.
 
 ## Korrekturlesen
 
-Wenn Sie ein sehr guter Benutzer einer bereits übersetzten Sprache sind, die noch nicht Korrektur gelesen wurde, sind wir dankbar für Ihre Mithilfe, um das QOwnNotes-Erlebnis zuverlässiger und komfortabler zu machen.
+Wenn Sie ein ausgezeichneter oder sogar Muttersprachler einer bereits übersetzten Sprache sind, die noch nicht Korrektur gelesen wurde, sind wir Ihnen dankbar, wenn Sie dazu beitragen, die QOwnNotes-Erfahrung zuverlässiger und komfortabler zu gestalten, indem Sie nicht genehmigte Übersetzungen überprüfen und gegebenenfalls korrigieren. Sie müssen den Eigentümer um die Erlaubnis bitten, Korrektor für Ihre Sprache zu sein.
 
-Klicken Sie hier, um zu sehen, ob Ihre Sprache zu den bereits übersetzten gehört!
+Klicken Sie hier um zu sehen, ob Ihre Sprache zu den bereits Übersetzten gehört!
 
 [QOwnNotes auf Crowdin](screenshot)
 
 Sobald Sie den [Projekt-Eigentümer auf Crowdin kontaktiert haben](https://crowdin.com/profile/pbek) und die Erlaubnis zum Korrekturlesen in Ihrer Sprache erhalten haben, können Sie loslegen!
 
-## General tips
+## Allgemeine Hinweise
 
-Bitte beachten Sie die folgenden Hinweise zu Ihrer Arbeit am Projekt:
+Bitte beachten Sie die folgenden Hinweise zu Ihrer Arbeit am Projekt.
 
-1) Maximale Genauigkeit sorgt für die beste Benutzererfahrung.
+### Genauigkeit
 
-2) Seien Sie kreativ in der Wortwahl, aber sorgen Sie für eine möglichst genaue Übersetzung.
+Bitte lokalisieren Sie mit größtmöglicher Genauigkeit und achten Sie dabei auf die Beherrschung Ihrer Zielsprache.
 
-3) Es ist sinnvoll, dass die Übersetzung ähnlich präzise ist und denselben Formalitäten wie das Original folgt.
+### Präzision
 
-4) Verwenden Sie immer dieselben Übersetzungen für identische Ausdrücke aus dem Quelltext:
+Das Ziel muss die Quelle genau und ohne Auslassungen oder Hinzufügungen von Teilen der Zeichenfolge darstellen.
 
-   Wenn `trashed notes` auf Deutsch mit `gelöschte Notizen` übersetzt wurde, verwenden Sie immer diesen Ausdruck. Eine Ausnahme davon ist, wenn Sie grammatikalisch oder sprachlich gebunden sind, eine Alternative zu verwenden.
+### Context
 
-   ![screenshot](/img/crowdin/screenshot-7.png)
+If you need more context, or help with a certain string and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page.
 
-   Um alle identischen Ausdrücke zu finden, durchsuchen Sie Crowdin und sehen Sie alle Vorkommen eines Begriffs
+### Häufig verwendete Schlüsselbegriffe
 
-   Standardisieren Sie alle Vorkommen so gut wie möglich, damit identische Begriffe identische Übersetzungen erhalten.
+Es ist notwendig, für die häufig verwendeten Schlüsselbegriffe die gleichen Übersetzungen zu prüfen und zu verwenden, z. B. "Notiz" muss immer auf die gleiche Weise übersetzt werden.
 
-   `Notiz` sollte auf jeden Fall immer nur eine Übersetzung haben.
+Wenn `trashed notes` auf Deutsch mit `gelöschte Notizen` übersetzt wurde, verwenden Sie immer diesen Ausdruck. Eine Ausnahme davon ist, wenn Sie grammatikalisch oder sprachlich gebunden sind, eine Alternative zu verwenden.
 
-5) Für den Plural fügen Sie bitte jeweils die entsprechende Übersetzung in den entsprechenden Block ein.
+![screenshot](/img/crowdin/screenshot-7.png)
 
-   ![screenshot](/img/crowdin/screenshot-4.png)
+Um alle identischen Ausdrücke zu finden, durchsuchen Sie Crowdin, um zu sehen, ob alle Vorkommen eines Begriffs tatsächlich dieselbe Übersetzung haben. Sie können eine bessere Übersetzung vorschlagen und über die anderen abstimmen.
 
-6) Die `%1` Schlagworte müssen ohne Leerzeichen eingegeben werden. Sie können entweder die Schlagworte aus dem Original einfügen, indem Sie an der entsprechenden Stelle auf sie klicken, oder sie in Ihre Übersetzung eingeben.
+Lokalisieren Sie alle Vorkommen so identisch wie möglich.
 
-   ![screenshot](/img/crowdin/screenshot-1.png)
+`Notiz` sollte auf jeden Fall immer nur eine Übersetzung haben.
 
-   ![screenshot](/img/crowdin/screenshot-5.png)
+### Plural Formen
 
-   ![screenshot](/img/crowdin/screenshot-3.png)
+Für Plural fügen Sie bitte jeweils die entsprechende Übersetzung in den entsprechenden Block ein.
 
-7) Verwenden Sie `&` vor jedem Buchstaben, der in einer Verknüpfung verwendet werden soll. Dies kann das gleiche wie im Original sein, muss aber nicht.
+![screenshot](/img/crowdin/screenshot-4.png)
 
-   ![screenshot](/img/crowdin/screenshot-4.png)
+### Variablen
 
-8) Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
+Die `%1`-Variablen müssen ohne Leerzeichen geschrieben werden. In RTL-Sprachen können Sie die Variablen entweder aus dem Original einfügen oder in Ihre Übersetzung schreiben.
 
-## Translating and proofreading are fun!
+![screenshot](/img/crowdin/screenshot-1.png)
 
-You get to deal with the language that this software speaks and learn a lot about terms and the insides of the project.
+![screenshot](/img/crowdin/screenshot-5.png)
 
-If you are thus ready to help proofreading the translation of your language, [Fabijenna](https://crowdin.com/profile/rawfreeamy), as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading experience.
+![screenshot](/img/crowdin/screenshot-3.png)
 
-Thanks a lot for your help!
+### Zugangsschlüssel
+
+Verwenden Sie `&` vor jedem Buchstaben, der in einer Verknüpfung verwendet werden soll, kann derselbe wie im Original sein, muss es aber nicht.
+
+![screenshot](/img/crowdin/screenshot-4.png)
+
+### Benutzerdefinierte Container
+
+Strings wie `::: tip`, `::: warning` und `::: info` in der Dokumentation sind Markierungen für [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress und sollten nicht übersetzt werden.
+
+### Andere nicht zu übersetzende Zeichenfolgen
+
+Einige Segmente, die wir in der Dokumentation nicht übersetzen:
+
+- Never translate codes or links, tags must be left as they are (and without added spaces, as some MT does that, those must be deleted)
+- We don't translate date and time (leave blank)
+- And we also don't translate references (which QON got in numerous languages), so you can simply skip them
+
+## Übersetzen und Korrekturlesen kann spannend sein!
+
+Sie setzen sich mit der Sprache dieser Software auseinander, lernen neue Begriffe und erhalten viele Insider-Informationen rund um das Projekt.
+
+If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading. You can ask her anything that helps you have fun contributing.
+
+Vielen Dank für Deine Hilfe! 🙂
