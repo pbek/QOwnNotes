@@ -6,6 +6,7 @@
   (for [#2304](https://github.com/pbek/QOwnNotes/issues/2304))
     - you can use notes with a special tag to store command snippets, which you can
       execute from the command-line snippet manager
+    - for more information please visit the [Command-line snippet manager](https://www.qownnotes.org/getting-started/command-line-snippet-manager.html)
 - added more translation (thank you ivonkatran, rawfreeamy, fitoschido, alexeyfdv, marterra)
 
 ## 21.11.8
