@@ -99,14 +99,19 @@ and shouldn't be translated.
 
 Some segments we don't translate in the Documentation:
 
-- Never translate codes or links, tags must be left as they are (and without added spaces, as some MT does that, those must be deleted)
+- Never translate codes or links, tags must be left as they are
+  (and without added spaces, as some MT does that, those must be deleted)
 - We don't translate date and time (leave blank)
-- And we also don't translate references (which QON got in numerous languages), so you can simply skip them
+- And we also don't translate references (which QON got in numerous languages),
+  so you can simply skip them
 
 ## Translating and proofreading can be exciting!
 
 You will deal with the language of this software, learn new terms and receive a lot of inside information about the project.
 
-If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading. You can ask her anything that helps you having fun contributing.
+If you are thus ready to help to proofread the translation of your language,
+[Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short
+briefing in the practice of translating and proofreading.
+You can ask her anything that helps you have fun contributing.
 
 Thanks a lot for your help! 🙂
