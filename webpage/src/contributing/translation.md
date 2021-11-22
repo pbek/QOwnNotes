@@ -45,9 +45,7 @@ The target needs to represent the source exactly and with no omissions or additi
 
 ### Context
 
-If you need more context, or help with a certain string, and you happen to know another language,
-you can change the language and see what other translators made out of the segment,
-but feel free to leave a message and ask for clarification on the right side of the page.
+If you need more context, or help with a certain string and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page. 
 
 ### Frequently used key terms
 
@@ -109,6 +107,6 @@ Some segments we don't translate in the Documentation:
 
 You will deal with the language of this software, learn new terms and receive a lot of inside information about the project.
 
-If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading, where you can ask her anything to help you to have fun contributing. If you have no or only little experience translating, you can book a completely cost free Zoom introduction into translation. 
+If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading. You can ask her anything that helps you having fun contributing.
 
 Thanks a lot for your help! 🙂
