@@ -1665,7 +1665,7 @@ void MainWindow::initStyling() {
                          "{background-color: %1;}")
                          .arg(noteTagFrameColorName);
 
-//     qApp->setStyleSheet(appStyleSheet);
+    qApp->setStyleSheet(appStyleSheet);
     QTimer::singleShot(1, this, []{
         Utils::Gui::updateInterfaceFontSize();
     });

@@ -7,6 +7,7 @@
     - you can use notes with a special tag to store command snippets, which you can
       execute from the command-line snippet manager
     - for more information please visit the [Command-line snippet manager](https://www.qownnotes.org/getting-started/command-line-snippet-manager.html)
+- the startup time of the application was improved (for [#2303](https://github.com/pbek/QOwnNotes/pull/2303), thank you @Waqar144) 
 - added more translation (thank you ivonkatran, rawfreeamy, fitoschido, alexeyfdv, marterra)
 
 ## 21.11.8
