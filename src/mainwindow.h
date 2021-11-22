@@ -784,7 +784,6 @@ private:
     bool _scriptUpdateFound = false;
     bool _isMaximizedBeforeFullScreen = false;
     bool _isMinimizedBeforeFullScreen = false;
-    CommandBar* _commandBar;
 
     void createSystemTrayIcon();
 
