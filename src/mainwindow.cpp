@@ -403,9 +403,13 @@ MainWindow::MainWindow(QWidget *parent)
     this->loadNoteFolderListMenu();
 
     // update panels sort and order
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QTimer::singleShot(10, this, [this]{
+#endif
         updatePanelsSortOrder();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     });
+#endif
 
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates(this, UpdateService::AppStart);
@@ -1666,9 +1670,14 @@ void MainWindow::initStyling() {
                          .arg(noteTagFrameColorName);
 
     qApp->setStyleSheet(appStyleSheet);
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QTimer::singleShot(1, this, []{
+#endif
         Utils::Gui::updateInterfaceFontSize();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     });
+#endif
 
     if (!isInDistractionFreeMode()) {
         ui->noteTextEdit->setPaperMargins(0);
@@ -2504,10 +2513,16 @@ void MainWindow::readSettings() {
     QSettings settings;
     showSystemTray =
         settings.value(QStringLiteral("ShowSystemTray"), false).toBool();
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QTimer::singleShot(1, this, [this]{
+#endif
         restoreGeometry(
             QSettings().value(QStringLiteral("MainWindow/geometry")).toByteArray());
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     });
+#endif
+
     ui->menuBar->restoreGeometry(
         settings.value(QStringLiteral("MainWindow/menuBarGeometry"))
             .toByteArray());
@@ -2611,10 +2626,14 @@ void MainWindow::readSettings() {
 
     // load language dicts names into menu
     // Delay loading, loading dictionary names is slow
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QTimer::singleShot(10, this, [this]{
+#endif
         _languageGroup = new QActionGroup(ui->menuLanguages);
         loadDictionaryNames();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     });
+#endif
 }
 
 /**

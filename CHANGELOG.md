@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.11.10
+- the build on Debian 8 was fixed
+
 ## 21.11.9
 - added support for the [QOwnNotes command-line snippet manager](https://github.com/qownnotes/qc)
   to execute command snippets stored in notes in QOwnNotes from the command line
