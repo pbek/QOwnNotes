@@ -25,3 +25,16 @@ And put the security token in the `token` attribute:
 token = "yourtokenhere"
 ```
 
+## Shell completion
+
+You can generate an autocompletion script for lots of shells with:
+
+```bash
+qc completion <shell>
+```
+
+So for example for the Fish shell you can do a:
+
+```bash
+qc completion fish > ~/.config/fish/completions/qc.fish
+```
