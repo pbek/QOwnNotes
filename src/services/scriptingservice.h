@@ -57,10 +57,11 @@ class ScriptingService : public QObject {
                                           const QStringList &parameters,
                                           const QString &callbackIdentifier = QString(),
                                           const QVariant &callbackParameter = 0,
-                                          const QByteArray &processData = QByteArray());
+                                          const QByteArray &processData = QByteArray(),
+                                          const QString &workingDirectory = "");
     Q_INVOKABLE QByteArray startSynchronousProcess(
-        const QString &executablePath, QStringList parameters,
-        QByteArray data = QByteArray()) const;
+        const QString &executablePath, const QStringList &parameters,
+        const QByteArray &data = QByteArray(), const QString &workingDirectory = "") const;
     Q_INVOKABLE QString currentNoteFolderPath();
     Q_INVOKABLE NoteApi *currentNote() const;
     Q_INVOKABLE void log(QString text);

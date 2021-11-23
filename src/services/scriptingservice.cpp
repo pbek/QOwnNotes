@@ -1041,13 +1041,15 @@ bool ScriptingService::callHandleWebsocketRawDataHook(
  * @param callbackIdentifier an identifier to be used in the onDetachedProcessCallback() function (optional)
  * @param callbackParameter an additional parameter for loops or the like (optional)
  * @param processData data written to the process if the callback is used (optional)
+ * @param workingDirectory the working directory to execute the process in (optional, only works without callback)
  * @return true on success, false otherwise
  */
 bool ScriptingService::startDetachedProcess(const QString &executablePath,
                                             const QStringList &parameters,
                                             const QString &callbackIdentifier,
                                             const QVariant &callbackParameter,
-                                            const QByteArray &processData) {
+                                            const QByteArray &processData,
+                                            const QString &workingDirectory) {
     MetricsService::instance()->sendVisitIfEnabled(
         QStringLiteral("scripting/") % QString(__func__));
 
@@ -1058,14 +1060,14 @@ bool ScriptingService::startDetachedProcess(const QString &executablePath,
         cmd.parameters = parameters;
         cmd.data = processData;
 
-        ScriptThread *st = new ScriptThread(
+        auto *st = new ScriptThread(
             this, cmd, callbackIdentifier, callbackParameter);
         st->start();
 
         return true;
     }
 
-    return Utils::Misc::startDetachedProcess(executablePath, parameters);
+    return Utils::Misc::startDetachedProcess(executablePath, parameters, workingDirectory);
 }
 
 /**
@@ -1074,16 +1076,17 @@ bool ScriptingService::startDetachedProcess(const QString &executablePath,
  * @param executablePath the path of the executable
  * @param parameters a list of parameter strings
  * @param data the data that will be written to the process (optional)
+ * @param workingDirectory the working directory to execute the process in (optional)
  * @return the text that was returned by the process
  */
 QByteArray ScriptingService::startSynchronousProcess(
-    const QString &executablePath, QStringList parameters,
-    QByteArray data) const {
+    const QString &executablePath, const QStringList &parameters,
+    const QByteArray &data, const QString &workingDirectory) const {
     MetricsService::instance()->sendVisitIfEnabled(
         QStringLiteral("scripting/") % QString(__func__));
 
     return Utils::Misc::startSynchronousProcess(
-        executablePath, std::move(parameters), std::move(data));
+        executablePath, parameters, data, workingDirectory);
 }
 
 /**

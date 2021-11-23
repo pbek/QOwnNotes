@@ -31,7 +31,7 @@ private:
 
 public:
     // constructor
-    explicit ScriptThread(ScriptingService *ss, const TerminalCmd &cmd, const QString &identifier, const QVariant callbackParameter = 0);
+    explicit ScriptThread(ScriptingService *ss, const TerminalCmd &cmd, const QString &identifier, const QVariant &callbackParameter = 0);
 
     // overriding the QThread's run() method
     void run();

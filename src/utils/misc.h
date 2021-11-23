@@ -88,7 +88,8 @@ QString htmlToMarkdown(QString text);
 QString parseTaskList(const QString &html, bool clickable);
 QByteArray startSynchronousProcess(const QString &executablePath,
                                    const QStringList &parameters,
-                                   const QByteArray &data = QByteArray());
+                                   const QByteArray &data = QByteArray(),
+                                   const QString &workingDirectory = "");
 bool startSynchronousResultProcess(TerminalCmd &cmd);
 QList<QObject *> getParents(QObject *object);
 QString appDataPath();

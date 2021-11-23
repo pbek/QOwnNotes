@@ -362,7 +362,7 @@ QString Utils::Misc::toStartCase(const QString &text) {
  *
  * @param executablePath the path of the executable
  * @param parameters a list of parameter strings
- * @param workingDirectory the directory to run the executable from
+ * @param workingDirectory the directory to run the executable from (optional)
  * @return true on success, false otherwise
  */
 bool Utils::Misc::startDetachedProcess(const QString &executablePath,
@@ -420,13 +420,19 @@ bool Utils::Misc::openFilesWithApplication(const QString &executablePath,
  *
  * @param executablePath the path of the executable
  * @param parameters a list of parameter strings
- * @param data the data that will be written to the process
+ * @param data the data that will be written to the process (optional)
+ * @param workingDirectory the working directory to execute the process in (optional)
  * @return the text that was returned by the process
  */
 QByteArray Utils::Misc::startSynchronousProcess(const QString &executablePath,
                                                 const QStringList &parameters,
-                                                const QByteArray &data) {
+                                                const QByteArray &data,
+                                                const QString &workingDirectory) {
     QProcess process;
+
+    if (!workingDirectory.isEmpty()) {
+        process.setWorkingDirectory(workingDirectory);
+    }
 
     // start executablePath synchronous with parameters
 #ifdef Q_OS_MAC

@@ -14,11 +14,12 @@ Starting an external program in the background
  * @param callbackIdentifier an identifier to be used in the onDetachedProcessCallback() function (optional)
  * @param callbackParameter an additional parameter for loops or the like (optional)
  * @param processData data written to the process if the callback is used (optional)
+ * @param workingDirectory the working directory to execute the process in (optional, only works without callback)
  * @return true on success, false otherwise
  */
 bool startDetachedProcess(QString executablePath, QStringList parameters,
                             QString callbackIdentifier, QVariant callbackParameter,
-                            QByteArray processData);
+                            QByteArray processData, QString workingDirectory);
 ```
 
 ### Example
@@ -63,13 +64,14 @@ Starting an external program and wait for the output
  * @param executablePath the path of the executable
  * @param parameters a list of parameter strings
  * @param data the data that will be written to the process (optional)
+ * @param workingDirectory the working directory to execute the process in (optional)
  * @return the text that was returned by the process
-QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data);
+QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data, QString workingDirectory);
 ```
 
 ### Example
 ```js
-var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data");
+var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data", "/path/to/execute/in");
 ```
 
 You may want to take a look at the example

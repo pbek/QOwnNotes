@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 21.11.10
+- the scripting functions `startDetachedProcess` and `startDetachedProcess` now
+  have an optional parameter `workingDirectory` (for [#2300](https://github.com/pbek/QOwnNotes/issues/2300))
+  - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html)
 - the build on Debian 8 was fixed
 
 ## 21.11.9
