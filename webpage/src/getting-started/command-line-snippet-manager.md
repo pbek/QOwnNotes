@@ -1,6 +1,6 @@
 # Command-line Snippet Manager
 
-Download the [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc)
+Download the [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc/releases)
 to **execute command snippets stored in notes** in QOwnNotes from the command line.
 
 ![qc](/img/qc.png)
