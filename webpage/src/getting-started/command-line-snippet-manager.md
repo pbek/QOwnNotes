@@ -22,6 +22,7 @@ Then you need to show the security token (3) and copy it (4).
 Now open the configuration file of the snippet manager with:
 
 ```bash
+# Configure the snippet manager
 qc configure
 ```
 
@@ -49,4 +50,16 @@ found in the current note regardless of note tags.
 - `echo I am a command` I am a description #tag1 #tag2 #tag3
 * `echo I am also a command` I am a description #tag3 #tag4 #tag5
 - cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+```
+
+## Usage
+
+```bash
+# Search and execute command snippets
+qc exec
+```
+
+```bash
+# Search and print command snippets
+qc search
 ```
