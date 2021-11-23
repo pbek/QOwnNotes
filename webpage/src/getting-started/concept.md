@@ -5,7 +5,8 @@ graph TB
     subgraph Your computer
         qon((QOwnNotes))-->md{{"Markdown files"}}
         sync("Nextcloud Sync")-->md
-        qon-comp("QOwnNotes browser extension")-->qon
+        qon-comp("Browser extension")-->qon
+        qc("Command-line snippet manager")-->qon
     end
     subgraph Your Nextcloud server
         qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
@@ -24,6 +25,7 @@ graph TB
     click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
     click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
     click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
+    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
     click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
     click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
@@ -61,6 +63,14 @@ You can manage your **browser bookmarks** with QOwnNotes or use it as a **web cl
 ::: tip
 The browser extensions works **offline**, no internet connection needed.
 Please visit [QOwnNotes Web Companion browser extension](browser-extension.md) for more information.
+:::
+
+## QOwnNotes command-line snippet manager
+
+You can manage your **command snippets** with QOwnNotes and execute them on the command-line.
+
+::: tip
+Please visit [QOwnNotes command-line snippet manager](command-line-snippet-manager.md) for more information.
 :::
 
 ## Nextcloud desktop sync client
