@@ -664,6 +664,20 @@ void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
     handler->installEventFilter();
     handler->setupWidget();
 
+    const auto homeDir = QStandardPaths::standardLocations(QStandardPaths::HomeLocation).first();
+    const auto vimRcQONFile = new QFile(QDir(homeDir).filePath(".vimrc.qownnotes"));
+
+    // Try to load .vimrc.qownnotes or .vimrc files
+    if (vimRcQONFile->exists()) {
+        handler->handleCommand(QStringLiteral("source ") + vimRcQONFile->fileName());
+    } else {
+        const auto vimRcFile = new QFile(QDir(homeDir).filePath(".vimrc"));
+
+        if (vimRcFile->exists()) {
+            handler->handleCommand(QStringLiteral("source ") + vimRcFile->fileName());
+        }
+    }
+
     QPointer<FakeVimProxy> proxy = new FakeVimProxy(noteTextEdit, this, handler);
 
     using namespace FakeVim::Internal;

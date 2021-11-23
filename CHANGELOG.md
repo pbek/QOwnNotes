@@ -4,6 +4,9 @@
 - the scripting functions `startSynchronousProcess` and `startDetachedProcess` now
   have an optional parameter `workingDirectory` (for [#2300](https://github.com/pbek/QOwnNotes/issues/2300))
   - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html)
+- when vim-mode is enabled the application will first try to load a `.vimrc.qownnotes`
+  file from your home directory, and if not found it will try to load the `.vimrc` file
+  to add additional configs (for [#2247](https://github.com/pbek/QOwnNotes/issues/2247))
 - the build on Debian 8 was fixed
 
 ## 21.11.9
