@@ -31,12 +31,12 @@ token = "yourtokenhere"
 ```
 
 ::: tip
-In den QOwnNotes-Einstellungen können Sie auch festlegen, welches Notiz-Tag verwendet werden soll, um in Notizen nach Befehlen zu suchen. Standardmäßig wird das Tag `command` verwendet.
+In den QOwnNotes-Einstellungen können Sie auch festlegen, welches Notiz-Tag verwendet werden soll, um in Notizen nach Befehlen zu suchen. Standardmäßig wird das Tag `commands` verwendet.
 :::
 
 ## Syntax von Befehlsschnipseln
 
-Sie können ungeordnete Listen mit Inline-Codeblöcken verwenden, um Befehlsausschnitte zu speichern. Alle Notizen mit dem Tag `command` werden nach Befehlsschnipseln durchsucht.
+Sie können ungeordnete Listen mit Inline-Codeblöcken verwenden, um Befehlsausschnitte zu speichern. Alle Notizen mit dem Tag `commands` werden nach Befehlsschnipseln durchsucht.
 
 Wenn Sie vor dem Inline-Codeblock ein `cmd:` hinzufügen, wird der Befehl auch in der aktuellen Notiz gefunden, unabhängig von Notiz-Tags.
 

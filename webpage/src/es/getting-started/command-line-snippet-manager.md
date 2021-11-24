@@ -31,12 +31,12 @@ token = "yourtokenhere"
 ```
 
 ::: tip
-In the QOwnNotes settings you can also set what note tag should be used to search for commands in notes. By default, the tag `command` is used.
+In the QOwnNotes settings you can also set what note tag should be used to search for commands in notes. By default, the tag `commands` is used.
 :::
 
 ## Syntax of command snippets
 
-You can use unordered lists with in-line code blocks to store command snippets. All notes with the tag `command` are searched for command snippets.
+You can use unordered lists with in-line code blocks to store command snippets. All notes with the tag `commands` are searched for command snippets.
 
 If you add a `cmd:` before the in-line code block, the command will also be found in the current note regardless of note tags.
 

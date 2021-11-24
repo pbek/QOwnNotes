@@ -31,12 +31,12 @@ token = "yourtokenhere"
 ```
 
 ::: tip
-A QOwnNotes beállításaiban azt is beállíthatja, hogy milyen jegyzetcímkét használjon a parancsok kereséséhez a jegyzetekben. Alapértelmezés szerint a `command` címke használatos.
+A QOwnNotes beállításaiban azt is beállíthatja, hogy milyen jegyzetcímkét használjon a parancsok kereséséhez a jegyzetekben. Alapértelmezés szerint a `commands` címke használatos.
 :::
 
 ## A parancsrészletek szintaxisa
 
-A parancsrészletek tárolásához használhat soron belüli kódblokkokkal rendelkező rendezetlen listákat. Minden `command` címkével rendelkező jegyzetben a rendszer parancsrészleteket keres.
+A parancsrészletek tárolásához használhat soron belüli kódblokkokkal rendelkező rendezetlen listákat. Minden `commands` címkével rendelkező jegyzetben a rendszer parancsrészleteket keres.
 
 Ha a soron belüli kódblokk elé egy `cmd:` karakterláncot ad hozzá, a parancs a jegyzetcímkéktől függetlenül az aktuális jegyzetben is megtalálható lesz.
 
