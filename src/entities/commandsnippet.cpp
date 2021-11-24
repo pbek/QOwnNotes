@@ -55,8 +55,8 @@ QVector<CommandSnippet> CommandSnippet::parseCommandSnippets(const QString &text
     QRegularExpressionMatchIterator i;
     QVector<CommandSnippet> commandSnippets;
     const auto regex = QRegularExpression(
-        withPrefixOnly ? QStringLiteral(R"([-*] cmd: `(.+?)`(.*)$)") :
-                       QStringLiteral(R"([-*] `(.+?)`(.*)$)"),
+        withPrefixOnly ? QStringLiteral(R"([-*]\s+cmd:\s+`(.+?)`(.*)$)") :
+                       QStringLiteral(R"([-*]\s+`(.+?)`(.*)$)"),
         QRegularExpression::MultilineOption);
 
     // parse command snippets like "- `my-command` #tag1 #tag2 description text"

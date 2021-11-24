@@ -65,7 +65,7 @@ QVector<Bookmark> Bookmark::parseBookmarks(const QString &text,
     // parse bookmark links like `- [name](http://link) #tag1 #tag2 the
     // description text` with optional tags and description
     i = QRegularExpression(
-            QStringLiteral(R"([-*] \[(.+?)\]\(([\w-]+://.+?)\)(.*)$)"),
+            QStringLiteral(R"([-*]\s+\[(.+?)\]\(([\w-]+://.+?)\)(.*)$)"),
             QRegularExpression::MultilineOption)
             .globalMatch(text);
 
