@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.11.11
+- an issue with no note being set initially after startup when using the note
+  tagging scripting hooks was fixed (for [#2309](https://github.com/pbek/QOwnNotes/issues/2309))
+ 
 ## 21.11.10
 - the scripting functions `startSynchronousProcess` and `startDetachedProcess` now
   have an optional parameter `workingDirectory` (for [#2300](https://github.com/pbek/QOwnNotes/issues/2300))
