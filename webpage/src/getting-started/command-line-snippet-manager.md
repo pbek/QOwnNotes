@@ -75,7 +75,7 @@ qc exec
 qc search
 ```
 
-# Configuration
+## Configuration
 
 Run `qc configure`.
 
