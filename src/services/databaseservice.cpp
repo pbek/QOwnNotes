@@ -882,6 +882,21 @@ bool DatabaseService::setupTables() {
         version = 37;
     }
 
+    // version 38 was spent
+
+    if (version < 39) {
+        // migrate from customNoteFileExtensionList to noteFileExtensionList
+        auto extensions = settings.value(
+              QStringLiteral("customNoteFileExtensionList")).toStringList();
+
+        settings.setValue(
+            QStringLiteral("noteFileExtensionList"),
+            extensions);
+        settings.remove(QStringLiteral("customNoteFileExtensionList"));
+
+        version = 39;
+    }
+
     if (version != oldVersion) {
         setAppData(QStringLiteral("database_version"),
                    QString::number(version));

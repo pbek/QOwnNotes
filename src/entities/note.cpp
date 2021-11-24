@@ -1254,12 +1254,12 @@ QString Note::defaultNoteFileExtension() {
 }
 
 /**
- * Returns the a list of the custom note file extensions
+ * Returns the a list of all note file extensions
  */
-QStringList Note::customNoteFileExtensionList(const QString &prefix) {
+QStringList Note::noteFileExtensionList(const QString &prefix) {
     const QSettings settings;
     QStringList list =
-        settings.value(QStringLiteral("customNoteFileExtensionList"))
+        settings.value(QStringLiteral("noteFileExtensionList"))
             .toStringList();
     list.removeDuplicates();
 
@@ -3367,8 +3367,7 @@ bool Note::fileUrlIsNoteInCurrentNoteFolder(const QUrl &url) {
         return false;
     }
 
-    QListIterator<QString> itr(customNoteFileExtensionList(
-        QStringLiteral(".")));
+    QListIterator<QString> itr(noteFileExtensionList(QStringLiteral(".")));
 
     while (itr.hasNext()) {
         const auto fileExtension = itr.next();

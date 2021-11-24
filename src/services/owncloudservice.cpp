@@ -1114,12 +1114,11 @@ void OwnCloudService::loadTrash(MainWindow *mainWindow) {
     q.addQueryItem(QStringLiteral("format"), format);
     q.addQueryItem(QStringLiteral("dir"), serverNotesPath);
 
-    QStringList customNoteFileExtensionList =
-        Note::customNoteFileExtensionList();
+    QStringList noteFileExtensionList = Note::noteFileExtensionList();
 
     // add the custom note extensions
-    if (customNoteFileExtensionList.count() > 0) {
-        QListIterator<QString> itr(customNoteFileExtensionList);
+    if (noteFileExtensionList.count() > 0) {
+        QListIterator<QString> itr(noteFileExtensionList);
         while (itr.hasNext()) {
             QString fileExtension = itr.next();
             q.addQueryItem(QStringLiteral("extensions[]"), fileExtension);

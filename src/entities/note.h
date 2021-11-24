@@ -96,7 +96,7 @@ class Note {
 
     static QString defaultNoteFileExtension();
 
-    static QStringList customNoteFileExtensionList(
+    static QStringList noteFileExtensionList(
         const QString &prefix = QString());
 
     static QString getFullFilePathForFile(const QString &fileName);

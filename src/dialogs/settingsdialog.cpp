@@ -883,14 +883,14 @@ void SettingsDialog::storeSettings() {
                       ui->ignoreSSLErrorsCheckBox->isChecked());
 
     // store the custom note file extensions
-    QStringList customNoteFileExtensionList;
+    QStringList noteFileExtensionList;
     for (int i = 0; i < ui->defaultNoteFileExtensionListWidget->count(); i++) {
         QListWidgetItem *item = ui->defaultNoteFileExtensionListWidget->item(i);
-        customNoteFileExtensionList.append(item->text());
+        noteFileExtensionList.append(item->text());
     }
-    customNoteFileExtensionList.removeDuplicates();
-    settings.setValue(QStringLiteral("customNoteFileExtensionList"),
-                      customNoteFileExtensionList);
+    noteFileExtensionList.removeDuplicates();
+    settings.setValue(QStringLiteral("noteFileExtensionList"),
+                      noteFileExtensionList);
 
     // store the font settings
     storeFontSettings();
@@ -1397,7 +1397,7 @@ void SettingsDialog::readSettings() {
     }
 
     // loads the custom note file extensions
-    QListIterator<QString> itr(Note::customNoteFileExtensionList());
+    QListIterator<QString> itr(Note::noteFileExtensionList());
     while (itr.hasNext()) {
         QString fileExtension = itr.next();
         addCustomNoteFileExtension(fileExtension);

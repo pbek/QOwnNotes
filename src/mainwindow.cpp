@@ -3346,7 +3346,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
     QDir notesDir(notePath);
 
     // only show certain files
-    auto filters = Note::customNoteFileExtensionList(QStringLiteral("*."));
+    auto filters = Note::noteFileExtensionList(QStringLiteral("*."));
 
     // show the newest entry first
     QStringList files = notesDir.entryList(filters, QDir::Files, QDir::Time);
@@ -8033,7 +8033,7 @@ bool MainWindow::isValidMediaFile(QFile *file) {
  * Evaluates if file is a note file
  */
 bool MainWindow::isValidNoteFile(QFile *file) {
-    auto mediaExtensions = Note::customNoteFileExtensionList();
+    auto mediaExtensions = Note::noteFileExtensionList();
     const QFileInfo fileInfo(file->fileName());
     const QString extension = fileInfo.suffix();
     return mediaExtensions.contains(extension, Qt::CaseInsensitive);
