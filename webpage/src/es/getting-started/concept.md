@@ -5,7 +5,8 @@ graph TB
     subgraph Your computer
         qon((QOwnNotes))-->md{{"Markdown files"}}
         sync("Nextcloud Sync")-->md
-        qon-comp("QOwnNotes browser extension")-->qon
+        qon-comp("Browser extension")-->qon
+        qc("Command-line snippet manager")-->qon
     end
     subgraph Your Nextcloud server
         qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
@@ -24,6 +25,7 @@ graph TB
     click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
     click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
     click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
+    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
     click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
     click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
@@ -59,56 +61,64 @@ Puede administrar los **marcadores de su navegador** con QOwnNotes o usarlo como
 Las extensiones del navegador funcionan ** sin conexión **, no se necesita conexión a Internet. Visite [QOwnNotes Web Companion extensión del navegador](browser-extension.md) para obtener más información.
 :::
 
-## Cliente de sincronización de escritorio de Nextcloud
+## QOwnNotes command-line snippet manager
 
-**Sincroniza tus notas** con otros dispositivos (escritorio y móvil) con tu cliente de sincronización [Nextcloud](https://nextcloud.com/) o [ownCloud](https://owncloud.org/) con tu servidor.
+You can manage your **command snippets** with QOwnNotes and execute them on the command-line.
 
 ::: tip
-Por supuesto, otras soluciones, como **Dropbox**, **Syncthing**, **Seafile** o BitTorrent Sync también se pueden utilizar para sincronizar sus notas y otros archivos.
-
-También puede usar **git** para sincronizar con herramientas como [gitomatic](https://github.com/muesli/gitomatic/).
+Please visit [QOwnNotes command-line snippet manager](command-line-snippet-manager.md) for more information.
 :::
 
-## Servidor Nextcloud
+## Nextcloud desktop sync client
 
-Para trabajar con sus notas en línea, puede utilizar servidores como [Nextcloud](https://nextcloud.com/) o [ownCloud](https://owncloud.org/).
-
-Puede alojar su propio servidor o utilizar soluciones alojadas.
-
-Hay una [lista mantenida por la comunidad de proveedores de Nextcloud](https://github.com/nextcloud/providers#providers), así como una [lista de dispositivos con Nextcloud](https://nextcloud.com/devices/).
-
-[Portknox](https://portknox.net) ha informado que tienen [QOwnNotesAPI instalado](https://portknox.net/en/app_listing).
+**Sync your notes** with other devices (desktop & mobile) with your [Nextcloud](https://nextcloud.com/) or [ownCloud](https://owncloud.org/) sync client to your server.
 
 ::: tip
-Por supuesto, otras soluciones, como **Dropbox**, **Syncthing**, **Seafile** o BitTorrent Sync también se pueden utilizar para alojar sus notas y otros archivos.
+Of course other solutions, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used too to sync your notes and other files.
+
+You can also use **git** to sync with tools like [gitomatic](https://github.com/muesli/gitomatic/).
+:::
+
+## Nextcloud server
+
+To work with your notes online you can use servers like [Nextcloud](https://nextcloud.com/) or [ownCloud](https://owncloud.org/).
+
+You can host your own server or use hosted solutions.
+
+There is a [community-maintained list of Nextcloud providers](https://github.com/nextcloud/providers#providers), as well as a [list of devices with Nextcloud](https://nextcloud.com/devices/).
+
+[Portknox](https://portknox.net) has reported they have [QOwnNotesAPI installed](https://portknox.net/en/app_listing).
+
+::: tip
+Of course other solutions, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used too to host your notes and other files.
 :::
 
 ## QOwnNotesAPI Nextcloud app
 
-[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) le permite acceder a su **notas enviadas a la papelera** y **versiones de notas** del lado del servidor.
+[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) lets you access your server-side **trashed notes** and **note versions**.
 
 ::: tip
-Visite [Aplicación QOwnNotesAPI Nextcloud](qownnotesapi.md) para obtener más información.
+Please visit [QOwnNotesAPI Nextcloud App](qownnotesapi.md) for more information.
 :::
 
-## Aplicación de servidor Nextcloud Notes
+## Nextcloud Notes server app
 
-Utilice [**Nextcloud Notes**](https://github.com/nextcloud/notes) para editar sus notas en la **web**.
+Use [**Nextcloud Notes**](https://github.com/nextcloud/notes) to edit your notes in the **web**.
 
 ::: warning
-Tenga en cuenta que Nextcloud Notes actualmente solo admite hasta un nivel de subcarpetas.
+Keep in mind that Nextcloud Notes currently only supports up to one level of subfolders.
 :::
 
 ## Nextcloud Notes mobile app
 
-Para acceder a sus notas de Nextcloud / ownCloud desde su **dispositivo móvil**, puede utilizar diferentes aplicaciones.
+To access your Nextcloud / ownCloud notes from your **mobile device** you can use different apps.
 
 ### Android
 
 - [ Nextcloud Notes para Android ](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (terceros)
 
 ::: tip
-También puedes usar una herramienta como *Synchronize Ultimate* o *FolderSync* para sincronizar tus archivos de notas, y usar software como *neutriNotes* para editarlas.
+You could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files and use software like *neutriNotes* to edit your notes.
 :::
 
 ### iOS
@@ -116,25 +126,25 @@ También puedes usar una herramienta como *Synchronize Ultimate* o *FolderSync* 
 - [CloudNotes para iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (tercero)
 
 ::: tip
-También puede utilizar [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) y sincronice sus notas a través de WebDAV, hay un buen tutorial en [Cómo tomar notas con Nextcloud, QOwnNotes y Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
+You can also use [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) and sync your notes via WebDAV, there is a good tutorial at [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
 :::
 
 ## api.qownnotes.org
 
-Este es un servicio en línea proporcionado por QOwnNotes para verificar si hay una nueva versión de la aplicación disponible.
+This is an online service provided by QOwnNotes to check if there is a new release of the application available.
 
-Está hablando con GitHub y busca la última versión, obtiene una URL de descarga adecuada y compila los cambios del registro de cambios en comparación con la versión de QOwnNotes que está usando actualmente como html para mostrar en el cuadro de diálogo de actualización.
+It is talking to GitHub and checks for the latest release, gets a suited download url and compiles the changes from the changelog compared to the version of QOwnNotes you are currently using as html to show in the update dialog.
 
-Además, también proporciona [Release RSS Fee](http://api.qownnotes.org/rss/app-releases) y una implementación de la API de comprobación de actualizaciones heredada para versiones anteriores de QOwnNotes.
+In addition, it also provides the [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) and an implementation of the legacy update checking api for older versions of QOwnNotes.
 
 ::: tip
-Puede acceder al código fuente de [api.qownnotes.org](https://api.qownnotes.org) en [GitHub](https://github.com/qownnotes/api).
+You can access the source code for [api.qownnotes.org](https://api.qownnotes.org) on [GitHub](https://github.com/qownnotes/api).
 :::
 
-## Aplicación web de QOwnNotes
+## QOwnNotes Web App
 
-Puede insertar fotos de su teléfono móvil en la nota actual en QOwnNotes en su escritorio a través de la **aplicación web ** en [app.qownnotes.org](https://app.qownnotes.org/).
+You can insert photos from your mobile phone into the current note in QOwnNotes on your desktop via the **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
 
 ::: tip
-Visite [Aplicación web QOwnNotes](web-app.md) para obtener más información.
+Please visit [QOwnNotes Web App](web-app.md) for more information.
 :::

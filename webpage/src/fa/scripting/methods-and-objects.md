@@ -14,11 +14,12 @@
  * @param callbackIdentifier an identifier to be used in the onDetachedProcessCallback() function (optional)
  * @param callbackParameter an additional parameter for loops or the like (optional)
  * @param processData data written to the process if the callback is used (optional)
+ * @param workingDirectory the working directory to execute the process in (optional, only works without callback)
  * @return true on success, false otherwise
  */
 bool startDetachedProcess(QString executablePath, QStringList parameters,
                             QString callbackIdentifier, QVariant callbackParameter,
-                            QByteArray processData);
+                            QByteArray processData, QString workingDirectory);
 ```
 
 ### مثال
@@ -59,13 +60,14 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
  * @param executablePath the path of the executable
  * @param parameters a list of parameter strings
  * @param data the data that will be written to the process (optional)
+ * @param workingDirectory the working directory to execute the process in (optional)
  * @return the text that was returned by the process
-QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data);
+QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data, QString workingDirectory);
 ```
 
 ### مثال
 ```js
-var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data");
+var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data", "/path/to/execute/in");
 ```
 
 می توانید مثال [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml) را ملاحظه کنید.

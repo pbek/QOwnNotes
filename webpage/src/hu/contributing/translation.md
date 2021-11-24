@@ -20,13 +20,13 @@ Ha fordítást szeretne hozzáadni **meglévő fordításokhoz**, a fenti linken
 
 ## Lektorálás
 
-Ha Ön egy már lefordított, még le nem olvasott nyelv kiváló vagy akár anyanyelvi beszélője, hálásak vagyunk, ha a nem jóváhagyott fordítások ellenőrzésével és szükség esetén kijavításával segíti a QOwnNotes élmény megbízhatóbbá és kényelmesebbé tételét. Engedélyt kell kérnie a tulajdonostól, hogy lektorálja az Ön nyelvét.
+Ha Ön egy már lefordított, még le nem olvasott nyelv kiváló vagy akár anyanyelvi beszélője, hálásan köszönjük, ha a nem jóváhagyott fordítások ellenőrzésével és szükség esetén javításával segíti a QOwnNotes élményét megbízhatóbbá és kényelmesebbé tenni. Kérjen engedélyt a tulajdonostól, hogy lektorálhasson a saját nyelvén.
 
 Kattintson ide, hogy lássa, az Ön nyelve a lefordítottak között van-e!
 
 [QOwnNotes a Crowdin-on](https://translate.qownnotes.org/)
 
-Miután [felvette a kapcsolatot a projekt tulajdonosával a Crowdin-on](https://crowdin.com/profile/pbek) és megkapta az engedélyt az Ön nyelvén történő lektorálásra, startolhat!
+Miután [felvette a kapcsolatot a projekt tulajdonosával a Crowdinon](https://crowdin.com/profile/pbek), és engedélyt kapott az Ön nyelvén történő lektorálásra, készen áll!
 
 ## Általános tippek
 
@@ -42,7 +42,7 @@ A célnak pontosan kell képviselnie a forrást, a karakterlánc bármely rész�
 
 ### Kontextus
 
-If you need more context, or help with a certain string and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page.
+Ha több kontextusra vagy segítségre van szüksége egy bizonyos karakterlánchoz, és történetesen tud egy további nyelven is, megváltoztathatja a nyelvet, és megnézheti, hogy más fordítók mit hoztak létre a szegmensből. De nyugodtan hagyjon üzenetet, és kérjen pontosítást az oldal jobb oldalán.
 
 ### Gyakran használt kulcsfogalmak
 
@@ -88,14 +88,14 @@ Az olyan karakterláncok, mint az `::: tip`, `::: warning` and `::: info` a doku
 
 Néhány szegmens, amelyet nem fordítunk le a Dokumentációban:
 
-- Never translate codes or links, tags must be left as they are (and without added spaces, as some MT does that, those must be deleted)
-- We don't translate date and time (leave blank)
-- And we also don't translate references (which QON got in numerous languages), so you can simply skip them
+- Soha ne fordítson le kódokat vagy linkeket, a címkéket úgy kell hagyni, ahogy vannak (és szóközök nélkül, ahogy egyes MT-k ezt teszik, ezeket törölni kell)
+- Nem fordítjuk le a dátumot és az időt (hagyja üresen)
+- És nem fordítunk hivatkozásokat (amit a QON számos nyelven kapott), így egyszerűen kihagyhatja őket
 
 ## A fordítás és a lektorálás izgalmas lehet!
 
 Foglalkozni fog ennek a szoftvernek a nyelvével, új kifejezéseket tanul, és sok bennfentes információt kap a projektről.
 
-If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading. You can ask her anything that helps you have fun contributing.
+Ha készen áll arra, hogy segítsen nyelve fordításának lektorálásában, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) üdvözli Önt egy rövid eligazításon a fordítás és a lektorálás gyakorlatáról. Bármit kérdezhet tőle, ami segít abban, hogy kellemesen végezze a munkát.
 
 Nagyon köszönjük a segítségét! 🙂

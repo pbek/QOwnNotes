@@ -9,6 +9,7 @@
   to add additional configs (for [#2247](https://github.com/pbek/QOwnNotes/issues/2247))
 - fixed a possible crash with the note tag handling API and note tabs (for [#2309](https://github.com/pbek/QOwnNotes/issues/2309))
 - the build on Debian 8 was fixed
+- added more translation (thank you rawfreeamy, marterra, mguerra)
 
 ## 21.11.9
 - added support for the [QOwnNotes command-line snippet manager](https://github.com/qownnotes/qc)

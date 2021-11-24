@@ -5,7 +5,8 @@ graph TB
     subgraph Your computer
         qon((QOwnNotes))-->md{{"Markdown files"}}
         sync("Nextcloud Sync")-->md
-        qon-comp("QOwnNotes browser extension")-->qon
+        qon-comp("Browser extension")-->qon
+        qc("Command-line snippet manager")-->qon
     end
     subgraph Your Nextcloud server
         qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
@@ -24,6 +25,7 @@ graph TB
     click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
     click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
     click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
+    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
     click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
     click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
@@ -59,9 +61,17 @@ Sie können Ihre **Browser-Lesezeichen** mit QOwnNotes verwalten oder als **Webc
 Die Browsererweiterungen funktionieren **offline**, keine Internetverbindung erforderlich. Weitere Informationen finden Sie unter [QOwnNotes Web Companion-Browsererweiterung](browser-extension.md).
 :::
 
+## QOwnNotes command-line snippet manager
+
+Sie können Ihre **Befehlsschnipsel** mit QOwnNotes verwalten und auf der Befehlszeile ausführen.
+
+::: tip
+Weitere Informationen finden Sie unter [QOwnNotes-Befehlszeilen-Snippet-Manager](command-line-snippet-manager.md).
+:::
+
 ## Nextcloud Desktop Sync Client
 
-**Synchronisieren Sie Ihre Notizen** mit anderen Geräten (Desktop & Mobile) mittels Ihres [Nextcloud](https://nextcloud.com/) oder [ownCloud](https://owncloud.org/) Sync-Clients für Ihren Server.
+**Synchronisieren Sie Ihre Notizen** mit anderen Geräten (desktop & mobile) mit Ihrem [Nextcloud](https://nextcloud.com/)- oder [ownCloud](https://owncloud.org/)-Sync-Client mit Ihrem Server.
 
 ::: tip
 Natürlich können auch andere Lösungen wie **Dropbox**, **Syncthing**, **Seafile** oder BitTorrent Sync verwendet werden, um Ihre Notizen und andere Dateien zu synchronisieren.

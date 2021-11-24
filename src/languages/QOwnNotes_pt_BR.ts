@@ -6376,7 +6376,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="276"/>
 <source>Browser extension / command snippets</source>
-<translation type="unfinished">Browser extension / command snippets</translation>
+<translation>Extensão de navegado / snippets de comando</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
@@ -6627,27 +6627,27 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6317"/>
 <source>Command snippets</source>
-<translation type="unfinished">Command snippets</translation>
+<translation>Snippets de comando</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6326"/>
 <source>Tag name for commands notes</source>
-<translation type="unfinished">Tag name for commands notes</translation>
+<translation>Nome de tag para notas de comandos</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6333"/>
 <source>Commands tag:</source>
-<translation type="unfinished">Commands tag:</translation>
+<translation>Tags de comando:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6353"/>
 <source>Commands note name:</source>
-<translation type="unfinished">Commands note name:</translation>
+<translation>Nome da nota de comandos:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6363"/>
 <source>Note name for adding new commands</source>
-<translation type="unfinished">Note name for adding new commands</translation>
+<translation>Nome da nota para adicionar novos comandos</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6403"/>
@@ -6682,12 +6682,12 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6298"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
-<translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
+<translation>Faça o download do &lt;a href="%1"&gt;gerenciador de snippet de linha de comando&lt;/a&gt; para executar snippets de comando armazenados em notas no QOwnNotes da linha de comando.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6340"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+<translation>Você pode usar notas com uma tag especial para armazenar snippets de comando, a qual você pode executar do gerenciador de snippet de linha de comando. Para maiores informações sobre a sintaxe de snippet de comando, clique &lt;a href="%1"&gt;aqui&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6537"/>

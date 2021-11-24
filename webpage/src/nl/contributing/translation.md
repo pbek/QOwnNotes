@@ -26,9 +26,9 @@ Klik hier om te zien of uw taal een van de vertaalde talen is!
 
 [QOwnNotes op Crowdin](https://translate.qownnotes.org/)
 
-Zodra u [contact heeft opgenomen met de projecteigenaar op Crowdin](https://crowdin.com/profile/pbek) en toestemming heeft gekregen om in uw taal te proeflezen, bent u klaar om te gaan!
+Zodra je [contact hebt opgenomen met de projecteigenaar op Crowdin](https://crowdin.com/profile/pbek) en toestemming hebt gekregen om in jouw taal te proeflezen, ben je klaar om te gaan!
 
-## General tips
+## Allgemeine Hinweise
 
 Overweeg een paar dingen terwijl u aan het project werkt.
 
@@ -42,7 +42,7 @@ Het doel moet de bron exact weergeven en zonder weglatingen of toevoegingen van 
 
 ### Context
 
-If you need more context, or help with a certain string and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page.
+Als je meer context nodig hebt, of hulp bij een bepaalde string, en je kent een andere taal, dan kun je de taal veranderen en zien wat andere vertalers van het segment hebben gemaakt. Maar laat gerust een bericht achter en vraag om opheldering aan de rechterkant van de pagina.
 
 ### Veelgebruikte sleuteltermen
 
@@ -88,14 +88,14 @@ Tekenreeksen zoals `::: tip`, `::: warning` en `::: info` in de documentatie zij
 
 Sommige segmenten vertalen we niet in de documentatie:
 
-- Never translate codes or links, tags must be left as they are (and without added spaces, as some MT does that, those must be deleted)
-- We don't translate date and time (leave blank)
-- And we also don't translate references (which QON got in numerous languages), so you can simply skip them
+- Vertaal nooit codes of links, tags moeten blijven zoals ze zijn (en zonder toegevoegde spaties, zoals sommige MT dat doen, die moeten worden verwijderd)
+- Wij vertalen datum en tijd niet (leeg laten)
+- En we vertalen ook geen referenties (die QON in tal van talen heeft), dus je kunt ze gewoon overslaan
 
 ## Vertalen en proeflezen kan spannend zijn!
 
 Je zult omgaan met de taal van deze software, nieuwe termen leren en veel inside-informatie over het project ontvangen.
 
-If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading. You can ask her anything that helps you have fun contributing.
+Als je dus klaar bent om te helpen bij het proeflezen van de vertaling van jouw taal, heet [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) je welkom op een korte briefing in de praktijk van vertalen en proeflezen. Je kunt haar alles vragen wat je helpt om met plezier een bijdrage te leveren.
 
 Heel erg bedankt voor je hulp! 🙂

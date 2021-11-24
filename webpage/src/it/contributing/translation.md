@@ -14,19 +14,19 @@ Puoi iscriverti a [Crowdin](https://crowdin.com/project/qownnotes/invite) e **tr
 
 **[QOwnNotes su Crowdin](https://crowdin.com/project/qownnotes/invite)**
 
-Devi solo [mandare un messaggio all'autore del progetto su Crowdin](https://crowdin.com/profile/pbek) o aprire un [problema su GitHub](https://github.com/pbek/QOwnNotes/issues) se vuoi tradurre QOwnNotes in una nuova lingua.
+Just [drop the project owner a message on Crowdin](https://crowdin.com/profile/pbek) or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues) if you want to translate QOwnNotes to a new language.
 
 If you want to add new translations to **existing languages** you can do so right away.
 
 ## Correzione di bozze
 
-If you are an excellent or even native speaker of an already translated language that has not been proofread yet, we are grateful if you help making the QOwnNotes experience more reliable and convenient by checking and if necessary, correcting unapproved translations. You need to ask the owner for the permission to be a proofreader for your language.
+If you are an excellent or even native speaker of an already translated language that has not been proofread yet, we are grateful if you help to make the QOwnNotes experience more reliable and convenient by checking and if necessary, correcting unapproved translations. You need to ask the owner for the permission to be a proofreader for your language.
 
 Clicca qui per vedere se la tua lingua è tra quelle tradotte!
 
 [QOwnNotes su Crowdin](https://translate.qownnotes.org/)
 
-Dopo aver [contattato il proprietario del progetto su Crowdin](https://crowdin.com/profile/pbek) e ottenuto il permesso di correggere le bozze nella tua lingua, sei pronto per partire!
+Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profile/pbek) and received permission to proofread in your language, you’re ready to go!
 
 ## General tips
 
@@ -42,7 +42,7 @@ The target needs to represent the source exactly and with no omissions or additi
 
 ### Context
 
-If you need more context, or help with a certain string and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page.
+If you need more context, or help with a certain string, and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page.
 
 ### Frequently used key terms
 

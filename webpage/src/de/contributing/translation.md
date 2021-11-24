@@ -14,7 +14,7 @@ Sie können sich unter [Crowdin](https://crowdin.com/project/qownnotes/invite) u
 
 **[QOwnNotes auf Crowdin](screenshot)**
 
-Schreiben Sie dem Projekt-Eigentümer einfach eine Nachricht auf [Crowdin](https://crowdin.com/profile/pbek) oder als [GitHub-Issue](https://github.com/pbek/QOwnNotes/issues), wenn Sie QOwnNotes in eine neue Sprache übersetzen möchten.
+[Schreiben Sie dem Projektinhaber einfach eine Nachricht auf Crowdin](https://crowdin.com/profile/pbek) oder als [GitHub-Ausgabe](https://github.com/pbek/QOwnNotes/issues), wenn Sie QOwnNotes in eine neue Sprache übersetzen möchten.
 
 Wenn Sie **vorhandene Sprachen** um neue Übersetzungen erweitern möchten, können Sie dies sofort tun.
 
@@ -26,7 +26,7 @@ Klicken Sie hier um zu sehen, ob Ihre Sprache zu den bereits Übersetzten gehör
 
 [QOwnNotes auf Crowdin](screenshot)
 
-Sobald Sie den [Projekt-Eigentümer auf Crowdin kontaktiert haben](https://crowdin.com/profile/pbek) und die Erlaubnis zum Korrekturlesen in Ihrer Sprache erhalten haben, können Sie loslegen!
+Sobald Sie den [Projektinhaber auf Crowdin kontaktiert haben](https://crowdin.com/profile/pbek) und die Erlaubnis zum Korrekturlesen in Ihrer Sprache erhalten haben, können Sie loslegen!
 
 ## Allgemeine Hinweise
 
@@ -42,7 +42,7 @@ Das Ziel muss die Quelle genau und ohne Auslassungen oder Hinzufügungen von Tei
 
 ### Context
 
-If you need more context, or help with a certain string and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page.
+Wenn Sie mehr Kontext oder Hilfe bei einer bestimmten Zeichenfolge benötigen und zufällig eine andere Sprache kennen, können Sie die Sprache ändern und sehen, was andere Übersetzer aus dem Segment gemacht haben. Aber zögern Sie nicht, rechts auf der Seite eine Nachricht zu hinterlassen und um Klärung zu bitten.
 
 ### Häufig verwendete Schlüsselbegriffe
 
@@ -88,14 +88,14 @@ Strings wie `::: tip`, `::: warning` und `::: info` in der Dokumentation sind Ma
 
 Einige Segmente, die wir in der Dokumentation nicht übersetzen:
 
-- Never translate codes or links, tags must be left as they are (and without added spaces, as some MT does that, those must be deleted)
-- We don't translate date and time (leave blank)
-- And we also don't translate references (which QON got in numerous languages), so you can simply skip them
+- Übersetzen Sie niemals Codes oder Links, Tags müssen so belassen werden, wie sie sind (und ohne zusätzliche Leerzeichen, wie das manche MT tun, müssen diese gelöscht werden)
+- Wir übersetzen Datum und Uhrzeit nicht (leer lassen)
+- Und wir übersetzen auch keine Referenzen (die QON in zahlreichen Sprachen bekommen hat), also kannst du sie einfach überspringen
 
 ## Übersetzen und Korrekturlesen kann spannend sein!
 
 Sie setzen sich mit der Sprache dieser Software auseinander, lernen neue Begriffe und erhalten viele Insider-Informationen rund um das Projekt.
 
-If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading. You can ask her anything that helps you have fun contributing.
+Wenn Sie also bereit sind, beim Korrekturlesen der Übersetzung Ihrer Sprache mitzuhelfen, begrüßt Sie [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) zu einer kurzen Einführung in die Praxis des Übersetzens und des Korrekturlesens. Du kannst sie alles fragen, was dir dabei hilft, Spaß am Beitragen zu haben.
 
 Vielen Dank für Deine Hilfe! 🙂

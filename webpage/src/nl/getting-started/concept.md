@@ -5,7 +5,8 @@ graph TB
     subgraph Your computer
         qon((QOwnNotes))-->md{{"Markdown files"}}
         sync("Nextcloud Sync")-->md
-        qon-comp("QOwnNotes browser extension")-->qon
+        qon-comp("Browser extension")-->qon
+        qc("Command-line snippet manager")-->qon
     end
     subgraph Your Nextcloud server
         qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
@@ -24,6 +25,7 @@ graph TB
     click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
     click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
     click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
+    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
     click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
     click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
@@ -59,14 +61,22 @@ U kunt uw **browserbladwijzers** beheren met QOwnNotes of deze gebruiken als **w
 De browserextensies werken **offline**, geen internetverbinding nodig. Bezoek de [QOwnNotes Web Companion browserextensie](browser-extension.md) voor meer informatie.
 :::
 
+## QOwnNotes command-line snippet manager
+
+U kunt uw **opdrachtfragmenten** beheren met QOwnNotes en ze uitvoeren op de opdrachtregel.
+
+::: tip
+Ga naar [QOwnNotes command-line snippet manager](command-line-snippet-manager.md) voor meer informatie.
+:::
+
 ## Nextcloud desktop-synchronisatieclient
 
-**Synchroniseer uw notities** met andere apparaten (desktop en mobiel) met uw [Nextcloud](https://nextcloud.com/) of [ownCloud](https://owncloud.org/) synchronisatieclient naar uw server
+**Synchroniseer uw notities** met andere apparaten (desktop & mobile) met uw [Nextcloud](https://nextcloud.com/) of [ownCloud](https://owncloud.org/) synchronisatieclient naar uw server.
 
 ::: tip
 Natuurlijk kunnen andere oplossingen, zoals **Dropbox**, **Syncthing**, **Seafile** of BitTorrent Sync worden gebruikt om uw notities en andere bestanden te synchroniseren.
 
-Je kunt ook **git** gebruiken om te synchroniseren met tools zoals [gitomatic](https://github.com/muesli/gitomatic/)
+Je kunt ook **git** gebruiken om te synchroniseren met tools zoals [gitomatic](https://github.com/muesli/gitomatic/).
 :::
 
 ## Nextcloud-server

@@ -1,8 +1,12 @@
 # Gestor de fragmentos de órdenes de terminal
 
-Descárguese el [Gestor de fragmentos de órdenes de terminal de QOwnNotes](https://github.com/qownnotes/qc) para ejecutar órdenes guardadas en notas de QOwnNotes en la consola.
+Download the [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc/releases) to **execute command snippets stored in notes** in QOwnNotes from the command line.
 
-You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager.
+![qc](/img/qc.png)
+
+You can use **notes with a special tag** to store **command snippets**, which you can **execute from the command-line snippet manager**.
+
+![commands](/img/commands.png)
 
 ## Configuration
 
@@ -15,6 +19,7 @@ Then you need to show the security token (3) and copy it (4).
 Now open the configuration file of the snippet manager with:
 
 ```bash
+# Configure the snippet manager
 qc configure
 ```
 
@@ -25,3 +30,30 @@ And put the security token in the `token` attribute:
 token = "yourtokenhere"
 ```
 
+::: tip
+In the QOwnNotes settings you can also set what note tag should be used to search for commands in notes. By default, the tag `command` is used.
+:::
+
+## Syntax of command snippets
+
+You can use unordered lists with in-line code blocks to store command snippets. All notes with the tag `command` are searched for command snippets.
+
+If you add a `cmd:` before the in-line code block, the command will also be found in the current note regardless of note tags.
+
+```markdown
+- `echo I am a command` I am a description #tag1 #tag2 #tag3
+* `echo I am also a command` I am a description #tag3 #tag4 #tag5
+- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+```
+
+## Usage
+
+```bash
+# Search and execute command snippets
+qc exec
+```
+
+```bash
+# Search and print command snippets
+qc search
+```

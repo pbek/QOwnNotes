@@ -1,40 +1,59 @@
 # Command-line Snippet Manager
 
-Download the [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc) to execute command snippets stored in notes in QOwnNotes from the command line.
+Download the [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc/releases) to **execute command snippets stored in notes** in QOwnNotes from the command line.
 
-You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager.
+![qc](/img/qc.png)
 
-## Configuration
+Sie können **Notizen mit einem speziellen Tag** verwenden, um **Befehls-Snippets** zu speichern, die Sie **über den Befehlszeilen-Snippet-Manager** ausführen können.
+
+![commands](/img/commands.png)
+
+## Aufbau
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Before you are using the snippet manager you need to enable the *Web socket server* (2) in the *Browser extension / command snippets* (1) settings in QOwnNotes.
+Bevor Sie den Snippet-Manager verwenden, müssen Sie den *Web-Socket-Server* (2) in den Einstellungen *Browsererweiterung / Befehlsschnipsel* (1) in QOwnNotes aktivieren.
 
-Then you need to show the security token (3) and copy it (4).
+Dann müssen Sie das Sicherheitstoken vorzeigen (3) und kopieren (4).
 
-Now open the configuration file of the snippet manager with:
+Öffnen Sie nun die Konfigurationsdatei des Snippet-Managers mit:
 
 ```bash
+# Configure the snippet manager
 qc configure
 ```
 
-And put the security token in the `token` attribute:
+Und fügen Sie das Sicherheitstoken in das Attribut `token` ein:
 
 ```toml
 [QOwnNotes]
 token = "yourtokenhere"
 ```
 
-## Shell completion
+::: tip
+In den QOwnNotes-Einstellungen können Sie auch festlegen, welches Notiz-Tag verwendet werden soll, um in Notizen nach Befehlen zu suchen. Standardmäßig wird das Tag `command` verwendet.
+:::
 
-You can generate an autocompletion script for lots of shells with:
+## Syntax von Befehlsschnipseln
 
-```bash
-qc completion <shell>
+Sie können ungeordnete Listen mit Inline-Codeblöcken verwenden, um Befehlsausschnitte zu speichern. Alle Notizen mit dem Tag `command` werden nach Befehlsschnipseln durchsucht.
+
+Wenn Sie vor dem Inline-Codeblock ein `cmd:` hinzufügen, wird der Befehl auch in der aktuellen Notiz gefunden, unabhängig von Notiz-Tags.
+
+```markdown
+- `echo I am a command` I am a description #tag1 #tag2 #tag3
+* `echo I am also a command` I am a description #tag3 #tag4 #tag5
+- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
 ```
 
-So for example for the Fish shell you can do a:
+## Usage
 
 ```bash
-qc completion fish > ~/.config/fish/completions/qc.fish
+# Search and execute command snippets
+qc exec
+```
+
+```bash
+# Search and print command snippets
+qc search
 ```

@@ -7,23 +7,19 @@ Avvio di un programma esterno in background
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Wrapper QML per avviare un processo scollegato
-  *
-  * @param executablePath il percorso dell'eseguibile
-  * @param parameters un elenco di stringhe di parametri
-  * @param callbackIdentifier un identificatore da utilizzare nella
-  * funzione onDetachedProcessCallback() (opzionale)
-  * @param callbackParameter un parametro aggiuntivo per i loop o
-  * simili (opzionale)
-  * @param processData dati scritti nel processo se viene utilizzata
-  * la richiamata (opzionale)
-  * @return true in caso di successo, false in caso contrario
+ * QML wrapper to start a detached process
+ *
+ * @param executablePath the path of the executable
+ * @param parameters a list of parameter strings
+ * @param callbackIdentifier an identifier to be used in the onDetachedProcessCallback() function (optional)
+ * @param callbackParameter an additional parameter for loops or the like (optional)
+ * @param processData data written to the process if the callback is used (optional)
+ * @param workingDirectory the working directory to execute the process in (optional, only works without callback)
+ * @return true on success, false otherwise
  */
-bool startDetachedProcess(QString executablePath,
-                          QStringList parameters,
-                          QString callbackIdentifier,
-                          QVariant callbackParameter,
-                          QByteArray processData);
+bool startDetachedProcess(QString executablePath, QStringList parameters,
+                            QString callbackIdentifier, QVariant callbackParameter,
+                            QByteArray processData, QString workingDirectory);
 ```
 
 ### Esempio
@@ -59,18 +55,19 @@ Avvio di un programma esterno e attesa dell'output
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Wrapper QML per avviare un processo sincrono
-  *
-  * @param executablePath il percorso dell'eseguibile
-  * @param parameters un elenco di stringhe di parametri
-  * @param data i dati che verranno scritti nel processo (facoltativo)
-  * @return il testo che è stato restituito dal processo
-QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data);
+ * QML wrapper to start a synchronous process
+ *
+ * @param executablePath the path of the executable
+ * @param parameters a list of parameter strings
+ * @param data the data that will be written to the process (optional)
+ * @param workingDirectory the working directory to execute the process in (optional)
+ * @return the text that was returned by the process
+QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data, QString workingDirectory);
 ```
 
 ### Esempio
 ```js
-var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data");
+var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data", "/path/to/execute/in");
 ```
 
 Puoi dare un'occhiata all'esempio [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml).

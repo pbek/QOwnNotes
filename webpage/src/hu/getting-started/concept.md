@@ -5,7 +5,8 @@ graph TB
     subgraph Your computer
         qon((QOwnNotes))-->md{{"Markdown files"}}
         sync("Nextcloud Sync")-->md
-        qon-comp("QOwnNotes browser extension")-->qon
+        qon-comp("Browser extension")-->qon
+        qc("Command-line snippet manager")-->qon
     end
     subgraph Your Nextcloud server
         qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
@@ -24,6 +25,7 @@ graph TB
     click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
     click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
     click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
+    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
     click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
     click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
@@ -59,9 +61,17 @@ Kezelheti a **böngésző könyvjelzőit** a QOwnNotes szolgáltatással, vagy h
 A böngészőbővítmények **offline** működnek, nincs szükség internetkapcsolatra. További információért keresse fel a [QOwnNotes Web Companion böngészőbővítményt](browser-extension.md).
 :::
 
+## QOwnNotes command-line snippet manager
+
+A QOwnNotes segítségével kezelheti **parancsrészleteit**, és végrehajthatja őket a parancssorban.
+
+::: tip
+További információért keresse fel a [QOwnNotes parancssori kódrészletkezelőt](command-line-snippet-manager.md).
+:::
+
 ## Nextcloud asztali szinkronizáló kliens
 
-**A jegyzetek szinkronizálása** más eszközökkel (asztali és mobil) a [Nextcloud](https://nextcloud.com/) vagy a [ownCloud](https://owncloud.org/) szinkronizálási klienssel a szerverhez.
+**A jegyzetek szinkronizálása** más eszközökkel (asztali & mobil) a [Nextcloud](https://nextcloud.com/) vagy a [ownCloud](https://owncloud.org/) szinkronizálási klienssel a szerverhez.
 
 ::: tip
 Természetesen más megoldások, például a **Dropbox**, a **szinkronizálás**, a **Seafile** vagy a BitTorrent Sync is használhatók a jegyzetek és más fájlok szinkronizálására.
@@ -107,6 +117,7 @@ Különböző alkalmazásokat használhat a Nextcloud / ownCloud jegyzetek elér
 
 - [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (harmadik fél)
 
+::: tip
 Használhat bármilyen szinkronizáló eszközt is, például a *Ultimate Synchronize* vagy a *FolderSync* eszközt a jegyzetfájlok szinkronizálásához, és a jegyzetek szerkesztéséhez használhat olyan szoftvereket, mint a *neutriNotes*.
 :::
 
@@ -114,7 +125,7 @@ Használhat bármilyen szinkronizáló eszközt is, például a *Ultimate Synchr
 
 - [CloudNotes iOS rendszerhez](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (harmadik fél)
 
-Használhatja a [Jegyzetfüzet](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662)et is, és szinkronizálhatja a jegyzeteit a WebDAV-on keresztül. Van egy jó útmutató a [Jegyzetek készítése a Nextcloud, a QOwnNotes és a Jegyzetfüzetek témához](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
+Használhatja a [Jegyzetfüzet](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662)et is, és szinkronizálhatja a jegyzeteit a WebDAV-on keresztül. Van egy jó útmutató a [Jegyzetek készítése a Nextcloud, a QOwnNotes és a Jegyzetfüzetek témához](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks):::
 
 ## api.qownnotes.org
 
@@ -128,7 +139,7 @@ Ezenkívül biztosítja a [RSS-kiadás kiadását](http://api.qownnotes.org/rss/
 Az [api.qownnotes.org](https://api.qownnotes.org) forráskódját a [GitHub](https://github.com/qownnotes/api) oldalon érheti el.
 :::
 
-## QOwnNotes webalkalmazás
+## QOwnNotes Web App
 
 A mobiltelefonról származó fotókat beillesztheti az asztali QOwnNotes aktuális jegyzetébe az **webalkalmazás** segítségével az [app.qownnotes.org](https://app.qownnotes.org/) oldalon.
 
