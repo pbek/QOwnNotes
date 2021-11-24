@@ -1,6 +1,12 @@
 # QOwnNotes Changelog
 
 ## 21.11.11
+- there now is a software repository for **Fedora 35**
+    - please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html#fedora-35)
+      for instructions
+- there now is a software repository for **Raspberry Pi OS 11**
+    - please visit the [Raspberry Pi OS installation page](https://www.qownnotes.org/installation/raspberry-pi-os.html#raspberry-pi-os-11)
+      for instructions
 - an issue with no note being set initially after startup when using the note
   tagging scripting hooks was fixed (for [#2309](https://github.com/pbek/QOwnNotes/issues/2309))
  
