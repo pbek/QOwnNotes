@@ -8948,9 +8948,15 @@ void MainWindow::handleScriptingNotesTagUpdating() {
 
     // workaround when signal blocking doesn't work correctly
     directoryWatcherWorkaround(true, true);
-
-    const QVector<Note> &notes = Note::fetchAll();
+    const QString defExt = Note::defaultNoteFileExtension();
+    const QStringList exts = Note::customNoteFileExtensionList(QStringLiteral("."));
+    const QVector<Note> notes = Note::fetchAll();
     for (const Note &note : notes) {
+        // ignore non-note files
+        const auto suffix = note.fileNameSuffix();
+        if (defExt != suffix || !exts.contains(suffix)) {
+            continue;
+        }
         QSet<int> tagIdList;
         const QStringList tagNameList =
             ScriptingService::instance()
