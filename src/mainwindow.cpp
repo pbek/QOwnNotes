@@ -13090,9 +13090,14 @@ void MainWindow::on_actionShow_Hide_application_triggered() {
 
 void MainWindow::on_noteEditTabWidget_currentChanged(int index) {
     QWidget *widget = ui->noteEditTabWidget->currentWidget();
+
+    if (widget == nullptr) {
+        return;
+    }
+
     const int noteId = widget->property("note-id").toInt();
 
-    // close the tab if note doesn't exist any more
+    // close the tab if note doesn't exist anymore
     if (!Note::noteIdExists(noteId)) {
         removeNoteTab(index);
         return;

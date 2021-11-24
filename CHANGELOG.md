@@ -7,6 +7,7 @@
 - when vim-mode is enabled the application will first try to load a `.vimrc.qownnotes`
   file from your home directory, and if not found it will try to load the `.vimrc` file
   to add additional configs (for [#2247](https://github.com/pbek/QOwnNotes/issues/2247))
+- fixed a possible crash with the note tag handling API and note tabs (for [#2309](https://github.com/pbek/QOwnNotes/issues/2309))
 - the build on Debian 8 was fixed
 
 ## 21.11.9
