@@ -87,6 +87,6 @@ Run `qc configure`.
   sortby = ""               # specify how snippets get sorted (recency (default), -recency, description, -description, command, -command, output, -output)
 
 [QOwnNotes]
-  token = "MvtagWXF"        # your QOwnNotes API token
+  token = "MvTagHXF"        # your QOwnNotes API token
   websocket_port = 22222    # websocket port in QOwnNotes
 ```
