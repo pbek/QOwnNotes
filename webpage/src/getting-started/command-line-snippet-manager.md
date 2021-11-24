@@ -10,7 +10,18 @@ You can use **notes with a special tag** to store **command snippets**, which yo
 
 ![commands](/img/commands.png)
 
-## Configuration
+## Dependencies
+
+[fzf](https://github.com/junegunn/fzf) (fuzzy search) or [peco](https://github.com/peco/peco)
+(older, but more likely to be installed by default) need to be installed to search
+for commands on the command-line.
+
+::: tip
+By default `fzf` is used for searching, but you can use `peco` by setting it
+with `qc configure`.
+:::
+
+## Setup
 
 ![socket-server-token](/img/socket-server-token.png)
 
@@ -62,4 +73,20 @@ qc exec
 ```bash
 # Search and print command snippets
 qc search
+```
+
+# Configuration
+
+Run `qc configure`.
+
+```toml
+[General]
+  editor = "vim"            # your favorite text editor
+  column = 40               # column size for list command
+  selectcmd = "fzf"         # selector command for edit command (fzf or peco)
+  sortby = ""               # specify how snippets get sorted (recency (default), -recency, description, -description, command, -command, output, -output)
+
+[QOwnNotes]
+  token = "MvtagWXF"        # your QOwnNotes API token
+  websocket_port = 22222    # websocket port in QOwnNotes
 ```
