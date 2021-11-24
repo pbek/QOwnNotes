@@ -1263,6 +1263,10 @@ QStringList Note::customNoteFileExtensionList(const QString &prefix) {
             .toStringList();
     list.removeDuplicates();
 
+    if (list.isEmpty()) {
+        list << defaultNoteFileExtension();
+    }
+
     if (!prefix.isEmpty()) {
         list.replaceInStrings(QRegularExpression(QStringLiteral("^")), prefix);
     }
