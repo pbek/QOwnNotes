@@ -1,6 +1,6 @@
 # Command-line Snippet Manager
 
-Download the [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc/releases)
+You can use the [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc)
 to **execute command snippets stored in notes** in QOwnNotes from the command line.
 
 ![qc](/img/qc.png)
@@ -9,6 +9,26 @@ You can use **notes with a special tag** to store **command snippets**, which yo
 **execute from the command-line snippet manager**.
 
 ![commands](/img/commands.png)
+
+## Installation
+
+Visit the [latest release page](https://github.com/qownnotes/qc/releases/latest)
+and download the version you need.
+
+::: tip
+If you have [jq](https://stedolan.github.io/jq) installed you can also use this snippet
+to download and install for example the latest Linux AMD64 AppImage to `/usr/local/bin/qc`:
+
+```bash
+curl https://api.github.com/repos/qownnotes/qc/releases/latest | \
+jq '.assets[] | select(.browser_download_url | endswith("_linux_amd64.tar.gz")) | .browser_download_url' | \
+xargs curl -Lo /tmp/qc.tar.gz && \
+tar xfz /tmp/qc.tar.gz -C /tmp && \
+rm /tmp/qc.tar.gz && \
+sudo mv /tmp/qc /usr/local/bin/qc && \
+/usr/local/bin/qc --version
+```
+:::
 
 ## Dependencies
 
