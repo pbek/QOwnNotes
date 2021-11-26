@@ -71,11 +71,11 @@ search for commands in notes. By default, the tag `commands` is used.
 
 ## Syntax of command snippets
 
-You can use unordered lists with in-line code blocks to store command snippets.
+You can use **unordered lists with in-line code blocks** to store command snippets.
 All notes with the tag `commands` are searched for command snippets.
 
 If you add a `cmd: ` before the in-line code block, the command will also be
-found in the current note regardless of note tags.
+found in the **current note** regardless of note tags.
 
 ```markdown
 - `echo I am a command` I am a description #tag1 #tag2 #tag3
@@ -83,13 +83,13 @@ found in the current note regardless of note tags.
 - cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
 ```
 
-`bash` or `shell` code blocks, preceded by a heading 2 or higher as a description,
+**`bash` or `shell` code blocks**, preceded by a heading 2 or higher as a description,
 can also be used for command snippets. Tags are also supported if they are between
 the heading and the code block.
 
     ## Do this with a "bash" code block
     
-    - this text will be ignored ignored text
+    - this text will be ignored text
     - but tags can be used: #tag1 #tag2
     
     ```bash
