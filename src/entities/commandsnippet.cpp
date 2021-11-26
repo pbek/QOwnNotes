@@ -54,7 +54,7 @@ QVector<CommandSnippet> CommandSnippet::parseCommandSnippets(const QString &text
                                            bool withPrefixOnly) {
     QRegularExpressionMatchIterator i;
     QVector<CommandSnippet> commandSnippets;
-    const auto regex = QRegularExpression(
+    auto regex = QRegularExpression(
         withPrefixOnly ? QStringLiteral(R"([-*]\s+cmd:\s+`(.+?)`(.*)$)") :
                        QStringLiteral(R"([-*]\s+`(.+?)`(.*)$)"),
         QRegularExpression::MultilineOption);
@@ -90,6 +90,39 @@ QVector<CommandSnippet> CommandSnippet::parseCommandSnippets(const QString &text
 
         if (withPrefixOnly && !tags.contains(QStringLiteral("current"))) {
             tags << QStringLiteral("current");
+        }
+
+        auto commandSnippet = CommandSnippet(command, description, tags);
+        commandSnippet.mergeInList(commandSnippets);
+    }
+
+    regex = QRegularExpression(
+        QStringLiteral(R"(## ([^\n]+)\n(.*?)^```(bash|sh)\n(.+?)^```)"),
+        QRegularExpression::MultilineOption | QRegularExpression::DotMatchesEverythingOption);
+
+    // parse snippets that are in a "bash" or "sh" code block,
+    // preceded by a heading 2 or higher as a description
+    i = regex.globalMatch(text);
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString description = match.captured(1);
+        QString additionalText = match.captured(2).trimmed();
+        QString command = match.captured(4);
+        QStringList tags;
+
+        if (!additionalText.isEmpty()) {
+            QRegularExpressionMatchIterator addIterator =
+                QRegularExpression(QStringLiteral(R"(#([^\s#]+))"))
+                    .globalMatch(additionalText);
+            while (addIterator.hasNext()) {
+                QRegularExpressionMatch addMatch = addIterator.next();
+                QString tag = addMatch.captured(1).trimmed();
+
+                if (!tags.contains(tag)) {
+                    tags << tag;
+                }
+            }
         }
 
         auto commandSnippet = CommandSnippet(command, description, tags);

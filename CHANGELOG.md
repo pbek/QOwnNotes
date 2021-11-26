@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 21.11.12
+- command snippets can now also be stored in `bash` or `sh` code blocks,
+  preceded by a heading 2 or higher as a description (for [#2304](https://github.com/pbek/QOwnNotes/issues/2304))
+  - for more information please visit the [Command-line snippet manager](https://www.qownnotes.org/getting-started/command-line-snippet-manager.html)
+- version 0.3.0 of the **[QOwnNotes command-line snippet manager](https://github.com/qownnotes/qc)**
+  (qc) was released
+    - enable sorting of snippets via settings and allow sorting case-insensitively
+    - cache snippets in case QOwnNotes is not running
+    - don't throw an error if selectCmd was exited with an error code (e.g. by `Ctrl + C`)
+
 ## 21.11.11
 - there now is a software repository for **Fedora 35**
     - please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html#fedora-35)

@@ -83,6 +83,30 @@ found in the current note regardless of note tags.
 - cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
 ```
 
+`bash` or `shell` code blocks, preceded by a heading 2 or higher as a description,
+can also be used for command snippets. Tags are also supported if they are between
+the heading and the code block.
+
+    ## Do this with a "bash" code block
+    
+    - this text will be ignored ignored text
+    - but tags can be used: #tag1 #tag2
+    
+    ```bash
+    echo do this
+    echo do that
+    ```
+    
+    ## Do something else with a "sh" code block
+    
+    ```sh
+    echo do something else
+    echo do something other
+    ```
+
+Above example will result in two command snippets, the first one with the two
+tags `tag1` and `tag2`.
+
 ## Usage
 
 ```bash
