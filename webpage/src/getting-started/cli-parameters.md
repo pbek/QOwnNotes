@@ -5,6 +5,7 @@ You can use these parameters on the command line interface:
 | Parameter                    | Description                                                                                                                                |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--help`                     | Shows the help screen                                                                                                                      |
+| `--version`                  | Prints out the version number of the application                                                                                           |
 | `--portable`                 | Runs the application in portable mode                                                                                                      |
 | `--clear-settings`           | Clears the settings and runs the application                                                                                               |
 | `--dump-settings`            | Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application |

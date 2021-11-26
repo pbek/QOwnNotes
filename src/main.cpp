@@ -104,6 +104,11 @@ bool mainStartupMisc(const QStringList &arguments) {
             "application and environment in GitHub Markdown and exits "
             "the application."));
     parser.addOption(dumpSettingsOption);
+    const QCommandLineOption versionOption(
+        QStringLiteral("version"),
+        QCoreApplication::translate(
+            "main", "Prints out the version number."));
+    parser.addOption(versionOption);
     const QCommandLineOption allowMultipleInstancesOption(
         QStringLiteral("allow-multiple-instances"),
         QCoreApplication::translate(
@@ -140,6 +145,12 @@ bool mainStartupMisc(const QStringList &arguments) {
     // show the help page if the help parameter was provided
     if (parser.isSet(helpOption)) {
         parser.showHelp();
+    }
+
+    if (parser.isSet(versionOption)) {
+        fprintf(
+            stdout, "QOwnNotes %s\n", VERSION);
+        exit(0);
     }
 
     QSettings settings;

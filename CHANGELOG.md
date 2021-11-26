@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.11.13
+- a `--version` parameter to print out the version number of the application was added
+
 ## 21.11.12
 - command snippets can now also be stored in `bash` or `sh` code blocks,
   preceded by a heading 2 or higher as a description (for [#2304](https://github.com/pbek/QOwnNotes/issues/2304))
