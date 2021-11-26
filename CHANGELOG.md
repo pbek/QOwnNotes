@@ -3,7 +3,7 @@
 ## 21.11.12
 - command snippets can now also be stored in `bash` or `sh` code blocks,
   preceded by a heading 2 or higher as a description (for [#2304](https://github.com/pbek/QOwnNotes/issues/2304))
-  - for more information please visit the [Command-line snippet manager](https://www.qownnotes.org/getting-started/command-line-snippet-manager.html)
+  - for more information please visit [Command-line snippet manager](https://www.qownnotes.org/getting-started/command-line-snippet-manager.html)
 - an issue with the bookmarks note name being overwritten by `Commands` when
   saving settings in the settings dialog was fixed (for [#2304](https://github.com/pbek/QOwnNotes/issues/2304))
     - if your bookmarks note name was `Commands` it will be set to `Bookmarks`
