@@ -965,7 +965,7 @@ void SettingsDialog::storeSettings() {
     settings.setValue(QStringLiteral("webSocketServerService/commandSnippetsTag"),
                       ui->commandSnippetsTagLineEdit->text());
     settings.setValue(
-        QStringLiteral("webSocketServerService/bookmarksNoteName"),
+        QStringLiteral("webSocketServerService/commandSnippetsNoteName"),
         ui->commandSnippetsNoteNameLineEdit->text());
 
     settings.setValue(QStringLiteral("webAppClientService/serverUrl"),

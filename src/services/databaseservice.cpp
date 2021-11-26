@@ -897,6 +897,20 @@ bool DatabaseService::setupTables() {
         version = 39;
     }
 
+    if (version < 40) {
+        const auto bookmarksNoteName = settings.value(
+          QStringLiteral("webSocketServerService/bookmarksNoteName")).toString();
+
+        // fix overwritten bookmarksNoteName
+        if (bookmarksNoteName == QStringLiteral("Commands")) {
+            settings.setValue(
+                QStringLiteral("webSocketServerService/bookmarksNoteName"),
+                QStringLiteral("Bookmarks"));
+        }
+
+        version = 40;
+    }
+
     if (version != oldVersion) {
         setAppData(QStringLiteral("database_version"),
                    QString::number(version));
