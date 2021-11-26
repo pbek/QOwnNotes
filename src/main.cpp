@@ -3,7 +3,6 @@
 #include <utils/gui.h>
 #include <utils/misc.h>
 #include <utils/schema.h>
-#include <widgets/logwidget.h>
 
 #include <QApplication>
 #include <QFileDialog>
