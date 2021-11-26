@@ -2912,7 +2912,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1674"/>
 <source>&amp;Export note as Markdown file</source>
-<translation type="unfinished">&amp;Export note as Markdown file</translation>
+<translation>&amp;Exporter la note au format Markdown</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1704"/>
@@ -6382,7 +6382,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="276"/>
 <source>Browser extension / command snippets</source>
-<translation type="unfinished">Browser extension / command snippets</translation>
+<translation>Extension de navigateur / extraits de commande</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
@@ -6633,27 +6633,27 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6317"/>
 <source>Command snippets</source>
-<translation type="unfinished">Command snippets</translation>
+<translation>Extraits de commande</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6326"/>
 <source>Tag name for commands notes</source>
-<translation type="unfinished">Tag name for commands notes</translation>
+<translation>Nom de balise pour les notes de commandes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6333"/>
 <source>Commands tag:</source>
-<translation type="unfinished">Commands tag:</translation>
+<translation>Balise de commandes :</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6353"/>
 <source>Commands note name:</source>
-<translation type="unfinished">Commands note name:</translation>
+<translation>Nom de la note des commandes :</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6363"/>
 <source>Note name for adding new commands</source>
-<translation type="unfinished">Note name for adding new commands</translation>
+<translation>Nom de la note pour l'ajout de nouvelles commandes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6403"/>
@@ -6688,12 +6688,12 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6298"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
-<translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
+<translation>Téléchargez le &lt;a href="%1"&gt;gestionnaire d'extraits de ligne de commande&lt;/a&gt; pour exécuter des extraits de commande stockés dans les notes dans QOwnNotes à partir de la ligne de commande.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6340"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+<translation>Vous pouvez utiliser des notes avec une balise spéciale pour stocker des extraits de commande, que vous pouvez exécuter à partir du gestionnaire d'extraits de ligne de commande. Pour plus d'informations sur la syntaxe de l'extrait de commande, cliquez &lt;a href="%1"&gt;ici&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6537"/>

@@ -2,14 +2,23 @@
 
 You can download the latest AppImage from the [QOwnNotes releases page](https://github.com/pbek/QOwnNotes/releases). Meg kell nevezni a következő néven: `QOwnNotes-x86_64.AppImage`.
 
-Ezután megváltoztathatja a fájl végrehajtási engedélyeit:
+::: tip
+If you have [jq](https://stedolan.github.io/jq/) installed you can also download the latest AppImage directly:
+
+```bash
+# query the latest Linux release from the QOwnNotes API, parse the JSON for the URL and download it
+curl -L https://api.qownnotes.org/latest_releases/linux | jq .url | xargs curl -Lo QOwnNotes-x86_64.AppImage
+```
+:::
+
+Then you can change the execute-permissions on the file:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Ezután képesnek kell lennie az AppImage futtatására a QOwnNotes futtatásához.
+Afterwards you should be able to execute the AppImage to run QOwnNotes.
 
 ::: warning
-Ha az **automatikus frissítőt** szeretné használni, feltétlenül helyezze el az AppImage -ot olyan helyre, ahová felhasználói fiókja írási jogosultsággal rendelkezik, például valahol a saját könyvtárában.
+If you want to use the **automatic updater** please make sure to put your AppImage in a place where your user account has write-access to, like somewhere in your home directory.
 :::

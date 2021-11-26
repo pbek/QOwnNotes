@@ -71,7 +71,7 @@ Wenn Sie dieses Repository für andere Debian Linux-Versionen verwenden, stellen
 Führen Sie die folgenden Shell-Befehle aus, um dem Repository zu vertrauen.
 
 ```bash
-wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0/Release.key -O - | sudo apt-key add -
+wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -
 ```
 
 Führen Sie die folgenden Shell-Befehle aus, um das Repository hinzuzufügen und QOwnNotes von dort aus zu installieren.

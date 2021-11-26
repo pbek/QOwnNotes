@@ -1,6 +1,6 @@
 # Gestor de fragmentos de órdenes de terminal
 
-Download the [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc/releases) to **execute command snippets stored in notes** in QOwnNotes from the command line.
+You can use the [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc) to **execute command snippets stored in notes** in QOwnNotes from the command line.
 
 ![qc](/img/qc.png)
 
@@ -8,7 +8,33 @@ You can use **notes with a special tag** to store **command snippets**, which yo
 
 ![commands](/img/commands.png)
 
-## Configuration
+## Installation
+
+Visit the [latest release page](https://github.com/qownnotes/qc/releases/latest) and download the version you need.
+
+::: tip
+If you have [jq](https://stedolan.github.io/jq) installed you can also use this snippet to download and install for example the latest Linux AMD64 AppImage to `/usr/local/bin/qc`:
+
+```bash
+curl https://api.github.com/repos/qownnotes/qc/releases/latest | \
+jq '.assets[] | select(.browser_download_url | endswith("_linux_amd64.tar.gz")) | .browser_download_url' | \
+xargs curl -Lo /tmp/qc.tar.gz && \
+tar xfz /tmp/qc.tar.gz -C /tmp && \
+rm /tmp/qc.tar.gz && \
+sudo mv /tmp/qc /usr/local/bin/qc && \
+/usr/local/bin/qc --version
+```
+:::
+
+## Dependencies
+
+[fzf](https://github.com/junegunn/fzf) (fuzzy search) or [peco](https://github.com/peco/peco) (older, but more likely to be installed by default) need to be installed to search for commands on the command-line.
+
+::: tip
+By default `fzf` is used for searching, but you can use `peco` by setting it with `qc configure`.
+:::
+
+## Setup
 
 ![socket-server-token](/img/socket-server-token.png)
 
@@ -46,6 +72,28 @@ If you add a `cmd:` before the in-line code block, the command will also be foun
 - cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
 ```
 
+`bash` or `shell` code blocks, preceded by a heading 2 or higher as a description, can also be used for command snippets. Tags are also supported if they are between the heading and the code block.
+
+    ## Do this with a "bash" code block
+
+    - this text will be ignored ignored text
+    - but tags can be used: #tag1 #tag2
+
+    ```bash
+    echo do this
+    echo do that
+    ```
+
+
+    ## Do something else with a "sh" code block
+
+    ```sh
+    echo do something else
+    echo do something other
+    ```
+
+Above example will result in two command snippets, the first one with the two tags `tag1` and `tag2`.
+
 ## Usage
 
 ```bash
@@ -56,4 +104,20 @@ qc exec
 ```bash
 # Search and print command snippets
 qc search
+```
+
+## Configuration
+
+Run `qc configure`.
+
+```toml
+[General]
+  editor = "vim"            # your favorite text editor
+  column = 40               # column size for list command
+  selectcmd = "fzf"         # selector command for edit command (fzf or peco)
+  sortby = ""               # specify how snippets get sorted (recency (default), -recency, description, -description, command, -command, output, -output)
+
+[QOwnNotes]
+  token = "MvTagHXF"        # your QOwnNotes API token
+  websocket_port = 22222    # websocket port in QOwnNotes
 ```

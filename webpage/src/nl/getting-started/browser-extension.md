@@ -59,4 +59,4 @@ U kunt ook uw browserbladwijzers importeren in QOwnNotes met de webpartner-brows
 * [Webpaginanaam](https://www.example.com) het alternatieve lijstteken werkt ook
 ```
 
-You are able to search for name, url tags or description in the browser extension.
+U kunt zoeken op naam, url-tags of beschrijving in de browserextensie.

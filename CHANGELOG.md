@@ -9,6 +9,7 @@
     - enable sorting of snippets via settings and allow sorting case-insensitively
     - cache snippets in case QOwnNotes is not running
     - don't throw an error if selectCmd was exited with an error code (e.g. by `Ctrl + C`)
+- added more translation (thank you marcoxbresciani, mguerra, rawfreeamy, marterra, amirkbrpr)
 
 ## 21.11.11
 - there now is a software repository for **Fedora 35**

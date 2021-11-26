@@ -430,12 +430,12 @@ Dieser Hook wird aufgerufen, wenn Daten von der QOwnNotes Web Companion-Browsere
 
 ```js
 /**
- * @param requestType can be "page" or "selection"
- * @param pageUrl the url of the webpage where the request was made
- * @param pageTitle the page title of the webpage where the request was made
- * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
- * @param screenshotDataUrl the data url of the screenshot if the webpage where the request was made
- * @return true if data was handled by a hook
+ * @param requestType kann "Seite" oder "Auswahl" sein
+ * @param pageUrl die Url der Webseite, auf der die Anfrage gestellt wurde
+ * @param pageTitle der Seitentitel der Webseite, auf der die Anfrage gestellt wurde
+ * @param rawData die übertragenen Daten, html für requestType „page“ oder Klartext für requestType „selection“
+ * @param screenshotDataUrl die Daten-Url des Screenshots, wenn die Webseite, auf der die Anfrage gestellt wurde
+ * @return true, wenn Daten von einem Hook verarbeitet wurden
  */
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```

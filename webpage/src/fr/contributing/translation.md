@@ -1,8 +1,8 @@
 # Traduction
 
-Thank you for helping out!
+Merci de votre aide!
 
-How can I help to translate QOwnNotes?
+Comment puis-je aider à traduire QOwnNotes?
 
 ## Rejoignez-nous sur Crowdin pour traduire QOwnNotes
 
@@ -14,53 +14,53 @@ Vous pouvez vous inscrire sur [Crowdin](https://crowdin.com/project/qownnotes/in
 
 **[QOwnNotes sur Crowdin](https://crowdin.com/project/qownnotes/invite)**
 
-Just [drop the project owner a message on Crowdin](https://crowdin.com/profile/pbek) or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues) if you want to translate QOwnNotes to a new language.
+Il suffit de [envoyer un message au propriétaire du projet sur Crowdin](https://crowdin.com/profile/pbek) ou en tant que [problème GitHub](https://github.com/pbek/QOwnNotes/issues) si vous souhaitez traduire QOwnNotes dans une nouvelle langue.
 
-If you want to add new translations to **existing languages** you can do so right away.
+Si vous souhaitez ajouter de nouvelles traductions aux **langues existantes**, vous pouvez le faire immédiatement.
 
 ## Relecture
 
-If you are an excellent or even native speaker of an already translated language that has not been proofread yet, we are grateful if you help to make the QOwnNotes experience more reliable and convenient by checking and if necessary, correcting unapproved translations. You need to ask the owner for the permission to be a proofreader for your language.
+Si vous êtes un excellent locuteur ou même natif d'une langue déjà traduite qui n'a pas encore été relue, nous vous remercions de contribuer à rendre l'expérience QOwnNotes plus fiable et plus pratique en vérifiant et si nécessaire, en corrigeant les traductions non approuvées. Vous devez demander au propriétaire la permission d'être un relecteur pour votre langue.
 
 Cliquez ici pour voir si votre langue fait partie des langues traduites!
 
 [QOwnNotes sur Crowdin](https://translate.qownnotes.org/)
 
-Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profile/pbek) and received permission to proofread in your language, you’re ready to go!
+Une fois que vous avez [contacté le propriétaire du projet sur Crowdin](https://crowdin.com/profile/pbek) et obtenu l’autorisation de relire dans votre langue, vous êtes prêt à commencer!
 
-## General tips
+## Conseils généraux
 
-Please consider a few things while working on the project.
+Veuillez prendre en compte quelques éléments lorsque vous travaillez sur le projet.
 
-### Accuracy
+### Précision
 
-Please localize with maximal possible accuracy while caring for fluency in your target language.
+Veuillez localiser avec une précision maximale tout en veillant à la maîtrise de votre langue cible.
 
-### Precision
+### Précision
 
-The target needs to represent the source exactly and with no omissions or additions of any part of the string.
+La cible doit représenter la source exactement et sans omission ni ajout d'aucune partie de la chaîne.
 
-### Context
+### Le contexte
 
-If you need more context, or help with a certain string, and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page.
+Si vous avez besoin de plus de contexte ou d'aide avec une certaine chaîne et que vous connaissez une autre langue, vous pouvez changer la langue et voir ce que les autres traducteurs ont fait à partir du segment. Mais n'hésitez pas à laisser un message et à demander des éclaircissements sur le côté droit de la page.
 
-### Frequently used key terms
+### Termes clés fréquemment utilisés
 
-It is necessary to check and use the same translations for the frequently used key terms, for example, "note" must be translated always in the same way.
+Il est nécessaire de vérifier et d'utiliser les mêmes traductions pour les termes clés fréquemment utilisés, par exemple, "note" doit être traduit toujours de la même manière.
 
 Si `notes trashed` est `fichiers supprimés` en français, vous le traduisez toujours en utilisant cette expression. L'exception serait lorsque vous êtes grammaticalement obligé d'utiliser une alternative, mais restez simple.
 
 ![copie d'écran](/img/crowdin/screenshot-7.png)
 
-In order to find all the identical expressions, search Crowdin to see if all the occurrences of a term indeed have the same translation, if you know better, and they don't you may suggest a better translation and vote down (or up) for the better / correct translation.
+Afin de trouver toutes les expressions identiques, recherchez Crowdin pour voir si toutes les occurrences d'un terme ont effectivement la même traduction, si vous connaissez mieux, et ce n'est pas le cas, vous pouvez suggérer une meilleure traduction et voter pour la meilleure/correcte traduction .
 
-Localize all occurrences as identically as you can.
+Localisez toutes les occurrences de la manière la plus identique possible.
 
 `Remarque` doit toujours avoir une seule traduction.
 
-### Plural forms
+### Formes du pluriel
 
-For plural please add the appropriate translation each in the corresponding block.
+Pour le pluriel, veuillez ajouter la traduction appropriée chacun dans le bloc correspondant.
 
 ![copie d'écran](/img/crowdin/screenshot-4.png)
 

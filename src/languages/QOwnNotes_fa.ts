@@ -6474,7 +6474,7 @@ QOwnNotesAPI
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="276"/>
 <source>Browser extension / command snippets</source>
-<translation type="unfinished">Browser extension / command snippets</translation>
+<translation>افزونه مرورگر / تکه کدهای دستور</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
@@ -6739,27 +6739,27 @@ QOwnNotesAPI
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6317"/>
 <source>Command snippets</source>
-<translation type="unfinished">Command snippets</translation>
+<translation>تکه کدهای دستور</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6326"/>
 <source>Tag name for commands notes</source>
-<translation type="unfinished">Tag name for commands notes</translation>
+<translation>نام برچسب برای یادداشت های دستورات</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6333"/>
 <source>Commands tag:</source>
-<translation type="unfinished">Commands tag:</translation>
+<translation>برچسب دستورات:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6353"/>
 <source>Commands note name:</source>
-<translation type="unfinished">Commands note name:</translation>
+<translation>نام یادداشت دستورات:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6363"/>
 <source>Note name for adding new commands</source>
-<translation type="unfinished">Note name for adding new commands</translation>
+<translation>نام یادداشت برای افزودن دستورات جدید</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6403"/>
@@ -6805,12 +6805,12 @@ QOwnNotesAPI
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6298"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
-<translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
+<translation>&lt;a href="%1"&gt;مدیر تکه کد خط فرمان&lt;/a&gt; را دانلود کنید تا از خط فرمان QOwnNotes قادر به اجرای تکه کدهای دستور ذخیره شده در یادداشت ها باشید.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6340"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+<translation>شما می توانید از یادداشت های دارای برچسب خاص برای ذخیره سازی تکه کدهای دستور قابل اجرا از مدیر تکه کد خط فرمان استفاده کنید. برای اطلاعات بیشتر در مورد چیدمان تکه کد دستور، &lt;a href="%1"&gt;اینجا&lt;/a&gt; کلیک کنید.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6537"/>

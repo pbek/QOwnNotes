@@ -1,5 +1,23 @@
 # Installieren Sie unter Raspberry Pi OS
 
+## Raspberry Pi OS 11
+
+Führen Sie die folgenden Shell-Befehle aus, um dem Repository zu vertrauen.
+
+```bash
+wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_11/Release.key -O - | sudo apt-key add -
+```
+
+Führen Sie die folgenden Shell-Befehle aus, um das Repository hinzuzufügen und QOwnNotes von dort aus zu installieren.
+
+```bash
+sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_11/ /' >> /etc/apt/sources.list.d/qownnotes.list"
+sudo apt-get update
+sudo apt-get install qownnotes
+```
+
+[Direkter Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_11)
+
 ## Raspberry Pi OS 10
 
 Führen Sie die folgenden Shell-Befehle aus, um dem Repository zu vertrauen.

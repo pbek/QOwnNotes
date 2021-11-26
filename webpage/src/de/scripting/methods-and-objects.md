@@ -9,13 +9,13 @@ Starten eines externen Programms im Hintergrund
 /**
  * QML wrapper to start a detached process
  *
- * @param executablePath the path of the executable
- * @param parameters a list of parameter strings
- * @param callbackIdentifier an identifier to be used in the onDetachedProcessCallback() function (optional)
- * @param callbackParameter an additional parameter for loops or the like (optional)
- * @param processData data written to the process if the callback is used (optional)
- * @param workingDirectory the working directory to execute the process in (optional, only works without callback)
- * @return true on success, false otherwise
+ * @param executablePath der Pfad der ausführbaren Datei
+ * @param parameters eine Liste von Parameterstrings
+ * @param callbackIdentifier ein Bezeichner, der in der Funktion onDetachedProcessCallback() verwendet werden soll (optional)
+ * @param callbackParameter ein zusätzlicher Parameter für Schleifen oder ähnliches (optional)
+ * @param processData data in den Prozess geschrieben, wenn der Callback verwendet wird (optional)
+ * @param workingDirectory das Arbeitsverzeichnis, in dem der Prozess ausgeführt werden soll (optional, funktioniert nur ohne Callback)
+ * @return true bei Erfolg, sonst false
  */
 bool startDetachedProcess(QString executablePath, QStringList parameters,
                             QString callbackIdentifier, QVariant callbackParameter,
@@ -665,7 +665,7 @@ bool ScriptingService::platformIsWindows();
 ### Beispiel
 ```js
 if (script.platformIsLinux()) {
-    // Will be executed only if under Linux
+    // Wird nur ausgeführt, wenn unter Linux
 }
 ```
 
@@ -1275,7 +1275,7 @@ import QtQml 2.0
 import QOwnNotesTypes 1.0
 
 Script {
-    // the path to the script's directory will be set here
+    // hier wird der Pfad zum Verzeichnis des Skripts gesetzt
     property string scriptDirPath;
 
     function init() {

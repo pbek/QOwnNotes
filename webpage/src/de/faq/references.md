@@ -237,7 +237,7 @@ Was andere über QOwnNotes gesagt haben…
 - [Taking notes : selfhosted](https://www.reddit.com/r/selfhosted/comments/erb7kj/taking_notes/)
 - [Поиск по сайту - qownnotes](https://www.linux.org.ru/search.jsp?q=qownnotes&range=ALL&interval=ALL&user=&_usertopic=on)
 - [El cliente oficial de Evernote para Linux llegará este año](https://www.muylinux.com/2020/01/20/cliente-oficial-evernote-para-linux/) #comment
-- [GitHub - tycrek/degoogle: A huge list of alternatives to Google products. Privacy tips, tricks, and links.](https://github.com/tycrek/degoogle)
+- [Some new Breeze app icons in Frameworks 5.22 - Alex L. Privacy tips, tricks, and links.](https://github.com/tycrek/degoogle)
     - [Cutting Google out of your life (2019) (Updated: Jan 2020) | degoogle](https://degoogle.jmoore.dev/)
 - [Request to add QOwnnotes to Manjaro SW Repo - Package request - Manjaro Linux Forum](https://forum.manjaro.org/t/request-to-add-qownnotes-to-manjaro-sw-repo/97630)
 - [Notas en Nextcloud y Markdown. uGeek Podcast](https://ugeek.github.io//post/2017-02-15-notas-en-nextcloud-y-markdown.html) #podcast #spanish
