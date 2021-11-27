@@ -2225,9 +2225,7 @@ bool Note::refetch() {
  * Returns the suffix of the note file name
  */
 QString Note::fileNameSuffix() const {
-    QFileInfo fileInfo;
-    fileInfo.setFile(_fileName);
-    return fileInfo.suffix();
+    return QFileInfo(_fileName).suffix();
 }
 
 /**
