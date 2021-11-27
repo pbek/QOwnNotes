@@ -66,7 +66,7 @@ Pour le pluriel, veuillez ajouter la traduction appropriée chacun dans le bloc 
 
 ### Variables
 
-The `%1` variables need to be written without a space, in RTL languages you can either insert the variables from the original or write them into your translation.
+Les variables `%1` doivent être écrites sans espace. Dans les langages RTL il est possible d'insérer les variables depuis l'original ou de les écrire dans votre traduction.
 
 ![copie d'écran](/img/crowdin/screenshot-1.png)
 
@@ -74,28 +74,28 @@ The `%1` variables need to be written without a space, in RTL languages you can 
 
 ![copie d'écran](/img/crowdin/screenshot-3.png)
 
-### Access keys
+### Clés d'accès
 
-Use `&` in front of any letter that should be used in a shortcut, can be the same as in original but does not have to.
+Utilisez `&` devant toute lettre qui devrait être utilisées dans un raccourci. Peut être identique à l'original mais ce n'est pas une obligation.
 
 ![copie d'écran](/img/crowdin/screenshot-4.png)
 
-### Custom containers
+### Conteneurs personnalisés
 
-Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
+Les chaînes telles que `::: tip`, `::: warning` et `::: info` dans la documentation sont des marqueurs pour des [conteneurs personnalisés](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) dans VuePress et ne devraient pas être traduites.
 
-### Other strings not to be translated
+### Autres chaînes à ne pas traduire
 
-Some segments we don't translate in the Documentation:
+Quelques segments que nous ne traduisons pas dans la documentation :
 
-- Never translate codes or links, tags must be left as they are (and without added spaces, as some MT does that, those must be deleted)
-- We don't translate date and time (leave blank)
-- And we also don't translate references (which QON got in numerous languages), so you can simply skip them
+- Never translate codes or links, tags must be left as they are (and without added spaces, as some machine translation does that, those must be deleted)
+- La date et l'heure (laissez vierge)
+- And we also don't translate references (which QOwnNotes got in numerous translation languages), so you can simply skip them
 
-## Translating and proofreading can be exciting!
+## La traduction et la relecture peuvent être amusantes !
 
-You will deal with the language of this software, learn new terms and receive a lot of inside information about the project.
+Vous aurez à gérer la langue de ce logiciel, apprendrez de nouveaux termes et recevrez de nombreuses informations internes à propos du projet.
 
-If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading. You can ask her anything that helps you have fun contributing.
+Si vous êtes prêt⋅e à aider à la relecture de votre langue, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) vous invite à un court exposé sur la pratique de la traduction et de la relecture. Vous pouvez lui demander tout ce qui vous aiderait à prendre plaisir à contribuer.
 
-Thanks a lot for your help! 🙂
+Merci beaucoup pour votre aide ! 🙂

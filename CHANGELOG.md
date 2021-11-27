@@ -2,6 +2,7 @@
 
 ## 21.11.13
 - a `--version` parameter to print out the version number of the application was added
+- added more translation (thank you rawfreeamy, marterra, chocolatine)
 
 ## 21.11.12
 - command snippets can now also be stored in `bash` or `sh` code blocks,

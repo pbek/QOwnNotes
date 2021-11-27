@@ -62,9 +62,9 @@ In den QOwnNotes-Einstellungen können Sie auch festlegen, welches Notiz-Tag ver
 
 ## Syntax von Befehlsschnipseln
 
-Sie können ungeordnete Listen mit Inline-Codeblöcken verwenden, um Befehlsausschnitte zu speichern. Alle Notizen mit dem Tag `commands` werden nach Befehlsschnipseln durchsucht.
+Sie können **ungeordnete Listen mit Inline-Codeblöcken** verwenden, um Befehlsausschnitte zu speichern. Alle Notizen mit dem Tag `commands` werden nach Befehlsschnipseln durchsucht.
 
-Wenn Sie vor dem Inline-Codeblock ein `cmd:` hinzufügen, wird der Befehl auch in der aktuellen Notiz gefunden, unabhängig von Notiz-Tags.
+Wenn Sie vor dem Inline-Codeblock ein `cmd:` hinzufügen, wird der Befehl auch in der **aktuellen Notiz** gefunden, unabhängig von Notiz-Tags.
 
 ```markdown
 - `Echo Ich bin ein Befehl` Ich bin eine Beschreibung #tag1 #tag2 #tag3
@@ -72,50 +72,50 @@ Wenn Sie vor dem Inline-Codeblock ein `cmd:` hinzufügen, wird der Befehl auch i
 - cmd: `echo ich werde in der aktuellen Notiz gefunden` Dieser Befehl wird in der aktuellen Notiz gefunden, unabhängig von Notiz-Tags
 ```
 
-`bash` or `shell` code blocks, preceded by a heading 2 or higher as a description, can also be used for command snippets. Tags are also supported if they are between the heading and the code block.
+**`Bash`- oder `Shell`-Codeblöcke**, denen eine Überschrift 2 oder höher als Beschreibung vorangestellt ist, können auch für Befehlsschnipsel verwendet werden. Tags werden auch unterstützt, wenn sie sich zwischen der Überschrift und dem Codeblock befinden.
 
-    ## Do this with a "bash" code block
+    ## Tun Sie dies mit einem "Bash" -Codeblock
 
-    - this text will be ignored ignored text
-    - but tags can be used: #tag1 #tag2
+    - dieser Text wird ignoriert Text
+    - aber Tags können verwendet werden: #tag1 #tag2
 
     ```bash
-    echo do this
-    echo do that
+    Echo mach das
+     Echo mach das
     ```
 
 
-    ## Do something else with a "sh" code block
+    ## Mach etwas anderes mit einem "sh" Codeblock
 
     ```sh
-    echo do something else
-    echo do something other
+    Echo mach was anderes
+     echo mach was anderes
     ```
 
-Above example will result in two command snippets, the first one with the two tags `tag1` and `tag2`.
+Das obige Beispiel führt zu zwei Befehlsschnipseln, dem ersten mit den beiden Tags `tag1` und `tag2`.
 
 ## Verwendung
 
 ```bash
-# Search and execute command snippets
+# Befehlsschnipsel suchen und ausführen
 qc exec
 ```
 
 ```bash
-# Search and print command snippets
-qc search
+# Befehlsausschnitte suchen und drucken
+qc-Suche
 ```
 
 ## Aufbau
 
-Run `qc configure`.
+Führen Sie `qc configure` aus.
 
 ```toml
 [General]
-  editor = "vim"            # your favorite text editor
-  column = 40               # column size for list command
-  selectcmd = "fzf"         # selector command for edit command (fzf or peco)
-  sortby = ""               # specify how snippets get sorted (recency (default), -recency, description, -description, command, -command, output, -output)
+  editor = "vim"            # Ihr Lieblingstexteditor
+  column = 40               # Spaltengröße für Listenbefehl
+  selectcmd = "fzf"         # Selektorbefehl für Editierbefehl (fzf oder peco)
+  sortby = ""               # Geben Sie an, wie Snippets sortiert werden (recency (default), -recency, description, -description, command, -command, output, -output)
 
 [QOwnNotes]
   token = "MvTagHXF"        # your QOwnNotes API token

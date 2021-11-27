@@ -2,15 +2,16 @@
 
 Vous pouvez utiliser ces paramètres sur l'interface de ligne de commande:
 
-| Paramètre                    | La description                                                                                                                              |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--help`                     | Affiche l'écran d'aide                                                                                                                      |
-| `--portable`                 | Exécute l'application en mode portable                                                                                                      |
-| `--clear-settings`           | Efface les paramètres et exécute l'application                                                                                              |
-| `--dump-settings`            | Imprime un vidage des paramètres et d'autres informations sur l'application et l'environnement dans GitHub Markdown et quitte l'application |
-| `--session <name>`     | Exécute l'application dans un contexte différent pour les paramètres et les fichiers internes                                               |
-| `--allow-multiple-instances` | Permet de démarrer plusieurs instances de QOwnNotes même si elles ne sont pas autorisées dans les paramètres                                |
-| `--action <name>`      | Déclenche une action de menu après le démarrage de l'application (voir ci-dessous)                                                          |
+| Paramètre                    | La description                                                                                                                                                |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--help`                     | Affiche l'écran d'aide                                                                                                                                        |
+| `--version`                  | Affiche le numéro de version de l'application                                                                                                                 |
+| `--portable`                 | Exécute l'application en mode portable                                                                                                                        |
+| `--clear-settings`           | Efface les paramétrages et exécute l'application                                                                                                              |
+| `--dump-settings`            | Affiche l'ensemble des paramètres ainsi que d'autres informations à propos de l'application et de l'environnement en MarkDown Github puis ferme l'application |
+| `--session <name>`     | Exécute l'application dans un contexte de paramètres et de fichiers internes différent                                                                        |
+| `--allow-multiple-instances` | Autorise l'exécution simultanée de plusieurs instances de QOwnNotes, même si cela est interdit dans les paramètres                                            |
+| `--action <name>`      | Déclenche une action de menu après le démarrage de l'application (voir ci-dessous)                                                                            |
 
 ::: tip
 Si vous rencontrez des problèmes avec votre installation de QOwnNotes, vous pouvez démarrer l'application avec de nouveaux paramètres sans perdre vos paramètres actuels en utilisant le paramètre `--session`.

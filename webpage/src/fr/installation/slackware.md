@@ -44,4 +44,4 @@ cd qownnotes-slackbuilds/14.1/qownnotes
 
 Vous pouvez ensuite installer le paquet généré avec `installpkg`.
 
-[QOwnNotes Slackbuild on GitHub](https://github.com/pbek/qownnotes-slackbuilds/)
+[Slackbuild QOwnNotes sur GitHub](https://github.com/pbek/qownnotes-slackbuilds/)

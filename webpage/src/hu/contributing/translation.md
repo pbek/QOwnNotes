@@ -88,9 +88,9 @@ Az olyan karakterláncok, mint az `::: tip`, `::: warning` and `::: info` a doku
 
 Néhány szegmens, amelyet nem fordítunk le a Dokumentációban:
 
-- Soha ne fordítson le kódokat vagy linkeket, a címkéket úgy kell hagyni, ahogy vannak (és szóközök nélkül, ahogy egyes MT-k ezt teszik, ezeket törölni kell)
+- Never translate codes or links, tags must be left as they are (and without added spaces, as some machine translation does that, those must be deleted)
 - Nem fordítjuk le a dátumot és az időt (hagyja üresen)
-- És nem fordítunk hivatkozásokat (amit a QON számos nyelven kapott), így egyszerűen kihagyhatja őket
+- And we also don't translate references (which QOwnNotes got in numerous translation languages), so you can simply skip them
 
 ## A fordítás és a lektorálás izgalmas lehet!
 

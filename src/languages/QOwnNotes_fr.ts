@@ -1662,7 +1662,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
-<translation>Importer des balises</translation>
+<translation>Importer des étiquettes</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="182"/>
@@ -6382,7 +6382,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="276"/>
 <source>Browser extension / command snippets</source>
-<translation>Extension de navigateur / extraits de commande</translation>
+<translation>Extension de navigateur / extraits de commandes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
@@ -6492,7 +6492,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4251"/>
 <source>Note file extensions</source>
-<translation>Remarque sur les extensions de fichiers</translation>
+<translation>Extensions de fichier des notes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4289"/>
@@ -6633,7 +6633,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6317"/>
 <source>Command snippets</source>
-<translation>Extraits de commande</translation>
+<translation>Extraits de commandes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6326"/>
@@ -6688,12 +6688,12 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6298"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
-<translation>Téléchargez le &lt;a href="%1"&gt;gestionnaire d'extraits de ligne de commande&lt;/a&gt; pour exécuter des extraits de commande stockés dans les notes dans QOwnNotes à partir de la ligne de commande.</translation>
+<translation>Téléchargez le &lt;a href="%1"&gt;gestionnaire d'extraits de commandes en ligne de commande&lt;/a&gt; pour exécuter des extraits de commande stockés dans les notes dans QOwnNotes à partir de la ligne de commande.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6340"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation>Vous pouvez utiliser des notes avec une balise spéciale pour stocker des extraits de commande, que vous pouvez exécuter à partir du gestionnaire d'extraits de ligne de commande. Pour plus d'informations sur la syntaxe de l'extrait de commande, cliquez &lt;a href="%1"&gt;ici&lt;/a&gt;.</translation>
+<translation>Vous pouvez utiliser des notes avec une balise spéciale pour stocker des extraits de commande, que vous pouvez exécuter à partir du gestionnaire d'extraits de commandes en ligne de commande. Pour plus d'informations sur la syntaxe de l'extrait de commande, cliquez &lt;a href="%1"&gt;ici&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6537"/>

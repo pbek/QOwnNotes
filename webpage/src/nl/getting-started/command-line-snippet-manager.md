@@ -62,9 +62,9 @@ In the QOwnNotes settings you can also set what note tag should be used to searc
 
 ## Syntax of command snippets
 
-You can use unordered lists with in-line code blocks to store command snippets. All notes with the tag `commands` are searched for command snippets.
+You can use **unordered lists with in-line code blocks** to store command snippets. All notes with the tag `commands` are searched for command snippets.
 
-If you add a `cmd:` before the in-line code block, the command will also be found in the current note regardless of note tags.
+If you add a `cmd:` before the in-line code block, the command will also be found in the **current note** regardless of note tags.
 
 ```markdown
 - `echo I am a command` I am a description #tag1 #tag2 #tag3
@@ -72,11 +72,11 @@ If you add a `cmd:` before the in-line code block, the command will also be foun
 - cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
 ```
 
-`bash` or `shell` code blocks, preceded by a heading 2 or higher as a description, can also be used for command snippets. Tags are also supported if they are between the heading and the code block.
+**`bash` or `shell` code blocks**, preceded by a heading 2 or higher as a description, can also be used for command snippets. Tags worden ook ondersteund als ze tussen de kop en het codeblok staan.
 
-    ## Do this with a "bash" code block
+    ## Doe dit met een "bash" codeblok
 
-    - this text will be ignored ignored text
+    - this text will be ignored text
     - but tags can be used: #tag1 #tag2
 
     ```bash

@@ -7,15 +7,15 @@ Lancer un programme externe en arrière-plan
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * QML wrapper to start a detached process
+ * Wrapper QML pour démarrer un processus détaché
  *
- * @param executablePath the path of the executable
- * @param parameters a list of parameter strings
- * @param callbackIdentifier an identifier to be used in the onDetachedProcessCallback() function (optional)
- * @param callbackParameter an additional parameter for loops or the like (optional)
- * @param processData data written to the process if the callback is used (optional)
- * @param workingDirectory the working directory to execute the process in (optional, only works without callback)
- * @return true on success, false otherwise
+ * @param executablePath le chemin d'accès de l'exécutable
+ * @param parameters une liste de chaînes de paramètres
+ * @param callbackIdentifier un indetifiant à utiliser dans la fonction onDetachedProcessCallback() (optionnel)
+ * @param callbackParameter un paramètre additionel pour les boucles ou équivalents (optionnel)
+ * @param processData données écrites vers le processus si la fonction de rappel est utilisée (optionnel)
+ * @param workingDirectory le répertoire de travail dans lequel exécuter le processus (optionnel, fonctionne seulement avec une fonction de rappel)
+ * @return true en cas de succès, false sinon
  */
 bool startDetachedProcess(QString executablePath, QStringList parameters,
                             QString callbackIdentifier, QVariant callbackParameter,
@@ -27,7 +27,7 @@ bool startDetachedProcess(QString executablePath, QStringList parameters,
 Exemple simple :
 
 ```js
-script.startDetachedProcess("/path/to/my/program", ["my parameter"]);
+script.startDetachedProcess("/chemin/vers/mon/programme", ["mon paramètre"]);
 ```
 
 Exemple simple :
@@ -55,19 +55,19 @@ Lancer un programme externe et attendre la sortie
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * QML wrapper to start a synchronous process
+ * Wrapper QML pour démarrer un processus synchrone
  *
- * @param executablePath the path of the executable
- * @param parameters a list of parameter strings
- * @param data the data that will be written to the process (optional)
- * @param workingDirectory the working directory to execute the process in (optional)
- * @return the text that was returned by the process
+ * @param executablePath le chemin vers l'exécutable
+ * @param parameters une liste de chaînes de paramètres
+ * @param data les données qui seront écrites vers le processus (optionnel)
+ * @param workingDirectory le répertoire de travail dans lequel exécuter le processus (optionnel)
+ * @return le texte qui a été retourné par le processus
 QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data, QString workingDirectory);
 ```
 
 ### Exemple
 ```js
-var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data", "/path/to/execute/in");
+var result = script.startSynchronousProcess("/chemin/vers/mon/programme", ["mon paramètre"], "données", "/chemin/d'accès/dans/lequel/exécuter");
 ```
 
 Vous voudrez peut-être jeter un œil à l'exemple [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml).
@@ -204,7 +204,7 @@ Insérer un fichier joint dans le dossier des pièces jointes
 ### Appel de méthode et paramètres
 ```cpp
  * Wrapper QML pour insérer un fichier joint dans le dossier `attachments` et
-  * retourner l'url de la pièce jointe ou le texte en Markdown de la pièce jointe
+  * retourner l'URL de la pièce jointe ou le texte en Markdown de la pièce jointe
 * relativement à la note actuelle
 *
 * @param {QString} attachmentFilePath
@@ -220,7 +220,7 @@ QString ScriptingService::insertAttachmentFile(const QString &attachmentFilePath
 
 ### Exemple
 ```js
-var markdown = script.insertAttachmentFile("/path/to/your/file.png");
+var markdown = script.insertAttachmentFile("/chemin/vers/votre/fichier.png");
 ```
 
 Régénérer l'aperçu de la note
@@ -561,7 +561,7 @@ Obtenir la position de départ de la sélection courante dans le texte de la not
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Returns the start position of the current selection in the note text edit
+ * Renvoie la position de départ de la sélection actuelle dans l'éditeur de texte de la note
  */
 int ScriptingService::noteTextEditSelectionStart();
 ```
@@ -577,9 +577,9 @@ Obtenir la position de fin de la sélection courante dans le texte de la note
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Returns the end position of the current selection in the note text edit
+ * Renvoie la position de fin de la sélection actuelle dans l'éditeur de texte de la note
  */
-int ScriptingService::noteTextEditSelectionEnd();
+int ScriptingService :: noteTextEditSelectionEnd ();
 ```
 
 ### Exemple

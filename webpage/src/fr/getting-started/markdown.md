@@ -356,4 +356,4 @@ description: une description
 Du texte
 ```
 
-Le nom de fichier de cet exemple de note serait `Le titre de la note commence ici.md`.
+Le nom de fichier de cet exemple de note serait `L'en-tête de la note commence ici.md`.

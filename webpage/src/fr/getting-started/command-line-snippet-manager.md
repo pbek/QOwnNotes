@@ -1,19 +1,19 @@
-# Command-line Snippet Manager
+# Gestionnaire de snippet en ligne de commande
 
-You can use the [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc) to **execute command snippets stored in notes** in QOwnNotes from the command line.
+Vous pouvez utiliser le [Gestionnaire d'extraits de commandes en ligne de commande de QOwnNotes](https://github.com/qownnotes/qc) pour **exécuter des extraits de commandes stockés dans des notes** se trouvant dans QownNotes depuis la ligne de commande.
 
 ![qc](/img/qc.png)
 
-You can use **notes with a special tag** to store **command snippets**, which you can **execute from the command-line snippet manager**.
+Vous pouvez utiliser des **notes avec une étiquette spécifique** pour y stocker **des extraits de commandes** que vous pouvez **exécuter depuis le Gestionnaire d'extraits de commandes en ligne de commande**.
 
 ![commands](/img/commands.png)
 
 ## Installation
 
-Visit the [latest release page](https://github.com/qownnotes/qc/releases/latest) and download the version you need.
+Visitez la [page de la dernière version](https://github.com/qownnotes/qc/releases/latest) et téléchargez la version dont vous avez besoin.
 
 ::: tip
-If you have [jq](https://stedolan.github.io/jq) installed you can also use this snippet to download and install for example the latest Linux AMD64 AppImage to `/usr/local/bin/qc`:
+Si vous avez installé [jq](https://stedolan.github.io/jq) vous pouvez également utiliser ce snippet pour, par exemple, télécharger et installer la dernière AppImage Linux AMD64 dans `/usr/local/bin/qc`:
 
 ```bash
 curl https://api.github.com/repos/qownnotes/qc/releases/latest | \
@@ -26,98 +26,98 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 ```
 :::
 
-## Dependencies
+## Dépendances
 
-[fzf](https://github.com/junegunn/fzf) (fuzzy search) or [peco](https://github.com/peco/peco) (older, but more likely to be installed by default) need to be installed to search for commands on the command-line.
+[fzf](https://github.com/junegunn/fzf) (fuzzy search) ou [peco](https://github.com/peco/peco) (plus ancien mais plus probablement installé par défaut) doit être installé pour rechercher des commandes depuis la ligne de commande.
 
 ::: tip
-By default `fzf` is used for searching, but you can use `peco` by setting it with `qc configure`.
+`fzf` est utilisé par défaut pour les recherches, mais vous pouvez utiliser `peco` en le paramétrant à l'aide de `qc configure`.
 :::
 
-## Setup
+## Configuration
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Before you are using the snippet manager you need to enable the *Web socket server* (2) in the *Browser extension / command snippets* (1) settings in QOwnNotes.
+Avant d'utiliser le gestionnaire d'extraits de commandes vous devez activer le *serveur Web socket * (2) dans la section *Extension de navigateur / extraits de commandes* (1) dans les paramètres de QOwnNotes.
 
-Then you need to show the security token (3) and copy it (4).
+Vous devez ensuite afficher le jeton de sécurité (3) et le copier (4).
 
-Now open the configuration file of the snippet manager with:
+Ouvrez maintenant le fichier de configuration du gestionnaire de snippets avec :
 
 ```bash
-# Configure the snippet manager
+# Configurer le gestionnaire de snippets
 qc configure
 ```
 
-And put the security token in the `token` attribute:
+Et placez le jeton de sécurité dans l'attribut `token` :
 
 ```toml
 [QOwnNotes]
-token = "yourtokenhere"
+token = "votre_jeton_ici"
 ```
 
 ::: tip
-In the QOwnNotes settings you can also set what note tag should be used to search for commands in notes. By default, the tag `commands` is used.
+Dans les paramètres de QOwnNotes vous pouvez également définir quelle étiquette devrait être utilisée pour rechercher des commandes dans les notes. Par défaut l'étiquette `commands` est utilisée.
 :::
 
-## Syntax of command snippets
+## Syntaxe des extraits de commandes
 
-You can use unordered lists with in-line code blocks to store command snippets. All notes with the tag `commands` are searched for command snippets.
+Vous pouvez utiliser des **listes non-ordonnées avec des blocs de code en ligne** pour stocker des extraits de commandes. Toutes les notes avec l'étiquette `commands` sont lues pour y trouver d'éventuels extraits de commandes.
 
-If you add a `cmd:` before the in-line code block, the command will also be found in the current note regardless of note tags.
+Si vous ajoutez un `cmd:` avant le bloc de code en ligne, la commande sera aussi trouvée dans la **note courante** quelles que soient les étiquettes de cette dernière.
 
 ```markdown
-- `echo I am a command` I am a description #tag1 #tag2 #tag3
-* `echo I am also a command` I am a description #tag3 #tag4 #tag5
-- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+- `echo Je suis une commande` Je suis une description #étiquette1 #étiquette2 #étiquette3
+* `echo Je suis aussi une commande` Je suis une description #étiquette3 #étiquette4 #étiquette5
+- cmd: `echo Je serai trouvée dans la note courante` Cette commande sera trouvée dans la note courante quelles que soient ses étiquettes
 ```
 
-`bash` or `shell` code blocks, preceded by a heading 2 or higher as a description, can also be used for command snippets. Tags are also supported if they are between the heading and the code block.
+Des **blocs de code `bash` ou `shell`** précédés par un en-tête niveau 2 ou plus élevé peuvent également être utilisés pour des extraits de commandes. Les étiquettes sont également prises en charge si elles sont placées entre un en-tête et un bloc de code.
 
-    ## Do this with a "bash" code block
+    ## Faire ceci avec un bloc de code "bash"
 
-    - this text will be ignored ignored text
-    - but tags can be used: #tag1 #tag2
+    - ce texte sera du texte ignoré
+    - mais des étiquettes peuvent être utilisées : #étiquette1 #étiquette2
 
     ```bash
-    echo do this
-    echo do that
+    echo fais ceci
+    echo fais cela
     ```
 
 
-    ## Do something else with a "sh" code block
+    ## Faire autre chose avec un bloc de code "sh"
 
     ```sh
-    echo do something else
-    echo do something other
+    echo fais autre chose
+    echo fais encore autre chose
     ```
 
-Above example will result in two command snippets, the first one with the two tags `tag1` and `tag2`.
+Les exemples ci-dessus résulteront en deux extraits de commandes, le premier avec les deux étiquettes `étiquette1` et `étiquette2`.
 
-## Usage
+## Utilisation
 
 ```bash
-# Search and execute command snippets
+# Rechercher et exécuter des extraits de commandes
 qc exec
 ```
 
 ```bash
-# Search and print command snippets
+# Rechercher et afficher des extraits de commandes
 qc search
 ```
 
 ## Configuration
 
-Run `qc configure`.
+Exécutez `qc configure`.
 
 ```toml
 [General]
-  editor = "vim"            # your favorite text editor
-  column = 40               # column size for list command
-  selectcmd = "fzf"         # selector command for edit command (fzf or peco)
-  sortby = ""               # specify how snippets get sorted (recency (default), -recency, description, -description, command, -command, output, -output)
+  editor = "vim"            # votre éditeur de texte favori
+  column = 40               # taille de colonne pour la commande list
+  selectcmd = "fzf"         # sélecteur de commande pour éditer une commande (fzf ou peco)
+  sortby = ""               # spécifie comment les extraits de commandes sont triés (recency (par défaut), -recency, description, -description, command, -command, output, -output)
 
 [QOwnNotes]
-  token = "MvTagHXF"        # your QOwnNotes API token
-  websocket_port = 22222    # websocket port in QOwnNotes
+  token = "MvTagHXF"        # le jeton de l'API QOwnNotes
+  websocket_port = 22222    # le port websocket dans QOwnNotes
 ```

@@ -2,15 +2,16 @@
 
 شما می توانید از این پارامترها در رابط خط فرمان استفاده کنید:
 
-| پارامتر                     | شرح                                                                                                                 |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `--راهنمایی`                | صفحه راهنمایی را نشان می دهد                                                                                        |
-| `--قابل حمل`                | برنامه را در حالت قابل حمل اجرا می کند                                                                              |
-| `--پاک کردن تنظیمات `       | تنظیمات را پاک کرده و برنامه را اجرا می کند                                                                         |
-| `--نسخه برداری از تنظیمات`  | روگرفتی از تنظیمات و سایر اطلاعات مربوط به برنامه و محیط را در مارک داون گیت هاب چاپ می کند و از برنامه خارج می شود |
-| `--دوره <name>`       | برنامه را در یک زمینه متفاوت برای تنظیمات و پرونده های داخلی اجرا می کند                                            |
-| `--پذیرفتن-نمونه های-متعدد` | به شروع نمونه های متعددی از QOwnNotes اجازه می دهد، حتی اگر در تنظیمات مجاز نباشند.                                 |
-| `--عملیات <name>`     | پس از اینکه برنامه شروع به کار کرد، یک منو اکشن را راه اندازی کنید (قسمت زیر را ملاحظه کنید).                       |
+| پارامتر                      | شرح                                                                                                                                        |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--راهنمایی`                 | صفحه راهنمایی را نشان می دهد                                                                                                               |
+| `--version`                  | Prints out the version number of the application                                                                                           |
+| `--portable`                 | Runs the application in portable mode                                                                                                      |
+| `--clear-settings`           | Clears the settings and runs the application                                                                                               |
+| `--dump-settings`            | Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application |
+| `--session <name>`     | Runs the application in a different context for settings and internal files                                                                |
+| `--allow-multiple-instances` | Allows multiple instances of QOwnNotes to be started even if disallowed in the settings                                                    |
+| `--action <name>`      | Triggers a menu action after the application was started (see below)                                                                       |
 
 ::: tip
 اگر با نصب QOwnNotes به مشکل برخورد کردید، شاید بخواهید با استفاده از پارامتر `--دوره` برنامه را با تنظیمات جدید و بدون از دست دادن تنظیمات فعلی خود آغاز کنید.

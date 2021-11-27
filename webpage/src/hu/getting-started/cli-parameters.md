@@ -2,15 +2,16 @@
 
 Ezeket a paramétereket a parancssori felületen használhatja:
 
-| Paraméter                    | Leírás                                                                                                                                   |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `--help`                     | Megjeleníti a súgó képernyőt                                                                                                             |
-| `--portable`                 | Hordozható üzemmódban fut az alkalmazás                                                                                                  |
-| `--clear-settings`           | Törli a beállításokat és futtatja az alkalmazást                                                                                         |
-| `--dump-settings`            | Kiírja a GitHub Markdown beállításainak és az alkalmazással és a környezettel kapcsolatos egyéb információkat, és kilép az alkalmazásból |
-| `--session <name>`     | Az alkalmazást a beállításoknál és a belső fájloknál egy különböző környezetben futtat                                                   |
-| `--allow-multiple-instances` | Lehetővé teszi, hogy a QOwnNotes több példányát indítsa, még akkor is, ha a beállításokban nincs engedélyezve                            |
-| `--action <name>`      | Menüműveletet indít el az alkalmazás elindítása után (lásd alább)                                                                        |
+| Paraméter                    | Leírás                                                                                                                                     |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--help`                     | Megjeleníti a súgó képernyőt                                                                                                               |
+| `--version`                  | Prints out the version number of the application                                                                                           |
+| `--portable`                 | Runs the application in portable mode                                                                                                      |
+| `--clear-settings`           | Clears the settings and runs the application                                                                                               |
+| `--dump-settings`            | Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application |
+| `--session <name>`     | Runs the application in a different context for settings and internal files                                                                |
+| `--allow-multiple-instances` | Allows multiple instances of QOwnNotes to be started even if disallowed in the settings                                                    |
+| `--action <name>`      | Triggers a menu action after the application was started (see below)                                                                       |
 
 ::: tip
 If you run into troubles with your installation of QOwnNotes you may want start the application with fresh settings without losing your current settings by using the `--session` parameter.

@@ -4,15 +4,15 @@
 
 QOwnNotes (as in the application itself) is **developed by one and sometimes two persons in their spare time**.
 
-Releases are built for a lot of platforms and distributions (often very old versions of them). Keeping them up is a lot of work.
+Releases zijn gebouwd voor veel platforms en distributies (vaak zeer oude versies ervan). Het is veel werk om ze bij te houden.
 
-The metrics are the only real source of information about which versions of platforms and distributions and what features are used by the users, so decisions can be made which versions to retire and which features need more work and which are hardly used.
+De metrische gegevens zijn de enige echte bron van informatie over welke versies van platforms en distributies en welke functies door de gebruikers worden gebruikt, zodat beslissingen kunnen worden genomen welke versies buiten gebruik worden gesteld en welke functies meer werk vergen en welke nauwelijks worden gebruikt.
 
-The same goes for the used languages of the users, which drives the translations of the application and the documentation.
+Hetzelfde geldt voor de gebruikte talen van de gebruikers, die de vertalingen van de applicatie en de documentatie aansturen.
 
-## Where are the metrics stored?
+## Waar worden de statistieken opgeslagen?
 
-The metrics are transmitted to and stored on a self-hosted [Matomo](https://matomo.org/) server. Only the two main developers have access to the data. **No data is shared with 3rd parties.**
+De statistieken worden verzonden naar en opgeslagen op een zelf-gehoste [Matomo](https://matomo.org/)-server. Alleen de twee belangrijkste ontwikkelaars hebben toegang tot de gegevens. **Er worden geen gegevens gedeeld met derden.**
 
 ## How are metrics collected?
 

@@ -6,8 +6,10 @@ image: /img/bookmarks.png
 
 Permet de capturer du contenu depuis une page affichée dans un navigateur et de gérer les favoris entre différents navigateurs et systèmes d'exploitation.
 
-::: Astuce Info
-- ::: Astuce Info QOwnNotes doit être en cours d'exécution pour que l'extension de navigateur Web Companion fonctionne.
+::: tip
+Info
+- ::: tip Info
+QOwnNotes doit être en cours d'exécution pour que l'extension de navigateur Web Companion fonctionne.
 - Une connexion Internet n'est pas nécessaire. L'extension de navigateur fonctionne **hors-ligne**.
 :::
 
@@ -42,7 +44,7 @@ Par défaut, l'extension de navigateur affichera tous les **liens de la note act
 
 Vous pouvez également **gérer vos favoris dans des notes** avec l'étiquette de note `bookmarks` (personnalisable dans les paramètres). Ces liens peuvent également avoir des étiquettes et une description qui seront affichées dans l'extension de navigateur.
 
-Les nouveaux favoris sont stockés dans une note appelée `Bookmarks` (également perosnnalisable dans les paramètres).
+Les nouveaux favoris sont stockés dans une note appelée `Bookmarks` (également personnalisable dans les paramètres).
 
 ::: tip
 Vous pouvez également importer les favoris de votre navigateur dans QOwnNotes avec Web Compagnon !

@@ -2,15 +2,16 @@
 
 È possibile usare questi parametri sull'interfaccia della riga di comando:
 
-| Parametro                    | Descrizione                                                                                                                       |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `--help`                     | Mostra la schermata della guida                                                                                                   |
-| `--portable`                 | Esegue l'applicazione in modalità portatile                                                                                       |
-| `--clear-settings`           | Azzera le impostazioni e avvia l'applicazione                                                                                     |
-| `--dump-settings`            | Esporta in formato Markdown l'elenco delle impostazioni e altre informazioni su applicazione e ambiente ed esce dall'applicazione |
-| `--session <name>`     | Esegue l'applicazione in un contesto differente per le impostazioni e i file interni                                              |
-| `--allow-multiple-instances` | Consente di avviare più istanze di QOwnNotes anche se non consentito nelle impostazioni                                           |
-| `--action <name>`      | Attiva un'azione di menu dopo l'avvio dell'applicazione (vedi sotto)                                                              |
+| Parametro                    | Descrizione                                                                                                                                |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--help`                     | Mostra la schermata della guida                                                                                                            |
+| `--version`                  | Prints out the version number of the application                                                                                           |
+| `--portable`                 | Runs the application in portable mode                                                                                                      |
+| `--clear-settings`           | Clears the settings and runs the application                                                                                               |
+| `--dump-settings`            | Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application |
+| `--session <name>`     | Runs the application in a different context for settings and internal files                                                                |
+| `--allow-multiple-instances` | Allows multiple instances of QOwnNotes to be started even if disallowed in the settings                                                    |
+| `--action <name>`      | Triggers a menu action after the application was started (see below)                                                                       |
 
 ::: tip
 Se si verificano problemi con l'installazione di QOwnNotes, è possibile avviare l'applicazione con nuove impostazioni senza perdere le impostazioni correnti utilizzando il parametro `--session`.
