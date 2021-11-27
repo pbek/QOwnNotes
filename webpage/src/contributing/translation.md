@@ -108,7 +108,7 @@ and shouldn't be translated.
 Some segments we don't translate in the Documentation:
 
 - Never translate codes or links, tags must be left as they are
-  (and without added spaces, as some MT does that, those must be deleted)
+  (and without added spaces, as some machine translation does that, those must be deleted)
 - We don't translate date and time (leave blank)
 - And we also don't translate references (which QON got in numerous languages),
   so you can simply skip them
