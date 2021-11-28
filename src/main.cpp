@@ -147,12 +147,6 @@ bool mainStartupMisc(const QStringList &arguments) {
         parser.showHelp();
     }
 
-    if (parser.isSet(versionOption)) {
-        fprintf(
-            stdout, "QOwnNotes %s\n", VERSION);
-        exit(0);
-    }
-
     QSettings settings;
     QString interfaceStyle =
         settings.value(QStringLiteral("interfaceStyle")).toString();
@@ -453,6 +447,9 @@ int main(int argc, char *argv[]) {
             if (argc > (i + 1)) {
                 action = QString(argv[i + 1]).trimmed();
             }
+        } else if (arg == QStringLiteral("--version")) {
+            fprintf(stdout, "QOwnNotes %s\n", VERSION);
+            exit(0);
         }
     }
 

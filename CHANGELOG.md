@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.11.14
+- the `--version` parameter now also works when another instance of the
+  application is already running
+
 ## 21.11.13
 - a `--version` parameter to print out the version number of the application was added
 - added more translation (thank you rawfreeamy, marterra, chocolatine)
