@@ -1,6 +1,6 @@
 # Command-line Snippet Manager
 
-You can use the [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc) to **execute command snippets stored in notes** in QOwnNotes from the command line.
+U kunt de [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc) gebruiken om **opdrachtfragmenten uit te voeren die zijn opgeslagen in notities** in QOwnNotes vanaf de opdrachtregel.
 
 ![qc](/img/qc.png)
 
@@ -8,12 +8,12 @@ U kunt **notities met een speciale tag** gebruiken om **command snippets** op te
 
 ![commands](/img/commands.png)
 
-## Installation
+## Installatie
 
-Visit the [latest release page](https://github.com/qownnotes/qc/releases/latest) and download the version you need.
+Ga naar de [nieuwste release-pagina](https://github.com/qownnotes/qc/releases/latest) en download de versie die je nodig hebt.
 
 ::: tip
-If you have [jq](https://stedolan.github.io/jq) installed you can also use this snippet to download and install for example the latest Linux AMD64 AppImage to `/usr/local/bin/qc`:
+Als je [jq](https://stedolan.github.io/jq) hebt geïnstalleerd, kun je dit fragment ook gebruiken om bijvoorbeeld de nieuwste Linux AMD64 AppImage te downloaden en te installeren naar `/usr/local/bin/qc`:
 
 ```bash
 curl https://api.github.com/repos/qownnotes/qc/releases/latest | \
@@ -26,30 +26,30 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 ```
 :::
 
-## Dependencies
+## Afhankelijkheden
 
-[fzf](https://github.com/junegunn/fzf) (fuzzy search) or [peco](https://github.com/peco/peco) (older, but more likely to be installed by default) need to be installed to search for commands on the command-line.
+[fzf](https://github.com/junegunn/fzf) (fuzzy zoeken) of [peco](https://github.com/peco/peco) (ouder, maar waarschijnlijker standaard geïnstalleerd) moeten worden geïnstalleerd om naar opdrachten op de opdrachtregel te zoeken.
 
 ::: tip
-By default `fzf` is used for searching, but you can use `peco` by setting it with `qc configure`.
+Standaard wordt `fzf` gebruikt om te zoeken, maar u kunt `peco` gebruiken door dit in te stellen met `qc configure`.
 :::
 
-## Setup
+## Opstelling
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Before you are using the snippet manager you need to enable the *Web socket server* (2) in the *Browser extension / command snippets* (1) settings in QOwnNotes.
+Voordat u de snippetmanager gebruikt, moet u de *Websocketserver* (2) inschakelen in de instellingen voor *Browserextensie / opdrachtfragmenten* (1) in QOwnNotes.
 
-Then you need to show the security token (3) and copy it (4).
+Dan moet je het security token (3) laten zien en kopiëren (4).
 
-Now open the configuration file of the snippet manager with:
+Open nu het configuratiebestand van de snippetmanager met:
 
 ```bash
-# Configure the snippet manager
-qc configure
+# Configureer de snippetmanager
+qc configureren
 ```
 
-And put the security token in the `token` attribute:
+En plaats het security token in het `token` attribuut:
 
 ```toml
 [QOwnNotes]
@@ -57,14 +57,14 @@ token = "yourtokenhere"
 ```
 
 ::: tip
-In the QOwnNotes settings you can also set what note tag should be used to search for commands in notes. By default, the tag `commands` is used.
+In de QOwnNotes-instellingen kunt u ook instellen welke notitietag moet worden gebruikt om naar opdrachten in notities te zoeken. Standaard wordt de tag `opdrachten` gebruikt.
 :::
 
-## Syntax of command snippets
+## Syntaxis van opdrachtfragmenten
 
-You can use **unordered lists with in-line code blocks** to store command snippets. All notes with the tag `commands` are searched for command snippets.
+U kunt **ongeordende lijsten met in-line codeblokken** gebruiken om opdrachtfragmenten op te slaan. Alle notities met de tag `opdrachten` worden doorzocht op opdrachtfragmenten.
 
-If you add a `cmd:` before the in-line code block, the command will also be found in the **current note** regardless of note tags.
+Als je een `cmd:` toevoegt voor het in-line codeblok, zal het commando ook gevonden worden in de **huidige notitie** ongeacht notitietags.
 
 ```markdown
 - `echo I am a command` I am a description #tag1 #tag2 #tag3

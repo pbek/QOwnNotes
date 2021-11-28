@@ -437,7 +437,7 @@ var clipboardText = script.clipboard();
 var clipboardHtml = script.clipboard(true);
 ```
 
-You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Misschien wilt u het voorbeeld eens bekijken [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 Schrijf tekst naar de tekst van de notitie
 --------------------------------
@@ -458,9 +458,9 @@ void ScriptingService :: noteTextEditWrite (QString-tekst);
 script.noteTextEditWrite ("Mijn aangepaste tekst");
 ```
 
-You might want to look at the custom action `transformTextRot13` in the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Misschien wilt u de aangepaste actie `transformTextRot13` in voorbeeld [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) bekijken.
 
-You can use this together with `noteTextEditSelectAll` to overwrite the whole text of the current note.
+U kunt dit samen met `noteTextEditSelectAll` gebruiken om de hele tekst van de huidige notitie te overschrijven.
 
 Lees de geselecteerde tekst in de tekstbewerking van de notitie
 --------------------------------------------
@@ -481,7 +481,7 @@ QString ScriptingService :: noteTextEditSelectedText ();
 var text = script.noteTextEditSelectedText ();
 ```
 
-You might want to look at the custom action `transformTextRot13` in the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Misschien wilt u de aangepaste actie `transformTextRot13` bekijken in het voorbeeld [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 Selecteer alle tekst in de tekstbewerking van de notitie
 -------------------------------------
@@ -499,7 +499,7 @@ leegte ScriptingService :: noteTextEditSelectAll ();
 script.noteTextEditSelectAll();
 ```
 
-You can use this together with `noteTextEditWrite` to overwrite the whole text of the current note.
+U kunt dit samen met `noteTextEditWrite` gebruiken om de hele tekst van de huidige notitie te overschrijven.
 
 Selecteer de huidige regel in de tekstbewerking van de notitie
 ---------------------------------------------
@@ -539,20 +539,20 @@ Stel de momenteel geselecteerde tekst in bij het bewerken van de notitietekst
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Sets the currently selected text in the note text edit
+ * Stelt de momenteel geselecteerde tekst in de notitietekstbewerking in
  *
  * @param start
- * @param end
+ * @param einde
  */
 void ScriptingService::noteTextEditSetSelection(int start, int end);
 ```
 
 ### Voorbeeld
 ```js
-// expands the current selection by one character
-script.noteTextEditSetSelection(
-    script.noteTextEditSelectionStart() - 1,
-    script.noteTextEditSelectionEnd() + 1);
+// breidt de huidige selectie uit met één teken
+script.noteTextEditSetSelection (
+     script.noteTextEditSelectionStart () - 1,
+     script.noteTextEditSelectionEnd () + 1);
 ```
 
 Verkrijg de startpositie van de huidige selectie in de notitietekst
@@ -604,10 +604,10 @@ void ScriptingService::noteTextEditSetCursorPosition(int position);
 
 ### Voorbeeld
 ```js
-// jump to the 11th character in the note
+// spring naar het 11e teken in de notitie
 script.noteTextEditSetCursorPosition(10);
 
-// jump to the end of the note
+// spring naar het einde van de notitie
 script.noteTextEditSetCursorPosition(-1);
 ```
 
@@ -936,7 +936,7 @@ script.setCurrentNote (opmerking);
 
 You may want to take a look at the example [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
 
-Jumping to a note subfolder
+Springen naar een submap van een notitie
 ---------------------------
 
 ### Methodeaanroep en parameters
@@ -962,30 +962,30 @@ script.jumpToNoteSubFolder("a sub folder/sub");
 ```
 
 ::: tip
-You can create a new note subfolder in the current subfolder by calling [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
+U kunt een nieuwe submap voor notities maken in de huidige submap door [`mainWindow.createNewNoteSubFolder`](classes.html#example-2) aan te roepen.
 :::
 
-Showing an information message box
+Een informatieberichtvenster weergeven
 ----------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Shows an information message box
+ * Toont een informatieberichtvenster
  *
- * @param text
- * @param title (optional)
+ * @param tekst
+ * @param title (optioneel)
  */
-void ScriptingService::informationMessageBox(QString text, QString title);
+void ScriptingService:: informationMessageBox (QString-tekst, QString-titel);
 ```
 
 ### Voorbeeld
 ```js
-// show a information message box
-script.informationMessageBox("The text I want to show", "Some optional title");
+// toon een informatieberichtvenster
+script.informationMessageBox ("De tekst die ik wil laten zien", "Een optionele titel");
 ```
 
-Showing a question message box
+Er wordt een berichtvenster met een vraag weergegeven
 ------------------------------
 
 ### Methodeaanroep en parameters
@@ -1008,18 +1008,18 @@ int ScriptingService::questionMessageBox(
 
 ### Voorbeeld
 ```js
-// show a question message box with an apply and a help button
-// see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
-var result = script.questionMessageBox(
-    "The text I want to show", "Some optional title", 0x01000000|0x02000000, 0x02000000);
-script.log(result);
+// toon een vraagberichtvenster met een sollicitatie- en een helpknop
+// zie: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+var resultaat = script.questionMessageBox (
+    "De tekst die ik wil laten zien", "Een optionele titel", 0x01000000 | 0x02000000, 0x02000000);
+script.log (resultaat);
 ```
 
-For information about buttons see [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
+Zie voor informatie over knoppen [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
 
-You may also want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+Zie voor informatie over knoppen [StandardButton](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
-Showing an open file dialog
+Een open bestandsdialoog weergeven
 ---------------------------
 
 ### Methodeaanroep en parameters
@@ -1042,10 +1042,10 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
 ```
 
-Showing a save file dialog
+Een zekere bestandsdialoog weergeven
 --------------------------
 
-### Method call and parameters
+### Methodeaanroep en parameters
 ```cpp
 /**
  * Shows a save file dialog
@@ -1065,16 +1065,16 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 var fileName = script.getSaveFileName("Please select HTML file to save", "output.html", "HTML (*.html)");
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Misschien wilt u het voorbeeld eens bekijken [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Registering script settings variables
+Variabelen voor scriptinstellingen registreren
 -------------------------------------
 
 You need to define your settings variables as properties in your script and register them in a property named `settingsVariables`.
 
-The user can then set these properties in the script settings.
+De gebruiker kan deze eigenschappen vervolgens instellen in de scriptinstellingen.
 
-### Example
+### Voorbeeld
 ```js
 // you have to define your registered variables so you can access them later
 property string myString;
@@ -1137,7 +1137,7 @@ property variant settingsVariables: [
 ];
 ```
 
-In addition you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
+Bovendien kun je de `settingsVariables` overschrijven met een speciale functie `registerSettingsVariables()` zoals deze:
 
 ### Voorbeeld
 ```js
@@ -1155,9 +1155,9 @@ function registerSettingsVariables() {
 }
 ```
 
-You may also want to take a look at the example [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
+Misschien wilt u het voorbeeld eens bekijken [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
 
-Storing and loading persistent variables
+Persistente variabelen opslaan en laden
 ----------------------------------------
 
 ### Methodeaanroep en parameters
