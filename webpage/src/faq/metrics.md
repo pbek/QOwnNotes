@@ -32,7 +32,7 @@ Some basic information like screen resolution, operating system and version of Q
 
 Furthermore, for example events are sent to the server when actions are used in the applications.
 
-QOwnNotes is free open source software.
+QOwnNotes is a free open source software.
 You can review the metrics all the time by searching for example for
 [sendVisitIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendVisitIfEnabled)
 and [sendEventIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendEventIfEnabled)
