@@ -12,8 +12,7 @@ The metrics are the only dependable source of information about which versions o
 distributions QOwnNotes runs on. They also show which features are the most popular, so that decisions can be made
 concerning which versions to retire, which features need more work and which are hardly used.
 
-The same goes for the used languages of the users, which drives the translations of
-the application and the documentation.
+The same applies to the user's selection of preferred languages, which promotes the improvement of the corresponding translations.
 
 ## Where are the metrics stored?
 
