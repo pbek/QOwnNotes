@@ -402,6 +402,12 @@ MainWindow::MainWindow(QWidget *parent)
     // load the note folder list in the menu
     this->loadNoteFolderListMenu();
 
+    // Update panels sort and order
+    // Best don't do that with QTimer::singleShot
+    // See: https://github.com/pbek/QOwnNotes/issues/2309
+    // See: https://github.com/pbek/QOwnNotes/issues/2319
+    updatePanelsSortOrder();
+
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates(this, UpdateService::AppStart);
 
@@ -568,26 +574,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     // trigger cli parameter menu action if there was any set
     triggerStartupMenuAction();
-
-    // We need to wait longer if there is a note tagging hook, because
-    // "directoryWatcherWorkaround" is called in the process, which will mess up
-    // things when done in the background
-    const int delayTime = ScriptingService::instance()->noteTaggingHookExists()
-                              ? 1500 : 10;
-
-    // This is done in the end, because we try to do that asynchronously for performance.
-    // If a note tagging hook exists code will be executed that uses
-    // "directoryWatcherWorkaround", and it's a bad idea do that at some random
-    // time when other code is depending on it turned off!
-    // See: https://github.com/pbek/QOwnNotes/issues/2309
-    #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-        QTimer::singleShot(delayTime, this, [this]{
-    #endif
-            // Update panels sort and order
-            updatePanelsSortOrder();
-    #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-        });
-    #endif
 }
 
 /**
