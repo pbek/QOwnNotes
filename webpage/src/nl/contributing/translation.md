@@ -88,9 +88,9 @@ Tekenreeksen zoals `::: tip`, `::: warning` en `::: info` in de documentatie zij
 
 Sommige segmenten vertalen we niet in de documentatie:
 
-- Never translate codes or links, tags must be left as they are (and without added spaces, as some machine translation does that, those must be deleted)
+- Vertaal nooit codes of links, tags moeten blijven zoals ze zijn (en zonder toegevoegde spaties, zoals sommige machine vertaling dat doen, die moeten worden verwijderd)
 - Wij vertalen datum en tijd niet (leeg laten)
-- And we also don't translate references (which QOwnNotes got in numerous translation languages), so you can simply skip them
+- En we vertalen ook geen referenties (die QOwnNotes in tal van vertaaltalen heeft), dus je kunt ze gewoon overslaan
 
 ## Vertalen en proeflezen kan spannend zijn!
 

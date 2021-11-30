@@ -61,7 +61,7 @@ U kunt uw **browserbladwijzers** beheren met QOwnNotes of deze gebruiken als **w
 De browserextensies werken **offline**, geen internetverbinding nodig. Bezoek de [QOwnNotes Web Companion browserextensie](browser-extension.md) voor meer informatie.
 :::
 
-## QOwnNotes command-line snippet manager
+## QOwnNotes-opdrachtregelfragmentbeheer
 
 U kunt uw **opdrachtfragmenten** beheren met QOwnNotes en ze uitvoeren op de opdrachtregel.
 

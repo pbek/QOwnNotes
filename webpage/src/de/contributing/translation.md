@@ -88,9 +88,9 @@ Strings wie `::: tip`, `::: warning` und `::: info` in der Dokumentation sind Ma
 
 Einige Segmente, die wir in der Dokumentation nicht übersetzen:
 
-- Never translate codes or links, tags must be left as they are (and without added spaces, as some machine translation does that, those must be deleted)
+- Übersetzen Sie niemals Codes oder Links; Tags müssen so belassen werden, wie sie sind und ohne zusätzliche Leerzeichen, (wie das manche maschinellen Übersetzungen tun, dann müssen diese Zeichen händisch entfernt werden)
 - Wir übersetzen Datum und Uhrzeit nicht (leer lassen)
-- And we also don't translate references (which QOwnNotes got in numerous translation languages), so you can simply skip them
+- Und wir übersetzen auch keine Referenzen (die QON in zahlreichen Sprachen bekommen hat), Sie können dieses Kapitel einfach überspringen.
 
 ## Übersetzen und Korrekturlesen kann spannend sein!
 

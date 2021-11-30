@@ -53,7 +53,7 @@
 <message>
 <location filename="../dialogs/attachmentdialog.ui" line="94"/>
 <source>Cancel download</source>
-<translation>Cancelar o download</translation>
+<translation>Cancelar download</translation>
 </message>
 <message>
 <location filename="../dialogs/attachmentdialog.ui" line="117"/>

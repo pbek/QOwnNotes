@@ -85,19 +85,19 @@ Als je een `cmd:` toevoegt voor het in-line codeblok, zal het commando ook gevon
     ```
 
 
-    ## Do something else with a "sh" code block
+    ## Mach etwas anderes mit einem "sh" Codeblock
 
     ```sh
     echo do something else
     echo do something other
     ```
 
-Above example will result in two command snippets, the first one with the two tags `tag1` and `tag2`.
+Bovenstaand voorbeeld resulteert in twee opdrachtfragmenten, de eerste met de twee tags `tag1` en `tag2`.
 
-## Usage
+## Gebruik
 
 ```bash
-# Search and execute command snippets
+# Zoek en voer opdrachtfragmenten uit
 qc exec
 ```
 
@@ -106,7 +106,7 @@ qc exec
 qc search
 ```
 
-## Configuration
+## Configuratie
 
 Run `qc configure`.
 
@@ -120,4 +120,14 @@ Run `qc configure`.
 [QOwnNotes]
   token = "MvTagHXF"        # your QOwnNotes API token
   websocket_port = 22222    # websocket port in QOwnNotes
+```
+
+## Shell completion
+
+You can generate shell completion code for your shell with `qc completion <shell>`.
+
+For example for the Fish shell you can use:
+
+```bash
+qc completion fish > ~/.config/fish/completions/qc.fish
 ```

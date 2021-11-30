@@ -4,11 +4,11 @@
 
 QOwnNotes (l'application elle-même) est **développée par une ou parfois deux personnes sur leur temps libre**.
 
-Les versions sont compilées pour un grand nombre de plate-formes (souvent de très vielles versions de ces dernières). Les garder à jour représente beaucoup de travail.
+Les versions sont compilées pour un grand nombre de plate-formes (souvent de très vieilles versions de ces dernières). Les garder à jour représente beaucoup de travail.
 
-Les statistiques d'utilisation sont la seule véritable source d'information permettant de savoir quelles versions des plate-formes et des distributions et quelles fonctionnalités sont utilisées par les utilisateurs. Elles permettent de prendre des décisions concernant les versions à mettre à la retraite, quelles fonctionnalités nécessitent plus de travail et lesquelles sont rarement utilisées.
+The metrics are the only dependable source of information about which versions of platforms and distributions QOwnNotes runs on. They also show which features are the most popular, so that decisions can be made concerning which versions to retire, which features need more work, and which are hardly used.
 
-Les mêmes principes s'appliquent pour les langues utilisées, ce qui guide les traductions de l'application et de sa documentation.
+The same applies to the user's selection of preferred languages, which promotes the improvement of the corresponding translations.
 
 ## Où les statistiques d'utilisation sont-elles stockées ?
 
@@ -30,14 +30,14 @@ QOwnNotes est un logiciel libre open-source. Vous pouvez contrôler les statisti
 
 **Aucune information personnelle - telle que du texte que vous avez entré ou les noms des notes - ne sont collectées ni stockées sur le serveur !**
 
-## Puis-je désactiver les statistiques d'utilisation ?
+## Puis-je désactiver la collecte des statistiques d'utilisation ?
 
 Vous pouvez les désactiver au premier démarrage de l'application dans la boîte de dialogue de bienvenue, ou plus tard dans les paramètres.
 
 ## Pourquoi les statistiques d’utilisation ne sont-elles pas désactivées par défaut ?
 
-Les réglages par défaut sont rois. Désactiver par défaut les statistiques d'utilisation voudrait pour ainsi dire aucunes statistiques utilisables.
+Les réglages par défaut sont rois. Désactiver par défaut les statistiques d'utilisation aurait pour conséquence l'absence de collecte de statistiques utilisables.
 
-La plupart des gens se fichent des statistiques d'utilisation. Ceux qui se préoccupent des statistiques d'utilisation et ne veulent pas voter avec les leurs concernant ce qui fera l'objet d'un travail ou pris en charge, peuvent facilement les désactiver au premier démarrage de l'application.
+La plupart des personnes se fichent des statistiques d'utilisation. Celles qui se préoccupent des statistiques d'utilisation et ne veulent pas voter avec les leurs - concernant ce qui fera l'objet d'un travail ou d'une prise en charge - peuvent facilement les désactiver au premier démarrage de l'application.
 
-Vous verrez même une seconde boîte de dialogue qui vous informera sur les statistiques d’utilisation si vous avez clôt la boîte de dialogue de bienvenue trop tôt.
+Vous verrez même une seconde boîte de dialogue qui vous informera sur les statistiques d’utilisation si vous avez fermé la boîte de dialogue de bienvenue trop tôt.

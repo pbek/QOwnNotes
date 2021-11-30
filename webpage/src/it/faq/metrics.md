@@ -6,9 +6,9 @@ QOwnNotes (l'applicazione) è **sviluppata da una persona, qualche volta due, ne
 
 I rilasci sono preparati per molte piattaforme e distribuzioni (spesso per versioni molto vecchie delle stesse). Mantenerle attive costa un sacco di lavoro.
 
-Le metriche sono l'unica reale sorgente di informazioni a proposito di quali versioni di piattaforme e distribuzioni e quali funzionalità sono usate dagli utenti, quindi si possono prendere decisioni su quali versioni ritirare e quali funzionalità richiedono più lavoro e quali invece sono usate raramente.
+The metrics are the only dependable source of information about which versions of platforms and distributions QOwnNotes runs on. They also show which features are the most popular, so that decisions can be made concerning which versions to retire, which features need more work, and which are hardly used.
 
-Lo stesso vale per le lingue usate dagli utenti, che guidano le traduzioni dell'applicazione e della documentazione.
+The same applies to the user's selection of preferred languages, which promotes the improvement of the corresponding translations.
 
 ## Dove sono salvate le metriche?
 

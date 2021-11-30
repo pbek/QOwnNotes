@@ -1,43 +1,43 @@
-# Why metrics?
+# چرا سنجه ها؟
 
-## Why are metrics useful?
+## چرا سنجه ها مفید هستند؟
 
-QOwnNotes (as in the application itself) is **developed by one and sometimes two persons in their spare time**.
+QOwnNotes (مانند خود برنامه) **توسط یک یا گاهی اوقات دو شخص در اوقات فراغت آنها توسعه داده شده است**.
 
-Releases are built for a lot of platforms and distributions (often very old versions of them). Keeping them up is a lot of work.
+نسخه های منتشر شده برای بسیاری از پلتفرم ها و توزیع ها (اغلب نسخه های بسیار قدیمی آنها) ساخته شده اند. نگهداری آنها حائز اهمیت است.
 
-The metrics are the only real source of information about which versions of platforms and distributions and what features are used by the users, so decisions can be made which versions to retire and which features need more work and which are hardly used.
+سنجه ها تنها منبع اطلاعاتی مورد اطمینان برای نسخه های پلتفرم ها و توزیع هایی هستند که QOwnNotes در آنها اجرا می شود. They also show which features are the most popular, so that decisions can be made concerning which versions to retire, which features need more work, and which are hardly used.
 
-The same goes for the used languages of the users, which drives the translations of the application and the documentation.
+The same applies to the user's selection of preferred languages, which promotes the improvement of the corresponding translations.
 
-## Where are the metrics stored?
+## سنجه ها کجا ذخیره سازی می شوند؟
 
-The metrics are transmitted to and stored on a self-hosted [Matomo](https://matomo.org/) server. Only the two main developers have access to the data. **No data is shared with 3rd parties.**
+سنجه ها به سرور خود میزبان[Matomo](https://matomo.org/) منتقل شده و در آنجا ذخیره سازی می شوند. تنها دو توسعه دهنده اصلی به اطلاعات دسترسی دارند. **هیچ اطلاعاتی با اشخاص ثالث به اشتراک گذاشته نمی شود.**
 
-## How are metrics collected?
+## سنجه ها چگونه گردآوری می شوند؟
 
-Metrics are **anonymized** (e.g. ip address stripped out) on the Matomo server after they are received.
+سنجه ها پس از دریافت در سرور Matomo به صورت **ناشناس** خواهند بود (مثلاً آدرس IP آنها حذف می شود).
 
-No personal information, like text you entered or note names are collected or stored on the server!
+اطلاعات شخصی نظیر متنی که وارد می کنید یا اسامی یادداشت به هیچ وجه در سرور گردآوری یا ذخیره سازی نمی شود!
 
-## What is collected?
+## چه چیزی گرد آوری می شود؟
 
-Some basic information like screen resolution, operating system and version of QOwnNotes used is transmitted.
+برخی از اطلاعات اصلی مانند رزولوشن صفحه نمایش، سیستم عامل و نسخه QOwnNotes مورد استفاده منتقل می شود.
 
-Furthermore, for example events are sent to the server when actions are used in the applications.
+علاوه بر این، به عنوان مثال، گزارش فعالیت های انجام شده در برنامه ها به سرور ارسال می شوند.
 
-QOwnNotes is free open source software. You can review the metrics all the time by searching for example for [sendVisitIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendVisitIfEnabled) and [sendEventIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendEventIfEnabled) in the source code to see what exactly is sent.
+QOwnNotes یک نرم افزار متن باز رایگان است. شما همواره می توانید با جستجوی عباراتی مانند [sendVisitIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendVisitIfEnabled) و [sendEventIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendEventIfEnabled) در کد منبع، سنجه ها را بازبینی کرده و آنچه که دقیقاً ارسال می‌شود را مشاهده کنید.
 
-**No personal information, like text you entered or note names are collected!**
+**اطلاعات شخصی نظیر متنی که وارد می کنید یا اسامی یادداشت به هیچ وجه گردآوری نمی شود!**
 
-## Can I turn metrics off?
+## آیا می توانم سنجه ها را غیر فعال کنم؟
 
-You can turn them off upon first start of the application in the welcome dialog or at a later time in the settings dialog.
+با نخستین راه اندازی برنامه در کادر خوش آمد گویی یا بعداً در کادر تنظیمات، می توانید آنها را غیر فعال کنید.
 
-## Why are metrics not off by default?
+## چرا سنجه ها به طور پیش‌فرض غیرفعال نیستند؟
 
-Defaults are king. Turning metrics off by default would result in no meaningful metrics at all.
+موارد پیش فرض بسیار مهم هستند. غیر فعال سازی سنجه ها به صورت پیش فرض موجب می شود آنها کارایی و مفهوم خود را در کل از دست بدهند.
 
-Most of the people don't care about metrics. Those who care about metrics and don't want to vote with their metrics about what is worked on or what is supported can easily turn them off at the first start of the application.
+بسیاری از مردم به سنجه ها اهمیت نمی دهند. کسانی که به سنجه ها و حوزه فعالیت یا پشتیبانی آنها اهمیت نمی دهند، به راحتی می‌توانند در نخستین راه اندازی برنامه آنها را غیرفعال کنند.
 
-You will even get a second dialog that will tell you about the metrics, if you finished the welcome dialog too early.
+در صورتی که کادر خوش آمد گویی را بسیار زودتر از حالت عادی ببندید، کادر گفتگوی دیگری در مورد سنجه ها دریافت خواهید کرد.

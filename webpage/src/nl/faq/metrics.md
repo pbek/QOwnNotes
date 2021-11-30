@@ -6,9 +6,9 @@ QOwnNotes (zoals in de applicatie zelf) is **ontwikkeld door één en soms twee 
 
 Releases zijn gebouwd voor veel platforms en distributies (vaak zeer oude versies ervan). Het is veel werk om ze bij te houden.
 
-De metrische gegevens zijn de enige echte bron van informatie over welke versies van platforms en distributies en welke functies door de gebruikers worden gebruikt, zodat beslissingen kunnen worden genomen welke versies buiten gebruik worden gesteld en welke functies meer werk vergen en welke nauwelijks worden gebruikt.
+Die Metriken sind die einzige zuverlässige Informationsquelle darüber, auf welchen Versionen von Plattformen und Distributionen QOwnNotes ausgeführt wird. They also show which features are the most popular, so that decisions can be made concerning which versions to retire, which features need more work, and which are hardly used.
 
-Hetzelfde geldt voor de gebruikte talen van de gebruikers, die de vertalingen van de applicatie en de documentatie aansturen.
+The same applies to the user's selection of preferred languages, which promotes the improvement of the corresponding translations.
 
 ## Waar worden de statistieken opgeslagen?
 
@@ -26,7 +26,7 @@ Sommige basisinformatie zoals schermresolutie, besturingssysteem en gebruikte ve
 
 Verder worden er bijvoorbeeld gebeurtenissen naar de server gestuurd wanneer acties in de applicaties worden gebruikt.
 
-QOwnNotes is gratis open source software. You can review the metrics all the time by searching for example for [sendVisitIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendVisitIfEnabled) and [sendEventIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendEventIfEnabled) in the source code to see what exactly is sent.
+QOwnNotes is gratis open source software. Sie können die Metriken ständig überprüfen, indem Sie beispielsweise im Quellcode nach [sendVisitIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendVisitIfEnabled) und [sendEventIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendEventIfEnabled) suchen, um zu sehen, was genau gesendet wird.
 
 **Er wordt geen persoonlijke informatie verzameld, zoals ingevoerde tekst of notitienamen!**
 

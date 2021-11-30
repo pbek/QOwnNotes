@@ -121,3 +121,13 @@ Exécutez `qc configure`.
   token = "MvTagHXF"        # le jeton de l'API QOwnNotes
   websocket_port = 22222    # le port websocket dans QOwnNotes
 ```
+
+## Shell completion
+
+You can generate shell completion code for your shell with `qc completion <shell>`.
+
+For example for the Fish shell you can use:
+
+```bash
+qc completion fish > ~/.config/fish/completions/qc.fish
+```

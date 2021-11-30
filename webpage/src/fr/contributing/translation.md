@@ -88,13 +88,13 @@ Les chaînes telles que `::: tip`, `::: warning` et `::: info` dans la documenta
 
 Quelques segments que nous ne traduisons pas dans la documentation :
 
-- Never translate codes or links, tags must be left as they are (and without added spaces, as some machine translation does that, those must be deleted)
+- Le code informatique, les liens ou les étiquettes. Ils doivent être laissés en l'état et sans espaces ajoutés comme cela arrive avec certaines traductions automatiques. Ceux ajoutés doivent être effacés
 - La date et l'heure (laissez vierge)
-- And we also don't translate references (which QOwnNotes got in numerous translation languages), so you can simply skip them
+- Nous ne traduisons pas non plus les références que QOwnNotes possède dans de nombreuses langues traduites, vous pouvez les ignorer
 
 ## La traduction et la relecture peuvent être amusantes !
 
-Vous aurez à gérer la langue de ce logiciel, apprendrez de nouveaux termes et recevrez de nombreuses informations internes à propos du projet.
+Vous devrez assimiler la terminologie de ce logiciel, apprendrez de nouveaux termes et recevrez de nombreuses informations internes à propos du projet.
 
 Si vous êtes prêt⋅e à aider à la relecture de votre langue, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) vous invite à un court exposé sur la pratique de la traduction et de la relecture. Vous pouvez lui demander tout ce qui vous aiderait à prendre plaisir à contribuer.
 

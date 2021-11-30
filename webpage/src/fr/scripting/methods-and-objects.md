@@ -243,7 +243,7 @@ script.regenerateNotePreview();
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
 
-Registering a custom action
+Déclarer une action personnalisée
 ---------------------------
 
 ### Appel de méthode et paramètres

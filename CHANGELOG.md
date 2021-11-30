@@ -4,6 +4,7 @@
 - highlighting support for checkboxes list with an `X` (instead of `x`) was added
   (for [#2313](https://github.com/pbek/QOwnNotes/issues/2313), thank you @sanderboom)
 - an attempt was made to fix a rare crash (for [#2319](https://github.com/pbek/QOwnNotes/issues/2319))
+- added more translation (thank you amirkbrpr, rawfreeamy, danilosf, chocolatine)
 
 ## 21.11.14
 - the `--version` parameter now also works when another instance of the
