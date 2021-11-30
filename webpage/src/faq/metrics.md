@@ -10,7 +10,7 @@ Keeping them up is a lot of work.
 
 The metrics are the only dependable source of information about which versions of platforms and
 distributions QOwnNotes runs on. They also show which features are the most popular, so that decisions can be made
-concerning which versions to retire, which features need more work and which are hardly used.
+concerning which versions to retire, which features need more work, and which are hardly used.
 
 The same goes for the used languages of the users, which drives the translations of
 the application and the documentation.
