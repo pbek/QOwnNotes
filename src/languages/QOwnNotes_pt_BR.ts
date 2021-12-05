@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt-BR" sourcelanguage="en">
+<TS version="2.1" language="pt_BR" sourcelanguage="en">
 <context>
 <name>AboutDialog</name>
 <message>
@@ -4711,7 +4711,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <location filename="../main.cpp" line="267"/>
 <source>Your note folder was not found any more! Do you want to select a new one?</source>
-<translation>Sua pasta de anotações não foi mais encontrada! Deseja selecionar um novo?</translation>
+<translation>Não foi possível encontrar sua pasta de notas. Deseja selecionar uma nova?</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="274"/>

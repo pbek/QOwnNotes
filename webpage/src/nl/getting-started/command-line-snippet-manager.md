@@ -72,7 +72,7 @@ Als je een `cmd:` toevoegt voor het in-line codeblok, zal het commando ook gevon
 - cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
 ```
 
-**`bash` or `shell` code blocks**, preceded by a heading 2 or higher as a description, can also be used for command snippets. Tags worden ook ondersteund als ze tussen de kop en het codeblok staan.
+**`bash` of `shell` codeblokken**, voorafgegaan door een kop 2 of hoger als beschrijving, kunnen ook worden gebruikt voor opdrachtfragmenten. Tags worden ook ondersteund als ze tussen de kop en het codeblok staan.
 
     ## Doe dit met een "bash" codeblok
 

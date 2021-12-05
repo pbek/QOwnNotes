@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs" sourcelanguage="en">
+<TS version="2.1" language="cs_CZ" sourcelanguage="en">
 <context>
 <name>AboutDialog</name>
 <message>
@@ -6482,22 +6482,22 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
 <source>Web application</source>
-<translation type="unfinished">Web application</translation>
+<translation>Webová aplikace</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
 <source>This also allows note files to be renamed</source>
-<translation type="unfinished">This also allows note files to be renamed</translation>
+<translation>Umožňuje také přejmenovat soubory poznámek</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="864"/>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-<translation type="unfinished">You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</translation>
+<translation>Ke svému serveru ownCloud můžete přistupovat z aplikace a spravovat například vyřazené poznámky a verze poznámek nebo sdílet poznámky. Tato integrace nesynchronizuje soubory poznámek. K synchronizaci souborů stále potřebujete nainstalovat synchronizačního klienta ownCloud.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1431"/>
 <source>If your password doesn't work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
+<translation>Pokud vaše heslo nefunguje, vytvořte heslo aplikace (tlačítko vpravo)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1455"/>

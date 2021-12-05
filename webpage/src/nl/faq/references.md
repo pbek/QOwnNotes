@@ -56,7 +56,7 @@ Wat andere mensen zeiden over QOwnNotes ...
 - [What comes after Evernote? A QOwnNotes review. | JawFodder](http://www.jawfodder.com/what-comes-after-evernote-a-qownnotes-review/)
 - [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/2017/05/03/taking-notes-nextcloud-qownnotes-notebooks/)
     - using [Notebooks](http://www.notebooksapp.com/) to sync Notes via WebDAV on iOS
-- [hierarchical note taking applications : linux](https://www.reddit.com/r/linux/comments/5me4wv/hierarchical_note_taking_applications/)
+- [hiërarchische toepassingen voor het maken van notities: linux](https://www.reddit.com/r/linux/comments/5me4wv/hierarchical_note_taking_applications/)
 - [QownNotes - De la prise de notes chiffrées sur votre cloud personnel - Korben](https://korben.info/qownnotes.html)
 - [The 6 Best Windows Notepad Alternatives](http://www.makeuseof.com/tag/best-windows-notepad-alternatives/)
 - [Synchronisation des notes (QOwnNotes) — Wiki de la mère Zaclys](https://wiki.zaclys.com/index.php/Synchronisation_des_notes_(QOwnNotes))

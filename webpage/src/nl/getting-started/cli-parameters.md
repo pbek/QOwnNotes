@@ -1,17 +1,17 @@
-# Opdrachtregelinterfaceparameters
+# Opdrachtregel-interface-parameters
 
 U kunt deze parameters gebruiken op de opdrachtregelinterface:
 
-| Parameter                    | Beschrijving                                                                                                                               |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `--help`                     | Toont het helpscherm                                                                                                                       |
-| `--version`                  | Prints out the version number of the application                                                                                           |
-| `--portable`                 | Runs the application in portable mode                                                                                                      |
-| `--clear-settings`           | Clears the settings and runs the application                                                                                               |
-| `--dump-settings`            | Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application |
-| `--session <name>`     | Runs the application in a different context for settings and internal files                                                                |
-| `--allow-multiple-instances` | Allows multiple instances of QOwnNotes to be started even if disallowed in the settings                                                    |
-| `--action <name>`      | Triggers a menu action after the application was started (see below)                                                                       |
+| Parameter                    | Beschrijving                                                                                                                        |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `--help`                     | Toont het helpscherm                                                                                                                |
+| `--version`                  | Drukt het versienummer van de applicatie af                                                                                         |
+| `--portable`                 | Start de applicatie in draagbare modus                                                                                              |
+| `--clear-settings`           | Wist de instellingen en start de applicatie                                                                                         |
+| `--dump-settings`            | Print een dump van de instellingen en andere informatie over de applicatie en omgeving in GitHub Markdown en sluit de applicatie af |
+| `--session <name>`     | Voert de applicatie uit in een andere context voor instellingen en interne bestanden                                                |
+| `--allow-multiple-instances` | Maakt het mogelijk om meerdere exemplaren van QOwnNotes te starten, zelfs als dit niet is toegestaan in de instellingen             |
+| `--action <name>`      | Activeert een menuactie nadat de applicatie is gestart (zie hieronder)                                                              |
 
 ::: tip
 Als u problemen ondervindt met uw installatie van QOwnNotes, wilt u misschien de toepassing starten met nieuwe instellingen zonder uw huidige instellingen te verliezen door de parameter `--session` te gebruiken.

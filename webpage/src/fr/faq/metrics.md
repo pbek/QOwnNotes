@@ -6,9 +6,9 @@ QOwnNotes (l'application elle-même) est **développée par une ou parfois deux 
 
 Les versions sont compilées pour un grand nombre de plate-formes (souvent de très vieilles versions de ces dernières). Les garder à jour représente beaucoup de travail.
 
-The metrics are the only dependable source of information about which versions of platforms and distributions QOwnNotes runs on. They also show which features are the most popular, so that decisions can be made concerning which versions to retire, which features need more work, and which are hardly used.
+Les statistiques d'utilisation sont la seule source fiable d'information concernant les versions des plate-formes et des distributions sur lesquelles QOwnNotes peut être utilisé. Elles montrent également quelques fonctions sont les plus populaires, ceci afin que des décisions puissent être prises concernant les version à retirer, les fonctions à peaufiner ou encore lesquelles sont rarement utilisées.
 
-The same applies to the user's selection of preferred languages, which promotes the improvement of the corresponding translations.
+Le même principe s'applique au choix des langues les plus populaires par les utilisateurs, choix qui encourage l'amélioration des traductions correspondantes.
 
 ## Où les statistiques d'utilisation sont-elles stockées ?
 

@@ -6,9 +6,9 @@ QOwnNotes (zoals in de applicatie zelf) is **ontwikkeld door één en soms twee 
 
 Releases zijn gebouwd voor veel platforms en distributies (vaak zeer oude versies ervan). Het is veel werk om ze bij te houden.
 
-Die Metriken sind die einzige zuverlässige Informationsquelle darüber, auf welchen Versionen von Plattformen und Distributionen QOwnNotes ausgeführt wird. They also show which features are the most popular, so that decisions can be made concerning which versions to retire, which features need more work, and which are hardly used.
+Die Metriken sind die einzige zuverlässige Informationsquelle darüber, auf welchen Versionen von Plattformen und Distributionen QOwnNotes ausgeführt wird. Sie zeigen auch, welche Funktionen am beliebtesten sind, sodass Entscheidungen getroffen werden können, welche Versionen eingestellt werden, welche Funktionen mehr Arbeit erfordern und welche kaum genutzt werden.
 
-The same applies to the user's selection of preferred languages, which promotes the improvement of the corresponding translations.
+Hetzelfde geldt voor de selectie van voorkeurstalen door de gebruiker, wat de verbetering van de bijbehorende vertalingen bevordert.
 
 ## Waar worden de statistieken opgeslagen?
 

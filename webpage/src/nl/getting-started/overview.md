@@ -172,7 +172,7 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 ## Uiterlijk
 - **Markdown-markering** van notities en een **markdown-voorbeeldmodus**
 - **Thema-ondersteuning voor donkere modus**
-- **Theming support**  voor de **markdown syntaxisaccentuering **
+- **Theming support** voor de **markdown syntaxisaccentuering**
 - Alle **panelen kunnen worden geplaatst waar u maar wilt**, ze kunnen zelfs **zweven** of **stapelen** (volledig dockbaar)
 - Ondersteuning voor **freedesktop-themapictogrammen**, u kunt QOwnNotes gebruiken met uw **native bureaubladpictogrammen** en met uw favoriete **donkere bureaubladthema**
 - **Distraction free mode**, **Full-screen mode** en **Typewriter mode**

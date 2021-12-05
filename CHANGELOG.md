@@ -5,6 +5,8 @@
   with the size of the heading
 - the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
   was updated to version 21.12.0 to support Nextcloud 23
+- added more translation (thank you mguerra, rawfreeamy, ivonkatran, i****myself,
+  chocolatine, marterra)
 
 ## 21.12.0
 - highlighting support for checkboxes list with an `X` (instead of `x`) was added
@@ -403,7 +405,7 @@
 - since notes in Nextcloud Notes on the web and on Android now allow renaming of
   notes this also is the new default setting for note folders in QOwnNotes
     - existing note folders will not be modified automatically
-- added more translation (thank you amirkbrpr, mguerra, rakekniven, ihatemyself, rawfreeamy, marterra)
+- added more translation (thank you amirkbrpr, mguerra, rakekniven, i****myself, rawfreeamy, marterra)
 
 ## 21.8.11
 - a few features were added to the todo dialog (for [#2210](https://github.com/pbek/QOwnNotes/issues/2210))
