@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.12.1
+- The `#`s in the Markdown headings will be now styled as "masked syntax", but with the size of the heading
+
 ## 21.12.0
 - highlighting support for checkboxes list with an `X` (instead of `x`) was added
   (for [#2313](https://github.com/pbek/QOwnNotes/issues/2313), thank you @sanderboom)
