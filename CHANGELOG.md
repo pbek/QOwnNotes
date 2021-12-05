@@ -2,7 +2,7 @@
 
 ## 21.12.1
 - The `#`s in the Markdown headings will be now styled as "masked syntax", but
-  with the size of the heading
+  with the size of the heading (for [#2321](https://github.com/pbek/QOwnNotes/issues/2321))
 - the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
   was updated to version 21.12.0 to support Nextcloud 23
 - added more translation (thank you mguerra, rawfreeamy, ivonkatran, i****myself,
