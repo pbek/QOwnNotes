@@ -1,7 +1,10 @@
 # QOwnNotes Changelog
 
 ## 21.12.1
-- The `#`s in the Markdown headings will be now styled as "masked syntax", but with the size of the heading
+- The `#`s in the Markdown headings will be now styled as "masked syntax", but
+  with the size of the heading
+- the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
+  was updated to version 21.12.0 to support Nextcloud 23
 
 ## 21.12.0
 - highlighting support for checkboxes list with an `X` (instead of `x`) was added
