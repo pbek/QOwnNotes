@@ -719,6 +719,12 @@ module.exports = {
         sort: entries => _.reverse( _.sortBy( entries, 'date' ) ),
       }
     ],
+    [
+      'vuepress-plugin-canonical', // https://github.com/IOriens/vuepress-plugin-canonical
+      {
+        baseURL: 'https://www.qownnotes.org' // base url for your canonical link, optional, default: ''
+      }
+    ],
   ],
   markdown: {
     lineNumbers: true

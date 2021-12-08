@@ -8455,6 +8455,11 @@ vuepress-html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
+vuepress-plugin-canonical@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/vuepress-plugin-canonical/-/vuepress-plugin-canonical-1.0.0.tgz#a8f69b8479da86d215a6a87bdea815caa564a298"
+  integrity sha512-R2mcc+bp9VbKBQ3YIbCqUbWcWfmWSp1NIEyNGiLKkrcZmyUF/+0D48BqMCTx61AgJzWPW5DJzB6VkmpjbMIDbA==
+
 vuepress-plugin-code-copy@^1.0.6:
   version "1.0.6"
   resolved "https://registry.npmjs.org/vuepress-plugin-code-copy/-/vuepress-plugin-code-copy-1.0.6.tgz#6431dab764b48b5b203e4936d98b1943651ce4ad"
