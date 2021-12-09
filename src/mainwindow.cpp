@@ -5800,7 +5800,7 @@ void MainWindow::filterNotes(bool searchForText) {
     ui->noteTreeWidget->scrollToTop();
 
     // filter the notes by text in the search line edit
-    filterNotesBySearchLineEditText();
+    filterNotesBySearchLineEditText(searchForText);
 
     if (NoteFolder::isCurrentShowSubfolders() &&
         !_showNotesFromAllNoteSubFolders) {
@@ -5845,7 +5845,7 @@ bool MainWindow::isNoteEditPaneEnabled() {
 /**
  * Does the note filtering by text in the search line edit
  */
-void MainWindow::filterNotesBySearchLineEditText() {
+void MainWindow::filterNotesBySearchLineEditText(bool searchInNote) {
     const QString searchText = ui->searchLineEdit->text();
 
     QTreeWidgetItemIterator it(ui->noteTreeWidget);
@@ -5853,8 +5853,10 @@ void MainWindow::filterNotesBySearchLineEditText() {
 
     // search notes when at least 2 characters were entered
     if (searchText.count() >= 2) {
-        // open search dialog
-        doSearchInNote(searchText);
+        if (searchInNote) {
+            // open search dialog
+            doSearchInNote(searchText);
+        }
 
         QVector<int> noteIdList = Note::searchInNotes(
             searchText,

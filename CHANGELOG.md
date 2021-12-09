@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.12.2
+- In-note searching while renaming a note via its headline is now prevented, to
+  prevent messing up the headline while typing (for [#2325](https://github.com/pbek/QOwnNotes/issues/2325))
+
 ## 21.12.1
 - The `#`s in the Markdown headings will be now styled as "masked syntax", but
   with the size of the heading (for [#2321](https://github.com/pbek/QOwnNotes/issues/2321))

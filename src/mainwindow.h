@@ -891,7 +891,7 @@ private:
 
     void highlightCurrentNoteTagsInTagTree();
 
-    void filterNotesBySearchLineEditText();
+    void filterNotesBySearchLineEditText(bool searchInNote = true);
 
     void filterNotes(bool searchForText = true);
 
