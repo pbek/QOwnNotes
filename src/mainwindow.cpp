@@ -6518,6 +6518,13 @@ void MainWindow::openLocalUrl(QString urlString) {
                                     "<strong>%1</strong>?")
                         .arg(fileName);
             } else {
+                // Open attachments with extensions that are used for notes externally
+                if (relativeFilePath.contains(QStringLiteral("attachments"))) {
+                    if (QDesktopServices::openUrl(url)) {
+                        return;
+                    }
+                }
+
                 promptQuestion = tr("Note was not found, create new note "
                                     "<strong>%1</strong> at path <strong>%2</strong>?")
                         .arg(fileName, relativeFilePath);
@@ -7306,6 +7313,48 @@ void MainWindow::insertNoteText(const QString &text) {
     c.insertText(text);
 }
 
+
+/**
+ * Inserts text as a file attachment into the current note
+ */
+bool MainWindow::insertTextAsAttachment(const QString &text, const QString &title) {
+    if (text.isEmpty()) {
+        return false;
+    }
+
+    // create a temporary file for the attachment
+    auto *tempFile =
+        new QTemporaryFile(QDir::tempPath() + QDir::separator() +
+                           QStringLiteral("text-XXXXXX.txt"));
+
+    if (!tempFile->open()) {
+        showStatusBarMessage(tr("Temporary file can't be opened"),
+                             3000);
+
+        return false;
+    }
+
+    // write file data to the temporary file
+    tempFile->write(text.toUtf8());
+    tempFile->flush();
+    tempFile->close();
+
+    // we need a reference to tempFile or else it will be gone before inserted
+    auto *file = new QFile(tempFile->fileName());
+
+    bool result = insertAttachment(file, title);
+
+    if (result) {
+        showStatusBarMessage(tr("Inserted text as text attachment file"), 3000);
+    }
+
+    // for some reason the temp file on disk will not be removed automatically
+    // without deleting the pointer manually
+    delete tempFile;
+
+    return result;
+}
+
 /**
  * Inserts a file attachment into the current note
  */
@@ -7820,6 +7869,13 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
             c.insertText(text);
 
             return;
+        }
+
+        // Insert text as attachment file
+        if (mimeData->hasText()) {
+            if (insertTextAsAttachment(mimeData->text())) {
+                return;
+            }
         }
     }
 

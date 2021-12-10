@@ -1042,6 +1042,8 @@ private:
 
     bool insertAttachment(QFile *file, const QString &title = QString());
 
+    bool insertTextAsAttachment(const QString &text, const QString &title = QString());
+
     static Qt::SortOrder toQtOrder(int order);
 
     void updatePanelsSortOrder();

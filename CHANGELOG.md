@@ -1,11 +1,17 @@
 # QOwnNotes Changelog
 
 ## 21.12.2
-- In-note searching while renaming a note via its headline is now prevented, to
+- in-note searching while renaming a note via its headline is now prevented, to
   prevent messing up the headline while typing (for [#2325](https://github.com/pbek/QOwnNotes/issues/2325))
+- you can now paste plain text from the clipboard into the note as text file
+  attachment with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd>
+  (for [#2327](https://github.com/pbek/QOwnNotes/issues/2327))
+- links to attachments with extensions, that are used for notes are now opened
+  externally instead of attempted to being opened as note (that doesn't exist)
+  (for [#2327](https://github.com/pbek/QOwnNotes/issues/2327))
 
 ## 21.12.1
-- The `#`s in the Markdown headings will be now styled as "masked syntax", but
+- the `#`s in the Markdown headings will be now styled as "masked syntax", but
   with the size of the heading (for [#2321](https://github.com/pbek/QOwnNotes/issues/2321))
 - the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
   was updated to version 21.12.0 to support Nextcloud 23 (for [#36](https://github.com/pbek/qownnotesapi/issues/36))
