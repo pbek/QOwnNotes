@@ -102,8 +102,8 @@ qc exec
 ```
 
 ```bash
-# Search and print command snippets
-qc search
+# Parancsrészletek keresése és nyomtatása
+qc keresés
 ```
 
 ## Configuratie

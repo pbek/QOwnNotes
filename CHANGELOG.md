@@ -9,6 +9,7 @@
 - links to attachments with extensions, that are used for notes are now opened
   externally instead of attempted to being opened as note (that doesn't exist)
   (for [#2327](https://github.com/pbek/QOwnNotes/issues/2327))
+- added more translation (thank you mguerra, amirkbrpr, ivonkatran, marcoxbresciani, rawfreeamy)
 
 ## 21.12.1
 - the `#`s in the Markdown headings will be now styled as "masked syntax", but

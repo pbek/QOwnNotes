@@ -149,7 +149,7 @@ QString downloadUrlToString(QUrl url);
 var html = script.downloadUrlToString("https://www.qownnotes.org");
 ```
 
-Puoi dare un'occhiata all'esempio [inserisci-titolo-con-link-da-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
+Puoi dare un'occhiata all'esempio [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
 
 Download di un URL nella cartella multimediale
 --------------------------------------
@@ -190,7 +190,7 @@ Inserimento di un file multimediale nella cartella multimediale
 
 ### Esempio
 ```js
-var markdown = script.insertMediaFile("/path/to/your/image.png");
+var markdown = script.insertMediaFile("/percorso/del/tuo/file.png");
 ```
 
 Puoi dare un'occhiata all'esempio [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
@@ -200,7 +200,7 @@ Inserimento di un file allegato nella cartella allegati
 
 ### Chiamata al metodo e parametri
 ```cpp
-  * Wrapper QML per inserire un file allegato nella cartella
+ * Wrapper QML per inserire un file allegato nella cartella
  * `attachments`e restituire l'URL dell'allegato o il testo markdown
  * dell'allegato relativi alla nota corrente
  *
@@ -276,7 +276,7 @@ Puoi anche assegnare scorciatoie locali e globali alle tue azioni personalizzate
 :::
 
 ::: warning
-Keep in mind that [freedesktop theme icons](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html) are mostly available only under Linux. So if you really want to use an icon under macOS or Windows you need to provide one with your script. To get the path of your script to set a proper path for your icon you can use the [scriptDirPath property](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script).
+Ricorda che le [icone a tema freedesktop](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html) sono principalmente disponibili solo in Linux. Quindi se vuoi davvero usare un'icona in macOS o Windows, devi fornirne una col tuo script. Per fare in modo che il tuo script definisca un percorso corretto per la tua icona puoi usare la [proprietà scriptDir](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script).
 :::
 
 ### Esempio
@@ -666,7 +666,7 @@ if (script.platformIsLinux()) {
 }
 ```
 
-Contrassegna la nota corrente
+Etichetta la nota corrente
 --------------------
 
 ### Chiamata al metodo e parametri
@@ -981,7 +981,7 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 script.informationMessageBox("The text I want to show", "Some optional title");
 ```
 
-Visualizzazione di una finestra di messaggio informativo
+Visualizzazione di una finestra di messaggio interrogativo
 ------------------------------
 
 ### Chiamata al metodo e parametri
@@ -1038,7 +1038,7 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
 ```
 
-Visualizzazione di una finestra di dialogo per il salvataggio del file
+Visualizzazione di una finestra di dialogo Salva file
 --------------------------
 
 ### Chiamata al metodo e parametri

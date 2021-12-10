@@ -40,12 +40,12 @@ noteDoubleClickedHook
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * Questa funzione viene chiamata dopo aver fatto doppio clic su una nota
+  * Questa funzione viene chiamata dopo aver fatto doppio clic su una
+  * nota
   *
   * @param {NoteApi} note - l'oggetto nota su cui è stato fatto clic
   */
 funzione noteDoubleClickedHook (note);
-
 ```
 
 Potresti voler dare un'occhiata all'esempio [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-open.qml).
@@ -102,11 +102,13 @@ insertingFromMimeDataHook
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * Questa funzione viene chiamata quando html o un file multimediale viene incollato in una nota con `Ctrl + Maiusc + V`
+  * Questa funzione viene chiamata quando html o un file multimediale
+  * viene incollato in una nota con `Ctrl + Maiusc + V`
   *
   * @param text testo dell'oggetto QMimeData
   * @param html html dell'oggetto QMimeData
-  * @ restituisce la stringa che deve essere inserita al posto del testo dall'oggetto QMimeData
+  * @returns la stringa che deve essere inserita al posto del testo
+  * dall'oggetto QMimeData
  */
 function insertingFromMimeDataHook(text, html);
 ```
@@ -119,15 +121,15 @@ handleNoteTextFileNameHook
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * Questa funzione viene chiamata quando una nota viene archiviata su disco se
-  * "Consenti al nome del file della nota di essere diverso dal titolo" è abilitato
-  * nelle impostazioni
+  * Questa funzione viene chiamata quando una nota viene archiviata su
+  * disco se "Consenti al nome del file della nota di essere diverso dal
+  * titolo" è abilitato nelle impostazioni
   *
   * Ti permette di modificare il nome del file della nota
   * Tieni presente che devi preoccuparti tu stesso dei nomi duplicati!
- *
-  * Restituisce una stringa vuota se il nome del file della nota non deve
-  * essere modificato
+   *
+  * Restituisce una stringa vuota se il nome del file della nota non
+  * deve essere modificato
   *
   * @param {NoteApi} note - l'oggetto nota della nota memorizzata
   * @return {string} il nome del file della nota
@@ -143,12 +145,14 @@ handleNoteNameHook
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * Questa funzione viene chiamata quando il nome della nota è determinato per una nota
-  *
-  * Ti permette di modificare il nome della nota che viene visualizzata
-  *
-  * Restituisce una stringa vuota se il nome della nota non deve essere modificato
-  *
+ * Questa funzione viene chiamata quando il nome della nota è
+ * determinato per una nota
+ *
+ * Ti permette di modificare il nome della nota che viene visualizzata
+ *
+ * Restituisce una stringa vuota se il nome della nota non deve essere
+ * modificato
+ *
  * @param {NoteApi} note - the note object of the stored note
  * @return {string} the name of the note
  */
@@ -165,16 +169,17 @@ handleNewNoteHeadlineHook
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * Questa funzione viene chiamata prima della creazione di una nota
-  *
-  * Ti permette di modificare il titolo della nota prima che venga creata
-  * Nota che devi prenderti cura di un nome di nota univoco, altrimenti
-  * la nuova nota non verrà creata, si troverà solo nell'elenco delle note
-  *
-  * È possibile utilizzare questo metodo per creare modelli di note
-  *
-  * @param testo del titolo che verrebbe utilizzato per creare il titolo
-  * @return {string} il titolo della nota
+ * Questa funzione è chiamata prima della creazione di una nota
+ *
+ * Permette di modificare l'intestazione della nota prima che sia creata
+ * nota che devi preoccuparti che il nome della nota sia univoco,
+ * altrimenti la nuova nota non sarà creata ma sarà semplicemente
+ * disponibile nell'elenco delle note
+ *
+ * Puoi usare questo metodo per creare modelli di note
+ *
+ * @param headline testo che deve essere usato per creare l'intestazione
+ * @return {string} il titolo della nota
  */
 function handleNewNoteHeadlineHook(headline);
 ```
@@ -187,19 +192,25 @@ preNoteToMarkdownHtmlHook
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * Questa funzione viene chiamata prima che venga generato l'html markdown di una nota
-  *
-  * Ti consente di modificare ciò che viene passato al convertitore markdown in html
-  *
-  * Il metodo può essere utilizzato ad esempio in più script per eseguire il rendering del codice (come LaTeX math o mermaid)
-  * alla sua rappresentazione grafica per l'anteprima
-  *
-  * La nota non verrà modificata in questo processo
-  *
-  * @param {NoteApi} note - l'oggetto nota
-  * @param {string} markdown - il markdown che sta per essere convertito in html
-  * @param {string} forExport - true se l'html viene utilizzato per un'esportazione, false per l'anteprima
-  * @return {string} il markdown modificato o una stringa vuota se non si deve modificare nulla
+ * Questa funzione viene chiamata prima che venga generato l'html
+ * markdown di una nota
+ *
+ * Ti consente di modificare ciò che viene passato al convertitore
+ * markdown in html
+ *
+ * Il metodo può essere utilizzato ad esempio in più script per eseguire
+ * il rendering del codice (come LaTeX math o mermaid) nella sua
+ * rappresentazione grafica per l'anteprima
+ *
+ * La nota non verrà modificata in questo processo
+ *
+ * @param {NoteApi} note - l'oggetto nota
+ * @param {string} markdown - il markdown che sta per essere convertito
+ *                            in html
+ * @param {string} forExport - true se l'html viene usato per
+ *                             un'esportazione, false per l'anteprima
+ * @return {string} il markdown modificato o una stringa vuota se non si
+ *                  deve modificare nulla
  */
 function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
@@ -212,17 +223,21 @@ noteToMarkdownHtmlHook
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * Questa funzione viene chiamata quando viene generato l'html markdown di una nota
-  *
-  * Ti permette di modificare questo html
-  * Questo è ad esempio chiamato prima dall'anteprima della nota
-  *
-  * Il metodo può essere utilizzato in più script per modificare l'html dell'anteprima
-  *
-  * @param {NoteApi} note - l'oggetto nota
-  * @param {string} html - l'html che sta per essere renderizzato
-  * @param {string} forExport - true se l'html viene utilizzato per un'esportazione, false per l'anteprima
-  * @return {string} l'html modificato o una stringa vuota se non si deve modificare nulla
+ * Questa funzione viene chiamata quando viene generato l'html markdown
+ * di una nota
+ *
+ * Ti permette di modificare questo html
+ * Questo è chiamato ad esempio prima dell'anteprima della nota
+ *
+ * Il metodo può essere usato in più script per modificare l'html
+ * dell'anteprima
+ *
+ * @param {NoteApi} note - l'oggetto nota
+ * @param {string} html - l'html che sta per essere renderizzato
+ * @param {string} forExport - true se l'html viene usato per
+ *                             un'esportazione, false per l'anteprima
+ * @return {string} l'html modificato o una stringa vuota se non si deve
+ *                  modificare nulla
  */
 function noteToMarkdownHtmlHook(note, html, forExport);
 ```
@@ -237,12 +252,14 @@ encryptionHook
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * Questa funzione viene chiamata quando il testo deve essere crittografato o decrittografato
-  *
-  * @param stringa di testo il testo da crittografare o decrittografare
-  * @param password stringa la password
-  * @param decrypt bool se è richiesta una falsa crittografia, se è richiesta una vera decrittografia
-  * @return il testo crittografato decrittografato
+ * Questa funzione viene chiamata quando il testo deve essere
+ * crittografato o decrittografato
+ *
+ * @param text string il testo da crittografare o decrittografare
+ * @param password string la password
+ * @param decrypt bool se falso, si chiede di criptare, se vero si
+ *                     chiede di descrittare
+ * @return il testo crittografato/decrittografato
  */
 function encryptionHook(text, password, decrypt);
 ```
@@ -257,66 +274,71 @@ Puoi implementare il tuo meccanismo di etichettatura delle note, ad esempio con 
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * Gestisce l'etichettatura delle note per una nota
+  * Gestisce l'etichettatura per una nota
   *
-  * Questa funzione viene chiamata quando i tag vengono aggiunti, rimossi o rinominati in
-  * dovrebbe essere elencata una nota o i tag di una nota
+  * Questa funzione viene chiamata quando si aggiunge, toglie o rinomina
+  * un'etichetta in una nota oppure sono elencate le etichette di una
+  * nota
   *
   * @param note
-  * L'azione @param può essere "add", "remove", "rename" o "list"
-  * @param tagName nome del tag da aggiungere, rimuovere o rinominare
-  * @param newTagName nome del tag da rinominare se action = "rename"
-  * @return nota stringa di testo o elenco di stringhe di nomi di tag (se action = "list")
+  * @param action può essere "add", "remove", "rename" o "list"
+  * @param tagName nome dell'etichetta da aggiungere, rimuovere o
+                   rinominare
+  * @param newTagName nome dell'etichetta da rinominare se action =
+                      "rename"
+  * @return nota stringa di testo o elenco di stringhe di nomi di
+  *         etichette (se action = "list")
  */
 function noteTaggingHook(note, action, tagName, newTagName);
 ```
 
--   non appena viene attivato uno script che implementa la nuova funzione `noteTaggingHook` il tagging delle note sarà gestito da quella funzione
--   le seguenti funzionalità dovrebbero funzionare tramite l'interfaccia utente QOwnNotes
-    -   inizialmente importando tag come `@tag` dalle note e sovrascrivendo l'assegnazione di tag corrente
-        -   non perderai il tuo albero dei tag, solo il precedente assegnamento alle note
-        -   puoi comunque spostare i tag in altri tag
-        -   se più di un tag ha lo stesso nome nel tuo albero dei tag, verrà assegnato il primo hit
-    -   l'aggiunta di un tag a una nota aggiungerà il tag al testo della nota
-    -   la rimozione di un tag da una nota rimuoverà il tag dal testo della nota
-    -   la rimozione dei tag nell'elenco dei tag rimuoverà quei tag dalle tue note
-    -   rinominare i tag nell'elenco dei tag rinominerà quei tag nelle note
-    -   l'etichettatura collettiva delle note nell'elenco delle note aggiungerà tali tag alle note
-    -   la rimozione collettiva di tag dalle note nell'elenco delle note rimuoverà tali tag dalle note
-    -   l'applicazione attiverà una serie di azioni `aggiungi` e `rimuovi` per tutti i tag selezionati e i loro figli su tutte le note se i tag vengono spostati nel pannello dei tag
+-   non appena viene attivato uno script che implementa la nuova funzione `noteTaggingHook` l'etichettatura delle note sarà gestita da quella funzione
+-   le seguenti funzionalità dovrebbero essere disponibili tramite l'interfaccia utente QOwnNotes
+    -   inizialmente importando le etichette `@tag` dalle note e sovrascrivendo l'assegnazione dell'etichetta corrente
+        -   non perderai il tuo albero delle etichette, solo il precedente assegnamento alle note
+        -   puoi comunque spostare le etichette in altre etichette
+        -   se ci sono più etichette collo stesso nome nel tuo albero delle etichette, verrà assegnata la prima corrispondenza
+    -   l'aggiunta di un'etichetta a una nota aggiungerà l'etichetta al testo della nota
+    -   la rimozione di un'etichetta da una nota rimuoverà l'etichetta dal testo della nota
+    -   la rimozione di etichettw dall'elenco rimuoverà le etichette dalle tue note
+    -   rinominare le etichette nell'elenco rinominerà le etichette nelle note
+    -   l'etichettatura collettiva delle note nell'elenco delle note aggiungerà tali etichette alle note
+    -   la rimozione collettiva di etichette dalle note nell'elenco delle note rimuoverà tali etichette dalle note
+    -   l'applicazione attiverà una serie di azioni `aggiungi` e `rimuovi` per tutte le etichette selezionate e i loro figli su tutte le note se le etichette vengono spostate nel pannello delle etichette
 
-Potresti voler dare un'occhiata all'esempio [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml) per implementare il tuo meccanismo di tagging.
+Potresti voler dare un'occhiata all'esempio [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml) per implementare il tuo meccanismo di etichettatura.
 
-Assicurati che la tua azione `lista` sia veramente veloce, perché verrà eseguita per ogni nota ogni volta che la cartella delle note viene ricaricata!
+Assicurati che la tua azione `list` sia veramente veloce, perché sarà eseguita per ogni nota ogni volta che la cartella delle note viene ricaricata!
 :::
 
 noteTaggingByObjectHook
 ----------------------
 
-Analogamente a [noteTaggingHook](#notetagginghook) puoi implementare il tuo meccanismo di tagging delle note, ma non sei vincolato ai nomi dei tag nella radice dell'albero dei tag. In questo modo puoi utilizzare l'intero albero dei tag invece che solo un elenco di tag.
+Analogamente a [noteTaggingHook](#notetagginghook) puoi implementare il tuo meccanismo di etichettatura delle note, ma non sei vincolato ai nomi delle etichette nella radice dell'albero delle etichette. In questo modo puoi utilizzare l'intero albero delle etichette invece che solo un elenco di etichette.
 
-Con `noteTaggingByObjectHook` ottieni un oggetto `TagApi` come parametro, invece del nome di un tag. E come risultato per l'azione `list` è necessario fornire un elenco di ID tag.
+Con `noteTaggingByObjectHook` ottieni un oggetto `TagApi` come parametro, invece del nome di un'etichetta. E come risultato per l'azione `list` è necessario fornire un elenco di ID etichetta.
 
-Ciò significa anche che devi creare tu stesso i tag mancanti per poter fornire un elenco di ID tag già esistenti per l'azione `list`.
+Ciò significa anche che devi creare tu stesso le etichette mancanti per poter fornire un elenco di ID etichetta già esistenti per l'azione `list`.
 
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * Gestisce l'etichettatura delle note per una nota
-  *
-  * Questa funzione viene chiamata quando i tag vengono aggiunti, rimossi o rinominati in
-  * dovrebbe essere elencata una nota o i tag di una nota
-  *
-  * @param note
-  * L'azione @param può essere "add", "remove", "rename" o "list"
-  * Tag @param da aggiungere, rimuovere o rinominare
-  * @param newTagName nome del tag da rinominare se action = "rename"
-  * @return nota stringa di testo o elenco di stringhe di ID tag (se action = "list")
+ * Gestisce l'etichettatura per una nota
+ *
+ * Questa funzione viene chiamata quando si aggiunge, toglie o rinomina
+ * un'etichetta in una nota oppure sono elencate le etichette di una
+ * nota
+ *
+ * @param note
+ * @param action può essere "add", "remove", "rename" o "list"
+ * @param tag nome dell'etichetta da aggiungere, rimuovere o rinominare
+ * @param newTagName nome dell'etichetta da rinominare se action =
+ *        "rename"
  */
 function noteTaggingByObjectHook(note, action, tag, newTagName);
 ```
 
-Puoi dare un'occhiata all'esempio [tagging delle note per oggetto.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml) per implementare il tuo meccanismo di tagging.
+Puoi dare un'occhiata all'esempio [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml) per implementare il tuo meccanismo di etichettatura.
 
 autocompletionHook
 ------------------
@@ -326,10 +348,12 @@ autocompletionHook
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * Chiama la funzione autocompletionHook per tutti i componenti dello script
-  * Questa funzione viene chiamata quando viene richiamato il completamento automatico in una nota
-  *
-  * @return QStringElenco di testo per l'elenco di completamento automatico
+ * Chiama la funzione autocompletionHook per tutti i componenti dello
+ * script
+ * Questa funzione viene chiamata quando viene richiamato il
+ * completamento automatico in una nota
+ *
+ * @return QStringList testi per l'elenco di completamento automatico
  */
 function callAutocompletionHook();
 ```
@@ -344,12 +368,16 @@ Questo hook viene chiamato quando i dati vengono inviati dall'estensione del bro
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * @param requestType può essere "page" o "selection"
-  * @param pageUrl l'URL della pagina web in cui è stata effettuata la richiesta
-  * @param pageTitle il titolo della pagina web in cui è stata effettuata la richiesta
-  * @param rawData i dati che sono stati trasmessi, html per requestType "page" o testo normale per requestType "selezione"
-  * @param screenshotDataUrl l'URL dei dati dello screenshot se la pagina web in cui è stata effettuata la richiesta
-  * @return true se i dati sono stati gestiti da un hook
+ * @param requestType può essere "page" o "selection"
+ * @param pageUrl l'URL della pagina web in cui è stata effettuata la
+ *                richiesta
+ * @param pageTitle il titolo della pagina web in cui è stata effettuata
+ *                  la richiesta
+ * @param rawData i dati che sono stati trasmessi, html per requestType
+ *                "page" o testo normale per requestType "selezione"
+ * @param screenshotDataUrl l'URL dei dati dello screenshot se la pagina
+ *                          web in cui è stata effettuata la richiesta
+ * @return true se i dati sono stati gestiti da un hook
  */
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
@@ -359,18 +387,26 @@ Puoi dare un'occhiata agli esempi [websocket-raw-data-new-note.qml](https://gith
 onDetachedProcessCallback
 -------------------------
 
-Questo hook viene chiamato quando viene eseguito un thread di script di [startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background).
+Questo hook viene chiamato quando un thread dello script [startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background) completa l'esecuzione.
 
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * Questa funzione viene chiamata quando viene eseguito un thread di script.
- * Hint: thread[1]==0 helps to determine if a bulk of started processes for a certain identifier is done.
+ * Questa funzione viene chiamata quando un thread di script completa
+ * l'esecuzione.
+ * Suggerimento: thread[1]==0 aiuta a capire se l'insieme di processi di
+ * un certo identificatore è terminato.
  *
- * @param {QString} callbackIdentifier - the provided id when calling startDetachedProcess()
- * @param {QString} resultSet - the result of the process
- * @param {QVariantList} cmd - the entire command array [0-executablePath, 1-parameters, 2-exitCode]
- * @param {QVariantList} thread - the thread information array [0-passed callbackParameter, 1-remaining threads for this identifier]
+ * @param {QString} callbackIdentifier - l'id fornito chiamando
+ *                                       startDetachedProcess()
+ * @param {QString} resultSet - il risultato del processo
+ * @param {QVariantList} cmd - l'array dell'intero comando
+ *                             [0-percorso dell'eseguibile,
+ *                              1-parametri,
+ *                              2-codice di uscita]
+ * @param {QVariantList} thread - l'array di informazioni sul thread
+ *                                [0-parametro callback fornito,
+ *                                 1-thread rimanenti per questo id]
  */
 function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
 ```
@@ -383,9 +419,13 @@ windowStateChangedHook
 ### Chiamata al metodo e parametri
 ```js
 /**
-* Questa funzione viene chiamata dopo che è stato attivato un evento WindowStateChange
-  *
-  * @param {QString} windowState - il nuovo stato della finestra, il valore del parametro può essere "minimizzato", "ingrandito", "schermo intero", "attivo" o "nostate"
+ * Questa funzione viene chiamata dopo che è stato attivato un evento
+ * WindowStateChange
+ *
+ * @param {QString} windowState - il nuovo stato della finestra, il
+ *                                valore del parametro può essere
+ *                                "minimized", "maximized",
+ *                                "fullscreen", "active" o "nostate"
  */
 function windowStateChangedHook(windowState);
 ```

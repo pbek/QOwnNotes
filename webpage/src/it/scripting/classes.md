@@ -98,20 +98,23 @@ class MainWindow {
     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
             bool forceBuild = false, bool forceLoad = false);
     Q_INVOKABLE void focusNoteTextEdit();
-    // Creates a new note subfolder in the current subfolder
+    // Crea una nuova sottocartella note nella sottocartella corrente
     Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
-    // Inserts html in the current note as markdown
-    // This method also downloads remote images and transforms "data:image"
-    // urls to local images stored in the media directory
+    // Inserisce HTML nella nota corrente come markdown
+    // Questo metodo scarica anche le immagini remote e trasforma
+    // "data:image" URL in immagini locali memorizzate nella cartella
+    // media
     Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
-    // Reloads the current note by id
-    // This is useful when the path or filename of the current note changed
+    // Ricarica la nota corrente per id
+    // Questo viene utile quando il percorso o il nome del file della
+    // nota corrente sono cambiati
     Q_INVOKABLE void reloadCurrentNoteByNoteId();
-    // Returns the list of workspace UUIDs
+    // Restituisce gli UUID degli spazi di lavoro
     Q_INVOKABLE QStringList getWorkspaceUuidList();
-    // Returns the UUID of a workspace, passing in the workspace name
+    // Restituisce l'UUID di uno spazio di lavoro, passandogli il nome
+    // dello spazio di lavoro
     Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
-    // Sets the current workspace by UUID
+    // Imposta lo spazio di lavoro corrente tramite UUID
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
 };
 ```
