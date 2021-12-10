@@ -78,9 +78,8 @@ void QOwnNotesMarkdownTextEdit::setFormatStyle(
  * @param fontSize
  */
 void QOwnNotesMarkdownTextEdit::overrideFontSizeStyle(int fontSize) {
-    QSettings settings;
     bool overrideInterfaceFontSize =
-        settings.value(QStringLiteral("overrideInterfaceFontSize"), false)
+        QSettings().value(QStringLiteral("overrideInterfaceFontSize"), false)
             .toBool();
 
     // remove old style
@@ -158,10 +157,8 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     setFormatStyle(MarkdownHighlighter::HighlighterState::CodeOther);
 
 #ifdef Q_OS_WIN32
-    QSettings settings;
-
     // set the selection background color to a light blue if not in dark mode
-    if (!settings.value(QStringLiteral("darkMode")).toBool()) {
+    if (!QSettings().value(QStringLiteral("darkMode")).toBool()) {
         // light green (#9be29b) could be another choice, but be aware that
         // this color will be used for mouse and keyboard selections too
         setStyleSheet(styleSheet() +
@@ -533,8 +530,7 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
  * Highlights the current line if enabled in the settings
  */
 void QOwnNotesMarkdownTextEdit::highlightCurrentLine() {
-    QSettings settings;
-    if (!settings.value(QStringLiteral("Editor/highlightCurrentLine"), true)
+    if (!QSettings().value(QStringLiteral("Editor/highlightCurrentLine"), true)
              .toBool()) {
         return;
     }
