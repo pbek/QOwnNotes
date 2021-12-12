@@ -7855,6 +7855,11 @@ void MainWindow::dropEvent(QDropEvent *e) {
  * produced by a drop event or a paste action
  */
 void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
+//    qDebug() << __func__ << " - 'mimeData->hasText()': " << mimeData->hasText();
+//    qDebug() << __func__ << " - 'mimeData->hasHtml()': " << mimeData->hasHtml();
+//    qDebug() << __func__ << " - 'mimeData->hasImage()': " << mimeData->hasImage();
+//    qDebug() << __func__ << " - 'mimeData->hasUrls()': " << mimeData->hasUrls();
+
     // check if a QML wants to set the inserted text
     if (mimeData->hasText() || mimeData->hasHtml()) {
         ScriptingService *scriptingService = ScriptingService::instance();
@@ -7870,18 +7875,9 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
 
             return;
         }
-
-        // Insert text as attachment file
-        if (mimeData->hasText()) {
-            if (insertTextAsAttachment(mimeData->text())) {
-                return;
-            }
-        }
     }
 
-    if (mimeData->hasHtml()) {
-        insertHtmlAsMarkdownIntoCurrentNote(mimeData->html());
-    } else if (mimeData->hasUrls()) {
+    if (mimeData->hasUrls()) {
         int successCount = 0;
         int failureCount = 0;
         int skipCount = 0;
@@ -7992,6 +7988,23 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                 showStatusBarMessage(tr("Temporary file can't be opened"),
                                      3000);
             }
+        }
+    } else if (mimeData->hasText() || mimeData->hasHtml()) {
+        const auto textEdit = activeNoteTextEdit();
+        auto rect = textEdit->cursorRect(textEdit->textCursor());
+        //    const auto pos = textEdit->cursor().pos();
+        const QPoint globalPos = textEdit->mapToGlobal(rect.bottomRight());
+        QMenu menu;
+
+        QAction *htmlAction = menu.addAction(tr("Paste &HTML as markdown"));
+        QAction *textAttachmentAction = menu.addAction(tr("Paste as &text file attachment"));
+        QAction *selectedItem = menu.exec(globalPos);
+
+        if (selectedItem == htmlAction) {
+            insertHtmlAsMarkdownIntoCurrentNote(mimeData->html());
+        } else if (selectedItem == textAttachmentAction) {
+            // Insert text as attachment file
+            insertTextAsAttachment(mimeData->text());
         }
     }
 }
