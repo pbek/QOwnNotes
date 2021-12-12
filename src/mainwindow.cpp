@@ -6501,6 +6501,13 @@ void MainWindow::openLocalUrl(QString urlString) {
                     "\\/"));
             }
 
+            // Open attachments with extensions that are used for notes externally
+            if (relativeFilePath.contains(QStringLiteral("attachments"))) {
+                if (QDesktopServices::openUrl(url)) {
+                    return;
+                }
+            }
+
             if (!relativeFilePath.isEmpty() && !NoteFolder::isCurrentHasSubfolders()) {
                 Utils::Gui::warning(
                     this, tr("Note was not found"),
@@ -6518,13 +6525,6 @@ void MainWindow::openLocalUrl(QString urlString) {
                                     "<strong>%1</strong>?")
                         .arg(fileName);
             } else {
-                // Open attachments with extensions that are used for notes externally
-                if (relativeFilePath.contains(QStringLiteral("attachments"))) {
-                    if (QDesktopServices::openUrl(url)) {
-                        return;
-                    }
-                }
-
                 promptQuestion = tr("Note was not found, create new note "
                                     "<strong>%1</strong> at path <strong>%2</strong>?")
                         .arg(fileName, relativeFilePath);

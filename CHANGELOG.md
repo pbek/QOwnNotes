@@ -4,6 +4,8 @@
 - pasting of HTML as Markdown and dropping of images is now fixed again, and you
   can select if you want to paste HTML as Markdown or as text file attachment
   (for [#2327](https://github.com/pbek/QOwnNotes/issues/2327))
+- opening of text file attachments now also works if note sub-folders are disabled
+  (for [#2327](https://github.com/pbek/QOwnNotes/issues/2327))
 
 ## 21.12.2
 - in-note searching while renaming a note via its headline is now prevented, to
