@@ -275,7 +275,7 @@
 - [خسته از برنامه های یادداشت برداری | Hacker News](https://news.ycombinator.com/item?id=23888799&p=2)
 - [Mark Text : un éditeur de texte encore jeune, mais très prometteur](https://www.nextinpact.com/article/44807/mark-text-editeur-texte-encore-jeune-mais-tres-prometteur)
 - [انجمن سینولوژی](https://community.synology.com/enu/forum/1/post/124951)
-- [Trilium Notes - new note taking application : linux](https://www.reddit.com/r/linux/comments/9c34b8/trilium_notes_new_note_taking_application/e581cs1/)
+- [Trilium Notes - برنامه جدید یادداشت برداری: لینوکس](https://www.reddit.com/r/linux/comments/9c34b8/trilium_notes_new_note_taking_application/e581cs1/)
 - <https://github.com/noraj/OSCP-Exam-Report-Template-Markdown>
 - [Inspire Writer - Voxcaster](https://www.vox.me.uk/post/2020/04/inspire-writer)
 - [Programmi Blocco notes alternative al Notepad su Windows - Navigaweb.net](https://www.navigaweb.net/2011/01/programmi-blocco-note-per-sostituire-il.html)
