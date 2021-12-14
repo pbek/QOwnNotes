@@ -50,7 +50,7 @@ graph TB
 ## Markdown note files
 
 - You **own** all your notes and media / attachment files!
-- Yours notes are stored as **plain-text Markdown files** on your desktop computer
+- Your notes are stored as **plain-text Markdown files** on your desktop computer
 - You can use any text editor you like beside QOwnNotes to view or edit your note files
 - **Sync your notes** with other devices (desktop & mobile) with your [Nextcloud](https://nextcloud.com/)
   or [ownCloud](https://owncloud.org/) sync client to your server
