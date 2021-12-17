@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.12.4
+- when doing a regular expression search in a note a stuck application is now prevented
+  when the user enters just start or end markers (for [#2302](https://github.com/pbek/QOwnNotes/issues/2302))
+
 ## 21.12.3
 - pasting of HTML as Markdown and dropping of images is now fixed again, and you
   can select if you want to paste HTML as Markdown or as text file attachment
