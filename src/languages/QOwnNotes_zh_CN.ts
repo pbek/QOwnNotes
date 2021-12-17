@@ -2546,7 +2546,7 @@
 <location filename="../mainwindow.ui" line="1990"/>
 <location filename="../mainwindow.ui" line="1993"/>
 <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
-<translation>打开 #qownnotes IRC 频道，你必须保持在线以获得回复</translation>
+<translation>打开 #qownnotes IRC (Kiwi) 频道，你必须保持在线以获得回复</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2057"/>
@@ -6607,7 +6607,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6326"/>
 <source>Tag name for commands notes</source>
-<translation type="unfinished">Tag name for commands notes</translation>
+<translation>书签命令的标签名称</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6333"/>
@@ -9359,7 +9359,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../main.cpp" line="109"/>
 <source>Prints out the version number.</source>
-<translation type="unfinished">Prints out the version number.</translation>
+<translation>打印版本号</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="114"/>

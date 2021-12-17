@@ -3310,7 +3310,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../mainwindow.cpp" line="7348"/>
 <source>Inserted text as text attachment file</source>
-<translation type="unfinished">Inserted text as text attachment file</translation>
+<translation>Inserir el text com un adjunt de fitxer de text</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7520"/>
@@ -4221,12 +4221,12 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../mainwindow.cpp" line="7999"/>
 <source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
+<translation>Copia l'&amp;HTML com a markdown</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8000"/>
 <source>Paste as &amp;text file attachment</source>
-<translation type="unfinished">Paste as &amp;text file attachment</translation>
+<translation>Copia com un adjunt de fitxer de &amp;text</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8055"/>
@@ -9410,7 +9410,7 @@ Això no es pot desfer!</translation>
 <message>
 <location filename="../main.cpp" line="109"/>
 <source>Prints out the version number.</source>
-<translation type="unfinished">Prints out the version number.</translation>
+<translation>Mostra el número de versió.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="114"/>

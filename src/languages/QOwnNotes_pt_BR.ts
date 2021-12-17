@@ -4222,12 +4222,12 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <location filename="../mainwindow.cpp" line="7999"/>
 <source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
+<translation>Cole &amp;HTML como uma remarcação</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8000"/>
 <source>Paste as &amp;text file attachment</source>
-<translation type="unfinished">Paste as &amp;text file attachment</translation>
+<translation>Cole como anexo de arquivo &amp;text</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8055"/>

@@ -3360,7 +3360,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <message>
 <location filename="../mainwindow.cpp" line="7348"/>
 <source>Inserted text as text attachment file</source>
-<translation type="unfinished">Inserted text as text attachment file</translation>
+<translation>Text vložený jako textový soubor přílohy</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7520"/>
@@ -4305,12 +4305,12 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <message>
 <location filename="../mainwindow.cpp" line="7999"/>
 <source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
+<translation>Vložte &amp;HTML jako Markdown</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8000"/>
 <source>Paste as &amp;text file attachment</source>
-<translation type="unfinished">Paste as &amp;text file attachment</translation>
+<translation>Vložte jako přílohu &amp;textového souboru</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8055"/>
@@ -6523,7 +6523,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1862"/>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
-<translation type="unfinished">You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</translation>
+<translation>Ke správě seznamů úkolů můžete přistupovat k serveru ownSloud nebo obecnému serveru CalDAV.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2220"/>
@@ -6603,37 +6603,37 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4251"/>
 <source>Note file extensions</source>
-<translation type="unfinished">Note file extensions</translation>
+<translation>Přípony souborů s poznámkami</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4289"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
-<translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
+<translation>Soubory s uvedenými příponami souborů jsou rozpoznány jako poznámky. Vybraná přípona souboru se použije pro nové poznámky.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4299"/>
 <source>Add a new note file extension</source>
-<translation type="unfinished">Add a new note file extension</translation>
+<translation>Přidat novou příponu souboru s poznámkami</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4313"/>
 <source>Remove selected note file extension</source>
-<translation type="unfinished">Remove selected note file extension</translation>
+<translation>Odebrat vybranou příponu souboru s poznámkami</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4444"/>
 <source>Checks the disk database integrity and fixes problems</source>
-<translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
+<translation>Zkontroluje integritu databáze disku a opraví problémy</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4447"/>
 <source>Check integrity</source>
-<translation type="unfinished">Check integrity</translation>
+<translation>Zkontrolovat integritu</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4454"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
-<translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
+<translation>Upozorňujeme, že novou inicializací databáze se také odstraní položky úkolů uložené v mezipaměti a nakonfigurované složky s poznámkami a skripty!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4537"/>

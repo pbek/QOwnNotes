@@ -156,12 +156,12 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 - A Nextcloud / ownCloud **témalistáinak kezelése** (**Nextcloud-feladatok** vagy **Tasks Plus** / **Calendar Plus**) vagy használjon egy másik **CalDAV szervert** a feladatok szinkronizálásához
 - A jegyzetek régebbi **verziói** **visszaállíthatók** a **Nextcloud / ownCloud** szerverről
 - **A kukába helyezett jegyzetek** **visszaállíthatók** a **Nextcloud / ownCloud** szerverről
-- A jegyzetfájlok **külső változásai** ** figyelésre kerülnek** (a jegyzetek vagy a jegyzetlista újratöltődnek)
+- A jegyzetfájlok **külső változásai** **itt megfigyelhetők** (a jegyzetek vagy a jegyzetlista újratöltődnek)
 - A **hierarchikus jegyzetcímkézés** és a **jegyzetmappák** támogatása
 - Opcionális jegyzetek **titkosítása** (beépített AES-256 vagy használhat egyedi titkosítási módszereket, például **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) vagy **PGP** ([titkosítás-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
 - A **jegyzetek mappa** **szabadon választható** (több jegyzetmappa is használható)
 - A jegyzetek **alsztring keresése** lehetséges, és a keresési eredmények kiemelésre kerülnek a jegyzetekben
-- [**Estensione del browser**](browser-extension.md) per **aggiungere note dal testo selezionato**, **fare screenshot** o **gestire i tuoi segnalibri**
+- [**Böngészőbővítmény**](browser-extension.md): **jegyzetek hozzáadásához a kijelölt szöveghez**, **képernyőképek készítéséhez** vagy **könyvjelzők kezeléséhez**
 - [**Helyesírás-ellenőrzés**](../editor/spellchecking.md) támogatás
 - **Hordozható mód** a QOwnNotes hordozásához USB-meghajtókon
 - **A szkriptek támogatása** és az online [**szkripttár**](https://github.com/qownnotes/scripts), ahol parancsfájlokat telepíthet az alkalmazásba

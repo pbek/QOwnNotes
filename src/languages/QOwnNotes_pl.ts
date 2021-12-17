@@ -878,12 +878,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation>Gebruik FakeVim</translation>
+<translation>Użyj FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation>Lees .vimrc vanaf locatie:</translation>
+<translation>Przeczytaj plik .vimrc z lokalizacji:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
@@ -1372,7 +1372,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
 <source>Underlined text</source>
-<translation type="unfinished">Underlined text</translation>
+<translation>podkreślony tekst</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
@@ -2931,7 +2931,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1674"/>
 <source>&amp;Export note as Markdown file</source>
-<translation type="unfinished">&amp;Export note as Markdown file</translation>
+<translation>Eksportuj notatkę jako plik markaDown</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1704"/>
@@ -3361,7 +3361,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message>
 <location filename="../mainwindow.cpp" line="7348"/>
 <source>Inserted text as text attachment file</source>
-<translation type="unfinished">Inserted text as text attachment file</translation>
+<translation>Wstawiony tekst jako plik załącznika tekstowego</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7520"/>
@@ -3376,12 +3376,12 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message>
 <location filename="../mainwindow.cpp" line="7631"/>
 <source>Export attached files</source>
-<translation type="unfinished">Export attached files</translation>
+<translation>Eksportuj załączone pliki.</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7632"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+<translation>Czy chcesz również eksportować pliki mediów i załączniki do notatki? Pliki mogą być nadpisane w folderze docelowym!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7666"/>
@@ -4304,12 +4304,12 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message>
 <location filename="../mainwindow.cpp" line="7999"/>
 <source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
+<translation>Wklej &amp;HTML jako Markdown</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8000"/>
 <source>Paste as &amp;text file attachment</source>
-<translation type="unfinished">Paste as &amp;text file attachment</translation>
+<translation>Wklej jako załącznik do pliku tekstowego</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8055"/>
@@ -6482,7 +6482,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="276"/>
 <source>Browser extension / command snippets</source>
-<translation type="unfinished">Browser extension / command snippets</translation>
+<translation>Rozszerzenia przeglądarki / fragmenty poleceń</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
@@ -6497,7 +6497,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="864"/>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-<translation type="unfinished">You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</translation>
+<translation>Możesz uzyskać dostęp do serwera ownCloud z poziomu aplikacji, na przykład w celu zarządzania usuniętymi notatkami i wersjami notatek lub udostępniania notatek. Ta integracja nie powoduje synchronizacji plików notatek. Nadal musisz zainstalować klienta synchronizacji ownCloud do synchronizacji plików.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1431"/>
@@ -6512,7 +6512,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1862"/>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
-<translation type="unfinished">You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</translation>
+<translation>Możesz uzyskać dostęp do serwera ownCloud lub ogólnego serwera CalDAV, aby zarządzać listami rzeczy do zrobienia.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2220"/>
@@ -6733,32 +6733,32 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6317"/>
 <source>Command snippets</source>
-<translation type="unfinished">Command snippets</translation>
+<translation>Fragmenty poleceń</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6326"/>
 <source>Tag name for commands notes</source>
-<translation type="unfinished">Tag name for commands notes</translation>
+<translation>Nazwa znacznika dla poleceń notatki</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6333"/>
 <source>Commands tag:</source>
-<translation type="unfinished">Commands tag:</translation>
+<translation>Znacznik polecenia:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6353"/>
 <source>Commands note name:</source>
-<translation type="unfinished">Commands note name:</translation>
+<translation>Nazwa notatki polecenia:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6363"/>
 <source>Note name for adding new commands</source>
-<translation type="unfinished">Note name for adding new commands</translation>
+<translation>Nazwa notatki dla dodawania nowych poleceń</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6403"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
-<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
+<translation>Możesz użyć aplikacji internetowej &lt;a href="%1"&gt;QOwnNotes&lt;/a&gt; aby móc wstawiać zdjęcia do QOwnNotes na pulpicie z telefonu komórkowego przez Internet.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6440"/>
@@ -6783,17 +6783,17 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6282"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
-<translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
+<translation>Zainstaluj rozszerzenie przeglądarki &lt;a href="%1"&gt;Web Companion&lt;/a&gt; ze strony &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; lub &lt;a href="%3"&gt;Firefox Add-ons&lt;/a&gt; aby używać QOwnNotes jako kliper internetowy lub do zarządzania zakładkami.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6298"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
-<translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
+<translation>Pobierz &lt;a href="%1"&gt; Menedżera fragmentu wiersza polecenia &lt;/a&gt; do wykonywania fragmentów poleceń przechowywanych w notatkach w Qownnotes z wiersza poleceń.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6340"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+<translation>Możesz użyć notatek ze specjalnym znacznikiem do przechowywania fragmentów poleceń, które można wykonać z menedżera fragmentu wiersza polecenia. Aby uzyskać więcej informacji na temat komend Swiastek Składnia Kliknij &lt;a Href="%1"&gt; Oto &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6537"/>
@@ -6858,7 +6858,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6040"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
-<translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
+<translation>Włącz funkcję lokalnego kosza, aby zachować kopię usuniętych notatek</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6076"/>
@@ -9506,7 +9506,7 @@ Nie można tego cofnąć!</translation>
 <message>
 <location filename="../main.cpp" line="109"/>
 <source>Prints out the version number.</source>
-<translation type="unfinished">Prints out the version number.</translation>
+<translation>Drukuje numer wersji.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="114"/>

@@ -3317,7 +3317,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <location filename="../mainwindow.cpp" line="7348"/>
 <source>Inserted text as text attachment file</source>
-<translation type="unfinished">Inserted text as text attachment file</translation>
+<translation>Tekst ingevoegd als tekstbijlagebestand</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7520"/>
@@ -4229,12 +4229,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <location filename="../mainwindow.cpp" line="7999"/>
 <source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
+<translation>&amp;HTML plakken als afwaardering</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8000"/>
 <source>Paste as &amp;text file attachment</source>
-<translation type="unfinished">Paste as &amp;text file attachment</translation>
+<translation>Plakken als &amp;tekstbestandsbijlage</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8055"/>
@@ -9423,7 +9423,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 <message>
 <location filename="../main.cpp" line="109"/>
 <source>Prints out the version number.</source>
-<translation type="unfinished">Prints out the version number.</translation>
+<translation>Drukt het versienummer af.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="114"/>

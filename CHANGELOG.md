@@ -4,6 +4,8 @@
 - when doing a regular expression search in a note a stuck application is now prevented
   when the user enters just start or end markers (for [#2302](https://github.com/pbek/QOwnNotes/issues/2302))
 - a glitch in the custom CalDAV server settings was fixed
+- added more translation (thank you amirkbrpr, wineee, seemless, mguerra,
+  rawfreeamy, hansa2662, marterra, ivonkatran, rakekniven)
 
 ## 21.12.3
 - pasting of HTML as Markdown and dropping of images is now fixed again, and you

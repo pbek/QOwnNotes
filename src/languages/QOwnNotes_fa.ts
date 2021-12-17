@@ -4234,12 +4234,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="7999"/>
 <source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
+<translation>چسباندن &amp;HTML به صورت مارک داون</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8000"/>
 <source>Paste as &amp;text file attachment</source>
-<translation type="unfinished">Paste as &amp;text file attachment</translation>
+<translation>چسباندن به صورت پیوست پرونده متنی&amp;</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8055"/>

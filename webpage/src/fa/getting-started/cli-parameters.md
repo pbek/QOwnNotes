@@ -5,7 +5,7 @@
 | پارامتر                      | شرح                                                                                                                                        |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--راهنمایی`                 | صفحه راهنمایی را نشان می دهد                                                                                                               |
-| `--version`                  | Prints out the version number of the application                                                                                           |
+| `--version`                  | شماره نسخه نرم‌افزار را نمایش می‌دهد                                                                                                       |
 | `--portable`                 | Runs the application in portable mode                                                                                                      |
 | `--clear-settings`           | Clears the settings and runs the application                                                                                               |
 | `--dump-settings`            | Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application |
