@@ -1,0 +1,3 @@
+# LLVM,Google,Chromium,Mozilla,WebKit,Microsoft
+BasedOnStyle: Google
+ColumnLimit: 1000

@@ -34,6 +34,7 @@ namespace Ui {
 class MainWindow;
 }
 
+class HtmlPreviewWidget;
 class QMimeData;
 class QActionGroup;
 class QListWidgetItem;
@@ -770,6 +771,11 @@ private:
     QActionGroup *_languageGroup;
     QActionGroup *_spellBackendGroup;
     bool _brokenTagNoteLinksRemoved = false;
+
+#ifdef USE_QLITEHTML
+    HtmlPreviewWidget *_notePreviewWidget = nullptr;
+#endif
+
     const QIcon _tagIcon = QIcon::fromTheme(
         QStringLiteral("tag"),
         QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/tag.svg")));

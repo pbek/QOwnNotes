@@ -40,6 +40,12 @@ endif()
 add_subdirectory(libraries/fakevim)
 add_subdirectory(libraries/diff_match_patch)
 
+option(USE_QLITE_HTML "Build using system installed Botan 2 crypto library" OFF)
+if (USE_QLITEHTML)
+    add_definitions(-DUSE_QLITEHTML=1)
+    add_subdirectory(libraries/qlitehtml)
+endif()
+
 
 find_package(Qt5 COMPONENTS REQUIRED
     LinguistTools
@@ -138,8 +144,8 @@ set(SOURCE_FILES
     dialogs/storedimagesdialog.cpp
     dialogs/storedimagesdialog.h
     dialogs/storedimagesdialog.ui
-        dialogs/storedattachmentsdialog.cpp
-        dialogs/storedattachmentsdialog.h
+    dialogs/storedattachmentsdialog.cpp
+    dialogs/storedattachmentsdialog.h
     dialogs/storedattachmentsdialog.ui
     dialogs/scriptrepositorydialog.cpp
     dialogs/scriptrepositorydialog.h
@@ -330,6 +336,8 @@ set(SOURCE_FILES
     widgets/layoutwidget.ui
     widgets/todoitemtreewidget.cpp
     widgets/todoitemtreewidget.h
+    widgets/htmlpreviewwidget.h
+    widgets/htmlpreviewwidget.cpp
     utils/misc.cpp
     utils/misc.h
     utils/git.cpp
@@ -532,6 +540,12 @@ if(UNIX)
     target_link_libraries(QOwnNotes PRIVATE
         Qt5::X11Extras
         ${X11_LIBRARIES}
+    )
+endif()
+
+if (USE_QLITEHTML)
+    target_link_libraries(QOwnNotes PRIVATE
+        qlitehtml::qlitehtml
     )
 endif()
 
