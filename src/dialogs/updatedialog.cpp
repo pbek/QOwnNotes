@@ -469,7 +469,7 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
     // rename the new AppImage to the path of the current binary
     if (!updateFile.rename(appPath)) {
         QMessageBox::critical(0, tr("File error"),
-          tr("Your old QOwnNotes executable '%1' could not be overwritten be replaced "
+          tr("Your old QOwnNotes executable '%1' could not be replaced "
                 "by the new file '%2'! You need to replace it yourself.")
               .arg(appPath, filePath));
 

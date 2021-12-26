@@ -319,7 +319,7 @@
       <item row="4" column="0">
        <widget class="QCheckBox" name="checkBox">
         <property name="toolTip">
-         <string>Only show images that are not used in notes</string>
+         <string>Only show attachments that are not used in notes</string>
         </property>
         <property name="text">
          <string>Only show orphaned attachments</string>
