@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.12.6
+- the builds for Qt < 5.15 were fixed (for [#2329](https://github.com/pbek/QOwnNotes/issues/2329))
+
 ## 21.12.5
 - the account id of a Nextcloud account will now be fetched and stored as part
   of the Nextcloud Login Flow v2 to be used to generate the CalDAV URLs

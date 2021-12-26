@@ -2335,7 +2335,7 @@ QString OwnCloudService::fetchNextcloudAccountId(const QString &serverUrl,
 
 #if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
-    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+    manager->setNetworkAccessible(QNetworkAccessManager::Accessible);
 #endif
 
     QNetworkReply *reply = manager->get(networkRequest);
