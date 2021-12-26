@@ -151,22 +151,22 @@
 - شما می توانید **متن موجود یا پرونده های مارک داون** خود را بدون نیاز به صرف زمان زیادی استفاده کنید.
 - QOwnNotes در ++C نوشته شده و برای **مصرف منابع کم** بهینه سازی شده است (بدون برنامه الکترونی نیازمند (hungry Electron app) به حافظه و CPU).
 - **ورودی اورنوت و جاپلین**
-- **Compatible** with the Notes application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
-- Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
-- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
-- Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
-- **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
-- **External changes** of note files are **watched** (notes or note list are reloaded)
-- Support for **hierarchical note tagging** and **note subfolders**
-- Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
-- The **notes folder** can be **freely chosen** (multiple note folders can be used)
-- **Sub-string searching** of notes is possible and search results are highlighted in the notes
-- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
-- [**Spellchecking**](../editor/spellchecking.md) support
-- **Portable mode** for carrying QOwnNotes around on USB sticks
-- **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
+- **سازگار** با برنامه Notes متعلق به **Nextcloud / ownCloud** و **تلفن همراه** و Nextcloud Text
+- پشتیبانی از **اشتراک گذاری یادداشت ها** در سرور **اون کلود** یا **نکست کلود** شما
+- **لیست های انجام دادنی** نکست کلود یا اون کلود (**Nextcloud Tasks** یا **Tasks Plus**/ **Calendar Plus**) خود را مدیریت کرده یا از **سرور CalDAV** دیگری برای همگام سازی وظایف خود با QOwnNotes استفاده کنید.
+- **نسخه های** قدیمی تر یادداشت های شما از سرور **نکست کلود یا اون کلود** شما قابل **بازیابی** هستند
+- **یادداشت های حذف شده** از سرور **نکست کلود یا اون کلود** شما قابل **بازیابی** هستند
+- **تغییرات خارجی** پرونده های یادداشت **مشاهده** می شوند (یادداشت ها یا لیست یادداشت بارگذاری مجدد می شود)
+- پشتیبانی از **برچسب گذاری سلسله مراتبی یادداشت** و **زیرپوشه های یادداشت**
+- **رمزنگاری** گزینشی یادداشت ها (جایی که AES-256 در آن ایجاد می شود یا می توانید از روش رمزنگاری سفارشی مانند **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) یا **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)) بهره گیرید)
+- **پوشه یادداشت ها** می توانند **به راحتی انتخاب** شوند (چندین پوشه یادداشت قابل استفاده می باشد)
+- **جستجوی زیر رشته** یادداشت ها امکان پذیر است و نتایج جستجو در یادداشت ها برجسته می شود
+- [**افزونه مرورگر**](browser-extension.md) برای **افزودن یادداشت ها از متن منتخب**، **ایجاد نماگرفت** یا **مدیریت نشانک های شما**
+- پشتیبانی از [**غلط یابی**](../editor/spellchecking.md)
+- **حالت قابل حمل** برای حمل QOwnNotes با استفاده از USB فلش ها
+- **پشتیبانی از اسکریپت نویسی** و [**مخزن اسکریپت**](https://github.com/qownnotes/scripts) برخط که در آن می توانید اسکریپت ها را درون برنامه نصب کنید
 - **حالت Vim**
-- [Web application](web-app.md) to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
+- [برنامه تحت وب](web-app.md) برای **درج تصاویر از تلفن همراه شما** در یاداشت کنونی موجود در QOwnNotes دسکتاپ شما
 
 
 ## ظاهر

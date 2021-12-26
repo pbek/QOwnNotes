@@ -48,7 +48,7 @@ graph TB
 ## Markdown-notitiebestanden
 
 - Je **bezit** al je notities en media / bijlagen!
-- Uw aantekeningen worden op uw desktopcomputer opgeslagen als **plain-text Markdown files**
+- Your notes are stored as **plain-text Markdown files** on your desktop computer
 - U kunt naast QOwnNotes elke gewenste teksteditor gebruiken om uw notitiebestanden te bekijken of te bewerken
 - **Synchroniseer uw notities** met andere apparaten (desktop en mobiel) met uw [Nextcloud](https://nextcloud.com/) of [ownCloud](https://owncloud.org/) synchronisatieclient naar uw server
 

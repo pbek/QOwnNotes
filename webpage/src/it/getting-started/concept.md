@@ -48,7 +48,7 @@ graph TB
 ## File di note Markdown
 
 - Tutte le tue note e file multimediali / allegati **sono tue**!
-- Le tue note vengono archiviate come **file di testo Markdown** sul tuo computer
+- Your notes are stored as **plain-text Markdown files** on your desktop computer
 - Puoi usare qualsiasi tuo editor di testo preferito insieme a QOwnNotes per visualizzare o modificare i file delle note
 - **Sincronizza le tue note** con altri dispositivi (desktop e mobili) con il tuo client di sincronizzazione [Nextcloud](https://nextcloud.com/) o [ownCloud](https://owncloud.org/) sul tuo server
 

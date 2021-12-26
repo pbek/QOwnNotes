@@ -5,6 +5,7 @@
   of the Nextcloud Login Flow v2 to be used to generate the CalDAV URLs
   (for [#2329](https://github.com/pbek/QOwnNotes/issues/2329))
   - this fixes todo list issues with SSO logins like via LDAP
+- added more translation (thank you noureddin, amirkbrpr, hansa2662, mguerra, rawfreeamy)
 
 ## 21.12.4
 - when doing a regular expression search in a note a stuck application is now prevented

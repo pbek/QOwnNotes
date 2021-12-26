@@ -48,7 +48,7 @@ graph TB
 ## Markdown jegyzetfájlok
 
 - Az összes jegyzeted és média- / mellékletfájlod **a te tulajdonodban** van!
-- Az Ön jegyzeteit **egyszerű szöveges Markdown fájlokként** tárolják az asztali számítógépen
+- Jegyzeteit **egyszerű szöveges Markdown-fájlokként** tárolja az asztali számítógépe
 - A QOwnNotes mellett tetszőleges szövegszerkesztőt használhat a jegyzetfájlok megtekintésére vagy szerkesztésére
 - **A jegyzetek szinkronizálása** más eszközökkel (asztali és mobil) a [Nextcloud](https://nextcloud.com/) vagy a [ownCloud](https://owncloud.org/) szinkronizálási klienssel a szerverhez
 

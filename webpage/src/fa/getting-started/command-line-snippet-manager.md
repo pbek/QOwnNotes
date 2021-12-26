@@ -45,7 +45,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 اکنون از طریق دستور پیشرو پرونده پیکربندی مدیر تکه کد را باز کنید:
 
 ```bash
-# Configure the snippet manager
+# پیکربندی مدیر تکه کد
 qc configure
 ```
 
@@ -69,10 +69,10 @@ token = "yourtokenhere"
 ```markdown
 - `echo I am a command` I am a description #tag1 #tag2 #tag3
 * `echo I am also a command` I am a description #tag3 #tag4 #tag5
-- 'cmd: 'echo I will be found in the current note (این دستور بدون توجه به برچسب های یادداشت در یادداشت کنونی دریافت می شود)
+- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
 ```
 
-کد بلوک های بش یا پوسته (بعد از یک سرخط 2 یا بالاتر به صورت توضیح) برای جستجوی تکه کدهای دستوری نیز قابل استفاده هستند. همچنین اگر برچسب ها بین عنوان و کد بلوک قرار گیرند، پشتیبانی خواهند شد.
+**کد بلوک های `بش` یا `پوسته`** (بعد از سرخط 2 یا بالاتر به صورت توضیح) برای جستجوی تکه کدهای دستوری نیز قابل استفاده هستند. همچنین اگر برچسب ها بین عنوان و کد بلوک قرار گیرند، پشتیبانی خواهند شد.
 
     ## انجام این کار با کد بلوک «بش»
 

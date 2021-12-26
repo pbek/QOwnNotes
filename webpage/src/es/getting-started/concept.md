@@ -48,7 +48,7 @@ graph TB
 ## Archivos de notas de rebajas
 
 - ¡Tú eres **dueño** de todas tus notas y archivos multimedia / adjuntos!
-- Sus notas se almacenan como **archivos de Markdown de texto sin formato** en su computadora de escritorio
+- Your notes are stored as **plain-text Markdown files** on your desktop computer
 - Puede utilizar cualquier editor de texto que desee junto a QOwnNotes para ver o editar sus archivos de notas
 - **Sincroniza tus notas** con otros dispositivos (escritorio y móvil) con tu cliente de sincronización [Nextcloud](https://nextcloud.com/) o [ownCloud](https://owncloud.org/) con tu servidor
 

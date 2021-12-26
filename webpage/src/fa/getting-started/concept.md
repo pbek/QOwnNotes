@@ -61,64 +61,64 @@ graph TB
 افزونه های مرورگر به صورت **آفلاین** و بدون نیاز به اتصال اینترنت اجرا می شوند. برای اطلاعات بیشتر لطفاً نگاهی به [افزونه مرورگر همراه وب QOwnNotes](browser-extension.md) بیندازید.
 :::
 
-## QOwnNotes command-line snippet manager
+## مدیر تکه کد خط فرمان QOwnNotes
 
-You can manage your **command snippets** with QOwnNotes and execute them on the command-line.
-
-::: tip
-Please visit [QOwnNotes command-line snippet manager](command-line-snippet-manager.md) for more information.
-:::
-
-## Nextcloud desktop sync client
-
-**Sync your notes** with other devices (desktop & mobile) with your [Nextcloud](https://nextcloud.com/) or [ownCloud](https://owncloud.org/) sync client to your server.
+**تکه کدهای دستوری** را می توانید با QOwnNotes مدیریت کرده و در خط فرمان اجرا کنید.
 
 ::: tip
-Of course other solutions, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used too to sync your notes and other files.
-
-You can also use **git** to sync with tools like [gitomatic](https://github.com/muesli/gitomatic/).
+لطفاً برای اطلاعات بیشتر [مدیر تکه کد خط فرمان QOwnNotes](command-line-snippet-manager.md) را ملاحظه کنید.
 :::
 
-## Nextcloud server
+## مشتری همگام سازی رومیزی نکست کلود
 
-To work with your notes online you can use servers like [Nextcloud](https://nextcloud.com/) or [ownCloud](https://owncloud.org/).
-
-You can host your own server or use hosted solutions.
-
-There is a [community-maintained list of Nextcloud providers](https://github.com/nextcloud/providers#providers), as well as a [list of devices with Nextcloud](https://nextcloud.com/devices/).
-
-[Portknox](https://portknox.net) has reported they have [QOwnNotesAPI installed](https://portknox.net/en/app_listing).
+**یادداشت های** خود را با کمک سایر ابزارها (رومیزی و تلفن همراه) و به وسیله سرویس گیرنده همگام سازی [نکست کلود](https://nextcloud.com/) یا [اون کلود](https://owncloud.org/) با سرورتان همگام سازی کنید.
 
 ::: tip
-Of course other solutions, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used too to host your notes and other files.
+البته راهکارهای دیگری مانند **Dropbox**، **Syncthing**، **Seafile**، یا BitTorrent Sync را نیز می توان برای همگام سازی یادداشت ها و سایر پرونده ها بکار برد.
+
+همچنین می توانید برای همگام سازی با ابزارهایی از قبیل [گینوماتیک](https://github.com/muesli/gitomatic/) از **گیت** استفاده کنید.
 :::
 
-## QOwnNotesAPI Nextcloud app
+## سرور نکست کلود
 
-[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) lets you access your server-side **trashed notes** and **note versions**.
+جهت کار با یادداشت های خود به صورت آنلاین می توانید از سرور هایی نظیر [نکست کلود](https://nextcloud.com/) یا [اون کلود](https://owncloud.org/) بهره گیرید.
+
+می‌توانید سرور خود را میزبانی کرده یا از راهکارهای میزبانی شده استفاده کنید.
+
+[لیست نگهداری شده جمعی از طرف ارائه‌دهندگان نکست کلود](https://github.com/nextcloud/providers#providers) و نیز [لیست ابزارهای همراه نکست کلود](https://nextcloud.com/devices/) در دسترس قرار دارند.
+
+[Portknox](https://portknox.net) گزارش کرده است که آنها [QOwnNotesAPI را نصب کرده اند](https://portknox.net/en/app_listing).
 
 ::: tip
-Please visit [QOwnNotesAPI Nextcloud App](qownnotesapi.md) for more information.
+البته راهکارهای دیگری مانند **Dropbox**، **Syncthing**، **Seafile**، یا BitTorrent Sync را نیز می توان برای میزبانی یادداشت ها و سایر پرونده ها بکار برد.
 :::
 
-## Nextcloud Notes server app
+## برنامه QOwnNotesAPI Nextcloud
 
-Use [**Nextcloud Notes**](https://github.com/nextcloud/notes) to edit your notes in the **web**.
+[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) اجازه دسترسی به شما برای **نسخه ‌های یادداشت** و **یادداشت های حذف شده** سمت سرورتان را می دهد.
+
+::: tip
+برای اطلاعات بیشتر لطفاً نگاهی به [برنامه QOwnNotesAPI Nextcloud](qownnotesapi.md) بیندازید.
+:::
+
+## برنامه سرور Nextcloud Notes
+
+به منظور ویرایش یادداشت هایتان در **وب** از [**Nextcloud Notes**](https://github.com/nextcloud/notes) استفاده کنید.
 
 ::: warning
-Keep in mind that Nextcloud Notes currently only supports up to one level of subfolders.
+به خاطر داشته باشید که در حال حاضر Nextcloud Notes تنها یک سطح از زیر پوشه ها را پشتیبانی می کند.
 :::
 
-## Nextcloud Notes mobile app
+## برنامه تلفن همراه Nextcloud Notes
 
-To access your Nextcloud / ownCloud notes from your **mobile device** you can use different apps.
+برای دسترسی به یادداشت های نکست کلود یا اون کلود تان از **تلفن همراه** خود می توانید برنامه های مختلفی را به کار ببندید.
 
 ### اندروید
 
 - [Nextcloud Notes برای اندروید](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (شخص ثالث)
 
 ::: tip
-You could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files and use software like *neutriNotes* to edit your notes.
+همچنین می توانید برای همگام سازی پرونده‌های یادداشت تان از هر ابزار همگام سازی مانند *Synchronize Ultimate* یا *FolderSync* استفاده کنید و برای ویرایش یادداشت هایتان نرم افزاری مانند *neutriNotes* را بکار گیرید.
 :::
 
 ### iOS
@@ -126,25 +126,25 @@ You could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to 
 - [ CloudNotes برای iOS ](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (شخص ثالث)
 
 ::: tip
-You can also use [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) and sync your notes via WebDAV, there is a good tutorial at [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
+علاوه بر این، می توانید از [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) استفاده کرده و یادداشت های خود را از طریق WebDAV همگام سازی کنید. در [یادداشت برداری با نکست کلود، QOwnNotes و Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks) آموزش مناسبی در نظر گرفته شده است.
 :::
 
 ## api.qownnotes.org
 
-This is an online service provided by QOwnNotes to check if there is a new release of the application available.
+یک سرویس آنلاین توسط QOwnNotes در نظر گرفته شده ‌است تا در دسترس قرار گرفتن نسخه جدیدی از برنامه را بررسی کند.
 
-It is talking to GitHub and checks for the latest release, gets a suited download url and compiles the changes from the changelog compared to the version of QOwnNotes you are currently using as html to show in the update dialog.
+در مقایسه با نسخه QOwnNote که در حال حاضر از آن به صورت html برای نمایش کادر بروز رسانی استفاده می کنید، با گیت هاب تعامل کرده، آخرین نسخه را بررسی کرده، URL مناسب برای بارگیری را دریافت کرده و تغییرات را از گزارش تغییرات گردآوری می کند.
 
-In addition, it also provides the [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) and an implementation of the legacy update checking api for older versions of QOwnNotes.
+بعلاوه، [پخش خبرنامه](http://api.qownnotes.org/rss/app-releases) و یک پیاده سازی از API بررسی بروز رسانی پیشینه برای نسخه های قدیمی تر QOwnNotes را هم فراهم می کند.
 
 ::: tip
-You can access the source code for [api.qownnotes.org](https://api.qownnotes.org) on [GitHub](https://github.com/qownnotes/api).
+شما می توانید به کد منبع مربوط به [api.qownnotes.org](https://api.qownnotes.org) در [گیت هاب](https://github.com/qownnotes/api) دسترسی داشته باشید.
 :::
 
-## QOwnNotes Web App
+## برنامه تحت وب QOwnNotes
 
-You can insert photos from your mobile phone into the current note in QOwnNotes on your desktop via the **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
+شما می توانید تصاویر تلفن همراه خود را در یادداشت کنونی QOwnNotes در دسکتاپ خود از طریق **برنامه تحت وب** در [app.qownnotes.org](https://app.qownnotes.org/) درج کنید.
 
 ::: tip
-Please visit [QOwnNotes Web App](web-app.md) for more information.
+برای اطلاعات بیشتر لطفاً [برنامه تحت وب QOwnNotes](web-app.md) را ملاحظه کنید.
 :::

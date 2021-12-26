@@ -48,7 +48,7 @@ graph TB
 ## Fichiers de notes en Markdown
 
 - Vous **possédez** toutes vos notes et fichiers multimédias / pièces jointes!
-- Vos notes sont stockées sous forme de **fichiers Markdown en texte brut** sur votre ordinateur de bureau
+- Your notes are stored as **plain-text Markdown files** on your desktop computer
 - Vous pouvez utiliser n'importe quel éditeur de texte que vous aimez à côté de QOwnNotes pour afficher ou modifier vos fichiers de notes
 - **Synchronisez vos notes** avec d'autres appareils (bureau et mobile) avec votre client de synchronisation [Nextcloud](https://nextcloud.com/) ou [ownCloud](https://owncloud.org/) sur votre serveur
 

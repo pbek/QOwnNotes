@@ -48,7 +48,7 @@ graph TB
 ## Markdown-Notizdateien
 
 - Sie **besitzen** alle Ihre Notizen und Medien- / Anhangsdateien!
-- Ihre Notizen werden als **Nur-Text-Markdown-Dateien** auf Ihrem Desktop-Computer gespeichert
+- Your notes are stored as **plain-text Markdown files** on your desktop computer
 - Sie können einen beliebigen Texteditor neben QOwnNotes verwenden, um Ihre Notizdateien anzuzeigen oder zu bearbeiten
 - **Synchronisieren Sie Ihre Notizen** mit anderen Geräten (Desktop & Mobile) mit Ihrer [Nextcloud](https://nextcloud.com/) oder [ownCloud](https://owncloud.org/) Client mit Ihrem Server synchronisieren
 
