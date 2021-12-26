@@ -4477,6 +4477,13 @@ void SettingsDialog::on_loginFlowButton_clicked() {
         ui->userNameEdit->setText(jsonObject.value(QStringLiteral("loginName")).toString());
         ui->passwordEdit->setText(jsonObject.value(QStringLiteral("appPassword")).toString());
 
+        // Try to fetch the account id
+        QString accountId = OwnCloudService::fetchNextcloudAccountId(
+            ui->serverUrlEdit->text(), ui->userNameEdit->text(),
+            ui->passwordEdit->text());
+        _selectedCloudConnection.setAccountId(accountId);
+        _selectedCloudConnection.store();
+
         QMessageBox::information(this, QObject::tr("Login flow succeeded"),
                              QObject::tr("Username and password were set successfully!"));
 

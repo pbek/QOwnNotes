@@ -96,6 +96,8 @@ class OwnCloudService : public QObject {
 
     static bool initiateLoginFlowV2(const QString &serverUrl, QJsonObject &pollData);
 
+    static QString fetchNextcloudAccountId(const QString &serverUrl, const QString &userName, const QString &password);
+
    private:
     QString serverUrl;
     QString todoCalendarServerUrl;
@@ -130,6 +132,8 @@ class OwnCloudService : public QObject {
     void checkAppInfo(QNetworkReply *reply);
 
     void readSettings(int cloudConnectionId = -1);
+
+    static void addGenericAuthHeader(QNetworkRequest *r, const QString &userName, const QString &password);
 
     void addAuthHeader(QNetworkRequest *r);
 

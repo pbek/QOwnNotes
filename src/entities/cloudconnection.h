@@ -22,6 +22,7 @@ class CloudConnection {
     QString getName();
     QString getServerUrl();
     QString getUsername();
+    QString getAccountId();
     QString getPassword();
     bool getAppQOwnNotesAPIEnabled();
     int getPriority();
@@ -30,6 +31,7 @@ class CloudConnection {
     void setPriority(int value);
     void setAppQOwnNotesAPIEnabled(bool value);
     void setUsername(const QString &text);
+    void setAccountId(const QString &text);
     void setPassword(const QString &text);
     static int countAll();
     static bool migrateToCloudConnections();
@@ -47,6 +49,7 @@ class CloudConnection {
     QString name;
     QString serverUrl;
     QString username;
+    QString accountId;
     QString password;
     int priority = 0;
     bool appQOwnNotesAPIEnabled = true;

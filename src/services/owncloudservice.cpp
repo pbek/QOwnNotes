@@ -179,10 +179,16 @@ void OwnCloudService::readSettings(int cloudConnectionId) {
     CloudConnection todoCalendarCloudConnection =
         CloudConnection::currentTodoCalendarCloudConnection();
 
+    QString todoCalendarAccountId = todoCalendarCloudConnection.getAccountId();
+
+    if (todoCalendarAccountId.isEmpty()) {
+        todoCalendarAccountId = todoCalendarCloudConnection.getUsername();
+    }
+
     QString calendarPath = QStringLiteral("/remote.php/") %
                            calendarBackendString %
                            QStringLiteral("/calendars/") %
-                           todoCalendarCloudConnection.getUsername();
+                           todoCalendarAccountId;
     todoCalendarServerUrl =
         todoCalendarCloudConnection.getServerUrl().isEmpty()
             ? QString()
@@ -1142,6 +1148,12 @@ void OwnCloudService::loadTrash(MainWindow *mainWindow) {
 }
 
 void OwnCloudService::addAuthHeader(QNetworkRequest *r) {
+    addGenericAuthHeader(r, userName, password);
+}
+
+void OwnCloudService::addGenericAuthHeader(QNetworkRequest *r,
+                                           const QString &userName,
+                                           const QString &password) {
     if (r) {
         QString concatenated = userName % QStringLiteral(":") % password;
         QByteArray data = concatenated.toLocal8Bit().toBase64();
@@ -2287,4 +2299,75 @@ bool OwnCloudService::initiateLoginFlowV2(const QString &serverUrl, QJsonObject 
     pollData = jsonObject.value(QStringLiteral("poll")).toObject();
 
     return true;
+}
+
+/**
+ * Fetches the Nextcloud Account Id (to be used as WebDav username) as part of the login flow v2
+ * https://docs.nextcloud.com/server/latest/developer_manual/client_apis/LoginFlow/index.html#obtaining-the-login-credentials
+ *
+ * @param serverUrl
+ * @param userName
+ * @param password
+ * @return
+ */
+QString OwnCloudService::fetchNextcloudAccountId(const QString &serverUrl,
+                                                      const QString &userName,
+                                                      const QString &password) {
+    auto *manager = new QNetworkAccessManager();
+    QEventLoop loop;
+    QTimer timer;
+    timer.setSingleShot(true);
+    QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    QObject::connect(manager, SIGNAL(finished(QNetworkReply *)), &loop,
+                     SLOT(quit()));
+
+    // 5 sec timeout for the request
+    timer.start(5000);
+
+    QUrl url(serverUrl % QStringLiteral("/ocs/v1.php/cloud/user"));
+
+//    qDebug() << __func__ << " - 'url': " << url;
+//    qDebug() << __func__ << " - 'userName': " << userName;
+//    qDebug() << __func__ << " - 'password': " << password;
+
+    QNetworkRequest networkRequest = QNetworkRequest(url);
+    addGenericAuthHeader(&networkRequest, userName, password);
+
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
+    // try to ensure the network is accessible
+    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
+
+    QNetworkReply *reply = manager->get(networkRequest);
+    ignoreSslErrorsIfAllowed(reply);
+    loop.exec();
+
+    // if we didn't get a timeout let us return the content
+    if (timer.isActive()) {
+        if (reply->error() != QNetworkReply::NoError) {
+            qDebug() << __func__ << " - 'reply->error()': " << reply->error();
+            qDebug() << __func__ << " - 'reply->errorString()': "
+                     << reply->errorString();
+            qDebug() << __func__ << " - 'reply->readAll()': "
+                     << reply->readAll();
+
+            return {};
+        }
+
+        QString data = QString(reply->readAll());
+//        qDebug() << __func__ << " - 'data': " << data;
+
+        QXmlQuery query;
+        query.setFocus(data);
+        query.setQuery(QStringLiteral("ocs/data/id/text()"));
+        QString id;
+        query.evaluateTo(&id);
+
+        return id.trimmed();
+    }
+
+    reply->deleteLater();
+    delete (manager);
+
+    return {};
 }

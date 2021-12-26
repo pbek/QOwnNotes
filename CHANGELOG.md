@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 21.12.5
+- the account id of a Nextcloud account will now be fetched and stored as part
+  of the Nextcloud Login Flow v2 to be used to generate the CalDAV URLs
+  (for [#2329](https://github.com/pbek/QOwnNotes/issues/2329))
+  - this fixes todo list issues with SSO logins like via LDAP
+
 ## 21.12.4
 - when doing a regular expression search in a note a stuck application is now prevented
   when the user enters just start or end markers (for [#2302](https://github.com/pbek/QOwnNotes/issues/2302))

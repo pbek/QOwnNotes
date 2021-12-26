@@ -50,6 +50,8 @@ QString CloudConnection::getServerUrlWithoutPath() {
 
 QString CloudConnection::getUsername() { return this->username; }
 
+QString CloudConnection::getAccountId() { return this->accountId; }
+
 QString CloudConnection::getPassword() { return this->password; }
 
 bool CloudConnection::getAppQOwnNotesAPIEnabled() { return this->appQOwnNotesAPIEnabled; }
@@ -90,6 +92,10 @@ void CloudConnection::setServerUrl(const QString &text) {
 
 void CloudConnection::setUsername(const QString &text) {
     this->username = text.trimmed();
+}
+
+void CloudConnection::setAccountId(const QString &text) {
+    this->accountId = text.trimmed();
 }
 
 void CloudConnection::setPassword(const QString &text) {
@@ -181,6 +187,7 @@ bool CloudConnection::fillFromQuery(const QSqlQuery &query) {
     this->name = query.value(QStringLiteral("name")).toString();
     this->serverUrl = query.value(QStringLiteral("server_url")).toString();
     this->username = query.value(QStringLiteral("username")).toString();
+    this->accountId = query.value(QStringLiteral("account_id")).toString();
     this->password = CryptoService::instance()->decryptToString(
         query.value(QStringLiteral("password")).toString());
     this->priority = query.value(QStringLiteral("priority")).toInt();
@@ -220,21 +227,22 @@ bool CloudConnection::store() {
     if (this->id > 0) {
         query.prepare(
             "UPDATE cloudConnection SET name = :name, server_url = :serverUrl, "
-            "username = :username, password = :password, "
+            "username = :username, account_id = :account_id, password = :password, "
             "priority = :priority, qownnotesapi_enabled = :qownnotesapi_enabled WHERE "
             "id = :id");
         query.bindValue(QStringLiteral(":id"), this->id);
     } else {
         query.prepare(
             "INSERT INTO cloudConnection (name, server_url, username, "
-            "password, priority, qownnotesapi_enabled)"
-            " VALUES (:name, :serverUrl, :username, "
+            "account_id, password, priority, qownnotesapi_enabled)"
+            " VALUES (:name, :serverUrl, :username, :account_id"
             ":password, :priority, :qownnotesapi_enabled)");
     }
 
     query.bindValue(QStringLiteral(":name"), this->name);
     query.bindValue(QStringLiteral(":serverUrl"), this->serverUrl);
     query.bindValue(QStringLiteral(":username"), this->username);
+    query.bindValue(QStringLiteral(":account_id"), this->accountId);
     query.bindValue(QStringLiteral(":password"),
                     CryptoService::instance()->encryptToString(this->password));
     query.bindValue(QStringLiteral(":priority"), this->priority);
@@ -325,7 +333,8 @@ QDebug operator<<(QDebug dbg, const CloudConnection &cloudConnection) {
     dbg.nospace() << "CloudConnection: <id>" << cloudConnection.id << " <name>"
                   << cloudConnection.name << " <serverUrl>"
                   << cloudConnection.serverUrl << " <username>"
-                  << cloudConnection.username << " <priority>"
+                  << cloudConnection.username << " <accountId>"
+                  << cloudConnection.accountId << " <priority>"
                   << cloudConnection.priority;
     return dbg.space();
 }

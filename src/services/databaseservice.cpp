@@ -911,6 +911,12 @@ bool DatabaseService::setupTables() {
         version = 40;
     }
 
+    if (version < 41) {
+        queryDisk.exec(QStringLiteral(
+            "ALTER TABLE cloudConnection ADD account_id VARCHAR(255)"));
+        version = 41;
+    }
+
     if (version != oldVersion) {
         setAppData(QStringLiteral("database_version"),
                    QString::number(version));

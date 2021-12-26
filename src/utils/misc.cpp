@@ -1853,6 +1853,9 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
         output += prepareDebugInformationLine(QStringLiteral("username"),
                                               cloudConnection.getUsername(),
                                               withGitHubLineBreaks);
+        output += prepareDebugInformationLine(QStringLiteral("accountId"),
+                                              cloudConnection.getAccountId(),
+                                              withGitHubLineBreaks);
     }
 
     // add script information
