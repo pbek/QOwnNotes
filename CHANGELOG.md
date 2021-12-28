@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.12.7
+- an issue with creating new Nextcloud connections was fixed (for [#2329](https://github.com/pbek/QOwnNotes/issues/2329))
+
 ## 21.12.6
 - the builds for Qt < 5.15 were fixed (for [#2329](https://github.com/pbek/QOwnNotes/issues/2329))
 

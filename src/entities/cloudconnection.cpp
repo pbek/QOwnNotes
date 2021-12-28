@@ -235,7 +235,7 @@ bool CloudConnection::store() {
         query.prepare(
             "INSERT INTO cloudConnection (name, server_url, username, "
             "account_id, password, priority, qownnotesapi_enabled)"
-            " VALUES (:name, :serverUrl, :username, :account_id"
+            " VALUES (:name, :serverUrl, :username, :account_id, "
             ":password, :priority, :qownnotesapi_enabled)");
     }
 
