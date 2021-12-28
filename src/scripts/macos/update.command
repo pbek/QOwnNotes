@@ -69,7 +69,11 @@ rm $tempDir/$diskImage
 rmdir $tempDir
 rmdir $mountPoint
 
+echo "Listing content of QOwnNotes.app..."
+find "$applicationsFolder/QOwnNotes.app"
+
 echo "Starting QOwnNotes..."
+sleep 2
 open "$applicationsFolder/QOwnNotes.app"
 
 echo "Removing temporary script..."
