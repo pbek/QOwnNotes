@@ -1314,7 +1314,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="232"/>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>الخط:</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="279"/>
@@ -1644,7 +1644,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>استيراد من Joplin</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="48"/>
@@ -1654,7 +1654,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>برجاء تحديد «RAW - مجلد تصدير Joplin» الذي تريد استيراد الملاحظات منه:</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="37"/>
@@ -1684,7 +1684,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="182"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>إذا كان لديك «JEX - ملف تصدير Joplin»، برجاء استخراج محتوياته إلى مجلد وتحديد هذا المجلد.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="142"/>
@@ -1694,7 +1694,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="74"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW - مجلد تصدير Joplin</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
@@ -1704,7 +1704,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="90"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>حدد «RAW - مجلد تصدير Joplin» لاستيراده</translation>
 </message>
 </context>
 <context>
@@ -2868,7 +2868,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2658"/>
 <source>Jump to navigation panel</source>
-<translation type="unfinished">Jump to navigation panel</translation>
+<translation>انتقال إلى لوحة التنقل</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2670"/>
@@ -2883,7 +2883,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2682"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>استيراد ملاحظات من Joplin</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1908"/>
@@ -4357,7 +4357,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="6528"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation>تعذر العثور على الملاحظة؛ هل تريد إنشاء ملاحظة جديدة &lt;strong&gt;%1&lt;/strong&gt; في المسار &lt;strong&gt;%2&lt;/strong&gt;؟</translation>
+<translation>تعذر العثور على الملاحظة؛ هل تريد إنشاء ملاحظة جديدة بعنوان &lt;strong&gt;%1&lt;/strong&gt; في المسار &lt;strong&gt;%2&lt;/strong&gt;؟</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6955"/>
@@ -4535,160 +4535,160 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>OwnCloudService</name>
 <message>
-<location filename="../services/owncloudservice.cpp" line="237"/>
+<location filename="../services/owncloudservice.cpp" line="243"/>
 <source>incorrect</source>
 <translation>خطأ</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="239"/>
-<location filename="../services/owncloudservice.cpp" line="537"/>
+<location filename="../services/owncloudservice.cpp" line="245"/>
+<location filename="../services/owncloudservice.cpp" line="543"/>
 <source>not connected</source>
 <translation>غير متصل</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="254"/>
+<location filename="../services/owncloudservice.cpp" line="260"/>
 <source>Username / password error</source>
 <translation>خطأ في اسم المستخدم/ كلمة السر</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="255"/>
+<location filename="../services/owncloudservice.cpp" line="261"/>
 <source>Your calendar username or password is incorrect!</source>
 <translation>اسم المستخدم أو كلمة السر لتقويمك غير صحيحة!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="315"/>
-<location filename="../services/owncloudservice.cpp" line="317"/>
-<location filename="../services/owncloudservice.cpp" line="327"/>
-<location filename="../services/owncloudservice.cpp" line="329"/>
-<location filename="../services/owncloudservice.cpp" line="433"/>
-<location filename="../services/owncloudservice.cpp" line="487"/>
-<location filename="../services/owncloudservice.cpp" line="502"/>
-<location filename="../services/owncloudservice.cpp" line="510"/>
-<location filename="../services/owncloudservice.cpp" line="528"/>
+<location filename="../services/owncloudservice.cpp" line="321"/>
+<location filename="../services/owncloudservice.cpp" line="323"/>
+<location filename="../services/owncloudservice.cpp" line="333"/>
+<location filename="../services/owncloudservice.cpp" line="335"/>
+<location filename="../services/owncloudservice.cpp" line="439"/>
+<location filename="../services/owncloudservice.cpp" line="493"/>
+<location filename="../services/owncloudservice.cpp" line="508"/>
+<location filename="../services/owncloudservice.cpp" line="516"/>
+<location filename="../services/owncloudservice.cpp" line="534"/>
 <source>ok</source>
 <translation>جيد</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="320"/>
+<location filename="../services/owncloudservice.cpp" line="326"/>
 <source>not correct</source>
 <translation>خطأ</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="333"/>
+<location filename="../services/owncloudservice.cpp" line="339"/>
 <source>not detected</source>
 <translation>لم يُكتشف</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="436"/>
-<location filename="../services/owncloudservice.cpp" line="531"/>
+<location filename="../services/owncloudservice.cpp" line="442"/>
+<location filename="../services/owncloudservice.cpp" line="537"/>
 <source>not found</source>
 <translation>تعذر العثور</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="473"/>
-<location filename="../services/owncloudservice.cpp" line="475"/>
+<location filename="../services/owncloudservice.cpp" line="479"/>
+<location filename="../services/owncloudservice.cpp" line="481"/>
 <source>unknown</source>
 <translation>مجهول</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="484"/>
+<location filename="../services/owncloudservice.cpp" line="490"/>
 <source>version %1 too low</source>
 <translation>النسخة %1 ضعيفة جدا</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="505"/>
-<location filename="../services/owncloudservice.cpp" line="513"/>
+<location filename="../services/owncloudservice.cpp" line="511"/>
+<location filename="../services/owncloudservice.cpp" line="519"/>
 <source>not enabled</source>
 <translation>غير مفعل</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="587"/>
+<location filename="../services/owncloudservice.cpp" line="593"/>
 <source>API app version too low</source>
 <translation>نسخة API التطبيقات منخفضة جدًا</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="588"/>
+<location filename="../services/owncloudservice.cpp" line="594"/>
 <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
 <translation>يرجى مراعاة تحديث تطبيق QOwnNotesAPI على خادمك، حيث إن نسخة تطبيقك الحالية %1 منخفضة جداً وقد تسبب مشاكل في عمل QOwnNotesAPI.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1200"/>
+<location filename="../services/owncloudservice.cpp" line="1212"/>
 <source>ownCloud server connection error</source>
 <translation>خطأ في الاتصال بخادم ownCloud</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1205"/>
+<location filename="../services/owncloudservice.cpp" line="1217"/>
 <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
 <translation>خطأ في خادم ownCloud: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt; الرجاء التحقق من إعداداتك لـ ownCloud</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1225"/>
+<location filename="../services/owncloudservice.cpp" line="1237"/>
 <source>You need to setup your ownCloud server!</source>
 <translation>تحتاج إلى إعداد خادم ownCloud خاصتك!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1237"/>
+<location filename="../services/owncloudservice.cpp" line="1249"/>
 <source>Open &amp;settings</source>
 <translation>افتح الإ&amp;عدادات</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1237"/>
+<location filename="../services/owncloudservice.cpp" line="1249"/>
 <source>&amp;Cancel</source>
 <translation>ألغ</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1296"/>
+<location filename="../services/owncloudservice.cpp" line="1308"/>
 <source>Done with loading note versions</source>
 <translation>انتهى تحميل إصدارات الملاحظة</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1341"/>
+<location filename="../services/owncloudservice.cpp" line="1353"/>
 <source>No versions found</source>
 <translation>لم يتم العثور على إصدارات</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1342"/>
+<location filename="../services/owncloudservice.cpp" line="1354"/>
 <source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>لا توجد إصدارات سابقة لهذه الملاحظة، أو لم يتم العثور عليها على الخادم.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1362"/>
+<location filename="../services/owncloudservice.cpp" line="1374"/>
 <source>Done with loading trashed notes</source>
 <translation>انتهى تحميل الملاحظات الموجودة في سلة المهملات</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1407"/>
+<location filename="../services/owncloudservice.cpp" line="1419"/>
 <source>No trashed notes</source>
 <translation>لا توجد ملاحظات في سلة المهملات</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1408"/>
+<location filename="../services/owncloudservice.cpp" line="1420"/>
 <source>No trashed notes were found on the server.</source>
 <translation>لا توجد ملاحظات في سلة المهملات على الخادم.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1430"/>
-<location filename="../services/owncloudservice.cpp" line="1457"/>
+<location filename="../services/owncloudservice.cpp" line="1442"/>
+<location filename="../services/owncloudservice.cpp" line="1469"/>
 <source>Error while loading todo lists!</source>
 <translation>خطأ خلال تحميل قوائم للإنجاز!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1431"/>
+<location filename="../services/owncloudservice.cpp" line="1443"/>
 <source>Your CalDAV server didn't reply anything!</source>
 <translation>لم يرد خادمك لـ CalDAV بأي شيء!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1458"/>
+<location filename="../services/owncloudservice.cpp" line="1470"/>
 <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>رسالة خطأ من خادمك لـ CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2146"/>
+<location filename="../services/owncloudservice.cpp" line="2158"/>
 <source>No bookmarks</source>
 <translation>لا توجد إشارات مرجعية</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2147"/>
+<location filename="../services/owncloudservice.cpp" line="2159"/>
 <source>No bookmarks were found on the server.</source>
 <translation>لم يتم العثور على إشارات مرجعية على الخادم.</translation>
 </message>
@@ -4864,17 +4864,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>اتصال جديد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4480"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4487"/>
 <source>Login flow succeeded</source>
 <translation type="unfinished">Login flow succeeded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4481"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4488"/>
 <source>Username and password were set successfully!</source>
 <translation type="unfinished">Username and password were set successfully!</translation>
 </message>
 <message>
-<location filename="../entities/cloudconnection.cpp" line="291"/>
+<location filename="../entities/cloudconnection.cpp" line="299"/>
 <source>Default</source>
 <translation>افتراضي</translation>
 </message>
@@ -4947,18 +4947,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>عليك تفعيل خاصية المجلدات الفرعية للملاحظات لمجلد الملاحظة الحالية حتى يمكنك استيراد مجلدات.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2263"/>
-<location filename="../services/owncloudservice.cpp" line="2278"/>
+<location filename="../services/owncloudservice.cpp" line="2275"/>
+<location filename="../services/owncloudservice.cpp" line="2290"/>
 <source>Login flow failed</source>
 <translation type="unfinished">Login flow failed</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2264"/>
+<location filename="../services/owncloudservice.cpp" line="2276"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
 <translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2279"/>
+<location filename="../services/owncloudservice.cpp" line="2291"/>
 <source>Could not parse login url!</source>
 <translation type="unfinished">Could not parse login url!</translation>
 </message>
@@ -5193,12 +5193,12 @@ Are the folder and the file writeable?</source>
 <translation>لا يمكن فتح قاعدة بيانات مجلد الملاحظات</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="966"/>
+<location filename="../services/databaseservice.cpp" line="972"/>
 <source>Cannot open database</source>
 <translation>لا يمكن فتح قاعدة البيانات</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="967"/>
+<location filename="../services/databaseservice.cpp" line="973"/>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
 <translation>غير قادر على تأسيس اتصال قاعدة بيانات مع قاعدة بيانات مجلد الملاحظة لدمج '%1'.
@@ -6602,7 +6602,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="276"/>
 <source>Browser extension / command snippets</source>
-<translation type="unfinished">Browser extension / command snippets</translation>
+<translation>إضافة المتصفح وقصاصات الأوامر</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
@@ -6857,7 +6857,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6317"/>
 <source>Command snippets</source>
-<translation type="unfinished">Command snippets</translation>
+<translation>قصاصات الأوامر</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6326"/>
@@ -6912,12 +6912,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6298"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
-<translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
+<translation>نزّل &lt;a href="%1"&gt;مدير قصاصات سطر الأوامر&lt;/a&gt; لتنفيذ قصاصات الأوامر المخزنة في الملاحظات في QOwnNotes من سطر الأوامر.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6340"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+<translation>يمكنك استخدام ملاحظات بوسم خاص لتخزين قصاصات الأوامر، والتي يمكنك تنفيذها من مدير قصاصات سطر الأوامر. لمزيد من المعلومات عن صيغة قصاصات الأوامر، اضغط &lt;a href="%1"&gt;هنا&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6537"/>
@@ -8346,8 +8346,8 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
-<source>Only show images that are not used in notes</source>
-<translation>أظهر فقط الصور غير المستخدمة في ملاحظات</translation>
+<source>Only show attachments that are not used in notes</source>
+<translation>أظهر فقط المرفقات غير المستخدمة في ملاحظات</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
@@ -8487,7 +8487,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
 <source>Stored images</source>
-<translation>الصور المحفوظة</translation>
+<translation>الصور المخزنة</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="165"/>
@@ -9292,11 +9292,6 @@ This cannot be undone!</source>
 <translation>لا يمكن حذف الملف التنفيذي القديم لـQOwnNotes الخاص بك «%1»! يجب استبداله بـ«%2» بنفسك.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="472"/>
-<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation>تعذر استبدال الملف التنفيذي القديم لـQOwnNotes الخاص بك «%1» بالملف الجديد «%2»! يجب استبداله بنفسك.</translation>
-</message>
-<message>
 <location filename="../dialogs/updatedialog.cpp" line="480"/>
 <source>Restart application</source>
 <translation>أعد تشغيل التطبيق</translation>
@@ -9347,6 +9342,11 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="559"/>
 <source>Proceed with update</source>
 <translation>المضي قدماً في التحديث</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="472"/>
+<source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation>تعذر استبدال الملف التنفيذي القديم لـQOwnNotes الخاص بك «%1» بالملف الجديد «%2»! يجب استبداله بنفسك.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="560"/>

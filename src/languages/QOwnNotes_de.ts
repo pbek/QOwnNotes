@@ -4397,160 +4397,160 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <context>
 <name>OwnCloudService</name>
 <message>
-<location filename="../services/owncloudservice.cpp" line="237"/>
+<location filename="../services/owncloudservice.cpp" line="243"/>
 <source>incorrect</source>
 <translation>inkorrekt</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="239"/>
-<location filename="../services/owncloudservice.cpp" line="537"/>
+<location filename="../services/owncloudservice.cpp" line="245"/>
+<location filename="../services/owncloudservice.cpp" line="543"/>
 <source>not connected</source>
 <translation>nicht verbunden</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="254"/>
+<location filename="../services/owncloudservice.cpp" line="260"/>
 <source>Username / password error</source>
 <translation>Benutzername/Passwort-Fehler</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="255"/>
+<location filename="../services/owncloudservice.cpp" line="261"/>
 <source>Your calendar username or password is incorrect!</source>
 <translation>Kalender-Benutzername oder Passwort ist falsch!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="315"/>
-<location filename="../services/owncloudservice.cpp" line="317"/>
-<location filename="../services/owncloudservice.cpp" line="327"/>
-<location filename="../services/owncloudservice.cpp" line="329"/>
-<location filename="../services/owncloudservice.cpp" line="433"/>
-<location filename="../services/owncloudservice.cpp" line="487"/>
-<location filename="../services/owncloudservice.cpp" line="502"/>
-<location filename="../services/owncloudservice.cpp" line="510"/>
-<location filename="../services/owncloudservice.cpp" line="528"/>
+<location filename="../services/owncloudservice.cpp" line="321"/>
+<location filename="../services/owncloudservice.cpp" line="323"/>
+<location filename="../services/owncloudservice.cpp" line="333"/>
+<location filename="../services/owncloudservice.cpp" line="335"/>
+<location filename="../services/owncloudservice.cpp" line="439"/>
+<location filename="../services/owncloudservice.cpp" line="493"/>
+<location filename="../services/owncloudservice.cpp" line="508"/>
+<location filename="../services/owncloudservice.cpp" line="516"/>
+<location filename="../services/owncloudservice.cpp" line="534"/>
 <source>ok</source>
 <translation>ok</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="320"/>
+<location filename="../services/owncloudservice.cpp" line="326"/>
 <source>not correct</source>
 <translation>nicht korrekt</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="333"/>
+<location filename="../services/owncloudservice.cpp" line="339"/>
 <source>not detected</source>
 <translation>nicht erkannt</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="436"/>
-<location filename="../services/owncloudservice.cpp" line="531"/>
+<location filename="../services/owncloudservice.cpp" line="442"/>
+<location filename="../services/owncloudservice.cpp" line="537"/>
 <source>not found</source>
 <translation>nicht gefunden</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="473"/>
-<location filename="../services/owncloudservice.cpp" line="475"/>
+<location filename="../services/owncloudservice.cpp" line="479"/>
+<location filename="../services/owncloudservice.cpp" line="481"/>
 <source>unknown</source>
 <translation>unbekannt</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="484"/>
+<location filename="../services/owncloudservice.cpp" line="490"/>
 <source>version %1 too low</source>
 <translation>Version %1 zu niedrig</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="505"/>
-<location filename="../services/owncloudservice.cpp" line="513"/>
+<location filename="../services/owncloudservice.cpp" line="511"/>
+<location filename="../services/owncloudservice.cpp" line="519"/>
 <source>not enabled</source>
 <translation>nicht aktiviert</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="587"/>
+<location filename="../services/owncloudservice.cpp" line="593"/>
 <source>API app version too low</source>
 <translation>API-Anwendungsversion zu niedrig</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="588"/>
+<location filename="../services/owncloudservice.cpp" line="594"/>
 <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
 <translation>Eventuell ziehen Sie die Aktualisierung Ihrer QOwnNotesAPI-Anwendung auf Ihrem Server in Betracht. Die Version %1 ist zu niedrig und kann Probleme in QOwnNotes verursachen.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1200"/>
+<location filename="../services/owncloudservice.cpp" line="1212"/>
 <source>ownCloud server connection error</source>
 <translation>ownCloud-Server Verbindungsfehler</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1205"/>
+<location filename="../services/owncloudservice.cpp" line="1217"/>
 <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
 <translation>ownCloud Serverfehler: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt; Bitte überprüfen Sie Ihre ownCloud Einstellungen.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1225"/>
+<location filename="../services/owncloudservice.cpp" line="1237"/>
 <source>You need to setup your ownCloud server!</source>
 <translation>Ihr ownCloud-Server muss konfiguriert werden!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1237"/>
+<location filename="../services/owncloudservice.cpp" line="1249"/>
 <source>Open &amp;settings</source>
 <translation>Öffne &amp;Einstellungen</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1237"/>
+<location filename="../services/owncloudservice.cpp" line="1249"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Abbrechen</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1296"/>
+<location filename="../services/owncloudservice.cpp" line="1308"/>
 <source>Done with loading note versions</source>
 <translation>Laden der Notizversionen abgeschlossen</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1341"/>
+<location filename="../services/owncloudservice.cpp" line="1353"/>
 <source>No versions found</source>
 <translation>Keine Versionen gefunden</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1342"/>
+<location filename="../services/owncloudservice.cpp" line="1354"/>
 <source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>Keine Versionen der Notiz vorhanden oder diese Notiz existiert nicht auf dem Server.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1362"/>
+<location filename="../services/owncloudservice.cpp" line="1374"/>
 <source>Done with loading trashed notes</source>
 <translation>Gelöschte Notizen wurden geladen</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1407"/>
+<location filename="../services/owncloudservice.cpp" line="1419"/>
 <source>No trashed notes</source>
 <translation>Keine Notizen im Papierkorb</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1408"/>
+<location filename="../services/owncloudservice.cpp" line="1420"/>
 <source>No trashed notes were found on the server.</source>
 <translation>Keine gelöschten Notizen auf dem Server gefunden.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1430"/>
-<location filename="../services/owncloudservice.cpp" line="1457"/>
+<location filename="../services/owncloudservice.cpp" line="1442"/>
+<location filename="../services/owncloudservice.cpp" line="1469"/>
 <source>Error while loading todo lists!</source>
 <translation>Fehler beim Laden der Aufgabenlisten!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1431"/>
+<location filename="../services/owncloudservice.cpp" line="1443"/>
 <source>Your CalDAV server didn't reply anything!</source>
 <translation>Keine Antwort von Ihrem CalDAV-Server!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1458"/>
+<location filename="../services/owncloudservice.cpp" line="1470"/>
 <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>Fehlermeldung Ihres CalDAV-Servers: &lt;strong&gt;%1&lt;/strong&gt;</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2146"/>
+<location filename="../services/owncloudservice.cpp" line="2158"/>
 <source>No bookmarks</source>
 <translation>Keine Lesezeichen</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2147"/>
+<location filename="../services/owncloudservice.cpp" line="2159"/>
 <source>No bookmarks were found on the server.</source>
 <translation>Auf dem Server wurden keine Lesezeichen gefunden.</translation>
 </message>
@@ -4713,17 +4713,17 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <translation>Neue Verbindung</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4480"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4487"/>
 <source>Login flow succeeded</source>
 <translation>Anmeldevorgang abgeschlossen</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4481"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4488"/>
 <source>Username and password were set successfully!</source>
 <translation>Benutzername und Passwort wurden gesetzt!</translation>
 </message>
 <message>
-<location filename="../entities/cloudconnection.cpp" line="291"/>
+<location filename="../entities/cloudconnection.cpp" line="299"/>
 <source>Default</source>
 <translation>Standard</translation>
 </message>
@@ -4786,18 +4786,18 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <translation>Notizunterordner für den aktuellen Notizordner aktiviert, um Ordner importieren zu können.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2263"/>
-<location filename="../services/owncloudservice.cpp" line="2278"/>
+<location filename="../services/owncloudservice.cpp" line="2275"/>
+<location filename="../services/owncloudservice.cpp" line="2290"/>
 <source>Login flow failed</source>
 <translation>Anmeldevorgang fehlgeschlagen</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2264"/>
+<location filename="../services/owncloudservice.cpp" line="2276"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
 <translation>Nextcloud Anmeldevorgang v2 konnte nicht gestartet werden. Stellen Sie sicher, dass die Server-URL korrekt ist und Sie einen Nextcloud-Server verwenden!&lt;br /&gt;&lt;br /&gt;Wenn Sie immer noch Probleme haben, erstellen Sie bitte ein App-Passwort von Hand auf der Admin-Seite Ihres Servers.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2279"/>
+<location filename="../services/owncloudservice.cpp" line="2291"/>
 <source>Could not parse login url!</source>
 <translation>Anmelde-URL konnte nicht ausgewertet werden!</translation>
 </message>
@@ -5031,12 +5031,12 @@ Are the folder and the file writeable?</source>
 <translation>Notizordner-Datenbank kann nicht geöffnet werden</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="966"/>
+<location filename="../services/databaseservice.cpp" line="972"/>
 <source>Cannot open database</source>
 <translation>Datenbank kann nicht geöffnet werden</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="967"/>
+<location filename="../services/databaseservice.cpp" line="973"/>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
 <translation>Kann keine Datenbankverbindung zur der Notizordner-Datenbank zum Zusammführen von '%1' herstellen. Sind der Ordner und die Datei beschreibbar?</translation>
@@ -8135,8 +8135,8 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
-<source>Only show images that are not used in notes</source>
-<translation>Zeigen Sie nur Bilder an, die nicht in Notizen verwendet werden</translation>
+<source>Only show attachments that are not used in notes</source>
+<translation>Nur Anhänge anzeigen, welche nicht in Notizen verwendet werden.</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
@@ -9072,11 +9072,6 @@ Kann nicht rückgängig gemacht werden!</translation>
 <translation>Ihre alte ausführbare QOwnNotes-Datei '%1' konnte nicht entfernt werden! Sie müssen es selbst durch '%2' ersetzen.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="472"/>
-<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation>Ihre alte ausführbare QOwnNotes-Datei '%1' konnte nicht überschrieben werden und wurde durch die neue Datei '%2' ersetzt! Sie müssen es selbst ersetzen.</translation>
-</message>
-<message>
 <location filename="../dialogs/updatedialog.cpp" line="480"/>
 <source>Restart application</source>
 <translation>Anwendung neu starten</translation>
@@ -9127,6 +9122,11 @@ Kann nicht rückgängig gemacht werden!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="559"/>
 <source>Proceed with update</source>
 <translation>Mit Aktualisierung fortfahren</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="472"/>
+<source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation>Ihre alte ausführbare QOwnNotes-Datei '%1' konnte nicht durch die neue Datei '%2' ersetzt werden! Sie müssen es selbst ersetzen.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="560"/>

@@ -4407,160 +4407,160 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <context>
 <name>OwnCloudService</name>
 <message>
-<location filename="../services/owncloudservice.cpp" line="237"/>
+<location filename="../services/owncloudservice.cpp" line="243"/>
 <source>incorrect</source>
 <translation type="unfinished">incorrect</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="239"/>
-<location filename="../services/owncloudservice.cpp" line="537"/>
+<location filename="../services/owncloudservice.cpp" line="245"/>
+<location filename="../services/owncloudservice.cpp" line="543"/>
 <source>not connected</source>
 <translation type="unfinished">not connected</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="254"/>
+<location filename="../services/owncloudservice.cpp" line="260"/>
 <source>Username / password error</source>
 <translation>Sunan mai amfani / kuskuren kalmar sirri</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="255"/>
+<location filename="../services/owncloudservice.cpp" line="261"/>
 <source>Your calendar username or password is incorrect!</source>
 <translation>Sunan kalandar kalandar ko kalmar wucewa ba daidai bane!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="315"/>
-<location filename="../services/owncloudservice.cpp" line="317"/>
-<location filename="../services/owncloudservice.cpp" line="327"/>
-<location filename="../services/owncloudservice.cpp" line="329"/>
-<location filename="../services/owncloudservice.cpp" line="433"/>
-<location filename="../services/owncloudservice.cpp" line="487"/>
-<location filename="../services/owncloudservice.cpp" line="502"/>
-<location filename="../services/owncloudservice.cpp" line="510"/>
-<location filename="../services/owncloudservice.cpp" line="528"/>
+<location filename="../services/owncloudservice.cpp" line="321"/>
+<location filename="../services/owncloudservice.cpp" line="323"/>
+<location filename="../services/owncloudservice.cpp" line="333"/>
+<location filename="../services/owncloudservice.cpp" line="335"/>
+<location filename="../services/owncloudservice.cpp" line="439"/>
+<location filename="../services/owncloudservice.cpp" line="493"/>
+<location filename="../services/owncloudservice.cpp" line="508"/>
+<location filename="../services/owncloudservice.cpp" line="516"/>
+<location filename="../services/owncloudservice.cpp" line="534"/>
 <source>ok</source>
 <translation type="unfinished">ok</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="320"/>
+<location filename="../services/owncloudservice.cpp" line="326"/>
 <source>not correct</source>
 <translation type="unfinished">not correct</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="333"/>
+<location filename="../services/owncloudservice.cpp" line="339"/>
 <source>not detected</source>
 <translation type="unfinished">not detected</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="436"/>
-<location filename="../services/owncloudservice.cpp" line="531"/>
+<location filename="../services/owncloudservice.cpp" line="442"/>
+<location filename="../services/owncloudservice.cpp" line="537"/>
 <source>not found</source>
 <translation type="unfinished">not found</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="473"/>
-<location filename="../services/owncloudservice.cpp" line="475"/>
+<location filename="../services/owncloudservice.cpp" line="479"/>
+<location filename="../services/owncloudservice.cpp" line="481"/>
 <source>unknown</source>
 <translation type="unfinished">unknown</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="484"/>
+<location filename="../services/owncloudservice.cpp" line="490"/>
 <source>version %1 too low</source>
 <translation type="unfinished">version %1 too low</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="505"/>
-<location filename="../services/owncloudservice.cpp" line="513"/>
+<location filename="../services/owncloudservice.cpp" line="511"/>
+<location filename="../services/owncloudservice.cpp" line="519"/>
 <source>not enabled</source>
 <translation type="unfinished">not enabled</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="587"/>
+<location filename="../services/owncloudservice.cpp" line="593"/>
 <source>API app version too low</source>
 <translation>Appa'idar API ta ƙasa tayi ƙasa da ƙasa</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="588"/>
+<location filename="../services/owncloudservice.cpp" line="594"/>
 <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
 <translation>Da fatan za a yi la’akari da sabuntar kayanka na QOwnNotesAPI akan sabar ka, sigar app dinka% 1 tayi kasa sosai kuma tana iya haifarda matsala a QOwnNotes.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1200"/>
+<location filename="../services/owncloudservice.cpp" line="1212"/>
 <source>ownCloud server connection error</source>
 <translation>kuskuren haɗin uwar garken ownCloud</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1205"/>
+<location filename="../services/owncloudservice.cpp" line="1217"/>
 <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
 <translation>kuskuren uwar ownCloud': &lt;strong&gt;%1&lt;/strong&gt; &lt;br/&gt; Da fatan za a duba tsarin ownCloud.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1225"/>
+<location filename="../services/owncloudservice.cpp" line="1237"/>
 <source>You need to setup your ownCloud server!</source>
 <translation>Kuna buƙatar saita sabar ownCloud!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1237"/>
+<location filename="../services/owncloudservice.cpp" line="1249"/>
 <source>Open &amp;settings</source>
 <translation>Bude &amp;saiti</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1237"/>
+<location filename="../services/owncloudservice.cpp" line="1249"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Soke</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1296"/>
+<location filename="../services/owncloudservice.cpp" line="1308"/>
 <source>Done with loading note versions</source>
 <translation>Anyi tare da juzu'in bayanin kula</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1341"/>
+<location filename="../services/owncloudservice.cpp" line="1353"/>
 <source>No versions found</source>
 <translation>Babu sigar da aka samo</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1342"/>
+<location filename="../services/owncloudservice.cpp" line="1354"/>
 <source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>Babu sigogin wannan bayanin ko ba'a samo bayanin a kan sabar ba.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1362"/>
+<location filename="../services/owncloudservice.cpp" line="1374"/>
 <source>Done with loading trashed notes</source>
 <translation>An gama tare da bayanan bayanan da aka fallasa</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1407"/>
+<location filename="../services/owncloudservice.cpp" line="1419"/>
 <source>No trashed notes</source>
 <translation>No trashed notes</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1408"/>
+<location filename="../services/owncloudservice.cpp" line="1420"/>
 <source>No trashed notes were found on the server.</source>
 <translation>Babu bayanin da aka tarar da aka gano akan sabar.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1430"/>
-<location filename="../services/owncloudservice.cpp" line="1457"/>
+<location filename="../services/owncloudservice.cpp" line="1442"/>
+<location filename="../services/owncloudservice.cpp" line="1469"/>
 <source>Error while loading todo lists!</source>
 <translation>Kuskure yayin loda jerin lambobi!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1431"/>
+<location filename="../services/owncloudservice.cpp" line="1443"/>
 <source>Your CalDAV server didn't reply anything!</source>
 <translation>Unguwa ta CalDAV bata amsa komai ba!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1458"/>
+<location filename="../services/owncloudservice.cpp" line="1470"/>
 <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>Saƙon kuskure daga uwar garken CalDAV ɗin: &lt;strong&gt;%1 &lt;/strong&gt;</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2146"/>
+<location filename="../services/owncloudservice.cpp" line="2158"/>
 <source>No bookmarks</source>
 <translation>Babu alamun shafi</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2147"/>
+<location filename="../services/owncloudservice.cpp" line="2159"/>
 <source>No bookmarks were found on the server.</source>
 <translation>Ba a sami alamun shafi ba a kan sabar.</translation>
 </message>
@@ -4723,17 +4723,17 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <translation>Sabuwar haɗi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4480"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4487"/>
 <source>Login flow succeeded</source>
 <translation type="unfinished">Login flow succeeded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4481"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4488"/>
 <source>Username and password were set successfully!</source>
 <translation type="unfinished">Username and password were set successfully!</translation>
 </message>
 <message>
-<location filename="../entities/cloudconnection.cpp" line="291"/>
+<location filename="../entities/cloudconnection.cpp" line="299"/>
 <source>Default</source>
 <translation>Tsohuwa</translation>
 </message>
@@ -4797,18 +4797,18 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2263"/>
-<location filename="../services/owncloudservice.cpp" line="2278"/>
+<location filename="../services/owncloudservice.cpp" line="2275"/>
+<location filename="../services/owncloudservice.cpp" line="2290"/>
 <source>Login flow failed</source>
 <translation type="unfinished">Login flow failed</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2264"/>
+<location filename="../services/owncloudservice.cpp" line="2276"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
 <translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2279"/>
+<location filename="../services/owncloudservice.cpp" line="2291"/>
 <source>Could not parse login url!</source>
 <translation type="unfinished">Could not parse login url!</translation>
 </message>
@@ -5043,12 +5043,12 @@ Shin babban fayil ɗin da fayil ɗin za a iya rubutawa?</translation>
 <translation>Ba za a iya bude bayanin fayil ɗin bayanin kula ba</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="966"/>
+<location filename="../services/databaseservice.cpp" line="972"/>
 <source>Cannot open database</source>
 <translation>Ba za a iya bude bayanai ba</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="967"/>
+<location filename="../services/databaseservice.cpp" line="973"/>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
 <translation>An kasa kafa tushen bayanan bayanai tare da bayanan babban fayil domin hade '%1'.
@@ -8159,8 +8159,8 @@ Bayanan kula ku za su zauna lafiya!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
-<source>Only show images that are not used in notes</source>
-<translation type="unfinished">Only show images that are not used in notes</translation>
+<source>Only show attachments that are not used in notes</source>
+<translation type="unfinished">Only show attachments that are not used in notes</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
@@ -9096,11 +9096,6 @@ Ba za a sake yin wannan ba!</translation>
 <translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="472"/>
-<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
-</message>
-<message>
 <location filename="../dialogs/updatedialog.cpp" line="480"/>
 <source>Restart application</source>
 <translation type="unfinished">Restart application</translation>
@@ -9151,6 +9146,11 @@ Ba za a sake yin wannan ba!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="559"/>
 <source>Proceed with update</source>
 <translation>Ci gaba da sabuntawa</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="472"/>
+<source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="560"/>

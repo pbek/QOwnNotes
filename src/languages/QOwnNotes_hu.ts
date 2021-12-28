@@ -4395,160 +4395,160 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <context>
 <name>OwnCloudService</name>
 <message>
-<location filename="../services/owncloudservice.cpp" line="237"/>
+<location filename="../services/owncloudservice.cpp" line="243"/>
 <source>incorrect</source>
 <translation>helytelen</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="239"/>
-<location filename="../services/owncloudservice.cpp" line="537"/>
+<location filename="../services/owncloudservice.cpp" line="245"/>
+<location filename="../services/owncloudservice.cpp" line="543"/>
 <source>not connected</source>
 <translation>nem kapcsolódik</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="254"/>
+<location filename="../services/owncloudservice.cpp" line="260"/>
 <source>Username / password error</source>
 <translation>Felhasználónév / jelszó hiba</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="255"/>
+<location filename="../services/owncloudservice.cpp" line="261"/>
 <source>Your calendar username or password is incorrect!</source>
 <translation>A naptár-felhasználónév vagy a jelszó nem megfelelő!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="315"/>
-<location filename="../services/owncloudservice.cpp" line="317"/>
-<location filename="../services/owncloudservice.cpp" line="327"/>
-<location filename="../services/owncloudservice.cpp" line="329"/>
-<location filename="../services/owncloudservice.cpp" line="433"/>
-<location filename="../services/owncloudservice.cpp" line="487"/>
-<location filename="../services/owncloudservice.cpp" line="502"/>
-<location filename="../services/owncloudservice.cpp" line="510"/>
-<location filename="../services/owncloudservice.cpp" line="528"/>
+<location filename="../services/owncloudservice.cpp" line="321"/>
+<location filename="../services/owncloudservice.cpp" line="323"/>
+<location filename="../services/owncloudservice.cpp" line="333"/>
+<location filename="../services/owncloudservice.cpp" line="335"/>
+<location filename="../services/owncloudservice.cpp" line="439"/>
+<location filename="../services/owncloudservice.cpp" line="493"/>
+<location filename="../services/owncloudservice.cpp" line="508"/>
+<location filename="../services/owncloudservice.cpp" line="516"/>
+<location filename="../services/owncloudservice.cpp" line="534"/>
 <source>ok</source>
 <translation>rendben</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="320"/>
+<location filename="../services/owncloudservice.cpp" line="326"/>
 <source>not correct</source>
 <translation>nem megfelelő</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="333"/>
+<location filename="../services/owncloudservice.cpp" line="339"/>
 <source>not detected</source>
 <translation>nem észlelt</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="436"/>
-<location filename="../services/owncloudservice.cpp" line="531"/>
+<location filename="../services/owncloudservice.cpp" line="442"/>
+<location filename="../services/owncloudservice.cpp" line="537"/>
 <source>not found</source>
 <translation>nem található</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="473"/>
-<location filename="../services/owncloudservice.cpp" line="475"/>
+<location filename="../services/owncloudservice.cpp" line="479"/>
+<location filename="../services/owncloudservice.cpp" line="481"/>
 <source>unknown</source>
 <translation>ismeretlen</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="484"/>
+<location filename="../services/owncloudservice.cpp" line="490"/>
 <source>version %1 too low</source>
 <translation>verzió %1 túl alacsony</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="505"/>
-<location filename="../services/owncloudservice.cpp" line="513"/>
+<location filename="../services/owncloudservice.cpp" line="511"/>
+<location filename="../services/owncloudservice.cpp" line="519"/>
 <source>not enabled</source>
 <translation>nem engedélyezett</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="587"/>
+<location filename="../services/owncloudservice.cpp" line="593"/>
 <source>API app version too low</source>
 <translation>API app változat túl alacsony</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="588"/>
+<location filename="../services/owncloudservice.cpp" line="594"/>
 <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
 <translation>Kérjük frissítse a QOwnNotesAPI alkalmazását, az Ön %1 változata túl alacsony és gondot okozhat a QOwnNotes-ban.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1200"/>
+<location filename="../services/owncloudservice.cpp" line="1212"/>
 <source>ownCloud server connection error</source>
 <translation>ownCloud kiszolgálócsatlakozási hiba</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1205"/>
+<location filename="../services/owncloudservice.cpp" line="1217"/>
 <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
 <translation>ownCloud kiszolgálóhiba: &lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt; Kérjük ellenőrizze az ownCloud konfigurációját.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1225"/>
+<location filename="../services/owncloudservice.cpp" line="1237"/>
 <source>You need to setup your ownCloud server!</source>
 <translation>Telepítse az ownCloud szerverét!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1237"/>
+<location filename="../services/owncloudservice.cpp" line="1249"/>
 <source>Open &amp;settings</source>
 <translation>Megnyitja a &amp;beállításokat</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1237"/>
+<location filename="../services/owncloudservice.cpp" line="1249"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Mégse</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1296"/>
+<location filename="../services/owncloudservice.cpp" line="1308"/>
 <source>Done with loading note versions</source>
 <translation>A jegyzetváltozatok töltése befejeződött</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1341"/>
+<location filename="../services/owncloudservice.cpp" line="1353"/>
 <source>No versions found</source>
 <translation>Nem található változat</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1342"/>
+<location filename="../services/owncloudservice.cpp" line="1354"/>
 <source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>A jegyzetek nincsenek változatai, vagy a jegyzet nem található a kiszolgálón.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1362"/>
+<location filename="../services/owncloudservice.cpp" line="1374"/>
 <source>Done with loading trashed notes</source>
 <translation>A törölt jegyzetek töltése befejeződött</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1407"/>
+<location filename="../services/owncloudservice.cpp" line="1419"/>
 <source>No trashed notes</source>
 <translation>Nincsenek törölt jegyzetek</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1408"/>
+<location filename="../services/owncloudservice.cpp" line="1420"/>
 <source>No trashed notes were found on the server.</source>
 <translation>Nincsenek törölt jegyzetek a kiszolgálón.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1430"/>
-<location filename="../services/owncloudservice.cpp" line="1457"/>
+<location filename="../services/owncloudservice.cpp" line="1442"/>
+<location filename="../services/owncloudservice.cpp" line="1469"/>
 <source>Error while loading todo lists!</source>
 <translation>Hiba a teendőlista betöltése alatt!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1431"/>
+<location filename="../services/owncloudservice.cpp" line="1443"/>
 <source>Your CalDAV server didn't reply anything!</source>
 <translation>A CalDAV-kiszolgáló nem válaszolt!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1458"/>
+<location filename="../services/owncloudservice.cpp" line="1470"/>
 <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>Hibaüzenet a CalDAV szerveren: &lt;strong&gt;%1&lt;/strong&gt;</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2146"/>
+<location filename="../services/owncloudservice.cpp" line="2158"/>
 <source>No bookmarks</source>
 <translation>Nincsenek könyvjelzők</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2147"/>
+<location filename="../services/owncloudservice.cpp" line="2159"/>
 <source>No bookmarks were found on the server.</source>
 <translation>Nincsenek könyvjelzők a kiszolgálón.</translation>
 </message>
@@ -4711,17 +4711,17 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <translation>Új kapcsolat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4480"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4487"/>
 <source>Login flow succeeded</source>
 <translation>A bejelentkezési folyamat sikerült</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4481"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4488"/>
 <source>Username and password were set successfully!</source>
 <translation>A felhasználónév és a jelszó beállítása sikeres!</translation>
 </message>
 <message>
-<location filename="../entities/cloudconnection.cpp" line="291"/>
+<location filename="../entities/cloudconnection.cpp" line="299"/>
 <source>Default</source>
 <translation>Alapértelmezett</translation>
 </message>
@@ -4784,18 +4784,18 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <translation>Bekapcsolta a jegyzet almappáit az aktuális jegyzetmappa számára, hogy mappákat tudjon importálni.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2263"/>
-<location filename="../services/owncloudservice.cpp" line="2278"/>
+<location filename="../services/owncloudservice.cpp" line="2275"/>
+<location filename="../services/owncloudservice.cpp" line="2290"/>
 <source>Login flow failed</source>
 <translation>A bejelentkezési folyamat nem sikerült</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2264"/>
+<location filename="../services/owncloudservice.cpp" line="2276"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
 <translation>A Nextcloud bejelentkezési folyamat v2 nem indítható. Győződjön meg arról, hogy a szerver URL -címe helyes, és Nextcloud -szervert használ! &lt;br/&gt;&lt;br /&gt; Ha továbbra is problémái vannak, kérjük, hozzon létre kézzel egy alkalmazásjelszót a szerver adminisztrációs oldalán.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2279"/>
+<location filename="../services/owncloudservice.cpp" line="2291"/>
 <source>Could not parse login url!</source>
 <translation>Nem sikerült elemezni a bejelentkezési URL -t!</translation>
 </message>
@@ -5030,12 +5030,12 @@ A mappa és a fájl írható?</translation>
 <translation>Jegyzet adatbázis nem nyitható meg</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="966"/>
+<location filename="../services/databaseservice.cpp" line="972"/>
 <source>Cannot open database</source>
 <translation>Nem lehet megnyitni az adatbázist</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="967"/>
+<location filename="../services/databaseservice.cpp" line="973"/>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
 <translation>Nem sikerült adatbázis-kapcsolatot létrehozni a jegyzetmappák adatbázisával a(z) '%1' egyesítéséhez.
@@ -8137,8 +8137,8 @@ A jegyzetek érintetlenül maradnak!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
-<source>Only show images that are not used in notes</source>
-<translation>Csak azokat a képeket jelenítse meg, amelyeket nem használnak a jegyzetek</translation>
+<source>Only show attachments that are not used in notes</source>
+<translation type="unfinished">Only show attachments that are not used in notes</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
@@ -9074,11 +9074,6 @@ Nem lehet visszavonni!</translation>
 <translation>A régi QOwnNotes '%1' futtatható fájlját nem sikerült eltávolítani! Magának le kell cserélnie '%2'-re.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="472"/>
-<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation>A régi QOwnNotes futtatható %1 fájlt nem lehet felülírni, helyette az új fájlt '%2'! Magának kell kicserélnie.</translation>
-</message>
-<message>
 <location filename="../dialogs/updatedialog.cpp" line="480"/>
 <source>Restart application</source>
 <translation>Indítsa újra az alkalmazást</translation>
@@ -9129,6 +9124,11 @@ Nem lehet visszavonni!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="559"/>
 <source>Proceed with update</source>
 <translation>Folytatja a frissítést</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="472"/>
+<source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="560"/>

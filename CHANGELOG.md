@@ -4,6 +4,8 @@
 - an issue with creating new Nextcloud connections was fixed (for [#2329](https://github.com/pbek/QOwnNotes/issues/2329))
 - an attempt was made to debug/fix the application not starting automatically
   after an update on macOS Big Sur (for [#2339](https://github.com/pbek/QOwnNotes/issues/2339))
+- added more translation (thank you noureddin, mguerra, marcoxbresciani, skosho,
+  marterra, rakekniven)
 
 ## 21.12.6
 - the builds for Qt < 5.15 were fixed (for [#2329](https://github.com/pbek/QOwnNotes/issues/2329))

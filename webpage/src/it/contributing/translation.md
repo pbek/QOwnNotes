@@ -1,8 +1,8 @@
 # Traduzione
 
-Thank you for helping out!
+Grazie per l'aiuto!
 
-How can I help to translate QOwnNotes?
+Come posso aiutare a tradurre QOwnNotes?
 
 ## Unisciti a noi su Crowdin per tradurre QOwnNotes
 
@@ -14,59 +14,59 @@ Puoi iscriverti a [Crowdin](https://crowdin.com/project/qownnotes/invite) e **tr
 
 **[QOwnNotes su Crowdin](https://crowdin.com/project/qownnotes/invite)**
 
-Just [drop the project owner a message on Crowdin](https://crowdin.com/profile/pbek) or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues) if you want to translate QOwnNotes to a new language.
+Devi solo [mandare un messaggio all'autore del progetto su Crowdin](https://crowdin.com/profile/pbek) o aprire un [problema su GitHub](https://github.com/pbek/QOwnNotes/issues) se vuoi tradurre QOwnNotes in una nuova lingua.
 
-If you want to add new translations to **existing languages** you can do so right away.
+Se desideri aggiungere nuove traduzioni a **lingue esistenti**, puoi farlo subito.
 
 ## Correzione di bozze
 
-If you are an excellent or even native speaker of an already translated language that has not been proofread yet, we are grateful if you help to make the QOwnNotes experience more reliable and convenient by checking and if necessary, correcting unapproved translations. You need to ask the owner for the permission to be a proofreader for your language.
+Se parli con competenza o nativamente una lingua già tradotta ma non ancora ricontrollata, ti saremmo grati se volessi contribuire a rendere l'uso di QOwnNotes più comodo e affidabile controllando e, se necessario, correggendo le traduzioni non approvate. Devi chiedere il permesso al proprietario per essere un correttore di bozze per la tua lingua.
 
 Clicca qui per vedere se la tua lingua è tra quelle tradotte!
 
 [QOwnNotes su Crowdin](https://translate.qownnotes.org/)
 
-Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profile/pbek) and received permission to proofread in your language, you’re ready to go!
+Dopo aver [contattato il proprietario del progetto su Crowdin](https://crowdin.com/profile/pbek) e ottenuto il permesso di correggere le bozze nella tua lingua, sei pronto per partire!
 
-## General tips
+## Suggerimenti
 
-Please consider a few things while working on the project.
+Si prega di considerare alcune cose mentre si lavora al progetto.
 
-### Accuracy
+### Accuratezza
 
-Please localize with maximal possible accuracy while caring for fluency in your target language.
+Per favore, traduci colla massima cura, tenendo in considerazione la fluidità del tuo linguaggio di arrivo.
 
-### Precision
+### Precisione
 
-The target needs to represent the source exactly and with no omissions or additions of any part of the string.
+Il linguaggio finale deve rappresentare la fonte correttamente, senza omissioni o aggiunte in nessuna parte della frase.
 
-### Context
+### Contesto
 
-If you need more context, or help with a certain string, and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page.
+Se hai bisogno di più contesto o aiuto con una data frase, e conosci qualche altra lingua, può cambiare lingua e vedere se qualche altro traduttore ha completato quella frase. Ma sentiti libero di mandare un messaggio e chiedere chiarimenti tramite il lato destro della pagina.
 
-### Frequently used key terms
+### Termini chiave frequenti
 
-It is necessary to check and use the same translations for the frequently used key terms, for example, "note" must be translated always in the same way.
+E' necessario controllare e usare le stesse traduzioni per i termini chiave più frequenti. "Note", per esempio, deve essere tradotto sempre nello stesso modo.
 
-Se `note cestinate` è `file eliminati` in italiano, verrà sempre tradotto utilizzando questa espressione. Ci sarà un'eccezione quando si è grammaticalmente obbligati a usare un'alternativa, ma è opportuno cercare di mantenere semplice il tutto.
+Se `trashed notes` è `note cestinate` in italiano, dovrai tradurlo sempre con questa espressione. Ci sarà un'eccezione quando si è grammaticalmente obbligati a usare un'alternativa, ma è opportuno cercare di mantenere semplice il tutto.
 
 ![screenshot](/img/crowdin/screenshot-7.png)
 
-In order to find all the identical expressions, search Crowdin to see if all the occurrences of a term indeed have the same translation, if you know better, and they don't you may suggest a better translation and vote down (or up) for the better / correct translation.
+Per trovare tutte le espressioni identiche, cerca Crowdin per vedere se altre occorrenze dello stesso termine hanno la stessa traduzioni. Se hai un'idea migliore, puoi suggerire una traduzioni migliore e votare giù (o su) per la traduzione migliore/corretta.
 
-Localize all occurrences as identically as you can.
+Traduci tutte le occorrenze nel modo più identico possibile.
 
-`Nota` dovrebbe chiaramente avere una sola traduzione.
+`Note` dovrebbe avere sempre una sola traduzione.
 
-### Plural forms
+### Forme plurali
 
-For plural please add the appropriate translation each in the corresponding block.
+Per il plurale, aggiungi la traduzione appropriata nel blocco corrispondente.
 
 ![screenshot](/img/crowdin/screenshot-4.png)
 
-### Variables
+### Variabili
 
-The `%1` variables need to be written without a space, in RTL languages you can either insert the variables from the original or write them into your translation.
+Le `%1` variabili devono essere scritte senza spazio; nelle lingue RTL puoi inserire le variabili dall'originale o scriverle nella tua traduzione.
 
 ![screenshot](/img/crowdin/screenshot-1.png)
 
@@ -74,28 +74,28 @@ The `%1` variables need to be written without a space, in RTL languages you can 
 
 ![screenshot](/img/crowdin/screenshot-3.png)
 
-### Access keys
+### Tasti di scelta rapida
 
-Use `&` in front of any letter that should be used in a shortcut, can be the same as in original but does not have to.
+Usa `&` davanti a qualsiasi lettera che dovrebbe essere usata in una scorciatoia, può essere la stessa dell'originale ma non è necessario.
 
 ![screenshot](/img/crowdin/screenshot-4.png)
 
-### Custom containers
+### Contenitori personalizzati
 
-Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
+Stringhe come `::: tip`, `::: warning` e `::: info` nella documentazione sono marcatori per [contenitori personalizzati](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) di VuePress e non devono essere tradotti.
 
-### Other strings not to be translated
+### Altre stringhe da non tradurre
 
-Some segments we don't translate in the Documentation:
+Alcune parti della documentazione non vanno tradotte:
 
-- Never translate codes or links, tags must be left as they are (and without added spaces, as some machine translation does that, those must be deleted)
-- We don't translate date and time (leave blank)
-- And we also don't translate references (which QOwnNotes got in numerous translation languages), so you can simply skip them
+- Non tradurre mai codice, collegamenti, etichette che devono essere lasciati come sono (e senza spazi aggiunti, dato che alcuni traduttori automatici lo fanno, devono essere cancellati)
+- Non traduciamo data e ora (lasciamoli vuoti)
+- E non traduciamo riferimenti (che QOwnNotes riceve in molte lingue), così possiamo lasciarli come sono
 
-## Translating and proofreading can be exciting!
+## Tradurre e correggere può essere interessante!
 
 You will deal with the language of this software, learn new terms and receive a lot of inside information about the project.
 
 If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading. You can ask her anything that helps you have fun contributing.
 
-Thanks a lot for your help! 🙂
+Grazie mille per il vostro aiuto! 🙂
