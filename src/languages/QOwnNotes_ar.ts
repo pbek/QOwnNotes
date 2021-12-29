@@ -889,12 +889,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished">Pass control keys</translation>
+<translation>تمرير أزرار التحكم</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished">Pass keys in insert mode</translation>
+<translation>تمرير الأزرار في وضع الإدخال</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
@@ -920,7 +920,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished">Shift width:</translation>
+<translation>عرض الإزاحة:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
@@ -965,12 +965,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished">Show partial command</translation>
+<translation>إظهار الأوامر الجزئية</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>إظهار أرقام السطور نسبةً إلى المؤشر</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
@@ -980,7 +980,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished">Scroll offset:</translation>
+<translation>إزاحة التمرير:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
@@ -1000,7 +1000,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>يُظهر أرقام السطور نسبةً إلى السطر الذي يحتوي على مؤشر النص.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
@@ -1065,12 +1065,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>اضغط Meta-Shift-Y ثم Meta-Shift-Y لإنهاء وضع FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
+<translation>اضغط Alt-Y ثم Alt-Y لإنهاء وضع FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1712,7 +1712,7 @@
 <message>
 <location filename="../widgets/layoutwidget.ui" line="97"/>
 <source>Use layout</source>
-<translation>استخدام التصميم</translation>
+<translation>استخدم التخطيط</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="57"/>
@@ -1727,7 +1727,7 @@
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="85"/>
 <source>Do you want to use the selected layout?</source>
-<translation>هل تريد استخدام التصميم المحدد؟</translation>
+<translation>هل تريد استخدام التخطيط المحدد؟</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="87"/>
@@ -1738,25 +1738,25 @@
 <location filename="../widgets/layoutwidget.cpp" line="151"/>
 <source>Minimal</source>
 <comment>Layout name</comment>
-<translation>أدنى</translation>
+<translation>بسيط</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="153"/>
 <source>Full</source>
 <comment>Layout name</comment>
-<translation>كامل، تمام</translation>
+<translation>كامل</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="155"/>
 <source>Preview only</source>
 <comment>Layout name</comment>
-<translation>عرض تمهيدي فقط</translation>
+<translation>معاينة فقط</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="157"/>
 <source>Full vertical</source>
 <comment>Layout name</comment>
-<translation>عمودي كامل</translation>
+<translation>رأسي بالكامل</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="159"/>
@@ -1786,19 +1786,19 @@
 <location filename="../widgets/layoutwidget.cpp" line="182"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
 <comment>Layout description</comment>
-<translation>يتم تمكين معظم اللوحات، مثل قائمة الملاحظات الموجودة على اليسار، ولوحات التوسيم، ولوحة تحرير الملاحظات في المركز ولوحة عرض تمهيدي على اليمين افتراضياً.</translation>
+<translation>تظهر معظم اللوحات بصفة مبدئية، مثل قائمة الملاحظات على اليسار، ولوحات الوسوم، ولوحة تحرير الملاحظات في المنتصف، ولوحة المعاينة على اليمين.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="188"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another workspace to actually edit notes!</source>
 <comment>Layout description</comment>
-<translation>تم تمكين معظم اللوحات، مثل قائمة الملاحظات على اليسار، ولوحات التوسيم، ولوحة عرض تمهيدي على اليمين فقط افتراضيًا. ستحتاج إلى مساحة عمل أخرى لتحرير الملاحظات بالفعل!</translation>
+<translation>تظهر معظم اللوحات بصفة مبدئية، مثل قائمة الملاحظات على اليسار، ولوحات الوسوم، وعلى اليمين لوحة المعاينة فقط. ستحتاج إلى مساحة عمل أخرى لتحرير الملاحظات فعليا!</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="194"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
 <comment>Layout description</comment>
-<translation>تم تمكين معظم اللوحات، مثل قائمة الملاحظات على اليسار، ولوحات التوسيم، ولوحة تحرير الملاحظات على اليمين ولوحة عرض تمهيدي فوق لوحة تحرير الملاحظات افتراضياً.</translation>
+<translation>تظهر معظم اللوحات بصفة مبدئية، مثل قائمة الملاحظات على اليسار، ولوحات الوسوم، ولوحة تحرير الملاحظات على اليمين، ولوحة المعاينة فوقها.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="201"/>
@@ -2358,7 +2358,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1191"/>
 <source>Workspace</source>
-<translation>ورشة عمل</translation>
+<translation>مساحة العمل</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1200"/>
@@ -2429,17 +2429,17 @@
 <message>
 <location filename="../mainwindow.ui" line="1563"/>
 <source>&amp;Export note as PDF (preview)</source>
-<translation>&amp;تصدير ملاحظة بتنسيق PDF (معاينة)</translation>
+<translation>&amp;تصدير معاينة الملاحظة كملف PDF</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1566"/>
 <source>Export note as PDF (preview)</source>
-<translation>تصدير ملاحظة بصيغة PDF (عرض)</translation>
+<translation>تصدير معاينة الملاحظة كملف PDF</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1575"/>
 <source>&amp;Export note as PDF (text)</source>
-<translation>&amp;صدّر الملاحظة بهيئة PDF لـ (نص)</translation>
+<translation>ت&amp;صدير نص الملاحظة كملف PDF</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1584"/>
@@ -2585,7 +2585,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1978"/>
 <source>Export note as HTML</source>
-<translation>تصدير ملاحظة بصيغة HTML</translation>
+<translation>تصدير الملاحظة كملف HTML</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1990"/>
@@ -2650,7 +2650,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2271"/>
 <source>Switch to previous workspace</source>
-<translation>بدّل إلة مساحة العمل السابقة</translation>
+<translation>انتقل إلى مساحة العمل السابقة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2279"/>
@@ -2888,13 +2888,13 @@
 <message>
 <location filename="../mainwindow.ui" line="1908"/>
 <source>Use &amp;vertical preview layout</source>
-<translation>استخدم مخطط العرض العمودي</translation>
+<translation>استخدم مخطط المعاينة ال&amp;رأسي</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1911"/>
 <location filename="../mainwindow.ui" line="1914"/>
 <source>The note edit panel will be above the preview panel</source>
-<translation>سيكون قسم تحرير الملاحظة فوق قسم المعاينة</translation>
+<translation>لوحة تحرير الملاحظة ستكون فوق لوحة المعاينة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1923"/>
@@ -2945,12 +2945,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1596"/>
 <source>&amp;Print note (preview)</source>
-<translation>&amp;طباعة الملاحظة (معاينة)</translation>
+<translation>&amp;طباعة معاينة الملاحظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1674"/>
 <source>&amp;Export note as Markdown file</source>
-<translation>&amp;صدّر الملاحظة كملف Markdown</translation>
+<translation>تصدي&amp;ر الملاحظة كملف Markdown</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1704"/>
@@ -3379,7 +3379,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="6998"/>
 <source>Print selected text (preview)</source>
-<translation>طباعة النص المحدد (معاينة)</translation>
+<translation>طباعة معاينة النص المحدد</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7016"/>
@@ -3389,7 +3389,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="7022"/>
 <source>Export selected text as PDF (preview)</source>
-<translation>تصدير النص المحدد بصيغة PDF (معاينة)</translation>
+<translation>تصدير معاينة النص المحدد بصيغة PDF</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7348"/>
@@ -3414,7 +3414,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="7632"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+<translation>هل تريد أيضا تصدير ملفات وسائط ومرفقات هذه الملاحظة؟ قد يتم الكتابة فوق الملفات في مجلد التصدير!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7666"/>
@@ -3842,7 +3842,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="5575"/>
 <source>Export current note as PDF</source>
-<translation>صدّر الملاحظة الحالية كملف PDF</translation>
+<translation>تصدير الملاحظة الحالية كملف PDF</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5682"/>
@@ -4026,7 +4026,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="10520"/>
 <source>Export current note as HTML file</source>
-<translation>صدّر الملاحظة الحالية كملف HTML</translation>
+<translation>تصدير الملاحظة الحالية كملف HTML</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5526"/>
@@ -4036,7 +4036,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="1305"/>
 <source>quit toolbar</source>
-<translation>قم بإنهاء شريط الأدوات</translation>
+<translation>شريط أداة الخروج</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5526"/>
@@ -4200,7 +4200,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="1001"/>
 <source>Note preview</source>
-<translation>عرض الملاحظة</translation>
+<translation>معاينة الملاحظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1009"/>
@@ -4230,7 +4230,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="1295"/>
 <source>window toolbar</source>
-<translation>نافذة شريط الأدوات</translation>
+<translation>شريط أدوات النافذة</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1300"/>
@@ -4240,7 +4240,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="1320"/>
 <source>Workspace selector</source>
-<translation>اختيار مساحة العمل</translation>
+<translation>محدد مساحة العمل</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1470"/>
@@ -4427,7 +4427,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="7618"/>
 <source>Export current note as Markdown file</source>
-<translation>صدّر الملاحظة الحالية كملف markdown</translation>
+<translation>تصدير الملاحظة الحالية كملف Markdown</translation>
 </message>
 </context>
 <context>
@@ -4548,7 +4548,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/owncloudservice.cpp" line="260"/>
 <source>Username / password error</source>
-<translation>خطأ في اسم المستخدم/ كلمة السر</translation>
+<translation>خطأ في اسم المستخدم أو كلمة السر</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="261"/>
@@ -4571,18 +4571,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/owncloudservice.cpp" line="326"/>
 <source>not correct</source>
-<translation>خطأ</translation>
+<translation>غير صحيح</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="339"/>
 <source>not detected</source>
-<translation>لم يُكتشف</translation>
+<translation>غير مكتشف</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="442"/>
 <location filename="../services/owncloudservice.cpp" line="537"/>
 <source>not found</source>
-<translation>تعذر العثور</translation>
+<translation>غير موجود</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="479"/>
@@ -4698,7 +4698,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../dialogs/passworddialog.ui" line="14"/>
 <source>Please enter your password</source>
-<translation>أدخل كلمة السر رجاءاً</translation>
+<translation>برجاء إدخال كلمة السر</translation>
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="24"/>
@@ -4794,7 +4794,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../helpers/toolbarcontainer.cpp" line="100"/>
 <source>Workspace selector</source>
-<translation>اختيار مساحة العمل</translation>
+<translation>محدد مساحة العمل</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="339"/>
@@ -4821,7 +4821,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../utils/gui.cpp" line="1037"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;آخر تعديل: %2</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1042"/>
@@ -4831,22 +4831,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../utils/gui.cpp" line="1070"/>
 <source>Dark mode detected</source>
-<translation type="unfinished">Dark mode detected</translation>
+<translation>تم اكتشاف الوضع المظلم</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1071"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>يبدو أن نظام وندوز الخاص بك يستخدم الوضع المظلم. هل تريد أيضا تفعيل الوضع المظلم في QOwnNotes؟</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1083"/>
 <source>Light mode detected</source>
-<translation type="unfinished">Light mode detected</translation>
+<translation>تم اكتشاف الوضع المضيء</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1084"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>يبدو أن نظام وندوز الخاص بك يستخدم الوضع المضيء. هل تريد أيضا تعطيل الوضع المظلم في QOwnNotes؟</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="76"/>
@@ -4871,7 +4871,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4488"/>
 <source>Username and password were set successfully!</source>
-<translation type="unfinished">Username and password were set successfully!</translation>
+<translation>تم ضبط اسم المستخدم وكلمة السر بنجاح!</translation>
 </message>
 <message>
 <location filename="../entities/cloudconnection.cpp" line="299"/>
@@ -4932,13 +4932,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="376"/>
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
+<translation>
+<numerusform>تستخدم %n ملاحظات هذه الصورة. هل تود أيضا إعادة تسمية تلك الصور في الملاحظات؟</numerusform>
+<numerusform>تستخدم %n ملاحظة هذه الصورة. هل تود أيضا إعادة تسمية تلك الصورة في الملاحظة؟</numerusform>
+<numerusform>تستخدم %n ملاحظتان هذه الصورة. هل تود أيضا إعادة تسمية تلك الصورتين في الملاحظتين؟</numerusform>
+<numerusform>تستخدم %n ملاحظات هذه الصورة. هل تود أيضا إعادة تسمية تلك الصور في الملاحظات؟</numerusform>
+<numerusform>تستخدم %n ملاحظة هذه الصورة. هل تود أيضا إعادة تسمية تلك الصور في الملاحظات؟</numerusform>
+<numerusform>تستخدم %n ملاحظة هذه الصورة. هل تود أيضا إعادة تسمية تلك الصور في الملاحظات؟</numerusform>
 </translation>
 </message>
 <message>
@@ -4960,7 +4960,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/owncloudservice.cpp" line="2291"/>
 <source>Could not parse login url!</source>
-<translation type="unfinished">Could not parse login url!</translation>
+<translation>تعذر تحليل عنوان الولوج!</translation>
 </message>
 <message>
 <location filename="../utils/misc.cpp" line="930"/>
@@ -5497,7 +5497,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1114"/>
 <source>ownCloud server url:</source>
-<translation>عنوان url لخادم ownCloud :</translation>
+<translation>عنوان خادم ownCloud:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1136"/>
@@ -5996,7 +5996,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="179"/>
 <source>Layout</source>
-<translation>النسق</translation>
+<translation>تخطيط الواجهة</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="191"/>
@@ -6149,7 +6149,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1243"/>
 <source>&amp;Connect to ownCloud server</source>
-<translation>اتصل بخادم ownCloud</translation>
+<translation>ا&amp;تصل بخادم ownCloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1263"/>
@@ -6169,8 +6169,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="738"/>
 <source>Use note subfolders</source>
-<translation>استخدم المجلدات الفرعية للملاحظة
-</translation>
+<translation>استخدم المجلدات الفرعية للملاحظة</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1418"/>
@@ -6185,7 +6184,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1444"/>
 <source>Login to Nextcloud to grant access</source>
-<translation type="unfinished">Login to Nextcloud to grant access</translation>
+<translation>الولوج إلى Nextcloud للسماح بالوصول</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1849"/>
@@ -6425,7 +6424,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3141"/>
 <source>Enable dark mode icon theme</source>
-<translation>تمكين سمة الوضع الداكن للأيقونة</translation>
+<translation>تفعيل سِمة أيقونات الوضع المظلم</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3071"/>
@@ -6612,7 +6611,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
 <source>This also allows note files to be renamed</source>
-<translation type="unfinished">This also allows note files to be renamed</translation>
+<translation>هذا أيضا سيسمح لأسماء ملفات الملاحظات بأن يُعاد تسميتها</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="864"/>
@@ -6627,7 +6626,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1455"/>
 <source>Cancel Nextcloud login</source>
-<translation type="unfinished">Cancel Nextcloud login</translation>
+<translation>إلغاء الولوج إلى Nextcloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1862"/>
@@ -6862,17 +6861,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6326"/>
 <source>Tag name for commands notes</source>
-<translation type="unfinished">Tag name for commands notes</translation>
+<translation>اسم الوسم لملاحظات الأوامر</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6333"/>
 <source>Commands tag:</source>
-<translation type="unfinished">Commands tag:</translation>
+<translation>وسم الأوامر:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6353"/>
 <source>Commands note name:</source>
-<translation type="unfinished">Commands note name:</translation>
+<translation>اسم ملاحظة الأوامر:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6363"/>
@@ -6927,7 +6926,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6469"/>
 <source>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation>سيتم فتح اتصال websocket مع هذا الخادم ليكون جسرا بين تطبيق وب QOwnNotes وتطبيق QOwnNotes المكتبي.</translation>
+<translation>سيتم فتح اتصال مقبس وب مع هذا الخادم ليكون جسرا بين تطبيق وب QOwnNotes وتطبيق QOwnNotes المكتبي.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6547"/>
@@ -6987,7 +6986,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6076"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-<translation>يمكن تشغيل وإيقاف تشغيل اللوحات في القائمة الرئيسية &lt;i&gt;للنافذة / تالوحات&lt;/i&gt; ويمكن أيضًا ضبط &lt;i&gt;مساحات عمل مختلفة&lt;/i&gt; لتكوينات لوحة مختلفة.</translation>
+<translation>يمكن إخفاء وإظهار اللوحات من قائمة &lt;i&gt;نافذة &amp;gt; لوحات&lt;/i&gt;، وتستطيع أيضا إعداد &lt;i&gt;مساحات عمل&lt;/i&gt; مختلفة من أجل إعدادات متعددة من اللوحات.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6153"/>
@@ -7044,7 +7043,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6235"/>
 <source>Reset the socket server port</source>
-<translation type="unfinished">Reset the socket server port</translation>
+<translation>إعادة تعيين منفذ خادم المقبس</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6249"/>
@@ -7126,12 +7125,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6057"/>
 <source>Layout selector</source>
-<translation>محدد التنسيق</translation>
+<translation>محدد التخطيط</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6063"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-<translation>يمكنك تعيين تنسيق جديد هنا. ضع في اعتبارك أنه يمكنك دائمًا تعديل موضع اللوحات من خلال زر &lt;i&gt;إلغاء قفل اللوحات&lt;/i&gt;.</translation>
+<translation>يمكنك تعيين تخطيط جديد هنا. تذكر أنك تستطيع دائمًا تعديل أماكن اللوحات بزر &lt;i&gt;فكّ قفل اللوحات&lt;/i&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5300"/>
@@ -8352,7 +8351,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
 <source>Only show orphaned attachments</source>
-<translation type="unfinished">Only show orphaned attachments</translation>
+<translation>إظهار المرفقات اليتيمة فقط</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
@@ -8382,7 +8381,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="392"/>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>إنعاش</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="102"/>
@@ -8537,7 +8536,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="175"/>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>إنعاش</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="234"/>
@@ -8552,7 +8551,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="119"/>
 <source>Only show orphaned images</source>
-<translation>إظهار الصور اليتيمة</translation>
+<translation>إظهار الصور اليتيمة فقط</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="83"/>
@@ -9422,12 +9421,12 @@ This cannot be undone!</source>
 <message>
 <location filename="../services/webappclientservice.cpp" line="102"/>
 <source>QOwnNotes is now connected via websocket to %1</source>
-<translation>اتصل QOwnNotes الآن عبر websocket مع %1</translation>
+<translation>اتصل QOwnNotes الآن بمقبس وب مع %1</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="111"/>
 <source>QOwnNotes is now disconnected from websocket to %1</source>
-<translation>انفصل QOwnNotes الآن عبر websocket عن %1</translation>
+<translation>انفصل QOwnNotes الآن من مقبس الوب إلى %1</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="127"/>
@@ -9437,7 +9436,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../services/webappclientservice.cpp" line="139"/>
 <source>Image received</source>
-<translation type="unfinished">Image received</translation>
+<translation>تم استلام صورة</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="140"/>
@@ -9560,7 +9559,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="285"/>
 <source>Panel layout</source>
-<translation>نسق اللوحة</translation>
+<translation>تخطيط اللوحات</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="342"/>

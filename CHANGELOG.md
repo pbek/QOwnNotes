@@ -4,6 +4,7 @@
 - pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd> or <kbd>Ctrl</kbd> + `Click` on
   reference links in the note text edit will now open the referenced URL in the
   default browser (for [#2341](https://github.com/pbek/QOwnNotes/issues/2341))
+- added more Arabic translation (thank you noureddin)
 
 ## 21.12.7
 - an issue with creating new Nextcloud connections was fixed (for [#2329](https://github.com/pbek/QOwnNotes/issues/2329))
