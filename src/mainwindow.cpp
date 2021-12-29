@@ -11883,7 +11883,7 @@ void MainWindow::setCurrentWorkspace(const QString &uuid) {
     // update the menu and combo box (but don't rebuild it)
     updateWorkspaceLists(false);
 
-    // update the preview in case it was disable previously
+    // update the preview in case it was disabled previously
     setNoteTextFromNote(&currentNote, true);
 }
 
