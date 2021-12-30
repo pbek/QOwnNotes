@@ -4383,6 +4383,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../widgets/notepreviewwidget.cpp" line="366"/>
         <source>Export preview as raw HTML file</source>
+        <comment>&quot;Raw&quot; means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
