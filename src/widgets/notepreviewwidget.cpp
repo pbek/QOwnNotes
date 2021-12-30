@@ -363,7 +363,7 @@ void NotePreviewWidget::exportAsHTMLFile() {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setNameFilter(tr("HTML files") + " (*.html)");
-    dialog.setWindowTitle(tr("Export preview as raw HTML file"));
+    dialog.setWindowTitle(tr("Export preview as raw HTML file", "\"Raw\" means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)"));
     dialog.selectFile(QStringLiteral("preview.html"));
     int ret = dialog.exec();
 
