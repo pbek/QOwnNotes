@@ -40,7 +40,7 @@ endif()
 add_subdirectory(libraries/fakevim)
 add_subdirectory(libraries/diff_match_patch)
 
-option(USE_QLITE_HTML "Build using system installed Botan 2 crypto library" OFF)
+option(USE_QLITE_HTML "Build using QLiteHtml for preview" OFF)
 if (USE_QLITEHTML)
     add_definitions(-DUSE_QLITEHTML=1)
     add_subdirectory(libraries/qlitehtml)
