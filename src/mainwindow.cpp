@@ -7862,19 +7862,13 @@ void MainWindow::resizeEvent(QResizeEvent *event) {
 }
 
 void MainWindow::resizeNoteSubFolderTreeWidgetColumnToContents() const {
-    QTimer::singleShot(1, this, [this]{
-        ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
-        ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
-    });
+    ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
+    ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
 }
 
 void MainWindow::resizeTagTreeWidgetColumnToContents() const {
-    if (ui->tagTreeWidget->isVisible()) {
-        QTimer::singleShot(1, this, [this]{
-            ui->tagTreeWidget->resizeColumnToContents(0);
-            ui->tagTreeWidget->resizeColumnToContents(1);
-        });
-    }
+    ui->tagTreeWidget->resizeColumnToContents(0);
+    ui->tagTreeWidget->resizeColumnToContents(1);
 }
 
 /**
