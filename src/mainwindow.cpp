@@ -119,6 +119,7 @@
 #include "ui_mainwindow.h"
 #include "version.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
+#include "widgets/htmlpreviewwidget.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
@@ -154,6 +155,16 @@ MainWindow::MainWindow(QWidget *parent)
         initFakeVim(ui->noteTextEdit);
         initFakeVim(ui->encryptedNoteTextEdit);
     }
+
+#ifdef USE_QLITEHTML
+    _notePreviewWidget = new HtmlPreviewWidget(this);
+    if (!ui->noteViewFrame->layout())
+        ui->noteViewFrame->setLayout(new QVBoxLayout);
+    ui->noteViewFrame->layout()->addWidget(_notePreviewWidget);
+
+    // QTextBrowser previewer is hidden when we use qlitehtml
+    ui->noteTextView->setVisible(false);
+#endif
 
     setWindowIcon(getSystemTrayIcon());
 
@@ -221,7 +232,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame, darkMode);
     ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame,
                                                darkMode);
-    ui->noteTextView->initSearchFrame(ui->noteTextViewSearchFrame, darkMode);
+
+#ifndef USE_QLITEHTML
+   ui->noteTextView->initSearchFrame(ui->noteTextViewSearchFrame, darkMode);
+#endif
 
     // set the main window for accessing it's public methods
     ui->noteTextEdit->setMainWindow(this);
@@ -339,8 +353,14 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->searchLineEdit->installEventFilter(this);
     ui->noteTreeWidget->installEventFilter(this);
+
+#ifndef USE_QLITEHTML
     ui->noteTextView->installEventFilter(this);
     ui->noteTextView->viewport()->installEventFilter(this);
+#else
+    _notePreviewWidget->installEventFilter(this);
+    _notePreviewWidget->viewport()->installEventFilter(this);
+#endif
     ui->noteTextEdit->installEventFilter(this);
     ui->noteTextEdit->viewport()->installEventFilter(this);
     ui->encryptedNoteTextEdit->installEventFilter(this);
@@ -484,8 +504,11 @@ MainWindow::MainWindow(QWidget *parent)
             &MainWindow::startNavigationParser);
 
     // act on note preview resize
-    connect(ui->noteTextView, &NotePreviewWidget::resize, this,
-            &MainWindow::onNoteTextViewResize);
+#ifndef USE_QLITEHTML
+   connect(ui->noteTextView, &NotePreviewWidget::resize, this,
+           &MainWindow::onNoteTextViewResize);
+#else
+#endif
 
     // reloads all tasks from the ownCloud server
     reloadTodoLists();
@@ -1202,7 +1225,10 @@ void MainWindow::initEditorSoftWrap() {
 
     ui->noteTextEdit->setLineWrapMode(pMode);
     ui->encryptedNoteTextEdit->setLineWrapMode(pMode);
+
+#ifndef USE_QLITEHTML
     ui->noteTextView->setLineWrapMode(mode);
+#endif
 }
 
 /**
@@ -1721,8 +1747,13 @@ void MainWindow::initStyling() {
             SLOT(noteTextSliderValueChanged(int)));
 
     // move the note edit scrollbar when the note view scrollbar was moved
+#ifdef USE_QLITEHTML
+    connect(_notePreviewWidget->verticalScrollBar(), SIGNAL(valueChanged(int)),
+            this, SLOT(noteViewSliderValueChanged(int)));
+#else
     connect(ui->noteTextView->verticalScrollBar(), SIGNAL(valueChanged(int)),
             this, SLOT(noteViewSliderValueChanged(int)));
+#endif
 
     // hide the combo box if it looses focus if it should not be viewed
     connect(ui->noteFolderComboBox, &ComboBox::focusOut, this,
@@ -1739,7 +1770,11 @@ void MainWindow::noteTextSliderValueChanged(int value, bool force) {
     }
 
     QScrollBar *editScrollBar = activeNoteTextEdit()->verticalScrollBar();
+#ifdef USE_QLITEHTML
+    QScrollBar *viewScrollBar = _notePreviewWidget->verticalScrollBar();
+#else
     QScrollBar *viewScrollBar = ui->noteTextView->verticalScrollBar();
+#endif
 
     const float editScrollFactor =
         static_cast<float>(value) / editScrollBar->maximum();
@@ -1755,12 +1790,21 @@ void MainWindow::noteTextSliderValueChanged(int value, bool force) {
  */
 void MainWindow::noteViewSliderValueChanged(int value, bool force) {
     // don't react if note text view doesn't have the focus
+
+#ifdef USE_QLITEHTML
+    if (!_notePreviewWidget->hasFocus() && !force) {
+#else
     if (!ui->noteTextView->hasFocus() && !force) {
+#endif
         return;
     }
 
     QScrollBar *editScrollBar = activeNoteTextEdit()->verticalScrollBar();
+#ifdef USE_QLITEHTML
+    QScrollBar *viewScrollBar = _notePreviewWidget->verticalScrollBar();
+#else
     QScrollBar *viewScrollBar = ui->noteTextView->verticalScrollBar();
+#endif
 
     const float editScrollFactor =
         static_cast<float>(value) / viewScrollBar->maximum();
@@ -2737,7 +2781,11 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
 
     // store the current font if there isn't any set yet
     if (fontString.isEmpty()) {
+#ifdef USE_QLITEHTML
+        fontString = _notePreviewWidget->defaultFont().toString();
+#else
         fontString = ui->noteTextView->font().toString();
+#endif
         settings.setValue(QStringLiteral("MainWindow/noteTextView.font"),
                           fontString);
     }
@@ -2745,7 +2793,11 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     // set the note text view font
     QFont font;
     font.fromString(fontString);
+#ifdef USE_QLITEHTML
+    _notePreviewWidget->setDefaultFont(font);
+#else
     ui->noteTextView->setFont(font);
+#endif
 
     // set the main toolbar icon size
     int toolBarIconSize =
@@ -4171,7 +4223,11 @@ void MainWindow::removeCurrentNote() {
         const QSignalBlocker blocker2(ui->noteTextEdit);
         Q_UNUSED(blocker2)
 
+#ifdef USE_QLITEHTML
+        const QSignalBlocker blocker3(_notePreviewWidget);
+#else
         const QSignalBlocker blocker3(ui->noteTextView);
+#endif
         Q_UNUSED(blocker3)
 
         const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
@@ -4451,7 +4507,9 @@ void MainWindow::searchInNoteTextEdit(QString str) {
         // do an in-note search
         doSearchInNote(str);
         ui->noteTextEdit->moveCursor(QTextCursor::Start);
-        ui->noteTextView->moveCursor(QTextCursor::Start);
+#ifndef USE_QLITEHTML
+       ui->noteTextView->moveCursor(QTextCursor::Start);
+#endif
         ui->encryptedNoteTextEdit->moveCursor(QTextCursor::Start);
         const QColor color = QColor(0, 180, 0, 100);
 
@@ -4481,14 +4539,18 @@ void MainWindow::searchInNoteTextEdit(QString str) {
                 extraSelections.append(extra);
             }
 
-            while (ui->noteTextView->find(regExp)) {
-                QTextEdit::ExtraSelection extra = QTextEdit::ExtraSelection();
-                extra.format.setBackground(color);
+            // TODO:
+#ifdef USE_QLITEHTML
+           _notePreviewWidget->findText(str, QTextDocument::FindFlag::FindWholeWords, true);
+#else
+           while (ui->noteTextView->find(regExp)) {
+               QTextEdit::ExtraSelection extra = QTextEdit::ExtraSelection();
+               extra.format.setBackground(color);
 
-                extra.cursor = ui->noteTextView->textCursor();
-                extraSelections2.append(extra);
-            }
-
+               extra.cursor = ui->noteTextView->textCursor();
+               extraSelections2.append(extra);
+           }
+#endif
             while (ui->encryptedNoteTextEdit->find(regExp)) {
                 QTextEdit::ExtraSelection extra = QTextEdit::ExtraSelection();
                 extra.format.setBackground(color);
@@ -4500,7 +4562,9 @@ void MainWindow::searchInNoteTextEdit(QString str) {
     }
 
     ui->noteTextEdit->setExtraSelections(extraSelections);
-    ui->noteTextView->setExtraSelections(extraSelections2);
+#ifndef USE_QLITEHTML
+   ui->noteTextView->setExtraSelections(extraSelections2);
+#endif
     ui->encryptedNoteTextEdit->setExtraSelections(extraSelections3);
 }
 
@@ -4559,8 +4623,14 @@ void MainWindow::askForEncryptedNotePasswordIfNeeded(
  * Gets the maximum image width
  */
 int MainWindow::getMaxImageWidth() {
+    // TODO: Make sure this works or not
+#ifndef USE_QLITEHTML
     const QMargins margins = ui->noteTextView->contentsMargins();
     int maxImageWidth = ui->noteTextView->viewport()->width() - margins.left() -
+#else
+    const QMargins margins = _notePreviewWidget->contentsMargins();
+    int maxImageWidth = _notePreviewWidget->viewport()->width() - margins.left() -
+#endif
                         margins.right() - 15;
 
     if (maxImageWidth < 0) {
@@ -4610,7 +4680,11 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
         // we use our hash because ui->noteTextView->toHtml() may return
         // a different text than before
         if (_notePreviewHash != hash) {
+#ifdef USE_QLITEHTML
+            _notePreviewWidget->setHtml(html);
+#else
             ui->noteTextView->setHtml(html);
+#endif
             _notePreviewHash = hash;
         }
     }
@@ -4737,7 +4811,11 @@ void MainWindow::removeSelectedNotes() {
         const QSignalBlocker blocker2(activeNoteTextEdit());
         Q_UNUSED(blocker2)
 
+#ifndef USE_QLITEHTML
         const QSignalBlocker blocker3(ui->noteTextView);
+#else
+        const QSignalBlocker blocker3(_notePreviewWidget);
+#endif
         Q_UNUSED(blocker3)
 
         const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
@@ -4975,9 +5053,14 @@ void MainWindow::unsetCurrentNote() {
     currentNote = Note();
 
     // clear the note preview
+#ifndef USE_QLITEHTML
     const QSignalBlocker blocker(ui->noteTextView);
+   ui->noteTextView->clear();
+#else
+    const QSignalBlocker blocker(_notePreviewWidget);
+    _notePreviewWidget->setHtml(QString());
+#endif
     Q_UNUSED(blocker)
-    ui->noteTextView->clear();
 
     // clear the note text edit
     const QSignalBlocker blocker2(ui->noteTextEdit);
@@ -7779,13 +7862,19 @@ void MainWindow::resizeEvent(QResizeEvent *event) {
 }
 
 void MainWindow::resizeNoteSubFolderTreeWidgetColumnToContents() const {
-    ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
-    ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
+    QTimer::singleShot(1, this, [this]{
+        ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
+        ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
+    });
 }
 
 void MainWindow::resizeTagTreeWidgetColumnToContents() const {
-    ui->tagTreeWidget->resizeColumnToContents(0);
-    ui->tagTreeWidget->resizeColumnToContents(1);
+    if (ui->tagTreeWidget->isVisible()) {
+        QTimer::singleShot(1, this, [this]{
+            ui->tagTreeWidget->resizeColumnToContents(0);
+            ui->tagTreeWidget->resizeColumnToContents(1);
+        });
+    }
 }
 
 /**
@@ -9223,7 +9312,11 @@ void MainWindow::reloadCurrentNoteTags() {
         // overwrite the note preview with a preview of the selected notes
         const QString previewHtml =
             Note::generateMultipleNotesPreviewText(notes);
+#ifdef USE_QLITEHTML
+        _notePreviewWidget->setHtml(previewHtml);
+#else
         ui->noteTextView->setText(previewHtml);
+#endif
     }
 
     _lastNoteSelectionWasMultiple = !currentNoteOnly;
