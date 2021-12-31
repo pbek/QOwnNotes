@@ -74,7 +74,8 @@ find "$applicationsFolder/QOwnNotes.app"
 
 echo "Starting QOwnNotes..."
 sleep 2
-open "$applicationsFolder/QOwnNotes.app"
+# open "$applicationsFolder/QOwnNotes.app"
+"$applicationsFolder/QOwnNotes.app/Contents/MacOS/QOwnNotes" &
 
 echo "Removing temporary script..."
 rm $0
