@@ -597,6 +597,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     // trigger cli parameter menu action if there was any set
     triggerStartupMenuAction();
+
+    resizeNoteSubFolderTreeWidgetColumnToContents();
+    resizeTagTreeWidgetColumnToContents();
 }
 
 /**
@@ -7855,20 +7858,16 @@ void MainWindow::trackAction(QAction *action) {
                                                    action->objectName());
 }
 
-void MainWindow::resizeEvent(QResizeEvent *event) {
-    resizeTagTreeWidgetColumnToContents();
-    resizeNoteSubFolderTreeWidgetColumnToContents();
-    QMainWindow::resizeEvent(event);
-}
-
 void MainWindow::resizeNoteSubFolderTreeWidgetColumnToContents() const {
-    ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
-    ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
+    auto header = ui->noteSubFolderTreeWidget->header();
+    header->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+    header->setSectionResizeMode(1, QHeaderView::ResizeToContents);
 }
 
 void MainWindow::resizeTagTreeWidgetColumnToContents() const {
-    ui->tagTreeWidget->resizeColumnToContents(0);
-    ui->tagTreeWidget->resizeColumnToContents(1);
+    auto header = ui->tagTreeWidget->header();
+    header->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+    header->setSectionResizeMode(1, QHeaderView::ResizeToContents);
 }
 
 /**
@@ -8476,7 +8475,6 @@ void MainWindow::reloadTagTree() {
     ui->tagTreeWidget->setRootIsDecorated(Tag::countAllParentId(0) !=
                                           Tag::countAll());
 
-    resizeTagTreeWidgetColumnToContents();
     highlightCurrentNoteTagsInTagTree();
 }
 
@@ -8592,8 +8590,6 @@ void MainWindow::reloadNoteSubFolderTree() {
 
         ui->noteSubFolderTreeWidget->setCurrentItem(item);
     }
-
-    resizeNoteSubFolderTreeWidgetColumnToContents();
 
     // send an event to jump to "All notes" in the note subfolder tree widget
     // if that item was last selected
@@ -11248,9 +11244,6 @@ void MainWindow::on_noteSubFolderTreeWidget_itemExpanded(
     if (noteSubFolder.isFetched()) {
         noteSubFolder.saveTreeWidgetExpandState(item->isExpanded());
     }
-
-    // resize columns so long folder names get displayed
-    resizeNoteSubFolderTreeWidgetColumnToContents();
 }
 
 void MainWindow::on_noteSubFolderTreeWidget_itemCollapsed(
@@ -12501,7 +12494,6 @@ void MainWindow::on_tagTreeWidget_itemCollapsed(QTreeWidgetItem *item) {
  */
 void MainWindow::on_tagTreeWidget_itemExpanded(QTreeWidgetItem *item) {
     Q_UNUSED(item)
-    resizeTagTreeWidgetColumnToContents();
     storeTagTreeWidgetExpandState();
 }
 
