@@ -153,11 +153,13 @@ exists($$PWD/3rdparty/litehtml/CMakeLists.txt) {
 }
 
 HEADERS += \
+    $$PWD/element_checkbox.h \
     $$PWD/container_qpainter.h \
     $$PWD/container_qpainter_p.h \
     $$PWD/qlitehtmlwidget.h
 
 SOURCES += \
+    $$PWD/element_checkbox.cpp \
     $$PWD/container_qpainter.cpp \
     $$PWD/qlitehtmlwidget.cpp
 

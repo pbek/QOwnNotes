@@ -2453,7 +2453,11 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
     unsigned flags = MD_DIALECT_GITHUB | MD_FLAG_WIKILINKS |
                      MD_FLAG_LATEXMATHSPANS | MD_FLAG_UNDERLINE;
     // we parse the task lists ourselves
+
+    // we render checkboxes when using qlitehtml
+#ifndef USE_QLITEHTML
     flags &= ~MD_FLAG_TASKLISTS;
+#endif
 
     const QSettings settings;
     if (!settings

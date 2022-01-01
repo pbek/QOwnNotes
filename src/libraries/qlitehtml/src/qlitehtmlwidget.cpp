@@ -578,6 +578,8 @@ void QLiteHtmlWidget::mouseReleaseEvent(QMouseEvent *event)
     const QVector<QRect> areas = d->documentContainer.mouseReleaseEvent(pos, viewportPos, event->button());
     for (const QRect &r : areas)
         viewport()->update(fromVirtual(r.translated(-scrollPosition())));
+
+    viewport()->update();
 }
 
 void QLiteHtmlWidget::mouseDoubleClickEvent(QMouseEvent *event)

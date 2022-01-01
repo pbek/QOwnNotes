@@ -42,6 +42,8 @@ endif()
 
 if(TARGET litehtml)
   set(PUBLIC_HEADERS
+      element_checkbox.h
+      element_checkbox.cpp
       container_qpainter.h
       container_qpainter_p.h
       qlitehtml_global.h
