@@ -9,6 +9,7 @@
 #include <QMenu>
 #include <QApplication>
 #include <QClipboard>
+#include <QWheelEvent>
 
 HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent)
     : QLiteHtmlWidget(parent)
@@ -66,7 +67,36 @@ void HtmlPreviewWidget::onContextMenuRequested(QPoint pos, const QUrl &linkUrl)
         menu.addAction(act);
     }
 
+    menu.addAction(tr("Reset Zoom"), this, [this]{ setZoomFactor(1.0); });
+
     menu.exec(mapToGlobal(pos));
+}
+
+bool HtmlPreviewWidget::eventFilter(QObject *src, QEvent *e)
+{
+    if (e->type() == QEvent::Wheel) {
+        auto we = static_cast<QWheelEvent *>(e);
+        if (we->modifiers() == Qt::ControlModifier) {
+            e->ignore();
+            return true;
+        }
+    }
+
+    return QLiteHtmlWidget::eventFilter(src, e);
+}
+
+void HtmlPreviewWidget::wheelEvent(QWheelEvent *event)
+{
+    if (event->modifiers() != Qt::ControlModifier)
+        return QLiteHtmlWidget::wheelEvent(event);
+
+    event->accept();
+    const int deltaY = event->angleDelta().y();
+    if (deltaY > 0) {
+        setZoomFactor(zoomFactor() + .1);
+    } else {
+        setZoomFactor(zoomFactor() - .1);
+    }
 }
 
 #endif

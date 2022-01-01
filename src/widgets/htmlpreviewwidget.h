@@ -5,7 +5,7 @@
 #include <libraries/qlitehtml/src/qlitehtmlwidget.h>
 #include <QNetworkAccessManager>
 
-class HtmlPreviewWidget : public QLiteHtmlWidget
+class HtmlPreviewWidget final : public QLiteHtmlWidget
 {
 public:
     HtmlPreviewWidget(QWidget *parent);
@@ -13,6 +13,9 @@ public:
 private:
     QByteArray resourceLoadCallBack(const QUrl&);
     void onContextMenuRequested(QPoint pos, const QUrl &url);
+
+    void wheelEvent(QWheelEvent *) override;
+    bool eventFilter(QObject *src, QEvent *e) override;
 
     QNetworkAccessManager m_nam;
 };
