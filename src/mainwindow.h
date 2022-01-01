@@ -209,8 +209,6 @@ class MainWindow : public QMainWindow {
 
     bool eventFilter(QObject *obj, QEvent *event) override;
 
-    void resizeEvent(QResizeEvent *event) override;
-
    public slots:
     void setCurrentNoteFromNoteId(const int noteId);
 
