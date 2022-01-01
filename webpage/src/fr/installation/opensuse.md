@@ -5,7 +5,7 @@
 <!-- <Content :page-key="getPageKey($site.pages, '/installation/ubuntu.md')" /> -->
 
 
-## Sur toutes les versions openSUSE
+## Sur toutes les versions d'openSUSE
 
 Vous pouvez installer QOwnNotes à l'aide de l'outil [OBS Package Installer](https://github.com/openSUSE/opi).
 

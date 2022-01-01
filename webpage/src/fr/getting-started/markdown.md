@@ -100,7 +100,7 @@ Il existe plusieurs façons de créer des liens.
 [Vous pouvez utiliser des nombres pour les définitions de liens de style référence][1]
 
 Les URL et URL entre crochets angulaires seront automatiquement transformées en liens dans l'aperçu. 
-http://www.example.com or <http://www.example.com>
+http://www.example.com ou <http://www.example.com>
 
 [1]: https://www.qownnotes.org
 ```

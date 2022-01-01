@@ -36,10 +36,10 @@ Vous pouvez utiliser les méthodes de [Date](https://developer.mozilla.org/en-US
 script.log(note.fileCreated.toISOString());
 script.log(note.fileLastModified.getFullYear());
 
-// renames a note to "new name.md"
-note.renameNoteFile("new name");
+// renomme une note en tant que "nouveau nom.md"
+note.renameNoteFile("nouveau nom");
 
-// check if it is allowed to have a different note file name than the headline
+// vérifie si il est permis d'avoir un nom de fichier de note différent du titre
 script.log(note.allowDifferentFileName());
 ```
 
@@ -62,12 +62,12 @@ class NoteSubFolderApi {
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// iterate through notes in note subfolder
+// itérer à travers les notes dans un sous-dossier de notes
 for (var idx in noteSubFolder.notes) {
     var note = noteSubFolder.notes[idx];
 }
 
-// print all subfolder names
+// imprime les noms de tous les sous-dossiers
 noteSubFolder.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
     script.log(nsf.name);
 });
@@ -116,7 +116,7 @@ class MainWindow {
 };
 ```
 
-### Exemple
+### Exemples
 ```js
 // Forcer un rechargement de la liste de notes
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList (vrai, vrai);

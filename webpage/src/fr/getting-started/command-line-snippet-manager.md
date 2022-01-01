@@ -122,11 +122,11 @@ Exécutez `qc configure`.
   websocket_port = 22222    # le port websocket dans QOwnNotes
 ```
 
-## Shell completion
+## Complétion dans le Shell
 
-You can generate shell completion code for your shell with `qc completion <shell>`.
+Vous pouvez générer du code de complétion pour votre shell avec `qc completion <shell>`.
 
-For example for the Fish shell you can use:
+Pour le Fish shell vous pouvez par exemple utiliser :
 
 ```bash
 qc completion fish > ~/.config/fish/completions/qc.fish

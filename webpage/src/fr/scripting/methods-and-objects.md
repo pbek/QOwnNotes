@@ -127,7 +127,7 @@ void log(QString text);
 
 ### Exemple
 ```js
-script.log("my text");
+script.log("mon texte");
 ```
 
 Téléchargement d'une URL dans une chaîne
@@ -193,7 +193,7 @@ QString ScriptingService::insertMediaFile (QString mediaFilePath,
 
 ### Exemple
 ```js
-var markdown = script.insertMediaFile("/path/to/your/image.png");
+var markdown = script.insertMediaFile("/chemin/vers/votre/image.png");
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
