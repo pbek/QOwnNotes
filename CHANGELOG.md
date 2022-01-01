@@ -4,7 +4,10 @@
 - another attempt was made to debug/fix the application not starting automatically
   after an update on macOS Big Sur (for [#2339](https://github.com/pbek/QOwnNotes/issues/2339))
 - [QLiteHtml](https://github.com/litehtml/litehtml) was integrated experimentally
-  to be enabled with flags at compile time (for [#2345](https://github.com/pbek/QOwnNotes/pull/2345), thank you @Waqar144)  
+  to be enabled with flags at compile time (for [#2345](https://github.com/pbek/QOwnNotes/pull/2345), thank you @Waqar144)
+- an attempt was made to work around an AppImage update executable permissions issue
+  by setting the permissions a 2nd time after the renaming of the AppImage file
+  (for [#2342](https://github.com/pbek/QOwnNotes/issues/2342))
 - added more Arabic, Persian, French translation (thank you noureddin, amirkbrpr, chocolatine)
 
 ## 21.12.8
