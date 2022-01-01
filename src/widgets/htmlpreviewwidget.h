@@ -12,6 +12,8 @@ public:
 
 private:
     QByteArray resourceLoadCallBack(const QUrl&);
+    void onContextMenuRequested(QPoint pos, const QUrl &url);
+
     QNetworkAccessManager m_nam;
 };
 

@@ -5,6 +5,10 @@
 #include <QEventLoop>
 #include <QNetworkReply>
 #include <QDesktopServices>
+#include <QAction>
+#include <QMenu>
+#include <QApplication>
+#include <QClipboard>
 
 HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent)
     : QLiteHtmlWidget(parent)
@@ -19,6 +23,8 @@ HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent)
     connect(this, &QLiteHtmlWidget::linkClicked, this, [](const QUrl &url){
         QDesktopServices::openUrl(url);
     });
+
+    connect(this, &QLiteHtmlWidget::contextMenuRequested, this, &HtmlPreviewWidget::onContextMenuRequested);
 }
 
 QByteArray HtmlPreviewWidget::resourceLoadCallBack(const QUrl &url)
@@ -40,6 +46,29 @@ QByteArray HtmlPreviewWidget::resourceLoadCallBack(const QUrl &url)
     loop.exec(QEventLoop::ExcludeUserInputEvents);
 
     return data;
+}
+
+void HtmlPreviewWidget::onContextMenuRequested(QPoint pos, const QUrl &linkUrl)
+{
+    QMenu menu;
+
+    QAction *act = new QAction(tr("Copy"), this);
+    act->setDisabled(selectedText().isEmpty());
+    connect(act, &QAction::triggered, this, [this]{
+        qApp->clipboard()->setText(selectedText());
+    });
+    menu.addAction(act);
+
+    if (!linkUrl.isEmpty() && linkUrl.isValid()) {
+        QAction *act = new QAction(tr("Copy Link"), this);
+        act->setEnabled(selectedText().isEmpty());
+        connect(act, &QAction::triggered, this, [linkUrl]{
+            qApp->clipboard()->setText(linkUrl.toString());
+        });
+        menu.addAction(act);
+    }
+
+    menu.exec(mapToGlobal(pos));
 }
 
 #endif
