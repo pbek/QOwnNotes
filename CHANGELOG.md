@@ -3,6 +3,8 @@
 ## 22.1.0
 - another attempt was made to debug/fix the application not starting automatically
   after an update on macOS Big Sur (for [#2339](https://github.com/pbek/QOwnNotes/issues/2339))
+- [QLiteHtml](https://github.com/litehtml/litehtml) was integrated experimentally
+  to be enabled with flags at compile time (for [#2345](https://github.com/pbek/QOwnNotes/pull/2345), thank you @Waqar144)  
 
 ## 21.12.8
 - pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd> or <kbd>Ctrl</kbd> + `Click` on
