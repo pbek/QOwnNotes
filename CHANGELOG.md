@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.1.0
+- another attempt was made to debug/fix the application not starting automatically
+  after an update on macOS Big Sur (for [#2339](https://github.com/pbek/QOwnNotes/issues/2339))
+
 ## 21.12.8
 - pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd> or <kbd>Ctrl</kbd> + `Click` on
   reference links in the note text edit will now open the referenced URL in the
