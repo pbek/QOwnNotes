@@ -18,8 +18,6 @@ HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent)
     };
     setResourceHandler(callback);
 
-    setZoomFactor(1.5);
-
     connect(this, &QLiteHtmlWidget::linkClicked, this, [](const QUrl &url){
         QDesktopServices::openUrl(url);
     });

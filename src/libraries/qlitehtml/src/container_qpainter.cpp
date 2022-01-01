@@ -28,6 +28,7 @@
 
 #include "container_qpainter.h"
 #include "container_qpainter_p.h"
+#include "element_checkbox.h"
 
 #if QT_CONFIG(clipboard)
 #include <QClipboard>
@@ -943,7 +944,25 @@ std::shared_ptr<litehtml::element> DocumentContainerPrivate::create_element(
     const std::shared_ptr<litehtml::document> &doc)
 {
     // TODO
+
+    // We only handle checkbox here
+    if (litehtml::t_strcasecmp("input", tag_name) != 0) {
+        return {};
+    }
+
+    auto it = attributes.find("type");
+    if (it == attributes.end() || it->second != "checkbox")
+        return {};
+
+    it = attributes.find("checked");
+    const bool isChecked = it != attributes.end();
+
+    auto checkBox = std::make_shared<checkbox>(m_document);
+    checkBox->set_checked(isChecked);
+    return checkBox;
+
     qDebug(log) << "create_element" << QString::fromUtf8(tag_name);
+
     Q_UNUSED(attributes)
     Q_UNUSED(doc)
     return {};
