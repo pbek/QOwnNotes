@@ -202,7 +202,8 @@ SOURCES += main.cpp\
     dialogs/commandbar.cpp \
     models/commandmodel.cpp \
     libraries/fuzzy/kfuzzymatcher.cpp \
-    libraries/qr-code-generator/QrCode.cpp
+    libraries/qr-code-generator/QrCode.cpp \
+    widgets/notesubfoldertree.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -307,7 +308,8 @@ HEADERS  += mainwindow.h \
     dialogs/commandbar.h \
     models/commandmodel.h \
     libraries/fuzzy/kfuzzymatcher.h \
-    libraries/qr-code-generator/QrCode.hpp
+    libraries/qr-code-generator/QrCode.hpp \
+    widgets/notesubfoldertree.h
 
 FORMS    += mainwindow.ui \
     dialogs/attachmentdialog.ui \

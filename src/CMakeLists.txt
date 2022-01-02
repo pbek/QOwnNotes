@@ -338,6 +338,8 @@ set(SOURCE_FILES
     widgets/todoitemtreewidget.h
     widgets/htmlpreviewwidget.h
     widgets/htmlpreviewwidget.cpp
+    widgets/notesubfoldertree.cpp
+    widgets/notesubfoldertree.h
     utils/misc.cpp
     utils/misc.h
     utils/git.cpp

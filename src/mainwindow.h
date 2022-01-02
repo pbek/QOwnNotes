@@ -113,6 +113,8 @@ class MainWindow : public QMainWindow {
 
     ~MainWindow();
 
+    void initTreeWidgets();
+
     void triggerStartupMenuAction();
 
     void setCurrentNoteText(QString text);
@@ -201,6 +203,8 @@ class MainWindow : public QMainWindow {
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
 
     Q_INVOKABLE bool insertDataUrlAsFileIntoCurrentNote(const QString &dataUrl);
+
+    void setShowNotesFromAllNoteSubFolders(bool show);
 
    protected:
     void changeEvent(QEvent *event) override;
@@ -457,26 +461,15 @@ class MainWindow : public QMainWindow {
 
     void on_noteTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
 
-    void on_noteSubFolderTreeWidget_currentItemChanged(
-        QTreeWidgetItem *current, QTreeWidgetItem *previous);
+    void onCurrentSubFolderChanged();
 
-    void on_noteSubFolderTreeWidget_itemSelectionChanged();
+    void onMultipleSubfoldersSelected();
 
     void clearTagFilteringColumn();
 
     void on_noteSubFolderLineEdit_textChanged(const QString &arg1);
 
-    void on_noteSubFolderTreeWidget_itemExpanded(QTreeWidgetItem *item);
-
-    void on_noteSubFolderTreeWidget_itemCollapsed(QTreeWidgetItem *item);
-
-    void on_noteSubFolderTreeWidget_customContextMenuRequested(
-        const QPoint pos);
-
     void on_noteSubFolderLineEdit_returnPressed();
-
-    void on_noteSubFolderTreeWidget_itemChanged(QTreeWidgetItem *item,
-                                                int column);
 
     void on_actionShare_note_triggered();
 
@@ -675,6 +668,15 @@ class MainWindow : public QMainWindow {
     void on_actionInsert_note_link_triggered();
 
     void on_actionImport_notes_from_Joplin_triggered();
+
+    /** Actions **/
+public:
+    QAction *newNoteAction();
+    QAction *reloadNoteFolderAction();
+
+public:
+    void clearNoteDirectoryWatcher();
+    void updateNoteDirectoryWatcher();
 
 private:
     Ui::MainWindow *ui;
@@ -950,8 +952,6 @@ private:
 
     void filterNotesByNoteSubFolders();
 
-    void updateNoteDirectoryWatcher();
-
     bool addNoteToNoteTreeWidget(const Note &note,
                                  QTreeWidgetItem *parent = nullptr);
 
@@ -1094,9 +1094,6 @@ private:
     void openNotesContextMenu(const QPoint globalPos,
                               bool multiNoteMenuEntriesOnly = false);
 
-    void openNoteSubFolderContextMenu(const QPoint globalPos,
-                                      QTreeWidget *treeWidget);
-
     void updateCurrentNoteTextHash();
 
     void centerAndResize();
@@ -1120,7 +1117,6 @@ private:
     void noteTextEditTextWasUpdated();
     void removeNoteFromNoteTreeWidget(Note &note) const;
     void initGlobalKeyboardShortcuts();
-    void clearNoteDirectoryWatcher();
     void resizeTagTreeWidgetColumnToContents() const;
     void resizeNoteSubFolderTreeWidgetColumnToContents() const;
     void updateCurrentTabData(const Note &note) const;
