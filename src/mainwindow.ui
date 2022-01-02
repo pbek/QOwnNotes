@@ -124,7 +124,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QTreeWidget" name="noteSubFolderTreeWidget">
+             <widget class="NoteSubFolderTree" name="noteSubFolderTreeWidget">
               <property name="contextMenuPolicy">
                <enum>Qt::CustomContextMenu</enum>
               </property>
@@ -2709,6 +2709,11 @@ p, li { white-space: pre-wrap; }
    <class>LineEdit</class>
    <extends>QLineEdit</extends>
    <header location="global">widgets/lineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>NoteSubFolderTree</class>
+   <extends>QTreeWidget</extends>
+   <header>widgets/notesubfoldertree.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>
