@@ -51,6 +51,10 @@
 #include <algorithm>
 #include <set>
 
+#if Q_OS_WIN
+#include <Windows.h>
+#endif
+
 const int kDragDistance = 5;
 
 using Font = QFont;
@@ -561,8 +565,20 @@ void DocumentContainerPrivate::draw_text(litehtml::uint_ptr hdc,
 
 int DocumentContainerPrivate::pt_to_px(int pt) const
 {
-    // magic factor of 11/12 to account for differences to webengine/webkit
-    return m_paintDevice->physicalDpiY() * pt * 11 / m_paintDevice->logicalDpiY() / 12;
+#if Q_OS_WIN
+    HDC dc = GetDC(NULL);
+    int ret = MulDiv(pt, GetDeviceCaps(dc, LOGPIXELSY), 72);
+    ReleaseDC(NULL, dc);
+    return ret;
+#endif
+
+    const qreal dpi = m_paintDevice->logicalDpiY();
+    return (int) (qreal(pt) * dpi / 72.0);
+
+#if 0
+// magic factor of 11/12 to account for differences to webengine/webkit
+// return m_paintDevice->physicalDpiY() * pt * 11 / m_paintDevice->logicalDpiY() / 12;
+#endif
 }
 
 int DocumentContainerPrivate::get_default_font_size() const
