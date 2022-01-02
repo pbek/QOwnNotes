@@ -481,7 +481,7 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
     // make the new AppImage executable (2nd attempt)
     if (!appFile.setPermissions(appFile.permissions() | QFileDevice::ExeOwner)) {
         QMessageBox::critical(0, tr("Permission error"),
-                              tr("The app file file '%1' could not be made executable! "
+                              tr("The app file '%1' could not be made executable! "
                                  "You need to make it executable yourself.")
                                   .arg(appPath));
 
