@@ -278,6 +278,11 @@ void Utils::Schema::Settings::setFormatStyle(
     // get the correct font
     QFont font = getFont(index);
 
+    // this fixes issues rendering monospaced fonts bold when they
+    // are set to bold by setFontWeight below
+    // https://github.com/pbek/QOwnNotes/issues/2338
+    font.setStyleName(QString());
+
     // set the font
     format.setFont(font);
 
