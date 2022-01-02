@@ -11,6 +11,9 @@
 #include <QtWidgets/QMessageBox>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QStatusBar>
+#include <QSettings>
+#include <QStandardPaths>
+#include <QDir>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     #include<QRegularExpression>
@@ -19,7 +22,95 @@
 #endif
 
 FakeVimProxy::FakeVimProxy(QWidget *widget, MainWindow *mw, QObject *parent)
-    : QObject(parent), m_widget(widget), m_mainWindow(mw) {}
+    : QObject(parent), m_widget(widget), m_mainWindow(mw)
+{
+    using namespace FakeVim::Internal;
+
+    auto *handler = static_cast<FakeVim::Internal::FakeVimHandler*>(parent);
+
+    handler->installEventFilter();
+    handler->setupWidget();
+
+    const auto homeDir = QStandardPaths::standardLocations(QStandardPaths::HomeLocation).first();
+    const QFile vimRcQONFile(QDir(homeDir).filePath(".vimrc.qownnotes"));
+
+    // Try to load .vimrc.qownnotes or .vimrc files
+    if (vimRcQONFile.exists()) {
+        handler->handleCommand(QStringLiteral("source ") + vimRcQONFile.fileName());
+    } else {
+        const QFile vimRcFile(QDir(homeDir).filePath(".vimrc"));
+        if (vimRcFile.exists()) {
+            handler->handleCommand(QStringLiteral("source ") + vimRcFile.fileName());
+        }
+    }
+
+    QSettings settings;
+    bool setExpandTab = !settings.value(QStringLiteral("Editor/useTabIndent")).toBool();
+    fakeVimSettings()->item("et")->setValue(setExpandTab);
+    fakeVimSettings()->item("ts")->setValue(Utils::Misc::indentSize());
+    fakeVimSettings()->item("sw")->setValue(Utils::Misc::indentSize());
+
+
+    {
+        auto h = [this](const QString &contents, int cursorPos, int anchorPos, int msgLvl) {
+            changeStatusMessage(contents, cursorPos, anchorPos, msgLvl);
+        };
+        handler->commandBufferChanged.connect(h);
+    }
+
+    {
+        auto h = [this](const QString &msg) { changeExtraInformation(msg); };
+        handler->extraInformationChanged.connect(h);
+    }
+
+    {
+        auto h = [this](const QString &msg) { changeStatusData(msg); };
+        handler->statusDataChanged.connect(h);
+    }
+
+    {
+        auto h = [this](const QString &msg) { highlightMatches(msg); };
+        handler->highlightMatches.connect(h);
+    }
+
+    {
+        auto h = [this](bool *handled, const ExCommand &cmd) { handleExCommand(handled, cmd); };
+        handler->handleExCommandRequested.connect(h);
+    }
+
+    {
+        auto h = [this](const QTextCursor &cursor) { requestSetBlockSelection(cursor); };
+        handler->requestSetBlockSelection.connect(h);
+    }
+
+    {
+        auto h = [this]() { requestDisableBlockSelection(); };
+        handler->requestDisableBlockSelection.connect(h);
+    }
+
+    {
+
+        auto h = [this](bool *on) { requestHasBlockSelection(on); };
+        handler->requestHasBlockSelection.connect(h);
+    }
+
+    {
+        auto h = [this](int beginLine, int endLine, QChar typedChar) {
+            indentRegion(beginLine, endLine, typedChar);
+        };
+        handler->indentRegion.connect(h);
+    }
+
+    {
+        auto h = [this](bool *result, QChar c) {
+            checkForElectricCharacter(result, c);
+        };
+        handler->checkForElectricCharacter.connect(h);
+    }
+
+    // regular signal
+    connect(this, &FakeVimProxy::handleInput, handler, [handler](const QString &text) { handler->handleInput(text); });
+}
 
 void FakeVimProxy::changeStatusData(const QString &info) {
     m_statusData = info;
