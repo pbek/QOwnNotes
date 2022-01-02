@@ -3,6 +3,8 @@
 ## 22.1.2
 - an issue with rendering "bold" really bold in the note edit panel when the default font
   is monospaced was fixed (for [#2339](https://github.com/pbek/QOwnNotes/issues/2339))  
+- more [QLiteHtml](https://github.com/litehtml/litehtml) feature integration was done
+  (for [#2352](https://github.com/pbek/QOwnNotes/pull/2352), thank you @Waqar144)
 
 ## 22.1.1
 - the tag tree and note subfolder tree resizing was improved (for [#2350](https://github.com/pbek/QOwnNotes/pull/2350), thank you @Waqar144)
