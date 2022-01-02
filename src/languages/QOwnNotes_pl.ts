@@ -1548,17 +1548,17 @@
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="54"/>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Kopiuj</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="62"/>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>Kopiuj link</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="70"/>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>Resetuj powiększenie</translation>
 </message>
 </context>
 <context>
@@ -9241,7 +9241,7 @@ Nie można tego cofnąć!</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation type="unfinished">The app file '%1' could not be made executable! You need to make it executable yourself.</translation>
+<translation>Plik aplikacji '%1' nie może zostać wykonany! Musisz sam sprawić, by był on wykonywalny.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="572"/>

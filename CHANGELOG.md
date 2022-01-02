@@ -5,6 +5,7 @@
   is monospaced was fixed (for [#2339](https://github.com/pbek/QOwnNotes/issues/2339))  
 - more [QLiteHtml](https://github.com/litehtml/litehtml) feature integration was done
   (for [#2352](https://github.com/pbek/QOwnNotes/pull/2352), thank you @Waqar144)
+- added more German, Brazilian Portuguese, Polish translation (thank you rakekniven, marterra, hansa2662)
 
 ## 22.1.1
 - the tag tree and note subfolder tree resizing was improved (for [#2350](https://github.com/pbek/QOwnNotes/pull/2350), thank you @Waqar144)
