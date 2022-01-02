@@ -6,6 +6,7 @@
 #include <QStyleOptionButton>
 #include <QCheckBox>
 #include <QLoggingCategory>
+#include <QApplication>
 
 static Q_LOGGING_CATEGORY(log, "qlitehtml_checkbox", QtWarningMsg)
 
@@ -23,9 +24,9 @@ void checkbox::addProperty(const litehtml::tchar_t *name, const litehtml::tchar_
 
 void checkbox::parse_attributes()
 {
-    addProperty(_t("width"), _t("10"));
-    addProperty(_t("height"), _t("10"));
-    addProperty(_t("margin-right"), _t("2"));
+    addProperty(_t("width"), _t("12"));
+    addProperty(_t("height"), _t("12"));
+    addProperty(_t("margin-right"), _t("5"));
 }
 
 void checkbox::draw(litehtml::uint_ptr hdc, int x, int y, const litehtml::position* clip)
@@ -36,15 +37,26 @@ void checkbox::draw(litehtml::uint_ptr hdc, int x, int y, const litehtml::positi
 
 //     qDebug(log) << "draw checkbox " << QRect(pos.x, pos.y, pos.width, pos.height);
 
+    auto palette = qApp->palette();
+
     auto *paint = reinterpret_cast<QPainter*>(hdc);
     const QRectF checkboxRect(pos.x, pos.y, pos.width, pos.height);
+
+    auto savedBrush = paint->brush();
+    auto savedPen = paint->pen();
+
+    paint->setPen(palette.windowText().color());
+    paint->setBrush(palette.base());
+
     paint->drawRoundedRect(checkboxRect, 1., 1.);
 
     if (m_checked) {
-        QRect check = checkboxRect.toRect().adjusted(1, 1, -1, -1);
-        auto brush = paint->brush();
-        paint->setBrush(Qt::gray);
+        QRect check = checkboxRect.toRect().adjusted(2, 2, -2, -2);
+        paint->setBrush(palette.windowText().color());
         paint->drawRect(check);
-        paint->setBrush(brush);
     }
+
+    // restore
+    paint->setPen(savedPen);
+    paint->setBrush(savedBrush);
 }
