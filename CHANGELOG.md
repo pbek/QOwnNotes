@@ -4,6 +4,8 @@
 - the tag tree and note subfolder tree resizing was improved (for [#2350](https://github.com/pbek/QOwnNotes/pull/2350), thank you @Waqar144)
 - more [QLiteHtml](https://github.com/litehtml/litehtml) feature integration was done
   (for [#2349](https://github.com/pbek/QOwnNotes/pull/2349), thank you @Waqar144)
+- an issue with scripts getting Markdown code, that was already modified too much
+  by code block highlighting was fixed (for [#2343](https://github.com/pbek/QOwnNotes/issues/2343))
 
 ## 22.1.0
 - another attempt was made to debug/fix the application not starting automatically

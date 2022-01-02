@@ -2479,20 +2479,6 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
         str.remove(re);
     }
 
-    /*CODE HIGHLIGHTING*/
-    int cbCount = nonOverlapCount(str, '`');
-    if (cbCount % 2 != 0) --cbCount;
-
-    int cbTildeCount = nonOverlapCount(str, '~');
-    if (cbTildeCount % 2 != 0) --cbTildeCount;
-
-    // divide by two to get actual number of code blocks
-    cbCount /= 2;
-    cbTildeCount /= 2;
-
-    highlightCode(str, QStringLiteral("```"), cbCount);
-    highlightCode(str, QStringLiteral("~~~"), cbTildeCount);
-
     // parse for relative file urls and make them absolute
     // (for example to show images under the note path)
     static const QRegularExpression re(QStringLiteral(R"(([\(<])file:\/\/([^\/].+?)([\)>]))"));
@@ -2567,6 +2553,21 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
     if (!preScriptResult.isEmpty()) {
         str = std::move(preScriptResult);
     }
+
+    /*CODE HIGHLIGHTING*/
+    int cbCount = nonOverlapCount(str, '`');
+    if (cbCount % 2 != 0) --cbCount;
+
+    int cbTildeCount = nonOverlapCount(str, '~');
+    if (cbTildeCount % 2 != 0) --cbTildeCount;
+
+    // divide by two to get actual number of code blocks
+    cbCount /= 2;
+    cbTildeCount /= 2;
+
+    // this will also add html in the code blocks, so we will do this at the very end
+    highlightCode(str, QStringLiteral("```"), cbCount);
+    highlightCode(str, QStringLiteral("~~~"), cbTildeCount);
 
     const auto data = str.toUtf8();
     if (data.size() == 0) {
