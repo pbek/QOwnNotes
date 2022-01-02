@@ -59,7 +59,7 @@ void HtmlPreviewWidget::onContextMenuRequested(QPoint pos, const QUrl &linkUrl)
     menu.addAction(act);
 
     if (!linkUrl.isEmpty() && linkUrl.isValid()) {
-        QAction *act = new QAction(tr("Copy Link"), this);
+        QAction *act = new QAction(tr("Copy link"), this);
         act->setEnabled(selectedText().isEmpty());
         connect(act, &QAction::triggered, this, [linkUrl]{
             qApp->clipboard()->setText(linkUrl.toString());
@@ -67,7 +67,7 @@ void HtmlPreviewWidget::onContextMenuRequested(QPoint pos, const QUrl &linkUrl)
         menu.addAction(act);
     }
 
-    menu.addAction(tr("Reset Zoom"), this, [this]{ setZoomFactor(1.0); });
+    menu.addAction(tr("Reset zoom"), this, [this]{ setZoomFactor(1.0); });
 
     menu.exec(mapToGlobal(pos));
 }
