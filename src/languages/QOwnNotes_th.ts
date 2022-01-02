@@ -1529,6 +1529,24 @@
 </message>
 </context>
 <context>
+<name>HtmlPreviewWidget</name>
+<message>
+<location filename="../widgets/htmlpreviewwidget.cpp" line="54"/>
+<source>Copy</source>
+<translation type="unfinished">Copy</translation>
+</message>
+<message>
+<location filename="../widgets/htmlpreviewwidget.cpp" line="62"/>
+<source>Copy link</source>
+<translation type="unfinished">Copy link</translation>
+</message>
+<message>
+<location filename="../widgets/htmlpreviewwidget.cpp" line="70"/>
+<source>Reset zoom</source>
+<translation type="unfinished">Reset zoom</translation>
+</message>
+</context>
+<context>
 <name>ImageDialog</name>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="14"/>
@@ -2017,7 +2035,7 @@
 <message>
 <location filename="../mainwindow.ui" line="411"/>
 <location filename="../mainwindow.ui" line="912"/>
-<location filename="../mainwindow.cpp" line="962"/>
+<location filename="../mainwindow.cpp" line="988"/>
 <source>Navigation</source>
 <translation>การเดินเรือ</translation>
 </message>
@@ -2028,7 +2046,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="9195"/>
+<location filename="../mainwindow.cpp" line="9274"/>
 <source>Add a tag to the current note</source>
 <translation>เพิ่มแท็กในบันทึกย่อปัจจุบัน</translation>
 </message>
@@ -2064,7 +2082,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1241"/>
-<location filename="../mainwindow.cpp" line="7041"/>
+<location filename="../mainwindow.cpp" line="7127"/>
 <source>Custom actions</source>
 <translation>การกระทำที่กำหนดเอง</translation>
 </message>
@@ -2145,12 +2163,12 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1448"/>
-<location filename="../mainwindow.cpp" line="10897"/>
+<location filename="../mainwindow.cpp" line="10980"/>
 <source>Select &amp;all notes</source>
 <translation>เลือก &amp;บันทึกย่อทั้งหมด</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6949"/>
+<location filename="../mainwindow.cpp" line="7035"/>
 <source>Insert &amp;link</source>
 <translation>แทรก &amp;ลิงก์</translation>
 </message>
@@ -2200,7 +2218,7 @@
 <translation>ค้นหาหรือสร้างบันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9196"/>
+<location filename="../mainwindow.cpp" line="9275"/>
 <source>Add a tag to the selected notes</source>
 <translation>เพิ่มแท็กในบันทึกย่อที่เลือก</translation>
 </message>
@@ -2211,7 +2229,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="886"/>
-<location filename="../mainwindow.cpp" line="7003"/>
+<location filename="../mainwindow.cpp" line="7089"/>
 <source>Export</source>
 <translation>ส่งออก</translation>
 </message>
@@ -2222,7 +2240,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="929"/>
-<location filename="../mainwindow.cpp" line="6984"/>
+<location filename="../mainwindow.cpp" line="7070"/>
 <source>Print</source>
 <translation>พิมพ์</translation>
 </message>
@@ -2293,7 +2311,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1161"/>
-<location filename="../mainwindow.cpp" line="890"/>
+<location filename="../mainwindow.cpp" line="916"/>
 <source>Workspaces</source>
 <translation>พื้นที่ทำงาน</translation>
 </message>
@@ -2591,7 +2609,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2244"/>
-<location filename="../mainwindow.cpp" line="12024"/>
+<location filename="../mainwindow.cpp" line="12104"/>
 <source>Remove current workspace</source>
 <translation>ลบเวิร์กสเปซปัจจุบัน</translation>
 </message>
@@ -2633,7 +2651,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2318"/>
-<location filename="../mainwindow.cpp" line="6958"/>
+<location filename="../mainwindow.cpp" line="7044"/>
 <source>Insert block &amp;quote</source>
 <translation>แทรกบล็อค &amp;เครื่องหมายคำพูด</translation>
 </message>
@@ -2660,7 +2678,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2365"/>
-<location filename="../mainwindow.cpp" line="10873"/>
+<location filename="../mainwindow.cpp" line="10956"/>
 <source>Open note in different window</source>
 <translation>เปิดบันทึกย่อในหน้าต่างอื่น</translation>
 </message>
@@ -2681,7 +2699,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2405"/>
-<location filename="../mainwindow.cpp" line="10881"/>
+<location filename="../mainwindow.cpp" line="10964"/>
 <source>Show note git versions</source>
 <translation>แสดงเวอร์ชัน git ของโน้ต</translation>
 </message>
@@ -2764,7 +2782,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2567"/>
-<location filename="../mainwindow.cpp" line="13020"/>
+<location filename="../mainwindow.cpp" line="13099"/>
 <source>Automatically detect</source>
 <translation>ตรวจจับอัตโนมัติ</translation>
 </message>
@@ -2978,22 +2996,22 @@
 <translation>นำเข้าบันทึกย่อจาก Evernote</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3044"/>
+<location filename="../mainwindow.cpp" line="3099"/>
 <source>Note was removed externally!</source>
 <translation>หมายเหตุถูกลบภายนอก!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3045"/>
+<location filename="../mainwindow.cpp" line="3100"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>บันทึกปัจจุบันถูกลบออกนอกแอปพลิเคชันนี้!
 คืนค่าบันทึกย่อปัจจุบันหรือไม่</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5662"/>
-<location filename="../mainwindow.cpp" line="5685"/>
-<location filename="../mainwindow.cpp" line="7524"/>
-<location filename="../mainwindow.cpp" line="10963"/>
+<location filename="../mainwindow.cpp" line="5748"/>
+<location filename="../mainwindow.cpp" line="5771"/>
+<location filename="../mainwindow.cpp" line="7610"/>
+<location filename="../mainwindow.cpp" line="11046"/>
 <source>&amp;Cancel</source>
 <translation>&amp;ยกเลิก</translation>
 </message>
@@ -3004,109 +3022,109 @@ Restore current note?</source>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3291"/>
+<location filename="../mainwindow.cpp" line="3346"/>
 <source>new version %1 available</source>
 <translation>มีรุ่นใหม่ %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3405"/>
+<location filename="../mainwindow.cpp" line="3460"/>
 <source>Abort</source>
 <translation>การแท้ง</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3405"/>
+<location filename="../mainwindow.cpp" line="3460"/>
 <source>Loading notes…</source>
 <translation>กำลังโหลดโน้ต ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3619"/>
+<location filename="../mainwindow.cpp" line="3674"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>ลบฐานข้อมูลที่ขัดแย้งกันซ้ำ: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3620"/>
+<location filename="../mainwindow.cpp" line="3675"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>ไม่สามารถลบฐานข้อมูลที่ขัดแย้งกันซ้ำ: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3626"/>
+<location filename="../mainwindow.cpp" line="3681"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>ลบฐานข้อมูลที่ขัดแย้งที่ผสานแล้ว: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3627"/>
+<location filename="../mainwindow.cpp" line="3682"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>ไม่สามารถลบฐานข้อมูลที่ขัดแย้งที่ผสาน: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3642"/>
+<location filename="../mainwindow.cpp" line="3697"/>
 <source>Delete conflicted database copies</source>
 <translation>ลบสำเนาฐานข้อมูลที่ขัดแย้งกัน</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3665"/>
+<location filename="../mainwindow.cpp" line="3720"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>ลบ %n สำเนาฐานข้อมูลที่ขัดแย้ง</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3829"/>
+<location filename="../mainwindow.cpp" line="3884"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>โปรดเลือกโฟลเดอร์ที่จะเก็บบันทึกย่อของคุณ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3855"/>
+<location filename="../mainwindow.cpp" line="3910"/>
 <source>No folder was selected</source>
 <translation>ไม่ได้เลือกโฟลเดอร์</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3857"/>
+<location filename="../mainwindow.cpp" line="3912"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>คุณต้องเลือกโฟลเดอร์บันทึกย่อบนคลาวด์ของคุณเองเพื่อให้ซอฟต์แวร์นี้ใช้งานได้!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3859"/>
+<location filename="../mainwindow.cpp" line="3914"/>
 <source>&amp;Retry</source>
 <translation>&amp;ลองใหม่</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3859"/>
+<location filename="../mainwindow.cpp" line="3914"/>
 <source>&amp;Exit</source>
 <translation>&amp;ทางออก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4166"/>
+<location filename="../mainwindow.cpp" line="4221"/>
 <source>Remove current note</source>
 <translation>ลบบันทึกย่อปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4167"/>
+<location filename="../mainwindow.cpp" line="4222"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>ลบโน้ตปัจจุบัน: &lt;strong&gt;%1 &lt;/strong&gt; หรือไม่</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4526"/>
+<location filename="../mainwindow.cpp" line="4593"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>โปรดป้อน &lt;strong&gt; รหัสผ่าน &lt;/strong&gt; ของบันทึกย่อที่เข้ารหัสนี้</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4549"/>
+<location filename="../mainwindow.cpp" line="4616"/>
 <source>Note can't be decrypted!</source>
 <translation>ไม่สามารถถอดรหัสโน้ตได้!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4550"/>
+<location filename="../mainwindow.cpp" line="4617"/>
 <source>It seems that your password is not valid!</source>
 <translation>ดูเหมือนว่ารหัสผ่านของคุณไม่ถูกต้อง!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4726"/>
+<location filename="../mainwindow.cpp" line="4803"/>
 <source>Remove selected notes</source>
 <translation>ลบบันทึกย่อที่เลือก</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4728"/>
+<location filename="../mainwindow.cpp" line="4805"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3117,476 +3135,476 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4818"/>
-<location filename="../mainwindow.cpp" line="11192"/>
+<location filename="../mainwindow.cpp" line="4899"/>
+<location filename="../mainwindow.cpp" line="11272"/>
 <source>Remove selected folders</source>
 <translation>ลบโฟลเดอร์ที่เลือก</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4819"/>
+<location filename="../mainwindow.cpp" line="4900"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation>
 <numerusform>ลบ &lt;strong&gt;%n &lt;/strong&gt; โฟลเดอร์ที่เลือกหรือไม่ &lt;ul&gt; &lt;li&gt;%1 &lt;/li&gt; &lt;/ul&gt; ไฟล์และโฟลเดอร์ทั้งหมดในโฟลเดอร์เหล่านี้จะถูกลบเช่นกัน!</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4830"/>
+<location filename="../mainwindow.cpp" line="4911"/>
 <source>Removed note subfolder: %1</source>
 <translation>ลบโฟลเดอร์ย่อยของ note: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4850"/>
+<location filename="../mainwindow.cpp" line="4931"/>
 <source>Remove selected tags</source>
 <translation>ลบแท็กที่เลือก</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4851"/>
+<location filename="../mainwindow.cpp" line="4932"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>ลบ &lt;strong&gt;%n &lt;/strong&gt; แท็กที่เลือกหรือไม่ จะไม่มีการลบโน้ตในกระบวนการนี้</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4903"/>
-<location filename="../mainwindow.cpp" line="9981"/>
+<location filename="../mainwindow.cpp" line="4984"/>
+<location filename="../mainwindow.cpp" line="10064"/>
 <source>Move selected notes</source>
 <translation>ย้ายบันทึกย่อที่เลือก</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4904"/>
+<location filename="../mainwindow.cpp" line="4985"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>ย้าย% โน้ตที่เลือกไปยัง &lt;strong&gt;%2 &lt;/strong&gt; หรือไม่</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5009"/>
-<location filename="../mainwindow.cpp" line="10101"/>
+<location filename="../mainwindow.cpp" line="5095"/>
+<location filename="../mainwindow.cpp" line="10184"/>
 <source>Copy selected notes</source>
 <translation>คัดลอกบันทึกย่อที่เลือก</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5010"/>
+<location filename="../mainwindow.cpp" line="5096"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>คัดลอก% n บันทึกย่อที่เลือกไปยัง &lt;strong&gt;%2 &lt;/strong&gt; หรือไม่</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5040"/>
-<location filename="../mainwindow.cpp" line="5189"/>
+<location filename="../mainwindow.cpp" line="5126"/>
+<location filename="../mainwindow.cpp" line="5275"/>
 <source>Done</source>
 <translation>เสร็จสิ้น</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5041"/>
+<location filename="../mainwindow.cpp" line="5127"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n บันทึกถูกคัดลอกไปยัง &lt;strong&gt;%2 &lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5054"/>
+<location filename="../mainwindow.cpp" line="5140"/>
 <source>Tag selected notes</source>
 <translation>แท็กบันทึกย่อที่เลือก</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5055"/>
+<location filename="../mainwindow.cpp" line="5141"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>แท็กบันทึกที่เลือกไว้ %n รายการด้วย &lt;strong&gt;%2 &lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5330"/>
+<location filename="../mainwindow.cpp" line="5416"/>
 <source>Restart application</source>
 <translation>รีสตาร์ทแอปพลิเคชัน</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5331"/>
+<location filename="../mainwindow.cpp" line="5417"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>คุณอาจต้องรีสตาร์ทแอปพลิเคชันเพื่อให้การเปลี่ยนแปลงมีผล</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5334"/>
+<location filename="../mainwindow.cpp" line="5420"/>
 <source>Restart</source>
 <translation>เริ่มต้นใหม่</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5574"/>
+<location filename="../mainwindow.cpp" line="5660"/>
 <source>PDF files</source>
 <translation>ไฟล์ PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5658"/>
+<location filename="../mainwindow.cpp" line="5744"/>
 <source>Todo lists disabled!</source>
 <translation>รายการสิ่งที่ต้องทำถูกปิดใช้งาน!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5659"/>
+<location filename="../mainwindow.cpp" line="5745"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>คุณได้ปิดใช้งานรายการสิ่งที่ต้องทำ &lt;br /&gt; โปรดตรวจสอบการกำหนดค่า &lt;strong&gt; สิ่งที่ต้องทำ &lt;/strong&gt; ในการตั้งค่า!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5913"/>
+<location filename="../mainwindow.cpp" line="5999"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>พบ &lt;strong&gt;%n &lt;/strong&gt; เกิดขึ้นกับคำใด ๆ ของ &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6513"/>
-<location filename="../mainwindow.cpp" line="6534"/>
+<location filename="../mainwindow.cpp" line="6599"/>
+<location filename="../mainwindow.cpp" line="6620"/>
 <source>Note was not found</source>
 <translation>ไม่พบบันทึก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6524"/>
+<location filename="../mainwindow.cpp" line="6610"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>ไม่พบโน้ตสร้างโน้ตใหม่ &lt;strong&gt;%1 &lt;/strong&gt; ไหม</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6573"/>
+<location filename="../mainwindow.cpp" line="6659"/>
 <source>Failed to create note</source>
 <translation type="unfinished">Failed to create note</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6574"/>
+<location filename="../mainwindow.cpp" line="6660"/>
 <source>Note creation failed</source>
 <translation type="unfinished">Note creation failed</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6762"/>
+<location filename="../mainwindow.cpp" line="6848"/>
 <source>Note folders</source>
 <translation>หมายเหตุโฟลเดอร์</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6885"/>
+<location filename="../mainwindow.cpp" line="6971"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>หมายเหตุรุ่นปัจจุบันโหลดจากเซิร์ฟเวอร์ ownCloud ของคุณ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6902"/>
+<location filename="../mainwindow.cpp" line="6988"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>บันทึกย่อที่อยู่ในถังขยะกำลังโหลดจากเซิร์ฟเวอร์ ownCloud ของคุณ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6968"/>
+<location filename="../mainwindow.cpp" line="7054"/>
 <source>Copy code block</source>
 <translation>คัดลอกบล็อครหัส</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6992"/>
+<location filename="../mainwindow.cpp" line="7078"/>
 <source>Print selected text</source>
 <translation>พิมพ์ข้อความที่เลือก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6998"/>
+<location filename="../mainwindow.cpp" line="7084"/>
 <source>Print selected text (preview)</source>
 <translation>พิมพ์ข้อความที่เลือก (ดูตัวอย่าง)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7016"/>
+<location filename="../mainwindow.cpp" line="7102"/>
 <source>Export selected text as PDF</source>
 <translation>ส่งออกข้อความที่เลือกเป็น PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7022"/>
+<location filename="../mainwindow.cpp" line="7108"/>
 <source>Export selected text as PDF (preview)</source>
 <translation>ส่งออกข้อความที่เลือกเป็น PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7348"/>
+<location filename="../mainwindow.cpp" line="7434"/>
 <source>Inserted text as text attachment file</source>
 <translation type="unfinished">Inserted text as text attachment file</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7520"/>
+<location filename="../mainwindow.cpp" line="7606"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>บันทึกย่อของคุณจะถูกถอดรหัสและเก็บไว้เป็นข้อความธรรมดาอีกครั้ง โปรดทราบว่าอาจมีการเข้ารหัสบันทึกย่อที่ไม่ได้เข้ารหัสกับเซิร์ฟเวอร์ของคุณและข้อความที่ละเอียดอ่อนอาจถูกเปิดเผย &lt;br /&gt; คุณต้องการถอดรหัสบันทึกย่อของคุณหรือไม่</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7617"/>
+<location filename="../mainwindow.cpp" line="7703"/>
 <source>Markdown files</source>
 <translation>ไฟล์ Markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7631"/>
+<location filename="../mainwindow.cpp" line="7717"/>
 <source>Export attached files</source>
 <translation type="unfinished">Export attached files</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7632"/>
+<location filename="../mainwindow.cpp" line="7718"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7666"/>
+<location filename="../mainwindow.cpp" line="7752"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>ตำแหน่งโน้ตที่คั่นหน้าไว้ที่ช่อง %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7681"/>
+<location filename="../mainwindow.cpp" line="7767"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>ข้ามไปยังตำแหน่งบุ๊กมาร์กที่ช่อง %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7912"/>
-<location filename="../mainwindow.cpp" line="7982"/>
+<location filename="../mainwindow.cpp" line="7994"/>
+<location filename="../mainwindow.cpp" line="8064"/>
 <source>Inserting image</source>
 <translation>การแทรกรูปภาพ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7917"/>
-<location filename="../mainwindow.cpp" line="7986"/>
+<location filename="../mainwindow.cpp" line="7999"/>
+<location filename="../mainwindow.cpp" line="8068"/>
 <source>Done inserting image</source>
 <translation>แทรกรูปภาพเสร็จแล้ว</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7919"/>
+<location filename="../mainwindow.cpp" line="8001"/>
 <source>Inserting attachment</source>
 <translation>การแทรกสิ่งที่แนบมา</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7924"/>
+<location filename="../mainwindow.cpp" line="8006"/>
 <source>Done inserting attachment</source>
 <translation>ทำการแทรกสิ่งที่แนบมา</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7936"/>
+<location filename="../mainwindow.cpp" line="8018"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>คัดลอก %n note ไปยัง %1</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7946"/>
+<location filename="../mainwindow.cpp" line="8028"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>ไม่สามารถคัดลอก %n บันทึก (มีอยู่แล้วส่วนใหญ่แล้ว)</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7956"/>
+<location filename="../mainwindow.cpp" line="8038"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>ข้ามการคัดลอก %n บันทึก (ไม่มี markdown หรือไฟล์ข้อความหรืออ่านไม่ได้)</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7969"/>
+<location filename="../mainwindow.cpp" line="8051"/>
 <source>Saving temporary image</source>
 <translation>กำลังบันทึกภาพชั่วคราว</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7331"/>
-<location filename="../mainwindow.cpp" line="7988"/>
+<location filename="../mainwindow.cpp" line="7417"/>
+<location filename="../mainwindow.cpp" line="8070"/>
 <source>Temporary file can't be opened</source>
 <translation>ไม่สามารถเปิดไฟล์ชั่วคราว</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8043"/>
+<location filename="../mainwindow.cpp" line="8125"/>
 <source>Downloading %1</source>
 <translation>กำลังดาวน์โหลด %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8235"/>
+<location filename="../mainwindow.cpp" line="8317"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>รีเซ็ตขนาดตัวอักษรเป็น %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9241"/>
+<location filename="../mainwindow.cpp" line="9324"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>ลบแท็ก '%1' ออกจากบันทึกปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9242"/>
+<location filename="../mainwindow.cpp" line="9325"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>ลบแท็ก '%1' ออกจากบันทึกย่อที่เลือก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9473"/>
+<location filename="../mainwindow.cpp" line="9556"/>
 <source>Rename tag</source>
 <translation>เปลี่ยนชื่อวัน</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9474"/>
+<location filename="../mainwindow.cpp" line="9557"/>
 <source>Assign color</source>
 <translation>กำหนดสี</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9475"/>
+<location filename="../mainwindow.cpp" line="9558"/>
 <source>Disable color</source>
 <translation>ปิดการใช้งานสี</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9479"/>
+<location filename="../mainwindow.cpp" line="9562"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;ย้ายแท็กไปที่ ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9690"/>
+<location filename="../mainwindow.cpp" line="9773"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>ย้ายไปที่ราก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10257"/>
+<location filename="../mainwindow.cpp" line="10340"/>
 <source>An url was opened at the current cursor position</source>
 <translation>URL ถูกเปิดที่ตำแหน่งเคอร์เซอร์ปัจจุบัน</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10360"/>
+<location filename="../mainwindow.cpp" line="10443"/>
 <source>No equation was found in front of the cursor</source>
 <translation>ไม่พบสมการด้านหน้าเคอร์เซอร์</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10380"/>
+<location filename="../mainwindow.cpp" line="10463"/>
 <source>Result for equation: %1 = %2</source>
 <translation>ผลลัพธ์สำหรับสมการ: %1 =%2</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10485"/>
+<location filename="../mainwindow.cpp" line="10568"/>
 <source>The scripting engine was reloaded</source>
 <translation>เครื่องมือการเขียนสคริปต์ถูกโหลดใหม่</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10519"/>
+<location filename="../mainwindow.cpp" line="10602"/>
 <source>HTML files</source>
 <translation>ไฟล์ HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10809"/>
+<location filename="../mainwindow.cpp" line="10892"/>
 <source>Jump to the note's subfolder</source>
 <translation>ข้ามไปที่โฟลเดอร์ย่อยของบันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10866"/>
+<location filename="../mainwindow.cpp" line="10949"/>
 <source>Open note in tab</source>
 <translation>เปิดบันทึกย่อในแท็บ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12580"/>
+<location filename="../mainwindow.cpp" line="12659"/>
 <source>A script update was found!</source>
 <translation>พบการอัปเดตสคริปต์!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12586"/>
+<location filename="../mainwindow.cpp" line="12665"/>
 <source>Script updates</source>
 <translation>อัปเดตสคริปต์</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12587"/>
+<location filename="../mainwindow.cpp" line="12666"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>พบการอัปเดตสคริปต์ของคุณในที่เก็บสคริปต์! คุณต้องการอัปเดตหรือไม่</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12602"/>
+<location filename="../mainwindow.cpp" line="12681"/>
 <source>No script updates were found</source>
 <translation>ไม่พบการอัปเดตสคริปต์</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13257"/>
+<location filename="../mainwindow.cpp" line="13336"/>
 <source>Toggle note stickiness</source>
 <translation>สลับหมายเหตุความหนืด</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13263"/>
+<location filename="../mainwindow.cpp" line="13342"/>
 <source>Close other note tabs</source>
 <translation>ปิดแท็บบันทึกอื่น ๆ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10753"/>
-<location filename="../mainwindow.cpp" line="10947"/>
+<location filename="../mainwindow.cpp" line="10836"/>
+<location filename="../mainwindow.cpp" line="11030"/>
 <source>Rename note</source>
 <translation>เปลี่ยนชื่อบันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10755"/>
+<location filename="../mainwindow.cpp" line="10838"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>ช่วยให้คุณเปลี่ยนชื่อไฟล์ของบันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10769"/>
+<location filename="../mainwindow.cpp" line="10852"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;ย้ายโน้ตไปที่ ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10770"/>
+<location filename="../mainwindow.cpp" line="10853"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;คัดลอกบันทึกไปที่ ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10813"/>
+<location filename="../mainwindow.cpp" line="10896"/>
 <source>Move notes to subfolder…</source>
 <translation>ย้ายโน้ตไปที่โฟลเดอร์ย่อย ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10817"/>
+<location filename="../mainwindow.cpp" line="10900"/>
 <source>Copy notes to subfolder…</source>
 <translation>คัดลอกบันทึกย่อไปยังโฟลเดอร์ย่อย ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10825"/>
+<location filename="../mainwindow.cpp" line="10908"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;แท็กบันทึกย่อที่เลือกด้วย ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10849"/>
+<location filename="../mainwindow.cpp" line="10932"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;ลบแท็กออกจากบันทึกย่อที่เลือก ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10947"/>
+<location filename="../mainwindow.cpp" line="11030"/>
 <source>Name:</source>
 <translation>นามสกุล:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10959"/>
+<location filename="../mainwindow.cpp" line="11042"/>
 <source>Note renaming not enabled!</source>
 <translation>ไม่ได้เปิดใช้งานการเปลี่ยนชื่อหมายเหตุ!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11191"/>
+<location filename="../mainwindow.cpp" line="11271"/>
 <source>Rename subfolder</source>
 <translation>เปลี่ยนชื่อโฟลเดอร์ย่อย</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11796"/>
+<location filename="../mainwindow.cpp" line="11876"/>
 <source>Create new workspace</source>
 <translation>สร้างพื้นที่ทำงานใหม่</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11797"/>
-<location filename="../mainwindow.cpp" line="12066"/>
+<location filename="../mainwindow.cpp" line="11877"/>
+<location filename="../mainwindow.cpp" line="12146"/>
 <source>Workspace name:</source>
 <translation>ชื่อพื้นที่ทำงาน:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11915"/>
+<location filename="../mainwindow.cpp" line="11995"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>เต็ม</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11922"/>
+<location filename="../mainwindow.cpp" line="12002"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>ต่ำสุด</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12025"/>
+<location filename="../mainwindow.cpp" line="12105"/>
 <source>Remove the current workspace?</source>
 <translation>ลบพื้นที่ทำงานปัจจุบันหรือไม่</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12065"/>
+<location filename="../mainwindow.cpp" line="12145"/>
 <source>Rename workspace</source>
 <translation>เปลี่ยนชื่อเวิร์กสเปซ</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="12248"/>
+<location filename="../mainwindow.cpp" line="12328"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation type="unfinished">
@@ -3594,42 +3612,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12519"/>
+<location filename="../mainwindow.cpp" line="12598"/>
 <source>Disallow all note editing</source>
 <translation>ไม่อนุญาตการแก้ไขโน้ตทั้งหมด</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12762"/>
+<location filename="../mainwindow.cpp" line="12841"/>
 <source>Select text files to import</source>
 <translation>เลือกไฟล์ข้อความที่จะนำเข้า</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12792"/>
+<location filename="../mainwindow.cpp" line="12871"/>
 <source>Importing: %1</source>
 <translation>กำลังนำเข้า: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12857"/>
+<location filename="../mainwindow.cpp" line="12936"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>คัดลอกหัวเรื่อง '%1' ไปยังคลิปบอร์ดแล้ว</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12951"/>
+<location filename="../mainwindow.cpp" line="13030"/>
 <source>Leave full-screen mode</source>
 <translation>ออกจากโหมดเต็มหน้าจอ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13137"/>
+<location filename="../mainwindow.cpp" line="13216"/>
 <source>Custom editor width</source>
 <translation>ความกว้างของตัวแก้ไขที่กำหนดเอง</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="13137"/>
+<location filename="../mainwindow.cpp" line="13216"/>
 <source>Characters:</source>
 <translation>ตัวอักษร:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9215"/>
+<location filename="../mainwindow.cpp" line="9294"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>เลือก %n บันทึก</numerusform>
@@ -3637,7 +3655,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2450"/>
-<location filename="../mainwindow.cpp" line="12520"/>
+<location filename="../mainwindow.cpp" line="12599"/>
 <source>Allow all note editing</source>
 <translation>อนุญาตการแก้ไขโน้ตทั้งหมด</translation>
 </message>
@@ -3647,611 +3665,611 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">&amp;Tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5129"/>
+<location filename="../mainwindow.cpp" line="5215"/>
 <source>Remove tag from selected notes</source>
 <translation>ลบแท็กออกจากบันทึกย่อที่เลือก</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5130"/>
+<location filename="../mainwindow.cpp" line="5216"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>ลบแท็ก &lt;strong&gt;%1 &lt;/strong&gt; จากโน้ตที่เลือก %n หรือไม่</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5190"/>
+<location filename="../mainwindow.cpp" line="5276"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>แท็ก &lt;strong&gt;%1 &lt;/strong&gt; ถูกนำออกจากบันทึกย่อ %n รายการ</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5235"/>
+<location filename="../mainwindow.cpp" line="5321"/>
 <source>Current notes folder: </source>
 <translation>โฟลเดอร์บันทึกย่อปัจจุบัน:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5238"/>
+<location filename="../mainwindow.cpp" line="5324"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>ตั้งค่าโฟลเดอร์บันทึกย่อ โฟลเดอร์บันทึกย่อปัจจุบัน:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5442"/>
+<location filename="../mainwindow.cpp" line="5528"/>
 <source>Print note</source>
 <translation>พิมพ์บันทึก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5517"/>
+<location filename="../mainwindow.cpp" line="5603"/>
 <source>Letter</source>
 <translation>จดหมาย</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5547"/>
+<location filename="../mainwindow.cpp" line="5633"/>
 <source>Portrait</source>
 <translation>ภาพเหมือน</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5547"/>
+<location filename="../mainwindow.cpp" line="5633"/>
 <source>Landscape</source>
 <translation>ภูมิประเทศ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5552"/>
+<location filename="../mainwindow.cpp" line="5638"/>
 <source>Orientation</source>
 <translation>ปฐมนิเทศ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5552"/>
+<location filename="../mainwindow.cpp" line="5638"/>
 <source>Orientation:</source>
 <translation>ปฐมนิเทศ:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5575"/>
+<location filename="../mainwindow.cpp" line="5661"/>
 <source>Export current note as PDF</source>
 <translation>ส่งออกบันทึกย่อปัจจุบันเป็น PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5682"/>
+<location filename="../mainwindow.cpp" line="5768"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>คุณยังไม่ได้เลือกรายการสิ่งที่ต้องทำ &lt;br /&gt; โปรดตรวจสอบการกำหนดค่า &lt;strong&gt; สิ่งที่ต้องทำ &lt;/strong&gt; ในการตั้งค่า!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6744"/>
+<location filename="../mainwindow.cpp" line="6830"/>
 <source>Open QOwnNotes</source>
 <translation>เปิด QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6276"/>
-<location filename="../mainwindow.cpp" line="6794"/>
-<location filename="../mainwindow.cpp" line="10749"/>
-<location filename="../mainwindow.cpp" line="11185"/>
+<location filename="../mainwindow.cpp" line="6362"/>
+<location filename="../mainwindow.cpp" line="6880"/>
+<location filename="../mainwindow.cpp" line="10832"/>
+<location filename="../mainwindow.cpp" line="11265"/>
 <source>New note</source>
 <translation>โน้ตใหม่</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6811"/>
+<location filename="../mainwindow.cpp" line="6897"/>
 <source>Recent notes</source>
 <translation>บันทึกล่าสุด</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6827"/>
+<location filename="../mainwindow.cpp" line="6913"/>
 <source>Show todo lists</source>
 <translation>แสดงรายการสิ่งที่ต้องทำ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6839"/>
+<location filename="../mainwindow.cpp" line="6925"/>
 <source>Recent tasks</source>
 <translation>งานล่าสุด</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6860"/>
+<location filename="../mainwindow.cpp" line="6946"/>
 <source>Quit</source>
 <translation>เลิก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8414"/>
+<location filename="../mainwindow.cpp" line="8495"/>
 <source>show notes from all note subfolders (%1)</source>
 <translation>แสดงบันทึกย่อจากโฟลเดอร์ย่อยบันทึกย่อทั้งหมด (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8437"/>
+<location filename="../mainwindow.cpp" line="8518"/>
 <source>show notes in note root folder (%1)</source>
 <translation>แสดงบันทึกย่อในโฟลเดอร์รูทโน้ต (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
-<location filename="../mainwindow.cpp" line="934"/>
-<location filename="../mainwindow.cpp" line="2278"/>
-<location filename="../mainwindow.cpp" line="8449"/>
+<location filename="../mainwindow.cpp" line="960"/>
+<location filename="../mainwindow.cpp" line="2325"/>
+<location filename="../mainwindow.cpp" line="8530"/>
 <source>Note folder</source>
 <translation>โฟลเดอร์บันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9862"/>
-<location filename="../mainwindow.cpp" line="9929"/>
+<location filename="../mainwindow.cpp" line="9945"/>
+<location filename="../mainwindow.cpp" line="10012"/>
 <source>Copy to note folder</source>
 <translation>คัดลอกไปยังโฟลเดอร์บันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9862"/>
-<location filename="../mainwindow.cpp" line="9930"/>
+<location filename="../mainwindow.cpp" line="9945"/>
+<location filename="../mainwindow.cpp" line="10013"/>
 <source>Move to note folder</source>
 <translation>ย้ายไปยังโฟลเดอร์บันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9863"/>
-<location filename="../mainwindow.cpp" line="9931"/>
+<location filename="../mainwindow.cpp" line="9946"/>
+<location filename="../mainwindow.cpp" line="10014"/>
 <source>Copy to this subfolder</source>
 <translation>คัดลอกไปยังโฟลเดอร์ย่อยนี้</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9864"/>
-<location filename="../mainwindow.cpp" line="9932"/>
+<location filename="../mainwindow.cpp" line="9947"/>
+<location filename="../mainwindow.cpp" line="10015"/>
 <source>Move to this subfolder</source>
 <translation>ย้ายไปที่โฟลเดอร์ย่อยนี้</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9976"/>
+<location filename="../mainwindow.cpp" line="10059"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>ย้าย %n โน้ตที่เลือกเพื่อบันทึกโฟลเดอร์ย่อย &lt;strong&gt;%2 &lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5334"/>
-<location filename="../mainwindow.cpp" line="12776"/>
+<location filename="../mainwindow.cpp" line="5420"/>
+<location filename="../mainwindow.cpp" line="12855"/>
 <source>Cancel</source>
 <translation>ยกเลิก</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10072"/>
+<location filename="../mainwindow.cpp" line="10155"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n บันทึกถูกย้ายไปยังโฟลเดอร์ย่อย "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10096"/>
+<location filename="../mainwindow.cpp" line="10179"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>คัดลอก %n บันทึกที่เลือกเพื่อบันทึกโฟลเดอร์ย่อย &lt;strong&gt;%2 &lt;/strong&gt; หรือไม่</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10171"/>
+<location filename="../mainwindow.cpp" line="10254"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n บันทึกถูกคัดลอกไปยังโฟลเดอร์ย่อย "%2"</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10871"/>
+<location filename="../mainwindow.cpp" line="10954"/>
 <source>Open note in external editor</source>
 <translation>เปิดบันทึกย่อในเอดิเตอร์ภายนอก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10875"/>
+<location filename="../mainwindow.cpp" line="10958"/>
 <source>Show note in file manager</source>
 <translation>แสดงบันทึกย่อในตัวจัดการไฟล์</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10960"/>
+<location filename="../mainwindow.cpp" line="11043"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>หากคุณต้องการเปลี่ยนชื่อบันทึกย่อของคุณคุณต้องเปิดใช้งานตัวเลือกเพื่อให้ชื่อไฟล์โน้ตแตกต่างจากบรรทัดแรก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11186"/>
+<location filename="../mainwindow.cpp" line="11266"/>
 <source>New subfolder</source>
 <translation>โฟลเดอร์ย่อยใหม่</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11196"/>
+<location filename="../mainwindow.cpp" line="11276"/>
 <source>Show folder in file manager</source>
 <translation>แสดงโฟลเดอร์ในตัวจัดการไฟล์</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11241"/>
+<location filename="../mainwindow.cpp" line="11321"/>
 <source>Create a new folder</source>
 <translation>สร้างโฟลเดอร์ใหม่</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11242"/>
+<location filename="../mainwindow.cpp" line="11322"/>
 <source>Folder name:</source>
 <translation>ชื่อโฟลเดอร์:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8373"/>
+<location filename="../mainwindow.cpp" line="8455"/>
 <source>show all untagged notes (%1)</source>
 <translation>แสดงโน้ตที่ไม่ติดแท็กทั้งหมด (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8375"/>
+<location filename="../mainwindow.cpp" line="8457"/>
 <source>Untagged notes</source>
 <translation>โน้ตที่ไม่ติดแท็ก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10520"/>
+<location filename="../mainwindow.cpp" line="10603"/>
 <source>Export current note as HTML file</source>
 <translation>ส่งออกบันทึกย่อปัจจุบันเป็นไฟล์ HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5526"/>
+<location filename="../mainwindow.cpp" line="5612"/>
 <source>Page size</source>
 <translation>ขนาดหน้ากระดาษ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1305"/>
+<location filename="../mainwindow.cpp" line="1334"/>
 <source>quit toolbar</source>
 <translation>ออกจากแถบเครื่องมือ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5526"/>
+<location filename="../mainwindow.cpp" line="5612"/>
 <source>Page size:</source>
 <translation>ขนาดหน้า:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5643"/>
+<location filename="../mainwindow.cpp" line="5729"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes จะติดตามข้อมูลการใช้งานที่ไม่ระบุชื่อซึ่งจะช่วยในการตัดสินใจว่าส่วนใดของ QOwnNotes ที่จะปรับปรุงต่อไปและเพื่อค้นหาและแก้ไขข้อบกพร่อง คุณสามารถปิดใช้งานการทำงานนั้นได้ในการตั้งค่า</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5647"/>
+<location filename="../mainwindow.cpp" line="5733"/>
 <source>&amp;Ok</source>
 <translation type="unfinished">&amp;Ok</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10759"/>
+<location filename="../mainwindow.cpp" line="10842"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;ลบโน้ต</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6949"/>
+<location filename="../mainwindow.cpp" line="7035"/>
 <source>&amp;Link selected text</source>
 <translation>&amp;ลิงก์ข้อความที่เลือก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1232"/>
+<location filename="../mainwindow.cpp" line="1261"/>
 <source>Your tasks are being loaded from your server</source>
 <translation>งานของคุณกำลังโหลดจากเซิร์ฟเวอร์ของคุณ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2979"/>
+<location filename="../mainwindow.cpp" line="3034"/>
 <source>Current note was modified externally</source>
 <translation>บันทึกย่อปัจจุบันถูกแก้ไขจากภายนอก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3058"/>
-<location filename="../mainwindow.cpp" line="6214"/>
+<location filename="../mainwindow.cpp" line="3113"/>
+<location filename="../mainwindow.cpp" line="6300"/>
 <source>Stored current note to disk</source>
 <translation>บันทึกปัจจุบันไปยังดิสก์</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3076"/>
+<location filename="../mainwindow.cpp" line="3131"/>
 <source>Note was modified externally: %1</source>
 <translation>หมายเหตุถูกแก้ไขภายนอก: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3098"/>
+<location filename="../mainwindow.cpp" line="3153"/>
 <source>Notes directory was modified externally</source>
 <translation>ไดเร็กทอรี Notes ถูกแก้ไขภายนอก</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3160"/>
+<location filename="../mainwindow.cpp" line="3215"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>บันทึก %n บันทึกลงดิสก์แล้ว</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8339"/>
+<location filename="../mainwindow.cpp" line="8421"/>
 <source>show all notes (%1)</source>
 <translation>แสดงโน้ตทั้งหมด (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8342"/>
-<location filename="../mainwindow.cpp" line="8417"/>
+<location filename="../mainwindow.cpp" line="8424"/>
+<location filename="../mainwindow.cpp" line="8498"/>
 <source>All notes</source>
 <translation>บันทึกทั้งหมด</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9465"/>
+<location filename="../mainwindow.cpp" line="9548"/>
 <source>&amp;Add tag</source>
 <translation>&amp;เพิ่มแท็ก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9513"/>
+<location filename="../mainwindow.cpp" line="9596"/>
 <source>Tag could not be created!</source>
 <translation>ไม่สามารถสร้างแท็กได้!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9692"/>
+<location filename="../mainwindow.cpp" line="9775"/>
 <source>Move to this tag</source>
 <translation>ย้ายไปที่แท็กนี้</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9727"/>
+<location filename="../mainwindow.cpp" line="9810"/>
 <source>Tag this</source>
 <translation>วันนี้</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9752"/>
+<location filename="../mainwindow.cpp" line="9835"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>ไม่สามารถย้ายแท็ก '%1' ไปยังแท็กนี้</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9801"/>
+<location filename="../mainwindow.cpp" line="9884"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>ย้ายแท็ก '%1' ไปยังแท็กใหม่แล้ว</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8679"/>
+<location filename="../mainwindow.cpp" line="8758"/>
 <source>show all notes tagged with '%1' (%2)</source>
 <translation>แสดงโน้ตทั้งหมดที่ติดแท็กด้วย '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9476"/>
+<location filename="../mainwindow.cpp" line="9559"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;ลบแท็ก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5681"/>
+<location filename="../mainwindow.cpp" line="5767"/>
 <source>No selected todo lists!</source>
 <translation>ไม่มีรายการสิ่งที่ต้องทำที่เลือก!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="601"/>
+<location filename="../mainwindow.cpp" line="627"/>
 <source>Action not found!</source>
 <translation type="unfinished">Action not found!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="602"/>
+<location filename="../mainwindow.cpp" line="628"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
 <translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="903"/>
+<location filename="../mainwindow.cpp" line="929"/>
 <source>Subfolders</source>
 <translation>โฟลเดอร์ย่อย</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="915"/>
+<location filename="../mainwindow.cpp" line="941"/>
 <source>Tags</source>
 <translation>แท็ก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="924"/>
+<location filename="../mainwindow.cpp" line="950"/>
 <source>Note search</source>
 <translation>ค้นหาบันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="953"/>
+<location filename="../mainwindow.cpp" line="979"/>
 <source>Note list</source>
 <translation>รายการบันทึก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="978"/>
+<location filename="../mainwindow.cpp" line="1004"/>
 <source>Note edit</source>
 <translation>หมายเหตุการแก้ไข</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="990"/>
+<location filename="../mainwindow.cpp" line="1016"/>
 <source>Note tags</source>
 <translation>แท็กหมายเหตุ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1001"/>
+<location filename="../mainwindow.cpp" line="1027"/>
 <source>Note preview</source>
 <translation>ดูตัวอย่างหมายเหตุ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1009"/>
+<location filename="../mainwindow.cpp" line="1035"/>
 <source>Log</source>
 <translation>เข้าสู่ระบบ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1018"/>
+<location filename="../mainwindow.cpp" line="1044"/>
 <source>Scripting</source>
 <translation>การเขียนสคริปต์</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1272"/>
+<location filename="../mainwindow.cpp" line="1301"/>
 <source>formatting toolbar</source>
 <translation>แถบเครื่องมือการจัดรูปแบบ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1281"/>
+<location filename="../mainwindow.cpp" line="1310"/>
 <source>inserting toolbar</source>
 <translation>การแทรกแถบเครื่องมือ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1288"/>
+<location filename="../mainwindow.cpp" line="1317"/>
 <source>encryption toolbar</source>
 <translation>แถบเครื่องมือเข้ารหัส</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1295"/>
+<location filename="../mainwindow.cpp" line="1324"/>
 <source>window toolbar</source>
 <translation>แถบเครื่องมือหน้าต่าง</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1300"/>
+<location filename="../mainwindow.cpp" line="1329"/>
 <source>custom action toolbar</source>
 <translation>แถบเครื่องมือการกระทำที่กำหนดเอง</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1320"/>
+<location filename="../mainwindow.cpp" line="1349"/>
 <source>Workspace selector</source>
 <translation>ตัวเลือกพื้นที่ทำงาน</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1470"/>
+<location filename="../mainwindow.cpp" line="1499"/>
 <source>Show %1 panel</source>
 <translation>แสดงแผง %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1515"/>
+<location filename="../mainwindow.cpp" line="1544"/>
 <source>Show %1</source>
 <translation>แสดง %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1849"/>
+<location filename="../mainwindow.cpp" line="1896"/>
 <source>Leave distraction free mode</source>
 <translation>ออกจากโหมดปราศจากความฟุ้งซ่าน</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2039"/>
+<location filename="../mainwindow.cpp" line="2086"/>
 <source>Switch to note folder</source>
 <translation>สลับเป็นโฟลเดอร์บันทึกย่อ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2434"/>
+<location filename="../mainwindow.cpp" line="2481"/>
 <source>show notes in folder '%1' (%2)</source>
 <translation>แสดงบันทึกย่อในโฟลเดอร์ '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2666"/>
+<location filename="../mainwindow.cpp" line="2713"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>ไม่สามารถโหลด Toolbar โดยไม่มีชื่อ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3002"/>
+<location filename="../mainwindow.cpp" line="3057"/>
 <source>Overwriting external changes of: %1</source>
 <translation>เขียนทับการเปลี่ยนแปลงภายนอกของ: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3023"/>
+<location filename="../mainwindow.cpp" line="3078"/>
 <source>Loading external changes from: %1</source>
 <translation>กำลังโหลดการเปลี่ยนแปลงภายนอกจาก: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3059"/>
-<location filename="../mainwindow.cpp" line="6215"/>
+<location filename="../mainwindow.cpp" line="3114"/>
+<location filename="../mainwindow.cpp" line="6301"/>
 <source>Current note could not be stored to disk</source>
 <translation>บันทึกปัจจุบันไม่สามารถจัดเก็บลงดิสก์ได้</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3248"/>
+<location filename="../mainwindow.cpp" line="3303"/>
 <source>Read-only</source>
 <translation>อ่านเท่านั้น</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3250"/>
+<location filename="../mainwindow.cpp" line="3305"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>การแก้ไขหมายเหตุถูกปิดใช้งานคลิกเพื่อเปิดใช้งาน</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3267"/>
+<location filename="../mainwindow.cpp" line="3322"/>
 <source>Line numbers</source>
 <translation>หมายเลขบรรทัด</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3277"/>
+<location filename="../mainwindow.cpp" line="3332"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>คลิกที่นี่เพื่อดูว่ามีอะไรเปลี่ยนแปลงและสามารถอัปเดตเป็นเวอร์ชันล่าสุดได้</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3644"/>
+<location filename="../mainwindow.cpp" line="3699"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>ดำเนินการต่อด้วยการลบสำเนาฐานข้อมูลที่ขัดแย้งกัน &lt;strong&gt;%n &lt;/strong&gt; ที่อาจบล็อกกระบวนการซิงค์ของคุณเองหรือไม่</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5113"/>
+<location filename="../mainwindow.cpp" line="5199"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n บันทึกถูกติดแท็กด้วย "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5909"/>
+<location filename="../mainwindow.cpp" line="5995"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>พบ &lt;strong&gt;%n &lt;/strong&gt; ที่เกิดขึ้นจาก &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6276"/>
+<location filename="../mainwindow.cpp" line="6362"/>
 <source>Note headline</source>
 <translation>หมายเหตุพาดหัว</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6514"/>
+<location filename="../mainwindow.cpp" line="6600"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
 <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6528"/>
+<location filename="../mainwindow.cpp" line="6614"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6955"/>
+<location filename="../mainwindow.cpp" line="7041"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
 <translation>ปิดกั้น &amp;อ้างข้อความที่เลือก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7999"/>
+<location filename="../mainwindow.cpp" line="8081"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation type="unfinished">Paste &amp;HTML as markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8000"/>
+<location filename="../mainwindow.cpp" line="8082"/>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8055"/>
+<location filename="../mainwindow.cpp" line="8137"/>
 <source>Downloading images finished</source>
 <translation>การดาวน์โหลดภาพเสร็จสิ้น</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8207"/>
+<location filename="../mainwindow.cpp" line="8289"/>
 <source>Increased font size to %1 pt</source>
 <translation>เพิ่มขนาดตัวอักษรเป็น %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8224"/>
+<location filename="../mainwindow.cpp" line="8306"/>
 <source>Decreased font size to %1 pt</source>
 <translation>ลดขนาดตัวอักษรเป็น %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5647"/>
-<location filename="../mainwindow.cpp" line="5662"/>
-<location filename="../mainwindow.cpp" line="5685"/>
-<location filename="../mainwindow.cpp" line="10963"/>
+<location filename="../mainwindow.cpp" line="5733"/>
+<location filename="../mainwindow.cpp" line="5748"/>
+<location filename="../mainwindow.cpp" line="5771"/>
+<location filename="../mainwindow.cpp" line="11046"/>
 <source>Open &amp;settings</source>
 <translation>เปิด &amp;การตั้งค่า</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1846"/>
-<location filename="../mainwindow.cpp" line="12928"/>
+<location filename="../mainwindow.cpp" line="1893"/>
+<location filename="../mainwindow.cpp" line="13007"/>
 <source>leave</source>
 <translation>ออกจาก</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7446"/>
+<location filename="../mainwindow.cpp" line="7532"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>โปรดป้อน &lt;strong&gt; รหัสผ่าน &lt;/strong&gt; เพื่อเข้ารหัสโน้ต &lt;br /&gt; โปรดจำไว้ว่าคุณต้อง &lt;strong&gt; จดจำ &lt;/strong&gt; รหัสผ่านของคุณเพื่ออ่านเนื้อหาของโน้ต &lt;br /&gt; และ คุณสามารถ &lt;strong&gt; เท่านั้น &lt;/strong&gt; ทำ &lt;strong&gt; ใน QOwnNotes &lt;/strong&gt;!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7519"/>
+<location filename="../mainwindow.cpp" line="7605"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>ถอดรหัสโน้ตและเก็บเป็นข้อความธรรมดา</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7524"/>
+<location filename="../mainwindow.cpp" line="7610"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;ถอดรหัส</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7549"/>
+<location filename="../mainwindow.cpp" line="7635"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br /&gt; คุณจะสามารถแก้ไขบันทึกย่อที่เข้ารหัสของคุณ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7618"/>
+<location filename="../mainwindow.cpp" line="7704"/>
 <source>Export current note as Markdown file</source>
 <translation>ส่งออกบันทึกย่อปัจจุบันเป็นไฟล์ Markdown</translation>
 </message>
@@ -4355,6 +4373,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/notepreviewwidget.cpp" line="366"/>
 <source>Export preview as raw HTML file</source>
+<comment>"Raw" means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)</comment>
 <translation>ส่งออกตัวอย่างเป็นไฟล์ HTML ดิบ</translation>
 </message>
 </context>
@@ -4575,24 +4594,24 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>บันทึก</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2791"/>
+<location filename="../entities/note.cpp" line="2796"/>
 <source>Could not read image file: %1</source>
 <translation>ไม่สามารถอ่านไฟล์รูปภาพ: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3449"/>
+<location filename="../entities/note.cpp" line="3454"/>
 <source>Note file path changed</source>
 <translation>พา ธ ของไฟล์บันทึกย่อเปลี่ยนไป</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3450"/>
+<location filename="../entities/note.cpp" line="3455"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>ตรวจพบการเปลี่ยนแปลงของเส้นทางบันทึกย่อ คุณต้องการแทนที่ลิงก์ &lt;strong&gt;%1 &lt;/strong&gt; ที่เกิดขึ้นทั้งหมดด้วย &lt;strong&gt;%2 &lt;/strong&gt; และลิงก์ที่มีชื่อไฟล์ &lt;strong&gt;%3 &lt;/strong&gt; ด้วย &lt;strong&gt;%4 &lt;/ strong &gt; ในไฟล์บันทึกย่อ &lt;strong&gt;%n &lt;/strong&gt; ไหม</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="4057"/>
+<location filename="../entities/note.cpp" line="4062"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>…และอีก %n โน้ต</numerusform>
@@ -8996,12 +9015,12 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="358"/>
-<location filename="../dialogs/updatedialog.cpp" line="508"/>
-<location filename="../dialogs/updatedialog.cpp" line="516"/>
-<location filename="../dialogs/updatedialog.cpp" line="525"/>
-<location filename="../dialogs/updatedialog.cpp" line="534"/>
-<location filename="../dialogs/updatedialog.cpp" line="544"/>
-<location filename="../dialogs/updatedialog.cpp" line="553"/>
+<location filename="../dialogs/updatedialog.cpp" line="520"/>
+<location filename="../dialogs/updatedialog.cpp" line="528"/>
+<location filename="../dialogs/updatedialog.cpp" line="537"/>
+<location filename="../dialogs/updatedialog.cpp" line="546"/>
+<location filename="../dialogs/updatedialog.cpp" line="556"/>
+<location filename="../dialogs/updatedialog.cpp" line="565"/>
 <source>Error</source>
 <translation>ความผิดพลาด</translation>
 </message>
@@ -9015,6 +9034,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="439"/>
 <location filename="../dialogs/updatedialog.cpp" line="451"/>
+<location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>Permission error</source>
 <translation type="unfinished">Permission error</translation>
 </message>
@@ -9034,54 +9054,54 @@ This cannot be undone!</source>
 <translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="480"/>
+<location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Restart application</source>
 <translation type="unfinished">Restart application</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="481"/>
+<location filename="../dialogs/updatedialog.cpp" line="493"/>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="483"/>
+<location filename="../dialogs/updatedialog.cpp" line="495"/>
 <source>Restart</source>
 <translation type="unfinished">Restart</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="483"/>
+<location filename="../dialogs/updatedialog.cpp" line="495"/>
 <source>Cancel</source>
 <translation type="unfinished">Cancel</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="509"/>
+<location filename="../dialogs/updatedialog.cpp" line="521"/>
 <source>Updater script '%1' doesn't exist!</source>
 <translation>สคริปต์ Updater '%1' ไม่มีอยู่!</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="517"/>
+<location filename="../dialogs/updatedialog.cpp" line="529"/>
 <source>Updater unzip executable '%1' doesn't exist!</source>
 <translation>ไม่มีโปรแกรมอัปเดตที่คลายการบีบอัด '%1'!</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="526"/>
-<location filename="../dialogs/updatedialog.cpp" line="535"/>
+<location filename="../dialogs/updatedialog.cpp" line="538"/>
+<location filename="../dialogs/updatedialog.cpp" line="547"/>
 <source>Could not copy updater script '%1' to '%2'!</source>
 <translation>ไม่สามารถคัดลอกสคริปต์ตัวอัปเดต '%1' ถึง '%2'!</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="545"/>
+<location filename="../dialogs/updatedialog.cpp" line="557"/>
 <source>Couldn't find updater script: %1</source>
 <translation>ไม่พบสคริปต์ตัวอัปเดต: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="554"/>
+<location filename="../dialogs/updatedialog.cpp" line="566"/>
 <source>Couldn't find unzip executable: %1</source>
 <translation>ไม่พบไฟล์บีบอัดที่รันได้: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="341"/>
-<location filename="../dialogs/updatedialog.cpp" line="559"/>
+<location filename="../dialogs/updatedialog.cpp" line="571"/>
 <source>Proceed with update</source>
 <translation>ดำเนินการต่อด้วยการอัปเดต</translation>
 </message>
@@ -9091,7 +9111,12 @@ This cannot be undone!</source>
 <translation type="unfinished">Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="560"/>
+<location filename="../dialogs/updatedialog.cpp" line="484"/>
+<source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
+<translation type="unfinished">The app file '%1' could not be made executable! You need to make it executable yourself.</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="572"/>
 <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
 <translation>การดาวน์โหลดเสร็จสิ้นแล้ว คุณต้องการอัพเดตและรีสตาร์ท QOwnNotes หรือไม่?</translation>
 </message>

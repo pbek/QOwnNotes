@@ -6,6 +6,7 @@
   (for [#2349](https://github.com/pbek/QOwnNotes/pull/2349), thank you @Waqar144)
 - an issue with scripts getting Markdown code, that was already modified too much
   by code block highlighting was fixed (for [#2343](https://github.com/pbek/QOwnNotes/issues/2343))
+- added more translation (thank you noureddin, amirkbrpr, marterra, hansa2662)
 
 ## 22.1.0
 - another attempt was made to debug/fix the application not starting automatically
