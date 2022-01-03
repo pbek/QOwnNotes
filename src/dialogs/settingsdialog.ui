@@ -409,7 +409,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>19</number>
+            <number>16</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -3548,8 +3548,8 @@
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>360</width>
-                           <height>532</height>
+                           <width>294</width>
+                           <height>465</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">
@@ -5781,6 +5781,13 @@ git config --global user.name &quot;Your name&quot;</string>
                 <string>Note edit panel</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_67">
+                <item row="1" column="1" colspan="2">
+                 <widget class="QCheckBox" name="restoreNoteTabsCheckBox">
+                  <property name="text">
+                   <string>Restore open note tabs at application startup and when note folders are switched</string>
+                  </property>
+                 </widget>
+                </item>
                 <item row="0" column="1" colspan="2">
                  <widget class="QCheckBox" name="noteEditCentralWidgetCheckBox">
                   <property name="toolTip">
@@ -5791,10 +5798,16 @@ git config --global user.name &quot;Your name&quot;</string>
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="1" colspan="2">
-                 <widget class="QCheckBox" name="restoreNoteTabsCheckBox">
+                <item row="2" column="1">
+                 <widget class="QCheckBox" name="autoSearchWhileTypingCheckBox">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
-                   <string>Restore open note tabs at application startup and when note folders are switched</string>
+                   <string>Automatically search while typing in note search </string>
                   </property>
                  </widget>
                 </item>

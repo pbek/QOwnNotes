@@ -523,6 +523,10 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
 
     _centerCursor =
         settings.value(QStringLiteral("Editor/centerCursor")).toBool();
+
+    _autoSearch =
+        settings.value(QStringLiteral("autoSearchWhileTyping"), true).toBool();
+
     QMarkdownTextEdit::updateSettings();
 }
 

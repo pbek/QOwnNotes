@@ -2739,6 +2739,9 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
             QStringLiteral("#eef067") : QStringLiteral("##141414")));
     }
 
+    const bool autoSearchWhileTyping = settings.value(QStringLiteral("autoSearchWhileTyping"), true).toBool();
+    ui->noteTextEdit->setAutoSearch(autoSearchWhileTyping);
+
     ui->noteTextEdit->setPaperMargins();
     ui->encryptedNoteTextEdit->setPaperMargins();
 
