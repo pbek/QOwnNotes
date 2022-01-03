@@ -2740,7 +2740,7 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     }
 
     const uint searchDebounceDelay = settings.value(QStringLiteral("searchDebounceDelay"), 0).toUInt();
-    ui->noteTextEdit->setDebounceDelay(searchDebounceDelay);
+    ui->noteTextEdit->setSearchWidgetDebounceDelay(searchDebounceDelay);
 
     ui->noteTextEdit->setPaperMargins();
     ui->encryptedNoteTextEdit->setPaperMargins();
