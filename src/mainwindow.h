@@ -87,6 +87,7 @@ class MainWindow : public QMainWindow {
    Q_SIGNALS:
     void currentNoteChanged(Note &note);
     void log(LogWidget::LogType logType, QString text);
+    void settingsChanged();
 
    public:
     enum CreateNewNoteOption {
@@ -756,7 +757,6 @@ private:
     IssueAssistantDialog *_issueAssistantDialog;
     StoredImagesDialog *_storedImagesDialog;
     StoredAttachmentsDialog *_storedAttachmentsDialog;
-    SettingsDialog *_settingsDialog;
     bool _noteExternallyRemovedCheckEnabled;
     QList<QAction *> _noteTextEditContextMenuActions;
     QList<QAction *> _noteListContextMenuActions;
