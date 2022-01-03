@@ -122,8 +122,14 @@
 #include "widgets/qownnotesmarkdowntextedit.h"
 #include "widgets/htmlpreviewwidget.h"
 
+static MainWindow* s_self = nullptr;
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
+
+    // static reference to us
+    s_self = this;
+
     // handle logging as signal/slot to even more prevent crashes when
     // writing to the log-widget while the app is shutting down
     connect(this, &MainWindow::log, LogWidget::instance(), &LogWidget::log);
@@ -200,7 +206,6 @@ MainWindow::MainWindow(QWidget *parent)
     _noteSubFolderDockWidgetVisible = true;
     _noteExternallyRemovedCheckEnabled = true;
     _readOnlyButton = new QPushButton(this);
-    _settingsDialog = Q_NULLPTR;
     _lastNoteSelectionWasMultiple = false;
     _webSocketServerService = Q_NULLPTR;
     _closeEventWasFired = false;
@@ -210,8 +215,6 @@ MainWindow::MainWindow(QWidget *parent)
     this->setWindowTitle(QStringLiteral("QOwnNotes - version ") +
                          QStringLiteral(VERSION) + QStringLiteral(" - build ") +
                          QString::number(BUILD));
-
-    qApp->setProperty("mainWindow", QVariant::fromValue<MainWindow *>(this));
 
     ClientProxy proxy;
     // refresh the Qt proxy settings
@@ -770,6 +773,8 @@ MainWindow::~MainWindow() {
     }
 
     delete ui;
+
+    s_self = nullptr;
 }
 
 /*!
@@ -1080,7 +1085,7 @@ void MainWindow::buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild,
  * Returns the global main window instance
  */
 MainWindow *MainWindow::instance() {
-    return qApp ? qApp->property("mainWindow").value<MainWindow *>() : nullptr;
+    return s_self;
 }
 
 /**
@@ -5110,26 +5115,21 @@ void MainWindow::updateCurrentFolderTooltip() {
  * Opens the settings dialog
  */
 void MainWindow::openSettingsDialog(int page, bool openScriptRepository) {
-    if (_settingsDialog == Q_NULLPTR) {
-        _settingsDialog = new SettingsDialog(page, this);
-    } else {
-        _settingsDialog->readSettings();
-        _settingsDialog->setCurrentPage(page);
-    }
+    SettingsDialog *settingsDialog = new SettingsDialog(page, this);
+    settingsDialog->readSettings();
 
     if (openScriptRepository) {
-        QTimer::singleShot(150, _settingsDialog,
-                           SLOT(searchScriptInRepository()));
+        QTimer::singleShot(10, settingsDialog, SLOT(searchScriptInRepository()));
     }
 
     // open the settings dialog
-    _settingsDialog->exec();
+    int ret = settingsDialog->exec();
 
-    // seems to safe a little leaking memory
-    // we must not null the dialog, this will crash if the ownCloud check
-    // tries to write to the labels and the dialog went away
-    //    delete(_settingsDialog);
-    //    _settingsDialog = Q_NULLPTR;
+    delete settingsDialog;
+
+    if (ret != QDialog::Accepted) {
+        return;
+    }
 
     // shows a restart application notification if needed
     if (showRestartNotificationIfNeeded()) {

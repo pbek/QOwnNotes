@@ -14,7 +14,8 @@
  */
 
 #include "qownnotesmarkdownhighlighter.h"
-
+#include "mainwindow.h"
+#include "qownspellchecker.h"
 #include <entities/note.h>
 
 #include <QApplication>
@@ -23,11 +24,17 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 
-#include "qownspellchecker.h"
 
 QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
     QTextDocument *parent, HighlightingOptions highlightingOptions)
-    : MarkdownHighlighter(parent, highlightingOptions) {}
+    : MarkdownHighlighter(parent, highlightingOptions)
+{
+    _defaultNoteFileExt = Note::defaultNoteFileExtension();
+    connect(MainWindow::instance(), &MainWindow::settingsChanged, this, [this](){
+        _defaultNoteFileExt = Note::defaultNoteFileExtension();
+        updateCachedRegexes(_defaultNoteFileExt);
+    });
+}
 
 void QOwnNotesMarkdownHighlighter::updateCurrentNote(Note *note) {
     if (note != nullptr) {
@@ -52,8 +59,7 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     // do the markdown highlighting before the spellcheck highlighting
     // if we do it afterwards, it overwrites the spellcheck highlighting
     MarkdownHighlighter::highlightMarkdown(text);
-    if (text.contains(QLatin1String("note://")) ||
-        text.contains(QChar('.') + Note::defaultNoteFileExtension())) {
+    if (text.contains(QLatin1String("note://")) || text.contains(QChar('.') + _defaultNoteFileExt)) {
         highlightBrokenNotesLink(text);
     }
 
@@ -69,9 +75,6 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
 
 void QOwnNotesMarkdownHighlighter::updateCachedRegexes(const QString& newExt)
 {
-    if (newExt == _defaultNoteFileExt)
-        return;
-
     _regexTagStyleLink = QRegularExpression(R"(<([^\s`][^`]*?\.)" + newExt + R"()>)");
     _regexBracketLink = QRegularExpression(R"(\[[^\[\]]+\]\((\S+\.)" + newExt + R"(|.+?\.)" + newExt + R"()(#[^\)]+)?\)\B)");
 }
@@ -101,9 +104,6 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
         if (_currentNote == nullptr) {
             return;
         }
-        updateCachedRegexes(Note::defaultNoteFileExtension());
-
-        const QString ext = Note::defaultNoteFileExtension();
 
         // check <note file.md> links
         // Example: <([^\s`][^`]*?\.md)>
