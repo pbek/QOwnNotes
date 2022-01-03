@@ -753,6 +753,8 @@ void SettingsDialog::storeSettings() {
                       ui->noteEditCentralWidgetCheckBox->isChecked());
     settings.setValue(QStringLiteral("restoreNoteTabs"),
                       ui->restoreNoteTabsCheckBox->isChecked());
+    settings.setValue(QStringLiteral("searchDebounceDelay"),
+                      ui->searchDebounceDelaySpinBox->value());
     settings.setValue(QStringLiteral("useNoteFolderButtons"),
                       ui->noteFolderButtonsCheckBox->isChecked());
     settings.setValue(QStringLiteral("MainWindow/noteTextView.rtl"),
@@ -1208,6 +1210,8 @@ void SettingsDialog::readSettings() {
             .toBool());
     ui->restoreNoteTabsCheckBox->setChecked(
         settings.value(QStringLiteral("restoreNoteTabs"), true).toBool());
+    ui->searchDebounceDelaySpinBox->setValue(
+        settings.value(QStringLiteral("searchDebounceDelay"), 0).toUInt());
     ui->noteFolderButtonsCheckBox->setChecked(
         settings.value(QStringLiteral("useNoteFolderButtons")).toBool());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(

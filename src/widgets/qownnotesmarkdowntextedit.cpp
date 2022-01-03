@@ -523,6 +523,10 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
 
     _centerCursor =
         settings.value(QStringLiteral("Editor/centerCursor")).toBool();
+
+    _debounceDelay =
+        settings.value(QStringLiteral("searchDebounceDelay"), 0).toUInt();
+
     QMarkdownTextEdit::updateSettings();
 }
 
