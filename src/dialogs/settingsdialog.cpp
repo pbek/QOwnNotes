@@ -41,6 +41,7 @@
 #include <QTimer>
 #include <QJsonDocument>
 #include <utility>
+#include <QPointer>
 
 #include "build_number.h"
 #include "dialogs/websockettokendialog.h"
@@ -3963,10 +3964,15 @@ void SettingsDialog::on_setGitPathToolButton_clicked() {
  * Opens a dialog to search for scripts in the script repository
  */
 void SettingsDialog::searchScriptInRepository(bool checkForUpdates) {
-    auto *dialog = new ScriptRepositoryDialog(this, checkForUpdates);
+    QPointer<ScriptRepositoryDialog> dialog = new ScriptRepositoryDialog(this, checkForUpdates);
     dialog->exec();
+
+    if (!dialog) {
+        return;
+    }
+
     Script lastInstalledScript = dialog->getLastInstalledScript();
-    delete (dialog);
+    delete dialog;
 
     // reload the script list
     reloadScriptList();
@@ -4459,8 +4465,15 @@ void SettingsDialog::on_loginFlowButton_clicked() {
             return;
         }
 
+        QPointer<SettingsDialog> alive(this);
+
         auto postData = QString("token=" + token).toLocal8Bit();
         auto data = Utils::Misc::downloadUrl(pollUrl, true, postData);
+
+        if (!alive) {
+            return;
+        }
+
 
 //        qDebug() << __func__ << " - 'data': " << data;
 
@@ -4481,6 +4494,11 @@ void SettingsDialog::on_loginFlowButton_clicked() {
         QString accountId = OwnCloudService::fetchNextcloudAccountId(
             ui->serverUrlEdit->text(), ui->userNameEdit->text(),
             ui->passwordEdit->text());
+
+        if (!alive) {
+            return;
+        }
+
         _selectedCloudConnection.setAccountId(accountId);
         _selectedCloudConnection.store();
 
