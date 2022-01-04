@@ -311,8 +311,12 @@ void litehtml::html_tag::parse_styles(bool is_reparse)
 		m_style.add(style, nullptr);
 	}
 
-	init_font();
 	document::ptr doc = get_document();
+	if (!doc) {
+        return;
+    }
+
+	init_font();
 
 	m_el_position	= (element_position)	value_index(get_style_property(_t("position"),		false,	_t("static")),		element_position_strings,	element_position_fixed);
 	m_text_align	= (text_align)			value_index(get_style_property(_t("text-align"),		true,	_t("left")),		text_align_strings,			text_align_left);
