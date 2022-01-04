@@ -1635,13 +1635,15 @@ bool Note::handleNoteTextFileName() {
 
     // remove frontmatter from start of markdown text
     if (noteText.startsWith(QLatin1String("---"))) {
-        static const QRegularExpression re(QStringLiteral(R"(^---\n.+?\n---\n)"), QRegularExpression::DotMatchesEverythingOption);
+        static const QRegularExpression re(QStringLiteral(R"(^---((\r\n)|(\n\r)|\r|\n).+?((\r\n)|(\n\r)|\r|\n)---((\r\n)|(\n\r)|\r|\n))"),
+                                           QRegularExpression::DotMatchesEverythingOption);
         noteText.remove(re);
     }
 
     // remove html comment from start of markdown text
     if (noteText.startsWith(QLatin1String("<!--"))) {
-        static const QRegularExpression re(QStringLiteral(R"(^<!--.+?-->\n)"), QRegularExpression::DotMatchesEverythingOption);
+        static const QRegularExpression re(QStringLiteral(R"(^<!--.+?-->((\r\n)|(\n\r)|\r|\n))"),
+                                           QRegularExpression::DotMatchesEverythingOption);
         noteText.remove(re);
     }
 
@@ -2475,7 +2477,8 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
 
     // remove frontmatter from markdown text
     if (str.startsWith(QLatin1String("---"))) {
-        static const QRegularExpression re(QStringLiteral(R"(^---\n.+?\n---\n)"), QRegularExpression::DotMatchesEverythingOption);
+        static const QRegularExpression re(QStringLiteral(R"(^---((\r\n)|(\n\r)|\r|\n).+?((\r\n)|(\n\r)|\r|\n)---((\r\n)|(\n\r)|\r|\n))"),
+                                           QRegularExpression::DotMatchesEverythingOption);
         str.remove(re);
     }
 

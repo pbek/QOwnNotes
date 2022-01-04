@@ -3,6 +3,8 @@
 ## 22.1.3
 - Joplin sub-folders can now also be imported if the parent folder is missing
   (for [#2361](https://github.com/pbek/QOwnNotes/issues/2361))
+- some issue with Windows line breaks for frontmatter and comment detection
+  have been fixed (for [#2343](https://github.com/pbek/QOwnNotes/issues/2343))
 - some performance improvements were made (for [#2362](https://github.com/pbek/QOwnNotes/pull/2362), thank you @Waqar144) 
 
 ## 22.1.2
