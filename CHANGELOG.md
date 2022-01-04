@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 22.1.3
+- some performance improvements were made (for [#2362](https://github.com/pbek/QOwnNotes/pull/2362), thank you @Waqar144) 
+
 ## 22.1.2
 - an issue with rendering "bold" really bold in the note edit panel when the default font
   is monospaced was fixed (for [#2339](https://github.com/pbek/QOwnNotes/issues/2339))  
