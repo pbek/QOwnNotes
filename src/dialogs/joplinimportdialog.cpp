@@ -232,6 +232,14 @@ NoteSubFolder JoplinImportDialog::importFolder(const QString& id, const QString&
         return _importedFolders[id];
     }
 
+    // if the text is empty, the reference most certainly wasn't found,
+    // so we just set an empty note sub folder
+    if (text.isEmpty()) {
+        _importedFolders[id] = NoteSubFolder();
+
+        return {};
+    }
+
     auto parentSubFolder = NoteSubFolder();
     auto parentIdMatch = QRegularExpression("^parent_id: (.+)$",
                       QRegularExpression::MultilineOption).match(text);
@@ -242,10 +250,6 @@ NoteSubFolder JoplinImportDialog::importFolder(const QString& id, const QString&
 
         if (!parentId.isEmpty()) {
             parentSubFolder = importFolder(parentId, _folderData[parentId]);
-
-            if (parentSubFolder.getId() == 0) {
-                return NoteSubFolder();
-            }
         }
     }
 
@@ -255,7 +259,7 @@ NoteSubFolder JoplinImportDialog::importFolder(const QString& id, const QString&
     auto folderName = textLines.at(0).trimmed();
 
     if (folderName.isEmpty()) {
-        return NoteSubFolder();
+        return {};
     }
 
     QDir dir;
@@ -264,7 +268,7 @@ NoteSubFolder JoplinImportDialog::importFolder(const QString& id, const QString&
 
     // create the folder on the disk
     if (!dir.mkpath(path)) {
-        return NoteSubFolder();
+        return {};
     }
 
     // try to fetch NoteSubFolder object
