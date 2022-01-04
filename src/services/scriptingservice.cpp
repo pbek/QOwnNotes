@@ -46,9 +46,10 @@ ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
     _engine->rootContext()->setContextProperty(QStringLiteral("script"), this);
 #ifndef INTEGRATION_TESTS
-    _engine->rootContext()->setContextProperty(
-        QStringLiteral("mainWindow"),
-        qApp->property("mainWindow").value<MainWindow *>());
+    if (!MainWindow::instance()) {
+        qWarning() << "Unexpected null MainWindow in ScriptingService()";
+    }
+    _engine->rootContext()->setContextProperty(QStringLiteral("mainWindow"), MainWindow::instance());
 #endif
 
     // deprecated
