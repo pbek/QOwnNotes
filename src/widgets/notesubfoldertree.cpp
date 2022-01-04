@@ -12,10 +12,15 @@
 NoteSubFolderTree::NoteSubFolderTree(QWidget *parent)
     : QTreeWidget(parent)
 {
+    // TODO: Maybe drop Debian 8 support
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QTimer::singleShot(1, this, [this](){
+#endif
         header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
         header()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     });
+#endif
     setContextMenuPolicy(Qt::CustomContextMenu);
 
     initConnections();
