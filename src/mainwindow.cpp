@@ -5115,7 +5115,7 @@ void MainWindow::updateCurrentFolderTooltip() {
  * Opens the settings dialog
  */
 void MainWindow::openSettingsDialog(int page, bool openScriptRepository) {
-    SettingsDialog *settingsDialog = new SettingsDialog(page, this);
+    QPointer<SettingsDialog> settingsDialog = new SettingsDialog(page, this);
     settingsDialog->readSettings();
 
     if (openScriptRepository) {
