@@ -205,6 +205,7 @@ class MainWindow : public QMainWindow {
     Q_INVOKABLE bool insertDataUrlAsFileIntoCurrentNote(const QString &dataUrl);
 
     void setShowNotesFromAllNoteSubFolders(bool show);
+    bool showNotesFromAllNoteSubFolders() const;
 
    protected:
     void changeEvent(QEvent *event) override;
@@ -776,15 +777,6 @@ private:
     HtmlPreviewWidget *_notePreviewWidget = nullptr;
 #endif
 
-    const QIcon _tagIcon = QIcon::fromTheme(
-        QStringLiteral("tag"),
-        QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/tag.svg")));
-    const QIcon _folderIcon = QIcon::fromTheme(
-        QStringLiteral("folder"),
-        QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg")));
-    const QIcon _noteIcon = QIcon::fromTheme(
-        QStringLiteral("text-x-generic"),
-        QIcon(":icons/breeze-qownnotes/16x16/text-x-generic.svg"));
     QList<QHotkey *> _globalShortcuts;
     int _lastNoteId = 0;
     bool _scriptUpdateFound = false;
@@ -943,19 +935,12 @@ private:
 
     QTreeWidgetItem *firstVisibleNoteTreeWidgetItem();
 
-    QTreeWidgetItem *addNoteSubFolderToTreeWidget(
-        QTreeWidgetItem *parentItem, const NoteSubFolder &noteSubFolder);
-
-    void buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent = nullptr);
-
     void setupNoteSubFolders();
 
     void filterNotesByNoteSubFolders();
 
     bool addNoteToNoteTreeWidget(const Note &note,
                                  QTreeWidgetItem *parent = nullptr);
-
-    void removeSelectedNoteSubFolders(QTreeWidget *treeWidget);
 
     QTreeWidgetItem *findNoteInNoteTreeWidget(const Note &note);
 
@@ -1017,11 +1002,6 @@ private:
 
     void assignColorToTagItem(QTreeWidgetItem *item);
 
-    static void handleTreeWidgetItemTagColor(QTreeWidgetItem *item,
-                                             const Tag &tag);
-    static void handleTreeWidgetItemTagColor(QTreeWidgetItem *item,
-                                             int tag);
-
     void disableColorOfTagItem(QTreeWidgetItem *item);
 
     void assignColorToSelectedTagItems();
@@ -1040,15 +1020,11 @@ private:
 
     static void startAppVersionTest();
 
-    bool showNotesFromAllNoteSubFolders();
-
     void selectAllNotesInNoteSubFolderTreeWidget() const;
 
     bool insertAttachment(QFile *file, const QString &title = QString());
 
     bool insertTextAsAttachment(const QString &text, const QString &title = QString());
-
-    static Qt::SortOrder toQtOrder(int order);
 
     void updatePanelsSortOrder();
 
@@ -1118,7 +1094,6 @@ private:
     void removeNoteFromNoteTreeWidget(Note &note) const;
     void initGlobalKeyboardShortcuts();
     void resizeTagTreeWidgetColumnToContents() const;
-    void resizeNoteSubFolderTreeWidgetColumnToContents() const;
     void updateCurrentTabData(const Note &note) const;
     bool jumpToTab(const Note &note) const;
     void closeOrphanedTabs() const;

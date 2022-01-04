@@ -17,6 +17,7 @@
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 #include <entities/notefolder.h>
 #include <entities/notesubfolder.h>
+#include <entities/tag.h>
 
 #include <QApplication>
 #include <QCheckBox>
@@ -33,6 +34,14 @@
 #include <QPlainTextEdit>
 #include <QTreeWidgetItem>
 #include <QVBoxLayout>
+
+#define ORDER_ASCENDING 0     // Qt::AscendingOrder // = 0
+#define ORDER_DESCENDING 1    // Qt::DescendingOrder // = 1
+
+Qt::SortOrder Utils::Gui::toQtOrder(int order) {
+    return order == ORDER_ASCENDING ? Qt::AscendingOrder : Qt::DescendingOrder;
+}
+
 /**
  * Checks if there is at least one child that is visible
  */
@@ -1091,4 +1100,68 @@ bool Utils::Gui::doWindowsDarkModeCheck() {
     }
 
     return false;
+}
+
+QIcon Utils::Gui::folderIcon()
+{
+    static const QIcon s_folderIcon = QIcon::fromTheme(
+        QStringLiteral("folder"),
+        QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg")));
+    return s_folderIcon;
+}
+
+QIcon Utils::Gui::noteIcon()
+{
+    static const QIcon s_noteIcon = QIcon::fromTheme(
+        QStringLiteral("text-x-generic"),
+        QIcon(":icons/breeze-qownnotes/16x16/text-x-generic.svg"));
+    return s_noteIcon;
+}
+
+QIcon Utils::Gui::tagIcon()
+{
+    static const QIcon s_tagIcon = QIcon::fromTheme(
+        QStringLiteral("tag"),
+        QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/tag.svg")));
+    return s_tagIcon;
+}
+
+void Utils::Gui::handleTreeWidgetItemTagColor(QTreeWidgetItem *item, const Tag &tag) {
+    if (item == Q_NULLPTR) {
+        qWarning() << "Unexpected null item in handleTreeWidgetItemTagColor";
+        return;
+    }
+    const int columnCount = item->columnCount();
+    if (columnCount == 0) {
+        return;
+    }
+
+    // get the color from the tag
+    QColor color = tag.getColor();
+
+    // if no color was set reset it by using a transparent white
+    if (!color.isValid()) {
+        color = Qt::transparent;
+    }
+
+    QBrush brush = QBrush(color);
+
+    // the tree widget events have to be blocked because when called in
+    // assignColorToTagItem() the 2nd setBackground() crashes the app,
+    // because it seems the tag tree will be reloaded
+    const QSignalBlocker blocker(item->treeWidget());
+    Q_UNUSED(blocker)
+
+    // set the color for all columns
+    for (int column = 0; column < columnCount; ++column) {
+        item->setBackground(column, brush);
+    }
+}
+
+void Utils::Gui::handleTreeWidgetItemTagColor(QTreeWidgetItem *item, int tagId)
+{
+    const Tag tag = Tag::fetch(tagId);
+    if (!tag.isFetched())
+        return;
+    Utils::Gui::handleTreeWidgetItemTagColor(item, tag);
 }

@@ -28,6 +28,7 @@ class QTabWidget;
 class QComboBox;
 class QPlainTextEdit;
 class QVBoxLayout;
+class Tag;
 
 /*  Gui functions that can be useful */
 
@@ -55,6 +56,8 @@ enum TreeWidgetSearchFlag {
 };
 
 Q_DECLARE_FLAGS(TreeWidgetSearchFlags, TreeWidgetSearchFlag)
+
+Qt::SortOrder toQtOrder(int order);
 
 bool isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item);
 
@@ -143,5 +146,19 @@ void reloadNoteTabs(QTabWidget *tabWidget);
 void setTreeWidgetItemToolTipForNote(QTreeWidgetItem *item, const Note &note,
                                      QDateTime *overrideFileLastModified = nullptr);
 bool doWindowsDarkModeCheck();
+
+QIcon folderIcon();
+QIcon noteIcon();
+QIcon tagIcon();
+
+/**
+ * Reads the color from a tag and sets the background color of a tree widget
+ * item
+ *
+ * @param item
+ * @param tag
+ */
+void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, const Tag &tag);
+void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, int tag);
 }    // namespace Gui
 }    // namespace Utils

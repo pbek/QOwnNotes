@@ -601,7 +601,6 @@ MainWindow::MainWindow(QWidget *parent)
     // trigger cli parameter menu action if there was any set
     triggerStartupMenuAction();
 
-    resizeNoteSubFolderTreeWidgetColumnToContents();
     resizeTagTreeWidgetColumnToContents();
 }
 
@@ -1940,7 +1939,7 @@ void MainWindow::loadNoteFolderListMenu() {
             action->setStatusTip(noteFolder.getLocalPath());
             action->setObjectName(QStringLiteral("noteFolder-") +
                                   QString::number(folderId));
-            action->setIcon(_folderIcon);
+            action->setIcon(Utils::Gui::folderIcon());
 
             if (isCurrentNoteFolder) {
                 font = action->font();
@@ -2198,11 +2197,11 @@ void MainWindow::loadNoteDirectoryList() {
         noteFolderItem->setText(0, tr("Note folder"));
         noteFolderItem->setData(0, Qt::UserRole, 0);
         noteFolderItem->setData(0, Qt::UserRole + 1, FolderType);
-        noteFolderItem->setIcon(0, _folderIcon);
+        noteFolderItem->setIcon(0, Utils::Gui::folderIcon());
         noteFolderItem->setForeground(1, QColor(Qt::gray));
         ui->noteTreeWidget->addTopLevelItem(noteFolderItem);
 
-        buildNoteSubFolderTreeForParentItem(noteFolderItem);
+        ui->noteSubFolderTreeWidget->buildTreeForParentItem(noteFolderItem);
         noteFolderItem->setExpanded(true);
 
         itemCount = Note::countAll();
@@ -2226,8 +2225,7 @@ void MainWindow::loadNoteDirectoryList() {
     if (settings.value(QStringLiteral("notesPanelSort"), SORT_BY_LAST_CHANGE)
             .toInt() == SORT_ALPHABETICAL) {
         ui->noteTreeWidget->sortItems(
-            0, toQtOrder(
-                   settings.value(QStringLiteral("notesPanelOrder")).toInt()));
+            0, Utils::Gui::toQtOrder(settings.value(QStringLiteral("notesPanelOrder")).toInt()));
     }
 
     // setup tagging
@@ -2274,12 +2272,12 @@ bool MainWindow::addNoteToNoteTreeWidget(const Note &note,
     noteItem->setText(0, name);
     noteItem->setData(0, Qt::UserRole, note.getId());
     noteItem->setData(0, Qt::UserRole + 1, NoteType);
-    noteItem->setIcon(0, _noteIcon);
+    noteItem->setIcon(0, Utils::Gui::noteIcon());
 
     const Tag tag = Tag::fetchOneOfNoteWithColor(note);
     if (tag.isFetched()) {
         // set the color of the note tree widget item
-        handleTreeWidgetItemTagColor(noteItem, tag);
+        Utils::Gui::handleTreeWidgetItemTagColor(noteItem, tag);
     }
 
     const bool isEditable = Note::allowDifferentFileName();
@@ -2336,42 +2334,6 @@ void MainWindow::updateNoteTreeWidgetItem(const Note &note,
 
     // this takes too long, it takes ages to do this on 1000 notes
     ui->noteTreeWidget->setItemWidget(noteItem, 0, noteTreeWidgetItem);
-}
-
-/**
- * Adds a note sub folder to the note sub folder tree widget
- */
-QTreeWidgetItem *MainWindow::addNoteSubFolderToTreeWidget(
-    QTreeWidgetItem *parentItem, const NoteSubFolder &noteSubFolder) {
-    const int id = noteSubFolder.getId();
-    const QString name = noteSubFolder.getName();
-    QSettings settings;
-    const int linkCount = Note::countByNoteSubFolderId(
-        id,
-        settings
-            .value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively"))
-            .toBool());
-    QString toolTip = tr("show notes in folder '%1' (%2)")
-                          .arg(name, QString::number(linkCount));
-
-    auto *item = new QTreeWidgetItem();
-    item->setText(0, name);
-    item->setData(0, Qt::UserRole, id);
-    item->setData(0, Qt::UserRole + 1, FolderType);
-    item->setToolTip(0, toolTip);
-    item->setIcon(0, _folderIcon);
-    item->setForeground(1, QColor(Qt::gray));
-    item->setText(1, QString::number(linkCount));
-    item->setToolTip(1, toolTip);
-    item->setFlags(item->flags() | Qt::ItemIsEditable);
-
-    if (parentItem == nullptr) {
-        ui->noteSubFolderTreeWidget->addTopLevelItem(item);
-    } else {
-        parentItem->addChild(item);
-    }
-
-    return item;
 }
 
 /**
@@ -4738,59 +4700,6 @@ void MainWindow::removeSelectedNotes() {
 }
 
 /**
- * Removes selected note subfolders after a confirmation
- */
-void MainWindow::removeSelectedNoteSubFolders(QTreeWidget *treeWidget) {
-    const int selectedItemsCount = treeWidget->selectedItems().size();
-
-    if (selectedItemsCount == 0) {
-        return;
-    }
-
-    // gather the folders that are about to be deleted
-    QStringList noteSubFolderPathList;
-    QVector<NoteSubFolder> noteSubFolderList;
-    const auto selItems = treeWidget->selectedItems();
-    for (QTreeWidgetItem *item : selItems) {
-        if (item->data(0, Qt::UserRole + 1) != FolderType) {
-            continue;
-        }
-
-        int id = item->data(0, Qt::UserRole).toInt();
-        const NoteSubFolder noteSubFolder = NoteSubFolder::fetch(id);
-        if (noteSubFolder.isFetched()) {
-            noteSubFolderList << noteSubFolder;
-            noteSubFolderPathList << noteSubFolder.fullPath();
-        }
-    }
-
-    if (noteSubFolderList.count() == 0) {
-        return;
-    }
-
-    if (Utils::Gui::question(
-            this, tr("Remove selected folders"),
-            tr("Remove <strong>%n</strong> selected folder(s)?"
-               "<ul><li>%1</li></ul>"
-               "All files and folders in these folders will be removed as"
-               " well!",
-               "", selectedItemsCount)
-                .arg(noteSubFolderPathList.join(QStringLiteral("</li><li>"))),
-            QStringLiteral("remove-folders")) == QMessageBox::Yes) {
-        // delete the note subfolders
-        for (const auto &noteSubFolder : Utils::asConst(noteSubFolderList)) {
-            // remove the directory recursively from the file system
-            if (noteSubFolder.removeFromFileSystem()) {
-                showStatusBarMessage(tr("Removed note subfolder: %1")
-                                         .arg(noteSubFolder.fullPath()));
-            }
-        }
-
-        on_action_Reload_note_folder_triggered();
-    }
-}
-
-/**
  * Removes selected tags after a confirmation
  */
 void MainWindow::removeSelectedTags() {
@@ -5184,7 +5093,7 @@ void MainWindow::directoryWatcherWorkaround(
 void MainWindow::handleNoteTreeTagColoringForNote(const Note &note) {
     const Tag colorTag = Tag::fetchOneOfNoteWithColor(note);
     QTreeWidgetItem *noteItem = findNoteInNoteTreeWidget(note);
-    handleTreeWidgetItemTagColor(noteItem, colorTag);
+    Utils::Gui::handleTreeWidgetItemTagColor(noteItem, colorTag);
 }
 
 /**
@@ -6738,7 +6647,7 @@ void MainWindow::generateSystemTrayContextMenu() {
                 font.setBold(true);
                 action->setFont(font);
 
-                action->setIcon(_folderIcon);
+                action->setIcon(Utils::Gui::folderIcon());
             }
 
             const int folderId = noteFolder.getId();
@@ -6773,7 +6682,7 @@ void MainWindow::generateSystemTrayContextMenu() {
 
         for (const Note &note : noteList) {
             QAction *action = noteMenu->addAction(note.getName());
-            action->setIcon(_noteIcon);
+            action->setIcon(Utils::Gui::noteIcon());
             int noteId = note.getId();
             connect(action, &QAction::triggered, this,
                     [this, noteId]() { setCurrentNoteFromNoteId(noteId); });
@@ -7731,12 +7640,6 @@ void MainWindow::trackAction(QAction *action) {
                                                    action->objectName());
 }
 
-void MainWindow::resizeNoteSubFolderTreeWidgetColumnToContents() const {
-    auto header = ui->noteSubFolderTreeWidget->header();
-    header->setSectionResizeMode(0, QHeaderView::ResizeToContents);
-    header->setSectionResizeMode(1, QHeaderView::ResizeToContents);
-}
-
 void MainWindow::resizeTagTreeWidgetColumnToContents() const {
     auto header = ui->tagTreeWidget->header();
     header->setSectionResizeMode(0, QHeaderView::ResizeToContents);
@@ -8313,7 +8216,7 @@ void MainWindow::reloadTagTree() {
     if (settings.value(QStringLiteral("tagsPanelSort")).toInt() ==
         SORT_ALPHABETICAL) {
         ui->tagTreeWidget->sortItems(
-            0, toQtOrder(
+            0, Utils::Gui::toQtOrder(
                    settings.value(QStringLiteral("tagsPanelOrder")).toInt()));
     }
     // now add 'All notes' to the top
@@ -8356,183 +8259,7 @@ void MainWindow::reloadTagTree() {
  */
 void MainWindow::reloadNoteSubFolderTree() {
     qDebug() << __func__;
-    ui->noteSubFolderTreeWidget->clear();
-    const int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
-    const bool showAllNotesItem =
-        !NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively();
-    auto *allItem = new QTreeWidgetItem();
-
-    // add the "all notes" item
-    if (showAllNotesItem) {
-        int linkCount = Note::countAll();
-        QString toolTip = tr("show notes from all note subfolders (%1)")
-                              .arg(QString::number(linkCount));
-
-        allItem->setText(0, tr("All notes"));
-        allItem->setData(0, Qt::UserRole, -1);
-        allItem->setToolTip(0, toolTip);
-        allItem->setIcon(
-            0, QIcon::fromTheme(
-                   QStringLiteral("edit-copy"),
-                   QIcon(QStringLiteral(
-                       ":icons/breeze-qownnotes/16x16/edit-copy.svg"))));
-        allItem->setForeground(1, QColor(Qt::gray));
-        allItem->setText(1, QString::number(linkCount));
-        allItem->setToolTip(1, toolTip);
-        allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
-    }
-
-    // add the "note folder" item
-    QSettings settings;
-    const int linkCount = Note::countByNoteSubFolderId(
-        0, settings
-               .value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively"))
-               .toBool());
-    const QString toolTip = tr("show notes in note root folder (%1)")
-                                .arg(QString::number(linkCount));
-
-    auto *item = new QTreeWidgetItem();
-    if (settings.value(QStringLiteral("noteSubfoldersPanelShowRootFolderName"))
-            .toBool()) {
-        item->setText(
-            0, NoteFolder::currentRootFolderName(
-                   settings
-                       .value(QStringLiteral("noteSubfoldersPanelShowFullPath"))
-                       .toBool()));
-    } else {
-        item->setText(0, tr("Note folder"));
-    }
-    item->setData(0, Qt::UserRole, 0);
-    item->setToolTip(0, toolTip);
-    item->setIcon(0, _folderIcon);
-    item->setForeground(1, QColor(Qt::gray));
-    item->setText(1, QString::number(linkCount));
-    item->setToolTip(1, toolTip);
-
-    if (settings.value(QStringLiteral("noteSubfoldersPanelDisplayAsFullTree"))
-            .toBool()) {
-        if (showAllNotesItem) {
-            // add 'All Notes'
-            ui->noteSubFolderTreeWidget->addTopLevelItem(allItem);
-        }
-
-        // add note root folder
-        ui->noteSubFolderTreeWidget->addTopLevelItem(item);
-
-        // add all note sub folders recursively as items
-        buildNoteSubFolderTreeForParentItem(item);
-
-        if (item->childCount() > 0) {
-            item->setExpanded(true);
-
-            if (settings.value(QStringLiteral("noteSubfoldersPanelSort"))
-                    .toInt() == SORT_ALPHABETICAL) {
-                item->sortChildren(
-                    0, toQtOrder(settings
-                                     .value(QStringLiteral(
-                                         "noteSubfoldersPanelOrder"))
-                                     .toInt()));
-            }
-        }
-    } else {    // the less hierarchical view
-        // add root note folder first
-        ui->noteSubFolderTreeWidget->addTopLevelItem(item);
-        // add subfolders recursively
-        buildNoteSubFolderTreeForParentItem();
-
-        // sort the widget
-        if (settings.value(QStringLiteral("noteSubfoldersPanelSort")).toInt() ==
-            SORT_ALPHABETICAL) {
-            ui->noteSubFolderTreeWidget->sortItems(
-                0,
-                toQtOrder(
-                    settings.value(QStringLiteral("noteSubfoldersPanelOrder"))
-                        .toInt()));
-        }
-
-        if (showAllNotesItem) {
-            // finally add 'All Notes' to the top
-            ui->noteSubFolderTreeWidget->insertTopLevelItem(0, allItem);
-        }
-    }
-
-    // set the active item
-    if (activeNoteSubFolderId == 0) {
-        const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
-        Q_UNUSED(blocker)
-
-        ui->noteSubFolderTreeWidget->setCurrentItem(item);
-    }
-
-    // send an event to jump to "All notes" in the note subfolder tree widget
-    // if that item was last selected
-    if ((activeNoteSubFolderId == 0) && _showNotesFromAllNoteSubFolders) {
-        selectAllNotesInNoteSubFolderTreeWidget();
-    }
-}
-
-/**
- * Populates the note sub folder tree recursively with its items
- */
-void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
-    const int parentId =
-        parent == nullptr ? 0 : parent->data(0, Qt::UserRole).toInt();
-    const int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
-    const bool isCurrentNoteTreeEnabled =
-        NoteFolder::isCurrentNoteTreeEnabled();
-
-    const auto noteSubFolderList = NoteSubFolder::fetchAllByParentId(parentId);
-
-    // build the next level of note sub folders
-    for (const auto &noteSubFolder : noteSubFolderList) {
-        QTreeWidgetItem *item =
-            addNoteSubFolderToTreeWidget(parent, noteSubFolder);
-
-        if (isCurrentNoteTreeEnabled) {
-            // load all notes of the subfolder and add them to the note list
-            // widget
-            const QVector<Note> noteList =
-                Note::fetchAllByNoteSubFolderId(noteSubFolder.getId());
-            for (const auto &note : noteList) {
-                addNoteToNoteTreeWidget(note, item);
-            }
-        } else {
-            // set the active item
-            if (activeNoteSubFolderId == noteSubFolder.getId()) {
-                const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
-                Q_UNUSED(blocker)
-
-                ui->noteSubFolderTreeWidget->setCurrentItem(item);
-            }
-        }
-
-        buildNoteSubFolderTreeForParentItem(item);
-
-        // set the expanded state
-        const bool isExpanded = noteSubFolder.treeWidgetExpandState();
-        item->setExpanded(isExpanded);
-
-        // sort alphabetically, if necessary
-        QSettings settings;
-        const int sort =
-            settings.value(QStringLiteral("noteSubfoldersPanelSort")).toInt();
-        if (sort == SORT_ALPHABETICAL) {
-            item->sortChildren(
-                0,
-                toQtOrder(
-                    settings.value(QStringLiteral("noteSubfoldersPanelOrder"))
-                        .toInt()));
-        }
-    }
-
-    // add the notes of the note folder root
-    if (parentId == 0 && isCurrentNoteTreeEnabled) {
-        const QVector<Note> noteList =
-            Note::fetchAllByNoteSubFolderId(0);
-        for (const auto &note : noteList) {
-            addNoteToNoteTreeWidget(note, parent);
-        }
-    }
+    ui->noteSubFolderTreeWidget->reload();
 }
 
 /**
@@ -8572,7 +8299,7 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent,
         item->setExpanded(expandedList.contains(QString::number(tagId)));
 
         if (tagPanelSort == SORT_ALPHABETICAL) {
-            item->sortChildren(0, toQtOrder(tagPanelOrder));
+            item->sortChildren(0, Utils::Gui::toQtOrder(tagPanelOrder));
         }
     }
 
@@ -8635,13 +8362,13 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
     item->setText(0, name);
     item->setText(1, linkCount > 0 ? QString::number(linkCount) : QString());
     item->setForeground(1, QColor(Qt::gray));
-    item->setIcon(0, _tagIcon);
+    item->setIcon(0, Utils::Gui::tagIcon());
     item->setToolTip(0, toolTip);
     item->setToolTip(1, toolTip);
     item->setFlags(item->flags() | Qt::ItemIsEditable);
 
     // set the color of the tag tree widget item
-    handleTreeWidgetItemTagColor(item, tagId);
+    Utils::Gui::handleTreeWidgetItemTagColor(item, tagId);
 
     if (parentId == 0) {
         // add the item at top level if there was no parent item
@@ -8652,55 +8379,6 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
     }
 
     return item;
-}
-
-void MainWindow::handleTreeWidgetItemTagColor(QTreeWidgetItem *item, int tagId)
-{
-    const Tag tag = Tag::fetch(tagId);
-    if (!tag.isFetched())
-        return;
-    handleTreeWidgetItemTagColor(item, tag);
-}
-
-/**
- * Reads the color from a tag and sets the background color of a tree widget
- * item
- *
- * @param item
- * @param tag
- */
-void MainWindow::handleTreeWidgetItemTagColor(QTreeWidgetItem *item,
-                                              const Tag &tag) {
-    if (item == Q_NULLPTR) {
-        return;
-    }
-
-    const int columnCount = item->columnCount();
-
-    if (columnCount == 0) {
-        return;
-    }
-
-    // get the color from the tag
-    QColor color = tag.getColor();
-
-    // if no color was set reset it by using a transparent white
-    if (!color.isValid()) {
-        color = Qt::transparent;
-    }
-
-    QBrush brush = QBrush(color);
-
-    // the tree widget events have to be blocked because when called in
-    // assignColorToTagItem() the 2nd setBackground() crashes the app,
-    // because it seems the tag tree will be reloaded
-    const QSignalBlocker blocker(item->treeWidget());
-    Q_UNUSED(blocker)
-
-    // set the color for all columns
-    for (int column = 0; column < columnCount; ++column) {
-        item->setBackground(column, brush);
-    }
 }
 
 /**
@@ -9531,7 +9209,7 @@ void MainWindow::assignColorToTagItem(QTreeWidgetItem *item) {
         tag.store();
 
         // set the color of the tag tree widget item
-        handleTreeWidgetItemTagColor(item, tag);
+        Utils::Gui::handleTreeWidgetItemTagColor(item, tag);
 
         // reload the notes in the note tree widget to update the colors
         loadNoteDirectoryList();
@@ -9586,7 +9264,7 @@ void MainWindow::assignColorToSelectedTagItems() {
             tag.store();
 
             // set the color of the tag tree widget item
-            handleTreeWidgetItemTagColor(item, tag);
+            Utils::Gui::handleTreeWidgetItemTagColor(item, tag);
         }
     }
 
@@ -9611,7 +9289,7 @@ void MainWindow::disableColorOfTagItem(QTreeWidgetItem *item) {
     tag.store();
 
     // set the color of the tag tree widget item
-    handleTreeWidgetItemTagColor(item, tag);
+    Utils::Gui::handleTreeWidgetItemTagColor(item, tag);
 }
 
 /**
@@ -10935,7 +10613,7 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
     
     // handle note subfolder renaming in a note tree
     if (item->data(0, Qt::UserRole + 1) == FolderType) {
-        ui->noteSubFolderTreeWidget->itemChanged(item, column);
+        ui->noteSubFolderTreeWidget->renameSubFolder(item);
         return;
     }
 
@@ -10981,7 +10659,7 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
                                SORT_BY_LAST_CHANGE)
                         .toInt() == SORT_ALPHABETICAL) {
                     ui->noteTreeWidget->sortItems(
-                        0, toQtOrder(
+                        0, Utils::Gui::toQtOrder(
                                settings.value(QStringLiteral("notesPanelOrder"))
                                    .toInt()));
                     ui->noteTreeWidget->scrollToItem(item);
@@ -11044,7 +10722,7 @@ void MainWindow::clearTagFilteringColumn() {
  * Returns true if notes from all note sub folders should be shown
  * @return
  */
-bool MainWindow::showNotesFromAllNoteSubFolders() {
+bool MainWindow::showNotesFromAllNoteSubFolders() const {
     QSettings settings;
     return settings
         .value(QStringLiteral("MainWindow/showNotesFromAllNoteSubFolders"),
@@ -12162,7 +11840,7 @@ void MainWindow::on_actionSave_modified_notes_triggered() {
 void MainWindow::on_actionAscending_triggered() {
     QSettings settings;
     settings.setValue(QStringLiteral("notesPanelOrder"), ORDER_ASCENDING);
-    ui->noteTreeWidget->sortItems(0, toQtOrder(ORDER_ASCENDING));
+    ui->noteTreeWidget->sortItems(0, Utils::Gui::toQtOrder(ORDER_ASCENDING));
 }
 
 /**
@@ -12171,7 +11849,7 @@ void MainWindow::on_actionAscending_triggered() {
 void MainWindow::on_actionDescending_triggered() {
     QSettings settings;
     settings.setValue(QStringLiteral("notesPanelOrder"), ORDER_DESCENDING);
-    ui->noteTreeWidget->sortItems(0, toQtOrder(ORDER_DESCENDING));
+    ui->noteTreeWidget->sortItems(0, Utils::Gui::toQtOrder(ORDER_DESCENDING));
 }
 
 /**
@@ -12262,10 +11940,6 @@ void MainWindow::on_actionScript_repository_triggered() {
  */
 void MainWindow::on_actionScript_settings_triggered() {
     openSettingsDialog(SettingsDialog::ScriptingPage);
-}
-
-Qt::SortOrder MainWindow::toQtOrder(int order) {
-    return order == ORDER_ASCENDING ? Qt::AscendingOrder : Qt::DescendingOrder;
 }
 
 void MainWindow::updatePanelsSortOrder() {
