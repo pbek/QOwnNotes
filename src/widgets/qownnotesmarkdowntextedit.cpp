@@ -458,6 +458,9 @@ QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
 }
 
 void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
+    // set a search delay of 250ms for text with more than 200k characters
+    setSearchWidgetDebounceDelay(text.size() > 200000 ? 250 : 0);
+
     QMarkdownTextEdit::setText(text);
 }
 

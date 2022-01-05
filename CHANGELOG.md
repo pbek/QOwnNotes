@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 22.1.4
+- for notes with more than 200k characters the in-note search will now wait for 250ms
+  before showing the search result, so users have time to enter more search characters
+  (for [#2335](https://github.com/pbek/QOwnNotes/pull/2335), thank you @fnkhz)
+
 ## 22.1.3
 - Joplin sub-folders can now also be imported if the parent folder is missing
   (for [#2361](https://github.com/pbek/QOwnNotes/issues/2361))
