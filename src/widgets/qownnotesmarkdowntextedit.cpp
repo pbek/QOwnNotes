@@ -11,6 +11,8 @@
 #include <QMimeData>
 #include <QRegularExpression>
 #include <QSettings>
+#include <QTextCursor>
+#include <QTextDocumentFragment>
 
 #include "entities/notefolder.h"
 #include "helpers/qownspellchecker.h"
@@ -276,7 +278,7 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
  * "/path/to/my/file/QOwnNotes.pdf" if the operating system
  * supports that handler
  */
-void QOwnNotesMarkdownTextEdit::openUrl(QString urlString) {
+void QOwnNotesMarkdownTextEdit::openUrl(const QString &urlString) {
     qDebug() << "QOwnNotesMarkdownTextEdit " << __func__
              << " - 'urlString': " << urlString;
 
@@ -288,13 +290,15 @@ void QOwnNotesMarkdownTextEdit::openUrl(QString urlString) {
     windowsSlash = QStringLiteral("/");
 #endif
 
+    auto urlCopy = urlString;
+
     // parse for relative file urls and make them absolute
-    urlString.replace(
+    urlCopy.replace(
         QRegularExpression(QStringLiteral("^file:[\\/]{2}([^\\/].+)$")),
         QStringLiteral("file://") + windowsSlash + notesPath +
             QStringLiteral("/\\1"));
 
-    QMarkdownTextEdit::openUrl(urlString);
+    QMarkdownTextEdit::openUrl(urlCopy);
 }
 
 // void QOwnNotesMarkdownTextEdit::setViewportMargins(
@@ -401,6 +405,47 @@ bool QOwnNotesMarkdownTextEdit::usesMonospacedFont() {
 #endif
 
     return widthNarrow == widthWide;
+}
+
+void QOwnNotesMarkdownTextEdit::insertCodeBlock()
+{
+    QTextCursor c = this->textCursor();
+    QString selectedText = c.selection().toPlainText();
+
+    if (selectedText.isEmpty()) {
+        // insert multi-line code block if cursor is in an empty line
+        if (c.atBlockStart() && c.atBlockEnd()) {
+            c.insertText(QStringLiteral("```\n\n```"));
+            c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 3);
+        } else {
+            c.insertText(QStringLiteral("``"));
+        }
+
+        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
+        setTextCursor(c);
+    } else {
+        bool addNewline = false;
+
+        // if the selected text has multiple lines add a multi-line code block
+        if (selectedText.contains(QStringLiteral("\n"))) {
+            // add another newline if there is no newline at the end of the
+            // selected text
+            const QString endNewline =
+                selectedText.endsWith(QLatin1String("\n"))
+                    ? QString()
+                    : QStringLiteral("\n");
+
+            selectedText = QStringLiteral("``\n") + selectedText + endNewline +
+                           QStringLiteral("``");
+            addNewline = true;
+        }
+
+        c.insertText(QStringLiteral("`") + selectedText + QStringLiteral("`"));
+
+        if (addNewline) {
+            c.insertText(QStringLiteral("\n"));
+        }
+    }
 }
 
 QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
@@ -561,14 +606,10 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
     const int mousePos = cursorAtMouse.position();
 
     QTextCursor cursor = textCursor();
-    if (cursor.block().userState() ==
-            MarkdownHighlighter::HighlighterState::CodeBlock ||
-        cursor.block().userState() ==
-            MarkdownHighlighter::HighlighterState::CodeBlockComment ||
-        cursor.block().userState() >=
-            MarkdownHighlighter::HighlighterState::CodeCpp) {
+    if (MarkdownHighlighter::isCodeBlock(cursor.block().userState())) {
         return false;
     }
+
     // Check if the user clicked a selected word
     const bool selectedWordClicked = cursor.hasSelection() &&
                                      mousePos >= cursor.selectionStart() &&

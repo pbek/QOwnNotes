@@ -19,9 +19,7 @@ HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent)
     };
     setResourceHandler(callback);
 
-    connect(this, &QLiteHtmlWidget::linkClicked, this, [](const QUrl &url){
-        QDesktopServices::openUrl(url);
-    });
+    connect(this, &QLiteHtmlWidget::linkClicked, this, &HtmlPreviewWidget::anchorClicked);
 
     connect(this, &QLiteHtmlWidget::contextMenuRequested, this, &HtmlPreviewWidget::onContextMenuRequested);
 }

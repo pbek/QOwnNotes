@@ -7,8 +7,12 @@
 
 class HtmlPreviewWidget final : public QLiteHtmlWidget
 {
+    Q_OBJECT
 public:
     HtmlPreviewWidget(QWidget *parent);
+
+Q_SIGNALS:
+    void anchorClicked(const QUrl &url);
 
 private:
     QByteArray resourceLoadCallBack(const QUrl&);

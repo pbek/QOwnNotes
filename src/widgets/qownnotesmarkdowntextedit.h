@@ -23,7 +23,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     explicit QOwnNotesMarkdownTextEdit(QWidget *parent = nullptr);
 
     void setStyles();
-    void openUrl(QString urlString);
+    void openUrl(const QString &urlString) override;
     //    void setViewportMargins(int left, int top, int right, int bottom);
     void setPaperMargins(int width = -1);
     void setMainWindow(MainWindow *mainWindow);
@@ -35,6 +35,11 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     bool isSpellCheckingEnabled();
     void disableSpellChecking();
     bool usesMonospacedFont();
+
+    /**
+     * Inserts an empty code block
+     */
+    void insertCodeBlock();
 
    protected:
     // we must not override _highlighter or Windows will create a

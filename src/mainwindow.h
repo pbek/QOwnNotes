@@ -114,13 +114,20 @@ class MainWindow : public QMainWindow {
 
     ~MainWindow();
 
-    void initTreeWidgets();
-
     void triggerStartupMenuAction();
 
     void setCurrentNoteText(QString text);
 
-    Note getCurrentNote();
+    void setCurrentNote(Note note, bool updateNoteText = true,
+                        bool updateSelectedNote = true,
+                        bool addPreviousNoteToHistory = true);
+
+    void createNewNote(QString noteName = QString(),
+                       bool withNameAppend = true);
+
+    void doSearchInNote(QString searchText);
+
+    const Note &getCurrentNote();
 
     void createNewNote(
         QString name, QString text,
@@ -208,6 +215,14 @@ class MainWindow : public QMainWindow {
     void setShowNotesFromAllNoteSubFolders(bool show);
     bool showNotesFromAllNoteSubFolders() const;
 
+    class NoteSubFolderTree *noteSubFolderTree();
+
+    void openTodoDialog(const QString &taskUid = QString());
+
+    class QOwnNotesMarkdownTextEdit *noteTextEdit();
+
+    void refreshNotePreview();
+
    protected:
     void changeEvent(QEvent *event) override;
 
@@ -259,7 +274,7 @@ class MainWindow : public QMainWindow {
 
     void on_action_New_note_triggered();
 
-    void on_noteTextView_anchorClicked(const QUrl &arg1);
+    void onNotePreviewAnchorClicked(const QUrl &arg1);
 
     void on_actionCheck_for_updates_triggered();
 
@@ -441,8 +456,6 @@ class MainWindow : public QMainWindow {
     void generateSystemTrayContextMenu();
 
     void reloadTodoLists();
-
-    void openTodoDialog(const QString &taskUid = QString());
 
     void showWindow();
 
@@ -783,6 +796,10 @@ private:
     bool _isMaximizedBeforeFullScreen = false;
     bool _isMinimizedBeforeFullScreen = false;
 
+    void initTreeWidgets();
+
+    void initNotePreviewAndTextEdits();
+
     void createSystemTrayIcon();
 
     void loadNoteDirectoryList();
@@ -792,10 +809,6 @@ private:
     bool buildNotesIndex(int noteSubFolderId = 0, bool forceRebuild = false);
 
     QString selectOwnCloudNotesFolder();
-
-    void setCurrentNote(Note note, bool updateNoteText = true,
-                        bool updateSelectedNote = true,
-                        bool addPreviousNoteToHistory = true);
 
     void removeCurrentNote();
 
@@ -872,8 +885,6 @@ private:
     void changeDistractionFreeMode(const bool enabled);
 
     bool insertMedia(QFile *file, QString title = QString());
-
-    int currentNoteLineNumber();
 
     static bool isValidMediaFile(QFile *file);
 
@@ -960,9 +971,6 @@ private:
     void moveSelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder);
 
     void copySelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder);
-
-    void createNewNote(QString noteName = QString(),
-                       bool withNameAppend = true);
 
     void initTagButtonScrollArea();
 
@@ -1077,8 +1085,6 @@ private:
     void forceRegenerateNotePreview();
 
     void removeConflictedNotesDatabaseCopies();
-
-    void doSearchInNote(QString searchText);
 
     void insertNoteText(const QString &text);
 
