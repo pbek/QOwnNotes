@@ -348,6 +348,8 @@ set(SOURCE_FILES
     utils/gui.h
     utils/schema.cpp
     utils/schema.h
+    utils/urlhandler.h
+    utils/urlhandler.cpp
     build_number.h
     main.cpp
     mainwindow.cpp

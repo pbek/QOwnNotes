@@ -121,6 +121,7 @@
 #include "version.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 #include "widgets/htmlpreviewwidget.h"
+#include "utils/urlhandler.h"
 
 static MainWindow* s_self = nullptr;
 
@@ -164,16 +165,6 @@ MainWindow::MainWindow(QWidget *parent)
         initFakeVim(ui->noteTextEdit);
         initFakeVim(ui->encryptedNoteTextEdit);
     }
-
-#ifdef USE_QLITEHTML
-    _notePreviewWidget = new HtmlPreviewWidget(this);
-    if (!ui->noteViewFrame->layout())
-        ui->noteViewFrame->setLayout(new QVBoxLayout);
-    ui->noteViewFrame->layout()->addWidget(_notePreviewWidget);
-
-    // QTextBrowser previewer is hidden when we use qlitehtml
-    ui->noteTextView->setVisible(false);
-#endif
 
     setWindowIcon(getSystemTrayIcon());
 
@@ -239,10 +230,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame,
                                                darkMode);
 
-#ifndef USE_QLITEHTML
-   ui->noteTextView->initSearchFrame(ui->noteTextViewSearchFrame, darkMode);
-#endif
-
     // set the main window for accessing it's public methods
     ui->noteTextEdit->setMainWindow(this);
     ui->encryptedNoteTextEdit->setMainWindow(this);
@@ -260,6 +247,8 @@ MainWindow::MainWindow(QWidget *parent)
         _customActionToolbar->hide();
         settings.setValue(QStringLiteral("guiFirstRunInit"), true);
     }
+
+    initNotePreviewAndTextEdits();
 
 #ifdef Q_OS_MAC
     // add some different shortcuts for the note history on the mac
@@ -360,13 +349,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->searchLineEdit->installEventFilter(this);
     ui->noteTreeWidget->installEventFilter(this);
 
-#ifndef USE_QLITEHTML
-    ui->noteTextView->installEventFilter(this);
-    ui->noteTextView->viewport()->installEventFilter(this);
-#else
-    _notePreviewWidget->installEventFilter(this);
-    _notePreviewWidget->viewport()->installEventFilter(this);
-#endif
     ui->noteTextEdit->installEventFilter(this);
     ui->noteTextEdit->viewport()->installEventFilter(this);
     ui->encryptedNoteTextEdit->installEventFilter(this);
@@ -509,13 +491,6 @@ MainWindow::MainWindow(QWidget *parent)
             &QOwnNotesMarkdownHighlighter::highlightingFinished, this,
             &MainWindow::startNavigationParser);
 
-    // act on note preview resize
-#ifndef USE_QLITEHTML
-   connect(ui->noteTextView, &NotePreviewWidget::resize, this,
-           &MainWindow::onNoteTextViewResize);
-#else
-#endif
-
     // reloads all tasks from the ownCloud server
     reloadTodoLists();
 
@@ -611,6 +586,38 @@ void MainWindow::initTreeWidgets()
 {
     connect(ui->noteSubFolderTreeWidget, &NoteSubFolderTree::multipleSubfoldersSelected, this, &MainWindow::onMultipleSubfoldersSelected);
     connect(ui->noteSubFolderTreeWidget, &NoteSubFolderTree::currentSubFolderChanged, this, &MainWindow::onCurrentSubFolderChanged);
+}
+
+void MainWindow::initNotePreviewAndTextEdits()
+{
+#ifdef USE_QLITEHTML
+    _notePreviewWidget = new HtmlPreviewWidget(this);
+    if (!ui->noteViewFrame->layout())
+        ui->noteViewFrame->setLayout(new QVBoxLayout);
+    ui->noteViewFrame->layout()->addWidget(_notePreviewWidget);
+
+    // QTextBrowser previewer is hidden when we use qlitehtml
+    ui->noteTextView->setVisible(false);
+
+    // TODO: remove this, and handle stuff in the widget directly
+    _notePreviewWidget->installEventFilter(this);
+    _notePreviewWidget->viewport()->installEventFilter(this);
+
+    connect(_notePreviewWidget, &HtmlPreviewWidget::anchorClicked, this, &MainWindow::onNotePreviewAnchorClicked);
+
+#else
+    ui->noteTextView->installEventFilter(this);
+    ui->noteTextView->viewport()->installEventFilter(this);
+
+   connect(ui->noteTextView, &NotePreviewWidget::resize, this,
+           &MainWindow::onNoteTextViewResize);
+
+   // TODO centralize dark mode handling
+   bool darkMode = QSettings().value(QStringLiteral("darkMode")).toBool();
+   ui->noteTextView->initSearchFrame(ui->noteTextViewSearchFrame, darkMode);
+
+    connect(ui->noteTextView, &QTextBrowser::anchorClicked, this, &MainWindow::onNotePreviewAnchorClicked);
+#endif
 }
 
 /**
@@ -6195,29 +6202,12 @@ void MainWindow::createNewNote(QString noteName, bool withNameAppend) {
 }
 
 /*
- * Handles urls in the noteTextView
- *
- * examples:
- * - <note://MyNote> opens the note "MyNote"
- * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with
- * spaces in the name"
- * - <https://www.qownnotes.org> opens the web page
- * - <file:///path/to/my/note/folder/subfolder/My%20note.pdf> opens the note
- * "My note" in the subfolder "subfolder"
- * - <file:///path/to/my/file/QOwnNotes.pdf> opens the file
- * "/path/to/my/file/QOwnNotes.pdf" if the operating system supports that
- * handler
+ * Handles urls in the note preview
  */
-void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
+void MainWindow::onNotePreviewAnchorClicked(const QUrl &url) {
     qDebug() << __func__ << " - 'url': " << url;
-    const QString scheme = url.scheme();
 
-    if ((scheme == QStringLiteral("note") ||
-         scheme == QStringLiteral("noteid") ||
-         scheme == QStringLiteral("task") ||
-         scheme == QStringLiteral("checkbox")) ||
-        (scheme == QStringLiteral("file") &&
-         Note::fileUrlIsNoteInCurrentNoteFolder(url))) {
+    if (UrlHandler::isUrlSchemeLocal(url)) {
         openLocalUrl(url.toString());
     } else {
         ui->noteTextEdit->openUrl(url.toString());
@@ -6226,288 +6216,9 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
 
 /*
  * Handles note urls
- *
- * examples:
- * - <note://MyNote> opens the note "MyNote"
- * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with
- * spaces in the name"
  */
 void MainWindow::openLocalUrl(QString urlString) {
-    if (urlString.isEmpty()) {
-        return;
-    }
-
-    bool urlWasNotValid = false;
-    QString fragment;
-
-    // if urlString is no valid url we will try to convert it into a note file
-    // url
-    if (!QOwnNotesMarkdownTextEdit::isValidUrl(urlString)) {
-        fragment = Note::getURLFragmentFromFileName(urlString);
-        urlString = currentNote.getFileURLFromFileName(urlString, true);
-        urlWasNotValid = true;
-    }
-
-    QUrl url = QUrl(urlString);
-
-    // If url was valid we want to get the fragment directly from the url
-    if (!urlWasNotValid) {
-        fragment = url.fragment();
-    }
-
-    const bool isExistingNoteFileUrl = Note::fileUrlIsExistingNoteInCurrentNoteFolder(url);
-    const bool isNoteFileUrl = Note::fileUrlIsNoteInCurrentNoteFolder(url);
-
-    // convert relative file urls to absolute urls and open them
-    if (urlString.startsWith(QStringLiteral("file://..")) && !isExistingNoteFileUrl) {
-        QString windowsSlash = QString();
-
-#ifdef Q_OS_WIN32
-        // we need another slash for Windows
-        windowsSlash = QStringLiteral("/");
-#endif
-
-        urlString.replace(QLatin1String("file://.."),
-                          QStringLiteral("file://") + windowsSlash +
-                              NoteFolder::currentLocalPath() +
-                              QStringLiteral("/.."));
-
-        QDesktopServices::openUrl(QUrl(urlString));
-        return;
-    }
-
-    // convert legacy attachment urls to absolute urls and open them
-    if (urlString.startsWith(QStringLiteral("file://attachments"))) {
-        QString windowsSlash = QString();
-
-#ifdef Q_OS_WIN32
-        // we need another slash for Windows
-        windowsSlash = QStringLiteral("/");
-#endif
-
-        urlString.replace(QLatin1String("file://attachments"),
-                          QStringLiteral("file://") + windowsSlash +
-                              NoteFolder::currentLocalPath() +
-                              QStringLiteral("/attachments"));
-
-        QDesktopServices::openUrl(QUrl(urlString));
-        return;
-    }
-
-    const QString scheme = url.scheme();
-
-    if (scheme == QStringLiteral("noteid")) {    // jump to a note by note id
-        static const QRegularExpression re(QStringLiteral(R"(^noteid:\/\/note-(\d+)$)"));
-        QRegularExpressionMatch match = re.match(urlString);
-
-        if (match.hasMatch()) {
-            int noteId = match.captured(1).toInt();
-            Note note = Note::fetch(noteId);
-            if (note.isFetched()) {
-                // set current note
-                setCurrentNote(std::move(note));
-            }
-        } else {
-            qDebug() << "malformed url: " << urlString;
-        }
-    } else if (scheme == QStringLiteral("note") ||
-               isNoteFileUrl) {    // jump to a note url string
-        Note note;
-
-        if (isNoteFileUrl) {
-            note = Note::fetchByFileUrl(url);
-        } else {
-            // try to fetch a note from the url string
-            note = Note::fetchByUrlString(urlString);
-        }
-
-        // does this note really exist?
-        if (note.isFetched()) {
-            // set current note
-            setCurrentNote(std::move(note));
-
-            // jump to the Markdown heading in the note that is represented by the url fragment
-            if (!fragment.isEmpty()) {
-                doSearchInNote("\"## " + fragment + "\"");
-                activeNoteTextEdit()->searchWidget()->deactivate();
-            }
-        } else {
-            QString fileName;
-            QUrl filePath;
-
-            if (!isNoteFileUrl) {
-                // if the name of the linked note only consists of numbers we cannot
-                // use host() to get the filename, it would get converted to an
-                // ip-address
-                static const QRegularExpression re(QStringLiteral(R"(^\w+:\/\/(\d+)$)"));
-                QRegularExpressionMatch match = re.match(urlString);
-                fileName =
-                    match.hasMatch() ? match.captured(1) : url.host();
-
-                // try to generate a useful title for the note
-                fileName = Utils::Misc::toStartCase(
-                            fileName.replace(QStringLiteral("_"), QStringLiteral(" ")));
-            } else {
-                fileName = url.fileName();
-                filePath = url.adjusted(QUrl::RemoveFilename);
-            }
-
-            // remove file extension
-            QFileInfo fileInfo(fileName);
-            fileName = fileInfo.baseName();
-            QString relativeFilePath =
-                    Note::fileUrlInCurrentNoteFolderToRelativePath(filePath);
-            QString currentNoteRelativeSubFolderPath =
-                currentNote.getNoteSubFolder().relativePath();
-
-            // remove the current relative sub-folder path from the relative path
-            // of the future note to be able to create the correct path afterwards
-            if (!currentNoteRelativeSubFolderPath.isEmpty()) {
-                relativeFilePath.remove(QRegularExpression(
-                    "^" +
-                    QRegularExpression::escape(currentNoteRelativeSubFolderPath) +
-                    "\\/"));
-            }
-
-            // Open attachments with extensions that are used for notes externally
-            if (relativeFilePath.contains(QStringLiteral("attachments"))) {
-                if (QDesktopServices::openUrl(url)) {
-                    return;
-                }
-            }
-
-            if (!relativeFilePath.isEmpty() && !NoteFolder::isCurrentHasSubfolders()) {
-                Utils::Gui::warning(
-                    this, tr("Note was not found"),
-                    tr("Could not find note.<br />Unable to automatically "
-                       "create note at location, because subfolders are "
-                       "disabled for the current note folder."),
-                    "cannot-create-note-not-has-subfolders");
-                return;
-            }
-
-            QString promptQuestion;
-
-            if (relativeFilePath.isEmpty()) {
-                promptQuestion = tr("Note was not found, create new note "
-                                    "<strong>%1</strong>?")
-                        .arg(fileName);
-            } else {
-                promptQuestion = tr("Note was not found, create new note "
-                                    "<strong>%1</strong> at path <strong>%2</strong>?")
-                        .arg(fileName, relativeFilePath);
-            }
-
-            // ask if we want to create a new note if note wasn't found
-            if (Utils::Gui::questionNoSkipOverride(this, tr("Note was not found"),
-                                                   promptQuestion,
-                                                   QStringLiteral("open-url-create-note")) == QMessageBox::Yes) {
-
-                NoteSubFolder noteSubFolder = currentNote.getNoteSubFolder();
-                bool subFolderCreationFailed(false);
-
-                if (!relativeFilePath.isEmpty()) {
-                    for (const QString& folderName : relativeFilePath.split("/")) {
-                        if (folderName.isEmpty()) {
-                            break;
-                        }
-
-                        NoteSubFolder subFolder = NoteSubFolder::fetchByNameAndParentId(folderName, noteSubFolder.getId());
-                        if (!subFolder.isFetched()) {
-                            createNewNoteSubFolder(folderName);
-                            noteSubFolder = NoteSubFolder::fetchByNameAndParentId(folderName, noteSubFolder.getId());
-                            if (!noteSubFolder.isFetched()) {
-                                qWarning() << "Failed to create subfolder: " << folderName <<
-                                              "when attempting to create path: " << relativeFilePath;
-                                subFolderCreationFailed = true;
-                                break;
-                            }
-                        } else {
-                            noteSubFolder = subFolder;
-                        }
-
-                        noteSubFolder.setAsActive();
-                    }
-                }
-
-                if (!subFolderCreationFailed) {
-                    if (!relativeFilePath.isEmpty()) {
-                        ui->noteSubFolderTreeWidget->reset();
-                        jumpToNoteSubFolder(noteSubFolder.getId());
-                    }
-                    createNewNote(fileName, false);
-                } else {
-                    Utils::Gui::warning(
-                        this, tr("Failed to create note"),
-                        tr("Note creation failed"),
-                        "note-create-failed");
-                }
-                return;
-            }
-        }
-    } else if (scheme == QStringLiteral("task")) {
-        return openTodoDialog(url.host());
-    } else if (scheme == QStringLiteral("checkbox")) {
-        const auto text = ui->noteTextEdit->toPlainText();
-
-        int index = url.host().midRef(1).toInt();
-#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
-        QRegExp re(R"((^|\n)\s*[-*+]\s\[([xX ]?)\])", Qt::CaseInsensitive);
-#else
-        static const QRegularExpression re(R"((^|\n)\s*[-*+]\s\[([xX ]?)\])", QRegularExpression::CaseInsensitiveOption);
-#endif
-        int pos = 0;
-        while (true) {
-
-#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
-            pos = re.indexIn(text, pos);
-#else
-            QRegularExpressionMatch match;
-            pos = text.indexOf(re, pos, &match);
-#endif
-            if (pos == -1)    // not found
-                return;
-            auto cursor = ui->noteTextEdit->textCursor();
-
-#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
-            int matchedLength = re.matchedLength();
-            cursor.setPosition(pos + re.matchedLength() - 1);
-#else
-            int matchedLength = match.capturedLength();
-            qDebug() << __func__ << "match.capturedLength(): " << match.capturedLength();
-            cursor.setPosition(pos + match.capturedLength() - 1);
-#endif
-            if (cursor.block().userState() ==
-                MarkdownHighlighter::HighlighterState::List) {
-                if (index == 0) {
-
-#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
-                    auto ch = re.cap(2);
-#else
-                    auto ch = match.captured(2);
-#endif
-                    if (ch.isEmpty())
-                        cursor.insertText(QStringLiteral("x"));
-                    else {
-                        cursor.movePosition(QTextCursor::PreviousCharacter,
-                                            QTextCursor::KeepAnchor);
-                        cursor.insertText(ch == QStringLiteral(" ")
-                                              ? QStringLiteral("x")
-                                              : QStringLiteral(" "));
-                    }
-
-                    // refresh instantly
-                    _noteViewUpdateTimer->start(1);
-                    break;
-                }
-                --index;
-            }
-            pos += matchedLength;
-        }
-    } else if (scheme == QStringLiteral("file") && urlWasNotValid) {
-        // open urls that previously were not valid
-        QDesktopServices::openUrl(QUrl(urlString));
-    }
+    UrlHandler(this).openUrl(urlString);
 }
 
 /*
@@ -7172,7 +6883,7 @@ void MainWindow::insertNoteText(const QString &text) {
 
     // if we try to insert media in the first line of the note (aka.
     // note name) move the cursor to the last line
-    if (currentNoteLineNumber() == 1) {
+    if (c.block() == textEdit->document()->firstBlock()) {
         c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
         textEdit->setTextCursor(c);
     }
@@ -7240,7 +6951,7 @@ bool MainWindow::insertAttachment(QFile *file, const QString &title) {
 
         // if we try to insert the attachment in the first line of the note
         // (aka. note name) move the cursor to the last line
-        if (currentNoteLineNumber() == 1) {
+        if (c.block() == textEdit->document()->firstBlock()) {
             c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
             textEdit->setTextCursor(c);
         }
@@ -7260,26 +6971,6 @@ bool MainWindow::insertAttachment(QFile *file, const QString &title) {
     }
 
     return false;
-}
-
-/**
- * Returns the cursor's line number in the current note
- */
-int MainWindow::currentNoteLineNumber() {
-    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-    const QTextCursor cursor = textEdit->textCursor();
-
-    QTextDocument *doc = textEdit->document();
-    QTextBlock blk = doc->findBlock(cursor.position());
-    QTextBlock blk2 = doc->begin();
-
-    int i = 1;
-    while (blk != blk2) {
-        blk2 = blk2.next();
-        ++i;
-    }
-
-    return i;
 }
 
 /**
@@ -7556,44 +7247,7 @@ void MainWindow::gotoNoteBookmark(int slot) {
  * Inserts a code block at the current cursor position
  */
 void MainWindow::on_actionInsert_code_block_triggered() {
-    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-    QString selectedText = c.selection().toPlainText();
-
-    if (selectedText.isEmpty()) {
-        // insert multi-line code block if cursor is in an empty line
-        if (c.atBlockStart() && c.atBlockEnd()) {
-            c.insertText(QStringLiteral("```\n\n```"));
-            c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 3);
-        } else {
-            c.insertText(QStringLiteral("``"));
-        }
-
-        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
-        textEdit->setTextCursor(c);
-    } else {
-        bool addNewline = false;
-
-        // if the selected text has multiple lines add a multi-line code block
-        if (selectedText.contains(QStringLiteral("\n"))) {
-            // add another newline if there is no newline at the end of the
-            // selected text
-            const QString endNewline =
-                selectedText.endsWith(QLatin1String("\n"))
-                    ? QString()
-                    : QStringLiteral("\n");
-
-            selectedText = QStringLiteral("``\n") + selectedText + endNewline +
-                           QStringLiteral("``");
-            addNewline = true;
-        }
-
-        c.insertText(QStringLiteral("`") + selectedText + QStringLiteral("`"));
-
-        if (addNewline) {
-            c.insertText(QStringLiteral("\n"));
-        }
-    }
+    activeNoteTextEdit()->insertCodeBlock();
 }
 
 void MainWindow::on_actionNext_note_triggered() { gotoNextNote(); }
@@ -10737,6 +10391,21 @@ void MainWindow::setShowNotesFromAllNoteSubFolders(bool show)
     settings.setValue(QStringLiteral("MainWindow/showNotesFromAllNoteSubFolders"), _showNotesFromAllNoteSubFolders);
 }
 
+NoteSubFolderTree *MainWindow::noteSubFolderTree()
+{
+    return ui->noteSubFolderTreeWidget;
+}
+
+QOwnNotesMarkdownTextEdit *MainWindow::noteTextEdit()
+{
+    return ui->noteTextEdit;
+}
+
+void MainWindow::refreshNotePreview()
+{
+    _noteViewUpdateTimer->start(1);
+}
+
 /**
  * Searches for note sub folders in the note sub folder tree widget
  */
@@ -12375,7 +12044,7 @@ void MainWindow::on_navigationLineEdit_textChanged(const QString &arg1) {
         ui->navigationWidget, arg1, Utils::Gui::TreeWidgetSearchFlag::IntCheck);
 }
 
-Note MainWindow::getCurrentNote() { return currentNote; }
+const Note & MainWindow::getCurrentNote() { return currentNote; }
 
 void MainWindow::on_actionJump_to_note_list_panel_triggered() {
     ui->noteTreeWidget->setFocus();
