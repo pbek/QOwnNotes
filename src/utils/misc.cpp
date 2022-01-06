@@ -565,7 +565,16 @@ QString Utils::Misc::portableDataPath() {
     QString path = QString();
 
     if (qApp != Q_NULLPTR) {
-        path = QCoreApplication::applicationDirPath();
+        // for AppImages we best take out the path directly from the first
+        // argument of the executable arguments, because the applicationDirPath
+        // will be some temporary path
+        if (Utils::Misc::isAppImage()) {
+            const QFileInfo fileInfo(qApp->property(
+                             "arguments").toStringList().at(0));
+            path = fileInfo.absolutePath();
+        } else {
+            path = QCoreApplication::applicationDirPath();
+        }
     }
 
     // use a fallback if the QApplication object wasn't instantiated yet
@@ -591,6 +600,15 @@ QString Utils::Misc::portableDataPath() {
  */
 bool Utils::Misc::isInPortableMode() {
     return qApp != nullptr ? qApp->property("portable").toBool() : false;
+}
+
+/**
+ * Returns true if the app is an AppImage
+ *
+ * @return
+ */
+bool Utils::Misc::isAppImage() {
+    return qApp->property("release").toString().contains(QStringLiteral("AppImage"));
 }
 
 /**
