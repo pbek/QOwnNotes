@@ -53,4 +53,4 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_9.0)
+[دانلود مستقیم](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_9.0)

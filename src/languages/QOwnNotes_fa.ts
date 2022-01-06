@@ -1538,17 +1538,17 @@
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="54"/>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>رونوشت</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="62"/>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>رونوشت پیوند</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="70"/>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>بازنشانی بزرگنمایی</translation>
 </message>
 </context>
 <context>
@@ -9330,7 +9330,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation type="unfinished">The app file '%1' could not be made executable! You need to make it executable yourself.</translation>
+<translation>پرونده برنامه '%1' قابل اجرا نیست! شما باید آن را شخصاً اجرایی کنید.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="572"/>

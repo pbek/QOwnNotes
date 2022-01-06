@@ -1535,17 +1535,17 @@
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="54"/>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Kopiëren</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="62"/>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>Link másolása</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="70"/>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>Zoom resetten</translation>
 </message>
 </context>
 <context>
@@ -8165,7 +8165,7 @@ Je notities zullen intact blijven!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
 <source>Only show attachments that are not used in notes</source>
-<translation type="unfinished">Only show attachments that are not used in notes</translation>
+<translation>Alleen bijlagen weergeven die niet in notities worden gebruikt</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
@@ -9155,12 +9155,12 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="472"/>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</translation>
+<translation>Uw oude QOwnNotes uitvoerbare bestand '%1' kon niet worden vervangen door het nieuwe bestand '%2'! Die moet je zelf vervangen.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation type="unfinished">The app file '%1' could not be made executable! You need to make it executable yourself.</translation>
+<translation>Het app-bestand '%1' kan niet uitvoerbaar worden gemaakt! Je moet het zelf uitvoerbaar maken.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="572"/>

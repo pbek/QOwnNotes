@@ -15,7 +15,7 @@
 <location filename="../dialogs/actiondialog.ui" line="14"/>
 <location filename="../dialogs/actiondialog.ui" line="46"/>
 <source>Find action</source>
-<translation>جد الإجراء</translation>
+<translation>العثور على إجراء</translation>
 </message>
 </context>
 <context>
@@ -720,7 +720,7 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
 <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-<translation>للحصول على ملف enex ، تحتاج إلى تحديد ملاحظة أو عدة ملاحظات في مستخدم Evernotes لسطح المكتب الخاص بك وانقر فوق "تصدير الملاحظات..." من قائمة "ملف".</translation>
+<translation>للحصول على ملف enex، عليك تحديد ملاحظة أو أكثر في عميل Evernotes الحاسوبي الخاص بك والنقر على «تصدير الملاحظات…» (أو "Export notes…‎") من قائمة «ملف» (أو File).</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -919,7 +919,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation>تمييز نتائج البحث</translation>
+<translation>ظلّل نتائج البحث</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
@@ -1483,7 +1483,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="245"/>
 <source>Block quote</source>
-<translation>اقتباس</translation>
+<translation>كتلة اقتباس</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="246"/>
@@ -1559,12 +1559,12 @@
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="54"/>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>نسخ</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="62"/>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>نسخ الرابط</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="70"/>
@@ -1909,7 +1909,7 @@
 <message>
 <location filename="../dialogs/localtrashdialog.ui" line="55"/>
 <source>Find note name</source>
-<translation>اكتشف اسم الملاحظة</translation>
+<translation>العثور على اسم ملاحظة</translation>
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.ui" line="81"/>
@@ -2150,7 +2150,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1319"/>
 <source>&amp;Find note</source>
-<translation>&amp;جد الملاحظة</translation>
+<translation>ا&amp;عثر على ملاحظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1331"/>
@@ -2211,7 +2211,7 @@
 <location filename="../mainwindow.ui" line="1448"/>
 <location filename="../mainwindow.cpp" line="10980"/>
 <source>Select &amp;all notes</source>
-<translation>اختر جميع الملاحظات</translation>
+<translation>حدد &amp;جميع الملاحظات</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7035"/>
@@ -2221,12 +2221,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1469"/>
 <source>&amp;Find in current note</source>
-<translation>جد في الملاحظة المفتوحة</translation>
+<translation>ا&amp;بحث في الملاحظة الحالية</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1472"/>
 <source>Find text in current note</source>
-<translation>جد نصاً في الملاحظة المفتوحة</translation>
+<translation>ابحث عن نص في الملاحظة الحالية</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1485"/>
@@ -2246,12 +2246,12 @@
 <message>
 <location filename="../mainwindow.ui" line="119"/>
 <source>Find or create note sub folder</source>
-<translation>جد أو أوجد مجلد ملاحظات فرعي</translation>
+<translation>اعثر على مجلد ملاحظات فرعي أو أنشئه</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="196"/>
 <source>Find or create tag</source>
-<translation>جد أو أوجد وسماً</translation>
+<translation>ابحث عن وسم أو أنشئه</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="292"/>
@@ -2277,12 +2277,12 @@
 <location filename="../mainwindow.ui" line="886"/>
 <location filename="../mainwindow.cpp" line="7089"/>
 <source>Export</source>
-<translation>صدّر</translation>
+<translation>تصدير</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="899"/>
 <source>Import</source>
-<translation>استورد</translation>
+<translation>استيراد</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="929"/>
@@ -2390,7 +2390,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1237"/>
 <source>&amp;Scripting</source>
-<translation>&amp;البرمجة</translation>
+<translation>ال&amp;برمجة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1343"/>
@@ -2466,7 +2466,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1584"/>
 <source>&amp;Print note (text)</source>
-<translation>&amp;اطبع الملاحظة (نص)</translation>
+<translation>&amp;طباعة نص الملاحظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1608"/>
@@ -2597,7 +2597,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1897"/>
 <source>&amp;Reload note folder</source>
-<translation>أعد تحميل مجلد الملاحظة</translation>
+<translation>إ&amp;عادة تحميل مجلد الملاحظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1969"/>
@@ -2682,13 +2682,13 @@
 <message>
 <location filename="../mainwindow.ui" line="2288"/>
 <source>Find action</source>
-<translation>جد الإجراء</translation>
+<translation>العثور على إجراء</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2291"/>
 <location filename="../mainwindow.ui" line="2294"/>
 <source>Find an action from the menu</source>
-<translation>جد إجراءاً من القائمة</translation>
+<translation>اعثر على إجراء من القائمة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2306"/>
@@ -2699,13 +2699,13 @@
 <location filename="../mainwindow.ui" line="2318"/>
 <location filename="../mainwindow.cpp" line="7044"/>
 <source>Insert block &amp;quote</source>
-<translation>إدراج &amp;اقتباس كتلة</translation>
+<translation>إدراج كتلة ا&amp;قتباس</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2326"/>
 <location filename="../mainwindow.ui" line="2329"/>
 <source>Search selected text on the web</source>
-<translation>البحث في النص المحدد على الويب</translation>
+<translation>البحث في الوب عن النص المحدد</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2337"/>
@@ -2720,7 +2720,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2353"/>
 <source>Copy note headline</source>
-<translation>نسخة عنوان المذكرة</translation>
+<translation>نسخ العنوان الرئيسي للملاحظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2365"/>
@@ -2747,17 +2747,17 @@
 <location filename="../mainwindow.ui" line="2405"/>
 <location filename="../mainwindow.cpp" line="10964"/>
 <source>Show note git versions</source>
-<translation>إظهار الملاحظة بصيغ git</translation>
+<translation>إظهار إصدارات git للملاحظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2414"/>
 <source>Find scripts in script repository</source>
-<translation>العثور على البرامج النصية في مستودع البرنامج النصي</translation>
+<translation>اعثر على بُريمِجات في مستودع البُريمِجات</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2426"/>
 <source>Script settings</source>
-<translation>إعدادات النص</translation>
+<translation>إعدادات البُريمِجات</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2435"/>
@@ -2767,7 +2767,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2462"/>
 <source>Check for script updates</source>
-<translation>تحقق من وجود تحديثات للنصوص</translation>
+<translation>تحقق من وجود تحديثات للبُريمِجات</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2471"/>
@@ -2803,7 +2803,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2520"/>
 <source>Activate context menu</source>
-<translation>تفعيل قائمة السياق</translation>
+<translation>إظهار قائمة السياق</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2528"/>
@@ -2824,7 +2824,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2559"/>
 <source>Check spelling</source>
-<translation>فحص من التهجئة</translation>
+<translation>تدقيق إملائي</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2567"/>
@@ -2926,7 +2926,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1931"/>
 <source>Autocomplete, solve equation or open URL</source>
-<translation>إكمال تلقائي، حل المعادلة أو افتح رابط URL</translation>
+<translation>إكمال تلقائي أو حل المعادلة أو فتح الرابط</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1934"/>
@@ -2941,7 +2941,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1957"/>
 <source>Reload scripting engine</source>
-<translation>أعد تحميل محرك النص البرمجي</translation>
+<translation>أعد تحميل محرك البرمجة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2178"/>
@@ -3002,12 +3002,12 @@
 <message>
 <location filename="../mainwindow.ui" line="2039"/>
 <source>Share note</source>
-<translation>شارك الملاحظة</translation>
+<translation>مشاركة الملاحظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2069"/>
 <source>Markdown cheatsheet</source>
-<translation>لوحة اختصارات Markdown</translation>
+<translation>المرجع السريع في ماركداون</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2078"/>
@@ -3033,7 +3033,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2119"/>
 <source>Split note at cursor position</source>
-<translation>اقسم الملاحظة عند موضع المؤشّر</translation>
+<translation>تقسيم الملاحظة عند موضع المؤشر</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2139"/>
@@ -3043,7 +3043,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2160"/>
 <source>Import notes from Evernote</source>
-<translation>استورد ملاحظات من Evernote</translation>
+<translation>استيراد ملاحظات من Evernote</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="3099"/>
@@ -3426,7 +3426,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="7703"/>
 <source>Markdown files</source>
-<translation>ملفات Markdown</translation>
+<translation>ملفات ماركداون</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7717"/>
@@ -3498,12 +3498,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.cpp" line="8038"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
+<numerusform>تم تخطي نسخ %n من الملاحظات (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
+<numerusform>تم تخطي نسخ %n من الملاحظات (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
 <numerusform>تم تجاوز نسخ %n من الملاحظات (لا يوجد ملف نصي أو markdown أو أنه غير مقروء)</numerusform>
-<numerusform>تم تجاوز نسخ %n من الملاحظات (لا يوجد ملف نصي أو markdown أو أنه غير مقروء)</numerusform>
-<numerusform>تم تجاوز نسخ %n من الملاحظات (لا يوجد ملف نصي أو markdown أو أنه غير مقروء)</numerusform>
-<numerusform>تم تجاوز نسخ %n من الملاحظات (لا يوجد ملف نصي أو markdown أو أنه غير مقروء)</numerusform>
-<numerusform>تم تجاوز نسخ %n من الملاحظات (لا يوجد ملف نصي أو markdown أو أنه غير مقروء)</numerusform>
-<numerusform>تم تجاوز نسخ %n من الملاحظات (لا يوجد ملف نصي أو markdown أو أنه غير مقروء)</numerusform>
+<numerusform>تم تخطي نسخ %n من الملاحظات (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
+<numerusform>تم تخطي نسخ %n من الملاحظات (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
+<numerusform>تم تخطي نسخ %n من الملاحظات (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
 </translation>
 </message>
 <message>
@@ -3604,23 +3604,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="12659"/>
 <source>A script update was found!</source>
-<translation>تم العثور على تحديث لنصوص البرمجة!
-</translation>
+<translation>يتوفر تحديث لبُريمج!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12665"/>
 <source>Script updates</source>
-<translation>تحديثات نصوص البرمجة</translation>
+<translation>تحديثات البُريمِجات</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12666"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-<translation>تم العثور على تحديثات لنصوص البرمجة الخاصة بك في مستودع البرنامج النصي! هل تريد تحديثها؟</translation>
+<translation>تم العثور على تحديثات لبُريمِجاتك في مستودع البُريمِجات! هل تريد تحديثها؟</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12681"/>
 <source>No script updates were found</source>
-<translation>لم يتم العثور على تحديثات لنصوص البرمجة</translation>
+<translation>لا توجد تحديثات للبُريمِجات</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="13336"/>
@@ -3737,7 +3736,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="12598"/>
 <source>Disallow all note editing</source>
-<translation>عدم السماح بجميع تعديلات المذكرة</translation>
+<translation>عدم السماح بجميع التعديلات على الملاحظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12841"/>
@@ -3785,7 +3784,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.ui" line="2450"/>
 <location filename="../mainwindow.cpp" line="12599"/>
 <source>Allow all note editing</source>
-<translation>السماح بجميع تعديلات المذكرة</translation>
+<translation>السماح بجميع التعديلات على الملاحظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1231"/>
@@ -4232,7 +4231,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="1044"/>
 <source>Scripting</source>
-<translation>نصوص البرمجة</translation>
+<translation>البرمجة</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1301"/>
@@ -4385,12 +4384,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.cpp" line="7041"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation>منع &amp;اقتباس النص المحدد</translation>
+<translation>حوّل النص المحدد إلى كتلة اقتباس</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8081"/>
 <source>Paste &amp;HTML as markdown</source>
-<translation>أ&amp;لصق محتوى HTML بصيغة Markdown</translation>
+<translation>أ&amp;لصق محتوى HTML بصيغة ماركداون</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8082"/>
@@ -4449,7 +4448,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="7704"/>
 <source>Export current note as Markdown file</source>
-<translation>تصدير الملاحظة الحالية كملف Markdown</translation>
+<translation>تصدير الملاحظة الحالية كملف ماركداون</translation>
 </message>
 </context>
 <context>
@@ -5117,7 +5116,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/qtexteditsearchwidget.ui" line="52"/>
 <source>Find:</source>
-<translation>جد:</translation>
+<translation>بحث:</translation>
 </message>
 <message>
 <location filename="../widgets/qtexteditsearchwidget.ui" line="62"/>
@@ -5127,7 +5126,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/qtexteditsearchwidget.ui" line="79"/>
 <source>find in text</source>
-<translation>جد في النص</translation>
+<translation>بحث في النص</translation>
 </message>
 <message>
 <location filename="../widgets/qtexteditsearchwidget.ui" line="86"/>
@@ -5233,12 +5232,12 @@ Are the folder and the file writeable?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
 <source>Script repository</source>
-<translation>قائمة البرامج النصية</translation>
+<translation>مستودع البُريمِجات</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
 <source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-<translation>للبحث عن برنامج نصي، يرجى إدخال نص البحث والضغط على زر &lt;i&gt;Enter&lt;/i&gt;.</translation>
+<translation>للبحث عن بُريمج، برجاء إدخال نص البحث والضغط على زر &lt;i&gt;Enter&lt;/i&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="127"/>
@@ -5249,7 +5248,7 @@ Are the folder and the file writeable?</source>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="420"/>
 <source>Installs the script</source>
-<translation>يثبت البرنامج النصي</translation>
+<translation>يثبّت البُريمج</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
@@ -5261,7 +5260,7 @@ Are the folder and the file writeable?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="444"/>
 <source>Load more scripts</source>
-<translation>تحميل المزيد من البرامج النصية</translation>
+<translation>تحميل بُريمِجات أكثر</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
@@ -5291,7 +5290,7 @@ Are the folder and the file writeable?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="416"/>
 <source>Find script</source>
-<translation>العثور على برنامج نصي</translation>
+<translation>اعثر على بُريمج</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="52"/>
@@ -5301,7 +5300,7 @@ Are the folder and the file writeable?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="53"/>
 <source>All scripts are up-to-date.</source>
-<translation>جميع البرامج النصية محدثة.</translation>
+<translation>جميع البُريمِجات محدثة.</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="389"/>
@@ -5336,7 +5335,7 @@ Are the folder and the file writeable?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="409"/>
 <source>Updates the script</source>
-<translation>تحديث البرنامج النصي</translation>
+<translation>يحدّث البُريمج</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="411"/>
@@ -5346,7 +5345,7 @@ Are the folder and the file writeable?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="412"/>
 <source>Reinstalls the script</source>
-<translation>يعيد تثبيت البرنامج النصي</translation>
+<translation>يعيد تثبيت البُريمج</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="479"/>
@@ -5357,8 +5356,8 @@ Are the folder and the file writeable?</source>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="480"/>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-<translation>منصتك غير مدعومة من قبل هذا البرنامج النصي!
-أترغب بتثبيته على أي حال؟</translation>
+<translation>منصتك لا يدعمها هذا البُريمج!
+أترغب بتثبيته على أيّة حال؟</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="482"/>
@@ -5373,7 +5372,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
 <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-<translation>من فضلك لا تنسى تحديث نسختك من QOwnNotes حتى يتمكن البرنامج النصي من العمل!</translation>
+<translation>من فضلك لا تنسَ تحديث QOwnNotes حتى يتمكن البُريمج من العمل!</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="558"/>
@@ -5383,7 +5382,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="559"/>
 <source>The script was successfully installed!</source>
-<translation>تم تثبيت البرنامج النصي بنجاح!</translation>
+<translation>تم تثبيت البُريمج بنجاح!</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="566"/>
@@ -5393,7 +5392,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="567"/>
 <source>The script could not be downloaded!</source>
-<translation>فشل تحميل الملف النصي!</translation>
+<translation>تعذر تنزيل البُريمج!</translation>
 </message>
 </context>
 <context>
@@ -5525,17 +5524,17 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1136"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;الرجاء إدخال عنوان URL لخادم ownCloud خاصتك، على سبيل المثال: &lt;span style=" font-style:italic;"&gt; https://cloud.yourserver.com &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;برجاء إدخال عنوان URL لخادم ownCloud الخاص بك، مثلا: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1174"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;أدخل رجاءاً اسم المستخدم على خادم ownCloud خاصتك. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;برجاء إدخال اسم المستخدم على خادم ownCloud الخاص بك.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1209"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; أدخل رجاءاً كلمة السر لاسم المستخدم خاصتك. &lt;br/&gt; سيتم حالياً تخزين كلمة السر بشكل مشفّر مع باقي الإعدادات، لكنّه ليس آمناً جداً.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;برجاء إدخال كلمة السر لاسم المستخدم الخاص بك.&lt;br/&gt;حاليا يتم تخزين كلمة السر بشكل مشفّر مع باقي الإعدادات، لكنّ هذا ليس آمنًا جدا.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1280"/>
@@ -5572,7 +5571,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1237"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; انقر هنا لاختبار اتصالك بخادم ownCloud خاصتك.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;انقر هنا لاختبار اتصالك بخادم ownCloud الخاص بك.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1348"/>
@@ -5592,7 +5591,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="946"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;يفتح صفحة &lt;span style=" font-weight:600;"&gt;إعدادات التطبيق&lt;/span&gt; في خادم ownCloud خاصتك في متصفحك لتنصيب أو تحديث QOwnNotesAPI وتفعيل التطبيقات الأساسيّة &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; و &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;يفتح صفحة &lt;span style=" font-weight:600;"&gt;إعدادات التطبيق&lt;/span&gt; على خادم ownCloud الخاص بك في متصفح الوب لتثبيت أو تحديث QOwnNotesAPI وتفعيل التطبيقين الأساسيين: &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; و &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="636"/>
@@ -5617,7 +5616,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;تحتاج أيضاً لأن يكون التطبيقان الأساسيان لـ ownCloud &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; و &lt;span style=" font-weight:600;"&gt;Deleted Files&lt;/span&gt; مفعلان على خادم ownCloud خاصتك (هذا هو الحال افتراضياً).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;تحتاج أيضا لأن يكون التطبيقان الأساسيان ownCloud &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; و &lt;span style=" font-weight:600;"&gt;Deleted Files&lt;/span&gt; مفعلين على خادم ownCloud الخاص بك (هذا هو الحال الافتراضي).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1014"/>
@@ -5725,12 +5724,12 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5185"/>
 <source>Markdown highlighting</source>
-<translation>تلوين markdown</translation>
+<translation>تلوين ماركداون</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5191"/>
 <source>Enable markdown highlighting</source>
-<translation>فعّل تلوين markdown</translation>
+<translation>فعّل تلوين ماركداون</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2214"/>
@@ -5847,7 +5846,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1659"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;قد ترغب بالحصول على شهادة SSL مجانية من &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;قد ترغب بالحصول على شهادة SSL مجانية من &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2233"/>
@@ -5858,18 +5857,18 @@ Do you want to install it anyway?</source>
 <location filename="../dialogs/settingsdialog.ui" line="3772"/>
 <location filename="../dialogs/settingsdialog.ui" line="3847"/>
 <source>You need to reload the scripting engine if you modify a script file</source>
-<translation>ستحتاج إعادة تحميل محرك البرمجة إن قمت بتعديل ملف برمجي</translation>
+<translation>ستحتاج إلى إعادة تحميل محرك البرمجة إذا قمت بتعديل ملف بُريمِج</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3775"/>
 <location filename="../dialogs/settingsdialog.ui" line="3850"/>
 <source>Reload scripting engine</source>
-<translation>إعادة تحميل المحرك البرمجي</translation>
+<translation>إعادة تحميل محرك البرمجة</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3765"/>
 <source>Validate script</source>
-<translation>التحقق من صحة البرنامج</translation>
+<translation>تحقق من صحة البُريمِج</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="300"/>
@@ -5884,7 +5883,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3970"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;إن فعلته سيتم تنبيهك دائماً حول التعديلات الخارجية، حتى لو لم يتم تعديل الملاحظة الحالية في الدقيقة الأخيرة. ينصح بتركها &lt;span style=" font-style:italic;"&gt;دون تفعيل&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;عند التفعيل سيتم تنبيهك دائما بالتعديلات خارج التطبيق، حتى لو لم يتم تعديل الملاحظة الحالية في الدقيقة الأخيرة. ننصح بتركها &lt;span style=" font-style:italic;"&gt;دون تفعيل&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4066"/>
@@ -5999,17 +5998,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3385"/>
 <source>Your scripts</source>
-<translation>البرامج خاصتك</translation>
+<translation>بُريمِجاتك</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3469"/>
 <source>&amp;Remove script</source>
-<translation>أ&amp;زل النص البرمجي</translation>
+<translation>أ&amp;زل البُريمج</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3782"/>
 <source>Click here to select your QML script</source>
-<translation>انقر هنا لاختيار نص QML البرمجي خاصتك</translation>
+<translation>انقر هنا لتحديد بُريمِج QML المراد</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="92"/>
@@ -6049,7 +6048,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="323"/>
 <source>Git versioning</source>
-<translation>إصادر git</translation>
+<translation>إدارة الإصدارات عبر git</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="335"/>
@@ -6106,7 +6105,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="721"/>
 <source>Use git to keep a local history of your notes</source>
-<translation>استخدم git للاحتفاظ بسجل محلي لملاحظاتك</translation>
+<translation>استخدم git للاحتفاظ بنسخة محلية من تاريخ ملاحظاتك</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="851"/>
@@ -6127,8 +6126,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="927"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; و
-سوف لا تزال بحاجة إلى &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt; وكيل مزامنة ownCloud &lt;/span&gt;&lt;/a&gt; (أو عميل مزامنة سطح مكتب آخر) لمزامنة ملاحظاتك!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ستظل في حاجة إلى &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;عميل مزامنةownCloud &lt;/span&gt;&lt;/a&gt; (أو عميل مزامنة حاسوبي آخر) لمزامنة ملاحظاتك!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1047"/>
@@ -6487,7 +6485,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3458"/>
 <source>&amp;Add script…</source>
-<translation>&amp;إضافة نص برمجي</translation>
+<translation>أ&amp;ضف بُريمِجًا…</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4145"/>
@@ -6556,12 +6554,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4530"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;أفضل طريقة لإرسال مشاكل هي استخدام مساعد الإبلاغ عن المشاكل بالضغط على زر &lt;span style=" font-weight:600;"&gt;تشغيل مساعد الإبلاغ عن المشاكل&lt;/span&gt; في الأسفل.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;أفضل طريقة لإرسال مشاكل هي استخدام مساعد الإبلاغ عن المشاكل بالضغط على زر &lt;span style=" font-weight:600;"&gt;تشغيل مساعد الإبلاغ عن المشاكل&lt;/span&gt; في الأسفل.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4795"/>
 <source>Ignore code font size to allow zooming</source>
-<translation>تجاهل رمز حجم الخط للسماح بالتكبير</translation>
+<translation>تجاهل حجم خط الأكواد للسماح بالتكبير</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4789"/>
@@ -6576,7 +6574,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5219"/>
 <source>Fully highlight blockquotes</source>
-<translation>تظليل كامل لمربعات الاقتباس</translation>
+<translation>ظلّل كتل الاقتباس بكاملها</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5276"/>
@@ -6756,7 +6754,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4454"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
-<translation>انتبه من أن إعادة تهيئة قاعدة البيانات ستزيل أيضًا عناصر المهام المخزنة و اعدادات مجلدات الملاحظات و النصوص!</translation>
+<translation>انتبه إلى أن إعادة تهيئة قاعدة البيانات ستزيل أيضًا عناصر المهام المخزنة وإعدادات مجلدات الملاحظات والبُريمِجات!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4537"/>
@@ -6806,7 +6804,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5252"/>
 <source>Disable cursor blinking</source>
-<translation>تعطيل المؤشر الوامض</translation>
+<translation>لا تجعل المؤشر وامضا</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5259"/>
@@ -6893,7 +6891,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6403"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
-<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
+<translation>يمكنك استخدام &lt;a href="%1"&gt;تطبيق وبّ QOwnNotes&lt;/a&gt; لإدراج الصور من محمولك إلى QOwnNotes على حاسوبك عبر الإنترنت.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6440"/>
@@ -6933,12 +6931,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6537"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
-<translation>يجب إدخال هذا الرمز في تطبيق وب QOwnNotes حتى تستطيع التواصل مع تطبيق QOwnNotes المكتبي الخاص بك.</translation>
+<translation>يجب إدخال هذا الرمز في تطبيق وبّ QOwnNotes للتواصل مع تطبيق QOwnNotes الحاسوبي الخاص بك.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6469"/>
 <source>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation>سيتم فتح اتصال مقبس وب مع هذا الخادم ليكون جسرا بين تطبيق وب QOwnNotes وتطبيق QOwnNotes المكتبي.</translation>
+<translation>سيتم فتح اتصال مقبس وبّ مع هذا الخادم ليكون جسرا بين تطبيق وبّ QOwnNotes وتطبيق QOwnNotes الحاسوبي.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6547"/>
@@ -7024,7 +7022,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6176"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation>بشكل افتراضي، سيعرض امتداد المستعرض جميع روابط الملاحظة الحالية. يمكنك أيضًا جعلها تُظهر روابط إشارة مرجعية خاصة من الملاحظات مع علامة معينة. لمزيد من المعلومات حول هيكل ارتباط الإشارة المرجعية، انقر على &lt;a href="%1"&gt;هنا&lt;/a&gt;.</translation>
+<translation>بشكل افتراضي، ستعرض إضافة المتصفح جميع روابط الملاحظة الحالية. يمكنك أيضًا جعلها تُظهر روابط إشارات مرجعية خاصة من الملاحظات ذات وسم معين. لمزيد من المعلومات حول صيغ روابط الإشارات المرجعية، اضغط &lt;a href="%1"&gt;هنا&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6189"/>
@@ -7152,7 +7150,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5447"/>
 <source>External git log command to show the git versions of a note</source>
-<translation>أمر سجل git الخارجي لإظهار إصدارات git السابقة لملاحظة</translation>
+<translation>أمر سجل git الخارجي لإظهار إصدارات git لملاحظة</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5453"/>
@@ -7164,7 +7162,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <location filename="../dialogs/settingsdialog.ui" line="5473"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>إذا كنت تستخدم هذا الإعداد، فستحصل على إدخال قائمة جديد لإظهار إصدارات git إذا قمت بالنقر بزر الماوس الأيمن على ملاحظة.</translation>
+<translation>إذا كنت تستخدم هذا الإعداد، فستحصل على عنصر جديد في القائمة عند النقر بزر الفأرة الأيمن على ملاحظة، لإظهار إصدارات git.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5593"/>
@@ -7179,12 +7177,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5245"/>
 <source>Highlight the current line</source>
-<translation>تظليل السطر الحالي</translation>
+<translation>ظلّل السطر الحالي</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5540"/>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-<translation>لا تنس تمكين دعم git لمجلدات الملاحظات الخاصة بك وضبط اسمك وعنوان بريدك الإلكتروني لوكيل git الخاص بك، على سبيل المثال مع باستخدام أوامر "التيرمنال" هذه:</translation>
+<translation>لا تنس تفعيل دعم git لمجلدات ملاحظاتك وضبط اسمك وعنوان بريدك الإلكتروني في عميل git الخاص بك، مثلا باستخدام أوامر الطرفية هذه:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5823"/>
@@ -7275,7 +7273,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2945"/>
 <source>Search script repository</source>
-<translation>مستقائمة بحث البرامج النصية</translation>
+<translation>بحث في مستودع البُريمِجات</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5463"/>
@@ -7296,7 +7294,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5492"/>
 <source>Path to git client, leave empty for default</source>
-<translation>المسار إلى عميل git، وتjرك فارغة افتراضيًا</translation>
+<translation>المسار إلى عميل git، اتركه فارغا لاستخدام القيمة الافتراضية</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5411"/>
@@ -7417,7 +7415,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3584"/>
 <source>Description:</source>
-<translation>وصف:</translation>
+<translation>الوصف:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3666"/>
@@ -7512,7 +7510,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5293"/>
 <source>Enable automatic closing of brackets and markdown formatting characters</source>
-<translation>فعّل الإغلاق التلقائي للأقواس وحروف تنسيق markdown</translation>
+<translation>فعّل الإغلاق التلقائي للأقواس وحروف تنسيق ماركداون</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5327"/>
@@ -7623,7 +7621,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3758"/>
 <source>Script path:</source>
-<translation>مسار النص البرمجي:</translation>
+<translation>مسار البُريمج:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="775"/>
@@ -7707,7 +7705,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4504"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;يمكنك &lt;span style=" font-weight:600;"&gt;نسخ ولصق&lt;/span&gt; هذا النص (أو أجزاء من هذا النص) في &lt;span style=" font-weight:600;"&gt;مشكلة&lt;/span&gt; على &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; صفحة مشاكل QOwnNotes&lt;/a&gt; إذا كان لديك &lt;span style=" font-weight:600;"&gt;أسئلة أو مشاكل&lt;/span&gt; مع تطبيق QOwnNotes. يتم إخفاء البيانات الحساسة للغاية في هذه المعلومات.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;يمكنك &lt;span style=" font-weight:600;"&gt;نسخ ولصق&lt;/span&gt; هذا النص (أو أجزاء من هذا النص) في &lt;span style=" font-weight:600;"&gt;مشكلة&lt;/span&gt; على &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; صفحة مشاكل QOwnNotes&lt;/a&gt; إذا كان لديك &lt;span style=" font-weight:600;"&gt;أسئلة أو مشاكل&lt;/span&gt; مع تطبيق QOwnNotes. يتم إخفاء البيانات الحساسة للغاية في هذه المعلومات.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4591"/>
@@ -7782,7 +7780,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2356"/>
 <source>Markdown files</source>
-<translation>ملفات Markdown</translation>
+<translation>ملفات ماركداون</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2384"/>
@@ -7832,7 +7830,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2930"/>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>ألق نظرة على &lt;a href="%1"&gt;وثائق البرامج النصية&lt;/a&gt; للبدء بسرعة.</translation>
+<translation>ألقِ نظرة على &lt;a href="%1"&gt;وثائق البرمجة&lt;/a&gt; للبدء بسرعة.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2934"/>
@@ -7842,17 +7840,17 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2956"/>
 <source>Check for script updates</source>
-<translation>تحقق من وجود تحديثات البرنامج النصي</translation>
+<translation>تحقق من وجود تحديثات للبُريمِجات</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2963"/>
 <source>Add local script</source>
-<translation>أضف برنامج نصي محلي</translation>
+<translation>أضف بُريمِجًا محليًا</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2967"/>
 <source>Add an existing, local script</source>
-<translation>أضف برنامج نصي محلي موجود بالفعل</translation>
+<translation>أضف بُريمِجًا موجودًا محليًا</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3312"/>
@@ -7862,7 +7860,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3346"/>
 <source>Markdown file</source>
-<translation>ملف Markdown</translation>
+<translation>ملف ماركداون</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3348"/>
@@ -7883,7 +7881,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4113"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-<translation>هل تريد حقًا استيراد الإعدادات؟ ستتم إزالة إعداداتك الحالية ولن تتم استعادة كل الإعدادات، مثل إعدادات مجلد الملاحظات والبرامج النصية التي كنت تستخدمها. ستحتاج أيضًا إلى ضبط بعض الإعدادات، لا سيما عبر الأنظمة الأساسية، ولكن ستبقى ملاحظاتك سليمة!</translation>
+<translation>هل تريد حقًا استيراد الإعدادات؟ ستتم إزالة إعداداتك الحالية وربما لن تتم استعادة جميع الإعدادات، مثل إعدادات مجلد الملاحظات والبُريمِجات التي كنت تستخدمها. ستحتاج أيضًا إلى تضبيط بعض الإعدادات، لا سيما عند عبور الأنظمة أو المنصات، ولكن ستبقى ملاحظاتك سليمة!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4120"/>
@@ -7908,7 +7906,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2950"/>
 <source>Find a script in the script repository</source>
-<translation>إيجاد برنامج نصي في قائمة البرامج النصية</translation>
+<translation>اعثر على بُريمج في مستودع البُريمِجات</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="299"/>
@@ -7951,12 +7949,12 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3043"/>
 <source>Remove script</source>
-<translation>أزل النص البرمجي</translation>
+<translation>أزل البُريمج</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3044"/>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation>هل تريد إزالة النص البرمجي &lt;strong&gt;%1&lt;/strong&gt;؟</translation>
+<translation>هل تريد إزالة البُريمج الحالي &lt;strong&gt;%1&lt;/strong&gt;؟</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3094"/>
@@ -7976,13 +7974,13 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3243"/>
 <source>Your script seems to be valid</source>
-<translation>يبدو أنّ نصك البرمجي سليم</translation>
+<translation>يبدو أن بُريمجك سليم</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3244"/>
 <source>There were script errors:
 %1</source>
-<translation>كانت هناك أخطاء في النص البرمجي:
+<translation>وُجدت أخطاء في البُريمج:
 %1</translation>
 </message>
 <message>
@@ -8044,7 +8042,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3950"/>
 <source>Please select the path of your git executable</source>
-<translation>يرجى اختيار مسار ملف تنفيذ git الخاص بك </translation>
+<translation>برجاء تحديد مسار ملف git التنفيذي</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4047"/>
@@ -8054,7 +8052,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
 <source>New script</source>
-<translation>برنامج نصي جديد</translation>
+<translation>بُريمج جديد</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="111"/>
@@ -8153,7 +8151,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/sharedialog.ui" line="20"/>
 <source>Share note</source>
-<translation>شارك الملاحظة</translation>
+<translation>مشاركة الملاحظة</translation>
 </message>
 <message>
 <location filename="../dialogs/sharedialog.ui" line="40"/>
@@ -8168,7 +8166,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/sharedialog.ui" line="30"/>
 <source>The public url of your note</source>
-<translation>عنوان URL العام لملاحظتك</translation>
+<translation>عنوان URL العمومي لملاحظتك</translation>
 </message>
 <message>
 <location filename="../dialogs/sharedialog.ui" line="47"/>
@@ -8178,7 +8176,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/sharedialog.cpp" line="66"/>
 <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-<translation>ضع في اعتبارك أنه لا يزال يتعين عليك مزامنة ملاحظاتك مع الخادم الخاص بك باستخدام أداة مزامنة سطح المكتب ownCloud لتتمكن من مشاركة الملاحظات مع الآخرين!</translation>
+<translation>تذكر أنك لا تزال في حاجة إلى مزامنة ملاحظاتك مع خادمك باستخدام عميل مزامنة ownCloud الحاسوبي حتى تشارك الملاحظات مع الآخرين!</translation>
 </message>
 </context>
 <context>
@@ -9085,7 +9083,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/trashdialog.ui" line="55"/>
 <source>Find note name</source>
-<translation>اكتشف اسم الملاحظة</translation>
+<translation>العثور على اسم ملاحظة</translation>
 </message>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="31"/>
@@ -9325,7 +9323,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="521"/>
 <source>Updater script '%1' doesn't exist!</source>
-<translation>برنامج التحديث '%1' غير موجود!</translation>
+<translation>بُريمج التحديث «%1» غير موجود!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="529"/>
@@ -9336,12 +9334,12 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="538"/>
 <location filename="../dialogs/updatedialog.cpp" line="547"/>
 <source>Could not copy updater script '%1' to '%2'!</source>
-<translation>لم يتمكن من نسخ برنامج التحديث '%1' إلى '%2'!</translation>
+<translation>تعذر نسخ بُريمج التحديث «%1» إلى «%2»!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="557"/>
 <source>Couldn't find updater script: %1</source>
-<translation>لم يتمكن من إيجاد برنامج المحدّث: %1</translation>
+<translation>تعذر العثور على بُريمج التحديث: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="566"/>
@@ -9362,7 +9360,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation type="unfinished">The app file '%1' could not be made executable! You need to make it executable yourself.</translation>
+<translation>تعذر جعل ملف التطبيق «%1» قابلا للتنفيذ! عليك جعله قابلا للتنفيذ بنفسك.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="572"/>
@@ -9530,7 +9528,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="24"/>
 <source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>تدوين ملاحظات نص عادي في ملف markdown مع تكامل ownCloud</translation>
+<translation>تدوين الملاحظات في ملف نصي مجرد بصيغة ماركداون مع تكامل ownCloud</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="88"/>
@@ -9649,7 +9647,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../main.cpp" line="100"/>
 <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-<translation>يطبع بيانات تفريغ الإعدادات وغيرها من المعلومات حول التطبيق والبيئة في GitHub Markdown ويخرج من التطبيق.</translation>
+<translation>يطبع تفريغ الإعدادات ومعلومات أخرى عن التطبيق والبيئة، بصيغة ماركداون GitHub ويخرج من التطبيق.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="109"/>

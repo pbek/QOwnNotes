@@ -7,6 +7,7 @@
 - some database warnings were fixed when running the application for the first time
 - the data path detection was improved for AppImages in portable mode
   (for [#2324](https://github.com/pbek/QOwnNotes/issues/2324#issuecomment-990642833))  
+- added more translation (thank you marterra, amirkbrpr, noureddin, rawfreeamy)
 
 ## 22.1.3
 - Joplin sub-folders can now also be imported if the parent folder is missing
