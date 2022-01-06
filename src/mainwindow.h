@@ -188,8 +188,6 @@ class MainWindow : public QMainWindow {
 
     bool jumpToNoteSubFolder(int noteSubFolderId);
 
-    QString noteTextEditCurrentWord(bool withPreviousCharacters = false);
-
     Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = QString());
 
     QString getLogText();
@@ -211,9 +209,6 @@ class MainWindow : public QMainWindow {
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
 
     Q_INVOKABLE bool insertDataUrlAsFileIntoCurrentNote(const QString &dataUrl);
-
-    void setShowNotesFromAllNoteSubFolders(bool show);
-    bool showNotesFromAllNoteSubFolders() const;
 
     class NoteSubFolderTree *noteSubFolderTree();
 
@@ -295,8 +290,6 @@ class MainWindow : public QMainWindow {
     void on_actionSelect_all_notes_triggered();
 
     void jumpToWelcomeNote();
-
-    void on_noteTextEdit_customContextMenuRequested(const QPoint pos);
 
     void pasteMediaIntoNote();
 
@@ -584,13 +577,7 @@ class MainWindow : public QMainWindow {
 
     void on_actionCheck_for_script_updates_triggered();
 
-    void noteTextEditResize(QResizeEvent *event);
-
-    void encryptedNoteTextEditResize(QResizeEvent *event);
-
     void on_actionShow_local_trash_triggered();
-
-    void on_encryptedNoteTextEdit_customContextMenuRequested(const QPoint pos);
 
     void on_actionJump_to_note_text_edit_triggered();
 
@@ -684,10 +671,29 @@ class MainWindow : public QMainWindow {
 
     void on_actionImport_notes_from_Joplin_triggered();
 
+public:
+    /** Settings access **/
+    static bool isInDistractionFreeMode();
+    void setShowNotesFromAllNoteSubFolders(bool show);
+    bool showNotesFromAllNoteSubFolders() const;
+
     /** Actions **/
 public:
     QAction *newNoteAction();
     QAction *reloadNoteFolderAction();
+    QAction *insertTextLinkAction();
+    QAction *searchTextOnWebAction();
+    QAction *pasteImageAction();
+    QAction *autocompleteAction();
+    QAction *splitNoteAtPosAction();
+    QList<QAction*> customTextEditActions();
+
+public:
+    /** export / print **/
+    void printTextDocument(QTextDocument *textDocument);
+    void exportNoteAsPDF(QTextDocument *doc);
+
+    int getMaxImageWidth() const;
 
 public:
     void clearNoteDirectoryWatcher();
@@ -851,16 +857,6 @@ private:
 
     bool preparePrintNotePrinter(QPrinter *printer);
 
-    void printNote(QPlainTextEdit *textEdit);
-
-    void exportNoteAsPDF(QTextEdit *textEdit);
-
-    void exportNoteAsPDF(QTextDocument *doc);
-
-    void printNote(QTextEdit *textEdit);
-
-    void printTextDocument(QTextDocument *textDocument);
-
     void updateNoteEncryptionUI();
 
     void askForEncryptedNotePasswordIfNeeded(
@@ -889,8 +885,6 @@ private:
     static bool isValidMediaFile(QFile *file);
 
     static bool isValidNoteFile(QFile *file);
-
-    static bool isInDistractionFreeMode();
 
     void removeSelectedTags();
 
@@ -933,8 +927,6 @@ private:
     bool jumpToNoteHistoryItem(const NoteHistoryItem &historyItem);
 
     void initScriptingEngine();
-
-    int getMaxImageWidth();
 
     void updateWindowTitle();
 
@@ -981,10 +973,6 @@ private:
     void initTreeWidgetItemHeight();
 
     static void updateTreeWidgetItemHeight(QTreeWidget *treeWidget, int height);
-
-    bool solveEquationInNoteTextEdit(double &returnValue);
-
-    bool noteTextEditAutoComplete(QStringList &resultList);
 
     void initDockWidgets();
 
@@ -1060,11 +1048,6 @@ private:
     bool undoFormatting(const QString &formatter);
 
     void applyFormatter(const QString &formatter);
-
-    bool isNoteTextSelected();
-
-    void noteTextEditCustomContextMenuRequested(
-        QOwnNotesMarkdownTextEdit *noteTextEdit, const QPoint pos);
 
     void updateNoteTextEditReadOnly();
 

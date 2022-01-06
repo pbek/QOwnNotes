@@ -13,11 +13,16 @@
 #include <QSettings>
 #include <QTextCursor>
 #include <QTextDocumentFragment>
+#include <QJSEngine>
+#include <QApplication>
+#include <QClipboard>
 
+#include "services/scriptingservice.h"
 #include "entities/notefolder.h"
 #include "helpers/qownspellchecker.h"
 #include "mainwindow.h"
 #include "libraries/qmarkdowntextedit/linenumberarea.h"
+#include "utils/urlhandler.h"
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     : QMarkdownTextEdit(parent, false) {
@@ -55,6 +60,44 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         // re-initialize the highlighting rules if we are using some options
         if (options != MarkdownHighlighter::HighlightingOption::None) {
             _highlighter->initHighlightingRules();
+        }
+    }
+
+    // ignores note clicks in QMarkdownTextEdit in the note text edit
+    setIgnoredClickUrlSchemata(QStringList({"note", "task"}));
+
+    connect(this, &QOwnNotesMarkdownTextEdit::zoomIn, this, [this](){
+        onZoom(/*in=*/ true);
+    });
+    connect(this, &QOwnNotesMarkdownTextEdit::zoomOut, this, [this](){
+        onZoom(/*in=*/ false);
+    });
+
+    connect(this, &QOwnNotesMarkdownTextEdit::urlClicked, this, [this](const QString &url){
+        if (!mainWindow) {
+            qWarning() << "No MainWindow! shouldn't happen!";
+            return;
+        }
+        UrlHandler(mainWindow).openUrl(url);
+    });
+
+    setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(this, &QOwnNotesMarkdownTextEdit::customContextMenuRequested, this, &QOwnNotesMarkdownTextEdit::onContextMenu);
+}
+
+void QOwnNotesMarkdownTextEdit::onZoom(bool in)
+{
+    FontModificationMode mode = in ? Increase : Decrease;
+    const int fontSize = modifyFontSize(mode);
+
+    if (mainWindow && mainWindow->isInDistractionFreeMode()) {
+        setPaperMargins();
+        if (in) {
+            mainWindow->showStatusBarMessage(tr("Increased font size to %1 pt").arg(fontSize),
+                                3000);
+        } else {
+            mainWindow->showStatusBarMessage(tr("Decreased font size to %1 pt").arg(fontSize),
+                                3000);
         }
     }
 }
@@ -407,6 +450,44 @@ bool QOwnNotesMarkdownTextEdit::usesMonospacedFont() {
     return widthNarrow == widthWide;
 }
 
+void QOwnNotesMarkdownTextEdit::toggleCase()
+{
+    QTextCursor c = textCursor();
+    // Save positions to restore everything at the end
+    const int selectionStart = c.selectionStart();
+    const int selectionEnd = c.selectionEnd();
+    const int cPos = c.position();
+
+    QString selectedText = c.selectedText();
+    const bool textWasSelected = !selectedText.isEmpty();
+
+    // if no text is selected: automatically select the Word under the Cursor
+    if (selectedText.isEmpty()) {
+        c.select(QTextCursor::WordUnderCursor);
+        selectedText = c.selectedText();
+    }
+
+    // cycle text through lowercase, uppercase, start case, and sentence case
+    c.insertText(Utils::Misc::cycleTextCase(selectedText));
+
+    if (textWasSelected) {
+        // select the text again to maybe do another operation on it
+        // keep the original cursor position
+        if (cPos == selectionStart) {
+            c.setPosition(selectionEnd, QTextCursor::MoveAnchor);
+            c.setPosition(selectionStart, QTextCursor::KeepAnchor);
+        } else {
+            c.setPosition(selectionStart, QTextCursor::MoveAnchor);
+            c.setPosition(selectionEnd, QTextCursor::KeepAnchor);
+        }
+    } else {
+        // Just restore the Cursor Position if no text was selected
+        c.setPosition(cPos, QTextCursor::MoveAnchor);
+    }
+    // Restore the visible cursor
+    setTextCursor(c);
+}
+
 void QOwnNotesMarkdownTextEdit::insertCodeBlock()
 {
     QTextCursor c = this->textCursor();
@@ -448,6 +529,252 @@ void QOwnNotesMarkdownTextEdit::insertCodeBlock()
     }
 }
 
+void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested()
+{
+    // attempt to toggle a checkbox at the cursor position
+    if (Utils::Gui::toggleCheckBoxAtCursor(this)) {
+        return;
+    }
+
+    // try to open a link at the cursor position
+    if (openLinkAtCursorPosition()) {
+        mainWindow->showStatusBarMessage(
+            tr("An url was opened at the current cursor position"), 5000);
+        return;
+    }
+
+    // attempt a markdown table auto-format
+    if (Utils::Gui::autoFormatTableAtCursor(this)) {
+        return;
+    }
+
+    QMenu menu;
+
+    double resultValue;
+    if (solveEquation(resultValue)) {
+        const QString text = QString::number(resultValue);
+        auto *action = menu.addAction(QStringLiteral("= ") + text);
+        action->setData(text);
+        action->setWhatsThis(QStringLiteral("equation"));
+    }
+
+    QStringList resultList;
+    if (autoComplete(resultList)) {
+        for (const QString &text : Utils::asConst(resultList)) {
+            auto *action = menu.addAction(text);
+            action->setData(text);
+            action->setWhatsThis(QStringLiteral("autocomplete"));
+        }
+    }
+
+    // load texts from scripts to show in the autocompletion list
+    const QStringList autocompletionList =
+        ScriptingService::instance()->callAutocompletionHook();
+    if (!autocompletionList.isEmpty()) {
+        auto *action = menu.addAction(QString());
+        action->setSeparator(true);
+
+        for (const QString &text : autocompletionList) {
+            auto *newAction = menu.addAction(text);
+            newAction->setData(text);
+            newAction->setWhatsThis(QStringLiteral("autocomplete"));
+        }
+    }
+
+    QPoint globalPos = mapToGlobal(cursorRect().bottomRight());
+
+    // compensate viewport margins
+    globalPos.setY(globalPos.y() + viewportMargins().top());
+    globalPos.setX(globalPos.x() + viewportMargins().left());
+
+    if (menu.actions().count() > 0) {
+        QAction *selectedItem = menu.exec(globalPos);
+        if (selectedItem) {
+            const QString text = selectedItem->data().toString();
+            const QString type = selectedItem->whatsThis();
+
+            if (text.isEmpty()) {
+                return;
+            }
+
+            if (type == QStringLiteral("autocomplete")) {
+                // overwrite the currently written word
+                QTextCursor c = textCursor();
+                c.movePosition(QTextCursor::StartOfWord,
+                               QTextCursor::KeepAnchor);
+                c.insertText(text + QStringLiteral(" "));
+            } else {
+                insertPlainText(text);
+            }
+        }
+    }
+}
+
+/**
+ * Returns the text from the current cursor to the start of the word in the
+ * note text edit
+ *
+ * @param withPreviousCharacters also get more characters at the beginning
+ *                               to get characters like "@" that are not
+ *                               word-characters
+ * @return
+ */
+QString QOwnNotesMarkdownTextEdit::currentWord(bool withPreviousCharacters) const {
+    QTextCursor c = textCursor();
+
+    // get the text from the current word
+    c.movePosition(QTextCursor::EndOfWord);
+    c.movePosition(QTextCursor::StartOfWord, QTextCursor::KeepAnchor);
+
+    QString text = c.selectedText();
+
+    if (withPreviousCharacters) {
+        static const QRegularExpression re(QStringLiteral("^[\\s\\n][^\\s]*"));
+        do {
+            c.movePosition(QTextCursor::Left, QTextCursor::KeepAnchor);
+            text = c.selectedText();
+        } while (!(re.match(text).hasMatch() || c.atBlockStart()));
+    }
+
+    return text.trimmed();
+}
+
+/**
+ * Tries to find words that start with the current word in the note text edit
+ *
+ * @param resultList
+ * @return
+ */
+bool QOwnNotesMarkdownTextEdit::autoComplete(QStringList &resultList) const {
+    // get the text from the current cursor to the start of the word
+    const QString text = currentWord();
+    qDebug() << __func__ << " - 'text': " << text;
+
+    if (text.isEmpty()) {
+        return false;
+    }
+
+    const QString noteText = toPlainText();
+
+    // find all items that match our current word
+    resultList = noteText
+                     .split(QRegularExpression(
+                                QStringLiteral("[^\\w\\d]"),
+                                QRegularExpression::UseUnicodePropertiesOption),
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                            QString::SkipEmptyParts)
+#else
+                            Qt::SkipEmptyParts)
+#endif
+                     .filter(QRegularExpression(
+                         QStringLiteral("^") + QRegularExpression::escape(text),
+                         QRegularExpression::CaseInsensitiveOption));
+
+    // we only want each word once
+    resultList.removeDuplicates();
+
+    // remove the text we already entered
+    resultList.removeOne(text);
+
+    if (resultList.count() == 0) {
+        return false;
+    }
+
+    qDebug() << __func__ << " - 'resultList': " << resultList;
+
+    return true;
+}
+
+/**
+ * Tries to find an equation in the current line and solves it
+ *
+ * @param returnValue
+ * @return
+ */
+bool QOwnNotesMarkdownTextEdit::solveEquation(double &returnValue) {
+    QTextCursor c = textCursor();
+
+    // get the text from the current cursor to the start of the line
+    c.movePosition(QTextCursor::StartOfBlock, QTextCursor::KeepAnchor);
+    QString text = c.selectedText();
+    qDebug() << __func__ << " - 'text': " << text;
+
+    QString equation = text;
+
+    // replace "," with "." to allow "," as coma
+    equation.replace(QLatin1Char(','), QLatin1Char('.'));
+
+    // remove leading list characters
+    equation.remove(QRegularExpression(QStringLiteral(R"(^\s*[\-*+] )")));
+
+    // match all numbers and basic operations like +, -, * and /
+    QRegularExpressionMatch match =
+        QRegularExpression(QStringLiteral(R"(([\d\.,+\-*\/\(\)\s]+)\s*=)"))
+            .match(equation);
+
+    if (!match.hasMatch()) {
+        if (equation.trimmed().endsWith(QChar('='))) {
+            mainWindow->showStatusBarMessage(
+                tr("No equation was found in front of the cursor"), 5000);
+        }
+
+        return false;
+    }
+
+    equation = match.captured(1);
+    qDebug() << __func__ << " - 'equation': " << equation;
+
+    QJSEngine engine;
+    // evaluate our equation
+    QJSValue result = engine.evaluate(equation);
+    double resultValue = result.toNumber();
+    qDebug() << __func__ << " - 'resultValue': " << resultValue;
+
+    // compensate for subtraction errors with 0
+    if ((resultValue < 0.0001) && (resultValue > 0)) {
+        resultValue = 0;
+    }
+
+    mainWindow->showStatusBarMessage(tr("Result for equation: %1 = %2")
+                             .arg(equation, QString::number(resultValue)),
+                         10000);
+
+    // check if cursor is after the "="
+    match = QRegularExpression(QStringLiteral("=\\s*$")).match(text);
+    if (!match.hasMatch()) {
+        return false;
+    }
+
+    returnValue = resultValue;
+    return true;
+}
+
+void QOwnNotesMarkdownTextEdit::insertBlockQuote()
+{
+    QTextCursor c = textCursor();
+    QString selectedText = c.selectedText();
+
+    if (selectedText.isEmpty()) {
+        c.insertText(QStringLiteral("> "));
+        setTextCursor(c);
+    } else {
+        // this only applies to the start of the selected block
+        selectedText.replace(QRegularExpression(QStringLiteral("^")),
+                             QStringLiteral("> "));
+
+        // transform Unicode line endings
+        // this newline character seems to be used in multi-line selections
+        const QString newLine =
+            QString::fromUtf8(QByteArray::fromHex("e280a9"));
+        selectedText.replace(newLine, QStringLiteral("\n> "));
+
+        // remove the block quote if it was placed at the end of the text
+        selectedText.remove(QRegularExpression(QStringLiteral("> $")));
+
+        c.insertText(selectedText);
+    }
+}
+
 QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     return QMarkdownTextEdit::viewportMargins();
@@ -481,7 +808,7 @@ bool QOwnNotesMarkdownTextEdit::isSpellCheckingEnabled() {
 }
 
 void QOwnNotesMarkdownTextEdit::resizeEvent(QResizeEvent *event) {
-    emit resize(event);
+    setPaperMargins();
     QMarkdownTextEdit::resizeEvent(event);
 }
 
@@ -603,14 +930,179 @@ void QOwnNotesMarkdownTextEdit::highlightCurrentLine() {
     setExtraSelections(extraSelections);
 }
 
-bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
+void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
+
+    auto *spellCheckMenu = spellCheckContextMenu(pos);
+
+    const QPoint globalPos = this->mapToGlobal(pos);
+    QMenu *menu = this->createStandardContextMenu();
+    if (spellCheckMenu) {
+        // insert spell check at the top if available
+        menu->insertMenu(menu->actions().constFirst(), spellCheckMenu);
+    }
+
+    const bool isAllowNoteEditing = Utils::Misc::isNoteEditingAllowed();
+    const bool isTextSelected = textCursor().hasSelection();
+
+    const QString linkTextActionName =
+        isTextSelected ? tr("&Link selected text") : tr("Insert &link");
+    QAction *linkTextAction = menu->addAction(linkTextActionName, this, [this](){
+        mainWindow->insertTextLinkAction()->trigger();
+    });
+    linkTextAction->setEnabled(isAllowNoteEditing);
+
+    QString blockQuoteTextActionName =
+        isTextSelected ? tr("Block &quote selected text",
+                            "Action to apply a block quote formatting to the "
+                            "selected text")
+                       : tr("Insert block &quote");
+    QAction *blockQuoteTextAction = menu->addAction(blockQuoteTextActionName);
+    connect(blockQuoteTextAction, &QAction::triggered, this, &QOwnNotesMarkdownTextEdit::insertBlockQuote);
+    blockQuoteTextAction->setEnabled(isAllowNoteEditing);
+
+    if (isTextSelected) {
+        menu->addAction(mainWindow->searchTextOnWebAction());
+    }
+//     searchAction->setEnabled(isTextSelected);
+//     QAction *searchAction =
+//         menu->addAction(ui->actionSearch_text_on_the_web->text());
+//     searchAction->setShortcut(ui->actionSearch_text_on_the_web->shortcut());
+
+    QAction *copyCodeBlockAction = menu->addAction(tr("Copy code block"));
+    copyCodeBlockAction->setIcon(QIcon::fromTheme(
+        QStringLiteral("edit-copy"),
+        QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/edit-copy.svg"))));
+    const QTextBlock currentTextBlock = cursorForPosition(pos).block();
+    const int userState = currentTextBlock.userState();
+    const bool isCodeSpan = highlighter()->isPosInACodeSpan(currentTextBlock.blockNumber(), cursorForPosition(pos).positionInBlock());
+    copyCodeBlockAction->setEnabled(
+        MarkdownHighlighter::isCodeBlock(userState) || isCodeSpan);
+    connect(copyCodeBlockAction, &QAction::triggered, this, [this, isCodeSpan, currentTextBlock, pos](){
+        // copy the text from a copy block around currentTextBlock to the
+        // clipboard
+        if (isCodeSpan) {
+            const auto codeSpanRange = highlighter()->getSpanRange(MarkdownHighlighter::RangeType::CodeSpan,
+                                                        currentTextBlock.blockNumber(),
+                                                        cursorForPosition(pos).positionInBlock());
+            QApplication::clipboard()->setText(currentTextBlock.text().mid(codeSpanRange.first + 1,
+                                                                            codeSpanRange.second - codeSpanRange.first - 1));
+        } else {
+            Utils::Gui::copyCodeBlockText(currentTextBlock);
+        }
+    });
+
+
+    menu->addSeparator();
+
+    // add the print menu
+    QMenu *printMenu = menu->addMenu(tr("Print"));
+    QIcon printIcon = QIcon::fromTheme(
+        QStringLiteral("document-print"),
+        QIcon(QStringLiteral(
+            ":icons/breeze-qownnotes/16x16/document-print.svg")));
+    printMenu->setIcon(printIcon);
+
+    // add the print selected text action
+    QAction *printTextAction = printMenu->addAction(tr("Print selected text"));
+    printTextAction->setEnabled(isTextSelected);
+    printTextAction->setIcon(printIcon);
+    connect(printTextAction, &QAction::triggered, this, [this](){
+        mainWindow->printTextDocument(document());
+    });
+
+    // add the print selected text (preview) action
+    QAction *printHTMLAction =
+        printMenu->addAction(tr("Print selected text (preview)"));
+    printHTMLAction->setEnabled(isTextSelected);
+    printHTMLAction->setIcon(printIcon);
+    connect(printHTMLAction, &QAction::triggered, this, [this](){
+        auto note = mainWindow->getCurrentNote();
+        QString html = note.textToMarkdownHtml(
+            toPlainText(), NoteFolder::currentLocalPath(),
+            mainWindow->getMaxImageWidth(),
+            Utils::Misc::useInternalExportStylingForPreview());
+        QTextDocument doc;
+        doc.setHtml(html);
+        mainWindow->printTextDocument(&doc);
+    });
+
+    // add the export menu
+    QMenu *exportMenu = menu->addMenu(tr("Export"));
+    exportMenu->setIcon(QIcon::fromTheme(
+        QStringLiteral("document-export"),
+        QIcon(QStringLiteral(
+            ":icons/breeze-qownnotes/16x16/document-export.svg"))));
+
+    QIcon pdfIcon = QIcon::fromTheme(
+        QStringLiteral("application-pdf"),
+        QIcon(QStringLiteral(
+            ":icons/breeze-qownnotes/16x16/application-pdf.svg")));
+
+    // add the export selected text action
+    QAction *exportTextAction =
+        exportMenu->addAction(tr("Export selected text as PDF"));
+    exportTextAction->setEnabled(isTextSelected);
+    exportTextAction->setIcon(pdfIcon);
+    connect(exportTextAction, &QAction::triggered, this, [this](){
+        mainWindow->exportNoteAsPDF(document());
+    });
+
+    // add the export selected text (preview) action
+    QAction *exportHTMLAction =
+        exportMenu->addAction(tr("Export selected text as PDF (preview)"));
+    exportHTMLAction->setEnabled(isTextSelected);
+    exportHTMLAction->setIcon(pdfIcon);
+    connect(exportHTMLAction, &QAction::triggered, this, [this](){
+        // export the selected text (preview) as PDF
+        auto note = mainWindow->getCurrentNote();
+        QString html = note.textToMarkdownHtml(
+            toPlainText(), NoteFolder::currentLocalPath(),
+            mainWindow->getMaxImageWidth(),
+            Utils::Misc::useInternalExportStylingForPreview());
+        html = Utils::Misc::parseTaskList(html, false);
+        QTextDocument doc;
+        doc.setHtml(html);
+        mainWindow->exportNoteAsPDF(&doc);
+    });
+
+    menu->addSeparator();
+
+    // add some other existing menu entries
+    menu->addAction(mainWindow->pasteImageAction());
+    menu->addAction(mainWindow->autocompleteAction());
+    menu->addAction(mainWindow->splitNoteAtPosAction());
+
+    // add the custom actions to the context menu
+    const auto customActions = mainWindow->customTextEditActions();
+    if (!customActions.isEmpty()) {
+        // add the scripts menu
+        QIcon scriptIcon = QIcon::fromTheme(
+            QStringLiteral("story-editor"),
+            QIcon(QStringLiteral(
+                ":icons/breeze-qownnotes/16x16/story-editor.svg")));
+        menu->addSeparator();
+        QMenu *scriptMenu = menu->addMenu(tr("Custom actions"));
+        scriptMenu->setIcon(scriptIcon);
+        scriptMenu->addActions(customActions);
+    }
+
+    menu->exec(globalPos);
+}
+
+QMenu *QOwnNotesMarkdownTextEdit::spellCheckContextMenu(QPoint pos)
+{
+    auto spellchecker = QOwnSpellChecker::instance();
+    if (!spellchecker || !spellchecker->isActive() || _isSpellCheckingDisabled) {
+        return nullptr;
+    }
+
     // obtain the cursor at current mouse position
-    QTextCursor cursorAtMouse = cursorForPosition(event->pos());
+    QTextCursor cursorAtMouse = cursorForPosition(pos);
     const int mousePos = cursorAtMouse.position();
 
     QTextCursor cursor = textCursor();
     if (MarkdownHighlighter::isCodeBlock(cursor.block().userState())) {
-        return false;
+        return nullptr;
     }
 
     // Check if the user clicked a selected word
@@ -650,10 +1142,15 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
     wordSelectCursor.movePosition(QTextCursor::NextCharacter,
                                   QTextCursor::KeepAnchor, selectedWord.size());
 
-    auto spellchecker = QOwnSpellChecker::instance();
     const bool wordIsMisspelled =
         isMouseCursorInsideWord && spellchecker && spellchecker->isActive() &&
         !selectedWord.isEmpty() && spellchecker->isWordMisspelled(selectedWord);
+
+    // Use standard context menu for already selected words, correctly spelled
+    // words and words inside quotes.
+    if (!wordIsMisspelled || selectedWordClicked) {
+        return nullptr;
+    }
 
     if (!selectedWordClicked) {
         // If the user clicked on a misspelled word, select that word.
@@ -667,64 +1164,41 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
         cursor = textCursor();
     }
 
-    // Use standard context menu for already selected words, correctly spelled
-    // words and words inside quotes.
-    if (!wordIsMisspelled || selectedWordClicked) {
-        return false;
-    }
-
     // create the suggestion menu
-    QMenu menu;
+    QMenu *menu = new QMenu(this);
     // Add the suggestions to the menu
     const QStringList reps =
         spellchecker->suggestionsForWord(selectedWord, cursor, 8);
     if (reps.isEmpty()) {
         QAction *suggestionsAction =
-            menu.addAction(tr("No suggestions for %1").arg(selectedWord));
+            menu->addAction(tr("No suggestions for %1").arg(selectedWord));
         suggestionsAction->setEnabled(false);
     } else {
-        QStringList::const_iterator end(reps.constEnd());
-        for (QStringList::const_iterator it = reps.constBegin(); it != end;
-             ++it) {
-            menu.addAction(*it);
+        for (const QString& rep : reps) {
+            menu->addAction(rep, this, [rep, this, &cursor](){
+                cursor.insertText(rep);
+                setTextCursor(cursor);
+            });
         }
     }
 
-    menu.addSeparator();
-    const QPoint &pos = event->globalPos();
-    QAction *ignoreAction = menu.addAction(tr("Ignore"));
-    QAction *addToDictAction = menu.addAction(tr("Add to Dictionary"));
-    // Execute the popup inline
-    const QAction *selectedAction = menu.exec(pos);
+    menu->addSeparator();
 
-    if (selectedAction) {
-        Q_ASSERT(cursor.selectedText() == selectedWord);
+    QAction *ignoreAction = menu->addAction(tr("Ignore"), this, [selectedWord, this](){
+        QOwnSpellChecker::instance()->ignoreWord(selectedWord);
+    });
+    QAction *addToDictAction = menu->addAction(tr("Add to Dictionary"), this, [selectedWord, this](){
+        QOwnSpellChecker::instance()->addWordToDictionary(selectedWord);
+    });
 
-        if (selectedAction == ignoreAction) {
-            spellchecker->ignoreWord(selectedWord);
-            _highlighter->rehighlight();
-        } else if (selectedAction == addToDictAction) {
-            spellchecker->addWordToDictionary(selectedWord);
-            _highlighter->rehighlight();
-        }
-        // Other actions can only be one of the suggested words
-        else {
-            const QString replacement = selectedAction->text();
-            Q_ASSERT(reps.contains(replacement));
-            cursor.insertText(replacement);
-            setTextCursor(cursor);
-        }
-    }
+    menu->setTitle(tr("Spelling"));
 
-    return true;
+    return menu;
 }
 
 bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
     auto spellchecker = QOwnSpellChecker::instance();
-    if (event->type() == QEvent::ContextMenu && spellchecker) {
-        if (spellchecker->isActive() && !_isSpellCheckingDisabled)
-            return onContextMenuEvent(static_cast<QContextMenuEvent *>(event));
-    }
+
     if (event->type() == QEvent::KeyPress) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 

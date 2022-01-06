@@ -1367,7 +1367,7 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters) {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     return mainWindow != Q_NULLPTR
-               ? mainWindow->noteTextEditCurrentWord(withPreviousCharacters)
+               ? mainWindow->activeNoteTextEdit()->currentWord(withPreviousCharacters)
                : QString();
 #else
     Q_UNUSED(withPreviousCharacters)

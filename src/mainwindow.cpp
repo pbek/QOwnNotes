@@ -160,11 +160,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     initTreeWidgets();
 
-    // setup vim mode
-    if (settings.value(QStringLiteral("Editor/vimMode")).toBool()) {
-        initFakeVim(ui->noteTextEdit);
-        initFakeVim(ui->encryptedNoteTextEdit);
-    }
+    initNotePreviewAndTextEdits();
 
     setWindowIcon(getSystemTrayIcon());
 
@@ -224,20 +220,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->encryptedNoteTextEdit->hide();
     ui->multiSelectActionFrame->hide();
 
-    // set the search frames for the note text edits
-    bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
-    ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame, darkMode);
-    ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame,
-                                               darkMode);
-
-    // set the main window for accessing its public methods
-    ui->noteTextEdit->setMainWindow(this);
-    ui->encryptedNoteTextEdit->setMainWindow(this);
-
     // initialize the tag button scroll area
     initTagButtonScrollArea();
-
-    noteHistory = NoteHistory();
 
     // initialize the toolbars
     initToolbars();
@@ -247,8 +231,6 @@ MainWindow::MainWindow(QWidget *parent)
         _customActionToolbar->hide();
         settings.setValue(QStringLiteral("guiFirstRunInit"), true);
     }
-
-    initNotePreviewAndTextEdits();
 
 #ifdef Q_OS_MAC
     // add some different shortcuts for the note history on the mac
@@ -349,59 +331,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->searchLineEdit->installEventFilter(this);
     ui->noteTreeWidget->installEventFilter(this);
 
-    ui->noteTextEdit->installEventFilter(this);
-    ui->noteTextEdit->viewport()->installEventFilter(this);
-    ui->encryptedNoteTextEdit->installEventFilter(this);
-    ui->encryptedNoteTextEdit->viewport()->installEventFilter(this);
     ui->tagTreeWidget->installEventFilter(this);
     ui->newNoteTagLineEdit->installEventFilter(this);
     ui->selectedTagsToolButton->installEventFilter(this);
 
     // init the saved searches completer
     initSavedSearchesCompleter();
-
-    // ignores note clicks in QMarkdownTextEdit in the note text edit
-    ui->noteTextEdit->setIgnoredClickUrlSchemata(QStringList({"note", "task"}));
-    ui->encryptedNoteTextEdit->setIgnoredClickUrlSchemata(
-        QStringList({"note", "task"}));
-
-    // handle note url externally in the note text edit
-    connect(ui->noteTextEdit, &QOwnNotesMarkdownTextEdit::urlClicked, this,
-            &MainWindow::openLocalUrl);
-    // also handle note url externally in the encrypted note text edit
-    connect(ui->encryptedNoteTextEdit, &QOwnNotesMarkdownTextEdit::urlClicked,
-            this, &MainWindow::openLocalUrl);
-
-    // handle note edit zooming
-    connect(ui->noteTextEdit, &QOwnNotesMarkdownTextEdit::zoomIn, this,
-            &MainWindow::on_action_Increase_note_text_size_triggered);
-    connect(ui->noteTextEdit, &QOwnNotesMarkdownTextEdit::zoomOut, this,
-            &MainWindow::on_action_Decrease_note_text_size_triggered);
-    connect(ui->encryptedNoteTextEdit, &QOwnNotesMarkdownTextEdit::zoomIn, this,
-            &MainWindow::on_action_Increase_note_text_size_triggered);
-    connect(ui->encryptedNoteTextEdit, &QOwnNotesMarkdownTextEdit::zoomOut, this,
-            &MainWindow::on_action_Decrease_note_text_size_triggered);
-
-    // handle note text edit resize events
-    connect(ui->noteTextEdit, &QOwnNotesMarkdownTextEdit::resize, this,
-            &MainWindow::noteTextEditResize);
-    connect(ui->encryptedNoteTextEdit, &QOwnNotesMarkdownTextEdit::resize, this,
-            &MainWindow::encryptedNoteTextEditResize);
-
-    // set the tab stop to the width of 4 spaces in the editor
-    const int tabStop = 4;
-    QFont font = ui->noteTextEdit->font();
-    QFontMetrics metrics(font);
-
-#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
-    int width = tabStop * metrics.width(' ');
-    ui->noteTextEdit->setTabStopWidth(width);
-    ui->encryptedNoteTextEdit->setTabStopWidth(width);
-#else
-    int width = tabStop * metrics.horizontalAdvance(' ');
-    ui->noteTextEdit->setTabStopDistance(width);
-    ui->encryptedNoteTextEdit->setTabStopDistance(width);
-#endif
 
     // called now in readSettingsFromSettingsDialog() line 494
     // set the edit mode for the note text edit
@@ -482,15 +417,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->navigationWidget, &NavigationWidget::positionClicked, this,
             &MainWindow::onNavigationWidgetPositionClicked);
 
-    // do the navigation parsing after the highlighter was finished
-    connect(ui->noteTextEdit->highlighter(),
-            &QOwnNotesMarkdownHighlighter::highlightingFinished, this,
-            &MainWindow::startNavigationParser);
-
-    connect(ui->encryptedNoteTextEdit->highlighter(),
-            &QOwnNotesMarkdownHighlighter::highlightingFinished, this,
-            &MainWindow::startNavigationParser);
-
     // reloads all tasks from the ownCloud server
     reloadTodoLists();
 
@@ -532,15 +458,6 @@ MainWindow::MainWindow(QWidget *parent)
     _storedImagesDialog = Q_NULLPTR;
     _storedAttachmentsDialog = Q_NULLPTR;
     _issueAssistantDialog = Q_NULLPTR;
-
-    // track cursor position changes for the line number label
-    connect(ui->noteTextEdit, &QOwnNotesMarkdownTextEdit::cursorPositionChanged,
-            this, &MainWindow::noteEditCursorPositionChanged);
-
-    // track cursor position changes for the line number label
-    connect(ui->encryptedNoteTextEdit,
-            &QOwnNotesMarkdownTextEdit::cursorPositionChanged, this,
-            &MainWindow::noteEditCursorPositionChanged);
 
     // restore the note tabs
     Utils::Gui::restoreNoteTabs(ui->noteEditTabWidget,
@@ -590,6 +507,48 @@ void MainWindow::initTreeWidgets()
 
 void MainWindow::initNotePreviewAndTextEdits()
 {
+    QSettings settings;
+
+    // set the search frames for the note text edits
+    const bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
+    ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame, darkMode);
+    ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame,
+                                               darkMode);
+
+    // set the main window for accessing its public methods
+    ui->noteTextEdit->setMainWindow(this);
+    ui->encryptedNoteTextEdit->setMainWindow(this);
+
+    // setup vim mode
+    if (settings.value(QStringLiteral("Editor/vimMode")).toBool()) {
+        initFakeVim(ui->noteTextEdit);
+        initFakeVim(ui->encryptedNoteTextEdit);
+    }
+
+    // do the navigation parsing after the highlighter was finished
+    connect(ui->noteTextEdit->highlighter(),
+            &QOwnNotesMarkdownHighlighter::highlightingFinished, this,
+            &MainWindow::startNavigationParser);
+
+    connect(ui->encryptedNoteTextEdit->highlighter(),
+            &QOwnNotesMarkdownHighlighter::highlightingFinished, this,
+            &MainWindow::startNavigationParser);
+
+    // track cursor position changes for the line number label
+    connect(ui->noteTextEdit, &QOwnNotesMarkdownTextEdit::cursorPositionChanged,
+            this, &MainWindow::noteEditCursorPositionChanged);
+
+    // track cursor position changes for the line number label
+    connect(ui->encryptedNoteTextEdit,
+            &QOwnNotesMarkdownTextEdit::cursorPositionChanged, this,
+            &MainWindow::noteEditCursorPositionChanged);
+
+    // TODO: Remove and handle this in widgets directly
+    ui->noteTextEdit->installEventFilter(this);
+    ui->noteTextEdit->viewport()->installEventFilter(this);
+    ui->encryptedNoteTextEdit->installEventFilter(this);
+    ui->encryptedNoteTextEdit->viewport()->installEventFilter(this);
+
 #ifdef USE_QLITEHTML
     _notePreviewWidget = new HtmlPreviewWidget(this);
     if (!ui->noteViewFrame->layout())
@@ -613,7 +572,6 @@ void MainWindow::initNotePreviewAndTextEdits()
            &MainWindow::onNoteTextViewResize);
 
    // TODO centralize dark mode handling
-   bool darkMode = QSettings().value(QStringLiteral("darkMode")).toBool();
    ui->noteTextView->initSearchFrame(ui->noteTextViewSearchFrame, darkMode);
 
     connect(ui->noteTextView, &QTextBrowser::anchorClicked, this, &MainWindow::onNotePreviewAnchorClicked);
@@ -4472,7 +4430,7 @@ void MainWindow::askForEncryptedNotePasswordIfNeeded(
 /**
  * Gets the maximum image width
  */
-int MainWindow::getMaxImageWidth() {
+int MainWindow::getMaxImageWidth() const {
     // TODO: Make sure this works or not
 #ifndef USE_QLITEHTML
     const QMargins margins = ui->noteTextView->contentsMargins();
@@ -5327,33 +5285,15 @@ bool MainWindow::preparePrintNotePrinter(QPrinter *printer) {
 }
 
 /**
- * @brief Prints the content of a plain text edit widget
- * @param textEdit
- */
-void MainWindow::printNote(QPlainTextEdit *textEdit) {
-    printTextDocument(textEdit->document());
-}
-
-/**
- * @brief Prints the content of a text edit widget
- * @param textEdit
- */
-void MainWindow::printNote(QTextEdit *textEdit) {
-    printTextDocument(textEdit->document());
-}
-
-/**
  * @brief Prints the content of a text document
  * @param textEdit
  */
 void MainWindow::printTextDocument(QTextDocument *textDocument) {
-    auto *printer = new QPrinter();
 
-    if (preparePrintNotePrinter(printer)) {
-        textDocument->print(printer);
+    QPrinter printer;
+    if (preparePrintNotePrinter(&printer)) {
+        textDocument->print(&printer);
     }
-
-    delete printer;
 }
 
 /**
@@ -5475,14 +5415,6 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
  * @param textEdit
  */
 void MainWindow::exportNoteAsPDF(QPlainTextEdit *textEdit) {
-    exportNoteAsPDF(textEdit->document());
-}
-
-/**
- * @brief Exports the content of a text edit widget as PDF
- * @param textEdit
- */
-void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
     exportNoteAsPDF(textEdit->document());
 }
 
@@ -6492,207 +6424,6 @@ void MainWindow::enableShowTrashButton() {
 
 void MainWindow::on_actionSelect_all_notes_triggered() { selectAllNotes(); }
 
-/**
- * Creates the additional menu entries for the note text edit field
- *
- * @param pos
- */
-void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint pos) {
-    noteTextEditCustomContextMenuRequested(ui->noteTextEdit, pos);
-}
-
-/**
- * Creates the additional menu entries for the encrypted note text edit field
- *
- * @param pos
- */
-void MainWindow::on_encryptedNoteTextEdit_customContextMenuRequested(
-    const QPoint pos) {
-    noteTextEditCustomContextMenuRequested(ui->encryptedNoteTextEdit, pos);
-}
-
-/**
- * Creates the additional menu entries for a note text edit field
- *
- * @param noteTextEdit
- * @param pos
- */
-void MainWindow::noteTextEditCustomContextMenuRequested(
-    QOwnNotesMarkdownTextEdit *noteTextEdit, const QPoint pos) {
-    const QPoint globalPos = noteTextEdit->mapToGlobal(pos);
-    QMenu *menu = noteTextEdit->createStandardContextMenu();
-    const bool isAllowNoteEditing = Utils::Misc::isNoteEditingAllowed();
-    const bool isTextSelected = isNoteTextSelected();
-
-    const QString linkTextActionName =
-        isTextSelected ? tr("&Link selected text") : tr("Insert &link");
-    QAction *linkTextAction = menu->addAction(linkTextActionName);
-    linkTextAction->setShortcut(ui->actionInsert_text_link->shortcut());
-    linkTextAction->setEnabled(isAllowNoteEditing);
-
-    QString blockQuoteTextActionName =
-        isTextSelected ? tr("Block &quote selected text",
-                            "Action to apply a block quote formatting to the "
-                            "selected text")
-                       : tr("Insert block &quote");
-    QAction *blockQuoteTextAction = menu->addAction(blockQuoteTextActionName);
-    blockQuoteTextAction->setShortcut(ui->actionInsert_block_quote->shortcut());
-    blockQuoteTextAction->setEnabled(isAllowNoteEditing);
-
-    QAction *searchAction =
-        menu->addAction(ui->actionSearch_text_on_the_web->text());
-    searchAction->setShortcut(ui->actionSearch_text_on_the_web->shortcut());
-    searchAction->setEnabled(isTextSelected);
-
-    QAction *copyCodeBlockAction = menu->addAction(tr("Copy code block"));
-    copyCodeBlockAction->setIcon(QIcon::fromTheme(
-        QStringLiteral("edit-copy"),
-        QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/edit-copy.svg"))));
-    const QTextBlock &currentTextBlock =
-        noteTextEdit->cursorForPosition(pos).block();
-    const int userState = currentTextBlock.userState();
-    const bool isCodeSpan = ui->noteTextEdit->highlighter()->isPosInACodeSpan(currentTextBlock.blockNumber(),
-                                                                              noteTextEdit->cursorForPosition(pos).positionInBlock());
-
-    copyCodeBlockAction->setEnabled(
-        MarkdownHighlighter::isCodeBlock(userState) || isCodeSpan);
-
-    menu->addSeparator();
-
-    // add the print menu
-    QMenu *printMenu = menu->addMenu(tr("Print"));
-    QIcon printIcon = QIcon::fromTheme(
-        QStringLiteral("document-print"),
-        QIcon(QStringLiteral(
-            ":icons/breeze-qownnotes/16x16/document-print.svg")));
-    printMenu->setIcon(printIcon);
-
-    // add the print selected text action
-    QAction *printTextAction = printMenu->addAction(tr("Print selected text"));
-    printTextAction->setEnabled(isTextSelected);
-    printTextAction->setIcon(printIcon);
-
-    // add the print selected text (preview) action
-    QAction *printHTMLAction =
-        printMenu->addAction(tr("Print selected text (preview)"));
-    printHTMLAction->setEnabled(isTextSelected);
-    printHTMLAction->setIcon(printIcon);
-
-    // add the export menu
-    QMenu *exportMenu = menu->addMenu(tr("Export"));
-    exportMenu->setIcon(QIcon::fromTheme(
-        QStringLiteral("document-export"),
-        QIcon(QStringLiteral(
-            ":icons/breeze-qownnotes/16x16/document-export.svg"))));
-
-    QIcon pdfIcon = QIcon::fromTheme(
-        QStringLiteral("application-pdf"),
-        QIcon(QStringLiteral(
-            ":icons/breeze-qownnotes/16x16/application-pdf.svg")));
-
-    // add the export selected text action
-    QAction *exportTextAction =
-        exportMenu->addAction(tr("Export selected text as PDF"));
-    exportTextAction->setEnabled(isTextSelected);
-    exportTextAction->setIcon(pdfIcon);
-
-    // add the export selected text (preview) action
-    QAction *exportHTMLAction =
-        exportMenu->addAction(tr("Export selected text as PDF (preview)"));
-    exportHTMLAction->setEnabled(isTextSelected);
-    exportHTMLAction->setIcon(pdfIcon);
-
-    menu->addSeparator();
-
-    // add some other existing menu entries
-    menu->addAction(ui->actionPaste_image);
-    menu->addAction(ui->actionAutocomplete);
-    menu->addAction(ui->actionSplit_note_at_cursor_position);
-
-    // add the custom actions to the context menu
-    if (!_noteTextEditContextMenuActions.isEmpty()) {
-        // add the scripts menu
-        QIcon scriptIcon = QIcon::fromTheme(
-            QStringLiteral("story-editor"),
-            QIcon(QStringLiteral(
-                ":icons/breeze-qownnotes/16x16/story-editor.svg")));
-        menu->addSeparator();
-        QMenu *scriptMenu = menu->addMenu(tr("Custom actions"));
-        scriptMenu->setIcon(scriptIcon);
-        for (QAction *action :
-             Utils::asConst(_noteTextEditContextMenuActions)) {
-            scriptMenu->addAction(action);
-        }
-    }
-
-    QAction *selectedItem = menu->exec(globalPos);
-    if (selectedItem) {
-        if (selectedItem == linkTextAction) {
-            // handle the linking of text with a note
-            handleTextNoteLinking();
-        } else if (selectedItem == blockQuoteTextAction) {
-            // handle the block quoting of text
-            on_actionInsert_block_quote_triggered();
-        } else if (selectedItem == searchAction) {
-            // search for the selected text on the web
-            on_actionSearch_text_on_the_web_triggered();
-        } else if (selectedItem == printTextAction) {
-            // print the selected text
-            auto *textEdit = new QOwnNotesMarkdownTextEdit(this);
-            textEdit->setPlainText(selectedNoteTextEditText());
-            printNote(textEdit);
-        } else if (selectedItem == printHTMLAction) {
-            // print the selected text (preview)
-            QString html = currentNote.textToMarkdownHtml(
-                selectedNoteTextEditText(), NoteFolder::currentLocalPath(),
-                getMaxImageWidth(),
-                Utils::Misc::useInternalExportStylingForPreview());
-            auto *textEdit = new QTextEdit(this);
-            textEdit->setHtml(html);
-            printNote(textEdit);
-        } else if (selectedItem == exportTextAction) {
-            // export the selected text as PDF
-            auto *textEdit = new QOwnNotesMarkdownTextEdit(this);
-            textEdit->setPlainText(selectedNoteTextEditText());
-            exportNoteAsPDF(textEdit);
-        } else if (selectedItem == exportHTMLAction) {
-            // export the selected text (preview) as PDF
-            QString html = currentNote.textToMarkdownHtml(
-                selectedNoteTextEditText(), NoteFolder::currentLocalPath(),
-                getMaxImageWidth(),
-                Utils::Misc::useInternalExportStylingForPreview());
-            html = Utils::Misc::parseTaskList(html, false);
-            auto *textEdit = new QTextEdit(this);
-            textEdit->setHtml(html);
-            exportNoteAsPDF(textEdit);
-        } else if (selectedItem == copyCodeBlockAction) {
-            // copy the text from a copy block around currentTextBlock to the
-            // clipboard
-            if (isCodeSpan) {
-                const auto codeSpanRange = ui->noteTextEdit->highlighter()->getSpanRange(MarkdownHighlighter::RangeType::CodeSpan,
-                                                                                         currentTextBlock.blockNumber(),
-                                                                                         noteTextEdit->cursorForPosition(pos).positionInBlock());
-                QApplication::clipboard()->setText(currentTextBlock.text().mid(codeSpanRange.first + 1,
-                                                                               codeSpanRange.second - codeSpanRange.first - 1));
-            } else {
-                Utils::Gui::copyCodeBlockText(currentTextBlock);
-            }
-        }
-    }
-}
-
-/**
- * Checks if text in a note is selected
- *
- * @return
- */
-bool MainWindow::isNoteTextSelected() {
-    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-    const QString selectedText =
-        textEdit->textCursor().selectedText().trimmed();
-    return !selectedText.isEmpty();
-}
-
 void MainWindow::on_actionInsert_text_link_triggered() {
     // handle the linking of text
     handleTextNoteLinking(LinkDialog::TextLinkPage);
@@ -6799,8 +6530,7 @@ void MainWindow::on_action_Print_note_markdown_triggered() {
  * @brief Prints the current note (text)
  */
 void MainWindow::on_action_Print_note_text_triggered() {
-    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-    printNote(textEdit);
+    printTextDocument(activeNoteTextEdit()->document());
 }
 
 /**
@@ -7707,34 +7437,14 @@ void MainWindow::on_actionFormat_text_italic_triggered() {
  * Increases the note text font size by one
  */
 void MainWindow::on_action_Increase_note_text_size_triggered() {
-    const int fontSize =
-        ui->noteTextEdit->modifyFontSize(QOwnNotesMarkdownTextEdit::Increase);
-    ui->encryptedNoteTextEdit->setStyles();
-
-    if (isInDistractionFreeMode()) {
-        ui->noteTextEdit->setPaperMargins();
-        ui->encryptedNoteTextEdit->setPaperMargins();
-    }
-
-    showStatusBarMessage(tr("Increased font size to %1 pt").arg(fontSize),
-                         3000);
+    Q_EMIT activeNoteTextEdit()->zoomIn();
 }
 
 /**
  * Decreases the note text font size by one
  */
 void MainWindow::on_action_Decrease_note_text_size_triggered() {
-    const int fontSize =
-        ui->noteTextEdit->modifyFontSize(QOwnNotesMarkdownTextEdit::Decrease);
-    ui->encryptedNoteTextEdit->setStyles();
-
-    if (isInDistractionFreeMode()) {
-        ui->noteTextEdit->setPaperMargins();
-        ui->encryptedNoteTextEdit->setPaperMargins();
-    }
-
-    showStatusBarMessage(tr("Decreased font size to %1 pt").arg(fontSize),
-                         3000);
+    Q_EMIT activeNoteTextEdit()->zoomOut();
 }
 
 /**
@@ -9532,228 +9242,7 @@ void MainWindow::regenerateNotePreview() {
  * Tries to open a link at the current cursor position or solve an equation
  */
 void MainWindow::on_actionAutocomplete_triggered() {
-    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-
-    // attempt to toggle a checkbox at the cursor position
-    if (Utils::Gui::toggleCheckBoxAtCursor(textEdit)) {
-        return;
-    }
-
-    // try to open a link at the cursor position
-    if (textEdit->openLinkAtCursorPosition()) {
-        showStatusBarMessage(
-            tr("An url was opened at the current cursor position"), 5000);
-        return;
-    }
-
-    // attempt a markdown table auto-format
-    if (Utils::Gui::autoFormatTableAtCursor(textEdit)) {
-        return;
-    }
-
-    QMenu menu;
-
-    double resultValue;
-    if (solveEquationInNoteTextEdit(resultValue)) {
-        const QString text = QString::number(resultValue);
-        auto *action = menu.addAction(QStringLiteral("= ") + text);
-        action->setData(text);
-        action->setWhatsThis(QStringLiteral("equation"));
-    }
-
-    QStringList resultList;
-    if (noteTextEditAutoComplete(resultList)) {
-        for (const QString &text : Utils::asConst(resultList)) {
-            auto *action = menu.addAction(text);
-            action->setData(text);
-            action->setWhatsThis(QStringLiteral("autocomplete"));
-        }
-    }
-
-    // load texts from scripts to show in the autocompletion list
-    const QStringList autocompletionList =
-        ScriptingService::instance()->callAutocompletionHook();
-    if (!autocompletionList.isEmpty()) {
-        auto *action = menu.addAction(QString());
-        action->setSeparator(true);
-
-        for (const QString &text : autocompletionList) {
-            auto *newAction = menu.addAction(text);
-            newAction->setData(text);
-            newAction->setWhatsThis(QStringLiteral("autocomplete"));
-        }
-    }
-
-    QPoint globalPos =
-        textEdit->mapToGlobal(textEdit->cursorRect().bottomRight());
-
-    // compensate viewport margins
-    globalPos.setY(globalPos.y() + textEdit->viewportMargins().top());
-    globalPos.setX(globalPos.x() + textEdit->viewportMargins().left());
-
-    if (menu.actions().count() > 0) {
-        QAction *selectedItem = menu.exec(globalPos);
-        if (selectedItem) {
-            const QString text = selectedItem->data().toString();
-            const QString type = selectedItem->whatsThis();
-
-            if (text.isEmpty()) {
-                return;
-            }
-
-            if (type == QStringLiteral("autocomplete")) {
-                // overwrite the currently written word
-                QTextCursor c = textEdit->textCursor();
-                c.movePosition(QTextCursor::StartOfWord,
-                               QTextCursor::KeepAnchor);
-                c.insertText(text + QStringLiteral(" "));
-            } else {
-                textEdit->insertPlainText(text);
-            }
-        }
-    }
-}
-
-/**
- * Tries to find an equation in the current line and solves it
- *
- * @param returnValue
- * @return
- */
-bool MainWindow::solveEquationInNoteTextEdit(double &returnValue) {
-    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-
-    // get the text from the current cursor to the start of the line
-    c.movePosition(QTextCursor::StartOfBlock, QTextCursor::KeepAnchor);
-    QString text = c.selectedText();
-    qDebug() << __func__ << " - 'text': " << text;
-
-    QString equation = text;
-
-    // replace "," with "." to allow "," as coma
-    equation.replace(QLatin1Char(','), QLatin1Char('.'));
-
-    // remove leading list characters
-    equation.remove(QRegularExpression(QStringLiteral(R"(^\s*[\-*+] )")));
-
-    // match all numbers and basic operations like +, -, * and /
-    QRegularExpressionMatch match =
-        QRegularExpression(QStringLiteral(R"(([\d\.,+\-*\/\(\)\s]+)\s*=)"))
-            .match(equation);
-
-    if (!match.hasMatch()) {
-        if (equation.trimmed().endsWith(QChar('='))) {
-            showStatusBarMessage(
-                tr("No equation was found in front of the cursor"), 5000);
-        }
-
-        return false;
-    }
-
-    equation = match.captured(1);
-    qDebug() << __func__ << " - 'equation': " << equation;
-
-    QJSEngine engine;
-    // evaluate our equation
-    QJSValue result = engine.evaluate(equation);
-    double resultValue = result.toNumber();
-    qDebug() << __func__ << " - 'resultValue': " << resultValue;
-
-    // compensate for subtraction errors with 0
-    if ((resultValue < 0.0001) && (resultValue > 0)) {
-        resultValue = 0;
-    }
-
-    showStatusBarMessage(tr("Result for equation: %1 = %2")
-                             .arg(equation, QString::number(resultValue)),
-                         10000);
-
-    // check if cursor is after the "="
-    match = QRegularExpression(QStringLiteral("=\\s*$")).match(text);
-    if (!match.hasMatch()) {
-        return false;
-    }
-
-    returnValue = resultValue;
-    return true;
-}
-
-/**
- * Returns the text from the current cursor to the start of the word in the
- * note text edit
- *
- * @param withPreviousCharacters also get more characters at the beginning
- *                               to get characters like "@" that are not
- *                               word-characters
- * @return
- */
-QString MainWindow::noteTextEditCurrentWord(bool withPreviousCharacters) {
-    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-
-    // get the text from the current word
-    c.movePosition(QTextCursor::EndOfWord);
-    c.movePosition(QTextCursor::StartOfWord, QTextCursor::KeepAnchor);
-
-    QString text = c.selectedText();
-
-    if (withPreviousCharacters) {
-        static const QRegularExpression re(QStringLiteral("^[\\s\\n][^\\s]*"));
-        do {
-            c.movePosition(QTextCursor::Left, QTextCursor::KeepAnchor);
-            text = c.selectedText();
-        } while (!(re.match(text).hasMatch() || c.atBlockStart()));
-    }
-
-    return text.trimmed();
-}
-
-/**
- * Tries to find words that start with the current word in the note text edit
- *
- * @param resultList
- * @return
- */
-bool MainWindow::noteTextEditAutoComplete(QStringList &resultList) {
-    // get the text from the current cursor to the start of the word
-    const QString text = noteTextEditCurrentWord();
-    qDebug() << __func__ << " - 'text': " << text;
-
-    if (text.isEmpty()) {
-        return false;
-    }
-
-    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-    const QString noteText = textEdit->toPlainText();
-
-    // find all items that match our current word
-    resultList = noteText
-                     .split(QRegularExpression(
-                                QStringLiteral("[^\\w\\d]"),
-                                QRegularExpression::UseUnicodePropertiesOption),
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-                            QString::SkipEmptyParts)
-#else
-                            Qt::SkipEmptyParts)
-#endif
-                     .filter(QRegularExpression(
-                         QStringLiteral("^") + QRegularExpression::escape(text),
-                         QRegularExpression::CaseInsensitiveOption));
-
-    // we only want each word once
-    resultList.removeDuplicates();
-
-    // remove the text we already entered
-    resultList.removeOne(text);
-
-    if (resultList.count() == 0) {
-        return false;
-    }
-
-    qDebug() << __func__ << " - 'resultList': " << resultList;
-
-    return true;
+    activeNoteTextEdit()->onAutoCompleteRequested();
 }
 
 /**
@@ -10494,41 +9983,7 @@ void MainWindow::on_actionShare_note_triggered() {
  * Toggles the case of the word under the Cursor or the selected text
  */
 void MainWindow::on_actionToggle_text_case_triggered() {
-    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-    // Save positions to restore everything at the end
-    const int selectionStart = c.selectionStart();
-    const int selectionEnd = c.selectionEnd();
-    const int cPos = c.position();
-
-    QString selectedText = c.selectedText();
-    const bool textWasSelected = !selectedText.isEmpty();
-
-    // if no text is selected: automatically select the Word under the Cursor
-    if (selectedText.isEmpty()) {
-        c.select(QTextCursor::WordUnderCursor);
-        selectedText = c.selectedText();
-    }
-
-    // cycle text through lowercase, uppercase, start case, and sentence case
-    c.insertText(Utils::Misc::cycleTextCase(selectedText));
-
-    if (textWasSelected) {
-        // select the text again to maybe do another operation on it
-        // keep the original cursor position
-        if (cPos == selectionStart) {
-            c.setPosition(selectionEnd, QTextCursor::MoveAnchor);
-            c.setPosition(selectionStart, QTextCursor::KeepAnchor);
-        } else {
-            c.setPosition(selectionStart, QTextCursor::MoveAnchor);
-            c.setPosition(selectionEnd, QTextCursor::KeepAnchor);
-        }
-    } else {
-        // Just restore the Cursor Position if no text was selected
-        c.setPosition(cPos, QTextCursor::MoveAnchor);
-    }
-    // Restore the visible cursor
-    textEdit->setTextCursor(c);
+    activeNoteTextEdit()->toggleCase();
 }
 
 /**
@@ -11331,33 +10786,8 @@ void MainWindow::on_actionInsert_table_triggered() {
     delete (dialog);
 }
 
-/**
- * Inserts a block quote character or formats the selected text as block quote
- */
 void MainWindow::on_actionInsert_block_quote_triggered() {
-    auto *textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-    QString selectedText = c.selectedText();
-
-    if (selectedText.isEmpty()) {
-        c.insertText(QStringLiteral("> "));
-        textEdit->setTextCursor(c);
-    } else {
-        // this only applies to the start of the selected block
-        selectedText.replace(QRegularExpression(QStringLiteral("^")),
-                             QStringLiteral("> "));
-
-        // transform Unicode line endings
-        // this newline character seems to be used in multi-line selections
-        const QString newLine =
-            QString::fromUtf8(QByteArray::fromHex("e280a9"));
-        selectedText.replace(newLine, QStringLiteral("\n> "));
-
-        // remove the block quote if it was placed at the end of the text
-        selectedText.remove(QRegularExpression(QStringLiteral("> $")));
-
-        c.insertText(selectedText);
-    }
+    activeNoteTextEdit()->insertBlockQuote();
 }
 
 /**
@@ -11762,16 +11192,6 @@ void MainWindow::updateJumpToActionsAvailability()
     ui->actionJump_to_note_list_panel->setEnabled(ui->notesListFrame->isVisible());
     ui->actionJump_to_note_subfolder_panel->setEnabled(ui->noteSubFolderFrame->isVisible());
     ui->actionJump_to_tags_panel->setEnabled(ui->tagFrame->isVisible());
-}
-
-void MainWindow::noteTextEditResize(QResizeEvent *event) {
-    Q_UNUSED(event)
-    ui->noteTextEdit->setPaperMargins();
-}
-
-void MainWindow::encryptedNoteTextEditResize(QResizeEvent *event) {
-    Q_UNUSED(event)
-    ui->encryptedNoteTextEdit->setPaperMargins();
 }
 
 void MainWindow::on_actionShow_local_trash_triggered() {
@@ -12480,4 +11900,34 @@ QAction* MainWindow::reloadNoteFolderAction()
 QAction* MainWindow::newNoteAction()
 {
     return ui->action_Reload_note_folder;
+}
+
+QAction* MainWindow::insertTextLinkAction()
+{
+    return ui->actionInsert_text_link;
+}
+
+QAction *MainWindow::searchTextOnWebAction()
+{
+    return ui->actionSearch_text_on_the_web;
+}
+
+QAction *MainWindow::pasteImageAction()
+{
+    return ui->actionPaste_image;
+}
+
+QAction *MainWindow::autocompleteAction()
+{
+    return ui->actionAutocomplete;
+}
+
+QAction *MainWindow::splitNoteAtPosAction()
+{
+    return ui->actionSplit_note_at_cursor_position;
+}
+
+QList<QAction*> MainWindow::customTextEditActions()
+{
+    return _noteTextEditContextMenuActions;
 }
