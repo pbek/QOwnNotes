@@ -14,6 +14,7 @@
 #include <utility>
 
 #include "notefolder.h"
+#include "services/databaseservice.h"
 
 CloudConnection::CloudConnection()
     : name(QString()),
@@ -187,12 +188,20 @@ bool CloudConnection::fillFromQuery(const QSqlQuery &query) {
     this->name = query.value(QStringLiteral("name")).toString();
     this->serverUrl = query.value(QStringLiteral("server_url")).toString();
     this->username = query.value(QStringLiteral("username")).toString();
-    this->accountId = query.value(QStringLiteral("account_id")).toString();
     this->password = CryptoService::instance()->decryptToString(
         query.value(QStringLiteral("password")).toString());
     this->priority = query.value(QStringLiteral("priority")).toInt();
-    this->appQOwnNotesAPIEnabled = query.value(QStringLiteral(
-                                       "qownnotesapi_enabled")).toBool();
+
+    const int databaseVersion = DatabaseService::getAppData(
+                                    QStringLiteral("database_version")).toInt();
+
+    this->accountId = databaseVersion >= 41 ?
+                                            query.value(QStringLiteral("account_id")).toString() :
+                                            QStringLiteral("");
+
+    this->appQOwnNotesAPIEnabled = databaseVersion >= 34 ?
+                query.value(QStringLiteral("qownnotesapi_enabled")).toBool() :
+                true;
 
     return true;
 }
@@ -262,6 +271,47 @@ bool CloudConnection::store() {
 }
 
 /**
+ * Inserts or updates a CloudConnection object in the database (for the cloud connection migration)
+ */
+bool CloudConnection::storeMigratedCloudConnection() {
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    QSqlQuery query(db);
+
+    if (this->id > 0) {
+        query.prepare(
+            "UPDATE cloudConnection SET name = :name, server_url = :serverUrl, "
+            "username = :username, password = :password, "
+            "priority = :priority WHERE "
+            "id = :id");
+        query.bindValue(QStringLiteral(":id"), this->id);
+    } else {
+        query.prepare(
+            "INSERT INTO cloudConnection (name, server_url, username, "
+            "password, priority)"
+            " VALUES (:name, :serverUrl, :username, "
+            ":password, :priority)");
+    }
+
+    query.bindValue(QStringLiteral(":name"), this->name);
+    query.bindValue(QStringLiteral(":serverUrl"), this->serverUrl);
+    query.bindValue(QStringLiteral(":username"), this->username);
+    query.bindValue(QStringLiteral(":password"),
+                    CryptoService::instance()->encryptToString(this->password));
+    query.bindValue(QStringLiteral(":priority"), this->priority);
+
+    if (!query.exec()) {
+        // on error
+        qWarning() << __func__ << ": " << query.lastError();
+        return false;
+    } else if (this->id == 0) {
+        // on insert
+        this->id = query.lastInsertId().toInt();
+    }
+
+    return true;
+}
+
+/**
  * Checks if the current cloudConnection still exists in the database
  */
 bool CloudConnection::exists() {
@@ -301,7 +351,7 @@ bool CloudConnection::migrateToCloudConnections() {
     cloudConnection.setUsername(username);
     cloudConnection.setPassword(password);
     cloudConnection.setPriority(1);
-    cloudConnection.store();
+    cloudConnection.storeMigratedCloudConnection();
 
     return true;
 }

@@ -12,6 +12,7 @@ class CloudConnection {
     static CloudConnection fetch(int id, bool ignoreTableWarning = false);
     static CloudConnection cloudConnectionFromQuery(const QSqlQuery &query);
     bool store();
+    bool storeMigratedCloudConnection();
     friend QDebug operator<<(QDebug dbg,
                              const CloudConnection &CloudConnection);
     bool exists();
