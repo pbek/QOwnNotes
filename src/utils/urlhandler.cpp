@@ -42,17 +42,15 @@ void UrlHandler::openUrl(QString urlString)
         return;
     }
 
-    QUrl url = QUrl(urlString);
-    const bool isExistingNoteFileUrl = Note::fileUrlIsExistingNoteInCurrentNoteFolder(url);
-    const bool isNoteFileUrl = Note::fileUrlIsNoteInCurrentNoteFolder(url);
-    const QString scheme = url.scheme();
-
-    UrlHandler *handler = nullptr;
-
     bool urlWasNotValid = !QOwnNotesMarkdownTextEdit::isValidUrl(urlString);
     if (urlWasNotValid) {
         urlString = _mw->getCurrentNote().getFileURLFromFileName(urlString, true);
     }
+
+    QUrl url = QUrl(urlString);
+    const bool isExistingNoteFileUrl = Note::fileUrlIsExistingNoteInCurrentNoteFolder(url);
+    const bool isNoteFileUrl = Note::fileUrlIsNoteInCurrentNoteFolder(url);
+    const QString scheme = url.scheme();
 
     if (urlString.startsWith(QStringLiteral("file://..")) && !isExistingNoteFileUrl) {
         handleFileUrl(urlString);
@@ -67,7 +65,10 @@ void UrlHandler::openUrl(QString urlString)
     } else if (scheme == QStringLiteral("checkbox")) {
         handleCheckboxUrl(urlString);
     } else if (scheme == QStringLiteral("file") && urlWasNotValid) {
-        QDesktopServices::openUrl(QUrl(urlString));
+        auto res = QDesktopServices::openUrl(QUrl(urlString));
+        if (!res) {
+            qWarning() << "Failed to open url" << url << urlString;
+        }
     }
 }
 
