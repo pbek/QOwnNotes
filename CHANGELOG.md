@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.1.5
+- italic and bold formatted text in headlines will now have the same size as the headline
+  (for [#2369](https://github.com/pbek/QOwnNotes/pull/2369), thank you @Waqar144)
+
 ## 22.1.4
 - for notes with more than 200k characters the in-note search will now wait for 250ms
   before showing the search result, so users have time to enter more search characters
