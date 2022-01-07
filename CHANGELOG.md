@@ -2,12 +2,13 @@
 
 ## 22.1.5
 - italic and bold formatted text in headlines will now have the same size as the headline
-  (for [#2369](https://github.com/pbek/QOwnNotes/pull/2369), thank you @Waqar144)
+  (for [#2369](https://github.com/pbek/QOwnNotes/issues/2369), thank you @Waqar144)
+- opening images from the note edit was fixed (for [#2371](https://github.com/pbek/QOwnNotes/issues/2371), thank you @Waqar144)
 
 ## 22.1.4
 - for notes with more than 200k characters the in-note search will now wait for 250ms
   before showing the search result, so users have time to enter more search characters
-  (for [#2335](https://github.com/pbek/QOwnNotes/pull/2335), thank you @fnkhz)
+  (for [#2335](https://github.com/pbek/QOwnNotes/issues/2335), thank you @fnkhz)
 - some database warnings were fixed when running the application for the first time
 - the data path detection was improved for AppImages in portable mode
   (for [#2324](https://github.com/pbek/QOwnNotes/issues/2324#issuecomment-990642833))  
