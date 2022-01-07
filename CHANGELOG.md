@@ -4,6 +4,8 @@
 - italic and bold formatted text in headlines will now have the same size as the headline
   (for [#2369](https://github.com/pbek/QOwnNotes/issues/2369), thank you @Waqar144)
 - opening images from the note edit was fixed (for [#2371](https://github.com/pbek/QOwnNotes/issues/2371), thank you @Waqar144)
+- the spell-checker context menu of the note edit was integrated into the general
+  context menu (for [#1426](https://github.com/pbek/QOwnNotes/issues/1426), thank you @Waqar144)
 
 ## 22.1.4
 - for notes with more than 200k characters the in-note search will now wait for 250ms
