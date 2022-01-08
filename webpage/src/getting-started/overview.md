@@ -163,7 +163,7 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 - Support for **hierarchical note tagging** and **note subfolders**
 - Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
 - The **notes folder** can be **freely chosen** (multiple note folders can be used)
-- **Sub-string searching** of notes is possible and search results are highlighted in the notes
+- **Searching parts of words** in notes is possible and search results are highlighted in the notes
 - [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
 - [**Spellchecking**](../editor/spellchecking.md) support
 - **Portable mode** for carrying QOwnNotes around on USB sticks
