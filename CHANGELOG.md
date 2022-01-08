@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 22.1.6
+- support for Qt < 5.6 was dropped with version 22.1.5, that mainly means there will
+  be no repositories anymore for Ubuntu 16.04, Debian 8.0 and some older versions of
+  Fedora and openSUSE Linux (for [#2373](https://github.com/pbek/QOwnNotes/pull/2373))
+    - please use the [AppImage version of QOwnNotes](https://www.qownnotes.org/installation/appimage.html)
+      (64bit only) if you are still on one of those Linux distributions
+
 ## 22.1.5
 - italic and bold formatted text in headlines will now have the same size as the headline
   (for [#2369](https://github.com/pbek/QOwnNotes/issues/2369), thank you @Waqar144)

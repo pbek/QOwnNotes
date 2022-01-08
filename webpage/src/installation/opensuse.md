@@ -32,18 +32,6 @@ Also check that the chosen repo is the official `home:pbek:QOwnNotes` and not a 
 You need to choose the option to keep the repository after installation to get updates.
 :::
 
-## openSUSE 13.2
-
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
-
-```bash
-zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_13.2/home:pbek:QOwnNotes.repo
-zypper refresh
-zypper install qownnotes
-```
-
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_13.2)
-
 ## openSUSE Leap 15.4
 
 Run the following shell commands as root to add the repository and install QOwnNotes from there.
@@ -139,25 +127,6 @@ zypper install qownnotes
 ```
 
 [Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_42.2)
-
-## openSUSE Leap 42.1
-
-Run the following shell commands as root to trust the repository.
-
-```bash
-su -
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_42.1/repodata/repomd.xml.key
-```
-
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
-
-```bash
-zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_42.1/home:pbek:QOwnNotes.repo
-zypper refresh
-zypper install qownnotes
-```
-
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_42.1)
 
 ## openSUSE Tumbleweed
 

@@ -590,11 +590,8 @@ void MainWindow::triggerStartupMenuAction() {
 
     QAction *action = findAction(actionName);
 
-    // TODO: Maybe drop Debian 8 support
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     // use a single-shot timer to prevent crashes when called by SingleApplication::receivedMessage
     QTimer::singleShot(0, this, [this, actionName, action]() {
-#endif
         if (action != nullptr) {
             qDebug() << "Running menu action: " << actionName;
             action->trigger();
@@ -605,9 +602,7 @@ void MainWindow::triggerStartupMenuAction() {
                    "Did you spell it correctly?").arg(actionName),
                 "menu-action-not-found");
         }
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     });
-#endif
 }
 
 /**

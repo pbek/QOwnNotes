@@ -463,11 +463,7 @@ QVector<Tag> Tag::fetchAllOfNotes(const QVector<Note> &notes) {
 
     //get all tags for the notes list
     for (const Note &note : notes) {
-#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
-        notesTagList += Tag::fetchAllOfNote(note);
-#else
         notesTagList.append(Tag::fetchAllOfNote(note));
-#endif
     }
     //sort
     std::sort (notesTagList.begin(), notesTagList.end());

@@ -353,12 +353,10 @@ void tempLogMessageOutput(QtMsgType type, const QMessageLogContext &context,
             }
             Utils::Misc::logToFileIfAllowed(type, msg);
             break;
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
         case QtInfoMsg:
             fprintf(stderr, "%s", messageWithType.toLocal8Bit().constData());
             Utils::Misc::logToFileIfAllowed(type, message);
             break;
-#endif
         case QtWarningMsg:
         case QtCriticalMsg:
         case QtFatalMsg:

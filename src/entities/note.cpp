@@ -1518,13 +1518,8 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged) {
             // remove the old note file
             if (oldFile.exists() && oldFileInfo.isFile() &&
                 oldFileInfo.isReadable() && oldFile.remove()) {
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
                 qInfo() << QObject::tr("Renamed note-file was removed: %1")
                                .arg(oldFile.fileName());
-#else
-                qDebug() << __func__ << " - 'renamed note-file was removed': "
-                         << oldFile.fileName();
-#endif
 
             } else {
                 qWarning() << QObject::tr(

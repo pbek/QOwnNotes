@@ -346,13 +346,11 @@ void LogWidget::logMessageOutput(QtMsgType type,
 #endif
             logType = LogType::DebugLogType;
             break;
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
         case QtInfoMsg:
             fprintf(stderr, "Info: %s (%s:%u, %s)\n", localMsg.constData(),
                     context.file, context.line, context.function);
             logType = LogType::InfoLogType;
             break;
-#endif
         case QtWarningMsg:
             fprintf(stderr, "Warning: %s (%s:%u, %s)\n", localMsg.constData(),
                     context.file, context.line, context.function);

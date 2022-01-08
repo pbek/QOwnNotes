@@ -23,13 +23,7 @@
 #include <QMenu>
 #include <QMovie>
 #include <QProxyStyle>
-
-#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
-    #include <QRegExp>
-#else
-    #include <QRegularExpression>
-#endif
-
+#include <QRegularExpression>
 #include "utils/misc.h"
 
 class NoDottedOutlineForLinksStyle : public QProxyStyle {
@@ -106,20 +100,6 @@ bool NotePreviewWidget::eventFilter(QObject *obj, QEvent *event) {
 QStringList NotePreviewWidget::extractGifUrls(const QString &text) const {
 
     QSet<QString> urlSet;
-
-#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
-    QRegExp regex(R"(<img[^>]+src=\"(file:\/\/\/[^\"]+\.gif)\")",
-                         Qt::CaseInsensitive);
-
-    int pos = 0;
-    while (true) {
-        pos = regex.indexIn(text, pos);
-        if (pos == -1) break;
-        QString url = regex.cap(1);
-        urlSet.insert(url);
-        pos += regex.matchedLength();
-    }
-#else
     static const QRegularExpression regex(R"(<img[^>]+src=\"(file:\/\/\/[^\"]+\.gif)\")", QRegularExpression::CaseInsensitiveOption);
     int pos = 0;
 
@@ -132,8 +112,6 @@ QStringList NotePreviewWidget::extractGifUrls(const QString &text) const {
         urlSet.insert(url);
         pos += match.capturedLength();
     }
-
-#endif
 
 #if (QT_VERSION < QT_VERSION_CHECK(5, 14, 0))
     return urlSet.toList();

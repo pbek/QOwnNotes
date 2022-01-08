@@ -1541,11 +1541,7 @@ QString Utils::Misc::htmlspecialchars(QString text) {
  * @param text
  */
 void Utils::Misc::printInfo(const QString &text) {
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     qInfo() << text;
-#else
-    printf("%s\n", text.toLatin1().data());
-#endif
 }
 
 /**
@@ -2558,11 +2554,9 @@ QString Utils::Misc::logMsgTypeText(QtMsgType logType) {
         case QtMsgType::QtDebugMsg:
             type = QStringLiteral("Debug");
             break;
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
         case QtMsgType::QtInfoMsg:
             type = QStringLiteral("Info");
             break;
-#endif
         case QtMsgType::QtWarningMsg:
             type = QStringLiteral("Warning");
             break;

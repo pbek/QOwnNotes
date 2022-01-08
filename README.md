@@ -167,7 +167,7 @@ You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 ## Minimum software requirements
 
 - A desktop operating system, that supports [Qt](http://www.qt.io/)
-- Qt 5.3+
+- Qt 5.5+
 - gcc 4.8+
 
 ## Disclaimer

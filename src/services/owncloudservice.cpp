@@ -348,11 +348,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             QList<CalDAVCalendarData> calendarDataList =
                 parseCalendarData(data);
 
-            //#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
             //            qInfo() << "calendarDataList: " << calendarDataList;
-            //#else
-            //            qDebug() << "calendarDataList: " << calendarDataList;
-            //#endif
 
             if (settingsDialog != Q_NULLPTR) {
                 settingsDialog->refreshTodoCalendarList(calendarDataList);

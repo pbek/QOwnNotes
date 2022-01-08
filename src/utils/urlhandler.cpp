@@ -240,41 +240,21 @@ void UrlHandler::handleCheckboxUrl(QString urlString)
     const QUrl url(urlString);
 
     int index = url.host().midRef(1).toInt();
-#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
-    QRegExp re(R"((^|\n)\s*[-*+]\s\[([xX ]?)\])", Qt::CaseInsensitive);
-#else
     static const QRegularExpression re(R"((^|\n)\s*[-*+]\s\[([xX ]?)\])", QRegularExpression::CaseInsensitiveOption);
-#endif
     int pos = 0;
     while (true) {
-
-#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
-        pos = re.indexIn(text, pos);
-#else
         QRegularExpressionMatch match;
         pos = text.indexOf(re, pos, &match);
-#endif
         if (pos == -1)    // not found
             return;
         auto cursor = _mw->noteTextEdit()->textCursor();
-
-#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
-        int matchedLength = re.matchedLength();
-        cursor.setPosition(pos + re.matchedLength() - 1);
-#else
         int matchedLength = match.capturedLength();
         qDebug() << __func__ << "match.capturedLength(): " << match.capturedLength();
         cursor.setPosition(pos + match.capturedLength() - 1);
-#endif
         if (cursor.block().userState() ==
             MarkdownHighlighter::HighlighterState::List) {
             if (index == 0) {
-
-#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
-                auto ch = re.cap(2);
-#else
                 auto ch = match.captured(2);
-#endif
                 if (ch.isEmpty())
                     cursor.insertText(QStringLiteral("x"));
                 else {
