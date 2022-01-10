@@ -6,6 +6,8 @@
   Fedora and openSUSE Linux (for [#2373](https://github.com/pbek/QOwnNotes/pull/2373))
     - please use the [AppImage version of QOwnNotes](https://www.qownnotes.org/installation/appimage.html)
       (64bit only) if you are still on one of those Linux distributions
+- added a new editor color schema *OLED red* by @FireFragment
+  (for [#2375](https://github.com/pbek/QOwnNotes/issues/2375))
 
 ## 22.1.5
 - italic and bold formatted text in headlines will now have the same size as the headline
