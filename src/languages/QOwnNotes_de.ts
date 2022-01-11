@@ -8155,7 +8155,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
 <source>Only show attachments that are not used in notes</source>
-<translation>Nur Anhänge anzeigen, welche nicht in Notizen verwendet werden.</translation>
+<translation>Nur Anhänge anzeigen, die nicht in Notizen verwendet werden</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>

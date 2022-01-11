@@ -5,39 +5,39 @@
 ### Im Hauptfenster
 
 - <kbd>Strg</kbd> + <kbd>N</kbd> erstellt eine neue Notiz mit dem aktuellen Datum und der aktuellen Uhrzeit im Namen
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd> erstellt eine neue Notiz in einer neuen Registerkarte
-- Mit <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> können Sie nach Notizen suchen (im Namen der Notiz und ihres Inhalts).
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> creates a new note in a new tab
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
 - Mit <kbd>Alt</kbd> + <kbd>F</kbd> können Sie in allen Tags / Unterordnern nach Notizen suchen
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> wechselt zum vorherigen Arbeitsbereich
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> bearbeitet eine verschlüsselte Notiz
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> switches to the previous workspace
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> edits an encrypted note
 - <kbd>Alt</kbd> + <kbd>R</kbd> entfernt die aktuelle Note
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> sucht nach Updates
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> öffnet die Aufgabenliste
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> öffnet die aktuelle Notiz in einem externen Editor
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> öffnet die aktuelle Notiz in einer Ansicht
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> shows the current note in the file manager
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> aktiviert oder deaktiviert die Bearbeitung von Notizen
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> checks for updates
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> opens the todo list
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in an external editor
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in a view
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> shows the current note in the file manager
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> enables or disables editing of notes
 - <kbd>Alt</kbd> + <kbd>Up</kbd> springt zur vorherigen sichtbaren Notiz
-    - alternative Verknüpfung ist  <kbd>Ctrl</kbd> + <kbd>PgUp</kbd>
+    - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>Page Up</kbd>
 - <kbd>Alt</kbd> + <kbd>Down</kbd> springt zur nächsten sichtbaren Note
-    - alternative Verknüpfung ist <kbd>Ctrl</kbd> + <kbd>Seite nach Unten</kbd>
-- <kbd>Alt</kbd> + <kbd>Seite nach oben</kbd> springt zur vorherigen Notizenregisterkarte
-- <kbd>Alt</kbd> + <kbd>PgDn</kbd> springt zur nächsten Notizregisterkarte
+    - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>Page Down</kbd>
+- <kbd>Alt</kbd> + <kbd>Page Up</kbd> jumps to the previous note tab
+- <kbd>Alt</kbd> + <kbd>Page Dn</kbd> jumps to the next note tab
 - <kbd>Strg</kbd> + <kbd>W</kbd> schließt die aktuelle Notiz-Registerkarte
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> schaltet den ablenkungsfreien Modus um
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> toggles the distraction free mode
     - Sie können es auch mit <kbd>Esc</kbd> schließen
 - <kbd>Strg</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Text aus
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Abschrift aus
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> fügt Notizen, Bilder und HTML aus der Zwischenablage ein
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> prints the current note as markdown
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
 - <kbd>Strg</kbd> + <kbd>,</kbd> öffnet die Einstellungen
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> fügt einer Notiz ein neues Tag hinzu
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> lädt den aktuellen Notizordner neu
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> adds a new tag to a note
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> reloads the current note folder
 - <kbd>Strg</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> erlaubt Ihnen einen anderen Notizordner auswählen
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> lädt die Scripting-Engine neu
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> blendet die Hauptmenüleiste aus oder ein
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> erlaubt Ihnen nach Aktionen zu suchen
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> hides or shows the main menu bar
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you search for actions
 - <kbd>Strg</kbd> + <kbd>S</kbd> speichert geänderte Notizen manuell
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> öffnet das Skript-Repository-Dialogfeld
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> opens the Script repository dialog
 - <kbd>F4</kbd> springt zum Notizenbearbeitungsfeld
 - <kbd>F5</kbd> springt zur Notizenliste
 - <kbd>F6</kbd> springt zum Unterordnerfenster für Notizen
@@ -45,7 +45,7 @@
 - <kbd>F8</kbd> springt zum Navigationsbereich
 - <kbd>F10</kbd> aktiviert das Kontextmenü des aktuellen Widgets
 - <kbd>F11</kbd> schaltet den Vollbildmodus um
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopiert die Überschrift der aktuellen Notiz
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### In der Notizsuchleiste
 
@@ -62,7 +62,7 @@
 
 - <kbd>Strg</kbd> + <kbd>Klicken Sie</kbd> auf einen Link, um ihn zu öffnen
 - Mit<kbd> Strg</kbd> + <kbd>F</kbd> können Sie in der aktuellen Notiz suchen
-    - Verwenden Sie die Tasten <kbd>Auf</kbd> und <kbd>Ab</kbd> oder <kbd>F3</kbd> und <kbd>⇧</kbd> + <kbd>F3</kbd> Tasten, um zum vorherigen und nächsten Treffer zu springen
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
     - <kbd>Esc</kbd> schließt die Suchleiste
 - Mit <kbd>Strg</kbd> + <kbd>R</kbd> können Sie in der aktuellen Notiz suchen und ersetzen
 - <kbd>Strg</kbd> + <kbd>D</kbd> dupliziert die aktuelle Zeile oder den ausgewählten Text
@@ -70,44 +70,44 @@
 - <kbd>Alt</kbd> + <kbd>Rücktaste</kbd> löscht die aktuelle Zeile
 - <kbd>Strg</kbd> + <kbd>Rücktaste</kbd> löscht das aktuelle Wort
 - <kbd>Strg</kbd> + <kbd>L</kbd> öffnet einen Dialog zum Hinzufügen eines Textlinks (funktioniert auch bei markiertem Text)
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> öffnet einen Dialog zum Hinzufügen eines Notizlinks
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> opens a dialog to add note link
 - <kbd>Strg</kbd> + <kbd>T</kbd> fügt das aktuelle Datum im ISO 8601-Format ein
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> fügt ein Bild ein (das Bild wird in den Ordner `media` im aktuellen Notizenordner kopiert)
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> fügt einen Anhang ein (die Datei wird in den Ordner `Anhänge` des aktuellen Notizenordners kopiert)
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> fügt eine Tabelle ein
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> fügt an der aktuellen Position einen Codeblock ein
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> fügt an der aktuellen Position ein Blockzitat ein
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> inserts a table
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>C</kbd> inserts a code block at the current position
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> inserts a block quote at the current position
 - <kbd>Strg</kbd> + <kbd>B</kbd> formatiert den ausgewählten Text fett
 - <kbd>Strg</kbd> + <kbd>I</kbd> formatiert den ausgewählten Text kursiv
 - <kbd>Strg</kbd> + <kbd>U</kbd> formatiert den ausgewählten Text unterstrichen
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> streicht den ausgewählten Text durch
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> durchläuft die Buchstaben des ausgewählten Textes
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> strikes out the selected text
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
 - <kbd>Tab</kbd> rückt den ausgewählten Text ein (funktioniert auch für mehrere Zeilen)
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> hebt die Einrückung für den ausgewählten Text auf
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Tab</kbd> rückt das Listenelement nach einem ungeordneten Listenzeichen ein
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> hebt das Listenelement nach einem ungeordneten Listenzeichen auf
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
 - <kbd>Eingabe</kbd> in Listen erstellt ein neues Listenelement
 - <kbd>Alt</kbd> + <kbd>Links</kbd> springt im Notenverlauf ein Element rückwärts
     - <kbd>Alt</kbd> + <kbd>Rechts</kbd> springt im Notenverlauf ein Element vorwärts
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> setzt ein Notizenlesezeichen auf Lesezeichenplatz 1..9
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
 - <kbd>Strg</kbd> + <kbd>0..9</kbd> springt zum Notizen-Lesezeichen im Lesezeichen-Slot 0..9
 - <kbd>Strg</kbd> + <kbd>0..9</kbd> springt zum Notizenlesezeichen im Lesezeichen-Slot 0..9
 - <kbd>Strg</kbd> + <kbd>-</kbd> verringert die Schriftgröße des Notizentextes um einen Punkt
 - <kbd>Strg</kbd> + <kbd>0</kbd> setzt die Schriftgröße des Notizentextes zurück
 - Versucht, einfache Gleichungen wie `(4+5)*3=` vor dem Cursor zu lösen, vervollständigt Text automatisch oder öffnet URLs
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd>  fügt eine Überschrift aus dem Dateinamen der Notiz oben in der Notiz ein
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd>  teilt die aktuelle Notiz an der aktuellen Cursorposition in zwei Notizen auf
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> sucht im Web nach dem ausgewählten Text
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> searches for the selected text on the web
 - <kbd>Strg</kbd> + <kbd>Nach oben</kbd> scrollt den Inhalt nach oben
 - <kbd>Strg</kbd> + <kbd>Nach unten</kbd> scrollt den Inhalt nach unten
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>Nach unten</kbd> verschiebt die aktuelle Zeile nach unten
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>Nach oben</kbd> verschiebt die aktuelle Zeile nach oben
-- <kbd>⇧</kbd> + <kbd>Eingabe</kbd> fügt zwei Leerzeichen und ein Zeilenumbruchzeichen hinzu, um einen Markdown-Zeilenumbruch zu erzwingen
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> moves the current line down
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> moves the current line up
+- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### Im Notizvorschaufenster
 
 - Mit <kbd>Strg</kbd> + <kbd>F</kbd> können Sie in der aktuellen Notiz suchen
-    - Verwenden Sie die Tasten <kbd>Nach oben</kbd> und <kbd>Nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧</kbd> + <kbd> F3</kbd>, um zum vorherigen und nächsten Treffer zu springen
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
     - <kbd>Esc</kbd> schließt die Suchleiste
 
 ### In der Todo-Liste
@@ -122,39 +122,39 @@
 ### Im Hauptfenster
 
 - <kbd>⌘</kbd> + <kbd>N</kbd> erstellt eine neue Notiz mit dem aktuellen Datum und der aktuellen Uhrzeit im Namen
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd> erstellt eine neue Notiz in einer neuen Registerkarte
-- Mit <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> können Sie nach Notizen suchen (im Namen der Notiz und ihres Inhalts).
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> creates a new note in a new tab
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> erlaubt Ihnen in allen Tags / Unterordnern nach Notizen suchen
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> wechselt zum vorherigen Arbeitsbereich
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> bearbeitet eine verschlüsselte Notiz
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> switches to the previous workspace
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> edits an encrypted note
 - <kbd>Strg</kbd> + <kbd>R</kbd>  entfernt die aktuelle Note
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> sucht nach Updates
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> öffnet die Aufgabenliste
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> öffnet die aktuelle Notiz in einem externen Editor
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd>  öffnet die aktuelle Notiz in einer Ansicht
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd>  öffnet den Ordner der aktuellen Notiz im Finder
-- <kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> E </kbd> aktiviert oder deaktiviert die Bearbeitung von Notizen
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> checks for updates
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> opens the todo list
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in an external editor
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in a view
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> enables or disables editing of notes
 - <kbd>Strg</kbd> + <kbd>Nach oben</kbd> springt zur vorherigen sichtbaren Notiz
-    - Die alternative Verknüpfung lautet <kbd>⌘</kbd> + <kbd>PgUp</kbd>
+    - alternate shortcut is <kbd>⌘</kbd> + <kbd>Page Up</kbd>
 - <kbd>Strg</kbd> + <kbd>Nach unten</kbd>  springt zur nächsten sichtbaren Notiz
-    - die alternative Verknüpfung lautet  <kbd>⌘</kbd> + <kbd>PgDown</kbd>
-- <kbd>Alt</kbd> + <kbd>Seite nach oben</kbd> springt zur vorherigen Notizenregisterkarte
-- <kbd>Alt</kbd> + <kbd>Seite nach Unten</kbd> springt zur nächsten Notizenregisterkarte
+    - alternate shortcut is <kbd>⌘</kbd> + <kbd>Page Down</kbd>
+- <kbd>Alt</kbd> + <kbd>Page Up</kbd> jumps to the previous note tab
+- <kbd>Alt</kbd> + <kbd>Page Dn</kbd> jumps to the next note tab
 - <kbd>⌘</kbd> + <kbd>W</kbd> schließt die aktuelle Notizregisterkarte
-- <kbd>⌘</kbd> + <kbd>⇧ </kbd> + <kbd>D</kbd> schaltet den ablenkungsfreien Modus um
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> toggles the distraction free mode
     - Sie können es auch mit <kbd>Esc</kbd> schließen
 - <kbd>⌘</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Text
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Abschrift
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> prints the current note as markdown
 - <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>V</kbd>  fügt Notizen, Bilder und HTML aus der Zwischenablage ein
 - <kbd>⌘</kbd> + <kbd>,</kbd> öffnet die Einstellungen
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> fügt einer Notiz ein neues Schlagwort hinzu
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> lädt den aktuellen Notizordner neu
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> adds a new tag to a note
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> reloads the current note folder
 - <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>F</kbd> können Sie einen anderen Notizordner auswählen
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> lädt die Skript-Engine neu
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> blendet die Hauptmenüleiste aus oder ein
-- Mit <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> können Sie nach Aktionen suchen
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> hides or shows the main menu bar
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you search for actions
 - <kbd>⌘</kbd> + <kbd>S</kbd> speichert geänderte Notizen manuell
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> öffnet den Skript-Repository-Dialog
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> opens the Script repository dialog
 - <kbd>F4</kbd> springt zum Notizenbearbeitungsfeld
 - <kbd>F5</kbd> springt zur Notizenliste
 - <kbd>F6</kbd> springt zum Unterordnerfenster für Notizen
@@ -162,7 +162,7 @@
 - <kbd>F8</kbd> springt zum Navigationsbereich
 - <kbd>F10</kbd> aktiviert das Kontextmenü des aktuellen Widgets
 - <kbd>⌘</kbd> + <kbd>F11</kbd> schaltet den Vollbildmodus um
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopiert die Überschrift der aktuellen Notiz
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### In der Notizsuchleiste
 
@@ -179,7 +179,7 @@
 
 - <kbd>⌘</kbd> + <kbd>Klicken Sie</kbd> auf einen Link, um ihn zu öffnen
 - Mit <kbd>⌘</kbd> + <kbd>F</kbd> können Sie in der aktuellen Notiz suchen
-    - Verwenden Sie die Tasten <kbd> Auf </kbd> und <kbd> Ab </kbd> oder <kbd> F3 </kbd> und <kbd> ⇧ </kbd> + <kbd> F3 </kbd>, um zum  vorherigen und nächsten Treffer zu springen
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
     - <kbd>Esc</kbd> schließt die Suchleiste
 - Mit <kbd>⌘</kbd> + <kbd>R</kbd> können Sie in der aktuellen Notiz suchen und ersetzen
 - <kbd>⌘</kbd> + <kbd>D</kbd> dupliziert die aktuelle Zeile oder den ausgewählten Text
@@ -187,42 +187,42 @@
 - <kbd>⌘</kbd> + <kbd>Rücktaste</kbd> löscht die aktuelle Zeile
 - <kbd>Strg</kbd> + <kbd>Rücktaste</kbd> löscht das aktuelle Wort
 - <kbd>⌘</kbd> + <kbd>L</kbd> öffnet einen Dialog zum Hinzufügen eines Textlinks (funktioniert auch bei markiertem Text)
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> öffnet einen Dialog zum Hinzufügen eines Notizlinks
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> opens a dialog to add note link
 - <kbd> ⌘ </kbd> + <kbd> T </kbd> fügt das aktuelle Datum im ISO 8601-Format ein
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> fügt ein Bild ein (das Bild wird in den Ordner `media` im aktuellen Notizenordner kopiert)
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> fügt einen Anhang ein (Die Datei wird in den Ordner `attachments` im aktuellen Notizenordner kopiert.)
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> fügt eine Tabelle ein
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd>  fügt an der aktuellen Position einen Codeblock ein
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> fügt an der aktuellen Position ein Blockzitat ein
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> inserts a table
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>C</kbd> inserts a code block at the current position
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> inserts a block quote at the current position
 - <kbd>⌘</kbd> + <kbd>B</kbd> formatiert den ausgewählten Text fett
 - <kbd>⌘</kbd> + <kbd>I</kbd> formatiert den ausgewählten Text kursiv
 - <kbd>⌘</kbd> + <kbd>U</kbd> formatiert den ausgewählten Text unterstrichen
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> streicht den ausgewählten Text durch
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> durchläuft die Buchstaben des ausgewählten Textes
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> strikes out the selected text
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
 - <kbd>Tab</kbd> rückt den ausgewählten Text ein (funktioniert auch für mehrere Zeilen)
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> hebt die Einrückung für den ausgewählten Text auf
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Tab</kbd> rückt das Listenelement nach einem ungeordneten Listenzeichen ein
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> hebt das Listenelement nach einem ungeordneten Listenzeichen auf
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
 - <kbd>Eingabe</kbd> in Listen erstellt ein neues Listenelement
 - <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>Links</kbd> springt im Notizenverlauf ein Element rückwärts
     - <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>Rechts</kbd> springt im Notizenverlauf vorwärts
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> setzt ein Notizen-Lesezeichen auf Lesezeichenplatz 1..9
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
 - <kbd>⌘</kbd> + <kbd>0..9</kbd> springt zum Notizen-Lesezeichen im Lesezeichen-Slot 0..9
 - <kbd>⌘</kbd> + <kbd>+</kbd> erhöht die Schriftgröße des Notizentextes um einen Punkt
 - <kbd>⌘</kbd> + <kbd>-</kbd> verringert die Schriftgröße des Notizentextes um einen Punkt
 - <kbd>⌘</kbd> + <kbd>0</kbd> setzt die Schriftgröße des Notizentextes zurück
 - <kbd>⌘</kbd> + <kbd>Leerzeichen</kbd> versucht, einfache Gleichungen wie `(4+5)*3=` in der aktuellen Zeile vor dem Cursor zu lösen. Vervollständigt Text oder öffnet URLs
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> fügt eine Überschrift aus dem Dateinamen der Notiz oben in der Notiz ein
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> teilt die aktuelle Notiz an der aktuellen Cursorposition in zwei Notizen auf
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> sucht im Web nach dem ausgewählten Text
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> searches for the selected text on the web
 - <kbd>Strg</kbd> + <kbd>Nach oben</kbd> scrollt den Inhalt nach oben
 - <kbd>⌘</kbd> + <kbd>Nach unten</kbd> scrollt den Inhalt nach unten
-- <kbd>⇧</kbd> + <kbd>Eingabe</kbd> fügt zwei Leerzeichen und ein Zeilenumbruchzeichen hinzu, um einen Markdown-Zeilenumbruch zu erzwingen
+- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### Im Notizvorschaufenster
 
 - Mit <kbd>⌘</kbd> + <kbd>F</kbd> können Sie in der aktuellen Notiz suchen
-    - Verwenden Sie die Tasten <kbd>Auf</kbd> und <kbd>Ab</kbd> oder <kbd>F3</kbd> und <kbd>⇧</kbd> + <kbd>F3</kbd> Tasten, um zum vorherigen und nächsten Treffer zu springen
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
     - <kbd>Esc</kbd> schließt die Suchleiste
 
 ### In der Todo-Liste

@@ -11,7 +11,7 @@ features:
     title: Gardez le contrôle de vos notes
     details: Toutes les notes sont stockées sous forme de fichiers texte brut en Markdown sur votre ordinateur, pas de "verrouillage par le fournisseur". Utilisez des services de synchronisation comme Nextcloud pour synchroniser les notes sur différents appareils.
   - 
-    title: Small footprint
+    title: Faible empreinte
     details: Application native, optimisée pour la vitesse et consommant peu de ressources processeur et mémoire.
   - 
     title: Personnalisation

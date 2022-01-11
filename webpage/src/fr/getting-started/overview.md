@@ -160,7 +160,7 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 - Prise en charge du **balisage hiérarchique des notes** et **sous-dossiers de notes**
 - **Chiffrement** optionnel des notes. AES-256 est intégré mais vous pouvez également utiliser des méthodes de chiffrement personnalisées telles que **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) ou **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
 - Le **dossier de notes** peut être **librement choisi** (plusieurs dossiers de notes peuvent être utilisés)
-- **La recherche de sous-chaînes** de notes est possible et les résultats de la recherche sont mis en évidence dans les notes
+- **Searching parts of words** in notes is possible and search results are highlighted in the notes
 - [**Extension de navigateur**](browser-extension.md) pour **ajouter des notes à partir du texte sélectionné**, **faire des copies d'écran** ou **gérer vos favoris**
 - Aide à la [**vérification orthographique**](../editor/spellchecking.md)
 - **Mode portable** pour transporter QOwnNotes sur des clés USB

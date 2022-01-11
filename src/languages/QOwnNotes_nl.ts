@@ -1540,7 +1540,7 @@
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="62"/>
 <source>Copy link</source>
-<translation>Link másolása</translation>
+<translation>Kopieer link</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="70"/>
@@ -9155,12 +9155,12 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="472"/>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation>Uw oude QOwnNotes uitvoerbare bestand '%1' kon niet worden vervangen door het nieuwe bestand '%2'! Die moet je zelf vervangen.</translation>
+<translation>Uw oude QOwnNotes uitvoerbare bestand '%1' kon niet worden vervangen door het nieuwe bestand '%2'! Die moet U zelf vervangen.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation>Het app-bestand '%1' kan niet uitvoerbaar worden gemaakt! Je moet het zelf uitvoerbaar maken.</translation>
+<translation>Het app-bestand '%1' kan niet uitvoerbaar worden gemaakt! U moet het zelf uitvoerbaar maken.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="572"/>

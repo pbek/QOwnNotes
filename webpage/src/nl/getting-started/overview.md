@@ -160,7 +160,7 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 - Ondersteuning voor **hiërarchische tagging van notities** en **submappen van notities**
 - Optioneel **encryption** van opmerkingen (AES-256 is ingebouwd of u kunt aangepaste versleutelingsmethoden gebruiken zoals **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) of **PGP** ([encryptie-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
 - De **notitiemap** kan **vrij gekozen worden** (meerdere notitiemappen kunnen worden gebruikt)
-- **Substring zoeken** van notities is mogelijk en zoekresultaten worden gemarkeerd in de notities
+- **Searching parts of words** in notes is possible and search results are highlighted in the notes
 - [**Browserextensie**](browser-extension.md) om **notities uit de geselecteerde tekst toe te voegen**, **screenshots te maken** of **je bladwijzers te beheren**
 - [**Spellingcontrole**](../editor/spellchecking.md) ondersteuning
 - **Portable mode** om QOwnNotes mee te nemen op USB-sticks

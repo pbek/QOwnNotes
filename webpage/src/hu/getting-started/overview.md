@@ -160,7 +160,7 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 - A **hierarchikus jegyzetcímkézés** és a **jegyzetmappák** támogatása
 - Opcionális jegyzetek **titkosítása** (beépített AES-256 vagy használhat egyedi titkosítási módszereket, például **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) vagy **PGP** ([titkosítás-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
 - A **jegyzetek mappa** **szabadon választható** (több jegyzetmappa is használható)
-- A jegyzetek **alsztring keresése** lehetséges, és a keresési eredmények kiemelésre kerülnek a jegyzetekben
+- **Searching parts of words** in notes is possible and search results are highlighted in the notes
 - [**Böngészőbővítmény**](browser-extension.md): **jegyzetek hozzáadásához a kijelölt szöveghez**, **képernyőképek készítéséhez** vagy **könyvjelzők kezeléséhez**
 - [**Helyesírás-ellenőrzés**](../editor/spellchecking.md) támogatás
 - **Hordozható mód** a QOwnNotes hordozásához USB-meghajtókon

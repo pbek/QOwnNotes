@@ -8,6 +8,8 @@
       (64bit only) if you are still on one of those Linux distributions
 - added a new editor color schema *OLED red* by @FireFragment
   (for [#2375](https://github.com/pbek/QOwnNotes/issues/2375))
+- added more translation (thank you hansa2662, amirkbrpr, chocolatine, marterra,
+  bonnjalal, rawfreeamy, noureddin, mguerra)
 
 ## 22.1.5
 - italic and bold formatted text in headlines will now have the same size as the headline

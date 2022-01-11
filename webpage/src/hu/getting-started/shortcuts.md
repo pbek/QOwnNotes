@@ -5,39 +5,39 @@
 ### A főablakban
 
 - <kbd>Ctrl</kbd> + <kbd>N</kbd> új jegyzetet hoz létre az aktuális dátummal és idővel a névben
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd> új jegyzetet hoz létre egy új lapon
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> lehetővé teszi jegyzetek keresését (a jegyzet és tartalma nevében)
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> creates a new note in a new tab
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
 - <kbd>Alt</kbd> + <kbd>F</kbd> lehetővé teszi jegyzetek keresését (a jegyzet és tartalma nevében)
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> az előző munkaterületre vált
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> titkosított jegyzetet szerkeszt
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> switches to the previous workspace
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> edits an encrypted note
 - <kbd>Alt</kbd> + <kbd>R</kbd> eltávolítja az aktuális jegyzetet
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> ellenőrzi a frissítéseket
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> megnyitja a todo listát
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> megnyitja az aktuális jegyzetet egy külső szerkesztőben
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> megnyitja az aktuális jegyzetet egy külső szerkesztőben
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> az aktuális jegyzetet mutatja a fájlkezelőben
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> engedélyezi vagy letiltja a jegyzetek szerkesztését
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> checks for updates
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> opens the todo list
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in an external editor
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in a view
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> shows the current note in the file manager
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> enables or disables editing of notes
 - <kbd>Alt</kbd> + <kbd>Up</kbd> az előző látható jegyzetre ugrik
-    - alternatív parancsikon <kbd>Ctrl</kbd> + <kbd>PgUp</kbd>
+    - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>Page Up</kbd>
 - <kbd>Alt</kbd> + <kbd>Down</kbd> a következő látható jegyzethez ugrik
-    - alternatív parancsikon <kbd>Ctrl</kbd> + <kbd>PgDown</kbd>
-- <kbd>Alt</kbd> + <kbd>PgUp</kbd> az előző jegyzet fülre ugrik
-- <kbd>Alt</kbd> + <kbd>PgDn</kbd> a következő jegyzet fülre ugrik
+    - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>Page Down</kbd>
+- <kbd>Alt</kbd> + <kbd>Page Up</kbd> jumps to the previous note tab
+- <kbd>Alt</kbd> + <kbd>Page Dn</kbd> jumps to the next note tab
 - A <kbd>Ctrl</kbd> + <kbd>W</kbd> bezárja az aktuális jegyzetfület
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> a figyelemelterelés nélküli mód váltása
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> toggles the distraction free mode
     - bezárhatja az <kbd>Esc</kbd> gombbal is
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> a figyelemelterelés nélküli mód váltása
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> az aktuális hangjegyet markdownként kinyomtatja
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> bejegyzéseket, képeket és html fájlokat illeszt be a vágólapról
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> prints the current note as markdown
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
 - <kbd>Ctrl</kbd> + <kbd>,</kbd> megnyitja a beállításokat
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> új címkét ad hozzá a jegyzethez
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> újratölti az aktuális jegyzetmappát
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> adds a new tag to a note
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> reloads the current note folder
 - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> lets you select a different note folder
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> újratölti a parancsfájlmotort
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> elrejti vagy megjeleníti a fő menüsort
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> lehetővé teszi a műveletek keresését
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> hides or shows the main menu bar
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you search for actions
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> manuálisan menti a módosított jegyzeteket
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> megnyitja a szkripttár párbeszéd panelt
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> opens the Script repository dialog
 - <kbd>F4</kbd> a jegyzetszerkesztő panelhez ugrik
 - <kbd>F5</kbd> ugrik a jegyzetlistára
 - <kbd>F6</kbd> a jegyzet almappája panelre ugrik
@@ -45,7 +45,7 @@
 - <kbd>F8</kbd> a navigációs panelre ugrik
 - <kbd>F10</kbd> aktiválja az aktuális eszköz helyi menüjét
 - <kbd>F11</kbd> a teljes képernyős mód váltása
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> az aktuális jegyzet címsorát másolja
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### A jegyzet keresősávban
 
@@ -62,7 +62,7 @@
 
 - <kbd>Ctrl</kbd> + <kbd>Click</kbd> linkre kattintva nyissa meg
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> lets you search in the current note
-    - <kbd>Up</kbd> és <kbd>Down</kbd> billentyűkkel vagy <kbd>F3</kbd> és <kbd>⇧</kbd> + <kbd>F3</kbd> ugorhat az előző és a következő megegyezőkre
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
     - Az <kbd>Esc</kbd> bezárja a keresősávot
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> lehetővé teszi az aktuális jegyzet keresését és cseréjét
 - A <kbd>Ctrl</kbd> + <kbd>D</kbd> másolja az aktuális sort vagy a kijelölt szöveget
@@ -70,44 +70,44 @@
 - <kbd>Alt</kbd> + <kbd>Backspace</kbd> törli az aktuális sort
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> törli az aktuális szót
 - A <kbd>Ctrl</kbd> + <kbd>L</kbd> megnyit egy párbeszédpanelt szöveges hivatkozás hozzáadásához (a kiválasztott szövegen is működik)
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> megnyit egy párbeszédablakot a jegyzet link hozzáadásához
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> opens a dialog to add note link
 - <kbd>Ctrl</kbd> + <kbd>T</kbd> beszúrja az aktuális dátumot ISO 8601 formátumba
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> beszúr egy képet (a kép átmásolásra kerül az aktuális jegyzetek mappában található `media` mappába)
-- A <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> mellékletet illeszt be (a fájl át lesz másolva az aktuális jegyzetek `mellékletek` mappájába mappa)
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> beszúr egy táblázatot
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> kódblokkot szúr be az aktuális pozícióba
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> blokk idézetet szúr be az aktuális pozícióba
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> inserts a table
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>C</kbd> inserts a code block at the current position
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> inserts a block quote at the current position
 - <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> a kijelölt szöveget dőlt formázza
 - <kbd>Ctrl</kbd> + <kbd>U</kbd> formázza a kijelölt szöveget aláhúzással
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> kitörli a kijelölt szöveget
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> végigvezet a kiválasztott szöveg esetein
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> strikes out the selected text
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
 - <kbd>Tab</kbd> behúzza a kijelölt szöveget (több soron is működik)
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> behúzza a kijelölt szöveget
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Tab</kbd> egy rendezetlen lista karakter után behúzza a lista elemét
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> rendezetlen lista karakter után behúzza a lista elemét
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
 - <kbd>Return</kbd> listákban létrehoz egy új listaelemet
 - <kbd>Alt</kbd> + <kbd>Left</kbd> visszaugrik a jegyzettörténetbe
     - előreugrik a jegyzettörténetben
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> jegyzet könyvjelzőt állít be az 1..9 könyvjelző nyílásba
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
 - <kbd>Ctrl</kbd> + <kbd>0..9</kbd> ugrik a jegyzet könyvjelzőhöz a 0..9 könyvjelzőhelyen
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
 - <kbd>Ctrl</kbd> + <kbd>-</kbd> egy ponttal csökkenti a jegyzet szövegének betűméretét
 - <kbd>Ctrl</kbd> + <kbd>0</kbd> visszaállítja a jegyzet szövegének betűméretét
 - A <kbd>⌘</kbd> + <kbd>szóköz</kbd> megpróbál olyan egyszerű egyenleteket megoldani, mint `(4+5)*3=`a kurzor előtt, automatikusan kiegészíti a szöveget vagy megnyitja az URL-eket
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> címsort szúr be a jegyzet tetején lévő jegyzet fájlnévből
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> az aktuális jegyzetet két jegyzetre osztja a kurzor aktuális helyzetében
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> a kijelölt szöveget az interneten keresi
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> searches for the selected text on the web
 - <kbd>Ctrl</kbd> + <kbd>Up</kbd> felfelé görgeti a tartalmat
 - <kbd>Ctrl</kbd> + <kbd>Down</kbd> lefelé görgeti a tartalmat
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> lefelé mozgatja az aktuális sort
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Up</kbd> feljebb mozgatja az aktuális sort
-- <kbd>⇧</kbd> + <kbd>Return</kbd> két szóközt és egy újsor karaktert ad hozzá a markdown új sor kényszerítéséhez
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> moves the current line down
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> moves the current line up
+- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### A jegyzet előnézeti paneljén
 
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> lehetővé teszi az aktuális jegyzetben történő keresést
-    - <kbd>Up</kbd> és <kbd>Down</kbd> billentyűkkel vagy <kbd>F3</kbd> és <kbd>⇧</kbd> + <kbd>F3</kbd> ugorhat az előző és a következő megegyezőkre
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
     - Az <kbd>Esc</kbd> bezárja a keresősávot
 
 ### A Todo listában
@@ -122,39 +122,39 @@
 ### A főablakban
 
 - <kbd>⌘</kbd> + <kbd>N</kbd> új jegyzetet hoz létre az aktuális dátummal és idővel a névben
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd> új jegyzetet hoz létre egy új lapon
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> lehetővé teszi jegyzetek keresését (a jegyzet és tartalma nevében)
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> creates a new note in a new tab
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> lehetővé teszi jegyzetek keresését az összes címkében / almappában
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> az előző munkaterületre vált
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> titkosított jegyzetet szerkeszt
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> switches to the previous workspace
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> edits an encrypted note
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> eltávolítja az aktuális jegyzetet
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> ellenőrzi a frissítéseket
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> megnyitja a todo listát
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> megnyitja az aktuális jegyzetet egy külső szerkesztőben
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> megnyitja az aktuális jegyzetet egy külső szerkesztőben
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> megnyitja az aktuális jegyzet mappáját a Finderben
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> engedélyezi vagy letiltja a jegyzetek szerkesztését
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> checks for updates
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> opens the todo list
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in an external editor
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in a view
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> enables or disables editing of notes
 - <kbd>Ctrl</kbd> + <kbd>Up</kbd> az előző látható jegyzetre ugrik
-    - alternatív parancsikon <kbd>⌘</kbd> + <kbd>PgUp</kbd>
+    - alternate shortcut is <kbd>⌘</kbd> + <kbd>Page Up</kbd>
 - <kbd>Ctrl</kbd> + <kbd>Le</kbd> a következő látható jegyzethez ugrik
-    - alternatív parancsikon: <kbd>⌘</kbd> + <kbd>PgDown</kbd>
-- <kbd>Alt</kbd> + <kbd>PgUp</kbd> az előző jegyzet fülre ugrik
-- <kbd>Alt</kbd> + <kbd>PgDn</kbd> a következő jegyzet fülre ugrik
+    - alternate shortcut is <kbd>⌘</kbd> + <kbd>Page Down</kbd>
+- <kbd>Alt</kbd> + <kbd>Page Up</kbd> jumps to the previous note tab
+- <kbd>Alt</kbd> + <kbd>Page Dn</kbd> jumps to the next note tab
 - <kbd>⌘</kbd> + <kbd>W</kbd> bezárja az aktuális jegyzetfület
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> a figyelemelterelés nélküli módra váltás
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> toggles the distraction free mode
     - bezárhatja az <kbd>Esc</kbd> gombbal is
 - <kbd>⌘</kbd> + <kbd>P</kbd> az aktuális jegyzetet szövegként kinyomtatja
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> az aktuális jegyzetet markdownként kinyomtatja
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> prints the current note as markdown
 - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>V</kbd> beilleszti a jegyzeteket, képeket és html-t a vágólapról
 - <kbd>⌘</kbd> + <kbd>,</kbd> megnyitja a beállításokat
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> új címkét ad hozzá a jegyzethez
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> újratölti az aktuális jegyzetmappát
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> adds a new tag to a note
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> reloads the current note folder
 - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>F</kbd> segítségével kiválaszthat egy másik jegyzetmappát
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> újratölti a parancsfájlmotort
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> elrejti vagy megjeleníti a fő menüsort
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> lehetővé teszi a műveletek keresését
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> hides or shows the main menu bar
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you search for actions
 - <kbd>⌘</kbd> + <kbd>S</kbd> manuálisan menti a módosított jegyzeteket
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> megnyitja a szkripttár párbeszédpanelt
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> opens the Script repository dialog
 - <kbd>F4</kbd> a jegyzetszerkesztő panelre ugrik
 - <kbd>F5</kbd> ugrik a jegyzetlistára
 - <kbd>F6</kbd> a jegyzet almappája panelre ugrik
@@ -162,7 +162,7 @@
 - <kbd>F8</kbd> a navigációs panelre ugrik
 - <kbd>F10</kbd> aktiválja az aktuális eszköz helyi menüjét
 - <kbd>⌘</kbd> + <kbd>F11</kbd> a teljes képernyős mód váltása
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> az aktuális jegyzet címsorát másolja
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### A jegyzet keresősávban
 
@@ -179,7 +179,7 @@
 
 - <kbd>⌘</kbd> + <kbd>Click</kbd> linkre kattintva nyissa meg
 - <kbd>⌘</kbd> + <kbd>F</kbd> lehetővé teszi az aktuális jegyzetben történő keresést
-    - <kbd>Up</kbd> és <kbd>Down</kbd> billentyűkkel vagy <kbd>F3</kbd> és <kbd>⇧</kbd> + <kbd>F3</kbd> ugorhat az előző és a következő megegyezőkre
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
     - Az <kbd>Esc</kbd> bezárja a keresősávot
 - <kbd>⌘</kbd> + <kbd>R</kbd> lehetővé teszi az aktuális jegyzet keresését és cseréjét
 - A <kbd>⌘</kbd> + <kbd>D</kbd> másolja az aktuális sort vagy a kijelölt szöveget
@@ -187,42 +187,42 @@
 - <kbd>⌘</kbd> + <kbd>Backspace</kbd> törli az aktuális sort
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> törli az aktuális szót
 - A <kbd>⌘</kbd> + <kbd>L</kbd> megnyit egy párbeszédpanelt szöveges hivatkozás hozzáadásához (a kiválasztott szövegen is működik)
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> megnyit egy párbeszédablakot a jegyzet link hozzáadásához
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> opens a dialog to add note link
 - <kbd>⌘</kbd> + <kbd>T</kbd> beszúrja az aktuális dátumot ISO 8601 formátumba
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> beszúr egy képet (a kép átmásolásra kerül az aktuális jegyzetek mappában található `media` mappába)
-- A <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> mellékletet illeszt be (a fájl át lesz másolva az aktuális jegyzetek `mellékletek` mappájába mappa)
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> beszúr egy táblázatot
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> kódblokkot szúr be az aktuális pozícióba
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> blokk idézetet szúr be az aktuális pozícióba
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> inserts a table
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>C</kbd> inserts a code block at the current position
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> inserts a block quote at the current position
 - <kbd>⌘</kbd> + <kbd>B</kbd> a kijelölt szöveget félkövér formázza
 - <kbd>⌘</kbd> + <kbd>I</kbd> a kijelölt szöveget dőlt formázza
 - <kbd>⌘</kbd> + <kbd>U</kbd> formázza a kijelölt szöveget aláhúzással
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> kitörli a kijelölt szöveget
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> végigvezet a kiválasztott szöveg esetein
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> strikes out the selected text
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
 - <kbd>Tab</kbd> behúzza a kijelölt szöveget (több soron is működik)
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> behúzza a kijelölt szöveget
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Tab</kbd> rendezetlen lista karakter után behúzza a lista elemét
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> rendezetlen lista karakter után behúzza a lista elemét
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
 - <kbd>Return</kbd> listákban létrehoz egy új listaelemet
 - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Left</kbd> visszaugrik a kottatörténetbe
     - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Right</kbd> előreugrik a hangtörténetben
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> jegyzet könyvjelzőt állít be az 1..9 könyvjelző nyílásba
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
 - <kbd>⌘</kbd> + <kbd>0..9</kbd> springt zum Notiz-Lesezeichen auf Lesezeichen-Slot 0..9
 - <kbd>⌘</kbd> + <kbd>+</kbd> egy ponttal növeli a jegyzet szövegének betűméretét
 - <kbd>⌘</kbd> + <kbd>-</kbd> egy ponttal csökkenti a jegyzet szövegének betűméretét
 - <kbd>⌘</kbd> + <kbd>0</kbd> visszaállítja a jegyzet szövegének betűméretét
 - A <kbd>⌘</kbd> + <kbd> szóköz</kbd> olyan egyszerű egyenleteket próbál megfejteni, mint például a kurzor előtti aktuális sorban az `(4 + 5) * 3 =`, automatikusan kiegészíti a szöveget vagy megnyit URL-eket
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> címsort szúr be a jegyzet tetején lévő jegyzet fájlnévből
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> az aktuális hangot két jegyzetre osztja a kurzor aktuális helyzetében
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> a kijelölt szöveget az interneten keresi
+- <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> searches for the selected text on the web
 - <kbd>⌘</kbd> + <kbd>Up</kbd> felfelé görgeti a tartalmat
 - <kbd>⌘</kbd> + <kbd>Down</kbd> lefelé görgeti a tartalmat
-- <kbd>⇧</kbd> + <kbd>Return</kbd> két szóközt és egy újsor karaktert ad hozzá a markdown új sor kényszerítéséhez
+- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### A jegyzet előnézeti paneljén
 
 - <kbd>⌘</kbd> + <kbd>F</kbd> lehetővé teszi az aktuális jegyzetben történő keresést
-    - <kbd>Up</kbd> és <kbd>Down</kbd> billentyűkkel vagy <kbd>F3</kbd> és <kbd>⇧</kbd> + <kbd>F3</kbd> ugorhat az előző és a következő megegyezőkre
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
     - Az <kbd>Esc</kbd> bezárja a keresősávot
 
 ### A Todo listában

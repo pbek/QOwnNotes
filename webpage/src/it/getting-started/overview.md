@@ -160,7 +160,7 @@ Unisciti al nostro [Gruppo Telegram](https://t.me/QOwnNotes) per discutere, impa
 - Supporta l'**etichettatura gerarchica delle note** e **sottocartelle delle note**
 - **Cifratura** opzionale delle note. È disponibile AES-256 oppure puoi usare metodi di cifratura personalizzabili come **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) o **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
 - La **cartella note** può essere **scelta liberamente** (è possibile utilizzare più cartelle note)
-- La **ricerca di sotto-stringhe** di note è possibile e i risultati della ricerca sono evidenziati nelle note
+- **Searching parts of words** in notes is possible and search results are highlighted in the notes
 - [**Estensione del browser**](browser-extension.md) per **aggiungere note dal testo selezionato**, **catturare schermate** o **gestire i tuoi segnalibri**
 - Supporta il [**il controllo ortografico**](../editor/spellchecking.md)
 - **Modalità portatile** per portare in giro QOwnNotes su chiavette USB

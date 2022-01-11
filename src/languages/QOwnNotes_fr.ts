@@ -1538,17 +1538,17 @@
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="54"/>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Copier</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="62"/>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>Copier le lien</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="70"/>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>Réinitialiser le zoom</translation>
 </message>
 </context>
 <context>
@@ -9158,7 +9158,7 @@ Cela ne peut être annuler !</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation type="unfinished">The app file '%1' could not be made executable! You need to make it executable yourself.</translation>
+<translation>Le fichier app '%1' n'a pas pu être rendu exécutable ! Vous devez le rendre exécutable vous-même.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="572"/>

@@ -11,7 +11,7 @@ features:
     title: A jegyzetek tulajdonosa
     details: Az összes jegyzet egyszerű szöveges markdown-os fájlként kerül tárolásra a számítógépén, nincs "vendor lock-in" Használja a szinkronizálási szolgáltatásokat, például a Nextcloud -ot a jegyzetek szinkronizálásához az eszközök között.
   - 
-    title: Small footprint
+    title: Kis lábnyom
     details: Natív alkalmazás, amely a sebességre optimalizált, és kevés processzor- és memória -erőforrást igényel.
   - 
     title: Testreszabás

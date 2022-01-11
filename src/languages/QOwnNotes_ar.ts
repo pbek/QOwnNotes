@@ -23,7 +23,7 @@
 <message>
 <location filename="../dialogs/attachmentdialog.ui" line="14"/>
 <source>Insert attachment</source>
-<translation>إدراج مرفقات</translation>
+<translation>إدراج مرفق</translation>
 </message>
 <message>
 <location filename="../dialogs/attachmentdialog.ui" line="20"/>
@@ -64,7 +64,7 @@
 <message>
 <location filename="../dialogs/attachmentdialog.cpp" line="42"/>
 <source>Select file to insert</source>
-<translation>حدد ملف لإدراجه</translation>
+<translation>حدد ملفًا لإدراجه</translation>
 </message>
 <message>
 <location filename="../dialogs/attachmentdialog.cpp" line="142"/>
@@ -210,7 +210,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
 <source>Gujarati</source>
-<translation>الغوجاراتية</translation>
+<translation>الكجراتية</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
@@ -365,7 +365,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
 <source>Galician</source>
-<translation>الجاليكية</translation>
+<translation>الغاليسية</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
@@ -455,7 +455,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="101"/>
 <source>Lao</source>
-<translation>لاو</translation>
+<translation>اللاوية</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
@@ -520,7 +520,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
 <source>Occitan</source>
-<translation>الأوكيتانية</translation>
+<translation>الأكستانية</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="118"/>
@@ -610,7 +610,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="146"/>
 <source>Telugu</source>
-<translation>التيلجو</translation>
+<translation>التيلوغوية</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="147"/>
@@ -675,7 +675,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="160"/>
 <source>Zulu</source>
-<translation>الزولو</translation>
+<translation>الزولوية</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="294"/>
@@ -725,7 +725,7 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
 <source>Please select the Evernote enex file you want to import:</source>
-<translation>اختر رجاءاً ملف enex لـ Evernote الذي تريد استيراده:</translation>
+<translation>برجاء تحديد ملف enex من Evernote الذي تريد استيراده:</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
@@ -735,7 +735,7 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
 <source>Import images</source>
-<translation>استورد صوراً</translation>
+<translation>استيراد الصور</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
@@ -750,7 +750,7 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
 <source>Evernote enex file</source>
-<translation>ملف enex لـ Evernote</translation>
+<translation>ملف enex من Evernote</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
@@ -775,7 +775,7 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.cpp" line="636"/>
 <source>Basic attributes</source>
-<translation>السمات الأساسية</translation>
+<translation>الخصائص الأساسية</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.cpp" line="637"/>
@@ -790,7 +790,7 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.cpp" line="642"/>
 <source>Note attributes</source>
-<translation>ملاحظة السمات</translation>
+<translation>خصائص الملاحظة</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.cpp" line="643"/>
@@ -860,12 +860,12 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.cpp" line="685"/>
 <source>Application data</source>
-<translation>بيانات الطلب</translation>
+<translation>بيانات التطبيق</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.cpp" line="584"/>
 <source>Attribute</source>
-<translation>سمة</translation>
+<translation>خاصية</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.cpp" line="584"/>
@@ -989,12 +989,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished">Backspace:</translation>
+<translation>Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished">Keyword characters:</translation>
+<translation>حروف الكلمات الدلالية:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
@@ -1569,7 +1569,7 @@
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="70"/>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>إعادة تعيين التكبير</translation>
 </message>
 </context>
 <context>
@@ -1607,7 +1607,7 @@
 <message>
 <location filename="../dialogs/imagedialog.ui" line="30"/>
 <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-<translation>سيتم إدراج المسار أو عنوان url مباشرةً ، وستكون المسارات إلى الملفات مرتبطة بالملاحظة الحالية</translation>
+<translation>سيتم إدراج المسار أو الرابط مباشرةً، وستحوّل مسارات الملفات لجعلها بالنسبة إلى الملاحظة الحالية</translation>
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
@@ -1642,7 +1642,7 @@
 <message>
 <location filename="../dialogs/imagedialog.cpp" line="87"/>
 <source>Select image to insert</source>
-<translation>اختر صورة لإدراجها</translation>
+<translation>حدد صورة لإدراجها</translation>
 </message>
 </context>
 <context>
@@ -1739,7 +1739,7 @@
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="57"/>
 <source>Keep in mind that workspaces that demand that there is no central widget will not work properly if the central widget is enabled.</source>
-<translation>ضع في اعتبارك أن مساحات العمل التي تتطلب عدم وجود عنصر واجهة مركزية لن تعمل بشكل صحيح إذا تم تمكين عنصر واجهة المستخدم المركزي.</translation>
+<translation>تذكر أن مساحات العمل التي تتطلب عدم وجود أداة مركزية لن تعمل بشكل صحيح إذا كانت الأداة المركزية مفعلة.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="84"/>
@@ -2216,7 +2216,7 @@
 <message>
 <location filename="../mainwindow.cpp" line="7035"/>
 <source>Insert &amp;link</source>
-<translation>أدرج رابطاً</translation>
+<translation>إدراج رابط</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1469"/>
@@ -2246,12 +2246,12 @@
 <message>
 <location filename="../mainwindow.ui" line="119"/>
 <source>Find or create note sub folder</source>
-<translation>اعثر على مجلد ملاحظات فرعي أو أنشئه</translation>
+<translation>إيجاد أو إنشاء مجلد فرعي للملاحظات</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="196"/>
 <source>Find or create tag</source>
-<translation>ابحث عن وسم أو أنشئه</translation>
+<translation>إيجاد أو إنشاء وسم</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="292"/>
@@ -2261,7 +2261,7 @@
 <message>
 <location filename="../mainwindow.ui" line="306"/>
 <source>Search or create note</source>
-<translation>ابحث أو أوجد ملاحظة</translation>
+<translation>إيجاد أو إنشاء ملاحظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9275"/>
@@ -2441,12 +2441,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1539"/>
 <source>Insert current &amp;time</source>
-<translation>أدرج &amp;الوقت الحالي</translation>
+<translation>إدراج ال&amp;وقت الحالي</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1551"/>
 <source>Show &amp;Todo List</source>
-<translation>أظهر قائمة &amp;للإنجاز</translation>
+<translation>إظهار قائمة الـ&amp;مهام</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1563"/>
@@ -2471,7 +2471,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1608"/>
 <source>Insert &amp;image</source>
-<translation>أدرج &amp;صورة</translation>
+<translation>إدراج &amp;صورة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1611"/>
@@ -2511,17 +2511,17 @@
 <message>
 <location filename="../mainwindow.ui" line="1692"/>
 <source>Insert &amp;code block</source>
-<translation>أدرج فقرة &amp;كود</translation>
+<translation>إدراج كتلة &amp;كود</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1728"/>
 <source>&amp;Distraction free mode</source>
-<translation>&amp;النمط الخالي من المشوشات</translation>
+<translation>الو&amp;ضع الخالي من المشوشات</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1731"/>
 <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-<translation>النمط الخالي من المشوشات، يمكنك مغادرته من الزر على اليمين الأسفل</translation>
+<translation>الوضع الخالي من المشوشات، يمكنك مغادرته بالزر الذي بالأسفل على اليسار</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1742"/>
@@ -2628,7 +2628,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2148"/>
 <source>Find notes in all tags / subfolders</source>
-<translation>البحث عن الملاحظات في كافة العلامات/المجلدات الفرعية</translation>
+<translation>البحث عن الملاحظات في جميع الوسوم والمجلدات الفرعية</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2169"/>
@@ -2693,7 +2693,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2306"/>
 <source>Insert table</source>
-<translation>أدرج جدولاً</translation>
+<translation>إدراج جدول</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2318"/>
@@ -2762,7 +2762,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2435"/>
 <source>Insert attachment</source>
-<translation>أضف مرفقات</translation>
+<translation>إدراج مرفق</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2462"/>
@@ -2987,7 +2987,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2002"/>
 <source>Insert headline from note filename</source>
-<translation>أدرج عنواناً من اسم ملف الملاحظة</translation>
+<translation>إدراج عنوان رئيسي من اسم ملف الملاحظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2016"/>
@@ -3338,7 +3338,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="5745"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-<translation>لقد عطلت قوائم المهام.&lt;br /&gt;الرجاء التحقق من  &lt;strong&gt;تهيئة&lt;/strong&gt; المهام في الإعدادات!</translation>
+<translation>لقد عطلت قوائم المهام.&lt;br /&gt;برجاء التحقق من ضبط &lt;strong&gt;قوائم المهام&lt;/strong&gt; في الإعدادات!</translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="5999"/>
@@ -3452,18 +3452,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.cpp" line="7994"/>
 <location filename="../mainwindow.cpp" line="8064"/>
 <source>Inserting image</source>
-<translation>إدراج الصورة</translation>
+<translation>يتم إدراج الصورة</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7999"/>
 <location filename="../mainwindow.cpp" line="8068"/>
 <source>Done inserting image</source>
-<translation>انتهى إدراج الصورة</translation>
+<translation>تم إدراج الصورة</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8001"/>
 <source>Inserting attachment</source>
-<translation>إدراج المرفق</translation>
+<translation>يتم إدراج المرفق</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8006"/>
@@ -3868,7 +3868,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="5768"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-<translation>لم تقم باختيار أي قوائم للإنجاز. &lt;br /&gt; تحقق رجاءاً من تهييئات &lt;strong&gt;للإنجاز&lt;/strong&gt; في الإعدادات!</translation>
+<translation>لم تقم باختيار أي قوائم مهام.&lt;br /&gt; برجاء التحقق من ضبط &lt;strong&gt;قوائم المهام&lt;/strong&gt; في الإعدادات!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6830"/>
@@ -4176,7 +4176,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="5767"/>
 <source>No selected todo lists!</source>
-<translation>لم يتم اختيار أي قوائم للإنجاز!</translation>
+<translation>لم يتم تحديد أي قوائم مهام!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="627"/>
@@ -4266,17 +4266,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="1499"/>
 <source>Show %1 panel</source>
-<translation>أظهر لوحة %1</translation>
+<translation>إظهار لوحة %1</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1544"/>
 <source>Show %1</source>
-<translation>أظهر %1</translation>
+<translation>إظهار %1</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1896"/>
 <source>Leave distraction free mode</source>
-<translation>ترك وضع عدم الإلهاء.</translation>
+<translation>غادر الوضع الخالي من المشوشات</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2086"/>
@@ -4692,7 +4692,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../services/owncloudservice.cpp" line="1442"/>
 <location filename="../services/owncloudservice.cpp" line="1469"/>
 <source>Error while loading todo lists!</source>
-<translation>خطأ خلال تحميل قوائم للإنجاز!</translation>
+<translation>خطأ أثناء تحميل قوائم المهام!</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1443"/>
@@ -5073,7 +5073,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="203"/>
 <source>Regular expression</source>
-<translation>تعبير عادي</translation>
+<translation>تعبير نمطي</translation>
 </message>
 <message>
 <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
@@ -5161,7 +5161,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/qtexteditsearchwidget.ui" line="166"/>
 <source>Regular expression</source>
-<translation>تعبير عادي</translation>
+<translation>تعبير نمطي</translation>
 </message>
 <message>
 <location filename="../widgets/qtexteditsearchwidget.ui" line="187"/>
@@ -5606,7 +5606,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="745"/>
 <source>Click here to select your remote note path on your ownCloud server</source>
-<translation>انقر هنا لاختيار مسار ملاحظاتك البعيد على خادم ownCloud</translation>
+<translation>انقر هنا لاختيار مسار ملاحظاتك البعيدة على خادم ownCloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="602"/>
@@ -5616,7 +5616,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;تحتاج أيضا لأن يكون التطبيقان الأساسيان ownCloud &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; و &lt;span style=" font-weight:600;"&gt;Deleted Files&lt;/span&gt; مفعلين على خادم ownCloud الخاص بك (هذا هو الحال الافتراضي).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;تحتاج أيضا إلى أن يكون تطبيقا ownCloud الأساسيان &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; و &lt;span style=" font-weight:600;"&gt;Deleted Files&lt;/span&gt; مفعلين على خادم ownCloud الخاص بك (هذا هو الوضع الافتراضي).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1014"/>
@@ -5671,7 +5671,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="156"/>
 <source>Todo</source>
-<translation>للإنجاز</translation>
+<translation>قوائم المهام</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1920"/>
@@ -5931,7 +5931,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4376"/>
 <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-<translation>يسمح لك هذا الزر بمسح جميع الإعدادات، ومسح قاعدة بيانات قوائم للإنجاز المحلية ومغادرة كيو-أون-نوتس.</translation>
+<translation>يسمح لك هذا الزر بمسح جميع الإعدادات، ومسح قاعدة بيانات قوائم المهام المحلية، ومغادرة QOwnNotes.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4386"/>
@@ -6074,12 +6074,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="605"/>
 <source>&amp;Use as ownCloud path</source>
-<translation>استخدم كمسار ownCloud</translation>
+<translation>ا&amp;ستخدم كمسار ownCloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="644"/>
 <source>Please select your note folder on your ownCloud server:</source>
-<translation>اختر رجاءاً مجلّد الملاحظات على خادم ownCloud خاصتك:</translation>
+<translation>برجاء تحديد مجلد الملاحظات على خادم ownCloud الخاص بك:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="664"/>
@@ -6120,13 +6120,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
 <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>الرجاء تثبيت أحدث إصدار من 
-&lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; على الأقل الإصدار QOWNNOTESAPI_MIN_VERSION) على خادم ownCloud الخاص بك إذا كنت تريد أن يتمكن QOwnNotes من الوصول إلى الإصدارات السابقثة من الملاحظات والملاحظات في سلة المهملات.</translation>
+<translation>الرجاء تثبيت أحدث إصدار من &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (على الأقل الإصدار QOWNNOTESAPI_MIN_VERSION) على خادم ownCloud الخاص بك إذا كنت تريد أن يتمكن QOwnNotes من الوصول إلى نسخ الملاحظات والملاحظات المهملة.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="927"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ستظل في حاجة إلى &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;عميل مزامنةownCloud &lt;/span&gt;&lt;/a&gt; (أو عميل مزامنة حاسوبي آخر) لمزامنة ملاحظاتك!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ستظل في حاجة إلى &lt;a href="https://owncloud.org/"&gt;&lt;span style="font-weight:600"&gt;عميل مزامنة ownCloud&lt;/span&gt;&lt;/a&gt; (أو عميل مزامنة حاسوبي آخر) لمزامنة ملاحظاتك!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1047"/>
@@ -6210,7 +6209,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1849"/>
 <source>Todo settings</source>
-<translation>إعدادات قائمة المهام اليومية</translation>
+<translation>إعدادات قائمة المهام</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1855"/>
@@ -6225,17 +6224,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2065"/>
 <source>Select the calendars you want to use for the Todo list</source>
-<translation>حدد التقاويم التي تريد استخدامها لقائمة المهام اليومية</translation>
+<translation>حدد التقاويم التي تريد استخدامها لقائمة المهام</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2140"/>
 <source>Todo list settings</source>
-<translation>إعدادات قائمة المهام اليومية</translation>
+<translation>إعدادات قائمة المهام</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2146"/>
 <source>Saving an item also closes the Todo list</source>
-<translation>يؤدي حفظ العنصر أيضًا إلى إغلاق قائمة المهام اليومية</translation>
+<translation>يؤدي حفظ العنصر أيضًا إلى إغلاق قائمة المهام</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2258"/>
@@ -6300,7 +6299,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2456"/>
 <source>Galician</source>
-<translation>الجاليكية</translation>
+<translation>الغاليسية</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2467"/>
@@ -6644,7 +6643,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1862"/>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
-<translation type="unfinished">You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</translation>
+<translation>يمكنك الوصول إلى خادم ownCloud الخاص بك أو أي خادم CalDAV عام لإدارة قوائم مهامك.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2220"/>
@@ -6891,7 +6890,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6403"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
-<translation>يمكنك استخدام &lt;a href="%1"&gt;تطبيق وبّ QOwnNotes&lt;/a&gt; لإدراج الصور من محمولك إلى QOwnNotes على حاسوبك عبر الإنترنت.</translation>
+<translation>يمكنك استخدام &lt;a href="%1"&gt;تطبيق وبّ QOwnNotes&lt;/a&gt; لإضافة الصور من محمولك إلى QOwnNotes على حاسوبك عبر الإنترنت.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6440"/>
@@ -6991,7 +6990,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6040"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
-<translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
+<translation>قم بتفعيل المهملات المحلية للاحتفاظ بنسخة من الملاحظات المهملة</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6076"/>
@@ -7043,12 +7042,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6209"/>
 <source>Web socket server</source>
-<translation>خادم websocket</translation>
+<translation>خادم مقبس الوب</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6215"/>
 <source>Socket server port:</source>
-<translation>منفذ خادم socket:</translation>
+<translation>منفذ خادم المقبس:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6235"/>
@@ -7064,12 +7063,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6269"/>
 <source>Web socket server support</source>
-<translation>دعم خادم web socket</translation>
+<translation>دعم خادم مقبس الوب</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6275"/>
 <source>Enable socket server</source>
-<translation>تمكين خادم socket</translation>
+<translation>تفعيل خادم المقبس</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
@@ -7084,7 +7083,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5790"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-<translation>استخدم لوحة تحرير الملاحظات باعتبارها نافذة مركزية ثابتة يمكن تغيير حجمها إذا تم تغيير حجم النافذة أو اللوحات الأخرى</translation>
+<translation>استخدم لوحة تحرير الملاحظات باعتبارها أداة مركزية ثابتة يمكن تغيير حجمها إذا تم تغيير حجم النافذة أو اللوحات الأخرى</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5905"/>
@@ -7220,7 +7219,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5286"/>
 <source>Only use editor width setting in distraction free mode</source>
-<translation>استخدم فقط إعداد عرض المحرر في الوضع الخالي من التشتت</translation>
+<translation>استخدم إعداد عرض المحرر فقط في الوضع الخالي من المشوشات</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5606"/>
@@ -7237,7 +7236,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5875"/>
 <source>Hide 'Find or create tag' search</source>
-<translation>إخفاء بحث "إيجاد أو إنشاء وسم"</translation>
+<translation>إخفاء بحث «إيجاد أو إنشاء وسم»</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5662"/>
@@ -7263,7 +7262,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5728"/>
 <source>Hide 'Find or create note subfolder' search</source>
-<translation>إخفاء "إيجاد أو إنشاء مجلد فرعي للملاحظات"</translation>
+<translation>إخفاء بحث «إيجاد أو إنشاء مجلد فرعي للملاحظات»</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5735"/>
@@ -7350,12 +7349,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1942"/>
 <source>Calendar base url:</source>
-<translation>عنوان url لقاعدة التقويم:</translation>
+<translation>الرابط الأساسي للتقويم:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1964"/>
 <source>Please enter the CalDAV base url to your calendar.</source>
-<translation>أدخل رجاءاً عنوان Url لقاعدة CalDAV إلى تقويمك.</translation>
+<translation>برجاء إدخال الرابط الأساسي لتقويم CalDAV الخاص بك.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2034"/>
@@ -7525,7 +7524,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1967"/>
 <source>Your CalDAV calendar base url</source>
-<translation>عنوان URL لقاعدة تقويم CalDAV</translation>
+<translation>الرابط الأساسي لتقويم CalDAV</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1999"/>
@@ -7550,17 +7549,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2090"/>
 <source>Empty calendar item cache</source>
-<translation>أفرغ ذاكرة تخزين عناصر التقويم المؤقته</translation>
+<translation>أفرغ الذاكرة المؤقتة لعناصر التقويم</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2113"/>
 <source>Click here to reload the list of calendars from your calendar server.</source>
-<translation>انقر هنا لإعادة تحميل قائمة التقويمات من خادم التقويم خاصتك.</translation>
+<translation>انقر هنا لإعادة تحميل قائمة التقويمات من خادم التقويم الخاص بك.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2119"/>
 <source>&amp;Reload calendar list</source>
-<translation>أعد تحميل قائمة التقويمات</translation>
+<translation>أ&amp;عد تحميل قائمة التقويمات</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3028"/>
@@ -7601,7 +7600,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2130"/>
 <source>Ignore calendars that don't support todo items</source>
-<translation>تجاهل التقاويم التي لا تدعم عناصر للإنجاز</translation>
+<translation>تجاهل التقاويم التي لا تدعم قوائم المهام</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2962"/>
@@ -8133,7 +8132,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2330"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-<translation>هل تريد حقاً مسح قاعدة البيانات المحليّة؟ سيزيل هذا أيضاً إعدادات مجلدات ملاحظاتك وعناصر قوائم للإنجاز في الذاكرة المؤقته!</translation>
+<translation>هل تريد حقًا مسح قاعدة البيانات المحلية؟ سيزيل هذا أيضًا إعدادات مجلدات ملاحظاتك، وعناصر قوائم المهام التي في الذاكرة المؤقتة!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2333"/>
@@ -8651,7 +8650,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tabledialog.ui" line="14"/>
 <source>Insert table</source>
-<translation>أدرج جدولاً</translation>
+<translation>إدراج جدول</translation>
 </message>
 <message>
 <location filename="../dialogs/tabledialog.ui" line="24"/>
@@ -8777,7 +8776,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tododialog.ui" line="14"/>
 <source>Todo</source>
-<translation>للإنجاز</translation>
+<translation>قائمة المهام</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="78"/>
@@ -8809,7 +8808,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tododialog.ui" line="349"/>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>هذا لن يعمل مع العناصر الفرعية، لأنها قد تكون مختفية وراء العنصر الأب!</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="352"/>
@@ -8834,7 +8833,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tododialog.ui" line="292"/>
 <source>Reload the todo list from server</source>
-<translation>أعد تحميل قائمة للإنجاز من الخادم</translation>
+<translation>أعد تحميل قائمة المهام من الخادم</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="295"/>
@@ -8844,7 +8843,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tododialog.ui" line="260"/>
 <source>Search or create todo item</source>
-<translation>ابحث عن و أنشئ عنصر قائمة للإنجاز</translation>
+<translation>إيجاد أو إنشاء عنصر قائمة مهام</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="334"/>
@@ -8854,22 +8853,22 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tododialog.ui" line="342"/>
 <source>select your todo list</source>
-<translation>اختر قائمتك للإنجاز</translation>
+<translation>حدد قائمة مهامك</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="188"/>
 <source>Save the current todo item</source>
-<translation>احفظ عنصر للإنجاز الحالي</translation>
+<translation>احفظ عنصر قائمة المهام الحالي</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="125"/>
 <source>Save the current todo item and insert a link to it into the current note</source>
-<translation>احفظ عنصر للإنجاز الحالي وأدرج رابطاً له في الملاحظة الحالية</translation>
+<translation>احفظ عنصر قائمة المهام الحالي وأدرج رابطًا له في الملاحظة الحالية</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="134"/>
 <source>Import the current todo item as new note</source>
-<translation>استورد عنصر للإنجاز الحالي كملاحظة جديدة</translation>
+<translation>استورد عنصر قائمة المهام الحالي كملاحظة جديدة</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="130"/>
@@ -8879,12 +8878,12 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tododialog.ui" line="205"/>
 <source>Remove the current todo item</source>
-<translation>أزل عنصر قائمة للإنجاز الحالي</translation>
+<translation>أزل عنصر قائمة المهام الحالي</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="309"/>
 <source>Todo list items are being loaded from the server</source>
-<translation>يتم تحميل عناصر قائمة للإنجاز من الخادم</translation>
+<translation>يجري تحميل عناصر قائمة المهام من الخادم</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="145"/>
@@ -8909,13 +8908,14 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="621"/>
 <source>Remove todo item</source>
-<translation>أزل عنصر قائمة للإنجاز</translation>
+<translation>أزل عنصر قائمة المهام</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="622"/>
 <source>Remove the selected todo item?
 This cannot be undone!</source>
-<translation>هل تريد إزالة عنصر قائمة للإنجاز الحالي؟ لا يمكن التراجع عن هذا!</translation>
+<translation>هل تريد إزالة عنصر قائمة المهام الحالي؟
+لا يمكن التراجع عن هذا فيما بعد!</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="906"/>
@@ -9034,7 +9034,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
 <source>&amp;Insert</source>
-<translation>أدرج</translation>
+<translation>أ&amp;درج</translation>
 </message>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
@@ -9078,7 +9078,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/trashdialog.ui" line="14"/>
 <source>Trashed notes</source>
-<translation>الملاحظات في سلة المهملات</translation>
+<translation>الملاحظات المهملة</translation>
 </message>
 <message>
 <location filename="../dialogs/trashdialog.ui" line="55"/>
@@ -9130,8 +9130,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="191"/>
 <source>Delete selected trashed note on server?</source>
-<translation>حذف الملاحظة المحددة من المهملات على الخادم؟
-</translation>
+<translation>حذف الملاحظة المهملة المحددة على الخادم؟</translation>
 </message>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="213"/>
@@ -9142,7 +9141,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="214"/>
 <source>Deleting trashed note failed with status code: %1</source>
-<translation>فشل حذف الملاحظة من المهملات وكان رمز الحالة: %1</translation>
+<translation>تعذر حذف الملاحظة المهملة، ورمز الحالة: %1</translation>
 </message>
 </context>
 <context>
@@ -9446,7 +9445,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../services/webappclientservice.cpp" line="127"/>
 <source>Web app warning</source>
-<translation type="unfinished">Web app warning</translation>
+<translation>تحذير تطبيق الوب</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="139"/>
@@ -9456,7 +9455,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../services/webappclientservice.cpp" line="140"/>
 <source>Insert image received from QOwnNotes web application?</source>
-<translation>إدراج الصورة المستلمة من تطبيق وب QOwnNotes؟</translation>
+<translation>إدراج الصورة المستلمة من تطبيق وبّ QOwnNotes؟</translation>
 </message>
 </context>
 <context>
@@ -9528,7 +9527,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="24"/>
 <source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>تدوين الملاحظات في ملف نصي مجرد بصيغة ماركداون مع تكامل ownCloud</translation>
+<translation>تطبيق لتدوين الملاحظات كملفات نصية مجردة بصيغة ماركداون ومندمج مع ownCloud</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="88"/>
@@ -9599,7 +9598,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="319"/>
 <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-<translation>إذا كنت تريد أن تكون قادرًا على الوصول إلى الإصدارات السابقة لملاحظاتك والملاحظاتك المهملة على خادمك ownCloud الخاص بك، يمكنك ضبط QOwnNotes للقيام بذلك الآن أو يمكنك القيام بذلك لاحقًا.</translation>
+<translation>إذا أردت إمكانية الوصول إلى نسخ ملاحظاتك وملاحظاتك المهملة على خادم ownCloud الخاص بك، فيمكنك ضبط QOwnNotes لهذا. ويمكنك كذلك ضبطه لاحقًا.</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="349"/>

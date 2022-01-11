@@ -65,25 +65,3 @@ Si vous utilisez ce dépôt pour d'autres versions de Debian Linux, veuillez vou
 :::
 
 [Téléchargement direct](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)
-
-## Debian 8.0
-
-Exécutez les commandes shell suivantes pour approuver le dépôt.
-
-```bash
-wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0/Release.key -O - | sudo apt-key add -
-```
-
-Exécutez les commandes shell suivantes pour ajouter le dépôt et installer QOwnNotes à partir de là.
-
-```bash
-sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0/ /' >> /etc/apt/sources.list.d/qownnotes.list"
-sudo apt-get update
-sudo apt-get install qownnotes
-```
-
-::: tip
-Si vous utilisez ce dépôt pour d'autres versions de Debian Linux, veuillez vous assurer que vous avez installé **Qt version 5.3** ou plus récent.
-:::
-
-[Téléchargement direct](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0)

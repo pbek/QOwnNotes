@@ -160,7 +160,7 @@
 - Soporte para **etiquetado jerárquico de notas** y **subcarpetas de notas**
 - **Cifrado** opcional de notas, (AES-256 está integrado o puede utilizar métodos de cifrado personalizados como **[ Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) o **PGP** ([encriptación-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
 - La **carpeta de notas** se puede **elegir libremente** (se pueden utilizar varias carpetas de notas)
-- **La búsqueda de subcadena** de notas es posible y los resultados de la búsqueda se resaltan en las notas
+- **Searching parts of words** in notes is possible and search results are highlighted in the notes
 - [**Extensión del navegador**](browser-extension.md) para **agregar notas del texto seleccionado**, **hacer capturas de pantalla** o **administrar sus marcadores**
 - <0 Soporte de corrección ortográfica</strong></a>
 - **Modo portátil** para llevar QOwnNotes en memorias USB
