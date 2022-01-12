@@ -44,3 +44,13 @@ You can install it with:
 ```shell
 choco install qownnotes
 ```
+
+## Scoop
+
+You can also use Scoop to install QOwnNotes (located in the Extras bucket). In case of using Scoop, QOwnNotes will work in portable mode.
+
+```shell
+scoop bucket add extras
+scoop update
+scoop install qownnotes
+```
