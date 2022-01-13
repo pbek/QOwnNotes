@@ -18,7 +18,7 @@
     "@vuejs-community/vue-filter-date-parse": "^1.1.5",
     "@vuepress/plugin-back-to-top": "^1.6.0",
     "@vuepress/plugin-medium-zoom": "^1.6.0",
-    "markdown-it": "^12.0.1",
+    "markdown-it": "^12.3.2",
     "markdown-it-meta": "^0.0.1",
     "vuepress": "^1.8.0",
     "vuepress-plugin-canonical": "^1.0.0",
