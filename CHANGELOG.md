@@ -2,6 +2,7 @@
 
 ## 22.1.7
 - a crash when correcting a misspelled word was fixed (for [#2377](https://github.com/pbek/QOwnNotes/issues/2377), thank you @Waqar144)
+- added more translation (thank you amirkbrpr, noureddin, mguerra, marterra)
 
 ## 22.1.6
 - support for Qt < 5.6 was dropped with version 22.1.5, that mainly means there will

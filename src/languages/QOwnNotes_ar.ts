@@ -2720,7 +2720,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2353"/>
 <source>Copy note headline</source>
-<translation>نسخ العنوان الرئيسي للملاحظة</translation>
+<translation>نسخ عنوان الملاحظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2365"/>
@@ -3751,7 +3751,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="12936"/>
 <source>Note headline '%1' was copied to the clipboard</source>
-<translation>تم نسخ عنوان الملاحظة '%1' إلى الحافظة</translation>
+<translation>تم نسخ عنوان الملاحظة «%1» إلى الحافظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="13030"/>
@@ -5749,7 +5749,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="252"/>
 <source>Shortcuts</source>
-<translation>اختصارات</translation>
+<translation>الاختصارات</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4640"/>
@@ -6628,7 +6628,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="864"/>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-<translation type="unfinished">You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</translation>
+<translation>يمكنك الوصول إلى خادم ownCloud الخاص بك من داخل التطبيق، مثلا لإدارة الملاحظات المهملة ونسخ الملاحظات أو لمشاركة الملاحظات. هذا التكامل لا يشمل مزامنة ملفات الملاحظات؛ لا تزال في حاجة إلى تثبيت عميل مزامنة ownCloud لمزامنة الملفات.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1431"/>
@@ -6885,7 +6885,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6363"/>
 <source>Note name for adding new commands</source>
-<translation type="unfinished">Note name for adding new commands</translation>
+<translation>اسم الملاحظة لإضافة أوامر جديدة</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6403"/>
@@ -9527,7 +9527,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="24"/>
 <source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>تطبيق لتدوين الملاحظات كملفات نصية مجردة بصيغة ماركداون ومندمج مع ownCloud</translation>
+<translation>تطبيق لتدوين الملاحظات كملفات نصية مجردة بصيغة ماركداون ويتكامل مع ownCloud</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="88"/>
