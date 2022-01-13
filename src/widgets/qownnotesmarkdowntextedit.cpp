@@ -1170,9 +1170,11 @@ QMenu *QOwnNotesMarkdownTextEdit::spellCheckContextMenu(QPoint pos)
         suggestionsAction->setEnabled(false);
     } else {
         for (const QString& rep : reps) {
-            menu->addAction(rep, this, [rep, this, &cursor](){
-                cursor.insertText(rep);
-                setTextCursor(cursor);
+            menu->addAction(rep, this, [rep, this, cursor]() mutable {
+                if (!cursor.isNull()) {
+                    cursor.insertText(rep);
+                    setTextCursor(cursor);
+                }
             });
         }
     }
