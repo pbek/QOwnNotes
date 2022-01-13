@@ -22,7 +22,7 @@
 - <kbd>Alt</kbd> + <kbd>Down</kbd> jumps to the next visible note
     - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>Page Down</kbd>
 - <kbd>Alt</kbd> + <kbd>Page Up</kbd> jumps to the previous note tab
-- <kbd>Alt</kbd> + <kbd>Page Dn</kbd> jumps to the next note tab
+- <kbd>Alt</kbd> + <kbd>Page Down</kbd> jumps to the next note tab
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> closes the current note tab
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> toggles the distraction free mode
     - you can also close it with <kbd>Esc</kbd>
@@ -143,7 +143,7 @@
 - <kbd>Ctrl</kbd> + <kbd>Down</kbd> jumps to the next visible note
     - alternate shortcut is <kbd>⌘</kbd> + <kbd>Page Down</kbd>
 - <kbd>Alt</kbd> + <kbd>Page Up</kbd> jumps to the previous note tab
-- <kbd>Alt</kbd> + <kbd>Page Dn</kbd> jumps to the next note tab
+- <kbd>Alt</kbd> + <kbd>Page Down</kbd> jumps to the next note tab
 - <kbd>⌘</kbd> + <kbd>W</kbd> closes the current note tab
 - <kbd>⌘</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> toggles the distraction free mode
     - you can also close it with <kbd>Esc</kbd>
