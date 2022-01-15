@@ -79,11 +79,12 @@ void NavigationWidget::onItemClicked(QTreeWidgetItem *current, int column) {
 /**
  * Parses a text document and builds the navigation tree for it
  */
-void NavigationWidget::parse(const QTextDocument *document) {
+void NavigationWidget::parse(const QTextDocument *document, int textCursorPosition) {
     const QSignalBlocker blocker(this);
     Q_UNUSED(blocker)
 
     setDocument(document);
+    _latestTextCursorPosition = textCursorPosition;
 
     const QFuture<QVector<Node>> future =
         QtConcurrent::run(&NavigationWidget::parseDocument, document);
@@ -114,9 +115,60 @@ QVector<Node> NavigationWidget::parseDocument(
     return nodes;
 }
 
+void NavigationWidget::selectItemForCursorPosition(int position)
+{
+    if (_parseFutureWatcher->isRunning()) {
+        _latestTextCursorPosition = position;
+        return;
+    }
+
+    int itemIndex = findItemIndexforCursorPosition(position);
+
+    if (itemIndex < 0) {
+        blockSignals(true);
+        setCurrentItem(nullptr);
+        blockSignals(false);
+        return;
+    }
+
+    QTreeWidgetItemIterator it(this);
+    it += itemIndex;
+
+    blockSignals(true);
+    setCurrentItem(*it);
+    blockSignals(false);
+}
+
+
+int NavigationWidget::findItemIndexforCursorPosition(int position) const
+{
+    int i = 0;
+    int j = _navigationTreeNodes.size() - 1;
+    int mid = (i + j) / 2;
+
+    while (i < j) {
+        const auto midPos = _navigationTreeNodes.at(mid).pos;
+        if (position < midPos) {
+            j = mid - 1;
+        } else if (position > midPos) {
+            i = mid + 1;
+        } else {
+            break;
+        }
+        mid = (i + j) / 2;
+    }
+
+    if (_navigationTreeNodes.at(mid).pos > position) {
+        --mid;
+    }
+
+    return mid;
+}
+
 void NavigationWidget::onParseCompleted() {
     QVector<Node> nodes = this->_parseFutureWatcher->result();
     if (_navigationTreeNodes == nodes) return;
+
     _navigationTreeNodes = std::move(nodes);
 
     clear();
@@ -149,6 +201,7 @@ void NavigationWidget::onParseCompleted() {
         _lastHeadingItemList[elementType] = item;
     }
     expandAll();
+    selectItemForCursorPosition(_latestTextCursorPosition);
 }
 
 /**
