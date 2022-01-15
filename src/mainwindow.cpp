@@ -3671,6 +3671,14 @@ bool MainWindow::jumpToNoteSubFolder(int noteSubFolderId) {
     return false;
 }
 
+bool MainWindow::selectNavigationItemAtPosition(int position)
+{
+    if (ui->navigationWidget->isVisible()) {
+        return ui->navigationWidget->selectItemAtPosition(position);
+    }
+    return false;
+}
+
 QString MainWindow::selectOwnCloudNotesFolder() {
     QString path = this->notesPath;
 

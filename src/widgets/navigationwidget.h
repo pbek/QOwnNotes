@@ -15,6 +15,7 @@
 
 #include <QFutureWatcher>
 #include <QTreeWidget>
+#include <QMap>
 
 class QTextDocument;
 class QTreeWidgetItem;
@@ -41,6 +42,8 @@ class NavigationWidget : public QTreeWidget {
     void setDocument(const QTextDocument *document);
     static QVector<Node> parseDocument(const QTextDocument *const document);
 
+    bool selectItemAtPosition(int position);
+
    private slots:
     void onCurrentItemChanged(QTreeWidgetItem *current,
                               QTreeWidgetItem *previous);
@@ -55,6 +58,7 @@ class NavigationWidget : public QTreeWidget {
     QHash<int, QTreeWidgetItem *> _lastHeadingItemList;
     QFutureWatcher<QVector<Node>> *_parseFutureWatcher;
     QVector<Node> _navigationTreeNodes;
+    QMap<int, QTreeWidgetItem *> _positionItemMap;
 
     QTreeWidgetItem *findSuitableParentItem(int elementType) const;
 };

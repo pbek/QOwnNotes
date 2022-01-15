@@ -114,9 +114,27 @@ QVector<Node> NavigationWidget::parseDocument(
     return nodes;
 }
 
+bool NavigationWidget::selectItemAtPosition(int position)
+{
+    if (!_positionItemMap.contains(position)) {
+        return false;
+    }
+
+    blockSignals(true);
+
+    const auto item = _positionItemMap[position];
+    setCurrentItem(item);
+
+    blockSignals(false);
+
+    return true;
+}
+
 void NavigationWidget::onParseCompleted() {
     QVector<Node> nodes = this->_parseFutureWatcher->result();
     if (_navigationTreeNodes == nodes) return;
+
+    _positionItemMap.clear();
     _navigationTreeNodes = std::move(nodes);
 
     clear();
@@ -132,6 +150,8 @@ void NavigationWidget::onParseCompleted() {
         item->setToolTip(
             0,
             tr("headline %1").arg(elementType - MarkdownHighlighter::H1 + 1));
+
+        _positionItemMap.insert(pos, item);
 
         // attempt to find a suitable parent item for the element type
         QTreeWidgetItem *lastHigherItem = findSuitableParentItem(elementType);
