@@ -124,18 +124,15 @@ void NavigationWidget::selectItemForCursorPosition(int position)
 
     int itemIndex = findItemIndexforCursorPosition(position);
 
-    if (itemIndex < 0) {
-        blockSignals(true);
-        setCurrentItem(nullptr);
-        blockSignals(false);
-        return;
+    QTreeWidgetItem *itemToSelect{nullptr};
+    if (itemIndex >= 0) {
+        QTreeWidgetItemIterator it(this);
+        it += itemIndex;
+        itemToSelect = *it;
     }
 
-    QTreeWidgetItemIterator it(this);
-    it += itemIndex;
-
     blockSignals(true);
-    setCurrentItem(*it);
+    setCurrentItem(itemToSelect);
     blockSignals(false);
 }
 
