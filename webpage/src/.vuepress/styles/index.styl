@@ -27,9 +27,27 @@ kbd
 .v-subheader.blog
   padding: 0
 
+code
+  direction: ltr
+
+div.line-numbers-mode
+  /* fix the direction of the content in code blocks */
+  direction: ltr
+  /* let the code not touch the right edge of the block */
+  padding-right: 1rem
+
 // add RTL styles
 // taken from: https://github.com/abbasifard/vuepress-rtl/blob/master/src/rtl.styl
 html:lang(fa)
+  div.line-numbers-wrapper
+    /* fix the placement of the line numbers */
+    left: 0
+
+  .page-nav > .inner > .prev { float: right }
+  .page-nav > .inner > .next { float: left  }
+  .page-nav > .inner > .prev:before { content: '→' }
+  .page-nav > .inner > .next:after  { content: '←' }
+
   a.sidebar-link
     border-left medium none color
     border-right 0.25rem solid transparent
