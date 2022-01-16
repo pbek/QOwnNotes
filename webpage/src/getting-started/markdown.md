@@ -191,7 +191,7 @@ cd Notes
 ```
 ~~~
 
-Currently supported languages (and code block identifiers) are:
+Currently, supported languages (and code block identifiers) are:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -229,7 +229,7 @@ Currently supported languages (and code block identifiers) are:
 
 Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
-```markdown
+~~~markdown
 Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
@@ -246,7 +246,7 @@ You can also use inline Markdown.
 | --- | --- | --- |
 | *Still* | `renders` | **nicely** |
 | 1 | 2 | 3 |
-```
+~~~
 
 ::: tip
 Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you creating tables.
