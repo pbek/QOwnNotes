@@ -249,7 +249,7 @@ You can also use inline Markdown.
 ~~~
 
 ::: tip
-Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you creating tables.
+Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you to create tables.
 You can even import CSV files in that dialog.
 
 Use <kbd>Ctrl + Space</kbd> inside a markdown table to automatically format it.
