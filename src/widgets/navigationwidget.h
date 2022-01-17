@@ -58,7 +58,7 @@ class NavigationWidget : public QTreeWidget {
     QHash<int, QTreeWidgetItem *> _lastHeadingItemList;
     QFutureWatcher<QVector<Node>> *_parseFutureWatcher;
     QVector<Node> _navigationTreeNodes;
-    int _latestTextCursorPosition;
+    int _cursorPosition;
 
     QTreeWidgetItem *findSuitableParentItem(int elementType) const;
     int findItemIndexforCursorPosition(int position) const;

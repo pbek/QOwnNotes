@@ -72,12 +72,14 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     connect(this, &QOwnNotesMarkdownTextEdit::zoomOut, this, [this](){
         onZoom(/*in=*/ false);
     });
-    connect(this, &QOwnNotesMarkdownTextEdit::newLinePosition, this, [this](int position){
+
+    connect(this, &QPlainTextEdit::cursorPositionChanged, this,
+            [this]() {
         if (!mainWindow) {
             qWarning() << "No MainWindow! shouldn't happen!";
             return;
         }
-        mainWindow->selectNavigationItemAtPosition(position);
+        mainWindow->selectNavigationItemAtPosition(textCursor().block().position());
     });
 
     connect(this, &QOwnNotesMarkdownTextEdit::urlClicked, this, [this](const QString &url){
