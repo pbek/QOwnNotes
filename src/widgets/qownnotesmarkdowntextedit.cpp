@@ -80,7 +80,7 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
             return;
         }
         const bool autoSelect =
-            QSettings().value(QStringLiteral("navigationPanelAutoSelect"), false)
+            QSettings().value(QStringLiteral("navigationPanelAutoSelect"), true)
                 .toBool();
         if (autoSelect) {
             mainWindow->selectNavigationItemAtPosition(textCursor().block().position());
