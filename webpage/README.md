@@ -1,5 +1,10 @@
 # QOwnNotes Webpage
 
+## Dev Dependencies
+
+- [yarn](https://yarnpkg.com/)
+- [nodejs](https://nodejs.org/en/)
+
 ## Development
 
 ```shell
