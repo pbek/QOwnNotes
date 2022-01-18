@@ -15,7 +15,6 @@
 
 #include <QFutureWatcher>
 #include <QTreeWidget>
-#include <QMap>
 
 class QTextDocument;
 class QTreeWidgetItem;
