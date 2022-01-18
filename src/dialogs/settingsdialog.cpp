@@ -1055,6 +1055,9 @@ void SettingsDialog::storePanelSettings() {
     settings.setValue(QStringLiteral("navigationPanelHideSearch"),
                       ui->navigationPanelHideSearchCheckBox->isChecked());
 
+    settings.setValue(QStringLiteral("navigationPanelAutoSelect"),
+                      ui->navigationPanelAutoSelectCheckBox->isChecked());
+
     settings.setValue(QStringLiteral("enableNoteTree"),
                       ui->enableNoteTreeCheckBox->isChecked());
 }
@@ -1649,6 +1652,9 @@ void SettingsDialog::readPanelSettings() {
     // Navigation Panel Options
     ui->navigationPanelHideSearchCheckBox->setChecked(
         settings.value(QStringLiteral("navigationPanelHideSearch")).toBool());
+
+    ui->navigationPanelAutoSelectCheckBox->setChecked(
+        settings.value(QStringLiteral("navigationPanelAutoSelect")).toBool());
 
     ui->enableNoteTreeCheckBox->setChecked(Utils::Misc::isEnableNoteTree());
 }
