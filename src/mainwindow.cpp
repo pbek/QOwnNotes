@@ -3671,6 +3671,13 @@ bool MainWindow::jumpToNoteSubFolder(int noteSubFolderId) {
     return false;
 }
 
+void MainWindow::selectNavigationItemAtPosition(int position)
+{
+    if (ui->navigationWidget->isVisible()) {
+        ui->navigationWidget->selectItemForCursorPosition(position);
+    }
+}
+
 QString MainWindow::selectOwnCloudNotesFolder() {
     QString path = this->notesPath;
 
@@ -4502,7 +4509,8 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
  */
 void MainWindow::startNavigationParser() {
     if (ui->navigationWidget->isVisible())
-        ui->navigationWidget->parse(activeNoteTextEdit()->document());
+        ui->navigationWidget->parse(activeNoteTextEdit()->document(),
+                                    activeNoteTextEdit()->textCursor().position());
 }
 
 /**

@@ -188,6 +188,8 @@ class MainWindow : public QMainWindow {
 
     bool jumpToNoteSubFolder(int noteSubFolderId);
 
+    void selectNavigationItemAtPosition(int position);
+
     Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = QString());
 
     QString getLogText();

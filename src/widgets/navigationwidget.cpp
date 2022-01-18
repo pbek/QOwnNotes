@@ -79,11 +79,12 @@ void NavigationWidget::onItemClicked(QTreeWidgetItem *current, int column) {
 /**
  * Parses a text document and builds the navigation tree for it
  */
-void NavigationWidget::parse(const QTextDocument *document) {
+void NavigationWidget::parse(const QTextDocument *document, int textCursorPosition) {
     const QSignalBlocker blocker(this);
     Q_UNUSED(blocker)
 
     setDocument(document);
+    _cursorPosition = textCursorPosition;
 
     const QFuture<QVector<Node>> future =
         QtConcurrent::run(&NavigationWidget::parseDocument, document);
@@ -114,9 +115,42 @@ QVector<Node> NavigationWidget::parseDocument(
     return nodes;
 }
 
+void NavigationWidget::selectItemForCursorPosition(int position)
+{
+    if (_parseFutureWatcher->isRunning()) {
+        _cursorPosition = position;
+        return;
+    }
+
+    int itemIndex = findItemIndexforCursorPosition(position);
+
+    QTreeWidgetItem *itemToSelect{nullptr};
+    if (itemIndex >= 0) {
+        QTreeWidgetItemIterator it(this);
+        it += itemIndex;
+        itemToSelect = *it;
+    }
+
+    blockSignals(true);
+    setCurrentItem(itemToSelect);
+    blockSignals(false);
+}
+
+
+int NavigationWidget::findItemIndexforCursorPosition(int position) const
+{
+    auto fwdIt = std::lower_bound(_navigationTreeNodes.begin(),
+                                  _navigationTreeNodes.end(),
+                                  position,
+                                  [](const Node &node, int position){return node.pos <= position;});
+
+    return fwdIt - std::begin(_navigationTreeNodes) - 1;
+}
+
 void NavigationWidget::onParseCompleted() {
     QVector<Node> nodes = this->_parseFutureWatcher->result();
     if (_navigationTreeNodes == nodes) return;
+
     _navigationTreeNodes = std::move(nodes);
 
     clear();
@@ -149,6 +183,7 @@ void NavigationWidget::onParseCompleted() {
         _lastHeadingItemList[elementType] = item;
     }
     expandAll();
+    selectItemForCursorPosition(_cursorPosition);
 }
 
 /**
