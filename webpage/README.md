@@ -30,4 +30,4 @@ If you run `yarn run build` the webpage will be built in production mode in `web
 ## Customization
 
 - Styles are mainly stored in [index.styl](https://github.com/pbek/QOwnNotes/blob/develop/webpage/src/.vuepress/styles/index.styl)
-- Menus and configuration is stored in [config.js](https://github.com/pbek/QOwnNotes/blob/develop/webpage/src/.vuepress/config.js)
+- Menus and configuration is stored are [config.js](https://github.com/pbek/QOwnNotes/blob/develop/webpage/src/.vuepress/config.js)
