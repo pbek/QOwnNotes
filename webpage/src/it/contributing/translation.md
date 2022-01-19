@@ -94,8 +94,8 @@ Alcune parti della documentazione non vanno tradotte:
 
 ## Tradurre e correggere può essere interessante!
 
-You will deal with the language of this software, learn new terms and receive a lot of inside information about the project.
+Avrai a che fare con il linguaggio di questa applicazione, imparerai nuovi termini e riceverai tante informazioni interne riguardanti il progetto.
 
-If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading. You can ask her anything that helps you have fun contributing.
+Se sei pronto ad aiutare a verificare le traduzioni nella tua lingua, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) ti darà il benvenuto in un breve incontro sulla pratica della traduzione e della correzione di bozze. Puoi chiederle quello di cui hai bisogno per renderti divertente contribuire.
 
-Grazie mille per il vostro aiuto! 🙂
+Grazie mille per il tuo aiuto! 🙂

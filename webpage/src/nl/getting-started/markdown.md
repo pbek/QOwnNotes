@@ -182,7 +182,7 @@ cd Notes
 ```
 ~~~
 
-Momenteel ondersteunde talen (en codeblok-ID's) zijn:
+Currently, supported languages (and code block identifiers) are:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -218,10 +218,9 @@ Momenteel ondersteunde talen (en codeblok-ID's) zijn:
 
 ## Tables
 
-Tabellen maken geen deel uit van de belangrijkste Markdown-specificaties, maar de QOwnNotes-preview ondersteunt ze.
- 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
-```markdown
+~~~markdown
 Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
@@ -241,7 +240,7 @@ U kunt ook inline markdown gebruiken.
 ~~~
 
 ::: tip
-Druk op <kbd>Alt + Shift + T</kbd> om een dialoogvenster te openen waarmee u tabellen kunt maken. U kunt zelfs CSV-bestanden in dat dialoogvenster importeren.
+Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you to create tables. U kunt zelfs CSV-bestanden in dat dialoogvenster importeren.
 
 Gebruik <kbd>Ctrl + Space</kbd> in een markdown-tabel om deze automatisch op te maken.
 :::

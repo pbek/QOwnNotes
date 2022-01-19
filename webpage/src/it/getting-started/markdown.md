@@ -220,7 +220,7 @@ I linguaggi supportati al momento (e i loro identificativi di blocco) sono:
 
 Le tabelle non sono parte della specifica Markdown originale, ma l'anteprima QOwnNotes le supporta. 
 
-```markdown
+~~~markdown
 I due punti possono essere utilizzati per allineare le colonne.
 
 |    Tabelle     |         Sono       | Belle |

@@ -182,7 +182,7 @@ cd Notes
 ```
 ~~~
 
-A jelenleg támogatott nyelvek (és kódblokk-azonosítók) a következők:
+Currently, supported languages (and code block identifiers) are:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -216,12 +216,12 @@ A jelenleg támogatott nyelvek (és kódblokk-azonosítók) a következők:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Táblázatok
+## Tables
 
-A táblázatok nem részei a Markdown alapvető specifikációinak, de a QOwnNotes előnézet támogatja őket. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
-```markdown
-A kettőspontok használhatók az oszlopok igazítására.
+~~~markdown
+Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
@@ -240,7 +240,7 @@ Használhatja az inline Markdown funkciót is.
 ~~~
 
 ::: tip
-Nyomja meg az <kbd>Alt + Shift + T</kbd> billentyűkombinációt egy párbeszédpanel aktiválásához, amely segíthet táblázatok létrehozásában. Akár CSV fájlokat is importálhat abban a párbeszédpanelen.
+Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you to create tables. Akár CSV fájlokat is importálhat abban a párbeszédpanelen.
 
 Használja a <kbd>Ctrl + szóköz</kbd>t egy jelölési táblázatban az automatikus formázáshoz.
 :::

@@ -183,7 +183,7 @@ cd notas
 ```
 ~~~
 
-Currently supported languages (and code block identifiers) are:
+Currently, supported languages (and code block identifiers) are:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -221,8 +221,8 @@ Currently supported languages (and code block identifiers) are:
 
 Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
-`` rebaja
-Se pueden utilizar dos puntos para alinear columnas.
+~~~markdown
+Colons can be used to align columns.
 
 | Tablas | Son | Cool |
 | ------------- |: -------------: | -----: |
@@ -241,7 +241,7 @@ También puede utilizar Markdown en línea.
 ~~~
 
 ::: tip
-Presione <kbd>Alt + Mayús + T</kbd> para activar un diálogo que puede ayudarlo a crear tablas. Incluso puede importar archivos CSV en ese cuadro de diálogo.
+Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you to create tables. Incluso puede importar archivos CSV en ese cuadro de diálogo.
 
 Use <kbd>Ctrl + Espacio</kbd> dentro de una tabla de rebajas para formatearla automáticamente.
 :::

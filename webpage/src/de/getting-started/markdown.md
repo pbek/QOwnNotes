@@ -182,7 +182,8 @@ cd Notes
 ```
 ~~~
 
-Derzeit unterstützte Sprachen (und Codeblock-IDs) sind:
+Currently, supported languages (and code block identifiers) are:
+
 * BASh scripting, `bash`
 * C, `c`
 * C++, `cpp`
@@ -215,11 +216,11 @@ Derzeit unterstützte Sprachen (und Codeblock-IDs) sind:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tabellen
+## Tables
 
-Tabellen sind nicht Teil der Kern-Markdown-Spezifikation, aber die QOwnNotes-Vorschau unterstützt sie. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
-```markdown
+~~~markdown
 Doppelpunkte können zum Ausrichten von Spalten verwendet werden.
 
 | Tables        | Are           | Cool  |
@@ -239,7 +240,7 @@ Sie können auch Inline-Markdown verwenden.
 ~~~
 
 ::: tip
-Drücken Sie <kbd>Alt + Umschalt + T</kbd>, um ein Dialogfeld zu aktivieren, mit dem Sie Tabellen erstellen können. In diesem Dialog können Sie sogar CSV-Dateien importieren!
+Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you to create tables. In diesem Dialog können Sie sogar CSV-Dateien importieren!
 
 Verwenden Sie <kbd>Strg + Leertaste</kbd> in einer Markdown-Tabelle, um sie automatisch zu formatieren.
 :::

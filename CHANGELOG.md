@@ -7,6 +7,8 @@
   added again (for [#2387](https://github.com/pbek/QOwnNotes/issues/2387))
 - items in the navigation panel are now highlighted according to the position of
   the cursor in the note edit panel (for [#2136](https://github.com/pbek/QOwnNotes/issues/2136), thank you @fnkhz)
+- added more translation (thank you amirkbrpr, marcoxbresciani, noureddin,
+  hansa2662, marterra, rawfreeamy)
 
 ## 22.1.7
 - a crash when correcting a misspelled word was fixed (for [#2377](https://github.com/pbek/QOwnNotes/issues/2377), thank you @Waqar144)

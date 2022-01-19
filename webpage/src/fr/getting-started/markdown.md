@@ -182,16 +182,16 @@ cd Notes
 ```
 ~~~
 
-Les languages actuellement pris en charge (et les identificateurs de bloc de code) sont :
+Currently, supported languages (and code block identifiers) are:
 
-* Script BASh, `bash`
+* BASh scripting, `bash`
 * C, `c`
-* C ++, `cpp`
-* C ++, `cxx`
-* C ++, `c ++`
-* C #, `c #`
+* C++, `cpp`
+* C++, `cxx`
+* C++, `c++`
+* C#, `c#`
 * CMake, `cmake`
-* C #, `csharp`
+* C#, `csharp`
 * CSS, `css`
 * Go, `go`
 * HTML, `html`
@@ -206,7 +206,7 @@ Les languages actuellement pris en charge (et les identificateurs de bloc de cod
 * Python, `python`
 * QML, `qml`
 * Rust, `rust`
-* Scripting shell, `sh`
+* Shell scripting, `sh`
 * SQL, `sql`
 * TypeScript, `ts`
 * TypeScript, `typescript`
@@ -216,13 +216,12 @@ Les languages actuellement pris en charge (et les identificateurs de bloc de cod
 * YAML, `yml`
 * YAML, `yaml`
 
+## Tables
 
-## Tableaux
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
-Les tableaux ne font pas partie de la spécification Markdown principale mais l'aperçu de QOwnNotes les prend en charge. 
-
-``` markdown
-Les deux points peuvent être utilisés pour aligner les colonnes.
+~~~markdown
+Colons can be used to align columns.
 
 | Les Tables | Sont | Chouettes |
 | ------------- |: -------------: | -----: |
@@ -241,7 +240,7 @@ Vous pouvez également utiliser le Markdown en ligne.
 ~~~
 
 ::: tip
-Appuyez sur <kbd>Alt + Maj + T</kbd> pour activer une boîte de dialogue qui peut vous aider à créer des tableaux. Vous pouvez même importer des fichiers CSV dans cette boîte de dialogue.
+Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you to create tables. Vous pouvez même importer des fichiers CSV dans cette boîte de dialogue.
 
 Utilisez <kbd>Ctrl + Espace</kbd> dans un tableau de démarquage pour le formater automatiquement.
 :::
