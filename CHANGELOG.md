@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 22.1.8
+- an attempt was made to fix potential crashes with the Markdown highlighter
+  (for [#2388](https://github.com/pbek/QOwnNotes/issues/2388), thank you @Waqar144)
 - items in the navigation panel are now highlighted according to the position of
   the cursor in the note edit panel (for [#2136](https://github.com/pbek/QOwnNotes/issues/2136), thank you @fnkhz)
 
