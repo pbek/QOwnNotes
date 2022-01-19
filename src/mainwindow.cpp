@@ -11909,7 +11909,7 @@ QAction* MainWindow::reloadNoteFolderAction()
 
 QAction* MainWindow::newNoteAction()
 {
-    return ui->action_Reload_note_folder;
+    return ui->action_New_note;
 }
 
 QAction* MainWindow::insertTextLinkAction()
