@@ -73,7 +73,7 @@
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> deletes the current word
 - <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> opens a dialog to add note link
-- <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
+- <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date and time in a user specific format
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> inserts a table
@@ -194,7 +194,7 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>Backspace</kbd> deletes the current word
 - <kbd>⌘ Cmd</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> opens a dialog to add note link
-- <kbd>⌘ Cmd</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
+- <kbd>⌘ Cmd</kbd> + <kbd>T</kbd> inserts the current date and time in a user specific format
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> inserts a table
