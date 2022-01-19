@@ -2797,6 +2797,7 @@ void MainWindow::notesWereModified(const QString &str) {
     if (note.getFileName() == this->currentNote.getFileName()) {
         delayCheckNotesExists(note);
         if (note.fileExists()) {
+            noteDirectoryWatcher.addPath(note.fullNoteFilePath());
             // If the modified date of the file is the same as the one
             // from the current note it was a false alarm
             if (fi.lastModified() == this->currentNote.getFileLastModified()) {
