@@ -73,20 +73,6 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         onZoom(/*in=*/ false);
     });
 
-    connect(this, &QPlainTextEdit::cursorPositionChanged, this,
-            [this]() {
-        if (!mainWindow) {
-            qWarning() << "No MainWindow! shouldn't happen!";
-            return;
-        }
-        const bool autoSelect =
-            QSettings().value(QStringLiteral("navigationPanelAutoSelect"), true)
-                .toBool();
-        if (autoSelect) {
-            mainWindow->selectNavigationItemAtPosition(textCursor().block().position());
-        }
-    });
-
     connect(this, &QOwnNotesMarkdownTextEdit::urlClicked, this, [this](const QString &url){
         if (!mainWindow) {
             qWarning() << "No MainWindow! shouldn't happen!";

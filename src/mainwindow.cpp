@@ -10823,7 +10823,7 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
 }
 
 /**
- * Updates the line number label
+ * Updates the line number label and the selected navigation item, if required
  */
 void MainWindow::noteEditCursorPositionChanged() {
     if (!_noteEditLineNumberLabel->isVisible()) return;
@@ -10842,6 +10842,13 @@ void MainWindow::noteEditCursorPositionChanged() {
             QStringLiteral(":") + QString::number(cursor.positionInBlock() + 1);
 
     _noteEditLineNumberLabel->setText(text);
+
+    const bool autoSelect =
+        QSettings().value(QStringLiteral("navigationPanelAutoSelect"), true)
+            .toBool();
+    if (autoSelect) {
+        selectNavigationItemAtPosition(textEdit->textCursor().block().position());
+    }
 }
 
 /**
