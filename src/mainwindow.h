@@ -220,6 +220,8 @@ class MainWindow : public QMainWindow {
 
     void refreshNotePreview();
 
+    void delayCheckNotesExists(const Note &note);
+
    protected:
     void changeEvent(QEvent *event) override;
 

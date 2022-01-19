@@ -2766,6 +2766,16 @@ void MainWindow::updateNoteTextFromDisk(Note note) {
     ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
 }
 
+void MainWindow::delayCheckNotesExists(const Note &note) {
+    int max_checks = 10;
+    while(!note.fileExists() && max_checks-->0) {
+        QTime sleepTime = QTime::currentTime().addSecs(1);
+        while(QTime::currentTime() < sleepTime) {
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+        }
+    }
+}
+
 void MainWindow::notesWereModified(const QString &str) {
     // workaround when signal block doesn't work correctly
     if (_isNotesWereModifiedDisabled) {
@@ -2785,6 +2795,7 @@ void MainWindow::notesWereModified(const QString &str) {
 
     // load note from disk if current note was changed
     if (note.getFileName() == this->currentNote.getFileName()) {
+        delayCheckNotesExists(note);
         if (note.fileExists()) {
             // If the modified date of the file is the same as the one
             // from the current note it was a false alarm
