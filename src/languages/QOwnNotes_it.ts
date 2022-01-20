@@ -2208,7 +2208,7 @@
 <message>
 <location filename="../mainwindow.ui" line="196"/>
 <source>Find or create tag</source>
-<translation>Trova o crea etichette</translation>
+<translation>Trova o crea etichetta</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="292"/>
@@ -3147,7 +3147,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>Eliminare &lt;strong&gt;%n&lt;/strong&gt; etichetta selezionata? Nessuna nota sarà eliminata in questo processo.</numerusform>
-<numerusform>Eliminare &lt;strong&gt;%n&lt;/strong&gt; i tag selezionati? Nessuna nota sarà eliminata in questo processo.</numerusform>
+<numerusform>Eliminare le &lt;strong&gt;%n&lt;/strong&gt; etichette selezionate? Nessuna nota sarà eliminata in questo processo.</numerusform>
 </translation>
 </message>
 <message>
@@ -3195,14 +3195,14 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="4895"/>
 <source>Tag selected notes</source>
-<translation>Applica etichetta alle note selezionate</translation>
+<translation>Etichetta le note selezionate</translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="4896"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
-<numerusform>Applica etichetta a %n nota selezionata con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-<numerusform>Taggare %n note selezionate con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Etichetta %n nota selezionata con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Etichetta %n note selezionate con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -3486,7 +3486,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="9628"/>
 <source>&amp;Remove tag from selected notes…</source>
-<translation>&amp;Rimuvi etichetta dalle note selezionate…</translation>
+<translation>&amp;Rimuovi etichetta dalle note selezionate…</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9726"/>
@@ -3592,27 +3592,27 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.ui" line="1231"/>
 <source>&amp;Tag</source>
-<translation>&amp;Tag</translation>
+<translation>&amp;Etichetta</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4970"/>
 <source>Remove tag from selected notes</source>
-<translation>Rimuovi tag dalle note selezionate</translation>
+<translation>Rimuovi etichetta dalle note selezionate</translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="4971"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
-<numerusform>Rimuovere il tag &lt;strong&gt;%1&lt;/strong&gt;? da %n nota selezionata?</numerusform>
-<numerusform>Eliminare il tag &lt;strong&gt;%1&lt;/strong&gt;? da %n note selezionate?</numerusform>
+<numerusform>Rimuovere l'etichetta &lt;strong&gt;%1&lt;/strong&gt;? da %n nota selezionata?</numerusform>
+<numerusform>Rimuovere l'etichetta &lt;strong&gt;%1&lt;/strong&gt;? da %n note selezionate?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="5031"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
-<numerusform>Il tag &lt;strong&gt;%1&lt;/strong&gt; è stato rimosso da %n nota</numerusform>
-<numerusform>Il tag &lt;strong&gt;%1&lt;/strong&gt; è stato rimosso da %n note</numerusform>
+<numerusform>L'etichetta &lt;strong&gt;%1&lt;/strong&gt; è stata rimossa da %n nota</numerusform>
+<numerusform>L'etichetta &lt;strong&gt;%1&lt;/strong&gt; è stata rimossa da %n note</numerusform>
 </translation>
 </message>
 <message>
@@ -3794,7 +3794,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="7598"/>
 <source>show all untagged notes (%1)</source>
-<translation>mostra tutte le note senza tag (%1)</translation>
+<translation>mostra tutte le note senza etichetta (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7600"/>
@@ -3883,42 +3883,42 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="8466"/>
 <source>&amp;Add tag</source>
-<translation>&amp;Aggiungi tag</translation>
+<translation>Aggiungi etichetta</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8514"/>
 <source>Tag could not be created!</source>
-<translation>Il tag non può essere creato!</translation>
+<translation>Impossible creare l'etichetta!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8693"/>
 <source>Move to this tag</source>
-<translation>Sposta in questo tag</translation>
+<translation>Sposta in questa etichetta</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8728"/>
 <source>Tag this</source>
-<translation>Applica tag a questa</translation>
+<translation>Etichetta questa</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8753"/>
 <source>Cannot move tag '%1' to this tag</source>
-<translation>Non è possibile spostare il tag '%1' in questo tag</translation>
+<translation>Impossibile spostare l'etichetta '%1' in questa etichetta</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8802"/>
 <source>Moved tag '%1' to new tag</source>
-<translation>Tag '%1' spostato</translation>
+<translation>Etichetta '%1' spostata</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7725"/>
 <source>show all notes tagged with '%1' (%2)</source>
-<translation>mostra tutte le note con tag con '%1' (%2)</translation>
+<translation>mostra tutte le note con etichetta '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8477"/>
 <source>&amp;Remove tags</source>
-<translation>&amp;Rimuovi tag</translation>
+<translation>&amp;Rimuovi etichetta</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5491"/>
@@ -4309,9 +4309,9 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message numerus="yes">
 <location filename="../widgets/notesubfoldertree.cpp" line="358"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Rimuovere &lt;strong&gt;%n&lt;/strong&gt; cartelle selezionate?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Verranno rimossi anche tutti i file e le cartelle al loro interno!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>Rimuovere &lt;strong&gt;%n&lt;/strong&gt; cartella selezionata? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Tutti i file e le cartelle presenti all'interno saranno eliminati!</numerusform>
+<numerusform>Rimuovere &lt;strong&gt;%n&lt;/strong&gt; cartelle selezionate? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Tutti i file e le cartelle presenti all'interno saranno eliminati!</numerusform>
 </translation>
 </message>
 <message>
@@ -6692,7 +6692,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5889"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
-<translation>Nascondi "Conteggio note" con i tag (aumenta le prestazioni)</translation>
+<translation>Nascondi "Conteggio note" con le etichette (aumenta le prestazioni)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5925"/>
@@ -6843,7 +6843,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <location filename="../dialogs/settingsdialog.ui" line="6166"/>
 <location filename="../dialogs/settingsdialog.ui" line="6330"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
-<translation>Le note con questo tag verranno utilizzate per il recupero dei segnalibri</translation>
+<translation>Le note con questa etichetta saranno usate per il recupero dei segnalibri</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6169"/>
@@ -8587,12 +8587,12 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/tagadddialog.ui" line="20"/>
 <source>Add a new tag</source>
-<translation>Aggiungi un nuovo tag</translation>
+<translation>Aggiungi una nuova etichetta</translation>
 </message>
 <message>
 <location filename="../dialogs/tagadddialog.ui" line="30"/>
 <source>Add new tag</source>
-<translation>Aggiungi nuovo tag</translation>
+<translation>Aggiungi nuova etichetta</translation>
 </message>
 <message>
 <location filename="../dialogs/tagadddialog.ui" line="47"/>

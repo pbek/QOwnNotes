@@ -4274,7 +4274,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="173"/>
 <source>show notes from all note subfolders (%1)</source>
-<translation>نمایش یادداشت ها از همه زیرپوشه های یادداشت ها (٪1)</translation>
+<translation>نمایش یادداشت ها از همه زیرپوشه های یادداشت (٪1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="176"/>
@@ -4805,63 +4805,63 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="957"/>
 <source>&amp;Link selected text</source>
-<translation type="unfinished">&amp;Link selected text</translation>
+<translation>&amp;پیوند متن منتخب</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="957"/>
 <source>Insert &amp;link</source>
-<translation type="unfinished">Insert &amp;link</translation>
+<translation>درج &amp;پیوند</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="964"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation type="unfinished">Block &amp;quote selected text</translation>
+<translation>مسدود کردن &amp;نقل قول متن انتخاب شده</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="967"/>
 <source>Insert block &amp;quote</source>
-<translation type="unfinished">Insert block &amp;quote</translation>
+<translation>درج نقل &amp;قول</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="980"/>
 <source>Copy code block</source>
-<translation type="unfinished">Copy code block</translation>
+<translation>رونوشت کد بلوک</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1007"/>
 <source>Print</source>
-<translation type="unfinished">Print</translation>
+<translation>چاپ</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1015"/>
 <source>Print selected text</source>
-<translation type="unfinished">Print selected text</translation>
+<translation>چاپ متن منتخب</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1024"/>
 <source>Print selected text (preview)</source>
-<translation type="unfinished">Print selected text (preview)</translation>
+<translation>چاپ متن منتخب (پیش نمایش)</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1039"/>
 <source>Export</source>
-<translation type="unfinished">Export</translation>
+<translation>خروج</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1052"/>
 <source>Export selected text as PDF</source>
-<translation type="unfinished">Export selected text as PDF</translation>
+<translation>خروج متن منتخب به صورت PDF</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1061"/>
 <source>Export selected text as PDF (preview)</source>
-<translation type="unfinished">Export selected text as PDF (preview)</translation>
+<translation>خروج متن منتخب به صورت PDF (پیش نمایش)</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1093"/>
 <source>Custom actions</source>
-<translation type="unfinished">Custom actions</translation>
+<translation>اقدامات سفارشی</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1183"/>
@@ -4881,7 +4881,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1205"/>
 <source>Spelling</source>
-<translation type="unfinished">Spelling</translation>
+<translation>املا</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1238"/>
@@ -6795,7 +6795,7 @@ QOwnNotesAPI
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5820"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
-<translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
+<translation>انتخاب خودکار اقلام موجود در پنل ناوبری هنگام تغییر موقعیت مکان نما</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5889"/>

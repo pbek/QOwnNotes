@@ -288,6 +288,10 @@ ___
 - **Una nuova riga** ti darà una **nuova riga nello stesso paragrafo**.
 - Per avere una **interruzione di riga senza un paragrafo**, dovrai usare **due spazi finali**.
 
+::: tip
+You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
+:::
+
 ```markdown
 Ecco una riga con cui iniziare.
 
@@ -298,12 +302,12 @@ Questa riga è separata solo da due spazi finali e da un singolo ritorno a capo,
 ```
 
 ::: tip
-Gli spazi finali sono evidenziati per impostazione predefinita nell'editor.
+Trailing spaces are highlighted by default in the editor.
 :::
 
 ## Commenti
 
-I commenti non vengono visualizzati nell'anteprima.
+Comments are not shown in the preview.
 
 ```markdown
 [comment]: # (Questo commento non apparirà nell'anteprima)
@@ -312,12 +316,12 @@ I commenti non vengono visualizzati nell'anteprima.
 ```
 
 ::: tip
-Anche un blocco di commenti HTML iniziale in una nota verrà ignorato nella generazione automatica del nome del file della nota.
+A leading html comment block in a note will also be ignored in the automatic note filename generation.
 :::
 
 ## Elenchi di caselle di controllo
 
-Puoi creare semplici elenchi di cose da fare con elenchi di caselle di controllo.
+You can create simple todo lists with checkbox lists.
 
 ```markdown
 - [x] fatto
@@ -325,12 +329,12 @@ Puoi creare semplici elenchi di cose da fare con elenchi di caselle di controllo
 ```
 
 ::: tip
-Puoi selezionare / deselezionare le caselle di controllo nell'anteprima.
+You can check/un-check checkboxes in the preview.
 :::
 
 ## Pagine preliminari
 
-In QOwnNotes puoi usare un frontmatter (es.YAML) per aggiungere alcune meta informazioni extra. **Non verrà mostrato nell'anteprima** e **non disturberà la generazione automatica del nome del file della nota**.
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
 
 ```markdown
 ---
@@ -342,4 +346,4 @@ description: Una descrizione
 Del testo
 ```
 
-Il nome del file di questa nota di esempio sarebbe `Il titolo della nota inizia qui.md`.
+The filename of this example note would be `Note headline starts here.md`.

@@ -300,6 +300,10 @@ ___
 - **Une nouvelle ligne** vous donnera une nouvelle ligne **dans le même paragraphe**.
 - Pour avoir un saut de ligne **sans paragraphe**, vous devrez utiliser **deux espaces de fin**.
 
+::: tip
+You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
+:::
+
 ```markdown
 Voici une ligne pour nous de commencer.
 
@@ -310,12 +314,12 @@ Cette ligne n'est séparée que par deux espaces de fin et un seul saut de ligne
 ```
 
 ::: tip
-Les espaces de fin sont mis en évidence par défaut dans l'éditeur.
+Trailing spaces are highlighted by default in the editor.
 :::
 
 ## Commentaires
 
-Les commentaires ne sont pas affichés dans l'aperçu.
+Comments are not shown in the preview.
 
 ```markdown
 [comment]: # (Ce commentaire n'apparaîtra pas dans l'aperçu)
@@ -324,12 +328,12 @@ Les commentaires ne sont pas affichés dans l'aperçu.
 ```
 
 ::: tip
-Un bloc de commentaire HTML en tête d'une note sera également ignoré dans la génération automatique du nom de fichier de la note.
+A leading html comment block in a note will also be ignored in the automatic note filename generation.
 :::
 
 ## Listes de cases à cocher
 
-Vous pouvez créer des listes de tâches simples avec des listes de cases à cocher.
+You can create simple todo lists with checkbox lists.
 
 ```markdown
 - [x] fait
@@ -337,12 +341,12 @@ Vous pouvez créer des listes de tâches simples avec des listes de cases à coc
 ```
 
 ::: tip
-Vous pouvez cocher / décocher les cases dans l'aperçu.
+You can check/un-check checkboxes in the preview.
 :::
 
 ## Frontmatter
 
-Dans QOwnNotes, vous pouvez utiliser un « frontmatter » (par exemple YAML) pour ajouter des méta-informations supplémentaires. Il ne sera **pas affiché dans l'aperçu** et ne perturbera **pas la génération automatique de nom de fichier de note**.
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
 
 ```markdown
 ---
@@ -355,4 +359,4 @@ description: une description
 Du texte
 ```
 
-Le nom de fichier de cet exemple de note serait `L'en-tête de la note commence ici.md`.
+The filename of this example note would be `Note headline starts here.md`.

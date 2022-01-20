@@ -288,6 +288,10 @@ ___
 - **Mit einer neuen Zeile** erhalten Sie eine **neue Zeile im selben Absatz**.
 - Um einen Zeilenumbruch **ohne Absatz** zu erzielen, müssen Sie **zwei nachgestellte Leerzeichen** verwenden.
 
+::: tip
+You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
+:::
+
 ```markdown
 Hier ist eine Zeile, mit der wir beginnen sollten.
 
@@ -298,12 +302,12 @@ Diese Zeile wird nur durch zwei nachgestellte Leerzeichen und eine einzelne neue
 ```
 
 ::: tip
-Nachgestellte Leerzeichen werden im Editor standardmäßig hervorgehoben.
+Trailing spaces are highlighted by default in the editor.
 :::
 
 ## Kommentare
 
-Kommentare werden in der Vorschau nicht angezeigt.
+Comments are not shown in the preview.
 
 ```markdown
 [Kommentar]: # (Dieser Kommentar wird nicht in der Vorschau angezeigt.)
@@ -312,12 +316,12 @@ Kommentare werden in der Vorschau nicht angezeigt.
 ```
 
 ::: tip
-Ein führender HTML-Kommentarblock in einer Notiz wird bei der automatischen Generierung von Notizdateinamen ebenfalls ignoriert.
+A leading html comment block in a note will also be ignored in the automatic note filename generation.
 :::
 
 ## Kontrollkästchenlisten
 
-Sie können einfache Aufgabenlisten mit Kontrollkästchenlisten erstellen.
+You can create simple todo lists with checkbox lists.
 
 ```markdown
 - [x] done
@@ -325,12 +329,12 @@ Sie können einfache Aufgabenlisten mit Kontrollkästchenlisten erstellen.
 ```
 
 ::: tip
-Sie können Kontrollkästchen in der Vorschau aktivieren / deaktivieren.
+You can check/un-check checkboxes in the preview.
 :::
 
 ## Inhaltsübersicht
 
-In QOwnNotes können Sie eine Frontmatter (z.B. YAML) verwenden, um zusätzliche Metainformationen hinzuzufügen. Es wird **nicht in der Vorschau angezeigt** und **stört die automatische Generierung von Notizendateinamen** nicht.
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
 
 ```markdown
 ---
@@ -343,4 +347,4 @@ Beschreibung: Ein wenig Beschreibung
 Etwas Text
 ```
 
-Der Dateiname dieser Beispielnotiz lautet `. Die Überschrift der Notiz beginnt hier.md `.
+The filename of this example note would be `Note headline starts here.md`.

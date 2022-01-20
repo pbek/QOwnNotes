@@ -290,6 +290,10 @@ ___
 - **یک خط نو** دسترسی شما را به یک **خط جدید در همان پاراگراف** میسر می سازد.
 - برای برخورداری از **شکست خط بدون پاراگراف**، باید از **دو فاصله مؤخر** استفاده نمایید.
 
+::: tip
+You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
+:::
+
 ```markdown
 در اینجا برای شروع خطی در اختیار ما گذاشته شده است.
 
@@ -300,12 +304,12 @@ ___
 ```
 
 ::: tip
-فاصله های مؤخر به صورت پیش فرض در ویرایشگر برجسته هستند.
+Trailing spaces are highlighted by default in the editor.
 :::
 
 ## توضیحات
 
-توضیحات در پیش نمایش نشان داده نمی شود.
+Comments are not shown in the preview.
 
 ```markdown
 [comment]: # (این توضیح در پیش نمایش ظاهر نخواهد شد)
@@ -314,12 +318,12 @@ ___
 ```
 
 ::: tip
-هنگام ایجاد خودکار نام پرونده یادداشت، بلاک کامنت html اصلی در یادداشت هم نادیده گرفته می شود.
+A leading html comment block in a note will also be ignored in the automatic note filename generation.
 :::
 
 ## لیست های صندوق بررسی
 
-شما می توانید لیست های ساده انجام دادنی را با لیست های صندوق بررسی ایجاد کنید.
+You can create simple todo lists with checkbox lists.
 
 ```markdown
 - [x] انجام شده
@@ -327,12 +331,12 @@ ___
 ```
 
 ::: tip
-شما قادر خواهید بود صندوق های بررسی را در پیش نمایش علامت بزنید یا علامت آنها را بردارید.
+You can check/un-check checkboxes in the preview.
 :::
 
 ## پیش‌ گفتار
 
-در QOwnNotes می توانید از یک پیش گفتار (مانند YAML) برای افزودن مقداری ابر اطلاعات اضافی استفاده کنید. **در پیش نمایش نشان داده نمی شود** و **برای تشکیل خودکار نام پرونده یادداشت اختلال ایجاد نمی کند**.
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
 
 ```markdown
 ---
@@ -345,4 +349,4 @@ ___
 مقداری متن
 ```
 
-نام پرونده این یادداشت نمونه `Note headline starts here.md`خواهد بود.
+The filename of this example note would be `Note headline starts here.md`.

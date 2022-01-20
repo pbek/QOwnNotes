@@ -289,6 +289,10 @@ ___
 - **Una nueva línea**le dará una** nueva línea en el mismo párrafo**.
 - Para tener un salto de línea **sin un párrafo**, necesitará usar **dos espacios finales**.
 
+::: tip
+You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
+:::
+
 ```markdown
 Aquí hay una línea para empezar.
 
@@ -299,12 +303,12 @@ Esta línea solo está separada por dos espacios finales y una sola línea nueva
 ```
 
 ::: tip
-Los espacios finales están resaltados de forma predeterminada en el editor.
+Trailing spaces are highlighted by default in the editor.
 :::
 
 ## Comentarios
 
-Los comentarios no se muestran en la vista previa.
+Comments are not shown in the preview.
 
 ```markdown
 [comentario]: # (este comentario no aparecerá en la vista previa)
@@ -312,12 +316,13 @@ Los comentarios no se muestran en la vista previa.
 <! - Los comentarios HTML también están ocultos - >
 ```
 
-::: Astuce Un bloc de commentaire html en tête dans une note sera également ignoré dans la génération automatique du nom de fichier de la note.
+::: tip
+A leading html comment block in a note will also be ignored in the automatic note filename generation.
 :::
 
 ## Listas de casillas de verificación
 
-Puede crear listas de tareas pendientes simples con listas de casillas de verificación.
+You can create simple todo lists with checkbox lists.
 
 ```markdown
 - [x] done
@@ -325,12 +330,12 @@ Puede crear listas de tareas pendientes simples con listas de casillas de verifi
 ```
 
 ::: tip
-Puede marcar / desmarcar las casillas de verificación en la vista previa.
+You can check/un-check checkboxes in the preview.
 :::
 
 ## Frontmatter
 
-En QOwnNotes puede usar un frontmatter (por ejemplo, YAML) para agregar algo de metainformación adicional. **No se mostrará en la vista previa** y **no perturbará la generación automática de nombres de archivo de notas**.
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
 
 ```markdown
 ---
@@ -343,4 +348,4 @@ descripción: Alguna descripción
 Algún texto
 ```
 
-El nombre de archivo de esta nota de ejemplo sería `El título de la nota comienza aquí.md`.
+The filename of this example note would be `Note headline starts here.md`.

@@ -288,6 +288,10 @@ ___
 - **Een nieuwe regel** levert een **nieuwe regel in dezelfde alinea** op.
 - Om een **regeleinde zonder alinea** te hebben, moet u **twee spaties achteraan** gebruiken.
 
+::: tip
+You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
+:::
+
 ```markdown
 Hier is een regel om mee te beginnen.
 
@@ -298,12 +302,12 @@ Deze regel wordt alleen gescheiden door twee volgspaties en een enkele nieuwe re
 ```
 
 ::: tip
-Spaties achteraan worden standaard gemarkeerd in de editor.
+Trailing spaces are highlighted by default in the editor.
 :::
 
 ## Opmerkingen
 
-Opmerkingen worden niet weergegeven in het voorbeeld.
+Comments are not shown in the preview.
 
 ```markdown
 [comment]: # (Deze opmerking verschijnt niet in het voorbeeld)
@@ -312,12 +316,12 @@ Opmerkingen worden niet weergegeven in het voorbeeld.
 ```
 
 ::: tip
-Een leidend html-commentaarblok in een notitie wordt ook genegeerd bij het automatisch genereren van notitiebestandsnamen.
+A leading html comment block in a note will also be ignored in the automatic note filename generation.
 :::
 
 ## Checkbox-lijsten
 
-U kunt eenvoudige takenlijsten maken met lijsten met selectievakjes.
+You can create simple todo lists with checkbox lists.
 
 ```markdown
 - [x] done
@@ -325,12 +329,12 @@ U kunt eenvoudige takenlijsten maken met lijsten met selectievakjes.
 ```
 
 ::: tip
-U kunt selectievakjes in het voorbeeld in- of uitschakelen.
+You can check/un-check checkboxes in the preview.
 :::
 
 ## Frontmatter
 
-In QOwnNotes kun je een frontmatter (bijvoorbeeld YAML) gebruiken om wat extra meta-informatie toe te voegen. Het wordt **niet getoond in het voorbeeld** en zal **het automatisch genereren van de bestandsnaam van notities** niet verstoren.
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
 
 ```markdown
 ---
@@ -343,4 +347,4 @@ description: Enige beschrijving
 Wat tekst
 ```
 
-De bestandsnaam van deze voorbeeldnotitie zou ` Notitiekop begint hier.md ` zijn.
+The filename of this example note would be `Note headline starts here.md`.

@@ -71,7 +71,7 @@
 - <kbd>Backspace</kbd> + <kbd>Ctrl</kbd> کلمه کنونی را حذف می کند
 - <kbd>L</kbd> + <kbd>Ctrl</kbd> برای افزودن پیوند متنی، کادر گفتگو باز می کند (در متن منتخب نیز کار می کند)
 - <kbd>L</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Ctrl</kbd> برای افزودن پیوند متنی کادر گفتگو باز می کند
-- <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date and time in a user specific format
+- <kbd>Ctrl</kbd> + <kbd>T</kbd> تاریخ و زمان کنونی را به صورت قالب ویژه کاربر درج می کند
 - <kbd>I</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Ctrl</kbd> تصویری درج می کند که به پوشه `رسانه` در پوشه یادداشت های کنونی رونوشت برداری می شود
 - <kbd>X</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Ctrl</kbd> پیوستی درج می کند که به پوشه `پیوست ها` در پوشه یادداشت های کنونی رونوشت برداری می شود
 - <kbd>T</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Alt</kbd> جدول درج می کند
@@ -188,7 +188,7 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>Backspace</kbd> deletes the current word
 - <kbd>⌘ Cmd</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> opens a dialog to add note link
-- <kbd>⌘ Cmd</kbd> + <kbd>T</kbd> inserts the current date and time in a user specific format
+- <kbd>⌘</kbd> + <kbd>T</kbd> تاریخ و زمان کنونی را به صورت قالب ویژه کاربر درج می کند
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> inserts a table

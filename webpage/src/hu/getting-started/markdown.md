@@ -288,6 +288,10 @@ ___
 - **Egy új sor** egy **új sort kap ugyanabban a bekezdésben**.
 - **Sortörés bekezdés nélkül**, **két zárójelet kell használnia**.
 
+::: tip
+You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
+:::
+
 ```markdown
 Itt egy sor, amellyel kezdhetjük.
 
@@ -298,12 +302,12 @@ Ezt a sort csak két zárójel és egyetlen új sor választja el, tehát külö
 ```
 
 ::: tip
-A szóközöket a szerkesztő alapértelmezés szerint kiemeli.
+Trailing spaces are highlighted by default in the editor.
 :::
 
 ## Hozzászólások
 
-A jegyzet nem jelenik meg az előnézetben.
+Comments are not shown in the preview.
 
 ```markdown
 [comment]: # (Ez a megjegyzés nem jelenik meg az előnézetben)
@@ -312,12 +316,12 @@ A jegyzet nem jelenik meg az előnézetben.
 ```
 
 ::: tip
-A jegyzetek vezető html megjegyzésblokkja az automatikus jegyzetfájl-generálás során sem kerül figyelembe.
+A leading html comment block in a note will also be ignored in the automatic note filename generation.
 :::
 
 ## Jelölőnégyzet -listák
 
-Létrehozhat egyszerű todo listákat jelölőnégyzet listákkal.
+You can create simple todo lists with checkbox lists.
 
 ```markdown
 - [x] done
@@ -325,12 +329,12 @@ Létrehozhat egyszerű todo listákat jelölőnégyzet listákkal.
 ```
 
 ::: tip
-Az előnézetben bejelölheti / eltávolíthatja a jelölőnégyzeteket.
+You can check/un-check checkboxes in the preview.
 :::
 
 ## Frontmatter
 
-A QOwnNotes alkalmazásban frontmatterrel (pl. YAML) adhat további meta-információkat. **nem jelenik meg az előnézetben**, és **nem zavarja az automatikus jegyzetfájlnév előállítását**.
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
 
 ```markdown
 ---
@@ -343,4 +347,4 @@ leírás: Néhány leírás
 Némi szöveg
 ```
 
-Ennek a példafájlnak a neve `Note headline starts here.md` lenne.
+The filename of this example note would be `Note headline starts here.md`.

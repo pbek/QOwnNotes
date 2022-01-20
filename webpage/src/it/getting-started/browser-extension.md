@@ -8,45 +8,45 @@ Allows for clipping from a browser page and managing browser bookmarks across br
 
 ::: tip
 Info
-- QOwnNotes must be running for the Web Companion browser extension to work.
-- No internet connection needed. The browser extensions works **offline**.
+- QOwnNotes deve essere in esecuzione affinché l'estensione del browser Web Companion funzioni.
+- Non è necessaria una connessione Internet. L'estensione del browser lavora **offline**.
 :::
 
-## Installation
+## Installazione
 
-1. Get the extension
+1. Scarica l'estensione
     - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-    - [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-    - You can also find the extension on [GitHub](https://github.com/qownnotes/web-companion/).
+    - [Pagina delle Estensioni Firefox](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+    - Puoi trovare l'estensione anche su [GitHub](https://github.com/qownnotes/web-companion/).
 2. Add the Security Token to configure the extension.
     - The first time you click on the QOwnNotes browser extension icon you will receive a dialog box with a security token. Copy the token.
     - Go to your browser's extension management location. Click into the QOwnNotes extension details.
     - Paste the token into the Security Token field.
 
-## Web clipper
+## Strumento di ritaglio web
 
-![web-clipper](/img/web-clipper.png)
+![strumento di ritaglio web](/img/web-clipper.png)
 
-Right-click on a webpage or selected text to use the **web-clipper** functionality. There you can also create a new note with a **screenshot** of the current webpage.
+Fai clic con il pulsante destro del mouse su una pagina web o sul testo selezionato per usare la funzionalità **web-clipper**. Lì puoi anche creare una nuova nota con uno **screenshot** della pagina web corrente.
 
 ::: tip
-The web clipper is also scriptable! Take a look at the [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) if you want to control what you clip from webpages.
+Il web clipper è anche scriptabile! Dai un'occhiata a [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) se desideri controllare ciò che ritagli dalle pagine web.
 :::
 
-## Bookmarks
+## Segnalibri
 
-![bookmarks](/img/bookmarks.png)
+![segnalibri](/img/bookmarks.png)
 
-If you want full control over your browser bookmarks and **use them across different browsers and operating systems** then the QOwnNotes browser extension is for you.
+Se vuoi il pieno controllo dei tuoi segnalibri del browser e **usarli tra diversi browser e sistemi operativi**, allora l'estensione del browser di QOwnNotes fa per te.
 
-By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
+Per impostazione predefinita, l'estensione del browser mostrerà tutti i **collegamenti della nota corrente** in un popup quando fai clic sull'icona QOwnNotes nel tuo browser. Questi collegamenti avranno l'etichetta `corrente`.
 
-You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
+Puoi anche **gestire i tuoi segnalibri nelle note** con l'etichetta `segnalibri` (modificabile nelle impostazioni). Questi collegamenti possono anche avere etichette e una descrizione che verrà mostrata nell'estensione del browser.
 
-New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
+I nuovi segnalibri sono memorizzati in una nota chiamata `Segnalibri` (anch'essa modificabile nelle impostazioni).
 
 ::: tip
-You can also import your browser bookmarks into QOwnNotes with the web companion browser extension!
+Puoi anche importare i segnalibri del tuo browser in QOwnNotes con l'estensione browser web companion!
 :::
 
 ### Sintassi dei collegamenti segnalibri
@@ -59,4 +59,4 @@ You can also import your browser bookmarks into QOwnNotes with the web companion
 * [Nome pagina web](https://www.example.com) funziona anche il carattere lista alternativo
 ```
 
-You are able to search for name, url tags or description in the browser extension.
+Puoi cercare nome, etichetta URL o descrizione nell'estensione del browser.
