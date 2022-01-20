@@ -9,12 +9,15 @@
 #include <QMenu>
 #include <QScrollBar>
 #include <QSettings>
+#include <QPointer>
 
 #include "mainwindow.h"
 
 #ifndef INTEGRATION_TESTS
 #include "ui_logwidget.h"
 #endif
+
+static QPointer<LogWidget> s_logWidget = nullptr;
 
 LogWidget::LogWidget(QWidget *parent)
     : QFrame(parent)
@@ -24,7 +27,9 @@ LogWidget::LogWidget(QWidget *parent)
 #endif
 {
 #ifndef INTEGRATION_TESTS
-    connect(this, &LogWidget::destroyed, this, &LogWidget::onDestroyed);
+
+    // static reference to us for use in the message handler
+    s_logWidget = this;
 
     ui->setupUi(this);
 
@@ -40,9 +45,6 @@ LogWidget::LogWidget(QWidget *parent)
     // we use a different context menu here, not default one
     disconnect(ui->logTextEdit, &QPlainTextEdit::customContextMenuRequested, nullptr, nullptr);
     connect(ui->logTextEdit, &QPlainTextEdit::customContextMenuRequested, this, &LogWidget::on_logTextEdit_customContextMenuRequested);
-
-    connect(ui->logTextEdit, &QOwnNotesMarkdownTextEdit::destroyed, this,
-            &LogWidget::onDestroyed);
 
     ui->buttonFrame->hide();
     const QSettings settings;
@@ -159,7 +161,7 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
     logToFileIfAllowed(logType, text);
 
     // return if logging wasn't enabled or if widget is not visible
-    if (!qApp->property("loggingEnabled").toBool() || !isVisible()) {
+    if (!isVisible()) {
         return;
     }
 
@@ -249,11 +251,6 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
     const bool scrollDown =
         scrollBar->value() >= (scrollBar->maximum() - scrollBar->singleStep());
 
-    // return if logging isn't enabled any more
-    if (!qApp->property("loggingEnabled").toBool()) {
-        return;
-    }
-
     const QSignalBlocker blocker(ui->logTextEdit);
     Q_UNUSED(blocker)
 
@@ -309,37 +306,6 @@ QString LogWidget::logTypeText(LogType logType) {
 
     return type;
 }
-
-/**
- * Fetches the global instance of the class
- * The instance will be created if it doesn't exist.
- */
-LogWidget *LogWidget::instance() {
-    LogWidget *logWidget = nullptr;
-#ifndef INTEGRATION_TESTS
-    logWidget = qApp->property("logWidget").value<LogWidget *>();
-#endif
-
-    if (logWidget == Q_NULLPTR) {
-        logWidget = createInstance(nullptr);
-    }
-
-    return logWidget;
-}
-
-/**
- * Creates a global instance of the class
- */
-LogWidget *LogWidget::createInstance(QWidget *parent) {
-    auto *logWidget = new LogWidget(parent);
-
-#ifndef INTEGRATION_TESTS
-    qApp->setProperty("logWidget", QVariant::fromValue<LogWidget *>(logWidget));
-#endif
-
-    return logWidget;
-}
-
 /**
  * Custom log output
  */
@@ -381,13 +347,12 @@ void LogWidget::logMessageOutput(QtMsgType type,
     }
 
 #ifndef INTEGRATION_TESTS
-    MainWindow *mainWindow = MainWindow::instance();
 
-    if (mainWindow != Q_NULLPTR) {
-        // handle logging as signal/slot to even more prevent crashes when
-        // writing to the log-widget while the app is shutting down
-        emit(mainWindow->log(logType, msg));
+    if (s_logWidget) {
+        // Use auto connection to handle the case if a message is coming in from a different thread.
+        QMetaObject::invokeMethod(s_logWidget, "log", Qt::AutoConnection, Q_ARG(LogWidget::LogType, logType), Q_ARG(QString, msg));
     }
+
 #else
     Q_UNUSED(logType)
 #endif
@@ -460,19 +425,6 @@ void LogWidget::on_logTextEdit_customContextMenuRequested(QPoint pos) {
     }
 #else
     Q_UNUSED(pos)
-#endif
-}
-
-/**
- * In case that method gets ever called it should disable logging if an
- * object is destroyed
- *
- * @param obj
- */
-void LogWidget::onDestroyed(QObject *obj) {
-    Q_UNUSED(obj)
-#ifndef INTEGRATION_TESTS
-    qApp->setProperty("loggingEnabled", false);
 #endif
 }
 

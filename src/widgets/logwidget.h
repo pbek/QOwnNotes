@@ -34,11 +34,10 @@ class LogWidget : public QFrame {
         StatusLogType,
         ScriptingLogType
     };
+    Q_ENUM(LogType);
 
     explicit LogWidget(QWidget *parent = 0);
     ~LogWidget();
-    static LogWidget *instance();
-    static LogWidget *createInstance(QWidget *parent);
     static void logMessageOutput(QtMsgType type,
                                  const QMessageLogContext &context,
                                  const QString &msg);
@@ -54,8 +53,6 @@ class LogWidget : public QFrame {
     void on_clearButton_clicked();
 
     void on_logTextEdit_customContextMenuRequested(QPoint pos);
-
-    void onDestroyed(QObject *obj = Q_NULLPTR);
 
    private:
     Ui::LogWidget *ui;

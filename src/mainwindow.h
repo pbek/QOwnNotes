@@ -759,6 +759,7 @@ private:
     QDockWidget *_notePreviewDockWidget;
     QDockWidget *_logDockWidget;
     QDockWidget *_scriptingDockWidget;
+    class LogWidget *_logWidget;
     QWidget *_taggingDockTitleBarWidget;
     QWidget *_noteSubFolderDockTitleBarWidget;
     QWidget *_noteSearchDockTitleBarWidget;
