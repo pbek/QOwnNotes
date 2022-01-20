@@ -300,6 +300,10 @@ ___
 - **One newline** will get you a **new line in the same paragraph**.
 - To have a **line break without a paragraph**, you will need to use **two trailing spaces**.
 
+::: tip
+You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
+:::
+
 ```markdown
 Here's a line for us to start with.
 
