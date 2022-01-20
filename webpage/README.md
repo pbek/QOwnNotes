@@ -25,7 +25,7 @@ Then you can open the webpage in your browser at <http://0.0.0.0:8080/>.
 
 Every change you make to the source code will be automatically reflected in the webpage.
 
-If you run `yarn run build` the webpage will be built in production mode in `webpage/dist`.
+If you run `yarn run build` the webpage will be built in production mode in `webpage/src/.vuepress/dist`.
 
 ## Customization
 
