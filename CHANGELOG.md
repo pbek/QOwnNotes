@@ -2,6 +2,8 @@
 
 ## 22.1.9
 - potential crashes in the logging panel were fixed (for [#2391](https://github.com/pbek/QOwnNotes/issues/2391), thank you @Waqar144)
+- <kbd>Ctrl</kbd> + <kbd>V</kbd> now also triggers the dialog to enable note editing
+  (for [#2397](https://github.com/pbek/QOwnNotes/issues/2397))
 
 ## 22.1.8
 - an attempt was made to fix potential crashes with the Markdown highlighter

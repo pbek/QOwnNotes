@@ -1217,8 +1217,9 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
 
                 // show notification if user tries to edit a note while
                 // note editing is turned off
-                if ((keyEvent->key() < 128 || keys.contains(keyEvent->key())) &&
-                    keyEvent->modifiers().testFlag(Qt::NoModifier) &&
+                if (((keyEvent->key() < 128 || keys.contains(keyEvent->key())) &&
+                    keyEvent->modifiers().testFlag(Qt::NoModifier) ||
+                    (keyEvent->key() == Qt::Key_V ) && keyEvent->modifiers().testFlag(Qt::ControlModifier)) &&
                     isReadOnly()) {
                     if (Utils::Gui::questionNoSkipOverride(
                             this, tr("Note editing disabled"),
