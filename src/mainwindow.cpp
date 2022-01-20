@@ -5099,6 +5099,12 @@ void MainWindow::openSettingsDialog(int page, bool openScriptRepository) {
         return;
     }
 
+    // let the world know that settings have change
+    // anything that uses settings should use this
+    // signal to adapt dynamically
+    Q_EMIT settingsChanged();
+
+    // TODO: Remove the need for restart
     // shows a restart application notification if needed
     if (showRestartNotificationIfNeeded()) {
         return;
