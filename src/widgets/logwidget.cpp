@@ -28,6 +28,19 @@ LogWidget::LogWidget(QWidget *parent)
 
     ui->setupUi(this);
 
+    // drop some stuff that doesn't apply here
+    disconnect(ui->logTextEdit, &QMarkdownTextEdit::zoomIn, nullptr, nullptr);
+    disconnect(ui->logTextEdit, &QMarkdownTextEdit::zoomOut, nullptr, nullptr);
+    disconnect(ui->logTextEdit, &QOwnNotesMarkdownTextEdit::urlClicked, nullptr, nullptr);
+
+    // The order of zoomIn is opposite (in calls out and vice versa), to be consistent with other edits
+    connect(ui->logTextEdit, &QMarkdownTextEdit::zoomIn, this, [this]{ static_cast<QPlainTextEdit*>(ui->logTextEdit)->zoomOut(-1); });
+    connect(ui->logTextEdit, &QMarkdownTextEdit::zoomOut, this, [this]{ static_cast<QPlainTextEdit*>(ui->logTextEdit)->zoomIn(-1); });
+
+    // we use a different context menu here, not default one
+    disconnect(ui->logTextEdit, &QPlainTextEdit::customContextMenuRequested, nullptr, nullptr);
+    connect(ui->logTextEdit, &QPlainTextEdit::customContextMenuRequested, this, &LogWidget::on_logTextEdit_customContextMenuRequested);
+
     connect(ui->logTextEdit, &QOwnNotesMarkdownTextEdit::destroyed, this,
             &LogWidget::onDestroyed);
 
