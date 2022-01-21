@@ -131,13 +131,11 @@ MainWindow::MainWindow(QWidget *parent)
     // static reference to us
     s_self = this;
 
-    // handle logging as signal/slot to even more prevent crashes when
-    // writing to the log-widget while the app is shutting down
-    connect(this, &MainWindow::log, LogWidget::instance(), &LogWidget::log);
+    _logWidget = new LogWidget(this);
+    connect(this, &MainWindow::log, _logWidget, &LogWidget::log);
 
     // use our custom log handler
     qInstallMessageHandler(LogWidget::logMessageOutput);
-    qApp->setProperty("loggingEnabled", true);
 
 #ifdef Q_OS_MAC
     // disable icons in the menu
@@ -724,14 +722,6 @@ MainWindow::~MainWindow() {
     // (#1269, may cause an interruption of the shutdown process)
     //    gitCommitCurrentNoteFolder();
 
-    qApp->setProperty("loggingEnabled", false);
-
-    if (showSystemTray) {
-        // if we are using the system tray lets delete the log window so the
-        // app can quit
-        delete (LogWidget::instance());
-    }
-
     delete ui;
 
     s_self = nullptr;
@@ -871,7 +861,7 @@ void MainWindow::initDockWidgets() {
 
     _logDockWidget = new QDockWidget(tr("Log"), this);
     _logDockWidget->setObjectName(QStringLiteral("logDockWidget"));
-    _logDockWidget->setWidget(LogWidget::instance());
+    _logDockWidget->setWidget(_logWidget);
     _logDockTitleBarWidget = _logDockWidget->titleBarWidget();
     addDockWidget(Qt::RightDockWidgetArea, _logDockWidget, Qt::Vertical);
     _logDockWidget->hide();
@@ -5581,19 +5571,11 @@ void MainWindow::handleNoteTextChanged() {
 }
 
 void MainWindow::on_action_Quit_triggered() {
-    // this will be done again in the destructor, but we want to make sure
-    // nothing is logged to the log widget that might already be destroyed
-    qApp->setProperty("loggingEnabled", false);
-
     storeSettings();
     QApplication::quit();
 }
 
 void MainWindow::quitApp() {
-    // this will be done again in the destructor, but we want to make sure
-    // nothing is logged to the log widget that might already be destroyed
-    qApp->setProperty("loggingEnabled", false);
-
     QApplication::quit();
 }
 
@@ -11323,8 +11305,7 @@ void MainWindow::on_noteOperationsButton_clicked() {
  * Returns the text of the log widget
  */
 QString MainWindow::getLogText() {
-    auto *widget = dynamic_cast<LogWidget *>(_logDockWidget->widget());
-    return widget->getLogText();
+    return _logWidget->getLogText();
 }
 
 /**
