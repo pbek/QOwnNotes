@@ -296,9 +296,8 @@ ___
 
 ## Line breaks
 
-- **Two newlines** will get you a **new paragraph**.
-- **One newline** will **not** get you a **new line in the same paragraph**.
-- To have a **line break without a paragraph**, you will need to use **two trailing spaces**.
+- You can break a paragraph into more than a single line for easier editing, they still render as a single paragraph with no breaks.
+- You can force a line break inside a paragraph by ending a line with two spaces.
 
 ::: tip
 You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
