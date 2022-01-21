@@ -297,7 +297,7 @@ ___
 ## Line breaks
 
 - **Two newlines** will get you a **new paragraph**.
-- **One newline** will get you a **new line in the same paragraph**.
+- **One newline** will **not** get you a **new line in the same paragraph**.
 - To have a **line break without a paragraph**, you will need to use **two trailing spaces**.
 
 ::: tip
