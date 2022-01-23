@@ -430,6 +430,9 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             handleImportBookmarksReply(data);
         } else if (url.toString() == serverUrl) {
             qDebug() << "Reply from main server url";
+            if (!settingsDialog) {
+                return;
+            }
 
             if (!data.isEmpty()) {
                 settingsDialog->setOKLabelData(1, tr("ok"),
@@ -470,6 +473,9 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
                                 .toString();
 
 #ifndef INTEGRATION_TESTS
+    if (!settingsDialog) {
+        return;
+    }
     // reset to "unknown" in case we can't test if versions
     // and trash app are enabled
     settingsDialog->setOKLabelData(6, tr("unknown"),
@@ -2008,7 +2014,9 @@ void OwnCloudService::loadDirectory(QString &data) {
     }
 
 #ifndef INTEGRATION_TESTS
-    settingsDialog->setNoteFolderRemotePathList(pathList);
+    if (settingsDialog) {
+        settingsDialog->setNoteFolderRemotePathList(pathList);
+    }
 #endif
 }
 
