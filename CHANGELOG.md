@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.1.10
+- added a new editor color schema *Orangueen* by @Zorziel
+  (for [#2405](https://github.com/pbek/QOwnNotes/issues/2405))
+
 ## 22.1.9
 - potential crashes in the logging panel were fixed (for [#2391](https://github.com/pbek/QOwnNotes/issues/2391), thank you @Waqar144)
 - <kbd>Ctrl</kbd> + <kbd>V</kbd> now also triggers the dialog to enable note editing
