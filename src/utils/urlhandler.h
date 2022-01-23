@@ -23,7 +23,7 @@ public:
 
 private:
     void handleNoteIdUrl(QString urlString);
-    void handleNoteUrl(QString urlString);
+    void handleNoteUrl(QString urlString, const QString &fragment);
     void handleCheckboxUrl(QString urlString);
     void handleFileUrl(QString urlString);
     void handleFileAttachmentUrl(QString urlString);
