@@ -9501,7 +9501,8 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
     const int type = item->data(0, Qt::UserRole + 1).toInt();
 
     if (type == FolderType) {
-        Q_EMIT ui->noteSubFolderTreeWidget->customContextMenuRequested(pos);
+        std::unique_ptr<QMenu> menu(NoteSubFolderTree::contextMenu(ui->noteTreeWidget));
+        menu->exec(globalPos);
     } else if (type == NoteType) {
         openNotesContextMenu(globalPos);
     }
