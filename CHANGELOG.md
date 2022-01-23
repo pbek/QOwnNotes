@@ -3,6 +3,8 @@
 ## 22.1.10
 - added a new editor color schema *Orangueen* by @Zorziel
   (for [#2405](https://github.com/pbek/QOwnNotes/issues/2405))
+- jumping to headings from note links in the note edit panel was fixed
+  (for [#2404](https://github.com/pbek/QOwnNotes/issues/2404), thank you @Waqar144)
 
 ## 22.1.9
 - potential crashes in the logging panel were fixed (for [#2391](https://github.com/pbek/QOwnNotes/issues/2391), thank you @Waqar144)
