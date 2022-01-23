@@ -131,23 +131,18 @@ MainWindow::MainWindow(QWidget *parent)
     // static reference to us
     s_self = this;
 
+    ui->setupUi(this);
+
     _logWidget = new LogWidget(this);
     connect(this, &MainWindow::log, _logWidget, &LogWidget::log);
 
     // use our custom log handler
     qInstallMessageHandler(LogWidget::logMessageOutput);
 
-#ifdef Q_OS_MAC
-    // disable icons in the menu
-    QApplication::instance()->setAttribute(Qt::AA_DontShowIconsInMenus, true);
-#endif
-
     QSettings settings;
     _noteEditIsCentralWidget =
         settings.value(QStringLiteral("noteEditIsCentralWidget"), true)
             .toBool();
-
-    ui->setupUi(this);
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
     ui->noteEditTabWidget->setTabBarAutoHide(true);
