@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QObject>
+#include <QPointer>
 
 #define QOWNNOTESAPI_MIN_VERSION "0.4.2"
 
@@ -125,7 +126,7 @@ class OwnCloudService : public QObject {
     QString sharePath;
     QString bookmarkPath;
     QString trashDeletePath;
-    SettingsDialog *settingsDialog;
+    QPointer<SettingsDialog> settingsDialog;
     TodoDialog *todoDialog;
     QString calendarName;
 
