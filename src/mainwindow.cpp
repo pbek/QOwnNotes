@@ -131,6 +131,11 @@ MainWindow::MainWindow(QWidget *parent)
     // static reference to us
     s_self = this;
 
+#ifdef Q_OS_MAC
+    // disable icons in the menu
+    QApplication::instance()->setAttribute(Qt::AA_DontShowIconsInMenus, true);
+#endif
+
     ui->setupUi(this);
 
     _logWidget = new LogWidget(this);
