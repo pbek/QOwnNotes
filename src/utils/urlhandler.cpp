@@ -43,8 +43,12 @@ void UrlHandler::openUrl(QString urlString)
     }
 
     bool urlWasNotValid = !QOwnNotesMarkdownTextEdit::isValidUrl(urlString);
+    QString fragment;
     if (urlWasNotValid) {
+        fragment = Note::getURLFragmentFromFileName(urlString);
         urlString = _mw->getCurrentNote().getFileURLFromFileName(urlString, true);
+    } else {
+        fragment = QUrl(urlString).fragment();
     }
 
     QUrl url = QUrl(urlString);
@@ -59,7 +63,7 @@ void UrlHandler::openUrl(QString urlString)
     } else if (scheme == QStringLiteral("noteid")) {
         handleNoteIdUrl(urlString);
     } else if (scheme == QStringLiteral("note") || isNoteFileUrl) {
-        handleNoteUrl(urlString);
+        handleNoteUrl(urlString, fragment);
     } else if (scheme == QStringLiteral("task")) {
         _mw->openTodoDialog(url.host());
     } else if (scheme == QStringLiteral("checkbox")) {
@@ -89,15 +93,10 @@ void UrlHandler::handleNoteIdUrl(QString urlString)
     }
 }
 
-void UrlHandler::handleNoteUrl(QString urlString) {
+void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
     Note note;
     const QUrl url(urlString);
     const auto &currentNote = _mw->getCurrentNote();
-
-    QString fragment = url.fragment();
-    if (!QOwnNotesMarkdownTextEdit::isValidUrl(urlString)) {
-        fragment = Note::getURLFragmentFromFileName(urlString);
-    }
 
     const bool isNoteFileUrl = Note::fileUrlIsNoteInCurrentNoteFolder(url);
 
