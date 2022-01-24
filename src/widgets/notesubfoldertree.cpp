@@ -9,6 +9,8 @@
 #include <QHeaderView>
 #include <QMenu>
 
+#include <memory>
+
 NoteSubFolderTree::NoteSubFolderTree(QWidget *parent)
     : QTreeWidget(parent)
 {
