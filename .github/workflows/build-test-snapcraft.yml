@@ -1,0 +1,82 @@
+name: Test Snapcraft Build
+
+on:
+  push:
+    branches-ignore:
+      - master
+    tags-ignore:
+      - '*'
+  pull_request:
+  workflow_dispatch:
+#  schedule:
+#    - cron: "0 0 */3 * *"
+
+defaults:
+  run:
+    working-directory: src
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    continue-on-error: ${{ matrix.experimental }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-18]
+        # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
+        # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
+        # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
+        qt-version: ['5.15.2']
+        experimental: [false]
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - id: files
+        uses: jitterbit/get-changed-files@v1
+        with:
+          format: 'csv'
+      - id: changes
+        name: Check if we want to build QOwnNotes
+        shell: bash
+        run: |
+          unset DO_BUILD
+          mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
+          for changed_file in "${added_modified_files[@]}"; do
+            if [[ ${changed_file} = src* ]] || [[ ${changed_file} = tests* ]] || [[ ${changed_file} = build-systems/github/* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
+            then
+              echo "'${changed_file}' matches, we will build"
+              DO_BUILD='true'
+            fi
+          done
+          echo "DO_BUILD: ${DO_BUILD}"
+          echo ::set-output name=DO_BUILD::${DO_BUILD}
+
+        #
+        # Install Qt
+        #
+
+      - if: steps.changes.outputs.DO_BUILD
+        name: Cache Qt
+        id: cache-qt
+        uses: actions/cache@v1
+        with:
+          path: ../Qt
+          key: ${{ runner.os }}-QtCache-${{ matrix.qt-version }}
+      - if: steps.changes.outputs.DO_BUILD
+        name: Install Snapcraft
+        uses: samuelmeuli/action-snapcraft@v1
+        with:
+          use_lxd: true
+          # `snapcraft export-login --snaps qownnotes --channels edge,stable -`, token valid for one year
+          snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
+      # https://github.com/jurplel/install-qt-action
+      - if: steps.changes.outputs.DO_BUILD
+        name: Install Qt
+        uses: jurplel/install-qt-action@v2
+        with:
+          version: ${{ matrix.qt-version }}
+          cached: ${{ steps.cache-qt.outputs.cache-hit }}
+      - if: steps.changes.outputs.DO_BUILD
+        name: Build for Snapcraft
+        run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
