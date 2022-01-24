@@ -4156,11 +4156,11 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 
         if (obj == ui->searchLineEdit->completer()->popup()) {
-            if (keyEvent->key() == Qt::Key_Return) {
+            if (keyEvent->key() == Qt::Key_Return || keyEvent->key() == Qt::Key_Enter) {
                 // set a variable to ignore that first "Return" in the
                 // return-handler
                 _searchLineEditFromCompleter = true;
-                return false;
+                return QMainWindow::eventFilter(obj, event);
             }
         } else if ((obj == ui->newNoteTagLineEdit) ||
                    ((ui->newNoteTagLineEdit->completer() != nullptr) &&
@@ -4175,7 +4175,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                     linkTagNameToCurrentNote(tag.getName(), true);
                 }
 
-                return false;
+                return QMainWindow::eventFilter(obj, event);;
             }
         } else if (obj == ui->searchLineEdit) {
             bool downSelectNote = false;
@@ -4195,7 +4195,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
 
                     // open the completer
                     ui->searchLineEdit->completer()->complete();
-                    return false;
+                    return QMainWindow::eventFilter(obj, event);;
                 } else {
                     // if nothing was found in the completer we want to jump
                     // to the note list
@@ -4224,7 +4224,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 ui->noteTreeWidget->setFocus();
                 return true;
             }
-            return false;
+            return QMainWindow::eventFilter(obj, event);;
         } else if (obj == activeNoteTextEdit()) {
             // check if we want to leave the distraction free mode and the
             // search widget is not visible (because we want to close that
@@ -4237,7 +4237,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 return true;
             }
 
-            return false;
+            return QMainWindow::eventFilter(obj, event);;
         } else if (obj == ui->noteTreeWidget) {
             // set focus to the note text edit if Key_Return or Key_Tab were
             // pressed in the notes list
@@ -4256,14 +4256,14 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 removeSelectedNotes();
                 return true;
             }
-            return false;
+            return QMainWindow::eventFilter(obj, event);;
         } else if (obj == ui->tagTreeWidget) {
             if ((keyEvent->key() == Qt::Key_Delete) ||
                 (keyEvent->key() == Qt::Key_Backspace)) {
                 removeSelectedTags();
                 return true;
             }
-            return false;
+            return QMainWindow::eventFilter(obj, event);
         }
     } else if (event->type() == QEvent::MouseButtonRelease) {
         auto *mouseEvent = static_cast<QMouseEvent *>(event);
