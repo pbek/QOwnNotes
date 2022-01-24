@@ -9,6 +9,8 @@
 #include <QHeaderView>
 #include <QMenu>
 
+#include <memory>
+
 NoteSubFolderTree::NoteSubFolderTree(QWidget *parent)
     : QTreeWidget(parent)
 {
@@ -280,51 +282,61 @@ void NoteSubFolderTree::onItemExpanded(QTreeWidgetItem *item) {
     }
 }
 
-void NoteSubFolderTree::onContextMenuRequested(QPoint pos)
+QMenu *NoteSubFolderTree::contextMenu(QTreeWidget *parent)
 {
+    QMenu *menu = new QMenu(parent);
+
     auto *mainWindow = MainWindow::instance();
     Q_ASSERT(mainWindow);
 
-    QMenu menu;
-    menu.addAction(mainWindow->newNoteAction());
-    QAction *newAction = menu.addAction(tr("New subfolder"));
+    menu->addAction(mainWindow->newNoteAction());
+
+    QAction *newAction = menu->addAction(tr("New subfolder"));
+    connect(newAction, &QAction::triggered, parent, [](){
+        MainWindow::instance()->createNewNoteSubFolder();
+    });
+
     QAction *renameAction(nullptr);
     QAction *removeAction(nullptr);
 
     if (NoteFolder::currentNoteFolder().getActiveNoteSubFolder().isFetched()) {
-        renameAction = menu.addAction(tr("Rename subfolder"));
-        removeAction = menu.addAction(tr("Remove selected folders"));
+        renameAction = menu->addAction(tr("Rename subfolder"));
+        connect(renameAction, &QAction::triggered, [parent](){
+            QTreeWidgetItem *item = parent->currentItem();
+            // rename folder
+            parent->editItem(item);
+        });
+
+        removeAction = menu->addAction(tr("Remove selected folders"));
+        connect(removeAction, &QAction::triggered, parent, [parent](){
+            // remove folders
+            removeSelectedNoteSubFolders(parent);
+        });
     }
 
     QAction *showInFileManagerAction =
-        menu.addAction(tr("Show folder in file manager"));
-    menu.addAction(mainWindow->reloadNoteFolderAction());
+        menu->addAction(tr("Show folder in file manager"));
+    connect(showInFileManagerAction, &QAction::triggered, parent, [parent](){
+        NoteSubFolder noteSubFolder =
+        NoteFolder::currentNoteFolder().getActiveNoteSubFolder();
 
-    QAction *selectedItem = menu.exec(mapToGlobal(pos));
-    if (selectedItem) {
-        if (selectedItem == newAction) {
-            // create a new folder
-            mainWindow->createNewNoteSubFolder();
-        } else if (selectedItem == removeAction) {
-            // remove folders
-            removeSelectedNoteSubFolders();
-        } else if (selectedItem == renameAction) {
-            QTreeWidgetItem *item = currentItem();
+        // show the current folder in the file manager
+        Utils::Misc::openPath(noteSubFolder.fullPath());
+    });
 
-            // rename folder
-            editItem(item);
-        } else if (selectedItem == showInFileManagerAction) {
-            NoteSubFolder noteSubFolder =
-                NoteFolder::currentNoteFolder().getActiveNoteSubFolder();
+    menu->addAction(mainWindow->reloadNoteFolderAction());
 
-            // show the current folder in the file manager
-            Utils::Misc::openPath(noteSubFolder.fullPath());
-        }
-    }
+    return menu;
 }
 
-void NoteSubFolderTree::removeSelectedNoteSubFolders() {
-    const auto selectedItems = this->selectedItems();
+void NoteSubFolderTree::onContextMenuRequested(QPoint pos)
+{
+    std::unique_ptr<QMenu> menu(contextMenu(this));
+    menu->exec(mapToGlobal(pos));
+}
+
+void NoteSubFolderTree::removeSelectedNoteSubFolders(QTreeWidget *parent) {
+    const auto selectedItems = parent->selectedItems();
     const int selectedItemsCount = selectedItems.size();
 
     if (selectedItemsCount == 0) {
@@ -354,7 +366,7 @@ void NoteSubFolderTree::removeSelectedNoteSubFolders() {
     auto *mainWindow = MainWindow::instance();
 
     if (Utils::Gui::question(
-            this, tr("Remove selected folders"),
+            parent, tr("Remove selected folders"),
             tr("Remove <strong>%n</strong> selected folder(s)?"
                "<ul><li>%1</li></ul>"
                "All files and folders in these folders will be removed as"

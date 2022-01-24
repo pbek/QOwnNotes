@@ -19,13 +19,16 @@ public:
 
     void reload();
 
+    static QMenu *contextMenu(QTreeWidget *parent);
+
 private Q_SLOTS:
     void onItemExpanded(QTreeWidgetItem *item);
     void onContextMenuRequested(QPoint pos);
-    void removeSelectedNoteSubFolders();
     void onCurrentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
     void onItemChanged(QTreeWidgetItem *item, int column);
     void onItemSelectionChanged();
+
+    static void removeSelectedNoteSubFolders(QTreeWidget *treeWidget);
 
 Q_SIGNALS:
     void currentSubFolderChanged();
