@@ -6465,9 +6465,14 @@ void MainWindow::on_actionInsert_current_time_triggered() {
     QSettings settings;
     const QString format =
         settings.value(QStringLiteral("insertTimeFormat")).toString();
-    const QString text = format.isEmpty()
-                             ? dateTime.toString(Qt::SystemLocaleShortDate)
-                             : dateTime.toString(format);
+
+    QLocale locale = QLocale::system();
+    QString text;
+    if (format.isEmpty()) {
+        text = locale.toString(dateTime.date(), QLocale::FormatType::ShortFormat);
+    } else {
+        text = locale.toString(dateTime, format);
+    }
 
     // insert the current date
     c.insertText(text);
@@ -9741,7 +9746,7 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
  * Renames a note file if the note was renamed in the note tree widget
  */
 void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
-                                               int column) {
+                                               int /*column*/) {
     if (item == nullptr) {
         return;
     }

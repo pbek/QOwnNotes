@@ -15,6 +15,12 @@
 #include <QFileDialog>
 #include <QFileInfo>
 #include <QMimeData>
+
+#ifdef __GNUC__
+    #if __GNUC__ >= 11
+        QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
+    #endif
+#endif
 #include <QQmlComponent>
 #include <QQmlContext>
 #include <QQmlEngine>

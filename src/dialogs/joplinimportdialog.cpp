@@ -85,7 +85,8 @@ JoplinImportDialog::~JoplinImportDialog() {
  */
 void JoplinImportDialog::on_directoryButton_clicked() {
     FileDialog dialog(QStringLiteral("Joplin Import"));
-    dialog.setFileMode(QFileDialog::DirectoryOnly);
+    dialog.setFileMode(QFileDialog::Directory);
+    dialog.setOption(QFileDialog::ShowDirsOnly);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setWindowTitle(tr("Select 'RAW - Joplin Export Directory' to import"));
     int ret = dialog.exec();

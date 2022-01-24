@@ -2078,8 +2078,10 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
     // 5 sec timeout for the request
     timer.start(5000);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
     r.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+#else
+    r.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
 #endif
 
     QNetworkReply *reply = manager->get(r);
@@ -2195,9 +2197,11 @@ QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString &path) {
     QNetworkRequest networkRequest = QNetworkRequest(url);
     addAuthHeader(&networkRequest);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
     networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
                                 true);
+#else
+    networkRequest.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
 #endif
 
     QByteArray data;

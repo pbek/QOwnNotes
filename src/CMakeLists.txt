@@ -8,16 +8,35 @@ include_directories(libraries/sonnet/src/core)
 #some hunspell settings for windows
 include(libraries/sonnet/src/plugins/hunspell/hunspell/CMakeLists.txt)
 
+add_library(md4c
+    libraries/md4c/md4c/md4c.c
+    libraries/md4c/md2html/render_html.c
+    libraries/md4c/md2html/entity.c
+)
 
 add_executable(QOwnNotes "")
 
 set_target_properties(QOwnNotes PROPERTIES
-    CXX_STANDARD 11
+    CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
     AUTOMOC ON
     AUTOUIC ON
     AUTORCC ON
 )
+
+if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+target_compile_options(
+    QOwnNotes
+    PRIVATE
+    -Wall -Wextra -pedantic -Werror -Wno-gnu-zero-variadic-macro-arguments -Wno-error=deprecated-declaration
+)
+else()
+target_compile_options(
+    QOwnNotes
+    PRIVATE
+    -Wall -Wextra -pedantic -Werror
+)
+endif()
 
 target_include_directories(QOwnNotes PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}
@@ -218,9 +237,6 @@ set(SOURCE_FILES
     api/tagapi.h
     api/scriptapi.cpp
     api/scriptapi.h
-    libraries/md4c/md4c/md4c.c
-    libraries/md4c/md2html/render_html.c
-    libraries/md4c/md2html/entity.c
     libraries/qmarkdowntextedit/linenumberarea.h
     libraries/qmarkdowntextedit/qownlanguagedata.cpp
     libraries/qmarkdowntextedit/qownlanguagedata.h
@@ -539,6 +555,7 @@ target_link_libraries(QOwnNotes PRIVATE
     Botan::Botan
     fakevim
     Google::DiffMatchPatch
+    md4c
 )
 if(UNIX)
     target_link_libraries(QOwnNotes PRIVATE

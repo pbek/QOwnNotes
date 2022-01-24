@@ -156,7 +156,7 @@ void FakeVimProxy::highlightMatches(const QString &pattern) {
     updateExtraSelections();
 }
 
-void FakeVimProxy::changeStatusMessage(const QString &contents, int cursorPos, int anchorPos, int messageLevel) {
+void FakeVimProxy::changeStatusMessage(const QString &contents, int cursorPos, int /*anchorPos*/, int /*messageLevel*/) {
     m_statusMessage =
         cursorPos == -1
             ? contents

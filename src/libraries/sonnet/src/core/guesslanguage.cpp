@@ -105,7 +105,12 @@ GuessLanguagePrivate::GuessLanguagePrivate()
         return;
     }
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
     s_knownDictionaries = Loader::openLoader()->languages().toSet();
+#else
+    const auto langs = Loader::openLoader()->languages();
+    s_knownDictionaries = QSet<QString>(langs.cbegin(), langs.cend());
+#endif
     QSet<QString> dictionaryLanguages;
 #if QT_VERSION >= 0x050700
     for (const QString &dictName : qAsConst(s_knownDictionaries)) {
@@ -524,8 +529,11 @@ GuessLanguagePrivate::GuessLanguagePrivate()
 #endif
             break;
         }
+#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
         allLanguages.unite(names.toSet());
-
+#else
+        allLanguages.unite(QSet<QString>(names.cbegin(), names.cend()));
+#endif
         { // Remove unknown languages
             QStringList pruned;
 #if QT_VERSION >= 0x050700
@@ -671,7 +679,11 @@ void GuessLanguagePrivate::loadModels()
         }
         availableLanguages.insert(iterator.key());
     }
+#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
     QSet<QString> knownLanguages(s_scriptLanguages.values().toSet());
+#else
+    QSet<QString> knownLanguages(s_scriptLanguages.cbegin(), s_scriptLanguages.cend());
+#endif
     knownLanguages.subtract(availableLanguages);
     if (!knownLanguages.isEmpty()) {
         qCWarning(SONNET_LOG_CORE) << "Missing trigrams for languages:" << knownLanguages;

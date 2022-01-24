@@ -102,7 +102,7 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_sq.ts
 
 CODECFORTR = UTF-8
-CONFIG += c++11
+CONFIG += c++17
 
 INCLUDEPATH += $$PWD/libraries $$PWD/libraries/diff_match_patch
 
@@ -399,6 +399,8 @@ unix {
   icons.path = $$DATADIR/icons/hicolor
   icons.files += images/icons/*
 }
+
+QMAKE_CXXFLAGS += "-Wall -Wextra -Wno-error=deprecated-declarations -Wundef -Werror"
 
 CONFIG(debug, debug|release) {
 #    QMAKE_CXXFLAGS_DEBUG += -g3 -O0

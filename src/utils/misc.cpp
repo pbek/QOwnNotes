@@ -1016,9 +1016,11 @@ QByteArray Utils::Misc::downloadUrl(const QUrl &url, bool usePost, QByteArray po
     networkRequest.setHeader(QNetworkRequest::UserAgentHeader,
                              Utils::Misc::friendlyUserAgentString());
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
     networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
                                 true);
+#else
+    networkRequest.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
 #endif
 
     QByteArray data;
