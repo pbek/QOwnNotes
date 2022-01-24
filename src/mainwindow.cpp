@@ -13,7 +13,7 @@
  */
 
 #include "mainwindow.h"
-
+#include <memory>
 #include <dialogs/actiondialog.h>
 #include <dialogs/attachmentdialog.h>
 #include <dialogs/dictionarymanagerdialog.h>
