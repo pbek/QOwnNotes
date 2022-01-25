@@ -18,7 +18,6 @@ defaults:
 jobs:
   build:
     runs-on: ${{ matrix.os }}
-    continue-on-error: ${{ matrix.experimental }}
     strategy:
       fail-fast: false
       matrix:
@@ -27,7 +26,6 @@ jobs:
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
         qt-version: ['5.15.2']
-        experimental: [false]
     steps:
       - uses: actions/checkout@v2
         with:
