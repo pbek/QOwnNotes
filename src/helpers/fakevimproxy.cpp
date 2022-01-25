@@ -214,12 +214,12 @@ void FakeVimProxy::requestSetBlockSelection(const QTextCursor &tc) {
 
     int from = cur.positionInBlock();
     int to = cur.anchor() - cur.document()->findBlock(cur.anchor()).position();
-    const int min = qMin(cur.position(), cur.anchor());
-    const int max = qMax(cur.position(), cur.anchor());
+    const int min = qMin<int>(cur.position(), cur.anchor());
+    const int max = qMax<int>(cur.position(), cur.anchor());
     for (QTextBlock block = cur.document()->findBlock(min);
          block.isValid() && block.position() < max; block = block.next()) {
-        cur.setPosition(block.position() + qMin(from, block.length()));
-        cur.setPosition(block.position() + qMin(to, block.length()),
+        cur.setPosition(block.position() + qMin<int>(from, block.length()));
+        cur.setPosition(block.position() + qMin<int>(to, block.length()),
                         QTextCursor::KeepAnchor);
         selection.cursor = cur;
         m_blockSelection.append(selection);
@@ -295,7 +295,7 @@ void FakeVimProxy::indentRegion(int beginBlock, int endBlock, QChar typedChar) {
 
             qint64 indent = firstNonSpace(previousLine);
             if (typedChar == '}')
-                indent = std::max(0, int(indent - indentSize));
+                indent = std::max<int>(0, int(indent - indentSize));
             else if (previousLine.endsWith(QLatin1String("{")))
                 indent += indentSize;
             const auto indentString = QStringLiteral(" ").repeated(indent);

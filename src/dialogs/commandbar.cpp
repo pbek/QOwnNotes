@@ -370,8 +370,8 @@ void CommandBar::updateViewGeometry()
     const QSize viewMaxSize(centralSize.width() / 2, centralSize.height() / 2);
 
     // Position should be central over window
-    const int xPos = std::max(0, (centralSize.width() - viewMaxSize.width()) / 2);
-    const int yPos = std::max(0, (centralSize.height() - viewMaxSize.height()) * 1 / 4);
+    const int xPos = std::max<int>(0, (centralSize.width() - viewMaxSize.width()) / 2);
+    const int yPos = std::max<int>(0, (centralSize.height() - viewMaxSize.height()) * 1 / 4);
 
     const QPoint p(xPos, yPos);
     move(p + parentWidget()->pos());

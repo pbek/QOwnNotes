@@ -2615,7 +2615,7 @@ int levenshteinDistance(const QString &source, const QString &target)
     for (int i = 0; i < sourceCount; i++) {
         column[0] = i + 1;
         for (int j = 0; j < targetCount; j++) {
-            column[j + 1] = std::min({
+            column[j + 1] = std::min<int>({
                 1 + column.at(j),
                 1 + previousColumn.at(1 + j),
                 previousColumn.at(j) + ((source.at(i) == target.at(j)) ? 0 : 1)

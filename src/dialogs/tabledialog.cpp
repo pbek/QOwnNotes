@@ -48,8 +48,8 @@ void TableDialog::on_createTableWidget_itemSelectionChanged() {
         ui->createTableWidget->selectedRanges().first();
 #endif
 
-    ui->rowSpinBox->setValue(std::max(_maxRows, range.rowCount()));
-    ui->columnSpinBox->setValue(std::max(_maxColumns, range.columnCount()));
+    ui->rowSpinBox->setValue(std::max<int>(_maxRows, range.rowCount()));
+    ui->columnSpinBox->setValue(std::max<int>(_maxColumns, range.columnCount()));
 }
 
 void TableDialog::updateMaxItems() {
@@ -59,8 +59,8 @@ void TableDialog::updateMaxItems() {
             bool hasText = item != nullptr ? !item->text().isEmpty() : false;
 
             if (hasText) {
-                _maxRows = std::max(_maxRows, row + 1);
-                _maxColumns = std::max(_maxColumns, col + 1);
+                _maxRows = std::max<int>(_maxRows, row + 1);
+                _maxColumns = std::max<int>(_maxColumns, col + 1);
             }
         }
     }

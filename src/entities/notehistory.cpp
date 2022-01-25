@@ -338,7 +338,7 @@ void NoteHistory::storeForCurrentNoteFolder() {
     const int noteHistoryItemCount = noteHistoryItems.count();
 
     // we only want to store the last 200 note history items
-    const int maxCount = std::min(noteHistoryItemCount, 200);
+    const int maxCount = std::min<int>(noteHistoryItemCount, 200);
 
     if (maxCount == 0) {
         return;
