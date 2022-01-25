@@ -25674,6 +25674,8 @@ void OS::page_allow_access(void* page)
    DWORD old_perms = 0;
    ::VirtualProtect(page, page_size, PAGE_READWRITE, &old_perms);
    BOTAN_UNUSED(old_perms);
+   BOTAN_UNUSED(page);
+   BOTAN_UNUSED(page_size);
 #endif
    }
 

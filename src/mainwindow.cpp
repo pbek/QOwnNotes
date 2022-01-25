@@ -5359,8 +5359,8 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
     // select the orientation
     QStringList orientationStrings;
     orientationStrings << tr("Portrait") << tr("Landscape");
-    QList<QPrinter::Orientation> orientations;
-    orientations << QPrinter::Portrait << QPrinter::Landscape;
+    QList<QPageLayout::Orientation> orientations;
+    orientations << QPageLayout::Portrait << QPageLayout::Landscape;
 
     QString orientationString = QInputDialog::getItem(
         this, tr("Orientation"), tr("Orientation:"), orientationStrings,
@@ -5377,7 +5377,7 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
         return false;
     }
 
-    printer->setOrientation(orientations.at(orientationIndex));
+    printer->setPageOrientation(orientations.at(orientationIndex));
     settings.setValue(QStringLiteral("Printer/NotePDFExportOrientation"),
                       orientationIndex);
 #endif

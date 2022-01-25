@@ -26,6 +26,7 @@
 #include <QtCore/QByteArray>
 #include <QtCore/QSharedMemory>
 #include <QtCore/QUuid>
+#include <QElapsedTimer>
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
 #include <QtCore/QRandomGenerator>
