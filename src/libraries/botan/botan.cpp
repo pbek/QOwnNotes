@@ -25668,6 +25668,9 @@ std::vector<void*> OS::allocate_locked_pages(size_t count)
 void OS::page_allow_access(void* page)
    {
    const size_t page_size = OS::system_page_size();
+   (void)page_size;
+   (void)page;
+
 #if defined(BOTAN_TARGET_OS_HAS_POSIX1)
    ::mprotect(page, page_size, PROT_READ | PROT_WRITE);
 #elif defined(BOTAN_TARGET_OS_HAS_VIRTUAL_LOCK)
@@ -25682,6 +25685,8 @@ void OS::page_allow_access(void* page)
 void OS::page_prohibit_access(void* page)
    {
    const size_t page_size = OS::system_page_size();
+   (void)page_size;
+   (void)page;
 #if defined(BOTAN_TARGET_OS_HAS_POSIX1)
    ::mprotect(page, page_size, PROT_NONE);
 #elif defined(BOTAN_TARGET_OS_HAS_VIRTUAL_LOCK)

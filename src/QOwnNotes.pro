@@ -402,6 +402,10 @@ unix {
 
 QMAKE_CXXFLAGS += "-Wall -Wextra -Wno-error=deprecated-declarations -Wundef -Werror"
 
+!win32 {
+    QMAKE_CXXFLAGS += "-Wno-deprecated-copy"
+}
+
 CONFIG(debug, debug|release) {
 #    QMAKE_CXXFLAGS_DEBUG += -g3 -O0
     message("Currently in DEBUG mode.")
