@@ -21,7 +21,7 @@ CommandSnippet::CommandSnippet(QString command, QString description, QStringList
     this->command = std::move(command);
     this->tags = std::move(tagList);
     this->description = std::move(description);
-};
+}
 
 QJsonObject CommandSnippet::jsonObject() const {
     QJsonObject commandSnippetObject;
@@ -31,7 +31,7 @@ QJsonObject CommandSnippet::jsonObject() const {
     commandSnippetObject.insert(QStringLiteral("description"),
                           QJsonValue::fromVariant(description));
     return commandSnippetObject;
-};
+}
 
 QDebug operator<<(QDebug dbg, const CommandSnippet &commandSnippet) {
     dbg.nospace() << " <command>" << commandSnippet.command

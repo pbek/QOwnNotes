@@ -24,18 +24,22 @@ set_target_properties(QOwnNotes PROPERTIES
     AUTORCC ON
 )
 
-if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-target_compile_options(
-    QOwnNotes
-    PRIVATE
-    -Wall -Wextra -pedantic -Werror -Wno-gnu-zero-variadic-macro-arguments -Wno-error=deprecated-declaration
-)
-else()
-target_compile_options(
-    QOwnNotes
-    PRIVATE
-    -Wall -Wextra -pedantic -Werror
-)
+if (UNIX)
+    if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+        target_compile_options(QOwnNotes PRIVATE
+            -Wall -Wextra -pedantic -Wno-gnu-zero-variadic-macro-arguments -Wno-error=deprecated-declarations
+        )
+    else()
+        target_compile_options(QOwnNotes PRIVATE
+            -Wall -Wextra -pedantic
+        )
+    endif()
+
+    # enable werror on linux
+    if (NOT APPLE)
+        message("Werror enabled on linux")
+        target_compile_options(QOwnNotes PRIVATE -Werror)
+    endif()
 endif()
 
 target_include_directories(QOwnNotes PRIVATE
