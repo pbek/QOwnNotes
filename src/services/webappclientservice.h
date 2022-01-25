@@ -16,6 +16,7 @@
 
 #include <QObject>
 #include <QTimer>
+#include <QSslError>
 
 class QWebSocket;
 class QSslError;

@@ -856,8 +856,8 @@ void OwnCloudService::setPermissionsOnSharedNote(const Note &note,
     QUrl url(serverUrl % sharePath % QStringLiteral("/") %
              QString::number(note.getShareId()) %
              QStringLiteral("?format=xml"));
-    QString path = NoteFolder::currentRemotePath() +
-                   note.relativeNoteFilePath(QStringLiteral("/"));
+//    QString path = NoteFolder::currentRemotePath() +
+//                   note.relativeNoteFilePath(QStringLiteral("/"));
 
     QUrlQuery params;
     params.addQueryItem(QStringLiteral("permissions"),
@@ -1736,7 +1736,12 @@ void OwnCloudService::handleUpdateNoteShareReply(const QString &urlPart,
         return;
     }
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+    Q_UNUSED(urlPart)
+    qWarning() << Q_FUNC_INFO << "not implemented for qt6";
+    return;
+#else
+
     //    qDebug() << __func__ << " - 'data': " << data;
 
     QRegularExpression re(QRegularExpression::escape(sharePath) %
@@ -2321,6 +2326,14 @@ bool OwnCloudService::initiateLoginFlowV2(const QString &serverUrl, QJsonObject 
 QString OwnCloudService::fetchNextcloudAccountId(const QString &serverUrl,
                                                       const QString &userName,
                                                       const QString &password) {
+
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+    Q_UNUSED(serverUrl)
+    Q_UNUSED(userName)
+    Q_UNUSED(password)
+    qWarning() << Q_FUNC_INFO << "not implemented for qt6";
+    return {};
+#else
     auto *manager = new QNetworkAccessManager();
     QEventLoop loop;
     QTimer timer;
@@ -2378,4 +2391,5 @@ QString OwnCloudService::fetchNextcloudAccountId(const QString &serverUrl,
     delete (manager);
 
     return {};
+#endif
 }

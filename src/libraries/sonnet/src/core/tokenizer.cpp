@@ -199,10 +199,11 @@ Token WordTokenizer::next()
     // check if this word starts an email address of url
     if (!d->inAddress || hasNext()) {
         int pos = n.position()+n.length();
-        if (d->buffer[pos] == QLatin1Char('@')) {
+        if (pos < d->buffer.size() && d->buffer.at(pos) == QLatin1Char('@')) {
             d->inAddress = true;
         }
-        if (d->buffer[pos] == QLatin1Char(':') && d->buffer[pos+1] == QLatin1Char('/')
+        if (pos < d->buffer.size() && d->buffer.at(pos) == QLatin1Char(':') &&
+            pos + 1 < d->buffer.size() && d->buffer.at(pos+1) == QLatin1Char('/')
             && d->buffer[pos+2] == QLatin1Char('/')) {
             d->inAddress = true;
         }

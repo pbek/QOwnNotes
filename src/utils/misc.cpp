@@ -2513,6 +2513,9 @@ QString Utils::Misc::testEvernoteImportText(const QString& data) {
 
     return content.trimmed();
 #endif
+    qWarning() << Q_FUNC_INFO << "not implemented for qt6";
+    Q_UNUSED(data);
+    return {};
 }
 
 /**

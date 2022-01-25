@@ -24,6 +24,7 @@
 #include <QStandardPaths>
 #include <QDataStream>
 #include <QLocale>
+#include <QVector>
 
 #include "guesslanguage.h"
 #include "loader_p.h"

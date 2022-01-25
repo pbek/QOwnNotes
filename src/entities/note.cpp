@@ -246,7 +246,7 @@ bool Note::fillByFileName(const QString &fileName, int noteSubFolderId) {
  * @return
  */
 Note Note::fetchByRelativeFilePath(const QString &relativePath) {
-    const QFileInfo &fileInfo{relativePath};
+    const QFileInfo fileInfo(relativePath);
 
     // load note subfolder and note from the relative path
     // be aware that there must not be a ".." in the path, a canonical path must
@@ -3816,7 +3816,7 @@ bool Note::scaleDownImageFileIfNeeded(QFile &file) {
     }
 
     QMimeDatabase db;
-    QMimeType type = db.mimeTypeForFile(file);
+    QMimeType type = db.mimeTypeForFile(file.fileName());
 
     // we don't want to resize SVGs because Qt can't store them
     if (type.name().contains("image/svg")) {

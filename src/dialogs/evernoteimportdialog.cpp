@@ -94,6 +94,9 @@ void EvernoteImportDialog::initNoteCount(const QString &data) {
 
     ui->progressBar->setMaximum(count);
     ui->progressBar->show();
+#else
+    qWarning() << Q_FUNC_INFO << "not implemented for qt6";
+    Q_UNUSED(data)
 #endif
 }
 

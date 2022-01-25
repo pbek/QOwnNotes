@@ -10,10 +10,6 @@ lessThan(QT_MAJOR_VERSION, 6) {
     QT += xmlpatterns
 }
 
-greaterThan(QT_MAJOR_VERSION, 5) {
-    DEFINES += QON_QT6_BUILD =1
-}
-
 # quick is enabled for more scripting options
 # Windows and macOS seem to ignore that
 #QT       += quick
@@ -370,17 +366,13 @@ include(libraries/qttoolbareditor/toolbar_editor.pri)
 include(libraries/fakevim/fakevim.pri)
 include(libraries/singleapplication/singleapplication.pri)
 include(libraries/sonnet/src/core/sonnet-core.pri)
-
-unix:!mac {
-    lessThan(QT_MAJOR_VERSION, 6) {
-        include(libraries/qhotkey/qhotkey.pri)
-    }
+lessThan(QT_MAJOR_VERSION, 6) {
+    include(libraries/qhotkey/qhotkey.pri)
 }
-mac {
-include(libraries/qhotkey/qhotkey.pri)
-}
-win32 {
-include(libraries/qhotkey/qhotkey.pri)
+greaterThan(QT_MAJOR_VERSION, 5) {
+# not enabled for linux yet on Qt6
+mac: include(libraries/qhotkey/qhotkey.pri)
+win32: include(libraries/qhotkey/qhotkey.pri)
 }
 
 unix {
