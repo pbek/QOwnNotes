@@ -10,6 +10,10 @@ lessThan(QT_MAJOR_VERSION, 6) {
     QT += xmlpatterns
 }
 
+greaterThan(QT_MAJOR_VERSION, 5) {
+    DEFINES += QON_QT6_BUILD =1
+}
+
 # quick is enabled for more scripting options
 # Windows and macOS seem to ignore that
 #QT       += quick
@@ -400,10 +404,11 @@ unix {
   icons.files += images/icons/*
 }
 
-QMAKE_CXXFLAGS += "-Wall -Wextra -Wno-error=deprecated-declarations -Wundef -Werror"
+QMAKE_CXXFLAGS += "-Wall -Wextra -Wundef -pedantic"
 
-!win32 {
-    QMAKE_CXXFLAGS += "-Wno-deprecated-copy"
+# Enable Werror on unixes except mac
+unix:!mac {
+    QMAKE_CXXFLAGS += "-Wno-error=deprecated-declarations -Wno-deprecated-copy -Werror"
 }
 
 CONFIG(debug, debug|release) {
