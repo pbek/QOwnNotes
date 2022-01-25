@@ -1,6 +1,7 @@
 #pragma once
 
 #include "masterdialog.h"
+#include <QStringList>
 
 namespace Ui {
 class LocalTrashDialog;
@@ -9,7 +10,6 @@ class LocalTrashDialog;
 class MainWindow;
 class QTreeWidgetItem;
 class QSplitter;
-class QStringList;
 class QAbstractButton;
 
 class LocalTrashDialog : public MasterDialog {

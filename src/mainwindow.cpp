@@ -54,7 +54,6 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDesktopServices>
-#include <QDesktopWidget>
 #include <QDir>
 #include <QDirIterator>
 #include <QDockWidget>

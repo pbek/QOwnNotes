@@ -73,7 +73,7 @@ QString Diff::strOperation(Operation op) {
 QString Diff::toString() const {
   QString prettyText = text;
   // Replace linebreaks with Pilcrow signs.
-  prettyText.replace('\n', L'\u00b6');
+  prettyText.replace('\n', u'\u00b6');
   return QString("Diff(") + strOperation(operation) + QString(",\"")
       + prettyText + QString("\")");
 }
@@ -1614,7 +1614,7 @@ void diff_match_patch::patch_addContext(Patch &patch, const QString &text) {
   }
   // Add the suffix.
   QString suffix = safeMid(text, patch.start2 + patch.length1,
-      std::min(text.length(), patch.start2 + patch.length1 + padding)
+      std::min<int>(text.length(), patch.start2 + patch.length1 + padding)
       - (patch.start2 + patch.length1));
   if (!suffix.isEmpty()) {
     patch.diffs.append(Diff(EQUAL, suffix));

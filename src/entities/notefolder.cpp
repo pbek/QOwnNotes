@@ -509,7 +509,7 @@ QJsonObject NoteFolder::jsonObject() const {
     object.insert(QStringLiteral("text"), QJsonValue::fromVariant(name));
     object.insert(QStringLiteral("value"), QJsonValue::fromVariant(id));
     return object;
-};
+}
 
 /**
  * Returns json text of the note folder list for the WebSocketServerService

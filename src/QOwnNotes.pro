@@ -370,7 +370,18 @@ include(libraries/qttoolbareditor/toolbar_editor.pri)
 include(libraries/fakevim/fakevim.pri)
 include(libraries/singleapplication/singleapplication.pri)
 include(libraries/sonnet/src/core/sonnet-core.pri)
+
+unix:!mac {
+    lessThan(QT_MAJOR_VERSION, 6) {
+        include(libraries/qhotkey/qhotkey.pri)
+    }
+}
+mac {
 include(libraries/qhotkey/qhotkey.pri)
+}
+win32 {
+include(libraries/qhotkey/qhotkey.pri)
+}
 
 unix {
   isEmpty(PREFIX) {
