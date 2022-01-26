@@ -47,13 +47,13 @@ jobs:
           # botan 32bit error
         include:
           - os: ubuntu-latest
-            qt-version: '6.2.2'
+            qt-version: '6.2'
             experimental: true
           - os: macos-latest
-            qt-version: '6.2.2'
+            qt-version: '6.2'
             experimental: true
           - os: windows-latest
-            qt-version: '6.2.2'
+            qt-version: '6.2'
             experimental: true
           # Snapcraft
           - os: ubuntu-18.04
@@ -121,7 +121,7 @@ jobs:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw73
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: contains( matrix.os, 'windows') && ( ( matrix.qt-version == '5.15.2' ) || ( matrix.qt-version == '6.2.2' )) && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'windows') && ( ( matrix.qt-version == '5.15.2' ) || ( matrix.qt-version == '6.2' )) && steps.changes.outputs.DO_BUILD
       name: Install Qt > 5.15.2 on Windows
       uses: jurplel/install-qt-action@v2
       with:
