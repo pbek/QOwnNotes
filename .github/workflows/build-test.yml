@@ -55,6 +55,9 @@ jobs:
           - os: windows-latest
             qt-version: '6.2.2'
             experimental: true
+          # Snapcraft
+          - os: ubuntu-18
+            qt-version: '5.15.2'
     steps:
     - uses: actions/checkout@v2
       with:
@@ -83,6 +86,12 @@ jobs:
         done
         echo "DO_BUILD: ${DO_BUILD}"
         echo ::set-output name=DO_BUILD::${DO_BUILD}
+
+    - if: contains( matrix.os, 'ubuntu-18') && steps.changes.outputs.DO_BUILD
+      name: Install Snapcraft
+      uses: samuelmeuli/action-snapcraft@v1
+      with:
+        use_lxd: true
 
       #
       # Install Qt
@@ -161,6 +170,9 @@ jobs:
       name: Build QOwnNotes
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j8
+    - if: contains( matrix.os, 'ubuntu-18') && steps.changes.outputs.DO_BUILD
+      name: Build for Snapcraft
+      run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
 
       #
       # Build QOwnNotes Windows Release and store it as artifact
