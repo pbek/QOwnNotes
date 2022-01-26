@@ -117,12 +117,14 @@ jobs:
       with:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
+        modules: qtwebsockets
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: false == contains( matrix.os, 'windows') && steps.changes.outputs.DO_BUILD
       name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
         version: ${{ matrix.qt-version }}
+        modules: qtwebsockets
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
 
       #
