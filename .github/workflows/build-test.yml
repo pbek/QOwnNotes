@@ -104,7 +104,7 @@ jobs:
       uses: actions/cache@v1
       with:
         path: ../Qt
-        key: ${{ runner.os }}-QtCache-${{ matrix.qt-version }}
+        key: ${{ matrix.os }}-QtCache-${{ matrix.qt-version }}
     # https://github.com/jurplel/install-qt-action
     - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.9.9' ) && steps.changes.outputs.DO_BUILD
       name: Install Qt 5.9 on Windows
