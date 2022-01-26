@@ -58,7 +58,7 @@ jobs:
           # Snapcraft
           - os: ubuntu-18.04
             qt-version: '5.15.2'
-            experimental: false
+            experimental: true
     steps:
     - uses: actions/checkout@v2
       with:
