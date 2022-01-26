@@ -125,6 +125,7 @@ jobs:
       name: Install Qt > 5.15.2 on Windows
       uses: jurplel/install-qt-action@v2
       with:
+        aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
         modules: qtwebsockets
@@ -133,6 +134,7 @@ jobs:
       name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
+        aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
         modules: qtwebsockets
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
