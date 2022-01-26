@@ -231,16 +231,16 @@ MainWindow::MainWindow(QWidget *parent)
 
 #ifdef Q_OS_MAC
     // add some different shortcuts for the note history on the mac
-    ui->action_Back_in_note_history->setShortcut(Qt::CTRL + Qt::ALT +
+    ui->action_Back_in_note_history->setShortcut(Qt::CTRL | Qt::ALT |
                                                  Qt::Key_Left);
-    ui->action_Forward_in_note_history->setShortcut(Qt::CTRL + Qt::ALT +
+    ui->action_Forward_in_note_history->setShortcut(Qt::CTRL | Qt::ALT |
                                                     Qt::Key_Right);
 
     // add another shortcut for the auto-completer
-    ui->actionAutocomplete->setShortcut(Qt::META + Qt::Key_Space);
+    ui->actionAutocomplete->setShortcut(Qt::META | Qt::Key_Space);
 
     // add another shortcut for inserting media
-    ui->actionPaste_image->setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_V);
+    ui->actionPaste_image->setShortcut(Qt::CTRL | Qt::ALT | Qt::Key_V);
 #endif
 
     // adding some alternate shortcuts for changing the current note
