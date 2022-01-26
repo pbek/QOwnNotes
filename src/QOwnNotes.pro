@@ -407,11 +407,14 @@ unix {
   icons.files += images/icons/*
 }
 
-QMAKE_CXXFLAGS += "-Wall -Wextra -Wundef -pedantic"
+QMAKE_CXXFLAGS += "-Wall -Wextra -Wundef"
 
 # Enable Werror on unixes except mac
-unix:!mac {
-    QMAKE_CXXFLAGS += "-Wno-error=deprecated-declarations -Wno-deprecated-copy -Werror"
+CONFIG(DEV_MODE) {
+    unix:!mac {
+        message("Werror enabled")
+        QMAKE_CXXFLAGS += "-Wno-error=deprecated-declarations -Werror"
+    }
 }
 
 CONFIG(debug, debug|release) {
