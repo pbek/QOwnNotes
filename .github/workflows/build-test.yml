@@ -173,7 +173,7 @@ jobs:
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j8
     - if: contains( matrix.os, 'ubuntu-18') && steps.changes.outputs.DO_BUILD
       name: Build for Snapcraft
-      run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
+      run: make clean && cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
 
       #
       # Build QOwnNotes Windows Release and store it as artifact
