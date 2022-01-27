@@ -26,3 +26,9 @@ If you want to use the **automatic updater** please make sure to put your
 AppImage in a place where your user account has write-access to, like somewhere
 in your home directory.
 :::
+
+::: tip
+If you have troubles running the AppImage, because your glibc version is too old
+you can try the [AppImage built on OBS](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage),
+it should be built with glibc 2.16.
+:::
