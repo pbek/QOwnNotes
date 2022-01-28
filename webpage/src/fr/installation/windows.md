@@ -38,7 +38,7 @@ choco install qownnotes
 
 ## Scoop
 
-There is a [community maintained package of QOwnNotes](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) at [Scoop](https://scoop.sh/). If you add the Extras bucket you can use it to install QOwnNotes in portable mode.
+Il existe un [paquet QOwnNotes maintenu par la communauté](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) sur [Scoop](https://scoop.sh/). Si vous ajoutez le « bucket » Extras vous pourrez l'utiliser pour installer QOwnNotes en mode portable.
 
 ```shell
 scoop bucket add extras

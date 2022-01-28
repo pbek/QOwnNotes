@@ -2340,7 +2340,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1138"/>
 <source>To&amp;do</source>
-<translation>قائمة ال&amp;مهام</translation>
+<translation>قائمة الم&amp;هام</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1144"/>
@@ -2438,7 +2438,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1551"/>
 <source>Show &amp;Todo List</source>
-<translation>إظهار قائمة الـ&amp;مهام</translation>
+<translation>إظهار قائمة الم&amp;هام</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1563"/>
@@ -4402,7 +4402,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="138"/>
 <source>show notes in folder '%1' (%2)</source>
-<translation type="unfinished">show notes in folder '%1' (%2)</translation>
+<translation>أظهر الملاحظات التي في مجلد «‪%1‬» (‫%2‬)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="173"/>
@@ -4851,13 +4851,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
 <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
+<translation>
+<numerusform>تستخدم %n ملاحظات هذا المرفق. هل تود أيضا إعادة تسمية تلك المرفقات في الملاحظات؟</numerusform>
+<numerusform>تستخدم %n ملاحظة هذا المرفق. هل تود أيضا إعادة تسمية تلك المرفقات في الملاحظة؟</numerusform>
+<numerusform>تستخدم %n ملاحظتان هذا المرفق. هل تود أيضا إعادة تسمية تلك المرفقات في الملاحظتين؟</numerusform>
+<numerusform>تستخدم %n ملاحظات هذا المرفق. هل تود أيضا إعادة تسمية تلك المرفقات في الملاحظات؟</numerusform>
+<numerusform>تستخدم %n ملاحظة هذا المرفق. هل تود أيضا إعادة تسمية تلك المرفقات في الملاحظات؟</numerusform>
+<numerusform>تستخدم %n ملاحظة هذا المرفق. هل تود أيضا إعادة تسمية تلك المرفقات في الملاحظات؟</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4896,7 +4896,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../utils/misc.cpp" line="948"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
+<translation>إنك تستخدم التطبيق في وضع النسخة الوحيدة، والذي يمنع تشغيل نسخة أخرى من التطبيق إذا كان يعمل بالفعل. سيتم تعطيل هذا الوضع عند التشغيل التالي للتطبيق، حتى تتمكن من إعادة تشغيله بدون إغلاق هذه النسخة.</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="168"/>
@@ -5909,7 +5909,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3944"/>
 <source>Notes</source>
-<translation>ملاحظات</translation>
+<translation>الملاحظات</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3970"/>
@@ -6064,7 +6064,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="215"/>
 <source>Panels</source>
-<translation>لوحات</translation>
+<translation>اللوحات</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="239"/>
@@ -6594,7 +6594,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4789"/>
 <source>Rendering</source>
-<translation>يجري التحويل للعرض</translation>
+<translation>المعاينة</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4809"/>
@@ -6966,7 +6966,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6544"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
-<translation>يجب إدخال هذا الرمز في تطبيق وبّ QOwnNotes للتواصل مع تطبيق QOwnNotes الحاسوبي الخاص بك.</translation>
+<translation>يجب إدخال هذا الرمز في تطبيق ويب QOwnNotes للتواصل مع تطبيق QOwnNotes الحاسوبي الخاص بك.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6476"/>
@@ -7355,7 +7355,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="227"/>
 <source>Preview</source>
-<translation>معاينة</translation>
+<translation>المعاينة</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1884"/>
@@ -7691,7 +7691,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4161"/>
 <source>Only allow one app instance at the same time</source>
-<translation>اسمح بعمل نسخة واحدة من التطبيق فقط في الوقت عينه</translation>
+<translation>اسمح بتشغيل نسخة واحدة فقط من التطبيق في الوقت نفسه</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4336"/>
@@ -9692,7 +9692,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../main.cpp" line="114"/>
 <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
-<translation>يسمح بتشغيل عدة مثيلات من برنامج QOwnNotes حتى في حالة عدم السماح بذلك في الإعدادات.</translation>
+<translation>يسمح بتشغيل عدة نسخ من تطبيق QOwnNotes حتى في حالة منع ذلك في الإعدادات.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="121"/>
@@ -9717,12 +9717,12 @@ This cannot be undone!</source>
 <message>
 <location filename="../main.cpp" line="573"/>
 <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-<translation>تم بدء مثيل آخر من QOwnNotes بالفعل! يمكنك إيقاف تشغيل وضع المثيل الفردي في الإعدادات أو استخدام معلمة -allow-multiple-instances.</translation>
+<translation>لقد شغّلت نسخة أخرى من QOwnNotes بالفعل! يمكنك تعطيل وضع النسخة الوحيدة في الإعدادات أو باستخدام المعامل ‪--allow-multiple-instances‬.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="624"/>
 <source>A second instance of QOwnNotes was attempted to be started!</source>
-<translation>تمت محاولة بدء تشغيل مثيل ثانٍ من QOwnNotes!</translation>
+<translation>تمت محاولة تشغيل نسخة أخرى من QOwnNotes!</translation>
 </message>
 </context>
 </TS>

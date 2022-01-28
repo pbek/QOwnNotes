@@ -4273,7 +4273,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="176"/>
 <source>All notes</source>
-<translation type="unfinished">All notes</translation>
+<translation>Az összes jegyzet</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="196"/>
@@ -4288,7 +4288,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="290"/>
 <source>New subfolder</source>
-<translation type="unfinished">New subfolder</translation>
+<translation>Új almappa</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="295"/>
@@ -4299,19 +4299,19 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <location filename="../widgets/notesubfoldertree.cpp" line="296"/>
 <location filename="../widgets/notesubfoldertree.cpp" line="357"/>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>Kijelölt mappák eltávolítása</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="300"/>
 <source>Show folder in file manager</source>
-<translation type="unfinished">Show folder in file manager</translation>
+<translation>Mappa megjelenítése a fájlkezelőben</translation>
 </message>
 <message numerus="yes">
 <location filename="../widgets/notesubfoldertree.cpp" line="358"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>Eltávolítja a kijelölt &lt;strong&gt;%n&lt;/strong&gt; mappát? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Minden fájl és mappa is törlődik ezekben a mappákban!</numerusform>
+<numerusform>Eltávolítja a kijelölt &lt;strong&gt;%n&lt;/strong&gt; mappát? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Minden fájl és mappa is törlődik ezekben a mappákban!</numerusform>
 </translation>
 </message>
 <message>
@@ -4736,7 +4736,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <location filename="../utils/urlhandler.cpp" line="168"/>
 <location filename="../utils/urlhandler.cpp" line="189"/>
 <source>Note was not found</source>
-<translation type="unfinished">Note was not found</translation>
+<translation>Jegyzet nem található</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="169"/>

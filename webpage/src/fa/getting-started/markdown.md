@@ -286,12 +286,12 @@ ___
 
 ## شکست خط
 
-- ** دو خط نو** دسترسی شما را به یک **پاراگراف جدید** میسر می سازد.
-- **یک خط نو** دسترسی شما را به یک **خط جدید در همان پاراگراف** میسر می سازد.
-- برای برخورداری از **شکست خط بدون پاراگراف**، باید از **دو فاصله مؤخر** استفاده نمایید.
+- برای ویرایش راحت‌تر می‌توانید پاراگراف را به بیش از از یک خط منفرد تقسیم کنید؛ البته همچنان به عنوان یک پاراگراف منفرد و بدون تقسیمات ارائه می شود.
+- از طریق خاتمه یک خط با دو فاصله می توانید درون پاراگراف خط شکنی انجام دهید.
+- شما می‌توانید پاراگراف جداگانه‌ای را از طریق خطوط خالی با تحدید حدود ایجاد کنید.
 
 ::: tip
-You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
+می توانید با استفاده از <kbd>⇧ Shift</kbd> + <kbd>بازگشت</kbd> دو فاصله و یک خط نو وارد کنید.
 :::
 
 ```markdown
@@ -304,12 +304,12 @@ You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</
 ```
 
 ::: tip
-Trailing spaces are highlighted by default in the editor.
+فاصله های مؤخر به صورت پیش فرض در ویرایشگر برجسته هستند.
 :::
 
 ## توضیحات
 
-Comments are not shown in the preview.
+توضیحات در پیش نمایش نشان داده نمی شود.
 
 ```markdown
 [comment]: # (این توضیح در پیش نمایش ظاهر نخواهد شد)
@@ -318,12 +318,12 @@ Comments are not shown in the preview.
 ```
 
 ::: tip
-A leading html comment block in a note will also be ignored in the automatic note filename generation.
+هنگام ایجاد خودکار نام پرونده یادداشت، بلاک کامنت html اصلی در یادداشت هم نادیده گرفته می شود.
 :::
 
 ## لیست های صندوق بررسی
 
-You can create simple todo lists with checkbox lists.
+شما می توانید لیست های ساده انجام دادنی را با لیست های صندوق بررسی ایجاد کنید.
 
 ```markdown
 - [x] انجام شده
@@ -331,12 +331,12 @@ You can create simple todo lists with checkbox lists.
 ```
 
 ::: tip
-You can check/un-check checkboxes in the preview.
+شما قادر خواهید بود صندوق های بررسی را در پیش نمایش علامت بزنید یا علامت آنها را بردارید.
 :::
 
 ## پیش‌ گفتار
 
-In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
+در QOwnNotes می توانید از یک پیش گفتار (مانند YAML) برای افزودن مقداری ابر اطلاعات اضافی استفاده کنید. **در پیش نمایش نشان داده نمی شود** و **برای تشکیل خودکار نام پرونده یادداشت اختلال ایجاد نمی کند**.
 
 ```markdown
 ---
@@ -349,4 +349,4 @@ In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta inform
 مقداری متن
 ```
 
-The filename of this example note would be `Note headline starts here.md`.
+نام پرونده این یادداشت نمونه `Note headline starts here.md`خواهد بود.

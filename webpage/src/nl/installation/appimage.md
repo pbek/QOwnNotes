@@ -22,3 +22,7 @@ Daarna zou u de AppImage moeten kunnen uitvoeren om QOwnNotes uit te voeren.
 ::: warning
 Als u de **automatische updater** wilt gebruiken, zorg er dan voor dat u uw AppImage op een plaats plaatst waar uw gebruikersaccount schrijftoegang heeft, bijvoorbeeld ergens in uw homedirectory.
 :::
+
+::: tip
+Als u problemen heeft met het uitvoeren van de AppImage, omdat uw glibc-versie te oud is, kunt u de [AppImage gebouwd op OBS](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage) proberen, deze moet worden gebouwd met glibc 2.16.
+:::

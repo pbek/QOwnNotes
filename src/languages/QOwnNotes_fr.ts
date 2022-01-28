@@ -1069,7 +1069,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation>Tapez Meta-Shift-Y, Meta-Shift-Y pour quitter le mode FakeVim.</translation>
+<translation>Tapez Meta-Maj-Y, Meta-Maj-Y pour quitter le mode FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
@@ -4264,61 +4264,61 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="138"/>
 <source>show notes in folder '%1' (%2)</source>
-<translation type="unfinished">show notes in folder '%1' (%2)</translation>
+<translation>afficher les notes dans le dossier « %1 » (%2)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="173"/>
 <source>show notes from all note subfolders (%1)</source>
-<translation type="unfinished">show notes from all note subfolders (%1)</translation>
+<translation>afficher les notes de tous les sous-dossiers (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="176"/>
 <source>All notes</source>
-<translation type="unfinished">All notes</translation>
+<translation>Toutes les notes</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="196"/>
 <source>show notes in note root folder (%1)</source>
-<translation type="unfinished">show notes in note root folder (%1)</translation>
+<translation>afficher les notes du dossier racine (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="208"/>
 <source>Note folder</source>
-<translation type="unfinished">Note folder</translation>
+<translation>Dossiers de notes</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="290"/>
 <source>New subfolder</source>
-<translation type="unfinished">New subfolder</translation>
+<translation>Nouveau sous-dossier</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="295"/>
 <source>Rename subfolder</source>
-<translation type="unfinished">Rename subfolder</translation>
+<translation>Renommer le sous-dossier</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="296"/>
 <location filename="../widgets/notesubfoldertree.cpp" line="357"/>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>Supprimer les dossiers sélectionnés</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="300"/>
 <source>Show folder in file manager</source>
-<translation type="unfinished">Show folder in file manager</translation>
+<translation>Afficher le dossier dans le gestionnaire de fichiers</translation>
 </message>
 <message numerus="yes">
 <location filename="../widgets/notesubfoldertree.cpp" line="358"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; le(s) dossier(s) sélectionné(s) ? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="369"/>
 <source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
+<translation>Sous-dossier de note %1 supprimé</translation>
 </message>
 </context>
 <context>
@@ -4737,32 +4737,32 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <location filename="../utils/urlhandler.cpp" line="168"/>
 <location filename="../utils/urlhandler.cpp" line="189"/>
 <source>Note was not found</source>
-<translation type="unfinished">Note was not found</translation>
+<translation>La note n'a pas été trouvée</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="169"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-<translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+<translation>Impossible de trouver la note.&lt;br /&gt;Impossible de créer automatiquement la note à l'emplacement spécifié car les sous-dossiers sont désactivés pour le dossier de notes courant.</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="179"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+<translation>La note n'a pas été trouvée, faut-il créer une nouvelle note &lt;strong&gt;%1&lt;/strong&gt; ?</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="183"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>La note n'a pas été trouvée, faut-il créer une nouvelle note &lt;strong&gt;%1&lt;/strong&gt; à l'emplacement &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="228"/>
 <source>Failed to create note</source>
-<translation type="unfinished">Failed to create note</translation>
+<translation>Échec de création de la note</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="229"/>
 <source>Note creation failed</source>
-<translation type="unfinished">Note creation failed</translation>
+<translation>La création de la note a échoué</translation>
 </message>
 </context>
 <context>
@@ -4770,88 +4770,88 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="110"/>
 <source>Increased font size to %1 pt</source>
-<translation type="unfinished">Increased font size to %1 pt</translation>
+<translation>Taille de police augmentée à %1 pt</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="113"/>
 <source>Decreased font size to %1 pt</source>
-<translation type="unfinished">Decreased font size to %1 pt</translation>
+<translation>Taille de police réduite à %1 pt</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="556"/>
 <source>An url was opened at the current cursor position</source>
-<translation type="unfinished">An url was opened at the current cursor position</translation>
+<translation>Une URL a été ouverte à la position courante du curseur</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="732"/>
 <source>No equation was found in front of the cursor</source>
-<translation type="unfinished">No equation was found in front of the cursor</translation>
+<translation>Aucune équation n'a été trouvée devant le curseur</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="752"/>
 <source>Result for equation: %1 = %2</source>
-<translation type="unfinished">Result for equation: %1 = %2</translation>
+<translation>Résultat de l'équation : %1 = %2</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="957"/>
 <source>&amp;Link selected text</source>
-<translation type="unfinished">&amp;Link selected text</translation>
+<translation>&amp;Link texte sélectionné</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="957"/>
 <source>Insert &amp;link</source>
-<translation type="unfinished">Insert &amp;link</translation>
+<translation>Insérer un &amp;link</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="964"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation type="unfinished">Block &amp;quote selected text</translation>
+<translation>Texte du bloc de citation &amp;quote sélectionné</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="967"/>
 <source>Insert block &amp;quote</source>
-<translation type="unfinished">Insert block &amp;quote</translation>
+<translation>Insérer un bloc de citation &amp;quote</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="980"/>
 <source>Copy code block</source>
-<translation type="unfinished">Copy code block</translation>
+<translation>Copier bloc de code</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1007"/>
 <source>Print</source>
-<translation type="unfinished">Print</translation>
+<translation>Imprimer</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1015"/>
 <source>Print selected text</source>
-<translation type="unfinished">Print selected text</translation>
+<translation>Imprimer le texte sélectionné</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1024"/>
 <source>Print selected text (preview)</source>
-<translation type="unfinished">Print selected text (preview)</translation>
+<translation>Imprimer le texte sélectionné (aperçu)</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1039"/>
 <source>Export</source>
-<translation type="unfinished">Export</translation>
+<translation>Exporter</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1052"/>
 <source>Export selected text as PDF</source>
-<translation type="unfinished">Export selected text as PDF</translation>
+<translation>Exporter le texte sélectionné au format PDF</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1061"/>
 <source>Export selected text as PDF (preview)</source>
-<translation type="unfinished">Export selected text as PDF (preview)</translation>
+<translation>Exporter le texte sélectionné au format PDF (aperçu)</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1093"/>
 <source>Custom actions</source>
-<translation type="unfinished">Custom actions</translation>
+<translation>Actions personnalisées</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1183"/>
@@ -4871,7 +4871,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1205"/>
 <source>Spelling</source>
-<translation type="unfinished">Spelling</translation>
+<translation>Orthographe</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1238"/>
@@ -6689,7 +6689,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5820"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
-<translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
+<translation>Automatiquement sélectionner les éléments dans le panneau de navigation quand la position du curseur change</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5889"/>

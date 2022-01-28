@@ -22,3 +22,7 @@ Vous devriez ensuite être en mesure d'exécuter l'AppImage pour lancer QOwnNote
 ::: warning
 Si vous souhaitez utiliser la **mise à jour automatique**, assurez-vous de placer votre AppImage à un endroit où votre compte utilisateur a un accès en écriture, par exemple quelque part dans votre répertoire personnel.
 :::
+
+::: tip
+Si vous rencontrez des difficultés pour exécuter l'AppImage parce que votre version de glibc est trop ancienne vous pouvez essayer l'[AppImage d'OBS](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage), qui devrait avoir été constuite en utilisant glibc 2.16.
+:::

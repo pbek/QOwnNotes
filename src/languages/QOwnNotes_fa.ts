@@ -4795,7 +4795,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="732"/>
 <source>No equation was found in front of the cursor</source>
-<translation>هیچ معادله ای در مقابل مکان نما پیدا نشد</translation>
+<translation>هیچ معادله ای در مقابل مکان نما یافت نشد</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="752"/>
@@ -4816,7 +4816,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="964"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation>مسدود کردن &amp;نقل قول متن انتخاب شده</translation>
+<translation>نقل &amp;قول متن منتخب</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="967"/>

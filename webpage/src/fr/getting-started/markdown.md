@@ -182,7 +182,7 @@ cd Notes
 ```
 ~~~
 
-Currently, supported languages (and code block identifiers) are:
+Les languages (et identifiants de blocs de code) actuellement pris en charge sont :
 
 * BASh scripting, `bash`
 * C, `c`
@@ -216,12 +216,12 @@ Currently, supported languages (and code block identifiers) are:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tables
+## Tableaux
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+Les tableaux ne font pas partie des spécifications originales de Markdown mais le mode de prévisualisation de QOwnNotes les prend en charge. 
 
 ~~~markdown
-Colons can be used to align columns.
+Les double-points peuvent être utilisés pour aligner le contenu des colonnes.
 
 | Les Tables | Sont | Chouettes |
 | ------------- |: -------------: | -----: |
@@ -240,7 +240,7 @@ Vous pouvez également utiliser le Markdown en ligne.
 ~~~
 
 ::: tip
-Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you to create tables. Vous pouvez même importer des fichiers CSV dans cette boîte de dialogue.
+Appuyez sur <kbd>Alt + Maj + T</kbd> pour faire apparaître une boîte de dialogue qui vous aidera à créer des tableaux. Vous pouvez même importer des fichiers CSV dans cette boîte de dialogue.
 
 Utilisez <kbd>Ctrl + Espace</kbd> dans un tableau de démarquage pour le formater automatiquement.
 :::
@@ -296,12 +296,12 @@ ___
 
 ## Sauts de ligne
 
-- **Deux retours à la ligne** vous donneront un **nouveau paragraphe**.
-- **Une nouvelle ligne** vous donnera une nouvelle ligne **dans le même paragraphe**.
-- Pour avoir un saut de ligne **sans paragraphe**, vous devrez utiliser **deux espaces de fin**.
+- Vous pouvez construire un paragraphe comme un enchaînement de plusieurs lignes pour en faciliter l'édition, il sera tout de même affiché comme un seul paragraphe.
+- Dans un paragraphe, vous pouvez forcer un retour à la ligne en insérant deux espaces à la fin d'une ligne.
+- Vous pouvez définir un paragraphe distinct en le délimitant avec des sauts de ligne.
 
 ::: tip
-You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
+Vous pouvez insérer deux espaces et un retour à la ligne avec <kbd>⇧ Shift</kbd> + <kbd>Entrée</kbd>.
 :::
 
 ```markdown
@@ -314,12 +314,12 @@ Cette ligne n'est séparée que par deux espaces de fin et un seul saut de ligne
 ```
 
 ::: tip
-Trailing spaces are highlighted by default in the editor.
+Les espaces de fin sont mis en évidence par défaut dans l'éditeur.
 :::
 
 ## Commentaires
 
-Comments are not shown in the preview.
+Les commentaires ne sont pas affichés dans l'aperçu.
 
 ```markdown
 [comment]: # (Ce commentaire n'apparaîtra pas dans l'aperçu)
@@ -328,12 +328,12 @@ Comments are not shown in the preview.
 ```
 
 ::: tip
-A leading html comment block in a note will also be ignored in the automatic note filename generation.
+Un bloc de commentaire HTML en tête d'une note sera également ignoré dans la génération automatique du nom de fichier de la note.
 :::
 
 ## Listes de cases à cocher
 
-You can create simple todo lists with checkbox lists.
+Vous pouvez créer des listes de tâches simples avec des listes de cases à cocher.
 
 ```markdown
 - [x] fait
@@ -341,12 +341,12 @@ You can create simple todo lists with checkbox lists.
 ```
 
 ::: tip
-You can check/un-check checkboxes in the preview.
+Vous pouvez cocher / décocher les cases à cocher dans l'aperçu.
 :::
 
 ## Frontmatter
 
-In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
+Dans QOwnNotes, vous pouvez utiliser un « frontmatter » (par exemple YAML) pour ajouter des méta-informations supplémentaires. Cela ne sera **pas affiché dans l'aperçu** et ne perturbera **pas la génération automatique de nom de fichier de note**.
 
 ```markdown
 ---
@@ -359,4 +359,4 @@ description: une description
 Du texte
 ```
 
-The filename of this example note would be `Note headline starts here.md`.
+Le nom de fichier de cet exemple de note serait `L'en-tête de la note commence ici.md`.

@@ -1,4 +1,4 @@
-# Gestionnaire de snippet en ligne de commande
+# Gestionnaire de snippets en ligne de commande
 
 Vous pouvez utiliser le [Gestionnaire d'extraits de commandes en ligne de commande de QOwnNotes](https://github.com/qownnotes/qc) pour **exécuter des extraits de commandes stockés dans des notes** se trouvant dans QownNotes depuis la ligne de commande.
 

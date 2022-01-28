@@ -2,6 +2,8 @@
 
 ## 22.1.11
 - a lot more work went into porting QOwnNotes to Qt 6 (for [#2414](https://github.com/pbek/QOwnNotes/pull/2414), thank you @Waqar144)
+- added more translation (thank you rawfreeamy, chocolatine, amirkbrpr, mguerra,
+  hansa2662, kkatalinux, marterra, noureddin, rakekniven)
 
 ## 22.1.10
 - added a new editor color schema *Orangueen* by @Zorziel

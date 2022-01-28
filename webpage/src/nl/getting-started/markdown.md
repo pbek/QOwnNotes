@@ -284,9 +284,9 @@ ___
 
 ## Line breaks
 
-- **Twee nieuwe regels** leveren u een **nieuwe alinea** op.
-- **Een nieuwe regel** levert een **nieuwe regel in dezelfde alinea** op.
-- Om een **regeleinde zonder alinea** te hebben, moet u **twee spaties achteraan** gebruiken.
+- You can break a paragraph into more than a single line for easier editing, they still render as a single paragraph with no breaks.
+- You can force a line break inside a paragraph by ending a line with two spaces.
+- You can make a separate paragraph by delimiting it by empty lines.
 
 ::: tip
 You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
