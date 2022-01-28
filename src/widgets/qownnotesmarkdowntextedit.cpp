@@ -1181,10 +1181,10 @@ QMenu *QOwnNotesMarkdownTextEdit::spellCheckContextMenu(QPoint pos)
 
     menu->addSeparator();
 
-    QAction *ignoreAction = menu->addAction(tr("Ignore"), this, [selectedWord, this](){
+    menu->addAction(tr("Ignore"), this, [selectedWord](){
         QOwnSpellChecker::instance()->ignoreWord(selectedWord);
     });
-    QAction *addToDictAction = menu->addAction(tr("Add to Dictionary"), this, [selectedWord, this](){
+    menu->addAction(tr("Add to Dictionary"), this, [selectedWord](){
         QOwnSpellChecker::instance()->addWordToDictionary(selectedWord);
     });
 
@@ -1194,8 +1194,6 @@ QMenu *QOwnNotesMarkdownTextEdit::spellCheckContextMenu(QPoint pos)
 }
 
 bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
-    auto spellchecker = QOwnSpellChecker::instance();
-
     if (event->type() == QEvent::KeyPress) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 
@@ -1217,10 +1215,8 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
 
                 // show notification if user tries to edit a note while
                 // note editing is turned off
-                if (((keyEvent->key() < 128 || keys.contains(keyEvent->key())) &&
-                    keyEvent->modifiers().testFlag(Qt::NoModifier) ||
-                    (keyEvent->key() == Qt::Key_V ) && keyEvent->modifiers().testFlag(Qt::ControlModifier)) &&
-                    isReadOnly()) {
+                if (((keyEvent->key() < 128 || keys.contains(keyEvent->key())) && keyEvent->modifiers().testFlag(Qt::NoModifier)) ||
+                    ((keyEvent->key() == Qt::Key_V ) && keyEvent->modifiers().testFlag(Qt::ControlModifier) && isReadOnly())) {
                     if (Utils::Gui::questionNoSkipOverride(
                             this, tr("Note editing disabled"),
                             tr("Note editing is currently disabled, do you "

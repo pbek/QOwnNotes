@@ -1757,7 +1757,7 @@ void SettingsDialog::loadShortcutSettings() {
             // the shortcut disabling button
             auto *frame = new QFrame();
             auto *frameLayout = new QHBoxLayout();
-            frameLayout->setMargin(0);
+            frameLayout->setContentsMargins({});
             frameLayout->setSpacing(2);
             frameLayout->addWidget(keyWidget);
             frameLayout->addWidget(disableShortcutButton);

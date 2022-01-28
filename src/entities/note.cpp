@@ -246,7 +246,7 @@ bool Note::fillByFileName(const QString &fileName, int noteSubFolderId) {
  * @return
  */
 Note Note::fetchByRelativeFilePath(const QString &relativePath) {
-    const QFileInfo &fileInfo{relativePath};
+    const QFileInfo fileInfo(relativePath);
 
     // load note subfolder and note from the relative path
     // be aware that there must not be a ".." in the path, a canonical path must
@@ -3547,7 +3547,7 @@ bool Note::handleNoteMoving(const Note &oldNote) {
  */
 QString Note::createNoteHeader(const QString &name) {
     QString header = name.trimmed() + QStringLiteral("\n");
-    const auto len = std::min(name.length(), 40);
+    const auto len = std::min<int>(name.length(), 40);
     header.reserve(len);
     header.append(QString(QChar('=')).repeated(len));
     header.append(QStringLiteral("\n\n"));
@@ -3816,7 +3816,7 @@ bool Note::scaleDownImageFileIfNeeded(QFile &file) {
     }
 
     QMimeDatabase db;
-    QMimeType type = db.mimeTypeForFile(file);
+    QMimeType type = db.mimeTypeForFile(file.fileName());
 
     // we don't want to resize SVGs because Qt can't store them
     if (type.name().contains("image/svg")) {
@@ -3972,7 +3972,7 @@ QString Note::getNotePreviewText(bool asHtml, int lines) const {
     line.truncate(80);
     noteText += line;
 
-    const auto min = std::min(lines, lineList.count());
+    const auto min = std::min<int>(lines, lineList.count());
     for (int i = 1; i < min; i++) {
         noteText += QStringLiteral("\n");
 

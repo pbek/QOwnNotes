@@ -54,7 +54,6 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDesktopServices>
-#include <QDesktopWidget>
 #include <QDir>
 #include <QDirIterator>
 #include <QDockWidget>
@@ -232,16 +231,16 @@ MainWindow::MainWindow(QWidget *parent)
 
 #ifdef Q_OS_MAC
     // add some different shortcuts for the note history on the mac
-    ui->action_Back_in_note_history->setShortcut(Qt::CTRL + Qt::ALT +
+    ui->action_Back_in_note_history->setShortcut(Qt::CTRL | Qt::ALT |
                                                  Qt::Key_Left);
-    ui->action_Forward_in_note_history->setShortcut(Qt::CTRL + Qt::ALT +
+    ui->action_Forward_in_note_history->setShortcut(Qt::CTRL | Qt::ALT |
                                                     Qt::Key_Right);
 
     // add another shortcut for the auto-completer
-    ui->actionAutocomplete->setShortcut(Qt::META + Qt::Key_Space);
+    ui->actionAutocomplete->setShortcut(Qt::META | Qt::Key_Space);
 
     // add another shortcut for inserting media
-    ui->actionPaste_image->setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_V);
+    ui->actionPaste_image->setShortcut(Qt::CTRL | Qt::ALT | Qt::Key_V);
 #endif
 
     // adding some alternate shortcuts for changing the current note
@@ -626,6 +625,10 @@ void MainWindow::initGlobalKeyboardShortcuts() {
         QAction *action = findAction(actionName);
         QString shortcut = settings.value(key).toString();
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0) && defined(Q_OS_LINUX)
+        Q_UNUSED(action)
+        qWarning() << "QHotkey not available on linux with qt6";
+#else
         auto hotKey = new QHotkey(QKeySequence(shortcut), true, this);
         _globalShortcuts.append(hotKey);
         connect(hotKey, &QHotkey::activated, this, [this, action]() {
@@ -640,6 +643,7 @@ void MainWindow::initGlobalKeyboardShortcuts() {
 
             action->trigger();
         });
+#endif
     }
 }
 
@@ -5359,8 +5363,8 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
     // select the orientation
     QStringList orientationStrings;
     orientationStrings << tr("Portrait") << tr("Landscape");
-    QList<QPrinter::Orientation> orientations;
-    orientations << QPrinter::Portrait << QPrinter::Landscape;
+    QList<QPageLayout::Orientation> orientations;
+    orientations << QPageLayout::Portrait << QPageLayout::Landscape;
 
     QString orientationString = QInputDialog::getItem(
         this, tr("Orientation"), tr("Orientation:"), orientationStrings,
@@ -5377,7 +5381,7 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
         return false;
     }
 
-    printer->setOrientation(orientations.at(orientationIndex));
+    printer->setPageOrientation(orientations.at(orientationIndex));
     settings.setValue(QStringLiteral("Printer/NotePDFExportOrientation"),
                       orientationIndex);
 #endif
@@ -6465,9 +6469,14 @@ void MainWindow::on_actionInsert_current_time_triggered() {
     QSettings settings;
     const QString format =
         settings.value(QStringLiteral("insertTimeFormat")).toString();
-    const QString text = format.isEmpty()
-                             ? dateTime.toString(Qt::SystemLocaleShortDate)
-                             : dateTime.toString(format);
+
+    QLocale locale = QLocale::system();
+    QString text;
+    if (format.isEmpty()) {
+        text = locale.toString(dateTime.date(), QLocale::FormatType::ShortFormat);
+    } else {
+        text = locale.toString(dateTime, format);
+    }
 
     // insert the current date
     c.insertText(text);
@@ -9741,7 +9750,7 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
  * Renames a note file if the note was renamed in the note tree widget
  */
 void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
-                                               int column) {
+                                               int /*column*/) {
     if (item == nullptr) {
         return;
     }

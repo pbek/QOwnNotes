@@ -7406,7 +7406,7 @@ namespace {
   /*
   * Prevent inlining to work around GCC bug 44174
   */
-  void __attribute__((__noinline__)) call_gcc_cpuid(Botan::u32bit type,
+  [[maybe_unused]] void __attribute__((__noinline__)) call_gcc_cpuid(Botan::u32bit type,
                                                     Botan::u32bit out[4])
      {
      __get_cpuid(type, out, out+1, out+2, out+3);
@@ -21971,7 +21971,7 @@ namespace Botan {
 
 std::unique_ptr<Public_Key>
 load_public_key(const AlgorithmIdentifier& alg_id,
-                const std::vector<uint8_t>& key_bits)
+                const std::vector<uint8_t>& /*key_bits*/)
    {
    const std::string oid_str = alg_id.get_oid().to_formatted_string();
    const std::vector<std::string> alg_info = split_on(oid_str, '/');
@@ -22052,7 +22052,7 @@ load_public_key(const AlgorithmIdentifier& alg_id,
 
 std::unique_ptr<Private_Key>
 load_private_key(const AlgorithmIdentifier& alg_id,
-                 const secure_vector<uint8_t>& key_bits)
+                 const secure_vector<uint8_t>& /*key_bits*/)
    {
    const std::string alg_name = alg_id.get_oid().to_formatted_string();
 
@@ -25668,18 +25668,25 @@ std::vector<void*> OS::allocate_locked_pages(size_t count)
 void OS::page_allow_access(void* page)
    {
    const size_t page_size = OS::system_page_size();
+   (void)page_size;
+   (void)page;
+
 #if defined(BOTAN_TARGET_OS_HAS_POSIX1)
    ::mprotect(page, page_size, PROT_READ | PROT_WRITE);
 #elif defined(BOTAN_TARGET_OS_HAS_VIRTUAL_LOCK)
    DWORD old_perms = 0;
    ::VirtualProtect(page, page_size, PAGE_READWRITE, &old_perms);
    BOTAN_UNUSED(old_perms);
+   BOTAN_UNUSED(page);
+   BOTAN_UNUSED(page_size);
 #endif
    }
 
 void OS::page_prohibit_access(void* page)
    {
    const size_t page_size = OS::system_page_size();
+   (void)page_size;
+   (void)page;
 #if defined(BOTAN_TARGET_OS_HAS_POSIX1)
    ::mprotect(page, page_size, PROT_NONE);
 #elif defined(BOTAN_TARGET_OS_HAS_VIRTUAL_LOCK)

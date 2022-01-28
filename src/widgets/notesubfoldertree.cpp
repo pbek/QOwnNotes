@@ -316,7 +316,7 @@ QMenu *NoteSubFolderTree::contextMenu(QTreeWidget *parent)
 
     QAction *showInFileManagerAction =
         menu->addAction(tr("Show folder in file manager"));
-    connect(showInFileManagerAction, &QAction::triggered, parent, [parent](){
+    connect(showInFileManagerAction, &QAction::triggered, parent, [](){
         NoteSubFolder noteSubFolder =
         NoteFolder::currentNoteFolder().getActiveNoteSubFolder();
 

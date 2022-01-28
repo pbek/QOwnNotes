@@ -97,7 +97,7 @@ Loader::~Loader()
     delete d;
 }
 
-SpellerPlugin *Loader::createSpeller(const QString &language, const QString &clientName) const
+SpellerPlugin *Loader::createSpeller(const QString &language, const QString &/*clientName*/) const
 {
 /*QOwnNotes Specific
  * Waqar144: <waqar.17a@gmail.com>

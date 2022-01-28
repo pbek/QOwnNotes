@@ -182,10 +182,13 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
             QUrl url(releaseUrl);
             QNetworkRequest networkRequest(url);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+#if (QT_VERSION < QT_VERSION_CHECK(5, 9, 0))
             // we really need redirects for GitHub urls!
             networkRequest.setAttribute(
                 QNetworkRequest::FollowRedirectsAttribute, true);
+#else
+            networkRequest.setAttribute(
+                QNetworkRequest::RedirectPolicyAttribute, true);
 #endif
 
 #if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))

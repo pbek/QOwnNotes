@@ -2,6 +2,8 @@
 #define NOTEHISTORY_H
 
 #include <QDataStream>
+#include <QString>
+#include <QMetaType>
 
 class Note;
 class QPlainTextEdit;

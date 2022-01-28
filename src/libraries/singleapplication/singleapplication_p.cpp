@@ -112,17 +112,27 @@ void SingleApplicationPrivate::genBlockServerName()
 #endif
 #ifdef Q_OS_UNIX
         QProcess process;
-        process.start( "whoami" );
-        if( process.waitForFinished( 100 ) &&
-            process.exitCode() == QProcess::NormalExit) {
-            appData.addData( process.readLine() );
-        } else {
+        const auto fullPath = QStandardPaths::findExecutable(QStringLiteral("whoami"));
+        if (fullPath.isEmpty()) {
             appData.addData(
                 QDir(
                     QStandardPaths::standardLocations( QStandardPaths::HomeLocation ).first()
                 ).absolutePath().toUtf8()
             );
+        } else {
+            process.setProgram(fullPath);
+            if( process.waitForFinished( 100 ) &&
+                process.exitCode() == QProcess::NormalExit) {
+                appData.addData( process.readLine() );
+            } else {
+                appData.addData(
+                    QDir(
+                        QStandardPaths::standardLocations( QStandardPaths::HomeLocation ).first()
+                    ).absolutePath().toUtf8()
+                );
+            }
         }
+
 #endif
     }
 

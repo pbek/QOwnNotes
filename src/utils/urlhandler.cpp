@@ -238,7 +238,7 @@ void UrlHandler::handleCheckboxUrl(QString urlString)
     const auto text = _mw->noteTextEdit()->toPlainText();
     const QUrl url(urlString);
 
-    int index = url.host().midRef(1).toInt();
+    int index = url.host().mid(1).toInt();
     static const QRegularExpression re(R"((^|\n)\s*[-*+]\s\[([xX ]?)\])", QRegularExpression::CaseInsensitiveOption);
     int pos = 0;
     while (true) {

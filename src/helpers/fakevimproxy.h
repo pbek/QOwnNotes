@@ -8,7 +8,7 @@ class QTextCursor;
 
 namespace FakeVim {
 namespace Internal {
-class ExCommand;
+struct ExCommand;
 }
 }    // namespace FakeVim
 

@@ -102,7 +102,7 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_sq.ts
 
 CODECFORTR = UTF-8
-CONFIG += c++11
+CONFIG += c++17
 
 INCLUDEPATH += $$PWD/libraries $$PWD/libraries/diff_match_patch
 
@@ -366,7 +366,14 @@ include(libraries/qttoolbareditor/toolbar_editor.pri)
 include(libraries/fakevim/fakevim.pri)
 include(libraries/singleapplication/singleapplication.pri)
 include(libraries/sonnet/src/core/sonnet-core.pri)
-include(libraries/qhotkey/qhotkey.pri)
+lessThan(QT_MAJOR_VERSION, 6) {
+    include(libraries/qhotkey/qhotkey.pri)
+}
+greaterThan(QT_MAJOR_VERSION, 5) {
+# not enabled for linux yet on Qt6
+mac: include(libraries/qhotkey/qhotkey.pri)
+win32: include(libraries/qhotkey/qhotkey.pri)
+}
 
 unix {
   isEmpty(PREFIX) {
@@ -398,6 +405,16 @@ unix {
 
   icons.path = $$DATADIR/icons/hicolor
   icons.files += images/icons/*
+}
+
+QMAKE_CXXFLAGS += "-Wall -Wextra -Wundef"
+
+# Enable Werror on unixes except mac
+CONFIG(DEV_MODE) {
+    unix:!mac {
+        message("Werror enabled")
+        QMAKE_CXXFLAGS += "-Wno-error=deprecated-declarations -Werror"
+    }
 }
 
 CONFIG(debug, debug|release) {

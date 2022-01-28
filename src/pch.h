@@ -1,4 +1,5 @@
-#pragma once
+#ifndef QOWNNOTES_PCH_H
+#define QOWNNOTES_PCH_H
 
 #if defined __cplusplus
 /* Add C++ includes here */
@@ -34,3 +35,5 @@
 #include <utility>
 
 #endif
+
+#endif // QOWNNOTES_PCH_H

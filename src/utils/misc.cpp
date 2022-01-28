@@ -1016,9 +1016,11 @@ QByteArray Utils::Misc::downloadUrl(const QUrl &url, bool usePost, QByteArray po
     networkRequest.setHeader(QNetworkRequest::UserAgentHeader,
                              Utils::Misc::friendlyUserAgentString());
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
     networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
                                 true);
+#else
+    networkRequest.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
 #endif
 
     QByteArray data;
@@ -2511,6 +2513,9 @@ QString Utils::Misc::testEvernoteImportText(const QString& data) {
 
     return content.trimmed();
 #endif
+    qWarning() << Q_FUNC_INFO << "not implemented for qt6";
+    Q_UNUSED(data);
+    return {};
 }
 
 /**
@@ -2613,7 +2618,7 @@ int levenshteinDistance(const QString &source, const QString &target)
     for (int i = 0; i < sourceCount; i++) {
         column[0] = i + 1;
         for (int j = 0; j < targetCount; j++) {
-            column[j + 1] = std::min({
+            column[j + 1] = std::min<int>({
                 1 + column.at(j),
                 1 + previousColumn.at(1 + j),
                 previousColumn.at(j) + ((source.at(i) == target.at(j)) ? 0 : 1)

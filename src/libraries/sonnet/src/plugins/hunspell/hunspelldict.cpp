@@ -27,11 +27,14 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QDir>
-#include <QTextCodec>
 #include <QTextStream>
 #include <QStandardPaths>
 #include <utils/misc.h>
 #include <QStringBuilder>
+
+#if QT_VERSION >= QT_VERSION_CHECK(6,0,0)
+#include <QStringEncoder>
+#endif
 
 using namespace Sonnet;
 
@@ -51,13 +54,21 @@ HunspellDict::HunspellDict(const QString &lang, QString path)
 
         m_speller
                 = new Hunspell(aff.toLocal8Bit().constData(), dictionary.toLocal8Bit().constData());
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+        m_codec = QStringConverter::encodingForName(m_speller->get_dic_encoding()).value_or(QStringConverter::Utf8);
+#else
         m_codec = QTextCodec::codecForName(m_speller->get_dic_encoding());
+#endif
         if (!m_codec) {
             qCWarning(SONNET_HUNSPELL) << "Failed to find a text codec for name"
                                        << m_speller->get_dic_encoding()
                                        << "defaulting to locale text codec";
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+            m_codec = QStringConverter::Utf8;
+#else
             m_codec = QTextCodec::codecForLocale();
             Q_ASSERT(m_codec);
+#endif
         }
 
     } else {
@@ -110,7 +121,12 @@ HunspellDict::~HunspellDict()
 QByteArray HunspellDict::toDictEncoding(const QString &word) const
 {
     if (m_codec) {
+#if QT_VERSION >= QT_VERSION_CHECK(6,0,0)
+        QStringEncoder e(m_codec);
+        return e.encode(word);
+#else
         return m_codec->fromUnicode(word);
+#endif
     }
     return {};
 }
@@ -122,21 +138,8 @@ bool HunspellDict::isCorrect(const QString &word) const
         return false;
     }
 
-#if USE_OLD_HUNSPELL_API
-    int result = m_speller->spell(toDictEncoding(word).constData());
-    qCDebug(SONNET_HUNSPELL) << " result :" << result;
-    return result != 0;
-#else
-
-#if QT_VERSION >= 0x050400
     bool result = m_speller->spell(toDictEncoding(word).toStdString());
-
-#else
-    bool result = m_speller->spell(QString(toDictEncoding(word)).toStdString());
-#endif
-   // qCDebug(SONNET_HUNSPELL) << " result :" << result;
     return result;
-#endif
 }
 
 QStringList HunspellDict::suggest(const QString &word) const
@@ -146,19 +149,15 @@ QStringList HunspellDict::suggest(const QString &word) const
     }
 
     QStringList lst;
-#if USE_OLD_HUNSPELL_API
-    char **selection;
-    int nbWord = m_speller->suggest(&selection, toDictEncoding(word).constData());
-    for (int i = 0; i < nbWord; ++i) {
-        lst << m_codec->toUnicode(selection[i]);
-    }
-    m_speller->free_list(&selection, nbWord);
+
+#if QT_VERSION >= QT_VERSION_CHECK(6,0,0)
+        QStringDecoder e(m_codec);
+        const auto suggestions = m_speller->suggest(toDictEncoding(word).toStdString());
+        std::for_each (suggestions.begin(), suggestions.end(), [&e, &lst](const std::string &suggestion) {
+                lst << e.decode(suggestion.c_str());
+        });
 #else
-#if QT_VERSION >= 0x050400
     const auto suggestions = m_speller->suggest(toDictEncoding(word).toStdString());
-#else
-    const auto suggestions = m_speller->suggest(QString(toDictEncoding(word)).toStdString());
-#endif
     std::for_each (suggestions.begin(), suggestions.end(), [this, &lst](const std::string &suggestion) {
             lst << m_codec->toUnicode(suggestion.c_str()); });
 #endif

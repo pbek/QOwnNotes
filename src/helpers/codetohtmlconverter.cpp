@@ -362,13 +362,11 @@ int CodeToHtmlConverter::highlightStringLiterals(StringView input,
                                                  int i) {
     int start = i;
     ++i;
-    bool foundEnd = false;
 
     while (i < input.length()) {
         // look for string end
         // make sure it's not an escape seq
         if (input.at(i) == strType && input.at(i - 1) != '\\') {
-            foundEnd = true;
             ++i;
             break;
         }

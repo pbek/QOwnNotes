@@ -26,6 +26,7 @@
 #include <QtCore/QByteArray>
 #include <QtCore/QSharedMemory>
 #include <QtCore/QUuid>
+#include <QElapsedTimer>
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
 #include <QtCore/QRandomGenerator>
@@ -80,7 +81,7 @@ SingleApplication::SingleApplication( int &argc, char *argv[], bool allowSeconda
     }
 
     InstancesInfo* inst = static_cast<InstancesInfo*>( d->memory->data() );
-    QTime time;
+    QElapsedTimer time;
     time.start();
 
     // Make sure the shared memory block is initialised and in consistent state
@@ -104,7 +105,7 @@ SingleApplication::SingleApplication( int &argc, char *argv[], bool allowSeconda
         const quint32 number = QRandomGenerator::global()->generate();
 #endif
 
-        QThread::sleep( 8 + static_cast <unsigned long>( static_cast <float>( number ) / RAND_MAX * 10 ) );
+        QThread::sleep( 8 + static_cast <unsigned long>( static_cast <float>( number ) / (float)RAND_MAX * 10.f ) );
     }
 
     if( inst->primary == false) {

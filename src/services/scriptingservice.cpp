@@ -15,6 +15,12 @@
 #include <QFileDialog>
 #include <QFileInfo>
 #include <QMimeData>
+
+#ifdef __GNUC__
+    #if __GNUC__ >= 11
+        QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
+    #endif
+#endif
 #include <QQmlComponent>
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -1251,8 +1257,8 @@ void ScriptingService::noteTextEditSetSelection(int start, int end) {
         QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
 
-        start = std::max(start, 0);
-        end = std::min(end, textEdit->toPlainText().count());
+        start = std::max<int>(start, 0);
+        end = std::min<int>(end, textEdit->toPlainText().count());
 
         c.setPosition(start);
         c.setPosition(end, QTextCursor::KeepAnchor);
@@ -1279,7 +1285,7 @@ void ScriptingService::noteTextEditSetCursorPosition(int position) {
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != Q_NULLPTR) {
         QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
-        position = std::min(position, textEdit->toPlainText().count());
+        position = std::min<int>(position, textEdit->toPlainText().count());
         QTextCursor c = textEdit->textCursor();
 
         if (position < 0) {

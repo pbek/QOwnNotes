@@ -58,6 +58,7 @@ win32 {
 unix:*-g++* {
     QMAKE_CFLAGS += -fPIC -fpermissive -finline-functions -Wno-long-long
     QMAKE_CXXFLAGS += -fPIC -fpermissive -finline-functions -Wno-long-long
+    QMAKE_CXXFLAGS -= -Werror
 }
 
 linux*|freebsd* {

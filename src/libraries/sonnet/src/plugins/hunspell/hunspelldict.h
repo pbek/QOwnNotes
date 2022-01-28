@@ -24,6 +24,12 @@
 #include "spellerplugin_p.h"
 #include "hunspell/src/hunspell/hunspell.hxx"
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+  #include <QStringConverter>
+#else
+  #include <QTextCodec>
+#endif
+
 class HunspellDict : public Sonnet::SpellerPlugin
 {
 public:
@@ -42,7 +48,11 @@ private:
     QByteArray toDictEncoding(const QString &word) const;
 
     Hunspell *m_speller = nullptr;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    QStringConverter::Encoding m_codec;
+#else
     QTextCodec *m_codec = nullptr;
+#endif
 };
 
 #endif
