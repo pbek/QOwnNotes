@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 22.1.11
+- a lot more work went into porting QOwnNotes to Qt 6 (for [#2414](https://github.com/pbek/QOwnNotes/pull/2414), thank you @Waqar144)
+
 ## 22.1.10
 - added a new editor color schema *Orangueen* by @Zorziel
   (for [#2405](https://github.com/pbek/QOwnNotes/issues/2405))
