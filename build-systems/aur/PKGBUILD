@@ -22,7 +22,7 @@ prepare() {
 build() {
     cd "${pkgname}-${pkgver}"
     qmake QMAKE_CFLAGS_RELEASE="${CFLAGS}" QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" QMAKE_LFLAGS_RELEASE="${LDFLAGS}"
-    make -j$(nproc)
+    make
 }
 
 package() {
