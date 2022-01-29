@@ -111,7 +111,7 @@ void FontColorWidget::initSchemaSelector() {
     Q_FOREACH (const QString& schemaKey, _defaultSchemaKeys) {
         const QSettings& defaultSchemaSettings =
             Utils::Schema::schemaSettings->defaultSchemaSettings();
-        const QString& name =
+        const QString name =
             defaultSchemaSettings.value(schemaKey + "/Name").toString();
         ui->colorSchemeComboBox->addItem(name, schemaKey);
 
