@@ -36,10 +36,6 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         updateSettings();
     }
 
-    connect(this, &QOwnNotesMarkdownTextEdit::cursorPositionChanged, this,
-            &QOwnNotesMarkdownTextEdit::highlightCurrentLine);
-    highlightCurrentLine();
-
     QSettings settings;
     MarkdownHighlighter::HighlightingOptions options;
 
@@ -80,6 +76,8 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         }
         UrlHandler(mainWindow).openUrl(url);
     });
+
+    connect(MainWindow::instance(), &MainWindow::settingsChanged, this, &QOwnNotesMarkdownTextEdit::updateSettings);
 
     setContextMenuPolicy(Qt::CustomContextMenu);
     connect(this, &QOwnNotesMarkdownTextEdit::customContextMenuRequested, this, &QOwnNotesMarkdownTextEdit::onContextMenu);
@@ -891,38 +889,15 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
         }
     }
 
+    const bool hlCurrLine = settings.value(QStringLiteral("Editor/highlightCurrentLine"), true).toBool();
+    setHighlightCurrentLine(hlCurrLine);
+    const auto color = Utils::Schema::schemaSettings->getBackgroundColor(
+    MarkdownHighlighter::HighlighterState::CurrentLineBackgroundColor);
+    setCurrentLineHighlightColor(color);
+
     _centerCursor =
         settings.value(QStringLiteral("Editor/centerCursor")).toBool();
     QMarkdownTextEdit::updateSettings();
-}
-
-/**
- * Highlights the current line if enabled in the settings
- */
-void QOwnNotesMarkdownTextEdit::highlightCurrentLine() {
-    if (!QSettings().value(QStringLiteral("Editor/highlightCurrentLine"), true)
-             .toBool()) {
-        return;
-    }
-
-    QList<QTextEdit::ExtraSelection> extraSelections;
-
-    ensureCursorVisible();
-    QTextEdit::ExtraSelection selection = QTextEdit::ExtraSelection();
-
-    QColor lineColor = Utils::Schema::schemaSettings->getBackgroundColor(
-        MarkdownHighlighter::HighlighterState::CurrentLineBackgroundColor);
-
-    selection.format.setBackground(lineColor);
-    selection.format.setProperty(QTextFormat::FullWidthSelection, true);
-    selection.cursor = textCursor();
-    //        selection.cursor.clearSelection();
-    //        selection.cursor.select(QTextCursor::BlockUnderCursor);
-    extraSelections.append(selection);
-
-    // be aware that extra selections, like for global searching, gets
-    // removed when the current line gets highlighted
-    setExtraSelections(extraSelections);
 }
 
 void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {

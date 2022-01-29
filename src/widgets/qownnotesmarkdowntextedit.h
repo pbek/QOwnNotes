@@ -90,9 +90,6 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void resizeEvent(QResizeEvent *event) override;
     bool eventFilter(QObject *obj, QEvent *event) override;
 
-   public slots:
-    void highlightCurrentLine();
-
    private:
     MainWindow *mainWindow = nullptr;
     bool _isSpellCheckingDisabled = false;
