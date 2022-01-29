@@ -17,3 +17,12 @@ snap/.snapcraft/state
 src/languages/*.qm
 .vscode/
 CMakeLists.txt.user*
+*.o
+qrc_*.cpp
+moc_*.cpp
+moc_*.h
+ui_*.h
+/src/.qmake.stash
+/src/Makefile
+/src/QOwnNotes
+
