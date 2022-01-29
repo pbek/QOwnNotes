@@ -2014,7 +2014,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
 bool Utils::Misc::regExpInListMatches(const QString &text,
                                       const QStringList &regExpList) {
     for (const QString &regExp : regExpList) {
-        const QString &trimmed = regExp.trimmed();
+        const QString trimmed = regExp.trimmed();
         if (trimmed.isEmpty()) {
             continue;
         }
