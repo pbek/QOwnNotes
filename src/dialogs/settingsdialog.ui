@@ -5187,6 +5187,9 @@ p, li { white-space: pre-wrap; }
                <layout class="QGridLayout" name="gridLayout_35">
                 <item row="0" column="1" colspan="2">
                  <widget class="QCheckBox" name="markdownHighlightingCheckBox">
+                  <property name="toolTip">
+                   <string>Note that disabling this will also disable the navigation panel!</string>
+                  </property>
                   <property name="text">
                    <string>Enable markdown highlighting</string>
                   </property>
