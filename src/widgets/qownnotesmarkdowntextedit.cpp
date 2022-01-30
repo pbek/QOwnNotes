@@ -1201,6 +1201,21 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
                         if (mainWindow != Q_NULLPTR) {
                             mainWindow->allowNoteEditing();
                         }
+                        // If the answer is overriden to Yes ("Don't ask again" with "Yes"),
+                        // what you type then only enables note editing, but is not typed in
+                        // the editor. We need to re-send the event after enabling editing.
+                        // BUT, we should do that only if the msgbox is overriden to Yes,
+                        // not if manually answered.
+                        // You may see: https://github.com/pbek/QOwnNotes/issues/2421
+                        // This check is partially copied from utils/gui.cpp showMessage()
+                        QSettings settings;
+                        const QString settingsKey = QStringLiteral("MessageBoxOverride/readonly-mode-allow");
+                        auto overrideButton = static_cast<QMessageBox::StandardButton>(
+                            settings.value(settingsKey, QMessageBox::NoButton).toInt());
+                        if ((overrideButton == QMessageBox::Yes)) {
+                            // overriden to answer yes: re-send the event
+                            return QMarkdownTextEdit::eventFilter(obj, event);
+                        }
                     }
 
                     return true;
