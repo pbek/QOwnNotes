@@ -4448,13 +4448,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <location filename="../widgets/notesubfoldertree.cpp" line="358"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; مجلد محدد؟&lt;ul&gt;&lt;li dir="ltr"&gt;%1&lt;/li&gt;&lt;/ul&gt;سيتم حذف جميع الملفات والمجلدات التي في هذه المجلدات أيضا!</numerusform>
+<numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; مجلد محدد؟&lt;ul&gt;&lt;li dir="ltr"&gt;%1&lt;/li&gt;&lt;/ul&gt;سيتم حذف جميع الملفات والمجلدات التي في هذا المجلد أيضا!</numerusform>
+<numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; مجلدين محددين؟&lt;ul&gt;&lt;li dir="ltr"&gt;%1&lt;/li&gt;&lt;/ul&gt;سيتم حذف جميع الملفات والمجلدات التي في هذين المجلدين أيضا!</numerusform>
+<numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; مجلدات محددة؟&lt;ul&gt;&lt;li dir="ltr"&gt;%1&lt;/li&gt;&lt;/ul&gt;سيتم حذف جميع الملفات والمجلدات التي في هذه المجلدات أيضا!</numerusform>
+<numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; مجلد محدد؟&lt;ul&gt;&lt;li dir="ltr"&gt;%1&lt;/li&gt;&lt;/ul&gt;سيتم حذف جميع الملفات والمجلدات التي في هذه المجلدات أيضا!</numerusform>
+<numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; مجلد محدد؟&lt;ul&gt;&lt;li dir="ltr"&gt;%1&lt;/li&gt;&lt;/ul&gt;سيتم حذف جميع الملفات والمجلدات التي في هذه المجلدات أيضا!</numerusform>
 </translation>
 </message>
 <message>

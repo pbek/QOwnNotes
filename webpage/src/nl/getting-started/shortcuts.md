@@ -22,22 +22,22 @@
 - <kbd>Alt</kbd> + <kbd>Down</kbd> springt naar de volgende zichtbare noot
     - alternatieve snelkoppeling is <kbd>Ctrl</kbd> + <kbd>Page Down</kbd>
 - <kbd>Alt</kbd> + <kbd>Page Up</kbd> springt naar het vorige notitietabblad
-- <kbd>Alt</kbd> + <kbd>Page Down</kbd> jumps to the next note tab
+- <kbd>Alt</kbd> + <kbd>PgDn</kbd> springt naar het volgende notitietabblad
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> sluit het huidige notitietabblad
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> toggles the distraction free mode
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> schakelt de afleidingsvrije modus in
     - u kunt het ook sluiten met <kbd>Esc</kbd>
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> drukt de huidige notitie af als tekst
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> prints the current note as markdown
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> drukt de huidige notitie af als markdown
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> plakt notities, afbeeldingen en html van het klembord
 - <kbd>Ctrl</kbd> + <kbd>,</kbd> opent de instellingen
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> adds a new tag to a note
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> reloads the current note folder
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> voegt een nieuwe tag toe aan een notitie
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> laadt de huidige notitiemap opnieuw
 - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> laat je een andere notitiemap selecteren
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> hides or shows the main menu bar
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you search for actions
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> herlaadt de script-engine
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> verbergt of toont de hoofdmenubalk
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> laat je zoeken naar acties
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> slaat handmatig gewijzigde notities op
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> opens the Script repository dialog
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> opent het dialoogvenster Scriptrepository
 - <kbd>F4</kbd> springt naar het notitiebewerkingspaneel
 - <kbd>F5</kbd> springt naar de notitielijst
 - <kbd>F6</kbd> springt naar het notitiesubfolderpaneel
@@ -45,7 +45,7 @@
 - <kbd>F8</kbd> springt naar het navigatiepaneel
 - <kbd>F10</kbd> activeert het contextmenu van de huidige widget
 - <kbd>F11</kbd> schakelt de volledige schermmodus in
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> copies the headline of the current note
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopieert de kop van de huidige notitie
 
 ### In de notitie-zoekbalk
 
@@ -62,7 +62,7 @@
 
 - <kbd>Ctrl</kbd> + <kbd>Click</kbd> op een link om het te openen
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> laat je zoeken in de huidige notitie
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+    - Gebruik <kbd>Up</kbd> en <kbd>Down</kbd> toetsen of <kbd>F3</kbd> and <kbd>⇧</kbd> + <kbd>F3</kbd> toetsen om naar de vorige en volgende overeenkomsten te gaan
     - <kbd>Esc</kbd> sluit de zoekbalk
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> laat je zoeken en vervangen in de huidige notitie
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> dupliceert de huidige regel of de geselecteerde tekst
@@ -70,8 +70,8 @@
 - <kbd>Alt</kbd> + <kbd>Backspace</kbd> verwijdert de huidige regel
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> verwijdert het huidige woord
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <0>L</0> opent een dialoogvenster om een notitielink toe te voegen
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> opens a dialog to add note link
-- <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date and time in a user specific format
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> opent een dialoogvenster om een notitielink toe te voegen
+- <kbd>Ctrl</kbd> + <kbd>T</kbd> voegt de huidige datum en tijd in een gebruikersspecifiek formaat in
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> voegt een afbeelding in (de afbeelding wordt gekopieerd naar de map `media` in de huidige notitiemap)
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> voegt een bijlage in (het bestand wordt gekopieerd naar de map `attachments` in de huidige notitiemap)
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> voegt een tafel in
@@ -81,7 +81,7 @@
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> maakt de geselecteerde tekst cursief op
 - <kbd>Ctrl</kbd> + <kbd>U</kbd> maakt de geselecteerde tekst onderstrepen op
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> haalt de geselecteerde tekst door
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> doorloopt de gevallen van de geselecteerde tekst
 - <kbd>Tab</kbd> laat de geselecteerde tekst inspringen (werkt ook op meerdere regels)
     - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Tab</kbd> nadat een ongeordend lijstteken het lijstitem inspringt
