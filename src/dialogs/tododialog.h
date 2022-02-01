@@ -78,7 +78,7 @@ private:
                            const QString &relatedUid = QLatin1String(""));
 
    protected:
-    bool eventFilter(QObject *obj, QEvent *event);
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
     void jumpToTodoListItem();
    private slots:

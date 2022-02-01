@@ -25,5 +25,5 @@ class LineEdit : public QLineEdit {
     explicit LineEdit(QWidget *parent = nullptr);
 
    protected:
-    bool eventFilter(QObject *obj, QEvent *event);
+    bool eventFilter(QObject *obj, QEvent *event) override;
 };

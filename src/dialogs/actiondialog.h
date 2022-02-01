@@ -24,7 +24,7 @@ class ActionDialog : public MasterDialog {
     void on_actionLineEdit_textChanged(const QString &arg1);
 
    protected:
-    bool eventFilter(QObject *obj, QEvent *event);
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
    private:
     Ui::ActionDialog *ui;

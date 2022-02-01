@@ -52,7 +52,7 @@ class LinkDialog : public MasterDialog {
 private:
     Ui::LinkDialog *ui;
     int firstVisibleNoteListRow;
-    bool eventFilter(QObject *obj, QEvent *event);
+    bool eventFilter(QObject *obj, QEvent *event) override;
     QString selectedNoteText;
     void setupFileUrlMenu();
     void loadNoteHeadings() const;
