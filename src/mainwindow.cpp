@@ -68,7 +68,6 @@
 #include <QPointer>
 #include <QPrintDialog>
 #include <QPrinter>
-#include <QProcess>
 #include <QProgressDialog>
 #include <QQmlApplicationEngine>
 #include <QQmlComponent>
@@ -625,10 +624,6 @@ void MainWindow::initGlobalKeyboardShortcuts() {
         QAction *action = findAction(actionName);
         QString shortcut = settings.value(key).toString();
 
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0) && defined(Q_OS_LINUX)
-        Q_UNUSED(action)
-        qWarning() << "QHotkey not available on linux with qt6";
-#else
         auto hotKey = new QHotkey(QKeySequence(shortcut), true, this);
         _globalShortcuts.append(hotKey);
         connect(hotKey, &QHotkey::activated, this, [this, action]() {
@@ -643,7 +638,6 @@ void MainWindow::initGlobalKeyboardShortcuts() {
 
             action->trigger();
         });
-#endif
     }
 }
 

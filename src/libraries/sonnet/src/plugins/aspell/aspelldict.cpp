@@ -20,7 +20,12 @@
  */
 #include "aspelldict.h"
 
+#if QT_VERSION >= QT_VERSION_CHECK(6,0,0)
+#include <QStringEncoder>
+#else
 #include <QTextCodec>
+#endif
+
 #include <QDebug>
 #ifdef Q_OS_WIN
 #include <QCoreApplication>
@@ -75,7 +80,12 @@ QStringList ASpellDict::suggest(const QString &word) const
         return QStringList();
     }
     /* Needed for Unicode conversion */
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QTextCodec *codec = QTextCodec::codecForName("utf8");
+#else
+    QStringConverter::Encoding codec;
+    QStringDecoder e(codec);
+#endif
 
     /* ASpell is expecting length of a string in char representation */
     /* word.length() != word.toUtf8().length() for nonlatin strings    */
@@ -91,7 +101,11 @@ QStringList ASpellDict::suggest(const QString &word) const
     while ((cword = aspell_string_enumeration_next(elements))) {
         /* Since while creating the class ASpellDict the encoding is set */
         /* to utf-8, one has to convert output from Aspell to Unicode    */
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         qsug.append(codec->toUnicode(cword));
+#else
+        qsug.append(e.decode(cword));
+#endif
     }
 
     delete_aspell_string_enumeration(elements);
