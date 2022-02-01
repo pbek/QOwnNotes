@@ -68,7 +68,6 @@
 #include <QPointer>
 #include <QPrintDialog>
 #include <QPrinter>
-#include <QProcess>
 #include <QProgressDialog>
 #include <QQmlApplicationEngine>
 #include <QQmlComponent>

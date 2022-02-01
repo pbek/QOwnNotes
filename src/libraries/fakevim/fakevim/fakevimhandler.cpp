@@ -84,6 +84,7 @@
 #include <QMimeData>
 #include <QSharedPointer>
 #include <QDir>
+#include <QStandardPaths>
 
 #include <algorithm>
 #include <climits>
@@ -965,6 +966,12 @@ static QString fromLocalEncoding(const QByteArray &data)
 
 static QString getProcessOutput(const QString &command, const QString &input)
 {
+    // ensure the executable exists in some standard path and isn't random
+    const auto fullCmdPath = QStandardPaths::findExecutable(command);
+    if (fullCmdPath.isEmpty()) {
+        return {};
+    }
+
     QProcess proc;
 #if QT_VERSION >= QT_VERSION_CHECK(5,15,0)
     QStringList arguments = QProcess::splitCommand(command);

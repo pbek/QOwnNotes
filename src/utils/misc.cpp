@@ -152,11 +152,11 @@ void Utils::Misc::openFolderSelect(const QString &absolutePath) {
         openPath(path.left(path.lastIndexOf("/")));
     }
 #elif defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
-    if (QFileInfo(path).exists()) {
+    static const auto fullXdgMimePath = QStandardPaths::findExecutable(QStringLiteral("xdg-mime"));
+    if (!fullXdgMimePath.isEmpty() && QFileInfo(path).exists()) {
         QProcess proc;
         QString output;
-        proc.start(QStringLiteral("xdg-mime"),
-                   QStringList{"query", "default", "inode/directory"});
+        proc.start(fullXdgMimePath, QStringList{"query", "default", "inode/directory"});
         proc.waitForFinished();
         output = proc.readLine().simplified();
         if (output == QStringLiteral("dolphin.desktop") ||

@@ -24,7 +24,7 @@ namespace Git {
 void commitCurrentNoteFolder();
 bool executeCommand(const QString& command, const QStringList& arguments,
                     QProcess* process = Q_NULLPTR, bool withErrorDialog = false);
-bool executeGitCommand(const QStringList& arguments, QProcess* process = Q_NULLPTR,
+bool executeGitCommand(const QString &gitExe, const QStringList& arguments, QProcess* process = Q_NULLPTR,
                        bool withErrorDialog = true);
 QString gitCommand();
 void showLog(const QString& filePath);
