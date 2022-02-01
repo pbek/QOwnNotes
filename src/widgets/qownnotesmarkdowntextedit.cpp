@@ -1212,7 +1212,7 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
                         const QString settingsKey = QStringLiteral("MessageBoxOverride/readonly-mode-allow");
                         auto overrideButton = static_cast<QMessageBox::StandardButton>(
                             settings.value(settingsKey, QMessageBox::NoButton).toInt());
-                        if ((overrideButton == QMessageBox::Yes)) {
+                        if (overrideButton == QMessageBox::Yes) {
                             // overriden to answer yes: re-send the event
                             return QMarkdownTextEdit::eventFilter(obj, event);
                         }
