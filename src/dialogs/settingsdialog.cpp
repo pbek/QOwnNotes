@@ -29,7 +29,6 @@
 #include <QKeySequenceEdit>
 #include <QMenu>
 #include <QMessageBox>
-#include <QProcess>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QSettings>
