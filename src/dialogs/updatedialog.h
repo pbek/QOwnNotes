@@ -21,10 +21,10 @@ class UpdateDialog : public MasterDialog {
                           const QString &releaseVersionString = QString());
     ~UpdateDialog();
     static bool isUpdateDialogOpen();
-    int exec();
+    int exec() override;
 
    public slots:
-    void show();
+    void show() override;
 
    private slots:
     void dialogButtonClicked(QAbstractButton *button);
@@ -48,7 +48,7 @@ class UpdateDialog : public MasterDialog {
         Cancel
     };
 
-    void closeEvent(QCloseEvent *event);
+    void closeEvent(QCloseEvent *event) override;
 
     bool initializeUpdateProcess(const QString &filePath);
 

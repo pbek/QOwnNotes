@@ -10,7 +10,7 @@ class TodoItemTreeWidget : public QTreeWidget {
    public:
     explicit TodoItemTreeWidget(QWidget *parent = Q_NULLPTR);
    protected:
-    void dropEvent(QDropEvent *e);
+    void dropEvent(QDropEvent *e) override;
 
    Q_SIGNALS:
     void calendarItemUpdated(CalendarItem item);

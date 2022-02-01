@@ -21,7 +21,7 @@ class AttachmentDialog : public MasterDialog {
     QString getTitle();
 
    public slots:
-    void accept();
+    void accept() override;
 
    private slots:
     void on_openButton_clicked();

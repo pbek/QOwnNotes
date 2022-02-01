@@ -82,7 +82,7 @@ class SettingsDialog : public MasterDialog {
     void readSettings();
 
    protected:
-    void closeEvent(QCloseEvent *event);
+    void closeEvent(QCloseEvent *event) override;
 
    private slots:
 
