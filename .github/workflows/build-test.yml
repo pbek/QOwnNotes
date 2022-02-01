@@ -46,15 +46,15 @@ jobs:
 #            qt-version: '5.15.1'
           # botan 32bit error
         include:
-          - os: ubuntu-latest
-            qt-version: '6.3.0'
-            experimental: true
-          - os: macos-latest
-            qt-version: '6.3.0'
-            experimental: true
-          - os: windows-latest
-            qt-version: '6.3.0'
-            experimental: true
+#          - os: ubuntu-latest
+#            qt-version: '6.3.0'
+#            experimental: true
+#          - os: macos-latest
+#            qt-version: '6.3.0'
+#            experimental: true
+#          - os: windows-latest
+#            qt-version: '6.3.0'
+#            experimental: true
           # Snapcraft
           - os: ubuntu-18.04
             qt-version: '5.15.2'
