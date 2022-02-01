@@ -5594,7 +5594,7 @@
     - following features should already work via the QOwnNotes user interface
         - initially importing tags like `@tag` from your notes and overwriting
           your current tag assignment
-            - you will not loose your tags tree, just the former assignment to notes
+            - you will not lose your tags tree, just the former assignment to notes
             - you can still move tags into other tags
             - if more than one tag has the same name in your tag tree the 
               first hit will be assigned
