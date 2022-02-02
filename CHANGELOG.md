@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 22.1.13
+- some small text, code and Qt 6 support improvements were made 
+
 ## 22.1.12
 - you can now edit instantly when you disabled the read-only mode by checking
   `Don't ask again` in the dialog you get when typing in read-only mode
