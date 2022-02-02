@@ -2,6 +2,8 @@
 
 ## 22.1.13
 - some small text, code and Qt 6 support improvements were made 
+- an issue was fixed were changes in the current note were not detected correctly if the
+  current note was in a note sub-folder (for [#2433](https://github.com/pbek/QOwnNotes/issues/2433))
 
 ## 22.1.12
 - you can now edit instantly when you disabled the read-only mode by checking

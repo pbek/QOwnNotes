@@ -2769,10 +2769,11 @@ void MainWindow::notesWereModified(const QString &str) {
     qDebug() << "notesWereModified: " << str;
 
     QFileInfo fi(str);
-    Note note = Note::fetchByFileName(fi.fileName());
+    Note note = Note::fetchByFileUrl(QUrl::fromLocalFile(str));
 
     // load note from disk if current note was changed
-    if (note.getFileName() == this->currentNote.getFileName()) {
+    if ((note.getFileName() == this->currentNote.getFileName()) &&
+        (note.getNoteSubFolderId() == this->currentNote.getNoteSubFolderId())) {
         if (note.fileExists()) {
             // If the modified date of the file is the same as the one
             // from the current note it was a false alarm
