@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 22.1.13
+## 22.2.0
 - some small text, code and Qt 6 support improvements were made 
 - an issue was fixed were changes in the current note were not detected correctly if the
   current note was in a note sub-folder (for [#2433](https://github.com/pbek/QOwnNotes/issues/2433))
