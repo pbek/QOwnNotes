@@ -85,24 +85,24 @@
 - <kbd>Tab</kbd> behúzza a kijelölt szöveget (több soron is működik)
     - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Tab</kbd> egy rendezetlen lista karakter után behúzza a lista elemét
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> rendezetlen lista karakter után behúzza a lista elemét
 - <kbd>Return</kbd> listákban létrehoz egy új listaelemet
 - <kbd>Alt</kbd> + <kbd>Left</kbd> visszaugrik a jegyzettörténetbe
     - előreugrik a jegyzettörténetben
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> setzt ein Notiz-Lesezeichen auf den Lesezeichen-Slot 1..9
 - <kbd>Ctrl</kbd> + <kbd>0..9</kbd> ugrik a jegyzet könyvjelzőhöz a 0..9 könyvjelzőhelyen
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
 - <kbd>Ctrl</kbd> + <kbd>-</kbd> egy ponttal csökkenti a jegyzet szövegének betűméretét
 - <kbd>Ctrl</kbd> + <kbd>0</kbd> visszaállítja a jegyzet szövegének betűméretét
 - A <kbd>⌘</kbd> + <kbd>szóköz</kbd> megpróbál olyan egyszerű egyenleteket megoldani, mint `(4+5)*3=`a kurzor előtt, automatikusan kiegészíti a szöveget vagy megnyitja az URL-eket
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> searches for the selected text on the web
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> fügt eine Überschrift aus dem Dateinamen der Notiz am Anfang der Notiz ein
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> az aktuális hangjegyet két hangra osztja a kurzor aktuális pozíciójában
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> megkeresi a kiválasztott szöveget a weben
 - <kbd>Ctrl</kbd> + <kbd>Up</kbd> felfelé görgeti a tartalmat
 - <kbd>Ctrl</kbd> + <kbd>Down</kbd> lefelé görgeti a tartalmat
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> moves the current line down
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> moves the current line up
-- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Le</kbd> az aktuális sort lefelé mozgatja
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> feljebb mozgatja az aktuális sort
+- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> két szóközt és egy újsor karaktert ad hozzá, hogy kikényszerítse az újsor leértékelését
 
 ### A jegyzet előnézeti paneljén
 

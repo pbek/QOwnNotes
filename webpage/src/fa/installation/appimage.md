@@ -24,5 +24,5 @@ chmod a+x QOwnNotes-*.AppImage
 :::
 
 ::: tip
-If you have troubles running the AppImage, because your glibc version is too old you can try the [AppImage built on OBS](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage), it should be built with glibc 2.16.
+در صورت بروز مشکل در اجرای AppImage، به دلیل بسیار قدیمی بودن نسخه glibc شما، [AppImage built on OBS](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage) که بایستی با glibc 2.16 ایجاد شود را می‌توانید امتحان کنید.
 :::

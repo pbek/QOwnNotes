@@ -1,8 +1,8 @@
-# Install on Void Linux
+# Instalar en Void Linux
 
-There is a community-created package for **Void Linux** in [qownnotes srcpkg](https://github.com/void-linux/void-packages/tree/master/srcpkgs/qownnotes) that can be installed in the following way:
+Hay un paquete creado por la comunidad para **Void Linux** en [qownnotes srcpkg](https://github.com/void-linux/void-packages/tree/master/srcpkgs/qownnotes) que se puede instalar de la siguiente manera:
 
 ```bash
-# Synchronize remote repository index files and install QOwnNotes
+# Sincronice los archivos de índice del repositorio remoto e instale QOwnNotes
 xbps-install -S qownnotes
 ```

@@ -1,8 +1,8 @@
 # Traducción
 
-Thank you for helping out!
+¡Gracias por colaborar!
 
-How can I help to translate QOwnNotes?
+¿Cómo puedo ayudar a traducir QOwnNotes?
 
 ## Únase a nosotros en Crowdin para traducir QOwnNotes
 
@@ -14,59 +14,59 @@ Puede registrarse en [Crowdin](https://crowdin.com/project/qownnotes/invite) y *
 
 **[QOwnNotes en Crowdin](https://crowdin.com/project/qownnotes/invite)**
 
-Just [drop the project owner a message on Crowdin](https://crowdin.com/profile/pbek) or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues) if you want to translate QOwnNotes to a new language.
+Simplemente [envíe un mensaje al propietario del proyecto en Crowdin](https://crowdin.com/profile/pbek) o como un [problema de GitHub](https://github.com/pbek/QOwnNotes/issues) si desea traducir QOwnNotes a un nuevo idioma.
 
-If you want to add new translations to **existing languages** you can do so right away.
+Si desea agregar nuevas traducciones a **idiomas existentes**, puede hacerlo de inmediato.
 
 ## Corrección de pruebas
 
-If you are an excellent or even native speaker of an already translated language that has not been proofread yet, we are grateful if you help to make the QOwnNotes experience more reliable and convenient by checking and if necessary, correcting unapproved translations. You need to ask the owner for the permission to be a proofreader for your language.
+Si es un hablante excelente o incluso nativo de un idioma ya traducido que aún no ha sido corregido, le agradecemos que ayude a que la experiencia de QOwnNotes sea más confiable y conveniente verificando y, si es necesario, corrigiendo las traducciones no aprobadas. Debe pedirle permiso al propietario para ser un corrector de pruebas para su idioma.
 
 Haga clic aquí para ver si su idioma está entre los traducidos.
 
 [QOwnNotes en Crowdin](https://translate.qownnotes.org/)
 
-Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profile/pbek) and received permission to proofread in your language, you’re ready to go!
+Una vez que [se haya puesto en contacto con el propietario del proyecto en Crowdin](https://crowdin.com/profile/pbek) y haya recibido permiso para corregir en su idioma, ¡estará listo para comenzar!
 
-## General tips
+## Consejos generales
 
-Please consider a few things while working on the project.
+Tenga en cuenta algunas cosas mientras trabaja en el proyecto.
 
-### Accuracy
+### Exactitud
 
-Please localize with maximal possible accuracy while caring for fluency in your target language.
+Localice con la máxima precisión posible mientras cuida la fluidez en su idioma de destino.
 
-### Precision
+### Precisión
 
-The target needs to represent the source exactly and with no omissions or additions of any part of the string.
+El objetivo debe representar la fuente exactamente y sin omisiones ni adiciones de ninguna parte de la cadena.
 
-### Context
+### Contexto
 
-If you need more context, or help with a certain string, and you happen to know another language, you can change the language and see what other translators made out of the segment. But feel free to leave a message and ask for clarification on the right side of the page.
+Si necesita más contexto, o ayuda con una determinada cadena, y sabe otro idioma, puede cambiar el idioma y ver lo que otros traductores hicieron del segmento. Pero siéntete libre de dejar un mensaje y pedir una aclaración en el lado derecho de la página.
 
-### Frequently used key terms
+### Términos clave de uso frecuente
 
-It is necessary to check and use the same translations for the frequently used key terms, for example, "note" must be translated always in the same way.
+Es necesario comprobar y utilizar las mismas traducciones para los términos clave de uso frecuente, por ejemplo, "nota" debe traducirse siempre de la misma manera.
 
 Si `notas en la papelera` es `gelöschte Dateien` en alemán, siempre lo traducirías usando esta expresión. La excepción sería cuando gramaticalmente esté obligado a usar una alternativa, pero manténgalo simple.
 
 ![captura de pantalla](/img/crowdin/screenshot-7.png)
 
-In order to find all the identical expressions, search Crowdin to see if all the occurrences of a term indeed have the same translation, if you know better, and they don't you may suggest a better translation and vote down (or up) for the better / correct translation.
+Para encontrar todas las expresiones idénticas, busque en Crowdin para ver si todas las apariciones de un término tienen la misma traducción, si sabe mejor, y ellos no, puede sugerir una mejor traducción y votar hacia abajo (o hacia arriba) por la traducción mejor/correcta.
 
-Localize all occurrences as identically as you can.
+Localice todas las ocurrencias de la forma más idéntica posible.
 
 `Nota` definitivamente siempre debería tener una sola traducción.
 
-### Plural forms
+### Formas plurales
 
-For plural please add the appropriate translation each in the corresponding block.
+Para el plural, agregue la traducción apropiada cada uno en el bloque correspondiente.
 
 ![captura de pantalla](/img/crowdin/screenshot-4.png)
 
 ### Variables
 
-The `%1` variables need to be written without a space, in RTL languages you can either insert the variables from the original or write them into your translation.
+Las variables `%1` deben escribirse sin espacios; en los lenguajes RTL puede insertar las variables del original o escribirlas en su traducción.
 
 ![captura de pantalla](/img/crowdin/screenshot-1.png)
 
@@ -74,28 +74,28 @@ The `%1` variables need to be written without a space, in RTL languages you can 
 
 ![captura de pantalla](/img/crowdin/screenshot-3.png)
 
-### Access keys
+### Teclas de acceso
 
-Use `&` in front of any letter that should be used in a shortcut, can be the same as in original but does not have to.
+Use `&` delante de cualquier letra que deba usarse en un atajo, puede ser igual que en el original pero no es obligatorio.
 
 ![captura de pantalla](/img/crowdin/screenshot-4.png)
 
-### Custom containers
+### Contenedores personalizados
 
-Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress and shouldn't be translated.
+Strings wie `::: tip`, `::: warning` und `::: info` in der Dokumentation sind Markierungen für [benutzerdefinierte Container](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress und sollten nicht übersetzt werden.
 
-### Other strings not to be translated
+### Otras cadenas no se traducirán
 
-Some segments we don't translate in the Documentation:
+Algunos segmentos que no traducimos en la Documentación:
 
-- Never translate codes or links, tags must be left as they are (and without added spaces, as some machine translation does that, those must be deleted)
-- We don't translate date and time (leave blank)
-- And we also don't translate references (which QOwnNotes got in numerous translation languages), so you can simply skip them
+- Nunca traduzca códigos o enlaces, las etiquetas deben dejarse como están (y sin espacios añadidos, ya que algunas traducciones automáticas hacen eso, deben eliminarse)
+- Nosotras no traducimos fecha y hora (dejar en blanco)
+- Y tampoco traducimos las referencias (que QOwnNotes obtuvo en numerosos idiomas de traducción), por lo que simplemente puede omitirlas.
 
-## Translating and proofreading can be exciting!
+## ¡Traducir y corregir puede ser emocionante!
 
-You will deal with the language of this software, learn new terms and receive a lot of inside information about the project.
+Tratará con el lenguaje de este software, aprenderá nuevos términos y recibirá mucha información interna sobre el proyecto.
 
-If you are thus ready to help to proofread the translation of your language, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short briefing in the practice of translating and proofreading. You can ask her anything that helps you have fun contributing.
+Si está listo para ayudar a corregir la traducción de su idioma, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) le da la bienvenida a una breve sesión informativa sobre la práctica de la traducción y la corrección. Puedes preguntarle cualquier cosa que te ayude a divertirte contribuyendo.
 
-Thanks a lot for your help! 🙂
+¡Muchas gracias por tu ayuda! 🙂

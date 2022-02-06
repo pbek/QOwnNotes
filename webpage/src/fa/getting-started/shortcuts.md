@@ -22,7 +22,7 @@
 - <kbd>Alt</kbd> + <kbd>پایین</kbd> به یادداشت قابل مشاهده بعدی پرش می کند
     - میانبر جایگزین <kbd>Page Down</kbd> + <kbd>Ctrl</kbd> است
 - <kbd>Page Up</kbd> + <kbd>Alt</kbd> به زبانه یادداشت قبلی پرش می کند
-- <kbd>Alt</kbd> + <kbd>Page Down</kbd> jumps to the next note tab
+- <kbd>Page Down</kbd> + <kbd>Alt</kbd> به زبانه یادداشت بعدی پرش می کند
 - <kbd>W</kbd> + <kbd>Ctrl</kbd> زبانه یادداشت کنونی را می بندد
 - <kbd>D</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Ctrl</kbd> به حالت بدون مزاحمت تغییر وضعیت می دهد
     - همچنین می توانید آن را با <kbd>Esc</kbd> ببندید
@@ -121,26 +121,26 @@
 
 ### در پنجره اصلی
 
-- <kbd>⌘ Cmd</kbd> + <kbd>N</kbd> creates a new note with the current date and time in the name
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> creates a new note in a new tab
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
-- <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> lets you search for notes in all tags / subfolders
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> switches to the previous workspace
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> edits an encrypted note
-- <kbd>⌃ Ctrl</kbd> + <kbd>R</kbd> removes the current note
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> checks for updates
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> opens the todo list
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in an external editor
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in a view
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> enables or disables editing of notes
-- <kbd>⌃ Ctrl</kbd> + <kbd>Up</kbd> jumps to the previous visible note
-    - alternate shortcut is <kbd>⌘ Cmd</kbd> + <kbd>Page Up</kbd>
-- <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> jumps to the next visible note
-    - alternate shortcut is <kbd>⌘ Cmd</kbd> + <kbd>Page Down</kbd>
-- <kbd>⌥ Alt</kbd> + <kbd>Page Up</kbd> jumps to the previous note tab
-- <kbd>⌥ Alt</kbd> + <kbd>Page Down</kbd> jumps to the next note tab
-- <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> closes the current note tab
+- <kbd>⌘ Cmd</kbd> + <kbd>N</kbd> یک یادداشت جدید با تاریخ و زمان کنونی در نام ایجاد می کند
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> یادداشت جدیدی در یک زبانه جدید ایجاد می کند
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> به شما اجازه می دهد تا یادداشت ها را (براساس نام یادداشت و محتوای آن) جستجو کنید
+- <kbd>F</kbd> + <kbd>⌃ Ctrl</kbd> به شما امکان می دهد یادداشت ها را در همه زبانه ها یا زیر پوشه ها جستجو کنید
+- <kbd>P</kbd> + <kbd>⇧ Shift</kbd> + <kbd>⌃ Ctrl</kbd> به فضای کاری قبلی تغییر می کند
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> یک یادداشت رمزگذاری شده را ویرایش می کند
+- <kbd>R</kbd> + <kbd>⌃ Ctrl</kbd> یادداشت کنونی را حذف می کند
+- <kbd>U</kbd> + <kbd>⇧ Shift</kbd> + <kbd>⌃ Ctrl</kbd> برای بروز رسانی بررسی انجام می دهد
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> لیست انجام دادنی را باز می کند
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> یادداشت کنونی را در یک ویرایشگر خارجی باز می کند
+- <kbd>O</kbd> + <kbd>⇧ Shift</kbd> + <kbd>⌃ Ctrl</kbd> یادداشت کنونی را در یک نما باز می کند
+- <kbd>F</kbd> + <kbd>⇧ Shift</kbd> + <kbd>⌃ Ctrl</kbd> پوشه یادداشت کنونی را در یابنده باز می کند
+- <kbd>E</kbd> + <kbd>⇧ Shift</kbd> + <kbd>⌃ Ctrl</kbd> ویرایش کردن یادداشت ها را فعال یا غیر فعال می سازد
+- <kbd>⌃ Ctrl</kbd> + <kbd>بالا</kbd> به یادداشت قابل مشاهده قبلی پرش می کند
+    - میانبر جایگزین <kbd>Page Up</kbd> + <kbd>⌘ Cmd</kbd> است
+- <kbd>⌃ Ctrl</kbd> + <kbd>پایین</kbd> به یادداشت قابل مشاهده بعدی پرش می کند
+    - میانبر جایگزین <kbd>Page Down</kbd> + <kbd>⌘ Cmd</kbd> است
+- <kbd>Page Up</kbd> + <kbd>⌥ Alt</kbd> به زبانه یادداشت قبلی پرش می کند
+- <kbd>Page Down</kbd> + <kbd>⌥ Alt</kbd> به زبانه یادداشت بعدی پرش می کند
+- <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> زبانه یادداشت کنونی را می بندد
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> toggles the distraction free mode
     - می توانید آن را با <kbd>Esc</kbd> نیز ببندید
 - <kbd>⌘ Cmd</kbd> + <kbd>P</kbd> prints the current note as text

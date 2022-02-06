@@ -1,4 +1,4 @@
-# Install on Ubuntu Linux, elementary OS and Linux Mint
+# Instalar en Ubuntu Linux, sistema operativo elemental y Linux Mint
 
 ## Ubuntu Linux 18.04 o más reciente, sistema operativo elemental, Linux Mint 18 o más reciente
 

@@ -326,7 +326,7 @@ function noteTaggingHook (note, action, tagName, newTagName);
   
       -   importieren Sie zunächst Tags wie `@tag` aus Ihren Notizen und überschreiben Sie Ihre aktuelle Tag-Zuweisung
       
-              -   Sie werden Ihren Tag-Baum nicht verlieren, sondern nur die frühere Zuordnung zu Notizen
+              -   Sie werden Ihren Schlagworte-Baum nicht verlieren, sondern nur die frühere Zuordnung zu Notizen
 
         -   Sie können Tags weiterhin in andere Tags verschieben
 

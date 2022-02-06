@@ -36,9 +36,9 @@ Qt با نسخه 5.8 از ویندوز XP پشتیبانی نمی کند ولی 
 choco install qownnotes
 ```
 
-## Scoop
+## اسکوپ
 
-There is a [community maintained package of QOwnNotes](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) at [Scoop](https://scoop.sh/). در صورت افزودن باکت افزونه ها (Extras)، برای نصب QOwnNotes به شکل قابل حمل می توانید از آن استفاده کنید.
+یک [بسته نگهداری شده جمعی از QOwnNotes](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) در [اسکوپ](https://scoop.sh/) در دسترس قرار دارد. در صورت افزودن باکت افزونه ها (Extras)، برای نصب QOwnNotes به شکل قابل حمل می توانید از آن استفاده کنید.
 
 ```shell
 scoop bucket add extras

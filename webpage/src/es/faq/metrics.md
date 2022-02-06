@@ -1,43 +1,43 @@
-# Why metrics?
+# ¿Por qué métricas?
 
-## Why are metrics useful?
+## ¿Por qué son útiles las métricas?
 
-QOwnNotes (as in the application itself) is **developed by one and sometimes two persons in their spare time**.
+QOwnNotes (como en la propia aplicación) es **desarrollado por una ya veces dos personas en su tiempo libre**.
 
-Releases are built for a lot of platforms and distributions (often very old versions of them). Keeping them up is a lot of work.
+Los lanzamientos se crean para muchas plataformas y distribuciones (a menudo, versiones muy antiguas de las mismas). Mantenerlas es mucho trabajo.
 
-The metrics are the only dependable source of information about which versions of platforms and distributions QOwnNotes runs on. They also show which features are the most popular, so that decisions can be made concerning which versions to retire, which features need more work, and which are hardly used.
+Las métricas son la única fuente confiable de información sobre las versiones de plataformas y distribuciones en las que se ejecuta QOwnNotes. También muestran qué funciones son las más populares, de modo que se pueden tomar decisiones sobre qué versiones retirar, qué funciones necesitan más trabajo y cuáles apenas se usan.
 
-The same applies to the user's selection of preferred languages, which promotes the improvement of the corresponding translations.
+Lo mismo se aplica a la selección de idiomas preferidos por parte del usuario, lo que promueve la mejora de las traducciones correspondientes.
 
-## Where are the metrics stored?
+## ¿Dónde se almacenan las métricas?
 
-The metrics are transmitted to and stored on a self-hosted [Matomo](https://matomo.org/) server. Only the two main developers have access to the data. **No data is shared with 3rd parties.**
+Las métricas se transmiten y almacenan en un servidor [Matomo](https://matomo.org/) autohospedado. Solo los dos desarrolladores principales tienen acceso a los datos. **No se comparten datos con terceros.**
 
 ## How are metrics collected?
 
-Metrics are **anonymized** (e.g. ip address stripped out) on the Matomo server after they are received.
+Las métricas se **anonimizan** (p. ej., se elimina la dirección IP) en el servidor de Matomo después de recibirlas.
 
-No personal information, like text you entered or note names are collected or stored on the server!
+¡Ninguna información personal, como el texto que ingresó o los nombres de las notas, se recopila o almacena en el servidor!
 
-## What is collected?
+## ¿Qué se recoge?
 
-Some basic information like screen resolution, operating system and version of QOwnNotes used is transmitted.
+Se transmite cierta información básica como la resolución de pantalla, el sistema operativo y la versión de QOwnNotes utilizada.
 
-Furthermore, for example events are sent to the server when actions are used in the applications.
+Además, por ejemplo, los eventos se envían al servidor cuando se utilizan acciones en las aplicaciones.
 
-QOwnNotes is free open source software. You can review the metrics all the time by searching for example for [sendVisitIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendVisitIfEnabled) and [sendEventIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendEventIfEnabled) in the source code to see what exactly is sent.
+QOwnNotes es un software gratuito de código abierto. Puede revisar las métricas todo el tiempo buscando, por ejemplo, [sendVisitIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendVisitIfEnabled) y [enviarEventoSiHabilitado](https://github.com/pbek/QOwnNotes/search?q=sendEventIfEnabled) en el código fuente para ver qué se envía exactamente.
 
-**No personal information, like text you entered or note names are collected!**
+**¡No se recopila información personal, como el texto que ingresó o los nombres de las notas!**
 
-## Can I turn metrics off?
+## ¿Puedo desactivar las métricas?
 
-You can turn them off upon first start of the application in the welcome dialog or at a later time in the settings dialog.
+Puede desactivarlos la primera vez que inicie la aplicación en el cuadro de diálogo de bienvenida o más tarde en el cuadro de diálogo de configuración.
 
-## Why are metrics not off by default?
+## ¿Por qué las métricas no están desactivadas de forma predeterminada?
 
-Defaults are king. Turning metrics off by default would result in no meaningful metrics at all.
+Los valores predeterminados son rey. Desactivar las métricas de forma predeterminada no generaría ninguna métrica significativa.
 
-Most of the people don't care about metrics. Those who care about metrics and don't want to vote with their metrics about what is worked on or what is supported can easily turn them off at the first start of the application.
+A la mayoría de la gente no le importan las métricas. Aquellos que se preocupan por las métricas y no quieren votar con sus métricas sobre en qué se trabaja o qué se admite, pueden desactivarlas fácilmente en el primer inicio de la aplicación.
 
-You will even get a second dialog that will tell you about the metrics, if you finished the welcome dialog too early.
+Incluso obtendrá un segundo cuadro de diálogo que le informará sobre las métricas si terminó el cuadro de diálogo de bienvenida demasiado pronto.

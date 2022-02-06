@@ -3,6 +3,7 @@
 ## 22.2.1
 - the Evernote import now supports importing images and attachments in-line
   (for [#2435](https://github.com/pbek/QOwnNotes/issues/2435)) 
+- added more translation (thank you amirkbrpr, rawfreeamy, noureddin, mguerra, marterra, hansa2662)
 
 ## 22.2.0
 - some small text, code and Qt 6 support improvements were made 

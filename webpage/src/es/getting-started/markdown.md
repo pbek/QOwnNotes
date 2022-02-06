@@ -183,10 +183,10 @@ cd notas
 ```
 ~~~
 
-Currently, supported languages (and code block identifiers) are:
+Actualmente, los idiomas admitidos (e identificadores de bloque de código) son:
 
-* BASh scripting, `bash`
-* C, `c`
+* Scripts BASh, `bash`
+* C, 'c'
 * C++, `cpp`
 * C++, `cxx`
 * C++, `c++`
@@ -194,32 +194,32 @@ Currently, supported languages (and code block identifiers) are:
 * CMake, `cmake`
 * C#, `csharp`
 * CSS, `css`
-* Go, `go`
+* Ir, `ir`
 * HTML, `html`
-* INI, `ini`
+*INI, `ini`
 * Java, `java`
 * JavaScript, `javascript`
 * JavaScript, `js`
 * JSON, `json`
-* Makefile, `make`
+* Makefile, `hacer`
 * PHP, `php`
 * Python, `py`
-* Python, `python`
+* Python, `pitón`
 * QML, `qml`
-* Rust, `rust`
-* Shell scripting, `sh`
+* Óxido, `óxido`
+* Script de shell, `sh`
 * SQL, `sql`
-* TypeScript, `ts`
-* TypeScript, `typescript`
-* V, `v`
-* Vex, `vex`
-* XML, `xml`
+* Mecanografiado, `ts`
+* Mecanografiado, `mecanografiado`
+* V, 'v'
+* Vejar, `vejar`
+* XML, 'xml'
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tables
+## Mesas
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+Las tablas no forman parte de la especificación principal de Markdown, pero la vista previa de QOwnNotes las admite. 
 
 ~~~markdown
 Colons can be used to align columns.
@@ -241,7 +241,7 @@ También puede utilizar Markdown en línea.
 ~~~
 
 ::: tip
-Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you to create tables. Incluso puede importar archivos CSV en ese cuadro de diálogo.
+Presione <kbd>Alt + Shift + T</kbd> para activar un cuadro de diálogo que puede ayudarlo a crear tablas. Incluso puede importar archivos CSV en ese cuadro de diálogo.
 
 Use <kbd>Ctrl + Espacio</kbd> dentro de una tabla de rebajas para formatearla automáticamente.
 :::
@@ -285,12 +285,12 @@ ___
 
 ## Saltos de línea
 
-- You can break a paragraph into more than a single line for easier editing, they still render as a single paragraph with no breaks.
-- You can force a line break inside a paragraph by ending a line with two spaces.
-- You can make a separate paragraph by delimiting it by empty lines.
+- Puede dividir un párrafo en más de una sola línea para facilitar la edición, aún se representan como un solo párrafo sin interrupciones.
+- Puede forzar un salto de línea dentro de un párrafo terminando una línea con dos espacios.
+- Puede hacer un párrafo separado delimitándolo con líneas vacías.
 
 ::: tip
-You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
+Puede ingresar dos espacios y una nueva línea con <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
 :::
 
 ```markdown
@@ -303,12 +303,12 @@ Esta línea solo está separada por dos espacios finales y una sola línea nueva
 ```
 
 ::: tip
-Trailing spaces are highlighted by default in the editor.
+Los espacios finales están resaltados de forma predeterminada en el editor.
 :::
 
 ## Comentarios
 
-Comments are not shown in the preview.
+Los comentarios no se muestran en la vista previa.
 
 ```markdown
 [comentario]: # (este comentario no aparecerá en la vista previa)
@@ -317,12 +317,12 @@ Comments are not shown in the preview.
 ```
 
 ::: tip
-A leading html comment block in a note will also be ignored in the automatic note filename generation.
+Un bloque de comentario html inicial en una nota también se ignorará en la generación automática del nombre de archivo de la nota.
 :::
 
 ## Listas de casillas de verificación
 
-You can create simple todo lists with checkbox lists.
+Puede crear listas de tareas pendientes simples con listas de casillas de verificación.
 
 ```markdown
 - [x] done
@@ -330,12 +330,12 @@ You can create simple todo lists with checkbox lists.
 ```
 
 ::: tip
-You can check/un-check checkboxes in the preview.
+Puede marcar / desmarcar las casillas de verificación en la vista previa.
 :::
 
 ## Frontmatter
 
-In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
+En QOwnNotes puede usar un frontmatter (por ejemplo, YAML) para agregar algo de metainformación adicional. **No se mostrará en la vista previa** y **no perturbará la generación automática de nombres de archivo de notas**.
 
 ```markdown
 ---
@@ -348,4 +348,4 @@ descripción: Alguna descripción
 Algún texto
 ```
 
-The filename of this example note would be `Note headline starts here.md`.
+El nombre de archivo de esta nota de ejemplo sería `El título de la nota comienza aquí.md`.

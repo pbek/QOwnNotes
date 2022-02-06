@@ -1,19 +1,19 @@
 # Gestor de fragmentos de órdenes de terminal
 
-You can use the [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc) to **execute command snippets stored in notes** in QOwnNotes from the command line.
+Puede utilizar el [Administrador de fragmentos de la línea de comandos de QOwnNotes](https://github.com/qownnotes/qc) para **ejecutar fragmentos de comandos almacenados en notas** en QOwnNotes desde la línea de comandos.
 
 ![qc](/img/qc.png)
 
-You can use **notes with a special tag** to store **command snippets**, which you can **execute from the command-line snippet manager**.
+Puede utilizar **notas con una etiqueta especial** para almacenar **fragmentos de código**, que puede **ejecutar desde el administrador de fragmentos de línea de comandos**.
 
 ![commands](/img/commands.png)
 
-## Installation
+## Instalación
 
-Visit the [latest release page](https://github.com/qownnotes/qc/releases/latest) and download the version you need.
+Visite la [página de la última versión](https://github.com/qownnotes/qc/releases/latest) y descargue la versión que necesita.
 
 ::: tip
-If you have [jq](https://stedolan.github.io/jq) installed you can also use this snippet to download and install for example the latest Linux AMD64 AppImage to `/usr/local/bin/qc`:
+Si tiene [jq](https://stedolan.github.io/jq) instalado, también puede usar este fragmento para descargar e instalar, por ejemplo, la última AppImage de Linux AMD64 en `/usr/local/bin/qc`:
 
 ```bash
 curl https://api.github.com/repos/qownnotes/qc/releases/latest | \
@@ -26,30 +26,30 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 ```
 :::
 
-## Dependencies
+## Dependencias
 
 [fzf](https://github.com/junegunn/fzf) (fuzzy search) or [peco](https://github.com/peco/peco) (older, but more likely to be installed by default) need to be installed to search for commands on the command-line.
 
 ::: tip
-By default `fzf` is used for searching, but you can use `peco` by setting it with `qc configure`.
+De forma predeterminada, `fzf` se usa para buscar, pero puede usar `peco` configurándolo con `qc configure`.
 :::
 
-## Setup
+## Configuración
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Before you are using the snippet manager you need to enable the *Web socket server* (2) in the *Browser extension / command snippets* (1) settings in QOwnNotes.
+Antes de usar el administrador de fragmentos, debe habilitar el *servidor de socket web* (2) en la configuración de *fragmentos de comando/extensión del navegador* (1) en QOwnNotes.
 
-Then you need to show the security token (3) and copy it (4).
+Luego, debe mostrar el token de seguridad (3) y copiarlo (4).
 
-Now open the configuration file of the snippet manager with:
+Ahora abra el archivo de configuración del administrador de fragmentos con:
 
 ```bash
-# Configure the snippet manager
-qc configure
+# Configurar el administrador de fragmentos
+control de calidad configurar
 ```
 
-And put the security token in the `token` attribute:
+Y coloque el token de seguridad en el atributo `token`:
 
 ```toml
 [QOwnNotes]
@@ -57,14 +57,14 @@ token = "yourtokenhere"
 ```
 
 ::: tip
-In the QOwnNotes settings you can also set what note tag should be used to search for commands in notes. By default, the tag `commands` is used.
+En la configuración de QOwnNotes, también puede establecer qué etiqueta de nota se debe usar para buscar comandos en las notas. De forma predeterminada, se utiliza la etiqueta `comandos`.
 :::
 
-## Syntax of command snippets
+## Sintaxis de fragmentos de comando
 
-You can use **unordered lists with in-line code blocks** to store command snippets. All notes with the tag `commands` are searched for command snippets.
+Puede usar **listas desordenadas con bloques de código en línea** para almacenar fragmentos de comandos. Todas las notas con la etiqueta `comandos` se buscan fragmentos de comandos.
 
-If you add a `cmd:` before the in-line code block, the command will also be found in the **current note** regardless of note tags.
+Si agrega un `cmd:` antes del bloque de código en línea, el comando también se encontrará en la **nota actual** independientemente de las etiquetas de nota.
 
 ```markdown
 - `echo I am a command` I am a description #tag1 #tag2 #tag3
@@ -72,43 +72,42 @@ If you add a `cmd:` before the in-line code block, the command will also be foun
 - cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
 ```
 
-**`bash` or `shell` code blocks**, preceded by a heading 2 or higher as a description, can also be used for command snippets. Tags are also supported if they are between the heading and the code block.
+**`bash` or `shell` code blocks**, preceded by a heading 2 or higher as a description, can also be used for command snippets. Las etiquetas también son compatibles si se encuentran entre el encabezado y el bloque de código.
 
-    ## Do this with a "bash" code block
+    ## Haz esto con un bloque de código "bash"
 
-    - this text will be ignored text
-    - but tags can be used: #tag1 #tag2
+    - este texto será ignorado texto
+    - pero se pueden usar etiquetas: #tag1 #tag2
 
     ```bash
-    echo do this
-    echo do that
+    eco haz esto
+     echo haz eso
     ```
 
 
-    ## Do something else with a "sh" code block
+    ## Haz otra cosa con un bloque de código "sh"
 
     ```sh
-    echo do something else
-    echo do something other
+    eco haz otra cosa
+     echo hacer otra cosa
     ```
 
-Above example will result in two command snippets, the first one with the two tags `tag1` and `tag2`.
+El ejemplo anterior dará como resultado dos fragmentos de comando, el primero con los dos etiquetas `etiqueta1` y `etiqueta2`.
 
-## Usage
+## Uso
 
 ```bash
-# Search and execute command snippets
-qc exec
+# Buscar y ejecutar fragmentos de comandos
+ejecutivo de control de calidad
 ```
 
 ```bash
-# Search and print command snippets
-qc search
+# Buscar ejecutar y fragmentos de comandos ejecutivos de control de calidad
 ```
 
-## Configuration
+## Configuración
 
-Run `qc configure`.
+Ejecute `qc configure`.
 
 ```toml
 [General]
@@ -122,11 +121,11 @@ Run `qc configure`.
   websocket_port = 22222    # websocket port in QOwnNotes
 ```
 
-## Shell completion
+## Terminación de caparazón
 
-You can generate shell completion code for your shell with `qc completion <shell>`.
+Puede generar un código de finalización de shell para su shell con `completado de qc <shell>`.
 
-For example for the Fish shell you can use:
+Por ejemplo, para el caparazón de pescado puedes usar:
 
 ```bash
 qc completion fish > ~/.config/fish/completions/qc.fish

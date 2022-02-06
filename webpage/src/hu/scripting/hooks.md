@@ -262,7 +262,7 @@ Megvalósíthatja saját jegyzetcímkézési mechanizmusát, például a jegyzet
 -   amint egy szkript aktiválódik, amely végrehajtja az új függvényt, a `noteTaggingHook` jegyzet címkézést ez a függvény kezeli.
 -   a következő funkcióknak a QOwnNotes felhasználói felületén keresztül kell működniük
     -   kezdetben olyan címkéket importál a jegyzeteiből, mint a `@tag`, és felülírja az aktuális címkekiosztást
-        -   nem fogja elveszíteni a címkefáját, csak a jegyzetekhez való korábbi hozzárendelést
+        -   you will not lose your tags tree, just the former assignment to notes
         -   továbbra is áthelyezhet címkéket más címkékbe
         -   ha egynél több címkének ugyanaz a neve a címkefájában, akkor az első találatot hozzárendelik
     -   címke hozzáadása egy jegyzethez hozzáadja a címkét a jegyzet szövegéhez

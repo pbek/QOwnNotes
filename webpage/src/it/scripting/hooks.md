@@ -295,7 +295,7 @@ function noteTaggingHook(note, action, tagName, newTagName);
 -   non appena viene attivato uno script che implementa la nuova funzione `noteTaggingHook` l'etichettatura delle note sarà gestita da quella funzione
 -   le seguenti funzionalità dovrebbero essere disponibili tramite l'interfaccia utente QOwnNotes
     -   inizialmente importando le etichette `@tag` dalle note e sovrascrivendo l'assegnazione dell'etichetta corrente
-        -   non perderai il tuo albero delle etichette, solo il precedente assegnamento alle note
+        -   you will not lose your tags tree, just the former assignment to notes
         -   puoi comunque spostare le etichette in altre etichette
         -   se ci sono più etichette collo stesso nome nel tuo albero delle etichette, verrà assegnata la prima corrispondenza
     -   l'aggiunta di un'etichetta a una nota aggiungerà l'etichetta al testo della nota

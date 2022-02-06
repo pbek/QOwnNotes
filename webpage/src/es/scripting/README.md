@@ -1,4 +1,4 @@
-# QOwnNotes Scripting
+# Secuencias de comandos de QOwnNotes
 
 Un script QOwnNotes es principalmente **JavaScript** en [ archivos Qt QML](https://doc.qt.io/qt-5/qtqml-index.html).
 

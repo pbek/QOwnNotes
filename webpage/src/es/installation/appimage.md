@@ -3,26 +3,26 @@
 Puede descargar la última AppImage de la [página de versiones de QOwnNotes](https://github.com/pbek/QOwnNotes/releases). Debe llamarse como `QOwnNotes-x86_64.AppImage` en esa página.
 
 ::: tip
-If you have [jq](https://stedolan.github.io/jq/) installed you can also download the latest AppImage directly:
+Si tiene [jq](https://stedolan.github.io/jq/) instalado, también puede descarga la última AppImage directamente:
 
 ```bash
-# query the latest Linux release from the QOwnNotes API, parse the JSON for the URL and download it
+# consulte la última versión de Linux desde la API QOwnNotes, analice el JSON para la URL y descárguelo
 curl -L https://api.qownnotes.org/latest_releases/linux | jq .url | xargs curl -Lo QOwnNotes-x86_64.AppImage
 ```
 :::
 
-Then you can change the execute-permissions on the file:
+Luego puede cambiar los permisos de ejecución en el archivo:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Afterwards you should be able to execute the AppImage to run QOwnNotes.
+Después, debería poder ejecutar AppImage para ejecutar QOwnNotes.
 
 ::: warning
-If you want to use the **automatic updater** please make sure to put your AppImage in a place where your user account has write-access to, like somewhere in your home directory.
+Si desea utilizar el **actualizador automático**, asegúrese de colocar su AppImage en un lugar donde su cuenta de usuario tenga acceso de escritura, como en algún lugar de su directorio de inicio.
 :::
 
 ::: tip
-If you have troubles running the AppImage, because your glibc version is too old you can try the [AppImage built on OBS](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage), it should be built with glibc 2.16.
+Si tiene problemas para ejecutar AppImage, porque su versión de glibc es demasiado antigua, puede probar la [AppImage construida en OBS](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage), debe estar construida con glibc 2.16.
 :::

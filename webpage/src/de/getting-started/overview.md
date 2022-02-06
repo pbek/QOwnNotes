@@ -160,7 +160,7 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 - Unterstützung für **hierarchische Notizkennzeichnung** und **Notizunterordner**
 - Optionale **Verschlüsselung** von Notizen, (AES-256 ist integriert oder Sie können benutzerdefinierte Verschlüsselungsmethoden wie **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) oder **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)) verwenden.)
 - Der **Notizenordner** kann **frei gewählt werden** (mehrere Notizordner können verwendet werden)
-- **Searching parts of words** in notes is possible and search results are highlighted in the notes
+- **Szavarészekben kereshet** a jegyzetekben, és a keresési eredmények kiemelve jelennek meg a jegyzetekben
 - [**Browsererweiterung**](browser-extension.md) zum **Hinzufügen von Notizen aus dem ausgewählten Text**, **Erstellen von Screenshots** oder **Verwalten Ihrer Lesezeichen**
 - Unterstützung für [**Rechtschreibprüfung**](../editor/spellchecking.md)
 - **Tragbarer Modus** zum Mitnehmen von QOwnNotes auf USB-Sticks

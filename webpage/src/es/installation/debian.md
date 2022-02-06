@@ -1,6 +1,6 @@
 # Instalar en Debian Linux
 
-## Debian 11.0
+## Debian 10.0
 
 Ejecute los siguientes comandos de shell para confiar en el repositorio.
 
@@ -17,7 +17,7 @@ sudo apt-get install qownnotes
 ```
 
 ::: tip
-If you use this repository for other Debian Linux versions please make sure that you have **Qt** installed at least at **version 5.11**.
+Si usa este repositorio para otras versiones de Debian Linux, asegúrese de tener **Qt** instalado al menos en la **versión 5.11**.
 :::
 
 [Descarga Directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_11)
@@ -39,7 +39,7 @@ sudo apt-get install qownnotes
 ```
 
 ::: tip
-If you use this repository for other Debian Linux versions please make sure that you have **Qt** installed at least at **version 5.8**.
+Si usa este repositorio para otras versiones de Debian Linux, asegúrese de tener **Qt** instalado al menos en la **versión 5.8**.
 :::
 
 [Descarga Directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10)
@@ -61,7 +61,7 @@ sudo apt-get install qownnotes
 ```
 
 ::: tip
-If you use this repository for other Debian Linux versions please make sure that you have **Qt** installed at least at **version 5.5**.
+Si usa este repositorio para otras versiones de Debian Linux, asegúrese de tener **Qt** instalado al menos en la **versión 5.5**.
 :::
 
 [Descarga Directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)

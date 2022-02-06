@@ -67,32 +67,32 @@
 <translation>סעלעקטירן טעקע צו אַרייַנלייגן</translation>
 </message>
 <message>
-<location filename="../dialogs/attachmentdialog.cpp" line="142"/>
+<location filename="../dialogs/attachmentdialog.cpp" line="144"/>
 <source>Download error</source>
 <translation>אראפקאפיע טעות</translation>
 </message>
 <message>
-<location filename="../dialogs/attachmentdialog.cpp" line="143"/>
+<location filename="../dialogs/attachmentdialog.cpp" line="145"/>
 <source>Error while downloading:
 %1</source>
 <translation>טעות בעת דאַונלאָודינג:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/attachmentdialog.cpp" line="171"/>
-<location filename="../dialogs/attachmentdialog.cpp" line="195"/>
+<location filename="../dialogs/attachmentdialog.cpp" line="173"/>
+<location filename="../dialogs/attachmentdialog.cpp" line="197"/>
 <source>File error</source>
 <translation>טעקע טעות</translation>
 </message>
 <message>
-<location filename="../dialogs/attachmentdialog.cpp" line="172"/>
+<location filename="../dialogs/attachmentdialog.cpp" line="174"/>
 <source>Could not open temporary file:
 %1</source>
 <translation>קען נישט עפענען צייטווייליגע פייל:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/attachmentdialog.cpp" line="196"/>
+<location filename="../dialogs/attachmentdialog.cpp" line="198"/>
 <source>Could not store downloaded file:
 %1</source>
 <translation>קען נישט קראָם די דאַונלאָודיד טעקע:
@@ -678,32 +678,32 @@
 <translation>זולו</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="294"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="296"/>
 <source>Download error</source>
 <translation>אראפקאפיע טעות</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="295"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="297"/>
 <source>Error while downloading:
 %1</source>
 <translation>טעות בעת דאַונלאָודינג:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="311"/>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="423"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="313"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="425"/>
 <source>File error</source>
 <translation>טעקע טעות</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="312"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="314"/>
 <source>Could not store downloaded file:
 %1</source>
 <translation>קען נישט קראָם די דאַונלאָודיד טעקע:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="424"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="426"/>
 <source>Could not remove dictionary file:
 %1</source>
 <translation>די ווערטערבוך פייל קען נישט אַראָפּנעמען:
@@ -773,102 +773,102 @@
 <translation>סעלעקט Evernote ענעקס טעקע צו אַרייַנפיר</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="636"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="639"/>
 <source>Basic attributes</source>
 <translation>יקערדיק אַטריביוץ</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="637"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="640"/>
 <source>Created date</source>
 <translation>באשאפן טאָג</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="639"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="642"/>
 <source>Updated date</source>
 <translation>דערהייַנטיקט דאַטע</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="642"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="645"/>
 <source>Note attributes</source>
 <translation>באַמערקונג אַטריביוץ</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="643"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="646"/>
 <source>Subject date</source>
 <translation>טעמע טאָג</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="646"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="649"/>
 <source>Latitude</source>
 <translation>ברייט</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="649"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="652"/>
 <source>Longitude</source>
 <translation>לאָנגיטודע</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="652"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
 <source>Altitude</source>
 <translation>הייך</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="658"/>
 <source>Author</source>
 <translation>מחבר</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="658"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
 <source>Source</source>
 <translation>מקור</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="664"/>
 <source>Source URL</source>
 <translation>מקור URL</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="668"/>
 <source>Source application</source>
 <translation>מקור אַפּלאַקיישאַן</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="668"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
 <source>Reminder order</source>
 <translation>דערמאָנונג סדר</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="674"/>
 <source>Reminder time</source>
 <translation>דערמאָנונג צייט</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="678"/>
 <source>Reminder done time</source>
 <translation>דערמאָנונג געטאן צייט</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="678"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="681"/>
 <source>Place name</source>
 <translation>אָרט נאָמען</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="681"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="684"/>
 <source>Content class</source>
 <translation>אינהאַלט קלאַס</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="685"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="688"/>
 <source>Application data</source>
 <translation>אַפּפּליקאַטיאָן דאַטן</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="584"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="587"/>
 <source>Attribute</source>
 <translation>אַטריביוט</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="584"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="587"/>
 <source>Value</source>
 <translation>ווערט</translation>
 </message>
@@ -1706,7 +1706,7 @@
 <translation type="unfinished">Import attachments</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.cpp" line="90"/>
+<location filename="../dialogs/joplinimportdialog.cpp" line="91"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
 <translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
 </message>
@@ -2025,17 +2025,17 @@
 </message>
 <message>
 <location filename="../widgets/logwidget.ui" line="135"/>
-<location filename="../widgets/logwidget.cpp" line="438"/>
+<location filename="../widgets/logwidget.cpp" line="416"/>
 <source>Clear log</source>
 <translation>קלאָר קלאָץ</translation>
 </message>
 <message>
-<location filename="../widgets/logwidget.cpp" line="436"/>
+<location filename="../widgets/logwidget.cpp" line="414"/>
 <source>Show options</source>
 <translation>ווייַזן אָפּציעס</translation>
 </message>
 <message>
-<location filename="../widgets/logwidget.cpp" line="436"/>
+<location filename="../widgets/logwidget.cpp" line="414"/>
 <source>Hide options</source>
 <translation>באַהאַלטן אָפּציעס</translation>
 </message>
@@ -2050,7 +2050,7 @@
 <message>
 <location filename="../mainwindow.ui" line="411"/>
 <location filename="../mainwindow.ui" line="912"/>
-<location filename="../mainwindow.cpp" line="825"/>
+<location filename="../mainwindow.cpp" line="819"/>
 <source>Navigation</source>
 <translation>נאַוויגאַציע</translation>
 </message>
@@ -2061,7 +2061,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="8192"/>
+<location filename="../mainwindow.cpp" line="8189"/>
 <source>Add a tag to the current note</source>
 <translation>לייג אַ קוויטל צו די קראַנט טאָן</translation>
 </message>
@@ -2177,7 +2177,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1448"/>
-<location filename="../mainwindow.cpp" line="9676"/>
+<location filename="../mainwindow.cpp" line="9674"/>
 <source>Select &amp;all notes</source>
 <translation>&amp;סעלעקטירן אַלע הערות</translation>
 </message>
@@ -2227,7 +2227,7 @@
 <translation>זוכן פֿאַר הערות אָדער שאַפֿן נייַע הערות דורך אַרייַן טעקסט און דריקן צוריקקומען</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8193"/>
+<location filename="../mainwindow.cpp" line="8190"/>
 <source>Add a tag to the selected notes</source>
 <translation>לייג אַ קוויטל צו די אויסגעקליבן הערות</translation>
 </message>
@@ -2318,7 +2318,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1161"/>
-<location filename="../mainwindow.cpp" line="753"/>
+<location filename="../mainwindow.cpp" line="747"/>
 <source>Workspaces</source>
 <translation>וואָרקספּאַסעס</translation>
 </message>
@@ -2616,7 +2616,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2244"/>
-<location filename="../mainwindow.cpp" line="10639"/>
+<location filename="../mainwindow.cpp" line="10637"/>
 <source>Remove current workspace</source>
 <translation>אַראָפּנעמען קראַנט וואָרקספּאַסע</translation>
 </message>
@@ -2684,7 +2684,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2365"/>
-<location filename="../mainwindow.cpp" line="9652"/>
+<location filename="../mainwindow.cpp" line="9650"/>
 <source>Open note in different window</source>
 <translation>עפֿן טאָן אין פאַרשידענע פֿענצטער</translation>
 </message>
@@ -2705,7 +2705,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2405"/>
-<location filename="../mainwindow.cpp" line="9660"/>
+<location filename="../mainwindow.cpp" line="9658"/>
 <source>Show note git versions</source>
 <translation>ווייַזן באַמערקונג גיט ווערסיעס</translation>
 </message>
@@ -2788,7 +2788,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2567"/>
-<location filename="../mainwindow.cpp" line="11595"/>
+<location filename="../mainwindow.cpp" line="11599"/>
 <source>Automatically detect</source>
 <translation>אויטאָמאַטיש דעטעקט</translation>
 </message>
@@ -3001,12 +3001,12 @@
 <translation>אַרייַנפיר הערות פון עווערנאָטע</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2899"/>
+<location filename="../mainwindow.cpp" line="2893"/>
 <source>Note was removed externally!</source>
 <translation>באַמערקונג איז אַוועקגענומען ויסווייניק!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2900"/>
+<location filename="../mainwindow.cpp" line="2894"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>די יעצטיגע צעטל איז אראפגענומען געווארן מחוץ דעם אפליקאציע!
@@ -3015,8 +3015,8 @@ Restore current note?</source>
 <message>
 <location filename="../mainwindow.cpp" line="5472"/>
 <location filename="../mainwindow.cpp" line="5495"/>
-<location filename="../mainwindow.cpp" line="6816"/>
-<location filename="../mainwindow.cpp" line="9742"/>
+<location filename="../mainwindow.cpp" line="6813"/>
+<location filename="../mainwindow.cpp" line="9740"/>
 <source>&amp;Cancel</source>
 <translation>&amp;באָטל מאַכן</translation>
 </message>
@@ -3028,47 +3028,47 @@ Restore current note?</source>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3146"/>
+<location filename="../mainwindow.cpp" line="3140"/>
 <source>new version %1 available</source>
 <translation>נייַע ווערסיע %1 בנימצא</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3260"/>
+<location filename="../mainwindow.cpp" line="3254"/>
 <source>Abort</source>
 <translation>אַבאָרט</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3260"/>
+<location filename="../mainwindow.cpp" line="3254"/>
 <source>Loading notes…</source>
 <translation>לאָודינג הערות…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3474"/>
+<location filename="../mainwindow.cpp" line="3468"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>אַוועקגענומען דופּליקאַט קאַנפליקטיד דאַטאַבייס: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3475"/>
+<location filename="../mainwindow.cpp" line="3469"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>קען נישט אַראָפּנעמען דופּליקאַט קאַנפליקטיד דאַטאַבייס: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3481"/>
+<location filename="../mainwindow.cpp" line="3475"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>אַוועקגענומען מערדזשד קאַנפליקטיד דאַטאַבייס: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3482"/>
+<location filename="../mainwindow.cpp" line="3476"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>קען נישט אַראָפּנעמען די צונויפגיסן קאַנפליקטיד דאַטאַבייס: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3497"/>
+<location filename="../mainwindow.cpp" line="3491"/>
 <source>Delete conflicted database copies</source>
 <translation>ויסמעקן קאַנפליקטיד דייטאַבייס קאפיעס</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3520"/>
+<location filename="../mainwindow.cpp" line="3514"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>אַוועקגענומען %n קאַנפליקטאַד דאַטאַבייס קאפיעס</numerusform>
@@ -3076,62 +3076,62 @@ Restore current note?</source>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3691"/>
+<location filename="../mainwindow.cpp" line="3685"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>סעלעקטירן דעם טעקע אין וואָס דיין הערות זענען סטאָרד</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3717"/>
+<location filename="../mainwindow.cpp" line="3711"/>
 <source>No folder was selected</source>
 <translation>קיין טעקע איז אויסגעקליבן</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3719"/>
+<location filename="../mainwindow.cpp" line="3713"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>איר מוזן סעלעקטירן דיין אָוועסקלאָוד הערות טעקע צו מאַכן דעם ווייכווארג אַרבעט!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3721"/>
+<location filename="../mainwindow.cpp" line="3715"/>
 <source>&amp;Retry</source>
 <translation>&amp;פרובירט</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3721"/>
+<location filename="../mainwindow.cpp" line="3715"/>
 <source>&amp;Exit</source>
 <translation>&amp;אַרויסגאַנג</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4028"/>
+<location filename="../mainwindow.cpp" line="4022"/>
 <source>Remove current note</source>
 <translation>אַראָפּנעמען קראַנט טאָן</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4029"/>
+<location filename="../mainwindow.cpp" line="4023"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>אַראָפּנעמען קראַנט באַמערקונג: &lt;strong&gt;%1 &lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4400"/>
+<location filename="../mainwindow.cpp" line="4394"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>ביטע אַרייַן די &lt;strong&gt; פּאַראָל &lt;/ strong&gt; פון דעם ענקריפּטיד טאָן.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4423"/>
+<location filename="../mainwindow.cpp" line="4417"/>
 <source>Note can't be decrypted!</source>
 <translation>באַמערקונג קענען ניט זיין דעקריפּטעד!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4424"/>
+<location filename="../mainwindow.cpp" line="4418"/>
 <source>It seems that your password is not valid!</source>
 <translation>עס מיינט אַז דיין פּאַראָל איז נישט גילטיק!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4611"/>
+<location filename="../mainwindow.cpp" line="4605"/>
 <source>Remove selected notes</source>
 <translation>אַראָפּנעמען אויסגעקליבן הערות</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4613"/>
+<location filename="../mainwindow.cpp" line="4607"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3145,12 +3145,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4686"/>
+<location filename="../mainwindow.cpp" line="4680"/>
 <source>Remove selected tags</source>
 <translation>אַראָפּנעמען אויסגעקליבן טאַגס</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4687"/>
+<location filename="../mainwindow.cpp" line="4681"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>באַזייַטיקן &lt;strong&gt;%n &lt;/strong&gt; אויסגעקליבן קוויטל? קיין הערות וועט ווערן אַוועקגענומען אין דעם פּראָצעס.</numerusform>
@@ -3158,13 +3158,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4739"/>
-<location filename="../mainwindow.cpp" line="8982"/>
+<location filename="../mainwindow.cpp" line="4733"/>
+<location filename="../mainwindow.cpp" line="8979"/>
 <source>Move selected notes</source>
 <translation>מאַך אויסגעקליבן הערות</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4740"/>
+<location filename="../mainwindow.cpp" line="4734"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>מאַך %n אויסגעקליבן טאָן צו &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3172,13 +3172,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4850"/>
-<location filename="../mainwindow.cpp" line="9102"/>
+<location filename="../mainwindow.cpp" line="4844"/>
+<location filename="../mainwindow.cpp" line="9099"/>
 <source>Copy selected notes</source>
 <translation>נאָכמאַכן אויסגעקליבן הערות</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4851"/>
+<location filename="../mainwindow.cpp" line="4845"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>נאָכמאַכן %n אויסגעקליבן טאָן צו &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3186,13 +3186,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4881"/>
-<location filename="../mainwindow.cpp" line="5030"/>
+<location filename="../mainwindow.cpp" line="4875"/>
+<location filename="../mainwindow.cpp" line="5024"/>
 <source>Done</source>
 <translation>געשען</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4882"/>
+<location filename="../mainwindow.cpp" line="4876"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n טאָן זענען קאַפּיד צו &lt;strong&gt;%2 &lt;/strong&gt;.
@@ -3202,12 +3202,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4895"/>
+<location filename="../mainwindow.cpp" line="4889"/>
 <source>Tag selected notes</source>
 <translation>קוויטל אויסגעקליבן הערות</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4896"/>
+<location filename="../mainwindow.cpp" line="4890"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>צייכן% n אויסגעקליבן טאָן מיט &lt;strong&gt;% 2 &lt;/strong&gt;?</numerusform>
@@ -3245,7 +3245,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>איר האָט פאַרקריפּלט די טאָדאָ ליס. &lt;br /&gt; ביטע טשעק דיין &lt;strong&gt; Todo &lt;/strong&gt; קאַנפיגיעריישאַן אין די סעטטינגס!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5723"/>
+<location filename="../mainwindow.cpp" line="5715"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>געפֿונען &lt;strong&gt;%n&lt;/ strong&gt; ייבערהאַנט פון קיין טערמין פון &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -3253,79 +3253,79 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6276"/>
+<location filename="../mainwindow.cpp" line="6268"/>
 <source>Note folders</source>
 <translation>באַמערקונג פאָלדערס</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6399"/>
+<location filename="../mainwindow.cpp" line="6391"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>באַמערקונג ווערסיעס זענען דערווייַל לאָודיד פון דיין OwnCloud סערווער</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6416"/>
+<location filename="../mainwindow.cpp" line="6408"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>טרוש הערות זענען דערווייַל לאָודיד פון דיין אָוווערקלאָוד סערווער</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6660"/>
+<location filename="../mainwindow.cpp" line="6657"/>
 <source>Inserted text as text attachment file</source>
 <translation type="unfinished">Inserted text as text attachment file</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6812"/>
+<location filename="../mainwindow.cpp" line="6809"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>דיין טאָן וועט זיין דעקריפּט און סטאָרד ווי קלאָר טעקסט ווידער. האַלטן אין מיינונג אַז די ונענקריפּטעד טאָן קען זיין סינסעד צו דיין סערווער און שפּירעוודיק טעקסט קען זיין יקספּאָוזד! &lt;br /&gt; צי איר ווילן צו דעקריפּט דיין טאָן?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6909"/>
+<location filename="../mainwindow.cpp" line="6906"/>
 <source>Markdown files</source>
 <translation>מאַרקדאַון טעקעס</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6923"/>
+<location filename="../mainwindow.cpp" line="6920"/>
 <source>Export attached files</source>
 <translation type="unfinished">Export attached files</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6924"/>
+<location filename="../mainwindow.cpp" line="6921"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6958"/>
+<location filename="../mainwindow.cpp" line="6955"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>בוקמאַרקעד טאָן שטעלע בייַ שפּעלטל %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6973"/>
+<location filename="../mainwindow.cpp" line="6970"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>דזשאַמפּט צו לייענ - צייכן שטעלע בייַ שפּעלטל %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7157"/>
-<location filename="../mainwindow.cpp" line="7227"/>
+<location filename="../mainwindow.cpp" line="7154"/>
+<location filename="../mainwindow.cpp" line="7224"/>
 <source>Inserting image</source>
 <translation>ינסערטינג בילד</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7162"/>
-<location filename="../mainwindow.cpp" line="7231"/>
+<location filename="../mainwindow.cpp" line="7159"/>
+<location filename="../mainwindow.cpp" line="7228"/>
 <source>Done inserting image</source>
 <translation>געטאן ינסערטינג בילד</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7164"/>
+<location filename="../mainwindow.cpp" line="7161"/>
 <source>Inserting attachment</source>
 <translation>ינסערטינג אַטאַטשמאַנט</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7169"/>
+<location filename="../mainwindow.cpp" line="7166"/>
 <source>Done inserting attachment</source>
 <translation>דורכגעקאָכט אַטאַטשמאַנט</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7181"/>
+<location filename="../mainwindow.cpp" line="7178"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>%n טאָן קאַפּיד צו %1
@@ -3335,7 +3335,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7191"/>
+<location filename="../mainwindow.cpp" line="7188"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>ניט געקענט נאָכמאַכן %n טאָן (מיסטאָמע שוין יגזיסטינג)</numerusform>
@@ -3343,7 +3343,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7201"/>
+<location filename="../mainwindow.cpp" line="7198"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>קאַפּירייט פון% n טאָן (קיין מאַרקדאָוון אָדער טעקסט טעקע אָדער ניט ליינעוודיק)</numerusform>
@@ -3351,199 +3351,199 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7214"/>
+<location filename="../mainwindow.cpp" line="7211"/>
 <source>Saving temporary image</source>
 <translation>שפּאָרן צייטווייליגע בילד</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6643"/>
-<location filename="../mainwindow.cpp" line="7233"/>
+<location filename="../mainwindow.cpp" line="6640"/>
+<location filename="../mainwindow.cpp" line="7230"/>
 <source>Temporary file can't be opened</source>
 <translation>צצייטווייליגע טעקע קענען ניט זיין געעפנט</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7288"/>
+<location filename="../mainwindow.cpp" line="7285"/>
 <source>Downloading %1</source>
 <translation>דאַונלאָודינג %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7460"/>
+<location filename="../mainwindow.cpp" line="7457"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>באַשטעטיק שריפֿט גרייס צו %1 פּט</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8242"/>
+<location filename="../mainwindow.cpp" line="8239"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>אַראָפּנעמען די קוויטל '%1' פון די קראַנט באַמערקונג</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8243"/>
+<location filename="../mainwindow.cpp" line="8240"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>אַראָפּנעמען קוויטל '%1' פון די אויסגעקליבן הערות</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8474"/>
+<location filename="../mainwindow.cpp" line="8471"/>
 <source>Rename tag</source>
 <translation>רענאַמע קוויטל</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8475"/>
+<location filename="../mainwindow.cpp" line="8472"/>
 <source>Assign color</source>
 <translation>באַשטימען קאָליר</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8476"/>
+<location filename="../mainwindow.cpp" line="8473"/>
 <source>Disable color</source>
 <translation>דיסאַבלע קאָליר</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8480"/>
+<location filename="../mainwindow.cpp" line="8477"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;מאַך טאַגס צו…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8691"/>
+<location filename="../mainwindow.cpp" line="8688"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>מאַך צו די וואָרצל</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9265"/>
+<location filename="../mainwindow.cpp" line="9262"/>
 <source>The scripting engine was reloaded</source>
 <translation>די סקריפּטינג מאָטאָר איז רילאָודיד</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9299"/>
+<location filename="../mainwindow.cpp" line="9296"/>
 <source>HTML files</source>
 <translation>HTML טעקעס</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9588"/>
+<location filename="../mainwindow.cpp" line="9586"/>
 <source>Jump to the note's subfolder</source>
 <translation>שפרינג צו די סובפאָלדער פון דער צעטל</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9645"/>
+<location filename="../mainwindow.cpp" line="9643"/>
 <source>Open note in tab</source>
 <translation>עפֿן טאָן אין קוויטל</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11165"/>
+<location filename="../mainwindow.cpp" line="11170"/>
 <source>A script update was found!</source>
 <translation>א שריפט דערהייַנטיקן איז געפונען!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11171"/>
+<location filename="../mainwindow.cpp" line="11176"/>
 <source>Script updates</source>
 <translation>שריפט דערהייַנטיקונגען</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11172"/>
+<location filename="../mainwindow.cpp" line="11177"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>אַפּדייץ צו דיין סקריפּס זענען געפֿונען אין די שריפט ריפּאַזאַטאָרי! צי איר ווילן צו דערהייַנטיקן זיי?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11187"/>
+<location filename="../mainwindow.cpp" line="11192"/>
 <source>No script updates were found</source>
 <translation>קיין שריפט דערהייַנטיקונגען זענען געפונען</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11832"/>
+<location filename="../mainwindow.cpp" line="11836"/>
 <source>Toggle note stickiness</source>
 <translation>טאַגאַל טאָן סטיקקינעסס</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11838"/>
+<location filename="../mainwindow.cpp" line="11842"/>
 <source>Close other note tabs</source>
 <translation>נאָענט אנדערע טאָן טאַבס</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9532"/>
-<location filename="../mainwindow.cpp" line="9726"/>
+<location filename="../mainwindow.cpp" line="9530"/>
+<location filename="../mainwindow.cpp" line="9724"/>
 <source>Rename note</source>
 <translation>רענאַמע טאָן</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9534"/>
+<location filename="../mainwindow.cpp" line="9532"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>אַלאַוז איר צו רענאַמע די פילענאַמע פון די צעטל</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9548"/>
+<location filename="../mainwindow.cpp" line="9546"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;מאַך הערות צו ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9549"/>
+<location filename="../mainwindow.cpp" line="9547"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;נאָכמאַכן הערות צו…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9592"/>
+<location filename="../mainwindow.cpp" line="9590"/>
 <source>Move notes to subfolder…</source>
 <translation>מאַך הערות צו סובפאָלדער ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9596"/>
+<location filename="../mainwindow.cpp" line="9594"/>
 <source>Copy notes to subfolder…</source>
 <translation>נאָכמאַכן הערות צו סובפאָלדער ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9604"/>
+<location filename="../mainwindow.cpp" line="9602"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;קוויטל אויסגעקליבן הערות מיט…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9628"/>
+<location filename="../mainwindow.cpp" line="9626"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;אַראָפּנעמען קוויטל פון אויסגעקליבן הערות</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9726"/>
+<location filename="../mainwindow.cpp" line="9724"/>
 <source>Name:</source>
 <translation>נאָמען:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9738"/>
+<location filename="../mainwindow.cpp" line="9736"/>
 <source>Note renaming not enabled!</source>
 <translation>באַמערקונג ריניימינג ניט ענייבאַלד!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10411"/>
+<location filename="../mainwindow.cpp" line="10409"/>
 <source>Create new workspace</source>
 <translation>שאַפֿן נייַ וואָרקספּאַסע</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10412"/>
-<location filename="../mainwindow.cpp" line="10681"/>
+<location filename="../mainwindow.cpp" line="10410"/>
+<location filename="../mainwindow.cpp" line="10679"/>
 <source>Workspace name:</source>
 <translation>וואָרקספּאַסע נאָמען:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10530"/>
+<location filename="../mainwindow.cpp" line="10528"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>פול</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10537"/>
+<location filename="../mainwindow.cpp" line="10535"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>מינימאַל</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10640"/>
+<location filename="../mainwindow.cpp" line="10638"/>
 <source>Remove the current workspace?</source>
 <translation>אַראָפּנעמען דעם קראַנט ווערקשיט?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10680"/>
+<location filename="../mainwindow.cpp" line="10678"/>
 <source>Rename workspace</source>
 <translation>רענאַמע וואָרקספּאַסע</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10838"/>
+<location filename="../mainwindow.cpp" line="10836"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3552,42 +3552,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11104"/>
+<location filename="../mainwindow.cpp" line="11109"/>
 <source>Disallow all note editing</source>
 <translation>דיסאַלו אַלע עדיטינג עדיטינג</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11337"/>
+<location filename="../mainwindow.cpp" line="11341"/>
 <source>Select text files to import</source>
 <translation>סעלעקטירן טעקסט טעקעס צו אַרייַנפיר</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11367"/>
+<location filename="../mainwindow.cpp" line="11371"/>
 <source>Importing: %1</source>
 <translation>ימפּאָרטינג: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11432"/>
+<location filename="../mainwindow.cpp" line="11436"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>באַמערקונג כעדינג '%1' איז קאַפּיד צו די קליפּבאָרד</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11526"/>
+<location filename="../mainwindow.cpp" line="11530"/>
 <source>Leave full-screen mode</source>
 <translation>לאָזן פול-פאַרשטעלן מאָדע</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11712"/>
+<location filename="../mainwindow.cpp" line="11716"/>
 <source>Custom editor width</source>
 <translation>מנהג רעדאַקטאָר ברייט</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11712"/>
+<location filename="../mainwindow.cpp" line="11716"/>
 <source>Characters:</source>
 <translation>אותיות:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8212"/>
+<location filename="../mainwindow.cpp" line="8209"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n טאָן אויסגעקליבן</numerusform>
@@ -3596,7 +3596,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2450"/>
-<location filename="../mainwindow.cpp" line="11105"/>
+<location filename="../mainwindow.cpp" line="11110"/>
 <source>Allow all note editing</source>
 <translation>לאָזן אַלע טאָן עדיטינג</translation>
 </message>
@@ -3606,12 +3606,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>&amp;טאָג</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4970"/>
+<location filename="../mainwindow.cpp" line="4964"/>
 <source>Remove tag from selected notes</source>
 <translation>אַראָפּנעמען קוויטל פון אויסגעקליבן הערות</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4971"/>
+<location filename="../mainwindow.cpp" line="4965"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>אַראָפּנעמען קוויטל &lt;strong&gt;%1 &lt;/strong&gt; פון %n סעלעקטעד טאָן?</numerusform>
@@ -3619,7 +3619,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5031"/>
+<location filename="../mainwindow.cpp" line="5025"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>קוויטל &lt;strong&gt;%1&lt;/strong&gt; איז אַוועקגענומען פון %n טאָן</numerusform>
@@ -3627,12 +3627,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5076"/>
+<location filename="../mainwindow.cpp" line="5070"/>
 <source>Current notes folder: </source>
 <translation>קראַנט נאָטיץ טעקע:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5079"/>
+<location filename="../mainwindow.cpp" line="5073"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>באַשטעטיק די הערות טעקע. קראַנט נאָטיץ טעקע:</translation>
 </message>
@@ -3677,70 +3677,70 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>איר האָט ניט אויסגעקליבן קיין טאָדאָ ליס. &lt;br /&gt; ביטע טשעק דיין &lt;strong&gt; Todo &lt;/strong&gt; קאַנפיגיעריישאַן אין די סעטטינגס!!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6258"/>
+<location filename="../mainwindow.cpp" line="6250"/>
 <source>Open QOwnNotes</source>
 <translation>עפֿן קוואָננאָטעס</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6086"/>
-<location filename="../mainwindow.cpp" line="6308"/>
-<location filename="../mainwindow.cpp" line="9528"/>
+<location filename="../mainwindow.cpp" line="6078"/>
+<location filename="../mainwindow.cpp" line="6300"/>
+<location filename="../mainwindow.cpp" line="9526"/>
 <source>New note</source>
 <translation>ניו טאָן</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6325"/>
+<location filename="../mainwindow.cpp" line="6317"/>
 <source>Recent notes</source>
 <translation>לעצטע הערות</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6341"/>
+<location filename="../mainwindow.cpp" line="6333"/>
 <source>Show todo lists</source>
 <translation>ווייַזן טאָדאָ רשימות</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6353"/>
+<location filename="../mainwindow.cpp" line="6345"/>
 <source>Recent tasks</source>
 <translation>לעצטע טאַסקס</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6374"/>
+<location filename="../mainwindow.cpp" line="6366"/>
 <source>Quit</source>
 <translation>פאַרלאָזן</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
-<location filename="../mainwindow.cpp" line="797"/>
-<location filename="../mainwindow.cpp" line="2162"/>
+<location filename="../mainwindow.cpp" line="791"/>
+<location filename="../mainwindow.cpp" line="2156"/>
 <source>Note folder</source>
 <translation>באַמערקונג טעקע</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8863"/>
-<location filename="../mainwindow.cpp" line="8930"/>
+<location filename="../mainwindow.cpp" line="8860"/>
+<location filename="../mainwindow.cpp" line="8927"/>
 <source>Copy to note folder</source>
 <translation>קאָפּיע צו טאָן טעקע</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8863"/>
-<location filename="../mainwindow.cpp" line="8931"/>
+<location filename="../mainwindow.cpp" line="8860"/>
+<location filename="../mainwindow.cpp" line="8928"/>
 <source>Move to note folder</source>
 <translation>מאַך צו טאָן טעקע</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8864"/>
-<location filename="../mainwindow.cpp" line="8932"/>
+<location filename="../mainwindow.cpp" line="8861"/>
+<location filename="../mainwindow.cpp" line="8929"/>
 <source>Copy to this subfolder</source>
 <translation>נאָכמאַכן צו דעם סובפאָלדער</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8865"/>
-<location filename="../mainwindow.cpp" line="8933"/>
+<location filename="../mainwindow.cpp" line="8862"/>
+<location filename="../mainwindow.cpp" line="8930"/>
 <source>Move to this subfolder</source>
 <translation>מאַך צו די סובפאָלדער</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8977"/>
+<location filename="../mainwindow.cpp" line="8974"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>מאַך %n אויסגעקליבן טאָן צו טאָן סובפאָלדער &lt;strong&gt;%2 &lt;/ strong&gt;?</numerusform>
@@ -3749,12 +3749,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5170"/>
-<location filename="../mainwindow.cpp" line="11351"/>
+<location filename="../mainwindow.cpp" line="11355"/>
 <source>Cancel</source>
 <translation>באָטל מאַכן</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9073"/>
+<location filename="../mainwindow.cpp" line="9070"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n טאָן איז אריבערגעפארן צו דער באַמערקונג סובפאָלדער "%2"
@@ -3763,7 +3763,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9097"/>
+<location filename="../mainwindow.cpp" line="9094"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>נאָכמאַכן %n סעלעקטעד טאָן צו טאָן סובפאָלדער &lt;strong&gt;%2 &lt;/strong&gt;?
@@ -3773,7 +3773,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9172"/>
+<location filename="../mainwindow.cpp" line="9169"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n טאָן איז קאַפּיד צו די באַמערקונג סובפאָלדער "%2"
@@ -3783,42 +3783,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9650"/>
+<location filename="../mainwindow.cpp" line="9648"/>
 <source>Open note in external editor</source>
 <translation>עפֿן טאָן אין פונדרויסנדיק רעדאַקטאָר</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9654"/>
+<location filename="../mainwindow.cpp" line="9652"/>
 <source>Show note in file manager</source>
 <translation>ווייַזן טאָן אין טעקע פאַרוואַלטער</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9739"/>
+<location filename="../mainwindow.cpp" line="9737"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>אויב איר ווילן צו רענאַמע דיין צעטל, איר דאַרפֿן צו געבן די אָפּציע צו לאָזן די נאָמען פֿאַר די נאָמען פון די נאָמען צו זיין אַנדערש פון דעם קעפל.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9929"/>
+<location filename="../mainwindow.cpp" line="9927"/>
 <source>Create a new folder</source>
 <translation>שאַפֿן אַ נייַע טעקע</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9930"/>
+<location filename="../mainwindow.cpp" line="9928"/>
 <source>Folder name:</source>
 <translation>טעקע נאָמען:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7598"/>
+<location filename="../mainwindow.cpp" line="7595"/>
 <source>show all untagged notes (%1)</source>
 <translation>ווייַזן אַלע אַנאַטאַגד הערות (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7600"/>
+<location filename="../mainwindow.cpp" line="7597"/>
 <source>Untagged notes</source>
 <translation>ונטאַגד הערות</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9300"/>
+<location filename="../mainwindow.cpp" line="9297"/>
 <source>Export current note as HTML file</source>
 <translation>אַרויספירן קראַנט באַמערקונג ווי HTML טעקע</translation>
 </message>
@@ -3828,7 +3828,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>בלאַט גרייס</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1171"/>
+<location filename="../mainwindow.cpp" line="1165"/>
 <source>quit toolbar</source>
 <translation>פאַרלאָזן מכשיר</translation>
 </message>
@@ -3848,38 +3848,38 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>&amp;אקעי</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9538"/>
+<location filename="../mainwindow.cpp" line="9536"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;אַראָפּנעמען הערות</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1098"/>
+<location filename="../mainwindow.cpp" line="1092"/>
 <source>Your tasks are being loaded from your server</source>
 <translation>דיין טאַסקס זענען לאָודיד פון דיין סערווירער</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2834"/>
+<location filename="../mainwindow.cpp" line="2828"/>
 <source>Current note was modified externally</source>
 <translation>די איצטיקע צעטל איז מאַדאַפייד פונדרויסנדיק</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2913"/>
-<location filename="../mainwindow.cpp" line="6024"/>
+<location filename="../mainwindow.cpp" line="2907"/>
+<location filename="../mainwindow.cpp" line="6016"/>
 <source>Stored current note to disk</source>
 <translation>סטאָרד קראַנט טאָן צו דיסק</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2931"/>
+<location filename="../mainwindow.cpp" line="2925"/>
 <source>Note was modified externally: %1</source>
 <translation>באַמערקונג איז געווען מאַדאַפייד פונדרויסנדיק: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2953"/>
+<location filename="../mainwindow.cpp" line="2947"/>
 <source>Notes directory was modified externally</source>
 <translation>נאָטעס וועגווייַזער איז מאַדאַפייד ויסווייניק</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3015"/>
+<location filename="../mainwindow.cpp" line="3009"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>סטאָרד %n טאָן צו דיסק
@@ -3888,52 +3888,52 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7564"/>
+<location filename="../mainwindow.cpp" line="7561"/>
 <source>show all notes (%1)</source>
 <translation>ווייַזן אַלע הערות (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7567"/>
+<location filename="../mainwindow.cpp" line="7564"/>
 <source>All notes</source>
 <translation>כל הערות</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8466"/>
+<location filename="../mainwindow.cpp" line="8463"/>
 <source>&amp;Add tag</source>
 <translation>&amp;לייג קוויטל</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8514"/>
+<location filename="../mainwindow.cpp" line="8511"/>
 <source>Tag could not be created!</source>
 <translation>קוויטל קען נישט זיין באשאפן!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8693"/>
+<location filename="../mainwindow.cpp" line="8690"/>
 <source>Move to this tag</source>
 <translation>מאַך צו דעם קוויטל</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8728"/>
+<location filename="../mainwindow.cpp" line="8725"/>
 <source>Tag this</source>
 <translation>פאַרבינדן דעם</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8753"/>
+<location filename="../mainwindow.cpp" line="8750"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>קען ניט רירן דעם קוויטל '%1' צו דעם קוויטל</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8802"/>
+<location filename="../mainwindow.cpp" line="8799"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>אריבערגעפארן פאַרבינדן '%1' צו נייַ קוויטל</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7725"/>
+<location filename="../mainwindow.cpp" line="7722"/>
 <source>show all notes tagged with '%1' (%2)</source>
 <translation>ווייַזן אַלע הערות טאַגד מיט '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8477"/>
+<location filename="../mainwindow.cpp" line="8474"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;אַראָפּנעמען טאַגס</translation>
 </message>
@@ -3943,153 +3943,153 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>ניט אויסגעקליבן טאָדאָ ליס!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="600"/>
+<location filename="../mainwindow.cpp" line="597"/>
 <source>Action not found!</source>
 <translation type="unfinished">Action not found!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="601"/>
+<location filename="../mainwindow.cpp" line="598"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
 <translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="766"/>
+<location filename="../mainwindow.cpp" line="760"/>
 <source>Subfolders</source>
 <translation>סובפאָלדערס</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="778"/>
+<location filename="../mainwindow.cpp" line="772"/>
 <source>Tags</source>
 <translation>טאַגס</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="787"/>
+<location filename="../mainwindow.cpp" line="781"/>
 <source>Note search</source>
 <translation>באַמערקונג זוכן</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="816"/>
+<location filename="../mainwindow.cpp" line="810"/>
 <source>Note list</source>
 <translation>באַמערקונג רשימה</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="841"/>
+<location filename="../mainwindow.cpp" line="835"/>
 <source>Note edit</source>
 <translation>באַמערקונג רעדאַגירן</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="853"/>
+<location filename="../mainwindow.cpp" line="847"/>
 <source>Note tags</source>
 <translation>באַמערקונג טאַגס</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="864"/>
+<location filename="../mainwindow.cpp" line="858"/>
 <source>Note preview</source>
 <translation>פאָרויסיקע ווייַזונג</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="872"/>
+<location filename="../mainwindow.cpp" line="866"/>
 <source>Log</source>
 <translation>קלאָץ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="881"/>
+<location filename="../mainwindow.cpp" line="875"/>
 <source>Scripting</source>
 <translation>סקריפּטינג</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1138"/>
+<location filename="../mainwindow.cpp" line="1132"/>
 <source>formatting toolbar</source>
 <translation>פאָרמאַטטינג מכשיר</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1147"/>
+<location filename="../mainwindow.cpp" line="1141"/>
 <source>inserting toolbar</source>
 <translation>ינסערטינג מכשיר</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1154"/>
+<location filename="../mainwindow.cpp" line="1148"/>
 <source>encryption toolbar</source>
 <translation>ענקריפּשאַן מכשיר</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1161"/>
+<location filename="../mainwindow.cpp" line="1155"/>
 <source>window toolbar</source>
 <translation>פֿענצטער מכשיר</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1166"/>
+<location filename="../mainwindow.cpp" line="1160"/>
 <source>custom action toolbar</source>
 <translation>מנהג קאַמף מכשיר</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1186"/>
+<location filename="../mainwindow.cpp" line="1180"/>
 <source>Workspace selector</source>
 <translation>מנהג קאַמף מכשיר</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1336"/>
+<location filename="../mainwindow.cpp" line="1330"/>
 <source>Show %1 panel</source>
 <translation>ווייַזן %1 טאַפליע</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1381"/>
+<location filename="../mainwindow.cpp" line="1375"/>
 <source>Show %1</source>
 <translation>ווייַזן %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1733"/>
+<location filename="../mainwindow.cpp" line="1727"/>
 <source>Leave distraction free mode</source>
 <translation>לאָזן דיסטראַקטיאָן מאָדע פריי</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1923"/>
+<location filename="../mainwindow.cpp" line="1917"/>
 <source>Switch to note folder</source>
 <translation>באַשטימען צו טאָן טעקע</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2513"/>
+<location filename="../mainwindow.cpp" line="2507"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>די מכשיר קען ניט זיין לאָודיד אָן נאָמען</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2857"/>
+<location filename="../mainwindow.cpp" line="2851"/>
 <source>Overwriting external changes of: %1</source>
 <translation>אָווועררייטינג פונדרויסנדיק ענדערונגען פון: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2878"/>
+<location filename="../mainwindow.cpp" line="2872"/>
 <source>Loading external changes from: %1</source>
 <translation>לאָודינג פונדרויסנדיק ענדערונגען פֿון: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2914"/>
-<location filename="../mainwindow.cpp" line="6025"/>
+<location filename="../mainwindow.cpp" line="2908"/>
+<location filename="../mainwindow.cpp" line="6017"/>
 <source>Current note could not be stored to disk</source>
 <translation>די קראַנט טאָן קען ניט זיין סטאָרד צו דיסק</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3103"/>
+<location filename="../mainwindow.cpp" line="3097"/>
 <source>Read-only</source>
 <translation>נאר צום ליינען</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3105"/>
+<location filename="../mainwindow.cpp" line="3099"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>באַמערקונג עדיטינג איז פאַרקריפּלט, גיט צו געבן</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3122"/>
+<location filename="../mainwindow.cpp" line="3116"/>
 <source>Line numbers</source>
 <translation>שורה נומערן</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3132"/>
+<location filename="../mainwindow.cpp" line="3126"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>דריקט דאָ צו זען וואָס איז פארענדערט און צו קענען צו דערהייַנטיקן צו די לעצטע ווערסיע</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3499"/>
+<location filename="../mainwindow.cpp" line="3493"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>פאָרזעצן מיט אָטאַמאַטיק דילישאַן פון &lt;strong&gt;%n &lt;/ strong&gt; קאָנפליקטעד דייטאַבייס קאפיעס וואָס קען פאַרשפּאַרן דיין אָווועקלאָוד סינק פּראָצעס?</numerusform>
@@ -4097,7 +4097,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4954"/>
+<location filename="../mainwindow.cpp" line="4948"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n טאָן איז געווען טאַגד מיט "%2"
@@ -4106,7 +4106,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5719"/>
+<location filename="../mainwindow.cpp" line="5711"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>געפונען &lt;strong&gt;%n &lt;/strong&gt; פּאַסירונג פון &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
@@ -4114,22 +4114,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6086"/>
+<location filename="../mainwindow.cpp" line="6078"/>
 <source>Note headline</source>
 <translation>באַמערקונג כעדינג</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7244"/>
+<location filename="../mainwindow.cpp" line="7241"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation type="unfinished">Paste &amp;HTML as markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7245"/>
+<location filename="../mainwindow.cpp" line="7242"/>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7300"/>
+<location filename="../mainwindow.cpp" line="7297"/>
 <source>Downloading images finished</source>
 <translation>דאַונלאָודינג בילדער פאַרטיק</translation>
 </message>
@@ -4137,38 +4137,38 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.cpp" line="5457"/>
 <location filename="../mainwindow.cpp" line="5472"/>
 <location filename="../mainwindow.cpp" line="5495"/>
-<location filename="../mainwindow.cpp" line="9742"/>
+<location filename="../mainwindow.cpp" line="9740"/>
 <source>Open &amp;settings</source>
 <translation>עפֿן &amp;סעטטינגס</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1730"/>
-<location filename="../mainwindow.cpp" line="11503"/>
+<location filename="../mainwindow.cpp" line="1724"/>
+<location filename="../mainwindow.cpp" line="11507"/>
 <source>leave</source>
 <translation>לאָזן</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6738"/>
+<location filename="../mainwindow.cpp" line="6735"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>ביטע אַרייַן דיין &lt;strong&gt; פּאַראָל &lt;/ strong&gt; צו ענקריפּט דעם צעטל. &lt;br /&gt; געדענקט אַז איר מוזט &lt;strong&gt; געדענקען &lt;/ strong&gt; דיין פּאַראָל צו לייענען די אינהאַלט פון דעם צעטל &lt;br /&gt; און אַז איר קענט &lt;strong&gt; בלויז &lt;/ strong&gt; טאָן דאָס אין QOwnNotes &lt;/strong&gt;!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6811"/>
+<location filename="../mainwindow.cpp" line="6808"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>דעקריפּט טאָן און קראָם עס ווי קלאָר טעקסט</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6816"/>
+<location filename="../mainwindow.cpp" line="6813"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;דעקריפּט</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6841"/>
+<location filename="../mainwindow.cpp" line="6838"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br /&gt; איר וועט קענען צו רעדאַגירן דיין ענקריפּטיד טאָן.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6910"/>
+<location filename="../mainwindow.cpp" line="6907"/>
 <source>Export current note as Markdown file</source>
 <translation>דעפֿיניציע טאָן און דאַטן עס ווי קלאָרד טעקסט</translation>
 </message>
@@ -4279,53 +4279,53 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="138"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="140"/>
 <source>show notes in folder '%1' (%2)</source>
 <translation type="unfinished">show notes in folder '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="173"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="175"/>
 <source>show notes from all note subfolders (%1)</source>
 <translation type="unfinished">show notes from all note subfolders (%1)</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="176"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="178"/>
 <source>All notes</source>
 <translation type="unfinished">All notes</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="196"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="198"/>
 <source>show notes in note root folder (%1)</source>
 <translation type="unfinished">show notes in note root folder (%1)</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="208"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="210"/>
 <source>Note folder</source>
 <translation type="unfinished">Note folder</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="290"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="294"/>
 <source>New subfolder</source>
 <translation type="unfinished">New subfolder</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="295"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="303"/>
 <source>Rename subfolder</source>
 <translation type="unfinished">Rename subfolder</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="296"/>
-<location filename="../widgets/notesubfoldertree.cpp" line="357"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="310"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="369"/>
 <source>Remove selected folders</source>
 <translation type="unfinished">Remove selected folders</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="300"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="318"/>
 <source>Show folder in file manager</source>
 <translation type="unfinished">Show folder in file manager</translation>
 </message>
 <message numerus="yes">
-<location filename="../widgets/notesubfoldertree.cpp" line="358"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="370"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation type="unfinished">
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
@@ -4333,7 +4333,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="369"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="381"/>
 <source>Removed note subfolder: %1</source>
 <translation type="unfinished">Removed note subfolder: %1</translation>
 </message>
@@ -4347,7 +4347,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="245"/>
-<location filename="../services/owncloudservice.cpp" line="539"/>
+<location filename="../services/owncloudservice.cpp" line="545"/>
 <source>not connected</source>
 <translation type="unfinished">not connected</translation>
 </message>
@@ -4366,11 +4366,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../services/owncloudservice.cpp" line="323"/>
 <location filename="../services/owncloudservice.cpp" line="333"/>
 <location filename="../services/owncloudservice.cpp" line="335"/>
-<location filename="../services/owncloudservice.cpp" line="435"/>
-<location filename="../services/owncloudservice.cpp" line="489"/>
-<location filename="../services/owncloudservice.cpp" line="504"/>
-<location filename="../services/owncloudservice.cpp" line="512"/>
-<location filename="../services/owncloudservice.cpp" line="530"/>
+<location filename="../services/owncloudservice.cpp" line="438"/>
+<location filename="../services/owncloudservice.cpp" line="495"/>
+<location filename="../services/owncloudservice.cpp" line="510"/>
+<location filename="../services/owncloudservice.cpp" line="518"/>
+<location filename="../services/owncloudservice.cpp" line="536"/>
 <source>ok</source>
 <translation type="unfinished">ok</translation>
 </message>
@@ -4385,116 +4385,116 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">not detected</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="438"/>
-<location filename="../services/owncloudservice.cpp" line="533"/>
+<location filename="../services/owncloudservice.cpp" line="441"/>
+<location filename="../services/owncloudservice.cpp" line="539"/>
 <source>not found</source>
 <translation type="unfinished">not found</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="475"/>
-<location filename="../services/owncloudservice.cpp" line="477"/>
+<location filename="../services/owncloudservice.cpp" line="481"/>
+<location filename="../services/owncloudservice.cpp" line="483"/>
 <source>unknown</source>
 <translation type="unfinished">unknown</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="486"/>
+<location filename="../services/owncloudservice.cpp" line="492"/>
 <source>version %1 too low</source>
 <translation type="unfinished">version %1 too low</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="507"/>
-<location filename="../services/owncloudservice.cpp" line="515"/>
+<location filename="../services/owncloudservice.cpp" line="513"/>
+<location filename="../services/owncloudservice.cpp" line="521"/>
 <source>not enabled</source>
 <translation type="unfinished">not enabled</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="589"/>
+<location filename="../services/owncloudservice.cpp" line="595"/>
 <source>API app version too low</source>
 <translation>אַפּי אַפּ ווערסיע צו נידעריק</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="590"/>
+<location filename="../services/owncloudservice.cpp" line="596"/>
 <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
 <translation>ביטע באַטראַכטן אַפּדייטינג דיין QOwnNotesAPI אַפּ אויף דיין סערווירער. דיין אַפּ ווערסיע% 1 איז צו נידעריק און קען פאַרשאַפן קאָפּדרייעניש אין QOwnNotes.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1208"/>
+<location filename="../services/owncloudservice.cpp" line="1214"/>
 <source>ownCloud server connection error</source>
 <translation>ownCloud סערווער קשר טעות</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1213"/>
+<location filename="../services/owncloudservice.cpp" line="1219"/>
 <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
 <translation>ownCloud סערווער טעות: &lt;strong&gt;%1 &lt;/ strong&gt; &lt;br /&gt; ביטע טשעק דיין OwnCloud קאַנפיגיעריישאַן.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1233"/>
+<location filename="../services/owncloudservice.cpp" line="1239"/>
 <source>You need to setup your ownCloud server!</source>
 <translation>איר דאַרפֿן צו סעטאַפּ דיין אָווועקלאָוד סערווער!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1245"/>
+<location filename="../services/owncloudservice.cpp" line="1251"/>
 <source>Open &amp;settings</source>
 <translation>עפענען &amp;סעטטינגס</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1245"/>
+<location filename="../services/owncloudservice.cpp" line="1251"/>
 <source>&amp;Cancel</source>
 <translation>&amp;באָטל מאַכן</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1304"/>
+<location filename="../services/owncloudservice.cpp" line="1310"/>
 <source>Done with loading note versions</source>
 <translation>געטאן מיט ווערסיעס פון לאָודינג טאָן</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1349"/>
+<location filename="../services/owncloudservice.cpp" line="1355"/>
 <source>No versions found</source>
 <translation>קיין ווערסיעס געפֿונען</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1350"/>
+<location filename="../services/owncloudservice.cpp" line="1356"/>
 <source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>עס זענען קיין ווערסיעס פֿאַר דעם טאָן, אָדער די באַמערקונג איז ניט געפֿונען אויף די סערווער.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1370"/>
+<location filename="../services/owncloudservice.cpp" line="1376"/>
 <source>Done with loading trashed notes</source>
 <translation>געטאן מיט לאָודינג טראַשט הערות</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1415"/>
+<location filename="../services/owncloudservice.cpp" line="1421"/>
 <source>No trashed notes</source>
 <translation>ניט קיין טראַשעד הערות</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1416"/>
+<location filename="../services/owncloudservice.cpp" line="1422"/>
 <source>No trashed notes were found on the server.</source>
 <translation>קיין טרוש נאָטעס זענען געפֿונען אויף די סערווער.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1438"/>
-<location filename="../services/owncloudservice.cpp" line="1465"/>
+<location filename="../services/owncloudservice.cpp" line="1444"/>
+<location filename="../services/owncloudservice.cpp" line="1471"/>
 <source>Error while loading todo lists!</source>
 <translation>טעות בעשאַס לאָודינג טאָדאָ רשימות!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1439"/>
+<location filename="../services/owncloudservice.cpp" line="1445"/>
 <source>Your CalDAV server didn't reply anything!</source>
 <translation>דיין קאַלדאַוו סערווירער האָט נישט געענטפערט עפּעס!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1466"/>
+<location filename="../services/owncloudservice.cpp" line="1472"/>
 <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>טעות אָנזאָג פון דיין CalDAV סערווער: &lt;strong&gt;% 1 &lt;/strong&gt;</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2154"/>
+<location filename="../services/owncloudservice.cpp" line="2169"/>
 <source>No bookmarks</source>
 <translation>ניט קיין בוקמאַרקס</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2155"/>
+<location filename="../services/owncloudservice.cpp" line="2170"/>
 <source>No bookmarks were found on the server.</source>
 <translation>קיין בוקמאַרקס זענען געפֿונען אויף די סערווער.</translation>
 </message>
@@ -4731,18 +4731,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2271"/>
-<location filename="../services/owncloudservice.cpp" line="2286"/>
+<location filename="../services/owncloudservice.cpp" line="2288"/>
+<location filename="../services/owncloudservice.cpp" line="2303"/>
 <source>Login flow failed</source>
 <translation type="unfinished">Login flow failed</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2272"/>
+<location filename="../services/owncloudservice.cpp" line="2289"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
 <translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2287"/>
+<location filename="../services/owncloudservice.cpp" line="2304"/>
 <source>Could not parse login url!</source>
 <translation type="unfinished">Could not parse login url!</translation>
 </message>
@@ -4752,33 +4752,33 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="168"/>
-<location filename="../utils/urlhandler.cpp" line="189"/>
+<location filename="../utils/urlhandler.cpp" line="167"/>
+<location filename="../utils/urlhandler.cpp" line="188"/>
 <source>Note was not found</source>
 <translation type="unfinished">Note was not found</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="169"/>
+<location filename="../utils/urlhandler.cpp" line="168"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
 <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="179"/>
+<location filename="../utils/urlhandler.cpp" line="178"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="183"/>
+<location filename="../utils/urlhandler.cpp" line="182"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="228"/>
+<location filename="../utils/urlhandler.cpp" line="227"/>
 <source>Failed to create note</source>
 <translation type="unfinished">Failed to create note</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="229"/>
+<location filename="../utils/urlhandler.cpp" line="228"/>
 <source>Note creation failed</source>
 <translation type="unfinished">Note creation failed</translation>
 </message>
@@ -4786,118 +4786,118 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="110"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="94"/>
 <source>Increased font size to %1 pt</source>
 <translation type="unfinished">Increased font size to %1 pt</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="113"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="97"/>
 <source>Decreased font size to %1 pt</source>
 <translation type="unfinished">Decreased font size to %1 pt</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="556"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="540"/>
 <source>An url was opened at the current cursor position</source>
 <translation type="unfinished">An url was opened at the current cursor position</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="732"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="716"/>
 <source>No equation was found in front of the cursor</source>
 <translation type="unfinished">No equation was found in front of the cursor</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="752"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="736"/>
 <source>Result for equation: %1 = %2</source>
 <translation type="unfinished">Result for equation: %1 = %2</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="957"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="918"/>
 <source>&amp;Link selected text</source>
 <translation type="unfinished">&amp;Link selected text</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="957"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="918"/>
 <source>Insert &amp;link</source>
 <translation type="unfinished">Insert &amp;link</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="964"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="925"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
 <translation type="unfinished">Block &amp;quote selected text</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="967"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="928"/>
 <source>Insert block &amp;quote</source>
 <translation type="unfinished">Insert block &amp;quote</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="980"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="941"/>
 <source>Copy code block</source>
 <translation type="unfinished">Copy code block</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1007"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="968"/>
 <source>Print</source>
 <translation type="unfinished">Print</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1015"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="976"/>
 <source>Print selected text</source>
 <translation type="unfinished">Print selected text</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1024"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="985"/>
 <source>Print selected text (preview)</source>
 <translation type="unfinished">Print selected text (preview)</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1039"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1000"/>
 <source>Export</source>
 <translation type="unfinished">Export</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1052"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1013"/>
 <source>Export selected text as PDF</source>
 <translation type="unfinished">Export selected text as PDF</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1061"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1022"/>
 <source>Export selected text as PDF (preview)</source>
 <translation type="unfinished">Export selected text as PDF (preview)</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1093"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1054"/>
 <source>Custom actions</source>
 <translation type="unfinished">Custom actions</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1183"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1144"/>
 <source>No suggestions for %1</source>
 <translation>קיין פֿירלייגן פֿאַר %1</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1198"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1159"/>
 <source>Ignore</source>
 <translation>איגנאָרירן</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1201"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1162"/>
 <source>Add to Dictionary</source>
 <translation>לייג צו ווערטערבוך</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1205"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1166"/>
 <source>Spelling</source>
 <translation type="unfinished">Spelling</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1238"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1196"/>
 <source>Note editing disabled</source>
 <translation>באַמערקונג עדיטינג פאַרקריפּלט</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1239"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1197"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
 <translation>באַמערקונג עדיטינג איז דערווייַל פאַרקריפּלט. צי איר ווילן צו לאָזן עס ווידער?</translation>
 </message>
@@ -5130,14 +5130,14 @@ Are the folder and the file writeable?</source>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="420"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="426"/>
 <source>Installs the script</source>
 <translation>ינסטאָלז די שריפט</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="419"/>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="482"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="425"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="488"/>
 <source>Install</source>
 <translation>ינסטאַלירן</translation>
 </message>
@@ -5187,94 +5187,94 @@ Are the folder and the file writeable?</source>
 <translation>כל סקריפּס זענען ופּדאַטעד.</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="389"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="395"/>
 <source>Authors</source>
 <translation>מחברים</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="389"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="395"/>
 <source>Author</source>
 <translation>מחבר</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="393"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="399"/>
 <source>Supported platforms</source>
 <translation>שטיצט פּלאַטפאָרמס</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="394"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="400"/>
 <source>Supported platform</source>
 <translation>שטיצט פּלאַטפאָרמע</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="398"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="404"/>
 <source>Open repository</source>
 <translation>עפֿן ריפּאַזאַטאָרי</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="408"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="414"/>
 <source>Update</source>
 <translation>דערהייַנטיקן</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="409"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="415"/>
 <source>Updates the script</source>
 <translation>דערהייַנטיקט די שריפט</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="411"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="417"/>
 <source>Reinstall</source>
 <translation>ריינסטאַל</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="412"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="418"/>
 <source>Reinstalls the script</source>
 <translation>ריינסטאַל די שריפט</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="479"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="485"/>
 <source>Platform not supported!</source>
 <translation>פּלאַטפאָרמע ניט געשטיצט!</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="480"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="486"/>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
 <translation>דיין פּלאַטפאָרמע איז נישט געשטיצט דורך דעם שריפט!
 צי איר ווילט צו ינסטאַלירן עס סייַ ווי סייַ?</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="482"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="488"/>
 <source>Cancel</source>
 <translation>באָטל מאַכן</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="489"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="495"/>
 <source>Update app</source>
 <translation>דערהייַנטיקן אַפּ</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="496"/>
 <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>ביטע טאָן ניט פאַרגעסן צו דערהייַנטיקן דיין ינסטאַלירונג פון QOwnNotes צו מאַכן דעם שריפט אַרבעט!</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="558"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="564"/>
 <source>Install successful</source>
 <translation>ינסטאַלירן געראָטן</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="559"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="565"/>
 <source>The script was successfully installed!</source>
 <translation>די שריפט איז געווען אינסטאַלירן הצלחה!</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="566"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="572"/>
 <source>Download failed</source>
 <translation>אראפקאפיע ניט אַנדערש</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="567"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="573"/>
 <source>The script could not be downloaded!</source>
 <translation>די שריפט קען ניט זיין דאַונלאָודיד!</translation>
 </message>
@@ -5295,7 +5295,7 @@ Do you want to install it anyway?</source>
 <context>
 <name>ScriptingService</name>
 <message>
-<location filename="../services/scriptingservice.cpp" line="268"/>
+<location filename="../services/scriptingservice.cpp" line="274"/>
 <source>file doesn't exist</source>
 <translation>טעקע עקזיסטירט נישט</translation>
 </message>
@@ -5581,7 +5581,7 @@ Do you want to install it anyway?</source>
 <translation>מאַרקדאַון כיילייטינג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5191"/>
+<location filename="../dialogs/settingsdialog.ui" line="5194"/>
 <source>Enable markdown highlighting</source>
 <translation>געבן אַ כיילייטינג מאַרקדאַון</translation>
 </message>
@@ -5741,8 +5741,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4066"/>
-<location filename="../dialogs/settingsdialog.ui" line="5433"/>
-<location filename="../dialogs/settingsdialog.ui" line="5985"/>
+<location filename="../dialogs/settingsdialog.ui" line="5436"/>
+<location filename="../dialogs/settingsdialog.ui" line="5988"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>איר קען לויפן אין סינק קאָפּדרייעניש מיט עלטערע ווערסיעס פון OwnCloud סינק ווען איר גיין ווייַט אונטער 10 סעק.
@@ -5810,7 +5810,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4353"/>
-<location filename="../dialogs/settingsdialog.ui" line="5512"/>
+<location filename="../dialogs/settingsdialog.ui" line="5515"/>
 <source>set external editor</source>
 <translation>שטעלן פונדרויסנדיק רעדאַקטאָר</translation>
 </message>
@@ -6425,17 +6425,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>געבן אַנדערלייינג רענדערינג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5219"/>
+<location filename="../dialogs/settingsdialog.ui" line="5222"/>
 <source>Fully highlight blockquotes</source>
 <translation>גאָר הויכפּונקט בלאָקקוואָטעס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5276"/>
+<location filename="../dialogs/settingsdialog.ui" line="5279"/>
 <source>Note-edit cursor width:</source>
 <translation>באַמערקונג-רעדאַגירן לויפֿער ברייט:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5238"/>
+<location filename="../dialogs/settingsdialog.ui" line="5241"/>
 <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
 <translation>געבן Vim מאָדע (עטלעכע קוויננאָטעס דורכוועג וועט נישט אַרבעטן)</translation>
 </message>
@@ -6655,475 +6655,480 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; איר זאל וועלן צו קוקן אין אַלע פאַראַנען &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt; צייט פאָרמאַץ &lt;/a&gt;. &lt;/ p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5252"/>
+<location filename="../dialogs/settingsdialog.ui" line="5191"/>
+<source>Note that disabling this will also disable the navigation panel!</source>
+<translation type="unfinished">Note that disabling this will also disable the navigation panel!</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="5255"/>
 <source>Disable cursor blinking</source>
 <translation>דיסייבאַל לויפֿער בלינקינג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5259"/>
+<location filename="../dialogs/settingsdialog.ui" line="5262"/>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>אויטאָמאַטיש באַזייַטיקן טריילינג ספּייסאַז אין די באַמערקונג טעקסט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5337"/>
+<location filename="../dialogs/settingsdialog.ui" line="5340"/>
 <source>Show line numbers</source>
 <translation type="unfinished">Show line numbers</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5347"/>
+<location filename="../dialogs/settingsdialog.ui" line="5350"/>
 <source>Tabs and Indents</source>
 <translation>טאַבס און ינדענץ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5355"/>
+<location filename="../dialogs/settingsdialog.ui" line="5358"/>
 <source>Use tab character instead of spaces</source>
 <translation>ניצן קוויטל כאַראַקטער אַנשטאָט פון ספּייסאַז</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5362"/>
+<location filename="../dialogs/settingsdialog.ui" line="5365"/>
 <source>Indent:</source>
 <translation>ינדענט:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5742"/>
-<location filename="../dialogs/settingsdialog.ui" line="5751"/>
+<location filename="../dialogs/settingsdialog.ui" line="5745"/>
+<location filename="../dialogs/settingsdialog.ui" line="5754"/>
 <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>רעגולער אויסדרוקן צעטל סאַבפאָולדערז צו איגנאָרירן, אפגעשיידט דורך ";"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5745"/>
+<location filename="../dialogs/settingsdialog.ui" line="5748"/>
 <source>Ignored subfolders</source>
 <translation>איגנאָרירט סובפאָלדערס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5761"/>
+<location filename="../dialogs/settingsdialog.ui" line="5764"/>
 <source>Reset ignored subfolders</source>
 <translation>באַשטעטיק איגנאָרירט סובפאָלדערס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5797"/>
+<location filename="../dialogs/settingsdialog.ui" line="5800"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
 <translation>ומקערן עפענען טאָן טאַבס ביי אַפּלאַקיישאַן סטאַרטאַפּ און ווען טאָן פאָלדערס זענען סוויטשט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5820"/>
+<location filename="../dialogs/settingsdialog.ui" line="5823"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
 <translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5889"/>
+<location filename="../dialogs/settingsdialog.ui" line="5892"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
 <translation>באַהאַלטן 'באַמערקונג ציילן' מיט טאַגס (ינקריסאַז פאָרשטעלונג)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5925"/>
+<location filename="../dialogs/settingsdialog.ui" line="5928"/>
 <source>Show the number of matches in each note</source>
 <translation>ווייַזן די נומער פון שוועבעלעך אין יעדער צעטל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6324"/>
+<location filename="../dialogs/settingsdialog.ui" line="6327"/>
 <source>Command snippets</source>
 <translation type="unfinished">Command snippets</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6333"/>
+<location filename="../dialogs/settingsdialog.ui" line="6336"/>
 <source>Tag name for commands notes</source>
 <translation type="unfinished">Tag name for commands notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6340"/>
+<location filename="../dialogs/settingsdialog.ui" line="6343"/>
 <source>Commands tag:</source>
 <translation type="unfinished">Commands tag:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6360"/>
+<location filename="../dialogs/settingsdialog.ui" line="6363"/>
 <source>Commands note name:</source>
 <translation type="unfinished">Commands note name:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6370"/>
+<location filename="../dialogs/settingsdialog.ui" line="6373"/>
 <source>Note name for adding new commands</source>
 <translation type="unfinished">Note name for adding new commands</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6410"/>
+<location filename="../dialogs/settingsdialog.ui" line="6413"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
 <translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6447"/>
+<location filename="../dialogs/settingsdialog.ui" line="6450"/>
 <source>QOwnNotes web application</source>
 <translation type="unfinished">QOwnNotes web application</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6537"/>
+<location filename="../dialogs/settingsdialog.ui" line="6540"/>
 <source>Server URL:</source>
 <translation type="unfinished">Server URL:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6594"/>
+<location filename="../dialogs/settingsdialog.ui" line="6597"/>
 <source>Show QR code</source>
 <translation type="unfinished">Show QR code</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6486"/>
+<location filename="../dialogs/settingsdialog.ui" line="6489"/>
 <source>Security token:</source>
 <translation type="unfinished">Security token:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6289"/>
+<location filename="../dialogs/settingsdialog.ui" line="6292"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
 <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6305"/>
+<location filename="../dialogs/settingsdialog.ui" line="6308"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
 <translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6347"/>
+<location filename="../dialogs/settingsdialog.ui" line="6350"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6544"/>
+<location filename="../dialogs/settingsdialog.ui" line="6547"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
 <translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6476"/>
+<location filename="../dialogs/settingsdialog.ui" line="6479"/>
 <source>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation type="unfinished">A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6554"/>
+<location filename="../dialogs/settingsdialog.ui" line="6557"/>
 <source>Copy security token to clipboard</source>
 <translation type="unfinished">Copy security token to clipboard</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6507"/>
+<location filename="../dialogs/settingsdialog.ui" line="6510"/>
 <source>Generate new security token</source>
 <translation type="unfinished">Generate new security token</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6568"/>
+<location filename="../dialogs/settingsdialog.ui" line="6571"/>
 <source>Reset the URL to default</source>
 <translation type="unfinished">Reset the URL to default</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6397"/>
+<location filename="../dialogs/settingsdialog.ui" line="6400"/>
 <source>QOwnNotes web application support</source>
 <translation type="unfinished">QOwnNotes web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6403"/>
+<location filename="../dialogs/settingsdialog.ui" line="6406"/>
 <source>Enable web application support</source>
 <translation type="unfinished">Enable web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5573"/>
+<location filename="../dialogs/settingsdialog.ui" line="5576"/>
 <source>Note list panel</source>
 <translation>באַמערקונג רשימה טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5579"/>
+<location filename="../dialogs/settingsdialog.ui" line="5582"/>
 <source>Show notes in the note list with preview</source>
 <translation>ווייַזן הערות אין די טאָן רשימה מיט פאָרויסיקע ווייַזונג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5652"/>
+<location filename="../dialogs/settingsdialog.ui" line="5655"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
 <translation>אַנשטאָט אַ באַמערקונג רשימה, נוצן אַ צעטל בוים מיט אַלע די סובפאָלדערס (אויב זיי זענען פארקערט אויף פֿאַר די טאָן טעקע)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5935"/>
+<location filename="../dialogs/settingsdialog.ui" line="5938"/>
 <source>Note folder panel</source>
 <translation>באַמערקונג טעקע טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5941"/>
+<location filename="../dialogs/settingsdialog.ui" line="5944"/>
 <source>Show note folders as buttons instead of in a select box</source>
 <translation>ווייַזן נאָטיץ פאָלדערס ווי קנעפּלעך אַנשטאָט פון אין אַ סעלעקט קעסטל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6047"/>
+<location filename="../dialogs/settingsdialog.ui" line="6050"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
 <translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6083"/>
+<location filename="../dialogs/settingsdialog.ui" line="6086"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
 <translation>פּאַנעלס קענען זיין פארקערט אויף און אַוועק אין די &lt;i&gt; ווינדאָו / פּאַנעלס &lt;/ i&gt; הויפּט מעניו, און איר קענט אויך קאַנפיגיער פאַרשידענע &lt;i&gt; וואָרקספּאַסעס &lt;/i&gt; פֿאַר פאַרשידענע טאַפליע קאַנפיגיעריישאַנז.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6160"/>
+<location filename="../dialogs/settingsdialog.ui" line="6163"/>
 <source>Bookmarks</source>
 <translation>בוקמאַרקס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6166"/>
-<location filename="../dialogs/settingsdialog.ui" line="6330"/>
+<location filename="../dialogs/settingsdialog.ui" line="6169"/>
+<location filename="../dialogs/settingsdialog.ui" line="6333"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
 <translation>נאָטעס מיט דעם קוויטל וועט זיין געוויינט פֿאַר פעטשינג לייענ-צייכן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6169"/>
+<location filename="../dialogs/settingsdialog.ui" line="6172"/>
 <source>Tag name for bookmarks notes</source>
 <translation>קוויטל נאָמען פֿאַר בוקמאַרקס הערות</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6176"/>
+<location filename="../dialogs/settingsdialog.ui" line="6179"/>
 <source>Bookmarks tag:</source>
 <translation>לייענ - צייכן:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6183"/>
+<location filename="../dialogs/settingsdialog.ui" line="6186"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>דורך פעליקייַט, דער בלעטערער פאַרלענגערונג וועט ווייַזן אַלע לינקס פון דעם קראַנט טאָן. איר קענט אויך ווייַזן ספּעציעלע לייענ-צייכן לינקס פון הערות מיט אַ זיכער קוויטל. פאר מער אינפֿאָרמאַציע וועגן דער סינטאַקס פון דער לייענ-צייכן גיט &lt;a href="%1"&gt; דאָ &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6196"/>
+<location filename="../dialogs/settingsdialog.ui" line="6199"/>
 <source>Bookmarks note name:</source>
 <translation>נאָמען פון בוקמאַרקס טאָן:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6203"/>
-<location filename="../dialogs/settingsdialog.ui" line="6367"/>
+<location filename="../dialogs/settingsdialog.ui" line="6206"/>
+<location filename="../dialogs/settingsdialog.ui" line="6370"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
 <translation>דער באַמערקונג וועט זיין געוויינט פֿאַר אַדינג נייַ בוקמאַרקס פון דעם בלעטערער געשפּרייט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6206"/>
+<location filename="../dialogs/settingsdialog.ui" line="6209"/>
 <source>Note name for adding new bookmarks</source>
 <translation>באַמערקונג נאָמען פֿאַר אַדינג נייַ בוקמאַרקס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6216"/>
+<location filename="../dialogs/settingsdialog.ui" line="6219"/>
 <source>Web socket server</source>
 <translation>וועב כאָלעל סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6222"/>
+<location filename="../dialogs/settingsdialog.ui" line="6225"/>
 <source>Socket server port:</source>
 <translation>כאָלעל סערווער פּאָרט:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6242"/>
+<location filename="../dialogs/settingsdialog.ui" line="6245"/>
 <source>Reset the socket server port</source>
 <translation type="unfinished">Reset the socket server port</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6256"/>
-<location filename="../dialogs/settingsdialog.ui" line="6493"/>
+<location filename="../dialogs/settingsdialog.ui" line="6259"/>
+<location filename="../dialogs/settingsdialog.ui" line="6496"/>
 <source>Show security token</source>
 <translation>ווייַזן זיכערהייט סימען</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6276"/>
+<location filename="../dialogs/settingsdialog.ui" line="6279"/>
 <source>Web socket server support</source>
 <translation>שטיצן פֿאַר וועב כאָלעל סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6282"/>
+<location filename="../dialogs/settingsdialog.ui" line="6285"/>
 <source>Enable socket server</source>
 <translation>געבן די כאָלעל סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5781"/>
+<location filename="../dialogs/settingsdialog.ui" line="5784"/>
 <source>Note edit panel</source>
 <translation>באַמערקונג רעדאַגירן טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5787"/>
+<location filename="../dialogs/settingsdialog.ui" line="5790"/>
 <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
 <translation>אויב דאָס איז פאַרקריפּלט, איר קענען שאַפֿן מער קאָמפּליצירט טאַפליע לייאַוץ, אָבער אַלע פּאַנאַלז וועט זיין ענייבאַלד אויב די גרייס פון דעם פֿענצטער איז פארענדערט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5790"/>
+<location filename="../dialogs/settingsdialog.ui" line="5793"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
 <translation>ניצן די קוויטל רעדאַגירן טאַפליע ווי פאַרפעסטיקט הויפט ווידזשיט צו זיין גרייס אויב די פֿענצטער אָדער אנדערע פּאַנאַלז זענען רעסיזעד</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5912"/>
+<location filename="../dialogs/settingsdialog.ui" line="5915"/>
 <source>Note search panel</source>
 <translation>באַמערקונג זוכן טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5918"/>
+<location filename="../dialogs/settingsdialog.ui" line="5921"/>
 <source>Disable auto-completion of previous searches</source>
 <translation>דיסאַבלע אַוטאָ קאַמפּלישאַן פון פרייַערדיק אָנפֿרעגן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5807"/>
+<location filename="../dialogs/settingsdialog.ui" line="5810"/>
 <source>Navigation panel</source>
 <translation>נאַוויגאַציע טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5813"/>
+<location filename="../dialogs/settingsdialog.ui" line="5816"/>
 <source>Hide navigation item search bar</source>
 <translation>באַהאַלטן זוך באַר אויף נאַוויגאַציע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5955"/>
+<location filename="../dialogs/settingsdialog.ui" line="5958"/>
 <source>Local trash settings</source>
 <translation>לאקאלע אָפּפאַל סעטטינגס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5989"/>
+<location filename="../dialogs/settingsdialog.ui" line="5992"/>
 <source>Remove trashed notes after:</source>
 <translation>נעם אָפּפאַל הערות נאָך:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5996"/>
+<location filename="../dialogs/settingsdialog.ui" line="5999"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
 <translation>טעג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6015"/>
+<location filename="../dialogs/settingsdialog.ui" line="6018"/>
 <source>Automatically remove trashed notes after a certain time</source>
 <translation>אויטאָמאַטיש אַראָפּנעמען טרוש נאָטעס נאָך אַ זיכער צייט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6041"/>
+<location filename="../dialogs/settingsdialog.ui" line="6044"/>
 <source>Local trash support</source>
 <translation>לאקאלע אָפּפאַל שטיצן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6064"/>
+<location filename="../dialogs/settingsdialog.ui" line="6067"/>
 <source>Layout selector</source>
 <translation>אויסלייג סעלעקטאָר</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6070"/>
+<location filename="../dialogs/settingsdialog.ui" line="6073"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
 <translation>איר קענען שטעלן אַ נייַע אויסלייג דאָ. געדענקט אַז איר קענט שטענדיק מאָדיפיצירן די שטעלע פון די פּאַנאַלז מיט די &lt;i&gt; ופשליסן פּאַנאַלז &lt;/ i&gt; קנעפּל.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5300"/>
+<location filename="../dialogs/settingsdialog.ui" line="5303"/>
 <source>Reset the cursor width</source>
 <translation>באַשטעטיק די לויפֿער ברייט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5447"/>
+<location filename="../dialogs/settingsdialog.ui" line="5450"/>
 <source>External git log command to show the git versions of a note</source>
 <translation>פונדרויסנדיק גיט באַפֿעלן צו ווייַזן גיט ווערסיעס פון אַ צעטל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5453"/>
+<location filename="../dialogs/settingsdialog.ui" line="5456"/>
 <source>Enter a command to be used to show a git log (like for example "gitk")</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>אַרייַן אַ באַפֿעל צו ווערן גענוצט צו ווייַזן אַ גיט לאָג (ווי למשל "גיטק")</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5473"/>
+<location filename="../dialogs/settingsdialog.ui" line="5476"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>אויב איר נוצן דעם באַשטעטיקן, איר וועט באַקומען אַ נייַע מעניו פּאָזיציע צו ווייַזן די גיט ווערסיעס אויב איר רעכט גיט אויף אַ צעטל.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5593"/>
+<location filename="../dialogs/settingsdialog.ui" line="5596"/>
 <source>Show all notes of a tag including the notes of their children-tags</source>
 <translation>ווייַזן אַלע הערות פון אַ קוויטל אַרייַנגערעכנט די הערות פון זייער קינדער טאַגס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5586"/>
+<location filename="../dialogs/settingsdialog.ui" line="5589"/>
 <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
 <translation>ווייַזן אַלע הערות אין אַ טעקע מיט זייער סובפאָלדערס (נאָר אַרבעט אויב סובפאָלדערס זענען אויסגעדרייט אויף)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5245"/>
+<location filename="../dialogs/settingsdialog.ui" line="5248"/>
 <source>Highlight the current line</source>
 <translation>הויכפּונקט די קראַנט שורה</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5540"/>
+<location filename="../dialogs/settingsdialog.ui" line="5543"/>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>דו זאלסט נישט פאַרגעסן צו געבן גיט שטיצן פֿאַר דיין באַמערקונג פאָלדערס און צו קאַנפיגיער דיין נאָמען און אימעיל אַדרעס פֿאַר דיין גיט קליענט, למשל מיט די וואָקזאַל קאַמאַנדז:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5830"/>
+<location filename="../dialogs/settingsdialog.ui" line="5833"/>
 <source>Tags panel</source>
 <translation>טאַגס טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5626"/>
-<location filename="../dialogs/settingsdialog.ui" line="5705"/>
-<location filename="../dialogs/settingsdialog.ui" line="5859"/>
+<location filename="../dialogs/settingsdialog.ui" line="5629"/>
+<location filename="../dialogs/settingsdialog.ui" line="5708"/>
+<location filename="../dialogs/settingsdialog.ui" line="5862"/>
 <source>Order</source>
 <translation>סדר</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5635"/>
-<location filename="../dialogs/settingsdialog.ui" line="5711"/>
-<location filename="../dialogs/settingsdialog.ui" line="5865"/>
+<location filename="../dialogs/settingsdialog.ui" line="5638"/>
+<location filename="../dialogs/settingsdialog.ui" line="5714"/>
+<location filename="../dialogs/settingsdialog.ui" line="5868"/>
 <source>Ascending</source>
 <translation>ארויף</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5642"/>
-<location filename="../dialogs/settingsdialog.ui" line="5718"/>
-<location filename="../dialogs/settingsdialog.ui" line="5872"/>
+<location filename="../dialogs/settingsdialog.ui" line="5645"/>
+<location filename="../dialogs/settingsdialog.ui" line="5721"/>
+<location filename="../dialogs/settingsdialog.ui" line="5875"/>
 <source>Descending</source>
 <translation>אראפנידערן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5600"/>
-<location filename="../dialogs/settingsdialog.ui" line="5675"/>
-<location filename="../dialogs/settingsdialog.ui" line="5836"/>
+<location filename="../dialogs/settingsdialog.ui" line="5603"/>
+<location filename="../dialogs/settingsdialog.ui" line="5678"/>
+<location filename="../dialogs/settingsdialog.ui" line="5839"/>
 <source>Sort</source>
 <translation>סאָרט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5286"/>
+<location filename="../dialogs/settingsdialog.ui" line="5289"/>
 <source>Only use editor width setting in distraction free mode</source>
 <translation>נוצן בלויז עדיטינג פֿאַר עדיטאָר ברייט אין דיסטראַקטיאָן מאָדע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5606"/>
-<location filename="../dialogs/settingsdialog.ui" line="5681"/>
-<location filename="../dialogs/settingsdialog.ui" line="5842"/>
+<location filename="../dialogs/settingsdialog.ui" line="5609"/>
+<location filename="../dialogs/settingsdialog.ui" line="5684"/>
+<location filename="../dialogs/settingsdialog.ui" line="5845"/>
 <source>Alphabetical</source>
 <translation>אלפאבעט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5849"/>
+<location filename="../dialogs/settingsdialog.ui" line="5852"/>
 <source>By last change / use</source>
 <translation>דורך לעצטע ענדערונג / נוצן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5882"/>
+<location filename="../dialogs/settingsdialog.ui" line="5885"/>
 <source>Hide 'Find or create tag' search</source>
 <translation>באַהאַלטן זוך "געפֿינען אָדער שאַפֿן קוויטל"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5662"/>
+<location filename="../dialogs/settingsdialog.ui" line="5665"/>
 <source>Note subfolders panel</source>
 <translation>באַמערקונג סובפאָלדערס טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5668"/>
+<location filename="../dialogs/settingsdialog.ui" line="5671"/>
 <source>Show with full path</source>
 <translation>ווייַזן מיט פול דרך</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5613"/>
-<location filename="../dialogs/settingsdialog.ui" line="5688"/>
+<location filename="../dialogs/settingsdialog.ui" line="5616"/>
+<location filename="../dialogs/settingsdialog.ui" line="5691"/>
 <source>By last change</source>
 <translation>דורך לעצטע ענדערונג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5698"/>
+<location filename="../dialogs/settingsdialog.ui" line="5701"/>
 <source>Show root folder name</source>
 <translation>ווייַזן וואָרצל טעקע נאָמען</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5728"/>
+<location filename="../dialogs/settingsdialog.ui" line="5731"/>
 <source>Hide 'Find or create note subfolder' search</source>
 <translation>באַהאַלטן זוך "געפֿינען אָדער שאַפֿן באַמערקונג סובפאָלדער"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5735"/>
+<location filename="../dialogs/settingsdialog.ui" line="5738"/>
 <source>Display note subfolders as full tree</source>
 <translation>אַרויסווייַזן טאָן סובפאָלדערס ווי פול בוים</translation>
 </message>
@@ -7133,39 +7138,39 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>זוכן שריפט ריפּאַזאַטאָרי</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5463"/>
+<location filename="../dialogs/settingsdialog.ui" line="5466"/>
 <source>You optionally can use "%notePath%" for the path of the note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>איר קענען אָפּטיאָנאַללי נוצן "% notePath%" פֿאַר דעם דרך פון דעם צעטל.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5486"/>
+<location filename="../dialogs/settingsdialog.ui" line="5489"/>
 <source>Git client</source>
 <translation>גיט קליענט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5502"/>
+<location filename="../dialogs/settingsdialog.ui" line="5505"/>
 <source>Path to git executable:</source>
 <translation>דורכפירן דרך צו גיט:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5492"/>
+<location filename="../dialogs/settingsdialog.ui" line="5495"/>
 <source>Path to git client, leave empty for default</source>
 <translation>דרך צו גיט קליענט, לאָזן ליידיק פֿאַר פעליקייַט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5411"/>
+<location filename="../dialogs/settingsdialog.ui" line="5414"/>
 <source>Commit interval</source>
 <translation>יבערגעבן ינטערוואַל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5417"/>
+<location filename="../dialogs/settingsdialog.ui" line="5420"/>
 <source>sec</source>
 <extracomment>seconds</extracomment>
 <translation>סעק</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5437"/>
+<location filename="../dialogs/settingsdialog.ui" line="5440"/>
 <source>git commit interval time [sec]</source>
 <translation>גיט יבערגאַנג צייט צייט [סעק]</translation>
 </message>
@@ -7360,22 +7365,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>אַרייַן דיין מנהג צייט פֿאָרמאַט, ווי "dd.MM.yyy hh: mm"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5232"/>
+<location filename="../dialogs/settingsdialog.ui" line="5235"/>
 <source>Editor options</source>
 <translation>עדיטאָר אָפּציעס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5293"/>
+<location filename="../dialogs/settingsdialog.ui" line="5296"/>
 <source>Enable automatic closing of brackets and markdown formatting characters</source>
 <translation>געבן אָטאַמאַטיק קלאָוזינג קלאָוזינג אותיות און מאַרקדאַון פֿאָרמאַטירונג אותיות</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5327"/>
+<location filename="../dialogs/settingsdialog.ui" line="5330"/>
 <source>You have to use the backspace key to remove the opening character</source>
 <translation>איר דאַרפֿן צו נוצן די באַקקספּאַסע שליסל צו באַזייַטיקן די עפן כאַראַקטער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5330"/>
+<location filename="../dialogs/settingsdialog.ui" line="5333"/>
 <source>Enable automatic removal of matching closing characters</source>
 <translation>געבן אָטאַמאַטיק באַזייַטיקונג פון ריכטן קלאָוזינג אותיות</translation>
 </message>
@@ -9064,155 +9069,155 @@ This cannot be undone!</source>
 <translation>&amp;באָטל מאַכן</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="244"/>
+<location filename="../dialogs/updatedialog.cpp" line="247"/>
 <source>Download error</source>
 <translation>אראפקאפיע טעות</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="245"/>
+<location filename="../dialogs/updatedialog.cpp" line="248"/>
 <source>Error while downloading:
 %1</source>
 <translation>טעות בעת דאַונלאָודינג:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="247"/>
+<location filename="../dialogs/updatedialog.cpp" line="250"/>
 <source>network error: %1</source>
 <translation>נעץ טעות: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="269"/>
-<location filename="../dialogs/updatedialog.cpp" line="290"/>
-<location filename="../dialogs/updatedialog.cpp" line="384"/>
-<location filename="../dialogs/updatedialog.cpp" line="461"/>
-<location filename="../dialogs/updatedialog.cpp" line="471"/>
+<location filename="../dialogs/updatedialog.cpp" line="272"/>
+<location filename="../dialogs/updatedialog.cpp" line="293"/>
+<location filename="../dialogs/updatedialog.cpp" line="387"/>
+<location filename="../dialogs/updatedialog.cpp" line="464"/>
+<location filename="../dialogs/updatedialog.cpp" line="474"/>
 <source>File error</source>
 <translation>טעקע טעות</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="270"/>
-<location filename="../dialogs/updatedialog.cpp" line="385"/>
+<location filename="../dialogs/updatedialog.cpp" line="273"/>
+<location filename="../dialogs/updatedialog.cpp" line="388"/>
 <source>Could not open temporary file:
 %1</source>
 <translation>קען נישט עפענען צייטווייליגע פייל:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="291"/>
+<location filename="../dialogs/updatedialog.cpp" line="294"/>
 <source>Could not store downloaded file:
 %1</source>
 <translation>קען נישט קראָם די דאַונלאָודיד טעקע:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="342"/>
+<location filename="../dialogs/updatedialog.cpp" line="345"/>
 <source>Do you want to update and restart QOwnNotes?</source>
 <translation>צי איר ווילן צו דערהייַנטיקן און ריסטאַרט QOwnNotes?</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="358"/>
-<location filename="../dialogs/updatedialog.cpp" line="520"/>
-<location filename="../dialogs/updatedialog.cpp" line="528"/>
-<location filename="../dialogs/updatedialog.cpp" line="537"/>
-<location filename="../dialogs/updatedialog.cpp" line="546"/>
-<location filename="../dialogs/updatedialog.cpp" line="556"/>
-<location filename="../dialogs/updatedialog.cpp" line="565"/>
+<location filename="../dialogs/updatedialog.cpp" line="361"/>
+<location filename="../dialogs/updatedialog.cpp" line="523"/>
+<location filename="../dialogs/updatedialog.cpp" line="531"/>
+<location filename="../dialogs/updatedialog.cpp" line="540"/>
+<location filename="../dialogs/updatedialog.cpp" line="549"/>
+<location filename="../dialogs/updatedialog.cpp" line="559"/>
+<location filename="../dialogs/updatedialog.cpp" line="568"/>
 <source>Error</source>
 <translation>טעות</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="359"/>
+<location filename="../dialogs/updatedialog.cpp" line="362"/>
 <source>Could not find updater file:
 %1</source>
 <translation>די אַפּדאַטער טעקע קען נישט געפֿינען:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="439"/>
-<location filename="../dialogs/updatedialog.cpp" line="451"/>
-<location filename="../dialogs/updatedialog.cpp" line="483"/>
+<location filename="../dialogs/updatedialog.cpp" line="442"/>
+<location filename="../dialogs/updatedialog.cpp" line="454"/>
+<location filename="../dialogs/updatedialog.cpp" line="486"/>
 <source>Permission error</source>
 <translation type="unfinished">Permission error</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="440"/>
+<location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
 <translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="452"/>
+<location filename="../dialogs/updatedialog.cpp" line="455"/>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="462"/>
+<location filename="../dialogs/updatedialog.cpp" line="465"/>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
 <translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="492"/>
+<location filename="../dialogs/updatedialog.cpp" line="495"/>
 <source>Restart application</source>
 <translation type="unfinished">Restart application</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="493"/>
+<location filename="../dialogs/updatedialog.cpp" line="496"/>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="495"/>
+<location filename="../dialogs/updatedialog.cpp" line="498"/>
 <source>Restart</source>
 <translation type="unfinished">Restart</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="495"/>
+<location filename="../dialogs/updatedialog.cpp" line="498"/>
 <source>Cancel</source>
 <translation type="unfinished">Cancel</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="521"/>
+<location filename="../dialogs/updatedialog.cpp" line="524"/>
 <source>Updater script '%1' doesn't exist!</source>
 <translation>ופּדאַטער שריפט '%1' עקזיסטירט נישט!</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="529"/>
+<location filename="../dialogs/updatedialog.cpp" line="532"/>
 <source>Updater unzip executable '%1' doesn't exist!</source>
 <translation>ופּדאַטשער אַנזיפּ עקסעקוטאַבלע '%1' עקזיסטירט נישט!</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="538"/>
-<location filename="../dialogs/updatedialog.cpp" line="547"/>
+<location filename="../dialogs/updatedialog.cpp" line="541"/>
+<location filename="../dialogs/updatedialog.cpp" line="550"/>
 <source>Could not copy updater script '%1' to '%2'!</source>
 <translation>קען נישט נאָכמאַכן די אַפּדייט שריפט '%1' צו '%2'!</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="557"/>
+<location filename="../dialogs/updatedialog.cpp" line="560"/>
 <source>Couldn't find updater script: %1</source>
 <translation>קען נישט געפֿינען אַפּדייט שריפט: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="566"/>
+<location filename="../dialogs/updatedialog.cpp" line="569"/>
 <source>Couldn't find unzip executable: %1</source>
 <translation>ניט געקענט צונויפפירן יגזעקיאַטיוו: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="341"/>
-<location filename="../dialogs/updatedialog.cpp" line="571"/>
+<location filename="../dialogs/updatedialog.cpp" line="344"/>
+<location filename="../dialogs/updatedialog.cpp" line="574"/>
 <source>Proceed with update</source>
 <translation>גיינ ווייַטער מיט דערהייַנטיקן</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="472"/>
+<location filename="../dialogs/updatedialog.cpp" line="475"/>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
 <translation type="unfinished">Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="484"/>
+<location filename="../dialogs/updatedialog.cpp" line="487"/>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
 <translation type="unfinished">The app file '%1' could not be made executable! You need to make it executable yourself.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="572"/>
+<location filename="../dialogs/updatedialog.cpp" line="575"/>
 <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
 <translation>די אראפקאפיע איז איצט פאַרטיק. צי איר ווילן צו דערהייַנטיקן און ריסטאַרט QOwnNotes?</translation>
 </message>
@@ -9521,17 +9526,17 @@ This cannot be undone!</source>
 <translation type="unfinished">Triggers a menu action after the application was started.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="559"/>
+<location filename="../main.cpp" line="562"/>
 <source>Single application mode is not supported on your system!</source>
 <translation>איין אַפּלאַקיישאַן מאָדע איז ניט געשטיצט אויף דיין סיסטעם!</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="573"/>
+<location filename="../main.cpp" line="576"/>
 <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
 <translation>אן אנדער בייַשפּיל פון QOwnNotes איז שוין סטאַרטעד! איר קענען קער אַוועק די איין בייַשפּיל מאָדע אין די סעטטינגס אָדער נוצן דעם פּאַראַמעטער - אַללאָוו-קייפל-ינסטאַנסיז.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="624"/>
+<location filename="../main.cpp" line="627"/>
 <source>A second instance of QOwnNotes was attempted to be started!</source>
 <translation>א צווייטע בייַשפּיל פון QOwnNotes איז געפרוווט צו זיין סטאַרטעד!</translation>
 </message>

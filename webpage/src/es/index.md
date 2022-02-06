@@ -11,7 +11,7 @@ features:
     title: Aduéñate de tus notas
     details: Todas las notas se almacena como archivos markdown de texto plano en tu ordenador, no hay «bloqueo de vendedor». Utilice servicios de sincronización como Nextcloud para sincronizar notas entre dispositivos.
   - 
-    title: Small footprint
+    title: Pequeña huella de pie
     details: Aplicación nativa, optimizada para la velocidad y que consume pocos recursos de memoria y procesador.
   - 
     title: Personalización
