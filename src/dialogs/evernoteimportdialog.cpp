@@ -244,8 +244,9 @@ QString EvernoteImportDialog::importImages(const Note &note, QString content,
         QString markdownCode = getMarkdownForMediaFileData(note, mediaFileData);
 
         if (!markdownCode.isEmpty()) {
-            // replace image tag with Markdown code
-            content.replace(imageTag, markdownCode);
+            // replace image tag with Markdown code (and a leading newline, since
+            // Evernote doesn't support inline images, and we like to add a spacer)
+            content.replace(imageTag, QStringLiteral("\n") + markdownCode);
         }
     }
 
