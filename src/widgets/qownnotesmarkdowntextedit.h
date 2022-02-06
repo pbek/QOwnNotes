@@ -81,6 +81,13 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
      */
     bool autoComplete(QStringList &resultList) const;
 
+    /**
+     * set encrypted mode.
+     * Encrypted mode causes the text edit to draw
+     * a red frame around the text edit
+     */
+    void setEncryptedMode(bool);
+
    protected:
     // we must not override _highlighter or Windows will create a
     // QOwnNotesMarkdownHighlighter and MarkdownHighlighter instance
@@ -93,6 +100,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
    private:
     MainWindow *mainWindow = nullptr;
     bool _isSpellCheckingDisabled = false;
+    QWidget * _encryptedOverlay = nullptr;
 
     /// @param in is true if zoom-in, false otherwise
     void onZoom(bool in);

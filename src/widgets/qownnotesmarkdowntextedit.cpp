@@ -24,9 +24,61 @@
 #include "libraries/qmarkdowntextedit/linenumberarea.h"
 #include "utils/urlhandler.h"
 
+/**
+ * Helper class that draws a red frame around text edit
+ * when in encrypted mode
+ */
+class EncryptedBorderOverlay : public QWidget
+{
+public:
+    EncryptedBorderOverlay(QWidget *parent)
+        : QWidget(parent)
+    {
+        Q_ASSERT(parent);
+        parent->installEventFilter(this);
+        setAttribute(Qt::WA_TransparentForMouseEvents);
+        setAttribute( Qt::WA_NoSystemBackground);
+        setFocusPolicy(Qt::NoFocus);
+
+        updateGeometry();
+        //hidden by default
+        setVisible(false);
+    }
+
+    void updateGeometry()
+    {
+        if (!parentWidget())
+            return;
+
+        setGeometry(parentWidget()->rect());
+        raise();
+    }
+
+private:
+    bool eventFilter(QObject *o, QEvent *e) override
+    {
+        if (isVisible() && (e->type() == QEvent::Resize || e->type() == QEvent::Move)) {
+            updateGeometry();
+        }
+
+        return QWidget::eventFilter(o, e);
+    }
+
+    void paintEvent(QPaintEvent *) override
+    {
+        QPainter p(this);
+        QPen pen(Qt::red);
+        pen.setWidth(6);
+        pen.setStyle(Qt::DashLine);
+        p.setPen(pen);
+        p.drawRect(rect());
+    }
+};
+
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
-    : QMarkdownTextEdit(parent, false) {
-    mainWindow = nullptr;
+    : QMarkdownTextEdit(parent, false)
+    , _encryptedOverlay(new EncryptedBorderOverlay(this)) {
+    mainWindow = Q_NULLPTR;
 
     _highlighter = nullptr;
     if (parent->objectName() != QStringLiteral("LogWidget")) {
@@ -683,6 +735,12 @@ bool QOwnNotesMarkdownTextEdit::autoComplete(QStringList &resultList) const {
     return true;
 }
 
+void QOwnNotesMarkdownTextEdit::setEncryptedMode(bool e)
+{
+    static_cast<EncryptedBorderOverlay*>(_encryptedOverlay)->updateGeometry();
+    _encryptedOverlay->setVisible(e);
+}
+
 /**
  * Tries to find an equation in the current line and solves it
  *
@@ -778,6 +836,9 @@ QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
 }
 
 void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
+    if (_encryptedOverlay->isVisible()) {
+        setEncryptedMode(false);
+    }
     // set a search delay of 250ms for text with more than 200k characters
     setSearchWidgetDebounceDelay(text.size() > 200000 ? 250 : 0);
 

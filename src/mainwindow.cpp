@@ -3895,7 +3895,7 @@ void MainWindow::updateNoteTextEditReadOnly() {
                               currentNote.fileWriteable() &&
                               Utils::Misc::isNoteEditingAllowed()));
 
-    if (ui->noteTextEdit->isVisible() && currentNote.hasEncryptedNoteText()) {
+    if (ui->noteTextEdit->isVisible() && currentNote.hasEncryptedNoteText() && currentNote.getDecryptedNoteText().isEmpty()) {
         ui->noteTextEdit->setReadOnly(true);
     }
 
@@ -6750,7 +6750,6 @@ void MainWindow::on_actionDecrypt_note_triggered() {
 
     if (currentNote.canDecryptNoteText()) {
         ui->noteTextEdit->setText(currentNote.fetchDecryptedNoteText());
-        ui->noteTextEdit->show();
         ui->noteTextEdit->setFocus();
         updateNoteTextEditReadOnly();
     }
@@ -6773,6 +6772,7 @@ void MainWindow::on_actionEdit_encrypted_note_triggered() {
         const auto text = currentNote.fetchDecryptedNoteText();
         currentNote.setDecryptedText(text);
         ui->noteTextEdit->setText(text);
+        ui->noteTextEdit->setEncryptedMode(true);
         ui->noteTextEdit->setFocus();
         _noteViewNeedsUpdate = true;
         updateNoteTextEditReadOnly();
@@ -11601,7 +11601,16 @@ void MainWindow::on_noteTextEdit_modificationChanged(bool arg1) {
     }
 
     ui->noteTextEdit->document()->setModified(false);
-    noteTextEditTextWasUpdated();
+
+    // Editing an encrypted note?
+    if (!currentNote.getDecryptedNoteText().isEmpty()) {
+        const auto text = ui->noteTextEdit->toPlainText();
+        if (currentNote.storeNewDecryptedText(text)) {
+            handleNoteTextChanged();
+        }
+    } else {
+        noteTextEditTextWasUpdated();
+    }
 }
 
 void MainWindow::on_actionEditorWidthCustom_triggered() {
@@ -11647,6 +11656,12 @@ void MainWindow::on_noteEditTabWidget_currentChanged(int index) {
 
     setCurrentNoteFromNoteId(noteId);
     widget->setLayout(ui->noteEditTabWidgetLayout);
+
+    if (!currentNote.getDecryptedNoteText().isEmpty()) {
+        ui->noteTextEdit->setEncryptedMode(true);
+    } else {
+        ui->noteTextEdit->setEncryptedMode(false);
+    }
 
     closeOrphanedTabs();
 }
