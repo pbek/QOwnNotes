@@ -240,16 +240,16 @@ QString EvernoteImportDialog::importImages(const Note &note, QString content,
         // get the base64 encoded image
         MediaFileData mediaFileData = mediaFileDataHash[objectId];
 
-        // get the markdown code for the image file data entry
+        // get the Markdown code for the image file data entry
         QString markdownCode = getMarkdownForMediaFileData(note, mediaFileData);
 
         if (!markdownCode.isEmpty()) {
-            // replace image tag with markdown code
+            // replace image tag with Markdown code
             content.replace(imageTag, markdownCode);
         }
     }
 
-    // get the image markdown code for missing images
+    // get the image Markdown code for missing images
     QHashIterator<QString, MediaFileData> hashIterator(mediaFileDataHash);
     while (hashIterator.hasNext()) {
         hashIterator.next();
@@ -260,7 +260,7 @@ QString EvernoteImportDialog::importImages(const Note &note, QString content,
 
         MediaFileData mediaFileData = hashIterator.value();
 
-        // get the markdown code for the image file data entry
+        // get the Markdown code for the image file data entry
         QString markdownCode = getMarkdownForMediaFileData(note, mediaFileData);
 
         content += QStringLiteral("\n") + markdownCode;
@@ -394,17 +394,17 @@ QString EvernoteImportDialog::importAttachments(const Note &note,
         // get the base64 encoded file
         MediaFileData mediaFileData = mediaFileDataHash[objectId];
 
-        // get the markdown code for the file data entry
+        // get the Markdown code for the file data entry
         QString markdownCode =
             getMarkdownForAttachmentFileData(note, mediaFileData);
 
         if (!markdownCode.isEmpty()) {
-            // replace media tag with markdown code
+            // replace media tag with Markdown code
             content.replace(mediaTag, markdownCode);
         }
     }
 
-    // get the file markdown code for missing attachments
+    // get the file's Markdown code for missing attachments
     QHashIterator<QString, MediaFileData> hashIterator(mediaFileDataHash);
     while (hashIterator.hasNext()) {
         hashIterator.next();
@@ -415,7 +415,7 @@ QString EvernoteImportDialog::importAttachments(const Note &note,
 
         MediaFileData mediaFileData = hashIterator.value();
 
-        // get the markdown code for the file data entry
+        // get the Markdown code for the file data entry
         QString markdownCode =
             getMarkdownForAttachmentFileData(note, mediaFileData);
 
@@ -553,7 +553,7 @@ void EvernoteImportDialog::tagNote(QXmlQuery &query, Note &note) {
 }
 
 /**
- * Generates the metadata markdown table for a note
+ * Generates the metadata Markdown table for a note
  */
 QString EvernoteImportDialog::generateMetaDataMarkdown(QXmlQuery query) {
     QString resultText;
@@ -760,7 +760,7 @@ void EvernoteImportDialog::on_importButton_clicked() {
 }
 
 /**
- * Returns the markdown code for an image file data entry
+ * Returns the Markdown code for an image file data entry
  *
  * @param mediaFileData
  * @return
@@ -774,7 +774,7 @@ QString EvernoteImportDialog::getMarkdownForMediaFileData(
 }
 
 /**
- * Returns the markdown code for an attachment file data entry
+ * Returns the Markdown code for an attachment file data entry
  *
  * @param mediaFileData
  * @return
@@ -798,7 +798,7 @@ QString EvernoteImportDialog::getMarkdownForAttachmentFileData(
     tempFile->write(QByteArray::fromBase64(data.toLatin1()));
 
     // store the temporary file in the media folder and return the
-    // markdown code
+    // Markdown code
     QString markdownCode = note.getInsertAttachmentMarkdown(tempFile, fileName);
 
     return markdownCode;
