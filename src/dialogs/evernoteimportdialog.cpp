@@ -459,7 +459,8 @@ void EvernoteImportDialog::importNotes(const QString &data) {
             // content seems to be html encoded
             query.evaluateTo(&content);
 
-            Utils::Misc::transformEvernoteImportText(content);
+            // unescape content
+            Utils::Misc::unescapeEvernoteImportText(content);
 
             if (ui->imageImportCheckBox->isChecked()) {
                 // import images
@@ -471,7 +472,9 @@ void EvernoteImportDialog::importNotes(const QString &data) {
                 content = importAttachments(note, std::move(content), query);
             }
 
-            Utils::Misc::cleanupEvernoteImportText(content);
+            // we need to do that after images and attachments are imported,
+            // otherwise they will not be detected in-line
+            Utils::Misc::transformEvernoteImportText(content, true);
 
 #ifdef Q_OS_WIN32
             // removing or replacing some characters that are asking for

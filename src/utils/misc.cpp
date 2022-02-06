@@ -2427,12 +2427,14 @@ void Utils::Misc::switchToLightMode() {
     switchToDarkOrLightMode(false);
 }
 
-void Utils::Misc::transformEvernoteImportText(QString &content, bool withCleanup) {
+void Utils::Misc::unescapeEvernoteImportText(QString &content) {
     content.replace(QStringLiteral("\\\""), QStringLiteral("\""));
 
     // decode HTML entities
     content = Utils::Misc::unescapeHtml(std::move(content));
+}
 
+void Utils::Misc::transformEvernoteImportText(QString &content, bool withCleanup) {
     // add a newline in front of lists
     //            content.replace(QRegularExpression("<ul.*?>"),
     //            "\n<ul>");
@@ -2508,6 +2510,9 @@ QString Utils::Misc::testEvernoteImportText(const QString& data) {
 
     // content seems to be html encoded
     query.evaluateTo(&content);
+
+    // unescape content
+    Utils::Misc::unescapeEvernoteImportText(content);
 
     Utils::Misc::transformEvernoteImportText(content, true);
 
