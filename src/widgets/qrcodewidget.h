@@ -19,7 +19,7 @@ class QRCodeWidget : public QWidget {
     Q_OBJECT
 
    public:
-    explicit QRCodeWidget(QWidget *parent = Q_NULLPTR,
+    explicit QRCodeWidget(QWidget *parent = nullptr,
                    Qt::WindowFlags f = Qt::WindowFlags());
     void setText(const QString &text);
 

@@ -26,7 +26,7 @@
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     : QMarkdownTextEdit(parent, false) {
-    mainWindow = Q_NULLPTR;
+    mainWindow = nullptr;
 
     _highlighter = nullptr;
     if (parent->objectName() != QStringLiteral("LogWidget")) {
@@ -824,7 +824,7 @@ void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData *source) {
     // if there is text in the clipboard do the normal pasting process
     if (source->hasText()) {
         QMarkdownTextEdit::insertFromMimeData(source);
-    } else if (mainWindow != Q_NULLPTR) {
+    } else if (mainWindow != nullptr) {
         // to more complex pasting if there was no text (and a main window
         // was set)
         mainWindow->handleInsertingFromMimeData(source);
@@ -1198,7 +1198,7 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
                                "want to allow it again?"),
                             QStringLiteral("readonly-mode-allow")) ==
                         QMessageBox::Yes) {
-                        if (mainWindow != Q_NULLPTR) {
+                        if (mainWindow != nullptr) {
                             mainWindow->allowNoteEditing();
                         }
                         // If the answer is overriden to Yes ("Don't ask again" with "Yes"),
@@ -1223,7 +1223,7 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
             } else {
                 // disable note editing if escape key was pressed
                 if (keyEvent->key() == Qt::Key_Escape &&
-                    mainWindow != Q_NULLPTR) {
+                    mainWindow != nullptr) {
                     mainWindow->disallowNoteEditing();
 
                     return true;

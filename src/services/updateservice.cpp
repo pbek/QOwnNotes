@@ -98,7 +98,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
 
 void UpdateService::onResult(QNetworkReply *reply) {
     // abort if reply was null
-    if (reply == Q_NULLPTR) {
+    if (reply == nullptr) {
         return;
     }
 
@@ -111,7 +111,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
 
         if (this->updateMode == UpdateService::Manual) {
             QMessageBox::warning(
-                Q_NULLPTR, tr("Update-checker error"),
+                nullptr, tr("Update-checker error"),
                 tr("Network reply error: %1").arg(reply->error()));
         }
 
@@ -126,7 +126,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
 
         if (this->updateMode == UpdateService::Manual) {
             QMessageBox::warning(
-                Q_NULLPTR, tr("Update-checker error"),
+                nullptr, tr("Update-checker error"),
                 tr("No data was received by the network request!"));
         }
 
@@ -147,7 +147,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
 
         if (this->updateMode == UpdateService::Manual) {
             QMessageBox::warning(
-                Q_NULLPTR, tr("Update-checker error"),
+                nullptr, tr("Update-checker error"),
                 tr("The data from the network request could not be "
                    "interpreted!"));
         }
@@ -217,7 +217,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
         if (showUpdateDialog) {
             // if there already is an update dialog and if it is open
             // then close and remove the old one
-            if (_updateDialog != Q_NULLPTR &&
+            if (_updateDialog != nullptr &&
                 UpdateDialog::isUpdateDialogOpen()) {
                 _updateDialog->close();
                 _updateDialog->deleteLater();
@@ -237,7 +237,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
 
             // open the update dialog
             _updateDialog =
-                new UpdateDialog(Q_NULLPTR, changesHtml, releaseUrl,
+                new UpdateDialog(nullptr, changesHtml, releaseUrl,
                                  releaseVersionString);
 
             // try to prevent stealing of focus on periodic checks
@@ -252,7 +252,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
 
         if (this->updateMode == UpdateService::Manual) {
             QMessageBox::information(
-                Q_NULLPTR, tr("No updates"),
+                nullptr, tr("No updates"),
                 tr("There are no updates available.<br /><strong>%1"
                    "</strong> is the latest version.")
                     .arg(QStringLiteral(VERSION)));

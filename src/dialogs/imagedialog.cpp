@@ -242,7 +242,7 @@ void ImageDialog::on_graphicsView_rubberBandChanged(QRect viewportRect,
         _rubberBand->show();
     } else {    // currently dragging
         // close rubber band from previous dragging
-        if (_rubberBand != Q_NULLPTR && _rubberBand->isVisible()) {
+        if (_rubberBand != nullptr && _rubberBand->isVisible()) {
             _rubberBand->close();
         }
 
@@ -293,7 +293,7 @@ void ImageDialog::on_cropButton_clicked() {
 }
 
 void ImageDialog::scrolledGraphicsViewContentsBy(int dx, int dy) {
-    if (_rubberBand == Q_NULLPTR || _rubberBand->isHidden()) {
+    if (_rubberBand == nullptr || _rubberBand->isHidden()) {
         return;
     }
 
@@ -302,7 +302,7 @@ void ImageDialog::scrolledGraphicsViewContentsBy(int dx, int dy) {
 }
 
 void ImageDialog::resizedGraphicsViewBy(int dw, int dh) {
-    if (_rubberBand == Q_NULLPTR || _rubberBand->isHidden()) {
+    if (_rubberBand == nullptr || _rubberBand->isHidden()) {
         return;
     }
 

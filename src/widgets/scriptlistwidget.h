@@ -18,7 +18,7 @@
 
 class ScriptListWidget : public QListWidget {
    public:
-    explicit ScriptListWidget(QWidget *parent = Q_NULLPTR);
+    explicit ScriptListWidget(QWidget *parent = nullptr);
 
    protected:
     void dropEvent(QDropEvent *e);

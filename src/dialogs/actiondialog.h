@@ -31,5 +31,5 @@ class ActionDialog : public MasterDialog {
     QMenuBar *_menuBar;
 
     void buildActionTreeForMenu(QMenu *menu,
-                                QTreeWidgetItem *parentItem = Q_NULLPTR);
+                                QTreeWidgetItem *parentItem = nullptr);
 };

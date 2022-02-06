@@ -547,7 +547,7 @@ bool NoteSubFolder::willFolderBeIgnored(const QString& folderName,
 #ifndef INTEGRATION_TESTS
         if (showWarning) {
             Utils::Gui::warning(
-                Q_NULLPTR, QObject::tr("Folder will be hidden!"),
+                nullptr, QObject::tr("Folder will be hidden!"),
                 QObject::tr("Folder with name <b>%1</b> can't be created, "
                             "because it's internally used by the "
                             "application!")
@@ -574,7 +574,7 @@ bool NoteSubFolder::willFolderBeIgnored(const QString& folderName,
 #ifndef INTEGRATION_TESTS
         if (showWarning) {
             Utils::Gui::warning(
-                Q_NULLPTR, QObject::tr("Folder will be hidden!"),
+                nullptr, QObject::tr("Folder will be hidden!"),
                 QObject::tr(
                     "Folder with name <b>%1</b> can't be created, "
                     "because it's on the list of ignored subfolders! "

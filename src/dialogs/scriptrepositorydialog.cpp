@@ -450,7 +450,7 @@ QJsonObject ScriptRepositoryDialog::getCurrentInfoJsonObject() {
 QString ScriptRepositoryDialog::getCurrentInfoJsonString() {
     QTreeWidgetItem *item = ui->scriptTreeWidget->currentItem();
 
-    if (item == Q_NULLPTR) {
+    if (item == nullptr) {
         return QString();
     }
 

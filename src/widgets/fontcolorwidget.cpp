@@ -283,7 +283,7 @@ void FontColorWidget::addTextTreeWidgetItem(const QString& text, int index) {
 void FontColorWidget::updateSchemeEditFrame() {
     QTreeWidgetItem* item = ui->textTreeWidget->currentItem();
 
-    if (item == Q_NULLPTR) {
+    if (item == nullptr) {
         // select a current item if none was selected
         ui->textTreeWidget->setCurrentItem(ui->textTreeWidget->topLevelItem(0));
         return;
@@ -405,11 +405,11 @@ QString FontColorWidget::textSettingsKey(const QString& key,
  * @return
  */
 int FontColorWidget::textSettingsIndex(QTreeWidgetItem* item) {
-    if (item == Q_NULLPTR) {
+    if (item == nullptr) {
         item = ui->textTreeWidget->currentItem();
     }
 
-    return item == Q_NULLPTR ? -1000 : item->data(0, Qt::UserRole).toInt();
+    return item == nullptr ? -1000 : item->data(0, Qt::UserRole).toInt();
 }
 
 /**
@@ -505,11 +505,11 @@ void FontColorWidget::on_textTreeWidget_currentItemChanged(
  * @param item
  */
 void FontColorWidget::updateTextItem(QTreeWidgetItem* item) {
-    if (item == Q_NULLPTR) {
+    if (item == nullptr) {
         item = ui->textTreeWidget->currentItem();
     }
 
-    if (item == Q_NULLPTR) {
+    if (item == nullptr) {
         return;
     }
 

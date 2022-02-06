@@ -92,9 +92,9 @@ class FontColorWidget : public QFrame {
                         QString schemaKey = QString());
 
     QString textSettingsKey(const QString &key,
-                            QTreeWidgetItem *item = Q_NULLPTR);
+                            QTreeWidgetItem *item = nullptr);
 
-    void updateTextItem(QTreeWidgetItem *item = Q_NULLPTR);
+    void updateTextItem(QTreeWidgetItem *item = nullptr);
 
     void updateForegroundColorCheckBox(bool checked, bool store = false);
 
@@ -102,7 +102,7 @@ class FontColorWidget : public QFrame {
 
     void updateFontCheckBox(bool checked, bool store = false);
 
-    int textSettingsIndex(QTreeWidgetItem *item = Q_NULLPTR);
+    int textSettingsIndex(QTreeWidgetItem *item = nullptr);
 
     void updateTextItems(int index);
 

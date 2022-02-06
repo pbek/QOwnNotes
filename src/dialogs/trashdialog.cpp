@@ -161,7 +161,7 @@ void TrashDialog::on_trashListWidget_currentRowChanged(int currentRow) {
 }
 
 void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
-    if (ui->trashListWidget->currentItem() != Q_NULLPTR) {
+    if (ui->trashListWidget->currentItem() != nullptr) {
         int actionRole = button->property("ActionRole").toInt();
 
         QString name = ui->trashListWidget->currentItem()->text();

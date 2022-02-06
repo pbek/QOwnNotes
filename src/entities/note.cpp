@@ -3449,7 +3449,7 @@ bool Note::handleNoteMoving(const Note &oldNote) {
     const QString newUrl = getNoteURL(_name);
 
     if (Utils::Gui::questionNoSkipOverride(
-            Q_NULLPTR, QObject::tr("Note file path changed"),
+            nullptr, QObject::tr("Note file path changed"),
             QObject::tr("A change of the note path was detected. Would you "
                         "like to replace all occurrences of "
                         "<strong>%1</strong> links with "

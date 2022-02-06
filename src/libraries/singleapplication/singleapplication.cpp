@@ -134,7 +134,7 @@ SingleApplication::SingleApplication( int &argc, char *argv[], bool allowSeconda
     delete d;
 
     // Call user function if application will be aborted
-    if( instanceAbortedFunction != Q_NULLPTR ) {
+    if( instanceAbortedFunction != nullptr ) {
         instanceAbortedFunction();
     }
 

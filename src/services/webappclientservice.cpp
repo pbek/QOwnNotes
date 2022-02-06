@@ -130,7 +130,7 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
     } else if (command == "insertFile") {
 #ifndef INTEGRATION_TESTS
         MainWindow *mainWindow = MainWindow::instance();
-        if (mainWindow == Q_NULLPTR) {
+        if (mainWindow == nullptr) {
             return;
         }
 

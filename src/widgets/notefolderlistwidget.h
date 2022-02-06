@@ -18,7 +18,7 @@
 
 class NoteFolderListWidget : public QListWidget {
    public:
-    explicit NoteFolderListWidget(QWidget *parent = Q_NULLPTR);
+    explicit NoteFolderListWidget(QWidget *parent = nullptr);
 
    protected:
     void dropEvent(QDropEvent *e);

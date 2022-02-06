@@ -165,7 +165,7 @@ bool Utils::Gui::userDataInTreeWidgetExists(QTreeWidget *treeWidget,
                                             const QVariant &userData,
                                             int column) {
     return getTreeWidgetItemWithUserData(treeWidget, userData, column) !=
-           Q_NULLPTR;
+           nullptr;
 }
 
 /**
@@ -189,7 +189,7 @@ QTreeWidgetItem *Utils::Gui::getTreeWidgetItemWithUserData(
         }
     }
 
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 QListWidgetItem *Utils::Gui::getListWidgetItemWithUserData(
@@ -204,7 +204,7 @@ QListWidgetItem *Utils::Gui::getListWidgetItemWithUserData(
         }
     }
 
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 /**
@@ -1127,7 +1127,7 @@ QIcon Utils::Gui::tagIcon()
 }
 
 void Utils::Gui::handleTreeWidgetItemTagColor(QTreeWidgetItem *item, const Tag &tag) {
-    if (item == Q_NULLPTR) {
+    if (item == nullptr) {
         qWarning() << "Unexpected null item in handleTreeWidgetItemTagColor";
         return;
     }

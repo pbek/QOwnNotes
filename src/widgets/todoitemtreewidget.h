@@ -8,7 +8,7 @@
 class TodoItemTreeWidget : public QTreeWidget {
     Q_OBJECT
    public:
-    explicit TodoItemTreeWidget(QWidget *parent = Q_NULLPTR);
+    explicit TodoItemTreeWidget(QWidget *parent = nullptr);
    protected:
     void dropEvent(QDropEvent *e) override;
 
