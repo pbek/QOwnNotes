@@ -606,25 +606,6 @@
               </widget>
              </item>
              <item>
-              <widget class="QOwnNotesMarkdownTextEdit" name="encryptedNoteTextEdit">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="contextMenuPolicy">
-                <enum>Qt::CustomContextMenu</enum>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QPlainTextEdit {
-	border: 3px dashed #aa0000;
-}
-</string>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QFrame" name="noteTextEditSearchFrame">
                <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
@@ -2728,7 +2709,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>navigationWidget</tabstop>
   <tabstop>noteOperationsButton</tabstop>
   <tabstop>noteTextEdit</tabstop>
-  <tabstop>encryptedNoteTextEdit</tabstop>
   <tabstop>newNoteTagButton</tabstop>
   <tabstop>newNoteTagLineEdit</tabstop>
   <tabstop>scriptingScrollArea</tabstop>

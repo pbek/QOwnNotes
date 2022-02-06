@@ -335,8 +335,6 @@ class MainWindow : public QMainWindow {
 
     void on_actionEdit_encrypted_note_triggered();
 
-    void on_encryptedNoteTextEdit_textChanged();
-
     void on_action_Open_note_in_external_editor_triggered();
 
     void on_action_Export_note_as_markdown_triggered();
@@ -640,8 +638,6 @@ class MainWindow : public QMainWindow {
     void on_actionManage_dictionaries_triggered();
 
     void on_noteTextEdit_modificationChanged(bool arg1);
-
-    void on_encryptedNoteTextEdit_modificationChanged(bool arg1);
 
     void on_actionEditorWidthCustom_triggered();
 
