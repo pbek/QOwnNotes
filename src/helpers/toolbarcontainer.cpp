@@ -50,22 +50,22 @@ QToolBar *ToolbarContainer::create(QMainWindow *w) const {
 
 bool ToolbarContainer::toolbarFound() {
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow == Q_NULLPTR) {
+    if (mainWindow == nullptr) {
         return false;
     }
 
     auto *toolbar = mainWindow->findChild<QToolBar *>(name);
-    return toolbar != Q_NULLPTR;
+    return toolbar != nullptr;
 }
 
 void ToolbarContainer::updateToolbar() {
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow == Q_NULLPTR) {
+    if (mainWindow == nullptr) {
         return;
     }
 
     auto *toolbar = mainWindow->findChild<QToolBar *>(name);
-    if (toolbar == Q_NULLPTR) {
+    if (toolbar == nullptr) {
         return;
     }
 
@@ -93,7 +93,7 @@ void ToolbarContainer::updateToolbar() {
 
                 qDebug() << __func__ << " - 'widgetAction': " << widgetAction;
 
-                if (widgetAction == Q_NULLPTR) {
+                if (widgetAction == nullptr) {
                     widgetAction = new QWidgetAction(mainWindow);
                     widgetAction->setObjectName(
                         QStringLiteral("actionWorkspaceComboBox"));
@@ -112,7 +112,7 @@ void ToolbarContainer::updateToolbar() {
                     }
                 }
 
-                if (action != Q_NULLPTR) {
+                if (action != nullptr) {
                     toolbar->addAction(action);
                 } else {
                     qWarning() << QObject::tr("Unknown action %1").arg(item);

@@ -237,7 +237,7 @@ void ScriptingService::reloadScriptComponents() {
 #ifndef INTEGRATION_TESTS
     // do some things in the main window (like clearing the custom actions)
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         mainWindow->preReloadScriptingEngine();
     }
 #endif
@@ -1163,7 +1163,7 @@ void ScriptingService::noteTextEditWrite(const QString &text) {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         mainWindow->writeToNoteTextEdit(text);
     }
 #else
@@ -1182,7 +1182,7 @@ QString ScriptingService::noteTextEditSelectedText() {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    return mainWindow != Q_NULLPTR ? mainWindow->selectedNoteTextEditText()
+    return mainWindow != nullptr ? mainWindow->selectedNoteTextEditText()
                                    : QString();
 #else
     return QString();
@@ -1198,7 +1198,7 @@ void ScriptingService::noteTextEditSelectAll() {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         mainWindow->activeNoteTextEdit()->selectAll();
     }
 #endif
@@ -1213,7 +1213,7 @@ void ScriptingService::noteTextEditSelectCurrentLine() {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
         c.movePosition(QTextCursor::StartOfBlock);
@@ -1232,7 +1232,7 @@ void ScriptingService::noteTextEditSelectCurrentWord() {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
         c.select(QTextCursor::WordUnderCursor);
@@ -1253,7 +1253,7 @@ void ScriptingService::noteTextEditSetSelection(int start, int end) {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
 
@@ -1283,7 +1283,7 @@ void ScriptingService::noteTextEditSetCursorPosition(int position) {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         position = std::min<int>(position, textEdit->toPlainText().count());
         QTextCursor c = textEdit->textCursor();
@@ -1311,7 +1311,7 @@ int ScriptingService::noteTextEditCursorPosition() {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
 
@@ -1331,7 +1331,7 @@ int ScriptingService::noteTextEditSelectionStart() {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         return textEdit->textCursor().selectionStart();
     }
@@ -1349,7 +1349,7 @@ int ScriptingService::noteTextEditSelectionEnd() {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         return textEdit->textCursor().selectionEnd();
     }
@@ -1372,7 +1372,7 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters) {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    return mainWindow != Q_NULLPTR
+    return mainWindow != nullptr
                ? mainWindow->activeNoteTextEdit()->currentWord(withPreviousCharacters)
                : QString();
 #else
@@ -1392,7 +1392,7 @@ void ScriptingService::tagCurrentNote(const QString &tagName) {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         mainWindow->linkTagNameToCurrentNote(tagName);
     }
 #else
@@ -1412,7 +1412,7 @@ void ScriptingService::log(QString text) {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         emit mainWindow->log(LogWidget::ScriptingLogType, std::move(text));
     }
 #else
@@ -1508,7 +1508,7 @@ void ScriptingService::regenerateNotePreview() const {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         MetricsService::instance()->sendVisitIfEnabled(
             QStringLiteral("scripting/") % QString(__func__));
 
@@ -1544,7 +1544,7 @@ void ScriptingService::registerCustomAction(const QString &identifier,
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         MetricsService::instance()->sendVisitIfEnabled(
             QStringLiteral("scripting/") % QString(__func__));
 
@@ -1575,7 +1575,7 @@ void ScriptingService::registerLabel(const QString &identifier,
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         MetricsService::instance()->sendVisitIfEnabled(
             QStringLiteral("scripting/") % QString(__func__));
 
@@ -1598,7 +1598,7 @@ void ScriptingService::setLabelText(const QString &identifier,
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         MetricsService::instance()->sendVisitIfEnabled(
             QStringLiteral("scripting/") % QString(__func__));
 
@@ -1619,7 +1619,7 @@ void ScriptingService::createNote(QString text) {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         MetricsService::instance()->sendVisitIfEnabled(
             QStringLiteral("scripting/") % QString(__func__));
 
@@ -1819,7 +1819,7 @@ void ScriptingService::setCurrentNote(NoteApi *note) {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         mainWindow->setCurrentNoteFromNoteId(note->getId());
     }
 #else
@@ -1840,7 +1840,7 @@ void ScriptingService::informationMessageBox(const QString &text,
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         QMessageBox::information(mainWindow, title, text);
     }
 #else
@@ -1869,7 +1869,7 @@ int ScriptingService::questionMessageBox(const QString &text,
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         return QMessageBox::question(
             mainWindow, title, text, QMessageBox::StandardButtons(buttons),
             QMessageBox::StandardButton(defaultButton));
@@ -1900,7 +1900,7 @@ QString ScriptingService::getOpenFileName(const QString &caption,
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         return QFileDialog::getOpenFileName(mainWindow, caption, dir, filter);
     }
 #else
@@ -1928,7 +1928,7 @@ QString ScriptingService::getSaveFileName(const QString &caption,
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         return QFileDialog::getSaveFileName(mainWindow, caption, dir, filter);
     }
 #else
@@ -1989,7 +1989,7 @@ QStringList ScriptingService::selectedNotesPaths() {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         Q_FOREACH (Note note, mainWindow->selectedNotes()) {
             selectedNotePaths
                 << QDir::toNativeSeparators(note.fullNoteFilePath());
@@ -2016,7 +2016,7 @@ QList<int> ScriptingService::selectedNotesIds() const {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         Q_FOREACH (Note note, mainWindow->selectedNotes()) {
             selectedNotesIds << note.getId();
         }
@@ -2059,7 +2059,7 @@ QString ScriptingService::inputDialogGetItem(const QString &title,
         QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
-    return QInputDialog::getItem(Q_NULLPTR, title, label, items, current,
+    return QInputDialog::getItem(nullptr, title, label, items, current,
                                  editable);
 #else
     Q_UNUSED(title)
@@ -2086,7 +2086,7 @@ QString ScriptingService::inputDialogGetText(const QString &title,
         QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
-    return QInputDialog::getText(Q_NULLPTR, title, label, QLineEdit::Normal,
+    return QInputDialog::getText(nullptr, title, label, QLineEdit::Normal,
                                  text);
 #else
     Q_UNUSED(title)
@@ -2165,7 +2165,7 @@ bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow == Q_NULLPTR) {
+    if (mainWindow == nullptr) {
         return false;
     }
 
@@ -2309,14 +2309,14 @@ void ScriptingService::triggerMenuAction(const QString &objectName,
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow == Q_NULLPTR) {
+    if (mainWindow == nullptr) {
         return;
     }
 
     QAction *action = mainWindow->findAction(objectName);
 
     // return if action wasn't found
-    if (action == Q_NULLPTR) {
+    if (action == nullptr) {
         return;
     }
 

@@ -19,9 +19,9 @@ class Label : public QLabel {
     Q_OBJECT
 
    public:
-    explicit Label(QWidget *parent = Q_NULLPTR,
+    explicit Label(QWidget *parent = nullptr,
                    Qt::WindowFlags f = Qt::WindowFlags());
-    explicit Label(const QString &text, QWidget *parent = Q_NULLPTR,
+    explicit Label(const QString &text, QWidget *parent = nullptr,
                    Qt::WindowFlags f = Qt::WindowFlags());
 
    public Q_SLOTS:

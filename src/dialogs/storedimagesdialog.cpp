@@ -165,7 +165,7 @@ void StoredImagesDialog::loadCurrentFileDetails() {
  * @return
  */
 QString StoredImagesDialog::getFilePath(QTreeWidgetItem *item) {
-    if (item == Q_NULLPTR) {
+    if (item == nullptr) {
         return QString();
     }
 
@@ -231,7 +231,7 @@ bool StoredImagesDialog::eventFilter(QObject *obj, QEvent *event) {
 void StoredImagesDialog::on_insertButton_clicked() {
     MainWindow *mainWindow = MainWindow::instance();
 
-    if (mainWindow == Q_NULLPTR) {
+    if (mainWindow == nullptr) {
         return;
     }
 
@@ -291,7 +291,7 @@ void StoredImagesDialog::openCurrentNote() {
 
     MainWindow *mainWindow = MainWindow::instance();
 
-    if (mainWindow == Q_NULLPTR) {
+    if (mainWindow == nullptr) {
         Q_UNUSED(item)
         return;
     }
@@ -372,7 +372,7 @@ void StoredImagesDialog::on_fileTreeWidget_itemChanged(
     }
 
     if (Utils::Gui::questionNoSkipOverride(
-        Q_NULLPTR, QObject::tr("File name changed"),
+        nullptr, QObject::tr("File name changed"),
         QObject::tr("%n note(s) are using this image. Would you also "
                     "like to rename those images in the note(s)?",
                     "", affectedNotesCount),
@@ -397,7 +397,7 @@ void StoredImagesDialog::on_fileTreeWidget_itemChanged(
     refreshAndJumpToFileName(newFileName);
     MainWindow *mainWindow = MainWindow::instance();
 
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         // update the current note in case image paths were updated in it
         mainWindow->reloadCurrentNoteByNoteId(true);
     }

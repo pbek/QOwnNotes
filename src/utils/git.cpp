@@ -65,7 +65,7 @@ void Utils::Git::commitCurrentNoteFolder() {
  */
 bool Utils::Git::executeCommand(const QString& command, const QStringList& arguments,
                                 QProcess* process, bool withErrorDialog) {
-    if (process == Q_NULLPTR) {
+    if (process == nullptr) {
         process = new QProcess();
     }
 
@@ -76,7 +76,7 @@ bool Utils::Git::executeCommand(const QString& command, const QStringList& argum
 
         if (withErrorDialog) {
             Utils::Gui::warning(
-                Q_NULLPTR, QObject::tr("Command failed!"),
+                nullptr, QObject::tr("Command failed!"),
                 QObject::tr("The command <code>%1</code> with arguments <code>%2</code> failed!")
                     .arg(command, arguments.join(QStringLiteral(", "))),
                 "command-failed");

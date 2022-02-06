@@ -564,7 +564,7 @@ void Utils::Misc::waitMsecs(int msecs) {
 QString Utils::Misc::portableDataPath() {
     QString path = QString();
 
-    if (qApp != Q_NULLPTR) {
+    if (qApp != nullptr) {
         // for AppImages we best take out the path directly from the first
         // argument of the executable arguments, because the applicationDirPath
         // will be some temporary path
@@ -837,7 +837,7 @@ QList<QObject *> Utils::Misc::getParents(QObject *object) {
     QList<QObject *> list;
     QObject *parent = object->parent();
 
-    if (parent != Q_NULLPTR) {
+    if (parent != nullptr) {
         list = getParents(parent);
         list << parent;
     }

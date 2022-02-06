@@ -67,7 +67,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
 
     // if there was no size set yet and we already have a main window we'll
     // mimic that size
-    if (mainWindow != Q_NULLPTR) {
+    if (mainWindow != nullptr) {
         resize(mainWindow->width(), mainWindow->height());
     } else {
         // we must not use resize(1, 1) because XFCE really resizes the window
@@ -182,9 +182,9 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
 #endif
 
     // disable the shortcut page if there is no main window yet
-    if (mainWindow == Q_NULLPTR) {
+    if (mainWindow == nullptr) {
         QTreeWidgetItem *item = findSettingsTreeWidgetItemByPage(ShortcutPage);
-        if (item != Q_NULLPTR) {
+        if (item != nullptr) {
             item->setDisabled(true);
         }
     }
@@ -1664,7 +1664,7 @@ void SettingsDialog::readPanelSettings() {
 void SettingsDialog::loadShortcutSettings() {
     MainWindow *mainWindow = MainWindow::instance();
 
-    if (mainWindow == Q_NULLPTR) {
+    if (mainWindow == nullptr) {
         return;
     }
 
@@ -1806,7 +1806,7 @@ void SettingsDialog::loadShortcutSettings() {
 void SettingsDialog::keySequenceEvent(const QString &objectName) {
     QKeySequenceWidget *keySequenceWidget = findKeySequenceWidget(objectName);
 
-    if (keySequenceWidget == Q_NULLPTR) {
+    if (keySequenceWidget == nullptr) {
         return;
     }
 
@@ -1892,7 +1892,7 @@ QKeySequenceWidget *SettingsDialog::findKeySequenceWidget(
         }
     }
 
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 /**
@@ -3155,7 +3155,7 @@ void SettingsDialog::on_scriptListWidget_currentItemChanged(
 void SettingsDialog::reloadCurrentScriptPage() {
     QListWidgetItem *item = ui->scriptListWidget->currentItem();
 
-    if (item == Q_NULLPTR) {
+    if (item == nullptr) {
         return;
     }
 
@@ -3328,7 +3328,7 @@ void SettingsDialog::on_addCustomNoteFileExtensionButton_clicked() {
 
     QListWidgetItem *item = addCustomNoteFileExtension(fileExtension);
 
-    if (item != Q_NULLPTR) {
+    if (item != nullptr) {
         ui->defaultNoteFileExtensionListWidget->setCurrentItem(item);
     }
 }
@@ -3342,7 +3342,7 @@ QListWidgetItem *SettingsDialog::addCustomNoteFileExtension(
 
     if (ui->defaultNoteFileExtensionListWidget->findItems(
             fileExtension, Qt::MatchExactly).count() > 0) {
-        return Q_NULLPTR;
+        return nullptr;
     }
 
     auto *item = new QListWidgetItem(fileExtension);
@@ -3525,7 +3525,7 @@ void SettingsDialog::on_settingsTreeWidget_currentItemChanged(
 
 void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
     QTreeWidgetItem *item = findSettingsTreeWidgetItemByPage(index);
-    if (item != Q_NULLPTR) {
+    if (item != nullptr) {
         const QSignalBlocker blocker(ui->settingsTreeWidget);
         Q_UNUSED(blocker)
 
@@ -3543,7 +3543,7 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
 
     // turn off the tasks page if no ownCloud settings are available
     //    QTreeWidgetItem *todoItem =
-    //    findSettingsTreeWidgetItemByPage(TodoPage); if (todoItem != Q_NULLPTR)
+    //    findSettingsTreeWidgetItemByPage(TodoPage); if (todoItem != nullptr)
     //    {
     //        if (OwnCloudService::hasOwnCloudSettings()) {
     //            todoItem->setDisabled(false);
@@ -3578,7 +3578,7 @@ QTreeWidgetItem *SettingsDialog::findSettingsTreeWidgetItemByPage(int page) {
         }
     }
 
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 /**
@@ -3694,7 +3694,7 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
     ui->toolbarEditor->apply();
 
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow == Q_NULLPTR) {
+    if (mainWindow == nullptr) {
         return;
     }
 
@@ -3875,7 +3875,7 @@ void SettingsDialog::addToSearchIndexList(QWidget *widget,
 int SettingsDialog::findSettingsPageIndexOfWidget(QWidget *widget) {
     QWidget *parent = qobject_cast<QWidget *>(widget->parent());
 
-    if (parent == Q_NULLPTR) {
+    if (parent == nullptr) {
         return -1;
     }
 

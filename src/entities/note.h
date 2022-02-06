@@ -104,9 +104,9 @@ class Note {
     QString getFilePathRelativeToNote(const Note &note) const;
 
     static int storeDirtyNotesToDisk(Note &currentNote,
-                                     bool *currentNoteChanged = Q_NULLPTR,
-                                     bool *noteWasRenamed = Q_NULLPTR,
-                                     bool *currentNoteTextChanged = Q_NULLPTR);
+                                     bool *currentNoteChanged = nullptr,
+                                     bool *noteWasRenamed = nullptr,
+                                     bool *currentNoteTextChanged = nullptr);
 
     bool updateNoteTextFromDisk();
 

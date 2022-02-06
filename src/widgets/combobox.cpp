@@ -27,17 +27,17 @@ ComboBox::ComboBox(QWidget *parent) : QComboBox(parent) {
  * Emits focusIn() and focusOut() signals if the focus of the combo box changed
  */
 void ComboBox::onFocusChanged(QWidget *old, QWidget *now) {
-    bool focusOld = old != Q_NULLPTR && isAncestorOf(old);
-    bool focusNow = now != Q_NULLPTR && isAncestorOf(now);
+    bool focusOld = old != nullptr && isAncestorOf(old);
+    bool focusNow = now != nullptr && isAncestorOf(now);
 
     // check two parents too, because the QComboBoxListView is nested
-    if (!focusOld && old != Q_NULLPTR) {
+    if (!focusOld && old != nullptr) {
         QObject *oldParent = old->parent();
         if (oldParent == this) {
             focusOld = true;
         }
 
-        if (!focusOld && oldParent != Q_NULLPTR) {
+        if (!focusOld && oldParent != nullptr) {
             QObject *oldParent2 = oldParent->parent();
 
             if (oldParent2 == this) {
@@ -47,13 +47,13 @@ void ComboBox::onFocusChanged(QWidget *old, QWidget *now) {
     }
 
     // check two parents too, because the QComboBoxListView is nested
-    if (!focusNow && now != Q_NULLPTR) {
+    if (!focusNow && now != nullptr) {
         QObject *nowParent = now->parent();
         if (nowParent == this) {
             focusNow = true;
         }
 
-        if (!focusNow && nowParent != Q_NULLPTR) {
+        if (!focusNow && nowParent != nullptr) {
             QObject *nowParent2 = nowParent->parent();
 
             if (nowParent2 == this) {

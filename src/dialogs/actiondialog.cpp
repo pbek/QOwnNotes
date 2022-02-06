@@ -53,7 +53,7 @@ void ActionDialog::buildActionTreeForMenu(QMenu *menu,
     auto *menuItem = new QTreeWidgetItem();
     menuItem->setText(0, menuText);
 
-    if (parentItem == Q_NULLPTR) {
+    if (parentItem == nullptr) {
         ui->actionTreeWidget->addTopLevelItem(menuItem);
     } else {
         parentItem->addChild(menuItem);
@@ -107,7 +107,7 @@ void ActionDialog::on_actionTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
                                                          int column) {
     Q_UNUSED(column);
 
-    if (item == Q_NULLPTR) {
+    if (item == nullptr) {
         return;
     }
 

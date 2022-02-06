@@ -35,7 +35,7 @@ using namespace std;
 QT_USE_NAMESPACE
 
 static QString getIdentifier(QWebSocket *peer) {
-    if (peer == Q_NULLPTR) {
+    if (peer == nullptr) {
         return {};
     }
 
@@ -112,7 +112,7 @@ WebSocketServerService::~WebSocketServerService() {
 void WebSocketServerService::onNewConnection() {
     auto pSocket = m_pWebSocketServer->nextPendingConnection();
 
-    if (pSocket == Q_NULLPTR) {
+    if (pSocket == nullptr) {
         return;
     }
 
@@ -162,7 +162,7 @@ void WebSocketServerService::processMessage(const QString &message) {
     if ((type == QLatin1String("newNote")) || isHandleRawData) {
 #ifndef INTEGRATION_TESTS
         MainWindow *mainWindow = MainWindow::instance();
-        if (mainWindow == Q_NULLPTR) {
+        if (mainWindow == nullptr) {
             return;
         }
 
@@ -244,7 +244,7 @@ void WebSocketServerService::processMessage(const QString &message) {
 #ifndef INTEGRATION_TESTS
         MainWindow *mainWindow = MainWindow::instance();
 
-        if (mainWindow == Q_NULLPTR) {
+        if (mainWindow == nullptr) {
             pSender->sendTextMessage(getNoteFolderSwitchedJsonText(false));
 
             return;
@@ -334,7 +334,7 @@ QJsonArray WebSocketServerService::createBookmarks(
 
 QString WebSocketServerService::getBookmarksJsonText() {
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow == Q_NULLPTR) {
+    if (mainWindow == nullptr) {
         return {};
     }
 
@@ -364,7 +364,7 @@ QString WebSocketServerService::getBookmarksJsonText() {
 
 QString WebSocketServerService::getCommandSnippetsJsonText() {
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow == Q_NULLPTR) {
+    if (mainWindow == nullptr) {
         return {};
     }
 
@@ -426,7 +426,7 @@ QString WebSocketServerService::getTokenQueryJsonText() {
 void WebSocketServerService::socketDisconnected() {
     auto *pClient = qobject_cast<QWebSocket *>(sender());
 
-    if (pClient != Q_NULLPTR) {
+    if (pClient != nullptr) {
         Utils::Misc::printInfo(tr("%1 was disconnected from QOwnNotes server")
                                    .arg(getIdentifier(pClient)));
 

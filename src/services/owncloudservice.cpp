@@ -71,10 +71,10 @@ OwnCloudService::OwnCloudService(int cloudConnectionId, QObject *parent)
                      this, SLOT(slotReplyFinished(QNetworkReply *)));
 
     readSettings(cloudConnectionId);
-    settingsDialog = Q_NULLPTR;
-    todoDialog = Q_NULLPTR;
-    mainWindow = Q_NULLPTR;
-    shareDialog = Q_NULLPTR;
+    settingsDialog = nullptr;
+    todoDialog = nullptr;
+    mainWindow = nullptr;
+    shareDialog = nullptr;
 }
 
 void OwnCloudService::resetNetworkManagerCookieJar() {
@@ -239,7 +239,7 @@ void OwnCloudService::slotAuthenticationRequired(
     qWarning() << "Username and/or password incorrect";
 
 #ifndef INTEGRATION_TESTS
-    if (settingsDialog != Q_NULLPTR) {
+    if (settingsDialog != nullptr) {
         settingsDialog->setOKLabelData(3, tr("incorrect"),
                                        SettingsDialog::Failure);
         settingsDialog->setOKLabelData(4, tr("not connected"),
@@ -350,7 +350,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 
             //            qInfo() << "calendarDataList: " << calendarDataList;
 
-            if (settingsDialog != Q_NULLPTR) {
+            if (settingsDialog != nullptr) {
                 settingsDialog->refreshTodoCalendarList(calendarDataList);
             }
         } else if (!todoCalendarServerUrlPath.isEmpty() &&
@@ -368,7 +368,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                     data = QString();
                 }
 
-                if (todoDialog != Q_NULLPTR) {
+                if (todoDialog != nullptr) {
                     // this will mostly happen after the PUT request to update
                     // or create a task item
                     if (data.isEmpty()) {
@@ -392,7 +392,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                     // VTODO item) we will remove it
                     if (!wasUpdated) {
                         calItem.remove();
-                    } else if (todoDialog != Q_NULLPTR) {
+                    } else if (todoDialog != nullptr) {
                         // reload the task list items
                         todoDialog->reloadTodoListItems();
                     }
@@ -1589,7 +1589,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
 
 #ifndef INTEGRATION_TESTS
     // set the preliminary maximum of the progress bar
-    if (todoDialog != Q_NULLPTR) {
+    if (todoDialog != nullptr) {
         todoDialog->todoItemLoadingProgressBarSetMaximum(responseNodesCount);
     }
 #endif
@@ -1682,7 +1682,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
     }
 
 #ifndef INTEGRATION_TESTS
-    if (todoDialog != Q_NULLPTR) {
+    if (todoDialog != nullptr) {
         // set the real maximum of the progress bar
         todoDialog->todoItemLoadingProgressBarSetMaximum(requestCount);
 
@@ -1704,7 +1704,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
     }
 
 #ifndef INTEGRATION_TESTS
-    if (todoDialog != Q_NULLPTR) {
+    if (todoDialog != nullptr) {
         // reload the existing items
         todoDialog->reloadTodoListItems();
     }
@@ -1797,7 +1797,7 @@ void OwnCloudService::handleUpdateNoteShareReply(const QString &urlPart,
 
 #ifndef INTEGRATION_TESTS
     // update the share dialog to show the share url
-    if (shareDialog != Q_NULLPTR) {
+    if (shareDialog != nullptr) {
         shareDialog->updateDialog();
     }
 #endif
@@ -1949,7 +1949,7 @@ void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
 
 #ifndef INTEGRATION_TESTS
             // update the share dialog to show the share url
-            if (updateShareDialog && (shareDialog != Q_NULLPTR)) {
+            if (updateShareDialog && (shareDialog != nullptr)) {
                 shareDialog->updateDialog();
             }
 #else

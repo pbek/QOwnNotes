@@ -190,7 +190,7 @@ MainWindow::MainWindow(QWidget *parent)
     _noteExternallyRemovedCheckEnabled = true;
     _readOnlyButton = new QPushButton(this);
     _lastNoteSelectionWasMultiple = false;
-    _webSocketServerService = Q_NULLPTR;
+    _webSocketServerService = nullptr;
     _closeEventWasFired = false;
     _leaveFullScreenModeButton = nullptr;
     _useNoteFolderButtons = settings.value("useNoteFolderButtons").toBool();
@@ -449,11 +449,11 @@ MainWindow::MainWindow(QWidget *parent)
         QStringLiteral("editor"), QStringLiteral("editor color schema count"),
         QString::number(schemaCount) + QStringLiteral(" schemas"), schemaCount);
 
-    _actionDialog = Q_NULLPTR;
-    _todoDialog = Q_NULLPTR;
-    _storedImagesDialog = Q_NULLPTR;
-    _storedAttachmentsDialog = Q_NULLPTR;
-    _issueAssistantDialog = Q_NULLPTR;
+    _actionDialog = nullptr;
+    _todoDialog = nullptr;
+    _storedImagesDialog = nullptr;
+    _storedAttachmentsDialog = nullptr;
+    _issueAssistantDialog = nullptr;
 
     // restore the note tabs
     Utils::Gui::restoreNoteTabs(ui->noteEditTabWidget,
@@ -900,7 +900,7 @@ void MainWindow::initDockWidgets() {
     //    ui->noteEditTabWidget->layout()->setContentsMargins(0, 0, 0, 0);
 
     setDockNestingEnabled(true);
-    setCentralWidget(_noteEditIsCentralWidget ? ui->noteEditTabWidget : Q_NULLPTR);
+    setCentralWidget(_noteEditIsCentralWidget ? ui->noteEditTabWidget : nullptr);
 
     // macOS and Windows will look better without this
 #ifdef Q_OS_LINUX
@@ -1004,7 +1004,7 @@ QAction *MainWindow::findAction(const QString &objectName) {
         }
     }
 
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 /**
@@ -1080,7 +1080,7 @@ void MainWindow::reloadTodoLists() {
         QListIterator<QString> itr(calendars);
         while (itr.hasNext()) {
             QString calendar = itr.next();
-            ownCloud->todoGetTodoList(calendar, Q_NULLPTR);
+            ownCloud->todoGetTodoList(calendar, nullptr);
         }
 
         showStatusBarMessage(tr("Your tasks are being loaded from your server"),
@@ -1114,7 +1114,7 @@ void MainWindow::initScriptingEngine() {
  */
 void MainWindow::onCustomActionInvoked(const QString &identifier) {
     ScriptingService *scriptingService = ScriptingService::instance();
-    if (scriptingService != Q_NULLPTR) {
+    if (scriptingService != nullptr) {
         scriptingService->onCustomActionInvoked(identifier);
     }
 }
@@ -1389,7 +1389,7 @@ void MainWindow::updateToolbarMenu() {
 void MainWindow::togglePanelVisibility(const QString &objectName) {
     auto *dockWidget = findChild<QDockWidget *>(objectName);
 
-    if (dockWidget == Q_NULLPTR) {
+    if (dockWidget == nullptr) {
         return;
     }
 
@@ -1425,7 +1425,7 @@ void MainWindow::togglePanelVisibility(const QString &objectName) {
 void MainWindow::toggleToolbarVisibility(const QString &objectName) {
     auto *toolbar = findChild<QToolBar *>(objectName);
 
-    if (toolbar == Q_NULLPTR) {
+    if (toolbar == nullptr) {
         return;
     }
 
@@ -1739,8 +1739,8 @@ void MainWindow::setDistractionFreeMode(const bool enabled) {
         //
 
         statusBar()->removeWidget(_leaveDistractionFreeModeButton);
-        disconnect(_leaveDistractionFreeModeButton, Q_NULLPTR, Q_NULLPTR,
-                   Q_NULLPTR);
+        disconnect(_leaveDistractionFreeModeButton, nullptr, nullptr,
+                   nullptr);
 
         // restore states and sizes
         restoreState(
@@ -2193,13 +2193,13 @@ void MainWindow::loadNoteDirectoryList() {
     generateSystemTrayContextMenu();
 
     // clear the text edits if there is no visible note
-    if (firstVisibleNoteTreeWidgetItem() == Q_NULLPTR) {
+    if (firstVisibleNoteTreeWidgetItem() == nullptr) {
         unsetCurrentNote();
     } else {
         const auto item = findNoteInNoteTreeWidget(currentNote);
 
         // in the end we need to set the current item again if we can find it
-        if (item != Q_NULLPTR) {
+        if (item != nullptr) {
             ui->noteTreeWidget->setCurrentItem(item);
         }
     }
@@ -2296,7 +2296,7 @@ void MainWindow::updateNoteTreeWidgetItem(const Note &note,
 void MainWindow::makeCurrentNoteFirstInNoteList() {
     QTreeWidgetItem *item = findNoteInNoteTreeWidget(currentNote);
 
-    if (item != Q_NULLPTR) {
+    if (item != nullptr) {
         const QSignalBlocker blocker(ui->noteTreeWidget);
         Q_UNUSED(blocker)
 
@@ -2350,7 +2350,7 @@ QTreeWidgetItem *MainWindow::findNoteInNoteTreeWidget(const Note &note) {
         }
     }
 
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 void MainWindow::readSettings() {
@@ -2666,7 +2666,7 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     ui->noteTextEdit->setPaperMargins();
     ui->encryptedNoteTextEdit->setPaperMargins();
 
-    if (_webSocketServerService == Q_NULLPTR) {
+    if (_webSocketServerService == nullptr) {
         QTimer::singleShot(250, this, SLOT(initWebSocketServerService()));
     } else if (Utils::Misc::isSocketServerEnabled()) {
         if (_webSocketServerService->getPort() !=
@@ -4211,10 +4211,10 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
 
                 // choose another selected item if current item is invisible
                 QTreeWidgetItem *item = ui->noteTreeWidget->currentItem();
-                if ((item != Q_NULLPTR) && item->isHidden()) {
+                if ((item != nullptr) && item->isHidden()) {
                     QTreeWidgetItem *firstVisibleItem =
                         firstVisibleNoteTreeWidgetItem();
-                    if (firstVisibleItem != Q_NULLPTR) {
+                    if (firstVisibleItem != nullptr) {
                         ui->noteTreeWidget->setCurrentItem(firstVisibleItem);
                     }
                 }
@@ -5494,7 +5494,7 @@ void MainWindow::openTodoDialog(const QString &taskUid) {
         return;
     }
 
-    if (_todoDialog == Q_NULLPTR) {
+    if (_todoDialog == nullptr) {
         _todoDialog = new TodoDialog(this, taskUid, this);
     } else {
         _todoDialog->refreshUi();
@@ -6160,7 +6160,7 @@ void MainWindow::on_actionReport_problems_or_ideas_triggered() {
 }
 
 void MainWindow::openIssueAssistantDialog() {
-    if (_issueAssistantDialog == Q_NULLPTR) {
+    if (_issueAssistantDialog == nullptr) {
         _issueAssistantDialog = new IssueAssistantDialog(this);
     } else {
     }
@@ -7011,7 +7011,7 @@ void MainWindow::on_actionToggle_distraction_free_mode_triggered() {
  * Tracks an action
  */
 void MainWindow::trackAction(QAction *action) {
-    if (action == Q_NULLPTR) {
+    if (action == nullptr) {
         return;
     }
 
@@ -7473,7 +7473,7 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index) {
     QAction *action =
         findAction(QStringLiteral("togglePanel-noteSubFolderDockWidget"));
 
-    if (action != Q_NULLPTR) {
+    if (action != nullptr) {
         action->setVisible(NoteFolder::isCurrentShowSubfolders());
     }
 
@@ -8433,7 +8433,7 @@ void MainWindow::on_tagTreeWidget_itemSelectionChanged() {
     if (count <= 1) {
         if (count == 1) {
             //           on_tagTreeWidget_currentItemChanged(ui->tagTreeWidget->selectedItems().first(),
-            //                                                Q_NULLPTR);
+            //                                                nullptr);
         }
         return;
     }
@@ -10242,7 +10242,7 @@ void MainWindow::setScriptingLabelText(const QString &identifier,
                                        const QString &text) {
     auto *label = ui->scriptingScrollArea->findChild<QLabel *>(
         QStringLiteral("scriptingLabel-") + identifier);
-    if (label != Q_NULLPTR) {
+    if (label != nullptr) {
         label->setText(text);
     }
 }
@@ -10583,7 +10583,7 @@ void MainWindow::restoreCurrentWorkspace() {
         centerAndResize();
     }
 
-    if (focusWidget != Q_NULLPTR) {
+    if (focusWidget != nullptr) {
         // set the focus to the widget that had the focus before
         // the workspace was restored
         focusWidget->setFocus();
@@ -10747,7 +10747,7 @@ static void loadAllActions(QMenu* menu, QVector<QPair<QString, QAction*>>& outAc
  */
 void MainWindow::on_actionFind_action_triggered() {
 #if 0
-    if (_actionDialog == Q_NULLPTR) {
+    if (_actionDialog == nullptr) {
         _actionDialog = new ActionDialog(ui->menuBar, this);
     } else {
         _actionDialog->refreshUi();
@@ -11513,7 +11513,7 @@ void MainWindow::on_actionToggle_fullscreen_triggered() {
         }
 
         statusBar()->removeWidget(_leaveFullScreenModeButton);
-        disconnect(_leaveFullScreenModeButton, Q_NULLPTR, Q_NULLPTR, Q_NULLPTR);
+        disconnect(_leaveFullScreenModeButton, nullptr, nullptr, nullptr);
         delete _leaveFullScreenModeButton;
         _leaveFullScreenModeButton = nullptr;
     } else {
