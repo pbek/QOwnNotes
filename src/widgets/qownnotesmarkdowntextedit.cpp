@@ -69,7 +69,9 @@ private:
         QPainter p(this);
         QPen pen(Qt::red);
         pen.setWidth(6);
-        pen.setStyle(Qt::DashLine);
+        QVector<qreal> dashPattern{2, 2};
+        pen.setDashPattern(dashPattern);
+        pen.setCapStyle(Qt::SquareCap);
         p.setPen(pen);
         p.drawRect(rect());
     }
