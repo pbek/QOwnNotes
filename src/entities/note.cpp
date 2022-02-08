@@ -3784,9 +3784,15 @@ QString Note::importMediaFromBase64(QString &data, const QString &imageSuffix) {
  * markdown image tag
  */
 QString Note::importMediaFromDataUrl(const QString &dataUrl) {
-    if (dataUrl.startsWith(QLatin1String("data:image/"),
+    if (dataUrl.contains(QLatin1String("data:image/"),
                            Qt::CaseInsensitive)) {
-        QStringList parts = dataUrl.split(QStringLiteral(";base64,"));
+        QStringList parts = dataUrl.split(QLatin1String("data:image/"));
+
+        if (parts.count() != 2) {
+            return {};
+        }
+
+        parts = parts[1].split(QStringLiteral(";base64,"));
         if (parts.count() == 2) {
             QString fileExtension = Utils::Misc::fileExtensionForMimeType(
                 parts[0].mid(5));

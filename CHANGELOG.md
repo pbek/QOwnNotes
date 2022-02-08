@@ -6,6 +6,8 @@
   (for [#2411](https://github.com/pbek/QOwnNotes/issues/2411))
   - for more information please take a look at the
     [scripting documentation](https://www.qownnotes.org/scripting/classes.html#notesubfolder)
+- capturing screenshots with the [Web Companion browser extension](https://www.qownnotes.org/getting-started/browser-extension.html)
+  was now fixed for browsers not sending correct image data (for [#2443](https://github.com/pbek/QOwnNotes/issues/2443))
 
 ## 22.2.1
 - the Evernote import now supports importing images and attachments in-line
