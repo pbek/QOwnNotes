@@ -23,7 +23,10 @@ class NoteSubFolderApi : public QObject, public NoteSubFolder {
     static NoteSubFolderApi *fromNoteSubFolder(const NoteSubFolder &noteSubFolder);
 
     Q_INVOKABLE static NoteSubFolderApi *fetchNoteSubFolderById(int id);
+    Q_INVOKABLE static NoteSubFolderApi *activeNoteSubFolder();
     Q_INVOKABLE static QList<QObject*> fetchNoteSubFoldersByParentId(int parentId);
 
     Q_INVOKABLE QQmlListProperty<NoteApi> notes();
+    Q_INVOKABLE [[nodiscard]] QString relativePath() const;
+    Q_INVOKABLE [[nodiscard]] QString fullPath() const;
 };

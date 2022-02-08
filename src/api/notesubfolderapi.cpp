@@ -78,3 +78,15 @@ QList<QObject*> NoteSubFolderApi::fetchNoteSubFoldersByParentId(int parentId)
 
     return noteSubFolderApis;
 }
+
+NoteSubFolderApi *NoteSubFolderApi::activeNoteSubFolder() {
+    return fetchNoteSubFolderById(NoteSubFolder::activeNoteSubFolderId());
+}
+
+QString NoteSubFolderApi::relativePath() const {
+    return _noteSubFolder.relativePath();
+}
+
+QString NoteSubFolderApi::fullPath() const {
+    return _noteSubFolder.fullPath();
+}

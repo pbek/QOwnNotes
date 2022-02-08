@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 22.2.2
+- there now are new methods for the scripting class `NoteSubFolderApi` to get
+  the active note subfolder and the relative and absolute path of a subfolder
+  (for [#2411](https://github.com/pbek/QOwnNotes/issues/2411))
+  - for more information please take a look at the
+    [scripting documentation](https://www.qownnotes.org/scripting/classes.html#notesubfolder)
+
 ## 22.2.1
 - the Evernote import now supports importing images and attachments in-line
   (for [#2435](https://github.com/pbek/QOwnNotes/issues/2435)) 
