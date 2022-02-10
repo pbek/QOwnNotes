@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 22.2.3
+- the levenshtein distance check was now disabled, because it takes too long
+  (for [#2433](https://github.com/pbek/QOwnNotes/issues/2433))
 - try to fix a possible crash in the navigation panel (for [#2393](https://github.com/pbek/QOwnNotes/issues/2393), thank you @Waqar144)
 
 ## 22.2.2

@@ -2658,10 +2658,11 @@ bool Utils::Misc::isSimilar(const QString &str1, const QString &str2, int thresh
         return true;
     }
 
-    // Use levenshtein if the middle part of the strings is different
-    if (levenshteinDistance(str1, str2) <= threshold) {
-        return true;
-    }
+    // Use levenshtein for not too large notes if the middle part of the strings is different
+    // Disabled, because it takes far too long!
+//    if ((str1.length() < 5000) && (levenshteinDistance(str1, str2) <= threshold)) {
+//        return true;
+//    }
 
     if (str1.length() != str2.length()) {
         return false;
