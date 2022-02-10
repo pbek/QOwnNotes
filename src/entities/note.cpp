@@ -1489,6 +1489,7 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged) {
     out.setCodec("UTF-8");
 #endif
     out << text;
+    out.flush();
     file.flush();
     file.close();
 

@@ -123,6 +123,23 @@
 
 static MainWindow* s_self = nullptr;
 
+struct FileWatchDisabler {
+    FileWatchDisabler(MainWindow *mw)
+        : _mainWindow(mw)
+    {
+        Q_ASSERT(mw);
+        mw->disconnect(&mw->noteDirectoryWatcher, nullptr, nullptr, nullptr);
+    }
+
+    ~FileWatchDisabler()
+    {
+        Q_ASSERT(_mainWindow);
+        _mainWindow->connectFileWatcher();
+    }
+private:
+    MainWindow *const _mainWindow = nullptr;
+};
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
 
@@ -318,11 +335,7 @@ MainWindow::MainWindow(QWidget *parent)
             &MainWindow::frequentPeriodicChecker);
     this->_frequentPeriodicTimer->start(60000);
 
-    QObject::connect(&this->noteDirectoryWatcher,
-                     SIGNAL(directoryChanged(QString)), this,
-                     SLOT(notesDirectoryWasModified(QString)));
-    QObject::connect(&this->noteDirectoryWatcher, SIGNAL(fileChanged(QString)),
-                     this, SLOT(notesWereModified(QString)));
+    connectFileWatcher();
 
     ui->searchLineEdit->installEventFilter(this);
     ui->noteTreeWidget->installEventFilter(this);
@@ -572,6 +585,12 @@ void MainWindow::initNotePreviewAndTextEdits()
 
     connect(ui->noteTextView, &QTextBrowser::anchorClicked, this, &MainWindow::onNotePreviewAnchorClicked);
 #endif
+}
+
+void MainWindow::connectFileWatcher()
+{
+    connect(&noteDirectoryWatcher, &QFileSystemWatcher::directoryChanged, this, &MainWindow::notesDirectoryWasModified, Qt::UniqueConnection);
+    connect(&noteDirectoryWatcher, &QFileSystemWatcher::fileChanged, this, &MainWindow::notesWereModified, Qt::UniqueConnection);
 }
 
 /**
@@ -2839,8 +2858,8 @@ void MainWindow::notesWereModified(const QString &str) {
             switch (result) {
                 // overwrite file with local changes
                 case NoteDiffDialog::Overwrite: {
-                    const QSignalBlocker blocker(this->noteDirectoryWatcher);
-                    Q_UNUSED(blocker)
+                    // disconnect the watcher before saving on disk
+                    FileWatchDisabler disable(this);
 
                     showStatusBarMessage(
                         tr("Overwriting external changes of: %1")
@@ -2851,15 +2870,6 @@ void MainWindow::notesWereModified(const QString &str) {
                     // external change is already in the note table entry
                     currentNote.storeNewText(ui->noteTextEdit->toPlainText());
                     currentNote.storeNoteTextFileToDisk();
-
-                    // just to make sure everything is up-to-date
-                    //                        this->currentNote = note;
-                    //                        this->setNoteTextFromNote( &note,
-                    //                        true );
-
-                    // wait 100ms before the block on this->noteDirectoryWatcher
-                    // is opened, otherwise we get the event
-                    Utils::Misc::waitMsecs(100);
                 } break;
 
                 // reload note file from disk
@@ -2975,8 +2985,8 @@ void MainWindow::noteViewUpdateTimerSlot() {
 }
 
 void MainWindow::storeUpdatedNotesToDisk() {
-    const QSignalBlocker blocker(noteDirectoryWatcher);
-    Q_UNUSED(blocker)
+    // disconnect the watcher before saving on disk
+    FileWatchDisabler disable(this);
 
     const QString oldNoteName = currentNote.getName();
 
@@ -3002,10 +3012,6 @@ void MainWindow::storeUpdatedNotesToDisk() {
         qDebug() << __func__ << " - 'count': " << count;
 
         showStatusBarMessage(tr("Stored %n note(s) to disk", "", count), 3000);
-
-        // wait 100ms before the block on this->noteDirectoryWatcher
-        // is opened, otherwise we get the event
-        Utils::Misc::waitMsecs(100);
 
         if (currentNoteChanged) {
             // strip trailing spaces of the current note (if enabled)
