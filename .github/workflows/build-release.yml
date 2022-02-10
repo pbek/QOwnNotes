@@ -148,6 +148,8 @@ jobs:
         qmake PREFIX=/usr
         lrelease QOwnNotes.pro
         make -j 8
+        # debug: check if translations are present
+        find
         # Create DEB
         #cd ../travis
         #dpkg-deb -x QOwnNotes.deb build
@@ -159,8 +161,10 @@ jobs:
         #sed -i 's/VERSION_NUMBER/'"${VERSION}"'/g' build/DEBIAN/control
         #dpkg -b build QOwnNotes.deb
         #cd ../src
-        # Create AppImage (needs Ubuntu 16.04)
+        # Create AppImage (needs Ubuntu 18.04)
         make INSTALL_ROOT=appdir -j 8 install ; find appdir/
+        # debug: check if translations are present
+        find
         wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
         chmod a+x linuxdeployqt-continuous-x86_64.AppImage
         # export VERSION=... # linuxdeployqt uses this for naming the file
