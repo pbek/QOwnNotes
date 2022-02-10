@@ -2790,14 +2790,6 @@ void MainWindow::notesWereModified(const QString &str) {
             const bool isCurrentNoteNotEditedForAWhile =
                 this->currentNoteLastEdited.addSecs(60) <
                 QDateTime::currentDateTime();
-            // If the current note wasn't edited for a while, we want that it is possible
-            // to get updated even with small changes, so we are setting a threshold of 0
-            const int threshold = isCurrentNoteNotEditedForAWhile ? 0 : 8;
-
-            // Check if the old note text is the same or similar as the one on disk
-            if (Utils::Misc::isSimilar(oldNoteText, noteTextOnDisk, threshold)) {
-                return;
-            }
 
             const QString noteTextOnDiskHash =
                 QString(QCryptographicHash::hash(noteTextOnDisk.toLocal8Bit(),
@@ -2813,12 +2805,6 @@ void MainWindow::notesWereModified(const QString &str) {
             // fetch current text
             const QString noteTextEditText =
                 this->ui->noteTextEdit->toPlainText();
-
-            // skip dialog if text of note file on disk text from note text
-            // edit are equal or similar
-            if (Utils::Misc::isSimilar(noteTextEditText, noteTextOnDisk, threshold)) {
-                return;
-            }
 
             showStatusBarMessage(tr("Current note was modified externally"),
                                  5000);
