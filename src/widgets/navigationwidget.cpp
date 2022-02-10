@@ -96,6 +96,9 @@ QVector<Node> NavigationWidget::parseDocument(
     QVector<Node> nodes;
     for (int i = 0; i < document->blockCount(); ++i) {
         const QTextBlock block = document->findBlockByNumber(i);
+        if (!block.isValid()) {
+            continue;
+        }
         const int elementType = block.userState();
 
         // ignore all non headline types
