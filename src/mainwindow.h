@@ -84,6 +84,8 @@ class MainWindow : public QMainWindow {
     Q_PROPERTY(Note currentNote WRITE setCurrentNote MEMBER currentNote NOTIFY
                    currentNoteChanged)
 
+    friend struct FileWatchDisabler;
+
    Q_SIGNALS:
     void currentNoteChanged(Note &note);
     void log(LogWidget::LogType logType, QString text);
@@ -808,6 +810,8 @@ private:
     void initTreeWidgets();
 
     void initNotePreviewAndTextEdits();
+
+    void connectFileWatcher();
 
     void createSystemTrayIcon();
 
