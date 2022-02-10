@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 22.2.3
+- try to fix a possible crash in the navigation panel (for [#2393](https://github.com/pbek/QOwnNotes/issues/2393), thank you @Waqar144)
+
 ## 22.2.2
 - there now are new methods for the scripting class `NoteSubFolderApi` to get
   the active note subfolder and the relative and absolute path of a subfolder
