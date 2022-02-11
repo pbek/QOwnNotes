@@ -53,24 +53,36 @@ class NoteSubFolderApi {
     Q_PROPERTY(QString name)
     Q_PROPERTY(QQmlListProperty<NoteApi> notes)
     Q_INVOKABLE static NoteSubFolderApi *fetchNoteSubFolderById(int id);
+    Q_INVOKABLE static NoteSubFolderApi *activeNoteSubFolder();
     Q_INVOKABLE static QList<QObject*> fetchNoteSubFoldersByParentId(int parentId);
+    Q_INVOKABLE QString relativePath() const;
+    Q_INVOKABLE QString fullPath() const;
 };
 ```
 
 ### Esempio
 ```js
+var noteSubFolderQmlObj = Qt.createQmlObject("import QOwnNotesTypes 1.0; NoteSubFolder{}", mainWindow, "noteSubFolder");
+
+// print all subfolder names
+noteSubFolderQmlObj.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
+    script.log(nsf.name);
+});
+
+// get the active note subfolder
+var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
+
+// print the full and relative path of the active note subfolder
+script.log(noteSubFolder.fullPath());
+script.log(noteSubFolder.relativePath());
+
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// esegui un ciclo su tutte le note nella sottocartella note
+// iterate through notes in note subfolder
 for (var idx in noteSubFolder.notes) {
     var note = noteSubFolder.notes[idx];
 }
-
-// stampa i nomi di tutte le sottocartelle
-noteSubFolder.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
-    script.log(nsf.name);
-});
 ```
 
 Etichetta (Tag)

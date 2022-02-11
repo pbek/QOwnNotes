@@ -24,5 +24,5 @@ Se vuoi usare l'**aggiornamento automatico** assicurati di mettere il tuo AppIma
 :::
 
 ::: tip
-If you have troubles running the AppImage, because your glibc version is too old you can try the [AppImage built on OBS](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage), it should be built with glibc 2.16.
+Se hai problemi e eseguire AppImage, perché la versione della tua glibc è troppo vecchia, puoi provare [AppImage costruita su OBS](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage), dovrebbe essere costruita con glibc 2.16.
 :::

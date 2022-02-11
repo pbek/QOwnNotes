@@ -1042,62 +1042,62 @@
 <translation>Argument peab olema positiivne: %1 = %2</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1177"/>
 <source>Mark "%1" not set.</source>
 <translation>Märkige "%1" pole määratud.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3100"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3107"/>
 <source>Recursive mapping</source>
 <translation>Rekursiivne kaardistamine</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3992"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3999"/>
 <source>%1%2%</source>
 <translation>%1%2%</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3994"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4001"/>
 <source>%1All</source>
 <translation>%1Kõik</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4008"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4015"/>
 <source>Not implemented in FakeVim.</source>
 <translation>Pole rakendatud FakeVimis.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4700"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
 <translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4702"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
 <translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6297"/>
 <source>Unknown option:</source>
 <translation>Tundmatu variant:</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6300"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6307"/>
 <source>Invalid argument:</source>
 <translation>Ebakorrektne argument:</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6302"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6309"/>
 <source>Trailing characters:</source>
 <translation>Lõpumärgid:</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6384"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6391"/>
 <source>Move lines into themselves.</source>
 <translation>Liigutage read iseendasse.</translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6426"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6433"/>
 <source>%n lines moved.</source>
 <translation>
 <numerusform>%n rida teisaldatud.</numerusform>
@@ -1105,37 +1105,37 @@
 </translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6494"/>
 <source>File "%1" exists (add ! to override)</source>
 <translation>Fail "%1" eksisteerib (ületamiseks lisage!)</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
 <source>Cannot open file "%1" for writing</source>
 <translation>Faili "%1" kirjutamiseks ei saa avada</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6514"/>
 <source>"%1" %2 %3L, %4C written.</source>
 <translation>"%1" %2 %3L, %4C kirjutatud.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6515"/>
 <source> [New] </source>
 <translation>[Uus]</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6523"/>
 <source>Cannot open file "%1" for reading</source>
 <translation>Faili "%1" ei saa lugemiseks avada</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6551"/>
 <source>"%1" %2L, %3C</source>
 <translation>"%1" %2L, %3C</translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6571"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6578"/>
 <source>%n lines filtered.</source>
 <translation>
 <numerusform>%n rida filtreeritud.</numerusform>
@@ -1143,47 +1143,47 @@
 </translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6692"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6699"/>
 <source>Cannot open file %1</source>
 <translation>Faili %1 ei saa avada</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6765"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6772"/>
 <source>Not an editor command: %1</source>
 <translation>Pole redaktori käsk: %1</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6867"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6874"/>
 <source>Invalid regular expression: %1</source>
 <translation>Kehtetu regulaaravaldis: %1</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6903"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6910"/>
 <source>Pattern not found: %1</source>
 <translation>Mustrit ei leitud: %1</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6907"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6914"/>
 <source>Search hit BOTTOM, continuing at TOP.</source>
 <translation>Otsing asub allosas, jätkates ülaosas.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6908"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6915"/>
 <source>Search hit TOP, continuing at BOTTOM.</source>
 <translation>Otsing on ülaosas, jätkates allosas.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6913"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6920"/>
 <source>Search hit BOTTOM without match for: %1</source>
 <translation>Otsige tulemuse alt kokku ilma vasteta: %1</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6914"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6921"/>
 <source>Search hit TOP without match for: %1</source>
 <translation>Otsingu %1 vaste on TOP-is ilma vasteta</translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7021"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7028"/>
 <source>%n lines indented.</source>
 <translation>
 <numerusform>%n rida taandub.</numerusform>
@@ -1191,7 +1191,7 @@
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7084"/>
 <source>%n lines %1ed %2 time.</source>
 <translation>
 <numerusform>%n rida %1ed %2 korda.</numerusform>
@@ -1199,7 +1199,7 @@
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7615"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7622"/>
 <source>%n lines yanked.</source>
 <translation>
 <numerusform>%n rida jaanitud.</numerusform>
@@ -1207,12 +1207,12 @@
 </translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="8514"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="8521"/>
 <source>Already at oldest change.</source>
 <translation>Juba vanimas vahetuses.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="8515"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="8522"/>
 <source>Already at newest change.</source>
 <translation>Juba uuemate muudatuste juures.</translation>
 </message>
@@ -2044,7 +2044,7 @@
 <message>
 <location filename="../mainwindow.ui" line="411"/>
 <location filename="../mainwindow.ui" line="912"/>
-<location filename="../mainwindow.cpp" line="819"/>
+<location filename="../mainwindow.cpp" line="813"/>
 <source>Navigation</source>
 <translation>Navigeerimine</translation>
 </message>
@@ -2055,7 +2055,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="8189"/>
+<location filename="../mainwindow.cpp" line="8183"/>
 <source>Add a tag to the current note</source>
 <translation>Lisage märge aktiivsele märkusele</translation>
 </message>
@@ -2171,7 +2171,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1448"/>
-<location filename="../mainwindow.cpp" line="9674"/>
+<location filename="../mainwindow.cpp" line="9668"/>
 <source>Select &amp;all notes</source>
 <translation>Valige &amp;kõik märkmed</translation>
 </message>
@@ -2221,7 +2221,7 @@
 <translation>Märkme otsimine või loomine</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8190"/>
+<location filename="../mainwindow.cpp" line="8184"/>
 <source>Add a tag to the selected notes</source>
 <translation>Lisage valitud märkmetele silt</translation>
 </message>
@@ -2312,7 +2312,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1161"/>
-<location filename="../mainwindow.cpp" line="747"/>
+<location filename="../mainwindow.cpp" line="741"/>
 <source>Workspaces</source>
 <translation>Tööruumid</translation>
 </message>
@@ -2610,7 +2610,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2244"/>
-<location filename="../mainwindow.cpp" line="10637"/>
+<location filename="../mainwindow.cpp" line="10631"/>
 <source>Remove current workspace</source>
 <translation>Eemaldage praegune tööruum</translation>
 </message>
@@ -2678,7 +2678,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2365"/>
-<location filename="../mainwindow.cpp" line="9650"/>
+<location filename="../mainwindow.cpp" line="9644"/>
 <source>Open note in different window</source>
 <translation>Avage märge teises aknas</translation>
 </message>
@@ -2699,7 +2699,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2405"/>
-<location filename="../mainwindow.cpp" line="9658"/>
+<location filename="../mainwindow.cpp" line="9652"/>
 <source>Show note git versions</source>
 <translation>Kuva märkmete versioonid</translation>
 </message>
@@ -2782,7 +2782,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2567"/>
-<location filename="../mainwindow.cpp" line="11599"/>
+<location filename="../mainwindow.cpp" line="11593"/>
 <source>Automatically detect</source>
 <translation>Tuvastab automaatselt</translation>
 </message>
@@ -2996,22 +2996,22 @@
 <translation>Importige märkmeid Evernote'ist</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2893"/>
+<location filename="../mainwindow.cpp" line="2887"/>
 <source>Note was removed externally!</source>
 <translation>Märkus eemaldati väliselt!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2894"/>
+<location filename="../mainwindow.cpp" line="2888"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>Praegune märkus eemaldati väljaspool seda rakendust!
 Kas taastada praegune märkus?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5472"/>
-<location filename="../mainwindow.cpp" line="5495"/>
-<location filename="../mainwindow.cpp" line="6813"/>
-<location filename="../mainwindow.cpp" line="9740"/>
+<location filename="../mainwindow.cpp" line="5466"/>
+<location filename="../mainwindow.cpp" line="5489"/>
+<location filename="../mainwindow.cpp" line="6807"/>
+<location filename="../mainwindow.cpp" line="9734"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Tühista</translation>
 </message>
@@ -3023,47 +3023,47 @@ Kas taastada praegune märkus?</translation>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3140"/>
+<location filename="../mainwindow.cpp" line="3134"/>
 <source>new version %1 available</source>
 <translation>uus versioon %1 on saadaval</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3254"/>
+<location filename="../mainwindow.cpp" line="3248"/>
 <source>Abort</source>
 <translation>Katkesta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3254"/>
+<location filename="../mainwindow.cpp" line="3248"/>
 <source>Loading notes…</source>
 <translation>Märkmete laadimine…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3468"/>
+<location filename="../mainwindow.cpp" line="3462"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>Vastuolulise andmebaasi duplikaat on eemaldatud: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3469"/>
+<location filename="../mainwindow.cpp" line="3463"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>Vastuolulist andmebaasi duplikaati ei saanud eemaldada: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3475"/>
+<location filename="../mainwindow.cpp" line="3469"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>Eemaldatud ühendatud vastuoluline andmebaas: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3476"/>
+<location filename="../mainwindow.cpp" line="3470"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>Ühendatud vastuolulist andmebaasi ei saanud eemaldada: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3491"/>
+<location filename="../mainwindow.cpp" line="3485"/>
 <source>Delete conflicted database copies</source>
 <translation>Kustutage vastuolulised andmebaasi koopiad</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3514"/>
+<location filename="../mainwindow.cpp" line="3508"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>Eemaldatud on %n vastuoluline andmebaasi koopia</numerusform>
@@ -3071,62 +3071,62 @@ Kas taastada praegune märkus?</translation>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3685"/>
+<location filename="../mainwindow.cpp" line="3679"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>Valige kaust, kuhu teie märkmeid salvestatakse</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3711"/>
+<location filename="../mainwindow.cpp" line="3705"/>
 <source>No folder was selected</source>
 <translation>Ühtegi kausta ei valitud</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3713"/>
+<location filename="../mainwindow.cpp" line="3707"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>Selle tarkvara toimimiseks peate valima märkmete kausta ownCloud!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3715"/>
+<location filename="../mainwindow.cpp" line="3709"/>
 <source>&amp;Retry</source>
 <translation>&amp;Uuesti proovima</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3715"/>
+<location filename="../mainwindow.cpp" line="3709"/>
 <source>&amp;Exit</source>
 <translation>&amp;Välju</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4022"/>
+<location filename="../mainwindow.cpp" line="4016"/>
 <source>Remove current note</source>
 <translation>Eemalda praegune märkus</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4023"/>
+<location filename="../mainwindow.cpp" line="4017"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Kas eemaldada praegune märkus: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4394"/>
+<location filename="../mainwindow.cpp" line="4388"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>Sisestage selle krüptitud märkuse &lt;strong&gt; parool &lt;/strong&gt;.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4417"/>
+<location filename="../mainwindow.cpp" line="4411"/>
 <source>Note can't be decrypted!</source>
 <translation>Märkus ei saa dekrüptitud!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4418"/>
+<location filename="../mainwindow.cpp" line="4412"/>
 <source>It seems that your password is not valid!</source>
 <translation>Näib, et teie parool pole kehtiv!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4605"/>
+<location filename="../mainwindow.cpp" line="4599"/>
 <source>Remove selected notes</source>
 <translation>Eemaldage valitud märkmed</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4607"/>
+<location filename="../mainwindow.cpp" line="4601"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3140,12 +3140,12 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4680"/>
+<location filename="../mainwindow.cpp" line="4674"/>
 <source>Remove selected tags</source>
 <translation>Eemaldage valitud sildid</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4681"/>
+<location filename="../mainwindow.cpp" line="4675"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>Kas eemaldada valitud märgend &lt;strong&gt;%n &lt;/strong&gt;? Selle käigus ei eemaldata ühtegi märkust.</numerusform>
@@ -3153,13 +3153,13 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4733"/>
-<location filename="../mainwindow.cpp" line="8979"/>
+<location filename="../mainwindow.cpp" line="4727"/>
+<location filename="../mainwindow.cpp" line="8973"/>
 <source>Move selected notes</source>
 <translation>Valitud märkmete teisaldamine</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4734"/>
+<location filename="../mainwindow.cpp" line="4728"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Kas teisaldada %n valitud märkus kausta &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3167,13 +3167,13 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4844"/>
-<location filename="../mainwindow.cpp" line="9099"/>
+<location filename="../mainwindow.cpp" line="4838"/>
+<location filename="../mainwindow.cpp" line="9093"/>
 <source>Copy selected notes</source>
 <translation>Kopeeri valitud märkmed</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4845"/>
+<location filename="../mainwindow.cpp" line="4839"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Kas kopeerida %n valitud märkus kausta &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3181,13 +3181,13 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4875"/>
-<location filename="../mainwindow.cpp" line="5024"/>
+<location filename="../mainwindow.cpp" line="4869"/>
+<location filename="../mainwindow.cpp" line="5018"/>
 <source>Done</source>
 <translation>Valmis</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4876"/>
+<location filename="../mainwindow.cpp" line="4870"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n märge kopeeriti kausta &lt;strong&gt;%2 &lt;/strong&gt;.</numerusform>
@@ -3195,12 +3195,12 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4889"/>
+<location filename="../mainwindow.cpp" line="4883"/>
 <source>Tag selected notes</source>
 <translation>Märkige valitud märkused</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4890"/>
+<location filename="../mainwindow.cpp" line="4884"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Kas märgistada %n valitud märge &lt;strong&gt;%2 &lt;/strong&gt; -ga?</numerusform>
@@ -3208,37 +3208,37 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5166"/>
+<location filename="../mainwindow.cpp" line="5160"/>
 <source>Restart application</source>
 <translation>Taaskäivitage rakendus</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5167"/>
+<location filename="../mainwindow.cpp" line="5161"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Võimalik, et muudatuste jõustumiseks peate rakenduse taaskäivitama.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5170"/>
+<location filename="../mainwindow.cpp" line="5164"/>
 <source>Restart</source>
 <translation>Taaskäivita</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5392"/>
+<location filename="../mainwindow.cpp" line="5386"/>
 <source>PDF files</source>
 <translation>PDF-failid</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5468"/>
+<location filename="../mainwindow.cpp" line="5462"/>
 <source>Todo lists disabled!</source>
 <translation>Todo nimekirjad on keelatud!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5469"/>
+<location filename="../mainwindow.cpp" line="5463"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Olete todo-loendid keelanud. &lt;br /&gt; Kontrollige seadetes oma &lt;strong&gt; Todo &lt;/strong&gt; -konfiguratsiooni!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5715"/>
+<location filename="../mainwindow.cpp" line="5709"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Kas märgistatud %n valitud märkmeid &lt;strong&gt;%2 &lt;/strong&gt; abil</numerusform>
@@ -3246,79 +3246,79 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6268"/>
+<location filename="../mainwindow.cpp" line="6262"/>
 <source>Note folders</source>
 <translation>Pange tähele kaustu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6391"/>
+<location filename="../mainwindow.cpp" line="6385"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>Märkmete versioonid laaditakse praegu teie serverist ownCloud</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6408"/>
+<location filename="../mainwindow.cpp" line="6402"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Prügikasti märkmed laaditakse praegu teie serverist ownCloud</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6657"/>
+<location filename="../mainwindow.cpp" line="6651"/>
 <source>Inserted text as text attachment file</source>
 <translation type="unfinished">Inserted text as text attachment file</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6809"/>
+<location filename="../mainwindow.cpp" line="6803"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>Teie märkus dekrüptitakse ja salvestatakse uuesti lihttekstina. Pidage meeles, et krüptimata märkus sünkroonitakse tõenäoliselt teie serveriga ja tundlik tekst võib olla paljastatud! &lt;br /&gt; Kas soovite oma märkuse dekrüpteerida?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6906"/>
+<location filename="../mainwindow.cpp" line="6900"/>
 <source>Markdown files</source>
 <translation>Markdown-failid</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6920"/>
+<location filename="../mainwindow.cpp" line="6914"/>
 <source>Export attached files</source>
 <translation type="unfinished">Export attached files</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6921"/>
+<location filename="../mainwindow.cpp" line="6915"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6955"/>
+<location filename="../mainwindow.cpp" line="6949"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>Järjehoidjaga märkme positsioon pesas %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6970"/>
+<location filename="../mainwindow.cpp" line="6964"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>Hüppas järjehoidja positsiooni pesas %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7154"/>
-<location filename="../mainwindow.cpp" line="7224"/>
+<location filename="../mainwindow.cpp" line="7148"/>
+<location filename="../mainwindow.cpp" line="7218"/>
 <source>Inserting image</source>
 <translation>Kujutise sisestamine</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7159"/>
-<location filename="../mainwindow.cpp" line="7228"/>
+<location filename="../mainwindow.cpp" line="7153"/>
+<location filename="../mainwindow.cpp" line="7222"/>
 <source>Done inserting image</source>
 <translation>Kujutise sisestamine on lõpetatud</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7161"/>
+<location filename="../mainwindow.cpp" line="7155"/>
 <source>Inserting attachment</source>
 <translation>Manuse sisestamine</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7166"/>
+<location filename="../mainwindow.cpp" line="7160"/>
 <source>Done inserting attachment</source>
 <translation>Manuse sisestamine on lõpetatud</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7178"/>
+<location filename="../mainwindow.cpp" line="7172"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>Kopeeriti %n märkus kausta %1</numerusform>
@@ -3326,7 +3326,7 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7188"/>
+<location filename="../mainwindow.cpp" line="7182"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>%n märkuse kopeerimine ebaõnnestus (tõenäoliselt juba olemas)</numerusform>
@@ -3334,7 +3334,7 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7198"/>
+<location filename="../mainwindow.cpp" line="7192"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>%n märkme vahelejätmine kopeerimine (märgistust või tekstifaili pole või pole loetav)</numerusform>
@@ -3342,204 +3342,204 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7211"/>
+<location filename="../mainwindow.cpp" line="7205"/>
 <source>Saving temporary image</source>
 <translation>Ajutise pildi salvestamine</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6640"/>
-<location filename="../mainwindow.cpp" line="7230"/>
+<location filename="../mainwindow.cpp" line="6634"/>
+<location filename="../mainwindow.cpp" line="7224"/>
 <source>Temporary file can't be opened</source>
 <translation>Ajutist faili ei saa avada</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7285"/>
+<location filename="../mainwindow.cpp" line="7279"/>
 <source>Downloading %1</source>
 <translation>%1 allalaadimine</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7457"/>
+<location filename="../mainwindow.cpp" line="7451"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Lähtestage fondi suurus väärtusele %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8239"/>
+<location filename="../mainwindow.cpp" line="8233"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>Eemaldage märge '%1' aktiivsest märkmest</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8240"/>
+<location filename="../mainwindow.cpp" line="8234"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>Eemaldage silt "%1" valitud märkmetest</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8471"/>
+<location filename="../mainwindow.cpp" line="8465"/>
 <source>Rename tag</source>
 <translation>Nimeta silt ümber</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8472"/>
+<location filename="../mainwindow.cpp" line="8466"/>
 <source>Assign color</source>
 <translation>Määrake värv</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8473"/>
+<location filename="../mainwindow.cpp" line="8467"/>
 <source>Disable color</source>
 <translation>Keela värv</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8477"/>
+<location filename="../mainwindow.cpp" line="8471"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;Teisalda sildid kausta…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8688"/>
+<location filename="../mainwindow.cpp" line="8682"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>Liikuge juure</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9262"/>
+<location filename="../mainwindow.cpp" line="9256"/>
 <source>The scripting engine was reloaded</source>
 <translation>Skriptimootor laaditi uuesti</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9296"/>
+<location filename="../mainwindow.cpp" line="9290"/>
 <source>HTML files</source>
 <translation>HTML-failid</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9586"/>
+<location filename="../mainwindow.cpp" line="9580"/>
 <source>Jump to the note's subfolder</source>
 <translation>Hüppa noodi alamkausta
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9643"/>
+<location filename="../mainwindow.cpp" line="9637"/>
 <source>Open note in tab</source>
 <translation>Avage vahekaardil märkus</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11170"/>
+<location filename="../mainwindow.cpp" line="11164"/>
 <source>A script update was found!</source>
 <translation>Skripti värskendus leiti!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11176"/>
+<location filename="../mainwindow.cpp" line="11170"/>
 <source>Script updates</source>
 <translation>Skripti värskendused</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11177"/>
+<location filename="../mainwindow.cpp" line="11171"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>Skripti värskendused
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11192"/>
+<location filename="../mainwindow.cpp" line="11186"/>
 <source>No script updates were found</source>
 <translation>Skriptide värskendused leiti skriptide hoidlast! Kas soovite neid värskendada?
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11836"/>
+<location filename="../mainwindow.cpp" line="11830"/>
 <source>Toggle note stickiness</source>
 <translation>Skripti värskendusi ei leitud
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11842"/>
+<location filename="../mainwindow.cpp" line="11836"/>
 <source>Close other note tabs</source>
 <translation>Lülitab märkme kleepuvuse sisse ja välja
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9530"/>
-<location filename="../mainwindow.cpp" line="9724"/>
+<location filename="../mainwindow.cpp" line="9524"/>
+<location filename="../mainwindow.cpp" line="9718"/>
 <source>Rename note</source>
 <translation>Pange noot ümber</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9532"/>
+<location filename="../mainwindow.cpp" line="9526"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>Võimaldab teil märkme failinime ümber nimetada</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9546"/>
+<location filename="../mainwindow.cpp" line="9540"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;Teisalda märkmed kausta…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9547"/>
+<location filename="../mainwindow.cpp" line="9541"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;Kopeeri märkmeid…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9590"/>
+<location filename="../mainwindow.cpp" line="9584"/>
 <source>Move notes to subfolder…</source>
 <translation>Teisalda märkmed alamkausta…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9594"/>
+<location filename="../mainwindow.cpp" line="9588"/>
 <source>Copy notes to subfolder…</source>
 <translation>Kopeeri märkmed alamkausta…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9602"/>
+<location filename="../mainwindow.cpp" line="9596"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;Märgi valitud märkmed…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9626"/>
+<location filename="../mainwindow.cpp" line="9620"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Eemalda silt valitud märkmetest silt…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9724"/>
+<location filename="../mainwindow.cpp" line="9718"/>
 <source>Name:</source>
 <translation>Nimi:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9736"/>
+<location filename="../mainwindow.cpp" line="9730"/>
 <source>Note renaming not enabled!</source>
 <translation>Pange tähele, et ümbernimetamine pole lubatud!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10409"/>
+<location filename="../mainwindow.cpp" line="10403"/>
 <source>Create new workspace</source>
 <translation>Uue tööruumi loomine</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10410"/>
-<location filename="../mainwindow.cpp" line="10679"/>
+<location filename="../mainwindow.cpp" line="10404"/>
+<location filename="../mainwindow.cpp" line="10673"/>
 <source>Workspace name:</source>
 <translation>Tööruumi nimi:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10528"/>
+<location filename="../mainwindow.cpp" line="10522"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>täis</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10535"/>
+<location filename="../mainwindow.cpp" line="10529"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>minimaalne</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10638"/>
+<location filename="../mainwindow.cpp" line="10632"/>
 <source>Remove the current workspace?</source>
 <translation>Kas eemaldada praegune tööruum?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10678"/>
+<location filename="../mainwindow.cpp" line="10672"/>
 <source>Rename workspace</source>
 <translation>Tööruumi ümbernimetamine</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10836"/>
+<location filename="../mainwindow.cpp" line="10830"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3548,42 +3548,42 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11109"/>
+<location filename="../mainwindow.cpp" line="11103"/>
 <source>Disallow all note editing</source>
 <translation>Keela kogu märkmete redigeerimine</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11341"/>
+<location filename="../mainwindow.cpp" line="11335"/>
 <source>Select text files to import</source>
 <translation>Valige imporditavad tekstifailid</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11371"/>
+<location filename="../mainwindow.cpp" line="11365"/>
 <source>Importing: %1</source>
 <translation>Import: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11436"/>
+<location filename="../mainwindow.cpp" line="11430"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>Märkuse pealkiri '%1' kopeeriti lõikelauale</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11530"/>
+<location filename="../mainwindow.cpp" line="11524"/>
 <source>Leave full-screen mode</source>
 <translation>Lahkuge täisekraanirežiimist</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11716"/>
+<location filename="../mainwindow.cpp" line="11710"/>
 <source>Custom editor width</source>
 <translation>Kohandatud redaktori laius</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11716"/>
+<location filename="../mainwindow.cpp" line="11710"/>
 <source>Characters:</source>
 <translation>Tegelased:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8209"/>
+<location filename="../mainwindow.cpp" line="8203"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n märkus valitud</numerusform>
@@ -3592,7 +3592,7 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2450"/>
-<location filename="../mainwindow.cpp" line="11110"/>
+<location filename="../mainwindow.cpp" line="11104"/>
 <source>Allow all note editing</source>
 <translation>Luba kogu märkmete redigeerimine</translation>
 </message>
@@ -3602,12 +3602,12 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 <translation>&amp;päev</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4964"/>
+<location filename="../mainwindow.cpp" line="4958"/>
 <source>Remove tag from selected notes</source>
 <translation>Eemalda silt valitud märkmetest</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4965"/>
+<location filename="../mainwindow.cpp" line="4959"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>Serverist leiti &lt;strong&gt;%n järjehoidjat &lt;/strong&gt;?</numerusform>
@@ -3615,7 +3615,7 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5025"/>
+<location filename="../mainwindow.cpp" line="5019"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>Silt &lt;strong&gt;%1 &lt;/strong&gt; eemaldati %n märkmest</numerusform>
@@ -3623,120 +3623,120 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5070"/>
+<location filename="../mainwindow.cpp" line="5064"/>
 <source>Current notes folder: </source>
 <translation>Praeguste märkmete kaust: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5073"/>
+<location filename="../mainwindow.cpp" line="5067"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>Seadke märkmete kaust. Praeguste märkmete kaust: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5278"/>
+<location filename="../mainwindow.cpp" line="5272"/>
 <source>Print note</source>
 <translation>Prindi märkus</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5335"/>
+<location filename="../mainwindow.cpp" line="5329"/>
 <source>Letter</source>
 <translation>Kiri</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5365"/>
+<location filename="../mainwindow.cpp" line="5359"/>
 <source>Portrait</source>
 <translation>Portree</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5365"/>
+<location filename="../mainwindow.cpp" line="5359"/>
 <source>Landscape</source>
 <translation>Maastik</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5370"/>
+<location filename="../mainwindow.cpp" line="5364"/>
 <source>Orientation</source>
 <translation>Orienteerumine</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5370"/>
+<location filename="../mainwindow.cpp" line="5364"/>
 <source>Orientation:</source>
 <translation>Orienteerumine:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5393"/>
+<location filename="../mainwindow.cpp" line="5387"/>
 <source>Export current note as PDF</source>
 <translation>Ekspordi praegune märkus PDF-failina</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5492"/>
+<location filename="../mainwindow.cpp" line="5486"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Te pole ühtegi ülesandeloendit valinud. &lt;br /&gt; Kontrollige seadetes oma &lt;strong&gt; Todo &lt;/strong&gt; konfiguratsiooni!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6250"/>
+<location filename="../mainwindow.cpp" line="6244"/>
 <source>Open QOwnNotes</source>
 <translation>Avage QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6078"/>
-<location filename="../mainwindow.cpp" line="6300"/>
-<location filename="../mainwindow.cpp" line="9526"/>
+<location filename="../mainwindow.cpp" line="6072"/>
+<location filename="../mainwindow.cpp" line="6294"/>
+<location filename="../mainwindow.cpp" line="9520"/>
 <source>New note</source>
 <translation>Uus märkus</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6317"/>
+<location filename="../mainwindow.cpp" line="6311"/>
 <source>Recent notes</source>
 <translation>Viimased märkmed</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6333"/>
+<location filename="../mainwindow.cpp" line="6327"/>
 <source>Show todo lists</source>
 <translation>Kuva ülesandeloendeid</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6345"/>
+<location filename="../mainwindow.cpp" line="6339"/>
 <source>Recent tasks</source>
 <translation>Viimased ülesanded</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6366"/>
+<location filename="../mainwindow.cpp" line="6360"/>
 <source>Quit</source>
 <translation>Lõpeta</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
-<location filename="../mainwindow.cpp" line="791"/>
-<location filename="../mainwindow.cpp" line="2156"/>
+<location filename="../mainwindow.cpp" line="785"/>
+<location filename="../mainwindow.cpp" line="2150"/>
 <source>Note folder</source>
 <translation>Märkmete kaust</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8860"/>
-<location filename="../mainwindow.cpp" line="8927"/>
+<location filename="../mainwindow.cpp" line="8854"/>
+<location filename="../mainwindow.cpp" line="8921"/>
 <source>Copy to note folder</source>
 <translation>Kopeeri märkmete kausta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8860"/>
-<location filename="../mainwindow.cpp" line="8928"/>
+<location filename="../mainwindow.cpp" line="8854"/>
+<location filename="../mainwindow.cpp" line="8922"/>
 <source>Move to note folder</source>
 <translation>Teisaldage märkmete kausta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8861"/>
-<location filename="../mainwindow.cpp" line="8929"/>
+<location filename="../mainwindow.cpp" line="8855"/>
+<location filename="../mainwindow.cpp" line="8923"/>
 <source>Copy to this subfolder</source>
 <translation>Kopeeri sellesse alamkausta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8862"/>
-<location filename="../mainwindow.cpp" line="8930"/>
+<location filename="../mainwindow.cpp" line="8856"/>
+<location filename="../mainwindow.cpp" line="8924"/>
 <source>Move to this subfolder</source>
 <translation>Liiguta sellesse alamkausta</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8974"/>
+<location filename="../mainwindow.cpp" line="8968"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Kas teisaldada %n valitud märkus märkme alamkausta &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3744,13 +3744,13 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5170"/>
-<location filename="../mainwindow.cpp" line="11355"/>
+<location filename="../mainwindow.cpp" line="5164"/>
+<location filename="../mainwindow.cpp" line="11349"/>
 <source>Cancel</source>
 <translation>Tühista</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9070"/>
+<location filename="../mainwindow.cpp" line="9064"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n märkus teisaldati märkmete alamkausta "%2"</numerusform>
@@ -3758,7 +3758,7 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9094"/>
+<location filename="../mainwindow.cpp" line="9088"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Kas kopeerida %n valitud märkus märkme alamkausta &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3766,7 +3766,7 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9169"/>
+<location filename="../mainwindow.cpp" line="9163"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n märkus kopeeriti märkmete alamkausta "%2"</numerusform>
@@ -3774,103 +3774,103 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9648"/>
+<location filename="../mainwindow.cpp" line="9642"/>
 <source>Open note in external editor</source>
 <translation>Ava märkme välises redigeerijas</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9652"/>
+<location filename="../mainwindow.cpp" line="9646"/>
 <source>Show note in file manager</source>
 <translation>Kuva märkus failihalduris</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9737"/>
+<location filename="../mainwindow.cpp" line="9731"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>Kui soovite oma märkust ümber nimetada, peate lubama võimaluse, et märkme failinimi erineks pealkirjast.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9927"/>
+<location filename="../mainwindow.cpp" line="9921"/>
 <source>Create a new folder</source>
 <translation>Looge uus kaust</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9928"/>
+<location filename="../mainwindow.cpp" line="9922"/>
 <source>Folder name:</source>
 <translation>Kausta nimi:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7595"/>
+<location filename="../mainwindow.cpp" line="7589"/>
 <source>show all untagged notes (%1)</source>
 <translation>kuva kõik sildistamata märkmed (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7597"/>
+<location filename="../mainwindow.cpp" line="7591"/>
 <source>Untagged notes</source>
 <translation>Märgistamata märkmed</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9297"/>
+<location filename="../mainwindow.cpp" line="9291"/>
 <source>Export current note as HTML file</source>
 <translation>Ekspordi praegune märkus HTML-failina</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5344"/>
+<location filename="../mainwindow.cpp" line="5338"/>
 <source>Page size</source>
 <translation>Lehe suurus</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1165"/>
+<location filename="../mainwindow.cpp" line="1159"/>
 <source>quit toolbar</source>
 <translation>sulgege tööriistariba</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5344"/>
+<location filename="../mainwindow.cpp" line="5338"/>
 <source>Page size:</source>
 <translation>Lehe suurus:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5453"/>
+<location filename="../mainwindow.cpp" line="5447"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes jälgib anonüümseid kasutusandmeid, mis aitab otsustada, milliseid QOwnNotes osi järgmisena parendada ning vigu leida ja parandada. Selle käitumise saate seadetes keelata.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5457"/>
+<location filename="../mainwindow.cpp" line="5451"/>
 <source>&amp;Ok</source>
 <translation>&amp;Ok</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9536"/>
+<location filename="../mainwindow.cpp" line="9530"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;Eemaldage märkmed</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1092"/>
+<location filename="../mainwindow.cpp" line="1086"/>
 <source>Your tasks are being loaded from your server</source>
 <translation>Teie ülesanded laaditakse teie serverist</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2828"/>
+<location filename="../mainwindow.cpp" line="2822"/>
 <source>Current note was modified externally</source>
 <translation>Käesolevat märkust muudeti väliselt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2907"/>
-<location filename="../mainwindow.cpp" line="6016"/>
+<location filename="../mainwindow.cpp" line="2901"/>
+<location filename="../mainwindow.cpp" line="6010"/>
 <source>Stored current note to disk</source>
 <translation>Salvestatud praegune märkus kettale</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2925"/>
+<location filename="../mainwindow.cpp" line="2919"/>
 <source>Note was modified externally: %1</source>
 <translation>Märkus muudeti väliselt: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2947"/>
+<location filename="../mainwindow.cpp" line="2941"/>
 <source>Notes directory was modified externally</source>
 <translation>Märkmete kataloogi muudeti väliselt</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3009"/>
+<location filename="../mainwindow.cpp" line="3003"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>Salvestatud %n märkus kettal</numerusform>
@@ -3878,209 +3878,209 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7561"/>
+<location filename="../mainwindow.cpp" line="7555"/>
 <source>show all notes (%1)</source>
 <translation>näita kõiki märkmeid (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7564"/>
+<location filename="../mainwindow.cpp" line="7558"/>
 <source>All notes</source>
 <translation>Kõik märkmed</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8463"/>
+<location filename="../mainwindow.cpp" line="8457"/>
 <source>&amp;Add tag</source>
 <translation>&amp;Lisage silt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8511"/>
+<location filename="../mainwindow.cpp" line="8505"/>
 <source>Tag could not be created!</source>
 <translation>Silti ei saanud luua!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8690"/>
+<location filename="../mainwindow.cpp" line="8684"/>
 <source>Move to this tag</source>
 <translation>Teisalda sellele sildile</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8725"/>
+<location filename="../mainwindow.cpp" line="8719"/>
 <source>Tag this</source>
 <translation>Sildista see</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8750"/>
+<location filename="../mainwindow.cpp" line="8744"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>Märgendit "%1" sellele sildile ei saa teisaldada</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8799"/>
+<location filename="../mainwindow.cpp" line="8793"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>Teisaldatud silt '%1' uude märgendisse</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7722"/>
+<location filename="../mainwindow.cpp" line="7716"/>
 <source>show all notes tagged with '%1' (%2)</source>
 <translation>kuva kõik märkused, millel on märge '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8474"/>
+<location filename="../mainwindow.cpp" line="8468"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;Eemaldage sildid</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5491"/>
+<location filename="../mainwindow.cpp" line="5485"/>
 <source>No selected todo lists!</source>
 <translation>Ühtegi valitud ülesandeloendit pole!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="597"/>
+<location filename="../mainwindow.cpp" line="596"/>
 <source>Action not found!</source>
 <translation type="unfinished">Action not found!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="598"/>
+<location filename="../mainwindow.cpp" line="597"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
 <translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="760"/>
+<location filename="../mainwindow.cpp" line="754"/>
 <source>Subfolders</source>
 <translation>Alamkaustad</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="772"/>
+<location filename="../mainwindow.cpp" line="766"/>
 <source>Tags</source>
 <translation>Sildid</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="781"/>
+<location filename="../mainwindow.cpp" line="775"/>
 <source>Note search</source>
 <translation>Märkusotsing</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="810"/>
+<location filename="../mainwindow.cpp" line="804"/>
 <source>Note list</source>
 <translation>Märkmete nimekiri</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="835"/>
+<location filename="../mainwindow.cpp" line="829"/>
 <source>Note edit</source>
 <translation>Märkme muutmine</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="847"/>
+<location filename="../mainwindow.cpp" line="841"/>
 <source>Note tags</source>
 <translation>Pange tähele silte</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="858"/>
+<location filename="../mainwindow.cpp" line="852"/>
 <source>Note preview</source>
 <translation>Märkme eelvaade</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="866"/>
+<location filename="../mainwindow.cpp" line="860"/>
 <source>Log</source>
 <translation>Logi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="875"/>
+<location filename="../mainwindow.cpp" line="869"/>
 <source>Scripting</source>
 <translation>Skriptimine</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1132"/>
+<location filename="../mainwindow.cpp" line="1126"/>
 <source>formatting toolbar</source>
 <translation>vormindamise tööriistariba</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1141"/>
+<location filename="../mainwindow.cpp" line="1135"/>
 <source>inserting toolbar</source>
 <translation>tööriistariba sisestamine</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1148"/>
+<location filename="../mainwindow.cpp" line="1142"/>
 <source>encryption toolbar</source>
 <translation>krüptimise tööriistariba</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1155"/>
+<location filename="../mainwindow.cpp" line="1149"/>
 <source>window toolbar</source>
 <translation>akna tööriistariba</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1160"/>
+<location filename="../mainwindow.cpp" line="1154"/>
 <source>custom action toolbar</source>
 <translation>kohandatud toimingute tööriistariba</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1180"/>
+<location filename="../mainwindow.cpp" line="1174"/>
 <source>Workspace selector</source>
 <translation>Tööruumi valija</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1330"/>
+<location filename="../mainwindow.cpp" line="1324"/>
 <source>Show %1 panel</source>
 <translation>Kuva %1 paneel</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1375"/>
+<location filename="../mainwindow.cpp" line="1369"/>
 <source>Show %1</source>
 <translation>Kuva %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1727"/>
+<location filename="../mainwindow.cpp" line="1721"/>
 <source>Leave distraction free mode</source>
 <translation>Jätke tähelepanu kõrvale juhtimise režiim</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1917"/>
+<location filename="../mainwindow.cpp" line="1911"/>
 <source>Switch to note folder</source>
 <translation>Lülitu märkmete kausta
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2507"/>
+<location filename="../mainwindow.cpp" line="2501"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>Tööriistariba ei saanud ilma nimeta laadida</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2851"/>
+<location filename="../mainwindow.cpp" line="2845"/>
 <source>Overwriting external changes of: %1</source>
 <translation>Väliste muudatuste ülekirjutamine: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2872"/>
+<location filename="../mainwindow.cpp" line="2866"/>
 <source>Loading external changes from: %1</source>
 <translation>Väliste muudatuste laadimine alates: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2908"/>
-<location filename="../mainwindow.cpp" line="6017"/>
+<location filename="../mainwindow.cpp" line="2902"/>
+<location filename="../mainwindow.cpp" line="6011"/>
 <source>Current note could not be stored to disk</source>
 <translation>Praegust märkust ei saanud kettale salvestada</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3097"/>
+<location filename="../mainwindow.cpp" line="3091"/>
 <source>Read-only</source>
 <translation>Loe ainult</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3099"/>
+<location filename="../mainwindow.cpp" line="3093"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>Märkme redigeerimine on keelatud, lubamiseks klõpsake</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3116"/>
+<location filename="../mainwindow.cpp" line="3110"/>
 <source>Line numbers</source>
 <translation>Ridade numbrid</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3126"/>
+<location filename="../mainwindow.cpp" line="3120"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Klõpsake siin, et näha, mis on muutunud, ja värskendada uusimale versioonile</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3493"/>
+<location filename="../mainwindow.cpp" line="3487"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>Kas jätkata &lt;strong&gt;%n &lt;/strong&gt; vastuolulise andmebaasi koopia automaatse kustutamisega, mis võib blokeerida teie ownCloudi sünkroonimisprotsessi?</numerusform>
@@ -4088,7 +4088,7 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4948"/>
+<location filename="../mainwindow.cpp" line="4942"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n märkus märgistati märkega "%2"</numerusform>
@@ -4096,7 +4096,7 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5711"/>
+<location filename="../mainwindow.cpp" line="5705"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Leitud &lt;strong&gt;%n&lt;/strong&gt; &lt;strong&gt;%1&lt;/strong&gt; esinemine</numerusform>
@@ -4104,61 +4104,61 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6078"/>
+<location filename="../mainwindow.cpp" line="6072"/>
 <source>Note headline</source>
 <translation>Pange tähele pealkirja</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7241"/>
+<location filename="../mainwindow.cpp" line="7235"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation type="unfinished">Paste &amp;HTML as markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7242"/>
+<location filename="../mainwindow.cpp" line="7236"/>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7297"/>
+<location filename="../mainwindow.cpp" line="7291"/>
 <source>Downloading images finished</source>
 <translation>Piltide allalaadimine on lõppenud</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5457"/>
-<location filename="../mainwindow.cpp" line="5472"/>
-<location filename="../mainwindow.cpp" line="5495"/>
-<location filename="../mainwindow.cpp" line="9740"/>
+<location filename="../mainwindow.cpp" line="5451"/>
+<location filename="../mainwindow.cpp" line="5466"/>
+<location filename="../mainwindow.cpp" line="5489"/>
+<location filename="../mainwindow.cpp" line="9734"/>
 <source>Open &amp;settings</source>
 <translation>Avage &amp;seaded</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1724"/>
-<location filename="../mainwindow.cpp" line="11507"/>
+<location filename="../mainwindow.cpp" line="1718"/>
+<location filename="../mainwindow.cpp" line="11501"/>
 <source>leave</source>
 <translation>lahkuda</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6735"/>
+<location filename="../mainwindow.cpp" line="6729"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>Märkme krüptimiseks sisestage oma &lt;strong&gt; parool &lt;/strong&gt;. &lt;br/&gt; Pidage meeles, et märkme sisu lugemiseks on teil &lt;strong&gt; meeles &lt;/ strong&gt; oma salasõna &lt;br /&gt; ja &lt;strong&gt; saate seda teha &lt;strong&gt; ainult &lt;/strong&gt; ka rakenduses QOwnNotes &lt;/strong&gt;!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6808"/>
+<location filename="../mainwindow.cpp" line="6802"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>Märkme dekrüpteerige ja salvestage see lihttekstina</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6813"/>
+<location filename="../mainwindow.cpp" line="6807"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;Lahtikrüptimine</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6838"/>
+<location filename="../mainwindow.cpp" line="6832"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br/&gt;Saate oma krüptitud märkust redigeerida.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6907"/>
+<location filename="../mainwindow.cpp" line="6901"/>
 <source>Export current note as Markdown file</source>
 <translation>Ekspordi praegune märkus Markdown-failina</translation>
 </message>
@@ -4520,6 +4520,19 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 </message>
 </context>
 <context>
+<name>QHotkey</name>
+<message>
+<location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="294"/>
+<source>Failed to register %1. Error: %2</source>
+<translation type="unfinished">Failed to register %1. Error: %2</translation>
+</message>
+<message>
+<location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="314"/>
+<source>Failed to unregister %1. Error: %2</source>
+<translation type="unfinished">Failed to unregister %1. Error: %2</translation>
+</message>
+</context>
+<context>
 <name>QObject</name>
 <message>
 <location filename="../entities/notefolder.cpp" line="470"/>
@@ -4634,27 +4647,27 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 <translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
-<location filename="../utils/git.cpp" line="76"/>
+<location filename="../utils/git.cpp" line="79"/>
 <source>Command failed!</source>
 <translation>Käsk ebaõnnestus!</translation>
 </message>
 <message>
-<location filename="../utils/git.cpp" line="77"/>
+<location filename="../utils/git.cpp" line="80"/>
 <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
 <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4310"/>
 <source>New connection</source>
 <translation>Uus ühendus</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4511"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4510"/>
 <source>Login flow succeeded</source>
 <translation type="unfinished">Login flow succeeded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4512"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4511"/>
 <source>Username and password were set successfully!</source>
 <translation type="unfinished">Username and password were set successfully!</translation>
 </message>
@@ -5318,7 +5331,7 @@ Kas soovite selle ikkagi installida?</translation>
 <name>SettingsDialog</name>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="26"/>
-<location filename="../dialogs/settingsdialog.ui" line="4402"/>
+<location filename="../dialogs/settingsdialog.ui" line="4405"/>
 <source>Settings</source>
 <translation>Seadistused</translation>
 </message>
@@ -5410,7 +5423,7 @@ Kas soovite selle ikkagi installida?</translation>
 <location filename="../dialogs/settingsdialog.ui" line="1338"/>
 <location filename="../dialogs/settingsdialog.ui" line="1355"/>
 <location filename="../dialogs/settingsdialog.ui" line="1372"/>
-<location filename="../dialogs/settingsdialog.cpp" line="347"/>
+<location filename="../dialogs/settingsdialog.cpp" line="346"/>
 <source>unknown</source>
 <translation>tundmatu</translation>
 </message>
@@ -5568,12 +5581,12 @@ Kas soovite selle ikkagi installida?</translation>
 <translation>Üksuste suurused peaaknas</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5185"/>
+<location filename="../dialogs/settingsdialog.ui" line="5188"/>
 <source>Markdown highlighting</source>
 <translation>Markeri esiletõstmine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5194"/>
+<location filename="../dialogs/settingsdialog.ui" line="5197"/>
 <source>Enable markdown highlighting</source>
 <translation>Luba märgistuse esiletõstmine</translation>
 </message>
@@ -5598,14 +5611,14 @@ Kas soovite selle ikkagi installida?</translation>
 <translation>Otseteed</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4640"/>
-<location filename="../dialogs/settingsdialog.ui" line="4933"/>
+<location filename="../dialogs/settingsdialog.ui" line="4643"/>
+<location filename="../dialogs/settingsdialog.ui" line="4936"/>
 <source>Default font:</source>
 <translation>Vaike font:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4682"/>
-<location filename="../dialogs/settingsdialog.ui" line="4874"/>
+<location filename="../dialogs/settingsdialog.ui" line="4685"/>
+<location filename="../dialogs/settingsdialog.ui" line="4877"/>
 <source>Code font:</source>
 <translation>Koodi font:</translation>
 </message>
@@ -5625,7 +5638,7 @@ Kas soovite selle ikkagi installida?</translation>
 <translation>Eira kõiki välise märkmekausta muudatusi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4540"/>
+<location filename="../dialogs/settingsdialog.ui" line="4543"/>
 <source>Use GitHub line breaks</source>
 <translation>Kasutage GitHubi reavahetusi</translation>
 </message>
@@ -5733,8 +5746,8 @@ Kas soovite selle ikkagi installida?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4066"/>
-<location filename="../dialogs/settingsdialog.ui" line="5436"/>
-<location filename="../dialogs/settingsdialog.ui" line="5988"/>
+<location filename="../dialogs/settingsdialog.ui" line="5439"/>
+<location filename="../dialogs/settingsdialog.ui" line="5991"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>Kui te lähete kaugemale kui 10 sekundit, võib teil tekkida sünkroonimisprobleeme ownCloudi sünkroonimise vanemate versioonidega.
@@ -5756,32 +5769,32 @@ Pange end proovile, kui teil tekivad sünkroonimiskonfliktid, ja määrake siis 
 <translation>Teatage kõigist praeguse märkuse välistest muudatustest</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4431"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2336"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2344"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4381"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4386"/>
+<location filename="../dialogs/settingsdialog.ui" line="4434"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2335"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2343"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4380"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4385"/>
 <source>Database</source>
 <translation>Andmebaas</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4437"/>
+<location filename="../dialogs/settingsdialog.ui" line="4440"/>
 <source>Reinitialize Database</source>
 <translation>Andmebaasi taasalustamine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4370"/>
+<location filename="../dialogs/settingsdialog.ui" line="4373"/>
 <source>Clear application data and exit</source>
 <translation>Kustutage rakenduse andmed ja väljuge</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4376"/>
+<location filename="../dialogs/settingsdialog.ui" line="4379"/>
 <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
 <translation>Selle nupuga saate kustutada kõik sätted, eemaldada kohalik todo andmebaas ja väljuda QOwnNotes.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4386"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2410"/>
+<location filename="../dialogs/settingsdialog.ui" line="4389"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2409"/>
 <source>Clear app data and exit</source>
 <translation>Kustutage rakenduse andmed ja väljuge</translation>
 </message>
@@ -5791,18 +5804,18 @@ Pange end proovile, kui teil tekivad sünkroonimiskonfliktid, ja määrake siis 
 <translation>Värskendamise dialoog</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4330"/>
+<location filename="../dialogs/settingsdialog.ui" line="4333"/>
 <source>External editor</source>
 <translation>Väline toimetaja</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4343"/>
+<location filename="../dialogs/settingsdialog.ui" line="4346"/>
 <source>path to external editor, leave empty for default</source>
 <translation>tee välise redigeerija juurde, jätke vaikimisi tühjaks</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4353"/>
-<location filename="../dialogs/settingsdialog.ui" line="5515"/>
+<location filename="../dialogs/settingsdialog.ui" line="4356"/>
+<location filename="../dialogs/settingsdialog.ui" line="5518"/>
 <source>set external editor</source>
 <translation>seada väline toimetaja</translation>
 </message>
@@ -6375,61 +6388,61 @@ Pange end proovile, kui teil tekivad sünkroonimiskonfliktid, ja määrake siis 
 <translation>Sõnumikastid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4221"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4058"/>
+<location filename="../dialogs/settingsdialog.ui" line="4224"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4057"/>
 <source>Reset message boxes</source>
 <translation>Lähtestage sõnumikastid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4408"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4124"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4145"/>
+<location filename="../dialogs/settingsdialog.ui" line="4411"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4123"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4144"/>
 <source>Import settings</source>
 <translation>Seadete importimine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4415"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4090"/>
+<location filename="../dialogs/settingsdialog.ui" line="4418"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4089"/>
 <source>Export settings</source>
 <translation>Seadete eksportimine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4563"/>
+<location filename="../dialogs/settingsdialog.ui" line="4566"/>
 <source>Open issue assistant</source>
 <translation>Avatud numbri assistent</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4530"/>
+<location filename="../dialogs/settingsdialog.ui" line="4533"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Parim viis väljaannete postitamiseks on väljaandeabistaja kasutamine, vajutades nuppu &lt;span style = "font-weight: 600;"&gt; Ava väljaandeabiline &lt;/span&gt; alt. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4795"/>
+<location filename="../dialogs/settingsdialog.ui" line="4798"/>
 <source>Ignore code font size to allow zooming</source>
 <translation>Suumimise lubamiseks ignoreerige fondi suurust</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4789"/>
+<location filename="../dialogs/settingsdialog.ui" line="4792"/>
 <source>Rendering</source>
 <translation>Renderdamine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4809"/>
+<location filename="../dialogs/settingsdialog.ui" line="4812"/>
 <source>Enable underline rendering</source>
 <translation>Luba allajoonitud renderdamine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5222"/>
+<location filename="../dialogs/settingsdialog.ui" line="5225"/>
 <source>Fully highlight blockquotes</source>
 <translation>Tõstke täielikult välja jutumärgid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5279"/>
+<location filename="../dialogs/settingsdialog.ui" line="5282"/>
 <source>Note-edit cursor width:</source>
 <translation>Märkuse muutmise kursori laius:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5241"/>
+<location filename="../dialogs/settingsdialog.ui" line="5244"/>
 <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
 <translation>Luba režiim Vim (mõned QOwnNotes otseteed ei tööta)</translation>
 </message>
@@ -6570,606 +6583,611 @@ Pange end proovile, kui teil tekivad sünkroonimiskonfliktid, ja määrake siis 
 <translation>Viimati avatud märkus avatakse rakenduse käivitamisel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4251"/>
+<location filename="../dialogs/settingsdialog.ui" line="4221"/>
+<source>Forget all "Don't ask again" choices in message boxes</source>
+<translation type="unfinished">Forget all "Don't ask again" choices in message boxes</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="4254"/>
 <source>Note file extensions</source>
 <translation type="unfinished">Note file extensions</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4289"/>
+<location filename="../dialogs/settingsdialog.ui" line="4292"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
 <translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4299"/>
+<location filename="../dialogs/settingsdialog.ui" line="4302"/>
 <source>Add a new note file extension</source>
 <translation type="unfinished">Add a new note file extension</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4313"/>
+<location filename="../dialogs/settingsdialog.ui" line="4316"/>
 <source>Remove selected note file extension</source>
 <translation type="unfinished">Remove selected note file extension</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4444"/>
+<location filename="../dialogs/settingsdialog.ui" line="4447"/>
 <source>Checks the disk database integrity and fixes problems</source>
 <translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4447"/>
+<location filename="../dialogs/settingsdialog.ui" line="4450"/>
 <source>Check integrity</source>
 <translation type="unfinished">Check integrity</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4454"/>
+<location filename="../dialogs/settingsdialog.ui" line="4457"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
 <translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4537"/>
+<location filename="../dialogs/settingsdialog.ui" line="4540"/>
 <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>GitHub ei vaja reavahetuse tegemiseks rea lõpus kahte tühikut</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4560"/>
+<location filename="../dialogs/settingsdialog.ui" line="4563"/>
 <source>This is the best way to open an issue</source>
 <translation>See on parim viis teema avamiseks</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4574"/>
+<location filename="../dialogs/settingsdialog.ui" line="4577"/>
 <source>Please use this in the issue tracker</source>
 <translation>Kasutage seda väljaannete jälgimises</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4577"/>
+<location filename="../dialogs/settingsdialog.ui" line="4580"/>
 <source>&amp;Copy debug information to clipboard</source>
 <translation>&amp;Kopeeri silumisteave lõikelauale</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4588"/>
+<location filename="../dialogs/settingsdialog.ui" line="4591"/>
 <source>Please don't use this in the issue tracker</source>
 <translation>Ärge kasutage seda probleemide jälgimises</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4816"/>
+<location filename="../dialogs/settingsdialog.ui" line="4819"/>
 <source>Use editor highlighting styles also for the preview</source>
 <translation>Kasutage eelvaate jaoks redaktori esiletõstmise stiile</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4839"/>
+<location filename="../dialogs/settingsdialog.ui" line="4842"/>
 <source>Exporting</source>
 <translation>Eksportimine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4845"/>
+<location filename="../dialogs/settingsdialog.ui" line="4848"/>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
 <translation>Kasutage PDF-i eksportimiseks ja eelvaate printimiseks sisemist eksportimisstiili</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5153"/>
+<location filename="../dialogs/settingsdialog.ui" line="5156"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Võite proovida tutvuda kõigi saadaolevate &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;ajavormingutega&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5191"/>
+<location filename="../dialogs/settingsdialog.ui" line="5194"/>
 <source>Note that disabling this will also disable the navigation panel!</source>
 <translation type="unfinished">Note that disabling this will also disable the navigation panel!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5255"/>
+<location filename="../dialogs/settingsdialog.ui" line="5258"/>
 <source>Disable cursor blinking</source>
 <translation>Keela kursori vilkumine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5262"/>
+<location filename="../dialogs/settingsdialog.ui" line="5265"/>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>Eemaldage automaatselt märkme tekstist tühikud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5340"/>
+<location filename="../dialogs/settingsdialog.ui" line="5343"/>
 <source>Show line numbers</source>
 <translation type="unfinished">Show line numbers</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5350"/>
+<location filename="../dialogs/settingsdialog.ui" line="5353"/>
 <source>Tabs and Indents</source>
 <translation>Vahelehed ja taanded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5358"/>
+<location filename="../dialogs/settingsdialog.ui" line="5361"/>
 <source>Use tab character instead of spaces</source>
 <translation>Kasutage tühikute asemel tabulaatorimärki</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5365"/>
+<location filename="../dialogs/settingsdialog.ui" line="5368"/>
 <source>Indent:</source>
 <translation>Taane:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5745"/>
-<location filename="../dialogs/settingsdialog.ui" line="5754"/>
+<location filename="../dialogs/settingsdialog.ui" line="5748"/>
+<location filename="../dialogs/settingsdialog.ui" line="5757"/>
 <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>Märkme alamkaustade regulaarväljendused, mida ignoreerida, eraldatud tähega ";"
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5748"/>
+<location filename="../dialogs/settingsdialog.ui" line="5751"/>
 <source>Ignored subfolders</source>
 <translation>Eiratud alamkaustad
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5764"/>
+<location filename="../dialogs/settingsdialog.ui" line="5767"/>
 <source>Reset ignored subfolders</source>
 <translation>Lähtestage ignoreeritud alamkaustad
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5800"/>
+<location filename="../dialogs/settingsdialog.ui" line="5803"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
 <translation>Vratite otvorene kartice bilješki pri pokretanju aplikacije i kad se prebace bilješke</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5823"/>
+<location filename="../dialogs/settingsdialog.ui" line="5826"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
 <translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5892"/>
+<location filename="../dialogs/settingsdialog.ui" line="5895"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
 <translation>Peida märksõnadega märkmete arv (suurendab toimivust)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5928"/>
+<location filename="../dialogs/settingsdialog.ui" line="5931"/>
 <source>Show the number of matches in each note</source>
 <translation>Näidake vastete arvu igas märkuses</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6327"/>
+<location filename="../dialogs/settingsdialog.ui" line="6330"/>
 <source>Command snippets</source>
 <translation type="unfinished">Command snippets</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6336"/>
+<location filename="../dialogs/settingsdialog.ui" line="6339"/>
 <source>Tag name for commands notes</source>
 <translation type="unfinished">Tag name for commands notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6343"/>
+<location filename="../dialogs/settingsdialog.ui" line="6346"/>
 <source>Commands tag:</source>
 <translation type="unfinished">Commands tag:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6363"/>
+<location filename="../dialogs/settingsdialog.ui" line="6366"/>
 <source>Commands note name:</source>
 <translation type="unfinished">Commands note name:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6373"/>
+<location filename="../dialogs/settingsdialog.ui" line="6376"/>
 <source>Note name for adding new commands</source>
 <translation type="unfinished">Note name for adding new commands</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6413"/>
+<location filename="../dialogs/settingsdialog.ui" line="6416"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
 <translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6450"/>
+<location filename="../dialogs/settingsdialog.ui" line="6453"/>
 <source>QOwnNotes web application</source>
 <translation type="unfinished">QOwnNotes web application</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6540"/>
+<location filename="../dialogs/settingsdialog.ui" line="6543"/>
 <source>Server URL:</source>
 <translation type="unfinished">Server URL:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6597"/>
+<location filename="../dialogs/settingsdialog.ui" line="6600"/>
 <source>Show QR code</source>
 <translation type="unfinished">Show QR code</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6489"/>
+<location filename="../dialogs/settingsdialog.ui" line="6492"/>
 <source>Security token:</source>
 <translation type="unfinished">Security token:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6292"/>
+<location filename="../dialogs/settingsdialog.ui" line="6295"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
 <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6308"/>
+<location filename="../dialogs/settingsdialog.ui" line="6311"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
 <translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6350"/>
+<location filename="../dialogs/settingsdialog.ui" line="6353"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6547"/>
+<location filename="../dialogs/settingsdialog.ui" line="6550"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
 <translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6479"/>
+<location filename="../dialogs/settingsdialog.ui" line="6482"/>
 <source>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation type="unfinished">A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6557"/>
+<location filename="../dialogs/settingsdialog.ui" line="6560"/>
 <source>Copy security token to clipboard</source>
 <translation type="unfinished">Copy security token to clipboard</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6510"/>
+<location filename="../dialogs/settingsdialog.ui" line="6513"/>
 <source>Generate new security token</source>
 <translation type="unfinished">Generate new security token</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6571"/>
+<location filename="../dialogs/settingsdialog.ui" line="6574"/>
 <source>Reset the URL to default</source>
 <translation type="unfinished">Reset the URL to default</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6400"/>
+<location filename="../dialogs/settingsdialog.ui" line="6403"/>
 <source>QOwnNotes web application support</source>
 <translation type="unfinished">QOwnNotes web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6406"/>
+<location filename="../dialogs/settingsdialog.ui" line="6409"/>
 <source>Enable web application support</source>
 <translation type="unfinished">Enable web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5576"/>
+<location filename="../dialogs/settingsdialog.ui" line="5579"/>
 <source>Note list panel</source>
 <translation>Märkmete loendi paneel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5582"/>
+<location filename="../dialogs/settingsdialog.ui" line="5585"/>
 <source>Show notes in the note list with preview</source>
 <translation>Kuva märkmete loendis märkmeid eelvaatega</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5655"/>
+<location filename="../dialogs/settingsdialog.ui" line="5658"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
 <translation>Märkmete nimekirja asemel kasutage märkmepuud koos kõigi alamkaustadega (kui need on märkmete kausta jaoks sisse lülitatud)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5938"/>
+<location filename="../dialogs/settingsdialog.ui" line="5941"/>
 <source>Note folder panel</source>
 <translation>Märkmete kausta paneel
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5944"/>
+<location filename="../dialogs/settingsdialog.ui" line="5947"/>
 <source>Show note folders as buttons instead of in a select box</source>
 <translation>Kuva märkmekaustad nuppudena, mitte valikukastis</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6050"/>
+<location filename="../dialogs/settingsdialog.ui" line="6053"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
 <translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6086"/>
+<location filename="../dialogs/settingsdialog.ui" line="6089"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
 <translation>Paneele saab sisse ja välja lülitada peamenüüs &lt;i&gt; Aken / Paneelid &lt;/i&gt; ning saate ka erinevaid &lt;i&gt; tööruume &lt;/i&gt; konfigureerida paneeli erinevateks konfiguratsioonideks.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6163"/>
+<location filename="../dialogs/settingsdialog.ui" line="6166"/>
 <source>Bookmarks</source>
 <translation>Järjehoidjad</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6169"/>
-<location filename="../dialogs/settingsdialog.ui" line="6333"/>
+<location filename="../dialogs/settingsdialog.ui" line="6172"/>
+<location filename="../dialogs/settingsdialog.ui" line="6336"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
 <translation>Selle sildiga märkmeid kasutatakse järjehoidjate toomiseks</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6172"/>
+<location filename="../dialogs/settingsdialog.ui" line="6175"/>
 <source>Tag name for bookmarks notes</source>
 <translation>Järjehoidjate märkuste sildi nimi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6179"/>
+<location filename="../dialogs/settingsdialog.ui" line="6182"/>
 <source>Bookmarks tag:</source>
 <translation>Järjehoidjate silt:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6186"/>
+<location filename="../dialogs/settingsdialog.ui" line="6189"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>Vaikimisi kuvatakse brauserilaiendis kõik aktiivse märkuse lingid. Võite ka panna selle kuvama teatud sildiga märkmete spetsiaalsed järjehoidjate lingid. Lisateavet järjehoidja lingi süntaksi kohta klõpsake &lt;a href="%1"&gt; siin &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6199"/>
+<location filename="../dialogs/settingsdialog.ui" line="6202"/>
 <source>Bookmarks note name:</source>
 <translation>Järjehoidjate märkme nimi:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6206"/>
-<location filename="../dialogs/settingsdialog.ui" line="6370"/>
+<location filename="../dialogs/settingsdialog.ui" line="6209"/>
+<location filename="../dialogs/settingsdialog.ui" line="6373"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
 <translation>Seda märkust kasutatakse brauserilaiendist uute järjehoidjate lisamiseks</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6209"/>
+<location filename="../dialogs/settingsdialog.ui" line="6212"/>
 <source>Note name for adding new bookmarks</source>
 <translation>Märkme nimi uute järjehoidjate lisamiseks</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6219"/>
+<location filename="../dialogs/settingsdialog.ui" line="6222"/>
 <source>Web socket server</source>
 <translation>Veebipistiku server</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6225"/>
+<location filename="../dialogs/settingsdialog.ui" line="6228"/>
 <source>Socket server port:</source>
 <translation>Pistikupesa serveri port:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6245"/>
+<location filename="../dialogs/settingsdialog.ui" line="6248"/>
 <source>Reset the socket server port</source>
 <translation type="unfinished">Reset the socket server port</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6259"/>
-<location filename="../dialogs/settingsdialog.ui" line="6496"/>
+<location filename="../dialogs/settingsdialog.ui" line="6262"/>
+<location filename="../dialogs/settingsdialog.ui" line="6499"/>
 <source>Show security token</source>
 <translation>Kuva turvatunnus</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6279"/>
+<location filename="../dialogs/settingsdialog.ui" line="6282"/>
 <source>Web socket server support</source>
 <translation>Veebipistiku serveri tugi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6285"/>
+<location filename="../dialogs/settingsdialog.ui" line="6288"/>
 <source>Enable socket server</source>
 <translation>Luba pistikupesa server</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5784"/>
+<location filename="../dialogs/settingsdialog.ui" line="5787"/>
 <source>Note edit panel</source>
 <translation>Pange tähele redigeerimispaneeli</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5790"/>
+<location filename="../dialogs/settingsdialog.ui" line="5793"/>
 <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
 <translation>Kui see on keelatud, saate luua keerukamaid paneelipaigutusi, kuid akna suuruse muutmisel muudetakse kõigi paneelide suurust</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5793"/>
+<location filename="../dialogs/settingsdialog.ui" line="5796"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
 <translation>Kasutage märkmete redigeerimise paneeli kui fikseeritud keskmist vidinat, mille suurust saab muuta juhul, kui akna või muude paneelide suurus on muudetud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5915"/>
+<location filename="../dialogs/settingsdialog.ui" line="5918"/>
 <source>Note search panel</source>
 <translation>Märkmete otsingupaneel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5921"/>
+<location filename="../dialogs/settingsdialog.ui" line="5924"/>
 <source>Disable auto-completion of previous searches</source>
 <translation>Keela eelmiste otsingute automaatne lõpetamine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5810"/>
+<location filename="../dialogs/settingsdialog.ui" line="5813"/>
 <source>Navigation panel</source>
 <translation>Navigeerimispaneel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5816"/>
+<location filename="../dialogs/settingsdialog.ui" line="5819"/>
 <source>Hide navigation item search bar</source>
 <translation>Peida navigeerimise üksuse otsinguriba</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5958"/>
+<location filename="../dialogs/settingsdialog.ui" line="5961"/>
 <source>Local trash settings</source>
 <translation>Kohalikud prügikasti seaded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5992"/>
+<location filename="../dialogs/settingsdialog.ui" line="5995"/>
 <source>Remove trashed notes after:</source>
 <translation>Eemaldage prügikasti märkmed pärast:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5999"/>
+<location filename="../dialogs/settingsdialog.ui" line="6002"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
 <translation>päeva</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6018"/>
+<location filename="../dialogs/settingsdialog.ui" line="6021"/>
 <source>Automatically remove trashed notes after a certain time</source>
 <translation>Eemaldage prügikasti lisatud märkmed automaatselt teatud aja möödudes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6044"/>
+<location filename="../dialogs/settingsdialog.ui" line="6047"/>
 <source>Local trash support</source>
 <translation>Kohaliku prügikasti tugi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6067"/>
+<location filename="../dialogs/settingsdialog.ui" line="6070"/>
 <source>Layout selector</source>
 <translation>Paigutuse valija</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6073"/>
+<location filename="../dialogs/settingsdialog.ui" line="6076"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
 <translation>Siin saate määrata uue paigutuse. Pidage meeles, et paneelide asukohta saate alati muuta nupu &lt;i&gt; Vabasta paneelid &lt;/i&gt; abil.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5303"/>
+<location filename="../dialogs/settingsdialog.ui" line="5306"/>
 <source>Reset the cursor width</source>
 <translation>Lähtestage kursori laius</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5450"/>
+<location filename="../dialogs/settingsdialog.ui" line="5453"/>
 <source>External git log command to show the git versions of a note</source>
 <translation>Väline git logi käsk märkuse git versioonide kuvamiseks</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5456"/>
+<location filename="../dialogs/settingsdialog.ui" line="5459"/>
 <source>Enter a command to be used to show a git log (like for example "gitk")</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Sisestage käsk, mida kasutatakse git logi kuvamiseks (nagu näiteks "gitk")</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5476"/>
+<location filename="../dialogs/settingsdialog.ui" line="5479"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Kui kasutate seda sätet, saate uue menüükirje git versioonide kuvamiseks, kui paremklõpsake märkust.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5596"/>
+<location filename="../dialogs/settingsdialog.ui" line="5599"/>
 <source>Show all notes of a tag including the notes of their children-tags</source>
 <translation>Näita kõiki sildi märkmeid, sealhulgas nende laste siltide märkmeid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5589"/>
+<location filename="../dialogs/settingsdialog.ui" line="5592"/>
 <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
 <translation>Kuva kõik kausta märkused koos alamkaustadega (töötab ainult siis, kui alamkaustad on sisse lülitatud)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5248"/>
+<location filename="../dialogs/settingsdialog.ui" line="5251"/>
 <source>Highlight the current line</source>
 <translation>Tõstke esile praegune rida</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5543"/>
+<location filename="../dialogs/settingsdialog.ui" line="5546"/>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Ärge unustage lubada märkmekaustadele giti tugi ja konfigureerida oma giti kliendi nimi ja e-posti aadress, näiteks järgmiste terminali käskude abil:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5833"/>
+<location filename="../dialogs/settingsdialog.ui" line="5836"/>
 <source>Tags panel</source>
 <translation>Sildide paneel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5629"/>
-<location filename="../dialogs/settingsdialog.ui" line="5708"/>
-<location filename="../dialogs/settingsdialog.ui" line="5862"/>
+<location filename="../dialogs/settingsdialog.ui" line="5632"/>
+<location filename="../dialogs/settingsdialog.ui" line="5711"/>
+<location filename="../dialogs/settingsdialog.ui" line="5865"/>
 <source>Order</source>
 <translation>Telli</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5638"/>
-<location filename="../dialogs/settingsdialog.ui" line="5714"/>
-<location filename="../dialogs/settingsdialog.ui" line="5868"/>
+<location filename="../dialogs/settingsdialog.ui" line="5641"/>
+<location filename="../dialogs/settingsdialog.ui" line="5717"/>
+<location filename="../dialogs/settingsdialog.ui" line="5871"/>
 <source>Ascending</source>
 <translation>Tõusev</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5645"/>
-<location filename="../dialogs/settingsdialog.ui" line="5721"/>
-<location filename="../dialogs/settingsdialog.ui" line="5875"/>
+<location filename="../dialogs/settingsdialog.ui" line="5648"/>
+<location filename="../dialogs/settingsdialog.ui" line="5724"/>
+<location filename="../dialogs/settingsdialog.ui" line="5878"/>
 <source>Descending</source>
 <translation>Laskudes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5603"/>
-<location filename="../dialogs/settingsdialog.ui" line="5678"/>
-<location filename="../dialogs/settingsdialog.ui" line="5839"/>
+<location filename="../dialogs/settingsdialog.ui" line="5606"/>
+<location filename="../dialogs/settingsdialog.ui" line="5681"/>
+<location filename="../dialogs/settingsdialog.ui" line="5842"/>
 <source>Sort</source>
 <translation>Sorteeri</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5289"/>
+<location filename="../dialogs/settingsdialog.ui" line="5292"/>
 <source>Only use editor width setting in distraction free mode</source>
 <translation>Kasutage toimetaja laiuse seadistust ainult häireteta režiimis</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5609"/>
-<location filename="../dialogs/settingsdialog.ui" line="5684"/>
-<location filename="../dialogs/settingsdialog.ui" line="5845"/>
+<location filename="../dialogs/settingsdialog.ui" line="5612"/>
+<location filename="../dialogs/settingsdialog.ui" line="5687"/>
+<location filename="../dialogs/settingsdialog.ui" line="5848"/>
 <source>Alphabetical</source>
 <translation>Tähestikuline</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5852"/>
+<location filename="../dialogs/settingsdialog.ui" line="5855"/>
 <source>By last change / use</source>
 <translation>Viimase muudatuse / kasutamise järgi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5885"/>
+<location filename="../dialogs/settingsdialog.ui" line="5888"/>
 <source>Hide 'Find or create tag' search</source>
 <translation>Peida otsing 'otsi või loo silt'</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5665"/>
+<location filename="../dialogs/settingsdialog.ui" line="5668"/>
 <source>Note subfolders panel</source>
 <translation>Märkus alamkaustade paneel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5671"/>
+<location filename="../dialogs/settingsdialog.ui" line="5674"/>
 <source>Show with full path</source>
 <translation>Saade kogu teega</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5616"/>
-<location filename="../dialogs/settingsdialog.ui" line="5691"/>
+<location filename="../dialogs/settingsdialog.ui" line="5619"/>
+<location filename="../dialogs/settingsdialog.ui" line="5694"/>
 <source>By last change</source>
 <translation>Viimase muudatuse järgi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5701"/>
+<location filename="../dialogs/settingsdialog.ui" line="5704"/>
 <source>Show root folder name</source>
 <translation>Näita juurkausta nime</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5731"/>
+<location filename="../dialogs/settingsdialog.ui" line="5734"/>
 <source>Hide 'Find or create note subfolder' search</source>
 <translation>Peida otsing 'Märkme alamkausta otsimine või loomine'</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5738"/>
+<location filename="../dialogs/settingsdialog.ui" line="5741"/>
 <source>Display note subfolders as full tree</source>
 <translation>Kuva märkmete alamkaustad täispuuna</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2952"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2951"/>
 <source>Search script repository</source>
 <translation>Skriptide hoidlast otsimine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5466"/>
+<location filename="../dialogs/settingsdialog.ui" line="5469"/>
 <source>You optionally can use "%notePath%" for the path of the note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Võite märkme teekonna jaoks kasutada ka teksti "%notePath%".</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5489"/>
+<location filename="../dialogs/settingsdialog.ui" line="5492"/>
 <source>Git client</source>
 <translation>Git klient</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5505"/>
+<location filename="../dialogs/settingsdialog.ui" line="5508"/>
 <source>Path to git executable:</source>
 <translation>Tee täitmisele pööramiseks:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5495"/>
+<location filename="../dialogs/settingsdialog.ui" line="5498"/>
 <source>Path to git client, leave empty for default</source>
 <translation>Tee kliendi juurde võtmiseks, jätke vaikimisi tühjaks</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5414"/>
+<location filename="../dialogs/settingsdialog.ui" line="5417"/>
 <source>Commit interval</source>
 <translation>Siduvuse intervall</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5420"/>
+<location filename="../dialogs/settingsdialog.ui" line="5423"/>
 <source>sec</source>
 <extracomment>seconds</extracomment>
 <translation>sek</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5440"/>
+<location filename="../dialogs/settingsdialog.ui" line="5443"/>
 <source>git commit interval time [sec]</source>
 <translation>git toimetamisaeg [sek]</translation>
 </message>
@@ -7314,72 +7332,72 @@ Pange end proovile, kui teil tekivad sünkroonimiskonfliktid, ja määrake siis 
 <translation>Kursori asukoha taastamine märkme avamisel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4977"/>
+<location filename="../dialogs/settingsdialog.ui" line="4980"/>
 <source>Apply toolbar configuration</source>
 <translation>Rakenda tööriistariba konfiguratsioon</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4991"/>
+<location filename="../dialogs/settingsdialog.ui" line="4994"/>
 <source>Reset toolbars</source>
 <translation>Lähtestage tööriistaribad</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5019"/>
+<location filename="../dialogs/settingsdialog.ui" line="5022"/>
 <source>Enable logging to file</source>
 <translation>Luba faili logimine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5026"/>
+<location filename="../dialogs/settingsdialog.ui" line="5029"/>
 <source>Clear log file</source>
 <translation>Kustuta logifail</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5037"/>
+<location filename="../dialogs/settingsdialog.ui" line="5040"/>
 <source>Fake old version number to trigger update</source>
 <translation>Võltsitud vana versiooni number värskenduse käivitamiseks</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5065"/>
+<location filename="../dialogs/settingsdialog.ui" line="5068"/>
 <source>Log file path:</source>
 <translation>Logifaili tee:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5127"/>
+<location filename="../dialogs/settingsdialog.ui" line="5130"/>
 <source>Here you can set your own time format for inserting the current time into a note.</source>
 <translation>Siin saate määrata kellaaja märkusesse sisestamiseks oma ajavormingu.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5130"/>
+<location filename="../dialogs/settingsdialog.ui" line="5133"/>
 <source>Insert current time</source>
 <translation>Sisestage praegune kellaaeg</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5136"/>
+<location filename="../dialogs/settingsdialog.ui" line="5139"/>
 <source>Time format:</source>
 <translation>Ajavorming:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5143"/>
+<location filename="../dialogs/settingsdialog.ui" line="5146"/>
 <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
 <translation>Sisestage oma kohandatud ajavorming, näiteks "pp.kM.aayy hh:mm"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5235"/>
+<location filename="../dialogs/settingsdialog.ui" line="5238"/>
 <source>Editor options</source>
 <translation>Redaktori valikud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5296"/>
+<location filename="../dialogs/settingsdialog.ui" line="5299"/>
 <source>Enable automatic closing of brackets and markdown formatting characters</source>
 <translation>Sulgude ja märgistuse vormindamise märkide automaatse sulgemise lubamine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5330"/>
+<location filename="../dialogs/settingsdialog.ui" line="5333"/>
 <source>You have to use the backspace key to remove the opening character</source>
 <translation>Avatähe eemaldamiseks peate kasutama tagasilükkeklahvi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5333"/>
+<location filename="../dialogs/settingsdialog.ui" line="5336"/>
 <source>Enable automatic removal of matching closing characters</source>
 <translation>Luba sobivate sulgevate tähemärkide automaatne eemaldamine</translation>
 </message>
@@ -7450,7 +7468,7 @@ Pange end proovile, kui teil tekivad sünkroonimiskonfliktid, ja määrake siis 
 <translation>Lähtestage üksuse kõrgus</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4802"/>
+<location filename="../dialogs/settingsdialog.ui" line="4805"/>
 <source>View text right to left (RTL)</source>
 <translation>Teksti kuvamine paremalt vasakule (RTL)</translation>
 </message>
@@ -7520,7 +7538,7 @@ Pange end proovile, kui teil tekivad sünkroonimiskonfliktid, ja määrake siis 
 <translation>Lubage korraga ainult üks rakenduse eksemplar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4336"/>
+<location filename="../dialogs/settingsdialog.ui" line="4339"/>
 <source>Path to external editor:</source>
 <translation>Tee välise redigeerija juurde:</translation>
 </message>
@@ -7530,24 +7548,24 @@ Pange end proovile, kui teil tekivad sünkroonimiskonfliktid, ja määrake siis 
 <translation>Ära kuva värskenduste dialoogi automaatselt</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4634"/>
-<location filename="../dialogs/settingsdialog.ui" line="4861"/>
+<location filename="../dialogs/settingsdialog.ui" line="4637"/>
+<location filename="../dialogs/settingsdialog.ui" line="4864"/>
 <source>Fonts</source>
 <translation>Fondid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4657"/>
-<location filename="../dialogs/settingsdialog.ui" line="4699"/>
-<location filename="../dialogs/settingsdialog.ui" line="4884"/>
-<location filename="../dialogs/settingsdialog.ui" line="4912"/>
+<location filename="../dialogs/settingsdialog.ui" line="4660"/>
+<location filename="../dialogs/settingsdialog.ui" line="4702"/>
+<location filename="../dialogs/settingsdialog.ui" line="4887"/>
+<location filename="../dialogs/settingsdialog.ui" line="4915"/>
 <source>Set a new font</source>
 <translation>Seadke uus font</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4668"/>
-<location filename="../dialogs/settingsdialog.ui" line="4713"/>
-<location filename="../dialogs/settingsdialog.ui" line="4898"/>
-<location filename="../dialogs/settingsdialog.ui" line="4943"/>
+<location filename="../dialogs/settingsdialog.ui" line="4671"/>
+<location filename="../dialogs/settingsdialog.ui" line="4716"/>
+<location filename="../dialogs/settingsdialog.ui" line="4901"/>
+<location filename="../dialogs/settingsdialog.ui" line="4946"/>
 <source>Reset font</source>
 <translation>Lähtesta font</translation>
 </message>
@@ -7557,59 +7575,59 @@ Pange end proovile, kui teil tekivad sünkroonimiskonfliktid, ja määrake siis 
 <translation>Silumine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4498"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2355"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4360"/>
+<location filename="../dialogs/settingsdialog.ui" line="4501"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2354"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4359"/>
 <source>Debug information</source>
 <translation>Silumisinfo</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4504"/>
+<location filename="../dialogs/settingsdialog.ui" line="4507"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Saate &lt;span style = "font-weight: 600;"&gt; kopeerida ja kleepida &lt;/span&gt; seda teksti (või selle osi) &lt;span style = "font-weight: 600;"&gt; väljastamine &lt;/span&gt; &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; lehel QOwnNotes väljaanded &lt;/a&gt;, kui teil on &lt;span style = "font-weight: 600;"&gt; küsimused või mured &lt;/span&gt; QOwnNotes'iga. Sellesse teabe on peidetud liiga tundlikud andmed. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4591"/>
+<location filename="../dialogs/settingsdialog.ui" line="4594"/>
 <source>&amp;Save debug information</source>
 <translation>&amp;Salvestage silumisteave</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="517"/>
+<location filename="../dialogs/settingsdialog.cpp" line="516"/>
 <source>hostname of proxy server</source>
 <translation>puhverserveri hostinimi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="518"/>
+<location filename="../dialogs/settingsdialog.cpp" line="517"/>
 <source>username for proxy server</source>
 <translation>puhverserveri kasutajanimi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="519"/>
+<location filename="../dialogs/settingsdialog.cpp" line="518"/>
 <source>password for proxy server</source>
 <translation>puhverserveri parool</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="521"/>
+<location filename="../dialogs/settingsdialog.cpp" line="520"/>
 <source>HTTP(S) proxy</source>
 <translation>HTTP(S) puhverserver</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="522"/>
+<location filename="../dialogs/settingsdialog.cpp" line="521"/>
 <source>SOCKS5 proxy</source>
 <translation>SOCKS5 puhverserver</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1535"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1534"/>
 <source>Automatic (needs restart)</source>
 <translation>Automaatne (vajab taaskäivitamist)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1849"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1848"/>
 <source>Shortcut already assigned</source>
 <translation>Otsetee on juba määratud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2052"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2051"/>
 <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -7618,7 +7636,7 @@ Serveri versioon: %1
 QOwnNotesAPI versioon: %2</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2065"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2064"/>
 <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -7629,347 +7647,347 @@ Samuti peab teil olema installitud ja lubatud rakendus QOwnNotesAPI!
 Ühenduse tõrketeade:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2345"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2344"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
 <translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2356"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2355"/>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Ärge kasutage seda probleemide jälgimises, kopeerige silumise teabe tekst otse väljaandesse.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2363"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2362"/>
 <source>Markdown files</source>
 <translation>Markdown-failid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2391"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2390"/>
 <source>Disable usage tracking</source>
 <translation>Keela kasutamise jälgimine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2392"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2391"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Anonüümsed kasutusandmed aitavad otsustada, milliseid QOwnNotes osi järgmisena parendada ning vigu leida ja parandada. &lt;br/&gt; Keelake see ainult siis, kui te tõesti ei saa sellega elada. &lt;br/&gt; &lt;br/&gt; Keelake kasutamise jälgimine tõesti?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2625"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2624"/>
 <source>new folder</source>
 <translation>uus kaust</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2659"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2658"/>
 <source>Remove note folder</source>
 <translation>Eemaldage märkmete kaust</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2660"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2659"/>
 <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Kas eemaldada praegune märkmete kaust &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2741"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2740"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>Valige kaust, kuhu teie märkmed salvestatakse</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2776"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2775"/>
 <source>Loading folders from server</source>
 <translation>Kaustade laadimine serverist</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2791"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2790"/>
 <source>No more folders were found in the current folder</source>
 <translation>Aktiivsest kaustast rohkem kaustu ei leitud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2864"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2863"/>
 <source>Loading folders in '%1' from server</source>
 <translation>Kaustade laadimine serverist '%1'</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2937"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2936"/>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
 <translation>Kiireks alustamiseks vaadake &lt;a href="%1"&gt; skriptimisdokumentatsiooni &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2941"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2940"/>
 <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
 <translation>Kui teil on vaja juurdepääsu QOwnNotes teatud funktsioonidele, avage probleem &lt;a href="%1"&gt; QOwnNotes väljaande lehel &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2963"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2962"/>
 <source>Check for script updates</source>
 <translation>Kontrollige skriptide värskendusi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2970"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2969"/>
 <source>Add local script</source>
 <translation>Lisage kohalik skript</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2974"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2973"/>
 <source>Add an existing, local script</source>
 <translation>Lisage olemasolev kohalik skript</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3319"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3318"/>
 <source>Please enter a new note file extension:</source>
 <translation type="unfinished">Please enter a new note file extension:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3353"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3352"/>
 <source>Markdown file</source>
 <translation type="unfinished">Markdown file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3355"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3354"/>
 <source>Plain text file</source>
 <translation type="unfinished">Plain text file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3373"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3372"/>
 <source>Remove note file extension</source>
 <translation type="unfinished">Remove note file extension</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4089"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4144"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4088"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4143"/>
 <source>INI files</source>
 <translation>INI failid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4125"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4124"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>Kas soovite tõesti seadeid importida? Teie praegused seaded eemaldatakse ja mitte kõiki seadeid ei pruugita taastada, näiteks märkmekausta sätted ja skriptid, mida kasutasite. Samuti peate kohandama mõnda seadet, eriti platvormide vahel, kuid teie märkmed jäävad puutumatuks!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4132"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4131"/>
 <source>The application will be restarted after the import.</source>
 <translation>Pärast importimist taaskäivitatakse rakendus.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4361"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4360"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>Silumisteave kopeeriti lõikelauale.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4382"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4381"/>
 <source>The integrity of the disk database is valid.</source>
 <translation type="unfinished">The integrity of the disk database is valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4387"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4386"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation type="unfinished">The integrity of the disk database is not valid!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2957"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2956"/>
 <source>Find a script in the script repository</source>
 <translation>Skripti otsimine skriptide hoidlast</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="300"/>
+<location filename="../dialogs/settingsdialog.cpp" line="299"/>
 <source>Menu bar</source>
 <translation>Menüüriba</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="301"/>
+<location filename="../dialogs/settingsdialog.cpp" line="300"/>
 <source>Show menu bar item</source>
 <translation>Kuva menüüriba üksus</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1722"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1774"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1721"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1773"/>
 <source>Undefined shortcut</source>
 <translation>Määratlematu otsetee
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1726"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1778"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1725"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1777"/>
 <source>Assign a new shortcut</source>
 <translation>Määrake uus otsetee
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1727"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1779"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1726"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1778"/>
 <source>Reset to default shortcut</source>
 <translation>Lähtestage vaikeseade
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1745"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1744"/>
 <source>Clear shortcut</source>
 <translation>Kustuta otsetee</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1850"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1849"/>
 <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
 <translation>Otsetee &lt;strong&gt;%1 &lt;/strong&gt; on juba määratud jaotisele &lt;strong&gt;%2 &lt;/strong&gt;! Kas soovite hüpata otseteele?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3050"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3049"/>
 <source>Remove script</source>
 <translation>Skripti eemaldamine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3051"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3050"/>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Kas eemaldada praegune skript &lt;strong&gt;%1 &lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3101"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3100"/>
 <source>QML files</source>
 <translation>QML-failid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3102"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3101"/>
 <source>Please select your QML file</source>
 <translation>Valige oma QML-fail</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3192"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3191"/>
 <source>Open repository</source>
 <translation>Ava hoidla</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3250"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3249"/>
 <source>Your script seems to be valid</source>
 <translation>Tundub, et teie skript on kehtiv</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3251"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3250"/>
 <source>There were script errors:
 %1</source>
 <translation>Skriptivead olid:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3319"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3318"/>
 <source>File extension</source>
 <translation>Faililaiend</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3374"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3373"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
 <translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3664"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3663"/>
 <source>Calendar cache emptied</source>
 <translation>Kalendri vahemälu on tühjendatud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3665"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3664"/>
 <source>Your calendar cache was emptied.</source>
 <translation>Teie kalendri vahemälu tühjendati.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3746"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3745"/>
 <source>Reset toolbars and exit</source>
 <translation>Lähtestage tööriistaribad ja väljuge</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3747"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3746"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>Kas soovite tõesti kõik tööriistaribad lähtestada? Rakendus suletakse protsessis, vaikimisi tööriistaribad taastatakse uuesti käivitamisel.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3751"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3750"/>
 <source>Reset and &amp;exit</source>
 <translation>Lähtestamine ja &amp;väljumine</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3909"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3908"/>
 <source>Log file cleared</source>
 <translation>Logifail on kustutatud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3910"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3909"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Logifail &lt;strong&gt;%1 &lt;/strong&gt; kustutati.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3946"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3945"/>
 <source>Executable files</source>
 <translation>Käivitatavad failid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3947"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3949"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3946"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3948"/>
 <source>All files</source>
 <translation>Kõik failid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3957"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3956"/>
 <source>Please select the path of your git executable</source>
 <translation>Valige oma git-i käivitatava tee asukoht</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4059"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4058"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>Kas soovite tõesti lähtestada kõigi sõnumikastide alistused?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="108"/>
+<location filename="../dialogs/settingsdialog.cpp" line="107"/>
 <source>New script</source>
 <translation>Uus skript</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="112"/>
+<location filename="../dialogs/settingsdialog.cpp" line="111"/>
 <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
 <translation>Saate oma Git-kliendi alla laadida siit: &lt;a href="%url"&gt; Git Windowsi jaoks &lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="472"/>
+<location filename="../dialogs/settingsdialog.cpp" line="471"/>
 <source>enabled</source>
 <translation>lubatud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="472"/>
+<location filename="../dialogs/settingsdialog.cpp" line="471"/>
 <source>disabled</source>
 <translation>puudega</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="474"/>
+<location filename="../dialogs/settingsdialog.cpp" line="473"/>
 <source>Portable mode is currently:</source>
 <translation>Kaasaskantav režiim on praegu:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="477"/>
+<location filename="../dialogs/settingsdialog.cpp" line="476"/>
 <source>In portable mode</source>
 <translation>Kaasaskantavas režiimis</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="478"/>
+<location filename="../dialogs/settingsdialog.cpp" line="477"/>
 <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>sisemine sqlite andmebaas ja sätted salvestatakse kausta &lt;code&gt; Data &lt;/code&gt; binaari asukohas</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="481"/>
+<location filename="../dialogs/settingsdialog.cpp" line="480"/>
 <source>the settings will be stored in an ini file</source>
 <translation>sätted salvestatakse ini-faili</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="483"/>
+<location filename="../dialogs/settingsdialog.cpp" line="482"/>
 <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
 <translation>märkmete kaustad, skriptide teed ja välise redigeerija tee salvestatakse automaatselt kausta &lt;code&gt; Data &lt;/code&gt; suhtes, nii et õiged märkmete kaustad, skriptid ja väline redaktor laaditakse olenemata sellest, kus teie QOwnNotes install praegu asub</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="493"/>
+<location filename="../dialogs/settingsdialog.cpp" line="492"/>
 <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
 <translation>See aktiveeritakse, kui käivitate QOwnNotes parameetriga &lt;code&gt; --portable &lt;/code&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2364"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2363"/>
 <source>Save debug information</source>
 <translation>Salvestage silumisteave</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2411"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2410"/>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -7978,34 +7996,34 @@ Your notes will stay intact!</source>
 Teie märkmed jäävad puutumatuks!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2414"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2413"/>
 <source>Clear and &amp;exit</source>
 <translation>Tühjendage ja &amp;väljuge</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2340"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2414"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3751"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2339"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2413"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3750"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Tühista</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="499"/>
+<location filename="../dialogs/settingsdialog.cpp" line="498"/>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>QOwnNotes käivitamiseks kaasaskantavas režiimis leiate oma vabastamisteelt &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2337"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2336"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Kas soovite tõesti kohaliku andmebaasi tühjendada? See eemaldab ka teie konfigureeritud märkmekaustad ja vahemällu salvestatud todo-üksused!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2340"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2339"/>
 <source>Clear &amp;database</source>
 <translation>Kustuta &amp;andmebaas</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2531"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2530"/>
 <source>Select editor application</source>
 <translation>Valige redaktorirakendus</translation>
 </message>

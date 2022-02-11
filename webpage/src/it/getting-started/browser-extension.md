@@ -4,7 +4,7 @@ image: /img/bookmarks.png
 
 # Estensione del browser QOwnNotes Web Companion
 
-Allows for clipping from a browser page and managing browser bookmarks across browsers and operating systems.
+Consente di ritagliare da una pagina del browser e gestire i segnalibri del browser su diversi browser e sistemi operativi.
 
 ::: tip
 Info
@@ -18,10 +18,10 @@ Info
     - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
     - [Pagina delle Estensioni Firefox](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
     - Puoi trovare l'estensione anche su [GitHub](https://github.com/qownnotes/web-companion/).
-2. Add the Security Token to configure the extension.
-    - The first time you click on the QOwnNotes browser extension icon you will receive a dialog box with a security token. Copy the token.
-    - Go to your browser's extension management location. Click into the QOwnNotes extension details.
-    - Paste the token into the Security Token field.
+2. Aggiungi il token di sicurezza per configurare l'estensione.
+    - La prima volta che clicchi sull'icona dell'estensione del browser di QOwnNotes, vedrai una finestra di dialogo col token di sicurezza. Copialo.
+    - Vai alla gestione delle tue estensioni del browser. Clicca sui dettagli dell'estensione QOwnNotes.
+    - Incolla il token nel campo del token di sicurezza.
 
 ## Strumento di ritaglio web
 

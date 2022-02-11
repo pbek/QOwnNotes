@@ -171,7 +171,7 @@
 
 ### Nell'elenco delle note
 
-- double-click on note to open note in a new tab (keep in mind that there is a scripting hook that can override the double-click action)
+- doppio clic su una nota per aprirla in un nuovo tab (ricorda che ci può essere un collegamento cogli script che sovrascrive l'azione di doppio clic)
 - <kbd>⌘ Cmd</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
 - <kbd>Tab</kbd> o <kbd>Invio</kbd> consente di modificare la nota corrente
 
@@ -200,10 +200,10 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> strikes out the selected text
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
 - <kbd>Tab</kbd> fa rientrare il testo selezionato (funziona anche su più righe)
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> annulla il rientro del testo selezionato
 - <kbd>Tab</kbd> dopo un carattere di elenco non ordinato fa rientrare l'elemento dell'elenco
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
-- <kbd>Return</kbd> negli elenchi crea un nuovo elemento dell'elenco
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> dopo un carattere di elenco non ordinato annulla il rientro della voce dell'elenco
+- <kbd>Invio</kbd> negli elenchi crea un nuovo elemento dell'elenco
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history
     - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9

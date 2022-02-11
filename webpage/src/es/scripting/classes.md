@@ -53,24 +53,36 @@ class NoteSubFolderApi {
     Q_PROPERTY(QString name)
     Q_PROPERTY(QQmlListProperty<NoteApi> notes)
     Q_INVOKABLE static NoteSubFolderApi *fetchNoteSubFolderById(int id);
+    Q_INVOKABLE static NoteSubFolderApi *activeNoteSubFolder();
     Q_INVOKABLE static QList<QObject*> fetchNoteSubFoldersByParentId(int parentId);
+    Q_INVOKABLE QString relativePath() const;
+    Q_INVOKABLE QString fullPath() const;
 };
 ```
 
 ### Ejemplo
 ```js
-script.log (noteSubFolder.id);
-script.log (noteSubFolder.name);
+var noteSubFolderQmlObj = Qt.createQmlObject("import QOwnNotesTypes 1.0; NoteSubFolder{}", mainWindow, "noteSubFolder");
 
-// iterar a través de notas en la subcarpeta de notas
-para (var idx en noteSubFolder.notes) {
-     var note = noteSubFolder.notes [idx];
-}
-
-// imprime todos los nombres de las subcarpetas
-noteSubFolder.fetchNoteSubFoldersByParentId (parentId).forEach (function (nsf) {
-     script.log (nsf.name);
+// print all subfolder names
+noteSubFolderQmlObj.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
+    script.log(nsf.name);
 });
+
+// get the active note subfolder
+var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
+
+// print the full and relative path of the active note subfolder
+script.log(noteSubFolder.fullPath());
+script.log(noteSubFolder.relativePath());
+
+script.log(noteSubFolder.id);
+script.log(noteSubFolder.name);
+
+// iterate through notes in note subfolder
+for (var idx in noteSubFolder.notes) {
+    var note = noteSubFolder.notes[idx];
+}
 ```
 
 Etiqueta

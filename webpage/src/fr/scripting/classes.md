@@ -53,24 +53,36 @@ class NoteSubFolderApi {
     Q_PROPERTY(QString name)
     Q_PROPERTY(QQmlListProperty<NoteApi> notes)
     Q_INVOKABLE static NoteSubFolderApi *fetchNoteSubFolderById(int id);
+    Q_INVOKABLE static NoteSubFolderApi *activeNoteSubFolder();
     Q_INVOKABLE static QList<QObject*> fetchNoteSubFoldersByParentId(int parentId);
+    Q_INVOKABLE QString relativePath() const;
+    Q_INVOKABLE QString fullPath() const;
 };
 ```
 
 ### Exemple
 ```js
+var noteSubFolderQmlObj = Qt.createQmlObject("import QOwnNotesTypes 1.0; NoteSubFolder{}", mainWindow, "noteSubFolder");
+
+// imprimer tous les noms de sous-dossiers
+noteSubFolderQmlObj.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
+    script.log(nsf.name);
+});
+
+// obtenir le sous-dossier de la note active
+var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
+
+// imprimer l'intégralité du chemin relatif du sous-dossier de la note active
+script.log(noteSubFolder.fullPath());
+script.log(noteSubFolder.relativePath());
+
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// itérer à travers les notes dans un sous-dossier de notes
+// itérer en suivant les notes dans le sous-dossier de notes
 for (var idx in noteSubFolder.notes) {
     var note = noteSubFolder.notes[idx];
 }
-
-// imprime les noms de tous les sous-dossiers
-noteSubFolder.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
-    script.log(nsf.name);
-});
 ```
 
 Tag

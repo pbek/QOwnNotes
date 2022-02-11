@@ -263,7 +263,7 @@ function noteTaggingHook (note, action, tagName, newTagName);
 -   dès qu'un script est activé qui implémente la nouvelle fonction `noteTaggingHook` le marquage des notes sera géré par cette fonction
 -   les fonctionnalités suivantes doivent fonctionner via l'interface utilisateur QOwnNotes
     -   importation initiale de balises telles que `@tag` à partir de vos notes et écrasement de votre attribution de balise actuelle
-        -   you will not lose your tags tree, just the former assignment to notes
+        -   vous ne perdrez pas votre arbre de balises, juste l'ancienne affectation aux notes
         -   vous pouvez toujours déplacer des balises dans d'autres balises
         -   si plus d'une balise porte le même nom dans votre arborescence de balises, le premier hit sera attribué
     -   l'ajout d'une balise à une note ajoutera la balise au texte de la note

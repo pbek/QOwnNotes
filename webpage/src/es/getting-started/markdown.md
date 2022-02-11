@@ -335,7 +335,7 @@ Puede marcar / desmarcar las casillas de verificación en la vista previa.
 
 ## Frontmatter
 
-En QOwnNotes puede usar un frontmatter (por ejemplo, YAML) para agregar algo de metainformación adicional. **No se mostrará en la vista previa** y **no perturbará la generación automática de nombres de archivo de notas**.
+En QOwnNotes puede usar un frontmatter (por ejemplo, YAML) para agregar algo de metainformación adicional. **No se mostrará en la previsualización** ni **perturbará la generación automática de nombres de archivo para las notas**.
 
 ```markdown
 ---

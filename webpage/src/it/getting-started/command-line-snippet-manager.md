@@ -8,7 +8,7 @@ You can use **notes with a special tag** to store **command snippets**, which yo
 
 ![commands](/img/commands.png)
 
-## Installation
+## Installazione
 
 Visit the [latest release page](https://github.com/qownnotes/qc/releases/latest) and download the version you need.
 
@@ -26,7 +26,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 ```
 :::
 
-## Dependencies
+## Dipendenze
 
 [fzf](https://github.com/junegunn/fzf) (fuzzy search) or [peco](https://github.com/peco/peco) (older, but more likely to be installed by default) need to be installed to search for commands on the command-line.
 
@@ -34,7 +34,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 By default `fzf` is used for searching, but you can use `peco` by setting it with `qc configure`.
 :::
 
-## Setup
+## Preparazione
 
 ![socket-server-token](/img/socket-server-token.png)
 
@@ -94,7 +94,7 @@ If you add a `cmd:` before the in-line code block, the command will also be foun
 
 Above example will result in two command snippets, the first one with the two tags `tag1` and `tag2`.
 
-## Usage
+## Come si usa
 
 ```bash
 # Search and execute command snippets
@@ -106,27 +106,27 @@ qc exec
 qc search
 ```
 
-## Configuration
+## Configurazione
 
-Run `qc configure`.
+Esegui `qc configure`.
 
 ```toml
 [General]
-  editor = "vim"            # your favorite text editor
-  column = 40               # column size for list command
-  selectcmd = "fzf"         # selector command for edit command (fzf or peco)
-  sortby = ""               # specify how snippets get sorted (recency (default), -recency, description, -description, command, -command, output, -output)
+  editor = "vim"            # il tuo editor di testo preferito
+  column = 40               # numero di colonne per la lista comandi
+  selectcmd = "fzf"         # selettore per modificare il comando (fzf o peco)
+  sortby = ""               # specifica come i frammenti saranno ordinati (recency (predefinito), -recency, description, -description, command, -command, output, -output)
 
 [QOwnNotes]
-  token = "MvTagHXF"        # your QOwnNotes API token
-  websocket_port = 22222    # websocket port in QOwnNotes
+  token = "MvTagHXF"        # il tuo token API QOwnNotes
+  websocket_port = 22222    # porta websocket di QOwnNotes
 ```
 
-## Shell completion
+## Completamento console
 
-You can generate shell completion code for your shell with `qc completion <shell>`.
+Puoi generare il codice per il completamento da console per la tua shell con `qc completion <shell>`.
 
-For example for the Fish shell you can use:
+Per esempio, per la Fish shell puoi usare:
 
 ```bash
 qc completion fish > ~/.config/fish/completions/qc.fish

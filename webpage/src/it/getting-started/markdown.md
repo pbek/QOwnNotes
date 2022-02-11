@@ -284,12 +284,12 @@ ___
 
 ## Interruzioni di riga
 
-- You can break a paragraph into more than a single line for easier editing, they still render as a single paragraph with no breaks.
-- You can force a line break inside a paragraph by ending a line with two spaces.
-- You can make a separate paragraph by delimiting it by empty lines.
+- Puoi dividere un paragrafo in più linee per modificarlo più facilmente, saranno comunque rese come un singolo paragrafo senza interruzioni.
+- Puoi forzare un'interruzione di linea all'interno di un paragrafo terminando la linea con due spazi.
+- Puoi creare un paragrafo separato delimintandolo con linee vuote.
 
 ::: tip
-You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
+Puoi inserire due spazi e un a capo con <kbd>⇧ Shift</kbd> + <kbd>Invio</kbd>.
 :::
 
 ```markdown
@@ -302,12 +302,12 @@ Questa riga è separata solo da due spazi finali e da un singolo ritorno a capo,
 ```
 
 ::: tip
-Trailing spaces are highlighted by default in the editor.
+Gli spazi finali sono evidenziati per impostazione predefinita nell'editor.
 :::
 
 ## Commenti
 
-Comments are not shown in the preview.
+I commenti non vengono visualizzati nell'anteprima.
 
 ```markdown
 [comment]: # (Questo commento non apparirà nell'anteprima)
@@ -316,12 +316,12 @@ Comments are not shown in the preview.
 ```
 
 ::: tip
-A leading html comment block in a note will also be ignored in the automatic note filename generation.
+Anche un blocco di commenti HTML iniziale in una nota verrà ignorato nella generazione automatica del nome del file della nota.
 :::
 
 ## Elenchi di caselle di controllo
 
-You can create simple todo lists with checkbox lists.
+Puoi creare semplici elenchi di cose da fare con elenchi di caselle di controllo.
 
 ```markdown
 - [x] fatto
@@ -329,12 +329,12 @@ You can create simple todo lists with checkbox lists.
 ```
 
 ::: tip
-You can check/un-check checkboxes in the preview.
+Puoi selezionare / deselezionare le caselle di controllo nell'anteprima.
 :::
 
 ## Pagine preliminari
 
-In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
+In QOwnNotes puoi usare un frontmatter (es.YAML) per aggiungere alcune meta informazioni extra. **Non verrà mostrato nell'anteprima** e **non disturberà la generazione automatica del nome del file della nota**.
 
 ```markdown
 ---
@@ -346,4 +346,4 @@ description: Una descrizione
 Del testo
 ```
 
-The filename of this example note would be `Note headline starts here.md`.
+Il nome del file di questa nota di esempio sarebbe `Il titolo della nota inizia qui.md`.
