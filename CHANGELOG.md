@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 22.2.4
+- an attempt was made to include translation files correctly into the AppImage build
+
 ## 22.2.3
 - the levenshtein distance check was now disabled, because it takes too long
   (for [#2433](https://github.com/pbek/QOwnNotes/issues/2433))

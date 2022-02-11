@@ -148,8 +148,6 @@ jobs:
         qmake PREFIX=/usr
         lrelease QOwnNotes.pro
         make -j 8
-        # debug: check if translations are present
-        find
         # Create DEB
         #cd ../travis
         #dpkg-deb -x QOwnNotes.deb build
@@ -163,6 +161,11 @@ jobs:
         #cd ../src
         # Create AppImage (needs Ubuntu 18.04)
         make INSTALL_ROOT=appdir -j 8 install ; find appdir/
+        # debug: check if translations are present
+        find
+        mkdir -p appdir/usr/languages
+        # mv tranlations to appdir (where QOwnNotes will find them)
+        mv ./languages/*.qm appdir/usr/languages
         # debug: check if translations are present
         find
         wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
