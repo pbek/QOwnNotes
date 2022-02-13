@@ -21,10 +21,6 @@
 #include <QTextDocument>
 #include <QTreeWidgetItem>
 
-#include <chrono>
-
-using namespace std::chrono_literals;
-
 NavigationWidget::NavigationWidget(QWidget *parent)
     : QTreeWidget(parent) {
     // we want to handle currentItemChanged because it also works with the keyboard
@@ -76,7 +72,7 @@ void NavigationWidget::parse(const QTextDocument *document, int textCursorPositi
 
     _doc = document;
 
-    _delay.start(1s);
+    _delay.start(1000);
 
     _cursorPosition = textCursorPosition;
 }

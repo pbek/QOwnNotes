@@ -104,6 +104,13 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
 CODECFORTR = UTF-8
 CONFIG += c++17
 
+# for older Qt versions
+win32-msvc {
+    QMAKE_CXXFLAGS += "/std:c++17"
+} else {
+    QMAKE_CXXFLAGS += "-std=c++17"
+}
+
 INCLUDEPATH += $$PWD/libraries $$PWD/libraries/diff_match_patch
 
 SOURCES += main.cpp\
@@ -400,7 +407,7 @@ unix {
   icons.files += images/icons/*
 }
 
-QMAKE_CXXFLAGS += "-Wall -Wextra -Wundef"
+!win32-msvc: QMAKE_CXXFLAGS += "-Wall -Wextra -Wundef"
 
 # Enable Werror on unixes except mac
 CONFIG(DEV_MODE) {
