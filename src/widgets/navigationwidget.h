@@ -15,6 +15,7 @@
 
 #include <QFutureWatcher>
 #include <QTreeWidget>
+#include <QTimer>
 
 class QTextDocument;
 class QTreeWidgetItem;
@@ -35,10 +36,8 @@ class NavigationWidget : public QTreeWidget {
 
    public:
     explicit NavigationWidget(QWidget *parent = 0);
-    ~NavigationWidget();
 
     void parse(const QTextDocument *document, int textCursorPosition);
-    void setDocument(const QTextDocument *document);
     static QVector<Node> parseDocument(const QTextDocument *const document);
 
     void selectItemForCursorPosition(int position);
@@ -47,15 +46,18 @@ class NavigationWidget : public QTreeWidget {
     void onCurrentItemChanged(QTreeWidgetItem *current,
                               QTreeWidgetItem *previous);
     void onItemClicked(QTreeWidgetItem *current, int column);
-    void onParseCompleted();
+
+   private:
+    void buildNavTree(const QVector<Node> &nodes);
+    void doParse();
 
    signals:
     void positionClicked(int position);
 
    private:
-    const QTextDocument *_document;
+    QTimer _delay;
+    const QTextDocument *_doc;
     QHash<int, QTreeWidgetItem *> _lastHeadingItemList;
-    QFutureWatcher<QVector<Node>> *_parseFutureWatcher;
     QVector<Node> _navigationTreeNodes;
     int _cursorPosition;
 

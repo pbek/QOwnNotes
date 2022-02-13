@@ -20,10 +20,13 @@
 #include <QTextBlock>
 #include <QTextDocument>
 #include <QTreeWidgetItem>
-#include <QtConcurrent/QtConcurrent>
+
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 NavigationWidget::NavigationWidget(QWidget *parent)
-    : QTreeWidget(parent), _document(nullptr) {
+    : QTreeWidget(parent) {
     // we want to handle currentItemChanged because it also works with the keyboard
     QObject::connect(this, &NavigationWidget::currentItemChanged, this,
                      &NavigationWidget::onCurrentItemChanged);
@@ -31,20 +34,8 @@ NavigationWidget::NavigationWidget(QWidget *parent)
     QObject::connect(this, &NavigationWidget::itemClicked, this,
                      &NavigationWidget::onItemClicked);
 
-    _parseFutureWatcher = new QFutureWatcher<QVector<Node>>(this);
-    connect(_parseFutureWatcher, &QFutureWatcher<QVector<Node>>::finished, this,
-            &NavigationWidget::onParseCompleted);
-}
-
-NavigationWidget::~NavigationWidget() {
-    this->_parseFutureWatcher->waitForFinished();
-}
-
-/**
- * Sets a document to parse
- */
-void NavigationWidget::setDocument(const QTextDocument *document) {
-    _document = document;
+    _delay.setSingleShot(true);
+    connect(&_delay, &QTimer::timeout, this, &NavigationWidget::doParse);
 }
 
 /**
@@ -83,12 +74,18 @@ void NavigationWidget::parse(const QTextDocument *document, int textCursorPositi
     const QSignalBlocker blocker(this);
     Q_UNUSED(blocker)
 
-    setDocument(document);
-    _cursorPosition = textCursorPosition;
+    _doc = document;
 
-    const QFuture<QVector<Node>> future =
-        QtConcurrent::run(&NavigationWidget::parseDocument, document);
-    this->_parseFutureWatcher->setFuture(future);
+    _delay.start(1s);
+
+    _cursorPosition = textCursorPosition;
+}
+
+void NavigationWidget::doParse()
+{
+    _delay.stop();
+    const auto nodes = parseDocument(_doc);
+    buildNavTree(nodes);
 }
 
 QVector<Node> NavigationWidget::parseDocument(
@@ -120,11 +117,6 @@ QVector<Node> NavigationWidget::parseDocument(
 
 void NavigationWidget::selectItemForCursorPosition(int position)
 {
-    if (_parseFutureWatcher->isRunning()) {
-        _cursorPosition = position;
-        return;
-    }
-
     int itemIndex = findItemIndexforCursorPosition(position);
 
     QTreeWidgetItem *itemToSelect{nullptr};
@@ -134,9 +126,8 @@ void NavigationWidget::selectItemForCursorPosition(int position)
         itemToSelect = *it;
     }
 
-    blockSignals(true);
+    QSignalBlocker b(this);
     setCurrentItem(itemToSelect);
-    blockSignals(false);
 }
 
 
@@ -150,9 +141,10 @@ int NavigationWidget::findItemIndexforCursorPosition(int position) const
     return fwdIt - std::begin(_navigationTreeNodes) - 1;
 }
 
-void NavigationWidget::onParseCompleted() {
-    QVector<Node> nodes = this->_parseFutureWatcher->result();
-    if (_navigationTreeNodes == nodes) return;
+void NavigationWidget::buildNavTree(const QVector<Node> &nodes) {
+
+    if (_navigationTreeNodes == nodes)
+        return;
 
     _navigationTreeNodes = std::move(nodes);
 
