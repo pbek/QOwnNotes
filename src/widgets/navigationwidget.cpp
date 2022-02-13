@@ -29,9 +29,6 @@ NavigationWidget::NavigationWidget(QWidget *parent)
     // we want to handle itemClicked because it allows to click on an item a 2nd time
     QObject::connect(this, &NavigationWidget::itemClicked, this,
                      &NavigationWidget::onItemClicked);
-
-    _delay.setSingleShot(true);
-    connect(&_delay, &QTimer::timeout, this, &NavigationWidget::doParse);
 }
 
 /**
@@ -71,15 +68,12 @@ void NavigationWidget::parse(const QTextDocument *document, int textCursorPositi
     Q_UNUSED(blocker)
 
     _doc = document;
-
-    _delay.start(1000);
-
     _cursorPosition = textCursorPosition;
+    doParse();
 }
 
 void NavigationWidget::doParse()
 {
-    _delay.stop();
     const auto nodes = parseDocument(_doc);
     buildNavTree(nodes);
 }
