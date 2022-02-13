@@ -15,7 +15,6 @@
 
 #include <QFutureWatcher>
 #include <QTreeWidget>
-#include <QTimer>
 
 class QTextDocument;
 class QTreeWidgetItem;
@@ -55,7 +54,6 @@ class NavigationWidget : public QTreeWidget {
     void positionClicked(int position);
 
    private:
-    QTimer _delay;
     const QTextDocument *_doc;
     QHash<int, QTreeWidgetItem *> _lastHeadingItemList;
     QVector<Node> _navigationTreeNodes;
