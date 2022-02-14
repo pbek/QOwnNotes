@@ -1069,6 +1069,7 @@ void MainWindow::initEditorSoftWrap() {
     QPlainTextEdit::LineWrapMode pMode = useSoftWrapInNoteEditor
                                              ? QPlainTextEdit::WidgetWidth
                                              : QPlainTextEdit::NoWrap;
+    Q_UNUSED(mode)
 
     ui->noteTextEdit->setLineWrapMode(pMode);
     ui->encryptedNoteTextEdit->setLineWrapMode(pMode);
