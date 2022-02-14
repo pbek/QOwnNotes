@@ -46,8 +46,6 @@
 #include "widgets/qownnotesmarkdowntextedit.h"
 #endif
 
-static bool _componentsInitialized = false;
-
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
     _engine->rootContext()->setContextProperty(QStringLiteral("script"), this);
@@ -88,10 +86,6 @@ ScriptingService *ScriptingService::instance() {
 
     if (scriptingService == nullptr) {
         scriptingService = createInstance(nullptr);
-    }
-    if (!_componentsInitialized) {
-        scriptingService->initComponents();
-        _componentsInitialized = true;
     }
 
     return scriptingService;

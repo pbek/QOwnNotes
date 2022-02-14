@@ -1124,6 +1124,8 @@ void MainWindow::initScriptingEngine() {
     //    QQmlEngine::CppOwnership);
     engine->rootContext()->setContextProperty(QStringLiteral("noteTextEdit"),
                                               ui->noteTextEdit);
+
+    scriptingService->initComponents();
 }
 
 /**
