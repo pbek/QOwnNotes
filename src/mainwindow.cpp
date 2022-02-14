@@ -128,7 +128,7 @@ struct FileWatchDisabler {
         : _mainWindow(mw)
     {
         Q_ASSERT(mw);
-        mw->disconnect(&mw->noteDirectoryWatcher, nullptr, nullptr, nullptr);
+        QObject::disconnect(&mw->noteDirectoryWatcher, nullptr, nullptr, nullptr);
     }
 
     ~FileWatchDisabler()
@@ -587,10 +587,19 @@ void MainWindow::initNotePreviewAndTextEdits()
 #endif
 }
 
-void MainWindow::connectFileWatcher()
+void MainWindow::connectFileWatcher(bool delayed)
 {
-    connect(&noteDirectoryWatcher, &QFileSystemWatcher::directoryChanged, this, &MainWindow::notesDirectoryWasModified, Qt::UniqueConnection);
-    connect(&noteDirectoryWatcher, &QFileSystemWatcher::fileChanged, this, &MainWindow::notesWereModified, Qt::UniqueConnection);
+    if (!delayed) {
+        connect(&noteDirectoryWatcher, &QFileSystemWatcher::directoryChanged, this, &MainWindow::notesDirectoryWasModified, Qt::UniqueConnection);
+        connect(&noteDirectoryWatcher, &QFileSystemWatcher::fileChanged, this, &MainWindow::notesWereModified, Qt::UniqueConnection);
+    } else {
+        // In some cases, there are delayed signals coming in which we don't want to handle
+        // so reconnect with delay
+        QTimer::singleShot(500, this, [this]{
+            connect(&noteDirectoryWatcher, &QFileSystemWatcher::directoryChanged, this, &MainWindow::notesDirectoryWasModified, Qt::UniqueConnection);
+            connect(&noteDirectoryWatcher, &QFileSystemWatcher::fileChanged, this, &MainWindow::notesWereModified, Qt::UniqueConnection);
+        });
+    }
 }
 
 /**
