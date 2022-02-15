@@ -91,7 +91,7 @@ Loader::Loader()
 
 Loader::~Loader()
 {
-    qCDebug(SONNET_LOG_CORE) << "Removing loader: " << this;
+//     qCDebug(SONNET_LOG_CORE) << "Removing loader: " << this;
     delete d->settings;
     d->settings = nullptr;
     delete d;
@@ -113,7 +113,7 @@ SpellerPlugin *Loader::createSpeller(const QString &language, const QString &/*c
 
 //    auto clientsItr = d->languageClients.constFind(plang);
 //    if (clientsItr == d->languageClients.constEnd()) {
-//        qCWarning(SONNET_LOG_CORE) << "No language dictionaries for the language:" << plang;
+//        qWarning() << "No language dictionaries for the language:" << plang;
 //        emit loadingDictionaryFailed(plang);
 //        return nullptr;
 //    }
@@ -128,7 +128,7 @@ SpellerPlugin *Loader::createSpeller(const QString &language, const QString &/*c
 //            bool unknown = !std::any_of(lClients.constBegin(), lClients.constEnd(), [backend] (const Client *client) {
 //                    return client->name() == backend; });
 //            if (unknown) {
-//                qCWarning(SONNET_LOG_CORE) << "Default client" << backend << "doesn't support language:" << plang;
+//                qWarning() << "Default client" << backend << "doesn't support language:" << plang;
 //                backend = QString();
 //            }
 //        }
@@ -159,7 +159,7 @@ SpellerPlugin *Loader::createSpeller(const QString &language, const QString &/*c
         qWarning() << "Hunspell has no language dictionaries for the language: " <<plang;
         return nullptr;
     }
-    //qCWarning(SONNET_LOG_CORE) << "The default client" << backend << "has no language dictionaries for the language:" << plang;
+    //qWarning() << "The default client" << backend << "has no language dictionaries for the language:" << plang;
     //return nullptr;
 }
 
@@ -376,7 +376,7 @@ void Loader::loadPlugins()
         }
     }
     if (plugins == 0) {
-        qCWarning(SONNET_LOG_CORE) << "Sonnet: No speller backends available!";
+        qWarning() << "Sonnet: No speller backends available!";
     }
 #else
 //#ifdef Q_OS_MACOS
@@ -401,14 +401,14 @@ void Loader::loadPlugin(const QString &pluginPath)
 #ifndef SONNET_STATIC
     QPluginLoader plugin(pluginPath);
     if (!plugin.load()) { // We do this separately for better error handling
-        qCWarning(SONNET_LOG_CORE) << "Sonnet: Unable to load plugin" << pluginPath << "Error:"
+        qWarning() << "Sonnet: Unable to load plugin" << pluginPath << "Error:"
                                    << plugin.errorString();
         return;
     }
 
     Client *client = qobject_cast<Client *>(plugin.instance());
     if (!client) {
-        qCWarning(SONNET_LOG_CORE) << "Sonnet: Invalid plugin loaded" << pluginPath;
+        qWarning() << "Sonnet: Invalid plugin loaded" << pluginPath;
         plugin.unload(); // don't leave it in memory
         return;
     }
