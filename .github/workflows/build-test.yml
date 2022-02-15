@@ -146,12 +146,12 @@ jobs:
     - if: contains( matrix.os, 'ubuntu-latest') && steps.changes.outputs.DO_BUILD
       name: Do Linux tests
       run: |
-        cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
+        cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j$(nproc)
         ../bin/tests/tests -platform minimal -txt
     - if: contains( matrix.os, 'macos') && steps.changes.outputs.DO_BUILD
       name: Do macOS tests
       run: |
-        cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
+        cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j$(nproc)
         ../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
     - if: contains( matrix.os, 'windows') && steps.changes.outputs.DO_BUILD
       name: Do Windows tests
@@ -169,10 +169,14 @@ jobs:
       # Build QOwnNotes
       #
 
-    - if: steps.changes.outputs.DO_BUILD && !(contains( matrix.os, 'windows') && !contains( matrix.os, 'ubuntu-18') && ( matrix.qt-version == '5.15.2' ))
+    - if: steps.changes.outputs.DO_BUILD && !(contains( matrix.os, 'windows') && contains( matrix.os, 'ubuntu-18') && ( matrix.qt-version == '5.15.2' ))
       name: Build QOwnNotes
       run: |
-        lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j8
+        lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j$(nproc)
+    - if: steps.changes.outputs.DO_BUILD && contains( matrix.os, 'ubuntu-18')
+      name: Build QOwnNotes
+      run: |
+        lrelease QOwnNotes.pro && qmake CONFIG+=release && make -j$(nproc)
     - if: contains( matrix.os, 'ubuntu-18') && steps.changes.outputs.DO_BUILD
       name: Build for Snapcraft
       run: make clean && cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
