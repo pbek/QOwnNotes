@@ -102,13 +102,13 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_sq.ts
 
 CODECFORTR = UTF-8
-CONFIG += c++17
+CONFIG += c++14
 
 # for older Qt versions
 win32-msvc {
-    QMAKE_CXXFLAGS += "/std:c++17"
+    QMAKE_CXXFLAGS += "/std:c++14"
 } else {
-    QMAKE_CXXFLAGS += "-std=c++17"
+    QMAKE_CXXFLAGS += "-std=c++14"
 }
 
 INCLUDEPATH += $$PWD/libraries $$PWD/libraries/diff_match_patch
@@ -413,7 +413,7 @@ unix {
 CONFIG(DEV_MODE) {
     unix:!mac {
         message("Werror enabled")
-        QMAKE_CXXFLAGS += "-Wno-error=deprecated-declarations -Werror"
+        QMAKE_CXXFLAGS += "-Wno-error=deprecated-declarations -Werror -pedantic"
     }
 }
 
