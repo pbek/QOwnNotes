@@ -134,7 +134,7 @@ struct FileWatchDisabler {
     ~FileWatchDisabler()
     {
         Q_ASSERT(_mainWindow);
-        _mainWindow->connectFileWatcher();
+        _mainWindow->connectFileWatcher(/*delayed = */ true);
     }
 private:
     MainWindow *const _mainWindow = nullptr;
