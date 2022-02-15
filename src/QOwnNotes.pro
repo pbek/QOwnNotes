@@ -413,7 +413,7 @@ unix {
 CONFIG(DEV_MODE) {
     unix:!mac {
         message("Werror enabled")
-        QMAKE_CXXFLAGS += "-Wno-error=deprecated-declarations -Werror -pedantic"
+        QMAKE_CXXFLAGS += "-Wno-error=deprecated-declarations -Wno-error=variadic-macros -Werror -pedantic"
     }
 }
 
