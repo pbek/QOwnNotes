@@ -60,7 +60,7 @@ HunspellDict::HunspellDict(const QString &lang, QString path)
         m_codec = QTextCodec::codecForName(m_speller->get_dic_encoding());
 #endif
         if (!m_codec) {
-            qCWarning(SONNET_HUNSPELL) << "Failed to find a text codec for name"
+            qWarning() << "Failed to find a text codec for name"
                                        << m_speller->get_dic_encoding()
                                        << "defaulting to locale text codec";
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
@@ -72,7 +72,7 @@ HunspellDict::HunspellDict(const QString &lang, QString path)
         }
 
     } else {
-        qCWarning(SONNET_HUNSPELL) << "Unable to find dictionary for" << lang << "in path" << path;
+        qWarning() << "Unable to find dictionary for" << lang << "in path" << path;
 
         // don't load user dictionary if dictionary was not found, may lead to crashes
         return;

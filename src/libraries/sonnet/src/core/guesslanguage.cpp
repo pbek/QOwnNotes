@@ -120,7 +120,7 @@ GuessLanguagePrivate::GuessLanguagePrivate()
 #endif
         QString languageName = QLocale(dictName).name();
         if (languageName.isEmpty()) {
-            qCWarning(SONNET_LOG_CORE) << "Unable to parse name for dictionary" << dictName;
+            qWarning() << "Unable to parse name for dictionary" << dictName;
             continue;
         }
         dictionaryLanguages.insert(languageName);
@@ -569,12 +569,12 @@ GuessLanguagePrivate::GuessLanguagePrivate()
         for (const QString &dictName : dicts) {
             QString languageName = QLocale(dictName).name();
             if (languageName.isEmpty()) {
-                qCWarning(SONNET_LOG_CORE) << "Unable to parse language name" << dictName;
+                qWarning() << "Unable to parse language name" << dictName;
                 continue;
             }
             s_dictionaryNameMap[languageName] = dictName;
             if (!s_scriptLanguages.values().contains(languageName)) {
-                qCWarning(SONNET_LOG_CORE) << "Unable to handle language from dictionary"
+                qWarning() << "Unable to handle language from dictionary"
                                            << dictName << languageName;
             }
         }
@@ -656,12 +656,11 @@ void GuessLanguagePrivate::loadModels()
     QString triMapFile;
 
     triMapFile = QStringLiteral(":/libraries/sonnet/src/trigrams.map");
-    qCDebug(SONNET_LOG_CORE) << "Loading trigrams from" << triMapFile;
+    qDebug() << "Loading trigrams from" << triMapFile;
 
     QFile sin(triMapFile);
     if (!sin.open(QIODevice::ReadOnly)) {
-        qCWarning(SONNET_LOG_CORE) << "Sonnet: Unable to load trigram models from file"
-                                   << triMapFile;
+        qWarning() << "Sonnet: Unable to load trigram models from file" << triMapFile;
         return;
     }
 
@@ -674,7 +673,7 @@ void GuessLanguagePrivate::loadModels()
     while (iterator.hasNext()) {
         iterator.next();
         if (iterator.value().count() < MAXGRAMS) {
-            qCWarning(SONNET_LOG_CORE) << iterator.key() << "is has only"
+            qWarning() << iterator.key() << "is has only"
                                        << iterator.value().count() << "trigrams, expected"
                                        << MAXGRAMS;
         }
@@ -687,7 +686,7 @@ void GuessLanguagePrivate::loadModels()
 #endif
     knownLanguages.subtract(availableLanguages);
     if (!knownLanguages.isEmpty()) {
-        qCWarning(SONNET_LOG_CORE) << "Missing trigrams for languages:" << knownLanguages;
+        qWarning() << "Missing trigrams for languages:" << knownLanguages;
     }
 }
 
@@ -776,7 +775,7 @@ QStringList GuessLanguagePrivate::guessFromTrigrams(const QString &sample,
 
     // Skip if either no results or best result is completely unknown (distance >= maxdistance)
     if (scores.isEmpty() || scores.first().first >= MAXGRAMS * sampleTrigrams.size()) {
-        qCDebug(SONNET_LOG_CORE) << "No scores for" << sample;
+//         qCDebug(SONNET_LOG_CORE) << "No scores for" << sample;
         return ret;
     }
 
@@ -878,7 +877,7 @@ QString GuessLanguagePrivate::guessFromDictionaries(const QString &sentence,
     QList<QSharedPointer<SpellerPlugin> > spellers;
     for (const QString &lang : candidates) {
         if (!Loader::openLoader()->languages().contains(lang)) {
-            qCWarning(SONNET_LOG_CORE) << "Dictionary asked for invalid speller" << lang;
+            qWarning() << "Dictionary asked for invalid speller" << lang;
             continue;
         }
         QSharedPointer<SpellerPlugin> plugin = Loader::openLoader()->cachedSpeller(lang);
