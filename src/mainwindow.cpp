@@ -595,7 +595,7 @@ void MainWindow::connectFileWatcher(bool delayed)
     } else {
         // In some cases, there are delayed signals coming in which we don't want to handle
         // so reconnect with delay
-        QTimer::singleShot(500, this, [this]{
+        QTimer::singleShot(300, this, [this]{
             connect(&noteDirectoryWatcher, &QFileSystemWatcher::directoryChanged, this, &MainWindow::notesDirectoryWasModified, Qt::UniqueConnection);
             connect(&noteDirectoryWatcher, &QFileSystemWatcher::fileChanged, this, &MainWindow::notesWereModified, Qt::UniqueConnection);
         });
