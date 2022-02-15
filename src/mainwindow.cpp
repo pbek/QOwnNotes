@@ -3465,8 +3465,7 @@ void MainWindow::removeConflictedNotesDatabaseCopies() {
     const QSignalBlocker blocker(this->noteDirectoryWatcher);
     Q_UNUSED(blocker)
 
-    // we try to fix problems with the blocker
-    directoryWatcherWorkaround(true);
+    FileWatchDisabler disable(this);
 
     while (it.hasNext()) {
         const QString &file = it.next();
@@ -3525,8 +3524,6 @@ void MainWindow::removeConflictedNotesDatabaseCopies() {
 
     showStatusBarMessage(
         tr("Removed %n conflicted database copies", "", count));
-
-    directoryWatcherWorkaround(false);
 }
 
 /**
