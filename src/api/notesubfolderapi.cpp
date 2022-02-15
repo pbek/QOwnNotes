@@ -83,10 +83,10 @@ NoteSubFolderApi *NoteSubFolderApi::activeNoteSubFolder() {
     return fetchNoteSubFolderById(NoteSubFolder::activeNoteSubFolderId());
 }
 
-QString NoteSubFolderApi::relativePath() const {
+QString NoteSubFolderApi::relativePath() {
     return _noteSubFolder.relativePath();
 }
 
-QString NoteSubFolderApi::fullPath() const {
+QString NoteSubFolderApi::fullPath() {
     return _noteSubFolder.fullPath();
 }
