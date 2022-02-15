@@ -811,7 +811,7 @@ private:
 
     void initNotePreviewAndTextEdits();
 
-    void connectFileWatcher();
+    void connectFileWatcher(bool delayed = false);
 
     void createSystemTrayIcon();
 
