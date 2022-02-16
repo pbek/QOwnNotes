@@ -17,7 +17,7 @@ add_library(md4c
 add_executable(QOwnNotes "")
 
 set_target_properties(QOwnNotes PROPERTIES
-    CXX_STANDARD 14
+    CXX_STANDARD 11
     CXX_STANDARD_REQUIRED ON
     AUTOMOC ON
     AUTOUIC ON
