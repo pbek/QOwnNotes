@@ -21,7 +21,8 @@
 - the [Web Companion browser extension](https://www.qownnotes.org/getting-started/browser-extension.html)
   is now back in the Mozilla Addons store with version 22.2.3 and can be used in Firefox
   again after a user data consent workflow was implemented (for [#37](https://github.com/qownnotes/web-companion/issues/37))
-  - you need to give your consent that personal data can be sent to QOwnNotes once
+  - you need to open the extension popup and give your consent that personal data
+    can be sent to QOwnNotes once
 
 ## 22.2.4
 - an attempt was made to include translation files correctly into the AppImage build
