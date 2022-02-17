@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 22.2.7
+- added a new editor color schema *Calm and Simple* by @nils-se
+  (for [#2465](https://github.com/pbek/QOwnNotes/issues/2465))
 - the [Web Companion browser extension](https://www.qownnotes.org/getting-started/browser-extension.html)
   was ported to the soon mandatory manifest v3 for Chrome with version 22.2.4
   (for [#38](https://github.com/qownnotes/web-companion/issues/38))
