@@ -2944,7 +2944,7 @@ void MainWindow::notesWereModified(const QString &str) {
 
         // rebuild and reload the notes directory list
         buildNotesIndexAndLoadNoteDirectoryList();
-        setCurrentNote(std::move(this->currentNote), false);
+        setCurrentNote(std::move(this->currentNote), true);
     }
 }
 
