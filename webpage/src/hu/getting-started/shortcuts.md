@@ -90,7 +90,7 @@
 - <kbd>Alt</kbd> + <kbd>Left</kbd> visszaugrik a jegyzettörténetbe
     - előreugrik a jegyzettörténetben
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> setzt ein Notiz-Lesezeichen auf den Lesezeichen-Slot 1..9
-- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> ugrik a jegyzet könyvjelzőhöz a 0..9 könyvjelzőhelyen
+- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
 - <kbd>Ctrl</kbd> + <kbd>-</kbd> egy ponttal csökkenti a jegyzet szövegének betűméretét
 - <kbd>Ctrl</kbd> + <kbd>0</kbd> visszaállítja a jegyzet szövegének betűméretét
@@ -207,7 +207,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history
     - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
-- <kbd>⌘ Cmd</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
+- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> increases the note text font size by one point
 - <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> decreases the note text font size by one point
 - <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> resets the note text font size

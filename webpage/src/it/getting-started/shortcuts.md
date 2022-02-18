@@ -90,7 +90,7 @@
 - <kbd>Alt</kbd> + <kbd>Sinistra</kbd> torna indietro nella cronologia delle note
     - <kbd>Alt</kbd> + <kbd>Right</kbd> salta in avanti nella cronologia delle note
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
-- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> salta al segnalibro della nota nello slot del segnalibro 0..9
+- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> aumenta la dimensione del carattere del testo della nota di un punto
 - <kbd>Ctrl</kbd> + <kbd>-</kbd> riduce la dimensione del carattere del testo della nota di un punto
 - <kbd>Ctrl</kbd> + <kbd>0</kbd> ripristina la dimensione del carattere del testo della nota
@@ -207,7 +207,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history
     - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
-- <kbd>⌘ Cmd</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
+- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> increases the note text font size by one point
 - <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> decreases the note text font size by one point
 - <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> resets the note text font size

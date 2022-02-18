@@ -346,7 +346,7 @@ Vous pouvez cocher / décocher les cases à cocher dans l'aperçu.
 
 ## Frontmatter
 
-Dans QOwnNotes, vous pouvez utiliser un « frontmatter » (par exemple YAML) pour ajouter des méta-informations supplémentaires. It will **not be shown in the preview** and will **not disturb the automatic note filename generation**.
+Dans QOwnNotes, vous pouvez utiliser un « frontmatter » (par exemple YAML) pour ajouter des méta-informations supplémentaires. Il ne sera **pas affiché dans l'aperçu** et ne perturbera **pas la génération automatique de nom de fichier de note**.
 
 ```markdown
 ---

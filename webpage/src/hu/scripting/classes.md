@@ -55,8 +55,8 @@ class NoteSubFolderApi {
     Q_INVOKABLE static NoteSubFolderApi *fetchNoteSubFolderById(int id);
     Q_INVOKABLE static NoteSubFolderApi *activeNoteSubFolder();
     Q_INVOKABLE static QList<QObject*> fetchNoteSubFoldersByParentId(int parentId);
-    Q_INVOKABLE QString relativePath() const;
-    Q_INVOKABLE QString fullPath() const;
+    Q_INVOKABLE QString relativePath();
+    Q_INVOKABLE QString fullPath();
 };
 ```
 

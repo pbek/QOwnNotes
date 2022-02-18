@@ -90,7 +90,7 @@
 - <kbd>Alt</kbd> + <kbd>Links</kbd> springt im Notenverlauf ein Element rückwärts
     - <kbd>Alt</kbd> + <kbd>Rechts</kbd> springt im Notenverlauf ein Element vorwärts
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> setzt ein Notiz-Lesezeichen auf den Lesezeichen-Slot 1..9
-- <kbd>Strg</kbd> + <kbd>0..9</kbd> springt zum Notizen-Lesezeichen im Lesezeichen-Slot 0..9
+- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
 - <kbd>Strg</kbd> + <kbd>0..9</kbd> springt zum Notizenlesezeichen im Lesezeichen-Slot 0..9
 - <kbd>Strg</kbd> + <kbd>-</kbd> verringert die Schriftgröße des Notizentextes um einen Punkt
 - <kbd>Strg</kbd> + <kbd>0</kbd> setzt die Schriftgröße des Notizentextes zurück
@@ -207,7 +207,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Strg</kbd> + <kbd>Links</kbd> springt im Notizverlauf zurück
     - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Strg</kbd> + <kbd>Rechts</kbd> springt im Notizverlauf vorwärts
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> setzt ein Notiz-Lesezeichen auf Lesezeichenplatz 1..9
-- <kbd>⌘ Cmd</kbd> + <kbd>0..9</kbd> springt zum Notiz-Lesezeichen auf Lesezeichenplatz 0..9
+- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> erhöht die Schriftgröße des Notiztextes um einen Punkt
 - <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> verringert die Schriftgröße des Notiztextes um einen Punkt
 - <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> setzt die Schriftgröße des Notiztextes zurück

@@ -90,7 +90,7 @@
 - <kbd>Alt</kbd> + <kbd>Left</kbd> retrocede en el historial de notas
     - <kbd>Alt</kbd> + <kbd>Right</kbd> salta hacia adelante en el historial de notas
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> establece un marcador de nota en la ranura de marcador 1..9
-- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> salta al marcador de notas en la ranura de marcador 0..9
+- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> aumenta el tamaño de la fuente del texto de la nota en un punto
 - <kbd>Ctrl</kbd> + <kbd>-</kbd> disminuye el tamaño de la fuente del texto de la nota en un punto
 - <kbd>Ctrl</kbd> + <kbd>0</kbd> restablece el tamaño de fuente del texto de la nota
@@ -207,7 +207,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Izquierda</kbd> retrocede en el historial de notas
     - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Derecha</kbd> salta hacia adelante en el historial de notas
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> establece un marcador de nota en la ranura de marcador 1..9
-- <kbd>⌘ Cmd</kbd> + <kbd>0..9</kbd> salta al marcador de notas en la ranura de marcador 0..9
+- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> aumenta el tamaño de fuente del texto de la nota en un punto
 - <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> reduce el tamaño de fuente del texto de la nota en un punto
 - <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> restablece el tamaño de fuente del texto de la nota
