@@ -32,7 +32,7 @@ void CodeToHtmlConverter::initCodeLangs() Q_DECL_NOTHROW {
         {QStringLiteral("html"), CodeToHtmlConverter::CodeXML},
         {QStringLiteral("ini"), CodeToHtmlConverter::CodeINI},
         {QStringLiteral("java"), CodeToHtmlConverter::CodeJava},
-        {QStringLiteral("javascript"), CodeToHtmlConverter::CodeJava},
+        {QStringLiteral("javascript"), CodeToHtmlConverter::CodeJs},
         {QStringLiteral("js"), CodeToHtmlConverter::CodeJs},
         {QStringLiteral("json"), CodeToHtmlConverter::CodeJSON},
         {QStringLiteral("make"), CodeToHtmlConverter::CodeMake},
