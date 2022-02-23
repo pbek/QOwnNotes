@@ -6732,7 +6732,7 @@ void MainWindow::on_action_Find_text_in_note_triggered() {
 void MainWindow::on_action_Encrypt_note_triggered() {
     currentNote.refetch();
 
-    // return if there the note text is already encrypted
+    // return if the note text is already encrypted
     if (currentNote.hasEncryptedNoteText()) {
         return;
     }
