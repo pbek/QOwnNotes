@@ -40,12 +40,18 @@ void TableDialog::on_createTableWidget_itemSelectionChanged() {
     */
 
     updateMaxItems();
+    const QList<QTableWidgetSelectionRange> &list =
+        ui->createTableWidget->selectedRanges();
+
+    if (list.isEmpty()) {
+        return;
+    }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    QTableWidgetSelectionRange range =
-        ui->createTableWidget->selectedRanges().constFirst();
+    QTableWidgetSelectionRange range = list.constFirst();
 #else
     QTableWidgetSelectionRange range =
-        ui->createTableWidget->selectedRanges().first();
+        list.first();
 #endif
 
     ui->rowSpinBox->setValue(std::max<int>(_maxRows, range.rowCount()));
