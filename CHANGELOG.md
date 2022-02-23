@@ -3,6 +3,8 @@
 ## 22.2.8
 - a possible crash in the table dialog was fixed when clicking on a cell with text
   (for [#2472](https://github.com/pbek/QOwnNotes/issues/2472))
+- Javascript in code blocks are now treated as Javascript instead of Java
+  (for [#2468](https://github.com/pbek/QOwnNotes/issues/2468), thank you, @dohliam)
 
 ## 22.2.7
 - added a new editor color schema *Calm and Simple* by @nils-se
