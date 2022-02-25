@@ -675,6 +675,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionImport_notes_from_Joplin_triggered();
 
+    void on_actionToggle_Always_on_top_triggered();
+
 public:
     /** Settings access **/
     static bool isInDistractionFreeMode();

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.2.9
+- you can now tell the application to stay always on top of other windows in the
+  *Window* menu (for [#2476](https://github.com/pbek/QOwnNotes/issues/2476))
+
 ## 22.2.8
 - a possible crash in the table dialog was fixed when clicking on a cell with text
   (for [#2472](https://github.com/pbek/QOwnNotes/issues/2472))

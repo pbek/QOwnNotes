@@ -11948,3 +11948,10 @@ QList<QAction*> MainWindow::customTextEditActions()
 {
     return _noteTextEditContextMenuActions;
 }
+
+void MainWindow::on_actionToggle_Always_on_top_triggered()
+{
+    Qt::WindowFlags flags = windowFlags();
+    setWindowFlags(flags.testFlag(Qt::WindowStaysOnTopHint) ? flags & (~Qt::WindowStaysOnTopHint) : flags | Qt::WindowStaysOnTopHint);
+    show();
+}
