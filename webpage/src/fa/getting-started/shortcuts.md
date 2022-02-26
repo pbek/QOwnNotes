@@ -90,7 +90,7 @@
 - <kbd>Alt</kbd> + <kbd>چپ</kbd> در تاریخچه یادداشت پرش به عقب می کند
     - <kbd>Alt</kbd> + <kbd>راست</kbd> در تاریخچه یادداشت پرش به جلو می کند
 - <kbd>1..9</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Ctrl</kbd> نشانک یادداشت را در شکاف نشانک 1..9 تنظیم می کند
-- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
+- <kbd>9..1</kbd> + <kbd>Ctrl</kbd> به نشانک یادداشت در شکاف نشانک 9..1 پرش می کند
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> اندازه فونت متن یادداشت را به صورت تک نقطه ای افزایش می دهد
 - <kbd>Ctrl</kbd> + <kbd>-</kbd> اندازه فونت متن یادداشت را به صورت تک نقطه ای کاهش می دهد
 - <kbd>0</kbd> + <kbd>Ctrl</kbd> اندازه فونت متن یادداشت را بازنشانی می کند
@@ -207,7 +207,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history
     - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
-- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
+- <kbd>9..1</kbd> + <kbd>⌘ Cmd</kbd> به نشانک یادداشت در شکاف نشانک 9..1 پرش می کند
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> increases the note text font size by one point
 - <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> decreases the note text font size by one point
 - <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> resets the note text font size

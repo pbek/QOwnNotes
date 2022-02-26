@@ -90,7 +90,7 @@
 - <kbd>Alt</kbd> + <kbd>← Gauche</kbd> revient en arrière dans l'historique des notes
     - <kbd>Alt</kbd> + <kbd>→ Droite</kbd> saute en avant dans l'historique des notes
 - <kbd>Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>1…9</kbd> définit un signet de note sur l'emplacement de signet 1…9
-- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
+- <kbd>Ctrl</kbd> + <kbd>1…9</kbd> bascule vers le signet de note sur l'emplacement de signet 1…9
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> augmente la taille de la police du texte de la note d'un point
 - <kbd>Ctrl</kbd> + <kbd>-</kbd> diminue la taille de la police du texte de la note d'un point
 - <kbd>Ctrl</kbd> + <kbd>0</kbd> réinitialise la taille de la police du texte de la note
@@ -207,7 +207,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>^ Ctrl</kbd> + <kbd>← Gauche</kbd> remonte à rebours l'historique des notes
     - <kbd>⌘ Cmd</kbd> + <kbd>^ Ctrl</kbd> + <kbd>→ Droite</kbd> avance dans l'historique des notes
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>1…9</kbd> définit un signet de note sur l'emplacement de signet 1…9
-- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
+- <kbd>⌘ Cmd</kbd> + <kbd>1…9</kbd> bascule vers le signet de note sur l'emplacement de signet 1…9
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> augmente la taille de la police du texte de la note d'un point
 - <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> diminue la taille de la police du texte de la note d'un point
 - <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> réinitialise la taille de la police du texte de la note
