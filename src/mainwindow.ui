@@ -2685,7 +2685,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionToggle_Always_on_top">
    <property name="text">
-    <string>Toggle aways-on-top mode</string>
+    <string>Toggle always-on-top mode</string>
    </property>
   </action>
  </widget>
