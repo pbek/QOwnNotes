@@ -2852,7 +2852,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2688"/>
-        <source>Toggle aways-on-top mode</source>
+        <source>Toggle always-on-top mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
