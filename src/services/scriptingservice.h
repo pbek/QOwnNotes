@@ -192,8 +192,6 @@ class ScriptingService : public QObject {
 
     Q_INVOKABLE void regenerateNotePreview() const;
 
-    Q_INVOKABLE void forceRegenerateNotePreview() const;
-
     Q_INVOKABLE QList<int> selectedNotesIds() const;
 
     Q_INVOKABLE bool writeToFile(const QString &filePath,

@@ -1506,22 +1506,7 @@ void ScriptingService::regenerateNotePreview() const {
         MetricsService::instance()->sendVisitIfEnabled(
             QStringLiteral("scripting/") % QString(__func__));
 
-        mainWindow->regenerateNotePreview();
-    }
-#endif
-}
-
-/**
- * Forces to regenerate the note preview
- */
-void ScriptingService::forceRegenerateNotePreview() const {
-#ifndef INTEGRATION_TESTS
-    MainWindow *mainWindow = MainWindow::instance();
-
-    if (mainWindow != nullptr) {
-        MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
-
+        // Also regenerate the note preview if the note wasn't changed to e.g. reload images
         mainWindow->forceRegenerateNotePreview();
     }
 #endif
