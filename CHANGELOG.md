@@ -4,6 +4,7 @@
 - the scripting function `script.regenerateNotePreview()` now also regenerates the
   note preview if the note wasn't changed (for [#2477](https://github.com/pbek/QOwnNotes/issues/2477))
     - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#regenerating-the-note-preview)
+- added more Chinese Traditional, Persian, Polish translation (thank you evildeepblue, amirkbrpr, hansa2662)
 
 ## 22.2.9
 - you can now tell the application to stay always on top of other windows in the

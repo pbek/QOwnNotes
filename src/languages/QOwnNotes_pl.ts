@@ -2878,7 +2878,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2688"/>
 <source>Toggle always-on-top mode</source>
-<translation type="unfinished">Toggle always-on-top mode</translation>
+<translation>Przełącz tryb zawsze na wierzchu</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1909"/>
