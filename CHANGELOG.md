@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 22.2.10
+- there now is a new scripting function `script.forceRegenerateNotePreview()` to
+  force the regeneration of the note preview  (for [#2477](https://github.com/pbek/QOwnNotes/issues/2477))
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#forcing-regeneration-of-the-note-preview)
+
 ## 22.2.9
 - you can now tell the application to stay always on top of other windows in the
   *Window* menu (for [#2476](https://github.com/pbek/QOwnNotes/issues/2476))

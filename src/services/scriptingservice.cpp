@@ -1512,6 +1512,22 @@ void ScriptingService::regenerateNotePreview() const {
 }
 
 /**
+ * Forces to regenerate the note preview
+ */
+void ScriptingService::forceRegenerateNotePreview() const {
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow != nullptr) {
+        MetricsService::instance()->sendVisitIfEnabled(
+            QStringLiteral("scripting/") % QString(__func__));
+
+        mainWindow->forceRegenerateNotePreview();
+    }
+#endif
+}
+
+/**
  * Registers a custom action
  *
  * @param identifier the identifier of the action

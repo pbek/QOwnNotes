@@ -234,6 +234,8 @@ class MainWindow : public QMainWindow {
 
     void regenerateNotePreview();
 
+    void forceRegenerateNotePreview();
+
     void storeUpdatedNotesToDisk();
 
     void changeNoteFolder(const int noteFolderId,
@@ -1073,8 +1075,6 @@ private:
     void updateCurrentNoteTextHash();
 
     void centerAndResize();
-
-    void forceRegenerateNotePreview();
 
     void removeConflictedNotesDatabaseCopies();
 

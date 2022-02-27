@@ -254,6 +254,24 @@ script.regenerateNotePreview();
 You may want to take a look at the example
 [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
 
+Forcing regeneration of the note preview
+----------------------------------------
+
+Forces the refresh of the note preview (which also reloads the images).
+
+### Method call and parameters
+```cpp
+/**
+ * Forces the refresh of the note preview
+ */
+QString ScriptingService::forceRegenerateNotePreview();
+```
+
+### Example
+```js
+script.forceRegenerateNotePreview();
+```
+
 Registering a custom action
 ---------------------------
 
