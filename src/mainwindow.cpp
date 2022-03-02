@@ -1446,6 +1446,12 @@ void MainWindow::togglePanelVisibility(const QString &objectName) {
 
     // filter notes again according to new widget state
     filterNotes();
+
+    // Ensure we have latest note preview
+    if (dockWidget == _notePreviewDockWidget && dockWidget->isVisible()) {
+        _noteViewNeedsUpdate = true;
+        refreshNotePreview();
+    }
 }
 
 /**
