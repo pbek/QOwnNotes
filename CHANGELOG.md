@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.3.0
+- an issue with redrawing the preview when the preview panel is turned on manually without
+  switching workspaces was fixed (for [#2482](https://github.com/pbek/QOwnNotes/issues/2482), thank you, @Waqar144)
+
 ## 22.2.10
 - the scripting function `script.regenerateNotePreview()` now also regenerates the
   note preview if the note wasn't changed (for [#2477](https://github.com/pbek/QOwnNotes/issues/2477))
