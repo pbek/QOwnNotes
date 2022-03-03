@@ -5,6 +5,7 @@
   switching workspaces was fixed (for [#2482](https://github.com/pbek/QOwnNotes/issues/2482), thank you, @Waqar144)
 - text blocks are now re-highlighted when text is added to the dictionary
   (for [#2480](https://github.com/pbek/QOwnNotes/issues/2480), thank you, @Waqar144)
+- added more German, Arabic, French translation (thank you rakekniven, noureddin, chocolatine)
 
 ## 22.2.10
 - the scripting function `script.regenerateNotePreview()` now also regenerates the

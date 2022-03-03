@@ -217,7 +217,9 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> busca el texto seleccionado en la web
 - <kbd>⌘ Cmd</kbd> + <kbd>Up</kbd> desplaza el contenido hacia arriba
 - <kbd>⌘ Cmd</kbd> + <kbd>Abajo</kbd> desplaza el contenido hacia abajo
-- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> agrega dos espacios y un carácter de nueva línea para forzar una nueva línea de descuento
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> moves the current line down
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> moves the current line up
+- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### En el panel de vista previa de notas
 

@@ -217,7 +217,9 @@
 - <kbd>⌃ Strg</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> sucht nach dem ausgewählten Text im Web
 - <kbd>⌘ Cmd</kbd> + <kbd>Nach oben</kbd> scrollt den Inhalt nach oben
 - <kbd>⌘ Cmd</kbd> + <kbd>Down</kbd> scrollt den Inhalt nach unten
-- <kbd>⇧ Shift</kbd> + <kbd>Eingabe</kbd> fügt zwei Leerzeichen und ein Zeilenumbruchzeichen hinzu, um einen Markdown-Zeilenumbruch zu erzwingen
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> moves the current line down
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> moves the current line up
+- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### Im Notizvorschaufenster
 

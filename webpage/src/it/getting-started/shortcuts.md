@@ -217,6 +217,8 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> searches for the selected text on the web
 - <kbd>⌘ Cmd</kbd> + <kbd>Up</kbd> scrolls the content up
 - <kbd>⌘ Cmd</kbd> + <kbd>Down</kbd> scrolls the content down
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> moves the current line down
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> moves the current line up
 - <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### Nel pannello di anteprima della nota
