@@ -1086,6 +1086,7 @@ QMenu *QOwnNotesMarkdownTextEdit::spellCheckContextMenu(QPoint pos)
     wordSelectCursor.clearSelection();
     wordSelectCursor.select(QTextCursor::WordUnderCursor);
     QString selectedWord = wordSelectCursor.selectedText();
+    const int selectedWordBlock = wordSelectCursor.blockNumber();
 
     bool isMouseCursorInsideWord = true;
     if ((mousePos < wordSelectCursor.selectionStart() ||
@@ -1159,8 +1160,14 @@ QMenu *QOwnNotesMarkdownTextEdit::spellCheckContextMenu(QPoint pos)
     menu->addAction(tr("Ignore"), this, [selectedWord](){
         QOwnSpellChecker::instance()->ignoreWord(selectedWord);
     });
-    menu->addAction(tr("Add to Dictionary"), this, [selectedWord](){
+    menu->addAction(tr("Add to Dictionary"), this, [this, selectedWord, selectedWordBlock](){
         QOwnSpellChecker::instance()->addWordToDictionary(selectedWord);
+        if (highlighter() && document()) {
+            const QTextBlock block = document()->findBlockByNumber(selectedWordBlock);
+            if (block.isValid()) {
+                highlighter()->rehighlightBlock(block);
+            }
+        }
     });
 
     menu->setTitle(tr("Spelling"));
