@@ -27,8 +27,10 @@ to your computer. QOwnNotes doesn't need to be installed!
 Qt dropped support for Windows XP with version 5.8, but QOwnNotes is now also built
 with Qt 5.7 to allow Windows XP users to still use it.
 
-Although you have to seek out the latest master build from [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/history)
-yourself, choose the *Qt 5.7 environment* and download the *artifact*.
+You need to download the ZIP file from [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts)
+yourself and unzip it to a folder of your liking.
+
+You can then directly run `QOwnNotes.exe` from that folder, no installation is required.
 
 ::: tip Info
 The automatic update mechanism does not work with the AppVeyor build for Windows XP!
