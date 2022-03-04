@@ -20,17 +20,19 @@ U hebt het draagbare modus niet nodig als u gewoon geen beheerdersrechten voor u
 
 Qt heeft de ondersteuning voor Windows XP met versie 5.8 laten vallen, maar QOwnNotes is nu ook gebouwd met Qt 5.7 zodat Windows XP-gebruikers het nog steeds kunnen gebruiken.
 
-Hoewel je zelf de laatste master-build van [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/history) moet zoeken, kies je de *Qt 5.7-omgeving* en download je het *artefact*.
+You need to download the ZIP file from [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts) yourself and unzip it to a folder of your liking.
+
+You can then directly run `QOwnNotes.exe` from that folder, no installation is required.
 
 ::: tip Info
-Het automatische updatemechanisme werkt niet met de AppVeyor-build voor Windows XP! U zult zelf nieuwe releases moeten downloaden.
+The automatic update mechanism does not work with the AppVeyor build for Windows XP! You will have to download new releases yourself.
 :::
 
 ## Chocolatey
 
-Er is een door de gemeenschap onderhouden pakket van QOwnNotes op [Chocolatey](https://chocolatey.org/packages/qownnotes/).
+There is a community maintained package of QOwnNotes at [Chocolatey](https://chocolatey.org/packages/qownnotes/).
 
-U kunt het installeren met:
+You can install it with:
 
 ```shell
 choco install qownnotes

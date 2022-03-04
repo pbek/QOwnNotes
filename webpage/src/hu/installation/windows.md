@@ -20,17 +20,19 @@ Nincs szüksége a hordozható módra, ha csak nincs adminisztrációs engedély
 
 A Qt elvetette az 5.8-as verziójú Windows XP támogatását, de a QOwnNotes mostantól a Qt 5.7-tel is fel van építve, hogy a Windows XP felhasználói továbbra is használhassák.
 
-Bár magának meg kell keresnie az [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/history) legfrissebb master buildjét, válassza ki a *Qt 5.7 környezetet* és töltse le az *artefaktum* t.
+You need to download the ZIP file from [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts) yourself and unzip it to a folder of your liking.
+
+You can then directly run `QOwnNotes.exe` from that folder, no installation is required.
 
 ::: tip Info
-Az automatikus frissítési mechanizmus nem működik az AppVeyor Windows XP rendszerhez készült verziójával! Magának le kell töltenie az új kiadásokat.
+The automatic update mechanism does not work with the AppVeyor build for Windows XP! You will have to download new releases yourself.
 :::
 
 ## Chocolatey
 
-Van egy közösség által karbantartott QOwnNotes csomag a [Chocolatey](https://chocolatey.org/packages/qownnotes/) címen.
+There is a community maintained package of QOwnNotes at [Chocolatey](https://chocolatey.org/packages/qownnotes/).
 
-Telepítheti:
+You can install it with:
 
 ```shell
 choco install qownnotes

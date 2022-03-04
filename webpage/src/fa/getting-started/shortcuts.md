@@ -219,7 +219,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>Down</kbd> scrolls the content down
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> moves the current line down
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> moves the current line up
-- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
+- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> برای تقویت خط نوی مارک داون، دو فاصله و یک نویسه خط نو را اضافه می کند
 
 ### در پنل پیش نمایش یادداشت
 

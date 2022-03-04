@@ -4,6 +4,7 @@
 - disabling of spellchecking if the current note is encrypted now also works after
   the settings dialog was opened (for [#2487](https://github.com/pbek/QOwnNotes/issues/2487))
 - more dark icons for menu entries were created (for [#2489](https://github.com/pbek/QOwnNotes/issues/2489))
+- added more translation (thank you hansa2662, chocolatine, noureddin, amirkbrpr, mguerra)
 
 ## 22.3.0
 - an issue with redrawing the preview when the preview panel is turned on manually without

@@ -217,9 +217,9 @@
 - <kbd>^ Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>W</kbd> recherche le texte sélectionné sur le Web
 - <kbd>⌘ Cmd</kbd> + <kbd>↑ Haut</kbd> fait défiler le contenu vers le haut
 - <kbd>⌘ Cmd</kbd> + <kbd>↓ Bas</kbd> fait défiler le contenu vers le bas
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> moves the current line down
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> moves the current line up
-- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>↓ Bas</kbd> déplace la ligne courante vers le bas
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>↑ Haut</kbd> déplace la ligne courante vers le haut
+- <kbd>⇧ Maj</kbd> + <kbd>Entrée</kbd> ajoute deux espaces et un caractère de retour à la ligne pour forcer une nouvelle ligne en Markdown
 
 ### Dans le panneau d'aperçu de la note
 
