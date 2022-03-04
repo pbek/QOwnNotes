@@ -100,6 +100,6 @@
         <file alias="16x16/window.svg">icons/breeze-dark-qownnotes/16x16/window.svg</file>
         <file alias="16x16/mail-attachment.svg">icons/breeze-dark-qownnotes/16x16/mail-attachment.svg</file>
         <file alias="16x16/transform-crop.svg">icons/breeze-dark-qownnotes/16x16/transform-crop.svg</file>
-        <file>icons/breeze-dark-qownnotes/16x16/tools-check-spelling.svg</file>
+        <file alias="16x16/tools-check-spelling.svg">icons/breeze-dark-qownnotes/16x16/tools-check-spelling.svg</file>
     </qresource>
 </RCC>

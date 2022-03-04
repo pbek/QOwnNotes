@@ -2554,7 +2554,8 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="icon">
     <iconset theme="tools-check-spelling">
-     <normaloff>.</normaloff>.</iconset>
+     <normalon>:/icons/breeze-qownnotes/16x16/tools-check-spelling.svg</normalon>
+    </iconset>
    </property>
    <property name="text">
     <string>Check spelling</string>
