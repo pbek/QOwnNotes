@@ -5126,6 +5126,9 @@ void MainWindow::openSettingsDialog(int page, bool openScriptRepository) {
         return;
     }
 
+    // disable spell checking if current note is encrypted
+    updateNoteEncryptionUI();
+
     // read all relevant settings, that can be set in the settings dialog,
     // even if the dialog was canceled
     readSettingsFromSettingsDialog();

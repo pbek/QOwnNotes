@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.3.1
+- disabling of spellchecking if the current note is encrypted now also works after
+  the settings dialog was opened (for [#2487](https://github.com/pbek/QOwnNotes/issues/2487))
+
 ## 22.3.0
 - an issue with redrawing the preview when the preview panel is turned on manually without
   switching workspaces was fixed (for [#2482](https://github.com/pbek/QOwnNotes/issues/2482), thank you, @Waqar144)
