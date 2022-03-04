@@ -258,7 +258,7 @@ void NoteSubFolderTree::reload()
         }
 
         if (showAllNotesItem) {
-            // finally add 'All Notes' to the top
+            // finally, add 'All Notes' to the top
             insertTopLevelItem(0, allItem);
         }
     }
