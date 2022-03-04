@@ -172,7 +172,7 @@ void NoteSubFolderTree::reload()
     // add the "all notes" item
     if (showAllNotesItem) {
         int linkCount = Note::countAll();
-        QString toolTip = tr("show notes from all note subfolders (%1)")
+        QString toolTip = tr("Show notes from all note subfolders (%1)")
                               .arg(QString::number(linkCount));
 
         allItem->setText(0, tr("All notes"));
@@ -195,7 +195,7 @@ void NoteSubFolderTree::reload()
         0, settings
                .value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively"))
                .toBool());
-    const QString toolTip = tr("show notes in note root folder (%1)")
+    const QString toolTip = tr("Show notes in note root folder (%1)")
                                 .arg(QString::number(linkCount));
 
     auto *item = new QTreeWidgetItem();

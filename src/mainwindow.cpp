@@ -7577,7 +7577,7 @@ void MainWindow::reloadTagTree() {
     int linkCount =
         _showNotesFromAllNoteSubFolders || !NoteFolder::isCurrentShowSubfolders() ?
                 Note::countAll() : noteIdList.count();
-    QString toolTip = tr("show all notes (%1)").arg(QString::number(linkCount));
+    QString toolTip = tr("Show all notes (%1)").arg(QString::number(linkCount));
 
     auto *allItem = new QTreeWidgetItem();
     allItem->setText(0, tr("All notes"));
@@ -7738,7 +7738,7 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
     }
 
     const int linkCount = count;
-    const QString toolTip = tr("show all notes tagged with '%1' (%2)")
+    const QString toolTip = tr("Show all notes tagged with '%1' (%2)")
                                 .arg(name, QString::number(linkCount));
     auto *item = new QTreeWidgetItem();
     item->setData(0, Qt::UserRole, tagId);
