@@ -2653,7 +2653,10 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     QString styleSheet = ui->searchLineEdit->styleSheet();
     static const QRegularExpression re(QStringLiteral("background-image: url\\(:.+\\);"));
     styleSheet.replace(re, QStringLiteral("background-image: url(:/images/%1);").arg(fileName));
+    ui->noteSubFolderLineEdit->setStyleSheet(styleSheet);
+    ui->tagLineEdit->setStyleSheet(styleSheet);
     ui->searchLineEdit->setStyleSheet(styleSheet);
+    ui->navigationLineEdit->setStyleSheet(styleSheet);
 
     // initialize the shortcuts for the actions
     initShortcuts();
