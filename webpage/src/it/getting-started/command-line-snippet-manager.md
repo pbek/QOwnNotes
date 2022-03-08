@@ -1,19 +1,19 @@
-# Command-line Snippet Manager
+# Gestore dei frammenti di comandi
 
-You can use the [QOwnNotes Command-line Snippet Manager](https://github.com/qownnotes/qc) to **execute command snippets stored in notes** in QOwnNotes from the command line.
+Puoi usare il [Gestore dei frammenti di comandi QOwnNotes](https://github.com/qownnotes/qc) per **eseguire frammenti di comandi memorizzati nelle note** in QOwnNotes tramite la linea di comando.
 
 ![qc](/img/qc.png)
 
-You can use **notes with a special tag** to store **command snippets**, which you can **execute from the command-line snippet manager**.
+Puoi usare **note con etichette speciali** per memorizzare **frammenti di comandi** che puoi **eseguire dal gestore dei frammenti di comandi**.
 
 ![commands](/img/commands.png)
 
 ## Installazione
 
-Visit the [latest release page](https://github.com/qownnotes/qc/releases/latest) and download the version you need.
+Visita la [pagina dell'ultimo rilascio](https://github.com/qownnotes/qc/releases/latest) e scarica la versione di cui hai bisogno.
 
 ::: tip
-If you have [jq](https://stedolan.github.io/jq) installed you can also use this snippet to download and install for example the latest Linux AMD64 AppImage to `/usr/local/bin/qc`:
+Se hai installato [jq](https://stedolan.github.io/jq) puoi usarlo per scaricare e installare, per esempio l'ultima AppImage di Linux AMD64 in `/usr/local/bin/qc`:
 
 ```bash
 curl https://api.github.com/repos/qownnotes/qc/releases/latest | \
@@ -97,12 +97,12 @@ Above example will result in two command snippets, the first one with the two ta
 ## Come si usa
 
 ```bash
-# Search and execute command snippets
+# Cerca ed esegui frammenti di comando
 qc exec
 ```
 
 ```bash
-# Search and print command snippets
+# Cerca e visualizza frammenti di comando
 qc search
 ```
 

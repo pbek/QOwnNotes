@@ -2,19 +2,19 @@
 
 ```mermaid
 graph TB
-    subgraph Your computer
-        qon((QOwnNotes))-->md{{"Markdown files"}}
-        sync("Nextcloud Sync")-->md
-        qon-comp("Browser extension")-->qon
+    subgraph Il tuo computer
+        qon((QOwnNotes))-->md{{"File Markdown"}}
+        sync("Sincronizzazione Nextcloud")-->md
+        qon-comp("Estensione del Browser")-->qon
         qc("Command-line snippet manager")-->qon
     end
-    subgraph Your Nextcloud server
-        qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
+    subgraph Il tuo server Nextcloud
+        qon-api("QOwnNotesApi")-->ncs[("Server Nextcloud")]
         nc-notes-app("Nextcloud Notes")-->ncs
     end
 
-    nc-notes-mob("Nextcloud Notes mobile app")-->nc-notes-app
-    qon-web-app("QOwnNotes web application")-->qon
+    nc-notes-mob("App Nextcloud Notes")-->nc-notes-app
+    qon-web-app("Applicazione web QOwnNotes")-->qon
     qon-->qon-api
     qon-->ncs
     sync-->ncs
@@ -22,16 +22,16 @@ graph TB
     qon-web-api-->github("GitHub")
 
     style qon fill:#d0d0ff,stroke:#333,stroke-width:4px
-    click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
-    click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
-    click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
-    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
-    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
-    click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
-    click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
-    click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
-    click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
-    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
+    click qon "/getting-started/concept.html#qownnotes" "QOwnNotes applicazione desktop per gestire le tue note sul tuo computer"
+    click md "/getting-started/concept.html#markdown-note-files" "Markdown, file multimediali e allegati nella tua cartella note"
+    click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "Estensione del browser QOwnNotes per gestire i segnalibri i file Markdown e come strumento di ritaglio"
+    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "Gestore dei comandi parziali QOwnNotes"
+    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Client di sincronizzazione desktop Nextcloud per sincronizzare le tue note col tuo server"
+    click ncs "/getting-started/concept.html#nextcloud-server" "Server Nextcloud per ospitare le tue note e i tuoi file"
+    click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "App QOwnNotesAPI Nextcloud per accedere al cestino sul server e al versionamento delle note"
+    click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "App server Nextcloud Notes per gestire le tue note sul web"
+    click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "App Nextcloud Notes per gestire le tue note sul telefono cellulare"
+    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "Applicazione web QOwnNotes per inviare foto dal tuo telefono cellulare"
     click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
 
@@ -62,12 +62,12 @@ L'estensione del browser funziona **offline**, senza alcuna connessione internet
 Per ulteriori informazioni, visita l'[estensione del browser QOwnNotes Web Companion](browser-extension.md).
 :::
 
-## QOwnNotes command-line snippet manager
+## Gestore dei frammenti di comandi QOwnNotes
 
-You can manage your **command snippets** with QOwnNotes and execute them on the command-line.
+Puoi gestire i tuoi **frammenti di comandi** con QOwnNotes ed eseguirli sulla linea di comando.
 
 ::: tip
-Please visit [QOwnNotes command-line snippet manager](command-line-snippet-manager.md) for more information.
+Per favore, visita [Gestore dei frammenti di comandi QOwnNotes](command-line-snippet-manager.md) per ulteriori informazioni.
 :::
 
 ## Client di sincronizzazione desktop Nextcloud

@@ -64,22 +64,22 @@ class NoteSubFolderApi {
 ```js
 var noteSubFolderQmlObj = Qt.createQmlObject("import QOwnNotesTypes 1.0; NoteSubFolder{}", mainWindow, "noteSubFolder");
 
-// print all subfolder names
+// mostra i nomi di tutte le sottoscartelle
 noteSubFolderQmlObj.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
     script.log(nsf.name);
 });
 
-// get the active note subfolder
+// restituisce il nome della sottocartella della nota attiva
 var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
 
-// print the full and relative path of the active note subfolder
+// Mostra il percorso assoluto e relativo della sottocartella della nota attiva
 script.log(noteSubFolder.fullPath());
 script.log(noteSubFolder.relativePath());
 
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// iterate through notes in note subfolder
+// cicla tutte le note della sottocartella note
 for (var idx in noteSubFolder.notes) {
     var note = noteSubFolder.notes[idx];
 }

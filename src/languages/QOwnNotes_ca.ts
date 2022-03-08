@@ -3454,12 +3454,12 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../mainwindow.cpp" line="7580"/>
 <source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
+<translation>Mostrar totes les notes (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7741"/>
 <source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+<translation>Mostar totes les notes etiquetades amb '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9551"/>
@@ -4271,12 +4271,12 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="175"/>
 <source>Show notes from all note subfolders (%1)</source>
-<translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+<translation>Mostrsr les notes de totes les subcarpetes (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="198"/>
 <source>Show notes in note root folder (%1)</source>
-<translation type="unfinished">Show notes in note root folder (%1)</translation>
+<translation>Mostrar les notes de la carpeta arrel (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="210"/>

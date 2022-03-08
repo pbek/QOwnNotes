@@ -2859,7 +2859,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2688"/>
 <source>Toggle always-on-top mode</source>
-<translation type="unfinished">Toggle always-on-top mode</translation>
+<translation>Alternar el modo siempre visible</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1909"/>
@@ -3461,12 +3461,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <location filename="../mainwindow.cpp" line="7580"/>
 <source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
+<translation>Mostrar todas las notas (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7741"/>
 <source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+<translation>Mostrar todas las notas etiquetadas con '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9551"/>
@@ -4278,12 +4278,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="175"/>
 <source>Show notes from all note subfolders (%1)</source>
-<translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+<translation>Mostrar notas de todas las subcarpetas de notas (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="198"/>
 <source>Show notes in note root folder (%1)</source>
-<translation type="unfinished">Show notes in note root folder (%1)</translation>
+<translation>Mostrar notas en la carpeta raíz de la nota (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="210"/>

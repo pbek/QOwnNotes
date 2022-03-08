@@ -2859,7 +2859,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2688"/>
 <source>Toggle always-on-top mode</source>
-<translation type="unfinished">Toggle always-on-top mode</translation>
+<translation>Váltsd át a mindig a tetején módot</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1909"/>
@@ -3461,12 +3461,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <message>
 <location filename="../mainwindow.cpp" line="7580"/>
 <source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
+<translation>Az összes jegyzetet megjeleníti (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7741"/>
 <source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+<translation>Az összes '%1' (%2) jegyzetet megjeleníti</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9551"/>
@@ -4278,12 +4278,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="175"/>
 <source>Show notes from all note subfolders (%1)</source>
-<translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+<translation>Jegyzetek megjelenítése az összes jegyzetalmappából (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="198"/>
 <source>Show notes in note root folder (%1)</source>
-<translation type="unfinished">Show notes in note root folder (%1)</translation>
+<translation>Jegyzetek megjelenítése a jegyzet gyökérmappájában (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="210"/>
@@ -4519,12 +4519,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <message>
 <location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="294"/>
 <source>Failed to register %1. Error: %2</source>
-<translation type="unfinished">Failed to register %1. Error: %2</translation>
+<translation>Nem sikerült regisztrálni %1. Hiba: %2</translation>
 </message>
 <message>
 <location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="314"/>
 <source>Failed to unregister %1. Error: %2</source>
-<translation type="unfinished">Failed to unregister %1. Error: %2</translation>
+<translation>Nem sikerült a(z) %1 regisztráció törlése. Hiba: %2</translation>
 </message>
 </context>
 <context>
@@ -6576,7 +6576,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
 <source>Forget all "Don't ask again" choices in message boxes</source>
-<translation type="unfinished">Forget all "Don't ask again" choices in message boxes</translation>
+<translation>Felejtsd el az összes „Ne kérdezz többé” lehetőséget az üzenetablakban</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4254"/>

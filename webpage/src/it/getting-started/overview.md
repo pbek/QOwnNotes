@@ -5,13 +5,13 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot.png" alt="Schermata di QOwnNotes" />
     <div class="sheet">
-      Modifica le tue note con evidenziazione del markdown, tag colorati e sottocartelle
+      Modifica le tue note con evidenziazione markdown, etichette colorate e sottocartelle
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-minimal.png" alt="Vista minima" />
     <div class="sheet">
-      Interfaccia utente predefinita minima che può essere rimossa ancora di più
+      Interfaccia utente predefinita minima che può essere ulteriormente semplificata
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -23,7 +23,7 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-portable-mode.png" alt="Modalità portatile" />
     <div class="sheet">
-      Modalità portatile per chiavette USB
+      Modalità portabile per chiavette USB
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -35,13 +35,13 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-darkmode.png" alt="Schermata in modalità scura" />
     <div class="sheet">
-      Modalità notte
+      Modalità scura
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-distraction-free-mode.png" alt="schermata-modalità-senza-distrazioni" />
     <div class="sheet">
-      Modalità senza distrazioni
+      Modalità anti-distrazione
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -59,13 +59,13 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-diff.png" alt="schermata diff" />
     <div class="sheet">
-      Mostra la differenza tra le note quando è stata modificata esternamente
+      Mostra la differenza tra le note quando subiscono modifiche esterne all'applicazione
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-export-print.png" alt="schermata-esporta-stampa" />
     <div class="sheet">
-      Nota esportazione e stampa in PDF
+      Exportazione in PDF e stampa della nota
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -77,13 +77,13 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-other-workspace.png" alt="schermata-altro-spazio" />
     <div class="sheet">
-      Puoi avere diversi spazi di lavoro
+      Puoi avere diversi aree di lavoro
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-qml.png" alt="schermata-qml" />
     <div class="sheet">
-      Scriptable
+      Gestisce gli script
     </div>
   </v-carousel-item>
   <v-carousel-item>

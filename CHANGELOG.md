@@ -3,6 +3,7 @@
 ## 22.3.2
 - the search icons for sub-folders, tags and the navigation panel in the main-window
   are now all better visible in dark mode (for [#2490](https://github.com/pbek/QOwnNotes/issues/2490))
+- added more translation (thank you rawfreeamy, marcoxbresciani, amirkbrpr, mguerra)
 
 ## 22.3.1
 - disabling of spellchecking if the current note is encrypted now also works after

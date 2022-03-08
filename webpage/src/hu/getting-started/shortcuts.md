@@ -90,7 +90,7 @@
 - <kbd>Alt</kbd> + <kbd>Left</kbd> visszaugrik a jegyzettörténetbe
     - előreugrik a jegyzettörténetben
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> setzt ein Notiz-Lesezeichen auf den Lesezeichen-Slot 1..9
-- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
+- A <kbd>Ctrl</kbd> + <kbd>1..9</kbd> a jegyzet könyvjelzőjére ugrik az 1..9. könyvjelzőhelyen
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
 - <kbd>Ctrl</kbd> + <kbd>-</kbd> egy ponttal csökkenti a jegyzet szövegének betűméretét
 - <kbd>Ctrl</kbd> + <kbd>0</kbd> visszaállítja a jegyzet szövegének betűméretét
@@ -107,7 +107,7 @@
 ### A jegyzet előnézeti paneljén
 
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> lehetővé teszi az aktuális jegyzetben történő keresést
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+    - használja a <kbd>Fel</kbd> és <kbd>Le</kbd> vagy az <kbd>F3</kbd> és <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> billentyűk az előző és a következő egyezésre ugráshoz
     - Az <kbd>Esc</kbd> bezárja a keresősávot
 
 ### A Todo listában
@@ -122,15 +122,15 @@
 ### A főablakban
 
 - <kbd>⌘ Cmd</kbd> + <kbd>N</kbd> új jegyzetet hoz létre az aktuális dátummal és idővel a névben
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> creates a new note in a new tab
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> új jegyzetet hoz létre egy új lapon
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> lehetővé teszi jegyzetek keresését (a jegyzet és tartalma nevében)
-- <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> lets you search for notes in all tags / subfolders
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> switches to the previous workspace
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> edits an encrypted note
-- <kbd>⌃ Ctrl</kbd> + <kbd>R</kbd> removes the current note
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> checks for updates
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> opens the todo list
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in an external editor
+- A <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> segítségével jegyzeteket kereshet az összes címkében/almappában
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> átvált az előző munkaterületre
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> szerkeszt egy titkosított jegyzetet
+- <kbd>⌃ Ctrl</kbd> + <kbd>R</kbd> eltávolítja az aktuális hangjegyet
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> frissítéseket keres
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> megnyitja a teendők listáját
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> megnyitja az aktuális jegyzetet egy külső szerkesztőben
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in a view
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> enables or disables editing of notes
