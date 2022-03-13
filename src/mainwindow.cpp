@@ -2981,7 +2981,8 @@ void MainWindow::notesDirectoryWasModified(const QString &str) {
     // note folder was modified
     QString noteFileName = currentNote.getFileName();
     if (!noteFileName.isEmpty()) {
-        notesWereModified(currentNote.getFileName());
+        // Use the full path, like a filesystem watcher would, instead of just the file-name
+        notesWereModified(currentNote.fullNoteFilePath());
     }
 
     // also update the text of the text edit if current note has changed
