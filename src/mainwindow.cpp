@@ -2806,10 +2806,12 @@ void MainWindow::notesWereModified(const QString &str) {
         return;
     }
 
-    qDebug() << "notesWereModified: " << str;
-
     QFileInfo fi(str);
     Note note = Note::fetchByFileUrl(QUrl::fromLocalFile(str));
+
+    qDebug() << __func__ << " - 'str': " << str;
+    qDebug() << __func__ << " - 'note': " << note;
+    qDebug() << __func__ << " - 'currentNote': " << currentNote;
 
     // load note from disk if current note was changed
     if ((note.getFileName() == this->currentNote.getFileName()) &&
@@ -2818,6 +2820,7 @@ void MainWindow::notesWereModified(const QString &str) {
             // If the modified date of the file is the same as the one
             // from the current note it was a false alarm
             if (fi.lastModified() == this->currentNote.getFileLastModified()) {
+                qDebug() << __func__ << " - Modification date didn't change, ignoring";
                 return;
             }
 
@@ -2836,6 +2839,7 @@ void MainWindow::notesWereModified(const QString &str) {
 
             // Check if the old note text is the same or similar as the one on disk
             if (Utils::Misc::isSimilar(oldNoteText, noteTextOnDisk, threshold)) {
+                qDebug() << __func__ << " - Old and new text are same or similar, ignoring";
                 return;
             }
 
@@ -2847,6 +2851,7 @@ void MainWindow::notesWereModified(const QString &str) {
             // skip dialog if text of note file on disk and current note are
             // equal
             if (noteTextOnDiskHash == _currentNoteTextHash) {
+                qDebug() << __func__ << " - Note text and _currentNoteTextHash are the same, ignoring";
                 return;
             }
 
@@ -2857,6 +2862,7 @@ void MainWindow::notesWereModified(const QString &str) {
             // skip dialog if text of note file on disk text from note text
             // edit are equal or similar
             if (Utils::Misc::isSimilar(noteTextEditText, noteTextOnDisk, threshold)) {
+                qDebug() << __func__ << " - Note text and text on disk are too similar, ignoring";
                 return;
             }
 
