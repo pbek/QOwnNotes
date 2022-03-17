@@ -153,19 +153,19 @@ handleNewNoteHeadlineHook
 
 ### Methodeaanroep en parameters
 ```js
-/ **
-  * Deze functie wordt aangeroepen voordat een nootnoot wordt aangemaakt
-  *
-  * Hiermee kunt u de kop van de notitie wijzigen voordat deze wordt gemaakt
-  * Merk op dat u anders moet zorgen voor een unieke naam van de notitie
-  * de nieuwe notitie wordt niet aangemaakt, deze staat alleen in de notitielijst
-  *
-  * U kunt deze methode gebruiken om notitiesjablonen te maken
-  *
-  * @param koptekst die zou worden gebruikt om de koptekst te maken
-  * @return {string} de kop van de notitie
-  * /
-functie handleNewNoteHeadlineHook (headline);
+/**
+ * This function is called before a note is created
+ *
+ * It allows you to modify the headline of the note before it is created
+ * Note that you have to take care about a unique note name, otherwise
+ * the new note will not be created, it will just be found in the note list
+ *
+ * You can use this function for creating note templates
+ *
+ * @param headline text that would be used to create the headline
+ * @return {string} the headline of the note
+ */
+function handleNewNoteHeadlineHook(headline);
 ```
 
 Misschien wil je het voorbeeld [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-new-note-headline.qml) bekijken.
@@ -176,21 +176,21 @@ preNoteToMarkdownHtmlHook
 ### Methodeaanroep en parameters
 ```js
 /**
-  * Deze functie wordt aangeroepen voordat de markdown-html van een notitie wordt gegenereerd
-  *
-  * Hiermee kunt u wijzigen wat wordt doorgegeven aan de markdown naar html-converter
-  *
-  * De methode kan bijvoorbeeld in meerdere scripts worden gebruikt om code weer te geven (zoals LaTeX-wiskunde of zeemeermin)
-  * naar de grafische weergave voor de preview
-  *
-  * De notitie wordt tijdens dit proces niet gewijzigd
-  *
-  * @param {NoteApi} note - het notitieobject
-  * @param {string} markdown - de markdown die op het punt staat te worden omgezet naar html
-  * @param {string} forExport - true als de html wordt gebruikt voor een export, false voor de preview
-  * @return {string} de gewijzigde markdown of een lege string als er niets gewijzigd mag worden
-  */
-functie preNoteToMarkdownHtmlHook (note, markdown, forExport);
+ * This function is called before the markdown html of a note is generated
+ *
+ * It allows you to modify what is passed to the markdown to html converter
+ *
+ * The function can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
+ * to its graphical representation for the preview
+ *
+ * The note will not be changed in this process
+ *
+ * @param {NoteApi} note - the note object
+ * @param {string} markdown - the markdown that is about to being converted to html
+ * @param {string} forExport - true if the html is used for an export, false for the preview
+ * @return {string} the modified markdown or an empty string if nothing should be modified
+ */
+function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
 
 Misschien wilt u het voorbeeld eens bekijken [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
@@ -201,19 +201,19 @@ noteToMarkdownHtmlHook
 ### Methodeaanroep en parameters
 ```js
 /**
-  * Deze functie wordt aangeroepen wanneer de markdown-html van een notitie wordt gegenereerd
-  *
-  * Hiermee kunt u deze html wijzigen
-  * Dit wordt bijvoorbeeld eerder aangeroepen door het notitievoorbeeld
-  *
-  * De methode kan in meerdere scripts worden gebruikt om de html van de preview te wijzigen
-  *
-  * @param {NoteApi} note - het notitieobject
-  * @param {string} html - de html die op het punt staat te worden weergegeven
-  * @param {string} forExport - true als de html wordt gebruikt voor een export, false voor de preview
-  * @return {string} de gewijzigde html of een lege string als er niets gewijzigd mag worden
-  */
-functie noteToMarkdownHtmlHook (opmerking, html, forExport);
+ * This function is called when the markdown html of a note is generated
+ *
+ * It allows you to modify this html
+ * This is for example called before by the note preview
+ *
+ * The function can be used in multiple scripts to modify the html of the preview
+ *
+ * @param {NoteApi} note - the note object
+ * @param {string} html - the html that is about to being rendered
+ * @param {string} forExport - true if the html is used for an export, false for the preview
+ * @return {string} the modified html or an empty string if nothing should be modified
+ */
+function noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
 Misschien wilt u het voorbeeld eens bekijken [voorbeeld.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) of [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).

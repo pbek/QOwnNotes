@@ -90,7 +90,7 @@ QString currentNoteFolderPath();
 var path = script.currentNoteFolderPath();
 ```
 
-برای مثال می توانید نگاهی به مثال [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/absolute-media-links.qml) بیندازید.
+برای نمونه می توانید نگاهی به مثال [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/absolute-media-links.qml) بیندازید.
 
 دستیابی به یادداشت کنونی
 ------------------------
@@ -275,11 +275,11 @@ void ScriptingService::registerCustomAction(QString identifier,
 ```
 
 ::: tip
-شما قادر به اختصاص میانبرهای محلی و جهانی به فعالیت های سفارشی تان هم در *تنظیمات میانبرها* هستید.
+شما قادر به اختصاص میانبرهای محلی و جهانی به فعالیت های سفارشی تان نیز در *تنظیمات میانبرها* هستید.
 :::
 
 ::: warning
-توجه داشته باشید که [آیکون های تم freedesktop](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html) اغلب تنها در سیستم عامل لینوکس در دسترس قرار دارند. پس در صورتی که واقعاً تمایل به استفاده از آیکونی تحت سیستم عامل های مکینتاش یا ویندوز داشته باشید، باید یکی از آنها را در اسکیت خود قرار دهید. To get the path of your script to set a proper path for your icon you can use the [scriptDirPath property](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script).
+توجه داشته باشید که [آیکون های تم freedesktop](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html) اغلب تنها در سیستم عامل لینوکس در دسترس قرار دارند. پس در صورتی که واقعاً تمایل به استفاده از آیکونی تحت سیستم عامل های مکینتاش یا ویندوز داشته باشید، باید یکی از آنها را در اسکیت خود قرار دهید. برای دستیابی به مسیر اسکریپت خود جهت تنظیم یک مسیر صحیح مربوط به آیکون، می توانید از [scriptDirPath property](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script) استفاده کنید.
 :::
 
 ### مثال
@@ -331,13 +331,13 @@ Script {
 }
 ```
 
-For some more examples please see [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+برای نمونه های بیشتر، لطفاً [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) را ملاحظه نمایید.
 
 ::: tip
-You can also trigger a custom action after the application was started with the parameter `--action customAction_<identifier>`. For more information please take a look at [Trigger menu actions after startup](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
+شما همچنین می توانید عملیات سفارشی را پس از شروع به کار برنامه با پارامتر `--action customAction_<identifier>` راه‌اندازی کنید. برای کسب اطلاعات بیشتر لطفاً به [راه‌اندازی منو اکشن ها بعد از شروع به کار](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup) مراجعه نمایید.
 :::
 
-Registering a label
+ثبت برچسب
 -------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -360,13 +360,13 @@ script.registerLabel("long-label", "another very long text, another very long te
 script.registerLabel("counter-label");
 ```
 
-The labels will be visible in the scripting dock widget.
+برچسب ها در ابزارک لنگرگاه اسکریپت نویسی قابل رؤیت هستند.
 
-You can use both plain text or html in the labels. The text will be selectable and links can be clicked.
+شما می توانید هم از متن ساده و هم html در برچسب ها استفاده کنید. متن قابل انتخاب بوده و می توان روی پیوندها کلیک کرد.
 
-You may then want to take a look at the example script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
+سپس به عنوان مثال می توانید اسکریپت [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml) را ملاحظه کنید.
 
-Setting the text of a registered label
+تنظیم متن برچسب ثبت شده
 --------------------------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -385,11 +385,11 @@ void ScriptingService::setLabelText(QString identifier, QString text);
 script.setLabelText("counter-label", "counter text");
 ```
 
-You can use both plain text or html in the labels. The text will be selectable and links can be clicked.
+شما می توانید هم از متن ساده و هم html در برچسب ها استفاده کنید. متن قابل انتخاب بوده و می توان روی پیوندها کلیک کرد.
 
-You may then want to take a look at the example script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
+سپس به عنوان مثال می توانید اسکریپت [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml) را ملاحظه کنید.
 
-Creating a new note
+ایجاد یادداشت جدید
 -------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -407,10 +407,10 @@ void ScriptingService::createNote(QString text);
 script.createNote("My note headline\n===\n\nMy text");
 ```
 
-You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+شاید بخواهید به مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) نگاهی بیندازید.
 
 ::: tip
-If you turned off that your note headline determines the note filename then you have to rename your note file yourself afterwards, like this:
+اگر شما این گزینه را غیر فعال کنید که سرخط یادداشت شما نام پرونده یادداشت را تعیین می‌کند، در این صورت باید پرونده یادداشت خود را مانند نمونه پیش رو تغییر نام دهید:
 
 ```js
 var note = script.currentNote();
@@ -418,7 +418,7 @@ note.renameNoteFile('your-filename');
 ```
 :::
 
-Accessing the clipboard
+دسترسی به تخته برش
 -----------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -437,9 +437,9 @@ var clipboardText = script.clipboard();
 var clipboardHtml = script.clipboard(true);
 ```
 
-You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+شاید بخواهید به مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) نگاهی بیندازید.
 
-Write text to the note text edit
+نوشتن متن برای ویرایش متن یادداشت
 --------------------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -555,7 +555,7 @@ script.noteTextEditSetSelection(
     script.noteTextEditSelectionEnd() + 1);
 ```
 
-Get the start position of the current selection in the note text edit
+قرار گرفتن در موقعیت شروع انتخاب کنونی در ویرایش متن یادداشت
 ---------------------------------------------------------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -571,7 +571,7 @@ int ScriptingService::noteTextEditSelectionStart();
 script.log(script.noteTextEditSelectionStart());
 ```
 
-Get the end position of the current selection in the note text edit
+قرار گرفتن در موقعیت پایانی انتخاب کنونی در ویرایش متن یادداشت
 -------------------------------------------------------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -587,7 +587,7 @@ int ScriptingService::noteTextEditSelectionEnd();
 script.log(script.noteTextEditSelectionEnd());
 ```
 
-Set the text cursor in the note text edit to a certain position
+تنظیم نشانگر متن در ویرایش یادداشت کنونی نسبت به موقعیت معین
 ---------------------------------------------------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -611,7 +611,7 @@ script.noteTextEditSetCursorPosition(10);
 script.noteTextEditSetCursorPosition(-1);
 ```
 
-Get the current position of the text cursor in the note text edit
+قرارگیری موقعیت کنونی نشانگر متن در ویرایش متن یادداشت
 -----------------------------------------------------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -628,7 +628,7 @@ int ScriptingService::noteTextEditCursorPosition();
 script.log(script.noteTextEditCursorPosition());
 ```
 
-Read the current word from the note text edit
+خواندن کلمه کنونی از ویرایش متن یادداشت
 ---------------------------------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -650,9 +650,9 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 var text = script.noteTextEditCurrentWord();
 ```
 
-You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
+به عنوان مثال می توانید به [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml) نگاهی بیندازید.
 
-Check whether platform is Linux, OS X or Windows
+بررسی اینکه آیا پلتفرم لینوکس، سیستم عامل X یا ویندوز است
 ------------------------------------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -665,11 +665,11 @@ bool ScriptingService::platformIsWindows();
 ### مثال
 ```js
 if (script.platformIsLinux()) {
-    // Will be executed only if under Linux
+    // only will be executed if under Linux
 }
 ```
 
-Tag the current note
+برچسب گذاری یادداشت کنونی
 --------------------
 
 ### فراخوانی شگرد و پارامترها

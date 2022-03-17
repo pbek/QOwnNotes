@@ -4671,12 +4671,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="294"/>
 <source>Failed to register %1. Error: %2</source>
-<translation type="unfinished">Failed to register %1. Error: %2</translation>
+<translation>تعذر تسجيل %1. الخطأ: %2</translation>
 </message>
 <message>
 <location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="314"/>
 <source>Failed to unregister %1. Error: %2</source>
-<translation type="unfinished">Failed to unregister %1. Error: %2</translation>
+<translation>تعذر إلغاء تسجيل %1. الخطأ: %2</translation>
 </message>
 </context>
 <context>
@@ -6582,13 +6582,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4215"/>
 <source>Message boxes</source>
-<translation>صناديق الرسائل</translation>
+<translation>نوافذ الرسائل</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4224"/>
 <location filename="../dialogs/settingsdialog.cpp" line="4057"/>
 <source>Reset message boxes</source>
-<translation>إعادة تعيين مربعات الرسائل</translation>
+<translation>مسح إجابات نوافذ الرسائل</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4411"/>
@@ -6781,7 +6781,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
 <source>Forget all "Don't ask again" choices in message boxes</source>
-<translation type="unfinished">Forget all "Don't ask again" choices in message boxes</translation>
+<translation>انسَ جميع المرات التي اخترت فيها «لا تسأل مرة أخرى!» في نوافذ الرسائل</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4254"/>
@@ -8119,7 +8119,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4058"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
-<translation>هل تريد حقًا إعادة تعيين التجاوزات لكافة مربعات الرسائل؟</translation>
+<translation>هل تريد حقًا نسيان جميع المرات التي اخترت فيها «لا تسأل مرة أخرى!» في نوافذ الرسائل؟</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
@@ -8248,7 +8248,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/sharedialog.cpp" line="66"/>
 <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-<translation>تذكر أنك لا تزال في حاجة إلى مزامنة ملاحظاتك مع خادمك باستخدام عميل مزامنة ownCloud الحاسوبي حتى تشارك الملاحظات مع الآخرين!</translation>
+<translation>تذكر أنك ما تزال في حاجة إلى مزامنة ملاحظاتك مع خادمك باستخدام عميل مزامنة ownCloud الحاسوبي حتى تشارك الملاحظات مع الآخرين!</translation>
 </message>
 </context>
 <context>

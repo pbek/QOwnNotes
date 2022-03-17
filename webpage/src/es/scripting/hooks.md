@@ -155,17 +155,17 @@ handleNewNoteHeadlineHook
 ### Parámetros y llamada al método
 ```js
 /**
-  * Esta función se llama antes de crear una nota.
-  *
-  * Te permite modificar el título de la nota antes de que se cree
-  * Tenga en cuenta que debe tener cuidado con un nombre de nota único, de lo contrario
-  * la nueva nota no se creará, solo se encontrará en la lista de notas
-  *
-  * Puede utilizar este método para crear plantillas de notas
-  *
-  * @param texto del título que se usaría para crear el título
-  * @ return {string} el título de la nota
-  */
+ * This function is called before a note is created
+ *
+ * It allows you to modify the headline of the note before it is created
+ * Note that you have to take care about a unique note name, otherwise
+ * the new note will not be created, it will just be found in the note list
+ *
+ * You can use this function for creating note templates
+ *
+ * @param headline text that would be used to create the headline
+ * @return {string} the headline of the note
+ */
 function handleNewNoteHeadlineHook(headline);
 ```
 
@@ -177,20 +177,20 @@ preNoteToMarkdownHtmlHook
 ### Parámetros y llamada al método
 ```js
 /**
-  * Esta función se llama antes de que se genere el html de descuento de una nota
-  *
-  * Le permite modificar lo que se pasa al convertidor de rebajas a html
-  *
-  * El método se puede usar, por ejemplo, en múltiples scripts para renderizar código (como matemáticas LaTeX o sirena)
-  * a su representación gráfica para la vista previa
-  *
-  * La nota no se modificará en este proceso
-  *
-  * @param {NoteApi} nota: el objeto de nota
-  * @param {string} markdown: el descuento que está a punto de convertirse a html
-  * @param {string} forExport: verdadero si el html se utiliza para una exportación, falso para la vista previa
-  * @return {string} la rebaja modificada o una cadena vacía si no se debe modificar nada
-  */
+ * This function is called before the markdown html of a note is generated
+ *
+ * It allows you to modify what is passed to the markdown to html converter
+ *
+ * The function can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
+ * to its graphical representation for the preview
+ *
+ * The note will not be changed in this process
+ *
+ * @param {NoteApi} note - the note object
+ * @param {string} markdown - the markdown that is about to being converted to html
+ * @param {string} forExport - true if the html is used for an export, false for the preview
+ * @return {string} the modified markdown or an empty string if nothing should be modified
+ */
 function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
 
@@ -202,19 +202,19 @@ noteToMarkdownHtmlHook
 ### Parámetros y llamada al método
 ```js
 /**
-  * Esta función se llama cuando se genera el html de descuento de una nota
-  *
-  * Te permite modificar este html
-  * Esto es, por ejemplo, llamado antes por la vista previa de la nota
-  *
-  * El método se puede utilizar en varios scripts para modificar el html de la vista previa
-  *
-  * @param {NoteApi} nota: el objeto de nota
-  * @param {string} html - el html que está a punto de ser renderizado
-  * @param {string} forExport: verdadero si el html se utiliza para una exportación, falso para la vista previa
-  * @return {string} el html modificado o una cadena vacía si no se debe modificar nada
-  */
-función noteToMarkdownHtmlHook (nota, html, para exportación);
+ * This function is called when the markdown html of a note is generated
+ *
+ * It allows you to modify this html
+ * This is for example called before by the note preview
+ *
+ * The function can be used in multiple scripts to modify the html of the preview
+ *
+ * @param {NoteApi} note - the note object
+ * @param {string} html - the html that is about to being rendered
+ * @param {string} forExport - true if the html is used for an export, false for the preview
+ * @return {string} the modified html or an empty string if nothing should be modified
+ */
+function noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
 Es posible que desee echar un vistazo al ejemplo [ejemplo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) o [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).

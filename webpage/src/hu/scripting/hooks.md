@@ -154,18 +154,18 @@ handleNewNoteHeadlineHook
 ### Módszerhívás és paraméterek
 ```js
 /**
-  * Ezt a funkciót a jegyzet létrehozása előtt hívják meg
-  *
-  * Lehetővé teszi a jegyzet címsorának módosítását még létrehozása előtt
-  * Ne feledje, hogy különben ügyelnie kell az egyedi jegyzet nevére
-  * az új jegyzet nem jön létre, csak megtalálható a jegyzetlistában
-  *
-  * Ezt a módszert használhatja jegyzetsablonok létrehozásához
-  *
-  * @param címsor szövege, amelyet a címsor létrehozásához használnak
-  * @return {string} a jegyzet címsora
-  */
-function handleNewNoteHeadlineHook (címsor);
+ * Ez a függvény a jegyzet létrehozása előtt meghívásra kerül
+ *
+ * Lehetővé teszi a jegyzet címsorának módosítását a létrehozás előtt
+ * Vegye figyelembe, hogy különben ügyelnie kell az egyedi jegyzetnévre
+ * az új jegyzet nem jön létre, csak megjelenik a jegyzetlistában
+ *
+ * Ezt a funkciót jegyzetsablonok létrehozására használhatja
+ *
+ * @param headline text that would be used to create the headline
+ * @return {string} the headline of the note
+ */
+function handleNewNoteHeadlineHook(headline);
 ```
 
 Érdemes megnézni a példát [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-new-note-headline.qml).
@@ -201,18 +201,18 @@ noteToMarkdownHtmlHook
 ### Módszerhívás és paraméterek
 ```js
 /**
-  * Ezt a függvényt akkor hívják meg, amikor egy jegyzet markdown html-jét létrehozzák
-  *
-  * Lehetővé teszi ennek a html-nek a módosítását
-  * Ezt például a jegyzet előnézete hívta meg korábban
-  *
-  * A módszer több szkriptben is használható az előnézet html-jének módosítására
-  *
-  * @param {NoteApi} megjegyzés - a jegyzet objektum
-  * @param {string} html - a megjelenítés előtt álló html
-  * @param {string} forExport - igaz, ha a html-t exportálják, hamis az előnézethez
-  * @return {string} a módosított html vagy egy üres karakterlánc, ha semmit nem kellene módosítani
-  */
+ * This function is called when the markdown html of a note is generated
+ *
+ * It allows you to modify this html
+ * This is for example called before by the note preview
+ *
+ * The function can be used in multiple scripts to modify the html of the preview
+ *
+ * @param {NoteApi} note - the note object
+ * @param {string} html - the html that is about to being rendered
+ * @param {string} forExport - true if the html is used for an export, false for the preview
+ * @return {string} the modified html or an empty string if nothing should be modified
+ */
 function noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
