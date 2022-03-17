@@ -154,6 +154,10 @@ module.exports = {
       lang: 'hu-HU',
       title: 'QOwnNotes',
     },
+    '/ar/': {
+      lang: 'ar-AR',
+      title: 'QOwnNotes',
+    },
   },
 
   /**
@@ -658,6 +662,65 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "nl")
+          }
+        ]      },
+      '/ar/': {
+        selectText: 'Languages',
+        label: 'اَلْعَرَبِيَّةُ',
+        ariaLabel: 'Languages',
+        editLinkText: 'Help us improve this page!',
+        algolia: {
+          apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
+          indexName: 'qownnotes'
+        },
+        nav: [
+          {
+            text: 'Loslegen',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'ar'),
+          },
+          {
+            text: 'Installation',
+            link: utils.getNavItemForLanguage(installationNavItem, 'ar'),
+          },
+          {
+            text: 'Änderungsprotokoll',
+            link: changelogNavItem,
+            collapsable: true,
+          },
+          {
+            text: 'Kontakt',
+            ariaLabel: 'Contact Menu',
+            items: contactNavItems
+          },
+          {
+            text: 'Spenden',
+            link: utils.getNavItemForLanguage(donateNavItem, 'ar'),
+          }
+        ],
+        sidebar: [
+          {
+            title: 'Loslegen',
+            children: utils.getNavItemsForLanguage(gettingStartedNavItems, 'ar')
+          },
+          {
+            title: 'Installation',
+            children: utils.getNavItemsForLanguage(installationNavItems, 'ar')
+          },
+          {
+            title: 'Editor',
+            children: utils.getNavItemsForLanguage(editorNavItems, 'ar')
+          },
+          {
+            title: 'Skripten',
+            children: utils.getNavItemsForLanguage(scriptingNavItems, 'ar')
+          },
+          {
+            title: 'Beitragen',
+            children: utils.getNavItemsForLanguage(contributingNavItems, 'ar')
+          },
+          {
+            title: 'FAQ',
+            children: utils.getNavItemsForLanguage(faqNavItems, 'ar')
           }
         ]
       }

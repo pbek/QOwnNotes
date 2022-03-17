@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.3.3
+- the Arabic translation was integrated into the webpage on [QOwnNotes webpage in Arabic](www.qownnotes.org/ar)
+  (for [#2494](https://github.com/pbek/QOwnNotes/issues/2494))
+
 ## 22.3.2
 - the search icons for sub-folders, tags and the navigation panel in the main-window
   are now all better visible in dark mode (for [#2490](https://github.com/pbek/QOwnNotes/issues/2490))
