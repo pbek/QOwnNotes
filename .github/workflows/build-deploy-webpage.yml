@@ -42,6 +42,7 @@ jobs:
       run: yarn install
     - if: steps.changes.outputs.DO_BUILD
       run: yarn run build
+      shell: bash
     - if: steps.changes.outputs.DO_BUILD
       name: Set up QEMU
       uses: docker/setup-qemu-action@v1
