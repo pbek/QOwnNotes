@@ -3,6 +3,8 @@
 ## 22.3.3
 - the Arabic translation was integrated into the webpage on [QOwnNotes webpage in Arabic](www.qownnotes.org/ar)
   (for [#2494](https://github.com/pbek/QOwnNotes/issues/2494))
+- more debug messages were added to automatic note file reloading process
+  (for [#2493](https://github.com/pbek/QOwnNotes/issues/2493))
 - added more translation (thank you rawfreeamy, noureddin, amirkbrpr, mguerra)
 
 ## 22.3.2
