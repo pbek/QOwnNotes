@@ -665,61 +665,61 @@ module.exports = {
           }
         ]      },
       '/ar/': {
-        selectText: 'Languages',
-        label: 'اَلْعَرَبِيَّةُ',
+        selectText: 'اللغات',
+        label: 'العربية',
         ariaLabel: 'Languages',
-        editLinkText: 'Help us improve this page!',
+        editLinkText: 'ساعدنا في تحسين هذه الصفحة!',
         algolia: {
           apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
           indexName: 'qownnotes'
         },
         nav: [
           {
-            text: 'Loslegen',
+            text: 'بدء الاستخدام',
             link: utils.getNavItemForLanguage(gettingStartedNavItem, 'ar'),
           },
           {
-            text: 'Installation',
+            text: 'التثبيت',
             link: utils.getNavItemForLanguage(installationNavItem, 'ar'),
           },
           {
-            text: 'Änderungsprotokoll',
+            text: 'سجل التغييرات',
             link: changelogNavItem,
             collapsable: true,
           },
           {
-            text: 'Kontakt',
+            text: 'تواصل',
             ariaLabel: 'Contact Menu',
             items: contactNavItems
           },
           {
-            text: 'Spenden',
+            text: 'تبرع',
             link: utils.getNavItemForLanguage(donateNavItem, 'ar'),
           }
         ],
         sidebar: [
           {
-            title: 'Loslegen',
+            title: 'بدء الاستخدام',
             children: utils.getNavItemsForLanguage(gettingStartedNavItems, 'ar')
           },
           {
-            title: 'Installation',
+            title: 'التثبيت',
             children: utils.getNavItemsForLanguage(installationNavItems, 'ar')
           },
           {
-            title: 'Editor',
+            title: 'المحرر',
             children: utils.getNavItemsForLanguage(editorNavItems, 'ar')
           },
           {
-            title: 'Skripten',
+            title: 'البرمجة',
             children: utils.getNavItemsForLanguage(scriptingNavItems, 'ar')
           },
           {
-            title: 'Beitragen',
+            title: 'مساهمة',
             children: utils.getNavItemsForLanguage(contributingNavItems, 'ar')
           },
           {
-            title: 'FAQ',
+            title: 'أسئلة شائعة',
             children: utils.getNavItemsForLanguage(faqNavItems, 'ar')
           }
         ]
