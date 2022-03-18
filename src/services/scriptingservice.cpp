@@ -1137,7 +1137,7 @@ void ScriptingService::callCustomActionInvokedForObject(
 /**
  * QML wrapper to get the current note
  *
- * @return {NoteApi} the the current note
+ * @return {NoteApi} the current note
  */
 NoteApi *ScriptingService::currentNote() const {
     MetricsService::instance()->sendVisitIfEnabled(

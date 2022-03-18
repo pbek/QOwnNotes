@@ -3420,7 +3420,7 @@ QString Note::fileUrlInCurrentNoteFolderToRelativePath(const QUrl &url) {
 
 /**
  * @brief Note::relativeFilePath returns the relative path of "path" in regard
- * to the the path of the note
+ * to the path of the note
  * @param path
  * @return
  */

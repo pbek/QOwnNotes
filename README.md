@@ -104,7 +104,7 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 	  page to install the app on Mozilla Firefox
 - notes are getting their name from the first line of the note text (just like
   in the Nextcloud / ownCloud notes web-application) and the note text files are
-  automatically renamed, if the the first line changes
+  automatically renamed, if the first line changes
     - this feature can also be turned off and you can use any filename you like
 - manage your Nextcloud / ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
 - **encryption of notes** (AES-256 is built in or you can use custom encryption methods like

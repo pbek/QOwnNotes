@@ -106,7 +106,7 @@ Getting the current note
 /**
  * QML wrapper to get the current note
  *
- * @returns {NoteApi} the the current note object
+ * @returns {NoteApi} the current note object
  */
 NoteApi currentNote();
 ```

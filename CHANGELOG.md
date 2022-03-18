@@ -1025,7 +1025,7 @@
 - added the **new editor color schema** *Gruvbox*
   (for [#2085](https://github.com/pbek/QOwnNotes/issues/2092), thank you @Yoshua-chan)
 - there is now a new shortcut <kbd>F8</kbd> to jump to the *navigation panel* that
-  jumps to its search field if it is enabled or to the the navigation tree if the
+  jumps to its search field if it is enabled or to the navigation tree if the
   search field was hidden (for [#2093](https://github.com/pbek/QOwnNotes/issues/2093))
     - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
@@ -1234,7 +1234,7 @@
 
 ## 21.1.1
 - now the first occurrence of the search term is found first in the note text,
-  when searching for notes in the note search panel (instead of the the last
+  when searching for notes in the note search panel (instead of the last
   occurrence) (for [#1981](https://github.com/pbek/QOwnNotes/issues/1981))
 - added repositories for **openSUSE Leap 15.3**
   - please visit the [openSUSE installation page](https://www.qownnotes.org/installation/opensuse.html)
@@ -1268,7 +1268,7 @@
 
 ## 20.12.5
 - if you are searching for text in the note list now for the search term is also
-  searched again inside the notes when you click on other notes in the the note list
+  searched again inside the notes when you click on other notes in the note list
   (for [#1980](https://github.com/pbek/QOwnNotes/issues/1980))
 
 ## 20.12.4
@@ -2396,7 +2396,7 @@
   if no task is present (for [#1609](https://github.com/pbek/QOwnNotes/issues/1609))
 
 ## 20.1.17
-- on Windows the application will now automatically be shown if the the update
+- on Windows the application will now automatically be shown if the update
   dialog is triggered, because otherwise Windows seems to quit the application
   when the update dialog is closed while the application is hidden
   (for [#1514](https://github.com/pbek/QOwnNotes/issues/1514))
@@ -5054,7 +5054,7 @@
   note edit is configured as central widget (for [#420](https://github.com/pbek/QOwnNotes/issues/420))
 - fixed links to files with spaces in the file-path when creating the
   link with the *Link dialog*
-- in the *Link dialog* the the last selected file will now be remembered
+- in the *Link dialog* the last selected file will now be remembered
   in the open-file dialog
 - attempted to fix a non-reproducible crash in Windows 7 when a note is
   stored by clicking the close button (for [#886](https://github.com/pbek/QOwnNotes/issues/886))
@@ -6025,7 +6025,7 @@
     - please visit the [AppImage installation page](https://www.qownnotes.org/installation#AppImage)
       for instructions
     - if you run QOwnNotes from the AppImage the automatic updater will be 
-      enabled by default and you will be led the the AppImage download page if 
+      enabled by default and you will be led the AppImage download page if 
       there is a new version of the application available
 - fixed a problem in the desktop file for all openSUSE builds
 - added more Polish, Spanish, Croatian, Italian, Brazilian Portuguese, Hungarian
@@ -6868,7 +6868,7 @@
   the top in the note list even when not actively edited
   (for [#408](https://github.com/pbek/QOwnNotes/issues/408))
 - took some more safety measures to prevent crashes when the application is 
-  quitting while log output was still sent to the the log panel
+  quitting while log output was still sent to the log panel
   (for [#406](https://github.com/pbek/QOwnNotes/issues/406))
 
 ## 16.12.1
@@ -7455,7 +7455,7 @@
   and mlocati)
 
 ## 16.09.11
-- disabled the icon of the the share menu entry in OS X 
+- disabled the icon of the share menu entry in OS X 
 - `QOwnNotesPortable.exe` was removed from the Windows release of
    v16.09.10, because it wasn't clear if the BAT to EXE "converter" it
    was created with added malware
@@ -8549,7 +8549,7 @@
 - fixed the QOwnNotesAPI test in the settings dialog if no network connection
   is present
 - made the ownCloud server error text in the settings dialog copyable by mouse
-- clarified the the meaning of the setting `notify about all external 
+- clarified the meaning of the setting `notify about all external 
   modifications` (for [#161](https://github.com/pbek/QOwnNotes/issues/161))
 - generally increased the time a status message is visible for messages that 
   were viewed too short (for [#161](https://github.com/pbek/QOwnNotes/issues/161))
@@ -8588,7 +8588,7 @@
 - fixed a problem with the automatic text selection when replacing text in notes
 
 ## 16.05.8
-- fixed the the jumping to headlines when clicking on them in the navigation 
+- fixed the jumping to headlines when clicking on them in the navigation 
   bar if the note edit pane was disabled at app startup
   (for [#165](https://github.com/pbek/QOwnNotes/issues/165))
 - fixed the distraction free mode if the note edit pane was disabled while 

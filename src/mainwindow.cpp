@@ -2741,7 +2741,7 @@ void MainWindow::initTreeWidgetItemHeight() {
     QSettings settings;
     int height = settings.value(QStringLiteral("itemHeight")).toInt();
 
-    // if the height was 0 set it the the current height of a tree widget item
+    // if the height was 0 set it the current height of a tree widget item
     if (height == 0) {
         QTreeWidget treeWidget(this);
         auto *treeWidgetItem = new QTreeWidgetItem();
@@ -5775,7 +5775,7 @@ void MainWindow::filterNotesBySearchLineEditText(bool searchInNote) {
 }
 
 /**
- * Opens the search widget in the the current note and searches for all
+ * Opens the search widget in the current note and searches for all
  * occurrences of the words in the search text
  *
  * @param searchText
