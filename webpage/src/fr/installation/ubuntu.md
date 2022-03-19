@@ -9,7 +9,7 @@ Notez qu'il existe également des paquets pour ARM dans le dépôt, au cas où v
 Ouvrez un terminal et entrez les commandes suivantes pour ajouter le dépôt et installer QOwnNotes.
 
 ```bash
-sudo add-apt-repository ppa:pbek/qownnotes
+sudo add-apt-repository -y ppa:pbek/qownnotes
 sudo apt-get update
 sudo apt-get install qownnotes
 ```
