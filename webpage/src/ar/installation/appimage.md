@@ -1,4 +1,4 @@
-# التثبيت كـ&nbsp;AppImage
+# التثبيت كـ AppImage
 
 يمكنك تنزيل AppImage الأخيرة من [صفحة إصدارات QOwnNotes](https://github.com/pbek/QOwnNotes/releases). من المفترض أن يكون اسم ملفها شيئا مثل `QOwnNotes-x86_64.AppImage` في هذه الصفحة.
 

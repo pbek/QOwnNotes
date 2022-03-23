@@ -1,4 +1,4 @@
-# التثبيت على&nbsp;Ubuntu&nbsp;Linux و&nbsp;elementary&nbsp;OS و&nbsp;Linux&nbsp;Mint
+# التثبيت على أوبنتو وإلمنتري ولينكس منت
 
 ## أوبنتو 18.04 أو أحدث، إلمنتري، أو لينكس منت 18 أو أحدث
 

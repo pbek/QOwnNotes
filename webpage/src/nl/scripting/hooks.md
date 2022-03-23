@@ -154,17 +154,17 @@ handleNewNoteHeadlineHook
 ### Methodeaanroep en parameters
 ```js
 /**
- * This function is called before a note is created
- *
- * It allows you to modify the headline of the note before it is created
- * Note that you have to take care about a unique note name, otherwise
- * the new note will not be created, it will just be found in the note list
- *
- * You can use this function for creating note templates
- *
- * @param headline text that would be used to create the headline
- * @return {string} the headline of the note
- */
+  * Deze functie wordt aangeroepen voordat een noot wordt gemaakt
+  *
+  * Hiermee kunt u de kop van de notitie wijzigen voordat deze wordt gemaakt
+  * Houd er rekening mee dat u anders moet zorgen voor een unieke nootnaam
+  * de nieuwe notitie wordt niet gemaakt, deze wordt alleen in de notitielijst gevonden
+  *
+  * U kunt deze functie gebruiken voor het maken van notitiesjablonen
+  *
+  * @param koptekst die zou worden gebruikt om de kop te maken
+  * @return {string} de kop van de notitie
+  */
 function handleNewNoteHeadlineHook(headline);
 ```
 
@@ -176,20 +176,20 @@ preNoteToMarkdownHtmlHook
 ### Methodeaanroep en parameters
 ```js
 /**
- * This function is called before the markdown html of a note is generated
- *
- * It allows you to modify what is passed to the markdown to html converter
- *
- * The function can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
- * to its graphical representation for the preview
- *
- * The note will not be changed in this process
- *
- * @param {NoteApi} note - the note object
- * @param {string} markdown - the markdown that is about to being converted to html
- * @param {string} forExport - true if the html is used for an export, false for the preview
- * @return {string} the modified markdown or an empty string if nothing should be modified
- */
+  * Deze functie wordt aangeroepen voordat de markdown-html van een notitie wordt gegenereerd
+  *
+  * Hiermee kunt u wijzigen wat wordt doorgegeven aan de markdown naar html-converter
+  *
+  * De functie kan bijvoorbeeld in meerdere scripts worden gebruikt om code te renderen (zoals LaTeX wiskunde of zeemeermin)
+  * naar de grafische weergave voor de preview
+  *
+  * De notitie wordt tijdens dit proces niet gewijzigd
+  *
+  * @param {NoteApi} notitie - het notitieobject
+  * @param {string} markdown - de markdown die op het punt staat te worden geconverteerd naar html
+  * @param {string} forExport - waar als de html wordt gebruikt voor een export, onwaar voor het voorbeeld
+  * @return {string} de gewijzigde afwaardering of een lege tekenreeks als er niets moet worden gewijzigd
+  */
 function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
 
@@ -201,18 +201,18 @@ noteToMarkdownHtmlHook
 ### Methodeaanroep en parameters
 ```js
 /**
- * This function is called when the markdown html of a note is generated
- *
- * It allows you to modify this html
- * This is for example called before by the note preview
- *
- * The function can be used in multiple scripts to modify the html of the preview
- *
- * @param {NoteApi} note - the note object
- * @param {string} html - the html that is about to being rendered
- * @param {string} forExport - true if the html is used for an export, false for the preview
- * @return {string} the modified html or an empty string if nothing should be modified
- */
+  * Deze functie wordt aangeroepen wanneer de markdown-html van een notitie wordt gegenereerd
+  *
+  * Hiermee kunt u deze html wijzigen
+  * Dit wordt bijvoorbeeld eerder aangeroepen door de notitievoorbeeld
+  *
+  * De functie kan in meerdere scripts worden gebruikt om de html van de preview te wijzigen
+  *
+  * @param {NoteApi} notitie - het notitieobject
+  * @param {string} html - de html die op het punt staat te worden weergegeven
+  * @param {string} forExport - waar als de html wordt gebruikt voor een export, onwaar voor het voorbeeld
+  * @return {string} de gewijzigde html of een lege string als er niets gewijzigd moet worden
+  */
 function noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
