@@ -3683,6 +3683,8 @@ bool MainWindow::jumpToNoteSubFolder(int noteSubFolderId) {
         ui->noteSubFolderTreeWidget, noteSubFolderId);
 
     if (item != nullptr) {
+        // If the selection isn't cleared then the old subfolder is still selected too
+        ui->noteSubFolderTreeWidget->clearSelection();
         ui->noteSubFolderTreeWidget->setCurrentItem(item);
 
         return true;

@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 22.3.4
+- the note sub-folder selection is now cleared before jumping to a new sub-folder when
+  jumping to a note link with <kbd>Ctrl</kbd> + <kbd>Space</kbd> or <kbd>Ctrl</kbd> + `Click`
+  (for [#2498](https://github.com/pbek/QOwnNotes/issues/2498))
+
 ## 22.3.3
 - the Arabic translation was integrated into the webpage on [QOwnNotes webpage in Arabic](https://www.qownnotes.org/ar)
   (for [#2494](https://github.com/pbek/QOwnNotes/issues/2494))
