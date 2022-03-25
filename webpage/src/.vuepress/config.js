@@ -270,6 +270,10 @@ module.exports = {
             link: utils.getNavItemForLanguage(installationNavItem, 'de'),
           },
           {
+            text: 'Blog (auf Englisch)',
+            link: '/blog/',
+          },
+          {
             text: 'Änderungsprotokoll',
             link: changelogNavItem,
             collapsable: true,
@@ -308,6 +312,10 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "de")
+          },
+          {
+            title: 'Blog (auf Englisch)',
+            children: utils.getChildren('src', 'blog', true)
           }
         ]
       },
@@ -327,6 +335,10 @@ module.exports = {
           {
             text: 'Instalación',
             link: utils.getNavItemForLanguage(installationNavItem, 'es'),
+          },
+          {
+            text: 'Blog (en inglés)',
+            link: '/blog/',
           },
           {
             text: 'Registro de cambios',
@@ -367,6 +379,10 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "es")
+          },
+          {
+            title: 'Blog (en inglés)',
+            children: utils.getChildren('src', 'blog', true)
           }
         ]
       },
@@ -386,6 +402,10 @@ module.exports = {
           {
             text: 'Telepítés',
             link: utils.getNavItemForLanguage(installationNavItem, 'hu'),
+          },
+          {
+            text: 'Blog (angolul)',
+            link: '/blog/',
           },
           {
             text: 'Változások',
@@ -426,6 +446,10 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "hu")
+          },
+          {
+            title: 'Blog (angolul)',
+            children: utils.getChildren('src', 'blog', true)
           }
         ]
       },
@@ -445,6 +469,10 @@ module.exports = {
           {
             text: 'Installation',
             link: utils.getNavItemForLanguage(installationNavItem, 'fr'),
+          },
+          {
+            text: 'Blog (en anglais)',
+            link: '/blog/',
           },
           {
             text: 'Changelog',
@@ -485,6 +513,10 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "fr")
+          },
+          {
+            title: 'Blog (en anglais)',
+            children: utils.getChildren('src', 'blog', true)
           }
         ]
       },
@@ -504,6 +536,10 @@ module.exports = {
           {
             text: 'Installazione',
             link: utils.getNavItemForLanguage(installationNavItem, 'it'),
+          },
+          {
+            text: 'Blog (in inglese)',
+            link: '/blog/',
           },
           {
             text: 'Log delle modifiche',
@@ -544,6 +580,10 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "it")
+          },
+          {
+            title: 'Blog (in inglese)',
+            children: utils.getChildren('src', 'blog', true)
           }
         ]
       },
@@ -563,6 +603,10 @@ module.exports = {
           {
             text: 'نصب',
             link: utils.getNavItemForLanguage(installationNavItem, 'fa'),
+          },
+          {
+            text: 'وبلاگ (به انگلیسی)',
+            link: '/blog/',
           },
           {
             text: 'گزارش تغییرات',
@@ -603,6 +647,10 @@ module.exports = {
           {
             title: 'سؤالات متداول',
             children: utils.getNavItemsForLanguage(faqNavItems, 'fa')
+          },
+          {
+            title: 'وبلاگ (به انگلیسی)',
+            children: utils.getChildren('src', 'blog', true)
           }
         ]
       },
@@ -622,6 +670,10 @@ module.exports = {
           {
             text: 'Installatie',
             link: utils.getNavItemForLanguage(installationNavItem, 'nl'),
+          },
+          {
+            text: 'Blog (in het Engels)',
+            link: '/blog/',
           },
           {
             text: 'Changelog',
@@ -662,8 +714,13 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "nl")
+          },
+          {
+            title: 'Blog (in het Engels)',
+            children: utils.getChildren('src', 'blog', true)
           }
-        ]      },
+        ]
+      },
       '/ar/': {
         selectText: 'اللغات',
         label: 'العربية',
@@ -681,6 +738,10 @@ module.exports = {
           {
             text: 'التثبيت',
             link: utils.getNavItemForLanguage(installationNavItem, 'ar'),
+          },
+          {
+            text: 'المدونة (بالإنجليزية)',
+            link: '/blog/',
           },
           {
             text: 'سجل التغييرات',
@@ -721,6 +782,10 @@ module.exports = {
           {
             title: 'أسئلة شائعة',
             children: utils.getNavItemsForLanguage(faqNavItems, 'ar')
+          },
+          {
+            title: 'المدونة (بالإنجليزية)',
+            children: utils.getChildren('src', 'blog', true)
           }
         ]
       }
