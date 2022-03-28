@@ -29,6 +29,7 @@ const gettingStartedNavItems = [
   'getting-started/qownnotesapi',
   'getting-started/searching',
   'getting-started/shortcuts',
+  'changelog',
 ];
 
 const installationNavItems = [
@@ -83,7 +84,6 @@ const faqNavItems = [
 
 const gettingStartedNavItem = '/getting-started/overview';
 const installationNavItem = '/installation/';
-const changelogNavItem = '/changelog';
 const donateNavItem = '/contributing/donate';
 
 module.exports = {
@@ -179,7 +179,7 @@ module.exports = {
     locales: {
       '/': {
         // text for the language dropdown
-        selectText: 'Languages',
+        selectText: '🌍',
         // label for this locale in the language dropdown
         label: 'English',
         // Aria Label for locale in the dropdown
@@ -201,15 +201,6 @@ module.exports = {
           {
             text: 'Installation',
             link: installationNavItem,
-          },
-          {
-            text: 'Blog',
-            link: '/blog/',
-          },
-          {
-            text: 'Changelog',
-            link: changelogNavItem,
-            collapsable: true,
           },
           {
             text: 'Contact',
@@ -270,11 +261,6 @@ module.exports = {
             link: utils.getNavItemForLanguage(installationNavItem, 'de'),
           },
           {
-            text: 'Änderungsprotokoll',
-            link: changelogNavItem,
-            collapsable: true,
-          },
-          {
             text: 'Kontakt',
             ariaLabel: 'Contact Menu',
             items: contactNavItems
@@ -327,11 +313,6 @@ module.exports = {
           {
             text: 'Instalación',
             link: utils.getNavItemForLanguage(installationNavItem, 'es'),
-          },
-          {
-            text: 'Registro de cambios',
-            link: changelogNavItem,
-            collapsable: true,
           },
           {
             text: 'Contacto',
@@ -388,11 +369,6 @@ module.exports = {
             link: utils.getNavItemForLanguage(installationNavItem, 'hu'),
           },
           {
-            text: 'Változások',
-            link: changelogNavItem,
-            collapsable: true,
-          },
-          {
             text: 'Kapcsolat',
             ariaLabel: 'Contact Menu',
             items: contactNavItems
@@ -445,11 +421,6 @@ module.exports = {
           {
             text: 'Installation',
             link: utils.getNavItemForLanguage(installationNavItem, 'fr'),
-          },
-          {
-            text: 'Changelog',
-            link: changelogNavItem,
-            collapsable: true,
           },
           {
             text: 'Contact',
@@ -506,11 +477,6 @@ module.exports = {
             link: utils.getNavItemForLanguage(installationNavItem, 'it'),
           },
           {
-            text: 'Log delle modifiche',
-            link: changelogNavItem,
-            collapsable: true,
-          },
-          {
             text: 'Contatto',
             ariaLabel: 'Contact Menu',
             items: contactNavItems
@@ -563,11 +529,6 @@ module.exports = {
           {
             text: 'نصب',
             link: utils.getNavItemForLanguage(installationNavItem, 'fa'),
-          },
-          {
-            text: 'گزارش تغییرات',
-            link: changelogNavItem,
-            collapsable: true,
           },
           {
             text: 'تماس',
@@ -624,11 +585,6 @@ module.exports = {
             link: utils.getNavItemForLanguage(installationNavItem, 'nl'),
           },
           {
-            text: 'Changelog',
-            link: changelogNavItem,
-            collapsable: true,
-          },
-          {
             text: 'Contact',
             ariaLabel: 'Contact Menu',
             items: contactNavItems
@@ -681,11 +637,6 @@ module.exports = {
           {
             text: 'التثبيت',
             link: utils.getNavItemForLanguage(installationNavItem, 'ar'),
-          },
-          {
-            text: 'سجل التغييرات',
-            link: changelogNavItem,
-            collapsable: true,
           },
           {
             text: 'تواصل',
