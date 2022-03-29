@@ -29,7 +29,6 @@ const gettingStartedNavItems = [
   'getting-started/qownnotesapi',
   'getting-started/searching',
   'getting-started/shortcuts',
-  'changelog',
 ];
 
 const installationNavItems = [
