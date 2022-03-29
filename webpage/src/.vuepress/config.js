@@ -84,6 +84,7 @@ const faqNavItems = [
 
 const gettingStartedNavItem = '/getting-started/overview';
 const installationNavItem = '/installation/';
+const changelogNavItem = '/changelog';
 const donateNavItem = '/contributing/donate';
 
 module.exports = {
@@ -240,11 +241,15 @@ module.exports = {
           {
             title: 'Blog',
             children: utils.getChildren('src', 'blog', true)
+          },
+          {
+            title: 'Changelog',
+            children: [ changelogNavItem ]
           }
         ]
       },
       '/de/': {
-        selectText: 'Sprachen',
+        selectText: '🌍',
         label: 'Deutsch',
         editLinkText: 'Hilf uns diese Seite zu verbessern!',
         algolia: {
@@ -294,11 +299,19 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "de")
+          },
+          {
+            title: 'Blog (auf Englisch)',
+            children: utils.getChildren('src', 'blog', true)
+          },
+          {
+            title: 'Änderungsprotokoll (auf Englisch)',
+            children: [ changelogNavItem ]
           }
         ]
       },
       '/es/': {
-        selectText: 'Idiomas',
+        selectText: '🌍',
         label: 'Español',
         editLinkText: '¡Ayúdanos a mejorar este sitio!',
         algolia: {
@@ -348,11 +361,19 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "es")
+          },
+          {
+            title: 'Blog (en inglés)',
+            children: utils.getChildren('src', 'blog', true)
+          },
+          {
+            title: 'Registro de cambios (en inglés)',
+            children: [ changelogNavItem ]
           }
         ]
       },
       '/hu/': {
-        selectText: 'Nyelvek',
+        selectText: '🌍',
         label: 'Magyar',
         editLinkText: 'Segítsen javítani ezt az oldalt!',
         algolia: {
@@ -402,11 +423,19 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "hu")
+          },
+          {
+            title: 'Blog (angolul)',
+            children: utils.getChildren('src', 'blog', true)
+          },
+          {
+            title: 'Változások (angolul)',
+            children: [ changelogNavItem ]
           }
         ]
       },
        '/fr/': {
-        selectText: 'Langues',
+        selectText: '🌍',
         label: 'Français',
         editLinkText: 'Aidez-nous à améliorer ce site!',
          algolia: {
@@ -456,11 +485,19 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "fr")
+          },
+          {
+            title: 'Blog (en anglais)',
+            children: utils.getChildren('src', 'blog', true)
+          },
+          {
+            title: 'Changelog (en anglais)',
+            children: [ changelogNavItem ]
           }
         ]
       },
       '/it/': {
-        selectText: 'Lingue',
+        selectText: '🌍',
         label: 'Italiano',
         editLinkText: 'Aiutaci a migliorare questo sito!',
         algolia: {
@@ -510,11 +547,19 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "it")
+          },
+          {
+            title: 'Blog (in inglese)',
+            children: utils.getChildren('src', 'blog', true)
+          },
+          {
+            title: 'Log delle modifiche (in inglese)',
+            children: [ changelogNavItem ]
           }
         ]
       },
       '/fa/': {
-        selectText: 'زبان ها',
+        selectText: '🌍',
         label: 'فارسی',
         editLinkText: 'در اصلاح این صفحه ما را یاری کنید!',
         algolia: {
@@ -564,11 +609,19 @@ module.exports = {
           {
             title: 'سؤالات متداول',
             children: utils.getNavItemsForLanguage(faqNavItems, 'fa')
+          },
+          {
+            title: 'وبلاگ (به انگلیسی)',
+            children: utils.getChildren('src', 'blog', true)
+          },
+          {
+            title: 'گزارش تغییرات (به انگلیسی)',
+            children: [ changelogNavItem ]
           }
         ]
       },
       '/nl/': {
-        selectText: 'Talen',
+        selectText: '🌍',
         label: 'Nederlands',
         editLinkText: 'Help ons deze pagina te verbeteren!',
         algolia: {
@@ -618,12 +671,20 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "nl")
+          },
+          {
+            title: 'Blog (in het Engels)',
+            children: utils.getChildren('src', 'blog', true)
+          },
+          {
+            title: 'Changelog (in het Engels)',
+            children: [ changelogNavItem ]
           }
-        ]      },
+        ]
+      },
       '/ar/': {
-        selectText: 'اللغات',
+        selectText: '🌍',
         label: 'العربية',
-        ariaLabel: 'Languages',
         editLinkText: 'ساعدنا في تحسين هذه الصفحة!',
         algolia: {
           apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
@@ -672,6 +733,14 @@ module.exports = {
           {
             title: 'أسئلة شائعة',
             children: utils.getNavItemsForLanguage(faqNavItems, 'ar')
+          },
+          {
+            title: 'المدونة (بالإنجليزية)',
+            children: utils.getChildren('src', 'blog', true)
+          },
+          {
+            title: 'سجل التغييرات (بالإنجليزية)',
+            children: [ changelogNavItem ]
           }
         ]
       }
