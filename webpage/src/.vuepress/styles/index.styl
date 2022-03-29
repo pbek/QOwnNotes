@@ -83,8 +83,15 @@ html[dir="rtl"]
   .sidebar-heading
     padding-left 0
     padding-right 1.5rem
+
+  .sidebar
+    padding-left 1.5rem
+    padding-right 0
+
+  .sidebar-heading, .sidebar
     .arrow
       right: 0.35em
+      margin-right: 0.35em
     .arrow.right
       transform: rotate(180deg)
 
@@ -120,10 +127,15 @@ html[dir="rtl"]
 
   .sidebar
     left auto !important
-    right 0
+    right 0 !important
     border-right medium none color
     border-left 1px solid $borderColor
     direction rtl
+    transform none
+    transition right 0.5s linear
+
+  .theme-container.no-sidebar:not(.sidebar-open) .sidebar
+    right -100vw !important
 
   a.header-anchor
     float right !important
