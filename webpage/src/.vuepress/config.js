@@ -29,6 +29,7 @@ const gettingStartedNavItems = [
   'getting-started/qownnotesapi',
   'getting-started/searching',
   'getting-started/shortcuts',
+  'changelog',
 ];
 
 const installationNavItems = [
@@ -83,7 +84,6 @@ const faqNavItems = [
 
 const gettingStartedNavItem = '/getting-started/overview';
 const installationNavItem = '/installation/';
-const changelogNavItem = '/changelog';
 const donateNavItem = '/contributing/donate';
 
 module.exports = {
@@ -179,7 +179,7 @@ module.exports = {
     locales: {
       '/': {
         // text for the language dropdown
-        selectText: 'Languages',
+        selectText: '🌍',
         // label for this locale in the language dropdown
         label: 'English',
         // Aria Label for locale in the dropdown
@@ -201,15 +201,6 @@ module.exports = {
           {
             text: 'Installation',
             link: installationNavItem,
-          },
-          {
-            text: 'Blog',
-            link: '/blog/',
-          },
-          {
-            text: 'Changelog',
-            link: changelogNavItem,
-            collapsable: true,
           },
           {
             text: 'Contact',
@@ -270,15 +261,6 @@ module.exports = {
             link: utils.getNavItemForLanguage(installationNavItem, 'de'),
           },
           {
-            text: 'Blog (auf Englisch)',
-            link: '/blog/',
-          },
-          {
-            text: 'Änderungsprotokoll',
-            link: changelogNavItem,
-            collapsable: true,
-          },
-          {
             text: 'Kontakt',
             ariaLabel: 'Contact Menu',
             items: contactNavItems
@@ -335,15 +317,6 @@ module.exports = {
           {
             text: 'Instalación',
             link: utils.getNavItemForLanguage(installationNavItem, 'es'),
-          },
-          {
-            text: 'Blog (en inglés)',
-            link: '/blog/',
-          },
-          {
-            text: 'Registro de cambios',
-            link: changelogNavItem,
-            collapsable: true,
           },
           {
             text: 'Contacto',
@@ -404,15 +377,6 @@ module.exports = {
             link: utils.getNavItemForLanguage(installationNavItem, 'hu'),
           },
           {
-            text: 'Blog (angolul)',
-            link: '/blog/',
-          },
-          {
-            text: 'Változások',
-            link: changelogNavItem,
-            collapsable: true,
-          },
-          {
             text: 'Kapcsolat',
             ariaLabel: 'Contact Menu',
             items: contactNavItems
@@ -469,15 +433,6 @@ module.exports = {
           {
             text: 'Installation',
             link: utils.getNavItemForLanguage(installationNavItem, 'fr'),
-          },
-          {
-            text: 'Blog (en anglais)',
-            link: '/blog/',
-          },
-          {
-            text: 'Changelog',
-            link: changelogNavItem,
-            collapsable: true,
           },
           {
             text: 'Contact',
@@ -538,15 +493,6 @@ module.exports = {
             link: utils.getNavItemForLanguage(installationNavItem, 'it'),
           },
           {
-            text: 'Blog (in inglese)',
-            link: '/blog/',
-          },
-          {
-            text: 'Log delle modifiche',
-            link: changelogNavItem,
-            collapsable: true,
-          },
-          {
             text: 'Contatto',
             ariaLabel: 'Contact Menu',
             items: contactNavItems
@@ -603,15 +549,6 @@ module.exports = {
           {
             text: 'نصب',
             link: utils.getNavItemForLanguage(installationNavItem, 'fa'),
-          },
-          {
-            text: 'وبلاگ (به انگلیسی)',
-            link: '/blog/',
-          },
-          {
-            text: 'گزارش تغییرات',
-            link: changelogNavItem,
-            collapsable: true,
           },
           {
             text: 'تماس',
@@ -672,15 +609,6 @@ module.exports = {
             link: utils.getNavItemForLanguage(installationNavItem, 'nl'),
           },
           {
-            text: 'Blog (in het Engels)',
-            link: '/blog/',
-          },
-          {
-            text: 'Changelog',
-            link: changelogNavItem,
-            collapsable: true,
-          },
-          {
             text: 'Contact',
             ariaLabel: 'Contact Menu',
             items: contactNavItems
@@ -738,15 +666,6 @@ module.exports = {
           {
             text: 'التثبيت',
             link: utils.getNavItemForLanguage(installationNavItem, 'ar'),
-          },
-          {
-            text: 'المدونة (بالإنجليزية)',
-            link: '/blog/',
-          },
-          {
-            text: 'سجل التغييرات',
-            link: changelogNavItem,
-            collapsable: true,
           },
           {
             text: 'تواصل',
