@@ -118,9 +118,7 @@ Some segments we don't translate in the Documentation:
 You will deal with the language of this software, learn new terms and receive
 a lot of inside information about the project.
 
-If you are thus ready to help to proofread the translation of your language,
-[Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) welcomes you to a short
-briefing in the practice of translating and proofreading.
-You can ask her anything that helps you have fun contributing.
+If you are thus ready to help to proofread the translation of your language, contact
+[Patrizio](https://crowdin.com/profile/pbek) and ask away if you have any questions and/or obtain the rights for proofreading in your native language.
 
 Thanks a lot for your help! 🙂
