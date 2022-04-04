@@ -24,8 +24,10 @@ Devi scaricare il file Zip da [AppVeyor](https://ci.appveyor.com/project/pbek/qo
 
 Puoi eseguire direttamente `QOwnNotes.exe` da quella cartella, non è richiesta alcuna installazione.
 
-::: tip Info
-Il meccanismo di aggiornamento automatico non funziona con la build AppVeyor per Windows XP! Dovrai scaricare tu le nuove versioni.
+::: tip
+Info
+Il meccanismo di aggiornamento automatico non funziona con la build AppVeyor per Windows XP!
+Dovrai scaricare tu le nuove versioni.
 :::
 
 ## Chocolatey

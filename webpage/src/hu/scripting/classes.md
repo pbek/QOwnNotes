@@ -36,10 +36,10 @@ A [Dátum](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Glo
 script.log(note.fileCreated.toISOString());
 script.log(note.fileLastModified.getFullYear());
 
-// renames a note to "new name.md"
+// átnevez egy megjegyzést "új név.md"-re
 note.renameNoteFile("new name");
 
-// check if it is allowed to have a different note file name than the headline
+// ellenőrizze, hogy megengedett-e a címsortól eltérő jegyzetfájlnév
 script.log(note.allowDifferentFileName());
 ```
 

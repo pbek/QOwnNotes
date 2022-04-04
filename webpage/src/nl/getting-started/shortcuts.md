@@ -90,7 +90,7 @@
 - <kbd>Alt</kbd> + <kbd>Links</kbd> springt terug in de notitiegeschiedenis
     - <kbd>Alt</kbd> + <kbd>Rechts</kbd> springt vooruit in de notitiegeschiedenis
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> zet een notitiebladwijzer op bladwijzervak 1..9
-- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
+- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> springt naar de notitiebladwijzer op bladwijzervak 1..9
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> vergroot de lettergrootte van de notitietekst met één punt
 - <kbd>Ctrl</kbd> + <kbd>-</kbd> verkleint de lettergrootte van de notitietekst met één punt
 - <kbd>Ctrl</kbd> + <kbd>0</kbd> stelt de lettergrootte van de notitietekst opnieuw in
@@ -196,39 +196,39 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> voegt een blokcitaat in op de huidige positie
 - <kbd>⌘ Cmd</kbd> + <kbd>B</kbd> maakt de geselecteerde tekst vetgedrukt
 - <kbd>⌘ Cmd</kbd> + <kbd>I</kbd> maakt de geselecteerde tekst cursief op
-- <kbd>⌘ Cmd</kbd> + <kbd>U</kbd> formats the selected text underline
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> strikes out the selected text
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
+- <kbd>⌘ Cmd</kbd> + <kbd>U</kbd> maakt de geselecteerde tekst onderstrepen op
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> haalt de geselecteerde tekst door
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> bladert door de hoofdletters van de geselecteerde tekst
 - <kbd>Tab</kbd> laat de geselecteerde tekst inspringen (werkt ook op meerdere regels)
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> maakt het inspringen van de geselecteerde tekst ongedaan
 - <kbd>Tab</kbd> nadat een ongeordend lijstteken het lijstitem inspringt
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> nadat een ongeordend lijstteken de inspringing van het lijstitem opheft
 - <kbd>Return</kbd> in lijsten maakt een nieuw lijstitem
-- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history
-    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
-- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
-- <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> increases the note text font size by one point
-- <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> decreases the note text font size by one point
-- <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> resets the note text font size
-- <kbd>⌘ Cmd</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in the current line in front of the cursor, auto-completes text or opens urls
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> searches for the selected text on the web
-- <kbd>⌘ Cmd</kbd> + <kbd>Up</kbd> scrolls the content up
-- <kbd>⌘ Cmd</kbd> + <kbd>Down</kbd> scrolls the content down
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> moves the current line down
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> moves the current line up
-- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Links</kbd> springt terug in de notengeschiedenis
+    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Rechts</kbd> springt vooruit in de notengeschiedenis
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> stelt een notitiebladwijzer in op bladwijzersleuf 1..9
+- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> springt naar de notitiebladwijzer op bladwijzersleuf 1..9
+- <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> vergroot de lettergrootte van de notitietekst met één punt
+- <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> verkleint de lettergrootte van de notitietekst met één punt
+- <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> stelt de lettergrootte van de notitietekst opnieuw in
+- <kbd>⌘ Cmd</kbd> + <kbd>Space</kbd> probeert eenvoudige vergelijkingen zoals `(4+5)*3=` op te lossen in de huidige regel voor de cursor, vult automatisch tekst aan of opent url's
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> voegt een kop in van de notitiebestandsnaam bovenaan de notitie
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> splitst de huidige noot in twee noten op de huidige cursorpositie
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> zoekt naar de geselecteerde tekst op internet
+- <kbd>⌘ Cmd</kbd> + <kbd>Omhoog</kbd> schuift de inhoud omhoog
+- <kbd>⌘ Cmd</kbd> + <kbd>Omlaag</kbd> schuift de inhoud naar beneden
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Omlaag</kbd> verplaatst de huidige regel naar beneden
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Omhoog</kbd> verplaatst de huidige line-up
+- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> voegt twee spaties en een teken voor een nieuwe regel toe om een nieuwe regel af te dwingen
 
 ### In het notitievoorbeeldpaneel
 
-- <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> lets you search in the current note
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+- <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> laat je zoeken in de huidige noot
+    - gebruik de toetsen <kbd>Omhoog</kbd> en <kbd>Omlaag</kbd> of <kbd>F3</kbd> en <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> om spring naar de vorige en volgende wedstrijden
     - <kbd>Esc</kbd> sluit de zoekbalk
 
 ### In de Todo-lijst
 
-- <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> saves the current todo item
-- <kbd>⌘ Cmd</kbd> + <kbd>I</kbd> saves the current todo item and inserts in into the current note
-- <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> removes the current todo item
+- <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> slaat het huidige taakitem op
+- <kbd>⌘ Cmd</kbd> + <kbd>I</kbd> slaat het huidige taakitem op en voegt het toe aan de huidige notitie
+- <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> verwijdert het huidige taakitem

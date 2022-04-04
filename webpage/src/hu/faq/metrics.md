@@ -1,43 +1,43 @@
-# Why metrics?
+# Mire használjuk a mérőszámokat?
 
-## Why are metrics useful?
+## Miért hasznosak a mutatók?
 
-QOwnNotes (as in the application itself) is **developed by one and sometimes two persons in their spare time**.
+A QOwnNotes-t (mint magában az alkalmazásban is) **egy, néha két személy fejleszti szabadidejében**.
 
-Releases are built for a lot of platforms and distributions (often very old versions of them). Keeping them up is a lot of work.
+A kiadások sok platformhoz és disztribúcióhoz készültek (gyakran ezek nagyon régi verziói). Fenntartásuk rengeteg munka.
 
-The metrics are the only dependable source of information about which versions of platforms and distributions QOwnNotes runs on. They also show which features are the most popular, so that decisions can be made concerning which versions to retire, which features need more work, and which are hardly used.
+A mérőszámok jelentik az egyetlen megbízható információforrást arról, hogy a QOwnNotes mely platformok és disztribúciók verzióin fut. Azt is megmutatják, hogy mely szolgáltatások a legnépszerűbbek, így eldönthető, hogy mely verziókat kell visszavonni, mely funkciók igényelnek több munkát, és melyeket alig használnak.
 
-The same applies to the user's selection of preferred languages, which promotes the improvement of the corresponding translations.
+Ugyanez vonatkozik a preferált nyelvek felhasználó általi kiválasztására, ami elősegíti a megfelelő fordítások javítását.
 
-## Where are the metrics stored?
+## Hol tárolják a mutatókat?
 
-The metrics are transmitted to and stored on a self-hosted [Matomo](https://matomo.org/) server. Only the two main developers have access to the data. **No data is shared with 3rd parties.**
+A mérőszámokat a rendszer egy saját üzemeltetésű [Matomo](https://matomo.org/) szerverre továbbítja, és azon tárolja. Csak a két fő fejlesztő fér hozzá az adatokhoz. **Nem osztanak meg adatokat harmadik felekkel.**
 
-## How are metrics collected?
+## Hogyan történik a mutatók gyűjtése?
 
-Metrics are **anonymized** (e.g. ip address stripped out) on the Matomo server after they are received.
+A mérőszámokat a Matomo szerver a beérkezésük után **anonimizálja** (például az IP-címet töröljük).
 
-No personal information, like text you entered or note names are collected or stored on the server!
+A szerveren nem gyűjtenek vagy tárolnak személyes adatokat, például az Ön által beírt szöveget vagy a megjegyzések nevét!
 
-## What is collected?
+## Mi kerül összegyűjtésre?
 
-Some basic information like screen resolution, operating system and version of QOwnNotes used is transmitted.
+Néhány alapvető információ, például a képernyő felbontása, az operációs rendszer és a QOwnNotes használt verziója továbbítható.
 
-Furthermore, for example events are sent to the server when actions are used in the applications.
+Továbbá például eseményeket küld a szervernek, amikor az alkalmazásokban műveleteket használnak.
 
-QOwnNotes is free open source software. You can review the metrics all the time by searching for example for [sendVisitIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendVisitIfEnabled) and [sendEventIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendEventIfEnabled) in the source code to see what exactly is sent.
+A QOwnNotes egy ingyenes, nyílt forráskódú szoftver. A mérőszámokat folyamatosan áttekintheti, ha például a forráskódban a [sendVisitIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendVisitIfEnabled) és a [sendEventIfEnabled](https://github.com/pbek/QOwnNotes/search?q=sendEventIfEnabled) kifejezésekre keres, hogy megtudja, pontosan mit küld a rendszer.
 
-**No personal information, like text you entered or note names are collected!**
+**Nem gyűjtünk személyes adatokat, például az Ön által beírt szöveget vagy a megjegyzések nevét!**
 
-## Can I turn metrics off?
+## Kikapcsolhatom a mérőszámokat?
 
-You can turn them off upon first start of the application in the welcome dialog or at a later time in the settings dialog.
+Kikapcsolhatja őket az alkalmazás első indításakor az üdvözlő párbeszédpanelen, vagy később a beállítások párbeszédpanelen.
 
-## Why are metrics not off by default?
+## Miért nincsenek alapértelmezésben kikapcsolva a mérőszámok?
 
-Defaults are king. Turning metrics off by default would result in no meaningful metrics at all.
+Az alapértelmezések a királyok. A mutatók alapértelmezés szerinti kikapcsolása egyáltalán nem eredményez értelmes mérőszámokat.
 
-Most of the people don't care about metrics. Those who care about metrics and don't want to vote with their metrics about what is worked on or what is supported can easily turn them off at the first start of the application.
+A legtöbb embert nem érdeklik a mérőszámok. Azok, akiknek fontosak a mérőszámok, és nem akarnak szavazni a mérőszámaikkal arról, hogy min dolgoznak vagy mi támogatott, az alkalmazás első indításakor könnyen kikapcsolhatják azokat.
 
-You will even get a second dialog that will tell you about the metrics, if you finished the welcome dialog too early.
+Ha túl korán fejezte be az üdvözlő párbeszédpanelt, még egy második párbeszédablakot is kap, amely tájékoztat a mérőszámokról.

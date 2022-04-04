@@ -289,25 +289,25 @@ import QOwnNotesTypes 1.0
 
 Script {
     /**
-     * Initializes the custom actions
+     * Inicializálja az egyéni műveleteket
      */
     function init() {
-        // add a custom action without a button
+        // egyéni művelet hozzáadása gomb nélkül
         script.registerCustomAction("mycustomaction1", "Menu text");
 
-        // add a custom action with a button
+        // egyéni művelet hozzáadása gombbal
         script.registerCustomAction("mycustomaction2", "Menu text", "Button text");
 
-        // add a custom action with a button and freedesktop theme icon
+        // egyéni művelet hozzáadása gombbal és ingyenes asztali téma ikonnal
         script.registerCustomAction("mycustomaction3", "Menu text", "Button text", "task-new");
 
-        // add a custom action with a button and an icon from a file
+        // egyéni művelet hozzáadása gombbal és ikonnal egy fájlból
         script.registerCustomAction("mycustomaction4", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
     }
 
     /**
-     * This function is invoked when a custom action is triggered
-     * in the menu or via button
+     * Ez a funkció akkor kerül meghívásra, amikor egyéni műveletet indítanak el
+     * menüben vagy gombbal
      * 
      * @param identifier string the identifier defined in registerCustomAction
      */
@@ -394,10 +394,10 @@ Ezután érdemes megnéznie a példa szkriptet [scripting-label-demo.qml](https:
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Creates a new note
- *
- * @param text the note text
- */
+  * Új jegyzetet hoz létre
+  *
+  * @param írja be a jegyzet szövegét
+  */
 void ScriptingService::createNote(QString text);
 ```
 
@@ -560,8 +560,8 @@ Az aktuális kijelölés kiindulási helyének megszerzése a jegyzetszöveg sze
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Returns the start position of the current selection in the note text edit
- */
+  * Visszaadja az aktuális kijelölés kezdő pozícióját a jegyzetszöveg szerkesztésében
+  */
 int ScriptingService::noteTextEditSelectionStart();
 ```
 
@@ -576,9 +576,9 @@ Az aktuális kijelölés végpozíciója a jegyzetszöveg szerkesztésében
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Returns the end position of the current selection in the note text edit
- */
-int ScriptingService::noteTextEditSelectionEnd();
+  * Visszaadja az aktuális kijelölés végpozícióját a jegyzetszöveg szerkesztésében
+  */
+int ScriptingService :: noteTextEditSelectionEnd ();
 ```
 
 ### Példa
@@ -603,10 +603,10 @@ void ScriptingService::noteTextEditSetCursorPosition(int position);
 
 ### Példa
 ```js
-// jump to the 11th character in the note
+// ugrás a jegyzet 11. karakterére
 script.noteTextEditSetCursorPosition(10);
 
-// jump to the end of the note
+// ugrás a hang végére
 script.noteTextEditSetCursorPosition(-1);
 ```
 
@@ -627,13 +627,13 @@ int ScriptingService::noteTextEditCursorPosition();
 script.log(script.noteTextEditCursorPosition());
 ```
 
-Read the current word from the note text edit
+Olvassa el az aktuális szót a jegyzet szövegszerkesztéséből
 ---------------------------------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Reads the current word in the note text edit
+ * Beolvassa az aktuális szót a jegyzetszöveg szerkesztésében
  *
  * @param withPreviousCharacters also get more characters at the beginning
  *                               to get characters like "@" that are not
@@ -645,13 +645,13 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 
 ### Példa
 ```js
-// read the current word in the note text edit
+// olvassa el az aktuális szót a jegyzet szövegszerkesztésében
 var text = script.noteTextEditCurrentWord();
 ```
 
-You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
+Érdemes megnéznie az [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml) példát.
 
-Check whether platform is Linux, OS X or Windows
+Ellenőrizze, hogy a platform Linux, OS X vagy Windows
 ------------------------------------------------
 
 ### Módszerhívás és paraméterek
@@ -664,32 +664,32 @@ bool ScriptingService::platformIsWindows();
 ### Példa
 ```js
 if (script.platformIsLinux()) {
-    // Will be executed only if under Linux
+    // Csak akkor kerül végrehajtásra, ha Linux alatt
 }
 ```
 
-Tag the current note
+Jelölje be az aktuális jegyzetet
 --------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Tags the current note with a tag named tagName
- *
- * @param tagName
- */
-void ScriptingService::tagCurrentNote(QString tagName);
+  * Az aktuális jegyzetet tagName nevű címkével látja el
+  *
+  * @param tagName
+  */
+void ScriptingService :: tagCurrentNote (QString tagName);
 ```
 
 ### Példa
 ```js
-// add a "favorite" tag to the current note
-script.tagCurrentNote("favorite");
+// adjon hozzá egy "kedvenc" címkét az aktuális jegyzethez
+script.tagCurrentNote ("kedvenc");
 ```
 
-You might want to look at the custom action `favoriteNote` in the example [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml).
+Érdemes megnéznie a `kedvencNote` egyéni műveletet a [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml) példában.
 
-Create or fetch a tag by its name breadcrumb list
+Hozzon létre vagy válasszon egy címkét a nevének rákattintási listáján
 -------------------------------------------------
 
 ### Módszerhívás és paraméterek
@@ -708,95 +708,96 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
 
 ### Példa
 ```js
-// creates all tags until the 3rd level and returns the tag object for
-// tag "level3", which would look like that in the tag tree:
-// level1 > level2 > level3
-var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
+// az összes címkét létrehozza a 3. szintig, és visszaadja a címke objektumot
+// tag "level3", amely így nézne ki a címkefában:
+// szint1 > 2. szint > szint3
+var tag = script.getTagByNameBreadcrumbList (["szint1", "szint2", "szint3"]);
 ```
 
-Search for tags by name
+Címkék keresése név szerint
 -----------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Fetches all tags by doing a substring search on the name field
- *
- * @param name {QString} name to search for
- * @return {QStringList} list of tag names
+  * Az összes címkét lekérdezi a névmezőben egy részlekereséssel
+  *
+  * @param név {QString} név a keresésre
+  * @return {QStringList} címke nevek listája
  */
 QStringList ScriptingService::searchTagsByName(QString name);
 ```
 
 ### Példa
 ```js
-// searches for all tags with the word game in it
+// megkeresi az összes címkét, benne a játék szóval
 var tags = script.searchTagsByName("game");
 ```
 
-You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
+Érdemes megnéznie az [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml) példát.
 
-Search for notes by note text
+Jegyzetek keresése jegyzetszöveg alapján
 -----------------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Returns a list of note ids of all notes with a certain text in the note text
- *
- * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
- * can only transfer the note ids
- *
- * @return {QList<int>} list of note ids
- */
-QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
+  * Visszaadja az összes jegyzet jegyzetazonosítóinak listáját, egy bizonyos szöveggel a jegyzet szövegében
+  *
+  * Sajnos nincs egyszerű módszer a QList <NoteApi*>használatára a QML-ben, ezért mi
+  * csak a jegyzetazonosítókat tudja átvinni
+  *
+  * @return {QList<int>} jegyzetazonosítók listája
+*/
+QList<int>ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
+
 ```
 
 ### Példa
 ```js
-var noteIds = script.fetchNoteIdsByNoteTextPart("mytext");
+var noteIds = script.fetchNoteIdsByNoteTextPart ("mytext");
 
-noteIds.forEach(function (noteId){
-    var note = script.fetchNoteById(noteId);
+noteIds.forEach function (noteId){
+     var note = script.fetchNoteById(noteId);
 
-    // do something with the note
+     // tegyen valamit a jegyzettel
 });
 ```
 
-You may want to take a look at the example [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/unique-note-id.qml).
+Érdemes megnéznie az [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/unique-note-id.qml) példát.
 
-Add a custom stylesheet
+Adjon hozzá egy egyedi stíluslapot
 -----------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Adds a custom stylesheet to the application
- *
- * @param stylesheet
- */
-void ScriptingService::addStyleSheet(QString stylesheet);
+  * Hozzáad egy egyedi stíluslapot az alkalmazáshoz
+  *
+  * @param stíluslap
+  */
+void ScriptingService :: addStyleSheet (QString stíluslap);
 ```
 
 ### Példa
 ```js
-// make the text in the note list bigger
+// nagyítsa a jegyzetlista szövegét
 script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
 ```
 
-You may want to take a look at the example [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-stylesheet.qml).
+Érdemes megnézni a példát [egyéni stíluslap.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-stylesheet.qml).
 
-You can get the widget names from the `*.ui` files, for example the main window is [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
+A widgetek neveit a `*.ui` fájlokból kaphatja meg, például a főablak a [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
 
-The Qt documentation (for example [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)) can help you to see how the widgets are related to each other (search for `Inherits` on the pages).
+A Qt-dokumentáció (például [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)) segíthet abban, hogy megnézze, hogyan kapcsolódnak egymáshoz a widgetek (keresse az `Öröklések` kifejezést az oldalakon).
 
-The base widget for almost everything is [QWidget](https://doc.qt.io/qt-5/qwidget.html). So just styling `QWidget` with for example `QWidget {background-color: black; color: white;}` would mean everything has a black background color and a white foreground color.
+Az alap widget szinte mindenhez a [QWidget](https://doc.qt.io/qt-5/qwidget.html). Tehát csak a `QWidget` stílust, például a `QWidget {background-color: black; color: white;}` azt jelenti, hogy mindennek fekete háttérszíne és fehér előtérszíne van.
 
 ::: tip
-The [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) of [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle) might also be a good reference for styles you can change.
+A[style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) a [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle)-ból szintén jó referencia lehet a módosítható stílusokhoz.
 :::
 
-Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) for a reference of what styles are available.
+Vessen egy pillantást a [Stíluslap-referenciára](http://doc.qt.io/qt-5/stylesheet-reference.html), ahol megtudhatja, milyen stílusok érhetők el.
 
 Ha stílusokat szeretne beilleszteni a html előnézetbe, hogy módosítsa a jegyzetek előnézetének módját, kérjük, tekintse meg a [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook) részt.
 
@@ -1022,7 +1023,7 @@ Megnyitott fájl párbeszédpanel megjelenítése
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Shows an open file dialog
+ * Megjelenít egy megnyitott fájl párbeszédpanelt
  *
  * @param caption (optional)
  * @param dir (optional)
@@ -1073,7 +1074,7 @@ Ezután a felhasználó beállíthatja ezeket a tulajdonságokat a szkript beál
 
 ### Példa
 ```js
-// you have to define your registered variables so you can access them later
+// meg kell határoznia a regisztrált változókat, hogy később hozzáférhessen hozzájuk
 property string myString;
 property bool myBoolean;
 property string myText;
@@ -1081,52 +1082,52 @@ property int myInt;
 property string myFile;
 property string mySelection;
 
-// register your settings variables so the user can set them in the script settings
+// regisztrálja a beállítási változóit, hogy a felhasználó beállíthassa azokat a szkriptbeállításokban
 //
-// unfortunately there is no QVariantHash in Qt, we only can use
-// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
-// least can be ordered arbitrarily)
+// Sajnos a Qt-ban nincs QVariantHash, csak használhatjuk
+// QVariantMap (amelynek nincs tetszőleges sorrendje) vagy QVariantList (amely 
+// legalább tetszőlegesen megrendelhető)
 property variant settingsVariables: [
     {
         "identifier": "myString",
-        "name": "I am a line edit",
-        "description": "Please enter a valid string:",
+        "name": "Sorszerkesztő vagyok",
+        "description": "Adjon meg egy érvényes karakterláncot:",
         "type": "string",
         "default": "My default value",
     },
     {
         "identifier": "myBoolean",
-        "name": "I am a checkbox",
-        "description": "Some description",
-        "text": "Check this checkbox",
+        "name": "Jelölőnégyzet vagyok",
+        "description": "Egy kis leírás",
+        "text": "Jelölje be ezt a jelölőnégyzetet",
         "type": "boolean",
         "default": true,
     },
     {
         "identifier": "myText",
-        "name": "I am textbox",
-        "description": "Please enter your text:",
+        "name": "Szövegdoboz vagyok",
+        "description": "Kérjük, írja be a szövegét:",
         "type": "text",
-        "default": "This can be a really long text\nwith multiple lines.",
+        "default": "Ez nagyon hosszú szöveg lehet,\többsoros.",
     },
     {
         "identifier": "myInt",
-        "name": "I am a number selector",
-        "description": "Please enter a number:",
+        "name": "Számválasztó vagyok",
+        "description": "Kérjük, írjon be egy számot:",
         "type": "integer",
         "default": 42,
     },
     {
         "identifier": "myFile",
-        "name": "I am a file selector",
-        "description": "Please select the file:",
+        "name": "Fájlválasztó vagyok",
+        "description": "Kérjük, válassza ki a fájlt:",
         "type": "file",
         "default": "pandoc",
     },
     {
         "identifier": "mySelection",
-        "name": "I am an item selector",
-        "description": "Please select an item:",
+        "name": "Tételválasztó vagyok",
+        "description": "Kérjük, válasszon egy tételt:",
         "type": "selection",
         "default": "option2",
         "items": {"option1": "Text for option 1", "option2": "Text for option 2", "option3": "Text for option 3"},
@@ -1139,10 +1140,10 @@ Ezenkívül felülírhatja a `settingsVariables` funkciót egy `registerSettings
 ### Példa
 ```js
 /**
- * Registers the settings variables again
- *
- * Use this method if you want to use code to override your variables, like setting
- * default values depending on the operating system.
+  * Újra regisztrálja a beállítási változókat
+  *
+  * Használja ezt a módszert, ha kódot szeretne használni a változók felülírásához, például a beállításhoz
+  * az alapértelmezett értékek az operációs rendszertől függtek.
  */
 function registerSettingsVariables() {
     if (script.platformIsWindows()) {
@@ -1244,7 +1245,7 @@ var cacheDirForScript = script.cacheDir ("my-script-id");
 Gyorsítótár könyvtár törlése
 --------------------------
 
-You can clear the cache directory of your script by passing its name to clearCacheDir().
+Törölheti a szkript gyorsítótár-könyvtárát, ha átadja a nevét a clearCacheDir()-nek.
 
 ### Módszerhívás és paraméterek
 ```cpp
@@ -1294,26 +1295,26 @@ Az útvonalelválasztók átalakítása natívakká
  * Windows rendszeren a toNativeDirSeparators ("c:/winnt/system32") visszatér
  * "c:\winnt\system32".
  *
- * @param path
- * @return
- */
+  * @param útvonal
+  * @Visszatérés
+  */
 QString ScriptingService::toNativeDirSeparators(QString path);
 ```
 
 ### Példa
 ```js
-// will return "c:\winnt\system32" on Windows
+// a "c:\winnt\system32" szót adja vissza Windows rendszeren
 script.log(script.toNativeDirSeparators("c:/winnt/system32"));
 ```
 
-Converting path separators from native ones
+Az ösvényelválasztók konvertálása a natívakról
 -------------------------------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Returns path using '/' as file separator.
- * On Windows, for instance, fromNativeDirSeparators("c:\\winnt\\system32")
+  * Visszaadja az elérési utat a '/' fájlelválasztóként.
+ * Windows rendszeren pl. fromNativeDirSeparators("c:\\winnt\\system32")
  * returns "c:/winnt/system32".
  *
  * @param path
@@ -1324,116 +1325,117 @@ QString ScriptingService::fromNativeDirSeparators(QString path);
 
 ### Példa
 ```js
-// will return "c:/winnt/system32" on Windows
+// will return "c:/winnt/system32" a Windows-on
 script.log(script.fromNativeDirSeparators("c:\\winnt\\system32"));
 ```
 
-Getting the native directory separator
+A natív könyvtár elválasztó megszerzése
 --------------------------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Returns the native directory separator "/" or "\" on Windows
- *
- * @return
- */
-QString ScriptingService::dirSeparator();
+  * Visszaadja a natív könyvtárelválasztót "/" vagy "\" Windows rendszeren
+  *
+  * @ return
+  */
+QString ScriptingService :: dirSeparator ();
 ```
 
 ### Példa
 ```js
-// will return "\" on Windows
+// will return "\" Windows-on
 script.log(script.dirSeparator());
 ```
 
-Getting a list of the paths of all selected notes
+Az összes kijelölt jegyzet elérési útjának felsorolása
 -------------------------------------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Returns a list of the paths of all selected notes
- *
- * @return {QStringList} list of selected note paths
- */
-QStringList ScriptingService::selectedNotesPaths();
+  * Visszaadja az összes kijelölt jegyzet elérési útját
+  *
+  * @return {QStringList} a kiválasztott jegyzet útvonalak listája
+  */
+QStringList ScriptingService :: selectedNotesPaths ();
 ```
 
 ### Példa
 ```js
-// returns a list of the paths of all selected notes
-script.log(script.selectedNotesPaths());
+// az összes kijelölt jegyzet elérési útjának listáját adja vissza
+script.log (script.selectedNotesPaths());
 ```
 
-You may want to take a look at the example [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
+Érdemes megnézni a példát [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
 
-Getting a list of the ids of all selected notes
+Az összes kijelölt jegyzet azonosítóinak listájának lekérése
 -----------------------------------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Returns a list of the ids of all selected notes
- *
- * @return {QList<int>} list of selected note ids
- */
-QList<int> ScriptingService::selectedNotesIds();
+  * Visszaadja az összes kijelölt jegyzet azonosítóinak listáját
+  *
+  * @return {QList <int>} a kiválasztott jegyzetazonosítók listája
+  */
+QList <int> ScriptingService :: selectedNotesIds ();
 ```
 
 ### Példa
 ```js
-// returns a list of the ids of all selected notes
-script.log(script.selectedNotesIds());
+// az összes kijelölt jegyzet azonosítóinak listáját adja vissza a script.log (script.selectedNotesIds());
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Érdemes megnézni a példát [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Triggering a menu action
+Menüművelet kiváltása
 ------------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Triggers a menu action
- *
- * @param objectName {QString} object name of the action to trigger
- * @param checked {QString} only trigger the action if checked-state is
- *                          different than this parameter (optional, can be 0 or 1)
- */
+  * Kiválaszt egy menüműveletet
+  *
+  * @param objectName {QString} a kiváltandó művelet objektumneve
+  * A @param bejelölt {QString} csak akkor aktiválja a műveletet, ha a check-state van
+  * eltér ettől a paramétertől (opcionális, lehet 0 vagy 1)
+  */
 void ScriptingService::triggerMenuAction(QString objectName, QString checked);
 ```
 
 ### Példa
 ```js
-// toggle the read-only mode
+// az írásvédett mód váltása
 script.triggerMenuAction("actionAllow_note_editing");
 
-// disable the read-only mode
+// tiltsa le az írásvédett módot
 script.triggerMenuAction("actionAllow_note_editing", 1);
 ```
 
-You may want to take a look at the example [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
+Érdemes megnézni a példát [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
 
 ::: tip
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Just search for the English menu title. Note that these texts can change over time.
+A menümű objektumneveit innen szerezheti be [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Csak keresse meg az angol menü címét. Ne feledje, hogy ezek a szövegek idővel változhatnak.
 :::
 
-Opening an input dialog with a select box
+Beviteli párbeszédpanel megnyitása egy kiválasztott mezővel
 -----------------------------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
+Amy D. Lang (nyersfreeamy)
+@unchase itt is (lásd a másik kommentemet)
 /**
- * Opens an input dialog with a select box
- *
- * @param title {QString} title of the dialog
- * @param label {QString} label text of the dialog
- * @param items {QStringList} list of items to select
- * @param current {int} index of the item that should be selected (default: 0)
- * @param editable {bool} if true the text in the dialog can be edited (default: false)
- * @return {QString} text of the selected item
- */
+  * Megnyit egy beviteli párbeszédpanelt egy kiválasztó mezővel
+  *
+  * @param title {QString} párbeszédpanel címe
+  * @param label {QString} címke szövege a párbeszédpanelen
+  * @param items {QStringList} a kiválasztandó elemek listája
+  * A kiválasztandó elem @param current {int} indexe (alapértelmezett: 0)
+  * @param szerkeszthető {bool}, ha igaz, a párbeszédpanelen lévő szöveg szerkeszthető (alapértelmezett: hamis)
+  * @return {QString} szöveg a kiválasztott elemről
+  */
 QString ScriptingService::inputDialogGetItem(
         const QString &title, const QString &label, const QStringList &items,
         int current, bool editable);
@@ -1442,19 +1444,19 @@ QString ScriptingService::inputDialogGetItem(
 ### Példa
 ```js
 var result = script.inputDialogGetItem(
-    "combo box", "Please select an item", ["Item 1", "Item 2", "Item 3"]);
+    "combo box", "Kérjük, válasszon egy elemet", ["Item 1", "Item 2", "Item 3"]);
 script.log(result);
 ```
 
-You may want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+Érdemes megnézni a példát [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
-Opening an input dialog with a line edit
+Beviteli párbeszédpanel megnyitása sorszerkesztéssel
 ----------------------------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Opens an input dialog with a line edit
+ * Megnyit egy beviteli párbeszédablakot sorszerkesztéssel
  *
  * @param title {QString} title of the dialog
  * @param label {QString} label text of the dialog
@@ -1468,20 +1470,20 @@ QString ScriptingService::inputDialogGetText(
 ### Példa
 ```js
 var result = script.inputDialogGetText(
-    "line edit", "Please enter a name", "current text");
+    "line edit", "Kérjük, adjon meg egy nevet", "current text");
 script.log(result);
 ```
 
-Checking if a file exists
+Ellenőrizze, hogy létezik-e fájl
 -------------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Check if a file exists
- * @param filePath
- * @return
- */
+  * Ellenőrizze, hogy létezik-e fájl
+  * @param filePath
+  * @Visszatérés
+  */
 bool ScriptingService::fileExists(QString &filePath);
 ```
 
@@ -1491,19 +1493,19 @@ var result = script.fileExists(filePath);
 script.log(result);
 ```
 
-Reading text from a file
+Szöveg olvasása egy fájlból
 ------------------------
 
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Read text from a file
- *
- * @param filePath {QString} path of the file to load
- * @param codec {QString} file encoding (default: UTF-8)
- * @return the file data or null if the file does not exist
- */
-QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
+  * Szöveg olvasása egy fájlból
+  *
+  * A betöltendő fájl @param filePath {QString} elérési útja
+  * @param codec {QString} fájlkódolás (alapértelmezett: UTF-8)
+  * @visszaállítja a fájl adatait, vagy null, ha a fájl nem létezik
+  */
+QString ScriptingService::readFromFile (const QString & filePath, const QString & kodek)
 ```
 
 ### Példa
@@ -1537,12 +1539,12 @@ var result = script.writeToFile(filePath, html);
 script.log(result);
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Érdemes megnézni a példát [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Webhálózatok használata
 -----------------------
 
-You can remotely control QOwnNotes by using `WebSocketServer`.
+A QOwnNotes távolról vezérelhető a `WebSocketServer` használatával.
 
 Kérjük, nézze meg a példát [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). A socket kiszolgálót úgy tesztelheti, hogy csatlakozik hozzá a [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
 

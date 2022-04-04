@@ -1,4 +1,4 @@
-# Install as snap
+# Telepítés snap néven
 
 Snap `qownnotes` található a [Snap boltban](https://snapcraft.io/qownnotes).
 

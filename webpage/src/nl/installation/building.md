@@ -8,7 +8,7 @@ Check de code rechtstreeks uit de git-repository:
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b master
-cd QOwnNotes
+cd QEigenOpmerkingen
 git submodule update --init
 ```
 
@@ -19,7 +19,7 @@ Of u kunt het rechtstreeks in uw terminal bouwen:
 ```bash
 cd src
 qmake
-make
+maken
 ```
 
 Voel je vrij om broncode bij te dragen aan dit project, suggesties te doen of problemen te melden op de [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).

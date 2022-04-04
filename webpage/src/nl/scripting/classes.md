@@ -64,22 +64,22 @@ class NoteSubFolderApi {
 ```js
 var noteSubFolderQmlObj = Qt.createQmlObject("import QOwnNotesTypes 1.0; NoteSubFolder{}", mainWindow, "noteSubFolder");
 
-// print all subfolder names
+// alle namen van submappen afdrukken
 noteSubFolderQmlObj.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
     script.log(nsf.name);
 });
 
-// get the active note subfolder
+// verkrijg de actieve notitie-submap
 var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
 
-// print the full and relative path of the active note subfolder
+// print het volledige en relatieve pad van de actieve notitie-submap
 script.log(noteSubFolder.fullPath());
 script.log(noteSubFolder.relativePath());
 
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// iterate through notes in note subfolder
+// itereren door notities in de submap van notities
 for (var idx in noteSubFolder.notes) {
     var note = noteSubFolder.notes[idx];
 }

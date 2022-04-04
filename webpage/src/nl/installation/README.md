@@ -6,7 +6,8 @@ Indien niet anders vermeld, kunt u QOwnNotes achteraf uitvoeren door `QOwnNotes`
 
 Als u problemen heeft met de pakketten of repositories, meld deze dan op de [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
 
-::: tip Info
+::: tip
+Info
 Kijk in het menu voor alle verschillende manieren om QOwnNotes te installeren
 :::
 

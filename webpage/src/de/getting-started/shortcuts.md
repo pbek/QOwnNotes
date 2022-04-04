@@ -90,7 +90,7 @@
 - <kbd>Alt</kbd> + <kbd>Links</kbd> springt im Notenverlauf ein Element rückwärts
     - <kbd>Alt</kbd> + <kbd>Rechts</kbd> springt im Notenverlauf ein Element vorwärts
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> setzt ein Notiz-Lesezeichen auf den Lesezeichen-Slot 1..9
-- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
+- <kbd>Strg</kbd> + <kbd>1..9</kbd> springt zum Notiz-Lesezeichen auf Lesezeichenplatz 1..9
 - <kbd>Strg</kbd> + <kbd>0..9</kbd> springt zum Notizenlesezeichen im Lesezeichen-Slot 0..9
 - <kbd>Strg</kbd> + <kbd>-</kbd> verringert die Schriftgröße des Notizentextes um einen Punkt
 - <kbd>Strg</kbd> + <kbd>0</kbd> setzt die Schriftgröße des Notizentextes zurück
@@ -207,7 +207,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Strg</kbd> + <kbd>Links</kbd> springt im Notizverlauf zurück
     - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Strg</kbd> + <kbd>Rechts</kbd> springt im Notizverlauf vorwärts
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> setzt ein Notiz-Lesezeichen auf Lesezeichenplatz 1..9
-- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
+- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> springt zum Notiz-Lesezeichen auf Lesezeichenplatz 1..9
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> erhöht die Schriftgröße des Notiztextes um einen Punkt
 - <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> verringert die Schriftgröße des Notiztextes um einen Punkt
 - <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> setzt die Schriftgröße des Notiztextes zurück
@@ -217,9 +217,9 @@
 - <kbd>⌃ Strg</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> sucht nach dem ausgewählten Text im Web
 - <kbd>⌘ Cmd</kbd> + <kbd>Nach oben</kbd> scrollt den Inhalt nach oben
 - <kbd>⌘ Cmd</kbd> + <kbd>Down</kbd> scrollt den Inhalt nach unten
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> moves the current line down
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> moves the current line up
-- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Runter</kbd> bewegt die aktuelle Zeile nach unten
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> verschiebt die aktuelle Zeile nach oben
+- <kbd>⇧ Shift</kbd> + <kbd>Eingabe</kbd> fügt zwei Leerzeichen und ein Zeilenumbruchzeichen hinzu, um einen Markdown-Zeilenumbruch zu erzwingen
 
 ### Im Notizvorschaufenster
 

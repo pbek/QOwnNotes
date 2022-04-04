@@ -139,7 +139,7 @@ Ezenkívül biztosítja a [RSS-kiadás kiadását](http://api.qownnotes.org/rss/
 Az [api.qownnotes.org](https://api.qownnotes.org) forráskódját a [GitHub](https://github.com/qownnotes/api) oldalon érheti el.
 :::
 
-## QOwnNotes Web App
+## QOwnNotes webalkalmazás
 
 A mobiltelefonról származó fotókat beillesztheti az asztali QOwnNotes aktuális jegyzetébe az **webalkalmazás** segítségével az [app.qownnotes.org](https://app.qownnotes.org/) oldalon.
 

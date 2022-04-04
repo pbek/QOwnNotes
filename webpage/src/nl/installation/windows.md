@@ -20,19 +20,21 @@ U hebt het draagbare modus niet nodig als u gewoon geen beheerdersrechten voor u
 
 Qt heeft de ondersteuning voor Windows XP met versie 5.8 laten vallen, maar QOwnNotes is nu ook gebouwd met Qt 5.7 zodat Windows XP-gebruikers het nog steeds kunnen gebruiken.
 
-You need to download the ZIP file from [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts) yourself and unzip it to a folder of your liking.
+Je moet het ZIP-bestand zelf downloaden van [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts) en het uitpakken in een map naar keuze.
 
-You can then directly run `QOwnNotes.exe` from that folder, no installation is required.
+U kunt dan direct `QOwnNotes.exe` uitvoeren vanuit die map, er is geen installatie vereist.
 
-::: tip Info
-The automatic update mechanism does not work with the AppVeyor build for Windows XP! You will have to download new releases yourself.
+::: tip
+Info
+Het automatische updatemechanisme werkt niet met de AppVeyor-build voor Windows XP!
+U zult zelf nieuwe releases moeten downloaden.
 :::
 
 ## Chocolatey
 
-There is a community maintained package of QOwnNotes at [Chocolatey](https://chocolatey.org/packages/qownnotes/).
+Er is een door de gemeenschap onderhouden pakket van QOwnNotes op [Chocolatey](https://chocolatey.org/packages/qownnotes/).
 
-You can install it with:
+U kunt het installeren met:
 
 ```shell
 choco install qownnotes
@@ -40,7 +42,7 @@ choco install qownnotes
 
 ## Scoop
 
-There is a [community maintained package of QOwnNotes](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) at [Scoop](https://scoop.sh/). If you add the Extras bucket you can use it to install QOwnNotes in portable mode.
+Er is een [door de gemeenschap onderhouden pakket van QOwnNotes](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) bij [Scoop](https://scoop.sh/). Als u de Extras-bucket toevoegt, kunt u deze gebruiken om QOwnNotes in draagbare modus te installeren.
 
 ```shell
 scoop bucket add extras

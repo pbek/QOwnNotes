@@ -3463,12 +3463,12 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <location filename="../mainwindow.cpp" line="7580"/>
 <source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
+<translation>Alle Notizen anzeigen (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7741"/>
 <source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+<translation>Alle mit '%1' (%2) getaggten Notizen anzeigen</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9551"/>
@@ -4280,12 +4280,12 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="175"/>
 <source>Show notes from all note subfolders (%1)</source>
-<translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+<translation>Notizen aus allen Notizunterordnern anzeigen (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="198"/>
 <source>Show notes in note root folder (%1)</source>
-<translation type="unfinished">Show notes in note root folder (%1)</translation>
+<translation>Notizen im Notizstammordner anzeigen (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="210"/>

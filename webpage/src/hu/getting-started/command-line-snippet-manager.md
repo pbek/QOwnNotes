@@ -62,9 +62,9 @@ A QOwnNotes beállításaiban azt is beállíthatja, hogy milyen jegyzetcímkét
 
 ## A parancsrészletek szintaxisa
 
-You can use **unordered lists with in-line code blocks** to store command snippets. Minden `commands` címkét tartalmazó jegyzetben a rendszer parancsrészleteket keres.
+Használhat **soron belüli kódblokkokkal rendelkező rendezetlen listákat** a parancsrészletek tárolására. Minden `commands` címkét tartalmazó jegyzetben a rendszer parancsrészleteket keres.
 
-If you add a `cmd:` before the in-line code block, the command will also be found in the **current note** regardless of note tags.
+Ha a soron belüli kódblokk elé egy `cmd:` karakterláncot ad hozzá, a parancs az **aktuális jegyzetben** is megtalálható lesz, függetlenül a jegyzetcímkéktől.
 
 ```markdown
 - `visszhang Én vagyok a parancs` Leírás vagyok #tag1 #tag2 #tag3
@@ -72,62 +72,62 @@ If you add a `cmd:` before the in-line code block, the command will also be foun
 - cmd: `echo I megtalálható lesz az aktuális jegyzetben` Ez a parancs megtalálható az aktuális jegyzetben, függetlenül a jegyzetcímkéktől
 ```
 
-**`bash` or `shell` code blocks**, preceded by a heading 2 or higher as a description, can also be used for command snippets. Tags are also supported if they are between the heading and the code block.
+A **`bash` vagy `shell` kódblokkok**, amelyeket leírásként 2-es vagy magasabb címsor előz meg, szintén használhatók parancsrészletekhez. A címkék is támogatottak, ha a címsor és a kódblokk között vannak.
 
-    ## Do this with a "bash" code block
+    ## Ezt egy "bash" kódblokk segítségével teheti meg
 
-    - this text will be ignored text
-    - but tags can be used: #tag1 #tag2
+    - ezt a szöveget figyelmen kívül hagyja
+    - de használhatók a címkék: #tag1 #tag2
 
     ```bash
-    echo do this
-    echo do that
+    echo csináld ezt
+     echo tedd ezt
     ```
 
 
-    ## Do something else with a "sh" code block
+    ## Csinálj valami mást az "sh" kódblokk segítségével
 
     ```sh
-    echo do something else
-    echo do something other
+    echo csináljon valami mást
+     visszhang csinál valami mást
     ```
 
-Above example will result in two command snippets, the first one with the two tags `tag1` and `tag2`.
+A fenti példa két parancsrészletet eredményez, az első a két `tag1` és `tag2` címkével.
 
 ## Használat
 
 ```bash
-# Search and execute command snippets
+# Parancsrészletek keresése és végrehajtása
 qc exec
 ```
 
 ```bash
-# Search and print command snippets
-qc search
+# Parancsrészletek keresése és nyomtatása
+qc keresés
 ```
 
 ## Konfiguráció
 
-Run `qc configure`.
+Futtassa a `qc configure` parancsot.
 
 ```toml
 [General]
-  editor = "vim"            # your favorite text editor
-  column = 40               # column size for list command
-  selectcmd = "fzf"         # selector command for edit command (fzf or peco)
-  sortby = ""               # specify how snippets get sorted (recency (default), -recency, description, -description, command, -command, output, -output)
+  editor = "vim"            # kedvenc szövegszerkesztőd
+  column = 40               # oszlopméret a lista parancshoz
+  selectcmd = "fzf"         # választó parancs a szerkesztési parancshoz (fzf vagy peco)
+  sortby = ""               # adja meg a kódrészletek rendezési módját (recency (alapértelmezett), -recency, description, -description, parancs, -command, output, -output)
 
 [QOwnNotes]
   token = "MvTagHXF"        # your QOwnNotes API token
   websocket_port = 22222    # websocket port in QOwnNotes
 ```
 
-## Shell completion
+## Shell befejezése
 
-You can generate shell completion code for your shell with `qc completion <shell>`.
+A shell befejezési kódját a `qc befejezés <shell>` paranccsal állíthatja elő.
 
-For example for the Fish shell you can use:
+Például a Fish shell-hez használhatja:
 
 ```bash
-qc completion fish > ~/.config/fish/completions/qc.fish
+qc befejezési hal > ~/.config/fish/completions/qc.fish
 ```

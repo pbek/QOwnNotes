@@ -2858,7 +2858,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2688"/>
 <source>Toggle always-on-top mode</source>
-<translation type="unfinished">Toggle always-on-top mode</translation>
+<translation>Schakel altijd-op-top-modus in</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1909"/>
@@ -3462,12 +3462,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <location filename="../mainwindow.cpp" line="7580"/>
 <source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
+<translation>Toon alle notities (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7741"/>
 <source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+<translation>Toon alle notities getagd met '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9551"/>
@@ -4279,12 +4279,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="175"/>
 <source>Show notes from all note subfolders (%1)</source>
-<translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+<translation>Toon notities uit alle submappen van notities (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="198"/>
 <source>Show notes in note root folder (%1)</source>
-<translation type="unfinished">Show notes in note root folder (%1)</translation>
+<translation>Toon notities in notitiehoofdmap (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="210"/>
@@ -4522,12 +4522,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="294"/>
 <source>Failed to register %1. Error: %2</source>
-<translation type="unfinished">Failed to register %1. Error: %2</translation>
+<translation>Kan %1 niet registreren. Fout: %2</translation>
 </message>
 <message>
 <location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="314"/>
 <source>Failed to unregister %1. Error: %2</source>
-<translation type="unfinished">Failed to unregister %1. Error: %2</translation>
+<translation>Kan de registratie van %1 niet ongedaan maken. Fout: %2</translation>
 </message>
 </context>
 <context>
@@ -6580,7 +6580,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
 <source>Forget all "Don't ask again" choices in message boxes</source>
-<translation type="unfinished">Forget all "Don't ask again" choices in message boxes</translation>
+<translation>Vergeet alle "Niet meer vragen" keuzes in berichtvensters</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4254"/>

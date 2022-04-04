@@ -1,4 +1,4 @@
-# Install on Raspberry Pi OS
+# Telepítés Raspberry Pi OS-re
 
 ## Raspberry Pi OS 11
 

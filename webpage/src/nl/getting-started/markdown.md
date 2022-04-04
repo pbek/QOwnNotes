@@ -182,7 +182,7 @@ cd Notes
 ```
 ~~~
 
-Currently, supported languages (and code block identifiers) are:
+Momenteel zijn de ondersteunde talen (en codeblok-ID's):
 
 * BASh scripting, `bash`
 * C, `c`
@@ -216,12 +216,12 @@ Currently, supported languages (and code block identifiers) are:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tables
+## Tafels
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+Tabellen maken geen deel uit van de belangrijkste Markdown-specificaties, maar de QOwnNotes-preview ondersteunt ze. 
 
-~~~markdown
-Colons can be used to align columns.
+~~~ afwaardering
+Dubbele punten kunnen worden gebruikt om kolommen uit te lijnen.
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
@@ -229,18 +229,18 @@ Colons can be used to align columns.
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-There must be at least 3 dashes separating each header cell.
+Er moeten ten minste 3 streepjes zijn tussen elke kopcel.
 
 U kunt ook inline markdown gebruiken.
 
-| Markdown | Less | Pretty |
+| Afwaardering | Minder | Mooi |
 | --- | --- | --- |
-| *Still* | `renders` | **nicely** |
+| *Weergave* | `is-nog-steeds` | **leuk** |
 | 1 | 2 | 3 |
 ~~~
 
 ::: tip
-Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you to create tables. U kunt zelfs CSV-bestanden in dat dialoogvenster importeren.
+Druk op <kbd>Alt + Shift + T</kbd> om een dialoogvenster te activeren waarmee u tabellen kunt maken. U kunt zelfs CSV-bestanden in dat dialoogvenster importeren.
 
 Gebruik <kbd>Ctrl + Space</kbd> in een markdown-tabel om deze automatisch op te maken.
 :::
@@ -284,12 +284,12 @@ ___
 
 ## Line breaks
 
-- You can break a paragraph into more than a single line for easier editing, they still render as a single paragraph with no breaks.
-- You can force a line break inside a paragraph by ending a line with two spaces.
-- You can make a separate paragraph by delimiting it by empty lines.
+- U kunt een alinea opsplitsen in meer dan een enkele regel voor eenvoudiger bewerken, ze worden nog steeds weergegeven als een enkele alinea zonder pauzes.
+- U kunt een regeleinde binnen een alinea forceren door een regel met twee spaties te beëindigen.
+- U kunt een aparte alinea maken door deze af te bakenen met lege regels.
 
 ::: tip
-You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
+Je kunt twee spaties en een nieuwe regel invoeren met <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
 :::
 
 ```markdown
@@ -302,12 +302,12 @@ Deze regel wordt alleen gescheiden door twee volgspaties en een enkele nieuwe re
 ```
 
 ::: tip
-Trailing spaces are highlighted by default in the editor.
+Spaties achteraan worden standaard gemarkeerd in de editor.
 :::
 
 ## Opmerkingen
 
-Comments are not shown in the preview.
+Opmerkingen worden niet weergegeven in het voorbeeld.
 
 ```markdown
 [comment]: # (Deze opmerking verschijnt niet in het voorbeeld)
@@ -316,25 +316,25 @@ Comments are not shown in the preview.
 ```
 
 ::: tip
-A leading html comment block in a note will also be ignored in the automatic note filename generation.
+Een leidend html-commentaarblok in een notitie wordt ook genegeerd bij het automatisch genereren van notitiebestandsnamen.
 :::
 
 ## Checkbox-lijsten
 
-You can create simple todo lists with checkbox lists.
+U kunt eenvoudige takenlijsten maken met lijsten met selectievakjes.
 
 ```markdown
-- [x] done
-- [ ] todo
+- [x] klaar
+- [ ] te doen
 ```
 
 ::: tip
-You can check/un-check checkboxes in the preview.
+U kunt selectievakjes in het voorbeeld in- of uitschakelen.
 :::
 
 ## Frontmatter
 
-In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the automatic note filename generation**.
+In QOwnNotes kun je een frontmatter (bijvoorbeeld YAML) gebruiken om wat extra meta-informatie toe te voegen. Het wordt **niet getoond in het voorbeeld** en zal **het automatisch genereren van de bestandsnaam van notities** niet verstoren.
 
 ```markdown
 ---
@@ -347,4 +347,4 @@ description: Enige beschrijving
 Wat tekst
 ```
 
-The filename of this example note would be `Note headline starts here.md`.
+De bestandsnaam van deze voorbeeldnotitie zou ` Notitiekop begint hier.md ` zijn.

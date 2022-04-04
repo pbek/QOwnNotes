@@ -95,7 +95,9 @@ graph TB
 
 استخدم [**Nextcloud Notes**](https://github.com/nextcloud/notes) لتحرير ملاحظاتك على **الويب**.
 
-::: warning تذكر أن Nextcloud Notes حاليا يدعم مستوى واحد من المجلدات الفرعية كحد أقصى. :::
+::: warning
+تذكر أن Nextcloud Notes حاليا يدعم مستوى واحد من المجلدات الفرعية كحد أقصى.
+:::
 
 ## تطبيق محمول Nextcloud Notes
 

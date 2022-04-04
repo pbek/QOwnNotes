@@ -23,8 +23,10 @@ You need to download the ZIP file from [AppVeyor](https://ci.appveyor.com/projec
 
 You can then directly run `QOwnNotes.exe` from that folder, no installation is required.
 
-::: tip Info
-The automatic update mechanism does not work with the AppVeyor build for Windows XP! You will have to download new releases yourself.
+::: tip
+Info
+The automatic update mechanism does not work with the AppVeyor build for Windows XP!
+You will have to download new releases yourself.
 :::
 
 ## Chocolatey

@@ -4298,7 +4298,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="303"/>
 <source>Rename subfolder</source>
-<translation>Átnevezi az almappát</translation>
+<translation>Almappa átnevezése</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="310"/>

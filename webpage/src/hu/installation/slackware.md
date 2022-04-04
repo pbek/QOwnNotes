@@ -44,4 +44,4 @@ cd qownnotes-slackbuilds/14.1/qownnotes
 
 Ezt követően telepítheti a létrehozott csomagot a `installpkg` paranccsal.
 
-[QOwnNotes Slackbuild on GitHub](https://github.com/pbek/qownnotes-slackbuilds/)
+[QOwnNotes Slackbuild a GitHubon](https://github.com/pbek/qownnotes-slackbuilds/)

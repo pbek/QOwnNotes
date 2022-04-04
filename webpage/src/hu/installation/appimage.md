@@ -3,7 +3,7 @@
 You can download the latest AppImage from the [QOwnNotes releases page](https://github.com/pbek/QOwnNotes/releases). Meg kell nevezni a következő néven: `QOwnNotes-x86_64.AppImage`.
 
 ::: tip
-If you have [jq](https://stedolan.github.io/jq/) installed you can also download the latest AppImage directly:
+Ha telepítve van a [jq](https://stedolan.github.io/jq/), közvetlenül letöltheti a legújabb AppImage-et is:
 
 ```bash
 # query the latest Linux release from the QOwnNotes API, parse the JSON for the URL and download it
@@ -11,18 +11,18 @@ curl -L https://api.qownnotes.org/latest_releases/linux | jq .url | xargs curl -
 ```
 :::
 
-Then you can change the execute-permissions on the file:
+Ezután megváltoztathatja a fájl végrehajtási engedélyeit:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Afterwards you should be able to execute the AppImage to run QOwnNotes.
+Ezután képesnek kell lennie az AppImage futtatására a QOwnNotes futtatásához.
 
 ::: warning
-If you want to use the **automatic updater** please make sure to put your AppImage in a place where your user account has write-access to, like somewhere in your home directory.
+Ha az **automatikus frissítőt** szeretné használni, feltétlenül helyezze el az AppImage -ot olyan helyre, ahová felhasználói fiókja írási jogosultsággal rendelkezik, például valahol a saját könyvtárában.
 :::
 
 ::: tip
-If you have troubles running the AppImage, because your glibc version is too old you can try the [AppImage built on OBS](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage), it should be built with glibc 2.16.
+Ha problémái vannak az AppImage futtatásával, mert a glibc verziója túl régi, próbálkozzon az [OBS-re épített AppImage](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage) programmal, amelyet a glibc 2.16-os verziójával kell elkészíteni.
 :::

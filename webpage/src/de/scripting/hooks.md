@@ -173,16 +173,15 @@ handleNewNoteHeadlineHook
 
 ```js
 /**
- * This function is called before a note is created
- *
- * It allows you to modify the headline of the note before it is created
- * Note that you have to take care about a unique note name, otherwise
- * the new note will not be created, it will just be found in the note list
- *
- * You can use this function for creating note templates
- *
- * @param headline text that would be used to create the headline
- * @return {string} the headline of the note
+  * Diese Funktion wird aufgerufen, bevor eine Notiz erstellt wird
+  *
+  * Sie können die Überschrift der Notiz ändern, bevor sie erstellt wird
+  * Beachten Sie, dass Sie ansonsten auf einen eindeutigen Notennamen achten müssen
+  * Die neue Notiz wird nicht erstellt, sondern nur in der Notizliste gefunden
+  *
+  * Sie können diese Funktion zum Erstellen von Notizvorlagen verwenden
+  *
+  * @param Überschriftentext, der zum Erstellen der Überschrift verwendet wird
  */
 function handleNewNoteHeadlineHook(headline);
 ```
@@ -203,20 +202,20 @@ preNoteToMarkdownHtmlHook
 
 
 ```js
-/**
- * This function is called before the markdown html of a note is generated
- *
- * It allows you to modify what is passed to the markdown to html converter
- *
- * The function can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
- * to its graphical representation for the preview
- *
- * The note will not be changed in this process
- *
- * @param {NoteApi} note - the note object
- * @param {string} markdown - the markdown that is about to being converted to html
- * @param {string} forExport - true if the html is used for an export, false for the preview
- * @return {string} the modified markdown or an empty string if nothing should be modified
+/ **
+  * Diese Funktion wird aufgerufen, bevor das Markdown-HTML einer Notiz generiert wird
+  * *
+  * Hier können Sie ändern, was an den Markdown-to-HTML-Konverter übergeben wird
+  * *
+  * Die Methode kann beispielsweise in mehreren Skripten zum Rendern von Code verwendet werden (wie LaTeX-Mathematik oder Meerjungfrau).
+  * zu seiner grafischen Darstellung für die Vorschau
+  * *
+  * Der Hinweis wird dabei nicht geändert
+  * *
+  * @param {NoteApi} note - das Notizobjekt
+  * @param {string} markdown - der Markdown, der in HTML konvertiert werden soll
+  * @param {string} forExport - true, wenn der HTML-Code für einen Export verwendet wird, false für die Vorschau
+  * @return {string} der geänderte Markdown oder eine leere Zeichenfolge, wenn nichts geändert werden soll
  */
 function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
@@ -238,19 +237,19 @@ noteToMarkdownHtmlHook
 
 ```js
 /**
- * This function is called when the markdown html of a note is generated
- *
- * It allows you to modify this html
- * This is for example called before by the note preview
- *
- * The function can be used in multiple scripts to modify the html of the preview
- *
- * @param {NoteApi} note - the note object
- * @param {string} html - the html that is about to being rendered
- * @param {string} forExport - true if the html is used for an export, false for the preview
- * @return {string} the modified html or an empty string if nothing should be modified
- */
-function noteToMarkdownHtmlHook(note, html, forExport);
+  * Diese Funktion wird aufgerufen, wenn das Markdown-HTML einer Notiz generiert wird
+  *
+  * Sie können diesen HTML-Code ändern
+  * Dies wird beispielsweise zuvor von der Notenvorschau aufgerufen
+  *
+  * Die Funktion kann in mehreren Skripten verwendet werden, um das HTML der Vorschau zu ändern
+  *
+  * @param {NoteApi} note - das Notizobjekt
+  * @param {string} html - das HTML, das gerendert werden soll
+  * @param {string} forExport - true, wenn das HTML für einen Export verwendet wird, false für die Vorschau
+  * @return {string} der geänderte HTML-Code oder ein leerer String, wenn nichts geändert werden soll
+  */
+Funktion noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
 

@@ -6,7 +6,8 @@ Ha nincs másképp feltüntetve, akkor futtathatja a QOwnNotes alkalmazást a `Q
 
 Ha problémái vannak a csomagokkal vagy az adattárakkal, kérjük, jelezze azokat a [QOwnNotes kérdések oldalon](https://github.com/pbek/QOwnNotes/issues).
 
-::: tip Info
+::: tip
+Info
 Vessen egy pillantást a menüre a QOwnNotes telepítésének különféle módjairól
 :::
 

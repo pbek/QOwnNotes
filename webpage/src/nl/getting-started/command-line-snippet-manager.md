@@ -67,29 +67,29 @@ U kunt **ongeordende lijsten met in-line codeblokken** gebruiken om opdrachtfrag
 Als je een `cmd:` toevoegt voor het in-line codeblok, zal het commando ook gevonden worden in de **huidige notitie** ongeacht notitietags.
 
 ```markdown
-- `echo I am a command` I am a description #tag1 #tag2 #tag3
-* `echo I am also a command` I am a description #tag3 #tag4 #tag5
-- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+- `echo I am a command` Ik ben een beschrijving #tag1 #tag2 #tag3
+* `echo I am also a command`Ik ben een beschrijving #tag3 #tag4 #tag5
+- cmd: `echo Ik zal worden gevonden in de huidige notitie` Dit commando zal worden gevonden in de huidige notitie, ongeacht notitietags
 ```
 
 **`bash` of `shell` codeblokken**, voorafgegaan door een kop 2 of hoger als beschrijving, kunnen ook worden gebruikt voor opdrachtfragmenten. Tags worden ook ondersteund als ze tussen de kop en het codeblok staan.
 
     ## Doe dit met een "bash" codeblok
 
-    - this text will be ignored text
-    - but tags can be used: #tag1 #tag2
+    - deze tekst wordt genegeerd tekst
+    - maar tags kunnen worden gebruikt: #tag1 #tag2
 
     ```bash
-    echo do this
-    echo do that
+    echo doe dit
+     echo doe dat
     ```
 
 
     ## Mach etwas anderes mit einem "sh" Codeblock
 
     ```sh
-    echo do something else
-    echo do something other
+    echo doe iets anders
+     echo doe iets anders
     ```
 
 Bovenstaand voorbeeld resulteert in twee opdrachtfragmenten, de eerste met de twee tags `tag1` en `tag2`.
@@ -112,21 +112,21 @@ Run `qc configure`.
 
 ```toml
 [General]
-  editor = "vim"            # your favorite text editor
-  column = 40               # column size for list command
-  selectcmd = "fzf"         # selector command for edit command (fzf or peco)
-  sortby = ""               # specify how snippets get sorted (recency (default), -recency, description, -description, command, -command, output, -output)
+  editor = "vim"            # je favoriete teksteditor
+  column = 40               # kolomgrootte voor lijstopdracht
+  selectcmd = "fzf"         # selector commando voor edit commando (fzf of peco)
+  sortby = ""               # specificeer hoe fragmenten worden gesorteerd (recentheid (standaard), -recentie, beschrijving, -beschrijving, opdracht, -commando, uitvoer, -uitvoer)
 
 [QOwnNotes]
   token = "MvTagHXF"        # your QOwnNotes API token
   websocket_port = 22222    # websocket port in QOwnNotes
 ```
 
-## Shell completion
+## Shell voltooiing
 
-You can generate shell completion code for your shell with `qc completion <shell>`.
+U kunt shell-aanvullingscode voor uw shell genereren met `qc voltooiing <shell>`.
 
-For example for the Fish shell you can use:
+Voor de Fish shell kun je bijvoorbeeld gebruiken:
 
 ```bash
 qc completion fish > ~/.config/fish/completions/qc.fish

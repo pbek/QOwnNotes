@@ -83,7 +83,7 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-qml.png" alt="screenshot-qml" />
     <div class="sheet">
-      Scriptable
+      Írható
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -107,13 +107,13 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-settings-note-folders.png" alt="screenshot-settings-note-folders" />
     <div class="sheet">
-      Able to use multiple note folders
+      Több jegyzetmappa is használható
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-todo.png" alt="screenshot-todo" />
     <div class="sheet">
-      Manage your Todo lists via CalDAV
+      Kezelje feladatlistáit a CalDAV-on keresztül
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -160,7 +160,7 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 - A **hierarchikus jegyzetcímkézés** és a **jegyzetmappák** támogatása
 - Opcionális jegyzetek **titkosítása** (beépített AES-256 vagy használhat egyedi titkosítási módszereket, például **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) vagy **PGP** ([titkosítás-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
 - A **jegyzetek mappa** **szabadon választható** (több jegyzetmappa is használható)
-- **Searching parts of words** in notes is possible and search results are highlighted in the notes
+- **Szavarészekben kereshet** a jegyzetekben, és a keresési eredmények kiemelve jelennek meg a jegyzetekben
 - [**Böngészőbővítmény**](browser-extension.md): **jegyzetek hozzáadásához a kijelölt szöveghez**, **képernyőképek készítéséhez** vagy **könyvjelzők kezeléséhez**
 - [**Helyesírás-ellenőrzés**](../editor/spellchecking.md) támogatás
 - **Hordozható mód** a QOwnNotes hordozásához USB-meghajtókon

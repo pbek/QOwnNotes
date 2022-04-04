@@ -24,8 +24,10 @@ Vous devrez vous-même télécharger le fichier ZIP d'[AppVeyor](https://ci.appv
 
 Vous pouvez ensuite exécuter directement `QOwnNotes.exe` depuis ce dossier, aucune installation n'est requise.
 
-::: tip Info
-Le mécanisme de mise à jour automatique ne fonctionne pas avec la version d'AppVeyor pour Windows XP ! Vous devrez télécharger vous-même les nouvelles versions.
+::: tip
+Info
+Le mécanisme de mise à jour automatique ne fonctionne pas avec la version d'AppVeyor pour Windows XP !
+Vous devrez télécharger vous-même les nouvelles versions.
 :::
 
 ## Chocolatey

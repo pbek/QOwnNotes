@@ -15,8 +15,8 @@ Információ
 ## Telepítés
 
 1. Szerezze meg a bővítményt
-    - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-    - [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+    - [Chrome Internetes áruház](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+    - [Firefox kiegészítők oldala](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
     - A kiterjesztést a [GitHub](https://github.com/qownnotes/web-companion/) oldalon is megtalálja.
 2. Adja hozzá a biztonsági tokent a bővítmény konfigurálásához.
     - Amikor először kattint a QOwnNotes böngészőbővítmény ikonjára, megjelenik egy párbeszédpanel egy biztonsági tokennel. Másolja a tokent.
