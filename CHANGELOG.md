@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 22.4.0
+- if you indent multiple lines in the note editor the selection will now
+  automatically include the text until the start of the first selected block
+  (for [#2508](https://github.com/pbek/QOwnNotes/issues/2508))
+
 ## 22.3.4
 - the note sub-folder selection is now cleared before jumping to a new sub-folder when
   jumping to a note link with <kbd>Ctrl</kbd> + <kbd>Space</kbd> or <kbd>Ctrl</kbd> + `Click`
