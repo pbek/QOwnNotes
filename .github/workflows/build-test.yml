@@ -128,7 +128,7 @@ jobs:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
-#        modules: qtwebsockets
+        modules: qtwebsockets
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: false == contains( matrix.os, 'windows') && steps.changes.outputs.DO_BUILD
       name: Install Qt
@@ -136,7 +136,7 @@ jobs:
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
-#        modules: qtwebsockets
+        modules: qtwebsockets
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
 
       #
