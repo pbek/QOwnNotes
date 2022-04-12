@@ -2605,6 +2605,8 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
             _selectedNoteFolder.settingsValue(QStringLiteral("allowDifferentNoteFileName")).toBool());
         ui->noteFolderGitCommitCheckBox->setChecked(
             _selectedNoteFolder.isUseGit());
+        ui->noteFolderGitPushCheckBox->setChecked(
+            _selectedNoteFolder.isUseGitPush());
         Utils::Gui::setComboBoxIndexByUserData(
             ui->noteFolderCloudConnectionComboBox,
             _selectedNoteFolder.getCloudConnectionId());
@@ -3930,6 +3932,16 @@ void SettingsDialog::on_noteFolderGitCommitCheckBox_toggled(bool checked) {
     _selectedNoteFolder.setUseGit(checked);
     _selectedNoteFolder.store();
 }
+
+/**
+ * Toggles whether to use git push is executed after each commit
+ * @param checked
+ */
+void SettingsDialog::on_noteFolderGitPushCheckBox_toggled(bool checked) {
+    _selectedNoteFolder.setUseGitPush(checked);
+    _selectedNoteFolder.store();
+}
+
 
 void SettingsDialog::on_setGitPathToolButton_clicked() {
     QString path = ui->gitPathLineEdit->text();

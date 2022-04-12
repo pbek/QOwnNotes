@@ -33,6 +33,11 @@ bool Utils::Git::isCurrentNoteFolderUseGit() {
     return NoteFolder::currentNoteFolder().isUseGit();
 }
 
+bool Utils::Git::isCurrentNoteFolderUseGitPush() {
+    return NoteFolder::currentNoteFolder().isUseGitPush();
+}
+
+
 /**
  * Commits changes from the current note folder to git
  */
@@ -55,6 +60,32 @@ void Utils::Git::commitCurrentNoteFolder() {
 
     delete (process);
 }
+
+/**
+ * Commits changes from the current note folder to git
+ */
+void Utils::Git::pushCurrentNoteFolder() {
+    // check if git is enabled for the current note folder
+    if (!isCurrentNoteFolderUseGit()) {
+        return;
+    }
+    if (!isCurrentNoteFolderUseGitPush()) {
+        return;
+    }
+
+
+    const auto git = gitCommand();
+
+    auto* process = new QProcess();
+    process->setWorkingDirectory(NoteFolder::currentLocalPath());
+
+    if (!executeGitCommand(git, QStringList{"push", "-q"}, process)) {
+
+    }
+
+    delete (process);
+}
+
 
 /**
  * Executes a command

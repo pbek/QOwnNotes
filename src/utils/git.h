@@ -22,6 +22,7 @@
 namespace Utils {
 namespace Git {
 void commitCurrentNoteFolder();
+void pushCurrentNoteFolder();
 bool executeCommand(const QString& command, const QStringList& arguments,
                     QProcess* process = nullptr, bool withErrorDialog = false);
 bool executeGitCommand(const QString &gitExe, const QStringList& arguments, QProcess* process = nullptr,
@@ -30,5 +31,6 @@ QString gitCommand();
 void showLog(const QString& filePath);
 bool hasLogCommand();
 bool isCurrentNoteFolderUseGit();
+bool isCurrentNoteFolderUseGitPush();
 }    // namespace Git
 }    // namespace Utils

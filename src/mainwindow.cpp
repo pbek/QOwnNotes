@@ -9785,7 +9785,7 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
     if (item == nullptr) {
         return;
     }
-    
+
     // handle note subfolder renaming in a note tree
     if (item->data(0, Qt::UserRole + 1) == FolderType) {
         ui->noteSubFolderTreeWidget->renameSubFolder(item);
@@ -11004,6 +11004,7 @@ void MainWindow::updateNoteSortOrderSelectorVisibility(bool visible) {
  */
 void MainWindow::gitCommitCurrentNoteFolder() {
     Utils::Git::commitCurrentNoteFolder();
+    Utils::Git::pushCurrentNoteFolder();
 }
 
 /**

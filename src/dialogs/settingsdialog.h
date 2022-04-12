@@ -219,6 +219,9 @@ class SettingsDialog : public MasterDialog {
 
     void on_noteFolderGitCommitCheckBox_toggled(bool checked);
 
+    void on_noteFolderGitPushCheckBox_toggled(bool checked);
+
+
     void on_setGitPathToolButton_clicked();
 
     void searchScriptInRepository(bool checkForUpdates = false);

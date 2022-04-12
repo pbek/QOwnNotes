@@ -42,6 +42,9 @@ class NoteFolder {
     void resetActiveNoteSubFolder();
     bool isUseGit() const;
     void setUseGit(bool value);
+    bool isUseGitPush() const;
+    void setUseGitPush(bool value);
+
     QJsonObject jsonObject() const;
 
     static bool create(const QString &name, const QString &localPath,
@@ -78,4 +81,5 @@ private:
     int activeTagId;
     bool showSubfolders;
     bool useGit;
+    bool useGitPush;
 };

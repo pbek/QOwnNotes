@@ -1830,6 +1830,11 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                                                       ? QStringLiteral("yes")
                                                       : QStringLiteral("no"),
                                                   withGitHubLineBreaks);
+            output += prepareDebugInformationLine(QStringLiteral("isUseGitPush"),
+                                                  noteFolder.isUseGitPush()
+                                                      ? QStringLiteral("yes")
+                                                      : QStringLiteral("no"),
+                                                  withGitHubLineBreaks);
             output += prepareDebugInformationLine(QStringLiteral("allowDifferentNoteFileName"),
                 noteFolder.settingsValue(QStringLiteral("allowDifferentNoteFileName"))
                                                   .toBool()

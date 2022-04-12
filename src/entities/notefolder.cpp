@@ -26,6 +26,7 @@ NoteFolder::NoteFolder()
     activeTagId = 0;
     showSubfolders = false;
     useGit = false;
+    useGitPush = false;
 }
 
 int NoteFolder::getId() const { return this->id; }
@@ -43,6 +44,10 @@ int NoteFolder::getPriority() const { return this->priority; }
 bool NoteFolder::isShowSubfolders() const { return showSubfolders; }
 
 bool NoteFolder::isUseGit() const { return useGit; }
+
+bool NoteFolder::isUseGitPush() const { return useGitPush; }
+
+
 
 int NoteFolder::getActiveTagId() const { return this->activeTagId; }
 
@@ -63,6 +68,9 @@ void NoteFolder::setPriority(int value) { this->priority = value; }
 void NoteFolder::setShowSubfolders(bool value) { showSubfolders = value; }
 
 void NoteFolder::setUseGit(bool value) { useGit = value; }
+
+void NoteFolder::setUseGitPush(bool value) { useGitPush = value; }
+
 
 void NoteFolder::setActiveTagId(int value) { this->activeTagId = value; }
 
@@ -168,6 +176,7 @@ bool NoteFolder::fillFromQuery(const QSqlQuery &query) {
     this->showSubfolders =
         query.value(QStringLiteral("show_subfolders")).toBool();
     this->useGit = query.value(QStringLiteral("use_git")).toBool();
+    this->useGitPush = query.value(QStringLiteral("use_gitpush")).toBool();
     this->activeTagId = query.value(QStringLiteral("active_tag_id")).toInt();
     this->activeNoteSubFolderData =
         query.value(QStringLiteral("active_note_sub_folder_data")).toString();
@@ -212,17 +221,17 @@ bool NoteFolder::store() {
             "remote_path = :remotePath, priority = :priority, "
             "active_tag_id = :activeTagId, show_subfolders = "
             ":showSubfolders, active_note_sub_folder_data = "
-            ":activeNoteSubFolderData, use_git = :useGit WHERE "
+            ":activeNoteSubFolderData, use_git = :useGit, use_gitpush = :useGitPush WHERE "
             "id = :id"));
         query.bindValue(QStringLiteral(":id"), this->id);
     } else {
         query.prepare(QStringLiteral(
             "INSERT INTO noteFolder (name, local_path, cloud_connection_id, "
             "remote_path, priority, active_tag_id, "
-            "show_subfolders, active_note_sub_folder_data, use_git)"
+            "show_subfolders, active_note_sub_folder_data, use_git, use_gitpush)"
             " VALUES (:name, :localPath, :cloudConnectionId, "
             ":remotePath, :priority, :activeTagId, "
-            ":showSubfolders, :activeNoteSubFolderData, :useGit)"));
+            ":showSubfolders, :activeNoteSubFolderData, :useGit, :useGitPush)"));
     }
 
     query.bindValue(QStringLiteral(":name"), this->name);
@@ -233,6 +242,7 @@ bool NoteFolder::store() {
     query.bindValue(QStringLiteral(":activeTagId"), this->activeTagId);
     query.bindValue(QStringLiteral(":showSubfolders"), this->showSubfolders);
     query.bindValue(QStringLiteral(":useGit"), this->useGit);
+    query.bindValue(QStringLiteral(":useGitPush"), this->useGitPush);
     query.bindValue(QStringLiteral(":activeNoteSubFolderData"),
                     this->activeNoteSubFolderData);
 
