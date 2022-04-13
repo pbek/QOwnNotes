@@ -58,7 +58,7 @@ void Utils::Git::commitCurrentNoteFolder(MainWindow *mw) {
         !executeGitCommand(git, QStringList{"add", "-A"}, process) ||
         !executeGitCommand(git, QStringList{"commit", "-m", "QOwnNotes commit"}, process, false, true)) {
         if ( mw != nullptr ) {
-            mw->showStatusBarMessage(QObject::tr("Git: Commit failed."), 4000);
+            mw->showStatusBarMessage(QObject::tr("Git: Commit failed."), 10000);
         }
     }
 
@@ -88,7 +88,7 @@ void Utils::Git::pushCurrentNoteFolder(MainWindow *mw) {
         executeGitCommand(git, QStringList{"merge", "--abort"}, process);
 
         if ( mw != nullptr ) {
-            mw->showStatusBarMessage(QObject::tr("Git: Pulling and merging failed. Please check on the command line."), 4000);
+            mw->showStatusBarMessage(QObject::tr("Git: Pulling and merging failed. Please check on the command line."), 10000);
         }
         return;
     } else {
@@ -97,7 +97,7 @@ void Utils::Git::pushCurrentNoteFolder(MainWindow *mw) {
 
     if (!executeGitCommand(git, QStringList{"push", "-q"}, process)) {
         if ( mw != nullptr ) {
-            mw->showStatusBarMessage(QObject::tr("Git: Push to remote failed."), 4000);
+            mw->showStatusBarMessage(QObject::tr("Git: Push to remote failed."), 10000);
         }
     } else {
         if ( mw != nullptr ) {
