@@ -11003,8 +11003,8 @@ void MainWindow::updateNoteSortOrderSelectorVisibility(bool visible) {
  * Commits changes from the current note folder to git
  */
 void MainWindow::gitCommitCurrentNoteFolder() {
-    Utils::Git::commitCurrentNoteFolder();
-    Utils::Git::pushCurrentNoteFolder();
+    Utils::Git::commitCurrentNoteFolder(this);
+    Utils::Git::pushCurrentNoteFolder(this);
 }
 
 /**

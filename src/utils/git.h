@@ -16,13 +16,14 @@
 
 #include <QProcess>
 #include <QString>
+#include "mainwindow.h"
 
 /*  Git functions that can be useful */
 
 namespace Utils {
 namespace Git {
-void commitCurrentNoteFolder();
-void pushCurrentNoteFolder();
+void commitCurrentNoteFolder(MainWindow *mw = nullptr);
+void pushCurrentNoteFolder(MainWindow *mw = nullptr);
 bool executeCommand(const QString& command, const QStringList& arguments,
                     QProcess* process = nullptr, bool withErrorDialog = false, bool ignoreReturnValue = false);
 bool executeGitCommand(const QString &gitExe, const QStringList& arguments, QProcess* process = nullptr,

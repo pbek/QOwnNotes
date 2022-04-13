@@ -23,6 +23,7 @@
 
 #include "gui.h"
 #include "misc.h"
+#include "mainwindow.h"
 
 /**
  * Checks if the current note folder uses git
@@ -41,7 +42,7 @@ bool Utils::Git::isCurrentNoteFolderUseGitPush() {
 /**
  * Commits changes from the current note folder to git
  */
-void Utils::Git::commitCurrentNoteFolder() {
+void Utils::Git::commitCurrentNoteFolder(MainWindow *mw) {
     // check if git is enabled for the current note folder
     if (!isCurrentNoteFolderUseGit()) {
         return;
@@ -56,6 +57,9 @@ void Utils::Git::commitCurrentNoteFolder() {
         !executeGitCommand(git, QStringList{"config", "commit.gpgsign", "false"}, process) ||
         !executeGitCommand(git, QStringList{"add", "-A"}, process) ||
         !executeGitCommand(git, QStringList{"commit", "-m", "QOwnNotes commit"}, process, false, true)) {
+        if ( mw != nullptr ) {
+            mw->showStatusBarMessage(QObject::tr("Git: Commit failed."), 4000);
+        }
     }
 
     delete (process);
@@ -64,7 +68,7 @@ void Utils::Git::commitCurrentNoteFolder() {
 /**
  * Commits changes from the current note folder to git
  */
-void Utils::Git::pushCurrentNoteFolder() {
+void Utils::Git::pushCurrentNoteFolder(MainWindow *mw) {
     // check if git is enabled for the current note folder
     if (!isCurrentNoteFolderUseGit()) {
         return;
@@ -83,23 +87,22 @@ void Utils::Git::pushCurrentNoteFolder() {
         /* pull with merge failed */
         executeGitCommand(git, QStringList{"merge", "--abort"}, process);
 
-        Utils::Gui::warning(
-                nullptr, QObject::tr("Git pull/merge failed!"),
-                QObject::tr("The pull and merge of the remote repository failed. Please check on the command line whether the remote is configured correctly"
-                    "or if a manual merge is required. Please exit QOwnNotes and fix the problem in the git repository."),"git-pull-merge-failed.");
-        delete(process);
+        if ( mw != nullptr ) {
+            mw->showStatusBarMessage(QObject::tr("Git: Pulling and merging failed. Please check on the command line."), 4000);
+        }
         return;
     } else {
         executeGitCommand(git, QStringList{"commit", "-am", "Merge commit"}, process, false, true);
     }
 
     if (!executeGitCommand(git, QStringList{"push", "-q"}, process)) {
-        Utils::Gui::warning(
-                nullptr, QObject::tr("Git push failed!"),
-                QObject::tr("The push of the remote repository failed. Please check on the command line if the remote is configured correctly. "
-                    "Please exit QOwnNotes and fix the problem in the git repository."),
-                    "git-push-failed.");
-
+        if ( mw != nullptr ) {
+            mw->showStatusBarMessage(QObject::tr("Git: Push to remote failed."), 4000);
+        }
+    } else {
+        if ( mw != nullptr ) {
+            mw->showStatusBarMessage(QObject::tr("Git: Pushed."), 4000);
+        }
     }
 
     delete (process);

@@ -4636,32 +4636,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/git.cpp" line="87"/>
-        <source>Git pull/merge failed!</source>
+        <location filename="../utils/git.cpp" line="61"/>
+        <source>Git: Commit failed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/git.cpp" line="88"/>
-        <source>The pull and merge of the remote repository failed. Please check on the command line whether the remote is configured correctlyor if a manual merge is required. Please exit QOwnNotes and fix the problem in the git repository.</source>
+        <location filename="../utils/git.cpp" line="91"/>
+        <source>Git: Pulling and merging failed. Please check on the command line.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/git.cpp" line="98"/>
-        <source>Git push failed!</source>
+        <location filename="../utils/git.cpp" line="100"/>
+        <source>Git: Push to remote failed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/git.cpp" line="99"/>
-        <source>The push of the remote repository failed. Please check on the command line if the remote is configured correctly. Please exit QOwnNotes and fix the problem in the git repository.</source>
+        <location filename="../utils/git.cpp" line="104"/>
+        <source>Git: Pushed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/git.cpp" line="129"/>
+        <location filename="../utils/git.cpp" line="132"/>
         <source>Command failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/git.cpp" line="130"/>
+        <location filename="../utils/git.cpp" line="133"/>
         <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
         <translation type="unfinished"></translation>
     </message>
