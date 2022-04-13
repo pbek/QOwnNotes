@@ -16,9 +16,7 @@ BRANCH=develop
 #BRANCH=master
 
 # https://wiki.ubuntu.com/Releases
-# UBUNTU_RELEASES=( "bionic" "focal" "impish" "jammy" )
-UBUNTU_RELEASES=( "focal" )
-
+UBUNTU_RELEASES=( "bionic" "focal" "impish" "jammy" )
 
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
@@ -48,7 +46,7 @@ if [ -d $PROJECT_PATH ]; then
 fi
 
 # checkout the source code
-git clone --depth=1 git@github.com:grisuthedragon/QOwnNotes.git $PROJECT_PATH -b $BRANCH
+git clone --depth=1 git@github.com:pbek/QOwnNotes.git $PROJECT_PATH -b $BRANCH
 cd $PROJECT_PATH || exit 1
 
 # checkout submodules
@@ -95,7 +93,7 @@ do
     # update the changelog file
     #dch -v $versionPart $changelogText
     #dch -r $changelogText
-
+    
     # create the changelog file
     echo "qownnotes ($versionPart) $ubuntuRelease; urgency=low" > $changelogPath
     echo "" >> $changelogPath
@@ -104,7 +102,7 @@ do
     echo " -- $DEBFULLNAME <$DEBEMAIL>  $DATE" >> $changelogPath
 
     # launch debuild
-    debuild -S -sa  -uc -us $DEBUILD_ARGS
+    debuild -S -sa -k$SIGNING_EMAIL $DEBUILD_ARGS
     cd ..
 
     # send to launchpad
