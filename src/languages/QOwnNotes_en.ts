@@ -4636,12 +4636,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/git.cpp" line="116"/>
+        <location filename="../utils/git.cpp" line="87"/>
+        <source>Git pull/merge failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../utils/git.cpp" line="88"/>
+        <source>The pull and merge of the remote repository failed. Please check on the command line whether the remote is configured correctlyor if a manual merge is required. Please exit QOwnNotes and fix the problem in the git repository.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../utils/git.cpp" line="98"/>
+        <source>Git push failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../utils/git.cpp" line="99"/>
+        <source>The push of the remote repository failed. Please check on the command line if the remote is configured correctly. Please exit QOwnNotes and fix the problem in the git repository.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../utils/git.cpp" line="129"/>
         <source>Command failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/git.cpp" line="117"/>
+        <location filename="../utils/git.cpp" line="130"/>
         <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9245,19 +9265,6 @@ This cannot be undone!</source>
     <message>
         <location filename="../services/updateservice.cpp" line="256"/>
         <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Utils::Git</name>
-    <message>
-        <location filename="../utils/git.cpp" line="86"/>
-        <source>Git pull/push failed!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../utils/git.cpp" line="87"/>
-        <source>The pull/push of the remote repository failed. Please check on the command line whether the remote is configured correctlyor if a manual merge is required.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

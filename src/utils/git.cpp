@@ -86,7 +86,7 @@ void Utils::Git::pushCurrentNoteFolder() {
         Utils::Gui::warning(
                 nullptr, QObject::tr("Git pull/merge failed!"),
                 QObject::tr("The pull and merge of the remote repository failed. Please check on the command line whether the remote is configured correctly"
-                    "or if a manual merge is required."),"git-pull-merge-failed.");
+                    "or if a manual merge is required. Please exit QOwnNotes and fix the problem in the git repository."),"git-pull-merge-failed.");
         delete(process);
         return;
     } else {
@@ -96,7 +96,8 @@ void Utils::Git::pushCurrentNoteFolder() {
     if (!executeGitCommand(git, QStringList{"push", "-q"}, process)) {
         Utils::Gui::warning(
                 nullptr, QObject::tr("Git push failed!"),
-                QObject::tr("The push of the remote repository failed. Please check on the command line if the remote is configured correctly."),
+                QObject::tr("The push of the remote repository failed. Please check on the command line if the remote is configured correctly. "
+                    "Please exit QOwnNotes and fix the problem in the git repository."),
                     "git-push-failed.");
 
     }
