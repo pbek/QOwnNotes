@@ -55,7 +55,7 @@ void Utils::Git::commitCurrentNoteFolder() {
     if (!executeGitCommand(git, QStringList{"init"}, process) ||
         !executeGitCommand(git, QStringList{"config", "commit.gpgsign", "false"}, process) ||
         !executeGitCommand(git, QStringList{"add", "-A"}, process) ||
-        !executeGitCommand(git, QStringList{"commit", "-m", "QOwnNotes commit"}, process)) {
+        !executeGitCommand(git, QStringList{"commit", "-m", "QOwnNotes commit"}, process, false, true)) {
     }
 
     delete (process);
@@ -79,7 +79,25 @@ void Utils::Git::pushCurrentNoteFolder() {
     auto* process = new QProcess();
     process->setWorkingDirectory(NoteFolder::currentLocalPath());
 
+    if (!executeGitCommand(git, QStringList{"pull", "--no-commit", "--no-ff"}, process)) {
+        /* pull with merge failed */
+        executeGitCommand(git, QStringList{"merge", "--abort"}, process);
+
+        Utils::Gui::warning(
+                nullptr, QObject::tr("Git pull/merge failed!"),
+                QObject::tr("The pull and merge of the remote repository failed. Please check on the command line whether the remote is configured correctly"
+                    "or if a manual merge is required."),"git-pull-merge-failed.");
+        delete(process);
+        return;
+    } else {
+        executeGitCommand(git, QStringList{"commit", "-am", "Merge commit"}, process, false, true);
+    }
+
     if (!executeGitCommand(git, QStringList{"push", "-q"}, process)) {
+        Utils::Gui::warning(
+                nullptr, QObject::tr("Git push failed!"),
+                QObject::tr("The push of the remote repository failed. Please check on the command line if the remote is configured correctly."),
+                    "git-push-failed.");
 
     }
 
@@ -95,7 +113,7 @@ void Utils::Git::pushCurrentNoteFolder() {
  * @return
  */
 bool Utils::Git::executeCommand(const QString& command, const QStringList& arguments,
-                                QProcess* process, bool withErrorDialog) {
+                                QProcess* process, bool withErrorDialog, bool ignoreReturnValue) {
     if (process == nullptr) {
         process = new QProcess();
     }
@@ -116,18 +134,22 @@ bool Utils::Git::executeCommand(const QString& command, const QStringList& argum
         return false;
     }
 
+    if (process->exitCode() != 0 && !ignoreReturnValue) {
+        QByteArray errorMessage = process->readAllStandardError();
+
+        qWarning() << "Error Code " << process->exitCode() << " by '" + command + "' (" << arguments << "): ";
+
+        if (!errorMessage.isEmpty()) {
+            qWarning() << "Error message by '" + command + "' (" << arguments
+                << "): " + errorMessage;
+        }
+        return false;
+    }
     //    QByteArray result = process->readAll();
 
     //    if (!result.isEmpty()) {
     //    qDebug() << "Result message by '" + command + "': " + result;
     //    }
-
-    QByteArray errorMessage = process->readAllStandardError();
-
-    if (!errorMessage.isEmpty()) {
-        qWarning() << "Error message by '" + command + "' (" << arguments
-                   << "): " + errorMessage;
-    }
 
     return true;
 }
@@ -140,8 +162,8 @@ bool Utils::Git::executeCommand(const QString& command, const QStringList& argum
  * @return
  */
 bool Utils::Git::executeGitCommand(const QString &gitExe, const QStringList& arguments, QProcess* process,
-                                   bool withErrorDialog) {
-    return executeCommand(gitExe, arguments, process, withErrorDialog);
+                                   bool withErrorDialog, bool ignoreReturnValue) {
+    return executeCommand(gitExe, arguments, process, withErrorDialog, ignoreReturnValue);
 }
 
 /**
