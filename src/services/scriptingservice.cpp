@@ -297,6 +297,7 @@ void ScriptingService::initComponents() {
     clearCustomStyleSheets();
     _scriptComponents.clear();
     _settingsVariables.clear();
+    _highlightingRules.clear();
 
     // fetch enabled only
     const QList<Script> scripts = Script::fetchAll(true);
@@ -2410,4 +2411,23 @@ bool ScriptingService::clearCacheDir(const QString &subDir) const {
     }
 
     return result;
+}
+
+void ScriptingService::addHighlightingRule(const QString &pattern,
+                                           const QString &shouldContain,
+                                           int state,
+                                           int capturingGroup,
+                                           int maskedGroup) {
+    QOwnNotesMarkdownHighlighter::ScriptingHighlightingRule rule(
+        static_cast<MarkdownHighlighter::HighlighterState>(state));
+    rule.pattern = QRegularExpression(pattern);
+    rule.shouldContain = shouldContain;
+    rule.capturingGroup = capturingGroup;
+    rule.maskedGroup = maskedGroup;
+    _highlightingRules.append(rule);
+}
+
+QVector<QOwnNotesMarkdownHighlighter::ScriptingHighlightingRule>
+ScriptingService::getHighlightingRules() {
+    return _highlightingRules;
 }

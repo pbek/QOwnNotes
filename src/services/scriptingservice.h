@@ -9,6 +9,7 @@
 #include <QObject>
 #include <QVariant>
 #include <threads/scriptthread.h>
+#include "helpers/qownnotesmarkdownhighlighter.h"
 
 class ScriptThread;
 class QQmlComponent;
@@ -174,6 +175,14 @@ class ScriptingService : public QObject {
     Q_INVOKABLE void setPersistentVariable(const QString &key,
                                            const QVariant &value);
 
+    Q_INVOKABLE void addHighlightingRule(const QString &pattern,
+                                         const QString &shouldContain,
+                                         int state,
+                                         int capturingGroup = 0,
+                                         int maskedGroup = 0);
+
+    QVector<QOwnNotesMarkdownHighlighter::ScriptingHighlightingRule> getHighlightingRules();
+
     Q_INVOKABLE QVariant getPersistentVariable(
         const QString &key, const QVariant &defaultValue = QVariant());
 
@@ -213,6 +222,7 @@ class ScriptingService : public QObject {
     Note *_currentNote;
     QMap<int, ScriptComponent> _scriptComponents;
     QHash<int, QList<QVariant>> _settingsVariables;
+    QVector<QOwnNotesMarkdownHighlighter::ScriptingHighlightingRule> _highlightingRules;
     bool methodExistsForObject(QObject *object, const QString &method) const;
     QString callNoteToMarkdownHtmlHookForObject(ScriptComponent *scriptComponent, Note *note,
                                                 const QString &html, const bool forExport);

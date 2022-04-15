@@ -17,6 +17,7 @@
 #include "mainwindow.h"
 #include "qownspellchecker.h"
 #include <entities/note.h>
+#include <services/scriptingservice.h>
 
 #include <QApplication>
 #include <QDebug>
@@ -70,8 +71,50 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
         highlightSpellChecking(text);
     }
 
+    highlightScriptingRules(ScriptingService::instance()->getHighlightingRules(), text);
+
     _highlightingFinished = true;
 }
+
+void QOwnNotesMarkdownHighlighter::highlightScriptingRules(
+    const QVector<ScriptingHighlightingRule> &rules, const QString &text) {
+    const auto &maskedFormat = _formats[HighlighterState::MaskedSyntax];
+
+    for (const ScriptingHighlightingRule &rule : rules) {
+        const bool contains = text.contains(rule.shouldContain);
+        if (!contains) continue;
+
+        auto iterator = rule.pattern.globalMatch(text);
+        const uint8_t capturingGroup = rule.capturingGroup;
+        const uint8_t maskedGroup = rule.maskedGroup;
+        const QTextCharFormat &format = _formats[rule.state];
+
+        // find and format all occurrences
+        while (iterator.hasNext()) {
+            QRegularExpressionMatch match = iterator.next();
+
+            // if there is a capturingGroup set then first highlight
+            // everything as MaskedSyntax and highlight capturingGroup
+            // with the real format
+            if (capturingGroup > 0) {
+                QTextCharFormat currentMaskedFormat = maskedFormat;
+                // set the font size from the current rule's font format
+                if (format.fontPointSize() > 0) {
+                    currentMaskedFormat.setFontPointSize(
+                        format.fontPointSize());
+                }
+
+                setFormat(match.capturedStart(maskedGroup),
+                          match.capturedLength(maskedGroup),
+                          currentMaskedFormat);
+            }
+
+            setFormat(match.capturedStart(capturingGroup),
+                      match.capturedLength(capturingGroup), format);
+        }
+    }
+}
+
 
 void QOwnNotesMarkdownHighlighter::updateCachedRegexes(const QString& newExt)
 {
