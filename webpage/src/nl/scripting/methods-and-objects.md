@@ -98,11 +98,11 @@ De huidige notitie ophalen
 ### Methodeaanroep en parameters
 ```cpp
 /**
-  * QML-wrapper om de huidige notitie te krijgen
-  *
-  * @ retourneert {NoteApi} het huidige nootobject
-  */
-OpmerkingApi currentNote ();
+ * QML wrapper to get the current note
+ *
+ * @returns {NoteApi} the current note object
+ */
+NoteApi currentNote();
 ```
 
 ### Voorbeeld
@@ -1553,3 +1553,71 @@ Bekijk het voorbeeld eens [websocket-server.qml](https://github.com/pbek/QOwnNot
 U kunt ook naar sockets luisteren met `WebSocket`. Kijk alstublieft naar de voorbeeld [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
 
 Onthoud dat u Qt's QML `websocket`-bibliotheek moet hebben geïnstalleerd om dit te gebruiken. U kunt bijvoorbeeld onder Ubuntu Linux installeren `qml-module-qtwebsockets`.
+
+Adding a highlighting rule for the editor
+-----------------------------------------
+
+You can directly inject highlighting rules into the editor by defining regular expressions and assigning them to a highlighting state.
+
+### Method call and parameters
+```cpp
+/**
+ * Adds a highlighting rule to the syntax highlighter of the editor
+ *
+ * @param pattern {QString} the regular expression pattern to highlight
+ * @param shouldContain {QString} a string that must be contained in the highlighted text for the pattern to be parsed
+ * @param state {int} the state of the syntax highlighter to use
+ * @param capturingGroup {int} the capturing group for the pattern to use for highlighting (default: 0)
+ * @param maskedGroup {int} the capturing group for the pattern to use for masking (default: 0)
+ */
+void ScriptingService::addHighlightingRule(const QString &pattern,
+                                           const QString &shouldContain,
+                                           int state,
+                                           int capturingGroup,
+                                           int maskedGroup);
+```
+
+### Highlighting states
+
+| Name                       | Nr. |
+| -------------------------- | --- |
+| NoState                    | -1  |
+| Link                       | 0   |
+| Image                      | 3   |
+| CodeBlock                  | 4   |
+| CodeBlockComment           | 5   |
+| Italic                     | 7   |
+| Bold                       | 8   |
+| List                       | 9   |
+| Comment                    | 11  |
+| H1                         | 12  |
+| H2                         | 13  |
+| H3                         | 14  |
+| H4                         | 15  |
+| H5                         | 16  |
+| H6                         | 17  |
+| BlockQuote                 | 18  |
+| HorizontalRuler            | 21  |
+| Table                      | 22  |
+| InlineCodeBlock            | 23  |
+| MaskedSyntax               | 24  |
+| CurrentLineBackgroundColor | 25  |
+| BrokenLink                 | 26  |
+| FrontmatterBlock           | 27  |
+| TrailingSpace              | 28  |
+| CheckBoxUnChecked          | 29  |
+| CheckBoxChecked            | 30  |
+| StUnderline                | 31  |
+
+### Example
+```js
+// Highlight a text line like "BLOCK: some text" as blockquote (state 18)
+script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);
+
+// Mask out (state 24) all characters after 32 characters in a line
+// capturingGroup 1 means the expression from the first bracketed part of the pattern will be highlighted
+// maskedGroup -1 means that no masking should be done
+script.addHighlightingRule("^.{32}(.+)", "", 24, 1, -1);
+```
+
+You can also take a look at the examples in [highlighting.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/highlighting.qml).

@@ -4,6 +4,7 @@
 - you can now add highlighting rules for the editor with the help of the new
   scripting function `script.addHighlightingRule` (for [#2513](https://github.com/pbek/QOwnNotes/issues/2513))
     - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#adding-a-highlighting-rule-for-the-editor)
+- added more translation (thank you hansa2662, amirkbrpr, chocolatine, yanjun_sun, mguerra)
 
 ## 22.4.0
 - if you indent multiple lines in the note editor the selection will now

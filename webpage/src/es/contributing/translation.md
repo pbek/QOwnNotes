@@ -96,6 +96,6 @@ Algunos segmentos que no traducimos en la Documentación:
 
 Tratará con el lenguaje de este software, aprenderá nuevos términos y recibirá mucha información interna sobre el proyecto.
 
-Si está listo para ayudar a corregir la traducción de su idioma, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) le da la bienvenida a una breve sesión informativa sobre la práctica de la traducción y la corrección. Puedes preguntarle cualquier cosa que te ayude a divertirte contribuyendo.
+If you are thus ready to help to proofread the translation of your language, contact [Patrizio](https://crowdin.com/profile/pbek) and ask away if you have any questions and/or obtain the rights for proofreading in your native language.
 
 ¡Muchas gracias por tu ayuda! 🙂

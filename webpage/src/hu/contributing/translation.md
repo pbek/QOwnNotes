@@ -96,6 +96,6 @@ Néhány szegmens, amelyet nem fordítunk le a Dokumentációban:
 
 Foglalkozni fog ennek a szoftvernek a nyelvével, új kifejezéseket tanul, és sok bennfentes információt kap a projektről.
 
-Ha készen áll arra, hogy segítsen nyelve fordításának lektorálásában, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) üdvözli Önt egy rövid eligazításon a fordítás és a lektorálás gyakorlatáról. Bármit kérdezhet tőle, ami segít abban, hogy kellemesen végezze a munkát.
+If you are thus ready to help to proofread the translation of your language, contact [Patrizio](https://crowdin.com/profile/pbek) and ask away if you have any questions and/or obtain the rights for proofreading in your native language.
 
 Nagyon köszönjük a segítségét! 🙂

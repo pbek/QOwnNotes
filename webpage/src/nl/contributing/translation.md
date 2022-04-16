@@ -96,6 +96,6 @@ Sommige segmenten vertalen we niet in de documentatie:
 
 Je zult omgaan met de taal van deze software, nieuwe termen leren en veel inside-informatie over het project ontvangen.
 
-Als je dus klaar bent om te helpen bij het proeflezen van de vertaling van jouw taal, heet [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) je welkom op een korte briefing in de praktijk van vertalen en proeflezen. Je kunt haar alles vragen wat je helpt om met plezier een bijdrage te leveren.
+If you are thus ready to help to proofread the translation of your language, contact [Patrizio](https://crowdin.com/profile/pbek) and ask away if you have any questions and/or obtain the rights for proofreading in your native language.
 
 Heel erg bedankt voor je hulp! 🙂

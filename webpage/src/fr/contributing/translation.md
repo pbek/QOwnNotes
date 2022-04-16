@@ -96,6 +96,6 @@ Quelques segments que nous ne traduisons pas dans la documentation :
 
 Vous devrez assimiler la terminologie de ce logiciel, apprendrez de nouveaux termes et recevrez de nombreuses informations internes à propos du projet.
 
-Si vous êtes prêt⋅e à aider à la relecture de votre langue, [Amy Fabijenna](https://crowdin.com/profile/rawfreeamy) vous invite à un court exposé sur la pratique de la traduction et de la relecture. Vous pouvez lui demander tout ce qui vous aiderait à prendre plaisir à contribuer.
+Si vous souhaitez aider pour relire la traduction dans votre langue, contactez [Patrizio](https://crowdin.com/profile/pbek) pour poser vos questions et/ou obtenir les droits de relecture pour votre langue maternelle.
 
 Merci beaucoup pour votre aide ! 🙂
