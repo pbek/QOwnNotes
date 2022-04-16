@@ -78,6 +78,10 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
 
 void QOwnNotesMarkdownHighlighter::highlightScriptingRules(
     const QVector<ScriptingHighlightingRule> &rules, const QString &text) {
+    if (rules.isEmpty()) {
+        return;
+    }
+
     const auto &maskedFormat = _formats[HighlighterState::MaskedSyntax];
 
     for (const ScriptingHighlightingRule &rule : rules) {
