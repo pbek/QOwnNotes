@@ -1636,6 +1636,9 @@ installed to use this. For example under Ubuntu Linux you can install
 Adding a highlighting rule for the editor
 -----------------------------------------
 
+You can directly inject highlighting rules into the editor by defining regular
+expressions and assigning them to a highlighting state.
+
 ### Method call and parameters
 ```cpp
 /**
@@ -1657,7 +1660,8 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 ### Highlighting states
 
 | Name                       | Nr. |
-| -------------------------- | --- |
+| -------------------------- |-----|
+| NoState                    | -1  |
 | Link                       | 0   |
 | Image                      | 3   |
 | CodeBlock                  | 4   |
@@ -1687,6 +1691,12 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 
 ### Example
 ```js
-// highlights a text line like "TEST: some text" as blockquote (18)
-script.addHighlightingRule("^TEST: (.+)", "TEST:", 18);
+// Highlight a text line like "BLOCK: some text" as blockquote (state 18)
+script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);
+
+// Mask out (state 24) all characters after 32 characters in a line
+script.addHighlightingRule("^.{32}(.+)", "", 24, 1, -1);
 ```
+
+You can also take a look at the examples in
+[highlighting.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/highlighting.qml).
