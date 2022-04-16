@@ -1632,3 +1632,61 @@ example
 Keep in mind that you need to have Qt's QML `websocket` library
 installed to use this. For example under Ubuntu Linux you can install
 `qml-module-qtwebsockets`.
+
+Adding a highlighting rule for the editor
+-----------------------------------------
+
+### Method call and parameters
+```cpp
+/**
+ * Adds a highlighting rule to the syntax highlighter of the editor
+ *
+ * @param pattern {QString} the regular expression pattern to highlight
+ * @param shouldContain {QString} a string that must be contained in the highlighted text for the pattern to be parsed
+ * @param state {int} the state of the syntax highlighter to use
+ * @param capturingGroup {int} the capturing group for the pattern to use for highlighting (default: 0)
+ * @param maskedGroup {int} the capturing group for the pattern to use for masking (default: 0)
+ */
+void ScriptingService::addHighlightingRule(const QString &pattern,
+                                           const QString &shouldContain,
+                                           int state,
+                                           int capturingGroup,
+                                           int maskedGroup);
+```
+
+### Highlighting states
+
+| Name                       | Nr. |
+| -------------------------- | --- |
+| Link                       | 0   |
+| Image                      | 3   |
+| CodeBlock                  | 4   |
+| CodeBlockComment           | 5   |
+| Italic                     | 7   |
+| Bold                       | 8   |
+| List                       | 9   |
+| Comment                    | 11  |
+| H1                         | 12  |
+| H2                         | 13  |
+| H3                         | 14  |
+| H4                         | 15  |
+| H5                         | 16  |
+| H6                         | 17  |
+| BlockQuote                 | 18  |
+| HorizontalRuler            | 21  |
+| Table                      | 22  |
+| InlineCodeBlock            | 23  |
+| MaskedSyntax               | 24  |
+| CurrentLineBackgroundColor | 25  |
+| BrokenLink                 | 26  |
+| FrontmatterBlock           | 27  |
+| TrailingSpace              | 28  |
+| CheckBoxUnChecked          | 29  |
+| CheckBoxChecked            | 30  |
+| StUnderline                | 31  |
+
+### Example
+```js
+// highlights a text line like "TEST: some text" as blockquote (18)
+script.addHighlightingRule("^TEST: (.+)", "TEST:", 18);
+```

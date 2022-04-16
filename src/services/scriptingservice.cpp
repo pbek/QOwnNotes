@@ -2413,6 +2413,15 @@ bool ScriptingService::clearCacheDir(const QString &subDir) const {
     return result;
 }
 
+/**
+ * Adds a highlighting rule to the syntax highlighter of the editor
+ *
+ * @param pattern {QString} the regular expression pattern to highlight
+ * @param shouldContain {QString} a string that must be contained in the highlighted text for the pattern to be parsed
+ * @param state {int} the state of the syntax highlighter to use
+ * @param capturingGroup {int} the capturing group for the pattern to use for highlighting (default: 0)
+ * @param maskedGroup {int} the capturing group for the pattern to use for masking (default: 0)
+ */
 void ScriptingService::addHighlightingRule(const QString &pattern,
                                            const QString &shouldContain,
                                            int state,
