@@ -19,13 +19,6 @@
 
 ## Translations
 
-<ProfileCard
-  name="Amy Lang"
-  img="https://secure.gravatar.com/avatar/3dc87f329e6146780ea72c79db9c5b57"
-  backgroundImg="/screenshots/screenshot-darkmode.png"
-  functions="Head of translation"
-  crowdin="rawfreeamy" />
-
-…and many more, see [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/activity_stream)
+See [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/activity_stream)
 
 If you want to help translating QOwnNotes please visit [Translation](translation.md).
