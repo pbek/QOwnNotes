@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.4.2
+- comments in code blocks without syntax highlighting are now fixed
+  (for [#2514](https://github.com/pbek/QOwnNotes/issues/2514))
+
 ## 22.4.1
 - you can now add highlighting rules for the editor with the help of the new
   scripting function `script.addHighlightingRule` (for [#2513](https://github.com/pbek/QOwnNotes/issues/2513))
