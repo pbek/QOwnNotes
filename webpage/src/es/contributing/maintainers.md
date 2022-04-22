@@ -8,8 +8,6 @@
 
 ## Traducciones
 
-<ProfileCard name="Amy Lang" img="https://secure.gravatar.com/avatar/3dc87f329e6146780ea72c79db9c5b57" backgroundImg="/screenshots/screenshot-darkmode.png" functions="Head of translation" crowdin="rawfreeamy" />
+See [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/activity_stream)
 
-…Y muchos más, consulte [QOwnNotes sobre Crowdin](https://crowdin.com/project/qownnotes/activity_stream)
-
-Si desea ayudar a traducir QOwnNotes, visite [Traducción](translation.md).
+If you want to help translating QOwnNotes please visit [Translation](translation.md).
