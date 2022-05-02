@@ -2,6 +2,7 @@
 
 ## 22.5.0
 - a PPA for Ubuntu 22.10 (Kinetic Kudu) was added
+- added more Portuguese translation (thank you jofazepa)
 
 ## 22.4.2
 - comments in code blocks without syntax highlighting are now fixed

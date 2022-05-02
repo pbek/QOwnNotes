@@ -974,7 +974,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>Mostrar a numeração das linhas em relação ao cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
@@ -999,12 +999,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished">Use Vim-style Editing</translation>
+<translation>Utilizar edição no estilo do Vim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>Mostrar a numeração das linhas relativamente à linha que contém o cursor de texto.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
@@ -1297,7 +1297,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="232"/>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>Letra:</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="279"/>
@@ -1362,7 +1362,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
 <source>Underlined text</source>
-<translation type="unfinished">Underlined text</translation>
+<translation>Texto sublinhado</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
@@ -1538,12 +1538,12 @@
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="52"/>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Copiar</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="60"/>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>Copiar ligação</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="68"/>
@@ -1675,7 +1675,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="115"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Importar notas</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
@@ -1700,7 +1700,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>Importar anexos</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="91"/>
@@ -2854,7 +2854,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2674"/>
 <source>Ctrl+Shift+L</source>
-<translation type="unfinished">Ctrl+Shift+L</translation>
+<translation>Ctrl+Shift+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2683"/>
@@ -4286,7 +4286,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="178"/>
 <source>All notes</source>
-<translation type="unfinished">All notes</translation>
+<translation>Todas as notas</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="175"/>
