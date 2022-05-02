@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 22.5.0
+- a PPA for Ubuntu 22.10 (Kinetic Kudu) was added
+
 ## 22.4.2
 - comments in code blocks without syntax highlighting are now fixed
   (for [#2514](https://github.com/pbek/QOwnNotes/issues/2514))
