@@ -650,6 +650,10 @@ void MainWindow::initGlobalKeyboardShortcuts() {
         QString actionName = key;
         actionName.remove(QStringLiteral("MainWindow-"));
         QAction *action = findAction(actionName);
+        if (action == nullptr) {
+            qDebug() << "Failed to find action with name: " << actionName;
+            continue;
+        }
         QString shortcut = settings.value(key).toString();
 
         auto hotKey = new QHotkey(QKeySequence(shortcut), true, this);
