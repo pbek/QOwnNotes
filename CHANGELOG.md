@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.5.1
+- a possible crash when actions from global shortcuts are not found anymore was fixed
+  (for [#2528](https://github.com/pbek/QOwnNotes/issues/2528))
+
 ## 22.5.0
 - a PPA for Ubuntu 22.10 (Kinetic Kudu) was added
 - added more Portuguese translation (thank you jofazepa)
