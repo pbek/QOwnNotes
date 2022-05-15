@@ -4,6 +4,9 @@
 - a possible crash when actions from global shortcuts are not found anymore was fixed
   (for [#2528](https://github.com/pbek/QOwnNotes/issues/2528))
 - added more Chinese Simplified translation (thank you geeklihui)
+- the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
+  was updated to version 22.5.0 to support Nextcloud 24 (for [#38](https://github.com/pbek/qownnotesapi/issues/38))
+    - errors for not found files in the version API are now caught
 
 ## 22.5.0
 - a PPA for Ubuntu 22.10 (Kinetic Kudu) was added
