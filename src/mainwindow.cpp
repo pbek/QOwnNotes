@@ -652,6 +652,7 @@ void MainWindow::initGlobalKeyboardShortcuts() {
         QAction *action = findAction(actionName);
 
         if (action == nullptr) {
+            qDebug() << "Failed to find action with name: " << actionName;
             continue;
         }
 
