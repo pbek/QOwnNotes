@@ -6234,7 +6234,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2951"/>
 <source>Chinese Traditional</source>
-<translation>中国传统</translation>
+<translation>繁体中文</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3031"/>

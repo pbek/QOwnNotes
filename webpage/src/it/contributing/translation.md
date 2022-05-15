@@ -96,6 +96,6 @@ Alcune parti della documentazione non vanno tradotte:
 
 Avrai a che fare con il linguaggio di questa applicazione, imparerai nuovi termini e riceverai tante informazioni interne riguardanti il progetto.
 
-If you are thus ready to help to proofread the translation of your language, contact [Patrizio](https://crowdin.com/profile/pbek) and ask away if you have any questions and/or obtain the rights for proofreading in your native language.
+Se quindi sei pronto per aiutare a correggere la traduzione nella tua lingua, contatta [Patrizio](https://crowdin.com/profile/pbek) e chiedi se hai domande e per ottenere i permessi di correzione nella tua lingua madre.
 
 Grazie mille per il tuo aiuto! 🙂
