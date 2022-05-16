@@ -283,6 +283,11 @@ MainWindow::MainWindow(QWidget *parent)
     // widget is already in place
     initScriptingEngine();
 
+    // we need to init global shortcuts after the scriptengine is initialized
+    // in case there are global shortcuts for custom actions
+    // https://github.com/pbek/QOwnNotes/issues/2530
+    initGlobalKeyboardShortcuts();
+
     // restore toolbars
     // initDockWidgets() has to be called first so panel checkboxes can be
     // used in toolbars

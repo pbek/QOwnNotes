@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.5.2
+- global shortcuts for custom actions are now also working after restarting the application
+  (for [#2530](https://github.com/pbek/QOwnNotes/issues/2530))
+
 ## 22.5.1
 - a possible crash when actions from global shortcuts are not found anymore was fixed
   (for [#2528](https://github.com/pbek/QOwnNotes/issues/2528))
