@@ -35,9 +35,10 @@ jobs:
       #    three lines and modify them (or add more) to build your code if your
       #    project uses a compiled language
 
-      #- run: |
-      #     make bootstrap
-      #     make release
+      - run: |
+            cd src
+            qmake
+            make
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
