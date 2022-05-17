@@ -23,10 +23,15 @@ jobs:
         # with:
         #   languages: go, javascript, csharp, python, cpp, java
 
+      - name: Install Qt < 6 on Linux/macOS
+        uses: jurplel/install-qt-action@v2
+        with:
+          aqtversion: '==2.0.0'
       # Autobuild attempts to build any compiled languages (C/C++, C#, or Java).
       # If this step fails, then you should remove it and run the build manually (see below).
       - name: Autobuild
         uses: github/codeql-action/autobuild@v2
+        
 
       # ℹ️ Command-line programs to run using the OS shell.
       # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
