@@ -14,6 +14,8 @@ defaults:
 
 jobs:
   create_release:
+    permissions:
+      contents: write  # for actions/create-release to create a release
     name: Create release
     runs-on: ubuntu-latest
     outputs:
