@@ -101,7 +101,7 @@ jobs:
     - if: steps.changes.outputs.DO_BUILD
       name: Cache Qt
       id: cache-qt
-      uses: actions/cache@v1
+      uses: actions/cache@v3
       with:
         path: ../Qt
         key: ${{ matrix.os }}-QtCache-${{ matrix.qt-version }}
