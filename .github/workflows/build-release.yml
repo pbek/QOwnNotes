@@ -104,7 +104,7 @@ jobs:
         snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
     - name: Cache Qt
       id: cache-qt
-      uses: actions/cache@v1
+      uses: actions/cache@v3
       with:
         path: ../Qt
         key: ${{ runner.os }}-QtCache-${{ matrix.qt-version }}
