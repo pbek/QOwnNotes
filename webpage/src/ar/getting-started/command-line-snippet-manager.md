@@ -65,6 +65,10 @@ token = "رمز الأمان الخاص بك هنا"
 - `echo I am a command` I am a description #tag1 #tag2 #tag3
 * `echo I am also a command` I am a description #tag3 #tag4 #tag5
 - cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+
+<!-- Example for asking for user input -->
+
+- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
 ```
 
 يمكن استخدام **كتل أكواد `bash` أو `shell` ** لقصاصات الأوامر، على أن تُسبق بعنوان من المستوى الثاني أو أعلى، والذي سيستخدم لوصفها. الوسوم مدعومة إذا كانت بين العنوان وكتلة الكود.

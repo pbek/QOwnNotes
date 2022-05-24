@@ -8,6 +8,6 @@
 
 ## Vertalingen
 
-See [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/activity_stream)
+Zie [QOwnNotes over Crowdin](https://crowdin.com/project/qownnotes/activity_stream)
 
-If you want to help translating QOwnNotes please visit [Translation](translation.md).
+Als je wilt helpen met het vertalen van QOwnNotes, ga dan naar [Vertaling](translation.md).

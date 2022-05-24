@@ -67,9 +67,13 @@ Sie können **ungeordnete Listen mit Inline-Codeblöcken** verwenden, um Befehls
 Wenn Sie vor dem Inline-Codeblock ein `cmd:` hinzufügen, wird der Befehl auch in der **aktuellen Notiz** gefunden, unabhängig von Notiz-Tags.
 
 ```markdown
-- `Echo Ich bin ein Befehl` Ich bin eine Beschreibung #tag1 #tag2 #tag3
-* `echo ich bin auch ein Befehl` ich bin eine Beschreibung #tag3 #tag4 #tag5
-- cmd: `echo ich werde in der aktuellen Notiz gefunden` Dieser Befehl wird in der aktuellen Notiz gefunden, unabhängig von Notiz-Tags
+- `echo I am a command` I am a description #tag1 #tag2 #tag3
+* `echo I am also a command` I am a description #tag3 #tag4 #tag5
+- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+
+<!-- Example for asking for user input -->
+
+- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
 ```
 
 **`Bash`- oder `Shell`-Codeblöcke**, denen eine Überschrift 2 oder höher als Beschreibung vorangestellt ist, können auch für Befehlsschnipsel verwendet werden. Tags werden auch unterstützt, wenn sie sich zwischen der Überschrift und dem Codeblock befinden.

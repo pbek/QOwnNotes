@@ -70,6 +70,10 @@ token = "yourtokenhere"
 - `echo I am a command` I am a description #tag1 #tag2 #tag3
 * `echo I am also a command` I am a description #tag3 #tag4 #tag5
 - cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+
+<!-- Example for asking for user input -->
+
+- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
 ```
 
 **کد بلوک های `بش` یا `پوسته`** (بعد از سرخط 2 یا بالاتر به صورت توضیح) برای جستجوی تکه کدهای دستوری نیز قابل استفاده هستند. همچنین اگر برچسب ها بین عنوان و کد بلوک قرار گیرند، پشتیبانی خواهند شد.

@@ -96,6 +96,6 @@ Einige Segmente, die wir in der Dokumentation nicht übersetzen:
 
 Sie setzen sich mit der Sprache dieser Software auseinander, lernen neue Begriffe und erhalten viele Insider-Informationen rund um das Projekt.
 
-If you are thus ready to help to proofread the translation of your language, contact [Patrizio](https://crowdin.com/profile/pbek) and ask away if you have any questions and/or obtain the rights for proofreading in your native language.
+Wenn Sie also bereit sind, beim Korrekturlesen der Übersetzung in Ihrer Sprache zu helfen, wenden Sie sich an [Patrizio](https://crowdin.com/profile/pbek) und fragen Sie nach, wenn Sie Fragen haben und/oder die Rechte für das Korrekturlesen in Ihrer Muttersprache erhalten möchten.
 
 Vielen Dank für Deine Hilfe! 🙂

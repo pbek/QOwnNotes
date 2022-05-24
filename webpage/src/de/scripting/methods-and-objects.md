@@ -98,11 +98,11 @@ Abrufen der aktuellen Notiz
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * QML wrapper to get the current note
- *
- * @returns {NoteApi} the current note object
- */
-NoteApi currentNote();
+     * QML-Wrapper, um die aktuelle Notiz zu erhalten
+     *
+     * @retourniert {NoteApi} das aktuelle Notizobjekt
+     */
+NoteApi currentNote ();
 ```
 
 ### Beispiel
@@ -1552,12 +1552,12 @@ Sie können Sockets auch mit `WebSocket` abhören. Bitte schauen Sie sich das Be
 
 Beachten Sie, dass Sie die QML `Websocket`-Bibliothek von Qt installiert haben müssen, um dies zu verwenden. Unter Ubuntu Linux können Sie beispielsweise `qml-module-qtwebsockets` installieren.
 
-Adding a highlighting rule for the editor
+Hinzufügen einer Hervorhebungsregel für den Editor
 -----------------------------------------
 
-You can directly inject highlighting rules into the editor by defining regular expressions and assigning them to a highlighting state.
+Sie können Hervorhebungsregeln direkt in den Editor einfügen, indem Sie reguläre Ausdrücke definieren und ihnen einen Hervorhebungszustand zuweisen.
 
-### Method call and parameters
+### Methodenaufruf und Parameter
 ```cpp
 /**
  * Adds a highlighting rule to the syntax highlighter of the editor
@@ -1575,7 +1575,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
                                            int maskedGroup);
 ```
 
-### Highlighting states
+### Zustände hervorheben
 
 | Name                       | Nr. |
 | -------------------------- | --- |

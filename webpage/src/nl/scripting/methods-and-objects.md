@@ -1554,12 +1554,12 @@ U kunt ook naar sockets luisteren met `WebSocket`. Kijk alstublieft naar de voor
 
 Onthoud dat u Qt's QML `websocket`-bibliotheek moet hebben geïnstalleerd om dit te gebruiken. U kunt bijvoorbeeld onder Ubuntu Linux installeren `qml-module-qtwebsockets`.
 
-Adding a highlighting rule for the editor
+Een markeringsregel toevoegen voor de editor
 -----------------------------------------
 
-You can directly inject highlighting rules into the editor by defining regular expressions and assigning them to a highlighting state.
+U kunt markeringsregels rechtstreeks in de editor invoegen door reguliere expressies te definiëren en deze toe te wijzen aan een markeringsstatus.
 
-### Method call and parameters
+### Methodeaanroep en parameters
 ```cpp
 /**
  * Adds a highlighting rule to the syntax highlighter of the editor
@@ -1577,9 +1577,9 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
                                            int maskedGroup);
 ```
 
-### Highlighting states
+### Statussen markeren
 
-| Name                       | Nr. |
+| Naam                       | Nr. |
 | -------------------------- | --- |
 | NoState                    | -1  |
 | Link                       | 0   |
@@ -1609,7 +1609,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | CheckBoxChecked            | 30  |
 | StUnderline                | 31  |
 
-### Example
+### Voorbeeld
 ```js
 // Highlight a text line like "BLOCK: some text" as blockquote (state 18)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);
@@ -1620,4 +1620,4 @@ script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);
 script.addHighlightingRule("^.{32}(.+)", "", 24, 1, -1);
 ```
 
-You can also take a look at the examples in [highlighting.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/highlighting.qml).
+U kunt de voorbeelden ook bekijken in [markeren.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/highlighting.qml).

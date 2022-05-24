@@ -96,6 +96,6 @@ Sommige segmenten vertalen we niet in de documentatie:
 
 Je zult omgaan met de taal van deze software, nieuwe termen leren en veel inside-informatie over het project ontvangen.
 
-If you are thus ready to help to proofread the translation of your language, contact [Patrizio](https://crowdin.com/profile/pbek) and ask away if you have any questions and/or obtain the rights for proofreading in your native language.
+Als u dus klaar bent om te helpen bij het proeflezen van de vertaling van uw taal, neem dan contact op met [Patrizio](https://crowdin.com/profile/pbek) en vraag of u vragen heeft en/of de rechten voor proeflezen in uw moedertaal verkrijgt.
 
 Heel erg bedankt voor je hulp! 🙂
