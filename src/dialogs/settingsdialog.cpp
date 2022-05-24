@@ -767,6 +767,9 @@ void SettingsDialog::storeSettings() {
     settings.setValue(
         QStringLiteral("MainWindow/noteTextView.useInternalExportStyling"),
         ui->useInternalExportStylingCheckBox->isChecked());
+    settings.setValue(
+        QStringLiteral("MainWindow/noteTextView.refreshDebounceTime"),
+        ui->noteTextViewRefreshDebounceTimeSpinBox->value());
     settings.setValue(QStringLiteral("Debug/fakeOldVersionNumber"),
                       ui->oldVersionNumberCheckBox->isChecked());
     settings.setValue(QStringLiteral("Debug/fileLogging"),
@@ -1170,6 +1173,8 @@ void SettingsDialog::readSettings() {
             .toBool());
     ui->noteTextViewUseEditorStylesCheckBox->setChecked(
         Utils::Misc::isPreviewUseEditorStyles());
+    ui->noteTextViewRefreshDebounceTimeSpinBox->setValue(
+        Utils::Misc::getPreviewRefreshDebounceTime());
     ui->useInternalExportStylingCheckBox->setChecked(
         Utils::Misc::useInternalExportStylingForPreview());
     ui->oldVersionNumberCheckBox->setChecked(
@@ -4531,8 +4536,11 @@ void SettingsDialog::on_loginFlowCancelButton_clicked() {
  * Needs an additional check when an item is deleted, because that seems to
  * happen after the selection is changed!
  */
-void SettingsDialog::on_defaultNoteFileExtensionListWidget_itemSelectionChanged()
-{
+void SettingsDialog::on_defaultNoteFileExtensionListWidget_itemSelectionChanged() {
     ui->removeCustomNoteFileExtensionButton->setEnabled(
         ui->defaultNoteFileExtensionListWidget->count() > 1);
+}
+
+void SettingsDialog::on_noteTextViewRefreshDebounceTimeResetButton_clicked() {
+    ui->noteTextViewRefreshDebounceTimeSpinBox->setValue(600);
 }

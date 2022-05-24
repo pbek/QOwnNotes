@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 22.5.3
+- the note preview will now not being updated while typing by default
+  (for [#2535](https://github.com/pbek/QOwnNotes/issues/2535))
+  - you can change the debounce time in the *Preview settings*
+
 ## 22.5.2
 - global shortcuts for custom actions are now also working after restarting the application
   (for [#2530](https://github.com/pbek/QOwnNotes/issues/2530))

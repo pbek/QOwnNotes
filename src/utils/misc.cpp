@@ -2735,3 +2735,7 @@ QString Utils::Misc::createAbsolutePathsInHtml(const QString &html, const QStrin
 
     return result;
 }
+
+int Utils::Misc::getPreviewRefreshDebounceTime() {
+    return QSettings().value(QStringLiteral("MainWindow/noteTextView.refreshDebounceTime"), 600).toInt();
+}

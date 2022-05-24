@@ -317,6 +317,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_defaultNoteFileExtensionListWidget_itemSelectionChanged();
 
+    void on_noteTextViewRefreshDebounceTimeResetButton_clicked();
+
 private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;

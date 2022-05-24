@@ -5571,6 +5571,12 @@ void MainWindow::on_noteTextEdit_textChanged() {
     // this also triggers when formatting is applied / syntax highlighting
     // changes!
     //    noteTextEditTextWasUpdated();
+
+    // Override the _noteViewUpdateTimer with a debounce time
+    const int debounceTime = Utils::Misc::getPreviewRefreshDebounceTime();
+    if (debounceTime > 0) {
+        _noteViewUpdateTimer->start(debounceTime);
+    }
 }
 
 void MainWindow::noteTextEditTextWasUpdated() {
