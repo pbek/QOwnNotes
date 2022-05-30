@@ -28,10 +28,7 @@ jobs:
         with:
           aqtversion: '==2.0.0'
       - name: Build
-        run: |
-            cd src
-            qmake
-            make
+        run: cd src && qmake && make
         shell: bash
 
       - name: Perform CodeQL Analysis
