@@ -35,7 +35,7 @@ jobs:
         echo ::set-output name=DO_BUILD::${DO_BUILD}
     - if: steps.changes.outputs.DO_BUILD
       name: Use Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: '12'
     - if: steps.changes.outputs.DO_BUILD
