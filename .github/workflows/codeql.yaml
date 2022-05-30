@@ -27,13 +27,12 @@ jobs:
         uses: jurplel/install-qt-action@v2
         with:
           aqtversion: '==2.0.0'
-      # Autobuild attempts to build any compiled languages (C/C++, C#, or Java).
-      # If this step fails, then you should remove it and run the build manually (see below).
-      - name: build
-      - run: |
+      - name: Build
+        run: |
             cd src
             qmake
             make
+        shell: bash
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
