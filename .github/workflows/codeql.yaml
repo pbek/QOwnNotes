@@ -27,7 +27,7 @@ jobs:
         uses: jurplel/install-qt-action@v2
         with:
           aqtversion: '==2.0.0'
-      - name: Build
-        run: cd src && qmake && make
+     # - name: Build
+     #   run: cd src && qmake && make
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
