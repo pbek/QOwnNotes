@@ -34,6 +34,7 @@
 #include <QPlainTextEdit>
 #include <QTreeWidgetItem>
 #include <QVBoxLayout>
+#include <QDockWidget>
 
 #define ORDER_ASCENDING 0     // Qt::AscendingOrder // = 0
 #define ORDER_DESCENDING 1    // Qt::DescendingOrder // = 1
@@ -1164,4 +1165,23 @@ void Utils::Gui::handleTreeWidgetItemTagColor(QTreeWidgetItem *item, int tagId)
     if (!tag.isFetched())
         return;
     Utils::Gui::handleTreeWidgetItemTagColor(item, tag);
+}
+
+bool Utils::Gui::enableDockWidgetQuestion(QDockWidget *dockWidget)
+{
+    if (dockWidget->isVisible()) {
+        return true;
+    }
+    if (Utils::Gui::question(
+            dockWidget, QObject::tr("Panel disabled"),
+            QObject::tr("Panel <strong>%1</strong> is currently disabled, "
+               "do you want to turn it on again for this action to work?").arg(
+                    dockWidget->windowTitle()),
+            QStringLiteral("enable-panel-question-") +
+                dockWidget->objectName()) != QMessageBox::Yes) {
+        return false;
+    }
+
+    dockWidget->setVisible(true);
+    return true;
 }

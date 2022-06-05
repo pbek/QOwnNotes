@@ -5978,6 +5978,10 @@ void MainWindow::filterNotesByNoteSubFolders() {
 // set focus on search line edit if Ctrl + Shift + F was pressed
 //
 void MainWindow::on_action_Find_note_triggered() {
+    if (!Utils::Gui::enableDockWidgetQuestion(_noteSearchDockWidget)) {
+        return;
+    }
+
     changeDistractionFreeMode(false);
     this->ui->searchLineEdit->setFocus();
     this->ui->searchLineEdit->selectAll();

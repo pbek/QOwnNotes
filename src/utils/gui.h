@@ -28,6 +28,7 @@ class QTabWidget;
 class QComboBox;
 class QPlainTextEdit;
 class QVBoxLayout;
+class QDockWidget;
 class Tag;
 
 /*  Gui functions that can be useful */
@@ -160,5 +161,6 @@ QIcon tagIcon();
  */
 void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, const Tag &tag);
 void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, int tag);
+bool enableDockWidgetQuestion(QDockWidget *dockWidget);
 }    // namespace Gui
 }    // namespace Utils
