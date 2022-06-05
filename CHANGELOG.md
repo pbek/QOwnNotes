@@ -4,6 +4,8 @@
 - users are now asked if they want to turn on the search panel again when using
   the *Find note* action if they have turned it off previously
   (for [#2548](https://github.com/pbek/QOwnNotes/issues/2548))
+- added more translation (thank you amirkbrpr, chocolatine, mguerra,
+  tigris.huszonkilenc, adc3635, manuelarodsilva, noureddin)
 
 ## 22.5.3
 - the note preview will now not being updated while typing by default

@@ -522,9 +522,9 @@ Válassza ki az aktuális szót a jegyzet szövegszerkesztésében
 ### Módszerhívás és paraméterek
 ```cpp
 /**
-  * Kiválasztja az aktuális sort a jegyzet szövegszerkesztésében
-  */
-void ScriptingService :: noteTextEditSelectCurrentWord();
+ * Selects the current word in the note text edit
+ */
+void ScriptingService::noteTextEditSelectCurrentWord();
 ```
 
 ### Példa
@@ -1552,12 +1552,12 @@ A foglalatokat a `WebSocket` használatával is meghallgathatja. Kérjük, nézz
 
 Ne feledje, hogy ennek használatához telepítenie kell a Qt QML `websocket` könyvtárát. Például az Ubuntu Linux alatt telepíthet `qml-module-qtwebsockets`.
 
-Adding a highlighting rule for the editor
+Kiemelési szabály hozzáadása a szerkesztőhöz
 -----------------------------------------
 
-You can directly inject highlighting rules into the editor by defining regular expressions and assigning them to a highlighting state.
+A kiemelési szabályokat közvetlenül beillesztheti a szerkesztőbe úgy, hogy reguláris kifejezéseket definiál és kiemelési állapothoz rendel.
 
-### Method call and parameters
+### Módszerhívás és paraméterek
 ```cpp
 /**
  * Adds a highlighting rule to the syntax highlighter of the editor
@@ -1575,9 +1575,9 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
                                            int maskedGroup);
 ```
 
-### Highlighting states
+### Az állapotok kiemelése
 
-| Name                       | Nr. |
+| Név                        | Nr. |
 | -------------------------- | --- |
 | NoState                    | -1  |
 | Link                       | 0   |

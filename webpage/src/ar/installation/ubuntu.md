@@ -16,7 +16,7 @@ sudo apt-get install qownnotes
 
 [تنزيل مباشر](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
 
-## النسخ الأقدم من أبونتو ومشتقاتها
+## النسخ الأقدم من أوبنتو ومشتقاتها
 
 الأفضل تجربة استخدام الـ&nbsp;AppImage من [إصدارات QOwnNotes على GitHub](https://github.com/pbek/QOwnNotes/releases).
 

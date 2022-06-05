@@ -523,9 +523,9 @@ Seleccione la palabra actual en la edición de texto de la nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Selecciona la línea actual en la edición de texto de la nota
+ * Selects the current word in the note text edit
  */
-void ScriptingService:: noteTextEditSelectCurrentWord();
+void ScriptingService::noteTextEditSelectCurrentWord();
 ```
 
 ### Ejemplo

@@ -8,6 +8,6 @@
 
 ## Fordítások
 
-See [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/activity_stream)
+Lásd: [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/activity_stream)
 
-If you want to help translating QOwnNotes please visit [Translation](translation.md).
+Ha segíteni szeretne a QOwnNotes fordításában, látogasson el a [Fordítás](translation.md) oldalra.

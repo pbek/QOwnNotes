@@ -520,7 +520,7 @@ Seleziona la parola corrente nella finestra di modifica del testo della nota
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * Selects the current line in the note text edit
+ * Selects the current word in the note text edit
  */
 void ScriptingService::noteTextEditSelectCurrentWord();
 ```

@@ -205,7 +205,7 @@ preNoteToMarkdownHtmlHook (خطاف ما قبل تحويل الملاحظة من
  *
  * @param {NoteApi} note - the note object
  * @param {string} markdown - the markdown that is about to being converted to html
- * @param {string} forExport - true if the html is used for an export, false for the preview
+ * @param {bool} forExport - true if the html is used for an export, false for the preview
  * @return {string} the modified markdown or an empty string if nothing should be modified
  */
 function preNoteToMarkdownHtmlHook(note, markdown, forExport);
@@ -228,7 +228,7 @@ noteToMarkdownHtmlHook (خطاف تحويل الملاحظة من ماركداو
  *
  * @param {NoteApi} note - the note object
  * @param {string} html - the html that is about to being rendered
- * @param {string} forExport - true if the html is used for an export, false for the preview
+ * @param {bool} forExport - true if the html is used for an export, false for the preview
  * @return {string} the modified html or an empty string if nothing should be modified
  */
 function noteToMarkdownHtmlHook(note, html, forExport);

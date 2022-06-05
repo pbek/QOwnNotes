@@ -523,9 +523,9 @@ Selecteer de huidige woord in de tekstbewerking van de notitie
 ### Methodeaanroep en parameters
 ```cpp
 /**
-  * Selecteert de huidige regel in de tekstbewerking van de notitie
-  */
-void ScriptingService :: noteTextEditSelectCurrentWord ();
+ * Selects the current word in the note text edit
+ */
+void ScriptingService::noteTextEditSelectCurrentWord();
 ```
 
 ### Voorbeeld

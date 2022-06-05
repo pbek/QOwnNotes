@@ -176,20 +176,20 @@ preNoteToMarkdownHtmlHook
 ### Methodeaanroep en parameters
 ```js
 /**
-  * Deze functie wordt aangeroepen voordat de markdown-html van een notitie wordt gegenereerd
-  *
-  * Hiermee kunt u wijzigen wat wordt doorgegeven aan de markdown naar html-converter
-  *
-  * De functie kan bijvoorbeeld in meerdere scripts worden gebruikt om code te renderen (zoals LaTeX wiskunde of zeemeermin)
-  * naar de grafische weergave voor de preview
-  *
-  * De notitie wordt tijdens dit proces niet gewijzigd
-  *
-  * @param {NoteApi} notitie - het notitieobject
-  * @param {string} markdown - de markdown die op het punt staat te worden geconverteerd naar html
-  * @param {string} forExport - waar als de html wordt gebruikt voor een export, onwaar voor het voorbeeld
-  * @return {string} de gewijzigde afwaardering of een lege tekenreeks als er niets moet worden gewijzigd
-  */
+ * This function is called before the markdown html of a note is generated
+ *
+ * It allows you to modify what is passed to the markdown to html converter
+ *
+ * The function can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
+ * to its graphical representation for the preview
+ *
+ * The note will not be changed in this process
+ *
+ * @param {NoteApi} note - the note object
+ * @param {string} markdown - the markdown that is about to being converted to html
+ * @param {bool} forExport - true if the html is used for an export, false for the preview
+ * @return {string} the modified markdown or an empty string if nothing should be modified
+ */
 function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
 
@@ -201,18 +201,18 @@ noteToMarkdownHtmlHook
 ### Methodeaanroep en parameters
 ```js
 /**
-  * Deze functie wordt aangeroepen wanneer de markdown-html van een notitie wordt gegenereerd
-  *
-  * Hiermee kunt u deze html wijzigen
-  * Dit wordt bijvoorbeeld eerder aangeroepen door de notitievoorbeeld
-  *
-  * De functie kan in meerdere scripts worden gebruikt om de html van de preview te wijzigen
-  *
-  * @param {NoteApi} notitie - het notitieobject
-  * @param {string} html - de html die op het punt staat te worden weergegeven
-  * @param {string} forExport - waar als de html wordt gebruikt voor een export, onwaar voor het voorbeeld
-  * @return {string} de gewijzigde html of een lege string als er niets gewijzigd moet worden
-  */
+ * This function is called when the markdown html of a note is generated
+ *
+ * It allows you to modify this html
+ * This is for example called before by the note preview
+ *
+ * The function can be used in multiple scripts to modify the html of the preview
+ *
+ * @param {NoteApi} note - the note object
+ * @param {string} html - the html that is about to being rendered
+ * @param {bool} forExport - true if the html is used for an export, false for the preview
+ * @return {string} the modified html or an empty string if nothing should be modified
+ */
 function noteToMarkdownHtmlHook(note, html, forExport);
 ```
 

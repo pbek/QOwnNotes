@@ -96,6 +96,6 @@ Néhány szegmens, amelyet nem fordítunk le a Dokumentációban:
 
 Foglalkozni fog ennek a szoftvernek a nyelvével, új kifejezéseket tanul, és sok bennfentes információt kap a projektről.
 
-If you are thus ready to help to proofread the translation of your language, contact [Patrizio](https://crowdin.com/profile/pbek) and ask away if you have any questions and/or obtain the rights for proofreading in your native language.
+Ha így készen áll a nyelve fordításának lektorálásában, lépjen kapcsolatba a [Patrizio](https://crowdin.com/profile/pbek)-val, és kérdezze meg, ha bármilyen kérdése van, és/vagy szerezze meg az anyanyelvén végzett lektorálási jogokat.
 
 Nagyon köszönjük a segítségét! 🙂

@@ -523,7 +523,7 @@ script.noteTextEditSelectCurrentLine();
 ### فراخوانی شگرد و پارامترها
 ```cpp
 /**
- * Selects the current line in the note text edit
+ * Selects the current word in the note text edit
  */
 void ScriptingService::noteTextEditSelectCurrentWord();
 ```

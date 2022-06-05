@@ -180,7 +180,7 @@ preNoteToMarkdownHtmlHook
  *
  * Elle vous permet de modifier ce qui est passé au convertisseur Markdown vers HTML
  *
- * La méthode peut par exemple être utilisée dans de multiples scripts pour rendre du code (comme LaTeX math ou mermaid)
+ * La fonction peut par exemple être utilisée dans de multiples scripts pour rendre du code (comme LaTeX math ou mermaid)
  * dans sa représentation graphique pour l'aperçu
  *
  * La note ne sera pas modifiée dans ce processus
@@ -190,7 +190,7 @@ preNoteToMarkdownHtmlHook
  * @param {string} forExport - true si le HTML est utilisé pour une exportation, false pour l'aperçu
  * @return {string} le Markdown modifié ou une chaîne vide si rien ne doit être modifié
  */
-function preNoteToMarkdownHtmlHook (note, markdown, forExport);
+function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
@@ -204,7 +204,7 @@ noteToMarkdownHtmlHook
  * Cette fonction est appelée lorsque le code HTML Markdown d'une note est généré
  *
  * Elle vous permet de modifier ce HTML
- * Elle est par exemple appelé avant par l'aperçu de la note
+ * Elle est par exemple appelée avant par l'aperçu de la note
  *
  * Cette fonction peut être utilisée dans plusieurs scripts pour modifier le HTML de l'aperçu
  *
@@ -213,7 +213,7 @@ noteToMarkdownHtmlHook
  * @param {string} forExport - true si le HTML est utilisé pour une exportation, false pour l'aperçu
  * @return {string} le code HTML modifié ou une chaîne vide si rien ne doit être modifié
  */
-function noteToMarkdownHtmlHook (note, html, forExport);
+function noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [exemple.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) ou [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
