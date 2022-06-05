@@ -554,7 +554,7 @@ Select the current word in the note text edit
 ### Method call and parameters
 ```cpp
 /**
- * Selects the current line in the note text edit
+ * Selects the current word in the note text edit
  */
 void ScriptingService::noteTextEditSelectCurrentWord();
 ```
