@@ -1,6 +1,13 @@
 # QOwnNotes Changelog
 
 ## 22.6.1
+- under Linux (with dbus) the application will now ask you if you want to turn on 
+  dark mode if your desktop environment is in dark mode and the application is not
+  (for [#2525](https://github.com/pbek/QOwnNotes/issues/2525))
+    - the application will now also ask you if you want to turn off dark mode if your
+      desktop environment is in light mode and the application has dark mode turned on
+    - you can remember those decisions so that the switch will be made
+      automatically next time
 - an issue in the scripting hook `noteTaggingByObjectHook` was fixed where
   tags that are supposed to be removed couldn't be accessed by the hook
   (for [#2553](https://github.com/pbek/QOwnNotes/issues/2553))

@@ -160,6 +160,10 @@ bool mainStartupMisc(const QStringList &arguments) {
     Utils::Gui::doWindowsDarkModeCheck();
 #endif
 
+#ifdef Q_OS_LINUX
+    Utils::Gui::doLinuxDarkModeCheck();
+#endif
+
     bool systemIconTheme =
         settings.value(QStringLiteral("systemIconTheme")).toBool();
 

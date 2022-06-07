@@ -35,6 +35,7 @@
 #include <QTreeWidgetItem>
 #include <QVBoxLayout>
 #include <QDockWidget>
+#include <QProcess>
 
 #define ORDER_ASCENDING 0     // Qt::AscendingOrder // = 0
 #define ORDER_DESCENDING 1    // Qt::DescendingOrder // = 1
@@ -1094,6 +1095,78 @@ bool Utils::Gui::doWindowsDarkModeCheck() {
                 QObject::tr("Your Windows system seems to use the light mode. "
                     "Do you also want to turn off dark mode in QOwnNotes?"),
                 QStringLiteral("windows-light-mode")) == QMessageBox::Yes) {
+            Utils::Misc::switchToLightMode();
+
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/**
+ * Checks if Linux is in dark or light mode and if we want to switch to those modes too.
+ * This only works with dbus.
+ */
+bool Utils::Gui::doLinuxDarkModeCheck() {
+
+//    auto result = Utils::Misc::startSynchronousProcess("/usr/bin/dbus-send", QStringList() <<
+//                    QStringLiteral("--session") << QStringLiteral("--print-reply=literal") << QStringLiteral("--reply-timeout=1000") <<
+//                    QStringLiteral("--dest=org.freedesktop.portal.Desktop") << QStringLiteral("/org/freedesktop/portal/desktop") <<
+//                    QStringLiteral("org.freedesktop.portal.Settings.Read") << QStringLiteral("string:'org.freedesktop.appearance'") <<
+//                    QStringLiteral("string:'color-scheme'"));
+
+//    auto parameters = QStringList() <<
+//                    QStringLiteral("--session") << QStringLiteral("--print-reply=literal") << QStringLiteral("--reply-timeout=1000") <<
+//                    QStringLiteral("--dest=org.freedesktop.portal.Desktop") << QStringLiteral("/org/freedesktop/portal/desktop") <<
+//                    QStringLiteral("org.freedesktop.portal.Settings.Read") << QStringLiteral("string:'org.freedesktop.appearance'") <<
+//                    QStringLiteral("string:'color-scheme'");
+
+//    auto parameters = QStringList() <<
+//                    QStringLiteral("--session") << QStringLiteral("--print-reply=literal") << QStringLiteral("--reply-timeout=1000") <<
+//                    QStringLiteral("--dest=org.freedesktop.portal.Desktop") << QStringLiteral("/org/freedesktop/portal/desktop") <<
+//                    QStringLiteral("org.freedesktop.portal.Settings.Read") << QStringLiteral("string:'org.freedesktop.appearance' string:'color-scheme'");
+
+    auto parameters = QStringList() << "-c" << "dbus-send --session --print-reply=literal --reply-timeout=1000 --dest=org.freedesktop.portal.Desktop /org/freedesktop/portal/desktop org.freedesktop.portal.Settings.Read string:'org.freedesktop.appearance' string:'color-scheme'";
+
+    QProcess process;
+//    process.start(QStringLiteral("dbus-send"), parameters);
+    process.start(QStringLiteral("/bin/sh"), parameters);
+
+    if (!process.waitForStarted()) {
+        qWarning() << __func__ << " - 'doLinuxDarkModeCheck' returned false";
+        return false;
+    }
+
+    if (!process.waitForFinished()) {
+        qWarning() << __func__ << " - 'doLinuxDarkModeCheck' returned false";
+        return false;
+    }
+
+//    const auto result = QString(process.readAllStandardError());
+    const int systemColorSchema = QString(process.readAll()).trimmed().right(1).toInt();
+    const bool appDarkMode = QSettings().value("darkMode").toBool();
+
+    // Check for Linux dark mode and application default mode
+    if (systemColorSchema == 1 && !appDarkMode) {
+        if (Utils::Gui::questionNoSkipOverride(
+                nullptr, QObject::tr("Dark mode detected"),
+                QObject::tr("Your Linux system seems to use the dark mode. "
+                        "Do you also want to turn on dark mode in QOwnNotes?"),
+        QStringLiteral("linux-dark-mode")) == QMessageBox::Yes) {
+            Utils::Misc::switchToDarkMode();
+
+            return true;
+        }
+    }
+
+    // Check for Linux light mode and application dark mode
+    if (systemColorSchema == 2 && appDarkMode) {
+        if (Utils::Gui::questionNoSkipOverride(
+                nullptr, QObject::tr("Light mode detected"),
+                QObject::tr("Your Linux system seems to use the light mode. "
+                    "Do you also want to turn off dark mode in QOwnNotes?"),
+                QStringLiteral("linux-light-mode")) == QMessageBox::Yes) {
             Utils::Misc::switchToLightMode();
 
             return true;

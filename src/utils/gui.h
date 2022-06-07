@@ -147,6 +147,7 @@ void reloadNoteTabs(QTabWidget *tabWidget);
 void setTreeWidgetItemToolTipForNote(QTreeWidgetItem *item, const Note &note,
                                      QDateTime *overrideFileLastModified = nullptr);
 bool doWindowsDarkModeCheck();
+bool doLinuxDarkModeCheck();
 
 QIcon folderIcon();
 QIcon noteIcon();
