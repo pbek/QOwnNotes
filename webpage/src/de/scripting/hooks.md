@@ -203,21 +203,21 @@ preNoteToMarkdownHtmlHook
 
 ```js
 /**
- * This function is called before the markdown html of a note is generated
- *
- * It allows you to modify what is passed to the markdown to html converter
- *
- * The function can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
- * to its graphical representation for the preview
- *
- * The note will not be changed in this process
- *
- * @param {NoteApi} note - the note object
- * @param {string} markdown - the markdown that is about to being converted to html
- * @param {bool} forExport - true if the html is used for an export, false for the preview
- * @return {string} the modified markdown or an empty string if nothing should be modified
- */
-function preNoteToMarkdownHtmlHook(note, markdown, forExport);
+  * Diese Funktion wird aufgerufen, bevor das Markdown-HTML einer Notiz generiert wird
+  *
+  * Sie können ändern, was an den Markdown-zu-HTML-Konverter übergeben wird
+  *
+  * Die Funktion kann zum Beispiel in mehreren Skripten verwendet werden, um Code zu rendern (wie LaTeX math oder meermaid)
+  * zu seiner grafischen Darstellung für die Vorschau
+  *
+  * Die Notiz wird dabei nicht verändert
+  *
+  * @param {NoteApi} note - das Notizobjekt
+  * @param {string} Markdown - der Markdown, der gerade in HTML konvertiert wird
+  * @param {bool} forExport - true, wenn das HTML für einen Export verwendet wird, false für die Vorschau
+  * @return {string} der geänderte Markdown oder ein leerer String, wenn nichts geändert werden soll
+  */
+Funktion preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
 
 
