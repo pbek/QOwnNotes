@@ -4734,11 +4734,13 @@ void MainWindow::removeSelectedTags() {
         for (QTreeWidgetItem *item : selItems) {
             const int tagId = item->data(0, Qt::UserRole).toInt();
             const Tag tag = Tag::fetch(tagId);
-            tag.remove();
-            qDebug() << "Removed tag " << tag.getName();
 
             // take care that the tag is removed from all notes
             handleScriptingNotesTagRemoving(tag, true);
+
+            // remove tag after handled by scripts so it still can be accessed by them
+            tag.remove();
+            qDebug() << "Removed tag " << tag.getName();
         }
 
         if (ScriptingService::instance()->noteTaggingHookExists()) {

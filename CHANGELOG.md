@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 22.6.1
+- an issue in the scripting hook `noteTaggingByObjectHook` was fixed where
+  tags that are supposed to be removed couldn't be accessed by the hook
+  (for [#2553](https://github.com/pbek/QOwnNotes/issues/2553))
+
 ## 22.6.0
 - users are now asked if they want to turn on the search panel again when using
   the *Find note* action if they have turned it off previously
