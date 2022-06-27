@@ -9634,8 +9634,9 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
 
     QAction *moveToThisSubFolderAction = nullptr;
     const bool showSubFolders = NoteFolder::isCurrentShowSubfolders();
-    if (showSubFolders) {
-        if (ui->noteTreeWidget->selectedItems().count() == 1) {
+    const bool isEnableNoteTree = Utils::Misc::isEnableNoteTree();
+    if (showSubFolders || isEnableNoteTree) {
+        if (ui->noteTreeWidget->selectedItems().count() == 1 && !isEnableNoteTree) {
             moveToThisSubFolderAction =
                 noteMenu.addAction(tr("Jump to the note's subfolder"));
         }
