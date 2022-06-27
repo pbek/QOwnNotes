@@ -1,5 +1,9 @@
 # Searching for notes
 
+To search for notes or for text inside notes you can use the shortcut
+<kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (or 
+<kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> on macOS) to jump to the *Note search panel*.
+
 There are different ways to search for notes:
 
 - `note book` will search for notes with the word `note` or `book` in the file
