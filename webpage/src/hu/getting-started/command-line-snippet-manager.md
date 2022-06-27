@@ -67,13 +67,13 @@ Használhat **soron belüli kódblokkokkal rendelkező rendezetlen listákat** a
 Ha a soron belüli kódblokk elé egy `cmd:` karakterláncot ad hozzá, a parancs az **aktuális jegyzetben** is megtalálható lesz, függetlenül a jegyzetcímkéktől.
 
 ```markdown
-- `echo I am a command` I am a description #tag1 #tag2 #tag3
-* `echo I am also a command` I am a description #tag3 #tag4 #tag5
-- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+- `visszhang Én vagyok a parancs` Leírás vagyok #tag1 #tag2 #tag3
+* `visszhang Én is parancs vagyok` Leírás vagyok #tag3 #tag4 #tag5
+- cmd: `echo I megtalálható lesz az aktuális jegyzetben` Ez a parancs megtalálható az aktuális jegyzetben a jegyzetcímkéktől függetlenül
 
-<!-- Example for asking for user input -->
+<!-- Példa a felhasználói bevitel kérésére -->
 
-- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
+- `read -p "PR ID: " id && git lekérési eredet pull/$id/head:pull-$id && git checkout pull-$id` Kérjen lekérési azonosítót és lekérési kérést
 ```
 
 A **`bash` vagy `shell` kódblokkok**, amelyeket leírásként 2-es vagy magasabb címsor előz meg, szintén használhatók parancsrészletekhez. A címkék is támogatottak, ha a címsor és a kódblokk között vannak.

@@ -4266,7 +4266,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="178"/>
 <source>All notes</source>
-<translation type="unfinished">All notes</translation>
+<translation>Totes les notes</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="175"/>
@@ -4281,41 +4281,41 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="210"/>
 <source>Note folder</source>
-<translation type="unfinished">Note folder</translation>
+<translation>Carpeta de notes</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="294"/>
 <source>New subfolder</source>
-<translation type="unfinished">New subfolder</translation>
+<translation>Nova subcarpeta</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="303"/>
 <source>Rename subfolder</source>
-<translation type="unfinished">Rename subfolder</translation>
+<translation>Reanomenar subcarpeta</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="310"/>
 <location filename="../widgets/notesubfoldertree.cpp" line="369"/>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>Suprimeix les carpetes seleccionades</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="318"/>
 <source>Show folder in file manager</source>
-<translation type="unfinished">Show folder in file manager</translation>
+<translation>Mostra la nota en el gestor de fitxers</translation>
 </message>
 <message numerus="yes">
 <location filename="../widgets/notesubfoldertree.cpp" line="370"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>Eliminar &lt;strong&gt;%n&lt;/strong&gt; la(es) carpeta(es) de nota(es) seleccionada(es)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Tots els fitxers i carpetes s'eliminaran!</numerusform>
+<numerusform>Eliminar &lt;strong&gt;%n&lt;/strong&gt; les carpetes de notes seleccionades?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Tots els fitxers i carpetes s'eliminaran!</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="381"/>
 <source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
+<translation>Eliminar la subcarpeta de notes: %1</translation>
 </message>
 </context>
 <context>
@@ -4639,12 +4639,12 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../utils/gui.cpp" line="1154"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>El vostre sistema Linux usa el mode fosc. Voleu activar-lo també a QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1167"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>El vostre sistema Linux usa el mode clar. Voleu activar-lo també a QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1249"/>
@@ -4769,32 +4769,32 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <location filename="../utils/urlhandler.cpp" line="167"/>
 <location filename="../utils/urlhandler.cpp" line="188"/>
 <source>Note was not found</source>
-<translation type="unfinished">Note was not found</translation>
+<translation>No s'ha trobat cap nota</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="168"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-<translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+<translation>No s'ha trobat la nota.&lt;br /&gt;No es pot crear la nota on heu dit, perquè les subcarpetes estan deshabilitades en aquesta carpeta de notes.</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="178"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+<translation>No s'ha trobat cap nota, crear la nova nota &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="182"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>No s'ha trobat la nota, voleu crear &lt;strong&gt;%1&lt;/strong&gt; a &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="227"/>
 <source>Failed to create note</source>
-<translation type="unfinished">Failed to create note</translation>
+<translation>No s'ha pogut crear la nota</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="228"/>
 <source>Note creation failed</source>
-<translation type="unfinished">Note creation failed</translation>
+<translation>Creació de nota fallida</translation>
 </message>
 </context>
 <context>
@@ -4802,43 +4802,43 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="94"/>
 <source>Increased font size to %1 pt</source>
-<translation type="unfinished">Increased font size to %1 pt</translation>
+<translation>Tamany de tipus de lletra augmentat a %1 pt</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="97"/>
 <source>Decreased font size to %1 pt</source>
-<translation type="unfinished">Decreased font size to %1 pt</translation>
+<translation>Tamany de la font disminuït a %1 pt</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="540"/>
 <source>An url was opened at the current cursor position</source>
-<translation type="unfinished">An url was opened at the current cursor position</translation>
+<translation>S'ha obert una url a la posició actual del cursor</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="716"/>
 <source>No equation was found in front of the cursor</source>
-<translation type="unfinished">No equation was found in front of the cursor</translation>
+<translation>No s'ha trobat cap equació davant del cursor</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="736"/>
 <source>Result for equation: %1 = %2</source>
-<translation type="unfinished">Result for equation: %1 = %2</translation>
+<translation>Resultat de l'equació: %1 = %2</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="918"/>
 <source>&amp;Link selected text</source>
-<translation type="unfinished">&amp;Link selected text</translation>
+<translation>Enllaça el text seleccionat</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="918"/>
 <source>Insert &amp;link</source>
-<translation type="unfinished">Insert &amp;link</translation>
+<translation>Insereix un enllaç</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="925"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation type="unfinished">Block &amp;quote selected text</translation>
+<translation>Marca el text seleccionat com un bloc de cita</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="928"/>
@@ -4868,12 +4868,12 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1000"/>
 <source>Export</source>
-<translation type="unfinished">Export</translation>
+<translation>Exportar</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1013"/>
 <source>Export selected text as PDF</source>
-<translation type="unfinished">Export selected text as PDF</translation>
+<translation>Exportar el text seleccionat com a PDF</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1022"/>
@@ -4883,7 +4883,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1054"/>
 <source>Custom actions</source>
-<translation type="unfinished">Custom actions</translation>
+<translation>Accions personalitzades</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1145"/>

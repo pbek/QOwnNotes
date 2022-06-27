@@ -516,7 +516,7 @@ script.noteTextEditSelectCurrentLine();
 ### نداء الدالة ومُعامِلاتها
 ```cpp
 /**
- * Selects the current word in the note text edit
+ * تحدد الكلمة الحالية في محرر نص الملاحظات
  */
 void ScriptingService::noteTextEditSelectCurrentWord();
 ```

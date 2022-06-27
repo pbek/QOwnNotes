@@ -601,10 +601,10 @@ void ScriptingService::noteTextEditSetCursorPosition(int position);
 
 ### Esempio
 ```js
-// jump to the 11th character in the note
+// salta all'undicesimo carattere nella nota
 script.noteTextEditSetCursorPosition(10);
 
-// jump to the end of the note
+// salta alla fine della nota
 script.noteTextEditSetCursorPosition(-1);
 ```
 
@@ -614,9 +614,9 @@ Ottieni la posizione corrente del cursore del testo nella finestra di modifica d
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * Returns the current position of the text cursor in the note text edit
- * 0 would be the beginning of the note
- */
+  * Restituisce la posizione corrente del cursore del testo nella finestra di modifica del testo della nota
+  * 0 sarebbe l'inizio della nota
+  */
 int ScriptingService::noteTextEditCursorPosition();
 ```
 
@@ -643,7 +643,7 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 
 ### Esempio
 ```js
-// read the current word in the note text edit
+// legge la parola corrente dalla finestra di modifica del testo della nota
 var text = script.noteTextEditCurrentWord();
 ```
 
@@ -662,7 +662,7 @@ bool ScriptingService::platformIsWindows();
 ### Esempio
 ```js
 if (script.platformIsLinux()) {
-    // Will be executed only if under Linux
+    // Verrà eseguito solo se sotto Linux
 }
 ```
 
@@ -672,17 +672,17 @@ Etichetta la nota corrente
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * Tags the current note with a tag named tagName
- *
- * @param tagName
- */
+  * Contrassegna la nota corrente con un'entichetta denominata tagName
+  *
+  * @param tagName
+  */
 void ScriptingService::tagCurrentNote(QString tagName);
 ```
 
 ### Esempio
 ```js
-// add a "favorite" tag to the current note
-script.tagCurrentNote("favorite");
+// aggiungi un'etichetta "preferito" alla nota corrente
+script.tagCurrentNote("preferito");
 ```
 
 Potresti voler dare un'occhiata all'azione personalizzata `favoriteNote` nell'esempio [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml).
@@ -1190,9 +1190,9 @@ script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothing here yet"));
 ```
 
-Please make sure to use a meaningful prefix in your key like `PersistentVariablesTest/myVar` because the variables are accessible from all scripts.
+Assicurati di utilizzare un prefisso significativo nella tua chiave come `PersistentVariablesTest/myVar` perché le variabili sono accessibili da tutti gli script.
 
-You may also want to take a look at the example [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
+Potresti anche dare un'occhiata all'esempio [variabili-persistenti.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
 
 Caricamento delle variabili delle impostazioni dell'applicazione
 --------------------------------------
@@ -1216,12 +1216,12 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
 ```
 
-Keep in mind that settings actually can be empty, you have to take care about that yourself. `defaultValue` is only used if the setting doesn't exist at all.
+Tieni presente che le impostazioni in realtà possono essere vuote, devi occupartene tu stesso. `defaultValue` is only used if the setting doesn't exist at all.
 
 Creazione di una directory della cache
 --------------------------
 
-You can cache files at the default cache location of your system.
+È possibile memorizzare nella cache i file nella posizione cache predefinita del sistema.
 
 ### Chiamata al metodo e parametri
 ```cpp
@@ -1265,7 +1265,7 @@ script.clearCacheDir("my-script-id");
 Leggere il percorso della directory del tuo script
 ------------------------------------------------
 
-If you need to get the path to the directory where your script is placed to for example load other files you have to register a `property string scriptDirPath;`. This property will be set with the path to the script's directory.
+Se è necessario ottenere il percorso della directory in cui è posizionato lo script, ad esempio per caricare altri file, è necessario registrare un file `property string scriptDirPath;`. Questa proprietà verrà impostata con il percorso della directory dello script.
 
 ### Esempio
 ```js
@@ -1416,7 +1416,7 @@ script.triggerMenuAction("actionAllow_note_editing", 1);
 You may want to take a look at the example [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
 
 ::: tip
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Just search for the English menu title. Note that these texts can change over time.
+You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Basta cercare il titolo del menu in inglese. Nota che questi testi possono cambiare nel tempo.
 :::
 
 Apertura di una finestra di dialogo di input con una casella di selezione
@@ -1537,7 +1537,7 @@ var result = script.writeToFile(filePath, html);
 script.log(result);
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Puoi dare un'occhiata all'esempio [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Lavorare con websocket
 -----------------------
@@ -1594,7 +1594,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | H6                         | 17  |
 | BlockQuote                 | 18  |
 | HorizontalRuler            | 21  |
-| Table                      | 22  |
+| Tabella                    | 22  |
 | InlineCodeBlock            | 23  |
 | MaskedSyntax               | 24  |
 | CurrentLineBackgroundColor | 25  |
@@ -1605,7 +1605,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | CheckBoxChecked            | 30  |
 | StUnderline                | 31  |
 
-### Example
+### Esempio
 ```js
 // Highlight a text line like "BLOCK: some text" as blockquote (state 18)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);

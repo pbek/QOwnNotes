@@ -893,12 +893,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished">Pass control keys</translation>
+<translation>Prođite kontrolne tipke</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished">Pass keys in insert mode</translation>
+<translation>Dodavanje tipki u načinu umetanja</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
@@ -959,12 +959,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished">Use wrapscan</translation>
+<translation>Koristite wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished">Use tildeop</translation>
+<translation>Koristite tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
@@ -994,7 +994,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished">Keyword characters:</translation>
+<translation>Znakovi ključne riječi:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
@@ -1004,27 +1004,27 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>Prikazuje brojeve redaka u odnosu na redak koji sadrži kursor teksta.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
+<translation>Ne tumači sekvence tipki kao što je Ctrl-S u FakeVim-u, već ih obrađuje kao uobičajene prečace. To omogućuje lakši pristup osnovnoj funkcionalnosti po cijenu gubitka nekih značajki FakeVima.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
+<translation>Ne tumači neke pritiske tipki u načinu umetanja kako bi se kod mogao ispravno dovršiti i proširiti.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished">Vim tabstop option.</translation>
+<translation>Opcija Vim tabstop.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
+<translation>Ostavite prazno da biste koristili zadanu stazu, tj. %USERPROFILE%\_vimrc na Windowsima, ~/.vimrc inače.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
@@ -1302,7 +1302,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="232"/>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>Fonta:</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="279"/>
@@ -1367,7 +1367,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
 <source>Underlined text</source>
-<translation type="unfinished">Underlined text</translation>
+<translation>Podvučeni tekst</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
@@ -1543,17 +1543,17 @@
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="52"/>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Kopiraj</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="60"/>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>Kopiraj link</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="68"/>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>Poništi zumiranje</translation>
 </message>
 </context>
 <context>
@@ -1843,7 +1843,7 @@
 <message>
 <location filename="../dialogs/linkdialog.ui" line="153"/>
 <source>Search for a heading to link to</source>
-<translation type="unfinished">Search for a heading to link to</translation>
+<translation>Potražite naslov za povezivanje</translation>
 </message>
 <message>
 <location filename="../dialogs/linkdialog.ui" line="177"/>
@@ -2577,7 +2577,7 @@
 <location filename="../mainwindow.ui" line="1991"/>
 <location filename="../mainwindow.ui" line="1994"/>
 <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
-<translation type="unfinished">Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</translation>
+<translation>Otvorite #qownnotes IRC (Kiwi) kanal, morate ostati online da biste dobili odgovor</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2058"/>
@@ -2610,7 +2610,7 @@
 <location filename="../mainwindow.ui" line="2209"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
 <extracomment>"Element" as in the chat service</extracomment>
-<translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
+<translation>Otvorite sobu QOwnNotes Matrix (Element)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2236"/>
@@ -2853,7 +2853,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2672"/>
 <source>Insert &amp;note link</source>
-<translation type="unfinished">Insert &amp;note link</translation>
+<translation>Umetnite vezu &amp;napomena</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2675"/>
@@ -2868,7 +2868,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2689"/>
 <source>Toggle always-on-top mode</source>
-<translation type="unfinished">Toggle always-on-top mode</translation>
+<translation>Uključite način rada uvijek na vrhu</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1909"/>
@@ -2909,7 +2909,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2179"/>
 <source>Manage stored image files</source>
-<translation type="unfinished">Manage stored image files</translation>
+<translation>Upravljajte pohranjenim slikovnim datotekama</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2221"/>
@@ -3282,7 +3282,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../mainwindow.cpp" line="6711"/>
 <source>Inserted text as text attachment file</source>
-<translation type="unfinished">Inserted text as text attachment file</translation>
+<translation>Umetnut je tekst kao tekstualni privitak</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6863"/>
@@ -3481,12 +3481,12 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../mainwindow.cpp" line="7615"/>
 <source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
+<translation>Prikaži sve bilješke (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7776"/>
 <source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+<translation>Prikaži sve bilješke označene s '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9586"/>
@@ -3967,7 +3967,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../mainwindow.cpp" line="630"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>Nije moguće pronaći radnju izbornika &lt;code&gt;%1&lt;/code&gt;! Jeste li to ispravno napisali?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="793"/>
@@ -4141,12 +4141,12 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../mainwindow.cpp" line="7295"/>
 <source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
+<translation>Zalijepite HTML kao markdown</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7296"/>
 <source>Paste as &amp;text file attachment</source>
-<translation type="unfinished">Paste as &amp;text file attachment</translation>
+<translation>Zalijepi kao privitak tekstualne datoteke</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7351"/>
@@ -4301,48 +4301,48 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="140"/>
 <source>show notes in folder '%1' (%2)</source>
-<translation type="unfinished">show notes in folder '%1' (%2)</translation>
+<translation>prikaži bilješke u mapi '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="178"/>
 <source>All notes</source>
-<translation type="unfinished">All notes</translation>
+<translation>Sve bilješke</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="175"/>
 <source>Show notes from all note subfolders (%1)</source>
-<translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+<translation>Pokaži bilješke iz svih podmapa bilješki (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="198"/>
 <source>Show notes in note root folder (%1)</source>
-<translation type="unfinished">Show notes in note root folder (%1)</translation>
+<translation>Prikaži bilješke u korijenskoj mapi bilješki (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="210"/>
 <source>Note folder</source>
-<translation type="unfinished">Note folder</translation>
+<translation>Mapa bilješki</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="294"/>
 <source>New subfolder</source>
-<translation type="unfinished">New subfolder</translation>
+<translation>Nova podmapa</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="303"/>
 <source>Rename subfolder</source>
-<translation type="unfinished">Rename subfolder</translation>
+<translation>Preimenuj podmapu</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="310"/>
 <location filename="../widgets/notesubfoldertree.cpp" line="369"/>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>Izbriši odabrane mape</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="318"/>
 <source>Show folder in file manager</source>
-<translation type="unfinished">Show folder in file manager</translation>
+<translation>Prikaži mapu u upravljaču datoteka</translation>
 </message>
 <message numerus="yes">
 <location filename="../widgets/notesubfoldertree.cpp" line="370"/>
@@ -4356,7 +4356,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="381"/>
 <source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
+<translation>Izbriši podmapu bilješki: %1</translation>
 </message>
 </context>
 <context>
@@ -4420,7 +4420,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../services/owncloudservice.cpp" line="492"/>
 <source>version %1 too low</source>
-<translation type="unfinished">version %1 too low</translation>
+<translation>verzija %1 preniska</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="513"/>
@@ -4553,12 +4553,12 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="294"/>
 <source>Failed to register %1. Error: %2</source>
-<translation type="unfinished">Failed to register %1. Error: %2</translation>
+<translation>Registracija %1 nije uspjela. Pogreška: %2</translation>
 </message>
 <message>
 <location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="314"/>
 <source>Failed to unregister %1. Error: %2</source>
-<translation type="unfinished">Failed to unregister %1. Error: %2</translation>
+<translation>Poništavanje registracije %1 nije uspjelo. Pogreška: %2</translation>
 </message>
 </context>
 <context>
@@ -4661,43 +4661,43 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <location filename="../utils/gui.cpp" line="1081"/>
 <location filename="../utils/gui.cpp" line="1153"/>
 <source>Dark mode detected</source>
-<translation type="unfinished">Dark mode detected</translation>
+<translation>Otkriven je tamni način rada</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1082"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Čini se da vaš Windows sustav koristi tamni način rada. Želite li također uključiti tamni način rada u QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1094"/>
 <location filename="../utils/gui.cpp" line="1166"/>
 <source>Light mode detected</source>
-<translation type="unfinished">Light mode detected</translation>
+<translation>Otkriven je svjetlosni način rada</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1095"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Čini se da vaš Windows sustav koristi svjetlosni način rada. Želite li također isključiti tamni način rada u QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1154"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Čini se da vaš Linux sustav koristi tamni način rada. Želite li također uključiti tamni način rada u QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1167"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Čini se da vaš Linux sustav koristi svjetlosni način rada. Želite li također isključiti tamni način rada u QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1249"/>
 <source>Panel disabled</source>
-<translation type="unfinished">Panel disabled</translation>
+<translation>Ploča je onemogućena</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1250"/>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
+<translation>Ploča &lt;strong&gt;%1&lt;/strong&gt; trenutačno je onemogućena, želite li je ponovno uključiti da bi ova radnja funkcionirala?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="79"/>
@@ -4707,7 +4707,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../utils/git.cpp" line="80"/>
 <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
-<translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
+<translation>Naredba &lt;code&gt;%1&lt;/code&gt; s argumentima &lt;code&gt;%2&lt;/code&gt; nije uspjela!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4315"/>
@@ -4717,12 +4717,12 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4515"/>
 <source>Login flow succeeded</source>
-<translation type="unfinished">Login flow succeeded</translation>
+<translation>Tijek prijave je uspio</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4516"/>
 <source>Username and password were set successfully!</source>
-<translation type="unfinished">Username and password were set successfully!</translation>
+<translation>Korisničko ime i lozinka su uspješno postavljeni!</translation>
 </message>
 <message>
 <location filename="../entities/cloudconnection.cpp" line="349"/>
@@ -4788,59 +4788,59 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="29"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+<translation>Uključene su podmape bilješki za trenutnu mapu bilješki da biste mogli uvesti mape.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2288"/>
 <location filename="../services/owncloudservice.cpp" line="2303"/>
 <source>Login flow failed</source>
-<translation type="unfinished">Login flow failed</translation>
+<translation>Tijek prijave nije uspio</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2289"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
+<translation>Ne može se pokrenuti tijek prijave Nextcloud v2. Provjerite je li url poslužitelja ispravan i koristite li Nextcloud poslužitelj!&lt;br /&gt;&lt;br /&gt;Ako još uvijek imate problema, kreirajte lozinku aplikacije ručno na administratorskoj stranici vašeg poslužitelja.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2304"/>
 <source>Could not parse login url!</source>
-<translation type="unfinished">Could not parse login url!</translation>
+<translation>Nije moguće raščlaniti URL za prijavu!</translation>
 </message>
 <message>
 <location filename="../utils/misc.cpp" line="948"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
+<translation>Koristite način rada jedne instance aplikacije, koji sprječava da se aplikacija pokrene drugi put. Za sljedeće pokretanje aplikacije način rada jedne instance aplikacije bit će onemogućen, tako da se aplikacija može ponovno pokrenuti prije napuštanja ove instance.</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="167"/>
 <location filename="../utils/urlhandler.cpp" line="188"/>
 <source>Note was not found</source>
-<translation type="unfinished">Note was not found</translation>
+<translation>Bilješka nije pronađena</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="168"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-<translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+<translation>Nije moguće pronaći bilješku.&lt;br /&gt;Nije moguće automatski kreirati bilješku na lokaciji jer su podmape onemogućene za trenutnu mapu bilješki.</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="178"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+<translation>Bilješka nije pronađena, izradi novu bilješku&lt;strong&gt; %1 &lt;/strong&gt;?</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="182"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>Bilješka nije pronađena, stvoriti novu bilješku &lt;strong&gt;%1&lt;/strong&gt; na putu &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="227"/>
 <source>Failed to create note</source>
-<translation type="unfinished">Failed to create note</translation>
+<translation>Neuspjela izrada bilješke</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="228"/>
 <source>Note creation failed</source>
-<translation type="unfinished">Note creation failed</translation>
+<translation>Neuspjela izrada bilješke</translation>
 </message>
 </context>
 <context>
@@ -4848,88 +4848,88 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="94"/>
 <source>Increased font size to %1 pt</source>
-<translation type="unfinished">Increased font size to %1 pt</translation>
+<translation>Veličina fonta povećana za %1 pt</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="97"/>
 <source>Decreased font size to %1 pt</source>
-<translation type="unfinished">Decreased font size to %1 pt</translation>
+<translation>Veličina fonta smanjena za %1 pt</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="540"/>
 <source>An url was opened at the current cursor position</source>
-<translation type="unfinished">An url was opened at the current cursor position</translation>
+<translation>Url je otvoren na trenutnoj poziciji pokazivača</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="716"/>
 <source>No equation was found in front of the cursor</source>
-<translation type="unfinished">No equation was found in front of the cursor</translation>
+<translation>Jednadžba nije pronađena ispred pokazivača</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="736"/>
 <source>Result for equation: %1 = %2</source>
-<translation type="unfinished">Result for equation: %1 = %2</translation>
+<translation>Rezultat jednadžbe: %1 = %2</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="918"/>
 <source>&amp;Link selected text</source>
-<translation type="unfinished">&amp;Link selected text</translation>
+<translation>&amp;Poveži odabrani tekst</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="918"/>
 <source>Insert &amp;link</source>
-<translation type="unfinished">Insert &amp;link</translation>
+<translation>Umetni &amp;poveznicu</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="925"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation type="unfinished">Block &amp;quote selected text</translation>
+<translation>Blokiraj &amp;citiranje odabranog teksta</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="928"/>
 <source>Insert block &amp;quote</source>
-<translation type="unfinished">Insert block &amp;quote</translation>
+<translation>Umetni &amp;citat blok</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="941"/>
 <source>Copy code block</source>
-<translation type="unfinished">Copy code block</translation>
+<translation>Kopiraj blok koda</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="968"/>
 <source>Print</source>
-<translation type="unfinished">Print</translation>
+<translation>Ispis</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="976"/>
 <source>Print selected text</source>
-<translation type="unfinished">Print selected text</translation>
+<translation>Ispis odabranog teksta</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="985"/>
 <source>Print selected text (preview)</source>
-<translation type="unfinished">Print selected text (preview)</translation>
+<translation>Ispis odabranog teksta (pregled)</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1000"/>
 <source>Export</source>
-<translation type="unfinished">Export</translation>
+<translation>Eksport</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1013"/>
 <source>Export selected text as PDF</source>
-<translation type="unfinished">Export selected text as PDF</translation>
+<translation>Izvezi odabrani tekst kao PDF</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1022"/>
 <source>Export selected text as PDF (preview)</source>
-<translation type="unfinished">Export selected text as PDF (preview)</translation>
+<translation>Izvezi odabrani tekst kao PDF (pregled)</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1054"/>
 <source>Custom actions</source>
-<translation type="unfinished">Custom actions</translation>
+<translation>Korisničke akcije</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1145"/>
@@ -4949,7 +4949,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1173"/>
 <source>Spelling</source>
-<translation type="unfinished">Spelling</translation>
+<translation>Pravopis</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1203"/>
@@ -6115,12 +6115,12 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1441"/>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
-<translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
+<translation>Tijek prijave v2 radi samo s Nextcloudom, ne i s ownCloudom. Ako imate problema, morate ručno izraditi lozinku za aplikaciju.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1444"/>
 <source>Login to Nextcloud to grant access</source>
-<translation type="unfinished">Login to Nextcloud to grant access</translation>
+<translation>Prijavite se na Nextcloud da biste odobrili pristup</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1849"/>
@@ -6529,7 +6529,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="276"/>
 <source>Browser extension / command snippets</source>
-<translation type="unfinished">Browser extension / command snippets</translation>
+<translation>Proširenje preglednika / isječci naredbi</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
@@ -6539,27 +6539,27 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
 <source>This also allows note files to be renamed</source>
-<translation type="unfinished">This also allows note files to be renamed</translation>
+<translation>To također omogućuje preimenovanje datoteka bilješki</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="864"/>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-<translation type="unfinished">You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</translation>
+<translation>Možete pristupiti svom ownCloud poslužitelju iz aplikacije, na primjer za upravljanje otpadnim bilješkama i verzijama bilješki ili za dijeljenje bilješki. Ova integracija ne bilježi sinkronizaciju datoteka. Još uvijek morate instalirati ownCloud klijent za sinkronizaciju za sinkronizaciju datoteka.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1431"/>
 <source>If your password doesn't work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
+<translation>Ako vaša zaporka ne funkcionira, izradite zaporku aplikacije (gumb s desne strane)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1455"/>
 <source>Cancel Nextcloud login</source>
-<translation type="unfinished">Cancel Nextcloud login</translation>
+<translation>Otkažite prijavu na Nextcloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1862"/>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
-<translation type="unfinished">You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</translation>
+<translation>Možete pristupiti svom ownCloud poslužitelju ili generičkom CalDAV poslužitelju za upravljanje svojim popisima zadataka.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2220"/>
@@ -6639,32 +6639,32 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
 <source>Forget all "Don't ask again" choices in message boxes</source>
-<translation type="unfinished">Forget all "Don't ask again" choices in message boxes</translation>
+<translation>Zaboravite sve opcije "Ne pitaj više" u okvirima za poruke</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4254"/>
 <source>Note file extensions</source>
-<translation type="unfinished">Note file extensions</translation>
+<translation>Napomena ekstenzije datoteka</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4292"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
-<translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
+<translation>Datoteke s navedenim nastavcima datoteke bit će prepoznate kao bilješke, a odabrana ekstenzija datoteke će se koristiti za nove bilješke.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4302"/>
 <source>Add a new note file extension</source>
-<translation type="unfinished">Add a new note file extension</translation>
+<translation>Dodajte novu ekstenziju datoteke bilješki</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4316"/>
 <source>Remove selected note file extension</source>
-<translation type="unfinished">Remove selected note file extension</translation>
+<translation>Uklonite odabrani nastavak datoteke bilješke</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4447"/>
 <source>Checks the disk database integrity and fixes problems</source>
-<translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
+<translation>Provjerava integritet baze podataka diska i rješava probleme</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
@@ -6674,7 +6674,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4457"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
-<translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
+<translation>Budite upozoreni da će ponovna inicijalizacija baze podataka također ukloniti vaše predmemorirane stavke zadataka i konfigurirane mape bilješki i skripte!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4540"/>
@@ -6704,17 +6704,17 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4811"/>
 <source>Time to wait before refreshing the preview after typing:</source>
-<translation type="unfinished">Time to wait before refreshing the preview after typing:</translation>
+<translation>Vrijeme za čekanje prije osvježavanja pregleda nakon upisa:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4818"/>
 <source>Reset the debounce time</source>
-<translation type="unfinished">Reset the debounce time</translation>
+<translation>Poništi vrijeme odbijanja</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4832"/>
 <source>0ms means don't wait for the typing to stop</source>
-<translation type="unfinished">0ms means don't wait for the typing to stop</translation>
+<translation>0ms znači nemojte čekati da tipkanje prestane</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4864"/>
@@ -6739,7 +6739,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5247"/>
 <source>Note that disabling this will also disable the navigation panel!</source>
-<translation type="unfinished">Note that disabling this will also disable the navigation panel!</translation>
+<translation>Imajte na umu da će onemogućavanje ovoga također onemogućiti navigacijsku ploču!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5311"/>
@@ -6798,7 +6798,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5879"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
-<translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
+<translation>Automatski odabir stavki na navigacijskoj ploči prilikom promjene položaja kursora</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5948"/>
@@ -6813,32 +6813,32 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6383"/>
 <source>Command snippets</source>
-<translation type="unfinished">Command snippets</translation>
+<translation>Isječci naredbi</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6392"/>
 <source>Tag name for commands notes</source>
-<translation type="unfinished">Tag name for commands notes</translation>
+<translation>Naziv oznake za bilješke o naredbama</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6399"/>
 <source>Commands tag:</source>
-<translation type="unfinished">Commands tag:</translation>
+<translation>Oznaka naredbi:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6419"/>
 <source>Commands note name:</source>
-<translation type="unfinished">Commands note name:</translation>
+<translation>Naziv bilješke naredbi:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6429"/>
 <source>Note name for adding new commands</source>
-<translation type="unfinished">Note name for adding new commands</translation>
+<translation>Zabilježite naziv za dodavanje novih naredbi</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6469"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
-<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
+<translation>Možete koristiti &lt;a href="%1"&gt;web-aplikaciju QOwnNotes&lt;/a&gt; da biste mogli umetati fotografije u QOwnNotes na radnoj površini s mobilnog telefona putem interneta.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6506"/>
@@ -6858,42 +6858,42 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6545"/>
 <source>Security token:</source>
-<translation type="unfinished">Security token:</translation>
+<translation>Sigurnosni token:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6348"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
-<translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
+<translation>Instalirajte &lt;a href="%1"&gt;proširenje preglednika Web Companion&lt;/a&gt; iz &lt;a href="%2"&gt;Chrome web trgovine&lt;/a&gt; ili &lt;a href="%3"&gt;Firefox Add- ons page&lt;/a&gt; za korištenje QOwnNotes kao web clipper ili za upravljanje oznakama.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6364"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
-<translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
+<translation>Preuzmite &lt;a href="%1"&gt;upravitelj isječaka naredbenog retka&lt;/a&gt; za izvršavanje isječaka naredbi pohranjenih u bilješkama u QOwnNotes iz naredbenog retka.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6406"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+<translation>Možete koristiti bilješke s posebnom oznakom za pohranu isječaka naredbi, koje možete izvršiti iz upravitelja isječaka naredbenog retka. Za više informacija o sintaksi naredbenog isječka kliknite &lt;a href="%1"&gt;ovdje&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6603"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
-<translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
+<translation>Morate unijeti ovaj token u web-aplikaciju QOwnNotes da biste mogli razgovarati sa svojom QOwnNotes aplikacijom za stolno računalo.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6535"/>
 <source>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation type="unfinished">A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+<translation>Otvorit će se websocket veza s ovim poslužiteljem da djeluje kao most između QOwnNotes web aplikacije i QOwnNotes desktop aplikacije.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6613"/>
 <source>Copy security token to clipboard</source>
-<translation type="unfinished">Copy security token to clipboard</translation>
+<translation>Kopirajte sigurnosni token u međuspremnik</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6566"/>
 <source>Generate new security token</source>
-<translation type="unfinished">Generate new security token</translation>
+<translation>Generirajte novi sigurnosni token</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6627"/>
@@ -6903,12 +6903,12 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6456"/>
 <source>QOwnNotes web application support</source>
-<translation type="unfinished">QOwnNotes web application support</translation>
+<translation>Podrška za QOwnNotes web aplikaciju</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6462"/>
 <source>Enable web application support</source>
-<translation type="unfinished">Enable web application support</translation>
+<translation>Omogućite podršku za web aplikacije</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5632"/>
@@ -6939,7 +6939,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6106"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
-<translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
+<translation>Omogućite lokalni otpad da zadržite kopiju bilješki u otpadu</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6142"/>
@@ -7001,7 +7001,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6301"/>
 <source>Reset the socket server port</source>
-<translation type="unfinished">Reset the socket server port</translation>
+<translation>Poništite priključak poslužitelja utičnice</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6315"/>
@@ -7718,7 +7718,7 @@ Poruka o pogrešci veze: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2349"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
+<translation>Baza podataka je ponovno inicijalizirana. Ponovo pokrenite aplikaciju sada!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2360"/>
@@ -7803,22 +7803,22 @@ Poruka o pogrešci veze: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3323"/>
 <source>Please enter a new note file extension:</source>
-<translation type="unfinished">Please enter a new note file extension:</translation>
+<translation>Unesite novu ekstenziju datoteke bilješki:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3357"/>
 <source>Markdown file</source>
-<translation type="unfinished">Markdown file</translation>
+<translation>Markdown datoteka</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3359"/>
 <source>Plain text file</source>
-<translation type="unfinished">Plain text file</translation>
+<translation>Obična tekstualna datoteka</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3377"/>
 <source>Remove note file extension</source>
-<translation type="unfinished">Remove note file extension</translation>
+<translation>Uklonite ekstenziju datoteke bilješke</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4093"/>
@@ -7844,12 +7844,12 @@ Poruka o pogrešci veze: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4386"/>
 <source>The integrity of the disk database is valid.</source>
-<translation type="unfinished">The integrity of the disk database is valid.</translation>
+<translation>Integritet baze podataka diska je valjan.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4391"/>
 <source>The integrity of the disk database is not valid!</source>
-<translation type="unfinished">The integrity of the disk database is not valid!</translation>
+<translation>Integritet disk baze podataka nije valjan!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2961"/>
@@ -7942,7 +7942,7 @@ Poruka o pogrešci veze: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3378"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
-<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+<translation>Želite li stvarno ukloniti ekstenziju datoteke bilješki &lt;strong&gt;%1&lt;/strong&gt;? Više nećete vidjeti datoteke s ovim nastavkom na popisu bilješki!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3668"/>
@@ -8297,7 +8297,7 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
 <source>Used in notes:</source>
-<translation type="unfinished">Used in notes:</translation>
+<translation>Koristi se u bilješkama:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="312"/>
@@ -8307,7 +8307,7 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
 <source>Only show attachments that are not used in notes</source>
-<translation type="unfinished">Only show attachments that are not used in notes</translation>
+<translation>Prikaži samo privitke koji se ne koriste u bilješkama</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
@@ -8317,7 +8317,7 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
 <source>Add selected attachments to the current note</source>
-<translation type="unfinished">Add selected attachments to the current note</translation>
+<translation>Dodaj odabrane privitke u trenutačnu bilješku</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="342"/>
@@ -8499,7 +8499,7 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="234"/>
 <source>Used in notes:</source>
-<translation type="unfinished">Used in notes:</translation>
+<translation>Koristi se u bilješkama:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="116"/>
@@ -8754,12 +8754,12 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <location filename="../dialogs/tododialog.ui" line="349"/>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>Ovo ne radi za podstavke, jer ih može sakriti nadređena stavka!</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="352"/>
 <source>Show only items due today</source>
-<translation type="unfinished">Show only items due today</translation>
+<translation>Prikaži samo stavke koje dospiju danas</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="120"/>
@@ -8794,7 +8794,7 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <location filename="../dialogs/tododialog.ui" line="334"/>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Datum dospijeća</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="342"/>
@@ -9236,17 +9236,17 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
+<translation>Vaš QOwnNotes izvršni '%1' ne može se pisati! Trenutačni korisnik mora moći pisati da bi se mogao ažurirati.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="455"/>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
-<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
+<translation>Privremenu datoteku '%1' nije moguće učiniti izvršnom! Morate sami zamijeniti '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="465"/>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
+<translation>Vaš stari izvršni QOwnNotes '%1' nije mogao biti uklonjen! Morate ga sami zamijeniti s '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="495"/>
@@ -9303,12 +9303,12 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="475"/>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</translation>
+<translation>Vaš stari izvršni QOwnNotes '%1' nije mogao biti zamijenjen novom datotekom '%2'! Morate ga sami zamijeniti.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="487"/>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation type="unfinished">The app file '%1' could not be made executable! You need to make it executable yourself.</translation>
+<translation>Datoteku aplikacije '%1' nije moguće učiniti izvršnom! Morate ga sami učiniti izvršnim.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="575"/>
@@ -9384,12 +9384,12 @@ This cannot be undone!</source>
 <message>
 <location filename="../services/webappclientservice.cpp" line="102"/>
 <source>QOwnNotes is now connected via websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now connected via websocket to %1</translation>
+<translation>QOwnNotes je sada povezan putem websocketa na %1</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="111"/>
 <source>QOwnNotes is now disconnected from websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now disconnected from websocket to %1</translation>
+<translation>QOwnNotes je sada isključen s websocketa na %1</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="127"/>
@@ -9597,7 +9597,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../main.cpp" line="109"/>
 <source>Prints out the version number.</source>
-<translation type="unfinished">Prints out the version number.</translation>
+<translation>Ispisuje broj verzije.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="114"/>

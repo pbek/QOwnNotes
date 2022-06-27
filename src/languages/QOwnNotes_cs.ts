@@ -4602,7 +4602,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <message>
 <location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="314"/>
 <source>Failed to unregister %1. Error: %2</source>
-<translation type="unfinished">Failed to unregister %1. Error: %2</translation>
+<translation>Zrušení registrace %1 se nezdařilo. Chyba: %2</translation>
 </message>
 </context>
 <context>
@@ -4730,22 +4730,22 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <message>
 <location filename="../utils/gui.cpp" line="1154"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Zdá se, že váš systém Linux používá tmavý režim. Chcete také zapnout tmavý režim v QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1167"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Zdá se, že váš systém Linux používá lehký režim. Chcete také vypnout tmavý režim v QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1249"/>
 <source>Panel disabled</source>
-<translation type="unfinished">Panel disabled</translation>
+<translation>Bedienfeld deaktiviert</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1250"/>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
+<translation>Das Bedienfeld &lt;strong&gt;%1&lt;/strong&gt; ist derzeit deaktiviert. Möchten Sie es wieder aktivieren, damit diese Aktion funktioniert?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="79"/>
@@ -4867,32 +4867,32 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <location filename="../utils/urlhandler.cpp" line="167"/>
 <location filename="../utils/urlhandler.cpp" line="188"/>
 <source>Note was not found</source>
-<translation type="unfinished">Note was not found</translation>
+<translation>Poznámka nebyla nalezena</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="168"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-<translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+<translation>Poznámka se nenašla.&lt;br /&gt;V umístění není možné automaticky vytvořit poznámku, protože podsložky jsou pro aktuální složku poznámek zakázané.</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="178"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+<translation>Poznámka nebyla nalezena, vytvořte novou poznámku &lt;strong&gt; %1 &lt;/strong&gt;?</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="182"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>Poznámka se nenašla. Chcete &lt;strong&gt;%1&lt;/strong&gt;v cestě&lt;strong&gt;%2&lt;/strong&gt; vytvořit novou poznámku?</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="227"/>
 <source>Failed to create note</source>
-<translation type="unfinished">Failed to create note</translation>
+<translation>Nepodařilo se vytvořit poznámku</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="228"/>
 <source>Note creation failed</source>
-<translation type="unfinished">Note creation failed</translation>
+<translation>Vytvoření poznámky selhalo</translation>
 </message>
 </context>
 <context>
@@ -4900,88 +4900,88 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="94"/>
 <source>Increased font size to %1 pt</source>
-<translation type="unfinished">Increased font size to %1 pt</translation>
+<translation>Velikost písma zvýšena na %1 pt</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="97"/>
 <source>Decreased font size to %1 pt</source>
-<translation type="unfinished">Decreased font size to %1 pt</translation>
+<translation>Velikost písma snížena na %1 pt</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="540"/>
 <source>An url was opened at the current cursor position</source>
-<translation type="unfinished">An url was opened at the current cursor position</translation>
+<translation>URL adresa byla otevřena ze současné pozice kurzoru</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="716"/>
 <source>No equation was found in front of the cursor</source>
-<translation type="unfinished">No equation was found in front of the cursor</translation>
+<translation>Před kurzorem nebyla nalezena žádná rovnice</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="736"/>
 <source>Result for equation: %1 = %2</source>
-<translation type="unfinished">Result for equation: %1 = %2</translation>
+<translation>Výsledek rovnice: %1 = %2</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="918"/>
 <source>&amp;Link selected text</source>
-<translation type="unfinished">&amp;Link selected text</translation>
+<translation>&amp;Přiřadit odkaz k vybranému textu</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="918"/>
 <source>Insert &amp;link</source>
-<translation type="unfinished">Insert &amp;link</translation>
+<translation>Vložit &amp;odkaz</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="925"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation type="unfinished">Block &amp;quote selected text</translation>
+<translation>&amp;Vybraný text vyberte</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="928"/>
 <source>Insert block &amp;quote</source>
-<translation type="unfinished">Insert block &amp;quote</translation>
+<translation>Vložit blokovou &amp;citaci</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="941"/>
 <source>Copy code block</source>
-<translation type="unfinished">Copy code block</translation>
+<translation>Kopírovat kódový blok</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="968"/>
 <source>Print</source>
-<translation type="unfinished">Print</translation>
+<translation>Tisk</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="976"/>
 <source>Print selected text</source>
-<translation type="unfinished">Print selected text</translation>
+<translation>Vytisknout vybraný text</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="985"/>
 <source>Print selected text (preview)</source>
-<translation type="unfinished">Print selected text (preview)</translation>
+<translation>Vytisknout vybraný text (náhled)</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1000"/>
 <source>Export</source>
-<translation type="unfinished">Export</translation>
+<translation>Exportovat</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1013"/>
 <source>Export selected text as PDF</source>
-<translation type="unfinished">Export selected text as PDF</translation>
+<translation>Exportovat vybraný text jako PDF</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1022"/>
 <source>Export selected text as PDF (preview)</source>
-<translation type="unfinished">Export selected text as PDF (preview)</translation>
+<translation>Exportovat vybraný text jako PDF (náhled)</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1054"/>
 <source>Custom actions</source>
-<translation type="unfinished">Custom actions</translation>
+<translation>Vlastní akce</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1145"/>
@@ -5001,7 +5001,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1173"/>
 <source>Spelling</source>
-<translation type="unfinished">Spelling</translation>
+<translation>Pravopis</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1203"/>
@@ -6693,7 +6693,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
 <source>Forget all "Don't ask again" choices in message boxes</source>
-<translation type="unfinished">Forget all "Don't ask again" choices in message boxes</translation>
+<translation>Zapomeňte na všechny možnosti „Už se neptat“ ve zprávách</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4254"/>
@@ -6758,17 +6758,17 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4811"/>
 <source>Time to wait before refreshing the preview after typing:</source>
-<translation type="unfinished">Time to wait before refreshing the preview after typing:</translation>
+<translation>Čas čekání před obnovením náhledu po zadání:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4818"/>
 <source>Reset the debounce time</source>
-<translation type="unfinished">Reset the debounce time</translation>
+<translation>Resetujte dobu odskoku</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4832"/>
 <source>0ms means don't wait for the typing to stop</source>
-<translation type="unfinished">0ms means don't wait for the typing to stop</translation>
+<translation>0 ms znamená, že nečekejte, až se psaní zastaví</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4864"/>
@@ -6793,7 +6793,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5247"/>
 <source>Note that disabling this will also disable the navigation panel!</source>
-<translation type="unfinished">Note that disabling this will also disable the navigation panel!</translation>
+<translation>Všimněte si, že deaktivace této funkce deaktivuje také navigační panel!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5311"/>
@@ -6808,7 +6808,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5396"/>
 <source>Show line numbers</source>
-<translation type="unfinished">Show line numbers</translation>
+<translation>Zobrazit čísla řádků</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5406"/>
@@ -6852,7 +6852,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5879"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
-<translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
+<translation>Automatický výběr položek na navigačním panelu při změně pozice kurzoru</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5948"/>
@@ -6867,102 +6867,102 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6383"/>
 <source>Command snippets</source>
-<translation type="unfinished">Command snippets</translation>
+<translation>Úryvky příkazů</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6392"/>
 <source>Tag name for commands notes</source>
-<translation type="unfinished">Tag name for commands notes</translation>
+<translation>Název značky pro poznámky k příkazům</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6399"/>
 <source>Commands tag:</source>
-<translation type="unfinished">Commands tag:</translation>
+<translation>Značka příkazů:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6419"/>
 <source>Commands note name:</source>
-<translation type="unfinished">Commands note name:</translation>
+<translation>Název poznámky příkazů:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6429"/>
 <source>Note name for adding new commands</source>
-<translation type="unfinished">Note name for adding new commands</translation>
+<translation>Název poznámky pro přidávání nových příkazů</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6469"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
-<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
+<translation>Pomocí &lt;a href="%1"&gt;webové aplikace QOwnNotes&lt;/a&gt; můžete vkládat fotografie do QOwnNotes na ploše z mobilního telefonu přes internet.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6506"/>
 <source>QOwnNotes web application</source>
-<translation type="unfinished">QOwnNotes web application</translation>
+<translation>Webová aplikace QOwnNotes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6596"/>
 <source>Server URL:</source>
-<translation type="unfinished">Server URL:</translation>
+<translation>Adresa URL serveru:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6653"/>
 <source>Show QR code</source>
-<translation type="unfinished">Show QR code</translation>
+<translation>Zobrazit QR kód</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6545"/>
 <source>Security token:</source>
-<translation type="unfinished">Security token:</translation>
+<translation>Bezpečnostní token:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6348"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
-<translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
+<translation>Nainstalujte si &lt;a href="%1"&gt;rozšíření prohlížeče Web Companion&lt;/a&gt; z &lt;a href="%2"&gt;Internetového obchodu Chrome&lt;/a&gt; nebo &lt;a href="%3"&gt;doplňku Firefox- na stránce&lt;/a&gt; k použití QOwnNotes jako webový klipr nebo pro správu záložek.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6364"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
-<translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
+<translation>Stáhněte si &lt;a href="%1"&gt;Správce úryvků příkazového řádku&lt;/a&gt; a spouštějte úryvky příkazů uložené v poznámkách v QOwnNotes z příkazového řádku.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6406"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+<translation>Poznámky se speciální značkou můžete použít k ukládání úryvků příkazů, které můžete spustit ze správce úryvků příkazového řádku. Další informace o syntaxi fragmentu příkazu získáte kliknutím &lt;a href="%1"&gt;sem&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6603"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
-<translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
+<translation>Tento token musíte zadat do webové aplikace QOwnNotes, abyste mohli hovořit se svou desktopovou aplikací QOwnNotes.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6535"/>
 <source>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation type="unfinished">A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+<translation>Otevře se připojení websocket k tomuto serveru, které bude fungovat jako most mezi webovou aplikací QOwnNotes a desktopovou aplikací QOwnNotes.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6613"/>
 <source>Copy security token to clipboard</source>
-<translation type="unfinished">Copy security token to clipboard</translation>
+<translation>Zkopírujte bezpečnostní token do schránky</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6566"/>
 <source>Generate new security token</source>
-<translation type="unfinished">Generate new security token</translation>
+<translation>Vygenerujte nový bezpečnostní token</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6627"/>
 <source>Reset the URL to default</source>
-<translation type="unfinished">Reset the URL to default</translation>
+<translation>Obnovte výchozí adresu URL</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6456"/>
 <source>QOwnNotes web application support</source>
-<translation type="unfinished">QOwnNotes web application support</translation>
+<translation>Podpora webových aplikací QOwnNotes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6462"/>
 <source>Enable web application support</source>
-<translation type="unfinished">Enable web application support</translation>
+<translation>Povolit podporu webových aplikací</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5632"/>
@@ -6993,7 +6993,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6106"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
-<translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
+<translation>Chcete-li uchovat kopii poznámek v koši, povolte místní koš</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6142"/>
@@ -7055,7 +7055,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6301"/>
 <source>Reset the socket server port</source>
-<translation type="unfinished">Reset the socket server port</translation>
+<translation>Resetujte port soketového serveru</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6315"/>
@@ -7772,7 +7772,7 @@ Chybová zpráva připojení: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2349"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
+<translation>Databáze byla znovu inicializována. Restartujte aplikaci nyní!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2360"/>
@@ -7857,22 +7857,22 @@ Chybová zpráva připojení: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3323"/>
 <source>Please enter a new note file extension:</source>
-<translation type="unfinished">Please enter a new note file extension:</translation>
+<translation>Zadejte prosím novou příponu souboru poznámky:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3357"/>
 <source>Markdown file</source>
-<translation type="unfinished">Markdown file</translation>
+<translation>Markdown soubor</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3359"/>
 <source>Plain text file</source>
-<translation type="unfinished">Plain text file</translation>
+<translation>Prostý textový soubor</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3377"/>
 <source>Remove note file extension</source>
-<translation type="unfinished">Remove note file extension</translation>
+<translation>Odeberte příponu souboru poznámky</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4093"/>
@@ -7995,7 +7995,7 @@ Chybová zpráva připojení: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3378"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
-<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+<translation>Opravdu chcete odstranit příponu souboru poznámky &lt;strong&gt;%1&lt;/strong&gt;? Soubory s touto příponou již neuvidíte v seznamu poznámek!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3668"/>
@@ -8360,7 +8360,7 @@ Vaše poznámky zůstanou neporušené!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
 <source>Only show attachments that are not used in notes</source>
-<translation type="unfinished">Only show attachments that are not used in notes</translation>
+<translation>Zobrazovat pouze přílohy, které nejsou použity v poznámkách</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
@@ -8578,14 +8578,14 @@ Vaše poznámky zůstanou neporušené!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="187"/>
 <source>Delete selected files</source>
-<translation type="unfinished">Delete selected files</translation>
+<translation>Odstranit vybrané soubory</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="188"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation type="unfinished">
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybrané soubory?</numerusform>
+<numerusform>Odstranit &lt;strong&gt;%n &lt;/strong&gt; vybrané soubory?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 </translation>
@@ -8593,7 +8593,7 @@ Vaše poznámky zůstanou neporušené!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
 <source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<translation>Soubor neexistuje</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
@@ -8623,27 +8623,27 @@ Vaše poznámky zůstanou neporušené!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="436"/>
 <source>&amp;Open image externally</source>
-<translation type="unfinished">&amp;Open image externally</translation>
+<translation>&amp;Otevřít obrázek v externí aplikaci</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="437"/>
 <source>&amp;Rename image</source>
-<translation type="unfinished">&amp;Rename image</translation>
+<translation>&amp;Přejmenovat obrázek</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="438"/>
 <source>&amp;Delete images</source>
-<translation type="unfinished">&amp;Delete images</translation>
+<translation>&amp;Odstraňte obrázky</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="439"/>
 <source>&amp;Add images to current note</source>
-<translation type="unfinished">&amp;Add images to current note</translation>
+<translation>&amp;Přidejte obrázky k aktuální poznámce</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="472"/>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>&amp;Otevřít poznámku</translation>
 </message>
 </context>
 <context>
@@ -8809,12 +8809,12 @@ Vaše poznámky zůstanou neporušené!</translation>
 <message>
 <location filename="../dialogs/tododialog.ui" line="349"/>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>Toto nefunguje pro podpoložky, protože mohou být skryty nadřazenou položkou!</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="352"/>
 <source>Show only items due today</source>
-<translation type="unfinished">Show only items due today</translation>
+<translation>Zobrazit pouze položky splatné dnes</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="120"/>
@@ -8849,7 +8849,7 @@ Vaše poznámky zůstanou neporušené!</translation>
 <message>
 <location filename="../dialogs/tododialog.ui" line="334"/>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Datum splatnosti</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="342"/>
@@ -9196,7 +9196,7 @@ To nelze vrátit zpět!</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="64"/>
 <source>&amp;Download latest</source>
-<translation type="unfinished">&amp;Download latest</translation>
+<translation>&amp;Stáhnout nejnovější</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="74"/>
@@ -9287,42 +9287,42 @@ To nelze vrátit zpět!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="454"/>
 <location filename="../dialogs/updatedialog.cpp" line="486"/>
 <source>Permission error</source>
-<translation type="unfinished">Permission error</translation>
+<translation>Chyba oprávnění</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
+<translation>Do vašeho spustitelného souboru QOwnNotes '%1' nelze zapisovat! Aby mohl být aktualizován, musí být zapisovatelný pro aktuálního uživatele.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="455"/>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
-<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
+<translation>Dočasný soubor '%1' nemohl být proveden jako spustitelný! Musíte nahradit '%2' sami.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="465"/>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
+<translation>Váš starý spustitelný soubor QOwnNotes '%1' nelze odstranit! Musíte jej sami nahradit '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="495"/>
 <source>Restart application</source>
-<translation type="unfinished">Restart application</translation>
+<translation>Restartovat aplikaci</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="496"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished">You now can restart the application to complete the update process.</translation>
+<translation>Nyní můžete restartovat aplikaci a dokončit proces aktualizace.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="498"/>
 <source>Restart</source>
-<translation type="unfinished">Restart</translation>
+<translation>Restartovat</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="498"/>
 <source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
+<translation>Zrušit</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="524"/>
@@ -9359,12 +9359,12 @@ To nelze vrátit zpět!</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="475"/>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</translation>
+<translation>Váš starý spustitelný soubor QOwnNotes '%1' nemohl být nahrazen novým souborem '%2'! Musíte si ho vyměnit sami.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="487"/>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation type="unfinished">The app file '%1' could not be made executable! You need to make it executable yourself.</translation>
+<translation>Soubor aplikace '%1' nelze nastavit jako spustitelný! Musíte to udělat spustitelným sami.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="575"/>
@@ -9440,27 +9440,27 @@ To nelze vrátit zpět!</translation>
 <message>
 <location filename="../services/webappclientservice.cpp" line="102"/>
 <source>QOwnNotes is now connected via websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now connected via websocket to %1</translation>
+<translation>QOwnNotes je nyní připojen přes websocket k %1</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="111"/>
 <source>QOwnNotes is now disconnected from websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now disconnected from websocket to %1</translation>
+<translation>QOwnNotes je nyní odpojen od webového soketu k %1</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="127"/>
 <source>Web app warning</source>
-<translation type="unfinished">Web app warning</translation>
+<translation>Upozornění webové aplikace</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="139"/>
 <source>Image received</source>
-<translation type="unfinished">Image received</translation>
+<translation>Obrázek přijat</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="140"/>
 <source>Insert image received from QOwnNotes web application?</source>
-<translation type="unfinished">Insert image received from QOwnNotes web application?</translation>
+<translation>Vložit obrázek přijatý z webové aplikace QOwnNotes?</translation>
 </message>
 </context>
 <context>
@@ -9654,7 +9654,7 @@ To nelze vrátit zpět!</translation>
 <message>
 <location filename="../main.cpp" line="109"/>
 <source>Prints out the version number.</source>
-<translation type="unfinished">Prints out the version number.</translation>
+<translation>Vytiskne číslo verze.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="114"/>
@@ -9674,7 +9674,7 @@ To nelze vrátit zpět!</translation>
 <message>
 <location filename="../main.cpp" line="136"/>
 <source>Triggers a menu action after the application was started.</source>
-<translation type="unfinished">Triggers a menu action after the application was started.</translation>
+<translation>Spustí akci nabídky po spuštění aplikace.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="566"/>

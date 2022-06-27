@@ -60,7 +60,7 @@ Puede utilizar el [atajo](./shortcuts.md) <kbd>Ctrl + U</kbd> para subrayar un t
 ## Tachar
 
 ```markdown
-~~strike out~~
+~~tachar~~
 ```
 
 ::: tip
@@ -139,7 +139,7 @@ También puede pegar directamente una imagen del portapapeles en su nota con <kb
 ## Código en línea y bloques de código
 
 ```markdown
-Inline `code` has `back-ticks around` it.
+El 'código' en línea tiene 'marcas de retroceso' a su alrededor.
 ```
 
 ::: tip
@@ -148,7 +148,7 @@ Puede usar el [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> en texto en
 
 Blocks of code are either fenced by lines with three back-ticks, or are indented with four spaces.
 
-### 4-Spaces fence
+### Valla de 4 espacios
 
 Agregue cuatro espacios delante de su código para marcarlo como bloque de código.
 
@@ -222,7 +222,7 @@ Actualmente, los idiomas admitidos (e identificadores de bloque de código) son:
 Las tablas no forman parte de la especificación principal de Markdown, pero la vista previa de QOwnNotes las admite. 
 
 ~~~markdown
-Colons can be used to align columns.
+Los dos puntos se pueden utilizar para alinear columnas.
 
 | Tablas | Son | Cool |
 | ------------- |: -------------: | -----: |

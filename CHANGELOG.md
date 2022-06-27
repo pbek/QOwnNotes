@@ -3,6 +3,8 @@
 ## 22.6.2
 - the note actions for notes in subfolders are now enabled in the note tree context
   menu if the "note tree mode" is enabled (for [#2355](https://github.com/pbek/QOwnNotes/issues/2355))
+- added more translation (thank you tigris.huszonkilenc, mguerra, rawfreeamy,
+  chocolatine, amirkbrpr, noureddin)
 
 ## 22.6.1
 - under Linux (with dbus) the application will now ask you if you want to turn on 

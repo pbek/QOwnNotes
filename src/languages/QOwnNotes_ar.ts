@@ -4811,22 +4811,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../utils/gui.cpp" line="1154"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>يبدو أن نظام لينكس الخاص بك يستخدم الوضع المظلم. هل تريد أيضا تفعيل الوضع المظلم في QOwnNotes؟</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1167"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>يبدو أن نظام لينكس الخاص بك يستخدم الوضع المضيء. هل تريد أيضا تعطيل الوضع المظلم في QOwnNotes؟</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1249"/>
 <source>Panel disabled</source>
-<translation type="unfinished">Panel disabled</translation>
+<translation>اللوحة معطلة</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1250"/>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
+<translation>لوحة &lt;strong&gt;%1&lt;/strong&gt; معطلة حاليا؛ هل تريد تفعيلها من جديد لإتمام هذا الإجراء؟</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="79"/>

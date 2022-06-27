@@ -98,10 +98,10 @@ De huidige notitie ophalen
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * QML wrapper to get the current note
- *
- * @returns {NoteApi} the current note object
- */
+  * QML-wrapper om de huidige notitie te krijgen
+  *
+  * @returns {NoteApi} het huidige notitieobject
+  */
 NoteApi currentNote();
 ```
 
@@ -523,8 +523,8 @@ Selecteer de huidige woord in de tekstbewerking van de notitie
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Selects the current word in the note text edit
- */
+  * Selecteert het huidige woord in de notitietekstbewerking
+  */
 void ScriptingService::noteTextEditSelectCurrentWord();
 ```
 
@@ -1562,19 +1562,19 @@ U kunt markeringsregels rechtstreeks in de editor invoegen door reguliere expres
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Adds a highlighting rule to the syntax highlighter of the editor
- *
- * @param pattern {QString} the regular expression pattern to highlight
- * @param shouldContain {QString} a string that must be contained in the highlighted text for the pattern to be parsed
- * @param state {int} the state of the syntax highlighter to use
- * @param capturingGroup {int} the capturing group for the pattern to use for highlighting (default: 0)
- * @param maskedGroup {int} the capturing group for the pattern to use for masking (default: 0)
- */
-void ScriptingService::addHighlightingRule(const QString &pattern,
-                                           const QString &shouldContain,
-                                           int state,
-                                           int capturingGroup,
-                                           int maskedGroup);
+  * Voegt een markeringsregel toe aan de syntaxismarkering van de editor
+  *
+  * @param patroon {QString} het reguliere expressiepatroon om te markeren
+  * @param shouldContain {QString} een tekenreeks die in de gemarkeerde tekst moet staan om het patroon te kunnen ontleden
+  * @param state {int} de staat van de te gebruiken syntax highlighter
+  * @param captureGroup {int} de capture-groep voor het patroon om te gebruiken voor markering (standaard: 0)
+  * @param maskedGroup {int} de vastleggroep voor het patroon om te gebruiken voor maskering (standaard: 0)
+  */
+void ScriptingService::addHighlightingRule(const QString &patroon,
+                                            const QString &shouldContain,
+                                            int staat,
+                                            int captureGroup,
+                                            int maskedGroup);
 ```
 
 ### Statussen markeren
@@ -1582,14 +1582,14 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | Naam                       | Nr. |
 | -------------------------- | --- |
 | NoState                    | -1  |
-| Link                       | 0   |
-| Image                      | 3   |
+| Koppeling                  | 0   |
+| Afbeelding                 | 3   |
 | CodeBlock                  | 4   |
 | CodeBlockComment           | 5   |
-| Italic                     | 7   |
-| Bold                       | 8   |
-| List                       | 9   |
-| Comment                    | 11  |
+| Cursief                    | 7   |
+| Vet                        | 8   |
+| Lijst                      | 9   |
+| Opmerking                  | 11  |
 | H1                         | 12  |
 | H2                         | 13  |
 | H3                         | 14  |
@@ -1611,12 +1611,12 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 
 ### Voorbeeld
 ```js
-// Highlight a text line like "BLOCK: some text" as blockquote (state 18)
+// Markeer een tekstregel zoals "BLOCK: some text" als blockquote (status 18)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);
 
-// Mask out (state 24) all characters after 32 characters in a line
-// capturingGroup 1 means the expression from the first bracketed part of the pattern will be highlighted
-// maskedGroup -1 means that no masking should be done
+// Maskeer alle tekens na 32 tekens op een regel uit (status 24)
+// captureGroup 1 betekent dat de uitdrukking van het eerste deel van het patroon tussen haakjes wordt gemarkeerd
+// maskedGroup -1 betekent dat er niet gemaskeerd moet worden
 script.addHighlightingRule("^.{32}(.+)", "", 24, 1, -1);
 ```
 

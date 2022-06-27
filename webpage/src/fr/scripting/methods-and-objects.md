@@ -343,7 +343,7 @@ Enregistrer une étiquette
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Registers a label to write to
+ * Enregistre une étiquette sur laquelle écrire
  *
  * @param identifier the identifier of the label
  * @param text the text shown in the label (optional)
@@ -1581,14 +1581,14 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | Nom                        | Numéro |
 | -------------------------- | ------ |
 | NoState                    | -1     |
-| Link                       | 0      |
+| Lien                       | 0      |
 | Image                      | 3      |
 | CodeBlock                  | 4      |
 | CodeBlockComment           | 5      |
 | Italic                     | 7      |
-| Bold                       | 8      |
+| Gras                       | 8      |
 | List                       | 9      |
-| Comment                    | 11     |
+| Commentaire                | 11     |
 | H1                         | 12     |
 | H2                         | 13     |
 | H3                         | 14     |

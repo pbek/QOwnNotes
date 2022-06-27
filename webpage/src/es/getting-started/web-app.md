@@ -2,7 +2,7 @@
 image: /img/blog/web-application-settings.png
 ---
 
-# QOwnNotes Web App
+# Aplicación web de QOwnNotes
 
 Puede insertar fotos de su teléfono móvil en la nota actual en QOwnNotes en su escritorio a través de la **aplicación web ** en [app.qownnotes.org](https://app.qownnotes.org/).
 

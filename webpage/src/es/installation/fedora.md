@@ -1,4 +1,4 @@
-# Install on Fedora Linux
+# Instalar en Fedora Linux
 
 Hay repositorios QOwnNotes para **Fedora 28 y superior**.
 

@@ -17,7 +17,7 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-vertical.png" alt="Vertical view" />
     <div class="sheet">
-      View your notes in a vertical markdown view by moving the panels
+      أظهر ملاحظاتك رأسيًا بتحريك اللوحات
     </div>
   </v-carousel-item>
   <v-carousel-item>

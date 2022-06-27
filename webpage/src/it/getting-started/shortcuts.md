@@ -132,37 +132,37 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> apre l'elenco delle cose da fare
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> apre la nota corrente in un editor esterno
 - <kbd>^ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> apre la nota corrente in una vista
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> enables or disables editing of notes
-- <kbd>⌃ Ctrl</kbd> + <kbd>Up</kbd> jumps to the previous visible note
-    - alternate shortcut is <kbd>⌘ Cmd</kbd> + <kbd>Page Up</kbd>
-- <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> jumps to the next visible note
-    - alternate shortcut is <kbd>⌘ Cmd</kbd> + <kbd>Page Down</kbd>
-- <kbd>⌥ Alt</kbd> + <kbd>Page Up</kbd> jumps to the previous note tab
-- <kbd>⌥ Alt</kbd> + <kbd>Page Down</kbd> jumps to the next note tab
-- <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> closes the current note tab
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> toggles the distraction free mode
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> apre la cartella della nota corrente nel Finder
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> abilita o disabilita la modifica delle note
+- <kbd>⌃ Ctrl</kbd> + <kbd>Up</kbd> salta alla nota visibile precedente
+    - la scorciatoia alternativa è <kbd>⌘ Cmd</kbd> + <kbd>Page Up</kbd>
+- <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> passa alla nota vista successivamente
+    - la scorciatoia alternativa è <kbd>⌘ Cmd</kbd> + <kbd>Page Down</kbd>
+- <kbd>⌥ Alt</kbd> + <kbd>Pag↑</kbd> salta alla scheda note precedente
+- <kbd>⌥ Alt</kbd> + <kbd>Pag↓</kbd> passa alla scheda note successiva
+- <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> chiude la scheda della nota corrente
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> attiva o disattiva la modalità senza distrazioni
     - puoi anche chiudere con <kbd>Esc</kbd>
-- <kbd>⌘ Cmd</kbd> + <kbd>P</kbd> prints the current note as text
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> prints the current note as markdown
-- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
-- <kbd>⌘ Cmd</kbd> + <kbd>,</kbd> opens the settings
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> adds a new tag to a note
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> reloads the current note folder
-- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> lets you select a different note folder
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> hides or shows the main menu bar
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you search for actions
-- <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> manually saves modified notes
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> opens the Script repository dialog
+- <kbd>⌘ Cmd</kbd> + <kbd>P</kbd> stampa la nota corrente come testo
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> stampa la nota corrente come markdown
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>V</kbd> incolla note, immagini e html dagli appunti
+- <kbd>⌘ Cmd</kbd> + <kbd>,</kbd> apre le impostazioni
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> aggiunge un nuovo tag a una nota
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> ricarica la cartella della nota corrente
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> consente di selezionare una cartella di note diversa
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> ricarica il motore di scripting
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> nasconde o mostra la barra del menu principale
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> ti consente di cercare azioni
+- <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> salva manualmente le note modificate
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> apre la finestra di dialogo Repository di script
 - <kbd>F4</kbd> passa al pannello di modifica delle note
 - <kbd>F5</kbd> passa all'elenco delle note
 - <kbd>F6</kbd> passa al pannello delle sottocartelle delle note
 - <kbd>F7</kbd> passa al pannello delle etichette
 - <kbd>F8</kbd> passa al pannello di navigazione
 - <kbd>F10</kbd> attiva il menu contestuale del widget corrente
-- <kbd>⌘ Cmd</kbd> + <kbd>F11</kbd> toggles full-screen mode
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> copies the headline of the current note
+- <kbd>⌘ Cmd</kbd> + <kbd>F11</kbd> commuta la modalità a schermo intero
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> copia il titolo della nota corrente
 
 ### Nella barra di ricerca delle note
 
@@ -172,48 +172,48 @@
 ### Nell'elenco delle note
 
 - doppio clic su una nota per aprirla in un nuovo tab (ricorda che ci può essere un collegamento cogli script che sovrascrive l'azione di doppio clic)
-- <kbd>⌘ Cmd</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
+- <kbd>⌘ Cmd</kbd> + <kbd>A</kbd> seleziona tutte le note (per spostarle, copiarle o rimuoverle con un clic destro)
 - <kbd>Tab</kbd> o <kbd>Invio</kbd> consente di modificare la nota corrente
 
 ### Nel pannello di modifica del testo della nota
 
-- <kbd>⌘ Cmd</kbd> + <kbd>Click</kbd> on a link to open it
-- <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> lets you search in the current note
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+- <kbd>⌘ Cmd</kbd> + <kbd>Click</kbd> su un link per aprirlo
+- <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> consente di cercare nella nota corrente
+    - usa i tasti <kbd>↑</kbd> e <kbd>↓</kbd> o <kbd>F3</kbd> e <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> per passare alla corrispondenza precedente e successiva
     - <kbd>Esc</kbd> chiude la barra di ricerca
-- <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> lets you search and replace in the current note
-- <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
-    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> does the same
-- <kbd>⌘ Cmd</kbd> + <kbd>Backspace</kbd> deletes the current line
-- <kbd>⌃ Ctrl</kbd> + <kbd>Backspace</kbd> deletes the current word
-- <kbd>⌘ Cmd</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> opens a dialog to add note link
+- <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> consente di cercare e sostituire nella nota corrente
+- <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> duplica la riga corrente o il testo selezionato
+    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> fa lo stesso
+- <kbd>⌘ Cmd</kbd> + <kbd>Backspace</kbd> cancella la riga corrente
+- <kbd>⌃ Ctrl</kbd> + <kbd>Backspace</kbd> cancella la parola corrente
+- <kbd>⌘ Cmd</kbd> + <kbd>L</kbd> apre una finestra di dialogo per aggiungere un collegamento di testo (funziona anche sul testo selezionato)
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> apre una finestra di dialogo per aggiungere il collegamento alla nota
 - <kbd>⌘ Cmd</kbd> + <kbd>T</kbd> inserisce la data corrente nel formato scelto dall'utente
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> inserts a table
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>C</kbd> inserts a code block at the current position
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> inserts a block quote at the current position
-- <kbd>⌘ Cmd</kbd> + <kbd>B</kbd> formats the selected text bold
-- <kbd>⌘ Cmd</kbd> + <kbd>I</kbd> formats the selected text italic
-- <kbd>⌘ Cmd</kbd> + <kbd>U</kbd> formats the selected text underline
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> strikes out the selected text
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> inserisce una tabella
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>C</kbd> inserisce un blocco di codice nella posizione corrente
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> inserisce una virgoletta nella posizione corrente
+- <kbd>⌘ Cmd</kbd> + <kbd>B</kbd> formatta il testo selezionato in grassetto
+- <kbd>⌘ Cmd</kbd> + <kbd>I</kbd> formatta il corsivo del testo selezionato
+- <kbd>⌘ Cmd</kbd> + <kbd>U</kbd> formatta la sottolineatura del testo selezionato
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> cancella il testo selezionato
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> scorre le occorrenze di testo selezionato
 - <kbd>Tab</kbd> fa rientrare il testo selezionato (funziona anche su più righe)
     - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> annulla il rientro del testo selezionato
 - <kbd>Tab</kbd> dopo un carattere di elenco non ordinato fa rientrare l'elemento dell'elenco
     - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> dopo un carattere di elenco non ordinato annulla il rientro della voce dell'elenco
 - <kbd>Invio</kbd> negli elenchi crea un nuovo elemento dell'elenco
-- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history
-    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
-- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
-- <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> increases the note text font size by one point
-- <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> decreases the note text font size by one point
-- <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> resets the note text font size
-- <kbd>⌘ Cmd</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in the current line in front of the cursor, auto-completes text or opens urls
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Left</kbd> salta indietro nella cronologia delle note
+    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> salta in avanti nella cronologia delle note
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> imposta un segnalibro nota nell'indice segnalibro 1..9
+- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> salta al segnalibro della nota nell'indice del segnalibro 0..9
+- <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> aumenta la dimensione del carattere del testo della nota di un punto
+- <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> riduce la dimensione del carattere del testo della nota di un punto
+- <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> ripristina la dimensione del carattere del testo della nota
+- <kbd>⌘ Cmd</kbd> + <kbd>Space</kbd>cerca di risolvere semplici equazioni come `(4+5)*3=` nella riga corrente davanti al cursore, completa automaticamente il testo o apre gli URL
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> divide la nota corrente in due note nella posizione corrente del cursore
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> searches for the selected text on the web
 - <kbd>⌘ Cmd</kbd> + <kbd>Up</kbd> scrolls the content up
 - <kbd>⌘ Cmd</kbd> + <kbd>Down</kbd> scrolls the content down

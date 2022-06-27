@@ -4648,12 +4648,12 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <location filename="../utils/gui.cpp" line="1154"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Ihr Linux-System scheint den Dunkelmodus zu verwenden. Möchten Sie auch den Dunkelmodus in QOwnNotes aktivieren?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1167"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Ihr Linux-System scheint den Light-Modus zu verwenden. Möchten Sie den Dunkelmodus auch in QOwnNotes deaktivieren?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1249"/>

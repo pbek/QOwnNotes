@@ -55,13 +55,13 @@ Iniciar un programa externo y esperar la salida
 ### Parámetros y llamada al método
 ```cpp
 /**
- * QML wrapper to start a synchronous process
- *
- * @param executablePath the path of the executable
- * @param parameters a list of parameter strings
- * @param data the data that will be written to the process (optional)
- * @param workingDirectory the working directory to execute the process in (optional)
- * @return the text that was returned by the process
+  * Envoltorio QML para iniciar un proceso síncrono
+  *
+  * @param executablePath la ruta del ejecutable
+  * @param parámetros una lista de cadenas de parámetros
+  * @param data los datos que se escribirán en el proceso (opcional)
+  * @param workingDirectory el directorio de trabajo para ejecutar el proceso (opcional)
+  * @return el texto que devolvió el proceso
 QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data, QString workingDirectory);
 ```
 
@@ -98,9 +98,9 @@ Obtener la nota actual
 ### Parámetros y llamada al método
 ```cpp
 /**
- * QML wrapper to get the current note
- *
- * @returns {NoteApi} the current note object
+  * Envoltorio QML para obtener la nota actual
+  *
+  * @returns {NoteApi} el objeto de nota actual
  */
 NoteApi currentNote();
 ```
@@ -424,7 +424,7 @@ Accediendo al portapapeles
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns the content of the clipboard as text or html
+ * Devuelve el contenido del portapapeles como texto o html
  *
  * @param asHtml returns the clipboard content as html instead of text
  */
@@ -523,7 +523,7 @@ Seleccione la palabra actual en la edición de texto de la nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Selects the current word in the note text edit
+ * Selecciona la palabra actual en la edición de texto de nota
  */
 void ScriptingService::noteTextEditSelectCurrentWord();
 ```
@@ -771,7 +771,7 @@ Agregar una hoja de estilo personalizada
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Adds a custom stylesheet to the application
+ * Agrega una hoja de estilo personalizada a la aplicación.
  *
  * @param stylesheet
  */
@@ -1260,7 +1260,7 @@ bool ScriptingService :: clearCacheDir (const QString & subDir) const;
 
 ### Ejemplo
 ```js
-// clear cache directory of my-script-id 
+// borrar el directorio de caché de my-script-id
 script.clearCacheDir("my-script-id");
 ```
 
@@ -1336,7 +1336,7 @@ Obtener el separador de directorios nativo
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns the native directory separator "/" or "\" on Windows
+ * Devuelve el separador de directorio nativo "/" o "\" en Windows
  *
  * @return
  */
@@ -1345,7 +1345,7 @@ QString ScriptingService::dirSeparator();
 
 ### Ejemplo
 ```js
-// will return "\" on Windows
+// devolverá "\" en Windows
 script.log(script.dirSeparator());
 ```
 
@@ -1355,7 +1355,7 @@ Obtener una lista de las rutas de todas las notas seleccionadas
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns a list of the paths of all selected notes
+ * Devuelve una lista de las rutas de todas las notas seleccionadas
  *
  * @return {QStringList} list of selected note paths
  */
@@ -1456,7 +1456,7 @@ Abrir un diálogo de entrada con una edición de línea
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Opens an input dialog with a line edit
+ * Abre un cuadro de diálogo de entrada con una edición de línea.
  *
  * @param title {QString} title of the dialog
  * @param label {QString} label text of the dialog
@@ -1470,7 +1470,7 @@ QString ScriptingService::inputDialogGetText(
 ### Ejemplo
 ```js
 var result = script.inputDialogGetText(
-    "line edit", "Please enter a name", "current text");
+    "line edit", "Por favor ingresa un nombre", "current text");
 script.log(result);
 ```
 
@@ -1480,7 +1480,7 @@ Comprobando si existe un archivo
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Check if a file exists
+ * Comprobar si existe un archivo
  * @param filePath
  * @return
  */
@@ -1499,7 +1499,7 @@ Leer texto de un archivo
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Read text from a file
+ * Leer texto de un archivo
  *
  * @param filePath {QString} path of the file to load
  * @param codec {QString} file encoding (default: UTF-8)
@@ -1523,7 +1523,7 @@ Escribir texto en un archivo
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Writes a text to a file
+ * Escribe un texto en un archivo.
  *
  * @param filePath {QString}
  * @param data {QString}
@@ -1552,15 +1552,15 @@ También puede escuchar sockets con `WebSocket`. Por favor, mira el ejemplo [web
 
 Tenga en cuenta que debe tener instalada la biblioteca QML `websocket` de Qt para usar esto. Por ejemplo, en Ubuntu Linux puede instalar `módulo-qml-qtwebsockets`.
 
-Adding a highlighting rule for the editor
+Agregar una regla de resaltado para el editor
 -----------------------------------------
 
-You can directly inject highlighting rules into the editor by defining regular expressions and assigning them to a highlighting state.
+Puede inyectar directamente reglas de resaltado en el editor definiendo reglas regulares expresiones y asignarles un estado de resaltado.
 
-### Method call and parameters
+### Parámetros y llamada al método
 ```cpp
 /**
- * Adds a highlighting rule to the syntax highlighter of the editor
+ * Agrega una regla de resaltado al resaltador de sintaxis del editor
  *
  * @param pattern {QString} the regular expression pattern to highlight
  * @param shouldContain {QString} a string that must be contained in the highlighted text for the pattern to be parsed
@@ -1575,19 +1575,19 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
                                            int maskedGroup);
 ```
 
-### Highlighting states
+### Destacando estados
 
-| Name                       | Nr. |
+| Nombre                     | No. |
 | -------------------------- | --- |
 | NoState                    | -1  |
-| Link                       | 0   |
-| Image                      | 3   |
+| Enlace                     | 0   |
+| Imagen                     | 3   |
 | CodeBlock                  | 4   |
 | CodeBlockComment           | 5   |
-| Italic                     | 7   |
-| Bold                       | 8   |
-| List                       | 9   |
-| Comment                    | 11  |
+| Oblicua                    | 7   |
+| Negrita                    | 8   |
+| Liza                       | 9   |
+| Comentario                 | 11  |
 | H1                         | 12  |
 | H2                         | 13  |
 | H3                         | 14  |
@@ -1596,7 +1596,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | H6                         | 17  |
 | BlockQuote                 | 18  |
 | HorizontalRuler            | 21  |
-| Table                      | 22  |
+| Tabla                      | 22  |
 | InlineCodeBlock            | 23  |
 | MaskedSyntax               | 24  |
 | CurrentLineBackgroundColor | 25  |
@@ -1607,7 +1607,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | CheckBoxChecked            | 30  |
 | StUnderline                | 31  |
 
-### Example
+### Ejemplo
 ```js
 // Highlight a text line like "BLOCK: some text" as blockquote (state 18)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);
@@ -1618,4 +1618,4 @@ script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);
 script.addHighlightingRule("^.{32}(.+)", "", 24, 1, -1);
 ```
 
-You can also take a look at the examples in [highlighting.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/highlighting.qml).
+También puede echar un vistazo a los ejemplos en [highlighting.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/highlighting.qml).

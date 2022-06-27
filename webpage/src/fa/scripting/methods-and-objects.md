@@ -1259,7 +1259,7 @@ You can clear the cache directory of your script by passing its name to clearCac
 bool ScriptingService::clearCacheDir(const QString &subDir) const;
 ```
 
-### Example
+### مثال
 ```js
 // clear cache directory of my-script-id 
 script.clearCacheDir("my-script-id");
@@ -1578,35 +1578,35 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 
 ### حالات برجسته سازی
 
-| نام                        | شماره |
-| -------------------------- | ----- |
-| NoState                    | -1    |
-| Link                       | 0     |
-| Image                      | 3     |
-| CodeBlock                  | 4     |
-| CodeBlockComment           | 5     |
-| Italic                     | 7     |
-| Bold                       | 8     |
-| List                       | 9     |
-| Comment                    | 11    |
-| H1                         | 12    |
-| H2                         | 13    |
-| H3                         | 14    |
-| H4                         | 15    |
-| H5                         | 16    |
-| H6                         | 17    |
-| BlockQuote                 | 18    |
-| HorizontalRuler            | 21    |
-| Table                      | 22    |
-| InlineCodeBlock            | 23    |
-| MaskedSyntax               | 24    |
-| CurrentLineBackgroundColor | 25    |
-| BrokenLink                 | 26    |
-| FrontmatterBlock           | 27    |
-| TrailingSpace              | 28    |
-| CheckBoxUnChecked          | 29    |
-| CheckBoxChecked            | 30    |
-| StUnderline                | 31    |
+| نام                    | شماره |
+| ---------------------- | ----- |
+| NoState                | -1    |
+| اتصال                  | 0     |
+| تصویر                  | 3     |
+| کد بلوک                | 4     |
+| توضیحات کد بلوک        | 5     |
+| خوابیده                | 7     |
+| توپر                   | 8     |
+| لیست                   | 9     |
+| توضیحات                | 11    |
+| H1                     | 12    |
+| H2                     | 13    |
+| H3                     | 14    |
+| H4                     | 15    |
+| H5                     | 16    |
+| H6                     | 17    |
+| بلوک نقل قول           | 18    |
+| خط کش افقی             | 21    |
+| جدول                   | 22    |
+| کد بلوک درون خطی       | 23    |
+| چیدمان پوشیده          | 24    |
+| رنگ پس زمینه خط کنونی  | 25    |
+| لینک شکسته             | 26    |
+| بلوک پیش گفتار         | 27    |
+| فضای خالی              | 28    |
+| کادر انتخاب بدون علامت | 29    |
+| کادر انتخاب با علامت   | 30    |
+| StUnderline            | 31    |
 
 ### مثال
 ```js

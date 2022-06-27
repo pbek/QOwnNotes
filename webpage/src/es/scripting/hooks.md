@@ -155,13 +155,13 @@ handleNewNoteHeadlineHook
 ### Parámetros y llamada al método
 ```js
 /**
- * This function is called before a note is created
+ * Esta función se llama antes de que se cree una nota.
  *
- * It allows you to modify the headline of the note before it is created
- * Note that you have to take care about a unique note name, otherwise
- * the new note will not be created, it will just be found in the note list
- *
- * You can use this function for creating note templates
+* Te permite modificar el titular de la nota antes de crearla
+  * Tenga en cuenta que debe tener cuidado con un nombre de nota único, de lo contrario
+  * la nueva nota no se creará, solo se encontrará en la lista de notas
+  *
+  * Puede usar esta función para crear plantillas de notas
  *
  * @param headline text that would be used to create the headline
  * @return {string} the headline of the note
@@ -177,14 +177,14 @@ preNoteToMarkdownHtmlHook
 ### Parámetros y llamada al método
 ```js
 /**
- * This function is called before the markdown html of a note is generated
- *
- * It allows you to modify what is passed to the markdown to html converter
- *
- * The function can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
- * to its graphical representation for the preview
- *
- * The note will not be changed in this process
+  * Esta función se llama antes de que se genere el html de descuento de una nota
+  *
+  * Te permite modificar lo que se pasa al convertidor markdown to html
+  *
+  * La función se puede usar, por ejemplo, en múltiples scripts para generar código (como LaTeX math o mermaid)
+  * a su representación gráfica para la vista previa
+  *
+  * La nota no se cambiará en este proceso
  *
  * @param {NoteApi} note - the note object
  * @param {string} markdown - the markdown that is about to being converted to html
@@ -202,13 +202,13 @@ noteToMarkdownHtmlHook
 ### Parámetros y llamada al método
 ```js
 /**
- * This function is called when the markdown html of a note is generated
- *
- * It allows you to modify this html
- * This is for example called before by the note preview
- *
- * The function can be used in multiple scripts to modify the html of the preview
- *
+  * Esta función se llama cuando se genera el html de descuento de una nota
+  *
+  * Te permite modificar este html
+  * Esto es, por ejemplo, llamado antes por la vista previa de la nota
+  *
+  * La función se puede usar en múltiples scripts para modificar el html de la vista previa
+  *
  * @param {NoteApi} note - the note object
  * @param {string} html - the html that is about to being rendered
  * @param {bool} forExport - true if the html is used for an export, false for the preview

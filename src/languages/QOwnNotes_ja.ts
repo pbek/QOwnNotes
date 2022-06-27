@@ -878,158 +878,158 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>FakeVimを使用する</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished">Read .vimrc from location:</translation>
+<translation>Read .vimrc from location:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished">Show position of text marks</translation>
+<translation>テキストマークの位置を表示する</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished">Pass control keys</translation>
+<translation>コントロールキーを渡す</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished">Pass keys in insert mode</translation>
+<translation>挿入モードでキーを渡す</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>行の開始</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished">Tabulator size:</translation>
+<translation>タビュレーターのサイズ：</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished">Smart tabulators</translation>
+<translation>スマートタビュレーター</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished">Highlight search results</translation>
+<translation>検索結果を強調表示する</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished">Shift width:</translation>
+<translation>シフト幅：</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished">Expand tabulators</translation>
+<translation>タビュレーターを展開</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished">Automatic indentation</translation>
+<translation>自動インデント</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished">Incremental search</translation>
+<translation>インクリメンタル検索</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished">Use search dialog</translation>
+<translation>検索ダイアログを使用する</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished">Use smartcase</translation>
+<translation>スマートケースを使用する</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished">Use ignorecase</translation>
+<translation>無視するケースを使用する</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished">Use wrapscan</translation>
+<translation>ラップスキャンを使用する</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished">Use tildeop</translation>
+<translation>tildeopを使用する</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished">Show partial command</translation>
+<translation>部分的なコマンドを表示</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>カーソルを基準にした行番号を表示する</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished">Blinking cursor</translation>
+<translation>点滅するカーソル</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished">Scroll offset:</translation>
+<translation>スクロールオフセット：</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished">Backspace:</translation>
+<translation>バックスペース：</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished">Keyword characters:</translation>
+<translation>キーワード文字：</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished">Use Vim-style Editing</translation>
+<translation>Vimスタイルの編集を使用する</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>テキストカーソルを含む行を基準にした行番号を表示します。</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
+<translation>FakeVimのCtrl-Sのようなキーシーケンスを解釈しませんが、通常のショートカットとして処理します。 これにより、FakeVimの一部の機能が失われる代わりに、コア機能に簡単にアクセスできます。</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
+<translation>コードを適切に完了および拡張できるように、挿入モードでの一部のキー押下を解釈しません。</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished">Vim tabstop option.</translation>
+<translation>Vimタブストップオプション。</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
+<translation>デフォルトのパスを使用するには空のままにします。つまり、Windowsでは％USERPROFILE％\ _ vimrc、それ以外の場合は〜/.vimrcです。</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>デフォルト：％1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1069,12 +1069,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4700"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>Meta-Shift-Y、Meta-Shift-Yと入力して、FakeVimモードを終了します。</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4702"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
+<translation>Alt-Y、Alt-Yと入力して、FakeVimモードを終了します。</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6297"/>
@@ -1292,7 +1292,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="232"/>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>フォント：</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="279"/>
@@ -1357,7 +1357,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
 <source>Underlined text</source>
-<translation type="unfinished">Underlined text</translation>
+<translation>下線付きのテキスト</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
@@ -1533,17 +1533,17 @@
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="52"/>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>コピー</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="60"/>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>リンクをコピーする</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="68"/>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>ズームをリセット</translation>
 </message>
 </context>
 <context>
@@ -1624,7 +1624,7 @@
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
 <source>Minimum 8 characters</source>
-<translation type="unfinished">Minimum 8 characters</translation>
+<translation>最小8文字</translation>
 </message>
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1632,7 +1632,7 @@
 <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
 <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
 <source>Minimum 10 characters</source>
-<translation type="unfinished">Minimum 10 characters</translation>
+<translation>最小10文字</translation>
 </message>
 </context>
 <context>
@@ -1640,67 +1640,67 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>ジョプリンインポート</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="48"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>フォルダをインポートする</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>メモをインポートする「RAW-JoplinExportDirectory」を選択してください。</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="37"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>ディレクトリを選択</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>画像をインポートする</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="30"/>
 <source>%v of %m file(s) imported</source>
-<translation type="unfinished">%v of %m file(s) imported</translation>
+<translation>インポートされた％mファイルの％v</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="115"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>ノートをインポート</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>タグをインポートする</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="182"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>「JEX-JoplinExportFile」がある場合は、そのファイルのコンテンツをディレクトリに抽出し、そのディレクトリを選択してください。</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="142"/>
 <source>Import metadata</source>
-<translation type="unfinished">Import metadata</translation>
+<translation>メタデータをインポートする</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="74"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW - Joplin Export Directory</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>添付ファイルをインポートする</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="91"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>「RAW-JoplinExportDirectory」を選択してインポートします</translation>
 </message>
 </context>
 <context>
@@ -1833,7 +1833,7 @@
 <message>
 <location filename="../dialogs/linkdialog.ui" line="153"/>
 <source>Search for a heading to link to</source>
-<translation type="unfinished">Search for a heading to link to</translation>
+<translation>リンクする見出しを検索します</translation>
 </message>
 <message>
 <location filename="../dialogs/linkdialog.ui" line="177"/>
@@ -2356,12 +2356,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1458"/>
 <source>Insert text &amp;link</source>
-<translation type="unfinished">Insert text &amp;link</translation>
+<translation>テキストを挿入＆リンク</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1461"/>
 <source>Ctrl+L</source>
-<translation type="unfinished">Ctrl+L</translation>
+<translation>Ctrl+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1478"/>
@@ -2559,7 +2559,7 @@
 <location filename="../mainwindow.ui" line="1991"/>
 <location filename="../mainwindow.ui" line="1994"/>
 <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
-<translation type="unfinished">Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</translation>
+<translation>#qownnotes IRC（Kiwi）チャネルを開きます。応答を得るには、オンラインを維持する必要があります</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2058"/>
@@ -2592,7 +2592,7 @@
 <location filename="../mainwindow.ui" line="2209"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
 <extracomment>"Element" as in the chat service</extracomment>
-<translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
+<translation>QOwnNotesマトリックス（要素）ルームを開きます</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2236"/>
@@ -2728,7 +2728,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2492"/>
 <source>Manage stored attachments</source>
-<translation type="unfinished">Manage stored attachments</translation>
+<translation>保存された添付ファイルを管理する</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2497"/>
@@ -2836,7 +2836,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2660"/>
 <source>Jump to navigation panel</source>
-<translation type="unfinished">Jump to navigation panel</translation>
+<translation>ナビゲーションパネルにジャンプ</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2672"/>
@@ -2851,12 +2851,12 @@
 <message>
 <location filename="../mainwindow.ui" line="2684"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>からメモをインポートする Joplin</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2689"/>
 <source>Toggle always-on-top mode</source>
-<translation type="unfinished">Toggle always-on-top mode</translation>
+<translation>常時オントップモードを切り替えます</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1909"/>
@@ -2897,7 +2897,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2179"/>
 <source>Manage stored image files</source>
-<translation type="unfinished">Manage stored image files</translation>
+<translation>保存された画像ファイルを管理する</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2221"/>
@@ -2923,7 +2923,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1675"/>
 <source>&amp;Export note as Markdown file</source>
-<translation type="unfinished">&amp;Export note as Markdown file</translation>
+<translation>メモをマークダウンファイルとしてエクスポート</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1705"/>
@@ -3255,7 +3255,7 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <location filename="../mainwindow.cpp" line="6711"/>
 <source>Inserted text as text attachment file</source>
-<translation type="unfinished">Inserted text as text attachment file</translation>
+<translation>テキスト添付ファイルとして挿入されたテキスト</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6863"/>
@@ -3270,12 +3270,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <location filename="../mainwindow.cpp" line="6974"/>
 <source>Export attached files</source>
-<translation type="unfinished">Export attached files</translation>
+<translation>添付ファイルをエクスポートする</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6975"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+<translation>メモのメディアファイルと添付ファイルもエクスポートしますか？ 宛先フォルダのファイルが上書きされる可能性があります。</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7009"/>
@@ -3452,12 +3452,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <location filename="../mainwindow.cpp" line="7615"/>
 <source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
+<translation>すべてのメモを表示（％1）</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7776"/>
 <source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+<translation>'％1'（％2）でタグ付けされたすべてのメモを表示</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9586"/>
@@ -3915,12 +3915,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <location filename="../mainwindow.cpp" line="629"/>
 <source>Action not found!</source>
-<translation type="unfinished">Action not found!</translation>
+<translation>アクションが見つかりません！</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="630"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>メニューアクション&lt;code&gt;％1 &lt;/ code&gt;が見つかりませんでした！ 正しく綴りましたか？</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="793"/>
@@ -4250,60 +4250,60 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="140"/>
 <source>show notes in folder '%1' (%2)</source>
-<translation type="unfinished">show notes in folder '%1' (%2)</translation>
+<translation>'%1' フォルダー内のノートを表示 (%2)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="178"/>
 <source>All notes</source>
-<translation type="unfinished">All notes</translation>
+<translation>すべてのノート</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="175"/>
 <source>Show notes from all note subfolders (%1)</source>
-<translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+<translation>すべてのメモサブフォルダからのメモを表示する（％1）</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="198"/>
 <source>Show notes in note root folder (%1)</source>
-<translation type="unfinished">Show notes in note root folder (%1)</translation>
+<translation>ノートルートフォルダにノートを表示する（％1）</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="210"/>
 <source>Note folder</source>
-<translation type="unfinished">Note folder</translation>
+<translation>ノートフォルダー</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="294"/>
 <source>New subfolder</source>
-<translation type="unfinished">New subfolder</translation>
+<translation>新しいサブフォルダー</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="303"/>
 <source>Rename subfolder</source>
-<translation type="unfinished">Rename subfolder</translation>
+<translation>サブフォルダーの名前変更</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="310"/>
 <location filename="../widgets/notesubfoldertree.cpp" line="369"/>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>選択フォルダーの削除</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="318"/>
 <source>Show folder in file manager</source>
-<translation type="unfinished">Show folder in file manager</translation>
+<translation>フォルダーをファイル マネージャーで表示</translation>
 </message>
 <message numerus="yes">
 <location filename="../widgets/notesubfoldertree.cpp" line="370"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; 個の選択フォルダーを削除しますか？&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;フォルダー内のすべてのファイルとフォルダーは失われます！</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="381"/>
 <source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
+<translation>サブフォルダーを削除しました: %1</translation>
 </message>
 </context>
 <context>
@@ -4311,13 +4311,13 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <location filename="../services/owncloudservice.cpp" line="243"/>
 <source>incorrect</source>
-<translation type="unfinished">incorrect</translation>
+<translation>正しくない</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="245"/>
 <location filename="../services/owncloudservice.cpp" line="545"/>
 <source>not connected</source>
-<translation type="unfinished">not connected</translation>
+<translation>接続されていません</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="260"/>
@@ -4340,40 +4340,40 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <location filename="../services/owncloudservice.cpp" line="518"/>
 <location filename="../services/owncloudservice.cpp" line="536"/>
 <source>ok</source>
-<translation type="unfinished">ok</translation>
+<translation>わかった</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="326"/>
 <source>not correct</source>
-<translation type="unfinished">not correct</translation>
+<translation>正しくありません</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="339"/>
 <source>not detected</source>
-<translation type="unfinished">not detected</translation>
+<translation>見つかりませんでした</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="441"/>
 <location filename="../services/owncloudservice.cpp" line="539"/>
 <source>not found</source>
-<translation type="unfinished">not found</translation>
+<translation>見つかりません</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="481"/>
 <location filename="../services/owncloudservice.cpp" line="483"/>
 <source>unknown</source>
-<translation type="unfinished">unknown</translation>
+<translation>不明</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="492"/>
 <source>version %1 too low</source>
-<translation type="unfinished">version %1 too low</translation>
+<translation>バージョン％1が低すぎます</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="513"/>
 <location filename="../services/owncloudservice.cpp" line="521"/>
 <source>not enabled</source>
-<translation type="unfinished">not enabled</translation>
+<translation>有効になっていません</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="595"/>
@@ -4500,12 +4500,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="294"/>
 <source>Failed to register %1. Error: %2</source>
-<translation type="unfinished">Failed to register %1. Error: %2</translation>
+<translation>％1の登録に失敗しました。 エラー：％2</translation>
 </message>
 <message>
 <location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="314"/>
 <source>Failed to unregister %1. Error: %2</source>
-<translation type="unfinished">Failed to unregister %1. Error: %2</translation>
+<translation>％1の登録解除に失敗しました。 エラー：％2</translation>
 </message>
 </context>
 <context>
@@ -4595,54 +4595,54 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <location filename="../utils/gui.cpp" line="1048"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
+<translation>&lt;strong&gt;％1 &lt;/ strong&gt; &lt;br /&gt;最終変更日：％2</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1053"/>
 <source>&lt;br /&gt;path: %1</source>
-<translation type="unfinished">&lt;br /&gt;path: %1</translation>
+<translation>&lt;br /&gt;パス: %1</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1081"/>
 <location filename="../utils/gui.cpp" line="1153"/>
 <source>Dark mode detected</source>
-<translation type="unfinished">Dark mode detected</translation>
+<translation>ダークモードが検出されました</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1082"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>お使いのWindowsシステムはダークモードを使用しているようです。 QOwnNotesでダークモードもオンにしますか？</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1094"/>
 <location filename="../utils/gui.cpp" line="1166"/>
 <source>Light mode detected</source>
-<translation type="unfinished">Light mode detected</translation>
+<translation>ライトモードが検出されました</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1095"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>お使いのWindowsシステムはライトモードを使用しているようです。 QOwnNotesでダークモードもオフにしますか？</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1154"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Linuxシステムはダークモードを使用しているようです。 QOwnNotesでダークモードもオンにしますか？</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1167"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Linuxシステムはライトモードを使用しているようです。 QOwnNotesでダークモードもオフにしますか？</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1249"/>
 <source>Panel disabled</source>
-<translation type="unfinished">Panel disabled</translation>
+<translation>パネルが無効</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1250"/>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
+<translation>パネル&lt;strong&gt;％1 &lt;/ strong&gt;は現在無効になっていますが、このアクションを機能させるためにもう一度オンにしますか？</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="79"/>
@@ -4652,7 +4652,7 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <location filename="../utils/git.cpp" line="80"/>
 <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
-<translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
+<translation>コマンド&lt;code&gt;％1 &lt;/code&gt;と引数&lt;code&gt;％2 &lt;/ code&gt;が失敗しました！</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4315"/>
@@ -4662,12 +4662,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4515"/>
 <source>Login flow succeeded</source>
-<translation type="unfinished">Login flow succeeded</translation>
+<translation>ログインフローは成功しました</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4516"/>
 <source>Username and password were set successfully!</source>
-<translation type="unfinished">Username and password were set successfully!</translation>
+<translation>ユーザー名とパスワードが正常に設定されました！</translation>
 </message>
 <message>
 <location filename="../entities/cloudconnection.cpp" line="349"/>
@@ -4712,7 +4712,7 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
 <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
 <source>File name changed</source>
-<translation type="unfinished">File name changed</translation>
+<translation>ファイル名が変更されました</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
@@ -4731,59 +4731,59 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="29"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+<translation>ファイル名が変更されました</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2288"/>
 <location filename="../services/owncloudservice.cpp" line="2303"/>
 <source>Login flow failed</source>
-<translation type="unfinished">Login flow failed</translation>
+<translation>ログインフローが失敗しました</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2289"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
+<translation>Nextcloudログインフローv2を開始できませんでした。 サーバーのURLが正しく、Nextcloudサーバーを使用していることを確認してください！&lt;br/&gt; &lt;br /&gt;それでも問題が解決しない場合は、サーバーの管理ページでアプリのパスワードを手動で作成してください。</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2304"/>
 <source>Could not parse login url!</source>
-<translation type="unfinished">Could not parse login url!</translation>
+<translation>ログインURLを解析できませんでした！</translation>
 </message>
 <message>
 <location filename="../utils/misc.cpp" line="948"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
+<translation>シングルアプリインスタンスモードを使用しているため、アプリケーションを2回目に起動できません。 アプリケーションの次回の起動では、シングルアプリインスタンスモードが無効になるため、このインスタンスを終了する前にアプリケーションを再起動できます。</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="167"/>
 <location filename="../utils/urlhandler.cpp" line="188"/>
 <source>Note was not found</source>
-<translation type="unfinished">Note was not found</translation>
+<translation>ノートが見つかりません</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="168"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-<translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+<translation>メモが見つかりませんでした。&lt;br/&gt;現在のメモフォルダのサブフォルダが無効になっているため、その場所にメモを自動的に作成できません。</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="178"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+<translation>ノートがありません。新しいノート &lt;strong&gt;%1&lt;/strong&gt; を作成しますか？</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="182"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>メモが見つかりませんでした。パス&lt;strong&gt;％2 &lt;/ strong&gt;に新しいメモ&lt;strong&gt;％1 &lt;/ strong&gt;を作成しますか？</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="227"/>
 <source>Failed to create note</source>
-<translation type="unfinished">Failed to create note</translation>
+<translation>メモの作成に失敗しました</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="228"/>
 <source>Note creation failed</source>
-<translation type="unfinished">Note creation failed</translation>
+<translation>メモの作成に失敗しました</translation>
 </message>
 </context>
 <context>
@@ -4791,88 +4791,88 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="94"/>
 <source>Increased font size to %1 pt</source>
-<translation type="unfinished">Increased font size to %1 pt</translation>
+<translation>フォントサイズを％1ptに増やしました</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="97"/>
 <source>Decreased font size to %1 pt</source>
-<translation type="unfinished">Decreased font size to %1 pt</translation>
+<translation>フォントサイズを％1ptに減らしました</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="540"/>
 <source>An url was opened at the current cursor position</source>
-<translation type="unfinished">An url was opened at the current cursor position</translation>
+<translation>現在のカーソル位置でURLが開かれました</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="716"/>
 <source>No equation was found in front of the cursor</source>
-<translation type="unfinished">No equation was found in front of the cursor</translation>
+<translation>カーソルの前に方程式が見つかりませんでした</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="736"/>
 <source>Result for equation: %1 = %2</source>
-<translation type="unfinished">Result for equation: %1 = %2</translation>
+<translation>方程式の結果：％1 =％2</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="918"/>
 <source>&amp;Link selected text</source>
-<translation type="unfinished">&amp;Link selected text</translation>
+<translation>選択テキストをリンクに(&amp;L)</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="918"/>
 <source>Insert &amp;link</source>
-<translation type="unfinished">Insert &amp;link</translation>
+<translation>リンクの挿入(&amp;L)</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="925"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation type="unfinished">Block &amp;quote selected text</translation>
+<translation>&amp;選択したテキストをブロック</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="928"/>
 <source>Insert block &amp;quote</source>
-<translation type="unfinished">Insert block &amp;quote</translation>
+<translation>引用ブロックの挿入(&amp;Q)</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="941"/>
 <source>Copy code block</source>
-<translation type="unfinished">Copy code block</translation>
+<translation>コードブロックをコピー</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="968"/>
 <source>Print</source>
-<translation type="unfinished">Print</translation>
+<translation>印刷</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="976"/>
 <source>Print selected text</source>
-<translation type="unfinished">Print selected text</translation>
+<translation>選択テキストを印刷</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="985"/>
 <source>Print selected text (preview)</source>
-<translation type="unfinished">Print selected text (preview)</translation>
+<translation>選択テキスト(プレビュー) を印刷</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1000"/>
 <source>Export</source>
-<translation type="unfinished">Export</translation>
+<translation>エクスポート</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1013"/>
 <source>Export selected text as PDF</source>
-<translation type="unfinished">Export selected text as PDF</translation>
+<translation>選択テキストをPDFにエクスポート</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1022"/>
 <source>Export selected text as PDF (preview)</source>
-<translation type="unfinished">Export selected text as PDF (preview)</translation>
+<translation>選択テキスト(プレビュー)をPDFにエクスポート</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1054"/>
 <source>Custom actions</source>
-<translation type="unfinished">Custom actions</translation>
+<translation>カスタム アクション</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1145"/>
@@ -4892,7 +4892,7 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1173"/>
 <source>Spelling</source>
-<translation type="unfinished">Spelling</translation>
+<translation>つづり</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1203"/>
@@ -6057,12 +6057,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1441"/>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
-<translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
+<translation>ログインフローv2は、ownCloudではなくNextcloudでのみ機能します。 問題が発生した場合は、アプリのパスワードを手動で作成する必要があります。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1444"/>
 <source>Login to Nextcloud to grant access</source>
-<translation type="unfinished">Login to Nextcloud to grant access</translation>
+<translation>Nextcloudにログインして、アクセスを許可します</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1849"/>
@@ -6471,32 +6471,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="276"/>
 <source>Browser extension / command snippets</source>
-<translation type="unfinished">Browser extension / command snippets</translation>
+<translation>ブラウザ拡張機能/コマンドスニペット</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
 <source>Web application</source>
-<translation type="unfinished">Web application</translation>
+<translation>ウェブアプリケーション</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
 <source>This also allows note files to be renamed</source>
-<translation type="unfinished">This also allows note files to be renamed</translation>
+<translation>これにより、ノートファイルの名前を変更することもできます</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="864"/>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-<translation type="unfinished">You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</translation>
+<translation>アプリケーション内からownCloudサーバーにアクセスして、たとえば、ゴミ箱に移動したメモやメモのバージョンを管理したり、メモを共有したりできます。 この統合では、ノートファイルの同期は行われません。 ファイルを同期するには、ownCloud同期クライアントをインストールする必要があります。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1431"/>
 <source>If your password doesn't work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
+<translation>パスワードが機能しない場合は、アプリのパスワードを作成してください（右側のボタン）</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1455"/>
 <source>Cancel Nextcloud login</source>
-<translation type="unfinished">Cancel Nextcloud login</translation>
+<translation>Nextcloudログインをキャンセルする</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1862"/>
@@ -7793,7 +7793,7 @@ QOwnNotesAPI アプリをインストールして有効にする必要もあり�
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4391"/>
 <source>The integrity of the disk database is not valid!</source>
-<translation type="unfinished">The integrity of the disk database is not valid!</translation>
+<translation>ディスクデータベースの整合性が無効です。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2961"/>
@@ -7886,7 +7886,7 @@ QOwnNotesAPI アプリをインストールして有効にする必要もあり�
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3378"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
-<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+<translation>メモファイルの拡張子&lt;strong&gt;％1 &lt;/ strong&gt;を本当に削除しますか？ この拡張子のファイルは、ノートリストに表示されなくなります。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3668"/>
@@ -8226,159 +8226,159 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="378"/>
 <source>Delete selected attachments</source>
-<translation type="unfinished">Delete selected attachments</translation>
+<translation>選択した添付ファイルを削除します</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="381"/>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>削除</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
 <source>Stored attachments</source>
-<translation type="unfinished">Stored attachments</translation>
+<translation>保存された添付ファイル</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
 <source>Used in notes:</source>
-<translation type="unfinished">Used in notes:</translation>
+<translation>メモで使用：</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="312"/>
 <source>Find attachment</source>
-<translation type="unfinished">Find attachment</translation>
+<translation>添付ファイルを探す</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
 <source>Only show attachments that are not used in notes</source>
-<translation type="unfinished">Only show attachments that are not used in notes</translation>
+<translation>メモで使用されていない添付ファイルのみを表示する</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
 <source>Only show orphaned attachments</source>
-<translation type="unfinished">Only show orphaned attachments</translation>
+<translation>孤立した添付ファイルのみを表示する</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
 <source>Add selected attachments to the current note</source>
-<translation type="unfinished">Add selected attachments to the current note</translation>
+<translation>選択した添付ファイルを現在のメモに追加します</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="342"/>
 <source>Add to current note</source>
-<translation type="unfinished">Add to current note</translation>
+<translation>現在のメモに追加</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="353"/>
 <source>Open &amp;attachment</source>
-<translation type="unfinished">Open &amp;attachment</translation>
+<translation>添付を開く(&amp;A)</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="364"/>
 <source>Open the attachments folder</source>
-<translation type="unfinished">Open the attachments folder</translation>
+<translation>添付ファイルフォルダを開きます</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="367"/>
 <source>Open &amp;folder</source>
-<translation type="unfinished">Open &amp;folder</translation>
+<translation>フォルダーを開く(&amp;F)</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="392"/>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>更新</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="102"/>
 <source>File size:</source>
-<translation type="unfinished">File size:</translation>
+<translation>ファイルサイズ：</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="194"/>
 <source>File type:</source>
-<translation type="unfinished">File type:</translation>
+<translation>ファイルの種類:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="207"/>
 <source>File path:</source>
-<translation type="unfinished">File path:</translation>
+<translation>ファイルの場所:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="86"/>
 <source>Last modified at %1</source>
-<translation type="unfinished">Last modified at %1</translation>
+<translation>更新日時: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="160"/>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>パス：％1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="200"/>
 <source>Delete selected files</source>
-<translation type="unfinished">Delete selected files</translation>
+<translation>選択ファイルの削除</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-<translation type="unfinished">
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<translation>
+<numerusform>選択した&lt;strong&gt;%n&lt;/strong&gt;つのファイルを削除しますか？</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
 <source>&amp;Open attachment</source>
-<translation type="unfinished">&amp;Open attachment</translation>
+<translation>＆オープンアタッチメント</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
 <source>&amp;Rename attachment</source>
-<translation type="unfinished">&amp;Rename attachment</translation>
+<translation>＆名前の添付ファイル</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
 <source>&amp;Delete attachments</source>
-<translation type="unfinished">&amp;Delete attachments</translation>
+<translation>＆添付ファイルの削除</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="312"/>
 <source>&amp;Add attachments to current note</source>
-<translation type="unfinished">&amp;Add attachments to current note</translation>
+<translation>＆現在のメモに添付ファイルを追加</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
 <source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<translation>ファイルが存在しません</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+<translation>ファイル&lt;strong&gt;％1 &lt;/ strong&gt;は存在しません。名前を変更することはできません！</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>ファイルが存在しています</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-<translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+<translation>ファイル&lt;strong&gt;％1 &lt;/ strong&gt;は既に存在するため、新しいファイル名として&lt;strong&gt;％2 &lt;/ strong&gt;を選択する前に、ファイルを削除する必要があります。</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
 <source>File renaming failed</source>
-<translation type="unfinished">File renaming failed</translation>
+<translation>ファイルの名前変更に失敗しました</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+<translation>ファイル&lt;strong&gt;％1 &lt;/ strong&gt;の名前変更に失敗しました！</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>＆オープンノート</translation>
 </message>
 </context>
 <context>
@@ -8386,87 +8386,87 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
 <source>Stored images</source>
-<translation type="unfinished">Stored images</translation>
+<translation>保存された画像</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="165"/>
 <source>Find image</source>
-<translation type="unfinished">Find image</translation>
+<translation>画像を探す</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="126"/>
 <source>Add selected images to the current note</source>
-<translation type="unfinished">Add selected images to the current note</translation>
+<translation>選択した画像を現在のメモに追加します</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="64"/>
 <source>Open the media folder</source>
-<translation type="unfinished">Open the media folder</translation>
+<translation>メディアフォルダを開く</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="67"/>
 <source>Open &amp;folder</source>
-<translation type="unfinished">Open &amp;folder</translation>
+<translation>フォルダーを開く(&amp;F)</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="78"/>
 <source>Open image externally</source>
-<translation type="unfinished">Open image externally</translation>
+<translation>メディアフォルダを開く</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="81"/>
 <source>Open image</source>
-<translation type="unfinished">Open image</translation>
+<translation>画像を開く</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="129"/>
 <source>Add to current note</source>
-<translation type="unfinished">Add to current note</translation>
+<translation>現在のメモに追加</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="140"/>
 <source>Delete selected images</source>
-<translation type="unfinished">Delete selected images</translation>
+<translation>選択した画像を削除します</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="143"/>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>削除</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="175"/>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>更新</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="234"/>
 <source>Used in notes:</source>
-<translation type="unfinished">Used in notes:</translation>
+<translation>メモで使用：</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="116"/>
 <source>Only show images that are not used in notes</source>
-<translation type="unfinished">Only show images that are not used in notes</translation>
+<translation>メモに使用されていない画像のみを表示する</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="119"/>
 <source>Only show orphaned images</source>
-<translation type="unfinished">Only show orphaned images</translation>
+<translation>孤立した画像のみを表示する</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="83"/>
 <source>Last modified at %1</source>
-<translation type="unfinished">Last modified at %1</translation>
+<translation>更新日時: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="148"/>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>パス：％1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="187"/>
 <source>Delete selected files</source>
-<translation type="unfinished">Delete selected files</translation>
+<translation>選択ファイルの削除</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="188"/>
@@ -8478,17 +8478,17 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
 <source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<translation>ファイルが存在しません</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+<translation>ファイル&lt;strong&gt;％1 &lt;/ strong&gt;は存在しません。名前を変更することはできません！</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>ファイルが存在しています</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="349"/>
@@ -8498,37 +8498,37 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="359"/>
 <source>File renaming failed</source>
-<translation type="unfinished">File renaming failed</translation>
+<translation>ファイルの名前変更に失敗しました</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="360"/>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+<translation>ファイル&lt;strong&gt;％1 &lt;/ strong&gt;の名前変更に失敗しました！</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="436"/>
 <source>&amp;Open image externally</source>
-<translation type="unfinished">&amp;Open image externally</translation>
+<translation>＆画像を外部に開く</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="437"/>
 <source>&amp;Rename image</source>
-<translation type="unfinished">&amp;Rename image</translation>
+<translation>＆画像の名前を変更</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="438"/>
 <source>&amp;Delete images</source>
-<translation type="unfinished">&amp;Delete images</translation>
+<translation>＆画像の削除</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="439"/>
 <source>&amp;Add images to current note</source>
-<translation type="unfinished">&amp;Add images to current note</translation>
+<translation>現在のメモに画像を追加</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="472"/>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>＆オープンノート</translation>
 </message>
 </context>
 <context>
@@ -8694,12 +8694,12 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tododialog.ui" line="349"/>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>サブアイテムは親アイテムによって非表示になっている可能性があるため、これは機能しません。</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="352"/>
 <source>Show only items due today</source>
-<translation type="unfinished">Show only items due today</translation>
+<translation>今日の期限のあるアイテムのみを表示する</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="120"/>
@@ -8734,7 +8734,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tododialog.ui" line="334"/>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>期日</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.ui" line="342"/>
@@ -9061,7 +9061,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
 <source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation type="unfinished">&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+<translation>&lt;ahref="%1"&gt;QOwnNotesに参加する&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -9081,7 +9081,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="64"/>
 <source>&amp;Download latest</source>
-<translation type="unfinished">&amp;Download latest</translation>
+<translation>最新版のダウンロード(&amp;D)</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="74"/>
@@ -9172,42 +9172,42 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="454"/>
 <location filename="../dialogs/updatedialog.cpp" line="486"/>
 <source>Permission error</source>
-<translation type="unfinished">Permission error</translation>
+<translation>許可エラー</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
+<translation>QOwnNotes実行可能ファイル'％1'は書き込み可能ではありません！ 更新するには、現在のユーザーが書き込み可能である必要があります。</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="455"/>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
-<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
+<translation>一時ファイル'％1'を実行可能にすることができませんでした！ '％2'を自分で置き換える必要があります。</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="465"/>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
+<translation>古いQOwnNotes実行可能ファイル'％1'を削除できませんでした！ 自分で「％2」に置き換える必要があります。</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="495"/>
 <source>Restart application</source>
-<translation type="unfinished">Restart application</translation>
+<translation>アプリの再起動</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="496"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished">You now can restart the application to complete the update process.</translation>
+<translation>これで、アプリケーションを再起動して更新プロセスを完了することができます。</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="498"/>
 <source>Restart</source>
-<translation type="unfinished">Restart</translation>
+<translation>再起動</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="498"/>
 <source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
+<translation>中止</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="524"/>
@@ -9244,12 +9244,12 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="475"/>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</translation>
+<translation>古いQOwnNotes実行可能ファイル'％1'を新しいファイル'％2'に置き換えることができませんでした！ 自分で交換する必要があります。</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="487"/>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation type="unfinished">The app file '%1' could not be made executable! You need to make it executable yourself.</translation>
+<translation>アプリファイル'％1'を実行可能にすることができませんでした！ 自分で実行可能にする必要があります。</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="575"/>
@@ -9325,27 +9325,27 @@ This cannot be undone!</source>
 <message>
 <location filename="../services/webappclientservice.cpp" line="102"/>
 <source>QOwnNotes is now connected via websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now connected via websocket to %1</translation>
+<translation>QOwnNotesがwebsocket経由で％1に接続されるようになりました</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="111"/>
 <source>QOwnNotes is now disconnected from websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now disconnected from websocket to %1</translation>
+<translation>QOwnNotesがwebsocketから％1に切断されました</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="127"/>
 <source>Web app warning</source>
-<translation type="unfinished">Web app warning</translation>
+<translation>Webアプリの警告</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="139"/>
 <source>Image received</source>
-<translation type="unfinished">Image received</translation>
+<translation>受信した画像</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="140"/>
 <source>Insert image received from QOwnNotes web application?</source>
-<translation type="unfinished">Insert image received from QOwnNotes web application?</translation>
+<translation>QOwnNotes Webアプリケーションから受け取った画像を挿入しますか？</translation>
 </message>
 </context>
 <context>
@@ -9536,7 +9536,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../main.cpp" line="109"/>
 <source>Prints out the version number.</source>
-<translation type="unfinished">Prints out the version number.</translation>
+<translation>バージョン番号を出力します。</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="114"/>
@@ -9556,7 +9556,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../main.cpp" line="136"/>
 <source>Triggers a menu action after the application was started.</source>
-<translation type="unfinished">Triggers a menu action after the application was started.</translation>
+<translation>アプリケーションの開始後にメニューアクションをトリガーします。</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="566"/>

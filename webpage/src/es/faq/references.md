@@ -22,7 +22,7 @@ Lo que otras personas dijeron sobre QOwnNotes ...
 - [QOwnNotes - very powerful Markdown editor, alternative to Haroopad : LinuxActionShow](https://www.reddit.com/r/LinuxActionShow/comments/4p6ibh/qownnotes_very_powerful_markdown_editor/)
 - [Quick review of QOwnNotes](https://github.com/pbek/QOwnNotes/issues/225)
 - [linux-apps.com - QOwnNotes](https://www.linux-apps.com/p/1131235/)
-- [QOwnNotes review in British magazine Linux Format](https://www.qownnotes.org/blog/2016-07-11-QOwnNotes-review-in-British-magazine-Linux-Format.html)
+- [Sinhalese](https://www.qownnotes.org/blog/2016-07-11-QOwnNotes-review-in-British-magazine-Linux-Format.html)
 - **[Ubuntu Community Q&A](https://youtu.be/St46dvUruSg?t=3m27s)**
 - [Софт для Linux: графические программы на основе библиотеки Qt - QOwnNotes](http://linsoft.info/soft/qownnotes.html)
 - [qOwnNotes - pumprock.net](https://pumprock.net/aperalesf/note/w18MhAa6SY6ffK93PAd_lQ)
@@ -194,11 +194,11 @@ Lo que otras personas dijeron sobre QOwnNotes ...
 - [Some new Breeze app icons in Frameworks 5.22 - Alex L.](http://www.alexl.netsons.org/blogposts/some-new-breeze-app-icons-in-frameworks-5-22/)
     - [Planet KDE](https://planetkde.org/) at 16.05.16 19:46
 - <http://portallinux.es/una-notas-turtl-springseed-laverna/>
-    - comment
+    - comentario
 - <http://zettelkasten.de/posts/zettelkasten-antifragile/>
-    - comment
+    - comentario
 - [(2016-06) Recap of Markdown editors for Linux and/or browser : LinuxActionShow](https://www.reddit.com/r/LinuxActionShow/comments/4ow8yv/201606_recap_of_markdown_editors_for_linux_andor/)
-    - comment
+    - comentario
 - [QOwnNotes featured on the Linux Voice Podcast](https://www.qownnotes.org/blog/2016-07-12-QOwnNotes-featured-on-the-Linux-Voice-Podcast.html)
 - <http://www.heise.de/ct/ausgabe/2016-16-Briefe-E-Mail-Hotline-3271356.html>
 - [https://www.reddit.com/r/linux/comments/4xto4y/4_open_source_alternatives_to_evernote/](https://www.reddit.com/r/linux/comments/4xto4y/4_open_source_alternatives_to_evernote/)

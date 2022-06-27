@@ -176,21 +176,21 @@ preNoteToMarkdownHtmlHook
 ### Módszerhívás és paraméterek
 ```js
 /**
- * This function is called before the markdown html of a note is generated
- *
- * It allows you to modify what is passed to the markdown to html converter
- *
- * The function can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
- * to its graphical representation for the preview
- *
- * The note will not be changed in this process
- *
- * @param {NoteApi} note - the note object
- * @param {string} markdown - the markdown that is about to being converted to html
- * @param {bool} forExport - true if the html is used for an export, false for the preview
- * @return {string} the modified markdown or an empty string if nothing should be modified
- */
-function preNoteToMarkdownHtmlHook(note, markdown, forExport);
+  * Ezt a függvényt a rendszer a jegyzet markdown html-jének generálása előtt hívja meg
+  *
+  * Lehetővé teszi, hogy módosítsa, mi kerül át a html konverterhez
+  *
+  * A függvény például több szkriptben is használható kód megjelenítésére (például LaTeX matematikai vagy sellő)
+  * a grafikus megjelenítéséhez az előnézethez
+  *
+  * A jegyzet ebben a folyamatban nem módosul
+  *
+  * @param {NoteApi} note – a jegyzetobjektum
+  * @param {string} leértékelés – az a leértékelés, amelyet hamarosan html-vé alakítanak
+  * @param {bool} forExport - igaz, ha a html-t az exportáláshoz használja, hamis az előnézethez
+  * @return {string} a módosított jelölést vagy üres karakterláncot, ha semmit sem kell módosítani
+  */
+függvény preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
 
 Érdemes megnézni a példát [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
@@ -201,19 +201,19 @@ noteToMarkdownHtmlHook
 ### Módszerhívás és paraméterek
 ```js
 /**
- * This function is called when the markdown html of a note is generated
- *
- * It allows you to modify this html
- * This is for example called before by the note preview
- *
- * The function can be used in multiple scripts to modify the html of the preview
- *
- * @param {NoteApi} note - the note object
- * @param {string} html - the html that is about to being rendered
- * @param {bool} forExport - true if the html is used for an export, false for the preview
- * @return {string} the modified html or an empty string if nothing should be modified
- */
-function noteToMarkdownHtmlHook(note, html, forExport);
+  * Ezt a függvényt akkor hívják meg, amikor egy jegyzet leíró html-jét generálják
+  *
+  * Lehetővé teszi a html módosítását
+  * Ezt például korábban a jegyzet előnézete hívja meg
+  *
+  * A funkció több szkriptben is használható az előnézet html-jének módosítására
+  *
+  * @param {NoteApi} note – a jegyzetobjektum
+  * @param {karakterlánc} html - a html, amely hamarosan megjelenik
+  * @param {bool} forExport - igaz, ha a html-t az exportáláshoz használja, hamis az előnézethez
+  * @return {string} a módosított html-t vagy egy üres karakterláncot, ha semmit sem kell módosítani
+  */
+függvény noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
 Érdemes megnézni a példát [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) vagy [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).

@@ -4727,22 +4727,22 @@ Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybrane folder(y)?&lt;ul&gt;&lt;li&gt;%
 <message>
 <location filename="../utils/gui.cpp" line="1154"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Twój system Linux wydaje się używać trybu ciemnego. Czy chcesz również włączyć tryb ciemny w QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1167"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Twój system Linux wydaje się używać trybu światła. Czy chcesz również wyłączyć tryb ciemny w QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1249"/>
 <source>Panel disabled</source>
-<translation type="unfinished">Panel disabled</translation>
+<translation>Panel wyłączony</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1250"/>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
+<translation>Panel &lt;strong&gt;%1&lt;/strong&gt; jest obecnie wyłączony, czy chcesz go ponownie włączyć, aby ta akcja zadziałała?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="79"/>

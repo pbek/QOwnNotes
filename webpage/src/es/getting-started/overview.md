@@ -33,7 +33,7 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="/screenshots/screenshot-darkmode.png" alt="screenshot darkmode" />
+    <img src="/screenshots/screenshot-darkmode.png" alt="captura de pantalla modo oscuro" />
     <div class="sheet">
       Modo oscuro
     </div>
@@ -71,7 +71,7 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-freedesktop-theme.png" alt="screenshot-freedesktop-theme" />
     <div class="sheet">
-      Icons via Freedesktop theme
+      Iconos a través del tema Freedesktop
     </div>
   </v-carousel-item>
   <v-carousel-item>

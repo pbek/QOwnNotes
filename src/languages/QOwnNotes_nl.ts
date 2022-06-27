@@ -4649,22 +4649,22 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <location filename="../utils/gui.cpp" line="1154"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Je Linux-systeem lijkt de donkere modus te gebruiken. Wil je ook de donkere modus inschakelen in QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1167"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Je Linux-systeem lijkt de lichtmodus te gebruiken. Wil je de donkere modus ook uitschakelen in QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1249"/>
 <source>Panel disabled</source>
-<translation type="unfinished">Panel disabled</translation>
+<translation>Paneel uitgeschakeld</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1250"/>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
+<translation>Paneel &lt;strong&gt;%1&lt;/strong&gt; is momenteel uitgeschakeld. Wil je het weer inschakelen om deze actie te laten werken?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="79"/>
@@ -6667,17 +6667,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4811"/>
 <source>Time to wait before refreshing the preview after typing:</source>
-<translation type="unfinished">Time to wait before refreshing the preview after typing:</translation>
+<translation>Wartezeit bis zur Aktualisierung der Vorschau nach der Eingabe:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4818"/>
 <source>Reset the debounce time</source>
-<translation type="unfinished">Reset the debounce time</translation>
+<translation>Reset de debounce tijd</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4832"/>
 <source>0ms means don't wait for the typing to stop</source>
-<translation type="unfinished">0ms means don't wait for the typing to stop</translation>
+<translation>0ms betekent niet wachten tot het typen stopt</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4864"/>

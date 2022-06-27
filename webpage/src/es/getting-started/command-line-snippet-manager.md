@@ -28,7 +28,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ## Dependencias
 
-[fzf](https://github.com/junegunn/fzf) (fuzzy search) or [peco](https://github.com/peco/peco) (older, but more likely to be installed by default) need to be installed to search for commands on the command-line.
+[fzf](https://github.com/junegunn/fzf) (fuzzy search) or [peco](https://github.com/peco/peco) (más antiguo, pero es más probable que se instale de forma predeterminada) debe instalarse para buscar comandos en la línea de comandos.
 
 ::: tip
 De forma predeterminada, `fzf` se usa para buscar, pero puede usar `peco` configurándolo con `qc configure`.
@@ -67,16 +67,16 @@ Puede usar **listas desordenadas con bloques de código en línea** para almacen
 Si agrega un `cmd:` antes del bloque de código en línea, el comando también se encontrará en la **nota actual** independientemente de las etiquetas de nota.
 
 ```markdown
-- `echo I am a command` I am a description #tag1 #tag2 #tag3
-* `echo I am also a command` I am a description #tag3 #tag4 #tag5
-- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+- `echo Soy un comando` Soy una descripción #tag1 #tag2 #tag3
+* `echo yo tambien soy un comando` yo soy una descripcion #tag3 #tag4 #tag5
+- cmd: `echo I se encontrará en la nota actual` Este comando se encontrará en la nota actual independientemente de las etiquetas de nota
 
-<!-- Example for asking for user input -->
+<!-- Ejemplo para solicitar la entrada del usuario -->
 
 - `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
 ```
 
-**`bash` or `shell` code blocks**, preceded by a heading 2 or higher as a description, can also be used for command snippets. Las etiquetas también son compatibles si se encuentran entre el encabezado y el bloque de código.
+Los bloques de código **`bash` o `shell`**, precedidos por un encabezado 2 o superior como descripción, también se pueden usar para fragmentos de comando. Las etiquetas también son compatibles si se encuentran entre el encabezado y el bloque de código.
 
     ## Haz esto con un bloque de código "bash"
 

@@ -4315,9 +4315,9 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message numerus="yes">
 <location filename="../widgets/notesubfoldertree.cpp" line="370"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; le(s) dossier(s) sélectionné(s) ? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; le dossier sélectionné ? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !</numerusform>
+<numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; les dossiers sélectionnés ? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !</numerusform>
 </translation>
 </message>
 <message>
@@ -4647,22 +4647,22 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <location filename="../utils/gui.cpp" line="1154"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Votre système d'exploitation Linux semble utiliser le mode sombre. Voulez-vous également activer le mode sombre dans QOwnNotes ?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1167"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Votre système d'dxploitation Linux semble utiliser le mode clair. Voulez-vous également désactiver le mode sombre dans QOwnNotes ?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1249"/>
 <source>Panel disabled</source>
-<translation type="unfinished">Panel disabled</translation>
+<translation>Panneau désactivé</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1250"/>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
+<translation>Le panneau &lt;strong&gt;%1&lt;/strong&gt; est actuellement désactivé. Souhaitez-vous le réactiver pour permettre à cette action de se dérouler ?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="79"/>

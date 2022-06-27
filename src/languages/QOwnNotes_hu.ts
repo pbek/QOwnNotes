@@ -4646,22 +4646,22 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <message>
 <location filename="../utils/gui.cpp" line="1154"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Úgy tűnik, hogy a Linux rendszer a sötét módot használja. Szeretné bekapcsolni a sötét módot is a QOwnNotes-ban?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1167"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Úgy tűnik, hogy a Linux rendszered a világos módot használja. Ki szeretné kapcsolni a sötét módot a QOwnNotes-ban?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1249"/>
 <source>Panel disabled</source>
-<translation type="unfinished">Panel disabled</translation>
+<translation>Panel letiltva</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1250"/>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
+<translation>A(z) &lt;strong&gt;%1&lt;/strong&gt; panel jelenleg le van tiltva. Szeretné újra bekapcsolni, hogy ez a művelet működjön?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="79"/>

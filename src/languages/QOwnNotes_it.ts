@@ -4646,22 +4646,22 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../utils/gui.cpp" line="1154"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Il tuo sistema Linux sembra utilizzare la modalità oscura. Vuoi anche attivare la modalità oscura in QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1167"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Il tuo sistema Linux sembra utilizzare la modalità luce. Vuoi anche disattivare la modalità oscura in QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1249"/>
 <source>Panel disabled</source>
-<translation type="unfinished">Panel disabled</translation>
+<translation>Pannello disabilitato</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1250"/>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
+<translation>Il pannello &lt;strong&gt;%1&lt;/strong&gt; è attualmente disabilitato, vuoi riattivarlo per far funzionare questa azione?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="79"/>
@@ -6661,17 +6661,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4811"/>
 <source>Time to wait before refreshing the preview after typing:</source>
-<translation type="unfinished">Time to wait before refreshing the preview after typing:</translation>
+<translation>Tempo di attesa prima di aggiornare l'anteprima dopo aver digitato:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4818"/>
 <source>Reset the debounce time</source>
-<translation type="unfinished">Reset the debounce time</translation>
+<translation>Reimposta il tempo di antirimbalzo</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4832"/>
 <source>0ms means don't wait for the typing to stop</source>
-<translation type="unfinished">0ms means don't wait for the typing to stop</translation>
+<translation>0ms significa non aspettare che la digitazione si interrompa</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4864"/>

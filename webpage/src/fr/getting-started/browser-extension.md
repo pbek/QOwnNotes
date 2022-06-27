@@ -24,7 +24,7 @@ QOwnNotes doit être en cours d'exécution pour que l'extension de navigateur We
     - Ouvrez l'emplacement de gestion des extensions de votre navigateur. Cliquez sur les détails de l'extension QOwnNotes.
     - Copiez le jeton dans le champ "Jeton de sécurité".
 
-## Web clipper
+## Clipper Web
 
 ![web-clipper](/img/web-clipper.png)
 
@@ -36,7 +36,7 @@ Le Web Clipper est également scriptable ! Jetez un œil à [websocketRawDataHoo
 
 ## Favoris
 
-![bookmarks](/img/bookmarks.png)
+![signets](/img/bookmarks.png)
 
 Si vous souhaitez un contrôle total sur les favoris de votre navigateur et **les utiliser sur différents navigateurs et systèmes d'exploitation**, l'extension de navigateur QOwnNotes est faite pour vous.
 

@@ -90,7 +90,7 @@
 - <kbd>Alt</kbd> + <kbd>Left</kbd> retrocede en el historial de notas
     - <kbd>Alt</kbd> + <kbd>Right</kbd> salta hacia adelante en el historial de notas
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> establece un marcador de nota en la ranura de marcador 1..9
-- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
+- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> salta al marcador de notas en la ranura de marcador 1..9
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> aumenta el tamaño de la fuente del texto de la nota en un punto
 - <kbd>Ctrl</kbd> + <kbd>-</kbd> disminuye el tamaño de la fuente del texto de la nota en un punto
 - <kbd>Ctrl</kbd> + <kbd>0</kbd> restablece el tamaño de fuente del texto de la nota
@@ -207,7 +207,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Izquierda</kbd> retrocede en el historial de notas
     - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Derecha</kbd> salta hacia adelante en el historial de notas
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> establece un marcador de nota en la ranura de marcador 1..9
-- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
+- <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> salta al marcador de notas en la ranura de marcador 1..9
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> aumenta el tamaño de fuente del texto de la nota en un punto
 - <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> reduce el tamaño de fuente del texto de la nota en un punto
 - <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> restablece el tamaño de fuente del texto de la nota
@@ -217,9 +217,9 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> busca el texto seleccionado en la web
 - <kbd>⌘ Cmd</kbd> + <kbd>Up</kbd> desplaza el contenido hacia arriba
 - <kbd>⌘ Cmd</kbd> + <kbd>Abajo</kbd> desplaza el contenido hacia abajo
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> moves the current line down
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> moves the current line up
-- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> mueve la línea actual hacia abajo
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> mueve la línea actual hacia arriba
+- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> agrega dos espacios y un carácter de nueva línea para forzar una nueva línea de descuento
 
 ### En el panel de vista previa de notas
 

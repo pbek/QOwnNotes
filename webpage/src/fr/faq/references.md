@@ -1,4 +1,4 @@
-# Où puis-je trouver ce que d'autres personnes ont dit à propos de QOwnNotes?
+# Where can I find what other people said about QOwnNotes?
 
 Ce que d'autres personnes ont dit à propos de QOwnNotes…
 

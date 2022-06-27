@@ -35,7 +35,7 @@ Haga clic con el botón derecho en una página web o en el texto seleccionado pa
 
 ## Marcadores
 
-![bookmarks](/img/bookmarks.png)
+![marcadores](/img/bookmarks.png)
 
 Si desea tener un control total sobre los marcadores de su navegador y ** usarlos en diferentes navegadores y sistemas operativos **, entonces la extensión del navegador QOwnNotes es para usted.
 

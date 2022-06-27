@@ -4654,12 +4654,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../utils/gui.cpp" line="1154"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>به نظر می رسد سیستم لینوکس شما از حالت تاریک استفاده می کند. آیا به فعال کردن حالت تاریک در QOwnNotes نیز تمایل دارید؟</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1167"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>به نظر می رسد سیستم لینوکس شما از حالت روشن استفاده می کند. آیا به غیرفعال کردن حالت تاریک در QOwnNotes نیز تمایل دارید؟</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1249"/>

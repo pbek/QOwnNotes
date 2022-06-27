@@ -523,8 +523,8 @@ Wählen Sie das aktuelle Wort in der Notiztextbearbeitung aus
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Selects the current word in the note text edit
- */
+  * Wählt das aktuelle Wort in der Notiztextbearbeitung aus
+  */
 void ScriptingService::noteTextEditSelectCurrentWord();
 ```
 
@@ -1560,34 +1560,34 @@ Sie können Hervorhebungsregeln direkt in den Editor einfügen, indem Sie regul�
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Adds a highlighting rule to the syntax highlighter of the editor
- *
- * @param pattern {QString} the regular expression pattern to highlight
- * @param shouldContain {QString} a string that must be contained in the highlighted text for the pattern to be parsed
- * @param state {int} the state of the syntax highlighter to use
- * @param capturingGroup {int} the capturing group for the pattern to use for highlighting (default: 0)
- * @param maskedGroup {int} the capturing group for the pattern to use for masking (default: 0)
- */
+  * Fügt dem Syntax-Highlighter des Editors eine Hervorhebungsregel hinzu
+  *
+  * @param pattern {QString} das hervorzuhebende reguläre Ausdrucksmuster
+  * @param shouldContain {QString} eine Zeichenfolge, die im hervorgehobenen Text enthalten sein muss, damit das Muster analysiert werden kann
+  * @param state {int} der Zustand des zu verwendenden Syntax-Highlighters
+  * @param capturingGroup {int} die Erfassungsgruppe für das Muster, das zum Hervorheben verwendet werden soll (Standard: 0)
+  * @param maskedGroup {int} die Erfassungsgruppe für das Muster, das zum Maskieren verwendet werden soll (Standard: 0)
+  */
 void ScriptingService::addHighlightingRule(const QString &pattern,
-                                           const QString &shouldContain,
-                                           int state,
-                                           int capturingGroup,
-                                           int maskedGroup);
+                                            const QString &shouldContain,
+                                            int-Zustand,
+                                            int Erfassungsgruppe,
+                                            int maskierteGruppe);
 ```
 
-### Zustände hervorheben
+### Highlighting states
 
 | Name                       | Nr. |
 | -------------------------- | --- |
 | NoState                    | -1  |
 | Link                       | 0   |
-| Image                      | 3   |
+| Bild                       | 3   |
 | CodeBlock                  | 4   |
 | CodeBlockComment           | 5   |
-| Italic                     | 7   |
-| Bold                       | 8   |
-| List                       | 9   |
-| Comment                    | 11  |
+| Kursiv                     | 7   |
+| Fett                       | 8   |
+| Liste                      | 9   |
+| Kommentar                  | 11  |
 | H1                         | 12  |
 | H2                         | 13  |
 | H3                         | 14  |
@@ -1596,7 +1596,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | H6                         | 17  |
 | BlockQuote                 | 18  |
 | HorizontalRuler            | 21  |
-| Table                      | 22  |
+| Tabelle                    | 22  |
 | InlineCodeBlock            | 23  |
 | MaskedSyntax               | 24  |
 | CurrentLineBackgroundColor | 25  |
@@ -1607,15 +1607,15 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | CheckBoxChecked            | 30  |
 | StUnderline                | 31  |
 
-### Example
+### Beispiel
 ```js
-// Highlight a text line like "BLOCK: some text" as blockquote (state 18)
+// Hervorheben einer Textzeile wie "BLOCK: irgendein Text" als Blockquote (Zustand 18)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);
 
-// Mask out (state 24) all characters after 32 characters in a line
-// capturingGroup 1 means the expression from the first bracketed part of the pattern will be highlighted
-// maskedGroup -1 means that no masking should be done
+// Maskiere (Zustand 24) alle Zeichen nach 32 Zeichen in einer Zeile
+// capturingGroup 1 bedeutet, dass der Ausdruck aus dem ersten eingeklammerten Teil des Musters hervorgehoben wird
+// maskedGroup -1 bedeutet, dass keine Maskierung erfolgen soll
 script.addHighlightingRule("^.{32}(.+)", "", 24, 1, -1);
 ```
 
-You can also take a look at the examples in [highlighting.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/highlighting.qml).
+Sie können sich auch die Beispiele in ansehen [highlighting.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/highlighting.qml).

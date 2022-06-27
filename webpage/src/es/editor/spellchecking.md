@@ -64,16 +64,16 @@ Si el diccionario para su idioma no está en el **Administrador de diccionarios*
 | 39 | ru_RU               | Ruso                       |
 | 40 | si_LK               | Sinhalese                  |
 | 41 | sk_SK               | Eslovaco                   |
-| 42 | sl_Sl               | Slovenian                  |
-| 43 | sq_AL               | Albanian                   |
-| 44 | sr                  | Serbian                    |
-| 45 | sv_SE               | Swedish                    |
-| 46 | sw_TZ               | Swahili                    |
-| 47 | te_IN               | Telugu                     |
-| 48 | th_TH               | Thai                       |
-| 49 | tr_TR               | Turkish                    |
-| 51 | uk_UA               | Ukrainian                  |
-| 52 | vi                  | Vietnamese                 |
+| 42 | sl_Sl               | Esloveno                   |
+| 43 | sq_AL               | Albanés                    |
+| 44 | sr                  | Serbio                     |
+| 45 | sv_SE               | Sueco                      |
+| 46 | sw_TZ               | Suajili                    |
+| 47 | te_IN               | Télugu                     |
+| 48 | th_TH               | Tailandés                  |
+| 49 | tr_TR               | Turco                      |
+| 51 | uk_UA               | Ucraniano                  |
+| 52 | vi                  | Vietnamita                 |
 | 53 | zu_ZA               | Zulu(spell dict not avail) |
 
 ::: tip
