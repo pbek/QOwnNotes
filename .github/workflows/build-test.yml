@@ -178,8 +178,11 @@ jobs:
         copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
         copy ..\bin\tests\tests.exe .
         cd ..\bin\tests
+        echo test1 
         .\tests.exe -txt
+        echo windeployqt 
         windeployqt --debug tests.exe
+        echo test2 
         .\tests.exe -txt
 
       #
