@@ -177,7 +177,9 @@ jobs:
         copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
         copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
         copy ..\bin\tests\tests.exe .
-        windeployqt tests.exe
+        cd ..\bin\tests
+        .\tests.exe -txt
+        windeployqt --debug tests.exe
         .\tests.exe -txt
 
       #
