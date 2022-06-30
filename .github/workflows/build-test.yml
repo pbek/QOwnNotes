@@ -177,12 +177,16 @@ jobs:
         copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
         copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
         copy ..\bin\tests\tests.exe .
+        echo set
+        set
+        echo path
+        echo %PATH%
         echo dir1
-        dir /a /s ..\Qt\5.15.2\mingw81_64\bin
+        dir ..\Qt\5.15.2\mingw81_64\bin
         echo dir2
-        dir /a /s ..\..\Qt\5.15.2\mingw81_64\bin
+        dir ..\..\Qt\5.15.2\mingw81_64\bin
         echo dir3
-        dir /a /s ..\..\..\Qt\5.15.2\mingw81_64\bin
+        dir ..\..\..\Qt\5.15.2\mingw81_64\bin
         cd ..\bin\tests
         echo test1
         .\tests.exe -txt
