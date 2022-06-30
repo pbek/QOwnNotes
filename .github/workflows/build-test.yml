@@ -187,7 +187,7 @@ jobs:
         echo test1
         .\tests.exe -txt
         echo windeployqt 
-        windeployqt --debug tests.exe
+        windeployqt --release tests.exe
         echo test2
         .\tests.exe -txt
 
