@@ -181,12 +181,8 @@ jobs:
         gci env:* | sort-object name
         echo path
         echo echo $env:PATH
-        echo dir1
-        dir ..\Qt\5.15.2\mingw81_64\bin
         echo dir2
         dir ..\..\Qt\5.15.2\mingw81_64\bin
-        echo dir3
-        dir ..\..\..\Qt\5.15.2\mingw81_64\bin
         cd ..\bin\tests
         echo test1
         .\tests.exe -txt
