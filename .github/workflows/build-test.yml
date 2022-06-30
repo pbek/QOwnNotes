@@ -104,11 +104,11 @@ jobs:
       uses: actions/cache@v3
       with:
         path: ../Qt
-        key: ${{ matrix.os }}-QtCache-${{ matrix.qt-version }}
+        key: ${{ matrix.os }}-QtCache-${{ matrix.qt-version }}-2
     # https://github.com/jurplel/install-qt-action
     - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.9.9' ) && steps.changes.outputs.DO_BUILD
       name: Install Qt 5.9 on Windows
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v3
       with:
         version: ${{ matrix.qt-version }}
         arch: win32_mingw53
@@ -116,14 +116,14 @@ jobs:
         aqtversion: '==0.9.4'
     - if: contains( matrix.os, 'windows') && ( ( matrix.qt-version == '5.13.2' ) || ( matrix.qt-version == '5.14.2' ) ) && steps.changes.outputs.DO_BUILD
       name: Install Qt on Windows
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v3
       with:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw73
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' ) && steps.changes.outputs.DO_BUILD
       name: Install Qt 5.15.2 on Windows
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v3
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
@@ -131,7 +131,7 @@ jobs:
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '6.2.0' ) && steps.changes.outputs.DO_BUILD
       name: Install Qt 6.2.0 on Windows
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v3
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
@@ -140,14 +140,14 @@ jobs:
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: false == contains( matrix.os, 'windows') && ( matrix.qt-version != '6.2.0' ) && steps.changes.outputs.DO_BUILD
       name: Install Qt < 6 on Linux/macOS
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v3
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: false == contains( matrix.os, 'windows') && ( matrix.qt-version == '6.2.0' ) && steps.changes.outputs.DO_BUILD
       name: Install Qt 6.2.0 on Linux/macOS
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v3
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
