@@ -178,9 +178,9 @@ jobs:
         copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
         copy ..\bin\tests\tests.exe .
         echo set
-        set
+        gci env:* | sort-object name
         echo path
-        echo %PATH%
+        echo echo $env:PATH
         echo dir1
         dir ..\Qt\5.15.2\mingw81_64\bin
         echo dir2
