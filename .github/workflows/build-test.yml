@@ -22,7 +22,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest, windows-2019]
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
@@ -33,16 +33,16 @@ jobs:
           - os: ubuntu-latest
             qt-version: '5.9.9'
           # tests.exe not found
-          - os: windows-latest
+          - os: windows-2019
             qt-version: '5.9.9'
           # Qt installation times out too often
-#          - os: windows-latest
+#          - os: windows-2019
 #            qt-version: '5.13.2'
           # win64_mingw73 not found
-#          - os: windows-latest
+#          - os: windows-2019
 #            qt-version: '5.15.0'
 #          # qt.conf not found (https://github.com/jurplel/install-qt-action/issues/54)
-#          - os: windows-latest
+#          - os: windows-2019
 #            qt-version: '5.15.1'
           # botan 32bit error
         include:
@@ -52,7 +52,7 @@ jobs:
 #          - os: macos-latest
 #            qt-version: '6.3.0'
 #            experimental: true
-#          - os: windows-latest
+#          - os: windows-2019
 #            qt-version: '6.3.0'
 #            experimental: true
           # Snapcraft
