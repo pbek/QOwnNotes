@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 22.7.0
+- the build system for Windows was fixed again (for [#2558](https://github.com/pbek/QOwnNotes/issues/2558))
+
 ## 22.6.2
 - the note actions for notes in subfolders are now enabled in the note tree context
   menu if the "note tree mode" is enabled (for [#2355](https://github.com/pbek/QOwnNotes/issues/2355))
