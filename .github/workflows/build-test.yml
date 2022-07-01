@@ -177,16 +177,16 @@ jobs:
         copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
         copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
         copy ..\bin\tests\tests.exe .
-        rem echo set
-        rem gci env:* | sort-object name
-        rem echo path
-        rem echo echo $env:PATH
-        rem cd ..\bin\tests
-        rem echo test1
-        rem .\tests.exe -txt
-        rem echo windeployqt 
+        # echo set
+        # gci env:* | sort-object name
+        # echo path
+        # echo echo $env:PATH
+        # cd ..\bin\tests
+        # echo test1
+        # .\tests.exe -txt
+        # echo windeployqt 
         windeployqt --debug tests.exe
-        rem echo test2
+        # echo test2
         .\tests.exe -txt
 
       #
