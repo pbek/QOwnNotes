@@ -4815,37 +4815,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="968"/>
 <source>Print</source>
-<translation type="unfinished">Print</translation>
+<translation>打印</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="976"/>
 <source>Print selected text</source>
-<translation type="unfinished">Print selected text</translation>
+<translation>打印所选文字</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="985"/>
 <source>Print selected text (preview)</source>
-<translation type="unfinished">Print selected text (preview)</translation>
+<translation>打印所选文字（预览）</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1000"/>
 <source>Export</source>
-<translation type="unfinished">Export</translation>
+<translation>导出</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1013"/>
 <source>Export selected text as PDF</source>
-<translation type="unfinished">Export selected text as PDF</translation>
+<translation>导出选定的文字为 PDF</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1022"/>
 <source>Export selected text as PDF (preview)</source>
-<translation type="unfinished">Export selected text as PDF (preview)</translation>
+<translation>导出选定的文字为 PDF（预览）</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1054"/>
 <source>Custom actions</source>
-<translation type="unfinished">Custom actions</translation>
+<translation>自定义操作</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1145"/>
@@ -4865,7 +4865,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1173"/>
 <source>Spelling</source>
-<translation type="unfinished">Spelling</translation>
+<translation>拼写</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1203"/>

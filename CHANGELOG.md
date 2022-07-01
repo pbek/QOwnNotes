@@ -2,6 +2,7 @@
 
 ## 22.7.0
 - the build system for Windows was fixed again (for [#2558](https://github.com/pbek/QOwnNotes/issues/2558))
+- added more translation (thank you yangzhongtian, mguerra, amirkbrpr, chocolatine)
 
 ## 22.6.2
 - the note actions for notes in subfolders are now enabled in the note tree context
