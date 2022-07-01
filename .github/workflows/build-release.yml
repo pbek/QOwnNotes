@@ -61,14 +61,14 @@ jobs:
       matrix:
         # Ubuntu 18.04 because of https://github.com/probonopd/linuxdeployqt/issues/340
         # Ubuntu 18.04 because of samuelmeuli/action-snapcraft
-        os: [ubuntu-18.04, macos-latest, windows-latest]
+        os: [ubuntu-18.04, macos-latest, windows-2019]
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
         qt-version: ['5.15.2']
         app-image: [true, false]
         exclude:
-          - os: windows-latest
+          - os: windows-2019
             app-image: true
           - os: macos-latest
             app-image: true
@@ -79,7 +79,7 @@ jobs:
 #            qt-version: '5.13.2'
 #          - os: macos-latest
 #            qt-version: '5.13.2'
-#          - os: windows-latest
+#          - os: windows-2019
 #            qt-version: '5.15.2'
     steps:
     - uses: actions/checkout@v3	
