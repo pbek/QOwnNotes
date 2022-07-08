@@ -8,6 +8,9 @@
     - use `qc switch` to get a list of note folders to select which note folder to switch to
     - use `qc switch -f <note-folder-id>` to make QOwnNotes switch to another note folder instantly
     - needs OwnNotes at least at version 22.7.1
+- there now is a software repository for **Fedora 36**
+  - please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html)
+    for instructions
 - added more translation (thank you rifkahidayat, or120, tigris.huszonkilenc)
 
 ## 22.7.0
