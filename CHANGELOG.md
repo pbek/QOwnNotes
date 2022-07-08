@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 22.7.1
+- support for switching note folders in [qc](https://github.com/qownnotes/qc)
+  was added (for [#5](https://github.com/qownnotes/qc/issues/5))
+- [qc](https://github.com/qownnotes/qc) v0.4.0 was released
+  - add support for note folder switching (for [#5](https://github.com/qownnotes/qc/issues/5))
+    - use `qc switch` to get a list of note folders to select which note folder to switch to
+    - use `qc switch -f <note-folder-id>` to make QOwnNotes switch to another note folder instantly
+    - needs OwnNotes at least at version 22.7.1
+
 ## 22.7.0
 - the build system for Windows was fixed again (for [#2558](https://github.com/pbek/QOwnNotes/issues/2558))
 - added more translation (thank you yangzhongtian, mguerra, amirkbrpr, chocolatine)

@@ -259,11 +259,21 @@ void WebSocketServerService::processMessage(const QString &message) {
             return;
         }
 
-        mainWindow->changeNoteFolder(noteFolderId);
+        const bool switched = mainWindow->changeNoteFolder(noteFolderId);
 
-        pSender->sendTextMessage(getNoteFolderSwitchedJsonText(true));
+        pSender->sendTextMessage(getNoteFolderSwitchedJsonText(switched));
 
         QString jsonText = getBookmarksJsonText();
+        pSender->sendTextMessage(jsonText);
+#endif
+    } else if (type == QLatin1String("getNoteFolders")) {
+#ifndef INTEGRATION_TESTS
+        QString jsonText = getNoteFoldersJsonText();
+
+        if (jsonText.isEmpty()) {
+            return;
+        }
+
         pSender->sendTextMessage(jsonText);
 #endif
     } else if (type == QLatin1String("getCommandSnippets")) {
@@ -277,7 +287,13 @@ void WebSocketServerService::processMessage(const QString &message) {
         pSender->sendTextMessage(jsonText);
 #endif
     } else {
-        pSender->sendTextMessage("Received: " + message);
+        QJsonObject resultObject;
+        resultObject.insert(QStringLiteral("type"),
+                            QJsonValue::fromVariant("unknownMessage"));
+        resultObject.insert(QStringLiteral("data"), message);
+
+        QJsonDocument doc(resultObject);
+        pSender->sendTextMessage(doc.toJson(QJsonDocument::Compact));
     }
 }
 
@@ -360,6 +376,30 @@ QString WebSocketServerService::getBookmarksJsonText() {
     QString jsonText = Bookmark::bookmarksWebServiceJsonText(bookmarks);
 
     return jsonText;
+}
+
+QString WebSocketServerService::getNoteFoldersJsonText() {
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow == nullptr) {
+        return {};
+    }
+
+    QJsonArray noteFolderObjectList;
+
+    const auto noteFolders = NoteFolder::fetchAll();
+    for (const NoteFolder &noteFolder : noteFolders) {
+        noteFolderObjectList.push_back(noteFolder.jsonObject());
+    }
+
+    QJsonObject noteFolderResultObject;
+    noteFolderResultObject.insert(QStringLiteral("type"),
+                                      QJsonValue::fromVariant("noteFolders"));
+    noteFolderResultObject.insert(QStringLiteral("data"), noteFolderObjectList);
+    noteFolderResultObject.insert(QStringLiteral("currentId"), NoteFolder::currentNoteFolderId());
+
+    QJsonDocument doc(noteFolderResultObject);
+
+    return doc.toJson(QJsonDocument::Compact);
 }
 
 QString WebSocketServerService::getCommandSnippetsJsonText() {

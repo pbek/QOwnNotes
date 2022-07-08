@@ -238,7 +238,7 @@ class MainWindow : public QMainWindow {
 
     void storeUpdatedNotesToDisk();
 
-    void changeNoteFolder(const int noteFolderId,
+    bool changeNoteFolder(const int noteFolderId,
                           const bool forceChange = false);
 
     void allowNoteEditing();

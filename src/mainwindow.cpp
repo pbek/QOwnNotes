@@ -1979,7 +1979,7 @@ void MainWindow::loadNoteFolderListMenu() {
 /*
  * Set a new note folder
  */
-void MainWindow::changeNoteFolder(const int noteFolderId,
+bool MainWindow::changeNoteFolder(const int noteFolderId,
                                   const bool forceChange) {
     const int currentNoteFolderId = NoteFolder::currentNoteFolderId();
 
@@ -1997,11 +1997,11 @@ void MainWindow::changeNoteFolder(const int noteFolderId,
 
     const NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
     if (!noteFolder.isFetched()) {
-        return;
+        return false;
     }
 
     if (noteFolder.isCurrent() && !forceChange) {
-        return;
+        return false;
     }
 
     QString folderName = noteFolder.getLocalPath();
@@ -2080,6 +2080,8 @@ void MainWindow::changeNoteFolder(const int noteFolderId,
     generateSystemTrayContextMenu();
     updateWindowTitle();
     _lastNoteId = 0;
+
+    return true;
 }
 
 /*

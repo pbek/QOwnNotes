@@ -68,6 +68,8 @@ class WebSocketServerService : public QObject {
 
     static QString getTokenQueryJsonText() ;
 
+    static QString getNoteFoldersJsonText();
+
 #ifndef INTEGRATION_TESTS
     WebSocketTokenDialog *_webSocketTokenDialog;
 #endif
