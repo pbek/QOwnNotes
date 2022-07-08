@@ -8,6 +8,7 @@
     - use `qc switch` to get a list of note folders to select which note folder to switch to
     - use `qc switch -f <note-folder-id>` to make QOwnNotes switch to another note folder instantly
     - needs OwnNotes at least at version 22.7.1
+- added more translation (thank you rifkahidayat, or120, tigris.huszonkilenc)
 
 ## 22.7.0
 - the build system for Windows was fixed again (for [#2558](https://github.com/pbek/QOwnNotes/issues/2558))

@@ -189,8 +189,8 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>L</kbd> apre una finestra di dialogo per aggiungere un collegamento di testo (funziona anche sul testo selezionato)
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> apre una finestra di dialogo per aggiungere il collegamento alla nota
 - <kbd>⌘ Cmd</kbd> + <kbd>T</kbd> inserisce la data corrente nel formato scelto dall'utente
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> inserisce un'immagine (l'immagine verrà copiata nella cartella `media` nella cartella delle note corrente)
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> inserisce un allegato (il file sarà copiato nella cartella `attachments` della cartella note corrente)
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> inserisce una tabella
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>C</kbd> inserisce un blocco di codice nella posizione corrente
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> inserisce una virgoletta nella posizione corrente
@@ -215,20 +215,20 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> divide la nota corrente in due note nella posizione corrente del cursore
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> searches for the selected text on the web
-- <kbd>⌘ Cmd</kbd> + <kbd>Up</kbd> scrolls the content up
-- <kbd>⌘ Cmd</kbd> + <kbd>Down</kbd> scrolls the content down
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> moves the current line down
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> moves the current line up
-- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
+- <kbd>⌘ Cmd</kbd> + <kbd>Up</kbd> scorre il contenuto verso l'alto
+- <kbd>⌘ Cmd</kbd> + <kbd>Giù</kbd> scorre il contenuto verso il basso
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>↓</kbd> sposta la riga corrente verso il basso
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>↑</kbd> sposta la riga corrente verso l'alto
+- <kbd>⇧ Shift</kbd> + <kbd>Invio</kbd> aggiunge due spazi e un carattere di nuova riga per forzare una nuova riga di markdown
 
 ### Nel pannello di anteprima della nota
 
-- <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> lets you search in the current note
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+- <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> consente di cercare nella nota corrente
+    - usa i tasti <kbd>↑</kbd> e <kbd>↓</kbd> o <kbd>F3</kbd> e <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> per passare alla corrispondenza precedente e successiva
     - <kbd>Esc</kbd> chiude la barra di ricerca
 
 ### Nell'elenco delle Todo
 
-- <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> saves the current todo item
-- <kbd>⌘ Cmd</kbd> + <kbd>I</kbd> saves the current todo item and inserts in into the current note
-- <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> removes the current todo item
+- <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> salva l'elemento attività corrente
+- <kbd>⌘ Cmd</kbd> + <kbd>I</kbd> salva l'elemento attività corrente e lo inserisce nella nota corrente
+- <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> rimuove l'elemento da fare corrente

@@ -1575,7 +1575,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
                                             int maskierteGruppe);
 ```
 
-### Highlighting states
+### Hervorhebungsarten
 
 | Name                       | Nr. |
 | -------------------------- | --- |
