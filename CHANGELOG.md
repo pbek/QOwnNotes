@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.7.2
+- automatic resizing of images in the preview with space characters in filename is now 
+  also implemented (for [#2561](https://github.com/pbek/QOwnNotes/issues/2561))
+
 ## 22.7.1
 - support for switching note folders in [qc](https://github.com/qownnotes/qc)
   was added (for [#5](https://github.com/qownnotes/qc/issues/5))

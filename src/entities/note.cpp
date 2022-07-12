@@ -2766,7 +2766,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
             result.replace(
                 QRegularExpression(
                     QStringLiteral(R"(<img src="file:\/\/)") +
-                    QRegularExpression::escape(windowsSlash + fileName) +
+                    QRegularExpression::escape(windowsSlash + fileName.replace(QChar(' '), QStringLiteral("%20"))) +
                     QStringLiteral("\"")),
                 QStringLiteral("<img src=\"file://%2\"")
                     .arg(windowsSlash + fileName));
@@ -2776,12 +2776,12 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
             const int originalWidth = imageWidth;
             const int displayWidth =
                 (originalWidth > maxImageWidth) ? maxImageWidth : originalWidth;
+            const QString filePattern = QStringLiteral(R"(<img src="file://)") +
+                    windowsSlash + fileName.replace(QChar(' '), QStringLiteral("%20")) +
+                    QChar('"');
 
             result.replace(
-                QRegularExpression(
-                    QStringLiteral(R"(<img src="file:\/\/)") +
-                    QRegularExpression::escape(windowsSlash + fileName) +
-                    QChar('"')),
+                filePattern,
                 QStringLiteral(R"(<img width="%1" src="file://%2")")
                     .arg(QString::number(displayWidth),
                          windowsSlash + fileName));
