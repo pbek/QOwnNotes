@@ -2761,12 +2761,14 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
             getImageSizeCache()->push_back({fileName, imageWidth});
         }
 
+        auto fileNameWithPercentSpaces = fileName;
+        fileNameWithPercentSpaces.replace(QChar(' '), QStringLiteral("%20"));
 
         if (forExport) {
             result.replace(
                 QRegularExpression(
                     QStringLiteral(R"(<img src="file:\/\/)") +
-                    QRegularExpression::escape(windowsSlash + fileName.replace(QChar(' '), QStringLiteral("%20"))) +
+                    QRegularExpression::escape(windowsSlash + fileNameWithPercentSpaces) +
                     QStringLiteral("\"")),
                 QStringLiteral("<img src=\"file://%2\"")
                     .arg(windowsSlash + fileName));
@@ -2777,8 +2779,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
             const int displayWidth =
                 (originalWidth > maxImageWidth) ? maxImageWidth : originalWidth;
             const QString filePattern = QStringLiteral(R"(<img src="file://)") +
-                    windowsSlash + fileName.replace(QChar(' '), QStringLiteral("%20")) +
-                    QChar('"');
+                    windowsSlash + fileNameWithPercentSpaces + QChar('"');
 
             result.replace(
                 filePattern,
