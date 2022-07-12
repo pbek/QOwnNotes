@@ -40,16 +40,16 @@ By default `fzf` is used for searching, but you can use `peco` by setting it wit
 
 Before you are using the snippet manager you need to enable the *Web socket server* (2) in the *Browser extension / command snippets* (1) settings in QOwnNotes.
 
-Then you need to show the security token (3) and copy it (4).
+Quindi devi mostrare il token di sicurezza (3) e copiarlo (4).
 
-Now open the configuration file of the snippet manager with:
+Ora apri il file di configurazione dello snippet manager con:
 
 ```bash
 # Configure the snippet manager
 qc configure
 ```
 
-And put the security token in the `token` attribute:
+E inserisci il token di sicurezza nell'attributo `token`:
 
 ```toml
 [QOwnNotes]
@@ -57,14 +57,14 @@ token = "yourtokenhere"
 ```
 
 ::: tip
-In the QOwnNotes settings you can also set what note tag should be used to search for commands in notes. By default, the tag `commands` is used.
+Nelle impostazioni di QOwnNotes puoi anche impostare quale tag nota deve essere utilizzato per cercare i comandi nelle note. Per impostazione predefinita, viene utilizzato il tag `commands`.
 :::
 
-## Syntax of command snippets
+## Sintassi dei frammenti di comando
 
-You can use **unordered lists with in-line code blocks** to store command snippets. All notes with the tag `commands` are searched for command snippets.
+Puoi utilizzare **elenchi non ordinati con blocchi di codice in linea** per memorizzare frammenti di comando. Tutte le note con il tag `comandi` vengono cercate per frammenti di comando.
 
-If you add a `cmd:` before the in-line code block, the command will also be found in the **current note** regardless of note tags.
+Se aggiungi un `cmd:` prima del blocco di codice in linea, il comando si troverà anche nella **nota corrente** indipendentemente dai tag della nota.
 
 ```markdown
 - `echo I am a command` I am a description #tag1 #tag2 #tag3
@@ -76,27 +76,27 @@ If you add a `cmd:` before the in-line code block, the command will also be foun
 - `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
 ```
 
-**`bash` or `shell` code blocks**, preceded by a heading 2 or higher as a description, can also be used for command snippets. Tags are also supported if they are between the heading and the code block.
+**`bash` or `shell` code blocks**, preceded by a heading 2 or higher as a description, can also be used for command snippets. I tag sono supportati anche se si trovano tra l'intestazione e il blocco di codice.
 
-    ## Do this with a "bash" code block
+    ## Fallo con un blocco di codice "bash".
 
-    - this text will be ignored text
-    - but tags can be used: #tag1 #tag2
+    - questo testo verrà ignorato
+    - ma si possono usare i tag: #tag1 #tag2
 
     ```bash
-    echo do this
-    echo do that
+    eco fai questo
+     eco fallo
     ```
 
 
-    ## Do something else with a "sh" code block
+    ## Fai qualcos'altro con un blocco di codice "sh".
 
     ```sh
-    echo do something else
-    echo do something other
+    eco fare qualcos'altro
+     eco fai qualcos'altro
     ```
 
-Above example will result in two command snippets, the first one with the two tags `tag1` and `tag2`.
+L'esempio precedente risulterà in due frammenti di comando, il primo con i due tag `tag1` e `tag2`.
 
 ## Come si usa
 

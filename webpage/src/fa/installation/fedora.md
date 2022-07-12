@@ -19,7 +19,7 @@ dnf install qownnotes
 در صورت مواجه شدن با مشکل، کلید را با این کد وارد کنید:
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_35/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
 ```
 :::
 
@@ -30,7 +30,7 @@ rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fed
 فرمان های پوسته ای زیر را به صورت ریشه برای اطمینان از مخزن اجرا کنید.
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_35/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
 ```
 
 فرمان های پوسته ای زیر را برای افزودن مخزن به صورت ریشه اجرا کرده و QOwnNotes را از آنجا نصب کنید.
@@ -50,4 +50,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[دانلود مستقیم](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_35) (این پیوند نمونه مربوط به فدورا 34 است)
+[دانلود مستقیم](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36) (این لینک نمونه مربوط به فدورا 36 است)

@@ -19,7 +19,7 @@ Előfordulhat, hogy el kell fogadnia a repo kulcsot, mielőtt letölthet róla.
 Ha problémái vannak, akkor importálja a kulcsot saját kezüleg:
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_35/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
 ```
 :::
 
@@ -30,7 +30,7 @@ Használja ezt a módszert, ha a Fedora verziója nem támogatja a `config-manag
 Futtassa a következő shell parancsokat rootként, hogy megbízhasson az adattárban.
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_35/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
 ```
 
 Futtassa rootként a következő shell parancsokat az adattár hozzáadásához és a QOwnNotes onnan való telepítéséhez.
@@ -50,4 +50,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Közvetlen letöltés](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_35) (ez a példa hivatkozás a Fedora 35-höz való)
+[Közvetlen letöltés](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36) (ez a példa hivatkozás a Fedora 36-hoz)

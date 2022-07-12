@@ -19,7 +19,7 @@ Vous devrez peut-être accepter la clef du dépôt avant de pouvoir y téléchar
 Si vous rencontrez des problèmes, importez vous-même la clé avec :
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_35/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
 ```
 :::
 
@@ -30,7 +30,7 @@ Utilisez cette méthode si votre version de Fedora ne comporte pas le greffon dn
 Exécutez les commandes shell suivantes en tant que root pour approuver le dépôt.
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_35/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
 ```
 
 Exécutez les commandes shell suivantes en tant que root pour ajouter le dépôt et installer QOwnNotes à partir de là.
@@ -50,4 +50,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Téléchargement direct](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_35) (cet exemple de lien est pour Fedora 35)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36) (cet exemple de lien est pour Fedora 36)

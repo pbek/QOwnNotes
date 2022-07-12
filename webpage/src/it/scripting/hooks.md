@@ -169,14 +169,14 @@ handleNewNoteHeadlineHook
 ### Chiamata al metodo e parametri
 ```js
 /**
- * This function is called before a note is created
- *
- * It allows you to modify the headline of the note before it is created
- * Note that you have to take care about a unique note name, otherwise
- * the new note will not be created, it will just be found in the note list
- *
- * You can use this function for creating note templates
- *
+  * Questa funzione viene chiamata prima della creazione di una nota
+  *
+  * Ti permette di modificare il titolo della nota prima che venga creata
+  * Nota che devi prenderti cura di un nome di nota univoco, altrimenti
+  * la nuova nota non verrà creata, sarà solo trovata nell'elenco delle note
+  *
+  * È possibile utilizzare questa funzione per creare modelli di note
+  *
  * @param headline text that would be used to create the headline
  * @return {string} the headline of the note
  */
