@@ -2055,7 +2055,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="8243"/>
+<location filename="../mainwindow.cpp" line="8245"/>
 <source>Add a tag to the current note</source>
 <translation>Li ser nîşeya nû ya pêşnûmeyek zêde bikin</translation>
 </message>
@@ -2171,7 +2171,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1449"/>
-<location filename="../mainwindow.cpp" line="9728"/>
+<location filename="../mainwindow.cpp" line="9731"/>
 <source>Select &amp;all notes</source>
 <translation>Hilbijêrin &amp;hemî nîşeyan</translation>
 </message>
@@ -2221,7 +2221,7 @@
 <translation>Lêgerîn an nîşangir biafirînin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8244"/>
+<location filename="../mainwindow.cpp" line="8246"/>
 <source>Add a tag to the selected notes</source>
 <translation>Li ser nîşanên bijare nîşarek zêde bikin</translation>
 </message>
@@ -2610,7 +2610,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2245"/>
-<location filename="../mainwindow.cpp" line="10691"/>
+<location filename="../mainwindow.cpp" line="10694"/>
 <source>Remove current workspace</source>
 <translation>Qada xebata heyî rakirin</translation>
 </message>
@@ -2678,7 +2678,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2366"/>
-<location filename="../mainwindow.cpp" line="9704"/>
+<location filename="../mainwindow.cpp" line="9707"/>
 <source>Open note in different window</source>
 <translation>Di pencereya cûda de nîşana vekirî</translation>
 </message>
@@ -2699,7 +2699,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2406"/>
-<location filename="../mainwindow.cpp" line="9712"/>
+<location filename="../mainwindow.cpp" line="9715"/>
 <source>Show note git versions</source>
 <translation>Guhertoyên nîşana git nîşan bide</translation>
 </message>
@@ -2782,7 +2782,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2569"/>
-<location filename="../mainwindow.cpp" line="11653"/>
+<location filename="../mainwindow.cpp" line="11656"/>
 <source>Automatically detect</source>
 <translation>Bixweber vedîtin</translation>
 </message>
@@ -3001,22 +3001,22 @@
 <translation>Danasînên ji Evernote</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2936"/>
+<location filename="../mainwindow.cpp" line="2938"/>
 <source>Note was removed externally!</source>
 <translation>Nîşe ji derve hate rakirin!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2937"/>
+<location filename="../mainwindow.cpp" line="2939"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>Nîşeya heyî ji derveyî vê serîlêdanê hate derxistin!
 Nîşeya heyî ji nû ve vegerin?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5516"/>
-<location filename="../mainwindow.cpp" line="5539"/>
-<location filename="../mainwindow.cpp" line="6867"/>
-<location filename="../mainwindow.cpp" line="9794"/>
+<location filename="../mainwindow.cpp" line="5518"/>
+<location filename="../mainwindow.cpp" line="5541"/>
+<location filename="../mainwindow.cpp" line="6869"/>
+<location filename="../mainwindow.cpp" line="9797"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Bişûndekirin</translation>
 </message>
@@ -3028,47 +3028,47 @@ Nîşeya heyî ji nû ve vegerin?</translation>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3180"/>
+<location filename="../mainwindow.cpp" line="3182"/>
 <source>new version %1 available</source>
 <translation>guhertoya nû %1 heye</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3294"/>
+<location filename="../mainwindow.cpp" line="3296"/>
 <source>Abort</source>
 <translation>Betal bike</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3294"/>
+<location filename="../mainwindow.cpp" line="3296"/>
 <source>Loading notes…</source>
 <translation>Loading notes…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3507"/>
+<location filename="../mainwindow.cpp" line="3509"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>Databaza pevçûnê ya dubare hate jêbirin: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3508"/>
+<location filename="../mainwindow.cpp" line="3510"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>Ne gengaz e ku databasa pevçûnê ya dubare bikarbîne: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3514"/>
+<location filename="../mainwindow.cpp" line="3516"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>Databaza pevçûyî ya yekbûyî rakirin: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3515"/>
+<location filename="../mainwindow.cpp" line="3517"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>Ne gengaz e ku databasa pevçûnê ya yekbûyî rakirin: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3530"/>
+<location filename="../mainwindow.cpp" line="3532"/>
 <source>Delete conflicted database copies</source>
 <translation>Kopên databasê yên nakok hilweşînin</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3553"/>
+<location filename="../mainwindow.cpp" line="3555"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>Kopiyek databazê ya pevçûnê %n rakirin</numerusform>
@@ -3076,62 +3076,62 @@ Nîşeya heyî ji nû ve vegerin?</translation>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3724"/>
+<location filename="../mainwindow.cpp" line="3726"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>Ji kerema xwe peldanka ku namên xwe hilanîn hilbijêrin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3750"/>
+<location filename="../mainwindow.cpp" line="3752"/>
 <source>No folder was selected</source>
 <translation>Peldank nehat hilbijartin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3752"/>
+<location filename="../mainwindow.cpp" line="3754"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>Pêdivî ye ku hûn peldanka xweya ownCloud hilbijêrin da ku vê nermalavê bixebitin!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3754"/>
+<location filename="../mainwindow.cpp" line="3756"/>
 <source>&amp;Retry</source>
 <translation>&amp;Ribandin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3754"/>
+<location filename="../mainwindow.cpp" line="3756"/>
 <source>&amp;Exit</source>
 <translation>&amp;Jêçûn</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4061"/>
+<location filename="../mainwindow.cpp" line="4063"/>
 <source>Remove current note</source>
 <translation>Nîşeya heyî hilweşînin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4062"/>
+<location filename="../mainwindow.cpp" line="4064"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Nîşeya heyî rakin: &lt;strong&gt;%1 &lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4433"/>
+<location filename="../mainwindow.cpp" line="4435"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>Ji kerema xwe vê şîfreyara &lt;strong&gt; şîfreya &lt;/strong&gt; yê binivîse.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4456"/>
+<location filename="../mainwindow.cpp" line="4458"/>
 <source>Note can't be decrypted!</source>
 <translation>Nîşe nekarin bên dekandin!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4457"/>
+<location filename="../mainwindow.cpp" line="4459"/>
 <source>It seems that your password is not valid!</source>
 <translation>Wusa dixuye ku şîfreya te ne derbasdar e!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4644"/>
+<location filename="../mainwindow.cpp" line="4646"/>
 <source>Remove selected notes</source>
 <translation>Nîşeyên bijarte derxistin</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4646"/>
+<location filename="../mainwindow.cpp" line="4648"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3145,12 +3145,12 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4719"/>
+<location filename="../mainwindow.cpp" line="4721"/>
 <source>Remove selected tags</source>
 <translation>Tagên hilbijartî rakirin</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4720"/>
+<location filename="../mainwindow.cpp" line="4722"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; tag hilbijartin rakirin? Di vê pêvajoyê de tu nîşan nayên rakirin.</numerusform>
@@ -3158,13 +3158,13 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4774"/>
-<location filename="../mainwindow.cpp" line="9033"/>
+<location filename="../mainwindow.cpp" line="4776"/>
+<location filename="../mainwindow.cpp" line="9035"/>
 <source>Move selected notes</source>
 <translation>Nîşeyên hilbijartî hilkişînin</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4775"/>
+<location filename="../mainwindow.cpp" line="4777"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>%n nîşana bijarte li &lt;strong&gt;%2&lt;/strong&gt; veguhezîne?</numerusform>
@@ -3172,13 +3172,13 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4885"/>
-<location filename="../mainwindow.cpp" line="9153"/>
+<location filename="../mainwindow.cpp" line="4887"/>
+<location filename="../mainwindow.cpp" line="9155"/>
 <source>Copy selected notes</source>
 <translation>Nîşeyên bijartî kopî bikin</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4886"/>
+<location filename="../mainwindow.cpp" line="4888"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>%n nîşeya hilbijartî li &lt;strong&gt;%2&lt;/strong&gt; kopî bikin?</numerusform>
@@ -3186,13 +3186,13 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4916"/>
-<location filename="../mainwindow.cpp" line="5065"/>
+<location filename="../mainwindow.cpp" line="4918"/>
+<location filename="../mainwindow.cpp" line="5067"/>
 <source>Done</source>
 <translation>Binêre</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4917"/>
+<location filename="../mainwindow.cpp" line="4919"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n note li &lt;strong&gt;%2&lt;/strong&gt; hate kopî kirin.</numerusform>
@@ -3200,12 +3200,12 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4930"/>
+<location filename="../mainwindow.cpp" line="4932"/>
 <source>Tag selected notes</source>
 <translation>Nîşeyên bijartî Tag</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4931"/>
+<location filename="../mainwindow.cpp" line="4933"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Bi %n nîşana bijartî tag &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3213,37 +3213,37 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5210"/>
+<location filename="../mainwindow.cpp" line="5212"/>
 <source>Restart application</source>
 <translation>Serlêdana nû kirin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5211"/>
+<location filename="../mainwindow.cpp" line="5213"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Hûn hewce ne ku serîlêdanê ji nû ve bidin dest pê kirin da ku guhartinan bidin dest pê kirin.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5214"/>
+<location filename="../mainwindow.cpp" line="5216"/>
 <source>Restart</source>
 <translation>Destpêkirin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5436"/>
+<location filename="../mainwindow.cpp" line="5438"/>
 <source>PDF files</source>
 <translation>Pelên PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5512"/>
+<location filename="../mainwindow.cpp" line="5514"/>
 <source>Todo lists disabled!</source>
 <translation>Todo navnîşan asteng dike!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5513"/>
+<location filename="../mainwindow.cpp" line="5515"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Hûn navnîşên todo yên neçalak kirine. &lt;br /&gt; Ji kerema xwe mîhengên xweya mîhengê &lt;strong&gt; Todo &lt;/strong&gt; yê binihêrin!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5765"/>
+<location filename="../mainwindow.cpp" line="5767"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Di bûyera &lt;strong&gt;%n&lt;/ strong&gt; yê her termê &lt;strong&gt;%1&lt;/strong&gt; de dîtin</numerusform>
@@ -3251,79 +3251,79 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6322"/>
+<location filename="../mainwindow.cpp" line="6324"/>
 <source>Note folders</source>
 <translation>Nîşaneyên firotanê</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6445"/>
+<location filename="../mainwindow.cpp" line="6447"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>Guhertoyên nuha niha ji servera xwe ya xweya loadê hatî barkirin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6462"/>
+<location filename="../mainwindow.cpp" line="6464"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Nîşaneyên hilweşandî niha ji servera xwe ya xweya load ve hatî barkirin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6711"/>
+<location filename="../mainwindow.cpp" line="6713"/>
 <source>Inserted text as text attachment file</source>
 <translation type="unfinished">Inserted text as text attachment file</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6863"/>
+<location filename="../mainwindow.cpp" line="6865"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>Nîşeya we dê dîsa wekî nivîsa sade were şûndetirandin û hilanîn. Di bîra xwe de be ku dibe ku nîşana unencryted li ser servera we were qewirandin û nivîsara hesas dikare bête xuyandin! &lt;br /&gt; Ma hûn dixwazin pirtûka xwe bişkînin?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6960"/>
+<location filename="../mainwindow.cpp" line="6962"/>
 <source>Markdown files</source>
 <translation>Pelên Markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6974"/>
+<location filename="../mainwindow.cpp" line="6976"/>
 <source>Export attached files</source>
 <translation type="unfinished">Export attached files</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6975"/>
+<location filename="../mainwindow.cpp" line="6977"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7009"/>
+<location filename="../mainwindow.cpp" line="7011"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>Di slot %1 de nîşeya nîşankirî</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7024"/>
+<location filename="../mainwindow.cpp" line="7026"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>Di slot %1 de çûn ser helwesta nîşangir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7208"/>
-<location filename="../mainwindow.cpp" line="7278"/>
+<location filename="../mainwindow.cpp" line="7210"/>
+<location filename="../mainwindow.cpp" line="7280"/>
 <source>Inserting image</source>
 <translation>Naskirina wêneyê</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7213"/>
-<location filename="../mainwindow.cpp" line="7282"/>
+<location filename="../mainwindow.cpp" line="7215"/>
+<location filename="../mainwindow.cpp" line="7284"/>
 <source>Done inserting image</source>
 <translation>Wekî wêneyê xistin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7215"/>
+<location filename="../mainwindow.cpp" line="7217"/>
 <source>Inserting attachment</source>
 <translation>Inixandina pêvekirinê</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7220"/>
+<location filename="../mainwindow.cpp" line="7222"/>
 <source>Done inserting attachment</source>
 <translation>Tevne girêdanê lêkirin</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7232"/>
+<location filename="../mainwindow.cpp" line="7234"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>%n nîşana %1 hate kop kirin</numerusform>
@@ -3331,7 +3331,7 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7242"/>
+<location filename="../mainwindow.cpp" line="7244"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>Famîleya %n nîşana ya têkildar (bi guman jixwe heyî) nehat</numerusform>
@@ -3339,7 +3339,7 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7252"/>
+<location filename="../mainwindow.cpp" line="7254"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>Kopkirina %n notayê (bê nîşankirin an pelê nivîsê tune an nayê xwendin)</numerusform>
@@ -3347,214 +3347,214 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7265"/>
+<location filename="../mainwindow.cpp" line="7267"/>
 <source>Saving temporary image</source>
 <translation>Wêneyê demkî xilas dibe</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6694"/>
-<location filename="../mainwindow.cpp" line="7284"/>
+<location filename="../mainwindow.cpp" line="6696"/>
+<location filename="../mainwindow.cpp" line="7286"/>
 <source>Temporary file can't be opened</source>
 <translation>Dosya demkî nayê vekirin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7339"/>
+<location filename="../mainwindow.cpp" line="7341"/>
 <source>Downloading %1</source>
 <translation>Daxistin %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7511"/>
+<location filename="../mainwindow.cpp" line="7513"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Mezinahiya fontê bi %1 pt vekişîne</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8293"/>
+<location filename="../mainwindow.cpp" line="8295"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>Tag "%1" ji nîşeya heyî rakin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8294"/>
+<location filename="../mainwindow.cpp" line="8296"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>Tag "%1" ji nîşanên hilbijartî rakirin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8525"/>
+<location filename="../mainwindow.cpp" line="8527"/>
 <source>Rename tag</source>
 <translation>Tag name kirin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8526"/>
+<location filename="../mainwindow.cpp" line="8528"/>
 <source>Assign color</source>
 <translation>Rengê rengîn</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8527"/>
+<location filename="../mainwindow.cpp" line="8529"/>
 <source>Disable color</source>
 <translation>Rengê neçalak bike</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8531"/>
+<location filename="../mainwindow.cpp" line="8533"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;Tags hilkişînin…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8742"/>
+<location filename="../mainwindow.cpp" line="8744"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>Ber bi rootê ve biçin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9316"/>
+<location filename="../mainwindow.cpp" line="9318"/>
 <source>The scripting engine was reloaded</source>
 <translation>Motora şîfreyê ji nû ve hate saz kirin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9350"/>
+<location filename="../mainwindow.cpp" line="9352"/>
 <source>HTML files</source>
 <translation>Pelên HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9640"/>
+<location filename="../mainwindow.cpp" line="9643"/>
 <source>Jump to the note's subfolder</source>
 <translation>Jê berpala nîşnê biçe
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9697"/>
+<location filename="../mainwindow.cpp" line="9700"/>
 <source>Open note in tab</source>
 <translation>Li tabloyê nîşang vekir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11224"/>
+<location filename="../mainwindow.cpp" line="11227"/>
 <source>A script update was found!</source>
 <translation>Nûvekirinên script</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11230"/>
+<location filename="../mainwindow.cpp" line="11233"/>
 <source>Script updates</source>
 <translation>Nûvekirinên Script
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11231"/>
+<location filename="../mainwindow.cpp" line="11234"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>Nûvekirinên ku di nivîsarên we de ne di depoya tîpokê de hatine dîtin! Ma hûn dixwazin wan nûve bikin?
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11246"/>
+<location filename="../mainwindow.cpp" line="11249"/>
 <source>No script updates were found</source>
 <translation>Ne nûvekirinên skrîptê hate dîtin
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11890"/>
+<location filename="../mainwindow.cpp" line="11893"/>
 <source>Toggle note stickiness</source>
 <translation>Toggle note stickness
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11896"/>
+<location filename="../mainwindow.cpp" line="11899"/>
 <source>Close other note tabs</source>
 <translation>Tabloyên din ên nîşankirinê bigire</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9584"/>
-<location filename="../mainwindow.cpp" line="9778"/>
+<location filename="../mainwindow.cpp" line="9586"/>
+<location filename="../mainwindow.cpp" line="9781"/>
 <source>Rename note</source>
 <translation>Têbînî rename</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7615"/>
+<location filename="../mainwindow.cpp" line="7617"/>
 <source>Show all notes (%1)</source>
 <translation type="unfinished">Show all notes (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7776"/>
+<location filename="../mainwindow.cpp" line="7778"/>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9586"/>
+<location filename="../mainwindow.cpp" line="9588"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>Destûrê dide we ku navê pelê nîşê binivîse</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9600"/>
+<location filename="../mainwindow.cpp" line="9602"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;Nîşan bidin ber…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9601"/>
+<location filename="../mainwindow.cpp" line="9603"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;Nivîsên li ser…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9644"/>
+<location filename="../mainwindow.cpp" line="9647"/>
 <source>Move notes to subfolder…</source>
 <translation>Nîşan berbi peldanka veguhêzin…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9648"/>
+<location filename="../mainwindow.cpp" line="9651"/>
 <source>Copy notes to subfolder…</source>
 <translation>Nivîsarên li binê pelrê kopî bikin…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9656"/>
+<location filename="../mainwindow.cpp" line="9659"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;Nîşeyên hilbijartî bi…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9680"/>
+<location filename="../mainwindow.cpp" line="9683"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Tag ji nîşanên bijarte derxistin…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9778"/>
+<location filename="../mainwindow.cpp" line="9781"/>
 <source>Name:</source>
 <translation>Nav:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9790"/>
+<location filename="../mainwindow.cpp" line="9793"/>
 <source>Note renaming not enabled!</source>
 <translation>Têbînî ku navkirin nayê aktîfkirin!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10463"/>
+<location filename="../mainwindow.cpp" line="10466"/>
 <source>Create new workspace</source>
 <translation>Qada xebatê ya nû biafirînin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10464"/>
-<location filename="../mainwindow.cpp" line="10733"/>
+<location filename="../mainwindow.cpp" line="10467"/>
+<location filename="../mainwindow.cpp" line="10736"/>
 <source>Workspace name:</source>
 <translation>Navê qada kar:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10582"/>
+<location filename="../mainwindow.cpp" line="10585"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>tije</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10589"/>
+<location filename="../mainwindow.cpp" line="10592"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>mînîmal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10692"/>
+<location filename="../mainwindow.cpp" line="10695"/>
 <source>Remove the current workspace?</source>
 <translation>Qada xebata heyî rakirin?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10732"/>
+<location filename="../mainwindow.cpp" line="10735"/>
 <source>Rename workspace</source>
 <translation>Navê qada kar-yekê nû kirin</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10890"/>
+<location filename="../mainwindow.cpp" line="10893"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3563,42 +3563,42 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11163"/>
+<location filename="../mainwindow.cpp" line="11166"/>
 <source>Disallow all note editing</source>
 <translation>Hemî sererastkirinê nîşanker red bikin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11395"/>
+<location filename="../mainwindow.cpp" line="11398"/>
 <source>Select text files to import</source>
 <translation>Pelên nivîsê hilbijêrin da ku werin veguheztin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11425"/>
+<location filename="../mainwindow.cpp" line="11428"/>
 <source>Importing: %1</source>
 <translation>Daxistin: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11490"/>
+<location filename="../mainwindow.cpp" line="11493"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>Nîşeya sernavê '%1' li klîpa dêvê hate kopî kirin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11584"/>
+<location filename="../mainwindow.cpp" line="11587"/>
 <source>Leave full-screen mode</source>
 <translation>Moda full-screen hiştin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11770"/>
+<location filename="../mainwindow.cpp" line="11773"/>
 <source>Custom editor width</source>
 <translation>Wêjeya edîtorê ya xwerû</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11770"/>
+<location filename="../mainwindow.cpp" line="11773"/>
 <source>Characters:</source>
 <translation>Pît:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8263"/>
+<location filename="../mainwindow.cpp" line="8265"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n nîşana bijare</numerusform>
@@ -3607,7 +3607,7 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2451"/>
-<location filename="../mainwindow.cpp" line="11164"/>
+<location filename="../mainwindow.cpp" line="11167"/>
 <source>Allow all note editing</source>
 <translation>Hemî sererastkirina note</translation>
 </message>
@@ -3617,12 +3617,12 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 <translation>&amp;Tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5005"/>
+<location filename="../mainwindow.cpp" line="5007"/>
 <source>Remove tag from selected notes</source>
 <translation>Ji nîşanên hilbijartî rakirina tagê</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5006"/>
+<location filename="../mainwindow.cpp" line="5008"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>Ji %n nîşana bijarte nîşana &lt;strong&gt;%1&lt;/strong&gt; rakirin?</numerusform>
@@ -3630,7 +3630,7 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5066"/>
+<location filename="../mainwindow.cpp" line="5068"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>Tag &lt;%1 &lt;/strong&gt; ji %n note hate jêbirin
@@ -3639,120 +3639,120 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5111"/>
+<location filename="../mainwindow.cpp" line="5113"/>
 <source>Current notes folder: </source>
 <translation>Peldanka naha ya niha:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5114"/>
+<location filename="../mainwindow.cpp" line="5116"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>Peldanka nîşeyan bicîh bikin. Peldanka naha ya niha: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5322"/>
+<location filename="../mainwindow.cpp" line="5324"/>
 <source>Print note</source>
 <translation>Nivîsa çapkirinê</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5379"/>
+<location filename="../mainwindow.cpp" line="5381"/>
 <source>Letter</source>
 <translation>Name</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5409"/>
+<location filename="../mainwindow.cpp" line="5411"/>
 <source>Portrait</source>
 <translation>Portûgal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5409"/>
+<location filename="../mainwindow.cpp" line="5411"/>
 <source>Landscape</source>
 <translation>Dorhalî</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5414"/>
+<location filename="../mainwindow.cpp" line="5416"/>
 <source>Orientation</source>
 <translation>Orientation</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5414"/>
+<location filename="../mainwindow.cpp" line="5416"/>
 <source>Orientation:</source>
 <translation>Orientation:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5437"/>
+<location filename="../mainwindow.cpp" line="5439"/>
 <source>Export current note as PDF</source>
 <translation>Nîşana niha wekî PDF-ê derxînin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5536"/>
+<location filename="../mainwindow.cpp" line="5538"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>We navnîşek todowan hilbijartin. &lt;br/&gt; Ji kerema xwe mîhengên xweya mîhengê &lt;strong&gt; Todo &lt;/strong&gt; yê kontrol bikin!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6304"/>
+<location filename="../mainwindow.cpp" line="6306"/>
 <source>Open QOwnNotes</source>
 <translation>QOwnNotan vekin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6132"/>
-<location filename="../mainwindow.cpp" line="6354"/>
-<location filename="../mainwindow.cpp" line="9580"/>
+<location filename="../mainwindow.cpp" line="6134"/>
+<location filename="../mainwindow.cpp" line="6356"/>
+<location filename="../mainwindow.cpp" line="9582"/>
 <source>New note</source>
 <translation>Nîşeya nû</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6371"/>
+<location filename="../mainwindow.cpp" line="6373"/>
 <source>Recent notes</source>
 <translation>Nîşeyên dawî</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6387"/>
+<location filename="../mainwindow.cpp" line="6389"/>
 <source>Show todo lists</source>
 <translation>Lîsteyên todo nîşan bidin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6399"/>
+<location filename="../mainwindow.cpp" line="6401"/>
 <source>Recent tasks</source>
 <translation>Karên nû</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6420"/>
+<location filename="../mainwindow.cpp" line="6422"/>
 <source>Quit</source>
 <translation>Devjêberdan</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
 <location filename="../mainwindow.cpp" line="824"/>
-<location filename="../mainwindow.cpp" line="2198"/>
+<location filename="../mainwindow.cpp" line="2200"/>
 <source>Note folder</source>
 <translation>Peldanka bala</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8914"/>
-<location filename="../mainwindow.cpp" line="8981"/>
+<location filename="../mainwindow.cpp" line="8916"/>
+<location filename="../mainwindow.cpp" line="8983"/>
 <source>Copy to note folder</source>
 <translation>Pelê lêdana peldanka binivîsin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8914"/>
-<location filename="../mainwindow.cpp" line="8982"/>
+<location filename="../mainwindow.cpp" line="8916"/>
+<location filename="../mainwindow.cpp" line="8984"/>
 <source>Move to note folder</source>
 <translation>Move to peldanka nîşeyê</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8915"/>
-<location filename="../mainwindow.cpp" line="8983"/>
+<location filename="../mainwindow.cpp" line="8917"/>
+<location filename="../mainwindow.cpp" line="8985"/>
 <source>Copy to this subfolder</source>
 <translation>Ji vê subfolderê re kopî bikin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8916"/>
-<location filename="../mainwindow.cpp" line="8984"/>
+<location filename="../mainwindow.cpp" line="8918"/>
+<location filename="../mainwindow.cpp" line="8986"/>
 <source>Move to this subfolder</source>
 <translation>Berbi vê subfolderê ve biçin</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9028"/>
+<location filename="../mainwindow.cpp" line="9030"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>%n nîşana bijartî dakêşin da ku li subfolderê &lt;strong&gt;%2/strong&gt; bigerin?</numerusform>
@@ -3760,13 +3760,13 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5214"/>
-<location filename="../mainwindow.cpp" line="11409"/>
+<location filename="../mainwindow.cpp" line="5216"/>
+<location filename="../mainwindow.cpp" line="11412"/>
 <source>Cancel</source>
 <translation>Bişûndekirin</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9124"/>
+<location filename="../mainwindow.cpp" line="9126"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n note ji bo nîşankirina pelê "%2" hat veguheztin</numerusform>
@@ -3774,7 +3774,7 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9148"/>
+<location filename="../mainwindow.cpp" line="9150"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>%n nîşana bijartî kopî kirin da ku nîşa subfolder &lt;strong&gt;%2&lt;/strong&gt; bide?</numerusform>
@@ -3782,7 +3782,7 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9223"/>
+<location filename="../mainwindow.cpp" line="9225"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n note hate kopîkirin ku li jêr peldanka pelê "%2" were binavkirin</numerusform>
@@ -3790,47 +3790,47 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9702"/>
+<location filename="../mainwindow.cpp" line="9705"/>
 <source>Open note in external editor</source>
 <translation>Nivîskar li edîtorê derveyî veke</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9706"/>
+<location filename="../mainwindow.cpp" line="9709"/>
 <source>Show note in file manager</source>
 <translation>Di rêveberê pelê de nîşa nîşan bide</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9791"/>
+<location filename="../mainwindow.cpp" line="9794"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>Heke hûn dixwazin pirtûka xwe ji nû ve nav bikin, divê hûn vebijarkê çalak bikin da ku destûrê bide pelê nameyê ji sernavê cuda be.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9981"/>
+<location filename="../mainwindow.cpp" line="9984"/>
 <source>Create a new folder</source>
 <translation>Peldanka nû çêbikin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9982"/>
+<location filename="../mainwindow.cpp" line="9985"/>
 <source>Folder name:</source>
 <translation>Navê peldanka:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7649"/>
+<location filename="../mainwindow.cpp" line="7651"/>
 <source>show all untagged notes (%1)</source>
 <translation>nîşanên hemî nekêşandî nîşan bide (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7651"/>
+<location filename="../mainwindow.cpp" line="7653"/>
 <source>Untagged notes</source>
 <translation>Nîşeyên bêpergal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9351"/>
+<location filename="../mainwindow.cpp" line="9353"/>
 <source>Export current note as HTML file</source>
 <translation>Nîşana niha wekî pelê HTML-ê derxînin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5388"/>
+<location filename="../mainwindow.cpp" line="5390"/>
 <source>Page size</source>
 <translation>Mezinahiya rûpelê</translation>
 </message>
@@ -3840,22 +3840,22 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 <translation>amûrê bişkîne</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5388"/>
+<location filename="../mainwindow.cpp" line="5390"/>
 <source>Page size:</source>
 <translation>Mezinahiya rûpelê:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5497"/>
+<location filename="../mainwindow.cpp" line="5499"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes dê daneyên karanîna naskirî bişopîne, ku alîkarî dike ku biryar bide ka kîjan parçeyên QOwnNotes ji bo başkirina next û baştir dît û çareserkirina xelet. Hûn dikarin wê tevgerê di mîhengan de neçalakirin.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5501"/>
+<location filename="../mainwindow.cpp" line="5503"/>
 <source>&amp;Ok</source>
 <translation>&amp;Baş e</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9590"/>
+<location filename="../mainwindow.cpp" line="9592"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;Nîşan hildin</translation>
 </message>
@@ -3865,28 +3865,28 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 <translation>Karên we ji servera we têne barkirin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2880"/>
+<location filename="../mainwindow.cpp" line="2882"/>
 <source>Current note was modified externally</source>
 <translation>Nîşana heyî li derve hate guheztin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2950"/>
-<location filename="../mainwindow.cpp" line="6070"/>
+<location filename="../mainwindow.cpp" line="2952"/>
+<location filename="../mainwindow.cpp" line="6072"/>
 <source>Stored current note to disk</source>
 <translation>Nîşeya niha li dîskê hilanîn</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2968"/>
+<location filename="../mainwindow.cpp" line="2970"/>
 <source>Note was modified externally: %1</source>
 <translation>Nîşe li derve hate guheztin: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2990"/>
+<location filename="../mainwindow.cpp" line="2992"/>
 <source>Notes directory was modified externally</source>
 <translation>Peldanka nîşeyan ji derveyî hate guhertin</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3053"/>
+<location filename="../mainwindow.cpp" line="3055"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>%n nîşana li dîskê hilandin</numerusform>
@@ -3894,47 +3894,47 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7618"/>
+<location filename="../mainwindow.cpp" line="7620"/>
 <source>All notes</source>
 <translation>Hemî nîşan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8517"/>
+<location filename="../mainwindow.cpp" line="8519"/>
 <source>&amp;Add tag</source>
 <translation>&amp;Tagê zêde bikin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8565"/>
+<location filename="../mainwindow.cpp" line="8567"/>
 <source>Tag could not be created!</source>
 <translation>Tag nikaribû were afirandin!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8744"/>
+<location filename="../mainwindow.cpp" line="8746"/>
 <source>Move to this tag</source>
 <translation>Vebijêrin vê tagê</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8779"/>
+<location filename="../mainwindow.cpp" line="8781"/>
 <source>Tag this</source>
 <translation>Tag bikin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8804"/>
+<location filename="../mainwindow.cpp" line="8806"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>Li ser vê tagê "%1" nekare</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8853"/>
+<location filename="../mainwindow.cpp" line="8855"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>Li ser nîşeya nû '%1' hilkişiya</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8528"/>
+<location filename="../mainwindow.cpp" line="8530"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;Tags derxistin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5535"/>
+<location filename="../mainwindow.cpp" line="5537"/>
 <source>No selected todo lists!</source>
 <translation>No navnîşên hilbijartinên todo hilbijartî!</translation>
 </message>
@@ -4045,48 +4045,48 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2549"/>
+<location filename="../mainwindow.cpp" line="2551"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>Bişkojka bê navber nehat barkirin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2903"/>
+<location filename="../mainwindow.cpp" line="2905"/>
 <source>Overwriting external changes of: %1</source>
 <translation>Guherandinên derveyî yên guhertin: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2915"/>
+<location filename="../mainwindow.cpp" line="2917"/>
 <source>Loading external changes from: %1</source>
 <translation>Guherînên derveyî ji %1 dakêşin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2951"/>
-<location filename="../mainwindow.cpp" line="6071"/>
+<location filename="../mainwindow.cpp" line="2953"/>
+<location filename="../mainwindow.cpp" line="6073"/>
 <source>Current note could not be stored to disk</source>
 <translation>Nîşeya niha nekare li dîskê were hilanîn</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3137"/>
+<location filename="../mainwindow.cpp" line="3139"/>
 <source>Read-only</source>
 <translation>Tenê bixwînin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3139"/>
+<location filename="../mainwindow.cpp" line="3141"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>Guhertina nişankirî neçalak e, pêl bikî ku çalak bike</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3156"/>
+<location filename="../mainwindow.cpp" line="3158"/>
 <source>Line numbers</source>
 <translation>Hejmarên line</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3166"/>
+<location filename="../mainwindow.cpp" line="3168"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Vira bikirtînin da ku hûn bibînin ka çi guherî û ji nûve guhertoya nûve bike</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3532"/>
+<location filename="../mainwindow.cpp" line="3534"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>Li ser betalkirina otomatîkî ya &lt;strong&gt;%n&lt;/strong&gt; kopiyên databasê yên nakokî yên ku dikarin pêvajoyê hevrêziya ownCloud-ya xwe asteng bikin bigirin?</numerusform>
@@ -4094,7 +4094,7 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4989"/>
+<location filename="../mainwindow.cpp" line="4991"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n note bi "%2" hat xemilandin</numerusform>
@@ -4102,7 +4102,7 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5761"/>
+<location filename="../mainwindow.cpp" line="5763"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; bûyera &lt;strong&gt;%1&lt;/strong&gt; dît</numerusform>
@@ -4110,61 +4110,61 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6132"/>
+<location filename="../mainwindow.cpp" line="6134"/>
 <source>Note headline</source>
 <translation>Sernavê nîşanê</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7295"/>
+<location filename="../mainwindow.cpp" line="7297"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation type="unfinished">Paste &amp;HTML as markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7296"/>
+<location filename="../mainwindow.cpp" line="7298"/>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7351"/>
+<location filename="../mainwindow.cpp" line="7353"/>
 <source>Downloading images finished</source>
 <translation>Daxistina wêneyan bi dawî bû</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5501"/>
-<location filename="../mainwindow.cpp" line="5516"/>
-<location filename="../mainwindow.cpp" line="5539"/>
-<location filename="../mainwindow.cpp" line="9794"/>
+<location filename="../mainwindow.cpp" line="5503"/>
+<location filename="../mainwindow.cpp" line="5518"/>
+<location filename="../mainwindow.cpp" line="5541"/>
+<location filename="../mainwindow.cpp" line="9797"/>
 <source>Open &amp;settings</source>
 <translation>Vebijêrin &amp;mîhengan</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1766"/>
-<location filename="../mainwindow.cpp" line="11561"/>
+<location filename="../mainwindow.cpp" line="11564"/>
 <source>leave</source>
 <translation>terikandin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6789"/>
+<location filename="../mainwindow.cpp" line="6791"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>Ji kerema xwe şîfreya &lt;strong&gt; şîfreya xwe &lt;/strong&gt; ji bo şîfrekirina nivîsandinê binivîse. &lt;br/&gt; Bi bîr bînin ku hûn mecbûrin ku şîfreya &lt;strong&gt; bîr bînin &lt;/strong&gt; şîfreya xwe ji bo xwendina naveroka ya note &lt;br/&gt; û wê hûn dikarin bi &lt;strong&gt;tenê &lt;/strong&gt; &lt;strong&gt; bikin di QOwnNotes &lt;/strong&gt; de bikin!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6862"/>
+<location filename="../mainwindow.cpp" line="6864"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>Nîşe bikin û wê wekî nivîsa sade hilînin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6867"/>
+<location filename="../mainwindow.cpp" line="6869"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;Deşîfrekirin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6892"/>
+<location filename="../mainwindow.cpp" line="6894"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br /&gt;Hûn ê bigihîjin nîşana weya şîfrekirî.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6961"/>
+<location filename="../mainwindow.cpp" line="6963"/>
 <source>Export current note as Markdown file</source>
 <translation>Nîşana niha wekî pelê Markdown derxînin</translation>
 </message>
@@ -4564,25 +4564,35 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 <translation>Not</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2795"/>
+<location filename="../entities/note.cpp" line="2796"/>
 <source>Could not read image file: %1</source>
 <translation>Nekariye pelê wêneyê bixwîne: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3453"/>
+<location filename="../entities/note.cpp" line="3454"/>
 <source>Note file path changed</source>
 <translation>Rêzeya pelê ya pelê guhertin</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3454"/>
+<location filename="../entities/note.cpp" line="3455"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>Guherînek riya nîşe hate tespît kirin. Ma hûn dixwazin ku hemî bûyerên &lt;strong&gt;%1&lt;/strong&gt; bi girêdana &lt;strong&gt;%2&lt;/strong&gt; û girêdanên bi navê pel&lt;strong&gt;%3&lt;/strong&gt; bi &lt;strong&gt;%4&lt;/strong&gt; ve werin girêdan &gt; di &lt;strong&gt;%n&lt;/strong&gt; pelê ya note de?</numerusform>
 <numerusform>Guherînek riya nîşe hate tespît kirin. Ma hûn dixwazin ku hemî bûyerên &lt;strong&gt;%1&lt;/strong&gt; bi girêdana &lt;strong&gt;%2&lt;/strong&gt; û girêdanên bi navê pel&lt;strong&gt;%3&lt;/strong&gt; bi &lt;strong&gt;%4&lt;/strong&gt; ve werin girêdan &gt; di &lt;strong&gt;%n&lt;/strong&gt; pelêê ya note de?</numerusform>
 </translation>
 </message>
+<message>
+<location filename="../entities/note.cpp" line="3600"/>
+<source>Image file exists</source>
+<translation type="unfinished">Image file exists</translation>
+</message>
+<message>
+<location filename="../entities/note.cpp" line="3601"/>
+<source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
+<translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
+</message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="4067"/>
+<location filename="../entities/note.cpp" line="4091"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>… Û %n nîşana din</numerusform>
@@ -9410,7 +9420,7 @@ Hûn her dem dikarin paş nîşan û guhertoyên wê paşde bikin. &lt;/p&gt;</t
 </translation>
 </message>
 <message>
-<location filename="../services/websocketserverservice.cpp" line="430"/>
+<location filename="../services/websocketserverservice.cpp" line="470"/>
 <source>%1 was disconnected from QOwnNotes server</source>
 <translation>%1 ji servera QOwnNotes ve hate veqetandin</translation>
 </message>

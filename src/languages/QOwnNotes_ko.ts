@@ -2047,7 +2047,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="8243"/>
+<location filename="../mainwindow.cpp" line="8245"/>
 <source>Add a tag to the current note</source>
 <translation>현재 노트에 태그 추가</translation>
 </message>
@@ -2163,7 +2163,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1449"/>
-<location filename="../mainwindow.cpp" line="9728"/>
+<location filename="../mainwindow.cpp" line="9731"/>
 <source>Select &amp;all notes</source>
 <translation>모든 노트 선택(&amp;A)</translation>
 </message>
@@ -2213,7 +2213,7 @@
 <translation>노트 검색 또는 만들기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8244"/>
+<location filename="../mainwindow.cpp" line="8246"/>
 <source>Add a tag to the selected notes</source>
 <translation>선택된 노트에 태그 추가</translation>
 </message>
@@ -2602,7 +2602,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2245"/>
-<location filename="../mainwindow.cpp" line="10691"/>
+<location filename="../mainwindow.cpp" line="10694"/>
 <source>Remove current workspace</source>
 <translation>현재 작업 공간 삭제하기</translation>
 </message>
@@ -2670,7 +2670,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2366"/>
-<location filename="../mainwindow.cpp" line="9704"/>
+<location filename="../mainwindow.cpp" line="9707"/>
 <source>Open note in different window</source>
 <translation>다른 창에서 노트 열기</translation>
 </message>
@@ -2691,7 +2691,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2406"/>
-<location filename="../mainwindow.cpp" line="9712"/>
+<location filename="../mainwindow.cpp" line="9715"/>
 <source>Show note git versions</source>
 <translation>노트 git 버전 표시</translation>
 </message>
@@ -2774,7 +2774,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2569"/>
-<location filename="../mainwindow.cpp" line="11653"/>
+<location filename="../mainwindow.cpp" line="11656"/>
 <source>Automatically detect</source>
 <translation>자동으로 감지</translation>
 </message>
@@ -2992,22 +2992,22 @@
 <translation>Evernote로부터 노트 가져오기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2936"/>
+<location filename="../mainwindow.cpp" line="2938"/>
 <source>Note was removed externally!</source>
 <translation>노트가 외부에서 제거되었습니다!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2937"/>
+<location filename="../mainwindow.cpp" line="2939"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>현재 노트가 이 애플리케이션의 외부에서 제거되었습니다!
 현재 노트를 복원하시겠습니까?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5516"/>
-<location filename="../mainwindow.cpp" line="5539"/>
-<location filename="../mainwindow.cpp" line="6867"/>
-<location filename="../mainwindow.cpp" line="9794"/>
+<location filename="../mainwindow.cpp" line="5518"/>
+<location filename="../mainwindow.cpp" line="5541"/>
+<location filename="../mainwindow.cpp" line="6869"/>
+<location filename="../mainwindow.cpp" line="9797"/>
 <source>&amp;Cancel</source>
 <translation>취소(&amp;C)</translation>
 </message>
@@ -3018,109 +3018,109 @@ Restore current note?</source>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3180"/>
+<location filename="../mainwindow.cpp" line="3182"/>
 <source>new version %1 available</source>
 <translation>사용 가능한 새 버전 %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3294"/>
+<location filename="../mainwindow.cpp" line="3296"/>
 <source>Abort</source>
 <translation>중단하기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3294"/>
+<location filename="../mainwindow.cpp" line="3296"/>
 <source>Loading notes…</source>
 <translation>노트 로드 중…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3507"/>
+<location filename="../mainwindow.cpp" line="3509"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>중복되는 충돌 데이터베이스를 제거했습니다: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3508"/>
+<location filename="../mainwindow.cpp" line="3510"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>중복되는 충돌 데이터베이스를 제거할 수 없습니다: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3514"/>
+<location filename="../mainwindow.cpp" line="3516"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>병합된 충돌 데이터베이스를 제거했습니다: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3515"/>
+<location filename="../mainwindow.cpp" line="3517"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>병합된 충돌 데이터베이스를 제거할 수 없습니다: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3530"/>
+<location filename="../mainwindow.cpp" line="3532"/>
 <source>Delete conflicted database copies</source>
 <translation>충돌 데이터베이스 복사본 삭제</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3553"/>
+<location filename="../mainwindow.cpp" line="3555"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>충돌하는 데이터베이스 복사본 %n개 삭제</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3724"/>
+<location filename="../mainwindow.cpp" line="3726"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>노트를 저장할 폴더를 선택하십시오</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3750"/>
+<location filename="../mainwindow.cpp" line="3752"/>
 <source>No folder was selected</source>
 <translation>폴더가 선택되지 않았습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3752"/>
+<location filename="../mainwindow.cpp" line="3754"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>이 소프트웨어를 사용하려면 ownCloud 노트 폴더를 선택해야 합니다!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3754"/>
+<location filename="../mainwindow.cpp" line="3756"/>
 <source>&amp;Retry</source>
 <translation>재시도(&amp;R)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3754"/>
+<location filename="../mainwindow.cpp" line="3756"/>
 <source>&amp;Exit</source>
 <translation>&amp;나가기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4061"/>
+<location filename="../mainwindow.cpp" line="4063"/>
 <source>Remove current note</source>
 <translation>현재 노트 삭제하기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4062"/>
+<location filename="../mainwindow.cpp" line="4064"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>현재 노트 &lt;strong&gt;%1&lt;/strong&gt;을(를) 삭제하시겠습니까?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4433"/>
+<location filename="../mainwindow.cpp" line="4435"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>이 암호화된 노트의 &lt;strong&gt;비밀번호&lt;/strong&gt;를 입력하십시오.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4456"/>
+<location filename="../mainwindow.cpp" line="4458"/>
 <source>Note can't be decrypted!</source>
 <translation>노트는 해독할 수 없습니다!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4457"/>
+<location filename="../mainwindow.cpp" line="4459"/>
 <source>It seems that your password is not valid!</source>
 <translation>비밀번호가 유효하지 않습니다.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4644"/>
+<location filename="../mainwindow.cpp" line="4646"/>
 <source>Remove selected notes</source>
 <translation>선택된 노트 제거</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4646"/>
+<location filename="../mainwindow.cpp" line="4648"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3131,403 +3131,403 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4719"/>
+<location filename="../mainwindow.cpp" line="4721"/>
 <source>Remove selected tags</source>
 <translation>선택된 태그 제거</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4720"/>
+<location filename="../mainwindow.cpp" line="4722"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>선택한 태그 &lt;strong&gt;%n&lt;/strong&gt;개를 삭제하시겠습니까? 이 과정에서 노트가 삭제되지 않습니다.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4774"/>
-<location filename="../mainwindow.cpp" line="9033"/>
+<location filename="../mainwindow.cpp" line="4776"/>
+<location filename="../mainwindow.cpp" line="9035"/>
 <source>Move selected notes</source>
 <translation>선택된 노트 이동</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4775"/>
+<location filename="../mainwindow.cpp" line="4777"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>선택한 노트 %n개를 &lt;strong&gt;%2&lt;/strong&gt;(으)로 이동하시겠습니까?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4885"/>
-<location filename="../mainwindow.cpp" line="9153"/>
+<location filename="../mainwindow.cpp" line="4887"/>
+<location filename="../mainwindow.cpp" line="9155"/>
 <source>Copy selected notes</source>
 <translation>선택된 노트 복사</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4886"/>
+<location filename="../mainwindow.cpp" line="4888"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>선택한 노트 %n개를 &lt;strong&gt;%2&lt;/strong&gt;에 복사하시겠습니까?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4916"/>
-<location filename="../mainwindow.cpp" line="5065"/>
+<location filename="../mainwindow.cpp" line="4918"/>
+<location filename="../mainwindow.cpp" line="5067"/>
 <source>Done</source>
 <translation>완료</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4917"/>
+<location filename="../mainwindow.cpp" line="4919"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n개의 노트가 &lt;strong&gt;%2&lt;/strong&gt;에 복사되었습니다.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4930"/>
+<location filename="../mainwindow.cpp" line="4932"/>
 <source>Tag selected notes</source>
 <translation>선택된 노트 태그</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4931"/>
+<location filename="../mainwindow.cpp" line="4933"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>&lt;strong&gt;%2&lt;/strong&gt;(으)로 선택한 노트 %n개를 태그를 지정하시겠습니까?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5210"/>
+<location filename="../mainwindow.cpp" line="5212"/>
 <source>Restart application</source>
 <translation>애플리케이션 재시작</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5211"/>
+<location filename="../mainwindow.cpp" line="5213"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>변경 사항을 적용하려면 애플리케이션을 다시 시작해야 할 수도 있습니다.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5214"/>
+<location filename="../mainwindow.cpp" line="5216"/>
 <source>Restart</source>
 <translation>재시작</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5436"/>
+<location filename="../mainwindow.cpp" line="5438"/>
 <source>PDF files</source>
 <translation>PDF 파일</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5512"/>
+<location filename="../mainwindow.cpp" line="5514"/>
 <source>Todo lists disabled!</source>
 <translation>할 일 목록이 비활성화되었습니다!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5513"/>
+<location filename="../mainwindow.cpp" line="5515"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>할 일 목록을 비활성화했습니다.&lt;br /&gt;설정에서 &lt;strong&gt;할 일&lt;/strong&gt; 설정을 확인하십시오!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5765"/>
+<location filename="../mainwindow.cpp" line="5767"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%1&lt;/strong&gt; 용어 중&lt;strong&gt;%n&lt;/strong&gt;개를 찾았습니다</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6322"/>
+<location filename="../mainwindow.cpp" line="6324"/>
 <source>Note folders</source>
 <translation>노트 폴더</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6445"/>
+<location filename="../mainwindow.cpp" line="6447"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>노트 버전이 현재 사용자의 ownCloud 서버로부터 로드됩니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6462"/>
+<location filename="../mainwindow.cpp" line="6464"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>버려진 노트는 현재 사용자의 ownCloud 서버로부터 로드됩니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6711"/>
+<location filename="../mainwindow.cpp" line="6713"/>
 <source>Inserted text as text attachment file</source>
 <translation type="unfinished">Inserted text as text attachment file</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6863"/>
+<location filename="../mainwindow.cpp" line="6865"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>노트가 해독되어 다시 일반 텍스트로 저장됩니다. 암호화되지 않은 노트는 서버에서 동기화할 수 있으며 민감한 텍스트 내용이 노출될 수 있습니다.&lt;br /&gt;노트를 해독 하시겠습니까?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6960"/>
+<location filename="../mainwindow.cpp" line="6962"/>
 <source>Markdown files</source>
 <translation>마크다운 파일</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6974"/>
+<location filename="../mainwindow.cpp" line="6976"/>
 <source>Export attached files</source>
 <translation type="unfinished">Export attached files</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6975"/>
+<location filename="../mainwindow.cpp" line="6977"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7009"/>
+<location filename="../mainwindow.cpp" line="7011"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>슬롯 %1에 북마크된 노트 위치</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7024"/>
+<location filename="../mainwindow.cpp" line="7026"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>슬롯 %1에서 북마크 위치로 이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7208"/>
-<location filename="../mainwindow.cpp" line="7278"/>
+<location filename="../mainwindow.cpp" line="7210"/>
+<location filename="../mainwindow.cpp" line="7280"/>
 <source>Inserting image</source>
 <translation>이미지 삽입</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7213"/>
-<location filename="../mainwindow.cpp" line="7282"/>
+<location filename="../mainwindow.cpp" line="7215"/>
+<location filename="../mainwindow.cpp" line="7284"/>
 <source>Done inserting image</source>
 <translation>이미지 삽입 완료</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7215"/>
+<location filename="../mainwindow.cpp" line="7217"/>
 <source>Inserting attachment</source>
 <translation>첨부 파일 삽입</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7220"/>
+<location filename="../mainwindow.cpp" line="7222"/>
 <source>Done inserting attachment</source>
 <translation>첨부 파일 삽입 완료</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7232"/>
+<location filename="../mainwindow.cpp" line="7234"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>%n개의 노트를 %1에 복사했습니다</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7242"/>
+<location filename="../mainwindow.cpp" line="7244"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>노트 %n개 복사 실패(이미 존재함)</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7252"/>
+<location filename="../mainwindow.cpp" line="7254"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>노트 %n개 복사 건너뛰기(마크다운 또는 텍스트 파일이 없거나 읽기 불가능)</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7265"/>
+<location filename="../mainwindow.cpp" line="7267"/>
 <source>Saving temporary image</source>
 <translation>임시 이미지 저장</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6694"/>
-<location filename="../mainwindow.cpp" line="7284"/>
+<location filename="../mainwindow.cpp" line="6696"/>
+<location filename="../mainwindow.cpp" line="7286"/>
 <source>Temporary file can't be opened</source>
 <translation>임시 파일을 열 수 없습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7339"/>
+<location filename="../mainwindow.cpp" line="7341"/>
 <source>Downloading %1</source>
 <translation>%1 다운로드 중</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7511"/>
+<location filename="../mainwindow.cpp" line="7513"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>글꼴 크기를 %1pt로 재설정</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8293"/>
+<location filename="../mainwindow.cpp" line="8295"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>현재 노트에서 '%1' 태그 삭제</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8294"/>
+<location filename="../mainwindow.cpp" line="8296"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>선택된 노트에서 '%1' 태그 삭제</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8525"/>
+<location filename="../mainwindow.cpp" line="8527"/>
 <source>Rename tag</source>
 <translation>태그 이름 바꾸기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8526"/>
+<location filename="../mainwindow.cpp" line="8528"/>
 <source>Assign color</source>
 <translation>색상 지정</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8527"/>
+<location filename="../mainwindow.cpp" line="8529"/>
 <source>Disable color</source>
 <translation>색상 비활성화</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8531"/>
+<location filename="../mainwindow.cpp" line="8533"/>
 <source>&amp;Move tags to…</source>
 <translation>태그를 이동(&amp;M)...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8742"/>
+<location filename="../mainwindow.cpp" line="8744"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>루트로 이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9316"/>
+<location filename="../mainwindow.cpp" line="9318"/>
 <source>The scripting engine was reloaded</source>
 <translation>스크립팅 엔진이 다시 로드되었습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9350"/>
+<location filename="../mainwindow.cpp" line="9352"/>
 <source>HTML files</source>
 <translation>HTML 파일</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9640"/>
+<location filename="../mainwindow.cpp" line="9643"/>
 <source>Jump to the note's subfolder</source>
 <translation>노트의 하위 폴더로 이동
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9697"/>
+<location filename="../mainwindow.cpp" line="9700"/>
 <source>Open note in tab</source>
 <translation>탭에서 노트 열기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11224"/>
+<location filename="../mainwindow.cpp" line="11227"/>
 <source>A script update was found!</source>
 <translation>스크립트 업데이트가 있습니다!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11230"/>
+<location filename="../mainwindow.cpp" line="11233"/>
 <source>Script updates</source>
 <translation>스크립트 업데이트</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11231"/>
+<location filename="../mainwindow.cpp" line="11234"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>스크립트 업데이트가 스크립트 저장소에서 발견되었습니다! 업데이트하시겠습니까?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11246"/>
+<location filename="../mainwindow.cpp" line="11249"/>
 <source>No script updates were found</source>
 <translation>스크립트 업데이트가 없습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11890"/>
+<location filename="../mainwindow.cpp" line="11893"/>
 <source>Toggle note stickiness</source>
 <translation>노트 고정 전환</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11896"/>
+<location filename="../mainwindow.cpp" line="11899"/>
 <source>Close other note tabs</source>
 <translation>다른 노트 탭 닫기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9584"/>
-<location filename="../mainwindow.cpp" line="9778"/>
+<location filename="../mainwindow.cpp" line="9586"/>
+<location filename="../mainwindow.cpp" line="9781"/>
 <source>Rename note</source>
 <translation>노트 이름 바꾸기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7615"/>
+<location filename="../mainwindow.cpp" line="7617"/>
 <source>Show all notes (%1)</source>
 <translation type="unfinished">Show all notes (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7776"/>
+<location filename="../mainwindow.cpp" line="7778"/>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9586"/>
+<location filename="../mainwindow.cpp" line="9588"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>노트의 파일 이름을 바꿀 수 있습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9600"/>
+<location filename="../mainwindow.cpp" line="9602"/>
 <source>&amp;Move notes to…</source>
 <translation>노트를 다음으로 이동(&amp;M)...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9601"/>
+<location filename="../mainwindow.cpp" line="9603"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;노트를 복사...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9644"/>
+<location filename="../mainwindow.cpp" line="9647"/>
 <source>Move notes to subfolder…</source>
 <translation>하위 폴더로 노트 이동…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9648"/>
+<location filename="../mainwindow.cpp" line="9651"/>
 <source>Copy notes to subfolder…</source>
 <translation>하위 폴더로 노트 복사…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9656"/>
+<location filename="../mainwindow.cpp" line="9659"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>선택한 노트에 태그 추가&amp;T)...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9680"/>
+<location filename="../mainwindow.cpp" line="9683"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>선택한 노트에서 태그 삭제(&amp;R)...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9778"/>
+<location filename="../mainwindow.cpp" line="9781"/>
 <source>Name:</source>
 <translation>이름:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9790"/>
+<location filename="../mainwindow.cpp" line="9793"/>
 <source>Note renaming not enabled!</source>
 <translation>노트 이름 바꾸기가 허용되지 않습니다!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10463"/>
+<location filename="../mainwindow.cpp" line="10466"/>
 <source>Create new workspace</source>
 <translation>새로운 작업 공간 만들기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10464"/>
-<location filename="../mainwindow.cpp" line="10733"/>
+<location filename="../mainwindow.cpp" line="10467"/>
+<location filename="../mainwindow.cpp" line="10736"/>
 <source>Workspace name:</source>
 <translation>작업 공간 이름:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10582"/>
+<location filename="../mainwindow.cpp" line="10585"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>전체 화면</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10589"/>
+<location filename="../mainwindow.cpp" line="10592"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>최소</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10692"/>
+<location filename="../mainwindow.cpp" line="10695"/>
 <source>Remove the current workspace?</source>
 <translation>현재 작업 공간을 제거하시겠습니까?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10732"/>
+<location filename="../mainwindow.cpp" line="10735"/>
 <source>Rename workspace</source>
 <translation>작업 공간 이름 바꾸기</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10890"/>
+<location filename="../mainwindow.cpp" line="10893"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3535,42 +3535,42 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11163"/>
+<location filename="../mainwindow.cpp" line="11166"/>
 <source>Disallow all note editing</source>
 <translation>모든 노트 편집을 허용 안함</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11395"/>
+<location filename="../mainwindow.cpp" line="11398"/>
 <source>Select text files to import</source>
 <translation>가져올 텍스트 파일을 선택하십시오</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11425"/>
+<location filename="../mainwindow.cpp" line="11428"/>
 <source>Importing: %1</source>
 <translation>가져오기: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11490"/>
+<location filename="../mainwindow.cpp" line="11493"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>노트 제목 '%1'이(가) 클립보드에 복사되었습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11584"/>
+<location filename="../mainwindow.cpp" line="11587"/>
 <source>Leave full-screen mode</source>
 <translation>전체 화면 모드에서 나가기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11770"/>
+<location filename="../mainwindow.cpp" line="11773"/>
 <source>Custom editor width</source>
 <translation>편집기 너비 커스텀</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11770"/>
+<location filename="../mainwindow.cpp" line="11773"/>
 <source>Characters:</source>
 <translation>캐릭터:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8263"/>
+<location filename="../mainwindow.cpp" line="8265"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n개 노트가 선택됨</numerusform>
@@ -3578,7 +3578,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2451"/>
-<location filename="../mainwindow.cpp" line="11164"/>
+<location filename="../mainwindow.cpp" line="11167"/>
 <source>Allow all note editing</source>
 <translation>모든 노트 편집 허용</translation>
 </message>
@@ -3588,213 +3588,213 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
 <translation>&amp;태그</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5005"/>
+<location filename="../mainwindow.cpp" line="5007"/>
 <source>Remove tag from selected notes</source>
 <translation>선택된 노트에서 태그 제거</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5006"/>
+<location filename="../mainwindow.cpp" line="5008"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>선택한 노트 %n개에서 &lt;strong&gt;%1&lt;/strong&gt; 태그를 삭제하시겠습니까?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5066"/>
+<location filename="../mainwindow.cpp" line="5068"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>&lt;strong&gt;%1&lt;/strong&gt; 태그가 %n개의 노트에서 삭제되었습니다</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5111"/>
+<location filename="../mainwindow.cpp" line="5113"/>
 <source>Current notes folder: </source>
 <translation>현재 노트 폴더: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5114"/>
+<location filename="../mainwindow.cpp" line="5116"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>노트 폴더를 설정하십시오. 현재 노트 폴더: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5322"/>
+<location filename="../mainwindow.cpp" line="5324"/>
 <source>Print note</source>
 <translation>노트 프린트하기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5379"/>
+<location filename="../mainwindow.cpp" line="5381"/>
 <source>Letter</source>
 <translation>편지</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5409"/>
+<location filename="../mainwindow.cpp" line="5411"/>
 <source>Portrait</source>
 <translation>세로</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5409"/>
+<location filename="../mainwindow.cpp" line="5411"/>
 <source>Landscape</source>
 <translation>가로</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5414"/>
+<location filename="../mainwindow.cpp" line="5416"/>
 <source>Orientation</source>
 <translation>방향</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5414"/>
+<location filename="../mainwindow.cpp" line="5416"/>
 <source>Orientation:</source>
 <translation>방향:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5437"/>
+<location filename="../mainwindow.cpp" line="5439"/>
 <source>Export current note as PDF</source>
 <translation>현재 노트를 PDF로 내보내기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5536"/>
+<location filename="../mainwindow.cpp" line="5538"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>할 일 목록이 선택되지 않았습니다.&lt;br /&gt;설정에서 &lt;strong&gt;할 일&lt;/strong&gt; 설정을 확인하세요!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6304"/>
+<location filename="../mainwindow.cpp" line="6306"/>
 <source>Open QOwnNotes</source>
 <translation>QOwnNotes 열기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6132"/>
-<location filename="../mainwindow.cpp" line="6354"/>
-<location filename="../mainwindow.cpp" line="9580"/>
+<location filename="../mainwindow.cpp" line="6134"/>
+<location filename="../mainwindow.cpp" line="6356"/>
+<location filename="../mainwindow.cpp" line="9582"/>
 <source>New note</source>
 <translation>새로운 노트</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6371"/>
+<location filename="../mainwindow.cpp" line="6373"/>
 <source>Recent notes</source>
 <translation>최근 노트</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6387"/>
+<location filename="../mainwindow.cpp" line="6389"/>
 <source>Show todo lists</source>
 <translation>할 일 목록 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6399"/>
+<location filename="../mainwindow.cpp" line="6401"/>
 <source>Recent tasks</source>
 <translation>최근 작업</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6420"/>
+<location filename="../mainwindow.cpp" line="6422"/>
 <source>Quit</source>
 <translation>종료하기</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
 <location filename="../mainwindow.cpp" line="824"/>
-<location filename="../mainwindow.cpp" line="2198"/>
+<location filename="../mainwindow.cpp" line="2200"/>
 <source>Note folder</source>
 <translation>노트 폴더</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8914"/>
-<location filename="../mainwindow.cpp" line="8981"/>
+<location filename="../mainwindow.cpp" line="8916"/>
+<location filename="../mainwindow.cpp" line="8983"/>
 <source>Copy to note folder</source>
 <translation>노트 폴더에 복사</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8914"/>
-<location filename="../mainwindow.cpp" line="8982"/>
+<location filename="../mainwindow.cpp" line="8916"/>
+<location filename="../mainwindow.cpp" line="8984"/>
 <source>Move to note folder</source>
 <translation>노트 폴더로 이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8915"/>
-<location filename="../mainwindow.cpp" line="8983"/>
+<location filename="../mainwindow.cpp" line="8917"/>
+<location filename="../mainwindow.cpp" line="8985"/>
 <source>Copy to this subfolder</source>
 <translation>이 하위 폴더로 복사</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8916"/>
-<location filename="../mainwindow.cpp" line="8984"/>
+<location filename="../mainwindow.cpp" line="8918"/>
+<location filename="../mainwindow.cpp" line="8986"/>
 <source>Move to this subfolder</source>
 <translation>이 하위 폴더로 이동</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9028"/>
+<location filename="../mainwindow.cpp" line="9030"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>%n개의 선택된 노트를 노트 하위 폴더 &lt;strong&gt;%2&lt;/strong&gt;(으)로 이동하시겠습니까?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5214"/>
-<location filename="../mainwindow.cpp" line="11409"/>
+<location filename="../mainwindow.cpp" line="5216"/>
+<location filename="../mainwindow.cpp" line="11412"/>
 <source>Cancel</source>
 <translation>취소</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9124"/>
+<location filename="../mainwindow.cpp" line="9126"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n개의 노트가 노트 하위폴더 "%2"(으)로 이동되었습니다</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9148"/>
+<location filename="../mainwindow.cpp" line="9150"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>%n개의 선택된 노트를 노트 하위 폴더 &lt;strong&gt;%2&lt;/strong&gt;에 복사하시겠습니까?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9223"/>
+<location filename="../mainwindow.cpp" line="9225"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n개의 노트가 "%2" 노트 하위 폴더에 복사되었습니다</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9702"/>
+<location filename="../mainwindow.cpp" line="9705"/>
 <source>Open note in external editor</source>
 <translation>외부 편집기에서 노트 열기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9706"/>
+<location filename="../mainwindow.cpp" line="9709"/>
 <source>Show note in file manager</source>
 <translation>파일 관리자에 노트 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9791"/>
+<location filename="../mainwindow.cpp" line="9794"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>노트 이름을 바꾸려면 노트 파일 이름이 제목과 다르도록 허용하는 옵션을 활성화해야 합니다.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9981"/>
+<location filename="../mainwindow.cpp" line="9984"/>
 <source>Create a new folder</source>
 <translation>새 폴더 만들기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9982"/>
+<location filename="../mainwindow.cpp" line="9985"/>
 <source>Folder name:</source>
 <translation>폴더 이름:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7649"/>
+<location filename="../mainwindow.cpp" line="7651"/>
 <source>show all untagged notes (%1)</source>
 <translation>태그가 없는 모든 노트 표시 (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7651"/>
+<location filename="../mainwindow.cpp" line="7653"/>
 <source>Untagged notes</source>
 <translation>태그가 없는 노트</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9351"/>
+<location filename="../mainwindow.cpp" line="9353"/>
 <source>Export current note as HTML file</source>
 <translation>현재 노트를 HTML 파일로 내보내기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5388"/>
+<location filename="../mainwindow.cpp" line="5390"/>
 <source>Page size</source>
 <translation>페이지 크기</translation>
 </message>
@@ -3804,22 +3804,22 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
 <translation>툴바 종료</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5388"/>
+<location filename="../mainwindow.cpp" line="5390"/>
 <source>Page size:</source>
 <translation>페이지 크기:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5497"/>
+<location filename="../mainwindow.cpp" line="5499"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes는 익명의 사용 데이터를 추적하여 QOwnNotes를 개선하고 버그를 찾아 수정합니다. 설정에서 해당 동작을 비활성화할 수 있습니다.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5501"/>
+<location filename="../mainwindow.cpp" line="5503"/>
 <source>&amp;Ok</source>
 <translation>&amp;확인</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9590"/>
+<location filename="../mainwindow.cpp" line="9592"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;노트 삭제하기</translation>
 </message>
@@ -3829,75 +3829,75 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
 <translation>서버로부터 작업이 로드되고 있습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2880"/>
+<location filename="../mainwindow.cpp" line="2882"/>
 <source>Current note was modified externally</source>
 <translation>현재 노트가 외부에서 수정되었습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2950"/>
-<location filename="../mainwindow.cpp" line="6070"/>
+<location filename="../mainwindow.cpp" line="2952"/>
+<location filename="../mainwindow.cpp" line="6072"/>
 <source>Stored current note to disk</source>
 <translation>현재 노트를 디스크에 저장</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2968"/>
+<location filename="../mainwindow.cpp" line="2970"/>
 <source>Note was modified externally: %1</source>
 <translation>노트가 외부에서 수정되었습니다: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2990"/>
+<location filename="../mainwindow.cpp" line="2992"/>
 <source>Notes directory was modified externally</source>
 <translation>노트 디렉터리가 외부에서 수정되었습니다</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3053"/>
+<location filename="../mainwindow.cpp" line="3055"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>%n개의 노트를 디스크에 저장했습니다</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7618"/>
+<location filename="../mainwindow.cpp" line="7620"/>
 <source>All notes</source>
 <translation>모든 노트</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8517"/>
+<location filename="../mainwindow.cpp" line="8519"/>
 <source>&amp;Add tag</source>
 <translation>&amp;태그 추가</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8565"/>
+<location filename="../mainwindow.cpp" line="8567"/>
 <source>Tag could not be created!</source>
 <translation>태그를 만들 수 없습니다!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8744"/>
+<location filename="../mainwindow.cpp" line="8746"/>
 <source>Move to this tag</source>
 <translation>이 태그로 이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8779"/>
+<location filename="../mainwindow.cpp" line="8781"/>
 <source>Tag this</source>
 <translation>이것을 태그</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8804"/>
+<location filename="../mainwindow.cpp" line="8806"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>태그 '%1'을(를) 이 태그로 이동할 수 없습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8853"/>
+<location filename="../mainwindow.cpp" line="8855"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>태그 '%1'을(를) 새 태그로 이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8528"/>
+<location filename="../mainwindow.cpp" line="8530"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;태그 삭제</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5535"/>
+<location filename="../mainwindow.cpp" line="5537"/>
 <source>No selected todo lists!</source>
 <translation>선택된 할 일 목록이 없습니다!</translation>
 </message>
@@ -4007,123 +4007,123 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
 <translation>노트 폴더로 전환</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2549"/>
+<location filename="../mainwindow.cpp" line="2551"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>이름 없이 툴바를 로드할 수 없습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2903"/>
+<location filename="../mainwindow.cpp" line="2905"/>
 <source>Overwriting external changes of: %1</source>
 <translation>외부 변경 사항 덮어쓰기: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2915"/>
+<location filename="../mainwindow.cpp" line="2917"/>
 <source>Loading external changes from: %1</source>
 <translation>다음으로부터 외부 변경 사항 로드 중: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2951"/>
-<location filename="../mainwindow.cpp" line="6071"/>
+<location filename="../mainwindow.cpp" line="2953"/>
+<location filename="../mainwindow.cpp" line="6073"/>
 <source>Current note could not be stored to disk</source>
 <translation>현재 노트를 디스크에 저장할 수 없습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3137"/>
+<location filename="../mainwindow.cpp" line="3139"/>
 <source>Read-only</source>
 <translation>읽기 전용</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3139"/>
+<location filename="../mainwindow.cpp" line="3141"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>노트 편집이 비활성화되어 있습니다. 활성화하려면 클릭하십시오.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3156"/>
+<location filename="../mainwindow.cpp" line="3158"/>
 <source>Line numbers</source>
 <translation>줄 번호</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3166"/>
+<location filename="../mainwindow.cpp" line="3168"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>변경된 사항을 확인하고 최신 버전으로 업데이트하려면 여기를 클릭하십시오.</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3532"/>
+<location filename="../mainwindow.cpp" line="3534"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>ownCloud 동기화 프로세스를 차단할 수도 있는 충돌 데이터베이스 사본 &lt;strong&gt;%n&lt;/strong&gt;개를 자동으로 삭제하시겠습니까?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4989"/>
+<location filename="../mainwindow.cpp" line="4991"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n개의 노트가 "%2"(으)로 태그되었습니다</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5761"/>
+<location filename="../mainwindow.cpp" line="5763"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%1&lt;/strong&gt; 발생 &lt;strong&gt;%n&lt;/strong&gt;개를 찾았습니다</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6132"/>
+<location filename="../mainwindow.cpp" line="6134"/>
 <source>Note headline</source>
 <translation>노트 제목</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7295"/>
+<location filename="../mainwindow.cpp" line="7297"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation type="unfinished">Paste &amp;HTML as markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7296"/>
+<location filename="../mainwindow.cpp" line="7298"/>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7351"/>
+<location filename="../mainwindow.cpp" line="7353"/>
 <source>Downloading images finished</source>
 <translation>이미지 다운로드 완료</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5501"/>
-<location filename="../mainwindow.cpp" line="5516"/>
-<location filename="../mainwindow.cpp" line="5539"/>
-<location filename="../mainwindow.cpp" line="9794"/>
+<location filename="../mainwindow.cpp" line="5503"/>
+<location filename="../mainwindow.cpp" line="5518"/>
+<location filename="../mainwindow.cpp" line="5541"/>
+<location filename="../mainwindow.cpp" line="9797"/>
 <source>Open &amp;settings</source>
 <translation>&amp;설정 열기</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1766"/>
-<location filename="../mainwindow.cpp" line="11561"/>
+<location filename="../mainwindow.cpp" line="11564"/>
 <source>leave</source>
 <translation>나가기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6789"/>
+<location filename="../mainwindow.cpp" line="6791"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>노트를 암호화하려면 &lt;strong&gt;비밀번호&lt;/strong&gt;를 입력하십시오.&lt;br /&gt;노트의 내용을 읽으려면 비밀번호를 &lt;strong&gt;기억&lt;/strong&gt;해야하며&lt;br /&gt;&lt;strong&gt;오직&lt;/strong&gt;&lt;strong&gt;QOwnNotes&lt;/strong&gt;에서만&lt;/strong&gt;수행&lt;strong&gt;할 수 있습니다!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6862"/>
+<location filename="../mainwindow.cpp" line="6864"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>노트를 해독하고 일반 텍스트로 저장</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6867"/>
+<location filename="../mainwindow.cpp" line="6869"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;암호 해독</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6892"/>
+<location filename="../mainwindow.cpp" line="6894"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br /&gt;암호화된 노트를 편집할 수 있습니다.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6961"/>
+<location filename="../mainwindow.cpp" line="6963"/>
 <source>Export current note as Markdown file</source>
 <translation>현재 노트를 마크다운 파일로 내보내기</translation>
 </message>
@@ -4522,24 +4522,34 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
 <translation>노트</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2795"/>
+<location filename="../entities/note.cpp" line="2796"/>
 <source>Could not read image file: %1</source>
 <translation>이미지 파일을 읽을 수 없습니다: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3453"/>
+<location filename="../entities/note.cpp" line="3454"/>
 <source>Note file path changed</source>
 <translation>노트 파일 경로가 변경되었습니다</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3454"/>
+<location filename="../entities/note.cpp" line="3455"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>노트 경로의 변경이 감지되었습니다. &lt;strong&gt;%1&lt;/strong&gt;링크의 모든 항목을 &lt;strong&gt;%2&lt;/strong&gt;(으)로 바꾸고 &lt;strong&gt;%n&lt;/strong&gt;개의 노트 파일에서 파일 이름이 &lt;strong&gt;%3&lt;/strong&gt;인 링크를 &lt;strong&gt;%4&lt;/strong&gt;(으)로 바꾸시겠습니까?</numerusform>
 </translation>
 </message>
+<message>
+<location filename="../entities/note.cpp" line="3600"/>
+<source>Image file exists</source>
+<translation type="unfinished">Image file exists</translation>
+</message>
+<message>
+<location filename="../entities/note.cpp" line="3601"/>
+<source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
+<translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
+</message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="4067"/>
+<location filename="../entities/note.cpp" line="4091"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>…그리고 %n개의 더 많은 노트</numerusform>
@@ -9346,7 +9356,7 @@ This cannot be undone!</source>
 </translation>
 </message>
 <message>
-<location filename="../services/websocketserverservice.cpp" line="430"/>
+<location filename="../services/websocketserverservice.cpp" line="470"/>
 <source>%1 was disconnected from QOwnNotes server</source>
 <translation>QOwnNotes 서버에서 %1의 연결이 끊어졌습니다</translation>
 </message>

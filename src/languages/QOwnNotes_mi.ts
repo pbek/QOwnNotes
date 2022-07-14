@@ -2046,7 +2046,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="8243"/>
+<location filename="../mainwindow.cpp" line="8245"/>
 <source>Add a tag to the current note</source>
 <translation>Tāpirihia he tohu ki te rekoata o naianei</translation>
 </message>
@@ -2162,7 +2162,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1449"/>
-<location filename="../mainwindow.cpp" line="9728"/>
+<location filename="../mainwindow.cpp" line="9731"/>
 <source>Select &amp;all notes</source>
 <translation>Tīpakohia &amp;tuhipoka katoa</translation>
 </message>
@@ -2212,7 +2212,7 @@
 <translation>Rapua, waihangatia ranei</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8244"/>
+<location filename="../mainwindow.cpp" line="8246"/>
 <source>Add a tag to the selected notes</source>
 <translation>Taapirihia he tūtohu ki nga tuhi kua tohua</translation>
 </message>
@@ -2601,7 +2601,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2245"/>
-<location filename="../mainwindow.cpp" line="10691"/>
+<location filename="../mainwindow.cpp" line="10694"/>
 <source>Remove current workspace</source>
 <translation>Tangohia te waahanga mahi o naianei</translation>
 </message>
@@ -2669,7 +2669,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2366"/>
-<location filename="../mainwindow.cpp" line="9704"/>
+<location filename="../mainwindow.cpp" line="9707"/>
 <source>Open note in different window</source>
 <translation>Whakatatuhia nga panui i nga matapihi rereke</translation>
 </message>
@@ -2690,7 +2690,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2406"/>
-<location filename="../mainwindow.cpp" line="9712"/>
+<location filename="../mainwindow.cpp" line="9715"/>
 <source>Show note git versions</source>
 <translation>Whakaatuhia nga tohu git</translation>
 </message>
@@ -2773,7 +2773,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2569"/>
-<location filename="../mainwindow.cpp" line="11653"/>
+<location filename="../mainwindow.cpp" line="11656"/>
 <source>Automatically detect</source>
 <translation>Ka kitea te aunoa</translation>
 </message>
@@ -2991,22 +2991,22 @@
 <translation>Kawemai nga tuhinga mai ia Evernote</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2936"/>
+<location filename="../mainwindow.cpp" line="2938"/>
 <source>Note was removed externally!</source>
 <translation>Ko nga tohu kua tangohia ki waho!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2937"/>
+<location filename="../mainwindow.cpp" line="2939"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>Ko nga kaute o tenei wa i tangohia ki waho atu o tenei tono!
 Whakaora i te tuhipoka o naianei?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5516"/>
-<location filename="../mainwindow.cpp" line="5539"/>
-<location filename="../mainwindow.cpp" line="6867"/>
-<location filename="../mainwindow.cpp" line="9794"/>
+<location filename="../mainwindow.cpp" line="5518"/>
+<location filename="../mainwindow.cpp" line="5541"/>
+<location filename="../mainwindow.cpp" line="6869"/>
+<location filename="../mainwindow.cpp" line="9797"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Whakakore</translation>
 </message>
@@ -3017,109 +3017,109 @@ Whakaora i te tuhipoka o naianei?</translation>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3180"/>
+<location filename="../mainwindow.cpp" line="3182"/>
 <source>new version %1 available</source>
 <translation>putanga hou %1 wa e wātea ana</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3294"/>
+<location filename="../mainwindow.cpp" line="3296"/>
 <source>Abort</source>
 <translation>Taapiri</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3294"/>
+<location filename="../mainwindow.cpp" line="3296"/>
 <source>Loading notes…</source>
 <translation>Hoko kaute…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3507"/>
+<location filename="../mainwindow.cpp" line="3509"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>Kua tangohia te paparorohiko raupatu tohenga: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3508"/>
+<location filename="../mainwindow.cpp" line="3510"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>Kāore i taea te tango pātengi raraunga tuhirua:% 1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3514"/>
+<location filename="../mainwindow.cpp" line="3516"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>Kua tangohia te papahono honohono:% 1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3515"/>
+<location filename="../mainwindow.cpp" line="3517"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>Kāore i taea te tango i te pātengi raraunga whakaekehia: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3530"/>
+<location filename="../mainwindow.cpp" line="3532"/>
 <source>Delete conflicted database copies</source>
 <translation>Mukua nga kape o te papahono papaka</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3553"/>
+<location filename="../mainwindow.cpp" line="3555"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>I tangohia %n nga kape tuhinga paatai</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3724"/>
+<location filename="../mainwindow.cpp" line="3726"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>Tohua koa te kōpaki i reira e penapena ai o tuhi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3750"/>
+<location filename="../mainwindow.cpp" line="3752"/>
 <source>No folder was selected</source>
 <translation>Kaore i tohua he kōpaki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3752"/>
+<location filename="../mainwindow.cpp" line="3754"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>E koe ki te tīpako i to ake kōpaki tuhipoka ki te mahi i tenei mahi!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3754"/>
+<location filename="../mainwindow.cpp" line="3756"/>
 <source>&amp;Retry</source>
 <translation>&amp;Whakahaungia anō</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3754"/>
+<location filename="../mainwindow.cpp" line="3756"/>
 <source>&amp;Exit</source>
 <translation>&amp;Atu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4061"/>
+<location filename="../mainwindow.cpp" line="4063"/>
 <source>Remove current note</source>
 <translation>Tangohia te tuhipoka o naianei</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4062"/>
+<location filename="../mainwindow.cpp" line="4064"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Tangohia te tuhipoka o naianei: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4433"/>
+<location filename="../mainwindow.cpp" line="4435"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>Tomo koa te &lt;strong&gt; kupuhipa &lt;/strong&gt; o tenei tuhipoka whakauru.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4456"/>
+<location filename="../mainwindow.cpp" line="4458"/>
 <source>Note can't be decrypted!</source>
 <translation>E kore e taea te tuhipoka te tuhipoka!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4457"/>
+<location filename="../mainwindow.cpp" line="4459"/>
 <source>It seems that your password is not valid!</source>
 <translation>Te ahua nei kaore he mana o to kupu huna!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4644"/>
+<location filename="../mainwindow.cpp" line="4646"/>
 <source>Remove selected notes</source>
 <translation>Tangohia nga tuhipoka kua tohua</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4646"/>
+<location filename="../mainwindow.cpp" line="4648"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3130,402 +3130,402 @@ Mena ka whakahohea te paraihe i runga i to ake kaiwhakahaere server ka taea e ko
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4719"/>
+<location filename="../mainwindow.cpp" line="4721"/>
 <source>Remove selected tags</source>
 <translation>Tangohia nga tohu kua tohua</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4720"/>
+<location filename="../mainwindow.cpp" line="4722"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>Tangohia te &lt;strong&gt;%n&lt;/strong&gt; nga tohua kua tohua? Kaore nga kaute e tangohia i tenei mahi.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4774"/>
-<location filename="../mainwindow.cpp" line="9033"/>
+<location filename="../mainwindow.cpp" line="4776"/>
+<location filename="../mainwindow.cpp" line="9035"/>
 <source>Move selected notes</source>
 <translation>Nukuhia nga tohu kua tohua</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4775"/>
+<location filename="../mainwindow.cpp" line="4777"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Nukuhia te %n tohu kua tohua ki te &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4885"/>
-<location filename="../mainwindow.cpp" line="9153"/>
+<location filename="../mainwindow.cpp" line="4887"/>
+<location filename="../mainwindow.cpp" line="9155"/>
 <source>Copy selected notes</source>
 <translation>Tāruihia nga tuhipoka kua tohua</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4886"/>
+<location filename="../mainwindow.cpp" line="4888"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Tāruihia te %n tohu kua tohua ki te &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4916"/>
-<location filename="../mainwindow.cpp" line="5065"/>
+<location filename="../mainwindow.cpp" line="4918"/>
+<location filename="../mainwindow.cpp" line="5067"/>
 <source>Done</source>
 <translation>Kua oti</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4917"/>
+<location filename="../mainwindow.cpp" line="4919"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n tuhipoka(na) i kape ki te &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4930"/>
+<location filename="../mainwindow.cpp" line="4932"/>
 <source>Tag selected notes</source>
 <translation>Whakapaihia nga tohu kua tohua</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4931"/>
+<location filename="../mainwindow.cpp" line="4933"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Tohu %n nga tohu i tohua me te &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5210"/>
+<location filename="../mainwindow.cpp" line="5212"/>
 <source>Restart application</source>
 <translation>Tīmataria te tono</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5211"/>
+<location filename="../mainwindow.cpp" line="5213"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Ka hiahia pea koe ki te whakahou i te tono kia whakamana nga huringa.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5214"/>
+<location filename="../mainwindow.cpp" line="5216"/>
 <source>Restart</source>
 <translation>Tīmata anō</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5436"/>
+<location filename="../mainwindow.cpp" line="5438"/>
 <source>PDF files</source>
 <translation>Kōnae PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5512"/>
+<location filename="../mainwindow.cpp" line="5514"/>
 <source>Todo lists disabled!</source>
 <translation>Ko nga raarangi a Todo kua haukotia!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5513"/>
+<location filename="../mainwindow.cpp" line="5515"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Kua whakakorehia e koe nga raarangi todo.</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5765"/>
+<location filename="../mainwindow.cpp" line="5767"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>I kitea te &lt;strong&gt;%n&lt;/strong&gt; o nga kupu katoa o te &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6322"/>
+<location filename="../mainwindow.cpp" line="6324"/>
 <source>Note folders</source>
 <translation>Kōpaki Kōpaki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6445"/>
+<location filename="../mainwindow.cpp" line="6447"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>Kei te utaina nga waahanga tuhipoka mai i to ake kaitakawaenga ownCloud</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6462"/>
+<location filename="../mainwindow.cpp" line="6464"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Kei te utaina nga kaute kua pakaru mai i to ake kaitakaro ownCloud</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6711"/>
+<location filename="../mainwindow.cpp" line="6713"/>
 <source>Inserted text as text attachment file</source>
 <translation type="unfinished">Inserted text as text attachment file</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6863"/>
+<location filename="../mainwindow.cpp" line="6865"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>Ka tirohia te tuhipoka me te rongoa ka rite ano ki te tuhinga noa. Kia mahara ko te tuhipoka kaore ano kia whaaia ki to kaitono me te whakaatu i nga tuhinga whai kiko! &lt;br /&gt; Kei te hiahia koe ki te whakaputa i to tuhinga?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6960"/>
+<location filename="../mainwindow.cpp" line="6962"/>
 <source>Markdown files</source>
 <translation>Nga konae tohu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6974"/>
+<location filename="../mainwindow.cpp" line="6976"/>
 <source>Export attached files</source>
 <translation type="unfinished">Export attached files</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6975"/>
+<location filename="../mainwindow.cpp" line="6977"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7009"/>
+<location filename="../mainwindow.cpp" line="7011"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>Te tūnga tuhipoka i te slot %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7024"/>
+<location filename="../mainwindow.cpp" line="7026"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>Peke atu ki te tūranga tohuwāhi i te kōwae %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7208"/>
-<location filename="../mainwindow.cpp" line="7278"/>
+<location filename="../mainwindow.cpp" line="7210"/>
+<location filename="../mainwindow.cpp" line="7280"/>
 <source>Inserting image</source>
 <translation>Te whakauru i te whakapakoko</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7213"/>
-<location filename="../mainwindow.cpp" line="7282"/>
+<location filename="../mainwindow.cpp" line="7215"/>
+<location filename="../mainwindow.cpp" line="7284"/>
 <source>Done inserting image</source>
 <translation>Ka oti te whakauru i te whakaahua</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7215"/>
+<location filename="../mainwindow.cpp" line="7217"/>
 <source>Inserting attachment</source>
 <translation>Te whakauru i te taapiri</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7220"/>
+<location filename="../mainwindow.cpp" line="7222"/>
 <source>Done inserting attachment</source>
 <translation>Ka oti te whakapiri whakapiri</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7232"/>
+<location filename="../mainwindow.cpp" line="7234"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>Motuhia %n tuhipoka(s) ki te %1</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7242"/>
+<location filename="../mainwindow.cpp" line="7244"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>I rahua te kape i te %n (kia pai ake)</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7252"/>
+<location filename="../mainwindow.cpp" line="7254"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>Te kape i te kape o te %n tuhipoka (kaore he tohu, tuhinga tuhinga ranei kaore e taea te panui)</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7265"/>
+<location filename="../mainwindow.cpp" line="7267"/>
 <source>Saving temporary image</source>
 <translation>Te penapena whakaahua poto</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6694"/>
-<location filename="../mainwindow.cpp" line="7284"/>
+<location filename="../mainwindow.cpp" line="6696"/>
+<location filename="../mainwindow.cpp" line="7286"/>
 <source>Temporary file can't be opened</source>
 <translation>Kaore e taea te whakatuwhera i te konae</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7339"/>
+<location filename="../mainwindow.cpp" line="7341"/>
 <source>Downloading %1</source>
 <translation>Na te tango mai i te %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7511"/>
+<location filename="../mainwindow.cpp" line="7513"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Tautuhi i te rahi momotuhi ki te %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8293"/>
+<location filename="../mainwindow.cpp" line="8295"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>Tangohia te tohu '%1' mai i te tuhipoka o naianei</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8294"/>
+<location filename="../mainwindow.cpp" line="8296"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>Tangohia te tohu '%1' mai i nga tuhinga kua tohua</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8525"/>
+<location filename="../mainwindow.cpp" line="8527"/>
 <source>Rename tag</source>
 <translation>Whakaingia ano te tūtohu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8526"/>
+<location filename="../mainwindow.cpp" line="8528"/>
 <source>Assign color</source>
 <translation>Hoatu te tae</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8527"/>
+<location filename="../mainwindow.cpp" line="8529"/>
 <source>Disable color</source>
 <translation>Monokia te tae</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8531"/>
+<location filename="../mainwindow.cpp" line="8533"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;Neke te tūtohu ki…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8742"/>
+<location filename="../mainwindow.cpp" line="8744"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>Moe ki te pakiaka</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9316"/>
+<location filename="../mainwindow.cpp" line="9318"/>
 <source>The scripting engine was reloaded</source>
 <translation>Ko te miihini tuhi tuhi kua whakaohokia</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9350"/>
+<location filename="../mainwindow.cpp" line="9352"/>
 <source>HTML files</source>
 <translation>Kōnae HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9640"/>
+<location filename="../mainwindow.cpp" line="9643"/>
 <source>Jump to the note's subfolder</source>
 <translation type="unfinished">Jump to the note's subfolder</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9697"/>
+<location filename="../mainwindow.cpp" line="9700"/>
 <source>Open note in tab</source>
 <translation type="unfinished">Open note in tab</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11224"/>
+<location filename="../mainwindow.cpp" line="11227"/>
 <source>A script update was found!</source>
 <translation type="unfinished">A script update was found!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11230"/>
+<location filename="../mainwindow.cpp" line="11233"/>
 <source>Script updates</source>
 <translation type="unfinished">Script updates</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11231"/>
+<location filename="../mainwindow.cpp" line="11234"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation type="unfinished">Updates to your scripts were found in the script repository! Do you want to update them?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11246"/>
+<location filename="../mainwindow.cpp" line="11249"/>
 <source>No script updates were found</source>
 <translation type="unfinished">No script updates were found</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11890"/>
+<location filename="../mainwindow.cpp" line="11893"/>
 <source>Toggle note stickiness</source>
 <translation type="unfinished">Toggle note stickiness</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11896"/>
+<location filename="../mainwindow.cpp" line="11899"/>
 <source>Close other note tabs</source>
 <translation type="unfinished">Close other note tabs</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9584"/>
-<location filename="../mainwindow.cpp" line="9778"/>
+<location filename="../mainwindow.cpp" line="9586"/>
+<location filename="../mainwindow.cpp" line="9781"/>
 <source>Rename note</source>
 <translation>Whakaingoa ano hoki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7615"/>
+<location filename="../mainwindow.cpp" line="7617"/>
 <source>Show all notes (%1)</source>
 <translation type="unfinished">Show all notes (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7776"/>
+<location filename="../mainwindow.cpp" line="7778"/>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9586"/>
+<location filename="../mainwindow.cpp" line="9588"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>Ka taea e koe te whakaingoa i te ingoa ingoa o te tuhipoka</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9600"/>
+<location filename="../mainwindow.cpp" line="9602"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;Nukuhia nga tuhi ki ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9601"/>
+<location filename="../mainwindow.cpp" line="9603"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;Tāruihia nga tuhinga ki ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9644"/>
+<location filename="../mainwindow.cpp" line="9647"/>
 <source>Move notes to subfolder…</source>
 <translation>Nukuhia nga rekoata ki te kairapu ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9648"/>
+<location filename="../mainwindow.cpp" line="9651"/>
 <source>Copy notes to subfolder…</source>
 <translation>Tāruatia nga tuhipoka ki te kairapu ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9656"/>
+<location filename="../mainwindow.cpp" line="9659"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;Tohu nga tohu kua tohua me ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9680"/>
+<location filename="../mainwindow.cpp" line="9683"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Tangohia te tūtohu i nga raarangi kua tohua ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9778"/>
+<location filename="../mainwindow.cpp" line="9781"/>
 <source>Name:</source>
 <translation>Ingoa:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9790"/>
+<location filename="../mainwindow.cpp" line="9793"/>
 <source>Note renaming not enabled!</source>
 <translation>Kaore e taea te whakahou whakaari!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10463"/>
+<location filename="../mainwindow.cpp" line="10466"/>
 <source>Create new workspace</source>
 <translation>Waihangahia te tohu mahi hou</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10464"/>
-<location filename="../mainwindow.cpp" line="10733"/>
+<location filename="../mainwindow.cpp" line="10467"/>
+<location filename="../mainwindow.cpp" line="10736"/>
 <source>Workspace name:</source>
 <translation>Ingoa wāhi mahi:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10582"/>
+<location filename="../mainwindow.cpp" line="10585"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>tumu roa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10589"/>
+<location filename="../mainwindow.cpp" line="10592"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>iti</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10692"/>
+<location filename="../mainwindow.cpp" line="10695"/>
 <source>Remove the current workspace?</source>
 <translation>Tangohia te waahanga mahi o naianei</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10732"/>
+<location filename="../mainwindow.cpp" line="10735"/>
 <source>Rename workspace</source>
 <translation>Whakaingoatia hoki i te waahanga mahi</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10890"/>
+<location filename="../mainwindow.cpp" line="10893"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3533,42 +3533,42 @@ Mena ka whakahohea te paraihe i runga i to ake kaiwhakahaere server ka taea e ko
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11163"/>
+<location filename="../mainwindow.cpp" line="11166"/>
 <source>Disallow all note editing</source>
 <translation>Whakakore nga whakatika tuhipoka katoa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11395"/>
+<location filename="../mainwindow.cpp" line="11398"/>
 <source>Select text files to import</source>
 <translation>Tīpakohia nga konae kuputuhi hei kawemai</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11425"/>
+<location filename="../mainwindow.cpp" line="11428"/>
 <source>Importing: %1</source>
 <translation>Te kawhi:% 1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11490"/>
+<location filename="../mainwindow.cpp" line="11493"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>Tuhinga o mua '%1' i whakaputahia ki te papapihi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11584"/>
+<location filename="../mainwindow.cpp" line="11587"/>
 <source>Leave full-screen mode</source>
 <translation>Waihohia te aratau mata katoa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11770"/>
+<location filename="../mainwindow.cpp" line="11773"/>
 <source>Custom editor width</source>
 <translation>Whānuitanga whanui ētita</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11770"/>
+<location filename="../mainwindow.cpp" line="11773"/>
 <source>Characters:</source>
 <translation>Pūāhua:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8263"/>
+<location filename="../mainwindow.cpp" line="8265"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n nga tuhinga i tohua</numerusform>
@@ -3576,7 +3576,7 @@ Mena ka whakahohea te paraihe i runga i to ake kaiwhakahaere server ka taea e ko
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2451"/>
-<location filename="../mainwindow.cpp" line="11164"/>
+<location filename="../mainwindow.cpp" line="11167"/>
 <source>Allow all note editing</source>
 <translation>Whakaaetia te whakatika tuhipoka katoa</translation>
 </message>
@@ -3586,215 +3586,215 @@ Mena ka whakahohea te paraihe i runga i to ake kaiwhakahaere server ka taea e ko
 <translation>&amp;Tūpohu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5005"/>
+<location filename="../mainwindow.cpp" line="5007"/>
 <source>Remove tag from selected notes</source>
 <translation>Tangohia te tūtohu i nga raarangi kua tohua</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5006"/>
+<location filename="../mainwindow.cpp" line="5008"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>Tangohia te tohu &lt;strong&gt;%1&lt;/strong&gt; mai i te %n nga tohu i tohua?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5066"/>
+<location filename="../mainwindow.cpp" line="5068"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>Tūtohu &lt;strong&gt;% 1 &lt;/strong&gt; i tangohia i te% n tuhipoka.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5111"/>
+<location filename="../mainwindow.cpp" line="5113"/>
 <source>Current notes folder: </source>
 <translation>Kōpaki tuhipoka o naianei:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5114"/>
+<location filename="../mainwindow.cpp" line="5116"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>Whakatauhia te kōpaki tuhipoka. Kōpaki tuhipoka o naianei:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5322"/>
+<location filename="../mainwindow.cpp" line="5324"/>
 <source>Print note</source>
 <translation>Tāngia</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5379"/>
+<location filename="../mainwindow.cpp" line="5381"/>
 <source>Letter</source>
 <translation>Reta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5409"/>
+<location filename="../mainwindow.cpp" line="5411"/>
 <source>Portrait</source>
 <translation>Whakaahua</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5409"/>
+<location filename="../mainwindow.cpp" line="5411"/>
 <source>Landscape</source>
 <translation>Whenua</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5414"/>
+<location filename="../mainwindow.cpp" line="5416"/>
 <source>Orientation</source>
 <translation>Te Hinenui</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5414"/>
+<location filename="../mainwindow.cpp" line="5416"/>
 <source>Orientation:</source>
 <translation>Horahanga</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5437"/>
+<location filename="../mainwindow.cpp" line="5439"/>
 <source>Export current note as PDF</source>
 <translation>Kaweake i te tuhipoka o naianei hei PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5536"/>
+<location filename="../mainwindow.cpp" line="5538"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Kaore koe i tohua he raarangi todo.
 &lt;br /&gt;
 Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6304"/>
+<location filename="../mainwindow.cpp" line="6306"/>
 <source>Open QOwnNotes</source>
 <translation>Whakatuwheratia nga QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6132"/>
-<location filename="../mainwindow.cpp" line="6354"/>
-<location filename="../mainwindow.cpp" line="9580"/>
+<location filename="../mainwindow.cpp" line="6134"/>
+<location filename="../mainwindow.cpp" line="6356"/>
+<location filename="../mainwindow.cpp" line="9582"/>
 <source>New note</source>
 <translation>New note</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6371"/>
+<location filename="../mainwindow.cpp" line="6373"/>
 <source>Recent notes</source>
 <translation>Tuhinga o mua</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6387"/>
+<location filename="../mainwindow.cpp" line="6389"/>
 <source>Show todo lists</source>
 <translation>Whakaatuhia nga raarangi todo</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6399"/>
+<location filename="../mainwindow.cpp" line="6401"/>
 <source>Recent tasks</source>
 <translation>Nga mahi hou</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6420"/>
+<location filename="../mainwindow.cpp" line="6422"/>
 <source>Quit</source>
 <translation>Tuuturu</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
 <location filename="../mainwindow.cpp" line="824"/>
-<location filename="../mainwindow.cpp" line="2198"/>
+<location filename="../mainwindow.cpp" line="2200"/>
 <source>Note folder</source>
 <translation>Kōpaki Tuhipoka</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8914"/>
-<location filename="../mainwindow.cpp" line="8981"/>
+<location filename="../mainwindow.cpp" line="8916"/>
+<location filename="../mainwindow.cpp" line="8983"/>
 <source>Copy to note folder</source>
 <translation>He kape hei tuhi i nga kōpaki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8914"/>
-<location filename="../mainwindow.cpp" line="8982"/>
+<location filename="../mainwindow.cpp" line="8916"/>
+<location filename="../mainwindow.cpp" line="8984"/>
 <source>Move to note folder</source>
 <translation>Nuku ki te kōpaki kōpaki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8915"/>
-<location filename="../mainwindow.cpp" line="8983"/>
+<location filename="../mainwindow.cpp" line="8917"/>
+<location filename="../mainwindow.cpp" line="8985"/>
 <source>Copy to this subfolder</source>
 <translation>Tāruatia ki tēnei kōpakiroto</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8916"/>
-<location filename="../mainwindow.cpp" line="8984"/>
+<location filename="../mainwindow.cpp" line="8918"/>
+<location filename="../mainwindow.cpp" line="8986"/>
 <source>Move to this subfolder</source>
 <translation>Neke atu ki tenei taarua</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9028"/>
+<location filename="../mainwindow.cpp" line="9030"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Nukuhia% n tohu (tohua) kia tohua ki te mokowhiti koki &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5214"/>
-<location filename="../mainwindow.cpp" line="11409"/>
+<location filename="../mainwindow.cpp" line="5216"/>
+<location filename="../mainwindow.cpp" line="11412"/>
 <source>Cancel</source>
 <translation>Whakakore</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9124"/>
+<location filename="../mainwindow.cpp" line="9126"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n tuhipoka i nukuhia kia mau ki te mokamoka "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9148"/>
+<location filename="../mainwindow.cpp" line="9150"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Tāruatia %n tohu (tohua) kia tohua kia iti ai te kape &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9223"/>
+<location filename="../mainwindow.cpp" line="9225"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n tuhinga(i) i kape kia tuhia ki te mokamoka "%2"</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9702"/>
+<location filename="../mainwindow.cpp" line="9705"/>
 <source>Open note in external editor</source>
 <translation>Whakatuwheratia tuwhera ki te ētita o waho</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9706"/>
+<location filename="../mainwindow.cpp" line="9709"/>
 <source>Show note in file manager</source>
 <translation>Whakaatuhia te tuhipoka i te kaiwhakahaere o nga konae</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9791"/>
+<location filename="../mainwindow.cpp" line="9794"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>Ki te hiahia koe ki te whakaingoa i to tuhipoka me whakauru koe kia taea te tuku i te ingoa pepa kia rereke mai i te taitara.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9981"/>
+<location filename="../mainwindow.cpp" line="9984"/>
 <source>Create a new folder</source>
 <translation>Waihangahia he kōpaki hou</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9982"/>
+<location filename="../mainwindow.cpp" line="9985"/>
 <source>Folder name:</source>
 <translation>Ingoa Kōpaki:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7649"/>
+<location filename="../mainwindow.cpp" line="7651"/>
 <source>show all untagged notes (%1)</source>
 <translation>Whakaatuhia nga tuhipoka kore katoa (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7651"/>
+<location filename="../mainwindow.cpp" line="7653"/>
 <source>Untagged notes</source>
 <translation>Nga tuhinga kore</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9351"/>
+<location filename="../mainwindow.cpp" line="9353"/>
 <source>Export current note as HTML file</source>
 <translation>Kaweake i te tuhipoka o inaianei hei konae HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5388"/>
+<location filename="../mainwindow.cpp" line="5390"/>
 <source>Page size</source>
 <translation>Rahi whārangi</translation>
 </message>
@@ -3804,22 +3804,22 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
 <translation>pae taputapu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5388"/>
+<location filename="../mainwindow.cpp" line="5390"/>
 <source>Page size:</source>
 <translation>Rahi whārangi:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5497"/>
+<location filename="../mainwindow.cpp" line="5499"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>Ka whai nga QOwnNotes i nga raraunga whakamahinga kore ingoa, e awhina ana ki te whakatau he aha nga waahanga o te QOwnNotes hei whakapai ake i muri atu ka kitea me te whakatika i nga aitua. Ka taea e koe te whakakore i taua whanonga ki nga tautuhinga.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5501"/>
+<location filename="../mainwindow.cpp" line="5503"/>
 <source>&amp;Ok</source>
 <translation type="unfinished">&amp;Ok</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9590"/>
+<location filename="../mainwindow.cpp" line="9592"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;Tango tuhipoka</translation>
 </message>
@@ -3829,75 +3829,75 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
 <translation>Kei te utaina o au mahi mai i to kaitoro</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2880"/>
+<location filename="../mainwindow.cpp" line="2882"/>
 <source>Current note was modified externally</source>
 <translation>Current note was modified externally</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2950"/>
-<location filename="../mainwindow.cpp" line="6070"/>
+<location filename="../mainwindow.cpp" line="2952"/>
+<location filename="../mainwindow.cpp" line="6072"/>
 <source>Stored current note to disk</source>
 <translation>Stored current note to disk</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2968"/>
+<location filename="../mainwindow.cpp" line="2970"/>
 <source>Note was modified externally: %1</source>
 <translation>I whakarereketia te tuhipoka a-waho: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2990"/>
+<location filename="../mainwindow.cpp" line="2992"/>
 <source>Notes directory was modified externally</source>
 <translation>Ko nga raarangi rekoata i whakarerekehia a-waho</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3053"/>
+<location filename="../mainwindow.cpp" line="3055"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>Ka mau te tohu %n ki te kōpae</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7618"/>
+<location filename="../mainwindow.cpp" line="7620"/>
 <source>All notes</source>
 <translation>Nga kaute katoa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8517"/>
+<location filename="../mainwindow.cpp" line="8519"/>
 <source>&amp;Add tag</source>
 <translation>&amp;Tāpiri tūtohu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8565"/>
+<location filename="../mainwindow.cpp" line="8567"/>
 <source>Tag could not be created!</source>
 <translation>Kaore i taea te tūtohu Tag!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8744"/>
+<location filename="../mainwindow.cpp" line="8746"/>
 <source>Move to this tag</source>
 <translation>Neke ki tenei tohu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8779"/>
+<location filename="../mainwindow.cpp" line="8781"/>
 <source>Tag this</source>
 <translation>Maatau tenei tohu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8804"/>
+<location filename="../mainwindow.cpp" line="8806"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>Kāore e taea te nuku i te tūtohu '%1' ki tenei tūtohu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8853"/>
+<location filename="../mainwindow.cpp" line="8855"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>Tiki kua neke '%1' ki te tūtohu hou</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8528"/>
+<location filename="../mainwindow.cpp" line="8530"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;Tangohia nga tūtohu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5535"/>
+<location filename="../mainwindow.cpp" line="5537"/>
 <source>No selected todo lists!</source>
 <translation>Kāore he rārangi todo i tīpakohia!</translation>
 </message>
@@ -4007,123 +4007,123 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
 <translation type="unfinished">Switch to note folder</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2549"/>
+<location filename="../mainwindow.cpp" line="2551"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>Kaore i taea te utaina he taputapu taputapu kaore he ingoa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2903"/>
+<location filename="../mainwindow.cpp" line="2905"/>
 <source>Overwriting external changes of: %1</source>
 <translation>Te tuhi i nga huringa o-waho o te: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2915"/>
+<location filename="../mainwindow.cpp" line="2917"/>
 <source>Loading external changes from: %1</source>
 <translation>Ko te tango i nga huringa o-waho mai i te: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2951"/>
-<location filename="../mainwindow.cpp" line="6071"/>
+<location filename="../mainwindow.cpp" line="2953"/>
+<location filename="../mainwindow.cpp" line="6073"/>
 <source>Current note could not be stored to disk</source>
 <translation>Kaore i taea te rokiroki o naianei ki te kōpae</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3137"/>
+<location filename="../mainwindow.cpp" line="3139"/>
 <source>Read-only</source>
 <translation>Panui-anake</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3139"/>
+<location filename="../mainwindow.cpp" line="3141"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>Kua whakakorehia te panui tuhipoka, paatene kia whakahohea</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3156"/>
+<location filename="../mainwindow.cpp" line="3158"/>
 <source>Line numbers</source>
 <translation>Tau raina</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3166"/>
+<location filename="../mainwindow.cpp" line="3168"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Paatohia a konei ki te kite i nga mea kua rereke ke kia taea ki te whakahou i nga putanga hou</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3532"/>
+<location filename="../mainwindow.cpp" line="3534"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>Haere tonu me te mukua aunoa o te &lt;strong&gt;%n&lt;/strong&gt; i nga kape pātengi raraunga kua tohetohe ka aukati i to ake tono tukutahi o ownCloud?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4989"/>
+<location filename="../mainwindow.cpp" line="4991"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>% n tuhipoka(s) i tohua me "% 2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5761"/>
+<location filename="../mainwindow.cpp" line="5763"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>I kitea te &lt;strong&gt;%n&lt;/strong&gt; a (%) o te &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6132"/>
+<location filename="../mainwindow.cpp" line="6134"/>
 <source>Note headline</source>
 <translation>Pukapuka kape</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7295"/>
+<location filename="../mainwindow.cpp" line="7297"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation type="unfinished">Paste &amp;HTML as markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7296"/>
+<location filename="../mainwindow.cpp" line="7298"/>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7351"/>
+<location filename="../mainwindow.cpp" line="7353"/>
 <source>Downloading images finished</source>
 <translation>Ko te tango i nga whakaahua kua oti</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5501"/>
-<location filename="../mainwindow.cpp" line="5516"/>
-<location filename="../mainwindow.cpp" line="5539"/>
-<location filename="../mainwindow.cpp" line="9794"/>
+<location filename="../mainwindow.cpp" line="5503"/>
+<location filename="../mainwindow.cpp" line="5518"/>
+<location filename="../mainwindow.cpp" line="5541"/>
+<location filename="../mainwindow.cpp" line="9797"/>
 <source>Open &amp;settings</source>
 <translation>Tautuhi &amp;tuwhera</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1766"/>
-<location filename="../mainwindow.cpp" line="11561"/>
+<location filename="../mainwindow.cpp" line="11564"/>
 <source>leave</source>
 <translation>waiho</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6789"/>
+<location filename="../mainwindow.cpp" line="6791"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>Tomo koa ki to &lt;strong&gt; kupuhipa &lt;/strong&gt; ki te whakauru i te tuhipoka. ka taea e koe &lt;strong&gt; anake &lt;/strong&gt; te mahi i te &lt;strong&gt; i QOwnNotes &lt;/strong&gt;!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6862"/>
+<location filename="../mainwindow.cpp" line="6864"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>Tuhia nga tohu me te rokiroki kia rite ki te tuhinga noa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6867"/>
+<location filename="../mainwindow.cpp" line="6869"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;Whakaitihia</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6892"/>
+<location filename="../mainwindow.cpp" line="6894"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br /&gt; Ka taea e koe te whakatika i to tuhi whakamuna.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6961"/>
+<location filename="../mainwindow.cpp" line="6963"/>
 <source>Export current note as Markdown file</source>
 <translation>Kaweake i te tuhipoka o naianei hei konae Markdown</translation>
 </message>
@@ -4522,24 +4522,34 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
 <translation type="unfinished">Note</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2795"/>
+<location filename="../entities/note.cpp" line="2796"/>
 <source>Could not read image file: %1</source>
 <translation>Kaore i taea te panui i te konae whakaahua: %1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3453"/>
+<location filename="../entities/note.cpp" line="3454"/>
 <source>Note file path changed</source>
 <translation>Kua hurihia te ara ripa</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3454"/>
+<location filename="../entities/note.cpp" line="3455"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>Kua kitea he huringa o te ara panui. Kei te hiahia koe ki te whakakapi i nga mahinga katoa o te hononga ki te &lt;strong&gt;% 1 &lt;/strong&gt; me te &lt;strong&gt;% 2 &lt;/strong&gt; me nga hononga me te ingoa nama &lt;strong&gt;% 3 &lt;/strong&gt; me te &lt;strong&gt;% 4 &lt;/strong&gt; &gt; i te &lt;strong&gt;% n &lt;/strong&gt; konae tuhi(s)?</numerusform>
 </translation>
 </message>
+<message>
+<location filename="../entities/note.cpp" line="3600"/>
+<source>Image file exists</source>
+<translation type="unfinished">Image file exists</translation>
+</message>
+<message>
+<location filename="../entities/note.cpp" line="3601"/>
+<source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
+<translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
+</message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="4067"/>
+<location filename="../entities/note.cpp" line="4091"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>… Me te %n nui nga tuhinga(s)</numerusform>
@@ -9350,7 +9360,7 @@ Ka taea e koe te whakahoki tonu i te tuhipoka me ona waahanga a muri ake nei. &l
 </translation>
 </message>
 <message>
-<location filename="../services/websocketserverservice.cpp" line="430"/>
+<location filename="../services/websocketserverservice.cpp" line="470"/>
 <source>%1 was disconnected from QOwnNotes server</source>
 <translation>Kua katihia te %1 mai i te kaiwhakarato QOwnNotes</translation>
 </message>

@@ -28,24 +28,24 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ## Dipendenze
 
-[fzf](https://github.com/junegunn/fzf) (fuzzy search) or [peco](https://github.com/peco/peco) (older, but more likely to be installed by default) need to be installed to search for commands on the command-line.
+[fzf](https://github.com/junegunn/fzf) (fuzzy search) or [peco](https://github.com/peco/peco) (più vecchio, ma più probabile che venga installato per impostazione predefinita) deve essere installato per cercare i comandi sulla riga di comando.
 
 ::: tip
-By default `fzf` is used for searching, but you can use `peco` by setting it with `qc configure`.
+Per impostazione predefinita viene utilizzato `fzf` per la ricerca, ma puoi utilizzare `peco` impostandolo con `qc configure`.
 :::
 
 ## Preparazione
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Before you are using the snippet manager you need to enable the *Web socket server* (2) in the *Browser extension / command snippets* (1) settings in QOwnNotes.
+Prima di utilizzare lo snippet manager è necessario abilitare il *server Web socket* (2) nelle impostazioni *Estensione del browser / frammenti di comando* (1) in QOwnNotes.
 
 Quindi devi mostrare il token di sicurezza (3) e copiarlo (4).
 
 Ora apri il file di configurazione dello snippet manager con:
 
 ```bash
-# Configure the snippet manager
+# Configura il gestore degli snippet
 qc configure
 ```
 
@@ -67,16 +67,16 @@ Puoi utilizzare **elenchi non ordinati con blocchi di codice in linea** per memo
 Se aggiungi un `cmd:` prima del blocco di codice in linea, il comando si troverà anche nella **nota corrente** indipendentemente dai tag della nota.
 
 ```markdown
-- `echo I am a command` I am a description #tag1 #tag2 #tag3
-* `echo I am also a command` I am a description #tag3 #tag4 #tag5
-- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+- `echo sono un comando` sono una descrizione #tag1 #tag2 #tag3
+* `echo sono anche un comando` Sono una descrizione #tag3 #tag4 #tag5
+- cmd: `echo sarò trovato nella nota corrente` Questo comando sarà trovato nella nota corrente indipendentemente dai tag della nota
 
-<!-- Example for asking for user input -->
+<!-- Esempio di richiesta di input da parte dell'utente -->
 
-- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
+- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Richiedi l'ID della richiesta pull e la richiesta pull checkout
 ```
 
-**`bash` or `shell` code blocks**, preceded by a heading 2 or higher as a description, can also be used for command snippets. I tag sono supportati anche se si trovano tra l'intestazione e il blocco di codice.
+I blocchi di codice **`bash` o `shell`**, preceduti da un'intestazione 2 o superiore come descrizione, possono essere utilizzati anche per frammenti di comando. I tag sono supportati anche se si trovano tra l'intestazione e il blocco di codice.
 
     ## Fallo con un blocco di codice "bash".
 

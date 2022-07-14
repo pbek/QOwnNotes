@@ -5,6 +5,7 @@
   identical to an image already existing in the media folder then you will be asked if
   you want to use the existing image instead (for [#2563](https://github.com/pbek/QOwnNotes/issues/2563))
 - the Fedora 36 build process now works
+- added more Persian translation (thank you amirkbrpr)
 
 ## 22.7.2
 - automatic resizing of images in the preview with space characters in filename is now 
