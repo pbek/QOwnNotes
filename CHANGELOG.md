@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 22.7.3
+- if you now add an image again to a note, and it has the same filename and is binary
+  identical to an image already existing in the media folder then you will be asked if
+  you want to use the existing image instead (for [#2563](https://github.com/pbek/QOwnNotes/issues/2563))
 - the Fedora 36 build process now works
 
 ## 22.7.2
