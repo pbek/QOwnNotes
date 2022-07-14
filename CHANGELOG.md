@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 22.7.3
+- the Fedora 36 build process now works
+
 ## 22.7.2
 - automatic resizing of images in the preview with space characters in filename is now 
   also implemented (for [#2561](https://github.com/pbek/QOwnNotes/issues/2561))

@@ -88,6 +88,11 @@ Patrizio Bekerle <patrizio@bekerle.com>
 %define _unpackaged_files_terminate_build 0
 %endif
 
+# Fixes: /usr/bin/ld: cannot open linker script file /home/abuild/rpmbuild/BUILD/.package_note-qownnotes-22.7.1-1.1.x86_64.ld: No such file or directory
+%if 0%{?fedora} >= 36
+%global _package_note_file  %{_builddir}/%{name}-%{version}/.package_note-%{name}-%{version}-%{release}.%{_arch}.ld
+%endif
+
 %prep
 %setup -q
 
