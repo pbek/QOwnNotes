@@ -2237,10 +2237,10 @@ QString Utils::Misc::makeFileNameRandom(const QString &fileName,
  * Returns a non-existing filename (like "my-image.jpg") in directoryPath
  * If the filename is already taken a number will be appended (like "my-image-1.jpg")
  */
-QString Utils::Misc::findAvailableFileName(const QString &fileName,
+QString Utils::Misc::findAvailableFileName(const QString &filePath,
                                            const QString &directoryPath,
                                            const QString &overrideSuffix) {
-    const QFileInfo fileInfo(fileName);
+    const QFileInfo fileInfo(filePath);
     QString baseName = fileInfo.baseName();
     baseName.truncate(200);
     const QString newSuffix = fileInfo.suffix();
@@ -2258,15 +2258,37 @@ QString Utils::Misc::findAvailableFileName(const QString &fileName,
         newFileName = newBaseName + QStringLiteral(".") + newSuffix;
         newFilePath = directoryPath + QDir::separator() + newFileName;
         file.setFileName(newFilePath);
-        qDebug() << __func__ << " - 'override fileName': " << newFileName;
 
         if (nameCount > 1000) {
-            newFileName = makeFileNameRandom(fileName, overrideSuffix);
+            newFileName = makeFileNameRandom(filePath, overrideSuffix);
             break;
         }
     }
 
     return newFileName;
+}
+
+/**
+ * Returns filename for a file path for inserting images
+ */
+QString Utils::Misc::fileNameForPath(const QString &filePath) {
+    const QFileInfo fileInfo(filePath);
+    QString baseName = fileInfo.fileName();
+    baseName.truncate(200);
+
+    return baseName;
+}
+
+/**
+ * Checks if a filename exists like for findAvailableFileName
+ */
+bool Utils::Misc::fileNameExists(const QString &fileName,
+                                 const QString &directoryPath) {
+    QString filePath = directoryPath + QDir::separator() +
+                          fileNameForPath(fileName);
+    QFile file(filePath);
+
+    return file.exists();
 }
 
 /**

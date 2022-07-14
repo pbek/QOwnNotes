@@ -144,9 +144,12 @@ bool isSameFile(const QString &path1, const QString &path2);
 QString generateRandomString(int length = 8);
 QString makeFileNameRandom(const QString &fileName,
                            const QString &overrideSuffix = "");
-QString findAvailableFileName(const QString &fileName,
+QString findAvailableFileName(const QString &filePath,
                               const QString &directoryPath,
                               const QString &overrideSuffix = "");
+bool fileNameExists(const QString &fileName,
+                    const QString &directoryPath);
+QString fileNameForPath(const QString &filePath);
 QString rstrip(const QString &str);
 bool isPreviewUseEditorStyles();
 QString previewFontString();

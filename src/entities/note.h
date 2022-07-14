@@ -272,7 +272,7 @@ class Note {
 
     QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true,
                                    bool returnUrlOnly = false,
-                                   QString title = QString());
+                                   QString title = QString()) const;
 
     QString getInsertAttachmentMarkdown(QFile *file,
                                         QString fileName = QString(),

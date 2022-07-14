@@ -3560,62 +3560,85 @@ QString Note::createNoteHeader(const QString &name) {
  * Returns the markdown of the inserted media file into a note
  */
 QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
-                                     bool returnUrlOnly, QString title) {
+                                     bool returnUrlOnly, QString title) const {
     // file->exists() is false on Arch Linux for QTemporaryFile!
-    if (file->size() > 0) {
-        QDir mediaDir(NoteFolder::currentMediaPath());
+    if (file->size() == 0) {
+        return QLatin1String("");
+    }
 
-        // created the media folder if it doesn't exist
-        if (!mediaDir.exists()) {
-            mediaDir.mkpath(mediaDir.path());
+    QDir mediaDir(NoteFolder::currentMediaPath());
+
+    // create the media folder if it doesn't exist
+    if (!mediaDir.exists()) {
+        mediaDir.mkpath(mediaDir.path());
+    }
+
+    const QFileInfo fileInfo(file->fileName());
+    QString suffix = fileInfo.suffix();
+    QMimeDatabase db;
+    const QMimeType type = db.mimeTypeForFile(file->fileName());
+
+    // try to detect the mime type of the file and use a proper file suffix
+    if (type.isValid()) {
+        const QStringList suffixes = type.suffixes();
+        if (suffixes.count() > 0) {
+            suffix = suffixes.at(0);
         }
+    }
 
-        const QFileInfo fileInfo(file->fileName());
-        QString suffix = fileInfo.suffix();
-        QMimeDatabase db;
-        const QMimeType type = db.mimeTypeForFile(file->fileName());
+    bool useExistingFile = false;
+    // check if image with the same name already exists in media folder
+    if (Utils::Misc::fileNameExists(file->fileName(), mediaDir.path())) {
+        // file->fileName() wields a path!
+        auto fileHash = Utils::Misc::generateFileSha1Signature(file->fileName());
+        auto newFileHash = Utils::Misc::generateFileSha1Signature(
+            mediaDir.path() + QDir::separator() +
+            Utils::Misc::fileNameForPath(file->fileName()));
 
-        // try to detect the mime type of the file and use a proper file suffix
-        if (type.isValid()) {
-            const QStringList suffixes = type.suffixes();
-            if (suffixes.count() > 0) {
-                suffix = suffixes.at(0);
-            }
+        // check if files are binary identical and ask if we want to use the existing file
+        if (fileHash == newFileHash && Utils::Gui::question(nullptr,
+            QObject::tr("Image file exists"),
+            QObject::tr("Image file already exists in the media folder, "
+                "do you want to use the existing one instead of creating a new file?"),
+            QStringLiteral("insert-media-use-existing-image")) ==
+            QMessageBox::Yes) {
+            useExistingFile = true;
         }
+    }
 
-        // find a random name for the new file
-        const QString newFileName =
-            Utils::Misc::findAvailableFileName(file->fileName(),
-                                               mediaDir.path(), suffix);
+    // find a name for the new file
+    const QString newFileName = useExistingFile ?
+        Utils::Misc::fileNameForPath(file->fileName()) :
+        Utils::Misc::findAvailableFileName(file->fileName(),
+                                           mediaDir.path(), suffix);
 
-        const QString newFilePath =
-            mediaDir.path() + QDir::separator() + newFileName;
+    const QString newFilePath =
+        mediaDir.path() + QDir::separator() + newFileName;
 
+    if (!useExistingFile) {
         // copy the file to the media folder
         file->copy(newFilePath);
 
         QFile newFile(newFilePath);
         scaleDownImageFileIfNeeded(newFile);
-
-        const QString mediaUrlString = mediaUrlStringForFileName(newFileName);
-
-        // check if we only want to return the media url string
-        if (returnUrlOnly) {
-            return mediaUrlString;
-        }
-
-        if (title.isEmpty()) {
-            title = fileInfo.baseName();
-        }
-
-        // return the image link
-        // we add a "\n" in the end so that hoedown recognizes multiple images
-        return QStringLiteral("![") + title + QStringLiteral("](") +
-               mediaUrlString + QStringLiteral(")") +
-               (addNewLine ? QStringLiteral("\n") : QLatin1String(""));
     }
 
-    return QLatin1String("");
+    auto mediaUrlString = mediaUrlStringForFileName(newFileName);
+
+    // check if we only want to return the media url string
+    if (returnUrlOnly) {
+        return mediaUrlString;
+    }
+
+    if (title.isEmpty()) {
+        title = fileInfo.baseName();
+    }
+
+    // return the image link
+    // we add a "\n" in the end so that hoedown recognizes multiple images
+    return QStringLiteral("![") + title + QStringLiteral("](") +
+           mediaUrlString + QStringLiteral(")") +
+           (addNewLine ? QStringLiteral("\n") : QLatin1String(""));
 }
 
 QString Note::mediaUrlStringForFileName(const QString &fileName) const {
