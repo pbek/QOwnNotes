@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.7.4
+- the stuck regular expression detection while searching in notes was improved
+  (for [#2302](https://github.com/pbek/QOwnNotes/issues/2302#issuecomment-1184745128))
+
 ## 22.7.3
 - if you now add an image again to a note, and it has the same filename and is binary
   identical to an image already existing in the media folder then you will be asked if
