@@ -1,10 +1,11 @@
 # Local release environment
 FROM ubuntu:latest
 
-RUN apt-get install bash tmuxinator \
+RUN apt-get update
+RUN apt-get -y install bash tmuxinator \
          build-essential autoconf automake autotools-dev dh-make debhelper \
          devscripts fakeroot xutils lintian pbuilder cdbs \
-         python3 python3-pip osc xz
+         python3 python3-pip osc xz-utils
 
 # osc needs m2crypto:
 RUN pip3 install m2crypto
