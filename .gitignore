@@ -25,4 +25,5 @@ ui_*.h
 /src/.qmake.stash
 /src/Makefile
 /src/QOwnNotes
+secrets/*
 
