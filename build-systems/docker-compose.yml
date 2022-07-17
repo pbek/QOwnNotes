@@ -2,3 +2,11 @@ version: '3'
 services:
   releaser:
     build: .
+    volumes:
+      # doesn't work because of CryFS, see https://stackoverflow.com/a/67108158/1581487
+      - ../secrets/.oscrc:/home/release/.oscrc
+      - ../secrets/.dput.cf:/home/release/.dput.cf
+#      - ../secrets/github_rsa:/home/release/ssh/id_rsa:ro
+#      - ../secrets/github_rsa.pub:/home/release/ssh/id_rsa.pub:ro
+#      - ../secrets/aur_rsa:/home/release/ssh/aur_rsa:ro
+#      - ../secrets/aur_rsa.pub:/home/release/ssh/aur_rsa.pub:ro

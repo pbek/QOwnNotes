@@ -15,4 +15,6 @@ RUN pip3 install m2crypto
 # A /config/.oscrc needs to be mounted (usually from ~/.oscrc)
 #CMD ["/QOwnNotes/buildsystems/build-all.sh"]
 
-USER 1000
+RUN useradd -ms /bin/bash release
+USER release
+WORKDIR /home/release
