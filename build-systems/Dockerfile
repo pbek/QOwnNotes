@@ -18,3 +18,4 @@ RUN pip3 install m2crypto
 RUN useradd -ms /bin/bash release
 USER release
 WORKDIR /home/release
+RUN mkdir /home/release/.ssh -m 0700
