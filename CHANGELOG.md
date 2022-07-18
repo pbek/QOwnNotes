@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.7.5
+- prevent infinite loops in in-note regular expression searches by limiting to
+  10.000 search iterations (for [#2302](https://github.com/pbek/QOwnNotes/issues/2302#issuecomment-1185769472))
+
 ## 22.7.4
 - the stuck regular expression detection while searching in notes was improved
   (for [#2302](https://github.com/pbek/QOwnNotes/issues/2302#issuecomment-1184745128))
