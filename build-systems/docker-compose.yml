@@ -14,5 +14,6 @@ services:
       - ../secrets/aur_rsa.pub:/home/release/.ssh/aur_rsa.pub:ro
       - ../secrets/known_hosts:/home/release/.ssh/known_hosts
       - ../secrets/known_hosts.old:/home/release/.ssh/known_hosts.old
+      - ../secrets/private.pgp:/home/release/private.pgp
 #      - ../secrets/id_rsa:/home/release/.ssh/id_rsa:ro
 #      - ../secrets/id_rsa.pub:/home/release/.ssh/id_rsa.pub:ro

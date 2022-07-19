@@ -4,7 +4,7 @@
 # https://launchpad.net/~pbek/+archive/ubuntu/qownnotes
 #
 # We will need some packages to execute this locally:
-# sudo apt-get install build-essential autoconf automake autotools-dev dh-make debhelper devscripts fakeroot xutils lintian pbuilder cdbs
+# sudo apt-get install build-essential autoconf automake autotools-dev dh-make debhelper devscripts fakeroot xutils lintian pbuilder cdbs gnupg
 #
 # Also a ~/.dput.cf has to be in place
 #
