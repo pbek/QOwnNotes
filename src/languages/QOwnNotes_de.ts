@@ -4577,12 +4577,12 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <location filename="../entities/note.cpp" line="3600"/>
 <source>Image file exists</source>
-<translation type="unfinished">Image file exists</translation>
+<translation>Bilddatei existiert</translation>
 </message>
 <message>
 <location filename="../entities/note.cpp" line="3601"/>
 <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
-<translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
+<translation>Die Bilddatei ist bereits im Medienordner vorhanden. Möchten Sie die vorhandene verwenden, anstatt eine neue Datei zu erstellen?</translation>
 </message>
 <message numerus="yes">
 <location filename="../entities/note.cpp" line="4091"/>

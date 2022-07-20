@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.7.6
+- added more Spanish, German, Hungarian, Italian, Dutch, Polish, French,
+  Arabic translation (thank you tigris.huszonkilenc, chocolatine, noureddin)
+
 ## 22.7.5
 - prevent infinite loops in in-note regular expression searches by limiting to
   10.000 search iterations (for [#2302](https://github.com/pbek/QOwnNotes/issues/2302#issuecomment-1185769472))

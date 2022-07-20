@@ -4734,12 +4734,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../entities/note.cpp" line="3600"/>
 <source>Image file exists</source>
-<translation type="unfinished">Image file exists</translation>
+<translation>ملف الصورة موجود</translation>
 </message>
 <message>
 <location filename="../entities/note.cpp" line="3601"/>
 <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
-<translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
+<translation>ملف الصورة موجود بالفعل في مجلد الوسائط؛ هل تريد استخدام الملف الموجود بدلا من إنشاء ملف جديد؟</translation>
 </message>
 <message numerus="yes">
 <location filename="../entities/note.cpp" line="4091"/>

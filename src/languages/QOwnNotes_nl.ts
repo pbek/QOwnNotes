@@ -4578,12 +4578,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <location filename="../entities/note.cpp" line="3600"/>
 <source>Image file exists</source>
-<translation type="unfinished">Image file exists</translation>
+<translation>Afbeeldingsbestand bestaat</translation>
 </message>
 <message>
 <location filename="../entities/note.cpp" line="3601"/>
 <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
-<translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
+<translation>Afbeeldingsbestand bestaat al in de mediamap, wilt u het bestaande gebruiken in plaats van een nieuw bestand te maken?</translation>
 </message>
 <message numerus="yes">
 <location filename="../entities/note.cpp" line="4091"/>

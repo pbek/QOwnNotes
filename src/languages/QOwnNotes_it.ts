@@ -4575,12 +4575,12 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../entities/note.cpp" line="3600"/>
 <source>Image file exists</source>
-<translation type="unfinished">Image file exists</translation>
+<translation>Esiste un file immagine</translation>
 </message>
 <message>
 <location filename="../entities/note.cpp" line="3601"/>
 <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
-<translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
+<translation>Il file immagine esiste già nella cartella media, vuoi usare quello esistente invece di creare un nuovo file?</translation>
 </message>
 <message numerus="yes">
 <location filename="../entities/note.cpp" line="4091"/>

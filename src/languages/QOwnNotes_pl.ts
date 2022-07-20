@@ -4654,12 +4654,12 @@ Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybrane folder(y)?&lt;ul&gt;&lt;li&gt;%
 <message>
 <location filename="../entities/note.cpp" line="3600"/>
 <source>Image file exists</source>
-<translation type="unfinished">Image file exists</translation>
+<translation>Plik obrazu istnieje</translation>
 </message>
 <message>
 <location filename="../entities/note.cpp" line="3601"/>
 <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
-<translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
+<translation>Plik obrazu już istnieje w folderze multimediów, czy chcesz użyć istniejącego zamiast tworzyć nowy plik?</translation>
 </message>
 <message numerus="yes">
 <location filename="../entities/note.cpp" line="4091"/>
