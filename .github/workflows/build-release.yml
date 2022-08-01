@@ -115,13 +115,13 @@ jobs:
       with:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
-        cache: ${{ steps.cache-qt.outputs.cache-hit }}
+        cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: false == contains( matrix.os, 'windows')
       name: Install Qt on Linux/macOS
       uses: jurplel/install-qt-action@v2
       with:
         version: ${{ matrix.qt-version }}
-        cache: ${{ steps.cache-qt.outputs.cache-hit }}
+        cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - name: Printenv
       shell: bash
       run: |
