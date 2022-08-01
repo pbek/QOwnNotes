@@ -415,6 +415,31 @@ QString ScriptingService::callInsertAttachmentHook(QFile *file,
 }
 
 /**
+ * Calls the workspaceSwitchingHook function for all script components
+ * This function is called when workflows are switched
+ *
+ * @param oldUuid old uuid of workspace
+ * @param newUuid new uuid of workspace
+ */
+void ScriptingService::callWorkspaceSwitchingHook(const QString &oldUuid, const QString &newUuid) {
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+
+        if (methodExistsForObject(
+                scriptComponent.object,
+                QStringLiteral(
+                    "workspaceSwitchingHook(QVariant,QVariant)"))) {
+            QMetaObject::invokeMethod(
+                scriptComponent.object, "workspaceSwitchingHook",
+                Q_ARG(QVariant, oldUuid), Q_ARG(QVariant, newUuid));
+        }
+    }
+}
+
+/**
  * Calls the noteTaggingHook function for all script components
  * This function is called when tags are added to, removed from or renamed in
  * notes or the tags of a note should be listed

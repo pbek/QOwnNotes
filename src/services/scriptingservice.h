@@ -40,6 +40,7 @@ class ScriptingService : public QObject {
     void initComponents();
     QString callInsertMediaHook(QFile *file, QString markdownText);
     QString callInsertAttachmentHook(QFile *file, QString markdownText);
+    void callWorkspaceSwitchingHook(const QString &oldUuid, const QString &newUuid);
     QVariant callNoteTaggingHook(const Note &note, const QString &action,
                                  const QString &tagName = QString(),
                                  const QString &newTagName = QString());

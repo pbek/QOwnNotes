@@ -10555,6 +10555,8 @@ void MainWindow::setCurrentWorkspace(const QString &uuid) {
 
     // update the preview in case it was disabled previously
     setNoteTextFromNote(&currentNote, true);
+
+    ScriptingService::instance()->callWorkspaceSwitchingHook(currentUuid, uuid);
 }
 
 /**
