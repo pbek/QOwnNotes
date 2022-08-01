@@ -331,7 +331,7 @@ MainWindow::MainWindow(QWidget *parent)
             &MainWindow::gitCommitCurrentNoteFolder);
     _gitCommitTimer->start(_gitCommitInterval * 1000);
 
-    // set last heartbeat in the past so it gets called the first time
+    // set last heartbeat in the past, so it gets called the first time
     _lastHeartbeat = QDateTime::currentDateTime().addDays(-1);
 
     // do some stuff periodically
@@ -391,7 +391,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     frequentPeriodicChecker();
 
-    // setup the shortcuts for the note bookmarks
+    // set up the shortcuts for the note bookmarks
     setupNoteBookmarkShortcuts();
 
     // restore the distraction free mode
@@ -440,7 +440,7 @@ MainWindow::MainWindow(QWidget *parent)
             &MainWindow::reloadTodoLists);
     _todoListTimer->start(600000);
 
-    // setup the soft-wrap checkbox
+    // set up the soft-wrap checkbox
     const QSignalBlocker blocker2(ui->actionUse_softwrap_in_note_editor);
     Q_UNUSED(blocker2)
     ui->actionUse_softwrap_in_note_editor->setChecked(

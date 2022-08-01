@@ -937,7 +937,7 @@ void Utils::Gui::restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout) {
                 const Note note = Note::fetchByName(noteName,
                                                     noteSubFolderPathData);
 
-                // skip if note was not found any more
+                // skip if note was not found anymore
                 if (!note.isFetched()) {
                     continue;
                 }
