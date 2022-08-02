@@ -8,7 +8,7 @@ Script {
      * @param oldUuid old uuid of workspace
      * @param newUuid new uuid of workspace
      */
-    function workspaceSwitchingHook(oldUuid, newUuid) {
+    function workspaceSwitchedHook(oldUuid, newUuid) {
         script.log(oldUuid);
         script.log(newUuid);
     }

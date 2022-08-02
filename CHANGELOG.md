@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 22.8.0
+- a new scripting hook `workspaceSwitchedHook` was added that is called when
+  workflows are switched (for [#2565](https://github.com/pbek/QOwnNotes/issues/2565))
+  - please take a look at the
+    [workspaceSwitchedHook documentation](https://www.qownnotes.org/scripting/hooks.html#workspaceswitchedhook)
+    for more information
+
 ## 22.7.6
 - added more Spanish, German, Hungarian, Italian, Dutch, Polish, French,
   Arabic translation (thank you tigris.huszonkilenc, chocolatine, noureddin)

@@ -415,13 +415,13 @@ QString ScriptingService::callInsertAttachmentHook(QFile *file,
 }
 
 /**
- * Calls the workspaceSwitchingHook function for all script components
+ * Calls the workspaceSwitchedHook function for all script components
  * This function is called when workflows are switched
  *
  * @param oldUuid old uuid of workspace
  * @param newUuid new uuid of workspace
  */
-void ScriptingService::callWorkspaceSwitchingHook(const QString &oldUuid, const QString &newUuid) {
+void ScriptingService::callWorkspaceSwitchedHook(const QString &oldUuid, const QString &newUuid) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
@@ -431,9 +431,9 @@ void ScriptingService::callWorkspaceSwitchingHook(const QString &oldUuid, const 
         if (methodExistsForObject(
                 scriptComponent.object,
                 QStringLiteral(
-                    "workspaceSwitchingHook(QVariant,QVariant)"))) {
+                    "workspaceSwitchedHook(QVariant,QVariant)"))) {
             QMetaObject::invokeMethod(
-                scriptComponent.object, "workspaceSwitchingHook",
+                scriptComponent.object, "workspaceSwitchedHook",
                 Q_ARG(QVariant, oldUuid), Q_ARG(QVariant, newUuid));
         }
     }

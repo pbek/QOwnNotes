@@ -437,7 +437,7 @@ function windowStateChangedHook(windowState);
 You may want to take a look at the example
 [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/window-state-changed.qml).
 
-workspaceSwitchingHook
+workspaceSwitchedHook
 ----------------------
 
 This hook is called when workflows are switched.
@@ -450,7 +450,7 @@ This hook is called when workflows are switched.
  * @param oldUuid old uuid of workspace
  * @param newUuid new uuid of workspace
  */
-function workspaceSwitchingHook(oldUuid, newUuid);
+function workspaceSwitchedHook(oldUuid, newUuid);
 ```
 
 You may want to take a look at the example
