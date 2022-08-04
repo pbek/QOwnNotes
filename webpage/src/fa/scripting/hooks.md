@@ -381,3 +381,21 @@ function windowStateChangedHook(windowState);
 ```
 
 شاید بخواهید به مثال [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/window-state-changed.qml) نگاهی بیندازید.
+
+workspaceSwitchedHook
+----------------------
+
+این هوک زمانی فراخوانده می شود که وضعیت روند کار تغییر کند.
+
+### فراخوانی شگرد و پارامترها
+```js
+    /**
+ * This function is called when workflows are switched
+ *
+ * @param oldUuid old uuid of workspace
+ * @param newUuid new uuid of workspace
+ */
+function workspaceSwitchedHook(oldUuid, newUuid);
+```
+
+شاید بخواهید مثال [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/workspaces.qml) را ملاحظه کنید.

@@ -381,3 +381,21 @@ function windowStateChangedHook (windowState);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/window-state-changed.qml).
+
+workspaceSwitchedHook
+----------------------
+
+Ce crochet est appelé quand il y a bascule entre les flux de travail.
+
+### Appel de méthode et paramètres
+```js
+    /**
+ * Cette fonction est appelée quand il y a bascule entre les flux de travail
+ *
+ * @param oldUuid uuid actuel de l'espace de travail
+ * @param newUuid nouvel uuid de l'espace de travail
+ */
+function workspaceSwitchedHook(oldUuid, newUuid);
+```
+
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/workspaces.qml).
