@@ -386,17 +386,17 @@ Es posible que desee echar un vistazo al ejemplo [window-state-changed.qml](http
 workspaceSwitchedHook
 ----------------------
 
-This hook is called when workflows are switched.
+Este enlace se llama cuando se cambian los flujos de trabajo.
 
-### Method call and parameters
+### Parámetros y llamada al método
 ```js
     /**
- * This function is called when workflows are switched
- *
- * @param oldUuid old uuid of workspace
- * @param newUuid new uuid of workspace
- */
-function workspaceSwitchedHook(oldUuid, newUuid);
+  * Esta función se llama cuando se cambian los flujos de trabajo
+  *
+  * @param oldUuid uuid antiguo del espacio de trabajo
+  * @param newUuid nuevo uuid del espacio de trabajo
+  */
+función workspaceSwitchedHook(oldUuid, newUuid);
 ```
 
-You may want to take a look at the example [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/workspaces.qml).
+Es posible que desee echar un vistazo al ejemplo. [websocket-datos-sin procesar-nueva-nota.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/workspaces.qml).

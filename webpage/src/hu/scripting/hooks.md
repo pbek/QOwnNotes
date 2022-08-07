@@ -384,12 +384,12 @@ függvény windowStateChangedHook (windowState);
 workspaceSwitchedHook
 ----------------------
 
-This hook is called when workflows are switched.
+Ezt a hookot a munkafolyamatok váltásakor hívják meg.
 
-### Method call and parameters
+### Módszerhívás és paraméterek
 ```js
     /**
- * This function is called when workflows are switched
+ * Ez a funkció a munkafolyamatok váltásakor hívódik meg
  *
  * @param oldUuid old uuid of workspace
  * @param newUuid new uuid of workspace
@@ -397,4 +397,4 @@ This hook is called when workflows are switched.
 function workspaceSwitchedHook(oldUuid, newUuid);
 ```
 
-You may want to take a look at the example [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/workspaces.qml).
+Érdemes lehet egy pillantást vetni a példára [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/workspaces.qml).
