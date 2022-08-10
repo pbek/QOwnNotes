@@ -1,6 +1,7 @@
 # Command line interface parameters
 
-You can use these parameters on the command line interface:
+You can use these parameters on the command line interface (CLI) to control
+the behavior of the application:
 
 | Parameter                    | Description                                                                                                                                |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
