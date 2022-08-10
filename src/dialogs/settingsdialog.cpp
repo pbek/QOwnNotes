@@ -65,7 +65,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
 
     MainWindow *mainWindow = MainWindow::instance();
 
-    // if there was no size set yet and we already have a main window we'll
+    // if there was no size set yet, and we already have a main window we'll
     // mimic that size
     if (mainWindow != nullptr) {
         resize(mainWindow->width(), mainWindow->height());
@@ -145,10 +145,10 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     setupProxyPage();
 
     if (!fromWelcomeDialog) {
-        // setup the note folder tab
+        // set up the note folder tab
         setupNoteFolderPage();
 
-        // setup the scripting tab
+        // set up the scripting tab
         setupScriptingPage();
     }
 

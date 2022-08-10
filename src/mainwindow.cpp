@@ -5147,8 +5147,7 @@ void MainWindow::openSettingsDialog(int page, bool openScriptRepository) {
         return;
     }
 
-    // make sure no settings get written after after we got the
-    // clearAppDataAndExit call
+    // make sure no settings get written after we got the clearAppDataAndExit call
     if (qApp->property("clearAppDataAndExit").toBool()) {
         return;
     }
