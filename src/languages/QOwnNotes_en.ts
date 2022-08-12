@@ -3412,6 +3412,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="9759"/>
+        <source>Open selected notes in tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="11290"/>
         <source>A script update was found!</source>
         <translation type="unfinished"></translation>
@@ -3490,11 +3495,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../mainwindow.cpp" line="9739"/>
         <source>&amp;Remove tag from selected notes…</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="9759"/>
-        <source>Open selected notes in tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

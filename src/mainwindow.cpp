@@ -9756,7 +9756,7 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
     }
 
     if ((multiNoteMenuEntriesOnly && selectedItems.count() > 1) || !multiNoteMenuEntriesOnly) {
-        auto *openNoteInTabAction = noteMenu.addAction(tr("Open selected notes in tab"));
+        auto *openNoteInTabAction = noteMenu.addAction(tr("Open selected notes in tabs"));
         connect(openNoteInTabAction, &QAction::triggered, this,
                 &MainWindow::openSelectedNotesInTab);
     }
