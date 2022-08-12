@@ -1,6 +1,6 @@
 # Parameter der Befehlszeilenschnittstelle
 
-Sie können diese Parameter auf der Befehlszeilenschnittstelle verwenden:
+Sie können diese Parameter über die Befehlszeilenschnittstelle (CLI) verwenden, um das das Verhalten der Anwendung steuern:
 
 | Parameter                    | Beschreibung                                                                                                                                        |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |

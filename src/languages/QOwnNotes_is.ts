@@ -2055,7 +2055,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="8245"/>
+<location filename="../mainwindow.cpp" line="8248"/>
 <source>Add a tag to the current note</source>
 <translation>Bættu merki við núverandi athugasemd</translation>
 </message>
@@ -2171,7 +2171,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1449"/>
-<location filename="../mainwindow.cpp" line="9731"/>
+<location filename="../mainwindow.cpp" line="9792"/>
 <source>Select &amp;all notes</source>
 <translation>Veldu allar &amp;athugasemdir</translation>
 </message>
@@ -2221,7 +2221,7 @@
 <translation>Leitaðu eða búðu til minnismiða</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8246"/>
+<location filename="../mainwindow.cpp" line="8249"/>
 <source>Add a tag to the selected notes</source>
 <translation>Bættu merki við völdu glósurnar</translation>
 </message>
@@ -2610,7 +2610,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2245"/>
-<location filename="../mainwindow.cpp" line="10694"/>
+<location filename="../mainwindow.cpp" line="10757"/>
 <source>Remove current workspace</source>
 <translation>Fjarlægðu núverandi vinnusvæði</translation>
 </message>
@@ -2678,7 +2678,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2366"/>
-<location filename="../mainwindow.cpp" line="9707"/>
+<location filename="../mainwindow.cpp" line="9768"/>
 <source>Open note in different window</source>
 <translation>Opna athugasemd í öðrum glugga</translation>
 </message>
@@ -2699,7 +2699,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2406"/>
-<location filename="../mainwindow.cpp" line="9715"/>
+<location filename="../mainwindow.cpp" line="9776"/>
 <source>Show note git versions</source>
 <translation>Sýna athugasemdir git útgáfur</translation>
 </message>
@@ -2782,7 +2782,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2569"/>
-<location filename="../mainwindow.cpp" line="11656"/>
+<location filename="../mainwindow.cpp" line="11719"/>
 <source>Automatically detect</source>
 <translation>Greina sjálfkrafa</translation>
 </message>
@@ -3019,10 +3019,10 @@ Restore current note?</source>
 Endurheimta núverandi athugasemd?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5518"/>
-<location filename="../mainwindow.cpp" line="5541"/>
-<location filename="../mainwindow.cpp" line="6869"/>
-<location filename="../mainwindow.cpp" line="9797"/>
+<location filename="../mainwindow.cpp" line="5521"/>
+<location filename="../mainwindow.cpp" line="5544"/>
+<location filename="../mainwindow.cpp" line="6872"/>
+<location filename="../mainwindow.cpp" line="9858"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Hætta við</translation>
 </message>
@@ -3117,27 +3117,27 @@ Endurheimta núverandi athugasemd?</translation>
 <translation>Fjarlægja núverandi athugasemd: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4435"/>
+<location filename="../mainwindow.cpp" line="4439"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>Vinsamlegast sláðu inn &lt;strong&gt; lykilorð &lt;/strong&gt; þessa dulkóðaða athugasemd.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4458"/>
+<location filename="../mainwindow.cpp" line="4462"/>
 <source>Note can't be decrypted!</source>
 <translation>Ekki er hægt að afkóða athugasemd!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4459"/>
+<location filename="../mainwindow.cpp" line="4463"/>
 <source>It seems that your password is not valid!</source>
 <translation>Svo virðist sem lykilorðið þitt sé ekki gilt!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4646"/>
+<location filename="../mainwindow.cpp" line="4650"/>
 <source>Remove selected notes</source>
 <translation>Fjarlægðu valda minnispunkta</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4648"/>
+<location filename="../mainwindow.cpp" line="4652"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3151,12 +3151,12 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4721"/>
+<location filename="../mainwindow.cpp" line="4725"/>
 <source>Remove selected tags</source>
 <translation>Fjarlægðu valin merki</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4722"/>
+<location filename="../mainwindow.cpp" line="4726"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>Fjarlægja &lt;strong&gt;%n &lt;/strong&gt; valið merki? Engar athugasemdir verða fjarlægðar í þessu ferli.</numerusform>
@@ -3164,13 +3164,13 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4776"/>
-<location filename="../mainwindow.cpp" line="9035"/>
+<location filename="../mainwindow.cpp" line="4780"/>
+<location filename="../mainwindow.cpp" line="9038"/>
 <source>Move selected notes</source>
 <translation>Færðu valda minnispunkta</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4777"/>
+<location filename="../mainwindow.cpp" line="4781"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Færa %n valinn glósu í &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3178,13 +3178,13 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4887"/>
-<location filename="../mainwindow.cpp" line="9155"/>
+<location filename="../mainwindow.cpp" line="4891"/>
+<location filename="../mainwindow.cpp" line="9158"/>
 <source>Copy selected notes</source>
 <translation>Afritaðu valda minnispunkta</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4888"/>
+<location filename="../mainwindow.cpp" line="4892"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Afritaðu %n valinn glósu í &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3192,13 +3192,13 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4918"/>
-<location filename="../mainwindow.cpp" line="5067"/>
+<location filename="../mainwindow.cpp" line="4922"/>
+<location filename="../mainwindow.cpp" line="5071"/>
 <source>Done</source>
 <translation>Lokið</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4919"/>
+<location filename="../mainwindow.cpp" line="4923"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n athugasemd var afrituð til &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -3206,12 +3206,12 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4932"/>
+<location filename="../mainwindow.cpp" line="4936"/>
 <source>Tag selected notes</source>
 <translation>Merkið valda glósur</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4933"/>
+<location filename="../mainwindow.cpp" line="4937"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Merkið %n valinn athugasemd með &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3219,37 +3219,37 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5212"/>
+<location filename="../mainwindow.cpp" line="5215"/>
 <source>Restart application</source>
 <translation>Endurræstu forritið</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5213"/>
+<location filename="../mainwindow.cpp" line="5216"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Þú gætir þurft að endurræsa forritið til að láta breytingarnar taka gildi.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5216"/>
+<location filename="../mainwindow.cpp" line="5219"/>
 <source>Restart</source>
 <translation>Endurræsa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5438"/>
+<location filename="../mainwindow.cpp" line="5441"/>
 <source>PDF files</source>
 <translation>PDF skjöl</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5514"/>
+<location filename="../mainwindow.cpp" line="5517"/>
 <source>Todo lists disabled!</source>
 <translation>Todo listar óvirkir!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5515"/>
+<location filename="../mainwindow.cpp" line="5518"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Þú hefur gert todo listana óvirkan. &lt;br /&gt; Vinsamlegast athugaðu stillingarnar þínar &lt;strong&gt; Todo &lt;/strong&gt; í stillingunum!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5767"/>
+<location filename="../mainwindow.cpp" line="5770"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Fann &lt;strong&gt;%n &lt;/strong&gt; tilfelli af einhverju hugtaki &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
@@ -3257,79 +3257,79 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6324"/>
+<location filename="../mainwindow.cpp" line="6327"/>
 <source>Note folders</source>
 <translation>Athugaðu möppur</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6447"/>
+<location filename="../mainwindow.cpp" line="6450"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>Athugasemdarútgáfur eru nú hlaðnar af ownCloud netþjóni</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6464"/>
+<location filename="../mainwindow.cpp" line="6467"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Ruslaseðlar eru nú hlaðnir af þinn ownCloud netþjón</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6713"/>
+<location filename="../mainwindow.cpp" line="6716"/>
 <source>Inserted text as text attachment file</source>
 <translation type="unfinished">Inserted text as text attachment file</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6865"/>
+<location filename="../mainwindow.cpp" line="6868"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>Athugasemd þín verður afkóðuð og geymd sem einfaldur texti aftur. Hafðu í huga að ódulkóðaða seðillinn verður hugsanlega samstilltur við netþjóninn þinn og viðkvæmur texti kann að verða afhjúpaður! &lt;br/&gt; Viltu afkóða nótuna þína?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6962"/>
+<location filename="../mainwindow.cpp" line="6965"/>
 <source>Markdown files</source>
 <translation>Markdown skrár</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6976"/>
+<location filename="../mainwindow.cpp" line="6979"/>
 <source>Export attached files</source>
 <translation type="unfinished">Export attached files</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6977"/>
+<location filename="../mainwindow.cpp" line="6980"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7011"/>
+<location filename="../mainwindow.cpp" line="7014"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>Staða bókamerkja við rifa %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7026"/>
+<location filename="../mainwindow.cpp" line="7029"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>Hoppaði í bókamerkisstöðu á rauf %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7210"/>
-<location filename="../mainwindow.cpp" line="7280"/>
+<location filename="../mainwindow.cpp" line="7213"/>
+<location filename="../mainwindow.cpp" line="7283"/>
 <source>Inserting image</source>
 <translation>Setur inn mynd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7215"/>
-<location filename="../mainwindow.cpp" line="7284"/>
+<location filename="../mainwindow.cpp" line="7218"/>
+<location filename="../mainwindow.cpp" line="7287"/>
 <source>Done inserting image</source>
 <translation>Lokið með að setja mynd inn</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7217"/>
+<location filename="../mainwindow.cpp" line="7220"/>
 <source>Inserting attachment</source>
 <translation>Setur viðhengi í</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7222"/>
+<location filename="../mainwindow.cpp" line="7225"/>
 <source>Done inserting attachment</source>
 <translation>Lokið með viðhengi</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7234"/>
+<location filename="../mainwindow.cpp" line="7237"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>%n athugasemd afrituð í %1</numerusform>
@@ -3337,7 +3337,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7244"/>
+<location filename="../mainwindow.cpp" line="7247"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>Ekki tókst að afrita %n athugasemd (líklega þegar til)</numerusform>
@@ -3345,7 +3345,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7254"/>
+<location filename="../mainwindow.cpp" line="7257"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>Afrit af %n athugasemd sleppt (engin merking eða textaskrá eða ekki læsileg)</numerusform>
@@ -3353,216 +3353,215 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7267"/>
+<location filename="../mainwindow.cpp" line="7270"/>
 <source>Saving temporary image</source>
 <translation>Vistar tímabundna mynd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6696"/>
-<location filename="../mainwindow.cpp" line="7286"/>
+<location filename="../mainwindow.cpp" line="6699"/>
+<location filename="../mainwindow.cpp" line="7289"/>
 <source>Temporary file can't be opened</source>
 <translation>Ekki er hægt að opna tímabundna skrá</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7341"/>
+<location filename="../mainwindow.cpp" line="7344"/>
 <source>Downloading %1</source>
 <translation>Sækir %1 niður</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7513"/>
+<location filename="../mainwindow.cpp" line="7516"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Núllstilla leturstærð á %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8295"/>
+<location filename="../mainwindow.cpp" line="8298"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>Fjarlægðu merkið '%1' úr núverandi athugasemd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8296"/>
+<location filename="../mainwindow.cpp" line="8299"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>Fjarlægðu merkið '%1' úr núverandi tilkynningu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8527"/>
+<location filename="../mainwindow.cpp" line="8530"/>
 <source>Rename tag</source>
 <translation>Endurnefna merki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8528"/>
+<location filename="../mainwindow.cpp" line="8531"/>
 <source>Assign color</source>
 <translation>Úthlutaðu lit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8529"/>
+<location filename="../mainwindow.cpp" line="8532"/>
 <source>Disable color</source>
 <translation>Slökkva á lit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8533"/>
+<location filename="../mainwindow.cpp" line="8536"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;Færa merki í…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8744"/>
+<location filename="../mainwindow.cpp" line="8747"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>Færðu þig að rótinni</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9318"/>
+<location filename="../mainwindow.cpp" line="9321"/>
 <source>The scripting engine was reloaded</source>
 <translation>Skriftarvélin var endurhlaðin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9352"/>
+<location filename="../mainwindow.cpp" line="9355"/>
 <source>HTML files</source>
 <translation>HTML skrár</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9643"/>
+<location filename="../mainwindow.cpp" line="9699"/>
 <source>Jump to the note's subfolder</source>
 <translation>Fara í undirmöppu athugasemdarinnar
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9700"/>
-<source>Open note in tab</source>
-<translation>Opnaðu athugasemd í flipanum
-</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="11227"/>
+<location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Handrit uppfærsla fannst!
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11233"/>
+<location filename="../mainwindow.cpp" line="11296"/>
 <source>Script updates</source>
 <translation>Handrit uppfærslur
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11234"/>
+<location filename="../mainwindow.cpp" line="11297"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>Uppfærslur á forskriftunum þínum fundust í handritageymslunni! Viltu uppfæra þá?
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11249"/>
+<location filename="../mainwindow.cpp" line="11312"/>
 <source>No script updates were found</source>
 <translation>Engar handritsuppfærslur fundust
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11893"/>
+<location filename="../mainwindow.cpp" line="11956"/>
 <source>Toggle note stickiness</source>
 <translation>Skiptu um þéttleika minnismiða
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11899"/>
+<location filename="../mainwindow.cpp" line="11962"/>
 <source>Close other note tabs</source>
 <translation>Lokaðu öðrum athugasemdaflipum</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9586"/>
-<location filename="../mainwindow.cpp" line="9781"/>
+<location filename="../mainwindow.cpp" line="9642"/>
+<location filename="../mainwindow.cpp" line="9842"/>
 <source>Rename note</source>
 <translation>Endurnefna athugasemd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7617"/>
+<location filename="../mainwindow.cpp" line="7620"/>
 <source>Show all notes (%1)</source>
 <translation type="unfinished">Show all notes (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7778"/>
+<location filename="../mainwindow.cpp" line="7781"/>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9588"/>
+<location filename="../mainwindow.cpp" line="9644"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>Leyfir þér að endurnefna heiti nótunnar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9602"/>
+<location filename="../mainwindow.cpp" line="9658"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;Færa minnismiða til…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9603"/>
+<location filename="../mainwindow.cpp" line="9659"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;Afritaðu minnispunkta til…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9647"/>
+<location filename="../mainwindow.cpp" line="9703"/>
 <source>Move notes to subfolder…</source>
 <translation>Færa minnismiða í undirmöppu…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9651"/>
+<location filename="../mainwindow.cpp" line="9707"/>
 <source>Copy notes to subfolder…</source>
 <translation>Afritaðu minnispunkta í undirmöppu…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9659"/>
+<location filename="../mainwindow.cpp" line="9715"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;Merkið valda glósur með…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9683"/>
+<location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Fjarlægðu merki úr völdum athugasemdum…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9781"/>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tab</source>
+<translation type="unfinished">Open selected notes in tab</translation>
+</message>
+<message>
+<location filename="../mainwindow.cpp" line="9842"/>
 <source>Name:</source>
 <translation>Nafn:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9793"/>
+<location filename="../mainwindow.cpp" line="9854"/>
 <source>Note renaming not enabled!</source>
 <translation>Athugið að endurnefna er ekki virkt!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10466"/>
+<location filename="../mainwindow.cpp" line="10527"/>
 <source>Create new workspace</source>
 <translation>Búðu til nýjan vinnusvæði</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10467"/>
-<location filename="../mainwindow.cpp" line="10736"/>
+<location filename="../mainwindow.cpp" line="10528"/>
+<location filename="../mainwindow.cpp" line="10799"/>
 <source>Workspace name:</source>
 <translation>Heiti vinnusvæðis:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10585"/>
+<location filename="../mainwindow.cpp" line="10648"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>fullur</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10592"/>
+<location filename="../mainwindow.cpp" line="10655"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>lágmarks</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10695"/>
+<location filename="../mainwindow.cpp" line="10758"/>
 <source>Remove the current workspace?</source>
 <translation>Fjarlægja núverandi vinnusvæði?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10735"/>
+<location filename="../mainwindow.cpp" line="10798"/>
 <source>Rename workspace</source>
 <translation>Endurnefna vinnusvæði</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10893"/>
+<location filename="../mainwindow.cpp" line="10956"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3571,42 +3570,42 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11166"/>
+<location filename="../mainwindow.cpp" line="11229"/>
 <source>Disallow all note editing</source>
 <translation>Bannaðu alla klippagerð</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11398"/>
+<location filename="../mainwindow.cpp" line="11461"/>
 <source>Select text files to import</source>
 <translation>Veldu textaskrár sem á að flytja inn</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11428"/>
+<location filename="../mainwindow.cpp" line="11491"/>
 <source>Importing: %1</source>
 <translation>Flytur inn: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11493"/>
+<location filename="../mainwindow.cpp" line="11556"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>Athugasemd fyrirsögn '%1' var afrituð á klemmuspjaldið</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11587"/>
+<location filename="../mainwindow.cpp" line="11650"/>
 <source>Leave full-screen mode</source>
 <translation>Skildu á öllum skjánum</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11773"/>
+<location filename="../mainwindow.cpp" line="11836"/>
 <source>Custom editor width</source>
 <translation>Sérsniðin ritstjóri breidd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11773"/>
+<location filename="../mainwindow.cpp" line="11836"/>
 <source>Characters:</source>
 <translation>Stafir:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8265"/>
+<location filename="../mainwindow.cpp" line="8268"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n athugasemd valin</numerusform>
@@ -3615,7 +3614,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2451"/>
-<location filename="../mainwindow.cpp" line="11167"/>
+<location filename="../mainwindow.cpp" line="11230"/>
 <source>Allow all note editing</source>
 <translation>Leyfa allar athugasemdir</translation>
 </message>
@@ -3625,12 +3624,12 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <translation>&amp;Merki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5007"/>
+<location filename="../mainwindow.cpp" line="5011"/>
 <source>Remove tag from selected notes</source>
 <translation>Fjarlægðu merki af völdum athugasemdum</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5008"/>
+<location filename="../mainwindow.cpp" line="5012"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>Fjarlægja merki &lt;strong&gt;%1&lt;/strong&gt; úr %n völdum athugasemd?</numerusform>
@@ -3638,7 +3637,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5068"/>
+<location filename="../mainwindow.cpp" line="5072"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>Merkið &lt;strong&gt;%1 &lt;/strong&gt; var fjarlægt af %n athugasemd</numerusform>
@@ -3646,84 +3645,84 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5113"/>
+<location filename="../mainwindow.cpp" line="5117"/>
 <source>Current notes folder: </source>
 <translation>Mappa yfir núverandi athugasemdir: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5116"/>
+<location filename="../mainwindow.cpp" line="5120"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>Stilltu minnismiða möppuna. Mappa yfir núverandi athugasemdir: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5324"/>
+<location filename="../mainwindow.cpp" line="5327"/>
 <source>Print note</source>
 <translation>Prenta athugasemd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5381"/>
+<location filename="../mainwindow.cpp" line="5384"/>
 <source>Letter</source>
 <translation>Bréf</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5411"/>
+<location filename="../mainwindow.cpp" line="5414"/>
 <source>Portrait</source>
 <translation>Andlitsmynd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5411"/>
+<location filename="../mainwindow.cpp" line="5414"/>
 <source>Landscape</source>
 <translation>Landslag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5416"/>
+<location filename="../mainwindow.cpp" line="5419"/>
 <source>Orientation</source>
 <translation>Stefnumörkun</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5416"/>
+<location filename="../mainwindow.cpp" line="5419"/>
 <source>Orientation:</source>
 <translation>Stefnumörkun:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5439"/>
+<location filename="../mainwindow.cpp" line="5442"/>
 <source>Export current note as PDF</source>
 <translation>Flytja út núverandi athugasemd sem PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5538"/>
+<location filename="../mainwindow.cpp" line="5541"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Þú hefur ekki valið neina todo lista. &lt;br /&gt; Vinsamlegast athugaðu stillingarnar þínar &lt;strong&gt; Todo &lt;/strong&gt; í stillingunum!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6306"/>
+<location filename="../mainwindow.cpp" line="6309"/>
 <source>Open QOwnNotes</source>
 <translation>Opið QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6134"/>
-<location filename="../mainwindow.cpp" line="6356"/>
-<location filename="../mainwindow.cpp" line="9582"/>
+<location filename="../mainwindow.cpp" line="6137"/>
+<location filename="../mainwindow.cpp" line="6359"/>
+<location filename="../mainwindow.cpp" line="9638"/>
 <source>New note</source>
 <translation>Ný athugasemd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6373"/>
+<location filename="../mainwindow.cpp" line="6376"/>
 <source>Recent notes</source>
 <translation>Nýlegar athugasemdir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6389"/>
+<location filename="../mainwindow.cpp" line="6392"/>
 <source>Show todo lists</source>
 <translation>Sýna todo lista</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6401"/>
+<location filename="../mainwindow.cpp" line="6404"/>
 <source>Recent tasks</source>
 <translation>Nýleg verkefni</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6422"/>
+<location filename="../mainwindow.cpp" line="6425"/>
 <source>Quit</source>
 <translation>Hættu</translation>
 </message>
@@ -3735,31 +3734,31 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <translation>Athugasemd möppu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8916"/>
-<location filename="../mainwindow.cpp" line="8983"/>
+<location filename="../mainwindow.cpp" line="8919"/>
+<location filename="../mainwindow.cpp" line="8986"/>
 <source>Copy to note folder</source>
 <translation>Afritaðu í minnismiða</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8916"/>
-<location filename="../mainwindow.cpp" line="8984"/>
+<location filename="../mainwindow.cpp" line="8919"/>
+<location filename="../mainwindow.cpp" line="8987"/>
 <source>Move to note folder</source>
 <translation>Færa í minnismiða</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8917"/>
-<location filename="../mainwindow.cpp" line="8985"/>
+<location filename="../mainwindow.cpp" line="8920"/>
+<location filename="../mainwindow.cpp" line="8988"/>
 <source>Copy to this subfolder</source>
 <translation>Afritaðu í þennan undirmöppu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8918"/>
-<location filename="../mainwindow.cpp" line="8986"/>
+<location filename="../mainwindow.cpp" line="8921"/>
+<location filename="../mainwindow.cpp" line="8989"/>
 <source>Move to this subfolder</source>
 <translation>Fara í þessa undirmöppu</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9030"/>
+<location filename="../mainwindow.cpp" line="9033"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Færa %n valinn athugasemd til að skoða undirmöppu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3767,13 +3766,13 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5216"/>
-<location filename="../mainwindow.cpp" line="11412"/>
+<location filename="../mainwindow.cpp" line="5219"/>
+<location filename="../mainwindow.cpp" line="11475"/>
 <source>Cancel</source>
 <translation>Hætta við</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9126"/>
+<location filename="../mainwindow.cpp" line="9129"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n athugasemd var færð í undirmöppuna „%2“</numerusform>
@@ -3781,7 +3780,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9150"/>
+<location filename="../mainwindow.cpp" line="9153"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Afritaðu %n valinn glósu til að athuga undirmöppu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3789,7 +3788,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9225"/>
+<location filename="../mainwindow.cpp" line="9228"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n athugasemd var afrituð í athugasemd undirmöppuna "%2"</numerusform>
@@ -3797,47 +3796,47 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9705"/>
+<location filename="../mainwindow.cpp" line="9766"/>
 <source>Open note in external editor</source>
 <translation>Opin athugasemd í utanaðkomandi ritstjóra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9709"/>
+<location filename="../mainwindow.cpp" line="9770"/>
 <source>Show note in file manager</source>
 <translation>Sýna athugasemd í skjalastjóra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9794"/>
+<location filename="../mainwindow.cpp" line="9855"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>Ef þú vilt endurnefna seðilinn þarftu að virkja þann möguleika að leyfa nafnsskráarnafninu að vera frábrugðið fyrirsögninni.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9984"/>
+<location filename="../mainwindow.cpp" line="10045"/>
 <source>Create a new folder</source>
 <translation>Búðu til nýja möppu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9985"/>
+<location filename="../mainwindow.cpp" line="10046"/>
 <source>Folder name:</source>
 <translation>Mappanafn:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7651"/>
+<location filename="../mainwindow.cpp" line="7654"/>
 <source>show all untagged notes (%1)</source>
 <translation>sýna allar ómerktar athugasemdir (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7653"/>
+<location filename="../mainwindow.cpp" line="7656"/>
 <source>Untagged notes</source>
 <translation>Ómerktar athugasemdir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9353"/>
+<location filename="../mainwindow.cpp" line="9356"/>
 <source>Export current note as HTML file</source>
 <translation>Flytja út núverandi athugasemd sem HTML skjal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5390"/>
+<location filename="../mainwindow.cpp" line="5393"/>
 <source>Page size</source>
 <translation>Stærð síðu</translation>
 </message>
@@ -3847,22 +3846,22 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <translation>hætta tækjastikunni</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5390"/>
+<location filename="../mainwindow.cpp" line="5393"/>
 <source>Page size:</source>
 <translation>Stærð síðu:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5499"/>
+<location filename="../mainwindow.cpp" line="5502"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes mun rekja nafnlaus notkunargögn, sem hjálpar til við að ákveða hvaða hluta QOwnNotes bæta næst og finna og laga villur. Þú getur gert þá hegðun óvirkan í stillingum.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5503"/>
+<location filename="../mainwindow.cpp" line="5506"/>
 <source>&amp;Ok</source>
 <translation>&amp;Allt í lagi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9592"/>
+<location filename="../mainwindow.cpp" line="9648"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;Fjarlægðu minnispunkta</translation>
 </message>
@@ -3878,7 +3877,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2952"/>
-<location filename="../mainwindow.cpp" line="6072"/>
+<location filename="../mainwindow.cpp" line="6075"/>
 <source>Stored current note to disk</source>
 <translation>Vistað núverandi athugasemd á disknum</translation>
 </message>
@@ -3901,47 +3900,47 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7620"/>
+<location filename="../mainwindow.cpp" line="7623"/>
 <source>All notes</source>
 <translation>Allar athugasemdir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8519"/>
+<location filename="../mainwindow.cpp" line="8522"/>
 <source>&amp;Add tag</source>
 <translation>&amp;Bættu við merki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8567"/>
+<location filename="../mainwindow.cpp" line="8570"/>
 <source>Tag could not be created!</source>
 <translation>Ekki var hægt að búa til merki!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8746"/>
+<location filename="../mainwindow.cpp" line="8749"/>
 <source>Move to this tag</source>
 <translation>Færið í þetta merki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8781"/>
+<location filename="../mainwindow.cpp" line="8784"/>
 <source>Tag this</source>
 <translation>Merktu þetta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8806"/>
+<location filename="../mainwindow.cpp" line="8809"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>Ekki hægt að færa merkið '%1' yfir í þetta merki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8855"/>
+<location filename="../mainwindow.cpp" line="8858"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>Flutti merkið '%1' í nýtt merki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8530"/>
+<location filename="../mainwindow.cpp" line="8533"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;Fjarlægðu merki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5537"/>
+<location filename="../mainwindow.cpp" line="5540"/>
 <source>No selected todo lists!</source>
 <translation>Engir valdir todo listar!</translation>
 </message>
@@ -4068,7 +4067,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2953"/>
-<location filename="../mainwindow.cpp" line="6073"/>
+<location filename="../mainwindow.cpp" line="6076"/>
 <source>Current note could not be stored to disk</source>
 <translation>Ekki var hægt að geyma núverandi athugasemd á disknum</translation>
 </message>
@@ -4101,7 +4100,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4991"/>
+<location filename="../mainwindow.cpp" line="4995"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n athugasemd var merkt með „%2“</numerusform>
@@ -4109,7 +4108,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5763"/>
+<location filename="../mainwindow.cpp" line="5766"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Fann &lt;strong&gt;%n&lt;/strong&gt; tilfelli af &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -4117,61 +4116,61 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6134"/>
+<location filename="../mainwindow.cpp" line="6137"/>
 <source>Note headline</source>
 <translation>Athugið fyrirsögn</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7297"/>
+<location filename="../mainwindow.cpp" line="7300"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation type="unfinished">Paste &amp;HTML as markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7298"/>
+<location filename="../mainwindow.cpp" line="7301"/>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7353"/>
+<location filename="../mainwindow.cpp" line="7356"/>
 <source>Downloading images finished</source>
 <translation>Niðurhali er lokið</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5503"/>
-<location filename="../mainwindow.cpp" line="5518"/>
-<location filename="../mainwindow.cpp" line="5541"/>
-<location filename="../mainwindow.cpp" line="9797"/>
+<location filename="../mainwindow.cpp" line="5506"/>
+<location filename="../mainwindow.cpp" line="5521"/>
+<location filename="../mainwindow.cpp" line="5544"/>
+<location filename="../mainwindow.cpp" line="9858"/>
 <source>Open &amp;settings</source>
 <translation>Opna &amp;stillingar</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1766"/>
-<location filename="../mainwindow.cpp" line="11564"/>
+<location filename="../mainwindow.cpp" line="11627"/>
 <source>leave</source>
 <translation>fara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6791"/>
+<location filename="../mainwindow.cpp" line="6794"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>Vinsamlegast sláðu inn &lt;strong&gt;lykilorðið &lt;strong&gt; þitt til að dulkóða seðilinn. &lt;br/&gt; Hafðu í huga að þú verður að &lt;strong&gt; muna &lt;/ strong&gt; lykilorðið þitt til að lesa innihald nótunnar &lt;br/&gt; og það þú getur &lt;strong&gt; aðeins &lt;/strong&gt; gert það &lt;strong&gt; í QOwnNotes &lt;/strong&gt;!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6864"/>
+<location filename="../mainwindow.cpp" line="6867"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>Afkóðaðu athugasemdina og geymdu hana sem texta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6869"/>
+<location filename="../mainwindow.cpp" line="6872"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;Afkóða</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6894"/>
+<location filename="../mainwindow.cpp" line="6897"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br/&gt;Þú verður að geta breytt dulkóðuðu athugasemdinni þinni.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6963"/>
+<location filename="../mainwindow.cpp" line="6966"/>
 <source>Export current note as Markdown file</source>
 <translation>Flytja út núverandi athugasemd sem Markdown skjal</translation>
 </message>

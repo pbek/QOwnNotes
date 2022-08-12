@@ -1,6 +1,6 @@
 # Opdrachtregel-interface-parameters
 
-U kunt deze parameters gebruiken op de opdrachtregelinterface:
+You can use these parameters on the command line interface (CLI) to control the behavior of the application:
 
 | Parameter                    | Beschrijving                                                                                                                        |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |

@@ -2055,7 +2055,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="8245"/>
+<location filename="../mainwindow.cpp" line="8248"/>
 <source>Add a tag to the current note</source>
 <translation>ਮੌਜੂਦਾ ਨੋਟ ਵਿੱਚ ਇੱਕ ਟੈਗ ਸ਼ਾਮਲ ਕਰੋ</translation>
 </message>
@@ -2171,7 +2171,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1449"/>
-<location filename="../mainwindow.cpp" line="9731"/>
+<location filename="../mainwindow.cpp" line="9792"/>
 <source>Select &amp;all notes</source>
 <translation>ਸਾਰੇ &amp;ਨੋਟ ਚੁਣੋ</translation>
 </message>
@@ -2221,7 +2221,7 @@
 <translation>ਖੋਜ ਕਰੋ ਜਾਂ ਨੋਟ ਬਣਾਓ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8246"/>
+<location filename="../mainwindow.cpp" line="8249"/>
 <source>Add a tag to the selected notes</source>
 <translation>ਚੁਣੇ ਗਏ ਨੋਟਾਂ ਵਿੱਚ ਇੱਕ ਟੈਗ ਸ਼ਾਮਲ ਕਰੋ</translation>
 </message>
@@ -2610,7 +2610,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2245"/>
-<location filename="../mainwindow.cpp" line="10694"/>
+<location filename="../mainwindow.cpp" line="10757"/>
 <source>Remove current workspace</source>
 <translation>ਮੌਜੂਦਾ ਵਰਕਸਪੇਸ ਹਟਾਓ</translation>
 </message>
@@ -2678,7 +2678,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2366"/>
-<location filename="../mainwindow.cpp" line="9707"/>
+<location filename="../mainwindow.cpp" line="9768"/>
 <source>Open note in different window</source>
 <translation>ਵੱਖਰੀ ਵਿੰਡੋ ਵਿੱਚ ਨੋਟ ਖੋਲ੍ਹੋ</translation>
 </message>
@@ -2699,7 +2699,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2406"/>
-<location filename="../mainwindow.cpp" line="9715"/>
+<location filename="../mainwindow.cpp" line="9776"/>
 <source>Show note git versions</source>
 <translation>ਨੋਟ ਗਿਟ ਵਰਜਨ ਦਿਖਾਓ</translation>
 </message>
@@ -2782,7 +2782,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2569"/>
-<location filename="../mainwindow.cpp" line="11656"/>
+<location filename="../mainwindow.cpp" line="11719"/>
 <source>Automatically detect</source>
 <translation>ਆਟੋਮੈਟਿਕ ਖੋਜ</translation>
 </message>
@@ -3017,10 +3017,10 @@ Restore current note?</source>
 ਮੌਜੂਦਾ ਨੋਟ ਨੂੰ ਰੀਸਟੋਰ ਕਰਨਾ ਹੈ?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5518"/>
-<location filename="../mainwindow.cpp" line="5541"/>
-<location filename="../mainwindow.cpp" line="6869"/>
-<location filename="../mainwindow.cpp" line="9797"/>
+<location filename="../mainwindow.cpp" line="5521"/>
+<location filename="../mainwindow.cpp" line="5544"/>
+<location filename="../mainwindow.cpp" line="6872"/>
+<location filename="../mainwindow.cpp" line="9858"/>
 <source>&amp;Cancel</source>
 <translation>&amp;ਰੱਦ ਕਰੋ</translation>
 </message>
@@ -3115,27 +3115,27 @@ Restore current note?</source>
 <translation>ਮੌਜੂਦਾ ਨੋਟ ਹਟਾਓ: &lt;strong&gt;%1 &lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4435"/>
+<location filename="../mainwindow.cpp" line="4439"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਇਨਕ੍ਰਿਪਟਡ ਨੋਟ ਦਾ &lt;strong&gt; ਪਾਸਵਰਡ &lt;/strong&gt; ਭਰੋ.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4458"/>
+<location filename="../mainwindow.cpp" line="4462"/>
 <source>Note can't be decrypted!</source>
 <translation>ਨੋਟ ਡਿਕ੍ਰਿਪਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4459"/>
+<location filename="../mainwindow.cpp" line="4463"/>
 <source>It seems that your password is not valid!</source>
 <translation>ਅਜਿਹਾ ਲਗਦਾ ਹੈ ਕਿ ਤੁਹਾਡਾ ਪਾਸਵਰਡ ਸਹੀ ਨਹੀਂ ਹੈ!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4646"/>
+<location filename="../mainwindow.cpp" line="4650"/>
 <source>Remove selected notes</source>
 <translation>ਚੁਣੇ ਗਏ ਨੋਟ ਹਟਾਓ</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4648"/>
+<location filename="../mainwindow.cpp" line="4652"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3150,12 +3150,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4721"/>
+<location filename="../mainwindow.cpp" line="4725"/>
 <source>Remove selected tags</source>
 <translation>ਚੁਣੇ ਟੈਗ ਹਟਾਓ</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4722"/>
+<location filename="../mainwindow.cpp" line="4726"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਚੁਣਿਆ ਟੈਗ ਹਟਾਓ? ਇਸ ਪ੍ਰਕਿਰਿਆ ਵਿਚ ਕੋਈ ਨੋਟ ਨਹੀਂ ਹਟਾਏ ਜਾਣਗੇ.</numerusform>
@@ -3163,13 +3163,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4776"/>
-<location filename="../mainwindow.cpp" line="9035"/>
+<location filename="../mainwindow.cpp" line="4780"/>
+<location filename="../mainwindow.cpp" line="9038"/>
 <source>Move selected notes</source>
 <translation>ਚੁਣੇ ਗਏ ਨੋਟਾਂ ਨੂੰ ਮੂਵ ਕਰੋ</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4777"/>
+<location filename="../mainwindow.cpp" line="4781"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>ਕੀ %n ਚੁਣੇ ਨੋਟ ਨੂੰ &lt;strong&gt;%2&lt;/strong&gt; ਤੇ ਭੇਜੋ?</numerusform>
@@ -3177,13 +3177,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4887"/>
-<location filename="../mainwindow.cpp" line="9155"/>
+<location filename="../mainwindow.cpp" line="4891"/>
+<location filename="../mainwindow.cpp" line="9158"/>
 <source>Copy selected notes</source>
 <translation>ਚੁਣੇ ਗਏ ਨੋਟਾਂ ਦੀ ਨਕਲ ਕਰੋ</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4888"/>
+<location filename="../mainwindow.cpp" line="4892"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>%n ਚੁਣੇ ਨੋਟ ਨੂੰ &lt;strong&gt;%2 &lt;/strong&gt; ਤੇ ਕਾਪੀ ਕਰਨਾ ਹੈ?</numerusform>
@@ -3191,13 +3191,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4918"/>
-<location filename="../mainwindow.cpp" line="5067"/>
+<location filename="../mainwindow.cpp" line="4922"/>
+<location filename="../mainwindow.cpp" line="5071"/>
 <source>Done</source>
 <translation>ਹੋ ਗਿਆ</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4919"/>
+<location filename="../mainwindow.cpp" line="4923"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n ਨੋਟ &lt;/ strong&gt;%2 &lt;/ strong&gt; ਤੇ ਨਕਲ ਕੀਤੇ ਗਏ ਸਨ.</numerusform>
@@ -3205,12 +3205,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4932"/>
+<location filename="../mainwindow.cpp" line="4936"/>
 <source>Tag selected notes</source>
 <translation>ਚੁਣੇ ਨੋਟਾਂ ਨੂੰ ਟੈਗ ਕਰੋ</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4933"/>
+<location filename="../mainwindow.cpp" line="4937"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>%n ਚੁਣੇ ਨੋਟਾਂ ਨਾਲ ਟੈਗ ਕਰੋ &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3218,37 +3218,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5212"/>
+<location filename="../mainwindow.cpp" line="5215"/>
 <source>Restart application</source>
 <translation>ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਮੁੜ ਚਾਲੂ ਕਰੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5213"/>
+<location filename="../mainwindow.cpp" line="5216"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>ਤਬਦੀਲੀਆਂ ਨੂੰ ਲਾਗੂ ਕਰਨ ਦੇ ਲਈ ਤੁਹਾਨੂੰ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਦੁਬਾਰਾ ਸ਼ੁਰੂ ਕਰਨ ਦੀ ਲੋੜ ਹੋ ਸਕਦੀ ਹੈ.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5216"/>
+<location filename="../mainwindow.cpp" line="5219"/>
 <source>Restart</source>
 <translation>ਮੁੜ ਚਾਲੂ ਕਰੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5438"/>
+<location filename="../mainwindow.cpp" line="5441"/>
 <source>PDF files</source>
 <translation>PDF ਫਾਈਲਾਂ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5514"/>
+<location filename="../mainwindow.cpp" line="5517"/>
 <source>Todo lists disabled!</source>
 <translation>ਟੋਡੋ ਸੂਚੀ ਅਸਮਰੱਥ ਹੈ!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5515"/>
+<location filename="../mainwindow.cpp" line="5518"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>ਤੁਸੀਂ ਟੂਡ ਸੂਚੀਆਂ ਨੂੰ ਅਸਮਰੱਥ ਕਰ ਦਿੱਤਾ ਹੈ. &lt;br /&gt; ਕਿਰਪਾ ਕਰਕੇ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਆਪਣੀ &lt;/ strong&gt; ਟੋਡੋ &lt;/ strong&gt; ਦੀ ਕੌਨਫਿਗ੍ਰੇਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5767"/>
+<location filename="../mainwindow.cpp" line="5770"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%1&lt;/strong&gt; ਦੇ ਕਿਸੇ ਵੀ ਕਾਰਜਕਾਲ ਦੀ &lt;/ strong&gt;%n &lt;/strong&gt; ਮੌਜੂਦਗੀ (ਜ਼) ਨੂੰ ਮਿਲਿਆ</numerusform>
@@ -3256,79 +3256,79 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6324"/>
+<location filename="../mainwindow.cpp" line="6327"/>
 <source>Note folders</source>
 <translation>ਨੋਟ ਫੋਲਡਰ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6447"/>
+<location filename="../mainwindow.cpp" line="6450"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>ਨੋਟ ਸੰਸਕਰਣ ਇਸ ਸਮੇਂ ਤੁਹਾਡੇ ownCloud ਸਰਵਰ ਤੋਂ ਲੋਡ ਕੀਤੇ ਗਏ ਹਨ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6464"/>
+<location filename="../mainwindow.cpp" line="6467"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>ਟ੍ਰੈਸ਼ ਕੀਤੇ ਨੋਟ ਇਸ ਸਮੇਂ ਤੁਹਾਡੇ ownCloud ਸਰਵਰ ਤੋਂ ਲੋਡ ਕੀਤੇ ਗਏ ਹਨ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6713"/>
+<location filename="../mainwindow.cpp" line="6716"/>
 <source>Inserted text as text attachment file</source>
 <translation type="unfinished">Inserted text as text attachment file</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6865"/>
+<location filename="../mainwindow.cpp" line="6868"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>ਤੁਹਾਡਾ ਨੋਟ ਡਿਕ੍ਰਿਪਟ ਕੀਤਾ ਜਾਵੇਗਾ ਅਤੇ ਦੁਬਾਰਾ ਸਾਦੇ ਟੈਕਸਟ ਦੇ ਰੂਪ ਵਿੱਚ ਸਟੋਰ ਕੀਤਾ ਜਾਵੇਗਾ. ਇਹ ਯਾਦ ਰੱਖੋ ਕਿ ਨਾ-ਇਕ੍ਰਿਪਟਡ ਨੋਟ ਨੂੰ ਸੰਭਾਵਤ ਤੌਰ 'ਤੇ ਤੁਹਾਡੇ ਸਰਵਰ ਨਾਲ ਸਿੰਕ ਕੀਤਾ ਜਾਏਗਾ ਅਤੇ ਸੰਵੇਦਨਸ਼ੀਲ ਟੈਕਸਟ ਖੋਲ੍ਹਿਆ ਜਾ ਸਕਦਾ ਹੈ! &lt;br /&gt; ਕੀ ਤੁਸੀਂ ਆਪਣੇ ਨੋਟ ਨੂੰ ਡੀ੍ਰਿਪਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6962"/>
+<location filename="../mainwindow.cpp" line="6965"/>
 <source>Markdown files</source>
 <translation>ਮਾਰਕਡਾਉਨ ਫਾਈਲਾਂ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6976"/>
+<location filename="../mainwindow.cpp" line="6979"/>
 <source>Export attached files</source>
 <translation type="unfinished">Export attached files</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6977"/>
+<location filename="../mainwindow.cpp" line="6980"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7011"/>
+<location filename="../mainwindow.cpp" line="7014"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>ਸਲਾਟ %1 ਤੇ ਬੁੱਕਮਾਰਕ ਕੀਤੀ ਨੋਟ ਪੋਜ਼ੀਸ਼ਨ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7026"/>
+<location filename="../mainwindow.cpp" line="7029"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>ਸਲਾਟ %1 'ਤੇ ਬੁੱਕਮਾਰਕ ਸਥਿਤੀ' ਤੇ ਗਏ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7210"/>
-<location filename="../mainwindow.cpp" line="7280"/>
+<location filename="../mainwindow.cpp" line="7213"/>
+<location filename="../mainwindow.cpp" line="7283"/>
 <source>Inserting image</source>
 <translation>ਚਿੱਤਰ ਸ਼ਾਮਲ ਕਰ ਰਿਹਾ ਹੈ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7215"/>
-<location filename="../mainwindow.cpp" line="7284"/>
+<location filename="../mainwindow.cpp" line="7218"/>
+<location filename="../mainwindow.cpp" line="7287"/>
 <source>Done inserting image</source>
 <translation>ਸ਼ਾਮਲ ਕਰਨ ਵਾਲਾ ਚਿੱਤਰ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7217"/>
+<location filename="../mainwindow.cpp" line="7220"/>
 <source>Inserting attachment</source>
 <translation>ਲਗਾਵ ਜੋੜਨਾ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7222"/>
+<location filename="../mainwindow.cpp" line="7225"/>
 <source>Done inserting attachment</source>
 <translation>ਲਗਾਵ ਪਾਉਣ ਦਾ ਕੰਮ ਪੂਰਾ ਹੋ ਗਿਆ</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7234"/>
+<location filename="../mainwindow.cpp" line="7237"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>&lt;strong&gt;%1 &lt;/strong&gt; ਦੇ ਕਿਸੇ ਵੀ ਕਾਰਜਕਾਲ ਦੀ &lt;/ strong&gt;%n &lt;/ strong&gt; ਮੌਜੂਦਗੀ (ਜ਼) ਨੂੰ ਮਿਲਿਆ</numerusform>
@@ -3336,7 +3336,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7244"/>
+<location filename="../mainwindow.cpp" line="7247"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>%n ਨੋਟ (ਜ਼) ਦੀ ਨਕਲ ਕਰਨ ਵਿੱਚ ਅਸਫਲ (ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ)</numerusform>
@@ -3344,7 +3344,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7254"/>
+<location filename="../mainwindow.cpp" line="7257"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>%n ਨੋਟ ਦੀ ਕਾਪੀ ਛੱਡ ਦਿੱਤੀ ਗਈ (ਕੋਈ ਮਾਰਕਡਾਉਨ ਜਾਂ ਟੈਕਸਟ ਫਾਈਲ ਨਹੀਂ ਪੜ੍ਹਨ ਯੋਗ ਨਹੀਂ)</numerusform>
@@ -3352,216 +3352,215 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7267"/>
+<location filename="../mainwindow.cpp" line="7270"/>
 <source>Saving temporary image</source>
 <translation>ਅਸਥਾਈ ਚਿੱਤਰ ਸੰਭਾਲ ਰਿਹਾ ਹੈ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6696"/>
-<location filename="../mainwindow.cpp" line="7286"/>
+<location filename="../mainwindow.cpp" line="6699"/>
+<location filename="../mainwindow.cpp" line="7289"/>
 <source>Temporary file can't be opened</source>
 <translation>ਆਰਜ਼ੀ ਫਾਈਲ ਨੂੰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7341"/>
+<location filename="../mainwindow.cpp" line="7344"/>
 <source>Downloading %1</source>
 <translation>ਡਾ. ਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7513"/>
+<location filename="../mainwindow.cpp" line="7516"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>ਫੋਂਟ ਅਕਾਰ ਨੂੰ %1 pt ਤੇ ਸੈੱਟ ਕਰੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8295"/>
+<location filename="../mainwindow.cpp" line="8298"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>ਮੌਜੂਦਾ ਨੋਟ ਤੋਂ ਟੈਗ '%1' ਨੂੰ ਹਟਾਓ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8296"/>
+<location filename="../mainwindow.cpp" line="8299"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>ਚੁਣੇ ਗਏ ਨੋਟਾਂ ਵਿਚੋਂ '%1' ਟੈਗ ਹਟਾਓ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8527"/>
+<location filename="../mainwindow.cpp" line="8530"/>
 <source>Rename tag</source>
 <translation>ਟੈਗ ਦਾ ਨਾਮ ਬਦਲੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8528"/>
+<location filename="../mainwindow.cpp" line="8531"/>
 <source>Assign color</source>
 <translation>ਰੰਗ ਨਿਰਧਾਰਤ ਕਰੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8529"/>
+<location filename="../mainwindow.cpp" line="8532"/>
 <source>Disable color</source>
 <translation>ਰੰਗ ਅਯੋਗ ਕਰੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8533"/>
+<location filename="../mainwindow.cpp" line="8536"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;ਟੈਗਸ ਨੂੰ ਇਸ ਵਿੱਚ ਮੂਵ ਕਰੋ…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8744"/>
+<location filename="../mainwindow.cpp" line="8747"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>ਰੂਟ ਤੇ ਜਾਓ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9318"/>
+<location filename="../mainwindow.cpp" line="9321"/>
 <source>The scripting engine was reloaded</source>
 <translation>ਸਕ੍ਰਿਪਟਿੰਗ ਇੰਜਣ ਦੁਬਾਰਾ ਲੋਡ ਹੋਇਆ ਸੀ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9352"/>
+<location filename="../mainwindow.cpp" line="9355"/>
 <source>HTML files</source>
 <translation>HTML ਫਾਈਲਾਂ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9643"/>
+<location filename="../mainwindow.cpp" line="9699"/>
 <source>Jump to the note's subfolder</source>
 <translation>ਨੋਟ ਦੇ ਸਬਫੋਲਡਰ ਤੇ ਜਾਓ
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9700"/>
-<source>Open note in tab</source>
-<translation>ਟੈਬ ਵਿੱਚ ਨੋਟ ਖੋਲ੍ਹੋ
-</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="11227"/>
+<location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>ਇੱਕ ਸਕ੍ਰਿਪਟ ਅਪਡੇਟ ਮਿਲੀ ਹੈ!
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11233"/>
+<location filename="../mainwindow.cpp" line="11296"/>
 <source>Script updates</source>
 <translation>ਸਕ੍ਰਿਪਟ ਅਪਡੇਟਾਂ
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11234"/>
+<location filename="../mainwindow.cpp" line="11297"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>ਸਕ੍ਰਿਪਟ ਰਿਪੋਜ਼ਟਰੀ ਵਿੱਚ ਤੁਹਾਡੀਆਂ ਸਕ੍ਰਿਪਟਾਂ ਲਈ ਅਪਡੇਟਾਂ ਮਿਲੀਆਂ! ਕੀ ਤੁਸੀਂ ਉਨ੍ਹਾਂ ਨੂੰ ਅਪਡੇਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11249"/>
+<location filename="../mainwindow.cpp" line="11312"/>
 <source>No script updates were found</source>
 <translation>ਕੋਈ ਸਕ੍ਰਿਪਟ ਅਪਡੇਟ ਨਹੀਂ ਮਿਲੀ
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11893"/>
+<location filename="../mainwindow.cpp" line="11956"/>
 <source>Toggle note stickiness</source>
 <translation>ਨੋਟ ਸਟਿੱਕੀ ਬਦਲੋ
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11899"/>
+<location filename="../mainwindow.cpp" line="11962"/>
 <source>Close other note tabs</source>
 <translation>ਹੋਰ ਨੋਟ ਟੈਬਾਂ ਨੂੰ ਬੰਦ ਕਰੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9586"/>
-<location filename="../mainwindow.cpp" line="9781"/>
+<location filename="../mainwindow.cpp" line="9642"/>
+<location filename="../mainwindow.cpp" line="9842"/>
 <source>Rename note</source>
 <translation>ਨੋਟ ਦਾ ਨਾਮ ਬਦਲੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7617"/>
+<location filename="../mainwindow.cpp" line="7620"/>
 <source>Show all notes (%1)</source>
 <translation type="unfinished">Show all notes (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7778"/>
+<location filename="../mainwindow.cpp" line="7781"/>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9588"/>
+<location filename="../mainwindow.cpp" line="9644"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>ਤੁਹਾਨੂੰ ਨੋਟ ਦਾ ਫਾਈਲ ਨਾਮ ਬਦਲਣ ਦੀ ਆਗਿਆ ਦਿੰਦਾ ਹੈ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9602"/>
+<location filename="../mainwindow.cpp" line="9658"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;ਨੋਟਸ ਨੂੰ ਇਸ ਵਿੱਚ ਭੇਜੋ…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9603"/>
+<location filename="../mainwindow.cpp" line="9659"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;ਨੋਟਾਂ ਨੂੰ... ਤੇ ਨਕਲ ਕਰੋ…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9647"/>
+<location filename="../mainwindow.cpp" line="9703"/>
 <source>Move notes to subfolder…</source>
 <translation>ਨੋਟਸ ਨੂੰ ਸਬ ਫੋਲਡਰ ਵਿੱਚ ਭੇਜੋ…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9651"/>
+<location filename="../mainwindow.cpp" line="9707"/>
 <source>Copy notes to subfolder…</source>
 <translation>ਸਬਫੋਲਡਰ ਵਿੱਚ ਨੋਟ ਕਾਪੀ ਕਰੋ…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9659"/>
+<location filename="../mainwindow.cpp" line="9715"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;ਇਸ ਨਾਲ…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9683"/>
+<location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;ਚੁਣੇ ਗਏ ਨੋਟਾਂ ਤੋਂ ਟੈਗ ਹਟਾਓ…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9781"/>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tab</source>
+<translation type="unfinished">Open selected notes in tab</translation>
+</message>
+<message>
+<location filename="../mainwindow.cpp" line="9842"/>
 <source>Name:</source>
 <translation>ਨਾਮ:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9793"/>
+<location filename="../mainwindow.cpp" line="9854"/>
 <source>Note renaming not enabled!</source>
 <translation>ਨੋਟ ਬਦਲਣਾ ਯੋਗ ਨਹੀਂ!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10466"/>
+<location filename="../mainwindow.cpp" line="10527"/>
 <source>Create new workspace</source>
 <translation>ਨਵਾਂ ਵਰਕਸਪੇਸ ਬਣਾਓ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10467"/>
-<location filename="../mainwindow.cpp" line="10736"/>
+<location filename="../mainwindow.cpp" line="10528"/>
+<location filename="../mainwindow.cpp" line="10799"/>
 <source>Workspace name:</source>
 <translation>ਵਰਕਸਪੇਸ ਦਾ ਨਾਮ:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10585"/>
+<location filename="../mainwindow.cpp" line="10648"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>ਪੂਰਾ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10592"/>
+<location filename="../mainwindow.cpp" line="10655"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>ਘੱਟੋ ਘੱਟ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10695"/>
+<location filename="../mainwindow.cpp" line="10758"/>
 <source>Remove the current workspace?</source>
 <translation>ਮੌਜੂਦਾ ਵਰਕਸਪੇਸ ਨੂੰ ਹਟਾਓ?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10735"/>
+<location filename="../mainwindow.cpp" line="10798"/>
 <source>Rename workspace</source>
 <translation>ਵਰਕਸਪੇਸ ਦਾ ਨਾਮ ਬਦਲੋ</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10893"/>
+<location filename="../mainwindow.cpp" line="10956"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3570,42 +3569,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11166"/>
+<location filename="../mainwindow.cpp" line="11229"/>
 <source>Disallow all note editing</source>
 <translation>ਸਾਰੇ ਨੋਟ ਸੰਪਾਦਨ ਨੂੰ ਮਨਜ਼ੂਰੀ ਦਿਓ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11398"/>
+<location filename="../mainwindow.cpp" line="11461"/>
 <source>Select text files to import</source>
 <translation>ਸਾਰੇ ਨੋਟ ਸੰਪਾਦਨ ਮਨਜ਼ੂਰੀ ਦਿਓ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11428"/>
+<location filename="../mainwindow.cpp" line="11491"/>
 <source>Importing: %1</source>
 <translation>ਆਯਾਤ: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11493"/>
+<location filename="../mainwindow.cpp" line="11556"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>ਨੋਟ ਸਿਰਲੇਖ '%1' ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕੀਤਾ ਗਿਆ ਸੀ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11587"/>
+<location filename="../mainwindow.cpp" line="11650"/>
 <source>Leave full-screen mode</source>
 <translation>ਪੂਰੀ-ਸਕ੍ਰੀਨ ਮੋਡ ਛੱਡੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11773"/>
+<location filename="../mainwindow.cpp" line="11836"/>
 <source>Custom editor width</source>
 <translation>ਕਸਟਮ ਸੰਪਾਦਕ ਦੀ ਚੌੜਾਈ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11773"/>
+<location filename="../mainwindow.cpp" line="11836"/>
 <source>Characters:</source>
 <translation>ਅੱਖਰ:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8265"/>
+<location filename="../mainwindow.cpp" line="8268"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n ਨੋਟ ਚੁਣੇ ਗਏ</numerusform>
@@ -3614,7 +3613,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2451"/>
-<location filename="../mainwindow.cpp" line="11167"/>
+<location filename="../mainwindow.cpp" line="11230"/>
 <source>Allow all note editing</source>
 <translation>ਸਾਰੇ ਨੋਟ ਸੰਪਾਦਨ ਦੀ ਆਗਿਆ ਦਿਓ</translation>
 </message>
@@ -3624,12 +3623,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>&amp;ਟੈਗ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5007"/>
+<location filename="../mainwindow.cpp" line="5011"/>
 <source>Remove tag from selected notes</source>
 <translation>ਚੁਣੇ ਗਏ ਨੋਟਾਂ ਤੋਂ ਟੈਗ ਹਟਾਓ</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5008"/>
+<location filename="../mainwindow.cpp" line="5012"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>ਕੀ %n ਚੁਣੇ ਨੋਟਾਂ ਤੋਂ &lt;strong&gt; %1 &lt;/strong&gt; ਟੈਗ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?</numerusform>
@@ -3637,7 +3636,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5068"/>
+<location filename="../mainwindow.cpp" line="5072"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>ਟੈਗ &lt;strong&gt;%1 &lt;/ strong&gt; ਨੂੰ %n ਨੋਟ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ</numerusform>
@@ -3645,84 +3644,84 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5113"/>
+<location filename="../mainwindow.cpp" line="5117"/>
 <source>Current notes folder: </source>
 <translation>ਮੌਜੂਦਾ ਨੋਟ ਫੋਲਡਰ: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5116"/>
+<location filename="../mainwindow.cpp" line="5120"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>ਨੋਟ ਫੋਲਡਰ ਸੈੱਟ ਕਰੋ. ਮੌਜੂਦਾ ਨੋਟ ਫੋਲਡਰ: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5324"/>
+<location filename="../mainwindow.cpp" line="5327"/>
 <source>Print note</source>
 <translation>ਨੋਟ ਛਾਪੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5381"/>
+<location filename="../mainwindow.cpp" line="5384"/>
 <source>Letter</source>
 <translation>ਪੱਤਰ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5411"/>
+<location filename="../mainwindow.cpp" line="5414"/>
 <source>Portrait</source>
 <translation>ਪੋਰਟਰੇਟ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5411"/>
+<location filename="../mainwindow.cpp" line="5414"/>
 <source>Landscape</source>
 <translation>ਲੈਂਡਸਕੇਪ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5416"/>
+<location filename="../mainwindow.cpp" line="5419"/>
 <source>Orientation</source>
 <translation>ਓਰੀਐਂਟੇਸ਼ਨ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5416"/>
+<location filename="../mainwindow.cpp" line="5419"/>
 <source>Orientation:</source>
 <translation>ਓਰੀਐਂਟੇਸ਼ਨ:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5439"/>
+<location filename="../mainwindow.cpp" line="5442"/>
 <source>Export current note as PDF</source>
 <translation>ਨਿਰਯਾਤ ਮੌਜੂਦਾ ਨੋਟ PDF ਦੇ ਤੌਰ ਤੇ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5538"/>
+<location filename="../mainwindow.cpp" line="5541"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>ਤੁਸੀਂ ਕੋਈ ਵੀ ਟੂਡ ਸੂਚੀ ਨਹੀਂ ਚੁਣਿਆ ਹੈ. &lt;br/&gt;ਕਿਰਪਾ ਕਰਕੇ ਸੈਟਿੰਗਾਂ ਵਿਚ ਆਪਣੀ &lt;strong&gt; ਟੋਡੋ &lt;/ strong&gt; ਕੌਨਫਿਗ੍ਰੇਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6306"/>
+<location filename="../mainwindow.cpp" line="6309"/>
 <source>Open QOwnNotes</source>
 <translation>QOwnNotes ਖੋਲ੍ਹੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6134"/>
-<location filename="../mainwindow.cpp" line="6356"/>
-<location filename="../mainwindow.cpp" line="9582"/>
+<location filename="../mainwindow.cpp" line="6137"/>
+<location filename="../mainwindow.cpp" line="6359"/>
+<location filename="../mainwindow.cpp" line="9638"/>
 <source>New note</source>
 <translation>ਨਵਾਂ ਨੋਟ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6373"/>
+<location filename="../mainwindow.cpp" line="6376"/>
 <source>Recent notes</source>
 <translation>ਤਾਜ਼ਾ ਨੋਟਸ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6389"/>
+<location filename="../mainwindow.cpp" line="6392"/>
 <source>Show todo lists</source>
 <translation>ਟੂਡੋ ਲਿਸਟਾਂ ਵੇਖੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6401"/>
+<location filename="../mainwindow.cpp" line="6404"/>
 <source>Recent tasks</source>
 <translation>ਹਾਲੀਆ ਕੰਮ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6422"/>
+<location filename="../mainwindow.cpp" line="6425"/>
 <source>Quit</source>
 <translation>ਛੱਡੋ</translation>
 </message>
@@ -3734,31 +3733,31 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>ਨੋਟ ਫੋਲਡਰ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8916"/>
-<location filename="../mainwindow.cpp" line="8983"/>
+<location filename="../mainwindow.cpp" line="8919"/>
+<location filename="../mainwindow.cpp" line="8986"/>
 <source>Copy to note folder</source>
 <translation>ਫੋਲਡਰ ਨੂੰ ਨੋਟ ਕਰਨ ਲਈ ਕਾਪੀ ਕਰੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8916"/>
-<location filename="../mainwindow.cpp" line="8984"/>
+<location filename="../mainwindow.cpp" line="8919"/>
+<location filename="../mainwindow.cpp" line="8987"/>
 <source>Move to note folder</source>
 <translation>ਨੋਟ ਫੋਲਡਰ ਵਿੱਚ ਭੇਜੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8917"/>
-<location filename="../mainwindow.cpp" line="8985"/>
+<location filename="../mainwindow.cpp" line="8920"/>
+<location filename="../mainwindow.cpp" line="8988"/>
 <source>Copy to this subfolder</source>
 <translation>ਇਸ ਸਬਫੋਲਡਰ ਨੂੰ ਕਾਪੀ ਕਰੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8918"/>
-<location filename="../mainwindow.cpp" line="8986"/>
+<location filename="../mainwindow.cpp" line="8921"/>
+<location filename="../mainwindow.cpp" line="8989"/>
 <source>Move to this subfolder</source>
 <translation>ਇਸ ਸਬਫੋਲਡਰ ਤੇ ਜਾਓ</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9030"/>
+<location filename="../mainwindow.cpp" line="9033"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>ਕੀ %n ਚੁਣੇ ਨੋਟ ਨੂੰ ਸਬਫੋਲਡਰ &lt;strong&gt;%2&lt;/strong&gt; ਨੋਟ ਕਰਨ ਲਈ ਮੂਵ ਕਰਨਾ ਹੈ?</numerusform>
@@ -3766,13 +3765,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5216"/>
-<location filename="../mainwindow.cpp" line="11412"/>
+<location filename="../mainwindow.cpp" line="5219"/>
+<location filename="../mainwindow.cpp" line="11475"/>
 <source>Cancel</source>
 <translation>ਰੱਦ ਕਰੋ</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9126"/>
+<location filename="../mainwindow.cpp" line="9129"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n ਨੋਟ ਨੂੰ ਸਬਫੋਲਡਰ "%2" ਨੋਟ ਕਰਨ ਲਈ ਭੇਜਿਆ ਗਿਆ ਹੈ</numerusform>
@@ -3780,7 +3779,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9150"/>
+<location filename="../mainwindow.cpp" line="9153"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>ਸਬ-ਫੋਲਡਰ &lt;strong&gt;%2&lt;/strong&gt; ਨੂੰ ਨੋਟ ਕਰਨ ਲਈ %n ਚੁਣੇ ਗਏ ਨੋਟਾਂ ਦੀ ਨਕਲ ਕਰੋ?</numerusform>
@@ -3788,7 +3787,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9225"/>
+<location filename="../mainwindow.cpp" line="9228"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>ਸਬ-ਫੋਲਡਰ "%2" ਨੂੰ ਨੋਟ ਕਰਨ ਲਈ %n ਨੋਟ ਨਕਲ ਕੀਤੇ ਗਏ ਸਨ</numerusform>
@@ -3796,47 +3795,47 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9705"/>
+<location filename="../mainwindow.cpp" line="9766"/>
 <source>Open note in external editor</source>
 <translation>ਬਾਹਰੀ ਸੰਪਾਦਕ ਵਿੱਚ ਖੁੱਲਾ ਨੋਟ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9709"/>
+<location filename="../mainwindow.cpp" line="9770"/>
 <source>Show note in file manager</source>
 <translation>ਫਾਈਲ ਮੈਨੇਜਰ ਵਿੱਚ ਨੋਟ ਵੇਖਾਓ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9794"/>
+<location filename="../mainwindow.cpp" line="9855"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>ਜੇ ਤੁਸੀਂ ਆਪਣੇ ਨੋਟ ਦਾ ਨਾਮ ਬਦਲਣਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਤੁਹਾਨੂੰ ਨੋਟ ਫਾਈਲ ਨਾਮ ਨੂੰ ਸਿਰਲੇਖ ਤੋਂ ਵੱਖ ਕਰਨ ਦੀ ਇਜ਼ਾਜ਼ਤ ਦੇਣ ਲਈ ਵਿਕਲਪ ਯੋਗ ਕਰਨਾ ਪਏਗਾ.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9984"/>
+<location filename="../mainwindow.cpp" line="10045"/>
 <source>Create a new folder</source>
 <translation>ਇੱਕ ਨਵਾਂ ਫੋਲਡਰ ਬਣਾਓ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9985"/>
+<location filename="../mainwindow.cpp" line="10046"/>
 <source>Folder name:</source>
 <translation>ਫੋਲਡਰ ਦਾ ਨਾਮ:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7651"/>
+<location filename="../mainwindow.cpp" line="7654"/>
 <source>show all untagged notes (%1)</source>
 <translation>ਸਾਰੇ ਅਣਪਛਾਤੇ ਨੋਟ (%1) ਦਿਖਾਓ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7653"/>
+<location filename="../mainwindow.cpp" line="7656"/>
 <source>Untagged notes</source>
 <translation>Untagged ਨੋਟਸ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9353"/>
+<location filename="../mainwindow.cpp" line="9356"/>
 <source>Export current note as HTML file</source>
 <translation>ਮੌਜੂਦਾ ਨੋਟ ਨੂੰ HTML ਫਾਈਲ ਦੇ ਤੌਰ ਤੇ ਐਕਸਪੋਰਟ ਕਰੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5390"/>
+<location filename="../mainwindow.cpp" line="5393"/>
 <source>Page size</source>
 <translation>ਪੇਜ ਦਾ ਆਕਾਰ</translation>
 </message>
@@ -3846,22 +3845,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>ਟੂਲਬਾਰ ਛੱਡੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5390"/>
+<location filename="../mainwindow.cpp" line="5393"/>
 <source>Page size:</source>
 <translation>ਪੇਜ ਦਾ ਆਕਾਰ:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5499"/>
+<location filename="../mainwindow.cpp" line="5502"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes ਅਗਿਆਤ ਵਰਤੋਂ ਦੇ ਡੇਟਾ ਨੂੰ ਟਰੈਕ ਕਰੇਗਾ, ਜੋ ਕਿ ਇਹ ਫੈਸਲਾ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ ਕਿ QOwnNotes ਦੇ ਕਿਹੜੇ ਹਿੱਸਿਆਂ ਵਿੱਚ ਸੁਧਾਰ ਕਰਨਾ ਹੈ ਅਤੇ ਬੱਗਸ ਨੂੰ ਲੱਭਣ ਅਤੇ ਠੀਕ ਕਰਨ ਲਈ ਹੈ. ਤੁਸੀਂ ਵਿਵਹਾਰ ਨੂੰ ਵਿਵਸਥਾ ਵਿੱਚ ਅਯੋਗ ਕਰ ਸਕਦੇ ਹੋ.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5503"/>
+<location filename="../mainwindow.cpp" line="5506"/>
 <source>&amp;Ok</source>
 <translation>&amp;ਠੀਕ ਹੈ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9592"/>
+<location filename="../mainwindow.cpp" line="9648"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;ਨੋਟ ਹਟਾਓ</translation>
 </message>
@@ -3877,7 +3876,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2952"/>
-<location filename="../mainwindow.cpp" line="6072"/>
+<location filename="../mainwindow.cpp" line="6075"/>
 <source>Stored current note to disk</source>
 <translation>ਮੌਜੂਦਾ ਨੋਟ ਨੂੰ ਡਿਸਕ ਤੇ ਸੰਭਾਲਿਆ</translation>
 </message>
@@ -3900,47 +3899,47 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7620"/>
+<location filename="../mainwindow.cpp" line="7623"/>
 <source>All notes</source>
 <translation>ਸਾਰੇ ਨੋਟ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8519"/>
+<location filename="../mainwindow.cpp" line="8522"/>
 <source>&amp;Add tag</source>
 <translation>&amp;ਟੈਗ ਸ਼ਾਮਲ ਕਰੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8567"/>
+<location filename="../mainwindow.cpp" line="8570"/>
 <source>Tag could not be created!</source>
 <translation>ਟੈਗ ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8746"/>
+<location filename="../mainwindow.cpp" line="8749"/>
 <source>Move to this tag</source>
 <translation>ਇਸ ਟੈਗ ਤੇ ਜਾਓ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8781"/>
+<location filename="../mainwindow.cpp" line="8784"/>
 <source>Tag this</source>
 <translation>ਇਸ ਨੂੰ ਟੈਗ ਕਰੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8806"/>
+<location filename="../mainwindow.cpp" line="8809"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>ਟੈਗ '%1' ਨੂੰ ਇਸ ਟੈਗ ਤੇ ਨਹੀਂ ਲਿਜਾਇਆ ਜਾ ਸਕਦਾ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8855"/>
+<location filename="../mainwindow.cpp" line="8858"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>'%1' ਨੂੰ ਨਵੇਂ ਟੈਗ ਤੇ ਭੇਜਿਆ ਗਿਆ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8530"/>
+<location filename="../mainwindow.cpp" line="8533"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;ਟੈਗ ਹਟਾਓ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5537"/>
+<location filename="../mainwindow.cpp" line="5540"/>
 <source>No selected todo lists!</source>
 <translation>ਕੋਈ ਚੁਣੀ ਹੋਈ ਸੂਚੀ ਨਹੀਂ!</translation>
 </message>
@@ -4066,7 +4065,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2953"/>
-<location filename="../mainwindow.cpp" line="6073"/>
+<location filename="../mainwindow.cpp" line="6076"/>
 <source>Current note could not be stored to disk</source>
 <translation>ਮੌਜੂਦਾ ਨੋਟ ਨੂੰ ਡਿਸਕ ਉੱਤੇ ਸੰਭਾਲਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ</translation>
 </message>
@@ -4099,7 +4098,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4991"/>
+<location filename="../mainwindow.cpp" line="4995"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n ਨੋਟ ਨੂੰ "%2" ਨਾਲ ਟੈਗ ਕੀਤਾ ਗਿਆ ਸੀ</numerusform>
@@ -4107,7 +4106,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5763"/>
+<location filename="../mainwindow.cpp" line="5766"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt;ਦੀ ਮੌਜੂਦਗੀ &lt;strong&gt;%1&lt;/strong&gt; ਮਿਲੀ ਹੈ</numerusform>
@@ -4115,63 +4114,63 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6134"/>
+<location filename="../mainwindow.cpp" line="6137"/>
 <source>Note headline</source>
 <translation>ਨੋਟ ਸਿਰਲੇਖ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7297"/>
+<location filename="../mainwindow.cpp" line="7300"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation type="unfinished">Paste &amp;HTML as markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7298"/>
+<location filename="../mainwindow.cpp" line="7301"/>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7353"/>
+<location filename="../mainwindow.cpp" line="7356"/>
 <source>Downloading images finished</source>
 <translation>ਡਾਊਨਲੋਡ ਕੀਤੀ ਚਿੱਤਰ ਪੂਰਾ ਹੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5503"/>
-<location filename="../mainwindow.cpp" line="5518"/>
-<location filename="../mainwindow.cpp" line="5541"/>
-<location filename="../mainwindow.cpp" line="9797"/>
+<location filename="../mainwindow.cpp" line="5506"/>
+<location filename="../mainwindow.cpp" line="5521"/>
+<location filename="../mainwindow.cpp" line="5544"/>
+<location filename="../mainwindow.cpp" line="9858"/>
 <source>Open &amp;settings</source>
 <translation>ਸੈਟਿੰਗਾਂ &amp;ਖੋਲ੍ਹੋ</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1766"/>
-<location filename="../mainwindow.cpp" line="11564"/>
+<location filename="../mainwindow.cpp" line="11627"/>
 <source>leave</source>
 <translation>ਛੱਡੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6791"/>
+<location filename="../mainwindow.cpp" line="6794"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>ਨੋਟ ਨੂੰ ਐਨਕ੍ਰਿਪਟ ਕਰਨ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ &lt;strong&gt; ਪਾਸਵਰਡ &lt;/strong&gt; ਭਰੋ. &lt;br/&gt;
 
 ਯਾਦ ਰੱਖੋ ਕਿ ਤੁਹਾਨੂੰ ਨੋਟ ਦੀ ਸਮੱਗਰੀ ਨੂੰ ਪੜ੍ਹਨ ਲਈ ਆਪਣਾ ਪਾਸਵਰਡ &lt;strong&gt; ਯਾਦ &lt;/strong&gt; ਦੇਣਾ ਪਵੇਗਾ &lt;br/&gt; ਅਤੇ ਇਹ ਕਿ ਤੁਸੀਂ &lt;strong&gt; ਸਿਰਫ &lt;/strong&gt; ਕਰ ਸਕਦੇ ਹੋ &lt;strong&gt; QOwnNotes &lt;/strong&gt; ਵਿੱਚ!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6864"/>
+<location filename="../mainwindow.cpp" line="6867"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>ਨੋਟ ਨੂੰ ਡਿਕ੍ਰਿਪਟ ਕਰੋ ਅਤੇ ਇਸ ਨੂੰ ਸਾਦੇ ਟੈਕਸਟ ਦੇ ਰੂਪ ਵਿੱਚ ਸਟੋਰ ਕਰੋ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6869"/>
+<location filename="../mainwindow.cpp" line="6872"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;ਡਿਕ੍ਰਿਪਟ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6894"/>
+<location filename="../mainwindow.cpp" line="6897"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br /&gt; ਤੁਸੀਂ ਆਪਣੇ ਐਨਕ੍ਰਿਪਟਡ ਨੋਟ ਨੂੰ ਸੰਪਾਦਿਤ ਕਰਨ ਦੇ ਯੋਗ ਹੋਵੋਗੇ.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6963"/>
+<location filename="../mainwindow.cpp" line="6966"/>
 <source>Export current note as Markdown file</source>
 <translation>ਮੌਜੂਦਾ ਨੋਟ ਨੂੰ ਮਾਰਕਡਾਉਨ ਫਾਈਲ ਦੇ ਤੌਰ ਤੇ ਐਕਸਪੋਰਟ ਕਰੋ</translation>
 </message>
