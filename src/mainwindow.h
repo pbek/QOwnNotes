@@ -245,6 +245,10 @@ class MainWindow : public QMainWindow {
 
     void disallowNoteEditing();
 
+    void openSelectedNotesInTab();
+
+    void openNoteInTab(const Note& note);
+
     void openCurrentNoteInTab();
 
     Q_INVOKABLE void focusNoteTextEdit();

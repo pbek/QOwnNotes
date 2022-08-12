@@ -4314,8 +4314,12 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
         auto *mouseEvent = static_cast<QMouseEvent *>(event);
 
         if ((mouseEvent->button() == Qt::BackButton)) {
-            // move back in the note history
-            on_action_Back_in_note_history_triggered();
+            // There was an issue with the back button triggering infinitely when
+            // the selected notes were opened in a new tab, the singleShot helped
+            QTimer::singleShot(0, this, [this] () {
+                // move back in the note history
+                on_action_Back_in_note_history_triggered();
+            });
         } else if ((mouseEvent->button() == Qt::ForwardButton)) {
             // move forward in the note history
             on_action_Forward_in_note_history_triggered();
@@ -9514,6 +9518,59 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
     }
 }
 
+void MainWindow::openSelectedNotesInTab() {
+    const auto selectedItems = ui->noteTreeWidget->selectedItems();
+    for (QTreeWidgetItem *item : selectedItems) {
+        if (item->data(0, Qt::UserRole + 1) != NoteType) {
+            continue;
+        }
+
+        const int noteId = item->data(0, Qt::UserRole).toInt();
+        Note note = Note::fetch(noteId);
+
+        if (!note.isFetched()) {
+            continue;
+        }
+
+//        setCurrentNote(note);
+//        openCurrentNoteInTab();
+
+        openNoteInTab(note);
+    }
+}
+
+void MainWindow::openNoteInTab(const Note& note) {
+    // simulate a newly opened tab by updating the current tab with the last note
+    if (_lastNoteId > 0) {
+        auto previousNote = Note::fetch(_lastNoteId);
+
+        // open the previous note in a new tab only if it is not already open in a tab
+        if (previousNote.isFetched() && getNoteTabIndex(_lastNoteId) == -1) {
+            updateCurrentTabData(previousNote);
+        }
+    }
+
+    const QString &noteName = note.getName();
+    const int noteId = note.getId();
+    int tabIndex = getNoteTabIndex(noteId);
+
+    if (tabIndex == -1) {
+        auto *widgetPage = new QWidget();
+        widgetPage->setLayout(ui->noteEditTabWidgetLayout);
+        tabIndex = ui->noteEditTabWidget->addTab(widgetPage, noteName);
+    }
+
+    Utils::Gui::updateTabWidgetTabData(ui->noteEditTabWidget,
+                                       tabIndex, note);
+
+    ui->noteEditTabWidget->setCurrentIndex(tabIndex);
+
+    // remove the tab initially created by the ui file
+    if (ui->noteEditTabWidget->widget(0)->property("note-id").isNull()) {
+        ui->noteEditTabWidget->removeTab(0);
+    }
+}
+
 void MainWindow::openCurrentNoteInTab() {
     // simulate a newly opened tab by updating the current tab with the last note
     if (_lastNoteId > 0) {
@@ -9660,9 +9717,9 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
     }
 
     QStringList noteNameList;
-    const auto items = ui->noteTreeWidget->selectedItems();
-    for (QTreeWidgetItem *item : items) {
-        // the note names are not unique any more but the note subfolder
+    const auto selectedItems = ui->noteTreeWidget->selectedItems();
+    for (QTreeWidgetItem *item : selectedItems) {
+        // the note names are not unique anymore but the note subfolder
         // path will be taken into account in
         // Tag::fetchAllWithLinkToNoteNames
         const QString name = item->text(0);
@@ -9696,10 +9753,15 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
 
     if (!multiNoteMenuEntriesOnly) {
         noteMenu.addSeparator();
-        auto *openNoteInTabAction = noteMenu.addAction(tr("Open note in tab"));
-        connect(openNoteInTabAction, &QAction::triggered, this,
-                &MainWindow::openCurrentNoteInTab);
+    }
 
+    if ((multiNoteMenuEntriesOnly && selectedItems.count() > 1) || !multiNoteMenuEntriesOnly) {
+        auto *openNoteInTabAction = noteMenu.addAction(tr("Open selected notes in tab"));
+        connect(openNoteInTabAction, &QAction::triggered, this,
+                &MainWindow::openSelectedNotesInTab);
+    }
+
+    if (!multiNoteMenuEntriesOnly) {
         openInExternalEditorAction =
             noteMenu.addAction(tr("Open note in external editor"));
         openNoteWindowAction =

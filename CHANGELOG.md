@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.8.1
+- you now can open all selected notes as new tabs via the note list context menu
+  or the note operations button (for [#2578](https://github.com/pbek/QOwnNotes/issues/2578))
+
 ## 22.8.0
 - a new scripting hook `workspaceSwitchedHook` was added that is called when
   workflows are switched (for [#2565](https://github.com/pbek/QOwnNotes/issues/2565))
