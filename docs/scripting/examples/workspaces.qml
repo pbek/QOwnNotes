@@ -3,7 +3,7 @@ import QOwnNotesTypes 1.0
 
 Script {
     /**
-     * This function is called when workflows are switched
+     * This function is called when workspaces are switched
      *
      * @param oldUuid old uuid of workspace
      * @param newUuid new uuid of workspace

@@ -14,7 +14,7 @@
 
 ## 22.8.0
 - a new scripting hook `workspaceSwitchedHook` was added that is called when
-  workflows are switched (for [#2565](https://github.com/pbek/QOwnNotes/issues/2565))
+  workspaces are switched (for [#2565](https://github.com/pbek/QOwnNotes/issues/2565))
   - please take a look at the
     [workspaceSwitchedHook documentation](https://www.qownnotes.org/scripting/hooks.html#workspaceswitchedhook)
     for more information

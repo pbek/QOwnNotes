@@ -416,7 +416,7 @@ QString ScriptingService::callInsertAttachmentHook(QFile *file,
 
 /**
  * Calls the workspaceSwitchedHook function for all script components
- * This function is called when workflows are switched
+ * This function is called when workspaces are switched
  *
  * @param oldUuid old uuid of workspace
  * @param newUuid new uuid of workspace

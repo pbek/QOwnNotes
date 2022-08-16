@@ -440,12 +440,12 @@ You may want to take a look at the example
 workspaceSwitchedHook
 ----------------------
 
-This hook is called when workflows are switched.
+This hook is called when workspaces are switched.
 
 ### Method call and parameters
 ```js
-    /**
- * This function is called when workflows are switched
+/**
+ * This function is called when workspaces are switched
  *
  * @param oldUuid old uuid of workspace
  * @param newUuid new uuid of workspace
