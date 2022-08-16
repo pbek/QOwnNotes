@@ -1833,18 +1833,24 @@ void ScriptingService::setClipboardText(const QString &text, bool asHtml) {
  * Sets the current note if the note is visible in the note list
  *
  * @param note NoteApi note to jump to
+ * @param asTab bool if true the note will be opened in a new tab if not already open
  */
-void ScriptingService::setCurrentNote(NoteApi *note) {
+void ScriptingService::setCurrentNote(NoteApi *note, bool asTab) {
     MetricsService::instance()->sendVisitIfEnabled(
         QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != nullptr) {
-        mainWindow->setCurrentNoteFromNoteId(note->getId());
+        if (asTab) {
+            mainWindow->openNoteInTab(Note::fetch(note->getId()));
+        } else {
+            mainWindow->setCurrentNoteFromNoteId(note->getId());
+        }
     }
 #else
     Q_UNUSED(note)
+    Q_UNUSED(asTab)
 #endif
 }
 

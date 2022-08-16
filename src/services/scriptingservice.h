@@ -107,7 +107,7 @@ class ScriptingService : public QObject {
                                           int ignoreNoteId = 0,
                                           int noteSubFolderId = -1);
     Q_INVOKABLE void setClipboardText(const QString &text, bool asHtml = false);
-    Q_INVOKABLE void setCurrentNote(NoteApi *note);
+    Q_INVOKABLE void setCurrentNote(NoteApi *note, bool asTab = false);
 
     Q_INVOKABLE void informationMessageBox(const QString &text,
                                            const QString &title = QString());
