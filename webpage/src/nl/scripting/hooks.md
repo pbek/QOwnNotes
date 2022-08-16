@@ -385,12 +385,12 @@ Misschien wilt u het voorbeeld eens bekijken [window-state-changed.qml](https://
 workspaceSwitchedHook
 ----------------------
 
-Deze hook wordt aangeroepen wanneer workflows worden gewisseld.
+This hook is called when workspaces are switched.
 
 ### Methodeaanroep en parameters
 ```js
-    /**
- * Deze functie wordt aangeroepen wanneer workflows worden gewisseld
+/**
+ * This function is called when workspaces are switched
  *
  * @param oldUuid old uuid of workspace
  * @param newUuid new uuid of workspace

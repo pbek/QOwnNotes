@@ -3517,6 +3517,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>انتقال إلى المجلد الفرعي للملاحظة</translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation>افتح الملاحظات المحددة في تبويبات</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>يتوفر تحديث لبُريمج!</translation>
@@ -3596,11 +3601,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;إزالة العلامة من الملاحظات المحددة…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

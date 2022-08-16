@@ -921,17 +921,21 @@ Naar een notitie springen
 ### Methodeaanroep en parameters
 ```cpp
 /**
-  * Stelt de huidige notitie in als de notitie zichtbaar is in de notitielijst
-  *
-  * @param note Note Api-notitie om naar te springen
-  */
-void ScriptingService::setCurrentNote(NoteApi *note);
+ * Sets the current note if the note is visible in the note list
+ *
+ * @param note NoteApi note to jump to
+ * @param asTab bool if true the note will be opened in a new tab (if not already open)
+ */
+void ScriptingService::setCurrentNote(NoteApi *note, bool asTab = false);
 ```
 
 ### Voorbeeld
 ```js
-// spring naar de notitie
-script.setCurrentNote (opmerking);
+// jump to the note
+script.setCurrentNote(note);
+
+// open note in new tab (if not already open)
+script.setCurrentNote(note, true);
 ```
 
 You may want to take a look at the example [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).

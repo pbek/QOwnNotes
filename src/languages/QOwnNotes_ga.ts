@@ -3495,6 +3495,11 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
 </translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Fuarthas nuashonrú script!
@@ -3578,11 +3583,6 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Bain an clib ó nótaí roghnaithe…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

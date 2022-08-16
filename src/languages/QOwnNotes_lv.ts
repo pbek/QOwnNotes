@@ -3450,6 +3450,11 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
 </translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Tika atrasts skripta atjauninājums.
@@ -3534,11 +3539,6 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Noņemt atzīmi no atlasītajām piezīmēm…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

@@ -3419,6 +3419,11 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Aller au sous-dossier de la note</translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation>Ouvrir les notes sélectionnées dans des onglets</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Une mise à jour de script a été trouvée !</translation>
@@ -3498,11 +3503,6 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Enlever le tag des notes sélectionnées…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

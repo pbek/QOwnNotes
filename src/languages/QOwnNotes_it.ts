@@ -3418,6 +3418,11 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <translation>Vai alla sottocartella della nota</translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation>Apri le note selezionate nelle schede</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>È stato trovato un aggiornamento di uno script!</translation>
@@ -3497,11 +3502,6 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Rimuovi etichetta dalle note selezionate…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

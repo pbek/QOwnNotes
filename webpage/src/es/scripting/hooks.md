@@ -386,17 +386,17 @@ Es posible que desee echar un vistazo al ejemplo [window-state-changed.qml](http
 workspaceSwitchedHook
 ----------------------
 
-Este enlace se llama cuando se cambian los flujos de trabajo.
+This hook is called when workspaces are switched.
 
 ### Parámetros y llamada al método
 ```js
-    /**
-  * Esta función se llama cuando se cambian los flujos de trabajo
-  *
-  * @param oldUuid uuid antiguo del espacio de trabajo
-  * @param newUuid nuevo uuid del espacio de trabajo
-  */
-función workspaceSwitchedHook(oldUuid, newUuid);
+/**
+ * This function is called when workspaces are switched
+ *
+ * @param oldUuid old uuid of workspace
+ * @param newUuid new uuid of workspace
+ */
+function workspaceSwitchedHook(oldUuid, newUuid);
 ```
 
 Es posible que desee echar un vistazo al ejemplo. [websocket-datos-sin procesar-nueva-nota.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/workspaces.qml).

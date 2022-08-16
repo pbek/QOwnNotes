@@ -3428,6 +3428,11 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
 </translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Atopouse unha actualización de script.
@@ -3510,11 +3515,6 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Eliminar etiqueta das notas seleccionadas…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

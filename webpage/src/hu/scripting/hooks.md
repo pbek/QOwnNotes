@@ -384,12 +384,12 @@ függvény windowStateChangedHook (windowState);
 workspaceSwitchedHook
 ----------------------
 
-Ezt a hookot a munkafolyamatok váltásakor hívják meg.
+This hook is called when workspaces are switched.
 
 ### Módszerhívás és paraméterek
 ```js
-    /**
- * Ez a funkció a munkafolyamatok váltásakor hívódik meg
+/**
+ * This function is called when workspaces are switched
  *
  * @param oldUuid old uuid of workspace
  * @param newUuid new uuid of workspace

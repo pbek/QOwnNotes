@@ -3412,6 +3412,11 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <translation>Ir para a subpasta da nota</translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Um update do script foi encontrado!</translation>
@@ -3491,11 +3496,6 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>Remover a tag das notas selecionadas…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

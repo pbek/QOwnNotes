@@ -3403,6 +3403,11 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 </translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Pembaruan skrip ditemukan!
@@ -3487,11 +3492,6 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Buang tag dari catatan yang dipilih…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

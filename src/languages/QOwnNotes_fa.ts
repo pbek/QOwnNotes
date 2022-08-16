@@ -3421,6 +3421,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>پرش به زیر پوشه یادداشت</translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation>باز کردن یادداشت های منتخب در زبانه ها</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>یک بروزرسانی اسکریپت یافت شد!</translation>
@@ -3501,11 +3506,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;حذف برچسب از یادداشت های منتخب…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation>باز کردن یادداشت های منتخب به صورت زبانه</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

@@ -99,7 +99,7 @@ class TagApi {
 };
 ```
 
-You'll find an example where TagApi is used in [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
+Encontrará un ejemplo donde se usa TagApi en [etiquetado-de-notas-por-objeto.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
 
 MainWindow
 ----------

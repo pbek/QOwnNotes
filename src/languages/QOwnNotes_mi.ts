@@ -3396,6 +3396,11 @@ Mena ka whakahohea te paraihe i runga i to ake kaiwhakahaere server ka taea e ko
 <translation type="unfinished">Jump to the note's subfolder</translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation type="unfinished">A script update was found!</translation>
@@ -3475,11 +3480,6 @@ Mena ka whakahohea te paraihe i runga i to ake kaiwhakahaere server ka taea e ko
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Tangohia te tūtohu i nga raarangi kua tohua ...</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

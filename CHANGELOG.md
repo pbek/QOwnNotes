@@ -5,6 +5,7 @@
   scripting method `script.setCurrentNote()` (for [#2565](https://github.com/pbek/QOwnNotes/issues/2565))
   - for more information please take a look at the
     [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#jumping-to-a-note)
+- added more translation (thank you noureddin, amirkbrpr, hansa2662, venusgirl, mguerra, rakekniven)
 
 ## 22.8.1
 - you now can open all selected notes as new tabs via the note list context menu

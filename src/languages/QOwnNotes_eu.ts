@@ -3422,6 +3422,11 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Gidoi eguneratzea aurkitu da!</translation>
@@ -3501,11 +3506,6 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Kendu etiketa hautatutako oharretatik…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

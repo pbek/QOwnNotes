@@ -3427,6 +3427,11 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Handrit uppfærsla fannst!
@@ -3511,11 +3516,6 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Fjarlægðu merki úr völdum athugasemdum…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

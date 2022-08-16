@@ -920,17 +920,21 @@ Ugrás egy jegyzethez
 ### Módszerhívás és paraméterek
 ```cpp
 /**
-  * Beállítja az aktuális jegyzetet, ha a jegyzet látható a jegyzetlistában
-  *
-  * @param note NoteApi jegyzet, ahova ugorhat
-  */
-void ScriptingService::setCurrentNote(NoteApi *note);
+ * Sets the current note if the note is visible in the note list
+ *
+ * @param note NoteApi note to jump to
+ * @param asTab bool if true the note will be opened in a new tab (if not already open)
+ */
+void ScriptingService::setCurrentNote(NoteApi *note, bool asTab = false);
 ```
 
 ### Példa
 ```js
-// ugrás a hangra
+// jump to the note
 script.setCurrentNote(note);
+
+// open note in new tab (if not already open)
+script.setCurrentNote(note, true);
 ```
 
 Érdemes megnézni a példát [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).

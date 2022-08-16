@@ -3472,6 +3472,11 @@ Ak je kôš povolený na vašom serveri ownCloud, mali by ste byť schopní ho o
 </translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Bola nájdená aktualizácia skriptu!
@@ -3556,11 +3561,6 @@ Ak je kôš povolený na vašom serveri ownCloud, mali by ste byť schopní ho o
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Odstránenie značky z vybratej poznámky…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

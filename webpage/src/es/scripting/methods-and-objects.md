@@ -919,17 +919,21 @@ Saltando a una nota
 ### Parámetros y llamada al método
 ```cpp
 /**
-  * Establece la nota actual si la nota está visible en la lista de notas
-  *
-  * @param note NoteApi nota para saltar
-  */
-void ScriptingService::setCurrentNote (NoteApi *nota);
+ * Sets the current note if the note is visible in the note list
+ *
+ * @param note NoteApi note to jump to
+ * @param asTab bool if true the note will be opened in a new tab (if not already open)
+ */
+void ScriptingService::setCurrentNote(NoteApi *note, bool asTab = false);
 ```
 
 ### Ejemplo
 ```js
-// saltar a la nota
+// jump to the note
 script.setCurrentNote(note);
+
+// open note in new tab (if not already open)
+script.setCurrentNote(note, true);
 ```
 
 Es posible que desee echar un vistazo al ejemplo [entrada-diario.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).

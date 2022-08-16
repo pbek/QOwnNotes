@@ -3420,6 +3420,11 @@ Uma udoti unikwe amandla kwiseva yakho ownCloud kufanele ukwazi ukubuyisela laph
 <translation>Yeqa kwifolda yenothi</translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation type="unfinished">A script update was found!</translation>
@@ -3499,11 +3504,6 @@ Uma udoti unikwe amandla kwiseva yakho ownCloud kufanele ukwazi ukubuyisela laph
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Susa umaki kumanothi akhethiwe…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

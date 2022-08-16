@@ -3425,6 +3425,11 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>An samo sabbin rubutun!</translation>
@@ -3506,11 +3511,6 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Cire alamar daga bayanan da aka zaba…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

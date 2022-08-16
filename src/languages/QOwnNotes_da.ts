@@ -3421,6 +3421,11 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Der blev fundet en scriptopdatering!</translation>
@@ -3503,11 +3508,6 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Fjern tag fra udvalgte noter…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation>Åbn valgte noter i en fane</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

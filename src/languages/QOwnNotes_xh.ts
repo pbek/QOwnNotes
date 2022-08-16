@@ -3423,6 +3423,11 @@ Ngaba ufuna ukuphelisa inqaku lakho?</translation>
 <translation>Tsiba kwifolda yenqaku</translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Ukuhlaziywa kweskripthi kufunyenwe!</translation>
@@ -3502,11 +3507,6 @@ Ngaba ufuna ukuphelisa inqaku lakho?</translation>
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Remove tag from selected notes…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

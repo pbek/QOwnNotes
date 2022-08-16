@@ -3419,6 +3419,11 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation>Geselecteerde notities openen in tabbladen</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Er is een scriptupdate gevonden!</translation>
@@ -3498,11 +3503,6 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>Label &amp;verwijderen van geselecteerde notities…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

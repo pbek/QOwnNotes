@@ -3399,6 +3399,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>跳到筆記的子文件夾</translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>找到腳本更新！</translation>
@@ -3478,11 +3483,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>從選取筆記移除標籤…(&amp;R)</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

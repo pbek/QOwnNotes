@@ -400,14 +400,14 @@ function windowStateChangedHook(windowState);
 
 ربما تحب أن تلقي نظرة على المثال [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/window-state-changed.qml).
 
-workspaceSwitchedHook
+workspaceSwitchedHook (خطاف تبديل مساحة العمل)
 ----------------------
 
 This hook is called when workspaces are switched.
 
-### Method call and parameters
+### نداء الدالة ومُعامِلاتها
 ```js
-    /**
+/**
  * This function is called when workspaces are switched
  *
  * @param oldUuid old uuid of workspace
@@ -416,4 +416,4 @@ This hook is called when workspaces are switched.
 function workspaceSwitchedHook(oldUuid, newUuid);
 ```
 
-You may want to take a look at the example [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/workspaces.qml).
+ربما تحب أن تلقي نظرة على المثال [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/workspaces.qml).

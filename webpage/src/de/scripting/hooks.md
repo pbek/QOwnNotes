@@ -503,7 +503,7 @@ Vielleicht möchten Sie sich das Beispiel ansehen [window-state-changed.qml](htt
 workspaceSwitchedHook
 ----------------------
 
-Dieser Hook wird aufgerufen, wenn Workflows gewechselt werden.
+This hook is called when workspaces are switched.
 
 
 
@@ -511,8 +511,8 @@ Dieser Hook wird aufgerufen, wenn Workflows gewechselt werden.
 
 
 ```js
-    /**
- * Diese Funktion wird aufgerufen, wenn Workflows umgeschaltet werden
+/**
+ * This function is called when workspaces are switched
  *
  * @param oldUuid old uuid of workspace
  * @param newUuid new uuid of workspace

@@ -3420,6 +3420,11 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <translation>In den Unterordner der Notiz wechseln</translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation>Ausgewählte Notizen in Tabs öffnen</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Eine Skript-Aktualisierung wurde gefunden</translation>
@@ -3499,11 +3504,6 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>Schlagwort aus ausgewählten Notizen &amp;entfernen…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

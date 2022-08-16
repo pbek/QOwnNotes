@@ -3418,6 +3418,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>Ir a la subcarpeta de la nota</translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation>Abrir notas seleccionadas en pestañas</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>¡Se encontró una actualización de script!</translation>
@@ -3497,11 +3502,6 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>Elimina&amp;r etiqueta de las notas seleccionadas…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

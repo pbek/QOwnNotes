@@ -3425,6 +3425,11 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>U gjet një azhurnim i skenarit!</translation>
@@ -3504,11 +3509,6 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Hiq etiketën nga shënimet e zgjedhura…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>

@@ -3467,6 +3467,11 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation>Otwórz wybrane notatki w zakładkach</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Znaleziono aktualizację skryptu!</translation>
@@ -3547,11 +3552,6 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Usuń tag z zaznaczonych notatek…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation>Otwórz wybrane notatki w zakładce</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>
@@ -4390,8 +4390,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation type="unfinished">
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone folder(y)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Wszystkie zawarte w nim pliki i foldery zostaną również usunięte!</numerusform>
-<numerusform>One
-Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybrane folder(y)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Usunięte zostaną także wszystkie notatki i foldery w nich zawarte!</numerusform>
+<numerusform>Usuń &lt;strong&gt;%n&lt;/strong&gt; zaznaczone folder(y)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Wszystkie zawarte w nich pliki i foldery zostaną również usunięte!</numerusform>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybrane folder(y)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Usunięte zostaną także wszystkie notatki i foldery w nich zawarte!</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
 </translation>

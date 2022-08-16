@@ -3445,6 +3445,11 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
 </translation>
 </message>
 <message>
+<location filename="../mainwindow.cpp" line="9759"/>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
 <location filename="../mainwindow.cpp" line="11290"/>
 <source>A script update was found!</source>
 <translation>Pronađeno je ažuriranje skripte!</translation>
@@ -3524,11 +3529,6 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
 <location filename="../mainwindow.cpp" line="9739"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Ukloni oznaku iz odabranih bilješki…</translation>
-</message>
-<message>
-<location filename="../mainwindow.cpp" line="9759"/>
-<source>Open selected notes in tab</source>
-<translation type="unfinished">Open selected notes in tab</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9842"/>
