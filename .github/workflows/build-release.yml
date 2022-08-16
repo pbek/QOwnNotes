@@ -100,8 +100,6 @@ jobs:
       uses: samuelmeuli/action-snapcraft@v1
       with:
         use_lxd: true
-        # `snapcraft export-login --snaps qownnotes --channels edge,stable -`, token valid for one year  
-        snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
     - name: Cache Qt
       id: cache-qt
       uses: actions/cache@v3
@@ -214,6 +212,9 @@ jobs:
 
     - if: contains( matrix.os, 'ubuntu-18') && !matrix.app-image
       name: Deploy Snap
+      env:
+        # `snapcraft export-login --snaps qownnotes --channels edge,stable -`, token valid for one year
+        SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
       shell: bash
       run: |
         cd .. && ls
