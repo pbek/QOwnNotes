@@ -403,7 +403,7 @@ function windowStateChangedHook(windowState);
 workspaceSwitchedHook
 ----------------------
 
-This hook is called when workflows are switched.
+This hook is called when workspaces are switched.
 
 ### Method call and parameters
 ```js
