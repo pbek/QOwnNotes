@@ -212,6 +212,11 @@ jobs:
         asset_content_type: application/octet-stream
 
     - if: contains( matrix.os, 'ubuntu-18') && !matrix.app-image
+      shell: bash
+      run: |
+        snapcraft --version
+        cd .. && pwd
+    - if: contains( matrix.os, 'ubuntu-18') && !matrix.app-image
       name: Deploy Snap
       uses: snapcore/action-publish@v1
       env:
