@@ -100,6 +100,7 @@ jobs:
       uses: samuelmeuli/action-snapcraft@v1
       with:
         use_lxd: true
+        snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
     - name: Cache Qt
       id: cache-qt
       uses: actions/cache@v3
@@ -217,6 +218,7 @@ jobs:
         SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
       shell: bash
       run: |
+        snapcraft --version
         cd .. && ls
         if [ -n "$(ls *.snap 2>/dev/null)" ]; then
           sudo snapcraft upload *.snap --release stable
