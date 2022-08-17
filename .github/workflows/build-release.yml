@@ -213,16 +213,25 @@ jobs:
 
     - if: contains( matrix.os, 'ubuntu-18') && !matrix.app-image
       name: Deploy Snap
+      uses: snapcore/action-publish@v1
       env:
         # `snapcraft export-login --snaps qownnotes --channels edge,stable -`, token valid for one year
         SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
-      shell: bash
-      run: |
-        snapcraft --version
-        cd .. && ls
-        if [ -n "$(ls *.snap 2>/dev/null)" ]; then
-          sudo snapcraft upload *.snap --release stable
-        fi
+      with:
+        snap: ../qownnotes_${{ env.VERSION }}_amd64.snap
+        release: stable
+#    - if: contains( matrix.os, 'ubuntu-18') && !matrix.app-image
+#      name: Deploy Snap
+#      env:
+#        # `snapcraft export-login --snaps qownnotes --channels edge,stable -`, token valid for one year
+#        SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
+#      shell: bash
+#      run: |
+#        snapcraft --version
+#        cd .. && ls
+#        if [ -n "$(ls *.snap 2>/dev/null)" ]; then
+#          sudo snapcraft upload *.snap --release stable
+#        fi
 
     - if: contains( matrix.os, 'ubuntu-18') && matrix.app-image
       name: Release AppImage for Linux
