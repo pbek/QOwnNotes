@@ -211,11 +211,11 @@ jobs:
         asset_name: QOwnNotes-amd64.snap
         asset_content_type: application/octet-stream
 
-    - if: contains( matrix.os, 'ubuntu-18') && !matrix.app-image
-      shell: bash
-      run: |
-        snapcraft --version
-        cd .. && pwd
+#    - if: contains( matrix.os, 'ubuntu-18') && !matrix.app-image
+#      shell: bash
+#      run: |
+#        snapcraft --version
+#        cd .. && pwd
     - if: contains( matrix.os, 'ubuntu-18') && !matrix.app-image
       name: Deploy Snap
       uses: snapcore/action-publish@v1
@@ -223,7 +223,7 @@ jobs:
         # `snapcraft export-login --snaps qownnotes --channels edge,stable -`, token valid for one year
         SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
       with:
-        snap: ../qownnotes_${{ env.VERSION }}_amd64.snap
+        snap: /home/runner/work/QOwnNotes/QOwnNotes/qownnotes_${{ env.VERSION }}_amd64.snap
         release: stable
 #    - if: contains( matrix.os, 'ubuntu-18') && !matrix.app-image
 #      name: Deploy Snap
