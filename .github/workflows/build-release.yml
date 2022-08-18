@@ -219,6 +219,7 @@ jobs:
     - if: contains( matrix.os, 'ubuntu-18') && !matrix.app-image
       name: Deploy Snap
       uses: snapcore/action-publish@v1
+      continue-on-error: true
       env:
         # `snapcraft export-login --snaps qownnotes --channels edge,stable -`, token valid for one year
         SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
@@ -230,6 +231,10 @@ jobs:
       with:
         name: snapcraft-logs
         path: /home/runner/.cache/snapcraft/log/snapcraft-*.log
+    - if: contains( matrix.os, 'ubuntu-18') && !matrix.app-image
+      name: Fail
+      shell: bash
+      run: curl --fail
 
 #    - if: contains( matrix.os, 'ubuntu-18') && !matrix.app-image
 #      name: Deploy Snap
