@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 22.8.3
+- you now can fetch all notes that are linked to a tag with new scripting property
+  `notes` of `TagApi` objects (for [#2582](https://github.com/pbek/QOwnNotes/issues/2582))
+  - for more information please take a look at the
+    [scripting documentation](https://www.qownnotes.org/scripting/classes.html#tag)
+
 ## 22.8.2
 - you can now also open a note in a new tab if not already open with the
   scripting method `script.setCurrentNote()` (for [#2565](https://github.com/pbek/QOwnNotes/issues/2565))

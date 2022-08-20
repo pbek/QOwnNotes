@@ -96,12 +96,29 @@ class TagApi {
     Q_PROPERTY(int id)
     Q_PROPERTY(QString name)
     Q_PROPERTY(int parentId)
+    Q_PROPERTY(QQmlListProperty<NoteApi> notes)
     Q_INVOKABLE TagApi fetchByName(const QString &name, int parentId = 0)
     Q_INVOKABLE QStringList getParentTagNames()
 };
 ```
 
-You'll find an example where TagApi is used in
+### Example
+```js
+// Don't forget to use "import QOwnNotesTypes 1.0" at the top of your script!
+
+// Fetch tag "home"
+var tag = script.getTagByNameBreadcrumbList(["home"]);
+// Fetch all notes tagged with the tag
+var notes = tag.notes;
+
+// Iterate through notes of the tag
+for (var idx in notes) {
+    var note = notes[idx];
+    script.log(note.name);
+}
+```
+
+You'll find more examples where TagApi is used in
 [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
 
 MainWindow

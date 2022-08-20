@@ -194,3 +194,23 @@ QString NoteApi::toMarkdownHtml(bool forExport) {
 QString NoteApi::getFileURLFromFileName(const QString& localFileName) {
     return _note.getFileURLFromFileName(localFileName);
 }
+
+void NoteApi::copy(const Note &note)
+{
+    _note = note;
+
+    if (_note.isFetched()) {
+        _id = note.getId();
+        _name = note.getName();
+        _fileName = note.getFileName();
+        _noteText = note.getNoteText();
+        _hasDirtyData = note.getHasDirtyData();
+        _noteSubFolderId = note.getNoteSubFolderId();
+        _fileCreated = note.getFileCreated();
+        _fileLastModified = note.getFileLastModified();
+
+        // we'll try not to fetch the decrypted note text, because it
+        // would be done every time the current note changes
+        _decryptedNoteText = note.getDecryptedNoteText();
+    }
+}
