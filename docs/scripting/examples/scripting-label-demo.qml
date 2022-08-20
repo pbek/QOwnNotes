@@ -1,10 +1,11 @@
 import QtQml 2.0
+import QOwnNotesTypes 1.0
 
 /**
  * This script creates scripting labels
  * 
  */
-QtObject {
+Script {
     /**
      * Initializes the labels
      */
