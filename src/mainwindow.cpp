@@ -3243,8 +3243,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         }
     }
 
-    // add some notes if there aren't any and
-    // we haven't already created them once
+    // add some notes if there aren't any, and we haven't already created them once
     if (createDemoNotes) {
         qDebug() << "No notes! We will add some...";
         const QStringList filenames =
