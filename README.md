@@ -15,6 +15,7 @@
 [Mastodon](https://social.qownnotes.org/@qownnotes) |
 [Twitter](https://twitter.com/QOwnNotes) |
 [Facebook](https://www.facebook.com/QOwnNotes) |
+[QOwnNotes Web Companion Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/qownnotes-web-companion/) |
 [QOwnNotes Web Companion Chrome extension](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) |
 [QOwnNotes Web App](https://app.qownnotes.org/) |
 [QOwnNotes Tor Hidden Service](http://qownnotn3bknenanjs5u4nf3f2law2tzmqklux3c5e2xbvzcksmxm6yd.onion/)
