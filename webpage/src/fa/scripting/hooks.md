@@ -385,7 +385,7 @@ function windowStateChangedHook(windowState);
 workspaceSwitchedHook
 ----------------------
 
-This hook is called when workspaces are switched.
+این هوک زمانی فراخوانده می شود که وضعیت محیط های کار تغییر کند.
 
 ### فراخوانی شگرد و پارامترها
 ```js

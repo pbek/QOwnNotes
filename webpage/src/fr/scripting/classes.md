@@ -94,12 +94,29 @@ class TagApi {
     Q_PROPERTY(int id)
     Q_PROPERTY(QString name)
     Q_PROPERTY(int parentId)
+    Q_PROPERTY(QQmlListProperty<NoteApi> notes)
     Q_INVOKABLE TagApi fetchByName(const QString &name, int parentId = 0)
     Q_INVOKABLE QStringList getParentTagNames()
 };
 ```
 
-Vous trouverez ici un exemple dans lequel TagApi est utilisé : [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
+### Exemple
+```js
+// Noubliez pas d'utiliser "import QOwnNotesTypes 1.0" en tête de votre script !
+
+// Récupérer l'étiquette "home"
+var tag = script.getTagByNameBreadcrumbList(["home"]);
+// Récupérer toutes les notes portant cette étiquette
+var notes = tag.notes;
+
+// Itérer les notes portant l'étiquette
+for (var idx in notes) {
+    var note = notes[idx];
+    script.log(note.name);
+}
+```
+
+Vous trouverez ici d'autres exemples dans lesquels TagApi est utilisé [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
 
 MainWindow
 ----------
@@ -112,35 +129,37 @@ class MainWindow {
     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
             bool forceBuild = false, bool forceLoad = false);
     Q_INVOKABLE void focusNoteTextEdit();
-    // Creates a new note subfolder in the current subfolder
+    // Créé un nouveau sous-dossier de notes dans le sous-dossier courant
     Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
-    // Inserts html in the current note as markdown
-    // This method also downloads remote images and transforms "data:image"
-    // urls to local images stored in the media directory
+    // Insère du HTML au format MarkDown dans la note courante
+    // Cette méthode télécharge également les images distantes et transforme les URLs
+    // "data:image" en images locales stockées dans le dossier media
     Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
-    // Reloads the current note by id
-    // This is useful when the path or filename of the current note changed
+    // Re-charge la note courante par ID
+    // Ceci est utile quand le chemin ou le nom de fichier de la note courante a changé
     Q_INVOKABLE void reloadCurrentNoteByNoteId();
-    // Returns the list of workspace UUIDs
+    // Retourne la liste des UUIDs des espaces de travail
     Q_INVOKABLE QStringList getWorkspaceUuidList();
-    // Returns the UUID of a workspace, passing in the workspace name
+    // Retourne l'UUID d'un espace de travail, en y ajoutant le nom de ce dernier
     Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
-    // Sets the current workspace by UUID
+    // Définit l'espace de travail courant par son UUID
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
+    // Ferme un onglet de note sur un index spécifique (retourne 'true' en cas de succès)
+    Q_INVOKABLE bool removeNoteTab(int index);
 };
 ```
 
-### Exemples
+### Exemple
 ```js
-// Forcer un rechargement de la liste de notes
-mainWindow.buildNotesIndexAndLoadNoteDirectoryList (vrai, vrai);
+// Force le re-chargement de la liste des notes
+mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Crée un nouveau sous-dossier de notes "Mon dossier fantaisie" dans le sous-dossier actuel
-mainWindow.createNewNoteSubFolder ("Mon dossier fantaisie");
+// Créer un nouveau sous-dossier de notes "Mon joli dossier" dans le sous dossier courant
+mainWindow.createNewNoteSubFolder("Mon joli dossier");
 
-// Insère html dans la note actuelle comme markdown
-mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2> mon titre </h2> du texte");
+// Insère du HTML au format MarkDown dans la note courante
+mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Définit l'espace de travail 'Modifier' comme espace de travail courant
-mainWindow.setCurrentWorkspace (mainWindow.getWorkspaceUuid ("Modifier"));
+// Définit l'espace de travail 'Edition' comme espace de travail courant
+mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edition"));
 ```

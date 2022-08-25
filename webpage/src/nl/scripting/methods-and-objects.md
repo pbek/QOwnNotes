@@ -360,7 +360,7 @@ script.registerLabel("long-label", "nog een zeer lange tekst, nog een zeer lange
 script.registerLabel("counter-label");
 ```
 
-De labels zijn zichtbaar in de scriptdock-widget.
+The labels will be visible in the *Scripting panel*, which you need to enable in the *Window / Panels* menu.
 
 U kunt zowel platte tekst als html in de labels gebruiken. De tekst kan worden geselecteerd en er kan op links worden geklikt.
 

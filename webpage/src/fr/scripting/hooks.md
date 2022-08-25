@@ -385,15 +385,15 @@ Vous voudrez peut-être jeter un coup d'œil à l'exemple [window-state-changed.
 workspaceSwitchedHook
 ----------------------
 
-This hook is called when workspaces are switched.
+Ce crochet est appelé quand il y a bascule entre les flux de travail.
 
 ### Appel de méthode et paramètres
 ```js
 /**
- * This function is called when workspaces are switched
+ * Cette fonction est appelée quand il y a bascule entre les flux de travail
  *
- * @param oldUuid old uuid of workspace
- * @param newUuid new uuid of workspace
+ * @param oldUuid uuid actuel de l'espace de travail
+ * @param newUuid nouvel uuid de l'espace de travail
  */
 function workspaceSwitchedHook(oldUuid, newUuid);
 ```

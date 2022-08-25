@@ -329,7 +329,7 @@ script.registerLabel("etichetta lunga", "un altro testo molto lungo, un altro te
 script.registerLabel("counter-label");
 ```
 
-Le etichette saranno visibili nel widget del dock di scripting.
+The labels will be visible in the *Scripting panel*, which you need to enable in the *Window / Panels* menu.
 
 È possibile utilizzare sia testo normale che html nelle etichette. Il testo sarà selezionabile e sarà possibile fare clic sui collegamenti.
 

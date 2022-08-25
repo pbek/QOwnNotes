@@ -360,7 +360,7 @@ script.registerLabel("long-label", "another very long text, another very long te
 script.registerLabel("counter-label");
 ```
 
-برچسب ها در ابزارک لنگرگاه اسکریپت نویسی قابل رؤیت هستند.
+The labels will be visible in the *Scripting panel*, which you need to enable in the *Window / Panels* menu.
 
 شما می توانید هم از متن ساده و هم html در برچسب ها استفاده کنید. متن قابل انتخاب بوده و می توان روی پیوندها کلیک کرد.
 

@@ -360,7 +360,7 @@ script.registerLabel("long-label", "encore un très long texte, encore un très 
 script.registerLabel("counter-label");
 ```
 
-Les étiquettes seront visibles dans le widget de scripting du dock.
+Les étiquettes seront visibles dans le panneau *Écriture de scripts*, activable depuis le menu *Fenêtres / Panneaux*.
 
 Vous pouvez utiliser à la fois du texte brut ou du HTML dans les étiquettes. Le texte sera sélectionnable et les liens pourront être cliqués.
 
@@ -920,20 +920,20 @@ Sauter vers une note
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Sets the current note if the note is visible in the note list
+ * Définit la note courante si la note est visible dans la liste des notes
  *
- * @param note NoteApi note to jump to
- * @param asTab bool if true the note will be opened in a new tab (if not already open)
+ * @param note NoteApi note vers laquelle sauter
+ * @param asTab bool si vrai la note sera ouverte dans un nouvel onglet (si pas déjà ouverte)
  */
 void ScriptingService::setCurrentNote(NoteApi *note, bool asTab = false);
 ```
 
 ### Exemple
 ```js
-// jump to the note
+// sauter à la note
 script.setCurrentNote(note);
 
-// open note in new tab (if not already open)
+// ouvrir la note dans un nouvel onglet (si pas déjà ouverte)
 script.setCurrentNote(note, true);
 ```
 

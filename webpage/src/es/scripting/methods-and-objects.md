@@ -360,7 +360,7 @@ script.registerLabel("etiqueta larga", "otro texto muy largo, otro texto muy lar
 script.registerLabel("contra-etiqueta");
 ```
 
-Las etiquetas estarán visibles en el widget de la base de secuencias de comandos.
+The labels will be visible in the *Scripting panel*, which you need to enable in the *Window / Panels* menu.
 
 Puede utilizar texto sin formato o html en las etiquetas. Se podrá seleccionar el texto y se podrá hacer clic en los enlaces.
 

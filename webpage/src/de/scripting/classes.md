@@ -94,17 +94,34 @@ class TagApi {
     Q_PROPERTY(int id)
     Q_PROPERTY(QString name)
     Q_PROPERTY(int parentId)
+    Q_PROPERTY(QQmlListProperty<NoteApi> notes)
     Q_INVOKABLE TagApi fetchByName(const QString &name, int parentId = 0)
     Q_INVOKABLE QStringList getParentTagNames()
 };
 ```
 
-Ein Beispiel für die Verwendung von TagApi finden Sie in [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
+### Example
+```js
+// Don't forget to use "import QOwnNotesTypes 1.0" at the top of your script!
+
+// Fetch tag "home"
+var tag = script.getTagByNameBreadcrumbList(["home"]);
+// Fetch all notes tagged with the tag
+var notes = tag.notes;
+
+// Iterate through notes of the tag
+for (var idx in notes) {
+    var note = notes[idx];
+    script.log(note.name);
+}
+```
+
+You'll find more examples where TagApi is used in [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
 
 HauptFenster
 ----------
 
-### Eigenschaften und Methoden
+### Properties and methods
 ```cpp
 class MainWindow {
     Q_INVOKABLE void reloadTagTree();
@@ -127,34 +144,22 @@ class MainWindow {
     Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
     // Sets the current workspace by UUID
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
+    // Closes a note tab on a specific index (returns true if successful)
+    Q_INVOKABLE bool removeNoteTab(int index);
 };
 ```
 
-### Beispiel
+### Example
 ```js
-// Erzwingt ein Neuladen der Notizliste
+// Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Erstellt einen neuen Notiz-Unterordner "Mein schicker Ordner" im aktuellen Unterordner
+// Creates a new note subfolder "My fancy folder" in the current subfolder
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Fügt HTML als Markdown in die aktuelle Notiz ein
+// Inserts html in the current note as markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Legt Arbeitsbereich 'Bearbeiten' als aktuellen Arbeitsbereich fest
+// Set 'Edit' workspace as current workspace
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
-
-
-
-
-mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
-
-// Erstellt einen neuen Notiz-Unterordner "Mein schicker Ordner" im aktuellen Unterordner
-mainWindow.createNewNoteSubFolder("Mein ausgefallener Ordner");
-
-// Fügt HTML als Markdown in die aktuelle Notiz ein
-mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<0>meine Überschrift</0>etwas Text");
-
-
-mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Bearbeiten"));
 ```

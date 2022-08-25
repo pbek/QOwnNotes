@@ -6,6 +6,8 @@
   - for more information please take a look at the
     [MainWindow scripting documentation](https://www.qownnotes.org/scripting/classes.html#mainwindow)
 - the snap deployment process is now working again (for [#2588](https://github.com/pbek/QOwnNotes/issues/2588))
+- added more translation (thank you hansa2662, mguerra, chocolatine, venusgirl,
+  amirkbrpr, rakekniven, noureddin)
 
 ## 22.8.3
 - you now can fetch all notes that are linked to a tag with new scripting property

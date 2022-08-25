@@ -403,7 +403,7 @@ function windowStateChangedHook(windowState);
 workspaceSwitchedHook (خطاف تبديل مساحة العمل)
 ----------------------
 
-This hook is called when workspaces are switched.
+يُنادى هذا الخطاف عند تبديل مساحة العمل.
 
 ### نداء الدالة ومُعامِلاتها
 ```js

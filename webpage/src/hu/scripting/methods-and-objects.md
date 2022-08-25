@@ -359,7 +359,7 @@ script.registerLabel ("long-label", "egy másik nagyon hosszú, egy másik nagyo
 script.registerLabel ("ellencímke");
 ```
 
-A címkék láthatók lesznek a szkriptek dokkoló moduljában.
+The labels will be visible in the *Scripting panel*, which you need to enable in the *Window / Panels* menu.
 
 A címkékben használhat sima szöveget vagy HTML-t is. A szöveg választható lesz, és a linkekre kattintani lehet.
 

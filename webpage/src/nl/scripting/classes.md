@@ -90,21 +90,38 @@ Tag
 
 ### Eigenschappen en methoden
 ```cpp
-klasse TagApi {
-     Q_PROPERTY (int id)
-     Q_PROPERTY (QString-naam)
-     Q_PROPERTY (int parentId)
-     Q_INVOKABLE TagApi fetchByName (const QString &name, int parentId = 0)
-     Q_INVOKABLE QStringList getParentTagNames ()
+class TagApi {
+    Q_PROPERTY(int id)
+    Q_PROPERTY(QString name)
+    Q_PROPERTY(int parentId)
+    Q_PROPERTY(QQmlListProperty<NoteApi> notes)
+    Q_INVOKABLE TagApi fetchByName(const QString &name, int parentId = 0)
+    Q_INVOKABLE QStringList getParentTagNames()
 };
 ```
 
-U vindt een voorbeeld waarin TagApi wordt gebruikt in [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
+### Example
+```js
+// Don't forget to use "import QOwnNotesTypes 1.0" at the top of your script!
+
+// Fetch tag "home"
+var tag = script.getTagByNameBreadcrumbList(["home"]);
+// Fetch all notes tagged with the tag
+var notes = tag.notes;
+
+// Iterate through notes of the tag
+for (var idx in notes) {
+    var note = notes[idx];
+    script.log(note.name);
+}
+```
+
+You'll find more examples where TagApi is used in [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
 
 MainWindow
 ----------
 
-### Eigenschappen en methoden
+### Properties and methods
 ```cpp
 class MainWindow {
     Q_INVOKABLE void reloadTagTree();
@@ -112,35 +129,37 @@ class MainWindow {
     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
             bool forceBuild = false, bool forceLoad = false);
     Q_INVOKABLE void focusNoteTextEdit();
-    // Maakt een nieuwe submap voor notities in de huidige submap
+    // Creates a new note subfolder in the current subfolder
     Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
-    // Voegt html in de huidige notitie in als markdown
-    // Deze methode downloadt ook afbeeldingen op afstand en transformeert "data: image"
-    // urls naar lokale afbeeldingen die zijn opgeslagen in de mediamap
+    // Inserts html in the current note as markdown
+    // This method also downloads remote images and transforms "data:image"
+    // urls to local images stored in the media directory
     Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
-    // Herlaadt de huidige notitie op id
-    // Dit is handig als het pad of de bestandsnaam van de huidige notitie is gewijzigd
+    // Reloads the current note by id
+    // This is useful when the path or filename of the current note changed
     Q_INVOKABLE void reloadCurrentNoteByNoteId();
-    // Retourneert de lijst met werkruimte-UUID's
+    // Returns the list of workspace UUIDs
     Q_INVOKABLE QStringList getWorkspaceUuidList();
-    // Retourneert de UUID van een werkruimte, waarbij de naam van de werkruimte wordt doorgegeven
+    // Returns the UUID of a workspace, passing in the workspace name
     Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
-    // Stelt de huidige werkruimte in op UUID
+    // Sets the current workspace by UUID
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
+    // Closes a note tab on a specific index (returns true if successful)
+    Q_INVOKABLE bool removeNoteTab(int index);
 };
 ```
 
-### Voorbeeld
+### Example
 ```js
-// Forceer een herladen van de notitielijst
+// Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creëert een nieuwe notitie submap "Mijn mooie map" in de huidige submap
+// Creates a new note subfolder "My fancy folder" in the current subfolder
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Voegt html in de huidige notitie in als markdown
+// Inserts html in the current note as markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Stel de werkruimte 'Bewerken' in als de huidige werkruimte
-mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"))
+// Set 'Edit' workspace as current workspace
+mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 ```

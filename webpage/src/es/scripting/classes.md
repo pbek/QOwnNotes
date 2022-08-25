@@ -94,53 +94,72 @@ class TagApi {
     Q_PROPERTY(int id)
     Q_PROPERTY(QString name)
     Q_PROPERTY(int parentId)
+    Q_PROPERTY(QQmlListProperty<NoteApi> notes)
     Q_INVOKABLE TagApi fetchByName(const QString &name, int parentId = 0)
     Q_INVOKABLE QStringList getParentTagNames()
 };
 ```
 
-Encontrará un ejemplo donde se usa TagApi en [etiquetado-de-notas-por-objeto.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
+### Example
+```js
+// Don't forget to use "import QOwnNotesTypes 1.0" at the top of your script!
+
+// Fetch tag "home"
+var tag = script.getTagByNameBreadcrumbList(["home"]);
+// Fetch all notes tagged with the tag
+var notes = tag.notes;
+
+// Iterate through notes of the tag
+for (var idx in notes) {
+    var note = notes[idx];
+    script.log(note.name);
+}
+```
+
+You'll find more examples where TagApi is used in [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
 
 MainWindow
 ----------
 
-### Propiedades y métodos
+### Properties and methods
 ```cpp
 class MainWindow {
-    Q_INVOKABLE void reloadTagTree ();
-    Q_INVOKABLE void reloadNoteSubFolderTree ();
-    Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList (
-            bool forceBuild = falso, bool forceLoad = falso);
-    Q_INVOKABLE void focusNoteTextEdit ();
-    // Crea una nueva subcarpeta de notas en la subcarpeta actual
-    Q_INVOKABLE bool createNewNoteSubFolder (QString folderName = "");
-    // Inserta html en la nota actual como rebaja
-    // Este método también descarga imágenes remotas y transforma "data: image"
-    // URL a imágenes locales almacenadas en el directorio de medios
-    Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote (QString html);
-    // Recarga la nota actual por id
-    // Esto es útil cuando cambia la ruta o el nombre de archivo de la nota actual
-    Q_INVOKABLE void reloadCurrentNoteByNoteId ();
-    // Devuelve la lista de UUID del espacio de trabajo
-    Q_INVOKABLE QStringList getWorkspaceUuidList ();
-    // Devuelve el UUID de un espacio de trabajo, pasando el nombre del espacio de trabajo
-    Q_INVOKABLE QString getWorkspaceUuid (const QString & nombre de espacio de trabajo);
-    // Establece el espacio de trabajo actual por UUID
-    Q_INVOKABLE void setCurrentWorkspace (const QString & uuid);
+    Q_INVOKABLE void reloadTagTree();
+    Q_INVOKABLE void reloadNoteSubFolderTree();
+    Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
+            bool forceBuild = false, bool forceLoad = false);
+    Q_INVOKABLE void focusNoteTextEdit();
+    // Creates a new note subfolder in the current subfolder
+    Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
+    // Inserts html in the current note as markdown
+    // This method also downloads remote images and transforms "data:image"
+    // urls to local images stored in the media directory
+    Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
+    // Reloads the current note by id
+    // This is useful when the path or filename of the current note changed
+    Q_INVOKABLE void reloadCurrentNoteByNoteId();
+    // Returns the list of workspace UUIDs
+    Q_INVOKABLE QStringList getWorkspaceUuidList();
+    // Returns the UUID of a workspace, passing in the workspace name
+    Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
+    // Sets the current workspace by UUID
+    Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
+    // Closes a note tab on a specific index (returns true if successful)
+    Q_INVOKABLE bool removeNoteTab(int index);
 };
 ```
 
-### Ejemplo
+### Example
 ```js
-// Forzar una recarga de la lista de notas
-mainWindow.buildNotesIndexAndLoadNoteDirectoryList (verdadero, verdadero);
+// Force a reload of the note list
+mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Crea una nueva subcarpeta de notas "Mi carpeta elegante" en la subcarpeta actual
-mainWindow.createNewNoteSubFolder ("Mi carpeta de fantasía");
+// Creates a new note subfolder "My fancy folder" in the current subfolder
+mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Inserta html en la nota actual como rebaja
-mainWindow.insertHtmlAsMarkdownIntoCurrentNote ("<h2>mi título</h2> algo de texto");
+// Inserts html in the current note as markdown
+mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Establecer el espacio de trabajo 'Editar' como espacio de trabajo actual
-mainWindow.setCurrentWorkspace (mainWindow.getWorkspaceUuid ("Editar"));
+// Set 'Edit' workspace as current workspace
+mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 ```
