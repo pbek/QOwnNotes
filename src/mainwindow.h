@@ -222,6 +222,8 @@ class MainWindow : public QMainWindow {
 
     void refreshNotePreview();
 
+    Q_INVOKABLE bool removeNoteTab(int index) const;
+
    protected:
     void changeEvent(QEvent *event) override;
 
@@ -1099,7 +1101,6 @@ private:
     void updateCurrentTabData(const Note &note) const;
     bool jumpToTab(const Note &note) const;
     void closeOrphanedTabs() const;
-    void removeNoteTab(int index) const;
     void automaticScriptUpdateCheck();
     void updateJumpToActionsAvailability();
     int getNoteTabIndex(int noteId) const;

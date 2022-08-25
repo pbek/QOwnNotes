@@ -11910,10 +11910,19 @@ void MainWindow::on_actionNew_note_in_new_tab_triggered() {
     openCurrentNoteInTab();
 }
 
-void MainWindow::removeNoteTab(int index) const {
-    if (ui->noteEditTabWidget->count() > 1) {
-        ui->noteEditTabWidget->removeTab(index);
+/**
+ * Close a note tab on a specific index.
+ * @param index The index of the tab to close.
+ */
+bool MainWindow::removeNoteTab(int index) const {
+    const int maxIndex = ui->noteEditTabWidget->count() - 1;
+
+    if (maxIndex <= 0 || index > maxIndex) {
+        return false;
     }
+
+    ui->noteEditTabWidget->removeTab(index);
+    return true;
 }
 
 void MainWindow::on_noteEditTabWidget_tabBarDoubleClicked(int index) {

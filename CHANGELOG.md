@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 22.8.4
+- there now is a new scripting command `mainWindow.removeNoteTab(index)` to
+  close a note tab on a specific index (for [#2592](https://github.com/pbek/QOwnNotes/issues/2592))
+  - for more information please take a look at the
+    [MainWindow scripting documentation](https://www.qownnotes.org/scripting/classes.html#mainwindow)
 - the snap deployment process is now working again (for [#2588](https://github.com/pbek/QOwnNotes/issues/2588))
 
 ## 22.8.3
