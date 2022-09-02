@@ -1691,6 +1691,14 @@ void SettingsDialog::loadShortcutSettings() {
     auto disabledMenuNames = QStringList() << QStringLiteral("menuToolbars")
                                            << QStringLiteral("noteFoldersMenu");
 
+    const QIcon disableShortcutButtonIcon = QIcon::fromTheme(
+                QStringLiteral("dialog-cancel"),
+                QIcon(QStringLiteral(
+                          ":icons/breeze-qownnotes/16x16/dialog-cancel.svg")));
+    const QIcon clearButtonIcon = QIcon::fromTheme(QStringLiteral("edit-clear"),
+                                 QIcon(":/icons/breeze-qownnotes/16x16/"
+                                       "edit-clear.svg"));
+
     // loop through all menus
     for (const QMenu *menu : menus) {
         if (disabledMenuNames.contains(menu->objectName())) {
@@ -1719,10 +1727,7 @@ void SettingsDialog::loadShortcutSettings() {
             // create the key widget for the local shortcut
             auto *keyWidget = new QKeySequenceWidget();
             keyWidget->setFixedWidth(240);
-            keyWidget->setClearButtonIcon(
-                QIcon::fromTheme(QStringLiteral("edit-clear"),
-                                 QIcon(":/icons/breeze-qownnotes/16x16/"
-                                       "edit-clear.svg")));
+            keyWidget->setClearButtonIcon(clearButtonIcon);
             keyWidget->setNoneText(tr("Undefined shortcut"));
             keyWidget->setShortcutButtonActiveColor(shortcutButtonActiveColor);
             keyWidget->setShortcutButtonInactiveColor(
@@ -1747,10 +1752,7 @@ void SettingsDialog::loadShortcutSettings() {
 
             auto *disableShortcutButton = new QPushButton();
             disableShortcutButton->setToolTip(tr("Clear shortcut"));
-            disableShortcutButton->setIcon(QIcon::fromTheme(
-                QStringLiteral("dialog-cancel"),
-                QIcon(QStringLiteral(
-                          ":icons/breeze-qownnotes/16x16/dialog-cancel.svg"))));
+            disableShortcutButton->setIcon(disableShortcutButtonIcon);
 
             connect(disableShortcutButton, &QPushButton::pressed, this,
                 [keyWidget]() {
@@ -1771,10 +1773,7 @@ void SettingsDialog::loadShortcutSettings() {
             // create the key widget for the global shortcut
             auto *globalShortcutKeyWidget = new QKeySequenceWidget();
             globalShortcutKeyWidget->setFixedWidth(240);
-            globalShortcutKeyWidget->setClearButtonIcon(
-                QIcon::fromTheme(QStringLiteral("edit-clear"),
-                                 QIcon(":/icons/breeze-qownnotes/16x16/"
-                                       "edit-clear.svg")));
+            globalShortcutKeyWidget->setClearButtonIcon(clearButtonIcon);
             globalShortcutKeyWidget->setNoneText(tr("Undefined shortcut"));
             globalShortcutKeyWidget->setShortcutButtonActiveColor(shortcutButtonActiveColor);
             globalShortcutKeyWidget->setShortcutButtonInactiveColor(
@@ -3592,8 +3591,7 @@ QTreeWidgetItem *SettingsDialog::findSettingsTreeWidgetItemByPage(int page) {
 void SettingsDialog::initMainSplitter() {
     _mainSplitter = new QSplitter(this);
     _mainSplitter->setOrientation(Qt::Horizontal);
-    ui->leftSideFrame->setStyleSheet(
-        QStringLiteral("#leftSideFrame {margin-right: 5px;}"));
+    ui->leftSideFrame->setContentsMargins(0, 0, 5, 0);
 
     _mainSplitter->addWidget(ui->leftSideFrame);
     _mainSplitter->addWidget(ui->settingsFrame);
