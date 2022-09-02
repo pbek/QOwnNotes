@@ -5124,7 +5124,6 @@ void MainWindow::updateCurrentFolderTooltip() {
  */
 void MainWindow::openSettingsDialog(int page, bool openScriptRepository) {
     QPointer<SettingsDialog> settingsDialog = new SettingsDialog(page, this);
-    settingsDialog->readSettings();
 
     if (openScriptRepository) {
         QTimer::singleShot(10, settingsDialog, SLOT(searchScriptInRepository()));
