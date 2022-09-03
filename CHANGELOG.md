@@ -2,7 +2,7 @@
 
 ## 22.9.0
 - the settings dialog opening time was improved a bit (for [#2574](https://github.com/pbek/QOwnNotes/issues/2574), thank you, @Waqar144)
- 
+
 ## 22.8.4
 - there now is a new scripting command `mainWindow.removeNoteTab(index)` to
   close a note tab on a specific index (for [#2592](https://github.com/pbek/QOwnNotes/issues/2592))
