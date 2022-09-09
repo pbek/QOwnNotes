@@ -69,6 +69,7 @@ const scriptingNavItems = [
 
 const contributingNavItems = [
   'contributing/get-involved',
+  'contributing/code-of-conduct',
   'contributing/maintainers',
   'contributing/translation',
   'contributing/donate',

@@ -17,3 +17,7 @@ The various ways to get involved with QOwnNotes
 - Share your scripts at the [**QOwnNotes scripts** GitHub page](https://github.com/qownnotes/scripts)
 - Share **your experience with QOwnNotes** on your own **YouTube** - or other - channel, but also gladly [**send your audio/video/text to Amy**](mailto:amydoralang@aol.de) to be uploaded on [**QOwnNotes in a Nutshell**](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos)
 - You may want to answer a few, anonymous [**questions**](https://freeonlinesurveys.com/s/nA8t17k8) for us to help you getting better results with QOwnNotes
+
+::: tip Important
+Read the [code of conduct](./code-of-conduct.md) before you get involved!
+:::
