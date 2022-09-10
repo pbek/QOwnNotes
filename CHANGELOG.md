@@ -4,6 +4,8 @@
 - the settings dialog opening time was improved a lot (for [#2574](https://github.com/pbek/QOwnNotes/issues/2574), thank you, @Waqar144)
 - you can now specify file patterns of note files to ignore as regular expressions
   in the *Panels settings* (for [#2580](https://github.com/pbek/QOwnNotes/issues/2580))
+- added more translation (thank you venusgirl, noureddin, chocolatine, hansa2662,
+  rakekniven, milotype, amyla77, mguerra)
 
 ## 22.8.4
 - there now is a new scripting command `mainWindow.removeNoteTab(index)` to
