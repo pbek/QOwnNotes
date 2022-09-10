@@ -360,7 +360,7 @@ script.registerLabel ("long-label", "ein anderer sehr langer Text, ein anderer s
 script.registerLabel ("counter-label");
 ```
 
-The labels will be visible in the *Scripting panel*, which you need to enable in the *Window / Panels* menu.
+Die Labels sind im *Skript-Bedienfeld* sichtbar, das Sie im Menü *Fenster / Bedienfelder* aktivieren müssen.
 
 Sie können sowohl einfachen Text als auch HTML in den Beschriftungen verwenden. Der Text kann ausgewählt werden und Links können angeklickt werden.
 

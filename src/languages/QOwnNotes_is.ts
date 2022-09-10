@@ -2055,7 +2055,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="8248"/>
+<location filename="../mainwindow.cpp" line="8247"/>
 <source>Add a tag to the current note</source>
 <translation>Bættu merki við núverandi athugasemd</translation>
 </message>
@@ -2171,7 +2171,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1449"/>
-<location filename="../mainwindow.cpp" line="9792"/>
+<location filename="../mainwindow.cpp" line="9791"/>
 <source>Select &amp;all notes</source>
 <translation>Veldu allar &amp;athugasemdir</translation>
 </message>
@@ -2221,7 +2221,7 @@
 <translation>Leitaðu eða búðu til minnismiða</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8249"/>
+<location filename="../mainwindow.cpp" line="8248"/>
 <source>Add a tag to the selected notes</source>
 <translation>Bættu merki við völdu glósurnar</translation>
 </message>
@@ -2610,7 +2610,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2245"/>
-<location filename="../mainwindow.cpp" line="10757"/>
+<location filename="../mainwindow.cpp" line="10756"/>
 <source>Remove current workspace</source>
 <translation>Fjarlægðu núverandi vinnusvæði</translation>
 </message>
@@ -2678,7 +2678,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2366"/>
-<location filename="../mainwindow.cpp" line="9768"/>
+<location filename="../mainwindow.cpp" line="9767"/>
 <source>Open note in different window</source>
 <translation>Opna athugasemd í öðrum glugga</translation>
 </message>
@@ -2699,7 +2699,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2406"/>
-<location filename="../mainwindow.cpp" line="9776"/>
+<location filename="../mainwindow.cpp" line="9775"/>
 <source>Show note git versions</source>
 <translation>Sýna athugasemdir git útgáfur</translation>
 </message>
@@ -2782,7 +2782,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2569"/>
-<location filename="../mainwindow.cpp" line="11719"/>
+<location filename="../mainwindow.cpp" line="11718"/>
 <source>Automatically detect</source>
 <translation>Greina sjálfkrafa</translation>
 </message>
@@ -3019,10 +3019,10 @@ Restore current note?</source>
 Endurheimta núverandi athugasemd?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5521"/>
-<location filename="../mainwindow.cpp" line="5544"/>
-<location filename="../mainwindow.cpp" line="6872"/>
-<location filename="../mainwindow.cpp" line="9858"/>
+<location filename="../mainwindow.cpp" line="5520"/>
+<location filename="../mainwindow.cpp" line="5543"/>
+<location filename="../mainwindow.cpp" line="6871"/>
+<location filename="../mainwindow.cpp" line="9857"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Hætta við</translation>
 </message>
@@ -3165,7 +3165,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4780"/>
-<location filename="../mainwindow.cpp" line="9038"/>
+<location filename="../mainwindow.cpp" line="9037"/>
 <source>Move selected notes</source>
 <translation>Færðu valda minnispunkta</translation>
 </message>
@@ -3179,7 +3179,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4891"/>
-<location filename="../mainwindow.cpp" line="9158"/>
+<location filename="../mainwindow.cpp" line="9157"/>
 <source>Copy selected notes</source>
 <translation>Afritaðu valda minnispunkta</translation>
 </message>
@@ -3219,37 +3219,37 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5215"/>
+<location filename="../mainwindow.cpp" line="5214"/>
 <source>Restart application</source>
 <translation>Endurræstu forritið</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5216"/>
+<location filename="../mainwindow.cpp" line="5215"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Þú gætir þurft að endurræsa forritið til að láta breytingarnar taka gildi.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5219"/>
+<location filename="../mainwindow.cpp" line="5218"/>
 <source>Restart</source>
 <translation>Endurræsa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5441"/>
+<location filename="../mainwindow.cpp" line="5440"/>
 <source>PDF files</source>
 <translation>PDF skjöl</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5517"/>
+<location filename="../mainwindow.cpp" line="5516"/>
 <source>Todo lists disabled!</source>
 <translation>Todo listar óvirkir!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5518"/>
+<location filename="../mainwindow.cpp" line="5517"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Þú hefur gert todo listana óvirkan. &lt;br /&gt; Vinsamlegast athugaðu stillingarnar þínar &lt;strong&gt; Todo &lt;/strong&gt; í stillingunum!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5770"/>
+<location filename="../mainwindow.cpp" line="5769"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Fann &lt;strong&gt;%n &lt;/strong&gt; tilfelli af einhverju hugtaki &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
@@ -3257,79 +3257,79 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6327"/>
+<location filename="../mainwindow.cpp" line="6326"/>
 <source>Note folders</source>
 <translation>Athugaðu möppur</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6450"/>
+<location filename="../mainwindow.cpp" line="6449"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>Athugasemdarútgáfur eru nú hlaðnar af ownCloud netþjóni</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6467"/>
+<location filename="../mainwindow.cpp" line="6466"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Ruslaseðlar eru nú hlaðnir af þinn ownCloud netþjón</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6716"/>
+<location filename="../mainwindow.cpp" line="6715"/>
 <source>Inserted text as text attachment file</source>
 <translation type="unfinished">Inserted text as text attachment file</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6868"/>
+<location filename="../mainwindow.cpp" line="6867"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>Athugasemd þín verður afkóðuð og geymd sem einfaldur texti aftur. Hafðu í huga að ódulkóðaða seðillinn verður hugsanlega samstilltur við netþjóninn þinn og viðkvæmur texti kann að verða afhjúpaður! &lt;br/&gt; Viltu afkóða nótuna þína?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6965"/>
+<location filename="../mainwindow.cpp" line="6964"/>
 <source>Markdown files</source>
 <translation>Markdown skrár</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6979"/>
+<location filename="../mainwindow.cpp" line="6978"/>
 <source>Export attached files</source>
 <translation type="unfinished">Export attached files</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6980"/>
+<location filename="../mainwindow.cpp" line="6979"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7014"/>
+<location filename="../mainwindow.cpp" line="7013"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>Staða bókamerkja við rifa %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7029"/>
+<location filename="../mainwindow.cpp" line="7028"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>Hoppaði í bókamerkisstöðu á rauf %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7213"/>
-<location filename="../mainwindow.cpp" line="7283"/>
+<location filename="../mainwindow.cpp" line="7212"/>
+<location filename="../mainwindow.cpp" line="7282"/>
 <source>Inserting image</source>
 <translation>Setur inn mynd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7218"/>
-<location filename="../mainwindow.cpp" line="7287"/>
+<location filename="../mainwindow.cpp" line="7217"/>
+<location filename="../mainwindow.cpp" line="7286"/>
 <source>Done inserting image</source>
 <translation>Lokið með að setja mynd inn</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7220"/>
+<location filename="../mainwindow.cpp" line="7219"/>
 <source>Inserting attachment</source>
 <translation>Setur viðhengi í</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7225"/>
+<location filename="../mainwindow.cpp" line="7224"/>
 <source>Done inserting attachment</source>
 <translation>Lokið með viðhengi</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7237"/>
+<location filename="../mainwindow.cpp" line="7236"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>%n athugasemd afrituð í %1</numerusform>
@@ -3337,7 +3337,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7247"/>
+<location filename="../mainwindow.cpp" line="7246"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>Ekki tókst að afrita %n athugasemd (líklega þegar til)</numerusform>
@@ -3345,7 +3345,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7257"/>
+<location filename="../mainwindow.cpp" line="7256"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>Afrit af %n athugasemd sleppt (engin merking eða textaskrá eða ekki læsileg)</numerusform>
@@ -3353,215 +3353,215 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7270"/>
+<location filename="../mainwindow.cpp" line="7269"/>
 <source>Saving temporary image</source>
 <translation>Vistar tímabundna mynd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6699"/>
-<location filename="../mainwindow.cpp" line="7289"/>
+<location filename="../mainwindow.cpp" line="6698"/>
+<location filename="../mainwindow.cpp" line="7288"/>
 <source>Temporary file can't be opened</source>
 <translation>Ekki er hægt að opna tímabundna skrá</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7344"/>
+<location filename="../mainwindow.cpp" line="7343"/>
 <source>Downloading %1</source>
 <translation>Sækir %1 niður</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7516"/>
+<location filename="../mainwindow.cpp" line="7515"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Núllstilla leturstærð á %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8298"/>
+<location filename="../mainwindow.cpp" line="8297"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>Fjarlægðu merkið '%1' úr núverandi athugasemd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8299"/>
+<location filename="../mainwindow.cpp" line="8298"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>Fjarlægðu merkið '%1' úr núverandi tilkynningu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8530"/>
+<location filename="../mainwindow.cpp" line="8529"/>
 <source>Rename tag</source>
 <translation>Endurnefna merki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8531"/>
+<location filename="../mainwindow.cpp" line="8530"/>
 <source>Assign color</source>
 <translation>Úthlutaðu lit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8532"/>
+<location filename="../mainwindow.cpp" line="8531"/>
 <source>Disable color</source>
 <translation>Slökkva á lit</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8536"/>
+<location filename="../mainwindow.cpp" line="8535"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;Færa merki í…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8747"/>
+<location filename="../mainwindow.cpp" line="8746"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>Færðu þig að rótinni</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9321"/>
+<location filename="../mainwindow.cpp" line="9320"/>
 <source>The scripting engine was reloaded</source>
 <translation>Skriftarvélin var endurhlaðin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9355"/>
+<location filename="../mainwindow.cpp" line="9354"/>
 <source>HTML files</source>
 <translation>HTML skrár</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9699"/>
+<location filename="../mainwindow.cpp" line="9698"/>
 <source>Jump to the note's subfolder</source>
 <translation>Fara í undirmöppu athugasemdarinnar
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9759"/>
+<location filename="../mainwindow.cpp" line="9758"/>
 <source>Open selected notes in tabs</source>
 <translation type="unfinished">Open selected notes in tabs</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11290"/>
+<location filename="../mainwindow.cpp" line="11289"/>
 <source>A script update was found!</source>
 <translation>Handrit uppfærsla fannst!
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11296"/>
+<location filename="../mainwindow.cpp" line="11295"/>
 <source>Script updates</source>
 <translation>Handrit uppfærslur
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11297"/>
+<location filename="../mainwindow.cpp" line="11296"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>Uppfærslur á forskriftunum þínum fundust í handritageymslunni! Viltu uppfæra þá?
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11312"/>
+<location filename="../mainwindow.cpp" line="11311"/>
 <source>No script updates were found</source>
 <translation>Engar handritsuppfærslur fundust
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11956"/>
+<location filename="../mainwindow.cpp" line="11964"/>
 <source>Toggle note stickiness</source>
 <translation>Skiptu um þéttleika minnismiða
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11962"/>
+<location filename="../mainwindow.cpp" line="11970"/>
 <source>Close other note tabs</source>
 <translation>Lokaðu öðrum athugasemdaflipum</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9642"/>
-<location filename="../mainwindow.cpp" line="9842"/>
+<location filename="../mainwindow.cpp" line="9641"/>
+<location filename="../mainwindow.cpp" line="9841"/>
 <source>Rename note</source>
 <translation>Endurnefna athugasemd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7620"/>
+<location filename="../mainwindow.cpp" line="7619"/>
 <source>Show all notes (%1)</source>
 <translation type="unfinished">Show all notes (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7781"/>
+<location filename="../mainwindow.cpp" line="7780"/>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9644"/>
+<location filename="../mainwindow.cpp" line="9643"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>Leyfir þér að endurnefna heiti nótunnar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9658"/>
+<location filename="../mainwindow.cpp" line="9657"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;Færa minnismiða til…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9659"/>
+<location filename="../mainwindow.cpp" line="9658"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;Afritaðu minnispunkta til…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9703"/>
+<location filename="../mainwindow.cpp" line="9702"/>
 <source>Move notes to subfolder…</source>
 <translation>Færa minnismiða í undirmöppu…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9707"/>
+<location filename="../mainwindow.cpp" line="9706"/>
 <source>Copy notes to subfolder…</source>
 <translation>Afritaðu minnispunkta í undirmöppu…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9715"/>
+<location filename="../mainwindow.cpp" line="9714"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;Merkið valda glósur með…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9739"/>
+<location filename="../mainwindow.cpp" line="9738"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Fjarlægðu merki úr völdum athugasemdum…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9842"/>
+<location filename="../mainwindow.cpp" line="9841"/>
 <source>Name:</source>
 <translation>Nafn:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9854"/>
+<location filename="../mainwindow.cpp" line="9853"/>
 <source>Note renaming not enabled!</source>
 <translation>Athugið að endurnefna er ekki virkt!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10527"/>
+<location filename="../mainwindow.cpp" line="10526"/>
 <source>Create new workspace</source>
 <translation>Búðu til nýjan vinnusvæði</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10528"/>
-<location filename="../mainwindow.cpp" line="10799"/>
+<location filename="../mainwindow.cpp" line="10527"/>
+<location filename="../mainwindow.cpp" line="10798"/>
 <source>Workspace name:</source>
 <translation>Heiti vinnusvæðis:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10648"/>
+<location filename="../mainwindow.cpp" line="10647"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>fullur</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10655"/>
+<location filename="../mainwindow.cpp" line="10654"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>lágmarks</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10758"/>
+<location filename="../mainwindow.cpp" line="10757"/>
 <source>Remove the current workspace?</source>
 <translation>Fjarlægja núverandi vinnusvæði?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10798"/>
+<location filename="../mainwindow.cpp" line="10797"/>
 <source>Rename workspace</source>
 <translation>Endurnefna vinnusvæði</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10956"/>
+<location filename="../mainwindow.cpp" line="10955"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3570,42 +3570,42 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11229"/>
+<location filename="../mainwindow.cpp" line="11228"/>
 <source>Disallow all note editing</source>
 <translation>Bannaðu alla klippagerð</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11461"/>
+<location filename="../mainwindow.cpp" line="11460"/>
 <source>Select text files to import</source>
 <translation>Veldu textaskrár sem á að flytja inn</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11491"/>
+<location filename="../mainwindow.cpp" line="11490"/>
 <source>Importing: %1</source>
 <translation>Flytur inn: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11556"/>
+<location filename="../mainwindow.cpp" line="11555"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>Athugasemd fyrirsögn '%1' var afrituð á klemmuspjaldið</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11650"/>
+<location filename="../mainwindow.cpp" line="11649"/>
 <source>Leave full-screen mode</source>
 <translation>Skildu á öllum skjánum</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11836"/>
+<location filename="../mainwindow.cpp" line="11835"/>
 <source>Custom editor width</source>
 <translation>Sérsniðin ritstjóri breidd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11836"/>
+<location filename="../mainwindow.cpp" line="11835"/>
 <source>Characters:</source>
 <translation>Stafir:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8268"/>
+<location filename="../mainwindow.cpp" line="8267"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n athugasemd valin</numerusform>
@@ -3614,7 +3614,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2451"/>
-<location filename="../mainwindow.cpp" line="11230"/>
+<location filename="../mainwindow.cpp" line="11229"/>
 <source>Allow all note editing</source>
 <translation>Leyfa allar athugasemdir</translation>
 </message>
@@ -3655,74 +3655,74 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <translation>Stilltu minnismiða möppuna. Mappa yfir núverandi athugasemdir: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5327"/>
+<location filename="../mainwindow.cpp" line="5326"/>
 <source>Print note</source>
 <translation>Prenta athugasemd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5384"/>
+<location filename="../mainwindow.cpp" line="5383"/>
 <source>Letter</source>
 <translation>Bréf</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5414"/>
+<location filename="../mainwindow.cpp" line="5413"/>
 <source>Portrait</source>
 <translation>Andlitsmynd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5414"/>
+<location filename="../mainwindow.cpp" line="5413"/>
 <source>Landscape</source>
 <translation>Landslag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5419"/>
+<location filename="../mainwindow.cpp" line="5418"/>
 <source>Orientation</source>
 <translation>Stefnumörkun</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5419"/>
+<location filename="../mainwindow.cpp" line="5418"/>
 <source>Orientation:</source>
 <translation>Stefnumörkun:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5442"/>
+<location filename="../mainwindow.cpp" line="5441"/>
 <source>Export current note as PDF</source>
 <translation>Flytja út núverandi athugasemd sem PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5541"/>
+<location filename="../mainwindow.cpp" line="5540"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Þú hefur ekki valið neina todo lista. &lt;br /&gt; Vinsamlegast athugaðu stillingarnar þínar &lt;strong&gt; Todo &lt;/strong&gt; í stillingunum!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6309"/>
+<location filename="../mainwindow.cpp" line="6308"/>
 <source>Open QOwnNotes</source>
 <translation>Opið QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6137"/>
-<location filename="../mainwindow.cpp" line="6359"/>
-<location filename="../mainwindow.cpp" line="9638"/>
+<location filename="../mainwindow.cpp" line="6136"/>
+<location filename="../mainwindow.cpp" line="6358"/>
+<location filename="../mainwindow.cpp" line="9637"/>
 <source>New note</source>
 <translation>Ný athugasemd</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6376"/>
+<location filename="../mainwindow.cpp" line="6375"/>
 <source>Recent notes</source>
 <translation>Nýlegar athugasemdir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6392"/>
+<location filename="../mainwindow.cpp" line="6391"/>
 <source>Show todo lists</source>
 <translation>Sýna todo lista</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6404"/>
+<location filename="../mainwindow.cpp" line="6403"/>
 <source>Recent tasks</source>
 <translation>Nýleg verkefni</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6425"/>
+<location filename="../mainwindow.cpp" line="6424"/>
 <source>Quit</source>
 <translation>Hættu</translation>
 </message>
@@ -3734,31 +3734,31 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <translation>Athugasemd möppu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8919"/>
-<location filename="../mainwindow.cpp" line="8986"/>
+<location filename="../mainwindow.cpp" line="8918"/>
+<location filename="../mainwindow.cpp" line="8985"/>
 <source>Copy to note folder</source>
 <translation>Afritaðu í minnismiða</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8919"/>
-<location filename="../mainwindow.cpp" line="8987"/>
+<location filename="../mainwindow.cpp" line="8918"/>
+<location filename="../mainwindow.cpp" line="8986"/>
 <source>Move to note folder</source>
 <translation>Færa í minnismiða</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8920"/>
-<location filename="../mainwindow.cpp" line="8988"/>
+<location filename="../mainwindow.cpp" line="8919"/>
+<location filename="../mainwindow.cpp" line="8987"/>
 <source>Copy to this subfolder</source>
 <translation>Afritaðu í þennan undirmöppu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8921"/>
-<location filename="../mainwindow.cpp" line="8989"/>
+<location filename="../mainwindow.cpp" line="8920"/>
+<location filename="../mainwindow.cpp" line="8988"/>
 <source>Move to this subfolder</source>
 <translation>Fara í þessa undirmöppu</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9033"/>
+<location filename="../mainwindow.cpp" line="9032"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Færa %n valinn athugasemd til að skoða undirmöppu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3766,13 +3766,13 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5219"/>
-<location filename="../mainwindow.cpp" line="11475"/>
+<location filename="../mainwindow.cpp" line="5218"/>
+<location filename="../mainwindow.cpp" line="11474"/>
 <source>Cancel</source>
 <translation>Hætta við</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9129"/>
+<location filename="../mainwindow.cpp" line="9128"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n athugasemd var færð í undirmöppuna „%2“</numerusform>
@@ -3780,7 +3780,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9153"/>
+<location filename="../mainwindow.cpp" line="9152"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Afritaðu %n valinn glósu til að athuga undirmöppu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3788,7 +3788,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9228"/>
+<location filename="../mainwindow.cpp" line="9227"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n athugasemd var afrituð í athugasemd undirmöppuna "%2"</numerusform>
@@ -3796,47 +3796,47 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9766"/>
+<location filename="../mainwindow.cpp" line="9765"/>
 <source>Open note in external editor</source>
 <translation>Opin athugasemd í utanaðkomandi ritstjóra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9770"/>
+<location filename="../mainwindow.cpp" line="9769"/>
 <source>Show note in file manager</source>
 <translation>Sýna athugasemd í skjalastjóra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9855"/>
+<location filename="../mainwindow.cpp" line="9854"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>Ef þú vilt endurnefna seðilinn þarftu að virkja þann möguleika að leyfa nafnsskráarnafninu að vera frábrugðið fyrirsögninni.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10045"/>
+<location filename="../mainwindow.cpp" line="10044"/>
 <source>Create a new folder</source>
 <translation>Búðu til nýja möppu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10046"/>
+<location filename="../mainwindow.cpp" line="10045"/>
 <source>Folder name:</source>
 <translation>Mappanafn:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7654"/>
+<location filename="../mainwindow.cpp" line="7653"/>
 <source>show all untagged notes (%1)</source>
 <translation>sýna allar ómerktar athugasemdir (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7656"/>
+<location filename="../mainwindow.cpp" line="7655"/>
 <source>Untagged notes</source>
 <translation>Ómerktar athugasemdir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9356"/>
+<location filename="../mainwindow.cpp" line="9355"/>
 <source>Export current note as HTML file</source>
 <translation>Flytja út núverandi athugasemd sem HTML skjal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5393"/>
+<location filename="../mainwindow.cpp" line="5392"/>
 <source>Page size</source>
 <translation>Stærð síðu</translation>
 </message>
@@ -3846,22 +3846,22 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <translation>hætta tækjastikunni</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5393"/>
+<location filename="../mainwindow.cpp" line="5392"/>
 <source>Page size:</source>
 <translation>Stærð síðu:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5502"/>
+<location filename="../mainwindow.cpp" line="5501"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes mun rekja nafnlaus notkunargögn, sem hjálpar til við að ákveða hvaða hluta QOwnNotes bæta næst og finna og laga villur. Þú getur gert þá hegðun óvirkan í stillingum.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5506"/>
+<location filename="../mainwindow.cpp" line="5505"/>
 <source>&amp;Ok</source>
 <translation>&amp;Allt í lagi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9648"/>
+<location filename="../mainwindow.cpp" line="9647"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;Fjarlægðu minnispunkta</translation>
 </message>
@@ -3877,7 +3877,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2952"/>
-<location filename="../mainwindow.cpp" line="6075"/>
+<location filename="../mainwindow.cpp" line="6074"/>
 <source>Stored current note to disk</source>
 <translation>Vistað núverandi athugasemd á disknum</translation>
 </message>
@@ -3900,47 +3900,47 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7623"/>
+<location filename="../mainwindow.cpp" line="7622"/>
 <source>All notes</source>
 <translation>Allar athugasemdir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8522"/>
+<location filename="../mainwindow.cpp" line="8521"/>
 <source>&amp;Add tag</source>
 <translation>&amp;Bættu við merki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8570"/>
+<location filename="../mainwindow.cpp" line="8569"/>
 <source>Tag could not be created!</source>
 <translation>Ekki var hægt að búa til merki!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8749"/>
+<location filename="../mainwindow.cpp" line="8748"/>
 <source>Move to this tag</source>
 <translation>Færið í þetta merki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8784"/>
+<location filename="../mainwindow.cpp" line="8783"/>
 <source>Tag this</source>
 <translation>Merktu þetta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8809"/>
+<location filename="../mainwindow.cpp" line="8808"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>Ekki hægt að færa merkið '%1' yfir í þetta merki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8858"/>
+<location filename="../mainwindow.cpp" line="8857"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>Flutti merkið '%1' í nýtt merki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8533"/>
+<location filename="../mainwindow.cpp" line="8532"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;Fjarlægðu merki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5540"/>
+<location filename="../mainwindow.cpp" line="5539"/>
 <source>No selected todo lists!</source>
 <translation>Engir valdir todo listar!</translation>
 </message>
@@ -4067,7 +4067,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2953"/>
-<location filename="../mainwindow.cpp" line="6076"/>
+<location filename="../mainwindow.cpp" line="6075"/>
 <source>Current note could not be stored to disk</source>
 <translation>Ekki var hægt að geyma núverandi athugasemd á disknum</translation>
 </message>
@@ -4108,7 +4108,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5766"/>
+<location filename="../mainwindow.cpp" line="5765"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Fann &lt;strong&gt;%n&lt;/strong&gt; tilfelli af &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -4116,61 +4116,61 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6137"/>
+<location filename="../mainwindow.cpp" line="6136"/>
 <source>Note headline</source>
 <translation>Athugið fyrirsögn</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7300"/>
+<location filename="../mainwindow.cpp" line="7299"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation type="unfinished">Paste &amp;HTML as markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7301"/>
+<location filename="../mainwindow.cpp" line="7300"/>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7356"/>
+<location filename="../mainwindow.cpp" line="7355"/>
 <source>Downloading images finished</source>
 <translation>Niðurhali er lokið</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5506"/>
-<location filename="../mainwindow.cpp" line="5521"/>
-<location filename="../mainwindow.cpp" line="5544"/>
-<location filename="../mainwindow.cpp" line="9858"/>
+<location filename="../mainwindow.cpp" line="5505"/>
+<location filename="../mainwindow.cpp" line="5520"/>
+<location filename="../mainwindow.cpp" line="5543"/>
+<location filename="../mainwindow.cpp" line="9857"/>
 <source>Open &amp;settings</source>
 <translation>Opna &amp;stillingar</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1766"/>
-<location filename="../mainwindow.cpp" line="11627"/>
+<location filename="../mainwindow.cpp" line="11626"/>
 <source>leave</source>
 <translation>fara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6794"/>
+<location filename="../mainwindow.cpp" line="6793"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>Vinsamlegast sláðu inn &lt;strong&gt;lykilorðið &lt;strong&gt; þitt til að dulkóða seðilinn. &lt;br/&gt; Hafðu í huga að þú verður að &lt;strong&gt; muna &lt;/ strong&gt; lykilorðið þitt til að lesa innihald nótunnar &lt;br/&gt; og það þú getur &lt;strong&gt; aðeins &lt;/strong&gt; gert það &lt;strong&gt; í QOwnNotes &lt;/strong&gt;!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6867"/>
+<location filename="../mainwindow.cpp" line="6866"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>Afkóðaðu athugasemdina og geymdu hana sem texta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6872"/>
+<location filename="../mainwindow.cpp" line="6871"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;Afkóða</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6897"/>
+<location filename="../mainwindow.cpp" line="6896"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br/&gt;Þú verður að geta breytt dulkóðuðu athugasemdinni þinni.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6966"/>
+<location filename="../mainwindow.cpp" line="6965"/>
 <source>Export current note as Markdown file</source>
 <translation>Flytja út núverandi athugasemd sem Markdown skjal</translation>
 </message>
@@ -4703,17 +4703,17 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4315"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4320"/>
 <source>New connection</source>
 <translation>Ný tenging</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4515"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4520"/>
 <source>Login flow succeeded</source>
 <translation type="unfinished">Login flow succeeded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4516"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4521"/>
 <source>Username and password were set successfully!</source>
 <translation type="unfinished">Username and password were set successfully!</translation>
 </message>
@@ -5795,7 +5795,7 @@ Viltu setja það upp samt?</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4066"/>
 <location filename="../dialogs/settingsdialog.ui" line="5492"/>
-<location filename="../dialogs/settingsdialog.ui" line="6044"/>
+<location filename="../dialogs/settingsdialog.ui" line="6066"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>Þú gætir lent í vandræðum með samstillingu við eldri útgáfur af ownCloud samstillingu þegar þú ferð langt undir 10 sek.
@@ -5818,10 +5818,10 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4434"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2340"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2348"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4385"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2346"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2354"/>
 <location filename="../dialogs/settingsdialog.cpp" line="4390"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4395"/>
 <source>Database</source>
 <translation>Gagnagrunnur</translation>
 </message>
@@ -5842,7 +5842,7 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4389"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2414"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2420"/>
 <source>Clear app data and exit</source>
 <translation>Hreinsaðu forritsgögn og lokaðu</translation>
 </message>
@@ -6437,20 +6437,20 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4224"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4062"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4067"/>
 <source>Reset message boxes</source>
 <translation>Núllstilla skilaboðareitina</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4411"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4128"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4149"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4133"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4154"/>
 <source>Import settings</source>
 <translation>Flytja inn stillingar</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4418"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4094"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4099"/>
 <source>Export settings</source>
 <translation>Flytja út stillingar</translation>
 </message>
@@ -6765,141 +6765,152 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
 <translation>Shiga ciki:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5801"/>
-<location filename="../dialogs/settingsdialog.ui" line="5810"/>
+<location filename="../dialogs/settingsdialog.ui" line="5718"/>
+<location filename="../dialogs/settingsdialog.ui" line="5823"/>
+<location filename="../dialogs/settingsdialog.ui" line="5832"/>
 <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>Regluleg orðatiltæki fyrir undirmöppur til að hunsa, aðskilin með ";"
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5804"/>
+<location filename="../dialogs/settingsdialog.ui" line="5721"/>
+<source>Ignored note files</source>
+<translation type="unfinished">Ignored note files</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="5727"/>
+<source>Regular expressions of note files to ignore, separated by ";"</source>
+<translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="5826"/>
 <source>Ignored subfolders</source>
 <translation>Hunsa undirmöppur
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5820"/>
+<location filename="../dialogs/settingsdialog.ui" line="5842"/>
 <source>Reset ignored subfolders</source>
 <translation>Endurstilla hunsaða möppur sem hunsaðar voru
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5856"/>
+<location filename="../dialogs/settingsdialog.ui" line="5878"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
 <translation>Endurheimtu opna minnispunkta við upphaf umsóknar og þegar skipt er um möppur</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5879"/>
+<location filename="../dialogs/settingsdialog.ui" line="5901"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
 <translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5948"/>
+<location filename="../dialogs/settingsdialog.ui" line="5970"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
 <translation>Fela 'fjölda skýringa' með leitarorðum (eykur árangur)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5984"/>
+<location filename="../dialogs/settingsdialog.ui" line="6006"/>
 <source>Show the number of matches in each note</source>
 <translation>Sýna fjölda leikja í hverri athugasemd</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6383"/>
+<location filename="../dialogs/settingsdialog.ui" line="6405"/>
 <source>Command snippets</source>
 <translation type="unfinished">Command snippets</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6392"/>
+<location filename="../dialogs/settingsdialog.ui" line="6414"/>
 <source>Tag name for commands notes</source>
 <translation type="unfinished">Tag name for commands notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6399"/>
+<location filename="../dialogs/settingsdialog.ui" line="6421"/>
 <source>Commands tag:</source>
 <translation type="unfinished">Commands tag:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6419"/>
+<location filename="../dialogs/settingsdialog.ui" line="6441"/>
 <source>Commands note name:</source>
 <translation type="unfinished">Commands note name:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6429"/>
+<location filename="../dialogs/settingsdialog.ui" line="6451"/>
 <source>Note name for adding new commands</source>
 <translation type="unfinished">Note name for adding new commands</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6469"/>
+<location filename="../dialogs/settingsdialog.ui" line="6491"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
 <translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6506"/>
+<location filename="../dialogs/settingsdialog.ui" line="6528"/>
 <source>QOwnNotes web application</source>
 <translation type="unfinished">QOwnNotes web application</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6596"/>
+<location filename="../dialogs/settingsdialog.ui" line="6618"/>
 <source>Server URL:</source>
 <translation type="unfinished">Server URL:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6653"/>
+<location filename="../dialogs/settingsdialog.ui" line="6675"/>
 <source>Show QR code</source>
 <translation type="unfinished">Show QR code</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6545"/>
+<location filename="../dialogs/settingsdialog.ui" line="6567"/>
 <source>Security token:</source>
 <translation type="unfinished">Security token:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6348"/>
+<location filename="../dialogs/settingsdialog.ui" line="6370"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
 <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6364"/>
+<location filename="../dialogs/settingsdialog.ui" line="6386"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
 <translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6406"/>
+<location filename="../dialogs/settingsdialog.ui" line="6428"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6603"/>
+<location filename="../dialogs/settingsdialog.ui" line="6625"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
 <translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6535"/>
+<location filename="../dialogs/settingsdialog.ui" line="6557"/>
 <source>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation type="unfinished">A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6613"/>
+<location filename="../dialogs/settingsdialog.ui" line="6635"/>
 <source>Copy security token to clipboard</source>
 <translation type="unfinished">Copy security token to clipboard</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6566"/>
+<location filename="../dialogs/settingsdialog.ui" line="6588"/>
 <source>Generate new security token</source>
 <translation type="unfinished">Generate new security token</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6627"/>
+<location filename="../dialogs/settingsdialog.ui" line="6649"/>
 <source>Reset the URL to default</source>
 <translation type="unfinished">Reset the URL to default</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6456"/>
+<location filename="../dialogs/settingsdialog.ui" line="6478"/>
 <source>QOwnNotes web application support</source>
 <translation type="unfinished">QOwnNotes web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6462"/>
+<location filename="../dialogs/settingsdialog.ui" line="6484"/>
 <source>Enable web application support</source>
 <translation type="unfinished">Enable web application support</translation>
 </message>
@@ -6909,177 +6920,177 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
 <translation>Athugasemdalisti</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5638"/>
+<location filename="../dialogs/settingsdialog.ui" line="5652"/>
 <source>Show notes in the note list with preview</source>
 <translation>Sýna minnismiða á minnispunktalistanum með forskoðun</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5711"/>
+<location filename="../dialogs/settingsdialog.ui" line="5682"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
 <translation>Í staðinn fyrir minnispunkta skal nota nótutré með öllum undirmöppunum (ef kveikt er á þeim fyrir minnismiða)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5994"/>
+<location filename="../dialogs/settingsdialog.ui" line="6016"/>
 <source>Note folder panel</source>
 <translation>Athugaðu möppuspjaldið
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6000"/>
+<location filename="../dialogs/settingsdialog.ui" line="6022"/>
 <source>Show note folders as buttons instead of in a select box</source>
 <translation>Sýna minnismöppur sem hnappa í staðinn fyrir valkassa</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6106"/>
+<location filename="../dialogs/settingsdialog.ui" line="6128"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
 <translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6142"/>
+<location filename="../dialogs/settingsdialog.ui" line="6164"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
 <translation>Hægt er að kveikja og slökkva á spjöldum í &lt;i&gt; aðalvalmynd &lt;i&gt; Window / Panels &lt;/i&gt; og einnig er hægt að stilla mismunandi &lt;i&gt; Workspaces &lt;/i&gt; fyrir mismunandi pallborðsstillingar.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6219"/>
+<location filename="../dialogs/settingsdialog.ui" line="6241"/>
 <source>Bookmarks</source>
 <translation>Bókamerki</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6225"/>
-<location filename="../dialogs/settingsdialog.ui" line="6389"/>
+<location filename="../dialogs/settingsdialog.ui" line="6247"/>
+<location filename="../dialogs/settingsdialog.ui" line="6411"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
 <translation>Minnismiðar með þessu merki verða notaðir til að sækja bókamerki</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6228"/>
+<location filename="../dialogs/settingsdialog.ui" line="6250"/>
 <source>Tag name for bookmarks notes</source>
 <translation>Merkið heiti fyrir minnismiða bókamerkja</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6235"/>
+<location filename="../dialogs/settingsdialog.ui" line="6257"/>
 <source>Bookmarks tag:</source>
 <translation>Bókamerkjamerki:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6242"/>
+<location filename="../dialogs/settingsdialog.ui" line="6264"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>Sjálfgefið er að vafraviðbótin muni sýna alla tengla á núverandi athugasemd. Þú getur einnig látið það sjá sérstaka bókamerkjatengla með skýringum með ákveðnu merki. Smelltu á &lt;a href="%1"&gt; hér &lt;/a&gt; til að fá frekari upplýsingar um setningafræði við bókamerkjatengil.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6255"/>
+<location filename="../dialogs/settingsdialog.ui" line="6277"/>
 <source>Bookmarks note name:</source>
 <translation>Heiti bókamerkja:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6262"/>
-<location filename="../dialogs/settingsdialog.ui" line="6426"/>
+<location filename="../dialogs/settingsdialog.ui" line="6284"/>
+<location filename="../dialogs/settingsdialog.ui" line="6448"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
 <translation>Þessi athugasemd verður notuð til að bæta við nýjum bókamerkjum úr vafraviðbótinni</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6265"/>
+<location filename="../dialogs/settingsdialog.ui" line="6287"/>
 <source>Note name for adding new bookmarks</source>
 <translation>Athugaðu nafn til að bæta við nýjum bókamerkjum</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6275"/>
+<location filename="../dialogs/settingsdialog.ui" line="6297"/>
 <source>Web socket server</source>
 <translation>Vefur fals miðlara</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6281"/>
+<location filename="../dialogs/settingsdialog.ui" line="6303"/>
 <source>Socket server port:</source>
 <translation>Tengi netþjóns:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6301"/>
+<location filename="../dialogs/settingsdialog.ui" line="6323"/>
 <source>Reset the socket server port</source>
 <translation type="unfinished">Reset the socket server port</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6315"/>
-<location filename="../dialogs/settingsdialog.ui" line="6552"/>
+<location filename="../dialogs/settingsdialog.ui" line="6337"/>
+<location filename="../dialogs/settingsdialog.ui" line="6574"/>
 <source>Show security token</source>
 <translation>Sýna öryggismerki</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6335"/>
+<location filename="../dialogs/settingsdialog.ui" line="6357"/>
 <source>Web socket server support</source>
 <translation>Stuðningur við netsendingarþjón</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6341"/>
+<location filename="../dialogs/settingsdialog.ui" line="6363"/>
 <source>Enable socket server</source>
 <translation>Virkja fals miðlara</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5840"/>
+<location filename="../dialogs/settingsdialog.ui" line="5862"/>
 <source>Note edit panel</source>
 <translation>Athugaðu breyta spjaldið</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5846"/>
+<location filename="../dialogs/settingsdialog.ui" line="5868"/>
 <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
 <translation>Ef þetta er óvirk ertu fær um að búa til flóknari skipulag pallborðs, en öll spjöld verða breytt ef stærð gluggans er breytt</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5849"/>
+<location filename="../dialogs/settingsdialog.ui" line="5871"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
 <translation>Notaðu athugasemdarbreytispjaldið sem fastan aðalbúnað til að breyta stærð ef glugginn eða önnur spjöld eru breytt</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5971"/>
+<location filename="../dialogs/settingsdialog.ui" line="5993"/>
 <source>Note search panel</source>
 <translation>Athugaðu leitarspjald</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5977"/>
+<location filename="../dialogs/settingsdialog.ui" line="5999"/>
 <source>Disable auto-completion of previous searches</source>
 <translation>Slökkva á sjálfvirkri útfyllingu fyrri leitar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5866"/>
+<location filename="../dialogs/settingsdialog.ui" line="5888"/>
 <source>Navigation panel</source>
 <translation>Leiðsögn pallborð</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5872"/>
+<location filename="../dialogs/settingsdialog.ui" line="5894"/>
 <source>Hide navigation item search bar</source>
 <translation>Fela leitarstiku yfir leiðsöguhlut</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6014"/>
+<location filename="../dialogs/settingsdialog.ui" line="6036"/>
 <source>Local trash settings</source>
 <translation>Staðbundnar ruslstillingar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6048"/>
+<location filename="../dialogs/settingsdialog.ui" line="6070"/>
 <source>Remove trashed notes after:</source>
 <translation>Fjarlægðu ruslpunkta eftir:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6055"/>
+<location filename="../dialogs/settingsdialog.ui" line="6077"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
 <translation>daga</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6074"/>
+<location filename="../dialogs/settingsdialog.ui" line="6096"/>
 <source>Automatically remove trashed notes after a certain time</source>
 <translation>Fjarlægðu sjálfkrafa ruslabréf eftir ákveðinn tíma</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6100"/>
+<location filename="../dialogs/settingsdialog.ui" line="6122"/>
 <source>Local trash support</source>
 <translation>Local rusl stuðning</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6123"/>
+<location filename="../dialogs/settingsdialog.ui" line="6145"/>
 <source>Layout selector</source>
 <translation>Skipulagaval</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6129"/>
+<location filename="../dialogs/settingsdialog.ui" line="6151"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
 <translation>Þú getur stillt nýtt skipulag hér. Hafðu í huga að þú getur alltaf breytt staðsetningu spjaldanna með &lt;i&gt; Taka úr lás &lt;/i&gt; hnappinn.</translation>
 </message>
@@ -7106,12 +7117,12 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
 <translation>Ef þú notar þessa stillingu muntu fá nýja valmyndaratriði til að sýna git-útgáfurnar ef þú smellir á hægrismellt á athugasemd.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5652"/>
+<location filename="../dialogs/settingsdialog.ui" line="5645"/>
 <source>Show all notes of a tag including the notes of their children-tags</source>
 <translation>Sýna allar glósur af merkimiði þar með talnum af barnamerkjunum</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5645"/>
+<location filename="../dialogs/settingsdialog.ui" line="5638"/>
 <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
 <translation>Sýna allar minnispunkta í möppu þar á meðal undirmöppur þeirra (virkar aðeins ef kveikt er á undirmöppum)</translation>
 </message>
@@ -7126,35 +7137,35 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
 <translation>Ekki gleyma að gera git stuðning fyrir athugasemdarmöppurnar þínar og stilla nafn þitt og netfang fyrir Git viðskiptavininn þinn, til dæmis með þessum flugstöðvaskipunum:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5889"/>
+<location filename="../dialogs/settingsdialog.ui" line="5911"/>
 <source>Tags panel</source>
 <translation>Merkispjald</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5685"/>
-<location filename="../dialogs/settingsdialog.ui" line="5764"/>
-<location filename="../dialogs/settingsdialog.ui" line="5918"/>
+<location filename="../dialogs/settingsdialog.ui" line="5692"/>
+<location filename="../dialogs/settingsdialog.ui" line="5786"/>
+<location filename="../dialogs/settingsdialog.ui" line="5940"/>
 <source>Order</source>
 <translation>Pantaðu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5694"/>
-<location filename="../dialogs/settingsdialog.ui" line="5770"/>
-<location filename="../dialogs/settingsdialog.ui" line="5924"/>
+<location filename="../dialogs/settingsdialog.ui" line="5701"/>
+<location filename="../dialogs/settingsdialog.ui" line="5792"/>
+<location filename="../dialogs/settingsdialog.ui" line="5946"/>
 <source>Ascending</source>
 <translation>Stígandi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5701"/>
-<location filename="../dialogs/settingsdialog.ui" line="5777"/>
-<location filename="../dialogs/settingsdialog.ui" line="5931"/>
+<location filename="../dialogs/settingsdialog.ui" line="5708"/>
+<location filename="../dialogs/settingsdialog.ui" line="5799"/>
+<location filename="../dialogs/settingsdialog.ui" line="5953"/>
 <source>Descending</source>
 <translation>Lækkandi</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5659"/>
-<location filename="../dialogs/settingsdialog.ui" line="5734"/>
-<location filename="../dialogs/settingsdialog.ui" line="5895"/>
+<location filename="../dialogs/settingsdialog.ui" line="5756"/>
+<location filename="../dialogs/settingsdialog.ui" line="5917"/>
 <source>Sort</source>
 <translation>Raða</translation>
 </message>
@@ -7165,54 +7176,54 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5665"/>
-<location filename="../dialogs/settingsdialog.ui" line="5740"/>
-<location filename="../dialogs/settingsdialog.ui" line="5901"/>
+<location filename="../dialogs/settingsdialog.ui" line="5762"/>
+<location filename="../dialogs/settingsdialog.ui" line="5923"/>
 <source>Alphabetical</source>
 <translation>Stafrófsröð</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5908"/>
+<location filename="../dialogs/settingsdialog.ui" line="5930"/>
 <source>By last change / use</source>
 <translation>Eftir síðustu breytingu / notkun</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5941"/>
+<location filename="../dialogs/settingsdialog.ui" line="5963"/>
 <source>Hide 'Find or create tag' search</source>
 <translation>Fela leit 'Finndu eða búa til merki'</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5721"/>
+<location filename="../dialogs/settingsdialog.ui" line="5743"/>
 <source>Note subfolders panel</source>
 <translation>Athugaðu undirmöppur spjaldið</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5727"/>
+<location filename="../dialogs/settingsdialog.ui" line="5749"/>
 <source>Show with full path</source>
 <translation>Sýna með fullri leið</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5672"/>
-<location filename="../dialogs/settingsdialog.ui" line="5747"/>
+<location filename="../dialogs/settingsdialog.ui" line="5769"/>
 <source>By last change</source>
 <translation>Eftir síðustu breytingu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5757"/>
+<location filename="../dialogs/settingsdialog.ui" line="5779"/>
 <source>Show root folder name</source>
 <translation>Sýna heiti rótarmöppu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5787"/>
+<location filename="../dialogs/settingsdialog.ui" line="5809"/>
 <source>Hide 'Find or create note subfolder' search</source>
 <translation>Fela leit 'Finndu eða búa til undirmöppu athugasemda'</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5794"/>
+<location filename="../dialogs/settingsdialog.ui" line="5816"/>
 <source>Display note subfolders as full tree</source>
 <translation>Birta undirmöppur athugasemda sem fullt tré</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2956"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2962"/>
 <source>Search script repository</source>
 <translation>Leitar að geymslugeymslu</translation>
 </message>
@@ -7638,8 +7649,8 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2359"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4364"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2365"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4369"/>
 <source>Debug information</source>
 <translation>Kemba upplýsingar</translation>
 </message>
@@ -7679,17 +7690,17 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
 <translation>SOCKS5 umboð</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1539"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1543"/>
 <source>Automatic (needs restart)</source>
 <translation>Sjálfvirk (þarf endurræsingu)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1853"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1859"/>
 <source>Shortcut already assigned</source>
 <translation>Flýtileið þegar úthlutað</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2056"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2062"/>
 <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -7698,7 +7709,7 @@ QOwnNotesAPI version: %2</source>
 QOwnNotesAPI útgáfa: %2</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2069"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2075"/>
 <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -7709,143 +7720,143 @@ Connection error message: </source>
 Villuboð tengingar: </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2349"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2355"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
 <translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2360"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2366"/>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Vinsamlegast notaðu þetta ekki í útgáfusporanum, afritaðu upplýsingatexta um kembiforrit beint í málið.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2367"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2373"/>
 <source>Markdown files</source>
 <translation>Markdown skrár</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2395"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2401"/>
 <source>Disable usage tracking</source>
 <translation>Slökkva á mælingar á notkun</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2396"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2402"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Nafnlaus notkunargögn hjálpa til við að ákveða hvaða hluta QOwnNotes bæta næst og finna og laga villur. &lt;br/&gt; Vinsamlegast slökktu á þeim aðeins ef þú raunverulega getur ekki lifað með þeim. &lt;br/&gt; &lt;br/&gt; Slökktu virkilega á notkun mælingar?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2629"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2635"/>
 <source>new folder</source>
 <translation>ný mappa</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2663"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2669"/>
 <source>Remove note folder</source>
 <translation>Fjarlægðu minnismiða</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2664"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2670"/>
 <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Fjarlægja núverandi athugasemdarmöppu &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2745"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2751"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>Vinsamlegast veldu möppuna þar sem glósurnar þínar verða vistaðar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2780"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2786"/>
 <source>Loading folders from server</source>
 <translation>Hleður möppum af netþjóninum</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2795"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2801"/>
 <source>No more folders were found in the current folder</source>
 <translation>Engar fleiri möppur fundust í núverandi möppu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2868"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2874"/>
 <source>Loading folders in '%1' from server</source>
 <translation>Hleður möppum í '%1' frá netþjóninum</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2941"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2947"/>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
 <translation>Skoðaðu &lt;a href="%1"&gt; handritagögn &lt;/a&gt; til að byrja hratt.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2945"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2951"/>
 <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
 <translation>Ef þú þarft aðgang að ákveðinni virkni í QOwnNotes vinsamlegast opnaðu málið á &lt;a href="%1"&gt; QOwnNotes útgáfusíðunni &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2967"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2973"/>
 <source>Check for script updates</source>
 <translation>Leitaðu að handritsuppfærslum</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2974"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2980"/>
 <source>Add local script</source>
 <translation>Bættu við handriti á staðnum</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2978"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2984"/>
 <source>Add an existing, local script</source>
 <translation>Bættu við núverandi staðbundnu handriti</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3323"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3329"/>
 <source>Please enter a new note file extension:</source>
 <translation type="unfinished">Please enter a new note file extension:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3357"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3363"/>
 <source>Markdown file</source>
 <translation type="unfinished">Markdown file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3359"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3365"/>
 <source>Plain text file</source>
 <translation type="unfinished">Plain text file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3377"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3383"/>
 <source>Remove note file extension</source>
 <translation type="unfinished">Remove note file extension</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4148"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4098"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4153"/>
 <source>INI files</source>
 <translation>INI skrár</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4129"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4134"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>Viltu virkilega flytja inn stillingar? Núverandi stillingar þínar verða fjarlægðar og ekki er víst að allar stillingar endurheimtist, eins og stillingar athugasemdamöppunnar og hvaða forskriftir þú notaðir. Þú þarft einnig að aðlaga nokkrar stillingar, sérstaklega á vettvangi, en athugasemdir þínar verða óbreyttar!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4136"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4141"/>
 <source>The application will be restarted after the import.</source>
 <translation>Forritið verður endurræst að loknum innflutningi.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4365"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4370"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>Upplýsingar um kembiforrit voru afritaðar á klemmuspjaldið.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4386"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4391"/>
 <source>The integrity of the disk database is valid.</source>
 <translation type="unfinished">The integrity of the disk database is valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4391"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4396"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation type="unfinished">The integrity of the disk database is not valid!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2961"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2967"/>
 <source>Find a script in the script repository</source>
 <translation>Finndu handrit í handritageymslunni</translation>
 </message>
@@ -7860,136 +7871,136 @@ Villuboð tengingar: </translation>
 <translation>Sýna valmyndaratriðið</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1726"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1778"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1738"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1784"/>
 <source>Undefined shortcut</source>
 <translation>Óskilgreindur flýtileið
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1730"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1782"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1742"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1788"/>
 <source>Assign a new shortcut</source>
 <translation>Úthlutaðu nýjum flýtileið
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1731"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1783"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1743"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1789"/>
 <source>Reset to default shortcut</source>
 <translation>Endurstilla í sjálfgefna flýtileið
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1749"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1761"/>
 <source>Clear shortcut</source>
 <translation>Hreinsa flýtileið</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1854"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1860"/>
 <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
 <translation>Flýtileiðin &lt;strong&gt;%1 &lt;/strong&gt; er þegar úthlutað til &lt;strong&gt;%2 &lt;/strong&gt;! Viltu hoppa á flýtileiðina?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3054"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3060"/>
 <source>Remove script</source>
 <translation>Fjarlægðu handrit</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3055"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3061"/>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Fjarlægja núverandi handrit &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3105"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3111"/>
 <source>QML files</source>
 <translation>QML skrár</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3106"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3112"/>
 <source>Please select your QML file</source>
 <translation>Vinsamlegast veldu QML skrána þína</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3196"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3202"/>
 <source>Open repository</source>
 <translation>Opið geymsla</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3254"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3260"/>
 <source>Your script seems to be valid</source>
 <translation>Handritið þitt virðist vera gilt</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3255"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3261"/>
 <source>There were script errors:
 %1</source>
 <translation>Það voru handritsvillur:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3323"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3329"/>
 <source>File extension</source>
 <translation>Skráarlenging</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3378"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3384"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
 <translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3668"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3673"/>
 <source>Calendar cache emptied</source>
 <translation>Töflu dagatalsins tæmt</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3669"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3674"/>
 <source>Your calendar cache was emptied.</source>
 <translation>Skyndiminnið þitt var tæmt.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3750"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3755"/>
 <source>Reset toolbars and exit</source>
 <translation>Endurstilla tækjastikur og lokaðu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3751"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3756"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>Viltu virkilega endurstilla allar tækjastikur? Forritinu verður lokað í ferlinu, sjálfgefnu tækjastikurnar verða endurheimtar þegar þú ræsir það aftur.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3755"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3760"/>
 <source>Reset and &amp;exit</source>
 <translation>Endurstilla og &amp;hætta</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3913"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3918"/>
 <source>Log file cleared</source>
 <translation>Annáll hreinsaður</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3914"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3919"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Annállinn &lt;strong&gt;%1 &lt;/strong&gt; var hreinsaður.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3950"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3955"/>
 <source>Executable files</source>
 <translation>Keyranlegar skrár</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3951"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3953"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3956"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3958"/>
 <source>All files</source>
 <translation>Allar skrár</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3961"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3966"/>
 <source>Please select the path of your git executable</source>
 <translation>Vinsamlegast veldu leið til að keyra þinn git</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4063"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4068"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>Viltu virkilega núllstilla forgangsröðun allra skilaboðakassa?</translation>
 </message>
@@ -8044,12 +8055,12 @@ Villuboð tengingar: </translation>
 <translation>Það verður virkjað ef þú keyrir QOwnNotes með breytunni &lt;code&gt; - flytjanlegur &lt;/code&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2368"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2374"/>
 <source>Save debug information</source>
 <translation>Vistaðu villuleitarupplýsingar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2415"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2421"/>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -8058,14 +8069,14 @@ Your notes will stay intact!</source>
 Skýringar þínar haldast óbreyttir!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2418"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2424"/>
 <source>Clear and &amp;exit</source>
 <translation>Hreinsa og &amp;hætta</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2344"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2418"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3755"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2350"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2424"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3760"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Hætta við</translation>
 </message>
@@ -8075,17 +8086,17 @@ Skýringar þínar haldast óbreyttir!</translation>
 <translation>Þú finnur &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; á losunarleiðinni til að hefja QOwnNotes í flytjanlegri stillingu.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2341"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2347"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Viltu virkilega hreinsa staðbundna gagnagrunninn? Þetta mun einnig fjarlægja uppsetta athugasemdarmöppur þínar og skyndiminni í skyndiminni!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2344"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2350"/>
 <source>Clear &amp;database</source>
 <translation>Hreinsa &amp;gagnagrunn</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2535"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2541"/>
 <source>Select editor application</source>
 <translation>Veldu ritstjóraforrit</translation>
 </message>

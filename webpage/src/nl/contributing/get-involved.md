@@ -17,3 +17,7 @@ De verschillende manieren om betrokken te raken bij QOwnNotes
 - Deel uw scripts op de [**QOwnNotes-scripts** GitHub-pagina](https://github.com/qownnotes/scripts)
 - Deel **je ervaring met QOwnNotes** op je eigen **YouTube** - of ander - kanaal, maar stuur ook graag [**je audio/video/tekst naar Amy**](mailto:amydoralang@aol.de) te uploaden op [**QOwnNotes in a Nutshell**](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos)
 - Misschien wilt u een paar anonieme [**vragen**](https://freeonlinesurveys.com/s/nA8t17k8) voor ons beantwoorden om u te helpen betere resultaten te behalen met QOwnNotes
+
+::: tip Important
+Read the [code of conduct](./code-of-conduct.md) before you get involved!
+:::

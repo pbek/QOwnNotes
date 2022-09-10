@@ -109,6 +109,7 @@ fixCrowdinTranslationProblems() {
   sed -i -e 's/::: warning /::: warning\n/g' "$1"
   sed -i -e 's/::: tip /::: tip\n/g' "$1"
   sed -i -e ':a' -e 'N' -e '$!ba' -e 's/::: tip\nInfo /::: tip Info\n/g' "$1"
+  sed -i -e ':a' -e 'N' -e '$!ba' -e 's/::: tip\nImportant /::: tip Important\n/g' "$1"
   sed -i -e 's/ :::$/\n:::/g' "$1"
   sed -i -e ':a' -e 'N' -e '$!ba' -e 's/~~~\n~~~/```\n~~~/g' "$1"
 }

@@ -17,3 +17,7 @@
 - اسکریپت های خود را در [ صفحه گیت هاب ** اسکریپت های QOwnNotes ** ](https://github.com/qownnotes/scripts) به اشتراک بگذارید
 - **تجربه خود با QOwnNotes** را در کانال **یوتیوب** یا سایر کالنال هایتان اشتراک گذاری کرده و همچنین [**فایل صوتی، تصویری یا متنی خود را به Amy ارسال کنید**](mailto:amydoralang@aol.de) تا در [**QOwnNotes in a Nutshell**](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos) بارگذاری شود.
 - شما می توانید با پاسخ به تعدادی [**سوال**](https://freeonlinesurveys.com/s/nA8t17k8) نامشخص به ما در دستیابی به نتایج بهتر با QOwnNotes کمک کنید
+
+::: tip Important
+Read the [code of conduct](./code-of-conduct.md) before you get involved!
+:::

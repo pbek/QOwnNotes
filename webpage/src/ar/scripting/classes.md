@@ -100,28 +100,28 @@ class TagApi {
 };
 ```
 
-### Example
+### مثال
 ```js
-// Don't forget to use "import QOwnNotesTypes 1.0" at the top of your script!
+// لا تنس أن تبدأ بُريمجك بالعبارة "import QOwnNotesTypes 1.0"!
 
-// Fetch tag "home"
+// أحضر الوسم "home"
 var tag = script.getTagByNameBreadcrumbList(["home"]);
-// Fetch all notes tagged with the tag
+// أحضر جميع الملاحظات الموسومة بهذا الوسم
 var notes = tag.notes;
 
-// Iterate through notes of the tag
+// كرر كودًا على جميع الملاحظات ذات الوسم المحدد
 for (var idx in notes) {
     var note = notes[idx];
     script.log(note.name);
 }
 ```
 
-You'll find more examples where TagApi is used in [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
+يمكنك أن تجد أمثلة أكثر على استخدام TagApi في [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
 
 MainWindow (النافذة الرئيسية)
 ----------
 
-### Properties and methods
+### الخصائص والدوال
 ```cpp
 class MainWindow {
     Q_INVOKABLE void reloadTagTree();
@@ -129,37 +129,38 @@ class MainWindow {
     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
             bool forceBuild = false, bool forceLoad = false);
     Q_INVOKABLE void focusNoteTextEdit();
-    // Creates a new note subfolder in the current subfolder
+    // يُنشئ مجلد فرعي جديد للملاحظة في المجلد الفرعي الحالي
     Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
-    // Inserts html in the current note as markdown
-    // This method also downloads remote images and transforms "data:image"
-    // urls to local images stored in the media directory
+    // يضيف هتمل بصيغة ماركداون في الملاحظة الحالية
+    // هذه الدالة أيضا تقوم بتنزيل الصور البعيدة وتحويل الروابط من النوع
+    // "data:image"
+    // إلى صور محلية مخزنة في مجلد الوسائط
     Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
-    // Reloads the current note by id
-    // This is useful when the path or filename of the current note changed
+    // يُعيد تحميل الملاحظة الحالية بمُعرِّفها
+    // هذا مفيد عندما يتغير مسار أو اسم ملف الملاحظة الحالية
     Q_INVOKABLE void reloadCurrentNoteByNoteId();
-    // Returns the list of workspace UUIDs
+    // يُعيد قائمة بالمُعرِّفات العالمية الفريدة لمساحات العمل (UUID)
     Q_INVOKABLE QStringList getWorkspaceUuidList();
-    // Returns the UUID of a workspace, passing in the workspace name
+    // يُعطى اسم مساحة عمل ويُعيد مُعرِّفها العالمي الفريد (UUID)
     Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
-    // Sets the current workspace by UUID
+    // يجعل مساحة العمل الحالية هي المساحة ذات المُعرِّف العالمي الفريد المُعطى (UUID)
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
-    // Closes a note tab on a specific index (returns true if successful)
+    // يغلق تبويب الملاحظة ذا الدليل المعطى، وعند نجاح العملية يعيد القيمة المنطقية الصادقة (true)
     Q_INVOKABLE bool removeNoteTab(int index);
 };
 ```
 
-### Example
+### مثال
 ```js
-// Force a reload of the note list
+// إعادة تحميل قائمة الملاحظات بالقوة
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creates a new note subfolder "My fancy folder" in the current subfolder
-mainWindow.createNewNoteSubFolder("My fancy folder");
+// إنشاء مجلد فرعي جديد لملاحظة باسم «مجلدي الفخيم» في المجلد الفرعي الحالي
+mainWindow.createNewNoteSubFolder("مجلدي الفخيم");
 
-// Inserts html in the current note as markdown
-mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
+// إضافة هتمل إلى الملاحظة الحالية بصيغة ماركداون
+mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>عنوان</h2>بعض النص");
 
-// Set 'Edit' workspace as current workspace
-mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
+// جعل مساحة العمل «تحرير» هي المساحة الحالية
+mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("تحرير"));
 ```

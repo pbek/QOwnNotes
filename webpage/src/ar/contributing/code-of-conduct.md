@@ -1,80 +1,80 @@
-# Code of Conduct
+# ميثاق السلوك
 
-## Our Pledge
+## عهدنا
 
-We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
+نحن، أعضاءً ومساهمين وقادة، نتعهد بجعل المشاركة في مجتمعنا تجرِبة خالية من المضايقات للجميع، بغض النظر عن عمرهم وعن حجم جسمهم وعن وجود إعاقة ظاهرة أو غير ظاهرة وعن جنسهم وعن جنسيتهم وعن عِرقهم وعن خبرتهم وعن تعليمهم وعن حالتهم الاجتماعية أو الاقتصادية وعن مظهرهم الخارجي ولون جلدهم وعن دينهم وعن هُويتهم الجنسية وميلهم الجنسي.
 
-We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
+نتعهد بالتعامل بطرق تساهم في جعل المجتمع مفتوحًا ومُرحِّبًا ومتنوعًا وشموليًا وذا بيئة صحية.
 
-## Our Standards
+## معاييرنا
 
-Examples of behavior that contributes to a positive environment for our community include:
+من أمثلة السلوك الذي يساهم في جعل بيئة مجتمعنا إيجابية:
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the overall community
+* التعاطف مع الآخرين والإحسان إليهم
+* احترام آراء الآخرين ووجهات نظرهم وتجاربهم
+* إعطاء النقد البنّاء، وقبوله بصدر رحب
+* قَبول المسؤولية والاعتذار للذين تأثروا بأخطائنا، والتعلم من التجرِبة
+* التركيز على ما هو أفضل، ليس فحسب لنا كأفراد، ولكن للمجتمع جميعه
 
-Examples of unacceptable behavior include:
+من أمثلة السلوك المرفوض:
 
-* The use of sexualized language or imagery, and sexual attention or advances of any kind
-* Trolling, insulting or derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or email address, without their explicit permission
-* Other conduct which could reasonably be considered inappropriate in a professional setting
+* استخدام لغة أو صور جنسية، أو تحرش أو مضايقة جنسية من أي نوع
+* التصيد (المشاغبة)، والتعليقات المهينة أو الازدرائية، والهجوم الشخصي أو السياسي
+* المضايقة أو التحرش، سواءً عبر وسيلة تواصل عامة أو خاصة
+* نشر معلومات الآخرين الخاصة بغير إذنهم الصريح، مثل عنوان المسكن أو عنوان البريد الإلكتروني
+* أي سلوك آخر يُعدّ غير لائق في السياق المهني
 
-## Enforcement Responsibilities
+## مسؤوليات الإنفاذ
 
-Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
+قادة المجتمع مسؤولون عن توضيح معاييرنا للسلوك المقبول وعن إنفاذها، وسيتخذون الإجراءات التصحيحية العادلة المناسبة للرد على أي سلوك يرونه غير لائق أو يمثل تهديدًا أو هجومًا أو ضررًا.
 
-Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.
+لدى قادة المشروع الحق والمسؤولية في إزالة أو تعديل أو رفض أيٍّ من: التعليقات، والإيداعات، والأكواد، وتعديلات الويكي، والمسائل، وأي مساهمات أخرى لا تتسق مع ميثاق السلوك، وسيشاركون أسباب الإجراءات الإشرافية عند الحاجة.
 
-## Scope
+## النطاق
 
-This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
+يطبَّق ميثاق السلوك هذا في جميع مساحات المجتمع، وكذلك يطبَّق عندما يكون أحد الأفراد ممثلا رسميا للمجتمع في مساحة عامة. يتضمن تمثيل مجتمعنا: استخدام عنوان بريد إلكتروني رسمي، والنشر عبر حساب تواصل اجتماعي رسمي، والعمل ممثلا مختارا لنا في فعالية على الإنترنت أو على الأرض.
 
-## Enforcement
+## الإنفاذ
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement (see *Contact* menu on [www.qownnotes.org](https://www.qownnotes.org/)). All complaints will be reviewed and investigated promptly and fairly.
+يمكن إبلاغ قادة المجتمع المسؤولين عن إنفاذ ميثاق السلوك، عن حالات التطاول أو المضايقات أو أي سلوك مرفوض (انظر قائمة *تواصل* على [www.qownnotes.org/ar](https://www.qownnotes.org/ar/)). سنراجع جميع الشكاوى ونحقق فيها فورا وبإنصاف.
 
-All community leaders are obligated to respect the privacy and security of the reporter of any incident.
+يلتزم جميع قادة المجتمع باحترام خصوصية وتأمين مَن يبلغ عن أي حادث.
 
-## Enforcement Guidelines
+## إرشادات الإنفاذ
 
-Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:
+سيتبّع قادة المجتمع إرشادات الأثر المجتمعي هذه في تحديد توابع أي فعل يرونه مخالفا لميثاق السلوك:
 
-### 1. Correction
+### ١. التصحيح
 
-**Community Impact**: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.
+**الأثر المجتمعي**: استخدام لغة غير لائقة، أو أي سلوك آخر يُعدّ غير مهني أو غير مقبول في المجتمع.
 
-**Consequence**: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.
+**العاقبة**: تحذير مكتوب، عبر الخاص، من قادة المجتمع، موضحا طبيعة المخالفة ولماذا كان هذا السلوك غير لائق. قد يُطلب اعتذار عام.
 
-### 2. Warning
+### ٢. التحذير
 
-**Community Impact**: A violation through a single incident or series of actions.
+**الأثر المجتمعي**: مخالفة بفعل واحد أو سلسلة من الأفعال.
 
-**Consequence**: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.
+**العاقبة**: التحذير بالعواقب في حالة استمرار السلوك. ممنوع خلال مدة محددة التعامل مع هؤلاء الأشخاص، بما في ذلك التعامل غير المرغوب فيه مع الذين ينفذون ميثاق السلوك. هذا يشمل تجنب التعامل في مساحات المجتمع وكذلك قنوات التواصل الخارجية مثل مواقع التواصل الاجتماعي. قد تؤدي مخالفة هذه الشروط إلى حظر مؤقت أو دائم.
 
-### 3. Temporary Ban
+### ٣. الحظر المؤقت
 
-**Community Impact**: A serious violation of community standards, including sustained inappropriate behavior.
+**الأثر المجتمعي**: مخالفة فادحة لمعايير المجتمع، بما في ذلك الاستمرار في سلوك غير لائق.
 
-**Consequence**: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.
+**العاقبة**: حظر مؤقت من أي نوع من التعامل أو التواصل العام مع المجتمع لمدة زمنية محددة. ممنوع خلال هذه المدة التعامل عبر وسيلة تواصل عامة أو خاصة مع هؤلاء الأشخاص، بما في ذلك التعامل غير المرغوب فيه مع الذين ينفذون ميثاق السلوك. قد تؤدي مخالفة هذه الشروط إلى حظر دائم.
 
-### 4. Permanent Ban
+### ٤. الحظر الدائم
 
-**Community Impact**: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.
+**الأثر المجتمعي**: إظهار نمط من مخالفة معايير المجتمع، بما في ذلك استمرار الأفعال غير اللائقة، ومضايقة فرد أو التحرش به لفظيا أو غير ذلك، والعنف تجاه بعض الفئات من البشر أو الاستهزاء بهم.
 
-**Consequence**: A permanent ban from any sort of public interaction within the community.
+**العاقبة**: حظر دائم من أي نوع من التعامل العام داخل المجتمع.
 
-## Attribution
+## الإسناد
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 2.1, available at [https://www.contributor-covenant.org/version/2/1/code_of_conduct.html][v2.1].
+ميثاق السلوك هذا مشتق من [Contributor Covenant (ميثاق المساهمين)][homepage]، النسخة ١٫٢، والمتاحة على [https://www.contributor-covenant.org/version/2/1/code_of_conduct.html][v2.1].
 
-Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcement ladder][Mozilla CoC].
+إرشادات الأثر المجتمعي مستوحاة من [سلّم إنفاذ ميثاق السلوك من موزيلا][Mozilla CoC].
 
-For answers to common questions about this code of conduct, see the FAQ at [https://www.contributor-covenant.org/faq][FAQ]. Translations are available at [https://www.contributor-covenant.org/translations][translations].
+لإجابات عن الأسئلة الشائعة عن ميثاق السلوك هذا، انظر صفحة الأسئلة الشائعة (بالإنجليزية) على [https://www.contributor-covenant.org/faq][FAQ]. الترجمات متاحة على [https://www.contributor-covenant.org/translations][translations].
 
 [homepage]: https://www.contributor-covenant.org
 [v2.1]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html

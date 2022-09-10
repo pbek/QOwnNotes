@@ -17,3 +17,7 @@ A QOwnNotes részvételének különféle módjai
 - Ossza meg szkriptjeit a [**QOwnNotes szkriptek** GitHub oldalán](https://github.com/qownnotes/scripts)
 - Ossza meg ** tapasztalatait a QOwnNotes szolgáltatással ** a saját ** YouTube ** - vagy más - csatornán, de örömmel [** küldje el audio / video / szövegét Amynek **](mailto:amydoralang@aol.de), hogy feltöltse a [** QOwnNotes dióhéjban **](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos) YouTube csatornán
 - Érdemes megválaszolnia néhány, névtelen [**kérdést**](https://freeonlinesurveys.com/s/nA8t17k8), hogy majd még jobb eredményeket érhessen el a QOwnNotes szolgáltatással
+
+::: tip Important
+Read the [code of conduct](./code-of-conduct.md) before you get involved!
+:::

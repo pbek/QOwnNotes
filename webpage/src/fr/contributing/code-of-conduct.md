@@ -1,40 +1,40 @@
-# Code of Conduct
+# Code de conduite
 
-## Our Pledge
+## Notre serment
 
-We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
+Nous; membres, contributeurs et leaders faisont serment de faire de la participation à notre communauté une expérience libre de harcèlement pour tout le monde, indépendamment de leur âge, morphologie, handicap visible ou invisible, ethnicité, caractéristiques sexuelles, identité et expression de genre, niveau d'expérience, éducation, statut socio-économique, nationalté, apparence, race, caste, couleur de peau, religion, identité ou orientation sexuelle.
 
-We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
+Nous faisons serment d'agir et d'interagir de façon à contribuer à une communauté accueillante, diverse, inclusive et saine.
 
-## Our Standards
+## Nos standards
 
-Examples of behavior that contributes to a positive environment for our community include:
+Quelques exemples de comportements contribuant à un environnement positif pour notre communauté :
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the overall community
+* Faire preuve d'empathie et de bienveillance envers les autres personnes
+* Respecter les opinions, points de vue et expériences différents
+* Donner et accepter de bonne grâce des retours constructifs
+* Accepter sa responsabilité et présenter des excuses à ceux affectés par nos erreurs, ainsi qu'apprendre de cette expérience
+* Se concentrer sur ce qui est le mieux pour l'ensemble de la communauté et non pas juste pour soi en tant qu'individu
 
-Examples of unacceptable behavior include:
+Quelques exemples de comportements inacceptables :
 
-* The use of sexualized language or imagery, and sexual attention or advances of any kind
-* Trolling, insulting or derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or email address, without their explicit permission
-* Other conduct which could reasonably be considered inappropriate in a professional setting
+* L'emploi d'un langage ou d'une imagerie sexualisé, ou des avances ou attentions sexuelles quelle que soit leur nature
+* Le trolling, les commentaires insultants ou péjoratifs ainsi que les attaques personnelles ou politiques
+* Le harcèlement en public ou en privé
+* La publication d'informations personnelles de tiers sans leur permission explicite, telle que leur adresse postale ou de courriel
+* Toutes les autres conduites qui pourraient raisonnablement être considérées inappropriées dans un environnement professionnel
 
-## Enforcement Responsibilities
+## Responsabilité de mise en application
 
-Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
+Les leaders de la communauté sont tenus de clarifier et mettre en œuvre nos standards de comportement acceptables. Ils/elles prendront les mesures correctives justes et appropriées en réponse à tout comportement qu'ils/elles considèreront inapproprié, menaçant, injurieux ou blessant.
 
-Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.
+Les leaders de la communauté ont le droit et le devoir de retirer, éditer ou rejeter les commentaires, commits, code, modifications du wiki ou toute autre contribution contrevenant au présent Code de Conduite. Ils/elles communiqueront les raisons de la modération quand cela est approprié.
 
-## Scope
+## Périmètre d'application
 
-This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
+Le présent Code de Conduite s'applique au sein de tous les espaces communautaires ainsi que quand une personne représente officiellement la communauté dans un espace public. Quelques exemples de représentation : utilisation d'une adresse de courriel officielle, publication sur un réseau social via un compte officiel ou agissement en tant que représentant(e) désigné(e) lors d'un évènement, en personne ou en ligne.
 
-## Enforcement
+## Mise en application
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement (see *Contact* menu on [www.qownnotes.org](https://www.qownnotes.org/)). All complaints will be reviewed and investigated promptly and fairly.
 

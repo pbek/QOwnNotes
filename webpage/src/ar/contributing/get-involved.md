@@ -17,3 +17,5 @@
 - شارك بُريمِجاتك على [صفحة **بُريمِجات QOwnNotes** على GitHub](https://github.com/qownnotes/scripts)
 - شارك **تجربتك مع QOwnNotes** على قناتك على **يوتيوب** - أو أي قناة أخرى -، ولكن أيضا نحب أن [**ترسل الصوت أو الفيديو أو النص إلى Amy**](mailto:amydoralang@aol.de) لرفعه على قناة [**QOwnNotes in a Nutshell**](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos)
 - إن رغبت، يمكنك الإجابة على بعض [**الأسئلة**](https://freeonlinesurveys.com/s/nA8t17k8) بشكل سري، حتى يمكننا مساعدتك في الحصول على نتائج أفضل مع QOwnNotes
+
+::: tip Important Read the [code of conduct](./code-of-conduct.md) before you get involved! :::
