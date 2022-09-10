@@ -378,6 +378,8 @@ class Note {
 
     QStringList getHeadingList();
 
+    static bool applyIgnoredNotesSetting(QStringList& fileNames);
+
    protected:
     int _id;
     int _noteSubFolderId;

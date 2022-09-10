@@ -4156,6 +4156,30 @@ QStringList Note::getHeadingList() {
     return headingList;
 }
 
+bool Note::applyIgnoredNotesSetting(QStringList& fileNames) {
+    const QSettings settings;
+    const QStringList ignoredFileRegExpList =
+        settings.value(QStringLiteral("ignoredNoteFiles")).toString()
+            .split(QLatin1Char(';'));
+
+    if (ignoredFileRegExpList.isEmpty()) {
+        return false;
+    }
+
+    auto newFileNames = QStringList();
+
+    for (const QString &fileName : fileNames) {
+        if (!Utils::Misc::regExpInListMatches(fileName,
+                                              ignoredFileRegExpList)) {
+            newFileNames.append(fileName);
+        }
+    }
+
+    fileNames = newFileNames;
+
+    return true;
+}
+
 /**
  * Fetches all tags of the note
  */

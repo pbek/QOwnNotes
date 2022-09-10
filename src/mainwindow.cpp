@@ -3227,6 +3227,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 
     // show the newest entry first
     QStringList files = notesDir.entryList(filters, QDir::Files, QDir::Time);
+    Note::applyIgnoredNotesSetting(files);
     //    qDebug() << __func__ << " - 'files': " << files;
 
     bool createDemoNotes = (files.count() == 0) && !hasNoteSubFolder;

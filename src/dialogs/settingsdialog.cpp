@@ -1033,6 +1033,10 @@ void SettingsDialog::storePanelSettings() {
     settings.setValue(QStringLiteral("ignoreNoteSubFolders"),
                       ui->ignoreNoteSubFoldersLineEdit->text());
 
+    const QSignalBlocker blocker2(ui->ignoredNoteFilesLineEdit);
+    settings.setValue(QStringLiteral("ignoredNoteFiles"),
+                      ui->ignoredNoteFilesLineEdit->text());
+
     // Tags Panel Options
     settings.setValue(QStringLiteral("tagsPanelHideSearch"),
                       ui->tagsPanelHideSearchCheckBox->isChecked());
@@ -1652,6 +1656,9 @@ void SettingsDialog::readPanelSettings() {
             .value(QStringLiteral("ignoreNoteSubFolders"),
                    IGNORED_NOTE_SUBFOLDERS_DEFAULT)
             .toString());
+
+    ui->ignoredNoteFilesLineEdit->setText(
+        settings.value(QStringLiteral("ignoredNoteFiles")).toString());
 
     // Navigation Panel Options
     ui->navigationPanelHideSearchCheckBox->setChecked(
