@@ -3,6 +3,10 @@
 You can use your own time format when inserting the current time into a
 note.
 
+You can use this page to build a personal default time format.
+You can enter that string at _Note_ > _Settings_ > _Editor_ >
+_Insert current time_.
+
 ## Expressions for date
 
 | Expression   | Output                                                        |
