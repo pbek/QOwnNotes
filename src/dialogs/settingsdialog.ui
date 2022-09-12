@@ -5715,7 +5715,7 @@ git config --global user.name &quot;Your name&quot;</string>
                 <item row="4" column="1" colspan="2">
                  <widget class="QGroupBox" name="groupBox_39">
                   <property name="toolTip">
-                   <string>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</string>
+                   <string>Regular expressions of note files to ignore, separated by &quot;;&quot;</string>
                   </property>
                   <property name="title">
                    <string>Ignored note files</string>
