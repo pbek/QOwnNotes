@@ -3,6 +3,10 @@
 ## 22.9.1
 - the tag name line edit will now be properly hidden after an existing tag was
   recognized and added when pressing <kbd>Tab</kbd> (for [#2607](https://github.com/pbek/QOwnNotes/issues/2607))
+- there now is a new scripting command `mainWindow.jumpToTag(tagId)` to
+  jump to a tag in the tag tree (for [#2584](https://github.com/pbek/QOwnNotes/issues/2584))
+  - for more information please take a look at the
+    [MainWindow scripting documentation](https://www.qownnotes.org/scripting/classes.html#mainwindow)
 - the tooltip for specifying file patterns of note files to ignore as regular expressions
   in the *Panels settings* was fixed (for [#2580](https://github.com/pbek/QOwnNotes/issues/2580))
 

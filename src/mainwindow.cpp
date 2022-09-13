@@ -8489,6 +8489,27 @@ void MainWindow::on_tagTreeWidget_currentItemChanged(
 }
 
 /**
+ * Jumps to a tag in the tag tree
+ *
+ * @param tagId
+ * @return
+ */
+bool MainWindow::jumpToTag(int tagId) {
+    QTreeWidgetItem *item = Utils::Gui::getTreeWidgetItemWithUserData(
+        ui->tagTreeWidget, tagId);
+
+    if (item != nullptr) {
+        // If the selection isn't cleared then the old subfolder is still selected too
+        ui->tagTreeWidget->clearSelection();
+        ui->tagTreeWidget->setCurrentItem(item);
+
+        return true;
+    }
+
+    return false;
+}
+
+/**
  * Triggers filtering when multiple tags are selected
  */
 void MainWindow::on_tagTreeWidget_itemSelectionChanged() {

@@ -23,6 +23,8 @@ QtObject {
         script.registerCustomAction("transformTextRot13", "Transform selected text with rot13", "rot13", "text-wrap", true);
 
         script.registerCustomAction("noteSubFolder", "Show active note subfolder information", "Subfolder");
+
+        script.registerCustomAction("setActiveTag", "Set active tag", "Active tag");
     }
 
     /**
@@ -82,6 +84,12 @@ QtObject {
                 var subFolder = noteSubFolderQmlObj.activeNoteSubFolder();
                 script.log(subFolder.fullPath());
                 script.log(subFolder.relativePath());
+                break;
+
+            // jump to the tag "test" in the tag tree
+            case "setActiveTag":
+                var tag = script.getTagByNameBreadcrumbList(["test"]);
+                mainWindow.jumpToTag(tag.id);
                 break;
         }
     }
