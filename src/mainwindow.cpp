@@ -4218,6 +4218,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                     Tag::fetchByName(ui->newNoteTagLineEdit->text(), true);
                 if (tag.isFetched()) {
                     linkTagNameToCurrentNote(tag.getName(), true);
+                    on_newNoteTagLineEdit_editingFinished();
                 }
 
                 return QMainWindow::eventFilter(obj, event);;

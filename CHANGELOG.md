@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 22.9.1
+- the tag name line edit will now be properly hidden after an existing tag was
+  recognized and added when pressing <kbd>Tab</kbd> (for [#2607](https://github.com/pbek/QOwnNotes/issues/2607))
 - the tooltip for specifying file patterns of note files to ignore as regular expressions
   in the *Panels settings* was fixed (for [#2580](https://github.com/pbek/QOwnNotes/issues/2580))
 
