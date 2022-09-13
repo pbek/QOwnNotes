@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.9.1
+- the tooltip for specifying file patterns of note files to ignore as regular expressions
+  in the *Panels settings* was fixed (for [#2580](https://github.com/pbek/QOwnNotes/issues/2580))
+
 ## 22.9.0
 - the settings dialog opening time was improved a lot (for [#2574](https://github.com/pbek/QOwnNotes/issues/2574), thank you, @Waqar144)
 - you can now specify file patterns of note files to ignore as regular expressions
