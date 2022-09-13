@@ -2,6 +2,8 @@
 
 يمكنك استخدام صيغة الوقت التي تفضلها عند إدراج الوقت الحالي في الملاحظات.
 
+You can use this page to build a personal default time format. You can enter that string at _Note_ > _Settings_ > _Editor_ > _Insert current time_.
+
 ## تعبيرات التاريخ
 
 | التعبير | الناتج                                                                                                 |
@@ -45,6 +47,6 @@
 | `hh:mm:ss.zzz`     | 14:13:09.042                                    |
 | `h:m:s ap`         | 2:13:9 م                                        |
 
-::: tip معلومة ألقِ نظرة على [توثيق Qt (بالإنجليزية)](http://doc.qt.io/qt-5/qdatetime.html#toString) للمزيد من المعلومات عن صيغ الوقت. :::
+::: tip Info Take a look at the [Qt documentation](http://doc.qt.io/qt-5/qdatetime.html#toString) for more information about time formats. :::
 
-::: tip إذا احتجت إلى عمليات أكثر تعقيدًا لإنتاج الوقت الحالي، فبرجاء النظر في إنشاء [إجراء مخصص](../scripting/methods-and-objects.md#registering-a-custom-action). :::
+::: tip If you need to make more complex operations to output the current time please consider creating a [custom action](../scripting/methods-and-objects.md#registering-a-custom-action). :::

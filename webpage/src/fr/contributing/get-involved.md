@@ -19,5 +19,5 @@ Les différentes façons de s'impliquer avec QOwnNotes
 - Si vous le souhaitez, répondez à quelques [**questions**](https://freeonlinesurveys.com/s/nA8t17k8) anonymes pour que nous vous aidions à obtenir de meilleurs résultats avec QOwnNotes
 
 ::: tip Important
-Lisez le [code de conduite](./code-of-conduct.md) avant de vous impliquer dans le projet!
+Lisez le [code de conduite](./code-of-conduct.md) avant de vous impliquer dans le projet !
 :::

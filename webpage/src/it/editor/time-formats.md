@@ -2,6 +2,8 @@
 
 È possibile utilizzare il proprio formato dell'ora quando si inserisce l'ora corrente in una nota.
 
+You can use this page to build a personal default time format. You can enter that string at _Note_ > _Settings_ > _Editor_ > _Insert current time_.
+
 ## Espressioni per la data
 
 | Espressione | Risultato                                                                 |
@@ -46,9 +48,9 @@
 | `h:m:s ap`         | 2:13:9 pm        |
 
 ::: tip Info
-Dai un'occhiata alla [documentazione Qt](http://doc.qt.io/qt-5/qdatetime.html#toString) per ulteriori informazioni sui formati dell'ora.
+Take a look at the [Qt documentation](http://doc.qt.io/qt-5/qdatetime.html#toString) for more information about time formats.
 :::
 
 ::: tip
-Se è necessario eseguire operazioni più complesse per visualizzare l'ora corrente, prendere in considerazione la creazione di un'[azione personalizzata](../scripting/methods-and-objects.md#registering-a-custom-action).
+If you need to make more complex operations to output the current time please consider creating a [custom action](../scripting/methods-and-objects.md#registering-a-custom-action).
 :::

@@ -2,6 +2,8 @@
 
 Használhatja saját időformátumát, amikor az aktuális időt beszúrja egy jegyzetbe.
 
+You can use this page to build a personal default time format. You can enter that string at _Note_ > _Settings_ > _Editor_ > _Insert current time_.
+
 ## Kifejezések a dátumra
 
 | Kifejezés | Kibocsátás                                                 |
@@ -46,9 +48,9 @@ Használhatja saját időformátumát, amikor az aktuális időt beszúrja egy j
 | `h:m:s ap`         | 2:13:9 pm        |
 
 ::: tip Info
-Tekintse meg a [Qt dokumentációt](http://doc.qt.io/qt-5/qdatetime.html#toString) az időformátumokról.
+Take a look at the [Qt documentation](http://doc.qt.io/qt-5/qdatetime.html#toString) for more information about time formats.
 :::
 
 ::: tip
-Ha bonyolultabb műveleteket kell végrehajtania az aktuális idő kimenetéhez, fontolja meg egy [egyéni művelet](../scripting/methods-and-objects.md#registering-a-custom-action) létrehozását.
+If you need to make more complex operations to output the current time please consider creating a [custom action](../scripting/methods-and-objects.md#registering-a-custom-action).
 :::

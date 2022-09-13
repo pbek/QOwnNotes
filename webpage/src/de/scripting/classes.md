@@ -146,6 +146,8 @@ class MainWindow {
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
     // Closes a note tab on a specific index (returns true if successful)
     Q_INVOKABLE bool removeNoteTab(int index);
+    // Jumps to a tag in the tag tree
+    Q_INVOKABLE bool jumpToTag(int tagId);
 };
 ```
 
@@ -162,4 +164,9 @@ mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
 // Set 'Edit' workspace as current workspace
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
+
+// Jump to the tag "test" in the tag tree
+// There is an example in https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml
+var tag = script.getTagByNameBreadcrumbList(["test"]);
+mainWindow.jumpToTag(tag.id);
 ```

@@ -2,6 +2,8 @@
 
 Puede utilizar su propio formato de hora al insertar la hora actual en una nota.
 
+You can use this page to build a personal default time format. You can enter that string at _Note_ > _Settings_ > _Editor_ > _Insert current time_.
+
 ## Expresiones para la fecha
 
 | Expresión | Salida                                                               |
@@ -45,9 +47,10 @@ Puede utilizar su propio formato de hora al insertar la hora actual en una nota.
 | `hh:mm:ss.zzz`     | 14:13:09.042     |
 | `h:m:s ap`         | 2:13:9 pm        |
 
-::: Información de la sugerencia Eche un vistazo a la [documentación de Qt](http://doc.qt.io/qt-5/qdatetime.html#toString) para obtener más información sobre los formatos de hora.
+::: tip Info
+Take a look at the [Qt documentation](http://doc.qt.io/qt-5/qdatetime.html#toString) for more information about time formats.
 :::
 
 ::: tip
-Si necesita realizar operaciones más complejas para generar la hora actual, considere crear una [acción personalizada](../scripting/methods-and-objects.md#registering-a-custom-action).
+If you need to make more complex operations to output the current time please consider creating a [custom action](../scripting/methods-and-objects.md#registering-a-custom-action).
 :::

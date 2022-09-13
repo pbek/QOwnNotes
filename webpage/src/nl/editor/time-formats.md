@@ -2,6 +2,8 @@
 
 U kunt uw eigen tijdnotatie gebruiken wanneer u de huidige tijd in een notitie invoegt.
 
+You can use this page to build a personal default time format. You can enter that string at _Note_ > _Settings_ > _Editor_ > _Insert current time_.
+
 ## Uitdrukkingen voor de datum
 
 | Uitdrukking | Uitvoer                                                           |
@@ -46,9 +48,9 @@ U kunt uw eigen tijdnotatie gebruiken wanneer u de huidige tijd in een notitie i
 | `h:m:s ap`         | 2:13:9 pm        |
 
 ::: tip Info
-Bekijk de [Qt-documentatie](http://doc.qt.io/qt-5/qdatetime.html#toString) voor meer informatie over tijdformaten.
+Take a look at the [Qt documentation](http://doc.qt.io/qt-5/qdatetime.html#toString) for more information about time formats.
 :::
 
 ::: tip
-Als u meer complexe bewerkingen moet uitvoeren om de huidige tijd weer te geven, overweeg dan om een [aangepaste actie](../scripting/methods-and-objects.md#registering-a-custom-action) te maken.
+If you need to make more complex operations to output the current time please consider creating a [custom action](../scripting/methods-and-objects.md#registering-a-custom-action).
 :::

@@ -129,37 +129,44 @@ class MainWindow {
     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
             bool forceBuild = false, bool forceLoad = false);
     Q_INVOKABLE void focusNoteTextEdit();
-    // Créé un nouveau sous-dossier de notes dans le sous-dossier courant
+    // Creates a new note subfolder in the current subfolder
     Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
-    // Insère du HTML au format MarkDown dans la note courante
-    // Cette méthode télécharge également les images distantes et transforme les URLs
-    // "data:image" en images locales stockées dans le dossier media
+    // Inserts html in the current note as markdown
+    // This method also downloads remote images and transforms "data:image"
+    // urls to local images stored in the media directory
     Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
-    // Re-charge la note courante par ID
-    // Ceci est utile quand le chemin ou le nom de fichier de la note courante a changé
+    // Reloads the current note by id
+    // This is useful when the path or filename of the current note changed
     Q_INVOKABLE void reloadCurrentNoteByNoteId();
-    // Retourne la liste des UUIDs des espaces de travail
+    // Returns the list of workspace UUIDs
     Q_INVOKABLE QStringList getWorkspaceUuidList();
-    // Retourne l'UUID d'un espace de travail, en y ajoutant le nom de ce dernier
+    // Returns the UUID of a workspace, passing in the workspace name
     Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
-    // Définit l'espace de travail courant par son UUID
+    // Sets the current workspace by UUID
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
-    // Ferme un onglet de note sur un index spécifique (retourne 'true' en cas de succès)
+    // Closes a note tab on a specific index (returns true if successful)
     Q_INVOKABLE bool removeNoteTab(int index);
+    // Jumps to a tag in the tag tree
+    Q_INVOKABLE bool jumpToTag(int tagId);
 };
 ```
 
 ### Exemple
 ```js
-// Force le re-chargement de la liste des notes
+// Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Créer un nouveau sous-dossier de notes "Mon joli dossier" dans le sous dossier courant
-mainWindow.createNewNoteSubFolder("Mon joli dossier");
+// Creates a new note subfolder "My fancy folder" in the current subfolder
+mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Insère du HTML au format MarkDown dans la note courante
+// Inserts html in the current note as markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Définit l'espace de travail 'Edition' comme espace de travail courant
-mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edition"));
+// Set 'Edit' workspace as current workspace
+mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
+
+// Jump to the tag "test" in the tag tree
+// There is an example in https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml
+var tag = script.getTagByNameBreadcrumbList(["test"]);
+mainWindow.jumpToTag(tag.id);
 ```
