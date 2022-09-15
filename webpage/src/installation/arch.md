@@ -1,6 +1,29 @@
 # Install on Arch Linux
 
+## Arch User Repository (AUR)
+
+Alternatively there also is an official package for QOwnNotes on AUR, it is called `qownnotes`.
+
+You will find it here: [QOwnNotes on AUR](https://aur.archlinux.org/packages/qownnotes)
+
+Synchronize your package database and install the package with `yay`:
+
+```bash
+yay -S qownnotes
+```
+
+::: tip
+If you want to speed up build time you may want to read
+[CCACHE and AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/).
+:::
+
 ## pacman
+
+::: warning
+[OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop)
+currently seems to have build issues on Arch Linux.
+Best use the AUR or the [AppImage](./appimage.md) for now.
+:::
 
 Add the following lines to your `/etc/pacman.conf` with `sudo nano /etc/pacman.conf`:
 
@@ -37,21 +60,4 @@ sudo pacman -Syy qownnotes
 
 ::: tip
 Of course you can also use this repository with other Arch Linux based distributions, like Manjaro.
-:::
-
-## Arch User Repository (AUR)
-
-Alternatively there also is an official package for QOwnNotes on AUR, it is called `qownnotes`.
-
-You will find it here: [QOwnNotes on AUR](https://aur.archlinux.org/packages/qownnotes)
-
-Synchronize your package database and install the package with `yay`:
-
-```bash
-yay -S qownnotes
-```
-
-::: tip
-If you want to speed up build time you may want to read
-[CCACHE and AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/).
 :::
