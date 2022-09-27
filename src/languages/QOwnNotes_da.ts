@@ -2365,7 +2365,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1458"/>
 <source>Insert text &amp;link</source>
-<translation type="unfinished">Insert text &amp;link</translation>
+<translation>Indsæt tekst &amp; link</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1461"/>
@@ -3423,7 +3423,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 <message>
 <location filename="../mainwindow.cpp" line="9758"/>
 <source>Open selected notes in tabs</source>
-<translation type="unfinished">Open selected notes in tabs</translation>
+<translation>Åbn valgte noter i faner</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="11289"/>

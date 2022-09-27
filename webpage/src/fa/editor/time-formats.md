@@ -2,7 +2,7 @@
 
 هنگام درج زمان کنونی در یک یادداشت می ‌توانید از قالب زمانی خود استفاده کنید.
 
-You can use this page to build a personal default time format. You can enter that string at _Note_ > _Settings_ > _Editor_ > _Insert current time_.
+می توانید از این صفحه برای ایجاد قالب زمانی پیش فرض و شخصی استفاده کنید. می توانید آن رشته را در _یادداشت_>_ تنظیمات_>_ ویرایشگر_>_ درج زمان کنونی وارد کنید.</p>
 
 ## اصطلاحات مربوط به تاریخ
 
@@ -67,9 +67,9 @@ A
 | `h:m:s ap`         | 2:13:9 pm        |
 
 ::: tip Info
-Take a look at the [Qt documentation](http://doc.qt.io/qt-5/qdatetime.html#toString) for more information about time formats.
+برای اطلاعات بیشتر در مورد قالب های زمانی نگاهی به [مستندات Qt ](http://doc.qt.io/qt-5/qdatetime.html#toString) بیندازید.
 :::
 
 ::: tip
-If you need to make more complex operations to output the current time please consider creating a [custom action](../scripting/methods-and-objects.md#registering-a-custom-action).
+در صورت نیاز به عملیات پیچیده تر به منظور دستیابی به زمان کنونی، لطفاً ایجاد یک [فعالیت سفارشی](../scripting/methods-and-objects.md#registering-a-custom-action) را در نظر داشته باشید.
 :::

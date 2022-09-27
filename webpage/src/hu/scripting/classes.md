@@ -146,6 +146,8 @@ class MainWindow {
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
     // Closes a note tab on a specific index (returns true if successful)
     Q_INVOKABLE bool removeNoteTab(int index);
+    // Returns a list of note ids that are opened in tabs
+    Q_INVOKABLE QList<int> getNoteTabNoteIdList();
     // Jumps to a tag in the tag tree
     Q_INVOKABLE bool jumpToTag(int tagId);
 };
@@ -169,4 +171,13 @@ mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 // There is an example in https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
+
+// Get all notes that are opened in tabs
+var noteIds = mainWindow.getNoteTabNoteIdList();
+noteIds.forEach(function (noteId){
+    var note = script.fetchNoteById(noteId);
+
+    // do something with the note
+});
+
 ```

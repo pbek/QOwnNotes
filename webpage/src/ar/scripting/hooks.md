@@ -408,10 +408,12 @@ workspaceSwitchedHook (خطاف تبديل مساحة العمل)
 ### نداء الدالة ومُعامِلاتها
 ```js
 /**
- * This function is called when workspaces are switched
+ * تُنادى هذه الدالة عند تبديل مساحات العمل
  *
- * @param oldUuid old uuid of workspace
- * @param newUuid new uuid of workspace
+ * @param oldUuid
+ *       المعرف العالمي الفريد لمساحة العمل القديمة
+ * @param newUuid
+ *       المعرف العالمي الفريد لمساحة العمل الجديدة
  */
 function workspaceSwitchedHook(oldUuid, newUuid);
 ```

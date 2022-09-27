@@ -6856,12 +6856,12 @@ QOwnNotesAPI
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5721"/>
 <source>Ignored note files</source>
-<translation type="unfinished">Ignored note files</translation>
+<translation>پرونده های یادداشت چشم پوشی شده</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5727"/>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
-<translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
+<translation>عبارات باقاعده از پرونده های یادداشت برای چشم پوشی، جدا شده با "؛"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5826"/>

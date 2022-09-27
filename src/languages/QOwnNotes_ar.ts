@@ -6882,7 +6882,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4818"/>
 <source>Reset the debounce time</source>
-<translation type="unfinished">Reset the debounce time</translation>
+<translation>إعادة تعيين زمن الارتداد</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4832"/>

@@ -6743,12 +6743,12 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5721"/>
 <source>Ignored note files</source>
-<translation type="unfinished">Ignored note files</translation>
+<translation>Fitxes de notes ignorats</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5727"/>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
-<translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
+<translation>Expressions regulars dels fitxers de notes a ignorar, separades per ";"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5826"/>

@@ -1101,8 +1101,8 @@
 <source>%n lines moved.</source>
 <translation>
 <numerusform>Premješten je %n redak.</numerusform>
-<numerusform>Premješteno je %n linija.</numerusform>
-<numerusform>Premješteno je %n linija.</numerusform>
+<numerusform>Premještena su %n retka.</numerusform>
+<numerusform>Premješteno je %n redaka.</numerusform>
 </translation>
 </message>
 <message>
@@ -1140,8 +1140,8 @@
 <source>%n lines filtered.</source>
 <translation>
 <numerusform>%n redaka filtrirano.</numerusform>
-<numerusform>%n linije filtrirane.</numerusform>
-<numerusform>%n linije filtrirane.</numerusform>
+<numerusform>%n redaka filtrirana.</numerusform>
+<numerusform>%n redaka filtrirano.</numerusform>
 </translation>
 </message>
 <message>
@@ -1189,8 +1189,8 @@
 <source>%n lines indented.</source>
 <translation>
 <numerusform>%n redaka razvedeno.</numerusform>
-<numerusform>%n redaka sa urezima.</numerusform>
-<numerusform>%n redaka sa urezima.</numerusform>
+<numerusform>%n retka uvučena.</numerusform>
+<numerusform>%n redaka uvučeno.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -1207,8 +1207,8 @@
 <source>%n lines yanked.</source>
 <translation>
 <numerusform>%n redaka povučeno.</numerusform>
-<numerusform>%n linije povukle.</numerusform>
-<numerusform>%n linije povukle.</numerusform>
+<numerusform>%n retka povučena.</numerusform>
+<numerusform>%n redaka povučeno.</numerusform>
 </translation>
 </message>
 <message>
