@@ -11947,6 +11947,21 @@ bool MainWindow::removeNoteTab(int index) const {
     return true;
 }
 
+/**
+ * Returns a list of note ids that are opened in tabs
+ */
+QList<int> MainWindow::getNoteTabNoteIdList() const {
+    QList<int> resultList;
+
+    for (int i = 0; i < ui->noteEditTabWidget->count(); i++) {
+        auto widget = ui->noteEditTabWidget->widget(i);
+        const int noteId = widget->property("note-id").toInt();
+        resultList.append(noteId);
+    }
+
+    return resultList;
+}
+
 void MainWindow::on_noteEditTabWidget_tabBarDoubleClicked(int index) {
     Utils::Gui::setTabWidgetTabSticky(ui->noteEditTabWidget, index,
           !Utils::Gui::isTabWidgetTabSticky(ui->noteEditTabWidget, index));

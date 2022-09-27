@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 22.9.2
+- there now is a new scripting command `mainWindow.getNoteTabNoteIdList()` to get
+  a list of note ids that are opened in tabs (for [#2597](https://github.com/pbek/QOwnNotes/issues/2597))
+  - for more information please take a look at the
+    [MainWindow scripting documentation](https://www.qownnotes.org/scripting/classes.html#mainwindow)
+
 ## 22.9.1
 - the tag name line edit will now be properly hidden after an existing tag was
   recognized and added when pressing <kbd>Tab</kbd> (for [#2607](https://github.com/pbek/QOwnNotes/issues/2607))

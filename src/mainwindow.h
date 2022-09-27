@@ -224,6 +224,8 @@ class MainWindow : public QMainWindow {
 
     Q_INVOKABLE bool removeNoteTab(int index) const;
 
+    Q_INVOKABLE QList<int> getNoteTabNoteIdList() const;
+
     Q_INVOKABLE bool jumpToTag(int tagId);
 
    protected:
