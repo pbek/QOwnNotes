@@ -17,6 +17,10 @@ You can **donate money via PayPal** by clicking this button:
     <img alt="" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 </form>
 
+## GitHub Sponsors
+
+You can **sponsor on GitHub Sponsors** on [pbek GitHub Sponsors](https://github.com/sponsors/pbek).
+
 ## Liberapay
 
 You can **donate money via Liberapay** by clicking this button:
