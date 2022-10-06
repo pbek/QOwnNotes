@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.10.0
+- Exporting and printing of the selected text in the note text edit now really only
+  uses the selected text again (for [#2618](https://github.com/pbek/QOwnNotes/issues/2618))
+
 ## 22.9.2
 - there now is a new scripting command `mainWindow.getNoteTabNoteIdList()` to get
   a list of note ids that are opened in tabs (for [#2597](https://github.com/pbek/QOwnNotes/issues/2597))

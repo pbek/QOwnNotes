@@ -977,7 +977,10 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     printTextAction->setEnabled(isTextSelected);
     printTextAction->setIcon(printIcon);
     connect(printTextAction, &QAction::triggered, this, [this](){
-        mainWindow->printTextDocument(document());
+        // print the selected text
+        auto *textEdit = new QOwnNotesMarkdownTextEdit(this);
+        textEdit->setPlainText(mainWindow->selectedNoteTextEditText());
+        mainWindow->printTextDocument(textEdit->document());
     });
 
     // add the print selected text (preview) action
@@ -986,14 +989,15 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     printHTMLAction->setEnabled(isTextSelected);
     printHTMLAction->setIcon(printIcon);
     connect(printHTMLAction, &QAction::triggered, this, [this](){
+        // print the selected text (preview)
         auto note = mainWindow->getCurrentNote();
         QString html = note.textToMarkdownHtml(
-            toPlainText(), NoteFolder::currentLocalPath(),
+            mainWindow->selectedNoteTextEditText(), NoteFolder::currentLocalPath(),
             mainWindow->getMaxImageWidth(),
             Utils::Misc::useInternalExportStylingForPreview());
-        QTextDocument doc;
-        doc.setHtml(html);
-        mainWindow->printTextDocument(&doc);
+        auto *textEdit = new QTextEdit(this);
+        textEdit->setHtml(html);
+        mainWindow->printTextDocument(textEdit->document());
     });
 
     // add the export menu
@@ -1014,7 +1018,10 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     exportTextAction->setEnabled(isTextSelected);
     exportTextAction->setIcon(pdfIcon);
     connect(exportTextAction, &QAction::triggered, this, [this](){
-        mainWindow->exportNoteAsPDF(document());
+        // export the selected text as PDF
+        auto *textEdit = new QOwnNotesMarkdownTextEdit(this);
+        textEdit->setPlainText(mainWindow->selectedNoteTextEditText());
+        mainWindow->exportNoteAsPDF(textEdit->document());
     });
 
     // add the export selected text (preview) action
@@ -1026,7 +1033,7 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
         // export the selected text (preview) as PDF
         auto note = mainWindow->getCurrentNote();
         QString html = note.textToMarkdownHtml(
-            toPlainText(), NoteFolder::currentLocalPath(),
+            mainWindow->selectedNoteTextEditText(), NoteFolder::currentLocalPath(),
             mainWindow->getMaxImageWidth(),
             Utils::Misc::useInternalExportStylingForPreview());
         html = Utils::Misc::parseTaskList(html, false);
