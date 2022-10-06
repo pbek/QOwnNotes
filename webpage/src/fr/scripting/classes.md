@@ -129,55 +129,45 @@ class MainWindow {
     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
             bool forceBuild = false, bool forceLoad = false);
     Q_INVOKABLE void focusNoteTextEdit();
-    // Creates a new note subfolder in the current subfolder
+    // Créer un nouveau sous-dossier de notes dans le sous-dossier courant
     Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
-    // Inserts html in the current note as markdown
-    // This method also downloads remote images and transforms "data:image"
-    // urls to local images stored in the media directory
+    // Insère le HTML dans la note courante au format MarkDown
+    // Cette méthode télécharge également les images distantes et transforme les URL "data:image"
+    // en images stockées localement dans le dossier media
     Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
-    // Reloads the current note by id
-    // This is useful when the path or filename of the current note changed
+    // Re-charge la note courante, par id
+    // Ceci est utile quand le chemin ou le nom de fichier de la note courante ont changé
     Q_INVOKABLE void reloadCurrentNoteByNoteId();
-    // Returns the list of workspace UUIDs
+    // Retourne la liste des UUID des espaces de travail
     Q_INVOKABLE QStringList getWorkspaceUuidList();
-    // Returns the UUID of a workspace, passing in the workspace name
+    // Retourne l'UUID correspondant au nom de l'espace de travail entré
     Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
-    // Sets the current workspace by UUID
+    // Définit l'espace de travail courant par son UUID
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
-    // Closes a note tab on a specific index (returns true if successful)
+    // Ferme un onglet de note sur un index spécifique (retourne true en cas de succès)
     Q_INVOKABLE bool removeNoteTab(int index);
-    // Returns a list of note ids that are opened in tabs
-    Q_INVOKABLE QList<int> getNoteTabNoteIdList();
-    // Jumps to a tag in the tag tree
+    // Saute à une étiquette dans l'arbre des étiquettes
     Q_INVOKABLE bool jumpToTag(int tagId);
 };
 ```
 
 ### Exemple
 ```js
-// Force a reload of the note list
+// Force un re-chargement de la liste des notes
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creates a new note subfolder "My fancy folder" in the current subfolder
-mainWindow.createNewNoteSubFolder("My fancy folder");
+// Créé le nouveau sous-dossier de notes "Mon joli dossier" dans le sous-dossier courant
+mainWindow.createNewNoteSubFolder("Mon joli dossier");
 
-// Inserts html in the current note as markdown
+// Insère du HTML en tant que MarkDown dans la note courante
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Set 'Edit' workspace as current workspace
+// Définir l'espace de travail 'Edit' comme espace de travail par défaut
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 
-// Jump to the tag "test" in the tag tree
-// There is an example in https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml
+// Sauter à l'étiquette "test" dans l'arbre des étiquettes
+// Un exemple est dispponible à cette adresse https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
-
-// Get all notes that are opened in tabs
-var noteIds = mainWindow.getNoteTabNoteIdList();
-noteIds.forEach(function (noteId){
-    var note = script.fetchNoteById(noteId);
-
-    // do something with the note
-});
 
 ```
