@@ -10472,15 +10472,7 @@ void MainWindow::writeToNoteTextEdit(const QString &text) {
  * @return
  */
 QString MainWindow::selectedNoteTextEditText() {
-    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-    QString selectedText = textEdit->textCursor().selectedText();
-
-    // transform Unicode line endings
-    // this newline character seems to be used in multi-line selections
-    const QString newLine = QString::fromUtf8(QByteArray::fromHex("e280a9"));
-    selectedText.replace(newLine, QStringLiteral("\n"));
-
-    return selectedText;
+    return activeNoteTextEdit()->cleanSelectedText();
 }
 
 /**

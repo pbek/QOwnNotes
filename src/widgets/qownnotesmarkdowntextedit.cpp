@@ -900,6 +900,17 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     QMarkdownTextEdit::updateSettings();
 }
 
+QString QOwnNotesMarkdownTextEdit::cleanSelectedText()
+{
+    QString selectedText = textCursor().selectedText();
+    // transform Unicode line endings
+    // this newline character seems to be used in multi-line selections
+    const QString newLine = QString::fromUtf8(QByteArray::fromHex("e280a9"));
+    selectedText.replace(newLine, QStringLiteral("\n"));
+
+    return selectedText;
+}
+
 void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
 
     auto *spellCheckMenu = spellCheckContextMenu(pos);
@@ -977,7 +988,8 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     printTextAction->setEnabled(isTextSelected);
     printTextAction->setIcon(printIcon);
     connect(printTextAction, &QAction::triggered, this, [this](){
-        mainWindow->printTextDocument(document());
+        QTextDocument doc(cleanSelectedText(), this);
+        mainWindow->printTextDocument(&doc);
     });
 
     // add the print selected text (preview) action
@@ -988,7 +1000,7 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     connect(printHTMLAction, &QAction::triggered, this, [this](){
         auto note = mainWindow->getCurrentNote();
         QString html = note.textToMarkdownHtml(
-            toPlainText(), NoteFolder::currentLocalPath(),
+            cleanSelectedText(), NoteFolder::currentLocalPath(),
             mainWindow->getMaxImageWidth(),
             Utils::Misc::useInternalExportStylingForPreview());
         QTextDocument doc;
@@ -1014,7 +1026,8 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     exportTextAction->setEnabled(isTextSelected);
     exportTextAction->setIcon(pdfIcon);
     connect(exportTextAction, &QAction::triggered, this, [this](){
-        mainWindow->exportNoteAsPDF(document());
+        QTextDocument doc(cleanSelectedText(), this);
+        mainWindow->exportNoteAsPDF(&doc);
     });
 
     // add the export selected text (preview) action
@@ -1026,7 +1039,7 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
         // export the selected text (preview) as PDF
         auto note = mainWindow->getCurrentNote();
         QString html = note.textToMarkdownHtml(
-            toPlainText(), NoteFolder::currentLocalPath(),
+            cleanSelectedText(), NoteFolder::currentLocalPath(),
             mainWindow->getMaxImageWidth(),
             Utils::Misc::useInternalExportStylingForPreview());
         html = Utils::Misc::parseTaskList(html, false);

@@ -81,6 +81,9 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
      */
     bool autoComplete(QStringList &resultList) const;
 
+    // Like selected text, but cleans unicode line endings
+    QString cleanSelectedText();
+
    protected:
     // we must not override _highlighter or Windows will create a
     // QOwnNotesMarkdownHighlighter and MarkdownHighlighter instance
