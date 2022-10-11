@@ -28,6 +28,8 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     : QMarkdownTextEdit(parent, false) {
     mainWindow = nullptr;
 
+    // We need to set the internal variable to true, because we start with a highlighter
+    _highlightingEnabled = true;
     _highlighter = nullptr;
     if (parent->objectName() != QStringLiteral("LogWidget")) {
         _highlighter = new QOwnNotesMarkdownHighlighter(document());
@@ -110,7 +112,9 @@ void QOwnNotesMarkdownTextEdit::setFormatStyle(
     MarkdownHighlighter::HighlighterState index) {
     QTextCharFormat format;
     Utils::Schema::schemaSettings->setFormatStyle(index, format);
-    _highlighter->setTextFormat(index, format);
+    if (_highlighter) {
+        _highlighter->setTextFormat(index, format);
+    }
 }
 
 /**
@@ -304,7 +308,9 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
 
     if (doSetStyles) {
         this->setStyles();
-        _highlighter->rehighlight();
+        if (_highlighter) {
+            _highlighter->rehighlight();
+        }
     }
 
     return fontSize;
@@ -885,7 +891,9 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
         if (highlightingEnabled) {
             // set the new highlighting styles
             setStyles();
-            _highlighter->rehighlight();
+            if (_highlighter) {
+                _highlighter->rehighlight();
+            }
         }
     }
 

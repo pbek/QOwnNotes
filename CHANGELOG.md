@@ -1,7 +1,11 @@
 # QOwnNotes Changelog
 
+## 22.10.1
+- disabling of the Markdown highlighting now also works after a restart of
+  the application (for [#2622](https://github.com/pbek/QOwnNotes/issues/2622))
+
 ## 22.10.0
-- Exporting and printing of the selected text in the note text edit now really only
+- exporting and printing of the selected text in the note text edit now really only
   uses the selected text again (for [#2618](https://github.com/pbek/QOwnNotes/issues/2618))
 
 ## 22.9.2
