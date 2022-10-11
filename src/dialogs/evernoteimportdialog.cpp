@@ -355,7 +355,7 @@ QString EvernoteImportDialog::importAttachments(const Note &note,
         QString suffix = fileInfo.suffix();
 
         // store data in the QHash
-        mediaFileDataHash[objectId].data = data;
+        mediaFileDataHash[objectId].data = data.trimmed();
         mediaFileDataHash[objectId].suffix = suffix;
         mediaFileDataHash[objectId].fileName = fileName;
     }
@@ -803,7 +803,8 @@ QString EvernoteImportDialog::getMarkdownForAttachmentFileData(
 
     // store the temporary file in the media folder and return the
     // Markdown code
-    QString markdownCode = note.getInsertAttachmentMarkdown(tempFile, fileName);
+    QString markdownCode = note.getInsertAttachmentMarkdown(
+        tempFile, fileName, false, Note::extendedCleanupFileName(fileName));
 
     return markdownCode;
 }

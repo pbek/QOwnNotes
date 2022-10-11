@@ -2,7 +2,9 @@
 
 ## 22.10.1
 - disabling of the Markdown highlighting now also works after a restart of
-  the application (for [#2622](https://github.com/pbek/QOwnNotes/issues/2622))
+  the application again (for [#2622](https://github.com/pbek/QOwnNotes/issues/2622))
+- when importing attachments with the Evernote import filenames will now be kept
+  as good as possible (for [#2621](https://github.com/pbek/QOwnNotes/issues/2621))
 
 ## 22.10.0
 - exporting and printing of the selected text in the note text edit now really only

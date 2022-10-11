@@ -3682,9 +3682,11 @@ QString Note::attachmentUrlStringForFileName(const QString &fileName) const {
 /**
  * Returns the markdown of the inserted attachment file into a note
  */
-QString Note::getInsertAttachmentMarkdown(QFile *file, QString fileName,
-                                          bool returnUrlOnly) {
-    if (file->exists() && (file->size() > 0)) {
+QString Note::getInsertAttachmentMarkdown(QFile *file, QString title,
+                                          bool returnUrlOnly,
+                                          QString fileBaseName) const {
+    // file->exists() was false for QTemporaryFile, so we are using file->size() only
+    if (file->size() > 0) {
         const QDir dir(NoteFolder::currentAttachmentsPath());
 
         // created the attachments folder if it doesn't exist
@@ -3692,9 +3694,16 @@ QString Note::getInsertAttachmentMarkdown(QFile *file, QString fileName,
             dir.mkpath(dir.path());
         }
 
-        // find a random name for the new file
+        const QFileInfo fileInfo(file->fileName());
+        const QString suffix = fileInfo.suffix();
+
+        if (fileBaseName.isEmpty()) {
+            fileBaseName = file->fileName();
+        }
+
+        // find an available filename for the new file
         const QString newFileName =
-            Utils::Misc::findAvailableFileName(file->fileName(), dir.path());
+            Utils::Misc::findAvailableFileName(fileBaseName, dir.path(), suffix);
 
         const QString newFilePath =
             dir.path() + QDir::separator() + newFileName;
@@ -3710,13 +3719,12 @@ QString Note::getInsertAttachmentMarkdown(QFile *file, QString fileName,
             return attachmentUrlString;
         }
 
-        if (fileName.isEmpty()) {
-            const QFileInfo fileInfo(file->fileName());
-            fileName = fileInfo.fileName();
+        if (title.isEmpty()) {
+            title = fileInfo.fileName();
         }
 
         // return the attachment link
-        return QStringLiteral("[") + fileName + QStringLiteral("](") +
+        return QStringLiteral("[") + title + QStringLiteral("](") +
                attachmentUrlString + QStringLiteral(")");
     }
 

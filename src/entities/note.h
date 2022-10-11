@@ -275,8 +275,9 @@ class Note {
                                    QString title = QString()) const;
 
     QString getInsertAttachmentMarkdown(QFile *file,
-                                        QString fileName = QString(),
-                                        bool returnUrlOnly = false);
+                                        QString title = QString(),
+                                        bool returnUrlOnly = false,
+                                        QString fileBaseName = QString()) const;
 
     static bool scaleDownImageFileIfNeeded(QFile &file);
 
