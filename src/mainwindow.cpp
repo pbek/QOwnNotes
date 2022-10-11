@@ -6731,7 +6731,7 @@ bool MainWindow::insertAttachment(QFile *file, const QString &title) {
 
     if (!text.isEmpty()) {
         ScriptingService *scriptingService = ScriptingService::instance();
-        // attempts to ask a script for another markdown text
+        // attempts to ask a script for another Markdown text
         text = scriptingService->callInsertAttachmentHook(file, text);
         qDebug() << __func__ << " - 'text': " << text;
 
