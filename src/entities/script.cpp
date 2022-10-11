@@ -439,7 +439,7 @@ QString Script::scriptRepositoryPath(bool removeRecursively) const {
 }
 
 /**
- * Checks if the script is a script from the sript repository
+ * Checks if the script is a script from the script repository
  *
  * @return
  */

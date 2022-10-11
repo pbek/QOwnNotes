@@ -2,7 +2,7 @@ import QtQml 2.0
 import QOwnNotesTypes 1.0
 
 /**
- * This script is a short example of how to use detatched processes and callbacks
+ * This script is a short example of how to use detached processes and callbacks
  * to relieve the UI thread.
  * Visit http://docs.qownnotes.org/ for more information about scripting
  */
