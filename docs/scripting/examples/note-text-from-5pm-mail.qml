@@ -62,7 +62,7 @@ QtObject {
         // add the headline of the task
         var text = headline + "\n";
         
-        // add "=" charactes so that the headline is really a headline
+        // add "=" characters so that the headline is really a headline
         for (var i = 0; i < headline.length; i++) {
             text += "=";
         }

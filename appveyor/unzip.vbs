@@ -27,7 +27,7 @@ If NOT fso.FolderExists(extractTo) Then
    fso.CreateFolder(extractTo)
 End If
 
-' Extract the contants of the zip file.
+' Extract the contents of the zip file.
 set objShell = CreateObject("Shell.Application")
 set FilesInZip = objShell.NameSpace(zipFile).Items()
 objShell.NameSpace(extractTo).CopyHere(FilesInZip)

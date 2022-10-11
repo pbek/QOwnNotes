@@ -163,7 +163,7 @@ jobs:
         # Create AppImage (needs Ubuntu 18.04)
         make INSTALL_ROOT=appdir -j 8 install ; find appdir/
         mkdir -p appdir/usr/languages
-        # mv tranlations to appdir (where QOwnNotes will find them)
+        # mv translations to appdir (where QOwnNotes will find them)
         mv ./languages/*.qm appdir/usr/languages
         wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
         chmod a+x linuxdeployqt-continuous-x86_64.AppImage
