@@ -274,9 +274,13 @@ void ScriptingService::registerCustomAction(QString identifier,
                                             bool useInNoteListContextMenu);
 ```
 
-::: tip يمكنك أيضا تعيين اختصارات محلية أو عامة لإجراءاتك المخصصة في *إعدادات الاختصارات*. :::
+::: tip
+يمكنك أيضا تعيين اختصارات محلية أو عامة لإجراءاتك المخصصة في *إعدادات الاختصارات*.
+:::
 
-::: warning تذكر أن [سمة أيقونات فري دسكتوب](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html) متاحة غالبا فقط على لينكس. لذلك إذا أردت استخدام أيقونة في ماك أو ويندوز، عليك تزويد بُريمجك بواحدة. للحصول على مسار بُريمجك لضبط المسار المناسب لأيقونتك، يمكنك استخدام [خاصية scriptDirPath](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script). :::
+::: warning
+تذكر أن [سمة أيقونات فري دسكتوب](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html) متاحة غالبا فقط على لينكس. لذلك إذا أردت استخدام أيقونة في ماك أو ويندوز، عليك تزويد بُريمجك بواحدة. للحصول على مسار بُريمجك لضبط المسار المناسب لأيقونتك، يمكنك استخدام [خاصية scriptDirPath](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script).
+:::
 
 ### مثال
 
@@ -329,7 +333,9 @@ Script {
 
 للمزيد من بعض الأمثلة يمكنك أن تلقي نظرة على [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-::: tip يمكنك تنفيذ إجراء مخصص بعد تشغيل التطبيق، باستخدام المُعامِل <code dir="ltr">--action customAction_&lt;المعرِّف&gt;</code>. للمزيد من المعلومات يمكنك أن تلقي نظرة على [تنفيذ إجراءات قائمة بعد التشغيل](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup). :::
+::: tip
+يمكنك تنفيذ إجراء مخصص بعد تشغيل التطبيق، باستخدام المُعامِل <code dir="ltr">--action customAction_&lt;المعرِّف&gt;</code>. للمزيد من المعلومات يمكنك أن تلقي نظرة على [تنفيذ إجراءات قائمة بعد التشغيل](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
+:::
 
 Registering a label
 -------------------
@@ -403,7 +409,8 @@ script.createNote("My note headline\n===\n\nMy text");
 
 ربما تحب أن تلقي نظرة على المثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-::: tip If you turned off that your note headline determines the note filename then you have to rename your note file yourself afterwards, like this:
+::: tip
+If you turned off that your note headline determines the note filename then you have to rename your note file yourself afterwards, like this:
 
 ```js
 var note = script.currentNote();
@@ -786,13 +793,17 @@ The Qt documentation (for example [QMainWindow](https://doc.qt.io/qt-5/qmainwind
 
 The base widget for almost everything is [QWidget](https://doc.qt.io/qt-5/qwidget.html). So just styling `QWidget` with for example `QWidget {background-color: black; color: white;}` would mean everything has a black background color and a white foreground color.
 
-::: tip The [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) of [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle) might also be a good reference for styles you can change. :::
+::: tip
+The [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) of [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle) might also be a good reference for styles you can change.
+:::
 
 Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) for a reference of what styles are available.
 
 If you want to inject styles into html preview to alter the way notes are previewed please look at [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
-::: tip If you actually want to see how the dialogs look and what their names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it. :::
+::: tip
+If you actually want to see how the dialogs look and what their names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it.
+:::
 
 إعادة تحميل محرك البرمجة
 ------------------------------
@@ -953,7 +964,9 @@ script.jumpToNoteSubFolder("a sub folder");
 script.jumpToNoteSubFolder("a sub folder/sub");
 ```
 
-::: tip يمكنك إنشاء مجلد ملاحظات فرعي في المجلد الفرعي الحالي بنداء [`mainWindow.createNewNoteSubFolder`](classes.html#example-2). :::
+::: tip
+يمكنك إنشاء مجلد ملاحظات فرعي في المجلد الفرعي الحالي بنداء [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
+:::
 
 إظهار صندوق رسالة معلومة
 ----------------------------------
@@ -1409,7 +1422,9 @@ script.triggerMenuAction("actionAllow_note_editing", 1);
 
 ربما تحب أن تلقي نظرة على المثال [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
 
-::: tip يمكنك الحصول على أسماء كائنات إجراءات القائمة من [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). فقط ابحث بالعنوان الإنجليزي للقائمة. لاحظ أن هذه النصوص قد تتغير بمرور الوقت. :::
+::: tip
+يمكنك الحصول على أسماء كائنات إجراءات القائمة من [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). فقط ابحث بالعنوان الإنجليزي للقائمة. لاحظ أن هذه النصوص قد تتغير بمرور الوقت.
+:::
 
 إظهار حوار إدخال بصندوق اختيار
 -----------------------------------------

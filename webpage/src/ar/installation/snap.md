@@ -10,4 +10,6 @@ snap install qownnotes
 
 بعدئذٍ يمكنك تشغيل QOwnNotes بالأمر `qownnotes`.
 
-::: tip حزم [Snap](http://snapcraft.io) تعمل على العديد من التوزيعات اللينكسية، مثل أوبنتو وآرتش&nbsp;لينكس ودبيان وفيدورا وأوبن&nbsp;سوزي وجنتو&nbsp;لينكس و&nbsp;OpenWRT و&nbsp;open&nbsp;embedded ومشروع&nbsp;يوكتو. :::
+::: tip
+حزم [Snap](http://snapcraft.io) تعمل على العديد من التوزيعات اللينكسية، مثل أوبنتو وآرتش&nbsp;لينكس ودبيان وفيدورا وأوبن&nbsp;سوزي وجنتو&nbsp;لينكس و&nbsp;OpenWRT و&nbsp;open&nbsp;embedded ومشروع&nbsp;يوكتو.
+:::

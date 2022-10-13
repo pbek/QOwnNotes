@@ -12,11 +12,15 @@ Synchronize your package database and install the package with `yay`:
 yay -S qownnotes
 ```
 
-::: tip If you want to speed up build time you may want to read [CCACHE and AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/). :::
+::: tip
+If you want to speed up build time you may want to read [CCACHE and AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/).
+:::
 
 ## pacman
 
-::: warning [OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) currently seems to have build issues on Arch Linux. Best use the AUR or the [AppImage](./appimage.md) for now. :::
+::: warning
+[OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) currently seems to have build issues on Arch Linux. Best use the AUR or the [AppImage](./appimage.md) for now.
+:::
 
 Add the following lines to your `/etc/pacman.conf` with `sudo nano /etc/pacman.conf`:
 

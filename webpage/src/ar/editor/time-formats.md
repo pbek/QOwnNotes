@@ -47,6 +47,10 @@
 | `hh:mm:ss.zzz`     | 14:13:09.042                                    |
 | `h:m:s ap`         | 2:13:9 م                                        |
 
-::: tip معلومة ألقِ نظرة على [توثيق Qt (بالإنجليزية)](http://doc.qt.io/qt-5/qdatetime.html#toString) للمزيد من المعلومات عن صيغ الوقت. :::
+::: tip
+معلومة ألقِ نظرة على [توثيق Qt (بالإنجليزية)](http://doc.qt.io/qt-5/qdatetime.html#toString) للمزيد من المعلومات عن صيغ الوقت.
+:::
 
-::: tip إذا احتجت إلى عمليات أكثر تعقيدًا لإنتاج الوقت الحالي، فبرجاء النظر في إنشاء [إجراء مخصص](../scripting/methods-and-objects.md#registering-a-custom-action). :::
+::: tip
+إذا احتجت إلى عمليات أكثر تعقيدًا لإنتاج الوقت الحالي، فبرجاء النظر في إنشاء [إجراء مخصص](../scripting/methods-and-objects.md#registering-a-custom-action).
+:::

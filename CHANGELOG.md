@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 22.10.2
+- the Polish translation was integrated into the webpage on [QOwnNotes webpage in Polish](https://www.qownnotes.org/pl)
+
 ## 22.10.1
 - disabling of the Markdown highlighting now also works after a restart of
   the application again (for [#2622](https://github.com/pbek/QOwnNotes/issues/2622))

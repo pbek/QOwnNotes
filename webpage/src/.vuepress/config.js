@@ -159,6 +159,10 @@ module.exports = {
       lang: 'ar-AR',
       title: 'QOwnNotes',
     },
+    '/pl/': {
+      lang: 'pl-PL',
+      title: 'QOwnNotes',
+    },
   },
 
   /**
@@ -678,6 +682,68 @@ module.exports = {
           },
           {
             title: 'Changelog (in het Engels)',
+            children: [ changelogNavItem ]
+          }
+        ]
+      },
+      '/pl/': {
+        selectText: '🌍',
+        label: 'Polski',
+        editLinkText: 'Pomóż nam ulepszyć tę stronę!',
+        algolia: {
+          apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
+          indexName: 'qownnotes'
+        },
+        nav: [
+          {
+            text: 'Pierwsze kroki',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'pl'),
+          },
+          {
+            text: 'Instalacja',
+            link: utils.getNavItemForLanguage(installationNavItem, 'pl'),
+          },
+          {
+            text: 'Kontakt',
+            ariaLabel: 'Contact Menu',
+            items: contactNavItems
+          },
+          {
+            text: 'Wpłać',
+            link: utils.getNavItemForLanguage(donateNavItem, 'pl'),
+          }
+        ],
+        sidebar: [
+          {
+            title: 'Pierwsze kroki',
+            children: utils.getNavItemsForLanguage(gettingStartedNavItems, 'pl')
+          },
+          {
+            title: 'Instalacja',
+            children: utils.getNavItemsForLanguage(installationNavItems, 'pl')
+          },
+          {
+            title: 'Editor',
+            children: utils.getNavItemsForLanguage(editorNavItems, 'pl')
+          },
+          {
+            title: 'Skrypty',
+            children: utils.getNavItemsForLanguage(scriptingNavItems, 'pl')
+          },
+          {
+            title: 'Wkład',
+            children: utils.getNavItemsForLanguage(contributingNavItems, 'pl')
+          },
+          {
+            title: 'FAQ',
+            children: utils.getNavItemsForLanguage(faqNavItems, 'pl')
+          },
+          {
+            title: 'Blog (auf Englisch)',
+            children: utils.getChildren('src', 'blog', true)
+          },
+          {
+            title: 'Lista zmian (po angielsku)',
             children: [ changelogNavItem ]
           }
         ]

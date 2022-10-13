@@ -57,21 +57,27 @@ graph TB
 
 يمكنك استخدام QOwnNotes لإدارة **إشارات المتصفح المرجعية** أو كـ**مقص ويب**.
 
-::: tip إضافة المتصفح تعمل **بدون اتصال بالإنترنت**. برجاء زيارة [إضافة المتصفح رفيقة ويب QOwnNotes](browser-extension.md) للمزيد من المعلومات. :::
+::: tip
+إضافة المتصفح تعمل **بدون اتصال بالإنترنت**. برجاء زيارة [إضافة المتصفح رفيقة ويب QOwnNotes](browser-extension.md) للمزيد من المعلومات.
+:::
 
 ## مدير قصاصات سطر أوامر QOwnNotes
 
 يمكنك إدارة **قصاصات الأوامر** الخاصة بك باستخدام QOwnNotes وتنفيذها في سطر الأوامر.
 
-::: tip برجاء زيارة [مدير قصاصات سطر أوامر QOwnNotes](command-line-snippet-manager.md) لمزيد من المعلومات. :::
+::: tip
+برجاء زيارة [مدير قصاصات سطر أوامر QOwnNotes](command-line-snippet-manager.md) لمزيد من المعلومات.
+:::
 
 ## عميل مزامنة Nextcloud الحاسوبي
 
 **زامن ملاحظاتك** مع الأجهزة الأخرى (الحاسوب والمحمول) باستخدام عميل مزامنة [Nextcloud](https://nextcloud.com/) أو [ownCloud](https://owncloud.org/) مع&nbsp;خادمك.
 
-::: tip بالطبع يمكن استخدام حلول أخرى، مثل **Dropbox** أو **Syncthing** أو **Seafile** أو BitTorrent Sync، لمزامنة ملاحظاتك والملفات الأخرى.
+::: tip
+بالطبع يمكن استخدام حلول أخرى، مثل **Dropbox** أو **Syncthing** أو **Seafile** أو BitTorrent Sync، لمزامنة ملاحظاتك والملفات الأخرى.
 
-يمكنك أيضا استخدام **git** للمزامنة باستخدام أدوات مثل [gitomatic](https://github.com/muesli/gitomatic/). :::
+يمكنك أيضا استخدام **git** للمزامنة باستخدام أدوات مثل [gitomatic](https://github.com/muesli/gitomatic/).
+:::
 
 ## خادم Nextcloud
 
@@ -83,13 +89,17 @@ graph TB
 
 يقال إن [Portknox](https://portknox.net) لديهم [QOwnNotesAPI مثبتًا](https://portknox.net/en/app_listing).
 
-::: tip بالطبع يمكن استخدام حلول أخرى، مثل **Dropbox** أو **Syncthing** أو **Seafile** أو BitTorrent Sync، لاستضافة ملاحظاتك والملفات الأخرى. :::
+::: tip
+بالطبع يمكن استخدام حلول أخرى، مثل **Dropbox** أو **Syncthing** أو **Seafile** أو BitTorrent Sync، لاستضافة ملاحظاتك والملفات الأخرى.
+:::
 
 ## QOwnNotesAPI Nextcloud app
 
 يتيح لك [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) الوصول إلى **ملاحظاتك المهملة** و**نسخ ملاحظاتك** الموجودة على الخادم.
 
-::: tip برجاء زيارة [QOwnNotesAPI Nextcloud App](qownnotesapi.md) للمزيد من المعلومات. :::
+::: tip
+برجاء زيارة [QOwnNotesAPI Nextcloud App](qownnotesapi.md) للمزيد من المعلومات.
+:::
 
 ## تطبيق خادم Nextcloud Notes
 
@@ -107,13 +117,17 @@ graph TB
 
 - [Nextcloud Notes لأندرويد](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (من طرف ثالث)
 
-::: tip يمكنك أيضا استخدام أي أداة مزامنة مثل *Synchronize Ultimate* أو *FolderSync* لمزامنة ملفات ملاحظاتك، وتطبيق مثل *neutriNotes* لتحريرها. :::
+::: tip
+يمكنك أيضا استخدام أي أداة مزامنة مثل *Synchronize Ultimate* أو *FolderSync* لمزامنة ملفات ملاحظاتك، وتطبيق مثل *neutriNotes* لتحريرها.
+:::
 
 ### آي أو إس
 
 - [CloudNotes لآي أو إس](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (من طرف ثالث)
 
-::: tip يمكنك أيضا استخدام [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) ومزامنة ملاحظاتك عبر WebDAV؛ هذا درس جيد (بالإنجليزية):<br/>[Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks) :::
+::: tip
+يمكنك أيضا استخدام [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) ومزامنة ملاحظاتك عبر WebDAV؛ هذا درس جيد (بالإنجليزية):<br/>[Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
+:::
 
 ## api.qownnotes.org
 
@@ -123,10 +137,14 @@ graph TB
 
 بالإضافة إلى ذلك فإنها أيضا توفر [موجز RSS للإصدارات](http://api.qownnotes.org/rss/app-releases)، ونسخة من واجهة API القديمة الخاصة بالتحديث لنسخ QOwnNotes القديمة.
 
-::: tip يمكنك الوصول إلى كود مصدر [api.qownnotes.org](https://api.qownnotes.org) على [GitHub](https://github.com/qownnotes/api). :::
+::: tip
+يمكنك الوصول إلى كود مصدر [api.qownnotes.org](https://api.qownnotes.org) على [GitHub](https://github.com/qownnotes/api).
+:::
 
 ## تطبيق ويب QOwnNotes
 
 يمكنك إضافة صور من هاتفك المحمول إلى الملاحظة الحالية في QOwnNotes على حاسوبك عبر **تطبيق الويب** على [app.qownnotes.org](https://app.qownnotes.org/).
 
-::: tip برجاء زيارة [تطبيق ويب QOwnNotes](web-app.md) للمزيد من المعلومات. :::
+::: tip
+برجاء زيارة [تطبيق ويب QOwnNotes](web-app.md) للمزيد من المعلومات.
+:::

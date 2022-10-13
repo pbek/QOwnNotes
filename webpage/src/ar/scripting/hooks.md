@@ -294,7 +294,9 @@ function noteTaggingHook(note, action, tagName, newTagName);
 
 ربما تحب أن تلقي نظرة على المثال [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml) لتنفيذ آلية وسم خاصة بك.
 
-::: warning اجعل إجراء السرد، `list`، الخاص بك سريعا جدا، لأنه سينفذ لكل ملاحظة كل مرة يُعاد فيها تحميل مجلدها! :::
+::: warning
+اجعل إجراء السرد، `list`، الخاص بك سريعا جدا، لأنه سينفذ لكل ملاحظة كل مرة يُعاد فيها تحميل مجلدها!
+:::
 
 noteTaggingByObjectHook (خطاف وسم الملاحظات الكائني)
 ----------------------

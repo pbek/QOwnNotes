@@ -18,4 +18,6 @@
 - شارك **تجربتك مع QOwnNotes** على قناتك على **يوتيوب** - أو أي قناة أخرى -، ولكن أيضا نحب أن [**ترسل الصوت أو الفيديو أو النص إلى Amy**](mailto:amydoralang@aol.de) لرفعه على قناة [**QOwnNotes in a Nutshell**](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos)
 - إن رغبت، يمكنك الإجابة على بعض [**الأسئلة**](https://freeonlinesurveys.com/s/nA8t17k8) بشكل سري، حتى يمكننا مساعدتك في الحصول على نتائج أفضل مع QOwnNotes
 
-::: tip مهم اقرأ [ميثاق السلوك](./code-of-conduct.md) قبل المشاركة! :::
+::: tip
+مهم اقرأ [ميثاق السلوك](./code-of-conduct.md) قبل المشاركة!
+:::

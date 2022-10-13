@@ -13,7 +13,8 @@
 | `<span dir="ltr">--allow-multiple-instances</span>` | يسمح بتشغيل عدة نسخ من تطبيق QOwnNotes حتى في حالة منع ذلك في الإعدادات                       |
 | `<span dir="ltr">--action <اسم></span>`       | ينفذ إجراء قائمة بعد تشغيل التطبيق (انظر بالأسفل)                                             |
 
-::: tip إذا كنت تواجه مشاكل مع QOwnNotes المثبت لديك، ربما تود أن تشغّل التطبيق بإعدادات جديدة بدون أن تفقد إعداداتك الحالية، باستخدام المُعامل <code dir="ltr">--session</code>.
+::: tip
+إذا كنت تواجه مشاكل مع QOwnNotes المثبت لديك، ربما تود أن تشغّل التطبيق بإعدادات جديدة بدون أن تفقد إعداداتك الحالية، باستخدام المُعامل <code dir="ltr">--session</code>.
 
 ```bash
 QOwnNotes --session test
@@ -38,7 +39,9 @@ QOwnNotes --session test
 QOwnNotes --action actionShow_Todo_List
 ```
 
-::: tip يمكنك الحصول على أسماء كائنات إجراءات القائمة من [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). فقط ابحث بالعنوان الإنجليزي للقائمة. لاحظ أن هذه النصوص قد تتغير بمرور الوقت. :::
+::: tip
+يمكنك الحصول على أسماء كائنات إجراءات القائمة من [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). فقط ابحث بالعنوان الإنجليزي للقائمة. لاحظ أن هذه النصوص قد تتغير بمرور الوقت.
+:::
 
 لتنفيذ [إجراء برمجي](../scripting/methods-and-objects.md#registering-a-custom-action)، استخدم <code dir="ltr">customAction_</code> متبوعًا باسم الإجراء المخصص. اسم الإجراء المخصص هو المُعامل الأول في نداء `script.registerCustomAction` في البُريمج.
 

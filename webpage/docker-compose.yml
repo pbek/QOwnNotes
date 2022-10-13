@@ -1,9 +1,20 @@
 version: '3'
 services:
-  web:
-    image: img-qownnotes-webpage
-    build: .
-    container_name: qownnotes-webpage
-    restart: always
+  dev:
+    image: node:12
+    volumes:
+      - .:/app
+    user: 1000:1000
     ports:
-      - "8080:80"
+      - "8080:8080"
+    command: ['/bin/bash', '-c', 'cd /app && yarn install && yarn run dev']
+
+#  web:
+#    image: img-qownnotes-webpage
+#    build: .
+#    container_name: qownnotes-webpage
+#    restart: always
+#    ports:
+#      - "8081:80"
+#    extra_hosts:
+#      - "qownnotes-api: 127.0.0.1"
