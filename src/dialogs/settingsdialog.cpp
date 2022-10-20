@@ -635,6 +635,8 @@ void SettingsDialog::startConnectionTest() {
     OwnCloudService *ownCloud =
         OwnCloudService::instance(true, _selectedCloudConnection.getId());
     ownCloud->settingsConnectionTest(this);
+    ui->check8Label->setText(tr("notes path <b>%1</b> found on server")
+                                 .arg(NoteFolder::currentRemotePath(false)));
 }
 
 /**
