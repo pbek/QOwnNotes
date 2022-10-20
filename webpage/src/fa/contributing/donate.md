@@ -16,35 +16,39 @@ QOwnNotes هیچ درآمد زایی ندارد (غیرانتفاعی).
     <img alt="" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-## لیبراپی
+## GitHub Sponsors
 
-می توانید با کلیک بر روی این دکمه **از طریق لیبراپی کمک مالی** کنید:
+You can **sponsor on GitHub Sponsors** on [pbek GitHub Sponsors](https://github.com/sponsors/pbek).
 
-<a href="https://liberapay.com/pbek/donate"><img alt="کمک مالی با استفاده از لیبراپی" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+## Liberapay
 
-## بیت کوین
+You can **donate money via Liberapay** by clicking this button:
 
-می توانید به این آدرس بیت کوین (BTC) **از طریق بیت کوین (BTC) کمک مالی** کنید:
+<a href="https://liberapay.com/pbek/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+
+## Bitcoin
+
+You can **donate Bitcoin BTC** to this Bitcoin BTC address:
 
 ```
 395NiU7QKpNiayWgRrUEGZDn8Z1ebMx8CH
 ```
 
-می توانید به این آدرس بیت کوین کش **از طریق بیت کوین کش کمک مالی** کنید:
+You can **donate Bitcoin Cash** to this Bitcoin Cash address:
 
 ```
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 ```
 
-## اترئوم
+## Ethereum
 
-می توانید به این آدرس اترئوم (ETH) **از طریق اترئوم (ETH) کمک مالی** کنید:
+You can **donate Ethereum ETH** to this Ethereum ETH address:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-می توانید به این آدرس اترئوم کلاسیک (ETC) **از طریق اترئوم کلاسیک (ETC) کمک مالی** کنید:
+You can **donate Ethereum ETC** to this Ethereum ETC address:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

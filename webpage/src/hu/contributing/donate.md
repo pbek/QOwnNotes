@@ -16,21 +16,25 @@ A gombra kattintva **pénzt adományozhat a PayPal-on keresztül**:
     <img alt="" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 </form>
 
+## GitHub Sponsors
+
+You can **sponsor on GitHub Sponsors** on [pbek GitHub Sponsors](https://github.com/sponsors/pbek).
+
 ## Liberapay
 
-A gombra kattintva **pénzt adományozhat a Liberapay-on keresztül**:
+You can **donate money via Liberapay** by clicking this button:
 
-<a href="https://liberapay.com/pbek/donate"><img alt="Adományozzon a Liberapay segítségével" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+<a href="https://liberapay.com/pbek/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 
 ## Bitcoin
 
-**Bitcoin BTC-t adományozhat** erre a Bitcoin BTC címre:
+You can **donate Bitcoin BTC** to this Bitcoin BTC address:
 
 ```
 395NiU7QKpNiayWgRrUEGZDn8Z1ebMx8CH
 ```
 
-**Bitcoin Cash-t adományozhat** erre a Bitcoin Cash címre:
+You can **donate Bitcoin Cash** to this Bitcoin Cash address:
 
 ```
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
@@ -38,13 +42,13 @@ qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 
 ## Ethereum
 
-**Adományozhatja az Ethereum ETH-t** erre az Ethereum ETH címre:
+You can **donate Ethereum ETH** to this Ethereum ETH address:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-**Adományozhatja az Ethereum ETC-t** erre az Ethereum ETC címre:
+You can **donate Ethereum ETC** to this Ethereum ETC address:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

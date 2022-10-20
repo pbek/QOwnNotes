@@ -10,6 +10,7 @@
   was updated to version 22.10.0 to support Nextcloud 25 (for [#41](https://github.com/pbek/qownnotesapi/issues/41))
   - also the code got a cleanup
 - the Polish translation was integrated into the webpage on [QOwnNotes webpage in Polish](https://www.qownnotes.org/pl)
+- added more French translation (thank you chocolatine)
 
 ## 22.10.1
 - disabling of the Markdown highlighting now also works after a restart of
