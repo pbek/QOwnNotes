@@ -2962,6 +2962,11 @@ void MainWindow::notesWereModified(const QString &str) {
 
                 // restore old selected row (but don't update the note text)
                 setCurrentNote(note, false);
+            } else {
+                // rebuild and reload the notes directory list
+                buildNotesIndexAndLoadNoteDirectoryList();
+
+                resetCurrentNote(true);
             }
         }
     } else {

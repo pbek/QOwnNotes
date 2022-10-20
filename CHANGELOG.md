@@ -3,6 +3,8 @@
 ## 22.10.2
 - the connection test in the *Nextcloud / ownCloud* settings now also shows the notes path
   on the server that is being checked (for [#2627](https://github.com/pbek/QOwnNotes/issues/2627))
+- the note folder is now reloaded and the current note is set to the first note after pressing
+  `No` in `Note was removed externally!` dialog (for [#2629](https://github.com/pbek/QOwnNotes/issues/2629))
 - the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
   was updated to version 22.10.0 to support Nextcloud 25 (for [#41](https://github.com/pbek/qownnotesapi/issues/41))
   - also the code got a cleanup
