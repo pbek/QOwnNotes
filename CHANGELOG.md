@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## Next
+- the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
+  was updated to version 22.10.0 to support Nextcloud 25 (for [#41](https://github.com/pbek/qownnotesapi/issues/41))
+  - also the code got a cleanup
+
 ## 22.10.2
 - the Polish translation was integrated into the webpage on [QOwnNotes webpage in Polish](https://www.qownnotes.org/pl)
 
