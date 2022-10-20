@@ -1378,6 +1378,9 @@
                   </item>
                   <item row="20" column="1">
                    <widget class="QLabel" name="check8Label">
+                    <property name="toolTip">
+                     <string>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</string>
+                    </property>
                     <property name="text">
                      <string>notes path found on server</string>
                     </property>
