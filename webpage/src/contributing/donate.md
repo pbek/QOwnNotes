@@ -7,7 +7,9 @@ hosting, domain, etc. feel free to do so.
 
 ## PayPal
 
-You can **donate money via PayPal** by clicking this button:
+You can **donate money via PayPal** on [pbek PayPal](https://paypal.me/pbek):
+
+For monthly donations you can use the following button (PayPal gets a cut of the donation):
 
 <form id="paypal-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_s-xclick">
