@@ -6,7 +6,9 @@ Si vous aimez QOwnNotes et que vous souhaitez **faire un don** au projet pour vo
 
 ## PayPal
 
-Vous pouvez **faire un don via PayPal** en cliquant sur ce bouton:
+Vous pouvez **faire un don via PayPal** à [pbek PayPal](https://paypal.me/pbek) :
+
+Pour programmer un don mensuel utilisez ce bouton (PayPal touche une commission sur le don) :
 
 <form id="paypal-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_s-xclick">

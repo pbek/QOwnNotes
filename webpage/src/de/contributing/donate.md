@@ -6,7 +6,9 @@ Wenn Sie QOwnNotes mögen und für das Projekt zur Finanzierung von Hosting, Dom
 
 ## PayPal
 
-Sie können **Geld über PayPal spenden**, indem Sie auf diese Schaltfläche klicken:
+You can **donate money via PayPal** on [pbek PayPal](https://paypal.me/pbek):
+
+For monthly donations you can use the following button (PayPal gets a cut of the donation):
 
 <form id="paypal-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_s-xclick">
