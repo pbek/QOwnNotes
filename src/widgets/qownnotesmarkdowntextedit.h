@@ -26,7 +26,6 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void openUrl(const QString &urlString) override;
     //    void setViewportMargins(int left, int top, int right, int bottom);
     void setPaperMargins(int width = -1);
-    void setMainWindow(MainWindow *mainWindow);
     int modifyFontSize(FontModificationMode mode);
     void updateSettings();
     QMargins viewportMargins();
@@ -91,7 +90,6 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     bool eventFilter(QObject *obj, QEvent *event) override;
 
    private:
-    MainWindow *mainWindow = nullptr;
     bool _isSpellCheckingDisabled = false;
 
     /// @param in is true if zoom-in, false otherwise

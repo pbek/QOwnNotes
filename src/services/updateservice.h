@@ -31,11 +31,9 @@ class UpdateService : public QObject {
 
     explicit UpdateService(QObject *parent = 0);
 
-    void checkForUpdates(MainWindow *mainWindow,
-                         UpdateMode updateMode = AppStart);
+    void checkForUpdates(UpdateMode updateMode = AppStart);
 
    private:
-    MainWindow *mainWindow;
     UpdateMode updateMode;
     UpdateDialog *_updateDialog;
     QString _currentReleaseVersionString;

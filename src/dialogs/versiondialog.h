@@ -16,8 +16,7 @@ class VersionDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit VersionDialog(const QJSValue &versions, MainWindow *mainWindow,
-                           QWidget *parent = 0);
+    explicit VersionDialog(const QJSValue &versions, QWidget *parent = 0);
     ~VersionDialog();
 
    private slots:
@@ -36,7 +35,6 @@ class VersionDialog : public MasterDialog {
     QSplitter *versionSplitter;
     QStringList *diffList;
     QStringList *dataList;
-    MainWindow *mainWindow;
     void setupMainSplitter();
 };
 

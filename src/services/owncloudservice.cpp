@@ -73,7 +73,6 @@ OwnCloudService::OwnCloudService(int cloudConnectionId, QObject *parent)
     readSettings(cloudConnectionId);
     settingsDialog = nullptr;
     todoDialog = nullptr;
-    mainWindow = nullptr;
     shareDialog = nullptr;
 }
 
@@ -993,10 +992,7 @@ void OwnCloudService::removeCalendarItem(CalendarItem calItem,
  * @brief Restores a note on the server
  */
 void OwnCloudService::restoreTrashedNoteOnServer(const QString &fileName,
-                                                 int timestamp,
-                                                 MainWindow *mainWindow) {
-    this->mainWindow = mainWindow;
-
+                                                 int timestamp) {
     QUrl url(serverUrl % restoreTrashedNotePath);
     QString serverNotesPath = Utils::Misc::appendIfDoesNotEndWith(
         NoteFolder::currentRemotePath() +
@@ -1076,10 +1072,7 @@ int OwnCloudService::deleteTrashedNoteOnServer(const QString &fileName,
 /**
  * @brief OwnCloudService::loadVersions
  */
-void OwnCloudService::loadVersions(const QString &fileName,
-                                   MainWindow *mainWindow) {
-    this->mainWindow = mainWindow;
-
+void OwnCloudService::loadVersions(const QString &fileName) {
     QUrl url(serverUrl % versionListPath);
     QString serverPath = NoteFolder::currentRemotePath() % fileName;
     qDebug() << __func__ << " - 'serverPath': " << serverPath;
@@ -1107,9 +1100,7 @@ void OwnCloudService::loadVersions(const QString &fileName,
 /**
  * @brief OwnCloudService::loadTrash
  */
-void OwnCloudService::loadTrash(MainWindow *mainWindow) {
-    this->mainWindow = mainWindow;
-
+void OwnCloudService::loadTrash() {
     QUrl url(serverUrl % trashListPath);
     QString serverNotesPath =
         NoteFolder::currentRemotePath() +
@@ -1306,8 +1297,8 @@ OwnCloudService *OwnCloudService::instance(bool reset, int cloudConnectionId) {
  */
 void OwnCloudService::handleVersionsLoading(QString data) {
 #ifndef INTEGRATION_TESTS
-    mainWindow->enableShowVersionsButton();
-    mainWindow->showStatusBarMessage(tr("Done with loading note versions"),
+    MainWindow::instance()->enableShowVersionsButton();
+    MainWindow::instance()->showStatusBarMessage(tr("Done with loading note versions"),
                                      2000);
 #endif
 
@@ -1359,7 +1350,7 @@ void OwnCloudService::handleVersionsLoading(QString data) {
     }
 
 #ifndef INTEGRATION_TESTS
-    VersionDialog *dialog = new VersionDialog(versions, mainWindow);
+    VersionDialog *dialog = new VersionDialog(versions);
     dialog->exec();
 #endif
 }
@@ -1372,8 +1363,8 @@ void OwnCloudService::handleVersionsLoading(QString data) {
  */
 void OwnCloudService::handleTrashedLoading(QString data) {
 #ifndef INTEGRATION_TESTS
-    mainWindow->enableShowTrashButton();
-    mainWindow->showStatusBarMessage(tr("Done with loading trashed notes"),
+    MainWindow::instance()->enableShowTrashButton();
+    MainWindow::instance()->showStatusBarMessage(tr("Done with loading trashed notes"),
                                      2000);
 #endif
 
@@ -1425,7 +1416,7 @@ void OwnCloudService::handleTrashedLoading(QString data) {
     }
 
 #ifndef INTEGRATION_TESTS
-    TrashDialog *dialog = new TrashDialog(notes, mainWindow);
+    TrashDialog *dialog = new TrashDialog(notes);
     dialog->exec();
 #endif
 }

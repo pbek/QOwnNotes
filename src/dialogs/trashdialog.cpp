@@ -14,10 +14,8 @@
 #include "mainwindow.h"
 #include "ui_trashdialog.h"
 
-TrashDialog::TrashDialog(const QJSValue &notes, MainWindow *mainWindow,
-                         QWidget *parent)
+TrashDialog::TrashDialog(const QJSValue &notes, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::TrashDialog) {
-    this->mainWindow = mainWindow;
     ui->setupUi(this);
 
     // init the note browser search frame
@@ -172,7 +170,7 @@ void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
             case Download: {
                 QString text =
                     dataList->value(ui->trashListWidget->currentRow());
-                mainWindow->createNewNote(name, text);
+                MainWindow::instance()->createNewNote(name, text);
                 break;
             }
 
@@ -181,7 +179,7 @@ void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
                     ui->trashListWidget->currentRow());
                 qDebug() << name << timestamp;
 
-                mainWindow->restoreTrashedNoteOnServer(fileName, timestamp);
+                MainWindow::instance()->restoreTrashedNoteOnServer(fileName, timestamp);
                 break;
             }
 

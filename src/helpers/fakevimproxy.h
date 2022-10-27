@@ -16,7 +16,7 @@ class FakeVimProxy : public QObject {
     Q_OBJECT
 
    public:
-    FakeVimProxy(QWidget *widget, MainWindow *mw, QObject *parent = 0);
+    FakeVimProxy(QWidget *widget, QObject *parent = 0);
 
    signals:
     void handleInput(const QString &keys);
@@ -71,7 +71,6 @@ class FakeVimProxy : public QObject {
     QString content() const;
 
     QWidget *m_widget;
-    MainWindow *m_mainWindow;
     QString m_statusMessage;
     QString m_statusData;
 
