@@ -905,7 +905,7 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
 
     auto *spellCheckMenu = spellCheckContextMenu(pos);
 
-    const QPoint globalPos = this->mapToGlobal(pos);
+    const QPoint globalPos = this->viewport()->mapToGlobal(pos);
     QMenu *menu = this->createStandardContextMenu();
     if (spellCheckMenu) {
         // insert spell check at the top if available
