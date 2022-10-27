@@ -26,7 +26,6 @@
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     : QMarkdownTextEdit(parent, false) {
-    mainWindow = nullptr;
 
     // We need to set the internal variable to true, because we start with a highlighter
     _highlightingEnabled = true;
@@ -71,12 +70,12 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         onZoom(/*in=*/ false);
     });
 
-    connect(this, &QOwnNotesMarkdownTextEdit::urlClicked, this, [this](const QString &url){
-        if (!mainWindow) {
+    connect(this, &QOwnNotesMarkdownTextEdit::urlClicked, this, [](const QString &url){
+        if (!MainWindow::instance()) {
             qWarning() << "No MainWindow! shouldn't happen!";
             return;
         }
-        UrlHandler(mainWindow).openUrl(url);
+        UrlHandler().openUrl(url);
     });
 
     connect(MainWindow::instance(), &MainWindow::settingsChanged, this, &QOwnNotesMarkdownTextEdit::updateSettings);
@@ -90,6 +89,7 @@ void QOwnNotesMarkdownTextEdit::onZoom(bool in)
     FontModificationMode mode = in ? Increase : Decrease;
     const int fontSize = modifyFontSize(mode);
 
+    auto mainWindow = MainWindow::instance();
     if (mainWindow && mainWindow->isInDistractionFreeMode()) {
         setPaperMargins();
         if (in) {
@@ -542,7 +542,7 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested()
 
     // try to open a link at the cursor position
     if (openLinkAtCursorPosition()) {
-        mainWindow->showStatusBarMessage(
+        MainWindow::instance()->showStatusBarMessage(
             tr("An url was opened at the current cursor position"), 5000);
         return;
     }
@@ -718,7 +718,7 @@ bool QOwnNotesMarkdownTextEdit::solveEquation(double &returnValue) {
 
     if (!match.hasMatch()) {
         if (equation.trimmed().endsWith(QChar('='))) {
-            mainWindow->showStatusBarMessage(
+            MainWindow::instance()->showStatusBarMessage(
                 tr("No equation was found in front of the cursor"), 5000);
         }
 
@@ -739,7 +739,7 @@ bool QOwnNotesMarkdownTextEdit::solveEquation(double &returnValue) {
         resultValue = 0;
     }
 
-    mainWindow->showStatusBarMessage(tr("Result for equation: %1 = %2")
+    MainWindow::instance()->showStatusBarMessage(tr("Result for equation: %1 = %2")
                              .arg(equation, QString::number(resultValue)),
                          10000);
 
@@ -811,13 +811,6 @@ void QOwnNotesMarkdownTextEdit::resizeEvent(QResizeEvent *event) {
     QMarkdownTextEdit::resizeEvent(event);
 }
 
-/**
- * Sets the main window for insertFromMimeData
- */
-void QOwnNotesMarkdownTextEdit::setMainWindow(MainWindow *mainWindow) {
-    this->mainWindow = mainWindow;
-}
-
 bool QOwnNotesMarkdownTextEdit::canInsertFromMimeData(const QMimeData *source) const
 {
     return (!source->hasUrls());
@@ -830,7 +823,7 @@ void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData *source) {
     // if there is text in the clipboard do the normal pasting process
     if (source->hasText()) {
         QMarkdownTextEdit::insertFromMimeData(source);
-    } else if (mainWindow != nullptr) {
+    } else if (auto mainWindow = MainWindow::instance()) {
         // to more complex pasting if there was no text (and a main window
         // was set)
         mainWindow->handleInsertingFromMimeData(source);
@@ -912,7 +905,7 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
 
     auto *spellCheckMenu = spellCheckContextMenu(pos);
 
-    const QPoint globalPos = this->mapToGlobal(pos);
+    const QPoint globalPos = this->viewport()->mapToGlobal(pos);
     QMenu *menu = this->createStandardContextMenu();
     if (spellCheckMenu) {
         // insert spell check at the top if available
@@ -924,8 +917,8 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
 
     const QString linkTextActionName =
         isTextSelected ? tr("&Link selected text") : tr("Insert &link");
-    QAction *linkTextAction = menu->addAction(linkTextActionName, this, [this](){
-        mainWindow->insertTextLinkAction()->trigger();
+    QAction *linkTextAction = menu->addAction(linkTextActionName, this, [](){
+        MainWindow::instance()->insertTextLinkAction()->trigger();
     });
     linkTextAction->setEnabled(isAllowNoteEditing);
 
@@ -939,7 +932,7 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     blockQuoteTextAction->setEnabled(isAllowNoteEditing);
 
     if (isTextSelected) {
-        menu->addAction(mainWindow->searchTextOnWebAction());
+        menu->addAction(MainWindow::instance()->searchTextOnWebAction());
     }
 //     searchAction->setEnabled(isTextSelected);
 //     QAction *searchAction =
@@ -986,6 +979,7 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     printTextAction->setIcon(printIcon);
     connect(printTextAction, &QAction::triggered, this, [this](){
         // print the selected text
+        auto mainWindow = MainWindow::instance();
         auto *textEdit = new QOwnNotesMarkdownTextEdit(this);
         textEdit->setPlainText(mainWindow->selectedNoteTextEditText());
         mainWindow->printTextDocument(textEdit->document());
@@ -998,6 +992,7 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     printHTMLAction->setIcon(printIcon);
     connect(printHTMLAction, &QAction::triggered, this, [this](){
         // print the selected text (preview)
+        auto mainWindow = MainWindow::instance();
         auto note = mainWindow->getCurrentNote();
         QString html = note.textToMarkdownHtml(
             mainWindow->selectedNoteTextEditText(), NoteFolder::currentLocalPath(),
@@ -1027,6 +1022,7 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     exportTextAction->setIcon(pdfIcon);
     connect(exportTextAction, &QAction::triggered, this, [this](){
         // export the selected text as PDF
+        auto mainWindow = MainWindow::instance();
         auto *textEdit = new QOwnNotesMarkdownTextEdit(this);
         textEdit->setPlainText(mainWindow->selectedNoteTextEditText());
         mainWindow->exportNoteAsPDF(textEdit->document());
@@ -1037,8 +1033,9 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
         exportMenu->addAction(tr("Export selected text as PDF (preview)"));
     exportHTMLAction->setEnabled(isTextSelected);
     exportHTMLAction->setIcon(pdfIcon);
-    connect(exportHTMLAction, &QAction::triggered, this, [this](){
+    connect(exportHTMLAction, &QAction::triggered, this, [](){
         // export the selected text (preview) as PDF
+        auto mainWindow = MainWindow::instance();
         auto note = mainWindow->getCurrentNote();
         QString html = note.textToMarkdownHtml(
             mainWindow->selectedNoteTextEditText(), NoteFolder::currentLocalPath(),
@@ -1053,6 +1050,7 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     menu->addSeparator();
 
     // add some other existing menu entries
+    auto mainWindow = MainWindow::instance();
     menu->addAction(mainWindow->pasteImageAction());
     menu->addAction(mainWindow->autocompleteAction());
     menu->addAction(mainWindow->splitNoteAtPosAction());
@@ -1220,8 +1218,8 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
                                "want to allow it again?"),
                             QStringLiteral("readonly-mode-allow")) ==
                         QMessageBox::Yes) {
-                        if (mainWindow != nullptr) {
-                            mainWindow->allowNoteEditing();
+                        if (MainWindow::instance()) {
+                            MainWindow::instance()->allowNoteEditing();
                         }
                         // If the answer is overridden to Yes ("Don't ask again" with "Yes"),
                         // what you type then only enables note editing, but is not typed in
@@ -1244,9 +1242,8 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
                 }
             } else {
                 // disable note editing if escape key was pressed
-                if (keyEvent->key() == Qt::Key_Escape &&
-                    mainWindow != nullptr) {
-                    mainWindow->disallowNoteEditing();
+                if (keyEvent->key() == Qt::Key_Escape) {
+                    MainWindow::instance()->disallowNoteEditing();
 
                     return true;
                 } else if ((keyEvent->key() == Qt::Key_Tab) ||

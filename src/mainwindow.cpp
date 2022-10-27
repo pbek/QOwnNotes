@@ -141,10 +141,11 @@ private:
 };
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow) {
+    : QMainWindow(parent) {
 
     // static reference to us
     s_self = this;
+    ui = new Ui::MainWindow;
 
 #ifdef Q_OS_MAC
     // disable icons in the menu
@@ -366,7 +367,7 @@ MainWindow::MainWindow(QWidget *parent)
     updatePanelsSortOrder();
 
     this->updateService = new UpdateService(this);
-    this->updateService->checkForUpdates(this, UpdateService::AppStart);
+    this->updateService->checkForUpdates(UpdateService::AppStart);
 
     // expire trashed items
     TrashItem::expireItems();
@@ -529,10 +530,6 @@ void MainWindow::initNotePreviewAndTextEdits()
     ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame,
                                                darkMode);
 
-    // set the main window for accessing its public methods
-    ui->noteTextEdit->setMainWindow(this);
-    ui->encryptedNoteTextEdit->setMainWindow(this);
-
     // setup vim mode
     if (settings.value(QStringLiteral("Editor/vimMode")).toBool()) {
         initFakeVim(ui->noteTextEdit);
@@ -690,7 +687,7 @@ void MainWindow::initWebAppClientService() {
 
 void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
     auto handler = new FakeVim::Internal::FakeVimHandler(noteTextEdit, this);
-    new FakeVimProxy(noteTextEdit, this, handler);
+    new FakeVimProxy(noteTextEdit, handler);
 }
 
 /**
@@ -3127,7 +3124,7 @@ void MainWindow::frequentPeriodicChecker() {
                           QDateTime::currentDateTime());
     } else if (lastUpdateCheck.addSecs(3600) <= QDateTime::currentDateTime()) {
         // check for updates every 1h
-        updateService->checkForUpdates(this, UpdateService::Periodic);
+        updateService->checkForUpdates(UpdateService::Periodic);
 
         // expire trashed items
         TrashItem::expireItems();
@@ -4636,7 +4633,7 @@ void MainWindow::createNewNote(QString name, QString text,
 void MainWindow::restoreTrashedNoteOnServer(const QString &fileName,
                                             int timestamp) {
     OwnCloudService *ownCloud = OwnCloudService::instance();
-    ownCloud->restoreTrashedNoteOnServer(fileName, timestamp, this);
+    ownCloud->restoreTrashedNoteOnServer(fileName, timestamp);
 }
 
 /**
@@ -5554,7 +5551,7 @@ void MainWindow::openTodoDialog(const QString &taskUid) {
     }
 
     if (_todoDialog == nullptr) {
-        _todoDialog = new TodoDialog(this, taskUid, this);
+        _todoDialog = new TodoDialog(taskUid, this);
     } else {
         _todoDialog->refreshUi();
         _todoDialog->jumpToTask(taskUid);
@@ -6209,14 +6206,14 @@ void MainWindow::onNotePreviewAnchorClicked(const QUrl &url) {
  * Handles note urls
  */
 void MainWindow::openLocalUrl(QString urlString) {
-    UrlHandler(this).openUrl(urlString);
+    UrlHandler().openUrl(urlString);
 }
 
 /*
  * Manually check for updates
  */
 void MainWindow::on_actionCheck_for_updates_triggered() {
-    this->updateService->checkForUpdates(this, UpdateService::Manual);
+    this->updateService->checkForUpdates(UpdateService::Manual);
 }
 
 /*
@@ -6458,7 +6455,7 @@ void MainWindow::on_actionShow_versions_triggered() {
 
     OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->loadVersions(
-        this->currentNote.relativeNoteFilePath(QStringLiteral("/")), this);
+        this->currentNote.relativeNoteFilePath(QStringLiteral("/")));
 }
 
 void MainWindow::enableShowVersionsButton() {
@@ -6474,7 +6471,7 @@ void MainWindow::on_actionShow_trash_triggered() {
         20000);
 
     OwnCloudService *ownCloud = OwnCloudService::instance();
-    ownCloud->loadTrash(this);
+    ownCloud->loadTrash();
 }
 
 void MainWindow::enableShowTrashButton() {

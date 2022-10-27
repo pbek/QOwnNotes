@@ -10,9 +10,7 @@
 #include <QDesktopServices>
 #include <QFileInfo>
 
-UrlHandler::UrlHandler(MainWindow *mainWindow)
-    : _mw(mainWindow)
-{}
+UrlHandler::UrlHandler() = default;
 
 bool UrlHandler::isUrlSchemeLocal(const QUrl &url)
 {
@@ -46,7 +44,7 @@ void UrlHandler::openUrl(QString urlString)
     QString fragment;
     if (urlWasNotValid) {
         fragment = Note::getURLFragmentFromFileName(urlString);
-        urlString = _mw->getCurrentNote().getFileURLFromFileName(urlString, true);
+        urlString = MainWindow::instance()->getCurrentNote().getFileURLFromFileName(urlString, true);
     } else {
         fragment = QUrl(urlString).fragment();
     }
@@ -65,7 +63,7 @@ void UrlHandler::openUrl(QString urlString)
     } else if (scheme == QStringLiteral("note") || isNoteFileUrl) {
         handleNoteUrl(urlString, fragment);
     } else if (scheme == QStringLiteral("task")) {
-        _mw->openTodoDialog(url.host());
+        MainWindow::instance()->openTodoDialog(url.host());
     } else if (scheme == QStringLiteral("checkbox")) {
         handleCheckboxUrl(urlString);
     } else if (scheme == QStringLiteral("file") && urlWasNotValid) {
@@ -86,7 +84,7 @@ void UrlHandler::handleNoteIdUrl(QString urlString)
         Note note = Note::fetch(noteId);
         if (note.isFetched()) {
             // set current note
-            _mw->setCurrentNote(std::move(note));
+            MainWindow::instance()->setCurrentNote(std::move(note));
         }
     } else {
         qWarning() << "NoteIdUrlHandler malformed url: " << urlString;
@@ -96,7 +94,8 @@ void UrlHandler::handleNoteIdUrl(QString urlString)
 void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
     Note note;
     const QUrl url(urlString);
-    const auto &currentNote = _mw->getCurrentNote();
+    auto mw = MainWindow::instance();
+    const auto &currentNote = mw->getCurrentNote();
 
     const bool isNoteFileUrl = Note::fileUrlIsNoteInCurrentNoteFolder(url);
 
@@ -110,12 +109,12 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
     // does this note really exist?
     if (note.isFetched()) {
         // set current note
-        _mw->setCurrentNote(std::move(note));
+        mw->setCurrentNote(std::move(note));
 
         // jump to the Markdown heading in the note that is represented by the url fragment
         if (!fragment.isEmpty()) {
-            _mw->doSearchInNote("\"## " + fragment + "\"");
-            _mw->activeNoteTextEdit()->searchWidget()->deactivate();
+            mw->doSearchInNote("\"## " + fragment + "\"");
+            mw->activeNoteTextEdit()->searchWidget()->deactivate();
         }
     } else {
         QString fileName;
@@ -200,7 +199,7 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
 
                     NoteSubFolder subFolder = NoteSubFolder::fetchByNameAndParentId(folderName, noteSubFolder.getId());
                     if (!subFolder.isFetched()) {
-                        _mw->createNewNoteSubFolder(folderName);
+                        mw->createNewNoteSubFolder(folderName);
                         noteSubFolder = NoteSubFolder::fetchByNameAndParentId(folderName, noteSubFolder.getId());
                         if (!noteSubFolder.isFetched()) {
                             qWarning() << "Failed to create subfolder: " << folderName <<
@@ -218,10 +217,10 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
 
             if (!subFolderCreationFailed) {
                 if (!relativeFilePath.isEmpty()) {
-                    _mw->noteSubFolderTree()->reset();
-                    _mw->jumpToNoteSubFolder(noteSubFolder.getId());
+                    mw->noteSubFolderTree()->reset();
+                    mw->jumpToNoteSubFolder(noteSubFolder.getId());
                 }
-                _mw->createNewNote(fileName, false);
+                mw->createNewNote(fileName, false);
             } else {
                 Utils::Gui::warning(
                     nullptr, QObject::tr("Failed to create note"),
@@ -235,7 +234,8 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
 
 void UrlHandler::handleCheckboxUrl(QString urlString)
 {
-    const auto text = _mw->noteTextEdit()->toPlainText();
+    auto mw = MainWindow::instance();
+    const auto text = mw->noteTextEdit()->toPlainText();
     const QUrl url(urlString);
 
     int index = url.host().mid(1).toInt();
@@ -246,7 +246,7 @@ void UrlHandler::handleCheckboxUrl(QString urlString)
         pos = text.indexOf(re, pos, &match);
         if (pos == -1)    // not found
             return;
-        auto cursor = _mw->noteTextEdit()->textCursor();
+        auto cursor = mw->noteTextEdit()->textCursor();
         int matchedLength = match.capturedLength();
         qDebug() << __func__ << "match.capturedLength(): " << match.capturedLength();
         cursor.setPosition(pos + match.capturedLength() - 1);
@@ -265,7 +265,7 @@ void UrlHandler::handleCheckboxUrl(QString urlString)
                 }
 
                 // refresh instantly
-                _mw->refreshNotePreview();
+                mw->refreshNotePreview();
                 break;
             }
             --index;

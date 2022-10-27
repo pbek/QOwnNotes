@@ -18,8 +18,7 @@ class TodoDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit TodoDialog(MainWindow *mainWindow,
-                        const QString &taskUid = QString(),
+    explicit TodoDialog(const QString &taskUid = QString(),
                         QWidget *parent = nullptr);
     ~TodoDialog();
 
@@ -58,7 +57,6 @@ class TodoDialog : public MasterDialog {
 
 private:
     Ui::TodoDialog *ui;
-    MainWindow *_mainWindow;
     QSplitter *mainSplitter;
     CalendarItem currentCalendarItem;
     CalendarItem lastCreatedCalendarItem;

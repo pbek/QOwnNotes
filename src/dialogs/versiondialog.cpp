@@ -12,10 +12,8 @@
 #include "mainwindow.h"
 #include "ui_versiondialog.h"
 
-VersionDialog::VersionDialog(const QJSValue &versions, MainWindow *mainWindow,
-                             QWidget *parent)
+VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::VersionDialog) {
-    this->mainWindow = mainWindow;
     ui->setupUi(this);
     setWindowTitle(Utils::Misc::replaceOwnCloudText(windowTitle()));
     ui->tabWidget->setCurrentIndex(0);
@@ -129,7 +127,7 @@ void VersionDialog::dialogButtonClicked(QAbstractButton *button) {
     int actionRole = button->property("ActionRole").toInt();
 
     if (actionRole == Restore) {
-        mainWindow->setCurrentNoteText(
+        MainWindow::instance()->setCurrentNoteText(
             dataList->value(ui->versionListWidget->currentRow()));
     }
 

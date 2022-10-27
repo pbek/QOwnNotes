@@ -46,12 +46,11 @@ class OwnCloudService : public QObject {
 
     void settingsConnectionTest(SettingsDialog *dialog);
 
-    void loadVersions(const QString &fileName, MainWindow *mainWindow);
+    void loadVersions(const QString &fileName);
 
-    void loadTrash(MainWindow *mainWindow);
+    void loadTrash();
 
-    void restoreTrashedNoteOnServer(const QString &fileName, int timestamp,
-                                    MainWindow *mainWindow);
+    void restoreTrashedNoteOnServer(const QString &fileName, int timestamp);
 
     int deleteTrashedNoteOnServer(const QString &fileName, int timestamp);
 
@@ -113,7 +112,6 @@ class OwnCloudService : public QObject {
     QString todoCalendarPassword;
     QNetworkAccessManager *networkManager;
     QNetworkAccessManager *calendarNetworkManager;
-    MainWindow *mainWindow;
     ShareDialog *shareDialog;
     static const QString rootPath;
     static const QString format;

@@ -17,8 +17,8 @@
 
     #include<QRegularExpression>
 
-FakeVimProxy::FakeVimProxy(QWidget *widget, MainWindow *mw, QObject *parent)
-    : QObject(parent), m_widget(widget), m_mainWindow(mw)
+FakeVimProxy::FakeVimProxy(QWidget *widget, QObject *parent)
+    : QObject(parent), m_widget(widget)
 {
     using namespace FakeVim::Internal;
 
@@ -168,7 +168,7 @@ void FakeVimProxy::updateStatusBar() {
     int slack = 80 - m_statusMessage.size() - m_statusData.size();
     QString msg =
         m_statusMessage + QString(slack, QLatin1Char(' ')) + m_statusData;
-    m_mainWindow->statusBar()->showMessage(msg);
+    MainWindow::instance()->statusBar()->showMessage(msg);
 }
 
 void FakeVimProxy::handleExCommand(bool *handled,
@@ -347,7 +347,7 @@ bool FakeVimProxy::wantQuit(const FakeVim::Internal::ExCommand &cmd) {
 void FakeVimProxy::cancel() { invalidate(); }
 
 bool FakeVimProxy::save() {
-    m_mainWindow->storeUpdatedNotesToDisk();
+    MainWindow::instance()->storeUpdatedNotesToDisk();
     return true;
 }
 

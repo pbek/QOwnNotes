@@ -16,8 +16,7 @@ class TrashDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit TrashDialog(const QJSValue &notes, MainWindow *mainWindow,
-                         QWidget *parent = 0);
+    explicit TrashDialog(const QJSValue &notes, QWidget *parent = 0);
     ~TrashDialog();
 
    private slots:
@@ -39,7 +38,6 @@ class TrashDialog : public MasterDialog {
     QSplitter *trashSplitter;
     QStringList *dataList;
     QList<int> *timestampList;
-    MainWindow *mainWindow;
     void setupMainSplitter();
 };
 

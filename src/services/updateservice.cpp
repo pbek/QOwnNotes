@@ -20,9 +20,7 @@
 
 UpdateService::UpdateService(QObject *parent) : QObject(parent) {}
 
-void UpdateService::checkForUpdates(MainWindow *mainWindow,
-                                    UpdateMode updateMode) {
-    this->mainWindow = mainWindow;
+void UpdateService::checkForUpdates(UpdateMode updateMode) {
     this->updateMode = updateMode;
 
     QSettings settings;
@@ -180,7 +178,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
                                   .toString();
 
         // show the update available button
-        mainWindow->showUpdateAvailableButton(releaseVersionString);
+        MainWindow::instance()->showUpdateAvailableButton(releaseVersionString);
 
         bool showUpdateDialog = true;
 
@@ -248,7 +246,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
             _updateDialog->show();
         }
     } else {
-        mainWindow->hideUpdateAvailableButton();
+        MainWindow::instance()->hideUpdateAvailableButton();
 
         if (this->updateMode == UpdateService::Manual) {
             QMessageBox::information(

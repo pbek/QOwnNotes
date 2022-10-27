@@ -15,7 +15,7 @@ class MainWindow;
  */
 class UrlHandler {
 public:
-    UrlHandler(MainWindow *mainWindow);
+    UrlHandler();
 
     static bool isUrlSchemeLocal(const QUrl &url);
 
@@ -27,6 +27,4 @@ private:
     void handleCheckboxUrl(QString urlString);
     void handleFileUrl(QString urlString);
     void handleFileAttachmentUrl(QString urlString);
-
-    MainWindow *_mw;
 };

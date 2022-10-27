@@ -17,12 +17,9 @@
 #include "services/owncloudservice.h"
 #include "ui_tododialog.h"
 
-TodoDialog::TodoDialog(MainWindow *mainWindow, const QString &taskUid,
-                       QWidget *parent)
+TodoDialog::TodoDialog(const QString &taskUid, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::TodoDialog) {
-    _mainWindow = mainWindow;
     ui->setupUi(this);
-    ui->descriptionEdit->setMainWindow(mainWindow);
     setupUi();
 
     connect(ui->todoItemTreeWidget, &TodoItemTreeWidget::calendarItemUpdated, this,
@@ -32,7 +29,7 @@ TodoDialog::TodoDialog(MainWindow *mainWindow, const QString &taskUid,
     ui->descriptionEdit->initSearchFrame(ui->descriptionEditSearchFrame);
 
     QString selectedText =
-        _mainWindow->activeNoteTextEdit()->textCursor().selectedText();
+        MainWindow::instance()->activeNoteTextEdit()->textCursor().selectedText();
 
     // insert the selected note text in the new item edit
     if (!selectedText.isEmpty()) {
@@ -795,7 +792,7 @@ void TodoDialog::onSaveAndInsertButtonClicked() {
     on_saveButton_clicked();
 
     QString selectedText =
-        _mainWindow->activeNoteTextEdit()->textCursor().selectedText();
+        MainWindow::instance()->activeNoteTextEdit()->textCursor().selectedText();
 
     QString taskUrl = "task://" + currentCalendarItem.getUid();
 
@@ -805,7 +802,7 @@ void TodoDialog::onSaveAndInsertButtonClicked() {
                               : selectedText;
     QString insertText = "[" + summaryText + "](" + taskUrl + ")";
 
-    _mainWindow->activeNoteTextEdit()->textCursor().insertText(insertText);
+    MainWindow::instance()->activeNoteTextEdit()->textCursor().insertText(insertText);
     close();
 }
 
@@ -817,7 +814,7 @@ void TodoDialog::onImportAsNoteButtonClicked() {
     QString text = ui->descriptionEdit->toPlainText();
 
     // create a new note with the task text
-    _mainWindow->createNewNote(
+    MainWindow::instance()->createNewNote(
         name, text,
         MainWindow::CreateNewNoteOptions(
             MainWindow::CreateNewNoteOption::UseNameAsHeadline));
