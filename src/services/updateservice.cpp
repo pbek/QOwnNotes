@@ -228,8 +228,8 @@ void UpdateService::onResult(QNetworkReply *reply) {
 #ifdef Q_OS_WIN32
             // on Windows the application quits if the update dialog is closed
             // while the application is hidden
-            if (mainWindow->isHidden()) {
-                mainWindow->show();
+            if (MainWindow::instance()->isHidden()) {
+                MainWindow::instance()->show();
             }
 #endif
 
