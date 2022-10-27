@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.10.3
+- a crash when right-clicking on the textedit in dialogs like the todo list dialog
+  and the issue dialog was fixed (for [#2634](https://github.com/pbek/QOwnNotes/issues/2634))
+
 ## 22.10.2
 - the connection test in the *Nextcloud / ownCloud* settings now also shows the notes path
   on the server that is being checked (for [#2627](https://github.com/pbek/QOwnNotes/issues/2627))
