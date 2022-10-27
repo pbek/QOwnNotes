@@ -28,7 +28,7 @@ You can **donate money via Liberapay** by clicking this button:
 
 <a href="https://liberapay.com/pbek/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 
-## Bitcoin
+## Bitcóin
 
 You can **donate Bitcoin BTC** to this Bitcoin BTC address:
 

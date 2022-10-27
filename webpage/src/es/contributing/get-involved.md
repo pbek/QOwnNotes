@@ -18,6 +18,6 @@ Las diversas formas de involucrarse con QOwnNotes
 - Comparta **su experiencia con QOwnNotes** en su propio **YouTube**- u otro - canal, pero también con gusto [**envíe su audio / video / texto a Amy**](mailto:amydoralang@aol.de) para ser cargado en [**QOwnNotes en pocas palabras**](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos)
 - Es posible que desee responder algunas [**preguntas**](https://freeonlinesurveys.com/s/nA8t17k8) anónimas para que lo ayudemos a obtener mejores resultados con QOwnNotes
 
-::: tip Important
-Read the [code of conduct](./code-of-conduct.md) before you get involved!
+::: tip
+Importante Lea el [código de conducta](./code-of-conduct.md) antes de involucrarse.
 :::
