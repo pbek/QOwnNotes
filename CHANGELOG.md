@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.11.1
+- the Markdown to HTML converter library md4c was updated to get the latest fixes and
+  improvements (for [#1732](https://github.com/pbek/QOwnNotes/issues/1732), thank you, @Waqar144)
+
 ## 22.11.0
 - a preview issue with 17 spaces in code-blocks was fixed
   (for [#1732](https://github.com/pbek/QOwnNotes/issues/1732))
