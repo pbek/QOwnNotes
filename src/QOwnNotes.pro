@@ -123,9 +123,9 @@ SOURCES += main.cpp\
     libraries/simplecrypt/simplecrypt.cpp \
     libraries/versionnumber/versionnumber.cpp \
     libraries/botan/botanwrapper.cpp \
-    libraries/md4c/md4c/md4c.c \
-    libraries/md4c/md2html/render_html.c \
-    libraries/md4c/md2html/entity.c \
+    libraries/md4c/src/md4c.c \
+    libraries/md4c/src/md4c-html.c \
+    libraries/md4c/src/entity.c \
     dialogs/aboutdialog.cpp \
     dialogs/linkdialog.cpp \
     dialogs/notediffdialog.cpp \
