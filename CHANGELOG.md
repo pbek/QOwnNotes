@@ -3,6 +3,7 @@
 ## 22.11.0
 - a preview issue with 17 spaces in code-blocks was fixed
   (for [#1732](https://github.com/pbek/QOwnNotes/issues/1732))
+- added more Arabic translation (thank you noureddin)
 
 ## 22.10.3
 - a crash when right-clicking on the textedit in dialogs like the todo list dialog

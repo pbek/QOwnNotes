@@ -4,11 +4,11 @@ QOwnNotes لا ينتج أي عائد (غير ربحي).
 
 إذا أعجبك QOwnNotes وتريد أن **تتبرع** للمشروع للمساعدة في الاستضافة والنطاق وغيرهما، لا تتردد في فعل ذلك.
 
-## PayPal
+## باي بال PayPal
 
-You can **donate money via PayPal** on [pbek PayPal](https://paypal.me/pbek):
+يمكنك **التبرع بالمال عبر باي بال** على [حساب pbek على باي بال](https://paypal.me/pbek):
 
-For monthly donations you can use the following button (PayPal gets a cut of the donation):
+وللتبرع شهريا، يمكنك الضغط على الزر التالي (سيحصل باي بال على نسبة من التبرع):
 
 <form id="paypal-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_s-xclick">
@@ -20,37 +20,37 @@ For monthly donations you can use the following button (PayPal gets a cut of the
 
 ## GitHub Sponsors
 
-You can **sponsor on GitHub Sponsors** on [pbek GitHub Sponsors](https://github.com/sponsors/pbek).
+يمكنك **دعمنا عبر GitHub Sponsors** بدعم [pbek على GitHub Sponsors](https://github.com/sponsors/pbek).
 
-## Liberapay
+## ليبراباي Liberapay
 
-You can **donate money via Liberapay** by clicking this button:
+يمكنك **التبرع بالمال عبر ليبراباي** بالضغط على هذا الزر:
 
 <a href="https://liberapay.com/pbek/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 
-## Bitcoin
+## بيتكوين Bitcoin
 
-You can **donate Bitcoin BTC** to this Bitcoin BTC address:
+يمكنك **التبرع بـ Bitcoin BTC** على عنوان Bitcoin BTC هذا:
 
 ```
 395NiU7QKpNiayWgRrUEGZDn8Z1ebMx8CH
 ```
 
-You can **donate Bitcoin Cash** to this Bitcoin Cash address:
+يمكنك **التبرع بـ Bitcoin Cash** على عنوان Bitcoin Cash هذا:
 
 ```
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 ```
 
-## Ethereum
+## إيثريوم Ethereum
 
-You can **donate Ethereum ETH** to this Ethereum ETH address:
+يمكنك **التبرع بـ Ethereum ETH** على عنوان Ethereum ETH هذا:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-You can **donate Ethereum ETC** to this Ethereum ETC address:
+يمكنك **التبرع بـ Ethereum ETC** على عنوان Ethereum ETC هذا:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

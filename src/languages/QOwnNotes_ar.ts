@@ -1535,7 +1535,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="558"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>نسخة</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="676"/>
@@ -6722,7 +6722,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1382"/>
 <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
-<translation type="unfinished">You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</translation>
+<translation>ستجد هذا المسار في إعدادات &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1437"/>
@@ -7034,7 +7034,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6563"/>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+<translation>سيتم فتح اتصال مقبس ويب مع هذا الخادم ليكون جسرًا بين تطبيق ويب QOwnNotes وتطبيق QOwnNotes الحاسوبي.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6624"/>
@@ -7873,7 +7873,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="638"/>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
-<translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
+<translation>مسار الملاحظات &lt;b&gt;%1&lt;/b&gt; وُجِد على الخادم</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="1545"/>
