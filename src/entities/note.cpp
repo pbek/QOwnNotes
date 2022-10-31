@@ -29,8 +29,8 @@
 
 #include <botanwrapper.h>
 
-#include "libraries/md4c/md2html/render_html.h"
-#include "libraries/md4c/md4c/md4c.h"
+#include "libraries/md4c/src/md4c-html.h"
+#include "libraries/md4c/src/md4c.h"
 #include "libraries/simplecrypt/simplecrypt.h"
 #include "notefolder.h"
 #include "notesubfolder.h"
@@ -2575,7 +2575,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
 
     QByteArray array;
     const int renderResult =
-        md_render_html(data.data(), MD_SIZE(data.size()), &captureHtmlFragment,
+        md_html(data.data(), MD_SIZE(data.size()), &captureHtmlFragment,
                        &array, flags, 0);
 
     QString result;

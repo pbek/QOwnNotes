@@ -8,11 +8,7 @@ include_directories(libraries/sonnet/src/core)
 #some hunspell settings for windows
 include(libraries/sonnet/src/plugins/hunspell/hunspell/CMakeLists.txt)
 
-add_library(md4c
-    libraries/md4c/md4c/md4c.c
-    libraries/md4c/md2html/render_html.c
-    libraries/md4c/md2html/entity.c
-)
+add_subdirectory(libraries/md4c)
 
 add_executable(QOwnNotes "")
 
@@ -559,7 +555,7 @@ target_link_libraries(QOwnNotes PRIVATE
     Botan::Botan
     fakevim
     Google::DiffMatchPatch
-    md4c
+    md4c-html
 )
 if(UNIX)
     target_link_libraries(QOwnNotes PRIVATE
