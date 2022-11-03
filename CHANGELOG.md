@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 22.11.2
+- in macOS now the <kbd>Home</kbd> and <kbd>End</kbd> keys move the cursor
+  to the start and end of the line and <kbd>Ctrl</kbd> + <kbd>Home</kbd> and
+  <kbd>Ctrl</kbd> + <kbd>End</kbd> now moves the cursor to start and end of
+  the document (for [#2643](https://github.com/pbek/QOwnNotes/issues/2643))
+
 ## 22.11.1
 - the Markdown to HTML converter library md4c was updated to get the latest fixes and
   improvements (for [#1732](https://github.com/pbek/QOwnNotes/issues/1732), thank you, @Waqar144)
