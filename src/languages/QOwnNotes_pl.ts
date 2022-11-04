@@ -1524,7 +1524,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="558"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopiuj</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="676"/>
@@ -6604,7 +6604,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1382"/>
 <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
-<translation type="unfinished">You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</translation>
+<translation>Znajdziesz tę ścieżkę w &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; ustawienia</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1437"/>
@@ -6916,7 +6916,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6563"/>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+<translation>Zostanie otwarte połączenie z gniazdem internetowym do tego serwera, które będzie pełniło rolę mostu pomiędzy aplikacją internetową QOwnNotes i aplikacją desktopową QOwnNotes.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6624"/>
@@ -7756,7 +7756,7 @@ wstawieniem nowej linii w aplikacji notatek ownCloud/Nextcloud</translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="638"/>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
-<translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
+<translation>ścieżka notatek &lt;b&gt;%1&lt;/b&gt; znaleziona na serwerze</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="1545"/>

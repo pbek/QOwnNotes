@@ -18,6 +18,5 @@ Oto różne sposoby, aby zaangażować się w projekt QOwnNotes:
 - Deel **je ervaring met QOwnNotes** op je eigen **YouTube** - of ander - kanaal, maar [**stuur ook graag je audio/video/tekst naar Amy**](mailto:amydoralang@aol.de) om geüpload op [**QOwnNotes in een notendop**](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos)
 - Możesz odpowiedzieć na kilka anonimowych [**pytań**](https://freeonlinesurveys.com/s/nA8t17k8), abyśmy mogli uzyskać lepsze wyniki dzięki QOwnNotes
 
-::: tip Important
-Read the [code of conduct](./code-of-conduct.md) before you get involved!
+::: wskazówka Ważne Przeczytaj [kodeks postępowania](./code-of-conduct.md) przed zaangażowaniem!
 :::

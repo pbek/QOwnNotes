@@ -18,7 +18,7 @@ W przypadku miesięcznych darowizn możesz użyć następującego przycisku (Pay
     <img alt="" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-## GitHub Sponsors
+## Sponsorzy GitHub
 
 Możesz **sponsorować na GitHub Sponsors** na [pbek GitHub Sponsors](https://github.com/sponsors/pbek).
 
