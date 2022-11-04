@@ -2524,7 +2524,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
     // TODO: In theory we could convert relative note links in the html (and not
     // in the markdown) to prevent troubles with code blocks
     i = QRegularExpression(
-            QStringLiteral(R"(\[(.+?)\]\((((?!\w+:\/\/)[^<>]){1,500}?)\))"))
+            QStringLiteral(R"(\[(.*?)\]\((((?!\w+:\/\/)[^<>]){1,500}?)\))"))
             .globalMatch(str);
 
     while (i.hasNext()) {

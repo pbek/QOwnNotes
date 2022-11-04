@@ -3,6 +3,8 @@
 ## 22.11.3
 - an issue with selecting with the <kbd>Home</kbd> and <kbd>End</kbd> keys
   was fixed (for [#2643](https://github.com/pbek/QOwnNotes/issues/2643))
+- Markdown images with no `alt` image text are now shown in the preview
+  (for [#2644](https://github.com/pbek/QOwnNotes/issues/2644))
 
 ## 22.11.2
 - in macOS now the <kbd>Home</kbd> and <kbd>End</kbd> keys move the cursor
