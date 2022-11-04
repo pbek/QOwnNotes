@@ -4425,7 +4425,12 @@ void MainWindow::searchInNoteTextEdit(QString str) {
  */
 void MainWindow::searchForSearchLineTextInNoteTextEdit() {
     QString searchString = ui->searchLineEdit->text();
-    searchInNoteTextEdit(std::move(searchString));
+
+    if (searchString.isEmpty()) {
+        activeNoteTextEdit()->searchWidget()->close();
+    } else {
+        searchInNoteTextEdit(std::move(searchString));
+    }
 }
 
 /**

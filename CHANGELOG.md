@@ -5,6 +5,8 @@
   was fixed (for [#2643](https://github.com/pbek/QOwnNotes/issues/2643))
 - Markdown images with no `alt` image text are now shown in the preview
   (for [#2644](https://github.com/pbek/QOwnNotes/issues/2644))
+- the in-note search panel is now closed automatically when the text in the
+  note-search panel is cleared (for [#2645](https://github.com/pbek/QOwnNotes/issues/2645))
 - added more Polish translation (thank you fresta)
 
 ## 22.11.2
