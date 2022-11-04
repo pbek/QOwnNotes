@@ -86,7 +86,7 @@ jobs:
           fi
         done
         echo "DO_BUILD: ${DO_BUILD}"
-        echo ::set-output name=DO_BUILD::${DO_BUILD}
+        echo "DO_BUILD=${DO_BUILD}" >> $GITHUB_OUTPUT
 
     - if: contains( matrix.os, 'ubuntu-18') && steps.changes.outputs.DO_BUILD
       name: Install Snapcraft
