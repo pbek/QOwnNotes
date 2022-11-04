@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.11.3
+- an issue with selecting with the <kbd>Home</kbd> and <kbd>End</kbd> keys
+  was fixed (for [#2643](https://github.com/pbek/QOwnNotes/issues/2643))
+
 ## 22.11.2
 - in macOS now the <kbd>Home</kbd> and <kbd>End</kbd> keys move the cursor
   to the start and end of the line and <kbd>Ctrl</kbd> + <kbd>Home</kbd> and
