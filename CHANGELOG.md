@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 22.11.4
+- in macOS you can now select text with <kbd>Shift</kbd> + <kbd>Home</kbd> and
+  <kbd>Shift</kbd> + <kbd>End</kbd> to the beginning and end of the line
+  (for [#1593](https://github.com/pbek/QOwnNotes/issues/1593))
+    - when also holding <kbd>Ctrl</kbd> you can select until the beginning or
+      end of the document
+
 ## 22.11.3
 - an issue with selecting with the <kbd>Home</kbd> and <kbd>End</kbd> keys
   was fixed (for [#2643](https://github.com/pbek/QOwnNotes/issues/2643))
