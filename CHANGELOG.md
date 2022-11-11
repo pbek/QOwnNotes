@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.11.5
+- if you press <kbd>Escape</kbd> in the note list now the search text in the note search
+  input will be cleared (for [#2653](https://github.com/pbek/QOwnNotes/issues/2653))
+
 ## 22.11.4
 - in macOS you can now select text with <kbd>Shift</kbd> + <kbd>Home</kbd> and
   <kbd>Shift</kbd> + <kbd>End</kbd> to the beginning and end of the line

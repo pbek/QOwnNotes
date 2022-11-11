@@ -4303,6 +4303,9 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                        (keyEvent->key() == Qt::Key_Backspace)) {
                 removeSelectedNotes();
                 return true;
+            } else if (keyEvent->key() == Qt::Key_Escape) {
+                ui->searchLineEdit->clear();
+                return true;
             }
             return QMainWindow::eventFilter(obj, event);;
         } else if (obj == ui->tagTreeWidget) {
