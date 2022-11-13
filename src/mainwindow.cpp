@@ -10870,7 +10870,7 @@ void MainWindow::on_actionShow_all_panels_triggered() {
     // handle the visibility of the note subfolder panel
     handleNoteSubFolderVisibility();
 
-    // update the preview in case it was disable previously
+    // update the preview in case it was disabled previously
     setNoteTextFromNote(&currentNote, true);
 
     // filter notes according to selections
