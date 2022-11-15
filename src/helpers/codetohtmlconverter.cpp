@@ -446,6 +446,13 @@ int CodeToHtmlConverter::highlightStringLiterals(StringView input,
         }
         ++i;
     }
+
+    if (!input.isEmpty() && i >= input.length() && input[input.length() - 1] == QLatin1Char('\n')) {
+        // move one position backwards, we want to insert </span> so
+        // that it's like </span>\n and not \n</span> i.e., new line
+        // should be after
+        i--;
+    }
     output += setFormat(input.mid(start, i - start), Format::String);
 
     // decrement i, this ensures that
