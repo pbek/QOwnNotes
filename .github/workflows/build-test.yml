@@ -74,7 +74,7 @@ jobs:
     - if: contains( matrix.os, 'macos')
       id: changes_macos
       name: Check if we want to build QOwnNotes
-      shell: /usr/local/bin/bash
+      shell: /usr/local/bin/bash {0}
       run: |
         unset DO_BUILD
         mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
