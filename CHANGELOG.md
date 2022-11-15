@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.11.6
+- a preview issue with quotes in code blocks was fixed
+  (for [#2657](https://github.com/pbek/QOwnNotes/issues/2657), thank you, @Waqar144)
+
 ## 22.11.5
 - if you press <kbd>Escape</kbd> in the note list now the search text in the note search
   input will be cleared (for [#2653](https://github.com/pbek/QOwnNotes/issues/2653))
