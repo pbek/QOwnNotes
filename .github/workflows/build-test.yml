@@ -87,7 +87,7 @@ jobs:
         done
         echo "DO_BUILD: ${DO_BUILD}"
         echo "DO_BUILD=${DO_BUILD}" >> $GITHUB_OUTPUT
-    - if: not contains( matrix.os, 'macos')
+    - if: contains( matrix.os, 'macos') == false
       id: changes
       name: Check if we want to build QOwnNotes
       shell: bash
