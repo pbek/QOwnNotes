@@ -67,11 +67,6 @@ jobs:
       uses: jitterbit/get-changed-files@v1
       with:
         format: 'csv'
-    - if: contains( matrix.os, 'macos')
-      name: Install bash 5.0 under macOS for mapfile
-      run: |
-        brew install bash
-        sudo mv /usr/local/bin/bash /bin/bash
     - id: changes
       name: Check if we want to build QOwnNotes
       shell: bash
