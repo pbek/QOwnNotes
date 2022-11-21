@@ -110,14 +110,14 @@ jobs:
     # https://github.com/marketplace/actions/install-qt
     - if: contains( matrix.os, 'windows')
       name: Install Qt on Windows
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v3
       with:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: false == contains( matrix.os, 'windows')
       name: Install Qt on Linux/macOS
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v3
       with:
         version: ${{ matrix.qt-version }}
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
