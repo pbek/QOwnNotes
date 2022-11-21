@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.11.7
+- a highlighting issue with ini code blocks was fixed
+  (for [#2667](https://github.com/pbek/QOwnNotes/issues/2667), thank you, @Waqar144)
+
 ## 22.11.6
 - a preview issue with quotes in code blocks was fixed
   (for [#2657](https://github.com/pbek/QOwnNotes/issues/2657), thank you, @Waqar144)
