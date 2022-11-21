@@ -19,6 +19,8 @@ In portable mode
 
 It will be activated if you run QOwnNotes with the **parameter *--portable***.
 
-On **Windows** there is a ***QOwnNotesPortable.exe*** in your release path to start QOwnNotes in **portable mode**.
+On **Windows** there is a ***QOwnNotesPortable.bat*** in your release path to start QOwnNotes in **portable mode**.
+
+Note: QOwnNotesPortable.exe was dropped because of anti virus false positives.
 
  ![Portable mode for USB sticks](/img/blog/Portable-mode_reference.png "Portable mode for USB sticks") **Portable mode** for USB sticks
