@@ -473,6 +473,24 @@ QString Utils::Schema::getSchemaStyles() {
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::CodeBuiltIn,
                                            QStringLiteral(".code-builtin"));
 
+    // enforce blockquotes styles (best effort, may not override all styles of other tags)
+    // https://github.com/pbek/QOwnNotes/issues/2669
+    if (QSettings().value(QStringLiteral("fullyHighlightedBlockquotes")).toBool()) {
+        schemaStyles += encodeCssStyleForState(MarkdownHighlighter::BlockQuote,
+                                               QStringLiteral("blockquote"));
+
+        QTextCharFormat format;
+        Utils::Schema::schemaSettings->setFormatStyle(
+            MarkdownHighlighter::BlockQuote, format);
+
+        // override foreground colors of sub-elements
+        schemaStyles += QStringLiteral("blockquote strong, blockquote em, "
+            "blockquote i, blockquote b, blockquote a, blockquote code, "
+            "blockquote pre, blockquote h1, blockquote h2, blockquote h3, "
+            "blockquote h4, blockquote h5, blockquote h6 {color: ") +
+                format.foreground().color().name() + QStringLiteral("}");
+    }
+
     return schemaStyles;
 }
 

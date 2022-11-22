@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 22.11.8
+- an attempt was made to override styles inside blockquotes in the preview
+  when blockquotes are fully highlighted in the note editor
+  (for [#2669](https://github.com/pbek/QOwnNotes/issues/2669))
+
 ## 22.11.7
 - a highlighting issue with ini code blocks was fixed
   (for [#2667](https://github.com/pbek/QOwnNotes/issues/2667), thank you, @Waqar144)
