@@ -2364,6 +2364,16 @@ static void highlightCode(QString &str, const QString &type, int cbCount) {
             if (endline == -1) {
                 break;
             }
+
+            if (firstBlock >= 4) {
+                bool fourSpaces = std::all_of(str.cbegin() + (firstBlock - 4), str.cbegin() + firstBlock, [](QChar c){
+                    return c.isSpace();
+                });
+                if (fourSpaces) {
+                    continue;
+                }
+            }
+
             const QString lang =
                 str.mid(currentCbPos + 3, endline - (currentCbPos + 3));
             // we skip it because it is inline code and not codeBlock
@@ -2374,7 +2384,6 @@ static void highlightCode(QString &str, const QString &type, int cbCount) {
                 continue;
             }
             // move start pos to after the endline
-
             currentCbPos = endline + 1;
             // find the codeBlock end
             int next = str.indexOf(type, currentCbPos);
@@ -2389,7 +2398,6 @@ static void highlightCode(QString &str, const QString &type, int cbCount) {
             QStringView str_view = str;
             QStringView codeBlock = str_view.mid(currentCbPos, next - currentCbPos);
 #endif
-
             QString highlightedCodeBlock;
             if (!(codeBlock.isEmpty() && lang.isEmpty())) {
                 const CodeToHtmlConverter c(lang);
