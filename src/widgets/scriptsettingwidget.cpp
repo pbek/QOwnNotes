@@ -85,7 +85,7 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
 
         ui->textEdit->setPlainText(value);
         ui->textEdit->show();
-    } else if (type == "file") {
+    } else if (type == "file" || type == "directory") {
         QString value = jsonObject.value(identifier).toString();
 
         if (jsonObject.value(identifier).isUndefined()) {
@@ -183,14 +183,17 @@ void ScriptSettingWidget::on_filePathLineEdit_textChanged(const QString &arg1) {
  */
 void ScriptSettingWidget::on_filePathButton_clicked() {
     QJsonObject jsonObject = _script.getSettingsVariablesJsonObject();
-    QString identifier = _variableMap["identifier"].toString();
-    QString description = _variableMap["description"].toString();
+    const QString identifier = _variableMap["identifier"].toString();
+    const QString description = _variableMap["description"].toString();
+    const QString type = _variableMap["type"].toString();
+    const bool isDirectory = type == "directory";
 
     FileDialog dialog("ScriptSettingsFile-" + _script.getIdentifier() + "-" +
                       identifier);
-    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setFileMode(isDirectory ? QFileDialog::Directory : QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
-    dialog.setWindowTitle(tr("Please select a file"));
+    dialog.setWindowTitle(isDirectory ?
+              tr("Please select a directory") : tr("Please select a file"));
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {

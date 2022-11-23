@@ -12,6 +12,7 @@ Script {
     property string myText;
     property int myInt;
     property string myFile;
+    property string myDirectory;
     property string mySelection;
 
     // register your settings variables so the user can set them in the script settings
@@ -57,6 +58,13 @@ Script {
             "default": "pandoc",
         },
         {
+            "identifier": "myDirectory",
+            "name": "I am a directory selector",
+            "description": "Please select the directory:",
+            "type": "directory",
+            "default": "/home",
+        },
+        {
             "identifier": "mySelection",
             "name": "I am an item selector",
             "description": "Please select an item:",
@@ -80,6 +88,7 @@ Script {
         script.log(myText);
         script.log(myInt);
         script.log(myFile);
+        script.log(myDirectory);
         script.log(mySelection);
     }
     

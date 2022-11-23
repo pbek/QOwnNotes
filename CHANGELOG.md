@@ -6,6 +6,12 @@
   (for [#2669](https://github.com/pbek/QOwnNotes/issues/2669))
 - a preview fix for indented code blocks was added
   (for [#2670](https://github.com/pbek/QOwnNotes/issues/2670), thank you, @Waqar144)
+- there now is a new *script settings variable* for **directories**
+  (for [#2672](https://github.com/pbek/QOwnNotes/issues/2672))
+  - the user can select a directory (similar to files)
+  - you will receive the selected directory in the script
+  - for more information please take a look at the
+    [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-script-settings-variables)
 
 ## 22.11.7
 - a highlighting issue with ini code blocks was fixed
