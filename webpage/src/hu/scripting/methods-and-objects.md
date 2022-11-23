@@ -1078,60 +1078,68 @@ Ezután a felhasználó beállíthatja ezeket a tulajdonságokat a szkript beál
 
 ### Példa
 ```js
-// meg kell határoznia a regisztrált változókat, hogy később hozzáférhessen hozzájuk
+// you have to define your registered variables so you can access them later
 property string myString;
 property bool myBoolean;
 property string myText;
 property int myInt;
 property string myFile;
+property string myDirectory;
 property string mySelection;
 
-// regisztrálja a beállítási változóit, hogy a felhasználó beállíthassa azokat a szkriptbeállításokban
+// register your settings variables so the user can set them in the script settings
 //
-// Sajnos a Qt-ban nincs QVariantHash, csak használhatjuk
-// QVariantMap (amelynek nincs tetszőleges sorrendje) vagy QVariantList (amely 
-// legalább tetszőlegesen megrendelhető)
+// unfortunately there is no QVariantHash in Qt, we only can use
+// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
+// least can be ordered arbitrarily)
 property variant settingsVariables: [
     {
         "identifier": "myString",
-        "name": "Sorszerkesztő vagyok",
-        "description": "Adjon meg egy érvényes karakterláncot:",
+        "name": "I am a line edit",
+        "description": "Please enter a valid string:",
         "type": "string",
         "default": "My default value",
     },
     {
         "identifier": "myBoolean",
-        "name": "Jelölőnégyzet vagyok",
-        "description": "Egy kis leírás",
-        "text": "Jelölje be ezt a jelölőnégyzetet",
+        "name": "I am a checkbox",
+        "description": "Some description",
+        "text": "Check this checkbox",
         "type": "boolean",
         "default": true,
     },
     {
         "identifier": "myText",
-        "name": "Szövegdoboz vagyok",
-        "description": "Kérjük, írja be a szövegét:",
+        "name": "I am textbox",
+        "description": "Please enter your text:",
         "type": "text",
-        "default": "Ez nagyon hosszú szöveg lehet,\többsoros.",
+        "default": "This can be a really long text\nwith multiple lines.",
     },
     {
         "identifier": "myInt",
-        "name": "Számválasztó vagyok",
-        "description": "Kérjük, írjon be egy számot:",
+        "name": "I am a number selector",
+        "description": "Please enter a number:",
         "type": "integer",
         "default": 42,
     },
     {
         "identifier": "myFile",
-        "name": "Fájlválasztó vagyok",
-        "description": "Kérjük, válassza ki a fájlt:",
+        "name": "I am a file selector",
+        "description": "Please select the file:",
         "type": "file",
         "default": "pandoc",
     },
     {
+        "identifier": "myDirectory",
+        "name": "I am a directory selector",
+        "description": "Please select the directory:",
+        "type": "directory",
+        "default": "/home",
+    },
+    {
         "identifier": "mySelection",
-        "name": "Tételválasztó vagyok",
-        "description": "Kérjük, válasszon egy tételt:",
+        "name": "I am an item selector",
+        "description": "Please select an item:",
         "type": "selection",
         "default": "option2",
         "items": {"option1": "Text for option 1", "option2": "Text for option 2", "option3": "Text for option 3"},

@@ -1079,63 +1079,71 @@ L'utilisateur peut ensuite définir ces propriétés dans les paramètres du scr
 
 ### Exemple
 ```js
-// vous devez définir les variables enregistrées pour pouvoir y accéder plus tard
+// you have to define your registered variables so you can access them later
 property string myString;
 property bool myBoolean;
 property string myText;
 property int myInt;
 property string myFile;
+property string myDirectory;
 property string mySelection;
 
-// enregistrez vos variables de paramètres pour que l'utilisateur puisse les définir dans les paramètres du script
+// register your settings variables so the user can set them in the script settings
 //
-// il n'y a malheureusement pas de QVariantHash dans Qt, nous pouvons seulement utiliser
-// QVariantMap (qui n'a pas de classement arbitraire) or QVariantList (qui
-// peut être ordonné arbitrairement)
+// unfortunately there is no QVariantHash in Qt, we only can use
+// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
+// least can be ordered arbitrarily)
 property variant settingsVariables: [
     {
         "identifier": "myString",
-        "name": "Je suis une édition de ligne",
-        "description": "Veuillez entrer une chaîne valide :",
+        "name": "I am a line edit",
+        "description": "Please enter a valid string:",
         "type": "string",
-        "default": "Ma valeur par défaut",
+        "default": "My default value",
     },
     {
         "identifier": "myBoolean",
-        "name": "Je suis une case à cocher",
-        "description": "Une description",
-        "text": "Cochez cette case",
+        "name": "I am a checkbox",
+        "description": "Some description",
+        "text": "Check this checkbox",
         "type": "boolean",
         "default": true,
     },
     {
         "identifier": "myText",
-        "name": "Je suis une boîte de texte",
-        "description": "Veuillez entrer votre texte :",
+        "name": "I am textbox",
+        "description": "Please enter your text:",
         "type": "text",
-        "default": "Ceci peut être un très long texte \navec plusieurs lignes.",
+        "default": "This can be a really long text\nwith multiple lines.",
     },
     {
         "identifier": "myInt",
-        "name": "Je suis un sélecteur de chiffres",
-        "description": "Veuillez entrer un chiffre :",
+        "name": "I am a number selector",
+        "description": "Please enter a number:",
         "type": "integer",
         "default": 42,
     },
     {
         "identifier": "myFile",
-        "name": "Je suis un sélecteur de fichiers",
-        "description": "Veuillez sélectionner un fichier :",
+        "name": "I am a file selector",
+        "description": "Please select the file:",
         "type": "file",
         "default": "pandoc",
     },
     {
+        "identifier": "myDirectory",
+        "name": "I am a directory selector",
+        "description": "Please select the directory:",
+        "type": "directory",
+        "default": "/home",
+    },
+    {
         "identifier": "mySelection",
-        "name": "Je suis un sélecteur d'éléments",
-        "description": "Veuillez sélectionner un élément:",
+        "name": "I am an item selector",
+        "description": "Please select an item:",
         "type": "selection",
         "default": "option2",
-        "items": {"option1": "Texte pour option 1", "option2": "Texte pour option 2", "option3": "Texte pour option 3"},
+        "items": {"option1": "Text for option 1", "option2": "Text for option 2", "option3": "Text for option 3"},
     }
 ];
 ```

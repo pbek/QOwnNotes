@@ -12,6 +12,7 @@
   - you will receive the selected directory in the script
   - for more information please take a look at the
     [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-script-settings-variables)
+- added more Persian translation (thank you amirkbrpr)
 
 ## 22.11.7
 - a highlighting issue with ini code blocks was fixed

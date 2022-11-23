@@ -1078,63 +1078,71 @@ Luego, el usuario puede establecer estas propiedades en la configuración del sc
 
 ### Ejemplo
 ```js
-// tienes que definir tus variables registradas para poder acceder a ellas más tarde
-propiedad cadena miCadena;
-propiedad bool miBooleano;
-propiedad cadena miTexto;
-propiedad int myInt;
-cadena de propiedad miArchivo;
-cadena de propiedad mySelection;
+// you have to define your registered variables so you can access them later
+property string myString;
+property bool myBoolean;
+property string myText;
+property int myInt;
+property string myFile;
+property string myDirectory;
+property string mySelection;
 
-// registre sus variables de configuración para que el usuario pueda establecerlas en la configuración del script
+// register your settings variables so the user can set them in the script settings
 //
-// desafortunadamente no hay QVariantHash en Qt, solo podemos usar
-// QVariantMap (que no tiene un orden arbitrario) o QVariantList (que en
-// menos se puede ordenar arbitrariamente)
-configuración de variante de propiedadVariables: [
+// unfortunately there is no QVariantHash in Qt, we only can use
+// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
+// least can be ordered arbitrarily)
+property variant settingsVariables: [
     {
-        "identificador": "miCadena",
-        "name": "Soy una edición de línea",
-        "description": "Por favor ingrese una cadena válida:",
-        "tipo": "cadena",
-        "predeterminado": "Mi valor predeterminado",
+        "identifier": "myString",
+        "name": "I am a line edit",
+        "description": "Please enter a valid string:",
+        "type": "string",
+        "default": "My default value",
     },
     {
-        "identificador": "miBooleano",
-        "name": "Soy una casilla de verificación",
-        "description": "Alguna descripción",
-        "texto": "Marque esta casilla de verificación",
-        "tipo": "booleano",
-        "predeterminado": verdadero,
+        "identifier": "myBoolean",
+        "name": "I am a checkbox",
+        "description": "Some description",
+        "text": "Check this checkbox",
+        "type": "boolean",
+        "default": true,
     },
     {
-        "identificador": "miTexto",
-        "name": "Soy cuadro de texto",
-        "description": "Por favor ingrese su texto:",
-        "teclee el texto",
-        "default": "Este puede ser un texto muy largo\ncon varias líneas.",
+        "identifier": "myText",
+        "name": "I am textbox",
+        "description": "Please enter your text:",
+        "type": "text",
+        "default": "This can be a really long text\nwith multiple lines.",
     },
     {
-        "identificador": "miInt",
-        "name": "Soy selector de números",
-        "description": "Por favor ingrese un número:",
-        "tipo": "entero",
-        "predeterminado": 42,
+        "identifier": "myInt",
+        "name": "I am a number selector",
+        "description": "Please enter a number:",
+        "type": "integer",
+        "default": 42,
     },
     {
-        "identificador": "miArchivo",
-        "name": "Soy un selector de archivos",
-        "description": "Seleccione el archivo:",
-        "tipo": "archivo",
-        "predeterminado": "pandoc",
+        "identifier": "myFile",
+        "name": "I am a file selector",
+        "description": "Please select the file:",
+        "type": "file",
+        "default": "pandoc",
     },
     {
-        "identificador": "miSelección",
-        "name": "Soy un selector de elementos",
-        "description": "Seleccione un artículo:",
-        "tipo": "selección",
-        "predeterminado": "opción2",
-        "items": {"option1": "Texto para la opción 1", "option2": "Texto para la opción 2", "option3": "Texto para la opción 3"},
+        "identifier": "myDirectory",
+        "name": "I am a directory selector",
+        "description": "Please select the directory:",
+        "type": "directory",
+        "default": "/home",
+    },
+    {
+        "identifier": "mySelection",
+        "name": "I am an item selector",
+        "description": "Please select an item:",
+        "type": "selection",
+        "default": "option2",
+        "items": {"option1": "Text for option 1", "option2": "Text for option 2", "option3": "Text for option 3"},
     }
 ];
 ```

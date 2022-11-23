@@ -1051,12 +1051,13 @@ L'utente può quindi impostare queste proprietà nelle impostazioni dello script
 
 ### Esempio
 ```js
-//devi definire le tue variabili registrate in modo da potervi accedere in seguito
+// you have to define your registered variables so you can access them later
 property string myString;
 property bool myBoolean;
 property string myText;
 property int myInt;
 property string myFile;
+property string myDirectory;
 property string mySelection;
 
 // register your settings variables so the user can set them in the script settings
@@ -1100,6 +1101,13 @@ property variant settingsVariables: [
         "description": "Please select the file:",
         "type": "file",
         "default": "pandoc",
+    },
+    {
+        "identifier": "myDirectory",
+        "name": "I am a directory selector",
+        "description": "Please select the directory:",
+        "type": "directory",
+        "default": "/home",
     },
     {
         "identifier": "mySelection",

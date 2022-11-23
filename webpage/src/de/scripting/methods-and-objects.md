@@ -1079,19 +1079,20 @@ Der Benutzer kann diese Eigenschaften dann in den Skripteinstellungen festlegen.
 
 ### Beispiel
 ```js
-// Sie müssen Ihre registrierten Variablen definieren, damit Sie später darauf zugreifen können
+// you have to define your registered variables so you can access them later
 property string myString;
 property bool myBoolean;
 property string myText;
 property int myInt;
 property string myFile;
+property string myDirectory;
 property string mySelection;
 
-// Registrieren Sie Ihre Einstellungsvariablen, damit der Benutzer sie in den Skripteinstellungen festlegen kann
+// register your settings variables so the user can set them in the script settings
 //
-// leider gibt es kein QVariantHash in Qt, wir können es nur verwenden
-// QVariantMap (die keine willkürliche Reihenfolge hat) oder QVariantList (die bei
-// am wenigsten beliebig bestellbar)
+// unfortunately there is no QVariantHash in Qt, we only can use
+// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
+// least can be ordered arbitrarily)
 property variant settingsVariables: [
     {
         "identifier": "myString",
@@ -1128,6 +1129,13 @@ property variant settingsVariables: [
         "description": "Please select the file:",
         "type": "file",
         "default": "pandoc",
+    },
+    {
+        "identifier": "myDirectory",
+        "name": "I am a directory selector",
+        "description": "Please select the directory:",
+        "type": "directory",
+        "default": "/home",
     },
     {
         "identifier": "mySelection",

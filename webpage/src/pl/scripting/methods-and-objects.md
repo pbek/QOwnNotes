@@ -1244,15 +1244,16 @@ Użytkownik może następnie ustawić te właściwości w ustawieniach skryptu.
 
 
 ```js
-// musisz zdefiniować zarejestrowane zmienne, aby móc później uzyskać do nich dostęp
+// you have to define your registered variables so you can access them later
 property string myString;
 property bool myBoolean;
 property string myText;
 property int myInt;
 property string myFile;
+property string myDirectory;
 property string mySelection;
 
-// zarejestruj zmienne ustawień, aby użytkownik mógł je ustawić w ustawieniach skryptu
+// register your settings variables so the user can set them in the script settings
 //
 // unfortunately there is no QVariantHash in Qt, we only can use
 // QVariantMap (that has no arbitrary ordering) or QVariantList (which at
@@ -1293,6 +1294,13 @@ property variant settingsVariables: [
         "description": "Please select the file:",
         "type": "file",
         "default": "pandoc",
+    },
+    {
+        "identifier": "myDirectory",
+        "name": "I am a directory selector",
+        "description": "Please select the directory:",
+        "type": "directory",
+        "default": "/home",
     },
     {
         "identifier": "mySelection",
