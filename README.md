@@ -140,7 +140,7 @@ code. Download the latest source here:
 Alternatively you can also checkout the code directly from the git repository:
 
 ```shell
-git clone https://github.com/pbek/QOwnNotes.git -b master
+git clone https://github.com/pbek/QOwnNotes.git -b master --depth=1
 cd QOwnNotes
 git submodule update --init
 ```
@@ -157,7 +157,7 @@ cd src
 lrelease QOwnNotes.pro
 
 qmake
-make
+make -j4
 ```
 
 ### Building QOwnNotes For Development
@@ -179,7 +179,7 @@ You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
 ## Minimum software requirements
 
-- A desktop operating system, that supports [Qt](http://www.qt.io/)
+- A desktop operating system, that supports [Qt](https://www.qt.io)
 - Qt 5.5+
 - gcc 4.8+
 
