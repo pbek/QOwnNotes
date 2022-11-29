@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 22.11.9
+- you now can also select text in the *Note versions* dialog via the keyboard
+
 ## 22.11.8
 - an attempt was made to override styles inside blockquotes in the preview
   when blockquotes are fully highlighted in the note editor
