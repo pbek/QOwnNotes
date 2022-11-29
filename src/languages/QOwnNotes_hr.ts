@@ -1519,7 +1519,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="558"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopiraj</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="676"/>
@@ -6874,7 +6874,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6563"/>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+<translation>Otvorit će se websocket veza s ovim poslužiteljem da djeluje kao most između QOwnNotes web aplikacije i QOwnNotes desktop aplikacije.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6624"/>
@@ -7714,7 +7714,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="638"/>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
-<translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
+<translation>staza bilješke &lt;b&gt;%1&lt;/b&gt; je pronađena na poslužitelju</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="1545"/>

@@ -112,7 +112,7 @@ var note = script.currentNote();
 
 ربما تحب أن تلقي نظرة على المثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-Logging to the log widget
+الكتابة في نافذة السجل
 -------------------------
 
 ### نداء الدالة ومُعامِلاتها
@@ -892,7 +892,7 @@ script.noteExistsByFileName("my note.md", note.id);
 
 ربما تحب أن تلقي نظرة على المثال [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).
 
-ينسخ نص إلى الحافظة
+نسخ نص إلى الحافظة
 -------------------------------
 
 ### نداء الدالة ومُعامِلاتها

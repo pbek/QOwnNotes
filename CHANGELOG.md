@@ -4,6 +4,7 @@
 - you now can also select text in the *Note versions* dialog via the keyboard
 - bold and italic can be used together in the note editor now
   (for [#2676](https://github.com/pbek/QOwnNotes/issues/2676))
+- added more Croatian, Arabic translation (thank you milotype, noureddin)
 
 ## 22.11.8
 - an attempt was made to override styles inside blockquotes in the preview

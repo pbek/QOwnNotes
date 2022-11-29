@@ -1079,71 +1079,71 @@ L'utilisateur peut ensuite définir ces propriétés dans les paramètres du scr
 
 ### Exemple
 ```js
-// you have to define your registered variables so you can access them later
-property string myString;
-property bool myBoolean;
-property string myText;
-property int myInt;
-property string myFile;
-property string myDirectory;
-property string mySelection;
+// vous devez définir vos variables déclarées pour pouvoir y accéder ultérieurement
+property string maChaine;
+property bool monBooleen;
+property string monTexte;
+property int monInt;
+property string monFichier;
+property string monEmplacement;
+property string maSelection;
 
-// register your settings variables so the user can set them in the script settings
+// déclarez vos variables de paramétrage afin que l'utilisateur puisse les définir dans les paramètres du script
 //
-// unfortunately there is no QVariantHash in Qt, we only can use
-// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
-// least can be ordered arbitrarily)
+// malheureusement il n'existe pas de QVariantHash dans Qt, nous ne pouvons utiliser que
+// QVariantMap (qui n'a pas d'ordonnancement arbitraire) oo QVariantList (qui peut au moins
+// être ordonné arbitrairement)
 property variant settingsVariables: [
     {
-        "identifier": "myString",
-        "name": "I am a line edit",
-        "description": "Please enter a valid string:",
+        "identifier": "maChaine",
+        "name": "Je sus une édition de ligne",
+        "description": "Veuillez entrer une chaîne valide :",
         "type": "string",
-        "default": "My default value",
+        "default": "Ma valeur par défaut",
     },
     {
-        "identifier": "myBoolean",
-        "name": "I am a checkbox",
-        "description": "Some description",
-        "text": "Check this checkbox",
+        "identifier": "monBooleen",
+        "name": "Je suis une case à cocher",
+        "description": "Une description",
+        "text": "Cochez cette case",
         "type": "boolean",
         "default": true,
     },
     {
-        "identifier": "myText",
-        "name": "I am textbox",
-        "description": "Please enter your text:",
+        "identifier": "monTexte",
+        "name": "Je suis une boîte de texte",
+        "description": "Veuillez entrer votre texte :",
         "type": "text",
-        "default": "This can be a really long text\nwith multiple lines.",
+        "default": "Ceci peut être un texte très long\nsur plusieurs lignes.",
     },
     {
-        "identifier": "myInt",
-        "name": "I am a number selector",
-        "description": "Please enter a number:",
+        "identifier": "monInt",
+        "name": "Je suis un sélecteur de chiffre",
+        "description": "Veuillez entrer un chiffre :",
         "type": "integer",
         "default": 42,
     },
     {
-        "identifier": "myFile",
-        "name": "I am a file selector",
-        "description": "Please select the file:",
+        "identifier": "monFichier",
+        "name": "Je suis un sélecteur de fichier",
+        "description": "Veuillez sélectionner le fichier :",
         "type": "file",
         "default": "pandoc",
     },
     {
-        "identifier": "myDirectory",
-        "name": "I am a directory selector",
-        "description": "Please select the directory:",
+        "identifier": "monEmplacement",
+        "name": "Je suis un sélecteur d'emplacement",
+        "description": "Veuillez sélectionner un emplacement :",
         "type": "directory",
         "default": "/home",
     },
     {
-        "identifier": "mySelection",
-        "name": "I am an item selector",
-        "description": "Please select an item:",
+        "identifier": "maSelection",
+        "name": "Je suis un sélecteur d'item",
+        "description": "Veuillez sélectionner un item :",
         "type": "selection",
         "default": "option2",
-        "items": {"option1": "Text for option 1", "option2": "Text for option 2", "option3": "Text for option 3"},
+        "items": {"option1": "Texte pour option 1", "option2": "Texte pour option 2", "option3": "Texte pour option 3"},
     }
 ];
 ```
