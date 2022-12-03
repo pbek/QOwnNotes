@@ -26,6 +26,10 @@
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     : QMarkdownTextEdit(parent, false) {
+    // Prevent infinite loops of QResizeEvents in conjunction with setPaperMargins()
+    // when the widget is resized (and leave some space for line numbers too)
+    // See: https://github.com/pbek/QOwnNotes/issues/2679
+    setMinimumWidth((int) (80 / devicePixelRatioF()));
 
     // We need to set the internal variable to true, because we start with a highlighter
     _highlightingEnabled = true;

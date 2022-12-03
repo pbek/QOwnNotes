@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 22.12.0
+- a minimum width for the note edit is now defined to prevent freezes when it is
+  resized too small in desktop environments where there is no minimum width of
+  the scrollbar dial that would prevent resizing the panel so small
+  (for [#2679](https://github.com/pbek/QOwnNotes/issues/2679))
+
 ## 22.11.9
 - you now can also select text in the *Note versions* dialog via the keyboard
 - bold and italic can be used together in the note editor now
