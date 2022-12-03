@@ -36,12 +36,9 @@ cd $PROJECT_PATH || exit 1
 
 echo "Project path: $PROJECT_PATH"
 
-# checkout the source code
-git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
+# checkout the source code with checkout submodules
+git clone --depth=1 https://github.com/pbek/QOwnNotes.git QOwnNotes -b $BRANCH --recursive
 cd QOwnNotes || exit 1
-
-# checkout submodules
-git submodule update --init
 
 # build binary translation files
 lrelease src/QOwnNotes.pro
