@@ -80,6 +80,8 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
      */
     bool autoComplete(QStringList &resultList) const;
 
+    QSize minimumSizeHint() const;
+
    protected:
     // we must not override _highlighter or Windows will create a
     // QOwnNotesMarkdownHighlighter and MarkdownHighlighter instance

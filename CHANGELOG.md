@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 22.12.1
+- **Happy 1000th release!**
+- the setting of the minimum width for the note edit was improved to take the width of the
+  line number area into account (for [#2679](https://github.com/pbek/QOwnNotes/issues/2679))
+
 ## 22.12.0
 - a minimum width for the note edit is now defined to prevent freezes when it is
   resized too small in desktop environments where there is no minimum width of
