@@ -1,7 +1,7 @@
 ---
 title: Polish website translation
 description: QOwnNotes webpage in Polish
-image: /assets/img/my-image.jpg
+image: /img/blog/webpage-persian.png
 date: 2022-10-15
 order: 20221015000000
 ---
