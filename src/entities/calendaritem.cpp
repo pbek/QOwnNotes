@@ -608,6 +608,9 @@ QString CalendarItem::generateNewICSData() {
 
         // Nextcloud seems to have problem with the VALARM block
         //        addVALARMBlockToICS();
+    } else {
+        icsDataHash.remove(QStringLiteral("DUE"));
+        icsDataKeyList.removeAll(QStringLiteral("DUE"));
     }
 
     // check for new keys so that we can send them to the calendar server
