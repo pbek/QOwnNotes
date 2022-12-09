@@ -651,6 +651,8 @@ void TodoDialog::on_reminderCheckBox_clicked() {
         ui->reminderDateTimeEdit->setDateTime(alarmDate);
         ui->reminderDateTimeEdit->show();
     } else {
+        currentCalendarItem.setAlarmDate(QDateTime{});
+        ui->reminderDateTimeEdit->clear();
         ui->reminderDateTimeEdit->hide();
     }
 }
