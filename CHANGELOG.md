@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.12.2
+- an issue where the alarm date of todo items couldn't be unset was fixed
+  (for [#2684](https://github.com/pbek/QOwnNotes/issues/2684), thank you, @WDMdanila)
+
 ## 22.12.1
 - **Happy 1000th release!**
 - the setting of the minimum width for the note edit was improved to take the width of the
