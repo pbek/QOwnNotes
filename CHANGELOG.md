@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 22.12.3
+- added a new editor color schema *Monokai* by @MarkFirewhal
+  (for [#2687](https://github.com/pbek/QOwnNotes/issues/2687))
+
 ## 22.12.2
 - an issue where the alarm date of todo items couldn't be unset was fixed
   (for [#2684](https://github.com/pbek/QOwnNotes/issues/2684), thank you, @WDMdanila)
