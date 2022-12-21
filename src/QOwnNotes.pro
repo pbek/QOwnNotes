@@ -102,13 +102,17 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_sq.ts
 
 CODECFORTR = UTF-8
-CONFIG += c++11
+lessThan(QT_MAJOR_VERSION, 6) {
+    CONFIG += c++11
 
-# for older Qt versions
-win32-msvc {
-    QMAKE_CXXFLAGS += "/std:c++11"
+    # for older Qt versions
+    win32-msvc {
+        QMAKE_CXXFLAGS += "/std:c++11"
+    } else {
+        QMAKE_CXXFLAGS += "-std=c++11"
+    }
 } else {
-    QMAKE_CXXFLAGS += "-std=c++11"
+    CONFIG += c++17
 }
 
 INCLUDEPATH += $$PWD/libraries $$PWD/libraries/diff_match_patch
