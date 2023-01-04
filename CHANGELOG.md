@@ -1,6 +1,11 @@
 # QOwnNotes Changelog
 
 ## 23.1.0
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 22.12.0
+  - changed Firefox default shortcut to <kbd>Ctrl + Alt + B</kbd> since the browser blocked
+    <kbd>Ctrl + Shift + B</kbd> (for [#48](https://github.com/qownnotes/web-companion/issues/48))
+  - added a lot more translation
 - added more Danish translation (thank you simonpmt)
 
 ## 22.12.3
