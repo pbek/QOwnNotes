@@ -1514,7 +1514,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="558"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopiér</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="676"/>
@@ -6738,7 +6738,7 @@ Bare test dig selv, hvis du får synkroniseringskonflikter og angiv en højere v
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5402"/>
 <source>Show line numbers</source>
-<translation type="unfinished">Show line numbers</translation>
+<translation>Vis linjenumre</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5412"/>
@@ -6853,7 +6853,7 @@ Bare test dig selv, hvis du får synkroniseringskonflikter og angiv en højere v
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6681"/>
 <source>Show QR code</source>
-<translation type="unfinished">Show QR code</translation>
+<translation>Vis QR-kode</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6573"/>
