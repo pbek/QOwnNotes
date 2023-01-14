@@ -12,8 +12,8 @@ Run the following shell commands to add the repository and install QOwnNotes fro
 
 ```bash
 sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_11/ /' >> /etc/apt/sources.list.d/qownnotes.list"
-sudo apt-get update
-sudo apt-get install qownnotes
+sudo apt update
+sudo apt install qownnotes
 ```
 
 ::: tip
