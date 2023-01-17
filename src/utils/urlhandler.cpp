@@ -232,9 +232,20 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
     }
 }
 
+/**
+ * Handles a checkbox:// url
+ *
+ * @param urlString
+ */
 void UrlHandler::handleCheckboxUrl(QString urlString)
 {
     auto mw = MainWindow::instance();
+
+    // Check if read-only mode is enabled and allow to get out of it
+    if (!(mw && mw->doNoteEditingCheck())) {
+        return;
+    }
+
     const auto text = mw->noteTextEdit()->toPlainText();
     const QUrl url(urlString);
 

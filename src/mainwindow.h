@@ -694,6 +694,7 @@ public:
     static bool isInDistractionFreeMode();
     void setShowNotesFromAllNoteSubFolders(bool show);
     bool showNotesFromAllNoteSubFolders() const;
+    bool doNoteEditingCheck();
 
     /** Actions **/
 public:

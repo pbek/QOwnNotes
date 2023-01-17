@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 23.1.1
+- toggling Markdown checkboxes in preview is now not any more allowed in read-only mode
+  (for [#2704](https://github.com/pbek/QOwnNotes/issues/2704))
+  - you will get a confirmation to disable the read-only mode if you click a checkbox in read-only mode
+
 ## 23.1.0
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 22.12.0

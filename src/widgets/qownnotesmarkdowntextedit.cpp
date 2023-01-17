@@ -1228,15 +1228,7 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
                 // note editing is turned off
                 if (((keyEvent->key() < 128 || keys.contains(keyEvent->key())) && keyEvent->modifiers().testFlag(Qt::NoModifier)) ||
                     ((keyEvent->key() == Qt::Key_V ) && keyEvent->modifiers().testFlag(Qt::ControlModifier) && isReadOnly())) {
-                    if (Utils::Gui::questionNoSkipOverride(
-                            this, tr("Note editing disabled"),
-                            tr("Note editing is currently disabled, do you "
-                               "want to allow it again?"),
-                            QStringLiteral("readonly-mode-allow")) ==
-                        QMessageBox::Yes) {
-                        if (MainWindow::instance()) {
-                            MainWindow::instance()->allowNoteEditing();
-                        }
+                    if (MainWindow::instance() && MainWindow::instance()->doNoteEditingCheck()) {
                         // If the answer is overridden to Yes ("Don't ask again" with "Yes"),
                         // what you type then only enables note editing, but is not typed in
                         // the editor. We need to re-send the event after enabling editing.

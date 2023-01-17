@@ -11267,6 +11267,28 @@ void MainWindow::allowNoteEditing() {
     }
 }
 
+/**
+ * Checks if read-only mode is enabled and allows to get out of it
+ */
+bool MainWindow::doNoteEditingCheck() {
+    if (Utils::Misc::isNoteEditingAllowed()) {
+        return true;
+    }
+
+    if (Utils::Gui::questionNoSkipOverride(
+            this, tr("Note editing disabled"),
+            tr("Note editing is currently disabled, do you "
+               "want to allow it again?"),
+            QStringLiteral("readonly-mode-allow")) ==
+        QMessageBox::Yes) {
+        allowNoteEditing();
+
+        return true;
+    }
+
+    return false;
+}
+
 void MainWindow::disallowNoteEditing() {
     if (ui->actionAllow_note_editing->isChecked()) {
         ui->actionAllow_note_editing->trigger();
