@@ -117,7 +117,7 @@ jobs:
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: false == contains( matrix.os, 'windows')
       name: Install Qt on Linux/macOS
-      uses: jurplel/install-qt-action@v3
+      uses: jurplel/install-qt-action@v2
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
