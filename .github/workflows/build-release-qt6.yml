@@ -122,7 +122,7 @@ jobs:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
         modules: qtwebsockets
-        cache: ${{ steps.cache-qt.outputs.cache-hit }}
+        cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - name: Printenv
       shell: bash
       run: |
