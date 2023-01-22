@@ -103,14 +103,18 @@ jobs:
       name: Install Qt on Windows
       uses: jurplel/install-qt-action@v3
       with:
+        aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
+        modules: qtwebsockets
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: false == contains( matrix.os, 'windows')
       name: Install Qt on Linux/macOS
       uses: jurplel/install-qt-action@v3
       with:
+        aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
+        modules: qtwebsockets
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
     - name: Printenv
       shell: bash
