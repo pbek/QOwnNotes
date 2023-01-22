@@ -1,7 +1,19 @@
 name: Build Webpage
 on:
+  push:
+    branches: [ develop ]
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
+    # if [[ ${changed_file} == "CHANGELOG.md" ]] || [[ ${changed_file} = screenshots* ]] || [[ ${changed_file} = webpage* ]] || [[ ${changed_file} = ".github/workflows/build-webpage.yml" ]] ;
+    paths:
+      - '.github/workflows/build-webpage.yml'
   pull_request:
     branches: [ develop ]
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
+    # if [[ ${changed_file} == "CHANGELOG.md" ]] || [[ ${changed_file} = screenshots* ]] || [[ ${changed_file} = webpage* ]] || [[ ${changed_file} = ".github/workflows/build-webpage.yml" ]] ;
+    paths:
+      - 'CHANGELOG.md'
+      - 'screenshots/**'
+      - 'webpage/**'
 
 defaults:
   run:
@@ -18,26 +30,9 @@ jobs:
       uses: masesgroup/retrieve-changed-files@v2
       with:
         format: 'csv'
-    - id: changes
-      name: Check if we want to build the webpage
-      run: |
-        unset DO_BUILD
-        mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
-        for changed_file in "${added_modified_files[@]}"; do
-          if [[ ${changed_file} == "CHANGELOG.md" ]] || [[ ${changed_file} = screenshots* ]] || [[ ${changed_file} = webpage* ]] || [[ ${changed_file} = ".github/workflows/build-webpage.yml" ]] ;
-          then
-            echo "'${changed_file}' matches, we will build"
-            DO_BUILD='true'
-          fi
-        done
-        echo "DO_BUILD: ${DO_BUILD}"
-        echo "DO_BUILD=${DO_BUILD}" >> $GITHUB_OUTPUT
-    - if: steps.changes.outputs.DO_BUILD
-      name: Use Node.js
+    - name: Use Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '12'
-    - if: steps.changes.outputs.DO_BUILD
-      run: yarn install
-    - if: steps.changes.outputs.DO_BUILD
-      run: yarn run build
+    - run: yarn install
+    - run: yarn run build
