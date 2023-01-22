@@ -77,7 +77,7 @@ jobs:
   build-appimage:
     needs: create_release
     runs-on: ubuntu-20.04
-    name: '🐧 Ubuntu 20.04'
+    name: '🐧 AppImage Ubuntu 20.04'
     steps:
 
       - name: '🧰 Checkout'
@@ -93,12 +93,12 @@ jobs:
           key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
 
       - name: '⚙️ Install Qt'
-        uses: jurplel/install-qt-action@v2
+        uses: jurplel/install-qt-action@v3
         with:
           version: ${{env.QT_VERSION}}
           modules: qtwebsockets
           aqtversion: '==2.0.0'
-          cached: ${{steps.cache-qt.outputs.cache-hit}}
+          cache: ${{steps.cache-qt.outputs.cache-hit}}
 
       - name: '⚙️ Install dependencies'
         run: |
