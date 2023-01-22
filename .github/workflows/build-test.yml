@@ -177,7 +177,7 @@ jobs:
       # Build QOwnNotes
       #
 
-    - if: !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && !contains( matrix.os, 'ubuntu-18')
+    - if: true && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && !contains( matrix.os, 'ubuntu-18')
       name: Build QOwnNotes
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j 8
