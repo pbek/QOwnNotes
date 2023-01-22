@@ -12,6 +12,20 @@ defaults:
   run:
     working-directory: src
 
+#--------------------------------------------------------------------------------
+# Define application name & version
+#--------------------------------------------------------------------------------
+
+env:
+  EXECUTABLE: "QOwnNotes"
+  APPLICATION: "QOwnNotes"
+  UNIXNAME: "QOwnNotes"
+  QMAKE_PROJECT: "QOwnNotes.pro"
+  PUBLISHER: "Patrizio Bekerle"
+  QT_VERSION: 6.4.2
+  QMAKE: qmake6
+  CORES: 16
+
 jobs:
   create_release:
     permissions:
@@ -52,6 +66,71 @@ jobs:
 #          body: ${{ env.RELEASE_TEXT }}
 #          draft: true
 #          prerelease: false
+
+#--------------------------------------------------------------------------------
+# Workflow jobs (GNU/Linux, macOS & Windows)
+#--------------------------------------------------------------------------------
+
+  #
+  # AppImage build
+  #
+  build-appimage:
+    needs: create_release
+    runs-on: ubuntu-20.04
+    name: '🐧 Ubuntu 20.04'
+    steps:
+
+      - name: '🧰 Checkout'
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: '⚙️ Cache Qt'
+        id: cache-qt
+        uses: actions/cache@v1
+        with:
+          path: ../Qt
+          key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
+
+      - name: '⚙️ Install Qt'
+        uses: jurplel/install-qt-action@v2
+        with:
+          version: ${{env.QT_VERSION}}
+          modules: qtwebsockets
+          aqtversion: '==2.0.0'
+          cached: ${{steps.cache-qt.outputs.cache-hit}}
+
+      - name: '⚙️ Install dependencies'
+        run: |
+          sudo apt-get update
+          # sudo apt-get install libgl1-mesa-dev libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libzstd-dev
+          sudo apt install desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1
+      - name: '🚧 Compile application'
+        run: |
+          echo "#define RELEASE \"AppImage\"" > release.h
+          ${{env.QMAKE}} ${{env.QMAKE_PROJECT}} CONFIG+=release PREFIX=/usr
+          lrelease QOwnNotes.pro
+          make -j${{env.CORES}}
+      - name: '⚙️ Install linuxdeploy'
+        run: |
+          wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
+          wget https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage
+          chmod +x linuxdeploy-x86_64.AppImage
+          chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
+      - name: '📦 Create AppImage'
+        run: |
+          export QMAKE=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/bin/${{env.QMAKE}}
+          export PATH=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/libexec:$PATH
+          ./linuxdeploy-x86_64.AppImage --appdir AppDir -e ${{env.UNIXNAME}} -i deploy/linux/${{env.UNIXNAME}}.png -d deploy/linux/${{env.UNIXNAME}}.desktop --plugin qt --output appimage
+          rm linuxdeploy-x86_64.AppImage
+          rm linuxdeploy-plugin-qt-x86_64.AppImage
+          mv *.AppImage ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
+
+      - name: '📤 Upload artifact: AppImage'
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
+          path: ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
 
   build:
     needs: create_release
