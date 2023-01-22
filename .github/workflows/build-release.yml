@@ -149,17 +149,6 @@ jobs:
         qmake PREFIX=/usr
         lrelease QOwnNotes.pro
         make -j 8
-        # Create DEB
-        #cd ../travis
-        #dpkg-deb -x QOwnNotes.deb build
-        #install ../src/QOwnNotes build/opt/QOwnNotes
-        #mkdir -p build/usr/bin
-        #ln -s /opt/QOwnNotes/QOwnNotes build/usr/bin
-        #mv ../src/languages/*.qm build/opt/QOwnNotes/
-        #mv ../icons/* build/opt/QOwnNotes/
-        #sed -i 's/VERSION_NUMBER/'"${VERSION}"'/g' build/DEBIAN/control
-        #dpkg -b build QOwnNotes.deb
-        #cd ../src
         # Create AppImage (needs Ubuntu 18.04)
         make INSTALL_ROOT=appdir -j 8 install ; find appdir/
         mkdir -p appdir/usr/languages
