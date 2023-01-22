@@ -122,14 +122,14 @@ jobs:
         arch: win64_mingw81
         modules: qtwebsockets
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: false == contains( matrix.os, 'windows') && ( matrix.qt-version != '6.2.0' ) && (steps.changes.outputs.DO_BUILD || steps.changes_macos.outputs.DO_BUILD)
+    - if: false == contains( matrix.os, 'windows') && ( matrix.qt-version != '6.2.0' )
       name: Install Qt < 6 on Linux/macOS
       uses: jurplel/install-qt-action@v3
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: false == contains( matrix.os, 'windows') && ( matrix.qt-version == '6.2.0' ) && (steps.changes.outputs.DO_BUILD || steps.changes_macos.outputs.DO_BUILD)
+    - if: false == contains( matrix.os, 'windows') && ( matrix.qt-version == '6.2.0' )
       name: Install Qt 6.2.0 on Linux/macOS
       uses: jurplel/install-qt-action@v3
       with:
@@ -147,7 +147,7 @@ jobs:
       run: |
         cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
         ../bin/tests/tests -platform minimal -txt
-    - if: contains( matrix.os, 'macos') && steps.changes_macos.outputs.DO_BUILD
+    - if: contains( matrix.os, 'macos')
       name: Do macOS tests
       run: |
         cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
@@ -177,11 +177,11 @@ jobs:
       # Build QOwnNotes
       #
 
-    - if: (steps.changes.outputs.DO_BUILD || steps.changes_macos.outputs.DO_BUILD) && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && !contains( matrix.os, 'ubuntu-18')
+    - if: !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && !contains( matrix.os, 'ubuntu-18')
       name: Build QOwnNotes
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j 8
-    - if: steps.changes.outputs.DO_BUILD && contains( matrix.os, 'ubuntu-18')
+    - if: contains( matrix.os, 'ubuntu-18')
       name: Build QOwnNotes Ubuntu 18.04
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=release && make -j 8
