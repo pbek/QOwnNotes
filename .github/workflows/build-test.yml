@@ -6,7 +6,17 @@ on:
       - master
     tags-ignore:
       - '*'
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
+    # if [[ ${changed_file} = src* ]] || [[ ${changed_file} = tests* ]] || [[ ${changed_file} = build-systems/github/* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'build-systems/github/**'
+      - '.github/workflows/build-test.yml'
   pull_request:
+    paths:
+      - 'src/**'
+      - 'tests/**'
   workflow_dispatch:
 #  schedule:
 #    - cron: "0 0 */3 * *"
@@ -63,48 +73,7 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: true
-    - id: files
-      uses: masesgroup/retrieve-changed-files@v2
-      with:
-        format: 'csv'
-    - if: contains( matrix.os, 'macos')
-      name: Install bash 5.0 under macOS for mapfile
-      run: |
-        brew install bash
-    - if: contains( matrix.os, 'macos')
-      id: changes_macos
-      name: Check if we want to build QOwnNotes for macOS
-      shell: /usr/local/bin/bash {0}
-      run: |
-        unset DO_BUILD
-        mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
-        for changed_file in "${added_modified_files[@]}"; do
-          if [[ ${changed_file} = src* ]] || [[ ${changed_file} = tests* ]] || [[ ${changed_file} = build-systems/github/* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
-          then
-            echo "'${changed_file}' matches, we will build"
-            DO_BUILD='true'
-          fi
-        done
-        echo "DO_BUILD: ${DO_BUILD}"
-        echo "DO_BUILD=${DO_BUILD}" >> $GITHUB_OUTPUT
-    - if: contains( matrix.os, 'macos') == false
-      id: changes
-      name: Check if we want to build QOwnNotes for Linux or Windows
-      shell: bash
-      run: |
-        unset DO_BUILD
-        mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
-        for changed_file in "${added_modified_files[@]}"; do
-          if [[ ${changed_file} = src* ]] || [[ ${changed_file} = tests* ]] || [[ ${changed_file} = build-systems/github/* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
-          then
-            echo "'${changed_file}' matches, we will build"
-            DO_BUILD='true'
-          fi
-        done
-        echo "DO_BUILD: ${DO_BUILD}"
-        echo "DO_BUILD=${DO_BUILD}" >> $GITHUB_OUTPUT
-
-    - if: contains( matrix.os, 'ubuntu-18') && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'ubuntu-18')
       name: Install Snapcraft
       uses: samuelmeuli/action-snapcraft@v1
       with:
@@ -114,15 +83,14 @@ jobs:
       # Install Qt
       #
 
-    - if: (steps.changes.outputs.DO_BUILD || steps.changes_macos.outputs.DO_BUILD)
-      name: Cache Qt
+    - name: Cache Qt
       id: cache-qt
       uses: actions/cache@v3
       with:
         path: ../Qt
         key: ${{ matrix.os }}-QtCache-${{ matrix.qt-version }}-2
     # https://github.com/jurplel/install-qt-action
-    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.9.9' ) && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.9.9' )
       name: Install Qt 5.9 on Windows
       uses: jurplel/install-qt-action@v3
       with:
@@ -130,14 +98,14 @@ jobs:
         arch: win32_mingw53
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
         aqtversion: '==0.9.4'
-    - if: contains( matrix.os, 'windows') && ( ( matrix.qt-version == '5.13.2' ) || ( matrix.qt-version == '5.14.2' ) ) && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'windows') && ( ( matrix.qt-version == '5.13.2' ) || ( matrix.qt-version == '5.14.2' ) )
       name: Install Qt on Windows
       uses: jurplel/install-qt-action@v3
       with:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw73
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' ) && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )
       name: Install Qt 5.15.2 on Windows
       uses: jurplel/install-qt-action@v3
       with:
@@ -145,7 +113,7 @@ jobs:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '6.2.0' ) && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '6.2.0' )
       name: Install Qt 6.2.0 on Windows
       uses: jurplel/install-qt-action@v3
       with:
@@ -174,7 +142,7 @@ jobs:
       # Do tests
       #
 
-    - if: contains( matrix.os, 'ubuntu-latest') && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'ubuntu-latest')
       name: Do Linux tests
       run: |
         cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
@@ -184,7 +152,7 @@ jobs:
       run: |
         cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
         ../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
-    - if: contains( matrix.os, 'windows') && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'windows')
       name: Do Windows tests
       run: |
         cd ..\tests
@@ -217,7 +185,7 @@ jobs:
       name: Build QOwnNotes Ubuntu 18.04
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=release && make -j 8
-    - if: contains( matrix.os, 'ubuntu-18') && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'ubuntu-18')
       name: Build for Snapcraft
       run: make clean && cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
 
@@ -225,10 +193,10 @@ jobs:
       # Build QOwnNotes Windows Release and store it as artifact
       #
 
-    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' ) && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )
       name: Build QOwnNotes Windows Release
       run: '& ..\build-systems\github\windows\build-zip.ps1'
-    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' ) && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )
       uses: actions/upload-artifact@v3
       with:
         name: QOwnNotes-Windows
