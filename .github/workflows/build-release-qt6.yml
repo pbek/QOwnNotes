@@ -103,7 +103,6 @@ jobs:
 
       - name: '⚙️ Install dependencies'
         run: |
-          find ${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}} 
           sudo apt-get update
           # sudo apt-get install libgl1-mesa-dev libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libzstd-dev
           sudo apt install desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1
@@ -242,7 +241,7 @@ jobs:
         qmake6 PREFIX=/usr
         lrelease QOwnNotes.pro
         make -j 8
-        ./linuxdeploy-x86_64.AppImage --appdir AppDir -e ${{env.UNIXNAME}} -i deploy/linux/${{env.UNIXNAME}}.png -d deploy/linux/${{env.UNIXNAME}}.desktop --plugin qt --output appimage
+        ./linuxdeploy-x86_64.AppImage --appdir AppDir -e ${{env.UNIXNAME}} -i ../icons/icon.png -d PBE.QOwnNotes.desktop --plugin qt --output appimage
         rm linuxdeploy-x86_64.AppImage
         rm linuxdeploy-plugin-qt-x86_64.AppImage
         mv *.AppImage ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
