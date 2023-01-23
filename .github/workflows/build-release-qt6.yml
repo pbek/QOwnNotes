@@ -131,7 +131,7 @@ jobs:
           mv *.AppImage ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
 
       - name: '📤 Upload artifact: AppImage'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
           path: ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
