@@ -128,7 +128,7 @@ jobs:
           rm linuxdeploy-plugin-qt-x86_64.AppImage
           ls -hal *.AppImage
           find -iname "*.AppImage"
-          mv *.AppImage ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
+          mv *.AppImage ${{env.EXECUTABLE}}-Linux.AppImage
           ls -hal *.AppImage
           find -iname "*.AppImage"
           pwd
@@ -136,8 +136,8 @@ jobs:
       - name: '📤 Upload artifact: AppImage'
         uses: actions/upload-artifact@v3
         with:
-          name: ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
-          path: src/${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
+          name: ${{env.EXECUTABLE}}-Linux.AppImage
+          path: src/${{env.EXECUTABLE}}-Linux.AppImage
 
 #  build:
 #    needs: create_release
