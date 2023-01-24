@@ -1,4 +1,4 @@
-name: Build and Release QOwnNotes
+name: Build and (not yet) Release QOwnNotes in Qt6
 
 on:
   push:
