@@ -26,13 +26,6 @@
 #include <QDesktopServices>
 #include <QJsonDocument>
 
-// Disabled for Qt-6
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    #include <QXmlQuery>
-    #include <QXmlResultItems>
-#endif
-
-
 #include "cryptoservice.h"
 #include "dialogs/serverbookmarksimportdialog.h"
 #include "dialogs/settingsdialog.h"
@@ -1727,13 +1720,7 @@ void OwnCloudService::handleUpdateNoteShareReply(const QString &urlPart,
         return;
     }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
-    Q_UNUSED(urlPart)
-    qWarning() << Q_FUNC_INFO << "not implemented for qt6";
-    return;
-#else
-
-    //    qDebug() << __func__ << " - 'data': " << data;
+    qDebug() << __func__ << " - 'data': " << data;
 
     QRegularExpression re(QRegularExpression::escape(sharePath) %
                           QStringLiteral("\\/(\\d+)$"));
@@ -1753,26 +1740,33 @@ void OwnCloudService::handleUpdateNoteShareReply(const QString &urlPart,
         return;
     }
 
-    QXmlQuery query;
-    query.setFocus(data);
-    query.setQuery(QStringLiteral("ocs/meta/status/text()"));
-    QString status;
-    query.evaluateTo(&status);
+    QDomDocument doc;
+    if (!doc.setContent(data)) {
+        qCritical() << __func__ << " - 'doc.setContent(data)' failed";
+        return;
+    }
+
+    QString status = doc.firstChildElement(QStringLiteral("ocs"))
+                         .firstChildElement(QStringLiteral("meta"))
+                         .firstChildElement(QStringLiteral("status"))
+                         .text();
 
     qDebug() << __func__ << " - 'status': " << status;
 
     if (status.trimmed() != QStringLiteral("ok")) {
-        query.setQuery(QStringLiteral("ocs/meta/message/text()"));
-        QString message;
-        query.evaluateTo(&message);
-
+        QString message = doc.firstChildElement(QStringLiteral("ocs"))
+                            .firstChildElement(QStringLiteral("meta"))
+                            .firstChildElement(QStringLiteral("message"))
+                            .text();
         showOwnCloudServerErrorMessage(message.trimmed());
+
         return;
     }
 
-    query.setQuery(QStringLiteral("ocs/data/permissions/text()"));
-    QString permissions;
-    query.evaluateTo(&permissions);
+    QString permissions = doc.firstChildElement(QStringLiteral("ocs"))
+                            .firstChildElement(QStringLiteral("data"))
+                            .firstChildElement(QStringLiteral("permissions"))
+                            .text();
 
     qDebug() << __func__ << " - 'permissions': " << permissions;
 
@@ -1792,8 +1786,6 @@ void OwnCloudService::handleUpdateNoteShareReply(const QString &urlPart,
         shareDialog->updateDialog();
     }
 #endif
-
-#endif // QT_6_VERSION_CHECK
 }
 
 /**
@@ -1807,27 +1799,41 @@ void OwnCloudService::updateNoteShareStatusFromShare(QString &data) {
         return;
     }
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    QXmlQuery query;
-    query.setFocus(data);
-    query.setQuery(QStringLiteral("ocs/meta/status/text()"));
-    QString status;
-    query.evaluateTo(&status);
+    qDebug() << __func__ << " - 'data': " << data;
+
+    QDomDocument doc;
+    if (!doc.setContent(data)) {
+        qCritical() << __func__ << " - 'doc.setContent(data)' failed";
+        return;
+    }
+
+    QString status = doc.firstChildElement(QStringLiteral("ocs"))
+                         .firstChildElement(QStringLiteral("meta"))
+                         .firstChildElement(QStringLiteral("status"))
+                         .text();
 
     qDebug() << __func__ << " - 'status': " << status;
 
     if (status.trimmed() != QStringLiteral("ok")) {
-        query.setQuery(QStringLiteral("ocs/meta/message/text()"));
-        QString message;
-        query.evaluateTo(&message);
+        QString message = doc.firstChildElement(QStringLiteral("ocs"))
+                              .firstChildElement(QStringLiteral("meta"))
+                              .firstChildElement(QStringLiteral("message"))
+                              .text();
 
         showOwnCloudServerErrorMessage(message.trimmed());
         return;
     }
 
-    query.setQuery(QStringLiteral("ocs/data"));
-    updateNoteShareStatus(query, true);
-#endif
+    QDomNodeList dataElements = doc.firstChildElement(QStringLiteral("ocs"))
+                                    .firstChildElement(QStringLiteral("data"))
+                                    .elementsByTagName(QStringLiteral("element"));
+
+    if (dataElements.count() == 0) {
+        dataElements = doc.firstChildElement(QStringLiteral("ocs"))
+                                .elementsByTagName(QStringLiteral("data"));
+    }
+
+    updateNoteShareStatus(dataElements, true);
 }
 
 /**
@@ -1841,56 +1847,64 @@ void OwnCloudService::updateNoteShareStatusFromFetchAll(QString &data) {
         return;
     }
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    QXmlQuery query;
-    query.setFocus(data);
-    query.setQuery(QStringLiteral("ocs/data/element"));
+    qDebug() << __func__ << " - 'data': " << data;
 
-    if (!query.isValid()) {
+    QDomDocument doc;
+    if (!doc.setContent(data)) {
+        qCritical() << __func__ << " - 'doc.setContent(data)' failed";
         return;
     }
 
-    updateNoteShareStatus(query);
-#endif
+    QDomNodeList dataElements = doc.firstChildElement(QStringLiteral("ocs"))
+                                  .firstChildElement(QStringLiteral("data"))
+                                  .elementsByTagName(QStringLiteral("element"));
+
+    if (dataElements.count() == 0) {
+        dataElements = doc.firstChildElement(QStringLiteral("ocs"))
+                           .elementsByTagName(QStringLiteral("data"));
+    }
+
+    updateNoteShareStatus(dataElements);
 }
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
+void OwnCloudService::updateNoteShareStatus(QDomNodeList &dataElements,
                                             bool updateShareDialog) {
-    QXmlResultItems results;
-    query.evaluateTo(&results);
+    qDebug() << __func__ << " - 'dataElements.count()': " << dataElements.count();
 
-    if (results.hasError()) {
+    if (dataElements.isEmpty()) {
         return;
     }
 
     QString serverNotesPath = NoteFolder::currentRemotePath();
 
-    while (!results.next().isNull()) {
-        query.setFocus(results.current());
+    for(int i = 0; i < dataElements.count(); i++)
+    {
+        QDomNode elm = dataElements.at(i);
+        if (!elm.isElement()) {
+            continue;
+        }
 
-        query.setQuery(QStringLiteral("share_type/text()"));
-        QString shareType;
-        query.evaluateTo(&shareType);
+        QString shareType = elm.firstChildElement(QStringLiteral("share_type"))
+                                .text();
+
+        qDebug() << __func__ << " - 'shareType': " << shareType;
 
         // we only want public shares
         if (shareType.trimmed() != QStringLiteral("3")) {
             continue;
         }
 
-        query.setQuery(QStringLiteral("item_type/text()"));
-        QString itemType;
-        query.evaluateTo(&itemType);
+        QString itemType = elm.firstChildElement(QStringLiteral("item_type"))
+                               .text();
+
+        qDebug() << __func__ << " - 'itemType': " << itemType;
 
         // we only want file shares
         if (itemType.trimmed() != QStringLiteral("file")) {
             continue;
         }
 
-        query.setQuery(QStringLiteral("path/text()"));
-        QString path;
-        query.evaluateTo(&path);
-        path = path.trimmed();
+        QString path = elm.firstChildElement(QStringLiteral("path")).text().trimmed();
 
         // we only want shares in our note folder
         if (!path.startsWith(serverNotesPath)) {
@@ -1919,22 +1933,16 @@ void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
         // store the share url for the note
         if (note.isFetched()) {
             // get the share id
-            query.setQuery(QStringLiteral("id/text()"));
-            QString id;
-            query.evaluateTo(&id);
-            note.setShareId(id.trimmed().toInt());
+            int id = elm.firstChildElement(QStringLiteral("id")).text().trimmed().toInt();
+            note.setShareId(id);
 
             // get the share url
-            query.setQuery(QStringLiteral("url/text()"));
-            QString url;
-            query.evaluateTo(&url);
-            note.setShareUrl(url.trimmed());
+            QString url = elm.firstChildElement(QStringLiteral("url")).text().trimmed();
+            note.setShareUrl(url);
 
             // get the share permissions
-            query.setQuery(QStringLiteral("permissions/text()"));
-            QString permissions;
-            query.evaluateTo(&permissions);
-            note.setSharePermissions(permissions.trimmed().toInt());
+            int permissions = elm.firstChildElement(QStringLiteral("permissions")).text().trimmed().toInt();
+            note.setSharePermissions(permissions);
 
             note.store();
 
@@ -1949,7 +1957,6 @@ void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
         }
     }
 }
-#endif
 
 void OwnCloudService::loadDirectory(QString &data) {
     QDomDocument doc;
@@ -2317,14 +2324,6 @@ bool OwnCloudService::initiateLoginFlowV2(const QString &serverUrl, QJsonObject 
 QString OwnCloudService::fetchNextcloudAccountId(const QString &serverUrl,
                                                       const QString &userName,
                                                       const QString &password) {
-
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
-    Q_UNUSED(serverUrl)
-    Q_UNUSED(userName)
-    Q_UNUSED(password)
-    qWarning() << Q_FUNC_INFO << "not implemented for qt6";
-    return {};
-#else
     auto *manager = new QNetworkAccessManager();
     QEventLoop loop;
     QTimer timer;
@@ -2369,18 +2368,24 @@ QString OwnCloudService::fetchNextcloudAccountId(const QString &serverUrl,
         QString data = QString(reply->readAll());
 //        qDebug() << __func__ << " - 'data': " << data;
 
-        QXmlQuery query;
-        query.setFocus(data);
-        query.setQuery(QStringLiteral("ocs/data/id/text()"));
-        QString id;
-        query.evaluateTo(&id);
+        QDomDocument doc;
+        if (!doc.setContent(data)) {
+            qCritical() << __func__ << " - 'doc.setContent(data)' failed";
+            return {};
+        }
 
-        return id.trimmed();
+        QString id = doc.firstChildElement(QStringLiteral("ocs"))
+                             .firstChildElement(QStringLiteral("data"))
+                             .firstChildElement(QStringLiteral("id"))
+                             .text().trimmed();
+
+        qDebug() << __func__ << " - 'id': " << id;
+
+        return id;
     }
 
     reply->deleteLater();
     delete (manager);
 
     return {};
-#endif
 }
