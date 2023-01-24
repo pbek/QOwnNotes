@@ -77,7 +77,7 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Tumbleweed)
+[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Tumbleweed)
 
 
 ## SLE 12 SP3 Backports
@@ -90,7 +90,7 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_12_SP3_Backports)
+[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_12_SP3_Backports)
 
 ## SLE 15
 

@@ -53,7 +53,7 @@ You can now synchronize your package database and install the package with `pacm
 sudo pacman -Syy qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra)
+[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra)
 
 ::: tip
 Of course you can also use this repository with other Arch Linux based distributions, like Manjaro.
