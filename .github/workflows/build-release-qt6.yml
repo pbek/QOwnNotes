@@ -82,7 +82,7 @@ jobs:
     steps:
 
       - name: '🧰 Checkout'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: recursive
 
@@ -138,6 +138,89 @@ jobs:
         with:
           name: ${{env.EXECUTABLE}}-Linux.AppImage
           path: src/${{env.EXECUTABLE}}-Linux.AppImage
+
+  #
+  # AppImage build
+  #
+  build-snap:
+    needs: create_release
+    runs-on: ubuntu-18.04
+    name: '🐧 Snap Ubuntu 18.04'
+    steps:
+
+      - name: '🧰 Checkout'
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: '⚙️ Set Env'
+        shell: bash
+        run: |
+          export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+
+      - name: '⚙️ Install Snapcraft'
+        uses: samuelmeuli/action-snapcraft@v1
+        with:
+          use_lxd: true
+  #        snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
+      - name: '⚙️ Cache Qt'
+        id: cache-qt
+        uses: actions/cache@v3
+        with:
+          path: ../Qt
+          key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
+      - name: '⚙️ Install Qt'
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: ${{env.QT_VERSION}}
+          modules: qtwebsockets
+          aqtversion: '==2.0.0'
+          cache: ${{steps.cache-qt.outputs.cache-hit}}
+      - name: '⚙️ Printenv'
+        shell: bash
+        run: |
+          echo "VERSION=${VERSION}"
+          printenv
+
+      - name: '🚧 Compile application'
+        run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
+
+  #    - name: Release Snap for Linux
+  #      uses: actions/upload-release-asset@v1
+  #      env:
+  #        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #      with:
+  #        upload_url: ${{ needs.create_release.outputs.upload_url }}
+  #        asset_path: ./qownnotes_${{ env.VERSION }}_amd64.snap
+  #        asset_name: QOwnNotes-amd64.snap
+  #        asset_content_type: application/octet-stream
+
+  #    - shell: bash
+  #      run: |
+  #        snapcraft --version
+  #        cd .. && pwd
+  #    - name: Deploy Snap
+  #      uses: snapcore/action-publish@v1
+  #      continue-on-error: true
+  #      env:
+  #        # `snapcraft export-login --snaps=qownnotes --acls package_access,package_push,package_update,package_release -`, token valid for one year
+  #        SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
+  #      with:
+  #        snap: /home/runner/work/QOwnNotes/QOwnNotes/qownnotes_${{ env.VERSION }}_amd64.snap
+  #        release: stable
+
+      - name: '📤 Upload artifact: Snap'
+        uses: actions/upload-artifact@v3
+        with:
+          name: qownnotes_${{ env.VERSION }}_amd64.snap
+          path: /home/runner/work/QOwnNotes/QOwnNotes/qownnotes_${{ env.VERSION }}_amd64.snap
+
+      - name: '📤 Upload artifact: Snap logs'
+        uses: actions/upload-artifact@v3
+        with:
+          name: snapcraft-logs
+          path: /home/runner/.cache/snapcraft/log/snapcraft-*.log
 
 #  build:
 #    needs: create_release
