@@ -29,9 +29,9 @@ env:
 
 jobs:
   create_release:
+    name: '🗃️️ Prepare release'
     permissions:
       contents: write  # for actions/create-release to create a release
-    name: Create release
     runs-on: ubuntu-latest
     outputs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
@@ -136,11 +136,34 @@ jobs:
       - name: '📤 Upload artifact: AppImage'
         uses: actions/upload-artifact@v3
         with:
-          name: ${{env.EXECUTABLE}}-Linux.AppImage
+          name: ${{env.EXECUTABLE}}-x86_64.AppImage
           path: src/${{env.EXECUTABLE}}-Linux.AppImage
+      - name: '📤 Upload artifact: AppImage sha256sum'
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
+          path: src/QOwnNotes-x86_64.AppImage.sha256sum
+#      - name: '📤 Release AppImage for Linux'
+#        uses: actions/upload-release-asset@v1
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        with:
+#          upload_url: ${{ needs.create_release.outputs.upload_url }}
+#          asset_path: ./src/QOwnNotes-x86_64.AppImage
+#          asset_name: QOwnNotes-x86_64.AppImage
+#          asset_content_type: application/vnd.appimage
+#      - name: '📤 Release AppImage sha256sum'
+#        uses: actions/upload-release-asset@v1
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        with:
+#          upload_url: ${{ needs.create_release.outputs.upload_url }}
+#          asset_path: ./src/QOwnNotes-x86_64.AppImage.sha256sum
+#          asset_name: QOwnNotes-x86_64.AppImage.sha256sum
+#          asset_content_type: text/plain
 
   #
-  # AppImage build
+  # Snap build
   #
   build-snap:
     needs: create_release
@@ -222,10 +245,14 @@ jobs:
           name: snapcraft-logs
           path: /home/runner/.cache/snapcraft/log/snapcraft-*.log
 
+  #
+  # Windows build
+  #
   build-windows:
     needs: create_release
     runs-on: windows-2019
     name: '🧊 Windows Server 2019'
+    continue-on-error: true
     steps:
 
       - name: '🧰 Checkout'
@@ -244,7 +271,9 @@ jobs:
         uses: jurplel/install-qt-action@v3
         with:
           aqtversion: '==2.0.0'
-          version: ${{ matrix.qt-version }}
+          version: ${{env.QT_VERSION}}
+          # https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_650/qt.qt6.650.win64_mingw/
+          # https://aqtinstall.readthedocs.io/en/latest/getting_started.html
           arch: win64_mingw81
           modules: qtwebsockets
           cache: ${{ steps.cache-qt.outputs.cache-hit }}
@@ -270,24 +299,97 @@ jobs:
           name: QOwnNotes.zip
           path: src/QOwnNotes.zip
 
-#      - name: Upload ZIP for Windows
+#      - name: '📤 Release ZIP'
 #        uses: actions/upload-release-asset@v1
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #        with:
 #          upload_url: ${{ needs.create_release.outputs.upload_url }}
-#          asset_path: ./QOwnNotes.zip
+#          asset_path: QOwnNotes.zip
 #          asset_name: QOwnNotes.zip
 #          asset_content_type: application/zip
-#      - name: Upload sha256 sum for Windows
+#      - name: '📤 Release sha256 sum'
 #        uses: actions/upload-release-asset@v1
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #        with:
 #          upload_url: ${{ needs.create_release.outputs.upload_url }}
-#          asset_path: ./QOwnNotes.zip.sha256
+#          asset_path: QOwnNotes.zip.sha256
 #          asset_name: QOwnNotes.zip.sha256
 #          asset_content_type: text/plain
+
+
+  #
+  # macOS build
+  #
+  build-macos:
+    name: '🍎 macOS Monterey'
+    needs: create_release
+    runs-on: macos-latest
+    continue-on-error: true
+    steps:
+
+      - name: '🧰 Checkout'
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: '⚙️ Cache Qt'
+        id: cache-qt
+        uses: actions/cache@v3
+        with:
+          path: ../Qt
+          key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
+
+      - name: '⚙️ Install Qt'
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: ${{env.QT_VERSION}}
+          modules: qtwebsockets
+          aqtversion: '==2.0.0'
+          cache: ${{steps.cache-qt.outputs.cache-hit}}
+
+      - name: '⚙️ Set Env'
+        shell: bash
+        run: |
+          export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+
+      - name: '⚙️ Printenv'
+        shell: bash
+        run: |
+          echo "VERSION=${VERSION}"
+          printenv
+
+      - name: '🚧 Compile application'
+        run: |
+          echo "#define RELEASE \"GitHub Actions\"" > release.h
+          lrelease QOwnNotes.pro
+          #ls ${Qt5_Dir}/bin
+          qmake
+          make -j {{env.CORES}}
+          ../build-systems/github/macos/create-dmg.sh
+
+      - name: '📤 Upload artifact: macOS'
+        uses: actions/upload-artifact@v3
+        with:
+          name: QOwnNotes.dmg
+          path: src/QOwnNotes.dmg
+
+#      - name: '📤 Release DMG'
+#        uses: actions/upload-release-asset@v1
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        with:
+#          upload_url: ${{ needs.create_release.outputs.upload_url }}
+#          asset_path: src/QOwnNotes.dmg
+#          asset_name: QOwnNotes.dmg
+#          asset_content_type: application/x-apple-diskimage
+
+
+
+
+
 
 
   #  build:
