@@ -2389,3 +2389,7 @@ QString OwnCloudService::fetchNextcloudAccountId(const QString &serverUrl,
 
     return {};
 }
+
+void OwnCloudService::unsetShareDialog() {
+    shareDialog = nullptr;
+}

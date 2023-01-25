@@ -99,6 +99,8 @@ class OwnCloudService : public QObject {
 
     static QString fetchNextcloudAccountId(const QString &serverUrl, const QString &userName, const QString &password);
 
+    void unsetShareDialog();
+
    private:
     QString serverUrl;
     QString todoCalendarServerUrl;

@@ -3,6 +3,8 @@
 ## 23.1.2
 - the XML parsing for the Nextcloud / ownCloud support was re-implemented
   to work with Qt6 (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
+- fixed a possible crash when reloading the note folder after changing the
+  sharing status of a note (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
 
 ## 23.1.1
 - toggling Markdown checkboxes in preview is now not any more allowed in read-only mode

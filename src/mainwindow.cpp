@@ -10121,6 +10121,7 @@ void MainWindow::on_actionShare_note_triggered() {
 
     ShareDialog *dialog = new ShareDialog(currentNote, this);
     dialog->exec();
+    OwnCloudService::instance()->unsetShareDialog();
     delete (dialog);
 
     currentNote.refetch();
