@@ -1,5 +1,7 @@
 #pragma once
 
+#include <QXmlStreamReader>
+
 #include "masterdialog.h"
 
 namespace Ui {
@@ -64,4 +66,7 @@ class EvernoteImportDialog : public MasterDialog {
 
     QString generateMetaDataMarkdown(QXmlQuery query);
 #endif
+    void importNotes(QXmlStreamReader &xml);
+    Note parseNote(QXmlStreamReader &xml, bool importMetaData = false);
+    void importImage(const Note &note, QString &content, QXmlStreamReader &xml);
 };
