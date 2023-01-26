@@ -24,6 +24,7 @@ env:
   PUBLISHER: "Patrizio Bekerle"
   REPO_DIR: "/home/runner/work/QOwnNotes"
   QT_VERSION: 6.5.0
+  QT_MODULES: ${{env.QT_MODULES}}
   QMAKE: qmake6
   CORES: 16
 
@@ -97,7 +98,7 @@ jobs:
         uses: jurplel/install-qt-action@v3
         with:
           version: ${{env.QT_VERSION}}
-          modules: qtwebsockets
+          modules: ${{env.QT_MODULES}}
           aqtversion: '==2.0.0'
           cache: ${{steps.cache-qt.outputs.cache-hit}}
 
@@ -197,7 +198,7 @@ jobs:
         uses: jurplel/install-qt-action@v3
         with:
           version: ${{env.QT_VERSION}}
-          modules: qtwebsockets
+          modules: ${{env.QT_MODULES}}
           aqtversion: '==2.0.0'
           cache: ${{steps.cache-qt.outputs.cache-hit}}
       - name: '⚙️ Printenv'
@@ -250,8 +251,8 @@ jobs:
   #
   build-windows:
     needs: create_release
-    runs-on: windows-2019
-    name: '🧊 Windows Server 2019'
+    runs-on: windows-2022
+    name: '🧊 Windows Server 2022'
     continue-on-error: true
     steps:
 
@@ -274,8 +275,8 @@ jobs:
           version: ${{env.QT_VERSION}}
           # https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_650/qt.qt6.650.win64_mingw/
           # https://aqtinstall.readthedocs.io/en/latest/getting_started.html
-          arch: win64_mingw81
-          modules: qtwebsockets
+#          arch: win64_mingw81
+          modules: ${{env.QT_MODULES}}
           cache: ${{ steps.cache-qt.outputs.cache-hit }}
 
       - name: '⚙️ Set Env'
@@ -291,7 +292,7 @@ jobs:
           printenv
 
       - name: '🚧 Compile application'
-        run: '& ..\build-systems\github\windows\build-zip.ps1'
+        run: '& ..\build-systems\github\windows\build-zip-qt6.ps1'
 
       - name: '📤 Upload artifact: Windows'
         uses: actions/upload-artifact@v3
@@ -334,6 +335,7 @@ jobs:
         with:
           submodules: recursive
 
+      # https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
       - name: '⚙️ Cache Qt'
         id: cache-qt
         uses: actions/cache@v3
@@ -345,7 +347,7 @@ jobs:
         uses: jurplel/install-qt-action@v3
         with:
           version: ${{env.QT_VERSION}}
-          modules: qtwebsockets
+          modules: ${{env.QT_MODULES}}
           aqtversion: '==2.0.0'
           cache: ${{steps.cache-qt.outputs.cache-hit}}
 
@@ -366,9 +368,9 @@ jobs:
           echo "#define RELEASE \"GitHub Actions\"" > release.h
           lrelease QOwnNotes.pro
           #ls ${Qt5_Dir}/bin
-          qmake
+          {{env.QMAKE}}
           make -j {{env.CORES}}
-          ../build-systems/github/macos/create-dmg.sh
+          ../build-systems/github/macos/create-dmg-qt6.sh
 
       - name: '📤 Upload artifact: macOS'
         uses: actions/upload-artifact@v3
@@ -452,7 +454,7 @@ jobs:
   #        aqtversion: '==2.0.0'
   #        version: ${{ matrix.qt-version }}
   #        arch: win64_mingw81
-  #        modules: qtwebsockets
+  #        modules: ${{env.QT_MODULES}}
   #        cache: ${{ steps.cache-qt.outputs.cache-hit }}
   #    - if: false == contains( matrix.os, 'windows')
   #      name: Install Qt on Linux/macOS
@@ -460,7 +462,7 @@ jobs:
   #      with:
   #        aqtversion: '==2.0.0'
   #        version: ${{ matrix.qt-version }}
-  #        modules: qtwebsockets
+  #        modules: ${{env.QT_MODULES}}
   #        cached: ${{ steps.cache-qt.outputs.cache-hit }}
   #    - name: Printenv
   #      shell: bash
