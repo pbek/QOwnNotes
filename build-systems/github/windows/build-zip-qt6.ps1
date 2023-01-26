@@ -5,7 +5,7 @@
 #dir -s ..\..\Qt
 Write-Host $Env:QT_VERSION
 echo "#define RELEASE ""GitHub Actions""" > release.h
-$Env:QMAKE QOwnNotes.pro -r
+qmake6 QOwnNotes.pro -r
 lrelease QOwnNotes.pro
 make
 md ..\release
