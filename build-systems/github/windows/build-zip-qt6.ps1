@@ -5,8 +5,8 @@
 #dir -s ..\..\Qt
 Write-Host $Env:QT_VERSION
 echo "#define RELEASE ""GitHub Actions""" > release.h
-$Env:QMAKE $Env:QMAKE_PROJECT -r
-lrelease $Env:QMAKE_PROJECT
+$Env:QMAKE QOwnNotes.pro -r
+lrelease QOwnNotes.pro
 make
 md ..\release
 # copy the binary to our release path
