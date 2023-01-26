@@ -260,164 +260,6 @@ QString EvernoteImportDialog::importImages(const Note &note, QString content, QX
 }
 
 /**
- * Imports and embeds images from an Evernote note
- *
- * @param content
- */
-void EvernoteImportDialog::importImage(const Note &note, QString &content, QXmlStreamReader &xml) {
-    Q_UNUSED(note)
-    Q_UNUSED(content)
-
-    if (xml.tokenType() != QXmlStreamReader::StartElement && xml.name() == "resource") {
-        return;
-    }
-
-    QHash<QString, MediaFileData> mediaFileDataHash;
-    QRegularExpressionMatch match;
-    QString mime;
-    bool isImage = false;
-    Q_UNUSED(isImage)
-
-    while (!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == "resource")) {
-        if (xml.tokenType() == QXmlStreamReader::StartElement) {
-            if (xml.name() == "mime") {
-                xml.readNext();
-                mime = xml.text().toString().trimmed();
-                if (mime.startsWith("image/")) {
-                    isImage = true;
-                }
-                qDebug() << __func__ << " - 'mime': " << mime;
-            }
-
-            // TODO: Continue here!
-        }
-
-        xml.readNext();
-    }
-
-//    while (!result.next().isNull()) {
-//        QString objectType;
-//        QString suffix;
-//        query.setFocus(result.current());
-//
-//        // parse the mime data of the object
-//        QString mime;
-//        query.setQuery(QStringLiteral("mime/text()"));
-//        query.evaluateTo(&mime);
-//
-//        QRegularExpression mimeExpression(QStringLiteral("(.+)?\\/(.+)?"),
-//                                          QRegularExpression::CaseInsensitiveOption);
-//        QRegularExpressionMatch mimeMatch = mimeExpression.match(mime);
-//
-//        if (mimeMatch.hasMatch()) {
-//            objectType = mimeMatch.captured(1);
-//            suffix = mimeMatch.captured(2);
-//        }
-//
-//        // we only want to import images
-//        if (objectType != QStringLiteral("image")) {
-//            continue;
-//        }
-//
-//        // check the recognition attribute for an object type
-//        QString recognition;
-//        query.setQuery(QStringLiteral("recognition/text()"));
-//        query.evaluateTo(&recognition);
-//
-//        recognition.replace(QStringLiteral("\\\""), QStringLiteral("\""));
-//
-//        match = QRegularExpression(QStringLiteral("objID=\"(.+?)\""),
-//                                   QRegularExpression::CaseInsensitiveOption)
-//                    .match(recognition);
-//
-//        QString objectId;
-//
-//        if (match.hasMatch()) {
-//            // get the object id of the resource to match it with the
-//            // en-media hash
-//            objectId = match.captured(1);
-//        }
-//
-//        QString data;
-//        query.setQuery(QStringLiteral("data/text()"));
-//        query.evaluateTo(&data);
-//
-//        // if there is no object id set we generate the hash ourselves
-//        if (objectId.isEmpty()) {
-//            objectId = QString(QCryptographicHash::hash(QByteArray::fromBase64(data.toLatin1()),
-//                                                        QCryptographicHash::Md5)
-//                                   .toHex());
-//        }
-//
-//        // store data in the QHash
-//        mediaFileDataHash[objectId].data = data;
-//        mediaFileDataHash[objectId].suffix = suffix;
-//    }
-//
-//    if (mediaFileDataHash.count() == 0) {
-//        return content;
-//    }
-//
-//    // match image tags
-//    QRegularExpression re(QStringLiteral("<en-media.+?type=\"image/.+?\".*?>"),
-//                          QRegularExpression::CaseInsensitiveOption);
-//    QRegularExpressionMatchIterator i = re.globalMatch(content);
-//    QStringList importedObjectIds;
-//
-//    // find all images
-//    while (i.hasNext()) {
-//        QRegularExpressionMatch imageMatch = i.next();
-//        QString imageTag = imageMatch.captured(0);
-//
-//        // check for the hash
-//        QRegularExpression re2(QStringLiteral("hash=\"(.+?)\""),
-//                               QRegularExpression::CaseInsensitiveOption);
-//        QRegularExpressionMatch hashMatch = re2.match(imageTag);
-//
-//        if (!hashMatch.hasMatch()) {
-//            continue;
-//        }
-//
-//        QString objectId = hashMatch.captured(1);
-//
-//        if (!mediaFileDataHash.contains(objectId)) {
-//            continue;
-//        }
-//
-//        importedObjectIds << objectId;
-//
-//        // get the base64 encoded image
-//        MediaFileData mediaFileData = mediaFileDataHash[objectId];
-//
-//        // get the Markdown code for the image file data entry
-//        QString markdownCode = getMarkdownForMediaFileData(note, mediaFileData);
-//
-//        if (!markdownCode.isEmpty()) {
-//            // replace image tag with Markdown code (and a leading newline, since
-//            // Evernote doesn't support inline images, and we like to add a spacer)
-//            content.replace(imageTag, QStringLiteral("\n") + markdownCode);
-//        }
-//    }
-//
-//    // get the image Markdown code for missing images
-//    QHashIterator<QString, MediaFileData> hashIterator(mediaFileDataHash);
-//    while (hashIterator.hasNext()) {
-//        hashIterator.next();
-//        QString objectId = hashIterator.key();
-//        if (importedObjectIds.contains(objectId)) {
-//            continue;
-//        }
-//
-//        MediaFileData mediaFileData = hashIterator.value();
-//
-//        // get the Markdown code for the image file data entry
-//        QString markdownCode = getMarkdownForMediaFileData(note, mediaFileData);
-//
-//        content += QStringLiteral("\n") + markdownCode;
-//    }
-}
-
-/**
  * Imports and embeds attachments from an Evernote note
  *
  * @param content
@@ -665,140 +507,6 @@ void EvernoteImportDialog::importNotes(const QString &data) {
     }
 }
 
-Note EvernoteImportDialog::parseNote(QXmlStreamReader &xml, bool importMetaData) {
-    Note note;
-
-    // Let's check that we're really getting a note.
-    if (xml.tokenType() != QXmlStreamReader::StartElement && xml.name() == "note") {
-        return note;
-    }
-
-    QString title;
-    QString content;
-
-    xml.readNext();
-
-    while (!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == "note")) {
-        if (xml.tokenType() == QXmlStreamReader::StartElement) {
-            if (xml.name() == "title") {
-                xml.readNext();
-                title = xml.text().toString().trimmed();
-
-                qDebug() << __func__ << " - 'title': " << title;
-            }
-
-            if (xml.name() == "content") {
-                xml.readNext();
-                content = xml.text().toString().trimmed();
-                Utils::Misc::unescapeEvernoteImportText(content);
-
-                qDebug() << __func__ << " - 'content': " << content;
-            }
-
-            if (xml.name() == "resource") {
-                xml.readNext();
-                if (ui->imageImportCheckBox->isChecked()) {
-                    importImage(note, content, xml);
-                }
-            }
-        }
-
-        xml.readNext();
-    }
-
-//    if (ui->imageImportCheckBox->isChecked()) {
-//        // import images
-//        // TODO: implement
-//        content = importImage(note, std::move(content), xml);
-//    }
-
-    if (ui->attachmentImportCheckBox->isChecked()) {
-        // import attachments
-        // TODO: implement
-        //                    content = importAttachments(note, std::move(content), query);
-    }
-
-    // we need to do that after images and attachments are imported,
-    // otherwise they will not be detected in-line
-    Utils::Misc::transformEvernoteImportText(content, true);
-
-#ifdef Q_OS_WIN32
-    // removing or replacing some characters that are asking for
-    // troubles
-    title.replace("—", "-");
-    title.replace("|", "-");
-    title.replace("/", "-");
-    title.replace("\\", "-");
-    title.remove("#");
-    title.remove("?");
-    title.remove("'");
-    title.remove("\"");
-#endif
-
-    QString noteText = Note::createNoteHeader(title);
-
-    if (importMetaData) {
-        // TODO: implement
-        //                    noteText += generateMetaDataMarkdown(query);
-    }
-
-    noteText += content.trimmed();
-
-    //            note.setName(title);
-    note.setNoteText(noteText);
-
-    // in case the user enabled that the filename can be different
-    // from the note name
-    // Attention: may already store the note
-    note.handleNoteTextFileName();
-
-    note.store();
-    note.storeNoteTextFileToDisk();
-
-    // tag the note if tags are found
-    // TODO: implement
-    //                tagNote(query, note);
-
-    _importCount++;
-    ui->progressBar->setValue(ui->progressBar->value() + 1);
-    QCoreApplication::processEvents();
-
-    return note;
-}
-
-/**
- * Imports the notes from the XML in data
- *
- * @param data
- */
-void EvernoteImportDialog::importNotes(QXmlStreamReader &xml) {
-    bool importMetaData = isMetaDataChecked();
-
-    while (!xml.atEnd() && !xml.hasError()) {
-        /* Read next element.*/
-        QXmlStreamReader::TokenType token = xml.readNext();
-        /* If token is just StartDocument, we'll go to next.*/
-        if (token == QXmlStreamReader::StartDocument) {
-            continue;
-        }
-        /* If token is StartElement, we'll see if we can read it.*/
-        if (token == QXmlStreamReader::StartElement) {
-            /* If it's named persons, we'll go to the next.*/
-            if (xml.name() == "en-export") {
-                continue;
-            }
-            /* If it's named person, we'll dig the information from there.*/
-            if (xml.name() == "note") {
-                Note note = this->parseNote(xml, importMetaData);
-                qDebug() << __func__ << " - 'note': " << note;
-            }
-        }
-    }
-    /* Error handling. */
-    if (xml.hasError()) {
-        qCritical() << "XML error: " << xml.errorString();
-    }
-}
 
 /**
  * Tags the note if tags are found
@@ -872,6 +580,140 @@ QString EvernoteImportDialog::generateMetaDataMarkdown(QXmlQuery query) {
     return resultText + QStringLiteral("\n");
 }
 #endif
+/**
+ * Imports the notes from the XML in data
+ *
+ * @param data
+ */
+void EvernoteImportDialog::importNotes(QXmlStreamReader &xml) {
+    bool importMetaData = isMetaDataChecked();
+
+    while (!xml.atEnd() && !xml.hasError()) {
+        /* Read next element.*/
+        QXmlStreamReader::TokenType token = xml.readNext();
+        /* If token is just StartDocument, we'll go to next.*/
+        if (token == QXmlStreamReader::StartDocument) {
+            continue;
+        }
+        /* If token is StartElement, we'll see if we can read it.*/
+        if (token == QXmlStreamReader::StartElement) {
+            /* If it's named persons, we'll go to the next.*/
+            if (xml.name() == "en-export") {
+                continue;
+            }
+            /* If it's named person, we'll dig the information from there.*/
+            if (xml.name() == "note") {
+                Note note = this->parseNote(xml, importMetaData);
+                qDebug() << __func__ << " - 'note': " << note;
+            }
+        }
+    }
+    /* Error handling. */
+    if (xml.hasError()) {
+        qCritical() << "XML error: " << xml.errorString();
+    }
+}
+
+Note EvernoteImportDialog::parseNote(QXmlStreamReader &xml, bool importMetaData) {
+    Note note;
+
+    // Let's check that we're really getting a note.
+    if (xml.tokenType() != QXmlStreamReader::StartElement && xml.name() == "note") {
+        return note;
+    }
+
+    QString title;
+    QString content;
+
+    xml.readNext();
+
+    while (!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == "note")) {
+        if (xml.tokenType() == QXmlStreamReader::StartElement) {
+            if (xml.name() == "title") {
+                xml.readNext();
+                title = xml.text().toString().trimmed();
+
+                qDebug() << __func__ << " - 'title': " << title;
+            }
+
+            if (xml.name() == "content") {
+                xml.readNext();
+                content = xml.text().toString().trimmed();
+                Utils::Misc::unescapeEvernoteImportText(content);
+
+                qDebug() << __func__ << " - 'content': " << content;
+            }
+
+            if (xml.name() == "resource") {
+                xml.readNext();
+                if (ui->imageImportCheckBox->isChecked()) {
+                    importImage(note, content, xml);
+                }
+            }
+        }
+
+        xml.readNext();
+    }
+
+    //    if (ui->imageImportCheckBox->isChecked()) {
+    //        // import images
+    //        // TODO: implement
+    //        content = importImage(note, std::move(content), xml);
+    //    }
+
+    if (ui->attachmentImportCheckBox->isChecked()) {
+        // import attachments
+        // TODO: implement
+        //                    content = importAttachments(note, std::move(content), query);
+    }
+
+    // we need to do that after images and attachments are imported,
+    // otherwise they will not be detected in-line
+    Utils::Misc::transformEvernoteImportText(content, true);
+
+#ifdef Q_OS_WIN32
+    // removing or replacing some characters that are asking for
+    // troubles
+    title.replace("—", "-");
+    title.replace("|", "-");
+    title.replace("/", "-");
+    title.replace("\\", "-");
+    title.remove("#");
+    title.remove("?");
+    title.remove("'");
+    title.remove("\"");
+#endif
+
+    QString noteText = Note::createNoteHeader(title);
+
+    if (importMetaData) {
+        // TODO: implement
+        //                    noteText += generateMetaDataMarkdown(query);
+    }
+
+    noteText += content.trimmed();
+
+    //            note.setName(title);
+    note.setNoteText(noteText);
+
+    // in case the user enabled that the filename can be different
+    // from the note name
+    // Attention: may already store the note
+    note.handleNoteTextFileName();
+
+    note.store();
+    note.storeNoteTextFileToDisk();
+
+    // tag the note if tags are found
+    // TODO: implement
+    //                tagNote(query, note);
+
+    _importCount++;
+    ui->progressBar->setValue(ui->progressBar->value() + 1);
+    QCoreApplication::processEvents();
+
+    return note;
+}
 
 /**
  * Adds a metadata tree widget item
@@ -1061,4 +903,162 @@ QString EvernoteImportDialog::getMarkdownForAttachmentFileData(
         tempFile, fileName, false, Note::extendedCleanupFileName(fileName));
 
     return markdownCode;
+}
+
+/**
+ * Imports and embeds images from an Evernote note
+ *
+ * @param content
+ */
+void EvernoteImportDialog::importImage(const Note &note, QString &content, QXmlStreamReader &xml) {
+    Q_UNUSED(note)
+    Q_UNUSED(content)
+
+    if (xml.tokenType() != QXmlStreamReader::StartElement && xml.name() == "resource") {
+        return;
+    }
+
+    QHash<QString, MediaFileData> mediaFileDataHash;
+    QRegularExpressionMatch match;
+    QString mime;
+    bool isImage = false;
+    Q_UNUSED(isImage)
+
+    while (!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == "resource")) {
+        if (xml.tokenType() == QXmlStreamReader::StartElement) {
+            if (xml.name() == "mime") {
+                xml.readNext();
+                mime = xml.text().toString().trimmed();
+                if (mime.startsWith("image/")) {
+                    isImage = true;
+                }
+                qDebug() << __func__ << " - 'mime': " << mime;
+            }
+
+            // TODO: Continue here!
+        }
+
+        xml.readNext();
+    }
+
+    //    while (!result.next().isNull()) {
+    //        QString objectType;
+    //        QString suffix;
+    //        query.setFocus(result.current());
+    //
+    //        // parse the mime data of the object
+    //        QString mime;
+    //        query.setQuery(QStringLiteral("mime/text()"));
+    //        query.evaluateTo(&mime);
+    //
+    //        QRegularExpression mimeExpression(QStringLiteral("(.+)?\\/(.+)?"),
+    //                                          QRegularExpression::CaseInsensitiveOption);
+    //        QRegularExpressionMatch mimeMatch = mimeExpression.match(mime);
+    //
+    //        if (mimeMatch.hasMatch()) {
+    //            objectType = mimeMatch.captured(1);
+    //            suffix = mimeMatch.captured(2);
+    //        }
+    //
+    //        // we only want to import images
+    //        if (objectType != QStringLiteral("image")) {
+    //            continue;
+    //        }
+    //
+    //        // check the recognition attribute for an object type
+    //        QString recognition;
+    //        query.setQuery(QStringLiteral("recognition/text()"));
+    //        query.evaluateTo(&recognition);
+    //
+    //        recognition.replace(QStringLiteral("\\\""), QStringLiteral("\""));
+    //
+    //        match = QRegularExpression(QStringLiteral("objID=\"(.+?)\""),
+    //                                   QRegularExpression::CaseInsensitiveOption)
+    //                    .match(recognition);
+    //
+    //        QString objectId;
+    //
+    //        if (match.hasMatch()) {
+    //            // get the object id of the resource to match it with the
+    //            // en-media hash
+    //            objectId = match.captured(1);
+    //        }
+    //
+    //        QString data;
+    //        query.setQuery(QStringLiteral("data/text()"));
+    //        query.evaluateTo(&data);
+    //
+    //        // if there is no object id set we generate the hash ourselves
+    //        if (objectId.isEmpty()) {
+    //            objectId = QString(QCryptographicHash::hash(QByteArray::fromBase64(data.toLatin1()),
+    //                                                        QCryptographicHash::Md5)
+    //                                   .toHex());
+    //        }
+    //
+    //        // store data in the QHash
+    //        mediaFileDataHash[objectId].data = data;
+    //        mediaFileDataHash[objectId].suffix = suffix;
+    //    }
+    //
+    //    if (mediaFileDataHash.count() == 0) {
+    //        return content;
+    //    }
+    //
+    //    // match image tags
+    //    QRegularExpression re(QStringLiteral("<en-media.+?type=\"image/.+?\".*?>"),
+    //                          QRegularExpression::CaseInsensitiveOption);
+    //    QRegularExpressionMatchIterator i = re.globalMatch(content);
+    //    QStringList importedObjectIds;
+    //
+    //    // find all images
+    //    while (i.hasNext()) {
+    //        QRegularExpressionMatch imageMatch = i.next();
+    //        QString imageTag = imageMatch.captured(0);
+    //
+    //        // check for the hash
+    //        QRegularExpression re2(QStringLiteral("hash=\"(.+?)\""),
+    //                               QRegularExpression::CaseInsensitiveOption);
+    //        QRegularExpressionMatch hashMatch = re2.match(imageTag);
+    //
+    //        if (!hashMatch.hasMatch()) {
+    //            continue;
+    //        }
+    //
+    //        QString objectId = hashMatch.captured(1);
+    //
+    //        if (!mediaFileDataHash.contains(objectId)) {
+    //            continue;
+    //        }
+    //
+    //        importedObjectIds << objectId;
+    //
+    //        // get the base64 encoded image
+    //        MediaFileData mediaFileData = mediaFileDataHash[objectId];
+    //
+    //        // get the Markdown code for the image file data entry
+    //        QString markdownCode = getMarkdownForMediaFileData(note, mediaFileData);
+    //
+    //        if (!markdownCode.isEmpty()) {
+    //            // replace image tag with Markdown code (and a leading newline, since
+    //            // Evernote doesn't support inline images, and we like to add a spacer)
+    //            content.replace(imageTag, QStringLiteral("\n") + markdownCode);
+    //        }
+    //    }
+    //
+    //    // get the image Markdown code for missing images
+    //    QHashIterator<QString, MediaFileData> hashIterator(mediaFileDataHash);
+    //    while (hashIterator.hasNext()) {
+    //        hashIterator.next();
+    //        QString objectId = hashIterator.key();
+    //        if (importedObjectIds.contains(objectId)) {
+    //            continue;
+    //        }
+    //
+    //        MediaFileData mediaFileData = hashIterator.value();
+    //
+    //        // get the Markdown code for the image file data entry
+    //        QString markdownCode = getMarkdownForMediaFileData(note, mediaFileData);
+    //
+    //        content += QStringLiteral("\n") + markdownCode;
+    //    }
 }
