@@ -3,19 +3,19 @@
 #ifdef USE_QLITEHTML
 
 #include <libraries/qlitehtml/src/qlitehtmlwidget.h>
+
 #include <QNetworkAccessManager>
 
-class HtmlPreviewWidget final : public QLiteHtmlWidget
-{
+class HtmlPreviewWidget final : public QLiteHtmlWidget {
     Q_OBJECT
-public:
+   public:
     HtmlPreviewWidget(QWidget *parent);
 
-Q_SIGNALS:
+   Q_SIGNALS:
     void anchorClicked(const QUrl &url);
 
-private:
-    QByteArray resourceLoadCallBack(const QUrl&);
+   private:
+    QByteArray resourceLoadCallBack(const QUrl &);
     void onContextMenuRequested(QPoint pos, const QUrl &url);
 
     void wheelEvent(QWheelEvent *) override;

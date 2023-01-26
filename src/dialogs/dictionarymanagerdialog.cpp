@@ -30,8 +30,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent)
     addDictionaryItem(tr("Amharic"), QStringLiteral("am_ET"));
     addDictionaryItem(tr("Ancient Greek"), QStringLiteral("grc_GR"));
     addDictionaryItem(tr("Arabic"), QStringLiteral("ar"));
-    addDictionaryItem(tr("Aragonese"), QStringLiteral("an_ES"),
-                      QStringLiteral("Aragonés"));
+    addDictionaryItem(tr("Aragonese"), QStringLiteral("an_ES"), QStringLiteral("Aragonés"));
     addDictionaryItem(tr("Armenian"), QStringLiteral("hy"));
     addDictionaryItem(tr("Albanian"), QStringLiteral("sq_AL"));
     addDictionaryItem(tr("Basque"), QStringLiteral("eu"));
@@ -47,52 +46,40 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent)
     addDictionaryItem(tr("Czech"), QStringLiteral("cs_CZ"));
     addDictionaryItem(tr("Danish"), QStringLiteral("da_DK"));
     addDictionaryItem(tr("Dutch"), QStringLiteral("nl_NL"));
-    addDictionaryItem(tr("English (American)"), QStringLiteral("en"),
-                      QStringLiteral("en_US"));
-    addDictionaryItem(tr("English (Australian)"), QStringLiteral("en"),
-                      QStringLiteral("en_AU"));
-    addDictionaryItem(tr("English (British)"), QStringLiteral("en"),
-                      QStringLiteral("en_GB"));
-    addDictionaryItem(tr("English (Canadian)"), QStringLiteral("en"),
-                      QStringLiteral("en_CA"));
+    addDictionaryItem(tr("English (American)"), QStringLiteral("en"), QStringLiteral("en_US"));
+    addDictionaryItem(tr("English (Australian)"), QStringLiteral("en"), QStringLiteral("en_AU"));
+    addDictionaryItem(tr("English (British)"), QStringLiteral("en"), QStringLiteral("en_GB"));
+    addDictionaryItem(tr("English (Canadian)"), QStringLiteral("en"), QStringLiteral("en_CA"));
     addDictionaryItem(tr("English (Medical Dictionary)"), QStringLiteral("en"),
                       QStringLiteral("en-medical"));
-    addDictionaryItem(tr("English (South African)"), QStringLiteral("en"),
-                      QStringLiteral("en_ZA"));
+    addDictionaryItem(tr("English (South African)"), QStringLiteral("en"), QStringLiteral("en_ZA"));
     addDictionaryItem(tr("Esperanto"), QStringLiteral("eo"));
     addDictionaryItem(tr("Estonian"), QStringLiteral("et_EE"));
     addDictionaryItem(tr("Faroese"), QStringLiteral("fo"));
-    addDictionaryItem(tr("French"), QStringLiteral("fr_FR"),
-                      QStringLiteral("fr"));
+    addDictionaryItem(tr("French"), QStringLiteral("fr_FR"), QStringLiteral("fr"));
     addDictionaryItem(tr("Friulian"), QStringLiteral("fur_IT"));
     addDictionaryItem(tr("Gaelic"), QStringLiteral("gd_GB"));
-    addDictionaryItem(tr("Galician"), QStringLiteral("gl"),
-                      QStringLiteral("gl_ES"));
+    addDictionaryItem(tr("Galician"), QStringLiteral("gl"), QStringLiteral("gl_ES"));
     addDictionaryItem(tr("Georgian"), QStringLiteral("ka_GE"));
-    addDictionaryItem(tr("German (Austrian)"), QStringLiteral("de"),
-                      QStringLiteral("de_AT_frami"));
+    addDictionaryItem(tr("German (Austrian)"), QStringLiteral("de"), QStringLiteral("de_AT_frami"));
     addDictionaryItem(tr("German (Classical Spelling)"), QStringLiteral("de"),
                       QStringLiteral("de_DE-oldspell"));
-    addDictionaryItem(tr("German (German)"), QStringLiteral("de"),
-                      QStringLiteral("de_DE_frami"));
-    addDictionaryItem(tr("German (Swiss)"), QStringLiteral("de"),
-                      QStringLiteral("de_CH_frami"));
+    addDictionaryItem(tr("German (German)"), QStringLiteral("de"), QStringLiteral("de_DE_frami"));
+    addDictionaryItem(tr("German (Swiss)"), QStringLiteral("de"), QStringLiteral("de_CH_frami"));
     addDictionaryItem(tr("German (Medical Dictionary)"), QStringLiteral("de"),
                       QStringLiteral("de-medical"));
     addDictionaryItem(tr("Greek"), QStringLiteral("el_GR"));
-    addDictionaryItem(tr("Modern Greek (Polytonic Greek)"),
-                      QStringLiteral("el_GR"), QStringLiteral("el-polyton"));
+    addDictionaryItem(tr("Modern Greek (Polytonic Greek)"), QStringLiteral("el_GR"),
+                      QStringLiteral("el-polyton"));
     addDictionaryItem(tr("Gujarati"), QStringLiteral("gu_IN"));
     addDictionaryItem(tr("Gurani"), QStringLiteral("gug"));
     addDictionaryItem(tr("Hebrew"), QStringLiteral("he_IL"));
     addDictionaryItem(tr("Hindi"), QStringLiteral("hi_IN"));
     addDictionaryItem(tr("Hungarian"), QStringLiteral("hu_HU"));
     addDictionaryItem(tr("Icelandic"), QStringLiteral("is"));
-    addDictionaryItem(tr("Indonesian"), QStringLiteral("id"),
-                      QStringLiteral("id_ID"));
+    addDictionaryItem(tr("Indonesian"), QStringLiteral("id"), QStringLiteral("id_ID"));
     addDictionaryItem(tr("Italian"), QStringLiteral("it_IT"));
-    addDictionaryItem(tr("Kaszebsczi"), QStringLiteral("csb_PL"),
-                      QStringLiteral("Kaszebsczi"));
+    addDictionaryItem(tr("Kaszebsczi"), QStringLiteral("csb_PL"), QStringLiteral("Kaszebsczi"));
     addDictionaryItem(tr("Kazakh"), QStringLiteral("kk"));
     addDictionaryItem(tr("Khmer"), QStringLiteral("km_KH"));
     addDictionaryItem(tr("Komi (Russia)"), QStringLiteral("koi"));
@@ -104,24 +91,20 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent)
     addDictionaryItem(tr("Latvian"), QStringLiteral("lv_LV"));
     addDictionaryItem(tr("Lithuanian"), QStringLiteral("lt_LT"));
     addDictionaryItem(tr("Low German / Low Saxon"), QStringLiteral("nds"));
-    addDictionaryItem(tr("Luxembourgish (Letzeburgesch)"),
-                      QStringLiteral("lb"));
+    addDictionaryItem(tr("Luxembourgish (Letzeburgesch)"), QStringLiteral("lb"));
     addDictionaryItem(tr("Macedonian"), QStringLiteral("mk"));
     addDictionaryItem(tr("Malayalam"), QStringLiteral("ml_IN"));
     addDictionaryItem(tr("Mongolian"), QStringLiteral("mn"));
     addDictionaryItem(tr("Nepali"), QStringLiteral("ne_NP"));
-    addDictionaryItem(tr("Norwegian (Bokmål)"), QStringLiteral("no"),
-                      QStringLiteral("nb_NO"));
-    addDictionaryItem(tr("Norwegian (Nynorsk)"), QStringLiteral("no"),
-                      QStringLiteral("nn_NO"));
+    addDictionaryItem(tr("Norwegian (Bokmål)"), QStringLiteral("no"), QStringLiteral("nb_NO"));
+    addDictionaryItem(tr("Norwegian (Nynorsk)"), QStringLiteral("no"), QStringLiteral("nn_NO"));
     addDictionaryItem(tr("Occitan"), QStringLiteral("oc_FR"));
     addDictionaryItem(tr("Papiamentu"), QStringLiteral("pap_CW"));
     addDictionaryItem(tr("Persian"), QStringLiteral("fa_IR"));
     addDictionaryItem(tr("Polish"), QStringLiteral("pl_PL"));
     addDictionaryItem(tr("Portugese (Brazilian)"), QStringLiteral("pt_BR"));
     addDictionaryItem(tr("Portugese"), QStringLiteral("pt_PT"));
-    addDictionaryItem(tr("Romanian"), QStringLiteral("ro"),
-                      QStringLiteral("ro_RO"));
+    addDictionaryItem(tr("Romanian"), QStringLiteral("ro"), QStringLiteral("ro_RO"));
     addDictionaryItem(tr("Romansh"), QStringLiteral("rm"));
     addDictionaryItem(tr("Russian"), QStringLiteral("ru_RU"));
     addDictionaryItem(tr("Russian Medical Dictionary"), QStringLiteral("ru_RU"),
@@ -129,15 +112,13 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent)
     addDictionaryItem(tr("Rusyn / Ruthene (Slovakia)"), QStringLiteral("sk_SK"),
                       QStringLiteral("rue_SK"));
     addDictionaryItem(tr("Serbian (Cyrillic)"), QStringLiteral("sr"));
-    addDictionaryItem(tr("Serbian (Latin)"), QStringLiteral("sr"),
-                      QStringLiteral("sr-Latn"));
+    addDictionaryItem(tr("Serbian (Latin)"), QStringLiteral("sr"), QStringLiteral("sr-Latn"));
     addDictionaryItem(tr("Shona"), QStringLiteral("sn_ZW"));
     addDictionaryItem(tr("Sindhi"), QStringLiteral("sd"));
     addDictionaryItem(tr("Sinhala"), QStringLiteral("si_LK"));
     addDictionaryItem(tr("Slovak"), QStringLiteral("sk_SK"));
     addDictionaryItem(tr("Slovenian"), QStringLiteral("sl_SI"));
-    addDictionaryItem(tr("Spanish"), QStringLiteral("es"),
-                      QStringLiteral("es_ANY"));
+    addDictionaryItem(tr("Spanish"), QStringLiteral("es"), QStringLiteral("es_ANY"));
     addDictionaryItem(tr("Swahili"), QStringLiteral("sw_TZ"));
     addDictionaryItem(tr("Swedish"), QStringLiteral("sv_SE"));
     addDictionaryItem(tr("Tagalog"), QStringLiteral("tl_PH"));
@@ -153,8 +134,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent)
     addDictionaryItem(tr("Uzbek"), QStringLiteral("uz_UZ"));
     addDictionaryItem(tr("Venda"), QStringLiteral("ve_ZA"));
     addDictionaryItem(tr("Venetian"), QStringLiteral("vec_IT"));
-    addDictionaryItem(tr("Vietnamese"), QStringLiteral("vi"),
-                      QStringLiteral("vi_VN"));
+    addDictionaryItem(tr("Vietnamese"), QStringLiteral("vi"), QStringLiteral("vi_VN"));
     addDictionaryItem(tr("Welsh"), QStringLiteral("cy_GB"));
     addDictionaryItem(tr("Xhosa"), QStringLiteral("xh_ZA"));
     addDictionaryItem(tr("Zulu"), QStringLiteral("zu_ZA"));
@@ -180,8 +160,7 @@ DictionaryManagerDialog::~DictionaryManagerDialog() {
     delete ui;
 }
 
-void DictionaryManagerDialog::addDictionaryItem(const QString &name,
-                                                const QString &pathPart,
+void DictionaryManagerDialog::addDictionaryItem(const QString &name, const QString &pathPart,
                                                 QString fileNamePart) {
     if (fileNamePart.isEmpty()) {
         fileNamePart = pathPart;
@@ -214,9 +193,7 @@ void DictionaryManagerDialog::setupMainSplitter() {
     // restore splitter sizes
     QSettings settings;
     QByteArray state =
-        settings
-            .value(QStringLiteral("DictionaryManagerDialog/mainSplitterState"))
-            .toByteArray();
+        settings.value(QStringLiteral("DictionaryManagerDialog/mainSplitterState")).toByteArray();
     _mainSplitter->restoreState(state);
 
     ui->gridLayout->layout()->addWidget(_mainSplitter);
@@ -227,9 +204,8 @@ void DictionaryManagerDialog::setupMainSplitter() {
  */
 void DictionaryManagerDialog::storeSettings() {
     QSettings settings;
-    settings.setValue(
-        QStringLiteral("DictionaryManagerDialog/mainSplitterState"),
-        _mainSplitter->saveState());
+    settings.setValue(QStringLiteral("DictionaryManagerDialog/mainSplitterState"),
+                      _mainSplitter->saveState());
 }
 
 void DictionaryManagerDialog::on_downloadButton_clicked() {
@@ -245,8 +221,7 @@ void DictionaryManagerDialog::on_downloadButton_clicked() {
         return;
     }
 
-    QString url =
-        item->data(0, Qt::UserRole).toString() + QStringLiteral(".dic");
+    QString url = item->data(0, Qt::UserRole).toString() + QStringLiteral(".dic");
     downloadFile(url);
 }
 
@@ -254,8 +229,7 @@ void DictionaryManagerDialog::downloadFile(const QString &url) {
     QNetworkRequest networkRequest(url);
 
 #if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
-    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
-                                true);
+    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
 #else
     networkRequest.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
 #endif
@@ -292,12 +266,10 @@ void DictionaryManagerDialog::slotReplyFinished(QNetworkReply *reply) {
 
     if (reply->error() != QNetworkReply::NoError &&
         reply->error() != QNetworkReply::OperationCanceledError) {
-        QMessageBox::critical(
-            nullptr, tr("Download error"),
-            tr("Error while downloading:\n%1").arg(reply->errorString()));
+        QMessageBox::critical(nullptr, tr("Download error"),
+                              tr("Error while downloading:\n%1").arg(reply->errorString()));
 
-        qWarning()
-            << QStringLiteral("Network error: %1").arg(reply->errorString());
+        qWarning() << QStringLiteral("Network error: %1").arg(reply->errorString());
 
         return;
     }
@@ -305,13 +277,11 @@ void DictionaryManagerDialog::slotReplyFinished(QNetworkReply *reply) {
     QFileInfo info(urlPath);
     QString suffix = info.completeSuffix();
 
-    QFile file(Utils::Misc::localDictionariesPath() + QStringLiteral("/") +
-               info.fileName());
+    QFile file(Utils::Misc::localDictionariesPath() + QStringLiteral("/") + info.fileName());
 
     if (!file.open(QIODevice::WriteOnly)) {
-        QMessageBox::critical(
-            nullptr, tr("File error"),
-            tr("Could not store downloaded file:\n%1").arg(file.errorString()));
+        QMessageBox::critical(nullptr, tr("File error"),
+                              tr("Could not store downloaded file:\n%1").arg(file.errorString()));
         return;
     }
 
@@ -324,8 +294,7 @@ void DictionaryManagerDialog::slotReplyFinished(QNetworkReply *reply) {
         auto *item = ui->remoteDictionaryTreeWidget->currentItem();
 
         if (item != nullptr) {
-            QString url =
-                item->data(0, Qt::UserRole).toString() + QStringLiteral(".aff");
+            QString url = item->data(0, Qt::UserRole).toString() + QStringLiteral(".aff");
             downloadFile(url);
         }
     } else {
@@ -342,14 +311,12 @@ void DictionaryManagerDialog::on_downloadCancelButton_clicked() {
 /**
  * Shows the download progress
  */
-void DictionaryManagerDialog::downloadProgress(qint64 bytesReceived,
-                                               qint64 bytesTotal) {
+void DictionaryManagerDialog::downloadProgress(qint64 bytesReceived, qint64 bytesTotal) {
     QString text = Utils::Misc::toHumanReadableByteSize(bytesReceived);
 
     // bytesTotal can be set to -1 if not available
     if (bytesTotal > -1) {
-        text += QStringLiteral(" / ") +
-                Utils::Misc::toHumanReadableByteSize(bytesTotal);
+        text += QStringLiteral(" / ") + Utils::Misc::toHumanReadableByteSize(bytesTotal);
     } else {
         // set to 4 MB
         bytesTotal = 4194304;
@@ -390,8 +357,7 @@ void DictionaryManagerDialog::loadLocalDictionaries() {
     qDebug() << files;
 }
 
-QString DictionaryManagerDialog::getDictionaryName(
-    const QString &fileNamePart) {
+QString DictionaryManagerDialog::getDictionaryName(const QString &fileNamePart) {
     foreach (Dictionary dict, _dictionaryList) {
         if (dict.fileNamePart == fileNamePart) {
             return dict.name;
@@ -402,8 +368,7 @@ QString DictionaryManagerDialog::getDictionaryName(
 }
 
 void DictionaryManagerDialog::on_deleteLocalDictionaryButton_clicked() {
-    foreach (QTreeWidgetItem *item,
-             ui->localDictionaryTreeWidget->selectedItems()) {
+    foreach (QTreeWidgetItem *item, ui->localDictionaryTreeWidget->selectedItems()) {
         const QString &fileNamePart = item->data(0, Qt::UserRole).toString();
 
         if (deleteLocalDictionaryFile(fileNamePart + QStringLiteral(".aff"))) {
@@ -415,47 +380,39 @@ void DictionaryManagerDialog::on_deleteLocalDictionaryButton_clicked() {
     qApp->setProperty("needsRestart", true);
 }
 
-bool DictionaryManagerDialog::deleteLocalDictionaryFile(
-    const QString &fileName) {
-    QFile file(Utils::Misc::localDictionariesPath() + QStringLiteral("/") +
-               fileName);
+bool DictionaryManagerDialog::deleteLocalDictionaryFile(const QString &fileName) {
+    QFile file(Utils::Misc::localDictionariesPath() + QStringLiteral("/") + fileName);
 
     if (!file.remove()) {
-        QMessageBox::critical(
-            nullptr, tr("File error"),
-            tr("Could not remove dictionary file:\n%1").arg(fileName));
+        QMessageBox::critical(nullptr, tr("File error"),
+                              tr("Could not remove dictionary file:\n%1").arg(fileName));
         return false;
     }
 
     return true;
 }
 
-void DictionaryManagerDialog::
-    on_remoteDictionaryTreeWidget_itemSelectionChanged() {
-    ui->downloadButton->setDisabled(
-        ui->remoteDictionaryTreeWidget->selectedItems().count() == 0);
+void DictionaryManagerDialog::on_remoteDictionaryTreeWidget_itemSelectionChanged() {
+    ui->downloadButton->setDisabled(ui->remoteDictionaryTreeWidget->selectedItems().count() == 0);
 }
 
-void DictionaryManagerDialog::
-    on_localDictionaryTreeWidget_itemSelectionChanged() {
+void DictionaryManagerDialog::on_localDictionaryTreeWidget_itemSelectionChanged() {
     ui->deleteLocalDictionaryButton->setDisabled(
         ui->localDictionaryTreeWidget->selectedItems().count() == 0);
 }
 
-void DictionaryManagerDialog::on_searchDictionaryEdit_textChanged(
-    const QString &arg1) {
+void DictionaryManagerDialog::on_searchDictionaryEdit_textChanged(const QString &arg1) {
     Utils::Gui::searchForTextInTreeWidget(ui->remoteDictionaryTreeWidget, arg1);
 }
 
-void DictionaryManagerDialog::on_remoteDictionaryTreeWidget_itemDoubleClicked(
-    QTreeWidgetItem *item, int column) {
+void DictionaryManagerDialog::on_remoteDictionaryTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
+                                                                              int column) {
     Q_UNUSED(item)
     Q_UNUSED(column)
     on_downloadButton_clicked();
 }
 
-void DictionaryManagerDialog::on_disableExternalDictionariesCheckBox_toggled(
-    bool checked) {
+void DictionaryManagerDialog::on_disableExternalDictionariesCheckBox_toggled(bool checked) {
     QSettings settings;
     settings.setValue(QStringLiteral("disableExternalDictionaries"), checked);
     qApp->setProperty("needsRestart", true);

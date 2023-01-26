@@ -31,8 +31,7 @@ class LanguageCache : public QTextBlockUserData {
         QMapIterator<QPair<int, int>, QString> it(languages);
         while (it.hasNext()) {
             it.next();
-            if (it.key().first <= pos &&
-                it.key().first + it.key().second >= pos) {
+            if (it.key().first <= pos && it.key().first + it.key().second >= pos) {
                 return it.value();
             }
         }

@@ -26,16 +26,14 @@ CommandSnippet::CommandSnippet(QString command, QString description, QStringList
 QJsonObject CommandSnippet::jsonObject() const {
     QJsonObject commandSnippetObject;
     commandSnippetObject.insert(QStringLiteral("command"), QJsonValue::fromVariant(command));
-    commandSnippetObject.insert(QStringLiteral("tags"),
-                          QJsonValue::fromVariant(tags));
+    commandSnippetObject.insert(QStringLiteral("tags"), QJsonValue::fromVariant(tags));
     commandSnippetObject.insert(QStringLiteral("description"),
-                          QJsonValue::fromVariant(description));
+                                QJsonValue::fromVariant(description));
     return commandSnippetObject;
 }
 
 QDebug operator<<(QDebug dbg, const CommandSnippet &commandSnippet) {
-    dbg.nospace() << " <command>" << commandSnippet.command
-                  << " <tags>" << commandSnippet.tags
+    dbg.nospace() << " <command>" << commandSnippet.command << " <tags>" << commandSnippet.tags
                   << " <description>" << commandSnippet.description;
     return dbg.space();
 }
@@ -51,13 +49,12 @@ bool CommandSnippet::operator==(const CommandSnippet &commandSnippet) const {
  * @return
  */
 QVector<CommandSnippet> CommandSnippet::parseCommandSnippets(const QString &text,
-                                           bool withPrefixOnly) {
+                                                             bool withPrefixOnly) {
     QRegularExpressionMatchIterator i;
     QVector<CommandSnippet> commandSnippets;
-    auto regex = QRegularExpression(
-        withPrefixOnly ? QStringLiteral(R"([-*]\s+cmd:\s+`(.+?)`(.*)$)") :
-                       QStringLiteral(R"([-*]\s+`(.+?)`(.*)$)"),
-        QRegularExpression::MultilineOption);
+    auto regex = QRegularExpression(withPrefixOnly ? QStringLiteral(R"([-*]\s+cmd:\s+`(.+?)`(.*)$)")
+                                                   : QStringLiteral(R"([-*]\s+`(.+?)`(.*)$)"),
+                                    QRegularExpression::MultilineOption);
 
     // parse command snippets like "- `my-command` #tag1 #tag2 description text"
     // with optional tags and description
@@ -72,16 +69,15 @@ QVector<CommandSnippet> CommandSnippet::parseCommandSnippets(const QString &text
 
         if (!additionalText.isEmpty()) {
             QRegularExpressionMatchIterator addIterator =
-                QRegularExpression(QStringLiteral(R"(#([^\s#]+))"))
-                    .globalMatch(additionalText);
+                QRegularExpression(QStringLiteral(R"(#([^\s#]+))")).globalMatch(additionalText);
             while (addIterator.hasNext()) {
                 QRegularExpressionMatch addMatch = addIterator.next();
                 QString tag = addMatch.captured(1).trimmed();
 
                 if (!tags.contains(tag)) {
                     tags << tag;
-                    additionalText.remove(QRegularExpression(
-                        "#" + QRegularExpression::escape(tag) + "\\b"));
+                    additionalText.remove(
+                        QRegularExpression("#" + QRegularExpression::escape(tag) + "\\b"));
                 }
             }
 
@@ -113,8 +109,7 @@ QVector<CommandSnippet> CommandSnippet::parseCommandSnippets(const QString &text
 
         if (!additionalText.isEmpty()) {
             QRegularExpressionMatchIterator addIterator =
-                QRegularExpression(QStringLiteral(R"(#([^\s#]+))"))
-                    .globalMatch(additionalText);
+                QRegularExpression(QStringLiteral(R"(#([^\s#]+))")).globalMatch(additionalText);
             while (addIterator.hasNext()) {
                 QRegularExpressionMatch addMatch = addIterator.next();
                 QString tag = addMatch.captured(1).trimmed();
@@ -147,7 +142,7 @@ QString CommandSnippet::commandSnippetsWebServiceJsonText(
 
     QJsonObject commandSnippetResultObject;
     commandSnippetResultObject.insert(QStringLiteral("type"),
-                                QJsonValue::fromVariant("commandSnippets"));
+                                      QJsonValue::fromVariant("commandSnippets"));
     commandSnippetResultObject.insert(QStringLiteral("data"), commandSnippetObjectList);
 
     QJsonDocument doc(commandSnippetResultObject);
@@ -161,7 +156,7 @@ QString CommandSnippet::commandSnippetsWebServiceJsonText(
  * @return
  */
 QString CommandSnippet::parsedCommandSnippetsWebServiceJsonText(const QString &text,
-                                                    bool withPrefixOnly) {
+                                                                bool withPrefixOnly) {
     return commandSnippetsWebServiceJsonText(parseCommandSnippets(text, withPrefixOnly));
 }
 
@@ -185,7 +180,8 @@ void CommandSnippet::mergeInList(QVector<CommandSnippet> &commandSnippets) {
 /**
  * Merges a commandSnippet into a list of commandSnippets
  */
-void CommandSnippet::mergeInList(QVector<CommandSnippet> &commandSnippets, CommandSnippet &commandSnippet) {
+void CommandSnippet::mergeInList(QVector<CommandSnippet> &commandSnippets,
+                                 CommandSnippet &commandSnippet) {
     commandSnippet.mergeInList(commandSnippets);
 }
 
@@ -210,7 +206,7 @@ void CommandSnippet::merge(CommandSnippet &commandSnippet) {
  * Merges a list of commandSnippets into another
  */
 void CommandSnippet::mergeListInList(const QVector<CommandSnippet> &sourceCommandSnippets,
-                               QVector<CommandSnippet> &destinationCommandSnippets) {
+                                     QVector<CommandSnippet> &destinationCommandSnippets) {
     for (CommandSnippet commandSnippet : sourceCommandSnippets) {
         commandSnippet.mergeInList(destinationCommandSnippets);
     }

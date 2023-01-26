@@ -13,7 +13,7 @@ using LangData = QMultiHash<char, QLatin1String>;
 #if QT_VERSION >= QT_VERSION_CHECK(5, 15, 2)
 using StringView = QStringView;
 #else
-using StringView = const QStringRef&;
+using StringView = const QStringRef &;
 #endif
 
 #if QT_VERSION < QT_VERSION_CHECK(5, 5, 0)
@@ -64,19 +64,15 @@ class CodeToHtmlConverter {
     Q_REQUIRED_RESULT static QString setFormat(const QString &str, Format format);
     static void initCodeLangs() Q_DECL_NOTHROW;
 
-    Q_REQUIRED_RESULT int highlightNumericLit(StringView input,
-                                              QString &output, int i) const;
-    Q_REQUIRED_RESULT static int highlightStringLiterals(
-        StringView input, QChar strType, QString &output, int i);
-    Q_REQUIRED_RESULT static int highlightComment(StringView input,
-                                                  QString &output, int i,
+    Q_REQUIRED_RESULT int highlightNumericLit(StringView input, QString &output, int i) const;
+    Q_REQUIRED_RESULT static int highlightStringLiterals(StringView input, QChar strType,
+                                                         QString &output, int i);
+    Q_REQUIRED_RESULT static int highlightComment(StringView input, QString &output, int i,
                                                   bool isSingleLine = true);
-    Q_REQUIRED_RESULT static int highlightWord(int i, const LangData &data,
-                                               StringView input,
+    Q_REQUIRED_RESULT static int highlightWord(int i, const LangData &data, StringView input,
                                                QString &output, Format f);
     Q_REQUIRED_RESULT QString xmlHighlighter(StringView input) const;
-    Q_REQUIRED_RESULT QString cssHighlighter(StringView input,
-                                             const LangData &types,
+    Q_REQUIRED_RESULT QString cssHighlighter(StringView input, const LangData &types,
                                              const LangData &keywords) const;
     Q_REQUIRED_RESULT QString ymlHighlighter(StringView input) const;
     Q_REQUIRED_RESULT QString iniHighlighter(StringView input) const;
@@ -84,22 +80,19 @@ class CodeToHtmlConverter {
     /**
      * @brief returns true if c is octal
      */
-    Q_REQUIRED_RESULT static inline bool isOctal(const char c) {
-        return (c >= '0' && c <= '7');
-    }
+    Q_REQUIRED_RESULT static inline bool isOctal(const char c) { return (c >= '0' && c <= '7'); }
 
     /**
      * @brief returns true if c is hex
      */
     Q_REQUIRED_RESULT static inline bool isHex(const char c) {
-        return ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'f') ||
-                (c >= 'A' && c <= 'F'));
+        return ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F'));
     }
 
     static QHash<QString, Lang> _langStringToEnum;
 
     /** For Test Cases Only **/
-    Q_REQUIRED_RESULT QString process(const QString& input) const;
+    Q_REQUIRED_RESULT QString process(const QString &input) const;
 
     friend class TestNotes;
 };

@@ -20,6 +20,6 @@ class TagApi : public QObject, public Tag {
     Q_INVOKABLE TagApi *fetchByName(const QString &name, int parentId = 0);
     Q_INVOKABLE QStringList getParentTagNames();
     Q_INVOKABLE QQmlListProperty<NoteApi> notes();
-    static TagApi* fromTag(const Tag& tag);
-    void copy(const Tag& t);
+    static TagApi *fromTag(const Tag &tag);
+    void copy(const Tag &t);
 };

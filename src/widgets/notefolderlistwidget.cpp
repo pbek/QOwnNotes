@@ -15,9 +15,7 @@
 
 #include <entities/notefolder.h>
 
-NoteFolderListWidget::NoteFolderListWidget(QWidget *parent) {
-    Q_UNUSED(parent);
-}
+NoteFolderListWidget::NoteFolderListWidget(QWidget *parent) { Q_UNUSED(parent); }
 
 void NoteFolderListWidget::dropEvent(QDropEvent *e) {
     // finish the move event

@@ -26,8 +26,8 @@ void TestNotes::initTestCase() {
 #endif
 
     // generate a notes path
-    notesPath = QDir::tempPath() + QDir::separator() +
-                QStringLiteral("qownnotes_test_") + QString::number(number);
+    notesPath = QDir::tempPath() + QDir::separator() + QStringLiteral("qownnotes_test_") +
+                QString::number(number);
     // qDebug() << "generated notesPath:" << notesPath;
 
     // create temporary notes directory
@@ -66,9 +66,8 @@ void TestNotes::cleanupTestCase() {
     // remove temporary notes directory
     if (notesPath.startsWith(QDir::tempPath()) && dir.exists(notesPath)) {
         Q_FOREACH (QFileInfo info,
-                   dir.entryInfoList(
-                       QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Files,
-                       QDir::DirsFirst)) {
+                   dir.entryInfoList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Files,
+                                     QDir::DirsFirst)) {
             if (info.isFile()) {
                 QFile::remove(info.absoluteFilePath());
             }
@@ -99,9 +98,8 @@ void TestNotes::testNoteEncryption() {
     QVERIFY(note.getId() == 2);
     QVERIFY(note.getName() == noteName);
     QVERIFY(note.getNoteText() ==
-            QStringLiteral(
-                "MyTestNote\n============\n\n<!-- BEGIN ENCRYPTED TEXT "
-                "--\nVTVdShbeNi63fYLB7B56pg==\n-- END ENCRYPTED TEXT -->"));
+            QStringLiteral("MyTestNote\n============\n\n<!-- BEGIN ENCRYPTED TEXT "
+                           "--\nVTVdShbeNi63fYLB7B56pg==\n-- END ENCRYPTED TEXT -->"));
 }
 
 void TestNotes::testNoteDecryption() {
@@ -128,8 +126,7 @@ void TestNotes::testNoteToMarkdownHtml() {
     note.createFromFile(file);
 
     QString html = note.toMarkdownHtml("", 980, true);
-    QString expectedBody =
-        QStringLiteral("<h1>MyTestNote</h1>\n<p>Some text</p>");
+    QString expectedBody = QStringLiteral("<h1>MyTestNote</h1>\n<p>Some text</p>");
 
     QVERIFY(html.contains(expectedBody));
 }
@@ -196,28 +193,23 @@ void TestNotes::testCodeToHtmlConversionPython() {
 }
 
 void TestNotes::testCodeToHtmlConversionHashComment() {
-    QString hashStyleComment =
-        QStringLiteral("#hello my qownnotes blah blah\n");
+    QString hashStyleComment = QStringLiteral("#hello my qownnotes blah blah\n");
     CodeToHtmlConverter c2(QStringLiteral("bash"));
-    QString outputHashStyleComment =
-        c2.process(hashStyleComment.mid(0, hashStyleComment.length()));
-    QString expectedOutputHashStyleComment = QStringLiteral(
-        "<span class=\"code-comment\">#hello my qownnotes blah blah</span>\n");
+    QString outputHashStyleComment = c2.process(hashStyleComment.mid(0, hashStyleComment.length()));
+    QString expectedOutputHashStyleComment =
+        QStringLiteral("<span class=\"code-comment\">#hello my qownnotes blah blah</span>\n");
 
     QVERIFY(outputHashStyleComment == expectedOutputHashStyleComment);
 }
 
 void TestNotes::testCodeToHtmlConversionSingleLineComment() {
-    QString comment =
-        QStringLiteral("//hello my qownnotes blah blah single line\n");
-    QString commentpy =
-        QStringLiteral("#hello my qownnotes blah blah single line\n");
+    QString comment = QStringLiteral("//hello my qownnotes blah blah single line\n");
+    QString commentpy = QStringLiteral("#hello my qownnotes blah blah single line\n");
 
     CodeToHtmlConverter cpp(QStringLiteral("cpp"));
     CodeToHtmlConverter py(QStringLiteral("py"));
 
-    QString outputSingleLineComment =
-        cpp.process(comment.mid(0, comment.length()));
+    QString outputSingleLineComment = cpp.process(comment.mid(0, comment.length()));
     QString outputCommentPy = py.process(commentpy.mid(0, commentpy.length()));
 
     QString expectedOutputSingleLineComment = QStringLiteral(
@@ -232,8 +224,7 @@ void TestNotes::testCodeToHtmlConversionSingleLineComment() {
 }
 
 void TestNotes::testCodeToHtmlConversionMultiLineComment() {
-    QString comment =
-        QStringLiteral("/*hello my qownnotes blah blah single line*/\n");
+    QString comment = QStringLiteral("/*hello my qownnotes blah blah single line*/\n");
     QString commentTrueMultiLine =
         QStringLiteral("/*hello my \nqownnotes blah \nblah single line*/\n");
     QString commentTrueMultiLineNoEnd =
@@ -243,16 +234,13 @@ void TestNotes::testCodeToHtmlConversionMultiLineComment() {
     CodeToHtmlConverter c(QStringLiteral("cpp"));
     CodeToHtmlConverter css("css");
 
-    QString outputMultiLineComment =
-        c.process(comment.mid(0, comment.length()));
+    QString outputMultiLineComment = c.process(comment.mid(0, comment.length()));
     QString outputTrueMultiLine =
         c.process(commentTrueMultiLine.mid(0, commentTrueMultiLine.length()));
-    QString outputTrueMultiLineNoEnd = c.process(
-        commentTrueMultiLineNoEnd.mid(0, commentTrueMultiLineNoEnd.length()));
-    QString outputNotAComment =
-        c.process(notAComment.mid(0, notAComment.length()));
-    QString outputCSSNotAComment =
-        css.process(notAComment.mid(0, notAComment.length()));
+    QString outputTrueMultiLineNoEnd =
+        c.process(commentTrueMultiLineNoEnd.mid(0, commentTrueMultiLineNoEnd.length()));
+    QString outputNotAComment = c.process(notAComment.mid(0, notAComment.length()));
+    QString outputCSSNotAComment = css.process(notAComment.mid(0, notAComment.length()));
 
     QString expectedMultiLineComment = QStringLiteral(
         "<span class=\"code-comment\">&#47;*hello my qownnotes blah blah "
@@ -264,8 +252,7 @@ void TestNotes::testCodeToHtmlConversionMultiLineComment() {
         "<span class=\"code-comment\">&#47;*hello my \nqownnotes blah \nblah "
         "single line</span>\n");
     QString expectedNotAComment = QStringLiteral("isnot&#47; a &#47;comment");
-    QString expectedCSSNotAComment =
-        QStringLiteral("isnot&#47; a &#47;comment");
+    QString expectedCSSNotAComment = QStringLiteral("isnot&#47; a &#47;comment");
 
     QVERIFY(outputMultiLineComment == expectedMultiLineComment);
     QVERIFY(outputTrueMultiLine == expectedTrueMultiLine);
@@ -427,8 +414,7 @@ void TestNotes::testCodeToHtmlStringLiterals() {
     QString charBefR = c.process(charBef.mid(0, charBef.length()));
 
     // e = expected
-    QString e =
-        QStringLiteral("<span class=\"code-string\">&quot;hello&quot;</span>");
+    QString e = QStringLiteral("<span class=\"code-string\">&quot;hello&quot;</span>");
     QString esa = QStringLiteral(
         "<span class=\"code-string\">&quot;hell</span><span "
         "class=\"code-literal\">\\a</span><span "
@@ -473,8 +459,7 @@ void TestNotes::testCodeToHtmlStringLiterals() {
         "<span class=\"code-string\">&quot; hell </span><span "
         "class=\"code-literal\">\\&quot;</span><span class=\"code-string\"> "
         "&quot;</span>");
-    QString eCharBef =
-        QStringLiteral("G<span class=\"code-string\">&quot;hello&quot;</span>");
+    QString eCharBef = QStringLiteral("G<span class=\"code-string\">&quot;hello&quot;</span>");
 
     QVERIFY(sR == e);
     QVERIFY(saR == esa);
@@ -500,8 +485,8 @@ void TestNotes::testOctal() {
         "<span class=\"code-string\">&quot;Waqar</span><span "
         "class=\"code-literal\">\\256</span><span "
         "class=\"code-string\">&quot;</span>");
-    QString eOctalFail1 = QStringLiteral(
-        "<span class=\"code-string\">&quot;Waqar\\183&quot;</span>");
+    QString eOctalFail1 =
+        QStringLiteral("<span class=\"code-string\">&quot;Waqar\\183&quot;</span>");
     QString eOctalFail2 = QStringLiteral(
         "<span class=\"code-string\">&quot;Waqar</span><span "
         "class=\"code-literal\">\\123</span><span "

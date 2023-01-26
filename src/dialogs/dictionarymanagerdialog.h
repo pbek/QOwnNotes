@@ -41,8 +41,7 @@ class DictionaryManagerDialog : public MasterDialog {
 
     void on_searchDictionaryEdit_textChanged(const QString &arg1);
 
-    void on_remoteDictionaryTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
-                                                         int column);
+    void on_remoteDictionaryTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
 
     void on_disableExternalDictionariesCheckBox_toggled(bool checked);
 

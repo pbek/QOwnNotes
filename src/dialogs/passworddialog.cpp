@@ -4,16 +4,14 @@
 
 #include "ui_passworddialog.h"
 
-PasswordDialog::PasswordDialog(QWidget *parent, const QString &labelText,
-                               bool doubleEnterPassword)
+PasswordDialog::PasswordDialog(QWidget *parent, const QString &labelText, bool doubleEnterPassword)
     : MasterDialog(parent), ui(new Ui::PasswordDialog) {
     _doubleEnterPassword = doubleEnterPassword;
 
     ui->setupUi(this);
 
     ui->passwordLineEdit2->setVisible(doubleEnterPassword);
-    ui->buttonBox->button(QDialogButtonBox::Ok)
-        ->setEnabled(!doubleEnterPassword);
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(!doubleEnterPassword);
     ui->errorLabel->setVisible(false);
 
     if (!labelText.isEmpty()) {
@@ -44,8 +42,7 @@ void PasswordDialog::on_passwordLineEdit2_textChanged(const QString &arg1) {
 bool PasswordDialog::checkIfPasswordsAreEqual() {
     bool equal = ui->passwordLineEdit->text() == ui->passwordLineEdit2->text();
 
-    ui->errorLabel->setVisible(!equal &&
-                               !ui->passwordLineEdit2->text().isEmpty());
+    ui->errorLabel->setVisible(!equal && !ui->passwordLineEdit2->text().isEmpty());
     ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(equal);
 
     return equal;

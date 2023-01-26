@@ -12,13 +12,10 @@ class MetricsService : public QObject {
 
    public:
     explicit MetricsService(QObject *parent = 0);
-    void sendVisitIfEnabled(const QString &path = QString(),
-                            const QString &actionName = QString());
-    void sendVisit(const QString &path = QString(),
-                   const QString &actionName = QString());
+    void sendVisitIfEnabled(const QString &path = QString(), const QString &actionName = QString());
+    void sendVisit(const QString &path = QString(), const QString &actionName = QString());
     void sendEventIfEnabled(const QString &path, const QString &eventCategory,
-                            const QString &eventAction,
-                            const QString &eventName = QString(),
+                            const QString &eventAction, const QString &eventName = QString(),
                             int eventValue = 0);
     void sendHeartbeat();
     static MetricsService *instance();

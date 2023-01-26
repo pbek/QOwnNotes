@@ -1,7 +1,7 @@
 #pragma once
 
-#include "masterdialog.h"
 #include "entities/note.h"
+#include "masterdialog.h"
 
 class QTreeWidgetItem;
 
@@ -20,8 +20,7 @@ class StoredImagesDialog : public MasterDialog {
     bool eventFilter(QObject *obj, QEvent *event) override;
 
    private slots:
-    void on_fileTreeWidget_currentItemChanged(QTreeWidgetItem *current,
-                                              QTreeWidgetItem *previous);
+    void on_fileTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
 
     void on_deleteButton_clicked();
 
@@ -47,7 +46,7 @@ class StoredImagesDialog : public MasterDialog {
 
     void on_openFolderButton_clicked();
 
-private:
+   private:
     Ui::StoredImagesDialog *ui;
     bool _orphanedImagesOnly = false;
     QHash<QString, QVector<Note>> _fileNoteList;

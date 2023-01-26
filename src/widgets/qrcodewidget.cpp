@@ -12,8 +12,10 @@
  */
 
 #include "qrcodewidget.h"
-#include "libraries/qr-code-generator/QrCode.hpp"
+
 #include <QPainter>
+
+#include "libraries/qr-code-generator/QrCode.hpp"
 
 QRCodeWidget::QRCodeWidget(QWidget *parent, Qt::WindowFlags f) {
     Q_UNUSED(parent);
@@ -26,12 +28,10 @@ void QRCodeWidget::paintEvent(QPaintEvent *) {
     paintQR(painter, size(), _text, QColor(0, 0, 0), QColor(255, 255, 255));
 }
 
-void QRCodeWidget::paintQR(QPainter &painter, const QSize sz,
-                           const QString &data, const QColor& fg,
-                           const QColor& bg) {
-    char *str=data.toUtf8().data();
-    qrcodegen::QrCode qr = qrcodegen::QrCode::encodeText(
-        str, qrcodegen::QrCode::Ecc::LOW);
+void QRCodeWidget::paintQR(QPainter &painter, const QSize sz, const QString &data, const QColor &fg,
+                           const QColor &bg) {
+    char *str = data.toUtf8().data();
+    qrcodegen::QrCode qr = qrcodegen::QrCode::encodeText(str, qrcodegen::QrCode::Ecc::LOW);
     const int s = qr.getSize() > 0 ? qr.getSize() : 1;
     const double w = sz.width();
     const double h = sz.height();
@@ -40,12 +40,12 @@ void QRCodeWidget::paintQR(QPainter &painter, const QSize sz,
     const double scale = size / (s + 2);
     painter.setPen(Qt::NoPen);
     painter.setBrush(bg);
-    painter.drawRect(QRect(0, 0, (int) w, (int) h));
+    painter.drawRect(QRect(0, 0, (int)w, (int)h));
     painter.setBrush(fg);
 
     for (int y = 0; y < s; y++) {
         for (int x = 0; x < s; x++) {
-            const int color = qr.getModule(x, y); // 0 for white, 1 for black
+            const int color = qr.getModule(x, y);    // 0 for white, 1 for black
             if (0x0 != color) {
                 const double rx1 = (x + 1) * scale, ry1 = (y + 1) * scale;
                 QRectF r(rx1, ry1, scale, scale);

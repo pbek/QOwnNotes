@@ -2,8 +2,7 @@
 
 #include "ui_tagadddialog.h"
 
-TagAddDialog::TagAddDialog(QWidget *parent)
-    : MasterDialog(parent), ui(new Ui::TagAddDialog) {
+TagAddDialog::TagAddDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::TagAddDialog) {
     ui->setupUi(this);
     ui->nameLineEdit->setFocus();
     resize(1, 1);

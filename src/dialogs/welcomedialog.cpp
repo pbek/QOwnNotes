@@ -12,16 +12,13 @@
 #include "settingsdialog.h"
 #include "ui_welcomedialog.h"
 
-WelcomeDialog::WelcomeDialog(QWidget *parent)
-    : MasterDialog(parent), ui(new Ui::WelcomeDialog) {
+WelcomeDialog::WelcomeDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::WelcomeDialog) {
     ui->setupUi(this);
     ui->layoutWidget->setManualSettingsStoring(false);
 
     // replace ownCloud text
-    ui->subHeadlineLabel->setText(
-        Utils::Misc::replaceOwnCloudText(ui->subHeadlineLabel->text()));
-    ui->groupBox_2->setTitle(
-        Utils::Misc::replaceOwnCloudText(ui->groupBox_2->title()));
+    ui->subHeadlineLabel->setText(Utils::Misc::replaceOwnCloudText(ui->subHeadlineLabel->text()));
+    ui->groupBox_2->setTitle(Utils::Misc::replaceOwnCloudText(ui->groupBox_2->title()));
     ui->label->setText(Utils::Misc::replaceOwnCloudText(ui->label->text()));
     ui->label_4->setText(Utils::Misc::replaceOwnCloudText(ui->label_4->text()));
     ui->ownCloudSettingsButton->setText(
@@ -30,8 +27,7 @@ WelcomeDialog::WelcomeDialog(QWidget *parent)
     // if note layout has already been set, we can finish settings in the first
     // step
     QSettings settings;
-    _allowFinishButton =
-        settings.contains(QStringLiteral("workspace-initial/windowState"));
+    _allowFinishButton = settings.contains(QStringLiteral("workspace-initial/windowState"));
     ui->finishButton->setEnabled(_allowFinishButton);
 
     ui->backButton->setEnabled(false);
@@ -46,15 +42,13 @@ WelcomeDialog::WelcomeDialog(QWidget *parent)
 WelcomeDialog::~WelcomeDialog() { delete ui; }
 
 void WelcomeDialog::on_cancelButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled(
-        QStringLiteral("welcome-dialog/cancel"));
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/cancel"));
 
     done(QDialog::Rejected);
 }
 
 void WelcomeDialog::on_nextButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled(
-        QStringLiteral("welcome-dialog/next"));
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/next"));
 
     int index = ui->stackedWidget->currentIndex();
     int maxIndex = ui->stackedWidget->count() - 1;
@@ -96,14 +90,12 @@ bool WelcomeDialog::handleNoteFolderSetup() {
         // everything is all right, the path already exists
         _allowFinishButton = true;
 
-        Utils::Misc::printInfo(
-            QStringLiteral("Note path '%1' exists.").arg(_notesPath));
+        Utils::Misc::printInfo(QStringLiteral("Note path '%1' exists.").arg(_notesPath));
     } else {
         if (ui->createNoteFolderCheckBox->isChecked()) {
-            Utils::Misc::printInfo(
-                QString("Note path '%1' doesn't exist yet and will "
-                        "be created.")
-                    .arg(_notesPath));
+            Utils::Misc::printInfo(QString("Note path '%1' doesn't exist yet and will "
+                                           "be created.")
+                                       .arg(_notesPath));
 
             // mkpath should only return true if the path was created, but we
             // want to double-check because there were some troubles on Windows
@@ -114,16 +106,14 @@ bool WelcomeDialog::handleNoteFolderSetup() {
                     _allowFinishButton = true;
 
                     Utils::Misc::printInfo(
-                        QStringLiteral("Note path '%1' was now created.")
-                            .arg(_notesPath));
+                        QStringLiteral("Note path '%1' was now created.").arg(_notesPath));
                 } else {
                     qWarning() << "Cannot create note path with mkpath!";
                     showNoteFolderErrorMessage(
                         tr("Cannot create note path! You have to create "
                            "the note folder manually!"));
                     MetricsService::instance()->sendVisitIfEnabled(
-                        QStringLiteral(
-                            "welcome-dialog/note-folder/cannot-create-mkpath"));
+                        QStringLiteral("welcome-dialog/note-folder/cannot-create-mkpath"));
                 }
             } else {
                 qWarning() << "Cannot create note path!";
@@ -164,16 +154,14 @@ void WelcomeDialog::storeNoteFolderSettings() {
 
     // make the path relative to the portable data path if we are in
     // portable mode
-    settings.setValue(
-        QStringLiteral("notesPath"),
-        Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(_notesPath));
+    settings.setValue(QStringLiteral("notesPath"),
+                      Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(_notesPath));
     settings.setValue(QStringLiteral("showNoteSubFolders"),
                       ui->showNoteSubFoldersCheckBox->isChecked());
 }
 
 void WelcomeDialog::on_backButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled(
-        QStringLiteral("welcome-dialog/back"));
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/back"));
 
     int index = ui->stackedWidget->currentIndex();
 
@@ -187,8 +175,7 @@ void WelcomeDialog::on_backButton_clicked() {
 }
 
 void WelcomeDialog::on_finishButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled(
-        QStringLiteral("welcome-dialog/finished"));
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/finished"));
     if (ui->stackedWidget->currentIndex() == WelcomePages::NoteFolderPage) {
         if (!handleNoteFolderSetup()) return;
     } else {
@@ -203,9 +190,8 @@ void WelcomeDialog::on_noteFolderButton_clicked() {
         QStringLiteral("welcome-dialog/set-note-folder"));
 
     QString dir = QFileDialog::getExistingDirectory(
-        this,
-        tr("Please select the folder where your notes will get stored to"),
-        _notesPath, QFileDialog::ShowDirsOnly);
+        this, tr("Please select the folder where your notes will get stored to"), _notesPath,
+        QFileDialog::ShowDirsOnly);
 
     QDir d = QDir(dir);
 
@@ -213,14 +199,12 @@ void WelcomeDialog::on_noteFolderButton_clicked() {
 #ifdef Q_OS_WIN32
         // check if user chose a different drive in portable mode
         if (Utils::Misc::isInPortableMode() &&
-            Utils::Misc::portableDataPath().toLower().at(0) !=
-                dir.toLower().at(0)) {
-            QMessageBox::information(
-                this, tr("Note folder"),
-                tr("Keep in mind that the note folder will be "
-                   "stored relative to the directory where QOwnNotes "
-                   "resides in portable mode! So you need to stay on the "
-                   "same drive."));
+            Utils::Misc::portableDataPath().toLower().at(0) != dir.toLower().at(0)) {
+            QMessageBox::information(this, tr("Note folder"),
+                                     tr("Keep in mind that the note folder will be "
+                                        "stored relative to the directory where QOwnNotes "
+                                        "resides in portable mode! So you need to stay on the "
+                                        "same drive."));
 
             return;
         }
@@ -248,7 +232,6 @@ void WelcomeDialog::on_networkSettingsButton_clicked() {
 }
 
 void WelcomeDialog::closeEvent(QCloseEvent *event) {
-    MetricsService::instance()->sendVisitIfEnabled(
-        QStringLiteral("welcome-dialog/close"));
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/close"));
     MasterDialog::closeEvent(event);
 }

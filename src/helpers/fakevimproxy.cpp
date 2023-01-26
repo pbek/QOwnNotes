@@ -3,6 +3,10 @@
 #include <libraries/fakevim/fakevim/fakevimhandler.h>
 #include <mainwindow.h>
 
+#include <QDir>
+#include <QRegularExpression>
+#include <QSettings>
+#include <QStandardPaths>
 #include <QtCore/QTemporaryFile>
 #include <QtCore/QTextStream>
 #include <QtGui/QTextBlock>
@@ -11,18 +15,11 @@
 #include <QtWidgets/QMessageBox>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QStatusBar>
-#include <QSettings>
-#include <QStandardPaths>
-#include <QDir>
 
-    #include<QRegularExpression>
-
-FakeVimProxy::FakeVimProxy(QWidget *widget, QObject *parent)
-    : QObject(parent), m_widget(widget)
-{
+FakeVimProxy::FakeVimProxy(QWidget *widget, QObject *parent) : QObject(parent), m_widget(widget) {
     using namespace FakeVim::Internal;
 
-    auto *handler = static_cast<FakeVim::Internal::FakeVimHandler*>(parent);
+    auto *handler = static_cast<FakeVim::Internal::FakeVimHandler *>(parent);
 
     handler->installEventFilter();
     handler->setupWidget();
@@ -45,7 +42,6 @@ FakeVimProxy::FakeVimProxy(QWidget *widget, QObject *parent)
     fakeVimSettings()->item("et")->setValue(setExpandTab);
     fakeVimSettings()->item("ts")->setValue(Utils::Misc::indentSize());
     fakeVimSettings()->item("sw")->setValue(Utils::Misc::indentSize());
-
 
     {
         auto h = [this](const QString &contents, int cursorPos, int anchorPos, int msgLvl) {
@@ -85,7 +81,6 @@ FakeVimProxy::FakeVimProxy(QWidget *widget, QObject *parent)
     }
 
     {
-
         auto h = [this](bool *on) { requestHasBlockSelection(on); };
         handler->requestHasBlockSelection.connect(h);
     }
@@ -98,14 +93,13 @@ FakeVimProxy::FakeVimProxy(QWidget *widget, QObject *parent)
     }
 
     {
-        auto h = [this](bool *result, QChar c) {
-            checkForElectricCharacter(result, c);
-        };
+        auto h = [this](bool *result, QChar c) { checkForElectricCharacter(result, c); };
         handler->checkForElectricCharacter.connect(h);
     }
 
     // regular signal
-    connect(this, &FakeVimProxy::handleInput, handler, [handler](const QString &text) { handler->handleInput(text); });
+    connect(this, &FakeVimProxy::handleInput, handler,
+            [handler](const QString &text) { handler->handleInput(text); });
 }
 
 void FakeVimProxy::changeStatusData(const QString &info) {
@@ -156,23 +150,21 @@ void FakeVimProxy::highlightMatches(const QString &pattern) {
     updateExtraSelections();
 }
 
-void FakeVimProxy::changeStatusMessage(const QString &contents, int cursorPos, int /*anchorPos*/, int /*messageLevel*/) {
-    m_statusMessage =
-        cursorPos == -1
-            ? contents
-            : contents.left(cursorPos) + QChar(10073) + contents.mid(cursorPos);
+void FakeVimProxy::changeStatusMessage(const QString &contents, int cursorPos, int /*anchorPos*/,
+                                       int /*messageLevel*/) {
+    m_statusMessage = cursorPos == -1
+                          ? contents
+                          : contents.left(cursorPos) + QChar(10073) + contents.mid(cursorPos);
     updateStatusBar();
 }
 
 void FakeVimProxy::updateStatusBar() {
     int slack = 80 - m_statusMessage.size() - m_statusData.size();
-    QString msg =
-        m_statusMessage + QString(slack, QLatin1Char(' ')) + m_statusData;
+    QString msg = m_statusMessage + QString(slack, QLatin1Char(' ')) + m_statusData;
     MainWindow::instance()->statusBar()->showMessage(msg);
 }
 
-void FakeVimProxy::handleExCommand(bool *handled,
-                                   const FakeVim::Internal::ExCommand &cmd) {
+void FakeVimProxy::handleExCommand(bool *handled, const FakeVim::Internal::ExCommand &cmd) {
     if (wantSaveAndQuit(cmd)) {
         // :wq
         if (save()) cancel();
@@ -195,8 +187,8 @@ void FakeVimProxy::requestSetBlockSelection(const QTextCursor &tc) {
     auto *ed = qobject_cast<QPlainTextEdit *>(m_widget);
     if (!ed) return;
 
-    QPalette pal = ed->parentWidget() != nullptr ? ed->parentWidget()->palette()
-                                                 : QApplication::palette();
+    QPalette pal =
+        ed->parentWidget() != nullptr ? ed->parentWidget()->palette() : QApplication::palette();
 
     m_blockSelection.clear();
     m_clearSelection.clear();
@@ -219,17 +211,14 @@ void FakeVimProxy::requestSetBlockSelection(const QTextCursor &tc) {
     for (QTextBlock block = cur.document()->findBlock(min);
          block.isValid() && block.position() < max; block = block.next()) {
         cur.setPosition(block.position() + qMin<int>(from, block.length()));
-        cur.setPosition(block.position() + qMin<int>(to, block.length()),
-                        QTextCursor::KeepAnchor);
+        cur.setPosition(block.position() + qMin<int>(to, block.length()), QTextCursor::KeepAnchor);
         selection.cursor = cur;
         m_blockSelection.append(selection);
     }
 
-    disconnect(ed, &QPlainTextEdit::selectionChanged, this,
-               &FakeVimProxy::updateBlockSelection);
+    disconnect(ed, &QPlainTextEdit::selectionChanged, this, &FakeVimProxy::updateBlockSelection);
     ed->setTextCursor(tc);
-    connect(ed, &QPlainTextEdit::selectionChanged, this,
-            &FakeVimProxy::updateBlockSelection);
+    connect(ed, &QPlainTextEdit::selectionChanged, this, &FakeVimProxy::updateBlockSelection);
 
     QPalette pal2 = ed->palette();
     pal2.setColor(QPalette::Highlight, Qt::transparent);
@@ -243,16 +232,15 @@ void FakeVimProxy::requestDisableBlockSelection() {
     auto *ed = qobject_cast<QPlainTextEdit *>(m_widget);
     if (!ed) return;
 
-    QPalette pal = ed->parentWidget() != nullptr ? ed->parentWidget()->palette()
-                                                 : QApplication::palette();
+    QPalette pal =
+        ed->parentWidget() != nullptr ? ed->parentWidget()->palette() : QApplication::palette();
 
     m_blockSelection.clear();
     m_clearSelection.clear();
 
     ed->setPalette(pal);
 
-    disconnect(ed, &QPlainTextEdit::selectionChanged, this,
-               &FakeVimProxy::updateBlockSelection);
+    disconnect(ed, &QPlainTextEdit::selectionChanged, this, &FakeVimProxy::updateBlockSelection);
 
     updateExtraSelections();
 }
@@ -264,9 +252,7 @@ void FakeVimProxy::updateBlockSelection() {
     requestSetBlockSelection(ed->textCursor());
 }
 
-void FakeVimProxy::requestHasBlockSelection(bool *on) {
-    *on = !m_blockSelection.isEmpty();
-}
+void FakeVimProxy::requestHasBlockSelection(bool *on) { *on = !m_blockSelection.isEmpty(); }
 
 void FakeVimProxy::indentRegion(int beginBlock, int endBlock, QChar typedChar) {
     auto *ed = qobject_cast<QPlainTextEdit *>(m_widget);
@@ -290,8 +276,7 @@ void FakeVimProxy::indentRegion(int beginBlock, int endBlock, QChar typedChar) {
             while (!cursor.atBlockEnd()) cursor.deleteChar();
         } else {
             const auto previousBlock = block.previous();
-            const auto previousLine =
-                previousBlock.isValid() ? previousBlock.text() : QString();
+            const auto previousLine = previousBlock.isValid() ? previousBlock.text() : QString();
 
             qint64 indent = firstNonSpace(previousLine);
             if (typedChar == '}')
@@ -303,8 +288,8 @@ void FakeVimProxy::indentRegion(int beginBlock, int endBlock, QChar typedChar) {
             QTextCursor cursor(block);
             cursor.beginEditBlock();
             cursor.movePosition(QTextCursor::StartOfBlock);
-            cursor.movePosition(QTextCursor::NextCharacter,
-                                QTextCursor::KeepAnchor, firstNonSpace(line));
+            cursor.movePosition(QTextCursor::NextCharacter, QTextCursor::KeepAnchor,
+                                firstNonSpace(line));
             cursor.removeSelectedText();
             cursor.insertText(indentString);
             cursor.endEditBlock();
@@ -325,9 +310,7 @@ int FakeVimProxy::firstNonSpace(const QString &text) {
 
 void FakeVimProxy::updateExtraSelections() {
     auto *ed = qobject_cast<QPlainTextEdit *>(m_widget);
-    if (ed)
-        ed->setExtraSelections(m_clearSelection + m_searchSelection +
-                               m_blockSelection);
+    if (ed) ed->setExtraSelections(m_clearSelection + m_searchSelection + m_blockSelection);
 }
 
 bool FakeVimProxy::wantSaveAndQuit(const FakeVim::Internal::ExCommand &cmd) {

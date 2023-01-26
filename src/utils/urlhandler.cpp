@@ -1,30 +1,26 @@
 #include "urlhandler.h"
-#include "mainwindow.h"
-#include "widgets/qownnotesmarkdowntextedit.h"
-#include "entities/note.h"
-#include "entities/notefolder.h"
-#include "entities/notesubfolder.h"
-#include "utils/gui.h"
-#include "widgets/notesubfoldertree.h"
 
 #include <QDesktopServices>
 #include <QFileInfo>
 
+#include "entities/note.h"
+#include "entities/notefolder.h"
+#include "entities/notesubfolder.h"
+#include "mainwindow.h"
+#include "utils/gui.h"
+#include "widgets/notesubfoldertree.h"
+#include "widgets/qownnotesmarkdowntextedit.h"
+
 UrlHandler::UrlHandler() = default;
 
-bool UrlHandler::isUrlSchemeLocal(const QUrl &url)
-{
+bool UrlHandler::isUrlSchemeLocal(const QUrl &url) {
     const QString scheme = url.scheme();
-    return scheme == QLatin1String("note")
-    || scheme == QLatin1String("noteid")
-    || scheme == QLatin1String("task")
-    || scheme == QLatin1String("checkbox")
-    || (scheme == QLatin1String("file") &&
-        Note::fileUrlIsNoteInCurrentNoteFolder(url));
+    return scheme == QLatin1String("note") || scheme == QLatin1String("noteid") ||
+           scheme == QLatin1String("task") || scheme == QLatin1String("checkbox") ||
+           (scheme == QLatin1String("file") && Note::fileUrlIsNoteInCurrentNoteFolder(url));
 }
 
-void UrlHandler::openUrl(QString urlString)
-{
+void UrlHandler::openUrl(QString urlString) {
     /* examples:
      * - <note://MyNote> opens the note "MyNote"
      * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with
@@ -44,7 +40,8 @@ void UrlHandler::openUrl(QString urlString)
     QString fragment;
     if (urlWasNotValid) {
         fragment = Note::getURLFragmentFromFileName(urlString);
-        urlString = MainWindow::instance()->getCurrentNote().getFileURLFromFileName(urlString, true);
+        urlString =
+            MainWindow::instance()->getCurrentNote().getFileURLFromFileName(urlString, true);
     } else {
         fragment = QUrl(urlString).fragment();
     }
@@ -74,8 +71,7 @@ void UrlHandler::openUrl(QString urlString)
     }
 }
 
-void UrlHandler::handleNoteIdUrl(QString urlString)
-{
+void UrlHandler::handleNoteIdUrl(QString urlString) {
     static const QRegularExpression re(QStringLiteral(R"(^noteid:\/\/note-(\d+)$)"));
     QRegularExpressionMatch match = re.match(urlString);
 
@@ -126,12 +122,11 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
             // ip-address
             static const QRegularExpression re(QStringLiteral(R"(^\w+:\/\/(\d+)$)"));
             QRegularExpressionMatch match = re.match(urlString);
-            fileName =
-                match.hasMatch() ? match.captured(1) : url.host();
+            fileName = match.hasMatch() ? match.captured(1) : url.host();
 
             // try to generate a useful title for the note
             fileName = Utils::Misc::toStartCase(
-                        fileName.replace(QStringLiteral("_"), QStringLiteral(" ")));
+                fileName.replace(QStringLiteral("_"), QStringLiteral(" ")));
         } else {
             fileName = url.fileName();
             filePath = url.adjusted(QUrl::RemoveFilename);
@@ -140,18 +135,14 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
         // remove file extension
         QFileInfo fileInfo(fileName);
         fileName = fileInfo.baseName();
-        QString relativeFilePath =
-                Note::fileUrlInCurrentNoteFolderToRelativePath(filePath);
-        QString currentNoteRelativeSubFolderPath =
-            currentNote.getNoteSubFolder().relativePath();
+        QString relativeFilePath = Note::fileUrlInCurrentNoteFolderToRelativePath(filePath);
+        QString currentNoteRelativeSubFolderPath = currentNote.getNoteSubFolder().relativePath();
 
         // remove the current relative sub-folder path from the relative path
         // of the future note to be able to create the correct path afterwards
         if (!currentNoteRelativeSubFolderPath.isEmpty()) {
             relativeFilePath.remove(QRegularExpression(
-                "^" +
-                QRegularExpression::escape(currentNoteRelativeSubFolderPath) +
-                "\\/"));
+                "^" + QRegularExpression::escape(currentNoteRelativeSubFolderPath) + "\\/"));
         }
 
         // Open attachments with extensions that are used for notes externally
@@ -162,48 +153,50 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
         }
 
         if (!relativeFilePath.isEmpty() && !NoteFolder::isCurrentHasSubfolders()) {
-            Utils::Gui::warning(
-                nullptr, QObject::tr("Note was not found"),
-                QObject::tr("Could not find note.<br />Unable to automatically "
-                    "create note at location, because subfolders are "
-                    "disabled for the current note folder."),
-                "cannot-create-note-not-has-subfolders");
+            Utils::Gui::warning(nullptr, QObject::tr("Note was not found"),
+                                QObject::tr("Could not find note.<br />Unable to automatically "
+                                            "create note at location, because subfolders are "
+                                            "disabled for the current note folder."),
+                                "cannot-create-note-not-has-subfolders");
             return;
         }
 
         QString promptQuestion;
 
         if (relativeFilePath.isEmpty()) {
-            promptQuestion = QObject::tr("Note was not found, create new note "
-                                "<strong>%1</strong>?")
-                    .arg(fileName);
+            promptQuestion = QObject::tr(
+                                 "Note was not found, create new note "
+                                 "<strong>%1</strong>?")
+                                 .arg(fileName);
         } else {
-            promptQuestion = QObject::tr("Note was not found, create new note "
-                                "<strong>%1</strong> at path <strong>%2</strong>?")
-                    .arg(fileName, relativeFilePath);
+            promptQuestion = QObject::tr(
+                                 "Note was not found, create new note "
+                                 "<strong>%1</strong> at path <strong>%2</strong>?")
+                                 .arg(fileName, relativeFilePath);
         }
 
         // ask if we want to create a new note if note wasn't found
-        if (Utils::Gui::questionNoSkipOverride(nullptr, QObject::tr("Note was not found"),
-                                                promptQuestion,
-                                                QStringLiteral("open-url-create-note")) == QMessageBox::Yes) {
-
+        if (Utils::Gui::questionNoSkipOverride(
+                nullptr, QObject::tr("Note was not found"), promptQuestion,
+                QStringLiteral("open-url-create-note")) == QMessageBox::Yes) {
             NoteSubFolder noteSubFolder = currentNote.getNoteSubFolder();
             bool subFolderCreationFailed(false);
 
             if (!relativeFilePath.isEmpty()) {
-                for (const QString& folderName : relativeFilePath.split("/")) {
+                for (const QString &folderName : relativeFilePath.split("/")) {
                     if (folderName.isEmpty()) {
                         break;
                     }
 
-                    NoteSubFolder subFolder = NoteSubFolder::fetchByNameAndParentId(folderName, noteSubFolder.getId());
+                    NoteSubFolder subFolder =
+                        NoteSubFolder::fetchByNameAndParentId(folderName, noteSubFolder.getId());
                     if (!subFolder.isFetched()) {
                         mw->createNewNoteSubFolder(folderName);
-                        noteSubFolder = NoteSubFolder::fetchByNameAndParentId(folderName, noteSubFolder.getId());
+                        noteSubFolder = NoteSubFolder::fetchByNameAndParentId(
+                            folderName, noteSubFolder.getId());
                         if (!noteSubFolder.isFetched()) {
-                            qWarning() << "Failed to create subfolder: " << folderName <<
-                                            "when attempting to create path: " << relativeFilePath;
+                            qWarning() << "Failed to create subfolder: " << folderName
+                                       << "when attempting to create path: " << relativeFilePath;
                             subFolderCreationFailed = true;
                             break;
                         }
@@ -222,10 +215,8 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
                 }
                 mw->createNewNote(fileName, false);
             } else {
-                Utils::Gui::warning(
-                    nullptr, QObject::tr("Failed to create note"),
-                    QObject::tr("Note creation failed"),
-                    "note-create-failed");
+                Utils::Gui::warning(nullptr, QObject::tr("Failed to create note"),
+                                    QObject::tr("Note creation failed"), "note-create-failed");
             }
             return;
         }
@@ -237,8 +228,7 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
  *
  * @param urlString
  */
-void UrlHandler::handleCheckboxUrl(QString urlString)
-{
+void UrlHandler::handleCheckboxUrl(QString urlString) {
     auto mw = MainWindow::instance();
 
     // Check if read-only mode is enabled and allow to get out of it
@@ -250,7 +240,8 @@ void UrlHandler::handleCheckboxUrl(QString urlString)
     const QUrl url(urlString);
 
     int index = url.host().mid(1).toInt();
-    static const QRegularExpression re(R"((^|\n)\s*[-*+]\s\[([xX ]?)\])", QRegularExpression::CaseInsensitiveOption);
+    static const QRegularExpression re(R"((^|\n)\s*[-*+]\s\[([xX ]?)\])",
+                                       QRegularExpression::CaseInsensitiveOption);
     int pos = 0;
     while (true) {
         QRegularExpressionMatch match;
@@ -261,18 +252,15 @@ void UrlHandler::handleCheckboxUrl(QString urlString)
         int matchedLength = match.capturedLength();
         qDebug() << __func__ << "match.capturedLength(): " << match.capturedLength();
         cursor.setPosition(pos + match.capturedLength() - 1);
-        if (cursor.block().userState() ==
-            MarkdownHighlighter::HighlighterState::List) {
+        if (cursor.block().userState() == MarkdownHighlighter::HighlighterState::List) {
             if (index == 0) {
                 auto ch = match.captured(2);
                 if (ch.isEmpty())
                     cursor.insertText(QStringLiteral("x"));
                 else {
-                    cursor.movePosition(QTextCursor::PreviousCharacter,
-                                        QTextCursor::KeepAnchor);
-                    cursor.insertText(ch == QStringLiteral(" ")
-                                            ? QStringLiteral("x")
-                                            : QStringLiteral(" "));
+                    cursor.movePosition(QTextCursor::PreviousCharacter, QTextCursor::KeepAnchor);
+                    cursor.insertText(ch == QStringLiteral(" ") ? QStringLiteral("x")
+                                                                : QStringLiteral(" "));
                 }
 
                 // refresh instantly
@@ -285,8 +273,7 @@ void UrlHandler::handleCheckboxUrl(QString urlString)
     }
 }
 
-void UrlHandler::handleFileUrl(QString urlString)
-{
+void UrlHandler::handleFileUrl(QString urlString) {
     QString windowsSlash = QString();
 
 #ifdef Q_OS_WIN32
@@ -294,16 +281,14 @@ void UrlHandler::handleFileUrl(QString urlString)
     windowsSlash = QStringLiteral("/");
 #endif
 
-    urlString.replace(QLatin1String("file://.."),
-                        QStringLiteral("file://") + windowsSlash +
-                            NoteFolder::currentLocalPath() +
-                            QStringLiteral("/.."));
+    urlString.replace(QLatin1String("file://.."), QStringLiteral("file://") + windowsSlash +
+                                                      NoteFolder::currentLocalPath() +
+                                                      QStringLiteral("/.."));
 
     QDesktopServices::openUrl(QUrl(urlString));
 }
 
-void UrlHandler::handleFileAttachmentUrl(QString urlString)
-{
+void UrlHandler::handleFileAttachmentUrl(QString urlString) {
     QString windowsSlash = QString();
 
 #ifdef Q_OS_WIN32
@@ -312,9 +297,8 @@ void UrlHandler::handleFileAttachmentUrl(QString urlString)
 #endif
 
     urlString.replace(QLatin1String("file://attachments"),
-                        QStringLiteral("file://") + windowsSlash +
-                            NoteFolder::currentLocalPath() +
-                            QStringLiteral("/attachments"));
+                      QStringLiteral("file://") + windowsSlash + NoteFolder::currentLocalPath() +
+                          QStringLiteral("/attachments"));
 
     QDesktopServices::openUrl(QUrl(urlString));
     return;

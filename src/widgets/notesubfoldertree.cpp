@@ -1,20 +1,18 @@
 #include "notesubfoldertree.h"
-#include "entities/notesubfolder.h"
+
+#include <QHeaderView>
+#include <QMenu>
+#include <QSettings>
+#include <memory>
+
 #include "entities/notefolder.h"
+#include "entities/notesubfolder.h"
 #include "entities/tag.h"
 #include "mainwindow.h"
 #include "utils/gui.h"
 
-#include <QSettings>
-#include <QHeaderView>
-#include <QMenu>
-
-#include <memory>
-
-NoteSubFolderTree::NoteSubFolderTree(QWidget *parent)
-    : QTreeWidget(parent)
-{
-    QTimer::singleShot(1, this, [this](){
+NoteSubFolderTree::NoteSubFolderTree(QWidget *parent) : QTreeWidget(parent) {
+    QTimer::singleShot(1, this, [this]() {
         header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
         header()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
     });
@@ -23,18 +21,18 @@ NoteSubFolderTree::NoteSubFolderTree(QWidget *parent)
     initConnections();
 }
 
-void NoteSubFolderTree::initConnections()
-{
+void NoteSubFolderTree::initConnections() {
     connect(this, &QTreeWidget::itemExpanded, this, &NoteSubFolderTree::onItemExpanded);
     connect(this, &QTreeWidget::itemCollapsed, this, &NoteSubFolderTree::onItemExpanded);
-    connect(this, &QTreeWidget::customContextMenuRequested, this, &NoteSubFolderTree::onContextMenuRequested);
+    connect(this, &QTreeWidget::customContextMenuRequested, this,
+            &NoteSubFolderTree::onContextMenuRequested);
     connect(this, &QTreeWidget::itemChanged, this, &NoteSubFolderTree::onItemChanged);
     connect(this, &QTreeWidget::currentItemChanged, this, &NoteSubFolderTree::onCurrentItemChanged);
-    connect(this, &QTreeWidget::itemSelectionChanged, this, &NoteSubFolderTree::onItemSelectionChanged);
+    connect(this, &QTreeWidget::itemSelectionChanged, this,
+            &NoteSubFolderTree::onItemSelectionChanged);
 }
 
-static QTreeWidgetItem *noteItem(const Note &note)
-{
+static QTreeWidgetItem *noteItem(const Note &note) {
     const QString name = note.getName();
     if (name.isEmpty()) {
         qWarning() << "Unexpected note with no name: " << note.getFileName();
@@ -60,10 +58,8 @@ static QTreeWidgetItem *noteItem(const Note &note)
     return noteItem;
 }
 
-void NoteSubFolderTree::buildTreeForParentItem(QTreeWidgetItem *parent)
-{
-    const int parentId =
-        parent == nullptr ? 0 : parent->data(0, Qt::UserRole).toInt();
+void NoteSubFolderTree::buildTreeForParentItem(QTreeWidgetItem *parent) {
+    const int parentId = parent == nullptr ? 0 : parent->data(0, Qt::UserRole).toInt();
     const int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
     const bool isCurrentNoteTreeEnabled = NoteFolder::isCurrentNoteTreeEnabled();
 
@@ -77,7 +73,7 @@ void NoteSubFolderTree::buildTreeForParentItem(QTreeWidgetItem *parent)
             // load all notes of the subfolder and add them to the note list
             // widget
             const QVector<Note> noteList = Note::fetchAllByNoteSubFolderId(noteSubFolder.getId());
-            QList<QTreeWidgetItem*> noteItems;
+            QList<QTreeWidgetItem *> noteItems;
             noteItems.reserve(noteList.size());
             for (const auto &note : noteList) {
                 noteItems << noteItem(note);
@@ -99,21 +95,18 @@ void NoteSubFolderTree::buildTreeForParentItem(QTreeWidgetItem *parent)
 
         // sort alphabetically, if necessary
         QSettings settings;
-        const int sort =
-            settings.value(QStringLiteral("noteSubfoldersPanelSort")).toInt();
+        const int sort = settings.value(QStringLiteral("noteSubfoldersPanelSort")).toInt();
         if (sort == SORT_ALPHABETICAL) {
             item->sortChildren(
-                0,
-                Utils::Gui::toQtOrder(
-                    settings.value(QStringLiteral("noteSubfoldersPanelOrder"))
-                        .toInt()));
+                0, Utils::Gui::toQtOrder(
+                       settings.value(QStringLiteral("noteSubfoldersPanelOrder")).toInt()));
         }
     }
 
     // add the notes of the note folder root
     if (parentId == 0 && isCurrentNoteTreeEnabled) {
         const QVector<Note> noteList = Note::fetchAllByNoteSubFolderId(0);
-        QList<QTreeWidgetItem*> noteItems;
+        QList<QTreeWidgetItem *> noteItems;
         noteItems.reserve(noteList.size());
         for (const auto &note : noteList) {
             noteItems << noteItem(note);
@@ -127,18 +120,14 @@ void NoteSubFolderTree::buildTreeForParentItem(QTreeWidgetItem *parent)
     }
 }
 
-QTreeWidgetItem *NoteSubFolderTree::addNoteSubFolder(QTreeWidgetItem *parentItem, const NoteSubFolder &noteSubFolder)
-{
+QTreeWidgetItem *NoteSubFolderTree::addNoteSubFolder(QTreeWidgetItem *parentItem,
+                                                     const NoteSubFolder &noteSubFolder) {
     const int id = noteSubFolder.getId();
     const QString name = noteSubFolder.getName();
     QSettings settings;
     const int linkCount = Note::countByNoteSubFolderId(
-        id,
-        settings
-            .value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively"))
-            .toBool());
-    QString toolTip = tr("show notes in folder '%1' (%2)")
-                          .arg(name, QString::number(linkCount));
+        id, settings.value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively")).toBool());
+    QString toolTip = tr("show notes in folder '%1' (%2)").arg(name, QString::number(linkCount));
 
     auto *item = new QTreeWidgetItem();
     item->setText(0, name);
@@ -160,29 +149,26 @@ QTreeWidgetItem *NoteSubFolderTree::addNoteSubFolder(QTreeWidgetItem *parentItem
     return item;
 }
 
-void NoteSubFolderTree::reload()
-{
+void NoteSubFolderTree::reload() {
     qDebug() << __func__;
     clear();
     const int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
-    const bool showAllNotesItem =
-        !NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively();
+    const bool showAllNotesItem = !NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively();
     auto *allItem = new QTreeWidgetItem();
 
     // add the "all notes" item
     if (showAllNotesItem) {
         int linkCount = Note::countAll();
-        QString toolTip = tr("Show notes from all note subfolders (%1)")
-                              .arg(QString::number(linkCount));
+        QString toolTip =
+            tr("Show notes from all note subfolders (%1)").arg(QString::number(linkCount));
 
         allItem->setText(0, tr("All notes"));
         allItem->setData(0, Qt::UserRole, -1);
         allItem->setToolTip(0, toolTip);
         allItem->setIcon(
-            0, QIcon::fromTheme(
-                   QStringLiteral("edit-copy"),
-                   QIcon(QStringLiteral(
-                       ":icons/breeze-qownnotes/16x16/edit-copy.svg"))));
+            0,
+            QIcon::fromTheme(QStringLiteral("edit-copy"),
+                             QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/edit-copy.svg"))));
         allItem->setForeground(1, QColor(Qt::gray));
         allItem->setText(1, QString::number(linkCount));
         allItem->setToolTip(1, toolTip);
@@ -192,20 +178,15 @@ void NoteSubFolderTree::reload()
     // add the "note folder" item
     QSettings settings;
     const int linkCount = Note::countByNoteSubFolderId(
-        0, settings
-               .value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively"))
-               .toBool());
-    const QString toolTip = tr("Show notes in note root folder (%1)")
-                                .arg(QString::number(linkCount));
+        0, settings.value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively")).toBool());
+    const QString toolTip =
+        tr("Show notes in note root folder (%1)").arg(QString::number(linkCount));
 
     auto *item = new QTreeWidgetItem();
-    if (settings.value(QStringLiteral("noteSubfoldersPanelShowRootFolderName"))
-            .toBool()) {
+    if (settings.value(QStringLiteral("noteSubfoldersPanelShowRootFolderName")).toBool()) {
         item->setText(
             0, NoteFolder::currentRootFolderName(
-                   settings
-                       .value(QStringLiteral("noteSubfoldersPanelShowFullPath"))
-                       .toBool()));
+                   settings.value(QStringLiteral("noteSubfoldersPanelShowFullPath")).toBool()));
     } else {
         item->setText(0, tr("Note folder"));
     }
@@ -216,8 +197,7 @@ void NoteSubFolderTree::reload()
     item->setText(1, QString::number(linkCount));
     item->setToolTip(1, toolTip);
 
-    if (settings.value(QStringLiteral("noteSubfoldersPanelDisplayAsFullTree"))
-            .toBool()) {
+    if (settings.value(QStringLiteral("noteSubfoldersPanelDisplayAsFullTree")).toBool()) {
         if (showAllNotesItem) {
             // add 'All Notes'
             addTopLevelItem(allItem);
@@ -227,18 +207,16 @@ void NoteSubFolderTree::reload()
         addTopLevelItem(item);
 
         // add all note sub folders recursively as items
-       buildTreeForParentItem(item);
+        buildTreeForParentItem(item);
 
         if (item->childCount() > 0) {
             item->setExpanded(true);
 
-            if (settings.value(QStringLiteral("noteSubfoldersPanelSort"))
-                    .toInt() == SORT_ALPHABETICAL) {
+            if (settings.value(QStringLiteral("noteSubfoldersPanelSort")).toInt() ==
+                SORT_ALPHABETICAL) {
                 item->sortChildren(
-                    0, Utils::Gui::toQtOrder(settings
-                                     .value(QStringLiteral(
-                                         "noteSubfoldersPanelOrder"))
-                                     .toInt()));
+                    0, Utils::Gui::toQtOrder(
+                           settings.value(QStringLiteral("noteSubfoldersPanelOrder")).toInt()));
             }
         }
     } else {    // the less hierarchical view
@@ -250,11 +228,8 @@ void NoteSubFolderTree::reload()
         // sort the widget
         if (settings.value(QStringLiteral("noteSubfoldersPanelSort")).toInt() ==
             SORT_ALPHABETICAL) {
-            sortItems(
-                0,
-                Utils::Gui::toQtOrder(
-                    settings.value(QStringLiteral("noteSubfoldersPanelOrder"))
-                        .toInt()));
+            sortItems(0, Utils::Gui::toQtOrder(
+                             settings.value(QStringLiteral("noteSubfoldersPanelOrder")).toInt()));
         }
 
         if (showAllNotesItem) {
@@ -282,8 +257,7 @@ void NoteSubFolderTree::onItemExpanded(QTreeWidgetItem *item) {
     }
 }
 
-QMenu *NoteSubFolderTree::contextMenu(QTreeWidget *parent)
-{
+QMenu *NoteSubFolderTree::contextMenu(QTreeWidget *parent) {
     QMenu *menu = new QMenu(parent);
 
     auto *mainWindow = MainWindow::instance();
@@ -292,33 +266,30 @@ QMenu *NoteSubFolderTree::contextMenu(QTreeWidget *parent)
     menu->addAction(mainWindow->newNoteAction());
 
     QAction *newAction = menu->addAction(tr("New subfolder"));
-    connect(newAction, &QAction::triggered, parent, [](){
-        MainWindow::instance()->createNewNoteSubFolder();
-    });
+    connect(newAction, &QAction::triggered, parent,
+            []() { MainWindow::instance()->createNewNoteSubFolder(); });
 
     QAction *renameAction(nullptr);
     QAction *removeAction(nullptr);
 
     if (NoteFolder::currentNoteFolder().getActiveNoteSubFolder().isFetched()) {
         renameAction = menu->addAction(tr("Rename subfolder"));
-        connect(renameAction, &QAction::triggered, [parent](){
+        connect(renameAction, &QAction::triggered, [parent]() {
             QTreeWidgetItem *item = parent->currentItem();
             // rename folder
             parent->editItem(item);
         });
 
         removeAction = menu->addAction(tr("Remove selected folders"));
-        connect(removeAction, &QAction::triggered, parent, [parent](){
+        connect(removeAction, &QAction::triggered, parent, [parent]() {
             // remove folders
             removeSelectedNoteSubFolders(parent);
         });
     }
 
-    QAction *showInFileManagerAction =
-        menu->addAction(tr("Show folder in file manager"));
-    connect(showInFileManagerAction, &QAction::triggered, parent, [](){
-        NoteSubFolder noteSubFolder =
-        NoteFolder::currentNoteFolder().getActiveNoteSubFolder();
+    QAction *showInFileManagerAction = menu->addAction(tr("Show folder in file manager"));
+    connect(showInFileManagerAction, &QAction::triggered, parent, []() {
+        NoteSubFolder noteSubFolder = NoteFolder::currentNoteFolder().getActiveNoteSubFolder();
 
         // show the current folder in the file manager
         Utils::Misc::openPath(noteSubFolder.fullPath());
@@ -329,8 +300,7 @@ QMenu *NoteSubFolderTree::contextMenu(QTreeWidget *parent)
     return menu;
 }
 
-void NoteSubFolderTree::onContextMenuRequested(QPoint pos)
-{
+void NoteSubFolderTree::onContextMenuRequested(QPoint pos) {
     std::unique_ptr<QMenu> menu(contextMenu(this));
     menu->exec(mapToGlobal(pos));
 }
@@ -347,7 +317,8 @@ void NoteSubFolderTree::removeSelectedNoteSubFolders(QTreeWidget *parent) {
     QStringList noteSubFolderPathList;
     QVector<NoteSubFolder> noteSubFolderList;
     for (QTreeWidgetItem *item : selectedItems) {
-        if (item->data(0, Qt::UserRole + 1).toInt() != MainWindow::NoteTreeWidgetItemType::FolderType) {
+        if (item->data(0, Qt::UserRole + 1).toInt() !=
+            MainWindow::NoteTreeWidgetItemType::FolderType) {
             continue;
         }
 
@@ -365,21 +336,20 @@ void NoteSubFolderTree::removeSelectedNoteSubFolders(QTreeWidget *parent) {
 
     auto *mainWindow = MainWindow::instance();
 
-    if (Utils::Gui::question(
-            parent, tr("Remove selected folders"),
-            tr("Remove <strong>%n</strong> selected folder(s)?"
-               "<ul><li>%1</li></ul>"
-               "All files and folders in these folders will be removed as"
-               " well!",
-               "", selectedItemsCount)
-                .arg(noteSubFolderPathList.join(QStringLiteral("</li><li>"))),
-            QStringLiteral("remove-folders")) == QMessageBox::Yes) {
+    if (Utils::Gui::question(parent, tr("Remove selected folders"),
+                             tr("Remove <strong>%n</strong> selected folder(s)?"
+                                "<ul><li>%1</li></ul>"
+                                "All files and folders in these folders will be removed as"
+                                " well!",
+                                "", selectedItemsCount)
+                                 .arg(noteSubFolderPathList.join(QStringLiteral("</li><li>"))),
+                             QStringLiteral("remove-folders")) == QMessageBox::Yes) {
         // delete the note subfolders
         for (const auto &noteSubFolder : Utils::asConst(noteSubFolderList)) {
             // remove the directory recursively from the file system
             if (noteSubFolder.removeFromFileSystem()) {
-                mainWindow->showStatusBarMessage(tr("Removed note subfolder: %1")
-                                         .arg(noteSubFolder.fullPath()));
+                mainWindow->showStatusBarMessage(
+                    tr("Removed note subfolder: %1").arg(noteSubFolder.fullPath()));
             }
         }
 
@@ -413,8 +383,7 @@ void NoteSubFolderTree::onCurrentItemChanged(QTreeWidgetItem *current, QTreeWidg
     Q_EMIT currentSubFolderChanged();
 }
 
-void NoteSubFolderTree::renameSubFolder(QTreeWidgetItem *item)
-{
+void NoteSubFolderTree::renameSubFolder(QTreeWidgetItem *item) {
     Q_ASSERT(item);
     onItemChanged(item, 0);
 }
@@ -426,8 +395,7 @@ void NoteSubFolderTree::onItemChanged(QTreeWidgetItem *item, int column) {
         return;
     }
 
-    NoteSubFolder noteSubFolder =
-        NoteSubFolder::fetch(item->data(0, Qt::UserRole).toInt());
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetch(item->data(0, Qt::UserRole).toInt());
     if (noteSubFolder.isFetched()) {
         const QString name = item->text(0);
 
@@ -455,8 +423,7 @@ void NoteSubFolderTree::onItemChanged(QTreeWidgetItem *item, int column) {
     }
 }
 
-void NoteSubFolderTree::onItemSelectionChanged()
-{
+void NoteSubFolderTree::onItemSelectionChanged() {
     if (selectedItems().size() > 1) {
         Q_EMIT multipleSubfoldersSelected();
     }

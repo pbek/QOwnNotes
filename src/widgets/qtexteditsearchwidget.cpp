@@ -26,20 +26,15 @@ QTextEditSearchWidget::QTextEditSearchWidget(QTextEdit *parent)
     _textEdit = parent;
     hide();
 
-    QObject::connect(ui->closeButton, SIGNAL(clicked()), this,
-                     SLOT(deactivate()));
+    QObject::connect(ui->closeButton, SIGNAL(clicked()), this, SLOT(deactivate()));
     QObject::connect(ui->searchLineEdit, SIGNAL(textChanged(QString)), this,
                      SLOT(searchLineEditTextChanged(QString)));
-    QObject::connect(ui->searchDownButton, SIGNAL(clicked()), this,
-                     SLOT(doSearchDown()));
-    QObject::connect(ui->searchUpButton, SIGNAL(clicked()), this,
-                     SLOT(doSearchUp()));
+    QObject::connect(ui->searchDownButton, SIGNAL(clicked()), this, SLOT(doSearchDown()));
+    QObject::connect(ui->searchUpButton, SIGNAL(clicked()), this, SLOT(doSearchUp()));
     QObject::connect(ui->replaceToggleButton, SIGNAL(toggled(bool)), this,
                      SLOT(setReplaceMode(bool)));
-    QObject::connect(ui->replaceButton, SIGNAL(clicked()), this,
-                     SLOT(doReplace()));
-    QObject::connect(ui->replaceAllButton, SIGNAL(clicked()), this,
-                     SLOT(doReplaceAll()));
+    QObject::connect(ui->replaceButton, SIGNAL(clicked()), this, SLOT(doReplace()));
+    QObject::connect(ui->replaceAllButton, SIGNAL(clicked()), this, SLOT(doReplaceAll()));
 
     installEventFilter(this);
     ui->searchLineEdit->installEventFilter(this);
@@ -120,8 +115,7 @@ bool QTextEditSearchWidget::eventFilter(QObject *obj, QEvent *event) {
                    (keyEvent->key() == Qt::Key_Up)) {
             doSearchUp();
             return true;
-        } else if ((keyEvent->key() == Qt::Key_Return) ||
-                   (keyEvent->key() == Qt::Key_Down)) {
+        } else if ((keyEvent->key() == Qt::Key_Return) || (keyEvent->key() == Qt::Key_Down)) {
             doSearchDown();
             return true;
         } else if (keyEvent->key() == Qt::Key_F3) {
@@ -164,8 +158,7 @@ bool QTextEditSearchWidget::doReplace(bool forAll) {
     int searchMode = ui->modeComboBox->currentIndex();
     if (searchMode == RegularExpressionMode) {
         QString text = c.selectedText();
-        text.replace(QRegularExpression(ui->searchLineEdit->text()),
-                     ui->replaceLineEdit->text());
+        text.replace(QRegularExpression(ui->searchLineEdit->text()), ui->replaceLineEdit->text());
         c.insertText(text);
     } else {
         c.insertText(ui->replaceLineEdit->text());
@@ -234,16 +227,14 @@ bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
 
     // start at the top (or bottom) if not found
     if (!found && allowRestartAtTop) {
-        _textEdit->moveCursor(searchDown ? QTextCursor::Start
-                                         : QTextCursor::End);
+        _textEdit->moveCursor(searchDown ? QTextCursor::Start : QTextCursor::End);
         found = _textEdit->find(text, options);
     }
 
     QRect rect = _textEdit->cursorRect();
     QMargins margins = _textEdit->layout()->contentsMargins();
     int searchWidgetHotArea = _textEdit->height() - this->height();
-    int marginBottom =
-        (rect.y() > searchWidgetHotArea) ? (this->height() + 10) : 0;
+    int marginBottom = (rect.y() > searchWidgetHotArea) ? (this->height() + 10) : 0;
 
     // move the search box a bit up if we would block the search result
     if (margins.bottom() != marginBottom) {
@@ -252,16 +243,14 @@ bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
     }
 
     // add a background color according if we found the text or not
-    QString colorCode =
-        found ? QStringLiteral("#D5FAE2") : QStringLiteral("#FAE9EB");
+    QString colorCode = found ? QStringLiteral("#D5FAE2") : QStringLiteral("#FAE9EB");
 
     if (_darkMode) {
-        colorCode =
-            found ? QStringLiteral("#135a13") : QStringLiteral("#8d2b36");
+        colorCode = found ? QStringLiteral("#135a13") : QStringLiteral("#8d2b36");
     }
 
-    ui->searchLineEdit->setStyleSheet(QStringLiteral("* { background: ") +
-                                      colorCode + QStringLiteral("; }"));
+    ui->searchLineEdit->setStyleSheet(QStringLiteral("* { background: ") + colorCode +
+                                      QStringLiteral("; }"));
 
     return found;
 }

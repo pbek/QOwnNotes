@@ -43,25 +43,20 @@ class Note {
 
     void setCryptoKey(const qint64 cryptoKey);
 
-    static bool addNote(const QString &name, const QString &fileName,
-                        const QString &text);
+    static bool addNote(const QString &name, const QString &fileName, const QString &text);
 
     static Note fetch(int id);
 
-    static Note fetchByName(const QRegularExpression &regExp,
-                            int noteSubFolderId = -1);
+    static Note fetchByName(const QRegularExpression &regExp, int noteSubFolderId = -1);
 
-    static Note fetchByFileName(const QString &fileName,
-                                int noteSubFolderId = -1);
+    static Note fetchByFileName(const QString &fileName, int noteSubFolderId = -1);
 
-    static Note fetchByFileName(const QString &fileName,
-                                const QString &noteSubFolderPathData);
+    static Note fetchByFileName(const QString &fileName, const QString &noteSubFolderPathData);
 
     static Note fetchByName(const QString &name, int noteSubFolderId = -1);
 
-    static Note fetchByName(const QString &name,
-        const QString &noteSubFolderPathData,
-        const QString& pathDataSeparator = QStringLiteral("\n"));
+    static Note fetchByName(const QString &name, const QString &noteSubFolderPathData,
+                            const QString &pathDataSeparator = QStringLiteral("\n"));
 
     static int fetchNoteIdByName(const QString &name, int noteSubFolderId = -1);
 
@@ -73,11 +68,10 @@ class Note {
 
     static QVector<Note> search(const QString &text);
 
-    static QVector<QString> searchAsNameListInCurrentNoteSubFolder(
-        const QString &text, bool searchInNameOnly = false);
+    static QVector<QString> searchAsNameListInCurrentNoteSubFolder(const QString &text,
+                                                                   bool searchInNameOnly = false);
 
-    static QVector<QString> searchAsNameList(const QString &text,
-                                             bool searchInNameOnly = false);
+    static QVector<QString> searchAsNameList(const QString &text, bool searchInNameOnly = false);
 
     static QStringList fetchNoteNamesInCurrentNoteSubFolder();
 
@@ -96,15 +90,13 @@ class Note {
 
     static QString defaultNoteFileExtension();
 
-    static QStringList noteFileExtensionList(
-        const QString &prefix = QString());
+    static QStringList noteFileExtensionList(const QString &prefix = QString());
 
     static QString getFullFilePathForFile(const QString &fileName);
 
     QString getFilePathRelativeToNote(const Note &note) const;
 
-    static int storeDirtyNotesToDisk(Note &currentNote,
-                                     bool *currentNoteChanged = nullptr,
+    static int storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged = nullptr,
                                      bool *noteWasRenamed = nullptr,
                                      bool *currentNoteTextChanged = nullptr);
 
@@ -114,8 +106,7 @@ class Note {
 
     bool operator==(const Note &note) const;
 
-    void createFromFile(QFile &file, int noteSubFolderId = 0,
-                        bool withNoteNameHook = false);
+    void createFromFile(QFile &file, int noteSubFolderId = 0, bool withNoteNameHook = false);
 
     static bool deleteAll();
 
@@ -138,18 +129,15 @@ class Note {
     bool remove(bool withFile = false);
 
     QString toMarkdownHtml(const QString &notesPath, int maxImageWidth = 980,
-                           bool forExport = false, bool decrypt = true,
-                           bool base64Images = false);
+                           bool forExport = false, bool decrypt = true, bool base64Images = false);
 
     bool isFetched() const;
 
-    bool copyToPath(const QString &destinationPath,
-                    QString noteFolderPath = QString());
+    bool copyToPath(const QString &destinationPath, QString noteFolderPath = QString());
 
     bool exportToPath(const QString &destinationPath, bool withAttachedFiles = false);
 
-    bool moveToPath(const QString &destinationPath,
-                    const QString &noteFolderPath = QString());
+    bool moveToPath(const QString &destinationPath, const QString &noteFolderPath = QString());
 
     static QString generateTextForLink(QString text);
 
@@ -199,15 +187,14 @@ class Note {
 
     bool modifyNoteTextFileNameFromQMLHook();
 
-    static QVector<int> searchInNotes(QString query,
-                                      bool ignoreNoteSubFolder = false,
+    static QVector<int> searchInNotes(QString query, bool ignoreNoteSubFolder = false,
                                       int noteSubFolderId = -1);
 
     int countSearchTextInNote(const QString &search) const;
 
-    static QStringList buildQueryStringList(
-        QString searchString, bool escapeForRegularExpression = false,
-        bool removeSearchPrefix = false);
+    static QStringList buildQueryStringList(QString searchString,
+                                            bool escapeForRegularExpression = false,
+                                            bool removeSearchPrefix = false);
 
     QString fileBaseName(bool withFullName = false);
 
@@ -223,8 +210,7 @@ class Note {
 
     static QVector<int> noteIdListFromNoteList(const QVector<Note> &noteList);
 
-    static int countByNoteSubFolderId(int noteSubFolderId = 0,
-                                      bool recursive = false);
+    static int countByNoteSubFolderId(int noteSubFolderId = 0, bool recursive = false);
 
     int getNoteSubFolderId() const;
 
@@ -258,8 +244,7 @@ class Note {
 
     int getFileSize() const;
 
-    static Note updateOrCreateFromFile(QFile &file,
-                                       const NoteSubFolder &noteSubFolder,
+    static Note updateOrCreateFromFile(QFile &file, const NoteSubFolder &noteSubFolder,
                                        bool withNoteNameHook = false);
 
     static QVector<int> fetchAllIds(int limit = -1, int offset = -1);
@@ -270,12 +255,10 @@ class Note {
 
     static QString createNoteHeader(const QString &name);
 
-    QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true,
-                                   bool returnUrlOnly = false,
+    QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true, bool returnUrlOnly = false,
                                    QString title = QString()) const;
 
-    QString getInsertAttachmentMarkdown(QFile *file,
-                                        QString title = QString(),
+    QString getInsertAttachmentMarkdown(QFile *file, QString title = QString(),
                                         bool returnUrlOnly = false,
                                         QString fileBaseName = QString()) const;
 
@@ -283,8 +266,8 @@ class Note {
 
     QString downloadUrlToMedia(const QUrl &url, bool returnUrlOnly = false);
 
-    QString importMediaFromBase64(
-        QString &data, const QString &imageSuffix = QStringLiteral("dat"));
+    QString importMediaFromBase64(QString &data,
+                                  const QString &imageSuffix = QStringLiteral("dat"));
 
     QString importMediaFromDataUrl(const QString &dataUrl);
 
@@ -294,9 +277,8 @@ class Note {
 
     void generateFileNameFromName();
 
-    QString textToMarkdownHtml(QString str, const QString &notesPath,
-                               int maxImageWidth = 980, bool forExport = false,
-                               bool base64Images = false);
+    QString textToMarkdownHtml(QString str, const QString &notesPath, int maxImageWidth = 980,
+                               bool forExport = false, bool base64Images = false);
 
     QStringList getMediaFileList();
 
@@ -330,11 +312,10 @@ class Note {
 
     void resetNoteTextHtmlConversionHash();
 
-    QString getFileURLFromFileName(QString fileName,
-                                   bool urlDecodeFileName = false,
+    QString getFileURLFromFileName(QString fileName, bool urlDecodeFileName = false,
                                    bool withFragment = false) const;
 
-    static QString getURLFragmentFromFileName(const QString& fileName);
+    static QString getURLFragmentFromFileName(const QString &fileName);
 
     static bool fileUrlIsNoteInCurrentNoteFolder(const QUrl &url);
 
@@ -348,8 +329,7 @@ class Note {
 
     static Note fetchByRelativeFilePath(const QString &relativePath);
 
-    QString getNoteUrlForLinkingTo(const Note &note,
-                                   bool forceLegacy = false) const;
+    QString getNoteUrlForLinkingTo(const Note &note, bool forceLegacy = false) const;
 
     QString mediaUrlStringForFileName(const QString &fileName) const;
 
@@ -379,7 +359,7 @@ class Note {
 
     QStringList getHeadingList();
 
-    static bool applyIgnoredNotesSetting(QStringList& fileNames);
+    static bool applyIgnoredNotesSetting(QStringList &fileNames);
 
    protected:
     int _id;
@@ -402,7 +382,7 @@ class Note {
     unsigned int _sharePermissions;
     bool _hasDirtyData;
 
-    static QRegularExpression getEncryptedNoteTextRegularExpression() ;
+    static QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText() const;
 
     static const QString getNoteURL(const QString &baseName);

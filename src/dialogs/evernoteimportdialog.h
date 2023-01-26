@@ -40,18 +40,15 @@ class EvernoteImportDialog : public MasterDialog {
 
     void initNoteCount(const QString &data);
 
-    QString getMarkdownForMediaFileData(Note note,
-                                        const MediaFileData &mediaFileData);
+    QString getMarkdownForMediaFileData(Note note, const MediaFileData &mediaFileData);
 
-    QString getMarkdownForAttachmentFileData(
-        Note note, const MediaFileData &mediaFileData);
+    QString getMarkdownForAttachmentFileData(Note note, const MediaFileData &mediaFileData);
 
-    QTreeWidgetItem *addMetaDataTreeWidgetItem(
-        const QString &name, const QString &attributeName = QString(),
-        QTreeWidgetItem *parentItem = nullptr);
+    QTreeWidgetItem *addMetaDataTreeWidgetItem(const QString &name,
+                                               const QString &attributeName = QString(),
+                                               QTreeWidgetItem *parentItem = nullptr);
 
     bool isMetaDataChecked();
-
 
     /** These require xml patterns **/
 #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
@@ -63,8 +60,7 @@ class EvernoteImportDialog : public MasterDialog {
 
     void tagNote(QXmlQuery &query, Note &note);
 
-    QString importAttachments(const Note &note, QString content,
-                              QXmlQuery query);
+    QString importAttachments(const Note &note, QString content, QXmlQuery query);
 
     QString generateMetaDataMarkdown(QXmlQuery query);
 #endif

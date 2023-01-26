@@ -17,22 +17,17 @@
 #include "notefolder.h"
 #include "tag.h"
 
-NoteSubFolder::NoteSubFolder()
-    : _id{0}, _parentId{0}, _name{QLatin1String("")} {}
+NoteSubFolder::NoteSubFolder() : _id{0}, _parentId{0}, _name{QLatin1String("")} {}
 
 int NoteSubFolder::getId() const { return _id; }
 
 int NoteSubFolder::getParentId() const { return _parentId; }
 
-NoteSubFolder NoteSubFolder::getParent() const {
-    return NoteSubFolder::fetch(_parentId);
-}
+NoteSubFolder NoteSubFolder::getParent() const { return NoteSubFolder::fetch(_parentId); }
 
 QString NoteSubFolder::getName() const { return _name; }
 
-QDateTime NoteSubFolder::getFileLastModified() const {
-    return _fileLastModified;
-}
+QDateTime NoteSubFolder::getFileLastModified() const { return _fileLastModified; }
 
 QDateTime NoteSubFolder::getModified() const { return _modified; }
 
@@ -60,8 +55,7 @@ NoteSubFolder NoteSubFolder::fetch(int id) {
     return NoteSubFolder();
 }
 
-NoteSubFolder NoteSubFolder::fetchByNameAndParentId(const QString& name,
-                                                    int parentId) {
+NoteSubFolder NoteSubFolder::fetchByNameAndParentId(const QString& name, int parentId) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
@@ -86,17 +80,15 @@ NoteSubFolder NoteSubFolder::fetchByNameAndParentId(const QString& name,
  * Gets the relative path name of the note sub folder
  */
 QString NoteSubFolder::relativePath(char separator) const {
-    return _parentId == 0
-               ? _name
-               : getParent().relativePath(separator) + separator + _name;
+    return _parentId == 0 ? _name : getParent().relativePath(separator) + separator + _name;
 }
 
 /**
  * Gets the full path of the note sub folder
  */
 QString NoteSubFolder::fullPath() const {
-    return Utils::Misc::removeIfEndsWith(
-        Note::getFullFilePathForFile(relativePath()), QStringLiteral("/"));
+    return Utils::Misc::removeIfEndsWith(Note::getFullFilePathForFile(relativePath()),
+                                         QStringLiteral("/"));
 }
 
 /**
@@ -108,15 +100,13 @@ QDir NoteSubFolder::dir() const { return QDir(fullPath()); }
  * Gets the path data of the note sub folder
  */
 QString NoteSubFolder::pathData() const {
-    return _parentId == 0 ? _name
-                          : getParent().pathData() + QChar('\n') + _name;
+    return _parentId == 0 ? _name : getParent().pathData() + QChar('\n') + _name;
 }
 
 /**
  * Fetches a note sub folder by its path data
  */
-NoteSubFolder NoteSubFolder::fetchByPathData(QString pathData,
-                                             const QString& separator) {
+NoteSubFolder NoteSubFolder::fetchByPathData(QString pathData, const QString& separator) {
     if (pathData.isEmpty()) return NoteSubFolder();
 
     pathData = Utils::Misc::removeIfStartsWith(std::move(pathData), separator);
@@ -124,8 +114,7 @@ NoteSubFolder NoteSubFolder::fetchByPathData(QString pathData,
     NoteSubFolder noteSubFolder;
     // loop through all names to fetch the deepest note sub folder
     for (const auto& name : pathList) {
-        noteSubFolder =
-            NoteSubFolder::fetchByNameAndParentId(name, noteSubFolder.getId());
+        noteSubFolder = NoteSubFolder::fetchByNameAndParentId(name, noteSubFolder.getId());
         if (!noteSubFolder.isFetched()) return NoteSubFolder();
     }
     return noteSubFolder;
@@ -181,8 +170,7 @@ bool NoteSubFolder::rename(const QString& newName) {
         const bool ret = QDir().rename(oldPath, newPath);
 
         if (!ret) {
-            qCritical() << "Renaming " << oldPath << " to " << newPath
-                        << " failed";
+            qCritical() << "Renaming " << oldPath << " to " << newPath << " failed";
         }
 
         return ret;
@@ -199,8 +187,7 @@ NoteSubFolder NoteSubFolder::fillFromQuery(const QSqlQuery& query) {
     _id = query.value(QStringLiteral("id")).toInt();
     _parentId = query.value(QStringLiteral("parent_id")).toInt();
     _name = query.value(QStringLiteral("name")).toString();
-    _fileLastModified =
-        query.value(QStringLiteral("file_last_modified")).toDateTime();
+    _fileLastModified = query.value(QStringLiteral("file_last_modified")).toDateTime();
     _created = query.value(QStringLiteral("created")).toDateTime();
     _modified = query.value(QStringLiteral("modified")).toDateTime();
 
@@ -259,8 +246,7 @@ QVector<int> NoteSubFolder::fetchAllIds() {
     return idList;
 }
 
-QVector<NoteSubFolder> NoteSubFolder::fetchAllByParentId(
-    int parentId, const QString& sortBy) {
+QVector<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId, const QString& sortBy) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
@@ -451,9 +437,7 @@ bool NoteSubFolder::isActive() const { return activeNoteSubFolderId() == _id; }
 /**
  * Returns the id of the current note sub folder of the current note folder
  */
-int NoteSubFolder::activeNoteSubFolderId() {
-    return activeNoteSubFolder().getId();
-}
+int NoteSubFolder::activeNoteSubFolderId() { return activeNoteSubFolder().getId(); }
 
 /**
  * Returns the current note sub folder of the current note folder
@@ -505,9 +489,7 @@ bool NoteSubFolder::treeWidgetExpandState() const {
  * Checks if noteSubfoldersPanelShowNotesRecursively is set
  */
 bool NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively() {
-    return QSettings()
-        .value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively"))
-        .toBool();
+    return QSettings().value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively")).toBool();
 }
 
 /**
@@ -537,22 +519,19 @@ int NoteSubFolder::depth() const {
     return relativePath.split(QChar('\n')).count();
 }
 
-bool NoteSubFolder::willFolderBeIgnored(const QString& folderName,
-                                        bool showWarning) {
+bool NoteSubFolder::willFolderBeIgnored(const QString& folderName, bool showWarning) {
     // ignore some folders
-    const QStringList ignoreFolderList{".", "..", "media", "attachments",
-                                       "trash"};
+    const QStringList ignoreFolderList{".", "..", "media", "attachments", "trash"};
 
     if (ignoreFolderList.contains(folderName)) {
 #ifndef INTEGRATION_TESTS
         if (showWarning) {
-            Utils::Gui::warning(
-                nullptr, QObject::tr("Folder will be hidden!"),
-                QObject::tr("Folder with name <b>%1</b> can't be created, "
-                            "because it's internally used by the "
-                            "application!")
-                    .arg(folderName),
-                "note-subfolder-hidden-internal");
+            Utils::Gui::warning(nullptr, QObject::tr("Folder will be hidden!"),
+                                QObject::tr("Folder with name <b>%1</b> can't be created, "
+                                            "because it's internally used by the "
+                                            "application!")
+                                    .arg(folderName),
+                                "note-subfolder-hidden-internal");
         }
 #else
         Q_UNUSED(showWarning)
@@ -563,9 +542,7 @@ bool NoteSubFolder::willFolderBeIgnored(const QString& folderName,
 
     const QSettings settings;
     const QStringList ignoredFolderRegExpList =
-        settings
-            .value(QStringLiteral("ignoreNoteSubFolders"),
-                   IGNORED_NOTE_SUBFOLDERS_DEFAULT)
+        settings.value(QStringLiteral("ignoreNoteSubFolders"), IGNORED_NOTE_SUBFOLDERS_DEFAULT)
             .toString()
             .split(QLatin1Char(';'));
 
@@ -573,14 +550,12 @@ bool NoteSubFolder::willFolderBeIgnored(const QString& folderName,
     if (Utils::Misc::regExpInListMatches(folderName, ignoredFolderRegExpList)) {
 #ifndef INTEGRATION_TESTS
         if (showWarning) {
-            Utils::Gui::warning(
-                nullptr, QObject::tr("Folder will be hidden!"),
-                QObject::tr(
-                    "Folder with name <b>%1</b> can't be created, "
-                    "because it's on the list of ignored subfolders! "
-                    "You can change that in the <i>Panels settings</i>.")
-                    .arg(folderName),
-                "note-subfolder-hidden-settings");
+            Utils::Gui::warning(nullptr, QObject::tr("Folder will be hidden!"),
+                                QObject::tr("Folder with name <b>%1</b> can't be created, "
+                                            "because it's on the list of ignored subfolders! "
+                                            "You can change that in the <i>Panels settings</i>.")
+                                    .arg(folderName),
+                                "note-subfolder-hidden-settings");
         }
 #endif
 
@@ -591,8 +566,7 @@ bool NoteSubFolder::willFolderBeIgnored(const QString& folderName,
 }
 
 QDebug operator<<(QDebug dbg, const NoteSubFolder& noteSubFolder) {
-    dbg.nospace() << "NoteSubFolder: <id>" << noteSubFolder._id << " <name>"
-                  << noteSubFolder._name << " <parentId>"
-                  << noteSubFolder._parentId;
+    dbg.nospace() << "NoteSubFolder: <id>" << noteSubFolder._id << " <name>" << noteSubFolder._name
+                  << " <parentId>" << noteSubFolder._parentId;
     return dbg.space();
 }

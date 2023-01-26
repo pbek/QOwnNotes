@@ -17,8 +17,7 @@ int main(int argc, char *argv[]) {
     QCoreApplication::setOrganizationDomain("PBE");
     QCoreApplication::setOrganizationName("PBE");
     QCoreApplication::setApplicationName("QOwnNotesTests");
-    QCoreApplication::setApplicationVersion(QString(VERSION) + " " +
-                                            QString(RELEASE));
+    QCoreApplication::setApplicationVersion(QString(VERSION) + " " + QString(RELEASE));
 
     int allTestsResult = 0 + QTest::qExec(new TestNotes(), argc, argv) +
                          QTest::qExec(new TestHTMLEntities(), argc, argv) +

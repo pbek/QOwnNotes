@@ -28,10 +28,10 @@ IssueAssistantDialog::IssueAssistantDialog(QWidget *parent)
                      SLOT(allowIssuePageNextButton()));
     QObject::connect(ui->questionPlainTextEdit, SIGNAL(textChanged()), this,
                      SLOT(allowIssuePageNextButton()));
-    QObject::connect(ui->expectedBehaviourPlainTextEdit, SIGNAL(textChanged()),
-                     this, SLOT(allowIssuePageNextButton()));
-    QObject::connect(ui->actualBehaviourPlainTextEdit, SIGNAL(textChanged()),
-                     this, SLOT(allowIssuePageNextButton()));
+    QObject::connect(ui->expectedBehaviourPlainTextEdit, SIGNAL(textChanged()), this,
+                     SLOT(allowIssuePageNextButton()));
+    QObject::connect(ui->actualBehaviourPlainTextEdit, SIGNAL(textChanged()), this,
+                     SLOT(allowIssuePageNextButton()));
     QObject::connect(ui->stepsPlainTextEdit, SIGNAL(textChanged()), this,
                      SLOT(allowIssuePageNextButton()));
     QObject::connect(ui->logOutputPlainTextEdit, SIGNAL(textChanged()), this,
@@ -43,8 +43,7 @@ IssueAssistantDialog::IssueAssistantDialog(QWidget *parent)
 IssueAssistantDialog::~IssueAssistantDialog() { delete ui; }
 
 void IssueAssistantDialog::on_nextButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled(
-        QStringLiteral("issue-assistant-dialog/next"));
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("issue-assistant-dialog/next"));
 
     int index = ui->stackedWidget->currentIndex();
     int maxIndex = ui->stackedWidget->count() - 1;
@@ -68,13 +67,11 @@ void IssueAssistantDialog::allowIssuePageNextButton() const {
     }
 
     if (ui->expectedBehaviourPlainTextEdit->isVisible()) {
-        allow = allow &&
-                ui->expectedBehaviourPlainTextEdit->toPlainText().length() >= 10;
+        allow = allow && ui->expectedBehaviourPlainTextEdit->toPlainText().length() >= 10;
     }
 
     if (ui->actualBehaviourPlainTextEdit->isVisible()) {
-        allow = allow &&
-                ui->actualBehaviourPlainTextEdit->toPlainText().length() >= 10;
+        allow = allow && ui->actualBehaviourPlainTextEdit->toPlainText().length() >= 10;
     }
 
     if (ui->stepsPlainTextEdit->isVisible()) {
@@ -87,9 +84,9 @@ void IssueAssistantDialog::allowIssuePageNextButton() const {
 void IssueAssistantDialog::allowLogPageNextButton() const {
     bool allow = true;
 
-//    if (ui->issueTypeComboBox->currentIndex() == ProblemIssueType) {
-//        allow = ui->logOutputPlainTextEdit->toPlainText().length() >= 10;
-//    }
+    //    if (ui->issueTypeComboBox->currentIndex() == ProblemIssueType) {
+    //        allow = ui->logOutputPlainTextEdit->toPlainText().length() >= 10;
+    //    }
 
     ui->nextButton->setEnabled(allow);
 }
@@ -166,14 +163,11 @@ void IssueAssistantDialog::generateSubmitPageContent() const {
             break;
         case FeatureRequestIssueType:
         case ProblemIssueType:
-            body +=
-                "#### Expected behaviour\n\n" +
-                ui->expectedBehaviourPlainTextEdit->toPlainText().trimmed() +
-                "\n\n";
+            body += "#### Expected behaviour\n\n" +
+                    ui->expectedBehaviourPlainTextEdit->toPlainText().trimmed() + "\n\n";
 
             body += "#### Actual behaviour\n\n" +
-                    ui->actualBehaviourPlainTextEdit->toPlainText().trimmed() +
-                    "\n\n";
+                    ui->actualBehaviourPlainTextEdit->toPlainText().trimmed() + "\n\n";
 
             body += "#### Steps to reproduce\n\n" +
                     ui->stepsPlainTextEdit->toPlainText().trimmed() + "\n\n";
@@ -185,21 +179,18 @@ void IssueAssistantDialog::generateSubmitPageContent() const {
     body +=
         "#### Relevant log output in the Log panel\n\n"
         "<details><summary>Expand</summary>\n\n```\n" +
-        ui->logOutputPlainTextEdit->toPlainText().trimmed() +
-        "\n```\n</details>\n\n";
+        ui->logOutputPlainTextEdit->toPlainText().trimmed() + "\n```\n</details>\n\n";
 
     body +=
         "#### Information about the application, settings and "
         "environment\n\n<details><summary>Expand</summary>\n\n" +
-        ui->debugOutputPlainTextEdit->toPlainText().trimmed() +
-        "\n</details>\n\n";
+        ui->debugOutputPlainTextEdit->toPlainText().trimmed() + "\n</details>\n\n";
 
     ui->bodyPlainTextEdit->setPlainText(body);
 }
 
 void IssueAssistantDialog::on_backButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled(
-        QStringLiteral("issue-assistant-dialog/back"));
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("issue-assistant-dialog/back"));
 
     int index = ui->stackedWidget->currentIndex();
 
@@ -234,15 +225,13 @@ void IssueAssistantDialog::on_issueTypeComboBox_currentIndexChanged(int index) {
 void IssueAssistantDialog::on_refreshLogButton_clicked() { refreshLogOutput(); }
 
 void IssueAssistantDialog::on_postButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled(
-        QStringLiteral("issue-assistant-dialog/post"));
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("issue-assistant-dialog/post"));
 
     QClipboard *clipboard = QApplication::clipboard();
     clipboard->setText(ui->bodyPlainTextEdit->toPlainText());
 
     QUrl url("https://github.com/pbek/QOwnNotes/issues/new?title=" +
-             QUrl::toPercentEncoding(ui->submitTitleLineEdit->text()) +
-             "&body=" +
+             QUrl::toPercentEncoding(ui->submitTitleLineEdit->text()) + "&body=" +
              QUrl::toPercentEncoding("Please paste the text from the issue "
                                      "assistant here. It should be already in "
                                      "your clipboard."));
@@ -264,10 +253,9 @@ void IssueAssistantDialog::on_searchIssueButton_clicked() {
 }
 
 void IssueAssistantDialog::on_newIssueButton_clicked() {
-    if (Utils::Gui::question(
-            this, QStringLiteral("Create new issue"),
-            QStringLiteral("Reset this dialog and create a new issue?"),
-            QStringLiteral("issue-dialog-new-issue")) != QMessageBox::Yes) {
+    if (Utils::Gui::question(this, QStringLiteral("Create new issue"),
+                             QStringLiteral("Reset this dialog and create a new issue?"),
+                             QStringLiteral("issue-dialog-new-issue")) != QMessageBox::Yes) {
         return;
     }
 

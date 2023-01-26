@@ -18,8 +18,8 @@
 
 #include <QDebug>
 #include <QProcess>
-#include <QtCore/QSettings>
 #include <QStandardPaths>
+#include <QtCore/QSettings>
 
 #include "gui.h"
 #include "misc.h"
@@ -29,9 +29,7 @@
  *
  * @return
  */
-bool Utils::Git::isCurrentNoteFolderUseGit() {
-    return NoteFolder::currentNoteFolder().isUseGit();
-}
+bool Utils::Git::isCurrentNoteFolderUseGit() { return NoteFolder::currentNoteFolder().isUseGit(); }
 
 /**
  * Commits changes from the current note folder to git
@@ -94,8 +92,7 @@ bool Utils::Git::executeCommand(const QString& command, const QStringList& argum
     QByteArray errorMessage = process->readAllStandardError();
 
     if (!errorMessage.isEmpty()) {
-        qWarning() << "Error message by '" + command + "' (" << arguments
-                   << "): " + errorMessage;
+        qWarning() << "Error message by '" + command + "' (" << arguments << "): " + errorMessage;
     }
 
     return true;
@@ -108,8 +105,8 @@ bool Utils::Git::executeCommand(const QString& command, const QStringList& argum
  * @param process
  * @return
  */
-bool Utils::Git::executeGitCommand(const QString &gitExe, const QStringList& arguments, QProcess* process,
-                                   bool withErrorDialog) {
+bool Utils::Git::executeGitCommand(const QString& gitExe, const QStringList& arguments,
+                                   QProcess* process, bool withErrorDialog) {
     return executeCommand(gitExe, arguments, process, withErrorDialog);
 }
 
@@ -128,7 +125,7 @@ QString Utils::Git::gitCommand() {
     }
 
 #ifdef Q_OS_WIN
-    path = "git.exe"; // FIXME: is the ".exe" even needed? I don't think so
+    path = "git.exe";    // FIXME: is the ".exe" even needed? I don't think so
 #else
     path = "git";
 #endif
@@ -185,6 +182,5 @@ void Utils::Git::showLog(const QString& filePath) {
     parameters << "-c" << gitLogCommand;
 #endif
 
-    Utils::Misc::startDetachedProcess(command, parameters,
-                                      NoteFolder::currentLocalPath());
+    Utils::Misc::startDetachedProcess(command, parameters, NoteFolder::currentLocalPath());
 }

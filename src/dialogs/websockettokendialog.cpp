@@ -12,9 +12,7 @@ WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent)
     ui->setupUi(this);
 
     QSettings settings;
-    QString token =
-        settings.value(QStringLiteral("webSocketServerService/token"))
-            .toString();
+    QString token = settings.value(QStringLiteral("webSocketServerService/token")).toString();
 
     if (token.isEmpty()) {
         on_generateButton_clicked();
@@ -24,9 +22,7 @@ WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent)
     }
 }
 
-QString WebSocketTokenDialog::generateToken() const {
-    return Utils::Misc::generateRandomString(8);
-}
+QString WebSocketTokenDialog::generateToken() const { return Utils::Misc::generateRandomString(8); }
 
 WebSocketTokenDialog::~WebSocketTokenDialog() { delete ui; }
 
@@ -45,6 +41,5 @@ void WebSocketTokenDialog::on_generateButton_clicked() {
 
 void WebSocketTokenDialog::on_buttonBox_accepted() {
     QSettings settings;
-    settings.setValue(QStringLiteral("webSocketServerService/token"),
-                      ui->tokenLineEdit->text());
+    settings.setValue(QStringLiteral("webSocketServerService/token"), ui->tokenLineEdit->text());
 }

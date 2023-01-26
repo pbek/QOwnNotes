@@ -15,8 +15,8 @@
 #include <QTemporaryFile>
 
 #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    #include <QXmlQuery>
-    #include <QXmlResultItems>
+#include <QXmlQuery>
+#include <QXmlResultItems>
 #endif
 
 #include <utility>
@@ -35,26 +35,18 @@ EvernoteImportDialog::EvernoteImportDialog(QWidget *parent)
 
     QSettings settings;
     ui->imageImportCheckBox->setChecked(
-        settings
-            .value(QStringLiteral("EvernoteImport/ImageImportCheckBoxChecked"),
-                   true)
-            .toBool());
+        settings.value(QStringLiteral("EvernoteImport/ImageImportCheckBoxChecked"), true).toBool());
     ui->attachmentImportCheckBox->setChecked(
-        settings
-            .value(QStringLiteral(
-                       "EvernoteImport/AttachmentImportCheckBoxChecked"),
-                   true)
+        settings.value(QStringLiteral("EvernoteImport/AttachmentImportCheckBoxChecked"), true)
             .toBool());
 }
 
 EvernoteImportDialog::~EvernoteImportDialog() {
     QSettings settings;
-    settings.setValue(
-        QStringLiteral("EvernoteImport/ImageImportCheckBoxChecked"),
-        ui->imageImportCheckBox->isChecked());
-    settings.setValue(
-        QStringLiteral("EvernoteImport/AttachmentImportCheckBoxChecked"),
-        ui->attachmentImportCheckBox->isChecked());
+    settings.setValue(QStringLiteral("EvernoteImport/ImageImportCheckBoxChecked"),
+                      ui->imageImportCheckBox->isChecked());
+    settings.setValue(QStringLiteral("EvernoteImport/AttachmentImportCheckBoxChecked"),
+                      ui->attachmentImportCheckBox->isChecked());
 
     storeMetaDataTreeWidgetItemsCheckedState();
 
@@ -130,8 +122,7 @@ int EvernoteImportDialog::countNotes(const QString &data) {
  *
  * @param content
  */
-QString EvernoteImportDialog::importImages(const Note &note, QString content,
-                                           QXmlQuery query) {
+QString EvernoteImportDialog::importImages(const Note &note, QString content, QXmlQuery query) {
     query.setQuery(QStringLiteral("resource"));
 
     QXmlResultItems result;
@@ -154,9 +145,8 @@ QString EvernoteImportDialog::importImages(const Note &note, QString content,
         query.setQuery(QStringLiteral("mime/text()"));
         query.evaluateTo(&mime);
 
-        QRegularExpression mimeExpression(
-            QStringLiteral("(.+)?\\/(.+)?"),
-            QRegularExpression::CaseInsensitiveOption);
+        QRegularExpression mimeExpression(QStringLiteral("(.+)?\\/(.+)?"),
+                                          QRegularExpression::CaseInsensitiveOption);
         QRegularExpressionMatch mimeMatch = mimeExpression.match(mime);
 
         if (mimeMatch.hasMatch()) {
@@ -194,9 +184,8 @@ QString EvernoteImportDialog::importImages(const Note &note, QString content,
 
         // if there is no object id set we generate the hash ourselves
         if (objectId.isEmpty()) {
-            objectId = QString(QCryptographicHash::hash(
-                                   QByteArray::fromBase64(data.toLatin1()),
-                                   QCryptographicHash::Md5)
+            objectId = QString(QCryptographicHash::hash(QByteArray::fromBase64(data.toLatin1()),
+                                                        QCryptographicHash::Md5)
                                    .toHex());
         }
 
@@ -275,8 +264,7 @@ QString EvernoteImportDialog::importImages(const Note &note, QString content,
  *
  * @param content
  */
-QString EvernoteImportDialog::importAttachments(const Note &note,
-                                                QString content,
+QString EvernoteImportDialog::importAttachments(const Note &note, QString content,
                                                 QXmlQuery query) {
     query.setQuery(QStringLiteral("resource"));
 
@@ -299,9 +287,8 @@ QString EvernoteImportDialog::importAttachments(const Note &note,
         query.setQuery(QStringLiteral("mime/text()"));
         query.evaluateTo(&mime);
 
-        QRegularExpression mimeExpression(
-            QStringLiteral("(.+)?\\/(.+)?"),
-            QRegularExpression::CaseInsensitiveOption);
+        QRegularExpression mimeExpression(QStringLiteral("(.+)?\\/(.+)?"),
+                                          QRegularExpression::CaseInsensitiveOption);
         QRegularExpressionMatch mimeMatch = mimeExpression.match(mime);
 
         if (mimeMatch.hasMatch()) {
@@ -338,9 +325,8 @@ QString EvernoteImportDialog::importAttachments(const Note &note,
 
         // if there is no object id set we generate the hash ourselves
         if (objectId.isEmpty()) {
-            objectId = QString(QCryptographicHash::hash(
-                                   QByteArray::fromBase64(data.toLatin1()),
-                                   QCryptographicHash::Md5)
+            objectId = QString(QCryptographicHash::hash(QByteArray::fromBase64(data.toLatin1()),
+                                                        QCryptographicHash::Md5)
                                    .toHex());
         }
 
@@ -396,8 +382,7 @@ QString EvernoteImportDialog::importAttachments(const Note &note,
         MediaFileData mediaFileData = mediaFileDataHash[objectId];
 
         // get the Markdown code for the file data entry
-        QString markdownCode =
-            getMarkdownForAttachmentFileData(note, mediaFileData);
+        QString markdownCode = getMarkdownForAttachmentFileData(note, mediaFileData);
 
         if (!markdownCode.isEmpty()) {
             // replace media tag with Markdown code
@@ -417,8 +402,7 @@ QString EvernoteImportDialog::importAttachments(const Note &note,
         MediaFileData mediaFileData = hashIterator.value();
 
         // get the Markdown code for the file data entry
-        QString markdownCode =
-            getMarkdownForAttachmentFileData(note, mediaFileData);
+        QString markdownCode = getMarkdownForAttachmentFileData(note, mediaFileData);
 
         content += "\n" + markdownCode;
     }
@@ -563,8 +547,7 @@ QString EvernoteImportDialog::generateMetaDataMarkdown(QXmlQuery query) {
     QString resultText;
     QString tableText;
     QList<QTreeWidgetItem *> items = ui->metaDataTreeWidget->findItems(
-        QStringLiteral("*"),
-        Qt::MatchWrap | Qt::MatchWildcard | Qt::MatchRecursive);
+        QStringLiteral("*"), Qt::MatchWrap | Qt::MatchWildcard | Qt::MatchRecursive);
 
     Q_FOREACH (QTreeWidgetItem *item, items) {
         if (item->checkState(0) != Qt::Checked) {
@@ -583,8 +566,7 @@ QString EvernoteImportDialog::generateMetaDataMarkdown(QXmlQuery query) {
             continue;
         }
 
-        tableText += QStringLiteral("| ") + name + (" | ") + attribute +
-                     QStringLiteral(" |\n");
+        tableText += QStringLiteral("| ") + name + (" | ") + attribute + QStringLiteral(" |\n");
     }
 
     if (!tableText.isEmpty()) {
@@ -606,9 +588,9 @@ QString EvernoteImportDialog::generateMetaDataMarkdown(QXmlQuery query) {
  * @param parentItem
  * @return
  */
-QTreeWidgetItem *EvernoteImportDialog::addMetaDataTreeWidgetItem(
-    const QString &name, const QString &attributeName,
-    QTreeWidgetItem *parentItem) {
+QTreeWidgetItem *EvernoteImportDialog::addMetaDataTreeWidgetItem(const QString &name,
+                                                                 const QString &attributeName,
+                                                                 QTreeWidgetItem *parentItem) {
     auto *item = new QTreeWidgetItem();
     item->setText(0, name);
 
@@ -622,12 +604,9 @@ QTreeWidgetItem *EvernoteImportDialog::addMetaDataTreeWidgetItem(
 
         QSettings settings;
         auto metaDataUnCheckedList =
-            settings
-                .value(QStringLiteral("EvernoteImport/MetaDataUnCheckedList"))
-                .toStringList();
-        item->setCheckState(0, metaDataUnCheckedList.contains(attributeName)
-                                   ? Qt::Unchecked
-                                   : Qt::Checked);
+            settings.value(QStringLiteral("EvernoteImport/MetaDataUnCheckedList")).toStringList();
+        item->setCheckState(
+            0, metaDataUnCheckedList.contains(attributeName) ? Qt::Unchecked : Qt::Checked);
 
         parentItem->addChild(item);
     }
@@ -639,58 +618,42 @@ QTreeWidgetItem *EvernoteImportDialog::addMetaDataTreeWidgetItem(
  * Setup the metadata tree widget items
  */
 void EvernoteImportDialog::setupMetaDataTreeWidgetItems() {
-    auto *basicAttributesItem =
-        addMetaDataTreeWidgetItem(tr("Basic attributes"));
-    addMetaDataTreeWidgetItem(tr("Created date"), QStringLiteral("created"),
-                              basicAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Updated date"), QStringLiteral("updated"),
-                              basicAttributesItem);
+    auto *basicAttributesItem = addMetaDataTreeWidgetItem(tr("Basic attributes"));
+    addMetaDataTreeWidgetItem(tr("Created date"), QStringLiteral("created"), basicAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Updated date"), QStringLiteral("updated"), basicAttributesItem);
 
     auto *noteAttributesItem = addMetaDataTreeWidgetItem(tr("Note attributes"));
-    addMetaDataTreeWidgetItem(tr("Subject date"),
-                              QStringLiteral("note-attributes/subject-date"),
+    addMetaDataTreeWidgetItem(tr("Subject date"), QStringLiteral("note-attributes/subject-date"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Latitude"),
-                              QStringLiteral("note-attributes/latitude"),
+    addMetaDataTreeWidgetItem(tr("Latitude"), QStringLiteral("note-attributes/latitude"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Longitude"),
-                              QStringLiteral("note-attributes/longitude"),
+    addMetaDataTreeWidgetItem(tr("Longitude"), QStringLiteral("note-attributes/longitude"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Altitude"),
-                              QStringLiteral("note-attributes/altitude"),
+    addMetaDataTreeWidgetItem(tr("Altitude"), QStringLiteral("note-attributes/altitude"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Author"),
-                              QStringLiteral("note-attributes/author"),
+    addMetaDataTreeWidgetItem(tr("Author"), QStringLiteral("note-attributes/author"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Source"),
-                              QStringLiteral("note-attributes/source"),
+    addMetaDataTreeWidgetItem(tr("Source"), QStringLiteral("note-attributes/source"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Source URL"),
-                              QStringLiteral("note-attributes/source-url"),
+    addMetaDataTreeWidgetItem(tr("Source URL"), QStringLiteral("note-attributes/source-url"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(
-        tr("Source application"),
-        QStringLiteral("note-attributes/source-application"),
-        noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Source application"),
+                              QStringLiteral("note-attributes/source-application"),
+                              noteAttributesItem);
     addMetaDataTreeWidgetItem(tr("Reminder order"),
-                              QStringLiteral("note-attributes/reminder-order"),
+                              QStringLiteral("note-attributes/reminder-order"), noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Reminder time"), QStringLiteral("note-attributes/reminder-time"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Reminder time"),
-                              QStringLiteral("note-attributes/reminder-time"),
+    addMetaDataTreeWidgetItem(tr("Reminder done time"),
+                              QStringLiteral("note-attributes/reminder-done-time"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(
-        tr("Reminder done time"),
-        QStringLiteral("note-attributes/reminder-done-time"),
-        noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Place name"),
-                              QStringLiteral("note-attributes/place-name"),
+    addMetaDataTreeWidgetItem(tr("Place name"), QStringLiteral("note-attributes/place-name"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Content class"),
-                              QStringLiteral("note-attributes/content-class"),
+    addMetaDataTreeWidgetItem(tr("Content class"), QStringLiteral("note-attributes/content-class"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(
-        tr("Application data"),
-        QStringLiteral("note-attributes/application-data"), noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Application data"),
+                              QStringLiteral("note-attributes/application-data"),
+                              noteAttributesItem);
 }
 
 /**
@@ -698,8 +661,7 @@ void EvernoteImportDialog::setupMetaDataTreeWidgetItems() {
  */
 void EvernoteImportDialog::storeMetaDataTreeWidgetItemsCheckedState() {
     QList<QTreeWidgetItem *> items = ui->metaDataTreeWidget->findItems(
-        QStringLiteral("*"),
-        Qt::MatchWrap | Qt::MatchWildcard | Qt::MatchRecursive);
+        QStringLiteral("*"), Qt::MatchWrap | Qt::MatchWildcard | Qt::MatchRecursive);
     QSettings settings;
     QStringList metaDataUnCheckedList;
 
@@ -720,8 +682,7 @@ void EvernoteImportDialog::storeMetaDataTreeWidgetItemsCheckedState() {
  */
 bool EvernoteImportDialog::isMetaDataChecked() {
     QList<QTreeWidgetItem *> items = ui->metaDataTreeWidget->findItems(
-        QStringLiteral("*"),
-        Qt::MatchWrap | Qt::MatchWildcard | Qt::MatchRecursive);
+        QStringLiteral("*"), Qt::MatchWrap | Qt::MatchWildcard | Qt::MatchRecursive);
 
     Q_FOREACH (QTreeWidgetItem *item, items) {
         if (item->checkState(0) == Qt::Checked) {
@@ -790,9 +751,8 @@ QString EvernoteImportDialog::getMarkdownForAttachmentFileData(
     QString fileName = mediaFileData.fileName;
 
     // create a temporary file for the attachment
-    auto *tempFile =
-        new QTemporaryFile(QDir::tempPath() + QDir::separator() +
-                           QStringLiteral("media-XXXXXX.") + suffix);
+    auto *tempFile = new QTemporaryFile(QDir::tempPath() + QDir::separator() +
+                                        QStringLiteral("media-XXXXXX.") + suffix);
 
     if (!tempFile->open()) {
         return QString();

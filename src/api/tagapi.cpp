@@ -40,8 +40,7 @@ TagApi* TagApi::fromTag(const Tag& tag) {
     return tagApi;
 }
 
-void TagApi::copy(const Tag &tag)
-{
+void TagApi::copy(const Tag& tag) {
     this->_id = tag.getId();
     _name = tag.getName();
     _parentId = tag.getParentId();
@@ -53,7 +52,7 @@ void TagApi::copy(const Tag &tag)
  */
 QQmlListProperty<NoteApi> TagApi::notes() {
     _notes.clear();
-    
+
     Tag tag = Tag::fetch(_id);
     QVector<Note> notes = tag.fetchAllLinkedNotes();
 

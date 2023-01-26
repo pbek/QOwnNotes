@@ -66,9 +66,8 @@ class SettingsDialog : public MasterDialog {
 
     ~SettingsDialog();
 
-    void connectTestCallback(bool appIsValid, QString appVersion,
-                             QString serverVersion, QString notesPathExistsText,
-                             QString connectionErrorMessage);
+    void connectTestCallback(bool appIsValid, QString appVersion, QString serverVersion,
+                             QString notesPathExistsText, QString connectionErrorMessage);
 
     void setOKLabelData(int number, const QString &text, OKLabelStatus status);
 
@@ -143,8 +142,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_noteFolderRemotePathButton_clicked();
 
-    void on_noteFolderRemotePathTreeWidget_currentItemChanged(
-        QTreeWidgetItem *current, QTreeWidgetItem *previous);
+    void on_noteFolderRemotePathTreeWidget_currentItemChanged(QTreeWidgetItem *current,
+                                                              QTreeWidgetItem *previous);
 
     void on_useOwnCloudPathButton_clicked();
 
@@ -167,8 +166,7 @@ class SettingsDialog : public MasterDialog {
 
     void on_removeCustomNoteFileExtensionButton_clicked();
 
-    void on_defaultNoteFileExtensionListWidget_itemChanged(
-        QListWidgetItem *item);
+    void on_defaultNoteFileExtensionListWidget_itemChanged(QListWidgetItem *item);
 
     void on_darkModeCheckBox_toggled();
 
@@ -319,7 +317,7 @@ class SettingsDialog : public MasterDialog {
 
     void on_noteTextViewRefreshDebounceTimeResetButton_clicked();
 
-private:
+   private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;
     QFont noteTextEditFont;
@@ -349,11 +347,9 @@ private:
 
     void outputSettings();
 
-    static void selectListWidgetValue(QListWidget *listWidget,
-                                      const QString &value);
+    static void selectListWidgetValue(QListWidget *listWidget, const QString &value);
 
-    static bool listWidgetValueExists(QListWidget *listWidget,
-                                      const QString &value);
+    static bool listWidgetValueExists(QListWidget *listWidget, const QString &value);
 
     static QString getSelectedListWidgetValue(QListWidget *listWidget);
 
@@ -363,14 +359,12 @@ private:
 
     void setupNoteFolderPage();
 
-    QTreeWidgetItem *findNoteFolderRemotePathTreeWidgetItem(
-        QTreeWidgetItem *parent, const QString &text);
+    QTreeWidgetItem *findNoteFolderRemotePathTreeWidgetItem(QTreeWidgetItem *parent,
+                                                            const QString &text);
 
-    void addPathToNoteFolderRemotePathTreeWidget(QTreeWidgetItem *parent,
-                                                 const QString &path);
+    void addPathToNoteFolderRemotePathTreeWidget(QTreeWidgetItem *parent, const QString &path);
 
-    QString generatePathFromCurrentNoteFolderRemotePathItem(
-        QTreeWidgetItem *item);
+    QString generatePathFromCurrentNoteFolderRemotePathItem(QTreeWidgetItem *item);
 
     void setNoteFolderRemotePathTreeWidgetFrameVisibility(bool visi);
 
@@ -426,8 +420,7 @@ private:
 
     void initCloudConnectionComboBox(int selectedId = -1);
 
-    void handleDarkModeCheckBoxToggled(bool updateCheckBoxes = false,
-                                       bool updateSchema = false);
+    void handleDarkModeCheckBoxToggled(bool updateCheckBoxes = false, bool updateSchema = false);
     void resetOKLabelData();
 };
 

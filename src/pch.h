@@ -4,36 +4,34 @@
 #if defined __cplusplus
 /* Add C++ includes here */
 
-#include <QDialog>
-#include <QString>
-#include <QPlainTextEdit>
-#include <QWidget>
-#include <QObject>
-#include <QJsonObject>
+#include <QDateTime>
 #include <QDebug>
-#include <QSettings>
-#include <QMainWindow>
-#include <QList>
-#include <QVector>
-#include <QHash>
-#include <QStringList>
-#include <QRegularExpression>
-#include <QSyntaxHighlighter>
-#include <QMetaType>
+#include <QDialog>
 #include <QDir>
 #include <QFileSystemWatcher>
+#include <QHash>
+#include <QJsonObject>
+#include <QKeySequence>
+#include <QLabel>
+#include <QList>
+#include <QLoggingCategory>
 #include <QMainWindow>
+#include <QMetaType>
+#include <QObject>
+#include <QPair>
+#include <QPlainTextEdit>
+#include <QRegularExpression>
+#include <QSettings>
+#include <QString>
+#include <QStringList>
+#include <QSyntaxHighlighter>
 #include <QSystemTrayIcon>
 #include <QTimer>
-#include <QKeySequence>
-#include <QPair>
-#include <QLoggingCategory>
-#include <QDateTime>
-#include <QLabel>
-
+#include <QVector>
+#include <QWidget>
 #include <string>
 #include <utility>
 
 #endif
 
-#endif // QOWNNOTES_PCH_H
+#endif    // QOWNNOTES_PCH_H

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "masterdialog.h"
 #include "entities/note.h"
+#include "masterdialog.h"
 
 class QTreeWidgetItem;
 class QEvent;
@@ -21,8 +21,7 @@ class StoredAttachmentsDialog : public MasterDialog {
     bool eventFilter(QObject *obj, QEvent *event);
 
    private slots:
-    void on_fileTreeWidget_currentItemChanged(QTreeWidgetItem *current,
-                                              QTreeWidgetItem *previous);
+    void on_fileTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
 
     void on_deleteButton_clicked();
 
@@ -48,7 +47,7 @@ class StoredAttachmentsDialog : public MasterDialog {
 
     void on_noteTreeWidget_customContextMenuRequested(const QPoint &pos);
 
-private:
+   private:
     Ui::StoredAttachmentsDialog *ui;
     bool _orphanedAttachmentsOnly = false;
     QHash<QString, QVector<Note>> _fileNoteList;

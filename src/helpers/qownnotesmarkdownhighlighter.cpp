@@ -14,8 +14,7 @@
  */
 
 #include "qownnotesmarkdownhighlighter.h"
-#include "mainwindow.h"
-#include "qownspellchecker.h"
+
 #include <entities/note.h>
 #include <services/scriptingservice.h>
 
@@ -25,13 +24,14 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 
+#include "mainwindow.h"
+#include "qownspellchecker.h"
 
-QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
-    QTextDocument *parent, HighlightingOptions highlightingOptions)
-    : MarkdownHighlighter(parent, highlightingOptions)
-{
+QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(QTextDocument *parent,
+                                                           HighlightingOptions highlightingOptions)
+    : MarkdownHighlighter(parent, highlightingOptions) {
     _defaultNoteFileExt = Note::defaultNoteFileExtension();
-    connect(MainWindow::instance(), &MainWindow::settingsChanged, this, [this](){
+    connect(MainWindow::instance(), &MainWindow::settingsChanged, this, [this]() {
         _defaultNoteFileExt = Note::defaultNoteFileExtension();
         updateCachedRegexes(_defaultNoteFileExt);
     });
@@ -60,7 +60,8 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     // do the markdown highlighting before the spellcheck highlighting
     // if we do it afterwards, it overwrites the spellcheck highlighting
     MarkdownHighlighter::highlightMarkdown(text);
-    if (text.contains(QLatin1String("note://")) || text.contains(QChar('.') + _defaultNoteFileExt)) {
+    if (text.contains(QLatin1String("note://")) ||
+        text.contains(QChar('.') + _defaultNoteFileExt)) {
         highlightBrokenNotesLink(text);
     }
 
@@ -104,26 +105,23 @@ void QOwnNotesMarkdownHighlighter::highlightScriptingRules(
                 QTextCharFormat currentMaskedFormat = maskedFormat;
                 // set the font size from the current rule's font format
                 if (format.fontPointSize() > 0) {
-                    currentMaskedFormat.setFontPointSize(
-                        format.fontPointSize());
+                    currentMaskedFormat.setFontPointSize(format.fontPointSize());
                 }
 
-                setFormat(match.capturedStart(maskedGroup),
-                          match.capturedLength(maskedGroup),
+                setFormat(match.capturedStart(maskedGroup), match.capturedLength(maskedGroup),
                           currentMaskedFormat);
             }
 
-            setFormat(match.capturedStart(capturingGroup),
-                      match.capturedLength(capturingGroup), format);
+            setFormat(match.capturedStart(capturingGroup), match.capturedLength(capturingGroup),
+                      format);
         }
     }
 }
 
-
-void QOwnNotesMarkdownHighlighter::updateCachedRegexes(const QString& newExt)
-{
+void QOwnNotesMarkdownHighlighter::updateCachedRegexes(const QString &newExt) {
     _regexTagStyleLink = QRegularExpression(R"(<([^\s`][^`]*?\.)" + newExt + R"()>)");
-    _regexBracketLink = QRegularExpression(R"(\[[^\[\]]+\]\((\S+\.)" + newExt + R"(|.+?\.)" + newExt + R"()(#[^\)]+)?\)\B)");
+    _regexBracketLink = QRegularExpression(R"(\[[^\[\]]+\]\((\S+\.)" + newExt + R"(|.+?\.)" +
+                                           newExt + R"()(#[^\)]+)?\)\B)");
 }
 
 /**
@@ -131,8 +129,7 @@ void QOwnNotesMarkdownHighlighter::updateCachedRegexes(const QString& newExt)
  *
  * @param text
  */
-void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
-    const QString &text) {
+void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString &text) {
     static const QRegularExpression regex(QStringLiteral(R"(note:\/\/[^\s\)>]+)"));
     QRegularExpressionMatch match = regex.match(text);
 
@@ -164,8 +161,7 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
                 return;
             }
 
-            const Note note =
-                _currentNote->fetchByRelativeFileName(fileName);
+            const Note note = _currentNote->fetchByRelativeFileName(fileName);
 
             // if the note exists we don't need to do anything
             if (note.isFetched()) {
@@ -176,16 +172,14 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
             match = _regexBracketLink.match(text);
 
             if (match.hasMatch()) {
-                const QString fileName =
-                    Note::urlDecodeNoteUrl(match.captured(1));
+                const QString fileName = Note::urlDecodeNoteUrl(match.captured(1));
 
                 // skip urls
                 if (fileName.contains(QStringLiteral("://"))) {
                     return;
                 }
 
-                const Note note =
-                    _currentNote->fetchByRelativeFileName(fileName);
+                const Note note = _currentNote->fetchByRelativeFileName(fileName);
 
                 // if the note exists we don't need to do anything
                 if (note.isFetched()) {
@@ -201,10 +195,8 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
     setFormat(match.capturedStart(0), match.capturedLength(0), _formats[state]);
 }
 
-void QOwnNotesMarkdownHighlighter::setMisspelled(const int start,
-                                                 const int count) {
-    if (MarkdownHighlighter::isPosInACodeSpan(currentBlock().blockNumber(), start))
-        return;
+void QOwnNotesMarkdownHighlighter::setMisspelled(const int start, const int count) {
+    if (MarkdownHighlighter::isPosInACodeSpan(currentBlock().blockNumber(), start)) return;
 
     // append to the already existing text format.
     // creating a new format will destroy pre-existing format
@@ -230,14 +222,12 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
         return;
     }
     int state = currentBlockState();
-    if (state == HighlighterState::HeadlineEnd ||
-        state == HighlighterState::CodeBlock ||
+    if (state == HighlighterState::HeadlineEnd || state == HighlighterState::CodeBlock ||
         state >= HighlighterState::CodeCpp)
         return;
 
     // use our own settings, as KDE users might face issues with Autodetection
-    const bool autodetectLanguage =
-        QOwnSpellChecker::instance()->isAutoDetectOn();
+    const bool autodetectLanguage = QOwnSpellChecker::instance()->isAutoDetectOn();
     LanguageCache *languageCache = nullptr;
     if (autodetectLanguage) {
         languageCache = dynamic_cast<LanguageCache *>(currentBlockUserData());
@@ -252,8 +242,7 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
         const Sonnet::Token sentence = languageFilter->next();
         if (autodetectLanguage) {
             QString lang;
-            const QPair<int, int> spos =
-                QPair<int, int>(sentence.position(), sentence.length());
+            const QPair<int, int> spos = QPair<int, int>(sentence.position(), sentence.length());
             // try cache first
             if (languageCache->languages.contains(spos)) {
                 lang = languageCache->languages.value(spos);
@@ -270,8 +259,7 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
             QOwnSpellChecker::instance()->setCurrentLanguage(lang);
         }
 
-        const auto wordTokenizer =
-            QOwnSpellChecker::instance()->wordTokenizer();
+        const auto wordTokenizer = QOwnSpellChecker::instance()->wordTokenizer();
         wordTokenizer->setBuffer(sentence.toString());
         const int offset = sentence.position();
         while (wordTokenizer->hasNext()) {

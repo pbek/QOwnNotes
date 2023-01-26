@@ -9,28 +9,27 @@ class CommandModel;
 class CommandBarFilterModel;
 class QLineEdit;
 
-class CommandBar : public QMenu
-{
+class CommandBar : public QMenu {
     Q_OBJECT
-public:
-    explicit CommandBar(QWidget *parent = nullptr);
+   public:
+    explicit CommandBar(QWidget* parent = nullptr);
 
     void updateBar(const QVector<QPair<QString, QAction*>>& actions);
 
     void updateViewGeometry();
 
-protected:
-    bool eventFilter(QObject *obj, QEvent *event) override;
+   protected:
+    bool eventFilter(QObject* obj, QEvent* event) override;
 
-private Q_SLOTS:
+   private Q_SLOTS:
     void slotReturnPressed();
     void reselectFirst();
 
-private:
+   private:
     QTreeView* m_treeView;
     QLineEdit* m_lineEdit;
     CommandModel* m_model;
     CommandBarFilterModel* m_proxyModel;
 };
 
-#endif // COMMANDBAR_H
+#endif    // COMMANDBAR_H

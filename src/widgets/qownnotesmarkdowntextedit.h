@@ -36,8 +36,8 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     bool usesMonospacedFont();
 
     /**
-    * Toggles the case of the word under the Cursor or the selected text
-    */
+     * Toggles the case of the word under the Cursor or the selected text
+     */
     void toggleCase();
 
     /**

@@ -12,30 +12,24 @@ ClientProxy::ClientProxy(QObject *parent) : QObject(parent) {}
 QNetworkProxy ClientProxy::proxyFromSettings() {
     QNetworkProxy proxy;
     QSettings settings;
-    QString proxyHostName =
-        settings.value(QStringLiteral("networking/proxyHostName")).toString();
+    QString proxyHostName = settings.value(QStringLiteral("networking/proxyHostName")).toString();
 
     if (proxyHostName.isEmpty()) {
         return QNetworkProxy();
     }
 
-    int proxyPort =
-        settings.value(QStringLiteral("networking/proxyPort")).toInt();
-    int proxyNeedsAuth =
-        settings.value(QStringLiteral("networking/proxyNeedsAuth")).toBool();
+    int proxyPort = settings.value(QStringLiteral("networking/proxyPort")).toInt();
+    int proxyNeedsAuth = settings.value(QStringLiteral("networking/proxyNeedsAuth")).toBool();
 
     proxy.setHostName(proxyHostName);
     proxy.setPort(proxyPort);
 
     if (proxyNeedsAuth) {
-        QString proxyUser =
-            settings.value(QStringLiteral("networking/proxyUser")).toString();
+        QString proxyUser = settings.value(QStringLiteral("networking/proxyUser")).toString();
         QString proxyPassword =
-            settings.value(QStringLiteral("networking/proxyPassword"))
-                .toString();
+            settings.value(QStringLiteral("networking/proxyPassword")).toString();
         proxy.setUser(proxyUser);
-        proxy.setPassword(
-            CryptoService::instance()->decryptToString(proxyPassword));
+        proxy.setPassword(CryptoService::instance()->decryptToString(proxyPassword));
     }
 
     return proxy;
@@ -43,26 +37,19 @@ QNetworkProxy ClientProxy::proxyFromSettings() {
 
 bool ClientProxy::isUsingSystemDefault() {
     QSettings settings;
-    int proxyType = settings
-                        .value(QStringLiteral("networking/proxyType"),
-                               QNetworkProxy::NoProxy)
-                        .toInt();
+    int proxyType =
+        settings.value(QStringLiteral("networking/proxyType"), QNetworkProxy::NoProxy).toInt();
     return proxyType == QNetworkProxy::DefaultProxy;
 }
 
 QString printQNetworkProxy(const QNetworkProxy &proxy) {
-    return QStringLiteral("%1://%2:%3")
-        .arg(proxy.type())
-        .arg(proxy.hostName())
-        .arg(proxy.port());
+    return QStringLiteral("%1://%2:%3").arg(proxy.type()).arg(proxy.hostName()).arg(proxy.port());
 }
 
 void ClientProxy::setupQtProxyFromSettings() {
     QSettings settings;
-    int proxyType = settings
-                        .value(QStringLiteral("networking/proxyType"),
-                               QNetworkProxy::NoProxy)
-                        .toInt();
+    int proxyType =
+        settings.value(QStringLiteral("networking/proxyType"), QNetworkProxy::NoProxy).toInt();
     QNetworkProxy proxy = proxyFromSettings();
 
     switch (proxyType) {
@@ -77,15 +64,13 @@ void ClientProxy::setupQtProxyFromSettings() {
             break;
         case QNetworkProxy::Socks5Proxy:
             proxy.setType(QNetworkProxy::Socks5Proxy);
-            qDebug() << "Set proxy configuration to SOCKS5"
-                     << printQNetworkProxy(proxy);
+            qDebug() << "Set proxy configuration to SOCKS5" << printQNetworkProxy(proxy);
             QNetworkProxyFactory::setUseSystemConfiguration(false);
             QNetworkProxy::setApplicationProxy(proxy);
             break;
         case QNetworkProxy::HttpProxy:
             proxy.setType(QNetworkProxy::HttpProxy);
-            qDebug() << "Set proxy configuration to HTTP"
-                     << printQNetworkProxy(proxy);
+            qDebug() << "Set proxy configuration to HTTP" << printQNetworkProxy(proxy);
             QNetworkProxyFactory::setUseSystemConfiguration(false);
             QNetworkProxy::setApplicationProxy(proxy);
             break;
@@ -114,18 +99,15 @@ const char *ClientProxy::proxyTypeToCStr(QNetworkProxy::ProxyType type) {
     }
 }
 
-void ClientProxy::lookupSystemProxyAsync(const QUrl &url, QObject *dst,
-                                         const char *slot) {
+void ClientProxy::lookupSystemProxyAsync(const QUrl &url, QObject *dst, const char *slot) {
     auto *runnable = new SystemProxyRunnable(url);
-    QObject::connect(runnable, SIGNAL(systemProxyLookedUp(QNetworkProxy)), dst,
-                     slot);
+    QObject::connect(runnable, SIGNAL(systemProxyLookedUp(QNetworkProxy)), dst, slot);
 
     // takes ownership and deletes
     QThreadPool::globalInstance()->start(runnable);
 }
 
-SystemProxyRunnable::SystemProxyRunnable(QUrl url)
-    : QObject(), QRunnable(), _url(std::move(url)) {}
+SystemProxyRunnable::SystemProxyRunnable(QUrl url) : QObject(), QRunnable(), _url(std::move(url)) {}
 
 void SystemProxyRunnable::run() {
     qDebug() << Q_FUNC_INFO << "Starting system proxy lookup";

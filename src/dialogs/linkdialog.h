@@ -14,10 +14,7 @@ class LinkDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    enum LinkDialogPages {
-        TextLinkPage,
-        NoteLinkPage
-    };
+    enum LinkDialogPages { TextLinkPage, NoteLinkPage };
 
     explicit LinkDialog(int page, const QString &dialogTitle = QString(),
                         QWidget *parent = nullptr);
@@ -42,14 +39,13 @@ class LinkDialog : public MasterDialog {
 
     void on_headingSearchLineEdit_textChanged(const QString &arg1);
 
-    void on_notesListWidget_currentItemChanged(QListWidgetItem *current,
-                                               QListWidgetItem *previous);
+    void on_notesListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
 
     void on_headingListWidget_doubleClicked(const QModelIndex &index);
 
     void on_tabWidget_currentChanged(int index);
 
-private:
+   private:
     Ui::LinkDialog *ui;
     int firstVisibleNoteListRow;
     bool eventFilter(QObject *obj, QEvent *event) override;

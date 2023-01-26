@@ -14,14 +14,14 @@ class MainWindow;
  * spaces in the name"
  */
 class UrlHandler {
-public:
+   public:
     UrlHandler();
 
     static bool isUrlSchemeLocal(const QUrl &url);
 
     void openUrl(QString urlString);
 
-private:
+   private:
     void handleNoteIdUrl(QString urlString);
     void handleNoteUrl(QString urlString, const QString &fragment);
     void handleCheckboxUrl(QString urlString);

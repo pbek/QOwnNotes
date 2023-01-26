@@ -1,8 +1,8 @@
 #pragma once
 
-#include "masterdialog.h"
-
 #include <QTemporaryFile>
+
+#include "masterdialog.h"
 
 namespace Ui {
 class TableDialog;
@@ -30,7 +30,7 @@ class TableDialog : public MasterDialog {
 
     void on_clipboardButton_clicked();
 
-private:
+   private:
     enum Tab { CreateTab, ImportTab };
 
     Ui::TableDialog *ui;

@@ -42,8 +42,7 @@ class OwnCloudService : public QObject {
     };
     Q_ENUMS(CalendarBackend)
 
-    explicit OwnCloudService(int cloudConnectionId = -1,
-                             QObject *parent = nullptr);
+    explicit OwnCloudService(int cloudConnectionId = -1, QObject *parent = nullptr);
 
     void settingsConnectionTest(SettingsDialog *dialog);
 
@@ -59,8 +58,7 @@ class OwnCloudService : public QObject {
 
     void todoGetTodoList(const QString &calendarName, TodoDialog *dialog);
 
-    void postCalendarItemToServer(CalendarItem calendarItem,
-                                  TodoDialog *dialog);
+    void postCalendarItemToServer(CalendarItem calendarItem, TodoDialog *dialog);
 
     bool updateICSDataOfCalendarItem(CalendarItem *calItem);
 
@@ -68,8 +66,7 @@ class OwnCloudService : public QObject {
 
     void settingsGetFileList(SettingsDialog *dialog, const QString &path);
 
-    static bool hasOwnCloudSettings(bool withEnabledCheck = true,
-                                    bool ignoreTableWarning = false);
+    static bool hasOwnCloudSettings(bool withEnabledCheck = true, bool ignoreTableWarning = false);
 
     void shareNote(const Note &note, ShareDialog *dialog);
 
@@ -81,8 +78,7 @@ class OwnCloudService : public QObject {
 
     void removeNoteShare(const Note &note, ShareDialog *dialog);
 
-    static OwnCloudService *instance(bool reset = false,
-                                     int cloudConnectionId = -1);
+    static OwnCloudService *instance(bool reset = false, int cloudConnectionId = -1);
 
     static bool isOwnCloudSupportEnabled();
 
@@ -92,12 +88,12 @@ class OwnCloudService : public QObject {
 
     void startAppVersionTest();
 
-    QString nextcloudPreviewImageTagToInlineImageTag(QString imageTag,
-                                                     int &imageWidth);
+    QString nextcloudPreviewImageTagToInlineImageTag(QString imageTag, int &imageWidth);
 
     static bool initiateLoginFlowV2(const QString &serverUrl, QJsonObject &pollData);
 
-    static QString fetchNextcloudAccountId(const QString &serverUrl, const QString &userName, const QString &password);
+    static QString fetchNextcloudAccountId(const QString &serverUrl, const QString &userName,
+                                           const QString &password);
 
     void unsetShareDialog();
 
@@ -135,7 +131,8 @@ class OwnCloudService : public QObject {
 
     void readSettings(int cloudConnectionId = -1);
 
-    static void addGenericAuthHeader(QNetworkRequest *r, const QString &userName, const QString &password);
+    static void addGenericAuthHeader(QNetworkRequest *r, const QString &userName,
+                                     const QString &password);
 
     void addAuthHeader(QNetworkRequest *r);
 
@@ -156,8 +153,7 @@ class OwnCloudService : public QObject {
     void showOwnCloudServerErrorMessage(const QString &message = QString(),
                                         bool withSettingsButton = true);
 
-    void showOwnCloudMessage(QString headline = QString(),
-                             QString message = QString(),
+    void showOwnCloudMessage(QString headline = QString(), QString message = QString(),
                              bool withSettingsButton = true);
 
     void updateNoteShareStatusFromShare(QString &data);
@@ -166,11 +162,9 @@ class OwnCloudService : public QObject {
 
     void handleNoteShareReply(QString &data);
 
-    void updateNoteShareStatus(QDomNodeList &dataElements,
-                               bool updateShareDialog = false);
+    void updateNoteShareStatus(QDomNodeList &dataElements, bool updateShareDialog = false);
 
-    void handleUpdateNoteShareReply(const QString &urlPart,
-                                    const QString &data);
+    void handleUpdateNoteShareReply(const QString &urlPart, const QString &data);
 
     static void checkAppVersion(QNetworkReply *reply);
 
@@ -186,11 +180,9 @@ class OwnCloudService : public QObject {
 
    private slots:
 
-    void slotAuthenticationRequired(QNetworkReply *reply,
-                                    QAuthenticator *authenticator);
+    void slotAuthenticationRequired(QNetworkReply *reply, QAuthenticator *authenticator);
 
-    void slotCalendarAuthenticationRequired(QNetworkReply *reply,
-                                            QAuthenticator *authenticator);
+    void slotCalendarAuthenticationRequired(QNetworkReply *reply, QAuthenticator *authenticator);
 
     void slotReplyFinished(QNetworkReply *);
 };

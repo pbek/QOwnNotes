@@ -24,7 +24,7 @@ class NoteSubFolderApi : public QObject, public NoteSubFolder {
 
     Q_INVOKABLE static NoteSubFolderApi *fetchNoteSubFolderById(int id);
     Q_INVOKABLE static NoteSubFolderApi *activeNoteSubFolder();
-    Q_INVOKABLE static QList<QObject*> fetchNoteSubFoldersByParentId(int parentId);
+    Q_INVOKABLE static QList<QObject *> fetchNoteSubFoldersByParentId(int parentId);
 
     Q_INVOKABLE QQmlListProperty<NoteApi> notes();
     Q_INVOKABLE QString relativePath();

@@ -56,8 +56,7 @@ class NoteSubFolder {
     NoteSubFolder getParent() const;
 
     static QVector<NoteSubFolder> fetchAllByParentId(
-        int parentId,
-        const QString& sortBy = QStringLiteral("file_last_modified DESC"));
+        int parentId, const QString& sortBy = QStringLiteral("file_last_modified DESC"));
 
     static QVector<int> fetchIdsRecursivelyByParentId(int parentId);
 
@@ -73,11 +72,10 @@ class NoteSubFolder {
 
     QString pathData() const;
 
-    static NoteSubFolder fetchByPathData(
-        QString pathData, const QString& separator = QStringLiteral("\n"));
+    static NoteSubFolder fetchByPathData(QString pathData,
+                                         const QString& separator = QStringLiteral("\n"));
 
-    static NoteSubFolder fetchByNameAndParentId(const QString& name,
-                                                int parentId);
+    static NoteSubFolder fetchByNameAndParentId(const QString& name, int parentId);
 
     void saveTreeWidgetExpandState(bool expanded) const;
 
@@ -99,8 +97,7 @@ class NoteSubFolder {
 
     int depth() const;
 
-    static bool willFolderBeIgnored(const QString& folderName,
-                                    bool showWarning = false);
+    static bool willFolderBeIgnored(const QString& folderName, bool showWarning = false);
 
    protected:
     int _id;

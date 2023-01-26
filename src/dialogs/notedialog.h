@@ -17,12 +17,12 @@ class NoteDialog : public MasterDialog {
     ~NoteDialog();
     void setNote(Note &note);
 
-private slots:
+   private slots:
     void on_noteTextView_anchorClicked(const QUrl &url);
 
     void on_tabWidget_currentChanged(int index);
 
-private:
+   private:
     Ui::NoteDialog *ui;
 };
 

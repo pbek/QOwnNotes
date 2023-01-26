@@ -7,14 +7,13 @@ class CloudConnection {
     explicit CloudConnection();
 
     int getId();
-    static bool create(const QString &name, const QString &serverUrl,
-                       const QString &username, const QString &password);
+    static bool create(const QString &name, const QString &serverUrl, const QString &username,
+                       const QString &password);
     static CloudConnection fetch(int id, bool ignoreTableWarning = false);
     static CloudConnection cloudConnectionFromQuery(const QSqlQuery &query);
     bool store();
     bool storeMigratedCloudConnection();
-    friend QDebug operator<<(QDebug dbg,
-                             const CloudConnection &CloudConnection);
+    friend QDebug operator<<(QDebug dbg, const CloudConnection &CloudConnection);
     bool exists();
     bool fillFromQuery(const QSqlQuery &query);
     bool remove();
@@ -37,8 +36,7 @@ class CloudConnection {
     static int countAll();
     static bool migrateToCloudConnections();
     bool isCurrent();
-    static CloudConnection currentCloudConnection(
-        bool ignoreTableWarning = false);
+    static CloudConnection currentCloudConnection(bool ignoreTableWarning = false);
     static CloudConnection firstCloudConnection();
     static CloudConnection currentTodoCalendarCloudConnection();
     QString getServerUrlPath();

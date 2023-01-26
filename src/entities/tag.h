@@ -10,7 +10,7 @@ class NoteSubFolder;
 
 struct TagHeader {
     TagHeader() = default;
-    TagHeader(int id, QString name) : _id {id}, _name{std::move(name)} {}
+    TagHeader(int id, QString name) : _id{id}, _name{std::move(name)} {}
     int _id = 0;
     QString _name{QLatin1String("")};
 
@@ -36,7 +36,7 @@ class Tag : protected TagHeader {
 
     inline int getId() const { return _id; }
 
-    inline const QString& getName() const { return _name; }
+    inline const QString &getName() const { return _name; }
 
     inline void setName(QString text) { _name = text; }
 
@@ -50,7 +50,6 @@ class Tag : protected TagHeader {
 
     bool isFetched() const;
 
-
     int getPriority() const;
 
     void setPriority(const int value);
@@ -63,25 +62,23 @@ class Tag : protected TagHeader {
 
     bool removeLinkToNote(const Note &note) const;
 
-    static QVector<int> fetchAllLinkedNoteIds(int tagId,
-                                       const bool fromAllSubfolders,
-                                       const bool recursive = true);
+    static QVector<int> fetchAllLinkedNoteIds(int tagId, const bool fromAllSubfolders,
+                                              const bool recursive = true);
 
-    static QVector<int> fetchAllLinkedNoteIdsForFolder(
-        int tagId,
-        const NoteSubFolder &noteSubFolder, bool fromAllSubfolders,
-        const bool recursive = true);
+    static QVector<int> fetchAllLinkedNoteIdsForFolder(int tagId,
+                                                       const NoteSubFolder &noteSubFolder,
+                                                       bool fromAllSubfolders,
+                                                       const bool recursive = true);
 
     QVector<Note> fetchAllLinkedNotes() const;
 
     bool isLinkedToNote(const Note &note) const;
 
-    static int countLinkedNoteFileNames(int tagId, bool fromAllSubfolders,
-                                        bool recursive);
+    static int countLinkedNoteFileNames(int tagId, bool fromAllSubfolders, bool recursive);
 
-    static int countLinkedNoteFileNamesForNoteSubFolder(
-        int tagId, const NoteSubFolder &noteSubFolder,
-        bool fromAllSubfolders, bool recursive);
+    static int countLinkedNoteFileNamesForNoteSubFolder(int tagId,
+                                                        const NoteSubFolder &noteSubFolder,
+                                                        bool fromAllSubfolders, bool recursive);
 
     int getParentId() const;
 
@@ -116,31 +113,27 @@ class Tag : protected TagHeader {
 
     static bool removeAllLinksToNote(const Note &note);
 
-    static bool renameNoteFileNamesOfLinks(const QString &oldFileName,
-                                           const QString &newFileName,
+    static bool renameNoteFileNamesOfLinks(const QString &oldFileName, const QString &newFileName,
                                            const NoteSubFolder &noteSubFolder);
 
-    static bool renameNoteSubFolderPathsOfLinks(const QString &oldPath,
-                                                const QString &newPath);
+    static bool renameNoteSubFolderPathsOfLinks(const QString &oldPath, const QString &newPath);
 
     static Tag fetch(const int id);
 
     static Tag tagFromQuery(const QSqlQuery &query);
 
-    static QVector<Tag> fetchAllWithLinkToNoteNames(
-        const QStringList &noteNameList);
+    static QVector<Tag> fetchAllWithLinkToNoteNames(const QStringList &noteNameList);
 
     static QVector<TagHeader> fetchAllTagHeadersByParentId(const int parentId);
 
-    static QVector<Tag> fetchAllByParentId(
-        const int parentId,
-        const QString &sortBy = QStringLiteral("created DESC"));
+    static QVector<Tag> fetchAllByParentId(const int parentId,
+                                           const QString &sortBy = QStringLiteral("created DESC"));
 
     static QVector<int> fetchAllIdsByParentId(const int parentId);
 
     static int countAllParentId(const int parentId);
 
-    static bool noteHasTags(const Note &note, const QString& path);
+    static bool noteHasTags(const Note &note, const QString &path);
 
     static void setAsActive(const int tagId);
 
@@ -170,10 +163,9 @@ class Tag : protected TagHeader {
 
     static bool mergeFromDatabase(QSqlDatabase &db);
 
-    static Tag getTagByNameBreadcrumbList(const QStringList &nameList,
-                                          bool createMissing);
+    static Tag getTagByNameBreadcrumbList(const QStringList &nameList, bool createMissing);
 
-protected:
+   protected:
     int _parentId;
     int _priority;
     QColor _color;

@@ -20,11 +20,12 @@
 #endif
 
 #include <utils/misc.h>
+
 #include <QJsonDocument>
 #include <QSettings>
-#include <QtWebSockets>
 #include <QSslError>
 #include <QWebSocket>
+#include <QtWebSockets>
 
 #include "metricsservice.h"
 
@@ -32,8 +33,7 @@ using namespace std;
 
 QT_USE_NAMESPACE
 
-WebAppClientService::WebAppClientService(QObject *parent)
-    : QObject(parent) {
+WebAppClientService::WebAppClientService(QObject *parent) : QObject(parent) {
     if (!Utils::Misc::isWebAppSupportEnabled()) {
         return;
     }
@@ -43,7 +43,8 @@ WebAppClientService::WebAppClientService(QObject *parent)
     connect(_webSocket, &QWebSocket::connected, this, &WebAppClientService::onConnected);
     connect(_webSocket, &QWebSocket::disconnected, this, &WebAppClientService::onDisconnected);
     connect(_webSocket, &QWebSocket::sslErrors, this, &WebAppClientService::onSslErrors);
-    connect(_webSocket, &QWebSocket::textMessageReceived, this, &WebAppClientService::onTextMessageReceived);
+    connect(_webSocket, &QWebSocket::textMessageReceived, this,
+            &WebAppClientService::onTextMessageReceived);
     connect(&_timerHeartbeat, SIGNAL(timeout()), this, SLOT(onSendHeartbeatText()));
     connect(&_timerReconnect, SIGNAL(timeout()), this, SLOT(onReconnect()));
 
@@ -63,8 +64,9 @@ void WebAppClientService::close() {
 }
 
 QString WebAppClientService::getServerUrl() {
-    return QSettings().value(QStringLiteral("webAppClientService/serverUrl"),
-                   getDefaultServerUrl()).toString();
+    return QSettings()
+        .value(QStringLiteral("webAppClientService/serverUrl"), getDefaultServerUrl())
+        .toString();
 }
 
 QString WebAppClientService::getOrGenerateToken() {
@@ -99,8 +101,8 @@ void WebAppClientService::onConnected() {
     _reconnectFailedCount = 0;
     _heartbeatFailedCount = 0;
 
-    Utils::Misc::printInfo(tr("QOwnNotes is now connected via websocket to %1")
-                               .arg(getServerUrl()));
+    Utils::Misc::printInfo(
+        tr("QOwnNotes is now connected via websocket to %1").arg(getServerUrl()));
 }
 
 void WebAppClientService::onDisconnected() {
@@ -108,8 +110,8 @@ void WebAppClientService::onDisconnected() {
     _timerHeartbeat.stop();
     _timerReconnect.start(_reconnectTime);
 
-    Utils::Misc::printInfo(tr("QOwnNotes is now disconnected from websocket to %1")
-                               .arg(getServerUrl()));
+    Utils::Misc::printInfo(
+        tr("QOwnNotes is now disconnected from websocket to %1").arg(getServerUrl()));
 }
 
 void WebAppClientService::onTextMessageReceived(const QString &message) {
@@ -123,9 +125,7 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
         qWarning() << "Web app warning: " << msg;
 
 #ifndef INTEGRATION_TESTS
-        Utils::Gui::warning(
-            nullptr, tr("Web app warning"), msg,
-            "wepappclientservice-warning");
+        Utils::Gui::warning(nullptr, tr("Web app warning"), msg, "wepappclientservice-warning");
 #endif
     } else if (command == "insertFile") {
 #ifndef INTEGRATION_TESTS
@@ -138,8 +138,7 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
 
         if (Utils::Gui::question(mainWindow, tr("Image received"),
                                  tr("Insert image received from QOwnNotes web application?"),
-                                 QStringLiteral("webapp-insert-image")) ==
-            QMessageBox::Yes) {
+                                 QStringLiteral("webapp-insert-image")) == QMessageBox::Yes) {
             // insert image into current note
             mainWindow->insertDataUrlAsFileIntoCurrentNote(fileDataUrl);
         }
@@ -151,13 +150,11 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
     }
 }
 
-void WebAppClientService::onSslErrors(const QList<QSslError> &errors) {
-    qCritical() << errors;
-}
+void WebAppClientService::onSslErrors(const QList<QSslError> &errors) { qCritical() << errors; }
 
 void WebAppClientService::onSendHeartbeatText() {
     const QString &heartbeatText = "qon-ping";
-    auto sendByte =	_webSocket->sendTextMessage(heartbeatText);
+    auto sendByte = _webSocket->sendTextMessage(heartbeatText);
 
     if (sendByte != heartbeatText.toLocal8Bit().length()) {
         _heartbeatFailedCount++;

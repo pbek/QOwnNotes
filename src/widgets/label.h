@@ -19,8 +19,7 @@ class Label : public QLabel {
     Q_OBJECT
 
    public:
-    explicit Label(QWidget *parent = nullptr,
-                   Qt::WindowFlags f = Qt::WindowFlags());
+    explicit Label(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
     explicit Label(const QString &text, QWidget *parent = nullptr,
                    Qt::WindowFlags f = Qt::WindowFlags());
 

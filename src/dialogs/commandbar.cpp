@@ -1,49 +1,41 @@
 #include "commandbar.h"
 
-#include <QAction>
-#include <QPainter>
-#include <QTreeView>
-#include <QLineEdit>
-#include <QKeyEvent>
-#include <QStyledItemDelegate>
-#include <QSortFilterProxyModel>
-#include <QTextDocument>
-#include <QVBoxLayout>
-#include <QCoreApplication>
-#include <QMenu>
 #include <QAbstractTextDocumentLayout>
+#include <QAction>
+#include <QCoreApplication>
+#include <QKeyEvent>
+#include <QLineEdit>
+#include <QMenu>
+#include <QPainter>
+#include <QSortFilterProxyModel>
+#include <QStyledItemDelegate>
+#include <QTextDocument>
+#include <QTreeView>
+#include <QVBoxLayout>
 
+#include "libraries/fuzzy/kfuzzymatcher.h"
 #include "models/commandmodel.h"
 #include "utils/misc.h"
-#include "libraries/fuzzy/kfuzzymatcher.h"
 
-class CommandBarFilterModel : public QSortFilterProxyModel
-{
-public:
-    CommandBarFilterModel(QObject *parent = nullptr)
-        : QSortFilterProxyModel(parent)
-    {
-    }
+class CommandBarFilterModel : public QSortFilterProxyModel {
+   public:
+    CommandBarFilterModel(QObject *parent = nullptr) : QSortFilterProxyModel(parent) {}
 
-    Q_SLOT void setFilterString(const QString &string)
-    {
+    Q_SLOT void setFilterString(const QString &string) {
         beginResetModel();
         m_pattern = string;
         endResetModel();
     }
 
-protected:
-    bool lessThan(const QModelIndex &sourceLeft, const QModelIndex &sourceRight) const override
-    {
+   protected:
+    bool lessThan(const QModelIndex &sourceLeft, const QModelIndex &sourceRight) const override {
         const int l = sourceLeft.data(CommandModel::Score).toInt();
         const int r = sourceRight.data(CommandModel::Score).toInt();
         return l < r;
     }
 
-    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override
-    {
-        if (m_pattern.isEmpty())
-            return true;
+    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override {
+        if (m_pattern.isEmpty()) return true;
 
         const auto idx = sourceModel()->index(sourceRow, 0, sourceParent);
         const QString str = idx.data().toString();
@@ -53,20 +45,16 @@ protected:
         return res.matched;
     }
 
-private:
+   private:
     QString m_pattern;
 };
 
-class CommandBarStyleDelegate : public QStyledItemDelegate
-{
-public:
-    CommandBarStyleDelegate(QObject *parent = nullptr)
-        : QStyledItemDelegate(parent)
-    {
-    }
+class CommandBarStyleDelegate : public QStyledItemDelegate {
+   public:
+    CommandBarStyleDelegate(QObject *parent = nullptr) : QStyledItemDelegate(parent) {}
 
-    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override
-    {
+    void paint(QPainter *painter, const QStyleOptionViewItem &option,
+               const QModelIndex &index) const override {
         QStyleOptionViewItem options = option;
         initStyleOption(&options, index);
 
@@ -77,10 +65,14 @@ public:
         const auto strs = index.data().toString().split(QLatin1Char(':'));
         QString str = strs.at(1);
         const QString nameColor = option.palette.color(QPalette::Link).name();
-        str = KFuzzyMatcher::toFuzzyMatchedDisplayString(m_filterString, str, QStringLiteral("<b style=\"color:%1;\">").arg(nameColor), QStringLiteral("</b>"));
-//        fts::to_fuzzy_matched_display_string(m_filterString, str, QStringLiteral("<b style=\"color:%1;\">").arg(nameColor), QStringLiteral("</b>"));
+        str = KFuzzyMatcher::toFuzzyMatchedDisplayString(
+            m_filterString, str, QStringLiteral("<b style=\"color:%1;\">").arg(nameColor),
+            QStringLiteral("</b>"));
+        //        fts::to_fuzzy_matched_display_string(m_filterString, str, QStringLiteral("<b
+        //        style=\"color:%1;\">").arg(nameColor), QStringLiteral("</b>"));
 
-        const QString component = QStringLiteral("<span style=\"color: gray;\">") + strs.at(0) + QStringLiteral(": </span>");
+        const QString component = QStringLiteral("<span style=\"color: gray;\">") + strs.at(0) +
+                                  QStringLiteral(": </span>");
 
         doc.setHtml(component + str);
         doc.setDocumentMargin(2);
@@ -94,16 +86,18 @@ public:
             painter->fillRect(option.rect, option.palette.base());
         }
 
-        options.text = QString(); // clear old text
-        options.widget->style()->drawControl(QStyle::CE_ItemViewItem, &options, painter, options.widget);
+        options.text = QString();    // clear old text
+        options.widget->style()->drawControl(QStyle::CE_ItemViewItem, &options, painter,
+                                             options.widget);
 
         // fix stuff for rtl
-        // QTextDocument doesn't work with RTL text out of the box so we give it a hand here by increasing
-        // the text width to our rect size. Icon displacement is also calculated here because 'translate()'
-        // later will not work.
+        // QTextDocument doesn't work with RTL text out of the box so we give it a hand here by
+        // increasing the text width to our rect size. Icon displacement is also calculated here
+        // because 'translate()' later will not work.
         const bool rtl = original.isRightToLeft();
         if (rtl) {
-            auto r = options.widget->style()->subElementRect(QStyle::SE_ItemViewItemText, &options, options.widget);
+            auto r = options.widget->style()->subElementRect(QStyle::SE_ItemViewItemText, &options,
+                                                             options.widget);
             auto hasIcon = index.data(Qt::DecorationRole).value<QIcon>().isNull();
             if (hasIcon)
                 doc.setTextWidth(r.width() - 25);
@@ -115,8 +109,7 @@ public:
         painter->translate(option.rect.x(), option.rect.y());
         // leave space for icon
 
-        if (!rtl)
-            painter->translate(25, 0);
+        if (!rtl) painter->translate(25, 0);
 
         QAbstractTextDocumentLayout::PaintContext ctx;
         ctx.palette.setColor(QPalette::Text, options.palette.text().color());
@@ -125,26 +118,19 @@ public:
         painter->restore();
     }
 
-public Q_SLOTS:
-    void setFilterString(const QString &text)
-    {
-        m_filterString = text;
-    }
+   public Q_SLOTS:
+    void setFilterString(const QString &text) { m_filterString = text; }
 
-private:
+   private:
     QString m_filterString;
 };
 
-class ShortcutStyleDelegate : public QStyledItemDelegate
-{
-public:
-    ShortcutStyleDelegate(QObject *parent = nullptr)
-        : QStyledItemDelegate(parent)
-    {
-    }
+class ShortcutStyleDelegate : public QStyledItemDelegate {
+   public:
+    ShortcutStyleDelegate(QObject *parent = nullptr) : QStyledItemDelegate(parent) {}
 
-    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override
-    {
+    void paint(QPainter *painter, const QStyleOptionViewItem &option,
+               const QModelIndex &index) const override {
         QStyleOptionViewItem options = option;
         initStyleOption(&options, index);
 
@@ -163,8 +149,9 @@ public:
             painter->fillRect(option.rect, option.palette.base());
         }
 
-        options.text = QString(); // clear old text
-        options.widget->style()->drawControl(QStyle::CE_ItemViewItem, &options, painter, options.widget);
+        options.text = QString();    // clear old text
+        options.widget->style()->drawControl(QStyle::CE_ItemViewItem, &options, painter,
+                                             options.widget);
 
         if (!strs.isEmpty()) {
             // collect button-style pixmaps
@@ -185,8 +172,8 @@ public:
             int py = option.rect.y() + plusRect.height() / 2;
             int total = btnRects.size();
             int i = 0;
-            painter->setRenderHint(QPainter::Antialiasing); // :)
-            for (const auto& pxm : btnRects) {
+            painter->setRenderHint(QPainter::Antialiasing);    // :)
+            for (const auto &pxm : btnRects) {
                 // draw rounded rect shadown
                 painter->setPen(Qt::NoPen);
                 QRect r(dx, y, pxm.first.width(), pxm.first.height());
@@ -206,7 +193,8 @@ public:
                 // draw '+'
                 if (i + 1 < total) {
                     dx += pxm.first.width() + 8;
-                    painter->drawText(QPoint(dx, py + (pxm.first.height() / 2)), QStringLiteral("+"));
+                    painter->drawText(QPoint(dx, py + (pxm.first.height() / 2)),
+                                      QStringLiteral("+"));
                     dx += plusRect.width() + 8;
                 }
                 i++;
@@ -217,9 +205,7 @@ public:
     }
 };
 
-CommandBar::CommandBar(QWidget *parent)
-    : QMenu(parent)
-{
+CommandBar::CommandBar(QWidget *parent) : QMenu(parent) {
     QVBoxLayout *layout = new QVBoxLayout();
     layout->setSpacing(0);
     layout->setContentsMargins(4, 4, 4, 4);
@@ -237,8 +223,8 @@ CommandBar::CommandBar(QWidget *parent)
 
     m_model = new CommandModel(this);
 
-    CommandBarStyleDelegate* delegate = new CommandBarStyleDelegate(this);
-    ShortcutStyleDelegate* del = new ShortcutStyleDelegate(this);
+    CommandBarStyleDelegate *delegate = new CommandBarStyleDelegate(this);
+    ShortcutStyleDelegate *del = new ShortcutStyleDelegate(this);
     m_treeView->setItemDelegateForColumn(0, delegate);
     m_treeView->setItemDelegateForColumn(1, del);
 
@@ -248,9 +234,11 @@ CommandBar::CommandBar(QWidget *parent)
     m_proxyModel->setFilterKeyColumn(0);
 
     connect(m_lineEdit, &QLineEdit::returnPressed, this, &CommandBar::slotReturnPressed);
-    connect(m_lineEdit, &QLineEdit::textChanged, m_proxyModel, &CommandBarFilterModel::setFilterString);
-    connect(m_lineEdit, &QLineEdit::textChanged, delegate, &CommandBarStyleDelegate::setFilterString);
-    connect(m_lineEdit, &QLineEdit::textChanged, this, [this](){
+    connect(m_lineEdit, &QLineEdit::textChanged, m_proxyModel,
+            &CommandBarFilterModel::setFilterString);
+    connect(m_lineEdit, &QLineEdit::textChanged, delegate,
+            &CommandBarStyleDelegate::setFilterString);
+    connect(m_lineEdit, &QLineEdit::textChanged, this, [this]() {
         m_treeView->viewport()->update();
         reselectFirst();
     });
@@ -271,8 +259,7 @@ CommandBar::CommandBar(QWidget *parent)
     setHidden(true);
 }
 
-void CommandBar::updateBar(const QVector<QPair<QString, QAction *> > &actions)
-{
+void CommandBar::updateBar(const QVector<QPair<QString, QAction *>> &actions) {
     m_model->refresh(actions);
     reselectFirst();
 
@@ -281,13 +268,15 @@ void CommandBar::updateBar(const QVector<QPair<QString, QAction *> > &actions)
     setFocus();
 }
 
-bool CommandBar::eventFilter(QObject *obj, QEvent *event)
-{
-    // catch key presses + shortcut overrides to allow to have ESC as application wide shortcut, too, see bug 409856
+bool CommandBar::eventFilter(QObject *obj, QEvent *event) {
+    // catch key presses + shortcut overrides to allow to have ESC as application wide shortcut,
+    // too, see bug 409856
     if (event->type() == QEvent::KeyPress || event->type() == QEvent::ShortcutOverride) {
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
         if (obj == m_lineEdit) {
-            const bool forward2list = (keyEvent->key() == Qt::Key_Up) || (keyEvent->key() == Qt::Key_Down) || (keyEvent->key() == Qt::Key_PageUp) || (keyEvent->key() == Qt::Key_PageDown);
+            const bool forward2list =
+                (keyEvent->key() == Qt::Key_Up) || (keyEvent->key() == Qt::Key_Down) ||
+                (keyEvent->key() == Qt::Key_PageUp) || (keyEvent->key() == Qt::Key_PageDown);
             if (forward2list) {
                 QCoreApplication::sendEvent(m_treeView, event);
                 return true;
@@ -300,8 +289,10 @@ bool CommandBar::eventFilter(QObject *obj, QEvent *event)
                 return true;
             }
         } else {
-            const bool forward2input = (keyEvent->key() != Qt::Key_Up) && (keyEvent->key() != Qt::Key_Down) && (keyEvent->key() != Qt::Key_PageUp) && (keyEvent->key() != Qt::Key_PageDown) && (keyEvent->key() != Qt::Key_Tab) &&
-                (keyEvent->key() != Qt::Key_Backtab);
+            const bool forward2input =
+                (keyEvent->key() != Qt::Key_Up) && (keyEvent->key() != Qt::Key_Down) &&
+                (keyEvent->key() != Qt::Key_PageUp) && (keyEvent->key() != Qt::Key_PageDown) &&
+                (keyEvent->key() != Qt::Key_Tab) && (keyEvent->key() != Qt::Key_Backtab);
             if (forward2input) {
                 QCoreApplication::sendEvent(m_lineEdit, event);
                 return true;
@@ -310,7 +301,8 @@ bool CommandBar::eventFilter(QObject *obj, QEvent *event)
     }
 
     // hide on focus out, if neither input field nor list have focus!
-    else if (event->type() == QEvent::FocusOut && !(m_lineEdit->hasFocus() || m_treeView->hasFocus())) {
+    else if (event->type() == QEvent::FocusOut &&
+             !(m_lineEdit->hasFocus() || m_treeView->hasFocus())) {
         m_lineEdit->clear();
         hide();
         return true;
@@ -319,15 +311,14 @@ bool CommandBar::eventFilter(QObject *obj, QEvent *event)
     return QWidget::eventFilter(obj, event);
 }
 
-void CommandBar::slotReturnPressed()
-{
-    auto act = m_proxyModel->data(m_treeView->currentIndex(), Qt::UserRole).value<QAction*>();
+void CommandBar::slotReturnPressed() {
+    auto act = m_proxyModel->data(m_treeView->currentIndex(), Qt::UserRole).value<QAction *>();
     if (act) {
         // if the action is a menu, we take all its actions
         // and reload our dialog with these instead.
         if (auto menu = act->menu()) {
             auto menuActions = menu->actions();
-            QVector<QPair<QString, QAction*>> list;
+            QVector<QPair<QString, QAction *>> list;
             list.reserve(menuActions.size());
 
             // if there are no actions, trigger load actions
@@ -353,14 +344,12 @@ void CommandBar::slotReturnPressed()
     hide();
 }
 
-void CommandBar::reselectFirst()
-{
+void CommandBar::reselectFirst() {
     QModelIndex index = m_proxyModel->index(0, 0);
     m_treeView->setCurrentIndex(index);
 }
 
-void CommandBar::updateViewGeometry()
-{
+void CommandBar::updateViewGeometry() {
     m_treeView->resizeColumnToContents(0);
     m_treeView->resizeColumnToContents(1);
 

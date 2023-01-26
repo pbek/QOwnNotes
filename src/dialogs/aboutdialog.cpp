@@ -11,8 +11,7 @@
 #include "ui_aboutdialog.h"
 #include "version.h"
 
-AboutDialog::AboutDialog(QWidget *parent)
-    : MasterDialog(parent), ui(new Ui::AboutDialog) {
+AboutDialog::AboutDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::AboutDialog) {
     ui->setupUi(this);
 
     // load the about.html
@@ -28,17 +27,14 @@ AboutDialog::AboutDialog(QWidget *parent)
         }
 
         // fill in the variables
-        html.replace(QLatin1String("QT_VERSION_STR"),
-                     QStringLiteral(QT_VERSION_STR));
+        html.replace(QLatin1String("QT_VERSION_STR"), QStringLiteral(QT_VERSION_STR));
         html.replace(QLatin1String("BUILD_NUMBER"), QString::number(BUILD));
         html.replace(QLatin1String("BUILD_DATE"), __DATE__);
         html.replace(QLatin1String("VERSION"), QStringLiteral(VERSION));
         html.replace(QLatin1String("RELEASE"), release);
-        html.replace(QLatin1String("CURRENT_YEAR"),
-                     QString::number(date.year()));
+        html.replace(QLatin1String("CURRENT_YEAR"), QString::number(date.year()));
 
-        ui->textBrowser->document()->setDefaultStyleSheet(
-            Utils::Misc::genericCSS());
+        ui->textBrowser->document()->setDefaultStyleSheet(Utils::Misc::genericCSS());
 
         // put the html to the text browser in the about dialog
         ui->textBrowser->setHtml(html);

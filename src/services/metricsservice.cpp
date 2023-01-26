@@ -18,8 +18,7 @@ MetricsService::MetricsService(QObject *parent) : QObject(parent) {
     siteId = 6;
 #endif
 
-    _piwikTracker = new PiwikTracker(
-        qApp, QUrl(QStringLiteral("https://p.qownnotes.org")), siteId);
+    _piwikTracker = new PiwikTracker(qApp, QUrl(QStringLiteral("https://p.qownnotes.org")), siteId);
     _piwikTracker->setCustomDimension(1, QStringLiteral(VERSION));
     _piwikTracker->setCustomDimension(2, QLocale::system().name());
     _piwikTracker->setCustomDimension(3, debug);
@@ -27,8 +26,7 @@ MetricsService::MetricsService(QObject *parent) : QObject(parent) {
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     _piwikTracker->setCustomDimension(
-        7, QSysInfo::prettyProductName() + " (" +
-               QSysInfo::currentCpuArchitecture() + ")");
+        7, QSysInfo::prettyProductName() + " (" + QSysInfo::currentCpuArchitecture() + ")");
 #endif
 }
 
@@ -45,8 +43,7 @@ MetricsService *MetricsService::instance() {
 MetricsService *MetricsService::createInstance(QObject *parent) {
     auto *metricsService = new MetricsService(parent);
 
-    qApp->setProperty("metricsService",
-                      QVariant::fromValue<MetricsService *>(metricsService));
+    qApp->setProperty("metricsService", QVariant::fromValue<MetricsService *>(metricsService));
 
     return metricsService;
 }
@@ -55,25 +52,19 @@ void MetricsService::sendVisit(const QString &path, const QString &actionName) {
     _piwikTracker->sendVisit(path, actionName);
 }
 
-void MetricsService::sendVisitIfEnabled(const QString &path,
-                                        const QString &actionName) {
+void MetricsService::sendVisitIfEnabled(const QString &path, const QString &actionName) {
     QSettings settings;
-    if (!settings.value(QStringLiteral("appMetrics/disableTracking"))
-             .toBool()) {
+    if (!settings.value(QStringLiteral("appMetrics/disableTracking")).toBool()) {
         sendVisit(path, actionName);
     }
 }
 
-void MetricsService::sendEventIfEnabled(const QString &path,
-                                        const QString &eventCategory,
-                                        const QString &eventAction,
-                                        const QString &eventName,
+void MetricsService::sendEventIfEnabled(const QString &path, const QString &eventCategory,
+                                        const QString &eventAction, const QString &eventName,
                                         int eventValue) {
     QSettings settings;
-    if (!settings.value(QStringLiteral("appMetrics/disableTracking"))
-             .toBool()) {
-        _piwikTracker->sendEvent(path, eventCategory, eventAction, eventName,
-                                 eventValue);
+    if (!settings.value(QStringLiteral("appMetrics/disableTracking")).toBool()) {
+        _piwikTracker->sendEvent(path, eventCategory, eventAction, eventName, eventValue);
     }
 }
 
@@ -82,8 +73,7 @@ void MetricsService::sendEventIfEnabled(const QString &path,
  */
 void MetricsService::sendHeartbeat() {
     QSettings settings;
-    if (!settings.value(QStringLiteral("appMetrics/disableAppHeartbeat"))
-             .toBool()) {
+    if (!settings.value(QStringLiteral("appMetrics/disableAppHeartbeat")).toBool()) {
         // send a normal event the first time
         if (_firstHeartbeat) {
             _piwikTracker->sendVisit(QStringLiteral("app/heartbeat"));
@@ -100,8 +90,7 @@ void MetricsService::sendHeartbeat() {
 void MetricsService::sendLocaleEvent() {
     QSettings settings;
     QString eventText = QLocale::system().name();
-    QString settingsLocale =
-        settings.value(QStringLiteral("interfaceLanguage")).toString();
+    QString settingsLocale = settings.value(QStringLiteral("interfaceLanguage")).toString();
     if (!settingsLocale.isEmpty()) {
         eventText += " (" + settingsLocale + ")";
     }
