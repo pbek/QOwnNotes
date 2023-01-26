@@ -276,6 +276,7 @@ void EvernoteImportDialog::importImage(const Note &note, QString &content, QXmlS
     QRegularExpressionMatch match;
     QString mime;
     bool isImage = false;
+    Q_UNUSED(isImage)
 
     while (!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == "resource")) {
         if (xml.tokenType() == QXmlStreamReader::StartElement) {
