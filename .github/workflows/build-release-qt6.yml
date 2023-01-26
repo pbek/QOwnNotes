@@ -368,7 +368,7 @@ jobs:
           echo "#define RELEASE \"GitHub Actions\"" > release.h
           lrelease QOwnNotes.pro
           #ls ${Qt5_Dir}/bin
-          {{env.QMAKE}}
+          ${{env.QMAKE}}
           make -j {{env.CORES}}
           ../build-systems/github/macos/create-dmg-qt6.sh
 
