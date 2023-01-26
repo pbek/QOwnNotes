@@ -24,7 +24,7 @@ env:
   PUBLISHER: "Patrizio Bekerle"
   REPO_DIR: "/home/runner/work/QOwnNotes"
   QT_VERSION: 6.5.0
-  QT_MODULES: ${{env.QT_MODULES}}
+  QT_MODULES: "qtwebsockets"
   QMAKE: qmake6
   CORES: 16
 
