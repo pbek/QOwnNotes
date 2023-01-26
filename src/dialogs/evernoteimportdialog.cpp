@@ -580,6 +580,7 @@ QString EvernoteImportDialog::generateMetaDataMarkdown(QXmlQuery query) {
     return resultText + QStringLiteral("\n");
 }
 #endif
+
 /**
  * Imports the notes from the XML in data
  *
@@ -598,11 +599,11 @@ void EvernoteImportDialog::importNotes(QXmlStreamReader &xml) {
         /* If token is StartElement, we'll see if we can read it.*/
         if (token == QXmlStreamReader::StartElement) {
             /* If it's named persons, we'll go to the next.*/
-            if (xml.name() == "en-export") {
+            if (xml.name() == QStringLiteral("en-export")) {
                 continue;
             }
             /* If it's named person, we'll dig the information from there.*/
-            if (xml.name() == "note") {
+            if (xml.name() == QStringLiteral("note")) {
                 Note note = this->parseNote(xml, importMetaData);
                 qDebug() << __func__ << " - 'note': " << note;
             }
@@ -618,7 +619,7 @@ Note EvernoteImportDialog::parseNote(QXmlStreamReader &xml, bool importMetaData)
     Note note;
 
     // Let's check that we're really getting a note.
-    if (xml.tokenType() != QXmlStreamReader::StartElement && xml.name() == "note") {
+    if (xml.tokenType() != QXmlStreamReader::StartElement && xml.name() == QStringLiteral("note")) {
         return note;
     }
 
@@ -627,16 +628,16 @@ Note EvernoteImportDialog::parseNote(QXmlStreamReader &xml, bool importMetaData)
 
     xml.readNext();
 
-    while (!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == "note")) {
+    while (!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == QStringLiteral("note"))) {
         if (xml.tokenType() == QXmlStreamReader::StartElement) {
-            if (xml.name() == "title") {
+            if (xml.name() == QStringLiteral("title")) {
                 xml.readNext();
                 title = xml.text().toString().trimmed();
 
                 qDebug() << __func__ << " - 'title': " << title;
             }
 
-            if (xml.name() == "content") {
+            if (xml.name() == QStringLiteral("content")) {
                 xml.readNext();
                 content = xml.text().toString().trimmed();
                 Utils::Misc::unescapeEvernoteImportText(content);
@@ -644,7 +645,7 @@ Note EvernoteImportDialog::parseNote(QXmlStreamReader &xml, bool importMetaData)
                 qDebug() << __func__ << " - 'content': " << content;
             }
 
-            if (xml.name() == "resource") {
+            if (xml.name() == QStringLiteral("resource")) {
                 xml.readNext();
                 if (ui->imageImportCheckBox->isChecked()) {
                     importImage(note, content, xml);
@@ -914,7 +915,7 @@ void EvernoteImportDialog::importImage(const Note &note, QString &content, QXmlS
     Q_UNUSED(note)
     Q_UNUSED(content)
 
-    if (xml.tokenType() != QXmlStreamReader::StartElement && xml.name() == "resource") {
+    if (xml.tokenType() != QXmlStreamReader::StartElement && xml.name() == QStringLiteral("resource")) {
         return;
     }
 
@@ -924,9 +925,9 @@ void EvernoteImportDialog::importImage(const Note &note, QString &content, QXmlS
     bool isImage = false;
     Q_UNUSED(isImage)
 
-    while (!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == "resource")) {
+    while (!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == QStringLiteral("resource"))) {
         if (xml.tokenType() == QXmlStreamReader::StartElement) {
-            if (xml.name() == "mime") {
+            if (xml.name() == QStringLiteral("mime")) {
                 xml.readNext();
                 mime = xml.text().toString().trimmed();
                 if (mime.startsWith("image/")) {
