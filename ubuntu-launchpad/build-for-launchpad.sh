@@ -16,7 +16,7 @@ BRANCH=develop
 #BRANCH=master
 
 # https://wiki.ubuntu.com/Releases
-UBUNTU_RELEASES=( "bionic" "focal" "jammy" "kinetic" )
+UBUNTU_RELEASES=( "jammy" "bionic" "focal" "kinetic" "lunar" )
 
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
