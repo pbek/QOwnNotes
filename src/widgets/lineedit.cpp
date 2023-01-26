@@ -15,9 +15,7 @@
 
 #include <QKeyEvent>
 
-LineEdit::LineEdit(QWidget *parent) : QLineEdit(parent) {
-    installEventFilter(this);
-}
+LineEdit::LineEdit(QWidget *parent) : QLineEdit(parent) { installEventFilter(this); }
 
 bool LineEdit::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::KeyPress) {

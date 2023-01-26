@@ -15,8 +15,7 @@ class UpdateDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit UpdateDialog(QWidget *parent = nullptr,
-                          const QString &changesHtml = QString(),
+    explicit UpdateDialog(QWidget *parent = nullptr, const QString &changesHtml = QString(),
                           const QString &releaseUrl = QString(),
                           const QString &releaseVersionString = QString());
     ~UpdateDialog();

@@ -4,13 +4,10 @@
 
 #include "services/metricsservice.h"
 
-void TestMetricsService::initTestCase() {
-    MetricsService::createInstance(this);
-}
+void TestMetricsService::initTestCase() { MetricsService::createInstance(this); }
 
 void TestMetricsService::testSendEvent() {
-    MetricsService::instance()->sendEventIfEnabled("test/event", "test",
-                                                   "event");
+    MetricsService::instance()->sendEventIfEnabled("test/event", "test", "event");
     QVERIFY(true);
 }
 

@@ -32,10 +32,8 @@ FileDialog::FileDialog(const QString& name) {
         setDirectory(path);
 
         // store the directory for the next time the dialog opens
-        connect(this, SIGNAL(fileSelected(QString)), this,
-                SLOT(storeDirectory(QString)));
-        connect(this, SIGNAL(filesSelected(QStringList)), this,
-                SLOT(storeDirectory(QStringList)));
+        connect(this, SIGNAL(fileSelected(QString)), this, SLOT(storeDirectory(QString)));
+        connect(this, SIGNAL(filesSelected(QStringList)), this, SLOT(storeDirectory(QStringList)));
     }
 }
 

@@ -17,10 +17,7 @@
 #include "services/databaseservice.h"
 
 CloudConnection::CloudConnection()
-    : name(QString()),
-      serverUrl(QString()),
-      username(QString()),
-      password(QString()) {
+    : name(QString()), serverUrl(QString()), username(QString()), password(QString()) {
     id = 0;
     priority = 0;
 }
@@ -31,9 +28,7 @@ QString CloudConnection::getName() { return this->name; }
 
 QString CloudConnection::getServerUrl() { return this->serverUrl; }
 
-QString CloudConnection::getServerUrlPath() {
-    return QUrl(this->serverUrl).path();
-}
+QString CloudConnection::getServerUrlPath() { return QUrl(this->serverUrl).path(); }
 
 QString CloudConnection::getServerUrlWithoutPath() {
     QString serverUrlWithoutPath = serverUrl;
@@ -42,8 +37,7 @@ QString CloudConnection::getServerUrlWithoutPath() {
     if (!serverUrlPath.isEmpty()) {
         // remove the path from the server url
         serverUrlWithoutPath.replace(
-            QRegularExpression(QRegularExpression::escape(serverUrlPath) + "$"),
-            QString());
+            QRegularExpression(QRegularExpression::escape(serverUrlPath) + "$"), QString());
     }
 
     return serverUrlWithoutPath;
@@ -64,8 +58,7 @@ CloudConnection CloudConnection::firstCloudConnection() {
     return list.count() > 0 ? list[0] : CloudConnection();
 }
 
-CloudConnection CloudConnection::currentCloudConnection(
-    bool ignoreTableWarning) {
+CloudConnection CloudConnection::currentCloudConnection(bool ignoreTableWarning) {
     NoteFolder noteFolder = NoteFolder::currentNoteFolder();
     const int id = noteFolder.getCloudConnectionId();
 
@@ -74,40 +67,31 @@ CloudConnection CloudConnection::currentCloudConnection(
 
 CloudConnection CloudConnection::currentTodoCalendarCloudConnection() {
     QSettings settings;
-    const int id =
-        settings
-            .value(QStringLiteral("ownCloud/todoCalendarCloudConnectionId"),
-                   firstCloudConnection().getId())
-            .toInt();
+    const int id = settings
+                       .value(QStringLiteral("ownCloud/todoCalendarCloudConnectionId"),
+                              firstCloudConnection().getId())
+                       .toInt();
 
     return CloudConnection::fetch(id);
 }
 
-void CloudConnection::setName(const QString &text) {
-    this->name = text.trimmed();
-}
+void CloudConnection::setName(const QString &text) { this->name = text.trimmed(); }
 
-void CloudConnection::setServerUrl(const QString &text) {
-    this->serverUrl = text.trimmed();
-}
+void CloudConnection::setServerUrl(const QString &text) { this->serverUrl = text.trimmed(); }
 
-void CloudConnection::setUsername(const QString &text) {
-    this->username = text.trimmed();
-}
+void CloudConnection::setUsername(const QString &text) { this->username = text.trimmed(); }
 
-void CloudConnection::setAccountId(const QString &text) {
-    this->accountId = text.trimmed();
-}
+void CloudConnection::setAccountId(const QString &text) { this->accountId = text.trimmed(); }
 
-void CloudConnection::setPassword(const QString &text) {
-    this->password = text.trimmed();
-}
+void CloudConnection::setPassword(const QString &text) { this->password = text.trimmed(); }
 
 void CloudConnection::setPriority(int value) { this->priority = value; }
-void CloudConnection::setAppQOwnNotesAPIEnabled(bool value) { this->appQOwnNotesAPIEnabled = value; }
+void CloudConnection::setAppQOwnNotesAPIEnabled(bool value) {
+    this->appQOwnNotesAPIEnabled = value;
+}
 
-bool CloudConnection::create(const QString &name, const QString &serverUrl,
-                             const QString &username, const QString &password) {
+bool CloudConnection::create(const QString &name, const QString &serverUrl, const QString &username,
+                             const QString &password) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
@@ -130,8 +114,7 @@ CloudConnection CloudConnection::fetch(int id, bool ignoreTableWarning) {
 
     CloudConnection cloudConnection;
 
-    query.prepare(
-        QStringLiteral("SELECT * FROM cloudConnection WHERE id = :id"));
+    query.prepare(QStringLiteral("SELECT * FROM cloudConnection WHERE id = :id"));
     query.bindValue(QStringLiteral(":id"), id);
 
     if (!query.exec()) {
@@ -149,8 +132,7 @@ int CloudConnection::countAll() {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
-    query.prepare(
-        QStringLiteral("SELECT COUNT(*) AS cnt FROM cloudConnection"));
+    query.prepare(QStringLiteral("SELECT COUNT(*) AS cnt FROM cloudConnection"));
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -176,8 +158,7 @@ bool CloudConnection::remove() {
     }
 }
 
-CloudConnection CloudConnection::cloudConnectionFromQuery(
-    const QSqlQuery &query) {
+CloudConnection CloudConnection::cloudConnectionFromQuery(const QSqlQuery &query) {
     CloudConnection cloudConnection;
     cloudConnection.fillFromQuery(query);
     return cloudConnection;
@@ -192,16 +173,14 @@ bool CloudConnection::fillFromQuery(const QSqlQuery &query) {
         query.value(QStringLiteral("password")).toString());
     this->priority = query.value(QStringLiteral("priority")).toInt();
 
-    const int databaseVersion = DatabaseService::getAppData(
-                                    QStringLiteral("database_version")).toInt();
+    const int databaseVersion =
+        DatabaseService::getAppData(QStringLiteral("database_version")).toInt();
 
-    this->accountId = databaseVersion >= 41 ?
-                                            query.value(QStringLiteral("account_id")).toString() :
-                                            QStringLiteral("");
+    this->accountId = databaseVersion >= 41 ? query.value(QStringLiteral("account_id")).toString()
+                                            : QStringLiteral("");
 
-    this->appQOwnNotesAPIEnabled = databaseVersion >= 34 ?
-                query.value(QStringLiteral("qownnotesapi_enabled")).toBool() :
-                true;
+    this->appQOwnNotesAPIEnabled =
+        databaseVersion >= 34 ? query.value(QStringLiteral("qownnotesapi_enabled")).toBool() : true;
 
     return true;
 }
@@ -212,8 +191,7 @@ QList<CloudConnection> CloudConnection::fetchAll() {
 
     QList<CloudConnection> cloudConnectionList;
 
-    query.prepare(QStringLiteral(
-        "SELECT * FROM cloudConnection ORDER BY priority ASC, id ASC"));
+    query.prepare(QStringLiteral("SELECT * FROM cloudConnection ORDER BY priority ASC, id ASC"));
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
@@ -255,8 +233,7 @@ bool CloudConnection::store() {
     query.bindValue(QStringLiteral(":password"),
                     CryptoService::instance()->encryptToString(this->password));
     query.bindValue(QStringLiteral(":priority"), this->priority);
-    query.bindValue(QStringLiteral(":qownnotesapi_enabled"),
-                    this->appQOwnNotesAPIEnabled);
+    query.bindValue(QStringLiteral(":qownnotesapi_enabled"), this->appQOwnNotesAPIEnabled);
 
     if (!query.exec()) {
         // on error
@@ -324,9 +301,7 @@ bool CloudConnection::isFetched() { return (this->id > 0); }
 /**
  * Checks if this note folder is the current one
  */
-bool CloudConnection::isCurrent() {
-    return currentCloudConnection().getId() == id;
-}
+bool CloudConnection::isCurrent() { return currentCloudConnection().getId() == id; }
 
 /**
  * Migrate the connections settings to a CloudConnection object
@@ -337,10 +312,8 @@ bool CloudConnection::migrateToCloudConnections() {
     }
 
     QSettings settings;
-    const QString serverUrl =
-        settings.value(QStringLiteral("ownCloud/serverUrl")).toString();
-    const QString username =
-        settings.value(QStringLiteral("ownCloud/userName")).toString();
+    const QString serverUrl = settings.value(QStringLiteral("ownCloud/serverUrl")).toString();
+    const QString username = settings.value(QStringLiteral("ownCloud/userName")).toString();
     const QString password = CryptoService::instance()->decryptToString(
         settings.value(QStringLiteral("ownCloud/password")).toString());
 
@@ -381,10 +354,8 @@ QList<int> CloudConnection::fetchUsedCloudConnectionsIds() {
 
 QDebug operator<<(QDebug dbg, const CloudConnection &cloudConnection) {
     dbg.nospace() << "CloudConnection: <id>" << cloudConnection.id << " <name>"
-                  << cloudConnection.name << " <serverUrl>"
-                  << cloudConnection.serverUrl << " <username>"
-                  << cloudConnection.username << " <accountId>"
-                  << cloudConnection.accountId << " <priority>"
-                  << cloudConnection.priority;
+                  << cloudConnection.name << " <serverUrl>" << cloudConnection.serverUrl
+                  << " <username>" << cloudConnection.username << " <accountId>"
+                  << cloudConnection.accountId << " <priority>" << cloudConnection.priority;
     return dbg.space();
 }

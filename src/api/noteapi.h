@@ -19,8 +19,7 @@ class NoteApi : public QObject, public Note {
     Q_PROPERTY(QString relativeNoteFileDirPath READ relativeNoteSubFolderPath() CONSTANT)
     Q_PROPERTY(int noteSubFolderId READ getNoteSubFolderId() CONSTANT)
     Q_PROPERTY(QString noteText READ getNoteText() WRITE setNoteText())
-    Q_PROPERTY(QString decryptedNoteText READ fetchDecryptedNoteText()
-                   WRITE setDecryptedNoteText())
+    Q_PROPERTY(QString decryptedNoteText READ fetchDecryptedNoteText() WRITE setDecryptedNoteText())
     Q_PROPERTY(QDateTime fileCreated READ getFileCreated() CONSTANT)
     Q_PROPERTY(QDateTime fileLastModified READ getFileLastModified() CONSTANT)
     Q_PROPERTY(bool hasDirtyData READ getHasDirtyData() CONSTANT)
@@ -40,8 +39,7 @@ class NoteApi : public QObject, public Note {
     Q_INVOKABLE bool addTag(const QString &tagName);
     Q_INVOKABLE bool removeTag(QString tagName);
     Q_INVOKABLE bool renameNoteFile(const QString &newName);
-    Q_INVOKABLE QQmlListProperty<NoteApi> fetchAll(int limit = -1,
-                                                   int offset = -1);
+    Q_INVOKABLE QQmlListProperty<NoteApi> fetchAll(int limit = -1, int offset = -1);
     Q_INVOKABLE QString toMarkdownHtml(bool forExport = true);
     Q_INVOKABLE QString getFileURLFromFileName(const QString &localFileName);
     Q_INVOKABLE static bool allowDifferentFileName();

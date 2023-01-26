@@ -21,22 +21,19 @@
 #include <QTextDocument>
 #include <QTreeWidgetItem>
 
-NavigationWidget::NavigationWidget(QWidget *parent)
-    : QTreeWidget(parent) {
+NavigationWidget::NavigationWidget(QWidget *parent) : QTreeWidget(parent) {
     // we want to handle currentItemChanged because it also works with the keyboard
     QObject::connect(this, &NavigationWidget::currentItemChanged, this,
                      &NavigationWidget::onCurrentItemChanged);
     // we want to handle itemClicked because it allows to click on an item a 2nd time
-    QObject::connect(this, &NavigationWidget::itemClicked, this,
-                     &NavigationWidget::onItemClicked);
+    QObject::connect(this, &NavigationWidget::itemClicked, this, &NavigationWidget::onItemClicked);
 }
 
 /**
  * Emits the positionClicked signal to jump to the changed navigation item's
  * position
  */
-void NavigationWidget::onCurrentItemChanged(QTreeWidgetItem *current,
-                                            QTreeWidgetItem *previous) {
+void NavigationWidget::onCurrentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous)
 
     if (current == nullptr) {
@@ -72,14 +69,12 @@ void NavigationWidget::parse(const QTextDocument *document, int textCursorPositi
     doParse();
 }
 
-void NavigationWidget::doParse()
-{
+void NavigationWidget::doParse() {
     const auto nodes = parseDocument(_doc);
     buildNavTree(nodes);
 }
 
-QVector<Node> NavigationWidget::parseDocument(
-    const QTextDocument *const document) {
+QVector<Node> NavigationWidget::parseDocument(const QTextDocument *const document) {
     QVector<Node> nodes;
     for (int i = 0; i < document->blockCount(); ++i) {
         const QTextBlock block = document->findBlockByNumber(i);
@@ -89,8 +84,7 @@ QVector<Node> NavigationWidget::parseDocument(
         const int elementType = block.userState();
 
         // ignore all non headline types
-        if ((elementType < MarkdownHighlighter::H1) ||
-            (elementType > MarkdownHighlighter::H6)) {
+        if ((elementType < MarkdownHighlighter::H1) || (elementType > MarkdownHighlighter::H6)) {
             continue;
         }
         static const QRegularExpression re(QStringLiteral("^#+\\s+"));
@@ -105,8 +99,7 @@ QVector<Node> NavigationWidget::parseDocument(
     return nodes;
 }
 
-void NavigationWidget::selectItemForCursorPosition(int position)
-{
+void NavigationWidget::selectItemForCursorPosition(int position) {
     int itemIndex = findItemIndexforCursorPosition(position);
 
     QTreeWidgetItem *itemToSelect{nullptr};
@@ -120,21 +113,16 @@ void NavigationWidget::selectItemForCursorPosition(int position)
     setCurrentItem(itemToSelect);
 }
 
-
-int NavigationWidget::findItemIndexforCursorPosition(int position) const
-{
-    auto fwdIt = std::lower_bound(_navigationTreeNodes.begin(),
-                                  _navigationTreeNodes.end(),
-                                  position,
-                                  [](const Node &node, int position){return node.pos <= position;});
+int NavigationWidget::findItemIndexforCursorPosition(int position) const {
+    auto fwdIt =
+        std::lower_bound(_navigationTreeNodes.begin(), _navigationTreeNodes.end(), position,
+                         [](const Node &node, int position) { return node.pos <= position; });
 
     return fwdIt - std::begin(_navigationTreeNodes) - 1;
 }
 
 void NavigationWidget::buildNavTree(const QVector<Node> &nodes) {
-
-    if (_navigationTreeNodes == nodes)
-        return;
+    if (_navigationTreeNodes == nodes) return;
 
     _navigationTreeNodes = std::move(nodes);
 
@@ -148,9 +136,7 @@ void NavigationWidget::buildNavTree(const QVector<Node> &nodes) {
         auto *item = new QTreeWidgetItem();
         item->setText(0, node.text);
         item->setData(0, Qt::UserRole, pos);
-        item->setToolTip(
-            0,
-            tr("headline %1").arg(elementType - MarkdownHighlighter::H1 + 1));
+        item->setToolTip(0, tr("headline %1").arg(elementType - MarkdownHighlighter::H1 + 1));
 
         // attempt to find a suitable parent item for the element type
         QTreeWidgetItem *lastHigherItem = findSuitableParentItem(elementType);
@@ -174,8 +160,7 @@ void NavigationWidget::buildNavTree(const QVector<Node> &nodes) {
 /**
  * Attempts to find a suitable parent item for the element type
  */
-QTreeWidgetItem *NavigationWidget::findSuitableParentItem(
-    int elementType) const {
+QTreeWidgetItem *NavigationWidget::findSuitableParentItem(int elementType) const {
     --elementType;
     auto lastHigherItem = _lastHeadingItemList.value(elementType);
 

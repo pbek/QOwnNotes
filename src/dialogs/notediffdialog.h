@@ -23,8 +23,7 @@ class NoteDiffDialog : public MasterDialog {
         Cancel
     };
 
-    explicit NoteDiffDialog(QWidget *parent = nullptr,
-                            const QString &html = QString());
+    explicit NoteDiffDialog(QWidget *parent = nullptr, const QString &html = QString());
     ~NoteDiffDialog();
     int resultActionRole();
 

@@ -17,8 +17,7 @@ class ScriptRepositoryDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit ScriptRepositoryDialog(QWidget *parent = nullptr,
-                                    bool checkForUpdates = false);
+    explicit ScriptRepositoryDialog(QWidget *parent = nullptr, bool checkForUpdates = false);
     ~ScriptRepositoryDialog();
 
     Script getLastInstalledScript();

@@ -8,9 +8,7 @@
 
 #include "services/metricsservice.h"
 
-MasterDialog::MasterDialog(QWidget *parent) : QDialog(parent) {
-    installEventFilter(this);
-}
+MasterDialog::MasterDialog(QWidget *parent) : QDialog(parent) { installEventFilter(this); }
 
 void MasterDialog::closeEvent(QCloseEvent *event) {
     //    storeGeometrySettings();
@@ -46,9 +44,7 @@ bool MasterDialog::eventFilter(QObject *obj, QEvent *event) {
  *
  * @return settings key
  */
-const QString MasterDialog::getGeometrySettingKey() const {
-    return objectName() + "/geometry";
-}
+const QString MasterDialog::getGeometrySettingKey() const { return objectName() + "/geometry"; }
 
 void MasterDialog::show() {
     handleOpenDialog();
@@ -71,15 +67,13 @@ int MasterDialog::exec() {
 void MasterDialog::handleOpenDialog() {
     // restore the geometry of the dialog
     QSettings settings;
-    QByteArray geometryData =
-        settings.value(getGeometrySettingKey()).toByteArray();
+    QByteArray geometryData = settings.value(getGeometrySettingKey()).toByteArray();
 
     // restore the geometry if there is some data
     if (geometryData.length() > 0) {
         restoreGeometry(geometryData);
     } else {
-        const QRect screenGeometry =
-            QGuiApplication::primaryScreen()->availableGeometry();
+        const QRect screenGeometry = QGuiApplication::primaryScreen()->availableGeometry();
 
         // maximize the dialog window if it looks like that it doesn't fit on
         // the current screen
@@ -95,13 +89,11 @@ void MasterDialog::handleOpenDialog() {
     }
 }
 
-void MasterDialog::setIgnoreReturnKey(bool ignore) {
-    _ignoreReturnKey = ignore;
-}
+void MasterDialog::setIgnoreReturnKey(bool ignore) { _ignoreReturnKey = ignore; }
 
 void MasterDialog::keyPressEvent(QKeyEvent *keyEvent) {
-    if (_ignoreReturnKey && (keyEvent->key() == Qt::Key_Enter ||
-                             keyEvent->key() == Qt::Key_Return)) {
+    if (_ignoreReturnKey &&
+        (keyEvent->key() == Qt::Key_Enter || keyEvent->key() == Qt::Key_Return)) {
         return;
     }
 

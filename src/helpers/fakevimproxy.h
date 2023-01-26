@@ -26,14 +26,14 @@ class FakeVimProxy : public QObject {
 
     void highlightMatches(const QString &pattern);
 
-    void changeStatusMessage(const QString &contents, int cursorPos, int anchorPos, int messageLevel);
+    void changeStatusMessage(const QString &contents, int cursorPos, int anchorPos,
+                             int messageLevel);
 
     void changeExtraInformation(const QString &info);
 
     void updateStatusBar();
 
-    void handleExCommand(bool *handled,
-                         const FakeVim::Internal::ExCommand &cmd);
+    void handleExCommand(bool *handled, const FakeVim::Internal::ExCommand &cmd);
 
     void requestSetBlockSelection(const QTextCursor &tc);
 

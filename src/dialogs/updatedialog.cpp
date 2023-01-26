@@ -18,8 +18,7 @@
 
 #include "ui_updatedialog.h"
 
-UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml,
-                           const QString &releaseUrl,
+UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml, const QString &releaseUrl,
                            const QString &releaseVersionString)
     : MasterDialog(parent), ui(new Ui::UpdateDialog) {
     ui->setupUi(this);
@@ -33,8 +32,7 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml,
         "https://www.qownnotes.org/contributing/get-involved.html"));
 
     // inject some generic CSS styles
-    ui->changeLogEdit->document()->setDefaultStyleSheet(
-        Utils::Misc::genericCSS());
+    ui->changeLogEdit->document()->setDefaultStyleSheet(Utils::Misc::genericCSS());
     //    ui->label_4->setText("<style>" + Utils::Misc::genericCSS() +
     //                                 "</style>" + ui->label_4->text());
 
@@ -51,8 +49,8 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml,
     _updateButton = new QPushButton(tr("&Update"));
     _updateButton->setProperty("ActionRole", Update);
     _updateButton->setDefault(true);
-    _updateButton->setIcon(QIcon::fromTheme(
-        "svn-update", QIcon(":/icons/breeze-qownnotes/16x16/svn-update.svg")));
+    _updateButton->setIcon(
+        QIcon::fromTheme("svn-update", QIcon(":/icons/breeze-qownnotes/16x16/svn-update.svg")));
     ui->buttonBox->addButton(_updateButton, QDialogButtonBox::ActionRole);
 
 #ifdef Q_OS_LINUX
@@ -66,9 +64,8 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml,
     }
 #endif
 
-    button->setIcon(QIcon::fromTheme(
-        QStringLiteral("edit-download"),
-        QIcon(":/icons/breeze-qownnotes/16x16/edit-download.svg")));
+    button->setIcon(QIcon::fromTheme(QStringLiteral("edit-download"),
+                                     QIcon(":/icons/breeze-qownnotes/16x16/edit-download.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("&Skip version"));
@@ -83,16 +80,15 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml,
     button->setToolTip(tr("Don't show this dialog automatically"));
     button->setProperty("ActionRole", Disable);
     button->setDefault(false);
-    button->setIcon(QIcon::fromTheme(QStringLiteral("window-close"),
-                                     QIcon(":/icons/breeze-qownnotes/16x16/"
-                                           "window-close.svg")));
+    button->setIcon(
+        QIcon::fromTheme(QStringLiteral("window-close"), QIcon(":/icons/breeze-qownnotes/16x16/"
+                                                               "window-close.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("&Cancel"), this);
     button->setProperty("ActionRole", Cancel);
-    button->setIcon(QIcon::fromTheme(
-        QStringLiteral("dialog-cancel"),
-        QIcon(":/icons/breeze-qownnotes/16x16/dialog-cancel.svg")));
+    button->setIcon(QIcon::fromTheme(QStringLiteral("dialog-cancel"),
+                                     QIcon(":/icons/breeze-qownnotes/16x16/dialog-cancel.svg")));
     button->setDefault(false);
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
@@ -129,15 +125,13 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
     switch (actionRole) {
         case Skip: {
             QSettings settings;
-            settings.setValue(QStringLiteral("skipVersion"),
-                              this->releaseVersionString);
+            settings.setValue(QStringLiteral("skipVersion"), this->releaseVersionString);
             qDebug() << "skip version";
             break;
         }
         case Disable: {
             QSettings settings;
-            settings.setValue(QStringLiteral("disableAutomaticUpdateDialog"),
-                              true);
+            settings.setValue(QStringLiteral("disableAutomaticUpdateDialog"), true);
             qDebug() << "disable dialog";
             break;
         }
@@ -145,8 +139,7 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
             QString release = qApp->property("release").toString();
             // if the release was build by the CI systems download the new
             // release
-            if ((release == QLatin1String("Travis CI")) ||
-                (release == QLatin1String("AppVeyor"))) {
+            if ((release == QLatin1String("Travis CI")) || (release == QLatin1String("AppVeyor"))) {
                 // download the new release
                 QDesktopServices::openUrl(QUrl(releaseUrl.toUtf8()));
             } else if ((release == QLatin1String("AppImage"))) {
@@ -154,8 +147,8 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
                 QDesktopServices::openUrl(QUrl(releaseUrl.toUtf8()));
             } else {
                 // open the installation page
-                QDesktopServices::openUrl(QUrl(
-                    QStringLiteral("https://www.qownnotes.org/installation")));
+                QDesktopServices::openUrl(
+                    QUrl(QStringLiteral("https://www.qownnotes.org/installation")));
             }
             break;
         }
@@ -184,17 +177,14 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
 
 #if (QT_VERSION < QT_VERSION_CHECK(5, 9, 0))
             // we really need redirects for GitHub urls!
-            networkRequest.setAttribute(
-                QNetworkRequest::FollowRedirectsAttribute, true);
+            networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
 #else
-            networkRequest.setAttribute(
-                QNetworkRequest::RedirectPolicyAttribute, true);
+            networkRequest.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
 #endif
 
 #if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
             // try to ensure the network is accessible
-            _networkManager->setNetworkAccessible(
-                QNetworkAccessManager::Accessible);
+            _networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
 #endif
 
             QNetworkReply *reply = _networkManager->get(networkRequest);
@@ -217,8 +207,7 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
 /**
  * Shows the download progress
  */
-void UpdateDialog::releaseDownloadProgress(qint64 bytesReceived,
-                                           qint64 bytesTotal) {
+void UpdateDialog::releaseDownloadProgress(qint64 bytesReceived, qint64 bytesTotal) {
     ui->downloadProgressBar->setMaximum(static_cast<int>(bytesTotal));
     ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived));
 }
@@ -243,9 +232,8 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
     qDebug() << __func__ << " - 'data.size': " << data.size();
 
     if (reply->error() != QNetworkReply::NoError) {
-        QMessageBox::critical(
-            0, tr("Download error"),
-            tr("Error while downloading:\n%1").arg(reply->errorString()));
+        QMessageBox::critical(0, tr("Download error"),
+                              tr("Error while downloading:\n%1").arg(reply->errorString()));
 
         qWarning() << tr("network error: %1").arg(reply->errorString());
         _updateButton->setDisabled(false);
@@ -261,17 +249,16 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
     QString suffix = "download";
 #endif
 
-    QTemporaryFile *tempFile =
-        new QTemporaryFile(QDir::tempPath() + "/QOwnNotes-XXXXXX." + suffix);
+    QTemporaryFile *tempFile = new QTemporaryFile(QDir::tempPath() + "/QOwnNotes-XXXXXX." + suffix);
 
     // we want to keep the file to be used in the update process
     tempFile->setAutoRemove(false);
 
     // get a temporary file
     if (!tempFile->open()) {
-        QMessageBox::critical(0, tr("File error"),
-                              tr("Could not open temporary file:\n%1")
-                                  .arg(tempFile->errorString()));
+        QMessageBox::critical(
+            0, tr("File error"),
+            tr("Could not open temporary file:\n%1").arg(tempFile->errorString()));
         return;
     }
 
@@ -289,9 +276,8 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
     QFile file(filePath);
 
     if (!file.open(QIODevice::WriteOnly)) {
-        QMessageBox::critical(
-            0, tr("File error"),
-            tr("Could not store downloaded file:\n%1").arg(file.errorString()));
+        QMessageBox::critical(0, tr("File error"),
+                              tr("Could not store downloaded file:\n%1").arg(file.errorString()));
         return;
     }
 
@@ -337,14 +323,13 @@ bool UpdateDialog::initializeMacOSUpdateProcess(const QString &releaseUrl) {
     QString applicationsPath = QStringLiteral("/Applications");
 
     if (applicationDirPath.endsWith(appPathPart)) {
-        applicationsPath = Utils::Misc::removeIfEndsWith(
-            std::move(applicationDirPath), appPathPart);
+        applicationsPath =
+            Utils::Misc::removeIfEndsWith(std::move(applicationDirPath), appPathPart);
     }
 
     if (Utils::Gui::question(this, tr("Proceed with update"),
                              tr("Do you want to update and restart QOwnNotes?"),
-                             QStringLiteral("update-and-restart")) !=
-        QMessageBox::Yes) {
+                             QStringLiteral("update-and-restart")) != QMessageBox::Yes) {
         return false;
     }
 
@@ -357,9 +342,8 @@ bool UpdateDialog::initializeMacOSUpdateProcess(const QString &releaseUrl) {
     QFile f(updaterPath);
 
     if (!f.exists()) {
-        QMessageBox::critical(
-            0, tr("Error"),
-            tr("Could not find updater file:\n%1").arg(f.fileName()));
+        QMessageBox::critical(0, tr("Error"),
+                              tr("Could not find updater file:\n%1").arg(f.fileName()));
         return false;
     }
 
@@ -368,25 +352,23 @@ bool UpdateDialog::initializeMacOSUpdateProcess(const QString &releaseUrl) {
     QTextStream ts(&f);
     QString scriptContent = ts.readAll();
     f.close();
-    scriptContent.replace(QLatin1String("\"$QOWNNOTES_RELEASE_URL\""),
-                          "\"" + releaseUrl + "\"");
-    scriptContent.replace(
-        QLatin1String("\"$QOWNNOTES_APPLICATIONS_PATH\""),
-        "\"" + QDir::toNativeSeparators(applicationsPath) + "\"");
+    scriptContent.replace(QLatin1String("\"$QOWNNOTES_RELEASE_URL\""), "\"" + releaseUrl + "\"");
+    scriptContent.replace(QLatin1String("\"$QOWNNOTES_APPLICATIONS_PATH\""),
+                          "\"" + QDir::toNativeSeparators(applicationsPath) + "\"");
 
     // we need a temporary script file with hardcoded parameters because some
     // users were not able to get parameters via the system environment
-    QTemporaryFile *tempFile = new QTemporaryFile(
-        QDir::tempPath() + "/QOwnNotes-Updater-XXXXXX.command");
+    QTemporaryFile *tempFile =
+        new QTemporaryFile(QDir::tempPath() + "/QOwnNotes-Updater-XXXXXX.command");
 
     // we want to keep the file to be used in the update process
     tempFile->setAutoRemove(false);
 
     // get a temporary file
     if (!tempFile->open()) {
-        QMessageBox::critical(0, tr("File error"),
-                              tr("Could not open temporary file:\n%1")
-                                  .arg(tempFile->errorString()));
+        QMessageBox::critical(
+            0, tr("File error"),
+            tr("Could not open temporary file:\n%1").arg(tempFile->errorString()));
         return false;
     }
 
@@ -394,8 +376,7 @@ bool UpdateDialog::initializeMacOSUpdateProcess(const QString &releaseUrl) {
     tempFile->write(scriptContent.toLatin1());
 
     // setting executable permissions to the updater script
-    tempFile->setPermissions(QFile::ExeUser | QFile::ReadUser |
-                             QFile::WriteUser);
+    tempFile->setPermissions(QFile::ExeUser | QFile::ReadUser | QFile::WriteUser);
 
     // file->fileName() only holds a value after file->open()
     QString updaterFilePath = tempFile->fileName();
@@ -440,9 +421,9 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
 
     if (!fileInfo.isWritable()) {
         QMessageBox::critical(0, tr("Permission error"),
-          tr("Your QOwnNotes executable '%1' is not writeable! It must be "
-             "writeable by the current user in order to be updated.")
-              .arg(appPath));
+                              tr("Your QOwnNotes executable '%1' is not writeable! It must be "
+                                 "writeable by the current user in order to be updated.")
+                                  .arg(appPath));
 
         return false;
     }
@@ -452,9 +433,9 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
     // make the new AppImage executable
     if (!updateFile.setPermissions(updateFile.permissions() | QFileDevice::ExeOwner)) {
         QMessageBox::critical(0, tr("Permission error"),
-          tr("The temporary file '%1' could not be made executable! "
-            "You need to replace '%2' yourself.")
-              .arg(filePath, appPath));
+                              tr("The temporary file '%1' could not be made executable! "
+                                 "You need to replace '%2' yourself.")
+                                  .arg(filePath, appPath));
 
         return false;
     }
@@ -462,9 +443,9 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
     // remove the current binary
     if (!file.remove()) {
         QMessageBox::critical(0, tr("File error"),
-          tr("Your old QOwnNotes executable '%1' could not be removed! "
-                "You need to replace it yourself with '%2'.")
-              .arg(appPath, filePath));
+                              tr("Your old QOwnNotes executable '%1' could not be removed! "
+                                 "You need to replace it yourself with '%2'.")
+                                  .arg(appPath, filePath));
 
         return false;
     }
@@ -472,9 +453,9 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
     // rename the new AppImage to the path of the current binary
     if (!updateFile.rename(appPath)) {
         QMessageBox::critical(0, tr("File error"),
-          tr("Your old QOwnNotes executable '%1' could not be replaced "
-                "by the new file '%2'! You need to replace it yourself.")
-              .arg(appPath, filePath));
+                              tr("Your old QOwnNotes executable '%1' could not be replaced "
+                                 "by the new file '%2'! You need to replace it yourself.")
+                                  .arg(appPath, filePath));
 
         return false;
     }
@@ -513,75 +494,67 @@ bool UpdateDialog::initializeWindowsUpdateProcess(const QString &filePath) {
     QString updaterPath = pathPrefix + "-updater.bat";
     QString unzipPath = pathPrefix + "-unzip.exe";
 
-    QFile updaterSourceFile(QCoreApplication::applicationDirPath() +
-                            "/update.bat");
-    QFile unzipSourceFile(QCoreApplication::applicationDirPath() +
-                          "/unzip.exe");
+    QFile updaterSourceFile(QCoreApplication::applicationDirPath() + "/update.bat");
+    QFile unzipSourceFile(QCoreApplication::applicationDirPath() + "/unzip.exe");
 
     // check if updater script exists
     if (!updaterSourceFile.exists()) {
-        QMessageBox::critical(0, tr("Error"),
-                              tr("Updater script '%1' doesn't exist!")
-                                  .arg(updaterSourceFile.fileName()));
+        QMessageBox::critical(
+            0, tr("Error"),
+            tr("Updater script '%1' doesn't exist!").arg(updaterSourceFile.fileName()));
         return false;
     }
 
     // check if unzip executable exists
     if (!unzipSourceFile.exists()) {
-        QMessageBox::critical(0, tr("Error"),
-                              tr("Updater unzip executable '%1' doesn't exist!")
-                                  .arg(unzipSourceFile.fileName()));
+        QMessageBox::critical(
+            0, tr("Error"),
+            tr("Updater unzip executable '%1' doesn't exist!").arg(unzipSourceFile.fileName()));
         return false;
     }
 
     // copy updater script
     if (!updaterSourceFile.copy(updaterPath)) {
-        QMessageBox::critical(
-            0, tr("Error"),
-            tr("Could not copy updater script '%1' to '%2'!")
-                .arg(updaterSourceFile.fileName(), unzipPath));
+        QMessageBox::critical(0, tr("Error"),
+                              tr("Could not copy updater script '%1' to '%2'!")
+                                  .arg(updaterSourceFile.fileName(), unzipPath));
         return false;
     }
 
     // copy unzip executable script
     if (!unzipSourceFile.copy(unzipPath)) {
-        QMessageBox::critical(
-            0, tr("Error"),
-            tr("Could not copy updater script '%1' to '%2'!")
-                .arg(updaterSourceFile.fileName(), unzipPath));
+        QMessageBox::critical(0, tr("Error"),
+                              tr("Could not copy updater script '%1' to '%2'!")
+                                  .arg(updaterSourceFile.fileName(), unzipPath));
         return false;
     }
 
     // check if updater script exists in temporary folder
     QFile updaterFile(updaterPath);
     if (!updaterFile.exists()) {
-        QMessageBox::critical(
-            0, tr("Error"),
-            tr("Couldn't find updater script: %1").arg(updaterPath));
+        QMessageBox::critical(0, tr("Error"),
+                              tr("Couldn't find updater script: %1").arg(updaterPath));
         return false;
     }
 
     // check if unzip executable exists in temporary folder
     QFile unzipFile(unzipPath);
     if (!unzipFile.exists()) {
-        QMessageBox::critical(
-            0, tr("Error"),
-            tr("Couldn't find unzip executable: %1").arg(unzipPath));
+        QMessageBox::critical(0, tr("Error"),
+                              tr("Couldn't find unzip executable: %1").arg(unzipPath));
         return false;
     }
 
-    if (Utils::Gui::question(
-            this, tr("Proceed with update"),
-            tr("The download is now finished. Do you want to update and "
-               "restart QOwnNotes?"),
-            QStringLiteral("update-and-restart")) != QMessageBox::Yes) {
+    if (Utils::Gui::question(this, tr("Proceed with update"),
+                             tr("The download is now finished. Do you want to update and "
+                                "restart QOwnNotes?"),
+                             QStringLiteral("update-and-restart")) != QMessageBox::Yes) {
         return false;
     }
 
     QStringList parameters(QStringList()
                            << QDir::toNativeSeparators(filePath)
-                           << QDir::toNativeSeparators(
-                                  QCoreApplication::applicationDirPath())
+                           << QDir::toNativeSeparators(QCoreApplication::applicationDirPath())
                            << QDir::toNativeSeparators(unzipPath));
 
     if (Utils::Misc::isInPortableMode()) {
@@ -600,9 +573,7 @@ bool UpdateDialog::initializeWindowsUpdateProcess(const QString &filePath) {
 /**
  * Checks if the update dialog is open
  */
-bool UpdateDialog::isUpdateDialogOpen() {
-    return qApp->property("isUpdateDialogOpen").toBool();
-}
+bool UpdateDialog::isUpdateDialogOpen() { return qApp->property("isUpdateDialogOpen").toBool(); }
 
 /**
  * Sets if the update dialog is open

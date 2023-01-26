@@ -45,17 +45,13 @@ int CalendarItem::getPriority() { return this->priority; }
 
 bool CalendarItem::getHasDirtyData() { return this->hasDirtyData; }
 
-QString CalendarItem::getLastModifiedString() {
-    return this->lastModifiedString;
-}
+QString CalendarItem::getLastModifiedString() { return this->lastModifiedString; }
 
 QString CalendarItem::getETag() { return this->etag; }
 
 QDateTime CalendarItem::getAlarmDate() { return this->alarmDate; }
 
-void CalendarItem::setLastModifiedString(const QString &text) {
-    this->lastModifiedString = text;
-}
+void CalendarItem::setLastModifiedString(const QString &text) { this->lastModifiedString = text; }
 
 void CalendarItem::setETag(const QString &text) { this->etag = text; }
 
@@ -65,29 +61,19 @@ void CalendarItem::setUrl(const QUrl &url) { this->url = url.toString(); }
 
 void CalendarItem::setCalendar(const QString &text) { this->calendar = text; }
 
-void CalendarItem::setDescription(const QString &text) {
-    this->description = text;
-}
+void CalendarItem::setDescription(const QString &text) { this->description = text; }
 
 void CalendarItem::setICSData(const QString &text) { this->icsData = text; }
 
 void CalendarItem::setUid(const QString &text) { this->uid = text; }
 
-void CalendarItem::setRelatedUid(const QString &text) {
-    this->relatedUid = text;
-}
+void CalendarItem::setRelatedUid(const QString &text) { this->relatedUid = text; }
 
-void CalendarItem::setCreated(const QDateTime &dateTime) {
-    this->created = dateTime;
-}
+void CalendarItem::setCreated(const QDateTime &dateTime) { this->created = dateTime; }
 
-void CalendarItem::setModified(const QDateTime &dateTime) {
-    this->modified = dateTime;
-}
+void CalendarItem::setModified(const QDateTime &dateTime) { this->modified = dateTime; }
 
-void CalendarItem::setAlarmDate(const QDateTime &dateTime) {
-    this->alarmDate = dateTime;
-}
+void CalendarItem::setAlarmDate(const QDateTime &dateTime) { this->alarmDate = dateTime; }
 
 void CalendarItem::setPriority(int value) { this->priority = value; }
 
@@ -107,9 +93,9 @@ void CalendarItem::updateCompleted(bool value) {
  * translated
  * @return
  */
-bool CalendarItem::addCalendarItemForRequest(
-    const QString &calendar, const QUrl &url, const QString &etag,
-    const QString &lastModifiedString) {
+bool CalendarItem::addCalendarItemForRequest(const QString &calendar, const QUrl &url,
+                                             const QString &etag,
+                                             const QString &lastModifiedString) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
@@ -120,8 +106,7 @@ bool CalendarItem::addCalendarItemForRequest(
     query.bindValue(QStringLiteral(":calendar"), calendar);
     query.bindValue(QStringLiteral(":url"), url);
     query.bindValue(QStringLiteral(":etag"), etag);
-    query.bindValue(QStringLiteral(":last_modified_string"),
-                    lastModifiedString);
+    query.bindValue(QStringLiteral(":last_modified_string"), lastModifiedString);
     return query.exec();
 }
 
@@ -157,8 +142,7 @@ CalendarItem CalendarItem::fetch(int id) {
     return calendarItem;
 }
 
-CalendarItem CalendarItem::fetchByUrlAndCalendar(const QString &url,
-                                                 const QString &calendar) {
+CalendarItem CalendarItem::fetchByUrlAndCalendar(const QString &url, const QString &calendar) {
     CalendarItem calendarItem;
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
@@ -183,8 +167,7 @@ CalendarItem CalendarItem::fetchByUid(const QString &uid) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
-    query.prepare(
-        QStringLiteral("SELECT * FROM calendarItem WHERE uid = :uid"));
+    query.prepare(QStringLiteral("SELECT * FROM calendarItem WHERE uid = :uid"));
     query.bindValue(QStringLiteral(":uid"), uid);
 
     if (!query.exec()) {
@@ -201,8 +184,7 @@ CalendarItem CalendarItem::fetchByUrl(const QUrl &url) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
-    query.prepare(
-        QStringLiteral("SELECT * FROM calendarItem WHERE url = :url"));
+    query.prepare(QStringLiteral("SELECT * FROM calendarItem WHERE url = :url"));
     query.bindValue(QStringLiteral(":url"), url);
 
     if (!query.exec()) {
@@ -257,8 +239,7 @@ bool CalendarItem::fillFromQuery(const QSqlQuery &query) {
     this->summary = query.value(QStringLiteral("summary")).toString();
     this->url = query.value(QStringLiteral("url")).toString();
     this->description = query.value(QStringLiteral("description")).toString();
-    this->hasDirtyData =
-        query.value(QStringLiteral("has_dirty_data")).toInt() == 1;
+    this->hasDirtyData = query.value(QStringLiteral("has_dirty_data")).toInt() == 1;
     this->completed = query.value(QStringLiteral("completed")).toInt() == 1;
     this->priority = query.value(QStringLiteral("priority")).toInt();
     this->uid = query.value(QStringLiteral("uid")).toString();
@@ -266,13 +247,11 @@ bool CalendarItem::fillFromQuery(const QSqlQuery &query) {
     this->calendar = query.value(QStringLiteral("calendar")).toString();
     this->icsData = query.value(QStringLiteral("ics_data")).toString();
     this->etag = query.value(QStringLiteral("etag")).toString();
-    this->lastModifiedString =
-        query.value(QStringLiteral("last_modified_string")).toString();
+    this->lastModifiedString = query.value(QStringLiteral("last_modified_string")).toString();
     this->alarmDate = query.value(QStringLiteral("alarm_date")).toDateTime();
     this->created = query.value(QStringLiteral("created")).toDateTime();
     this->modified = query.value(QStringLiteral("modified")).toDateTime();
-    this->completedDate =
-        query.value(QStringLiteral("completed_date")).toDateTime();
+    this->completedDate = query.value(QStringLiteral("completed_date")).toDateTime();
     this->sortPriority = query.value(QStringLiteral("sort_priority")).toInt();
 
     return true;
@@ -391,8 +370,7 @@ QList<QUrl> CalendarItem::fetchAllUrlsByCalendar(const QString &calendar) {
     QSqlQuery query(db);
     QList<QUrl> urlList;
 
-    query.prepare(QStringLiteral(
-        "SELECT url FROM calendarItem WHERE calendar = :calendar"));
+    query.prepare(QStringLiteral("SELECT url FROM calendarItem WHERE calendar = :calendar"));
     query.bindValue(QStringLiteral(":calendar"), calendar);
 
     if (!query.exec()) {
@@ -434,8 +412,7 @@ QList<CalendarItem> CalendarItem::search(const QString &text) {
 /**
  * Returns a list of UIDs for the search in the TodoDialog
  */
-QList<QString> CalendarItem::searchAsUidList(const QString &text,
-                                             const QString &calendar) {
+QList<QString> CalendarItem::searchAsUidList(const QString &text, const QString &calendar) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
     QList<QString> resultList;
@@ -522,16 +499,14 @@ bool CalendarItem::store() {
     query.bindValue(QStringLiteral(":summary"), this->summary);
     query.bindValue(QStringLiteral(":url"), this->url);
     query.bindValue(QStringLiteral(":description"), this->description);
-    query.bindValue(QStringLiteral(":has_dirty_data"),
-                    this->hasDirtyData ? 1 : 0);
+    query.bindValue(QStringLiteral(":has_dirty_data"), this->hasDirtyData ? 1 : 0);
     query.bindValue(QStringLiteral(":completed"), this->completed ? 1 : 0);
     query.bindValue(QStringLiteral(":calendar"), this->calendar);
     query.bindValue(QStringLiteral(":uid"), this->uid);
     query.bindValue(QStringLiteral(":related_uid"), this->relatedUid);
     query.bindValue(QStringLiteral(":ics_data"), this->icsData);
     query.bindValue(QStringLiteral(":etag"), this->etag);
-    query.bindValue(QStringLiteral(":last_modified_string"),
-                    this->lastModifiedString);
+    query.bindValue(QStringLiteral(":last_modified_string"), this->lastModifiedString);
     query.bindValue(QStringLiteral(":alarm_date"), this->alarmDate);
     query.bindValue(QStringLiteral(":priority"), this->priority);
     query.bindValue(QStringLiteral(":created"), this->created);
@@ -570,18 +545,14 @@ QString CalendarItem::generateNewICSData() {
     icsDataHash[QStringLiteral("DESCRIPTION")] = description;
     icsDataHash[QStringLiteral("UID")] = uid;
     icsDataHash[QStringLiteral("PRIORITY")] = QString::number(priority);
-    icsDataHash[QStringLiteral("PERCENT-COMPLETE")] =
-        QString::number(completed ? 100 : 0);
-    icsDataHash[QStringLiteral("STATUS")] =
-        completed ? "COMPLETED" : "NEEDS-ACTION";
+    icsDataHash[QStringLiteral("PERCENT-COMPLETE")] = QString::number(completed ? 100 : 0);
+    icsDataHash[QStringLiteral("STATUS")] = completed ? "COMPLETED" : "NEEDS-ACTION";
     //    icsDataHash["CREATED"] =
     //    created.toUTC().toString(ICS_DATETIME_FORMAT);
     //    icsDataHash["LAST-MODIFIED"] =
     //            modified.toUTC().toString(ICS_DATETIME_FORMAT);
-    icsDataHash[QStringLiteral("CREATED")] =
-        created.toString(ICS_DATETIME_FORMAT);
-    icsDataHash[QStringLiteral("LAST-MODIFIED")] =
-        modified.toString(ICS_DATETIME_FORMAT);
+    icsDataHash[QStringLiteral("CREATED")] = created.toString(ICS_DATETIME_FORMAT);
+    icsDataHash[QStringLiteral("LAST-MODIFIED")] = modified.toString(ICS_DATETIME_FORMAT);
 
     if (!relatedUid.isEmpty()) {
         icsDataHash[QStringLiteral("RELATED-TO")] = relatedUid;
@@ -590,8 +561,7 @@ QString CalendarItem::generateNewICSData() {
     if (completed) {
         //        icsDataHash["COMPLETED"] =
         //                completedDate.toUTC().toString(ICS_DATETIME_FORMAT);
-        icsDataHash[QStringLiteral("COMPLETED")] =
-            completedDate.toString(ICS_DATETIME_FORMAT);
+        icsDataHash[QStringLiteral("COMPLETED")] = completedDate.toString(ICS_DATETIME_FORMAT);
     } else {
         // remove the "COMPLETED" ics data attribute if the task item is not
         // completed
@@ -603,8 +573,7 @@ QString CalendarItem::generateNewICSData() {
 
     // set the alarm if needed
     if (alarmDate.isValid()) {
-        icsDataHash[QStringLiteral("DUE")] =
-            alarmDate.toString(ICS_DATETIME_FORMAT);
+        icsDataHash[QStringLiteral("DUE")] = alarmDate.toString(ICS_DATETIME_FORMAT);
 
         // Nextcloud seems to have problem with the VALARM block
         //        addVALARMBlockToICS();
@@ -701,8 +670,7 @@ bool CalendarItem::deleteAllByCalendar(const QString &calendar) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
-    query.prepare(
-        QStringLiteral("DELETE FROM calendarItem WHERE calendar = :calendar"));
+    query.prepare(QStringLiteral("DELETE FROM calendarItem WHERE calendar = :calendar"));
     query.bindValue(QStringLiteral(":calendar"), calendar);
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -740,20 +708,17 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
                   ? icsDataHash[QStringLiteral("SUMMARY")].trimmed()
                   : QString();
     completed = icsDataHash.contains(QStringLiteral("PERCENT-COMPLETE"))
-                    ? icsDataHash[QStringLiteral("PERCENT-COMPLETE")] ==
-                          QLatin1String("100")
+                    ? icsDataHash[QStringLiteral("PERCENT-COMPLETE")] == QLatin1String("100")
                     : false;
 
     // also take the completed status into account
     if (!completed) {
-        completed =
-            icsDataHash.contains(QStringLiteral("STATUS")) &&
-            icsDataHash[QStringLiteral("STATUS")] == QLatin1String("COMPLETED");
+        completed = icsDataHash.contains(QStringLiteral("STATUS")) &&
+                    icsDataHash[QStringLiteral("STATUS")] == QLatin1String("COMPLETED");
     }
 
-    uid = icsDataHash.contains(QStringLiteral("UID"))
-              ? icsDataHash[QStringLiteral("UID")]
-              : QString();
+    uid = icsDataHash.contains(QStringLiteral("UID")) ? icsDataHash[QStringLiteral("UID")]
+                                                      : QString();
     relatedUid = icsDataHash.contains(QStringLiteral("RELATED-TO"))
                      ? icsDataHash[QStringLiteral("RELATED-TO")]
                      : QString();
@@ -764,23 +729,23 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
                    ? icsDataHash[QStringLiteral("PRIORITY")].toInt()
                    : 0;
     created = icsDataHash.contains(QStringLiteral("CREATED"))
-        ? getDateTimeFromString(icsDataHash[QStringLiteral("CREATED")])
-        : QDateTime::currentDateTime();
+                  ? getDateTimeFromString(icsDataHash[QStringLiteral("CREATED")])
+                  : QDateTime::currentDateTime();
     modified = icsDataHash.contains(QStringLiteral("LAST-MODIFIED"))
-        ? getDateTimeFromString(icsDataHash[QStringLiteral("LAST-MODIFIED")])
-        : QDateTime::currentDateTime();
+                   ? getDateTimeFromString(icsDataHash[QStringLiteral("LAST-MODIFIED")])
+                   : QDateTime::currentDateTime();
 
     // workaround to check if we have a alarm description, so that on empty
     // descriptions the alarm description isn't taken
-    QString alarmDescription = getICSDataAttributeInBlock(
-        QStringLiteral("VALARM"), QStringLiteral("DESCRIPTION"));
+    QString alarmDescription =
+        getICSDataAttributeInBlock(QStringLiteral("VALARM"), QStringLiteral("DESCRIPTION"));
     if ((!description.isEmpty()) && (!alarmDescription.isEmpty()) &&
         (description == alarmDescription)) {
         description = QString();
     }
 
-    QString alarmDateString = getICSDataAttributeInBlock(
-        QStringLiteral("VALARM"), QStringLiteral("TRIGGER;VALUE=DATE-TIME"));
+    QString alarmDateString = getICSDataAttributeInBlock(QStringLiteral("VALARM"),
+                                                         QStringLiteral("TRIGGER;VALUE=DATE-TIME"));
 
     // Nextcloud seems to store the reminder date in the DUE field
     alarmDate = icsDataHash.contains(QStringLiteral("DUE"))
@@ -807,8 +772,7 @@ QDateTime CalendarItem::getDateTimeFromString(const QString &dateString) {
     // see: https://github.com/pbek/QOwnNotes/issues/1966
     if (!dateTime.isValid()) {
         dateTime = QDateTime::fromString(dateString, ICS_DATETIME_FORMAT_UTC);
-        dateTime = QDateTime(dateTime.date(), dateTime.time(), Qt::UTC)
-                       .toLocalTime();
+        dateTime = QDateTime(dateTime.date(), dateTime.time(), Qt::UTC).toLocalTime();
     }
 
     return dateTime;
@@ -899,8 +863,7 @@ bool CalendarItem::addVALARMBlockToICS() {
         QString value = icsDataHash.value(key);
 
         // look for the VTODO begin block
-        if (key.startsWith(QLatin1String("BEGIN")) &&
-            (value == QLatin1String("VTODO"))) {
+        if (key.startsWith(QLatin1String("BEGIN")) && (value == QLatin1String("VTODO"))) {
             foundBegin = true;
         }
 
@@ -916,18 +879,15 @@ bool CalendarItem::addVALARMBlockToICS() {
             icsDataHashCopy[addKey] = QLatin1String("VALARM");
             icsDataKeyListCopy.insert(i, addKey);
 
-            addKey =
-                findFreeHashKey(&icsDataHashCopy, QStringLiteral("ACTION"));
+            addKey = findFreeHashKey(&icsDataHashCopy, QStringLiteral("ACTION"));
             icsDataHashCopy[addKey] = QLatin1String("DISPLAY");
             icsDataKeyListCopy.insert(++i, addKey);
 
-            addKey = findFreeHashKey(&icsDataHashCopy,
-                                     QStringLiteral("DESCRIPTION"));
+            addKey = findFreeHashKey(&icsDataHashCopy, QStringLiteral("DESCRIPTION"));
             icsDataHashCopy[addKey] = QLatin1String("Reminder");
             icsDataKeyListCopy.insert(++i, addKey);
 
-            addKey = findFreeHashKey(&icsDataHashCopy,
-                                     QStringLiteral("TRIGGER;VALUE=DATE-TIME"));
+            addKey = findFreeHashKey(&icsDataHashCopy, QStringLiteral("TRIGGER;VALUE=DATE-TIME"));
             icsDataHashCopy[addKey] = alarmDateString;
             icsDataKeyListCopy.insert(++i, addKey);
 
@@ -1023,8 +983,7 @@ void CalendarItem::generateICSDataHash() {
  * @param number
  * @return
  */
-QString CalendarItem::findFreeHashKey(QHash<QString, QString> *hash,
-                                      QString key, int number) {
+QString CalendarItem::findFreeHashKey(QHash<QString, QString> *hash, QString key, int number) {
     // give up after 1000 tries
     if (number >= 1000) {
         return key;
@@ -1069,16 +1028,14 @@ QString CalendarItem::decodeICSDataLine(QString line) {
     return line;
 }
 
-CalendarItem CalendarItem::createNewTodoItem(const QString &summary,
-                                             const QString &calendar,
+CalendarItem CalendarItem::createNewTodoItem(const QString &summary, const QString &calendar,
                                              const QString &relatedUid) {
     QString uuidString = Utils::Misc::createUuidString();
     CalendarItem calItem;
     calItem.setSummary(summary);
     calItem.setCalendar(calendar);
     calItem.setRelatedUid(relatedUid);
-    calItem.setUrl(
-        QUrl(getCurrentCalendarUrl() + "qownnotes-" + uuidString + ".ics"));
+    calItem.setUrl(QUrl(getCurrentCalendarUrl() + "qownnotes-" + uuidString + ".ics"));
     calItem.setICSData(
         "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:ownCloud Calendar"
         "\nCALSCALE:GREGORIAN\nBEGIN:VTODO\nEND:VTODO"
@@ -1093,8 +1050,7 @@ CalendarItem CalendarItem::createNewTodoItem(const QString &summary,
 
     if (calItem.store()) {
         qDebug() << __func__ << " - 'calItem': " << calItem;
-        qDebug() << __func__
-                 << " - 'calItem.getICSData()': " << calItem.getICSData();
+        qDebug() << __func__ << " - 'calItem.getICSData()': " << calItem.getICSData();
     }
 
     return calItem;
@@ -1109,17 +1065,13 @@ int CalendarItem::getCurrentCalendarIndex() {
     QSettings settings;
 
     QString todoListSelectorSelectedItem =
-        settings
-            .value(QStringLiteral("TodoDialog/todoListSelectorSelectedItem"))
-            .toString();
+        settings.value(QStringLiteral("TodoDialog/todoListSelectorSelectedItem")).toString();
     if (!todoListSelectorSelectedItem.isEmpty()) {
         QStringList todoCalendarEnabledList =
-            settings.value(QStringLiteral("ownCloud/todoCalendarEnabledList"))
-                .toStringList();
+            settings.value(QStringLiteral("ownCloud/todoCalendarEnabledList")).toStringList();
 
         // search for the text in the todoCalendarEnabledList
-        int index =
-            todoCalendarEnabledList.indexOf(todoListSelectorSelectedItem);
+        int index = todoCalendarEnabledList.indexOf(todoListSelectorSelectedItem);
 
         if (index >= 0) {
             // return the index of the task list selector if we found it
@@ -1141,9 +1093,7 @@ QString CalendarItem::getCurrentCalendarUrl() {
 
     if (index >= 0) {
         QStringList todoCalendarEnabledUrlList =
-            settings
-                .value(QStringLiteral("ownCloud/todoCalendarEnabledUrlList"))
-                .toStringList();
+            settings.value(QStringLiteral("ownCloud/todoCalendarEnabledUrlList")).toStringList();
         return todoCalendarEnabledUrlList.at(index);
     }
 
@@ -1163,9 +1113,8 @@ void CalendarItem::alertTodoReminders() {
     QListIterator<CalendarItem> itr(calendarItemList);
     while (itr.hasNext()) {
         CalendarItem calItem = itr.next();
-        QMessageBox::information(
-            nullptr, QStringLiteral("Reminder"),
-            "Reminder: <strong>" + calItem.getSummary() + "</strong>");
+        QMessageBox::information(nullptr, QStringLiteral("Reminder"),
+                                 "Reminder: <strong>" + calItem.getSummary() + "</strong>");
     }
 }
 
@@ -1188,9 +1137,8 @@ int CalendarItem::countAll() {
 }
 
 QDebug operator<<(QDebug dbg, const CalendarItem &calendarItem) {
-    dbg.nospace() << "CalendarItem: <id>" << calendarItem.id << " <summary>"
-                  << calendarItem.summary << " <url>" << calendarItem.url
-                  << " <relatedUid>" << calendarItem.relatedUid
+    dbg.nospace() << "CalendarItem: <id>" << calendarItem.id << " <summary>" << calendarItem.summary
+                  << " <url>" << calendarItem.url << " <relatedUid>" << calendarItem.relatedUid
                   << " <calendar>" << calendarItem.calendar;
     return dbg.space();
 }

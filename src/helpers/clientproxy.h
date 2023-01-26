@@ -14,8 +14,7 @@ class ClientProxy : public QObject {
     explicit ClientProxy(QObject *parent = 0);
 
     static bool isUsingSystemDefault();
-    static void lookupSystemProxyAsync(const QUrl &url, QObject *dst,
-                                       const char *slot);
+    static void lookupSystemProxyAsync(const QUrl &url, QObject *dst, const char *slot);
     static QNetworkProxy proxyFromSettings();
 
    public slots:

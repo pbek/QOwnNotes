@@ -44,8 +44,8 @@ class NoteFolder {
     void setUseGit(bool value);
     QJsonObject jsonObject() const;
 
-    static bool create(const QString &name, const QString &localPath,
-                       int cloudConnectionId, const QString &remotePath);
+    static bool create(const QString &name, const QString &localPath, int cloudConnectionId,
+                       const QString &remotePath);
     static NoteFolder fetch(int id);
     static NoteFolder noteFolderFromQuery(const QSqlQuery &query);
     static QList<NoteFolder> fetchAll();
@@ -67,7 +67,7 @@ class NoteFolder {
     void setSettingsValue(const QString &key, const QVariant &value);
     QVariant settingsValue(const QString &key, const QVariant &defaultValue = QVariant()) const;
 
-private:
+   private:
     QString name;
     QString localPath;
     QString remotePath;

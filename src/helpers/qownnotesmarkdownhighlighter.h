@@ -40,8 +40,7 @@ class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter {
     void updateCurrentNote(Note *note);
 
     struct ScriptingHighlightingRule {
-        explicit ScriptingHighlightingRule(const HighlighterState state_)
-            : state(state_) {}
+        explicit ScriptingHighlightingRule(const HighlighterState state_) : state(state_) {}
         ScriptingHighlightingRule() = default;
 
         QRegularExpression pattern;
@@ -61,7 +60,7 @@ class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter {
     void setMisspelled(const int start, const int count);
     void highlightSpellChecking(const QString &text);
 
-    void updateCachedRegexes(const QString& newExt);
+    void updateCachedRegexes(const QString &newExt);
 
    private:
     Note *_currentNote = nullptr;

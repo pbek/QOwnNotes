@@ -7,9 +7,9 @@
 #include <QFile>
 #include <QKeyEvent>
 #include <QMenu>
+#include <QPointer>
 #include <QScrollBar>
 #include <QSettings>
-#include <QPointer>
 
 #include "mainwindow.h"
 
@@ -38,13 +38,17 @@ LogWidget::LogWidget(QWidget *parent)
     disconnect(ui->logTextEdit, &QMarkdownTextEdit::zoomOut, nullptr, nullptr);
     disconnect(ui->logTextEdit, &QOwnNotesMarkdownTextEdit::urlClicked, nullptr, nullptr);
 
-    // The order of zoomIn is opposite (in calls out and vice versa), to be consistent with other edits
-    connect(ui->logTextEdit, &QMarkdownTextEdit::zoomIn, this, [this]{ static_cast<QPlainTextEdit*>(ui->logTextEdit)->zoomOut(-1); });
-    connect(ui->logTextEdit, &QMarkdownTextEdit::zoomOut, this, [this]{ static_cast<QPlainTextEdit*>(ui->logTextEdit)->zoomIn(-1); });
+    // The order of zoomIn is opposite (in calls out and vice versa), to be consistent with other
+    // edits
+    connect(ui->logTextEdit, &QMarkdownTextEdit::zoomIn, this,
+            [this] { static_cast<QPlainTextEdit *>(ui->logTextEdit)->zoomOut(-1); });
+    connect(ui->logTextEdit, &QMarkdownTextEdit::zoomOut, this,
+            [this] { static_cast<QPlainTextEdit *>(ui->logTextEdit)->zoomIn(-1); });
 
     // we use a different context menu here, not default one
     disconnect(ui->logTextEdit, &QPlainTextEdit::customContextMenuRequested, nullptr, nullptr);
-    connect(ui->logTextEdit, &QPlainTextEdit::customContextMenuRequested, this, &LogWidget::on_logTextEdit_customContextMenuRequested);
+    connect(ui->logTextEdit, &QPlainTextEdit::customContextMenuRequested, this,
+            &LogWidget::on_logTextEdit_customContextMenuRequested);
 
     ui->buttonFrame->hide();
     const QSettings settings;
@@ -71,24 +75,16 @@ LogWidget::LogWidget(QWidget *parent)
     ui->statusCheckBox->setChecked(
         settings.value(QStringLiteral("LogWidget/statusLog"), true).toBool());
     ui->scriptingCheckBox->setChecked(
-        settings.value(QStringLiteral("LogWidget/scriptingLog"), true)
-            .toBool());
+        settings.value(QStringLiteral("LogWidget/scriptingLog"), true).toBool());
 
     // store the settings if the dialog is closed or the checkboxes are clicked
-    connect(ui->debugCheckBox, &QCheckBox::clicked, this,
-            &LogWidget::storeSettings);
-    connect(ui->infoCheckBox, &QCheckBox::clicked, this,
-            &LogWidget::storeSettings);
-    connect(ui->warningCheckBox, &QCheckBox::clicked, this,
-            &LogWidget::storeSettings);
-    connect(ui->criticalCheckBox, &QCheckBox::clicked, this,
-            &LogWidget::storeSettings);
-    connect(ui->fatalCheckBox, &QCheckBox::clicked, this,
-            &LogWidget::storeSettings);
-    connect(ui->statusCheckBox, &QCheckBox::clicked, this,
-            &LogWidget::storeSettings);
-    connect(ui->scriptingCheckBox, &QCheckBox::clicked, this,
-            &LogWidget::storeSettings);
+    connect(ui->debugCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
+    connect(ui->infoCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
+    connect(ui->warningCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
+    connect(ui->criticalCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
+    connect(ui->fatalCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
+    connect(ui->statusCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
+    connect(ui->scriptingCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
 
     ui->logTextEdit->installEventFilter(this);
     ui->buttonFrame->installEventFilter(this);
@@ -118,20 +114,13 @@ QString LogWidget::getLogText() const {
 void LogWidget::storeSettings() const {
 #ifndef INTEGRATION_TESTS
     QSettings settings;
-    settings.setValue(QStringLiteral("LogWidget/debugLog"),
-                      ui->debugCheckBox->isChecked());
-    settings.setValue(QStringLiteral("LogWidget/infoLog"),
-                      ui->infoCheckBox->isChecked());
-    settings.setValue(QStringLiteral("LogWidget/warningLog"),
-                      ui->warningCheckBox->isChecked());
-    settings.setValue(QStringLiteral("LogWidget/criticalLog"),
-                      ui->criticalCheckBox->isChecked());
-    settings.setValue(QStringLiteral("LogWidget/fatalLog"),
-                      ui->fatalCheckBox->isChecked());
-    settings.setValue(QStringLiteral("LogWidget/statusLog"),
-                      ui->statusCheckBox->isChecked());
-    settings.setValue(QStringLiteral("LogWidget/scriptingLog"),
-                      ui->scriptingCheckBox->isChecked());
+    settings.setValue(QStringLiteral("LogWidget/debugLog"), ui->debugCheckBox->isChecked());
+    settings.setValue(QStringLiteral("LogWidget/infoLog"), ui->infoCheckBox->isChecked());
+    settings.setValue(QStringLiteral("LogWidget/warningLog"), ui->warningCheckBox->isChecked());
+    settings.setValue(QStringLiteral("LogWidget/criticalLog"), ui->criticalCheckBox->isChecked());
+    settings.setValue(QStringLiteral("LogWidget/fatalLog"), ui->fatalCheckBox->isChecked());
+    settings.setValue(QStringLiteral("LogWidget/statusLog"), ui->statusCheckBox->isChecked());
+    settings.setValue(QStringLiteral("LogWidget/scriptingLog"), ui->scriptingCheckBox->isChecked());
 #endif
 }
 
@@ -142,17 +131,14 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
     // ignore "libpng sRGB profile", "QXcbConnection: XCB error: 8" and
     // "QFileSystemWatcher::removePaths" warnings
     if (logType == WarningLogType &&
-        (text.contains(QLatin1String(
-             "libpng warning: iCCP: known incorrect sRGB profile")) ||
+        (text.contains(QLatin1String("libpng warning: iCCP: known incorrect sRGB profile")) ||
          text.contains(QLatin1String("fromIccProfile: failed minimal tag size sanity")) ||
          text.contains(QLatin1String("QXcbConnection: XCB error:")) ||
-         text.contains(QLatin1String(
-             "Using QCharRef with an index pointing outside")) ||
+         text.contains(QLatin1String("Using QCharRef with an index pointing outside")) ||
          text.contains(QLatin1String("load glyph failed err=")) ||
          text.contains(QLatin1String("[Botan Error]  Invalid CBC padding")) ||
          text.contains(QLatin1String("Invalid version or not a cyphertext")) ||
-         text.contains(QLatin1String(
-             "QFileSystemWatcher::removePaths: list is empty")))) {
+         text.contains(QLatin1String("QFileSystemWatcher::removePaths: list is empty")))) {
         return;
     }
 
@@ -198,8 +184,7 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
             // this is a "fix" for crashes that occur when a network goes away
             // and this message should be printed, I haven't managed to get
             // around this crash with other methods
-            if (text.contains(QLatin1String(
-                    "/org/freedesktop/NetworkManager/ActiveConnection"))) {
+            if (text.contains(QLatin1String("/org/freedesktop/NetworkManager/ActiveConnection"))) {
                 return;
             }
 
@@ -240,16 +225,14 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
     //    text.prepend("[" + dateTime.toString("hh:mm:ss") + "] [" + type + "]
     //    "); text.append("\n");
 
-    const QString html =
-        QStringLiteral("<div style=\"color: %1\">[%2] [%3] %4</div>")
-            .arg(color.name(), dateTime.toString(QStringLiteral("hh:mm:ss")),
-                 type, text.toHtmlEscaped());
+    const QString html = QStringLiteral("<div style=\"color: %1\">[%2] [%3] %4</div>")
+                             .arg(color.name(), dateTime.toString(QStringLiteral("hh:mm:ss")), type,
+                                  text.toHtmlEscaped());
 
     QScrollBar *scrollBar = ui->logTextEdit->verticalScrollBar();
 
     // we want to scroll down later if the scrollbar is near the bottom
-    const bool scrollDown =
-        scrollBar->value() >= (scrollBar->maximum() - scrollBar->singleStep());
+    const bool scrollDown = scrollBar->value() >= (scrollBar->maximum() - scrollBar->singleStep());
 
     const QSignalBlocker blocker(ui->logTextEdit);
     Q_UNUSED(blocker)
@@ -309,8 +292,7 @@ QString LogWidget::logTypeText(LogType logType) {
 /**
  * Custom log output
  */
-void LogWidget::logMessageOutput(QtMsgType type,
-                                 const QMessageLogContext &context,
+void LogWidget::logMessageOutput(QtMsgType type, const QMessageLogContext &context,
                                  const QString &msg) {
     QByteArray localMsg = msg.toLocal8Bit();
     LogType logType = LogType::DebugLogType;
@@ -326,23 +308,23 @@ void LogWidget::logMessageOutput(QtMsgType type,
             logType = LogType::DebugLogType;
             break;
         case QtInfoMsg:
-            fprintf(stderr, "Info: %s (%s:%u, %s)\n", localMsg.constData(),
-                    context.file, context.line, context.function);
+            fprintf(stderr, "Info: %s (%s:%u, %s)\n", localMsg.constData(), context.file,
+                    context.line, context.function);
             logType = LogType::InfoLogType;
             break;
         case QtWarningMsg:
-            fprintf(stderr, "Warning: %s (%s:%u, %s)\n", localMsg.constData(),
-                    context.file, context.line, context.function);
+            fprintf(stderr, "Warning: %s (%s:%u, %s)\n", localMsg.constData(), context.file,
+                    context.line, context.function);
             logType = LogType::WarningLogType;
             break;
         case QtCriticalMsg:
-            fprintf(stderr, "Critical: %s (%s:%u, %s)\n", localMsg.constData(),
-                    context.file, context.line, context.function);
+            fprintf(stderr, "Critical: %s (%s:%u, %s)\n", localMsg.constData(), context.file,
+                    context.line, context.function);
             logType = LogType::CriticalLogType;
             break;
         case QtFatalMsg:
-            fprintf(stderr, "Fatal: %s (%s:%u, %s)\n", localMsg.constData(),
-                    context.file, context.line, context.function);
+            fprintf(stderr, "Fatal: %s (%s:%u, %s)\n", localMsg.constData(), context.file,
+                    context.line, context.function);
             logType = LogType::FatalLogType;
     }
 
@@ -350,7 +332,8 @@ void LogWidget::logMessageOutput(QtMsgType type,
 
     if (s_logWidget) {
         // Use auto connection to handle the case if a message is coming in from a different thread.
-        QMetaObject::invokeMethod(s_logWidget, "log", Qt::AutoConnection, Q_ARG(LogWidget::LogType, logType), Q_ARG(QString, msg));
+        QMetaObject::invokeMethod(s_logWidget, "log", Qt::AutoConnection,
+                                  Q_ARG(LogWidget::LogType, logType), Q_ARG(QString, msg));
     }
 
 #else
@@ -373,16 +356,14 @@ void LogWidget::logToFileIfAllowed(LogType logType, const QString &msg) {
     QSettings settings;
     if (settings.value(QStringLiteral("Debug/fileLogging")).toBool()) {
         QFile logFile(Utils::Misc::logFilePath());
-        if (logFile.open(QIODevice::WriteOnly | QIODevice::Text |
-                         QIODevice::Append)) {
+        if (logFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
             QTextStream out(&logFile);
             QDateTime dateTime = QDateTime::currentDateTime();
             QString typeStr = logTypeText(logType);
-            QString text =
-                QStringLiteral("[%1] [%2]: %3\n")
-                    .arg(dateTime.toString(QStringLiteral("MMM dd hh:mm:ss"))
-                             .remove(QStringLiteral(".")),
-                         typeStr, msg);
+            QString text = QStringLiteral("[%1] [%2]: %3\n")
+                               .arg(dateTime.toString(QStringLiteral("MMM dd hh:mm:ss"))
+                                        .remove(QStringLiteral(".")),
+                                    typeStr, msg);
             out << text;
             logFile.close();
         }
@@ -410,8 +391,7 @@ void LogWidget::on_logTextEdit_customContextMenuRequested(QPoint pos) {
 
     menu->addSeparator();
 
-    QString actionText =
-        ui->buttonFrame->isHidden() ? tr("Show options") : tr("Hide options");
+    QString actionText = ui->buttonFrame->isHidden() ? tr("Show options") : tr("Hide options");
     QAction *toggleOptionsAction = menu->addAction(actionText);
     QAction *clearLogAction = menu->addAction(tr("Clear log"));
 

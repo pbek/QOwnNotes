@@ -24,8 +24,7 @@ class WebSocketTokenDialog;
 class WebSocketServerService : public QObject {
     Q_OBJECT
    public:
-    explicit WebSocketServerService(quint16 port = 0,
-                                    QObject *parent = nullptr);
+    explicit WebSocketServerService(quint16 port = 0, QObject *parent = nullptr);
     ~WebSocketServerService() override;
 
     quint16 getPort() const;
@@ -60,13 +59,13 @@ class WebSocketServerService : public QObject {
     QList<QWebSocket *> m_clients;
     quint16 m_port{};
 
-    static QString getBookmarksJsonText() ;
+    static QString getBookmarksJsonText();
 
     static QString getCommandSnippetsJsonText();
 
-    static QString getNoteFolderSwitchedJsonText(bool switched) ;
+    static QString getNoteFolderSwitchedJsonText(bool switched);
 
-    static QString getTokenQueryJsonText() ;
+    static QString getTokenQueryJsonText();
 
     static QString getNoteFoldersJsonText();
 

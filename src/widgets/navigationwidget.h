@@ -25,8 +25,7 @@ struct Node {
     int elementType;
 
     bool operator==(const Node &node) const {
-        return text == node.text && pos == node.pos &&
-               elementType == node.elementType;
+        return text == node.text && pos == node.pos && elementType == node.elementType;
     }
 };
 
@@ -42,8 +41,7 @@ class NavigationWidget : public QTreeWidget {
     void selectItemForCursorPosition(int position);
 
    private slots:
-    void onCurrentItemChanged(QTreeWidgetItem *current,
-                              QTreeWidgetItem *previous);
+    void onCurrentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
     void onItemClicked(QTreeWidgetItem *current, int column);
 
    private:

@@ -38,8 +38,7 @@ class LogWidget : public QFrame {
 
     explicit LogWidget(QWidget *parent = 0);
     ~LogWidget();
-    static void logMessageOutput(QtMsgType type,
-                                 const QMessageLogContext &context,
+    static void logMessageOutput(QtMsgType type, const QMessageLogContext &context,
                                  const QString &msg);
     bool eventFilter(QObject *obj, QEvent *event) override;
     QString getLogText() const;

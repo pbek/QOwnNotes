@@ -2,18 +2,16 @@
 #define NOTEHISTORY_H
 
 #include <QDataStream>
-#include <QString>
 #include <QMetaType>
+#include <QString>
 
 class Note;
 class QPlainTextEdit;
 
 class NoteHistoryItem {
    public:
-    explicit NoteHistoryItem(Note *note = nullptr,
-                             QPlainTextEdit *textEdit = nullptr);
-    explicit NoteHistoryItem(QString noteName, QString noteSubFolderPathData,
-                             int cursorPosition,
+    explicit NoteHistoryItem(Note *note = nullptr, QPlainTextEdit *textEdit = nullptr);
+    explicit NoteHistoryItem(QString noteName, QString noteSubFolderPathData, int cursorPosition,
                              float relativeScrollBarPosition);
     friend QDebug operator<<(QDebug dbg, const NoteHistoryItem &item);
     QString getNoteName() const;

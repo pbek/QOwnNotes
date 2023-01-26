@@ -19,8 +19,7 @@
 #include <QSettings>
 
 QOwnSpellChecker::QOwnSpellChecker() : _spellchecker{new Sonnet::Speller()} {
-    _languageFilter =
-        new Sonnet::LanguageFilter(new Sonnet::SentenceTokenizer());
+    _languageFilter = new Sonnet::LanguageFilter(new Sonnet::SentenceTokenizer());
     _wordTokenizer = new Sonnet::WordTokenizer();
 #ifdef Q_OS_MACOS
     QStringList s = _spellchecker->availableLanguages();
@@ -30,13 +29,9 @@ QOwnSpellChecker::QOwnSpellChecker() : _spellchecker{new Sonnet::Speller()} {
 #endif
 }
 
-Sonnet::WordTokenizer *QOwnSpellChecker::wordTokenizer() const {
-    return _wordTokenizer;
-}
+Sonnet::WordTokenizer *QOwnSpellChecker::wordTokenizer() const { return _wordTokenizer; }
 
-Sonnet::LanguageFilter *QOwnSpellChecker::languageFilter() const {
-    return _languageFilter;
-}
+Sonnet::LanguageFilter *QOwnSpellChecker::languageFilter() const { return _languageFilter; }
 
 QOwnSpellChecker::~QOwnSpellChecker() {
     delete _languageFilter;
@@ -49,13 +44,9 @@ QOwnSpellChecker *QOwnSpellChecker::instance() {
     return &qonSpellchecker;
 }
 
-QString QOwnSpellChecker::currentLanguage() const {
-    return _spellchecker->language();
-}
+QString QOwnSpellChecker::currentLanguage() const { return _spellchecker->language(); }
 
-void QOwnSpellChecker::setCurrentLanguage(const QString &lang) {
-    _spellchecker->setLanguage(lang);
-}
+void QOwnSpellChecker::setCurrentLanguage(const QString &lang) { _spellchecker->setLanguage(lang); }
 
 void QOwnSpellChecker::setActive(bool active) { _active = active; }
 
@@ -65,9 +56,7 @@ void QOwnSpellChecker::addWordToDictionary(const QString &word) {
     _spellchecker->addToPersonal(word);
 }
 
-void QOwnSpellChecker::ignoreWord(const QString &word) {
-    _spellchecker->addToSession(word);
-}
+void QOwnSpellChecker::ignoreWord(const QString &word) { _spellchecker->addToSession(word); }
 
 bool QOwnSpellChecker::isValid() { return _spellchecker->isValid(); }
 
@@ -75,9 +64,7 @@ bool QOwnSpellChecker::testAttribute(Sonnet::Speller::Attribute attr) const {
     return _spellchecker->testAttribute(attr);
 }
 
-void QOwnSpellChecker::setAutoDetect(bool autoDetect) {
-    _autoDetect = autoDetect;
-}
+void QOwnSpellChecker::setAutoDetect(bool autoDetect) { _autoDetect = autoDetect; }
 
 bool QOwnSpellChecker::isAutoDetectOn() const { return _autoDetect; }
 
@@ -89,16 +76,13 @@ QStringList QOwnSpellChecker::suggestionsForWord(const QString &word, int max) {
     return suggestions;
 }
 
-QStringList QOwnSpellChecker::suggestionsForWord(const QString &word,
-                                                 const QTextCursor &cursor,
+QStringList QOwnSpellChecker::suggestionsForWord(const QString &word, const QTextCursor &cursor,
                                                  int max) {
     // detect the lang
     if (_autoDetect) {
-        LanguageCache *cache =
-            dynamic_cast<LanguageCache *>(cursor.block().userData());
+        LanguageCache *cache = dynamic_cast<LanguageCache *>(cursor.block().userData());
         if (cache) {
-            const QString cachedLanguage =
-                cache->languageAtPos(cursor.positionInBlock());
+            const QString cachedLanguage = cache->languageAtPos(cursor.positionInBlock());
             if (!cachedLanguage.isEmpty()) {
                 _spellchecker->setLanguage(cachedLanguage);
             }

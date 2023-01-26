@@ -9,8 +9,7 @@
 
 #include "ui_layoutwidget.h"
 
-LayoutWidget::LayoutWidget(QWidget *parent)
-    : QWidget(parent), ui(new Ui::LayoutWidget) {
+LayoutWidget::LayoutWidget(QWidget *parent) : QWidget(parent), ui(new Ui::LayoutWidget) {
     ui->setupUi(this);
     _manualSettingsStoring = true;
     loadLayouts();
@@ -19,11 +18,10 @@ LayoutWidget::LayoutWidget(QWidget *parent)
 LayoutWidget::~LayoutWidget() { delete ui; }
 
 void LayoutWidget::loadLayouts() {
-    _layoutSettings = new QSettings(
-        QStringLiteral(":/configurations/layouts.ini"), QSettings::IniFormat);
+    _layoutSettings =
+        new QSettings(QStringLiteral(":/configurations/layouts.ini"), QSettings::IniFormat);
     auto layoutIdentifiers =
-        _layoutSettings->value(QStringLiteral("LayoutIdentifiers"))
-            .toStringList();
+        _layoutSettings->value(QStringLiteral("LayoutIdentifiers")).toStringList();
 
     {
         const QSignalBlocker blocker(ui->layoutComboBox);
@@ -49,14 +47,14 @@ void LayoutWidget::on_layoutComboBox_currentIndexChanged(int index) {
 void LayoutWidget::updateCurrentLayout() {
     QString layoutIdentifier = ui->layoutComboBox->currentData().toString();
     QString layoutSettingsPrefix = "Layout-" + layoutIdentifier + "/";
-    QString screenshot =
-        _layoutSettings->value(layoutSettingsPrefix + "screenshot").toString();
+    QString screenshot = _layoutSettings->value(layoutSettingsPrefix + "screenshot").toString();
     QString layoutDescription = getLayoutDescription(layoutIdentifier);
 
     if (_manualSettingsStoring) {
-        layoutDescription += "\n\n" + tr("Keep in mind that workspaces that "
-             "demand that there is no central widget will not work properly if "
-             "the central widget is enabled.");
+        layoutDescription +=
+            "\n\n" + tr("Keep in mind that workspaces that "
+                        "demand that there is no central widget will not work properly if "
+                        "the central widget is enabled.");
     }
 
     ui->layoutDescriptionLabel->setText(layoutDescription);
@@ -82,14 +80,13 @@ void LayoutWidget::updateCurrentLayout() {
 void LayoutWidget::storeSettings() {
     if (_manualSettingsStoring) {
         QString title = tr("Use new layout");
-        QString text = tr("Do you want to use the selected layout?") +
-                       "\n\n" +
+        QString text = tr("Do you want to use the selected layout?") + "\n\n" +
                        tr("The application will be restarted afterwards.") +
                        Utils::Misc::appendSingleAppInstanceTextIfNeeded();
 
         if (Utils::Gui::question(this, title, text, "layoutwidget-use-layout",
-                                  QMessageBox::Yes | QMessageBox::No,
-                                  QMessageBox::No) == QMessageBox::No) {
+                                 QMessageBox::Yes | QMessageBox::No,
+                                 QMessageBox::No) == QMessageBox::No) {
             return;
         }
     }
@@ -97,31 +94,26 @@ void LayoutWidget::storeSettings() {
     QString layoutIdentifier = ui->layoutComboBox->currentData().toString();
     QString layoutSettingsPrefix = "Layout-" + layoutIdentifier + "/";
     QSettings settings;
-    QStringList workspaces =
-        settings.value(QStringLiteral("workspaces")).toStringList();
-    QString workspaceIdentifier = _manualSettingsStoring ?
-        Utils::Misc::generateRandomString(12) : "initial";
+    QStringList workspaces = settings.value(QStringLiteral("workspaces")).toStringList();
+    QString workspaceIdentifier =
+        _manualSettingsStoring ? Utils::Misc::generateRandomString(12) : "initial";
 
     if (!workspaces.contains(workspaceIdentifier)) {
         workspaces << workspaceIdentifier;
         settings.setValue(QStringLiteral("workspaces"), workspaces);
     }
 
-    settings.setValue(QStringLiteral("initialLayoutIdentifier"),
-                      layoutIdentifier);
-    settings.setValue(QStringLiteral("currentWorkspace"),
-        workspaceIdentifier);
+    settings.setValue(QStringLiteral("initialLayoutIdentifier"), layoutIdentifier);
+    settings.setValue(QStringLiteral("currentWorkspace"), workspaceIdentifier);
     settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
-                      _layoutSettings->value(layoutSettingsPrefix +
-                                             "noteEditIsCentralWidget"));
+                      _layoutSettings->value(layoutSettingsPrefix + "noteEditIsCentralWidget"));
     settings.setValue("workspace-" + workspaceIdentifier + "/windowState",
-        _layoutSettings->value(layoutSettingsPrefix + "windowState"));
+                      _layoutSettings->value(layoutSettingsPrefix + "windowState"));
     settings.setValue("workspace-" + workspaceIdentifier + "/name",
                       getLayoutName(layoutIdentifier));
     settings.setValue(
         "workspace-" + workspaceIdentifier + "/noteSubFolderDockWidgetVisible",
-        _layoutSettings->value(layoutSettingsPrefix +
-                               "noteSubFolderDockWidgetVisible"));
+        _layoutSettings->value(layoutSettingsPrefix + "noteSubFolderDockWidgetVisible"));
 
     // since a new layout is installed we later want to center and resize the
     // window
@@ -188,7 +180,8 @@ QString LayoutWidget::getLayoutDescription(const QString &layoutIdentifier) {
         return tr("Most of the panels, like the note list on the left, the "
                   "tagging panels, and only the preview panel on the right "
                   "are enabled by default. You will need another workspace to "
-                  "actually edit notes!","Layout description") +
+                  "actually edit notes!",
+                  "Layout description") +
                noCentralWidgetAddText;
     } else if (layoutIdentifier == QLatin1String("full-vertical")) {
         return tr("Most of the panels, like the note list on the left, the "
@@ -214,8 +207,8 @@ void LayoutWidget::resizeEvent(QResizeEvent *event) {
 
 void LayoutWidget::resizeLayoutImage() const {
     if (ui->layoutGraphicsView->scene() != nullptr) {
-        ui->layoutGraphicsView->fitInView(
-            ui->layoutGraphicsView->scene()->sceneRect(), Qt::KeepAspectRatio);
+        ui->layoutGraphicsView->fitInView(ui->layoutGraphicsView->scene()->sceneRect(),
+                                          Qt::KeepAspectRatio);
     }
 }
 

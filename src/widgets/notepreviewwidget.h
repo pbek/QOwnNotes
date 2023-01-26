@@ -44,7 +44,7 @@ class NotePreviewWidget : public QTextBrowser {
 
     void contextMenuEvent(QContextMenuEvent *event) override;
 
-    QVariant loadResource(int type, const QUrl& file) override;
+    QVariant loadResource(int type, const QUrl &file) override;
 
     bool lookupCache(const QString &key, QPixmap &pm);
     void insertInCache(const QString &key, const QPixmap &pm);

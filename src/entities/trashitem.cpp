@@ -30,9 +30,7 @@ qint64 TrashItem::getFileSize() { return this->fileSize; }
 
 QString TrashItem::getFileName() { return this->fileName; }
 
-NoteSubFolder TrashItem::getNoteSubFolder() {
-    return NoteSubFolder::fetch(this->noteSubFolderId);
-}
+NoteSubFolder TrashItem::getNoteSubFolder() { return NoteSubFolder::fetch(this->noteSubFolderId); }
 
 void TrashItem::setNoteSubFolder(const NoteSubFolder &noteSubFolder) {
     this->noteSubFolderPathData = noteSubFolder.pathData();
@@ -84,8 +82,7 @@ bool TrashItem::remove(bool withFile) {
  * Returns the full path of the trashed file
  */
 QString TrashItem::fullFilePath() {
-    return NoteFolder::currentTrashPath() + QDir::separator() +
-           QString::number(getId());
+    return NoteFolder::currentTrashPath() + QDir::separator() + QString::number(getId());
 }
 
 /**
@@ -158,8 +155,7 @@ bool TrashItem::doTrashing() {
     QDir destinationDir(destinationPath);
 
     // created the trash folder if it doesn't exist
-    if (!destinationDir.exists() &&
-        !destinationDir.mkpath(destinationDir.path())) {
+    if (!destinationDir.exists() && !destinationDir.mkpath(destinationDir.path())) {
         return false;
     }
 
@@ -211,8 +207,7 @@ QString TrashItem::restorationFilePath() {
     // prepend the current timestamp if the file already exists
     if (file.exists()) {
         filePath = folderPath + QDir::separator() +
-                   QString::number(QDateTime::currentMSecsSinceEpoch() / 1000) +
-                   "_" + fileName;
+                   QString::number(QDateTime::currentMSecsSinceEpoch() / 1000) + "_" + fileName;
     }
 
     file.setFileName(filePath);
@@ -224,8 +219,7 @@ QString TrashItem::restorationFilePath() {
         const quint32 number = QRandomGenerator::global()->generate();
 #endif
 
-        filePath = folderPath + QDir::separator() + QString::number(number) +
-                   "_" + fileName;
+        filePath = folderPath + QDir::separator() + QString::number(number) + "_" + fileName;
     }
 
     file.setFileName(filePath);
@@ -255,8 +249,7 @@ TrashItem TrashItem::trashItemFromQuery(const QSqlQuery &query) {
 bool TrashItem::fillFromQuery(const QSqlQuery &query) {
     id = query.value(QStringLiteral("id")).toInt();
     fileName = query.value(QStringLiteral("file_name")).toString();
-    noteSubFolderPathData =
-        query.value(QStringLiteral("note_sub_folder_path_data")).toString();
+    noteSubFolderPathData = query.value(QStringLiteral("note_sub_folder_path_data")).toString();
     fileSize = query.value(QStringLiteral("file_size")).toLongLong();
     created = query.value(QStringLiteral("created")).toDateTime();
 
@@ -273,8 +266,7 @@ QList<TrashItem> TrashItem::fetchAll(int limit) {
     QSqlQuery query(db);
 
     QList<TrashItem> trashItemList;
-    QString sql =
-        QStringLiteral("SELECT * FROM trashItem ORDER BY created DESC");
+    QString sql = QStringLiteral("SELECT * FROM trashItem ORDER BY created DESC");
 
     if (limit >= 0) {
         sql += QLatin1String(" LIMIT :limit");
@@ -309,8 +301,7 @@ QList<TrashItem> TrashItem::fetchAllExpired() {
     QSqlQuery query(db);
     QSettings settings;
     QList<TrashItem> trashItemList;
-    int days = settings.value(QStringLiteral("localTrash/autoCleanupDays"), 30)
-                   .toInt();
+    int days = settings.value(QStringLiteral("localTrash/autoCleanupDays"), 30).toInt();
     QDateTime dateTime = QDateTime::currentDateTime().addDays(-1 * days);
     QString sql =
         "SELECT * FROM trashItem WHERE created < :created "
@@ -363,8 +354,7 @@ bool TrashItem::store() {
 
     query.bindValue(QStringLiteral(":file_name"), fileName);
     query.bindValue(QStringLiteral(":file_size"), fileSize);
-    query.bindValue(QStringLiteral(":note_sub_folder_path_data"),
-                    noteSubFolderPathData);
+    query.bindValue(QStringLiteral(":note_sub_folder_path_data"), noteSubFolderPathData);
 
     // on error
     if (!query.exec()) {
@@ -524,8 +514,7 @@ int TrashItem::countAll() {
 
 bool TrashItem::isLocalTrashEnabled() {
     QSettings settings;
-    return settings.value(QStringLiteral("localTrash/supportEnabled"), true)
-        .toBool();
+    return settings.value(QStringLiteral("localTrash/supportEnabled"), true).toBool();
 }
 
 /**
@@ -537,8 +526,7 @@ bool TrashItem::expireItems() {
     QSettings settings;
 
     if (!TrashItem::isLocalTrashEnabled() ||
-        !settings.value(QStringLiteral("localTrash/autoCleanupEnabled"), true)
-             .toBool()) {
+        !settings.value(QStringLiteral("localTrash/autoCleanupEnabled"), true).toBool()) {
         return false;
     }
 
@@ -555,11 +543,9 @@ bool TrashItem::expireItems() {
 }
 
 QDebug operator<<(QDebug dbg, const TrashItem &trashItem) {
-    NoteSubFolder noteSubFolder =
-        NoteSubFolder::fetchByPathData(trashItem.noteSubFolderPathData);
-    dbg.nospace() << "TrashItem: <id>" << trashItem.id << " <fileName>"
-                  << trashItem.fileName << " <noteSubFolderId>"
-                  << trashItem.noteSubFolderId << " <_fullNoteFilePath>"
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetchByPathData(trashItem.noteSubFolderPathData);
+    dbg.nospace() << "TrashItem: <id>" << trashItem.id << " <fileName>" << trashItem.fileName
+                  << " <noteSubFolderId>" << trashItem.noteSubFolderId << " <_fullNoteFilePath>"
                   << trashItem._fullNoteFilePath << " <relativePath>"
                   << noteSubFolder.relativePath();
     return dbg.space();

@@ -17,9 +17,9 @@
 #define QOWNSPELLCHECKER_H
 
 #include <libraries/sonnet/src/core/speller.h>
-#include "libraries/sonnet/src/core/languagefilter_p.h"
 
 #include "LanguageCache.h"
+#include "libraries/sonnet/src/core/languagefilter_p.h"
 
 class QOwnSpellChecker {
    public:
@@ -47,9 +47,7 @@ class QOwnSpellChecker {
      * @param word the word to be checked
      * @return true if the given word is misspelled.
      */
-    inline bool isWordMisspelled(const QString &word) {
-        return _spellchecker->isMisspelled(word);
-    }
+    inline bool isWordMisspelled(const QString &word) { return _spellchecker->isMisspelled(word); }
 
     /**
      * Returns a list of suggested replacements for the given misspelled word.
@@ -76,8 +74,7 @@ class QOwnSpellChecker {
      *            be returned.
      * @return a list of suggested replacements for the word
      */
-    QStringList suggestionsForWord(const QString &word,
-                                   const QTextCursor &cursor, int max);
+    QStringList suggestionsForWord(const QString &word, const QTextCursor &cursor, int max);
 
     /**
      * @short Enable/Disable spell checking.

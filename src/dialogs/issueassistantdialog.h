@@ -12,12 +12,7 @@ class IssueAssistantDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    enum IssueAssistantPages {
-        IssuePage,
-        LogOutputPage,
-        DebugSettingsPage,
-        SubmitPage
-    };
+    enum IssueAssistantPages { IssuePage, LogOutputPage, DebugSettingsPage, SubmitPage };
 
     enum IssueTypes {
         ProblemIssueType,

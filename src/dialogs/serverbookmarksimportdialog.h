@@ -14,8 +14,7 @@ class ServerBookmarksImportDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit ServerBookmarksImportDialog(const QJSValue &bookmarks,
-                                         QWidget *parent = 0);
+    explicit ServerBookmarksImportDialog(const QJSValue &bookmarks, QWidget *parent = 0);
     ~ServerBookmarksImportDialog();
 
    private slots:

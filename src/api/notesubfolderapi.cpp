@@ -18,7 +18,7 @@ NoteSubFolderApi *NoteSubFolderApi::fetch(int id) {
 }
 
 NoteSubFolderApi *NoteSubFolderApi::fromNoteSubFolder(const NoteSubFolder &noteSubFolder) {
-    auto* noteSubFolderApi = new NoteSubFolderApi();
+    auto *noteSubFolderApi = new NoteSubFolderApi();
     noteSubFolderApi->fetch(noteSubFolder.getId());
     return noteSubFolderApi;
 }
@@ -36,7 +36,7 @@ QQmlListProperty<NoteApi> NoteSubFolderApi::notes() {
     while (itr.hasNext()) {
         Note note = itr.next();
 
-        auto* noteApi = new NoteApi();
+        auto *noteApi = new NoteApi();
         noteApi->fetch(note.getId());
         _notes.append(noteApi);
     }
@@ -54,8 +54,7 @@ QQmlListProperty<NoteApi> NoteSubFolderApi::notes() {
  * @param id int the id of the note subfolder
  * @return NoteSubFolderApi*
  */
-NoteSubFolderApi *NoteSubFolderApi::fetchNoteSubFolderById(int id)
-{
+NoteSubFolderApi *NoteSubFolderApi::fetchNoteSubFolderById(int id) {
     auto *noteSubFolder = new NoteSubFolderApi();
     noteSubFolder->fetch(id);
     return noteSubFolder;
@@ -67,8 +66,7 @@ NoteSubFolderApi *NoteSubFolderApi::fetchNoteSubFolderById(int id)
  * @param parentId int the id of the parent note subfolder
  * @return QList<QObject*>
  */
-QList<QObject*> NoteSubFolderApi::fetchNoteSubFoldersByParentId(int parentId)
-{
+QList<QObject *> NoteSubFolderApi::fetchNoteSubFoldersByParentId(int parentId) {
     QList<QObject *> noteSubFolderApis;
 
     const auto noteSubFolders = NoteSubFolder::fetchAllByParentId(parentId);
@@ -83,10 +81,6 @@ NoteSubFolderApi *NoteSubFolderApi::activeNoteSubFolder() {
     return fetchNoteSubFolderById(NoteSubFolder::activeNoteSubFolderId());
 }
 
-QString NoteSubFolderApi::relativePath() {
-    return _noteSubFolder.relativePath();
-}
+QString NoteSubFolderApi::relativePath() { return _noteSubFolder.relativePath(); }
 
-QString NoteSubFolderApi::fullPath() {
-    return _noteSubFolder.fullPath();
-}
+QString NoteSubFolderApi::fullPath() { return _noteSubFolder.fullPath(); }

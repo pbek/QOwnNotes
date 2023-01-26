@@ -1,8 +1,8 @@
 #ifndef TESTNOTES_H
 #define TESTNOTES_H
 
-//#include "basetestcase.h"
-//#include "models/key-models/keyfactory.h"
+// #include "basetestcase.h"
+// #include "models/key-models/keyfactory.h"
 #include <QObject>
 
 #include "entities/note.h"

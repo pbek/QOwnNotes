@@ -61,8 +61,7 @@ void AttachmentDialog::on_fileEdit_textChanged(const QString &arg1) {
         return;
     }
 
-    ui->downloadButton->setVisible(
-        url.scheme().startsWith(QLatin1String("http")));
+    ui->downloadButton->setVisible(url.scheme().startsWith(QLatin1String("http")));
 
     if (url.scheme() == QLatin1String("file")) {
         ui->fileEdit->setText(url.toLocalFile());
@@ -73,9 +72,8 @@ void AttachmentDialog::on_fileEdit_textChanged(const QString &arg1) {
         QMimeDatabase db;
         QMimeType type = db.mimeTypeForFile(arg1);
 
-        ui->infoLabel->setText(
-            Utils::Misc::toHumanReadableByteSize(fileInfo.size()) + " - " +
-            type.comment());
+        ui->infoLabel->setText(Utils::Misc::toHumanReadableByteSize(fileInfo.size()) + " - " +
+                               type.comment());
     }
 }
 
@@ -89,8 +87,7 @@ void AttachmentDialog::on_downloadButton_clicked() {
     QNetworkRequest networkRequest(url);
 
 #if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
-    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
-                                true);
+    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
 #else
     networkRequest.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
 #endif
@@ -110,13 +107,11 @@ void AttachmentDialog::on_downloadButton_clicked() {
 /**
  * Shows the download progress
  */
-void AttachmentDialog::downloadProgress(qint64 bytesReceived,
-                                        qint64 bytesTotal) {
+void AttachmentDialog::downloadProgress(qint64 bytesReceived, qint64 bytesTotal) {
     ui->downloadProgressBar->setMaximum(static_cast<int>(bytesTotal));
     ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived));
-    ui->downloadSizeLabel->setText(
-        Utils::Misc::toHumanReadableByteSize(bytesReceived) + " / " +
-        Utils::Misc::toHumanReadableByteSize(bytesTotal));
+    ui->downloadSizeLabel->setText(Utils::Misc::toHumanReadableByteSize(bytesReceived) + " / " +
+                                   Utils::Misc::toHumanReadableByteSize(bytesTotal));
 }
 
 /**
@@ -140,12 +135,10 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
     if (reply->error() != QNetworkReply::NoError &&
         reply->error() != QNetworkReply::OperationCanceledError) {
         _accept = false;
-        QMessageBox::critical(
-            nullptr, tr("Download error"),
-            tr("Error while downloading:\n%1").arg(reply->errorString()));
+        QMessageBox::critical(nullptr, tr("Download error"),
+                              tr("Error while downloading:\n%1").arg(reply->errorString()));
 
-        qWarning()
-            << QStringLiteral("Network error: %1").arg(reply->errorString());
+        qWarning() << QStringLiteral("Network error: %1").arg(reply->errorString());
 
         return;
     }
@@ -162,17 +155,16 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
         }
     }
 
-    auto *tempFile =
-        new QTemporaryFile(QDir::tempPath() + "/QOwnNotes-XXXXXX." + suffix);
+    auto *tempFile = new QTemporaryFile(QDir::tempPath() + "/QOwnNotes-XXXXXX." + suffix);
 
     // we want to keep the file to be used in the update process
     tempFile->setAutoRemove(false);
 
     // get a temporary file
     if (!tempFile->open()) {
-        QMessageBox::critical(nullptr, tr("File error"),
-                              tr("Could not open temporary file:\n%1")
-                                  .arg(tempFile->errorString()));
+        QMessageBox::critical(
+            nullptr, tr("File error"),
+            tr("Could not open temporary file:\n%1").arg(tempFile->errorString()));
         return;
     }
 
@@ -193,9 +185,8 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
     QFile file(filePath);
 
     if (!file.open(QIODevice::WriteOnly)) {
-        QMessageBox::critical(
-            nullptr, tr("File error"),
-            tr("Could not store downloaded file:\n%1").arg(file.errorString()));
+        QMessageBox::critical(nullptr, tr("File error"),
+                              tr("Could not store downloaded file:\n%1").arg(file.errorString()));
         return;
     }
 

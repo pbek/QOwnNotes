@@ -24,7 +24,8 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     on_tabWidget_currentChanged(page);
 
     // disallow ] characters, because they will break markdown links
-    ui->nameLineEdit->setValidator(new QRegularExpressionValidator(QRegularExpression(R"([^\]]*)")));
+    ui->nameLineEdit->setValidator(
+        new QRegularExpressionValidator(QRegularExpression(R"([^\]]*)")));
     firstVisibleNoteListRow = 0;
 
     if (!dialogTitle.isEmpty()) {
@@ -86,9 +87,8 @@ void LinkDialog::on_searchLineEdit_textChanged(const QString &arg1) {
 }
 
 QString LinkDialog::getSelectedNoteName() const {
-    return ui->notesListWidget->currentRow() > -1
-               ? ui->notesListWidget->currentItem()->text()
-               : QString();
+    return ui->notesListWidget->currentRow() > -1 ? ui->notesListWidget->currentItem()->text()
+                                                  : QString();
 }
 
 Note LinkDialog::getSelectedNote() const {
@@ -96,15 +96,15 @@ Note LinkDialog::getSelectedNote() const {
         return {};
     }
 
-    const int noteId =
-        ui->notesListWidget->currentItem()->data(Qt::UserRole).toInt();
+    const int noteId = ui->notesListWidget->currentItem()->data(Qt::UserRole).toInt();
 
     return Note::fetch(noteId);
 }
 
 QString LinkDialog::getSelectedHeading() const {
-    return ui->headingListWidget->selectedItems().isEmpty() ?
-             "" : ui->headingListWidget->currentItem()->text();
+    return ui->headingListWidget->selectedItems().isEmpty()
+               ? ""
+               : ui->headingListWidget->currentItem()->text();
 }
 
 QString LinkDialog::getURL() const {
@@ -117,17 +117,11 @@ QString LinkDialog::getURL() const {
     return url;
 }
 
-QString LinkDialog::getLinkName() const {
-    return ui->nameLineEdit->text().trimmed();
-}
+QString LinkDialog::getLinkName() const { return ui->nameLineEdit->text().trimmed(); }
 
-void LinkDialog::setLinkName(const QString &text) {
-    ui->nameLineEdit->setText(text);
-}
+void LinkDialog::setLinkName(const QString &text) { ui->nameLineEdit->setText(text); }
 
-QString LinkDialog::getLinkDescription() const {
-    return ui->descriptionLineEdit->text().trimmed();
-}
+QString LinkDialog::getLinkDescription() const { return ui->descriptionLineEdit->text().trimmed(); }
 
 //
 // Event filters on the NoteSearchDialog
@@ -139,15 +133,12 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
 
             // set focus to the notes list if Key_Down or Key_Tab were pressed
             // in the search line edit
-            if ((keyEvent->key() == Qt::Key_Down) ||
-                (keyEvent->key() == Qt::Key_Tab)) {
+            if ((keyEvent->key() == Qt::Key_Down) || (keyEvent->key() == Qt::Key_Tab)) {
                 // choose another selected item if current item is invisible
                 auto item = ui->notesListWidget->currentItem();
-                if ((item != nullptr) &&
-                    ui->notesListWidget->currentItem()->isHidden() &&
+                if ((item != nullptr) && ui->notesListWidget->currentItem()->isHidden() &&
                     (this->firstVisibleNoteListRow >= 0)) {
-                    ui->notesListWidget->setCurrentRow(
-                        this->firstVisibleNoteListRow);
+                    ui->notesListWidget->setCurrentRow(this->firstVisibleNoteListRow);
                 }
 
                 // give the keyboard focus to the notes list widget
@@ -162,8 +153,7 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
 
             // set focus to the notes list if Key_Down or Key_Tab were pressed
             // in the search line edit
-            if ((keyEvent->key() == Qt::Key_Down) ||
-                (keyEvent->key() == Qt::Key_Tab)) {
+            if ((keyEvent->key() == Qt::Key_Down) || (keyEvent->key() == Qt::Key_Tab)) {
                 // give the keyboard focus to the heading list widget
                 ui->headingListWidget->setFocus();
                 return true;
@@ -176,8 +166,7 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
 
             // set focus to the note text edit if Key_Return or Key_Tab
             // were pressed in the notes list
-            if ((keyEvent->key() == Qt::Key_Return) ||
-                (keyEvent->key() == Qt::Key_Tab)) {
+            if ((keyEvent->key() == Qt::Key_Return) || (keyEvent->key() == Qt::Key_Tab)) {
                 ui->headingSearchLineEdit->setFocus();
 
                 return true;
@@ -218,11 +207,10 @@ QString LinkDialog::getTitleForUrl(const QUrl &url) {
     }
 
     // parse title from webpage
-    QRegularExpression regex(
-        QStringLiteral(R"(<title>(.*)<\/title>)"),
-        QRegularExpression::MultilineOption |
-            QRegularExpression::DotMatchesEverythingOption |
-            QRegularExpression::InvertedGreedinessOption);
+    QRegularExpression regex(QStringLiteral(R"(<title>(.*)<\/title>)"),
+                             QRegularExpression::MultilineOption |
+                                 QRegularExpression::DotMatchesEverythingOption |
+                                 QRegularExpression::InvertedGreedinessOption);
     QRegularExpressionMatch match = regex.match(html);
     QString title = match.captured(1);
 
@@ -249,34 +237,28 @@ QString LinkDialog::getTitleForUrl(const QUrl &url) {
 void LinkDialog::addFileUrl() {
     QSettings settings;
     // load last url
-    QUrl fileUrl =
-        settings.value(QStringLiteral("LinkDialog/lastSelectedFileUrl"))
-            .toUrl();
+    QUrl fileUrl = settings.value(QStringLiteral("LinkDialog/lastSelectedFileUrl")).toUrl();
 
     if (Utils::Misc::isInPortableMode()) {
         fileUrl = QUrl(QStringLiteral("file://") +
-                       Utils::Misc::prependPortableDataPathIfNeeded(
-                           Utils::Misc::removeIfStartsWith(
-                               fileUrl.toLocalFile(), QStringLiteral("/"))));
+                       Utils::Misc::prependPortableDataPathIfNeeded(Utils::Misc::removeIfStartsWith(
+                           fileUrl.toLocalFile(), QStringLiteral("/"))));
     }
 
-    fileUrl = QFileDialog::getOpenFileUrl(this, tr("Select file to link to"),
-                                          fileUrl);
+    fileUrl = QFileDialog::getOpenFileUrl(this, tr("Select file to link to"), fileUrl);
     QString fileUrlString = fileUrl.toString(QUrl::FullyEncoded);
 
     if (Utils::Misc::isInPortableMode()) {
         fileUrlString =
             QStringLiteral("file://") +
             QUrl(QStringLiteral("../") +
-                 Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
-                     fileUrl.toLocalFile()))
+                 Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(fileUrl.toLocalFile()))
                 .toString(QUrl::FullyEncoded);
     }
 
     if (!fileUrlString.isEmpty()) {
         // store url for the next time
-        settings.setValue(QStringLiteral("LinkDialog/lastSelectedFileUrl"),
-                          fileUrlString);
+        settings.setValue(QStringLiteral("LinkDialog/lastSelectedFileUrl"), fileUrlString);
 
         // write the file-url to the url text-edit
         ui->urlEdit->setText(fileUrlString);
@@ -290,27 +272,24 @@ void LinkDialog::addDirectoryUrl() {
     QSettings settings;
     // load last url
     QUrl directoryUrl =
-        settings.value(QStringLiteral("LinkDialog/lastSelectedDirectoryUrl"))
-            .toUrl();
+        settings.value(QStringLiteral("LinkDialog/lastSelectedDirectoryUrl")).toUrl();
 
     if (Utils::Misc::isInPortableMode()) {
         directoryUrl =
             QUrl(QStringLiteral("file://") +
-                 Utils::Misc::prependPortableDataPathIfNeeded(
-                     Utils::Misc::removeIfStartsWith(directoryUrl.toLocalFile(),
-                                                     QStringLiteral("/"))));
+                 Utils::Misc::prependPortableDataPathIfNeeded(Utils::Misc::removeIfStartsWith(
+                     directoryUrl.toLocalFile(), QStringLiteral("/"))));
     }
 
-    directoryUrl = QFileDialog::getExistingDirectoryUrl(
-        this, tr("Select directory to link to"), directoryUrl);
+    directoryUrl =
+        QFileDialog::getExistingDirectoryUrl(this, tr("Select directory to link to"), directoryUrl);
     QString directoryUrlString = directoryUrl.toString(QUrl::FullyEncoded);
 
     if (Utils::Misc::isInPortableMode()) {
         directoryUrlString =
             QStringLiteral("file://") +
-            QUrl(QStringLiteral("../") +
-                 Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
-                     directoryUrl.toLocalFile()))
+            QUrl(QStringLiteral("../") + Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                                             directoryUrl.toLocalFile()))
                 .toString(QUrl::FullyEncoded);
     }
 
@@ -332,8 +311,7 @@ void LinkDialog::on_urlEdit_textChanged(const QString &arg1) {
     }
 
     // try to get the title of the webpage if no link name was set
-    if (url.scheme().startsWith(QStringLiteral("http")) &&
-        ui->nameLineEdit->text().isEmpty()) {
+    if (url.scheme().startsWith(QStringLiteral("http")) && ui->nameLineEdit->text().isEmpty()) {
         const QString title = getTitleForUrl(url);
 
         if (!title.isEmpty()) {
@@ -346,19 +324,16 @@ void LinkDialog::setupFileUrlMenu() {
     auto *addMenu = new QMenu(this);
 
     QAction *addFileAction = addMenu->addAction(tr("Select file to link to"));
-    addFileAction->setIcon(QIcon::fromTheme(
-        QStringLiteral("document-open"),
-        QIcon(QStringLiteral(
-            ":icons/breeze-qownnotes/16x16/document-open.svg"))));
+    addFileAction->setIcon(
+        QIcon::fromTheme(QStringLiteral("document-open"),
+                         QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/document-open.svg"))));
     connect(addFileAction, SIGNAL(triggered()), this, SLOT(addFileUrl()));
 
-    QAction *addDirectoryAction =
-        addMenu->addAction(tr("Select directory to link to"));
-    addDirectoryAction->setIcon(QIcon::fromTheme(
-        QStringLiteral("folder"),
-        QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg"))));
-    connect(addDirectoryAction, SIGNAL(triggered()), this,
-            SLOT(addDirectoryUrl()));
+    QAction *addDirectoryAction = addMenu->addAction(tr("Select directory to link to"));
+    addDirectoryAction->setIcon(
+        QIcon::fromTheme(QStringLiteral("folder"),
+                         QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg"))));
+    connect(addDirectoryAction, SIGNAL(triggered()), this, SLOT(addDirectoryUrl()));
 
     ui->fileUrlButton->setMenu(addMenu);
 }

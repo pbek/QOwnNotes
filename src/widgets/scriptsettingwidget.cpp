@@ -26,8 +26,7 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
     ui->nameLabel->setText("<b>" + name + "</b>");
     ui->descriptionLabel->setText(description);
     ui->descriptionLabel->setHidden(description.isEmpty());
-    ui->integerSpinBox->setRange(std::numeric_limits<int>::min(),
-                                 std::numeric_limits<int>::max());
+    ui->integerSpinBox->setRange(std::numeric_limits<int>::min(), std::numeric_limits<int>::max());
 
     // hide all widgets in the control frame
     ui->integerSpinBox->hide();
@@ -58,8 +57,7 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
 
         if (text.isEmpty()) {
             // fallback if no text was set
-            ui->booleanCheckBox->setText(description.isEmpty() ? name
-                                                               : description);
+            ui->booleanCheckBox->setText(description.isEmpty() ? name : description);
             ui->descriptionLabel->hide();
         } else {
             ui->booleanCheckBox->setText(text);
@@ -158,9 +156,7 @@ void ScriptSettingWidget::on_stringLineEdit_textChanged(const QString &arg1) {
  *
  * @param arg1
  */
-void ScriptSettingWidget::on_integerSpinBox_valueChanged(int arg1) {
-    storeSettingsVariable(arg1);
-}
+void ScriptSettingWidget::on_integerSpinBox_valueChanged(int arg1) { storeSettingsVariable(arg1); }
 
 /**
  * Stores the settings variable from the textEdit
@@ -188,12 +184,11 @@ void ScriptSettingWidget::on_filePathButton_clicked() {
     const QString type = _variableMap["type"].toString();
     const bool isDirectory = type == "directory";
 
-    FileDialog dialog("ScriptSettingsFile-" + _script.getIdentifier() + "-" +
-                      identifier);
+    FileDialog dialog("ScriptSettingsFile-" + _script.getIdentifier() + "-" + identifier);
     dialog.setFileMode(isDirectory ? QFileDialog::Directory : QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
-    dialog.setWindowTitle(isDirectory ?
-              tr("Please select a directory") : tr("Please select a file"));
+    dialog.setWindowTitle(isDirectory ? tr("Please select a directory")
+                                      : tr("Please select a file"));
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {

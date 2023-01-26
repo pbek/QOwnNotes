@@ -30,8 +30,7 @@ CryptoService::CryptoService(QObject *parent) : QObject(parent) {
  * The instance will be created if it doesn't exist.
  */
 CryptoService *CryptoService::instance() {
-    auto *cryptoService =
-        qApp->property("cryptoService").value<CryptoService *>();
+    auto *cryptoService = qApp->property("cryptoService").value<CryptoService *>();
 
     if (cryptoService == nullptr) {
         cryptoService = createInstance(nullptr);
@@ -46,8 +45,7 @@ CryptoService *CryptoService::instance() {
 CryptoService *CryptoService::createInstance(QObject *parent) {
     auto *cryptoService = new CryptoService(parent);
 
-    qApp->setProperty("cryptoService",
-                      QVariant::fromValue<CryptoService *>(cryptoService));
+    qApp->setProperty("cryptoService", QVariant::fromValue<CryptoService *>(cryptoService));
 
     return cryptoService;
 }

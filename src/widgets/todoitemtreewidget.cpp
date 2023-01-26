@@ -1,6 +1,8 @@
 
 #include "todoitemtreewidget.h"
+
 #include <entities/calendaritem.h>
+
 #include <QDebug>
 
 TodoItemTreeWidget::TodoItemTreeWidget(QWidget *parent) : QTreeWidget(parent) { Q_UNUSED(parent); }
