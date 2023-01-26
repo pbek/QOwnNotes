@@ -369,7 +369,7 @@ jobs:
           lrelease QOwnNotes.pro
           #ls ${Qt5_Dir}/bin
           ${{env.QMAKE}}
-          make -j {{env.CORES}}
+          make -j ${{env.CORES}}
           ../build-systems/github/macos/create-dmg-qt6.sh
 
       - name: '📤 Upload artifact: macOS'
