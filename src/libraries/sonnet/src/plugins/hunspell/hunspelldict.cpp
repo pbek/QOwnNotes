@@ -32,10 +32,6 @@
 #include <utils/misc.h>
 #include <QStringBuilder>
 
-#if QT_VERSION >= QT_VERSION_CHECK(6,0,0)
-#include <QStringEncoder>
-#endif
-
 using namespace Sonnet;
 
 HunspellDict::HunspellDict(const QString &lang, QString path)
@@ -54,21 +50,14 @@ HunspellDict::HunspellDict(const QString &lang, QString path)
 
         m_speller
                 = new Hunspell(aff.toLocal8Bit().constData(), dictionary.toLocal8Bit().constData());
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-        m_codec = QStringConverter::encodingForName(m_speller->get_dic_encoding()).value_or(QStringConverter::Utf8);
-#else
+
         m_codec = QTextCodec::codecForName(m_speller->get_dic_encoding());
-#endif
         if (!m_codec) {
             qWarning() << "Failed to find a text codec for name"
                                        << m_speller->get_dic_encoding()
                                        << "defaulting to locale text codec";
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-            m_codec = QStringConverter::Utf8;
-#else
             m_codec = QTextCodec::codecForLocale();
             Q_ASSERT(m_codec);
-#endif
         }
 
     } else {
@@ -121,12 +110,7 @@ HunspellDict::~HunspellDict()
 QByteArray HunspellDict::toDictEncoding(const QString &word) const
 {
     if (m_codec) {
-#if QT_VERSION >= QT_VERSION_CHECK(6,0,0)
-        QStringEncoder e(m_codec);
-        return e.encode(word);
-#else
         return m_codec->fromUnicode(word);
-#endif
     }
     return {};
 }
@@ -150,17 +134,9 @@ QStringList HunspellDict::suggest(const QString &word) const
 
     QStringList lst;
 
-#if QT_VERSION >= QT_VERSION_CHECK(6,0,0)
-        QStringDecoder e(m_codec);
-        const auto suggestions = m_speller->suggest(toDictEncoding(word).toStdString());
-        std::for_each (suggestions.begin(), suggestions.end(), [&e, &lst](const std::string &suggestion) {
-                lst << e.decode(suggestion.c_str());
-        });
-#else
     const auto suggestions = m_speller->suggest(toDictEncoding(word).toStdString());
     std::for_each (suggestions.begin(), suggestions.end(), [this, &lst](const std::string &suggestion) {
             lst << m_codec->toUnicode(suggestion.c_str()); });
-#endif
 
     return lst;
 }
