@@ -4,9 +4,14 @@ on:
   push:
     branches:
 #      - master
+      # For testing also on develop branch
       - develop
     tags-ignore:
       - '*'
+  # For testing also on pull requests
+  pull_request:
+    paths:
+      - 'src/**'
 
 defaults:
   run:
