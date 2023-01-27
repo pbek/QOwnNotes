@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 23.1.3
+- the Evernote import was completely rewritten with stream support (QXMLStreamReader)
+  to now support reading huge ENEX Evernote files (for [#2711](https://github.com/pbek/QOwnNotes/issues/2711))
+  - it also works under Qt 6 now
+
 ## 23.1.2
 - the XML parsing for the Nextcloud / ownCloud support was re-implemented
   to work with Qt6 (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
