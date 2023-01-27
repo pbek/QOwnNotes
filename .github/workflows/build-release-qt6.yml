@@ -4,9 +4,14 @@ on:
   push:
     branches:
 #      - master
+      # For testing also on develop branch
       - develop
     tags-ignore:
       - '*'
+  # For testing also on pull requests
+  pull_request:
+    paths:
+      - 'src/**'
 
 defaults:
   run:
@@ -24,7 +29,7 @@ env:
   PUBLISHER: "Patrizio Bekerle"
   REPO_DIR: "/home/runner/work/QOwnNotes"
   QT_VERSION: 6.5.0
-  QT_MODULES: ${{env.QT_MODULES}}
+  QT_MODULES: "qtwebsockets qt5compat"
   QMAKE: qmake6
   CORES: 16
 
@@ -368,8 +373,8 @@ jobs:
           echo "#define RELEASE \"GitHub Actions\"" > release.h
           lrelease QOwnNotes.pro
           #ls ${Qt5_Dir}/bin
-          {{env.QMAKE}}
-          make -j {{env.CORES}}
+          ${{env.QMAKE}}
+          make -j ${{env.CORES}}
           ../build-systems/github/macos/create-dmg-qt6.sh
 
       - name: '📤 Upload artifact: macOS'
