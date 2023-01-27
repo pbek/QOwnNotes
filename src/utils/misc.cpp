@@ -49,6 +49,8 @@
 #include <QUrl>
 #include <QUuid>
 #include <QtGui/QIcon>
+#include <QXmlStreamReader>
+
 #include <utility>
 #if (QT_VERSION < QT_VERSION_CHECK(5, 6, 0))
 #include <QHostInfo>
@@ -73,11 +75,6 @@
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
 #include <QRandomGenerator>
 #include <QStandardPaths>
-#endif
-
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-#include <QXmlQuery>
-#include <QXmlResultItems>
 #endif
 
 enum SearchEngines {
@@ -2346,36 +2343,51 @@ void Utils::Misc::cleanupEvernoteImportText(QString &content) {
 }
 
 QString Utils::Misc::testEvernoteImportText(const QString &data) {
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    QXmlQuery query;
-    query.setFocus(data);
-    query.setQuery(QStringLiteral("en-export/note"));
+    QXmlStreamReader xml(data);
 
-    QXmlResultItems result;
-    if (!query.isValid()) {
-        return "";
+    while (!xml.atEnd() && !xml.hasError()) {
+        QXmlStreamReader::TokenType token = xml.readNext();
+
+        // If token is just StartDocument, we'll go to next.
+        if (token == QXmlStreamReader::StartDocument) {
+            continue;
+        }
+
+        // If token is StartElement, we'll see if we can read it.
+        if (token == QXmlStreamReader::StartElement) {
+            if (xml.name() == QStringLiteral("en-export")) {
+                continue;
+            }
+
+            if (xml.name() == QStringLiteral("note")) {
+                // Let's check that we're really getting a note.
+                if (xml.tokenType() != QXmlStreamReader::StartElement &&
+                    xml.name() == QStringLiteral("note")) {
+                    return {};
+                }
+
+                QString content;
+                xml.readNext();
+
+                while (!(xml.tokenType() == QXmlStreamReader::EndElement &&
+                         xml.name() == QStringLiteral("note"))) {
+
+                    if (xml.tokenType() == QXmlStreamReader::StartElement) {
+                        if (xml.name() == QStringLiteral("content")) {
+                            xml.readNext();
+                            content = xml.text().toString().trimmed();
+                            Utils::Misc::transformEvernoteImportText(content, true);
+
+                            return content.trimmed();
+                        }
+                    }
+
+                    xml.readNext();
+                }
+            }
+        }
     }
 
-    query.evaluateTo(&result);
-
-    result.next();
-    query.setFocus(result.current());
-
-    QString content;
-    query.setQuery(QStringLiteral("content/text()"));
-
-    // content seems to be html encoded
-    query.evaluateTo(&content);
-
-    // unescape content
-    Utils::Misc::unescapeEvernoteImportText(content);
-
-    Utils::Misc::transformEvernoteImportText(content, true);
-
-    return content.trimmed();
-#endif
-    qWarning() << Q_FUNC_INFO << "not implemented for qt6";
-    Q_UNUSED(data);
     return {};
 }
 
