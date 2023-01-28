@@ -13,7 +13,6 @@ pkgbase = qownnotes
 	depends = qt5-declarative
 	depends = qt5-websockets
 	depends = qt5-tools
-	depends = qt5-xmlpatterns
 	depends = qt5-x11extras
 	depends = aspell
 	source = https://github.com/pbek/QOwnNotes.git

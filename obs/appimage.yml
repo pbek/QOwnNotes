@@ -13,7 +13,6 @@ build:
     - pkgconfig(Qt5Network)
     - pkgconfig(Qt5Widgets)
     - pkgconfig(Qt5Xml)
-    - pkgconfig(Qt5XmlPatterns)
     - pkgconfig(Qt5PrintSupport)
     - pkgconfig(Qt5Qml)
     - pkgconfig(Qt5WebSockets)

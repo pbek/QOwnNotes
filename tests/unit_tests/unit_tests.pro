@@ -1,10 +1,6 @@
 
 QT       += core gui testlib sql widgets xml network qml printsupport
 
-lessThan(QT_MAJOR_VERSION, 6) {
-    QT += xmlpatterns
-}
-
 #QT       -= gui
 
 TARGET = tests

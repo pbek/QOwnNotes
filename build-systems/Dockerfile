@@ -8,7 +8,7 @@ RUN apt-get -y install bash tmuxinator \
          devscripts fakeroot xutils lintian pbuilder cdbs gnupg \
          python3 python3-pip osc xz-utils git rsync qttools5-dev-tools \
          qt5-qmake qtbase5-dev libqt5svg5-dev qtdeclarative5-dev \
-         libqt5xmlpatterns5-dev libqt5websockets5-dev libqt5x11extras5-dev
+         libqt5websockets5-dev libqt5x11extras5-dev
 
 # QOwnNotes repo is supposed to be mounted to /QOwnNotes
 RUN useradd -ms /bin/bash release

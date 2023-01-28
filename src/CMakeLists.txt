@@ -75,7 +75,6 @@ find_package(Qt5 COMPONENTS REQUIRED
     Svg
     Network
     Xml
-    XmlPatterns
     PrintSupport
     WebSockets
     Qml
@@ -547,7 +546,6 @@ target_link_libraries(QOwnNotes PRIVATE
     Qt5::Svg
     Qt5::Network
     Qt5::Xml
-    Qt5::XmlPatterns
     Qt5::PrintSupport
     Qt5::WebSockets
     Qt5::Qml

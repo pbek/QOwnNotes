@@ -2,7 +2,7 @@ Source: qownnotes
 Priority: optional
 Maintainer: Patrizio Bekerle <patrizio@bekerle.com>
 Section: editors
-Build-Depends: debhelper (>= 9), cdbs, qt5-qmake, qtbase5-dev, libqt5svg5-dev, qtdeclarative5-dev, libqt5xmlpatterns5-dev, libqt5websockets5-dev, libqt5x11extras5-dev
+Build-Depends: debhelper (>= 9), cdbs, qt5-qmake, qtbase5-dev, libqt5svg5-dev, qtdeclarative5-dev, libqt5websockets5-dev, libqt5x11extras5-dev
 Standards-Version: 3.9.6
 Homepage: https://www.qownnotes.org
 Vcs-Git: https://github.com/pbek/QOwnNotes.git
@@ -10,7 +10,7 @@ Vcs-Browser: https://github.com/pbek/QOwnNotes/
 
 Package: qownnotes
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5core5a, libqt5gui5, libqt5sql5, libqt5sql5-sqlite, libqt5widgets5, libqt5qml5, libqt5svg5, libqt5network5, libqt5xml5, libqt5xmlpatterns5, libqt5websockets5, libqt5x11extras5, openssl
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5core5a, libqt5gui5, libqt5sql5, libqt5sql5-sqlite, libqt5widgets5, libqt5qml5, libqt5svg5, libqt5network5, libqt5xml5, libqt5websockets5, libqt5x11extras5, openssl
 Description: Plain-text file markdown note taking with Nextcloud/ownCloud integration
  Plain-text file markdown note taking with Nextcloud/ownCloud integration.
  You own your own notes! All notes are stored as plain-text files on your desktop computer.

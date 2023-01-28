@@ -27,7 +27,6 @@ class QNetworkReply;
 class QNetworkAccessManager;
 class QNetworkRequest;
 class QAuthenticator;
-class QXmlQuery;
 class QString;
 
 class OwnCloudService : public QObject {

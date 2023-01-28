@@ -81,7 +81,6 @@ parts:
       - qtdeclarative5-dev
       - libqt5svg5-dev
       - qttools5-dev-tools
-      - libqt5xmlpatterns5-dev
       - libqt5websockets5-dev
       - libqt5x11extras5-dev
     stage-packages:
@@ -93,7 +92,6 @@ parts:
       - libqt5svg5
       - libqt5network5
       - libqt5xml5
-      - libqt5xmlpatterns5
       - libqt5printsupport5
       - libqt5websockets5
       - libqt5x11extras5

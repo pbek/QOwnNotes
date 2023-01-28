@@ -28,7 +28,6 @@ DEPEND="
 	dev-qt/qtnetwork:5
 	dev-qt/qtdeclarative:5
 	dev-qt/qtxml:5
-	dev-qt/qtxmlpatterns:5
 	dev-qt/qtprintsupport:5
 	dev-qt/qtwebsockets:5
 	dev-qt/qtx11extras:5

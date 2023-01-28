@@ -9,7 +9,6 @@ class EvernoteImportDialog;
 }
 
 class Note;
-class QXmlQuery;
 class QTreeWidgetItem;
 
 class EvernoteImportDialog : public MasterDialog {

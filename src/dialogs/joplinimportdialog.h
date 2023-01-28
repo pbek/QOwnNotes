@@ -9,7 +9,6 @@ class JoplinImportDialog;
 }
 
 class Note;
-class QXmlQuery;
 class QTreeWidgetItem;
 
 class JoplinImportDialog : public MasterDialog {
