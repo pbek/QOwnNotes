@@ -144,7 +144,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{env.EXECUTABLE}}-x86_64.AppImage
-          path: src/${{env.EXECUTABLE}}-Linux.AppImage
+          path: src/${{env.EXECUTABLE}}-x86_64.AppImage
       - name: '📤 Upload artifact: AppImage sha256sum'
         uses: actions/upload-artifact@v3
         with:
