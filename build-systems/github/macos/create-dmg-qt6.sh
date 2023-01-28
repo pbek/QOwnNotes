@@ -44,9 +44,11 @@ cp ${Qt6_DIR}/translations/qtbase_*.qm $APP.app/Contents/Resources
 
 # use macdeployqt to deploy the application
 echo "Calling macdeployqt"
-#${Qt6_DIR}/bin/macdeployqt ./$APP.app
-${Qt6_DIR}/bin/macdeployqt6 ./$APP.app
+${Qt6_DIR}/bin/macdeployqt ./$APP.app
+# Qt 6.4.2 can't find macdeployqt6
+#${Qt6_DIR}/bin/macdeployqt6 ./$APP.app
 #macdeployqt ./$APP.app
+
 if [ "$?" -ne "0" ]; then
     echo "Failed to run macdeployqt"
     exit 1
