@@ -226,9 +226,9 @@ HEADERS  += mainwindow.h \
     libraries/simplecrypt/simplecrypt.h \
     libraries/versionnumber/versionnumber.h \
     libraries/botan/botanwrapper.h \
-    libraries/md4c/md4c/md4c.h \
-    libraries/md4c/md2html/render_html.h \
-    libraries/md4c/md2html/entity.h \
+    libraries/md4c/src/md4c.h \
+    libraries/md4c/src/md4c-html.h \
+    libraries/md4c/src/entity.h \
     entities/notehistory.h \
     entities/note.h \
     entities/trashitem.h \
