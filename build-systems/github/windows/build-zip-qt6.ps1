@@ -2,6 +2,9 @@
 # This script builds QOwnNotes and creates a ZIP including all necessary libraries
 ##################################################################################
 
+# Stop on error
+$ErrorActionPreference = "Stop"
+
 #dir -s ..\..\Qt
 Write-Host $Env:QT_VERSION
 echo "#define RELEASE ""GitHub Actions""" > release.h
