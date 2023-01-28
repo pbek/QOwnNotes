@@ -16,8 +16,8 @@ if [ "$NAME" != "Darwin" ]; then
     exit 1
 fi
 
-env
-find ${Qt6_DIR}
+#env
+#find ${Qt6_DIR}
 
 echo "Changing bundle identifier"
 sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' $PLIST
@@ -45,7 +45,8 @@ cp ${Qt6_DIR}/translations/qtbase_*.qm $APP.app/Contents/Resources
 # use macdeployqt to deploy the application
 echo "Calling macdeployqt"
 #${Qt6_DIR}/bin/macdeployqt ./$APP.app
-macdeployqt ./$APP.app
+${Qt6_DIR}/bin/macdeployqt6 ./$APP.app
+#macdeployqt ./$APP.app
 if [ "$?" -ne "0" ]; then
     echo "Failed to run macdeployqt"
     exit 1
