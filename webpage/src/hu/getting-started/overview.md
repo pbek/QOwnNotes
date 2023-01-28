@@ -158,7 +158,7 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 - **A kukába helyezett jegyzetek** **visszaállíthatók** a **Nextcloud / ownCloud** szerverről
 - A jegyzetfájlok **külső változásai** **itt megfigyelhetők** (a jegyzetek vagy a jegyzetlista újratöltődnek)
 - A **hierarchikus jegyzetcímkézés** és a **jegyzetmappák** támogatása
-- Opcionális jegyzetek **titkosítása** (beépített AES-256 vagy használhat egyedi titkosítási módszereket, például **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) vagy **PGP** ([titkosítás-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
+- Opcionális jegyzetek **titkosítása** (beépített AES-256 vagy használhat egyedi titkosítási módszereket, például **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) vagy **PGP** ([titkosítás-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
 - A **jegyzetek mappa** **szabadon választható** (több jegyzetmappa is használható)
 - **Szavarészekben kereshet** a jegyzetekben, és a keresési eredmények kiemelve jelennek meg a jegyzetekben
 - [**Böngészőbővítmény**](browser-extension.md): **jegyzetek hozzáadásához a kijelölt szöveghez**, **képernyőképek készítéséhez** vagy **könyvjelzők kezeléséhez**

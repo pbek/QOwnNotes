@@ -116,7 +116,7 @@ for (var idx in notes) {
 }
 ```
 
-يمكنك أن تجد أمثلة أكثر على استخدام TagApi في [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
+يمكنك أن تجد أمثلة أكثر على استخدام TagApi في [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
 
 MainWindow (النافذة الرئيسية)
 ----------
@@ -170,7 +170,7 @@ mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("تحرير"));
 
 // انتقل إلى الوسم «تجربة» في قائمة الوسوم
 // يوجد مثال في
-// https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml
+// https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["تجربة"]);
 mainWindow.jumpToTag(tag.id);
 

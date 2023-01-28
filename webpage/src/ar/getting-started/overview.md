@@ -158,7 +158,7 @@
 - **الملاحظات المهملة** يمكن **استعادتها** من خادم **Nextcloud أو ownCloud** الخاص بك
 - **التعديلات خارج التطبيق** على ملفات الملاحظات يتم **مراقبتها** (ويتم إعادة تحميل الملاحظة أو قائمة الملاحظات)
 - دعم **الوسم الهرمي للملاحظات** وكذلك **المجلدات الفرعية للملاحظات**
-- **تشفير** اختياري للملاحظات؛ AES-256 تأتي مدمجة، ويمكنك استخدام طرق تشفير مخصصة مثل **[Keybase.io](https://keybase.io/)** (انظر [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) أو **PGP** (انظر [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
+- **تشفير** اختياري للملاحظات؛ AES-256 تأتي مدمجة، ويمكنك استخدام طرق تشفير مخصصة مثل **[Keybase.io](https://keybase.io/)** (انظر [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) أو **PGP** (انظر [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
 - **مجلد الملاحظات** يمكن **اختياره بحرية** (يمكن اختيار مجلدات متعددة للملاحظات)
 - إمكانية **البحث بأجزاء الكلمات** في الملاحظات، وتظليل نتائج البحث فيها
 - [**إضافة متصفح**](browser-extension.md) حتى يمكنك **إضافة ملاحظات من النص المحدد** أو **أخذ لقطات شاشة** أو **إدارة إشاراتك المرجعية**

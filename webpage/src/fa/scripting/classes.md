@@ -116,7 +116,7 @@ for (var idx in notes) {
 }
 ```
 
-می توانید از مثال های بیشتر استفاده کنید که در آن TagApi در [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml) استفاده می شود.
+می توانید از مثال های بیشتر استفاده کنید که در آن TagApi در [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) استفاده می شود.
 
 پنجره اصلی
 ----------
@@ -168,7 +168,7 @@ mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 
 // Jump to the tag "test" in the tag tree
-// There is an example in https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml
+// There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 

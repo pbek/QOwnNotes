@@ -175,7 +175,7 @@ module.exports = {
     editLinks: true,
     domain: 'https://www.qownnotes.org',
     author: { name: 'Patrizio Bekerle', twitter: '@PatrizioBekerle' },
-    docsBranch: 'develop',
+    docsBranch: 'main',
     docsDir: 'webpage/src',
     editLinkText: 'Help us improve this page!',
     lastUpdated: false,

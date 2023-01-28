@@ -27,7 +27,7 @@ Zachęcamy do dodawania kodu źródłowego do tego projektu, zgłaszania sugesti
 Odwiedź [QOwnNotes na GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-Jeśli chcesz wnieść kod źródłowy do projektu, prześlij swoje żądania ściągnięcia do gałęzi `develop`.
+Jeśli chcesz wnieść kod źródłowy do projektu, prześlij swoje żądania ściągnięcia do gałęzi `main`.
 :::
 
 ## Archiwum źródłowe

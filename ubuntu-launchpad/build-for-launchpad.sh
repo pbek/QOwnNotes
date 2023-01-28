@@ -12,8 +12,8 @@
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=22.11.3.1
 
-BRANCH=develop
-#BRANCH=master
+BRANCH=main
+#BRANCH=release
 
 # https://wiki.ubuntu.com/Releases
 UBUNTU_RELEASES=( "jammy" "bionic" "focal" "kinetic" "lunar" )

@@ -12,7 +12,7 @@
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=16.06.12
 
-BRANCH=develop
+BRANCH=main
 #BRANCH=master
 
 PROJECT_PATH="/tmp/QOwnNotes-slackware-$$"

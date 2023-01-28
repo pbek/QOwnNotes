@@ -40,7 +40,7 @@ QOwnNotes --action actionShow_Todo_List
 ```
 
 ::: tip
-شما می توانید اسامی هدف منو اکشن را از [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui)دریافت کنید. تنها عنوان منوی انگلیسی را جستجو کنید. توجه داشته باشید که این متن ها با گذشت زمان می توانند تغییر کنند.
+شما می توانید اسامی هدف منو اکشن را از [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui)دریافت کنید. تنها عنوان منوی انگلیسی را جستجو کنید. توجه داشته باشید که این متن ها با گذشت زمان می توانند تغییر کنند.
 :::
 
 به منظور راه اندازی [عملیات اسکریپت نویسی](../scripting/methods-and-objects.md#registering-a-custom-action)، از `customAction_` و پس از آن از شناساگر عملیات سفارشی استفاده کنید. شناساگر عملیات سفارشی نخستین پارامتر درخواست `script.registerCustomAction` در اسکریپت است.

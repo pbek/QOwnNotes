@@ -45,7 +45,7 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
 }
 ```
 
-Érdemes megnézni a példát [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml), [callback.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml) or [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/execute-command-after-note-update.qml).
+Érdemes megnézni a példát [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml), [callback.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml) or [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/execute-command-after-note-update.qml).
 
 Érdemes egy pillantást vetni az [onDetachedProcessCallback](hooks.html#ondetachedprocesscallback) kampóra is.
 
@@ -70,7 +70,7 @@ QByteArray startSynchronousProcess(QString executablePath, QStringList parameter
 var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data", "/path/to/execute/in");
 ```
 
-Érdemes megnézni a példát [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml).
+Érdemes megnézni a példát [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml).
 
 Az aktuális jegyzet mappa elérési útjának lekérése
 -------------------------------------------
@@ -90,7 +90,7 @@ QString currentNoteFolderPath();
 var path = script.currentNoteFolderPath();
 ```
 
-Érdemes megnézni a példát [abszolút-media-links.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/absolute-media-links.qml).
+Érdemes megnézni a példát [abszolút-media-links.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/absolute-media-links.qml).
 
 Az aktuális jegyzet megszerzése
 ------------------------
@@ -110,7 +110,7 @@ NoteApi currentNote();
 var note = script.currentNote();
 ```
 
-Érdemes megnéznie az [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) példát.
+Érdemes megnéznie az [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) példát.
 
 Naplózás a napló widgetbe
 -------------------------
@@ -149,7 +149,7 @@ QString downloadUrlToString (QUrl url);
 var html = script.downloadUrlToString("https://www.qownnotes.org");
 ```
 
-Érdemes megnézni a példát [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
+Érdemes megnézni a példát [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
 
 URL letöltése a média mappába
 --------------------------------------
@@ -172,7 +172,7 @@ QString downloadUrlToMedia(QUrl url, bool returnUrlOnly);
 var markdown = script.downloadUrlToMedia("http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)}");
 ```
 
-Érdemes megnézni a példát [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/paste-latex-image.qml).
+Érdemes megnézni a példát [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/paste-latex-image.qml).
 
 Inserting a media file into the media folder
 --------------------------------------------
@@ -196,7 +196,7 @@ QString ScriptingService :: insertMediaFile (QString mediaFilePath,
 var markdown = script.insertMediaFile("/path/to/your/image.png");
 ```
 
-Érdemes megnézni a példát [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
+Érdemes megnézni a példát [scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml).
 
 Mellékletfájl beszúrása a mellékletek mappájába
 --------------------------------------------------------
@@ -241,7 +241,7 @@ QString ScriptingService::regenerateNotePreview();
 script.regenerateNotePreview();
 ```
 
-Érdemes megnézni a példát [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
+Érdemes megnézni a példát [scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml).
 
 Egyéni művelet regisztrálása
 ---------------------------
@@ -330,7 +330,7 @@ Script {
 }
 ```
 
-További példákért lásd: [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+További példákért lásd: [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
 Egyéni műveletet is kiválthat az alkalmazás indítása után a(z) `--action customAction_<identifier>` paraméterrel. További információért tekintse meg a(z) [Indítás utáni menüműveletek](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup)et.
@@ -363,7 +363,7 @@ The labels will be visible in the *Scripting panel*, which you need to enable in
 
 A címkékben használhat sima szöveget vagy HTML-t is. A szöveg választható lesz, és a linkekre kattintani lehet.
 
-Ezután érdemes megnéznie a példa szkriptet [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
+Ezután érdemes megnéznie a példa szkriptet [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
 
 Bejegyzett címke szövegének beállítása
 --------------------------------------
@@ -386,7 +386,7 @@ script.setLabelText("counter-label", "counter text");
 
 A címkékben használhat sima szöveget vagy HTML-t is. A szöveg választható lesz, és a linkekre kattintani lehet.
 
-Ezután érdemes megnéznie a példa szkriptet [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
+Ezután érdemes megnéznie a példa szkriptet [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
 
 Új jegyzet létrehozása
 -------------------
@@ -406,7 +406,7 @@ void ScriptingService::createNote(QString text);
 script.createNote("My note headline\n===\n\nMy text");
 ```
 
-Érdemes megnéznie az [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) példát.
+Érdemes megnéznie az [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) példát.
 
 ::: tip
 Ha kikapcsolta, hogy a jegyzet címsora határozza meg a jegyzet fájlnevét, akkor utána magának kell átneveznie a jegyzetfájlt, így:
@@ -436,7 +436,7 @@ var clipboardText = script.clipboard();
 var clipboardHtml = script.clipboard(true);
 ```
 
-Érdemes megnéznie az [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) példát.
+Érdemes megnéznie az [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) példát.
 
 Írjon szöveget a jegyzet szövegszerkesztésébe
 --------------------------------
@@ -457,7 +457,7 @@ void ScriptingService::noteTextEditWrite(QString text);
 script.noteTextEditWrite ("Saját szöveg");
 ```
 
-Érdemes megnéznie az `transformTextRot13` egyéni műveletet a [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) példában.
+Érdemes megnéznie az `transformTextRot13` egyéni műveletet a [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) példában.
 
 Használhatja ezt a `noteTextEditSelectAll` vel együtt az aktuális jegyzet teljes szövegének felülírásához.
 
@@ -480,7 +480,7 @@ QString ScriptingService :: noteTextEditSelectedText ();
 var text = script.noteTextEditSelectedText();
 ```
 
-Érdemes megnéznie az `transformTextRot13` egyéni műveletet a [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) példában.
+Érdemes megnéznie az `transformTextRot13` egyéni műveletet a [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) példában.
 
 Jelölje ki az összes szöveget a jegyzet szövegszerkesztésében
 -------------------------------------
@@ -649,7 +649,7 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 var text = script.noteTextEditCurrentWord();
 ```
 
-Érdemes megnéznie az [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml) példát.
+Érdemes megnéznie az [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml) példát.
 
 Ellenőrizze, hogy a platform Linux, OS X vagy Windows
 ------------------------------------------------
@@ -687,7 +687,7 @@ void ScriptingService :: tagCurrentNote (QString tagName);
 script.tagCurrentNote ("kedvenc");
 ```
 
-Érdemes megnéznie a `kedvencNote` egyéni műveletet a [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml) példában.
+Érdemes megnéznie a `kedvencNote` egyéni műveletet a [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/favorite-note.qml) példában.
 
 Hozzon létre vagy válasszon egy címkét a nevének rákattintási listáján
 -------------------------------------------------
@@ -734,7 +734,7 @@ QStringList ScriptingService::searchTagsByName(QString name);
 var tags = script.searchTagsByName("game");
 ```
 
-Érdemes megnéznie az [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml) példát.
+Érdemes megnéznie az [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml) példát.
 
 Jegyzetek keresése jegyzetszöveg alapján
 -----------------------------
@@ -764,7 +764,7 @@ noteIds.forEach function (noteId){
 });
 ```
 
-Érdemes megnéznie az [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/unique-note-id.qml) példát.
+Érdemes megnéznie az [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/unique-note-id.qml) példát.
 
 Adjon hozzá egy egyedi stíluslapot
 -----------------------
@@ -785,16 +785,16 @@ void ScriptingService :: addStyleSheet (QString stíluslap);
 script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
 ```
 
-Érdemes megnézni a példát [egyéni stíluslap.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-stylesheet.qml).
+Érdemes megnézni a példát [egyéni stíluslap.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-stylesheet.qml).
 
-A widgetek neveit a `*.ui` fájlokból kaphatja meg, például a főablak a [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
+A widgetek neveit a `*.ui` fájlokból kaphatja meg, például a főablak a [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui).
 
 A Qt-dokumentáció (például [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)) segíthet abban, hogy megnézze, hogyan kapcsolódnak egymáshoz a widgetek (keresse az `Öröklések` kifejezést az oldalakon).
 
 Az alap widget szinte mindenhez a [QWidget](https://doc.qt.io/qt-5/qwidget.html). Tehát csak a `QWidget` stílust, például a `QWidget {background-color: black; color: white;}` azt jelenti, hogy mindennek fekete háttérszíne és fehér előtérszíne van.
 
 ::: tip
-A[style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) a [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle)-ból szintén jó referencia lehet a módosítható stílusokhoz.
+A[style.qss](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle/style.qss) a [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle)-ból szintén jó referencia lehet a módosítható stílusokhoz.
 :::
 
 Vessen egy pillantást a [Stíluslap-referenciára](http://doc.qt.io/qt-5/stylesheet-reference.html), ahol megtudhatja, milyen stílusok érhetők el.
@@ -864,7 +864,7 @@ NoteApi* ScriptingService::fetchNoteById(int id);
 script.fetchNoteById (243);
 ```
 
-Érdemes megnézni a példát [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Érdemes megnézni a példát [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Annak ellenőrzése, hogy létezik-e jegyzet a fájlneve alapján
 ------------------------------------------
@@ -890,7 +890,7 @@ bool ScriptingService::noteExistsByFileName(QString fileName,
 script.noteExistsByFileName("my note.md", note.id);
 ```
 
-Érdemes megnézni a példát [use-tag-names-in-fájlnév.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).
+Érdemes megnézni a példát [use-tag-names-in-fájlnév.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
 
 Szöveg másolása a vágólapra
 -------------------------------
@@ -912,7 +912,7 @@ void ScriptingService::setClipboardText(QString text, bool asHtml);
 script.setClipboardText("text to copy");
 ```
 
-Érdemes megnézni a példát [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).
+Érdemes megnézni a példát [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/selected-markdown-to-bbcode.qml).
 
 Ugrás egy jegyzethez
 -----------------
@@ -937,7 +937,7 @@ script.setCurrentNote(note);
 script.setCurrentNote(note, true);
 ```
 
-Érdemes megnézni a példát [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
+Érdemes megnézni a példát [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/journal-entry.qml).
 
 Ugrás egy jegyzet almappájára
 ---------------------------
@@ -1019,7 +1019,7 @@ script.log(result);
 
 A gombokkal kapcsolatos információkért lásd: [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
 
-Érdemes egy pillantást vetni a példára is [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+Érdemes egy pillantást vetni a példára is [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml).
 
 Megnyitott fájl párbeszédpanel megjelenítése
 ---------------------------
@@ -1067,7 +1067,7 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 var fileName = script.getSaveFileName ("Please select HTML file to save", "output.html", "HTML (*.html)");
 ```
 
-Érdemes megnézni a példát [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Érdemes megnézni a példát [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Registering script settings variables
 -------------------------------------
@@ -1165,7 +1165,7 @@ function registerSettingsVariables() {
 }
 ```
 
-Érdemes egy pillantást vetni erre a példára is: [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
+Érdemes egy pillantást vetni erre a példára is: [variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/variables.qml).
 
 Tartós változók tárolása és betöltése
 ----------------------------------------
@@ -1206,7 +1206,7 @@ script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothin
 
 Kérjük, ne felejtsen el értelmes előtagot használni a kulcsában, például `PersistentVariablesTest / myVar`, mert a változók minden szkriptből elérhetők.
 
-Érdemes megnéznie a [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml) példát is.
+Érdemes megnéznie a [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/persistent-variables.qml) példát is.
 
 Az alkalmazás beállításainak változóinak betöltése
 --------------------------------------
@@ -1379,7 +1379,7 @@ QStringList ScriptingService :: selectedNotesPaths ();
 script.log (script.selectedNotesPaths());
 ```
 
-Érdemes megnézni a példát [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
+Érdemes megnézni a példát [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-diff.qml).
 
 Az összes kijelölt jegyzet azonosítóinak listájának lekérése
 -----------------------------------------------
@@ -1399,7 +1399,7 @@ QList <int> ScriptingService :: selectedNotesIds ();
 // az összes kijelölt jegyzet azonosítóinak listáját adja vissza a script.log (script.selectedNotesIds());
 ```
 
-Érdemes megnézni a példát [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Érdemes megnézni a példát [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Menüművelet kiváltása
 ------------------------
@@ -1425,10 +1425,10 @@ script.triggerMenuAction("actionAllow_note_editing");
 script.triggerMenuAction("actionAllow_note_editing", 1);
 ```
 
-Érdemes megnézni a példát [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
+Érdemes megnézni a példát [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/disable-readonly-mode.qml).
 
 ::: tip
-A menümű objektumneveit innen szerezheti be [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Csak keresse meg az angol menü címét. Ne feledje, hogy ezek a szövegek idővel változhatnak.
+A menümű objektumneveit innen szerezheti be [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Csak keresse meg az angol menü címét. Ne feledje, hogy ezek a szövegek idővel változhatnak.
 :::
 
 Beviteli párbeszédpanel megnyitása egy kiválasztott mezővel
@@ -1460,7 +1460,7 @@ var result = script.inputDialogGetItem(
 script.log(result);
 ```
 
-Érdemes megnézni a példát [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+Érdemes megnézni a példát [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml).
 
 Beviteli párbeszédpanel megnyitása sorszerkesztéssel
 ----------------------------------------
@@ -1551,16 +1551,16 @@ var result = script.writeToFile(filePath, html);
 script.log(result);
 ```
 
-Érdemes megnézni a példát [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Érdemes megnézni a példát [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Webhálózatok használata
 -----------------------
 
 A QOwnNotes távolról vezérelhető a `WebSocketServer` használatával.
 
-Kérjük, nézze meg a példát [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). A socket kiszolgálót úgy tesztelheti, hogy csatlakozik hozzá a [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
+Kérjük, nézze meg a példát [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-server.qml). A socket kiszolgálót úgy tesztelheti, hogy csatlakozik hozzá a [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
 
-A foglalatokat a `WebSocket` használatával is meghallgathatja. Kérjük, nézze meg a példát [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
+A foglalatokat a `WebSocket` használatával is meghallgathatja. Kérjük, nézze meg a példát [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-client.qml).
 
 Ne feledje, hogy ennek használatához telepítenie kell a Qt QML `websocket` könyvtárát. Például az Ubuntu Linux alatt telepíthet `qml-module-qtwebsockets`.
 
@@ -1630,4 +1630,4 @@ script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);
 script.addHighlightingRule("^.{32}(.+)", "", 24, 1, -1);
 ```
 
-Megnézheti a példákat is [kiemelés.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/highlighting.qml).
+Megnézheti a példákat is [kiemelés.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/highlighting.qml).

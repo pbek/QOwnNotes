@@ -9,8 +9,8 @@ os:
 
 branches:
   only:
-    - develop
-    - master
+    - main
+    - release
     - testing
     - /^feature.+$/
 
@@ -76,7 +76,7 @@ script:
   - cd ./tests
   - qmake DEFINES+=INTEGRATION_TESTS CONFIG+=ccache && make -s -j 2
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-      if [ "${TRAVIS_BRANCH}" != "master" ]; then
+      if [ "${TRAVIS_BRANCH}" != "release" ]; then
            ./../bin/tests/tests -platform minimal -txt
         && ../travis/linux/coveralls.sh
         ;
@@ -123,7 +123,7 @@ before_deploy:
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
   - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then
-        if [ "${TRAVIS_BRANCH}" == "master" ]; then
+        if [ "${TRAVIS_BRANCH}" == "release" ]; then
             export GIT_TAG=linux-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
             ;
         else
@@ -132,7 +132,7 @@ before_deploy:
         fi
         ;
     else
-        if [ "${TRAVIS_BRANCH}" == "master" ]; then
+        if [ "${TRAVIS_BRANCH}" == "release" ]; then
             export GIT_TAG=macosx-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
             ;
         else
@@ -145,7 +145,7 @@ before_deploy:
   - git push -q https://$TAGPERM@github.com/pbek/QOwnNotes --tags >/dev/null 2>&1
 
 deploy:
-    # Linux master release
+    # Linux release release
   - provider: releases
     api_key:
         secure: DaUepv9X3aPy91r8FBCyA0yUEQ0CNYQyA5EzlXsvLWsTi7XjscWZXCkv2BoFxk+MXvsCweaS6/qRbIn8/cW1TFLo6ZAbHjucnmjtSZn9wr9j3SEV7fM6jpAc6XBMMHtgjCaKZMpvH1R2Ed6O3DNr7L0//zB/PDhQx+rDeDre1kA=
@@ -153,10 +153,10 @@ deploy:
     skip_cleanup: true
     on:
         repo: pbek/QOwnNotes
-        branch: master
+        branch: release
         tags: false
         condition: $CONFIG = release && ${TRAVIS_OS_NAME} = linux
-    # macOS master release
+    # macOS release release
   - provider: releases
     api_key:
         secure: DaUepv9X3aPy91r8FBCyA0yUEQ0CNYQyA5EzlXsvLWsTi7XjscWZXCkv2BoFxk+MXvsCweaS6/qRbIn8/cW1TFLo6ZAbHjucnmjtSZn9wr9j3SEV7fM6jpAc6XBMMHtgjCaKZMpvH1R2Ed6O3DNr7L0//zB/PDhQx+rDeDre1kA=
@@ -164,7 +164,7 @@ deploy:
     skip_cleanup: true
     on:
         repo: pbek/QOwnNotes
-        branch: master
+        branch: release
         tags: false
         condition: $CONFIG = release && ${TRAVIS_OS_NAME} = osx
     # Linux development release
@@ -175,7 +175,7 @@ deploy:
 #    skip_cleanup: true
 #    on:
 #        repo: pbek/QOwnNotes
-#        branch: develop
+#        branch: main
 #        tags: false
 #        condition: ${TRAVIS_OS_NAME} = linux
     # macOS development release
@@ -187,7 +187,7 @@ deploy:
 #    skip_cleanup: true
 #    on:
 #        repo: pbek/QOwnNotes
-#        branch: develop
+#        branch: main
 #        tags: false
 #        condition: ${TRAVIS_OS_NAME} = osx
 

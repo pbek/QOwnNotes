@@ -45,7 +45,7 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
 }
 ```
 
-Puoi dare un'occhiata all'esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml), [callback.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml) o [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/execute-command-after-note-update.qml).
+Puoi dare un'occhiata all'esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml), [callback.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml) o [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/execute-command-after-note-update.qml).
 
 Potresti anche voler dare un'occhiata all'hook [onDetachedProcessCallback](hooks.html#ondetachedprocesscallback).
 
@@ -70,7 +70,7 @@ QByteArray startSynchronousProcess(QString executablePath, QStringList parameter
 var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data", "/path/to/execute/in");
 ```
 
-Puoi dare un'occhiata all'esempio [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml).
+Puoi dare un'occhiata all'esempio [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml).
 
 Ottenere il percorso della cartella della nota corrente
 -------------------------------------------
@@ -90,7 +90,7 @@ QString currentNoteFolderPath();
 var path = script.currentNoteFolderPath();
 ```
 
-Puoi dare un'occhiata all'esempio [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/absolute-media-links.qml).
+Puoi dare un'occhiata all'esempio [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/absolute-media-links.qml).
 
 Ottenere la nota corrente
 ------------------------
@@ -110,7 +110,7 @@ NoteApi currentNote();
 var note = script.currentNote();
 ```
 
-Puoi dare un'occhiata all'esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Puoi dare un'occhiata all'esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 Accesso al widget di registro
 -------------------------
@@ -149,7 +149,7 @@ QString downloadUrlToString(QUrl url);
 var html = script.downloadUrlToString("https://www.qownnotes.org");
 ```
 
-Puoi dare un'occhiata all'esempio [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
+Puoi dare un'occhiata all'esempio [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
 
 Download di un URL nella cartella multimediale
 --------------------------------------
@@ -172,7 +172,7 @@ QString downloadUrlToMedia(QUrl url, bool returnUrlOnly);
 var markdown = script.downloadUrlToMedia("http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)}");
 ```
 
-Puoi dare un'occhiata all'esempio [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/paste-latex-image.qml).
+Puoi dare un'occhiata all'esempio [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/paste-latex-image.qml).
 
 Inserimento di un file multimediale nella cartella multimediale
 --------------------------------------------
@@ -193,7 +193,7 @@ Inserimento di un file multimediale nella cartella multimediale
 var markdown = script.insertMediaFile("/percorso/del/tuo/file.png");
 ```
 
-Puoi dare un'occhiata all'esempio [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
+Puoi dare un'occhiata all'esempio [scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml).
 
 Inserimento di un file allegato nella cartella allegati
 --------------------------------------------------------
@@ -238,7 +238,7 @@ QString ScriptingService::regenerateNotePreview();
 script.regenerateNotePreview();
 ```
 
-Puoi dare un'occhiata all'esempio [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
+Puoi dare un'occhiata all'esempio [scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml).
 
 Registrazione di un'azione personalizzata
 ---------------------------
@@ -300,7 +300,7 @@ Script {
         script.registerCustomAction("mycustomaction3", "Menu text", "Button text", "task-new");
 ```
 
-Per altri esempi guarda [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Per altri esempi guarda [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
 Puoi anche attivare un'azione personalizzata dopo che l'applicazione è stata avviata con il parametro `--action customAction_<identifier>`. Per maggiori informazioni dai un'occhiata a [Attiva le azioni del menu dopo l'avvio](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
@@ -333,7 +333,7 @@ The labels will be visible in the *Scripting panel*, which you need to enable in
 
 È possibile utilizzare sia testo normale che html nelle etichette. Il testo sarà selezionabile e sarà possibile fare clic sui collegamenti.
 
-Potresti quindi voler dare un'occhiata allo script di esempio [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
+Potresti quindi voler dare un'occhiata allo script di esempio [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
 
 Impostazione del testo di un'etichetta registrata
 --------------------------------------
@@ -356,7 +356,7 @@ script.setLabelText("counter-label", "counter text");
 
 È possibile utilizzare sia testo normale che html nelle etichette. Il testo sarà selezionabile e sarà possibile fare clic sui collegamenti.
 
-Potresti quindi voler dare un'occhiata allo script di esempio [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
+Potresti quindi voler dare un'occhiata allo script di esempio [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
 
 Creazione di una nuova nota
 -------------------
@@ -376,7 +376,7 @@ void ScriptingService::createNote(QString text);
 script.createNote("My note headline\n===\n\nMy text");
 ```
 
-Puoi dare un'occhiata all'esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Puoi dare un'occhiata all'esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
 Se hai disattivato che il titolo della nota determina il nome del file della nota, devi rinominare il file della nota da solo in seguito, in questo modo:
@@ -406,7 +406,7 @@ var clipboardText = script.clipboard();
 var clipboardHtml = script.clipboard(true);
 ```
 
-Puoi dare un'occhiata all'esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Puoi dare un'occhiata all'esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 Scrivi il testo nella finestra di modifica del testo della nota
 --------------------------------
@@ -427,7 +427,7 @@ void ScriptingService::noteTextEditWrite(QString text);
 script.noteTextEditWrite("My custom text");
 ```
 
-Potresti voler esaminare l'azione personalizzata `transformTextRot13` nel file esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Potresti voler esaminare l'azione personalizzata `transformTextRot13` nel file esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 Puoi usarlo insieme a `noteTextEditSelectAll` per sovrascrivere l'intero testo della nota corrente.
 
@@ -451,7 +451,7 @@ QString ScriptingService::noteTextEditSelectedText();
 var text = script.noteTextEditSelectedText();
 ```
 
-Potresti voler esaminare l'azione personalizzata `transformTextRot13` nel file esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Potresti voler esaminare l'azione personalizzata `transformTextRot13` nel file esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 Seleziona tutto il testo nella finestra di modifica del testo della nota
 -------------------------------------
@@ -620,7 +620,7 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 var text = script.noteTextEditCurrentWord();
 ```
 
-Puoi dare un'occhiata all'esempio [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
+Puoi dare un'occhiata all'esempio [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
 Controlla se la piattaforma è Linux, OS X o Windows
 ------------------------------------------------
@@ -658,7 +658,7 @@ void ScriptingService::tagCurrentNote(QString tagName);
 script.tagCurrentNote("preferito");
 ```
 
-Potresti voler dare un'occhiata all'azione personalizzata `favoriteNote` nell'esempio [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml).
+Potresti voler dare un'occhiata all'azione personalizzata `favoriteNote` nell'esempio [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/favorite-note.qml).
 
 Crea o recupera un'etichetta dal una lista di elementi
 -------------------------------------------------
@@ -708,7 +708,7 @@ QStringList ScriptingService::searchTagsByName(QString name);
 var tags = script.searchTagsByName("game");
 ```
 
-Puoi dare un'occhiata all'esempio [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
+Puoi dare un'occhiata all'esempio [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
 Cerca note in base al testo della nota
 -----------------------------
@@ -736,7 +736,7 @@ noteIds.forEach(function (noteId){
 });
 ```
 
-Puoi dare un'occhiata all'esempio [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/unique-note-id.qml).
+Puoi dare un'occhiata all'esempio [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/unique-note-id.qml).
 
 Aggiungi un foglio di stile personalizzato
 -----------------------
@@ -757,16 +757,16 @@ void ScriptingService::addStyleSheet(QString stylesheet);
 script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
 ```
 
-Puoi dare un'occhiata all'esempio [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-stylesheet.qml).
+Puoi dare un'occhiata all'esempio [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-stylesheet.qml).
 
-Puoi ottenere i nomi dei widget dai file `*.ui`, ad esempio la finestra principale è [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
+Puoi ottenere i nomi dei widget dai file `*.ui`, ad esempio la finestra principale è [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui).
 
 La documentazione Qt (ad esempio [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)) può aiutarti a vedere come sono correlati tra loro i widget (cerca `Eredita` nelle pagine).
 
 Il widget di base per quasi tutto è [QWidget](https://doc.qt.io/qt-5/qwidget.html). Quindi basta disegnare `QWidget` con, ad esempio, `QWidget {background-color: black; color: white;}` significherebbe che tutto ha un colore di sfondo nero e un colore di primo piano bianco.
 
 ::: tip
-Il [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) di [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle) potrebbe anche essere un buon riferimento per gli stili che puoi modificare.
+Il [style.qss](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle/style.qss) di [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle) potrebbe anche essere un buon riferimento per gli stili che puoi modificare.
 :::
 
 Dai un'occhiata a [Riferimento foglio di stile](http://doc.qt.io/qt-5/stylesheet-reference.html) per un riferimento su quali stili sono disponibili.
@@ -836,7 +836,7 @@ NoteApi* ScriptingService::fetchNoteById(int id);
 script.fetchNoteById(243);
 ```
 
-Puoi dare un'occhiata all'esempio [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Puoi dare un'occhiata all'esempio [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Controllo dell'esistenza di una nota tramite il nome del file
 ------------------------------------------
@@ -862,7 +862,7 @@ bool ScriptingService::noteExistsByFileName(QString fileName,
 script.noteExistsByFileName("my note.md", note.id);
 ```
 
-Puoi dare un'occhiata all'esempio [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).
+Puoi dare un'occhiata all'esempio [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
 
 Copia del testo negli appunti
 -------------------------------
@@ -884,7 +884,7 @@ void ScriptingService::setClipboardText(QString text, bool asHtml);
 script.setClipboardText("text to copy");
 ```
 
-Puoi dare un'occhiata all'esempio [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).
+Puoi dare un'occhiata all'esempio [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/selected-markdown-to-bbcode.qml).
 
 Andare a una nota
 -----------------
@@ -909,7 +909,7 @@ script.setCurrentNote(note);
 script.setCurrentNote(note, true);
 ```
 
-Puoi dare un'occhiata all'esempio [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
+Puoi dare un'occhiata all'esempio [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/journal-entry.qml).
 
 Passaggio a una sottocartella di note
 ---------------------------
@@ -992,7 +992,7 @@ script.log(result);
 
 Per informazioni sui pulsanti vedere [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
 
-Potresti anche dare un'occhiata all'esempio [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+Potresti anche dare un'occhiata all'esempio [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml).
 
 Visualizzazione di una finestra di dialogo Apri file
 ---------------------------
@@ -1040,7 +1040,7 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 var fileName = script.getSaveFileName("Please select HTML file to save", "output.html", "HTML (*.html)");
 ```
 
-Puoi dare un'occhiata all'esempio [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Puoi dare un'occhiata all'esempio [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Registrazione delle variabili delle impostazioni dello script
 -------------------------------------
@@ -1138,7 +1138,7 @@ function registerSettingsVariables() {
 }
 ```
 
-Potresti anche dare un'occhiata all'esempio [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
+Potresti anche dare un'occhiata all'esempio [variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/variables.qml).
 
 Memorizzazione e caricamento di variabili persistenti
 ----------------------------------------
@@ -1180,7 +1180,7 @@ script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothin
 
 Assicurati di utilizzare un prefisso significativo nella tua chiave come `PersistentVariablesTest/myVar` perché le variabili sono accessibili da tutti gli script.
 
-Potresti anche dare un'occhiata all'esempio [variabili-persistenti.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
+Potresti anche dare un'occhiata all'esempio [variabili-persistenti.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/persistent-variables.qml).
 
 Caricamento delle variabili delle impostazioni dell'applicazione
 --------------------------------------
@@ -1354,7 +1354,7 @@ QStringList ScriptingService::selectedNotesPaths();
 script.log(script.selectedNotesPaths());
 ```
 
-Puoi dare un'occhiata all'esempio [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
+Puoi dare un'occhiata all'esempio [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-diff.qml).
 
 Ottenere un elenco degli ID di tutte le note selezionate
 -----------------------------------------------
@@ -1375,7 +1375,7 @@ QList<int> ScriptingService::selectedNotesIds();
 script.log(script.selectedNotesIds());
 ```
 
-Puoi dare un'occhiata all'esempio [esporta-note-come-un-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Puoi dare un'occhiata all'esempio [esporta-note-come-un-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Attivazione di un'azione di menu
 ------------------------
@@ -1401,10 +1401,10 @@ script.triggerMenuAction("actionAllow_note_editing");
 script.triggerMenuAction("actionAllow_note_editing", 1);
 ```
 
-Puoi dare un'occhiata all'esempio [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
+Puoi dare un'occhiata all'esempio [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/disable-readonly-mode.qml).
 
 ::: tip
-Puoi ottenere i nomi degli oggetti dell'azione del menu da [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Basta cercare il titolo del menu in inglese. Nota che questi testi possono cambiare nel tempo.
+Puoi ottenere i nomi degli oggetti dell'azione del menu da [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Basta cercare il titolo del menu in inglese. Nota che questi testi possono cambiare nel tempo.
 :::
 
 Apertura di una finestra di dialogo di input con una casella di selezione
@@ -1434,7 +1434,7 @@ var result = script.inputDialogGetItem(
 script.log(result);
 ```
 
-Potresti dare un'occhiata all'esempio [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+Potresti dare un'occhiata all'esempio [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml).
 
 Apertura di una finestra di dialogo di input con una riga di modifica
 ----------------------------------------
@@ -1525,16 +1525,16 @@ var result = script.writeToFile(filePath, html);
 script.log(result);
 ```
 
-Puoi dare un'occhiata all'esempio [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Puoi dare un'occhiata all'esempio [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Lavorare con websocket
 -----------------------
 
 Puoi controllare in remoto QOwnNotes utilizzando `WebSocketServer`.
 
-Si prega di dare un'occhiata all'esempio [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). Puoi testare il server socket collegandoti ad esso su [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
+Si prega di dare un'occhiata all'esempio [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-server.qml). Puoi testare il server socket collegandoti ad esso su [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
 
-Puoi anche ascoltare i socket con `WebSocket`. Per favore guarda l'esempio [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
+Puoi anche ascoltare i socket con `WebSocket`. Per favore guarda l'esempio [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-client.qml).
 
 Tieni presente che per utilizzarla è necessario che sia installata la libreria QML `websocket` di Qt. Ad esempio in Ubuntu Linux puoi installare `qml-module-qtwebsockets`.
 
@@ -1604,4 +1604,4 @@ script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);
 script.addHighlightingRule("^.{32}(.+)", "", 24, 1, -1);
 ```
 
-Puoi anche dare un'occhiata agli esempi in [highlighting.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/highlighting.qml).
+Puoi anche dare un'occhiata agli esempi in [highlighting.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/highlighting.qml).

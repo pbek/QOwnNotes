@@ -15,7 +15,7 @@ onNoteStored
 function onNoteStored(note);
 ```
 
-Érdemes megnézni a példát [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/on-note-opened.qml).
+Érdemes megnézni a példát [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
 
 noteOpenedHook
 --------------
@@ -30,7 +30,7 @@ noteOpenedHook
 function noteOpenedHook(note);
 ```
 
-Érdemes megnézni a példát [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/on-note-opened.qml).
+Érdemes megnézni a példát [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
 
 noteDoubleClickedHook
 ---------------------
@@ -45,7 +45,7 @@ noteDoubleClickedHook
 function noteDoubleClickedHook (jegyzet);
 ```
 
-Érdemes megnézni ezt a példát: [ external-note-open.qml ](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-open.qml).
+Érdemes megnézni ezt a példát: [ external-note-open.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-open.qml).
 
 insertMediaHook
 ---------------
@@ -64,7 +64,7 @@ Ha ezt a függvényt több szkript definiálja, akkor az első olyan szkript nye
 function insertMediaHook(fileName, markdownText);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml).
+You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 insertAttachmentHook
 --------------------
@@ -83,7 +83,7 @@ Ha ezt a függvényt több szkript definiálja, akkor az első olyan szkript nye
 function insertAttachmentHook(fileName, markdownText);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml).
+You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 insertingFromMimeDataHook
 -------------------------
@@ -100,7 +100,7 @@ insertingFromMimeDataHook
 function insertingFromMimeDataHook(text, html);
 ```
 
-Érdemes megnézni a példát [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml), [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) vagy [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-text-from-5pm-mail.qml).
+Érdemes megnézni a példát [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml), [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) vagy [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-text-from-5pm-mail.qml).
 
 handleNoteTextFileNameHook
 --------------------------
@@ -124,7 +124,7 @@ handleNoteTextFileNameHook
 function handleNoteTextFileNameHook(note);
 ```
 
-Érdemes megnézni a példát [példa.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) vagy [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).
+Érdemes megnézni a példát [példa.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) vagy [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
 
 handleNoteNameHook
 ------------------
@@ -144,7 +144,7 @@ handleNoteNameHook
 function handleNoteNameHook(note);
 ```
 
-Érdemes megnézni a példát [példa.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml).
+Érdemes megnézni a példát [példa.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 Lehet, hogy nem jó ötlet ezt a kampót használni, ha a fájlnév jegyzetnévként történő használata aktív.
 
@@ -168,7 +168,7 @@ handleNewNoteHeadlineHook
 function handleNewNoteHeadlineHook(headline);
 ```
 
-Érdemes megnézni a példát [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-new-note-headline.qml).
+Érdemes megnézni a példát [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml).
 
 preNoteToMarkdownHtmlHook
 -------------------------
@@ -193,7 +193,7 @@ preNoteToMarkdownHtmlHook
 függvény preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
 
-Érdemes megnézni a példát [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
+Érdemes megnézni a példát [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
 
 noteToMarkdownHtmlHook
 ----------------------
@@ -216,7 +216,7 @@ noteToMarkdownHtmlHook
 függvény noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
-Érdemes megnézni a példát [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) vagy [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
+Érdemes megnézni a példát [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) vagy [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
 
 Kérjük, olvassa el a [Támogatott HTML részhalmaz](http://doc.qt.io/qt-5/richtext-html-subset.html) dokumentációt az összes támogatott css stílus felsorolásához.
 
@@ -236,7 +236,7 @@ encryptionHook
 függvény encryptionHook (szöveg, jelszó, visszafejtés);
 ```
 
-Érdemes megnézni a példákat [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml) vagy [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-rot13.qml).
+Érdemes megnézni a példákat [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml) vagy [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-rot13.qml).
 
 noteTaggingHook
 ---------------
@@ -273,7 +273,7 @@ Megvalósíthatja saját jegyzetcímkézési mechanizmusát, például a jegyzet
     -   A címkék tömeges eltávolítása a jegyzetlista jegyzeteiből eltávolítja ezeket a címkéket a jegyzeteiből
     -   az alkalmazás elindít egy sor `add` és `remove` műveletet az összes kijelölt címkéhez és gyermekéhez az összes jegyzethez, ha a címkéket áthelyezi a címke panelre
 
-Érdemes megnézni a példát [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml) saját címkézési mechanizmusának megvalósításához.
+Érdemes megnézni a példát [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) saját címkézési mechanizmusának megvalósításához.
 
 ::: warning
 Győződjön meg arról, hogy a ` list ` művelete valóban gyors, mert minden jegyzetnél végrehajtásra kerül, minden alkalommal, amikor a jegyzetmappa újratöltésre kerül!
@@ -305,7 +305,7 @@ Ez azt is jelenti, hogy magának kell létrehoznia hiányzó címkéket, hogy me
 function noteTaggingByObjectHook(note, action, tag, newTagName);
 ```
 
-Érdemes megnézni a példát [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml) saját címkézési mechanizmusának megvalósításához.
+Érdemes megnézni a példát [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) saját címkézési mechanizmusának megvalósításához.
 
 autocompletionHook
 ------------------
@@ -323,7 +323,7 @@ Visszaadhatja az automatikus kiegészítés listájához hozzáadandó karakters
 függvény callAutocompletionHook ();
 ```
 
-Érdemes megnéznie az [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml) példát.
+Érdemes megnéznie az [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml) példát.
 
 websocketRawDataHook
 --------------------
@@ -343,7 +343,7 @@ Ezt a horgot akkor hívják meg, amikor az adatokat a QOwnNotes Web Companion b�
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
 
-Érdemes megnézni a példákat [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-raw-data-new-note.qml) és [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
+Érdemes megnézni a példákat [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-new-note.qml) és [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
 
 onDetachedProcessCallback
 -------------------------
@@ -364,7 +364,7 @@ Ezt a horgot akkor hívják meg, amikor a [startDetachedProcess](methods-and-obj
 függvény onDetachedProcessCallback (callbackIdentifier, resultSet, cmd, thread);
 ```
 
-Érdemes megnézni a példát [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml).
+Érdemes megnézni a példát [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml).
 
 windowStateChangedHook
 --------------
@@ -379,7 +379,7 @@ windowStateChangedHook
 függvény windowStateChangedHook (windowState);
 ```
 
-Érdemes megnézni a példát [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/window-state-changed.qml).
+Érdemes megnézni a példát [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/window-state-changed.qml).
 
 workspaceSwitchedHook
 ----------------------
@@ -397,4 +397,4 @@ This hook is called when workspaces are switched.
 function workspaceSwitchedHook(oldUuid, newUuid);
 ```
 
-Érdemes lehet egy pillantást vetni a példára [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/workspaces.qml).
+Érdemes lehet egy pillantást vetni a példára [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/workspaces.qml).

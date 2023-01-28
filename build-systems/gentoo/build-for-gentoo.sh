@@ -11,7 +11,7 @@
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=1.1.0.4
 
-BRANCH=develop
+BRANCH=main
 #BRANCH=master
 
 PROJECT_PATH="/tmp/QOwnNotes-gentoo-$$"

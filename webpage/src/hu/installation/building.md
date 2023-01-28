@@ -7,7 +7,7 @@ A forráskódból saját maga is elkészítheti a QOwnNotes programot.
 Csekkelje ki a kódot közvetlenül a git adattárból:
 
 ```bash
-git clone https://github.com/pbek/QOwnNotes.git -b master
+git clone https://github.com/pbek/QOwnNotes.git -b release
 cd QOwnNotes
 git submodule update --init
 ```
@@ -27,7 +27,7 @@ Kérjük, bátran adjon hozzá forráskódot a projekthez, tegyen javaslatokat v
 Látogassa meg: [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-Ha forráskóddal szeretne hozzájárulni a projekthez, kérjük, tegye meg a lekérési kérelmeket az `develop` ághoz.
+Ha forráskóddal szeretne hozzájárulni a projekthez, kérjük, tegye meg a lekérési kérelmeket az `main` ághoz.
 :::
 
 ## Forrásarchívum

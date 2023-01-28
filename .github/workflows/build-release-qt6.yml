@@ -3,9 +3,9 @@ name: Build release of QOwnNotes Qt6
 on:
   push:
     branches:
-#      - master
-      # For testing also on develop branch
-      - develop
+#      - release
+      # For testing also on main branch
+      - main
     tags-ignore:
       - '*'
   # For testing also on pull requests

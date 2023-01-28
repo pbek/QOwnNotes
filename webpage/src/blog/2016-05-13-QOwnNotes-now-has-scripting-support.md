@@ -17,7 +17,7 @@ You will find a new **Scripting tab** in the settings dialog, where you can **ad
 
 Currently you may need to restart QOwnNotes to let changes in a script take action.
 
-I prepared some **[examples and documentation](https://github.com/pbek/QOwnNotes/tree/develop/doc/scripting)** to play around with.
+I prepared some **[examples and documentation](https://github.com/pbek/QOwnNotes/tree/main/doc/scripting)** to play around with.
 
 If you need access to a certain functionality in QOwnNotes or have **questions or ideas** please open an issue on the [QOwnNotes issue page](https://github.com/pbek/QOwnNotes/issues).
 

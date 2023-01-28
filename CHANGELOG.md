@@ -3216,7 +3216,7 @@
     - more dictionaries were added to the dialog
 - added automatic spellchecking detection for British English and Austrian German
   (for [#1402](https://github.com/pbek/QOwnNotes/pull/1402), thank you @Waqar144)
-- updated the demo notes and [Markdown Cheatsheet](https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes/Markdown%20Cheatsheet.md)
+- updated the demo notes and [Markdown Cheatsheet](https://github.com/pbek/QOwnNotes/blob/main/src/demonotes/Markdown%20Cheatsheet.md)
   with checkbox list and spellchecking information
 - changed the *Readonly mode* icon to `document-edit`
 - added **Latvian and Vietnamese translation** (a big thank you to Fabijenna)
@@ -3255,7 +3255,7 @@
   and remove spellchecker dictionaries (for [#1378](https://github.com/pbek/QOwnNotes/issues/1378))
     - if you are missing a dictionary to download please look for it at
       [LibreOffice dictionaries](https://github.com/LibreOffice/dictionaries) and edit
-      the [dictionary manager dialog](https://github.com/pbek/QOwnNotes/blob/develop/src/dialogs/dictionarymanagerdialog.cpp)
+      the [dictionary manager dialog](https://github.com/pbek/QOwnNotes/blob/main/src/dialogs/dictionarymanagerdialog.cpp)
     - visit [QOwnNotes Spellchecking](http://docs.qownnotes.org/en/develop/spellchecking.html)
       for more information
 - automatic switching of note subfolders is now prevent if the setting to show notes in
@@ -3406,7 +3406,7 @@
     - it can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
       to its graphical representation for the preview
     - there is an example call in
-      [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml)
+      [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml)
     - for more information please take a look at the
       [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#prenotetomarkdownhtmlhook)
 - fixed a highlighting problem for checkbox link lists like `- [ ] [QOwnNotes](https://www.qownnotes.org)`
@@ -3880,7 +3880,7 @@
   prevent network problems with https on some computer (for [#1260](https://github.com/pbek/QOwnNotes/issues/1260))
     - if you had troubles with the latest few releases for Windows you need to
       download the latest release manually once or download the files from
-      [OpenSSL](https://github.com/pbek/QOwnNotes/tree/develop/appveyor/OpenSSL)
+      [OpenSSL](https://github.com/pbek/QOwnNotes/tree/main/appveyor/OpenSSL)
       and put them into your QOwnNotes folder 
 - added more German translation
 
@@ -5284,7 +5284,7 @@
       [noteDoubleClickedHook documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#noteDoubleClickedHook)
       for more information
     - there is an example script at
-      [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-open.qml)
+      [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-open.qml)
     - you will also find a script `External note open` in the script repository
       that uses the new hook
 - added more Brazilian Portuguese, Italian, Dutch and Hungarian translation
@@ -5993,7 +5993,7 @@
   [#603](https://github.com/pbek/QOwnNotes/issues/603))
     - as soon as a script is activated that implements the new function
       `noteTaggingHook` note tagging will be handled by that function
-    - please install the script [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml)
+    - please install the script [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml)
       to test the basic functionality and report in [#530](https://github.com/pbek/QOwnNotes/issues/530).
         - your internal tag database and your notes might get modified 
         - don't use this script on your production note folder, please make a 
@@ -6381,7 +6381,7 @@
   the dialog to select the script
 - there now is a new script variables datatype `boolean`
     - to get information about how to use it please take a look at the example
-      [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml)
+      [variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/variables.qml)
     - there is a new script `Weather stats` in the *Script repository* that 
       is using this new setting
 - added more French translation (thank you lepascalou)
@@ -6537,7 +6537,7 @@
     - currently there are settings types for `string`, `text`, `integer` and 
       `file`
     - take a look at the example at
-      [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml)
+      [variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/variables.qml)
       to understand how this all will work
     - a lot of new useful scripts were added to the script repository, which 
       now can be configured with the script settings variables
@@ -6784,7 +6784,7 @@
 - you can now copy text to the clipboard in a script with the new scripting
   method `script.setClipboardText()`
     - there is an example at
-      [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml)
+      [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/selected-markdown-to-bbcode.qml)
     - for more information please take a look at the
       [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#copying-text-into-the-clipboard)
 - the unicode line endings from the result of the scripting method
@@ -6792,7 +6792,7 @@
 - you can now jump to a note with the new scripting method `script.setCurrentNote()`
   if it is visible in the note list (for [#510](https://github.com/pbek/QOwnNotes/issues/510))
     - there is an example at
-      [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml)
+      [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/journal-entry.qml)
     - for more information please take a look at the
       [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#jumping-to-a-note)
 
@@ -6866,7 +6866,7 @@
   to allow you to download an url to the media folder and return the media url
   or the markdown image text (for [#499](https://github.com/pbek/QOwnNotes/issues/499))
     - there is an example at
-      [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/paste-latex-image.qml)
+      [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/paste-latex-image.qml)
     - for more information please take a look at the
       [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#downloading-an-url-to-the-media-folder)
 - added more fixes for a warning that might trigger when notes are moved to an
@@ -7312,7 +7312,7 @@
       [noteOpenedHook documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#noteopenedhook)
       for more information
     - there is an example script at
-      [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/on-note-opened.qml)
+      [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml)
 - added some documentation for all scripting hooks to the
   [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html)
 - the closing of brackets and markdown formatting characters is now only
@@ -7371,12 +7371,12 @@
   with the help of the new scripting method `script.addStyleSheet()`
   (for [#381](https://github.com/pbek/QOwnNotes/issues/381))
     - there is an example for adding custom stylesheets at
-      [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-stylesheet.qml)
+      [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-stylesheet.qml)
     - take a look at the
       [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#add-a-custom-stylesheet)
       for more information
     - you can get the object names from the `*.ui` files, for example
-      [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui)
+      [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui)
     - take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html)
       for a reference of what styles are available
 - you can now also **log to a log file** by checking
@@ -7578,7 +7578,7 @@
   (for [#351](https://github.com/pbek/QOwnNotes/issues/351))
     - there is an example for creating a custom action to add a tag
       `favorite` to the current note at
-      [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml)
+      [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/favorite-note.qml)
 - the status messages now all start with an uppercase letter
 - there now is a checkbox for ignoring of non-VTODO calendars in the
   todo settings that is turned on by default (for @binerf on GitHub)
@@ -7591,7 +7591,7 @@
 - fixed the restoring of the focus after switching workspaces
   (for [#343](https://github.com/pbek/QOwnNotes/issues/343))
 - added an example for custom styling of html in the note preview at
-  [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml)
+  [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml)
   (for [#356](https://github.com/pbek/QOwnNotes/issues/356))
 - the log dialog is now a dockable panel that can be placed everywhere
 - fixed a problem with showing the title bar of floating panels after
@@ -7677,10 +7677,10 @@
     - you can use the new scripting hook `encryptionHook()` do implement
       your own encryption
     - there are examples to encrypt notes with **[Keybase.io](https://keybase.io)**
-      ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml)),
-      **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml)) or
+      ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)),
+      **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml)) or
       do a trivial "encryption" with ROT13
-      ([encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-rot13.qml))
+      ([encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-rot13.qml))
     - you can disable the password dialog with `script.encryptionDisablePassword()`
     - to start an external synchronous process you can use `script.startSynchronousProcess()`
     - to check on which platform the script is running you can use
@@ -7688,7 +7688,7 @@
     - for more information on the new commands please take a look at the 
       [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html)
 - added some fixes to the demo script
-  [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml)
+  [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml)
 - the menu entry `Show tag pane under navigation pane` was replaced by
   `Show note list under tag panel` where note list and tag pane are swapped
   (for [#340](https://github.com/pbek/QOwnNotes/issues/340))
@@ -8035,7 +8035,7 @@
   and for [#297](https://github.com/pbek/QOwnNotes/issues/297))
     - there is an example for opening the current note with KWrite
       and to create a new note with a custom text at
-      [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml)
+      [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml)
     - there is a small documentation about the function
       `registerCustomAction` and other functions in the
       [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#register-a-custom-action)
@@ -8051,7 +8051,7 @@
       for more information
 - there now is a new example to create a note from a 5pm email with a 
   custom action at
-  [note-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/tree/develop/docs/scripting/examples/note-from-5pm-mail.qml)
+  [note-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/tree/main/docs/scripting/examples/note-from-5pm-mail.qml)
 - the warning about tags when copying or moving notes to a note
   subfolder will now be only displayed if one of the selected notes has
   a tag assigned (for [#289](https://github.com/pbek/QOwnNotes/issues/289))
@@ -8260,7 +8260,7 @@
       characters `===` will be added automatically, you have to do that
       in your script
     - take a look at the updated example at
-      [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-new-note-headline.qml)
+      [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml)
     - you now can use the hook to create your own headline styles, 
       for example using `# headline` instead of `headline`, followed by
       `==========`
@@ -8534,7 +8534,7 @@
     - note that you have to take care about a unique note name, otherwise
       the new note will not be created, it will just be found in the note list
     - there is an example at
-      [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-new-note-headline.qml)
+      [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml)
 - added more Hungarian and Russian translation (thank you Fabijenna and 
   frostyland)
 
@@ -8791,7 +8791,7 @@
     - it allows you to modify this html
     - this is for example called before by the note preview
     - there is an example call in
-      [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml)
+      [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml)
 - added more Japanese and Portuguese translation (thank you piyo and mlimacarlos)
 
 ## 16.05.14
@@ -8834,14 +8834,14 @@
 - there now is a new script function `script.downloadUrlToString("http://the-webpage");`
     - it allows you to download an url to a string
     - there is an example at
-      [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml)
+      [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml)
 - added more German and Russian translation (thank you bigant and frostyland)
 
 ## 16.05.12
 - tags and notes can now be exposed to the QML scripting engine
 - beside the note name, the file name and the note text you can also get a 
   list of all assigned tag names for notes or a list of assigned tag objects
-    - see [examples](https://github.com/pbek/QOwnNotes/tree/develop/docs/content/scripting/examples)
+    - see [examples](https://github.com/pbek/QOwnNotes/tree/main/docs/content/scripting/examples)
       for a full list of all note properties and functions 
 - you can get the current note with `script.currentNote()` from QML
 - `function onNoteStored(note)` now gets a note object as parameter instead of 
@@ -8852,7 +8852,7 @@
   (for [#166](https://github.com/pbek/QOwnNotes/issues/166))
     - it allows you to modify the name of the note file
     - there is an example at
-      [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml)
+      [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml)
 - added more Japanese, Portuguese, German and Dutch translation (thank you 
   piyo, mlimacarlos, bigant and Telesight)
 
@@ -8871,7 +8871,7 @@
       with `Ctrl + Shift + V`
     - you can intercept the media paste mechanism with it
     - there is an example at
-      [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/tree/develop/docs/scripting/examples/note-text-from-5pm-mail.qml)
+      [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/tree/main/docs/scripting/examples/note-text-from-5pm-mail.qml)
 - the script function `modifyMediaMarkdown` was be renamed to `insertMediaHook`
   for more consistency
 - added a `Paste HTML or media` context menu entry for notes
@@ -8886,7 +8886,7 @@
     - it is possible to disable or remove scripts
     - you may need to restart QOwnNotes to let changes in a script take action 
     - I prepared some
-      [examples](https://github.com/pbek/QOwnNotes/tree/develop/docs/content/scripting/examples)
+      [examples](https://github.com/pbek/QOwnNotes/tree/main/docs/content/scripting/examples)
       to play around with
     - if you need access to a certain functionality in QOwnNotes or have 
       questions or ideas please open an issue on the 

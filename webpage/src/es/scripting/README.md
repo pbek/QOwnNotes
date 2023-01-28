@@ -19,7 +19,7 @@ Script {
 Puede colocar esos archivos QML en cualquier lugar que desee y **agregarlos en QOwnNotes** agregándolos en la **Configuración de secuencias de comandos** (hay un botón `Agregar secuencia de comandos` / `Agregar secuencia de comandos local`).
 
 ::: tip
-Eche un vistazo a los [scripts de ejemplo](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples) para comenzar rápidamente.
+Eche un vistazo a los [scripts de ejemplo](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples) para comenzar rápidamente.
 :::
 
 En la **Configuración de secuencias de comandos** también puede instalar secuencias de comandos directamente desde el [**Repositorio de secuencias de comandos**](https://github.com/qownnotes/scripts).

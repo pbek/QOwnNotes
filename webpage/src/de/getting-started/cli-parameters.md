@@ -40,7 +40,7 @@ QOwnNotes --action actionShow_Todo_List
 ```
 
 ::: tip
-Die Objektnamen der Menüaktion erhalten Sie von [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Suchen Sie einfach nach dem englischen Menütitel. Beachten Sie, dass sich diese Texte im Laufe der Zeit ändern können.
+Die Objektnamen der Menüaktion erhalten Sie von [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Suchen Sie einfach nach dem englischen Menütitel. Beachten Sie, dass sich diese Texte im Laufe der Zeit ändern können.
 :::
 
 Verwenden Sie zum Auslösen von [Skriptaktionen](../scripting/methods-and-objects.md#registering-a-custom-action) ` customAction_` gefolgt von der Kennung der benutzerdefinierten Aktion. Der Bezeichner der benutzerdefinierten Aktion ist der erste Parameter des Aufrufs `script.registerCustomAction` im Skript.

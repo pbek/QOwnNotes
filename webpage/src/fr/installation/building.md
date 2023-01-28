@@ -7,7 +7,7 @@ Vous pouvez également compiler vous-même QOwnNotes à partir du code source.
 Récupérez le code directement depuis le dépôt git :
 
 ```bash
-git clone https://github.com/pbek/QOwnNotes.git -b master
+git clone https://github.com/pbek/QOwnNotes.git -b release
 cd QOwnNotes
 git submodule update --init
 ```
@@ -27,7 +27,7 @@ N'hésitez pas à contribuer au code source de ce projet, à faire des suggestio
 Visitez [QOwnNotes sur GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-Si vous souhaitez contribuer au code source du projet, veuillez envoyer vos requêtes d'extraction à la branche `develop`.
+Si vous souhaitez contribuer au code source du projet, veuillez envoyer vos requêtes d'extraction à la branche `main`.
 :::
 
 ## Archive source

@@ -19,7 +19,7 @@
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=1.1.3.2
 
-BRANCH=develop
+BRANCH=main
 #BRANCH=master
 
 PROJECT_PATH="/tmp/QOwnNotes-tuxfamily-$$"
@@ -101,7 +101,7 @@ remotePath="pbek@ssh.tuxfamily.org:/home/qownnotes/qownnotes-repository/src"
 tuxFamilyReadme="tuxfamily-readme.md"
 
 # generate the readme for tuxfamily with a screenshot from GitHub
-cat README.md | sed "s/screenshots\\/screenshot.png/https:\\/\\/raw.githubusercontent.com\\/pbek\\/QOwnNotes\\/develop\\/screenshots\\/screenshot.png/g" >> ${tuxFamilyReadme}
+cat README.md | sed "s/screenshots\\/screenshot.png/https:\\/\\/raw.githubusercontent.com\\/pbek\\/QOwnNotes\\/main\\/screenshots\\/screenshot.png/g" >> ${tuxFamilyReadme}
 echo >> ${tuxFamilyReadme}
 echo >> ${tuxFamilyReadme}
 cat CHANGELOG.md >> ${tuxFamilyReadme}

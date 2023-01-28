@@ -14,7 +14,7 @@
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=16.05.2
 
-BRANCH=develop
+BRANCH=main
 #BRANCH=master
 
 PROJECT_PATH="/tmp/QOwnNotes-aur-$$"

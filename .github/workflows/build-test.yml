@@ -3,7 +3,7 @@ name: Build QOwnNotes
 on:
   push:
     branches-ignore:
-      - master
+      - release
     tags-ignore:
       - '*'
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths

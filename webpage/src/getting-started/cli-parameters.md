@@ -45,7 +45,7 @@ QOwnNotes --action actionShow_Todo_List
 
 ::: tip
 You can get the object names of the menu action from
-[mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
+[mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui).
 Just search for the English menu title. Note that these texts can change over time.
 :::
 

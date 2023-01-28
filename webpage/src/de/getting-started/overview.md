@@ -158,7 +158,7 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 - **Gelöschten Notizen** können von Ihrem **Nextcloud / ownCloud** Server **wiederhergestellt werden**
 - **Externe Änderungen** von Notizdateien werden **überwacht** (Notizen oder Notizliste werden neu geladen)
 - Unterstützung für **hierarchische Notizkennzeichnung** und **Notizunterordner**
-- Optionale **Verschlüsselung** von Notizen, (AES-256 ist integriert oder Sie können benutzerdefinierte Verschlüsselungsmethoden wie **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) oder **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)) verwenden.)
+- Optionale **Verschlüsselung** von Notizen, (AES-256 ist integriert oder Sie können benutzerdefinierte Verschlüsselungsmethoden wie **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) oder **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml)) verwenden.)
 - Der **Notizenordner** kann **frei gewählt werden** (mehrere Notizordner können verwendet werden)
 - **Szavarészekben kereshet** a jegyzetekben, és a keresési eredmények kiemelve jelennek meg a jegyzetekben
 - [**Browsererweiterung**](browser-extension.md) zum **Hinzufügen von Notizen aus dem ausgewählten Text**, **Erstellen von Screenshots** oder **Verwalten Ihrer Lesezeichen**

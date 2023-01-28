@@ -7,7 +7,7 @@
 کد را مستقیماً از مخزن گیت وارسی کنید:
 
 ```bash
-git clone https://github.com/pbek/QOwnNotes.git -b master
+git clone https://github.com/pbek/QOwnNotes.git -b release
 cd QOwnNotes
 git submodule update --init
 ```

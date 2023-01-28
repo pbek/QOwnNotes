@@ -19,7 +19,7 @@ Script {
 Ezeket a QML fájlokat bárhová elhelyezheti, és **hozzáadhatja őket a QOwnNotes fájlokhoz** azáltal, hogy felveszi őket a **Szkriptbeállítások** ba (van egy gomb `Szkript hozzáadása` / `Helyi parancsfájl hozzáadása`).
 
 ::: tip
-A gyors kezdéshez nézze meg a [példa szkripteket](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples)
+A gyors kezdéshez nézze meg a [példa szkripteket](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples)
 :::
 
 A **szkriptbeállítások** ban parancsfájlokat is telepíthet közvetlenül a [**parancsfájltárból**](https://github.com/qownnotes/scripts).

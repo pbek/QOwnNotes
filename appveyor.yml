@@ -8,7 +8,7 @@ skip_tags: true
 
 branches:
   only:
-    - master
+    - release
 
 environment:
   global:
@@ -48,7 +48,7 @@ install:
   - set RELEASE_PATH=appveyor\release
   - set TEST_PATH=appveyor\test
   # enable this to use RDP connection, see https://www.appveyor.com/docs/how-to/rdp-to-build-worker/
-#  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+#  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/release/scripts/enable-rdp.ps1'))
 
 #  - C:\msys64\usr\bin\pacman --verbose --noconfirm --sync ccache
 #  - ccache.exe -V
@@ -150,7 +150,7 @@ artifacts:
 #    auth_token:
 #      secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR#
 #    on:
-#      branch: master
+#      branch: release
 #      QTDIR: C:\Qt\5.13\mingw73_32
 
 notifications:

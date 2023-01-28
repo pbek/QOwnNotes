@@ -19,7 +19,7 @@ Script {
 يمكنك وضع ملفات QML هذه في أي مكان تحبه، ثم **تضيفهم في QOwnNotes** بإضافتهم في **إعدادات البرمجة** (يوجد زر `أضف بُريمِجًا` &gt; `أضف بُريمِجًا محليًا`).
 
 ::: tip
-ألقِ نظرة على [أمثلة البُريمِجات](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples) للبدء بسرعة.
+ألقِ نظرة على [أمثلة البُريمِجات](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples) للبدء بسرعة.
 :::
 
 في **إعدادات البرمجة**، يمكنك أيضا تثبيت بُريمِجات مباشرةً من [**مستودع البُريمِجات**](https://github.com/qownnotes/scripts).

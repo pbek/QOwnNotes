@@ -15,7 +15,7 @@
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=16.07.3
 
-BRANCH=develop
+BRANCH=main
 #BRANCH=master
 
 PROJECT_PATH="/tmp/QOwnNotes-local-snap-$$"

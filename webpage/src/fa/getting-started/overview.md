@@ -158,7 +158,7 @@
 - **یادداشت های حذف شده** از سرور **نکست کلود یا اون کلود** شما قابل **بازیابی** هستند
 - **تغییرات خارجی** پرونده های یادداشت **مشاهده** می شوند (یادداشت ها یا لیست یادداشت بارگذاری مجدد می شود)
 - پشتیبانی از **برچسب گذاری سلسله مراتبی یادداشت** و **زیرپوشه های یادداشت**
-- **رمزنگاری** گزینشی یادداشت ها (جایی که AES-256 در آن ایجاد می شود یا می توانید از روش رمزنگاری سفارشی مانند **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) یا **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)) بهره گیرید)
+- **رمزنگاری** گزینشی یادداشت ها (جایی که AES-256 در آن ایجاد می شود یا می توانید از روش رمزنگاری سفارشی مانند **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) یا **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml)) بهره گیرید)
 - **پوشه یادداشت ها** می توانند **به راحتی انتخاب** شوند (چندین پوشه یادداشت قابل استفاده می باشد)
 - **جستجوی بخش به بخش کلمات** در یادداشت ها امکان پذیر است و نتایج جستجو در یادداشت ها برجسته می شود
 - [**افزونه مرورگر**](browser-extension.md) برای **افزودن یادداشت ها از متن منتخب**، **ایجاد نماگرفت** یا **مدیریت نشانک های شما**

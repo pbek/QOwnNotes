@@ -15,7 +15,7 @@
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=1.1.3.2
 
-BRANCH=develop
+BRANCH=main
 #BRANCH=master
 
 PROJECT_PATH="/tmp/QOwnNotes-sourceforge-$$"
@@ -83,7 +83,7 @@ remotePath="patbek@frs.sourceforge.net:/home/frs/project/qownnotes/src"
 sourceForgeReadme="sourceforge-readme.md"
 
 # generate the readme for sourceforge with a screenshot from GitHub
-cat README.md | sed "s/screenshots\\/screenshot.png/https:\\/\\/raw.githubusercontent.com\\/pbek\\/QOwnNotes\\/develop\\/screenshots\\/screenshot.png/g" >> ${sourceForgeReadme}
+cat README.md | sed "s/screenshots\\/screenshot.png/https:\\/\\/raw.githubusercontent.com\\/pbek\\/QOwnNotes\\/main\\/screenshots\\/screenshot.png/g" >> ${sourceForgeReadme}
 echo >> ${sourceForgeReadme}
 echo >> ${sourceForgeReadme}
 cat CHANGELOG.md >> ${sourceForgeReadme}

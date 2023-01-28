@@ -116,7 +116,7 @@ for (var idx in notes) {
 }
 ```
 
-Vous trouverez ici d'autres exemples dans lesquels TagApi est utilisé [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml).
+Vous trouverez ici d'autres exemples dans lesquels TagApi est utilisé [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
 
 MainWindow
 ----------
@@ -166,7 +166,7 @@ mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 
 // Sauter à l'étiquette "test" dans l'arbre des étiquettes
-// Un exemple est dispponible à cette adresse https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml
+// Un exemple est dispponible à cette adresse https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 

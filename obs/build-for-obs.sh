@@ -15,8 +15,8 @@
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=19.6.1.4
 
-BRANCH=develop
-#BRANCH=master
+BRANCH=main
+#BRANCH=release
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"

@@ -23,14 +23,14 @@
 [![Build Status GitHub Actions](https://github.com/pbek/QOwnNotes/actions/workflows/build-test.yml/badge.svg)](https://github.com/pbek/QOwnNotes/actions/workflows/build-test.yml)
 [![Build Status Windows](https://ci.appveyor.com/api/projects/status/github/pbek/QOwnNotes)](https://ci.appveyor.com/project/pbek/qownnotes)
 [![Snap Status](https://snapcraft.io/qownnotes/badge.svg)](https://snapcraft.io/qownnotes)
-[![Coverage Status](https://coveralls.io/repos/pbek/QOwnNotes/badge.svg?branch=develop&service=github)](https://coveralls.io/github/pbek/QOwnNotes?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/pbek/QOwnNotes/badge.svg?branch=main&service=github)](https://coveralls.io/github/pbek/QOwnNotes?branch=main)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/pbek/QOwnNotes.svg)](http://isitmaintained.com/project/pbek/QOwnNotes "Percentage of issues still open")
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/qownnotes/localized.svg)](https://crowdin.com/project/qownnotes)
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/qownnotes/qownnotes)
 
 
 [QOwnNotes](https://www.qownnotes.org) is the **open source notepad** with
-[**markdown support**](https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes/Markdown%20Cheatsheet.md)
+[**markdown support**](https://github.com/pbek/QOwnNotes/blob/main/src/demonotes/Markdown%20Cheatsheet.md)
 and **todo list manager** for **GNU/Linux**, **macOS** and **Windows**,
 that works together with [**Nextcloud Notes**](https://github.com/Nextcloud/notes)
 and [**ownCloud Notes**](https://github.com/owncloud/notes).
@@ -109,8 +109,8 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
     - this feature can also be turned off and you can use any filename you like
 - manage your Nextcloud / ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
 - **encryption of notes** (AES-256 is built in or you can use custom encryption methods like
-  **[Keybase.io](https://keybase.io)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml)) or
-  **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml)))
+  **[Keybase.io](https://keybase.io)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) or
+  **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml)))
 - **dark mode** theme support
 - all **panels can be placed wherever you want**, they can even float or stack (fully dockable)
 - **toolbars** are **fully customizable**
@@ -135,12 +135,12 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 
 To get the most current features you can build the application from the source
 code. Download the latest source here:
-[QOwnNotes Source on GitHub as ZIP](https://github.com/pbek/QOwnNotes/archive/develop.zip)
+[QOwnNotes Source on GitHub as ZIP](https://github.com/pbek/QOwnNotes/archive/main.zip)
 
 Alternatively you can also checkout the code directly from the git repository:
 
 ```shell
-git clone https://github.com/pbek/QOwnNotes.git -b master --depth=1
+git clone https://github.com/pbek/QOwnNotes.git -b release --depth=1
 cd QOwnNotes
 git submodule update --init
 ```

@@ -15,7 +15,7 @@ onNoteStored
 function onNoteStored(note);
 ```
 
-شاید بخواهید به مثال [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/on-note-opened.qml) نگاهی بیندازید.
+شاید بخواهید به مثال [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml) نگاهی بیندازید.
 
 noteOpenedHook
 --------------
@@ -30,7 +30,7 @@ noteOpenedHook
 function noteOpenedHook(note);
 ```
 
-برای نمونه می توانید به [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/on-note-opened.qml) نگاهی بیندازید.
+برای نمونه می توانید به [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml) نگاهی بیندازید.
 
 noteDoubleClickedHook
 ---------------------
@@ -45,7 +45,7 @@ noteDoubleClickedHook
 function noteDoubleClickedHook(note);
 ```
 
-به عنوان مثال می توانید به [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-open.qml) نگاهی بیندازید.
+به عنوان مثال می توانید به [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-open.qml) نگاهی بیندازید.
 
 insertMediaHook
 ---------------
@@ -64,7 +64,7 @@ insertMediaHook
 function insertMediaHook(fileName, markdownText);
 ```
 
-شاید بخواهید به مثال [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) نگاهی بیندازید.
+شاید بخواهید به مثال [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) نگاهی بیندازید.
 
 insertAttachmentHook
 --------------------
@@ -83,7 +83,7 @@ insertAttachmentHook
 function insertAttachmentHook(fileName, markdownText);
 ```
 
-به عنوان مثال می توانید [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) نگاهی بیندازید.
+به عنوان مثال می توانید [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) نگاهی بیندازید.
 
 insertingFromMimeDataHook
 -------------------------
@@ -100,7 +100,7 @@ insertingFromMimeDataHook
 function insertingFromMimeDataHook(text, html);
 ```
 
-شاید بخواهید نگاهی به مثال [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml)، [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) یا [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-text-from-5pm-mail.qml) بیندازید.
+شاید بخواهید نگاهی به مثال [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml)، [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) یا [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-text-from-5pm-mail.qml) بیندازید.
 
 handleNoteTextFileNameHook
 --------------------------
@@ -124,7 +124,7 @@ handleNoteTextFileNameHook
 function handleNoteTextFileNameHook(note);
 ```
 
-در صورت تمایل می توانید مثال [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) یا [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml) را ملاحظه کنید.
+در صورت تمایل می توانید مثال [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) یا [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml) را ملاحظه کنید.
 
 handleNoteNameHook
 ------------------
@@ -144,7 +144,7 @@ handleNoteNameHook
 function handleNoteNameHook(note);
 ```
 
-شاید بخواهید به مثال [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) نگاهی بیندازید.
+شاید بخواهید به مثال [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) نگاهی بیندازید.
 
 در صورتی که تنظیماتی که از نام پرونده به عنوان نام یادداشت استفاده می کند فعال باشد، استفاده از این هوک ایده خوبی به نظر نمی رسد.
 
@@ -168,7 +168,7 @@ handleNewNoteHeadlineHook
 function handleNewNoteHeadlineHook(headline);
 ```
 
-شاید بخواهید به مثال [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-new-note-headline.qml) نگاهی بیندازید.
+شاید بخواهید به مثال [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml) نگاهی بیندازید.
 
 preNoteToMarkdownHtmlHook
 -------------------------
@@ -193,7 +193,7 @@ preNoteToMarkdownHtmlHook
 function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
 
-شاید بخواهید به مثال [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml) نگاهی بیندازید.
+شاید بخواهید به مثال [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml) نگاهی بیندازید.
 
 noteToMarkdownHtmlHook
 ----------------------
@@ -216,7 +216,7 @@ noteToMarkdownHtmlHook
 function noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
-در صورت تمایل می توانید نگاهی به مثال [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) یا [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml) بیندازید.
+در صورت تمایل می توانید نگاهی به مثال [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) یا [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml) بیندازید.
 
 لطفاً برای لیستی از همه سبک های پشتیبانی شده css به مستندات [زیرمجموعه پشیبانی شده HTML](http://doc.qt.io/qt-5/richtext-html-subset.html) مراجعه کنید.
 
@@ -236,7 +236,7 @@ encryptionHook
 function encryptionHook(text, password, decrypt);
 ```
 
-شاید بخواهید نگاهی به مثال [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml)، [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml) یا [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-rot13.qml) بیندازید.
+شاید بخواهید نگاهی به مثال [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)، [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml) یا [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-rot13.qml) بیندازید.
 
 noteTaggingHook
 ---------------
@@ -274,7 +274,7 @@ function noteTaggingHook(note, action, tagName, newTagName);
     -   حذف انبوه برچسب ها از یادداشت ها در لیست یادداشت، آن برچسب ها را از یادداشت های شما حذف خواهد کرد
     -   در صورتی که برچسب ها در پنل برچسب جابجا ‌شوند، برنامه یکسری اقدامات `افزایش` و `حذف` برای همه برچسب های منتخب و فرزندان آن ها در تمام یادداشت ها انجام خواهد داد.
 
-شاید بخواهید برای پیاده سازی مکانیسم برچسب گذاری یادداشت خود به مثال [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml) نگاهی بیندازید.
+شاید بخواهید برای پیاده سازی مکانیسم برچسب گذاری یادداشت خود به مثال [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) نگاهی بیندازید.
 
 ::: warning
 مطمئن شوید که فعالیت `لیست` شما به واقع سریع است زیرا برای هر یادداشت و در هر زمانی که پوشه یادداشت مجدداً بارگذاری می شود، اجرا خواهد شد!
@@ -306,7 +306,7 @@ noteTaggingByObjectHook
 function noteTaggingByObjectHook(note, action, tag, newTagName);
 ```
 
-می توانید برای پیاده سازی مکانیسم برچسب گذاری یادداشت خود مثال [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml) را ملاحظه کنید.
+می توانید برای پیاده سازی مکانیسم برچسب گذاری یادداشت خود مثال [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) را ملاحظه کنید.
 
 autocompletionHook
 ------------------
@@ -324,7 +324,7 @@ autocompletionHook
 function callAutocompletionHook();
 ```
 
-شاید بخواهید به مثال [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml) نگاهی بیندازید.
+شاید بخواهید به مثال [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml) نگاهی بیندازید.
 
 websocketRawDataHook
 --------------------
@@ -344,7 +344,7 @@ websocketRawDataHook
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
 
-شاید بخواهید نگاهی به مثال های [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-raw-data-new-note.qml) و [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-raw-data-selection-in-note.qml) بیندازید.
+شاید بخواهید نگاهی به مثال های [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-new-note.qml) و [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml) بیندازید.
 
 onDetachedProcessCallback
 -------------------------
@@ -365,7 +365,7 @@ onDetachedProcessCallback
 function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
 ```
 
-شاید بخواهید مثال [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml) را ملاحظه کنید.
+شاید بخواهید مثال [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml) را ملاحظه کنید.
 
 windowStateChangedHook
 --------------
@@ -380,7 +380,7 @@ windowStateChangedHook
 function windowStateChangedHook(windowState);
 ```
 
-شاید بخواهید به مثال [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/window-state-changed.qml) نگاهی بیندازید.
+شاید بخواهید به مثال [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/window-state-changed.qml) نگاهی بیندازید.
 
 workspaceSwitchedHook
 ----------------------
@@ -398,4 +398,4 @@ workspaceSwitchedHook
 function workspaceSwitchedHook(oldUuid, newUuid);
 ```
 
-شاید بخواهید مثال [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/workspaces.qml) را ملاحظه کنید.
+شاید بخواهید مثال [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/workspaces.qml) را ملاحظه کنید.

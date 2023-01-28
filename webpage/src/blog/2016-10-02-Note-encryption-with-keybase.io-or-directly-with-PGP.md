@@ -12,7 +12,7 @@ order: 20161002103915
 You now can use your **custom method** to **encrypt and decrypt notes** via the scripting engine (for [Issue #334](https://github.com/pbek/QOwnNotes/issues/334)).
 
 - you can use the new scripting hook encryptionHook() do implement your own encryption
-- there are examples to encrypt notes with **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)), **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)) or do a trivial "encryption" with ROT13 ([encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-rot13.qml))
+- there are examples to encrypt notes with **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)), **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml)) or do a trivial "encryption" with ROT13 ([encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-rot13.qml))
 - you can disable the password dialog with script.encryptionDisablePassword()
 - to start an external synchronous process you can usescript.startSynchronousProcess()
 - to check on which platform the script is running you can use script.platformIsLinux(), script.platformIsOSX() and script.platformIsWindows()

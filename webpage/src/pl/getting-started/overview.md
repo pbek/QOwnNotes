@@ -159,7 +159,7 @@ Dołącz do naszej [grupy telegramów](https://t.me/QOwnNotes), aby dyskutować,
 - **Zewnętrzne zmiany** plików notatek są **obserwowane** (notatki lub lista notatek są ponownie ładowane)
 - Obsługa **hierarchicznego tagowania notatek** i **podfolderów notatek**
 - Opcjonalne **szyfrowanie** notatek, wbudowane jest AES-256 lub możesz użyć niestandardowych metod szyfrowania, takich jak **[Keybase.io](https://keybase.io/)** (
-encryption-keybase.qml<//2>) lub **PGP** ([szyfrowanie-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))</li> 
+encryption-keybase.qml<//2>) lub **PGP** ([szyfrowanie-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))</li> 
   
   - **folder notatek** można **swobodnie wybrać** (można użyć wielu folderów notatek)
 - **Wyszukiwanie części słów** w notatkach jest możliwe, a wyniki wyszukiwania są podświetlone w notatkach

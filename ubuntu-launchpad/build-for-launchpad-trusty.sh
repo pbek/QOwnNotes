@@ -19,7 +19,7 @@
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=0.78.1
 
-BRANCH=develop
+BRANCH=main
 #BRANCH=master
 UBUNTU_RELEASES=( "trusty" )
 
