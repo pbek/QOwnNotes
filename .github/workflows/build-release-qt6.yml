@@ -333,7 +333,6 @@ jobs:
     name: '🍎 macOS Monterey'
     needs: create_release
     runs-on: macos-latest
-    continue-on-error: true
     env:
       # Qt 6.5 doesn't support macOS 10 any more
       QT_VERSION: 6.4.2
