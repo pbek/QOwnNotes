@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 23.1.4
+- the obsolete (because of re-implementation of all XML parsing parts in QOwnNotes)
+  Qt module `xmlpatterns` was now removed from all build process to save disk space
+  (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
+
 ## 23.1.3
 - the Evernote import was completely rewritten with stream support (QXMLStreamReader)
   to now support reading huge ENEX Evernote files (for [#2711](https://github.com/pbek/QOwnNotes/issues/2711))
