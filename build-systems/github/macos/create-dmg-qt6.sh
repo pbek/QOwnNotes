@@ -16,6 +16,8 @@ if [ "$NAME" != "Darwin" ]; then
     exit 1
 fi
 
+env
+
 echo "Changing bundle identifier"
 sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' $PLIST
 
@@ -31,8 +33,8 @@ rm -f ${PLIST}-e
 
 # copy translation files to app
 cp languages/*.qm $APP.app/Contents/Resources
-cp ${Qt6_Dir}/translations/qtbase_*.qm $APP.app/Contents/Resources
-#cp ${Qt6_Dir}/translations/qt_*.qm $APP.app/Contents/Resources
+cp ${QT_DIR}/translations/qtbase_*.qm $APP.app/Contents/Resources
+#cp ${QT_DIR}/translations/qt_*.qm $APP.app/Contents/Resources
 #rm $APP.app/Contents/Resources/qt_help_*.qm
 
 # copy updater script to app
@@ -41,7 +43,7 @@ cp ${Qt6_Dir}/translations/qtbase_*.qm $APP.app/Contents/Resources
 
 # use macdeployqt to deploy the application
 echo "Calling macdeployqt"
-${Qt6_Dir}/bin/macdeployqt ./$APP.app
+${QT_DIR}/bin/macdeployqt ./$APP.app
 if [ "$?" -ne "0" ]; then
     echo "Failed to run macdeployqt"
     exit 1
