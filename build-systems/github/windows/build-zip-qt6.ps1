@@ -42,5 +42,3 @@ copy ..\..\Qt\$Env:QT_VERSION\mingw_64\bin\libstdc++-6.dll .
 # create zip archive
 Compress-Archive -Path * -DestinationPath ..\QOwnNotes.zip
 $(CertUtil -hashfile ..\QOwnNotes.zip SHA256)[1] -replace " ","" | Out-File -FilePath ..\QOwnNotes.zip.sha256
-dir
-dir ..\

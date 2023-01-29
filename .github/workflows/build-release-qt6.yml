@@ -304,7 +304,12 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: QOwnNotes.zip
-          path: src/QOwnNotes.zip
+          path: QOwnNotes.zip
+      - name: '📤 Upload artifact: Windows sha256sum'
+        uses: actions/upload-artifact@v3
+        with:
+          name: QOwnNotes.zip.sha256
+          path: QOwnNotes.zip.sha256
 
 #      - name: '📤 Release ZIP'
 #        uses: actions/upload-release-asset@v1
