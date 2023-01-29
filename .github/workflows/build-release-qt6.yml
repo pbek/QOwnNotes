@@ -261,7 +261,7 @@ jobs:
     runs-on: windows-2022
     env:
       # Is win64_mingw81 found with Qt 6.4.2?
-      QT_VERSION: 6.4.2
+#      QT_VERSION: 6.4.2
     continue-on-error: true
     steps:
 
@@ -284,7 +284,7 @@ jobs:
           version: ${{env.QT_VERSION}}
           # https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_650/qt.qt6.650.win64_mingw/
           # https://aqtinstall.readthedocs.io/en/latest/getting_started.html
-          arch: win64_mingw11
+          arch: win64_mingw
           modules: ${{env.QT_MODULES}}
           cache: ${{ steps.cache-qt.outputs.cache-hit }}
 
