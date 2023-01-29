@@ -27,7 +27,7 @@ Sentiti libero di contribuire con il codice sorgente a questo progetto, dare sug
 Visita [QOwnNotes su GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-Se vuoi contribuire con il codice sorgente al progetto, invia le tue richieste pull al ramo `main`.
+If you want to contribute source code to the project please make your pull requests to the  `main` branch.
 :::
 
 ## Archivio sorgente

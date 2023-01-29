@@ -39,8 +39,7 @@ Na przykład, aby otworzyć okno dialogowe listy rzeczy do zrobienia po uruchomi
 QOwnNotes --action actionShow_Todo_List
 ```
 
-::: tip
-Możesz uzyskać nazwy obiektów akcji menu z [główne okno.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Po prostu wyszukaj tytuł menu w języku angielskim. Pamiętaj, że te teksty mogą się zmieniać w czasie.
+::: Wskazówka You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Po prostu wyszukaj tytuł menu w języku angielskim. Pamiętaj, że te teksty mogą się zmieniać w czasie.
 :::
 
 Aby uruchomić [działania skryptowe](../scripting/methods-and-objects.md#registering-a-custom-action) użyj `customAction_`, po którym następuje identyfikator akcji niestandardowej. Identyfikator akcji niestandardowej jest pierwszym parametrem wywołania `script.registerCustomAction` w skrypcie.

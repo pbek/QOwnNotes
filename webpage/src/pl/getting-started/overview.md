@@ -158,24 +158,18 @@ Dołącz do naszej [grupy telegramów](https://t.me/QOwnNotes), aby dyskutować,
 - **Usunięte notatki** można **przywrócić** z serwera **Nextcloud / ownCloud**
 - **Zewnętrzne zmiany** plików notatek są **obserwowane** (notatki lub lista notatek są ponownie ładowane)
 - Obsługa **hierarchicznego tagowania notatek** i **podfolderów notatek**
-- Opcjonalne **szyfrowanie** notatek, wbudowane jest AES-256 lub możesz użyć niestandardowych metod szyfrowania, takich jak **[Keybase.io](https://keybase.io/)** (
-encryption-keybase.qml<//2>) lub **PGP** ([szyfrowanie-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))</li> 
-  
-  - **folder notatek** można **swobodnie wybrać** (można użyć wielu folderów notatek)
+- Opcjonalne **szyfrowanie** notatek, AES-256 jest wbudowany lub możesz użyć niestandardowych metod szyfrowania, takich jak **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) lub **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
+- **folder notatek** można **swobodnie wybrać** (można użyć wielu folderów notatek)
 - **Wyszukiwanie części słów** w notatkach jest możliwe, a wyniki wyszukiwania są podświetlone w notatkach
-- [**Rozszerzenie przeglądarki**](browser-extension.md) do **dodawania notatek z zaznaczonego tekstu**, **tworzenia zrzutów ekranu** lub **zarządzania zakładkami<//1></li> 
-  
-  - Obsługa [**sprawdzania pisowni**](../editor/spellchecking.md)
+- [**Rozszerzenie przeglądarki**](browser-extension.md) do **dodawania notatek z zaznaczonego tekstu**, **tworzenia zrzutów ekranu** lub **zarządzania zakładkami<//1></li>
+- Obsługa [**sprawdzania pisowni**](../editor/spellchecking.md)
 - **Tryb przenośny** do przenoszenia QOwnNotes na pamięciach USB
 - **Obsługa skryptów** i [**repozytorium skryptów online**](https://github.com/qownnotes/scripts), w którym można instalować skrypty wewnątrz aplikacji
 - **Tryb Vima**
-- [Aplikacja internetowa](web-app.md) do **wstawiania zdjęć z telefonu komórkowego** do bieżącej notatki w QOwnNotes na komputerze</ul> 
-
-
+- [Aplikacja internetowa](web-app.md) do **wstawiania zdjęć z telefonu komórkowego** do bieżącej notatki w QOwnNotes na komputerze</ul>
 
 
 ## Wygląd zewnętrzny
-
 - **Podświetlanie przecen** notatek i **tryb podglądu przecen**
 - **Obsługa motywów trybu ciemnego**
 - **Obsługa motywów** dla **podświetlania składni przecen**
@@ -185,12 +179,9 @@ encryption-keybase.qml<//2>) lub **PGP** ([szyfrowanie-pgp.qml](https://github.c
 - **Numery wierszy**
 - **Różnice** między bieżącą notatką a zewnętrznie zmienioną notatką są **pokazane** w oknie dialogowym
 
-
-
 ## Języki
-
-- **Dostępne w ponad 60 różnych językach**, takich jak angielski, niemiecki, francuski, polski, chiński, japoński, rosyjski, portugalski, węgierski, holenderski i hiszpański 
-    - [Twoja pomoc](../contributing/translation.md) jest bardzo ceniona w ulepszaniu tych tłumaczeń lub w tłumaczeniu QOwnNotes na więcej języków
+- **Dostępne w ponad 60 różnych językach**, takich jak angielski, niemiecki, francuski, polski, chiński, japoński, rosyjski, portugalski, węgierski, holenderski i hiszpański
+  - [Twoja pomoc](../contributing/translation.md) jest bardzo ceniona w ulepszaniu tych tłumaczeń lub w tłumaczeniu QOwnNotes na więcej języków
 
 <style>
 .sheet {

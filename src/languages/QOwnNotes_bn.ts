@@ -67,32 +67,32 @@
 <translation>ইনসার্ট করার জন্য ফাইল নির্বাচন করুন </translation>
 </message>
 <message>
-<location filename="../dialogs/attachmentdialog.cpp" line="144"/>
+<location filename="../dialogs/attachmentdialog.cpp" line="138"/>
 <source>Download error</source>
 <translation>ডাউনলোডে ত্রুটি</translation>
 </message>
 <message>
-<location filename="../dialogs/attachmentdialog.cpp" line="145"/>
+<location filename="../dialogs/attachmentdialog.cpp" line="139"/>
 <source>Error while downloading:
 %1</source>
 <translation>ডাউনলোডের সময় ত্রুটি:
 %১</translation>
 </message>
 <message>
-<location filename="../dialogs/attachmentdialog.cpp" line="173"/>
-<location filename="../dialogs/attachmentdialog.cpp" line="197"/>
+<location filename="../dialogs/attachmentdialog.cpp" line="166"/>
+<location filename="../dialogs/attachmentdialog.cpp" line="188"/>
 <source>File error</source>
 <translation>ফাইলে ত্রুটি</translation>
 </message>
 <message>
-<location filename="../dialogs/attachmentdialog.cpp" line="174"/>
+<location filename="../dialogs/attachmentdialog.cpp" line="167"/>
 <source>Could not open temporary file:
 %1</source>
 <translation>অস্থায়ী ফাইলটি খোলা যায়নিঃ
 %১</translation>
 </message>
 <message>
-<location filename="../dialogs/attachmentdialog.cpp" line="198"/>
+<location filename="../dialogs/attachmentdialog.cpp" line="189"/>
 <source>Could not store downloaded file:
 %1</source>
 <translation>ডাউনলোড করা ফাইল সংরক্ষণ করেনিঃ
@@ -153,52 +153,52 @@
 <translation>নির্বাচিত অভিধানগুলি মুছে ফেলুন</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="54"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
 <source>English (British)</source>
 <translation>ইংরেজি (ব্রিটিশ)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
 <source>English (American)</source>
 <translation>ইংরেজি (আমেরিকান)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="72"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
 <source>German (Austrian)</source>
 <translation>জার্মান (অস্ট্রিয়ান)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
 <source>German (German)</source>
 <translation>জার্মান (জার্মান)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="68"/>
 <source>German (Swiss)</source>
 <translation>জার্মান (সুইস)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="59"/>
 <source>French</source>
 <translation>ফরাসি</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="139"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
 <source>Spanish</source>
 <translation>স্পেনীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="126"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="109"/>
 <source>Russian</source>
 <translation>রুশ</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="120"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
 <source>Polish</source>
 <translation>পোলিশ</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="93"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="81"/>
 <source>Italian</source>
 <translation>ইতালীয়</translation>
 </message>
@@ -208,32 +208,32 @@
 <translation>আর্গোনিজ</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
 <source>Gujarati</source>
 <translation>গুজরাটি</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="105"/>
 <source>Portugese (Brazilian)</source>
 <translation>পর্তুগিজ (ব্রাজিলিয়ান)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="122"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
 <source>Portugese</source>
 <translation>পর্তুগীজ</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="47"/>
 <source>Danish</source>
 <translation>ডেনিশ </translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="142"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="123"/>
 <source>Swedish</source>
 <translation>সুইডিশ</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="47"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
 <source>Czech</source>
 <translation>চেক</translation>
 </message>
@@ -258,452 +258,452 @@
 <translation>আরবি</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
 <source>Armenian</source>
 <translation>আর্মেনিয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
 <source>Albanian</source>
 <translation>আলবেনীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
 <source>Basque</source>
 <translation>বাস্ক</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
 <source>Belarusian</source>
 <translation>বেলারুশিয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
 <source>Bulgarian</source>
 <translation>বুলগেরীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
 <source>Bengali</source>
 <translation>বাংলা</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
 <source>Breton</source>
 <translation>ব্রেটন</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
 <source>Catalan</source>
 <translation>কাতালান</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="43"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
 <source>Catalan (Valencian)</source>
 <translation>কাতালান (ভ্যালেন্সিয়ান)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="45"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="44"/>
 <source>Chuvash (Russia)</source>
 <translation>চুভাশ (রাশিয়া)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="45"/>
 <source>Croatian</source>
 <translation>ক্রোয়েশীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
 <source>Dutch</source>
 <translation>ডাচ</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
 <source>English (Australian)</source>
 <translation>ইংরেজি (অস্ট্রেলিয়ান)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
 <source>English (Canadian)</source>
 <translation>ইংরেজি (কানাডিয়ান)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="53"/>
 <source>English (Medical Dictionary)</source>
 <translation>ইংরেজি (মেডিকেল অভিধান)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="55"/>
 <source>English (South African)</source>
 <translation>ইংরেজি (দক্ষিণ আফ্রিকা)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="62"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
 <source>Esperanto</source>
 <translation>এস্পেরান্তো</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="57"/>
 <source>Estonian</source>
 <translation>এস্তোনীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
 <source>Faroese</source>
 <translation>ফেরাউনি</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
 <source>Friulian</source>
 <translation>ফ্রিউলিয়ান</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="68"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="61"/>
 <source>Gaelic</source>
 <translation>গ্যেলিক</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="62"/>
 <source>Galician</source>
 <translation>গ্যালিশিয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
 <source>Georgian</source>
 <translation>জর্জিয়ান</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
 <source>German (Classical Spelling)</source>
 <translation>জার্মান (ক্ল্যাসিকাল বানান)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="80"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
 <source>German (Medical Dictionary)</source>
 <translation>জার্মান (মেডিকেল অভিধান)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
 <source>Greek</source>
 <translation>গ্রিক</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="72"/>
 <source>Modern Greek (Polytonic Greek)</source>
 <translation>আধুনিক গ্রীক (পলিটোনিক গ্রীক)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="75"/>
 <source>Gurani</source>
 <translation>গুরানি</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
 <source>Hebrew</source>
 <translation>হিব্রু</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="77"/>
 <source>Hindi</source>
 <translation>হিন্দি</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
 <source>Hungarian</source>
 <translation>হাঙ্গেরীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="79"/>
 <source>Icelandic</source>
 <translation>আইসল্যান্ডীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="91"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="80"/>
 <source>Indonesian</source>
 <translation>ইন্দোনেশীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
 <source>Kaszebsczi</source>
 <translation>ক্যাজাবসি</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="96"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
 <source>Kazakh</source>
 <translation>কাজাখ</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="97"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="84"/>
 <source>Khmer</source>
 <translation>খেমের</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="98"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
 <source>Komi (Russia)</source>
 <translation>কোমি (রাশিয়া)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
 <source>Korean</source>
 <translation>কোরিয়ান</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="100"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
 <source>Kurdish (Turkey)</source>
 <translation>কুর্দি (তুরস্ক)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="101"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
 <source>Lao</source>
 <translation>লাও</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
 <source>Latgalian</source>
 <translation>লাটগালিয়ান</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
 <source>Latin</source>
 <translation>ল্যাটিন</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="105"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="92"/>
 <source>Lithuanian</source>
 <translation>লিথুয়েনীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="91"/>
 <source>Latvian</source>
 <translation>লাটভীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="93"/>
 <source>Low German / Low Saxon</source>
 <translation>লো জার্মান  / লো স্যাক্সন</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
 <source>Luxembourgish (Letzeburgesch)</source>
 <translation>লুক্সেমবার্গীয় (লেটজেবার্গেস্ক)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="109"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="95"/>
 <source>Macedonian</source>
 <translation>ম্যাসেডোনীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="110"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="96"/>
 <source>Malayalam</source>
 <translation>মালায়ালম</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="111"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="97"/>
 <source>Mongolian</source>
 <translation>মঙ্গোলীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="112"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="98"/>
 <source>Nepali</source>
 <translation>নেপালি</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="113"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
 <source>Norwegian (Bokmål)</source>
 <translation>নরওয়েজিয়ান (বোকমল)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="100"/>
 <source>Norwegian (Nynorsk)</source>
 <translation>নরওয়েজিয়ান (নিনর্স্ক)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="101"/>
 <source>Occitan</source>
 <translation>অক্সিটান</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="118"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
 <source>Papiamentu</source>
 <translation>পাপিয়ামেন্তু</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="119"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
 <source>Persian</source>
 <translation>পারসিক</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="123"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
 <source>Romanian</source>
 <translation>রোমানিয়ন</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="108"/>
 <source>Romansh</source>
 <translation>রোমানশ</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="110"/>
 <source>Russian Medical Dictionary</source>
 <translation>রুশ মেডিকেল অভিধান</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="129"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="112"/>
 <source>Rusyn / Ruthene (Slovakia)</source>
 <translation>রুসিন / রুথেন (স্লোভাকিয়া)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="131"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="114"/>
 <source>Serbian (Cyrillic)</source>
 <translation>সার্বিয়ান (সাইরিলিক)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="132"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
 <source>Serbian (Latin)</source>
 <translation>সার্বিয়ান (ল্যাটিন)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="134"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="116"/>
 <source>Shona</source>
 <translation>শোনা</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="135"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
 <source>Sindhi</source>
 <translation>সিন্ধি</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="136"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="118"/>
 <source>Sinhala</source>
 <translation>সিংহলী</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="137"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="119"/>
 <source>Slovak</source>
 <translation>স্লোভাক</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="138"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="120"/>
 <source>Slovenian</source>
 <translation>স্লোভেনীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="141"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="122"/>
 <source>Swahili</source>
 <translation>সোয়াহিলি</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="143"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="124"/>
 <source>Tagalog</source>
 <translation>তাগালোগ</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="144"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>
 <source>Tajik</source>
 <translation>তাজিক</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="145"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="126"/>
 <source>Tatar (Russia)</source>
 <translation>তাতার (রুশ)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="146"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
 <source>Telugu</source>
 <translation>তেলুগু</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="147"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="128"/>
 <source>Thai</source>
 <translation>থাই</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="148"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="129"/>
 <source>Turkish</source>
 <translation>তুর্কী</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="149"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="130"/>
 <source>Turkmen</source>
 <translation>তুর্কমেনী</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="150"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="131"/>
 <source>Udmurt (Russia)</source>
 <translation>উডমুর্ট (রাশিয়া)</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="151"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="132"/>
 <source>Ukrainian</source>
 <translation>ইউক্রেনীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="152"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="133"/>
 <source>Urdu</source>
 <translation>উর্দু</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="153"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="134"/>
 <source>Uzbek</source>
 <translation>উজবেকীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="154"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="135"/>
 <source>Venda</source>
 <translation>ভেন্ডা</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="155"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="136"/>
 <source>Venetian</source>
 <translation>ভেনেশীয়</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="156"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="137"/>
 <source>Vietnamese</source>
 <translation>ভিয়েতনামী</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="158"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="138"/>
 <source>Welsh</source>
 <translation>ওয়েলশ</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="159"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="139"/>
 <source>Xhosa</source>
 <translation>জোসা</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="160"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="140"/>
 <source>Zulu</source>
 <translation>জুলু</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="296"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="269"/>
 <source>Download error</source>
 <translation>ডাউনলোডে ত্রুটি</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="297"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="270"/>
 <source>Error while downloading:
 %1</source>
 <translation>ডাউনলোডের সময় ত্রুটি:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="313"/>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="425"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="283"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="387"/>
 <source>File error</source>
 <translation>ফাইলে ত্রুটি</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="314"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="284"/>
 <source>Could not store downloaded file:
 %1</source>
 <translation>ডাউনলোড করা ফাইল সংরক্ষণ করতে পারেনিঃ
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/dictionarymanagerdialog.cpp" line="426"/>
+<location filename="../dialogs/dictionarymanagerdialog.cpp" line="388"/>
 <source>Could not remove dictionary file:
 %1</source>
 <translation>অভিধান ফাইলটি সরানো যায়নিঃ
@@ -718,157 +718,157 @@
 <translation>এভারনোট আনুন</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
+<location filename="../dialogs/evernoteimportdialog.ui" line="138"/>
 <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
 <translation>একটি এনেেক্স ফাইল পেতে আপনাকে আপনার এভারনোটস ডেস্কটপ ক্লায়েন্টে এক বা একাধিক নোট নির্বাচন করতে হবে এবং ফাইল মেনুর "এক্সপোর্ট নোটস..." এ ক্লিক করতে হবে। </translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
+<location filename="../dialogs/evernoteimportdialog.ui" line="60"/>
 <source>Please select the Evernote enex file you want to import:</source>
 <translation>আপনি যে এভারনোট এনেক্স ফাইলটি আনতে চান তা দয়া করে নির্বাচন করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
+<location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
+<source>Number of imported notes</source>
+<translation type="unfinished">Number of imported notes</translation>
+</message>
+<message>
+<location filename="../dialogs/evernoteimportdialog.ui" line="148"/>
 <source>Select file</source>
 <translation>ফাইল নির্বাচন করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
+<location filename="../dialogs/evernoteimportdialog.ui" line="172"/>
 <source>Import images</source>
 <translation>ইমেজ আনুন</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
+<location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
 <source>Metadata to import</source>
 <translation>মেটাডেটা আনতে</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
+<location filename="../dialogs/evernoteimportdialog.ui" line="111"/>
 <source>Import notes</source>
 <translation>নোট আনুন</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
+<location filename="../dialogs/evernoteimportdialog.ui" line="53"/>
 <source>Evernote enex file</source>
 <translation>এভারনোট এনেক্স ফাইল</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
-<source>%v of %m note(s) imported</source>
-<translation>%m নোটস এর %v  আনা হয়েছে</translation>
-</message>
-<message>
-<location filename="../dialogs/evernoteimportdialog.ui" line="81"/>
+<location filename="../dialogs/evernoteimportdialog.ui" line="182"/>
 <source>Import attachments</source>
 <translation>সংযুক্তি আনুন</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="73"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="66"/>
 <source>Enex files</source>
 <translation>এনেক্স ফাইলসমূহ</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="74"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="67"/>
 <source>Select Evernote enex file to import</source>
 <translation>এভারনোট এনেক্স ফাইল আনার জন্য নির্বাচন করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="643"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="269"/>
 <source>Basic attributes</source>
 <translation>প্রাথমিক বৈশিষ্ট্য</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="644"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="270"/>
 <source>Created date</source>
 <translation>তৈরীর তারিখ</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="646"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="271"/>
 <source>Updated date</source>
 <translation>হালনাগাদের তারিখ</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="649"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="273"/>
 <source>Note attributes</source>
 <translation>নোটের বৈশিষ্ট্য</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="650"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="274"/>
 <source>Subject date</source>
 <translation>বিষয়ের তারিখ</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="653"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="276"/>
 <source>Latitude</source>
 <translation>ব্যাপ্তি/অক্ষাংশ</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="656"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="278"/>
 <source>Longitude</source>
 <translation>দ্রাঘিমাংশ</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="280"/>
 <source>Altitude</source>
 <translation>উচ্চতা/গভীরতা</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="662"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="282"/>
 <source>Author</source>
 <translation>লেখক/লেখিকা</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="284"/>
 <source>Source</source>
 <translation>উৎস </translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="668"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="286"/>
 <source>Source URL</source>
 <translation>উৎস ইউআরএল</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="672"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="288"/>
 <source>Source application</source>
 <translation>উৎস অ্যাপ্লিকেশন</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="291"/>
 <source>Reminder order</source>
 <translation>রিমাইন্ডার অর্ডার </translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="678"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="293"/>
 <source>Reminder time</source>
 <translation>রিমাইন্ডার সময়</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="682"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="295"/>
 <source>Reminder done time</source>
 <translation>রিমাইন্ডার সম্পন্ন সময়</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="685"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="298"/>
 <source>Place name</source>
 <translation>স্থানের নাম</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="688"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="300"/>
 <source>Content class</source>
 <translation>কন্টেন্ট ক্লাস</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="692"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="302"/>
 <source>Application data</source>
 <translation>অ্যাপ্লিকেশন ডেটা </translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="591"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="702"/>
 <source>Attribute</source>
 <translation>বৈশিষ্ট্য </translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="591"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="702"/>
 <source>Value</source>
 <translation>মান</translation>
 </message>
@@ -1220,7 +1220,7 @@
 <context>
 <name>FakeVimProxy</name>
 <message>
-<location filename="../helpers/fakevimproxy.cpp" line="117"/>
+<location filename="../helpers/fakevimproxy.cpp" line="111"/>
 <source>Information</source>
 <translation>তথ্য</translation>
 </message>
@@ -1259,7 +1259,7 @@
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="169"/>
-<location filename="../widgets/fontcolorwidget.cpp" line="725"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="673"/>
 <source>Export schema</source>
 <translation>স্কীমা রপ্তানি করুন</translation>
 </message>
@@ -1285,7 +1285,7 @@
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="141"/>
-<location filename="../widgets/fontcolorwidget.cpp" line="769"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="716"/>
 <source>Import schema</source>
 <translation>স্কীমা রপ্তানি করুন</translation>
 </message>
@@ -1335,200 +1335,200 @@
 <translation>আন্ডারলাইন করুন</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="210"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="196"/>
 <source>Text preset</source>
 <translation>পাঠ্য পূর্বনির্ধারণ করুন</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="211"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="197"/>
 <source>Emphasized text</source>
 <translation>এম্ফ্যাসাইজড লেখা</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="213"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="199"/>
 <source>Strong text</source>
 <translation>স্ট্রং লেখা</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="247"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="225"/>
 <source>(HTML) Comment</source>
 <translation>(HTML) মন্তব্য</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="237"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="216"/>
 <source>Header, level 1</source>
 <translation>হেডার, লেভেল ১</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="212"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="198"/>
 <source>Underlined text</source>
 <translation type="unfinished">Underlined text</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="214"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="200"/>
 <source>Link</source>
 <translation>লিংক</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="215"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="201"/>
 <source>Image</source>
 <translation>ছবি</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="216"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="202"/>
 <source>Code (block)</source>
 <translation>কোড (ব্লক)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="217"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="203"/>
 <source>Code (inline)</source>
 <translation>কোড (ইনলাইন)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="220"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="205"/>
 <source>Code (keyword)</source>
 <translation>কোড (কীওয়ার্ড)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="222"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="206"/>
 <source>Code (type)</source>
 <translation>কোড (প্রকার)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="223"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="207"/>
 <source>Code (comment)</source>
 <translation>কোড (মন্তব্য)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="225"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="208"/>
 <source>Code (string)</source>
 <translation>কোড (স্ট্রিং)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="226"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="209"/>
 <source>Code (built in)</source>
 <translation>কোড (অন্তর্নির্মিত)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="228"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="210"/>
 <source>Code (num literal)</source>
 <translation>কোড (সংখ্যা আক্ষরিক)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="230"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="211"/>
 <source>Code (other)</source>
 <translation>কোড (অন্যান্য)</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="232"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="213"/>
 <source>List item</source>
 <translation>আইটেম তালিকা করুন</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="233"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="214"/>
 <source>Checkbox unchecked</source>
 <translation>চেকবক্সটি চেক করা হয়নি</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="235"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="215"/>
 <source>Checkbox checked</source>
 <translation>চেকবক্স চেক করা হয়েছে</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="238"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="217"/>
 <source>Header, level 2</source>
 <translation>হেডার, লেভেল ২</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="239"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="218"/>
 <source>Header, level 3</source>
 <translation>হেডার, লেভেল ৩</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="240"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="219"/>
 <source>Header, level 4</source>
 <translation>হেডার, লেভেল ৪</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="241"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="220"/>
 <source>Header, level 5</source>
 <translation>হেডার, লেভেল ৫</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="242"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="221"/>
 <source>Header, level 6</source>
 <translation>হেডার, লেভেল ৬</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="245"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="223"/>
 <source>Block quote</source>
 <translation>উদ্ধৃত</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="246"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="224"/>
 <source>Table</source>
 <translation>টেবিল</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="248"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="226"/>
 <source>Masked syntax</source>
 <comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>মাস্কড সিনট্যাক্স</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="254"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="232"/>
 <source>Broken link</source>
 <translation>ছিন্ন সুত্র</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="243"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="222"/>
 <source>Horizontal rule</source>
 <translation>অনুভূমিক রেখা</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="252"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="230"/>
 <source>Current line background color</source>
 <translation>বর্তমান লাইনের পটভূমির রং</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="255"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="233"/>
 <source>Trailing space</source>
 <translation>চলমান স্পেস</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="271"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="246"/>
 <source>This item will be used to preset colors for the other items</source>
 <translation>এই আইটেমটি রং অন্যান্য বিষয়োপকরণের জন্য টুল পরামর্শসমূহ সম্পুরক নিধারন করতে ব্যবহার করা হবে</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="555"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="512"/>
 <source>Copy color schema</source>
 <translation>রং স্কীমা কপি</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="556"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="512"/>
 <source>Color schema name</source>
 <translation>রঙ স্কীমার নাম</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="558"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>অনুলিপি করুন</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="676"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="626"/>
 <source>Remove schema</source>
 <translation>স্কীমা অপসারণ করুন</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="677"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="627"/>
 <source>Remove current schema? This cannot be undone!</source>
 <translation>বর্তমান স্কিমটি অপসারন করবেন? এটি পূর্বাবস্থায় ফেরানো যাবে না!</translation>
 </message>
 <message>
-<location filename="../widgets/fontcolorwidget.cpp" line="724"/>
-<location filename="../widgets/fontcolorwidget.cpp" line="768"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="672"/>
+<location filename="../widgets/fontcolorwidget.cpp" line="715"/>
 <source>INI files</source>
 <translation>INI ফাইল</translation>
 </message>
@@ -1536,17 +1536,17 @@
 <context>
 <name>HtmlPreviewWidget</name>
 <message>
-<location filename="../widgets/htmlpreviewwidget.cpp" line="52"/>
+<location filename="../widgets/htmlpreviewwidget.cpp" line="45"/>
 <source>Copy</source>
 <translation type="unfinished">Copy</translation>
 </message>
 <message>
-<location filename="../widgets/htmlpreviewwidget.cpp" line="60"/>
+<location filename="../widgets/htmlpreviewwidget.cpp" line="51"/>
 <source>Copy link</source>
 <translation type="unfinished">Copy link</translation>
 </message>
 <message>
-<location filename="../widgets/htmlpreviewwidget.cpp" line="68"/>
+<location filename="../widgets/htmlpreviewwidget.cpp" line="58"/>
 <source>Reset zoom</source>
 <translation type="unfinished">Reset zoom</translation>
 </message>
@@ -1609,17 +1609,17 @@
 <translation>চিত্র ফাইল নির্বাচন করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/imagedialog.cpp" line="78"/>
+<location filename="../dialogs/imagedialog.cpp" line="73"/>
 <source>Image files</source>
 <translation>চিত্র ফাইল</translation>
 </message>
 <message>
-<location filename="../dialogs/imagedialog.cpp" line="81"/>
+<location filename="../dialogs/imagedialog.cpp" line="76"/>
 <source>Any files</source>
 <translation>কোন ফাইল</translation>
 </message>
 <message>
-<location filename="../dialogs/imagedialog.cpp" line="87"/>
+<location filename="../dialogs/imagedialog.cpp" line="82"/>
 <source>Select image to insert</source>
 <translation>চিত্র সন্নিবেশ করতে নির্বাচন করুন</translation>
 </message>
@@ -1703,7 +1703,7 @@
 <translation type="unfinished">Import attachments</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.cpp" line="91"/>
+<location filename="../dialogs/joplinimportdialog.cpp" line="74"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
 <translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
 </message>
@@ -1716,93 +1716,93 @@
 <translation>লেআউট ব্যবহার করুন</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="57"/>
+<location filename="../widgets/layoutwidget.cpp" line="55"/>
 <source>Keep in mind that workspaces that demand that there is no central widget will not work properly if the central widget is enabled.</source>
 <translation>মনে রাখবেন যে ওয়ার্কস্পেসগুলি যে কোনও কেন্দ্রীয় উইজেট নেই তা দাবি করে যে কেন্দ্রীয় উইজেট সক্ষম থাকলে সঠিকভাবে কাজ করবে না।</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="84"/>
+<location filename="../widgets/layoutwidget.cpp" line="82"/>
 <source>Use new layout</source>
 <translation>নতুন লেআউট ব্যবহার করুন</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="85"/>
+<location filename="../widgets/layoutwidget.cpp" line="83"/>
 <source>Do you want to use the selected layout?</source>
 <translation>আপনি কি নির্বাচিত লেআউটটি ব্যবহার করতে চান?</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="87"/>
+<location filename="../widgets/layoutwidget.cpp" line="84"/>
 <source>The application will be restarted afterwards.</source>
 <translation>এরপরে অ্যাপ্লিকেশনটি আবার শুরু হবে।</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="151"/>
+<location filename="../widgets/layoutwidget.cpp" line="143"/>
 <source>Minimal</source>
 <comment>Layout name</comment>
 <translation>যৎসামান্য </translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="153"/>
+<location filename="../widgets/layoutwidget.cpp" line="145"/>
 <source>Full</source>
 <comment>Layout name</comment>
 <translation>পূর্ণ</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="155"/>
+<location filename="../widgets/layoutwidget.cpp" line="147"/>
 <source>Preview only</source>
 <comment>Layout name</comment>
 <translation>কেবল প্রিভিউ </translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="157"/>
+<location filename="../widgets/layoutwidget.cpp" line="149"/>
 <source>Full vertical</source>
 <comment>Layout name</comment>
 <translation>সম্পূর্ণ খাড়া</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="159"/>
+<location filename="../widgets/layoutwidget.cpp" line="151"/>
 <source>Single column</source>
 <comment>Layout name</comment>
 <translation>একক কলাম</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="167"/>
+<location filename="../widgets/layoutwidget.cpp" line="159"/>
 <source>The note edit panel is the central widget that will be resized automatically.</source>
 <comment>Layout description</comment>
 <translation>নোট সম্পাদনা প্যানেলটি হ'ল কেন্দ্রীয় উইজেট যা স্বয়ংক্রিয়ভাবে পুনরায় আকার দেওয়া হবে।.</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="172"/>
+<location filename="../widgets/layoutwidget.cpp" line="164"/>
 <source>Because of this there is no central widget that will be resized automatically.</source>
 <comment>Layout description</comment>
 <translation>এ কারণে কোনও কেন্দ্রীয় উইজেট নেই যা স্বয়ংক্রিয়ভাবে পুনরায় আকার দেওয়া হবে।.</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="177"/>
+<location filename="../widgets/layoutwidget.cpp" line="169"/>
 <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
 <comment>Layout description</comment>
 <translation>বামদিকে কেবল নোট তালিকা এবং ডানদিকে নোট সম্পাদনা প্যানেলটি ডিফল্টরূপে সক্ষম করা হয়েছে।.</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="182"/>
+<location filename="../widgets/layoutwidget.cpp" line="174"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
 <comment>Layout description</comment>
 <translation>বামদিকে নোট তালিকার মতো বেশিরভাগ প্যানেল, ট্যাগিং প্যানেলগুলি, কেন্দ্রে নোট সম্পাদনা প্যানেল এবং ডানদিকে পূর্বরূপ প্যানেল ডিফল্টরূপে সক্ষম করা হয়েছে।.</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="188"/>
+<location filename="../widgets/layoutwidget.cpp" line="180"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another workspace to actually edit notes!</source>
 <comment>Layout description</comment>
 <translation>বামদিকে নোট তালিকার মতো বেশিরভাগ প্যানেল, ট্যাগিং প্যানেল এবং ডানদিকে কেবলমাত্র পূর্বরূপ প্যানেলই ডিফল্টরূপে সক্ষম হয়। আসলে নোটগুলি সম্পাদনা করতে আপনার আরও একটি ওয়ার্কস্পেসের প্রয়োজন হবে!</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="194"/>
+<location filename="../widgets/layoutwidget.cpp" line="187"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
 <comment>Layout description</comment>
 <translation>বামদিকে নোট তালিকার মতো বেশিরভাগ প্যানেল, ট্যাগিং প্যানেলগুলি, ডানদিকে নোট সম্পাদনা প্যানেল এবং নোট সম্পাদনা প্যানেলের শীর্ষে পূর্বরূপ প্যানেল ডিফল্টরূপে সক্ষম করা হয়েছে।.</translation>
 </message>
 <message>
-<location filename="../widgets/layoutwidget.cpp" line="201"/>
+<location filename="../widgets/layoutwidget.cpp" line="194"/>
 <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
 <comment>Layout description</comment>
 <translation>নোট অনুসন্ধান, নোট তালিকা এবং একে অপরের শীর্ষে নোট সম্পাদনা সহ একটি কলাম স্তরের বিন্যাস।.</translation>
@@ -1866,14 +1866,14 @@
 <translation>লিংক করার জন্য একটি নোট খুজুন</translation>
 </message>
 <message>
-<location filename="../dialogs/linkdialog.cpp" line="263"/>
-<location filename="../dialogs/linkdialog.cpp" line="348"/>
+<location filename="../dialogs/linkdialog.cpp" line="248"/>
+<location filename="../dialogs/linkdialog.cpp" line="326"/>
 <source>Select file to link to</source>
 <translation>লিঙ্ক থেকে ফাইল নির্বাচন করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/linkdialog.cpp" line="305"/>
-<location filename="../dialogs/linkdialog.cpp" line="356"/>
+<location filename="../dialogs/linkdialog.cpp" line="285"/>
+<location filename="../dialogs/linkdialog.cpp" line="332"/>
 <source>Select directory to link to</source>
 <translation>লিঙ্ক করতে ডিরেক্টরি নির্বাচন করুন</translation>
 </message>
@@ -1901,39 +1901,39 @@
 <translation>মোছা</translation>
 </message>
 <message>
-<location filename="../dialogs/localtrashdialog.cpp" line="45"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="43"/>
 <source>Restore</source>
 <translation>উদ্ধার</translation>
 </message>
 <message>
-<location filename="../dialogs/localtrashdialog.cpp" line="46"/>
-<location filename="../dialogs/localtrashdialog.cpp" line="195"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="44"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="187"/>
 <source>Restore selected notes</source>
 <translation>নির্বাচিত নোট উদ্ধার করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/localtrashdialog.cpp" line="54"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="51"/>
 <source>Remove</source>
 <translation>মুছুন</translation>
 </message>
 <message>
-<location filename="../dialogs/localtrashdialog.cpp" line="55"/>
-<location filename="../dialogs/localtrashdialog.cpp" line="240"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="52"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="229"/>
 <source>Remove selected notes</source>
 <translation>নির্বাচিত নোট মুছুন</translation>
 </message>
 <message>
-<location filename="../dialogs/localtrashdialog.cpp" line="99"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="95"/>
 <source>File will be restored to: %1</source>
 <translation>ফাইলটি পুনরুদ্ধার করা হবে: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/localtrashdialog.cpp" line="109"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="102"/>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
 <translation>ফাইল &lt;strong&gt;%1&lt;/strong&gt; অপঠিত নয় এবং পুনরুদ্ধার করা যাবে না!</translation>
 </message>
 <message numerus="yes">
-<location filename="../dialogs/localtrashdialog.cpp" line="196"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="188"/>
 <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
 <translation>
 <numerusform>নির্বাচিত নোটগুলি &lt;strong&gt;%n&lt;/strong&gt; পুনরুদ্ধার করুন?</numerusform>
@@ -1941,12 +1941,12 @@
 </translation>
 </message>
 <message>
-<location filename="../dialogs/localtrashdialog.cpp" line="220"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="208"/>
 <source>Notes restored</source>
 <translation>নোট পুনরুদ্ধার</translation>
 </message>
 <message numerus="yes">
-<location filename="../dialogs/localtrashdialog.cpp" line="221"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="209"/>
 <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; নোটটি পুনরুদ্ধার করা হয়েছে</numerusform>
@@ -1954,7 +1954,7 @@
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../dialogs/localtrashdialog.cpp" line="241"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="230"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; নির্বাচিত নোটগুলি বাতিল করবেন?</numerusform>
@@ -1962,12 +1962,12 @@
 </translation>
 </message>
 <message>
-<location filename="../dialogs/localtrashdialog.cpp" line="265"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="250"/>
 <source>Notes removed</source>
 <translation>নোট মুছে ফেলা</translation>
 </message>
 <message numerus="yes">
-<location filename="../dialogs/localtrashdialog.cpp" line="266"/>
+<location filename="../dialogs/localtrashdialog.cpp" line="251"/>
 <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/string&gt; নোড সরানো হয়েছে</numerusform>
@@ -2019,17 +2019,17 @@
 </message>
 <message>
 <location filename="../widgets/logwidget.ui" line="135"/>
-<location filename="../widgets/logwidget.cpp" line="416"/>
+<location filename="../widgets/logwidget.cpp" line="396"/>
 <source>Clear log</source>
 <translation>লগ মুছুন</translation>
 </message>
 <message>
-<location filename="../widgets/logwidget.cpp" line="414"/>
+<location filename="../widgets/logwidget.cpp" line="394"/>
 <source>Show options</source>
 <translation>বিকল্পসমূহ দেখান</translation>
 </message>
 <message>
-<location filename="../widgets/logwidget.cpp" line="414"/>
+<location filename="../widgets/logwidget.cpp" line="394"/>
 <source>Hide options</source>
 <translation>বিকল্পসমূহ লুকান</translation>
 </message>
@@ -2044,7 +2044,7 @@
 <message>
 <location filename="../mainwindow.ui" line="411"/>
 <location filename="../mainwindow.ui" line="912"/>
-<location filename="../mainwindow.cpp" line="852"/>
+<location filename="../mainwindow.cpp" line="816"/>
 <source>Navigation</source>
 <translation>পরিভ্রমণ</translation>
 </message>
@@ -2055,7 +2055,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="8253"/>
+<location filename="../mainwindow.cpp" line="7888"/>
 <source>Add a tag to the current note</source>
 <translation>বর্তমান নোটটিতে একটি ট্যাগ যুক্ত করুন</translation>
 </message>
@@ -2171,7 +2171,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1449"/>
-<location filename="../mainwindow.cpp" line="9818"/>
+<location filename="../mainwindow.cpp" line="9376"/>
 <source>Select &amp;all notes</source>
 <translation>সব নোট নির্বাচন করুন</translation>
 </message>
@@ -2221,7 +2221,7 @@
 <translation>অনুসন্ধান বা নোট তৈরি করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8254"/>
+<location filename="../mainwindow.cpp" line="7889"/>
 <source>Add a tag to the selected notes</source>
 <translation>নির্বাচিত নোটগুলিতে একটি ট্যাগ যুক্ত করুন</translation>
 </message>
@@ -2312,7 +2312,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1161"/>
-<location filename="../mainwindow.cpp" line="780"/>
+<location filename="../mainwindow.cpp" line="749"/>
 <source>Workspaces</source>
 <translation>ওয়ার্কস্পেসসমূহ</translation>
 </message>
@@ -2610,7 +2610,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2245"/>
-<location filename="../mainwindow.cpp" line="10783"/>
+<location filename="../mainwindow.cpp" line="10293"/>
 <source>Remove current workspace</source>
 <translation>বর্তমান কর্মক্ষেত্রটি সরান</translation>
 </message>
@@ -2678,7 +2678,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2366"/>
-<location filename="../mainwindow.cpp" line="9794"/>
+<location filename="../mainwindow.cpp" line="9355"/>
 <source>Open note in different window</source>
 <translation>পৃথক উইন্ডোতে নোট খুলুন</translation>
 </message>
@@ -2699,7 +2699,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2406"/>
-<location filename="../mainwindow.cpp" line="9802"/>
+<location filename="../mainwindow.cpp" line="9360"/>
 <source>Show note git versions</source>
 <translation>নোট এবং সংস্করণ দেখান</translation>
 </message>
@@ -2782,7 +2782,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2569"/>
-<location filename="../mainwindow.cpp" line="11745"/>
+<location filename="../mainwindow.cpp" line="11233"/>
 <source>Automatically detect</source>
 <translation>স্বয়ংক্রিয়ভাবে সনাক্ত করুন</translation>
 </message>
@@ -3001,22 +3001,22 @@
 <translation>নোট Evernote থেকে আমদানি করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2938"/>
+<location filename="../mainwindow.cpp" line="2792"/>
 <source>Note was removed externally!</source>
 <translation>উল্লেখ্য এক্সপোজ অপসারণ করা হয়েছে।</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2939"/>
+<location filename="../mainwindow.cpp" line="2793"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>নোট বর্তমানে এই অ্যাপ্লিকেশন বাইরে সরানো হয়!
 বর্তমান রেকর্ড পুনরুদ্ধার করবেন?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5526"/>
-<location filename="../mainwindow.cpp" line="5549"/>
-<location filename="../mainwindow.cpp" line="6877"/>
-<location filename="../mainwindow.cpp" line="9884"/>
+<location filename="../mainwindow.cpp" line="5273"/>
+<location filename="../mainwindow.cpp" line="5293"/>
+<location filename="../mainwindow.cpp" line="6570"/>
+<location filename="../mainwindow.cpp" line="9441"/>
 <source>&amp;Cancel</source>
 <translation>&amp;বাতিল</translation>
 </message>
@@ -3028,47 +3028,47 @@ Restore current note?</source>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3187"/>
+<location filename="../mainwindow.cpp" line="3030"/>
 <source>new version %1 available</source>
 <translation>নতুন সংস্করণ %1 পাওয়া যায়</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3301"/>
+<location filename="../mainwindow.cpp" line="3138"/>
 <source>Abort</source>
 <translation>গর্ভপাত করান</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3301"/>
+<location filename="../mainwindow.cpp" line="3138"/>
 <source>Loading notes…</source>
 <translation>নোটগুলি লোড হচ্ছে…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3514"/>
+<location filename="../mainwindow.cpp" line="3344"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>সদৃশ দ্বন্দ্বযুক্ত ডাটাবেস অপসারণ: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3515"/>
+<location filename="../mainwindow.cpp" line="3345"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>সদৃশ দ্বন্দ্বী ডেটা অপসারণ: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3521"/>
+<location filename="../mainwindow.cpp" line="3350"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>সংযুক্ত বিরোধী ডাটাবেস সরানো হয়েছে: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3522"/>
+<location filename="../mainwindow.cpp" line="3351"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>একত্রিত দ্বন্দ্বযুক্ত ডাটাবেস সরানো যায়নি: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3537"/>
+<location filename="../mainwindow.cpp" line="3365"/>
 <source>Delete conflicted database copies</source>
 <translation>বিবাদযুক্ত ডাটাবেস অনুলিপি মুছুন</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3560"/>
+<location filename="../mainwindow.cpp" line="3385"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>%n বিবাদযুক্ত ডাটাবেস অনুলিপি সরানো হয়েছে</numerusform>
@@ -3076,62 +3076,62 @@ Restore current note?</source>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3731"/>
+<location filename="../mainwindow.cpp" line="3547"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>দয়া করে যেখানে আপনার নোট সংরক্ষণ পেতে হবে সেই ফোল্ডারটি নির্বাচন করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3757"/>
+<location filename="../mainwindow.cpp" line="3571"/>
 <source>No folder was selected</source>
 <translation>কোনও ফোল্ডার নির্বাচন করা হয়নি</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3759"/>
+<location filename="../mainwindow.cpp" line="3572"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>এই সফ্টওয়্যার কাজ করার জন্য আপনাকে নিজের ক্লাউড রেকর্ড ফোল্ডার নির্বাচন করতে হবে!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3761"/>
+<location filename="../mainwindow.cpp" line="3574"/>
 <source>&amp;Retry</source>
 <translation>&amp;পুনরায় চেষ্টা করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3761"/>
+<location filename="../mainwindow.cpp" line="3574"/>
 <source>&amp;Exit</source>
 <translation>&amp;প্রস্থান করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4068"/>
+<location filename="../mainwindow.cpp" line="3868"/>
 <source>Remove current note</source>
 <translation>বর্তমান নোট অপসারণ করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4069"/>
+<location filename="../mainwindow.cpp" line="3869"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>বর্তমান নোট দূর-&lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4445"/>
+<location filename="../mainwindow.cpp" line="4238"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>অনুগ্রহ করে এই এনক্রিপ্ট করা নোট, &lt;strong&gt;গুপ্ত-সংকেত&lt;/strong&gt; প্রবেশ করান।</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4468"/>
+<location filename="../mainwindow.cpp" line="4260"/>
 <source>Note can't be decrypted!</source>
 <translation>নোট ডিক্রিপ্ট করা যাবে না!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4469"/>
+<location filename="../mainwindow.cpp" line="4261"/>
 <source>It seems that your password is not valid!</source>
 <translation>আপনার গুপ্ত-সংকেতটি বৈধ নয় বলে মনে হচ্ছে!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4656"/>
+<location filename="../mainwindow.cpp" line="4441"/>
 <source>Remove selected notes</source>
 <translation>নির্বাচিত নোট অপসারণ করুন</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4658"/>
+<location filename="../mainwindow.cpp" line="4442"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3145,12 +3145,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4731"/>
+<location filename="../mainwindow.cpp" line="4514"/>
 <source>Remove selected tags</source>
 <translation>নির্বাচিত ট্যাগ অপসারণ করুন</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4732"/>
+<location filename="../mainwindow.cpp" line="4515"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; নির্বাচিত tag(s) অপসারণ করা হবে? এই পদ্ধতিতে কোন নোট অপসারণ করা হবে।</numerusform>
@@ -3158,13 +3158,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4786"/>
-<location filename="../mainwindow.cpp" line="9064"/>
+<location filename="../mainwindow.cpp" line="4569"/>
+<location filename="../mainwindow.cpp" line="8657"/>
 <source>Move selected notes</source>
 <translation>নির্বাচিত নোট সরিয়ে নিন</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4787"/>
+<location filename="../mainwindow.cpp" line="4570"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>নির্বাচিত note(s) %n &lt;strong&gt;%2&lt;/strong&gt; করতে যাও?</numerusform>
@@ -3172,13 +3172,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4897"/>
-<location filename="../mainwindow.cpp" line="9184"/>
+<location filename="../mainwindow.cpp" line="4679"/>
+<location filename="../mainwindow.cpp" line="8769"/>
 <source>Copy selected notes</source>
 <translation>নির্বাচিত নোট কপি করো</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4898"/>
+<location filename="../mainwindow.cpp" line="4680"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>নির্বাচিত note(s) %n কাছে &lt;strong&gt;%2&lt;/strong&gt; কপি?</numerusform>
@@ -3186,13 +3186,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4928"/>
-<location filename="../mainwindow.cpp" line="5077"/>
+<location filename="../mainwindow.cpp" line="4707"/>
+<location filename="../mainwindow.cpp" line="4849"/>
 <source>Done</source>
 <translation>সম্পন্ন</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4929"/>
+<location filename="../mainwindow.cpp" line="4708"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%nরেকর্ডগুলি&lt;strong&gt;% 2&lt;/strong&gt;এ কপি করা হয়েছে।</numerusform>
@@ -3200,12 +3200,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4942"/>
+<location filename="../mainwindow.cpp" line="4721"/>
 <source>Tag selected notes</source>
 <translation>নোট নির্বাচিত ট্যাগ করুন</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4943"/>
+<location filename="../mainwindow.cpp" line="4722"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>&lt;strong&gt;%2&lt;/strong&gt; এর সাথে নির্বাচিত %nটি নোট?</numerusform>
@@ -3213,37 +3213,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5220"/>
+<location filename="../mainwindow.cpp" line="4988"/>
 <source>Restart application</source>
 <translation>অ্যাপ্লিকেশন পুনরায় চালু করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5221"/>
+<location filename="../mainwindow.cpp" line="4989"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>পরিবর্তনের প্রভাবের জন্য আপনাকে অ্যাপ্লিকেশন পুনঃসূচনা করতে হতে পারে।</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5224"/>
+<location filename="../mainwindow.cpp" line="4992"/>
 <source>Restart</source>
 <translation>পুনরারম্ভ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5446"/>
+<location filename="../mainwindow.cpp" line="5196"/>
 <source>PDF files</source>
 <translation>PDF ফাইল</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5522"/>
+<location filename="../mainwindow.cpp" line="5269"/>
 <source>Todo lists disabled!</source>
 <translation>টোডো তালিকা অক্ষম!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5523"/>
+<location filename="../mainwindow.cpp" line="5270"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>আপনি টুডু তালিকা অক্ষম করেছেন &lt;br/&gt; দয়া করে সেটিংসে আপনার &lt;strong&gt; টোড &lt;/strong&gt; কনফিগারেশনটি পরীক্ষা করুন!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5775"/>
+<location filename="../mainwindow.cpp" line="5511"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%1&lt;/strong&gt; এর যে কোনও শর্তের উপস্থিতি &lt;strong&gt;%n&lt;/strong&gt; পাওয়া গেছে</numerusform>
@@ -3251,79 +3251,79 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6332"/>
+<location filename="../mainwindow.cpp" line="6051"/>
 <source>Note folders</source>
 <translation>নোট ফোল্ডার</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6455"/>
+<location filename="../mainwindow.cpp" line="6166"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>বর্তমান নোট সংস্করণ আপনার নিজস্ব ক্লাউড সার্ভার থেকে লোড হয়</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6472"/>
+<location filename="../mainwindow.cpp" line="6179"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>বর্তমান ট্র্যাশের নোটগুলি আপনার নিজের ক্লাউড সার্ভার থেকে লোড হয়</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6721"/>
+<location filename="../mainwindow.cpp" line="6417"/>
 <source>Inserted text as text attachment file</source>
 <translation type="unfinished">Inserted text as text attachment file</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6873"/>
+<location filename="../mainwindow.cpp" line="6566"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>আপনার নোট ডিক্রিপ্ট করা হবে এবং আবার পাঠ্য টেক্সট হিসেবে সংরক্ষণ করা হবে। মনে রাখবেন যে এনএনএনক্রিপ্টড রেকর্ড আপনার সার্ভারের সাথে সিঙ্ক্রোনাইজড হতে পারে এবং সংবেদনশীল তথ্য ধারণকারী টেক্সটটি প্রকাশ্যে খোলা হতে পারে! &lt;br /&gt; আপনি কি আপনার নোট ডিস্ক্রিপ্ট করতে চান?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6970"/>
+<location filename="../mainwindow.cpp" line="6660"/>
 <source>Markdown files</source>
 <translation>মার্কডাউন ফাইলগুলো</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6984"/>
+<location filename="../mainwindow.cpp" line="6676"/>
 <source>Export attached files</source>
 <translation type="unfinished">Export attached files</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6985"/>
+<location filename="../mainwindow.cpp" line="6677"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7019"/>
+<location filename="../mainwindow.cpp" line="6707"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>মার্কডাউন ফাইল নোটের অবস্থান স্লট %1 এ চিহ্নিত করা হয়েছে</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7034"/>
+<location filename="../mainwindow.cpp" line="6723"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>%1 স্লটে মার্কআপ অবস্থান থেকে ঝাঁপ দাও</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7218"/>
-<location filename="../mainwindow.cpp" line="7288"/>
+<location filename="../mainwindow.cpp" line="6896"/>
+<location filename="../mainwindow.cpp" line="6963"/>
 <source>Inserting image</source>
 <translation>ছবি প্রবেশ করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7223"/>
-<location filename="../mainwindow.cpp" line="7292"/>
+<location filename="../mainwindow.cpp" line="6901"/>
+<location filename="../mainwindow.cpp" line="6967"/>
 <source>Done inserting image</source>
 <translation>ছবি প্রবেশ করানো সম্পন্ন হয়েছে</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7225"/>
+<location filename="../mainwindow.cpp" line="6903"/>
 <source>Inserting attachment</source>
 <translation>সংযুক্তি প্রবেশ করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7230"/>
+<location filename="../mainwindow.cpp" line="6908"/>
 <source>Done inserting attachment</source>
 <translation>সংযুক্তি প্রবেশ করানো সম্পন্ন হয়েছে</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7242"/>
+<location filename="../mainwindow.cpp" line="6919"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>%n নোট(গুলো) %1 এ কপি করা হয়েছে</numerusform>
@@ -3331,7 +3331,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7252"/>
+<location filename="../mainwindow.cpp" line="6929"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>%n নোট(গুলো) অনুলিপি করতে ব্যর্থ হয়েছে (সম্ভবত ইতিমধ্যেই)</numerusform>
@@ -3339,7 +3339,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7262"/>
+<location filename="../mainwindow.cpp" line="6938"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>অনুলিপি %n নোট(গুলো) (কোন markdown বা টেক্সট ফাইল বা অপঠিত) এড়িয়ে চলেছে</numerusform>
@@ -3347,210 +3347,210 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7275"/>
+<location filename="../mainwindow.cpp" line="6951"/>
 <source>Saving temporary image</source>
 <translation>অস্থায়ী চিত্র সংরক্ষণ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6704"/>
-<location filename="../mainwindow.cpp" line="7294"/>
+<location filename="../mainwindow.cpp" line="6401"/>
+<location filename="../mainwindow.cpp" line="6969"/>
 <source>Temporary file can't be opened</source>
 <translation>অস্থায়ী ফাইলটি খোলা যাবে না</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7349"/>
+<location filename="../mainwindow.cpp" line="7023"/>
 <source>Downloading %1</source>
 <translation>ডাউনলোড হচ্ছে %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7521"/>
+<location filename="../mainwindow.cpp" line="7187"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>%1 pt এ ফন্টের আকার পুনরায় সেট করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8303"/>
+<location filename="../mainwindow.cpp" line="7933"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>বর্তমান নোট থেকে ট্যাগ '%1' সরান</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8304"/>
+<location filename="../mainwindow.cpp" line="7934"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>নির্বাচিত নোটগুলি থেকে ট্যাগ '%1' সরান</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8556"/>
+<location filename="../mainwindow.cpp" line="8177"/>
 <source>Rename tag</source>
 <translation>ট্যাগ পুনঃনামকরণ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8557"/>
+<location filename="../mainwindow.cpp" line="8178"/>
 <source>Assign color</source>
 <translation>রঙ সেট করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8558"/>
+<location filename="../mainwindow.cpp" line="8179"/>
 <source>Disable color</source>
 <translation>রঙ অক্ষম করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8562"/>
+<location filename="../mainwindow.cpp" line="8183"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;ট্যাগগুলিকে এতে সরান…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8773"/>
+<location filename="../mainwindow.cpp" line="8393"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>রুট এ যান</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9347"/>
+<location filename="../mainwindow.cpp" line="8928"/>
 <source>The scripting engine was reloaded</source>
 <translation>স্ক্রিপ্টিং ইঞ্জিন পুনরায় লোড হয়েছে</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9381"/>
+<location filename="../mainwindow.cpp" line="8962"/>
 <source>HTML files</source>
 <translation>এইচটিএমল ফাইলগুলো</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9725"/>
+<location filename="../mainwindow.cpp" line="9292"/>
 <source>Jump to the note's subfolder</source>
 <translation>নোটের সাবফোল্ডারে ঝাঁপুন
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9785"/>
+<location filename="../mainwindow.cpp" line="9348"/>
 <source>Open selected notes in tabs</source>
 <translation type="unfinished">Open selected notes in tabs</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11316"/>
+<location filename="../mainwindow.cpp" line="10826"/>
 <source>A script update was found!</source>
 <translation>একটি স্ক্রিপ্ট আপডেট পাওয়া গেল!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11322"/>
+<location filename="../mainwindow.cpp" line="10831"/>
 <source>Script updates</source>
 <translation>স্ক্রিপ্ট আপডেট</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11323"/>
+<location filename="../mainwindow.cpp" line="10832"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>আপনার স্ক্রিপ্টগুলির আপডেটগুলি স্ক্রিপ্টের ভাণ্ডারে পাওয়া গিয়েছিল! আপনি কি সেগুলি আপডেট করতে চান?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11338"/>
+<location filename="../mainwindow.cpp" line="10847"/>
 <source>No script updates were found</source>
 <translation>কোনও স্ক্রিপ্ট আপডেট পাওয়া যায় নি</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12006"/>
+<location filename="../mainwindow.cpp" line="11481"/>
 <source>Toggle note stickiness</source>
 <translation>টগল নোট আঠালোতা</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12012"/>
+<location filename="../mainwindow.cpp" line="11486"/>
 <source>Close other note tabs</source>
 <translation>অন্যান্য নোট ট্যাবগুলি বন্ধ করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9668"/>
-<location filename="../mainwindow.cpp" line="9868"/>
+<location filename="../mainwindow.cpp" line="9240"/>
+<location filename="../mainwindow.cpp" line="9426"/>
 <source>Rename note</source>
 <translation>নোট পুনরায় নামকরণ করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7625"/>
+<location filename="../mainwindow.cpp" line="7289"/>
 <source>Show all notes (%1)</source>
 <translation type="unfinished">Show all notes (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7786"/>
+<location filename="../mainwindow.cpp" line="7436"/>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9670"/>
+<location filename="../mainwindow.cpp" line="9242"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>আপনাকে নোট ফাইল পুনঃনামকরণ করার অনুমতি দেয়</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9684"/>
+<location filename="../mainwindow.cpp" line="9256"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;এতে নোটগুলি সরান…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9685"/>
+<location filename="../mainwindow.cpp" line="9257"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;এতে নোটগুলি অনুলিপি করুন…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9729"/>
+<location filename="../mainwindow.cpp" line="9295"/>
 <source>Move notes to subfolder…</source>
 <translation>নোটগুলি সাবফোল্ডারে সরান…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9733"/>
+<location filename="../mainwindow.cpp" line="9298"/>
 <source>Copy notes to subfolder…</source>
 <translation>সাবফোল্ডারে নোটগুলি অনুলিপি করুন…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9741"/>
+<location filename="../mainwindow.cpp" line="9306"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;এর সাথে নির্বাচিত নোটগুলি ট্যাগ করুন…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9765"/>
+<location filename="../mainwindow.cpp" line="9328"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;নির্বাচিত নোটগুলি থেকে ট্যাগ সরান…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9868"/>
+<location filename="../mainwindow.cpp" line="9426"/>
 <source>Name:</source>
 <translation>নাম:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9880"/>
+<location filename="../mainwindow.cpp" line="9437"/>
 <source>Note renaming not enabled!</source>
 <translation>নোটের নাম পরিবর্তন সক্রিয় নয়!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10553"/>
+<location filename="../mainwindow.cpp" line="10070"/>
 <source>Create new workspace</source>
 <translation>একটি নতুন কর্মক্ষেত্র তৈরি করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10554"/>
-<location filename="../mainwindow.cpp" line="10825"/>
+<location filename="../mainwindow.cpp" line="10070"/>
+<location filename="../mainwindow.cpp" line="10331"/>
 <source>Workspace name:</source>
 <translation>কর্মক্ষেত্রের নাম:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10674"/>
+<location filename="../mainwindow.cpp" line="10187"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>পূর্ণ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10681"/>
+<location filename="../mainwindow.cpp" line="10194"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>সংক্ষিপ্ত</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10784"/>
+<location filename="../mainwindow.cpp" line="10294"/>
 <source>Remove the current workspace?</source>
 <translation>বর্তমান কাজস্থান বাতিল করবেন?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10824"/>
+<location filename="../mainwindow.cpp" line="10331"/>
 <source>Rename workspace</source>
 <translation>কর্মক্ষেত্রের নামকরণ করুন</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10982"/>
+<location filename="../mainwindow.cpp" line="10484"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3559,42 +3559,52 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11255"/>
+<location filename="../mainwindow.cpp" line="10747"/>
 <source>Disallow all note editing</source>
 <translation>সমস্ত নোট সম্পাদনা বাতিল করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11487"/>
+<location filename="../mainwindow.cpp" line="10765"/>
+<source>Note editing disabled</source>
+<translation type="unfinished">Note editing disabled</translation>
+</message>
+<message>
+<location filename="../mainwindow.cpp" line="10766"/>
+<source>Note editing is currently disabled, do you want to allow it again?</source>
+<translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+</message>
+<message>
+<location filename="../mainwindow.cpp" line="10991"/>
 <source>Select text files to import</source>
 <translation>আমদানি করার জন্য পাঠ্য ফাইলগুলি নির্বাচন করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11517"/>
+<location filename="../mainwindow.cpp" line="11020"/>
 <source>Importing: %1</source>
 <translation>আমদানি করা হচ্ছে: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11582"/>
+<location filename="../mainwindow.cpp" line="11082"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>নোট শিরোনাম '%1' ক্লিপবোর্ডে অনুলিপি করা হয়েছিল</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11676"/>
+<location filename="../mainwindow.cpp" line="11168"/>
 <source>Leave full-screen mode</source>
 <translation>পূর্ণ-স্ক্রিন মোড ছেড়ে দিন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11862"/>
+<location filename="../mainwindow.cpp" line="11343"/>
 <source>Custom editor width</source>
 <translation>কাস্টম সম্পাদক প্রস্থ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11862"/>
+<location filename="../mainwindow.cpp" line="11343"/>
 <source>Characters:</source>
 <translation>চরিত্র:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8273"/>
+<location filename="../mainwindow.cpp" line="7907"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n নোট নির্বাচন করা হয়েছে</numerusform>
@@ -3603,7 +3613,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2451"/>
-<location filename="../mainwindow.cpp" line="11256"/>
+<location filename="../mainwindow.cpp" line="10748"/>
 <source>Allow all note editing</source>
 <translation>সমস্ত নোট সম্পাদনা করার অনুমতি দিন</translation>
 </message>
@@ -3613,12 +3623,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>&amp;ট্যাগ করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5017"/>
+<location filename="../mainwindow.cpp" line="4792"/>
 <source>Remove tag from selected notes</source>
 <translation>নির্বাচিত নোট থেকে ট্যাগ অপসারণ করুন</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5018"/>
+<location filename="../mainwindow.cpp" line="4793"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>ট্যাগ &lt;strong&gt;%1&lt;/strong&gt; %n থেকে নির্বাচিত note(s) অপসারণ করা হবে?</numerusform>
@@ -3626,7 +3636,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5078"/>
+<location filename="../mainwindow.cpp" line="4850"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>%n note(s) থেকে &lt;strong&gt;%1&lt;/strong&gt; ট্যাগ অপসারণ করা হয়েছে</numerusform>
@@ -3634,120 +3644,120 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5123"/>
+<location filename="../mainwindow.cpp" line="4893"/>
 <source>Current notes folder: </source>
 <translation>বর্তমান নোট ফোল্ডার: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5126"/>
+<location filename="../mainwindow.cpp" line="4894"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>নোট ফোল্ডার সেট করুন। বর্তমান নোট ফোল্ডার: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5332"/>
+<location filename="../mainwindow.cpp" line="5095"/>
 <source>Print note</source>
 <translation>নোট মুদ্রণ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5389"/>
+<location filename="../mainwindow.cpp" line="5146"/>
 <source>Letter</source>
 <translation>চিঠি</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5419"/>
+<location filename="../mainwindow.cpp" line="5172"/>
 <source>Portrait</source>
 <translation>ছবি</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5419"/>
+<location filename="../mainwindow.cpp" line="5172"/>
 <source>Landscape</source>
 <translation>প্রাকিতিক ভূ-দৃশ্য</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5424"/>
+<location filename="../mainwindow.cpp" line="5177"/>
 <source>Orientation</source>
 <translation>সভা</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5424"/>
+<location filename="../mainwindow.cpp" line="5177"/>
 <source>Orientation:</source>
 <translation>পরিচিতি:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5447"/>
+<location filename="../mainwindow.cpp" line="5197"/>
 <source>Export current note as PDF</source>
 <translation>পিডিএফ হিসাবে বর্তমান নোট রপ্তানি করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5546"/>
+<location filename="../mainwindow.cpp" line="5290"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>আপনার কোন todo তালিকা। নির্বাচিত না &lt; br / &gt; আপনার &lt;strong&gt;Todo&lt;/strong&gt; কনফিগারেশন সেটিংস চেক করুন!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6314"/>
+<location filename="../mainwindow.cpp" line="6033"/>
 <source>Open QOwnNotes</source>
 <translation>খোলা QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6142"/>
-<location filename="../mainwindow.cpp" line="6364"/>
-<location filename="../mainwindow.cpp" line="9664"/>
+<location filename="../mainwindow.cpp" line="5865"/>
+<location filename="../mainwindow.cpp" line="6083"/>
+<location filename="../mainwindow.cpp" line="9236"/>
 <source>New note</source>
 <translation>&amp;নতুন নোট</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6381"/>
+<location filename="../mainwindow.cpp" line="6098"/>
 <source>Recent notes</source>
 <translation>সাম্প্রতিক টীকা</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6397"/>
+<location filename="../mainwindow.cpp" line="6114"/>
 <source>Show todo lists</source>
 <translation>Todo তালিকা প্রদর্শন করা হবে</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6409"/>
+<location filename="../mainwindow.cpp" line="6124"/>
 <source>Recent tasks</source>
 <translation>সাম্প্রতিক কার্যাবলী</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6430"/>
+<location filename="../mainwindow.cpp" line="6144"/>
 <source>Quit</source>
 <translation>বন্ধ করুন</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
-<location filename="../mainwindow.cpp" line="824"/>
-<location filename="../mainwindow.cpp" line="2200"/>
+<location filename="../mainwindow.cpp" line="789"/>
+<location filename="../mainwindow.cpp" line="2095"/>
 <source>Note folder</source>
 <translation>নোট ফোল্ডার</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8945"/>
-<location filename="../mainwindow.cpp" line="9012"/>
+<location filename="../mainwindow.cpp" line="8550"/>
+<location filename="../mainwindow.cpp" line="8609"/>
 <source>Copy to note folder</source>
 <translation>নোট ফোল্ডারে কপি করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8945"/>
-<location filename="../mainwindow.cpp" line="9013"/>
+<location filename="../mainwindow.cpp" line="8550"/>
+<location filename="../mainwindow.cpp" line="8609"/>
 <source>Move to note folder</source>
 <translation>নোট ফোল্ডারে যান</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8946"/>
-<location filename="../mainwindow.cpp" line="9014"/>
+<location filename="../mainwindow.cpp" line="8551"/>
+<location filename="../mainwindow.cpp" line="8610"/>
 <source>Copy to this subfolder</source>
 <translation>এই সাব-ফোল্ডার অনুলিপি করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8947"/>
-<location filename="../mainwindow.cpp" line="9015"/>
+<location filename="../mainwindow.cpp" line="8551"/>
+<location filename="../mainwindow.cpp" line="8610"/>
 <source>Move to this subfolder</source>
 <translation>এই সাব-ফোল্ডারে যান</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9059"/>
+<location filename="../mainwindow.cpp" line="8652"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>সাব-ফোল্ডার &lt;strong&gt;%2&lt;/strong&gt; কাছে %n নির্বাচিত note(s) চলে?</numerusform>
@@ -3755,13 +3765,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5224"/>
-<location filename="../mainwindow.cpp" line="11501"/>
+<location filename="../mainwindow.cpp" line="4992"/>
+<location filename="../mainwindow.cpp" line="11005"/>
 <source>Cancel</source>
 <translation>বাতিল</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9155"/>
+<location filename="../mainwindow.cpp" line="8745"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n note(s) সাবফোল্ডার '%2 ' উল্লেখ্য, সরিয়ে নেওয়া হয়েছে</numerusform>
@@ -3769,7 +3779,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9179"/>
+<location filename="../mainwindow.cpp" line="8764"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>সাবফোলার &lt;strong&gt;%2&lt;/strong&gt; নোটে(গুলো)%n টি নির্বাচিত নোটগুলির অনুলিপি করুন?</numerusform>
@@ -3777,7 +3787,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9254"/>
+<location filename="../mainwindow.cpp" line="8836"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n নোট(গুলো) নোট সাবফোল্ডার "%2" এ অনুলিপি করা হয়েছে</numerusform>
@@ -3785,103 +3795,103 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9792"/>
+<location filename="../mainwindow.cpp" line="9354"/>
 <source>Open note in external editor</source>
 <translation>বহিরাগত সম্পাদকের নোট খুলুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9796"/>
+<location filename="../mainwindow.cpp" line="9356"/>
 <source>Show note in file manager</source>
 <translation>ফাইল ম্যানেজার মধ্যে নোট দেখান</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9881"/>
+<location filename="../mainwindow.cpp" line="9438"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>যদি আপনি আপনার নোটগুলির নাম পরিবর্তন করতে চান, তবে আপনাকে একটি বিকল্প সক্ষম করতে হবে যা নোট ফাইলের নামের শিরোনাম থেকে আলাদা হতে সক্ষম হবে।</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10071"/>
+<location filename="../mainwindow.cpp" line="9613"/>
 <source>Create a new folder</source>
 <translation>একটি নতুন ফোল্ডার তৈরি করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10072"/>
+<location filename="../mainwindow.cpp" line="9613"/>
 <source>Folder name:</source>
 <translation>ফোল্ডারের নাম:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7659"/>
+<location filename="../mainwindow.cpp" line="7317"/>
 <source>show all untagged notes (%1)</source>
 <translation>সব ট্যাগমুক্ত নোট দেখান (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7661"/>
+<location filename="../mainwindow.cpp" line="7319"/>
 <source>Untagged notes</source>
 <translation>ট্যাগমুক্ত নোটগুলো</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9382"/>
+<location filename="../mainwindow.cpp" line="8963"/>
 <source>Export current note as HTML file</source>
 <translation>এইচটিএমএল হিসাবে বর্তমান নোট রপ্তানি করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5398"/>
+<location filename="../mainwindow.cpp" line="5154"/>
 <source>Page size</source>
 <translation>পৃষ্ঠা আকার</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1201"/>
+<location filename="../mainwindow.cpp" line="1143"/>
 <source>quit toolbar</source>
 <translation>টুলবার বন্ধ করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5398"/>
+<location filename="../mainwindow.cpp" line="5154"/>
 <source>Page size:</source>
 <translation>পৃষ্ঠা আকার:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5507"/>
+<location filename="../mainwindow.cpp" line="5254"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes বেনামী ব্যবহারের ডেটা রেকর্ড করবে যা QOwnNotes এর কোন অংশগুলি উন্নত করতে এবং ত্রুটির সন্ধান ও সংশোধন করতে সহায়তা করে। আপনি সেটিংসে এই আচরণটি অক্ষম করতে পারেন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5511"/>
+<location filename="../mainwindow.cpp" line="5258"/>
 <source>&amp;Ok</source>
 <translation>&amp;ঠিক আছে</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9674"/>
+<location filename="../mainwindow.cpp" line="9246"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;নোটগুলো সরান</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1126"/>
+<location filename="../mainwindow.cpp" line="1070"/>
 <source>Your tasks are being loaded from your server</source>
 <translation>আপনার কর্মগুলি আপনার সার্ভার থেকে লোড করা হচ্ছে</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2882"/>
+<location filename="../mainwindow.cpp" line="2740"/>
 <source>Current note was modified externally</source>
 <translation>এই নোটটি বহির্বিশ্বে পরিবর্তিত হয়েছে</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2952"/>
-<location filename="../mainwindow.cpp" line="6080"/>
+<location filename="../mainwindow.cpp" line="2804"/>
+<location filename="../mainwindow.cpp" line="5805"/>
 <source>Stored current note to disk</source>
 <translation>বর্তমান নোট ডিস্কে সংরক্ষণ করা হয়েছে</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2975"/>
+<location filename="../mainwindow.cpp" line="2827"/>
 <source>Note was modified externally: %1</source>
 <translation>নোটগুলি বহিঃস্থ করা হয়েছে: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2997"/>
+<location filename="../mainwindow.cpp" line="2847"/>
 <source>Notes directory was modified externally</source>
 <translation>ডিরেক্টরি নোট বহির্বিশ্বে পরিবর্তিত হয়েছে</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3060"/>
+<location filename="../mainwindow.cpp" line="2910"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>%n নোট(গুলি) ডিস্কে সংরক্ষণ করা হয়েছে</numerusform>
@@ -3889,198 +3899,198 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7628"/>
+<location filename="../mainwindow.cpp" line="7292"/>
 <source>All notes</source>
 <translation>সমস্ত নোট</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8548"/>
+<location filename="../mainwindow.cpp" line="8169"/>
 <source>&amp;Add tag</source>
 <translation>&amp;ট্যাগ যুক্ত করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8596"/>
+<location filename="../mainwindow.cpp" line="8217"/>
 <source>Tag could not be created!</source>
 <translation>ট্যাগ তৈরি করা যায়নি!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8775"/>
+<location filename="../mainwindow.cpp" line="8394"/>
 <source>Move to this tag</source>
 <translation>এই ট্যাগ সরান</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8810"/>
+<location filename="../mainwindow.cpp" line="8428"/>
 <source>Tag this</source>
 <translation>এটা ট্যাগ করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8835"/>
+<location filename="../mainwindow.cpp" line="8451"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>এই ট্যাগটিতে ট্যাগ '%1' সরানো যাবে না</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8884"/>
+<location filename="../mainwindow.cpp" line="8494"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>ট্যাগ '%1' নতুন ট্যাগে সরান</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8559"/>
+<location filename="../mainwindow.cpp" line="8180"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;ট্যাগ সরান</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5545"/>
+<location filename="../mainwindow.cpp" line="5289"/>
 <source>No selected todo lists!</source>
 <translation>কোনও টুডু তালিকা নির্বাচন করা হয়নি!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="629"/>
+<location filename="../mainwindow.cpp" line="600"/>
 <source>Action not found!</source>
 <translation type="unfinished">Action not found!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="630"/>
+<location filename="../mainwindow.cpp" line="601"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
 <translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="793"/>
+<location filename="../mainwindow.cpp" line="762"/>
 <source>Subfolders</source>
 <translation>সাবফোল্ডার</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="805"/>
+<location filename="../mainwindow.cpp" line="771"/>
 <source>Tags</source>
 <translation>ট্যাগ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="814"/>
+<location filename="../mainwindow.cpp" line="780"/>
 <source>Note search</source>
 <translation>নোট সন্ধান করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="843"/>
+<location filename="../mainwindow.cpp" line="807"/>
 <source>Note list</source>
 <translation>নোট তালিকা</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="868"/>
+<location filename="../mainwindow.cpp" line="828"/>
 <source>Note edit</source>
 <translation>উল্লেখ্য সম্পাদনা</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="880"/>
+<location filename="../mainwindow.cpp" line="838"/>
 <source>Note tags</source>
 <translation>ট্যাগ দ্রষ্টব্য</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="891"/>
+<location filename="../mainwindow.cpp" line="848"/>
 <source>Note preview</source>
 <translation>উল্লেখ্য প্রাকদর্শন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="899"/>
+<location filename="../mainwindow.cpp" line="854"/>
 <source>Log</source>
 <translation>লগ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="908"/>
+<location filename="../mainwindow.cpp" line="863"/>
 <source>Scripting</source>
 <translation>স্ক্রিপ্টিং</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1168"/>
+<location filename="../mainwindow.cpp" line="1110"/>
 <source>formatting toolbar</source>
 <translation>টুলবারের বিন্যাস</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1177"/>
+<location filename="../mainwindow.cpp" line="1119"/>
 <source>inserting toolbar</source>
 <translation>টুলবার ঢোকানো হচ্ছে।</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1184"/>
+<location filename="../mainwindow.cpp" line="1126"/>
 <source>encryption toolbar</source>
 <translation>এনক্রিপশন টুলবার</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1191"/>
+<location filename="../mainwindow.cpp" line="1133"/>
 <source>window toolbar</source>
 <translation>উইন্ডো টুলবার</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1196"/>
+<location filename="../mainwindow.cpp" line="1138"/>
 <source>custom action toolbar</source>
 <translation>নিজস্ব ক্রিয়া টুলবার</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1216"/>
+<location filename="../mainwindow.cpp" line="1158"/>
 <source>Workspace selector</source>
 <translation>টেবিলটা নির্বাচক</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1366"/>
+<location filename="../mainwindow.cpp" line="1304"/>
 <source>Show %1 panel</source>
 <translation>%1 প্যানেল প্রদর্শন করা হবে</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1411"/>
+<location filename="../mainwindow.cpp" line="1347"/>
 <source>Show %1</source>
 <translation>%1 প্রদর্শন করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1769"/>
+<location filename="../mainwindow.cpp" line="1688"/>
 <source>Leave distraction free mode</source>
 <translation>বিক্ষিপ্ত ফ্রি মোড ছেড়ে দিন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1959"/>
+<location filename="../mainwindow.cpp" line="1865"/>
 <source>Switch to note folder</source>
 <translation>নোট ফোল্ডারে স্যুইচ করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2551"/>
+<location filename="../mainwindow.cpp" line="2432"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>নাম না করেই টুলবার লোড করা যায়নি</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2905"/>
+<location filename="../mainwindow.cpp" line="2761"/>
 <source>Overwriting external changes of: %1</source>
 <translation>বহিস্থিত পরিবর্তন মুছে-%1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2917"/>
+<location filename="../mainwindow.cpp" line="2773"/>
 <source>Loading external changes from: %1</source>
 <translation>লোড করা হচ্ছে বাহ্যিক পরিবর্তন থেকে: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2953"/>
-<location filename="../mainwindow.cpp" line="6081"/>
+<location filename="../mainwindow.cpp" line="2805"/>
+<location filename="../mainwindow.cpp" line="5806"/>
 <source>Current note could not be stored to disk</source>
 <translation>বর্তমান নোট সংরক্ষণ করতে পারে না ডিস্ক</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3144"/>
+<location filename="../mainwindow.cpp" line="2991"/>
 <source>Read-only</source>
 <translation>শুধুমাত্র পাঠযোগ্য</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3146"/>
+<location filename="../mainwindow.cpp" line="2993"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>নোট সম্পাদনা অক্ষম করা হয়েছে, সক্ষম করতে ক্লিক করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3163"/>
+<location filename="../mainwindow.cpp" line="3008"/>
 <source>Line numbers</source>
 <translation>লাইন সংখ্যা</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3173"/>
+<location filename="../mainwindow.cpp" line="3018"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>যা পরিবর্তিত হয়েছে, দেখার জন্য এবং সর্বশেষ সংস্করণে হালনাগাদ করতে পারবেন এখানে ক্লিক করুন</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3539"/>
+<location filename="../mainwindow.cpp" line="3367"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>আপনার ownCloud সিঙ্ক প্রক্রিয়াটিকে অবরুদ্ধ করতে পারে এমন &lt;strong&gt;%n&lt;/strong&gt; বিবাদযুক্ত ডাটাবেস অনুলিপি স্বয়ংক্রিয়ভাবে মোছার সাথে এগিয়ে যান?</numerusform>
@@ -4088,7 +4098,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5001"/>
+<location filename="../mainwindow.cpp" line="4778"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n note(s) '%2' দিয়ে ট্যাগ করা হয়েছে</numerusform>
@@ -4096,7 +4106,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5771"/>
+<location filename="../mainwindow.cpp" line="5507"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%1&lt;/strong&gt; এর উপস্থিতি &lt;strong&gt;%n&lt;/strong&gt; পাওয়া গেছে</numerusform>
@@ -4104,61 +4114,61 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6142"/>
+<location filename="../mainwindow.cpp" line="5865"/>
 <source>Note headline</source>
 <translation>উল্লেখ্য শিরোনাম</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7305"/>
+<location filename="../mainwindow.cpp" line="6979"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation type="unfinished">Paste &amp;HTML as markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7306"/>
+<location filename="../mainwindow.cpp" line="6980"/>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7361"/>
+<location filename="../mainwindow.cpp" line="7035"/>
 <source>Downloading images finished</source>
 <translation>চিত্র ডাউনলোড করা শেষ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5511"/>
-<location filename="../mainwindow.cpp" line="5526"/>
-<location filename="../mainwindow.cpp" line="5549"/>
-<location filename="../mainwindow.cpp" line="9884"/>
+<location filename="../mainwindow.cpp" line="5258"/>
+<location filename="../mainwindow.cpp" line="5273"/>
+<location filename="../mainwindow.cpp" line="5293"/>
+<location filename="../mainwindow.cpp" line="9441"/>
 <source>Open &amp;settings</source>
 <translation>খোলা &amp;সেটিংস</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1766"/>
-<location filename="../mainwindow.cpp" line="11653"/>
+<location filename="../mainwindow.cpp" line="1686"/>
+<location filename="../mainwindow.cpp" line="11145"/>
 <source>leave</source>
 <translation>ছুটি</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6799"/>
+<location filename="../mainwindow.cpp" line="6494"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>অনুগ্রহ করে নোট। সঙ্কেতায়িত করতে &lt;strong&gt;গুপ্ত-সংকেত&lt;/strong&gt; প্রবেশ করান &lt; বিআর / &gt; তোমাদের &lt;strong&gt;স্মরণ&lt;/strong&gt; করতে নোট লেখা পড়ার জন্য আপনার গুপ্ত-সংকেত নেই। মনে রাখবেন &lt; br / &gt; আর আপনি পারেন &lt;strong&gt;শুধু&lt;/strong&gt; যে &lt;strong&gt;QOwnNotes আছে&lt;/strong&gt; কি!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6872"/>
+<location filename="../mainwindow.cpp" line="6565"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>নোট ডিক্রিপ্ট করুন এবং তা সরল পাঠ হিসেবে সংরক্ষণ করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6877"/>
+<location filename="../mainwindow.cpp" line="6570"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;ডিক্রিপ্ট করুন</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6902"/>
+<location filename="../mainwindow.cpp" line="6594"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br /&gt; আপনার এনক্রিপ্ট করা চিঠির সম্পাদনা করতে পারবেন।</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6971"/>
+<location filename="../mainwindow.cpp" line="6661"/>
 <source>Export current note as Markdown file</source>
 <translation>বর্তমান নোট Markdown ফাইল হিসেবে রপ্তানি করো</translation>
 </message>
@@ -4166,7 +4176,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>NavigationWidget</name>
 <message>
-<location filename="../widgets/navigationwidget.cpp" line="153"/>
+<location filename="../widgets/navigationwidget.cpp" line="139"/>
 <source>headline %1</source>
 <translation>%1 শিরোনাম</translation>
 </message>
@@ -4235,32 +4245,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>NotePreviewWidget</name>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="241"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="236"/>
 <source>Copy image file path</source>
 <translation>কপি ছবির ফাইলের পাথ</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="242"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="237"/>
 <source>Copy image to clipboard</source>
 <translation>চিত্রটি ক্লিপবোর্ডে অনুলিপি করুন</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="264"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="256"/>
 <source>Copy link location</source>
 <translation>লিংক অনুলিপি অবস্থান</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="268"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="259"/>
 <source>Export generated raw HTML</source>
 <translation>রপ্তানি উত্পন্ন কাঁচা এইচটিএমএল</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="343"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="328"/>
 <source>HTML files</source>
 <translation>এইচটিএমএল ফাইল</translation>
 </message>
 <message>
-<location filename="../widgets/notepreviewwidget.cpp" line="344"/>
+<location filename="../widgets/notepreviewwidget.cpp" line="330"/>
 <source>Export preview as raw HTML file</source>
 <comment>"Raw" means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)</comment>
 <translation>কাঁচা এইচটিএমএল ফাইল হিসাবে পূর্বরূপ রফতানি করুন</translation>
@@ -4269,53 +4279,53 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="140"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="130"/>
 <source>show notes in folder '%1' (%2)</source>
 <translation type="unfinished">show notes in folder '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="178"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="165"/>
 <source>All notes</source>
 <translation type="unfinished">All notes</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="175"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="163"/>
 <source>Show notes from all note subfolders (%1)</source>
 <translation type="unfinished">Show notes from all note subfolders (%1)</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="198"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="183"/>
 <source>Show notes in note root folder (%1)</source>
 <translation type="unfinished">Show notes in note root folder (%1)</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="210"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="191"/>
 <source>Note folder</source>
 <translation type="unfinished">Note folder</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="294"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="268"/>
 <source>New subfolder</source>
 <translation type="unfinished">New subfolder</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="303"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="276"/>
 <source>Rename subfolder</source>
 <translation type="unfinished">Rename subfolder</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="310"/>
-<location filename="../widgets/notesubfoldertree.cpp" line="369"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="283"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="339"/>
 <source>Remove selected folders</source>
 <translation type="unfinished">Remove selected folders</translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="318"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="290"/>
 <source>Show folder in file manager</source>
 <translation type="unfinished">Show folder in file manager</translation>
 </message>
 <message numerus="yes">
-<location filename="../widgets/notesubfoldertree.cpp" line="370"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="340"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation type="unfinished">
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
@@ -4323,7 +4333,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../widgets/notesubfoldertree.cpp" line="381"/>
+<location filename="../widgets/notesubfoldertree.cpp" line="352"/>
 <source>Removed note subfolder: %1</source>
 <translation type="unfinished">Removed note subfolder: %1</translation>
 </message>
@@ -4331,160 +4341,160 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>OwnCloudService</name>
 <message>
-<location filename="../services/owncloudservice.cpp" line="243"/>
+<location filename="../services/owncloudservice.cpp" line="214"/>
 <source>incorrect</source>
 <translation type="unfinished">incorrect</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="245"/>
-<location filename="../services/owncloudservice.cpp" line="545"/>
+<location filename="../services/owncloudservice.cpp" line="215"/>
+<location filename="../services/owncloudservice.cpp" line="483"/>
 <source>not connected</source>
 <translation type="unfinished">not connected</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="260"/>
+<location filename="../services/owncloudservice.cpp" line="228"/>
 <source>Username / password error</source>
 <translation>ব্যবহারকারীর নাম / পাসওয়ার্ড ত্রুটি</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="261"/>
+<location filename="../services/owncloudservice.cpp" line="229"/>
 <source>Your calendar username or password is incorrect!</source>
 <translation>আপনার ক্যালেন্ডার ব্যবহারকারী নাম বা পাসওয়ার্ড ভুল!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="321"/>
-<location filename="../services/owncloudservice.cpp" line="323"/>
-<location filename="../services/owncloudservice.cpp" line="333"/>
-<location filename="../services/owncloudservice.cpp" line="335"/>
-<location filename="../services/owncloudservice.cpp" line="438"/>
-<location filename="../services/owncloudservice.cpp" line="495"/>
-<location filename="../services/owncloudservice.cpp" line="510"/>
-<location filename="../services/owncloudservice.cpp" line="518"/>
-<location filename="../services/owncloudservice.cpp" line="536"/>
+<location filename="../services/owncloudservice.cpp" line="289"/>
+<location filename="../services/owncloudservice.cpp" line="290"/>
+<location filename="../services/owncloudservice.cpp" line="298"/>
+<location filename="../services/owncloudservice.cpp" line="299"/>
+<location filename="../services/owncloudservice.cpp" line="398"/>
+<location filename="../services/owncloudservice.cpp" line="445"/>
+<location filename="../services/owncloudservice.cpp" line="456"/>
+<location filename="../services/owncloudservice.cpp" line="462"/>
+<location filename="../services/owncloudservice.cpp" line="476"/>
 <source>ok</source>
 <translation type="unfinished">ok</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="326"/>
+<location filename="../services/owncloudservice.cpp" line="292"/>
 <source>not correct</source>
 <translation type="unfinished">not correct</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="339"/>
+<location filename="../services/owncloudservice.cpp" line="301"/>
 <source>not detected</source>
 <translation type="unfinished">not detected</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="441"/>
-<location filename="../services/owncloudservice.cpp" line="539"/>
+<location filename="../services/owncloudservice.cpp" line="400"/>
+<location filename="../services/owncloudservice.cpp" line="478"/>
 <source>not found</source>
 <translation type="unfinished">not found</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="481"/>
-<location filename="../services/owncloudservice.cpp" line="483"/>
+<location filename="../services/owncloudservice.cpp" line="434"/>
+<location filename="../services/owncloudservice.cpp" line="435"/>
 <source>unknown</source>
 <translation type="unfinished">unknown</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="492"/>
+<location filename="../services/owncloudservice.cpp" line="442"/>
 <source>version %1 too low</source>
 <translation type="unfinished">version %1 too low</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="513"/>
-<location filename="../services/owncloudservice.cpp" line="521"/>
+<location filename="../services/owncloudservice.cpp" line="458"/>
+<location filename="../services/owncloudservice.cpp" line="464"/>
 <source>not enabled</source>
 <translation type="unfinished">not enabled</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="595"/>
+<location filename="../services/owncloudservice.cpp" line="528"/>
 <source>API app version too low</source>
 <translation>API অ্যাপ্লিকেশন সংস্করণ খুব কম</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="596"/>
+<location filename="../services/owncloudservice.cpp" line="529"/>
 <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
 <translation>আপনার সার্ভারে আপনার QOwnNotesAPI অ্যাপ্লিকেশন আপডেট করার বিবেচনা করুন, আপনার অ্যাপ্লিকেশন সংস্করণ %1 অত্যন্ত কম এবং QOwnNotes এ সমস্যা সৃষ্টি করতে পারে।</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1214"/>
+<location filename="../services/owncloudservice.cpp" line="1108"/>
 <source>ownCloud server connection error</source>
 <translation>নিজস্ব ক্লাউড সার্ভার সংযোগ ত্রুটি</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1219"/>
+<location filename="../services/owncloudservice.cpp" line="1112"/>
 <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
 <translation>নিজস্ব সার্ভার ত্রুটি: &lt;strong&gt;%1&lt;/ strong&gt;&lt;br /&gt; আপনার নিজস্ব ক্লাউড কনফিগারেশনটি পরীক্ষা করুন।</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1239"/>
+<location filename="../services/owncloudservice.cpp" line="1131"/>
 <source>You need to setup your ownCloud server!</source>
 <translation>আপনার নিজের ক্লাউড সার্ভার আপনার সেটআপ করা প্রয়োজন!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1251"/>
+<location filename="../services/owncloudservice.cpp" line="1142"/>
 <source>Open &amp;settings</source>
 <translation>ওপেন সেটিংস</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1251"/>
+<location filename="../services/owncloudservice.cpp" line="1142"/>
 <source>&amp;Cancel</source>
 <translation>&amp; বাতিল</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1310"/>
+<location filename="../services/owncloudservice.cpp" line="1199"/>
 <source>Done with loading note versions</source>
 <translation>নোট সংস্করণ লোড সঙ্গে সম্পন্ন</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1355"/>
+<location filename="../services/owncloudservice.cpp" line="1236"/>
 <source>No versions found</source>
 <translation>কোন সংস্করণ পাওয়া যায় নি</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1356"/>
+<location filename="../services/owncloudservice.cpp" line="1237"/>
 <source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>এই নোটের কোন সংস্করণ নেই বা সার্ভারে নোট পাওয়া যায়নি.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1376"/>
+<location filename="../services/owncloudservice.cpp" line="1257"/>
 <source>Done with loading trashed notes</source>
 <translation>ট্র্যাশ করা নোটগুলি লোড করা সম্পন্ন</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1421"/>
+<location filename="../services/owncloudservice.cpp" line="1297"/>
 <source>No trashed notes</source>
 <translation>কোনও ট্র্যাশ করা নোট নেই</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1422"/>
+<location filename="../services/owncloudservice.cpp" line="1298"/>
 <source>No trashed notes were found on the server.</source>
 <translation>সার্ভারে কোনও ট্র্যাশ নোট পাওয়া যায়নি.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1444"/>
-<location filename="../services/owncloudservice.cpp" line="1471"/>
+<location filename="../services/owncloudservice.cpp" line="1320"/>
+<location filename="../services/owncloudservice.cpp" line="1345"/>
 <source>Error while loading todo lists!</source>
 <translation>টোড তালিকা লোড করার সময় ত্রুটি!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1445"/>
+<location filename="../services/owncloudservice.cpp" line="1321"/>
 <source>Your CalDAV server didn't reply anything!</source>
 <translation>আপনার CalDAV সার্ভার কিছু উত্তর করেনি!</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="1472"/>
+<location filename="../services/owncloudservice.cpp" line="1346"/>
 <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>আপনার CalDAV সার্ভার থেকে ত্রুটি বার্তা: &lt;strong&gt;% 1 &lt;/ strong&gt;</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2169"/>
+<location filename="../services/owncloudservice.cpp" line="2024"/>
 <source>No bookmarks</source>
 <translation>কোনও বুকমার্ক নেই</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2170"/>
+<location filename="../services/owncloudservice.cpp" line="2025"/>
 <source>No bookmarks were found on the server.</source>
 <translation>সার্ভারে কোনও বুকমার্ক পাওয়া যায় নি।.</translation>
 </message>
@@ -4533,42 +4543,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>QObject</name>
 <message>
-<location filename="../entities/notefolder.cpp" line="470"/>
+<location filename="../entities/notefolder.cpp" line="444"/>
 <source>default</source>
 <translation>ডিফল্ট</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1441"/>
+<location filename="../entities/note.cpp" line="1376"/>
 <source>Could not store note file: %1 - Error message: %2</source>
 <translation>নোট ফাইল সংরক্ষণ করা যায়নি:% 1 - ত্রুটি বার্তা:% 2</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1522"/>
+<location filename="../entities/note.cpp" line="1455"/>
 <source>Renamed note-file was removed: %1</source>
 <translation>পুনঃনামকরণ নোট ফাইল সরানো হয়েছে:% 1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1526"/>
+<location filename="../entities/note.cpp" line="1458"/>
 <source>Could not remove renamed note-file: %1 - Error message: %2</source>
 <translation>পুনঃনামকরণের নাম-ফাইলটি সরানো যায়নি:% 1 - ত্রুটি বার্তা:% 2</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="1670"/>
+<location filename="../entities/note.cpp" line="1600"/>
 <source>Note</source>
 <translation>নোট</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="2796"/>
+<location filename="../entities/note.cpp" line="2676"/>
 <source>Could not read image file: %1</source>
 <translation>চিত্র ফাইলটি পড়তে পারিনি:% 1</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3454"/>
+<location filename="../entities/note.cpp" line="3305"/>
 <source>Note file path changed</source>
 <translation>নোট ফাইলের পথ পরিবর্তন হয়েছে</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3455"/>
+<location filename="../entities/note.cpp" line="3306"/>
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>নোটের পথের একটি পরিবর্তন সনাক্ত হয়েছে। আপনি কি &lt;strong&gt;%2&lt;/strong&gt; এর সাথে &lt;strong&gt;%1&lt;/strong&gt; লিঙ্ক এবং ফাইল নাম &lt;strong&gt;%3&lt;/strong&gt; এর সাথে &lt;strong&gt;%4&lt;/ strong এর লিঙ্কগুলি প্রতিস্থাপন করতে চান? &gt; &lt;strong&gt;%n/ strong&gt; নোট ফাইল তে?</numerusform>
@@ -4576,17 +4586,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3600"/>
+<location filename="../entities/note.cpp" line="3436"/>
 <source>Image file exists</source>
 <translation type="unfinished">Image file exists</translation>
 </message>
 <message>
-<location filename="../entities/note.cpp" line="3601"/>
+<location filename="../entities/note.cpp" line="3437"/>
 <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
 <translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="4099"/>
+<location filename="../entities/note.cpp" line="3915"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>... এবং আরও %n টি নোট (গুলি)</numerusform>
@@ -4594,158 +4604,158 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../helpers/toolbarcontainer.cpp" line="41"/>
-<location filename="../helpers/toolbarcontainer.cpp" line="118"/>
+<location filename="../helpers/toolbarcontainer.cpp" line="40"/>
+<location filename="../helpers/toolbarcontainer.cpp" line="113"/>
 <source>Unknown action %1</source>
 <translation>অজানা ক্রিয়া% 1</translation>
 </message>
 <message>
-<location filename="../helpers/toolbarcontainer.cpp" line="100"/>
+<location filename="../helpers/toolbarcontainer.cpp" line="95"/>
 <source>Workspace selector</source>
 <translation>ওয়ার্কস্পেস নির্বাচক</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="350"/>
+<location filename="../utils/gui.cpp" line="339"/>
 <source>Don't ask again!</source>
 <translation>আবার জিজ্ঞাসা করবেন না!</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="351"/>
+<location filename="../utils/gui.cpp" line="340"/>
 <source>Don't show again!</source>
 <translation>আবার দেখাবেন না!</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1005"/>
+<location filename="../utils/gui.cpp" line="952"/>
 <source>Double-click to unstick note from tab</source>
 <translation>দুইবার ক্লিক করুন নোটের স্টিকিনেস ট্যাব থেকে বন্ধ করতে</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1006"/>
+<location filename="../utils/gui.cpp" line="953"/>
 <source>Double-click to stick note to tab</source>
 <translation>দুইবার ক্লিক করুন নোটকে ট্যাবের সাথে স্টিকি করতে</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1048"/>
+<location filename="../utils/gui.cpp" line="991"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
 <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1053"/>
+<location filename="../utils/gui.cpp" line="996"/>
 <source>&lt;br /&gt;path: %1</source>
 <translation type="unfinished">&lt;br /&gt;path: %1</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1081"/>
-<location filename="../utils/gui.cpp" line="1153"/>
+<location filename="../utils/gui.cpp" line="1024"/>
+<location filename="../utils/gui.cpp" line="1110"/>
 <source>Dark mode detected</source>
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1082"/>
+<location filename="../utils/gui.cpp" line="1025"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
 <translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1094"/>
-<location filename="../utils/gui.cpp" line="1166"/>
+<location filename="../utils/gui.cpp" line="1037"/>
+<location filename="../utils/gui.cpp" line="1123"/>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1095"/>
+<location filename="../utils/gui.cpp" line="1038"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
 <translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1154"/>
+<location filename="../utils/gui.cpp" line="1111"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
 <translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1167"/>
+<location filename="../utils/gui.cpp" line="1124"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
 <translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1249"/>
+<location filename="../utils/gui.cpp" line="1198"/>
 <source>Panel disabled</source>
 <translation type="unfinished">Panel disabled</translation>
 </message>
 <message>
-<location filename="../utils/gui.cpp" line="1250"/>
+<location filename="../utils/gui.cpp" line="1199"/>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
 <translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
 </message>
 <message>
-<location filename="../utils/git.cpp" line="79"/>
+<location filename="../utils/git.cpp" line="77"/>
 <source>Command failed!</source>
 <translation>কমান্ড ব্যর্থ!</translation>
 </message>
 <message>
-<location filename="../utils/git.cpp" line="80"/>
+<location filename="../utils/git.cpp" line="78"/>
 <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
 <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4322"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4014"/>
 <source>New connection</source>
 <translation>নতুন সংযোগ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4522"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4206"/>
 <source>Login flow succeeded</source>
 <translation type="unfinished">Login flow succeeded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4523"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4207"/>
 <source>Username and password were set successfully!</source>
 <translation type="unfinished">Username and password were set successfully!</translation>
 </message>
 <message>
-<location filename="../entities/cloudconnection.cpp" line="349"/>
+<location filename="../entities/cloudconnection.cpp" line="322"/>
 <source>Default</source>
 <translation>ডিফল্ট</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="274"/>
+<location filename="../main.cpp" line="252"/>
 <source>Note folder not found!</source>
 <translation>নোট ফোল্ডার পাওয়া যায় নি!</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="275"/>
+<location filename="../main.cpp" line="253"/>
 <source>Your note folder was not found any more! Do you want to select a new one?</source>
 <translation>আপনার নোট ফোল্ডার আর পাওয়া যায় নি! আপনি কি একটি নতুন নির্বাচন করতে চান?</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="282"/>
+<location filename="../main.cpp" line="259"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>আপনার নোটস যেখানে সংরক্ষণ করা হবে দয়া করে ফোল্ডার নির্বাচন করুন</translation>
 </message>
 <message>
-<location filename="../entities/notesubfolder.cpp" line="550"/>
-<location filename="../entities/notesubfolder.cpp" line="577"/>
+<location filename="../entities/notesubfolder.cpp" line="529"/>
+<location filename="../entities/notesubfolder.cpp" line="553"/>
 <source>Folder will be hidden!</source>
 <translation>ফোল্ডার লুকানো হবে!</translation>
 </message>
 <message>
-<location filename="../entities/notesubfolder.cpp" line="551"/>
+<location filename="../entities/notesubfolder.cpp" line="530"/>
 <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
 <translation>&lt;b&gt;%1&lt;/b&gt; নামের ফোল্ডার তৈরি করা সম্ভব না, কারণ অ্যাপ্লিকেশনের ভিতরে এই নামের ফাইল আছে!</translation>
 </message>
 <message>
-<location filename="../entities/notesubfolder.cpp" line="578"/>
+<location filename="../entities/notesubfolder.cpp" line="554"/>
 <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>&lt;b&gt;%1&lt;/b&gt; নামের ফোল্ডারটি তৈরি করা যায় না, কারণ এটি উপেক্ষিত সাবফোল্ডারদের তালিকায় রয়েছে! আপনি এটি &lt;i&gt; প্যানেল সেটিংস &lt;/ i&gt; এ পরিবর্তন করতে পারেন।
 </translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
-<location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="438"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="362"/>
 <source>File name changed</source>
 <translation type="unfinished">File name changed</translation>
 </message>
 <message numerus="yes">
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="439"/>
 <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
 <translation type="unfinished">
 <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
@@ -4753,7 +4763,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../dialogs/storedimagesdialog.cpp" line="376"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="363"/>
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
 <translation type="unfinished">
 <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
@@ -4761,59 +4771,59 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.cpp" line="29"/>
+<location filename="../dialogs/joplinimportdialog.cpp" line="30"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
 <translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2288"/>
-<location filename="../services/owncloudservice.cpp" line="2303"/>
+<location filename="../services/owncloudservice.cpp" line="2140"/>
+<location filename="../services/owncloudservice.cpp" line="2154"/>
 <source>Login flow failed</source>
 <translation type="unfinished">Login flow failed</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2289"/>
+<location filename="../services/owncloudservice.cpp" line="2141"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
 <translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
 </message>
 <message>
-<location filename="../services/owncloudservice.cpp" line="2304"/>
+<location filename="../services/owncloudservice.cpp" line="2155"/>
 <source>Could not parse login url!</source>
 <translation type="unfinished">Could not parse login url!</translation>
 </message>
 <message>
-<location filename="../utils/misc.cpp" line="948"/>
+<location filename="../utils/misc.cpp" line="903"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
 <translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="167"/>
-<location filename="../utils/urlhandler.cpp" line="188"/>
+<location filename="../utils/urlhandler.cpp" line="156"/>
+<location filename="../utils/urlhandler.cpp" line="180"/>
 <source>Note was not found</source>
 <translation type="unfinished">Note was not found</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="168"/>
+<location filename="../utils/urlhandler.cpp" line="157"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
 <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="178"/>
+<location filename="../utils/urlhandler.cpp" line="167"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="182"/>
+<location filename="../utils/urlhandler.cpp" line="172"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="227"/>
+<location filename="../utils/urlhandler.cpp" line="218"/>
 <source>Failed to create note</source>
 <translation type="unfinished">Failed to create note</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="228"/>
+<location filename="../utils/urlhandler.cpp" line="219"/>
 <source>Note creation failed</source>
 <translation type="unfinished">Note creation failed</translation>
 </message>
@@ -4821,120 +4831,110 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="96"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="105"/>
 <source>Increased font size to %1 pt</source>
 <translation type="unfinished">Increased font size to %1 pt</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="99"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="108"/>
 <source>Decreased font size to %1 pt</source>
 <translation type="unfinished">Decreased font size to %1 pt</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="546"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="528"/>
 <source>An url was opened at the current cursor position</source>
 <translation type="unfinished">An url was opened at the current cursor position</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="722"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="700"/>
 <source>No equation was found in front of the cursor</source>
 <translation type="unfinished">No equation was found in front of the cursor</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="742"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="721"/>
 <source>Result for equation: %1 = %2</source>
 <translation type="unfinished">Result for equation: %1 = %2</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="926"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="883"/>
 <source>&amp;Link selected text</source>
 <translation type="unfinished">&amp;Link selected text</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="926"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="883"/>
 <source>Insert &amp;link</source>
 <translation type="unfinished">Insert &amp;link</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="933"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="890"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
 <translation type="unfinished">Block &amp;quote selected text</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="936"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="893"/>
 <source>Insert block &amp;quote</source>
 <translation type="unfinished">Insert block &amp;quote</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="949"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="907"/>
 <source>Copy code block</source>
 <translation type="unfinished">Copy code block</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="976"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="934"/>
 <source>Print</source>
 <translation type="unfinished">Print</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="984"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="941"/>
 <source>Print selected text</source>
 <translation type="unfinished">Print selected text</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="996"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="953"/>
 <source>Print selected text (preview)</source>
 <translation type="unfinished">Print selected text (preview)</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1012"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="969"/>
 <source>Export</source>
 <translation type="unfinished">Export</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1025"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="979"/>
 <source>Export selected text as PDF</source>
 <translation type="unfinished">Export selected text as PDF</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1037"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="991"/>
 <source>Export selected text as PDF (preview)</source>
 <translation type="unfinished">Export selected text as PDF (preview)</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1069"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1023"/>
 <source>Custom actions</source>
 <translation type="unfinished">Custom actions</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1160"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1106"/>
 <source>No suggestions for %1</source>
 <translation>%1 এর জন্য কোনও পরামর্শ নেই</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1175"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1121"/>
 <source>Ignore</source>
 <translation>উপেক্ষা করা</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1178"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1123"/>
 <source>Add to Dictionary</source>
 <translation>অভিধানে যুক্ত করুন</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1188"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1133"/>
 <source>Spelling</source>
 <translation type="unfinished">Spelling</translation>
-</message>
-<message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1218"/>
-<source>Note editing disabled</source>
-<translation>নোট সম্পাদনা অক্ষম</translation>
-</message>
-<message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1219"/>
-<source>Note editing is currently disabled, do you want to allow it again?</source>
-<translation>নোট সম্পাদনা বর্তমানে অক্ষম করা হয়েছে, আপনি কি আবার অনুমতি দিতে চান?</translation>
 </message>
 </context>
 <context>
@@ -5106,40 +5106,40 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>QWidget</name>
 <message>
-<location filename="../services/databaseservice.cpp" line="107"/>
+<location filename="../services/databaseservice.cpp" line="104"/>
 <source>Cannot open memory database</source>
 <translation>স্মৃতি ডাটাবেস খোলা সম্ভব না</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="108"/>
+<location filename="../services/databaseservice.cpp" line="105"/>
 <source>Unable to establish a memory database connection.</source>
 <translation>স্মৃতি ডেটাবেস সংযোগ স্থাপন করতে অক্ষম।</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="124"/>
+<location filename="../services/databaseservice.cpp" line="120"/>
 <source>Cannot open disk database</source>
 <translation>স্মৃতি ডাটাবেস খোলা সম্ভব না</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="125"/>
-<location filename="../services/databaseservice.cpp" line="149"/>
+<location filename="../services/databaseservice.cpp" line="121"/>
+<location filename="../services/databaseservice.cpp" line="143"/>
 <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
 <translation>'% 1' ফাইলের সাথে ডাটাবেস সংযোগ স্থাপন করতে অক্ষম।
 ফোল্ডার এবং ফাইল লিখতে কি?</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="148"/>
+<location filename="../services/databaseservice.cpp" line="142"/>
 <source>Cannot open note folder database</source>
 <translation>নোট ফোল্ডার ডাটাবেস খুলতে পারবেন না</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="972"/>
+<location filename="../services/databaseservice.cpp" line="927"/>
 <source>Cannot open database</source>
 <translation>ডাটাবেস খুলতে পারে না</translation>
 </message>
 <message>
-<location filename="../services/databaseservice.cpp" line="973"/>
+<location filename="../services/databaseservice.cpp" line="928"/>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
 <translation>'%1' মার্জ করতে নোট ফোল্ডার ডাটাবেসের সাথে একটি ডেটাবেস সংযোগ স্থাপন করতে অক্ষম।
@@ -5165,14 +5165,14 @@ Are the folder and the file writeable?</source>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="426"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="407"/>
 <source>Installs the script</source>
 <translation>স্ক্রিপ্ট ইনস্টল</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="425"/>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="488"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="406"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="466"/>
 <source>Install</source>
 <translation>ইনস্টল করুন</translation>
 </message>
@@ -5212,104 +5212,104 @@ Are the folder and the file writeable?</source>
 <translation>স্ক্রিপ্ট খুঁজুন</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="52"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="51"/>
 <source>Script updates</source>
 <translation>স্ক্রিপ্ট আপডেট</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="53"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="52"/>
 <source>All scripts are up-to-date.</source>
 <translation>সমস্ত স্ক্রিপ্ট আপ টু ডেট.</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="395"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="379"/>
 <source>Authors</source>
 <translation>লেখক</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="395"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="379"/>
 <source>Author</source>
 <translation>লেখক</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="399"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="382"/>
 <source>Supported platforms</source>
 <translation>সমর্থিত প্ল্যাটফর্ম</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="400"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="382"/>
 <source>Supported platform</source>
 <translation>সমর্থিত প্ল্যাটফর্ম</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="404"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="385"/>
 <source>Open repository</source>
 <translation>খোলা সংগ্রহস্থল</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="414"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="395"/>
 <source>Update</source>
 <translation>হালনাগাদ</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="415"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="396"/>
 <source>Updates the script</source>
 <translation>স্ক্রিপ্ট আপডেট</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="417"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="398"/>
 <source>Reinstall</source>
 <translation>পুনরায় ইনস্টল করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="418"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="399"/>
 <source>Reinstalls the script</source>
 <translation>স্ক্রিপ্টটি পুনরায় চালু করে</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="485"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="463"/>
 <source>Platform not supported!</source>
 <translation>প্লাটফর্ম সমর্থিত নয়!</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="486"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="464"/>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
 <translation>আপনার প্ল্যাটফর্ম এই স্ক্রিপ্ট দ্বারা সমর্থিত নয়!
 আপনি কি এটি ইনস্টল করতে চান না?</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="488"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="466"/>
 <source>Cancel</source>
 <translation>বাতিল</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="495"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="472"/>
 <source>Update app</source>
 <translation>অ্যাপ্লিকেশন আপডেট করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="496"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="473"/>
 <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>এই স্ক্রিপ্ট কাজ করতে QOwnNotes আপনার ইনস্টলেশন আপডেট করতে ভুলবেন না!</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="564"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="539"/>
 <source>Install successful</source>
 <translation>সফলভাবে ইনস্টল করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="565"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="540"/>
 <source>The script was successfully installed!</source>
 <translation>স্ক্রিপ্ট সফলভাবে ইনস্টল করা হয়েছিল!</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="572"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="547"/>
 <source>Download failed</source>
 <translation>ডাউনলোড ব্যর্থ হয়েছে</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="573"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="548"/>
 <source>The script could not be downloaded!</source>
 <translation>স্ক্রিপ্ট ডাউনলোড করা যাবে না!</translation>
 </message>
@@ -5322,7 +5322,12 @@ Do you want to install it anyway?</source>
 <translation>সেটিং নাম</translation>
 </message>
 <message>
-<location filename="../widgets/scriptsettingwidget.cpp" line="193"/>
+<location filename="../widgets/scriptsettingwidget.cpp" line="190"/>
+<source>Please select a directory</source>
+<translation type="unfinished">Please select a directory</translation>
+</message>
+<message>
+<location filename="../widgets/scriptsettingwidget.cpp" line="191"/>
 <source>Please select a file</source>
 <translation>একটি ফাইল নির্বাচন করুন</translation>
 </message>
@@ -5330,7 +5335,7 @@ Do you want to install it anyway?</source>
 <context>
 <name>ScriptingService</name>
 <message>
-<location filename="../services/scriptingservice.cpp" line="268"/>
+<location filename="../services/scriptingservice.cpp" line="260"/>
 <source>file doesn't exist</source>
 <translation>ফাইলটি বিদ্যমান নেই</translation>
 </message>
@@ -5349,7 +5354,7 @@ Do you want to install it anyway?</source>
 <translation>%m বুকমার্ক (গুলি) এর %v আমদানি করা</translation>
 </message>
 <message numerus="yes">
-<location filename="../dialogs/serverbookmarksimportdialog.cpp" line="88"/>
+<location filename="../dialogs/serverbookmarksimportdialog.cpp" line="78"/>
 <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
 <translation>
 <numerusform>&lt;strong&gt;%n বুকমার্কস &lt;/strong&gt; সার্ভারে পাওয়া গেছে</numerusform>
@@ -5453,7 +5458,7 @@ Do you want to install it anyway?</source>
 <location filename="../dialogs/settingsdialog.ui" line="1338"/>
 <location filename="../dialogs/settingsdialog.ui" line="1355"/>
 <location filename="../dialogs/settingsdialog.ui" line="1372"/>
-<location filename="../dialogs/settingsdialog.cpp" line="346"/>
+<location filename="../dialogs/settingsdialog.cpp" line="312"/>
 <source>unknown</source>
 <translation>অজানা</translation>
 </message>
@@ -5800,10 +5805,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4440"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2348"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2356"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4392"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4397"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2108"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2117"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4080"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4084"/>
 <source>Database</source>
 <translation>ডেটাবেস</translation>
 </message>
@@ -5824,7 +5829,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4395"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2422"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2180"/>
 <source>Clear app data and exit</source>
 <translation>অ্যাপ্লিকেশন ডেটা সাফ করুন এবং প্রস্থান করুন</translation>
 </message>
@@ -6419,20 +6424,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4230"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4069"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3768"/>
 <source>Reset message boxes</source>
 <translation>বার্তা বাক্সগুলি রিসেট করুন</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4135"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4156"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3834"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3853"/>
 <source>Import settings</source>
 <translation>সেটিংস আমদানি করুন</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4424"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4101"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3800"/>
 <source>Export settings</source>
 <translation>সেটিংস রফতানি করুন</translation>
 </message>
@@ -7211,7 +7216,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>সম্পূর্ণ ট্রি হিসাবে নোট সাবফোল্ডারগুলি প্রদর্শন করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2964"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2694"/>
 <source>Search script repository</source>
 <translation>স্ক্রিপ্ট সংগ্রহস্থল অনুসন্ধান করুন</translation>
 </message>
@@ -7637,8 +7642,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4507"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2367"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4371"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2127"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4060"/>
 <source>Debug information</source>
 <translation>ডিবাগ তথ্য</translation>
 </message>
@@ -7653,47 +7658,47 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>&amp;ডিবাগ তথ্য সংরক্ষণ করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="516"/>
+<location filename="../dialogs/settingsdialog.cpp" line="466"/>
 <source>hostname of proxy server</source>
 <translation>প্রক্সি সার্ভারের হোস্টনাম</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="517"/>
+<location filename="../dialogs/settingsdialog.cpp" line="467"/>
 <source>username for proxy server</source>
 <translation>প্রক্সি সার্ভারের জন্য ব্যবহারকারীর নাম</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="518"/>
+<location filename="../dialogs/settingsdialog.cpp" line="468"/>
 <source>password for proxy server</source>
 <translation>প্রক্সি সার্ভারের জন্য পাসওয়ার্ড</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="520"/>
+<location filename="../dialogs/settingsdialog.cpp" line="470"/>
 <source>HTTP(S) proxy</source>
 <translation>Http(s) প্রক্সি</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="521"/>
+<location filename="../dialogs/settingsdialog.cpp" line="471"/>
 <source>SOCKS5 proxy</source>
 <translation>SOCKS5 প্রক্সি</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="638"/>
+<location filename="../dialogs/settingsdialog.cpp" line="579"/>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
 <translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1545"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1356"/>
 <source>Automatic (needs restart)</source>
 <translation>স্বয়ংক্রিয় (পুনঃসূচনা প্রয়োজন)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1861"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1644"/>
 <source>Shortcut already assigned</source>
 <translation>শর্টকাট ইতিমধ্যে নির্ধারিত</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2064"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1837"/>
 <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -7702,7 +7707,7 @@ QOwnNotesAPI version: %2</source>
 কিউউননোটেসপিআই সংস্করণ: %2</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2077"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1849"/>
 <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -7713,27 +7718,27 @@ Connection error message: </source>
 সংযোগ ত্রুটি বার্তা: </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2357"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2118"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
 <translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2368"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2128"/>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>দয়া করে এটি ইস্যু ট্র্যাকারে ব্যবহার করবেন না, ডিবাগ তথ্য পাঠ্যের বিষয়টি সরাসরি অনুলিপি করুন।.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2375"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2135"/>
 <source>Markdown files</source>
 <translation>মার্কডাউন ফাইলগুলো</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2403"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2162"/>
 <source>Disable usage tracking</source>
 <translation>ব্যবহার ট্র্যাকিং অক্ষম করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2404"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2163"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>বেনামে ব্যবহারের ডেটা QOwnNotes এর কোন অংশগুলি পরবর্তী উন্নতি করতে এবং বাগগুলি সন্ধান এবং ঠিক করতে সহায়তা করে।
 &lt;br /&gt;
@@ -7742,322 +7747,322 @@ Connection error message: </source>
 সত্যিই ব্যবহার ট্র্যাকিং অক্ষম করবেন?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2637"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2388"/>
 <source>new folder</source>
 <translation>নতুন ফোল্ডার</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2671"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2420"/>
 <source>Remove note folder</source>
 <translation>নোট ফোল্ডারটি সরান</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2672"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2421"/>
 <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>বর্তমান নোট ফোল্ডারটি &lt;strong&gt;%1&lt;/strong&gt; মুছে ফেলবেন?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2753"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2496"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>আপনার নোটস যেখানে সংরক্ষণ করা হবে দয়া করে ফোল্ডার নির্বাচন করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2788"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2530"/>
 <source>Loading folders from server</source>
 <translation>সার্ভার থেকে ফোল্ডার লোড হচ্ছে</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2803"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2545"/>
 <source>No more folders were found in the current folder</source>
 <translation>বর্তমান ফোল্ডারে আর কোনও ফোল্ডার পাওয়া যায় নি</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2876"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2613"/>
 <source>Loading folders in '%1' from server</source>
 <translation>সার্ভার থেকে ফোল্ডারগুলি '%1' এ লোড হচ্ছে</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2949"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2680"/>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
 <translation>দ্রুত শুরু করতে &lt;a href="%1"&gt; স্ক্রিপ্টিং ডকুমেন্টেশন &lt;/a&gt; দেখুন।.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2953"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2684"/>
 <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
 <translation>আপনার যদি QOwnNotes এ কোনও নির্দিষ্ট কার্যকারিতা অ্যাক্সেসের প্রয়োজন হয় তবে দয়া করে &lt;a href="%1"&gt; QOwnNotes ইস্যু পৃষ্ঠাতে &lt;/a&gt; একটি সমস্যা খুলুন।.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2975"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2702"/>
 <source>Check for script updates</source>
 <translation>স্ক্রিপ্ট আপডেটের জন্য পরীক্ষা করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2982"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2707"/>
 <source>Add local script</source>
 <translation>স্থানীয় স্ক্রিপ্ট যুক্ত করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2986"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2710"/>
 <source>Add an existing, local script</source>
 <translation>একটি বিদ্যমান, স্থানীয় স্ক্রিপ্ট যুক্ত করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3331"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3050"/>
 <source>Please enter a new note file extension:</source>
 <translation type="unfinished">Please enter a new note file extension:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3365"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3082"/>
 <source>Markdown file</source>
 <translation type="unfinished">Markdown file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3367"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3084"/>
 <source>Plain text file</source>
 <translation type="unfinished">Plain text file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3385"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3102"/>
 <source>Remove note file extension</source>
 <translation type="unfinished">Remove note file extension</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4100"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4155"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3799"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3852"/>
 <source>INI files</source>
 <translation>INI ফাইল</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4136"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3835"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>আপনি কি সত্যিই সেটিংস আমদানি করতে চান? আপনার বর্তমান সেটিংস মুছে ফেলা হবে এবং নোট ফোল্ডার সেটিংস এবং আপনি কোন স্ক্রিপ্টগুলি ব্যবহার করছেন তা প্রতিটি সেটিং পুনরুদ্ধার হতে পারে না। আপনার কিছু প্ল্যাটফর্ম জুড়ে কিছু সেটিংস সামঞ্জস্য করতে হবে তবে আপনার নোট অক্ষত থাকবে!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4143"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3841"/>
 <source>The application will be restarted after the import.</source>
 <translation>আমদানির পরে অ্যাপ্লিকেশনটি আবার শুরু হবে।.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4372"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4061"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>ডিবাগের তথ্যটি ক্লিপবোর্ডে অনুলিপি করা হয়েছিল।.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4393"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4081"/>
 <source>The integrity of the disk database is valid.</source>
 <translation type="unfinished">The integrity of the disk database is valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4398"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4085"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation type="unfinished">The integrity of the disk database is not valid!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2969"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2698"/>
 <source>Find a script in the script repository</source>
 <translation>স্ক্রিপ্ট সংগ্রহস্থলে একটি স্ক্রিপ্ট সন্ধান করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="299"/>
+<location filename="../dialogs/settingsdialog.cpp" line="268"/>
 <source>Menu bar</source>
 <translation>মেনু বার</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="300"/>
+<location filename="../dialogs/settingsdialog.cpp" line="269"/>
 <source>Show menu bar item</source>
 <translation>মেনু বার আইটেমটি দেখান</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1740"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1786"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1531"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1571"/>
 <source>Undefined shortcut</source>
 <translation>অপরিজ্ঞাত শর্টকাট
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1744"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1790"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1534"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1574"/>
 <source>Assign a new shortcut</source>
 <translation>একটি নতুন শর্টকাট বরাদ্দ করুন
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1745"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1791"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1534"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1575"/>
 <source>Reset to default shortcut</source>
 <translation>ডিফল্ট শর্টকাটে পুনরায় সেট করুন
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1763"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1550"/>
 <source>Clear shortcut</source>
 <translation>শর্টকাট সাফ করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1862"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1645"/>
 <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
 <translation>শর্টকাট &lt;strong&gt;%1 &lt;/strong&gt; ইতিমধ্যে &lt;strong&gt;%2 &lt;/strong&gt; এ নিয়োগ করা হয়েছে! আপনি কি শর্টকাটে যেতে চান?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3062"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2785"/>
 <source>Remove script</source>
 <translation>স্ক্রিপ্ট সরান</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3063"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2786"/>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>বর্তমান স্ক্রিপ্টটি &lt;strong&gt;%1&lt;/strong&gt; সরান?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3113"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2835"/>
 <source>QML files</source>
 <translation>QML ফাইল</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3114"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2836"/>
 <source>Please select your QML file</source>
 <translation>আপনার QML ফাইল নির্বাচন করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3204"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2925"/>
 <source>Open repository</source>
 <translation>খোলা সংগ্রহস্থল</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3262"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2981"/>
 <source>Your script seems to be valid</source>
 <translation>আপনার স্ক্রিপ্টটি বৈধ বলে মনে হচ্ছে</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3263"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2982"/>
 <source>There were script errors:
 %1</source>
 <translation>স্ক্রিপ্ট ত্রুটি ছিল:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3331"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3049"/>
 <source>File extension</source>
 <translation>ফাইল এক্সটেনশন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3386"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3103"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
 <translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3675"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3382"/>
 <source>Calendar cache emptied</source>
 <translation>খালি ক্যালেন্ডার ক্যাশে</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3676"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3383"/>
 <source>Your calendar cache was emptied.</source>
 <translation>আপনার ক্যালেন্ডার ক্যাশে খালি করা হয়েছিল।.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3757"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3459"/>
 <source>Reset toolbars and exit</source>
 <translation>সরঞ্জামবারগুলি পুনরায় সেট করুন এবং প্রস্থান করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3758"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3460"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>আপনি কি সত্যিই সমস্ত সরঞ্জামদণ্ড পুনরায় সেট করতে চান? অ্যাপ্লিকেশনটি প্রক্রিয়াটিতে বন্ধ হয়ে যাবে, আপনি আবার এটি শুরু করার সাথে ডিফল্ট টুলবার পুনরুদ্ধার করা হবে।.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3762"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3464"/>
 <source>Reset and &amp;exit</source>
 <translation>পুনরায় সেট করুন এবং &amp;প্রস্থান করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3920"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3623"/>
 <source>Log file cleared</source>
 <translation>লগ ফাইল সাফ করা হয়েছে</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3921"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3624"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>লগ ফাইলটি &lt;strong&gt;%1 &lt;/strong&gt; সাফ করা হয়েছে।.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3957"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3661"/>
 <source>Executable files</source>
 <translation>এক্সিকিউটেবল ফাইল</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3958"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3960"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3661"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3663"/>
 <source>All files</source>
 <translation>সব নথি</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3968"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3671"/>
 <source>Please select the path of your git executable</source>
 <translation>এক্সিকিউটেবল আপনার গিটের পথটি নির্বাচন করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4070"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3769"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>আপনি কি সত্যিই সমস্ত বার্তা বাক্সের ওভাররাইডগুলি পুনরায় সেট করতে চান?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="107"/>
+<location filename="../dialogs/settingsdialog.cpp" line="105"/>
 <source>New script</source>
 <translation>নতুন লিপি</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="111"/>
+<location filename="../dialogs/settingsdialog.cpp" line="109"/>
 <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
 <translation>আপনি এখানে আপনার গিট ক্লায়েন্টটি ডাউনলোড করতে পারেন: &lt;a href="%url"&gt; উইন্ডোজের জন্য গিট &lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="471"/>
+<location filename="../dialogs/settingsdialog.cpp" line="423"/>
 <source>enabled</source>
 <translation>সক্রিয়</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="471"/>
+<location filename="../dialogs/settingsdialog.cpp" line="423"/>
 <source>disabled</source>
 <translation>অক্ষম</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="473"/>
+<location filename="../dialogs/settingsdialog.cpp" line="426"/>
 <source>Portable mode is currently:</source>
 <translation>পোর্টেবল মোড বর্তমানে:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="476"/>
+<location filename="../dialogs/settingsdialog.cpp" line="428"/>
 <source>In portable mode</source>
 <translation>পোর্টেবল মোডে</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="477"/>
+<location filename="../dialogs/settingsdialog.cpp" line="429"/>
 <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>অভ্যন্তরীণ স্ক্লাইট ডাটাবেস এবং সেটিংস বাইনারিগুলির স্থানে &lt;code&gt; ডেটা &lt;/code&gt; ফোল্ডারের ভিতরে সংরক্ষণ করা হবে</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="480"/>
+<location filename="../dialogs/settingsdialog.cpp" line="432"/>
 <source>the settings will be stored in an ini file</source>
 <translation>সেটিংসটি কোনও আইএনআই ফাইলে সংরক্ষণ করা হবে</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="482"/>
+<location filename="../dialogs/settingsdialog.cpp" line="433"/>
 <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
 <translation>নোট ফোল্ডার, স্ক্রিপ্টের পাথ এবং একটি বাহ্যিক সম্পাদকের পাথ স্বয়ংক্রিয়ভাবে &lt;code&gt; ডেটা &lt;/code&gt; ফোল্ডারের সাথে সঞ্চিত হয়ে যাবে যাতে আপনার নোট ফোল্ডার, স্ক্রিপ্ট এবং বহিরাগত সম্পাদক লোড হবে যেখানে আপনার QOwnNotes ইনস্টলেশন বর্তমানে অবস্থিত</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="492"/>
+<location filename="../dialogs/settingsdialog.cpp" line="443"/>
 <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
 <translation>আপনি &lt;code&gt; - পোর্টেবল &lt;/code&gt; প্যারামিটার দিয়ে কিউউননোটস চালনা করলে এটি সক্রিয় হবে।.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2376"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2136"/>
 <source>Save debug information</source>
 <translation>ডিবাগ তথ্য সংরক্ষণ করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2423"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2181"/>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -8066,34 +8071,34 @@ Your notes will stay intact!</source>
 আপনার নোট অক্ষত থাকবে!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2426"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2184"/>
 <source>Clear and &amp;exit</source>
 <translation>সাফ করুন এবং প্রস্থান &amp;করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2352"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2426"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3762"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2112"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2184"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3464"/>
 <source>&amp;Cancel</source>
 <translation>&amp;বাতিল</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="498"/>
+<location filename="../dialogs/settingsdialog.cpp" line="449"/>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>পোর্টেবল মোডে QOwnNotes শুরু করার জন্য আপনার প্রকাশের পথে আপনি একটি &lt;code&gt; কিউউননোটেস্পোর্টেবল batব্যাট &lt;/code&gt; পাবেন।.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2349"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2109"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>আপনি কি সত্যিই স্থানীয় ডাটাবেস সাফ করতে চান? এটি আপনার কনফিগার করা নোট ফোল্ডার এবং আপনার ক্যাশেড টুডো আইটেমগুলিও সরিয়ে ফেলবে!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2352"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2112"/>
 <source>Clear &amp;database</source>
 <translation>সাফ &amp;ডাটাবেস</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2543"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2301"/>
 <source>Select editor application</source>
 <translation>সম্পাদক অ্যাপ্লিকেশন নির্বাচন করুন</translation>
 </message>
@@ -8126,7 +8131,7 @@ Your notes will stay intact!</source>
 <translation>আপনার নিজের ক্লাউড সার্ভারে বর্তমান নোট ফাইলটি সর্বজনীনভাবে ভাগ করুন। আপনি উত্পন্ন লিঙ্কটি অন্যকে প্রেরণ করতে পারেন যাতে তারা ফাইলটি দেখতে বা ডাউনলোড করতে পারে।.</translation>
 </message>
 <message>
-<location filename="../dialogs/sharedialog.cpp" line="66"/>
+<location filename="../dialogs/sharedialog.cpp" line="63"/>
 <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
 <translation>মনে রাখবেন যে এখনও অন্যদের সাথে নোটগুলি ভাগ করতে সক্ষম হতে আপনাকে ownCloud ডেস্কটপ সিঙ্ক সরঞ্জামটি ব্যবহার করে আপনার সার্ভারের সাথে আপনার নোটগুলি সিঙ্ক করতে হবে!</translation>
 </message>
@@ -8366,17 +8371,17 @@ Your notes will stay intact!</source>
 <translation type="unfinished">Last modified at %1</translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="160"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="158"/>
 <source>Path: %1</source>
 <translation type="unfinished">Path: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="200"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="197"/>
 <source>Delete selected files</source>
 <translation type="unfinished">Delete selected files</translation>
 </message>
 <message numerus="yes">
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="198"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation type="unfinished">
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
@@ -8384,57 +8389,57 @@ Your notes will stay intact!</source>
 </translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="300"/>
 <source>&amp;Open attachment</source>
 <translation type="unfinished">&amp;Open attachment</translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="301"/>
 <source>&amp;Rename attachment</source>
 <translation type="unfinished">&amp;Rename attachment</translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="302"/>
 <source>&amp;Delete attachments</source>
 <translation type="unfinished">&amp;Delete attachments</translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="312"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="303"/>
 <source>&amp;Add attachments to current note</source>
 <translation type="unfinished">&amp;Add attachments to current note</translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="397"/>
 <source>File doesn't exist</source>
 <translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="398"/>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
 <translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="411"/>
 <source>File exists</source>
 <translation type="unfinished">File exists</translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
 <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="422"/>
 <source>File renaming failed</source>
 <translation type="unfinished">File renaming failed</translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="423"/>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
 <translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
 </message>
 <message>
-<location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
+<location filename="../dialogs/storedattachmentsdialog.cpp" line="479"/>
 <source>&amp;Open note</source>
 <translation type="unfinished">&amp;Open note</translation>
 </message>
@@ -8512,22 +8517,22 @@ Your notes will stay intact!</source>
 <translation type="unfinished">Only show orphaned images</translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="83"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="82"/>
 <source>Last modified at %1</source>
 <translation type="unfinished">Last modified at %1</translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="148"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="146"/>
 <source>Path: %1</source>
 <translation type="unfinished">Path: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="187"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="185"/>
 <source>Delete selected files</source>
 <translation type="unfinished">Delete selected files</translation>
 </message>
 <message numerus="yes">
-<location filename="../dialogs/storedimagesdialog.cpp" line="188"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="186"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation type="unfinished">
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
@@ -8535,57 +8540,57 @@ Your notes will stay intact!</source>
 </translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="322"/>
 <source>File doesn't exist</source>
 <translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="323"/>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
 <translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
 <source>File exists</source>
 <translation type="unfinished">File exists</translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="349"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
 <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="359"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="346"/>
 <source>File renaming failed</source>
 <translation type="unfinished">File renaming failed</translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="360"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="347"/>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
 <translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="436"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="419"/>
 <source>&amp;Open image externally</source>
 <translation type="unfinished">&amp;Open image externally</translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="437"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="420"/>
 <source>&amp;Rename image</source>
 <translation type="unfinished">&amp;Rename image</translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="438"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="421"/>
 <source>&amp;Delete images</source>
 <translation type="unfinished">&amp;Delete images</translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="439"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="422"/>
 <source>&amp;Add images to current note</source>
 <translation type="unfinished">&amp;Add images to current note</translation>
 </message>
 <message>
-<location filename="../dialogs/storedimagesdialog.cpp" line="472"/>
+<location filename="../dialogs/storedimagesdialog.cpp" line="454"/>
 <source>&amp;Open note</source>
 <translation type="unfinished">&amp;Open note</translation>
 </message>
@@ -8683,17 +8688,17 @@ Your notes will stay intact!</source>
 <translation>পাঠ্য বিভেদক:</translation>
 </message>
 <message>
-<location filename="../dialogs/tabledialog.cpp" line="192"/>
+<location filename="../dialogs/tabledialog.cpp" line="184"/>
 <source>CSV files</source>
 <translation>CSV ফাইল</translation>
 </message>
 <message>
-<location filename="../dialogs/tabledialog.cpp" line="193"/>
+<location filename="../dialogs/tabledialog.cpp" line="184"/>
 <source>All files</source>
 <translation>সব নথি</translation>
 </message>
 <message>
-<location filename="../dialogs/tabledialog.cpp" line="198"/>
+<location filename="../dialogs/tabledialog.cpp" line="189"/>
 <source>Select CSV file to import</source>
 <translation>আমদানি করতে CSV ফাইল নির্বাচন করুন</translation>
 </message>
@@ -8761,7 +8766,7 @@ Your notes will stay intact!</source>
 <translation type="unfinished">Show only items due today</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="120"/>
+<location filename="../dialogs/tododialog.cpp" line="113"/>
 <source>Save and insert into note</source>
 <translation>সংরক্ষণ করুন এবং নোট sertোকান</translation>
 </message>
@@ -8806,17 +8811,17 @@ Your notes will stay intact!</source>
 <translation>বর্তমান টুডো আইটেমটি সংরক্ষণ করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="125"/>
+<location filename="../dialogs/tododialog.cpp" line="117"/>
 <source>Save the current todo item and insert a link to it into the current note</source>
 <translation>বর্তমান টুডো আইটেমটি সংরক্ষণ করুন এবং বর্তমান নোটটিতে একটি লিঙ্ক sertোকান</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="134"/>
+<location filename="../dialogs/tododialog.cpp" line="125"/>
 <source>Import the current todo item as new note</source>
 <translation>বর্তমান টুডো আইটেমটি নতুন নোট হিসাবে আমদানি করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="130"/>
+<location filename="../dialogs/tododialog.cpp" line="121"/>
 <source>Import as note</source>
 <translation>নোট হিসাবে আমদানি করুন</translation>
 </message>
@@ -8831,54 +8836,54 @@ Your notes will stay intact!</source>
 <translation>টোডো তালিকাগুলি সার্ভার থেকে লোড হচ্ছে</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="145"/>
+<location filename="../dialogs/tododialog.cpp" line="135"/>
 <source>Reload from server</source>
 <translation>সার্ভার থেকে পুনরায় লোড করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="149"/>
+<location filename="../dialogs/tododialog.cpp" line="138"/>
 <source>Reload tasks from server</source>
 <translation>সার্ভার থেকে কাজগুলি পুনরায় লোড করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="153"/>
+<location filename="../dialogs/tododialog.cpp" line="141"/>
 <source>Clear cache and reload</source>
 <translation>ক্যাশে সাফ করুন এবং পুনরায় লোড করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="158"/>
+<location filename="../dialogs/tododialog.cpp" line="145"/>
 <source>Clear calendar cache and reload tasks from server</source>
 <translation>সার্ভার থেকে ক্যালেন্ডার ক্যাশে এবং পুনরায় লোড করা কাজগুলি সাফ করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="621"/>
+<location filename="../dialogs/tododialog.cpp" line="586"/>
 <source>Remove todo item</source>
 <translation>টুডো আইটেম সরান</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="622"/>
+<location filename="../dialogs/tododialog.cpp" line="587"/>
 <source>Remove the selected todo item?
 This cannot be undone!</source>
 <translation>নির্বাচিত টুডো আইটেমটি সরান?
 এটা অসম্পূর্ণ থাকতে পারে না!</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="906"/>
+<location filename="../dialogs/tododialog.cpp" line="866"/>
 <source>Create sub-task</source>
 <translation>উপ-টাস্ক তৈরি করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="913"/>
+<location filename="../dialogs/tododialog.cpp" line="872"/>
 <source>Create new sub-task</source>
 <translation>নতুন উপ-টাস্ক তৈরি করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="913"/>
+<location filename="../dialogs/tododialog.cpp" line="872"/>
 <source>Name:</source>
 <translation>নাম:</translation>
 </message>
 <message>
-<location filename="../dialogs/tododialog.cpp" line="914"/>
+<location filename="../dialogs/tododialog.cpp" line="873"/>
 <source>New sub-task</source>
 <translation>নতুন উপ-টাস্ক</translation>
 </message>
@@ -9031,61 +9036,61 @@ This cannot be undone!</source>
 <translation>নোটের নামটি সন্ধান করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/trashdialog.cpp" line="31"/>
+<location filename="../dialogs/trashdialog.cpp" line="29"/>
 <source>&amp;Restore selected note on server</source>
 <translation>&amp;সার্ভারে নির্বাচিত নোটটি পুনরুদ্ধার করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/trashdialog.cpp" line="33"/>
+<location filename="../dialogs/trashdialog.cpp" line="31"/>
 <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
 <translation>&lt;H3&gt; ধীর, তবে নোট সংস্করণ সহ with&lt;/H3&gt; &lt;p&gt;নোটটি সমস্ত সংস্করণ সহ আপনার নিজের ক্লাউড সার্ভারে পুনরুদ্ধার করা হবে। &lt;/P&gt; &lt;p&gt; যেএটি নিজের ক্লাউড সিঙ্ক দ্বারা QOwnNotes এ সিঙ্ক না হওয়া পর্যন্ত আপনাকে অপেক্ষা করতে হবে।&lt;/ P&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/trashdialog.cpp" line="45"/>
+<location filename="../dialogs/trashdialog.cpp" line="42"/>
 <source>&amp;Download selected note</source>
 <translation>&amp;নির্বাচিত নোটটি ডাউনলোড করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/trashdialog.cpp" line="47"/>
+<location filename="../dialogs/trashdialog.cpp" line="44"/>
 <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
 <translation>&lt;h3&gt; দ্রুত, তবে সংস্করণ ছাড়াই &lt;/h3&gt; &lt;p&gt; প্রাকদর্শন থেকে পাঠ্যটি দিয়ে নোটটি তৈরি করা হবে। &lt;/p&gt; &lt;p&gt; আপনার নিজের ক্লাউড সার্ভারের নোট সংস্করণগুলি পুনরুদ্ধার করা হবে না এবং নোটটি আবর্জনায় থাকবে। &lt;/p&gt; &lt;p&gt; আপনি সর্বদা নোট এবং এর সংস্করণগুলি পরে পুনরুদ্ধার করতে পারেন। &lt;/p&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/trashdialog.cpp" line="59"/>
+<location filename="../dialogs/trashdialog.cpp" line="55"/>
 <source>&amp;Delete</source>
 <translation>&amp;মুছে ফেলুন</translation>
 </message>
 <message>
-<location filename="../dialogs/trashdialog.cpp" line="60"/>
+<location filename="../dialogs/trashdialog.cpp" line="56"/>
 <source>Delete selected note on server</source>
 <translation>সার্ভারে নির্বাচিত নোট মুছুন
 </translation>
 </message>
 <message>
-<location filename="../dialogs/trashdialog.cpp" line="68"/>
+<location filename="../dialogs/trashdialog.cpp" line="63"/>
 <source>&amp;Cancel</source>
 <translation>&amp;বাতিল</translation>
 </message>
 <message>
-<location filename="../dialogs/trashdialog.cpp" line="190"/>
+<location filename="../dialogs/trashdialog.cpp" line="171"/>
 <source>Delete note on server</source>
 <translation>সার্ভারে নোট মুছুন
 </translation>
 </message>
 <message>
-<location filename="../dialogs/trashdialog.cpp" line="191"/>
+<location filename="../dialogs/trashdialog.cpp" line="172"/>
 <source>Delete selected trashed note on server?</source>
 <translation>সার্ভারে নির্বাচিত ট্র্যাশ নোট মুছবেন?
 </translation>
 </message>
 <message>
-<location filename="../dialogs/trashdialog.cpp" line="213"/>
+<location filename="../dialogs/trashdialog.cpp" line="190"/>
 <source>Error while deleting note</source>
 <translation>নোট মুছে ফেলার সময় ত্রুটি
 </translation>
 </message>
 <message>
-<location filename="../dialogs/trashdialog.cpp" line="214"/>
+<location filename="../dialogs/trashdialog.cpp" line="191"/>
 <source>Deleting trashed note failed with status code: %1</source>
 <translation>স্থিতি কোড সহ ট্র্যাশ নোট মুছে ফেলা ব্যর্থ হয়েছে: %1</translation>
 </message>
@@ -9128,190 +9133,190 @@ This cannot be undone!</source>
 <translation>%p% ডাউনলোড হওয়া</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="51"/>
+<location filename="../dialogs/updatedialog.cpp" line="49"/>
 <source>&amp;Update</source>
 <translation>&amp;হালনাগাদ</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="48"/>
+<location filename="../dialogs/updatedialog.cpp" line="46"/>
 <source>Just download</source>
 <translation>শুধু ডাউনলোড করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="64"/>
+<location filename="../dialogs/updatedialog.cpp" line="62"/>
 <source>&amp;Download latest</source>
 <translation type="unfinished">&amp;Download latest</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="74"/>
+<location filename="../dialogs/updatedialog.cpp" line="71"/>
 <source>&amp;Skip version</source>
 <translation>&amp;সংস্করণটি এড়িয়ে যান</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="82"/>
+<location filename="../dialogs/updatedialog.cpp" line="79"/>
 <source>&amp;Disable dialog</source>
 <translation>&amp;কথোপকথনটি অক্ষম করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="83"/>
+<location filename="../dialogs/updatedialog.cpp" line="80"/>
 <source>Don't show this dialog automatically</source>
 <translation>এই ডায়ালগটি স্বয়ংক্রিয়ভাবে দেখাবেন না</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="91"/>
+<location filename="../dialogs/updatedialog.cpp" line="88"/>
 <source>&amp;Cancel</source>
 <translation>&amp;বাতিল</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="247"/>
+<location filename="../dialogs/updatedialog.cpp" line="235"/>
 <source>Download error</source>
 <translation>ডাউনলোড ত্রুটি</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="248"/>
+<location filename="../dialogs/updatedialog.cpp" line="236"/>
 <source>Error while downloading:
 %1</source>
 <translation>ডাউনলোড করার সময় ত্রুটি:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="250"/>
+<location filename="../dialogs/updatedialog.cpp" line="238"/>
 <source>network error: %1</source>
 <translation>নেটওয়ার্ক ত্রুটি: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="272"/>
-<location filename="../dialogs/updatedialog.cpp" line="293"/>
-<location filename="../dialogs/updatedialog.cpp" line="387"/>
-<location filename="../dialogs/updatedialog.cpp" line="464"/>
-<location filename="../dialogs/updatedialog.cpp" line="474"/>
+<location filename="../dialogs/updatedialog.cpp" line="260"/>
+<location filename="../dialogs/updatedialog.cpp" line="279"/>
+<location filename="../dialogs/updatedialog.cpp" line="370"/>
+<location filename="../dialogs/updatedialog.cpp" line="445"/>
+<location filename="../dialogs/updatedialog.cpp" line="455"/>
 <source>File error</source>
 <translation>ফাইল ত্রুটি</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="273"/>
-<location filename="../dialogs/updatedialog.cpp" line="388"/>
+<location filename="../dialogs/updatedialog.cpp" line="261"/>
+<location filename="../dialogs/updatedialog.cpp" line="371"/>
 <source>Could not open temporary file:
 %1</source>
 <translation>অস্থায়ী ফাইলটি খুলতে পারেনি:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="294"/>
+<location filename="../dialogs/updatedialog.cpp" line="280"/>
 <source>Could not store downloaded file:
 %1</source>
 <translation>ডাউনলোড করা ফাইল সংরক্ষণ করতে পারেনি:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="345"/>
+<location filename="../dialogs/updatedialog.cpp" line="331"/>
 <source>Do you want to update and restart QOwnNotes?</source>
 <translation>আপনাকে আপডেট এবং QOwnNotes পুনর্সূচনা করতে চান?</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="361"/>
-<location filename="../dialogs/updatedialog.cpp" line="523"/>
-<location filename="../dialogs/updatedialog.cpp" line="531"/>
-<location filename="../dialogs/updatedialog.cpp" line="540"/>
-<location filename="../dialogs/updatedialog.cpp" line="549"/>
-<location filename="../dialogs/updatedialog.cpp" line="559"/>
-<location filename="../dialogs/updatedialog.cpp" line="568"/>
+<location filename="../dialogs/updatedialog.cpp" line="345"/>
+<location filename="../dialogs/updatedialog.cpp" line="503"/>
+<location filename="../dialogs/updatedialog.cpp" line="511"/>
+<location filename="../dialogs/updatedialog.cpp" line="518"/>
+<location filename="../dialogs/updatedialog.cpp" line="526"/>
+<location filename="../dialogs/updatedialog.cpp" line="535"/>
+<location filename="../dialogs/updatedialog.cpp" line="543"/>
 <source>Error</source>
 <translation>এরর</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="362"/>
+<location filename="../dialogs/updatedialog.cpp" line="346"/>
 <source>Could not find updater file:
 %1</source>
 <translation>আপডেটের ফাইল খুঁজে পাওয়া যায়নি:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="442"/>
-<location filename="../dialogs/updatedialog.cpp" line="454"/>
-<location filename="../dialogs/updatedialog.cpp" line="486"/>
+<location filename="../dialogs/updatedialog.cpp" line="423"/>
+<location filename="../dialogs/updatedialog.cpp" line="435"/>
+<location filename="../dialogs/updatedialog.cpp" line="467"/>
 <source>Permission error</source>
 <translation type="unfinished">Permission error</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="443"/>
+<location filename="../dialogs/updatedialog.cpp" line="424"/>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
 <translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="455"/>
+<location filename="../dialogs/updatedialog.cpp" line="436"/>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="465"/>
+<location filename="../dialogs/updatedialog.cpp" line="446"/>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
 <translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="495"/>
+<location filename="../dialogs/updatedialog.cpp" line="476"/>
 <source>Restart application</source>
 <translation type="unfinished">Restart application</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="496"/>
+<location filename="../dialogs/updatedialog.cpp" line="477"/>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="498"/>
+<location filename="../dialogs/updatedialog.cpp" line="479"/>
 <source>Restart</source>
 <translation type="unfinished">Restart</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="498"/>
+<location filename="../dialogs/updatedialog.cpp" line="479"/>
 <source>Cancel</source>
 <translation type="unfinished">Cancel</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="524"/>
+<location filename="../dialogs/updatedialog.cpp" line="504"/>
 <source>Updater script '%1' doesn't exist!</source>
 <translation>আপডেটার স্ক্রিপ্ট '%1' বিদ্যমান নেই!</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="532"/>
+<location filename="../dialogs/updatedialog.cpp" line="512"/>
 <source>Updater unzip executable '%1' doesn't exist!</source>
 <translation>আপডেটর আনজিপ এক্সিকিউটেবল '%1' উপস্থিত নেই!</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="541"/>
-<location filename="../dialogs/updatedialog.cpp" line="550"/>
+<location filename="../dialogs/updatedialog.cpp" line="519"/>
+<location filename="../dialogs/updatedialog.cpp" line="527"/>
 <source>Could not copy updater script '%1' to '%2'!</source>
 <translation>আপডেটের স্ক্রিপ্ট '%1' কে '%2' এ অনুলিপি করতে পারেনি!</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="560"/>
+<location filename="../dialogs/updatedialog.cpp" line="536"/>
 <source>Couldn't find updater script: %1</source>
 <translation>আপডেটেটর স্ক্রিপ্টটি খুঁজে পাওয়া যায়নি: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="569"/>
+<location filename="../dialogs/updatedialog.cpp" line="544"/>
 <source>Couldn't find unzip executable: %1</source>
 <translation>আনজিপ কার্যকর করা যায়নি: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="344"/>
-<location filename="../dialogs/updatedialog.cpp" line="574"/>
+<location filename="../dialogs/updatedialog.cpp" line="330"/>
+<location filename="../dialogs/updatedialog.cpp" line="548"/>
 <source>Proceed with update</source>
 <translation>আপডেট সহ এগিয়ে যান</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="475"/>
+<location filename="../dialogs/updatedialog.cpp" line="456"/>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
 <translation type="unfinished">Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="487"/>
+<location filename="../dialogs/updatedialog.cpp" line="468"/>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
 <translation type="unfinished">The app file '%1' could not be made executable! You need to make it executable yourself.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="575"/>
+<location filename="../dialogs/updatedialog.cpp" line="549"/>
 <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
 <translation>ডাউনলোড এখন শেষ হয়েছে। আপনাকে আপডেট এবং QOwnNotes পুনর্সূচনা করতে চান?</translation>
 </message>
@@ -9319,34 +9324,34 @@ This cannot be undone!</source>
 <context>
 <name>UpdateService</name>
 <message>
-<location filename="../services/updateservice.cpp" line="114"/>
-<location filename="../services/updateservice.cpp" line="129"/>
-<location filename="../services/updateservice.cpp" line="150"/>
+<location filename="../services/updateservice.cpp" line="103"/>
+<location filename="../services/updateservice.cpp" line="117"/>
+<location filename="../services/updateservice.cpp" line="137"/>
 <source>Update-checker error</source>
 <translation>আপডেট-পরীক্ষক ত্রুটি</translation>
 </message>
 <message>
-<location filename="../services/updateservice.cpp" line="115"/>
+<location filename="../services/updateservice.cpp" line="104"/>
 <source>Network reply error: %1</source>
 <translation>নেটওয়ার্কের উত্তর ত্রুটি: %1</translation>
 </message>
 <message>
-<location filename="../services/updateservice.cpp" line="130"/>
+<location filename="../services/updateservice.cpp" line="118"/>
 <source>No data was received by the network request!</source>
 <translation>নেটওয়ার্কের অনুরোধে কোনও ডেটা পাওয়া যায়নি!</translation>
 </message>
 <message>
-<location filename="../services/updateservice.cpp" line="151"/>
+<location filename="../services/updateservice.cpp" line="138"/>
 <source>The data from the network request could not be interpreted!</source>
 <translation>নেটওয়ার্কের অনুরোধটি থেকে ডেটা ব্যাখ্যা করা যায় না!</translation>
 </message>
 <message>
-<location filename="../services/updateservice.cpp" line="255"/>
+<location filename="../services/updateservice.cpp" line="230"/>
 <source>No updates</source>
 <translation>কোনও আপডেট নেই</translation>
 </message>
 <message>
-<location filename="../services/updateservice.cpp" line="256"/>
+<location filename="../services/updateservice.cpp" line="231"/>
 <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
 <translation>কোনও আপডেট উপলব্ধ নেই। &lt;br/&gt; &lt;strong&gt;%1&lt;/strong&gt; সর্বশেষতম সংস্করণ।.</translation>
 </message>
@@ -9364,17 +9369,17 @@ This cannot be undone!</source>
 <translation>পরিবর্তন</translation>
 </message>
 <message>
-<location filename="../dialogs/versiondialog.ui" line="98"/>
+<location filename="../dialogs/versiondialog.ui" line="101"/>
 <source>Note text</source>
 <translation>নোট পাঠ্য</translation>
 </message>
 <message>
-<location filename="../dialogs/versiondialog.cpp" line="31"/>
+<location filename="../dialogs/versiondialog.cpp" line="29"/>
 <source>&amp;Restore selected version</source>
 <translation>&amp;নির্বাচিত সংস্করণ পুনরুদ্ধার করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/versiondialog.cpp" line="39"/>
+<location filename="../dialogs/versiondialog.cpp" line="36"/>
 <source>&amp;Cancel</source>
 <translation>&amp;বাতিল</translation>
 </message>
@@ -9382,17 +9387,17 @@ This cannot be undone!</source>
 <context>
 <name>WebAppClientService</name>
 <message>
-<location filename="../services/webappclientservice.cpp" line="102"/>
+<location filename="../services/webappclientservice.cpp" line="105"/>
 <source>QOwnNotes is now connected via websocket to %1</source>
 <translation type="unfinished">QOwnNotes is now connected via websocket to %1</translation>
 </message>
 <message>
-<location filename="../services/webappclientservice.cpp" line="111"/>
+<location filename="../services/webappclientservice.cpp" line="114"/>
 <source>QOwnNotes is now disconnected from websocket to %1</source>
 <translation type="unfinished">QOwnNotes is now disconnected from websocket to %1</translation>
 </message>
 <message>
-<location filename="../services/webappclientservice.cpp" line="127"/>
+<location filename="../services/webappclientservice.cpp" line="128"/>
 <source>Web app warning</source>
 <translation type="unfinished">Web app warning</translation>
 </message>
@@ -9415,17 +9420,17 @@ This cannot be undone!</source>
 <translation>QOwnNotes সার্ভার পোর্ট %1 এ শুনছে</translation>
 </message>
 <message>
-<location filename="../services/websocketserverservice.cpp" line="75"/>
+<location filename="../services/websocketserverservice.cpp" line="73"/>
 <source>Could not start QOwnNotes server on port %1!</source>
 <translation>%1 বন্দরে QOwnNotes সার্ভার শুরু করতে পারেনি!</translation>
 </message>
 <message>
-<location filename="../services/websocketserverservice.cpp" line="120"/>
+<location filename="../services/websocketserverservice.cpp" line="112"/>
 <source>%1 connected to QOwnNotes server!</source>
 <translation>%1 কিউউননোটস সার্ভারের সাথে সংযুক্ত!</translation>
 </message>
 <message numerus="yes">
-<location filename="../services/websocketserverservice.cpp" line="242"/>
+<location filename="../services/websocketserverservice.cpp" line="218"/>
 <source>%n bookmark(s) created</source>
 <translation>
 <numerusform>%n বুকমার্ক তৈরি হয়েছে</numerusform>
@@ -9433,7 +9438,7 @@ This cannot be undone!</source>
 </translation>
 </message>
 <message>
-<location filename="../services/websocketserverservice.cpp" line="470"/>
+<location filename="../services/websocketserverservice.cpp" line="437"/>
 <source>%1 was disconnected from QOwnNotes server</source>
 <translation>%1 QOwnNotes সার্ভার থেকে সংযোগ বিচ্ছিন্ন ছিল</translation>
 </message>
@@ -9496,7 +9501,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="168"/>
-<location filename="../dialogs/welcomedialog.cpp" line="219"/>
+<location filename="../dialogs/welcomedialog.cpp" line="203"/>
 <source>Note folder</source>
 <translation>উল্লেখ্য ফোল্ডার</translation>
 </message>
@@ -9556,27 +9561,27 @@ This cannot be undone!</source>
 <translation>QOwnNotes বেনামী ব্যবহারের ডেটা রেকর্ড করবে যা QOwnNotes এর কোন অংশগুলি উন্নত করতে এবং ত্রুটির সন্ধান ও সংশোধন করতে সহায়তা করে। আপনি সেটিংসে এই আচরণটি অক্ষম করতে পারেন</translation>
 </message>
 <message>
-<location filename="../dialogs/welcomedialog.cpp" line="122"/>
+<location filename="../dialogs/welcomedialog.cpp" line="113"/>
 <source>Cannot create note path! You have to create the note folder manually!</source>
 <translation>নোটের পথ তৈরি করা যায় না! আপনাকে ম্যানুয়ালি নোট ফোল্ডারটি তৈরি করতে হবে!</translation>
 </message>
 <message>
-<location filename="../dialogs/welcomedialog.cpp" line="130"/>
+<location filename="../dialogs/welcomedialog.cpp" line="120"/>
 <source>Cannot create note path!</source>
 <translation>নোটের পথ তৈরি করা যায় না!</translation>
 </message>
 <message>
-<location filename="../dialogs/welcomedialog.cpp" line="135"/>
+<location filename="../dialogs/welcomedialog.cpp" line="125"/>
 <source>This note path doesn't exist!</source>
 <translation>এই নোটের পথটি নেই!</translation>
 </message>
 <message>
-<location filename="../dialogs/welcomedialog.cpp" line="207"/>
+<location filename="../dialogs/welcomedialog.cpp" line="193"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>আপনার নোটস যেখানে সংরক্ষণ করা হবে দয়া করে ফোল্ডার নির্বাচন করুন</translation>
 </message>
 <message>
-<location filename="../dialogs/welcomedialog.cpp" line="220"/>
+<location filename="../dialogs/welcomedialog.cpp" line="204"/>
 <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
 <translation>মনে রাখবেন যে নোট ফোল্ডারটি ক্যুওননোটস বহনযোগ্য মোডে থাকা ডিরেক্টরিটির সাথে তুলনামূলকভাবে সংরক্ষণ করা হবে! সুতরাং আপনার একই ড্রাইভে থাকা দরকার।.</translation>
 </message>
@@ -9584,52 +9589,52 @@ This cannot be undone!</source>
 <context>
 <name>main</name>
 <message>
-<location filename="../main.cpp" line="94"/>
+<location filename="../main.cpp" line="88"/>
 <source>Runs the application in portable mode.</source>
 <translation>অ্যাপ্লিকেশনটি পোর্টেবল মোডে চালায়।.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="100"/>
+<location filename="../main.cpp" line="94"/>
 <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
 <translation>গিটহাব মার্কডাউন-এ অ্যাপ্লিকেশন এবং পরিবেশ সম্পর্কিত সেটিংস এবং অন্যান্য তথ্যের একটি ডাম্প প্রিন্ট করে এবং অ্যাপ্লিকেশনটি প্রস্থান করে।.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="109"/>
+<location filename="../main.cpp" line="102"/>
 <source>Prints out the version number.</source>
 <translation type="unfinished">Prints out the version number.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="114"/>
+<location filename="../main.cpp" line="106"/>
 <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
 <translation>সেটিংসে অনুমোদিত না হলেও QOwnNotes এর একাধিক উদাহরণ শুরু করার অনুমতি দেয়।.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="121"/>
+<location filename="../main.cpp" line="112"/>
 <source>Clears the settings and runs the application.</source>
 <translation>সেটিংস সাফ করে এবং অ্যাপ্লিকেশন চালায়।.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="127"/>
+<location filename="../main.cpp" line="118"/>
 <source>Runs the application in a different context for settings and internal files.</source>
 <translation>সেটিংস এবং অভ্যন্তরীণ ফাইলগুলির জন্য আলাদা প্রসঙ্গে অ্যাপ্লিকেশন চালায়।.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="136"/>
+<location filename="../main.cpp" line="126"/>
 <source>Triggers a menu action after the application was started.</source>
 <translation type="unfinished">Triggers a menu action after the application was started.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="566"/>
+<location filename="../main.cpp" line="535"/>
 <source>Single application mode is not supported on your system!</source>
 <translation>আপনার সিস্টেমে একক অ্যাপ্লিকেশন মোড সমর্থিত নয়!</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="580"/>
+<location filename="../main.cpp" line="549"/>
 <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
 <translation>QOwnNotes এর আর একটি উদাহরণ ইতিমধ্যে শুরু হয়েছিল! আপনি সেটিংসে একক উদাহরণ মোড বন্ধ করতে পারেন বা প্যারামিটার - অনুমতি - একাধিক - দৃষ্টান্ত ব্যবহার করতে পারেন।.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="631"/>
+<location filename="../main.cpp" line="601"/>
 <source>A second instance of QOwnNotes was attempted to be started!</source>
 <translation>QOwnNotes দ্বিতীয় উদাহরণ হিসেবে বলা যায় শুরু করা যেতে চেষ্টা করেছেন হয়েছিল!</translation>
 </message>

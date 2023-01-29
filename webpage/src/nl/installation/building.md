@@ -7,7 +7,7 @@ U kunt QOwnNotes ook zelf bouwen vanuit de broncode.
 Check de code rechtstreeks uit de git-repository:
 
 ```bash
-git clone https://github.com/pbek/QOwnNotes.git -b release
+git clone https://github.com/pbek/QOwnNotes.git -b master
 cd QEigenOpmerkingen
 git submodule update --init
 ```
@@ -27,7 +27,7 @@ Voel je vrij om broncode bij te dragen aan dit project, suggesties te doen of pr
 Bezoek [QOwnNotes op GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-Als u broncode aan het project wilt bijdragen, dient u uw pull-verzoeken in bij de `main` branch.
+If you want to contribute source code to the project please make your pull requests to the  `main` branch.
 :::
 
 ## Bronarchief

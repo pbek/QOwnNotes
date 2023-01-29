@@ -45,7 +45,7 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
 }
 ```
 
-شاید بخواهید نگاهی به مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml)، [callback.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml) یا [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/execute-command-after-note-update.qml) بیندازید.
+You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml), [callback.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml) or [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/execute-command-after-note-update.qml).
 
 همچنین می توانید هوک [onDetachedProcessCallback](hooks.html#ondetachedprocesscallback) را ملاحظه نمایید.
 
@@ -70,7 +70,7 @@ QByteArray startSynchronousProcess(QString executablePath, QStringList parameter
 var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data", "/path/to/execute/in");
 ```
 
-می توانید مثال [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml) را ملاحظه کنید.
+You may want to take a look at the example [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml).
 
 دستیابی به مسیر پوشه یادداشت کنونی
 -------------------------------------------
@@ -90,7 +90,7 @@ QString currentNoteFolderPath();
 var path = script.currentNoteFolderPath();
 ```
 
-برای نمونه می توانید نگاهی به مثال [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/absolute-media-links.qml) بیندازید.
+You may want to take a look at the example [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/absolute-media-links.qml).
 
 دستیابی به یادداشت کنونی
 ------------------------
@@ -110,7 +110,7 @@ NoteApi currentNote();
 var note = script.currentNote();
 ```
 
-شاید بخواهید به مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) نگاهی بیندازید.
+You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 ورود به ابزارک کارنگاری
 -------------------------
@@ -149,7 +149,7 @@ QString downloadUrlToString(QUrl url);
 var html = script.downloadUrlToString("https://www.qownnotes.org");
 ```
 
-به عنوان مثال می توانید نگاهی به [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) بیندازید.
+You may want to take a look at the example [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
 
 بارگیری URL به پوشه رسانه
 --------------------------------------
@@ -172,7 +172,7 @@ QString downloadUrlToMedia(QUrl url, bool returnUrlOnly);
 var markdown = script.downloadUrlToMedia("http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)}");
 ```
 
-به عنوان مثال می توانید به [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/paste-latex-image.qml) مراجعه کنید.
+You may want to take a look at the example [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/paste-latex-image.qml).
 
 درج پرونده رسانه در پوشه رسانه
 --------------------------------------------
@@ -196,7 +196,7 @@ QString ScriptingService::insertMediaFile(QString mediaFilePath,
 var markdown = script.insertMediaFile("/path/to/your/image.png");
 ```
 
-شاید بخواهید به مثال [scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml) نگاهی بیندازید.
+You may want to take a look at the example [scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml).
 
 درج پرونده پیوست در پوشه پیوست ها
 --------------------------------------------------------
@@ -241,7 +241,7 @@ QString ScriptingService::regenerateNotePreview();
 script.regenerateNotePreview();
 ```
 
-شاید بخواهید به مثال [scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml) نگاهی بیندازید.
+You may want to take a look at the example [scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml).
 
 ثبت فعالیت سفارشی
 ---------------------------
@@ -331,7 +331,7 @@ Script {
 }
 ```
 
-برای نمونه های بیشتر، لطفاً [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) را ملاحظه نمایید.
+For some more examples please see [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
 شما همچنین می توانید عملیات سفارشی را پس از شروع به کار برنامه با پارامتر `--action customAction_<identifier>` راه‌اندازی کنید. برای کسب اطلاعات بیشتر لطفاً به [راه‌اندازی منو اکشن ها بعد از شروع به کار](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup) مراجعه نمایید.
@@ -364,7 +364,7 @@ The labels will be visible in the *Scripting panel*, which you need to enable in
 
 شما می توانید هم از متن ساده و هم html در برچسب ها استفاده کنید. متن قابل انتخاب بوده و می توان روی پیوندها کلیک کرد.
 
-سپس به عنوان مثال می توانید اسکریپت [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml) را ملاحظه کنید.
+You may then want to take a look at the example script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
 
 تنظیم متن برچسب ثبت شده
 --------------------------------------
@@ -387,7 +387,7 @@ script.setLabelText("counter-label", "counter text");
 
 شما می توانید هم از متن ساده و هم html در برچسب ها استفاده کنید. متن قابل انتخاب بوده و می توان روی پیوندها کلیک کرد.
 
-سپس به عنوان مثال می توانید اسکریپت [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml) را ملاحظه کنید.
+You may then want to take a look at the example script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
 
 ایجاد یادداشت جدید
 -------------------
@@ -407,7 +407,7 @@ void ScriptingService::createNote(QString text);
 script.createNote("My note headline\n===\n\nMy text");
 ```
 
-شاید بخواهید به مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) نگاهی بیندازید.
+You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
 اگر شما این گزینه را غیر فعال کنید که سرخط یادداشت شما نام پرونده یادداشت را تعیین می‌کند، در این صورت باید پرونده یادداشت خود را مانند نمونه پیش رو تغییر نام دهید:
@@ -437,7 +437,7 @@ var clipboardText = script.clipboard();
 var clipboardHtml = script.clipboard(true);
 ```
 
-شاید بخواهید به مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) نگاهی بیندازید.
+You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 نوشتن متن برای ویرایش متن یادداشت
 --------------------------------
@@ -458,7 +458,7 @@ void ScriptingService::noteTextEditWrite(QString text);
 script.noteTextEditWrite("My custom text");
 ```
 
-در صورت تمایل می توانید فعالیت سفارشی `transformTextRot13` را در مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) ملاحظه کنید.
+You might want to look at the custom action `transformTextRot13` in the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 شما می توانید از این به همراه `noteTextEditSelectAll` برای بازنویسی کل متن یادداشت کنونی استفاده کنید.
 
@@ -481,7 +481,7 @@ QString ScriptingService::noteTextEditSelectedText();
 var text = script.noteTextEditSelectedText();
 ```
 
-در صورت تمایل می توانید فعالیت سفارشی `transformTextRot13` را در مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) ملاحظه کنید.
+You might want to look at the custom action `transformTextRot13` in the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 خواندن کل متن در ویرایش متن یادداشت
 -------------------------------------
@@ -650,7 +650,7 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 var text = script.noteTextEditCurrentWord();
 ```
 
-به عنوان مثال می توانید به [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml) نگاهی بیندازید.
+You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
 بررسی اینکه آیا پلتفرم لینوکس، سیستم عامل X یا ویندوز است
 ------------------------------------------------
@@ -735,7 +735,7 @@ QStringList ScriptingService::searchTagsByName(QString name);
 var tags = script.searchTagsByName("game");
 ```
 
-به عنوان مثال می توانید به [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml) نگاهی بیندازید.
+You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
 جستجوی یادداشت ها براساس متن یادداشت
 -----------------------------
@@ -764,7 +764,7 @@ noteIds.forEach(function (noteId){
 });
 ```
 
-برای نمونه می توانید به [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/unique-note-id.qml) نگاهی بیندازید.
+You may want to take a look at the example [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/unique-note-id.qml).
 
 افزودن برگه سبک نگارش سفارشی
 -----------------------
@@ -785,16 +785,16 @@ void ScriptingService::addStyleSheet(QString stylesheet);
 script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
 ```
 
-به عنوان مثال می توانید به [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-stylesheet.qml) مراجعه کنید.
+You may want to take a look at the example [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-stylesheet.qml).
 
-شما می توانید اسامی ابزاره ها را از پرونده های `*.ui` پیدا کنید؛ مثلاً پنجره اصلی معادل [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui) می باشد.
+You can get the widget names from the `*.ui` files, for example the main window is [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui).
 
 مستندات Qt (مانند [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)) می تواند به شما کمک کند تا نحوه ارتباط ابزاره ها را با یکدیگر مشاهده کنید (`Inherits` را در صفحات جستجو کنید).
 
 ابزاره پایه برای تقریباً همه چیز [QWidget](https://doc.qt.io/qt-5/qwidget.html) است. So just styling `QWidget` with for example `QWidget {background-color: black; color: white;}` would mean everything has a black background color and a white foreground color.
 
 ::: tip
-فایل [style.qss](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle/style.qss) متعلق به [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle) نیز ممکن است مرجع مناسبی برای سبک هایی باشد که شما می توانید آنها را تغییر دهید.
+The [style.qss](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle/style.qss) of [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle) might also be a good reference for styles you can change.
 :::
 
 برای ارجاع به سبک های موجود، نگاهی به [مرجع برگ سبک نگارش](http://doc.qt.io/qt-5/stylesheet-reference.html) بیندازید.
@@ -864,7 +864,7 @@ NoteApi* ScriptingService::fetchNoteById(int id);
 script.fetchNoteById(243);
 ```
 
-برای نمونه می توان به [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml) اشاره کرد.
+You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
 بررسی امکان وجود یادداشت براساس نام پرونده آن
 ------------------------------------------
@@ -890,7 +890,7 @@ bool ScriptingService::noteExistsByFileName(QString fileName,
 script.noteExistsByFileName("my note.md", note.id);
 ```
 
-برای مثال می توانید نگاهی به [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml) بیندازید.
+You may want to take a look at the example [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
 
 رونوشت برداری از متن به تخته برش
 -------------------------------
@@ -912,7 +912,7 @@ void ScriptingService::setClipboardText(QString text, bool asHtml);
 script.setClipboardText("text to copy");
 ```
 
-به عنوان مثال می توانید به [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/selected-markdown-to-bbcode.qml) نگاهی بیندازید.
+You may want to take a look at the example [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/selected-markdown-to-bbcode.qml).
 
 پرش به یادداشت
 -----------------
@@ -937,7 +937,7 @@ script.setCurrentNote(note);
 script.setCurrentNote(note, true);
 ```
 
-شاید بخواهید به مثال [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/journal-entry.qml) نگاهی بیندازید.
+You may want to take a look at the example [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/journal-entry.qml).
 
 پرش به زیر پوشه یادداشت
 ---------------------------
@@ -1381,7 +1381,7 @@ QStringList ScriptingService::selectedNotesPaths();
 script.log(script.selectedNotesPaths());
 ```
 
-به عنوان مثال می توانید [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-diff.qml) را ملاحظه کنید.
+You may want to take a look at the example [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-diff.qml).
 
 دریافت لیستی از شناسه های کاربری همه یادداشت های منتخب
 -----------------------------------------------
@@ -1402,7 +1402,7 @@ QList<int> ScriptingService::selectedNotesIds();
 script.log(script.selectedNotesIds());
 ```
 
-برای نمونه می توان به [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml) اشاره کرد.
+You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
 راه اندازی منو اکشن
 ------------------------
@@ -1428,10 +1428,10 @@ script.triggerMenuAction("actionAllow_note_editing");
 script.triggerMenuAction("actionAllow_note_editing", 1);
 ```
 
-برای نمونه می توانید به [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/disable-readonly-mode.qml) نگاهی بیندازید.
+You may want to take a look at the example [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/disable-readonly-mode.qml).
 
 ::: tip
-شما می توانید اسامی هدف منو اکشن را از [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui)دریافت کنید. تنها عنوان منوی انگلیسی را جستجو کنید. توجه داشته باشید که این متن ها با گذشت زمان می توانند تغییر کنند.
+You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). تنها عنوان منوی انگلیسی را جستجو کنید. توجه داشته باشید که این متن ها با گذشت زمان می توانند تغییر کنند.
 :::
 
 گشودن کادر گفتگوی ورود با صندوق انتخاب
@@ -1461,7 +1461,7 @@ var result = script.inputDialogGetItem(
 script.log(result);
 ```
 
-شما می توانید مثال [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml) را ملاحظه کنید.
+You may want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml).
 
 گشودن کادر گفتگوی ورود با ویرایش خط
 ----------------------------------------
@@ -1552,16 +1552,16 @@ var result = script.writeToFile(filePath, html);
 script.log(result);
 ```
 
-برای نمونه می توان به [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml) اشاره کرد.
+You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
 کار با وب سوکت ها
 -----------------------
 
 با استفاده از `WebSocketServer` می ‌توانید QOwnNotes را از راه دور کنترل کنید.
 
-برای نمونه می توانید به مثال [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-server.qml) نگاهی بیندازید. شما می توانید سرور سوکت را با اتصال به آن در [تست وب سوکت](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345) بررسی کنید.
+Please take a look at the example [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-server.qml). شما می توانید سرور سوکت را با اتصال به آن در [تست وب سوکت](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345) بررسی کنید.
 
-همچنین می توانید سوکت ها را با `وب سوکت` بشنوید. لطفاً مثال [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-client.qml) را ملاحظه نمایید.
+همچنین می توانید سوکت ها را با `وب سوکت` بشنوید. Please take look at the example [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-client.qml).
 
 به خاطر داشته باشید که شما باید کتابخانه `وب سوکت` QML متعلق به Qt را به صورت نصب شده داشته باشید تا بتوانید از آن استفاده کنید. برای مثال در سیستم عامل لینوکس اوبونتو شما می توانید `qml-module-qtwebsockets` را نصب کنید.
 

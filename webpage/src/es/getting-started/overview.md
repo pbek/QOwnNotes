@@ -158,7 +158,7 @@
 - **Las notas enviadas a la papelera** se pueden **restaurar** desde su servidor **Nextcloud / ownCloud**
 - **Los cambios externos** de los archivos de notas son **supervisados** (las notas o la lista de notas se vuelven a cargar)
 - Soporte para **etiquetado jerárquico de notas** y **subcarpetas de notas**
-- **Cifrado** opcional de notas, (AES-256 está integrado o puede utilizar métodos de cifrado personalizados como **[ Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) o **PGP** ([encriptación-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
+- Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
 - La **carpeta de notas** se puede **elegir libremente** (se pueden utilizar varias carpetas de notas)
 - **Es posible buscar partes de palabras** en las notas y los resultados de la búsqueda se resaltan en las notas
 - [**Extensión del navegador**](browser-extension.md) para **agregar notas del texto seleccionado**, **hacer capturas de pantalla** o **administrar sus marcadores**

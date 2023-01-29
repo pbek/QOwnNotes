@@ -40,7 +40,7 @@ QOwnNotes --action actionShow_Todo_List
 ```
 
 ::: tip
-Puede obtener los nombres de los objetos de la acción del menú en [ventana principal.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Simplemente busque el título del menú en inglés. Tenga en cuenta que estos textos pueden cambiar con el tiempo.
+You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Simplemente busque el título del menú en inglés. Tenga en cuenta que estos textos pueden cambiar con el tiempo.
 :::
 
 Para activar [acciones de secuencia de comandos](../scripting/methods-and-objects.md#registering-a-custom-action), utilice `customAction_` seguido del identificador de la acción personalizada. El identificador de la acción personalizada es el primer parámetro de la llamada `script.registerCustomAction` en el script.

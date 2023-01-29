@@ -158,7 +158,7 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 - **Notities naar prullenbak** kunnen worden **hersteld** vanaf uw **Nextcloud / ownCloud** -server
 - **Externe wijzigingen** van notitiebestanden worden **bekeken** (notities of notitielijst worden opnieuw geladen)
 - Ondersteuning voor **hiërarchische tagging van notities** en **submappen van notities**
-- Optioneel **encryption** van opmerkingen (AES-256 is ingebouwd of u kunt aangepaste versleutelingsmethoden gebruiken zoals **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) of **PGP** ([encryptie-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
+- Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
 - De **notitiemap** kan **vrij gekozen worden** (meerdere notitiemappen kunnen worden gebruikt)
 - **Zoeken naar delen van woorden** in notities is mogelijk en zoekresultaten worden gemarkeerd in de notities
 - [**Browserextensie**](browser-extension.md) om **notities uit de geselecteerde tekst toe te voegen**, **screenshots te maken** of **je bladwijzers te beheren**

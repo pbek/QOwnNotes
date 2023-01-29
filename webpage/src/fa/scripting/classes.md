@@ -116,7 +116,7 @@ for (var idx in notes) {
 }
 ```
 
-می توانید از مثال های بیشتر استفاده کنید که در آن TagApi در [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) استفاده می شود.
+You'll find more examples where TagApi is used in [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
 
 پنجره اصلی
 ----------

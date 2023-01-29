@@ -4,6 +4,7 @@
 - the obsolete (because of re-implementation of all XML parsing parts in QOwnNotes)
   Qt module `xmlpatterns` was now removed from all build process to save disk space
   (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
+- added more Korean, Croatian, French translation (thank you venusgirl, milotype, chocolatine)
 
 ## 23.1.3
 - the Evernote import was completely rewritten with stream support (QXMLStreamReader)

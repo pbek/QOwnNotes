@@ -116,7 +116,7 @@ for (var idx in notes) {
 }
 ```
 
-Vous trouverez ici d'autres exemples dans lesquels TagApi est utilisé [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
+You'll find more examples where TagApi is used in [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
 
 MainWindow
 ----------
@@ -153,21 +153,29 @@ class MainWindow {
 
 ### Exemple
 ```js
-// Force un re-chargement de la liste des notes
+// Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Créé le nouveau sous-dossier de notes "Mon joli dossier" dans le sous-dossier courant
-mainWindow.createNewNoteSubFolder("Mon joli dossier");
+// Creates a new note subfolder "My fancy folder" in the current subfolder
+mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Insère du HTML en tant que MarkDown dans la note courante
+// Inserts html in the current note as markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Définir l'espace de travail 'Edit' comme espace de travail par défaut
+// Set 'Edit' workspace as current workspace
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 
-// Sauter à l'étiquette "test" dans l'arbre des étiquettes
-// Un exemple est dispponible à cette adresse https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
+// Jump to the tag "test" in the tag tree
+// There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
+
+// Get all notes that are opened in tabs
+var noteIds = mainWindow.getNoteTabNoteIdList();
+noteIds.forEach(function (noteId){
+    var note = script.fetchNoteById(noteId);
+
+    // do something with the note
+});
 
 ```

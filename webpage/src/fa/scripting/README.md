@@ -19,7 +19,7 @@ Script {
 شما می توانید این پرونده های QML را در هر جایی که دوست دارید قرار داده و آنها را با افزودن به **تنظیمات اسکریپت نویسی** در **QOwnNotes** اضافه کنید (دکمه `افزودن اسکریپت`/`افزودن اسکریپت محلی` در دسترس قرار دارد).
 
 ::: tip
-برای شروع سریع [اسکریپت های نمونه](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples) را ملاحظه فرمایید.
+Take a look at the [example scripts](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples) to get started fast.
 :::
 
 در **تنظیمات اسکریپت نویسی** می توانید اسکریپت ها را مستقیماً از [**مخزن اسکریپت**](https://github.com/qownnotes/scripts) نیز نصب کنید.

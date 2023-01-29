@@ -7,7 +7,7 @@
 استنسخ الكود مباشرةً من مستودع git:
 
 ```bash
-git clone https://github.com/pbek/QOwnNotes.git -b release
+git clone https://github.com/pbek/QOwnNotes.git -b master
 cd QOwnNotes
 git submodule update --init
 ```
@@ -27,7 +27,7 @@ make
 قم بزيارة [QOwnNotes على GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-إذا أردت المساهمة في المشروع بكود مصدري، برجاء عمل طلبات السحب على فرع `develop`.
+If you want to contribute source code to the project please make your pull requests to the  `main` branch.
 :::
 
 ## ملفات الكود المصدري المضغوطة

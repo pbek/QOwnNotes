@@ -15,7 +15,7 @@ onNoteStored
 función onNoteStored (nota);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [on-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
+You may want to take a look at the example [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
 
 noteOpenedHook
 --------------
@@ -30,7 +30,7 @@ noteOpenedHook
 function noteOpenedHook(note);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [on-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
+You may want to take a look at the example [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
 
 noteDoubleClickedHook
 ---------------------
@@ -45,7 +45,7 @@ noteDoubleClickedHook
 function noteDoubleClickedHook(note);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-open.qml).
+You may want to take a look at the example [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-open.qml).
 
 insertMediaHook
 ---------------
@@ -64,7 +64,7 @@ Si esta función se define en varios scripts, entonces gana el primer script que
 function insertMediaHook (fileName, markdownText);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
+You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 insertAttachmentHook
 --------------------
@@ -83,7 +83,7 @@ Si esta función se define en varios scripts, entonces gana el primer script que
 function insertAttachmentHook (fileName, markdownText);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [ejemplo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
+You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 insertingFromMimeDataHook
 -------------------------
@@ -101,7 +101,7 @@ function insertingFromMimeDataHook(text, html);
 
 ```
 
-Es posible que desee echar un vistazo al ejemplo [ejemplo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml), [insertar-título-con-enlace-de-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) o [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-text-from-5pm-mail.qml).
+You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml), [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) or [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-text-from-5pm-mail.qml).
 
 handleNoteTextFileNameHook
 --------------------------
@@ -125,7 +125,7 @@ handleNoteTextFileNameHook
 function handleNoteTextFileNameHook (nota);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [ejemplo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) o [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
+You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) or [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
 
 handleNoteNameHook
 ------------------
@@ -145,7 +145,7 @@ handleNoteNameHook
 function handleNoteNameHook(note);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
+You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 Puede que no sea una buena idea usar este gancho si la configuración para usar el nombre de archivo como nombre de nota está activa.
 
@@ -169,7 +169,7 @@ handleNewNoteHeadlineHook
 function handleNewNoteHeadlineHook(headline);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [título-nuevo-de-nota-personalizado.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml).
+You may want to take a look at the example [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml).
 
 preNoteToMarkdownHtmlHook
 -------------------------
@@ -194,7 +194,7 @@ preNoteToMarkdownHtmlHook
 function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
+You may want to take a look at the example [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
 
 noteToMarkdownHtmlHook
 ----------------------
@@ -217,7 +217,7 @@ noteToMarkdownHtmlHook
 function noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [ejemplo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) o [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
+You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) or [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
 
 Consulte el [HTML compatible. Documentación del subconjunto](http://doc.qt.io/qt-5/richtext-html-subset.html) para obtener una lista de todos los estilos CSS admitidos.
 
@@ -237,7 +237,7 @@ encryptionHook
 function encryptionHook(text, password, decrypt);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml) or [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-rot13.qml).
+You may want to take a look at the example [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml) or [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-rot13.qml).
 
 noteTaggingHook
 ---------------
@@ -275,7 +275,7 @@ function noteTaggingHook(note, action, tagName, newTagName);
     -   la eliminación masiva de etiquetas de notas en la lista de notas eliminará esas etiquetas de sus notas
     -   la aplicación activará una serie de acciones `agregar` y `eliminar` para todas las etiquetas seleccionadas y sus hijos en todas las notas si las etiquetas se mueven en el panel de etiquetas
 
-Es posible que desee echar un vistazo al ejemplo [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) para implementar su propio mecanismo de etiquetado.
+You may want to take a look at the example [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) to implement your own tagging mechanism.
 
 ::: warning
 Asegúrese de que su acción `list` sea realmente rápida, ¡porque se ejecutará para cada nota cada vez que se recargue la carpeta de notas!
@@ -307,7 +307,7 @@ Esto también significa que debe crear usted mismo las etiquetas faltantes para 
 function noteTaggingByObjectHook(note, action, tag, newTagName);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [etiquetado-de-notas-por-objeto.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) para implementar su propio mecanismo de etiquetado.
+You may want to take a look at the example [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) to implement your own tagging mechanism.
 
 autocompletionHook
 ------------------
@@ -325,7 +325,7 @@ Puede devolver una lista de cadenas para agregar a la lista de autocompletar cua
 function callAutocompletionHook();
 ```
 
-Es posible que desee echar un vistazo al ejemplo [ autocompletado.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
+You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
 websocketRawDataHook
 --------------------
@@ -345,7 +345,7 @@ Este enlace se llama cuando se envían datos desde la extensión del navegador Q
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
 
-Es posible que desee echar un vistazo a los ejemplos [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-new-note.qml) y [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
+You may want to take a look at the examples [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-new-note.qml) and [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
 
 onDetachedProcessCallback
 -------------------------
@@ -366,7 +366,7 @@ Este gancho se llama cuando un hilo de script de [startDetachedProcess](methods-
 function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml).
+You may want to take a look at the example [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml).
 
 windowStateChangedHook
 --------------
@@ -381,7 +381,7 @@ windowStateChangedHook
 function windowStateChangedHook (windowState);
 ```
 
-Es posible que desee echar un vistazo al ejemplo [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/window-state-changed.qml).
+You may want to take a look at the example [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/window-state-changed.qml).
 
 workspaceSwitchedHook
 ----------------------
@@ -399,4 +399,4 @@ This hook is called when workspaces are switched.
 function workspaceSwitchedHook(oldUuid, newUuid);
 ```
 
-Es posible que desee echar un vistazo al ejemplo. [websocket-datos-sin procesar-nueva-nota.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/workspaces.qml).
+You may want to take a look at the example [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/workspaces.qml).

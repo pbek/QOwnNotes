@@ -7,7 +7,7 @@
 کد را مستقیماً از مخزن گیت وارسی کنید:
 
 ```bash
-git clone https://github.com/pbek/QOwnNotes.git -b release
+git clone https://github.com/pbek/QOwnNotes.git -b master
 cd QOwnNotes
 git submodule update --init
 ```
@@ -27,7 +27,7 @@ make
 [QOwnNotes را در گیت هاب](https://github.com/pbek/QOwnNotes) ملاحظه کنید.
 
 ::: tip
-در صورت تمایل برای سهیم کردن کد منبع با پروژه، لطفاً درخواست پول خود را به بخش `توسعه` ارائه دهید.
+If you want to contribute source code to the project please make your pull requests to the  `main` branch.
 :::
 
 ## بایگانی منبع
