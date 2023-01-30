@@ -2,6 +2,8 @@
 
 ## 23.1.5
 - a possible crash with the note history was fixed (for [#2716](https://github.com/pbek/QOwnNotes/issues/2716))
+- added a new editor color schema *Breezy Dark* by @N-Upchurch
+  (for [#2715](https://github.com/pbek/QOwnNotes/issues/2715))
 
 ## 23.1.4
 - the obsolete (because of re-implementation of all XML parsing parts in QOwnNotes)
