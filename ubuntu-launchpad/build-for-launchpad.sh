@@ -10,7 +10,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=22.11.3.1
+#QOWNNOTES_VERSION=23.1.4.1
 
 BRANCH=main
 #BRANCH=release
