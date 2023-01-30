@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 23.1.5
+- a possible crash with the note history was fixed (for [#2716](https://github.com/pbek/QOwnNotes/issues/2716))
+
 ## 23.1.4
 - the obsolete (because of re-implementation of all XML parsing parts in QOwnNotes)
   Qt module `xmlpatterns` was now removed from all build process to save disk space

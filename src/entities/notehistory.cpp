@@ -384,9 +384,11 @@ void NoteHistory::restoreForCurrentNoteFolder() {
         currentIndex = newCurrentIndex;
     }
 
-    // also set the current history item so it can be use to restore the current
+    // also set the current history item, so it can be used to restore the current
     // note after switching note folders
-    currentHistoryItem = noteHistory->at(currentIndex);
+    if (noteHistory->count() > currentIndex) {
+        currentHistoryItem = noteHistory->at(currentIndex);
+    }
 }
 
 QDebug operator<<(QDebug dbg, const NoteHistory &history) {
