@@ -130,7 +130,7 @@ void LogWidget::storeSettings() const {
 void LogWidget::log(LogWidget::LogType logType, const QString &text) {
     // ignore "libpng sRGB profile", "QXcbConnection: XCB error: 8" and
     // "QFileSystemWatcher::removePaths" warnings
-    if (logType == WarningLogType &&
+    if ((logType == WarningLogType || logType == InfoLogType) &&
         (text.contains(QLatin1String("libpng warning: iCCP: known incorrect sRGB profile")) ||
          text.contains(QLatin1String("fromIccProfile: failed minimal tag size sanity")) ||
          text.contains(QLatin1String("QXcbConnection: XCB error:")) ||
