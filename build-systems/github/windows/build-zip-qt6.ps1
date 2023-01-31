@@ -30,7 +30,7 @@ cd ..\release
 # http://doc.qt.io/qt-5/windows-deployment.html
 # Bug in Qt 5.14+: https://stackoverflow.com/questions/61045959/windeployqt-error-unable-to-find-the-platform-plugin
 # Don't use "--release"! (maybe because of debug log?)
-windeployqt --compiler-runtime --debug QOwnNotes.exe
+windeployqt --debug QOwnNotes.exe
 # these dlls where missed by windeployqt
 copy ..\..\Qt\$Env:QT_VERSION\mingw_64\bin\libwinpthread-1.dll .
 copy ..\..\Qt\$Env:QT_VERSION\mingw_64\bin\libgcc_s_seh-1.dll .
@@ -41,6 +41,7 @@ copy ..\..\Qt\$Env:QT_VERSION\mingw_64\bin\libgcc_s_seh-1.dll .
 copy ..\..\Qt\$Env:QT_VERSION\mingw_64\bin\libstdc++-6.dll .
 # create zip archive
 dir
-tree
+dir D:\a\QOwnNotes\QOwnNotes\release
+tree D:\a\QOwnNotes\QOwnNotes\release
 Compress-Archive -Path * -DestinationPath ..\QOwnNotes.zip
 $(CertUtil -hashfile ..\QOwnNotes.zip SHA256)[1] -replace " ","" | Out-File -FilePath ..\QOwnNotes.zip.sha256
