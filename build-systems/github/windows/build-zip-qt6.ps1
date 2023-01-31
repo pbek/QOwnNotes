@@ -30,7 +30,7 @@ cd ..\release
 # http://doc.qt.io/qt-5/windows-deployment.html
 # Bug in Qt 5.14+: https://stackoverflow.com/questions/61045959/windeployqt-error-unable-to-find-the-platform-plugin
 # Don't use "--release"! (maybe because of debug log?)
-windeployqt --debug QOwnNotes.exe
+windeployqt --compiler-runtime --debug QOwnNotes.exe
 # these dlls where missed by windeployqt
 copy ..\..\Qt\$Env:QT_VERSION\mingw_64\bin\libwinpthread-1.dll .
 copy ..\..\Qt\$Env:QT_VERSION\mingw_64\bin\libgcc_s_seh-1.dll .
