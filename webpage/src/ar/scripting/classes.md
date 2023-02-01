@@ -116,7 +116,7 @@ for (var idx in notes) {
 }
 ```
 
-You'll find more examples where TagApi is used in [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
+يمكنك أن تجد أمثلة أكثر على استخدام TagApi في [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
 
 MainWindow (النافذة الرئيسية)
 ----------
@@ -156,29 +156,30 @@ class MainWindow {
 
 ### مثال
 ```js
-// Force a reload of the note list
+// أعد تحميل قائمة الملاحظات بالقوة
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creates a new note subfolder "My fancy folder" in the current subfolder
-mainWindow.createNewNoteSubFolder("My fancy folder");
+// أنشى مجلد ملاحظات فرعي جديد باسم «مجلدي الفخيم» في المجلد الفرعي الحالي
+mainWindow.createNewNoteSubFolder("مجلدي الفخيم");
 
-// Inserts html in the current note as markdown
-mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
+// أضف هتمل في الملاحظة الحالية بصيغة ماركداون
+mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>عنوان</h2>بعض النص");
 
-// Set 'Edit' workspace as current workspace
-mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
+// اجعل مساحة العمل التي اسمها «تحرير» هي مساحة العمل الحالية
+mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("تحرير"));
 
-// Jump to the tag "test" in the tag tree
-// There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
-var tag = script.getTagByNameBreadcrumbList(["test"]);
+// انتقل إلى الوسم «تجربة» في قائمة الوسوم
+// يوجد مثال في
+// https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
+var tag = script.getTagByNameBreadcrumbList(["تجربة"]);
 mainWindow.jumpToTag(tag.id);
 
-// Get all notes that are opened in tabs
+// اجلب جميع الملاحظات المفتوحة في تبويبات
 var noteIds = mainWindow.getNoteTabNoteIdList();
 noteIds.forEach(function (noteId){
     var note = script.fetchNoteById(noteId);
 
-    // do something with the note
+    // افعل شيئا بالملاحظة
 });
 
 ```

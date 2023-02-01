@@ -158,7 +158,7 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 - **Les notes mises à la corbeille** peuvent être **restaurées** depuis votre serveur **Nextcloud / ownCloud**
 - **Les modifications externes** des fichiers de notes sont **surveillées** (les notes ou la liste de notes sont rechargées)
 - Prise en charge du **balisage hiérarchique des notes** et **sous-dossiers de notes**
-- Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
+- **Chiffrement** optionnel des notes. AES-256 est intégré, mais vous pouvez également utiliser des méthodes de chiffrement personnalisées telles que **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
 - Le **dossier de notes** peut être **librement choisi** (plusieurs dossiers de notes peuvent être utilisés)
 - **La recherche de mots incomplets** dans les notes est possible et les résultats de la recherche sont mis en évidence dans les notes
 - [**Extension de navigateur**](browser-extension.md) pour **ajouter des notes à partir du texte sélectionné**, **faire des copies d'écran** ou **gérer vos favoris**

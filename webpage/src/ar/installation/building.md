@@ -27,7 +27,7 @@ make
 قم بزيارة [QOwnNotes على GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-If you want to contribute source code to the project please make your pull requests to the  `main` branch.
+إذا أردت المساهمة في المشروع بكود مصدري، برجاء عمل طلبات السحب على فرع `main`.
 :::
 
 ## ملفات الكود المصدري المضغوطة

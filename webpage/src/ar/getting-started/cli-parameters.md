@@ -40,7 +40,7 @@ QOwnNotes --action actionShow_Todo_List
 ```
 
 ::: tip
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). فقط ابحث بالعنوان الإنجليزي للقائمة. لاحظ أن هذه النصوص قد تتغير بمرور الوقت.
+يمكنك الحصول على أسماء كائنات إجراءات القائمة من [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). فقط ابحث بالعنوان الإنجليزي للقائمة. لاحظ أن هذه النصوص قد تتغير بمرور الوقت.
 :::
 
 لتنفيذ [إجراء برمجي](../scripting/methods-and-objects.md#registering-a-custom-action)، استخدم <code dir="ltr">customAction_</code> متبوعًا باسم الإجراء المخصص. اسم الإجراء المخصص هو المُعامل الأول في نداء `script.registerCustomAction` في البُريمج.
