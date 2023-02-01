@@ -5,6 +5,8 @@
   application in read-only mode (for [#2717](https://github.com/pbek/QOwnNotes/issues/2717))
   - notes are also not stored in read-only mode anymore if they are changed by accident
   - some more main menu items are now disabled in read-only mode
+- added more Polish, Korean, Arabic, French translation (thank you hansa2662,
+  venusgirl, noureddin, chocolatine)
 
 ## 23.1.5
 - a possible crash with the note history was fixed (for [#2716](https://github.com/pbek/QOwnNotes/issues/2716))
