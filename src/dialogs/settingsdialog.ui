@@ -3950,99 +3950,13 @@
                   <string>Notes</string>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_5">
-                  <item row="3" column="0" colspan="2">
-                   <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
+                  <item row="1" column="0" colspan="2">
+                   <widget class="QCheckBox" name="ignoreAllExternalModificationsCheckBox">
                     <property name="toolTip">
-                     <string>Do this at your own risk!</string>
+                     <string>Check this if you want to ignore all external modifications while you are editing the current note.</string>
                     </property>
                     <property name="text">
-                     <string>Ignore all external note folder changes</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="7" column="0" colspan="2">
-                   <widget class="QCheckBox" name="newNoteAskHeadlineCheckBox">
-                    <property name="toolTip">
-                     <string>By default the headline will generated automatically</string>
-                    </property>
-                    <property name="text">
-                     <string>The shortcut to create a new note asks for a headline</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="0" colspan="2">
-                   <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
-                    <property name="toolTip">
-                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
-                    <property name="text">
-                     <string>Notify about all external modifications of the current note</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="8" column="0" colspan="2">
-                   <widget class="QCheckBox" name="useUNIXNewlineCheckBox">
-                    <property name="toolTip">
-                     <string>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</string>
-                    </property>
-                    <property name="text">
-                     <string>Use UNIX newline instead of native newline characters</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="10" column="0" colspan="2">
-                   <widget class="QCheckBox" name="restoreCursorPositionCheckBox">
-                    <property name="toolTip">
-                     <string>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</string>
-                    </property>
-                    <property name="text">
-                     <string>Restore cursor position when opening a note</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="9" column="0" colspan="2">
-                   <widget class="QCheckBox" name="restoreLastNoteAtStartupCheckBox">
-                    <property name="toolTip">
-                     <string>Disable this if you want to launch the application without opening a note</string>
-                    </property>
-                    <property name="text">
-                     <string>Open last accessed note at application startup</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="4" column="0">
-                   <widget class="QSpinBox" name="noteSaveIntervalTime">
-                    <property name="toolTip">
-                     <string/>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="minimum">
-                     <number>1</number>
-                    </property>
-                    <property name="maximum">
-                     <number>999</number>
-                    </property>
-                    <property name="value">
-                     <number>10</number>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="11" column="0" colspan="2">
-                   <widget class="QCheckBox" name="automaticNoteFolderDatabaseClosingCheckBox">
-                    <property name="toolTip">
-                     <string>Automatically close the note folder database to prevent problems with sync tools</string>
-                    </property>
-                    <property name="text">
-                     <string>Automatically close the note folder database</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="12" column="0" colspan="2">
-                   <widget class="QCheckBox" name="imageScaleDownCheckBox">
-                    <property name="text">
-                     <string>Scale images down when inserted into notes</string>
+                     <string>Ignore all external modifications of the current note</string>
                     </property>
                    </widget>
                   </item>
@@ -4056,24 +3970,40 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="1" column="0" colspan="2">
-                   <widget class="QCheckBox" name="ignoreAllExternalModificationsCheckBox">
+                  <item row="9" column="0" colspan="2">
+                   <widget class="QCheckBox" name="restoreLastNoteAtStartupCheckBox">
                     <property name="toolTip">
-                     <string>Check this if you want to ignore all external modifications while you are editing the current note.</string>
+                     <string>Disable this if you want to launch the application without opening a note</string>
                     </property>
                     <property name="text">
-                     <string>Ignore all external modifications of the current note</string>
+                     <string>Open last accessed note at application startup</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="4" column="1">
-                   <widget class="QLabel" name="noteSaveIntervalTimeLabel">
+                  <item row="14" column="0" colspan="2">
+                   <widget class="QCheckBox" name="legacyLinkingCheckBox">
                     <property name="toolTip">
-                     <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</string>
+                     <string notr="true">note://, file://media, file://attachments</string>
                     </property>
                     <property name="text">
-                     <string>note save interval time [sec]</string>
+                     <string>Use legacy way to link to notes, images and attachments</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="12" column="0" colspan="2">
+                   <widget class="QCheckBox" name="imageScaleDownCheckBox">
+                    <property name="text">
+                     <string>Scale images down when inserted into notes</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="10" column="0" colspan="2">
+                   <widget class="QCheckBox" name="restoreCursorPositionCheckBox">
+                    <property name="toolTip">
+                     <string>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</string>
+                    </property>
+                    <property name="text">
+                     <string>Restore cursor position when opening a note</string>
                     </property>
                    </widget>
                   </item>
@@ -4142,13 +4072,93 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </layout>
                    </widget>
                   </item>
-                  <item row="14" column="0" colspan="2">
-                   <widget class="QCheckBox" name="legacyLinkingCheckBox">
+                  <item row="8" column="0" colspan="2">
+                   <widget class="QCheckBox" name="useUNIXNewlineCheckBox">
+                    <property name="toolTip">
+                     <string>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</string>
+                    </property>
+                    <property name="text">
+                     <string>Use UNIX newline instead of native newline characters</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="QLabel" name="noteSaveIntervalTimeLabel">
+                    <property name="toolTip">
+                     <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</string>
+                    </property>
+                    <property name="text">
+                     <string>note save interval time [sec]</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0" colspan="2">
+                   <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
+                    <property name="toolTip">
+                     <string>Do this at your own risk!</string>
+                    </property>
+                    <property name="text">
+                     <string>Ignore all external note folder changes</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="0" colspan="2">
+                   <widget class="QCheckBox" name="newNoteAskHeadlineCheckBox">
+                    <property name="toolTip">
+                     <string>By default the headline will generated automatically</string>
+                    </property>
+                    <property name="text">
+                     <string>The shortcut to create a new note asks for a headline</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QSpinBox" name="noteSaveIntervalTime">
+                    <property name="toolTip">
+                     <string/>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="minimum">
+                     <number>1</number>
+                    </property>
+                    <property name="maximum">
+                     <number>999</number>
+                    </property>
+                    <property name="value">
+                     <number>10</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="11" column="0" colspan="2">
+                   <widget class="QCheckBox" name="automaticNoteFolderDatabaseClosingCheckBox">
+                    <property name="toolTip">
+                     <string>Automatically close the note folder database to prevent problems with sync tools</string>
+                    </property>
+                    <property name="text">
+                     <string>Automatically close the note folder database</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0" colspan="2">
+                   <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="text">
+                     <string>Notify about all external modifications of the current note</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="15" column="0" colspan="2">
+                   <widget class="QCheckBox" name="startInReadOnlyModeCheckBox">
                     <property name="toolTip">
                      <string notr="true">note://, file://media, file://attachments</string>
                     </property>
                     <property name="text">
-                     <string>Use legacy way to link to notes, images and attachments</string>
+                     <string>Start application in read-only mode</string>
                     </property>
                    </widget>
                   </item>
@@ -5297,13 +5307,6 @@ p, li { white-space: pre-wrap; }
                 <string>Editor options</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_59">
-                <item row="5" column="0" colspan="4">
-                 <widget class="QCheckBox" name="vimModeCheckBox">
-                  <property name="text">
-                   <string>Enable Vim mode (some QOwnNotes shortcuts will not work)</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="2" column="0" rowspan="2" colspan="4">
                  <widget class="QCheckBox" name="highlightCurrentLineCheckBox">
                   <property name="text">
@@ -5311,10 +5314,64 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
+                <item row="7" column="0">
+                 <widget class="QLabel" name="cursorWidthLabel">
+                  <property name="text">
+                   <string>Note-edit cursor width:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="3">
+                 <spacer name="horizontalSpacer_13">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="9" column="0" colspan="4">
+                 <widget class="QCheckBox" name="showLineNumbersInEditorCheckBox">
+                  <property name="text">
+                   <string>Show line numbers</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0" colspan="4">
+                 <widget class="QCheckBox" name="autoBracketRemovalCheckBox">
+                  <property name="toolTip">
+                   <string>You have to use the backspace key to remove the opening character</string>
+                  </property>
+                  <property name="text">
+                   <string>Enable automatic removal of matching closing characters</string>
+                  </property>
+                 </widget>
+                </item>
                 <item row="6" column="0" colspan="4">
                  <widget class="QCheckBox" name="disableCursorBlinkingCheckBox">
                   <property name="text">
                    <string>Disable cursor blinking</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="0" colspan="4">
+                 <widget class="QCheckBox" name="vimModeCheckBox">
+                  <property name="text">
+                   <string>Enable Vim mode (some QOwnNotes shortcuts will not work)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0" colspan="4">
+                 <widget class="QCheckBox" name="autoBracketClosingCheckBox">
+                  <property name="text">
+                   <string>Enable automatic closing of brackets and markdown formatting characters</string>
                   </property>
                  </widget>
                 </item>
@@ -5335,27 +5392,10 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="7" column="0">
-                 <widget class="QLabel" name="cursorWidthLabel">
-                  <property name="text">
-                   <string>Note-edit cursor width:</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                  </property>
-                 </widget>
-                </item>
                 <item row="4" column="0" colspan="4">
                  <widget class="QCheckBox" name="editorWidthInDFMOnlyCheckBox">
                   <property name="text">
                    <string>Only use editor width setting in distraction free mode</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0" colspan="4">
-                 <widget class="QCheckBox" name="autoBracketClosingCheckBox">
-                  <property name="text">
-                   <string>Enable automatic closing of brackets and markdown formatting characters</string>
                   </property>
                  </widget>
                 </item>
@@ -5370,36 +5410,6 @@ p, li { white-space: pre-wrap; }
                   <property name="icon">
                    <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
                     <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item row="7" column="3">
-                 <spacer name="horizontalSpacer_13">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="1" column="0" colspan="4">
-                 <widget class="QCheckBox" name="autoBracketRemovalCheckBox">
-                  <property name="toolTip">
-                   <string>You have to use the backspace key to remove the opening character</string>
-                  </property>
-                  <property name="text">
-                   <string>Enable automatic removal of matching closing characters</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="9" column="0" colspan="4">
-                 <widget class="QCheckBox" name="showLineNumbersInEditorCheckBox">
-                  <property name="text">
-                   <string>Show line numbers</string>
                   </property>
                  </widget>
                 </item>
@@ -6932,8 +6942,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

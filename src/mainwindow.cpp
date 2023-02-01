@@ -158,6 +158,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     qInstallMessageHandler(LogWidget::logMessageOutput);
 
     QSettings settings;
+
+    // Disable note editing if the user has set the start in read-only mode
+    if (settings.value(QStringLiteral("startInReadOnlyMode")).toBool()) {
+        settings.setValue(QStringLiteral("allowNoteEditing"), false);
+    }
+
     _noteEditIsCentralWidget =
         settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool();
 
@@ -10740,8 +10746,11 @@ void MainWindow::on_actionAllow_note_editing_triggered(bool checked) {
     setMenuEnabled(ui->menuEditNote, checked);
     setMenuEnabled(ui->menuInsert, checked);
     setMenuEnabled(ui->menuFormat, checked);
+    setMenuEnabled(ui->menuEncryption, checked);
     ui->actionPaste_image->setEnabled(checked);
     ui->actionReplace_in_current_note->setEnabled(checked);
+    ui->actionAutocomplete->setEnabled(checked);
+    ui->actionSplit_note_at_cursor_position->setEnabled(checked);
     _readOnlyButton->setHidden(checked);
 
     ui->actionAllow_note_editing->setText(checked ? tr("Disallow all note editing")

@@ -1160,7 +1160,7 @@ QVector<int> Note::fetchAllIdsByNoteTextPart(const QString &textPart) {
 }
 
 bool Note::storeNewText(QString text) {
-    if (!this->fileWriteable()) {
+    if (!this->fileWriteable() || !Utils::Misc::isNoteEditingAllowed()) {
         return false;
     }
 
@@ -1173,7 +1173,7 @@ bool Note::storeNewText(QString text) {
 void Note::setDecryptedText(QString text) { this->_decryptedNoteText = std::move(text); }
 
 bool Note::storeNewDecryptedText(QString text) {
-    if (text == this->_decryptedNoteText) {
+    if (text == this->_decryptedNoteText || !Utils::Misc::isNoteEditingAllowed()) {
         return false;
     }
 
