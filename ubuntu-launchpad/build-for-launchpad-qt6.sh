@@ -10,7 +10,7 @@
 #
 
 # uncomment this if you want to force a version
-QOWNNOTES_VERSION=23.1.6.5
+#QOWNNOTES_VERSION=23.1.6.5
 
 BRANCH=main
 #BRANCH=release
@@ -77,8 +77,8 @@ qownnotesSrcDir="qownnotes-qt6_${QOWNNOTES_VERSION}"
 # copy the src directory
 cp -R src $qownnotesSrcDir
 
-# TODO: Remove me after commit
-cp /QOwnNotes/src/dialogs/evernoteimportdialog.h $qownnotesSrcDir/dialogs
+# DONE: Remove me after commit
+#cp /QOwnNotes/src/dialogs/evernoteimportdialog.h $qownnotesSrcDir/dialogs
 
 # archive the source code
 tar -czf $qownnotesSrcDir.orig.tar.gz $qownnotesSrcDir
