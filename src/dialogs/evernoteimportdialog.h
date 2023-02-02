@@ -1,6 +1,8 @@
 #pragma once
 
 #include <QXmlStreamReader>
+#include <QHash>
+#include <QString>
 
 #include "masterdialog.h"
 
