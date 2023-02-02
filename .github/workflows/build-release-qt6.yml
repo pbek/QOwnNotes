@@ -8,6 +8,11 @@ on:
       - main
     tags-ignore:
       - '*'
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - '.github/workflows/build-release-qt6.yml'
   # For testing also on pull requests
   pull_request:
     paths:
