@@ -16,6 +16,25 @@ sudo apt-get install qownnotes
 
 [Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
 
+## QOwnNotes Qt6 Preview
+
+If you already want to try the Qt6 packages and are on Ubuntu 22.04 or newer
+you can use this repository:
+
+```bash
+# Remove Qt5 PPA in case you had it installed
+sudo add-apt-repository --remove ppa:pbek/qownnotes
+
+# Add Qt6 PPA
+sudo add-apt-repository ppa:pbek/qownnotes-qt6
+
+# Install QOwnNotes
+sudo apt-get update
+sudo apt-get install qownnotes
+```
+
+[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
+
 ## Older Ubuntu Linux distributions and derivatives
 
 Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).
