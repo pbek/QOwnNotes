@@ -48,7 +48,7 @@ cd $PROJECT_PATH || exit 1
 echo "Project path: $PROJECT_PATH"
 
 # checkout AUR repository
-git clone --depth=1 ssh://aur@aur.archlinux.org/qownnotes.git aur -b master
+git clone --depth=1 ssh://aur@aur.archlinux.org/qownnotes.git aur -b release
 
 # checkout the source code
 git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH

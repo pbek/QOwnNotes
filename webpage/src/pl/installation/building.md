@@ -7,7 +7,7 @@ Możesz także samodzielnie zbudować QOwnNotes z kodu źródłowego.
 Pobierz kod bezpośrednio z repozytorium git:
 
 ```bash
-git clone https://github.com/pbek/QOwnNotes.git -b master
+git clone https://github.com/pbek/QOwnNotes.git -b release
 cd QOwnNotes
 git submodule update --init
 ```
