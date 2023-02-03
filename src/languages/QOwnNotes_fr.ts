@@ -1342,12 +1342,12 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
 <source>Emphasized text</source>
-<translation>Texte mis en évidence</translation>
+<translation>Texte italique</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
 <source>Strong text</source>
-<translation>Texte davantage mis en évidence</translation>
+<translation>Texte gras</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="225"/>
@@ -1422,7 +1422,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
 <source>List item</source>
-<translation>Elément de liste</translation>
+<translation>Élément de liste</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
@@ -1488,12 +1488,12 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="230"/>
 <source>Current line background color</source>
-<translation>Couleur de fond de la ligne actuelle</translation>
+<translation>Couleur de fond de la ligne courante</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="233"/>
 <source>Trailing space</source>
-<translation>Espace de fuite</translation>
+<translation>Espace de fin</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="246"/>
@@ -2258,7 +2258,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1020"/>
 <source>&amp;Edit</source>
-<translation>&amp;Editer</translation>
+<translation>&amp;Éditer</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1024"/>
@@ -3974,7 +3974,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <location filename="../mainwindow.cpp" line="834"/>
 <source>Note edit</source>
-<translation>Editer la note</translation>
+<translation>Éditer la note</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="844"/>

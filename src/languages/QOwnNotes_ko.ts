@@ -1012,7 +1012,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation>FakeVim의 Ctrl-S와 같은 키 시퀀스를 해석하지 않고 일반 바로 가기로 처리합니다. 이를 통해 FakeVim의 일부 기능을 잃는 대신 핵심 기능에 더 쉽게 액세스할 수 있습니다.</translation>
+<translation>FakeVim의 Ctrl-S와 같은 키 시퀀스를 해석하지 않고 일반 단축키로 처리합니다. 이를 통해 FakeVim의 일부 기능을 잃는 대신 핵심 기능에 더 쉽게 액세스할 수 있습니다.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
@@ -1785,19 +1785,19 @@ File: QOwnNotes_en.ts</translation>
 <location filename="../widgets/layoutwidget.cpp" line="174"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
 <comment>Layout description</comment>
-<translation>왼쪽의 노트 목록, 태그 패널, 가운데의 노트 편집 패널 및 오른쪽의 미리 보기 패널과 같은 대부분의 패널은 기본적으로 사용 가능합니다.</translation>
+<translation>왼쪽의 노트 목록, 태그 패널, 가운데의 노트 편집 패널 및 오른쪽의 미리보기 패널과 같은 대부분의 패널은 기본적으로 사용 가능합니다.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="180"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another workspace to actually edit notes!</source>
 <comment>Layout description</comment>
-<translation>왼쪽의 노트 목록과 같은 대부분의 패널, 태그 패널 및 오른쪽의 미리 보기 패널만 기본적으로 사용할 수 있습니다. 실제로 노트를 편집하려면 다른 작업영역이 필요합니다!</translation>
+<translation>왼쪽의 노트 목록과 같은 대부분의 패널, 태그 패널 및 오른쪽의 미리보기 패널만 기본적으로 사용할 수 있습니다. 실제로 노트를 편집하려면 다른 작업영역이 필요합니다!</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="187"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
 <comment>Layout description</comment>
-<translation>왼쪽의 노트 목록, 태그 패널, 오른쪽의 노트 편집 패널 및 노트 편집 패널 위의 미리 보기 패널과 같은 대부분의 패널은 기본적으로 사용 가능합니다.</translation>
+<translation>왼쪽의 노트 목록, 태그 패널, 오른쪽의 노트 편집 패널 및 노트 편집 패널 위의 미리보기 패널과 같은 대부분의 패널은 기본적으로 사용 가능합니다.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="194"/>
@@ -1881,7 +1881,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../dialogs/localtrashdialog.ui" line="14"/>
 <source>Locally trashed notes</source>
-<translation>로컬 휴지통에 버려진 노트</translation>
+<translation>로컬 쓰레기 노트</translation>
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.ui" line="55"/>
@@ -1896,7 +1896,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../dialogs/localtrashdialog.ui" line="86"/>
 <source>Trashed</source>
-<translation>휴지통</translation>
+<translation>쓰레기</translation>
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="43"/>
@@ -2091,7 +2091,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../mainwindow.ui" line="1262"/>
 <source>main toolbar</source>
-<translation>주 도구 모음</translation>
+<translation>기본 도구 모음</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1296"/>
@@ -2161,7 +2161,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../mainwindow.ui" line="1444"/>
 <source>Show trashed notes on server</source>
-<translation>서버에 버린 노트 표시</translation>
+<translation>서버에 쓰레기 노트 표시</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1449"/>
@@ -2187,7 +2187,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../mainwindow.ui" line="1498"/>
 <source>&amp;Back in note history</source>
-<translation>노트 기록으로 돌아가기(&amp;B)</translation>
+<translation>노트 내역으로 돌아가기(&amp;B)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1414"/>
@@ -2318,7 +2318,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../mainwindow.ui" line="1171"/>
 <source>Toolbars</source>
-<translation>도구모음</translation>
+<translation>도구 모음</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1176"/>
@@ -2354,7 +2354,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../mainwindow.ui" line="1441"/>
 <source>Show remote trash</source>
-<translation>Show remote trash</translation>
+<translation>원격 휴지통 표시</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1458"/>
@@ -2375,7 +2375,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../mainwindow.ui" line="1510"/>
 <source>Forward in note history</source>
-<translation>노트 기록에서 앞으로</translation>
+<translation>노트 내역에서 앞으로</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1522"/>
@@ -2465,17 +2465,17 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../mainwindow.ui" line="1729"/>
 <source>&amp;Distraction free mode</source>
-<translation>집중 방해 없는 모드(&amp;D)</translation>
+<translation>산만하지 않은 모드(&amp;D)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1732"/>
 <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-<translation>주의 산만 자유 모드, 오른쪽 하단의 버튼과 함께 둘 수 있습니다</translation>
+<translation>산만하지 않은 모드, 오른쪽 하단에 버튼으로 남겨 둘 수 있습니다.</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1743"/>
 <source>Show &amp;toolbar</source>
-<translation>도구모음 표시(&amp;T)</translation>
+<translation>도구 모음 표시(&amp;T)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1751"/>
@@ -2521,7 +2521,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../mainwindow.ui" line="1838"/>
 <source>Format text &amp;italic</source>
-<translation>기울일꼴 텍스트 형식(&amp;I)</translation>
+<translation>기울임꼴 텍스트 형식(&amp;I)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1850"/>
@@ -2668,7 +2668,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../mainwindow.ui" line="2354"/>
 <source>Copy note headline</source>
-<translation>노트 헤드라인 복사</translation>
+<translation>노트 표제 복사</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2366"/>
@@ -2756,7 +2756,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../mainwindow.ui" line="2529"/>
 <source>Import bookmarks from server</source>
-<translation>서버에서 책갈피 가져오기</translation>
+<translation>서버에서 북마크 가져오기</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2534"/>
@@ -2864,7 +2864,7 @@ File: QOwnNotes_en.ts</translation>
 <location filename="../mainwindow.ui" line="1912"/>
 <location filename="../mainwindow.ui" line="1915"/>
 <source>The note edit panel will be above the preview panel</source>
-<translation>노트 편집 패널이 미리 보기 패널 위에 있습니다</translation>
+<translation>노트 편집 패널이 미리보기 패널 위에 있습니다</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1924"/>
@@ -2935,7 +2935,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../mainwindow.ui" line="2003"/>
 <source>Insert headline from note filename</source>
-<translation>노트 파일 이름에서 헤드라인 삽입</translation>
+<translation>노트 파일 이름에서 표제 삽입</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2017"/>
@@ -3079,7 +3079,7 @@ Restore current note?</source>
 <message>
 <location filename="../mainwindow.cpp" line="3578"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
-<translation>이 소프트웨어가 작동하려면 사용자 자신의 클라우드 노트 폴더를 선택해야 합니다!</translation>
+<translation>이 소프트웨어가 작동하려면 사용자 ownCloud 노트 폴더를 선택해야 합니다!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="3580"/>
@@ -3127,9 +3127,9 @@ Restore current note?</source>
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
 <translation>
-<numerusform>&lt;strong&gt;%n&lt;/strong&gt; 개의 선택한 노트를 제거하시겠습니까?
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt;개의 선택한 노트를 제거하시겠습니까?
 
-자신의 클라우드 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복원할 수 있습니다.</numerusform>
+ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복원할 수 있습니다.</numerusform>
 </translation>
 </message>
 <message>
@@ -3154,7 +3154,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.cpp" line="4576"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
-<numerusform>선택한 메모 % n 개를 &lt;strong&gt; %2 &lt;/ strong&gt;로 이동 하시겠습니까?</numerusform>
+<numerusform>%n개의 선택한 노트를 &lt;strong&gt;%2&lt;/strong&gt;로 이동하시겠습니까?</numerusform>
 </translation>
 </message>
 <message>
@@ -3218,7 +3218,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="5275"/>
 <source>Todo lists disabled!</source>
-<translation>작업관리 목록을 사용할 수 없습니다!</translation>
+<translation>할 일 목록을 사용할 수 없습니다!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5276"/>
@@ -3240,12 +3240,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="6172"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
-<translation>노트 버전은 현재 사용자의 클라우드 서버에서 로드되어 있습니다</translation>
+<translation>ownCloud 서버에서 현재 불러온 버전입니다</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6185"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
-<translation>휴지통에 버린 노트가 현재 ownCloud 서버에서 로드되어 있습니다</translation>
+<translation>쓰레기 노트를 현재 ownCloud 서버에서 불러왔습니다</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6423"/>
@@ -3498,7 +3498,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="10076"/>
 <source>Create new workspace</source>
-<translation>새로운 작업 공간 만들기</translation>
+<translation>새 작업 공간 만들기</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10076"/>
@@ -3564,7 +3564,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="11091"/>
 <source>Note headline '%1' was copied to the clipboard</source>
-<translation>참고 헤드라인 '%1'이(가) 클립보드에 복사되었습니다</translation>
+<translation>노트 표제 '%1'이(가) 클립보드에 복사되었습니다</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="11177"/>
@@ -3626,7 +3626,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="4900"/>
 <source>Set the notes folder. Current notes folder: </source>
-<translation>메모 폴더를 설정합니다. 현재 노트 폴더:</translation>
+<translation>노트 폴더를 설정합니다. 현재 노트 폴더: </translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5101"/>
@@ -3666,7 +3666,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="5296"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-<translation>작업관리 목록을 선택하지 않았습니다.&lt;br /&gt; 설정에서 &lt;strong&gt;할 일&lt;/strong&gt; 구성을 확인하십시오!</translation>
+<translation>할 일 목록을 선택하지 않았습니다.&lt;br /&gt; 설정에서 &lt;strong&gt;할 일&lt;/strong&gt; 구성을 확인하십시오!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6039"/>
@@ -3778,7 +3778,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="9444"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-<translation>노트의 이름을 변경하려면 노트 파일 이름을 헤드라인과 다르게 허용하는 옵션을 활성화해야 합니다.</translation>
+<translation>노트의 이름을 변경하려면 노트 파일 이름을 표제와 다르게 허용하는 옵션을 활성화해야 합니다.</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9619"/>
@@ -3981,12 +3981,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="1132"/>
 <source>encryption toolbar</source>
-<translation>암호화 도구모음</translation>
+<translation>암호화 도구 모음</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1139"/>
 <source>window toolbar</source>
-<translation>창 도구모음</translation>
+<translation>창 도구 모음</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1144"/>
@@ -4011,7 +4011,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="1694"/>
 <source>Leave distraction free mode</source>
-<translation>집중 방해 없는 모드 나가기</translation>
+<translation>산만하지 않은 모드 나가기</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1871"/>
@@ -4063,7 +4063,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.cpp" line="3373"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
-<numerusform>클라우드 동기화 프로세스를 차단할 수 있는 충돌하는 데이터베이스 복사본 &lt;strong&gt;%n&lt;/strong&gt;개의 자동 삭제를 계속하시겠습니까?</numerusform>
+<numerusform>ownCloud 동기화 프로세스를 차단할 수있는 &lt;strong&gt;%n&lt;/strong&gt;개의 충돌하는 데이터베이스 사본의 자동 삭제를 진행하시겠습니까?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4083,7 +4083,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="5871"/>
 <source>Note headline</source>
-<translation>노트 헤드라인</translation>
+<translation>노트 표제</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6985"/>
@@ -4145,7 +4145,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/navigationwidget.cpp" line="139"/>
 <source>headline %1</source>
-<translation>헤드라인 %1</translation>
+<translation>표제 %1</translation>
 </message>
 </context>
 <context>
@@ -4325,7 +4325,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/owncloudservice.cpp" line="229"/>
 <source>Your calendar username or password is incorrect!</source>
-<translation>캘린더 사용자 이름 또는 비밀번호가 잘못되었습니다!</translation>
+<translation>캘린더 사용자 이름 또는 암호가 잘못되었습니다!</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="289"/>
@@ -4391,12 +4391,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/owncloudservice.cpp" line="1112"/>
 <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-<translation>ownCloud 서버 오류: &lt;strong&gt; %1 &lt;/strong&gt; &lt;br/&gt; ownCloud 구성을 확인하십시오.</translation>
+<translation>ownCloud 서버 오류: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;ownCloud 구성을 확인하십시오.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1131"/>
 <source>You need to setup your ownCloud server!</source>
-<translation>OwnCloud 서버를 설정해야 합니다!</translation>
+<translation>ownCloud 서버를 설정해야 합니다!</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1142"/>
@@ -4426,28 +4426,28 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/owncloudservice.cpp" line="1257"/>
 <source>Done with loading trashed notes</source>
-<translation>휴지통에 넣은 노트 불러오기 완료</translation>
+<translation>쓰레기 노트 불러오기 완료</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1297"/>
 <source>No trashed notes</source>
-<translation>휴지통에 넣은 노트 없음</translation>
+<translation>쓰레기 노트 없음</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1298"/>
 <source>No trashed notes were found on the server.</source>
-<translation>서버에 휴지통에 넣은 노트를 찾을 수 없습니다.</translation>
+<translation>서버에 쓰레기 노트를 찾을 수 없습니다.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1320"/>
 <location filename="../services/owncloudservice.cpp" line="1345"/>
 <source>Error while loading todo lists!</source>
-<translation>할 일 목록을 로드하는 중 오류가 발생했습니다!</translation>
+<translation>할 일 목록을 불러오는 중 오류가 발생했습니다!</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1321"/>
 <source>Your CalDAV server didn't reply anything!</source>
-<translation>CalDAV 서버가 전혀 응답하지 않았습니다!</translation>
+<translation>CalDAV 서버에서 아무 응답이 없습니다!</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1346"/>
@@ -4457,7 +4457,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/owncloudservice.cpp" line="2024"/>
 <source>No bookmarks</source>
-<translation>북마크가 없음</translation>
+<translation>북마크 없음</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2025"/>
@@ -4745,7 +4745,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/owncloudservice.cpp" line="2141"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation>다음 클라우드 로그인 흐름 v2를 시작할 수 없습니다. 서버 url이 올바른지 확인하고 다음 클라우드 서버를 사용 중인지 확인하십시오!&lt;br /&gt;&lt;br /&gt;문제가 계속 발생하는 경우 서버의 관리 페이지에서 앱 암호를 직접 생성하십시오.</translation>
+<translation>Nextcloud 로그인 흐름 v2를 시작할 수 없습니다. 서버 url이 올바른지 확인하고 Nextcloud 서버를 사용 중인지 확인하십시오!&lt;br /&gt;&lt;br /&gt;문제가 계속 발생하는 경우 서버의 관리 페이지에서 앱 암호를 직접 만드십시오.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2155"/>
@@ -4870,7 +4870,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="991"/>
 <source>Export selected text as PDF (preview)</source>
-<translation>선택한 텍스트를 PDF로 내보내기 (미리 보기)</translation>
+<translation>선택한 텍스트를 PDF로 내보내기 (미리보기)</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1023"/>
@@ -5368,12 +5368,12 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="886"/>
 <source>Your ownCloud server</source>
-<translation>OwnCloud 서버</translation>
+<translation>ownCloud 서버</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1112"/>
 <source>ownCloud server url:</source>
-<translation>ownCloud 서버 URL:</translation>
+<translation>ownCloud 서버 url:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1134"/>
@@ -5398,7 +5398,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1295"/>
 <source>ownCloud server detected</source>
-<translation>ownCloud 서버가 탐지되었습니다</translation>
+<translation>ownCloud 서버가 탐지됨</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1329"/>
@@ -5408,7 +5408,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1312"/>
 <source>username and password correct</source>
-<translation>사용자 이름 및 암호가 올바릅니다</translation>
+<translation>사용자 이름 및 암호가 정확함</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1268"/>
@@ -5510,7 +5510,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1593"/>
 <source>Proxy server requires authentication</source>
-<translation>프록시 서버에 인증이 필요합니다</translation>
+<translation>프록시 서버 인증 필요</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1650"/>
@@ -5550,7 +5550,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3065"/>
 <source>Optimize preview colors for dark mode desktop themes</source>
-<translation>어두운 모드의 바탕화면 테마에 대한 미리보기 색상을 최적화합니다</translation>
+<translation>어두운 모드의 바탕화면 테마에 대한 미리보기 색상 최적화</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3052"/>
@@ -5603,7 +5603,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="252"/>
 <source>Shortcuts</source>
-<translation>바로가기</translation>
+<translation>단축키</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4657"/>
@@ -5620,7 +5620,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3320"/>
 <source>Main window shortcuts</source>
-<translation>기본 창 바로가기</translation>
+<translation>기본 창 단축키</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4097"/>
@@ -5690,7 +5690,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1814"/>
 <source>Disable heartbeat</source>
-<translation>핵심 특징 사용 안 함</translation>
+<translation>핵심 기능 사용 안 함</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2757"/>
@@ -5737,7 +5737,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4146"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;이 옵션을 선택하면 최근 노트가 편집되지 않은 경우에도 외부 수정에 대한 알림이 항상 표시됩니다. 권장은 &lt;span style=" font-style:italic;"&gt;선택 해제&lt;/span&gt;되어 있습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;이 옵션을 선택하면 최근 노트가 편집되지 않은 경우에도 외부 수정에 대한 알림이 항상 표시됩니다. 권장은 &lt;span style=" font-style:italic;"&gt;선택 해제&lt;/span&gt;로 되어 있습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4086"/>
@@ -5785,7 +5785,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4393"/>
 <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-<translation>이 버튼늘 사용하여 모든 설정을 지우고 로컬 작업관리 데이터베이스를 제거한 후 QOwnotes를 종료할 수 있습니다.</translation>
+<translation>이 버튼늘 사용하여 모든 설정을 지우고 로컬 할 일 데이터베이스를 제거한 후 QOwnotes를 종료할 수 있습니다.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4403"/>
@@ -5832,12 +5832,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1783"/>
 <source>App heartbeat</source>
-<translation>앱 핵심 특징</translation>
+<translation>앱 핵심 기능</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1801"/>
 <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-<translation>작은 핵심 특징 요청은 QOwnNotes가 실행되는 동안 주기적으로 전송됩니다. 누군가 QOWNNotes를 사용하고 있다는 것을 알려 개발자를 기쁘게 합니다.</translation>
+<translation>작은 핵심 기능 요청은 QOwnNotes가 실행되는 동안 주기적으로 전송됩니다. 누군가 QOWNNotes를 사용하고 있다는 것을 알려 개발자를 기쁘게 합니다.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2548"/>
@@ -5892,7 +5892,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="239"/>
 <source>Toolbars</source>
-<translation>도구모음</translation>
+<translation>도구 모음</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="311"/>
@@ -5959,7 +5959,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="721"/>
 <source>Use git to keep a local history of your notes</source>
-<translation>Git을 사용하여 노트의 로컬 기록 유지</translation>
+<translation>Git을 사용하여 노트의 로컬 내역 유지</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="851"/>
@@ -5974,7 +5974,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="900"/>
 <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>QOWNNotes가 노트 버전 및 휴지통 노트에 액세스할 수 있도록 하려면 ownCloud 서버에 최신 버전의 &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (최소 버전 QOWNNOTESAPI_MIN_VERSION)를 설치하십시오.</translation>
+<translation>QOWNNotes가 노트 버전 및 쓰레기 노트에 액세스할 수 있도록 하려면 ownCloud 서버에 최신 버전의 &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (최소 버전 QOWNNOTESAPI_MIN_VERSION)를 설치하십시오.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="926"/>
@@ -6007,7 +6007,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1175"/>
 <source>Your ownCloud username</source>
-<translation>OwnCloud 사용자 이름</translation>
+<translation>ownCloud 사용자 이름</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1185"/>
@@ -6088,7 +6088,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2150"/>
 <source>Saving an item also closes the Todo list</source>
-<translation>항목을 저장하면 할 일 목록도 닫힙니다</translation>
+<translation>항목을 저장하면 할 일 목록도 닫기</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2262"/>
@@ -6313,7 +6313,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3094"/>
 <source>Start application hidden</source>
-<translation>시작 응용 프로그램 숨김</translation>
+<translation>시작 응용 프로그램 숨기기</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3104"/>
@@ -6353,12 +6353,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4107"/>
 <source>By default the headline will generated automatically</source>
-<translation>기본적으로 헤드라인은 자동으로 생성됩니다</translation>
+<translation>기본적으로 표제는 자동으로 생성됩니다</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4110"/>
 <source>The shortcut to create a new note asks for a headline</source>
-<translation>새 노트를 만드는 바로가기가 헤드라인을 요청합니다</translation>
+<translation>새 노트를 만드는 단축키가 표제 요청</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4136"/>
@@ -6437,7 +6437,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5368"/>
 <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-<translation>Vim 모드 사용 (일부 QOWNNotes 바로 가기가 작동하지 않음)</translation>
+<translation>Vim 모드 사용 (일부 QOWNNotes 단축키가 작동하지 않음)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="654"/>
@@ -6482,7 +6482,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="864"/>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-<translation>응용 프로그램 내부에서 ownCloud 서버에 액세스하여 휴지통 노트 및 노트 버전을 관리하거나 노트를 공유할 수 있습니다. 이 통합은 파일 동기화를 수행하지 않습니다. 파일을 동기화하려면 여전히 ownCloud 동기화 클라이언트를 설치해야 합니다.</translation>
+<translation>응용 프로그램 내부에서 ownCloud 서버에 액세스하여 쓰레기 노트 및 노트 버전을 관리하거나 노트를 공유할 수 있습니다. 이 통합은 파일 동기화를 수행하지 않습니다. 파일을 동기화하려면 여전히 ownCloud 동기화 클라이언트를 설치해야 합니다.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1380"/>
@@ -6562,12 +6562,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3357"/>
 <source>Local shortcut</source>
-<translation>로컬 바로가기</translation>
+<translation>로컬 단축키</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3362"/>
 <source>Global shortcut</source>
-<translation>전역 바로가기</translation>
+<translation>전역 단축키</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3974"/>
@@ -6652,7 +6652,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4828"/>
 <source>Time to wait before refreshing the preview after typing:</source>
-<translation>다음을 입력한 후 미리 보기를 새로 고치기 전에 기다리는 시간:</translation>
+<translation>입력 후 미리보기를 새로 고치기 전에 대기할 시간:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4835"/>
@@ -6717,7 +6717,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5438"/>
 <source>Indent:</source>
-<translation>들여 쓰기:</translation>
+<translation>들여쓰기:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5840"/>
@@ -6774,7 +6774,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6431"/>
 <source>Tag name for commands notes</source>
-<translation>명령 참고의 태그 이름</translation>
+<translation>명령 노트의 태그 이름</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6438"/>
@@ -6824,7 +6824,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6387"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
-<translation>QOwnNotes를 웹 클리퍼 또는 북마크 관리용으로 사용하려면&lt;a href="%2"&gt;Chrome 웹 스토어&lt;/a&gt; 또는 &lt;a href="%3"&gt;Firefox 추가 기능 페이지&lt;/a&gt;에서 &lt;a href="%1"&gt;웹 지원 브라우저 확장&lt;/a&gt;을 설치합니다.</translation>
+<translation>QOwnNotes를 웹 자르기 또는 북마크 관리용으로 사용하려면&lt;a href="%2"&gt;Chrome 웹 스토어&lt;/a&gt; 또는 &lt;a href="%3"&gt;Firefox 추가 기능 페이지&lt;/a&gt;에서 &lt;a href="%1"&gt;웹 지원 브라우저 확장&lt;/a&gt;을 설치합니다.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6403"/>
@@ -6874,12 +6874,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5669"/>
 <source>Show notes in the note list with preview</source>
-<translation>미리 보기로 노트 목록에 노트 표시</translation>
+<translation>미리보기로 노트 목록에 노트 표시</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5699"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
-<translation>노트 목록 대신 모든 하위 폴더와 함께 노트 트리를 사용합니다 (노트 폴더에 대해 설정된 경우)</translation>
+<translation>노트 목록 대신 모든 하위 폴더와 함께 노트 트리 사용 (노트 폴더에 대해 설정된 경우)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6033"/>
@@ -6894,7 +6894,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6145"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
-<translation>휴지통에 버려진 노트의 복사본을 보관할 수 있는 로컬 휴지통</translation>
+<translation>로컬 휴지통을 사용하여 쓰레기 노트의 사본 보관</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6181"/>
@@ -6987,7 +6987,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5888"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-<translation>노트 편집 패널을 고정 중앙 위젯으로 사용하여 창 또는 다른 패널의 크기를 조정할 수 있습니다</translation>
+<translation>창 또는 기타 패널이 크기 조정되는 경우 노트 편집 패널을 고정된 중앙 위젯으로 사용</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6010"/>
@@ -7017,7 +7017,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6087"/>
 <source>Remove trashed notes after:</source>
-<translation>다음 이후에 휴지통에 버린 노트 제거:</translation>
+<translation>다음 이후에 쓰레기 노트 제거:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6094"/>
@@ -7028,7 +7028,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6113"/>
 <source>Automatically remove trashed notes after a certain time</source>
-<translation>특정 시간이 지나면 자동으로 휴지통에 버린 노트 제거</translation>
+<translation>특정 시간이 지나면 자동으로 쓰레기 노트 제거</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6139"/>
@@ -7053,7 +7053,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5523"/>
 <source>External git log command to show the git versions of a note</source>
-<translation>노트의 Git 버전을 표시하는 외부 Git log 명령</translation>
+<translation>노트의 Git 버전을 표시하는 외부 Git 로그 명령</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5529"/>
@@ -7065,7 +7065,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <location filename="../dialogs/settingsdialog.ui" line="5549"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>이 설정을 사용하면 노트를 마우스 오른쪽 버튼으로 클릭하면 Git 버전을 보여주는 새로운 메뉴 항목이 나타납니다.</translation>
+<translation>이 설정을 사용하면 노트를 마우스 오른쪽 버튼으로 클릭하면 Git 버전을 보여주는 새 메뉴 항목이 나타납니다.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5662"/>
@@ -7448,7 +7448,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2091"/>
 <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-<translation>이렇게 하면 다음에 작업관리 대화상자를 열 때 서버에서 모든 작업관리 목록 항목이 다시 로드됩니다.</translation>
+<translation>이렇게 하면 다음에 할 일 대화상자를 열 때 서버에서 모든 할 일 목록 항목을 다시 불러옵니다.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2094"/>
@@ -7494,12 +7494,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4895"/>
 <source>View text right to left (RTL)</source>
-<translation>오른쪽에서 왼쪽으로 텍스트 보기(RTL)</translation>
+<translation>오른쪽에서 왼쪽으로 텍스트 보기 (RTL)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3338"/>
 <source>Search for shortcut</source>
-<translation>바로가기 검색</translation>
+<translation>단축키 검색</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2134"/>
@@ -7534,7 +7534,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="822"/>
 <source>Allow note file name to be different from headline</source>
-<translation>메모 파일 이름이 헤드라인과 다를 수 있도록 허용</translation>
+<translation>노트 파일 이름이 표제와 다를 수 있도록 허용</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3954"/>
@@ -7608,7 +7608,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4521"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QOownNotes에 대한 &lt;span style=" font-weight:600;"&gt;질문이나 문제&lt;/span&gt;가 있는 경우, &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOownNotes 문제 페이지&lt;/a&gt;의 &lt;span style=" font-weight:600;"&gt;문제&lt;/span&gt;에 이 텍스트 (또는 이 텍스트의 일부)를 &lt;span style=" font-weight:600;"&gt;복사하여 붙여넣기&lt;/span&gt; 할 수 있습니다. 너무 민감한 데이터는 이 정보에 숨겨져 있습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QOownNotes에 대한 &lt;span style=" font-weight:600;"&gt;질문 또는 문제&lt;/span&gt;가 있는 경우, &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOownNotes 문제 페이지&lt;/a&gt;의 &lt;span style=" font-weight:600;"&gt;문제&lt;/span&gt;에 이 텍스트 (또는 이 텍스트의 일부)를 &lt;span style=" font-weight:600;"&gt;복사하여 붙여넣기&lt;/span&gt; 할 수 있습니다. 너무 민감한 데이터는 이 정보에 숨겨져 있습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4608"/>
@@ -7653,7 +7653,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="1646"/>
 <source>Shortcut already assigned</source>
-<translation>바로 가기가 이미 할당됨</translation>
+<translation>단축키가 이미 할당됨</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="1839"/>
@@ -7670,7 +7670,7 @@ QOwnNotesAPI 버전: %2</translation>
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-<translation>OwnCloud 서버에 연결하는 동안 오류가 발생했습니다!
+<translation>ownCloud 서버에 연결하는 동안 오류가 발생했습니다!
 또한 QOwnNotesAPI 앱을 설치하고 활성화해야 합니다!
 
 연결 오류 메시지: </translation>
@@ -7830,29 +7830,29 @@ Connection error message: </source>
 <location filename="../dialogs/settingsdialog.cpp" line="1533"/>
 <location filename="../dialogs/settingsdialog.cpp" line="1573"/>
 <source>Undefined shortcut</source>
-<translation>정의되지 않은 바로 가기</translation>
+<translation>정의되지 않은 단축키</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="1536"/>
 <location filename="../dialogs/settingsdialog.cpp" line="1576"/>
 <source>Assign a new shortcut</source>
-<translation>새 바로 가기 할당</translation>
+<translation>새 단축키 할당</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="1536"/>
 <location filename="../dialogs/settingsdialog.cpp" line="1577"/>
 <source>Reset to default shortcut</source>
-<translation>기본 바로 가기로 재설정</translation>
+<translation>기본 단축키로 재설정</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="1552"/>
 <source>Clear shortcut</source>
-<translation>바로가기 지우기</translation>
+<translation>단축키 지우기</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="1647"/>
 <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-<translation>&lt;strong&gt;%1&lt;/strong&gt; 바로가기가&lt;strong&gt;%2&lt;/strong&gt;에 이미 할당되었습니다! 바로가기로 이동하시겠습니까?</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; 단축키가&lt;strong&gt;%2&lt;/strong&gt;에 이미 할당되었습니다! 단축키로 이동하시겠습니까?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2787"/>
@@ -8041,7 +8041,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2111"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-<translation>로컬 데이터베이스를 지우시겠습니까? 구성된 노트 폴더와 캐시된 작업관리 항목도 제거됩니다!</translation>
+<translation>로컬 데이터베이스를 지우시겠습니까? 구성된 노트 폴더와 캐시된 할 일 항목도 제거됩니다!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2114"/>
@@ -8064,7 +8064,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/sharedialog.ui" line="40"/>
 <source>Share note on ownCloud</source>
-<translation>OwnCloud에 노트 공유</translation>
+<translation>ownCloud에 노트 공유</translation>
 </message>
 <message>
 <location filename="../dialogs/sharedialog.ui" line="73"/>
@@ -8079,12 +8079,12 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/sharedialog.ui" line="47"/>
 <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-<translation>자신의 클라우드 서버에서 현재 노트 파일을 공개적으로 공유합니다. 생성된 링크를 다른 사용자가 파일을 보거나 다운로드할 수 있도록 다른 사용자 다운로드할 수 있습니다.</translation>
+<translation>ownCloud 서버에서 현재 오트 파일을 공개적으로 공유합니다. 생성된 링크를 다른 사용자에게 보내 파일을 보거나 다운로드할 수 있도록 할 수 있습니다.</translation>
 </message>
 <message>
 <location filename="../dialogs/sharedialog.cpp" line="63"/>
 <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-<translation>다른 사용자와 노트를 공유하려면 자체 클라우드 데스크톱 동기화 도구를 사용하여 노트를 서버와 동기화해야 합니다!</translation>
+<translation>다른 사용자와 노트를 공유하려면 ownCloud 데스크톱 동기화 도구를 사용하여 노트를 서버와 동기화해야 합니다!</translation>
 </message>
 </context>
 <context>
@@ -8852,7 +8852,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
 <source>Select toolbar</source>
-<translation>도구모음 선택</translation>
+<translation>도구 모음 선택</translation>
 </message>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
@@ -8867,7 +8867,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
 <source>Add new Toolbar</source>
-<translation>새로운 도구모음 추가</translation>
+<translation>새 도구 모음 추가</translation>
 </message>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
@@ -8877,7 +8877,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
 <source>Delete selected toolbar</source>
-<translation>선택한 도구모음 삭제</translation>
+<translation>선택한 도구 모음 삭제</translation>
 </message>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
@@ -8913,7 +8913,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
 <source>moves the selected toolbar item down</source>
-<translation>선택된 도구모음 항목을 아래로 이동</translation>
+<translation>선택된 도구 모음 항목을 아래로 이동</translation>
 </message>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
@@ -8977,7 +8977,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/trashdialog.ui" line="14"/>
 <source>Trashed notes</source>
-<translation>휴지통에 넣은 노트</translation>
+<translation>쓰레기 노트</translation>
 </message>
 <message>
 <location filename="../dialogs/trashdialog.ui" line="55"/>
@@ -8992,7 +8992,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="31"/>
 <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-<translation>&lt;h3&gt; 느리지만 노트 버전이 있는 경우 &lt;/h3&gt;&lt;p&gt;노트는 모든 버전의 클라우드 서버에서 복원됩니다.&lt;/p&gt; &lt;p&gt; 자체 클라우드 동기화를 통해 QOwnNotes와 동기화될 때까지 기다려야 합니다.&lt;/p&gt;</translation>
+<translation>&lt;h3&gt;느리지만 노트 버전이 있는 경우&lt;/h3&gt;&lt;p&gt;노트는 모든 버전의 클라우드 서버에서 복원됩니다.&lt;/p&gt;&lt;p&gt;ownCloud 동기화를 통해 QOwnNotes와 동기화될 때까지 기다려야 합니다.&lt;/p&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="42"/>
@@ -9002,7 +9002,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="44"/>
 <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-<translation>&lt;h3&gt;빠르지만 버전이 없는 경우 &lt;/h3&gt;&lt;p&gt;노트는 미리 보기의 텍스트로 작성됩니다.&lt;/p&gt;&lt;p&gt;사용자 클라우드 서버의 노트 버전은 복원되지 않으며 노트는 휴지통에 남아 있습니다.&lt;/p&gt;&lt;p&gt; 노트와 노트 버전은 나중에 언제든지 복원할 수 있습니다.&lt;/p&gt;</translation>
+<translation>&lt;h3&gt;빠르지만 버전이 없는 경우 &lt;/h3&gt;&lt;p&gt;노트는 미리보기의 텍스트로 작성됩니다.&lt;/p&gt;&lt;p&gt;wCloud 서버의 노트 버전은 복원되지 않으며 노트는 휴지통에 남아 있습니다.&lt;/p&gt;&lt;p&gt;나중에 언제든지 노트와 해당 버전은 복원할 수 있습니다.&lt;/p&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="55"/>
@@ -9027,7 +9027,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="172"/>
 <source>Delete selected trashed note on server?</source>
-<translation>서버에서 선택한 휴지통 노트를 삭제하시겠습니까?</translation>
+<translation>서버에서 선택한 쓰레기 노트를 삭제하시겠습니까?</translation>
 </message>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="190"/>
@@ -9037,7 +9037,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="191"/>
 <source>Deleting trashed note failed with status code: %1</source>
-<translation>상태 코드 %1로 인해 휴지통 노트를 삭제하지 못했습니다</translation>
+<translation>상태 코드 %1로 인해 쓰레기 노트를 삭제하지 못했습니다</translation>
 </message>
 </context>
 <context>
@@ -9472,7 +9472,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="342"/>
 <source>Open ownCloud settings</source>
-<translation>OwnCloud 설정 열기</translation>
+<translation>ownCloud 설정 열기</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="384"/>
@@ -9492,12 +9492,12 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="319"/>
 <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-<translation>ownCloud 서버에서 노트 버전과 휴지통 노트에 액세스하려면 지금 QOwnNotes를 구성할 수 있습니다. 나중에 할 수도 있습니다.</translation>
+<translation>ownCloud 서버에서 노트 버전과 쓰레기 노트에 액세스하려면 지금 QOwnNotes를 구성할 수 있습니다. 나중에 할 수도 있습니다.</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="349"/>
 <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-<translation>노트를 사용자의 클라우드 서버와 동기화하려면 ownCloud 동기화 클라이언트 (또는 다른 동기화 클라이언트)가 필요합니다.</translation>
+<translation>어떤 경우든 ownCloud 서버와 노트를 동기화하려면 ownCloud 동기화 클라이언트 (또는 다른 동기화 클라이언트)가 필요합니다.</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="391"/>

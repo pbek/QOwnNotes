@@ -12,19 +12,26 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-سپس [Qt ساز](https://www.qt.io/download-open-source) را بارگیری کرده، پرونده پروژه `src/QOwnNotes.pro` را باز نموده و بر روی **ساخت** / **ساخت پروژه QOwnNotes** کلیک کنید.
+Then download [Qt Creator](https://www.qt.io/download-open-source), you will also need the packages `qtwebsockets` and `qt5compat` to build QOwnNotes with Qt6 (only `qtwebsockets` for Qt5). If you build under Windows, you want to stick to *MinGw 64-bit*.
 
-یا می توانید آن را مستقیماً در ترمینال خود بسازید:
+Afterwards open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
+
+Or you can build it directly in your terminal:
 
 ```bash
 cd src
+
+# build binary translation files if you want another language than English
+lrelease QOwnNotes.pro
+
+# prepare build process and build the application
 qmake
 make
 ```
 
-لطفاً در سهیم کردن کد منبع با این پروژه، ارائه پیشنهادات یا گزارش مشکلات در [صفحه مسائل QOwnNotes](https://github.com/pbek/QOwnNotes/issues) دریغ نفرمایید.
+Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
 
-[QOwnNotes را در گیت هاب](https://github.com/pbek/QOwnNotes) ملاحظه کنید.
+Visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
 If you want to contribute source code to the project please make your pull requests to the  `main` branch.
@@ -32,8 +39,8 @@ If you want to contribute source code to the project please make your pull reque
 
 ## بایگانی منبع
 
-بایگانی های منبع QOwnNotes را در [بایگانی منبع QOwnNotes](https://download.tuxfamily.org/qownnotes/src/) خواهید یافت.
+You will find source archives of QOwnNotes on [QOwnNotes source archive](https://download.tuxfamily.org/qownnotes/src/).
 
-بایگانی های منبع به شکلی شبیه به این در دسترس هستند:
+The source archives will be accessible like that:
 
 `https://download.tuxfamily.org/qownnotes/src/qownnotes-20.10.1.tar.xz`

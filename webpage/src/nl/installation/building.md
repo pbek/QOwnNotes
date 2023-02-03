@@ -8,23 +8,30 @@ Check de code rechtstreeks uit de git-repository:
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b release
-cd QEigenOpmerkingen
+cd QOwnNotes
 git submodule update --init
 ```
 
-Download vervolgens [Qt Creator](https://www.qt.io/download-open-source), open het projectbestand `src/QOwnNotes.pro` en klik op **Build** / **Build Project QOwnNotes**.
+Then download [Qt Creator](https://www.qt.io/download-open-source), you will also need the packages `qtwebsockets` and `qt5compat` to build QOwnNotes with Qt6 (only `qtwebsockets` for Qt5). If you build under Windows, you want to stick to *MinGw 64-bit*.
 
-Of u kunt het rechtstreeks in uw terminal bouwen:
+Afterwards open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
+
+Or you can build it directly in your terminal:
 
 ```bash
 cd src
+
+# build binary translation files if you want another language than English
+lrelease QOwnNotes.pro
+
+# prepare build process and build the application
 qmake
-maken
+make
 ```
 
-Voel je vrij om broncode bij te dragen aan dit project, suggesties te doen of problemen te melden op de [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
+Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
 
-Bezoek [QOwnNotes op GitHub](https://github.com/pbek/QOwnNotes).
+Visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
 If you want to contribute source code to the project please make your pull requests to the  `main` branch.
@@ -32,8 +39,8 @@ If you want to contribute source code to the project please make your pull reque
 
 ## Bronarchief
 
-U vindt bronarchieven van QOwnNotes op [QOwnNotes source archive](https://download.tuxfamily.org/qownnotes/src/).
+You will find source archives of QOwnNotes on [QOwnNotes source archive](https://download.tuxfamily.org/qownnotes/src/).
 
-De bronarchieven zullen als volgt toegankelijk zijn:
+The source archives will be accessible like that:
 
 `https://download.tuxfamily.org/qownnotes/src/qownnotes-20.10.1.tar.xz`

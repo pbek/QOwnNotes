@@ -16,17 +16,35 @@ sudo apt-get install qownnotes
 
 [Téléchargement direct](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
 
-## Anciennes distributions et dérivés Ubuntu Linux
+## Aperçu de QOwnNotes Qt6
+
+Si vous souhaitez les paquets Qt6 et que vous êtes sous Ubuntu 22.04 ou plus récent vous pouvez utiliser ce dépôt :
+
+```bash
+# Enlève le PPA Qt5 au cas où il serait installé
+sudo add-apt-repository --remove ppa:pbek/qownnotes
+
+# Ajoute le PPA Qt6
+sudo add-apt-repository ppa:pbek/qownnotes-qt6
+
+# Installe QOwnNotes
+sudo apt-get update
+sudo apt-get install qownnotes
+```
+
+[Téléchargement direct](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
+
+## Anciennes distributions et dérivés d'Ubuntu Linux
 
 Il est préférable d'utiliser l'AppImage des versions [QOwnNotes sur GitHub](https://github.com/pbek/QOwnNotes/releases).
 
-Vous pouvez ensuite modifier les autorisations d'exécution sur le fichier :
+Vous pouvez ensuite modifier les autorisations d'exécution du fichier :
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Vous devriez ensuite être en mesure d'exécuter l'AppImage pour utiliser QOwnNotes.
+Vous devriez ensuite être en mesure d'exécuter l'AppImage pour lancer QOwnNotes.
 
 ## Dépôt OBS
 
@@ -40,7 +58,7 @@ Exécutez la commande shell suivante pour approuver le dépôt.
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
 ```
 
-Exécutez les commandes shell suivantes pour ajouter le dépôt et installer QOwnNotes à partir de là.
+Exécutez les commandes shell suivantes pour ajouter le dépôt puis installer QOwnNotes.
 
 ```bash
 sudo su -

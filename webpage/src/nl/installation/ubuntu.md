@@ -16,31 +16,49 @@ sudo apt-get install qownnotes
 
 [Directe download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
 
-## Oudere Ubuntu Linux-distributies en derivaten
+## QOwnNotes Qt6 Preview
 
-Probeer het beste de AppImage van[QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases) te gebruiken.
+If you already want to try the Qt6 packages and are on Ubuntu 22.04 or newer you can use this repository:
 
-Vervolgens kunt u de uitvoeringsrechten voor het bestand wijzigen:
+```bash
+# Remove Qt5 PPA in case you had it installed
+sudo add-apt-repository --remove ppa:pbek/qownnotes
+
+# Add Qt6 PPA
+sudo add-apt-repository ppa:pbek/qownnotes-qt6
+
+# Install QOwnNotes
+sudo apt-get update
+sudo apt-get install qownnotes
+```
+
+[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
+
+## Older Ubuntu Linux distributions and derivatives
+
+Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).
+
+Then you can change the execute-permissions on the file:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Daarna zou u de AppImage moeten kunnen uitvoeren om QOwnNotes uit te voeren.
+Afterwards you should be able to execute the AppImage to run QOwnNotes.
 
-## OBS-opslagplaats
+## OBS Repository
 
-Mogelijk kunt u ook de QOwnNotes gebruiken op Ubuntu-versies die niet meer worden bijgewerkt op Ubuntu Launchpad, dan kunt u de repositories van de [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) gebruiken.
+You may also be able to use the QOwnNotes on Ubuntu versions that aren't any more updated on Ubuntu Launchpad then you can use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 
-Hieronder staan voorbeeldoproepen voor de xUbuntu 16.10-repository.
+Below are example calls for the xUbuntu 16.10 repository.
 
-Voer de volgende shellopdracht uit om de repository te vertrouwen.
+Run the following shell command to trust the repository.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
 ```
 
-Voer de volgende shell-opdrachten uit om de repository toe te voegen en vanaf daar QOwnNotes te installeren.
+Run the following shell commands to add the repository and install QOwnNotes from there.
 
 ```bash
 sudo su -
@@ -49,4 +67,4 @@ apt-get update
 apt-get install qownnotes
 ```
 
-[Directe download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)

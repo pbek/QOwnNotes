@@ -16,31 +16,49 @@ sudo apt-get install qownnotes
 
 [Direkter Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
 
-## Ältere Ubuntu Linux-Distributionen und -Derivate
+## QOwnNotes Qt6 Preview
 
-Versuchen Sie am besten, das AppImage aus [QOwnNotes Releases auf GitHub](https://github.com/pbek/QOwnNotes/releases) zu verwenden.
+If you already want to try the Qt6 packages and are on Ubuntu 22.04 or newer you can use this repository:
 
-Dann können Sie die Ausführungsberechtigungen für die Datei ändern:
+```bash
+# Remove Qt5 PPA in case you had it installed
+sudo add-apt-repository --remove ppa:pbek/qownnotes
+
+# Add Qt6 PPA
+sudo add-apt-repository ppa:pbek/qownnotes-qt6
+
+# Install QOwnNotes
+sudo apt-get update
+sudo apt-get install qownnotes
+```
+
+[Direkter Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
+
+## Older Ubuntu Linux distributions and derivatives
+
+Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).
+
+Then you can change the execute-permissions on the file:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Anschließend sollten Sie AppImage ausführen können, um dann QOwnNotes auszuführen.
+Afterwards you should be able to execute the AppImage to run QOwnNotes.
 
-## OBS Repository
+## OBS-Repository
 
 Möglicherweise können Sie auch die QOwnNotes unter Ubuntu-Versionen verwenden, die auf Ubuntu Launchpad nicht mehr aktualisiert wurden. Anschließend können Sie die Repositorys des [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) verwenden.
 
-Im Folgenden finden Sie Beispielaufrufe für das xUbuntu 16.10-Repository.
+Below are example calls for the xUbuntu 16.10 repository.
 
-Führen Sie den folgenden Shell-Befehl aus, um dem Repository zu vertrauen.
+Run the following shell command to trust the repository.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
 ```
 
-Führen Sie die folgenden Shell-Befehle aus, um das Repository hinzuzufügen und QOwnNotes von dort aus zu installieren.
+Run the following shell commands to add the repository and install QOwnNotes from there.
 
 ```bash
 sudo su -

@@ -12,19 +12,26 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Luego descargue [Qt Creator](https://www.qt.io/download-open-source), abra el archivo del proyecto `src / QOwnNotes.pr` y haga clic en **Build** / **BuildProject QOwnNotes** .
+Then download [Qt Creator](https://www.qt.io/download-open-source), you will also need the packages `qtwebsockets` and `qt5compat` to build QOwnNotes with Qt6 (only `qtwebsockets` for Qt5). If you build under Windows, you want to stick to *MinGw 64-bit*.
 
-O puede construirlo directamente en su terminal:
+Afterwards open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
+
+Or you can build it directly in your terminal:
 
 ```bash
 cd src
+
+# build binary translation files if you want another language than English
+lrelease QOwnNotes.pro
+
+# prepare build process and build the application
 qmake
 make
 ```
 
-No dude en contribuir con el código fuente a este proyecto, hacer sugerencias o informar problemas en la [página de problemas de QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
+Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
 
-Visite [QOwnNotes en GitHub](https://github.com/pbek/QOwnNotes).
+Visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
 If you want to contribute source code to the project please make your pull requests to the  `main` branch.
@@ -32,8 +39,8 @@ If you want to contribute source code to the project please make your pull reque
 
 ## Archivo fuente
 
-Encontrará archivos fuente de QOwnNotes en [archivo fuente QOwnNotes](https://download.tuxfamily.org/qownnotes/src/).
+You will find source archives of QOwnNotes on [QOwnNotes source archive](https://download.tuxfamily.org/qownnotes/src/).
 
-Los archivos de origen serán accesibles así:
+The source archives will be accessible like that:
 
 `https://download.tuxfamily.org/qownnotes/src/qownnotes-20.10.1.tar.xz`

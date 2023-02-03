@@ -12,28 +12,35 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-ثم نزّل [Qt Creator](https://www.qt.io/download-open-source)، وافتح ملف المشروع `src/QOwnNotes.pro`، وانقر على **Build** &gt; **Build Project QOwnNotes**.
+Then download [Qt Creator](https://www.qt.io/download-open-source), you will also need the packages `qtwebsockets` and `qt5compat` to build QOwnNotes with Qt6 (only `qtwebsockets` for Qt5). If you build under Windows, you want to stick to *MinGw 64-bit*.
 
-أو يمكنك بناؤه مباشرةً من الطرفية:
+Afterwards open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
+
+Or you can build it directly in your terminal:
 
 ```bash
 cd src
+
+# build binary translation files if you want another language than English
+lrelease QOwnNotes.pro
+
+# prepare build process and build the application
 qmake
 make
 ```
 
-رجاءً لا تتردد في المشاركة في هذا المشروع بكود برمجي أو اقتراحات أو إبلاغ عن مشاكل على [صفحة مسائل QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
+Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
 
-قم بزيارة [QOwnNotes على GitHub](https://github.com/pbek/QOwnNotes).
+Visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-إذا أردت المساهمة في المشروع بكود مصدري، برجاء عمل طلبات السحب على فرع `main`.
+If you want to contribute source code to the project please make your pull requests to the  `main` branch.
 :::
 
 ## ملفات الكود المصدري المضغوطة
 
-يمكنك العثور على الملفات المضغوطة لكود QOwnNotes المصدري في [أرشيف مصادر QOwnNotes](https://download.tuxfamily.org/qownnotes/src/).
+You will find source archives of QOwnNotes on [QOwnNotes source archive](https://download.tuxfamily.org/qownnotes/src/).
 
-يمكن الوصول إلى الملفات المضغوطة للكود المصدري برابط مثل هذا:
+The source archives will be accessible like that:
 
 `https://download.tuxfamily.org/qownnotes/src/qownnotes-20.10.1.tar.xz`

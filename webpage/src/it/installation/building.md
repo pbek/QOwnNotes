@@ -12,28 +12,35 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Quindi scarica [Qt Creator](https://www.qt.io/download-open-source), apri il file di progetto `src/QOwnNotes.pro` e fai clic su **Build** / **Build Project QOwnNotes**.
+Then download [Qt Creator](https://www.qt.io/download-open-source), you will also need the packages `qtwebsockets` and `qt5compat` to build QOwnNotes with Qt6 (only `qtwebsockets` for Qt5). If you build under Windows, you want to stick to *MinGw 64-bit*.
 
-Oppure puoi crearlo direttamente dal tuo terminale:
+Afterwards open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
+
+Or you can build it directly in your terminal:
 
 ```bash
 cd src
+
+# build binary translation files if you want another language than English
+lrelease QOwnNotes.pro
+
+# prepare build process and build the application
 qmake
 make
 ```
 
-Sentiti libero di contribuire con il codice sorgente a questo progetto, dare suggerimenti o segnalare problemi nella [pagina dei problemi di QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
+Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
 
-Visita [QOwnNotes su GitHub](https://github.com/pbek/QOwnNotes).
+Visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-Se vuoi contribuire con il codice sorgente al progetto, invia le tue richieste pull al ramo `main`.
+If you want to contribute source code to the project please make your pull requests to the  `main` branch.
 :::
 
 ## Archivio sorgente
 
-Troverai gli archivi sorgente di QOwnNotes in [archivio sorgente QOwnNotes](https://download.tuxfamily.org/qownnotes/src/).
+You will find source archives of QOwnNotes on [QOwnNotes source archive](https://download.tuxfamily.org/qownnotes/src/).
 
-Gli archivi sorgente saranno accessibili in questo modo:
+The source archives will be accessible like that:
 
 `https://download.tuxfamily.org/qownnotes/src/qownnotes-20.10.1.tar.xz`

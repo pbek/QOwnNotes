@@ -12,28 +12,35 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Następnie pobierz [Qt Creator](https://www.qt.io/download-open-source), otwórz plik projektu `src/QOwnNotes.pro` i kliknij **Build<//2> / **Build Project QOwnNotes** .</p>
+Then download [Qt Creator](https://www.qt.io/download-open-source), you will also need the packages `qtwebsockets` and `qt5compat` to build QOwnNotes with Qt6 (only `qtwebsockets` for Qt5). If you build under Windows, you want to stick to *MinGw 64-bit*.
 
-Możesz też zbudować go bezpośrednio w swoim terminalu:
+Afterwards open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
+
+Or you can build it directly in your terminal:
 
 ```bash
 cd src
+
+# build binary translation files if you want another language than English
+lrelease QOwnNotes.pro
+
+# prepare build process and build the application
 qmake
 make
 ```
 
-Zachęcamy do dodawania kodu źródłowego do tego projektu, zgłaszania sugestii lub zgłaszania problemów na [stronie problemów z QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
+Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
 
-Odwiedź [QOwnNotes na GitHub](https://github.com/pbek/QOwnNotes).
+Visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-Jeśli chcesz wnieść kod źródłowy do projektu, prześlij swoje żądania ściągnięcia na `Główny` Oddział.
+If you want to contribute source code to the project please make your pull requests to the  `main` branch.
 :::
 
 ## Archiwum źródłowe
 
-Archiwa źródłowe QOwnNotes znajdziesz w [archiwum źródłowym QOwnNotes](https://download.tuxfamily.org/qownnotes/src/).
+You will find source archives of QOwnNotes on [QOwnNotes source archive](https://download.tuxfamily.org/qownnotes/src/).
 
-Archiwa źródłowe będą dostępne w następujący sposób:
+The source archives will be accessible like that:
 
 `https://download.tuxfamily.org/qownnotes/src/qownnotes-20.10.1.tar.xz`
