@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.2.0
+- the toolbar selector in the *Toolbar settings* was fixed (mainly for Qt6,
+  for [#2721](https://github.com/pbek/QOwnNotes/issues/2721))
+
 ## 23.1.6
 - there now is a checkbox in the *General settings* that allows to start the
   application in read-only mode (for [#2717](https://github.com/pbek/QOwnNotes/issues/2717))
