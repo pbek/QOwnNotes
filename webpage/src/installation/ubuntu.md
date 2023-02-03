@@ -35,6 +35,8 @@ sudo apt-get install qownnotes
 
 [Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
+If you find any issues please report them on [QOwnNotes Issues on GitHub](https://github.com/pbek/QOwnNotes/issues)!
+
 ## Older Ubuntu Linux distributions and derivatives
 
 Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).

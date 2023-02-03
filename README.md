@@ -145,8 +145,13 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Then download [Qt Creator](http://www.qt.io/download-open-source), open the
-project file `src/QOwnNotes.pro` and click on *Build / Run*.
+Then download [Qt Creator](https://www.qt.io/download-open-source), you will also
+need the packages `qtwebsockets` and `qt5compat` to build QOwnNotes with Qt6
+(only `qtwebsockets` for Qt5). If you build under Windows, you want to stick to
+*MinGw 64-bit*.
+
+Afterwards open the project file `src/QOwnNotes.pro` and click on
+**Build** / **Build Project QOwnNotes**.
 
 Or you can build it directly in your terminal:
 
@@ -156,6 +161,7 @@ cd src
 # build binary translation files if you want another language than English
 lrelease QOwnNotes.pro
 
+# prepare build process and build the application
 qmake
 make -j4
 ```
