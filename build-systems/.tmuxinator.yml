@@ -21,3 +21,5 @@ windows:
             - slackware/build-for-slackware.sh
         - snap:
             - snap/build-for-launchpad-snap.sh
+        - launchpad-qt6:
+            - ../ubuntu-launchpad/build-for-launchpad-qt6.sh
