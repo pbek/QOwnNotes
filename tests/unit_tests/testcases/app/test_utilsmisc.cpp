@@ -166,10 +166,6 @@ void TestUtilsMisc::testToHumanReadableByteSize() {
 }
 
 void TestUtilsMisc::testTransformEvernoteImportCodeBlock() {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-    QSKIP("not supported on qt6 yet");
-#endif
-
     QString content = R"(<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export2.dtd">
 <en-export export-date="20181021T174838Z" application="Evernote/Windows" version="6.x">
@@ -191,9 +187,6 @@ phpinfo();
 }
 
 void TestUtilsMisc::testTransformEvernoteImportCodeBlock2() {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-    QSKIP("not supported on qt6 yet");
-#endif
     QString content = R"(<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export2.dtd">
 <en-export export-date="20181029T161628Z" application="Evernote/Windows" version="6.x">
@@ -241,9 +234,6 @@ return false;
 }
 
 void TestUtilsMisc::testTransformEvernoteImportRussian() {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-    QSKIP("not supported on qt6 yet");
-#endif
     QString content = R"(<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export2.dtd">
 <en-export export-date="20191111T145250Z" application="Evernote/Windows" version="6.x">
@@ -255,9 +245,6 @@ void TestUtilsMisc::testTransformEvernoteImportRussian() {
 }
 
 void TestUtilsMisc::testTransformEvernoteImportHyperlinks() {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-    QSKIP("not supported on qt6 yet");
-#endif
     QString content = R"(<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export2.dtd">
 <en-export export-date="20210924T214029Z" application="Evernote/Windows" version="6.x">
