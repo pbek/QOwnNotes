@@ -33,8 +33,6 @@ env:
   QMAKE_PROJECT: "QOwnNotes.pro"
   PUBLISHER: "Patrizio Bekerle"
   REPO_DIR: "/home/runner/work/QOwnNotes"
-#  QT_VERSION: 6.5.0
-  QT_VERSION: 6.4.2
   QT_MODULES: "qtwebsockets qt5compat"
   QMAKE: qmake6
   CORES: 16
@@ -45,6 +43,8 @@ jobs:
     permissions:
       contents: write  # for actions/create-release to create a release
     runs-on: ubuntu-latest
+    env:
+      QT_VERSION: 6.5.0
     outputs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
       release_id: ${{ steps.create_release.outputs.id }}
@@ -181,6 +181,8 @@ jobs:
   build-snap:
     needs: create_release
     runs-on: ubuntu-18.04
+    env:
+      QT_VERSION: 6.5.0
     name: '🐧 Snap Ubuntu 18.04'
     steps:
 
@@ -264,7 +266,11 @@ jobs:
   build-windows:
     name: '🧊 Windows Server 2022'
     needs: create_release
-    runs-on: windows-2022
+    # https://github.com/pbek/QOwnNotes/issues/2558 error on windows-2022!
+    runs-on: windows-2019
+    env:
+      # Qt 6.5 windeployqt doesn't deploy DLLs!
+      QT_VERSION: 6.4.2
     continue-on-error: true
     steps:
 
@@ -346,7 +352,7 @@ jobs:
     needs: create_release
     runs-on: macos-latest
     env:
-      # Qt 6.5 doesn't support macOS 10 any more
+      # Qt 6.5 doesn't support macOS 10 anymore!
       QT_VERSION: 6.4.2
     steps:
 
