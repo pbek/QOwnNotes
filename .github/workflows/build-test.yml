@@ -117,7 +117,7 @@ jobs:
       name: Install Qt 6 on Windows
       uses: jurplel/install-qt-action@v3
       with:
-        aqtversion: '==2.0.0'
+        aqtversion: '==2.1.*'
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
         modules: qtwebsockets qt5compat
