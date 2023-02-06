@@ -152,8 +152,8 @@ jobs:
       run: |
         cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
         ../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
-    - if: contains( matrix.os, 'windows')
-      name: Do Windows tests
+    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '5.' )
+      name: Do Qt5 Windows tests
       run: |
         cd ..\tests
         qmake DEFINES+=INTEGRATION_TESTS
@@ -171,6 +171,17 @@ jobs:
         # echo windeployqt 
         windeployqt --debug tests.exe
         # echo test2
+        .\tests.exe -txt
+    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
+      name: Do Qt6 Windows tests
+      run: |
+        cd ..\tests
+        qmake6 DEFINES+=INTEGRATION_TESTS
+        make
+        copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
+        copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
+        copy ..\bin\tests\tests.exe .
+        windeployqt --debug tests.exe
         .\tests.exe -txt
 
       #
