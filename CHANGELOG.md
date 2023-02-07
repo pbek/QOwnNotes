@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 23.2.1
+- the webpage title fetching in the link dialog is now made asynchronously to
+  reduce waiting time if no link title should be preset automatically
+  (for [#2726](https://github.com/pbek/QOwnNotes/issues/2726))
+  - the title parsing was also improved to guess more webpage titles
+  - the progress bars for other download processes, like the update-, attachment-
+    or dictionary-dialog was also improved to be able to handle larger download sizes
+
 ## 23.2.0
 - the toolbar selector in the *Toolbar settings* was fixed (mainly for Qt6,
   for [#2721](https://github.com/pbek/QOwnNotes/issues/2721))

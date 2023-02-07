@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QListWidgetItem>
+#include <QNetworkAccessManager>
 
 #include "masterdialog.h"
 
@@ -26,7 +27,7 @@ class LinkDialog : public MasterDialog {
     QString getLinkName() const;
     void setLinkName(const QString &text);
     QString getLinkDescription() const;
-    static QString getTitleForUrl(const QUrl &url);
+    static QString getTitleFromHtml(const QString &html);
     QString getSelectedHeading() const;
 
    private slots:
@@ -36,6 +37,8 @@ class LinkDialog : public MasterDialog {
     void on_urlEdit_textChanged(const QString &arg1);
     void addFileUrl();
     void addDirectoryUrl();
+    void slotReplyFinished(QNetworkReply *reply);
+    void downloadProgress(qint64 bytesReceived, qint64 bytesTotal);
 
     void on_headingSearchLineEdit_textChanged(const QString &arg1);
 
@@ -50,7 +53,9 @@ class LinkDialog : public MasterDialog {
     int firstVisibleNoteListRow;
     bool eventFilter(QObject *obj, QEvent *event) override;
     QString selectedNoteText;
+    QNetworkAccessManager *_networkManager;
     void setupFileUrlMenu();
     void loadNoteHeadings() const;
     void doAccept();
+    void startTitleFetchRequest(const QUrl& url);
 };

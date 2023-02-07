@@ -3079,6 +3079,8 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 
     // show the newest entry first
     QStringList files = notesDir.entryList(filters, QDir::Files, QDir::Time);
+    qDebug() << __func__ << " - 'files': " << files;
+
     Note::applyIgnoredNotesSetting(files);
     //    qDebug() << __func__ << " - 'files': " << files;
 

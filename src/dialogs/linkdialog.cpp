@@ -14,6 +14,7 @@
 #include <QRegularExpression>
 #include <QSettings>
 #include <QTimer>
+#include <QNetworkReply>
 
 #include "ui_linkdialog.h"
 
@@ -22,8 +23,12 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     ui->setupUi(this);
     ui->tabWidget->setCurrentIndex(page);
     on_tabWidget_currentChanged(page);
+    ui->downloadProgressBar->hide();
+    _networkManager = new QNetworkAccessManager(this);
+    QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)), this,
+                     SLOT(slotReplyFinished(QNetworkReply *)));
 
-    // disallow ] characters, because they will break markdown links
+    // disallow ] characters, because they will break Markdown links
     ui->nameLineEdit->setValidator(
         new QRegularExpressionValidator(QRegularExpression(R"([^\]]*)")));
     firstVisibleNoteListRow = 0;
@@ -195,19 +200,18 @@ void LinkDialog::on_headingListWidget_doubleClicked(const QModelIndex &index) {
 }
 
 /**
- * @brief Fetches the title of a webpage
- * @param url
+ * @brief Returns the title of an html page
+ *
+ * @param html
  * @return
  */
-QString LinkDialog::getTitleForUrl(const QUrl &url) {
-    const QString html = Utils::Misc::downloadUrl(url);
-
+QString LinkDialog::getTitleFromHtml(const QString &html) {
     if (html.isEmpty()) {
         return {};
     }
 
     // parse title from webpage
-    QRegularExpression regex(QStringLiteral(R"(<title>(.*)<\/title>)"),
+    QRegularExpression regex(QStringLiteral(R"(<title.*>(.*)<\/title>)"),
                              QRegularExpression::MultilineOption |
                                  QRegularExpression::DotMatchesEverythingOption |
                                  QRegularExpression::InvertedGreedinessOption);
@@ -229,6 +233,48 @@ QString LinkDialog::getTitleForUrl(const QUrl &url) {
 
     // trim whitespaces and return title
     return title.simplified();
+}
+
+/**
+ * Shows the download progress
+ */
+void LinkDialog::downloadProgress(qint64 bytesReceived, qint64 bytesTotal) {
+    ui->downloadProgressBar->setMaximum(static_cast<int>(bytesTotal/1000));
+    ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived/1000));
+    ui->downloadProgressBar->setToolTip(Utils::Misc::toHumanReadableByteSize(bytesReceived) + " / " +
+                                   Utils::Misc::toHumanReadableByteSize(bytesTotal));
+}
+
+/**
+ *
+ *
+ * @param reply
+ */
+void LinkDialog::slotReplyFinished(QNetworkReply *reply) {
+    if (reply == nullptr) {
+        return;
+    }
+
+    reply->deleteLater();
+    ui->downloadProgressBar->hide();
+
+    qDebug() << "Reply from " << reply->url().path();
+    QByteArray data = reply->readAll();
+    qDebug() << __func__ << " - 'data.size': " << data.size();
+
+    if (reply->error() != QNetworkReply::NoError &&
+        reply->error() != QNetworkReply::OperationCanceledError) {
+        qWarning() << QStringLiteral("Network error: %1").arg(reply->errorString());
+
+        return;
+    }
+
+    const QString title = getTitleFromHtml(data);
+
+    if (!title.isEmpty()) {
+        ui->nameLineEdit->setText(title);
+    }
+
 }
 
 /**
@@ -312,11 +358,8 @@ void LinkDialog::on_urlEdit_textChanged(const QString &arg1) {
 
     // try to get the title of the webpage if no link name was set
     if (url.scheme().startsWith(QStringLiteral("http")) && ui->nameLineEdit->text().isEmpty()) {
-        const QString title = getTitleForUrl(url);
 
-        if (!title.isEmpty()) {
-            ui->nameLineEdit->setText(title);
-        }
+        startTitleFetchRequest(url);
     }
 }
 
@@ -369,4 +412,25 @@ void LinkDialog::on_tabWidget_currentChanged(int index) {
     } else {
         ui->searchLineEdit->setFocus();
     }
+}
+
+void LinkDialog::startTitleFetchRequest(const QUrl& url) {
+    ui->downloadProgressBar->show();
+    QNetworkRequest networkRequest(url);
+
+#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
+    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+#else
+    networkRequest.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
+#endif
+
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
+    // try to ensure the network is accessible
+    _networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
+
+    QNetworkReply *reply = _networkManager->get(networkRequest);
+
+    connect(reply, SIGNAL(downloadProgress(qint64, qint64)), this,
+            SLOT(downloadProgress(qint64, qint64)));
 }
