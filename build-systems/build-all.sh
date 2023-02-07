@@ -43,6 +43,7 @@ exit
 
 # fallback if tmuxinator doesn't work
 ../ubuntu-launchpad/build-for-launchpad.sh
+../ubuntu-launchpad/build-for-launchpad-qt6.sh
 ../obs/build-for-obs.sh
 aur/build-for-aur.sh
 gentoo/build-for-gentoo.sh
