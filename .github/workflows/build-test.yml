@@ -116,7 +116,7 @@ jobs:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: contains( matrix.os, 'windows') matrix.qt-version == '6.2.0'
+    - if: contains( matrix.os, 'windows') && matrix.qt-version == '6.2.0'
       name: Install Qt Qt 6.2.0 on Windows
       uses: jurplel/install-qt-action@v3
       with:
