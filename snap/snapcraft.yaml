@@ -65,6 +65,7 @@ parts:
     # remove the default desktop file
     override-build: |
       export QT_SELECT=qt5
+      pwd
       cd src
       rm PBE.QOwnNotes.desktop
       echo "#define RELEASE \"Snapcraft.io\"" > release.h
