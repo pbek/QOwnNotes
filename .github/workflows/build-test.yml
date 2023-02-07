@@ -10,12 +10,14 @@ on:
     # if [[ ${changed_file} = src* ]] || [[ ${changed_file} = tests* ]] || [[ ${changed_file} = build-systems/github/* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
     paths:
       - 'src/**'
+      - 'snap/**'
       - 'tests/**'
       - 'build-systems/github/**'
       - '.github/workflows/build-test.yml'
   pull_request:
     paths:
       - 'src/**'
+      - 'snap/**'
       - 'tests/**'
   workflow_dispatch:
 #  schedule:
