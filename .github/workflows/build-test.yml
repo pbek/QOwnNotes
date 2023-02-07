@@ -77,14 +77,14 @@ jobs:
             qt-version: '6.5.0'
             experimental: true
           # Snapcraft
-          - os: ubuntu-18.04
+          - os: ubuntu-20.04
             qt-version: '5.15.2'
             experimental: false
     steps:
     - uses: actions/checkout@v3
       with:
         submodules: true
-    - if: contains( matrix.os, 'ubuntu-18')
+    - if: contains( matrix.os, 'ubuntu-20')
       name: Install Snapcraft
       uses: samuelmeuli/action-snapcraft@v1
       with:
@@ -208,15 +208,15 @@ jobs:
       # Build QOwnNotes
       #
 
-    - if: true && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && !contains( matrix.os, 'ubuntu-18')
+    - if: true && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && !contains( matrix.os, 'ubuntu-20')
       name: Build QOwnNotes
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j 8
-    - if: contains( matrix.os, 'ubuntu-18')
+    - if: contains( matrix.os, 'ubuntu-20')
       name: Build QOwnNotes Ubuntu 18.04
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=release && make -j 8
-    - if: contains( matrix.os, 'ubuntu-18')
+    - if: contains( matrix.os, 'ubuntu-20')
       name: Build for Snapcraft
       run: make clean && cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
 
