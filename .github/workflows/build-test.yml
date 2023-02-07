@@ -36,7 +36,7 @@ jobs:
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
-        qt-version: ['5.9.9', '5.13.2', '5.14.2', '5.15.2', '6.2.4', '6.4.2', '6.5.0']
+        qt-version: ['5.9.9', '5.13.2', '5.14.2', '5.15.2', '6.2.0', '6.4.2', '6.5.0']
         experimental: [false]
         exclude:
           # Failing SSL Tests
@@ -62,9 +62,12 @@ jobs:
 #          - os: macos-latest
 #            qt-version: '6.3.0'
 #            experimental: true
-#          - os: windows-2019
-#            qt-version: '6.3.0'
-#            experimental: true
+          - os: windows-2019
+            qt-version: '6.4.2'
+            experimental: true
+          - os: windows-2019
+            qt-version: '6.5.0'
+            experimental: true
           # Snapcraft
           - os: ubuntu-18.04
             qt-version: '5.15.2'
@@ -105,15 +108,15 @@ jobs:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw73
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )
-      name: Install Qt 5.15.2 on Windows
+    - if: contains( matrix.os, 'windows') && (matrix.qt-version == '5.15.2' || matrix.qt-version == '6.2.0')
+      name: Install Qt 5.15.2 / Qt 6.2.0 on Windows
       uses: jurplel/install-qt-action@v3
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
+    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && matrix.qt-version != '6.2.0'
       name: Install Qt 6 on Windows
       uses: jurplel/install-qt-action@v3
       with:
@@ -152,8 +155,8 @@ jobs:
       run: |
         cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
         ../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
-    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '5.' )
-      name: Do Qt5 Windows tests
+    - if: contains( matrix.os, 'windows') && (startsWith( matrix.qt-version, '5.' ) || matrix.qt-version == '6.2.0')
+      name: Do Qt5 / Qt 6.2.0 Windows tests
       run: |
         cd ..\tests
         qmake DEFINES+=INTEGRATION_TESTS
@@ -172,8 +175,8 @@ jobs:
         windeployqt --debug tests.exe
         # echo test2
         .\tests.exe -txt
-    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
-      name: Do Qt6 Windows tests
+    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && matrix.qt-version != '6.2.0'
+      name: Do Qt 6.3+ Windows tests
       run: |
         cd ..\tests
         qmake6 DEFINES+=INTEGRATION_TESTS
