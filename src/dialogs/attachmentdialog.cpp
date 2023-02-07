@@ -108,8 +108,8 @@ void AttachmentDialog::on_downloadButton_clicked() {
  * Shows the download progress
  */
 void AttachmentDialog::downloadProgress(qint64 bytesReceived, qint64 bytesTotal) {
-    ui->downloadProgressBar->setMaximum(static_cast<int>(bytesTotal));
-    ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived));
+    ui->downloadProgressBar->setMaximum(static_cast<int>(bytesTotal/1000));
+    ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived/1000));
     ui->downloadSizeLabel->setText(Utils::Misc::toHumanReadableByteSize(bytesReceived) + " / " +
                                    Utils::Misc::toHumanReadableByteSize(bytesTotal));
 }
