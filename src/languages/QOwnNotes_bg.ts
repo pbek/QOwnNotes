@@ -525,7 +525,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
 <source>Papiamentu</source>
-<translation type="unfinished">Papiamentu</translation>
+<translation>Bulgarian</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
@@ -730,7 +730,7 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
 <source>Number of imported notes</source>
-<translation type="unfinished">Number of imported notes</translation>
+<translation>Брой на импортираните бележки</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="148"/>
@@ -878,113 +878,113 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>Използвайте FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished">Read .vimrc from location:</translation>
+<translation>Прочетете .vimrc от локация:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished">Show position of text marks</translation>
+<translation>Показване позицията на текстови маркери</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished">Pass control keys</translation>
+<translation>Предаване на контролни клавиши</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished">Pass keys in insert mode</translation>
+<translation>Предаване на ключове в режим на вмъкване</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>Начало на ред</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished">Tabulator size:</translation>
+<translation>Размер на табулатор:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished">Smart tabulators</translation>
+<translation>Умни табулатори</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished">Highlight search results</translation>
+<translation>Осветяване на резултатите от търсене</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished">Shift width:</translation>
+<translation>Ширина на изместване:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished">Expand tabulators</translation>
+<translation>Разшири табулаторите</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished">Automatic indentation</translation>
+<translation>Автоотстъп</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished">Incremental search</translation>
+<translation>Инкрементално търсене</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished">Use search dialog</translation>
+<translation>Използване на диалог за търсене</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished">Use smartcase</translation>
+<translation>Използвай smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished">Use ignorecase</translation>
+<translation>Използвай ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished">Use wrapscan</translation>
+<translation>Използвай wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished">Use tildeop</translation>
+<translation>Използвай tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished">Show partial command</translation>
+<translation>Показване на частична команда</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>Покажи номера на редове спрямо показалеца</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished">Blinking cursor</translation>
+<translation>Мигащ показалец</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished">Scroll offset:</translation>
+<translation>Отместване при превъртане:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
@@ -994,42 +994,42 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished">Keyword characters:</translation>
+<translation>Символи с ключови думи:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished">Use Vim-style Editing</translation>
+<translation>Използвай редактиране в стил Vim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>Показва номера на редове спрямо реда, съдържащ текстов показалец.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
+<translation>Не интерпретира ключови последователности като Ctrl-S във FakeVim, но ги обработва като редовни клав. комбинации. Това дава по-лесен достъп до основната функционалност, загубвайки някои FakeVim функции.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
+<translation>Не интерпретира някои натискания на клавиши в режим на вмъкване, за да може кодът да бъде правилно завършен и разширен.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished">Vim tabstop option.</translation>
+<translation>Vim tabstop опция.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
+<translation>Оставете празно, за използване пътя по подразбиране, т.е. %USERPROFILE%\_vimrc за Windows, ~/.vimrc в останалите случаи.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>По подразб.: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1069,12 +1069,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4700"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>Въведете Meta-Shift-Y, Meta-Shift-Y, за изход от режим FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4702"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
+<translation>Въведете Alt-Y, Alt-Y, за изход от режим FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6297"/>
@@ -1297,7 +1297,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="232"/>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>Шрифт:</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="279"/>
@@ -1362,7 +1362,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
 <source>Underlined text</source>
-<translation type="unfinished">Underlined text</translation>
+<translation>Подчертан текст</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
@@ -1514,7 +1514,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Копирай</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -1538,17 +1538,17 @@
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="45"/>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Копирай</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="51"/>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>Копирай връзка</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="58"/>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>Нулиране на мащаба</translation>
 </message>
 </context>
 <context>
@@ -1629,7 +1629,7 @@
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
 <source>Minimum 8 characters</source>
-<translation type="unfinished">Minimum 8 characters</translation>
+<translation>Минимум 8 знака</translation>
 </message>
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1637,7 +1637,7 @@
 <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
 <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
 <source>Minimum 10 characters</source>
-<translation type="unfinished">Minimum 10 characters</translation>
+<translation>Минимум 10 знака</translation>
 </message>
 </context>
 <context>
@@ -1645,22 +1645,22 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Joplin импорт</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="48"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>Импорт на папки</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>Моля, изберете 'RAW - Joplin Export Directory', от която искате да импортирате бележки:</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="37"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>Изберете директория</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="152"/>
@@ -4353,7 +4353,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../services/owncloudservice.cpp" line="215"/>
 <location filename="../services/owncloudservice.cpp" line="483"/>
 <source>not connected</source>
-<translation type="unfinished">not connected</translation>
+<translation>няма връзка</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="228"/>
@@ -4376,40 +4376,40 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../services/owncloudservice.cpp" line="462"/>
 <location filename="../services/owncloudservice.cpp" line="476"/>
 <source>ok</source>
-<translation type="unfinished">ok</translation>
+<translation>ок</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="292"/>
 <source>not correct</source>
-<translation type="unfinished">not correct</translation>
+<translation>не е правилно</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="301"/>
 <source>not detected</source>
-<translation type="unfinished">not detected</translation>
+<translation>не е открито</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="400"/>
 <location filename="../services/owncloudservice.cpp" line="478"/>
 <source>not found</source>
-<translation type="unfinished">not found</translation>
+<translation>не е намерено</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="434"/>
 <location filename="../services/owncloudservice.cpp" line="435"/>
 <source>unknown</source>
-<translation type="unfinished">unknown</translation>
+<translation>неизвестно</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="442"/>
 <source>version %1 too low</source>
-<translation type="unfinished">version %1 too low</translation>
+<translation>версия %1 е твърде ниска</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="458"/>
 <location filename="../services/owncloudservice.cpp" line="464"/>
 <source>not enabled</source>
-<translation type="unfinished">not enabled</translation>
+<translation>не е разрешено</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="528"/>
@@ -4536,12 +4536,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="294"/>
 <source>Failed to register %1. Error: %2</source>
-<translation type="unfinished">Failed to register %1. Error: %2</translation>
+<translation>Неуспешно регистриране на %1. Грешка: %2</translation>
 </message>
 <message>
 <location filename="../libraries/qhotkey/QHotkey/qhotkey.cpp" line="314"/>
 <source>Failed to unregister %1. Error: %2</source>
-<translation type="unfinished">Failed to unregister %1. Error: %2</translation>
+<translation>Неуспешно дерегистриране на %1. Грешка: %2</translation>
 </message>
 </context>
 <context>
@@ -4592,12 +4592,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../entities/note.cpp" line="3436"/>
 <source>Image file exists</source>
-<translation type="unfinished">Image file exists</translation>
+<translation>Файлът с изображение съществува</translation>
 </message>
 <message>
 <location filename="../entities/note.cpp" line="3437"/>
 <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
-<translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
+<translation>Файлът с изображение вече съществува в медийната папка, ще използвате ли наличния, вместо да създавате нов файл?</translation>
 </message>
 <message numerus="yes">
 <location filename="../entities/note.cpp" line="3915"/>
@@ -4643,54 +4643,54 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../utils/gui.cpp" line="991"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;последна промяна: %2</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="996"/>
 <source>&lt;br /&gt;path: %1</source>
-<translation type="unfinished">&lt;br /&gt;path: %1</translation>
+<translation>&lt;br /&gt;път: %1</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1024"/>
 <location filename="../utils/gui.cpp" line="1110"/>
 <source>Dark mode detected</source>
-<translation type="unfinished">Dark mode detected</translation>
+<translation>Открит е тъмен режим</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1025"/>
 <source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Вашата Windows система изглежда използва тъмния режим. Искате ли също да включите тъмния режим в QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1037"/>
 <location filename="../utils/gui.cpp" line="1123"/>
 <source>Light mode detected</source>
-<translation type="unfinished">Light mode detected</translation>
+<translation>Открит е светъл режим</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1038"/>
 <source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Вашата Windows система изглежда използва светъл режим. Искате ли също да изключите тъмния режим в QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1111"/>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Вашата Linux система изглежда използва тъмния режим. Искате ли също да включите тъмния режим в QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1124"/>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Вашата Linux система изглежда използва светъл режим. Искате ли също да изключите тъмния режим в QOwnNotes?</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1198"/>
 <source>Panel disabled</source>
-<translation type="unfinished">Panel disabled</translation>
+<translation>Панелът е деактивиран</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1199"/>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
+<translation>Панел &lt;strong&gt;%1&lt;/strong&gt; в момента е забранен, искате ли да го включите отново, за да работи това действие?</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="77"/>
@@ -4700,7 +4700,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../utils/git.cpp" line="78"/>
 <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
-<translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
+<translation>Командата &lt;code&gt;%1&lt;/code&gt; с аргументи &lt;code&gt;%2&lt;/code&gt; е неуспешна!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4016"/>
@@ -4710,12 +4710,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4208"/>
 <source>Login flow succeeded</source>
-<translation type="unfinished">Login flow succeeded</translation>
+<translation>Влизането е успешно</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4209"/>
 <source>Username and password were set successfully!</source>
-<translation type="unfinished">Username and password were set successfully!</translation>
+<translation>Потребителското име и паролата бяха зададени успешно!</translation>
 </message>
 <message>
 <location filename="../entities/cloudconnection.cpp" line="322"/>
@@ -4760,80 +4760,80 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="438"/>
 <location filename="../dialogs/storedimagesdialog.cpp" line="362"/>
 <source>File name changed</source>
-<translation type="unfinished">File name changed</translation>
+<translation>Файловото име е променено</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="439"/>
 <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
+<translation>
+<numerusform>%n бележка(-и) използват този прикачен файл. Ще преименувате ли тези прикачени файлове в бележката(-ите)?</numerusform>
+<numerusform>%n бележка(-и) използват този прикачен файл. Искате ли също да преименувате тези прикачени файлове в бележката(-ите)?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="363"/>
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
+<translation>
+<numerusform>%n бележка(-и) използват това изображение. Ще преименувате ли тези изображ. в бележката(-ите)?</numerusform>
+<numerusform>%n бележка(-и) използват това изображение. Искате ли също да преименувате тези изображения в бележката(-ите)?</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="30"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+<translation>Включени са подпапките за бележки за текущата папка с бележки, за да може да се импортират папки.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2140"/>
 <location filename="../services/owncloudservice.cpp" line="2154"/>
 <source>Login flow failed</source>
-<translation type="unfinished">Login flow failed</translation>
+<translation>Неуспешно влизане</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2141"/>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
+<translation>Nextcloud v2 влизането не можа да бъде инициирано. Уверете се, че url на сървъра е правилен и че използвате сървър на Nextcloud!&lt;br /&gt;&lt;br /&gt;Ако все още имате проблеми, моля, създайте ръчно парола за приложение в страницата за администриране на вашия сървър.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2155"/>
 <source>Could not parse login url!</source>
-<translation type="unfinished">Could not parse login url!</translation>
+<translation>Не може да се анализира url за вход!</translation>
 </message>
 <message>
 <location filename="../utils/misc.cpp" line="900"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
+<translation>Използвате режима на единична инстанция на приложението, който не позволява то да бъде стартирано втори път. При следващото стартиране на приложението режимът на единична инстанция на приложението ще бъде деактивиран, така че приложението да може да се стартира отново, преди да се прекрати тази инстанция.</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="156"/>
 <location filename="../utils/urlhandler.cpp" line="180"/>
 <source>Note was not found</source>
-<translation type="unfinished">Note was not found</translation>
+<translation>Бележката не е намерена</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="157"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-<translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+<translation>Не може да се намери бележка.&lt;br /&gt;Не може автоматично да се създаде бележка на място, тъй като подпапките са забранени за текущата папка с бележки.</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="167"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+<translation>Бележката не е намерена, да се създаде ли нова бележка &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="172"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>Бележка не е намерена, да се създаде ли нова бележка &lt;strong&gt;%1&lt;/strong&gt; по пътя &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="218"/>
 <source>Failed to create note</source>
-<translation type="unfinished">Failed to create note</translation>
+<translation>Неуспешно създаване на бележка</translation>
 </message>
 <message>
 <location filename="../utils/urlhandler.cpp" line="219"/>
 <source>Note creation failed</source>
-<translation type="unfinished">Note creation failed</translation>
+<translation>Неуспешно създаване на бележка</translation>
 </message>
 </context>
 <context>
@@ -4841,37 +4841,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="105"/>
 <source>Increased font size to %1 pt</source>
-<translation type="unfinished">Increased font size to %1 pt</translation>
+<translation>Увеличен размер на шрифта до %1 pt</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="108"/>
 <source>Decreased font size to %1 pt</source>
-<translation type="unfinished">Decreased font size to %1 pt</translation>
+<translation>Намален размер на шрифта до %1 pt</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="528"/>
 <source>An url was opened at the current cursor position</source>
-<translation type="unfinished">An url was opened at the current cursor position</translation>
+<translation>Беше отворен url от текущата позиция на показалеца</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="700"/>
 <source>No equation was found in front of the cursor</source>
-<translation type="unfinished">No equation was found in front of the cursor</translation>
+<translation>Не е намерено уравнение пред показалеца</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="721"/>
 <source>Result for equation: %1 = %2</source>
-<translation type="unfinished">Result for equation: %1 = %2</translation>
+<translation>Резултат за уравнение: %1 = %2</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="883"/>
 <source>&amp;Link selected text</source>
-<translation type="unfinished">&amp;Link selected text</translation>
+<translation>&amp;Свързване на избрания текст</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="883"/>
 <source>Insert &amp;link</source>
-<translation type="unfinished">Insert &amp;link</translation>
+<translation>Вмъкване на &amp;връзка</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="890"/>
@@ -4887,12 +4887,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="907"/>
 <source>Copy code block</source>
-<translation type="unfinished">Copy code block</translation>
+<translation>Копиране на блок с код</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="934"/>
 <source>Print</source>
-<translation type="unfinished">Print</translation>
+<translation>Печат</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="941"/>

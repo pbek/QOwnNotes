@@ -6,9 +6,9 @@ Si le gusta QOwnNotes y desea **donar** al proyecto para ayudar a pagar el aloja
 
 ## PayPal
 
-You can **donate money via PayPal** on [pbek PayPal](https://paypal.me/pbek):
+Puede **hacer donativos por PayPal** a la cuenta [pbek](https://paypal.me/pbek):
 
-For monthly donations you can use the following button (PayPal gets a cut of the donation):
+Para donativos mensuales, puede utilizar este botón (PayPal se queda una parte):
 
 <form id="paypal-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_s-xclick">

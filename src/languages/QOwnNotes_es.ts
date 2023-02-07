@@ -730,7 +730,7 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
 <source>Number of imported notes</source>
-<translation type="unfinished">Number of imported notes</translation>
+<translation>Número de notas importadas</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="148"/>
@@ -1514,7 +1514,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Copiar</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -3563,12 +3563,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <location filename="../mainwindow.cpp" line="10774"/>
 <source>Note editing disabled</source>
-<translation type="unfinished">Note editing disabled</translation>
+<translation>Se desactivó la edición de notas</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10775"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
-<translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+<translation>La edición de notas está desactivada actualmente. ¿Quiere activarla de nuevo?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="11000"/>
@@ -5318,7 +5318,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../widgets/scriptsettingwidget.cpp" line="190"/>
 <source>Please select a directory</source>
-<translation type="unfinished">Please select a directory</translation>
+<translation>Seleccione un directorio</translation>
 </message>
 <message>
 <location filename="../widgets/scriptsettingwidget.cpp" line="191"/>
@@ -6616,7 +6616,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4159"/>
 <source>Start application in read-only mode</source>
-<translation type="unfinished">Start application in read-only mode</translation>
+<translation>Iniciar aplicación en modo de solo lectura</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4235"/>
@@ -6741,7 +6741,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5423"/>
 <source>Tabs and Indents</source>
-<translation>Tabuladores e indentado</translation>
+<translation>Tabuladores y sangrías</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5431"/>
@@ -6751,7 +6751,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5438"/>
 <source>Indent:</source>
-<translation>Indentado:</translation>
+<translation>Sangría:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5840"/>

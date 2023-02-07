@@ -7,6 +7,7 @@
   - the title parsing was also improved to guess more webpage titles
   - the progress bars for other download processes, like the update-, attachment-
     or dictionary-dialog was also improved to be able to handle larger download sizes
+- added more Bulgarian, Spanish translation (thank you maximborisov031, fitojb)
 
 ## 23.2.0
 - the toolbar selector in the *Toolbar settings* was fixed (mainly for Qt6,
