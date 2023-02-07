@@ -84,11 +84,6 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: true
-    - if: contains( matrix.os, 'ubuntu-20')
-      name: Install Snapcraft
-      uses: samuelmeuli/action-snapcraft@v1
-#      with:
-#        use_lxd: true
 
       #
       # Install Qt
@@ -218,7 +213,7 @@ jobs:
         lrelease QOwnNotes.pro && qmake CONFIG+=release && make -j 8
     - if: contains( matrix.os, 'ubuntu-20')
       name: Build for Snapcraft
-      run: make clean && cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
+      uses: snapcore/action-build@v1
 
       #
       # Build QOwnNotes Windows Release and store it as artifact
