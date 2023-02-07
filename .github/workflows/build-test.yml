@@ -108,13 +108,22 @@ jobs:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw73
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: contains( matrix.os, 'windows') && (matrix.qt-version == '5.15.2' || matrix.qt-version == '6.2.0')
-      name: Install Qt 5.15.2 / Qt 6.2.0 on Windows
+    - if: contains( matrix.os, 'windows') && matrix.qt-version == '5.15.2'
+      name: Install Qt 5.15.2 on Windows
       uses: jurplel/install-qt-action@v3
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
+        cache: ${{ steps.cache-qt.outputs.cache-hit }}
+    - if: contains( matrix.os, 'windows') matrix.qt-version == '6.2.0'
+      name: Install Qt Qt 6.2.0 on Windows
+      uses: jurplel/install-qt-action@v3
+      with:
+        aqtversion: '==2.0.0'
+        version: ${{ matrix.qt-version }}
+        arch: win64_mingw81
+        modules: qtwebsockets qt5compat
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && matrix.qt-version != '6.2.0'
       name: Install Qt 6 on Windows
