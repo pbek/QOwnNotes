@@ -87,8 +87,8 @@ jobs:
     - if: contains( matrix.os, 'ubuntu-20')
       name: Install Snapcraft
       uses: samuelmeuli/action-snapcraft@v1
-      with:
-        use_lxd: true
+#      with:
+#        use_lxd: true
 
       #
       # Install Qt
