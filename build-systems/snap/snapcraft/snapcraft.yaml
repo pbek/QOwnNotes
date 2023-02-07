@@ -57,8 +57,7 @@ parts:
     source-checksum: sha256/ARCHIVE-SHA256
     # see https://snapcraft.io/docs/qmake-plugin
     plugin: qmake
-    qt-version: qt5
-    options:
+    qmake-parameters:
       - CONFIG+=release
       - CONFIG+=snapcraft
     override-build: |
