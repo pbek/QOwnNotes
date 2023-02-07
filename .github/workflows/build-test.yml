@@ -207,10 +207,10 @@ jobs:
       name: Build QOwnNotes
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j 8
-    - if: contains( matrix.os, 'ubuntu-20')
-      name: Build QOwnNotes Ubuntu 18.04
-      run: |
-        lrelease QOwnNotes.pro && qmake CONFIG+=release && make -j 8
+#    - if: contains( matrix.os, 'ubuntu-20')
+#      name: Build QOwnNotes Ubuntu 20.04
+#      run: |
+#        lrelease QOwnNotes.pro && qmake CONFIG+=release && make -j 8
     - if: contains( matrix.os, 'ubuntu-20')
       name: Build for Snapcraft
       uses: snapcore/action-build@v1

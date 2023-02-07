@@ -4,7 +4,7 @@ version-script: cat src/version.h | sed "s/[^0-9,.]//g"
 summary: Plain-text file markdown note taking with Nextcloud/ownCloud integration
 grade: stable
 confinement: strict
-base: core18
+base: core22
 description: |
   QOwnNotes is the open source (GPL) plain-text file markdown note taking app
   for GNU/Linux, macOS and Windows, that (optionally) works together with the
