@@ -4,7 +4,7 @@ version-script: cat src/version.h | sed "s/[^0-9,.]//g"
 summary: Plain-text file markdown note taking with Nextcloud/ownCloud integration
 grade: stable
 confinement: strict
-base: core20
+base: core18
 description: |
   QOwnNotes is the open source (GPL) plain-text file markdown note taking app
   for GNU/Linux, macOS and Windows, that (optionally) works together with the
@@ -58,16 +58,18 @@ parts:
 #    source: https://github.com/pbek/qownnotes.git
     # see https://snapcraft.io/docs/qmake-plugin
     plugin: qmake
-    qmake-parameters:
+    qt-version: qt5
+#    qmake-parameters:
+    options:
       - ./src
       - CONFIG+=release
       - CONFIG+=snapcraft
-    # remove the default desktop file
     override-build: |
       export QT_SELECT=qt5
       >&2 pwd
       >&2 find
-      #cd src
+      cd src
+      # remove the default desktop file
       rm PBE.QOwnNotes.desktop
       echo "#define RELEASE \"Snapcraft.io\"" > release.h
       # qmake INSTALLDIR=/usr
