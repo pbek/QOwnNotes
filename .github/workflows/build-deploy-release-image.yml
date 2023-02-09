@@ -1,3 +1,5 @@
+# Test image with:
+# docker run -i -t ghcr.io/pbek/qownnotes-ubuntu18-dev:latest /bin/bash
 name: 📦 Create and publish release Docker image
 
 on:
