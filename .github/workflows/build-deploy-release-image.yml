@@ -17,7 +17,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: qownnotes-ubuntu18
+  IMAGE_NAME: pbek/qownnotes-ubuntu18-dev
 
 jobs:
   build-and-push-image:
