@@ -90,7 +90,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/pbek/qownnotes-ubuntu18-dev:latest
-    #      options: --user root
+      options: --user root
     env:
       QT_VERSION: 5.15.2
     name: '🐧 AppImage Qt ${QT_VERSION}'
@@ -185,7 +185,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/pbek/qownnotes-ubuntu18-dev:latest
-#      options: --user root
+      options: --user root
     env:
       QT_VERSION: 5.15.2
     name: '🐧 Snap Qt ${QT_VERSION}'
