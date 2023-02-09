@@ -93,7 +93,7 @@ jobs:
       options: --user root
     env:
       QT_VERSION: 5.15.2
-    name: '🐧 AppImage Qt ${QT_VERSION}'
+    name: '🐧 AppImage Qt ${{env.QT_VERSION}}'
     steps:
 
       - name: '🧰 Checkout'
@@ -188,7 +188,7 @@ jobs:
       options: --user root
     env:
       QT_VERSION: 5.15.2
-    name: '🐧 Snap Qt ${QT_VERSION}'
+    name: '🐧 Snap Qt ${{env.QT_VERSION}}'
     steps:
 
       - name: '🧰 Checkout'
@@ -268,7 +268,7 @@ jobs:
   # Windows build
   #
   build-windows:
-    name: '🧊 Windows Qt ${QT_VERSION}'
+    name: '🧊 Windows Qt ${{env.QT_VERSION}}'
     needs: create_release
     # https://github.com/pbek/QOwnNotes/issues/2558 error on windows-2022!
     runs-on: windows-2019
@@ -350,7 +350,7 @@ jobs:
   # macOS build
   #
   build-macos:
-    name: '🍎 macOS Qt ${QT_VERSION}'
+    name: '🍎 macOS Qt ${{env.QT_VERSION}}'
     needs: create_release
     runs-on: macos-latest
     env:
