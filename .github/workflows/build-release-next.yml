@@ -1,6 +1,7 @@
 name: 📣 Build release of QOwnNotes (Next)
 
 on:
+  workflow_dispatch:
   push:
     branches:
 #      - release
