@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y software-properties-common
 RUN apt-add-repository ppa:git-core/ppa -y
 
 RUN apt-get update && apt-get install -y \
-    git wget curl findutils sudo snap snapcraft \
+    git wget curl findutils sudo snap snapcraft build-essential libc6 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN git --version
