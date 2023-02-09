@@ -203,11 +203,11 @@ jobs:
           export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
-      - name: '⚙️ Install Snapcraft'
-        uses: samuelmeuli/action-snapcraft@v1
-        with:
-          use_lxd: true
-  #        snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
+#      - name: '⚙️ Install Snapcraft'
+#        uses: samuelmeuli/action-snapcraft@v1
+#        with:
+#          use_lxd: true
+#  #        snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
       - name: '⚙️ Cache Qt'
         id: cache-qt
         uses: actions/cache@v3
