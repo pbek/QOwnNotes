@@ -89,7 +89,7 @@ jobs:
     needs: create_release
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/${{ github.repository }}-ci:latest
+      image: ghcr.io/qownnotes-ubuntu18:latest
     #      options: --user root
     env:
       QT_VERSION: 5.15.2
@@ -184,7 +184,7 @@ jobs:
     needs: create_release
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/${{ github.repository }}-ci:latest
+      image: ghcr.io/qownnotes-ubuntu18:latest
 #      options: --user root
     env:
       QT_VERSION: 5.15.2

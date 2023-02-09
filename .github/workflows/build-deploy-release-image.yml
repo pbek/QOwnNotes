@@ -17,7 +17,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}-ci
+  IMAGE_NAME: qownnotes-ubuntu18
 
 jobs:
   build-and-push-image:
