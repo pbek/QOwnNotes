@@ -5,6 +5,15 @@ on:
   schedule:
     # build every month
     - cron: "0 0 1 * *"
+  push:
+    branches:
+      - main
+    tags-ignore:
+      - '*'
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
+    paths:
+      - '.github/workflows/build-deploy-release-image.yml'
+      - '.github/workflows/Dockerfile'
 
 env:
   REGISTRY: ghcr.io
