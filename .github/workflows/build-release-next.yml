@@ -34,7 +34,7 @@ env:
   PUBLISHER: "Patrizio Bekerle"
   REPO_DIR: "/home/runner/work/QOwnNotes"
   QT_MODULES: ""
-  QMAKE: qmake6
+  QMAKE: qmake
   CORES: 16
 
 jobs:
@@ -87,10 +87,13 @@ jobs:
   #
   build-appimage:
     needs: create_release
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:bionic
+    #      options: --user root
     env:
       QT_VERSION: 5.15.2
-    name: '🐧 AppImage Ubuntu 18.04'
+    name: '🐧 AppImage Qt ${QT_VERSION}'
     steps:
 
       - name: '🧰 Checkout'
@@ -179,10 +182,13 @@ jobs:
   #
   build-snap:
     needs: create_release
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:bionic
+#      options: --user root
     env:
-      QT_VERSION: 6.5.0
-    name: '🐧 Snap Ubuntu 18.04'
+      QT_VERSION: 5.15.2
+    name: '🐧 Snap Qt ${QT_VERSION}'
     steps:
 
       - name: '🧰 Checkout'
@@ -263,13 +269,12 @@ jobs:
   # Windows build
   #
   build-windows:
-    name: '🧊 Windows Server 2019'
+    name: '🧊 Windows'
     needs: create_release
     # https://github.com/pbek/QOwnNotes/issues/2558 error on windows-2022!
     runs-on: windows-2019
     env:
-      # Qt 6.5 windeployqt doesn't deploy DLLs!
-      QT_VERSION: 6.4.2
+      QT_VERSION: 5.15.2
     continue-on-error: true
     steps:
 
@@ -293,7 +298,7 @@ jobs:
           # https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_650/qt.qt6.650.win64_mingw/
           # https://aqtinstall.readthedocs.io/en/latest/getting_started.html
           # https://ddalcino.github.io/aqt-list-server/
-          arch: win64_mingw
+          arch: win64_mingw81
           modules: ${{env.QT_MODULES}}
           cache: ${{ steps.cache-qt.outputs.cache-hit }}
 
@@ -310,7 +315,7 @@ jobs:
           printenv
 
       - name: '🚧 Compile application'
-        run: '& ..\build-systems\github\windows\build-zip-qt6.ps1'
+        run: '& ..\build-systems\github\windows\build-zip.ps1'
 
       - name: '📤 Upload artifact: Windows'
         uses: actions/upload-artifact@v3
@@ -347,12 +352,11 @@ jobs:
   # macOS build
   #
   build-macos:
-    name: '🍎 macOS Monterey'
+    name: '🍎 macOS'
     needs: create_release
     runs-on: macos-latest
     env:
-      # Qt 6.5 doesn't support macOS 10 anymore!
-      QT_VERSION: 6.4.2
+      QT_VERSION: 5.15.2
     steps:
 
       - name: '🧰 Checkout'
