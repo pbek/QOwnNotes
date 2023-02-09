@@ -1,4 +1,4 @@
-name: Build release of QOwnNotes (Next)
+name: 📣 Build release of QOwnNotes (Next)
 
 on:
   push:
@@ -89,7 +89,7 @@ jobs:
     needs: create_release
     runs-on: ubuntu-latest
     container:
-      image: ubuntu:bionic
+      image: ghcr.io/${{ github.repository }}-ci:latest
     #      options: --user root
     env:
       QT_VERSION: 5.15.2
@@ -184,7 +184,7 @@ jobs:
     needs: create_release
     runs-on: ubuntu-latest
     container:
-      image: ubuntu:bionic
+      image: ghcr.io/${{ github.repository }}-ci:latest
 #      options: --user root
     env:
       QT_VERSION: 5.15.2
@@ -269,7 +269,7 @@ jobs:
   # Windows build
   #
   build-windows:
-    name: '🧊 Windows'
+    name: '🧊 Windows Qt ${QT_VERSION}'
     needs: create_release
     # https://github.com/pbek/QOwnNotes/issues/2558 error on windows-2022!
     runs-on: windows-2019
@@ -352,7 +352,7 @@ jobs:
   # macOS build
   #
   build-macos:
-    name: '🍎 macOS'
+    name: '🍎 macOS Qt ${QT_VERSION}'
     needs: create_release
     runs-on: macos-latest
     env:
