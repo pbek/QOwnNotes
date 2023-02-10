@@ -1,3 +1,5 @@
+# Build: docker build -t qownnotes-ubuntu18-dev .
+# Run: docker run -it --rm qownnotes-ubuntu18-dev bash
 
 FROM ubuntu:bionic
 
@@ -30,4 +32,7 @@ RUN python3 --version
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python3 get-pip.py
 
-RUN /usr/bin/python3 -m pip install setuptools wheel py7zr==0.19.*
+#RUN python3 -m venv myenv
+RUN /usr/bin/python3 -m pip install -U setuptools
+RUN /usr/bin/python3 -m pip install wheel py7zr==0.19.* aqtinstall==2.0.0
+#RUN /usr/bin/python3 -m pip install aqtinstall==2.0.0
