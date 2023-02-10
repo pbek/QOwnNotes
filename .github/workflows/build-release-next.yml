@@ -115,6 +115,7 @@ jobs:
           version: ${{env.QT_VERSION}}
           modules: ${{env.QT_MODULES}}
           aqtversion: '==2.0.0'
+          setup-python: false
           cache: ${{steps.cache-qt.outputs.cache-hit}}
 
       - name: '⚙️ Install dependencies'
@@ -219,6 +220,7 @@ jobs:
         with:
           version: ${{env.QT_VERSION}}
           modules: ${{env.QT_MODULES}}
+          setup-python: false
           cache: ${{steps.cache-qt.outputs.cache-hit}}
       - name: '⚙️ Printenv'
         shell: bash
