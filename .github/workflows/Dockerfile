@@ -33,6 +33,9 @@ RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python3 get-pip.py
 
 #RUN python3 -m venv myenv
+
+# https://stackoverflow.com/a/69573368/1581487
 RUN /usr/bin/python3 -m pip install -U setuptools
+
 RUN /usr/bin/python3 -m pip install wheel py7zr==0.19.* aqtinstall==2.0.0
 #RUN /usr/bin/python3 -m pip install aqtinstall==2.0.0
