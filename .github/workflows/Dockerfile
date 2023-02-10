@@ -11,7 +11,7 @@ RUN apt-add-repository ppa:git-core/ppa -y
 
 RUN apt-get update && apt-get install -y \
     git wget curl findutils sudo snapd snapcraft build-essential libc6 \
-    python3 python3-pip python3-setuptools python3-wheel python3-py7zr \
+    python3 python3-pip python3-setuptools python3-wheel \
     libgl1-mesa-dev libpulse-dev libxcb-glx0 libxcb-icccm4 libxcb-image0 \
     libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-render0 \
     libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxcb-xfixes0 \
