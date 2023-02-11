@@ -7,7 +7,7 @@
 # https://wiki.archlinux.org/index.php/Arch_User_Repository#Creating_a_new_package
 #
 # The QOwnNotes repository for AUR relies on our source archive on
-# https://sourceforge.net/projects/qownnotes/files/src/
+# https://download.tuxfamily.org/qownnotes/src/
 #
 
 

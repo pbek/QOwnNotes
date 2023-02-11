@@ -5,7 +5,7 @@
 # https://github.com/pbek/qownnotes-slackbuilds
 #
 # The QOwnNotes repository for Slackware relies on our source archive on
-# https://sourceforge.net/projects/qownnotes/files/src/
+# https://download.tuxfamily.org/qownnotes/src/
 #
 
 

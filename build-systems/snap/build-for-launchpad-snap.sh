@@ -7,7 +7,7 @@
 # git+ssh://pbek@git.launchpad.net/~pbek/qownnotes-snap
 #
 # The QOwnNotes repository for Launchpad Snap relies on our source archive on
-# https://sourceforge.net/projects/qownnotes/files/src/
+# https://download.tuxfamily.org/qownnotes/src/
 #
 
 
