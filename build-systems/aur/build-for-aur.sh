@@ -10,12 +10,15 @@
 # https://download.tuxfamily.org/qownnotes/src/
 #
 
+# Uncomment as workaround to run locally
+#QOWNNOTES_ARCHIVE_SHA256=$(curl https://download.tuxfamily.org/qownnotes/src/qownnotes-23.2.1.tar.xz.sha256)
+#echo QOWNNOTES_ARCHIVE_SHA256="${QOWNNOTES_ARCHIVE_SHA256}" > /tmp/QOwnNotes.checksum.vars
 
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=16.05.2
 
 BRANCH=main
-#BRANCH=master
+#BRANCH=release
 
 PROJECT_PATH="/tmp/QOwnNotes-aur-$$"
 CUR_DIR=$(pwd)
@@ -48,7 +51,7 @@ cd $PROJECT_PATH || exit 1
 echo "Project path: $PROJECT_PATH"
 
 # checkout AUR repository
-git clone --depth=1 ssh://aur@aur.archlinux.org/qownnotes.git aur -b release
+git clone --depth=1 ssh://aur@aur.archlinux.org/qownnotes.git aur -b master
 
 # checkout the source code
 git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
