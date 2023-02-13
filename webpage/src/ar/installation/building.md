@@ -16,31 +16,31 @@ Then download [Qt Creator](https://www.qt.io/download-open-source), you will als
 
 Afterwards open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
 
-Or you can build it directly in your terminal:
+أو يمكنك بناؤه مباشرةً من الطرفية:
 
 ```bash
 cd src
 
-# build binary translation files if you want another language than English
+# ابنِ الملفات الثنائية للترجمات إذا أردت لغة غير الإنجليزية
 lrelease QOwnNotes.pro
 
-# prepare build process and build the application
+# حضّر عملية البناء وابنِ التطبيق
 qmake
 make
 ```
 
-Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
+رجاءً لا تتردد في المشاركة في هذا المشروع بكود برمجي أو اقتراحات أو إبلاغ عن مشاكل على [صفحة مسائل QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
 
-Visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
+قم بزيارة [QOwnNotes على GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-If you want to contribute source code to the project please make your pull requests to the  `main` branch.
+إذا أردت المساهمة في المشروع بكود مصدري، برجاء عمل طلبات السحب على فرع `main`.
 :::
 
 ## ملفات الكود المصدري المضغوطة
 
-You will find source archives of QOwnNotes on [QOwnNotes source archive](https://download.tuxfamily.org/qownnotes/src/).
+يمكنك العثور على الملفات المضغوطة لكود QOwnNotes المصدري في [أرشيف مصادر QOwnNotes](https://download.tuxfamily.org/qownnotes/src/).
 
-The source archives will be accessible like that:
+يمكن الوصول إلى الملفات المضغوطة للكود المصدري برابط مثل هذا:
 
 `https://download.tuxfamily.org/qownnotes/src/qownnotes-20.10.1.tar.xz`

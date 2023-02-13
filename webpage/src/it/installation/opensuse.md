@@ -68,7 +68,7 @@ zypper install qownnotes
 
 ## openSUSE Tumbleweed
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+Esegui i seguenti comandi della shell come root per aggiungere il repository e installare QOwnNotes da lì.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Tumbleweed/home:pbek:QOwnNotes.repo
@@ -76,12 +76,12 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Tumbleweed)
+[Download diretto](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Tumbleweed)
 
 
 ## SLE 12 SP3 Backports
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+Esegui i seguenti comandi della shell come root per aggiungere il repository e installare QOwnNotes da lì.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_12_SP3_Backports/home:pbek:QOwnNotes.repo
@@ -89,7 +89,7 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_12_SP3_Backports)
+[Download diretto](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_12_SP3_Backports)
 
 ## SLE 15
 

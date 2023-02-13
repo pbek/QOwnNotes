@@ -2,27 +2,27 @@
 
 ## Arch User Repository (AUR)
 
-Alternatively there also is an official package for QOwnNotes on AUR, it is called `qownnotes`.
+In alternativa c'è anche un pacchetto ufficiale per QOwnNotes su AUR, si chiama `qownnotes`.
 
-You will find it here: [QOwnNotes on AUR](https://aur.archlinux.org/packages/qownnotes)
+Lo troverai qui: [QOwnNotes su AUR](https://aur.archlinux.org/packages/qownnotes)
 
-Synchronize your package database and install the package with `yay`:
+Sincronizza il database dei pacchetti e installa il pacchetto con `yay`:
 
 ```bash
 yay -S qownnotes
 ```
 
 ::: tip
-If you want to speed up build time you may want to read [CCACHE and AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/).
+Se vuoi accelerare i tempi di costruzione potresti voler leggere [CCACHE and AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/).
 :::
 
 ## pacman
 
 ::: warning
-[OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) currently seems to have build issues on Arch Linux. Best use the AUR or the [AppImage](./appimage.md) for now.
+[OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) sembra avere problemi di rilascio su Arch Linux. Best use the AUR or the [AppImage](./appimage.md) for now.
 :::
 
-Add the following lines to your `/etc/pacman.conf` with `sudo nano /etc/pacman.conf`:
+Aggiungi le seguenti righe al tuo `/etc/pacman.conf` con `sudo nano /etc/pacman.conf`:
 
 ```ini
 [home_pbek_QOwnNotes_Arch_Extra]
@@ -30,14 +30,14 @@ SigLevel = Optional TrustAll
 Server = http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra/$arch
 ```
 
-Run the following shell commands to trust the repository:
+Esegui i seguenti comandi della shell per considerare attendibile il repository:
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra/x86_64/home_pbek_QOwnNotes_Arch_Extra.key -O - | sudo pacman-key --add -
 sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB
 ```
 
-If the command `sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB` fails with a message like: `ERROR: FFC43FC94539B8B0 could not be locally signed.`, you could first find out the actual *keyid* of the downloaded key, i.e. with the command (and output):
+Se il comando `sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB` non riesce con un messaggio del tipo: `ERRORE: FFC43FC94539B8B0 non può essere firmato localmente.`, devi prima trovare l'effettivo *keyid* della chiave scaricata, con il comando (e l'output):
 
 ```bash
 gpg /path/to/downloaded/home_pbek_QOwnNotes_Arch_Extra.key
@@ -47,14 +47,14 @@ pub   rsa2048 2019-07-31 [SC] [expires: 2021-10-10]
 uid           home:pbek OBS Project <home:pbek@build.opensuse.org>
 ```
 
-You can now synchronize your package database and install the package with `pacman`:
+Ora puoi sincronizzare il database dei pacchetti e installare il pacchetto con `pacman`:
 
 ```bash
 sudo pacman -Syy qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra)
+[Download diretto](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra)
 
 ::: tip
-Of course you can also use this repository with other Arch Linux based distributions, like Manjaro.
+Ovviamente puoi anche usare questo repository con altre distribuzioni basate su Arch Linux, come Manjaro.
 :::

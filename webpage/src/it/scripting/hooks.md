@@ -17,7 +17,7 @@ onNoteStored
 function onNoteStored(note);
 ```
 
-You may want to take a look at the example [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
+Puoi dare un'occhiata all'esempio [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
 
 noteOpenedHook
 --------------
@@ -32,7 +32,7 @@ noteOpenedHook
 function noteOpenedHook(note);
 ```
 
-You may want to take a look at the example [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
+Puoi dare un'occhiata all'esempio [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
 
 noteDoubleClickedHook
 ---------------------
@@ -48,7 +48,7 @@ noteDoubleClickedHook
 funzione noteDoubleClickedHook (note);
 ```
 
-You may want to take a look at the example [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-open.qml).
+Potresti voler dare un'occhiata all'esempio [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-open.qml).
 
 insertMediaHook
 ---------------
@@ -71,7 +71,7 @@ Se questa funzione è definita in più script, vince il primo script che restitu
 function insertMediaHook(fileName, markdownText);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
+Puoi dare un'occhiata all'esempio [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 insertAttachmentHook
 --------------------
@@ -94,7 +94,7 @@ Se questa funzione è definita in più script, vince il primo script che restitu
 function insertAttachmentHook(fileName, markdownText);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
+Puoi dare un'occhiata all'esempio [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 insertingFromMimeDataHook
 -------------------------
@@ -113,7 +113,7 @@ insertingFromMimeDataHook
 function insertingFromMimeDataHook(text, html);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml), [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) or [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-text-from-5pm-mail.qml).
+Puoi dare un'occhiata all'esempio [esempio.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml), [inserisci-titolo-con-link-da-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) o [note-testo-dalle-17-mail.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-text-from-5pm-mail.qml).
 
 handleNoteTextFileNameHook
 --------------------------
@@ -137,7 +137,7 @@ handleNoteTextFileNameHook
 function handleNoteTextFileNameHook(note);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) or [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
+Puoi dare un'occhiata all'esempio [esempio.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) o [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
 
 handleNoteNameHook
 ------------------
@@ -159,7 +159,7 @@ handleNoteNameHook
 function handleNoteNameHook(note);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
+Puoi dare un'occhiata all'esempio [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 Potrebbe non essere una buona idea usare questo hook se l'impostazione per usare il nome del file come nome della nota è attiva.
 
@@ -183,7 +183,7 @@ handleNewNoteHeadlineHook
 function handleNewNoteHeadlineHook(headline);
 ```
 
-You may want to take a look at the example [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml).
+Puoi dare un'occhiata all'esempio [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml).
 
 preNoteToMarkdownHtmlHook
 -------------------------
@@ -208,7 +208,7 @@ preNoteToMarkdownHtmlHook
 function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
 
-You may want to take a look at the example [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
+Puoi dare un'occhiata all'esempio [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
 
 noteToMarkdownHtmlHook
 ----------------------
@@ -231,7 +231,7 @@ noteToMarkdownHtmlHook
 function noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) or [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
+Puoi dare un'occhiata all'esempio [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) o [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
 
 Fai riferimento al documento [Sottoinsieme di HTML supportato](http://doc.qt.io/qt-5/richtext-html-subset.html) per un elenco di tutti gli stili CSS supportati.
 

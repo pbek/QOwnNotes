@@ -193,10 +193,10 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> inserisce un allegato (il file sarà copiato nella cartella `attachments` della cartella note corrente)
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> inserisce una tabella
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>C</kbd> inserisce un blocco di codice nella posizione corrente
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> inserisce una virgoletta nella posizione corrente
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> inserisce una citazione in blocco nella posizione corrente
 - <kbd>⌘ Cmd</kbd> + <kbd>B</kbd> formatta il testo selezionato in grassetto
-- <kbd>⌘ Cmd</kbd> + <kbd>I</kbd> formatta il corsivo del testo selezionato
-- <kbd>⌘ Cmd</kbd> + <kbd>U</kbd> formatta la sottolineatura del testo selezionato
+- <kbd>⌘ Cmd</kbd> + <kbd>I</kbd> formatta il testo selezionato in corsivo
+- <kbd>⌘ Cmd</kbd> + <kbd>U</kbd> formatta il testo selezionato in sottolineato
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> cancella il testo selezionato
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> scorre le occorrenze di testo selezionato
 - <kbd>Tab</kbd> fa rientrare il testo selezionato (funziona anche su più righe)
@@ -212,9 +212,9 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> riduce la dimensione del carattere del testo della nota di un punto
 - <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> ripristina la dimensione del carattere del testo della nota
 - <kbd>⌘ Cmd</kbd> + <kbd>Space</kbd>cerca di risolvere semplici equazioni come `(4+5)*3=` nella riga corrente davanti al cursore, completa automaticamente il testo o apre gli URL
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> inserisce un titolo dal nome del file della nota all'inizio della nota
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> divide la nota corrente in due note nella posizione corrente del cursore
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> searches for the selected text on the web
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> cerca il testo selezionato sul web
 - <kbd>⌘ Cmd</kbd> + <kbd>Up</kbd> scorre il contenuto verso l'alto
 - <kbd>⌘ Cmd</kbd> + <kbd>Giù</kbd> scorre il contenuto verso il basso
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>↓</kbd> sposta la riga corrente verso il basso

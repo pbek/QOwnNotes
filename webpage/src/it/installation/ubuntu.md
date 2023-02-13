@@ -16,25 +16,27 @@ sudo apt-get install qownnotes
 
 [Download diretto](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
 
-## QOwnNotes Qt6 Preview
+## Anteprima QOwnNotes Qt6
 
-If you already want to try the Qt6 packages and are on Ubuntu 22.04 or newer you can use this repository:
+Se vuoi già provare i pacchetti Qt6 e sei su Ubuntu 22.04 o più recente, puoi usare questo repository:
 
 ```bash
-# Remove Qt5 PPA in case you had it installed
+# Rimuovi Qt5 PPA nel caso sia installato
 sudo add-apt-repository --remove ppa:pbek/qownnotes
 
-# Add Qt6 PPA
+# Aggiungi Qt6 PPA
 sudo add-apt-repository ppa:pbek/qownnotes-qt6
 
-# Install QOwnNotes
+# Installa QOwnNotes
 sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
+[Download diretto](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
-## Older Ubuntu Linux distributions and derivatives
+If you find any issues please report them on [QOwnNotes Issues on GitHub](https://github.com/pbek/QOwnNotes/issues)!
+
+## Vecchie distribuzioni e derivati di Ubuntu Linux
 
 Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).
 
@@ -46,7 +48,7 @@ chmod a+x QOwnNotes-*.AppImage
 
 Afterwards you should be able to execute the AppImage to run QOwnNotes.
 
-## OBS Repository
+## Repository OBS
 
 You may also be able to use the QOwnNotes on Ubuntu versions that aren't any more updated on Ubuntu Launchpad then you can use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 

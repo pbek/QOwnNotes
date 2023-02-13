@@ -19,5 +19,5 @@ I vari modi per partecipare a QOwnNotes
 - Se vuoi, puoi rispondere a poche [**domande**](https://freeonlinesurveys.com/s/nA8t17k8) anonime per noi, per aiutarci a ottenere risultati migliori con QOwnNotes
 
 ::: tip Important
-Read the [code of conduct](./code-of-conduct.md) before you get involved!
+Leggi il [codice di comportamento](./code-of-conduct.md) prima di partecipare!
 :::

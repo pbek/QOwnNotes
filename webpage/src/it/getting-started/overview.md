@@ -158,7 +158,7 @@ Unisciti al nostro [Gruppo Telegram](https://t.me/QOwnNotes) per discutere, impa
 - Le **note cancellate** possono essere **ripristinate** dal tuo server **Nextcloud / ownCloud**
 - Le **modifiche esterne** ai file delle note sono **monitorate** (le note o l'elenco delle note sono ricaricate)
 - Supporta l'**etichettatura gerarchica delle note** e **sottocartelle delle note**
-- Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
+- **Cifratura** opzionale delle note. È disponibile AES-256 oppure puoi usare metodi di cifratura personalizzabili come **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) o **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
 - La **cartella note** può essere **scelta liberamente** (è possibile utilizzare più cartelle note)
 - Puoi **cercare parti di parole** nelle note e i risultati di ricerca sono evidenziati nelle note
 - [**Estensione del browser**](browser-extension.md) per **aggiungere note dal testo selezionato**, **catturare schermate** o **gestire i tuoi segnalibri**

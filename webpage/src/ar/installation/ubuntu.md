@@ -16,49 +16,51 @@ sudo apt-get install qownnotes
 
 [تنزيل مباشر](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
 
-## QOwnNotes Qt6 Preview
+## معاينة نسخة Qt6 من QOwnNotes
 
-If you already want to try the Qt6 packages and are on Ubuntu 22.04 or newer you can use this repository:
+إذا أردت تجربة حزم Qt6 وكنت تستخدم أوبنتو 22.04 أو أحدث، يمكنك استخدام هذا المستودع:
 
 ```bash
-# Remove Qt5 PPA in case you had it installed
+# أزل المستودع الشخصي الخاص بنسخة كيوت 5 إذا كان لديك
 sudo add-apt-repository --remove ppa:pbek/qownnotes
 
-# Add Qt6 PPA
+# أضف المستدوع الشخصي الخاص بنسخة كيوت 6
 sudo add-apt-repository ppa:pbek/qownnotes-qt6
 
-# Install QOwnNotes
+# وأخيرا تثبيت QOwnNotes
 sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
+[تنزيل مباشر](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
-## Older Ubuntu Linux distributions and derivatives
+إذا وجدت أي مشاكل، رجاءً أبلغ عنها على [صفحة مسائل QOwnNotes على GitHub](https://github.com/pbek/QOwnNotes/issues)!
 
-Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).
+## النسخ الأقدم من أوبنتو ومشتقاتها
 
-Then you can change the execute-permissions on the file:
+الأفضل تجربة استخدام الـ&nbsp;AppImage من [إصدارات QOwnNotes على GitHub](https://github.com/pbek/QOwnNotes/releases).
+
+عندئذٍ يمكنك جعل الملف قابلا للتنفيذ:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Afterwards you should be able to execute the AppImage to run QOwnNotes.
+بعدئذٍ ستتمكن من تنفيذ الـ&nbsp;AppImage لتشغيل QOwnNotes.
 
-## OBS Repository
+## مستودع OBS
 
-You may also be able to use the QOwnNotes on Ubuntu versions that aren't any more updated on Ubuntu Launchpad then you can use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
+ربما تستطيع أيضا استخدام QOwnNotes على نسخ أوبنتو التي لم تعد تستقبل تحديثات في المستودع الشخصي، باستخدام مستودعات [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 
-Below are example calls for the xUbuntu 16.10 repository.
+إليك أمثلة على استخدام مستودع xUbuntu 16.10.
 
-Run the following shell command to trust the repository.
+نفّذ الأمر التالي في الطرفية لاستيثاق المستودع.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
 ```
 
-Run the following shell commands to add the repository and install QOwnNotes from there.
+نفّذ الأوامر التالية في الطرفية لإضافة المستودع وتثبيت QOwnNotes منه.
 
 ```bash
 sudo su -
@@ -67,4 +69,4 @@ apt-get update
 apt-get install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)
+[تنزيل مباشر](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)

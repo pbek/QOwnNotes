@@ -34,31 +34,33 @@ sudo apt-get install qownnotes
 
 [Téléchargement direct](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
+If you find any issues please report them on [QOwnNotes Issues on GitHub](https://github.com/pbek/QOwnNotes/issues)!
+
 ## Anciennes distributions et dérivés d'Ubuntu Linux
 
-Il est préférable d'utiliser l'AppImage des versions [QOwnNotes sur GitHub](https://github.com/pbek/QOwnNotes/releases).
+Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).
 
-Vous pouvez ensuite modifier les autorisations d'exécution du fichier :
+Then you can change the execute-permissions on the file:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Vous devriez ensuite être en mesure d'exécuter l'AppImage pour lancer QOwnNotes.
+Afterwards you should be able to execute the AppImage to run QOwnNotes.
 
 ## Dépôt OBS
 
-Vous pouvez également utiliser QOwnNotes sur les versions d'Ubuntu qui ne sont plus mises à jour sur Ubuntu Launchpad. Utilisez les dépôts du [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
+You may also be able to use the QOwnNotes on Ubuntu versions that aren't any more updated on Ubuntu Launchpad then you can use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 
-Vous trouverez ci-dessous des exemples d'appels pour le dépôt xUbuntu 16.10.
+Below are example calls for the xUbuntu 16.10 repository.
 
-Exécutez la commande shell suivante pour approuver le dépôt.
+Run the following shell command to trust the repository.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
 ```
 
-Exécutez les commandes shell suivantes pour ajouter le dépôt puis installer QOwnNotes.
+Run the following shell commands to add the repository and install QOwnNotes from there.
 
 ```bash
 sudo su -
@@ -67,4 +69,4 @@ apt-get update
 apt-get install qownnotes
 ```
 
-[Téléchargement direct](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)

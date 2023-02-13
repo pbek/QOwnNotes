@@ -1,6 +1,6 @@
 # Parametri dell'interfaccia della riga di comando
 
-È possibile utilizzare questi parametri sull'interfaccia della riga di comando (CLI) per controllare il comportamento dell'applicazione:
+Puoi usare questi parametri sull'interfaccia della riga di comando (CLI) per controllare il comportamento dell'applicazione:
 
 | Parametro                    | Descrizione                                                                                                                                 |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -40,7 +40,7 @@ QOwnNotes --action actionShow_Todo_List
 ```
 
 ::: tip
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Basta cercare il titolo del menu in inglese. Nota che questi testi possono cambiare nel tempo.
+Puoi ottenere i nomi degli oggetti dell'azione del menu da [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Basta cercare il titolo del menu in inglese. Nota che questi testi possono cambiare nel tempo.
 :::
 
 Per attivare le [azioni scripting](../scripting/methods-and-objects.md#registering-a-custom-action) usa `customAction_` seguito dall'identificativo dell'azione personalizzata. L'identificativo dell'azione personalizzata è il primo parametro della chiamata a `script.registerCustomAction` nello script.
