@@ -674,7 +674,7 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName, TodoDialog *d
         settings.value(QStringLiteral("ownCloud/todoCalendarEnabledList")).toStringList();
     int index = todoCalendarEnabledList.indexOf(calendarName);
 
-    // return if we did't find the calendar, this should not happen
+    // return if we didn't find the calendar, this should not happen
     if (index == -1) {
         return;
     }
