@@ -2,6 +2,7 @@
 
 ## 23.2.2
 - a button to manually load the todo list items from your cloud server was added
+  (for [#2735](https://github.com/pbek/QOwnNotes/issues/2735))
 
 ## 23.2.1
 - the webpage title fetching in the link dialog is now made asynchronously to
