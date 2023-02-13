@@ -35,7 +35,7 @@ class TodoDialog : public MasterDialog {
 
    private slots:
     void on_TodoDialog_finished(int result);
-    void on_todoListSelector_currentIndexChanged(const QString &arg1);
+    void on_todoListSelector_currentIndexChanged(int index);
     void on_prioritySlider_valueChanged(int value);
     void on_showCompletedItemsCheckBox_clicked();
     void on_saveButton_clicked();

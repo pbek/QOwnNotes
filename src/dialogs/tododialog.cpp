@@ -459,8 +459,8 @@ void TodoDialog::on_TodoDialog_finished(int result) {
     storeSettings();
 }
 
-void TodoDialog::on_todoListSelector_currentIndexChanged(const QString &arg1) {
-    Q_UNUSED(arg1)
+void TodoDialog::on_todoListSelector_currentIndexChanged(int index) {
+    Q_UNUSED(index)
 
     ui->newItemEdit->clear();
 

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.2.3
+- the calendar selector in the Todo List dialog was fixed for Qt6
+  (for [#2734](https://github.com/pbek/QOwnNotes/issues/2734))
+
 ## 23.2.2
 - a button to manually load the todo list items from your cloud server was added
   (for [#2735](https://github.com/pbek/QOwnNotes/issues/2735))
