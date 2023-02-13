@@ -1138,6 +1138,7 @@ p, li { white-space: pre-wrap; }
      <string>To&amp;do</string>
     </property>
     <addaction name="actionShow_Todo_List"/>
+    <addaction name="action_Load_Todo_Items"/>
    </widget>
    <widget class="QMenu" name="menuWindow">
     <property name="title">
@@ -2687,6 +2688,15 @@ p, li { white-space: pre-wrap; }
   <action name="actionToggle_Always_on_top">
    <property name="text">
     <string>Toggle always-on-top mode</string>
+   </property>
+  </action>
+  <action name="action_Load_Todo_Items">
+   <property name="icon">
+    <iconset theme="view-refresh" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Load Todo List items</string>
    </property>
   </action>
  </widget>

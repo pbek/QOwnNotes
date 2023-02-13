@@ -11574,3 +11574,8 @@ void MainWindow::on_actionToggle_Always_on_top_triggered() {
                                                             : flags | Qt::WindowStaysOnTopHint);
     show();
 }
+
+void MainWindow::on_action_Load_Todo_Items_triggered() {
+    reloadTodoLists();
+}
+

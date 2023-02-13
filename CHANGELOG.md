@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 23.2.2
+- a button to manually load the todo list items from your cloud server was added
+
 ## 23.2.1
 - the webpage title fetching in the link dialog is now made asynchronously to
   reduce waiting time if no link title should be preset automatically

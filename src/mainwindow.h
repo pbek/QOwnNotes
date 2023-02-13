@@ -680,7 +680,9 @@ class MainWindow : public QMainWindow {
 
     void on_actionToggle_Always_on_top_triggered();
 
-   public:
+    void on_action_Load_Todo_Items_triggered();
+
+public:
     /** Settings access **/
     static bool isInDistractionFreeMode();
     void setShowNotesFromAllNoteSubFolders(bool show);
