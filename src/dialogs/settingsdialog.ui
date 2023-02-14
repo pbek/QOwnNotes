@@ -345,6 +345,18 @@
            </item>
            <item>
             <property name="text">
+             <string>Experimental</string>
+            </property>
+            <property name="whatsThis">
+             <string notr="true">21</string>
+            </property>
+            <property name="icon">
+             <iconset theme="task-past-due" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/configure-shortcuts.svg</normaloff>:/icons/breeze-qownnotes/16x16/configure-shortcuts.svg</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
              <string>Debug</string>
             </property>
             <property name="whatsThis">
@@ -409,7 +421,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>19</number>
+            <number>21</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -5648,13 +5660,6 @@ git config --global user.name &quot;Your name&quot;</string>
                 <string>Note list panel</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_61">
-                <item row="0" column="1" colspan="2">
-                 <widget class="QCheckBox" name="noteSubfoldersPanelShowNotesRecursivelyCheckBox">
-                  <property name="text">
-                   <string>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="1" column="1" colspan="2">
                  <widget class="QCheckBox" name="taggingShowNotesRecursivelyCheckBox">
                   <property name="text">
@@ -5662,14 +5667,7 @@ git config --global user.name &quot;Your name&quot;</string>
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="1" colspan="2">
-                 <widget class="QCheckBox" name="noteListPreviewCheckBox">
-                  <property name="text">
-                   <string>Show notes in the note list with preview</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="5" column="1">
+                <item row="4" column="1">
                  <widget class="QGroupBox" name="notesPanelSortGroupBox">
                   <property name="title">
                    <string>Sort</string>
@@ -5693,13 +5691,28 @@ git config --global user.name &quot;Your name&quot;</string>
                  </widget>
                 </item>
                 <item row="3" column="1" colspan="2">
-                 <widget class="QCheckBox" name="enableNoteTreeCheckBox">
-                  <property name="text">
-                   <string>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</string>
+                 <widget class="QGroupBox" name="groupBox_39">
+                  <property name="toolTip">
+                   <string>Regular expressions of note files to ignore, separated by &quot;;&quot;</string>
                   </property>
+                  <property name="title">
+                   <string>Ignored note files</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_14">
+                   <item>
+                    <widget class="QLineEdit" name="ignoredNoteFilesLineEdit">
+                     <property name="placeholderText">
+                      <string>Regular expressions of note files to ignore, separated by &quot;;&quot;</string>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
                 </item>
-                <item row="5" column="2">
+                <item row="4" column="2">
                  <widget class="QGroupBox" name="notesPanelOrderGroupBox">
                   <property name="enabled">
                    <bool>true</bool>
@@ -5728,26 +5741,18 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="4" column="1" colspan="2">
-                 <widget class="QGroupBox" name="groupBox_39">
-                  <property name="toolTip">
-                   <string>Regular expressions of note files to ignore, separated by &quot;;&quot;</string>
+                <item row="0" column="1" colspan="2">
+                 <widget class="QCheckBox" name="noteSubfoldersPanelShowNotesRecursivelyCheckBox">
+                  <property name="text">
+                   <string>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</string>
                   </property>
-                  <property name="title">
-                   <string>Ignored note files</string>
+                 </widget>
+                </item>
+                <item row="2" column="1" colspan="2">
+                 <widget class="QCheckBox" name="noteListPreviewCheckBox">
+                  <property name="text">
+                   <string>Show notes in the note list with preview</string>
                   </property>
-                  <layout class="QHBoxLayout" name="horizontalLayout_14">
-                   <item>
-                    <widget class="QLineEdit" name="ignoredNoteFilesLineEdit">
-                     <property name="placeholderText">
-                      <string>Regular expressions of note files to ignore, separated by &quot;;&quot;</string>
-                     </property>
-                     <property name="clearButtonEnabled">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
                  </widget>
                 </item>
                </layout>
@@ -6700,6 +6705,39 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
              </item>
             </layout>
            </widget>
+           <widget class="QWidget" name="experimentalPage">
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QGroupBox" name="notesPanelGroupBox_3">
+               <property name="title">
+                <string>Note list panel</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_30">
+                <item>
+                 <widget class="QCheckBox" name="enableNoteTreeCheckBox">
+                  <property name="text">
+                   <string>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_20">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
           </widget>
          </item>
         </layout>
@@ -6942,8 +6980,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

@@ -3,6 +3,8 @@
 ## 23.2.3
 - the calendar selector in the Todo List dialog was fixed for Qt6
   (for [#2734](https://github.com/pbek/QOwnNotes/issues/2734))
+- the note tree setting was now moved to a new settings panel *Experimental*
+  (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
 
 ## 23.2.2
 - a button to manually load the todo list items from your cloud server was added

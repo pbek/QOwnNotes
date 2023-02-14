@@ -59,7 +59,8 @@ class SettingsDialog : public MasterDialog {
         LocalTrashPage,
         LayoutPage,
         WebCompanionPage,
-        WebApplicationPage
+        WebApplicationPage,
+        ExperimentalPage
     };
 
     explicit SettingsDialog(int page = 0, QWidget *parent = 0);
