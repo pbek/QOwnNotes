@@ -88,10 +88,11 @@ jobs:
   #
   build-appimage:
     needs: create_release
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/pbek/qownnotes-ubuntu18-dev:latest
-      options: --user root
+    runs-on: ubuntu-20.04
+#    runs-on: ubuntu-latest
+#    container:
+#      image: ghcr.io/pbek/qownnotes-ubuntu18-dev:latest
+#      options: --user root
     env:
       QT_VERSION: 5.15.2
     name: '🐧 AppImage Qt 5.15.2'
