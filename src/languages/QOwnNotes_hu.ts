@@ -1514,7 +1514,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Másolás</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -5367,7 +5367,7 @@ Mégis telepíti?</translation>
 <name>SettingsDialog</name>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="26"/>
-<location filename="../dialogs/settingsdialog.ui" line="4421"/>
+<location filename="../dialogs/settingsdialog.ui" line="4433"/>
 <source>Settings</source>
 <translation>Beállítások</translation>
 </message>
@@ -5377,144 +5377,144 @@ Mégis telepíti?</translation>
 <translation>Jegyzet mappák</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="431"/>
+<location filename="../dialogs/settingsdialog.ui" line="443"/>
 <source>Your note folders</source>
 <translation>Az Ön jegyzetmappái</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="507"/>
+<location filename="../dialogs/settingsdialog.ui" line="519"/>
 <source>&amp;Add folder</source>
 <translation>mappa &amp;hozzáadása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="531"/>
+<location filename="../dialogs/settingsdialog.ui" line="543"/>
 <source>&amp;Remove folder</source>
 <translation>Mappa &amp;eltávolítása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="769"/>
+<location filename="../dialogs/settingsdialog.ui" line="781"/>
 <source>This name will be viewed in all the menus.</source>
 <translation>Ez a név tűnik fel az összes menüben.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="806"/>
+<location filename="../dialogs/settingsdialog.ui" line="818"/>
 <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
 <translation>A ownCloud elérési útjának beállítása, ahol a jegyzetmappa elérési útja szinkronizálódik az ownCloud kiszolgálóján.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="728"/>
+<location filename="../dialogs/settingsdialog.ui" line="740"/>
 <source>Use as active note folder</source>
 <translation>Aktív jegyzet mappaként</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="887"/>
+<location filename="../dialogs/settingsdialog.ui" line="899"/>
 <source>Your ownCloud server</source>
 <translation>OwnCloud kiszolgálója</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1114"/>
+<location filename="../dialogs/settingsdialog.ui" line="1126"/>
 <source>ownCloud server url:</source>
 <translation>ownCloud szerver Url-címe:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1136"/>
+<location filename="../dialogs/settingsdialog.ui" line="1148"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kérjük, adja meg a ownCloud kiszolgáló URL-címét, például: &lt;span style="font-style:italic;"&gt; https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1174"/>
+<location filename="../dialogs/settingsdialog.ui" line="1186"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kérjük, írja be a felhasználónevet a ownCloud kiszolgálón.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1209"/>
+<location filename="../dialogs/settingsdialog.ui" line="1221"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kérjük, írja be a felhasználóneve jelszavát. &lt;br/&gt; Jelenleg a jelszó titkosítva lesz elraktározva más beállításokkal együtt, de nem nagyon biztonságos.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1280"/>
+<location filename="../dialogs/settingsdialog.ui" line="1292"/>
 <source>connection to web server</source>
 <translation>web szerver kapcsolat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1297"/>
+<location filename="../dialogs/settingsdialog.ui" line="1309"/>
 <source>ownCloud server detected</source>
 <translation>ownCloud kiszolgáló észlelve</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1331"/>
+<location filename="../dialogs/settingsdialog.ui" line="1343"/>
 <source>connection to QOwnNotesAPI</source>
 <translation>QOwnNotesAPI kapcsolat </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1314"/>
+<location filename="../dialogs/settingsdialog.ui" line="1326"/>
 <source>username and password correct</source>
 <translation>a felhasználónév és jelszó helyes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1270"/>
-<location filename="../dialogs/settingsdialog.ui" line="1287"/>
-<location filename="../dialogs/settingsdialog.ui" line="1304"/>
-<location filename="../dialogs/settingsdialog.ui" line="1321"/>
-<location filename="../dialogs/settingsdialog.ui" line="1338"/>
-<location filename="../dialogs/settingsdialog.ui" line="1355"/>
-<location filename="../dialogs/settingsdialog.ui" line="1372"/>
+<location filename="../dialogs/settingsdialog.ui" line="1282"/>
+<location filename="../dialogs/settingsdialog.ui" line="1299"/>
+<location filename="../dialogs/settingsdialog.ui" line="1316"/>
+<location filename="../dialogs/settingsdialog.ui" line="1333"/>
+<location filename="../dialogs/settingsdialog.ui" line="1350"/>
+<location filename="../dialogs/settingsdialog.ui" line="1367"/>
+<location filename="../dialogs/settingsdialog.ui" line="1384"/>
 <location filename="../dialogs/settingsdialog.cpp" line="312"/>
 <source>unknown</source>
 <translation>ismeretlen</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1237"/>
+<location filename="../dialogs/settingsdialog.ui" line="1249"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kattintson ide, hogy tesztelje a kapcsolatot az ownCloud kiszolgálójával.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1348"/>
+<location filename="../dialogs/settingsdialog.ui" line="1360"/>
 <source>versions app enabled on server</source>
 <translation>verziók-app engedélyezve a kiszolgálón</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1365"/>
+<location filename="../dialogs/settingsdialog.ui" line="1377"/>
 <source>trash app enabled on server</source>
 <translation>kuka alkalmazás engedélyezve a kiszolgálón</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1385"/>
+<location filename="../dialogs/settingsdialog.ui" line="1397"/>
 <source>notes path found on server</source>
 <translation>jegyzetek elérhetőek a kiszolgálón</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="946"/>
+<location filename="../dialogs/settingsdialog.ui" line="958"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Megnyitja az ownCloud kiszolgáló &lt;span style="font-weight:600;"&gt; alkalmazáskonfiguráció&lt;/span&gt; oldalt a böngészőjében, mely elindítja a QOwnNotesAPI telepítését vagy frissítését és engedélyezi a fő alkalmazás &lt;span style="font-weight:600;"&gt; Változatokat&lt;/span&gt; és &lt;span style="font-weight:600;"&gt;Törölt fájlokat&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="636"/>
+<location filename="../dialogs/settingsdialog.ui" line="648"/>
 <source>path</source>
 <translation>elérési út</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="792"/>
+<location filename="../dialogs/settingsdialog.ui" line="804"/>
 <source>Click here to select your local note path</source>
 <translation>Kattintson ide a jegyzet helyi elérési útja kiválasztásához</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="745"/>
+<location filename="../dialogs/settingsdialog.ui" line="757"/>
 <source>Click here to select your remote note path on your ownCloud server</source>
 <translation>Kattintson ide a jegyzet távoli elérési útja kiválasztásához</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="602"/>
+<location filename="../dialogs/settingsdialog.ui" line="614"/>
 <source>Click here to use the selected folder from your server as note folder</source>
 <translation>Kattintson ide a kiszolgálóján kijelölt mappa jegyzetmappaként való használatához</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="914"/>
+<location filename="../dialogs/settingsdialog.ui" line="926"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Szintén szüksége van a két ownCloud alapvető apps &lt;span style="font-weight:600;"&gt; változatra&lt;/span&gt; és &lt;span style="font-weight:600;"&gt; töröl fájlokat&lt;/span&gt; a kiszolgálón engedélyezve legyen a ownCloud (ez legyen az alapértelmezett).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1014"/>
+<location filename="../dialogs/settingsdialog.ui" line="1026"/>
 <source>Error Message</source>
 <translation>Hibaüzenet</translation>
 </message>
@@ -5524,42 +5524,42 @@ Mégis telepíti?</translation>
 <translation>Hálózat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1496"/>
+<location filename="../dialogs/settingsdialog.ui" line="1508"/>
 <source>Proxy Settings</source>
 <translation>Proxy beállítások</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1502"/>
+<location filename="../dialogs/settingsdialog.ui" line="1514"/>
 <source>No Proxy</source>
 <translation>Nincs Proxy</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1512"/>
+<location filename="../dialogs/settingsdialog.ui" line="1524"/>
 <source>Use system proxy</source>
 <translation>Rendszer proxy használata</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1519"/>
+<location filename="../dialogs/settingsdialog.ui" line="1531"/>
 <source>Specify proxy manually as</source>
 <translation>Adja meg a proxy-t manuálisan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1544"/>
+<location filename="../dialogs/settingsdialog.ui" line="1556"/>
 <source>Host</source>
 <translation>Host</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1595"/>
+<location filename="../dialogs/settingsdialog.ui" line="1607"/>
 <source>Proxy server requires authentication</source>
 <translation>A proxy szerver hitelesítést igényel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1652"/>
+<location filename="../dialogs/settingsdialog.ui" line="1664"/>
 <source>SSL Settings</source>
 <translation>SSL-beállítások</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1658"/>
+<location filename="../dialogs/settingsdialog.ui" line="1670"/>
 <source>Ignore SSL errors</source>
 <translation>Az SSL-hibák figyelmen kívül hagyása</translation>
 </message>
@@ -5569,7 +5569,7 @@ Mégis telepíti?</translation>
 <translation>Teendők</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1926"/>
+<location filename="../dialogs/settingsdialog.ui" line="1938"/>
 <source>Default ownCloud calendar</source>
 <translation>Alapértelmezett OwnCloud naptár</translation>
 </message>
@@ -5579,65 +5579,65 @@ Mégis telepíti?</translation>
 <translation>Felület</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1896"/>
+<location filename="../dialogs/settingsdialog.ui" line="1908"/>
 <source>Other CalDAV server</source>
 <translation>Más CalDAV-kiszolgáló</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3064"/>
+<location filename="../dialogs/settingsdialog.ui" line="3076"/>
 <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
 <translation>Csak egyes színeket alkalmazunk, az asztaltémája határozza meg a többit. Indítsa újra az alkalmazást a módosítások érvényesítéséhez.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3067"/>
+<location filename="../dialogs/settingsdialog.ui" line="3079"/>
 <source>Optimize preview colors for dark mode desktop themes</source>
 <translation>Az előnézet színeinek optimalizálása a sötét stílus asztaltémához</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3054"/>
+<location filename="../dialogs/settingsdialog.ui" line="3066"/>
 <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
 <translation>Ez engedélyezi a sötét üzemmódot, a felület és az ikonok módosulnak. Indítsa újra az alkalmazást a módosítások érvényesítéséhez.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3057"/>
+<location filename="../dialogs/settingsdialog.ui" line="3069"/>
 <source>Enable dark mode</source>
 <translation>Sötét üzemmód engedélyezése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3083"/>
-<location filename="../dialogs/settingsdialog.ui" line="3093"/>
-<location filename="../dialogs/settingsdialog.ui" line="3124"/>
-<location filename="../dialogs/settingsdialog.ui" line="3134"/>
+<location filename="../dialogs/settingsdialog.ui" line="3095"/>
+<location filename="../dialogs/settingsdialog.ui" line="3105"/>
+<location filename="../dialogs/settingsdialog.ui" line="3136"/>
+<location filename="../dialogs/settingsdialog.ui" line="3146"/>
 <source>You need to restart the application to let this setting take effect</source>
 <translation>Újra kell indítania az alkalmazást, hogy a beállítás érvénybe lépjen</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3163"/>
+<location filename="../dialogs/settingsdialog.ui" line="3175"/>
 <source>Item sizes in the main window</source>
 <translation>Elemek mérete a fő ablakban</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5257"/>
+<location filename="../dialogs/settingsdialog.ui" line="5269"/>
 <source>Markdown highlighting</source>
 <translation>Markdown kiemelés</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5266"/>
+<location filename="../dialogs/settingsdialog.ui" line="5278"/>
 <source>Enable markdown highlighting</source>
 <translation>Engedélyezi a markdown kiemelést</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2220"/>
+<location filename="../dialogs/settingsdialog.ui" line="2232"/>
 <source>Interface language</source>
 <translation>Kezelőfelület nyelve</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2250"/>
+<location filename="../dialogs/settingsdialog.ui" line="2262"/>
 <source>Automatic</source>
 <translation>Automatikus</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2385"/>
+<location filename="../dialogs/settingsdialog.ui" line="2397"/>
 <source>English</source>
 <translation>Angol</translation>
 </message>
@@ -5647,121 +5647,121 @@ Mégis telepíti?</translation>
 <translation>Parancsikonok</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4659"/>
-<location filename="../dialogs/settingsdialog.ui" line="5005"/>
+<location filename="../dialogs/settingsdialog.ui" line="4671"/>
+<location filename="../dialogs/settingsdialog.ui" line="5017"/>
 <source>Default font:</source>
 <translation>Alapértelmezett betűtípusa:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4701"/>
-<location filename="../dialogs/settingsdialog.ui" line="4946"/>
+<location filename="../dialogs/settingsdialog.ui" line="4713"/>
+<location filename="../dialogs/settingsdialog.ui" line="4958"/>
 <source>Code font:</source>
 <translation>Kód betűtípusa:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3322"/>
+<location filename="../dialogs/settingsdialog.ui" line="3334"/>
 <source>Main window shortcuts</source>
 <translation>Főablak parancsikonok</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4099"/>
+<location filename="../dialogs/settingsdialog.ui" line="4111"/>
 <source>Do this at your own risk!</source>
 <translation>Ezt a saját felelősségére tegye!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4102"/>
+<location filename="../dialogs/settingsdialog.ui" line="4114"/>
 <source>Ignore all external note folder changes</source>
 <translation>Figyelmen kívül hagyja az összes külső jegyzetmappa módosításokat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4559"/>
+<location filename="../dialogs/settingsdialog.ui" line="4571"/>
 <source>Use GitHub line breaks</source>
 <translation>Használja a GitHub sortöréseket</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2363"/>
+<location filename="../dialogs/settingsdialog.ui" line="2375"/>
 <source>German</source>
 <translation>Német</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2440"/>
+<location filename="../dialogs/settingsdialog.ui" line="2452"/>
 <source>French</source>
 <translation>francia</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2704"/>
+<location filename="../dialogs/settingsdialog.ui" line="2716"/>
 <source>Polish</source>
 <translation>Lengyel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2726"/>
+<location filename="../dialogs/settingsdialog.ui" line="2738"/>
 <source>Portuguese</source>
 <translation>Portugál</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2671"/>
+<location filename="../dialogs/settingsdialog.ui" line="2683"/>
 <source>Dutch</source>
 <translation>Holland</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2638"/>
+<location filename="../dialogs/settingsdialog.ui" line="2650"/>
 <source>Hungarian</source>
 <translation>Magyar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2396"/>
+<location filename="../dialogs/settingsdialog.ui" line="2408"/>
 <source>Spanish</source>
 <translation>Spanyol</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3028"/>
+<location filename="../dialogs/settingsdialog.ui" line="3040"/>
 <source>Dark mode</source>
 <translation>Sötét stílus</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1712"/>
+<location filename="../dialogs/settingsdialog.ui" line="1724"/>
 <source>Disable tracking of usage data</source>
 <translation>Tiltsa le az adatok nyomon követését</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1756"/>
+<location filename="../dialogs/settingsdialog.ui" line="1768"/>
 <source>Usage tracking is done on a private Piwik server.</source>
 <translation>A használatkövetés egy privát Piwik-kiszolgálón történik.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1816"/>
+<location filename="../dialogs/settingsdialog.ui" line="1828"/>
 <source>Disable heartbeat</source>
 <translation>Letiltja a szívverés-t</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2759"/>
+<location filename="../dialogs/settingsdialog.ui" line="2771"/>
 <source>Russian</source>
 <translation>Orosz</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1665"/>
+<location filename="../dialogs/settingsdialog.ui" line="1677"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Érdemes megfontolni egy ingyenes SSL tanúsítvány beszerzését itt:&lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2239"/>
+<location filename="../dialogs/settingsdialog.ui" line="2251"/>
 <source>If you change the language you have to restart the application for the changes to take action.</source>
 <translation>Ha módosítja a nyelvet, szükséges újraindítania az alkalmazást a módosulások érvényesítéséhez.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3778"/>
-<location filename="../dialogs/settingsdialog.ui" line="3853"/>
+<location filename="../dialogs/settingsdialog.ui" line="3790"/>
+<location filename="../dialogs/settingsdialog.ui" line="3865"/>
 <source>You need to reload the scripting engine if you modify a script file</source>
 <translation>Újra kell töltenie a parancsértelmezőt ha módosít egy parancsfájlt</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3781"/>
-<location filename="../dialogs/settingsdialog.ui" line="3856"/>
+<location filename="../dialogs/settingsdialog.ui" line="3793"/>
+<location filename="../dialogs/settingsdialog.ui" line="3868"/>
 <source>Reload scripting engine</source>
 <translation>Parancsértelmező újratöltése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3771"/>
+<location filename="../dialogs/settingsdialog.ui" line="3783"/>
 <source>Validate script</source>
 <translation>Parancsfájl érvényesítése</translation>
 </message>
@@ -5771,41 +5771,41 @@ Mégis telepíti?</translation>
 <translation>Általános</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3950"/>
+<location filename="../dialogs/settingsdialog.ui" line="3962"/>
 <source>Notes</source>
 <translation>Jegyzetek</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4148"/>
+<location filename="../dialogs/settingsdialog.ui" line="4160"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Ha be van jelölve, mindig értesítést kap a külső módosításokról, még akkor is, ha az utolsó pillanatban az aktuális jegyzet nem szerkesztett. Ajánlott &lt;span style="font-style:italic;"&gt;nem bejelölni&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4088"/>
-<location filename="../dialogs/settingsdialog.ui" line="5508"/>
-<location filename="../dialogs/settingsdialog.ui" line="6082"/>
+<location filename="../dialogs/settingsdialog.ui" line="4100"/>
+<location filename="../dialogs/settingsdialog.ui" line="5520"/>
+<location filename="../dialogs/settingsdialog.ui" line="6087"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>Szinkronizációs konfliktusok léphetnek fel az ownCloud korábbi verzióival ha sokkal 10 mp alá megy. 
 Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen esetben egy magasabb értéket.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2660"/>
+<location filename="../dialogs/settingsdialog.ui" line="2672"/>
 <source>Japanese</source>
 <translation>Japán</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4092"/>
+<location filename="../dialogs/settingsdialog.ui" line="4104"/>
 <source>note save interval time [sec]</source>
 <translation>jegyzetmentés időintervalluma [sec]</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4151"/>
+<location filename="../dialogs/settingsdialog.ui" line="4163"/>
 <source>Notify about all external modifications of the current note</source>
 <translation>Értesítsen az aktuális jegyzet minden külső módosításáról</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4450"/>
+<location filename="../dialogs/settingsdialog.ui" line="4462"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2110"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2119"/>
 <location filename="../dialogs/settingsdialog.cpp" line="4082"/>
@@ -5814,74 +5814,74 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <translation>Adatbázis</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4456"/>
+<location filename="../dialogs/settingsdialog.ui" line="4468"/>
 <source>Reinitialize Database</source>
 <translation>Újrainicializálja az adatbázist</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4389"/>
+<location filename="../dialogs/settingsdialog.ui" line="4401"/>
 <source>Clear application data and exit</source>
 <translation>Alkalmazási adatok törlése és kilépés</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4395"/>
+<location filename="../dialogs/settingsdialog.ui" line="4407"/>
 <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
 <translation>Ez a gomb törli az összes beállítást, eltávolítja a helyi tennivalók adatbázist és elhagyja vele a QOwnNotes-t.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4405"/>
+<location filename="../dialogs/settingsdialog.ui" line="4417"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2182"/>
 <source>Clear app data and exit</source>
 <translation>Alkalmazási adatok törlése és kilépés</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4187"/>
+<location filename="../dialogs/settingsdialog.ui" line="4199"/>
 <source>Update dialog</source>
 <translation>Ablak frissítése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4349"/>
+<location filename="../dialogs/settingsdialog.ui" line="4361"/>
 <source>External editor</source>
 <translation>Külső szerkesztő</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4362"/>
+<location filename="../dialogs/settingsdialog.ui" line="4374"/>
 <source>path to external editor, leave empty for default</source>
 <translation>térkép a külső szerkesztőhöz, hagyja üresen alapértelmezettként</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4372"/>
-<location filename="../dialogs/settingsdialog.ui" line="5587"/>
+<location filename="../dialogs/settingsdialog.ui" line="4384"/>
+<location filename="../dialogs/settingsdialog.ui" line="5599"/>
 <source>set external editor</source>
 <translation>Állítsa be a külső szerkesztőt</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1681"/>
+<location filename="../dialogs/settingsdialog.ui" line="1693"/>
 <source>App metrics</source>
 <translation>Alkalmazás statisztika</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1699"/>
+<location filename="../dialogs/settingsdialog.ui" line="1711"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>Névtelen használatkövetési adatok segítenek eldönteni, hogy a QOwnNotes melyik részeit fejlesztjük és mely hibákat szerelünk meg. Kérjük, csak abban az esetben tiltsa le, ha egyáltalán nem tud vele élni.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1731"/>
+<location filename="../dialogs/settingsdialog.ui" line="1743"/>
 <source>This data includes anonymous information about what features of the app are used.</source>
 <translation>Az alkalmazás jellemzőiről tárolandó névtelen használatkövetési adatok.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1785"/>
+<location filename="../dialogs/settingsdialog.ui" line="1797"/>
 <source>App heartbeat</source>
 <translation>Szívverés alkalmazás</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1803"/>
+<location filename="../dialogs/settingsdialog.ui" line="1815"/>
 <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
 <translation>Rendszeresen küldünk egy apró szívverés kérelmet a QOwnNotes futtatása közben. Tegyen egy fejlesztőt boldoggá és tudassa vele, hogy valaki használja a QOwnNotes-t.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2550"/>
+<location filename="../dialogs/settingsdialog.ui" line="2562"/>
 <source>Italian</source>
 <translation>Olasz</translation>
 </message>
@@ -5891,17 +5891,17 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <translation>Parancsfájlkezelés</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3391"/>
+<location filename="../dialogs/settingsdialog.ui" line="3403"/>
 <source>Your scripts</source>
 <translation>A parancsfájlok</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3475"/>
+<location filename="../dialogs/settingsdialog.ui" line="3487"/>
 <source>&amp;Remove script</source>
 <translation>Parancsfájl &amp;eltávolítása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3788"/>
+<location filename="../dialogs/settingsdialog.ui" line="3800"/>
 <source>Click here to select your QML script</source>
 <translation>Kattintson ide, hogy kijelölje a QML parancsfájlját</translation>
 </message>
@@ -5951,557 +5951,557 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <translation>Helyi kuka</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="359"/>
+<location filename="../dialogs/settingsdialog.ui" line="371"/>
 <source>Debug options</source>
 <translation>Hibakeresési lehetőségek</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="762"/>
+<location filename="../dialogs/settingsdialog.ui" line="774"/>
 <source>Path where your notes are stored locally</source>
 <translation>A tárolt jegyzetek elérési útja</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="809"/>
+<location filename="../dialogs/settingsdialog.ui" line="821"/>
 <source>"Notes" path on your server</source>
 <extracomment>"Notes" should not be translated</extracomment>
 <translation>"Jegyzet" elérési útja a kiszolgálón</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="605"/>
+<location filename="../dialogs/settingsdialog.ui" line="617"/>
 <source>&amp;Use as ownCloud path</source>
 <translation>Használata mint &amp;ownCloud elérési út</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="644"/>
+<location filename="../dialogs/settingsdialog.ui" line="656"/>
 <source>Please select your note folder on your ownCloud server:</source>
 <translation>Kérjük, válassza ki a jegyzet mappát a ownCloud szerveren:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="664"/>
+<location filename="../dialogs/settingsdialog.ui" line="676"/>
 <source>Path on your ownCloud server:</source>
 <translation>OwnCloud kiszolgáló elérési útja:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="785"/>
-<location filename="../dialogs/settingsdialog.ui" line="3722"/>
+<location filename="../dialogs/settingsdialog.ui" line="797"/>
+<location filename="../dialogs/settingsdialog.ui" line="3734"/>
 <source>Name:</source>
 <translation>Név:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="711"/>
+<location filename="../dialogs/settingsdialog.ui" line="723"/>
 <source>Note folder path:</source>
 <translation>Jegyzetmappa elérési útja:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="718"/>
+<location filename="../dialogs/settingsdialog.ui" line="730"/>
 <source>You need to have git installed to make this work!</source>
 <translation>Szüksége van a git telepítése, hogy ez működjön!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="721"/>
+<location filename="../dialogs/settingsdialog.ui" line="733"/>
 <source>Use git to keep a local history of your notes</source>
 <translation>Git használata a jegyzetei helyi történet tárolásához</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="851"/>
+<location filename="../dialogs/settingsdialog.ui" line="863"/>
 <source>ownCloud support</source>
 <translation>ownCloud támogatás</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="857"/>
+<location filename="../dialogs/settingsdialog.ui" line="869"/>
 <source>Enable ownCloud support</source>
 <translation>ownCloud támogatás engedélyezése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="901"/>
+<location filename="../dialogs/settingsdialog.ui" line="913"/>
 <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
 <translation>Kérjük telepítse a &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt; &lt;span style="font-weight:600;"&gt; QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; legújabb változatát (legalább QOWNNOTESAPI_MIN_VERSION) ha szeretne hozzájutni a QOwnNotes-szal a jegyzetverziókhoz és a törölt jegyzetekhez.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="927"/>
+<location filename="../dialogs/settingsdialog.ui" line="939"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Még mindig szüksége lesz a &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; ownCloud szinkronizáló kliensre &lt;/ span&gt; &lt;/a&gt; (vagy egy másik asztali szinkronizáló kliensre) a jegyzetek szinkronizálásához! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1047"/>
+<location filename="../dialogs/settingsdialog.ui" line="1059"/>
 <source>Select a connection to edit</source>
 <translation>Válassza ki a szerkeszteni kívánt kapcsolatot</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1054"/>
-<location filename="../dialogs/settingsdialog.ui" line="1057"/>
+<location filename="../dialogs/settingsdialog.ui" line="1066"/>
+<location filename="../dialogs/settingsdialog.ui" line="1069"/>
 <source>Add connection</source>
 <translation>Kapcsolat hozzáadása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1068"/>
-<location filename="../dialogs/settingsdialog.ui" line="1071"/>
+<location filename="../dialogs/settingsdialog.ui" line="1080"/>
+<location filename="../dialogs/settingsdialog.ui" line="1083"/>
 <source>Remove connection</source>
 <translation>Távolítsa el a kapcsolatot</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1152"/>
-<location filename="../dialogs/settingsdialog.ui" line="1983"/>
+<location filename="../dialogs/settingsdialog.ui" line="1164"/>
+<location filename="../dialogs/settingsdialog.ui" line="1995"/>
 <source>Username:</source>
 <translation>Felhasználónév:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1177"/>
+<location filename="../dialogs/settingsdialog.ui" line="1189"/>
 <source>Your ownCloud username</source>
 <translation>ownCloud felhasználónév</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1187"/>
-<location filename="../dialogs/settingsdialog.ui" line="2018"/>
+<location filename="../dialogs/settingsdialog.ui" line="1199"/>
+<location filename="../dialogs/settingsdialog.ui" line="2030"/>
 <source>Password:</source>
 <translation>Jelszó:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1215"/>
+<location filename="../dialogs/settingsdialog.ui" line="1227"/>
 <source>Your ownCloud password</source>
 <translation>OwnCloud jelszava</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1243"/>
+<location filename="../dialogs/settingsdialog.ui" line="1255"/>
 <source>&amp;Connect to ownCloud server</source>
 <translation>&amp;kapcsolat az ownCloud kiszolgálóval</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1263"/>
+<location filename="../dialogs/settingsdialog.ui" line="1275"/>
 <source>Connection status</source>
 <translation>Kapcsolat állapota</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1085"/>
+<location filename="../dialogs/settingsdialog.ui" line="1097"/>
 <source>Connection name:</source>
 <translation>Kapcsolat neve:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="735"/>
+<location filename="../dialogs/settingsdialog.ui" line="747"/>
 <source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
 <translation>Vegye figyelembe, hogy a ownCloud jegyzetek alkalmazás nem támogatja az almappákat!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="738"/>
+<location filename="../dialogs/settingsdialog.ui" line="750"/>
 <source>Use note subfolders</source>
 <translation>Használjon jegyzet almappákat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1424"/>
+<location filename="../dialogs/settingsdialog.ui" line="1436"/>
 <source>Enable QOwnNotesAPI app</source>
 <translation>A QOwnNotesAPI alkalmazás engedélyezése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1447"/>
+<location filename="../dialogs/settingsdialog.ui" line="1459"/>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
 <translation>A bejelentkezési folyamat v2 csak a Nextcloud -al működik, a ownCloud -tal nem. Ha problémái vannak, kézzel kell létrehoznia egy alkalmazásjelszót.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1450"/>
+<location filename="../dialogs/settingsdialog.ui" line="1462"/>
 <source>Login to Nextcloud to grant access</source>
 <translation>Belépéshez jelentkezzen be a Nextcloud szolgáltatásba</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1855"/>
+<location filename="../dialogs/settingsdialog.ui" line="1867"/>
 <source>Todo settings</source>
 <translation>Todo beállítások</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1861"/>
+<location filename="../dialogs/settingsdialog.ui" line="1873"/>
 <source>Enable todo calendar support</source>
 <translation>A naptár támogatásának engedélyezése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2059"/>
+<location filename="../dialogs/settingsdialog.ui" line="2071"/>
 <source>Which cloud connection do you want to use?</source>
 <translation>Melyik cloud kapcsolatot szeretné használni?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2071"/>
+<location filename="../dialogs/settingsdialog.ui" line="2083"/>
 <source>Select the calendars you want to use for the Todo list</source>
 <translation>Kiválasztja a tennivalók listájához használt naptárakat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2146"/>
+<location filename="../dialogs/settingsdialog.ui" line="2158"/>
 <source>Todo list settings</source>
 <translation>Teendőlista beállításai</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2152"/>
+<location filename="../dialogs/settingsdialog.ui" line="2164"/>
 <source>Saving an item also closes the Todo list</source>
 <translation>Cikk mentése zárja a teendőlistát</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2264"/>
+<location filename="../dialogs/settingsdialog.ui" line="2276"/>
 <source>Indonesian</source>
 <translation>Indonéz</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2286"/>
+<location filename="../dialogs/settingsdialog.ui" line="2298"/>
 <source>Bengali</source>
 <translation>Bengáli</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2297"/>
+<location filename="../dialogs/settingsdialog.ui" line="2309"/>
 <source>Bosnian</source>
 <translation>Bosnyák</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2308"/>
+<location filename="../dialogs/settingsdialog.ui" line="2320"/>
 <source>Bulgarian</source>
 <translation>Bolgár</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2319"/>
+<location filename="../dialogs/settingsdialog.ui" line="2331"/>
 <source>Catalan</source>
 <translation>Katalán</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2330"/>
+<location filename="../dialogs/settingsdialog.ui" line="2342"/>
 <source>Cebuano</source>
 <translation>Cebui</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2352"/>
+<location filename="../dialogs/settingsdialog.ui" line="2364"/>
 <source>Danish</source>
 <translation>Dán</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2374"/>
+<location filename="../dialogs/settingsdialog.ui" line="2386"/>
 <source>Basque</source>
 <translation>Baszk</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2407"/>
+<location filename="../dialogs/settingsdialog.ui" line="2419"/>
 <source>Estonian</source>
 <translation>Észt</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2418"/>
+<location filename="../dialogs/settingsdialog.ui" line="2430"/>
 <source>Filipino</source>
 <translation>Filippínó</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2429"/>
+<location filename="../dialogs/settingsdialog.ui" line="2441"/>
 <source>Finnish</source>
 <translation>Finn</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2451"/>
+<location filename="../dialogs/settingsdialog.ui" line="2463"/>
 <source>Irish</source>
 <translation>Ír</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2462"/>
+<location filename="../dialogs/settingsdialog.ui" line="2474"/>
 <source>Galician</source>
 <translation>Galíciai</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2473"/>
+<location filename="../dialogs/settingsdialog.ui" line="2485"/>
 <source>Greek</source>
 <translation>Görög</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2484"/>
+<location filename="../dialogs/settingsdialog.ui" line="2496"/>
 <source>Hausa</source>
 <translation>Hausza</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2495"/>
+<location filename="../dialogs/settingsdialog.ui" line="2507"/>
 <source>Hebrew</source>
 <translation>Héber</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2506"/>
+<location filename="../dialogs/settingsdialog.ui" line="2518"/>
 <source>Hindi</source>
 <translation>Hindi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2528"/>
+<location filename="../dialogs/settingsdialog.ui" line="2540"/>
 <source>Hiligaynon</source>
 <translation>Klasszikus nahuatli</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2539"/>
+<location filename="../dialogs/settingsdialog.ui" line="2551"/>
 <source>Icelandic</source>
 <translation>Izlandi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2561"/>
+<location filename="../dialogs/settingsdialog.ui" line="2573"/>
 <source>Korean</source>
 <translation>Koreai</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2572"/>
+<location filename="../dialogs/settingsdialog.ui" line="2584"/>
 <source>Kurdish</source>
 <translation>Kurd</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2594"/>
+<location filename="../dialogs/settingsdialog.ui" line="2606"/>
 <source>Latvian</source>
 <translation>Lett</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2605"/>
+<location filename="../dialogs/settingsdialog.ui" line="2617"/>
 <source>Lithuanian</source>
 <translation>Litván</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2616"/>
+<location filename="../dialogs/settingsdialog.ui" line="2628"/>
 <source>Macedonian</source>
 <translation>Macedóniai</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2649"/>
+<location filename="../dialogs/settingsdialog.ui" line="2661"/>
 <source>Norwegian</source>
 <translation>Norvég</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2693"/>
+<location filename="../dialogs/settingsdialog.ui" line="2705"/>
 <source>Uzbek</source>
 <translation>Üzbég</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2737"/>
+<location filename="../dialogs/settingsdialog.ui" line="2749"/>
 <source>Punjabi</source>
 <translation>Pandzsábi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2682"/>
+<location filename="../dialogs/settingsdialog.ui" line="2694"/>
 <source>Persian</source>
 <translation>Perzsa</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2748"/>
+<location filename="../dialogs/settingsdialog.ui" line="2760"/>
 <source>Romanian</source>
 <translation>Román</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2770"/>
+<location filename="../dialogs/settingsdialog.ui" line="2782"/>
 <source>Serbian</source>
 <translation>Szerb</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2781"/>
+<location filename="../dialogs/settingsdialog.ui" line="2793"/>
 <source>Albanian</source>
 <translation>Albán</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2814"/>
+<location filename="../dialogs/settingsdialog.ui" line="2826"/>
 <source>Slovak</source>
 <translation>Szlovák</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2825"/>
+<location filename="../dialogs/settingsdialog.ui" line="2837"/>
 <source>Slovenian</source>
 <translation>Szlovén</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2836"/>
+<location filename="../dialogs/settingsdialog.ui" line="2848"/>
 <source>Swedish</source>
 <translation>Svéd</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2847"/>
+<location filename="../dialogs/settingsdialog.ui" line="2859"/>
 <source>Tagalog</source>
 <translation>Tagalog</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2880"/>
+<location filename="../dialogs/settingsdialog.ui" line="2892"/>
 <source>Turkish</source>
 <translation>Török</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2913"/>
+<location filename="../dialogs/settingsdialog.ui" line="2925"/>
 <source>Urdu</source>
 <translation>Urdu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2946"/>
+<location filename="../dialogs/settingsdialog.ui" line="2958"/>
 <source>Chinese Simplified</source>
 <translation>Kínai (egyszerűsített)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2957"/>
+<location filename="../dialogs/settingsdialog.ui" line="2969"/>
 <source>Chinese Traditional</source>
 <translation>Kínai (hagyományos)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3037"/>
+<location filename="../dialogs/settingsdialog.ui" line="3049"/>
 <source>Enable dark mode application icon and tray icon</source>
 <translation>Sötét mód alkalmazás ikon és a tálca ikon engedélyezése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3044"/>
+<location filename="../dialogs/settingsdialog.ui" line="3056"/>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
 <translation>Előfordulhat, hogy sötét üzemmódban egy másik szerkesztő színsémát is választhat a szerkesztő beállításaiban.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3147"/>
+<location filename="../dialogs/settingsdialog.ui" line="3159"/>
 <source>Enable dark mode icon theme</source>
 <translation>Az ikon téma engedélyezése sötét módban</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3077"/>
+<location filename="../dialogs/settingsdialog.ui" line="3089"/>
 <source>System tray</source>
 <translation>Rendszer tálca</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3086"/>
+<location filename="../dialogs/settingsdialog.ui" line="3098"/>
 <source>Show system tray icon</source>
 <translation>Rendszer tálca ikon megjelenítése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3096"/>
+<location filename="../dialogs/settingsdialog.ui" line="3108"/>
 <source>Start application hidden</source>
 <translation>Az alkalmazást rejtetten indítja</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3106"/>
+<location filename="../dialogs/settingsdialog.ui" line="3118"/>
 <source>Interface style</source>
 <translation>Interfész stílus</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3137"/>
+<location filename="../dialogs/settingsdialog.ui" line="3149"/>
 <source>Enforce system icon theme</source>
 <translation>A rendszer ikonjának érvényesítése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3243"/>
+<location filename="../dialogs/settingsdialog.ui" line="3255"/>
 <source>Override interface font size</source>
 <translation>Felülírja az interfész betűméretet</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3252"/>
+<location filename="../dialogs/settingsdialog.ui" line="3264"/>
 <source>Interface font size:</source>
 <translation>Interfész betűméret:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3464"/>
+<location filename="../dialogs/settingsdialog.ui" line="3476"/>
 <source>&amp;Add script…</source>
 <translation>&amp;Parancsfájl hozzáadása…</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3989"/>
+<location filename="../dialogs/settingsdialog.ui" line="4001"/>
 <source>Use legacy way to link to notes, images and attachments</source>
 <translation>Kapcsolja össze a jegyzeteket, képeket és mellékleteket a szokásos módon</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4003"/>
+<location filename="../dialogs/settingsdialog.ui" line="4015"/>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
 <translation>A jegyzetek megnyitásakor a kurzor pozíciója a jegyzeten belül visszaáll abba a pozícióba, amikor a jegyzetet legutóbb megnyitotta az aktuális munkamenetben</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4109"/>
+<location filename="../dialogs/settingsdialog.ui" line="4121"/>
 <source>By default the headline will generated automatically</source>
 <translation>Alapértelmezés szerint a címet automatikusan generáljuk</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4112"/>
+<location filename="../dialogs/settingsdialog.ui" line="4124"/>
 <source>The shortcut to create a new note asks for a headline</source>
 <translation>A parancsikon egy új jegyzet létrehozására címet követel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4138"/>
+<location filename="../dialogs/settingsdialog.ui" line="4150"/>
 <source>Automatically close the note folder database to prevent problems with sync tools</source>
 <translation>Automatikusan zárja le a jegyzet mappa adatbázist és kerülje el a szinkronizáló eszközökkel való problémákat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4141"/>
+<location filename="../dialogs/settingsdialog.ui" line="4153"/>
 <source>Automatically close the note folder database</source>
 <translation>Automatikusan zárja le a jegyszet mappa adatbázist</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4209"/>
+<location filename="../dialogs/settingsdialog.ui" line="4221"/>
 <source>Search engine</source>
 <translation>Kereső</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4231"/>
+<location filename="../dialogs/settingsdialog.ui" line="4243"/>
 <source>Message boxes</source>
 <translation>Üzenet dobozok</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4240"/>
+<location filename="../dialogs/settingsdialog.ui" line="4252"/>
 <location filename="../dialogs/settingsdialog.cpp" line="3770"/>
 <source>Reset message boxes</source>
 <translation>Az üzenet dobozok visszaállítása alaphelyzetbe</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4427"/>
+<location filename="../dialogs/settingsdialog.ui" line="4439"/>
 <location filename="../dialogs/settingsdialog.cpp" line="3836"/>
 <location filename="../dialogs/settingsdialog.cpp" line="3855"/>
 <source>Import settings</source>
 <translation>Beállítások importálása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4434"/>
+<location filename="../dialogs/settingsdialog.ui" line="4446"/>
 <location filename="../dialogs/settingsdialog.cpp" line="3802"/>
 <source>Export settings</source>
 <translation>Beállítások exportálása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4582"/>
+<location filename="../dialogs/settingsdialog.ui" line="4594"/>
 <source>Open issue assistant</source>
 <translation>Nyitott kérdés asszisztens</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4549"/>
+<location filename="../dialogs/settingsdialog.ui" line="4561"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A problémák közzétételének legjobb módja a probléma-asszisztens használata a&lt;span style=" font-weight:600;"&gt; lenti probléma asszisztens&lt;/span&gt;gomb megnyomása által.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4901"/>
+<location filename="../dialogs/settingsdialog.ui" line="4913"/>
 <source>Ignore code font size to allow zooming</source>
 <translation>A nagyítás érdekében hagyja figyelmen kívül a kód betűméretét</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4821"/>
+<location filename="../dialogs/settingsdialog.ui" line="4833"/>
 <source>Rendering</source>
 <translation>Látványterv</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4887"/>
+<location filename="../dialogs/settingsdialog.ui" line="4899"/>
 <source>Enable underline rendering</source>
 <translation>Az aláhúzott megjelenítés engedélyezése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5294"/>
+<location filename="../dialogs/settingsdialog.ui" line="5306"/>
 <source>Fully highlight blockquotes</source>
 <translation>Teljesen kiemeli a blokkvázlatokat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5320"/>
+<location filename="../dialogs/settingsdialog.ui" line="5332"/>
 <source>Note-edit cursor width:</source>
 <translation>Jegyszetszerkesztő kurzor szélesség:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5367"/>
+<location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
 <translation>Vim-üzemmód engedélyezése (Néhány QOwnNotes hivatkozások nem működnek)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="654"/>
+<location filename="../dialogs/settingsdialog.ui" line="666"/>
 <source>Cloud connection:</source>
 <translation>Cloud csatlakozás:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="966"/>
+<location filename="../dialogs/settingsdialog.ui" line="978"/>
 <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
 <translation>Megnyitja a ownCloud szerver alkalmazásjelszó oldalát a webböngészőben, hogy új alkalmazásjelszót hozzon létre az alkalmazáshoz</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="969"/>
+<location filename="../dialogs/settingsdialog.ui" line="981"/>
 <source>Open your ownCloud server App Password page</source>
 <translation>Nyissa meg a ownCloud szerver alkalmazásjelszó oldalát</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2627"/>
+<location filename="../dialogs/settingsdialog.ui" line="2639"/>
 <source>Māori</source>
 <translation>Māori</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2275"/>
+<location filename="../dialogs/settingsdialog.ui" line="2287"/>
 <source>Malay</source>
 <translation>Maláj</translation>
 </message>
@@ -6516,701 +6516,707 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <translation>Webalkalmazás</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="819"/>
+<location filename="../dialogs/settingsdialog.ui" line="348"/>
+<source>Experimental</source>
+<translation type="unfinished">Experimental</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="831"/>
 <source>This also allows note files to be renamed</source>
 <translation>Ez lehetővé teszi a jegyzetfájlok átnevezését is</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="864"/>
+<location filename="../dialogs/settingsdialog.ui" line="876"/>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
 <translation>Az alkalmazáson belül elérheti a ownCloud szerverét, például a kukába helyezett jegyzetek és jegyzetverziók kezeléséhez vagy jegyzetek megosztásához. Ez az integráció nem végzi el a jegyzetfájlok szinkronizálását. A fájlok szinkronizálásához továbbra is telepítenie kell az ownCloud szinkronizálási klienst.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1382"/>
+<location filename="../dialogs/settingsdialog.ui" line="1394"/>
 <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
 <translation type="unfinished">You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1437"/>
+<location filename="../dialogs/settingsdialog.ui" line="1449"/>
 <source>If your password doesn't work, create an app password (button on the right)</source>
 <translation>Ha a jelszava nem működik, hozzon létre egy alkalmazásjelszót (jobb oldalon található gomb)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1461"/>
+<location filename="../dialogs/settingsdialog.ui" line="1473"/>
 <source>Cancel Nextcloud login</source>
 <translation>Törölje a Nextcloud bejelentkezést</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1868"/>
+<location filename="../dialogs/settingsdialog.ui" line="1880"/>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
 <translation>A teendőlisták kezeléséhez hozzáférhet sajátCloud-szerveréhez vagy egy általános CalDAV-kiszolgálóhoz.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2226"/>
+<location filename="../dialogs/settingsdialog.ui" line="2238"/>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Ha szeretne segíteni a QOwnNotes fordításában vagy egy meglévő fordítás frissítésében, olvassa el: &lt;a href="%1"&gt; Hogyan segíthetek a QOwnNotes fordításában?&lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2583"/>
+<location filename="../dialogs/settingsdialog.ui" line="2595"/>
 <source>Khmer</source>
 <translation>Kambodzsai</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2792"/>
+<location filename="../dialogs/settingsdialog.ui" line="2804"/>
 <source>Shona</source>
 <translation>Shona</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2803"/>
+<location filename="../dialogs/settingsdialog.ui" line="2815"/>
 <source>Sinhala</source>
 <translation>Szingaléz</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2858"/>
+<location filename="../dialogs/settingsdialog.ui" line="2870"/>
 <source>Thai</source>
 <translation>Thai</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2869"/>
+<location filename="../dialogs/settingsdialog.ui" line="2881"/>
 <source>Vietnamese</source>
 <translation>Vietnámi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2891"/>
+<location filename="../dialogs/settingsdialog.ui" line="2903"/>
 <source>Xhosa</source>
 <translation>Xhosa</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2924"/>
+<location filename="../dialogs/settingsdialog.ui" line="2936"/>
 <source>Yiddish</source>
 <translation>jiddis</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2935"/>
+<location filename="../dialogs/settingsdialog.ui" line="2947"/>
 <source>Zulu</source>
 <translation>Zulu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2991"/>
+<location filename="../dialogs/settingsdialog.ui" line="3003"/>
 <source>Search for language</source>
 <translation>Nyelv keresése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3354"/>
+<location filename="../dialogs/settingsdialog.ui" line="3366"/>
 <source>Action name</source>
 <translation>Művelet neve</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3359"/>
+<location filename="../dialogs/settingsdialog.ui" line="3371"/>
 <source>Local shortcut</source>
 <translation>Helyi parancsikon</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3364"/>
+<location filename="../dialogs/settingsdialog.ui" line="3376"/>
 <source>Global shortcut</source>
 <translation>Globális parancsikon</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3976"/>
+<location filename="../dialogs/settingsdialog.ui" line="3988"/>
 <source>Disable this if you want to launch the application without opening a note</source>
 <translation>Tiltsa le, ha az alkalmazást jegyzet megnyitása nélkül szeretné elindítani</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3979"/>
+<location filename="../dialogs/settingsdialog.ui" line="3991"/>
 <source>Open last accessed note at application startup</source>
 <translation>Az alkalmazás indításakor nyissa meg az utoljára megismert jegyzetet</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4161"/>
+<location filename="../dialogs/settingsdialog.ui" line="4173"/>
 <source>Start application in read-only mode</source>
 <translation type="unfinished">Start application in read-only mode</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4237"/>
+<location filename="../dialogs/settingsdialog.ui" line="4249"/>
 <source>Forget all "Don't ask again" choices in message boxes</source>
 <translation>Felejtsd el az összes „Ne kérdezz többé” lehetőséget az üzenetablakban</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4270"/>
+<location filename="../dialogs/settingsdialog.ui" line="4282"/>
 <source>Note file extensions</source>
 <translation>Jegyezze meg a fájlkiterjesztéseket</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4308"/>
+<location filename="../dialogs/settingsdialog.ui" line="4320"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
 <translation>A felsorolt ​​fájlkiterjesztéssel rendelkező fájlokat jegyzetekként ismeri fel a rendszer, a kiválasztott fájlkiterjesztést új jegyzetekhez használja fel.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4318"/>
+<location filename="../dialogs/settingsdialog.ui" line="4330"/>
 <source>Add a new note file extension</source>
 <translation>Új jegyzetfájl -kiterjesztés hozzáadása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4332"/>
+<location filename="../dialogs/settingsdialog.ui" line="4344"/>
 <source>Remove selected note file extension</source>
 <translation>Távolítsa el a kijelölt jegyzetfájl -kiterjesztést</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4463"/>
+<location filename="../dialogs/settingsdialog.ui" line="4475"/>
 <source>Checks the disk database integrity and fixes problems</source>
 <translation>Ellenőrzi a lemez adatbázis integritását és kijavítja a problémákat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4466"/>
+<location filename="../dialogs/settingsdialog.ui" line="4478"/>
 <source>Check integrity</source>
 <translation>Ellenőrizze az integritást</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4473"/>
+<location filename="../dialogs/settingsdialog.ui" line="4485"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
 <translation>Vegye figyelembe, hogy az adatbázis újraindítása a gyorsítótárazott todo elemeket, valamint a beállított jegyzetmappákat és szkripteket is eltávolítja!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4556"/>
+<location filename="../dialogs/settingsdialog.ui" line="4568"/>
 <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>A GitHub-nak nincs szüksége két szóközre a sor végén a sortöréshez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4579"/>
+<location filename="../dialogs/settingsdialog.ui" line="4591"/>
 <source>This is the best way to open an issue</source>
 <translation>Ez a legjobb módszer a probléma megnyitására</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4593"/>
+<location filename="../dialogs/settingsdialog.ui" line="4605"/>
 <source>Please use this in the issue tracker</source>
 <translation>Kérjük, használja ezt a problémakövetőben</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4596"/>
+<location filename="../dialogs/settingsdialog.ui" line="4608"/>
 <source>&amp;Copy debug information to clipboard</source>
 <translation>&amp;Másolja a hibakeresési információkat a vágólapra</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4607"/>
+<location filename="../dialogs/settingsdialog.ui" line="4619"/>
 <source>Please don't use this in the issue tracker</source>
 <translation>Kérjük, ne használja ezt a problémakövetőben</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4827"/>
+<location filename="../dialogs/settingsdialog.ui" line="4839"/>
 <source>Time to wait before refreshing the preview after typing:</source>
 <translation>Várni kell az előnézet frissítése előtt a beírás után:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4834"/>
+<location filename="../dialogs/settingsdialog.ui" line="4846"/>
 <source>Reset the debounce time</source>
 <translation>Állítsa vissza a visszapattanási időt</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4848"/>
+<location filename="../dialogs/settingsdialog.ui" line="4860"/>
 <source>0ms means don't wait for the typing to stop</source>
 <translation>A 0 ms azt jelenti, hogy nem várja meg, amíg a gépelés leáll</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4880"/>
+<location filename="../dialogs/settingsdialog.ui" line="4892"/>
 <source>Use editor highlighting styles also for the preview</source>
 <translation>Az előnézethez használja a szerkesztő kiemelési stílusait is</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4911"/>
+<location filename="../dialogs/settingsdialog.ui" line="4923"/>
 <source>Exporting</source>
 <translation>Exportálás</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4917"/>
+<location filename="../dialogs/settingsdialog.ui" line="4929"/>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
 <translation>Használjon belső exportstílusokat a PDF exportálásához és az előnézet nyomtatásához</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5225"/>
+<location filename="../dialogs/settingsdialog.ui" line="5237"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>Tekintse meg az összes elérhető &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;időformátumot&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5263"/>
+<location filename="../dialogs/settingsdialog.ui" line="5275"/>
 <source>Note that disabling this will also disable the navigation panel!</source>
 <translation>Vegye figyelembe, hogy ennek letiltása a navigációs panelt is letiltja!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5360"/>
+<location filename="../dialogs/settingsdialog.ui" line="5372"/>
 <source>Disable cursor blinking</source>
 <translation>Tiltsa le a kurzor villogását</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5381"/>
+<location filename="../dialogs/settingsdialog.ui" line="5393"/>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>Automatikusan eltávolítja a jegyzetszövegből az egymást követő szóközöket</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5343"/>
+<location filename="../dialogs/settingsdialog.ui" line="5355"/>
 <source>Show line numbers</source>
 <translation>Vonalszámok megjelenítése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5422"/>
+<location filename="../dialogs/settingsdialog.ui" line="5434"/>
 <source>Tabs and Indents</source>
 <translation>Lapok és bekezdések</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5430"/>
+<location filename="../dialogs/settingsdialog.ui" line="5442"/>
 <source>Use tab character instead of spaces</source>
 <translation>Használjon tabulátor karaktert szóköz helyett</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5437"/>
+<location filename="../dialogs/settingsdialog.ui" line="5449"/>
 <source>Indent:</source>
 <translation>Bekezdés:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5839"/>
-<location filename="../dialogs/settingsdialog.ui" line="5848"/>
+<location filename="../dialogs/settingsdialog.ui" line="5844"/>
+<location filename="../dialogs/settingsdialog.ui" line="5853"/>
 <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>A jegyzet almappáinak rendszeres kifejezései, amelyeket figyelmen kívül kell hagyni, ";" elválasztva</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5737"/>
+<location filename="../dialogs/settingsdialog.ui" line="5699"/>
 <source>Ignored note files</source>
 <translation type="unfinished">Ignored note files</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5734"/>
-<location filename="../dialogs/settingsdialog.ui" line="5743"/>
+<location filename="../dialogs/settingsdialog.ui" line="5696"/>
+<location filename="../dialogs/settingsdialog.ui" line="5705"/>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
 <translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5842"/>
+<location filename="../dialogs/settingsdialog.ui" line="5847"/>
 <source>Ignored subfolders</source>
 <translation>Figyelmen kívül hagyott almappák</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5858"/>
+<location filename="../dialogs/settingsdialog.ui" line="5863"/>
 <source>Reset ignored subfolders</source>
 <translation>Alaphelyzetbe állítja a figyelmen kívül hagyott almappákat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5894"/>
+<location filename="../dialogs/settingsdialog.ui" line="5899"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
 <translation>Állítsa vissza a nyitott jegyzetek lapjait az alkalmazás indításakor és a jegyzetmappák váltásakor</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5917"/>
+<location filename="../dialogs/settingsdialog.ui" line="5922"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
 <translation>Elemek automatikus kiválasztása a navigációs panelen a kurzor pozíciójának megváltoztatásakor</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5986"/>
+<location filename="../dialogs/settingsdialog.ui" line="5991"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
 <translation>A "jegyzetek számozása" elrejtése kulcsszavakkal (növeli a teljesítményt)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6022"/>
+<location filename="../dialogs/settingsdialog.ui" line="6027"/>
 <source>Show the number of matches in each note</source>
 <translation>Mutassa a találatok számát az egyes jegyzetekben</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6421"/>
+<location filename="../dialogs/settingsdialog.ui" line="6426"/>
 <source>Command snippets</source>
 <translation>Parancsrészletek</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6430"/>
+<location filename="../dialogs/settingsdialog.ui" line="6435"/>
 <source>Tag name for commands notes</source>
 <translation>Címkenév a parancsjegyzetekhez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6437"/>
+<location filename="../dialogs/settingsdialog.ui" line="6442"/>
 <source>Commands tag:</source>
 <translation>Parancsok címke:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6457"/>
+<location filename="../dialogs/settingsdialog.ui" line="6462"/>
 <source>Commands note name:</source>
 <translation>Parancsok megjegyzésének neve:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6467"/>
+<location filename="../dialogs/settingsdialog.ui" line="6472"/>
 <source>Note name for adding new commands</source>
 <translation>Jegyezze fel a nevet az új parancsok hozzáadásához</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6507"/>
+<location filename="../dialogs/settingsdialog.ui" line="6512"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
 <translation>A &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; segítségével fényképeket illeszthet be az asztali QOwnNotes-ba mobiltelefonjáról az interneten keresztül.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6544"/>
+<location filename="../dialogs/settingsdialog.ui" line="6549"/>
 <source>QOwnNotes web application</source>
 <translation>QOwnNotes webalkalmazás</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6573"/>
+<location filename="../dialogs/settingsdialog.ui" line="6578"/>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6634"/>
+<location filename="../dialogs/settingsdialog.ui" line="6639"/>
 <source>Server URL:</source>
 <translation>Szerver URL-címe:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6691"/>
+<location filename="../dialogs/settingsdialog.ui" line="6696"/>
 <source>Show QR code</source>
 <translation>QR-kód megjelenítése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6583"/>
+<location filename="../dialogs/settingsdialog.ui" line="6588"/>
 <source>Security token:</source>
 <translation>Biztonsági jelkép:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6386"/>
+<location filename="../dialogs/settingsdialog.ui" line="6391"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
 <translation>Telepítse a &lt;a href="%1"&gt;Web Companion böngészőbővítményt&lt;/a&gt; a &lt;a href="%2"&gt;Chrome Internetes áruházból&lt;/a&gt; vagy a &lt;a href="%3"&gt;Firefox Add- ons oldalon&lt;/a&gt;, hogy a QOwnNotes-ot webvágóként vagy könyvjelzőkezelésként használhassa.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6402"/>
+<location filename="../dialogs/settingsdialog.ui" line="6407"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
 <translation>Töltse le a &lt;a href="%1"&gt;Parancssori kódrészletkezelőt&lt;/a&gt; a QOwnNotes jegyzeteiben tárolt parancsrészletek parancssorból történő végrehajtásához.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6444"/>
+<location filename="../dialogs/settingsdialog.ui" line="6449"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>Speciális címkével ellátott jegyzetek segítségével parancsrészleteket tárolhat, amelyeket a parancssori kódrészletkezelőből hajthat végre. A parancsrészlet szintaxisával kapcsolatos további információkért kattintson &lt;a href="%1"&gt;ide&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6641"/>
+<location filename="../dialogs/settingsdialog.ui" line="6646"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
 <translation>Ezt a tokent be kell írnia a QOwnNotes webalkalmazásba, hogy kommunikálni tudjon a QOwnNotes asztali alkalmazásával.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6651"/>
+<location filename="../dialogs/settingsdialog.ui" line="6656"/>
 <source>Copy security token to clipboard</source>
 <translation>Másolja a biztonsági tokent a vágólapra</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6604"/>
+<location filename="../dialogs/settingsdialog.ui" line="6609"/>
 <source>Generate new security token</source>
 <translation>Új biztonsági token generálása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6665"/>
+<location filename="../dialogs/settingsdialog.ui" line="6670"/>
 <source>Reset the URL to default</source>
 <translation>Állítsa vissza az URL-t alapértelmezettre</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6494"/>
+<location filename="../dialogs/settingsdialog.ui" line="6499"/>
 <source>QOwnNotes web application support</source>
 <translation>QOwnNotes webalkalmazások támogatása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6500"/>
+<location filename="../dialogs/settingsdialog.ui" line="6505"/>
 <source>Enable web application support</source>
 <translation>Engedélyezze a webalkalmazások támogatását</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5648"/>
+<location filename="../dialogs/settingsdialog.ui" line="5660"/>
+<location filename="../dialogs/settingsdialog.ui" line="6713"/>
 <source>Note list panel</source>
 <translation>Jegyzetlista panel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5668"/>
+<location filename="../dialogs/settingsdialog.ui" line="5754"/>
 <source>Show notes in the note list with preview</source>
 <translation>Megmutatja a jegyzeteket az előnézet jegyzetlistában</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5698"/>
+<location filename="../dialogs/settingsdialog.ui" line="6719"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
 <translation>Jegyzetlista helyett használjon jegyzetfát az összes almappával (ha be vannak kapcsolva a jegyzetmappához)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6032"/>
+<location filename="../dialogs/settingsdialog.ui" line="6037"/>
 <source>Note folder panel</source>
 <translation>Jegyzetmappa</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6038"/>
+<location filename="../dialogs/settingsdialog.ui" line="6043"/>
 <source>Show note folders as buttons instead of in a select box</source>
 <translation>Jegyzetmappák megjelenítése gombként jelölőnégyzet helyett</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6144"/>
+<location filename="../dialogs/settingsdialog.ui" line="6149"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
 <translation>A helyi kuka engedélyezése a kukába helyezett jegyzetek másolatának megőrzéséhez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6180"/>
+<location filename="../dialogs/settingsdialog.ui" line="6185"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
 <translation>A panelek be- és kikapcsolhatók az &lt;i&gt; Ablak / Panelek &lt;/i&gt; főmenüben, és különböző &lt;i&gt; munkaterületeket &lt;/i&gt; konfigurálhat a különböző panelekkonfigurációkhoz.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6257"/>
+<location filename="../dialogs/settingsdialog.ui" line="6262"/>
 <source>Bookmarks</source>
 <translation>Könyvjelzők</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6263"/>
-<location filename="../dialogs/settingsdialog.ui" line="6427"/>
+<location filename="../dialogs/settingsdialog.ui" line="6268"/>
+<location filename="../dialogs/settingsdialog.ui" line="6432"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
 <translation>A címkével ellátott jegyzetek a könyvjelzők letöltését szolgálják</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6266"/>
+<location filename="../dialogs/settingsdialog.ui" line="6271"/>
 <source>Tag name for bookmarks notes</source>
 <translation>A könyvjelzők jegyzeteinek címkéje</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6273"/>
+<location filename="../dialogs/settingsdialog.ui" line="6278"/>
 <source>Bookmarks tag:</source>
 <translation>Könyvjelző címke:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6280"/>
+<location filename="../dialogs/settingsdialog.ui" line="6285"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>Alapértelmezés szerint a böngészőbővítmény az aktuális jegyzet összes linkjét mutatja. Azt is megteheti, hogy egy speciális címkével ellátott jegyzetek speciális könyvjelzői linkjeit jeleníti meg. A könyvjelző link szintaxisával kapcsolatos további információkért kattintson &lt;a href="%1"&gt;ide&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6293"/>
+<location filename="../dialogs/settingsdialog.ui" line="6298"/>
 <source>Bookmarks note name:</source>
 <translation>A könyvjelző-jegyzet neve:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6300"/>
-<location filename="../dialogs/settingsdialog.ui" line="6464"/>
+<location filename="../dialogs/settingsdialog.ui" line="6305"/>
+<location filename="../dialogs/settingsdialog.ui" line="6469"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
 <translation>Ez a jegyzet új könyvjelzők hozzáadására szolgál a böngészőbővítményből</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6303"/>
+<location filename="../dialogs/settingsdialog.ui" line="6308"/>
 <source>Note name for adding new bookmarks</source>
 <translation>Jegyzet név könyvjelzők hozzáadásához</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6313"/>
+<location filename="../dialogs/settingsdialog.ui" line="6318"/>
 <source>Web socket server</source>
 <translation>Web socket szerver</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6319"/>
+<location filename="../dialogs/settingsdialog.ui" line="6324"/>
 <source>Socket server port:</source>
 <translation>Socket szerver port:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6339"/>
+<location filename="../dialogs/settingsdialog.ui" line="6344"/>
 <source>Reset the socket server port</source>
 <translation>Állítsa vissza a socket kiszolgáló portját</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6353"/>
-<location filename="../dialogs/settingsdialog.ui" line="6590"/>
+<location filename="../dialogs/settingsdialog.ui" line="6358"/>
+<location filename="../dialogs/settingsdialog.ui" line="6595"/>
 <source>Show security token</source>
 <translation>Biztonsági jelző megjelenítése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6373"/>
+<location filename="../dialogs/settingsdialog.ui" line="6378"/>
 <source>Web socket server support</source>
 <translation>Webkiszolgáló aljzat támogatása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6379"/>
+<location filename="../dialogs/settingsdialog.ui" line="6384"/>
 <source>Enable socket server</source>
 <translation>Engedélyezi az aljzat szervert</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5878"/>
+<location filename="../dialogs/settingsdialog.ui" line="5883"/>
 <source>Note edit panel</source>
 <translation>Jegyzetszerkesztés panel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5884"/>
+<location filename="../dialogs/settingsdialog.ui" line="5889"/>
 <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
 <translation>Ha ez le van tiltva, bonyolultabb panel elrendezéseket hozhat létre, azonban az összes panelt átméretezi, ha az ablakot átméretezi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5887"/>
+<location filename="../dialogs/settingsdialog.ui" line="5892"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
 <translation>Használja a jegyzetszerkesztő panelt rögzített központi modulként, mely átméretezhető, ha az ablakot vagy más panelt átméretez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6009"/>
+<location filename="../dialogs/settingsdialog.ui" line="6014"/>
 <source>Note search panel</source>
 <translation>Jegyzetkeresés panel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6015"/>
+<location filename="../dialogs/settingsdialog.ui" line="6020"/>
 <source>Disable auto-completion of previous searches</source>
 <translation>Letiltja az előző keresések automatikus befejezését</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5904"/>
+<location filename="../dialogs/settingsdialog.ui" line="5909"/>
 <source>Navigation panel</source>
 <translation>Navigációs panel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5910"/>
+<location filename="../dialogs/settingsdialog.ui" line="5915"/>
 <source>Hide navigation item search bar</source>
 <translation>Navigációs elem keresősáv elrejtése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6052"/>
+<location filename="../dialogs/settingsdialog.ui" line="6057"/>
 <source>Local trash settings</source>
 <translation>Helyi kuka beállítások</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6086"/>
+<location filename="../dialogs/settingsdialog.ui" line="6091"/>
 <source>Remove trashed notes after:</source>
 <translation>Törölt jegyzeteket eltávolít:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6093"/>
+<location filename="../dialogs/settingsdialog.ui" line="6098"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
 <translation> nap</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6112"/>
+<location filename="../dialogs/settingsdialog.ui" line="6117"/>
 <source>Automatically remove trashed notes after a certain time</source>
 <translation>Automatikusan eltávolítja a kukába jegyzeteket egy adott idõ elteltével</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6138"/>
+<location filename="../dialogs/settingsdialog.ui" line="6143"/>
 <source>Local trash support</source>
 <translation>Helyi kuka segítség</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6161"/>
+<location filename="../dialogs/settingsdialog.ui" line="6166"/>
 <source>Layout selector</source>
 <translation>Elrendezésválasztó</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6167"/>
+<location filename="../dialogs/settingsdialog.ui" line="6172"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
 <translation>Itt beállíthat egy új elrendezést. A &lt;i&gt;Panelek feloldása&lt;/i&gt; gombbal bármikor módosíthatja a panelek helyzetét.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5405"/>
+<location filename="../dialogs/settingsdialog.ui" line="5417"/>
 <source>Reset the cursor width</source>
 <translation>Kurzorszélesség visszaállítása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5522"/>
+<location filename="../dialogs/settingsdialog.ui" line="5534"/>
 <source>External git log command to show the git versions of a note</source>
 <translation>Külső git napló parancs a jegyzet git változatai megjelenítéséhez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5528"/>
+<location filename="../dialogs/settingsdialog.ui" line="5540"/>
 <source>Enter a command to be used to show a git log (like for example "gitk")</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Írjon be egy parancsot egy git napló használata megjelenítéséhez (mint például a "gitk")</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5548"/>
+<location filename="../dialogs/settingsdialog.ui" line="5560"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Ezzel a beállítással kap egy új menü bejegyzést a git változatok megjelenítéséhez ha jobb gombbal kattint egy jegyzetre.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5661"/>
+<location filename="../dialogs/settingsdialog.ui" line="5666"/>
 <source>Show all notes of a tag including the notes of their children-tags</source>
 <translation>Címke minden jegyzetét megmutatja a gyermek-címkéket beleértve</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5654"/>
+<location filename="../dialogs/settingsdialog.ui" line="5747"/>
 <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
 <translation>Megmutatja az összes jegyzetet egy mappában, beleértve az almappákat (csak akkor működik, ha almappák be vannak kapcsolva)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5313"/>
+<location filename="../dialogs/settingsdialog.ui" line="5325"/>
 <source>Highlight the current line</source>
 <translation>Kijelöli az aktuális sort</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5615"/>
+<location filename="../dialogs/settingsdialog.ui" line="5627"/>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Ne felejtse engedélyezni a jegyzetmappák git támogatását és beállítani a nevét és az e-mail címét a git-ügyfelénél, pl. ezen terminálparancsokkal:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5927"/>
+<location filename="../dialogs/settingsdialog.ui" line="5932"/>
 <source>Tags panel</source>
 <translation>Címkék panel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5708"/>
-<location filename="../dialogs/settingsdialog.ui" line="5802"/>
-<location filename="../dialogs/settingsdialog.ui" line="5956"/>
+<location filename="../dialogs/settingsdialog.ui" line="5721"/>
+<location filename="../dialogs/settingsdialog.ui" line="5807"/>
+<location filename="../dialogs/settingsdialog.ui" line="5961"/>
 <source>Order</source>
 <translation>Rendezés</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5717"/>
-<location filename="../dialogs/settingsdialog.ui" line="5808"/>
-<location filename="../dialogs/settingsdialog.ui" line="5962"/>
+<location filename="../dialogs/settingsdialog.ui" line="5730"/>
+<location filename="../dialogs/settingsdialog.ui" line="5813"/>
+<location filename="../dialogs/settingsdialog.ui" line="5967"/>
 <source>Ascending</source>
 <translation>Növekvő</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5724"/>
-<location filename="../dialogs/settingsdialog.ui" line="5815"/>
-<location filename="../dialogs/settingsdialog.ui" line="5969"/>
+<location filename="../dialogs/settingsdialog.ui" line="5737"/>
+<location filename="../dialogs/settingsdialog.ui" line="5820"/>
+<location filename="../dialogs/settingsdialog.ui" line="5974"/>
 <source>Descending</source>
 <translation>Csökkenő</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5675"/>
-<location filename="../dialogs/settingsdialog.ui" line="5772"/>
-<location filename="../dialogs/settingsdialog.ui" line="5933"/>
+<location filename="../dialogs/settingsdialog.ui" line="5673"/>
+<location filename="../dialogs/settingsdialog.ui" line="5777"/>
+<location filename="../dialogs/settingsdialog.ui" line="5938"/>
 <source>Sort</source>
 <translation>Rendezés típusa</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5398"/>
+<location filename="../dialogs/settingsdialog.ui" line="5410"/>
 <source>Only use editor width setting in distraction free mode</source>
 <translation>Csak figyelemelterelés ingyenes módban használja a szerkesztő szélesség beállítását</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5681"/>
-<location filename="../dialogs/settingsdialog.ui" line="5778"/>
-<location filename="../dialogs/settingsdialog.ui" line="5939"/>
+<location filename="../dialogs/settingsdialog.ui" line="5679"/>
+<location filename="../dialogs/settingsdialog.ui" line="5783"/>
+<location filename="../dialogs/settingsdialog.ui" line="5944"/>
 <source>Alphabetical</source>
 <translation>Betűrendben</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5946"/>
+<location filename="../dialogs/settingsdialog.ui" line="5951"/>
 <source>By last change / use</source>
 <translation>Az utolsó módosítás használata</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5979"/>
+<location filename="../dialogs/settingsdialog.ui" line="5984"/>
 <source>Hide 'Find or create tag' search</source>
 <translation>A "Címke keresése vagy létrehozása" keresés elrejtése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5759"/>
+<location filename="../dialogs/settingsdialog.ui" line="5764"/>
 <source>Note subfolders panel</source>
 <translation>Jegyzet almappák panel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5765"/>
+<location filename="../dialogs/settingsdialog.ui" line="5770"/>
 <source>Show with full path</source>
 <translation>Megjelenítés elérési úttal</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5688"/>
-<location filename="../dialogs/settingsdialog.ui" line="5785"/>
+<location filename="../dialogs/settingsdialog.ui" line="5686"/>
+<location filename="../dialogs/settingsdialog.ui" line="5790"/>
 <source>By last change</source>
 <translation>A legutóbbi változások szerint </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5795"/>
+<location filename="../dialogs/settingsdialog.ui" line="5800"/>
 <source>Show root folder name</source>
 <translation>Megmutatja a gyökér mappa nevet</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5825"/>
+<location filename="../dialogs/settingsdialog.ui" line="5830"/>
 <source>Hide 'Find or create note subfolder' search</source>
 <translation>"Jegyzet almappa keresése vagy létrehozása" keresés elrejtése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5832"/>
+<location filename="../dialogs/settingsdialog.ui" line="5837"/>
 <source>Display note subfolders as full tree</source>
 <translation>Megmutatja a jegyzetalmappákat mint teljes fa</translation>
 </message>
@@ -7220,44 +7226,44 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <translation>Keresés szkript adattárban</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5538"/>
+<location filename="../dialogs/settingsdialog.ui" line="5550"/>
 <source>You optionally can use "%notePath%" for the path of the note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Tetszés szerint a "%notePath%" segítségével is eléri a jegyzet hozzáférési útját.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5561"/>
+<location filename="../dialogs/settingsdialog.ui" line="5573"/>
 <source>Git client</source>
 <translation>Git ügyfél</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5577"/>
+<location filename="../dialogs/settingsdialog.ui" line="5589"/>
 <source>Path to git executable:</source>
 <translation>Git végrehajtható elérési útja:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5567"/>
+<location filename="../dialogs/settingsdialog.ui" line="5579"/>
 <source>Path to git client, leave empty for default</source>
 <translation>Ösvény a git ügyfélhez, alapértelmezetten hagyja üresen</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5486"/>
+<location filename="../dialogs/settingsdialog.ui" line="5498"/>
 <source>Commit interval</source>
 <translation>Commit intervallum</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5492"/>
+<location filename="../dialogs/settingsdialog.ui" line="5504"/>
 <source>sec</source>
 <extracomment>seconds</extracomment>
 <translation>mp</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5512"/>
+<location filename="../dialogs/settingsdialog.ui" line="5524"/>
 <source>git commit interval time [sec]</source>
 <translation>git véglegesítési intervallum idő [mp]</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="949"/>
+<location filename="../dialogs/settingsdialog.ui" line="961"/>
 <source>Open your ownCloud server &amp;Apps page</source>
 <translation>Nyissa meg a ownCloud server &amp;alkalmazások oldalt</translation>
 </message>
@@ -7267,392 +7273,392 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <translation>Előnézet</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1890"/>
+<location filename="../dialogs/settingsdialog.ui" line="1902"/>
 <source>Which calendar backend do you want to use?</source>
 <translation>Melyik naptár backend-et szeretné használni?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1923"/>
+<location filename="../dialogs/settingsdialog.ui" line="1935"/>
 <source>For most current ownCloud and Nextcloud installations</source>
 <translation>A legfrissebb ownCloud és Nextcloud berendezések</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1903"/>
+<location filename="../dialogs/settingsdialog.ui" line="1915"/>
 <source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>OwnCloud régebbi verziói, amelynél az alapértelmezett beállítás nem működik</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1906"/>
+<location filename="../dialogs/settingsdialog.ui" line="1918"/>
 <source>Legacy ownCloud calendar</source>
 <translation>Örökölt ownCloud naptár</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1939"/>
+<location filename="../dialogs/settingsdialog.ui" line="1951"/>
 <source>CalDAV server settings</source>
 <translation>CalDAV kiszolgáló beállításai</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1948"/>
+<location filename="../dialogs/settingsdialog.ui" line="1960"/>
 <source>Calendar base url:</source>
 <translation>Naptár alap URL-címe:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1970"/>
+<location filename="../dialogs/settingsdialog.ui" line="1982"/>
 <source>Please enter the CalDAV base url to your calendar.</source>
 <translation>Kérjük, írja be a CalDAV alap Url-t a naptárba.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2040"/>
+<location filename="../dialogs/settingsdialog.ui" line="2052"/>
 <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
 <translation>Kérjük, írja be a jelszót a CalDAV felhasználónevét. &lt;br/&gt; Jelenleg a jelszót titkosítva tároljuk más beállítások mellet, de nem nagyon biztonságos.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2341"/>
+<location filename="../dialogs/settingsdialog.ui" line="2353"/>
 <source>Czech</source>
 <translation>Cseh</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2715"/>
+<location filename="../dialogs/settingsdialog.ui" line="2727"/>
 <source>Brazilian Portuguese</source>
 <translation>Brazíliai Portugál</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2902"/>
+<location filename="../dialogs/settingsdialog.ui" line="2914"/>
 <source>Ukrainian</source>
 <translation>Ukrán</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3907"/>
+<location filename="../dialogs/settingsdialog.ui" line="3919"/>
 <source>The name</source>
 <translation>A név</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4061"/>
+<location filename="../dialogs/settingsdialog.ui" line="4073"/>
 <source>Maximum height:</source>
 <translation>Maximális magasság:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4034"/>
+<location filename="../dialogs/settingsdialog.ui" line="4046"/>
 <source>Maximum width:</source>
 <translation>Maximális szélesség:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3996"/>
+<location filename="../dialogs/settingsdialog.ui" line="4008"/>
 <source>Scale images down when inserted into notes</source>
 <translation>Képek lekerekítése a jegyzetekbe való behelyezésekor</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2517"/>
+<location filename="../dialogs/settingsdialog.ui" line="2529"/>
 <source>Croatian</source>
 <translation>Horvát</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3815"/>
+<location filename="../dialogs/settingsdialog.ui" line="3827"/>
 <source>Path to your QML file</source>
 <translation>A QML fájl elérési útja</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3729"/>
+<location filename="../dialogs/settingsdialog.ui" line="3741"/>
 <source>Script name</source>
 <translation>Parancsfájl neve</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3590"/>
+<location filename="../dialogs/settingsdialog.ui" line="3602"/>
 <source>Description:</source>
 <translation>Leírás:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3672"/>
+<location filename="../dialogs/settingsdialog.ui" line="3684"/>
 <source>Version:</source>
 <translation>Verzió:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3633"/>
+<location filename="../dialogs/settingsdialog.ui" line="3645"/>
 <source>Repository:</source>
 <translation>Adattár:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3610"/>
+<location filename="../dialogs/settingsdialog.ui" line="3622"/>
 <source>Author(s):</source>
 <translation>Szerző(k):</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3966"/>
+<location filename="../dialogs/settingsdialog.ui" line="3978"/>
 <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
 <translation>Jelölje be, ha szeretne minden külső módosítást elfogadni az aktuális jegyzet szerkesztése alatt.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3969"/>
+<location filename="../dialogs/settingsdialog.ui" line="3981"/>
 <source>Accept all external modifications of the current note</source>
 <translation>Elfogadja az aktuális jegyzet minden külső módosítását</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4081"/>
+<location filename="../dialogs/settingsdialog.ui" line="4093"/>
 <source>Use UNIX newline instead of native newline characters</source>
 <translation>UNIX újsor használata natív újsor karakterek helyett</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4006"/>
+<location filename="../dialogs/settingsdialog.ui" line="4018"/>
 <source>Restore cursor position when opening a note</source>
 <translation>Visszaállítja a kurzor pozícióját a jegyzet megnyitásakor</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5049"/>
+<location filename="../dialogs/settingsdialog.ui" line="5061"/>
 <source>Apply toolbar configuration</source>
 <translation>Eszköztárbeállítások alkalmazása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5063"/>
+<location filename="../dialogs/settingsdialog.ui" line="5075"/>
 <source>Reset toolbars</source>
 <translation>Eszköztárak visszaállítása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5091"/>
+<location filename="../dialogs/settingsdialog.ui" line="5103"/>
 <source>Enable logging to file</source>
 <translation>Engedélyezi a naplózást a fájlban</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5098"/>
+<location filename="../dialogs/settingsdialog.ui" line="5110"/>
 <source>Clear log file</source>
 <translation>Törli a log fájlt</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5109"/>
+<location filename="../dialogs/settingsdialog.ui" line="5121"/>
 <source>Fake old version number to trigger update</source>
 <translation>Hamis régi verzió számmal hívja elő a frissítést</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5137"/>
+<location filename="../dialogs/settingsdialog.ui" line="5149"/>
 <source>Log file path:</source>
 <translation>Naplófájl elérési útja:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5199"/>
+<location filename="../dialogs/settingsdialog.ui" line="5211"/>
 <source>Here you can set your own time format for inserting the current time into a note.</source>
 <translation>Itt állíthatja be a saját időformátumát az aktuális idő beszúrásához a jegyzetbe.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5202"/>
+<location filename="../dialogs/settingsdialog.ui" line="5214"/>
 <source>Insert current time</source>
 <translation>Aktuális idő beszúrása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5208"/>
+<location filename="../dialogs/settingsdialog.ui" line="5220"/>
 <source>Time format:</source>
 <translation>Időformátum:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5215"/>
+<location filename="../dialogs/settingsdialog.ui" line="5227"/>
 <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
 <translation>Adja meg a választott időformátumát, mint pl. "ÉÉÉÉ. HH. NN., óó:pp."</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5307"/>
+<location filename="../dialogs/settingsdialog.ui" line="5319"/>
 <source>Editor options</source>
 <translation>Szerkesztő beállításai</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5374"/>
+<location filename="../dialogs/settingsdialog.ui" line="5386"/>
 <source>Enable automatic closing of brackets and markdown formatting characters</source>
 <translation>Automatikus záró zárójel és a markdown karakterformázás engedélyezése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5350"/>
+<location filename="../dialogs/settingsdialog.ui" line="5362"/>
 <source>You have to use the backspace key to remove the opening character</source>
 <translation>A vissza billentyűgombot használja a nyitó karakter eltavolitására</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5353"/>
+<location filename="../dialogs/settingsdialog.ui" line="5365"/>
 <source>Enable automatic removal of matching closing characters</source>
 <translation>Engedélyezi az egyforma karakterek automatikus eltávolítását</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1973"/>
+<location filename="../dialogs/settingsdialog.ui" line="1985"/>
 <source>Your CalDAV calendar base url</source>
 <translation>A CalDAV naptár alap Url-címe</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2005"/>
+<location filename="../dialogs/settingsdialog.ui" line="2017"/>
 <source>Please enter the username of your CalDAV server.</source>
 <translation>Kérjük, írja be a felhasználónevet a CalDAV-kiszolgálón.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2008"/>
+<location filename="../dialogs/settingsdialog.ui" line="2020"/>
 <source>Your CalDAV username</source>
 <translation>A CalDAV felhasználónevét</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2046"/>
+<location filename="../dialogs/settingsdialog.ui" line="2058"/>
 <source>Your CalDAV password</source>
 <translation>A CalDAV jelszava</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2093"/>
+<location filename="../dialogs/settingsdialog.ui" line="2105"/>
 <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
 <translation>A teendő párbeszédpanel következő megnyitásával az összes teendőlista elemet betölti a kiszolgálóról.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2096"/>
+<location filename="../dialogs/settingsdialog.ui" line="2108"/>
 <source>Empty calendar item cache</source>
 <translation>Üres naptárelem raktár</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2119"/>
+<location filename="../dialogs/settingsdialog.ui" line="2131"/>
 <source>Click here to reload the list of calendars from your calendar server.</source>
 <translation>Kattintson ide a naptárlisták újratöltéséhez a naptárkiszolgálójáról.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2125"/>
+<location filename="../dialogs/settingsdialog.ui" line="2137"/>
 <source>&amp;Reload calendar list</source>
 <translation>Naptárlista &amp;újratöltése</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3034"/>
-<location filename="../dialogs/settingsdialog.ui" line="3144"/>
+<location filename="../dialogs/settingsdialog.ui" line="3046"/>
+<location filename="../dialogs/settingsdialog.ui" line="3156"/>
 <source>You may need to restart the application to let these changes take effect</source>
 <translation>A módosítások érvényesítéséhez szükséges lehet újraindítani az alkalmazást</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3179"/>
+<location filename="../dialogs/settingsdialog.ui" line="3191"/>
 <source>Toolbar icon size:</source>
 <translation>Eszköztár ikonméret:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3169"/>
+<location filename="../dialogs/settingsdialog.ui" line="3181"/>
 <source>List and tree item height:</source>
 <translation>Lista- és favezérlő elem magasság:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3202"/>
+<location filename="../dialogs/settingsdialog.ui" line="3214"/>
 <source>Reset the icon size</source>
 <translation>Ikonméret visszaállítása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3216"/>
+<location filename="../dialogs/settingsdialog.ui" line="3228"/>
 <source>Reset the item height</source>
 <translation>Ikon magasság visszaállítása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4894"/>
+<location filename="../dialogs/settingsdialog.ui" line="4906"/>
 <source>View text right to left (RTL)</source>
 <translation>Szöveg jobbról balra (RTL)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3340"/>
+<location filename="../dialogs/settingsdialog.ui" line="3352"/>
 <source>Search for shortcut</source>
 <translation>Parancsikon keresés</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2136"/>
+<location filename="../dialogs/settingsdialog.ui" line="2148"/>
 <source>Ignore calendars that don't support todo items</source>
 <translation>Figyelmen kívül hagy teendőelemekkel nem kompatibilis naptárakat</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2968"/>
+<location filename="../dialogs/settingsdialog.ui" line="2980"/>
 <source>Arabic</source>
 <translation>Arab</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3118"/>
+<location filename="../dialogs/settingsdialog.ui" line="3130"/>
 <source>Icons</source>
 <translation>Ikonok</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3127"/>
+<location filename="../dialogs/settingsdialog.ui" line="3139"/>
 <source>Use internal icon theme instead of system icon theme</source>
 <translation>Belső ikontéma használata rendszer ikontéma helyett</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3764"/>
+<location filename="../dialogs/settingsdialog.ui" line="3776"/>
 <source>Script path:</source>
 <translation>Parancsfájl elérési útja:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="775"/>
+<location filename="../dialogs/settingsdialog.ui" line="787"/>
 <source>Note folder name</source>
 <translation>Jegyzetmappa neve</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="822"/>
+<location filename="../dialogs/settingsdialog.ui" line="834"/>
 <source>Allow note file name to be different from headline</source>
 <translation>Engedélyezi a jegyzet fájlneve eltérését a címtől</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3956"/>
+<location filename="../dialogs/settingsdialog.ui" line="3968"/>
 <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
 <translation>Jelölje be, ha szeretne minden külső módosítást figyelmen kívül hagyni az aktuális jegyzet szerkesztése alatt.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3959"/>
+<location filename="../dialogs/settingsdialog.ui" line="3971"/>
 <source>Ignore all external modifications of the current note</source>
 <translation>Figyelmen kívül hagyja az aktuális jegyzet összes külső módosítását</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4078"/>
+<location filename="../dialogs/settingsdialog.ui" line="4090"/>
 <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
 <translation>Használja ezt pl. a Windows alatt, ha konfliktusa akad a sortöréssel az ownCloud / Nextcloud jegyzetalkalmazásban</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4171"/>
+<location filename="../dialogs/settingsdialog.ui" line="4183"/>
 <source>App instance</source>
 <translation>Alkalmazáspéldány</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4177"/>
+<location filename="../dialogs/settingsdialog.ui" line="4189"/>
 <source>Only allow one app instance at the same time</source>
 <translation>Egyszerre csak egy alkalmazáspéldányt engedélyez</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4355"/>
+<location filename="../dialogs/settingsdialog.ui" line="4367"/>
 <source>Path to external editor:</source>
 <translation>Külső szerkesztő elérési útja:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4193"/>
+<location filename="../dialogs/settingsdialog.ui" line="4205"/>
 <source>Don't show the update dialog automatically</source>
 <translation>Ne jelenjen meg a frissítés párbeszédpanel automatikusan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4653"/>
-<location filename="../dialogs/settingsdialog.ui" line="4933"/>
+<location filename="../dialogs/settingsdialog.ui" line="4665"/>
+<location filename="../dialogs/settingsdialog.ui" line="4945"/>
 <source>Fonts</source>
 <translation>Betűtípusok</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4676"/>
-<location filename="../dialogs/settingsdialog.ui" line="4718"/>
-<location filename="../dialogs/settingsdialog.ui" line="4956"/>
-<location filename="../dialogs/settingsdialog.ui" line="4984"/>
+<location filename="../dialogs/settingsdialog.ui" line="4688"/>
+<location filename="../dialogs/settingsdialog.ui" line="4730"/>
+<location filename="../dialogs/settingsdialog.ui" line="4968"/>
+<location filename="../dialogs/settingsdialog.ui" line="4996"/>
 <source>Set a new font</source>
 <translation>Egy új betűtípus beállítása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4687"/>
-<location filename="../dialogs/settingsdialog.ui" line="4732"/>
-<location filename="../dialogs/settingsdialog.ui" line="4970"/>
-<location filename="../dialogs/settingsdialog.ui" line="5015"/>
+<location filename="../dialogs/settingsdialog.ui" line="4699"/>
+<location filename="../dialogs/settingsdialog.ui" line="4744"/>
+<location filename="../dialogs/settingsdialog.ui" line="4982"/>
+<location filename="../dialogs/settingsdialog.ui" line="5027"/>
 <source>Reset font</source>
 <translation>Betűtípusok visszaállítása</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="348"/>
+<location filename="../dialogs/settingsdialog.ui" line="360"/>
 <source>Debug</source>
 <translation>Hibakeresés</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4517"/>
+<location filename="../dialogs/settingsdialog.ui" line="4529"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2129"/>
 <location filename="../dialogs/settingsdialog.cpp" line="4062"/>
 <source>Debug information</source>
 <translation>Hibakeresési információk</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4523"/>
+<location filename="../dialogs/settingsdialog.ui" line="4535"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt; Itt &lt;span style="font-weight:600;"&gt;másolhatja és beillesztheti&lt;/span&gt; ezt a szöveget (vagy a szöveg egyes részeit) egy &lt;span style="font-weight:600;"&gt; egy témában &lt;/span&gt; a &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes kérdések vagy ötletek oldal &lt;/a&gt; ha &lt;span style="font-weight:600;"&gt;-on, ha kérdései vagy konfliktusai&lt;/span&gt; akadnak a QOwnNotes-ban. Az érzékenyebb adatok ebben az információban rejtettek.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4610"/>
+<location filename="../dialogs/settingsdialog.ui" line="4622"/>
 <source>&amp;Save debug information</source>
 <translation>&amp;Hibakeresési adatok mentése</translation>
 </message>

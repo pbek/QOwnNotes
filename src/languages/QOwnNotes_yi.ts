@@ -1517,7 +1517,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>קאָפּיע</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -5386,7 +5386,7 @@ Do you want to install it anyway?</source>
 <name>SettingsDialog</name>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="26"/>
-<location filename="../dialogs/settingsdialog.ui" line="4421"/>
+<location filename="../dialogs/settingsdialog.ui" line="4433"/>
 <source>Settings</source>
 <translation>סעטטינגס</translation>
 </message>
@@ -5396,144 +5396,144 @@ Do you want to install it anyway?</source>
 <translation>באַמערקונג פאָלדערס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="431"/>
+<location filename="../dialogs/settingsdialog.ui" line="443"/>
 <source>Your note folders</source>
 <translation>דיין טאָן פאָלדערס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="507"/>
+<location filename="../dialogs/settingsdialog.ui" line="519"/>
 <source>&amp;Add folder</source>
 <translation>&amp;לייג טעקע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="531"/>
+<location filename="../dialogs/settingsdialog.ui" line="543"/>
 <source>&amp;Remove folder</source>
 <translation>&amp;אַראָפּנעמען טעקע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="769"/>
+<location filename="../dialogs/settingsdialog.ui" line="781"/>
 <source>This name will be viewed in all the menus.</source>
 <translation>דעם נאָמען וועט זיין געוויזן אין אַלע מעניוז.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="806"/>
+<location filename="../dialogs/settingsdialog.ui" line="818"/>
 <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
 <translation>באַשטעטיקט דעם ownCloud דרך' וווּ די באַמערקונג טעקע דרך וועט זיין סינסעד צו אויף דיין OwnCloud סערווער.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="728"/>
+<location filename="../dialogs/settingsdialog.ui" line="740"/>
 <source>Use as active note folder</source>
 <translation>ניצן ווי אַקטיוו טאָן טעקע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="887"/>
+<location filename="../dialogs/settingsdialog.ui" line="899"/>
 <source>Your ownCloud server</source>
 <translation>דיין אָונקלאָוד סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1114"/>
+<location filename="../dialogs/settingsdialog.ui" line="1126"/>
 <source>ownCloud server url:</source>
 <translation>ownCloud סערווער URL:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1136"/>
+<location filename="../dialogs/settingsdialog.ui" line="1148"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; ביטע אַרייַן די URL פון דיין ownCloud סערווער, למשל: &lt;span style = "font-style: italic;"&gt; https://cloud.yourserver.com &lt;/ span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1174"/>
+<location filename="../dialogs/settingsdialog.ui" line="1186"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; ביטע אַרייַן די נאמען אויף דיין ownCloud סערווער. &lt;/ p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1209"/>
+<location filename="../dialogs/settingsdialog.ui" line="1221"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; ביטע אַרייַן די שפּריכוואָרט פֿאַר דיין נאמען. &lt;br/&gt; דערווייַל די פּאַראָל וועט זיין סטאָרד ענקריפּטיד מיט די אנדערע סעטטינגס, אָבער איז נישט זייער זיכער. &lt;/ p&gt; &lt;/ body &gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1280"/>
+<location filename="../dialogs/settingsdialog.ui" line="1292"/>
 <source>connection to web server</source>
 <translation>קשר צו וועב סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1297"/>
+<location filename="../dialogs/settingsdialog.ui" line="1309"/>
 <source>ownCloud server detected</source>
 <translation>ownCloud סערווער דיטעקטאַד</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1331"/>
+<location filename="../dialogs/settingsdialog.ui" line="1343"/>
 <source>connection to QOwnNotesAPI</source>
 <translation>קשר צו QOwnNotesAPI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1314"/>
+<location filename="../dialogs/settingsdialog.ui" line="1326"/>
 <source>username and password correct</source>
 <translation>נאמען און שפּריכוואָרט ריכטיק</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1270"/>
-<location filename="../dialogs/settingsdialog.ui" line="1287"/>
-<location filename="../dialogs/settingsdialog.ui" line="1304"/>
-<location filename="../dialogs/settingsdialog.ui" line="1321"/>
-<location filename="../dialogs/settingsdialog.ui" line="1338"/>
-<location filename="../dialogs/settingsdialog.ui" line="1355"/>
-<location filename="../dialogs/settingsdialog.ui" line="1372"/>
+<location filename="../dialogs/settingsdialog.ui" line="1282"/>
+<location filename="../dialogs/settingsdialog.ui" line="1299"/>
+<location filename="../dialogs/settingsdialog.ui" line="1316"/>
+<location filename="../dialogs/settingsdialog.ui" line="1333"/>
+<location filename="../dialogs/settingsdialog.ui" line="1350"/>
+<location filename="../dialogs/settingsdialog.ui" line="1367"/>
+<location filename="../dialogs/settingsdialog.ui" line="1384"/>
 <location filename="../dialogs/settingsdialog.cpp" line="312"/>
 <source>unknown</source>
 <translation>אומבאַקאַנט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1237"/>
+<location filename="../dialogs/settingsdialog.ui" line="1249"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; קליקט דאָ צו פּרובירן די פֿאַרבינדונג צו דיין ownCloud סערווער. &lt;/ p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1348"/>
+<location filename="../dialogs/settingsdialog.ui" line="1360"/>
 <source>versions app enabled on server</source>
 <translation>ווערסיעס אַפּ ענייבאַלד אויף סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1365"/>
+<location filename="../dialogs/settingsdialog.ui" line="1377"/>
 <source>trash app enabled on server</source>
 <translation>אָפּפאַל אַפּ ענייבאַלד אויף סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1385"/>
+<location filename="../dialogs/settingsdialog.ui" line="1397"/>
 <source>notes path found on server</source>
 <translation>הערות דרך געפֿונען אויף סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="946"/>
+<location filename="../dialogs/settingsdialog.ui" line="958"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; אָפּענס דיין ownCloud סערווער &lt;span style = "font-weight: 600;"&gt; אַפּ קאַנפיגיעריישאַן &lt;/ span&gt; בלאַט אין דיין וועב בראָווס צו ינסטאַלירן אָדער דערהייַנטיקן QOwnNotesAPI און צו געבן דעם האַרץ אַפּפּס &lt;span style = "font-weight: 600;"&gt; ווערסיעס &lt;/ span&gt; און &lt;span style = "font-weight: 600;"&gt; אויסגעמעקט טעקעס &lt;/ span&gt; &lt;/p&gt; &lt;/body&gt; &lt;/ HTML&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="636"/>
+<location filename="../dialogs/settingsdialog.ui" line="648"/>
 <source>path</source>
 <translation>דרך</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="792"/>
+<location filename="../dialogs/settingsdialog.ui" line="804"/>
 <source>Click here to select your local note path</source>
 <translation>דריקט דאָ צו אויסקלייַבן דיין היגע טאָן דרך</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="745"/>
+<location filename="../dialogs/settingsdialog.ui" line="757"/>
 <source>Click here to select your remote note path on your ownCloud server</source>
 <translation>דריקט דאָ צו סעלעקטירן דיין ווייַט טאָן דרך אויף דיין אָוווערקלאָוד סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="602"/>
+<location filename="../dialogs/settingsdialog.ui" line="614"/>
 <source>Click here to use the selected folder from your server as note folder</source>
 <translation>דריקט דאָ צו נוצן די אויסגעקליבן טעקע פון דיין סערווירער ווי טאָן טעקע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="914"/>
+<location filename="../dialogs/settingsdialog.ui" line="926"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; איר דארפט אויך האָבן די צוויי אייגענע קלאָוד האַרץ אַפּפּס &lt;span style = "font-weight: 600;"&gt; ווערסיעס &lt;/ span&gt; און &lt;span style = "font-weight : 600; "&gt; אויסגעמעקט טעקעס &lt;/ span&gt; ענייבאַלד אויף דיין OwnCloud סערווער (דאָס זאָל זיין די פעליקייַט). &lt;/ P&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1014"/>
+<location filename="../dialogs/settingsdialog.ui" line="1026"/>
 <source>Error Message</source>
 <translation>טעות אָנזאָג</translation>
 </message>
@@ -5543,42 +5543,42 @@ Do you want to install it anyway?</source>
 <translation>נעץ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1496"/>
+<location filename="../dialogs/settingsdialog.ui" line="1508"/>
 <source>Proxy Settings</source>
 <translation>פראקסי סעטטינגס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1502"/>
+<location filename="../dialogs/settingsdialog.ui" line="1514"/>
 <source>No Proxy</source>
 <translation>ניט קיין פראקסי</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1512"/>
+<location filename="../dialogs/settingsdialog.ui" line="1524"/>
 <source>Use system proxy</source>
 <translation>ניצן סיסטעם פראקסי</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1519"/>
+<location filename="../dialogs/settingsdialog.ui" line="1531"/>
 <source>Specify proxy manually as</source>
 <translation>ספּעציפיצירן פראקסי מאַניואַלי ווי</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1544"/>
+<location filename="../dialogs/settingsdialog.ui" line="1556"/>
 <source>Host</source>
 <translation>באַלעבאָס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1595"/>
+<location filename="../dialogs/settingsdialog.ui" line="1607"/>
 <source>Proxy server requires authentication</source>
 <translation>פראקסי סערווער ריקווייערז אָטענטאַקיישאַן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1652"/>
+<location filename="../dialogs/settingsdialog.ui" line="1664"/>
 <source>SSL Settings</source>
 <translation>SSL סעטטינגס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1658"/>
+<location filename="../dialogs/settingsdialog.ui" line="1670"/>
 <source>Ignore SSL errors</source>
 <translation>איגנאָרירן ססל ערראָרס</translation>
 </message>
@@ -5588,7 +5588,7 @@ Do you want to install it anyway?</source>
 <translation>צו טוהן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1926"/>
+<location filename="../dialogs/settingsdialog.ui" line="1938"/>
 <source>Default ownCloud calendar</source>
 <translation>פעליקייַט אָונקלאָוד קאַלענדאַר</translation>
 </message>
@@ -5598,65 +5598,65 @@ Do you want to install it anyway?</source>
 <translation>צובינד</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1896"/>
+<location filename="../dialogs/settingsdialog.ui" line="1908"/>
 <source>Other CalDAV server</source>
 <translation>אנדערע קאַלדאַוו סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3064"/>
+<location filename="../dialogs/settingsdialog.ui" line="3076"/>
 <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
 <translation>בלויז עטלעכע פארבן וועט זיין אַדאַפּטיד, דיין דעסקטאַפּ טעמע קאָנטראָל די מנוחה. איר דאַרפֿן צו ריסטאַרט די אַפּלאַקיישאַן צו לאָזן די ענדערונגען נעמען קאַמף.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3067"/>
+<location filename="../dialogs/settingsdialog.ui" line="3079"/>
 <source>Optimize preview colors for dark mode desktop themes</source>
 <translation>אָפּטימיזע פאָרויסיקע ווייַזונג פֿאַרבן פֿאַר טונקל מאָדע דעסקטאַפּ טעמעס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3054"/>
+<location filename="../dialogs/settingsdialog.ui" line="3066"/>
 <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
 <translation>דעם ינייבאַלז די טונקל מאָדע, צובינד און ייקאַנז וועט זיין מאַדאַפייד. איר דאַרפֿן צו ריסטאַרט די אַפּלאַקיישאַן צו לאָזן די ענדערונגען נעמען קאַמף.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3057"/>
+<location filename="../dialogs/settingsdialog.ui" line="3069"/>
 <source>Enable dark mode</source>
 <translation>געבן פינצטער מאָדע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3083"/>
-<location filename="../dialogs/settingsdialog.ui" line="3093"/>
-<location filename="../dialogs/settingsdialog.ui" line="3124"/>
-<location filename="../dialogs/settingsdialog.ui" line="3134"/>
+<location filename="../dialogs/settingsdialog.ui" line="3095"/>
+<location filename="../dialogs/settingsdialog.ui" line="3105"/>
+<location filename="../dialogs/settingsdialog.ui" line="3136"/>
+<location filename="../dialogs/settingsdialog.ui" line="3146"/>
 <source>You need to restart the application to let this setting take effect</source>
 <translation>איר דאַרפֿן צו ריסטאַרט די אַפּלאַקיישאַן צו לאָזן דעם באַשטעטיקן ווירקונג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3163"/>
+<location filename="../dialogs/settingsdialog.ui" line="3175"/>
 <source>Item sizes in the main window</source>
 <translation>נומער סיזעס אין די הויפּט פֿענצטער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5257"/>
+<location filename="../dialogs/settingsdialog.ui" line="5269"/>
 <source>Markdown highlighting</source>
 <translation>מאַרקדאַון כיילייטינג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5266"/>
+<location filename="../dialogs/settingsdialog.ui" line="5278"/>
 <source>Enable markdown highlighting</source>
 <translation>געבן אַ כיילייטינג מאַרקדאַון</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2220"/>
+<location filename="../dialogs/settingsdialog.ui" line="2232"/>
 <source>Interface language</source>
 <translation>צובינד שפּראַך</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2250"/>
+<location filename="../dialogs/settingsdialog.ui" line="2262"/>
 <source>Automatic</source>
 <translation>אויטאָמאַטיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2385"/>
+<location filename="../dialogs/settingsdialog.ui" line="2397"/>
 <source>English</source>
 <translation>ענגליש</translation>
 </message>
@@ -5666,121 +5666,121 @@ Do you want to install it anyway?</source>
 <translation>דורכוועג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4659"/>
-<location filename="../dialogs/settingsdialog.ui" line="5005"/>
+<location filename="../dialogs/settingsdialog.ui" line="4671"/>
+<location filename="../dialogs/settingsdialog.ui" line="5017"/>
 <source>Default font:</source>
 <translation>פעליקייַט שריפֿט:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4701"/>
-<location filename="../dialogs/settingsdialog.ui" line="4946"/>
+<location filename="../dialogs/settingsdialog.ui" line="4713"/>
+<location filename="../dialogs/settingsdialog.ui" line="4958"/>
 <source>Code font:</source>
 <translation>קאָד שריפֿט:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3322"/>
+<location filename="../dialogs/settingsdialog.ui" line="3334"/>
 <source>Main window shortcuts</source>
 <translation>הויפּט פֿענצטער דורכוועג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4099"/>
+<location filename="../dialogs/settingsdialog.ui" line="4111"/>
 <source>Do this at your own risk!</source>
 <translation>טאָן דאָס אויף דיין אייגן ריזיקירן!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4102"/>
+<location filename="../dialogs/settingsdialog.ui" line="4114"/>
 <source>Ignore all external note folder changes</source>
 <translation>איגנאָרירן אַלע ענדערונגען אין די פונדרויסנדיק טאָן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4559"/>
+<location filename="../dialogs/settingsdialog.ui" line="4571"/>
 <source>Use GitHub line breaks</source>
 <translation>ניצן GitHub שורה ברייקס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2363"/>
+<location filename="../dialogs/settingsdialog.ui" line="2375"/>
 <source>German</source>
 <translation>דײַטש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2440"/>
+<location filename="../dialogs/settingsdialog.ui" line="2452"/>
 <source>French</source>
 <translation>פראנצויזיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2704"/>
+<location filename="../dialogs/settingsdialog.ui" line="2716"/>
 <source>Polish</source>
 <translation>פּויליש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2726"/>
+<location filename="../dialogs/settingsdialog.ui" line="2738"/>
 <source>Portuguese</source>
 <translation>פארטוגעזיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2671"/>
+<location filename="../dialogs/settingsdialog.ui" line="2683"/>
 <source>Dutch</source>
 <translation>האָלענדיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2638"/>
+<location filename="../dialogs/settingsdialog.ui" line="2650"/>
 <source>Hungarian</source>
 <translation>אונגעריש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2396"/>
+<location filename="../dialogs/settingsdialog.ui" line="2408"/>
 <source>Spanish</source>
 <translation>שפּאַניש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3028"/>
+<location filename="../dialogs/settingsdialog.ui" line="3040"/>
 <source>Dark mode</source>
 <translation>פינצטער מאָדע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1712"/>
+<location filename="../dialogs/settingsdialog.ui" line="1724"/>
 <source>Disable tracking of usage data</source>
 <translation>דיסאַבלע טראַקינג פון באַניץ דאַטן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1756"/>
+<location filename="../dialogs/settingsdialog.ui" line="1768"/>
 <source>Usage tracking is done on a private Piwik server.</source>
 <translation>באַניץ טראַקינג איז געטאן אויף אַ פּריוואַט Piwik סערווער.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1816"/>
+<location filename="../dialogs/settingsdialog.ui" line="1828"/>
 <source>Disable heartbeat</source>
 <translation>דיסאַבלע כאַרטביט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2759"/>
+<location filename="../dialogs/settingsdialog.ui" line="2771"/>
 <source>Russian</source>
 <translation>רוסיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1665"/>
+<location filename="../dialogs/settingsdialog.ui" line="1677"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; איר וואָלט ווי צו נעמען אַ פריי SSL באַווייַזן פֿון &lt;a href="https://letsencrypt.org/"&gt; לאמיר ענקריפּט &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2239"/>
+<location filename="../dialogs/settingsdialog.ui" line="2251"/>
 <source>If you change the language you have to restart the application for the changes to take action.</source>
 <translation>אויב איר טוישן די שפּראַך, איר מוזן ריסטאַרט די אַפּלאַקיישאַן פֿאַר די ענדערונגען צו נעמען קאַמף..</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3778"/>
-<location filename="../dialogs/settingsdialog.ui" line="3853"/>
+<location filename="../dialogs/settingsdialog.ui" line="3790"/>
+<location filename="../dialogs/settingsdialog.ui" line="3865"/>
 <source>You need to reload the scripting engine if you modify a script file</source>
 <translation>איר דאַרפֿן צו רילאָוד די סקריפּטינג מאָטאָר אויב איר מאָדיפיצירן אַ שריפט טעקע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3781"/>
-<location filename="../dialogs/settingsdialog.ui" line="3856"/>
+<location filename="../dialogs/settingsdialog.ui" line="3793"/>
+<location filename="../dialogs/settingsdialog.ui" line="3868"/>
 <source>Reload scripting engine</source>
 <translation>רילאָוד סקריפּטינג מאָטאָר</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3771"/>
+<location filename="../dialogs/settingsdialog.ui" line="3783"/>
 <source>Validate script</source>
 <translation>וואַלאַדייט שריפט</translation>
 </message>
@@ -5790,41 +5790,41 @@ Do you want to install it anyway?</source>
 <translation>אַלגעמיינע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3950"/>
+<location filename="../dialogs/settingsdialog.ui" line="3962"/>
 <source>Notes</source>
 <translation>הערות</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4148"/>
+<location filename="../dialogs/settingsdialog.ui" line="4160"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; אויב אָפּגעשטעלט, איר וועט שטענדיק זיין נאָוטאַפייד וועגן פונדרויסנדיק מאַדאַפאַקיישאַנז, אפילו אויב די איצטיקע טאָן איז נישט עדיטיד אין די לעצטע מינוט. רעקאַמענדיד איז &lt;span style = "font-style: italic;"&gt; ונטשעקטיד &lt;/ span&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4088"/>
-<location filename="../dialogs/settingsdialog.ui" line="5508"/>
-<location filename="../dialogs/settingsdialog.ui" line="6082"/>
+<location filename="../dialogs/settingsdialog.ui" line="4100"/>
+<location filename="../dialogs/settingsdialog.ui" line="5520"/>
+<location filename="../dialogs/settingsdialog.ui" line="6087"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>איר קען לויפן אין סינק קאָפּדרייעניש מיט עלטערע ווערסיעס פון OwnCloud סינק ווען איר גיין ווייַט אונטער 10 סעק.
 נאָר פּרובירן זיך אויב איר באַקומען סינק קאָנפליקט און שטעלן אַ העכער ווערט אויב אַזוי.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2660"/>
+<location filename="../dialogs/settingsdialog.ui" line="2672"/>
 <source>Japanese</source>
 <translation>יאַפּאַניש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4092"/>
+<location filename="../dialogs/settingsdialog.ui" line="4104"/>
 <source>note save interval time [sec]</source>
 <translation>טאָן שפּאָרן מעהאַלעך צייט [סעק]</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4151"/>
+<location filename="../dialogs/settingsdialog.ui" line="4163"/>
 <source>Notify about all external modifications of the current note</source>
 <translation>געבנ צו וויסן וועגן אַלע פונדרויסנדיק מאַדאַפאַקיישאַנז פון דעם קראַנט טאָן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4450"/>
+<location filename="../dialogs/settingsdialog.ui" line="4462"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2110"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2119"/>
 <location filename="../dialogs/settingsdialog.cpp" line="4082"/>
@@ -5833,74 +5833,74 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>דאַטאַבייס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4456"/>
+<location filename="../dialogs/settingsdialog.ui" line="4468"/>
 <source>Reinitialize Database</source>
 <translation>רעינאַליטיאַליזירן דאַטאַבייס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4389"/>
+<location filename="../dialogs/settingsdialog.ui" line="4401"/>
 <source>Clear application data and exit</source>
 <translation>ויסמעקן אַפּלאַקיישאַן דאַטן און אַרויסגאַנג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4395"/>
+<location filename="../dialogs/settingsdialog.ui" line="4407"/>
 <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
 <translation>מיט דעם קנעפּל איר קענען ויסמעקן אַלע סעטטינגס, אַראָפּנעמען די היגע טאָדאָ דאַטאַבייס און אַרויסגאַנג QOwnNotes.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4405"/>
+<location filename="../dialogs/settingsdialog.ui" line="4417"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2182"/>
 <source>Clear app data and exit</source>
 <translation>ויסמעקן אַפּ דאַטן און אַרויסגאַנג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4187"/>
+<location filename="../dialogs/settingsdialog.ui" line="4199"/>
 <source>Update dialog</source>
 <translation>דערהייַנטיקן דיאַלאָג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4349"/>
+<location filename="../dialogs/settingsdialog.ui" line="4361"/>
 <source>External editor</source>
 <translation>פונדרויסנדיק רעדאַקטאָר</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4362"/>
+<location filename="../dialogs/settingsdialog.ui" line="4374"/>
 <source>path to external editor, leave empty for default</source>
 <translation>דרך צו פונדרויסנדיק רעדאַקטאָר, לאָזן ליידיק פֿאַר פעליקייַט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4372"/>
-<location filename="../dialogs/settingsdialog.ui" line="5587"/>
+<location filename="../dialogs/settingsdialog.ui" line="4384"/>
+<location filename="../dialogs/settingsdialog.ui" line="5599"/>
 <source>set external editor</source>
 <translation>שטעלן פונדרויסנדיק רעדאַקטאָר</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1681"/>
+<location filename="../dialogs/settingsdialog.ui" line="1693"/>
 <source>App metrics</source>
 <translation>אַפּ מעטריקס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1699"/>
+<location filename="../dialogs/settingsdialog.ui" line="1711"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>אַנאָנימע באַנוצערס דאַטן העלפֿן צו באַשליסן וואָס פּאַרץ פון QOwnNotes צו פֿאַרבעסערן ווייַטער און צו געפֿינען און פאַרריכטן באַגז. ביטע דיסייבאַל עס נאָר אויב איר טאַקע קענען נישט לעבן מיט אים.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1731"/>
+<location filename="../dialogs/settingsdialog.ui" line="1743"/>
 <source>This data includes anonymous information about what features of the app are used.</source>
 <translation>די דאַטע כולל אַנאָנימע באַנוצערס אינפֿאָרמאַציע וועגן וואָס פֿעיִקייטן פון די אַפּ זענען געניצט.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1785"/>
+<location filename="../dialogs/settingsdialog.ui" line="1797"/>
 <source>App heartbeat</source>
 <translation>אַפּ העאַרטביט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1803"/>
+<location filename="../dialogs/settingsdialog.ui" line="1815"/>
 <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
 <translation>א קליין העאַרטביט בעטן איז געשיקט פּיריאַדיקלי בשעת QOwnNotes איז פליסנדיק. מאַכן אַ דעוועלאָפּער צופרידן דורך לאָזן אים וויסן אַז עמעצער איז ניצן QOwnNotes.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2550"/>
+<location filename="../dialogs/settingsdialog.ui" line="2562"/>
 <source>Italian</source>
 <translation>איטאַליעניש</translation>
 </message>
@@ -5910,17 +5910,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>סקריפּטינג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3391"/>
+<location filename="../dialogs/settingsdialog.ui" line="3403"/>
 <source>Your scripts</source>
 <translation>דיין סקריפּס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3475"/>
+<location filename="../dialogs/settingsdialog.ui" line="3487"/>
 <source>&amp;Remove script</source>
 <translation>&amp;אַראָפּנעמען שריפט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3788"/>
+<location filename="../dialogs/settingsdialog.ui" line="3800"/>
 <source>Click here to select your QML script</source>
 <translation>דריקט דאָ צו סעלעקטירן דיין קמל שריפט</translation>
 </message>
@@ -5970,557 +5970,557 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>לאקאלע אָפּפאַל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="359"/>
+<location filename="../dialogs/settingsdialog.ui" line="371"/>
 <source>Debug options</source>
 <translation>דעבוג אָפּציעס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="762"/>
+<location filename="../dialogs/settingsdialog.ui" line="774"/>
 <source>Path where your notes are stored locally</source>
 <translation>דרך וווּ דיין הערות זענען סטאָרד לאָוקאַלי</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="809"/>
+<location filename="../dialogs/settingsdialog.ui" line="821"/>
 <source>"Notes" path on your server</source>
 <extracomment>"Notes" should not be translated</extracomment>
 <translation>"נאָטעס" דרך אויף דיין סערווירער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="605"/>
+<location filename="../dialogs/settingsdialog.ui" line="617"/>
 <source>&amp;Use as ownCloud path</source>
 <translation>&amp;ניצן ווי אָוונעקלאָוד דרך</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="644"/>
+<location filename="../dialogs/settingsdialog.ui" line="656"/>
 <source>Please select your note folder on your ownCloud server:</source>
 <translation>ביטע סעלעקטירן דיין נאָטיץ טעקע אויף דיין OwnCloud סערווער:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="664"/>
+<location filename="../dialogs/settingsdialog.ui" line="676"/>
 <source>Path on your ownCloud server:</source>
 <translation>דרך אויף דיין OwnCloud סערווער:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="785"/>
-<location filename="../dialogs/settingsdialog.ui" line="3722"/>
+<location filename="../dialogs/settingsdialog.ui" line="797"/>
+<location filename="../dialogs/settingsdialog.ui" line="3734"/>
 <source>Name:</source>
 <translation>נאָמען:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="711"/>
+<location filename="../dialogs/settingsdialog.ui" line="723"/>
 <source>Note folder path:</source>
 <translation>באַמערקונג טעקע דרך:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="718"/>
+<location filename="../dialogs/settingsdialog.ui" line="730"/>
 <source>You need to have git installed to make this work!</source>
 <translation>איר דאַרפֿן צו האָבן אינסטאַלירן גיט צו מאַכן דעם אַרבעט!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="721"/>
+<location filename="../dialogs/settingsdialog.ui" line="733"/>
 <source>Use git to keep a local history of your notes</source>
 <translation>ניצן גיט צו האַלטן אַ היגע געשיכטע פון דיין הערות</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="851"/>
+<location filename="../dialogs/settingsdialog.ui" line="863"/>
 <source>ownCloud support</source>
 <translation>ownCloud שטיצן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="857"/>
+<location filename="../dialogs/settingsdialog.ui" line="869"/>
 <source>Enable ownCloud support</source>
 <translation>געבן שטיצן ownCloud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="901"/>
+<location filename="../dialogs/settingsdialog.ui" line="913"/>
 <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
 <translation>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="927"/>
+<location filename="../dialogs/settingsdialog.ui" line="939"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; איר וועט נאָך דאַרפֿן די &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; ownCloud סינק קליענט &lt;/ שפּאַן&gt; &lt;/a&gt; (אָדער אן אנדער דעסקטאַפּ סינק קליענט) צו סינק דיין הערות! &lt;/ p&gt; &lt;/ body&gt; &lt;/ HTML&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1047"/>
+<location filename="../dialogs/settingsdialog.ui" line="1059"/>
 <source>Select a connection to edit</source>
 <translation>סעלעקטירן אַ פֿאַרבינדונג צו רעדאַגירן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1054"/>
-<location filename="../dialogs/settingsdialog.ui" line="1057"/>
+<location filename="../dialogs/settingsdialog.ui" line="1066"/>
+<location filename="../dialogs/settingsdialog.ui" line="1069"/>
 <source>Add connection</source>
 <translation>לייג קשר</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1068"/>
-<location filename="../dialogs/settingsdialog.ui" line="1071"/>
+<location filename="../dialogs/settingsdialog.ui" line="1080"/>
+<location filename="../dialogs/settingsdialog.ui" line="1083"/>
 <source>Remove connection</source>
 <translation>אַראָפּנעמען קשר</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1152"/>
-<location filename="../dialogs/settingsdialog.ui" line="1983"/>
+<location filename="../dialogs/settingsdialog.ui" line="1164"/>
+<location filename="../dialogs/settingsdialog.ui" line="1995"/>
 <source>Username:</source>
 <translation>נאמען:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1177"/>
+<location filename="../dialogs/settingsdialog.ui" line="1189"/>
 <source>Your ownCloud username</source>
 <translation>דיין אייגענע קלאָוד נאמען</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1187"/>
-<location filename="../dialogs/settingsdialog.ui" line="2018"/>
+<location filename="../dialogs/settingsdialog.ui" line="1199"/>
+<location filename="../dialogs/settingsdialog.ui" line="2030"/>
 <source>Password:</source>
 <translation>שפּריכוואָרט:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1215"/>
+<location filename="../dialogs/settingsdialog.ui" line="1227"/>
 <source>Your ownCloud password</source>
 <translation>דיין אָוועסקלאָוד פּאַראָל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1243"/>
+<location filename="../dialogs/settingsdialog.ui" line="1255"/>
 <source>&amp;Connect to ownCloud server</source>
 <translation>&amp;פאַרבינדן צו OwnCloud סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1263"/>
+<location filename="../dialogs/settingsdialog.ui" line="1275"/>
 <source>Connection status</source>
 <translation>קאַנעקשאַן סטאַטוס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1085"/>
+<location filename="../dialogs/settingsdialog.ui" line="1097"/>
 <source>Connection name:</source>
 <translation>פֿאַרבינדונג נאָמען:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="735"/>
+<location filename="../dialogs/settingsdialog.ui" line="747"/>
 <source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
 <translation>זיין וויסנד אַז די אָוועסקלאָוד הערות אַפּ טוט נישט שטיצן סובפאָלדערס!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="738"/>
+<location filename="../dialogs/settingsdialog.ui" line="750"/>
 <source>Use note subfolders</source>
 <translation>ניצן טאָן סובפאָלדערס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1424"/>
+<location filename="../dialogs/settingsdialog.ui" line="1436"/>
 <source>Enable QOwnNotesAPI app</source>
 <translation>Enable QOwnNotesAPI אַפּ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1447"/>
+<location filename="../dialogs/settingsdialog.ui" line="1459"/>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
 <translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1450"/>
+<location filename="../dialogs/settingsdialog.ui" line="1462"/>
 <source>Login to Nextcloud to grant access</source>
 <translation type="unfinished">Login to Nextcloud to grant access</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1855"/>
+<location filename="../dialogs/settingsdialog.ui" line="1867"/>
 <source>Todo settings</source>
 <translation>טאָדאָ סעטטינגס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1861"/>
+<location filename="../dialogs/settingsdialog.ui" line="1873"/>
 <source>Enable todo calendar support</source>
 <translation>געבן טאָדאָ קאַלענדאַר שטיצן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2059"/>
+<location filename="../dialogs/settingsdialog.ui" line="2071"/>
 <source>Which cloud connection do you want to use?</source>
 <translation>וואָס וואָלקן פֿאַרבינדונג טאָן איר ווילן צו נוצן?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2071"/>
+<location filename="../dialogs/settingsdialog.ui" line="2083"/>
 <source>Select the calendars you want to use for the Todo list</source>
 <translation>סעלעקט די קאַלענדאַרס איר ווילן צו נוצן פֿאַר די Todo רשימה</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2146"/>
+<location filename="../dialogs/settingsdialog.ui" line="2158"/>
 <source>Todo list settings</source>
 <translation>טאָדאָ רשימה סעטטינגס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2152"/>
+<location filename="../dialogs/settingsdialog.ui" line="2164"/>
 <source>Saving an item also closes the Todo list</source>
 <translation>שפּאָרן אַ נומער אויך קלאָוזיז די טאָדאָ רשימה</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2264"/>
+<location filename="../dialogs/settingsdialog.ui" line="2276"/>
 <source>Indonesian</source>
 <translation>אינדאנעזיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2286"/>
+<location filename="../dialogs/settingsdialog.ui" line="2298"/>
 <source>Bengali</source>
 <translation>בענגאַליש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2297"/>
+<location filename="../dialogs/settingsdialog.ui" line="2309"/>
 <source>Bosnian</source>
 <translation>באסניש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2308"/>
+<location filename="../dialogs/settingsdialog.ui" line="2320"/>
 <source>Bulgarian</source>
 <translation>בולגאַריש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2319"/>
+<location filename="../dialogs/settingsdialog.ui" line="2331"/>
 <source>Catalan</source>
 <translation>קאַטאַלאַניש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2330"/>
+<location filename="../dialogs/settingsdialog.ui" line="2342"/>
 <source>Cebuano</source>
 <translation>סעבואַנאָ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2352"/>
+<location filename="../dialogs/settingsdialog.ui" line="2364"/>
 <source>Danish</source>
 <translation>דאַניש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2374"/>
+<location filename="../dialogs/settingsdialog.ui" line="2386"/>
 <source>Basque</source>
 <translation>באַסק</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2407"/>
+<location filename="../dialogs/settingsdialog.ui" line="2419"/>
 <source>Estonian</source>
 <translation>עסטיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2418"/>
+<location filename="../dialogs/settingsdialog.ui" line="2430"/>
 <source>Filipino</source>
 <translation>Filipino</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2429"/>
+<location filename="../dialogs/settingsdialog.ui" line="2441"/>
 <source>Finnish</source>
 <translation>פיליפּינאָ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2451"/>
+<location filename="../dialogs/settingsdialog.ui" line="2463"/>
 <source>Irish</source>
 <translation>איריש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2462"/>
+<location filename="../dialogs/settingsdialog.ui" line="2474"/>
 <source>Galician</source>
 <translation>גאליציאנער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2473"/>
+<location filename="../dialogs/settingsdialog.ui" line="2485"/>
 <source>Greek</source>
 <translation>גריכיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2484"/>
+<location filename="../dialogs/settingsdialog.ui" line="2496"/>
 <source>Hausa</source>
 <translation>האַוסאַ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2495"/>
+<location filename="../dialogs/settingsdialog.ui" line="2507"/>
 <source>Hebrew</source>
 <translation>העברעאיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2506"/>
+<location filename="../dialogs/settingsdialog.ui" line="2518"/>
 <source>Hindi</source>
 <translation>הינדיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2528"/>
+<location filename="../dialogs/settingsdialog.ui" line="2540"/>
 <source>Hiligaynon</source>
 <translation>היליגייַנאָן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2539"/>
+<location filename="../dialogs/settingsdialog.ui" line="2551"/>
 <source>Icelandic</source>
 <translation>איסלענדיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2561"/>
+<location filename="../dialogs/settingsdialog.ui" line="2573"/>
 <source>Korean</source>
 <translation>קאָרעיִש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2572"/>
+<location filename="../dialogs/settingsdialog.ui" line="2584"/>
 <source>Kurdish</source>
 <translation>קורדיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2594"/>
+<location filename="../dialogs/settingsdialog.ui" line="2606"/>
 <source>Latvian</source>
 <translation>לעטיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2605"/>
+<location filename="../dialogs/settingsdialog.ui" line="2617"/>
 <source>Lithuanian</source>
 <translation>ליטוויש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2616"/>
+<location filename="../dialogs/settingsdialog.ui" line="2628"/>
 <source>Macedonian</source>
 <translation>מאַקעדאָניש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2649"/>
+<location filename="../dialogs/settingsdialog.ui" line="2661"/>
 <source>Norwegian</source>
 <translation>נאָרוועגיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2693"/>
+<location filename="../dialogs/settingsdialog.ui" line="2705"/>
 <source>Uzbek</source>
 <translation>אוזבעקיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2737"/>
+<location filename="../dialogs/settingsdialog.ui" line="2749"/>
 <source>Punjabi</source>
 <translation>פּונדזשאַבי</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2682"/>
+<location filename="../dialogs/settingsdialog.ui" line="2694"/>
 <source>Persian</source>
 <translation>פערסיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2748"/>
+<location filename="../dialogs/settingsdialog.ui" line="2760"/>
 <source>Romanian</source>
 <translation>רומעניש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2770"/>
+<location filename="../dialogs/settingsdialog.ui" line="2782"/>
 <source>Serbian</source>
 <translation>סערביש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2781"/>
+<location filename="../dialogs/settingsdialog.ui" line="2793"/>
 <source>Albanian</source>
 <translation>אַלבאַניש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2814"/>
+<location filename="../dialogs/settingsdialog.ui" line="2826"/>
 <source>Slovak</source>
 <translation>סלאוואקיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2825"/>
+<location filename="../dialogs/settingsdialog.ui" line="2837"/>
 <source>Slovenian</source>
 <translation>סלאוועניש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2836"/>
+<location filename="../dialogs/settingsdialog.ui" line="2848"/>
 <source>Swedish</source>
 <translation>שוועדיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2847"/>
+<location filename="../dialogs/settingsdialog.ui" line="2859"/>
 <source>Tagalog</source>
 <translation>טאגאלאג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2880"/>
+<location filename="../dialogs/settingsdialog.ui" line="2892"/>
 <source>Turkish</source>
 <translation>טערקיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2913"/>
+<location filename="../dialogs/settingsdialog.ui" line="2925"/>
 <source>Urdu</source>
 <translation>אורדו</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2946"/>
+<location filename="../dialogs/settingsdialog.ui" line="2958"/>
 <source>Chinese Simplified</source>
 <translation>סימפּליפיעד כינעזיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2957"/>
+<location filename="../dialogs/settingsdialog.ui" line="2969"/>
 <source>Chinese Traditional</source>
 <translation>כינעזיש טראַדיציאָנעל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3037"/>
+<location filename="../dialogs/settingsdialog.ui" line="3049"/>
 <source>Enable dark mode application icon and tray icon</source>
 <translation>געבן די אַפּלאַקיישאַן בילדל און טאַץ ייקאַן פינצטער מאָדע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3044"/>
+<location filename="../dialogs/settingsdialog.ui" line="3056"/>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
 <translation>איר קענט אויך ווילן צו קלייַבן אן אנדער רעדאַקטאָר קאָליר סכעמע אין די רעדאַקטאָר סעטטינגס אין פינצטער מאָדע.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3147"/>
+<location filename="../dialogs/settingsdialog.ui" line="3159"/>
 <source>Enable dark mode icon theme</source>
 <translation>געבן טונקל בילדל ייקאַן טעמע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3077"/>
+<location filename="../dialogs/settingsdialog.ui" line="3089"/>
 <source>System tray</source>
 <translation>סיסטעם טאַץ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3086"/>
+<location filename="../dialogs/settingsdialog.ui" line="3098"/>
 <source>Show system tray icon</source>
 <translation>ווייַזן סיסטעם טאַץ ייקאַן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3096"/>
+<location filename="../dialogs/settingsdialog.ui" line="3108"/>
 <source>Start application hidden</source>
 <translation>אָנהייב אַפּלאַקיישאַן איז פאַרבאָרגן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3106"/>
+<location filename="../dialogs/settingsdialog.ui" line="3118"/>
 <source>Interface style</source>
 <translation>צובינד סטיל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3137"/>
+<location filename="../dialogs/settingsdialog.ui" line="3149"/>
 <source>Enforce system icon theme</source>
 <translation>דורכפירן סיסטעם ייקאַן טעמע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3243"/>
+<location filename="../dialogs/settingsdialog.ui" line="3255"/>
 <source>Override interface font size</source>
 <translation>אָוועררידע צובינד שריפֿט גרייס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3252"/>
+<location filename="../dialogs/settingsdialog.ui" line="3264"/>
 <source>Interface font size:</source>
 <translation>צובינד שריפֿט גרייס:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3464"/>
+<location filename="../dialogs/settingsdialog.ui" line="3476"/>
 <source>&amp;Add script…</source>
 <translation>לייג שריפט…</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3989"/>
+<location filename="../dialogs/settingsdialog.ui" line="4001"/>
 <source>Use legacy way to link to notes, images and attachments</source>
 <translation>ניצן לעגאַט וועג צו לינק צו הערות, בילדער און אַטאַטשמאַנץ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4003"/>
+<location filename="../dialogs/settingsdialog.ui" line="4015"/>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
 <translation>ווען עפן הערות, די לויפֿער פּאָזיציע ין דער צעטל וועט איצט זיין ריסטאָרד צו דער שטעלע ווען די טאָן איז לעצטנס באזוכט אין די קראַנט סעסיע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4109"/>
+<location filename="../dialogs/settingsdialog.ui" line="4121"/>
 <source>By default the headline will generated automatically</source>
 <translation>דורך פעליקייַט, די כעדליין וועט אויטאָמאַטיש דזשענערייטאַד</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4112"/>
+<location filename="../dialogs/settingsdialog.ui" line="4124"/>
 <source>The shortcut to create a new note asks for a headline</source>
 <translation>דער דורכוועג צו שאַפֿן אַ נייַע באַמערקונג פרעגט פֿאַר אַ קעפּל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4138"/>
+<location filename="../dialogs/settingsdialog.ui" line="4150"/>
 <source>Automatically close the note folder database to prevent problems with sync tools</source>
 <translation>נאָענט אויטאָמאַטיש פאַרמאַכן די באַמערקונג טעקע דייטאַבייס צו פאַרמייַדן פראבלעמען מיט סינק מכשירים</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4141"/>
+<location filename="../dialogs/settingsdialog.ui" line="4153"/>
 <source>Automatically close the note folder database</source>
 <translation>אָטאַמאַטיק נאָענט די דאַטאַבייס פון די באַמערקונג טעקע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4209"/>
+<location filename="../dialogs/settingsdialog.ui" line="4221"/>
 <source>Search engine</source>
 <translation>זוכן מאָטאָר</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4231"/>
+<location filename="../dialogs/settingsdialog.ui" line="4243"/>
 <source>Message boxes</source>
 <translation>אָנזאָג באָקסעס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4240"/>
+<location filename="../dialogs/settingsdialog.ui" line="4252"/>
 <location filename="../dialogs/settingsdialog.cpp" line="3770"/>
 <source>Reset message boxes</source>
 <translation>באַשטעטיק אָנזאָג באָקסעס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4427"/>
+<location filename="../dialogs/settingsdialog.ui" line="4439"/>
 <location filename="../dialogs/settingsdialog.cpp" line="3836"/>
 <location filename="../dialogs/settingsdialog.cpp" line="3855"/>
 <source>Import settings</source>
 <translation>אַרייַנפיר סעטטינגס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4434"/>
+<location filename="../dialogs/settingsdialog.ui" line="4446"/>
 <location filename="../dialogs/settingsdialog.cpp" line="3802"/>
 <source>Export settings</source>
 <translation>אַרויספירן סעטטינגס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4582"/>
+<location filename="../dialogs/settingsdialog.ui" line="4594"/>
 <source>Open issue assistant</source>
 <translation>עפֿן אַרויסגעבן אַסיסטאַנט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4549"/>
+<location filename="../dialogs/settingsdialog.ui" line="4561"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; דער בעסטער וועג צו פּאָסטן ישוז איז צו נוצן די אַרויסגעבן אַסיסטאַנט דורך דרינגלעך די &lt;span style = "font-weight: 600;"&gt; עפֿן אַרויסגעבן אַסיסטאַנט &lt;/ span&gt; קנעפּל אויף די דנאָ. &lt;/ p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4901"/>
+<location filename="../dialogs/settingsdialog.ui" line="4913"/>
 <source>Ignore code font size to allow zooming</source>
 <translation>איגנאָרירן קאָד שריפֿט גרייס צו לאָזן זומינג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4821"/>
+<location filename="../dialogs/settingsdialog.ui" line="4833"/>
 <source>Rendering</source>
 <translation>רענדערינג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4887"/>
+<location filename="../dialogs/settingsdialog.ui" line="4899"/>
 <source>Enable underline rendering</source>
 <translation>געבן אַנדערלייינג רענדערינג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5294"/>
+<location filename="../dialogs/settingsdialog.ui" line="5306"/>
 <source>Fully highlight blockquotes</source>
 <translation>גאָר הויכפּונקט בלאָקקוואָטעס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5320"/>
+<location filename="../dialogs/settingsdialog.ui" line="5332"/>
 <source>Note-edit cursor width:</source>
 <translation>באַמערקונג-רעדאַגירן לויפֿער ברייט:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5367"/>
+<location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
 <translation>געבן Vim מאָדע (עטלעכע קוויננאָטעס דורכוועג וועט נישט אַרבעטן)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="654"/>
+<location filename="../dialogs/settingsdialog.ui" line="666"/>
 <source>Cloud connection:</source>
 <translation>וואָלקן קשר:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="966"/>
+<location filename="../dialogs/settingsdialog.ui" line="978"/>
 <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
 <translation>אָפּענס דיין אָוועסקלאָוד סערווירער אַפּ שפּריכוואָרט בלאַט אין דיין וועב בראָווסער צו שאַפֿן אַ נייַ אַפּ פּאַראָל פֿאַר די אַפּלאַקיישאַן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="969"/>
+<location filename="../dialogs/settingsdialog.ui" line="981"/>
 <source>Open your ownCloud server App Password page</source>
 <translation>עפֿן דיין OwnCloud סערווירער אַפּ שפּריכוואָרט בלאַט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2627"/>
+<location filename="../dialogs/settingsdialog.ui" line="2639"/>
 <source>Māori</source>
 <translation>Māori</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2275"/>
+<location filename="../dialogs/settingsdialog.ui" line="2287"/>
 <source>Malay</source>
 <translation>Malay</translation>
 </message>
@@ -6535,701 +6535,707 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation type="unfinished">Web application</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="819"/>
+<location filename="../dialogs/settingsdialog.ui" line="348"/>
+<source>Experimental</source>
+<translation type="unfinished">Experimental</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="831"/>
 <source>This also allows note files to be renamed</source>
 <translation type="unfinished">This also allows note files to be renamed</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="864"/>
+<location filename="../dialogs/settingsdialog.ui" line="876"/>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
 <translation type="unfinished">You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1382"/>
+<location filename="../dialogs/settingsdialog.ui" line="1394"/>
 <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
 <translation type="unfinished">You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1437"/>
+<location filename="../dialogs/settingsdialog.ui" line="1449"/>
 <source>If your password doesn't work, create an app password (button on the right)</source>
 <translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1461"/>
+<location filename="../dialogs/settingsdialog.ui" line="1473"/>
 <source>Cancel Nextcloud login</source>
 <translation type="unfinished">Cancel Nextcloud login</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1868"/>
+<location filename="../dialogs/settingsdialog.ui" line="1880"/>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
 <translation type="unfinished">You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2226"/>
+<location filename="../dialogs/settingsdialog.ui" line="2238"/>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>אויב איר ווילט צו איבערזעצן QOwnNotes אָדער דערהייַנטיקן אַן יגזיסטינג איבערזעצונג ביטע לייענען: &lt;a href="%1"&gt; ווי קען איך העלפֿן צו איבערזעצן QOwnNotes? &lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2583"/>
+<location filename="../dialogs/settingsdialog.ui" line="2595"/>
 <source>Khmer</source>
 <translation>כמער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2792"/>
+<location filename="../dialogs/settingsdialog.ui" line="2804"/>
 <source>Shona</source>
 <translation>שאָנאַ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2803"/>
+<location filename="../dialogs/settingsdialog.ui" line="2815"/>
 <source>Sinhala</source>
 <translation>סינהאַלאַ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2858"/>
+<location filename="../dialogs/settingsdialog.ui" line="2870"/>
 <source>Thai</source>
 <translation>טײַלענדיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2869"/>
+<location filename="../dialogs/settingsdialog.ui" line="2881"/>
 <source>Vietnamese</source>
 <translation>וויעטנאַמעזיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2891"/>
+<location filename="../dialogs/settingsdialog.ui" line="2903"/>
 <source>Xhosa</source>
 <translation>קסהאָסאַ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2924"/>
+<location filename="../dialogs/settingsdialog.ui" line="2936"/>
 <source>Yiddish</source>
 <translation>יידיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2935"/>
+<location filename="../dialogs/settingsdialog.ui" line="2947"/>
 <source>Zulu</source>
 <translation>זולו</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2991"/>
+<location filename="../dialogs/settingsdialog.ui" line="3003"/>
 <source>Search for language</source>
 <translation>זוכן פֿאַר שפּראַך</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3354"/>
+<location filename="../dialogs/settingsdialog.ui" line="3366"/>
 <source>Action name</source>
 <translation>קאַמף נאָמען</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3359"/>
+<location filename="../dialogs/settingsdialog.ui" line="3371"/>
 <source>Local shortcut</source>
 <translation>לאקאלע דורכוועג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3364"/>
+<location filename="../dialogs/settingsdialog.ui" line="3376"/>
 <source>Global shortcut</source>
 <translation>גלאבאלע דורכוועג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3976"/>
+<location filename="../dialogs/settingsdialog.ui" line="3988"/>
 <source>Disable this if you want to launch the application without opening a note</source>
 <translation>דיסאַבלע דעם אויב איר ווילן צו קאַטער די אַפּלאַקיישאַן אָן עפן אַ צעטל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3979"/>
+<location filename="../dialogs/settingsdialog.ui" line="3991"/>
 <source>Open last accessed note at application startup</source>
 <translation>עפֿן לעצטע אַקסעסט טאָן ביי אַפּלאַקיישאַן סטאַרטאַפּ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4161"/>
+<location filename="../dialogs/settingsdialog.ui" line="4173"/>
 <source>Start application in read-only mode</source>
 <translation type="unfinished">Start application in read-only mode</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4237"/>
+<location filename="../dialogs/settingsdialog.ui" line="4249"/>
 <source>Forget all "Don't ask again" choices in message boxes</source>
 <translation type="unfinished">Forget all "Don't ask again" choices in message boxes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4270"/>
+<location filename="../dialogs/settingsdialog.ui" line="4282"/>
 <source>Note file extensions</source>
 <translation type="unfinished">Note file extensions</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4308"/>
+<location filename="../dialogs/settingsdialog.ui" line="4320"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
 <translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4318"/>
+<location filename="../dialogs/settingsdialog.ui" line="4330"/>
 <source>Add a new note file extension</source>
 <translation type="unfinished">Add a new note file extension</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4332"/>
+<location filename="../dialogs/settingsdialog.ui" line="4344"/>
 <source>Remove selected note file extension</source>
 <translation type="unfinished">Remove selected note file extension</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4463"/>
+<location filename="../dialogs/settingsdialog.ui" line="4475"/>
 <source>Checks the disk database integrity and fixes problems</source>
 <translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4466"/>
+<location filename="../dialogs/settingsdialog.ui" line="4478"/>
 <source>Check integrity</source>
 <translation type="unfinished">Check integrity</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4473"/>
+<location filename="../dialogs/settingsdialog.ui" line="4485"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
 <translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4556"/>
+<location filename="../dialogs/settingsdialog.ui" line="4568"/>
 <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>גיטהוב דאַרף נישט צוויי ספּייסאַז אין די סוף פון די שורה צו מאַכן אַ שורה ברעכן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4579"/>
+<location filename="../dialogs/settingsdialog.ui" line="4591"/>
 <source>This is the best way to open an issue</source>
 <translation>דאָס איז דער בעסטער וועג צו עפֿענען אַן אַרויסגעבן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4593"/>
+<location filename="../dialogs/settingsdialog.ui" line="4605"/>
 <source>Please use this in the issue tracker</source>
 <translation>ביטע נוצן דעם אין דעם אַרויסגעבן טראַקער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4596"/>
+<location filename="../dialogs/settingsdialog.ui" line="4608"/>
 <source>&amp;Copy debug information to clipboard</source>
 <translation>&amp;נאָכמאַכן דיבאַג אינפֿאָרמאַציע צו קליפּבאָרד</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4607"/>
+<location filename="../dialogs/settingsdialog.ui" line="4619"/>
 <source>Please don't use this in the issue tracker</source>
 <translation>ביטע טאָן ניט נוצן דעם אין די אַרויסגעבן טראַקער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4827"/>
+<location filename="../dialogs/settingsdialog.ui" line="4839"/>
 <source>Time to wait before refreshing the preview after typing:</source>
 <translation type="unfinished">Time to wait before refreshing the preview after typing:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4834"/>
+<location filename="../dialogs/settingsdialog.ui" line="4846"/>
 <source>Reset the debounce time</source>
 <translation type="unfinished">Reset the debounce time</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4848"/>
+<location filename="../dialogs/settingsdialog.ui" line="4860"/>
 <source>0ms means don't wait for the typing to stop</source>
 <translation type="unfinished">0ms means don't wait for the typing to stop</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4880"/>
+<location filename="../dialogs/settingsdialog.ui" line="4892"/>
 <source>Use editor highlighting styles also for the preview</source>
 <translation>ניצן רעדאַקטאָר כיילייטינג סטיילז אויך פֿאַר די פאָרויסיקע ווייַזונג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4911"/>
+<location filename="../dialogs/settingsdialog.ui" line="4923"/>
 <source>Exporting</source>
 <translation>עקספּאָרטינג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4917"/>
+<location filename="../dialogs/settingsdialog.ui" line="4929"/>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
 <translation>ניצן ינערלעך אַרויספירן סטילינג פֿאַר די PDF אַרויספירן און דרוקן פון פאָרויסיקע ווייַזונג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5225"/>
+<location filename="../dialogs/settingsdialog.ui" line="5237"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; איר זאל וועלן צו קוקן אין אַלע פאַראַנען &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt; צייט פאָרמאַץ &lt;/a&gt;. &lt;/ p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5263"/>
+<location filename="../dialogs/settingsdialog.ui" line="5275"/>
 <source>Note that disabling this will also disable the navigation panel!</source>
 <translation type="unfinished">Note that disabling this will also disable the navigation panel!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5360"/>
+<location filename="../dialogs/settingsdialog.ui" line="5372"/>
 <source>Disable cursor blinking</source>
 <translation>דיסייבאַל לויפֿער בלינקינג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5381"/>
+<location filename="../dialogs/settingsdialog.ui" line="5393"/>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>אויטאָמאַטיש באַזייַטיקן טריילינג ספּייסאַז אין די באַמערקונג טעקסט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5343"/>
+<location filename="../dialogs/settingsdialog.ui" line="5355"/>
 <source>Show line numbers</source>
 <translation type="unfinished">Show line numbers</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5422"/>
+<location filename="../dialogs/settingsdialog.ui" line="5434"/>
 <source>Tabs and Indents</source>
 <translation>טאַבס און ינדענץ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5430"/>
+<location filename="../dialogs/settingsdialog.ui" line="5442"/>
 <source>Use tab character instead of spaces</source>
 <translation>ניצן קוויטל כאַראַקטער אַנשטאָט פון ספּייסאַז</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5437"/>
+<location filename="../dialogs/settingsdialog.ui" line="5449"/>
 <source>Indent:</source>
 <translation>ינדענט:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5839"/>
-<location filename="../dialogs/settingsdialog.ui" line="5848"/>
+<location filename="../dialogs/settingsdialog.ui" line="5844"/>
+<location filename="../dialogs/settingsdialog.ui" line="5853"/>
 <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>רעגולער אויסדרוקן צעטל סאַבפאָולדערז צו איגנאָרירן, אפגעשיידט דורך ";"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5737"/>
+<location filename="../dialogs/settingsdialog.ui" line="5699"/>
 <source>Ignored note files</source>
 <translation type="unfinished">Ignored note files</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5734"/>
-<location filename="../dialogs/settingsdialog.ui" line="5743"/>
+<location filename="../dialogs/settingsdialog.ui" line="5696"/>
+<location filename="../dialogs/settingsdialog.ui" line="5705"/>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
 <translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5842"/>
+<location filename="../dialogs/settingsdialog.ui" line="5847"/>
 <source>Ignored subfolders</source>
 <translation>איגנאָרירט סובפאָלדערס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5858"/>
+<location filename="../dialogs/settingsdialog.ui" line="5863"/>
 <source>Reset ignored subfolders</source>
 <translation>באַשטעטיק איגנאָרירט סובפאָלדערס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5894"/>
+<location filename="../dialogs/settingsdialog.ui" line="5899"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
 <translation>ומקערן עפענען טאָן טאַבס ביי אַפּלאַקיישאַן סטאַרטאַפּ און ווען טאָן פאָלדערס זענען סוויטשט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5917"/>
+<location filename="../dialogs/settingsdialog.ui" line="5922"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
 <translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5986"/>
+<location filename="../dialogs/settingsdialog.ui" line="5991"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
 <translation>באַהאַלטן 'באַמערקונג ציילן' מיט טאַגס (ינקריסאַז פאָרשטעלונג)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6022"/>
+<location filename="../dialogs/settingsdialog.ui" line="6027"/>
 <source>Show the number of matches in each note</source>
 <translation>ווייַזן די נומער פון שוועבעלעך אין יעדער צעטל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6421"/>
+<location filename="../dialogs/settingsdialog.ui" line="6426"/>
 <source>Command snippets</source>
 <translation type="unfinished">Command snippets</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6430"/>
+<location filename="../dialogs/settingsdialog.ui" line="6435"/>
 <source>Tag name for commands notes</source>
 <translation type="unfinished">Tag name for commands notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6437"/>
+<location filename="../dialogs/settingsdialog.ui" line="6442"/>
 <source>Commands tag:</source>
 <translation type="unfinished">Commands tag:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6457"/>
+<location filename="../dialogs/settingsdialog.ui" line="6462"/>
 <source>Commands note name:</source>
 <translation type="unfinished">Commands note name:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6467"/>
+<location filename="../dialogs/settingsdialog.ui" line="6472"/>
 <source>Note name for adding new commands</source>
 <translation type="unfinished">Note name for adding new commands</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6507"/>
+<location filename="../dialogs/settingsdialog.ui" line="6512"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
 <translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6544"/>
+<location filename="../dialogs/settingsdialog.ui" line="6549"/>
 <source>QOwnNotes web application</source>
 <translation type="unfinished">QOwnNotes web application</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6573"/>
+<location filename="../dialogs/settingsdialog.ui" line="6578"/>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6634"/>
+<location filename="../dialogs/settingsdialog.ui" line="6639"/>
 <source>Server URL:</source>
 <translation type="unfinished">Server URL:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6691"/>
+<location filename="../dialogs/settingsdialog.ui" line="6696"/>
 <source>Show QR code</source>
 <translation type="unfinished">Show QR code</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6583"/>
+<location filename="../dialogs/settingsdialog.ui" line="6588"/>
 <source>Security token:</source>
 <translation type="unfinished">Security token:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6386"/>
+<location filename="../dialogs/settingsdialog.ui" line="6391"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
 <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6402"/>
+<location filename="../dialogs/settingsdialog.ui" line="6407"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
 <translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6444"/>
+<location filename="../dialogs/settingsdialog.ui" line="6449"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6641"/>
+<location filename="../dialogs/settingsdialog.ui" line="6646"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
 <translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6651"/>
+<location filename="../dialogs/settingsdialog.ui" line="6656"/>
 <source>Copy security token to clipboard</source>
 <translation type="unfinished">Copy security token to clipboard</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6604"/>
+<location filename="../dialogs/settingsdialog.ui" line="6609"/>
 <source>Generate new security token</source>
 <translation type="unfinished">Generate new security token</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6665"/>
+<location filename="../dialogs/settingsdialog.ui" line="6670"/>
 <source>Reset the URL to default</source>
 <translation type="unfinished">Reset the URL to default</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6494"/>
+<location filename="../dialogs/settingsdialog.ui" line="6499"/>
 <source>QOwnNotes web application support</source>
 <translation type="unfinished">QOwnNotes web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6500"/>
+<location filename="../dialogs/settingsdialog.ui" line="6505"/>
 <source>Enable web application support</source>
 <translation type="unfinished">Enable web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5648"/>
+<location filename="../dialogs/settingsdialog.ui" line="5660"/>
+<location filename="../dialogs/settingsdialog.ui" line="6713"/>
 <source>Note list panel</source>
 <translation>באַמערקונג רשימה טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5668"/>
+<location filename="../dialogs/settingsdialog.ui" line="5754"/>
 <source>Show notes in the note list with preview</source>
 <translation>ווייַזן הערות אין די טאָן רשימה מיט פאָרויסיקע ווייַזונג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5698"/>
+<location filename="../dialogs/settingsdialog.ui" line="6719"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
 <translation>אַנשטאָט אַ באַמערקונג רשימה, נוצן אַ צעטל בוים מיט אַלע די סובפאָלדערס (אויב זיי זענען פארקערט אויף פֿאַר די טאָן טעקע)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6032"/>
+<location filename="../dialogs/settingsdialog.ui" line="6037"/>
 <source>Note folder panel</source>
 <translation>באַמערקונג טעקע טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6038"/>
+<location filename="../dialogs/settingsdialog.ui" line="6043"/>
 <source>Show note folders as buttons instead of in a select box</source>
 <translation>ווייַזן נאָטיץ פאָלדערס ווי קנעפּלעך אַנשטאָט פון אין אַ סעלעקט קעסטל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6144"/>
+<location filename="../dialogs/settingsdialog.ui" line="6149"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
 <translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6180"/>
+<location filename="../dialogs/settingsdialog.ui" line="6185"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
 <translation>פּאַנעלס קענען זיין פארקערט אויף און אַוועק אין די &lt;i&gt; ווינדאָו / פּאַנעלס &lt;/ i&gt; הויפּט מעניו, און איר קענט אויך קאַנפיגיער פאַרשידענע &lt;i&gt; וואָרקספּאַסעס &lt;/i&gt; פֿאַר פאַרשידענע טאַפליע קאַנפיגיעריישאַנז.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6257"/>
+<location filename="../dialogs/settingsdialog.ui" line="6262"/>
 <source>Bookmarks</source>
 <translation>בוקמאַרקס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6263"/>
-<location filename="../dialogs/settingsdialog.ui" line="6427"/>
+<location filename="../dialogs/settingsdialog.ui" line="6268"/>
+<location filename="../dialogs/settingsdialog.ui" line="6432"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
 <translation>נאָטעס מיט דעם קוויטל וועט זיין געוויינט פֿאַר פעטשינג לייענ-צייכן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6266"/>
+<location filename="../dialogs/settingsdialog.ui" line="6271"/>
 <source>Tag name for bookmarks notes</source>
 <translation>קוויטל נאָמען פֿאַר בוקמאַרקס הערות</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6273"/>
+<location filename="../dialogs/settingsdialog.ui" line="6278"/>
 <source>Bookmarks tag:</source>
 <translation>לייענ - צייכן:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6280"/>
+<location filename="../dialogs/settingsdialog.ui" line="6285"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>דורך פעליקייַט, דער בלעטערער פאַרלענגערונג וועט ווייַזן אַלע לינקס פון דעם קראַנט טאָן. איר קענט אויך ווייַזן ספּעציעלע לייענ-צייכן לינקס פון הערות מיט אַ זיכער קוויטל. פאר מער אינפֿאָרמאַציע וועגן דער סינטאַקס פון דער לייענ-צייכן גיט &lt;a href="%1"&gt; דאָ &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6293"/>
+<location filename="../dialogs/settingsdialog.ui" line="6298"/>
 <source>Bookmarks note name:</source>
 <translation>נאָמען פון בוקמאַרקס טאָן:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6300"/>
-<location filename="../dialogs/settingsdialog.ui" line="6464"/>
+<location filename="../dialogs/settingsdialog.ui" line="6305"/>
+<location filename="../dialogs/settingsdialog.ui" line="6469"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
 <translation>דער באַמערקונג וועט זיין געוויינט פֿאַר אַדינג נייַ בוקמאַרקס פון דעם בלעטערער געשפּרייט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6303"/>
+<location filename="../dialogs/settingsdialog.ui" line="6308"/>
 <source>Note name for adding new bookmarks</source>
 <translation>באַמערקונג נאָמען פֿאַר אַדינג נייַ בוקמאַרקס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6313"/>
+<location filename="../dialogs/settingsdialog.ui" line="6318"/>
 <source>Web socket server</source>
 <translation>וועב כאָלעל סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6319"/>
+<location filename="../dialogs/settingsdialog.ui" line="6324"/>
 <source>Socket server port:</source>
 <translation>כאָלעל סערווער פּאָרט:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6339"/>
+<location filename="../dialogs/settingsdialog.ui" line="6344"/>
 <source>Reset the socket server port</source>
 <translation type="unfinished">Reset the socket server port</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6353"/>
-<location filename="../dialogs/settingsdialog.ui" line="6590"/>
+<location filename="../dialogs/settingsdialog.ui" line="6358"/>
+<location filename="../dialogs/settingsdialog.ui" line="6595"/>
 <source>Show security token</source>
 <translation>ווייַזן זיכערהייט סימען</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6373"/>
+<location filename="../dialogs/settingsdialog.ui" line="6378"/>
 <source>Web socket server support</source>
 <translation>שטיצן פֿאַר וועב כאָלעל סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6379"/>
+<location filename="../dialogs/settingsdialog.ui" line="6384"/>
 <source>Enable socket server</source>
 <translation>געבן די כאָלעל סערווער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5878"/>
+<location filename="../dialogs/settingsdialog.ui" line="5883"/>
 <source>Note edit panel</source>
 <translation>באַמערקונג רעדאַגירן טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5884"/>
+<location filename="../dialogs/settingsdialog.ui" line="5889"/>
 <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
 <translation>אויב דאָס איז פאַרקריפּלט, איר קענען שאַפֿן מער קאָמפּליצירט טאַפליע לייאַוץ, אָבער אַלע פּאַנאַלז וועט זיין ענייבאַלד אויב די גרייס פון דעם פֿענצטער איז פארענדערט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5887"/>
+<location filename="../dialogs/settingsdialog.ui" line="5892"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
 <translation>ניצן די קוויטל רעדאַגירן טאַפליע ווי פאַרפעסטיקט הויפט ווידזשיט צו זיין גרייס אויב די פֿענצטער אָדער אנדערע פּאַנאַלז זענען רעסיזעד</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6009"/>
+<location filename="../dialogs/settingsdialog.ui" line="6014"/>
 <source>Note search panel</source>
 <translation>באַמערקונג זוכן טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6015"/>
+<location filename="../dialogs/settingsdialog.ui" line="6020"/>
 <source>Disable auto-completion of previous searches</source>
 <translation>דיסאַבלע אַוטאָ קאַמפּלישאַן פון פרייַערדיק אָנפֿרעגן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5904"/>
+<location filename="../dialogs/settingsdialog.ui" line="5909"/>
 <source>Navigation panel</source>
 <translation>נאַוויגאַציע טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5910"/>
+<location filename="../dialogs/settingsdialog.ui" line="5915"/>
 <source>Hide navigation item search bar</source>
 <translation>באַהאַלטן זוך באַר אויף נאַוויגאַציע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6052"/>
+<location filename="../dialogs/settingsdialog.ui" line="6057"/>
 <source>Local trash settings</source>
 <translation>לאקאלע אָפּפאַל סעטטינגס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6086"/>
+<location filename="../dialogs/settingsdialog.ui" line="6091"/>
 <source>Remove trashed notes after:</source>
 <translation>נעם אָפּפאַל הערות נאָך:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6093"/>
+<location filename="../dialogs/settingsdialog.ui" line="6098"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
 <translation>טעג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6112"/>
+<location filename="../dialogs/settingsdialog.ui" line="6117"/>
 <source>Automatically remove trashed notes after a certain time</source>
 <translation>אויטאָמאַטיש אַראָפּנעמען טרוש נאָטעס נאָך אַ זיכער צייט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6138"/>
+<location filename="../dialogs/settingsdialog.ui" line="6143"/>
 <source>Local trash support</source>
 <translation>לאקאלע אָפּפאַל שטיצן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6161"/>
+<location filename="../dialogs/settingsdialog.ui" line="6166"/>
 <source>Layout selector</source>
 <translation>אויסלייג סעלעקטאָר</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6167"/>
+<location filename="../dialogs/settingsdialog.ui" line="6172"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
 <translation>איר קענען שטעלן אַ נייַע אויסלייג דאָ. געדענקט אַז איר קענט שטענדיק מאָדיפיצירן די שטעלע פון די פּאַנאַלז מיט די &lt;i&gt; ופשליסן פּאַנאַלז &lt;/ i&gt; קנעפּל.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5405"/>
+<location filename="../dialogs/settingsdialog.ui" line="5417"/>
 <source>Reset the cursor width</source>
 <translation>באַשטעטיק די לויפֿער ברייט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5522"/>
+<location filename="../dialogs/settingsdialog.ui" line="5534"/>
 <source>External git log command to show the git versions of a note</source>
 <translation>פונדרויסנדיק גיט באַפֿעלן צו ווייַזן גיט ווערסיעס פון אַ צעטל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5528"/>
+<location filename="../dialogs/settingsdialog.ui" line="5540"/>
 <source>Enter a command to be used to show a git log (like for example "gitk")</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>אַרייַן אַ באַפֿעל צו ווערן גענוצט צו ווייַזן אַ גיט לאָג (ווי למשל "גיטק")</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5548"/>
+<location filename="../dialogs/settingsdialog.ui" line="5560"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>אויב איר נוצן דעם באַשטעטיקן, איר וועט באַקומען אַ נייַע מעניו פּאָזיציע צו ווייַזן די גיט ווערסיעס אויב איר רעכט גיט אויף אַ צעטל.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5661"/>
+<location filename="../dialogs/settingsdialog.ui" line="5666"/>
 <source>Show all notes of a tag including the notes of their children-tags</source>
 <translation>ווייַזן אַלע הערות פון אַ קוויטל אַרייַנגערעכנט די הערות פון זייער קינדער טאַגס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5654"/>
+<location filename="../dialogs/settingsdialog.ui" line="5747"/>
 <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
 <translation>ווייַזן אַלע הערות אין אַ טעקע מיט זייער סובפאָלדערס (נאָר אַרבעט אויב סובפאָלדערס זענען אויסגעדרייט אויף)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5313"/>
+<location filename="../dialogs/settingsdialog.ui" line="5325"/>
 <source>Highlight the current line</source>
 <translation>הויכפּונקט די קראַנט שורה</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5615"/>
+<location filename="../dialogs/settingsdialog.ui" line="5627"/>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>דו זאלסט נישט פאַרגעסן צו געבן גיט שטיצן פֿאַר דיין באַמערקונג פאָלדערס און צו קאַנפיגיער דיין נאָמען און אימעיל אַדרעס פֿאַר דיין גיט קליענט, למשל מיט די וואָקזאַל קאַמאַנדז:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5927"/>
+<location filename="../dialogs/settingsdialog.ui" line="5932"/>
 <source>Tags panel</source>
 <translation>טאַגס טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5708"/>
-<location filename="../dialogs/settingsdialog.ui" line="5802"/>
-<location filename="../dialogs/settingsdialog.ui" line="5956"/>
+<location filename="../dialogs/settingsdialog.ui" line="5721"/>
+<location filename="../dialogs/settingsdialog.ui" line="5807"/>
+<location filename="../dialogs/settingsdialog.ui" line="5961"/>
 <source>Order</source>
 <translation>סדר</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5717"/>
-<location filename="../dialogs/settingsdialog.ui" line="5808"/>
-<location filename="../dialogs/settingsdialog.ui" line="5962"/>
+<location filename="../dialogs/settingsdialog.ui" line="5730"/>
+<location filename="../dialogs/settingsdialog.ui" line="5813"/>
+<location filename="../dialogs/settingsdialog.ui" line="5967"/>
 <source>Ascending</source>
 <translation>ארויף</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5724"/>
-<location filename="../dialogs/settingsdialog.ui" line="5815"/>
-<location filename="../dialogs/settingsdialog.ui" line="5969"/>
+<location filename="../dialogs/settingsdialog.ui" line="5737"/>
+<location filename="../dialogs/settingsdialog.ui" line="5820"/>
+<location filename="../dialogs/settingsdialog.ui" line="5974"/>
 <source>Descending</source>
 <translation>אראפנידערן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5675"/>
-<location filename="../dialogs/settingsdialog.ui" line="5772"/>
-<location filename="../dialogs/settingsdialog.ui" line="5933"/>
+<location filename="../dialogs/settingsdialog.ui" line="5673"/>
+<location filename="../dialogs/settingsdialog.ui" line="5777"/>
+<location filename="../dialogs/settingsdialog.ui" line="5938"/>
 <source>Sort</source>
 <translation>סאָרט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5398"/>
+<location filename="../dialogs/settingsdialog.ui" line="5410"/>
 <source>Only use editor width setting in distraction free mode</source>
 <translation>נוצן בלויז עדיטינג פֿאַר עדיטאָר ברייט אין דיסטראַקטיאָן מאָדע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5681"/>
-<location filename="../dialogs/settingsdialog.ui" line="5778"/>
-<location filename="../dialogs/settingsdialog.ui" line="5939"/>
+<location filename="../dialogs/settingsdialog.ui" line="5679"/>
+<location filename="../dialogs/settingsdialog.ui" line="5783"/>
+<location filename="../dialogs/settingsdialog.ui" line="5944"/>
 <source>Alphabetical</source>
 <translation>אלפאבעט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5946"/>
+<location filename="../dialogs/settingsdialog.ui" line="5951"/>
 <source>By last change / use</source>
 <translation>דורך לעצטע ענדערונג / נוצן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5979"/>
+<location filename="../dialogs/settingsdialog.ui" line="5984"/>
 <source>Hide 'Find or create tag' search</source>
 <translation>באַהאַלטן זוך "געפֿינען אָדער שאַפֿן קוויטל"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5759"/>
+<location filename="../dialogs/settingsdialog.ui" line="5764"/>
 <source>Note subfolders panel</source>
 <translation>באַמערקונג סובפאָלדערס טאַפליע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5765"/>
+<location filename="../dialogs/settingsdialog.ui" line="5770"/>
 <source>Show with full path</source>
 <translation>ווייַזן מיט פול דרך</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5688"/>
-<location filename="../dialogs/settingsdialog.ui" line="5785"/>
+<location filename="../dialogs/settingsdialog.ui" line="5686"/>
+<location filename="../dialogs/settingsdialog.ui" line="5790"/>
 <source>By last change</source>
 <translation>דורך לעצטע ענדערונג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5795"/>
+<location filename="../dialogs/settingsdialog.ui" line="5800"/>
 <source>Show root folder name</source>
 <translation>ווייַזן וואָרצל טעקע נאָמען</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5825"/>
+<location filename="../dialogs/settingsdialog.ui" line="5830"/>
 <source>Hide 'Find or create note subfolder' search</source>
 <translation>באַהאַלטן זוך "געפֿינען אָדער שאַפֿן באַמערקונג סובפאָלדער"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5832"/>
+<location filename="../dialogs/settingsdialog.ui" line="5837"/>
 <source>Display note subfolders as full tree</source>
 <translation>אַרויסווייַזן טאָן סובפאָלדערס ווי פול בוים</translation>
 </message>
@@ -7239,44 +7245,44 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>זוכן שריפט ריפּאַזאַטאָרי</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5538"/>
+<location filename="../dialogs/settingsdialog.ui" line="5550"/>
 <source>You optionally can use "%notePath%" for the path of the note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>איר קענען אָפּטיאָנאַללי נוצן "% notePath%" פֿאַר דעם דרך פון דעם צעטל.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5561"/>
+<location filename="../dialogs/settingsdialog.ui" line="5573"/>
 <source>Git client</source>
 <translation>גיט קליענט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5577"/>
+<location filename="../dialogs/settingsdialog.ui" line="5589"/>
 <source>Path to git executable:</source>
 <translation>דורכפירן דרך צו גיט:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5567"/>
+<location filename="../dialogs/settingsdialog.ui" line="5579"/>
 <source>Path to git client, leave empty for default</source>
 <translation>דרך צו גיט קליענט, לאָזן ליידיק פֿאַר פעליקייַט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5486"/>
+<location filename="../dialogs/settingsdialog.ui" line="5498"/>
 <source>Commit interval</source>
 <translation>יבערגעבן ינטערוואַל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5492"/>
+<location filename="../dialogs/settingsdialog.ui" line="5504"/>
 <source>sec</source>
 <extracomment>seconds</extracomment>
 <translation>סעק</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5512"/>
+<location filename="../dialogs/settingsdialog.ui" line="5524"/>
 <source>git commit interval time [sec]</source>
 <translation>גיט יבערגאַנג צייט צייט [סעק]</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="949"/>
+<location filename="../dialogs/settingsdialog.ui" line="961"/>
 <source>Open your ownCloud server &amp;Apps page</source>
 <translation>עפֿן דיין OwnCloud סערווירער &amp; אַפּפּס בלאַט</translation>
 </message>
@@ -7286,392 +7292,392 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>פאָרויסיקע ווייַזונג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1890"/>
+<location filename="../dialogs/settingsdialog.ui" line="1902"/>
 <source>Which calendar backend do you want to use?</source>
 <translation>וואָס קאַלענדאַר באַקענד איר ווילן צו נוצן?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1923"/>
+<location filename="../dialogs/settingsdialog.ui" line="1935"/>
 <source>For most current ownCloud and Nextcloud installations</source>
 <translation>וואָס קאַלענדאַר באַקענד איר ווילן צו נוצן?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1903"/>
+<location filename="../dialogs/settingsdialog.ui" line="1915"/>
 <source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>פֿאַר עלטערע ווערסיעס פון אָוועסקלאָוד ווו די פעליקייַט באַשטעטיקן קען נישט אַרבעטן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1906"/>
+<location filename="../dialogs/settingsdialog.ui" line="1918"/>
 <source>Legacy ownCloud calendar</source>
 <translation>לעגאַט אָונקלאָוד קאַלענדאַר</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1939"/>
+<location filename="../dialogs/settingsdialog.ui" line="1951"/>
 <source>CalDAV server settings</source>
 <translation>קאַלדאַוו סערווירער סעטטינגס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1948"/>
+<location filename="../dialogs/settingsdialog.ui" line="1960"/>
 <source>Calendar base url:</source>
 <translation>URL פון קאַלענדאַר באַזע:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1970"/>
+<location filename="../dialogs/settingsdialog.ui" line="1982"/>
 <source>Please enter the CalDAV base url to your calendar.</source>
 <translation>ביטע אַרייַן די CalDAV באַזע URL צו דיין קאַלענדאַר.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2040"/>
+<location filename="../dialogs/settingsdialog.ui" line="2052"/>
 <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
 <translation>ביטע אַרייַן די פּאַראָל פֿאַר דיין קאַלדאַוו נאמען. &lt;br/&gt; דערווייַל די פּאַראָל וועט זיין סטאָרד ענקריפּטיד מיט די אנדערע סעטטינגס, אָבער איז נישט זייער זיכער.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2341"/>
+<location filename="../dialogs/settingsdialog.ui" line="2353"/>
 <source>Czech</source>
 <translation>טשעכיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2715"/>
+<location filename="../dialogs/settingsdialog.ui" line="2727"/>
 <source>Brazilian Portuguese</source>
 <translation>בראַזיליאַן פּאָרטוגעזיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2902"/>
+<location filename="../dialogs/settingsdialog.ui" line="2914"/>
 <source>Ukrainian</source>
 <translation>אוקראיניש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3907"/>
+<location filename="../dialogs/settingsdialog.ui" line="3919"/>
 <source>The name</source>
 <translation>דער נאָמען</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4061"/>
+<location filename="../dialogs/settingsdialog.ui" line="4073"/>
 <source>Maximum height:</source>
 <translation>מאַקסימום הייך:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4034"/>
+<location filename="../dialogs/settingsdialog.ui" line="4046"/>
 <source>Maximum width:</source>
 <translation>מאַקסימום הייך:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3996"/>
+<location filename="../dialogs/settingsdialog.ui" line="4008"/>
 <source>Scale images down when inserted into notes</source>
 <translation>וואָג די בילדער אַראָפּ ווען ינסערטאַד אין הערות</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2517"/>
+<location filename="../dialogs/settingsdialog.ui" line="2529"/>
 <source>Croatian</source>
 <translation>קראָאַטיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3815"/>
+<location filename="../dialogs/settingsdialog.ui" line="3827"/>
 <source>Path to your QML file</source>
 <translation>דרך צו דיין QML טעקע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3729"/>
+<location filename="../dialogs/settingsdialog.ui" line="3741"/>
 <source>Script name</source>
 <translation>שריפט נאָמען</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3590"/>
+<location filename="../dialogs/settingsdialog.ui" line="3602"/>
 <source>Description:</source>
 <translation>באַשרייַבונג:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3672"/>
+<location filename="../dialogs/settingsdialog.ui" line="3684"/>
 <source>Version:</source>
 <translation>ווערסיע:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3633"/>
+<location filename="../dialogs/settingsdialog.ui" line="3645"/>
 <source>Repository:</source>
 <translation>ריפּאַזאַטאָרי:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3610"/>
+<location filename="../dialogs/settingsdialog.ui" line="3622"/>
 <source>Author(s):</source>
 <translation>מחבר (s):</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3966"/>
+<location filename="../dialogs/settingsdialog.ui" line="3978"/>
 <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
 <translation>קאָנטראָלירן דעם אויב איר ווילן צו אָננעמען אַלע פונדרויסנדיק מאַדאַפאַקיישאַנז בשעת איר רעדאַגירן דעם קראַנט טאָן..</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3969"/>
+<location filename="../dialogs/settingsdialog.ui" line="3981"/>
 <source>Accept all external modifications of the current note</source>
 <translation>אָננעמען אַלע פונדרויסנדיק מאַדאַפאַקיישאַנז פון דעם קראַנט טאָן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4081"/>
+<location filename="../dialogs/settingsdialog.ui" line="4093"/>
 <source>Use UNIX newline instead of native newline characters</source>
 <translation>ניצן UNIX נעוולינע אַנשטאָט פון געבוירן נייַע שורה</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4006"/>
+<location filename="../dialogs/settingsdialog.ui" line="4018"/>
 <source>Restore cursor position when opening a note</source>
 <translation>ומקערן לויפֿער שטעלע ווען עפן אַ צעטל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5049"/>
+<location filename="../dialogs/settingsdialog.ui" line="5061"/>
 <source>Apply toolbar configuration</source>
 <translation>צולייגן מכשיר קאַנפיגיעריישאַן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5063"/>
+<location filename="../dialogs/settingsdialog.ui" line="5075"/>
 <source>Reset toolbars</source>
 <translation>באַשטעטיק מכשירים</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5091"/>
+<location filename="../dialogs/settingsdialog.ui" line="5103"/>
 <source>Enable logging to file</source>
 <translation>געבן לאָגינג צו טעקע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5098"/>
+<location filename="../dialogs/settingsdialog.ui" line="5110"/>
 <source>Clear log file</source>
 <translation>קלאָר קלאָץ טעקע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5109"/>
+<location filename="../dialogs/settingsdialog.ui" line="5121"/>
 <source>Fake old version number to trigger update</source>
 <translation>אַלט שווינדל נומער צו צינגל דערהייַנטיקן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5137"/>
+<location filename="../dialogs/settingsdialog.ui" line="5149"/>
 <source>Log file path:</source>
 <translation>קלאָץ אין טעקע טעקע:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5199"/>
+<location filename="../dialogs/settingsdialog.ui" line="5211"/>
 <source>Here you can set your own time format for inserting the current time into a note.</source>
 <translation>דאָ איר קענען שטעלן דיין אייגן צייט פֿאָרמאַט פֿאַר ינסערטינג די קראַנט צייט אין אַ צעטל.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5202"/>
+<location filename="../dialogs/settingsdialog.ui" line="5214"/>
 <source>Insert current time</source>
 <translation>אַרייַנלייגן קראַנט צייט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5208"/>
+<location filename="../dialogs/settingsdialog.ui" line="5220"/>
 <source>Time format:</source>
 <translation>צייט פֿאָרמאַט:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5215"/>
+<location filename="../dialogs/settingsdialog.ui" line="5227"/>
 <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
 <translation>אַרייַן דיין מנהג צייט פֿאָרמאַט, ווי "dd.MM.yyy hh: mm"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5307"/>
+<location filename="../dialogs/settingsdialog.ui" line="5319"/>
 <source>Editor options</source>
 <translation>עדיטאָר אָפּציעס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5374"/>
+<location filename="../dialogs/settingsdialog.ui" line="5386"/>
 <source>Enable automatic closing of brackets and markdown formatting characters</source>
 <translation>געבן אָטאַמאַטיק קלאָוזינג קלאָוזינג אותיות און מאַרקדאַון פֿאָרמאַטירונג אותיות</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5350"/>
+<location filename="../dialogs/settingsdialog.ui" line="5362"/>
 <source>You have to use the backspace key to remove the opening character</source>
 <translation>איר דאַרפֿן צו נוצן די באַקקספּאַסע שליסל צו באַזייַטיקן די עפן כאַראַקטער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5353"/>
+<location filename="../dialogs/settingsdialog.ui" line="5365"/>
 <source>Enable automatic removal of matching closing characters</source>
 <translation>געבן אָטאַמאַטיק באַזייַטיקונג פון ריכטן קלאָוזינג אותיות</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1973"/>
+<location filename="../dialogs/settingsdialog.ui" line="1985"/>
 <source>Your CalDAV calendar base url</source>
 <translation>דיין קאַלדאַוו קאַלענדאַר באַזע URL</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2005"/>
+<location filename="../dialogs/settingsdialog.ui" line="2017"/>
 <source>Please enter the username of your CalDAV server.</source>
 <translation>ביטע אַרייַן די נאמען פון דיין CalDAV סערווער.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2008"/>
+<location filename="../dialogs/settingsdialog.ui" line="2020"/>
 <source>Your CalDAV username</source>
 <translation>דיין קאַלדאַוו באַניצער נאמען</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2046"/>
+<location filename="../dialogs/settingsdialog.ui" line="2058"/>
 <source>Your CalDAV password</source>
 <translation>דיין קאַלדאַוו פּאַראָל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2093"/>
+<location filename="../dialogs/settingsdialog.ui" line="2105"/>
 <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
 <translation>דערנאָך אַלע די טאָדאָ ליסטע אַרטיקלען זענען רילאָוד פון דיין סערווירער די ווייַטער מאָל איר עפענען דיין טאָדאָ דיאַלאָג.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2096"/>
+<location filename="../dialogs/settingsdialog.ui" line="2108"/>
 <source>Empty calendar item cache</source>
 <translation>ליידיק קאַלענדאַר נומער קאַש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2119"/>
+<location filename="../dialogs/settingsdialog.ui" line="2131"/>
 <source>Click here to reload the list of calendars from your calendar server.</source>
 <translation>דריקט דאָ צו רילאָוד די רשימה פון קאַלענדאַרס פון דיין קאַלענדאַר סערווער.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2125"/>
+<location filename="../dialogs/settingsdialog.ui" line="2137"/>
 <source>&amp;Reload calendar list</source>
 <translation>&amp;רילאָוד קאַלענדאַר רשימה</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3034"/>
-<location filename="../dialogs/settingsdialog.ui" line="3144"/>
+<location filename="../dialogs/settingsdialog.ui" line="3046"/>
+<location filename="../dialogs/settingsdialog.ui" line="3156"/>
 <source>You may need to restart the application to let these changes take effect</source>
 <translation>איר קען דאַרפֿן צו ריסטאַרט די אַפּלאַקיישאַן צו לאָזן די ענדערונגען נעמען ווירקונג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3179"/>
+<location filename="../dialogs/settingsdialog.ui" line="3191"/>
 <source>Toolbar icon size:</source>
 <translation>גרייס פון דעם מכשיר בילדל:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3169"/>
+<location filename="../dialogs/settingsdialog.ui" line="3181"/>
 <source>List and tree item height:</source>
 <translation>רשימה און בוים נומער הייך:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3202"/>
+<location filename="../dialogs/settingsdialog.ui" line="3214"/>
 <source>Reset the icon size</source>
 <translation>באַשטעטיק בילדל גרייס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3216"/>
+<location filename="../dialogs/settingsdialog.ui" line="3228"/>
 <source>Reset the item height</source>
 <translation>באַשטעטיק די הייך פון די נומער</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4894"/>
+<location filename="../dialogs/settingsdialog.ui" line="4906"/>
 <source>View text right to left (RTL)</source>
 <translation>זוך טעקסט רעכט צו לינקס (RTL)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3340"/>
+<location filename="../dialogs/settingsdialog.ui" line="3352"/>
 <source>Search for shortcut</source>
 <translation>זוכן פֿאַר דורכוועג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2136"/>
+<location filename="../dialogs/settingsdialog.ui" line="2148"/>
 <source>Ignore calendars that don't support todo items</source>
 <translation>איגנאָרירן קאַלענדאַרס וואָס טאָן ניט שטיצן טאָדאָ ייטאַמז</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2968"/>
+<location filename="../dialogs/settingsdialog.ui" line="2980"/>
 <source>Arabic</source>
 <translation>אַראַביש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3118"/>
+<location filename="../dialogs/settingsdialog.ui" line="3130"/>
 <source>Icons</source>
 <translation>יקאָנס</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3127"/>
+<location filename="../dialogs/settingsdialog.ui" line="3139"/>
 <source>Use internal icon theme instead of system icon theme</source>
 <translation>ניצן ינערלעך ייקאַן טעמע אַנשטאָט פון סיסטעם ייקאַן טעמע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3764"/>
+<location filename="../dialogs/settingsdialog.ui" line="3776"/>
 <source>Script path:</source>
 <translation>שריפט דרך:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="775"/>
+<location filename="../dialogs/settingsdialog.ui" line="787"/>
 <source>Note folder name</source>
 <translation>באַמערקונג טעקע נאָמען</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="822"/>
+<location filename="../dialogs/settingsdialog.ui" line="834"/>
 <source>Allow note file name to be different from headline</source>
 <translation>דערלויבן אַז די נאָמען פון די באַמערקונג טעקע איז אַנדערש פון דעם טיטל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3956"/>
+<location filename="../dialogs/settingsdialog.ui" line="3968"/>
 <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
 <translation>קאָנטראָלירן דעם אויב איר ווילט צו איגנאָרירן אַלע פונדרויסנדיק מאַדאַפאַקיישאַנז בשעת איר רעדאַגירן דעם קראַנט טאָן.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3959"/>
+<location filename="../dialogs/settingsdialog.ui" line="3971"/>
 <source>Ignore all external modifications of the current note</source>
 <translation>איגנאָרירן אַלע פונדרויסנדיק מאַדאַפאַקיישאַנז פון דעם קראַנט טאָן</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4078"/>
+<location filename="../dialogs/settingsdialog.ui" line="4090"/>
 <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
 <translation>איר קענט ניצן דעם צום ביישפּיל אונטער Windows אויב איר האָט קאָפּדרייעניש מיט נעוולינעס אין די OwnCloud / Nextcloud הערות אַפּ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4171"/>
+<location filename="../dialogs/settingsdialog.ui" line="4183"/>
 <source>App instance</source>
 <translation>אַפּ בייַשפּיל</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4177"/>
+<location filename="../dialogs/settingsdialog.ui" line="4189"/>
 <source>Only allow one app instance at the same time</source>
 <translation>דערלויבן בלויז איין אַפּ בייַשפּיל אויף דער זעלביקער צייט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4355"/>
+<location filename="../dialogs/settingsdialog.ui" line="4367"/>
 <source>Path to external editor:</source>
 <translation>דרך צו פונדרויסנדיק רעדאַקטאָר:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4193"/>
+<location filename="../dialogs/settingsdialog.ui" line="4205"/>
 <source>Don't show the update dialog automatically</source>
 <translation>ווייַזן נישט די דערהייַנטיקן דיאַלאָג אויטאָמאַטיש</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4653"/>
-<location filename="../dialogs/settingsdialog.ui" line="4933"/>
+<location filename="../dialogs/settingsdialog.ui" line="4665"/>
+<location filename="../dialogs/settingsdialog.ui" line="4945"/>
 <source>Fonts</source>
 <translation>פאָנץ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4676"/>
-<location filename="../dialogs/settingsdialog.ui" line="4718"/>
-<location filename="../dialogs/settingsdialog.ui" line="4956"/>
-<location filename="../dialogs/settingsdialog.ui" line="4984"/>
+<location filename="../dialogs/settingsdialog.ui" line="4688"/>
+<location filename="../dialogs/settingsdialog.ui" line="4730"/>
+<location filename="../dialogs/settingsdialog.ui" line="4968"/>
+<location filename="../dialogs/settingsdialog.ui" line="4996"/>
 <source>Set a new font</source>
 <translation>באַשטעטיק אַ נייַ שריפֿט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4687"/>
-<location filename="../dialogs/settingsdialog.ui" line="4732"/>
-<location filename="../dialogs/settingsdialog.ui" line="4970"/>
-<location filename="../dialogs/settingsdialog.ui" line="5015"/>
+<location filename="../dialogs/settingsdialog.ui" line="4699"/>
+<location filename="../dialogs/settingsdialog.ui" line="4744"/>
+<location filename="../dialogs/settingsdialog.ui" line="4982"/>
+<location filename="../dialogs/settingsdialog.ui" line="5027"/>
 <source>Reset font</source>
 <translation>באַשטעטיק שריפֿט</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="348"/>
+<location filename="../dialogs/settingsdialog.ui" line="360"/>
 <source>Debug</source>
 <translation>דעבוג</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4517"/>
+<location filename="../dialogs/settingsdialog.ui" line="4529"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2129"/>
 <location filename="../dialogs/settingsdialog.cpp" line="4062"/>
 <source>Debug information</source>
 <translation>דעבוג אינפֿאָרמאַציע</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4523"/>
+<location filename="../dialogs/settingsdialog.ui" line="4535"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; איר קענען &lt;span style = "font-weight: 600;"&gt; נאָכמאַכן און פּאַפּ &lt;/ span&gt; דעם טעקסט (אָדער טיילן פון דעם טעקסט) אין אַ &lt;span style = "font-weight: 600;"&gt; אַרויסגעבן &lt;/ span&gt; אויף דעם &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; QOwnNotes ישוז בלאַט &lt;/a&gt; אויב איר האָט &lt;span style = "font-weight: 600;"&gt; פֿראגן אָדער קאָפּדרייעניש &lt;/ span&gt; מיט QOwnNotes. די שפּירעוודיק דאַטן זענען פאַרבאָרגן אין די אינפֿאָרמאַציע. &lt;/ P&gt; &lt;/ body&gt; &lt;/ HTML&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4610"/>
+<location filename="../dialogs/settingsdialog.ui" line="4622"/>
 <source>&amp;Save debug information</source>
 <translation>&amp;היט דיבאַג אינפֿאָרמאַציע</translation>
 </message>
