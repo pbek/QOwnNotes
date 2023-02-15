@@ -269,12 +269,13 @@ void LinkDialog::slotReplyFinished(QNetworkReply *reply) {
         return;
     }
 
-    const QString title = getTitleFromHtml(data);
+    if (getLinkName().isEmpty()) {
+        const QString title = getTitleFromHtml(data);
 
-    if (!title.isEmpty()) {
-        ui->nameLineEdit->setText(title);
+        if (!title.isEmpty()) {
+            setLinkName(title);
+        }
     }
-
 }
 
 /**

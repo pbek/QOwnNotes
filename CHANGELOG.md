@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.2.4
+- the link name in the link dialog will not be overwritten anymore by a
+  fetched title of a webpage (for [#2726](https://github.com/pbek/QOwnNotes/issues/2726))
+
 ## 23.2.3
 - the calendar selector in the Todo List dialog was fixed for Qt6
   (for [#2734](https://github.com/pbek/QOwnNotes/issues/2734))
