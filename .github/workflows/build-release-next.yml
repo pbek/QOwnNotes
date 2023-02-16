@@ -141,9 +141,11 @@ jobs:
           export PATH=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/libexec:$PATH
           export EXTRA_QT_PLUGINS=iconengines
           cp ../icons/icon.png QOwnNotes.png
-          ./linuxdeploy-x86_64.AppImage --appdir AppDir -e ${{env.UNIXNAME}} -i ${{env.UNIXNAME}}.png -d PBE.QOwnNotes.desktop --plugin qt --output appimage
+          ./linuxdeploy-x86_64.AppImage --help
+          ./linuxdeploy-x86_64.AppImage --verbose --appdir AppDir -e ${{env.UNIXNAME}} -i ${{env.UNIXNAME}}.png -d PBE.QOwnNotes.desktop --plugin qt --output appimage
           rm linuxdeploy-x86_64.AppImage
           rm linuxdeploy-plugin-qt-x86_64.AppImage
+          find /Qt*
           ls -hal *.AppImage
           find -iname "*.AppImage"
           mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage
