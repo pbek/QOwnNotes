@@ -1115,7 +1115,7 @@ void ScriptingService::noteTextEditWrite(const QString &text) {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != nullptr) {
+    if (mainWindow != nullptr && mainWindow->doNoteEditingCheck()) {
         mainWindow->writeToNoteTextEdit(text);
     }
 #else

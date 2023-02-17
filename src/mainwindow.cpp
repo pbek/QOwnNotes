@@ -5774,6 +5774,9 @@ void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
 
     // if we can't find a note we create a new one
     if (note.getId() == 0) {
+        // Allow note editing if it was disabled
+        allowNoteEditing();
+
         // check if a hook wants to set the text
         QString noteText = ScriptingService::instance()->callHandleNewNoteHeadlineHook(text);
 

@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 23.2.5
+- improvements to the **read-only mode** were made
+  - if a **script** tries to write into the current note in read-only mode a
+    dialog will now **ask you if you want to allow note editing**
+  - if you **create a new note** via the note search line edit **read-only mode**
+    will automatically be **exited**
+
 ## 23.2.4
 - the link name in the link dialog will not be overwritten anymore by a
   fetched title of a webpage (for [#2726](https://github.com/pbek/QOwnNotes/issues/2726))
