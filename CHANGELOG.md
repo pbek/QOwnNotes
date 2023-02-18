@@ -6,6 +6,7 @@
     dialog will now **ask you if you want to allow note editing**
   - if you **create a new note** via the note search line edit **read-only mode**
     will automatically be **exited**
+- added more Portuguese, Bulgarian, Spanish translation (thank you jofazepa, m.angelov, fitojb)
 
 ## 23.2.4
 - the link name in the link dialog will not be overwritten anymore by a
