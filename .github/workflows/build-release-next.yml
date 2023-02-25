@@ -93,9 +93,8 @@ jobs:
     container:
       image: ghcr.io/pbek/qownnotes-ubuntu22-dev:latest
       options: --user root
-    env:
+#    env:
 #      QT_VERSION: 5.15.2
-      QMAKE: qmake6
     name: '🐧 AppImage Qt 5.15.2'
     steps:
 
