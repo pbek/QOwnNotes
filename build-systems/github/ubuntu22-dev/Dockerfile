@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y \
     libxcb-xinerama0 libxcb1 libxkbcommon-x11-0 \
     g++ xz-utils qt5-qmake qtbase5-dev libqt5svg5-dev qtdeclarative5-dev \
     libqt5xmlpatterns5-dev libqt5websockets5-dev libqt5x11extras5-dev cmake qttools5-dev ccache libsm-dev \
+    libfuse-dev fuse \
     && rm -rf /var/lib/apt/lists/*
 
 RUN git --version
