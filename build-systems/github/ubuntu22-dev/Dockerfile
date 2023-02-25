@@ -19,6 +19,8 @@ RUN apt-get update && apt-get install -y \
     libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-render0 \
     libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxcb-xfixes0 \
     libxcb-xinerama0 libxcb1 libxkbcommon-x11-0 \
+    qt5-default g++ xz-utils qt5-qmake qtbase5-dev libqt5svg5-dev qtdeclarative5-dev \
+    libqt5xmlpatterns5-dev libqt5websockets5-dev libqt5x11extras5-dev cmake qttools5-dev ccache libsm-dev \
     && rm -rf /var/lib/apt/lists/*
 
 RUN git --version
