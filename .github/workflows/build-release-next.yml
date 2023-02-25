@@ -92,7 +92,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/pbek/qownnotes-ubuntu22-dev:latest
-      options: --user root --cap-add SYS_ADMIN --device /dev/fuse
+      options: --user root --cap-add SYS_ADMIN --device /dev/fuse --security-opt apparmor:unconfined
 #    env:
 #      QT_VERSION: 5.15.2
     name: '🐧 AppImage Qt 5.15.2'
