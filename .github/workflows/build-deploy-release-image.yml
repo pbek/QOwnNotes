@@ -15,7 +15,7 @@ on:
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
     paths:
       - '.github/workflows/build-deploy-release-image.yml'
-      - '.github/workflows/Dockerfile'
+      - 'build-systems/github/ubuntu22-dev/Dockerfile'
 
 env:
   REGISTRY: ghcr.io
