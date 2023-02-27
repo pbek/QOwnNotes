@@ -97,7 +97,7 @@ jobs:
 
     - if: contains( matrix.os, 'ubuntu-18') && !matrix.app-image
       name: Install Snapcraft
-      uses: samuelmeuli/action-snapcraft@v1
+      uses: samuelmeuli/action-snapcraft@v2
       with:
         use_lxd: true
 #        snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
