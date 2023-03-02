@@ -5,6 +5,7 @@
   **ask you if you want to allow note editing** if you press
   **<kbd>Ctrl</kbd> + <kbd>Space</kbd>** (e.g. when you want to
   toggle a checkbox) in the note edit panel
+- added more Chinese Simplified, Arabic translation (thank you integral_68, noureddin)
 
 ## 23.2.5
 - improvements to the **read-only mode** were made

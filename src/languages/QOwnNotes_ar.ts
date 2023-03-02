@@ -1535,7 +1535,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>نسخة</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -6722,7 +6722,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="348"/>
 <source>Experimental</source>
-<translation type="unfinished">Experimental</translation>
+<translation>تجريبي</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="831"/>

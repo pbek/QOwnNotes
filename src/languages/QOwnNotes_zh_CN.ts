@@ -727,7 +727,7 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
 <source>Number of imported notes</source>
-<translation type="unfinished">Number of imported notes</translation>
+<translation>已导入笔记数</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="148"/>
@@ -1506,7 +1506,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>复制</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -2186,7 +2186,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1415"/>
 <source>&amp;Settings</source>
-<translation>设置((&amp;S)</translation>
+<translation>设置(&amp;S)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="119"/>
@@ -2852,7 +2852,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2699"/>
 <source>&amp;Load Todo List items</source>
-<translation type="unfinished">&amp;Load Todo List items</translation>
+<translation>加载待办事项列表(&amp;L)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1910"/>
@@ -3397,7 +3397,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="9356"/>
 <source>Open selected notes in tabs</source>
-<translation type="unfinished">Open selected notes in tabs</translation>
+<translation>在标签页里打开选中笔记</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10837"/>
@@ -3539,12 +3539,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="10776"/>
 <source>Note editing disabled</source>
-<translation type="unfinished">Note editing disabled</translation>
+<translation>笔记编辑已禁用</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10777"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
-<translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+<translation>笔记编辑当前处于禁用状态，是否要再次允许？</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="11002"/>
@@ -4553,7 +4553,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../entities/note.cpp" line="3437"/>
 <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
-<translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
+<translation>媒体文件夹中已存在图片文件，您是否要放弃创建新文件并使用现有的文件？</translation>
 </message>
 <message numerus="yes">
 <location filename="../entities/note.cpp" line="3915"/>
@@ -5279,7 +5279,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../widgets/scriptsettingwidget.cpp" line="190"/>
 <source>Please select a directory</source>
-<translation type="unfinished">Please select a directory</translation>
+<translation>请选择一个目录</translation>
 </message>
 <message>
 <location filename="../widgets/scriptsettingwidget.cpp" line="191"/>
@@ -6471,7 +6471,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="348"/>
 <source>Experimental</source>
-<translation type="unfinished">Experimental</translation>
+<translation>实验性</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="831"/>
@@ -6486,7 +6486,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1394"/>
 <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
-<translation type="unfinished">You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</translation>
+<translation>您将在 &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; 设置里找到此路径</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1449"/>
@@ -6581,7 +6581,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4173"/>
 <source>Start application in read-only mode</source>
-<translation type="unfinished">Start application in read-only mode</translation>
+<translation>以只读模式启动应用程序</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4249"/>
@@ -6727,13 +6727,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5699"/>
 <source>Ignored note files</source>
-<translation type="unfinished">Ignored note files</translation>
+<translation>已忽略的笔记文件</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5696"/>
 <location filename="../dialogs/settingsdialog.ui" line="5705"/>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
-<translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
+<translation>要忽略的笔记文件正则表达式，以“;”分隔</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5847"/>
@@ -6803,7 +6803,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6578"/>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+<translation>将打开与该服务器的网页套接字连接，作为连接 QOwnNotes 网页应用和桌面应用的桥梁。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6639"/>
@@ -7643,7 +7643,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="579"/>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
-<translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
+<translation>已在服务器找到笔记路径 &lt;b&gt;%1&lt;/b&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="1358"/>
