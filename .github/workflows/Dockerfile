@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
     python3.11 \
     libgl1-mesa-dev libpulse-dev libxcb-glx0 libxcb-icccm4 libxcb-image0 \
     libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-render0 \
-    libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxcb-xfixes0 \
+    libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxkbcommon-x11-0 libxcb-xfixes0 \
     libxcb-xinerama0 libxcb1 libxkbcommon-x11-0 \
     && rm -rf /var/lib/apt/lists/*
 
