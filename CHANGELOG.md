@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 23.3.0
+- in **read-only mode** you will now also get a dialog to
+  **ask you if you want to allow note editing** if you press
+  **<kbd>Ctrl</kbd> + <kbd>Space</kbd>** (e.g. when you want to
+  toggle a checkbox) in the note edit panel
+
 ## 23.2.5
 - improvements to the **read-only mode** were made
   - if a **script** tries to write into the current note in read-only mode a
