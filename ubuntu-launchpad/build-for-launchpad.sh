@@ -10,13 +10,13 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=23.1.4.1
+#QOWNNOTES_VERSION=23.3.0.1
 
 BRANCH=main
 #BRANCH=release
 
 # https://wiki.ubuntu.com/Releases
-UBUNTU_RELEASES=( "jammy" "bionic" "focal" "kinetic" "lunar" )
+UBUNTU_RELEASES=( "bionic" "focal" "kinetic" "lunar" "jammy" )
 
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
