@@ -89,7 +89,7 @@ jobs:
     needs: create_release
     runs-on: ubuntu-20.04
     env:
-      QT_VERSION: 6.5.0
+      QT_VERSION: 6.4.2
       BUILD_DIR: build
     name: '🐧 AppImage Ubuntu 20.04'
     steps:
