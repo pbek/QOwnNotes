@@ -88,13 +88,14 @@ jobs:
   #
   build-appimage:
     needs: create_release
-#    runs-on: ubuntu-20.04
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/pbek/qownnotes-ubuntu22-dev:latest
-      options: --user root --cap-add SYS_ADMIN --device /dev/fuse --security-opt apparmor:unconfined
-#    env:
-#      QT_VERSION: 5.15.2
+    runs-on: ubuntu-20.04
+#    runs-on: ubuntu-latest
+#    container:
+#      image: ghcr.io/pbek/qownnotes-ubuntu22-dev:latest
+#      options: --user root --cap-add SYS_ADMIN --device /dev/fuse --security-opt apparmor:unconfined
+    env:
+      QT_VERSION: 5.15.2
+      BUILD_DIR: build
     name: '🐧 AppImage Qt 5.15.2'
     steps:
 
@@ -103,26 +104,26 @@ jobs:
         with:
           submodules: recursive
 
-#      - name: '⚙️ Cache Qt'
-#        id: cache-qt
-#        uses: actions/cache@v3
-#        with:
-#          path: ../Qt
-#          key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
-#
-#      - name: '⚙️ Install Qt'
-#        uses: jurplel/install-qt-action@v3
-#        with:
-#          version: ${{env.QT_VERSION}}
-#          modules: ${{env.QT_MODULES}}
-#          aqtversion: '==2.0.0'
-#          setup-python: false
-#          cache: ${{steps.cache-qt.outputs.cache-hit}}
+      - name: '⚙️ Cache Qt'
+        id: cache-qt
+        uses: actions/cache@v3
+        with:
+          path: ../Qt
+          key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
 
-#      - name: '⚙️ Install dependencies'
-#        run: |
-#          sudo apt-get update
-#          sudo apt install desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxkbcommon-x11-0
+      - name: '⚙️ Install Qt'
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: ${{env.QT_VERSION}}
+          modules: ${{env.QT_MODULES}}
+          aqtversion: '==2.0.0'
+          setup-python: false
+          cache: ${{steps.cache-qt.outputs.cache-hit}}
+
+      - name: '⚙️ Install dependencies'
+        run: |
+          sudo apt-get update
+          sudo apt install desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxkbcommon-x11-0
       - name: '🚧 Compile application'
         run: |
           echo "#define RELEASE \"AppImage\"" > release.h
@@ -137,14 +138,20 @@ jobs:
           chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
       - name: '📦 Create AppImage'
         run: |
-          # export QMAKE=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/bin/${{env.QMAKE}}
-          # export PATH=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/libexec:$PATH
-          export QMAKE=/usr/bin/qmake
-          # export PATH=/usr/lib/qt6/libexec:$PATH
-          export PATH=/usr/lib/x86_64-linux-gnu/qt5/libexec:$PATH
+          export QMAKE=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/bin/${{env.QMAKE}}
+          export PATH=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/libexec:$PATH
+          # export QMAKE=/usr/bin/qmake
+          # # export PATH=/usr/lib/qt6/libexec:$PATH
+          # export PATH=/usr/lib/x86_64-linux-gnu/qt5/libexec:$PATH
           export EXTRA_QT_PLUGINS=iconengines/libqsvgicon.so
           cp ../icons/icon.png QOwnNotes.png
-          EXTRA_QT_PLUGINS=iconengines ./linuxdeploy-x86_64.AppImage -v0 --appdir AppDir -e ${{env.UNIXNAME}} -i ${{env.UNIXNAME}}.png -d PBE.QOwnNotes.desktop --plugin qt --output appimage
+          # EXTRA_QT_PLUGINS=iconengines ./linuxdeploy-x86_64.AppImage -v0 --appdir AppDir -e ${{env.UNIXNAME}} -i ${{env.UNIXNAME}}.png -d PBE.QOwnNotes.desktop --plugin qt --output appimage
+          ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} -e ${{env.UNIXNAME}} -i ${{env.UNIXNAME}}.png -d PBE.QOwnNotes.desktop --plugin qt
+          mkdir -p ${{env.BUILD_DIR}}/usr/plugins/iconengines && cp -r ${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/plugins/iconengines/libqsvgicon.so ${{env.BUILD_DIR}}/usr/plugins/iconengines
+          mkdir -p ${{env.BUILD_DIR}}/usr/languages && cp -r languages/*.qm ${{env.BUILD_DIR}}/usr/languages
+          # cp -rL ${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/lib/libQt6QmlWorkerScript.so.6 ${{env.BUILD_DIR}}/usr/lib
+          find ${{env.BUILD_DIR}}
+          ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} --output appimage
           rm linuxdeploy-x86_64.AppImage
           rm linuxdeploy-plugin-qt-x86_64.AppImage
           # find ${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}
