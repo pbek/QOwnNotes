@@ -1,4 +1,4 @@
-name: 📣 Build release of QOwnNotes (Next)
+name: 📣 Build release of QOwnNotes
 
 on:
   workflow_dispatch:
