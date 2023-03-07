@@ -244,8 +244,7 @@ jobs:
           printenv
 
       - name: '🚧 Compile application'
-#        run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
-        run: cd .. && snapcraft && ls
+        run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
 
