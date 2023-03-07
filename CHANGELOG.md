@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 23.3.1
+- the whole **AppImage build process was re-invented** because the necessary
+  Ubuntu 18.04 build system will vanish from GitHub with the end of March
+  (for [#2728](https://github.com/pbek/QOwnNotes/issues/2728))
+
 ## 23.3.0
 - in **read-only mode** you will now also get a dialog to
   **ask you if you want to allow note editing** if you press
