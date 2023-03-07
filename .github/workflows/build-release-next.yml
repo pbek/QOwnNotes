@@ -198,9 +198,9 @@ jobs:
   build-snap:
     needs: create_release
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/pbek/qownnotes-ubuntu18-dev:latest
-      options: --user root
+#    container:
+#      image: ghcr.io/pbek/qownnotes-ubuntu18-dev:latest
+#      options: --user root
     env:
       QT_VERSION: 5.15.2
     name: '🐧 Snap Qt 5.15.2'
@@ -217,11 +217,11 @@ jobs:
           export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
-#      - name: '⚙️ Install Snapcraft'
-#        uses: samuelmeuli/action-snapcraft@v1
-#        with:
-#          use_lxd: true
-#  #        snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
+      - name: '⚙️ Install Snapcraft'
+        uses: samuelmeuli/action-snapcraft@v2
+        with:
+          use_lxd: true
+  #        snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
       - name: '⚙️ Cache Qt'
         id: cache-qt
         uses: actions/cache@v3
@@ -233,7 +233,7 @@ jobs:
         with:
           version: ${{env.QT_VERSION}}
           modules: ${{env.QT_MODULES}}
-          setup-python: false
+#          setup-python: false
           cache: ${{steps.cache-qt.outputs.cache-hit}}
       - name: '⚙️ Printenv'
         shell: bash
