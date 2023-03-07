@@ -4,6 +4,8 @@
 - the whole **AppImage build process was re-invented** because the necessary
   Ubuntu 18.04 build system will vanish from GitHub with the end of March
   (for [#2728](https://github.com/pbek/QOwnNotes/issues/2728))
+- added a **new editor color schema** *IntelliSerious* by @marcoXbresciani
+  (for [#2742](https://github.com/pbek/QOwnNotes/issues/2742))
 
 ## 23.3.0
 - in **read-only mode** you will now also get a dialog to
