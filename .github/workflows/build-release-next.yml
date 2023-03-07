@@ -222,7 +222,7 @@ jobs:
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
         with:
-          use_lxd: true
+#          use_lxd: true
   #        snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
       - name: '⚙️ Cache Qt'
         id: cache-qt
@@ -244,7 +244,8 @@ jobs:
           printenv
 
       - name: '🚧 Compile application'
-        run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
+#        run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
+        run: cd .. && snapcraft && ls
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
 
