@@ -157,7 +157,7 @@ jobs:
           # find ${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}
           ls -hal *.AppImage
           find -iname "*.AppImage"
-          # mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage
+          mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage || true
           sha256sum ${{env.EXECUTABLE}}-x86_64.AppImage > ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
           ls -hal *.AppImage
           find -iname "*.AppImage"
