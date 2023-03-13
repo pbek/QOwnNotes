@@ -11,6 +11,7 @@
 #include <QMessageBox>
 #include <QNetworkReply>
 #include <QNetworkRequest>
+#include <QProcessEnvironment>
 #include <QPushButton>
 #include <QSettings>
 #include <QTemporaryFile>
@@ -413,7 +414,12 @@ bool UpdateDialog::initializeMacOSUpdateProcess(const QString &releaseUrl) {
  * Initializes the Linux update process
  */
 bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
-    const QString appPath = qApp->property("arguments").toStringList()[0];
+    // This doesn't report the correct path for the AppImages of the deployment process for Ubuntu 20.04!
+    // (see https://github.com/pbek/QOwnNotes/issues/2728#issuecomment-1466522381)
+//    const QString appPath = qApp->property("arguments").toStringList()[0];
+
+    QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+    const QString appPath = env.value("APPIMAGE");
 
     qDebug() << __func__ << " - 'filePath': " << filePath;
     qDebug() << __func__ << " - 'appPath': " << appPath;

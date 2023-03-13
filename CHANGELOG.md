@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 23.3.3
+- unfortunately since 23.3.1 the **AppImage reports the wrong application path**, because
+  of that update mechanism fails, this **should (could) be fixed** after this release
+  (for [#2728](https://github.com/pbek/QOwnNotes/issues/2728))
+
 ## 23.3.2
 - the indent spaces are now limited between 2 and 5 in the settings, because
   that's the range the [md4c](https://github.com/qownnotes/md4c) supports when 
