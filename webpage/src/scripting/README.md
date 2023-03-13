@@ -25,6 +25,7 @@ to get started fast.
 :::
 
 In the **Scripting settings** you can also install scripts directly from the [**Script repository**](https://github.com/qownnotes/scripts).
+There is a community hosted web-application to search for scripts on [beurt.github.io/QOwnNoteScriptsList](https://beurt.github.io/QOwnNoteScriptsList/).
 
 For issues, questions or feature requests for scripts from the **Script repository** please open
 an issue on the [QOwnNotes script repository issue page](https://github.com/qownnotes/scripts/issues).
