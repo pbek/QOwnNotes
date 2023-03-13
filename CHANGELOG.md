@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 23.3.2
+- the indent spaces are now limited between 2 and 5 in the settings, because
+  that's the range the [md4c](https://github.com/qownnotes/md4c) supports when 
+  converting Markdown to HTML (for [#2744](https://github.com/pbek/QOwnNotes/issues/2744))
+
 ## 23.3.1
 - the whole **AppImage build process was re-invented** because the necessary
   Ubuntu 18.04 build system will vanish from GitHub with the end of March

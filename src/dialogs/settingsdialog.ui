@@ -5453,7 +5453,10 @@ p, li { white-space: pre-wrap; }
                   <item row="1" column="1">
                    <widget class="QSpinBox" name="indentSizeSpinBox">
                     <property name="minimum">
-                     <number>1</number>
+                     <number>2</number>
+                    </property>
+                    <property name="maximum">
+                     <number>5</number>
                     </property>
                    </widget>
                   </item>
