@@ -112,9 +112,9 @@ jobs:
         uses: samuelmeuli/action-snapcraft@v2
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
-#        with:
-#          use_lxd: true
-  #        snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
+        with:
+          use_lxd: true
+#          snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
       - name: '⚙️ Cache Qt'
         id: cache-qt
         uses: actions/cache@v3
@@ -136,8 +136,6 @@ jobs:
 
       - name: '🚧 Compile application'
         run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
-        env:
-          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
 
   #    - name: Release Snap for Linux
   #      uses: actions/upload-release-asset@v1
