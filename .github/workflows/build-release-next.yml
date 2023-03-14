@@ -88,7 +88,7 @@ jobs:
   #
   build-snap:
     needs: create_release
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 #    container:
 #      image: ghcr.io/pbek/qownnotes-ubuntu18-dev:latest
 #      options: --user root
@@ -113,7 +113,7 @@ jobs:
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
         with:
-          use_lxd: true
+          use_lxd: ${{ matrix.os == 'ubuntu-18.04' }}
 #          snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
       - name: '⚙️ Cache Qt'
         id: cache-qt
