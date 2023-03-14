@@ -135,7 +135,13 @@ jobs:
           printenv
 
       - name: '🚧 Compile application'
-        run: cd .. && snapcraft --use-lxd && ls
+        run: |
+          cd ..
+          lxd version
+          sudo usermod -a -G lxd ${USER}
+          newgrp lxd
+          snapcraft --use-lxd
+          ls
 #        run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
 
   #    - name: Release Snap for Linux
