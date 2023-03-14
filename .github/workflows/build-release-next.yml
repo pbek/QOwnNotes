@@ -88,7 +88,7 @@ jobs:
   #
   build-snap:
     needs: create_release
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 #    container:
 #      image: ghcr.io/pbek/qownnotes-ubuntu18-dev:latest
 #      options: --user root
