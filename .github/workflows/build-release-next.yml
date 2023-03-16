@@ -2,16 +2,16 @@ name: 📣 Build release of QOwnNotes (Next)
 
 on:
   workflow_dispatch:
-  push:
+#  push:
 #    branches:
 #      - main
 #    tags-ignore:
 #      - '*'
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
-    paths:
-#      - 'src/**'
-#      - 'tests/**'
-      - '.github/workflows/build-release-next.yml'
+#    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
+#    paths:
+##      - 'src/**'
+##      - 'tests/**'
+#      - '.github/workflows/build-release-next.yml'
   # For testing also on pull requests
 #  pull_request:
 #    paths:
