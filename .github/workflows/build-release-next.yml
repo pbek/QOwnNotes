@@ -108,13 +108,13 @@ jobs:
           export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
-      - name: '⚙️ Install Snapcraft'
-        uses: samuelmeuli/action-snapcraft@v2
-        env:
-          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
-        with:
-          use_lxd: ${{ matrix.os == 'ubuntu-18.04' }}
-#          snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
+#      - name: '⚙️ Install Snapcraft'
+#        uses: samuelmeuli/action-snapcraft@v2
+#        env:
+#          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
+#        with:
+#          use_lxd: ${{ matrix.os == 'ubuntu-18.04' }}
+##          snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
       - name: '⚙️ Cache Qt'
         id: cache-qt
         uses: actions/cache@v3
@@ -135,21 +135,27 @@ jobs:
           printenv
 
       - name: '🚧 Compile application'
-        run: |
-          cd ..
-          lxd version
-          sudo usermod -a -G lxd ${USER}
-          newgrp lxd
-          sudo adduser --system --no-create-home --group lxduser # create system user
-          echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers # allow sudo without password
-          echo "lxduser ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers # allow sudo without password
-          ls -al /var/snap/lxd/common/lxd/unix.socket
-          sudo systemctl restart snap.lxd.daemon
-          cat /var/snap/lxd/common/config
-          ls -al /var/snap/lxd/common/lxd/unix.socket
-          sudo -u lxduser -g lxd snapcraft --use-lxd
-          ls
-#        run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
+        uses: snapcore/action-build@v1
+        id: snapcraft
+        with:
+          path: ..
+
+#      - name: '🚧 Compile application'
+#        run: |
+#          cd ..
+#          lxd version
+#          sudo usermod -a -G lxd ${USER}
+#          newgrp lxd
+#          sudo adduser --system --no-create-home --group lxduser # create system user
+#          echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers # allow sudo without password
+#          echo "lxduser ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers # allow sudo without password
+#          ls -al /var/snap/lxd/common/lxd/unix.socket
+#          sudo systemctl restart snap.lxd.daemon
+#          cat /var/snap/lxd/common/config
+#          ls -al /var/snap/lxd/common/lxd/unix.socket
+#          sudo -u lxduser -g lxd snapcraft --use-lxd
+#          ls
+##        run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
 
   #    - name: Release Snap for Linux
   #      uses: actions/upload-release-asset@v1
