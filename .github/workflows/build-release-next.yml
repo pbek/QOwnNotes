@@ -137,8 +137,6 @@ jobs:
       - name: '🚧 Compile application'
         uses: snapcore/action-build@v1
         id: snapcraft
-        with:
-          path: ..
 
 #      - name: '🚧 Compile application'
 #        run: |
