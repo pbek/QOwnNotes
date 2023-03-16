@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 23.3.4
-- the **Snap build process was re-invented** because the necessary
+- the **amd64 Snap build process was re-invented**, because the necessary
   Ubuntu 18.04 build system will vanish from GitHub with the end of March
   (for [#2728](https://github.com/pbek/QOwnNotes/issues/2728))
 
