@@ -142,6 +142,7 @@ jobs:
           newgrp lxd
           sudo adduser --system --no-create-home --group lxduser # create system user
           echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers # allow sudo without password
+          echo "lxduser ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers # allow sudo without password
           ls -al /var/snap/lxd/common/lxd/unix.socket
           sudo systemctl restart snap.lxd.daemon
           cat /var/snap/lxd/common/config
