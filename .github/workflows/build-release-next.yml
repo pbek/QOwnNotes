@@ -140,11 +140,12 @@ jobs:
           lxd version
           sudo usermod -a -G lxd ${USER}
           newgrp lxd
+          sudo adduser --system --no-create-home --group lxduser # create system user
           ls -al /var/snap/lxd/common/lxd/unix.socket
           sudo systemctl restart snap.lxd.daemon
           cat /var/snap/lxd/common/config
           ls -al /var/snap/lxd/common/lxd/unix.socket
-          sudo -u :lxd snapcraft --use-lxd
+          sudo -u lxduser -g lxd snapcraft --use-lxd
           ls
 #        run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
 
