@@ -144,7 +144,7 @@ jobs:
           sudo systemctl restart snap.lxd.daemon
           cat /var/snap/lxd/common/config
           ls -al /var/snap/lxd/common/lxd/unix.socket
-          snapcraft --use-lxd
+          sudo -u :lxd snapcraft --use-lxd
           ls
 #        run: cd .. && sg lxd -c 'snapcraft --use-lxd' && ls
 
