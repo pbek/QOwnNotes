@@ -9029,7 +9029,8 @@ void MainWindow::storeSavedSearch() {
     }
 
     const QString text = ui->searchLineEdit->text();
-    if (!text.isEmpty()) {
+    // Only store searches with less than 30 characters to prevent clogging the settings
+    if (!text.isEmpty() && text.length() < 30) {
         int noteFolderId = NoteFolder::currentNoteFolderId();
         QString settingsKey =
             QStringLiteral("savedSearches/noteFolder-") + QString::number(noteFolderId);
