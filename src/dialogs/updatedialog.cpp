@@ -428,7 +428,7 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
     QFileInfo fileInfo(appPath);
 
     if (!fileInfo.isWritable()) {
-        QMessageBox::critical(0, tr("Permission error"),
+        QMessageBox::critical(nullptr, tr("Permission error"),
                               tr("Your QOwnNotes executable '%1' is not writeable! It must be "
                                  "writeable by the current user in order to be updated.")
                                   .arg(appPath));
@@ -440,7 +440,7 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
 
     // make the new AppImage executable
     if (!updateFile.setPermissions(updateFile.permissions() | QFileDevice::ExeOwner)) {
-        QMessageBox::critical(0, tr("Permission error"),
+        QMessageBox::critical(nullptr, tr("Permission error"),
                               tr("The temporary file '%1' could not be made executable! "
                                  "You need to replace '%2' yourself.")
                                   .arg(filePath, appPath));
@@ -450,7 +450,7 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
 
     // remove the current binary
     if (!file.remove()) {
-        QMessageBox::critical(0, tr("File error"),
+        QMessageBox::critical(nullptr, tr("File error"),
                               tr("Your old QOwnNotes executable '%1' could not be removed! "
                                  "You need to replace it yourself with '%2'.")
                                   .arg(appPath, filePath));
@@ -460,7 +460,7 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
 
     // rename the new AppImage to the path of the current binary
     if (!updateFile.rename(appPath)) {
-        QMessageBox::critical(0, tr("File error"),
+        QMessageBox::critical(nullptr, tr("File error"),
                               tr("Your old QOwnNotes executable '%1' could not be replaced "
                                  "by the new file '%2'! You need to replace it yourself.")
                                   .arg(appPath, filePath));
@@ -472,7 +472,7 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
 
     // make the new AppImage executable (2nd attempt)
     if (!appFile.setPermissions(appFile.permissions() | QFileDevice::ExeOwner)) {
-        QMessageBox::critical(0, tr("Permission error"),
+        QMessageBox::critical(nullptr, tr("Permission error"),
                               tr("The app file '%1' could not be made executable! "
                                  "You need to make it executable yourself.")
                                   .arg(appPath));
