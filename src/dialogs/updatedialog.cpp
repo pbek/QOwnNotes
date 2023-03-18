@@ -235,7 +235,7 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
     qDebug() << __func__ << " - 'data.size': " << data.size();
 
     if (reply->error() != QNetworkReply::NoError) {
-        QMessageBox::critical(0, tr("Download error"),
+        QMessageBox::critical(nullptr, tr("Download error"),
                               tr("Error while downloading:\n%1").arg(reply->errorString()));
 
         qWarning() << tr("network error: %1").arg(reply->errorString());
@@ -252,7 +252,7 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
     QString suffix = "download";
 #endif
 
-    QTemporaryFile *tempFile = new QTemporaryFile(QDir::tempPath() + "/QOwnNotes-XXXXXX." + suffix);
+    auto *tempFile = new QTemporaryFile(QDir::tempPath() + "/QOwnNotes-XXXXXX." + suffix);
 
     // we want to keep the file to be used in the update process
     tempFile->setAutoRemove(false);
@@ -260,7 +260,7 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
     // get a temporary file
     if (!tempFile->open()) {
         QMessageBox::critical(
-            0, tr("File error"),
+            nullptr, tr("File error"),
             tr("Could not open temporary file:\n%1").arg(tempFile->errorString()));
         return;
     }
@@ -279,7 +279,7 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
     QFile file(filePath);
 
     if (!file.open(QIODevice::WriteOnly)) {
-        QMessageBox::critical(0, tr("File error"),
+        QMessageBox::critical(nullptr, tr("File error"),
                               tr("Could not store downloaded file:\n%1").arg(file.errorString()));
         return;
     }
@@ -345,7 +345,7 @@ bool UpdateDialog::initializeMacOSUpdateProcess(const QString &releaseUrl) {
     QFile f(updaterPath);
 
     if (!f.exists()) {
-        QMessageBox::critical(0, tr("Error"),
+        QMessageBox::critical(nullptr, tr("Error"),
                               tr("Could not find updater file:\n%1").arg(f.fileName()));
         return false;
     }
@@ -533,7 +533,7 @@ bool UpdateDialog::initializeWindowsUpdateProcess(const QString &filePath) {
 
     // copy updater script
     if (!updaterSourceFile.copy(updaterPath)) {
-        QMessageBox::critical(0, tr("Error"),
+        QMessageBox::critical(nullptr, tr("Error"),
                               tr("Could not copy updater script '%1' to '%2'!")
                                   .arg(updaterSourceFile.fileName(), unzipPath));
         return false;
@@ -541,7 +541,7 @@ bool UpdateDialog::initializeWindowsUpdateProcess(const QString &filePath) {
 
     // copy unzip executable script
     if (!unzipSourceFile.copy(unzipPath)) {
-        QMessageBox::critical(0, tr("Error"),
+        QMessageBox::critical(nullptr, tr("Error"),
                               tr("Could not copy updater script '%1' to '%2'!")
                                   .arg(updaterSourceFile.fileName(), unzipPath));
         return false;
@@ -550,7 +550,7 @@ bool UpdateDialog::initializeWindowsUpdateProcess(const QString &filePath) {
     // check if updater script exists in temporary folder
     QFile updaterFile(updaterPath);
     if (!updaterFile.exists()) {
-        QMessageBox::critical(0, tr("Error"),
+        QMessageBox::critical(nullptr, tr("Error"),
                               tr("Couldn't find updater script: %1").arg(updaterPath));
         return false;
     }
@@ -558,7 +558,7 @@ bool UpdateDialog::initializeWindowsUpdateProcess(const QString &filePath) {
     // check if unzip executable exists in temporary folder
     QFile unzipFile(unzipPath);
     if (!unzipFile.exists()) {
-        QMessageBox::critical(0, tr("Error"),
+        QMessageBox::critical(nullptr, tr("Error"),
                               tr("Couldn't find unzip executable: %1").arg(unzipPath));
         return false;
     }

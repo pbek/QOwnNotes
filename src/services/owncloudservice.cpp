@@ -1342,7 +1342,7 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
                     QDomNode typeNode = typeNodes.at(j);
                     QString typeString = typeNode.toElement().tagName();
                     if (typeString == QStringLiteral("message")) {
-                        QMessageBox::critical(0, tr("Error while loading todo lists!"),
+                        QMessageBox::critical(nullptr, tr("Error while loading todo lists!"),
                                               tr("Error message from your "
                                                  "CalDAV server: <strong>%1</strong>")
                                                   .arg(typeNode.toElement().text()));
