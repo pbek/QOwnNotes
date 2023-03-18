@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 23.3.6
+- AppImage updater test release (for [#2751](https://github.com/pbek/QOwnNotes/issues/2751))
+
 ## 23.3.5
 - the size of search items that are stored in the "stored searches" history
   is now limited to prevent clogging the application settings with them
