@@ -4,6 +4,9 @@
 - the size of search items that are stored in the "stored searches" history
   is now limited to prevent clogging the application settings with them
   (for [#2752](https://github.com/pbek/QOwnNotes/issues/2752))
+- another AppImage update issue that came with the changes from
+  [#2728](https://github.com/pbek/QOwnNotes/issues/2728) should now be fixed
+  (for [#2751](https://github.com/pbek/QOwnNotes/issues/2751))
 
 ## 23.3.4
 - the **amd64 Snap build process was re-invented**, because the necessary

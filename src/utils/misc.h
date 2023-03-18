@@ -81,6 +81,7 @@ void waitMsecs(int msecs);
 QString portableDataPath();
 bool isInPortableMode();
 bool isAppImage();
+QString applicationPath();
 QString prependPortableDataPathIfNeeded(QString path, bool ifNotEmptyOnly = false);
 QString makePathRelativeToPortableDataPathIfNeeded(QString path);
 QString htmlToMarkdown(QString text);

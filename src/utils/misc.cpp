@@ -545,7 +545,7 @@ QString Utils::Misc::portableDataPath() {
         // argument of the executable arguments, because the applicationDirPath
         // will be some temporary path
         if (Utils::Misc::isAppImage()) {
-            const QFileInfo fileInfo(qApp->property("arguments").toStringList().at(0));
+            const QFileInfo fileInfo(Utils::Misc::applicationPath());
             path = fileInfo.absolutePath();
         } else {
             path = QCoreApplication::applicationDirPath();
@@ -877,7 +877,7 @@ void Utils::Misc::needRestart() { qApp->setProperty("needsRestart", true); }
 void Utils::Misc::restartApplication() {
     // QApplication::arguments() didn't contain any parameters!
     QStringList parameters = qApp->property("arguments").toStringList();
-    const QString appPath = parameters.takeFirst();
+    const QString appPath = Utils::Misc::applicationPath();
 
     // we don't want to have our settings cleared again after a restart
     parameters.removeOne(QStringLiteral("--clear-settings"));
@@ -892,6 +892,23 @@ void Utils::Misc::restartApplication() {
 
     startDetachedProcess(appPath, parameters);
     QApplication::quit();
+}
+
+QString Utils::Misc::applicationPath() {
+    QString appPath;
+
+    if (isAppImage()) {
+        // qApp->property("arguments").toStringList() doesn't report the correct path for the
+        // AppImages of the deployment process for Ubuntu 20.04!
+        // (see https://github.com/pbek/QOwnNotes/issues/2728#issuecomment-1466522381)
+        QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+        appPath = env.value("APPIMAGE");
+    } else {
+        QStringList parameters = qApp->property("arguments").toStringList();
+        appPath = parameters.takeFirst();
+    }
+
+    return appPath;
 }
 
 QString Utils::Misc::appendSingleAppInstanceTextIfNeeded(QString text) {
