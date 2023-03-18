@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 23.3.5
+- the size of search items that are stored in the "stored searches" history
+  is now limited to prevent clogging the application settings with them
+  (for [#2752](https://github.com/pbek/QOwnNotes/issues/2752))
+
 ## 23.3.4
 - the **amd64 Snap build process was re-invented**, because the necessary
   Ubuntu 18.04 build system will vanish from GitHub with the end of March
