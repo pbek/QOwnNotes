@@ -2403,8 +2403,9 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
     // TODO: maybe we could do that per QTextBlock to check if it's done in comment blocks?
     // Important: The `\n` is needed to not crash under Windows if there is just
     // an opening `<` and a lot of other text after it
+    // Note: If we find an `@` in the link we don't replace it because it's an email address
     static const QRegularExpression linkRE(
-        QStringLiteral("<(((?!\\w+:\\/\\/)[^\\*<>\n])+\\.[\\w\\d]+)>"));
+        QStringLiteral("<(((?!\\w+:\\/\\/)[^\\*<>@\n])+\\.[\\w\\d]+)>"));
     i = linkRE.globalMatch(str);
 
     while (i.hasNext()) {
