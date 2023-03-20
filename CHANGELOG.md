@@ -3,6 +3,8 @@
 ## 23.3.7
 - text parts with an `@` in it will now not be detected as note link
   (for [#2720](https://github.com/pbek/QOwnNotes/issues/2720))
+- added a **new editor color schema** *Orange and Green* by @Beurt
+  (for [#2754](https://github.com/pbek/QOwnNotes/issues/2754))
 
 ## 23.3.6
 - AppImage updater test release (for [#2751](https://github.com/pbek/QOwnNotes/issues/2751))
