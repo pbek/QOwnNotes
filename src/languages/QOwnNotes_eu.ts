@@ -730,7 +730,7 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
 <source>Number of imported notes</source>
-<translation type="unfinished">Number of imported notes</translation>
+<translation>Inportatutako ohar kopurua</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="148"/>
@@ -878,17 +878,17 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>Erabili FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished">Read .vimrc from location:</translation>
+<translation>Irakurri .vimrc hurrengo kokapenetik:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished">Show position of text marks</translation>
+<translation>Erakutsi testu-marken posizioa</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
@@ -903,18 +903,18 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>Errenkadaren hasiera</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished">Tabulator size:</translation>
+<translation>Koskatzearen tamaina:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished">Smart tabulators</translation>
+<translation>Koskatze adimenduak</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
@@ -929,7 +929,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished">Expand tabulators</translation>
+<translation>Zabaldu koskatzeak</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
@@ -1094,14 +1094,14 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6391"/>
 <source>Move lines into themselves.</source>
-<translation>Mugitu lerroak berez.</translation>
+<translation>Mugitu errenkadak euren lekura.</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6433"/>
 <source>%n lines moved.</source>
 <translation>
-<numerusform>%n linea mugitu da.</numerusform>
-<numerusform>%n lerro mugitu dira.</numerusform>
+<numerusform>%n errenkada mugitu dira.</numerusform>
+<numerusform>%n errenkada mugitu dira.</numerusform>
 </translation>
 </message>
 <message>
@@ -1138,7 +1138,7 @@
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6578"/>
 <source>%n lines filtered.</source>
 <translation>
-<numerusform>%n linea iragazi da.</numerusform>
+<numerusform>%n errenkada iragazi da.</numerusform>
 <numerusform>%n lerro iragazi dira.</numerusform>
 </translation>
 </message>
@@ -1186,7 +1186,7 @@
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7028"/>
 <source>%n lines indented.</source>
 <translation>
-<numerusform>%n lerro kosk egin da.</numerusform>
+<numerusform>%n errenkada koskatu dira.</numerusform>
 <numerusform>%n lerro koskatuak.</numerusform>
 </translation>
 </message>
@@ -1194,7 +1194,7 @@
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7084"/>
 <source>%n lines %1ed %2 time.</source>
 <translation>
-<numerusform>%n line %1ed %2 denbora.</numerusform>
+<numerusform>%n errenkada %1 dira %2 aldiz.</numerusform>
 <numerusform>%n lineak %1ed %2 denbora.</numerusform>
 </translation>
 </message>
@@ -1202,7 +1202,7 @@
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7622"/>
 <source>%n lines yanked.</source>
 <translation>
-<numerusform>%n line-k yanked.</numerusform>
+<numerusform>%n errenkada luzatu dira.</numerusform>
 <numerusform>%n lerro jotzen dira.</numerusform>
 </translation>
 </message>
@@ -1230,7 +1230,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="38"/>
 <source>Text font</source>
-<translation>Testuaren letra-tipoa</translation>
+<translation>Testuaren letra-mota</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="73"/>
@@ -1297,7 +1297,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="232"/>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>Letra-mota:</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="279"/>
@@ -1462,7 +1462,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="223"/>
 <source>Block quote</source>
-<translation>Blokeatu aurrekontua</translation>
+<translation>Bloke-aipua</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="224"/>
@@ -1488,7 +1488,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="230"/>
 <source>Current line background color</source>
-<translation>Uneko lerroaren atzeko planoaren kolorea</translation>
+<translation>Uneko errenkadaren atzeko planoaren kolorea</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="233"/>
@@ -2046,7 +2046,7 @@
 <location filename="../mainwindow.ui" line="912"/>
 <location filename="../mainwindow.cpp" line="822"/>
 <source>Navigation</source>
-<translation>Itsasketa</translation>
+<translation>Nabigazioa</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="394"/>
@@ -2466,7 +2466,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1694"/>
 <source>Insert &amp;code block</source>
-<translation>Txertatu &amp;kodea blokea</translation>
+<translation>Txertatu &amp;kodea-blokea</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1730"/>
@@ -2664,7 +2664,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2339"/>
 <source>Delete line</source>
-<translation>Ezabatu lerroa</translation>
+<translation>Ezabatu errenkada</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2347"/>
@@ -2829,7 +2829,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2644"/>
 <source>Toggle note stickiness of current tab</source>
-<translation>Txandakatu ohar baten fitxategiaren itsasgarritasuna</translation>
+<translation>Txandakatu uneko ohar baten itsasgarritasuna</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2653"/>
@@ -2890,7 +2890,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1936"/>
 <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-<translation>Ebatzi '(2 + 3) * 6 =' ekuazio sinple bat uneko lerroan</translation>
+<translation>Ebatzi '(2 + 3) * 6 =' ekuazio sinple bat uneko errenkadan</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1944"/>
@@ -3372,7 +3372,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <location filename="../mainwindow.cpp" line="7195"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
-<translation>Berrezarri letra tipo tamaina %1 pt</translation>
+<translation>Berrezarri letra tamaina %1 puntura</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7941"/>
@@ -4088,7 +4088,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <message>
 <location filename="../mainwindow.cpp" line="3014"/>
 <source>Line numbers</source>
-<translation>Lerro zenbakiak</translation>
+<translation>Errenkada zenbakiak</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="3024"/>
@@ -4839,12 +4839,12 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="105"/>
 <source>Increased font size to %1 pt</source>
-<translation type="unfinished">Increased font size to %1 pt</translation>
+<translation>Letraren tamaina %1 puntura handituta</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="108"/>
 <source>Decreased font size to %1 pt</source>
-<translation type="unfinished">Decreased font size to %1 pt</translation>
+<translation>Letraren tamaina %1 puntura txikituta</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="528"/>
@@ -4864,7 +4864,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="883"/>
 <source>&amp;Link selected text</source>
-<translation type="unfinished">&amp;Link selected text</translation>
+<translation>&amp;Estekatu aukeratutako testua</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="883"/>
@@ -4875,17 +4875,17 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="890"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation type="unfinished">Block &amp;quote selected text</translation>
+<translation>Egin bloke-&amp;aipua aukeratutako testuari</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="893"/>
 <source>Insert block &amp;quote</source>
-<translation type="unfinished">Insert block &amp;quote</translation>
+<translation>Txertatu bloke-&amp;aipua</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="907"/>
 <source>Copy code block</source>
-<translation type="unfinished">Copy code block</translation>
+<translation>Kopiatu kode-blokea</translation>
 </message>
 <message>
 <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="934"/>
@@ -5655,13 +5655,13 @@ Hala ere instalatu nahi duzu?</translation>
 <location filename="../dialogs/settingsdialog.ui" line="4671"/>
 <location filename="../dialogs/settingsdialog.ui" line="5017"/>
 <source>Default font:</source>
-<translation>Letra-tipo lehenetsia:</translation>
+<translation>Lehenetsitako letra-mota:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4713"/>
 <location filename="../dialogs/settingsdialog.ui" line="4958"/>
 <source>Code font:</source>
-<translation>Kodearen letra-tipoa:</translation>
+<translation>Kodearen letra-mota:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3334"/>
@@ -5681,7 +5681,7 @@ Hala ere instalatu nahi duzu?</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4571"/>
 <source>Use GitHub line breaks</source>
-<translation>Erabili GitHub lineako jauziak</translation>
+<translation>Erabili GitHub-eko errenkada-jauziak</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2375"/>
@@ -6460,7 +6460,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4913"/>
 <source>Ignore code font size to allow zooming</source>
-<translation>Ez ikusi egin kodeen letra-tipoaren tamaina zooma handitzeko</translation>
+<translation>Ez ikusi egin kodeen letra-motaren tamaina zooma handitzeko</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4833"/>
@@ -6475,7 +6475,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5306"/>
 <source>Fully highlight blockquotes</source>
-<translation>Nabarmendu blokeatze guztiz</translation>
+<translation>Nabarmendu guztiz bloke-aipuak</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5332"/>
@@ -6682,7 +6682,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4568"/>
 <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
-<translation>GitHub-ek ez ditu bi espazio behar lerroaren amaieran lerro jauzia egiteko</translation>
+<translation>GitHub-ek ez ditu bi espazio behar errenkadaren amaieran errenkada-jauzia egiteko</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4591"/>
@@ -7139,7 +7139,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5325"/>
 <source>Highlight the current line</source>
-<translation>Nabarmendu uneko lerroa</translation>
+<translation>Nabarmendu uneko errenkada</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5627"/>
@@ -7407,7 +7407,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4093"/>
 <source>Use UNIX newline instead of native newline characters</source>
-<translation>Erabili UNIX lerroa bertako lineako karaktere berrien ordez</translation>
+<translation>Erabili UNIX errenkada berria jatorrizko errenkada berrirako karaktereen ordez</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4018"/>
@@ -7634,7 +7634,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
 <location filename="../dialogs/settingsdialog.ui" line="4665"/>
 <location filename="../dialogs/settingsdialog.ui" line="4945"/>
 <source>Fonts</source>
-<translation>Tipoak</translation>
+<translation>Letra-motak</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4688"/>
@@ -7642,7 +7642,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
 <location filename="../dialogs/settingsdialog.ui" line="4968"/>
 <location filename="../dialogs/settingsdialog.ui" line="4996"/>
 <source>Set a new font</source>
-<translation>Ezarri letra-tipo berria</translation>
+<translation>Ezarri letra-mota berria</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4699"/>
@@ -7650,7 +7650,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
 <location filename="../dialogs/settingsdialog.ui" line="4982"/>
 <location filename="../dialogs/settingsdialog.ui" line="5027"/>
 <source>Reset font</source>
-<translation>Berrezarri letra-tipoa</translation>
+<translation>Berrezarri letra-mota</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="360"/>
@@ -8693,7 +8693,7 @@ Zure oharrak osorik egongo dira!</translation>
 <message>
 <location filename="../dialogs/tabledialog.ui" line="274"/>
 <source>First line is the table heading</source>
-<translation>Lehen lerroa taulako izenburua da</translation>
+<translation>Lehen errenkada taularen izenburua da</translation>
 </message>
 <message>
 <location filename="../dialogs/tabledialog.ui" line="267"/>

@@ -3,6 +3,7 @@
 ## 23.3.8
 - an issue with html tags in code-blocks that where not previewed correctly was fixed
   (for [#2756](https://github.com/pbek/QOwnNotes/issues/2756))
+- added more Basque translation (thank you izendegi)
 
 ## 23.3.7
 - text parts with an `@` in it will now not be detected as note link
