@@ -2269,7 +2269,7 @@ static void highlightCode(QString &str, const QString &type, int cbCount) {
             if (currentCbPos >= 4) {
                 bool fourSpaces =
                     std::all_of(str.cbegin() + (currentCbPos - 4), str.cbegin() + currentCbPos,
-                                [](QChar c) { return c.isSpace(); });
+                                [](QChar c) { return c == QChar(' '); });
                 if (fourSpaces) {
                     continue;
                 }
