@@ -3,6 +3,7 @@
 ## 23.4.0
 - the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
   was updated to version 23.3.0 to support Nextcloud 26 (for [#42](https://github.com/pbek/qownnotesapi/issues/42))
+- added more French translation (thank you chocolatine)
 
 ## 23.3.8
 - an issue with html tags in code-blocks that where not previewed correctly was fixed

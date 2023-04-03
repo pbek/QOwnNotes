@@ -2193,7 +2193,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1499"/>
 <source>&amp;Back in note history</source>
-<translation>Récupérer la &amp;dernière version de l'historique</translation>
+<translation>Reculer dans l’historique</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1415"/>

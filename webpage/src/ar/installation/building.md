@@ -12,9 +12,9 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Then download [Qt Creator](https://www.qt.io/download-open-source), you will also need the packages `qtwebsockets` and `qt5compat` to build QOwnNotes with Qt6 (only `qtwebsockets` for Qt5). If you build under Windows, you want to stick to *MinGw 64-bit*.
+ثم نزّل [Qt Creator](https://www.qt.io/download-open-source). ستحتاج أيضا حزمتيْ `qtwebsockets` و&nbsp;`qt5compat` لبناء QOwnNotes مع Qt6 (ولكن فقط `qtwebsockets` في حالة Qt5). وإذا كنت تبني على ويندوز، ربما تفضل البقاء مع *MinGw 64-bit*.
 
-Afterwards open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
+بعدئذٍ، افتح ملف المشروع `src/QOwnNotes.pro` وانقر على **Build** ثم **Build Project QOwnNotes**.
 
 أو يمكنك بناؤه مباشرةً من الطرفية:
 
