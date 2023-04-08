@@ -125,7 +125,7 @@ parts:
         - libqt6gui6
         - libgdk-pixbuf2.0-0
         - libqt6svg6 # for loading icon themes which are svg
-        - try: [appmenu-qt6] # not available on core18
+        - appmenu-qt6
         - locales-all
         - xdg-user-dirs
         - fcitx-frontend-qt6
