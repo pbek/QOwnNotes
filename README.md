@@ -133,7 +133,7 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 
 ## Installation
 
-[![Packaging status](https://repology.org/badge/vertical-allrepos/qownnotes.svg)](https://repology.org/project/qownnotes/versions)
+[![Packaging status](https://repology.org/badge/vertical-allrepos/qownnotes.svg?columns=3)](https://repology.org/project/qownnotes/versions)
 
 Please visit [Installation](https://www.qownnotes.org/installation) for all the ways to install QOwnNotes.
 
