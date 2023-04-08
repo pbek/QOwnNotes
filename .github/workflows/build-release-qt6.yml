@@ -189,6 +189,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       QT_VERSION: 6.5.0
+    continue-on-error: true
     name: '🐧 Snap Ubuntu 18.04'
     steps:
 
