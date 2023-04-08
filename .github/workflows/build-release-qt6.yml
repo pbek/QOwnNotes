@@ -13,10 +13,12 @@ on:
       - 'src/**'
       - 'tests/**'
       - '.github/workflows/build-release-qt6.yml'
+      - 'build-systems/github/snap.qt6/**'
   # For testing also on pull requests
   pull_request:
     paths:
       - 'src/**'
+  workflow_dispatch:
 
 defaults:
   run:
