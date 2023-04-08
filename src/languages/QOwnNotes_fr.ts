@@ -1514,7 +1514,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Copier</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -6518,7 +6518,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="348"/>
 <source>Experimental</source>
-<translation type="unfinished">Experimental</translation>
+<translation>Expérimental</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="831"/>
