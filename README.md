@@ -131,6 +131,12 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 	- Join the fun at **[Crowdin](https://crowdin.com/project/qownnotes/invite)**
 	  to **help** with the **translations**
 
+## Installation
+
+[![Packaging status](https://repology.org/badge/vertical-allrepos/qownnotes.svg)](https://repology.org/project/qownnotes/versions)
+
+Please visit [Installation](https://www.qownnotes.org/installation) for all the ways to install QOwnNotes.
+
 ## Building QOwnNotes
 
 To get the most current features you can build the application from the source
