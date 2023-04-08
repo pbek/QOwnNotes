@@ -1,0 +1,143 @@
+name: qownnotes
+version: git
+version-script: cat src/version.h | sed "s/[^0-9,.]//g"
+summary: Plain-text file markdown note taking with Nextcloud/ownCloud integration
+grade: stable
+confinement: strict
+base: core18
+description: |
+  QOwnNotes is the open source (GPL) plain-text file markdown note taking app
+  for GNU/Linux, macOS and Windows, that (optionally) works together with the
+  notes application of Nextcloud/ownCloud.
+  https://www.qownnotes.org/
+
+apps:
+  qownnotes:
+    command: desktop-launch $SNAP/usr/bin/QOwnNotes -style=Breeze --snap
+    environment:
+        DISABLE_WAYLAND: 1
+        QT_QPA_PLATFORMTHEME: gtk3
+    # see https://docs.snapcraft.io/reference/interfaces
+    plugs:
+      - x11
+      - unity7
+      - network
+      - network-bind
+      - home
+#      - kde-frameworks-5-plug
+      - desktop
+      - desktop-legacy
+      - removable-media
+      - opengl
+      - cups-control
+
+# plugs:
+#   kde-frameworks-5-plug:
+#     content: kde-frameworks-5-all
+#     interface: content
+#     default-provider: kde-frameworks-5
+#     target: kf5
+
+plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
+  gtk-3-themes:
+    interface: content
+    target: $SNAP/data-dir/themes
+    default-provider: gtk-common-themes:gtk-3-themes
+  icon-themes:
+    interface: content
+    target: $SNAP/data-dir/icons
+    default-provider: gtk-common-themes:icon-themes
+  sound-themes:
+    interface: content
+    target: $SNAP/data-dir/sounds
+    default-provider: gtk-common-themes:sounds-themes
+
+parts:
+  qownnotes:
+    source: .
+#    source: https://github.com/pbek/qownnotes.git
+    # see https://snapcraft.io/docs/qmake-plugin
+    plugin: qmake
+    qt-version: qt6
+#    qmake-parameters:
+    options:
+      - ./src
+      - CONFIG+=release
+      - CONFIG+=snapcraft
+    override-build: |
+      export QT_SELECT=qt6
+      >&2 pwd
+      >&2 find
+      cd src
+      # remove the default desktop file
+      rm PBE.QOwnNotes.desktop
+      echo "#define RELEASE \"Snapcraft.io\"" > release.h
+      # qmake INSTALLDIR=/usr
+      lrelease QOwnNotes.pro
+      # make -j $(nproc)
+      # make install
+      cd ..
+      snapcraftctl build
+    build-packages:
+      - qt6-base-dev
+      - qt6-declarative-dev
+      - libqt6svg6-dev
+      - libqt6websockets6-dev
+      - libqt6core5compat6-dev
+    stage-packages:
+      - libqt6svg6
+      - libqt6svgwidgets6
+      - libqt6websockets6
+      - libqt6core5compat6
+      - libqt6gui6
+      - libqt6sql6
+      - libqt6sql6-sqlite
+      - libqt6widgets6
+      - libqt6qml6
+      - libqt6network6
+      - libqt6xml6
+      - libqt6printsupport6
+    stage:
+      - -usr/share/pkgconfig
+    after: [desktop-qt6]
+
+  desktop-qt6:
+      source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+      source-subdir: qt
+      plugin: make
+      make-parameters: ["FLAVOR=qt6"]
+      build-packages:
+        - build-essential
+        - qtbase6-dev
+        - dpkg-dev
+      stage-packages:
+        - libxkbcommon0
+        - ttf-ubuntu-font-family
+        - dmz-cursor-theme
+        - light-themes
+        - adwaita-icon-theme
+        - gnome-themes-standard
+        - shared-mime-info
+        - libqt6gui6
+        - libgdk-pixbuf2.0-0
+        - libqt6svg6 # for loading icon themes which are svg
+        - try: [appmenu-qt6] # not available on core18
+        - locales-all
+        - xdg-user-dirs
+        - fcitx-frontend-qt6
+
+  plasma-integration:
+    plugin: nil
+    stage-packages:
+#    - plasma-integration # causes the KDE file selector to be used that didn't work
+    - kde-style-breeze
+    - breeze-icon-theme
+#    - kio # runtime slaves for kio, but does not seem to work
+    prime:
+    - "-usr/share/wallpapers/*"
+    - "-usr/share/fonts/*"
+
+  qt6-gtk-platform:
+    plugin: nil
+    stage-packages:
+      - qt6-gtk-platformtheme
