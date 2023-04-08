@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.4.1
+- added a new editor color schema *Springtime* by @igorp74
+  (for [#2763](https://github.com/pbek/QOwnNotes/issues/2763))
+
 ## 23.4.0
 - the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
   was updated to version 23.3.0 to support Nextcloud 26 (for [#42](https://github.com/pbek/qownnotesapi/issues/42))
