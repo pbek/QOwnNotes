@@ -791,10 +791,7 @@ void FontColorWidget::on_fontSizeAdaptionSpinBox_valueChanged(int value) {
  */
 void FontColorWidget::on_shareSchemaPushButton_clicked() {
     QDesktopServices::openUrl(
-        QUrl("https://github.com/pbek/QOwnNotes/issues/new?title=" +
-             QUrl::toPercentEncoding("New editor schema: <schema-name>") + "&body=" +
-             QUrl::toPercentEncoding("I want to submit a new editor schema.\n\n"
-                                     "(upload your schema)")));
+        QUrl("https://github.com/pbek/QOwnNotes/issues/new/choose"));
 }
 
 /**

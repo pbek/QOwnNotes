@@ -230,7 +230,8 @@ void IssueAssistantDialog::on_postButton_clicked() {
     QClipboard *clipboard = QApplication::clipboard();
     clipboard->setText(ui->bodyPlainTextEdit->toPlainText());
 
-    QUrl url("https://github.com/pbek/QOwnNotes/issues/new?title=" +
+    QUrl url("https://github.com/pbek/QOwnNotes/issues/new?"
+             "labels=Type%3A+Support&title=" +
              QUrl::toPercentEncoding(ui->submitTitleLineEdit->text()) + "&body=" +
              QUrl::toPercentEncoding("Please paste the text from the issue "
                                      "assistant here. It should be already in "

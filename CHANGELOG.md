@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## Next
+- the GitHub issue links were updated to make use of the new issue templates
+  (for [#2768](https://github.com/pbek/QOwnNotes/issues/2768))
+
 ## 23.4.2
 - an issue was fixed in the preview where code comments where always italic
   regardless of the color schema settings (for [#2765](https://github.com/pbek/QOwnNotes/issues/2765))
