@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.4.2
+- an issue was fixed in the preview where code comments where always italic
+  regardless of the color schema settings (for [#2765](https://github.com/pbek/QOwnNotes/issues/2765))
+
 ## 23.4.1
 - added a new editor color schema *Springtime* by @igorp74
   (for [#2763](https://github.com/pbek/QOwnNotes/issues/2763))

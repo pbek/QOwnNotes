@@ -2542,7 +2542,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
                           .arg(codeBackgroundColor, codeForegroundColor);
 
     // TODO: We should probably make a stylesheet for this
-    codeStyleSheet += QStringLiteral(" .code-comment { color: #75715E; font-style: italic;}");
+    codeStyleSheet += QStringLiteral(" .code-comment { color: #75715E;}");
     codeStyleSheet += QStringLiteral(" .code-string { color: #E6DB74;}");
     codeStyleSheet += QStringLiteral(" .code-literal { color: #AE81FF;}");
     codeStyleSheet += QStringLiteral(" .code-type { color: #66D9EF;}");
