@@ -3,3 +3,6 @@ contact_links:
   - name: QOwnNotes website
     url: https://www.qownnotes.org/
     about: Click on the "Contact" link on the website for all the ways to get in touch.
+  - name: QOwnNotes Scripts issues or feature requests
+    url: https://github.com/qownnotes/scripts/issues
+    about: Please mention the authors of the script. You will find the authors at the script entry in the *Script repository* panel in QOwnNotes.
