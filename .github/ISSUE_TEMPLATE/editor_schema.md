@@ -15,5 +15,5 @@ assignees: 'pbek'
 
 #### Schema file
 <!-- Please provide the schema file. -->
-<!-- You will need to compress the schema xml with zip or gz before GitHub lets you upload it. -->
+<!-- You will need to compress the schema xml as zip or gz before GitHub lets you upload it. -->
 <!-- If you don't know how to do that you can also upload it to a file sharing service and post the link here or just post the content of the file in a code block. -->
