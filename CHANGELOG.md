@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## Next
+## 23.4.3
 - the GitHub issue links were updated to make use of the new issue templates
   (for [#2768](https://github.com/pbek/QOwnNotes/issues/2768))
 
