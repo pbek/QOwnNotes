@@ -270,6 +270,18 @@
              <iconset theme="code-context" resource="../breeze-qownnotes.qrc">
               <normaloff>:/icons/breeze-qownnotes/16x16/code-context.svg</normaloff>:/icons/breeze-qownnotes/16x16/code-context.svg</iconset>
             </property>
+            <item>
+             <property name="text">
+              <string>Script repository</string>
+             </property>
+             <property name="whatsThis">
+              <string notr="true">22</string>
+             </property>
+             <property name="icon">
+              <iconset theme="code-context" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/code-context.svg</normaloff>:/icons/breeze-qownnotes/16x16/code-context.svg</iconset>
+             </property>
+            </item>
            </item>
            <item>
             <property name="text">
@@ -421,7 +433,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>21</number>
+            <number>22</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -6735,6 +6747,86 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <size>
                  <width>20</width>
                  <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="page">
+            <layout class="QVBoxLayout" name="verticalLayout_33">
+             <item>
+              <widget class="QGroupBox" name="scriptRepositoryGroupBox">
+               <property name="title">
+                <string>GitHub access token</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_83">
+                <item row="0" column="1" colspan="4">
+                 <widget class="QLabel" name="label_39">
+                  <property name="text">
+                   <string>To access the script repository you need to create a personal access token on &lt;a href=&quot;%1&quot;&gt;GitHub access tokens&lt;/a&gt;. The token doesn't need to have any scopes or permissions.</string>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QToolButton" name="scriptRepositoryShowTokenButton">
+                  <property name="toolTip">
+                   <string>Show access token</string>
+                  </property>
+                  <property name="text">
+                   <string notr="true">…</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="document-decrypt" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/document-decrypt.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-decrypt.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="4">
+                 <widget class="QToolButton" name="scriptRepositoryGenerateTokenButton">
+                  <property name="toolTip">
+                   <string>Generate new security token on GitHub</string>
+                  </property>
+                  <property name="text">
+                   <string notr="true">…</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1" colspan="2">
+                 <widget class="QLineEdit" name="scriptRepositoryTokenLineEdit">
+                  <property name="echoMode">
+                   <enum>QLineEdit::Password</enum>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_40">
+                  <property name="text">
+                   <string>Access token:</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_21">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
                 </size>
                </property>
               </spacer>
