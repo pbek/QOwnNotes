@@ -57,11 +57,18 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent, bool checkForUpd
 
         searchScript();
     }
+
+    // Set in the past so that the cache is always expired
+    _lastScriptMetaDataCacheUpdateTime = QDateTime::currentDateTime().addDays(-1);
 }
 
 ScriptRepositoryDialog::~ScriptRepositoryDialog() {
     storeSettings();
     delete ui;
+}
+
+bool ScriptRepositoryDialog::isScriptCacheExpired() {
+    return _lastScriptMetaDataCacheUpdateTime.secsTo(QDateTime::currentDateTime()) > 60;
 }
 
 /**
@@ -102,6 +109,43 @@ void ScriptRepositoryDialog::enableOverview(bool enable) {
     ui->scriptInfoFrame->setVisible(!enable);
 }
 
+bool ScriptRepositoryDialog::loadScriptRepositoryMetaData() {
+    if (!isScriptCacheExpired()) {
+        return false;
+    }
+
+    _lastScriptMetaDataCacheUpdateTime = QDateTime::currentDateTime();
+    const auto url = QUrl("https://github.com/qownnotes/scripts/releases/download/metadata-index/index.json");
+
+    int statusCode;
+    auto arr = Utils::Misc::downloadUrlWithStatusCode(url, statusCode);
+
+    if (statusCode != 200) {
+        qCritical() << __func__ << "Error: " << arr;
+        return false;
+    }
+
+//    qDebug() << "Reply from metadata-index request";
+    parseScriptRepositoryMetaData(arr);
+
+    return true;
+
+    //    QNetworkRequest networkRequest(url);
+//
+//#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
+//    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+//#else
+//    networkRequest.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
+//#endif
+//
+//#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
+//    // try to ensure the network is accessible
+//    _networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+//#endif
+//
+//    _networkManager->get(networkRequest);
+}
+
 /**
  * Searches for script in the script repository
  */
@@ -109,6 +153,42 @@ void ScriptRepositoryDialog::searchScript(int page) {
     if (page == 1) {
         _searchString = ui->searchScriptEdit->text();
     }
+
+    loadScriptRepositoryMetaData();
+    qDebug() << __func__ << " - '_scriptMetaDataCache.count()': " << _scriptMetaDataCache.count();
+
+    QHashIterator<QString, ScriptInfoJson> scriptMetaDataIterator(_scriptMetaDataCache);
+    ui->scriptTreeWidget->clear();
+    while (scriptMetaDataIterator.hasNext()) {
+        scriptMetaDataIterator.next();
+
+        auto scriptMetaData = scriptMetaDataIterator.value();
+
+        if (scriptMetaData.name.contains(_searchString, Qt::CaseInsensitive) ||
+            scriptMetaData.description.contains(_searchString, Qt::CaseInsensitive)) {
+            qDebug() << __func__ << " - 'scriptMetaData.name': " << scriptMetaData.name;
+            qDebug() << __func__ << " - 'scriptMetaData.description': " << scriptMetaData.description;
+
+            QString name = scriptMetaData.name;
+
+            auto *item = new QTreeWidgetItem();
+            item->setText(0, name);
+            item->setData(0, Qt::UserRole, scriptMetaDataIterator.key());
+
+            if (!scriptMetaData.platformSupported || !scriptMetaData.appVersionSupported) {
+                item->setForeground(0, QColor("#aaaaaa"));
+            }
+
+            ui->scriptTreeWidget->addTopLevelItem(item);
+            ui->scriptTreeWidget->resizeColumnToContents(0);
+        }
+    }
+
+    if (_page == 1) {
+        ui->scriptTreeWidget->setCurrentItem(ui->scriptTreeWidget->topLevelItem(0));
+    }
+    
+    return;
 
     QString query = QUrl::toPercentEncoding(_searchString);
     QUrl url(_codeSearchUrl + "?q=" + query +
@@ -186,19 +266,38 @@ void ScriptRepositoryDialog::slotReplyFinished(QNetworkReply *reply) {
 
     qDebug() << "Reply from " << urlPath;
 
-    if (urlPath.endsWith(QLatin1String("/search/code"))) {
-        QByteArray arr = reply->readAll();
-        qDebug() << "Reply from code search";
+    QByteArray arr = reply->readAll();
+    qDebug() << "Reply from metadata-index request";
 
-        parseCodeSearchReply(arr);
-    } else if (urlPath.startsWith(QLatin1String("/qownnotes/scripts/master"))) {
-        QByteArray arr = reply->readAll();
-        qDebug() << "Reply from info.qml request";
+    parseScriptRepositoryMetaData(arr);
 
-        parseInfoQMLReply(arr);
-    }
+//    if (urlPath.endsWith(QLatin1String("/metadata-index/index.json"))) {
+//        QByteArray arr = reply->readAll();
+//        qDebug() << "Reply from metadata-index request";
+//
+//        parseScriptRepositoryMetaData(arr);
+//    } else if (urlPath.startsWith(QLatin1String("/qownnotes/scripts/master"))) {
+//        QByteArray arr = reply->readAll();
+//        qDebug() << "Reply from info.qml request";
+//
+//        parseInfoQMLReply(arr);
+//    }
 
     reply->deleteLater();
+}
+
+void ScriptRepositoryDialog::parseScriptRepositoryMetaData(const QByteArray &arr) {
+    QJsonDocument doc = QJsonDocument::fromJson(arr);
+    QJsonArray jsonArray = doc.array();
+    _scriptMetaDataCache.clear();
+    
+    for (const auto& value : jsonArray) {
+        ScriptInfoJson infoJson(value.toObject());
+        _scriptMetaDataCache.insert(infoJson.name, infoJson);
+    }
+
+    qDebug() << __func__ << " - '_scriptMetaDataCache' count: " << _scriptMetaDataCache.count();
+    _lastScriptMetaDataCacheUpdateTime = QDateTime::currentDateTime();
 }
 
 /**

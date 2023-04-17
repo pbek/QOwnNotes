@@ -967,6 +967,12 @@ QLatin1String Utils::Misc::platform() {
  * @return {QByteArray} the content of the downloaded url
  */
 QByteArray Utils::Misc::downloadUrl(const QUrl &url, bool usePost, QByteArray postData) {
+    int statusCode;
+
+    return downloadUrlWithStatusCode(url, statusCode, usePost, std::move(postData));
+}
+
+QByteArray Utils::Misc::downloadUrlWithStatusCode(const QUrl &url, int &returnStatusCode, bool usePost, QByteArray postData) {
     auto *manager = new QNetworkAccessManager();
     QEventLoop loop;
     QTimer timer;
@@ -1008,11 +1014,11 @@ QByteArray Utils::Misc::downloadUrl(const QUrl &url, bool usePost, QByteArray po
 
     // if we didn't get a timeout let us return the content
     if (timer.isActive()) {
-        int statusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+        returnStatusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
 
         // only get the data if the status code was "success"
         // see: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
-        if (statusCode >= 200 && statusCode < 300) {
+        if (returnStatusCode >= 200 && returnStatusCode < 300) {
             // get the data from the network reply
             data = reply->readAll();
         }

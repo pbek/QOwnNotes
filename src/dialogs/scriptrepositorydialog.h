@@ -52,6 +52,8 @@ class ScriptRepositoryDialog : public MasterDialog {
     static const int _itemsPerPage = 30;
     QString _searchString;
     Script _lastInstalledScript;
+    QHash<QString, ScriptInfoJson> _scriptMetaDataCache;
+    QDateTime _lastScriptMetaDataCacheUpdateTime;
 
     void searchScript(int page = 1);
 
@@ -76,4 +78,8 @@ class ScriptRepositoryDialog : public MasterDialog {
     bool hasMoreItems() const;
 
     void loadMoreItems();
+
+    bool isScriptCacheExpired();
+    bool loadScriptRepositoryMetaData();
+    void parseScriptRepositoryMetaData(const QByteArray &arr);
 };
