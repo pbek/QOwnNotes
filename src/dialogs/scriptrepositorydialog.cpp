@@ -179,6 +179,11 @@ void ScriptRepositoryDialog::slotReplyFinished(QNetworkReply *reply) {
     QUrl url = reply->url();
     QString urlPath = url.path();
 
+    if (reply->error() != QNetworkReply::NoError) {
+        qCritical() << __func__ << "Error: " << reply->error() << " with message: "
+                    << reply->errorString() << " for url: " << url.toString();
+    }
+
     qDebug() << "Reply from " << urlPath;
 
     if (urlPath.endsWith(QLatin1String("/search/code"))) {
