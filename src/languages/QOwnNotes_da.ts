@@ -1514,7 +1514,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopi</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -1866,14 +1866,14 @@
 <translation>Søg efter en note, der skal linkes til</translation>
 </message>
 <message>
-<location filename="../dialogs/linkdialog.cpp" line="294"/>
-<location filename="../dialogs/linkdialog.cpp" line="369"/>
+<location filename="../dialogs/linkdialog.cpp" line="295"/>
+<location filename="../dialogs/linkdialog.cpp" line="370"/>
 <source>Select file to link to</source>
 <translation>Vælg fil for at linke til</translation>
 </message>
 <message>
-<location filename="../dialogs/linkdialog.cpp" line="331"/>
-<location filename="../dialogs/linkdialog.cpp" line="375"/>
+<location filename="../dialogs/linkdialog.cpp" line="332"/>
+<location filename="../dialogs/linkdialog.cpp" line="376"/>
 <source>Select directory to link to</source>
 <translation>Vælg bibliotek, der skal linkes til</translation>
 </message>
@@ -2055,7 +2055,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="7896"/>
+<location filename="../mainwindow.cpp" line="7899"/>
 <source>Add a tag to the current note</source>
 <translation>Tilføj et tag til den nuværende note</translation>
 </message>
@@ -2171,7 +2171,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1450"/>
-<location filename="../mainwindow.cpp" line="9384"/>
+<location filename="../mainwindow.cpp" line="9388"/>
 <source>Select &amp;all notes</source>
 <translation>Vælg &amp;alle noter</translation>
 </message>
@@ -2221,7 +2221,7 @@
 <translation>Søg eller lav notat</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7897"/>
+<location filename="../mainwindow.cpp" line="7900"/>
 <source>Add a tag to the selected notes</source>
 <translation>Tilføj et tag til de valgte noter</translation>
 </message>
@@ -2610,7 +2610,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2246"/>
-<location filename="../mainwindow.cpp" line="10301"/>
+<location filename="../mainwindow.cpp" line="10305"/>
 <source>Remove current workspace</source>
 <translation>Fjern det nuværende arbejdsområde</translation>
 </message>
@@ -2678,7 +2678,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2367"/>
-<location filename="../mainwindow.cpp" line="9363"/>
+<location filename="../mainwindow.cpp" line="9367"/>
 <source>Open note in different window</source>
 <translation>Åbn note i forskellige vinduer</translation>
 </message>
@@ -2699,7 +2699,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2407"/>
-<location filename="../mainwindow.cpp" line="9368"/>
+<location filename="../mainwindow.cpp" line="9372"/>
 <source>Show note git versions</source>
 <translation>Vis notat git versioner</translation>
 </message>
@@ -2782,7 +2782,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2570"/>
-<location filename="../mainwindow.cpp" line="11244"/>
+<location filename="../mainwindow.cpp" line="11248"/>
 <source>Automatically detect</source>
 <translation>Registrer automatisk</translation>
 </message>
@@ -3020,8 +3020,8 @@ Gendan nuværende notat?</translation>
 <message>
 <location filename="../mainwindow.cpp" line="5281"/>
 <location filename="../mainwindow.cpp" line="5301"/>
-<location filename="../mainwindow.cpp" line="6578"/>
-<location filename="../mainwindow.cpp" line="9449"/>
+<location filename="../mainwindow.cpp" line="6581"/>
+<location filename="../mainwindow.cpp" line="9453"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Annuller</translation>
 </message>
@@ -3164,7 +3164,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4577"/>
-<location filename="../mainwindow.cpp" line="8665"/>
+<location filename="../mainwindow.cpp" line="8668"/>
 <source>Move selected notes</source>
 <translation>Flyt markerede noter</translation>
 </message>
@@ -3178,7 +3178,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4687"/>
-<location filename="../mainwindow.cpp" line="8777"/>
+<location filename="../mainwindow.cpp" line="8780"/>
 <source>Copy selected notes</source>
 <translation>Kopier valgte noter</translation>
 </message>
@@ -3256,79 +3256,79 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6059"/>
+<location filename="../mainwindow.cpp" line="6062"/>
 <source>Note folders</source>
 <translation>Note mapper</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6174"/>
+<location filename="../mainwindow.cpp" line="6177"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>Bemærk versioner er i øjeblikket indlæst fra din ownCloud server</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6187"/>
+<location filename="../mainwindow.cpp" line="6190"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Trashed noter er i øjeblikket indlæst fra din ownCloud server</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6425"/>
+<location filename="../mainwindow.cpp" line="6428"/>
 <source>Inserted text as text attachment file</source>
 <translation>テキスト添付ファイルとして挿入されたテキスト</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6574"/>
+<location filename="../mainwindow.cpp" line="6577"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>Din note bliver dekrypteret og gemt som almindelig tekst igen. Husk, at den ukrypterede note muligvis bliver synkroniseret til din server, og følsom tekst kan blive udsat! &lt;br /&gt; Vil du dekryptere din note?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6668"/>
+<location filename="../mainwindow.cpp" line="6671"/>
 <source>Markdown files</source>
 <translation>Markdown filer</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6684"/>
+<location filename="../mainwindow.cpp" line="6687"/>
 <source>Export attached files</source>
 <translation>添付ファイルをエクスポートする</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6685"/>
+<location filename="../mainwindow.cpp" line="6688"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation>メモのメディアファイルと添付ファイルもエクスポートしますか？ 宛先フォルダのファイルが上書きされる可能性があります。</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6715"/>
+<location filename="../mainwindow.cpp" line="6718"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>Bogmærket notatposition i slot %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6731"/>
+<location filename="../mainwindow.cpp" line="6734"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>Hoppet til bogmærkeposition i slot %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6904"/>
-<location filename="../mainwindow.cpp" line="6971"/>
+<location filename="../mainwindow.cpp" line="6907"/>
+<location filename="../mainwindow.cpp" line="6974"/>
 <source>Inserting image</source>
 <translation>Indsætte billede</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6909"/>
-<location filename="../mainwindow.cpp" line="6975"/>
+<location filename="../mainwindow.cpp" line="6912"/>
+<location filename="../mainwindow.cpp" line="6978"/>
 <source>Done inserting image</source>
 <translation>Færdig indsat billede</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6911"/>
+<location filename="../mainwindow.cpp" line="6914"/>
 <source>Inserting attachment</source>
 <translation>Indsætte vedhæftet fil</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6916"/>
+<location filename="../mainwindow.cpp" line="6919"/>
 <source>Done inserting attachment</source>
 <translation>Færdig indsat vedhæftning</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="6927"/>
+<location filename="../mainwindow.cpp" line="6930"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>Kopierede %n note til %1</numerusform>
@@ -3336,7 +3336,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="6937"/>
+<location filename="../mainwindow.cpp" line="6940"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>Kunne ikke kopiere %n note (sandsynligvis allerede eksisterende)</numerusform>
@@ -3344,7 +3344,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="6946"/>
+<location filename="../mainwindow.cpp" line="6949"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>Skipet kopiering af %n note (ingen markering eller tekstfil eller ikke læsbar)</numerusform>
@@ -3352,213 +3352,213 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6959"/>
+<location filename="../mainwindow.cpp" line="6962"/>
 <source>Saving temporary image</source>
 <translation>Gem midlertidigt billede</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6409"/>
-<location filename="../mainwindow.cpp" line="6977"/>
+<location filename="../mainwindow.cpp" line="6412"/>
+<location filename="../mainwindow.cpp" line="6980"/>
 <source>Temporary file can't be opened</source>
 <translation>Midlertidig fil kan ikke åbnes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7031"/>
+<location filename="../mainwindow.cpp" line="7034"/>
 <source>Downloading %1</source>
 <translation>Downloadning af %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7195"/>
+<location filename="../mainwindow.cpp" line="7198"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Nulstil skriftstørrelse til %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7941"/>
+<location filename="../mainwindow.cpp" line="7944"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>Fjern tag '%1' fra den nuværende note</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7942"/>
+<location filename="../mainwindow.cpp" line="7945"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>Fjern tag '%1' fra de valgte noter</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8185"/>
+<location filename="../mainwindow.cpp" line="8188"/>
 <source>Rename tag</source>
 <translation>Omdøb tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8186"/>
+<location filename="../mainwindow.cpp" line="8189"/>
 <source>Assign color</source>
 <translation>Tildele farve</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8187"/>
+<location filename="../mainwindow.cpp" line="8190"/>
 <source>Disable color</source>
 <translation>Deaktivere farve</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8191"/>
+<location filename="../mainwindow.cpp" line="8194"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;Flytte tags til…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8401"/>
+<location filename="../mainwindow.cpp" line="8404"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>Flytte til roden</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8936"/>
+<location filename="../mainwindow.cpp" line="8939"/>
 <source>The scripting engine was reloaded</source>
 <translation>Skriptmaskinen blev genindlæst</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8970"/>
+<location filename="../mainwindow.cpp" line="8973"/>
 <source>HTML files</source>
 <translation>HTML-filer</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9300"/>
+<location filename="../mainwindow.cpp" line="9304"/>
 <source>Jump to the note's subfolder</source>
 <translation>Gå til notens undermappe
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9356"/>
+<location filename="../mainwindow.cpp" line="9360"/>
 <source>Open selected notes in tabs</source>
 <translation>Åbn valgte noter i faner</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10837"/>
+<location filename="../mainwindow.cpp" line="10841"/>
 <source>A script update was found!</source>
 <translation>Der blev fundet en scriptopdatering!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10842"/>
+<location filename="../mainwindow.cpp" line="10846"/>
 <source>Script updates</source>
 <translation>Script opdateringer</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10843"/>
+<location filename="../mainwindow.cpp" line="10847"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>Opdateringer til dine scripts blev fundet i scriptopbevaringsstedet! Vil du opdatere dem?
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10858"/>
+<location filename="../mainwindow.cpp" line="10862"/>
 <source>No script updates were found</source>
 <translation>Ingen scriptopdateringer blev fundet
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11492"/>
+<location filename="../mainwindow.cpp" line="11496"/>
 <source>Toggle note stickiness</source>
 <translation>Skift notehethed
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11497"/>
+<location filename="../mainwindow.cpp" line="11501"/>
 <source>Close other note tabs</source>
 <translation>Luk andre note-faner</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9248"/>
-<location filename="../mainwindow.cpp" line="9434"/>
+<location filename="../mainwindow.cpp" line="9252"/>
+<location filename="../mainwindow.cpp" line="9438"/>
 <source>Rename note</source>
 <translation>Omdøb notat</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7297"/>
+<location filename="../mainwindow.cpp" line="7300"/>
 <source>Show all notes (%1)</source>
 <translation>すべてのメモを表示（％1）</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7444"/>
+<location filename="../mainwindow.cpp" line="7447"/>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation>'％1'（％2）でタグ付けされたすべてのメモを表示</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9250"/>
+<location filename="../mainwindow.cpp" line="9254"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>Giver dig mulighed for at omdøbe filnavnet på noten</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9264"/>
+<location filename="../mainwindow.cpp" line="9268"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;Flyt noter til…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9265"/>
+<location filename="../mainwindow.cpp" line="9269"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;Kopier noter til…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9303"/>
+<location filename="../mainwindow.cpp" line="9307"/>
 <source>Move notes to subfolder…</source>
 <translation>Flyt noter til undermappe…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9306"/>
+<location filename="../mainwindow.cpp" line="9310"/>
 <source>Copy notes to subfolder…</source>
 <translation>Kopier noter til undermappe…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9314"/>
+<location filename="../mainwindow.cpp" line="9318"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;Tag markerede noter med…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9336"/>
+<location filename="../mainwindow.cpp" line="9340"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Fjern tag fra udvalgte noter…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9434"/>
+<location filename="../mainwindow.cpp" line="9438"/>
 <source>Name:</source>
 <translation>Navn:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9445"/>
+<location filename="../mainwindow.cpp" line="9449"/>
 <source>Note renaming not enabled!</source>
 <translation>Bemærk omdøbning ikke aktiveret!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10078"/>
+<location filename="../mainwindow.cpp" line="10082"/>
 <source>Create new workspace</source>
 <translation>Opret nyt arbejdsområde</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10078"/>
-<location filename="../mainwindow.cpp" line="10339"/>
+<location filename="../mainwindow.cpp" line="10082"/>
+<location filename="../mainwindow.cpp" line="10343"/>
 <source>Workspace name:</source>
 <translation>Arbejdspladsnavn:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10195"/>
+<location filename="../mainwindow.cpp" line="10199"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>fuld</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10202"/>
+<location filename="../mainwindow.cpp" line="10206"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>minimal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10302"/>
+<location filename="../mainwindow.cpp" line="10306"/>
 <source>Remove the current workspace?</source>
 <translation>Fjern det nuværende arbejdsområde?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10339"/>
+<location filename="../mainwindow.cpp" line="10343"/>
 <source>Rename workspace</source>
 <translation>Omdøb arbejdsområde</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10492"/>
+<location filename="../mainwindow.cpp" line="10496"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3567,52 +3567,52 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10758"/>
+<location filename="../mainwindow.cpp" line="10762"/>
 <source>Disallow all note editing</source>
 <translation>Tillad al note redigering</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10776"/>
+<location filename="../mainwindow.cpp" line="10780"/>
 <source>Note editing disabled</source>
 <translation type="unfinished">Note editing disabled</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10777"/>
+<location filename="../mainwindow.cpp" line="10781"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
 <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11002"/>
+<location filename="../mainwindow.cpp" line="11006"/>
 <source>Select text files to import</source>
 <translation>Vælg tekstfiler, der skal importeres</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11031"/>
+<location filename="../mainwindow.cpp" line="11035"/>
 <source>Importing: %1</source>
 <translation>Importerer: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11093"/>
+<location filename="../mainwindow.cpp" line="11097"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>Note overskrift '%1' blev kopieret til udklipsholderen</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11179"/>
+<location filename="../mainwindow.cpp" line="11183"/>
 <source>Leave full-screen mode</source>
 <translation>Forlad fuld skærmtilstand</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11354"/>
+<location filename="../mainwindow.cpp" line="11358"/>
 <source>Custom editor width</source>
 <translation>Brugerdefineret editor bredde</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11354"/>
+<location filename="../mainwindow.cpp" line="11358"/>
 <source>Characters:</source>
 <translation>Tegn:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7915"/>
+<location filename="../mainwindow.cpp" line="7918"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n note valgt</numerusform>
@@ -3621,7 +3621,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2452"/>
-<location filename="../mainwindow.cpp" line="10759"/>
+<location filename="../mainwindow.cpp" line="10763"/>
 <source>Allow all note editing</source>
 <translation>Tillad al note redigering</translation>
 </message>
@@ -3702,34 +3702,34 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 <translation>Du har ikke valgt nogen todo lister. &lt;br /&gt; Kontroller din &lt;strong&gt; Todo &lt;/ strong&gt; konfiguration i indstillingerne!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6041"/>
+<location filename="../mainwindow.cpp" line="6044"/>
 <source>Open QOwnNotes</source>
 <translation>Åben QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5873"/>
-<location filename="../mainwindow.cpp" line="6091"/>
-<location filename="../mainwindow.cpp" line="9244"/>
+<location filename="../mainwindow.cpp" line="5876"/>
+<location filename="../mainwindow.cpp" line="6094"/>
+<location filename="../mainwindow.cpp" line="9248"/>
 <source>New note</source>
 <translation>Ny note</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6106"/>
+<location filename="../mainwindow.cpp" line="6109"/>
 <source>Recent notes</source>
 <translation>Seneste noter</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6122"/>
+<location filename="../mainwindow.cpp" line="6125"/>
 <source>Show todo lists</source>
 <translation>Vis todo lister</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6132"/>
+<location filename="../mainwindow.cpp" line="6135"/>
 <source>Recent tasks</source>
 <translation>Seneste opgaver</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6152"/>
+<location filename="../mainwindow.cpp" line="6155"/>
 <source>Quit</source>
 <translation>Afslut</translation>
 </message>
@@ -3741,31 +3741,31 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 <translation>Note mappe</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8558"/>
-<location filename="../mainwindow.cpp" line="8617"/>
+<location filename="../mainwindow.cpp" line="8561"/>
+<location filename="../mainwindow.cpp" line="8620"/>
 <source>Copy to note folder</source>
 <translation>Kopier til notatmappe</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8558"/>
-<location filename="../mainwindow.cpp" line="8617"/>
+<location filename="../mainwindow.cpp" line="8561"/>
+<location filename="../mainwindow.cpp" line="8620"/>
 <source>Move to note folder</source>
 <translation>Flyt til notatmappe</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8559"/>
-<location filename="../mainwindow.cpp" line="8618"/>
+<location filename="../mainwindow.cpp" line="8562"/>
+<location filename="../mainwindow.cpp" line="8621"/>
 <source>Copy to this subfolder</source>
 <translation>Kopier til denne undermappe</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8559"/>
-<location filename="../mainwindow.cpp" line="8618"/>
+<location filename="../mainwindow.cpp" line="8562"/>
+<location filename="../mainwindow.cpp" line="8621"/>
 <source>Move to this subfolder</source>
 <translation>Flyt til denne undermappe</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8660"/>
+<location filename="../mainwindow.cpp" line="8663"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Flyt %n valgt note til notat undermappe &lt;strong&gt; %2&lt;/ strong&gt;?</numerusform>
@@ -3774,12 +3774,12 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5000"/>
-<location filename="../mainwindow.cpp" line="11016"/>
+<location filename="../mainwindow.cpp" line="11020"/>
 <source>Cancel</source>
 <translation>Annuller</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8753"/>
+<location filename="../mainwindow.cpp" line="8756"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n note blev flyttet for at notere undermappe "%2"</numerusform>
@@ -3787,7 +3787,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8772"/>
+<location filename="../mainwindow.cpp" line="8775"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Kopier %n valgt note til notat undermappe &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3795,7 +3795,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8844"/>
+<location filename="../mainwindow.cpp" line="8847"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n note blev kopieret for at notere undermappe "%2"</numerusform>
@@ -3803,42 +3803,42 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9362"/>
+<location filename="../mainwindow.cpp" line="9366"/>
 <source>Open note in external editor</source>
 <translation>Åbn note i ekstern editor</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9364"/>
+<location filename="../mainwindow.cpp" line="9368"/>
 <source>Show note in file manager</source>
 <translation>Åbn note i ekstern editor</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9446"/>
+<location filename="../mainwindow.cpp" line="9450"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>Hvis du vil omdøbe din note, skal du aktivere muligheden for at lade notatfilen være forskellig fra overskriften.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9621"/>
+<location filename="../mainwindow.cpp" line="9625"/>
 <source>Create a new folder</source>
 <translation>Opret en ny mappe</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9621"/>
+<location filename="../mainwindow.cpp" line="9625"/>
 <source>Folder name:</source>
 <translation>Mappenavn:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7325"/>
+<location filename="../mainwindow.cpp" line="7328"/>
 <source>show all untagged notes (%1)</source>
 <translation>vis alle untagged noter (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7327"/>
+<location filename="../mainwindow.cpp" line="7330"/>
 <source>Untagged notes</source>
 <translation>Ukodede noter</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8971"/>
+<location filename="../mainwindow.cpp" line="8974"/>
 <source>Export current note as HTML file</source>
 <translation>Eksporter nuværende note som HTML-fil</translation>
 </message>
@@ -3868,7 +3868,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 <translation>&amp;Ok</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9254"/>
+<location filename="../mainwindow.cpp" line="9258"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;Fjerne noter</translation>
 </message>
@@ -3884,7 +3884,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2810"/>
-<location filename="../mainwindow.cpp" line="5813"/>
+<location filename="../mainwindow.cpp" line="5816"/>
 <source>Stored current note to disk</source>
 <translation>Gemt aktuel note til disk</translation>
 </message>
@@ -3907,42 +3907,42 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7300"/>
+<location filename="../mainwindow.cpp" line="7303"/>
 <source>All notes</source>
 <translation>Alle noter</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8177"/>
+<location filename="../mainwindow.cpp" line="8180"/>
 <source>&amp;Add tag</source>
 <translation>&amp;Tilføj tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8225"/>
+<location filename="../mainwindow.cpp" line="8228"/>
 <source>Tag could not be created!</source>
 <translation>Tag kunne ikke oprettes!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8402"/>
+<location filename="../mainwindow.cpp" line="8405"/>
 <source>Move to this tag</source>
 <translation>Flyt til dette mærke</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8436"/>
+<location filename="../mainwindow.cpp" line="8439"/>
 <source>Tag this</source>
 <translation>Tag dette</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8459"/>
+<location filename="../mainwindow.cpp" line="8462"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>Kan ikke flytte tag '%1' til dette tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8502"/>
+<location filename="../mainwindow.cpp" line="8505"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>Flyttet tag '%1' til nyt tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8188"/>
+<location filename="../mainwindow.cpp" line="8191"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;Fjern tags</translation>
 </message>
@@ -4073,7 +4073,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2811"/>
-<location filename="../mainwindow.cpp" line="5814"/>
+<location filename="../mainwindow.cpp" line="5817"/>
 <source>Current note could not be stored to disk</source>
 <translation>Aktuel note kunne ikke gemmes på disk</translation>
 </message>
@@ -4122,22 +4122,22 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5873"/>
+<location filename="../mainwindow.cpp" line="5876"/>
 <source>Note headline</source>
 <translation>Note overskrift</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6987"/>
+<location filename="../mainwindow.cpp" line="6990"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation>マークダウンとしてHTMLを貼り付けます</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6988"/>
+<location filename="../mainwindow.cpp" line="6991"/>
 <source>Paste as &amp;text file attachment</source>
 <translation>テキストファイルの添付ファイルとして貼り付けます</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7043"/>
+<location filename="../mainwindow.cpp" line="7046"/>
 <source>Downloading images finished</source>
 <translation>Downloadning af billeder er færdig</translation>
 </message>
@@ -4145,38 +4145,38 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 <location filename="../mainwindow.cpp" line="5266"/>
 <location filename="../mainwindow.cpp" line="5281"/>
 <location filename="../mainwindow.cpp" line="5301"/>
-<location filename="../mainwindow.cpp" line="9449"/>
+<location filename="../mainwindow.cpp" line="9453"/>
 <source>Open &amp;settings</source>
 <translation>Åbn &amp;indstillinger</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1692"/>
-<location filename="../mainwindow.cpp" line="11156"/>
+<location filename="../mainwindow.cpp" line="11160"/>
 <source>leave</source>
 <translation>forlade</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6502"/>
+<location filename="../mainwindow.cpp" line="6505"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>Indtast venligst din &lt;strong&gt; adgangskode &lt;/ strong&gt; for at kryptere noten. &lt;br /&gt; Husk, at du skal &lt;strong&gt; huske &lt;/ strong&gt; dit kodeord for at læse indholdet af noten &lt;br /&gt; og at du kun &lt;strong&gt; kan &lt;/ strong&gt; gøre det &lt;strong&gt; i QOwnNotes &lt;/ strong &gt;!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6573"/>
+<location filename="../mainwindow.cpp" line="6576"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>Dekryptere notat og gem det som almindelig tekst</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6578"/>
+<location filename="../mainwindow.cpp" line="6581"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;Dekryptér</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6602"/>
+<location filename="../mainwindow.cpp" line="6605"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br/&gt;Du vil kunne redigere din krypterede note.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6669"/>
+<location filename="../mainwindow.cpp" line="6672"/>
 <source>Export current note as Markdown file</source>
 <translation>Eksporter nuværende note som Markdown-fil</translation>
 </message>
@@ -4801,7 +4801,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 <translation>Kunne ikke parse login-url!</translation>
 </message>
 <message>
-<location filename="../utils/misc.cpp" line="900"/>
+<location filename="../utils/misc.cpp" line="917"/>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
 <translation>Du bruger en enkelt app-instanstilstand, der forhindrer, at applikationen startes en anden gang. Til den næste lancering af applikationen deaktiveres enkelt app-instanstilstand, så applikationen kan genstartes, før denne instans afsluttes.</translation>
 </message>
@@ -5163,32 +5163,22 @@ Er mappen og filen skrivbar?</translation>
 <translation>Script repository</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
-<source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-<translation>For at søge efter et script skal du indtaste din forespørgselstekst og trykke på &lt;i&gt; Retur &lt;/ i&gt;.</translation>
-</message>
-<message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="127"/>
 <source>Currently installed version:</source>
 <translation>Aktuelt installeret version:</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="407"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="300"/>
 <source>Installs the script</source>
 <translation>Installerer scriptet</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="406"/>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="466"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="299"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="359"/>
 <source>Install</source>
 <translation>Installere</translation>
-</message>
-<message>
-<location filename="../dialogs/scriptrepositorydialog.ui" line="444"/>
-<source>Load more scripts</source>
-<translation>Indlæs flere scripts</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
@@ -5201,124 +5191,129 @@ Er mappen og filen skrivbar?</translation>
 <translation>Repository:</translation>
 </message>
 <message>
+<location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
+<source>To search for a script please enter your query text.</source>
+<translation type="unfinished">To search for a script please enter your query text.</translation>
+</message>
+<message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
 <source>Minimum app version:</source>
 <translation>Mindste appversion:</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.ui" line="433"/>
+<location filename="../dialogs/scriptrepositorydialog.ui" line="426"/>
 <source>Name</source>
 <translation>Navn</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
+<location filename="../dialogs/scriptrepositorydialog.ui" line="406"/>
 <source>Enter your query text</source>
 <translation>Indtast din forespørgsels tekst</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.ui" line="416"/>
+<location filename="../dialogs/scriptrepositorydialog.ui" line="409"/>
 <source>Find script</source>
 <translation>Find script</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="51"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="45"/>
 <source>Script updates</source>
 <translation>Script opdateringer</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="52"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="46"/>
 <source>All scripts are up-to-date.</source>
 <translation>Alle scripts er opdaterede.</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="379"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="272"/>
 <source>Authors</source>
 <translation>Forfatterne</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="379"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="272"/>
 <source>Author</source>
 <translation>Forfatter</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="382"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="275"/>
 <source>Supported platforms</source>
 <translation>Understøttede platforme</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="382"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="275"/>
 <source>Supported platform</source>
 <translation>Understøttet platform</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="385"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="278"/>
 <source>Open repository</source>
 <translation>Åben repository</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="395"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="288"/>
 <source>Update</source>
 <translation>Opdatering</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="396"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="289"/>
 <source>Updates the script</source>
 <translation>Opdaterer scriptet</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="398"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="291"/>
 <source>Reinstall</source>
 <translation>Geninstallere</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="399"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="292"/>
 <source>Reinstalls the script</source>
 <translation>Genindsætter scriptet</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="463"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="356"/>
 <source>Platform not supported!</source>
 <translation>Platform understøttes ikke!</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="464"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="357"/>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
 <translation>Din platform understøttes ikke af dette script!
 Vil du installere det alligevel?</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="466"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="359"/>
 <source>Cancel</source>
 <translation>Annuller</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="472"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="365"/>
 <source>Update app</source>
 <translation>Opdater app</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="473"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="366"/>
 <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>Husk at opdatere din installation af QOwnNotes for at få dette script til at fungere!</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="539"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="432"/>
 <source>Install successful</source>
 <translation>Installer succesfuldt</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="540"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="433"/>
 <source>The script was successfully installed!</source>
 <translation>Scriptet blev installeret!</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="547"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="440"/>
 <source>Download failed</source>
 <translation>Download fejlede</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="548"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="441"/>
 <source>The script could not be downloaded!</source>
 <translation>Scriptet kunne ikke downloades!</translation>
 </message>
@@ -5790,8 +5785,8 @@ Vil du installere det alligevel?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4100"/>
-<location filename="../dialogs/settingsdialog.ui" line="5520"/>
-<location filename="../dialogs/settingsdialog.ui" line="6087"/>
+<location filename="../dialogs/settingsdialog.ui" line="5523"/>
+<location filename="../dialogs/settingsdialog.ui" line="6090"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>Du kan muligvis løbe ind i synkroniseringsproblemer med ældre versioner af ownCloud-synkronisering, når du går langt under 10 sekunder.
@@ -5859,7 +5854,7 @@ Bare test dig selv, hvis du får synkroniseringskonflikter og angiv en højere v
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4384"/>
-<location filename="../dialogs/settingsdialog.ui" line="5599"/>
+<location filename="../dialogs/settingsdialog.ui" line="5602"/>
 <source>set external editor</source>
 <translation>sæt eksterne editor</translation>
 </message>
@@ -6776,332 +6771,332 @@ Bare test dig selv, hvis du får synkroniseringskonflikter og angiv en højere v
 <translation>Led:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5844"/>
-<location filename="../dialogs/settingsdialog.ui" line="5853"/>
+<location filename="../dialogs/settingsdialog.ui" line="5847"/>
+<location filename="../dialogs/settingsdialog.ui" line="5856"/>
 <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>Regelmæssige udtryk for undermapper, der skal ignoreres, adskilt med ";"
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5699"/>
+<location filename="../dialogs/settingsdialog.ui" line="5702"/>
 <source>Ignored note files</source>
 <translation type="unfinished">Ignored note files</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5696"/>
-<location filename="../dialogs/settingsdialog.ui" line="5705"/>
+<location filename="../dialogs/settingsdialog.ui" line="5699"/>
+<location filename="../dialogs/settingsdialog.ui" line="5708"/>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
 <translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5847"/>
+<location filename="../dialogs/settingsdialog.ui" line="5850"/>
 <source>Ignored subfolders</source>
 <translation>Ignorerede undermapper
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5863"/>
+<location filename="../dialogs/settingsdialog.ui" line="5866"/>
 <source>Reset ignored subfolders</source>
 <translation>Nulstil ignorerede undermapper
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5899"/>
+<location filename="../dialogs/settingsdialog.ui" line="5902"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
 <translation>Gendan åbne notatfane ved applikationsstart og når note-mapper skiftes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5922"/>
+<location filename="../dialogs/settingsdialog.ui" line="5925"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
 <translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5991"/>
+<location filename="../dialogs/settingsdialog.ui" line="5994"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
 <translation>Skjul 'antal noter' med nøgleord (øger ydelsen)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6027"/>
+<location filename="../dialogs/settingsdialog.ui" line="6030"/>
 <source>Show the number of matches in each note</source>
 <translation>Vis antallet af kampe i hver note</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6426"/>
+<location filename="../dialogs/settingsdialog.ui" line="6429"/>
 <source>Command snippets</source>
 <translation type="unfinished">Command snippets</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6435"/>
+<location filename="../dialogs/settingsdialog.ui" line="6438"/>
 <source>Tag name for commands notes</source>
 <translation type="unfinished">Tag name for commands notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6442"/>
+<location filename="../dialogs/settingsdialog.ui" line="6445"/>
 <source>Commands tag:</source>
 <translation type="unfinished">Commands tag:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6462"/>
+<location filename="../dialogs/settingsdialog.ui" line="6465"/>
 <source>Commands note name:</source>
 <translation type="unfinished">Commands note name:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6472"/>
+<location filename="../dialogs/settingsdialog.ui" line="6475"/>
 <source>Note name for adding new commands</source>
 <translation type="unfinished">Note name for adding new commands</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6512"/>
+<location filename="../dialogs/settingsdialog.ui" line="6515"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
 <translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6549"/>
+<location filename="../dialogs/settingsdialog.ui" line="6552"/>
 <source>QOwnNotes web application</source>
 <translation type="unfinished">QOwnNotes web application</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6578"/>
+<location filename="../dialogs/settingsdialog.ui" line="6581"/>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6639"/>
+<location filename="../dialogs/settingsdialog.ui" line="6642"/>
 <source>Server URL:</source>
 <translation>Server URL:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6696"/>
+<location filename="../dialogs/settingsdialog.ui" line="6699"/>
 <source>Show QR code</source>
 <translation>Vis QR-kode</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6588"/>
+<location filename="../dialogs/settingsdialog.ui" line="6591"/>
 <source>Security token:</source>
 <translation type="unfinished">Security token:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6391"/>
+<location filename="../dialogs/settingsdialog.ui" line="6394"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
 <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6407"/>
+<location filename="../dialogs/settingsdialog.ui" line="6410"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
 <translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6449"/>
+<location filename="../dialogs/settingsdialog.ui" line="6452"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6646"/>
+<location filename="../dialogs/settingsdialog.ui" line="6649"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
 <translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6656"/>
+<location filename="../dialogs/settingsdialog.ui" line="6659"/>
 <source>Copy security token to clipboard</source>
 <translation type="unfinished">Copy security token to clipboard</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6609"/>
+<location filename="../dialogs/settingsdialog.ui" line="6612"/>
 <source>Generate new security token</source>
 <translation type="unfinished">Generate new security token</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6670"/>
+<location filename="../dialogs/settingsdialog.ui" line="6673"/>
 <source>Reset the URL to default</source>
 <translation type="unfinished">Reset the URL to default</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6499"/>
+<location filename="../dialogs/settingsdialog.ui" line="6502"/>
 <source>QOwnNotes web application support</source>
 <translation type="unfinished">QOwnNotes web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6505"/>
+<location filename="../dialogs/settingsdialog.ui" line="6508"/>
 <source>Enable web application support</source>
 <translation type="unfinished">Enable web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5660"/>
-<location filename="../dialogs/settingsdialog.ui" line="6713"/>
+<location filename="../dialogs/settingsdialog.ui" line="5663"/>
+<location filename="../dialogs/settingsdialog.ui" line="6716"/>
 <source>Note list panel</source>
 <translation>Note listepanelet</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5754"/>
+<location filename="../dialogs/settingsdialog.ui" line="5757"/>
 <source>Show notes in the note list with preview</source>
 <translation>Vis noter i notatlisten med preview</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6719"/>
+<location filename="../dialogs/settingsdialog.ui" line="6722"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
 <translation>I stedet for en noteliste skal du bruge et note-træ med alle undermapper (hvis de er tændt for note-mappen)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6037"/>
+<location filename="../dialogs/settingsdialog.ui" line="6040"/>
 <source>Note folder panel</source>
 <translation>Bemærk mappepanel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6043"/>
+<location filename="../dialogs/settingsdialog.ui" line="6046"/>
 <source>Show note folders as buttons instead of in a select box</source>
 <translation>Vis notatmapper som knapper i stedet for i et valgfelt</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6149"/>
+<location filename="../dialogs/settingsdialog.ui" line="6152"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
 <translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6185"/>
+<location filename="../dialogs/settingsdialog.ui" line="6188"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
 <translation>Paneler kan tændes og slukkes i &lt;i&gt; Vindue / Paneler &lt;/i&gt; hovedmenuen, og du kan også konfigurere forskellige &lt;i&gt; Arbejdsområder &lt;/i&gt; til forskellige panelkonfigurationer.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6262"/>
+<location filename="../dialogs/settingsdialog.ui" line="6265"/>
 <source>Bookmarks</source>
 <translation>Bogmærker</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6268"/>
-<location filename="../dialogs/settingsdialog.ui" line="6432"/>
+<location filename="../dialogs/settingsdialog.ui" line="6271"/>
+<location filename="../dialogs/settingsdialog.ui" line="6435"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
 <translation>Noter med dette tag bruges til at hente bogmærker</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6271"/>
+<location filename="../dialogs/settingsdialog.ui" line="6274"/>
 <source>Tag name for bookmarks notes</source>
 <translation>Tag navn til bogmærker notater</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6278"/>
+<location filename="../dialogs/settingsdialog.ui" line="6281"/>
 <source>Bookmarks tag:</source>
 <translation>Bogmærke tag:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6285"/>
+<location filename="../dialogs/settingsdialog.ui" line="6288"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>Som standard vises browsertilladelsen for alle links i den aktuelle note. Du kan også få det til at vise specielle bogmærke links af noter med et bestemt tag. For flere oplysninger om synkronisering af bogmærkelink klik &lt;a href="%1"&gt; her &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6298"/>
+<location filename="../dialogs/settingsdialog.ui" line="6301"/>
 <source>Bookmarks note name:</source>
 <translation>Bogmærker notat navn:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6305"/>
-<location filename="../dialogs/settingsdialog.ui" line="6469"/>
+<location filename="../dialogs/settingsdialog.ui" line="6308"/>
+<location filename="../dialogs/settingsdialog.ui" line="6472"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
 <translation>Denne note vil blive brugt til at tilføje nye bogmærker fra browserudvidelsen</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6308"/>
+<location filename="../dialogs/settingsdialog.ui" line="6311"/>
 <source>Note name for adding new bookmarks</source>
 <translation>Angiv navn for at tilføje nye bogmærker</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6318"/>
+<location filename="../dialogs/settingsdialog.ui" line="6321"/>
 <source>Web socket server</source>
 <translation>Web socket server</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6324"/>
+<location filename="../dialogs/settingsdialog.ui" line="6327"/>
 <source>Socket server port:</source>
 <translation>Socket server port:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6344"/>
+<location filename="../dialogs/settingsdialog.ui" line="6347"/>
 <source>Reset the socket server port</source>
 <translation type="unfinished">Reset the socket server port</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6358"/>
-<location filename="../dialogs/settingsdialog.ui" line="6595"/>
+<location filename="../dialogs/settingsdialog.ui" line="6361"/>
+<location filename="../dialogs/settingsdialog.ui" line="6598"/>
 <source>Show security token</source>
 <translation>Vis sikkerhedstoken</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6378"/>
+<location filename="../dialogs/settingsdialog.ui" line="6381"/>
 <source>Web socket server support</source>
 <translation>Web socket server support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6384"/>
+<location filename="../dialogs/settingsdialog.ui" line="6387"/>
 <source>Enable socket server</source>
 <translation>Aktivér sokkelserver</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5883"/>
+<location filename="../dialogs/settingsdialog.ui" line="5886"/>
 <source>Note edit panel</source>
 <translation>Note redigeringspanel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5889"/>
+<location filename="../dialogs/settingsdialog.ui" line="5892"/>
 <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
 <translation>Hvis dette er deaktiveret, kan du oprette mere komplekse panellayouter, men alle paneler vil blive ændret, hvis vinduet er ændret</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5892"/>
+<location filename="../dialogs/settingsdialog.ui" line="5895"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
 <translation>Brug note redigeringspanelet som fast central widget, der skal ændres, hvis vinduet eller andre paneler er ændret</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6014"/>
+<location filename="../dialogs/settingsdialog.ui" line="6017"/>
 <source>Note search panel</source>
 <translation>Note søgepanel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6020"/>
+<location filename="../dialogs/settingsdialog.ui" line="6023"/>
 <source>Disable auto-completion of previous searches</source>
 <translation>Deaktiver automatisk afslutning af tidligere søgninger</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5909"/>
+<location filename="../dialogs/settingsdialog.ui" line="5912"/>
 <source>Navigation panel</source>
 <translation>Navigationspanel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5915"/>
+<location filename="../dialogs/settingsdialog.ui" line="5918"/>
 <source>Hide navigation item search bar</source>
 <translation>Skjul navigationselementets søgelinje</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6057"/>
+<location filename="../dialogs/settingsdialog.ui" line="6060"/>
 <source>Local trash settings</source>
 <translation>Lokale papirkurven indstillinger</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6091"/>
+<location filename="../dialogs/settingsdialog.ui" line="6094"/>
 <source>Remove trashed notes after:</source>
 <translation>Fjern slette noter efter:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6098"/>
+<location filename="../dialogs/settingsdialog.ui" line="6101"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
 <translation> dage</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6117"/>
+<location filename="../dialogs/settingsdialog.ui" line="6120"/>
 <source>Automatically remove trashed notes after a certain time</source>
 <translation>Fjern automatisk papirkurven efter en bestemt tid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6143"/>
+<location filename="../dialogs/settingsdialog.ui" line="6146"/>
 <source>Local trash support</source>
 <translation>Lokale papirkurven støtte</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6166"/>
+<location filename="../dialogs/settingsdialog.ui" line="6169"/>
 <source>Layout selector</source>
 <translation>Layout vælger</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6172"/>
+<location filename="../dialogs/settingsdialog.ui" line="6175"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
 <translation>Du kan indstille et nyt layout her. Husk at du altid kan ændre placeringen af panelerne med knappen &lt;i&gt; Lås op paneler &lt;/i&gt;.</translation>
 </message>
@@ -7111,29 +7106,29 @@ Bare test dig selv, hvis du får synkroniseringskonflikter og angiv en højere v
 <translation>Nulstil markørbredden</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5534"/>
+<location filename="../dialogs/settingsdialog.ui" line="5537"/>
 <source>External git log command to show the git versions of a note</source>
 <translation>Ekstern git log-kommando for at vise git-versionerne af en note</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5540"/>
+<location filename="../dialogs/settingsdialog.ui" line="5543"/>
 <source>Enter a command to be used to show a git log (like for example "gitk")</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Indtast en kommando, der skal bruges til at vise en git log (som for eksempel "gitk")</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5560"/>
+<location filename="../dialogs/settingsdialog.ui" line="5563"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Hvis du bruger denne indstilling, får du en ny menupunkt for at vise git-versionerne, hvis du højreklikker på en note.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5666"/>
+<location filename="../dialogs/settingsdialog.ui" line="5669"/>
 <source>Show all notes of a tag including the notes of their children-tags</source>
 <translation>Vis alle noter af et tag inklusive noterne på deres børne-tags</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5747"/>
+<location filename="../dialogs/settingsdialog.ui" line="5750"/>
 <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
 <translation>Vis alle noter i en mappe inklusive deres undermapper (fungerer kun, hvis undermapper er tændt)</translation>
 </message>
@@ -7143,40 +7138,40 @@ Bare test dig selv, hvis du får synkroniseringskonflikter og angiv en højere v
 <translation>Fremhæv den aktuelle linje</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5627"/>
+<location filename="../dialogs/settingsdialog.ui" line="5630"/>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Glem ikke at aktivere git-understøttelse til dine notatmapper og konfigurere dit navn og din email-adresse til din git-klient, f. eks. Med disse terminalkommandoer:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5932"/>
+<location filename="../dialogs/settingsdialog.ui" line="5935"/>
 <source>Tags panel</source>
 <translation>Tags panel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5721"/>
-<location filename="../dialogs/settingsdialog.ui" line="5807"/>
-<location filename="../dialogs/settingsdialog.ui" line="5961"/>
+<location filename="../dialogs/settingsdialog.ui" line="5724"/>
+<location filename="../dialogs/settingsdialog.ui" line="5810"/>
+<location filename="../dialogs/settingsdialog.ui" line="5964"/>
 <source>Order</source>
 <translation>Rækkefølge</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5730"/>
-<location filename="../dialogs/settingsdialog.ui" line="5813"/>
-<location filename="../dialogs/settingsdialog.ui" line="5967"/>
+<location filename="../dialogs/settingsdialog.ui" line="5733"/>
+<location filename="../dialogs/settingsdialog.ui" line="5816"/>
+<location filename="../dialogs/settingsdialog.ui" line="5970"/>
 <source>Ascending</source>
 <translation>Stigende</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5737"/>
-<location filename="../dialogs/settingsdialog.ui" line="5820"/>
-<location filename="../dialogs/settingsdialog.ui" line="5974"/>
+<location filename="../dialogs/settingsdialog.ui" line="5740"/>
+<location filename="../dialogs/settingsdialog.ui" line="5823"/>
+<location filename="../dialogs/settingsdialog.ui" line="5977"/>
 <source>Descending</source>
 <translation>Aftagende</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5673"/>
-<location filename="../dialogs/settingsdialog.ui" line="5777"/>
-<location filename="../dialogs/settingsdialog.ui" line="5938"/>
+<location filename="../dialogs/settingsdialog.ui" line="5676"/>
+<location filename="../dialogs/settingsdialog.ui" line="5780"/>
+<location filename="../dialogs/settingsdialog.ui" line="5941"/>
 <source>Sort</source>
 <translation>Sorter</translation>
 </message>
@@ -7186,50 +7181,50 @@ Bare test dig selv, hvis du får synkroniseringskonflikter og angiv en højere v
 <translation>Brug kun editorbreddeindstilling i distraktionsfri tilstand</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5679"/>
-<location filename="../dialogs/settingsdialog.ui" line="5783"/>
-<location filename="../dialogs/settingsdialog.ui" line="5944"/>
+<location filename="../dialogs/settingsdialog.ui" line="5682"/>
+<location filename="../dialogs/settingsdialog.ui" line="5786"/>
+<location filename="../dialogs/settingsdialog.ui" line="5947"/>
 <source>Alphabetical</source>
 <translation>Alfabetisk</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5951"/>
+<location filename="../dialogs/settingsdialog.ui" line="5954"/>
 <source>By last change / use</source>
 <translation>Ved sidste ændring / brug</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5984"/>
+<location filename="../dialogs/settingsdialog.ui" line="5987"/>
 <source>Hide 'Find or create tag' search</source>
 <translation>Skjul søgning 'Find eller opret tag'</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5764"/>
+<location filename="../dialogs/settingsdialog.ui" line="5767"/>
 <source>Note subfolders panel</source>
 <translation>Note undermapper panel</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5770"/>
+<location filename="../dialogs/settingsdialog.ui" line="5773"/>
 <source>Show with full path</source>
 <translation>Vis med fuld sti</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5686"/>
-<location filename="../dialogs/settingsdialog.ui" line="5790"/>
+<location filename="../dialogs/settingsdialog.ui" line="5689"/>
+<location filename="../dialogs/settingsdialog.ui" line="5793"/>
 <source>By last change</source>
 <translation>Ved sidste ændring</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5800"/>
+<location filename="../dialogs/settingsdialog.ui" line="5803"/>
 <source>Show root folder name</source>
 <translation>Vis rodmappenavn</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5830"/>
+<location filename="../dialogs/settingsdialog.ui" line="5833"/>
 <source>Hide 'Find or create note subfolder' search</source>
 <translation>Skjul 'Find eller opret notat undermappe' søgning</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5837"/>
+<location filename="../dialogs/settingsdialog.ui" line="5840"/>
 <source>Display note subfolders as full tree</source>
 <translation>Vis noter undermapper som fuldt træ</translation>
 </message>
@@ -7239,39 +7234,39 @@ Bare test dig selv, hvis du får synkroniseringskonflikter og angiv en højere v
 <translation>Søg script repository</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5550"/>
+<location filename="../dialogs/settingsdialog.ui" line="5553"/>
 <source>You optionally can use "%notePath%" for the path of the note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Du kan eventuelt bruge "%notePath%" for stien til noten.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5573"/>
+<location filename="../dialogs/settingsdialog.ui" line="5576"/>
 <source>Git client</source>
 <translation>Git klient</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5589"/>
+<location filename="../dialogs/settingsdialog.ui" line="5592"/>
 <source>Path to git executable:</source>
 <translation>Sti til git eksekverbar:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5579"/>
+<location filename="../dialogs/settingsdialog.ui" line="5582"/>
 <source>Path to git client, leave empty for default</source>
 <translation>Sti til git klient, forlad tom som standard</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5498"/>
+<location filename="../dialogs/settingsdialog.ui" line="5501"/>
 <source>Commit interval</source>
 <translation>Forpligtelsesinterval</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5504"/>
+<location filename="../dialogs/settingsdialog.ui" line="5507"/>
 <source>sec</source>
 <extracomment>seconds</extracomment>
 <translation>sek</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5524"/>
+<location filename="../dialogs/settingsdialog.ui" line="5527"/>
 <source>git commit interval time [sec]</source>
 <translation>git commit interval time [sek]</translation>
 </message>
@@ -9147,190 +9142,190 @@ Dette kan ikke fortrydes!</translation>
 <translation>%p% downloadet</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="49"/>
+<location filename="../dialogs/updatedialog.cpp" line="50"/>
 <source>&amp;Update</source>
 <translation>&amp;Opdatering</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="46"/>
+<location filename="../dialogs/updatedialog.cpp" line="47"/>
 <source>Just download</source>
 <translation>Bare download</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="62"/>
+<location filename="../dialogs/updatedialog.cpp" line="63"/>
 <source>&amp;Download latest</source>
 <translation>&amp;Download nyeste</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="71"/>
+<location filename="../dialogs/updatedialog.cpp" line="72"/>
 <source>&amp;Skip version</source>
 <translation>&amp;Spring version</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="79"/>
+<location filename="../dialogs/updatedialog.cpp" line="80"/>
 <source>&amp;Disable dialog</source>
 <translation>&amp;Deaktiver dialog</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="80"/>
+<location filename="../dialogs/updatedialog.cpp" line="81"/>
 <source>Don't show this dialog automatically</source>
 <translation>Vis ikke denne dialogboks automatisk</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="88"/>
+<location filename="../dialogs/updatedialog.cpp" line="89"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Annuller</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="237"/>
+<location filename="../dialogs/updatedialog.cpp" line="238"/>
 <source>Download error</source>
 <translation>Download fejl</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="238"/>
+<location filename="../dialogs/updatedialog.cpp" line="239"/>
 <source>Error while downloading:
 %1</source>
 <translation>Fejl under download:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="240"/>
+<location filename="../dialogs/updatedialog.cpp" line="241"/>
 <source>network error: %1</source>
 <translation>netværk fejl: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="262"/>
-<location filename="../dialogs/updatedialog.cpp" line="281"/>
-<location filename="../dialogs/updatedialog.cpp" line="372"/>
-<location filename="../dialogs/updatedialog.cpp" line="447"/>
-<location filename="../dialogs/updatedialog.cpp" line="457"/>
+<location filename="../dialogs/updatedialog.cpp" line="263"/>
+<location filename="../dialogs/updatedialog.cpp" line="282"/>
+<location filename="../dialogs/updatedialog.cpp" line="373"/>
+<location filename="../dialogs/updatedialog.cpp" line="454"/>
+<location filename="../dialogs/updatedialog.cpp" line="466"/>
 <source>File error</source>
 <translation>Filfejl</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="263"/>
-<location filename="../dialogs/updatedialog.cpp" line="373"/>
+<location filename="../dialogs/updatedialog.cpp" line="264"/>
+<location filename="../dialogs/updatedialog.cpp" line="374"/>
 <source>Could not open temporary file:
 %1</source>
 <translation>Kunne ikke åbne midlertidig fil:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="282"/>
+<location filename="../dialogs/updatedialog.cpp" line="283"/>
 <source>Could not store downloaded file:
 %1</source>
 <translation>Kunne ikke gemme downloadet fil:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="333"/>
+<location filename="../dialogs/updatedialog.cpp" line="334"/>
 <source>Do you want to update and restart QOwnNotes?</source>
 <translation>Vil du opdatere og genstarte QOwnNotes?</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="347"/>
-<location filename="../dialogs/updatedialog.cpp" line="505"/>
-<location filename="../dialogs/updatedialog.cpp" line="513"/>
-<location filename="../dialogs/updatedialog.cpp" line="520"/>
-<location filename="../dialogs/updatedialog.cpp" line="528"/>
-<location filename="../dialogs/updatedialog.cpp" line="537"/>
-<location filename="../dialogs/updatedialog.cpp" line="545"/>
+<location filename="../dialogs/updatedialog.cpp" line="348"/>
+<location filename="../dialogs/updatedialog.cpp" line="516"/>
+<location filename="../dialogs/updatedialog.cpp" line="524"/>
+<location filename="../dialogs/updatedialog.cpp" line="531"/>
+<location filename="../dialogs/updatedialog.cpp" line="539"/>
+<location filename="../dialogs/updatedialog.cpp" line="548"/>
+<location filename="../dialogs/updatedialog.cpp" line="556"/>
 <source>Error</source>
 <translation>Fejl</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="348"/>
+<location filename="../dialogs/updatedialog.cpp" line="349"/>
 <source>Could not find updater file:
 %1</source>
 <translation>Kunne ikke finde opdateringsfilen:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="425"/>
-<location filename="../dialogs/updatedialog.cpp" line="437"/>
-<location filename="../dialogs/updatedialog.cpp" line="469"/>
+<location filename="../dialogs/updatedialog.cpp" line="428"/>
+<location filename="../dialogs/updatedialog.cpp" line="442"/>
+<location filename="../dialogs/updatedialog.cpp" line="480"/>
 <source>Permission error</source>
 <translation>Tilladelsesfejl</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="426"/>
+<location filename="../dialogs/updatedialog.cpp" line="429"/>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
 <translation>Din QOwnNotes eksekverbare '%1' kan ikke skrives! Den skal kunne skrives af den aktuelle bruger for at blive opdateret.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="438"/>
+<location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation>Den midlertidige fil '%1' kunne ikke gøres eksekverbar! Du skal selv erstatte '%2'.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="448"/>
+<location filename="../dialogs/updatedialog.cpp" line="455"/>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
 <translation>Din gamle QOwnNotes eksekverbare '%1' kunne ikke fjernes! Du skal selv erstatte det med '%2'.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="478"/>
+<location filename="../dialogs/updatedialog.cpp" line="489"/>
 <source>Restart application</source>
 <translation>Genstart applikationen</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="479"/>
+<location filename="../dialogs/updatedialog.cpp" line="490"/>
 <source>You now can restart the application to complete the update process.</source>
 <translation>Du kan nu genstarte applikationen for at fuldføre opdateringsprocessen.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="481"/>
+<location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Restart</source>
 <translation>Genstart</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="481"/>
+<location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Cancel</source>
 <translation>Annuller</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="506"/>
+<location filename="../dialogs/updatedialog.cpp" line="517"/>
 <source>Updater script '%1' doesn't exist!</source>
 <translation>Updater script '%1' eksisterer ikke!</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="514"/>
+<location filename="../dialogs/updatedialog.cpp" line="525"/>
 <source>Updater unzip executable '%1' doesn't exist!</source>
 <translation>Updater unzip eksekverbar '%1' eksisterer ikke!</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="521"/>
-<location filename="../dialogs/updatedialog.cpp" line="529"/>
+<location filename="../dialogs/updatedialog.cpp" line="532"/>
+<location filename="../dialogs/updatedialog.cpp" line="540"/>
 <source>Could not copy updater script '%1' to '%2'!</source>
 <translation>Kunne ikke kopiere opdaterings script '%1' til '%2'!</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="538"/>
+<location filename="../dialogs/updatedialog.cpp" line="549"/>
 <source>Couldn't find updater script: %1</source>
 <translation>Kunne ikke finde opdaterings script: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="546"/>
+<location filename="../dialogs/updatedialog.cpp" line="557"/>
 <source>Couldn't find unzip executable: %1</source>
 <translation>Kunne ikke finde udpakket eksekverbar: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="332"/>
-<location filename="../dialogs/updatedialog.cpp" line="550"/>
+<location filename="../dialogs/updatedialog.cpp" line="333"/>
+<location filename="../dialogs/updatedialog.cpp" line="561"/>
 <source>Proceed with update</source>
 <translation>Fortsæt med opdatering</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="458"/>
+<location filename="../dialogs/updatedialog.cpp" line="467"/>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
 <translation>Din gamle QOwnNotes eksekverbare '%1' kunne ikke erstattes af den nye fil '%2'! Du skal selv udskifte den.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="470"/>
+<location filename="../dialogs/updatedialog.cpp" line="481"/>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
 <translation>App-filen '%1' kunne ikke gøres eksekverbar! Du skal selv gøre det eksekverbart.</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="551"/>
+<location filename="../dialogs/updatedialog.cpp" line="562"/>
 <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
 <translation>Downloaden er nu færdig. Vil du opdatere og genstarte QOwnNotes?</translation>
 </message>

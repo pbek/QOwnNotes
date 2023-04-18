@@ -22,7 +22,7 @@ Script {
 Take a look at the [example scripts](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples) to get started fast.
 :::
 
-در **تنظیمات اسکریپت نویسی** می توانید اسکریپت ها را مستقیماً از [**مخزن اسکریپت**](https://github.com/qownnotes/scripts) نیز نصب کنید.
+In the **Scripting settings** you can also install scripts directly from the [**Script repository**](https://github.com/qownnotes/scripts). There is a community hosted web-application to search for scripts on [beurt.github.io/QOwnNoteScriptsList](https://beurt.github.io/QOwnNoteScriptsList/).
 
 در مورد مسائل، سؤالات یا درخواست های مهم مربوط به اسکریپت ها از **مخزن اسکریپت** لطفاً یک مسئله را در [صفحه مسائل مخزن اسکریپت QOwnNotes](https://github.com/qownnotes/scripts/issues) باز کنید.
 

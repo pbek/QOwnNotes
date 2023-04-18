@@ -22,7 +22,7 @@ Script {
 ألقِ نظرة على [أمثلة البُريمِجات](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples) للبدء بسرعة.
 :::
 
-في **إعدادات البرمجة**، يمكنك أيضا تثبيت بُريمِجات مباشرةً من [**مستودع البُريمِجات**](https://github.com/qownnotes/scripts).
+في **إعدادات البرمجة**، يمكنك أيضا تثبيت بُريمِجات مباشرةً من [**مستودع البُريمِجات**](https://github.com/qownnotes/scripts). يوجد تطبيق ويب أنشأه المجتمع للبحث عن البريمجات، في [beurt.github.io/QOwnNoteScriptsList](https://beurt.github.io/QOwnNoteScriptsList/).
 
 للإبلاغ عن مشاكل أو أسئلة أو طلبات خصائص لبُريمِج من **مستودع البُريمِجات**، برجاء فتح مسألة على [صفحة مسائل مستودع QOwnNotes للبُريمِجات](https://github.com/qownnotes/scripts/issues).
 

@@ -22,7 +22,7 @@ Sie können diese QML-Dateien an einer beliebigen Stelle platzieren und **in QOw
 Take a look at the [example scripts](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples) to get started fast.
 :::
 
-In den **Scripting settings** können Sie Skripte auch direkt aus dem [**Skript-Repository**](https://github.com/qownnotes/scripts)installieren.
+In the **Scripting settings** you can also install scripts directly from the [**Script repository**](https://github.com/qownnotes/scripts). There is a community hosted web-application to search for scripts on [beurt.github.io/QOwnNoteScriptsList](https://beurt.github.io/QOwnNoteScriptsList/).
 
 Bei Problemen, Fragen oder Funktionsanforderungen für Skripte aus dem **Script repository**  eröffnen Sie bitte ein Problemthema auf der [QOwnNotes script repository issue page](https://github.com/qownnotes/scripts/issues).
 

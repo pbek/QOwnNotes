@@ -22,7 +22,7 @@ Ezeket a QML fájlokat bárhová elhelyezheti, és **hozzáadhatja őket a QOwnN
 Take a look at the [example scripts](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples) to get started fast.
 :::
 
-A **szkriptbeállítások** ban parancsfájlokat is telepíthet közvetlenül a [**parancsfájltárból**](https://github.com/qownnotes/scripts).
+In the **Scripting settings** you can also install scripts directly from the [**Script repository**](https://github.com/qownnotes/scripts). There is a community hosted web-application to search for scripts on [beurt.github.io/QOwnNoteScriptsList](https://beurt.github.io/QOwnNoteScriptsList/).
 
 A **parancsfájltárból** származó szkriptekkel kapcsolatos problémákkal, kérdésekkel vagy szolgáltatáskérésekkel nyissa meg a problémát a [QOwnNotes szkripttár kiadási oldalán](https://github.com/qownnotes/scripts/issues).
 
