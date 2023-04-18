@@ -46,9 +46,6 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent, bool checkForUpd
         ui->overviewLabel->setText(tr("All scripts are up-to-date."));
         searchForUpdates();
     } else {
-        QObject::connect(ui->scriptTreeWidget->verticalScrollBar(), SIGNAL(valueChanged(int)), this,
-                         SLOT(scriptTreeWidgetSliderValueChanged(int)));
-
         searchScript();
     }
 }
