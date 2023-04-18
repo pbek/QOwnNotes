@@ -20,6 +20,7 @@
 #include <QtNetwork/QNetworkRequest>
 #include <QtWidgets/QMessageBox>
 #include <QtWidgets/QSplitter>
+#include <QDateTime>
 
 #include "ui_scriptrepositorydialog.h"
 
