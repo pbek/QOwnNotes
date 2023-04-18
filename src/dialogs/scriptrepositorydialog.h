@@ -1,7 +1,7 @@
 #pragma once
 
 #include <entities/script.h>
-
+#include <QDateTime>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -10,7 +10,6 @@ class ScriptRepositoryDialog;
 
 class QSplitter;
 class QTreeWidgetItem;
-class QDateTime;
 
 class ScriptRepositoryDialog : public MasterDialog {
     Q_OBJECT
