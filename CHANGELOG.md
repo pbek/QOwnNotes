@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.4.5
+- the build process for Snapcraft and older operating systems was fixed
+  (for [#2772](https://github.com/pbek/QOwnNotes/issues/2772))
+
 ## 23.4.4
 - the **script repository integration was rewritten**, because GitHub now demands
   an access token for the code search API and has a harsh quota on the amounts of
