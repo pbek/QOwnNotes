@@ -1,5 +1,18 @@
 # QOwnNotes Changelog
 
+## 23.4.4
+- the **script repository integration was rewritten**, because GitHub now demands
+  an access token for the code search API and has a harsh quota on the amounts of
+  searches per person (for [#2772](https://github.com/pbek/QOwnNotes/issues/2772))
+  - an index will now be generated on the [Script Repository on GitHub](https://github.com/qownnotes/scripts),
+    which can be accessed by QOwnNotes without using the code search API of GitHub
+  - script searches, installs and updates are now **much faster**, because only
+    one single request is made
+  - all scripts are now **shown instantly**, instead of needing to search for
+    a script and browse multiple pages
+  - scripts are now **searched while typing** in the search bock, instead of
+    only when pressing <kbd>Enter</kbd>
+
 ## 23.4.3
 - the GitHub issue links were updated to make use of the new issue templates
   (for [#2768](https://github.com/pbek/QOwnNotes/issues/2768))

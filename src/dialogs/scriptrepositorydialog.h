@@ -9,9 +9,8 @@ class ScriptRepositoryDialog;
 }
 
 class QSplitter;
-class QNetworkReply;
-class QNetworkAccessManager;
 class QTreeWidgetItem;
+class QDateTime;
 
 class ScriptRepositoryDialog : public MasterDialog {
     Q_OBJECT
@@ -25,49 +24,34 @@ class ScriptRepositoryDialog : public MasterDialog {
     void updateFound();
 
    private slots:
-    void on_searchScriptEdit_returnPressed();
-
-    void slotReplyFinished(QNetworkReply *);
-
     void on_scriptTreeWidget_currentItemChanged(QTreeWidgetItem *current,
                                                 QTreeWidgetItem *previous);
 
     void on_installButton_clicked();
 
-    void scriptTreeWidgetSliderValueChanged(int value);
-
     void on_searchScriptEdit_textChanged(const QString &arg1);
-
-    void on_loadMoreScriptsButton_clicked();
 
    private:
     Ui::ScriptRepositoryDialog *ui;
-    QNetworkAccessManager *_networkManager;
     QString _codeSearchUrl;
     QString _rawContentUrlPrefix;
     QSplitter *_mainSplitter;
     bool _checkForUpdates;
-    int _page = 1;
-    int _totalCount = 0;
-    static const int _itemsPerPage = 30;
     QString _searchString;
     Script _lastInstalledScript;
     QHash<QString, ScriptInfoJson> _scriptMetaDataCache;
+    QHash<QString, QString> _scriptMetaDataJsonTextCache;
     QDateTime _lastScriptMetaDataCacheUpdateTime;
 
-    void searchScript(int page = 1);
+    void searchScript();
 
     void setupMainSplitter();
 
-    void parseCodeSearchReply(const QByteArray &arr);
-
     void storeSettings();
-
-    void parseInfoQMLReply(const QByteArray &arr);
 
     void enableOverview(bool enable);
 
-    QJsonObject getCurrentInfoJsonObject();
+    ScriptInfoJson getCurrentScriptInfoJson();
 
     QString getCurrentInfoJsonString();
 
@@ -75,11 +59,8 @@ class ScriptRepositoryDialog : public MasterDialog {
 
     void searchForUpdates();
 
-    bool hasMoreItems() const;
-
-    void loadMoreItems();
-
     bool isScriptCacheExpired();
     bool loadScriptRepositoryMetaData();
     void parseScriptRepositoryMetaData(const QByteArray &arr);
+    void addScriptTreeWidgetItem(const ScriptInfoJson &scriptInfoJson);
 };
