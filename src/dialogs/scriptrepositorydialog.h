@@ -19,6 +19,8 @@ class ScriptRepositoryDialog : public MasterDialog {
     ~ScriptRepositoryDialog();
 
     Script getLastInstalledScript();
+
+    void searchForUpdates();
    signals:
     void updateFound();
 
@@ -55,8 +57,6 @@ class ScriptRepositoryDialog : public MasterDialog {
     QString getCurrentInfoJsonString();
 
     void reloadCurrentScriptInfo();
-
-    void searchForUpdates();
 
     bool isScriptCacheExpired();
     bool loadScriptRepositoryMetaData();

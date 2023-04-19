@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.4.6
+- the **manual and automatic script update** process now also works again after the script
+  repository integration re-implementation (for [#2772](https://github.com/pbek/QOwnNotes/issues/2772))
+
 ## 23.4.5
 - the build process for Snapcraft and older operating systems was fixed
   (for [#2772](https://github.com/pbek/QOwnNotes/issues/2772))

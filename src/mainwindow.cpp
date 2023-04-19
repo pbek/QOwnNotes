@@ -10814,6 +10814,7 @@ void MainWindow::setMenuEnabled(QMenu *menu, bool enabled) {
 
 void MainWindow::on_actionCheck_for_script_updates_triggered() {
     auto *dialog = new ScriptRepositoryDialog(this, true);
+    dialog->searchForUpdates();
     dialog->exec();
     delete (dialog);
 
@@ -10851,6 +10852,11 @@ void MainWindow::automaticScriptUpdateCheck() {
             }
         });
     });
+
+    // Search for script updates after the "updateFound" signal was connected
+    // We need to do that in a separate step now, because the update check was so fast
+    // that the signal was not connected yet
+    dialog->searchForUpdates();
 
     // delete the dialog after 10 sec
     QTimer::singleShot(10000, this, [this, dialog]() {

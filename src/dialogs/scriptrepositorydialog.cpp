@@ -40,12 +40,7 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent, bool checkForUpd
     ui->scriptTreeWidget->sortByColumn(0, Qt::AscendingOrder);
     enableOverview(true);
 
-    if (checkForUpdates) {
-        ui->searchScriptEdit->hide();
-        setWindowTitle(tr("Script updates"));
-        ui->overviewLabel->setText(tr("All scripts are up-to-date."));
-        searchForUpdates();
-    } else {
+    if (!checkForUpdates) {
         searchScript();
     }
 }
@@ -81,7 +76,7 @@ bool ScriptRepositoryDialog::loadScriptRepositoryMetaData() {
     auto arr = Utils::Misc::downloadUrlWithStatusCode(url, statusCode);
 
     if (statusCode != 200) {
-        qCritical() << __func__ << "Error: " << arr;
+        qCritical() << __func__ << "Error (" << statusCode << "): " << arr;
         return false;
     }
 
@@ -137,6 +132,10 @@ void ScriptRepositoryDialog::addScriptTreeWidgetItem(const ScriptInfoJson &scrip
  * Searches for script updates
  */
 void ScriptRepositoryDialog::searchForUpdates() {
+    ui->searchScriptEdit->hide();
+    setWindowTitle(tr("Script updates"));
+    ui->overviewLabel->setText(tr("All scripts are up-to-date."));
+
     ui->selectFrame->hide();
     ui->scriptTreeWidget->clear();
     enableOverview(true);
@@ -154,7 +153,7 @@ void ScriptRepositoryDialog::searchForUpdates() {
         VersionNumber localVersion = VersionNumber(scriptInfoJson.version);
 
         if (localVersion >= remoteVersion) {
-            return;
+            continue;
         }
 
         emit updateFound();
