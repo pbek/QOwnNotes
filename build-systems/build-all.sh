@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/bash
 #
 # Runs all build scripts in tmux panes
 #
@@ -15,6 +15,8 @@ fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+echo "Upload source archive to TuxFamily, be aware that it usually can take a minute until the files are accessible via https://download.tuxfamily.org/qownnotes/src"
+
 # Upload source archive to TuxFamily, be aware that it usually can take a
 # minute until the files are accessible via https://download.tuxfamily.org/qownnotes/src
 "$DIR/tuxfamily/build-tuxfamily-src.sh"
@@ -24,6 +26,8 @@ rc=$?; if [[ $rc != 0 ]]; then exit $rc; fi
 
 # Upload source archive to SourceForge
 #$DIR/sourceforge/build-sourceforge-src.sh
+
+echo "Starting the deployment process for all platforms..."
 
 # lets wait a bit to make sure SourceForce has their files in place
 #sleep 3
