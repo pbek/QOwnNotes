@@ -48,7 +48,8 @@ class CodeToHtmlConverter {
         CodeINI,
         CodeVex,
         CodeCMake,
-        CodeMake
+        CodeMake,
+        CodeNix
     };
 
    public:

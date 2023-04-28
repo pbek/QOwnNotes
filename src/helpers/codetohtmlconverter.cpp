@@ -35,6 +35,7 @@ void CodeToHtmlConverter::initCodeLangs() Q_DECL_NOTHROW {
         {QStringLiteral("js"), CodeToHtmlConverter::CodeJs},
         {QStringLiteral("json"), CodeToHtmlConverter::CodeJSON},
         {QStringLiteral("make"), CodeToHtmlConverter::CodeMake},
+        {QLatin1String("nix"), CodeToHtmlConverter::CodeNix},
         {QStringLiteral("php"), CodeToHtmlConverter::CodePHP},
         {QStringLiteral("py"), CodeToHtmlConverter::CodePython},
         {QStringLiteral("python"), CodeToHtmlConverter::CodePython},
@@ -140,6 +141,10 @@ QString CodeToHtmlConverter::process(StringView input) const {
             return iniHighlighter(input);
         case CodeMake:
             loadMakeData(types, keywords, builtin, literals, others);
+            comment = QLatin1Char('#');
+            break;
+        case CodeNix:
+            loadJSData(types, keywords, builtin, literals, others);
             comment = QLatin1Char('#');
             break;
         case CodeCMake:
