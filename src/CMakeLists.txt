@@ -12,6 +12,13 @@ add_subdirectory(libraries/md4c)
 
 add_executable(QOwnNotes "")
 
+if (CMAKE_BUILD_TYPE MATCHES Debug)
+    message("Debug build configuration detected")
+    add_definitions(-DQT_DEBUG)
+else()
+    message("Non-debug build configuration detected")
+endif()
+
 set_target_properties(QOwnNotes PROPERTIES
     CXX_STANDARD 11
     CXX_STANDARD_REQUIRED ON

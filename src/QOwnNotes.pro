@@ -420,6 +420,7 @@ CONFIG(DEV_MODE) {
 CONFIG(debug, debug|release) {
 #    QMAKE_CXXFLAGS_DEBUG += -g3 -O0
     message("Currently in DEBUG mode.")
+    DEFINES += QT_DEBUG
 } else {
     DEFINES += QT_NO_DEBUG
 
