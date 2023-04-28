@@ -5359,7 +5359,7 @@ Are the folder and the file writeable?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
 <source>To search for a script please enter your query text.</source>
-<translation type="unfinished">To search for a script please enter your query text.</translation>
+<translation>للبحث عن بُريمج، برجاء إدخال عبارة البحث.</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>

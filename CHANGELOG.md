@@ -3,6 +3,7 @@
 ## 23.4.7
 - the timing of the **Start hidden** feature got improved (for [#2778](https://github.com/pbek/QOwnNotes/issues/2778))
 - there now is basic code block syntax highlighting for **nix code** (for [#2779](https://github.com/pbek/QOwnNotes/issues/2779))
+- added more Arabic, Korean, Chinese Simplified translation (thank you noureddin, venusgirl, integral_68)
 
 ## 23.4.6
 - the **manual and automatic script update** process now also works again after the script

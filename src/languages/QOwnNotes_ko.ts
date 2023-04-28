@@ -5150,7 +5150,7 @@ Are the folder and the file writeable?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
 <source>To search for a script please enter your query text.</source>
-<translation type="unfinished">To search for a script please enter your query text.</translation>
+<translation>스크립트를 검색하려면 쿼리 텍스트를 입력하십시오.</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
