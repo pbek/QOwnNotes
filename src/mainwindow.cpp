@@ -291,9 +291,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // restoreToolbars() to fill the workspace combo box again
     updateWorkspaceLists();
 
-    // check if we want to start the application hidden
-    initShowHidden();
-
     createSystemTrayIcon();
 
     buildNotesIndexAndLoadNoteDirectoryList(false, false, false);
@@ -493,6 +490,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     triggerStartupMenuAction();
 
     resizeTagTreeWidgetColumnToContents();
+
+    // check if we want to start the application hidden
+    initShowHidden();
 }
 
 void MainWindow::initTreeWidgets() {
@@ -938,8 +938,9 @@ void MainWindow::releaseDockWidgetSizes() {
 void MainWindow::initShowHidden() {
     QSettings settings;
     const bool startHidden = settings.value(QStringLiteral("StartHidden"), false).toBool();
+
     if (startHidden) {
-        QTimer::singleShot(250, this, SLOT(hide()));
+        QTimer::singleShot(0, this, SLOT(hide()));
     }
 }
 
