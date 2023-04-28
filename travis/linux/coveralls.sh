@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #
 # does the coveralls submit under linux

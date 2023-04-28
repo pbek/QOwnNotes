@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # Runs qt6 build script
 #

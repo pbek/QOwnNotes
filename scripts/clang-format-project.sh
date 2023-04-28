@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # A tool to run clang-format on the entire project
 #

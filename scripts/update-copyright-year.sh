@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # Use this script to update all copyright years in the source and license files
 #

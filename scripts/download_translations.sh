@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # Use this script in $ProjectFileDir$ to download the translations from Crowdin
 #

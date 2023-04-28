@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #
 # creating the QOwnNotes.dmg with Applications link

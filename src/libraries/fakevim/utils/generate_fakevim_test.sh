@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 VIM=vim
 FAKEVIM=${FAKEVIM:-example/example}
 diff=meld
