@@ -4,6 +4,12 @@
 - the text `[Debug]` is now prepended in the window title for debug builds
 - the code block syntax highlighting for **nix code** was improved
   (for [#2779](https://github.com/pbek/QOwnNotes/issues/2779))
+- there now is a software repository for **Fedora 38**
+  - please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html)
+    for instructions
+- ARM builds for Debian have been added (for [#1457](https://github.com/pbek/QOwnNotes/issues/1457))
+  - please visit the [Debian installation page](https://www.qownnotes.org/installation/debian.html)
+    for instructions
 
 ## 23.4.7
 - the timing of the **Start hidden** feature got improved (for [#2778](https://github.com/pbek/QOwnNotes/issues/2778))
