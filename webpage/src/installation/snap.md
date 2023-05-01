@@ -1,4 +1,4 @@
-# Install as snap
+# Install as Snap
 
 There is a snap `qownnotes` in the [Snap store](https://snapcraft.io/qownnotes).
 

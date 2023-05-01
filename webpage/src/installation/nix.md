@@ -1,4 +1,4 @@
-# Install via nix
+# Install via Nix
 
 You can install QOwnNotes with the [Nix package manager](https://nixos.wiki/wiki/Nix_package_manager)
 on [NixOS](https://nixos.org/) and other platforms, the derivation name is
