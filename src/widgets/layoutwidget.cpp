@@ -81,7 +81,7 @@ void LayoutWidget::storeSettings() {
     if (_manualSettingsStoring) {
         QString title = tr("Use new layout");
         QString text = tr("Do you want to use the selected layout?") + "\n\n" +
-                       tr("The application will be restarted afterwards.") +
+                       tr("The application will be restarted afterward.") +
                        Utils::Misc::appendSingleAppInstanceTextIfNeeded();
 
         if (Utils::Gui::question(this, title, text, "layoutwidget-use-layout",

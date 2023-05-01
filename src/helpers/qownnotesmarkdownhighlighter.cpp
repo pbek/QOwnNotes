@@ -58,7 +58,7 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     currentBlock().setUserState(HighlighterState::NoState);
 
     // do the markdown highlighting before the spellcheck highlighting
-    // if we do it afterwards, it overwrites the spellcheck highlighting
+    // if we do it afterward, it overwrites the spellcheck highlighting
     MarkdownHighlighter::highlightMarkdown(text);
     if (text.contains(QLatin1String("note://")) ||
         text.contains(QChar('.') + _defaultNoteFileExt)) {

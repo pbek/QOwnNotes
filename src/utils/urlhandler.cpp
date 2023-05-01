@@ -139,7 +139,7 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
         QString currentNoteRelativeSubFolderPath = currentNote.getNoteSubFolder().relativePath();
 
         // remove the current relative sub-folder path from the relative path
-        // of the future note to be able to create the correct path afterwards
+        // of the future note to be able to create the correct path afterward
         if (!currentNoteRelativeSubFolderPath.isEmpty()) {
             relativeFilePath.remove(QRegularExpression(
                 "^" + QRegularExpression::escape(currentNoteRelativeSubFolderPath) + "\\/"));

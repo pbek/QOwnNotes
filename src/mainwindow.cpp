@@ -2392,7 +2392,7 @@ void MainWindow::readSettings() {
         on_actionAllow_note_editing_triggered(isAllowNoteEditing);
     }
 
-    // we want to trigger the event afterwards so the settings of the note edits
+    // we want to trigger the event afterward so the settings of the note edits
     // are updated
     const bool centerCursor = settings.value(QStringLiteral("Editor/centerCursor")).toBool();
     ui->actionTypewriter_mode->setChecked(centerCursor);
