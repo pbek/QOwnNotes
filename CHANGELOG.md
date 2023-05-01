@@ -2,6 +2,8 @@
 
 ## 23.5.0
 - the text `[Debug]` is now prepended in the window title for debug builds
+- the code block syntax highlighting for **nix code** was improved
+  (for [#2779](https://github.com/pbek/QOwnNotes/issues/2779))
 
 ## 23.4.7
 - the timing of the **Start hidden** feature got improved (for [#2778](https://github.com/pbek/QOwnNotes/issues/2778))

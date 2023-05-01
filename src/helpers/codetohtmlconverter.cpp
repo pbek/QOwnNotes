@@ -144,7 +144,7 @@ QString CodeToHtmlConverter::process(StringView input) const {
             comment = QLatin1Char('#');
             break;
         case CodeNix:
-            loadJSData(types, keywords, builtin, literals, others);
+            loadNixData(types, keywords, builtin, literals, others);
             comment = QLatin1Char('#');
             break;
         case CodeCMake:
