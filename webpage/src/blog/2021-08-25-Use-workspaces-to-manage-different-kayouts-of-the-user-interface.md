@@ -24,7 +24,7 @@ You can also **drag panels around** by enabling *Unlock panels* in the *Window* 
 
 ![qownnotes-media-NfiQOu](./media/qownnotes-media-NfiQOu.png)
 
-Afterwards you can switch between the workspaces in the **workspaces dropdown**.
+Afterward you can switch between the workspaces in the **workspaces dropdown**.
 
 ![qownnotes-media-cfwfnC](./media/qownnotes-media-cfwfnC.png)
 

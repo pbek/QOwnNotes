@@ -5223,7 +5223,7 @@
 - you can now focus the note text edit in a script with `mainWindow.focusNoteTextEdit()`
 - there now is a new script `Disable read-only mode` in the *Scripting repository*
   to disable the read-only mode if a note is double clicked
-    - the note text edit will also be focused afterwards
+    - the note text edit will also be focused afterward
 - added more Polish, Chinese Traditional, Brazilian Portuguese, German and
   Italian translation (thank you lucjan, abev66, mlimacarlos, rakekniven and mlocati)
 

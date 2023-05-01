@@ -8,7 +8,7 @@ You can install it by typing:
 snap install qownnotes
 ```
 
-Afterwards you should be able to run QOwnNotes with the command `qownnotes`.
+Afterward you should be able to run QOwnNotes with the command `qownnotes`.
 
 ::: tip
 [Snaps](http://snapcraft.io) are working on many Linux distributions like Ubuntu, Arch Linux, Debian, Fedora, 

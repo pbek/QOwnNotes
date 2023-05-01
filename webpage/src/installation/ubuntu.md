@@ -47,7 +47,7 @@ Then you can change the execute-permissions on the file:
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Afterwards you should be able to execute the AppImage to run QOwnNotes.
+Afterward you should be able to execute the AppImage to run QOwnNotes.
 
 ## OBS Repository
 

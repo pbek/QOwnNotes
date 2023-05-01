@@ -434,7 +434,7 @@ You may want to take a look at the example
 
 ::: tip
 If you turned off that your note headline determines the note filename then you
-have to rename your note file yourself afterwards, like this:
+have to rename your note file yourself afterward, like this:
 
 ```js
 var note = script.currentNote();

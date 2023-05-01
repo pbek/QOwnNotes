@@ -17,7 +17,7 @@ need the packages `qtwebsockets` and `qt5compat` to build QOwnNotes with Qt6
 (only `qtwebsockets` for Qt5). If you build under Windows, you want to stick to
 *MinGw 64-bit*.
 
-Afterwards open the project file `src/QOwnNotes.pro` and click on
+Afterward open the project file `src/QOwnNotes.pro` and click on
 **Build** / **Build Project QOwnNotes**.
 
 Or you can build it directly in your terminal:
