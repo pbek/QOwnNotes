@@ -42,6 +42,7 @@ const installationNavItems = [
   'installation/snap',
   'installation/flatpak',
   'installation/appimage',
+  'installation/nix',
   'installation/arch',
   'installation/solus',
   'installation/kaos',
