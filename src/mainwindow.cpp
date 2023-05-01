@@ -3844,6 +3844,11 @@ void MainWindow::updateWindowTitle() {
     }
 
     title += QStringLiteral(" - %3").arg(QStringLiteral(VERSION));
+
+#ifdef QT_DEBUG
+    title.prepend(QStringLiteral("[Debug] "));
+#endif
+
     setWindowTitle(title);
 }
 
