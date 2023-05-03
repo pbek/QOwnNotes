@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.5.1
+- improve file-extension detection for images sent from a browser via the Web
+  Companion extension (for [#2781](https://github.com/pbek/QOwnNotes/issues/2781))
+
 ## 23.5.0
 - the text `[Debug]` is now prepended in the window title for debug builds
 - the code block syntax highlighting for **nix code** was improved

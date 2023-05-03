@@ -3612,10 +3612,14 @@ QString Note::downloadUrlToMedia(const QUrl &url, bool returnUrlOnly) {
  * @param imageSuffix
  * @return
  */
-QString Note::importMediaFromBase64(QString &data, const QString &imageSuffix) {
+QString Note::importMediaFromBase64(QString &data, QString imageSuffix) const {
     // if data still starts with base64 prefix remove it
     if (data.startsWith(QLatin1String("base64,"), Qt::CaseInsensitive)) {
         data = data.mid(6);
+    }
+
+    if (imageSuffix.isEmpty()) {
+        imageSuffix = QLatin1String("dat");
     }
 
     // create a temporary file for the image
@@ -3630,7 +3634,7 @@ QString Note::importMediaFromBase64(QString &data, const QString &imageSuffix) {
     // write image to the temporary file
     tempFile->write(QByteArray::fromBase64(data.toLatin1()));
 
-    // store the temporary image in the media folder and return the markdown
+    // store the temporary image in the media folder and return the Markdown
     // code
     QString markdownCode = getInsertMediaMarkdown(tempFile);
 
@@ -3653,7 +3657,9 @@ QString Note::importMediaFromDataUrl(const QString &dataUrl) {
 
         parts = parts[1].split(QStringLiteral(";base64,"));
         if (parts.count() == 2) {
-            QString fileExtension = Utils::Misc::fileExtensionForMimeType(parts[0].mid(5));
+            auto mimeType = QLatin1String("image/") + parts[0];
+            QString fileExtension = Utils::Misc::fileExtensionForMimeType(mimeType);
+
             return importMediaFromBase64(parts[1], fileExtension);
         }
     }

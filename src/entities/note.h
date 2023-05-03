@@ -266,8 +266,7 @@ class Note {
 
     QString downloadUrlToMedia(const QUrl &url, bool returnUrlOnly = false);
 
-    QString importMediaFromBase64(QString &data,
-                                  const QString &imageSuffix = QStringLiteral("dat"));
+    QString importMediaFromBase64(QString &data, QString imageSuffix = QString()) const;
 
     QString importMediaFromDataUrl(const QString &dataUrl);
 
