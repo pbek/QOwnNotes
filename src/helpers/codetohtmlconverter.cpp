@@ -49,7 +49,8 @@ void CodeToHtmlConverter::initCodeLangs() Q_DECL_NOTHROW {
         {QStringLiteral("vex"), CodeToHtmlConverter::CodeVex},
         {QStringLiteral("xml"), CodeToHtmlConverter::CodeXML},
         {QStringLiteral("yml"), CodeToHtmlConverter::CodeYAML},
-        {QStringLiteral("yaml"), CodeToHtmlConverter::CodeYAML}};
+        {QStringLiteral("yaml"), CodeToHtmlConverter::CodeYAML},
+        {QStringLiteral("yaml"), CodeToHtmlConverter::CodeForth}};
 }
 
 QString CodeToHtmlConverter::process(const QString &input) const {
@@ -150,6 +151,10 @@ QString CodeToHtmlConverter::process(StringView input) const {
         case CodeCMake:
             loadCMakeData(types, keywords, builtin, literals, others);
             comment = QLatin1Char('#');
+            break;
+        case CodeForth:
+            loadForthData(types, keywords, builtin, literals, others);
+            comment = QLatin1Char('\\');;
             break;
         default:
             output += escapeString(input);
