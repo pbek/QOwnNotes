@@ -22,13 +22,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '12'
-    - run: yarn install
-    - run: yarn run build
-      shell: bash
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v2
     - name: Set up Docker Buildx
