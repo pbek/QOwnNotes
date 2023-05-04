@@ -22,6 +22,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      # copy screenshots and changelog to webpage folder
+    - run: cp ../screenshots src/.vuepress/public -R; cp ../CHANGELOG.md src/changelog.md
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v2
     - name: Set up Docker Buildx
