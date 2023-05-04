@@ -17,7 +17,7 @@ Następnie możesz zmienić uprawnienia uruchomienia pliku:
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Dzięki temu będziesz mógł uruchomić AppImage, aby otworzyć QOwnNotes.
+Afterward you should be able to execute the AppImage to run QOwnNotes.
 
 ::: warning
 Jeśli chcesz użyć **automatycznego aktualizatora**, upewnij się, że umieściłeś swój obraz aplikacji w miejscu, w którym Twoje konto użytkownika ma dostęp do zapisu, na przykład gdzieś w katalogu domowym.

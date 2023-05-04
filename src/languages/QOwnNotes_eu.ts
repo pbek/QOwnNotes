@@ -1514,7 +1514,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopiatu</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -1732,8 +1732,8 @@
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="84"/>
-<source>The application will be restarted afterwards.</source>
-<translation>Aplikazioa gero berrabiaraziko da.</translation>
+<source>The application will be restarted afterward.</source>
+<translation type="unfinished">The application will be restarted afterward.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="143"/>
@@ -2055,7 +2055,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="7899"/>
+<location filename="../mainwindow.cpp" line="7900"/>
 <source>Add a tag to the current note</source>
 <translation>Gehitu etiketa uneko oharrari</translation>
 </message>
@@ -2171,7 +2171,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1450"/>
-<location filename="../mainwindow.cpp" line="9388"/>
+<location filename="../mainwindow.cpp" line="9389"/>
 <source>Select &amp;all notes</source>
 <translation>Hautatu &amp;ohar guztiak</translation>
 </message>
@@ -2221,7 +2221,7 @@
 <translation>Bilatu edo sortu oharra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7900"/>
+<location filename="../mainwindow.cpp" line="7901"/>
 <source>Add a tag to the selected notes</source>
 <translation>Gehitu etiketa hautatutako oharretan</translation>
 </message>
@@ -2610,7 +2610,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2246"/>
-<location filename="../mainwindow.cpp" line="10305"/>
+<location filename="../mainwindow.cpp" line="10306"/>
 <source>Remove current workspace</source>
 <translation>Kendu uneko laneko area</translation>
 </message>
@@ -2678,7 +2678,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2367"/>
-<location filename="../mainwindow.cpp" line="9367"/>
+<location filename="../mainwindow.cpp" line="9368"/>
 <source>Open note in different window</source>
 <translation>Ireki oharra beste leiho batean</translation>
 </message>
@@ -2699,7 +2699,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2407"/>
-<location filename="../mainwindow.cpp" line="9372"/>
+<location filename="../mainwindow.cpp" line="9373"/>
 <source>Show note git versions</source>
 <translation>Erakutsi oharrak git bertsioak</translation>
 </message>
@@ -2782,7 +2782,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2570"/>
-<location filename="../mainwindow.cpp" line="11248"/>
+<location filename="../mainwindow.cpp" line="11255"/>
 <source>Automatically detect</source>
 <translation>Automatikoki hautematea</translation>
 </message>
@@ -3007,22 +3007,22 @@
 <translation>Inportatu ohar Evernote-tik</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2798"/>
+<location filename="../mainwindow.cpp" line="2799"/>
 <source>Note was removed externally!</source>
 <translation>Oharra kanpotik kendu da!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2799"/>
+<location filename="../mainwindow.cpp" line="2800"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>Oraingo oharra aplikazio honetatik kanpo kendu da!
 Berrezarri uneko oharra?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5281"/>
-<location filename="../mainwindow.cpp" line="5301"/>
-<location filename="../mainwindow.cpp" line="6581"/>
-<location filename="../mainwindow.cpp" line="9453"/>
+<location filename="../mainwindow.cpp" line="5282"/>
+<location filename="../mainwindow.cpp" line="5302"/>
+<location filename="../mainwindow.cpp" line="6582"/>
+<location filename="../mainwindow.cpp" line="9454"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Utzi</translation>
 </message>
@@ -3034,47 +3034,47 @@ Berrezarri uneko oharra?</translation>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3036"/>
+<location filename="../mainwindow.cpp" line="3037"/>
 <source>new version %1 available</source>
 <translation>%1 bertsio berria eskuragarri dago</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3146"/>
+<location filename="../mainwindow.cpp" line="3147"/>
 <source>Abort</source>
 <translation>Abortatu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3146"/>
+<location filename="../mainwindow.cpp" line="3147"/>
 <source>Loading notes…</source>
 <translation>Oharrak kargatzen…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3352"/>
+<location filename="../mainwindow.cpp" line="3353"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>Datu-base gatazkatsu bikoiztua kendu da: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3353"/>
+<location filename="../mainwindow.cpp" line="3354"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>Ezin izan da gatazkaren datu bikoiztua kendu: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3358"/>
+<location filename="../mainwindow.cpp" line="3359"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>Kendu egin da bateratutako datu-base gatazkatua: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3359"/>
+<location filename="../mainwindow.cpp" line="3360"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>Ezin izan da batu gabeko gatazkaren datu basea kendu: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3373"/>
+<location filename="../mainwindow.cpp" line="3374"/>
 <source>Delete conflicted database copies</source>
 <translation>Ezabatu gatazka datu-basearen kopiak</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3393"/>
+<location filename="../mainwindow.cpp" line="3394"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>%n kendutako datu-basearen kopia kendu da</numerusform>
@@ -3082,62 +3082,62 @@ Berrezarri uneko oharra?</translation>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3555"/>
+<location filename="../mainwindow.cpp" line="3556"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>Hautatu zure oharrak gordeko diren karpeta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3579"/>
+<location filename="../mainwindow.cpp" line="3580"/>
 <source>No folder was selected</source>
 <translation>Ez da karpeta hautatu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3580"/>
+<location filename="../mainwindow.cpp" line="3581"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>Zure ownCloud oharren karpeta hautatu behar duzu software hau funtzionatzeko!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3582"/>
+<location filename="../mainwindow.cpp" line="3583"/>
 <source>&amp;Retry</source>
 <translation>&amp;Saiatu berriro</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3582"/>
+<location filename="../mainwindow.cpp" line="3583"/>
 <source>&amp;Exit</source>
 <translation>&amp;Irten</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3876"/>
+<location filename="../mainwindow.cpp" line="3877"/>
 <source>Remove current note</source>
 <translation>Kendu uneko oharra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3877"/>
+<location filename="../mainwindow.cpp" line="3878"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Kendu uneko oharra: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4246"/>
+<location filename="../mainwindow.cpp" line="4247"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>Idatzi enkriptatutako ohar honen &lt;strong&gt; pasahitza &lt;/strong&gt;.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4268"/>
+<location filename="../mainwindow.cpp" line="4269"/>
 <source>Note can't be decrypted!</source>
 <translation>Oharra ezin da desenkriptatu!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4269"/>
+<location filename="../mainwindow.cpp" line="4270"/>
 <source>It seems that your password is not valid!</source>
 <translation>Badirudi zure pasahitza ez dela baliozkoa!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4449"/>
+<location filename="../mainwindow.cpp" line="4450"/>
 <source>Remove selected notes</source>
 <translation>Kendu hautatutako oharrak</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4450"/>
+<location filename="../mainwindow.cpp" line="4451"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3151,12 +3151,12 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4522"/>
+<location filename="../mainwindow.cpp" line="4523"/>
 <source>Remove selected tags</source>
 <translation>Kendu hautatutako etiketak</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4523"/>
+<location filename="../mainwindow.cpp" line="4524"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>Ezabatu &lt;strong&gt;%n &lt;/strong&gt; hautatutako etiketa? Prozesu honetan ez da oharrik ezabatuko.</numerusform>
@@ -3164,13 +3164,13 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4577"/>
-<location filename="../mainwindow.cpp" line="8668"/>
+<location filename="../mainwindow.cpp" line="4578"/>
+<location filename="../mainwindow.cpp" line="8669"/>
 <source>Move selected notes</source>
 <translation>Mugitu hautatutako oharrak</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4578"/>
+<location filename="../mainwindow.cpp" line="4579"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Mugitu %n hautatutako oharra &lt;strong&gt;%2 &lt;/strong&gt; helbidera?</numerusform>
@@ -3178,13 +3178,13 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4687"/>
-<location filename="../mainwindow.cpp" line="8780"/>
+<location filename="../mainwindow.cpp" line="4688"/>
+<location filename="../mainwindow.cpp" line="8781"/>
 <source>Copy selected notes</source>
 <translation>Kopiatu hautatutako oharrak</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4688"/>
+<location filename="../mainwindow.cpp" line="4689"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Kopiatu %n hautatutako oharra &lt;strong&gt;%2 &lt;/strong&gt; helbidera?</numerusform>
@@ -3192,13 +3192,13 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4715"/>
-<location filename="../mainwindow.cpp" line="4857"/>
+<location filename="../mainwindow.cpp" line="4716"/>
+<location filename="../mainwindow.cpp" line="4858"/>
 <source>Done</source>
 <translation>Egina</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4716"/>
+<location filename="../mainwindow.cpp" line="4717"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n oharra &lt;strong&gt;%2 &lt;/strong&gt; -ra kopiatu da.</numerusform>
@@ -3206,12 +3206,12 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4729"/>
+<location filename="../mainwindow.cpp" line="4730"/>
 <source>Tag selected notes</source>
 <translation>Markatu hautatutako oharrak</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4730"/>
+<location filename="../mainwindow.cpp" line="4731"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Etiketa %n hautatutako oharra &lt;strong&gt;%2 &lt;/strong&gt; rekin?</numerusform>
@@ -3219,37 +3219,37 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4996"/>
+<location filename="../mainwindow.cpp" line="4997"/>
 <source>Restart application</source>
 <translation>Berrabiarazi aplikazioa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4997"/>
+<location filename="../mainwindow.cpp" line="4998"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Baliteke aplikazioa berrabiarazi behar izatea aldaketak eragina izateko.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5000"/>
+<location filename="../mainwindow.cpp" line="5001"/>
 <source>Restart</source>
 <translation>Berriro hasi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5204"/>
+<location filename="../mainwindow.cpp" line="5205"/>
 <source>PDF files</source>
 <translation>PDF fitxategiak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5277"/>
+<location filename="../mainwindow.cpp" line="5278"/>
 <source>Todo lists disabled!</source>
 <translation>Todo zerrendak desgaituta daude!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5278"/>
+<location filename="../mainwindow.cpp" line="5279"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Zerrenda guztiak desgaitu dituzu. &lt;br /&gt; Egiaztatu zure &lt;strong&gt; Todo &lt;/strong&gt; ren konfigurazioa ezarpenetan!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5519"/>
+<location filename="../mainwindow.cpp" line="5520"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%n &lt;/strong&gt; &lt;strong&gt;%1 &lt;/strong&gt; terminoaren agerraldia aurkitu da</numerusform>
@@ -3257,79 +3257,79 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6062"/>
+<location filename="../mainwindow.cpp" line="6063"/>
 <source>Note folders</source>
 <translation>Oharra karpetak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6177"/>
+<location filename="../mainwindow.cpp" line="6178"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>Oharra bertsioak zure ownCloud zerbitzaritik kargatuta daude</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6190"/>
+<location filename="../mainwindow.cpp" line="6191"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Zabaltzen diren oharrak ownCloud zerbitzaritik kargatuta daude</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6428"/>
+<location filename="../mainwindow.cpp" line="6429"/>
 <source>Inserted text as text attachment file</source>
 <translation type="unfinished">Inserted text as text attachment file</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6577"/>
+<location filename="../mainwindow.cpp" line="6578"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>Zure oharra desenkriptatu eta testu arrunt gisa gordeko da. Gogoan izan zifratutako oharra zure zerbitzariarekin sinkronizatuko dela eta testu sentikorra ager daiteke! &lt;br /&gt; Zure oharra desenkriptatu nahi al duzu?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6671"/>
+<location filename="../mainwindow.cpp" line="6672"/>
 <source>Markdown files</source>
 <translation>Markdown fitxategiak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6687"/>
+<location filename="../mainwindow.cpp" line="6688"/>
 <source>Export attached files</source>
 <translation type="unfinished">Export attached files</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6688"/>
+<location filename="../mainwindow.cpp" line="6689"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6718"/>
+<location filename="../mainwindow.cpp" line="6719"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>Laster-marken posizioa %1 zirrikituan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6734"/>
+<location filename="../mainwindow.cpp" line="6735"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>Laster-marken posizioan %1 jaitsi da</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6907"/>
-<location filename="../mainwindow.cpp" line="6974"/>
+<location filename="../mainwindow.cpp" line="6908"/>
+<location filename="../mainwindow.cpp" line="6975"/>
 <source>Inserting image</source>
 <translation>Irudia sartuz</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6912"/>
-<location filename="../mainwindow.cpp" line="6978"/>
+<location filename="../mainwindow.cpp" line="6913"/>
+<location filename="../mainwindow.cpp" line="6979"/>
 <source>Done inserting image</source>
 <translation>Erantsi irudia</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6914"/>
+<location filename="../mainwindow.cpp" line="6915"/>
 <source>Inserting attachment</source>
 <translation>Eranskina sartuz</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6919"/>
+<location filename="../mainwindow.cpp" line="6920"/>
 <source>Done inserting attachment</source>
 <translation>Erantsitako fitxategia txertatzea</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="6930"/>
+<location filename="../mainwindow.cpp" line="6931"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>%n ohar kopiatu %1era</numerusform>
@@ -3337,7 +3337,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="6940"/>
+<location filename="../mainwindow.cpp" line="6941"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>Hutsegitea %n ohar kopiatu (ziurrenik lehendik zegoen)</numerusform>
@@ -3345,7 +3345,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="6949"/>
+<location filename="../mainwindow.cpp" line="6950"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>%n oharraren kopia jauzi egin da (ez da marka edo testu-fitxategia edo ez da irakurgarria)</numerusform>
@@ -3353,210 +3353,210 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6962"/>
+<location filename="../mainwindow.cpp" line="6963"/>
 <source>Saving temporary image</source>
 <translation>Aldi baterako irudia gordetzen</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6412"/>
-<location filename="../mainwindow.cpp" line="6980"/>
+<location filename="../mainwindow.cpp" line="6413"/>
+<location filename="../mainwindow.cpp" line="6981"/>
 <source>Temporary file can't be opened</source>
 <translation>Ezin da aldi baterako fitxategia ireki</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7034"/>
+<location filename="../mainwindow.cpp" line="7035"/>
 <source>Downloading %1</source>
 <translation>%1 deskargatzen</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7198"/>
+<location filename="../mainwindow.cpp" line="7199"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Berrezarri letra tamaina %1 puntura</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7944"/>
+<location filename="../mainwindow.cpp" line="7945"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>Kendu '%1' etiketa uneko oharretik</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7945"/>
+<location filename="../mainwindow.cpp" line="7946"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>Kendu '%1' etiketa hautatutako oharretatik</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8188"/>
+<location filename="../mainwindow.cpp" line="8189"/>
 <source>Rename tag</source>
 <translation>Aldatu izena etiketa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8189"/>
+<location filename="../mainwindow.cpp" line="8190"/>
 <source>Assign color</source>
 <translation>Esleitu kolorea</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8190"/>
+<location filename="../mainwindow.cpp" line="8191"/>
 <source>Disable color</source>
 <translation>Desgaitu kolorea</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8194"/>
+<location filename="../mainwindow.cpp" line="8195"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;Eraman etiketak…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8404"/>
+<location filename="../mainwindow.cpp" line="8405"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>Eraman erroa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8939"/>
+<location filename="../mainwindow.cpp" line="8940"/>
 <source>The scripting engine was reloaded</source>
 <translation>Scripting motorra berriro kargatu zen</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8973"/>
+<location filename="../mainwindow.cpp" line="8974"/>
 <source>HTML files</source>
 <translation>HTML fitxategiak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9304"/>
+<location filename="../mainwindow.cpp" line="9305"/>
 <source>Jump to the note's subfolder</source>
 <translation>Oharren azpikarpetara salto egin
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9360"/>
+<location filename="../mainwindow.cpp" line="9361"/>
 <source>Open selected notes in tabs</source>
 <translation type="unfinished">Open selected notes in tabs</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10841"/>
+<location filename="../mainwindow.cpp" line="10843"/>
 <source>A script update was found!</source>
 <translation>Gidoi eguneratzea aurkitu da!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10846"/>
+<location filename="../mainwindow.cpp" line="10848"/>
 <source>Script updates</source>
 <translation>Script eguneratzeak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10847"/>
+<location filename="../mainwindow.cpp" line="10849"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>Scripten eguneratzeak aurkitu dira script-biltegian. Eguneratu nahi dituzu?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10862"/>
+<location filename="../mainwindow.cpp" line="10869"/>
 <source>No script updates were found</source>
 <translation>Ez da script-eguneratza aurkitu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11496"/>
+<location filename="../mainwindow.cpp" line="11503"/>
 <source>Toggle note stickiness</source>
 <translation>Txandakatu oharren itsaskotasuna</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11501"/>
+<location filename="../mainwindow.cpp" line="11508"/>
 <source>Close other note tabs</source>
 <translation>Itxi beste fitxen fitxak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9252"/>
-<location filename="../mainwindow.cpp" line="9438"/>
+<location filename="../mainwindow.cpp" line="9253"/>
+<location filename="../mainwindow.cpp" line="9439"/>
 <source>Rename note</source>
 <translation>Aldatu izena berriro</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7300"/>
+<location filename="../mainwindow.cpp" line="7301"/>
 <source>Show all notes (%1)</source>
 <translation type="unfinished">Show all notes (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7447"/>
+<location filename="../mainwindow.cpp" line="7448"/>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9254"/>
+<location filename="../mainwindow.cpp" line="9255"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>Oharraren izenaren izena aldatzeko aukera ematen du</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9268"/>
+<location filename="../mainwindow.cpp" line="9269"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;Mugitu oharrak…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9269"/>
+<location filename="../mainwindow.cpp" line="9270"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;Kopiatu oharrak…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9307"/>
+<location filename="../mainwindow.cpp" line="9308"/>
 <source>Move notes to subfolder…</source>
 <translation>Mugitu oharrak azpikarpeta…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9310"/>
+<location filename="../mainwindow.cpp" line="9311"/>
 <source>Copy notes to subfolder…</source>
 <translation>Kopiatu oharrak azpikarpeta…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9318"/>
+<location filename="../mainwindow.cpp" line="9319"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;Etiketatu hautatutako oharrak…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9340"/>
+<location filename="../mainwindow.cpp" line="9341"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Kendu etiketa hautatutako oharretatik…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9438"/>
+<location filename="../mainwindow.cpp" line="9439"/>
 <source>Name:</source>
 <translation>Izena:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9449"/>
+<location filename="../mainwindow.cpp" line="9450"/>
 <source>Note renaming not enabled!</source>
 <translation>Ez da gaiaren izena aldatu!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10082"/>
+<location filename="../mainwindow.cpp" line="10083"/>
 <source>Create new workspace</source>
 <translation>Sortu laneko area berria</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10082"/>
-<location filename="../mainwindow.cpp" line="10343"/>
+<location filename="../mainwindow.cpp" line="10083"/>
+<location filename="../mainwindow.cpp" line="10344"/>
 <source>Workspace name:</source>
 <translation>Laneko arearen izena:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10199"/>
+<location filename="../mainwindow.cpp" line="10200"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>osoa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10206"/>
+<location filename="../mainwindow.cpp" line="10207"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>minimal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10306"/>
+<location filename="../mainwindow.cpp" line="10307"/>
 <source>Remove the current workspace?</source>
 <translation>Uneko laneko area kendu?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10343"/>
+<location filename="../mainwindow.cpp" line="10344"/>
 <source>Rename workspace</source>
 <translation>Berrizendatu laneko area</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10496"/>
+<location filename="../mainwindow.cpp" line="10497"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3565,52 +3565,52 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10762"/>
+<location filename="../mainwindow.cpp" line="10763"/>
 <source>Disallow all note editing</source>
 <translation>Debekatu oharren edizio guztiak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10780"/>
+<location filename="../mainwindow.cpp" line="10781"/>
 <source>Note editing disabled</source>
 <translation type="unfinished">Note editing disabled</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10781"/>
+<location filename="../mainwindow.cpp" line="10782"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
 <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11006"/>
+<location filename="../mainwindow.cpp" line="11013"/>
 <source>Select text files to import</source>
 <translation>Hautatu inportatu beharreko testu fitxategiak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11035"/>
+<location filename="../mainwindow.cpp" line="11042"/>
 <source>Importing: %1</source>
 <translation>Inportatzen: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11097"/>
+<location filename="../mainwindow.cpp" line="11104"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>Oharra '%1' goiburua arbelean kopiatu da</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11183"/>
+<location filename="../mainwindow.cpp" line="11190"/>
 <source>Leave full-screen mode</source>
 <translation>Utzi pantaila osoko modua</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11358"/>
+<location filename="../mainwindow.cpp" line="11365"/>
 <source>Custom editor width</source>
 <translation>Editorearen zabalera pertsonalizatua</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11358"/>
+<location filename="../mainwindow.cpp" line="11365"/>
 <source>Characters:</source>
 <translation>Pertsonaiak:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7918"/>
+<location filename="../mainwindow.cpp" line="7919"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n ohar hautatu da</numerusform>
@@ -3619,7 +3619,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2452"/>
-<location filename="../mainwindow.cpp" line="10763"/>
+<location filename="../mainwindow.cpp" line="10764"/>
 <source>Allow all note editing</source>
 <translation>Baimendu ohar guztiak editatu</translation>
 </message>
@@ -3629,12 +3629,12 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <translation>&amp;Etiketa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4800"/>
+<location filename="../mainwindow.cpp" line="4801"/>
 <source>Remove tag from selected notes</source>
 <translation>Kendu etiketa hautatutako oharretan</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4801"/>
+<location filename="../mainwindow.cpp" line="4802"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>Hautatu &lt;strong&gt;%1&lt;/strong&gt; etiketa %n hautatutako oharra?</numerusform>
@@ -3642,7 +3642,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4858"/>
+<location filename="../mainwindow.cpp" line="4859"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>&lt;strong&gt;%1 &lt;/strong&gt; etiketa %n oharrean ezabatu da</numerusform>
@@ -3650,120 +3650,120 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4901"/>
+<location filename="../mainwindow.cpp" line="4902"/>
 <source>Current notes folder: </source>
 <translation>Uneko oharren karpeta: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4902"/>
+<location filename="../mainwindow.cpp" line="4903"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>Ezarri oharren karpeta. Uneko oharren karpeta:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5103"/>
+<location filename="../mainwindow.cpp" line="5104"/>
 <source>Print note</source>
 <translation>Inprimatu oharra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5154"/>
+<location filename="../mainwindow.cpp" line="5155"/>
 <source>Letter</source>
 <translation>Letra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5180"/>
+<location filename="../mainwindow.cpp" line="5181"/>
 <source>Portrait</source>
 <translation>Erretratua</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5180"/>
+<location filename="../mainwindow.cpp" line="5181"/>
 <source>Landscape</source>
 <translation>Paisaia</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5185"/>
+<location filename="../mainwindow.cpp" line="5186"/>
 <source>Orientation</source>
 <translation>Orientazio</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5185"/>
+<location filename="../mainwindow.cpp" line="5186"/>
 <source>Orientation:</source>
 <translation>Orientazio:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5205"/>
+<location filename="../mainwindow.cpp" line="5206"/>
 <source>Export current note as PDF</source>
 <translation>Esportatu uneko oharra PDF gisa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5298"/>
+<location filename="../mainwindow.cpp" line="5299"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Ez duzu aukeratutako zerrenden bat hautatu. &lt;br/&gt; Mesedez, egiaztatu &lt;strong&gt; Todo &lt;/strong&gt; konfigurazioa ezarpenetan!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6044"/>
+<location filename="../mainwindow.cpp" line="6045"/>
 <source>Open QOwnNotes</source>
 <translation>Ireki QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5876"/>
-<location filename="../mainwindow.cpp" line="6094"/>
-<location filename="../mainwindow.cpp" line="9248"/>
+<location filename="../mainwindow.cpp" line="5877"/>
+<location filename="../mainwindow.cpp" line="6095"/>
+<location filename="../mainwindow.cpp" line="9249"/>
 <source>New note</source>
 <translation>Ohar berria</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6109"/>
+<location filename="../mainwindow.cpp" line="6110"/>
 <source>Recent notes</source>
 <translation>Azken oharrak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6125"/>
+<location filename="../mainwindow.cpp" line="6126"/>
 <source>Show todo lists</source>
 <translation>Erakutsi lanen zerrendak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6135"/>
+<location filename="../mainwindow.cpp" line="6136"/>
 <source>Recent tasks</source>
 <translation>Azken lanak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6155"/>
+<location filename="../mainwindow.cpp" line="6156"/>
 <source>Quit</source>
 <translation>Irten</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
 <location filename="../mainwindow.cpp" line="795"/>
-<location filename="../mainwindow.cpp" line="2101"/>
+<location filename="../mainwindow.cpp" line="2102"/>
 <source>Note folder</source>
 <translation>Oharra karpeta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8561"/>
-<location filename="../mainwindow.cpp" line="8620"/>
+<location filename="../mainwindow.cpp" line="8562"/>
+<location filename="../mainwindow.cpp" line="8621"/>
 <source>Copy to note folder</source>
 <translation>Kopiatu oharra karpetan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8561"/>
-<location filename="../mainwindow.cpp" line="8620"/>
+<location filename="../mainwindow.cpp" line="8562"/>
+<location filename="../mainwindow.cpp" line="8621"/>
 <source>Move to note folder</source>
 <translation>Mugitu oharra karpetan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8562"/>
-<location filename="../mainwindow.cpp" line="8621"/>
+<location filename="../mainwindow.cpp" line="8563"/>
+<location filename="../mainwindow.cpp" line="8622"/>
 <source>Copy to this subfolder</source>
 <translation>Kopiatu azpikarpeta honetan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8562"/>
-<location filename="../mainwindow.cpp" line="8621"/>
+<location filename="../mainwindow.cpp" line="8563"/>
+<location filename="../mainwindow.cpp" line="8622"/>
 <source>Move to this subfolder</source>
 <translation>Joan azpikarpeta honetara</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8663"/>
+<location filename="../mainwindow.cpp" line="8664"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Mugitu %n hautatutako oharra azpikarpeta &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3771,13 +3771,13 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5000"/>
-<location filename="../mainwindow.cpp" line="11020"/>
+<location filename="../mainwindow.cpp" line="5001"/>
+<location filename="../mainwindow.cpp" line="11027"/>
 <source>Cancel</source>
 <translation>Utzi</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8756"/>
+<location filename="../mainwindow.cpp" line="8757"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n oharra "%2" azpikarpeta mugitu zen</numerusform>
@@ -3785,7 +3785,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8775"/>
+<location filename="../mainwindow.cpp" line="8776"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Kopiatu %n aukeratu hautatutako oharra azpikarpeta &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3793,7 +3793,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8847"/>
+<location filename="../mainwindow.cpp" line="8848"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n oharra "%2" azpikarpeta kopiatu zen</numerusform>
@@ -3801,103 +3801,103 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9366"/>
+<location filename="../mainwindow.cpp" line="9367"/>
 <source>Open note in external editor</source>
 <translation>Ireki ohar kanpoko editorean</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9368"/>
+<location filename="../mainwindow.cpp" line="9369"/>
 <source>Show note in file manager</source>
 <translation>Erakutsi ohar fitxategi kudeatzailean</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9450"/>
+<location filename="../mainwindow.cpp" line="9451"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>Zure oharra berriztatzea nahi baduzu, oharren izenburuaren izenburua desberdina izan dadin aukera gaitu behar duzu.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9625"/>
+<location filename="../mainwindow.cpp" line="9626"/>
 <source>Create a new folder</source>
 <translation>Sortu karpeta berri bat</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9625"/>
+<location filename="../mainwindow.cpp" line="9626"/>
 <source>Folder name:</source>
 <translation>Karpetaren izena:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7328"/>
+<location filename="../mainwindow.cpp" line="7329"/>
 <source>show all untagged notes (%1)</source>
 <translation>erakutsi gabeko ohar guztiak (%1) erakutsi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7330"/>
+<location filename="../mainwindow.cpp" line="7331"/>
 <source>Untagged notes</source>
 <translation>Idatzitako oharrak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8974"/>
+<location filename="../mainwindow.cpp" line="8975"/>
 <source>Export current note as HTML file</source>
 <translation>Esportatu uneko oharra HTML fitxategi gisa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5162"/>
+<location filename="../mainwindow.cpp" line="5163"/>
 <source>Page size</source>
 <translation>Orriaren tamaina</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1149"/>
+<location filename="../mainwindow.cpp" line="1150"/>
 <source>quit toolbar</source>
 <translation>irten tresna-barra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5162"/>
+<location filename="../mainwindow.cpp" line="5163"/>
 <source>Page size:</source>
 <translation>Orriaren tamaina:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5262"/>
+<location filename="../mainwindow.cpp" line="5263"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes-ek erabilera anonimoaren datuen jarraipena egingo du, hurrengo QOwnNotes-en zatiak hobetzen diren erabakitzeko eta akatsak aurkitzeko eta konpontzeko. Portaera hori ezar dezakezu.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5266"/>
+<location filename="../mainwindow.cpp" line="5267"/>
 <source>&amp;Ok</source>
 <translation>&amp;Ados</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9258"/>
+<location filename="../mainwindow.cpp" line="9259"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;Kendu oharrak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1076"/>
+<location filename="../mainwindow.cpp" line="1077"/>
 <source>Your tasks are being loaded from your server</source>
 <translation>Zereginak zerbitzaritik kargatzen ari dira</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2746"/>
+<location filename="../mainwindow.cpp" line="2747"/>
 <source>Current note was modified externally</source>
 <translation>Uneko oharra kanpotik aldatu da</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2810"/>
-<location filename="../mainwindow.cpp" line="5816"/>
+<location filename="../mainwindow.cpp" line="2811"/>
+<location filename="../mainwindow.cpp" line="5817"/>
 <source>Stored current note to disk</source>
 <translation>Gordetako uneko oharra diskoan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2833"/>
+<location filename="../mainwindow.cpp" line="2834"/>
 <source>Note was modified externally: %1</source>
 <translation>Oharra kanpotik aldatu da: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2853"/>
+<location filename="../mainwindow.cpp" line="2854"/>
 <source>Notes directory was modified externally</source>
 <translation>Oharren direktorioa kanpotik aldatu da</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="2916"/>
+<location filename="../mainwindow.cpp" line="2917"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>Gordetako %n oharra diskoan</numerusform>
@@ -3905,47 +3905,47 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7303"/>
+<location filename="../mainwindow.cpp" line="7304"/>
 <source>All notes</source>
 <translation>Ohar guztiak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8180"/>
+<location filename="../mainwindow.cpp" line="8181"/>
 <source>&amp;Add tag</source>
 <translation>&amp;Gehitu etiketa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8228"/>
+<location filename="../mainwindow.cpp" line="8229"/>
 <source>Tag could not be created!</source>
 <translation>Ezin izan da etiketa sortu!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8405"/>
+<location filename="../mainwindow.cpp" line="8406"/>
 <source>Move to this tag</source>
 <translation>Eraman etiketa honetara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8439"/>
+<location filename="../mainwindow.cpp" line="8440"/>
 <source>Tag this</source>
 <translation>Etiketatu hau</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8462"/>
+<location filename="../mainwindow.cpp" line="8463"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>Ezin da '%1' etiketa etiketa honetara eraman</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8505"/>
+<location filename="../mainwindow.cpp" line="8506"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>Etiketa berria '%1' eraman da</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8191"/>
+<location filename="../mainwindow.cpp" line="8192"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;Kendu etiketak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5297"/>
+<location filename="../mainwindow.cpp" line="5298"/>
 <source>No selected todo lists!</source>
 <translation>Ez da aukeratutako lan zerrendak!</translation>
 </message>
@@ -4005,98 +4005,98 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <translation>Scriptgintza</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1116"/>
+<location filename="../mainwindow.cpp" line="1117"/>
 <source>formatting toolbar</source>
 <translation>formatu tresna-barra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1125"/>
+<location filename="../mainwindow.cpp" line="1126"/>
 <source>inserting toolbar</source>
 <translation>tresna-barra txertatzea</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1132"/>
+<location filename="../mainwindow.cpp" line="1133"/>
 <source>encryption toolbar</source>
 <translation>enkriptatze tresna barra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1139"/>
+<location filename="../mainwindow.cpp" line="1140"/>
 <source>window toolbar</source>
 <translation>leihoaren tresna-barra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1144"/>
+<location filename="../mainwindow.cpp" line="1145"/>
 <source>custom action toolbar</source>
 <translation>ekintza pertsonalizatuaren tresna-barra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1164"/>
+<location filename="../mainwindow.cpp" line="1165"/>
 <source>Workspace selector</source>
 <translation>Laneko arearen hautatzailea</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1310"/>
+<location filename="../mainwindow.cpp" line="1311"/>
 <source>Show %1 panel</source>
 <translation>Erakutsi %1 panela</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1353"/>
+<location filename="../mainwindow.cpp" line="1354"/>
 <source>Show %1</source>
 <translation>Erakutsi %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1694"/>
+<location filename="../mainwindow.cpp" line="1695"/>
 <source>Leave distraction free mode</source>
 <translation>Leave full-screen mode</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1871"/>
+<location filename="../mainwindow.cpp" line="1872"/>
 <source>Switch to note folder</source>
 <translation>Aldatu ohar karpeta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2438"/>
+<location filename="../mainwindow.cpp" line="2439"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>Tresna-barra ezin da izenik gabe kargatu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2767"/>
+<location filename="../mainwindow.cpp" line="2768"/>
 <source>Overwriting external changes of: %1</source>
 <translation>Gainidatzi kanpoko aldaketak: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2779"/>
+<location filename="../mainwindow.cpp" line="2780"/>
 <source>Loading external changes from: %1</source>
 <translation>Kanpoko aldaketak kargatzen: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2811"/>
-<location filename="../mainwindow.cpp" line="5817"/>
+<location filename="../mainwindow.cpp" line="2812"/>
+<location filename="../mainwindow.cpp" line="5818"/>
 <source>Current note could not be stored to disk</source>
 <translation>Uneko oharra ezin izan da diskoan gorde</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2997"/>
+<location filename="../mainwindow.cpp" line="2998"/>
 <source>Read-only</source>
 <translation>Irakurtzeko soilik</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2999"/>
+<location filename="../mainwindow.cpp" line="3000"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>Kontuaren edizioa desgaituta dago, egin klik gaitzeko</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3014"/>
+<location filename="../mainwindow.cpp" line="3015"/>
 <source>Line numbers</source>
 <translation>Errenkada zenbakiak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3024"/>
+<location filename="../mainwindow.cpp" line="3025"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Egin klik hemen zer aldatu den ikusteko eta azken bertsiora eguneratu ahal izateko</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3375"/>
+<location filename="../mainwindow.cpp" line="3376"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>OwnCloud sinkronizazio prozesua blokeatu dezakeen &lt;strong&gt;%n&lt;/strong&gt; datu baseko kopia automatikoki ezabatu nahi duzu?</numerusform>
@@ -4104,7 +4104,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4786"/>
+<location filename="../mainwindow.cpp" line="4787"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n oharra "%2" etiketa zen</numerusform>
@@ -4112,7 +4112,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5515"/>
+<location filename="../mainwindow.cpp" line="5516"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%n &lt;/strong&gt; &lt;strong&gt;%1 &lt;/strong&gt; gertaera aurkitu da</numerusform>
@@ -4120,61 +4120,61 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5876"/>
+<location filename="../mainwindow.cpp" line="5877"/>
 <source>Note headline</source>
 <translation>Kontuan titularra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6990"/>
+<location filename="../mainwindow.cpp" line="6991"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation type="unfinished">Paste &amp;HTML as markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6991"/>
+<location filename="../mainwindow.cpp" line="6992"/>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7046"/>
+<location filename="../mainwindow.cpp" line="7047"/>
 <source>Downloading images finished</source>
 <translation>Irudiak deskargatzen amaitu dira</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5266"/>
-<location filename="../mainwindow.cpp" line="5281"/>
-<location filename="../mainwindow.cpp" line="5301"/>
-<location filename="../mainwindow.cpp" line="9453"/>
+<location filename="../mainwindow.cpp" line="5267"/>
+<location filename="../mainwindow.cpp" line="5282"/>
+<location filename="../mainwindow.cpp" line="5302"/>
+<location filename="../mainwindow.cpp" line="9454"/>
 <source>Open &amp;settings</source>
 <translation>Ireki &amp;ezarpenak</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1692"/>
-<location filename="../mainwindow.cpp" line="11160"/>
+<location filename="../mainwindow.cpp" line="1693"/>
+<location filename="../mainwindow.cpp" line="11167"/>
 <source>leave</source>
 <translation>utzi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6505"/>
+<location filename="../mainwindow.cpp" line="6506"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>Idatzi zure &lt;strong&gt; pasahitza &lt;/strong&gt; oharra enkriptatzeko. &lt;br/&gt;Kontuan izan &lt;strong&gt; gogoratu &lt;/strong&gt; zure pasahitza oharraren edukia irakurtzeko &lt;br /&gt; eta &lt;strong&gt; soilik &lt;/strong&gt; hori egin dezakezula &lt;strong&gt; QOwnNotes &lt;/ strong &lt;/ strong &lt;/strong. &gt;!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6576"/>
+<location filename="../mainwindow.cpp" line="6577"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>Deskripta ezazu oharra eta gorde testu arrunt gisa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6581"/>
+<location filename="../mainwindow.cpp" line="6582"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;Desenkriptatu</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6605"/>
+<location filename="../mainwindow.cpp" line="6606"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br/&gt; Zure enkriptatutako oharra editatu ahal izango duzu.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6672"/>
+<location filename="../mainwindow.cpp" line="6673"/>
 <source>Export current note as Markdown file</source>
 <translation>Esportatu uneko oharra Markdown fitxategi gisa</translation>
 </message>
@@ -5166,14 +5166,14 @@ Karpeta eta fitxategia idazten al dira?</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="300"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="296"/>
 <source>Installs the script</source>
 <translation>Script-a instalatzen du</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="299"/>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="359"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="295"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="355"/>
 <source>Install</source>
 <translation>Instalatu</translation>
 </message>
@@ -5213,104 +5213,104 @@ Karpeta eta fitxategia idazten al dira?</translation>
 <translation>Bilatu script-a</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="45"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="136"/>
 <source>Script updates</source>
 <translation>Script eguneratzeak</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="46"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="137"/>
 <source>All scripts are up-to-date.</source>
 <translation>Script guztiak eguneratuta daude.</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="272"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="268"/>
 <source>Authors</source>
 <translation>Egileak</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="272"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="268"/>
 <source>Author</source>
 <translation>Egilea</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="275"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="271"/>
 <source>Supported platforms</source>
 <translation>Onartutako plataformak</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="275"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="271"/>
 <source>Supported platform</source>
 <translation>Onartutako plataforma</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="278"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="274"/>
 <source>Open repository</source>
 <translation>Ireki biltegia</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="288"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="284"/>
 <source>Update</source>
 <translation>Eguneratzearen</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="289"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="285"/>
 <source>Updates the script</source>
 <translation>Script-a eguneratzen du</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="291"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="287"/>
 <source>Reinstall</source>
 <translation>Berrinstalatu</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="292"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="288"/>
 <source>Reinstalls the script</source>
 <translation>Gidoia berrezartzen du</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="356"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="352"/>
 <source>Platform not supported!</source>
 <translation>Plataforma ez da onartzen!</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="357"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="353"/>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
 <translation>Script honek ez du zure plataforma onartzen!
 Hala ere instalatu nahi duzu?</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="359"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="355"/>
 <source>Cancel</source>
 <translation>Utzi</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="365"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="361"/>
 <source>Update app</source>
 <translation>Eguneratu aplikazioa</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="366"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="362"/>
 <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>Mesedez, ez ahaztu QOwnNotes-en instalazioa eguneratzeko gidoi hau egiteko!</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="432"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="428"/>
 <source>Install successful</source>
 <translation>Instalatu arrakastaz</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="433"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="429"/>
 <source>The script was successfully installed!</source>
 <translation>Script-a behar bezala instalatu da!</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="440"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="436"/>
 <source>Download failed</source>
 <translation>Deskarga huts egin du</translation>
 </message>
 <message>
-<location filename="../dialogs/scriptrepositorydialog.cpp" line="441"/>
+<location filename="../dialogs/scriptrepositorydialog.cpp" line="437"/>
 <source>The script could not be downloaded!</source>
 <translation>Ezin izan da script-a deskargatu!</translation>
 </message>

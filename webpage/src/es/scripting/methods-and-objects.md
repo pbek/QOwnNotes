@@ -410,7 +410,7 @@ script.createNote("My note headline\n===\n\nMy text");
 You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
-Si desactivó que el título de su nota determina el nombre del archivo de la nota, luego debe cambiar el nombre de su archivo de nota usted mismo, así:
+If you turned off that your note headline determines the note filename then you have to rename your note file yourself afterward, like this:
 
 ```js
 var note = script.currentNote();

@@ -1,4 +1,4 @@
-# نصب به صورت اسنپ
+# Install as Snap
 
 یک اسنپ `qownnotes` در [Snap store](https://snapcraft.io/qownnotes) موجود می باشد.
 
@@ -8,7 +8,7 @@
 snap install qownnotes
 ```
 
-پس از آن با فرمان `qownnotes` حتماً قادر به اجرای QOwnNotes خواهید بود.
+Afterward you should be able to run QOwnNotes with the command `qownnotes`.
 
 ::: tip
 [ اسنپ ها](http://snapcraft.io) در حال کار روی بسیاری از توزیع های لینوکس نظیر اوبونتو، آرچ لینوکس، دبیان، فدورا، اوپن سوزه، جنتو لینوکس، OpenWRT، OpenEmbedded و پروزه یوکتو هستند.

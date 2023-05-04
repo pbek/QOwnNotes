@@ -2,7 +2,7 @@
 
 يمكنك تثبيت **QOwnNotes** على العديد من أنظمة التشغيل أو [بناؤه بنفسك](building.md).
 
-إذا لم يُذكر غير ذلك، فيمكنك تشغيل QOwnNotes بعدئذٍ بتنفيذ `QOwnNotes`.
+If not stated otherwise you can run QOwnNotes afterward by executing `QOwnNotes`.
 
 إذا واجهت مشكلة مع الحزم أو المستودعات، فيرجى الإبلاغ عنها في [صفحة مسائل QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
 

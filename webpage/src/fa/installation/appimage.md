@@ -17,7 +17,7 @@ curl -L https://api.qownnotes.org/latest_releases/linux | jq .url | xargs curl -
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-پس از آن حتماً قادر به اجرای AppImage برای استفاده از QOwnNotes خواهید بود.
+Afterward you should be able to execute the AppImage to run QOwnNotes.
 
 ::: warning
 در صورت تمایل به استفاده از **بروز رسان خودکار**، لطفاً مطمئن شوید که AppImage خود را در جایی که حساب کاربری شما به آن دسترسی نوشتاری دارد (مثلاً در فهرست شخصی)، قرار دهید.

@@ -2,7 +2,7 @@
 
 Telepítheti a **QOwnNotes** t számos operációs rendszerre, vagy [saját maga készítheti el](building.md).
 
-Ha nincs másképp feltüntetve, akkor futtathatja a QOwnNotes alkalmazást a `QOwnNotes` futtatásával.
+If not stated otherwise you can run QOwnNotes afterward by executing `QOwnNotes`.
 
 Ha problémái vannak a csomagokkal vagy az adattárakkal, kérjük, jelezze azokat a [QOwnNotes kérdések oldalon](https://github.com/pbek/QOwnNotes/issues).
 

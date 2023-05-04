@@ -17,7 +17,7 @@ Vervolgens kunt u de uitvoeringsrechten voor het bestand wijzigen:
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Daarna zou u de AppImage moeten kunnen uitvoeren om QOwnNotes uit te voeren.
+Afterward you should be able to execute the AppImage to run QOwnNotes.
 
 ::: warning
 Als u de **automatische updater** wilt gebruiken, zorg er dan voor dat u uw AppImage op een plaats plaatst waar uw gebruikersaccount schrijftoegang heeft, bijvoorbeeld ergens in uw homedirectory.

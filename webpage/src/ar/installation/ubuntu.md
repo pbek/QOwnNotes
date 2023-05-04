@@ -46,7 +46,7 @@ sudo apt-get install qownnotes
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-بعدئذٍ ستتمكن من تنفيذ الـ&nbsp;AppImage لتشغيل QOwnNotes.
+Afterward you should be able to execute the AppImage to run QOwnNotes.
 
 ## مستودع OBS
 

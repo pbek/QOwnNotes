@@ -17,7 +17,7 @@ Ezután megváltoztathatja a fájl végrehajtási engedélyeit:
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Ezután képesnek kell lennie az AppImage futtatására a QOwnNotes futtatásához.
+Afterward you should be able to execute the AppImage to run QOwnNotes.
 
 ::: warning
 Ha az **automatikus frissítőt** szeretné használni, feltétlenül helyezze el az AppImage -ot olyan helyre, ahová felhasználói fiókja írási jogosultsággal rendelkezik, például valahol a saját könyvtárában.

@@ -2,7 +2,7 @@
 
 می توانید **QOwnNotes** را در بسیاری از سیستم عامل ها نصب کنید یا [آن را خودتان بسازید](building.md).
 
-در غیر این صورت می توانید با انتخاب `QOwnNotes` آن را اجرا کنید.
+If not stated otherwise you can run QOwnNotes afterward by executing `QOwnNotes`.
 
 در صورتی که در مورد بسته ها یا مخزن ها با مشکل مواجه شدید، لطفاً آن را در [صفحه مسائل QOwnNotes](https://github.com/pbek/QOwnNotes/issues) مطرح کنید.
 

@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 23.5.2
+- added more Spanish, Korean translation (thank you fitojb, venusgirl)
+
 ## 23.5.1
 - improve file-extension detection for images sent from a browser via the Web
   Companion extension (for [#2781](https://github.com/pbek/QOwnNotes/issues/2781))
