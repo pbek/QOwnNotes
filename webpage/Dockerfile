@@ -1,6 +1,6 @@
 # Dockerfile to create image for static webpage
 
-FROM node:12 as node
+FROM node:12-alpine as node
 COPY . /app
 WORKDIR /app
 RUN yarn install && yarn run build
