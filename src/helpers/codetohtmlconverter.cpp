@@ -50,7 +50,7 @@ void CodeToHtmlConverter::initCodeLangs() Q_DECL_NOTHROW {
         {QStringLiteral("xml"), CodeToHtmlConverter::CodeXML},
         {QStringLiteral("yml"), CodeToHtmlConverter::CodeYAML},
         {QStringLiteral("yaml"), CodeToHtmlConverter::CodeYAML},
-        {QStringLiteral("yaml"), CodeToHtmlConverter::CodeForth}};
+        {QStringLiteral("forth"), CodeToHtmlConverter::CodeForth}};
 }
 
 QString CodeToHtmlConverter::process(const QString &input) const {
