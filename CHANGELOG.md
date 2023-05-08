@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 23.5.3
+- added more Arabic translation (thank you noureddin)
+
 ## 23.5.2
 - there now is code block syntax highlighting for **Forth code**
   (for [#2780](https://github.com/pbek/QOwnNotes/issues/2780), thank you, @0x3508A)
