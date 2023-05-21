@@ -2,6 +2,9 @@
 
 ## 23.5.4
 - added more Dutch translation (thank you stephanp)
+- the QOwnNotes command-line snippet manager [qc](https://github.com/qownnotes/qc)
+  can now be installed via the [Nix Store](https://search.nixos.org/packages?channel=unstable&show=qc)
+  - you can use `nix-shell -p qc --run qc` to try it out
 
 ## 23.5.3
 - added more Arabic translation (thank you noureddin)
