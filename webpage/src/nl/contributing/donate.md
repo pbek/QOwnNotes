@@ -2,13 +2,13 @@
 
 QOwnNotes genereert geen inkomsten (non-profit).
 
-Als je QOwnNotes leuk vindt en **wilt doneren** aan het project om te helpen betalen hosting, domein, etc. voel je vrij om dat te doen.
+Als u QOwnNotes nuttig vindt en **wilt doneren** aan het project om bij te dragen aan de kosten van hosting, domein, etc. voel je vrij om dat te doen.
 
 ## PayPal
 
-You can **donate money via PayPal** on [pbek PayPal](https://paypal.me/pbek):
+U kunt **een bedrag doneren via PayPal** op [pbek PayPal](https://paypal.me/pbek):
 
-For monthly donations you can use the following button (PayPal gets a cut of the donation):
+Voor maandelijkse donaties kunt u de volgende knop gebruiken (PayPal krijgt een deel van het bedrag):
 
 <form id="paypal-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_s-xclick">
@@ -20,23 +20,23 @@ For monthly donations you can use the following button (PayPal gets a cut of the
 
 ## GitHub Sponsors
 
-You can **sponsor on GitHub Sponsors** on [pbek GitHub Sponsors](https://github.com/sponsors/pbek).
+U kunt **bijdragen aan GitHub Sponsors** op [pbek GitHub Sponsors](https://github.com/sponsors/pbek).
 
 ## Liberapay
 
-You can **donate money via Liberapay** by clicking this button:
+U kunt **een bedrag doneren via Liberapay** door deze knop te klikken:
 
-<a href="https://liberapay.com/pbek/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+<a href="https://liberapay.com/pbek/donate"><img alt="Doneer met Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 
 ## Bitcoin
 
-You can **donate Bitcoin BTC** to this Bitcoin BTC address:
+U kunt **Bitcoin BTC doneren** aan dit Bitcoin BTC-adres:
 
 ```
 395NiU7QKpNiayWgRrUEGZDn8Z1ebMx8CH
 ```
 
-You can **donate Bitcoin Cash** to this Bitcoin Cash address:
+U kunt **Bitcoin Cash doneren** aan dit Bitcoin Cash-adres:
 
 ```
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
@@ -44,13 +44,13 @@ qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 
 ## Ethereum
 
-You can **donate Ethereum ETH** to this Ethereum ETH address:
+U kunt **Ethereum ETH doneren** aan dit Ethereum ETH-adres:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-You can **donate Ethereum ETC** to this Ethereum ETC address:
+U kunt **Ethereum ETC doneren** aan dit Ethereum ETC-adres:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

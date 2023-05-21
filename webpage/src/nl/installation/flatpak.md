@@ -1,4 +1,4 @@
-# Installeer als Flatpak
+# Installatie als Flatpak
 
 Er is een community die wordt onderhouden met Flatpak `org.qownnotes.QOwnNotes` op [Flathub](https://flathub.org/apps/details/org.qownnotes.QOwnNotes).
 
@@ -9,8 +9,8 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install flathub org.qownnotes.QOwnNotes
 ```
 
-Afterward you should be able to run QOwnNotes with the command `flatpak run org.qownnotes.QOwnNotes`.
+Daarna zou je QOwnNotes moeten kunnen draaien met het commando `flatpak run org.qownnotes.QOwnNotes`.
 
 ::: tip Info
-Please open issues with the Flatpak package on [QOwnNotes Flatpak Issues](https://github.com/flathub/org.qownnotes.QOwnNotes/issues).
+Meld problemen met het Flatpak-pakket op [ QOwnNotes Flatpak-problemen ](https://github.com/flathub/org.qownnotes.QOwnNotes/issues).
 :::

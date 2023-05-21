@@ -19,10 +19,10 @@ Script {
 U kunt die QML-bestanden waar u maar wilt plaatsen en **toevoegen in QOwnNotes** door ze toe te voegen in de **Scripting-instellingen** (er is een knop `Script toevoegen`/`Lokaal script toevoegen`).
 
 ::: tip
-Take a look at the [example scripts](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples) to get started fast.
+Bekijk de [voorbeeldscripts](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples) snel aan de slag.
 :::
 
-In the **Scripting settings** you can also install scripts directly from the [**Script repository**](https://github.com/qownnotes/scripts). There is a community hosted web-application to search for scripts on [beurt.github.io/QOwnNoteScriptsList](https://beurt.github.io/QOwnNoteScriptsList/).
+In de **Scripting settings** kun je ook scripts rechtstreeks vanuit de [**Script repository**](https://github.com/qownnotes/scripts) installeren. Er is een community-host webapplicatie om naar scripts te zoeken op [ beurt.github.io/QOwnNoteScriptsList ](https://beurt.github.io/QOwnNoteScriptsList/).
 
 Voor problemen, vragen of functieverzoeken voor scripts uit de **Script repository**, open een probleem op de [QOwnNotes script repository issue page](https://github.com/qownnotes/scripts/issues).
 

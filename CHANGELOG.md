@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 23.5.4
+- added more Dutch translation (thank you stephanp)
+
 ## 23.5.3
 - added more Arabic translation (thank you noureddin)
 

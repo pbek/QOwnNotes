@@ -1,4 +1,4 @@
-# Installeer op Microsoft Windows™
+# Installatie op Microsoft Windows™
 
 Download de nieuwste versie **Windows archive** van [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases) en pak deze uit waar u maar wilt. Er is geen installatie nodig!
 
@@ -8,7 +8,7 @@ Als u de **automatic updater** wilt gebruiken, zorg er dan voor dat u deze uitpa
 
 U kunt dan direct `QOwnNotes.exe` starten vanuit uw `QOwnNotes` -map, er is geen installatie vereist.
 
-### Draagbare modus
+### Portable mode
 
 Gebruik `QOwnNotesPortable.bat` om QOwnNotes in **draagbare modus** uit te voeren, waar alles (inclusief uw notities) alleen wordt opgeslagen in uw map `QOwnNotes`.
 

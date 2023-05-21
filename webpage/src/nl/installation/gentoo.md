@@ -1,4 +1,4 @@
-# Installeer op Gentoo Linux
+# Installatie op Gentoo Linux
 
 Voeg de QOwnNotes-repository toe met het volgende commando (zie [eselect-repository](https://wiki.gentoo.org/wiki/Eselect/Repository)).
 

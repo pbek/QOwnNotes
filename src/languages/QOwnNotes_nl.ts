@@ -727,7 +727,7 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
 <source>Number of imported notes</source>
-<translation type="unfinished">Number of imported notes</translation>
+<translation>Aantal geïmporteerde notities</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="148"/>
@@ -1511,7 +1511,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopie</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -1730,7 +1730,7 @@
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="84"/>
 <source>The application will be restarted afterward.</source>
-<translation type="unfinished">The application will be restarted afterward.</translation>
+<translation>De toepassing zal daarna opnieuw worden opgestart.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="143"/>
@@ -2863,7 +2863,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2699"/>
 <source>&amp;Load Todo List items</source>
-<translation type="unfinished">&amp;Load Todo List items</translation>
+<translation>Todo-lijst &amp;laden</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1910"/>
@@ -3569,12 +3569,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <location filename="../mainwindow.cpp" line="10781"/>
 <source>Note editing disabled</source>
-<translation type="unfinished">Note editing disabled</translation>
+<translation>Het bewerken van notities is uitgeschakeld</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10782"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
-<translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+<translation>Het bewerken van notities is momenteel uitgeschakeld, wilt u dit opnieuw toestaan?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="11013"/>
@@ -5188,7 +5188,7 @@ Zijn de map en het bestand beschrijfbaar?</translation>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
 <source>To search for a script please enter your query text.</source>
-<translation type="unfinished">To search for a script please enter your query text.</translation>
+<translation>Voer uw zoektekst in om naar een script te zoeken.</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
@@ -5322,7 +5322,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../widgets/scriptsettingwidget.cpp" line="190"/>
 <source>Please select a directory</source>
-<translation type="unfinished">Please select a directory</translation>
+<translation>Selecteer een directory</translation>
 </message>
 <message>
 <location filename="../widgets/scriptsettingwidget.cpp" line="191"/>
@@ -6516,7 +6516,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="348"/>
 <source>Experimental</source>
-<translation type="unfinished">Experimental</translation>
+<translation>Experimenteel</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="831"/>
@@ -6531,7 +6531,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1394"/>
 <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
-<translation type="unfinished">You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</translation>
+<translation>U vindt dit pad in de Instellingen van &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1449"/>
@@ -6627,7 +6627,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4173"/>
 <source>Start application in read-only mode</source>
-<translation type="unfinished">Start application in read-only mode</translation>
+<translation>Start de applicatie in alleen-lezen modus</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4249"/>
@@ -6774,13 +6774,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5702"/>
 <source>Ignored note files</source>
-<translation type="unfinished">Ignored note files</translation>
+<translation>Genegeerde notitiebestanden</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5699"/>
 <location filename="../dialogs/settingsdialog.ui" line="5708"/>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
-<translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
+<translation>Reguliere expressies van te negeren notitiebestanden, gescheiden door ";"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5850"/>
@@ -6852,7 +6852,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6581"/>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+<translation>Er wordt een websocketverbinding met deze server geopend om als brug te fungeren tussen de QOwnNotes-webapplicatie en de QOwnNotes-desktopapplicatie.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6642"/>
@@ -7692,7 +7692,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="579"/>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
-<translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
+<translation>notitiespad &lt;b&gt;%1&lt;/b&gt; op server gevonden</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="1358"/>

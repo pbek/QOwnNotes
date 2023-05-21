@@ -1,8 +1,8 @@
-# Tijdformaten
+# Tijdnotatie
 
 U kunt uw eigen tijdnotatie gebruiken wanneer u de huidige tijd in een notitie invoegt.
 
-You can use this page to build a personal default time format. You can enter that string at _Note_ > _Settings_ > _Editor_ > _Insert current time_.
+U kunt deze pagina gebruiken om een persoonlijke standaard tijdnotatie aan te maken. U kunt de tekenreeks invoeren bij _Note_ > _Instellingen_ > _Editor_ > _Huidige tijd invoegen_.
 
 ## Uitdrukkingen voor de datum
 
@@ -33,8 +33,8 @@ You can use this page to build a personal default time format. You can enter tha
 | `ss`        | de tweede met een voorloopnul (00 tot 59)                                 |
 | `z`         | de milliseconden zonder voorloopnullen (0 tot 999)                        |
 | `zzz`       | de milliseconden met voorloopnullen (000 tot 999)                         |
-| `AP` or `A` | gebruik AM / PM-weergave. A/ AP wordt vervangen door `AM` or `PM`.        |
-| `ap` of `a` | gebruik de am/ pm-weergave. a/ ap wordt vervangen door `am` or `pm`.      |
+| `AP` of `A` | gebruik AM / PM-weergave. A/ AP wordt vervangen door `AM` of `PM`.        |
+| `ap` of `a` | gebruik de am/ pm-weergave. a/ ap wordt vervangen door `am` of `pm`.      |
 | `t`         | de tijdzone (bijvoorbeeld `CEST`)                                         |
 
 ## Voorbeeld opmaakstrings
@@ -48,9 +48,9 @@ You can use this page to build a personal default time format. You can enter tha
 | `h:m:s ap`         | 2:13:9 pm        |
 
 ::: tip Info
-Take a look at the [Qt documentation](http://doc.qt.io/qt-5/qdatetime.html#toString) for more information about time formats.
+Bestudeer de [Qt-documentatie](http://doc.qt.io/qt-5/qdatetime.html#toString) voor meer informatie over tijdopmaak.
 :::
 
 ::: tip
-If you need to make more complex operations to output the current time please consider creating a [custom action](../scripting/methods-and-objects.md#registering-a-custom-action).
+Als u complexere bewerkingen moet uitvoeren om de huidige tijd uit te voeren overweeg dan een [aangepaste actie](../scripting/methods-and-objects.md#registering-a-custom-action) aan te maken.
 :::

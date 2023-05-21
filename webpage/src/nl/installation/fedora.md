@@ -1,10 +1,10 @@
-# Installeer op Fedora Linux
+# Installatie op Fedora Linux
 
 Er zijn QOwnNotes-repositories voor **Fedora 28 and higher**.
 
 ## A config-manager dnf beépülő modullal rendelkező rendszereken
 
-Futtassa a következő shell parancsokat rootként a lerakat hozzáadásához.
+Voer de volgende shell-opdrachten uit als root om de repository toe te voegen.
 
 ```bash
 dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
@@ -23,7 +23,7 @@ rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fed
 ```
 :::
 
-## Régi telepítési módszer
+## Legacy installatiemethode
 
 Gebruik deze methode als je Fedora-versie de `config-manager` dnf-plug-in niet ondersteunt, voer deze commando's uit als root.
 

@@ -2,7 +2,7 @@
 
 U kunt **QOwnNotes** op veel besturingssystemen installeren of [build it yourself](building.md).
 
-If not stated otherwise you can run QOwnNotes afterward by executing `QOwnNotes`.
+Tenzij anders vermeld, kunt u QOwnNotes daarna uitvoeren door `QOwnNotes` uit te voeren.
 
 Als u problemen heeft met de pakketten of repositories, meld deze dan op de [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
 

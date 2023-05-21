@@ -1,4 +1,4 @@
-# Installeer op Slackware Linux
+# Installatie op Slackware Linux
 
 ## Slackware 14.2
 

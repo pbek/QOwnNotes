@@ -1,4 +1,4 @@
-# Installeer op Raspberry Pi OS
+# Installatie op Raspberry Pi OS
 
 ## Raspberry Pi OS 11
 

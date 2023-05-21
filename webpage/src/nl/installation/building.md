@@ -31,16 +31,16 @@ make
 
 Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
 
-Visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
+Bezoek [QOwnNotes op GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-If you want to contribute source code to the project please make your pull requests to the  `main` branch.
+Als u broncode aan het project wilt bijdragen, dient u uw pull-verzoeken in naar de `main` tak.
 :::
 
 ## Bronarchief
 
-You will find source archives of QOwnNotes on [QOwnNotes source archive](https://download.tuxfamily.org/qownnotes/src/).
+U vindt bronarchieven van QOwnNotes op [QOwnNotes bronarchief](https://download.tuxfamily.org/qownnotes/src/).
 
-The source archives will be accessible like that:
+De bronarchieven zullen als volgt toegankelijk zijn:
 
 `https://download.tuxfamily.org/qownnotes/src/qownnotes-20.10.1.tar.xz`

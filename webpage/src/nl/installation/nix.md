@@ -1,7 +1,7 @@
-# Install via Nix
+# Installatie via Nix
 
-You can install QOwnNotes with the [Nix package manager](https://nixos.wiki/wiki/Nix_package_manager) on [NixOS](https://nixos.org/) and other platforms, the package name is [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
+U kunt QOwnNotes installeren met de [Nix pakketbeheerder](https://nixos.wiki/wiki/Nix_package_manager) op [NixOS](https://nixos.org/) en andere platforms is de pakketnaam [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
 
-See [QOwnNotes on nix](https://search.nixos.org/packages?channel=unstable&show=qownnotes) for more information.
+Zie [QOwnNotes op nix](https://search.nixos.org/packages?channel=unstable&show=qownnotes) voor meer informatie.
 
-Afterward you should be able to run QOwnNotes with the command `qownnotes`.
+Daarna zou u QOwnNotes moeten kunnen uitvoeren met de opdracht `qownnotes`.

@@ -100,7 +100,7 @@ class TagApi {
 };
 ```
 
-### Example
+### Voorbeeld
 ```js
 // Don't forget to use "import QOwnNotesTypes 1.0" at the top of your script!
 
@@ -116,12 +116,12 @@ for (var idx in notes) {
 }
 ```
 
-You'll find more examples where TagApi is used in [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
+U vindt meer voorbeelden waar TagApi wordt gebruikt [ notice-tagging-by-object.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
 
 MainWindow
 ----------
 
-### Properties and methods
+### Eigenschappen en methoden
 ```cpp
 class MainWindow {
     Q_INVOKABLE void reloadTagTree();
@@ -153,7 +153,7 @@ class MainWindow {
 };
 ```
 
-### Example
+### Voorbeeld
 ```js
 // Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);

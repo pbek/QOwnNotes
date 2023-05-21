@@ -1,6 +1,6 @@
-# Installeer op Ubuntu Linux, elementair besturingssysteem en Linux Mint
+# Installatie op Ubuntu Linux, elementary OS en Linux Mint
 
-## Ubuntu Linux 18.04 of nieuwer, elementair besturingssysteem, Linux Mint 18 of nieuwer
+## Ubuntu Linux 18.04 of nieuwer, elementary OS, Linux Mint 18 of nieuwer
 
 Installeer **QOwnNotes** op **Ubuntu Linux** (minimaal 18.04) met behulp van de PPA-repository.
 
@@ -18,7 +18,7 @@ sudo apt-get install qownnotes
 
 ## QOwnNotes Qt6 Preview
 
-If you already want to try the Qt6 packages and are on Ubuntu 22.04 or newer you can use this repository:
+Als u de Qt6-pakketten al wilt proberen en u op Ubuntu 22.04 of nieuwer wilt gebruiken u kunt deze repository gebruiken:
 
 ```bash
 # Remove Qt5 PPA in case you had it installed
@@ -32,35 +32,35 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
+[Directe download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
-If you find any issues please report them on [QOwnNotes Issues on GitHub](https://github.com/pbek/QOwnNotes/issues)!
+Als u problemen vindt, meld deze dan op [ QOwnNotes-problemen op GitHub ](https://github.com/pbek/QOwnNotes/issues)!
 
-## Older Ubuntu Linux distributions and derivatives
+## Oudere Ubuntu Linux-distributies en afgeleiden
 
-Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).
+U kunt het beste de AppImage van [QOwnNotes Releases op GitHub](https://github.com/pbek/QOwnNotes/releases) proberen te gebruiken.
 
-Then you can change the execute-permissions on the file:
+Vervolgens kunt u de uitvoeringsrechten voor het bestand wijzigen:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Afterward you should be able to execute the AppImage to run QOwnNotes.
+Daarna zou u de AppImage moeten kunnen uitvoeren om QOwnNotes uit te voeren.
 
 ## OBS Repository
 
-You may also be able to use the QOwnNotes on Ubuntu versions that aren't any more updated on Ubuntu Launchpad then you can use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
+Mogelijk kunt u ook de QOwnNotes gebruiken op Ubuntu-versies die niet meer worden bijgewerkt op Ubuntu Launchpad dan u kunt gebruik de opslagplaatsen van de [ Open Build Service ](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 
-Below are example calls for the xUbuntu 16.10 repository.
+Hieronder staan voorbeeldoproepen voor de xUbuntu 16.10-repository.
 
-Run the following shell command to trust the repository.
+Voer de volgende shellopdracht uit om de repository te vertrouwen.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
 ```
 
-Run the following shell commands to add the repository and install QOwnNotes from there.
+Voer de volgende shell-opdrachten uit om de repository toe te voegen en vanaf daar QOwnNotes te installeren.
 
 ```bash
 sudo su -
@@ -69,4 +69,4 @@ apt-get update
 apt-get install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)
+[Directe download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)

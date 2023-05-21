@@ -1,4 +1,4 @@
-# Installeer op Debian Linux
+# Installatie op Debian Linux
 
 ## Debian 11.0
 

@@ -4,7 +4,7 @@ U kunt dat doen door uit te schakelen dat het **notitiebewerkingspaneel** de **c
 
 Maak dan het beste een nieuwe werkruimte `Alleen voorbeeld` door op **Venster/Werkruimte/Nieuwe werkruimte toevoegen** in het hoofdmenu te klikken. U kunt tussen verschillende paneelindelingen schakelen.
 
-Afterward you can turn off the note edit panel in the **Window / Panels menu**.
+Daarna kunt u het notitiebewerkingspaneel uitschakelen in het menu **Venster / Panelen**.
 
 Houd er rekening mee dat u door alle panelen kunt navigeren zoals u wilt door op **Venster/panelen ontgrendelen** in het hoofdmenu te klikken. U kunt het formaat van alle panelen ook aanpassen aan uw behoeften.
 

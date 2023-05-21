@@ -1,6 +1,6 @@
-# Waar kan ik vinden wat andere mensen zeiden over QOwnNotes?
+# Waar kan ik vinden wat andere mensen zeggen over QOwnNotes?
 
-Wat andere mensen zeiden over QOwnNotes ...
+Wat andere mensen zeggen over QOwnNotes…
 
 - <http://qownnotes.findmysoft.com/>
 - [Pro-Linux: Informatie naar QOwnNotes](http://www.pro-linux.de/cgi-bin/DBApp/check.cgi?ShowApp..20415.100)
