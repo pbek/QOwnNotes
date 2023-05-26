@@ -39,10 +39,16 @@ stdenv.mkDerivation {
     botan2
   ] ++ lib.optionals stdenv.isLinux [ qtwayland ];
 
-#  qmakeFlags = [
-#    "QOwnNotes.pro"
-#    "USE_SYSTEM_BOTAN=1"
-#  ];
+  postPatch = ''
+    substituteInPlace ./libraries/botan/botan.pri \
+      --replace "PKGCONFIG += botan-2" ""
+  '';
+
+  qmakeFlags = [
+    "USE_SYSTEM_BOTAN=1"
+    "INCLUDEPATH+=${botan2}/include/botan-2"
+    "LIBS+=${botan2}/lib/libbotan-2.so"
+  ];
 
   postInstall =
   # Create a lowercase symlink for Linux
