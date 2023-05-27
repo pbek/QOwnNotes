@@ -47,7 +47,7 @@ stdenv.mkDerivation {
   qmakeFlags = [
     "USE_SYSTEM_BOTAN=1"
     "INCLUDEPATH+=${botan2}/include/botan-2"
-    "LIBS+=${botan2}/lib/libbotan-2.so"
+    "LIBS+=${botan2}/lib/libbotan-2${stdenv.hostPlatform.extensions.sharedLibrary}"
   ];
 
   postInstall =
