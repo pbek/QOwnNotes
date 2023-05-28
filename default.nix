@@ -12,6 +12,7 @@
 , makeWrapper
 , wrapQtAppsHook
 , botan2
+, pkg-config
 }:
 
 let
@@ -28,6 +29,7 @@ stdenv.mkDerivation {
     qmake
     qttools
     wrapQtAppsHook
+    pkg-config
   ] ++ lib.optionals stdenv.isDarwin [ makeWrapper ];
 
   buildInputs = [
@@ -39,15 +41,8 @@ stdenv.mkDerivation {
     botan2
   ] ++ lib.optionals stdenv.isLinux [ qtwayland ];
 
-  postPatch = ''
-    substituteInPlace ./libraries/botan/botan.pri \
-      --replace "PKGCONFIG += botan-2" ""
-  '';
-
   qmakeFlags = [
     "USE_SYSTEM_BOTAN=1"
-    "INCLUDEPATH+=${botan2}/include/botan-2"
-    "LIBS+=${botan2}/lib/libbotan-2${stdenv.hostPlatform.extensions.sharedLibrary}"
   ];
 
   postInstall =
