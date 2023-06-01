@@ -164,6 +164,10 @@ module.exports = {
       lang: 'pl-PL',
       title: 'QOwnNotes',
     },
+    '/ko/': {
+      lang: 'ko-KR',
+      title: 'QOwnNotes',
+    },
   },
 
   /**
@@ -311,6 +315,68 @@ module.exports = {
           },
           {
             title: 'Änderungsprotokoll (auf Englisch)',
+            children: [ changelogNavItem ]
+          }
+        ]
+      },
+      '/ko/': {
+        selectText: '🌍',
+        label: '한국어',
+        editLinkText: '이 페이지를 개선할 수 있도록 도와주세요!',
+        algolia: {
+          appId: 'LP8PS829KJ',
+          apiKey: '52d0b99615b7586dcd5a360a5cfe3f07',
+          indexName: 'qownnotes'
+        },
+        nav: [
+          {
+            text: '시작하기',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'ko'),
+          },
+          {
+            text: '설치',
+            link: utils.getNavItemForLanguage(installationNavItem, 'ko'),
+          },
+          {
+            text: '연락하다',
+            items: contactNavItems
+          },
+          {
+            text: '기부하다',
+            link: utils.getNavItemForLanguage(donateNavItem, 'ko'),
+          }
+        ],
+        sidebar: [
+          {
+            title: '시작하기',
+            children: utils.getNavItemsForLanguage(gettingStartedNavItems, "ko")
+          },
+          {
+            title: '설치',
+            children: utils.getNavItemsForLanguage(installationNavItems, "ko")
+          },
+          {
+            title: '편집자',
+            children: utils.getNavItemsForLanguage(editorNavItems, "ko")
+          },
+          {
+            title: '스크립팅',
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "ko")
+          },
+          {
+            title: '기여',
+            children: utils.getNavItemsForLanguage(contributingNavItems, "ko")
+          },
+          {
+            title: '자주하는 질문',
+            children: utils.getNavItemsForLanguage(faqNavItems, "ko")
+          },
+          {
+            title: 'Blog (auf Englisch)',
+            children: utils.getChildren('src', 'blog', true)
+          },
+          {
+            title: 'Changelog(영문)',
             children: [ changelogNavItem ]
           }
         ]
