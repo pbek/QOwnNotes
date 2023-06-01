@@ -4,7 +4,7 @@ let
 in
 with pkgs;
 mkShell {
-  buildInputs = [
+  nativeBuildInputs = [
     nodejs-12_x
     yarn
   ];
