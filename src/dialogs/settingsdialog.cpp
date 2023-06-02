@@ -259,23 +259,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
             SLOT(storeSelectedCloudConnection()));
     connect(ui->appQOwnNotesAPICheckBox, SIGNAL(toggled(bool)), this,
             SLOT(storeSelectedCloudConnection()));
-    connect(ui->appNextcloudDeckCheckBox, &QCheckBox::toggled, this,
-            [this](bool checked) {
-                ui->nextcloudDeckFrame->setVisible(checked);
-                _selectedCloudConnection.setNextcloudDeckEnabled(checked);
-            });
-
-    // valueChanged did not work
-    connect(ui->nextcloudDeckBoardSpinBox, &QSpinBox::textChanged, this,
-            [this]() {
-                _selectedCloudConnection.setNextcloudDeckBoardId(
-                    ui->nextcloudDeckBoardSpinBox->value());
-            });
-    connect(ui->nextcloudDeckStackSpinBox, &QSpinBox::textChanged, this,
-            [this]() {
-                _selectedCloudConnection.setNextcloudDeckStackId(
-                    ui->nextcloudDeckStackSpinBox->value());
-            });
 
     // set up the search engine combo-box
     initSearchEngineComboBox();
@@ -4259,4 +4242,18 @@ void SettingsDialog::on_defaultNoteFileExtensionListWidget_itemSelectionChanged(
 
 void SettingsDialog::on_noteTextViewRefreshDebounceTimeResetButton_clicked() {
     ui->noteTextViewRefreshDebounceTimeSpinBox->setValue(600);
+}
+
+void SettingsDialog::on_nextcloudDeckBoardSpinBox_valueChanged(int arg1) {
+    _selectedCloudConnection.setNextcloudDeckBoardId(arg1);
+}
+
+void SettingsDialog::on_nextcloudDeckStackSpinBox_valueChanged(int arg1) {
+    _selectedCloudConnection.setNextcloudDeckStackId(arg1);
+}
+
+void SettingsDialog::on_appNextcloudDeckCheckBox_toggled(bool checked)
+{
+    ui->nextcloudDeckFrame->setVisible(checked);
+    _selectedCloudConnection.setNextcloudDeckEnabled(checked);
 }

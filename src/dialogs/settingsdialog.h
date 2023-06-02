@@ -318,7 +318,13 @@ class SettingsDialog : public MasterDialog {
 
     void on_noteTextViewRefreshDebounceTimeResetButton_clicked();
 
-   private:
+    void on_nextcloudDeckBoardSpinBox_valueChanged(int arg1);
+
+    void on_nextcloudDeckStackSpinBox_valueChanged(int arg1);
+
+    void on_appNextcloudDeckCheckBox_toggled(bool checked);
+
+private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;
     QFont noteTextEditFont;
