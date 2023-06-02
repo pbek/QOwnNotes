@@ -22,6 +22,7 @@
 #include <dialogs/imagedialog.h>
 #include <dialogs/joplinimportdialog.h>
 #include <dialogs/localtrashdialog.h>
+#include <dialogs/nextclouddeckdialog.h>
 #include <dialogs/notedialog.h>
 #include <dialogs/scriptrepositorydialog.h>
 #include <dialogs/sharedialog.h>
@@ -11595,3 +11596,8 @@ void MainWindow::on_action_Load_Todo_Items_triggered() {
     reloadTodoLists();
 }
 
+void MainWindow::on_actionInsert_Nextcloud_Deck_card_triggered()
+{
+    auto *dialog = new NextcloudDeckDialog(this);
+    dialog->exec();
+}

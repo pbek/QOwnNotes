@@ -682,6 +682,8 @@ class MainWindow : public QMainWindow {
 
     void on_action_Load_Todo_Items_triggered();
 
+    void on_actionInsert_Nextcloud_Deck_card_triggered();
+
 public:
     /** Settings access **/
     static bool isInDistractionFreeMode();

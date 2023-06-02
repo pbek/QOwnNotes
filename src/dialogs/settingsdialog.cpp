@@ -259,8 +259,25 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
             SLOT(storeSelectedCloudConnection()));
     connect(ui->appQOwnNotesAPICheckBox, SIGNAL(toggled(bool)), this,
             SLOT(storeSelectedCloudConnection()));
+    connect(ui->appNextcloudDeckCheckBox, &QCheckBox::toggled, this,
+            [this](bool checked) {
+                ui->nextcloudDeckFrame->setVisible(checked);
+                _selectedCloudConnection.setNextcloudDeckEnabled(checked);
+            });
 
-    // setup the search engine combo-box
+    // valueChanged did not work
+    connect(ui->nextcloudDeckBoardSpinBox, &QSpinBox::textChanged, this,
+            [this]() {
+                _selectedCloudConnection.setNextcloudDeckBoardId(
+                    ui->nextcloudDeckBoardSpinBox->value());
+            });
+    connect(ui->nextcloudDeckStackSpinBox, &QSpinBox::textChanged, this,
+            [this]() {
+                _selectedCloudConnection.setNextcloudDeckStackId(
+                    ui->nextcloudDeckStackSpinBox->value());
+            });
+
+    // set up the search engine combo-box
     initSearchEngineComboBox();
 
 #ifdef Q_OS_MAC
@@ -986,6 +1003,8 @@ void SettingsDialog::readSettings() {
     ui->userNameEdit->setText(_selectedCloudConnection.getUsername());
     ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
     ui->appQOwnNotesAPICheckBox->setChecked(_selectedCloudConnection.getAppQOwnNotesAPIEnabled());
+    ui->appNextcloudDeckCheckBox->setChecked(_selectedCloudConnection.getNextcloudDeckEnabled());
+    ui->nextcloudDeckFrame->setVisible(ui->appNextcloudDeckCheckBox->isChecked());
     ui->timeFormatLineEdit->setText(settings.value(QStringLiteral("insertTimeFormat")).toString());
 
     // prepend the portable data path if we are in portable mode
@@ -4000,12 +4019,16 @@ void SettingsDialog::on_cloudConnectionComboBox_currentIndexChanged(int index) {
     Q_UNUSED(blocker4)
     const QSignalBlocker blocker5(ui->appQOwnNotesAPICheckBox);
     Q_UNUSED(blocker5)
+    const QSignalBlocker blocker6(ui->appNextcloudDeckCheckBox);
+    Q_UNUSED(blocker6)
 
     ui->cloudServerConnectionNameLineEdit->setText(_selectedCloudConnection.getName());
     ui->serverUrlEdit->setText(_selectedCloudConnection.getServerUrl());
     ui->userNameEdit->setText(_selectedCloudConnection.getUsername());
     ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
     ui->appQOwnNotesAPICheckBox->setChecked(_selectedCloudConnection.getAppQOwnNotesAPIEnabled());
+    ui->appNextcloudDeckCheckBox->setChecked(_selectedCloudConnection.getNextcloudDeckEnabled());
+    ui->nextcloudDeckFrame->setVisible(ui->appNextcloudDeckCheckBox->isChecked());
     ui->cloudConnectionRemoveButton->setDisabled(
         CloudConnection::fetchUsedCloudConnectionsIds().contains(id));
 }

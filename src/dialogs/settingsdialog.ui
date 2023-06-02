@@ -1231,7 +1231,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="11" column="1">
+                  <item row="13" column="1">
                    <widget class="QPushButton" name="connectButton">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -1260,7 +1260,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="13" column="1">
+                  <item row="15" column="1">
                    <widget class="QLabel" name="okLabelStatus">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -1276,7 +1276,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="14" column="0">
+                  <item row="16" column="0">
                    <widget class="QLabel" name="ok1Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1286,14 +1286,14 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="14" column="1">
+                  <item row="16" column="1">
                    <widget class="QLabel" name="check1Label">
                     <property name="text">
                      <string>connection to web server</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="15" column="0">
+                  <item row="17" column="0">
                    <widget class="QLabel" name="ok2Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1303,14 +1303,14 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="15" column="1">
+                  <item row="17" column="1">
                    <widget class="QLabel" name="check2Label">
                     <property name="text">
                      <string>ownCloud server detected</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="16" column="0">
+                  <item row="18" column="0">
                    <widget class="QLabel" name="ok3Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1320,14 +1320,14 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="16" column="1">
+                  <item row="18" column="1">
                    <widget class="QLabel" name="check3Label">
                     <property name="text">
                      <string>username and password correct</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="17" column="0">
+                  <item row="19" column="0">
                    <widget class="QLabel" name="ok4Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1337,14 +1337,14 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="17" column="1">
+                  <item row="19" column="1">
                    <widget class="QLabel" name="check4Label">
                     <property name="text">
                      <string>connection to QOwnNotesAPI</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="18" column="0">
+                  <item row="20" column="0">
                    <widget class="QLabel" name="ok6Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1354,14 +1354,14 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="18" column="1">
+                  <item row="20" column="1">
                    <widget class="QLabel" name="check6Label">
                     <property name="text">
                      <string>versions app enabled on server</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="19" column="0">
+                  <item row="21" column="0">
                    <widget class="QLabel" name="ok7Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1371,14 +1371,14 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="19" column="1">
+                  <item row="21" column="1">
                    <widget class="QLabel" name="check7Label">
                     <property name="text">
                      <string>trash app enabled on server</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="20" column="0">
+                  <item row="22" column="0">
                    <widget class="QLabel" name="ok8Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1388,7 +1388,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="20" column="1">
+                  <item row="22" column="1">
                    <widget class="QLabel" name="check8Label">
                     <property name="toolTip">
                      <string>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</string>
@@ -1401,7 +1401,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="21" column="1">
+                  <item row="23" column="1">
                    <spacer name="verticalSpacer_2">
                     <property name="orientation">
                      <enum>Qt::Vertical</enum>
@@ -1414,7 +1414,7 @@
                     </property>
                    </spacer>
                   </item>
-                  <item row="12" column="1">
+                  <item row="14" column="1">
                    <spacer name="verticalSpacer_18">
                     <property name="orientation">
                      <enum>Qt::Vertical</enum>
@@ -1433,7 +1433,7 @@
                   <item row="10" column="1">
                    <widget class="QCheckBox" name="appQOwnNotesAPICheckBox">
                     <property name="text">
-                     <string>Enable QOwnNotesAPI app</string>
+                     <string>Enable QOwnNotesAPI app support</string>
                     </property>
                    </widget>
                   </item>
@@ -1476,6 +1476,45 @@
                      <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
                       <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
                     </property>
+                   </widget>
+                  </item>
+                  <item row="11" column="1">
+                   <widget class="QCheckBox" name="appNextcloudDeckCheckBox">
+                    <property name="text">
+                     <string>Enable Nextcloud Deck support</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="12" column="1">
+                   <widget class="QFrame" name="nextcloudDeckFrame">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_83">
+                     <item row="0" column="1">
+                      <widget class="QSpinBox" name="nextcloudDeckBoardSpinBox"/>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="nextcloudDeckBoardLabel">
+                       <property name="text">
+                        <string>Board Id:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="nextcloudDeckStackLabel">
+                       <property name="text">
+                        <string>Stack Id:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QSpinBox" name="nextcloudDeckStackSpinBox"/>
+                     </item>
+                    </layout>
                    </widget>
                   </item>
                  </layout>

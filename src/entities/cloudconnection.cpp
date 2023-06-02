@@ -49,9 +49,33 @@ QString CloudConnection::getAccountId() { return this->accountId; }
 
 QString CloudConnection::getPassword() { return this->password; }
 
-bool CloudConnection::getAppQOwnNotesAPIEnabled() { return this->appQOwnNotesAPIEnabled; }
+bool CloudConnection::getAppQOwnNotesAPIEnabled() const { return this->appQOwnNotesAPIEnabled; }
 
-int CloudConnection::getPriority() { return this->priority; }
+bool CloudConnection::getNextcloudDeckEnabled() const {
+    return extraSetting(QStringLiteral("nextcloudDeckEnabled"), false).toBool();
+}
+
+void CloudConnection::setNextcloudDeckEnabled(bool value) {
+    setExtraSetting(QStringLiteral("nextcloudDeckEnabled"), value);
+}
+
+int CloudConnection::getNextcloudDeckBoardId() const {
+    return extraSetting(QStringLiteral("nextcloudDeckBoardId"), 0).toInt();
+}
+
+void CloudConnection::setNextcloudDeckBoardId(int value) {
+    setExtraSetting(QStringLiteral("nextcloudDeckBoardId"), value);
+}
+
+int CloudConnection::getNextcloudDeckStackId() const {
+    return extraSetting(QStringLiteral("nextcloudDeckStackId"), 0).toInt();
+}
+
+void CloudConnection::setNextcloudDeckStackId(int value) {
+    setExtraSetting(QStringLiteral("nextcloudDeckStackId"), value);
+}
+
+int CloudConnection::getPriority() const { return this->priority; }
 
 CloudConnection CloudConnection::firstCloudConnection() {
     auto list = CloudConnection::fetchAll();
@@ -154,8 +178,27 @@ bool CloudConnection::remove() {
         qWarning() << __func__ << ": " << query.lastError();
         return false;
     } else {
+        removeExtraSettings();
+
         return true;
     }
+}
+
+void CloudConnection::removeExtraSettings() {
+    QSettings().remove(extraSettingsSettingsKey());
+}
+
+QString CloudConnection::extraSettingsSettingsKey() const {
+    return QStringLiteral("CloudConnection-") + QString::number(this->id);
+}
+
+void CloudConnection::setExtraSetting(const QString &key, const QVariant &value) {
+    QSettings().setValue(extraSettingsSettingsKey() + QStringLiteral("/") + key, value);
+}
+
+QVariant CloudConnection::extraSetting(const QString &key, const QVariant &defaultValue) const {
+    return QSettings().value(extraSettingsSettingsKey() + QStringLiteral("/") + key,
+                             defaultValue);
 }
 
 CloudConnection CloudConnection::cloudConnectionFromQuery(const QSqlQuery &query) {

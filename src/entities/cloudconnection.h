@@ -24,8 +24,8 @@ class CloudConnection {
     QString getUsername();
     QString getAccountId();
     QString getPassword();
-    bool getAppQOwnNotesAPIEnabled();
-    int getPriority();
+    bool getAppQOwnNotesAPIEnabled() const;
+    int getPriority() const;
     void setName(const QString &text);
     void setServerUrl(const QString &text);
     void setPriority(int value);
@@ -42,6 +42,15 @@ class CloudConnection {
     QString getServerUrlPath();
     QString getServerUrlWithoutPath();
     static QList<int> fetchUsedCloudConnectionsIds();
+    void removeExtraSettings();
+    void setExtraSetting(const QString &key, const QVariant &value);
+    QVariant extraSetting(const QString &key, const QVariant &defaultValue) const;
+    int getNextcloudDeckBoardId() const;
+    void setNextcloudDeckBoardId(int value);
+    int getNextcloudDeckStackId() const;
+    void setNextcloudDeckStackId(int value);
+    bool getNextcloudDeckEnabled() const;
+    void setNextcloudDeckEnabled(bool value);
 
    private:
     int id;
@@ -52,4 +61,5 @@ class CloudConnection {
     QString password;
     int priority = 0;
     bool appQOwnNotesAPIEnabled = true;
+    QString extraSettingsSettingsKey() const;
 };

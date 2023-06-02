@@ -140,6 +140,9 @@ set(SOURCE_FILES
     dialogs/localtrashdialog.cpp
     dialogs/localtrashdialog.h
     dialogs/localtrashdialog.ui
+    dialogs/nextclouddeckdialog.cpp
+    dialogs/nextclouddeckdialog.h
+    dialogs/nextclouddeckdialog.ui
     dialogs/updatedialog.cpp
     dialogs/updatedialog.h
     dialogs/updatedialog.ui

@@ -115,6 +115,7 @@ INCLUDEPATH += $$PWD/libraries $$PWD/libraries/diff_match_patch
 
 SOURCES += main.cpp\
     dialogs/attachmentdialog.cpp \
+    dialogs/nextclouddeckdialog.cpp \
     entities/cloudconnection.cpp \
     helpers/codetohtmlconverter.cpp \
     helpers/qownspellchecker.cpp \
@@ -216,6 +217,7 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     build_number.h \
     dialogs/attachmentdialog.h \
+    dialogs/nextclouddeckdialog.h \
     entities/cloudconnection.h \
     helpers/LanguageCache.h \
     helpers/codetohtmlconverter.h \
@@ -323,6 +325,7 @@ HEADERS  += mainwindow.h \
 FORMS    += mainwindow.ui \
     dialogs/attachmentdialog.ui \
     dialogs/imagedialog.ui \
+    dialogs/nextclouddeckdialog.ui \
     dialogs/notediffdialog.ui \
     dialogs/aboutdialog.ui \
     dialogs/updatedialog.ui \
