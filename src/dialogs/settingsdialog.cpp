@@ -988,6 +988,8 @@ void SettingsDialog::readSettings() {
     ui->appQOwnNotesAPICheckBox->setChecked(_selectedCloudConnection.getAppQOwnNotesAPIEnabled());
     ui->appNextcloudDeckCheckBox->setChecked(_selectedCloudConnection.getNextcloudDeckEnabled());
     ui->nextcloudDeckFrame->setVisible(ui->appNextcloudDeckCheckBox->isChecked());
+    ui->nextcloudDeckBoardSpinBox->setValue(_selectedCloudConnection.getNextcloudDeckBoardId());
+    ui->nextcloudDeckStackSpinBox->setValue(_selectedCloudConnection.getNextcloudDeckStackId());
     ui->timeFormatLineEdit->setText(settings.value(QStringLiteral("insertTimeFormat")).toString());
 
     // prepend the portable data path if we are in portable mode
@@ -4012,6 +4014,8 @@ void SettingsDialog::on_cloudConnectionComboBox_currentIndexChanged(int index) {
     ui->appQOwnNotesAPICheckBox->setChecked(_selectedCloudConnection.getAppQOwnNotesAPIEnabled());
     ui->appNextcloudDeckCheckBox->setChecked(_selectedCloudConnection.getNextcloudDeckEnabled());
     ui->nextcloudDeckFrame->setVisible(ui->appNextcloudDeckCheckBox->isChecked());
+    ui->nextcloudDeckBoardSpinBox->setValue(_selectedCloudConnection.getNextcloudDeckBoardId());
+    ui->nextcloudDeckStackSpinBox->setValue(_selectedCloudConnection.getNextcloudDeckStackId());
     ui->cloudConnectionRemoveButton->setDisabled(
         CloudConnection::fetchUsedCloudConnectionsIds().contains(id));
 }
