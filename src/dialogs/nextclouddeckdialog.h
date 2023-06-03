@@ -18,6 +18,18 @@ public:
 private slots:
     void on_saveButton_clicked();
 
+    void on_add1HourButton_clicked();
+
+    void on_add10MinButton_clicked();
+
+    void on_add1DayButton_clicked();
+
+    void on_sub10MinButton_clicked();
+
+    void on_sub1HourButton_clicked();
+
+    void on_subd1DayButton_clicked();
+
 private:
     Ui::NextcloudDeckDialog *ui;
 };
