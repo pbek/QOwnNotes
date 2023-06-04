@@ -1,4 +1,6 @@
 #include "nextclouddeckdialog.h"
+
+#include "services/nextclouddeckservice.h"
 #include "ui_nextclouddeckdialog.h"
 
 NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent) :
@@ -13,6 +15,12 @@ NextcloudDeckDialog::~NextcloudDeckDialog() {
 }
 
 void NextcloudDeckDialog::on_saveButton_clicked() {
+    NextcloudDeckService nextcloudDeckService(CloudConnection::currentCloudConnection().getId(), this);
+
+    auto *dateTime = new QDateTime(ui->dueDateTimeEdit->dateTime());
+    nextcloudDeckService.createCard(ui->titleLineEdit->text(),
+                                    "",
+                                    dateTime);
 }
 
 

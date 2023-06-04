@@ -147,6 +147,7 @@ SOURCES += main.cpp\
     entities/bookmark.cpp \
     entities/commandsnippet.cpp \
     services/owncloudservice.cpp \
+    services/nextclouddeckservice.cpp \
     services/updateservice.cpp \
     helpers/htmlentities.cpp \
     helpers/clientproxy.cpp \
@@ -251,6 +252,7 @@ HEADERS  += mainwindow.h \
     dialogs/updatedialog.h \
     dialogs/versiondialog.h \
     services/owncloudservice.h \
+    services/nextclouddeckservice.h \
     services/updateservice.h \
     services/scriptingservice.h \
     services/websocketserverservice.h \

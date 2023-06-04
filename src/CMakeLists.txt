@@ -277,6 +277,8 @@ set(SOURCE_FILES
     services/databaseservice.h
     services/owncloudservice.cpp
     services/owncloudservice.h
+    services/nextclouddeckservice.cpp
+    services/nextclouddeckservice.h
     services/updateservice.cpp
     services/updateservice.h
     services/metricsservice.cpp
