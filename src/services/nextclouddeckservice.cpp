@@ -31,7 +31,7 @@ void NextcloudDeckService::createCard(const QString& title,
     // 10 sec timeout for the request
     timer.start(10000);
 
-    QUrl url(this->cloudConnection.getServerUrl() + "/boards/" +
+    QUrl url(this->cloudConnection.getServerUrl() + "/apps/deck/api/v1.1/boards/" +
              QString::number(this->boardId) + "/stacks/" +
              QString::number(this->stackId) + "/cards");
 
@@ -63,8 +63,14 @@ void NextcloudDeckService::createCard(const QString& title,
     QByteArray data;
     QNetworkReply *reply;
 
-    networkRequest.setHeader(QNetworkRequest::ContentTypeHeader,
-                             "application/x-www-form-urlencoded");
+    networkRequest.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    networkRequest.setRawHeader("OCS-APIRequest", "true");
+
+    auto authString = this->cloudConnection.getUsername() + QStringLiteral(":") + this->cloudConnection.getPassword();
+    QByteArray authStringBase64 = authString.toLocal8Bit().toBase64();
+    QString headerData = QStringLiteral("Basic ") + authStringBase64;
+    networkRequest.setRawHeader("Authorization", headerData.toLocal8Bit());
+
     reply = manager->post(networkRequest, bodyJsonDoc.toJson());
 
     loop.exec();
@@ -86,6 +92,7 @@ void NextcloudDeckService::createCard(const QString& title,
             qDebug() << __func__ << " - 'id': " << id;
         } else {
             qDebug() << __func__ << " - error: " << returnStatusCode;
+            qDebug() << __func__ << " - 'data': " << data;
         }
     }
 
