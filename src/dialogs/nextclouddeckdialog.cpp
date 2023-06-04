@@ -23,31 +23,25 @@ void NextcloudDeckDialog::on_saveButton_clicked() {
                                     dateTime);
 }
 
-
 void NextcloudDeckDialog::on_add1HourButton_clicked() {
     ui->dueDateTimeEdit->setDateTime(ui->dueDateTimeEdit->dateTime().addSecs(3600));
 }
-
 
 void NextcloudDeckDialog::on_add10MinButton_clicked() {
     ui->dueDateTimeEdit->setDateTime(ui->dueDateTimeEdit->dateTime().addSecs(600));
 }
 
-
 void NextcloudDeckDialog::on_add1DayButton_clicked() {
     ui->dueDateTimeEdit->setDateTime(ui->dueDateTimeEdit->dateTime().addDays(1));
 }
-
 
 void NextcloudDeckDialog::on_sub10MinButton_clicked() {
     ui->dueDateTimeEdit->setDateTime(ui->dueDateTimeEdit->dateTime().addSecs(-600));
 }
 
-
 void NextcloudDeckDialog::on_sub1HourButton_clicked() {
     ui->dueDateTimeEdit->setDateTime(ui->dueDateTimeEdit->dateTime().addSecs(-3600));
 }
-
 
 void NextcloudDeckDialog::on_subd1DayButton_clicked() {
     ui->dueDateTimeEdit->setDateTime(ui->dueDateTimeEdit->dateTime().addDays(-1));
