@@ -92,6 +92,17 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>titleLineEdit</tabstop>
+  <tabstop>dueDateTimeEdit</tabstop>
+  <tabstop>saveButton</tabstop>
+  <tabstop>add10MinButton</tabstop>
+  <tabstop>add1HourButton</tabstop>
+  <tabstop>add1DayButton</tabstop>
+  <tabstop>sub10MinButton</tabstop>
+  <tabstop>sub1HourButton</tabstop>
+  <tabstop>subd1DayButton</tabstop>
+ </tabstops>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>
  </resources>
