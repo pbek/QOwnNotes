@@ -1497,10 +1497,13 @@
                      <item row="0" column="1">
                       <widget class="QSpinBox" name="nextcloudDeckBoardSpinBox">
                        <property name="minimum">
-                        <number>1</number>
+                        <number>0</number>
                        </property>
                        <property name="maximum">
                         <number>999999999</number>
+                       </property>
+                       <property name="value">
+                        <number>0</number>
                        </property>
                       </widget>
                      </item>
@@ -1521,10 +1524,13 @@
                      <item row="1" column="1">
                       <widget class="QSpinBox" name="nextcloudDeckStackSpinBox">
                        <property name="minimum">
-                        <number>1</number>
+                        <number>0</number>
                        </property>
                        <property name="maximum">
                         <number>999999999</number>
+                       </property>
+                       <property name="value">
+                        <number>0</number>
                        </property>
                       </widget>
                      </item>
@@ -7036,8 +7042,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

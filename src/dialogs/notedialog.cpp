@@ -8,6 +8,7 @@
 #include <QSettings>
 
 #include "ui_notedialog.h"
+#include "utils/urlhandler.h"
 
 NoteDialog::NoteDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::NoteDialog) {
     ui->setupUi(this);
@@ -37,11 +38,8 @@ NoteDialog::~NoteDialog() { delete ui; }
 
 void NoteDialog::on_noteTextView_anchorClicked(const QUrl &url) {
     qDebug() << __func__ << " - 'url': " << url;
-    const QString scheme = url.scheme();
 
-    if ((scheme == QStringLiteral("note") || scheme == QStringLiteral("noteid") ||
-         scheme == QStringLiteral("task") || scheme == QStringLiteral("checkbox")) ||
-        (scheme == QStringLiteral("file") && Note::fileUrlIsNoteInCurrentNoteFolder(url))) {
+    if (UrlHandler::isUrlSchemeLocal(url)) {
         return;
     }
 

@@ -6,45 +6,113 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>463</width>
+    <height>412</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="2" column="2">
+   <item row="5" column="0">
+    <widget class="QPushButton" name="sub10MinButton">
+     <property name="text">
+      <string>-10min</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QPushButton" name="add10MinButton">
+     <property name="text">
+      <string>+10min</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
     <widget class="QPushButton" name="add1DayButton">
      <property name="text">
       <string>+1d</string>
      </property>
     </widget>
    </item>
-   <item row="7" column="0" colspan="3">
-    <widget class="QPushButton" name="saveButton">
-     <property name="toolTip">
-      <string>Save the current todo item</string>
-     </property>
-     <property name="text">
-      <string>Save</string>
-     </property>
-     <property name="icon">
-      <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
-       <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
-     </property>
-     <property name="shortcut">
-      <string notr="true">Ctrl+S</string>
-     </property>
-    </widget>
+   <item row="2" column="0" colspan="3">
+    <widget class="QOwnNotesMarkdownTextEdit" name="descriptionTextEdit"/>
    </item>
-   <item row="1" column="1" colspan="2">
+   <item row="3" column="1" colspan="2">
     <widget class="QDateTimeEdit" name="dueDateTimeEdit">
      <property name="currentSection">
       <enum>QDateTimeEdit::HourSection</enum>
      </property>
      <property name="calendarPopup">
       <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QPushButton" name="subd1DayButton">
+     <property name="text">
+      <string>-1d</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0" colspan="3">
+    <widget class="QFrame" name="buttonFrame">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="saveButton">
+        <property name="toolTip">
+         <string>Save the current todo item</string>
+        </property>
+        <property name="text">
+         <string>&amp;Save</string>
+        </property>
+        <property name="icon">
+         <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
+        </property>
+        <property name="shortcut">
+         <string notr="true">Ctrl+S</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QPushButton" name="add1HourButton">
+     <property name="text">
+      <string>+1h</string>
      </property>
     </widget>
    </item>
@@ -55,53 +123,48 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
-    <widget class="QPushButton" name="add1HourButton">
-     <property name="text">
-      <string>+1h</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="0">
-    <widget class="QPushButton" name="add10MinButton">
-     <property name="text">
-      <string>+10min</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="1">
+   <item row="5" column="1">
     <widget class="QPushButton" name="sub1HourButton">
      <property name="text">
       <string>-1h</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="0">
-    <widget class="QPushButton" name="sub10MinButton">
+   <item row="1" column="0" colspan="3">
+    <widget class="QLabel" name="descriptionLabel">
      <property name="text">
-      <string>-10min</string>
+      <string>Description:</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="2">
-    <widget class="QPushButton" name="subd1DayButton">
+   <item row="3" column="0">
+    <widget class="QCheckBox" name="dueDateTimeCheckBox">
      <property name="text">
-      <string>-1d</string>
+      <string>Due date</string>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QOwnNotesMarkdownTextEdit</class>
+   <extends>QPlainTextEdit</extends>
+   <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>titleLineEdit</tabstop>
   <tabstop>dueDateTimeEdit</tabstop>
-  <tabstop>saveButton</tabstop>
   <tabstop>add10MinButton</tabstop>
   <tabstop>add1HourButton</tabstop>
   <tabstop>add1DayButton</tabstop>
   <tabstop>sub10MinButton</tabstop>
   <tabstop>sub1HourButton</tabstop>
   <tabstop>subd1DayButton</tabstop>
+  <tabstop>saveButton</tabstop>
+  <tabstop>dueDateTimeCheckBox</tabstop>
+  <tabstop>descriptionTextEdit</tabstop>
  </tabstops>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>

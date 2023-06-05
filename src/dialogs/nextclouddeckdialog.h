@@ -3,11 +3,13 @@
 
 #include <QDialog>
 
+#include "masterdialog.h"
+
 namespace Ui {
 class NextcloudDeckDialog;
 }
 
-class NextcloudDeckDialog : public QDialog
+class NextcloudDeckDialog : public MasterDialog
 {
     Q_OBJECT
 
@@ -29,6 +31,10 @@ private slots:
     void on_sub1HourButton_clicked();
 
     void on_subd1DayButton_clicked();
+
+    void on_titleLineEdit_textChanged(const QString &arg1);
+
+    void on_dueDateTimeCheckBox_toggled(bool checked);
 
 private:
     Ui::NextcloudDeckDialog *ui;

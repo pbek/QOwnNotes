@@ -57,7 +57,7 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     }
 
     // ignores note clicks in QMarkdownTextEdit in the note text edit
-    setIgnoredClickUrlSchemata(QStringList({"note", "task"}));
+    setIgnoredClickUrlSchemata(QStringList({"note", "task", "deck"}));
 
     connect(this, &QOwnNotesMarkdownTextEdit::zoomIn, this, [this]() { onZoom(/*in=*/true); });
     connect(this, &QOwnNotesMarkdownTextEdit::zoomOut, this, [this]() { onZoom(/*in=*/false); });

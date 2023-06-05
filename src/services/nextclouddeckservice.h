@@ -1,8 +1,9 @@
 #ifndef QOWNNOTES_NEXTCLOUDDECKSERVICE_H
 #define QOWNNOTES_NEXTCLOUDDECKSERVICE_H
 
-#include <QObject>
 #include <QDateTime>
+#include <QObject>
+#include <QtNetwork/QNetworkRequest>
 
 #include "entities/cloudconnection.h"
 class NextcloudDeckService : public QObject {
@@ -10,12 +11,15 @@ class NextcloudDeckService : public QObject {
 
    public:
     NextcloudDeckService(int cloudConnectionId, QObject* parent);
-    void createCard(const QString& title, const QString& description = "", QDateTime* dueDateTime = nullptr);
+    int createCard(const QString& title, const QString& description = "", QDateTime* dueDateTime = nullptr);
+    QString getCardLinkForId(int cardId);
 
    private:
     CloudConnection cloudConnection;
+    QString serverUrl;
     int boardId;
     int stackId;
+    void addAuthHeader(QNetworkRequest& networkRequest);
 };
 
 #endif    // QOWNNOTES_NEXTCLOUDDECKSERVICE_H

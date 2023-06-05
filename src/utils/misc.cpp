@@ -1759,6 +1759,15 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                                               cloudConnection.getUsername(), withGitHubLineBreaks);
         output += prepareDebugInformationLine(QStringLiteral("accountId"),
                                               cloudConnection.getAccountId(), withGitHubLineBreaks);
+
+        if (cloudConnection.getNextcloudDeckEnabled()) {
+            output += prepareDebugInformationLine(QStringLiteral("Nextcloud Deck boardId"),
+                                                  QString::number(cloudConnection.getNextcloudDeckBoardId()),
+                                                  withGitHubLineBreaks);
+            output += prepareDebugInformationLine(QStringLiteral("Nextcloud Deck stackId"),
+                                                  QString::number(cloudConnection.getNextcloudDeckStackId()),
+                                                  withGitHubLineBreaks);
+        }
     }
 
     // add script information

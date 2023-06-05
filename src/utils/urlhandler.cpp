@@ -17,6 +17,7 @@ bool UrlHandler::isUrlSchemeLocal(const QUrl &url) {
     const QString scheme = url.scheme();
     return scheme == QLatin1String("note") || scheme == QLatin1String("noteid") ||
            scheme == QLatin1String("task") || scheme == QLatin1String("checkbox") ||
+           scheme == QStringLiteral("deck") ||
            (scheme == QLatin1String("file") && Note::fileUrlIsNoteInCurrentNoteFolder(url));
 }
 
@@ -61,6 +62,8 @@ void UrlHandler::openUrl(QString urlString) {
         handleNoteUrl(urlString, fragment);
     } else if (scheme == QStringLiteral("task")) {
         MainWindow::instance()->openTodoDialog(url.host());
+    } else if (scheme == QStringLiteral("deck")) {
+        // We currently don't need that
     } else if (scheme == QStringLiteral("checkbox")) {
         handleCheckboxUrl(urlString);
     } else if (scheme == QStringLiteral("file") && urlWasNotValid) {
