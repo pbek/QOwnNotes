@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Insert Nextcloud Deck card link</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="5" column="0">
@@ -92,7 +92,7 @@
       <item>
        <widget class="QPushButton" name="saveButton">
         <property name="toolTip">
-         <string>Save the current todo item</string>
+         <string>Create card and insert link into current note</string>
         </property>
         <property name="text">
          <string>&amp;Save</string>

@@ -2709,7 +2709,7 @@ p, li { white-space: pre-wrap; }
     <string>Insert Nextcloud Deck card link</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+Alt+D</string>
+    <string notr="true">Ctrl+Alt+D</string>
    </property>
   </action>
  </widget>
