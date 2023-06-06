@@ -1,10 +1,10 @@
 # QOwnNotes Changelog
 
 ## 23.6.0
-- you now can quickly **create Nextcloud Deck Cards** with a dute date and link them
+- you now can quickly **create Nextcloud Deck Cards** with a due date and link them
   in the current note with the shortcut <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd>
   (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789))
-  - before you can do that you need to set the IDs to the board and stack in the
+  - before you can do that, you need to set the IDs to the board and stack in the
     *Nextcloud / ownCloud* settings
 - in lists `- [-] ` is now detected as checklist when pressing <kbd>Return</kbd>
 - added more Persian, Dutch, Korean translation (thank you amirkbrpr, stephanp, venusgirl)
