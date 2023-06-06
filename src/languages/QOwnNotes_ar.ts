@@ -1535,7 +1535,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>نسخة</translation>
+<translation>انسخ</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -2081,7 +2081,7 @@
 <message>
 <location filename="../mainwindow.ui" line="411"/>
 <location filename="../mainwindow.ui" line="912"/>
-<location filename="../mainwindow.cpp" line="822"/>
+<location filename="../mainwindow.cpp" line="823"/>
 <source>Navigation</source>
 <translation>تصفح</translation>
 </message>
@@ -2092,7 +2092,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="7900"/>
+<location filename="../mainwindow.cpp" line="7906"/>
 <source>Add a tag to the current note</source>
 <translation>أضف علامة إلى الملاحظة الحالية</translation>
 </message>
@@ -2117,123 +2117,123 @@
 <translation>مسا&amp;عدة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1149"/>
+<location filename="../mainwindow.ui" line="1150"/>
 <source>Editor width in distraction free mode</source>
 <translation>عرض المحرر في الوضع الخالي من المشوشات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1152"/>
+<location filename="../mainwindow.ui" line="1153"/>
 <source>Editor width</source>
 <translation>عرض المحرر</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1243"/>
+<location filename="../mainwindow.ui" line="1244"/>
 <source>Custom actions</source>
 <translation>إجراءات مخصصة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1263"/>
+<location filename="../mainwindow.ui" line="1264"/>
 <source>main toolbar</source>
 <translation>شريط الأدوات الرئيسي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1297"/>
+<location filename="../mainwindow.ui" line="1298"/>
 <source>&amp;Quit</source>
 <translation>&amp;خروج</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1312"/>
+<location filename="../mainwindow.ui" line="1313"/>
 <source>&amp;Setup note folders</source>
 <translation>إع&amp;داد مجلدات الملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1321"/>
+<location filename="../mainwindow.ui" line="1322"/>
 <source>&amp;Find note</source>
 <translation>ا&amp;عثر على ملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1333"/>
+<location filename="../mainwindow.ui" line="1334"/>
 <source>&amp;Remove current note</source>
 <translation>اح&amp;ذف الملاحظة الحالية</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1357"/>
+<location filename="../mainwindow.ui" line="1358"/>
 <source>&amp;New note</source>
 <translation>&amp;ملاحظة جديدة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1369"/>
+<location filename="../mainwindow.ui" line="1370"/>
 <source>Check for &amp;updates</source>
 <translation>تح&amp;قق من التحديثات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1381"/>
+<location filename="../mainwindow.ui" line="1382"/>
 <source>Post questions, feature requests or issues</source>
 <translation>أرسل أسئلة، أو طلبات خصائص، أو مشاكل</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1392"/>
+<location filename="../mainwindow.ui" line="1393"/>
 <source>Alphabetical</source>
 <translation>أبجدي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1395"/>
+<location filename="../mainwindow.ui" line="1396"/>
 <source>Sort alphabetical</source>
 <translation>فرز أبجدي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1403"/>
+<location filename="../mainwindow.ui" line="1404"/>
 <source>By date</source>
 <translation>حسب التاريخ</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1406"/>
+<location filename="../mainwindow.ui" line="1407"/>
 <source>Sort by date</source>
 <translation>رتّب حسب التاريخ</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1430"/>
+<location filename="../mainwindow.ui" line="1431"/>
 <source>Show note &amp;versions</source>
 <translation>أظهر الملاحظة وإصداراتها</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1433"/>
+<location filename="../mainwindow.ui" line="1434"/>
 <source>Show note versions on server</source>
 <translation>عرض نُسخ الملاحظة على الخادم</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1445"/>
+<location filename="../mainwindow.ui" line="1446"/>
 <source>Show trashed notes on server</source>
 <translation>أظهر الملاحظات الموجودة في سلة المهملات على الخادم</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1450"/>
-<location filename="../mainwindow.cpp" line="9389"/>
+<location filename="../mainwindow.ui" line="1451"/>
+<location filename="../mainwindow.cpp" line="9395"/>
 <source>Select &amp;all notes</source>
 <translation>حدد &amp;جميع الملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1471"/>
+<location filename="../mainwindow.ui" line="1472"/>
 <source>&amp;Find in current note</source>
 <translation>ا&amp;بحث في الملاحظة الحالية</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1474"/>
+<location filename="../mainwindow.ui" line="1475"/>
 <source>Find text in current note</source>
 <translation>ابحث عن نص في الملاحظة الحالية</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1487"/>
+<location filename="../mainwindow.ui" line="1488"/>
 <source>&amp;Duplicate text</source>
 <translation>كرر النص</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1499"/>
+<location filename="../mainwindow.ui" line="1500"/>
 <source>&amp;Back in note history</source>
 <translation>ارجع في تاريخ الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1415"/>
+<location filename="../mainwindow.ui" line="1416"/>
 <source>&amp;Settings</source>
 <translation>الإعدادات</translation>
 </message>
@@ -2258,7 +2258,7 @@
 <translation>إيجاد أو إنشاء ملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7901"/>
+<location filename="../mainwindow.cpp" line="7907"/>
 <source>Add a tag to the selected notes</source>
 <translation>أضف علامة إلى الملاحظات المحددة</translation>
 </message>
@@ -2303,655 +2303,660 @@
 <translation>إدراج</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1042"/>
+<location filename="../mainwindow.ui" line="1043"/>
 <source>Format</source>
 <translation>التنسيق</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1056"/>
+<location filename="../mainwindow.ui" line="1057"/>
 <source>Extra</source>
 <translation>إضافي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1070"/>
+<location filename="../mainwindow.ui" line="1071"/>
 <source>Edit</source>
 <translation>تحرير</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1083"/>
+<location filename="../mainwindow.ui" line="1084"/>
 <source>Versioning</source>
 <translation>الإصدارات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1094"/>
+<location filename="../mainwindow.ui" line="1095"/>
 <source>Encryption</source>
 <translation>التشفير</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1106"/>
+<location filename="../mainwindow.ui" line="1107"/>
 <source>Languages</source>
 <translation>اللغات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1111"/>
+<location filename="../mainwindow.ui" line="1112"/>
 <source>Spelling backend</source>
 <translation>هجاء الخلفية</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1138"/>
+<location filename="../mainwindow.ui" line="1139"/>
 <source>To&amp;do</source>
 <translation>قائمة الم&amp;هام</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1145"/>
+<location filename="../mainwindow.ui" line="1146"/>
 <source>&amp;Window</source>
 <translation>&amp;نافذة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1162"/>
-<location filename="../mainwindow.cpp" line="755"/>
+<location filename="../mainwindow.ui" line="1163"/>
+<location filename="../mainwindow.cpp" line="756"/>
 <source>Workspaces</source>
 <translation>مساحات العمل</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1167"/>
+<location filename="../mainwindow.ui" line="1168"/>
 <source>Panels</source>
 <translation>لوحات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1172"/>
+<location filename="../mainwindow.ui" line="1173"/>
 <source>Toolbars</source>
 <translation>أشرطة الأدوات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1177"/>
+<location filename="../mainwindow.ui" line="1178"/>
 <source>Show</source>
 <extracomment>To show or hide stuff</extracomment>
 <translation>إظهار</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1192"/>
+<location filename="../mainwindow.ui" line="1193"/>
 <source>Workspace</source>
 <translation>مساحة العمل</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1201"/>
+<location filename="../mainwindow.ui" line="1202"/>
 <source>Jump to</source>
 <translation>انتقال إلى</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1239"/>
+<location filename="../mainwindow.ui" line="1240"/>
 <source>&amp;Scripting</source>
 <translation>ال&amp;برمجة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1345"/>
+<location filename="../mainwindow.ui" line="1346"/>
 <source>About &amp;QOwnNotes…</source>
 <translation>حول &amp;QOwnNotes…</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1384"/>
+<location filename="../mainwindow.ui" line="1385"/>
 <source>Post questions, feature requests or problems with the help of the issue assistant</source>
 <translation>أرسل أسئلة، أو طلبات خصائص، أو مشاكل، بمساعدة مساعد الإبلاغ عن المشاكل</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1442"/>
+<location filename="../mainwindow.ui" line="1443"/>
 <source>Show remote trash</source>
 <translation>عرض المهملات البعيدة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1459"/>
+<location filename="../mainwindow.ui" line="1460"/>
 <source>Insert text &amp;link</source>
 <translation>إدراج &amp;رابط نصي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1462"/>
+<location filename="../mainwindow.ui" line="1463"/>
 <source>Ctrl+L</source>
 <translation>Ctrl+L</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1479"/>
-<location filename="../mainwindow.ui" line="1482"/>
+<location filename="../mainwindow.ui" line="1480"/>
+<location filename="../mainwindow.ui" line="1483"/>
 <source>Auto format table</source>
 <translation>جدول تنسيق تلقائي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1511"/>
+<location filename="../mainwindow.ui" line="1512"/>
 <source>Forward in note history</source>
 <translation>التقدّم في تاريخ الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1523"/>
+<location filename="../mainwindow.ui" line="1524"/>
 <source>Show shortcuts</source>
 <translation>أظهر الاختصارات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1532"/>
+<location filename="../mainwindow.ui" line="1533"/>
 <source>&amp;Knowledge base</source>
 <translation>&amp;قاعدة المعلومات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1541"/>
+<location filename="../mainwindow.ui" line="1542"/>
 <source>Insert current &amp;time</source>
 <translation>إدراج ال&amp;وقت الحالي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1553"/>
+<location filename="../mainwindow.ui" line="1554"/>
 <source>Show &amp;Todo List</source>
 <translation>إظهار قائمة الم&amp;هام</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1565"/>
+<location filename="../mainwindow.ui" line="1566"/>
 <source>&amp;Export note as PDF (preview)</source>
 <translation>&amp;تصدير معاينة الملاحظة كملف PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1568"/>
+<location filename="../mainwindow.ui" line="1569"/>
 <source>Export note as PDF (preview)</source>
 <translation>تصدير معاينة الملاحظة كملف PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1577"/>
+<location filename="../mainwindow.ui" line="1578"/>
 <source>&amp;Export note as PDF (text)</source>
 <translation>ت&amp;صدير نص الملاحظة كملف PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1586"/>
+<location filename="../mainwindow.ui" line="1587"/>
 <source>&amp;Print note (text)</source>
 <translation>&amp;طباعة نص الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1610"/>
+<location filename="../mainwindow.ui" line="1611"/>
 <source>Insert &amp;image</source>
 <translation>إدراج &amp;صورة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1613"/>
+<location filename="../mainwindow.ui" line="1614"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
 <translation>أدرج صورة (سيتم نسخ الصورة إلى مجلد 'media' في مجلد الملاحظات الحالي)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1625"/>
+<location filename="../mainwindow.ui" line="1626"/>
 <source>Show &amp;changelog</source>
 <translation>أظهر &amp;سجل التغييرات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1634"/>
+<location filename="../mainwindow.ui" line="1635"/>
 <source>&amp;Encrypt note</source>
 <translation>&amp;شفّر الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1643"/>
+<location filename="../mainwindow.ui" line="1644"/>
 <source>Edit encrypted note</source>
 <translation>حرر ملاحظة مشفرة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1655"/>
+<location filename="../mainwindow.ui" line="1656"/>
 <source>Decrypt note</source>
 <translation>فكّ تشفير الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1664"/>
+<location filename="../mainwindow.ui" line="1665"/>
 <source>&amp;Open note in external editor</source>
 <translation>&amp;افتح الملاحظة بمحرر خارجي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1685"/>
+<location filename="../mainwindow.ui" line="1686"/>
 <source>&amp;Get involved</source>
 <translation>&amp;ساهم في البرنامج</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1694"/>
+<location filename="../mainwindow.ui" line="1695"/>
 <source>Insert &amp;code block</source>
 <translation>إدراج كتلة &amp;كود</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1730"/>
+<location filename="../mainwindow.ui" line="1731"/>
 <source>&amp;Distraction free mode</source>
 <translation>الو&amp;ضع الخالي من المشوشات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1733"/>
+<location filename="../mainwindow.ui" line="1734"/>
 <source>Distraction free mode, you can leave it with a button on the bottom right</source>
 <translation>الوضع الخالي من المشوشات، يمكنك مغادرته بالزر الذي بالأسفل على اليسار</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1744"/>
+<location filename="../mainwindow.ui" line="1745"/>
 <source>Show &amp;toolbar</source>
 <translation>أظهر &amp;شريط الأدوات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1752"/>
+<location filename="../mainwindow.ui" line="1753"/>
 <source>Narrow</source>
 <translation>ضيّق</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1763"/>
+<location filename="../mainwindow.ui" line="1764"/>
 <source>Medium</source>
 <translation>وسط</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1774"/>
+<location filename="../mainwindow.ui" line="1775"/>
 <source>Wide</source>
 <translation>عريض</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1785"/>
+<location filename="../mainwindow.ui" line="1786"/>
 <source>Full</source>
 <translation>كامل</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1797"/>
+<location filename="../mainwindow.ui" line="1798"/>
 <source>Paste html or media</source>
 <translation>الصق كود HTML أو الوسائط</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1800"/>
-<location filename="../mainwindow.ui" line="1803"/>
+<location filename="../mainwindow.ui" line="1801"/>
+<location filename="../mainwindow.ui" line="1804"/>
 <source>Paste images, notes and html from the clipboard</source>
 <translation>الصق الصور، الملاحظات وكود HTML من الحافظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1815"/>
+<location filename="../mainwindow.ui" line="1816"/>
 <source>Show note in &amp;file manager</source>
 <translation>أظهر الملاحظة &amp;في مدير الملفات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1827"/>
+<location filename="../mainwindow.ui" line="1828"/>
 <source>Format text &amp;bold</source>
 <translation>اجعل النص &amp;عريضا</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1839"/>
+<location filename="../mainwindow.ui" line="1840"/>
 <source>Format text &amp;italic</source>
 <translation>اجعل النص &amp;مائلا</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1851"/>
+<location filename="../mainwindow.ui" line="1852"/>
 <source>&amp;Increase note text size</source>
 <translation>زد في حجم نص الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1863"/>
+<location filename="../mainwindow.ui" line="1864"/>
 <source>&amp;Decrease note text size</source>
 <translation>انقص من حجم نص الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1875"/>
+<location filename="../mainwindow.ui" line="1876"/>
 <source>&amp;Reset note text size</source>
 <translation>أعد تعيين حجم خط الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1887"/>
+<location filename="../mainwindow.ui" line="1888"/>
 <source>&amp;Add tag to note</source>
 <translation>أضف الوسم للملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1899"/>
+<location filename="../mainwindow.ui" line="1900"/>
 <source>&amp;Reload note folder</source>
 <translation>إ&amp;عادة تحميل مجلد الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1971"/>
+<location filename="../mainwindow.ui" line="1972"/>
 <source>Show log</source>
 <translation>إظهار السجل</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1980"/>
+<location filename="../mainwindow.ui" line="1981"/>
 <source>Export note as HTML</source>
 <translation>تصدير الملاحظة كملف HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1992"/>
-<location filename="../mainwindow.ui" line="1995"/>
+<location filename="../mainwindow.ui" line="1993"/>
+<location filename="../mainwindow.ui" line="1996"/>
 <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
 <translation>افتح قناة التواصل عبر #qownnotes IRC (Kiwi) . ابق متصلا لتتوصل برد.</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2059"/>
+<location filename="../mainwindow.ui" line="2060"/>
 <source>Cycle text case</source>
 <translation>تبديل حالة النص</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2132"/>
+<location filename="../mainwindow.ui" line="2133"/>
 <source>Show note list under tag panel</source>
 <translation>إظهار قائمة الملاحظات أسفل لوحة الوسوم</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2150"/>
+<location filename="../mainwindow.ui" line="2151"/>
 <source>Find notes in all tags / subfolders</source>
 <translation>البحث عن الملاحظات في جميع الوسوم والمجلدات الفرعية</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2171"/>
+<location filename="../mainwindow.ui" line="2172"/>
 <source>Import notes from text files</source>
 <translation>استيراد الملاحظات من الملفات النصية</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2192"/>
-<location filename="../mainwindow.ui" line="2195"/>
+<location filename="../mainwindow.ui" line="2193"/>
+<location filename="../mainwindow.ui" line="2196"/>
 <source>Open the Telegram group</source>
 <translation>افتح مجموعة Telegram</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2207"/>
-<location filename="../mainwindow.ui" line="2210"/>
+<location filename="../mainwindow.ui" line="2208"/>
+<location filename="../mainwindow.ui" line="2211"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
 <extracomment>"Element" as in the chat service</extracomment>
 <translation>افتح الدردشة الخاصة ب QOwnNotes عبر منصة Matrix</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2237"/>
+<location filename="../mainwindow.ui" line="2238"/>
 <source>Unlock panels</source>
 <translation>فكّ قفل اللوحات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2246"/>
-<location filename="../mainwindow.cpp" line="10306"/>
+<location filename="../mainwindow.ui" line="2247"/>
+<location filename="../mainwindow.cpp" line="10312"/>
 <source>Remove current workspace</source>
 <translation>أزل مساحة العمل الحالية</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2255"/>
+<location filename="../mainwindow.ui" line="2256"/>
 <source>Add new workspace</source>
 <translation>أضف مساحة عمل جديدة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2264"/>
+<location filename="../mainwindow.ui" line="2265"/>
 <source>Rename current workspace</source>
 <translation>أعد تسمية مساحة العمل الحالية</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2273"/>
+<location filename="../mainwindow.ui" line="2274"/>
 <source>Switch to previous workspace</source>
 <translation>انتقل إلى مساحة العمل السابقة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2281"/>
+<location filename="../mainwindow.ui" line="2282"/>
 <source>Show all panels</source>
 <translation>أظهر جميع الألواح</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2290"/>
+<location filename="../mainwindow.ui" line="2291"/>
 <source>Find action</source>
 <translation>العثور على إجراء</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2293"/>
-<location filename="../mainwindow.ui" line="2296"/>
+<location filename="../mainwindow.ui" line="2294"/>
+<location filename="../mainwindow.ui" line="2297"/>
 <source>Find an action from the menu</source>
 <translation>اعثر على إجراء من القائمة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2308"/>
+<location filename="../mainwindow.ui" line="2309"/>
 <source>Insert table</source>
 <translation>إدراج جدول</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2320"/>
+<location filename="../mainwindow.ui" line="2321"/>
 <source>Insert block &amp;quote</source>
 <translation>إدراج كتلة ا&amp;قتباس</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2328"/>
-<location filename="../mainwindow.ui" line="2331"/>
+<location filename="../mainwindow.ui" line="2329"/>
+<location filename="../mainwindow.ui" line="2332"/>
 <source>Search selected text on the web</source>
 <translation>البحث في الويب عن النص المحدد</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2339"/>
+<location filename="../mainwindow.ui" line="2340"/>
 <source>Delete line</source>
 <translation>حذف السطر</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2347"/>
+<location filename="../mainwindow.ui" line="2348"/>
 <source>Delete word</source>
 <translation>حذف كلمة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2355"/>
+<location filename="../mainwindow.ui" line="2356"/>
 <source>Copy note headline</source>
 <translation>نسخ عنوان الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2367"/>
-<location filename="../mainwindow.cpp" line="9368"/>
+<location filename="../mainwindow.ui" line="2368"/>
+<location filename="../mainwindow.cpp" line="9374"/>
 <source>Open note in different window</source>
 <translation>فتح الملاحظة بنافذة جديدة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2379"/>
+<location filename="../mainwindow.ui" line="2380"/>
 <source>Save modified notes</source>
 <translation>حفظ الملاحظات المعدّلة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2390"/>
+<location filename="../mainwindow.ui" line="2391"/>
 <source>Ascending</source>
 <translation>تصاعدي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2398"/>
+<location filename="../mainwindow.ui" line="2399"/>
 <source>Descending</source>
 <translation>تنازلي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2407"/>
-<location filename="../mainwindow.cpp" line="9373"/>
+<location filename="../mainwindow.ui" line="2408"/>
+<location filename="../mainwindow.cpp" line="9379"/>
 <source>Show note git versions</source>
 <translation>إظهار إصدارات git للملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2416"/>
+<location filename="../mainwindow.ui" line="2417"/>
 <source>Find scripts in script repository</source>
 <translation>اعثر على بُريمِجات في مستودع البُريمِجات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2428"/>
+<location filename="../mainwindow.ui" line="2429"/>
 <source>Script settings</source>
 <translation>إعدادات البُريمِجات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2437"/>
+<location filename="../mainwindow.ui" line="2438"/>
 <source>Insert attachment</source>
 <translation>إدراج مرفق</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2464"/>
+<location filename="../mainwindow.ui" line="2465"/>
 <source>Check for script updates</source>
 <translation>تحقق من وجود تحديثات للبُريمِجات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2473"/>
+<location filename="../mainwindow.ui" line="2474"/>
 <source>Show local trash</source>
 <translation>عرض المهملات المحلية</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2478"/>
-<location filename="../mainwindow.ui" line="2481"/>
+<location filename="../mainwindow.ui" line="2479"/>
+<location filename="../mainwindow.ui" line="2482"/>
 <source>Jump to note edit panel</source>
 <translation>انتقال إلى لوحة تحرير الملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2493"/>
+<location filename="../mainwindow.ui" line="2494"/>
 <source>Manage stored attachments</source>
 <translation>إدارة المرفقات المخزنة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2498"/>
+<location filename="../mainwindow.ui" line="2499"/>
 <source>Jump to note subfolder panel</source>
 <translation>انتقال إلى لوحة المجلدات الفرعية للملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2506"/>
+<location filename="../mainwindow.ui" line="2507"/>
 <source>Jump to tags panel</source>
 <translation>الانتقال إلى لوحة العلامات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2514"/>
+<location filename="../mainwindow.ui" line="2515"/>
 <source>Jump to note list panel</source>
 <translation>انتقال إلى لوحة قائمة الملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2522"/>
+<location filename="../mainwindow.ui" line="2523"/>
 <source>Activate context menu</source>
 <translation>إظهار قائمة السياق</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2530"/>
+<location filename="../mainwindow.ui" line="2531"/>
 <source>Import bookmarks from server</source>
 <translation>استيراد الإشارات المرجعية من الخادم</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2535"/>
-<location filename="../mainwindow.ui" line="2538"/>
+<location filename="../mainwindow.ui" line="2536"/>
+<location filename="../mainwindow.ui" line="2539"/>
 <source>Toggle full-screen mode</source>
 <translation>تبديل وضع ملء الشاشة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2549"/>
+<location filename="../mainwindow.ui" line="2550"/>
 <source>Typewriter mode</source>
 <translation>وضع الآلة الكاتبة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2562"/>
+<location filename="../mainwindow.ui" line="2563"/>
 <source>Check spelling</source>
 <translation>تدقيق إملائي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2570"/>
-<location filename="../mainwindow.cpp" line="11255"/>
+<location filename="../mainwindow.ui" line="2571"/>
+<location filename="../mainwindow.cpp" line="11261"/>
 <source>Automatically detect</source>
 <translation>كشف تلقائي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2575"/>
+<location filename="../mainwindow.ui" line="2576"/>
 <source>Manage dictionaries</source>
 <translation>إدارة القواميس</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2583"/>
+<location filename="../mainwindow.ui" line="2584"/>
 <source>Custom</source>
 <translation>مخصص</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2586"/>
+<location filename="../mainwindow.ui" line="2587"/>
 <source>5</source>
 <translation>5</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2591"/>
+<location filename="../mainwindow.ui" line="2592"/>
 <source>Show/Hide application</source>
 <translation>إظهار / إخفاء التطبيق</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2600"/>
+<location filename="../mainwindow.ui" line="2601"/>
 <source>Previous note tab</source>
 <translation>علامة تبويب الملاحظة السابقة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2612"/>
+<location filename="../mainwindow.ui" line="2613"/>
 <source>Next note tab</source>
 <translation>علامة تبويب الملاحظة التالية
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2624"/>
+<location filename="../mainwindow.ui" line="2625"/>
 <source>Close current note tab</source>
 <translation>أغلق علامة تبويب الملاحظة الحالية
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2636"/>
+<location filename="../mainwindow.ui" line="2637"/>
 <source>New note in new tab</source>
 <translation>ملاحظة جديدة في علامة تبويب جديدة
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2644"/>
+<location filename="../mainwindow.ui" line="2645"/>
 <source>Toggle note stickiness of current tab</source>
 <translation>تبديل التصاق ملاحظة علامة التبويب الحالية
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2653"/>
+<location filename="../mainwindow.ui" line="2654"/>
 <source>Format text underline</source>
 <translation>تسطير النص
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2661"/>
+<location filename="../mainwindow.ui" line="2662"/>
 <source>Jump to navigation panel</source>
 <translation>انتقال إلى لوحة التنقل</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2673"/>
+<location filename="../mainwindow.ui" line="2674"/>
 <source>Insert &amp;note link</source>
 <translation>إدراج رابط &amp;ملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2676"/>
+<location filename="../mainwindow.ui" line="2677"/>
 <source>Ctrl+Shift+L</source>
 <translation>Ctrl+Shift+L</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2685"/>
+<location filename="../mainwindow.ui" line="2686"/>
 <source>Import notes from Joplin</source>
 <translation>استيراد ملاحظات من Joplin</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2690"/>
+<location filename="../mainwindow.ui" line="2691"/>
 <source>Toggle always-on-top mode</source>
 <translation>تبديل وضع البقاء دائما في المقدمة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2699"/>
+<location filename="../mainwindow.ui" line="2700"/>
 <source>&amp;Load Todo List items</source>
 <translation>&amp;تحميل عناصر قائمة المهام</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1910"/>
+<location filename="../mainwindow.ui" line="2709"/>
+<source>Insert Nextcloud Deck card link</source>
+<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+</message>
+<message>
+<location filename="../mainwindow.ui" line="1911"/>
 <source>Use &amp;vertical preview layout</source>
 <translation>استخدم مخطط المعاينة ال&amp;رأسي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1913"/>
-<location filename="../mainwindow.ui" line="1916"/>
+<location filename="../mainwindow.ui" line="1914"/>
+<location filename="../mainwindow.ui" line="1917"/>
 <source>The note edit panel will be above the preview panel</source>
 <translation>لوحة تحرير الملاحظات ستكون فوق لوحة المعاينة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1925"/>
+<location filename="../mainwindow.ui" line="1926"/>
 <source>Replace in current note</source>
 <translation>استبدل في الملاحظة الحالية</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1933"/>
+<location filename="../mainwindow.ui" line="1934"/>
 <source>Autocomplete, solve equation or open URL</source>
 <translation>إكمال تلقائي أو حل المعادلة أو فتح الرابط</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1936"/>
+<location filename="../mainwindow.ui" line="1937"/>
 <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
 <translation>حل معادلة بسيطة مثل '(2+3) * 6 = ' في السطر الحالي</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1944"/>
+<location filename="../mainwindow.ui" line="1945"/>
 <source>Select note folder</source>
 <translation>اختر مجلد الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1959"/>
+<location filename="../mainwindow.ui" line="1960"/>
 <source>Reload scripting engine</source>
 <translation>أعد تحميل محرك البرمجة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2180"/>
+<location filename="../mainwindow.ui" line="2181"/>
 <source>Manage stored image files</source>
 <translation>إدارة ملفات الصور المخزنة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2222"/>
-<location filename="../mainwindow.ui" line="2225"/>
+<location filename="../mainwindow.ui" line="2223"/>
+<location filename="../mainwindow.ui" line="2226"/>
 <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
 <translation>افتح غرفة برنامج كيو-أون-نوتس على منصة Gitter، ستحتاج لحساب GitHub أو Twitter للولوج، لكن بإمكانك الحصول على رسائل بينما لا تتواجد على الشبكة</translation>
 </message>
@@ -2966,103 +2971,103 @@
 <translation>عمليات الملاحظات…</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1598"/>
+<location filename="../mainwindow.ui" line="1599"/>
 <source>&amp;Print note (preview)</source>
 <translation>&amp;طباعة معاينة الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1676"/>
+<location filename="../mainwindow.ui" line="1677"/>
 <source>&amp;Export note as Markdown file</source>
 <translation>تصدي&amp;ر الملاحظة كملف Markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1706"/>
+<location filename="../mainwindow.ui" line="1707"/>
 <source>Move down in note list</source>
 <translation>انتقل لأسفل في قائمة الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1718"/>
+<location filename="../mainwindow.ui" line="1719"/>
 <source>Move up in note list</source>
 <translation>انتقل لأعلى في قائمة الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2004"/>
+<location filename="../mainwindow.ui" line="2005"/>
 <source>Insert headline from note filename</source>
 <translation>إدراج عنوان رئيسي من اسم ملف الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2018"/>
+<location filename="../mainwindow.ui" line="2019"/>
 <source>Use softwrap in note editor and preview</source>
 <translation>استعمل الالتفاف الناعم في محرر الملاحظة واعرض</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2026"/>
+<location filename="../mainwindow.ui" line="2027"/>
 <source>Show status bar</source>
 <translation>أظهر شريط الحالة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2041"/>
+<location filename="../mainwindow.ui" line="2042"/>
 <source>Share note</source>
 <translation>مشاركة الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2071"/>
+<location filename="../mainwindow.ui" line="2072"/>
 <source>Markdown cheatsheet</source>
 <translation>المرجع السريع في ماركداون</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2080"/>
+<location filename="../mainwindow.ui" line="2081"/>
 <source>Strike out text</source>
 <translation>اشطب النص</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2091"/>
+<location filename="../mainwindow.ui" line="2092"/>
 <source>Use one column mode</source>
 <translation>استعمل وضع عمود واحد</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2094"/>
-<location filename="../mainwindow.ui" line="2097"/>
+<location filename="../mainwindow.ui" line="2095"/>
+<location filename="../mainwindow.ui" line="2098"/>
 <source>Use a one column minimal mode (like NVAlt)</source>
 <translation>استخدم وضع عمود واحد بسيط (مثل NVAlt)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2109"/>
+<location filename="../mainwindow.ui" line="2110"/>
 <source>Show menu bar</source>
 <translation>أظهر شريط القوائم</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2121"/>
+<location filename="../mainwindow.ui" line="2122"/>
 <source>Split note at cursor position</source>
 <translation>تقسيم الملاحظة عند موضع المؤشر</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2141"/>
+<location filename="../mainwindow.ui" line="2142"/>
 <source>Donate</source>
 <translation>تبرّع</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2162"/>
+<location filename="../mainwindow.ui" line="2163"/>
 <source>Import notes from Evernote</source>
 <translation>استيراد ملاحظات من Evernote</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2799"/>
+<location filename="../mainwindow.cpp" line="2800"/>
 <source>Note was removed externally!</source>
 <translation>تم حذف الملاحظة خارجياً!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2800"/>
+<location filename="../mainwindow.cpp" line="2801"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>تم حذف هذه الملاحظة من خارج هذا البرنامج!
 هل تريد استعادة الملاحظة الحالية؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5282"/>
-<location filename="../mainwindow.cpp" line="5302"/>
-<location filename="../mainwindow.cpp" line="6582"/>
-<location filename="../mainwindow.cpp" line="9454"/>
+<location filename="../mainwindow.cpp" line="5288"/>
+<location filename="../mainwindow.cpp" line="5308"/>
+<location filename="../mainwindow.cpp" line="6588"/>
+<location filename="../mainwindow.cpp" line="9460"/>
 <source>&amp;Cancel</source>
 <translation>&amp;ألغ</translation>
 </message>
@@ -3078,47 +3083,47 @@ Restore current note?</source>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3037"/>
+<location filename="../mainwindow.cpp" line="3038"/>
 <source>new version %1 available</source>
 <translation>إصدار جديد %1 متوفر</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3147"/>
+<location filename="../mainwindow.cpp" line="3148"/>
 <source>Abort</source>
 <translation>إلغاء</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3147"/>
+<location filename="../mainwindow.cpp" line="3148"/>
 <source>Loading notes…</source>
 <translation>جارٍ تحميل الملاحظات…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3353"/>
+<location filename="../mainwindow.cpp" line="3354"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>تمت إزالة قاعدة بيانات متعارضة مكررة: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3354"/>
+<location filename="../mainwindow.cpp" line="3355"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>لا يمكن إزالة قاعدة بيانات متعارضة مكررة: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3359"/>
+<location filename="../mainwindow.cpp" line="3360"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>تمت إزالة قاعدة البيانات المتعارضة المدمجة: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3360"/>
+<location filename="../mainwindow.cpp" line="3361"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>لا يمكن إزالة قاعدة البيانات المتعارضة المدمجة: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3374"/>
+<location filename="../mainwindow.cpp" line="3375"/>
 <source>Delete conflicted database copies</source>
 <translation>حذف نسخ قاعدة البيانات المتعارضة</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3394"/>
+<location filename="../mainwindow.cpp" line="3395"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>تمت إزالة %n من نسخ قواعد البيانات المتعارضة</numerusform>
@@ -3130,62 +3135,62 @@ Restore current note?</source>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3556"/>
+<location filename="../mainwindow.cpp" line="3557"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>الرجاء تحديد المجلد الذي سيتم تخزين ملاحظاتك فيه</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3580"/>
+<location filename="../mainwindow.cpp" line="3581"/>
 <source>No folder was selected</source>
 <translation>لم يتم تحديد أي مجلّد</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3581"/>
+<location filename="../mainwindow.cpp" line="3582"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>عليك اختيار مجلد الملاحظات لـ ownCloud لأجل أن يعمل هذا البرنامج!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3583"/>
+<location filename="../mainwindow.cpp" line="3584"/>
 <source>&amp;Retry</source>
 <translation>&amp;أعد المحاولة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3583"/>
+<location filename="../mainwindow.cpp" line="3584"/>
 <source>&amp;Exit</source>
 <translation>&amp;أخرج</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3877"/>
+<location filename="../mainwindow.cpp" line="3883"/>
 <source>Remove current note</source>
 <translation>احذف الملاحظة الحالية</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3878"/>
+<location filename="../mainwindow.cpp" line="3884"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>أزل الملاحظة الحالية: &lt;strong&gt;%1&lt;/strong&gt;؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4247"/>
+<location filename="../mainwindow.cpp" line="4253"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>رجاءاً أدخل &lt;strong&gt;كلمة السر&lt;/strong&gt; لهذه الملاحظة المشفرة.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4269"/>
+<location filename="../mainwindow.cpp" line="4275"/>
 <source>Note can't be decrypted!</source>
 <translation>لا يمكن فكّ تشفير الملاحظة!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4270"/>
+<location filename="../mainwindow.cpp" line="4276"/>
 <source>It seems that your password is not valid!</source>
 <translation>يبدو أنّ كلمة سرّك غير صحيحة!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4450"/>
+<location filename="../mainwindow.cpp" line="4456"/>
 <source>Remove selected notes</source>
 <translation>أزل الملاحظات المختارة</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4451"/>
+<location filename="../mainwindow.cpp" line="4457"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3211,12 +3216,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4523"/>
+<location filename="../mainwindow.cpp" line="4529"/>
 <source>Remove selected tags</source>
 <translation>أزل الوسوم المحددة</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4524"/>
+<location filename="../mainwindow.cpp" line="4530"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>أزل &lt;strong&gt;%n&lt;/strong&gt; من الوسوم المحددة؟ لن يتم إزالة أي من الملاحظات في هذه العملية.</numerusform>
@@ -3228,13 +3233,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4578"/>
-<location filename="../mainwindow.cpp" line="8669"/>
+<location filename="../mainwindow.cpp" line="4584"/>
+<location filename="../mainwindow.cpp" line="8675"/>
 <source>Move selected notes</source>
 <translation>انقل الملاحظات المختارة</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4579"/>
+<location filename="../mainwindow.cpp" line="4585"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>أنقل %n من الملاحظات المختارة إلى &lt;strong&gt;%2&lt;/strong&gt;؟</numerusform>
@@ -3246,13 +3251,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4688"/>
-<location filename="../mainwindow.cpp" line="8781"/>
+<location filename="../mainwindow.cpp" line="4694"/>
+<location filename="../mainwindow.cpp" line="8787"/>
 <source>Copy selected notes</source>
 <translation>انسخ الملاحظات المختارة</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4689"/>
+<location filename="../mainwindow.cpp" line="4695"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>انسخ %n من الملاحظات المختارة إلى &lt;strong&gt;%2&lt;/strong&gt;؟</numerusform>
@@ -3264,13 +3269,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4716"/>
-<location filename="../mainwindow.cpp" line="4858"/>
+<location filename="../mainwindow.cpp" line="4722"/>
+<location filename="../mainwindow.cpp" line="4864"/>
 <source>Done</source>
 <translation>انتهى</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4717"/>
+<location filename="../mainwindow.cpp" line="4723"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>تم نسخ %n من الملاحظات إلى &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -3282,12 +3287,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4730"/>
+<location filename="../mainwindow.cpp" line="4736"/>
 <source>Tag selected notes</source>
 <translation>أضف وسماً للملاحظات المختارة</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4731"/>
+<location filename="../mainwindow.cpp" line="4737"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>أضف وسم &lt;strong&gt;%2&lt;/strong&gt; لـ %n من الملاحظات المختارة؟</numerusform>
@@ -3299,37 +3304,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4997"/>
+<location filename="../mainwindow.cpp" line="5003"/>
 <source>Restart application</source>
 <translation>إعادة تشغيل التطبيق</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4998"/>
+<location filename="../mainwindow.cpp" line="5004"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>قد تحتاج إلى إعادة تشغيل التطبيق للسماح بتنفيذ التغييرات.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5001"/>
+<location filename="../mainwindow.cpp" line="5007"/>
 <source>Restart</source>
 <translation>اعادة التشغيل</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5205"/>
+<location filename="../mainwindow.cpp" line="5211"/>
 <source>PDF files</source>
 <translation>ملفات PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5278"/>
+<location filename="../mainwindow.cpp" line="5284"/>
 <source>Todo lists disabled!</source>
 <translation>قوائم المهام معطلة!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5279"/>
+<location filename="../mainwindow.cpp" line="5285"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>لقد عطلت قوائم المهام.&lt;br /&gt;برجاء التحقق من ضبط &lt;strong&gt;قوائم المهام&lt;/strong&gt; في الإعدادات!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5520"/>
+<location filename="../mainwindow.cpp" line="5526"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارت لأي من مصطلحات &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -3341,79 +3346,79 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6063"/>
+<location filename="../mainwindow.cpp" line="6069"/>
 <source>Note folders</source>
 <translation>مجلّدات الملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6178"/>
+<location filename="../mainwindow.cpp" line="6184"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>تم حاليًا تحميل نُسخ الملاحظة من خادم ownCloud الخاص بك</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6191"/>
+<location filename="../mainwindow.cpp" line="6197"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>تم حاليًا تحميل الملاحظات المهملة من خادم ownCloud الخاص بك</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6429"/>
+<location filename="../mainwindow.cpp" line="6435"/>
 <source>Inserted text as text attachment file</source>
 <translation>تم إدراج النص كملف نصي مرفق</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6578"/>
+<location filename="../mainwindow.cpp" line="6584"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>سيتم فك تشفير ملاحظتك وتخزينها كنص عادي مرة أخرى. ضع في اعتبارك أنه من المحتمل أن تتم مزامنة الملاحظة غير المشفرة مع الخادم الخاص بك وأن النص الحساس قد يصبح مكشوفاً! &lt;br /&gt; هل تريد فك تشفير الملاحظة؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6672"/>
+<location filename="../mainwindow.cpp" line="6678"/>
 <source>Markdown files</source>
 <translation>ملفات ماركداون</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6688"/>
+<location filename="../mainwindow.cpp" line="6694"/>
 <source>Export attached files</source>
 <translation>تصدير الملفات المرفقة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6689"/>
+<location filename="../mainwindow.cpp" line="6695"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation>هل تريد أيضا تصدير ملفات وسائط ومرفقات هذه الملاحظة؟ قد يتم الكتابة فوق الملفات في مجلد التصدير!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6719"/>
+<location filename="../mainwindow.cpp" line="6725"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>تم إضافة إشارة مرجعية إلى موقع الملاحظة في فتحة %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6735"/>
+<location filename="../mainwindow.cpp" line="6741"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>تم الانتقال إلى موضع الإشارة المرجعية في فتحة %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6908"/>
-<location filename="../mainwindow.cpp" line="6975"/>
+<location filename="../mainwindow.cpp" line="6914"/>
+<location filename="../mainwindow.cpp" line="6981"/>
 <source>Inserting image</source>
 <translation>يتم إدراج الصورة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6913"/>
-<location filename="../mainwindow.cpp" line="6979"/>
+<location filename="../mainwindow.cpp" line="6919"/>
+<location filename="../mainwindow.cpp" line="6985"/>
 <source>Done inserting image</source>
 <translation>تم إدراج الصورة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6915"/>
+<location filename="../mainwindow.cpp" line="6921"/>
 <source>Inserting attachment</source>
 <translation>يتم إدراج المرفق</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6920"/>
+<location filename="../mainwindow.cpp" line="6926"/>
 <source>Done inserting attachment</source>
 <translation>تم إدراج المرفق</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="6931"/>
+<location filename="../mainwindow.cpp" line="6937"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>تم نسخ %n من الملاحظات إلى %1</numerusform>
@@ -3425,7 +3430,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="6941"/>
+<location filename="../mainwindow.cpp" line="6947"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>فشل في نسخ %n من الملاحظات (على الأرجح أنها موجودة مسبقاً)</numerusform>
@@ -3437,7 +3442,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="6950"/>
+<location filename="../mainwindow.cpp" line="6956"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>تم تخطي نسخ %n من الملاحظات (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
@@ -3449,209 +3454,209 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6963"/>
+<location filename="../mainwindow.cpp" line="6969"/>
 <source>Saving temporary image</source>
 <translation>حفظ الصورة المؤقته</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6413"/>
-<location filename="../mainwindow.cpp" line="6981"/>
+<location filename="../mainwindow.cpp" line="6419"/>
+<location filename="../mainwindow.cpp" line="6987"/>
 <source>Temporary file can't be opened</source>
 <translation>لا يمكن فتح الملف المؤقت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7035"/>
+<location filename="../mainwindow.cpp" line="7041"/>
 <source>Downloading %1</source>
 <translation>يتم تحميل %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7199"/>
+<location filename="../mainwindow.cpp" line="7205"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>إعادة تعيين حجم الخط إلى %1 نقطة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7945"/>
+<location filename="../mainwindow.cpp" line="7951"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>أزل العلامة '%1' من الملاحظة الحالية</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7946"/>
+<location filename="../mainwindow.cpp" line="7952"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>أزل العلامة '%1' من الملاحظات المحددة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8189"/>
+<location filename="../mainwindow.cpp" line="8195"/>
 <source>Rename tag</source>
 <translation>إعادة تسمية العلامة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8190"/>
+<location filename="../mainwindow.cpp" line="8196"/>
 <source>Assign color</source>
 <translation>عيّن لوناً</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8191"/>
+<location filename="../mainwindow.cpp" line="8197"/>
 <source>Disable color</source>
 <translation>عطّل اللون</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8195"/>
+<location filename="../mainwindow.cpp" line="8201"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;نقل الوسوم إلى…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8405"/>
+<location filename="../mainwindow.cpp" line="8411"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>انقل إلى الجذر</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8940"/>
+<location filename="../mainwindow.cpp" line="8946"/>
 <source>The scripting engine was reloaded</source>
 <translation>تمت إعادة تحميل محرك البرمجة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8974"/>
+<location filename="../mainwindow.cpp" line="8980"/>
 <source>HTML files</source>
 <translation>ملفات HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9305"/>
+<location filename="../mainwindow.cpp" line="9311"/>
 <source>Jump to the note's subfolder</source>
 <translation>انتقال إلى المجلد الفرعي للملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9361"/>
+<location filename="../mainwindow.cpp" line="9367"/>
 <source>Open selected notes in tabs</source>
 <translation>افتح الملاحظات المحددة في تبويبات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10843"/>
+<location filename="../mainwindow.cpp" line="10849"/>
 <source>A script update was found!</source>
 <translation>يتوفر تحديث لبُريمج!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10848"/>
+<location filename="../mainwindow.cpp" line="10854"/>
 <source>Script updates</source>
 <translation>تحديثات البُريمِجات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10849"/>
+<location filename="../mainwindow.cpp" line="10855"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>تم العثور على تحديثات لبُريمِجاتك في مستودع البُريمِجات! هل تريد تحديثها؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10869"/>
+<location filename="../mainwindow.cpp" line="10875"/>
 <source>No script updates were found</source>
 <translation>لا توجد تحديثات للبُريمِجات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11503"/>
+<location filename="../mainwindow.cpp" line="11509"/>
 <source>Toggle note stickiness</source>
 <translation>تبديل إلتصاق الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11508"/>
+<location filename="../mainwindow.cpp" line="11514"/>
 <source>Close other note tabs</source>
 <translation>أغلق علامات تبويب الملاحظات الأخرى</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9253"/>
-<location filename="../mainwindow.cpp" line="9439"/>
+<location filename="../mainwindow.cpp" line="9259"/>
+<location filename="../mainwindow.cpp" line="9445"/>
 <source>Rename note</source>
 <translation>إعادة تسمية الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7301"/>
+<location filename="../mainwindow.cpp" line="7307"/>
 <source>Show all notes (%1)</source>
 <translation>إظهار جميع الملاحظات (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7448"/>
+<location filename="../mainwindow.cpp" line="7454"/>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation>إظهار جميع الملاحظات الموسومة بالوسم «%1» (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9255"/>
+<location filename="../mainwindow.cpp" line="9261"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>يسمح لك بإعادة تسمية اسم ملف الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9269"/>
+<location filename="../mainwindow.cpp" line="9275"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;نقل الملاحظات إلى…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9270"/>
+<location filename="../mainwindow.cpp" line="9276"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;نسخ الملاحظات إلى…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9308"/>
+<location filename="../mainwindow.cpp" line="9314"/>
 <source>Move notes to subfolder…</source>
 <translation>نقل الملاحظات إلى مجلد فرعي…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9311"/>
+<location filename="../mainwindow.cpp" line="9317"/>
 <source>Copy notes to subfolder…</source>
 <translation>نسخ الملاحظات إلى مجلد فرعي…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9319"/>
+<location filename="../mainwindow.cpp" line="9325"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;وضع علامة على الملاحظات المحددة بـ…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9341"/>
+<location filename="../mainwindow.cpp" line="9347"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;إزالة العلامة من الملاحظات المحددة…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9439"/>
+<location filename="../mainwindow.cpp" line="9445"/>
 <source>Name:</source>
 <translation>الاسم:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9450"/>
+<location filename="../mainwindow.cpp" line="9456"/>
 <source>Note renaming not enabled!</source>
 <translation>إعادة تسمية الملاحظة غير ممكن!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10083"/>
+<location filename="../mainwindow.cpp" line="10089"/>
 <source>Create new workspace</source>
 <translation>أنشئ مساحة عمل جديدة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10083"/>
-<location filename="../mainwindow.cpp" line="10344"/>
+<location filename="../mainwindow.cpp" line="10089"/>
+<location filename="../mainwindow.cpp" line="10350"/>
 <source>Workspace name:</source>
 <translation>اسم مساحة العمل:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10200"/>
+<location filename="../mainwindow.cpp" line="10206"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>ممتلئ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10207"/>
+<location filename="../mainwindow.cpp" line="10213"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>بسيط</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10307"/>
+<location filename="../mainwindow.cpp" line="10313"/>
 <source>Remove the current workspace?</source>
 <translation>هل تريد إزالة مساحة العمل الحالية؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10344"/>
+<location filename="../mainwindow.cpp" line="10350"/>
 <source>Rename workspace</source>
 <translation>أعد تسمية مساحة العمل</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10497"/>
+<location filename="../mainwindow.cpp" line="10503"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3664,52 +3669,52 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10763"/>
+<location filename="../mainwindow.cpp" line="10769"/>
 <source>Disallow all note editing</source>
 <translation>عدم السماح بجميع التعديلات على الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10781"/>
+<location filename="../mainwindow.cpp" line="10787"/>
 <source>Note editing disabled</source>
 <translation>تحرير الملاحظات معطل</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10782"/>
+<location filename="../mainwindow.cpp" line="10788"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
 <translation>تحرير الملاحظات معطل حاليًا؛ هل تريد تفعيله مجددًا؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11013"/>
+<location filename="../mainwindow.cpp" line="11019"/>
 <source>Select text files to import</source>
 <translation>حدد الملفات النصية للاستيراد</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11042"/>
+<location filename="../mainwindow.cpp" line="11048"/>
 <source>Importing: %1</source>
 <translation>يستورد: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11104"/>
+<location filename="../mainwindow.cpp" line="11110"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>تم نسخ عنوان الملاحظة «%1» إلى الحافظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11190"/>
+<location filename="../mainwindow.cpp" line="11196"/>
 <source>Leave full-screen mode</source>
 <translation>اترك وضع ملء الشاشة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11365"/>
+<location filename="../mainwindow.cpp" line="11371"/>
 <source>Custom editor width</source>
 <translation>عرض محرر مخصص</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11365"/>
+<location filename="../mainwindow.cpp" line="11371"/>
 <source>Characters:</source>
 <translation>الرموز:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7919"/>
+<location filename="../mainwindow.cpp" line="7925"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>تم تحديد %n من الملاحظات</numerusform>
@@ -3721,23 +3726,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2452"/>
-<location filename="../mainwindow.cpp" line="10764"/>
+<location filename="../mainwindow.ui" line="2453"/>
+<location filename="../mainwindow.cpp" line="10770"/>
 <source>Allow all note editing</source>
 <translation>السماح بجميع التعديلات على الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1233"/>
+<location filename="../mainwindow.ui" line="1234"/>
 <source>&amp;Tag</source>
 <translation>&amp;وسم</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4801"/>
+<location filename="../mainwindow.cpp" line="4807"/>
 <source>Remove tag from selected notes</source>
 <translation>أزل الوسم من الملاحظات المختارة</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4802"/>
+<location filename="../mainwindow.cpp" line="4808"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>أزل الوسم &lt;strong&gt;%1&lt;/strong&gt; من %n من الملاحظات المختارة؟</numerusform>
@@ -3749,7 +3754,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4859"/>
+<location filename="../mainwindow.cpp" line="4865"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>تم إزالة الوسم &lt;strong&gt;%1&lt;/strong&gt; من %n من الملاحظات</numerusform>
@@ -3761,120 +3766,120 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4902"/>
+<location filename="../mainwindow.cpp" line="4908"/>
 <source>Current notes folder: </source>
 <translation>مجلدات الملاحظات الحالية:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4903"/>
+<location filename="../mainwindow.cpp" line="4909"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>حدد مجلد الملاحظات. مجلد الملاحظات الحالي: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5104"/>
+<location filename="../mainwindow.cpp" line="5110"/>
 <source>Print note</source>
 <translation>اطبع الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5155"/>
+<location filename="../mainwindow.cpp" line="5161"/>
 <source>Letter</source>
 <translation>رسالة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5181"/>
+<location filename="../mainwindow.cpp" line="5187"/>
 <source>Portrait</source>
 <translation>طولي</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5181"/>
+<location filename="../mainwindow.cpp" line="5187"/>
 <source>Landscape</source>
 <translation>عرضي</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5186"/>
+<location filename="../mainwindow.cpp" line="5192"/>
 <source>Orientation</source>
 <translation>الاتجاه</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5186"/>
+<location filename="../mainwindow.cpp" line="5192"/>
 <source>Orientation:</source>
 <translation>الاتجاه:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5206"/>
+<location filename="../mainwindow.cpp" line="5212"/>
 <source>Export current note as PDF</source>
 <translation>تصدير الملاحظة الحالية كملف PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5299"/>
+<location filename="../mainwindow.cpp" line="5305"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>لم تقم باختيار أي قوائم مهام.&lt;br /&gt; برجاء التحقق من ضبط &lt;strong&gt;قوائم المهام&lt;/strong&gt; في الإعدادات!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6045"/>
+<location filename="../mainwindow.cpp" line="6051"/>
 <source>Open QOwnNotes</source>
 <translation>افتح كيو-أون-نوتس</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5877"/>
-<location filename="../mainwindow.cpp" line="6095"/>
-<location filename="../mainwindow.cpp" line="9249"/>
+<location filename="../mainwindow.cpp" line="5883"/>
+<location filename="../mainwindow.cpp" line="6101"/>
+<location filename="../mainwindow.cpp" line="9255"/>
 <source>New note</source>
 <translation>ملاحظة جديدة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6110"/>
+<location filename="../mainwindow.cpp" line="6116"/>
 <source>Recent notes</source>
 <translation>الملاحظات الأخيرة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6126"/>
+<location filename="../mainwindow.cpp" line="6132"/>
 <source>Show todo lists</source>
 <translation>أظهر قوائم للإنجاز</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6136"/>
+<location filename="../mainwindow.cpp" line="6142"/>
 <source>Recent tasks</source>
 <translation>المهام الأخيرة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6156"/>
+<location filename="../mainwindow.cpp" line="6162"/>
 <source>Quit</source>
 <translation>خروج</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
-<location filename="../mainwindow.cpp" line="795"/>
-<location filename="../mainwindow.cpp" line="2102"/>
+<location filename="../mainwindow.cpp" line="796"/>
+<location filename="../mainwindow.cpp" line="2103"/>
 <source>Note folder</source>
 <translation>مجلّد ملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8562"/>
-<location filename="../mainwindow.cpp" line="8621"/>
+<location filename="../mainwindow.cpp" line="8568"/>
+<location filename="../mainwindow.cpp" line="8627"/>
 <source>Copy to note folder</source>
 <translation>انسخ إلى مجلّد الملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8562"/>
-<location filename="../mainwindow.cpp" line="8621"/>
+<location filename="../mainwindow.cpp" line="8568"/>
+<location filename="../mainwindow.cpp" line="8627"/>
 <source>Move to note folder</source>
 <translation>انقل إلى مجلّد الملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8563"/>
-<location filename="../mainwindow.cpp" line="8622"/>
+<location filename="../mainwindow.cpp" line="8569"/>
+<location filename="../mainwindow.cpp" line="8628"/>
 <source>Copy to this subfolder</source>
 <translation>انسخ إلى هذا المجلّد الفرعي</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8563"/>
-<location filename="../mainwindow.cpp" line="8622"/>
+<location filename="../mainwindow.cpp" line="8569"/>
+<location filename="../mainwindow.cpp" line="8628"/>
 <source>Move to this subfolder</source>
 <translation>انقل إلى هذا المجلّد الفرعي</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8664"/>
+<location filename="../mainwindow.cpp" line="8670"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>نقل %n من الملاحظات المختارة إلى المجلّد الفرعي &lt;strong&gt;%2&lt;/strong&gt;؟</numerusform>
@@ -3886,13 +3891,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5001"/>
-<location filename="../mainwindow.cpp" line="11027"/>
+<location filename="../mainwindow.cpp" line="5007"/>
+<location filename="../mainwindow.cpp" line="11033"/>
 <source>Cancel</source>
 <translation>ألغ</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8757"/>
+<location filename="../mainwindow.cpp" line="8763"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>تم نقل %n من الملاحظات إلى مجلّد الملاحظات الفرعي "%2"</numerusform>
@@ -3904,7 +3909,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8776"/>
+<location filename="../mainwindow.cpp" line="8782"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>انسخ %n من الملاحظات المختارة إلى مجلّد الملاحظات الفرعي &lt;strong&gt;%2&lt;/strong&gt;؟</numerusform>
@@ -3916,7 +3921,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8848"/>
+<location filename="../mainwindow.cpp" line="8854"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>تم نسخ %n من الملاحظات إلى مجلّد الملاحظات الفرعي "%2"</numerusform>
@@ -3928,103 +3933,103 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9367"/>
+<location filename="../mainwindow.cpp" line="9373"/>
 <source>Open note in external editor</source>
 <translation>افتح الملاحظة في المحرر الخارجي</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9369"/>
+<location filename="../mainwindow.cpp" line="9375"/>
 <source>Show note in file manager</source>
 <translation>أظهر الملاحظة في مدير الملفات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9451"/>
+<location filename="../mainwindow.cpp" line="9457"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>إذا كنت ترغب في إعادة تسمية ملاحظتك ، فعليك تمكين الخيار للسماح لاسم ملف الملاحظة بأن يكون مختلفًا عن العنوان الرئيسي.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9626"/>
+<location filename="../mainwindow.cpp" line="9632"/>
 <source>Create a new folder</source>
 <translation>أنشئ مجلداً جديداً</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9626"/>
+<location filename="../mainwindow.cpp" line="9632"/>
 <source>Folder name:</source>
 <translation>اسم المجلد:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7329"/>
+<location filename="../mainwindow.cpp" line="7335"/>
 <source>show all untagged notes (%1)</source>
 <translation>أظهر جميع الملاحظات الغير موسومة (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7331"/>
+<location filename="../mainwindow.cpp" line="7337"/>
 <source>Untagged notes</source>
 <translation>ملاحظات غير موسومة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8975"/>
+<location filename="../mainwindow.cpp" line="8981"/>
 <source>Export current note as HTML file</source>
 <translation>تصدير الملاحظة الحالية كملف HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5163"/>
+<location filename="../mainwindow.cpp" line="5169"/>
 <source>Page size</source>
 <translation>حجم الصفحة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1150"/>
+<location filename="../mainwindow.cpp" line="1151"/>
 <source>quit toolbar</source>
 <translation>شريط أداة الخروج</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5163"/>
+<location filename="../mainwindow.cpp" line="5169"/>
 <source>Page size:</source>
 <translation>حجم الصفحة:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5263"/>
+<location filename="../mainwindow.cpp" line="5269"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>يقوم برنامج كيو-أون-نوتس بتعقّب بيانات استخدام مجهولة الهويّة، يُساعد هذا في تحديد أي أجزاء برنامج كيو-أون-نوتس يمكن تحسينها وفي إيجاد وإصلاح المشاكل. يمكنك تعطيل هذا السلوك من الإعدادات.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5267"/>
+<location filename="../mainwindow.cpp" line="5273"/>
 <source>&amp;Ok</source>
 <translation>&amp;موافق</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9259"/>
+<location filename="../mainwindow.cpp" line="9265"/>
 <source>&amp;Remove notes</source>
 <translation>أ&amp;زل الملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1077"/>
+<location filename="../mainwindow.cpp" line="1078"/>
 <source>Your tasks are being loaded from your server</source>
 <translation>يتم تحميل المهام الخاصة بك من خادم ownCloud</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2747"/>
+<location filename="../mainwindow.cpp" line="2748"/>
 <source>Current note was modified externally</source>
 <translation>تم تعديل الملاحظة الحالية خارجياً</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2811"/>
-<location filename="../mainwindow.cpp" line="5817"/>
+<location filename="../mainwindow.cpp" line="2812"/>
+<location filename="../mainwindow.cpp" line="5823"/>
 <source>Stored current note to disk</source>
 <translation>تم حفظ الملاحظة الحالية على القرص الصلب</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2834"/>
+<location filename="../mainwindow.cpp" line="2835"/>
 <source>Note was modified externally: %1</source>
 <translation>تم تحرير الملاحظة خارجياً: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2854"/>
+<location filename="../mainwindow.cpp" line="2855"/>
 <source>Notes directory was modified externally</source>
 <translation>تم تعديل مجلد الملاحظات خارجياً</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="2917"/>
+<location filename="../mainwindow.cpp" line="2918"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>%n من الملاحظات حفظ إلى القرص الصلب</numerusform>
@@ -4036,198 +4041,198 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7304"/>
+<location filename="../mainwindow.cpp" line="7310"/>
 <source>All notes</source>
 <translation>كافة الملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8181"/>
+<location filename="../mainwindow.cpp" line="8187"/>
 <source>&amp;Add tag</source>
 <translation>أضف &amp;وسم</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8229"/>
+<location filename="../mainwindow.cpp" line="8235"/>
 <source>Tag could not be created!</source>
 <translation>تعذر إنشاء الوسم!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8406"/>
+<location filename="../mainwindow.cpp" line="8412"/>
 <source>Move to this tag</source>
 <translation>انقل إلى هذا الوسم</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8440"/>
+<location filename="../mainwindow.cpp" line="8446"/>
 <source>Tag this</source>
 <translation>أوسم هذا</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8463"/>
+<location filename="../mainwindow.cpp" line="8469"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>لا يمكن نقل الوسم '%1' إلى هذا الوسم</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8506"/>
+<location filename="../mainwindow.cpp" line="8512"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>تم نقل الوسم '%1' إلى وسم جديد</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8192"/>
+<location filename="../mainwindow.cpp" line="8198"/>
 <source>&amp;Remove tags</source>
 <translation>أ&amp;زل الوسوم</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5298"/>
+<location filename="../mainwindow.cpp" line="5304"/>
 <source>No selected todo lists!</source>
 <translation>لم يتم تحديد أي قوائم مهام!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="606"/>
+<location filename="../mainwindow.cpp" line="607"/>
 <source>Action not found!</source>
 <translation>الإجراء غير موجود!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="607"/>
+<location filename="../mainwindow.cpp" line="608"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
 <translation>تعذر العثور على إجراء القائمة &lt;code&gt;%1&lt;/code&gt;! هل كتبته بشكل صحيح؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="768"/>
+<location filename="../mainwindow.cpp" line="769"/>
 <source>Subfolders</source>
 <translation>مجلدات فرعية</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="777"/>
+<location filename="../mainwindow.cpp" line="778"/>
 <source>Tags</source>
 <translation>الوسوم</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="786"/>
+<location filename="../mainwindow.cpp" line="787"/>
 <source>Note search</source>
 <translation>البحث عن الملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="813"/>
+<location filename="../mainwindow.cpp" line="814"/>
 <source>Note list</source>
 <translation>قائمة الملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="834"/>
+<location filename="../mainwindow.cpp" line="835"/>
 <source>Note edit</source>
 <translation>تحرير الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="844"/>
+<location filename="../mainwindow.cpp" line="845"/>
 <source>Note tags</source>
 <translation>وسوم الملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="854"/>
+<location filename="../mainwindow.cpp" line="855"/>
 <source>Note preview</source>
 <translation>معاينة الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="860"/>
+<location filename="../mainwindow.cpp" line="861"/>
 <source>Log</source>
 <translation>سجل</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="869"/>
+<location filename="../mainwindow.cpp" line="870"/>
 <source>Scripting</source>
 <translation>البرمجة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1117"/>
+<location filename="../mainwindow.cpp" line="1118"/>
 <source>formatting toolbar</source>
 <translation>شريط أدوات التنسيق</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1126"/>
+<location filename="../mainwindow.cpp" line="1127"/>
 <source>inserting toolbar</source>
 <translation>شريط أدوات الإدراج</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1133"/>
+<location filename="../mainwindow.cpp" line="1134"/>
 <source>encryption toolbar</source>
 <translation>شريط أدوات التشفير</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1140"/>
+<location filename="../mainwindow.cpp" line="1141"/>
 <source>window toolbar</source>
 <translation>شريط أدوات النافذة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1145"/>
+<location filename="../mainwindow.cpp" line="1146"/>
 <source>custom action toolbar</source>
 <translation>شريط أدوات الإجراءات المخصصة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1165"/>
+<location filename="../mainwindow.cpp" line="1166"/>
 <source>Workspace selector</source>
 <translation>محدد مساحة العمل</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1311"/>
+<location filename="../mainwindow.cpp" line="1312"/>
 <source>Show %1 panel</source>
 <translation>إظهار لوحة %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1354"/>
+<location filename="../mainwindow.cpp" line="1355"/>
 <source>Show %1</source>
 <translation>إظهار %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1695"/>
+<location filename="../mainwindow.cpp" line="1696"/>
 <source>Leave distraction free mode</source>
 <translation>غادر الوضع الخالي من المشوشات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1872"/>
+<location filename="../mainwindow.cpp" line="1873"/>
 <source>Switch to note folder</source>
 <translation>قم بالتبديل إلى مجلد الملاحظات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2439"/>
+<location filename="../mainwindow.cpp" line="2440"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>لا يمكن تحميل شريط الأدوات من دون اسم</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2768"/>
+<location filename="../mainwindow.cpp" line="2769"/>
 <source>Overwriting external changes of: %1</source>
 <translation>الكتابة فوق التغييرات الخارجية في: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2780"/>
+<location filename="../mainwindow.cpp" line="2781"/>
 <source>Loading external changes from: %1</source>
 <translation>تحميل التغييرات الخارجيّة من: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2812"/>
-<location filename="../mainwindow.cpp" line="5818"/>
+<location filename="../mainwindow.cpp" line="2813"/>
+<location filename="../mainwindow.cpp" line="5824"/>
 <source>Current note could not be stored to disk</source>
 <translation>لا يمكن تخزين الملاحظة الحالية على القرص</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2998"/>
+<location filename="../mainwindow.cpp" line="2999"/>
 <source>Read-only</source>
 <translation>قراءة فقط</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3000"/>
+<location filename="../mainwindow.cpp" line="3001"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>تم تعطيل تحرير الملاحظة، اضغط للتمكين</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3015"/>
+<location filename="../mainwindow.cpp" line="3016"/>
 <source>Line numbers</source>
 <translation>أرقام الأسطر</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3025"/>
+<location filename="../mainwindow.cpp" line="3026"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>اضغط هنا لترى ما الذي تغير ولتكون قادراً على التحديث إلى أحدث إصدار</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3376"/>
+<location filename="../mainwindow.cpp" line="3377"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>الاستمرار بالحذف التلقائي لـ &lt;strong&gt;%n&lt;/strong&gt; من نُسَخ قواعد البيانات المتعارضة التي قد تمنع عملية مزامنة ownCloud؟</numerusform>
@@ -4239,7 +4244,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4787"/>
+<location filename="../mainwindow.cpp" line="4793"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n من الملاحظات تم وسمها بـ "%2"</numerusform>
@@ -4251,7 +4256,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5516"/>
+<location filename="../mainwindow.cpp" line="5522"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارات لـ &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -4263,61 +4268,61 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5877"/>
+<location filename="../mainwindow.cpp" line="5883"/>
 <source>Note headline</source>
 <translation>عنوان الملاحظة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6991"/>
+<location filename="../mainwindow.cpp" line="6997"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation>أ&amp;لصق محتوى HTML بصيغة ماركداون</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6992"/>
+<location filename="../mainwindow.cpp" line="6998"/>
 <source>Paste as &amp;text file attachment</source>
 <translation>ألصق كملف &amp;نصي مرفق</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7047"/>
+<location filename="../mainwindow.cpp" line="7053"/>
 <source>Downloading images finished</source>
 <translation>انتهى تحميل الصور</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5267"/>
-<location filename="../mainwindow.cpp" line="5282"/>
-<location filename="../mainwindow.cpp" line="5302"/>
-<location filename="../mainwindow.cpp" line="9454"/>
+<location filename="../mainwindow.cpp" line="5273"/>
+<location filename="../mainwindow.cpp" line="5288"/>
+<location filename="../mainwindow.cpp" line="5308"/>
+<location filename="../mainwindow.cpp" line="9460"/>
 <source>Open &amp;settings</source>
 <translation>فتح الإ&amp;عدادات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1693"/>
-<location filename="../mainwindow.cpp" line="11167"/>
+<location filename="../mainwindow.cpp" line="1694"/>
+<location filename="../mainwindow.cpp" line="11173"/>
 <source>leave</source>
 <translation>مغادرة</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6506"/>
+<location filename="../mainwindow.cpp" line="6512"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>أدخل كلمة &lt;strong&gt;سرك&lt;/strong&gt; لتشفير الملاحظة. &lt;br /&gt; تذكّر أنّ عليك أن &lt;strong&gt;لا تنسى&lt;/strong&gt; كلمة سرك لكي تقرأ محتويات الملاحظة &lt;br /&gt; وأنك لن تتمكن من فعل ذلك &lt;strong&gt;إلا&lt;/strong&gt; في برنامج &lt;strong&gt;كيو-أون-نوتس&lt;/strong&gt;!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6577"/>
+<location filename="../mainwindow.cpp" line="6583"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>فك تشفير الملاحظة وخزنها كنص بسيط</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6582"/>
+<location filename="../mainwindow.cpp" line="6588"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;فك التشفير</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6606"/>
+<location filename="../mainwindow.cpp" line="6612"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br /&gt;ستكون قادراً على تحرير ملاحظتك المشفرة.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6673"/>
+<location filename="../mainwindow.cpp" line="6679"/>
 <source>Export current note as Markdown file</source>
 <translation>تصدير الملاحظة الحالية كملف ماركداون</translation>
 </message>
@@ -4328,6 +4333,82 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../widgets/navigationwidget.cpp" line="139"/>
 <source>headline %1</source>
 <translation>عنوان %1</translation>
+</message>
+</context>
+<context>
+<name>NextcloudDeckDialog</name>
+<message>
+<location filename="../dialogs/nextclouddeckdialog.ui" line="20"/>
+<source>-10min</source>
+<translation type="unfinished">-10min</translation>
+</message>
+<message>
+<location filename="../dialogs/nextclouddeckdialog.ui" line="27"/>
+<source>+10min</source>
+<translation type="unfinished">+10min</translation>
+</message>
+<message>
+<location filename="../dialogs/nextclouddeckdialog.ui" line="34"/>
+<source>+1d</source>
+<translation type="unfinished">+1d</translation>
+</message>
+<message>
+<location filename="../dialogs/nextclouddeckdialog.ui" line="54"/>
+<source>-1d</source>
+<translation type="unfinished">-1d</translation>
+</message>
+<message>
+<location filename="../dialogs/nextclouddeckdialog.ui" line="14"/>
+<source>Insert Nextcloud Deck card link</source>
+<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+</message>
+<message>
+<location filename="../dialogs/nextclouddeckdialog.ui" line="95"/>
+<source>Create card and insert link into current note</source>
+<translation type="unfinished">Create card and insert link into current note</translation>
+</message>
+<message>
+<location filename="../dialogs/nextclouddeckdialog.ui" line="98"/>
+<source>&amp;Save</source>
+<translation type="unfinished">&amp;Save</translation>
+</message>
+<message>
+<location filename="../dialogs/nextclouddeckdialog.ui" line="115"/>
+<source>+1h</source>
+<translation type="unfinished">+1h</translation>
+</message>
+<message>
+<location filename="../dialogs/nextclouddeckdialog.ui" line="122"/>
+<source>Title</source>
+<translation type="unfinished">Title</translation>
+</message>
+<message>
+<location filename="../dialogs/nextclouddeckdialog.ui" line="129"/>
+<source>-1h</source>
+<translation type="unfinished">-1h</translation>
+</message>
+<message>
+<location filename="../dialogs/nextclouddeckdialog.ui" line="136"/>
+<source>Description:</source>
+<translation type="unfinished">Description:</translation>
+</message>
+<message>
+<location filename="../dialogs/nextclouddeckdialog.ui" line="143"/>
+<source>Due date</source>
+<translation type="unfinished">Due date</translation>
+</message>
+</context>
+<context>
+<name>NextcloudDeckService</name>
+<message>
+<location filename="../services/nextclouddeckservice.cpp" line="100"/>
+<source>Error while creating card</source>
+<translation type="unfinished">Error while creating card</translation>
+</message>
+<message>
+<location filename="../services/nextclouddeckservice.cpp" line="101"/>
+<source>Creating a card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Creating a card failed with status code %1 and message: %2</translation>
 </message>
 </context>
 <context>
@@ -4756,7 +4837,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>ملف الصورة موجود بالفعل في مجلد الوسائط؛ هل تريد استخدام الملف الموجود بدلا من إنشاء ملف جديد؟</translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3915"/>
+<location filename="../entities/note.cpp" line="3921"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>... و %n من الملاحظات الإضافية</numerusform>
@@ -4863,22 +4944,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>فشل الأمر &lt;code dir="ltr"&gt;%1&lt;/code&gt; ذا الوسيطات &lt;code dir="ltr"&gt;%2&lt;/code&gt;!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4016"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4026"/>
 <source>New connection</source>
 <translation>اتصال جديد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4208"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4218"/>
 <source>Login flow succeeded</source>
 <translation>نجح تدفق الولوج</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4209"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4219"/>
 <source>Username and password were set successfully!</source>
 <translation>تم ضبط اسم المستخدم وكلمة السر بنجاح!</translation>
 </message>
 <message>
-<location filename="../entities/cloudconnection.cpp" line="322"/>
+<location filename="../entities/cloudconnection.cpp" line="365"/>
 <source>Default</source>
 <translation>افتراضي</translation>
 </message>
@@ -4972,33 +5053,33 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>إنك تستخدم التطبيق في وضع النسخة الوحيدة، والذي يمنع تشغيل نسخة أخرى من التطبيق إذا كان يعمل بالفعل. سيتم تعطيل هذا الوضع عند التشغيل التالي للتطبيق، حتى تتمكن من إعادة تشغيله بدون إغلاق هذه النسخة.</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="156"/>
-<location filename="../utils/urlhandler.cpp" line="180"/>
+<location filename="../utils/urlhandler.cpp" line="159"/>
+<location filename="../utils/urlhandler.cpp" line="183"/>
 <source>Note was not found</source>
 <translation>لم يتم العثور على الملاحظة</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="157"/>
+<location filename="../utils/urlhandler.cpp" line="160"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
 <translation>لم يتم العثور على الملاحظة.&lt;br /&gt;تعذر إنشاء الملاحظة آليًا في المكان، بسبب منع المجلدات الفرعية في مجلد الملاحظة الحالية.</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="167"/>
+<location filename="../utils/urlhandler.cpp" line="170"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>لم يتم العثور على الملاحظة، أنشئ ملاحظة جديدة &lt;strong&gt;%1&lt;/strong&gt;؟</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="172"/>
+<location filename="../utils/urlhandler.cpp" line="175"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>لم يتم العثور على الملاحظة، أنشئ ملاحظة جديدة &lt;strong&gt;%1&lt;/strong&gt; في المسار &lt;strong&gt;%2&lt;/strong&gt;؟</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="218"/>
+<location filename="../utils/urlhandler.cpp" line="221"/>
 <source>Failed to create note</source>
 <translation>فشل في إنشاء ملاحظة</translation>
 </message>
 <message>
-<location filename="../utils/urlhandler.cpp" line="219"/>
+<location filename="../utils/urlhandler.cpp" line="222"/>
 <source>Note creation failed</source>
 <translation>فشل إنشاء الملاحظة</translation>
 </message>
@@ -5566,7 +5647,7 @@ Do you want to install it anyway?</source>
 <name>SettingsDialog</name>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="26"/>
-<location filename="../dialogs/settingsdialog.ui" line="4433"/>
+<location filename="../dialogs/settingsdialog.ui" line="4492"/>
 <source>Settings</source>
 <translation>الإعدادات</translation>
 </message>
@@ -5723,42 +5804,42 @@ Do you want to install it anyway?</source>
 <translation>الشبكة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1508"/>
+<location filename="../dialogs/settingsdialog.ui" line="1567"/>
 <source>Proxy Settings</source>
 <translation>إعدادات البروكسي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1514"/>
+<location filename="../dialogs/settingsdialog.ui" line="1573"/>
 <source>No Proxy</source>
 <translation>لا يوجد بروكسي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1524"/>
+<location filename="../dialogs/settingsdialog.ui" line="1583"/>
 <source>Use system proxy</source>
 <translation>استعمل بروكسي النظام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1531"/>
+<location filename="../dialogs/settingsdialog.ui" line="1590"/>
 <source>Specify proxy manually as</source>
 <translation>عيّن البروكسي يدوياً كـ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1556"/>
+<location filename="../dialogs/settingsdialog.ui" line="1615"/>
 <source>Host</source>
 <translation>المضيف</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1607"/>
+<location filename="../dialogs/settingsdialog.ui" line="1666"/>
 <source>Proxy server requires authentication</source>
 <translation>خادم البروكسي يتطلّب المصادقة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1664"/>
+<location filename="../dialogs/settingsdialog.ui" line="1723"/>
 <source>SSL Settings</source>
 <translation>إعدادات SSL</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1670"/>
+<location filename="../dialogs/settingsdialog.ui" line="1729"/>
 <source>Ignore SSL errors</source>
 <translation>تجاهل أخطاء SSL</translation>
 </message>
@@ -5768,7 +5849,7 @@ Do you want to install it anyway?</source>
 <translation>قوائم المهام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1938"/>
+<location filename="../dialogs/settingsdialog.ui" line="1997"/>
 <source>Default ownCloud calendar</source>
 <translation>تقويم ownCloud الافتراضي</translation>
 </message>
@@ -5778,65 +5859,65 @@ Do you want to install it anyway?</source>
 <translation>الواجهة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1908"/>
+<location filename="../dialogs/settingsdialog.ui" line="1967"/>
 <source>Other CalDAV server</source>
 <translation>خادم CalDAV آخر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3076"/>
+<location filename="../dialogs/settingsdialog.ui" line="3135"/>
 <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
 <translation>سيتم أقلمة بعض الألوان فقط، بينما ستتحكم سمة النظام بالباقي. ستحتاج إلى إعادة تشغيل البرنامج لتأخذ التغييرات مفعولها.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3079"/>
+<location filename="../dialogs/settingsdialog.ui" line="3138"/>
 <source>Optimize preview colors for dark mode desktop themes</source>
 <translation>اضبط ألوان العرض لتظهر بأفضل ما يمكن على السمات المظلمة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3066"/>
+<location filename="../dialogs/settingsdialog.ui" line="3125"/>
 <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
 <translation>يفعّل هذا الخيار الوضع المظلم، سيتم تعديل الواجهة والأيقونات. ستحتاج إلى إعادة تشغيل التطبيق لتأخذ التغييرات مفعولها.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3069"/>
+<location filename="../dialogs/settingsdialog.ui" line="3128"/>
 <source>Enable dark mode</source>
 <translation>تفعيل الوضع المظلم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3095"/>
-<location filename="../dialogs/settingsdialog.ui" line="3105"/>
-<location filename="../dialogs/settingsdialog.ui" line="3136"/>
-<location filename="../dialogs/settingsdialog.ui" line="3146"/>
+<location filename="../dialogs/settingsdialog.ui" line="3154"/>
+<location filename="../dialogs/settingsdialog.ui" line="3164"/>
+<location filename="../dialogs/settingsdialog.ui" line="3195"/>
+<location filename="../dialogs/settingsdialog.ui" line="3205"/>
 <source>You need to restart the application to let this setting take effect</source>
 <translation>قد تحتاج إلى إعادة تشغيل البرنامج لتسمح لهذا الخيار بأخذ مفعوله</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3175"/>
+<location filename="../dialogs/settingsdialog.ui" line="3234"/>
 <source>Item sizes in the main window</source>
 <translation>حجم العناصر في النافذة الرئيسة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5269"/>
+<location filename="../dialogs/settingsdialog.ui" line="5328"/>
 <source>Markdown highlighting</source>
 <translation>تلوين ماركداون</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5278"/>
+<location filename="../dialogs/settingsdialog.ui" line="5337"/>
 <source>Enable markdown highlighting</source>
 <translation>فعّل تلوين ماركداون</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2232"/>
+<location filename="../dialogs/settingsdialog.ui" line="2291"/>
 <source>Interface language</source>
 <translation>لغة الواجهة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2262"/>
+<location filename="../dialogs/settingsdialog.ui" line="2321"/>
 <source>Automatic</source>
 <translation>تلقائي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2397"/>
+<location filename="../dialogs/settingsdialog.ui" line="2456"/>
 <source>English</source>
 <translation>الإنجليزية</translation>
 </message>
@@ -5846,121 +5927,121 @@ Do you want to install it anyway?</source>
 <translation>الاختصارات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4671"/>
-<location filename="../dialogs/settingsdialog.ui" line="5017"/>
+<location filename="../dialogs/settingsdialog.ui" line="4730"/>
+<location filename="../dialogs/settingsdialog.ui" line="5076"/>
 <source>Default font:</source>
 <translation>الخط الافتراضي:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4713"/>
-<location filename="../dialogs/settingsdialog.ui" line="4958"/>
+<location filename="../dialogs/settingsdialog.ui" line="4772"/>
+<location filename="../dialogs/settingsdialog.ui" line="5017"/>
 <source>Code font:</source>
 <translation>خط الكود:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3334"/>
+<location filename="../dialogs/settingsdialog.ui" line="3393"/>
 <source>Main window shortcuts</source>
 <translation>اختصارات الإطار الرئيس</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4111"/>
+<location filename="../dialogs/settingsdialog.ui" line="4170"/>
 <source>Do this at your own risk!</source>
 <translation>نفّذ هذا على مسؤوليّتك!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4114"/>
+<location filename="../dialogs/settingsdialog.ui" line="4173"/>
 <source>Ignore all external note folder changes</source>
 <translation>تجاهل جميع تغييرات مجلّد الملاحظات الخارجيّة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4571"/>
+<location filename="../dialogs/settingsdialog.ui" line="4630"/>
 <source>Use GitHub line breaks</source>
 <translation>استعمل فواصل أسطر GitHub</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2375"/>
+<location filename="../dialogs/settingsdialog.ui" line="2434"/>
 <source>German</source>
 <translation>الألمانية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2452"/>
+<location filename="../dialogs/settingsdialog.ui" line="2511"/>
 <source>French</source>
 <translation>الفرنسية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2716"/>
+<location filename="../dialogs/settingsdialog.ui" line="2775"/>
 <source>Polish</source>
 <translation>البولندية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2738"/>
+<location filename="../dialogs/settingsdialog.ui" line="2797"/>
 <source>Portuguese</source>
 <translation>البرتغالية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2683"/>
+<location filename="../dialogs/settingsdialog.ui" line="2742"/>
 <source>Dutch</source>
 <translation>الهولندية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2650"/>
+<location filename="../dialogs/settingsdialog.ui" line="2709"/>
 <source>Hungarian</source>
 <translation>المجرية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2408"/>
+<location filename="../dialogs/settingsdialog.ui" line="2467"/>
 <source>Spanish</source>
 <translation>الإسبانية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3040"/>
+<location filename="../dialogs/settingsdialog.ui" line="3099"/>
 <source>Dark mode</source>
 <translation>الوضع المظلم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1724"/>
+<location filename="../dialogs/settingsdialog.ui" line="1783"/>
 <source>Disable tracking of usage data</source>
 <translation>عطّل تتبع بيانات الاستخدام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1768"/>
+<location filename="../dialogs/settingsdialog.ui" line="1827"/>
 <source>Usage tracking is done on a private Piwik server.</source>
 <translation>تعقّب الاستخدام يجري على خادم Piwik الخاص.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1828"/>
+<location filename="../dialogs/settingsdialog.ui" line="1887"/>
 <source>Disable heartbeat</source>
 <translation>عطّل نبضات القلب</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2771"/>
+<location filename="../dialogs/settingsdialog.ui" line="2830"/>
 <source>Russian</source>
 <translation>الروسية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1677"/>
+<location filename="../dialogs/settingsdialog.ui" line="1736"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;قد ترغب بالحصول على شهادة SSL مجانية من &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2251"/>
+<location filename="../dialogs/settingsdialog.ui" line="2310"/>
 <source>If you change the language you have to restart the application for the changes to take action.</source>
 <translation>إن قمت بتغيير اللغة فإنّ عليك إعادة تشغيل البرنامج لتأخذ التغييرات مفعولها.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3790"/>
-<location filename="../dialogs/settingsdialog.ui" line="3865"/>
+<location filename="../dialogs/settingsdialog.ui" line="3849"/>
+<location filename="../dialogs/settingsdialog.ui" line="3924"/>
 <source>You need to reload the scripting engine if you modify a script file</source>
 <translation>ستحتاج إلى إعادة تحميل محرك البرمجة إذا قمت بتعديل ملف بُريمِج</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3793"/>
-<location filename="../dialogs/settingsdialog.ui" line="3868"/>
+<location filename="../dialogs/settingsdialog.ui" line="3852"/>
+<location filename="../dialogs/settingsdialog.ui" line="3927"/>
 <source>Reload scripting engine</source>
 <translation>إعادة تحميل محرك البرمجة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3783"/>
+<location filename="../dialogs/settingsdialog.ui" line="3842"/>
 <source>Validate script</source>
 <translation>تحقق من صحة البُريمِج</translation>
 </message>
@@ -5970,117 +6051,117 @@ Do you want to install it anyway?</source>
 <translation>عام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3962"/>
+<location filename="../dialogs/settingsdialog.ui" line="4021"/>
 <source>Notes</source>
 <translation>الملاحظات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4160"/>
+<location filename="../dialogs/settingsdialog.ui" line="4219"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;عند التفعيل سيتم تنبيهك دائما بالتعديلات خارج التطبيق، حتى لو لم يتم تعديل الملاحظة الحالية في الدقيقة الأخيرة. ننصح بتركها &lt;span style=" font-style:italic;"&gt;دون تفعيل&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4100"/>
-<location filename="../dialogs/settingsdialog.ui" line="5523"/>
-<location filename="../dialogs/settingsdialog.ui" line="6090"/>
+<location filename="../dialogs/settingsdialog.ui" line="4159"/>
+<location filename="../dialogs/settingsdialog.ui" line="5582"/>
+<location filename="../dialogs/settingsdialog.ui" line="6149"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>قد تصادفك مشاكل في المزامنة مع الإصدارات القديمة من مزامنة ownCloud إن نزلت إلى ما دون 10 ثوان.
 تحقق بنفسك إن حصلت على تعارض في المزامنة وعيّن قيمة أعلى في حال حصول ذلك.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2672"/>
+<location filename="../dialogs/settingsdialog.ui" line="2731"/>
 <source>Japanese</source>
 <translation>اليابانية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4104"/>
+<location filename="../dialogs/settingsdialog.ui" line="4163"/>
 <source>note save interval time [sec]</source>
 <translation>مدة فترة حفظ الملاحظة [sec]</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4163"/>
+<location filename="../dialogs/settingsdialog.ui" line="4222"/>
 <source>Notify about all external modifications of the current note</source>
 <translation>نبّهني حول جميع التعديلات الخارجيّة للملاحظة الحاليّة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4462"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2110"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2119"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4082"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4086"/>
+<location filename="../dialogs/settingsdialog.ui" line="4521"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2114"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2123"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4092"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4096"/>
 <source>Database</source>
 <translation>قاعدة البيانات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4468"/>
+<location filename="../dialogs/settingsdialog.ui" line="4527"/>
 <source>Reinitialize Database</source>
 <translation>إعادة تهيئة قاعدة البيانات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4401"/>
+<location filename="../dialogs/settingsdialog.ui" line="4460"/>
 <source>Clear application data and exit</source>
 <translation>مسح بيانات التطبيق والمغادرة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4407"/>
+<location filename="../dialogs/settingsdialog.ui" line="4466"/>
 <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
 <translation>يسمح لك هذا الزر بمسح جميع الإعدادات، ومسح قاعدة بيانات قوائم المهام المحلية، ومغادرة QOwnNotes.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2182"/>
+<location filename="../dialogs/settingsdialog.ui" line="4476"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2186"/>
 <source>Clear app data and exit</source>
 <translation>مسح بيانات التطبيق والمغادرة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4199"/>
+<location filename="../dialogs/settingsdialog.ui" line="4258"/>
 <source>Update dialog</source>
 <translation>حدّث صندوق الحوار</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4361"/>
+<location filename="../dialogs/settingsdialog.ui" line="4420"/>
 <source>External editor</source>
 <translation>المحرر الخارجي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4374"/>
+<location filename="../dialogs/settingsdialog.ui" line="4433"/>
 <source>path to external editor, leave empty for default</source>
 <translation>المسار إلى المحرر الخارجي، اتركه خالياً للخيار الافتراضي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4384"/>
-<location filename="../dialogs/settingsdialog.ui" line="5602"/>
+<location filename="../dialogs/settingsdialog.ui" line="4443"/>
+<location filename="../dialogs/settingsdialog.ui" line="5661"/>
 <source>set external editor</source>
 <translation>عيّن المحرر الخارجي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1693"/>
+<location filename="../dialogs/settingsdialog.ui" line="1752"/>
 <source>App metrics</source>
 <translation>مقاييس التطبيق</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1711"/>
+<location filename="../dialogs/settingsdialog.ui" line="1770"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>بيانات الاستخدام المجهولة المصدر تساعد في تعيين الأجزاء من كيو-أون-نوتس التي سيتم تحسينها لاحقاً وفي إيجاد وإصلاح المشاكل. رجاءاً لا تقم بتعطيلها إلا أن كنت لا تقدر على العيش معها.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1743"/>
+<location filename="../dialogs/settingsdialog.ui" line="1802"/>
 <source>This data includes anonymous information about what features of the app are used.</source>
 <translation>تتضمن هذه البيانات معلومات مجهولة المصدر حول أي المزايا من البرنامج تم استخدامها.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1797"/>
+<location filename="../dialogs/settingsdialog.ui" line="1856"/>
 <source>App heartbeat</source>
 <translation>نبضات التطبيق</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1815"/>
+<location filename="../dialogs/settingsdialog.ui" line="1874"/>
 <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
 <translation>يتم ارسال طلب نبضة قلب بشكل دوري خلال عمل برنامج كيو-أون-نوتس. أسعد المطوّر بإعلامه أنّ أحداً ما يستخدم كيو-أون-نوتس.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2562"/>
+<location filename="../dialogs/settingsdialog.ui" line="2621"/>
 <source>Italian</source>
 <translation>الإيطالية</translation>
 </message>
@@ -6090,17 +6171,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>البرمجة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3403"/>
+<location filename="../dialogs/settingsdialog.ui" line="3462"/>
 <source>Your scripts</source>
 <translation>بُريمِجاتك</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3487"/>
+<location filename="../dialogs/settingsdialog.ui" line="3546"/>
 <source>&amp;Remove script</source>
 <translation>أ&amp;زل البُريمج</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3800"/>
+<location filename="../dialogs/settingsdialog.ui" line="3859"/>
 <source>Click here to select your QML script</source>
 <translation>انقر هنا لتحديد بُريمِج QML المراد</translation>
 </message>
@@ -6182,7 +6263,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="797"/>
-<location filename="../dialogs/settingsdialog.ui" line="3734"/>
+<location filename="../dialogs/settingsdialog.ui" line="3793"/>
 <source>Name:</source>
 <translation>الاسم:</translation>
 </message>
@@ -6240,7 +6321,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1164"/>
-<location filename="../dialogs/settingsdialog.ui" line="1995"/>
+<location filename="../dialogs/settingsdialog.ui" line="2054"/>
 <source>Username:</source>
 <translation>اسم المستخدم:</translation>
 </message>
@@ -6251,7 +6332,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1199"/>
-<location filename="../dialogs/settingsdialog.ui" line="2030"/>
+<location filename="../dialogs/settingsdialog.ui" line="2089"/>
 <source>Password:</source>
 <translation>كلمة السر:</translation>
 </message>
@@ -6286,11 +6367,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>استخدم المجلدات الفرعية للملاحظة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1436"/>
-<source>Enable QOwnNotesAPI app</source>
-<translation>فعل تطبيق QOwnNotesAPI</translation>
-</message>
-<message>
 <location filename="../dialogs/settingsdialog.ui" line="1459"/>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
 <translation>يعمل تدفق الولوج الإصدارة الثانية مع Nextcloud فقط، وليس مع ownCloud. إذا كنت تواجه مشاكل، فعليك إنشاء كلمة سر للتطبيق يدويًا.</translation>
@@ -6301,381 +6377,381 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>الولوج إلى Nextcloud للسماح بالوصول</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1867"/>
+<location filename="../dialogs/settingsdialog.ui" line="1926"/>
 <source>Todo settings</source>
 <translation>إعدادات قائمة المهام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1873"/>
+<location filename="../dialogs/settingsdialog.ui" line="1932"/>
 <source>Enable todo calendar support</source>
 <translation>تمكين دعم قائمة المهام في التقويم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2071"/>
+<location filename="../dialogs/settingsdialog.ui" line="2130"/>
 <source>Which cloud connection do you want to use?</source>
 <translation>أي الاتصالات السحابية ترغب باستخدامها؟</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2083"/>
+<location filename="../dialogs/settingsdialog.ui" line="2142"/>
 <source>Select the calendars you want to use for the Todo list</source>
 <translation>حدد التقاويم التي تريد استخدامها لقائمة المهام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2158"/>
+<location filename="../dialogs/settingsdialog.ui" line="2217"/>
 <source>Todo list settings</source>
 <translation>إعدادات قائمة المهام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2164"/>
+<location filename="../dialogs/settingsdialog.ui" line="2223"/>
 <source>Saving an item also closes the Todo list</source>
 <translation>يؤدي حفظ العنصر أيضًا إلى إغلاق قائمة المهام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2276"/>
+<location filename="../dialogs/settingsdialog.ui" line="2335"/>
 <source>Indonesian</source>
 <translation>الإندونيسية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2298"/>
+<location filename="../dialogs/settingsdialog.ui" line="2357"/>
 <source>Bengali</source>
 <translation>البنغالية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2309"/>
+<location filename="../dialogs/settingsdialog.ui" line="2368"/>
 <source>Bosnian</source>
 <translation>البوسنية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2320"/>
+<location filename="../dialogs/settingsdialog.ui" line="2379"/>
 <source>Bulgarian</source>
 <translation>البلغارية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2331"/>
+<location filename="../dialogs/settingsdialog.ui" line="2390"/>
 <source>Catalan</source>
 <translation>الكاتالونية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2342"/>
+<location filename="../dialogs/settingsdialog.ui" line="2401"/>
 <source>Cebuano</source>
 <translation>السيبيونية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2364"/>
+<location filename="../dialogs/settingsdialog.ui" line="2423"/>
 <source>Danish</source>
 <translation>الدانماركية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2386"/>
+<location filename="../dialogs/settingsdialog.ui" line="2445"/>
 <source>Basque</source>
 <translation>الباسكية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2419"/>
+<location filename="../dialogs/settingsdialog.ui" line="2478"/>
 <source>Estonian</source>
 <translation>الإستونية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2430"/>
+<location filename="../dialogs/settingsdialog.ui" line="2489"/>
 <source>Filipino</source>
 <translation>الفلبينية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2441"/>
+<location filename="../dialogs/settingsdialog.ui" line="2500"/>
 <source>Finnish</source>
 <translation>الفنلندية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2463"/>
+<location filename="../dialogs/settingsdialog.ui" line="2522"/>
 <source>Irish</source>
 <translation>الأيرلندية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2474"/>
+<location filename="../dialogs/settingsdialog.ui" line="2533"/>
 <source>Galician</source>
 <translation>الغاليسية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2485"/>
+<location filename="../dialogs/settingsdialog.ui" line="2544"/>
 <source>Greek</source>
 <translation>اليونانية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2496"/>
+<location filename="../dialogs/settingsdialog.ui" line="2555"/>
 <source>Hausa</source>
 <translation>الهوسا</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2507"/>
+<location filename="../dialogs/settingsdialog.ui" line="2566"/>
 <source>Hebrew</source>
 <translation>العبرية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2518"/>
+<location filename="../dialogs/settingsdialog.ui" line="2577"/>
 <source>Hindi</source>
 <translation>الهندية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2540"/>
+<location filename="../dialogs/settingsdialog.ui" line="2599"/>
 <source>Hiligaynon</source>
 <translation>الهيليجينون</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2551"/>
+<location filename="../dialogs/settingsdialog.ui" line="2610"/>
 <source>Icelandic</source>
 <translation>الأيسلندية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2573"/>
+<location filename="../dialogs/settingsdialog.ui" line="2632"/>
 <source>Korean</source>
 <translation>الكورية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2584"/>
+<location filename="../dialogs/settingsdialog.ui" line="2643"/>
 <source>Kurdish</source>
 <translation>الكردية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2606"/>
+<location filename="../dialogs/settingsdialog.ui" line="2665"/>
 <source>Latvian</source>
 <translation>اللاتفية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2617"/>
+<location filename="../dialogs/settingsdialog.ui" line="2676"/>
 <source>Lithuanian</source>
 <translation>الليتوانية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2628"/>
+<location filename="../dialogs/settingsdialog.ui" line="2687"/>
 <source>Macedonian</source>
 <translation>المقدونية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2661"/>
+<location filename="../dialogs/settingsdialog.ui" line="2720"/>
 <source>Norwegian</source>
 <translation>النرويجية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2705"/>
+<location filename="../dialogs/settingsdialog.ui" line="2764"/>
 <source>Uzbek</source>
 <translation>الأوزبكية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2749"/>
+<location filename="../dialogs/settingsdialog.ui" line="2808"/>
 <source>Punjabi</source>
 <translation>البنجابية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2694"/>
+<location filename="../dialogs/settingsdialog.ui" line="2753"/>
 <source>Persian</source>
 <translation>الفارسية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2760"/>
+<location filename="../dialogs/settingsdialog.ui" line="2819"/>
 <source>Romanian</source>
 <translation>الرومانية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2782"/>
+<location filename="../dialogs/settingsdialog.ui" line="2841"/>
 <source>Serbian</source>
 <translation>الصربية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2793"/>
+<location filename="../dialogs/settingsdialog.ui" line="2852"/>
 <source>Albanian</source>
 <translation>الألبانية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2826"/>
+<location filename="../dialogs/settingsdialog.ui" line="2885"/>
 <source>Slovak</source>
 <translation>السلوفاكية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2837"/>
+<location filename="../dialogs/settingsdialog.ui" line="2896"/>
 <source>Slovenian</source>
 <translation>السلوفينية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2848"/>
+<location filename="../dialogs/settingsdialog.ui" line="2907"/>
 <source>Swedish</source>
 <translation>السويدية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2859"/>
+<location filename="../dialogs/settingsdialog.ui" line="2918"/>
 <source>Tagalog</source>
 <translation>التغالوغ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2892"/>
+<location filename="../dialogs/settingsdialog.ui" line="2951"/>
 <source>Turkish</source>
 <translation>التركية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2925"/>
+<location filename="../dialogs/settingsdialog.ui" line="2984"/>
 <source>Urdu</source>
 <translation>الأردية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2958"/>
+<location filename="../dialogs/settingsdialog.ui" line="3017"/>
 <source>Chinese Simplified</source>
 <translation>الصينية المبسطة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2969"/>
+<location filename="../dialogs/settingsdialog.ui" line="3028"/>
 <source>Chinese Traditional</source>
 <translation>الصينية التقليدية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3049"/>
+<location filename="../dialogs/settingsdialog.ui" line="3108"/>
 <source>Enable dark mode application icon and tray icon</source>
 <translation>استخدام أيقونة الوضع المظلم في التطبيق وشريط النظام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3056"/>
+<location filename="../dialogs/settingsdialog.ui" line="3115"/>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
 <translation>قد ترغب أيضًا في اختيار مخطط ألوان آخر للمحرر في إعدادات المحرر في الوضع المظلم.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3159"/>
+<location filename="../dialogs/settingsdialog.ui" line="3218"/>
 <source>Enable dark mode icon theme</source>
 <translation>تفعيل سِمة أيقونات الوضع المظلم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3089"/>
+<location filename="../dialogs/settingsdialog.ui" line="3148"/>
 <source>System tray</source>
 <translation>القائمة التحتية للنظام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3098"/>
+<location filename="../dialogs/settingsdialog.ui" line="3157"/>
 <source>Show system tray icon</source>
 <translation>إظهار رمز القائمة التحتية للنظام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3108"/>
+<location filename="../dialogs/settingsdialog.ui" line="3167"/>
 <source>Start application hidden</source>
 <translation>بدء التطبيق وهو مخفي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3118"/>
+<location filename="../dialogs/settingsdialog.ui" line="3177"/>
 <source>Interface style</source>
 <translation>نمط الواجهة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3149"/>
+<location filename="../dialogs/settingsdialog.ui" line="3208"/>
 <source>Enforce system icon theme</source>
 <translation>فرض سمة أيقونة النظام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3255"/>
+<location filename="../dialogs/settingsdialog.ui" line="3314"/>
 <source>Override interface font size</source>
 <translation>تجاوز حجم خط الواجهة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3264"/>
+<location filename="../dialogs/settingsdialog.ui" line="3323"/>
 <source>Interface font size:</source>
 <translation>حجم خط الواجهة:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3476"/>
+<location filename="../dialogs/settingsdialog.ui" line="3535"/>
 <source>&amp;Add script…</source>
 <translation>أ&amp;ضف بُريمِجًا…</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4001"/>
+<location filename="../dialogs/settingsdialog.ui" line="4060"/>
 <source>Use legacy way to link to notes, images and attachments</source>
 <translation>استخدم الطريقة القديمة لربط الملاحظات والصور والمرفقات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4015"/>
+<location filename="../dialogs/settingsdialog.ui" line="4074"/>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
 <translation>عند فتح الملاحظات، سيتم الآن إعادة مكان المؤشر داخل الملاحظة إلى موضع آخر مرة تمت فيها زيارة الملاحظة في الجلسة الحالية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4121"/>
+<location filename="../dialogs/settingsdialog.ui" line="4180"/>
 <source>By default the headline will generated automatically</source>
 <translation>افتراضيًا، سيتم إنشاء العنوان تلقائيًا</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4124"/>
+<location filename="../dialogs/settingsdialog.ui" line="4183"/>
 <source>The shortcut to create a new note asks for a headline</source>
 <translation>الاختصار لإنشاء ملاحظة جديدة يطلب عنوانًا</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4150"/>
+<location filename="../dialogs/settingsdialog.ui" line="4209"/>
 <source>Automatically close the note folder database to prevent problems with sync tools</source>
 <translation>أغلق قاعدة بيانات مجلد الملاحظات تلقائيًا لمنع حدوث مشاكل في أدوات المزامنة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4153"/>
+<location filename="../dialogs/settingsdialog.ui" line="4212"/>
 <source>Automatically close the note folder database</source>
 <translation>أغلق قاعدة بيانات مجلد الملاحظة تلقائيًا</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4221"/>
+<location filename="../dialogs/settingsdialog.ui" line="4280"/>
 <source>Search engine</source>
 <translation>محرك البحث</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4243"/>
+<location filename="../dialogs/settingsdialog.ui" line="4302"/>
 <source>Message boxes</source>
 <translation>نوافذ الرسائل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4252"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3770"/>
+<location filename="../dialogs/settingsdialog.ui" line="4311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3774"/>
 <source>Reset message boxes</source>
 <translation>مسح إجابات نوافذ الرسائل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4439"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3836"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3855"/>
+<location filename="../dialogs/settingsdialog.ui" line="4498"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3840"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3859"/>
 <source>Import settings</source>
 <translation>استيراد الإعدادات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4446"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3802"/>
+<location filename="../dialogs/settingsdialog.ui" line="4505"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3806"/>
 <source>Export settings</source>
 <translation>تصدير الإعدادات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4594"/>
+<location filename="../dialogs/settingsdialog.ui" line="4653"/>
 <source>Open issue assistant</source>
 <translation>تشغيل مساعد الإبلاغ عن المشاكل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4561"/>
+<location filename="../dialogs/settingsdialog.ui" line="4620"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;أفضل طريقة لإرسال مشاكل هي استخدام مساعد الإبلاغ عن المشاكل بالضغط على زر &lt;span style=" font-weight:600;"&gt;تشغيل مساعد الإبلاغ عن المشاكل&lt;/span&gt; في الأسفل.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4913"/>
+<location filename="../dialogs/settingsdialog.ui" line="4972"/>
 <source>Ignore code font size to allow zooming</source>
 <translation>تجاهل حجم خط الأكواد للسماح بالتكبير</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4833"/>
+<location filename="../dialogs/settingsdialog.ui" line="4892"/>
 <source>Rendering</source>
 <translation>المعاينة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4899"/>
+<location filename="../dialogs/settingsdialog.ui" line="4958"/>
 <source>Enable underline rendering</source>
 <translation>تفعيل عرض التسطير</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5306"/>
+<location filename="../dialogs/settingsdialog.ui" line="5365"/>
 <source>Fully highlight blockquotes</source>
 <translation>ظلّل كتل الاقتباس بكاملها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5332"/>
+<location filename="../dialogs/settingsdialog.ui" line="5391"/>
 <source>Note-edit cursor width:</source>
 <translation>عرض مؤشر تعديل الملاحظات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5379"/>
+<location filename="../dialogs/settingsdialog.ui" line="5438"/>
 <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
 <translation>تمكين وضع Vim (لن تعمل بعض اختصارات QOwnNotes)</translation>
 </message>
@@ -6695,12 +6771,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>افتح صفحة كلمة مرور تطبيق خادم ownCloud الخاص بك</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2639"/>
+<location filename="../dialogs/settingsdialog.ui" line="2698"/>
 <source>Māori</source>
 <translation>الماورية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2287"/>
+<location filename="../dialogs/settingsdialog.ui" line="2346"/>
 <source>Malay</source>
 <translation>الملايو</translation>
 </message>
@@ -6735,6 +6811,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>ستجد هذا المسار في إعدادات &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt;</translation>
 </message>
 <message>
+<location filename="../dialogs/settingsdialog.ui" line="1436"/>
+<source>Enable QOwnNotesAPI app support</source>
+<translation type="unfinished">Enable QOwnNotesAPI app support</translation>
+</message>
+<message>
 <location filename="../dialogs/settingsdialog.ui" line="1449"/>
 <source>If your password doesn't work, create an app password (button on the right)</source>
 <translation>إن لم تعمل كلمة السر، أنشئ واحدة للتطبيق (الزر على اليمين)</translation>
@@ -6745,719 +6826,734 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>إلغاء الولوج إلى Nextcloud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1880"/>
+<location filename="../dialogs/settingsdialog.ui" line="1484"/>
+<source>Enable Nextcloud Deck support</source>
+<translation type="unfinished">Enable Nextcloud Deck support</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="1513"/>
+<source>Board Id:</source>
+<translation type="unfinished">Board Id:</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="1520"/>
+<source>Stack Id:</source>
+<translation type="unfinished">Stack Id:</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="1939"/>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
 <translation>يمكنك الوصول إلى خادم ownCloud الخاص بك أو أي خادم CalDAV عام لإدارة قوائم مهامك.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2238"/>
+<location filename="../dialogs/settingsdialog.ui" line="2297"/>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>إذا كنت تريد المساعدة في ترجمة QOwnNotes أو تحديث ترجمة موجودة، فيرجى قراءة: &lt;a href="%1"&gt;كيف يمكنني المساعدة في ترجمة QOwnNotes؟&lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2595"/>
+<location filename="../dialogs/settingsdialog.ui" line="2654"/>
 <source>Khmer</source>
 <translation>الخميرية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2804"/>
+<location filename="../dialogs/settingsdialog.ui" line="2863"/>
 <source>Shona</source>
 <translation>الشونا</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2815"/>
+<location filename="../dialogs/settingsdialog.ui" line="2874"/>
 <source>Sinhala</source>
 <translation>السنهالية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2870"/>
+<location filename="../dialogs/settingsdialog.ui" line="2929"/>
 <source>Thai</source>
 <translation>التايلاندية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2881"/>
+<location filename="../dialogs/settingsdialog.ui" line="2940"/>
 <source>Vietnamese</source>
 <translation>الفيتنامية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2903"/>
+<location filename="../dialogs/settingsdialog.ui" line="2962"/>
 <source>Xhosa</source>
 <translation>زوسا</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2936"/>
+<location filename="../dialogs/settingsdialog.ui" line="2995"/>
 <source>Yiddish</source>
 <translation>اليديشية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2947"/>
+<location filename="../dialogs/settingsdialog.ui" line="3006"/>
 <source>Zulu</source>
 <translation>الزولوية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3003"/>
+<location filename="../dialogs/settingsdialog.ui" line="3062"/>
 <source>Search for language</source>
 <translation>ابحث عن لغة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3366"/>
+<location filename="../dialogs/settingsdialog.ui" line="3425"/>
 <source>Action name</source>
 <translation>اسم الإجراء</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3371"/>
+<location filename="../dialogs/settingsdialog.ui" line="3430"/>
 <source>Local shortcut</source>
 <translation>اختصار محلي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3376"/>
+<location filename="../dialogs/settingsdialog.ui" line="3435"/>
 <source>Global shortcut</source>
 <translation>اختصار عام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3988"/>
+<location filename="../dialogs/settingsdialog.ui" line="4047"/>
 <source>Disable this if you want to launch the application without opening a note</source>
 <translation>قم بتعطيل هذا إذا كنت تريد تشغيل التطبيق دون فتح ملاحظة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3991"/>
+<location filename="../dialogs/settingsdialog.ui" line="4050"/>
 <source>Open last accessed note at application startup</source>
 <translation>افتح آخر ملاحظة تم الوصول إليها عند بدء تشغيل التطبيق</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4173"/>
+<location filename="../dialogs/settingsdialog.ui" line="4232"/>
 <source>Start application in read-only mode</source>
 <translation>ابدأ التطبيق في وضع القراءة فقط</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4249"/>
+<location filename="../dialogs/settingsdialog.ui" line="4308"/>
 <source>Forget all "Don't ask again" choices in message boxes</source>
 <translation>انسَ جميع المرات التي اخترت فيها «لا تسأل مرة أخرى!» في نوافذ الرسائل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4282"/>
+<location filename="../dialogs/settingsdialog.ui" line="4341"/>
 <source>Note file extensions</source>
 <translation>امتدادات ملفات الملاحظات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4320"/>
+<location filename="../dialogs/settingsdialog.ui" line="4379"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
 <translation>الملفات ذات امتداد من الامتدادات المسرودة سيتم اعتبارها ملفات ملاحظات. والامتداد المحدد سيتم استخدامه عند إنشاء ملاحظات جديدة.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4330"/>
+<location filename="../dialogs/settingsdialog.ui" line="4389"/>
 <source>Add a new note file extension</source>
 <translation>إضافة امتداد ملفات ملاحظات جديد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4344"/>
+<location filename="../dialogs/settingsdialog.ui" line="4403"/>
 <source>Remove selected note file extension</source>
 <translation>حذف امتداد ملفات الملاحظات المحدد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4475"/>
+<location filename="../dialogs/settingsdialog.ui" line="4534"/>
 <source>Checks the disk database integrity and fixes problems</source>
 <translation>يتحقق من سلامة قاعدة بيانات القرص و يصلح المشاكل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4478"/>
+<location filename="../dialogs/settingsdialog.ui" line="4537"/>
 <source>Check integrity</source>
 <translation>التحقق من السلامة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4485"/>
+<location filename="../dialogs/settingsdialog.ui" line="4544"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
 <translation>انتبه إلى أن إعادة تهيئة قاعدة البيانات ستزيل أيضًا عناصر المهام المخزنة وإعدادات مجلدات الملاحظات والبُريمِجات!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4568"/>
+<location filename="../dialogs/settingsdialog.ui" line="4627"/>
 <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>GitHub لا يحتاج مسافتين في نهاية السطر لعمل إنهاء للسطر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4591"/>
+<location filename="../dialogs/settingsdialog.ui" line="4650"/>
 <source>This is the best way to open an issue</source>
 <translation>هذه هي أفضل طريقة لفتح مشكلة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4605"/>
+<location filename="../dialogs/settingsdialog.ui" line="4664"/>
 <source>Please use this in the issue tracker</source>
 <translation>يرجى استخدام هذا في تعقب المشكلة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4608"/>
+<location filename="../dialogs/settingsdialog.ui" line="4667"/>
 <source>&amp;Copy debug information to clipboard</source>
 <translation>&amp;نسخ معلومات التنقيح إلى الحافظة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4619"/>
+<location filename="../dialogs/settingsdialog.ui" line="4678"/>
 <source>Please don't use this in the issue tracker</source>
 <translation>يرجى عدم استخدام هذا في تعقب المشكلة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4839"/>
+<location filename="../dialogs/settingsdialog.ui" line="4898"/>
 <source>Time to wait before refreshing the preview after typing:</source>
 <translation>زمن الانتظار بعد الكتابة قبل إنعاش المعاينة (مللي ثانية):</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4846"/>
+<location filename="../dialogs/settingsdialog.ui" line="4905"/>
 <source>Reset the debounce time</source>
 <translation>إعادة تعيين زمن الارتداد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4860"/>
+<location filename="../dialogs/settingsdialog.ui" line="4919"/>
 <source>0ms means don't wait for the typing to stop</source>
 <translation>صفر (0ms) تعني عدم انتظار توقف الكتابة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4892"/>
+<location filename="../dialogs/settingsdialog.ui" line="4951"/>
 <source>Use editor highlighting styles also for the preview</source>
 <translation>استخدام أنماط تظليل المحرر أيضًا للمعاينة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4923"/>
+<location filename="../dialogs/settingsdialog.ui" line="4982"/>
 <source>Exporting</source>
 <translation>التصدير</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4929"/>
+<location filename="../dialogs/settingsdialog.ui" line="4988"/>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
 <translation>استخدم أنماط التصميم الداخلي للتصدير لأجل لتصدير PDF وطباعة المعاينة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5237"/>
+<location filename="../dialogs/settingsdialog.ui" line="5296"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;قد ترغب في إلقاء نظرة على جميع &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;صيغ الوقت&lt;/a&gt; المتاحة&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5275"/>
+<location filename="../dialogs/settingsdialog.ui" line="5334"/>
 <source>Note that disabling this will also disable the navigation panel!</source>
 <translation>لاحظ أن تعطيل هذا يعطّل أيضا لوحة التنقل!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5372"/>
+<location filename="../dialogs/settingsdialog.ui" line="5431"/>
 <source>Disable cursor blinking</source>
 <translation>لا تجعل المؤشر وامضا</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5393"/>
+<location filename="../dialogs/settingsdialog.ui" line="5452"/>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>إزالة المسافات الزائدة بعد نهاية السطر من نص الملاحظة تلقائيًا</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5355"/>
+<location filename="../dialogs/settingsdialog.ui" line="5414"/>
 <source>Show line numbers</source>
 <translation>إظهار أرقام السطور</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5434"/>
+<location filename="../dialogs/settingsdialog.ui" line="5493"/>
 <source>Tabs and Indents</source>
 <translation>مسافات الجدولة والمسافات البادئة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5442"/>
+<location filename="../dialogs/settingsdialog.ui" line="5501"/>
 <source>Use tab character instead of spaces</source>
 <translation>استخدم محرف مسافة tab بدلاً من المسافات العادية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5449"/>
+<location filename="../dialogs/settingsdialog.ui" line="5508"/>
 <source>Indent:</source>
 <translation>المسافة البادئة:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5847"/>
-<location filename="../dialogs/settingsdialog.ui" line="5856"/>
+<location filename="../dialogs/settingsdialog.ui" line="5906"/>
+<location filename="../dialogs/settingsdialog.ui" line="5915"/>
 <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>التعبيرات النمطية لمجلدات الملاحظات الفرعية التي يجب تجاهلها، مفصولة بالفاصلة المنقوطة الغربية ";"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5702"/>
+<location filename="../dialogs/settingsdialog.ui" line="5761"/>
 <source>Ignored note files</source>
 <translation>ملفات الملاحظات المتجاهَلة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5699"/>
-<location filename="../dialogs/settingsdialog.ui" line="5708"/>
+<location filename="../dialogs/settingsdialog.ui" line="5758"/>
+<location filename="../dialogs/settingsdialog.ui" line="5767"/>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
 <translation>التعبيرات النمطية لملفات الملاحظات التي يجب تجاهلها، مفصولة بالفاصلة المنقوطة الغربية ";"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5850"/>
+<location filename="../dialogs/settingsdialog.ui" line="5909"/>
 <source>Ignored subfolders</source>
 <translation>المجلدات الفرعية المتجاهلة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5866"/>
+<location filename="../dialogs/settingsdialog.ui" line="5925"/>
 <source>Reset ignored subfolders</source>
 <translation>إعادة تعيين المجلدات الفرعية التي تم تجاهلها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5902"/>
+<location filename="../dialogs/settingsdialog.ui" line="5961"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
 <translation>استعادة علامات تبويب الملاحظات المفتوحة عند بدء تشغيل التطبيق وعند تبديل مجلدات الملاحظات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5925"/>
+<location filename="../dialogs/settingsdialog.ui" line="5984"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
 <translation>حدد عناصر لوحة التنقل آليًا عند تغيير مكان المؤشر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5994"/>
+<location filename="../dialogs/settingsdialog.ui" line="6053"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
 <translation>إخفاء "تعداد الملاحظات" باستخدام الوسوم (لتحسين الأداء)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6030"/>
+<location filename="../dialogs/settingsdialog.ui" line="6089"/>
 <source>Show the number of matches in each note</source>
 <translation>عرض عدد المطابقات في كل ملاحظة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6429"/>
+<location filename="../dialogs/settingsdialog.ui" line="6488"/>
 <source>Command snippets</source>
 <translation>قصاصات الأوامر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6438"/>
+<location filename="../dialogs/settingsdialog.ui" line="6497"/>
 <source>Tag name for commands notes</source>
 <translation>اسم الوسم لملاحظات الأوامر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6445"/>
+<location filename="../dialogs/settingsdialog.ui" line="6504"/>
 <source>Commands tag:</source>
 <translation>وسم الأوامر:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6465"/>
+<location filename="../dialogs/settingsdialog.ui" line="6524"/>
 <source>Commands note name:</source>
 <translation>اسم ملاحظة الأوامر:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6475"/>
+<location filename="../dialogs/settingsdialog.ui" line="6534"/>
 <source>Note name for adding new commands</source>
 <translation>اسم الملاحظة لإضافة أوامر جديدة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6515"/>
+<location filename="../dialogs/settingsdialog.ui" line="6574"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
 <translation>يمكنك استخدام &lt;a href="%1"&gt;تطبيق ويب QOwnNotes&lt;/a&gt; لإضافة الصور من محمولك إلى QOwnNotes على حاسوبك عبر الإنترنت.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6552"/>
+<location filename="../dialogs/settingsdialog.ui" line="6611"/>
 <source>QOwnNotes web application</source>
 <translation>تطبيق ويب QOwnNotes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6581"/>
+<location filename="../dialogs/settingsdialog.ui" line="6640"/>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation>سيتم فتح اتصال مقبس ويب مع هذا الخادم ليكون جسرًا بين تطبيق ويب QOwnNotes وتطبيق QOwnNotes الحاسوبي.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6642"/>
+<location filename="../dialogs/settingsdialog.ui" line="6701"/>
 <source>Server URL:</source>
 <translation>عنوان الخادم:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6699"/>
+<location filename="../dialogs/settingsdialog.ui" line="6758"/>
 <source>Show QR code</source>
 <translation>أظهر رمز QR</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6591"/>
+<location filename="../dialogs/settingsdialog.ui" line="6650"/>
 <source>Security token:</source>
 <translation>رمز الأمان:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6394"/>
+<location filename="../dialogs/settingsdialog.ui" line="6453"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
 <translation>قم بتثبيت &lt;a href="%1"&gt;إضافة المتصفح رفيقة الويب&lt;/a&gt; من &lt;a href="%2"&gt;‏سوق Chrome الإلكتروني&lt;/a&gt; أو &lt;a href="%3"&gt;صفحة إضافات فيرفكس&lt;/a&gt; لكي تستخدم QOwnNotes كمقص ويب أو لإدارة الإشارات المرجعية.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6410"/>
+<location filename="../dialogs/settingsdialog.ui" line="6469"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
 <translation>نزّل &lt;a href="%1"&gt;مدير قصاصات سطر الأوامر&lt;/a&gt; لتنفيذ قصاصات الأوامر المخزنة في الملاحظات في QOwnNotes من سطر الأوامر.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6452"/>
+<location filename="../dialogs/settingsdialog.ui" line="6511"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>يمكنك استخدام ملاحظات بوسم خاص لتخزين قصاصات الأوامر، والتي يمكنك تنفيذها من مدير قصاصات سطر الأوامر. لمزيد من المعلومات عن صيغة قصاصات الأوامر، اضغط &lt;a href="%1"&gt;هنا&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6649"/>
+<location filename="../dialogs/settingsdialog.ui" line="6708"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
 <translation>يجب إدخال هذا الرمز في تطبيق ويب QOwnNotes للتواصل مع تطبيق QOwnNotes الحاسوبي الخاص بك.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6659"/>
+<location filename="../dialogs/settingsdialog.ui" line="6718"/>
 <source>Copy security token to clipboard</source>
 <translation>نسخ رمز الأمان إلى الحافظة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6612"/>
+<location filename="../dialogs/settingsdialog.ui" line="6671"/>
 <source>Generate new security token</source>
 <translation>توليد رمز أمان جديد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6673"/>
+<location filename="../dialogs/settingsdialog.ui" line="6732"/>
 <source>Reset the URL to default</source>
 <translation>استعد العنوان إلى القيمة الافتراضية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6502"/>
+<location filename="../dialogs/settingsdialog.ui" line="6561"/>
 <source>QOwnNotes web application support</source>
 <translation>دعم تطبيق ويب QOwnNotes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6508"/>
+<location filename="../dialogs/settingsdialog.ui" line="6567"/>
 <source>Enable web application support</source>
 <translation>تفعيل دعم تطبيق الويب</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5663"/>
-<location filename="../dialogs/settingsdialog.ui" line="6716"/>
+<location filename="../dialogs/settingsdialog.ui" line="5722"/>
+<location filename="../dialogs/settingsdialog.ui" line="6775"/>
 <source>Note list panel</source>
 <translation>لوحة قائمة الملاحظة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5757"/>
+<location filename="../dialogs/settingsdialog.ui" line="5816"/>
 <source>Show notes in the note list with preview</source>
 <translation>إظهار الملاحظات في قائمة الملاحظات مع المعاينة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6722"/>
+<location filename="../dialogs/settingsdialog.ui" line="6781"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
 <translation>بدلاً من قائمة الملاحظات، استخدم شجرة ملاحظات مع جميع المجلدات الفرعية (إذا كانت قيد التشغيل لمجلد الملاحظات)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6040"/>
+<location filename="../dialogs/settingsdialog.ui" line="6099"/>
 <source>Note folder panel</source>
 <translation>لوحة مجلد الملاحظات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6046"/>
+<location filename="../dialogs/settingsdialog.ui" line="6105"/>
 <source>Show note folders as buttons instead of in a select box</source>
 <translation>إظهار مجلدات الملاحظات كأزرار بدلاً من مربع تحديد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6152"/>
+<location filename="../dialogs/settingsdialog.ui" line="6211"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
 <translation>قم بتفعيل المهملات المحلية للاحتفاظ بنسخة من الملاحظات المهملة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6188"/>
+<location filename="../dialogs/settingsdialog.ui" line="6247"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
 <translation>يمكن إخفاء وإظهار اللوحات من قائمة &lt;i&gt;نافذة &amp;gt; لوحات&lt;/i&gt;، وتستطيع أيضا إعداد &lt;i&gt;مساحات عمل&lt;/i&gt; مختلفة من أجل إعدادات متعددة من اللوحات.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6265"/>
+<location filename="../dialogs/settingsdialog.ui" line="6324"/>
 <source>Bookmarks</source>
 <translation>الإشارات المرجعية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6271"/>
-<location filename="../dialogs/settingsdialog.ui" line="6435"/>
+<location filename="../dialogs/settingsdialog.ui" line="6330"/>
+<location filename="../dialogs/settingsdialog.ui" line="6494"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
 <translation>سيتم استخدام الملاحظات مع هذا الوسم لاستيراد الإشارات المرجعية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6274"/>
+<location filename="../dialogs/settingsdialog.ui" line="6333"/>
 <source>Tag name for bookmarks notes</source>
 <translation>اسم الوسم للملاحظات المرجعية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6281"/>
+<location filename="../dialogs/settingsdialog.ui" line="6340"/>
 <source>Bookmarks tag:</source>
 <translation>وسم العلامة المرجعية:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6288"/>
+<location filename="../dialogs/settingsdialog.ui" line="6347"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>بشكل افتراضي، ستعرض إضافة المتصفح جميع روابط الملاحظة الحالية. يمكنك أيضًا جعلها تُظهر روابط إشارات مرجعية خاصة من الملاحظات ذات وسم معين. لمزيد من المعلومات حول صيغ روابط الإشارات المرجعية، اضغط &lt;a href="%1"&gt;هنا&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6301"/>
+<location filename="../dialogs/settingsdialog.ui" line="6360"/>
 <source>Bookmarks note name:</source>
 <translation>اسم ملاحظة الإشارات المرجعية:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6308"/>
-<location filename="../dialogs/settingsdialog.ui" line="6472"/>
+<location filename="../dialogs/settingsdialog.ui" line="6367"/>
+<location filename="../dialogs/settingsdialog.ui" line="6531"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
 <translation>سيتم استخدام هذه الملاحظة لإضافة إشارات مرجعية جديدة من إضافة المتصفح</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6311"/>
+<location filename="../dialogs/settingsdialog.ui" line="6370"/>
 <source>Note name for adding new bookmarks</source>
 <translation>اسم الملاحظة لإضافة إشارات مرجعية جديدة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6321"/>
+<location filename="../dialogs/settingsdialog.ui" line="6380"/>
 <source>Web socket server</source>
 <translation>خادم مقبس الويب</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6327"/>
+<location filename="../dialogs/settingsdialog.ui" line="6386"/>
 <source>Socket server port:</source>
 <translation>منفذ خادم المقبس:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6347"/>
+<location filename="../dialogs/settingsdialog.ui" line="6406"/>
 <source>Reset the socket server port</source>
 <translation>إعادة تعيين منفذ خادم المقبس</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6361"/>
-<location filename="../dialogs/settingsdialog.ui" line="6598"/>
+<location filename="../dialogs/settingsdialog.ui" line="6420"/>
+<location filename="../dialogs/settingsdialog.ui" line="6657"/>
 <source>Show security token</source>
 <translation>إظهار رمز الأمان</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6381"/>
+<location filename="../dialogs/settingsdialog.ui" line="6440"/>
 <source>Web socket server support</source>
 <translation>دعم خادم مقبس الويب</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6387"/>
+<location filename="../dialogs/settingsdialog.ui" line="6446"/>
 <source>Enable socket server</source>
 <translation>تفعيل خادم المقبس</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5886"/>
+<location filename="../dialogs/settingsdialog.ui" line="5945"/>
 <source>Note edit panel</source>
 <translation>لوحة تحرير الملاحظات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5892"/>
+<location filename="../dialogs/settingsdialog.ui" line="5951"/>
 <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
 <translation>إذا تم تعطيل هذا الخيار، فستتمكن من إنشاء تخطيطات لوحة أكثر تعقيدًا، ولكن سيتم تغيير حجم كل اللوحات إذا تم تغيير حجم النافذة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5895"/>
+<location filename="../dialogs/settingsdialog.ui" line="5954"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
 <translation>استخدم لوحة تحرير الملاحظات باعتبارها أداة مركزية ثابتة يمكن تغيير حجمها إذا تم تغيير حجم النافذة أو اللوحات الأخرى</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6017"/>
+<location filename="../dialogs/settingsdialog.ui" line="6076"/>
 <source>Note search panel</source>
 <translation>لوحة بحث الملاحظات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6023"/>
+<location filename="../dialogs/settingsdialog.ui" line="6082"/>
 <source>Disable auto-completion of previous searches</source>
 <translation>تعطيل الإكمال التلقائي لعمليات البحث السابقة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5912"/>
+<location filename="../dialogs/settingsdialog.ui" line="5971"/>
 <source>Navigation panel</source>
 <translation>لوحة التنقل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5918"/>
+<location filename="../dialogs/settingsdialog.ui" line="5977"/>
 <source>Hide navigation item search bar</source>
 <translation>إخفاء شريط بحث عناصر التنقل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6060"/>
+<location filename="../dialogs/settingsdialog.ui" line="6119"/>
 <source>Local trash settings</source>
 <translation>إعدادات المهملات المحلية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6094"/>
+<location filename="../dialogs/settingsdialog.ui" line="6153"/>
 <source>Remove trashed notes after:</source>
 <translation>إزالة الملاحظات المهملة بعد:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6101"/>
+<location filename="../dialogs/settingsdialog.ui" line="6160"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
 <translation> يوم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6120"/>
+<location filename="../dialogs/settingsdialog.ui" line="6179"/>
 <source>Automatically remove trashed notes after a certain time</source>
 <translation>قم تلقائيًا بإزالة الملاحظات من المهملات بعد وقت معين</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6146"/>
+<location filename="../dialogs/settingsdialog.ui" line="6205"/>
 <source>Local trash support</source>
 <translation>دعم المهملات المحلية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6169"/>
+<location filename="../dialogs/settingsdialog.ui" line="6228"/>
 <source>Layout selector</source>
 <translation>محدد التخطيط</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6175"/>
+<location filename="../dialogs/settingsdialog.ui" line="6234"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
 <translation>يمكنك تعيين تخطيط جديد هنا. تذكر أنك تستطيع دائمًا تعديل أماكن اللوحات بزر &lt;i&gt;فكّ قفل اللوحات&lt;/i&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5417"/>
+<location filename="../dialogs/settingsdialog.ui" line="5476"/>
 <source>Reset the cursor width</source>
 <translation>إعادة تعيين عرض المؤشر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5537"/>
+<location filename="../dialogs/settingsdialog.ui" line="5596"/>
 <source>External git log command to show the git versions of a note</source>
 <translation>أمر سجل git الخارجي لإظهار إصدارات git لملاحظة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5543"/>
+<location filename="../dialogs/settingsdialog.ui" line="5602"/>
 <source>Enter a command to be used to show a git log (like for example "gitk")</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>أدخل أمرًا لاستخدامه لإظهار سجل git (مثل، "gitk")</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5563"/>
+<location filename="../dialogs/settingsdialog.ui" line="5622"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>إذا كنت تستخدم هذا الإعداد، فستحصل على عنصر جديد في القائمة عند النقر بزر الفأرة الأيمن على ملاحظة، لإظهار إصدارات git.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5669"/>
+<location filename="../dialogs/settingsdialog.ui" line="5728"/>
 <source>Show all notes of a tag including the notes of their children-tags</source>
 <translation>عرض جميع ملاحظات الوسم بما في ذلك ملاحظات الوسوم الثانوية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5750"/>
+<location filename="../dialogs/settingsdialog.ui" line="5809"/>
 <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
 <translation>إظهار جميع الملاحظات في مجلد بما في ذلك المجلدات الفرعية (فقط إذا كانت المجلدات الفرعية مفعلة)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5325"/>
+<location filename="../dialogs/settingsdialog.ui" line="5384"/>
 <source>Highlight the current line</source>
 <translation>ظلّل السطر الحالي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5630"/>
+<location filename="../dialogs/settingsdialog.ui" line="5689"/>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>لا تنس تفعيل دعم git لمجلدات ملاحظاتك وضبط اسمك وعنوان بريدك الإلكتروني في عميل git الخاص بك، مثلا باستخدام أوامر الطرفية هذه:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5935"/>
+<location filename="../dialogs/settingsdialog.ui" line="5994"/>
 <source>Tags panel</source>
 <translation>لوحة الوسوم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5724"/>
-<location filename="../dialogs/settingsdialog.ui" line="5810"/>
-<location filename="../dialogs/settingsdialog.ui" line="5964"/>
+<location filename="../dialogs/settingsdialog.ui" line="5783"/>
+<location filename="../dialogs/settingsdialog.ui" line="5869"/>
+<location filename="../dialogs/settingsdialog.ui" line="6023"/>
 <source>Order</source>
 <translation>ترتيب</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5733"/>
-<location filename="../dialogs/settingsdialog.ui" line="5816"/>
-<location filename="../dialogs/settingsdialog.ui" line="5970"/>
+<location filename="../dialogs/settingsdialog.ui" line="5792"/>
+<location filename="../dialogs/settingsdialog.ui" line="5875"/>
+<location filename="../dialogs/settingsdialog.ui" line="6029"/>
 <source>Ascending</source>
 <translation>تصاعدي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5740"/>
-<location filename="../dialogs/settingsdialog.ui" line="5823"/>
-<location filename="../dialogs/settingsdialog.ui" line="5977"/>
+<location filename="../dialogs/settingsdialog.ui" line="5799"/>
+<location filename="../dialogs/settingsdialog.ui" line="5882"/>
+<location filename="../dialogs/settingsdialog.ui" line="6036"/>
 <source>Descending</source>
 <translation>تنازلي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5676"/>
-<location filename="../dialogs/settingsdialog.ui" line="5780"/>
-<location filename="../dialogs/settingsdialog.ui" line="5941"/>
+<location filename="../dialogs/settingsdialog.ui" line="5735"/>
+<location filename="../dialogs/settingsdialog.ui" line="5839"/>
+<location filename="../dialogs/settingsdialog.ui" line="6000"/>
 <source>Sort</source>
 <translation>فرز</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5410"/>
+<location filename="../dialogs/settingsdialog.ui" line="5469"/>
 <source>Only use editor width setting in distraction free mode</source>
 <translation>استخدم إعداد عرض المحرر فقط في الوضع الخالي من المشوشات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5682"/>
-<location filename="../dialogs/settingsdialog.ui" line="5786"/>
-<location filename="../dialogs/settingsdialog.ui" line="5947"/>
+<location filename="../dialogs/settingsdialog.ui" line="5741"/>
+<location filename="../dialogs/settingsdialog.ui" line="5845"/>
+<location filename="../dialogs/settingsdialog.ui" line="6006"/>
 <source>Alphabetical</source>
 <translation>أبجدي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5954"/>
+<location filename="../dialogs/settingsdialog.ui" line="6013"/>
 <source>By last change / use</source>
 <translation>حسب آخر تغيير / استخدام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5987"/>
+<location filename="../dialogs/settingsdialog.ui" line="6046"/>
 <source>Hide 'Find or create tag' search</source>
 <translation>إخفاء بحث «إيجاد أو إنشاء وسم»</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5767"/>
+<location filename="../dialogs/settingsdialog.ui" line="5826"/>
 <source>Note subfolders panel</source>
 <translation>لوحة المجلدات الفرعية للملاحظة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5773"/>
+<location filename="../dialogs/settingsdialog.ui" line="5832"/>
 <source>Show with full path</source>
 <translation>تظهر مع المسار الكامل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5689"/>
-<location filename="../dialogs/settingsdialog.ui" line="5793"/>
+<location filename="../dialogs/settingsdialog.ui" line="5748"/>
+<location filename="../dialogs/settingsdialog.ui" line="5852"/>
 <source>By last change</source>
 <translation>حسب التغيير الأخير</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5803"/>
+<location filename="../dialogs/settingsdialog.ui" line="5862"/>
 <source>Show root folder name</source>
 <translation>إظهار اسم المجلد الرئيسي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5833"/>
+<location filename="../dialogs/settingsdialog.ui" line="5892"/>
 <source>Hide 'Find or create note subfolder' search</source>
 <translation>إخفاء بحث «إيجاد أو إنشاء مجلد فرعي للملاحظات»</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5840"/>
+<location filename="../dialogs/settingsdialog.ui" line="5899"/>
 <source>Display note subfolders as full tree</source>
 <translation>عرض المجلدات الفرعية للملاحظة كشجرة كاملة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2696"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2700"/>
 <source>Search script repository</source>
 <translation>بحث في مستودع البُريمِجات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5553"/>
+<location filename="../dialogs/settingsdialog.ui" line="5612"/>
 <source>You optionally can use "%notePath%" for the path of the note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>يمكنك حسب رغبتك استخدام "%notePath%" ليكون مسار الملاحظة.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5576"/>
+<location filename="../dialogs/settingsdialog.ui" line="5635"/>
 <source>Git client</source>
 <translation>عميل git</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5592"/>
+<location filename="../dialogs/settingsdialog.ui" line="5651"/>
 <source>Path to git executable:</source>
 <translation>المسار إلى ملف git التنفيذي:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5582"/>
+<location filename="../dialogs/settingsdialog.ui" line="5641"/>
 <source>Path to git client, leave empty for default</source>
 <translation>المسار إلى عميل git، اتركه فارغا لاستخدام القيمة الافتراضية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5501"/>
+<location filename="../dialogs/settingsdialog.ui" line="5560"/>
 <source>Commit interval</source>
 <translation>فاصل التنفيذ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5507"/>
+<location filename="../dialogs/settingsdialog.ui" line="5566"/>
 <source>sec</source>
 <extracomment>seconds</extracomment>
 <translation>ثانية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5527"/>
+<location filename="../dialogs/settingsdialog.ui" line="5586"/>
 <source>git commit interval time [sec]</source>
 <translation>وقت فاصل تنفيذ git  [sec]</translation>
 </message>
@@ -7472,303 +7568,303 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>المعاينة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1902"/>
+<location filename="../dialogs/settingsdialog.ui" line="1961"/>
 <source>Which calendar backend do you want to use?</source>
 <translation>أي بنية تحتية تريد استخدامها للتقويم؟</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1935"/>
+<location filename="../dialogs/settingsdialog.ui" line="1994"/>
 <source>For most current ownCloud and Nextcloud installations</source>
 <translation>لمعظم تنصيبات ownCloud و Nextcloud الحالية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1915"/>
+<location filename="../dialogs/settingsdialog.ui" line="1974"/>
 <source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>للإصدارات الأقدم من ownCloud حيث لا يعمل الإعداد الافتراضي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1918"/>
+<location filename="../dialogs/settingsdialog.ui" line="1977"/>
 <source>Legacy ownCloud calendar</source>
 <translation>تقويم ownCloud القديم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1951"/>
+<location filename="../dialogs/settingsdialog.ui" line="2010"/>
 <source>CalDAV server settings</source>
 <translation>إعدادات خادم CalDAV</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1960"/>
+<location filename="../dialogs/settingsdialog.ui" line="2019"/>
 <source>Calendar base url:</source>
 <translation>الرابط الأساسي للتقويم:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1982"/>
+<location filename="../dialogs/settingsdialog.ui" line="2041"/>
 <source>Please enter the CalDAV base url to your calendar.</source>
 <translation>برجاء إدخال الرابط الأساسي لتقويم CalDAV الخاص بك.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2052"/>
+<location filename="../dialogs/settingsdialog.ui" line="2111"/>
 <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
 <translation>أدخل رجاءاً كلمة السر لاسم مستخدم CalDAV الخاص بك.&lt;br/&gt;سيتم في الوضع الحالي تخزين كلمة السر الخاصة بك مشفرة مع باقي الإعدادات، لكنّ هذا ليس آمناً جداً.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2353"/>
+<location filename="../dialogs/settingsdialog.ui" line="2412"/>
 <source>Czech</source>
 <translation>التشيكية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2727"/>
+<location filename="../dialogs/settingsdialog.ui" line="2786"/>
 <source>Brazilian Portuguese</source>
 <translation>البرتغالية البرازيلية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2914"/>
+<location filename="../dialogs/settingsdialog.ui" line="2973"/>
 <source>Ukrainian</source>
 <translation>الأوكرانية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3919"/>
+<location filename="../dialogs/settingsdialog.ui" line="3978"/>
 <source>The name</source>
 <translation>الاسم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4073"/>
+<location filename="../dialogs/settingsdialog.ui" line="4132"/>
 <source>Maximum height:</source>
 <translation>الارتفاع الأقصى:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4046"/>
+<location filename="../dialogs/settingsdialog.ui" line="4105"/>
 <source>Maximum width:</source>
 <translation>العرض الأقصى:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4008"/>
+<location filename="../dialogs/settingsdialog.ui" line="4067"/>
 <source>Scale images down when inserted into notes</source>
 <translation>صغّر حجم الصور عند إدراجها في الملاحظات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2529"/>
+<location filename="../dialogs/settingsdialog.ui" line="2588"/>
 <source>Croatian</source>
 <translation>الكرواتية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3827"/>
+<location filename="../dialogs/settingsdialog.ui" line="3886"/>
 <source>Path to your QML file</source>
 <translation>المسار إلى ملف QML الخاص بك</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3741"/>
+<location filename="../dialogs/settingsdialog.ui" line="3800"/>
 <source>Script name</source>
 <translation>اسم البرنامج النصي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3602"/>
+<location filename="../dialogs/settingsdialog.ui" line="3661"/>
 <source>Description:</source>
 <translation>الوصف:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3684"/>
+<location filename="../dialogs/settingsdialog.ui" line="3743"/>
 <source>Version:</source>
 <translation>الإصدار:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3645"/>
+<location filename="../dialogs/settingsdialog.ui" line="3704"/>
 <source>Repository:</source>
 <translation>مستودع:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3622"/>
+<location filename="../dialogs/settingsdialog.ui" line="3681"/>
 <source>Author(s):</source>
 <translation>المؤلفون):</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3978"/>
+<location filename="../dialogs/settingsdialog.ui" line="4037"/>
 <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
 <translation>فعّل هذا الخيار إن كنت تريد قبول جميع التعديلات الخارجيّة أثناء تعديلك على الملاحظة.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3981"/>
+<location filename="../dialogs/settingsdialog.ui" line="4040"/>
 <source>Accept all external modifications of the current note</source>
 <translation>اقبل جميع التعديلات الخارجيّة للملاحظة الحاليّة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4093"/>
+<location filename="../dialogs/settingsdialog.ui" line="4152"/>
 <source>Use UNIX newline instead of native newline characters</source>
 <translation>استخدم سطر UNIX جديد بدلاً من أحرف السطر الأصلية</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4018"/>
+<location filename="../dialogs/settingsdialog.ui" line="4077"/>
 <source>Restore cursor position when opening a note</source>
 <translation>استعادة مكان المؤشر عند فتح ملاحظة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5061"/>
+<location filename="../dialogs/settingsdialog.ui" line="5120"/>
 <source>Apply toolbar configuration</source>
 <translation>طبّق خيارات شريط الأدوات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5075"/>
+<location filename="../dialogs/settingsdialog.ui" line="5134"/>
 <source>Reset toolbars</source>
 <translation>أعد تعيين أشرطة الأدوات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5103"/>
+<location filename="../dialogs/settingsdialog.ui" line="5162"/>
 <source>Enable logging to file</source>
 <translation>فعّل التسجيل إلى ملف</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5110"/>
+<location filename="../dialogs/settingsdialog.ui" line="5169"/>
 <source>Clear log file</source>
 <translation>امسح ملف السجل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5121"/>
+<location filename="../dialogs/settingsdialog.ui" line="5180"/>
 <source>Fake old version number to trigger update</source>
 <translation>زوّر رقم الإصدار إلى آخر قديم لتفعيل التحديث</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5149"/>
+<location filename="../dialogs/settingsdialog.ui" line="5208"/>
 <source>Log file path:</source>
 <translation>مسار ملف السجل:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5211"/>
+<location filename="../dialogs/settingsdialog.ui" line="5270"/>
 <source>Here you can set your own time format for inserting the current time into a note.</source>
 <translation>هنا يمكنك ضبط صيغة الوقت التي تفضلها عند إدراج الوقت الحالي في الملاحظات.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5214"/>
+<location filename="../dialogs/settingsdialog.ui" line="5273"/>
 <source>Insert current time</source>
 <translation>إدراج الوقت الحالي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5220"/>
+<location filename="../dialogs/settingsdialog.ui" line="5279"/>
 <source>Time format:</source>
 <translation>صيغة الوقت:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5227"/>
+<location filename="../dialogs/settingsdialog.ui" line="5286"/>
 <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
 <translation>أدخل تنسيق الوقت المخصص، مثل "يوم.شهر.سنة ساعة:دقيقة"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5319"/>
+<location filename="../dialogs/settingsdialog.ui" line="5378"/>
 <source>Editor options</source>
 <translation>خيارات المحرر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5386"/>
+<location filename="../dialogs/settingsdialog.ui" line="5445"/>
 <source>Enable automatic closing of brackets and markdown formatting characters</source>
 <translation>فعّل الإغلاق التلقائي للأقواس وحروف تنسيق ماركداون</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5362"/>
+<location filename="../dialogs/settingsdialog.ui" line="5421"/>
 <source>You have to use the backspace key to remove the opening character</source>
 <translation>يجب عليك استخدام زر الرجوع لحذف الحرف الافتتاحي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5365"/>
+<location filename="../dialogs/settingsdialog.ui" line="5424"/>
 <source>Enable automatic removal of matching closing characters</source>
 <translation>فعّل الإزالة التلقائيّة لحروف الإغلاق المتماثلة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1985"/>
+<location filename="../dialogs/settingsdialog.ui" line="2044"/>
 <source>Your CalDAV calendar base url</source>
 <translation>الرابط الأساسي لتقويم CalDAV</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2017"/>
+<location filename="../dialogs/settingsdialog.ui" line="2076"/>
 <source>Please enter the username of your CalDAV server.</source>
 <translation>أدخل رجاءاً اسم مستخدم خادم CalDAV خاصتك.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2020"/>
+<location filename="../dialogs/settingsdialog.ui" line="2079"/>
 <source>Your CalDAV username</source>
 <translation>اسم مستخدم CalDAV خاصتك</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2058"/>
+<location filename="../dialogs/settingsdialog.ui" line="2117"/>
 <source>Your CalDAV password</source>
 <translation>كلمة سر CalDAV خاصتك</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2105"/>
+<location filename="../dialogs/settingsdialog.ui" line="2164"/>
 <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
 <translation>سيؤدي هذا إلى إعادة تحميل جميع قوائم للإنجاز من الخادم في المرة القادمة التي تفتح فيها صندوق حوار للإنجاز.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2108"/>
+<location filename="../dialogs/settingsdialog.ui" line="2167"/>
 <source>Empty calendar item cache</source>
 <translation>أفرغ الذاكرة المؤقتة لعناصر التقويم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2131"/>
+<location filename="../dialogs/settingsdialog.ui" line="2190"/>
 <source>Click here to reload the list of calendars from your calendar server.</source>
 <translation>انقر هنا لإعادة تحميل قائمة التقويمات من خادم التقويم الخاص بك.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2137"/>
+<location filename="../dialogs/settingsdialog.ui" line="2196"/>
 <source>&amp;Reload calendar list</source>
 <translation>أ&amp;عد تحميل قائمة التقويمات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3046"/>
-<location filename="../dialogs/settingsdialog.ui" line="3156"/>
+<location filename="../dialogs/settingsdialog.ui" line="3105"/>
+<location filename="../dialogs/settingsdialog.ui" line="3215"/>
 <source>You may need to restart the application to let these changes take effect</source>
 <translation>قد تحتاج إلى إعادة تشغيل البرنامج لتأخذ التغييرات مفعولها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3191"/>
+<location filename="../dialogs/settingsdialog.ui" line="3250"/>
 <source>Toolbar icon size:</source>
 <translation>حجم أيقونة شريط الأدوات:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3181"/>
+<location filename="../dialogs/settingsdialog.ui" line="3240"/>
 <source>List and tree item height:</source>
 <translation>ارتفاع عنصر القائمة والشجرة:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3214"/>
+<location filename="../dialogs/settingsdialog.ui" line="3273"/>
 <source>Reset the icon size</source>
 <translation>أعد تعيين حجم الأيقونة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3228"/>
+<location filename="../dialogs/settingsdialog.ui" line="3287"/>
 <source>Reset the item height</source>
 <translation>أعد تعيين ارتفاع العنصر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4906"/>
+<location filename="../dialogs/settingsdialog.ui" line="4965"/>
 <source>View text right to left (RTL)</source>
 <translation>اعرض النص من اليمين إلى اليسار (RTL)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3352"/>
+<location filename="../dialogs/settingsdialog.ui" line="3411"/>
 <source>Search for shortcut</source>
 <translation>ابحث عن اختصار</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2148"/>
+<location filename="../dialogs/settingsdialog.ui" line="2207"/>
 <source>Ignore calendars that don't support todo items</source>
 <translation>تجاهل التقاويم التي لا تدعم قوائم المهام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2980"/>
+<location filename="../dialogs/settingsdialog.ui" line="3039"/>
 <source>Arabic</source>
 <translation>العربيّة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3130"/>
+<location filename="../dialogs/settingsdialog.ui" line="3189"/>
 <source>Icons</source>
 <translation>الأيقونات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3139"/>
+<location filename="../dialogs/settingsdialog.ui" line="3198"/>
 <source>Use internal icon theme instead of system icon theme</source>
 <translation>استعمل سمة الأيقونات الداخلية عوضاً عن سمة أيقونات النظام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3776"/>
+<location filename="../dialogs/settingsdialog.ui" line="3835"/>
 <source>Script path:</source>
 <translation>مسار البُريمج:</translation>
 </message>
@@ -7783,59 +7879,59 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>اسمح لاسم ملف الملاحظة أن يكون مختلفاً عن العنوان</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3968"/>
+<location filename="../dialogs/settingsdialog.ui" line="4027"/>
 <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
 <translation>فعّل هذا الخيار إن كنت تريد تجاهل جميع التعديلات الخارجيّة أثناء تعديلك على الملاحظة.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3971"/>
+<location filename="../dialogs/settingsdialog.ui" line="4030"/>
 <source>Ignore all external modifications of the current note</source>
 <translation>تجاهل جميع التعديلات الخارجيّة للملاحظة الحاليّة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4090"/>
+<location filename="../dialogs/settingsdialog.ui" line="4149"/>
 <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
 <translation>يمكنك استخدام هذا على سبيل المثال ضمن نظام Windows إذا كنت تواجه مشكلات في السطور الجديدة في تطبيق ملاحظات ownCloud / Nextcloud</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4183"/>
+<location filename="../dialogs/settingsdialog.ui" line="4242"/>
 <source>App instance</source>
 <translation>نسخة التطبيق</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4189"/>
+<location filename="../dialogs/settingsdialog.ui" line="4248"/>
 <source>Only allow one app instance at the same time</source>
 <translation>اسمح بتشغيل نسخة واحدة فقط من التطبيق في الوقت نفسه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4367"/>
+<location filename="../dialogs/settingsdialog.ui" line="4426"/>
 <source>Path to external editor:</source>
 <translation>المسار إلى المحرر الخارجي:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4205"/>
+<location filename="../dialogs/settingsdialog.ui" line="4264"/>
 <source>Don't show the update dialog automatically</source>
 <translation>لا تظهر صندوق حوار التحديث تلقائياً</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4665"/>
-<location filename="../dialogs/settingsdialog.ui" line="4945"/>
+<location filename="../dialogs/settingsdialog.ui" line="4724"/>
+<location filename="../dialogs/settingsdialog.ui" line="5004"/>
 <source>Fonts</source>
 <translation>الخطوط</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4688"/>
-<location filename="../dialogs/settingsdialog.ui" line="4730"/>
-<location filename="../dialogs/settingsdialog.ui" line="4968"/>
-<location filename="../dialogs/settingsdialog.ui" line="4996"/>
+<location filename="../dialogs/settingsdialog.ui" line="4747"/>
+<location filename="../dialogs/settingsdialog.ui" line="4789"/>
+<location filename="../dialogs/settingsdialog.ui" line="5027"/>
+<location filename="../dialogs/settingsdialog.ui" line="5055"/>
 <source>Set a new font</source>
 <translation>عيّن خطاً جديداً</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4699"/>
-<location filename="../dialogs/settingsdialog.ui" line="4744"/>
-<location filename="../dialogs/settingsdialog.ui" line="4982"/>
-<location filename="../dialogs/settingsdialog.ui" line="5027"/>
+<location filename="../dialogs/settingsdialog.ui" line="4758"/>
+<location filename="../dialogs/settingsdialog.ui" line="4803"/>
+<location filename="../dialogs/settingsdialog.ui" line="5041"/>
+<location filename="../dialogs/settingsdialog.ui" line="5086"/>
 <source>Reset font</source>
 <translation>إعادة تعيين الخط</translation>
 </message>
@@ -7845,19 +7941,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>التنقيح</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4529"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2129"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4062"/>
+<location filename="../dialogs/settingsdialog.ui" line="4588"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2133"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4072"/>
 <source>Debug information</source>
 <translation>معلومات التنقيح</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4535"/>
+<location filename="../dialogs/settingsdialog.ui" line="4594"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html dir="rtl"&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;يمكنك &lt;span style=" font-weight:600;"&gt;نسخ ولصق&lt;/span&gt; هذا النص (أو أجزاء من هذا النص) في &lt;span style=" font-weight:600;"&gt;مسألة&lt;/span&gt; على &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; صفحة مسائل QOwnNotes&lt;/a&gt; إذا كان لديك &lt;span style=" font-weight:600;"&gt;أسئلة أو مشاكل&lt;/span&gt; مع تطبيق QOwnNotes. يتم إخفاء البيانات الحساسة للغاية في هذه المعلومات.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4622"/>
+<location filename="../dialogs/settingsdialog.ui" line="4681"/>
 <source>&amp;Save debug information</source>
 <translation>&amp;حفظ معلومات التنقيح</translation>
 </message>
@@ -7892,17 +7988,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>مسار الملاحظات &lt;b&gt;%1&lt;/b&gt; وُجِد على الخادم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1358"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1362"/>
 <source>Automatic (needs restart)</source>
 <translation>تلقائي (يحتاج إلى إعادة التشغيل)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1646"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1650"/>
 <source>Shortcut already assigned</source>
 <translation>اختصار معين بالفعل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1839"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1843"/>
 <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -7911,7 +8007,7 @@ QOwnNotesAPI version: %2</source>
 إصدار QOwnNotesAPI: %2</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1851"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1855"/>
 <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -7922,143 +8018,143 @@ Connection error message: </source>
 رسالة خطأ الاتصال: </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2120"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2124"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
 <translation>تمت إعادة تهيئة قاعدة البيانات. الرجاء إعادة تشغيل التطبيق الآن!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2130"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2134"/>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>من فضلك لا تستخدم هذا في متعقب المشاكل؛ انسخ نص معلومات التنقيح مباشرةً في المشكلة.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2137"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2141"/>
 <source>Markdown files</source>
 <translation>ملفات ماركداون</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2164"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2168"/>
 <source>Disable usage tracking</source>
 <translation>عطّل تتبع الاستخدام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2165"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2169"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>بيانات الاستخدام المجهولة المصدر تساعد في تعيين الأجزاء من كيو-أون-نوتس التي سيتم تحسينها لاحقاً وفي إيجاد وإصلاح المشاكل.&lt;br /&gt;رجاءاً لا تقم بتعطيلها إلا أن كنت لا تقدر على العيش معها.&lt;br /&gt;&lt;br /&gt;هل أنت متأكد من أنك تريد تعطيل تعقب الاستخدام؟</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2390"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2394"/>
 <source>new folder</source>
 <translation>مجلد جديد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2422"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2426"/>
 <source>Remove note folder</source>
 <translation>أزل مجلد الملاحظات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2423"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2427"/>
 <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>أزل مجلد الملاحظات الحالي &lt;strong&gt;%1&lt;/strong&gt;؟</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2498"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2502"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>اختر رجاءاً المجلد الذي سيتم تخزين ملاحظاتك فيه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2532"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2536"/>
 <source>Loading folders from server</source>
 <translation>يتم تحميل الملاحظات من الخادم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2547"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2551"/>
 <source>No more folders were found in the current folder</source>
 <translation>لم يتم العثور على المزيد من المجلدات في المجلد الحالي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2615"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2619"/>
 <source>Loading folders in '%1' from server</source>
 <translation>يتم تحميل المجلدات في '%1' من الخادم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2682"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2686"/>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
 <translation>ألقِ نظرة على &lt;a href="%1"&gt;وثائق البرمجة&lt;/a&gt; للبدء بسرعة.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2686"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2690"/>
 <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
 <translation>إذا كنت بحاجة إلى الوصول إلى وظيفة معينة في QOwnNotes، فيرجى فتح مشكلة على &lt;a href="%1"&gt;صفحة مشكلات QOwnNotes&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2704"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2708"/>
 <source>Check for script updates</source>
 <translation>تحقق من وجود تحديثات للبُريمِجات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2709"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2713"/>
 <source>Add local script</source>
 <translation>أضف بُريمِجًا محليًا</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2712"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2716"/>
 <source>Add an existing, local script</source>
 <translation>أضف بُريمِجًا موجودًا محليًا</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3052"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3056"/>
 <source>Please enter a new note file extension:</source>
 <translation>برجاء إدخال امتداد ملفات ملاحظات جديد:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3084"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3088"/>
 <source>Markdown file</source>
 <translation>ملف ماركداون</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3086"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3090"/>
 <source>Plain text file</source>
 <translation>ملف نصي مجرد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3104"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3108"/>
 <source>Remove note file extension</source>
 <translation>حذف امتداد ملفات الملاحظات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3801"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3854"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3805"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3858"/>
 <source>INI files</source>
 <translation>ملفات INI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3837"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3841"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>هل تريد حقًا استيراد الإعدادات؟ ستتم إزالة إعداداتك الحالية وربما لن تتم استعادة جميع الإعدادات، مثل إعدادات مجلد الملاحظات والبُريمِجات التي كنت تستخدمها. ستحتاج أيضًا إلى تضبيط بعض الإعدادات، لا سيما عند عبور الأنظمة أو المنصات، ولكن ستبقى ملاحظاتك سليمة!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3843"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3847"/>
 <source>The application will be restarted after the import.</source>
 <translation>سيتم إعادة تشغيل التطبيق بعد الاستيراد.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4063"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4073"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>تم نسخ معلومات التنقيح إلى الحافظة.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4083"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
 <source>The integrity of the disk database is valid.</source>
 <translation>سلامة قاعدة بيانات القرص صالحة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4087"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4097"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation>سلامة قاعدة بيانات القرص غير صالحة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2700"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2704"/>
 <source>Find a script in the script repository</source>
 <translation>اعثر على بُريمج في مستودع البُريمِجات</translation>
 </message>
@@ -8073,133 +8169,133 @@ Connection error message: </source>
 <translation>إظهار عنصر شريط القوائم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1533"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1573"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1537"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1577"/>
 <source>Undefined shortcut</source>
 <translation>اختصار غير محدد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1536"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1576"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1540"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1580"/>
 <source>Assign a new shortcut</source>
 <translation>تعيين اختصار جديد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1536"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1577"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1540"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1581"/>
 <source>Reset to default shortcut</source>
 <translation>إعادة تعيين إلى الاختصار الافتراضي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1552"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1556"/>
 <source>Clear shortcut</source>
 <translation>محو الاختصار</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1647"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1651"/>
 <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
 <translation>تم تعيين الاختصار &lt;strong&gt;%1&lt;/strong&gt; بالفعل إلى &lt;strong&gt;%2&lt;/strong&gt;! هل تريد الانتقال إلى الاختصار؟</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2787"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2791"/>
 <source>Remove script</source>
 <translation>أزل البُريمج</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2788"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2792"/>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>هل تريد إزالة البُريمج الحالي &lt;strong&gt;%1&lt;/strong&gt;؟</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2837"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2841"/>
 <source>QML files</source>
 <translation>ملفات QML</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2838"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2842"/>
 <source>Please select your QML file</source>
 <translation>اختر رجاءاً ملف QML خاصتك</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2927"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2931"/>
 <source>Open repository</source>
 <translation>قائمة مفتوحة</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2983"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2987"/>
 <source>Your script seems to be valid</source>
 <translation>يبدو أن بُريمجك سليم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2984"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2988"/>
 <source>There were script errors:
 %1</source>
 <translation>وُجدت أخطاء في البُريمج:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3051"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3055"/>
 <source>File extension</source>
 <translation>امتداد الملف</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3105"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3109"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
 <translation>هل تريد حقًا حذف امتداد ملفات الملاحظات &lt;strong&gt;%1&lt;/strong&gt;؟ لن ترى ملفات بهذا الامتداد في قائمة الملاحظات بعد الآن!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3384"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3388"/>
 <source>Calendar cache emptied</source>
 <translation>تم تفريغ الذاكرة المؤقتة للتقويم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3385"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3389"/>
 <source>Your calendar cache was emptied.</source>
 <translation>لقد تم تفريغ الذاكرة المؤقتة لتقويمك.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3461"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3465"/>
 <source>Reset toolbars and exit</source>
 <translation>أعد تعيين أشرطة الأدوات ثم اخرج</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3462"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3466"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>هل تريد حقاً إعادة تعيين جميع أشرطة الأدوات؟ سيتم اغلاق البرنامج خلال العملية، وأشرطة الأدوات الافتراضية ستسعاد حين تقوم بتشغيله مجدداً.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3466"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3470"/>
 <source>Reset and &amp;exit</source>
 <translation>أعد التعيين واخرج</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3625"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3629"/>
 <source>Log file cleared</source>
 <translation>تم إخلاء ملف السجل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3626"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3630"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>تم إخلاء ملف السجل &lt;strong&gt;%1&lt;/strong&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3663"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3667"/>
 <source>Executable files</source>
 <translation>الملفات القابلة للتنفيذ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3663"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3665"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3667"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3669"/>
 <source>All files</source>
 <translation>جميع الملفات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3673"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3677"/>
 <source>Please select the path of your git executable</source>
 <translation>برجاء تحديد مسار ملف git التنفيذي</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3771"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3775"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>هل تريد حقًا نسيان جميع المرات التي اخترت فيها «لا تسأل مرة أخرى!» في نوافذ الرسائل؟</translation>
 </message>
@@ -8254,12 +8350,12 @@ Connection error message: </source>
 <translation>سيتم تفعيله إذا شغّلت برنامج QOwnNotes مع المُعامِل &lt;code dir="ltr"&gt;--portable&lt;/code&gt; (محمول).</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2138"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2142"/>
 <source>Save debug information</source>
 <translation>حفظ معلومات التنقيح</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2183"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2187"/>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -8268,14 +8364,14 @@ Your notes will stay intact!</source>
 ستبقى ملاحظاتك دون أن تمس!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2186"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2190"/>
 <source>Clear and &amp;exit</source>
 <translation>امسح وغادر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2114"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2186"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3466"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2118"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2190"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3470"/>
 <source>&amp;Cancel</source>
 <translation>ألغ</translation>
 </message>
@@ -8285,17 +8381,17 @@ Your notes will stay intact!</source>
 <translation>ستجد ملف &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; في مسار إصدارك لأجل تشغيل برنامج كيو-أون-نوتس في الوضع المحمول.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2111"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2115"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>هل تريد حقًا مسح قاعدة البيانات المحلية؟ سيزيل هذا أيضًا إعدادات مجلدات ملاحظاتك، وعناصر قوائم المهام التي في الذاكرة المؤقتة!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2114"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2118"/>
 <source>Clear &amp;database</source>
 <translation>امسح قاعدة البيانات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2303"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2307"/>
 <source>Select editor application</source>
 <translation>اختر برنامج التحرير</translation>
 </message>

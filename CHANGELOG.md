@@ -6,7 +6,7 @@
   (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789))
   - before you can do that you need to set the IDs to the board and stack in the
     *Nextcloud / ownCloud* settings
-- added more Dutch translation (thank you stephanp)
+- added more Persian, Dutch, Korean translation (thank you amirkbrpr, stephanp, venusgirl)
 - the QOwnNotes command-line snippet manager [qc](https://github.com/qownnotes/qc)
   can now be installed via the [Nix Store](https://search.nixos.org/packages?channel=unstable&show=qc)
   - you can use `nix-shell -p qc --run qc` to try it out

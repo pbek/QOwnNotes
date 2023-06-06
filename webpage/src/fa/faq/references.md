@@ -163,7 +163,7 @@
 - [Аналоги OneNote в Linux | Losst](https://losst.ru/analogi-onenote-v-linux#4_QOwnNotes)
 - [一款自由开源的免费笔记软件——QOwnNotes | 爱上分享](https://www.237y.com/qownnotes.htm)
 - [Малоизвестные Windows-программы для ведения заметок!](https://sovetybloga.ru/maloizvestnye-windows-programmy-dlya-vedeniya-zametok/)
-- [QOwnNotes Portable 20.8.10 (markdown note taker) Released | PortableApps.com](https://portableapps.com/news/2020-08-27--qownnotes-portable-20.8.10-released)
+- [QOwnNotes Portable 20.8.10 (یادداشت برداری مارک داون) منتشر شد | PortableApps.com](https://portableapps.com/news/2020-08-27--qownnotes-portable-20.8.10-released)
 - [QOwnNotes](https://www.slant.co/topics/6303/viewpoints/21/~note-taking-apps-for-linux~qownnotes)
     - <https://www.slant.co/topics/6303/~note-taking-apps-for-linux#21>
 - [QOwnNotes - دفترچه و مدیر لیست انجام دادنی با پشتیبانی از مارک داون و ادغام نکست کلود: coolgithubprojects](https://www.reddit.com/r/coolgithubprojects/comments/izg63b/qownnotes_notepad_and_todolist_manager_with/)
@@ -244,7 +244,7 @@
 - [برنامه های یادداشت برداری](https://atarnotes.com/forum/index.php?topic=190238.0)
 - [آیا می خواهید برنامه های جدیدی در ecloud.global اضافه کنید؟ - ویژگی ها و برنامه ها - e/ community/](https://community.e.foundation/t/adding-new-apps-at-ecloud-global/12404/9)
 - [KDE Neon - PCGuia](https://www.pcguia.pt/2019/07/kde-neon/)
-- [یادداشت برداری - آیا ویرایشگر متنی لینوکس به همراه پشتیبانی از تصویرسازی ها، فولدینگ و فونت های متفاوت سراغ دارید؟  - توصیه های نرم افزاری استک اکسچنج](https://softwarerecs.stackexchange.com/questions/72663/linux-text-editor-with-su)
+- [یادداشت برداری - آیا ویرایشگر متنی لینوکس به همراه پشتیبانی از تصویرسازی ها، فولدینگ و فونت های متفاوت سراغ دارید؟  - توصیه های نرم افزاری Stack Exchange](https://softwarerecs.stackexchange.com/questions/72663/linux-text-editor-with-su)
     - توضیح
 - [سرور من - AlternativeTo.net](https://alternativeto.net/list/8220/my-server)
 - [50 پروژه برتر متن باز یادداشت برداری](https://awesomeopensource.com/projects/note-taking)

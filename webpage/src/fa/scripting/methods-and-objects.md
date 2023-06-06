@@ -1209,7 +1209,7 @@ Please make sure to use a meaningful prefix in your key like `PersistentVariable
 
 You may also want to take a look at the example [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/persistent-variables.qml).
 
-Loading application settings variables
+بارگذاری متغیرهای تنظیمات برنامه
 --------------------------------------
 
 ### فراخوانی شگرد و پارامترها
