@@ -6,6 +6,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QTimer>
+#include <QTimeZone>
 
 #include "entities/cloudconnection.h"
 #include "utils/gui.h"
@@ -49,7 +50,9 @@ int NextcloudDeckService::createCard(const QString& title,
     }
 
     if (dueDateTime != nullptr) {
-        bodyJson["duedate"] = dueDateTime->toString(Qt::ISODate);
+        // We need to convert the DateTime to UTC to get around Deck's/Nextcloud's timezone issue
+        // see: https://github.com/nextcloud/deck/issues/4764
+        bodyJson["duedate"] = dueDateTime->toTimeZone(QTimeZone::utc()).toString(Qt::ISODate);
     }
 
     qDebug() << __func__ << " - 'bodyJson': " << bodyJson;

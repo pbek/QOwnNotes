@@ -29,15 +29,18 @@ void NextcloudDeckDialog::on_saveButton_clicked() {
     int cardId = nextcloudDeckService.createCard(title,
                                     ui->descriptionTextEdit->toPlainText(),
                                     ui->dueDateTimeCheckBox->isChecked() ? dateTime : nullptr);
-    auto linkText = QString("[%1](%2)").arg(
-        title, nextcloudDeckService.getCardLinkForId(cardId));
+
+    if (cardId > 0) {
+        auto linkText = QString("[%1](%2)").arg(
+            title, nextcloudDeckService.getCardLinkForId(cardId));
 
 #ifndef INTEGRATION_TESTS
-    MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != nullptr) {
-        mainWindow->activeNoteTextEdit()->insertPlainText(linkText);
-    }
+        MainWindow *mainWindow = MainWindow::instance();
+        if (mainWindow != nullptr) {
+            mainWindow->activeNoteTextEdit()->insertPlainText(linkText);
+        }
 #endif
+    }
 
     close();
 }
