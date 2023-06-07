@@ -113,6 +113,7 @@
 #include "release.h"
 #include "services/databaseservice.h"
 #include "services/metricsservice.h"
+#include "services/nextclouddeckservice.h"
 #include "services/owncloudservice.h"
 #include "services/updateservice.h"
 #include "services/webappclientservice.h"
@@ -11598,6 +11599,19 @@ void MainWindow::on_action_Load_Todo_Items_triggered() {
 
 void MainWindow::on_actionInsert_Nextcloud_Deck_card_triggered()
 {
+    NextcloudDeckService nextcloudDeckService(this);
+
+    if (!nextcloudDeckService.isEnabled()) {
+        if (QMessageBox::warning(nullptr, tr("Nextcloud Deck support disabled!"),
+                                 tr("Nextcloud Deck support is not enabled or the settings are invalid.<br />"
+                                    "Please check your <strong>Nextcloud</strong> configuration in the settings!"),
+                                 tr("Open &settings"), tr("&Cancel"), QString(), 0, 1) == 0) {
+            openSettingsDialog(SettingsDialog::OwnCloudPage);
+        }
+
+        return;
+    }
+
     auto *dialog = new NextcloudDeckDialog(this);
     dialog->exec();
 }

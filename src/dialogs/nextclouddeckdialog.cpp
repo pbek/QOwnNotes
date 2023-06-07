@@ -21,7 +21,7 @@ NextcloudDeckDialog::~NextcloudDeckDialog() {
 
 void NextcloudDeckDialog::on_saveButton_clicked() {
     ui->saveButton->setEnabled(false);
-    NextcloudDeckService nextcloudDeckService(CloudConnection::currentCloudConnection().getId(), this);
+    NextcloudDeckService nextcloudDeckService(this);
 
     auto *dateTime = new QDateTime(ui->dueDateTimeEdit->dateTime());
     dateTime->setTimeZone(QTimeZone::systemTimeZone());

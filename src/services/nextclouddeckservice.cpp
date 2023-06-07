@@ -5,18 +5,30 @@
 #include <QJsonObject>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
-#include <QTimer>
 #include <QTimeZone>
+#include <QTimer>
 
 #include "entities/cloudconnection.h"
+#include "owncloudservice.h"
 #include "utils/gui.h"
 #include "utils/misc.h"
 
-NextcloudDeckService::NextcloudDeckService(int cloudConnectionId, QObject *parent) : QObject(parent) {
+NextcloudDeckService::NextcloudDeckService(QObject* parent, int cloudConnectionId) : QObject(parent) {
+    if (cloudConnectionId == -1) {
+        cloudConnectionId = CloudConnection::currentCloudConnection().getId();
+    }
+
     this->cloudConnection = CloudConnection::fetch(cloudConnectionId);
     this->serverUrl = this->cloudConnection.getServerUrl();
     this->boardId = this->cloudConnection.getNextcloudDeckBoardId();
     this->stackId = this->cloudConnection.getNextcloudDeckStackId();
+}
+
+bool NextcloudDeckService::isEnabled() {
+    return OwnCloudService::isOwnCloudSupportEnabled() &&
+           this->cloudConnection.getNextcloudDeckEnabled() &&
+           this->cloudConnection.getNextcloudDeckBoardId() > 0 &&
+           this->cloudConnection.getNextcloudDeckStackId() > 0;
 }
 
 int NextcloudDeckService::createCard(const QString& title,

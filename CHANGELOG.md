@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 23.6.1
+- there now is a check if Nextcloud Deck support is enabled and the config isn't
+  invalid before opening the Nextcloud Deck link insert dialog
+  (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789))
+
 ## 23.6.0
 - you now can quickly **create Nextcloud Deck Cards** with a due date and link them
   in the current note with the shortcut <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd>

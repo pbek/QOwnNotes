@@ -10,9 +10,10 @@ class NextcloudDeckService : public QObject {
     Q_OBJECT
 
    public:
-    NextcloudDeckService(int cloudConnectionId, QObject* parent);
+    explicit NextcloudDeckService(QObject* parent, int cloudConnectionId = -1);
     int createCard(const QString& title, const QString& description = "", QDateTime* dueDateTime = nullptr);
     QString getCardLinkForId(int cardId);
+    bool isEnabled();
 
    private:
     CloudConnection cloudConnection;
