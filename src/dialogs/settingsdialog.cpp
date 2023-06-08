@@ -51,6 +51,7 @@
 #include "release.h"
 #include "scriptrepositorydialog.h"
 #include "services/databaseservice.h"
+#include "services/nextclouddeckservice.h"
 #include "services/owncloudservice.h"
 #include "services/updateservice.h"
 #include "ui_settingsdialog.h"
@@ -987,9 +988,8 @@ void SettingsDialog::readSettings() {
     ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
     ui->appQOwnNotesAPICheckBox->setChecked(_selectedCloudConnection.getAppQOwnNotesAPIEnabled());
     ui->appNextcloudDeckCheckBox->setChecked(_selectedCloudConnection.getNextcloudDeckEnabled());
+    loadNextcloudDeckStackTreeWidget();
     ui->nextcloudDeckFrame->setVisible(ui->appNextcloudDeckCheckBox->isChecked());
-    ui->nextcloudDeckBoardSpinBox->setValue(_selectedCloudConnection.getNextcloudDeckBoardId());
-    ui->nextcloudDeckStackSpinBox->setValue(_selectedCloudConnection.getNextcloudDeckStackId());
     ui->timeFormatLineEdit->setText(settings.value(QStringLiteral("insertTimeFormat")).toString());
 
     // prepend the portable data path if we are in portable mode
@@ -4013,9 +4013,8 @@ void SettingsDialog::on_cloudConnectionComboBox_currentIndexChanged(int index) {
     ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
     ui->appQOwnNotesAPICheckBox->setChecked(_selectedCloudConnection.getAppQOwnNotesAPIEnabled());
     ui->appNextcloudDeckCheckBox->setChecked(_selectedCloudConnection.getNextcloudDeckEnabled());
+    loadNextcloudDeckStackTreeWidget();
     ui->nextcloudDeckFrame->setVisible(ui->appNextcloudDeckCheckBox->isChecked());
-    ui->nextcloudDeckBoardSpinBox->setValue(_selectedCloudConnection.getNextcloudDeckBoardId());
-    ui->nextcloudDeckStackSpinBox->setValue(_selectedCloudConnection.getNextcloudDeckStackId());
     ui->cloudConnectionRemoveButton->setDisabled(
         CloudConnection::fetchUsedCloudConnectionsIds().contains(id));
 }
@@ -4248,16 +4247,58 @@ void SettingsDialog::on_noteTextViewRefreshDebounceTimeResetButton_clicked() {
     ui->noteTextViewRefreshDebounceTimeSpinBox->setValue(600);
 }
 
-void SettingsDialog::on_nextcloudDeckBoardSpinBox_valueChanged(int arg1) {
-    _selectedCloudConnection.setNextcloudDeckBoardId(arg1);
-}
-
-void SettingsDialog::on_nextcloudDeckStackSpinBox_valueChanged(int arg1) {
-    _selectedCloudConnection.setNextcloudDeckStackId(arg1);
-}
-
 void SettingsDialog::on_appNextcloudDeckCheckBox_toggled(bool checked)
 {
     ui->nextcloudDeckFrame->setVisible(checked);
     _selectedCloudConnection.setNextcloudDeckEnabled(checked);
+    loadNextcloudDeckStackTreeWidget();
+}
+
+void SettingsDialog::loadNextcloudDeckStackTreeWidget() {
+    ui->nextcloudDeckStackTreeWidget->clear();
+    NextcloudDeckService nextcloudDeckService(this);
+
+    if (!nextcloudDeckService.isEnabled()) {
+        return;
+    }
+
+    auto boards = nextcloudDeckService.getBoards();
+    int currentStackId = _selectedCloudConnection.getNextcloudDeckStackId();
+
+    for (const auto &board : boards) {
+        auto boardItem = new QTreeWidgetItem(ui->nextcloudDeckStackTreeWidget);
+        boardItem->setText(0, board.title);
+        boardItem->setData(0, Qt::UserRole, board.id);
+        boardItem->setToolTip(0, tr("Board Id: %1").arg(board.id));
+        boardItem->setFlags(boardItem->flags() & ~Qt::ItemIsSelectable);
+
+        auto stacks = board.stacks;
+
+        QHash<int, QString>::const_iterator it;
+        for (it = stacks.constBegin(); it != stacks.constEnd(); ++it) {
+            auto stackItem = new QTreeWidgetItem(boardItem);
+            int stackId = it.key();
+
+            stackItem->setText(0, it.value());
+            stackItem->setData(0, Qt::UserRole, stackId);
+            stackItem->setToolTip(0, tr("Stack Id: %1").arg(stackId));
+
+            if (stackId == currentStackId) {
+                ui->nextcloudDeckStackTreeWidget->setCurrentItem(stackItem);
+            }
+        }
+    }
+
+    ui->nextcloudDeckStackTreeWidget->expandAll();
+}
+
+void SettingsDialog::on_nextcloudDeckStackTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    Q_UNUSED(previous)
+
+    if (current == nullptr) {
+        return;
+    }
+
+    _selectedCloudConnection.setNextcloudDeckStackId(current->data(0, Qt::UserRole).toInt());
+    _selectedCloudConnection.setNextcloudDeckBoardId(current->parent()->data(0, Qt::UserRole).toInt());
 }

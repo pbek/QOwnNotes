@@ -3,6 +3,7 @@
 #include <QEventLoop>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QJsonArray>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QTimeZone>
@@ -138,4 +139,102 @@ void NextcloudDeckService::addAuthHeader(QNetworkRequest& networkRequest) {
     QByteArray authStringBase64 = authString.toLocal8Bit().toBase64();
     QString headerData = QStringLiteral("Basic ") + authStringBase64;
     networkRequest.setRawHeader("Authorization", headerData.toLocal8Bit());
+}
+
+QList<NextcloudDeckService::Board> NextcloudDeckService::getBoards() {
+    auto *manager = new QNetworkAccessManager();
+    QEventLoop loop;
+    QTimer timer;
+
+    timer.setSingleShot(true);
+
+    QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    QObject::connect(manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
+
+    // 10 sec timeout for the request
+    timer.start(10000);
+
+    QUrl url(serverUrl + "/apps/deck/api/v1.1/boards?details=true");
+    qDebug() << __func__ << " - 'url': " << url;
+
+    QNetworkRequest networkRequest = QNetworkRequest(url);
+    networkRequest.setHeader(QNetworkRequest::UserAgentHeader,
+                             Utils::Misc::friendlyUserAgentString());
+
+#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
+    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+#else
+    networkRequest.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
+#endif
+
+    QByteArray data;
+    QNetworkReply *reply;
+
+    networkRequest.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    networkRequest.setRawHeader("OCS-APIRequest", "true");
+    addAuthHeader(networkRequest);
+
+    reply = manager->get(networkRequest);
+
+    loop.exec();
+    QList<NextcloudDeckService::Board> boards;
+
+    // if we didn't get a timeout let us return the content
+    if (timer.isActive()) {
+        int returnStatusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+
+        // only get the data if the status code was "success"
+        // see: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+        if (returnStatusCode >= 200 && returnStatusCode < 300) {
+            // get the data from the network reply
+            data = reply->readAll();
+            QJsonDocument jsonDoc = QJsonDocument::fromJson(data);
+
+            if (jsonDoc.isArray()) {
+                QJsonArray jsonArray = jsonDoc.array();
+
+                for (auto jsonValue : jsonArray) {
+                    QJsonObject object = jsonValue.toObject();
+                    int bBoardId = object["id"].toInt();
+
+                    NextcloudDeckService::Board board;
+                    board.id = bBoardId;
+                    board.title = object["title"].toString();
+
+                    auto stacksJsonValue = object["stacks"];
+                    QHash<int, QString> stacks;
+
+                    if (stacksJsonValue.isArray()) {
+                        QJsonArray stacksArray = stacksJsonValue.toArray();
+
+                        for (auto stackValue : stacksArray) {
+                            QJsonObject stackObject = stackValue.toObject();
+                            int bStackId = stackObject["id"].toInt();
+                            QString stackTitle = stackObject["title"].toString();
+
+                            stacks[bStackId] = stackTitle;
+                        }
+                    }
+
+                    board.stacks = stacks;
+                    boards.append(board);
+                }
+            }
+
+        } else {
+            QString errorString = reply->errorString();
+            Utils::Gui::warning(nullptr, tr("Error while loading boards"),
+                                tr("Loading the boards failed with status code %1 and message: %2")
+                                    .arg(QString::number(returnStatusCode), errorString),
+                                "nextcloud-deck-get-boards-failed");
+
+            qDebug() << __func__ << " - error: " << returnStatusCode;
+            qDebug() << __func__ << " - 'errorString': " << errorString;
+        }
+    }
+
+    reply->deleteLater();
+    delete (manager);
+
+    return boards;
 }

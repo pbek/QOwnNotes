@@ -318,11 +318,9 @@ class SettingsDialog : public MasterDialog {
 
     void on_noteTextViewRefreshDebounceTimeResetButton_clicked();
 
-    void on_nextcloudDeckBoardSpinBox_valueChanged(int arg1);
-
-    void on_nextcloudDeckStackSpinBox_valueChanged(int arg1);
-
     void on_appNextcloudDeckCheckBox_toggled(bool checked);
+
+    void on_nextcloudDeckStackTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
 
 private:
     Ui::SettingsDialog *ui;
@@ -428,7 +426,10 @@ private:
     void initCloudConnectionComboBox(int selectedId = -1);
 
     void handleDarkModeCheckBoxToggled(bool updateCheckBoxes = false, bool updateSchema = false);
+
     void resetOKLabelData();
+
+    void loadNextcloudDeckStackTreeWidget();
 };
 
 #endif    // SETTINGSDIALOG_H

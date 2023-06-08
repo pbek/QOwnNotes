@@ -1494,44 +1494,23 @@
                      </sizepolicy>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_83">
-                     <item row="0" column="1">
-                      <widget class="QSpinBox" name="nextcloudDeckBoardSpinBox">
-                       <property name="minimum">
-                        <number>0</number>
-                       </property>
-                       <property name="maximum">
-                        <number>999999999</number>
-                       </property>
-                       <property name="value">
-                        <number>0</number>
-                       </property>
-                      </widget>
-                     </item>
                      <item row="0" column="0">
-                      <widget class="QLabel" name="nextcloudDeckBoardLabel">
-                       <property name="text">
-                        <string>Board Id:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="1" column="0">
                       <widget class="QLabel" name="nextcloudDeckStackLabel">
                        <property name="text">
-                        <string>Stack Id:</string>
+                        <string>Stack:</string>
                        </property>
                       </widget>
                      </item>
-                     <item row="1" column="1">
-                      <widget class="QSpinBox" name="nextcloudDeckStackSpinBox">
-                       <property name="minimum">
-                        <number>0</number>
-                       </property>
-                       <property name="maximum">
-                        <number>999999999</number>
-                       </property>
-                       <property name="value">
-                        <number>0</number>
-                       </property>
+                     <item row="1" column="0" colspan="2">
+                      <widget class="QTreeWidget" name="nextcloudDeckStackTreeWidget">
+                       <attribute name="headerVisible">
+                        <bool>false</bool>
+                       </attribute>
+                       <column>
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </column>
                       </widget>
                      </item>
                     </layout>
