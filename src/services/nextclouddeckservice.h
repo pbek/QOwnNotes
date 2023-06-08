@@ -30,6 +30,7 @@ class NextcloudDeckService : public QObject {
     explicit NextcloudDeckService(QObject* parent, int cloudConnectionId = -1);
     int createCard(const QString& title, const QString& description = "", QDateTime* dueDateTime = nullptr);
     QString getCardLinkForId(int cardId);
+    bool isEnabledAndValid();
     bool isEnabled();
     QList<Board> getBoards();
 

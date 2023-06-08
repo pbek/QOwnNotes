@@ -4258,7 +4258,7 @@ void SettingsDialog::loadNextcloudDeckStackTreeWidget() {
     ui->nextcloudDeckStackTreeWidget->clear();
     NextcloudDeckService nextcloudDeckService(this, _selectedCloudConnection.getId());
 
-    if (!nextcloudDeckService.isEnabled()) {
+    if (!nextcloudDeckService.isEnabledAndValid()) {
         return;
     }
 

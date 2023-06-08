@@ -25,11 +25,15 @@ NextcloudDeckService::NextcloudDeckService(QObject* parent, int cloudConnectionI
     this->stackId = this->cloudConnection.getNextcloudDeckStackId();
 }
 
-bool NextcloudDeckService::isEnabled() {
-    return OwnCloudService::isOwnCloudSupportEnabled() &&
-           this->cloudConnection.getNextcloudDeckEnabled() &&
+bool NextcloudDeckService::isEnabledAndValid() {
+    return isEnabled() &&
            this->cloudConnection.getNextcloudDeckBoardId() > 0 &&
            this->cloudConnection.getNextcloudDeckStackId() > 0;
+}
+
+bool NextcloudDeckService::isEnabled() {
+    return OwnCloudService::isOwnCloudSupportEnabled() &&
+           this->cloudConnection.getNextcloudDeckEnabled();
 }
 
 int NextcloudDeckService::createCard(const QString& title,

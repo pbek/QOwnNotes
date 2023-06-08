@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.6.2
+- a Nextcloud Deck stack can now be selected if no stack was previously selected
+  (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789)) 
+
 ## 23.6.1
 - more **Nextcloud Deck** support features were added (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789))
   - there now is a check if Nextcloud Deck support is enabled and the config isn't
