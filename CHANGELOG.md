@@ -4,6 +4,10 @@
 - there now is a check if Nextcloud Deck support is enabled and the config isn't
   invalid before opening the Nextcloud Deck link insert dialog
   (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789))
+- added repositories for **openSUSE Leap 15.5** (for [#2790](https://github.com/pbek/QOwnNotes/issues/2790))
+  - please visit the [openSUSE installation page](https://www.qownnotes.org/installation/opensuse.html)
+    for instructions
+- a PPA for Ubuntu 23.10 (Mantic Minotaur) was added
 
 ## 23.6.0
 - you now can quickly **create Nextcloud Deck Cards** with a due date and link them
