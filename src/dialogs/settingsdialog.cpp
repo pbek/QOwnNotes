@@ -4256,7 +4256,7 @@ void SettingsDialog::on_appNextcloudDeckCheckBox_toggled(bool checked)
 
 void SettingsDialog::loadNextcloudDeckStackTreeWidget() {
     ui->nextcloudDeckStackTreeWidget->clear();
-    NextcloudDeckService nextcloudDeckService(this);
+    NextcloudDeckService nextcloudDeckService(this, _selectedCloudConnection.getId());
 
     if (!nextcloudDeckService.isEnabled()) {
         return;
