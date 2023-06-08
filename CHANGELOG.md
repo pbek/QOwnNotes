@@ -1,9 +1,11 @@
 # QOwnNotes Changelog
 
 ## 23.6.1
-- there now is a check if Nextcloud Deck support is enabled and the config isn't
-  invalid before opening the Nextcloud Deck link insert dialog
-  (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789))
+- more **Nextcloud Deck** support features were added (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789))
+  - there now is a check if Nextcloud Deck support is enabled and the config isn't
+    invalid before opening the Nextcloud Deck link insert dialog
+  - the board and stack can now be selected by name in a board / stack tree
+    instead of entering the IDs manually
 - added repositories for **openSUSE Leap 15.5** (for [#2790](https://github.com/pbek/QOwnNotes/issues/2790))
   - please visit the [openSUSE installation page](https://www.qownnotes.org/installation/opensuse.html)
     for instructions
