@@ -52,7 +52,7 @@ int NextcloudDeckService::createCard(const QString& title,
     // 10 sec timeout for the request
     timer.start(10000);
 
-    QUrl url(serverUrl + "/apps/deck/api/v1.1/boards/" +
+    QUrl url(serverUrl + "/index.php/apps/deck/api/v1.1/boards/" +
              QString::number(this->boardId) + "/stacks/" +
              QString::number(this->stackId) + "/cards");
     qDebug() << __func__ << " - 'url': " << url;
@@ -133,7 +133,7 @@ int NextcloudDeckService::createCard(const QString& title,
 QString NextcloudDeckService::getCardLinkForId(int cardId) {
     qDebug() << __func__ << " - 'boardId': " << this->boardId;
 
-    return QStringLiteral("%1/apps/deck/#/board/%2/card/%3").arg(
+    return QStringLiteral("%1/index.php/apps/deck/#/board/%2/card/%3").arg(
         this->serverUrl, QString::number(this->boardId), QString::number(cardId));
 }
 
@@ -158,7 +158,7 @@ QList<NextcloudDeckService::Board> NextcloudDeckService::getBoards() {
     // 10 sec timeout for the request
     timer.start(10000);
 
-    QUrl url(serverUrl + "/apps/deck/api/v1.1/boards?details=true");
+    QUrl url(serverUrl + "/index.php/apps/deck/api/v1.1/boards?details=true");
     qDebug() << __func__ << " - 'url': " << url;
 
     QNetworkRequest networkRequest = QNetworkRequest(url);

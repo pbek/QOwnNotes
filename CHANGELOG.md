@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 23.6.4
+- improve **Nextcloud Deck** API compatibility with wonky Nextcloud servers
+  (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789))
 - added more Korean, Persian, Dutch translation (thank you venusgirl, amirkbrpr, StephanP)
 
 ## 23.6.3
