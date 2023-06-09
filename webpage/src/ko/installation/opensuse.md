@@ -1,37 +1,47 @@
-# Install on openSUSE Linux
+# OpenSUSE Linux에 설치
 
 <installation-opensuse/>
 
 <!-- <Content :page-key="getPageKey($site.pages, '/installation/ubuntu.md')" /> -->
 
 
-## On every openSUSE version
+## 모든 openSUSE에서
 
-You can install QOwnNotes using the [OBS Package Installer](https://github.com/openSUSE/opi) tool.
+[OBS패키지 설치](https://github.com/openSUSE/opi) 도구를 사용하여 QOnNotes를 설치할 수 있습니다.
 
-Run the following shell commands as root to install `opi`:
+다음 셸 명령을 루트로 실행하여 `opi`을 설치합니다:
 
 ```bash
 zypper install opi
 ```
 
-Then install QOwnNotes with it:
+그런 다음 QOwnNotes를 설치합니다:
 
 ```bash
 opi qownnotes
 ```
 
-::: warning This tool will query the entire OBS service so be sure to choose `qownnotes`, and not `qownnotes-lang` if asked.
+::: 경고 이 도구는 전체 OBS 서비스를 쿼리하므로 `qownnotes-lang`이 아닌 `qownnotes`를 선택해야 합니다.
 
-Also check that the chosen repo is the official `home:pbek:QOwnNotes` and not a third-party one. :::
+또한 선택한 repo가 타사 홈이 아닌 공식 `home:pbek:QOwnNotes`인지 확인합니다. :::
 
-::: tip
-You need to choose the option to keep the repository after installation to get updates.
+::: 팁
+업데이트를 가져오려면 설치 후 리포지토리를 유지하는 옵션을 선택해야 합니다.
 :::
+
+## openSUSE Leap 15.5
+
+다음 셸 명령을 실행하여 저장소를 추가하고 여기서 QOwnNotes를 설치합니다.
+
+```bash
+zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.5/home:pbek:QOwnNotes.repo
+zypper refresh
+zypper install qownnotes
+```
 
 ## openSUSE Leap 15.4
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+다음 셸 명령을 루트로 실행하여 저장소를 추가하고 여기서QOwnNotes를 설치합니다.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.4/home:pbek:QOwnNotes.repo
@@ -39,11 +49,11 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.4)
+[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.4)
 
 ## openSUSE Leap 15.3
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+다음 셸 명령을 루트로 실행하여 저장소를 추가하고 여기서QOwnNotes를 설치합니다.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_15.3/home:pbek:QOwnNotes.repo
@@ -51,11 +61,11 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_15.3)
+[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_15.3)
 
 ## openSUSE Leap 15.2
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+다음 셸 명령을 루트로 실행하여 저장소를 추가하고 여기서QOwnNotes를 설치합니다.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_15.2/home:pbek:QOwnNotes.repo
@@ -63,11 +73,11 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_15.2)
+[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_15.2)
 
 ## openSUSE Tumbleweed
 
-다음 셸 명령을 루트로 실행하여 리포지토리를 추가하고 거기서 QOwnNotes를 설치합니다.
+다음 셸 명령을 루트로 실행하여 저장소를 추가하고 여기서QOwnNotes를 설치합니다.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Tumbleweed/home:pbek:QOwnNotes.repo
@@ -78,9 +88,9 @@ zypper install qownnotes
 [직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Tumbleweed)
 
 
-## SLE 12 SP3 백포트
+## SLE 12 SP3 Backports
 
-다음 셸 명령을 루트로 실행하여 리포지토리를 추가하고 거기서 QOwnNotes를 설치합니다.
+다음 셸 명령을 루트로 실행하여 저장소를 추가하고 여기서QOwnNotes를 설치합니다.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_12_SP3_Backports/home:pbek:QOwnNotes.repo
@@ -92,7 +102,7 @@ zypper install qownnotes
 
 ## SLE 15
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+다음 셸 명령을 루트로 실행하여 저장소를 추가하고 여기서QOwnNotes를 설치합니다.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_15/home:pbek:QOwnNotes.repo
@@ -100,4 +110,4 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_15)
+[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_15)

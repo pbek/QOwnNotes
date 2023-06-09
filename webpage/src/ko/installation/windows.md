@@ -1,18 +1,17 @@
 # Microsoft Windows™에 설치
 
-Download the latest **Windows archive** from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases) and unzip it to anywhere you like. There is no installation needed!
+[GitHub의 QOwnNotes 릴리스](https://github.com/pbek/QOwnNotes/releases)에서 최신 **Windows 압축파일** 다운로드하여 원하는 곳으로 압축을 풉니다. 설치할 필요가 없습니다!
 
-::: warning If you want to use the **automatic updater** please make sure you unzip it to a place where your user account has write access to. By default your user account most likely **doesn't have write access** to places like `C:\Program Files (x86)` or `C:\Program Files`. :::
+::: 경고 **자동 업데이트 프로그램**을 사용하려면 사용자 계정에 쓰기 권한이 있는 위치로 압축을 풉니다. 기본적으로 사용자 계정에는 `C:\Program Files (x86)` 또는`C:\Program Files`와 같은 위치에 대한 **쓰기 액세스 권한이 없습니다**. :::
 
-You can then directly run `QOwnNotes.exe` from your `QOwnNotes` folder, no installation is required.
+그런 다음 설치가 필요 없이 `QOwnNotes` 폴더에서 `QOwnNotes.exe`를 바로 실행할 수 있습니다.
 
 ### 휴대용 모드
 
-Use `QOwnNotesPortable.bat` to run QOwnNotes in **portable mode** where everything (including your notes) will only be stored in your `QOwnNotes` folder.
+`QOwnNotesPortable.bat`을 사용하여 모든 항목 (노트 포함)이 `QOwnNotes` 폴더에만 저장되는 **휴대용 모드**에서 QOwnNotes를 실행합니다.
 
-::: tip
-You don't need the portable mode if you just don't have Administration permissions
-to your computer. QOwnNotes doesn't need to be installed!
+::: 팁
+컴퓨터에 대한 관리 권한이 없는 경우에는 휴대용 모드가 필요하지 않습니다. QOwnNotes 를 설치할 필요가 없습니다!
 :::
 
 ## Windows XP
@@ -40,7 +39,7 @@ choco install qownnotes
 
 ## Scoop
 
-[Scop](https://scoop.sh/)에 커뮤니티에서 관리하는 [QOwnotes ](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) 패키지가 있습니다. Extra 버킷을 추가하면 휴대용 모드에서 QOwnNotes를 설치하는 데 사용할 수 있습니다.
+[Scop](https://scoop.sh/)에 커뮤니티에서 관리하는 [QOwnotes ](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) 패키지가 있습니다. 엑스트라 버킷을 추가하면 휴대용 모드에서 QOwnNotes를 설치하는 데 사용할 수 있습니다.
 
 ```shell
 scoop bucket add extras

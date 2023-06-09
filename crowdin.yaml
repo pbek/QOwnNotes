@@ -1,8 +1,8 @@
 # Crowdin configuration file
-# see: https://support.crowdin.com/configuration-file/
+# see: https://developer.crowdin.com/configuration-file/
 #
 # you will need the CLI client
-# see: https://support.crowdin.com/cli-tool/
+# see: https://crowdin.github.io/crowdin-cli/
 #
 # Crowdin supports a lot of files: https://support.crowdin.com/supported-formats/
 #

@@ -1,11 +1,14 @@
 # QOwnNotes Changelog
 
+## 23.6.4
+- added more Korean, Persian, Dutch translation (thank you venusgirl, amirkbrpr, StephanP)
+
 ## 23.6.3
-- a Nextcloud Deck stack can now **really** be selected if no stack was previously selected
+- a **Nextcloud Deck** stack can now **really** be selected if no stack was previously selected
   (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789)) 
 
 ## 23.6.2
-- a Nextcloud Deck stack can now be selected if no stack was previously selected
+- a **Nextcloud Deck** stack can now be selected if no stack was previously selected
   (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789)) 
 
 ## 23.6.1

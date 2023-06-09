@@ -31,6 +31,16 @@ Controleer ook of de gekozen repo de officiële `home:pbek:QOwnNotes` is en niet
 U moet de optie kiezen om de repository na installatie te behouden om updates te krijgen.
 :::
 
+## openSUSE Leap 15.5
+
+Voer de volgende shell-opdrachten uit als root om de repository toe te voegen en vanaf daar QOwnNotes te installeren.
+
+```bash
+zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.5/home:pbek:QOwnNotes.repo
+zypper refresh
+zypper install qownnotes
+```
+
 ## openSUSE Leap 15.4
 
 Voer de volgende shell-opdrachten uit als root om de repository toe te voegen en vanaf daar QOwnNotes te installeren.

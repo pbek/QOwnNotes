@@ -5,24 +5,24 @@
 ### 기본 창에서
 
 - <kbd>Ctrl</kbd> + <kbd>N</kbd> 이름에 현재 날짜와 시간이 포함된 새 노트를 만듭니다
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> 새 탭에서 새 노트 만들기
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> 새 탭에서 새 노트를 만듭니다
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> 노트를 검색할 수 있습니다 (노트 이름 및 내용)
 - <kbd>Alt</kbd> + <kbd>F</kbd> 모든 태그/하위 폴더에서 노트를 검색할 수 있습니다
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> 이전 작업 공간으로 전환
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> 이전 작업 공간으로 전환합니다
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> 암호화된 노트를 편집합니다
 - <kbd>Alt</kbd> + <kbd>R</kbd> 현재 노트를 제거합니다
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> 업데이트 확인
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> 업데이트를 확인합니다
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> 작업관리 목록을 엽니다
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> 외부 편집기에서 현재 노트 열기
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> 보기에서 현재 노트 열기
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> 외부 편집기에서 현재 노트를 엽니다
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> 보기에서 현재 노트를 엽니다
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> 파일 관리자의 현재 노트를 표시합니다
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> 노트 편집 사용 또는 사용 안 함
-- <kbd>Alt</kbd> + <kbd>Up</kbd> 이전에 볼 수 있는 노트로 이동
+- <kbd>Alt</kbd> + <kbd>Up</kbd> 이전에 볼 수 있는 노트로 이동합니다
     - 대체 단축키는 <kbd>Ctrl</kbd> + <kbd>Page Up</kbd>입니다
-- <kbd>Alt</kbd> + <kbd>Down</kbd> 다음으로 보이는 노트로 이동
+- <kbd>Alt</kbd> + <kbd>Down</kbd> 다음으로 보이는 노트로 이동합니다
     - 대체 단축키는 <kbd>Ctrl</kbd> + <kbd>Page Down</kbd>입니다
-- <kbd>Alt</kbd> + <kbd>Page Up</kbd> 이전 노트 탭으로 이동
-- <kbd>Alt</kbd> + <kbd>Page Down</kbd> 다음 노트 탭으로 이동
+- <kbd>Alt</kbd> + <kbd>Page Up</kbd> 이전 노트 탭으로 이동합니다
+- <kbd>Alt</kbd> + <kbd>Page Down</kbd> 다음 노트 탭으로 이동합니다
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> 현재 노트 탭을 닫습니다
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> 주의 집중 해제 모드를 전환합니다
     - <kbd>Esc</kbd>로도 닫을 수 있습니다
@@ -30,152 +30,152 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> 현재 노트를 마크다운으로 인쇄합니다
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>V</kbd> 클립보드에서 노트, 이미지 및 HTML을 붙여넣습니다
 - <kbd>Ctrl</kbd> + <kbd>,</kbd> 설정을 엽니다
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> 노트에 새 태그 추가
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> 노트에 새 태그를 추가합니다
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> 현재 노트 폴더를 다시 로드합니다
 - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> 다른 노트 폴더를 선택할 수 있습니다
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> 스크립팅 엔진을 다시 로드합니다
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> 기본 메뉴 표시줄을 숨기거나 표시합니다
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> 작업을 검색할 수 있습니다
-- <kbd>Ctrl</kbd> + <kbd>S</kbd> 수정된 노트 수동 저장
+- <kbd>Ctrl</kbd> + <kbd>S</kbd> 수정된 노트를 수동 저장합니다
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> 스크립트 저장소 대화 상자를 엽니다
-- <kbd>F4</kbd> 노트 편집 패널로 이동
-- <kbd>F5</kbd> 노트 목록으로 이동
-- <kbd>F6</kbd> 노트 하위 폴더 패널로 이동
-- <kbd>F7</kbd> 태그 패널로 이동
-- <kbd>F8</kbd> 탐색 패널로 이동
-- <kbd>F10</kbd> 현재 위젯의 상황에 맞는 메뉴 활성화
-- <kbd>F11</kbd> 전체 화면 모드 전환
+- <kbd>F4</kbd> 노트 편집 패널로 이동합니다
+- <kbd>F5</kbd> 노트 목록으로 이동합니다
+- <kbd>F6</kbd> 노트 하위 폴더 패널로 이동합니다
+- <kbd>F7</kbd> 태그 패널로 이동합니다
+- <kbd>F8</kbd> 탐색 패널로 이동합니다
+- <kbd>F10</kbd> 현재 위젯의 상황에 맞는 메뉴를 활성화합니다
+- <kbd>F11</kbd> 전체 화면 모드로 전환합니다
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> 현재 노트의 헤드라인을 복사합니다
 
 ### 노트 검색 표시줄
 
-- <kbd>Down</kbd> or <kbd>Tab</kbd> sets the focus to the note list
-- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
+- <kbd>Down</kbd> 또는 <kbd>Tab</kbd> 노트 목록에 집중을 설정합니다
+- <kbd>Return</kbd> 검색 줄의 텍스트를 헤드라인으로 사용하여 새 노트를 만듭니다
 
-### In the note list
+### 노트 목록에서
 
-- double-click on note to open note in a new tab (keep in mind that there is a scripting hook that can override the double-click action)
-- <kbd>Ctrl</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
-- <kbd>Tab</kbd> or <kbd>Return</kbd> lets you edit the current note
+- 노트를 두 번 클릭하여 새 탭에서 노트를 엽니다 (두 번 클릭 작업을 재정의할 수 있는 스크립팅 후크가 있습니다)
+- <kbd>Ctrl</kbd> + <kbd>A</kbd> 모든 노트를 선택합니다 (오른쪽 클릭으로 이동, 복사 또는 제거)
+- <kbd>Tab</kbd> 또는 <kbd>Return</kbd> 현재 노트를 편집할 수 있습니다
 
-### In the note text edit panel
+### 노트 텍스트 편집 패널에서
 
-- <kbd>Ctrl</kbd> + <kbd>Click</kbd> on a link to open it
-- <kbd>Ctrl</kbd> + <kbd>F</kbd> lets you search in the current note
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
-    - <kbd>Esc</kbd> closes the search bar
-- <kbd>Ctrl</kbd> + <kbd>R</kbd> lets you search and replace in the current note
-- <kbd>Ctrl</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
-    - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> does the same
-- <kbd>Alt</kbd> + <kbd>Backspace</kbd> deletes the current line
-- <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> deletes the current word
-- <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> opens a dialog to add note link
-- <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date and time in a user specific format
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> inserts a table
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>C</kbd> inserts a code block at the current position
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> inserts a block quote at the current position
-- <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold
-- <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic
-- <kbd>Ctrl</kbd> + <kbd>U</kbd> formats the selected text underline
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> strikes out the selected text
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
-- <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
-- <kbd>Tab</kbd> after an unordered list character indents the list item
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
-- <kbd>Return</kbd> in lists creates a new list item
-- <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history
-    - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
-- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
-- <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
-- <kbd>Ctrl</kbd> + <kbd>-</kbd> decreases the note text font size by one point
-- <kbd>Ctrl</kbd> + <kbd>0</kbd> resets the note text font size
-- <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in front of the cursor, auto-completes text or opens urls
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> searches for the selected text on the web
-- <kbd>Ctrl</kbd> + <kbd>Up</kbd> scrolls the content up
-- <kbd>Ctrl</kbd> + <kbd>Down</kbd> scrolls the content down
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> moves the current line down
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> moves the current line up
-- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
+- <kbd>Ctrl</kbd> + 링크를 <kbd>클릭</kbd>하여 엽니다
+- <kbd>Ctrl</kbd> + <kbd>F</kbd> 현재 노트에서 검색할 수 있습니다
+    - <kbd>Up</kbd> 및 <kbd>Down</kbd> 또는 <kbd>F3</kbd> 및 <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> 키를 사용하여 이전 및 다음 일치로 이동합니다
+    - <kbd>Esc</kbd> 검색 표시줄을 닫습니다
+- <kbd>Ctrl</kbd> + <kbd>R</kbd>을 사용하여 현재 노트를 검색하고 바꿀 수 있습니다
+- <kbd>Ctrl</kbd> + <kbd>D</kbd> 현재 줄 또는 선택한 텍스트를 복제합니다
+    - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd>도 마찬가지입니다
+- <kbd>Alt</kbd> + <kbd>백스페이스</kbd> 현재 줄을 삭제합니다
+- <kbd>Ctrl</kbd> + <kbd>백 스페이스</kbd> 현재 단어를 삭제합니다
+- <kbd>Ctrl</kbd> + <kbd>L</kbd> 텍스트 링크를 추가하는 대화 상자를 엽니다 (선택한 텍스트에서도 작동)
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd>은 노트 링크를 추가하는 대화 상자를 엽니다
+- <kbd>Ctrl</kbd> + <kbd>T</kbd> 현재 날짜와 시간을 사용자별 형식으로 삽입합니다
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> 이미지를 삽입합니다 (이미지가 현재 노트 폴더의 `미디어` 폴더에 복사됩니다)
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> 첨부 파일을 삽입합니다 (파일이 현재 노트 폴더의 `첨부` 파일 폴더에 복사됩니다)
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> 표를 삽입합니다
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>C</kbd> 현재 위치에 코드 블록을 삽입합니다
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> 현재 위치에 블록 따옴표를 삽입합니다
+- <kbd>Ctrl</kbd> + <kbd>B</kbd> 선택한 텍스트를 굵게 표시합니다
+- <kbd>Ctrl</kbd> + <kbd>I</kbd> 선택한 텍스트를 기울임꼴로 표시합니다
+- <kbd>Ctrl</kbd> + <kbd>U</kbd> 선택한 텍스트 밑줄 형식을 지정합니다
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> 선택한 텍스트를 취소선을 표시합니다
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> 선택한 텍스트의 대소문자를 순환합니다
+- <kbd>Tab</kbd> 선택한 텍스트를 들여쓰기합니다 (여러 줄에서도 작동)
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> 선택한 텍스트의 들여쓰기를 해제합니다
+- <kbd>Tab</kbd> 정렬되지 않은 목록 문자 뒤의 목록 항목을 들여쓰기합니다
+    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> 정렬되지 않은 목록 문자 뒤의 목록 항목의 들여쓰기를 해제합니다
+- <kbd>Return</kbd> 목록에서 새 목록 항목을 만듭니다
+- <kbd>Alt</kbd> + <kbd>Left</kbd> 노트 기록으로 돌아갑니다
+    - <kbd>Alt</kbd> + <kbd>Right</kbd> 노트 기록에서 앞으로 이동합니다
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> 북마크 슬롯 1...9에 노트 북마크를 설정합니다
+- <kbd>Ctrl</kbd> + <kbd>1..9</kbd> 북마크 슬롯 1..9의 노트 북마크로 이동합니다.
+- <kbd>Ctrl</kbd> + <kbd>+</kbd> 노트 텍스트 글꼴 크기를 1포인트 늘립니다
+- <kbd>Ctrl</kbd> + <kbd>-</kbd> 노트 텍스트 글꼴 크기를 1포인트 줄입니다
+- <kbd>Ctrl</kbd> + <kbd>0</kbd> 노트 텍스트 글꼴 크기를 재설정합니다
+- <kbd>Ctrl</kbd> + <kbd>스페이스</kbd> 커서 앞에서 `(4+5)*3=`와 같은 간단한 방정식을 풀거나 텍스트를 자동으로 선택하거나 Url을 엽니다
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> 노트 파일 이름의 헤드라인을 노트 상단에 삽입합니다
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> 현재 커서 위치에서 현재 노트를 두 개의 노트로 분할합니다
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> 웹에서 선택한 텍스트를 검색합니다
+- <kbd>Ctrl</kbd> + <kbd>Up</kbd> 콘텐츠를 위로 스크롤합니다
+- <kbd>Ctrl</kbd> + <kbd>Down</kbd> 내용을 아래로 스크롤합니다
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> 현재 줄을 아래로 이동합니다
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> 현재 줄을 위로 이동합니다
+- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> 두 개의 공백과 새 줄 문자를 추가하여 새 줄을 강제로 표시합니다
 
-### In the note preview panel
+### 노트 미리 보기 패널에서
 
-- <kbd>Ctrl</kbd> + <kbd>F</kbd> lets you search in the current note
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
-    - <kbd>Esc</kbd> closes the search bar
+- <kbd>Ctrl</kbd> + <kbd>F</kbd> 현재 노트에서 검색할 수 있습니다
+    - <kbd>Up</kbd> 및 <kbd>Down</kbd> 키 또는 <kbd>F3</kbd> 및 <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> 키는 이전 및 다음 일치 항목으로 이동합니다
+    - <kbd>Esc</kbd> 검색 표시줄을 닫습니다
 
-### In the Todo list
+### 할 일 목록에서
 
-- <kbd>Ctrl</kbd> + <kbd>S</kbd> saves the current todo item
-- <kbd>Ctrl</kbd> + <kbd>I</kbd> saves the current todo item and inserts in into the current note
-- <kbd>Ctrl</kbd> + <kbd>R</kbd> removes the current todo item
+- <kbd>Ctrl</kbd> + <kbd>S</kbd> 현재 할 일 항목을 저장합니다
+- <kbd>Ctrl</kbd> + <kbd>I</kbd> 현재 할 일 항목을 저장하고 현재 노트에 삽입합니다
+- <kbd>Ctrl</kbd> + <kbd>R</kbd> 현재 작업관리 항목을 제거합니다
 
 
 ## macOS
 
-### In the main window
+### 기본 창에서
 
-- <kbd>⌘ Cmd</kbd> + <kbd>N</kbd> creates a new note with the current date and time in the name
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> creates a new note in a new tab
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
-- <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> lets you search for notes in all tags / subfolders
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> switches to the previous workspace
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> edits an encrypted note
-- <kbd>⌃ Ctrl</kbd> + <kbd>R</kbd> removes the current note
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> checks for updates
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> opens the todo list
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in an external editor
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> opens the current note in a view
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> enables or disables editing of notes
-- <kbd>⌃ Ctrl</kbd> + <kbd>Up</kbd> jumps to the previous visible note
-    - alternate shortcut is <kbd>⌘ Cmd</kbd> + <kbd>Page Up</kbd>
-- <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> jumps to the next visible note
-    - alternate shortcut is <kbd>⌘ Cmd</kbd> + <kbd>Page Down</kbd>
-- <kbd>⌥ Alt</kbd> + <kbd>Page Up</kbd> jumps to the previous note tab
-- <kbd>⌥ Alt</kbd> + <kbd>Page Down</kbd> jumps to the next note tab
-- <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> closes the current note tab
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> toggles the distraction free mode
-    - you can also close it with <kbd>Esc</kbd>
-- <kbd>⌘ Cmd</kbd> + <kbd>P</kbd> prints the current note as text
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> prints the current note as markdown
-- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
-- <kbd>⌘ Cmd</kbd> + <kbd>,</kbd> opens the settings
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> adds a new tag to a note
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> reloads the current note folder
-- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> lets you select a different note folder
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> hides or shows the main menu bar
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you search for actions
-- <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> manually saves modified notes
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> opens the Script repository dialog
-- <kbd>F4</kbd> jumps to the note edit panel
-- <kbd>F5</kbd> jumps to the note list
-- <kbd>F6</kbd> jumps to the note subfolder panel
-- <kbd>F7</kbd> jumps to the tags panel
-- <kbd>F8</kbd> jumps to the navigation panel
-- <kbd>F10</kbd> activates the context menu of the current widget
-- <kbd>⌘ Cmd</kbd> + <kbd>F11</kbd> toggles full-screen mode
-- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> copies the headline of the current note
+- <kbd>⌘ Cmd</kbd> + <kbd>N</kbd> 이름에 현재 날짜와 시간이 포함된 새 노트를 만듭니다
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> 새 탭에 새 노트를 만듭니다
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> 노트를 검색할 수 있습니다 (노트 및 내용 이름)
+- <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> 모든 태그/하위 폴더에서 노트를 검색할 수 있습니다
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> 이전 작업영역으로 전환합니다
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> 암호화된 노트를 편집합니다
+- <kbd>⌃ Ctrl</kbd> + <kbd>R</kbd> 현재 노트를 제거합니다
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> 업데이트를 확인합니다
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> 작업관리 목록을 엽니다
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> 외부 편집기에서 현재 노트를 엽니다
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> 보기에서 현재 노트를엽니다
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> 파인더에서 현재 노트의 폴더를 엽니다
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> 노트 편집을 활성화 또는 비활성화합니다
+- <kbd>⌃ Ctrl</kbd> + <kbd>Up</kbd> 이전에 볼 수 있는 노트로 이동합니다
+    - 대체 바로 가기는 <kbd>⌘ Cmd</kbd> + <kbd>Page Up</kbd>입니다
+- <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> 보이는 다음 노트로 이동합니다
+    - 대체 바로 가기는 <kbd>⌘ Cmd</kbd> + <kbd>Page Down</kbd>입니다
+- <kbd>⌥ Alt</kbd> + <kbd>Page Up</kbd> 이전 노트 탭으로 이동합니다
+- <kbd>⌥ Alt</kbd> + <kbd>Page Down</kbd> 다음 노트 탭으로 이동합니다
+- <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> 현재 노트 탭을 닫습니다
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> 방해가 없는 모드를 전환합니다
+    - <kbd>Esc</kbd>로도 닫을 수 있습니다
+- <kbd>⌘ Cmd</kbd> + <kbd>P</kbd> 현재 노트를 텍스트로 인쇄합니다
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> 현재 노트를 마크다운으로 인쇄합니다
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>V</kbd> 클립보드에서 노트, 이미지 및 html을 붙여넣습니다
+- <kbd>⌘ Cmd</kbd> + <kbd>,</kbd> 설정을 엽니다
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> 노트에 새 태그를 추가합니다
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> 현재 노트 폴더를 다시 로드합니다
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> 다른 노트 폴더를 선택할 수 있습니다
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> 스크립팅 엔진을 다시 로드합니다
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> 기본 메뉴 표시줄를 숨기거나 표시합니다
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> 작업을 검색할 수 있습니다
+- <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> 수정된 노트를 수동으로 저장합니다
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> 스크립트 저장소 대화 상자를 엽니다
+- <kbd>F4</kbd> 노트 편집 패널로 이동합니다
+- <kbd>F5</kbd> 노트 목록으로 이동합니다
+- <kbd>F6</kbd> 노트 하위 폴더 패널로 이동합니다
+- <kbd>F7</kbd> 태그 패널로 이동합니다
+- <kbd>F8</kbd> 내비게이션 패널로 이동합니다
+- <kbd>F10</kbd> 현재 위젯의 상황에 맞는 메뉴를 활성화합니다
+- <kbd>⌘ Cmd</kbd> + <kbd>F11</kbd> 전체 화면 모드로 전환합니다
+- <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> 현재 노트의 헤드라인을 복사합니다
 
-### In the note search bar
+### 노트 검색 표시줄에서
 
-- <kbd>Down</kbd> or <kbd>Tab</kbd> sets the focus to the note list
-- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
+- <kbd>Down</kbd> 또는 <kbd>Tab</kbd> 노트 목록에 집중을 설정합니다
+- <kbd>Return</kbd> 검색란의 텍스트를 헤드라인으로 하여 새 노트를 만듭니다
 
-### In the note list
+### 노트 목록에서
 
-- double-click on note to open note in a new tab (keep in mind that there is a scripting hook that can override the double-click action)
-- <kbd>⌘ Cmd</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
-- <kbd>Tab</kbd> or <kbd>Return</kbd> lets you edit the current note
+- 노트를 더블 클릭해 새 탭에서 노트를 엽니다 (더블 클릭 동작을 재정의할 수 있는 스크립팅 훅이 있다는 점에 유의하세요).
+- <kbd>⌘ Cmd</kbd> + <kbd>A</kbd> 모든 노트를 선택합니다 (오른쪽 클릭으로 이동, 복사 또는 제거)
+- <kbd>Tab</kbd> 또는 <kbd>Return</kbd> 현재 노트를 편집할 수 있습니다
 
-### In the note text edit panel
+### 노트 텍스트 편집 패널에서
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Click</kbd> on a link to open it
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> lets you search in the current note

@@ -2044,7 +2044,7 @@
 <message>
 <location filename="../mainwindow.ui" line="411"/>
 <location filename="../mainwindow.ui" line="912"/>
-<location filename="../mainwindow.cpp" line="823"/>
+<location filename="../mainwindow.cpp" line="824"/>
 <source>Navigation</source>
 <translation>جهت یابی</translation>
 </message>
@@ -2055,7 +2055,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="7906"/>
+<location filename="../mainwindow.cpp" line="7907"/>
 <source>Add a tag to the current note</source>
 <translation>افزودن برچسب به یادداشت کنونی</translation>
 </message>
@@ -2171,7 +2171,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1451"/>
-<location filename="../mainwindow.cpp" line="9395"/>
+<location filename="../mainwindow.cpp" line="9396"/>
 <source>Select &amp;all notes</source>
 <translation>انتخاب &amp;همه یادداشت ها</translation>
 </message>
@@ -2221,7 +2221,7 @@
 <translation>جستجو یا ایجاد یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7907"/>
+<location filename="../mainwindow.cpp" line="7908"/>
 <source>Add a tag to the selected notes</source>
 <translation>افزودن برچسب به یادداشت های منتخب</translation>
 </message>
@@ -2312,7 +2312,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1163"/>
-<location filename="../mainwindow.cpp" line="756"/>
+<location filename="../mainwindow.cpp" line="757"/>
 <source>Workspaces</source>
 <translation>فضاهای کاری</translation>
 </message>
@@ -2610,7 +2610,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2247"/>
-<location filename="../mainwindow.cpp" line="10312"/>
+<location filename="../mainwindow.cpp" line="10313"/>
 <source>Remove current workspace</source>
 <translation>حذف فضای کاری کنونی</translation>
 </message>
@@ -2678,7 +2678,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2368"/>
-<location filename="../mainwindow.cpp" line="9374"/>
+<location filename="../mainwindow.cpp" line="9375"/>
 <source>Open note in different window</source>
 <translation>باز کردن یادداشت را در پنجره متفاوت</translation>
 </message>
@@ -2699,7 +2699,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2408"/>
-<location filename="../mainwindow.cpp" line="9379"/>
+<location filename="../mainwindow.cpp" line="9380"/>
 <source>Show note git versions</source>
 <translation>نمایش نسخه های گیت یادداشت</translation>
 </message>
@@ -2782,7 +2782,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2571"/>
-<location filename="../mainwindow.cpp" line="11261"/>
+<location filename="../mainwindow.cpp" line="11262"/>
 <source>Automatically detect</source>
 <translation>شناسایی خودکار</translation>
 </message>
@@ -3012,22 +3012,23 @@
 <translation>ورود یادداشت ها از اورنوت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2800"/>
+<location filename="../mainwindow.cpp" line="2801"/>
 <source>Note was removed externally!</source>
 <translation>یادداشت خارج شد!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2801"/>
+<location filename="../mainwindow.cpp" line="2802"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>یادداشت کنونی خارج از این برنامه حذف شد!
 آیا می خواهید یادداشت کنونی را بازیابی کنید؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5288"/>
-<location filename="../mainwindow.cpp" line="5308"/>
-<location filename="../mainwindow.cpp" line="6588"/>
-<location filename="../mainwindow.cpp" line="9460"/>
+<location filename="../mainwindow.cpp" line="5289"/>
+<location filename="../mainwindow.cpp" line="5309"/>
+<location filename="../mainwindow.cpp" line="6589"/>
+<location filename="../mainwindow.cpp" line="9461"/>
+<location filename="../mainwindow.cpp" line="11608"/>
 <source>&amp;Cancel</source>
 <translation>&amp;لغو</translation>
 </message>
@@ -3039,47 +3040,47 @@ Restore current note?</source>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3038"/>
+<location filename="../mainwindow.cpp" line="3039"/>
 <source>new version %1 available</source>
 <translation>نسخه جدید %1 در دسترس است</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3148"/>
+<location filename="../mainwindow.cpp" line="3149"/>
 <source>Abort</source>
 <translation>توقف</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3148"/>
+<location filename="../mainwindow.cpp" line="3149"/>
 <source>Loading notes…</source>
 <translation>بارگذاری یادداشت ها…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3354"/>
+<location filename="../mainwindow.cpp" line="3355"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>پایگاه داده متناقض تکراری حذف شده: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3355"/>
+<location filename="../mainwindow.cpp" line="3356"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>عدم امکان حذف پایگاه داده متناقض تکراری: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3360"/>
+<location filename="../mainwindow.cpp" line="3361"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>پایگاه داده متناقض ادغام شده حذف شده: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3361"/>
+<location filename="../mainwindow.cpp" line="3362"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>عدم امکان حذف پایگاه داده متناقض ادغام شده: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3375"/>
+<location filename="../mainwindow.cpp" line="3376"/>
 <source>Delete conflicted database copies</source>
 <translation>حذف رونوشت های پایگاه داده متناقض</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3395"/>
+<location filename="../mainwindow.cpp" line="3396"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>رونوشت های پایگاه داده متناقض %n حذف شده</numerusform>
@@ -3087,62 +3088,62 @@ Restore current note?</source>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3557"/>
+<location filename="../mainwindow.cpp" line="3558"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>لطفاً پوشه ای را که یادداشت های شما در آن ذخیره می شود، انتخاب کنید</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3581"/>
+<location filename="../mainwindow.cpp" line="3582"/>
 <source>No folder was selected</source>
 <translation>هیچ پوشه ای انتخاب نشد</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3582"/>
+<location filename="../mainwindow.cpp" line="3583"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>برای اینکه این نرم افزار کار کند، باید پوشه یادداشت های اون کلاود خود را انتخاب کنید!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3584"/>
+<location filename="../mainwindow.cpp" line="3585"/>
 <source>&amp;Retry</source>
 <translation>&amp;تلاش دوباره</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3584"/>
+<location filename="../mainwindow.cpp" line="3585"/>
 <source>&amp;Exit</source>
 <translation>&amp;خروج</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3883"/>
+<location filename="../mainwindow.cpp" line="3884"/>
 <source>Remove current note</source>
 <translation>حذف یادداشت کنونی</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3884"/>
+<location filename="../mainwindow.cpp" line="3885"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>حذف یادداشت کنونی: &lt;strong&gt;%1&lt;/strong&gt;؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4253"/>
+<location filename="../mainwindow.cpp" line="4254"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>لطفاً &lt;strong&gt; گذرواژه &lt;/strong&gt; این یادداشت رمزنگاری شده را وارد کنید.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4275"/>
+<location filename="../mainwindow.cpp" line="4276"/>
 <source>Note can't be decrypted!</source>
 <translation>یادداشت قابل رمزگشایی نیست!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4276"/>
+<location filename="../mainwindow.cpp" line="4277"/>
 <source>It seems that your password is not valid!</source>
 <translation>به نظر می رسد رمز عبور شما معتبر نیست!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4456"/>
+<location filename="../mainwindow.cpp" line="4457"/>
 <source>Remove selected notes</source>
 <translation>حذف یادداشت های منتخب</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4457"/>
+<location filename="../mainwindow.cpp" line="4458"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -3154,12 +3155,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4529"/>
+<location filename="../mainwindow.cpp" line="4530"/>
 <source>Remove selected tags</source>
 <translation>حذف برچسب های منتخب</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4530"/>
+<location filename="../mainwindow.cpp" line="4531"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>آیا می خواهید برچسب (های) منتخب &lt;strong&gt;%n&lt;/strong&gt; را حذف کنید؟
@@ -3169,13 +3170,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4584"/>
-<location filename="../mainwindow.cpp" line="8675"/>
+<location filename="../mainwindow.cpp" line="4585"/>
+<location filename="../mainwindow.cpp" line="8676"/>
 <source>Move selected notes</source>
 <translation>انتقال یادداشت های منتخب</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4585"/>
+<location filename="../mainwindow.cpp" line="4586"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>آیا می خواهید %n یادداشت منتخب را به &lt;strong&gt;%2&lt;/strong&gt; منتقل کنید؟</numerusform>
@@ -3183,13 +3184,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4694"/>
-<location filename="../mainwindow.cpp" line="8787"/>
+<location filename="../mainwindow.cpp" line="4695"/>
+<location filename="../mainwindow.cpp" line="8788"/>
 <source>Copy selected notes</source>
 <translation>رونوشت یادداشت های منتخب</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4695"/>
+<location filename="../mainwindow.cpp" line="4696"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>آیا می خواهید از %n یادداشت منتخب به &lt;strong&gt;%2&lt;/strong&gt; رونوشت برداری کنید؟</numerusform>
@@ -3197,13 +3198,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4722"/>
-<location filename="../mainwindow.cpp" line="4864"/>
+<location filename="../mainwindow.cpp" line="4723"/>
+<location filename="../mainwindow.cpp" line="4865"/>
 <source>Done</source>
 <translation>انجام شد</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4723"/>
+<location filename="../mainwindow.cpp" line="4724"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>یادداشت (های) %n به &lt;strong&gt;%2&lt;/strong&gt; رونوشت برداری شد.</numerusform>
@@ -3211,12 +3212,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4736"/>
+<location filename="../mainwindow.cpp" line="4737"/>
 <source>Tag selected notes</source>
 <translation>برچسب گذاری یادداشت های منتخب</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4737"/>
+<location filename="../mainwindow.cpp" line="4738"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>آیا می خواهید %n یادداشت منتخب را با &lt;strong&gt;%2&lt;/strong&gt; برچسب گذاری کنید؟</numerusform>
@@ -3224,37 +3225,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5003"/>
+<location filename="../mainwindow.cpp" line="5004"/>
 <source>Restart application</source>
 <translation>راه اندازی مجدد برنامه</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5004"/>
+<location filename="../mainwindow.cpp" line="5005"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>ممکن است لازم باشد برنامه را مجدداً راه اندازی کنید تا تغییرات اعمال شود.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5007"/>
+<location filename="../mainwindow.cpp" line="5008"/>
 <source>Restart</source>
 <translation>راه اندازی مجدد</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5211"/>
+<location filename="../mainwindow.cpp" line="5212"/>
 <source>PDF files</source>
 <translation>پرونده های PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5284"/>
+<location filename="../mainwindow.cpp" line="5285"/>
 <source>Todo lists disabled!</source>
 <translation>لیست انجام دادنی غیر فعال شد!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5285"/>
+<location filename="../mainwindow.cpp" line="5286"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>شما لیست های انجام دادنی را غیرفعال کرده اید. &lt;br /&gt; لطفاً پیکربندی &lt;strong&gt;انجام دادنی&lt;/strong&gt; خود را در تنظیمات بررسی کنید!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5526"/>
+<location filename="../mainwindow.cpp" line="5527"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; رویداد (ها) از هر عبارت &lt;strong&gt;%1&lt;/strong&gt; یافت شد</numerusform>
@@ -3262,79 +3263,79 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6069"/>
+<location filename="../mainwindow.cpp" line="6070"/>
 <source>Note folders</source>
 <translation>پوشه های یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6184"/>
+<location filename="../mainwindow.cpp" line="6185"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>نسخه های یادداشت در حال حاضر از سرور اون کلاود شما بارگذاری می شوند</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6197"/>
+<location filename="../mainwindow.cpp" line="6198"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>یادداشت های حذف شده در حال حاضر از سرور اون کلاود شما بارگذاری می شوند</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6435"/>
+<location filename="../mainwindow.cpp" line="6436"/>
 <source>Inserted text as text attachment file</source>
 <translation>متن درج شده به عنوان پرونده پیوست متنی</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6584"/>
+<location filename="../mainwindow.cpp" line="6585"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>یادداشت شما رمزگشایی شده و به صورت متن ساده دوباره ذخیره می شود. به خاطر داشته باشید که یادداشت رمزنگاری نشده ممکن است در سرور شما همگام سازی شود و متن حساس ممکن است در معرض دید شما باشد!&lt;br /&gt; آیا می خواهید یادداشت خود را رمزگشایی کنید؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6678"/>
+<location filename="../mainwindow.cpp" line="6679"/>
 <source>Markdown files</source>
 <translation>پرونده های مارک داون</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6694"/>
+<location filename="../mainwindow.cpp" line="6695"/>
 <source>Export attached files</source>
 <translation>خروج پرونده های پیوست شده</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6695"/>
+<location filename="../mainwindow.cpp" line="6696"/>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
 <translation>آیا نسبت به خروج پرونده ها و پیوست های رسانه ای یادداشت نیز تمایل دارید؟ پرونده ها ممکن است در پوشه مقصد رونویسی شوند!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6725"/>
+<location filename="../mainwindow.cpp" line="6726"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>موقعیت یادداشت نشانک در شکاف %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6741"/>
+<location filename="../mainwindow.cpp" line="6742"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>در شکاف %1 به موقعیت نشانک پرش کرد</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6914"/>
-<location filename="../mainwindow.cpp" line="6981"/>
+<location filename="../mainwindow.cpp" line="6915"/>
+<location filename="../mainwindow.cpp" line="6982"/>
 <source>Inserting image</source>
 <translation>درج تصویر</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6919"/>
-<location filename="../mainwindow.cpp" line="6985"/>
+<location filename="../mainwindow.cpp" line="6920"/>
+<location filename="../mainwindow.cpp" line="6986"/>
 <source>Done inserting image</source>
 <translation>درج تصویر انجام شد</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6921"/>
+<location filename="../mainwindow.cpp" line="6922"/>
 <source>Inserting attachment</source>
 <translation>درج کردن پیوست</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6926"/>
+<location filename="../mainwindow.cpp" line="6927"/>
 <source>Done inserting attachment</source>
 <translation>درج پیوست انجام شد</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="6937"/>
+<location filename="../mainwindow.cpp" line="6938"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>%n یادداشت به %1 رونوشت برداری شد</numerusform>
@@ -3342,7 +3343,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="6947"/>
+<location filename="../mainwindow.cpp" line="6948"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>رونوشت برداری از %n یادداشت (به احتمال زیاد موجود) انجام نشد</numerusform>
@@ -3350,7 +3351,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="6956"/>
+<location filename="../mainwindow.cpp" line="6957"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>انصراف از رونوشت برداری از %n یادداشت (بدون مارک داون یا پرونده متنی یا غیرقابل خواندن)</numerusform>
@@ -3358,210 +3359,220 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6969"/>
+<location filename="../mainwindow.cpp" line="6970"/>
 <source>Saving temporary image</source>
 <translation>ذخیره کردن تصویر موقت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6419"/>
-<location filename="../mainwindow.cpp" line="6987"/>
+<location filename="../mainwindow.cpp" line="11605"/>
+<source>Nextcloud Deck support disabled!</source>
+<translation>پشتیبانی از Nextcloud Deck غیرفعال شده است!</translation>
+</message>
+<message>
+<location filename="../mainwindow.cpp" line="11606"/>
+<source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
+<translation>پشتیبانی از Nextcloud Deck فعال نیست یا تنظیمات نامعتبر است.&lt;br /&gt;لطفاً در قسمت تنظیمات پیکربندی &lt;strong&gt;نکست کلود&lt;/strong&gt; خود را بررسی کنید!</translation>
+</message>
+<message>
+<location filename="../mainwindow.cpp" line="6420"/>
+<location filename="../mainwindow.cpp" line="6988"/>
 <source>Temporary file can't be opened</source>
 <translation>پرونده موقت قابل باز شدن نیست</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7041"/>
+<location filename="../mainwindow.cpp" line="7042"/>
 <source>Downloading %1</source>
 <translation>در حال بارگیری %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7205"/>
+<location filename="../mainwindow.cpp" line="7206"/>
 <source>Reset font size to %1 pt</source>
 <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>بازنشانی اندازه فونت در pt %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7951"/>
+<location filename="../mainwindow.cpp" line="7952"/>
 <source>Remove tag '%1' from the current note</source>
 <translation>حذف برچسب '%1' از یادداشت کنونی</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7952"/>
+<location filename="../mainwindow.cpp" line="7953"/>
 <source>Remove tag '%1' from the selected notes</source>
 <translation>حذف برچسب '%1' از یادداشت های منتخب</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8195"/>
+<location filename="../mainwindow.cpp" line="8196"/>
 <source>Rename tag</source>
 <translation>تغییر نام برچسب</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8196"/>
+<location filename="../mainwindow.cpp" line="8197"/>
 <source>Assign color</source>
 <translation>اختصاص رنگ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8197"/>
+<location filename="../mainwindow.cpp" line="8198"/>
 <source>Disable color</source>
 <translation>غیرفعال کردن رنگ</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8201"/>
+<location filename="../mainwindow.cpp" line="8202"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;انتقال برچسب ها به ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8411"/>
+<location filename="../mainwindow.cpp" line="8412"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>انتقال به ریشه</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8946"/>
+<location filename="../mainwindow.cpp" line="8947"/>
 <source>The scripting engine was reloaded</source>
 <translation>موتور اسکریپت نویسی مجدداً بارگذاری شد</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8980"/>
+<location filename="../mainwindow.cpp" line="8981"/>
 <source>HTML files</source>
 <translation>پرونده های HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9311"/>
+<location filename="../mainwindow.cpp" line="9312"/>
 <source>Jump to the note's subfolder</source>
 <translation>پرش به زیر پوشه یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9367"/>
+<location filename="../mainwindow.cpp" line="9368"/>
 <source>Open selected notes in tabs</source>
 <translation>باز کردن یادداشت های منتخب در زبانه ها</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10849"/>
+<location filename="../mainwindow.cpp" line="10850"/>
 <source>A script update was found!</source>
 <translation>یک بروزرسانی اسکریپت یافت شد!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10854"/>
+<location filename="../mainwindow.cpp" line="10855"/>
 <source>Script updates</source>
 <translation>بروزرسانی اسکریپت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10855"/>
+<location filename="../mainwindow.cpp" line="10856"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>بروزرسانی های اسکریپت های شما در مخزن اسکریپت یافت شد! آیا می خواهید آنها را بروز کنید؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10875"/>
+<location filename="../mainwindow.cpp" line="10876"/>
 <source>No script updates were found</source>
 <translation>بروزرسانی اسکریپت یافت نشد
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11509"/>
+<location filename="../mainwindow.cpp" line="11510"/>
 <source>Toggle note stickiness</source>
 <translation>تغییر چسبندگی یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11514"/>
+<location filename="../mainwindow.cpp" line="11515"/>
 <source>Close other note tabs</source>
 <translation>بستن سایر زبانه های یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9259"/>
-<location filename="../mainwindow.cpp" line="9445"/>
+<location filename="../mainwindow.cpp" line="9260"/>
+<location filename="../mainwindow.cpp" line="9446"/>
 <source>Rename note</source>
 <translation>تغییر نام یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7307"/>
+<location filename="../mainwindow.cpp" line="7308"/>
 <source>Show all notes (%1)</source>
 <translation>نمایش همه یادداشت ها (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7454"/>
+<location filename="../mainwindow.cpp" line="7455"/>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation>نمایش تمام یادداشت های دارای برچسب '%1' (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9261"/>
+<location filename="../mainwindow.cpp" line="9262"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>مجاز به تغییر نام پرونده یادداشت هستید</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9275"/>
+<location filename="../mainwindow.cpp" line="9276"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;انتقال یادداشت ها به…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9276"/>
+<location filename="../mainwindow.cpp" line="9277"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;رونوشت یادداشت ها به…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9314"/>
+<location filename="../mainwindow.cpp" line="9315"/>
 <source>Move notes to subfolder…</source>
 <translation>انتقال یادداشت ها به زیر پوشه…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9317"/>
+<location filename="../mainwindow.cpp" line="9318"/>
 <source>Copy notes to subfolder…</source>
 <translation>رونوشت یادداشت ها به زیر پوشه…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9325"/>
+<location filename="../mainwindow.cpp" line="9326"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;برچسب گذاری یادداشت های منتخب با…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9347"/>
+<location filename="../mainwindow.cpp" line="9348"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;حذف برچسب از یادداشت های منتخب…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9445"/>
+<location filename="../mainwindow.cpp" line="9446"/>
 <source>Name:</source>
 <translation>نام:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9456"/>
+<location filename="../mainwindow.cpp" line="9457"/>
 <source>Note renaming not enabled!</source>
 <translation>تغییر نام یادداشت فعال نشده است!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10089"/>
+<location filename="../mainwindow.cpp" line="10090"/>
 <source>Create new workspace</source>
 <translation>فضای کاری جدید ایجاد کنید</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10089"/>
-<location filename="../mainwindow.cpp" line="10350"/>
+<location filename="../mainwindow.cpp" line="10090"/>
+<location filename="../mainwindow.cpp" line="10351"/>
 <source>Workspace name:</source>
 <translation>نام فضای کاری:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10206"/>
+<location filename="../mainwindow.cpp" line="10207"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>پر</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10213"/>
+<location filename="../mainwindow.cpp" line="10214"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>حداقل</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10313"/>
+<location filename="../mainwindow.cpp" line="10314"/>
 <source>Remove the current workspace?</source>
 <translation>آیا می خواهید فضای کاری کنونی را حذف کنید؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10350"/>
+<location filename="../mainwindow.cpp" line="10351"/>
 <source>Rename workspace</source>
 <translation>تغییر نام فضای کاری</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10503"/>
+<location filename="../mainwindow.cpp" line="10504"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3570,52 +3581,52 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10769"/>
+<location filename="../mainwindow.cpp" line="10770"/>
 <source>Disallow all note editing</source>
 <translation>غیرمجاز کردن ویرایش همه یادداشت ها</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10787"/>
+<location filename="../mainwindow.cpp" line="10788"/>
 <source>Note editing disabled</source>
 <translation>ویرایش یادداشت غیرفعال است</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10788"/>
+<location filename="../mainwindow.cpp" line="10789"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
 <translation>ویرایش یادداشت در حال حاضر غیرفعال است. آیا می خواهید آن را دوباره مجاز کنید؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11019"/>
+<location filename="../mainwindow.cpp" line="11020"/>
 <source>Select text files to import</source>
 <translation>انتخاب پرونده های متنی برای ورود</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11048"/>
+<location filename="../mainwindow.cpp" line="11049"/>
 <source>Importing: %1</source>
 <translation>وارد کردن: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11110"/>
+<location filename="../mainwindow.cpp" line="11111"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>سرخط یادداشت "%1" به کلیپ بورد رونوشت برداری شد</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11196"/>
+<location filename="../mainwindow.cpp" line="11197"/>
 <source>Leave full-screen mode</source>
 <translation>خروج از حالت تمام صفحه</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11371"/>
+<location filename="../mainwindow.cpp" line="11372"/>
 <source>Custom editor width</source>
 <translation>پهنای ویرایشگر سفارشی</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11371"/>
+<location filename="../mainwindow.cpp" line="11372"/>
 <source>Characters:</source>
 <translation>نویسه ها:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7925"/>
+<location filename="../mainwindow.cpp" line="7926"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n یادداشت انتخاب شد</numerusform>
@@ -3624,7 +3635,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2453"/>
-<location filename="../mainwindow.cpp" line="10770"/>
+<location filename="../mainwindow.cpp" line="10771"/>
 <source>Allow all note editing</source>
 <translation>مجاز کردن ویرایش همه یادداشت ها</translation>
 </message>
@@ -3634,12 +3645,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>&amp;برچسب</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4807"/>
+<location filename="../mainwindow.cpp" line="4808"/>
 <source>Remove tag from selected notes</source>
 <translation>حذف برچسب از یادداشت های منتخب</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4808"/>
+<location filename="../mainwindow.cpp" line="4809"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>آیا می خواهید برچسب &lt;strong&gt;%1&lt;/strong&gt; را از %n یادداشت منتخب حذف کنید؟</numerusform>
@@ -3647,7 +3658,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4865"/>
+<location filename="../mainwindow.cpp" line="4866"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>برچسب &lt;strong&gt; %1 &lt;/strong&gt; از %n یادداشت حذف شد</numerusform>
@@ -3655,120 +3666,120 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4908"/>
+<location filename="../mainwindow.cpp" line="4909"/>
 <source>Current notes folder: </source>
 <translation>پوشه یادداشت های کنونی: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4909"/>
+<location filename="../mainwindow.cpp" line="4910"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>پوشه یادداشت ها را تنظیم کنید. پوشه یادداشت های کنونی: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5110"/>
+<location filename="../mainwindow.cpp" line="5111"/>
 <source>Print note</source>
 <translation>چاپ یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5161"/>
+<location filename="../mainwindow.cpp" line="5162"/>
 <source>Letter</source>
 <translation>نامه</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5187"/>
+<location filename="../mainwindow.cpp" line="5188"/>
 <source>Portrait</source>
 <translation>تک چهره</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5187"/>
+<location filename="../mainwindow.cpp" line="5188"/>
 <source>Landscape</source>
 <translation>چشم انداز</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5192"/>
+<location filename="../mainwindow.cpp" line="5193"/>
 <source>Orientation</source>
 <translation>موقعیت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5192"/>
+<location filename="../mainwindow.cpp" line="5193"/>
 <source>Orientation:</source>
 <translation>موقعیت:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5212"/>
+<location filename="../mainwindow.cpp" line="5213"/>
 <source>Export current note as PDF</source>
 <translation>خروج یادداشت کنونی به صورت PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5305"/>
+<location filename="../mainwindow.cpp" line="5306"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>شما هیچ لیست انجام دادنی انتخاب نکرده اید. &lt;br /&gt; لطفاً پیکربندی &lt;strong&gt;انجام دادنی&lt;/strong&gt; خود را در تنظیمات بررسی کنید!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6051"/>
+<location filename="../mainwindow.cpp" line="6052"/>
 <source>Open QOwnNotes</source>
 <translation>باز کردن QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5883"/>
-<location filename="../mainwindow.cpp" line="6101"/>
-<location filename="../mainwindow.cpp" line="9255"/>
+<location filename="../mainwindow.cpp" line="5884"/>
+<location filename="../mainwindow.cpp" line="6102"/>
+<location filename="../mainwindow.cpp" line="9256"/>
 <source>New note</source>
 <translation>یادداشت جدید</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6116"/>
+<location filename="../mainwindow.cpp" line="6117"/>
 <source>Recent notes</source>
 <translation>یادداشت های اخیر</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6132"/>
+<location filename="../mainwindow.cpp" line="6133"/>
 <source>Show todo lists</source>
 <translation>نمایش لیست های انجام دادنی</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6142"/>
+<location filename="../mainwindow.cpp" line="6143"/>
 <source>Recent tasks</source>
 <translation>وظایف اخیر</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6162"/>
+<location filename="../mainwindow.cpp" line="6163"/>
 <source>Quit</source>
 <translation>انصراف</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
-<location filename="../mainwindow.cpp" line="796"/>
-<location filename="../mainwindow.cpp" line="2103"/>
+<location filename="../mainwindow.cpp" line="797"/>
+<location filename="../mainwindow.cpp" line="2104"/>
 <source>Note folder</source>
 <translation>پوشه یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8568"/>
-<location filename="../mainwindow.cpp" line="8627"/>
+<location filename="../mainwindow.cpp" line="8569"/>
+<location filename="../mainwindow.cpp" line="8628"/>
 <source>Copy to note folder</source>
 <translation>رونوشت به پوشه یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8568"/>
-<location filename="../mainwindow.cpp" line="8627"/>
+<location filename="../mainwindow.cpp" line="8569"/>
+<location filename="../mainwindow.cpp" line="8628"/>
 <source>Move to note folder</source>
 <translation>انتقال به پوشه یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8569"/>
-<location filename="../mainwindow.cpp" line="8628"/>
+<location filename="../mainwindow.cpp" line="8570"/>
+<location filename="../mainwindow.cpp" line="8629"/>
 <source>Copy to this subfolder</source>
 <translation>رونوشت به این زیر پوشه</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8569"/>
-<location filename="../mainwindow.cpp" line="8628"/>
+<location filename="../mainwindow.cpp" line="8570"/>
+<location filename="../mainwindow.cpp" line="8629"/>
 <source>Move to this subfolder</source>
 <translation>انتقال به این زیر پوشه</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8670"/>
+<location filename="../mainwindow.cpp" line="8671"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>آیا می خواهید %n یادداشت منتخب را به زیر پوشه یادداشت &lt;strong&gt;%2&lt;/strong&gt; منتقل کنید؟</numerusform>
@@ -3776,13 +3787,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5007"/>
-<location filename="../mainwindow.cpp" line="11033"/>
+<location filename="../mainwindow.cpp" line="5008"/>
+<location filename="../mainwindow.cpp" line="11034"/>
 <source>Cancel</source>
 <translation>لغو</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8763"/>
+<location filename="../mainwindow.cpp" line="8764"/>
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n یادداشت به زیر پوشه یادداشت "%2" منتقل شد</numerusform>
@@ -3790,7 +3801,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8782"/>
+<location filename="../mainwindow.cpp" line="8783"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>آیا می خواهید از %n یادداشت منتخب به زیر پوشه یادداشت &lt;strong&gt;%2&lt;/strong&gt; رونوشت برداری کنید؟</numerusform>
@@ -3798,7 +3809,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8854"/>
+<location filename="../mainwindow.cpp" line="8855"/>
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n یادداشت به زیر پوشه یادداشت "%2" رونوشت برداری شد</numerusform>
@@ -3806,103 +3817,103 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9373"/>
+<location filename="../mainwindow.cpp" line="9374"/>
 <source>Open note in external editor</source>
 <translation>باز کردن یادداشت در ویرایشگر خارجی</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9375"/>
+<location filename="../mainwindow.cpp" line="9376"/>
 <source>Show note in file manager</source>
 <translation>نمایش یادداشت در مدیر پرونده</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9457"/>
+<location filename="../mainwindow.cpp" line="9458"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>اگر می خواهید نام  یادداشت خود را تغییر دهید، باید این گزینه را فعال کنید تا نام پرونده یادداشت با سرخط متفاوت باشد.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9632"/>
+<location filename="../mainwindow.cpp" line="9633"/>
 <source>Create a new folder</source>
 <translation>ایجاد یک پوشه جدید</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9632"/>
+<location filename="../mainwindow.cpp" line="9633"/>
 <source>Folder name:</source>
 <translation>نام پوشه:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7335"/>
+<location filename="../mainwindow.cpp" line="7336"/>
 <source>show all untagged notes (%1)</source>
 <translation>نمایش همه یادداشت های بدون برچسب (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7337"/>
+<location filename="../mainwindow.cpp" line="7338"/>
 <source>Untagged notes</source>
 <translation>یادداشت های بدون برچسب</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8981"/>
+<location filename="../mainwindow.cpp" line="8982"/>
 <source>Export current note as HTML file</source>
 <translation>خروج یادداشت کنونی به صورت پرونده HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5169"/>
+<location filename="../mainwindow.cpp" line="5170"/>
 <source>Page size</source>
 <translation>اندازه صفحه</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1151"/>
+<location filename="../mainwindow.cpp" line="1152"/>
 <source>quit toolbar</source>
 <translation>بستن نوار ابزار</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5169"/>
+<location filename="../mainwindow.cpp" line="5170"/>
 <source>Page size:</source>
 <translation>اندازه صفحه:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5269"/>
+<location filename="../mainwindow.cpp" line="5270"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes داده کاربری ناشناس را ردیابی می کند که به شما امکان می دهد تصمیم بگیرید که چه قسمت هایی از QOwnNotes برای نسخه بعدی بهبود یابد و چه اشکلاتی باید پیدا شده و برطرف گردند. می توانید آن عملکرد را در تنظیمات غیرفعال کنید.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5273"/>
+<location filename="../mainwindow.cpp" line="5274"/>
 <source>&amp;Ok</source>
 <translation>&amp;باشه</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9265"/>
+<location filename="../mainwindow.cpp" line="9266"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;حذف یادداشت ها</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1078"/>
+<location filename="../mainwindow.cpp" line="1079"/>
 <source>Your tasks are being loaded from your server</source>
 <translation>وظایف شما از سرورتان در حال بارگذاری است</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2748"/>
+<location filename="../mainwindow.cpp" line="2749"/>
 <source>Current note was modified externally</source>
 <translation>یادداشت کنونی به صورت خارجی اصلاح شد</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2812"/>
-<location filename="../mainwindow.cpp" line="5823"/>
+<location filename="../mainwindow.cpp" line="2813"/>
+<location filename="../mainwindow.cpp" line="5824"/>
 <source>Stored current note to disk</source>
 <translation>یادداشت کنونی بر روی دیسک ذخیره شد</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2835"/>
+<location filename="../mainwindow.cpp" line="2836"/>
 <source>Note was modified externally: %1</source>
 <translation>یادداشت به صورت خارجی اصلاح شد: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2855"/>
+<location filename="../mainwindow.cpp" line="2856"/>
 <source>Notes directory was modified externally</source>
 <translation>دایرکتوری یادداشت ها به صورت خارجی اصلاح شد</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="2918"/>
+<location filename="../mainwindow.cpp" line="2919"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>%n یادداشت در دیسک ذخیره شد</numerusform>
@@ -3910,198 +3921,198 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7310"/>
+<location filename="../mainwindow.cpp" line="7311"/>
 <source>All notes</source>
 <translation>همه یادداشت ها</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8187"/>
+<location filename="../mainwindow.cpp" line="8188"/>
 <source>&amp;Add tag</source>
 <translation>&amp;برچسب اضافه کنید</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8235"/>
+<location filename="../mainwindow.cpp" line="8236"/>
 <source>Tag could not be created!</source>
 <translation>برچسب قابل ایجاد شدن نیست!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8412"/>
+<location filename="../mainwindow.cpp" line="8413"/>
 <source>Move to this tag</source>
 <translation>انتقال به این برچسب</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8446"/>
+<location filename="../mainwindow.cpp" line="8447"/>
 <source>Tag this</source>
 <translation>برچسب گذاری این</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8469"/>
+<location filename="../mainwindow.cpp" line="8470"/>
 <source>Cannot move tag '%1' to this tag</source>
 <translation>انتقال برچسب "%1" به این برچسب امکان پذیر نیست</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8512"/>
+<location filename="../mainwindow.cpp" line="8513"/>
 <source>Moved tag '%1' to new tag</source>
 <translation>برچسب '%1' به برچسب جدید منتقل شد</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8198"/>
+<location filename="../mainwindow.cpp" line="8199"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;حذف برچسب ها</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5304"/>
+<location filename="../mainwindow.cpp" line="5305"/>
 <source>No selected todo lists!</source>
 <translation>هیچ لیست انجام دادنی منتخبی وجود ندارد!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="607"/>
+<location filename="../mainwindow.cpp" line="608"/>
 <source>Action not found!</source>
 <translation>عملیات یافت نشد!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="608"/>
+<location filename="../mainwindow.cpp" line="609"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
 <translation>آیا قادر به یافتن منو اکشن &lt;code&gt;%1&lt;/code&gt; نیستید؟ آیا آن را از نظر املایی به درستی وارد کرده اید؟</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="769"/>
+<location filename="../mainwindow.cpp" line="770"/>
 <source>Subfolders</source>
 <translation>زیر پوشه ها</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="778"/>
+<location filename="../mainwindow.cpp" line="779"/>
 <source>Tags</source>
 <translation>برچسب ها</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="787"/>
+<location filename="../mainwindow.cpp" line="788"/>
 <source>Note search</source>
 <translation>جستجوی یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="814"/>
+<location filename="../mainwindow.cpp" line="815"/>
 <source>Note list</source>
 <translation>لیست یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="835"/>
+<location filename="../mainwindow.cpp" line="836"/>
 <source>Note edit</source>
 <translation>ویرایش یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="845"/>
+<location filename="../mainwindow.cpp" line="846"/>
 <source>Note tags</source>
 <translation>برچسب های یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="855"/>
+<location filename="../mainwindow.cpp" line="856"/>
 <source>Note preview</source>
 <translation>پیش نمایش یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="861"/>
+<location filename="../mainwindow.cpp" line="862"/>
 <source>Log</source>
 <translation>سیاهه</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="870"/>
+<location filename="../mainwindow.cpp" line="871"/>
 <source>Scripting</source>
 <translation>اسکریپت نویسی</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1118"/>
+<location filename="../mainwindow.cpp" line="1119"/>
 <source>formatting toolbar</source>
 <translation>نوار ابزار قالب بندی</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1127"/>
+<location filename="../mainwindow.cpp" line="1128"/>
 <source>inserting toolbar</source>
 <translation>درج کردن نوار ابزار</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1134"/>
+<location filename="../mainwindow.cpp" line="1135"/>
 <source>encryption toolbar</source>
 <translation>نوار ابزار رمزنگاری</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1141"/>
+<location filename="../mainwindow.cpp" line="1142"/>
 <source>window toolbar</source>
 <translation>نوار ابزار پنجره</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1146"/>
+<location filename="../mainwindow.cpp" line="1147"/>
 <source>custom action toolbar</source>
 <translation>نوار ابزار اقدام سفارشی</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1166"/>
+<location filename="../mainwindow.cpp" line="1167"/>
 <source>Workspace selector</source>
 <translation>گزینشگر فضای کاری</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1312"/>
+<location filename="../mainwindow.cpp" line="1313"/>
 <source>Show %1 panel</source>
 <translation>نمایش پنل %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1355"/>
+<location filename="../mainwindow.cpp" line="1356"/>
 <source>Show %1</source>
 <translation>نمایش %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1696"/>
+<location filename="../mainwindow.cpp" line="1697"/>
 <source>Leave distraction free mode</source>
 <translation>خروج از حالت بدون مزاحمت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1873"/>
+<location filename="../mainwindow.cpp" line="1874"/>
 <source>Switch to note folder</source>
 <translation>تغییر به پوشه یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2440"/>
+<location filename="../mainwindow.cpp" line="2441"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>نوار ابزار بدون نام نمی تواند بارگذاری شود</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2769"/>
+<location filename="../mainwindow.cpp" line="2770"/>
 <source>Overwriting external changes of: %1</source>
 <translation>بازنویسی تغییرات خارجی: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2781"/>
+<location filename="../mainwindow.cpp" line="2782"/>
 <source>Loading external changes from: %1</source>
 <translation>بارگذاری تغییرات خارجی از: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2813"/>
-<location filename="../mainwindow.cpp" line="5824"/>
+<location filename="../mainwindow.cpp" line="2814"/>
+<location filename="../mainwindow.cpp" line="5825"/>
 <source>Current note could not be stored to disk</source>
 <translation>یادداشت کنونی نمی تواند در دیسک ذخیره شود</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2999"/>
+<location filename="../mainwindow.cpp" line="3000"/>
 <source>Read-only</source>
 <translation>فقط خواندنی</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3001"/>
+<location filename="../mainwindow.cpp" line="3002"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>ویرایش یادداشت غیرفعال است. برای فعال کردن کلیک کنید</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3016"/>
+<location filename="../mainwindow.cpp" line="3017"/>
 <source>Line numbers</source>
 <translation>شماره خط</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3026"/>
+<location filename="../mainwindow.cpp" line="3027"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>اینجا کلیک کنید تا ببینید چه چیزی تغییر کرده و امکان بروزرسانی به جدیدترین نسخه را داشته باشید</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3377"/>
+<location filename="../mainwindow.cpp" line="3378"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>آیا می خواهید روند حذف خودکار &lt;strong&gt;%n&lt;/strong&gt; رونوشت پایگاه داده متناقض را که ممکن است فرآیند همگام سازی اون کلاود شما را مسدود کند ادامه دهید؟</numerusform>
@@ -4109,7 +4120,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4793"/>
+<location filename="../mainwindow.cpp" line="4794"/>
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n یادداشت با "%2" برچسب گذاری شد</numerusform>
@@ -4117,7 +4128,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5522"/>
+<location filename="../mainwindow.cpp" line="5523"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; رویداد &lt;strong&gt;%1&lt;/strong&gt; یافت شد</numerusform>
@@ -4125,63 +4136,64 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5883"/>
+<location filename="../mainwindow.cpp" line="5884"/>
 <source>Note headline</source>
 <translation>سرخط یادداشت</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6997"/>
+<location filename="../mainwindow.cpp" line="6998"/>
 <source>Paste &amp;HTML as markdown</source>
 <translation>چسباندن &amp;HTML به صورت مارک داون</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6998"/>
+<location filename="../mainwindow.cpp" line="6999"/>
 <source>Paste as &amp;text file attachment</source>
 <translation>چسباندن به صورت پیوست پرونده متنی&amp;</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7053"/>
+<location filename="../mainwindow.cpp" line="7054"/>
 <source>Downloading images finished</source>
 <translation>بارگیری تصاویر به پایان رسید</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5273"/>
-<location filename="../mainwindow.cpp" line="5288"/>
-<location filename="../mainwindow.cpp" line="5308"/>
-<location filename="../mainwindow.cpp" line="9460"/>
+<location filename="../mainwindow.cpp" line="5274"/>
+<location filename="../mainwindow.cpp" line="5289"/>
+<location filename="../mainwindow.cpp" line="5309"/>
+<location filename="../mainwindow.cpp" line="9461"/>
+<location filename="../mainwindow.cpp" line="11608"/>
 <source>Open &amp;settings</source>
 <translation>باز کردن &amp;تنظیمات</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1694"/>
-<location filename="../mainwindow.cpp" line="11173"/>
+<location filename="../mainwindow.cpp" line="1695"/>
+<location filename="../mainwindow.cpp" line="11174"/>
 <source>leave</source>
 <translation>کنار گذاشتن</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6512"/>
+<location filename="../mainwindow.cpp" line="6513"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>لطفاً برای رمزنگاری یادداشت، &lt;strong&gt;گذرواژه&lt;/strong&gt; خود را وارد کنید.&lt;br /&gt; به خاطر داشته باشید که برای خواندن محتوای یادداشت باید گذرواژه خود را &lt;strong&gt;به خاطر بسپارید&lt;/strong&gt;
 &lt;br /&gt; و اینکه شما می توانید این کار را &lt;strong&gt; فقط &lt;/strong&gt; &lt;strong&gt;در QOwnNotes 
 &lt;/strong&gt;انجام دهید!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6583"/>
+<location filename="../mainwindow.cpp" line="6584"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>رمزگشایی یادداشت و ذخیره آن به صورت متن ساده</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6588"/>
+<location filename="../mainwindow.cpp" line="6589"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;رمزگشایی</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6612"/>
+<location filename="../mainwindow.cpp" line="6613"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br /&gt;شما می توانید یادداشت رمزنگاری شده خود را ویرایش کنید.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6679"/>
+<location filename="../mainwindow.cpp" line="6680"/>
 <source>Export current note as Markdown file</source>
 <translation>خروج یادداشت کنونی به صورت پرونده مارک داون</translation>
 </message>
@@ -4260,14 +4272,24 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>NextcloudDeckService</name>
 <message>
-<location filename="../services/nextclouddeckservice.cpp" line="100"/>
+<location filename="../services/nextclouddeckservice.cpp" line="113"/>
 <source>Error while creating card</source>
 <translation>خطا در حین ایجاد کارت</translation>
 </message>
 <message>
-<location filename="../services/nextclouddeckservice.cpp" line="101"/>
+<location filename="../services/nextclouddeckservice.cpp" line="114"/>
 <source>Creating a card failed with status code %1 and message: %2</source>
 <translation>ایجاد کارت با کد وضعیت %1 و پیغام پیش رو انجام نشد: %2</translation>
+</message>
+<message>
+<location filename="../services/nextclouddeckservice.cpp" line="226"/>
+<source>Error while loading boards</source>
+<translation type="unfinished">Error while loading boards</translation>
+</message>
+<message>
+<location filename="../services/nextclouddeckservice.cpp" line="227"/>
+<source>Loading the boards failed with status code %1 and message: %2</source>
+<translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
 </message>
 </context>
 <context>
@@ -4788,17 +4810,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>فرمان &lt;code&gt;%1&lt;/code&gt; با آرگومان های &lt;code&gt;%2&lt;/code&gt; اجرا نشد!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4026"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4025"/>
 <source>New connection</source>
 <translation>ارتباط جدید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4218"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4217"/>
 <source>Login flow succeeded</source>
 <translation>جریان ورود موفق بود</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4219"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4218"/>
 <source>Username and password were set successfully!</source>
 <translation>نام کاربری و کلمه عبور با موفقیت ایجاد شد!</translation>
 </message>
@@ -5456,7 +5478,7 @@ Do you want to install it anyway?</source>
 <name>SettingsDialog</name>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="26"/>
-<location filename="../dialogs/settingsdialog.ui" line="4492"/>
+<location filename="../dialogs/settingsdialog.ui" line="4471"/>
 <source>Settings</source>
 <translation>تنظیمات</translation>
 </message>
@@ -5561,7 +5583,7 @@ https://cloud.yourserver.com
 <location filename="../dialogs/settingsdialog.ui" line="1350"/>
 <location filename="../dialogs/settingsdialog.ui" line="1367"/>
 <location filename="../dialogs/settingsdialog.ui" line="1384"/>
-<location filename="../dialogs/settingsdialog.cpp" line="312"/>
+<location filename="../dialogs/settingsdialog.cpp" line="313"/>
 <source>unknown</source>
 <translation>نامشخص</translation>
 </message>
@@ -5657,42 +5679,42 @@ https://cloud.yourserver.com
 <translation>شبکه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1567"/>
+<location filename="../dialogs/settingsdialog.ui" line="1546"/>
 <source>Proxy Settings</source>
 <translation>تنظیمات پراکسی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1573"/>
+<location filename="../dialogs/settingsdialog.ui" line="1552"/>
 <source>No Proxy</source>
 <translation>بدون پراکسی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1583"/>
+<location filename="../dialogs/settingsdialog.ui" line="1562"/>
 <source>Use system proxy</source>
 <translation>استفاده از پراکسی سامانه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1590"/>
+<location filename="../dialogs/settingsdialog.ui" line="1569"/>
 <source>Specify proxy manually as</source>
 <translation>تعیین دستی پراکسی به صورت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1615"/>
+<location filename="../dialogs/settingsdialog.ui" line="1594"/>
 <source>Host</source>
 <translation>میزبان</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1666"/>
+<location filename="../dialogs/settingsdialog.ui" line="1645"/>
 <source>Proxy server requires authentication</source>
 <translation>سرور پراکسی به احراز هویت نیاز دارد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1723"/>
+<location filename="../dialogs/settingsdialog.ui" line="1702"/>
 <source>SSL Settings</source>
 <translation>تنظیمات SSL</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1729"/>
+<location filename="../dialogs/settingsdialog.ui" line="1708"/>
 <source>Ignore SSL errors</source>
 <translation>چشم پوشی از خطاهای SSL</translation>
 </message>
@@ -5702,7 +5724,7 @@ https://cloud.yourserver.com
 <translation>انجام دادنی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1997"/>
+<location filename="../dialogs/settingsdialog.ui" line="1976"/>
 <source>Default ownCloud calendar</source>
 <translation>تقویم اون کلاود پیش فرض</translation>
 </message>
@@ -5712,65 +5734,65 @@ https://cloud.yourserver.com
 <translation> رابط کاربری</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1967"/>
+<location filename="../dialogs/settingsdialog.ui" line="1946"/>
 <source>Other CalDAV server</source>
 <translation>سرور دیگر CalDAV</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3135"/>
+<location filename="../dialogs/settingsdialog.ui" line="3114"/>
 <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
 <translation>فقط برخی از رنگ ها وفق داده خواهند شد و پوسته دسکتاپ شما بقیه را کنترل خواهد کرد. برای اینکه اجازه دهید این تغییرات اعمال شود، باید برنامه را مجدداً راه‌اندازی کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3138"/>
+<location filename="../dialogs/settingsdialog.ui" line="3117"/>
 <source>Optimize preview colors for dark mode desktop themes</source>
 <translation>بهینه سازی رنگ پیش نمایش برای پوسته های دسکتاپ حالت تاریک</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3125"/>
+<location filename="../dialogs/settingsdialog.ui" line="3104"/>
 <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
 <translation>این حالت تاریک را فعال می کند و رابط کاربری و شمایل ها اصلاح خواهند شد. برای اینکه اجازه دهید این تغییرات اعمال شود، باید برنامه را مجدداً راه‌اندازی کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3128"/>
+<location filename="../dialogs/settingsdialog.ui" line="3107"/>
 <source>Enable dark mode</source>
 <translation>فعال سازی حالت تاریک</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3154"/>
-<location filename="../dialogs/settingsdialog.ui" line="3164"/>
-<location filename="../dialogs/settingsdialog.ui" line="3195"/>
-<location filename="../dialogs/settingsdialog.ui" line="3205"/>
+<location filename="../dialogs/settingsdialog.ui" line="3133"/>
+<location filename="../dialogs/settingsdialog.ui" line="3143"/>
+<location filename="../dialogs/settingsdialog.ui" line="3174"/>
+<location filename="../dialogs/settingsdialog.ui" line="3184"/>
 <source>You need to restart the application to let this setting take effect</source>
 <translation>برای اینکه اجازه دهید این تنظیمات اعمال شود، باید برنامه را مجدداً راه اندازی کنید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3234"/>
+<location filename="../dialogs/settingsdialog.ui" line="3213"/>
 <source>Item sizes in the main window</source>
 <translation>اندازه موارد در پنجره اصلی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5328"/>
+<location filename="../dialogs/settingsdialog.ui" line="5307"/>
 <source>Markdown highlighting</source>
 <translation>برجسته کردن مارک داون</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5337"/>
+<location filename="../dialogs/settingsdialog.ui" line="5316"/>
 <source>Enable markdown highlighting</source>
 <translation>فعال سازی برجسته کردن مارک داون</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2291"/>
+<location filename="../dialogs/settingsdialog.ui" line="2270"/>
 <source>Interface language</source>
 <translation>زبان رابط کاربری</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2321"/>
+<location filename="../dialogs/settingsdialog.ui" line="2300"/>
 <source>Automatic</source>
 <translation>خودکار</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2456"/>
+<location filename="../dialogs/settingsdialog.ui" line="2435"/>
 <source>English</source>
 <translation>انگلیسی</translation>
 </message>
@@ -5780,123 +5802,123 @@ https://cloud.yourserver.com
 <translation>میانبرها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4730"/>
-<location filename="../dialogs/settingsdialog.ui" line="5076"/>
+<location filename="../dialogs/settingsdialog.ui" line="4709"/>
+<location filename="../dialogs/settingsdialog.ui" line="5055"/>
 <source>Default font:</source>
 <translation>فونت پیش فرض:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4772"/>
-<location filename="../dialogs/settingsdialog.ui" line="5017"/>
+<location filename="../dialogs/settingsdialog.ui" line="4751"/>
+<location filename="../dialogs/settingsdialog.ui" line="4996"/>
 <source>Code font:</source>
 <translation>فونت کد:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3393"/>
+<location filename="../dialogs/settingsdialog.ui" line="3372"/>
 <source>Main window shortcuts</source>
 <translation>میانبرهای پنجره اصلی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4170"/>
+<location filename="../dialogs/settingsdialog.ui" line="4149"/>
 <source>Do this at your own risk!</source>
 <translation>این کار را با ریسک خودتان انجام دهید!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4173"/>
+<location filename="../dialogs/settingsdialog.ui" line="4152"/>
 <source>Ignore all external note folder changes</source>
 <translation>چشم پوشی از همه تغییرات پوشه یادداشت خارجی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4630"/>
+<location filename="../dialogs/settingsdialog.ui" line="4609"/>
 <source>Use GitHub line breaks</source>
 <translation>استفاده از نقطه سر خط های گیت هاب</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2434"/>
+<location filename="../dialogs/settingsdialog.ui" line="2413"/>
 <source>German</source>
 <translation>آلمانی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2511"/>
+<location filename="../dialogs/settingsdialog.ui" line="2490"/>
 <source>French</source>
 <translation>فرانسوی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2775"/>
+<location filename="../dialogs/settingsdialog.ui" line="2754"/>
 <source>Polish</source>
 <translation>لهستانی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2797"/>
+<location filename="../dialogs/settingsdialog.ui" line="2776"/>
 <source>Portuguese</source>
 <translation>پرتغالی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2742"/>
+<location filename="../dialogs/settingsdialog.ui" line="2721"/>
 <source>Dutch</source>
 <translation>هلندی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2709"/>
+<location filename="../dialogs/settingsdialog.ui" line="2688"/>
 <source>Hungarian</source>
 <translation>مجاری</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2467"/>
+<location filename="../dialogs/settingsdialog.ui" line="2446"/>
 <source>Spanish</source>
 <translation>اسپانیایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3099"/>
+<location filename="../dialogs/settingsdialog.ui" line="3078"/>
 <source>Dark mode</source>
 <translation>حالت تاریک</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1783"/>
+<location filename="../dialogs/settingsdialog.ui" line="1762"/>
 <source>Disable tracking of usage data</source>
 <translation>غیرفعال کردن ردیابی داده های کاربری</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1827"/>
+<location filename="../dialogs/settingsdialog.ui" line="1806"/>
 <source>Usage tracking is done on a private Piwik server.</source>
 <translation>ردیابی کاربری در سرور خصوصی پیویک انجام می شود.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1887"/>
+<location filename="../dialogs/settingsdialog.ui" line="1866"/>
 <source>Disable heartbeat</source>
 <translation>غیرفعال کردن ضربان قلب</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2830"/>
+<location filename="../dialogs/settingsdialog.ui" line="2809"/>
 <source>Russian</source>
 <translation>روسی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1736"/>
+<location filename="../dialogs/settingsdialog.ui" line="1715"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; شما می توانید یک گواهی SSL رایگان از 
 &lt;a href="https://letsencrypt.org/"&gt;
 بیایید رمزنگاری کنیم &lt;/a&gt;دریافت کنید&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2310"/>
+<location filename="../dialogs/settingsdialog.ui" line="2289"/>
 <source>If you change the language you have to restart the application for the changes to take action.</source>
 <translation>اگر زبان را تغییر می دهید، باید برای اعمال تغییرات برنامه را مجدداً راه اندازی کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3849"/>
-<location filename="../dialogs/settingsdialog.ui" line="3924"/>
+<location filename="../dialogs/settingsdialog.ui" line="3828"/>
+<location filename="../dialogs/settingsdialog.ui" line="3903"/>
 <source>You need to reload the scripting engine if you modify a script file</source>
 <translation>اگر یک پرونده اسکریپت را تغییر می دهید، باید موتور اسکریپت نویسی را مجدداً بارگذاری کنید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3852"/>
-<location filename="../dialogs/settingsdialog.ui" line="3927"/>
+<location filename="../dialogs/settingsdialog.ui" line="3831"/>
+<location filename="../dialogs/settingsdialog.ui" line="3906"/>
 <source>Reload scripting engine</source>
 <translation>بارگذاری مجدد موتور اسکریپت نویسی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3842"/>
+<location filename="../dialogs/settingsdialog.ui" line="3821"/>
 <source>Validate script</source>
 <translation>اعتبارسنجی اسکریپت</translation>
 </message>
@@ -5906,12 +5928,12 @@ https://cloud.yourserver.com
 <translation>عمومی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4021"/>
+<location filename="../dialogs/settingsdialog.ui" line="4000"/>
 <source>Notes</source>
 <translation>یادداشت ها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4219"/>
+<location filename="../dialogs/settingsdialog.ui" line="4198"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;
 &lt;head/&gt;
@@ -5926,107 +5948,107 @@ https://cloud.yourserver.com
 &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4159"/>
-<location filename="../dialogs/settingsdialog.ui" line="5582"/>
-<location filename="../dialogs/settingsdialog.ui" line="6149"/>
+<location filename="../dialogs/settingsdialog.ui" line="4138"/>
+<location filename="../dialogs/settingsdialog.ui" line="5561"/>
+<location filename="../dialogs/settingsdialog.ui" line="6128"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>ممکن است با همگام سازی اون کلاود نسخه های قدیمی تر در صورتی که کمتر از 10 ثانیه به طول بیانجامد با مشکلات همگام سازی مواجه شوید.
 اگر تناقض هایی در همگام سازی دریافت می کنید، خودتان تست کنید و اگر چنین است یک مقدار بالاتر تعیین کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2731"/>
+<location filename="../dialogs/settingsdialog.ui" line="2710"/>
 <source>Japanese</source>
 <translation>ژاپنی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4163"/>
+<location filename="../dialogs/settingsdialog.ui" line="4142"/>
 <source>note save interval time [sec]</source>
 <translation>زمان بندی ذخیره یادداشت [sec]</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4222"/>
+<location filename="../dialogs/settingsdialog.ui" line="4201"/>
 <source>Notify about all external modifications of the current note</source>
 <translation>آگاهی در مورد همه اصلاحات خارجی یادداشت کنونی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4521"/>
+<location filename="../dialogs/settingsdialog.ui" line="4500"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2114"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2123"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4092"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4096"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4091"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4095"/>
 <source>Database</source>
 <translation>پایگاه داده</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4527"/>
+<location filename="../dialogs/settingsdialog.ui" line="4506"/>
 <source>Reinitialize Database</source>
 <translation>ایجاد پایگاه داده جدید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4460"/>
+<location filename="../dialogs/settingsdialog.ui" line="4439"/>
 <source>Clear application data and exit</source>
 <translation>پاک کردن داده های برنامه و خروج</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4466"/>
+<location filename="../dialogs/settingsdialog.ui" line="4445"/>
 <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
 <translation>این دکمه به شما امکان می دهد همه تنظیمات را پاک کنید، پایگاه داده انجام دادنی محلی را حذف کنید و از QOwnNotes خارج شوید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4476"/>
+<location filename="../dialogs/settingsdialog.ui" line="4455"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2186"/>
 <source>Clear app data and exit</source>
 <translation>پاک کردن داده های برنامه و خروج</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4258"/>
+<location filename="../dialogs/settingsdialog.ui" line="4237"/>
 <source>Update dialog</source>
 <translation>بروزرسانی کادر گفتگو</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4420"/>
+<location filename="../dialogs/settingsdialog.ui" line="4399"/>
 <source>External editor</source>
 <translation>ویرایشگر خارجی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4433"/>
+<location filename="../dialogs/settingsdialog.ui" line="4412"/>
 <source>path to external editor, leave empty for default</source>
 <translation>مسیر ویرایشگر خارجی، به طور پیش فرض خالی بگذارید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<location filename="../dialogs/settingsdialog.ui" line="5661"/>
+<location filename="../dialogs/settingsdialog.ui" line="4422"/>
+<location filename="../dialogs/settingsdialog.ui" line="5640"/>
 <source>set external editor</source>
 <translation>تنظیم ویرایشگر خارجی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1752"/>
+<location filename="../dialogs/settingsdialog.ui" line="1731"/>
 <source>App metrics</source>
 <translation>معیارهای برنامه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1770"/>
+<location filename="../dialogs/settingsdialog.ui" line="1749"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>داده کاربری ناشناس به شما امکان می دهد تصمیم بگیرید که چه قسمت هایی از QOwnNotes برای نسخه بعدی بهبود یابد و چه اشکلاتی باید پیدا شده و برطرف گردند. اگر واقعاً نمی توانید با آن کار کنید، لطفاً آن را غیرفعال کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1802"/>
+<location filename="../dialogs/settingsdialog.ui" line="1781"/>
 <source>This data includes anonymous information about what features of the app are used.</source>
 <translation>این داده شامل اطلاعات ناشناس در مورد ویژگی هایی می شود که برنامه با آنها مورد استفاده قرار می گیرد.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1856"/>
+<location filename="../dialogs/settingsdialog.ui" line="1835"/>
 <source>App heartbeat</source>
 <translation>ضربان قلب برنامه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1874"/>
+<location filename="../dialogs/settingsdialog.ui" line="1853"/>
 <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
 <translation>در شرایطی که QOwnNotes در حال اجرا است یک درخواست ضربان قلب کوچک به طور متناوب ارسال می شود. با اعلام اینکه شخصی در حال استفاده از QOwnNotes است، یک توسعه دهنده را خوشحال کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2621"/>
+<location filename="../dialogs/settingsdialog.ui" line="2600"/>
 <source>Italian</source>
 <translation>ایتالیایی</translation>
 </message>
@@ -6036,17 +6058,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>اسکریپت نویسی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3462"/>
+<location filename="../dialogs/settingsdialog.ui" line="3441"/>
 <source>Your scripts</source>
 <translation>اسکریپت های شما</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3546"/>
+<location filename="../dialogs/settingsdialog.ui" line="3525"/>
 <source>&amp;Remove script</source>
 <translation>&amp;حذف اسکریپت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3859"/>
+<location filename="../dialogs/settingsdialog.ui" line="3838"/>
 <source>Click here to select your QML script</source>
 <translation>برای انتخاب اسکریپت QML خود اینجا کلیک کنید</translation>
 </message>
@@ -6128,7 +6150,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="797"/>
-<location filename="../dialogs/settingsdialog.ui" line="3793"/>
+<location filename="../dialogs/settingsdialog.ui" line="3772"/>
 <source>Name:</source>
 <translation>نام:</translation>
 </message>
@@ -6198,7 +6220,7 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1164"/>
-<location filename="../dialogs/settingsdialog.ui" line="2054"/>
+<location filename="../dialogs/settingsdialog.ui" line="2033"/>
 <source>Username:</source>
 <translation>نام کاربری:</translation>
 </message>
@@ -6209,7 +6231,7 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1199"/>
-<location filename="../dialogs/settingsdialog.ui" line="2089"/>
+<location filename="../dialogs/settingsdialog.ui" line="2068"/>
 <source>Password:</source>
 <translation>گذرواژه:</translation>
 </message>
@@ -6254,351 +6276,356 @@ QOwnNotesAPI
 <translation>ورود به نکست کلود برای صدور دسترسی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1926"/>
+<location filename="../dialogs/settingsdialog.ui" line="1500"/>
+<source>Stack:</source>
+<translation type="unfinished">Stack:</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="1905"/>
 <source>Todo settings</source>
 <translation>تنظیمات انجام دادنی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1932"/>
+<location filename="../dialogs/settingsdialog.ui" line="1911"/>
 <source>Enable todo calendar support</source>
 <translation>فعال سازی پشتیبانی از تقویم انجام دادنی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2130"/>
+<location filename="../dialogs/settingsdialog.ui" line="2109"/>
 <source>Which cloud connection do you want to use?</source>
 <translation>از کدام ارتباط ابری می خواهید استفاده کنید؟</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2142"/>
+<location filename="../dialogs/settingsdialog.ui" line="2121"/>
 <source>Select the calendars you want to use for the Todo list</source>
 <translation>تقویم هایی را که می خواهید برای لیست انجام دادنی استفاده کنید انتخاب کنید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2217"/>
+<location filename="../dialogs/settingsdialog.ui" line="2196"/>
 <source>Todo list settings</source>
 <translation>تنظیمات لیست انجام دادنی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2223"/>
+<location filename="../dialogs/settingsdialog.ui" line="2202"/>
 <source>Saving an item also closes the Todo list</source>
 <translation>ذخیره سازی یک مورد نیز لیست انجام دادنی را می بندد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2335"/>
+<location filename="../dialogs/settingsdialog.ui" line="2314"/>
 <source>Indonesian</source>
 <translation>اندونزیایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2357"/>
+<location filename="../dialogs/settingsdialog.ui" line="2336"/>
 <source>Bengali</source>
 <translation>بنگالی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2368"/>
+<location filename="../dialogs/settingsdialog.ui" line="2347"/>
 <source>Bosnian</source>
 <translation>بوسنیایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2379"/>
+<location filename="../dialogs/settingsdialog.ui" line="2358"/>
 <source>Bulgarian</source>
 <translation>بلغاری</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2390"/>
+<location filename="../dialogs/settingsdialog.ui" line="2369"/>
 <source>Catalan</source>
 <translation>کاتالان</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2401"/>
+<location filename="../dialogs/settingsdialog.ui" line="2380"/>
 <source>Cebuano</source>
 <translation>سبوانو</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2423"/>
+<location filename="../dialogs/settingsdialog.ui" line="2402"/>
 <source>Danish</source>
 <translation>دانمارکی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2445"/>
+<location filename="../dialogs/settingsdialog.ui" line="2424"/>
 <source>Basque</source>
 <translation>باسکی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2478"/>
+<location filename="../dialogs/settingsdialog.ui" line="2457"/>
 <source>Estonian</source>
 <translation>استونیایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2489"/>
+<location filename="../dialogs/settingsdialog.ui" line="2468"/>
 <source>Filipino</source>
 <translation>فیلیپینی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2500"/>
+<location filename="../dialogs/settingsdialog.ui" line="2479"/>
 <source>Finnish</source>
 <translation>فنلاندی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2522"/>
+<location filename="../dialogs/settingsdialog.ui" line="2501"/>
 <source>Irish</source>
 <translation>ایرلندی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2533"/>
+<location filename="../dialogs/settingsdialog.ui" line="2512"/>
 <source>Galician</source>
 <translation>گالیسی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2544"/>
+<location filename="../dialogs/settingsdialog.ui" line="2523"/>
 <source>Greek</source>
 <translation>یونانی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2555"/>
+<location filename="../dialogs/settingsdialog.ui" line="2534"/>
 <source>Hausa</source>
 <translation>هوسایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2566"/>
+<location filename="../dialogs/settingsdialog.ui" line="2545"/>
 <source>Hebrew</source>
 <translation>عبری</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2577"/>
+<location filename="../dialogs/settingsdialog.ui" line="2556"/>
 <source>Hindi</source>
 <translation>هندی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2599"/>
+<location filename="../dialogs/settingsdialog.ui" line="2578"/>
 <source>Hiligaynon</source>
 <translation>هیلیگاینون</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2610"/>
+<location filename="../dialogs/settingsdialog.ui" line="2589"/>
 <source>Icelandic</source>
 <translation>ایسلندی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2632"/>
+<location filename="../dialogs/settingsdialog.ui" line="2611"/>
 <source>Korean</source>
 <translation>کره ای</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2643"/>
+<location filename="../dialogs/settingsdialog.ui" line="2622"/>
 <source>Kurdish</source>
 <translation>کردی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2665"/>
+<location filename="../dialogs/settingsdialog.ui" line="2644"/>
 <source>Latvian</source>
 <translation>لتونیایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2676"/>
+<location filename="../dialogs/settingsdialog.ui" line="2655"/>
 <source>Lithuanian</source>
 <translation>لیتوانیایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2687"/>
+<location filename="../dialogs/settingsdialog.ui" line="2666"/>
 <source>Macedonian</source>
 <translation>مقدونی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2720"/>
+<location filename="../dialogs/settingsdialog.ui" line="2699"/>
 <source>Norwegian</source>
 <translation>نروژی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2764"/>
+<location filename="../dialogs/settingsdialog.ui" line="2743"/>
 <source>Uzbek</source>
 <translation>ازبکی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2808"/>
+<location filename="../dialogs/settingsdialog.ui" line="2787"/>
 <source>Punjabi</source>
 <translation>پنجابی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2753"/>
+<location filename="../dialogs/settingsdialog.ui" line="2732"/>
 <source>Persian</source>
 <translation>فارسی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2819"/>
+<location filename="../dialogs/settingsdialog.ui" line="2798"/>
 <source>Romanian</source>
 <translation>رومانیایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2841"/>
+<location filename="../dialogs/settingsdialog.ui" line="2820"/>
 <source>Serbian</source>
 <translation>صربی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2852"/>
+<location filename="../dialogs/settingsdialog.ui" line="2831"/>
 <source>Albanian</source>
 <translation>آلبانیایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2885"/>
+<location filename="../dialogs/settingsdialog.ui" line="2864"/>
 <source>Slovak</source>
 <translation>اسلواکی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2896"/>
+<location filename="../dialogs/settingsdialog.ui" line="2875"/>
 <source>Slovenian</source>
 <translation>اسلوونیایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2907"/>
+<location filename="../dialogs/settingsdialog.ui" line="2886"/>
 <source>Swedish</source>
 <translation>سوئدی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2918"/>
+<location filename="../dialogs/settingsdialog.ui" line="2897"/>
 <source>Tagalog</source>
 <translation>تاگالوگ</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2951"/>
+<location filename="../dialogs/settingsdialog.ui" line="2930"/>
 <source>Turkish</source>
 <translation>ترکی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2984"/>
+<location filename="../dialogs/settingsdialog.ui" line="2963"/>
 <source>Urdu</source>
 <translation>اردو</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3017"/>
+<location filename="../dialogs/settingsdialog.ui" line="2996"/>
 <source>Chinese Simplified</source>
 <translation>چینی ساده شده</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3028"/>
+<location filename="../dialogs/settingsdialog.ui" line="3007"/>
 <source>Chinese Traditional</source>
 <translation>چینی سنتی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3108"/>
+<location filename="../dialogs/settingsdialog.ui" line="3087"/>
 <source>Enable dark mode application icon and tray icon</source>
 <translation>فعال سازی شمایل برنامه حالت تاریک و شمایل سینی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3115"/>
+<location filename="../dialogs/settingsdialog.ui" line="3094"/>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
 <translation>همچنین شاید بخواهید یک طرحواره دیگر رنگ ویرایشگر را در تنظیمات ویرایشگر در حالت تاریک انتخاب کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3218"/>
+<location filename="../dialogs/settingsdialog.ui" line="3197"/>
 <source>Enable dark mode icon theme</source>
 <translation>فعال سازی پوسته شمایل حالت تاریک</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3148"/>
+<location filename="../dialogs/settingsdialog.ui" line="3127"/>
 <source>System tray</source>
 <translation>سینی سامانه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3157"/>
+<location filename="../dialogs/settingsdialog.ui" line="3136"/>
 <source>Show system tray icon</source>
 <translation>نمایش شمایل سینی سامانه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3167"/>
+<location filename="../dialogs/settingsdialog.ui" line="3146"/>
 <source>Start application hidden</source>
 <translation>آغاز برنامه به صورت پنهان</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3177"/>
+<location filename="../dialogs/settingsdialog.ui" line="3156"/>
 <source>Interface style</source>
 <translation>سبک رابط کاربری</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3208"/>
+<location filename="../dialogs/settingsdialog.ui" line="3187"/>
 <source>Enforce system icon theme</source>
 <translation>اجرای پوسته شمایل سامانه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3314"/>
+<location filename="../dialogs/settingsdialog.ui" line="3293"/>
 <source>Override interface font size</source>
 <translation>ابطال اندازه فونت رابط کاربری</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3323"/>
+<location filename="../dialogs/settingsdialog.ui" line="3302"/>
 <source>Interface font size:</source>
 <translation>اندازه قلم رابط کاربری:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3535"/>
+<location filename="../dialogs/settingsdialog.ui" line="3514"/>
 <source>&amp;Add script…</source>
 <translation>&amp;افزودن اسکریپت…</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4060"/>
+<location filename="../dialogs/settingsdialog.ui" line="4039"/>
 <source>Use legacy way to link to notes, images and attachments</source>
 <translation>استفاده از روش ارثی برای پیوند به یادداشت ها، تصاویر و پیوست ها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4074"/>
+<location filename="../dialogs/settingsdialog.ui" line="4053"/>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
 <translation>در هنگام باز کردن یادداشت ها، موقعیت مکان نما در یادداشت به موقعیتی که یادداشت برای آخرین بار در دوره کنونی بازدید شد بازیابی می گردد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4180"/>
+<location filename="../dialogs/settingsdialog.ui" line="4159"/>
 <source>By default the headline will generated automatically</source>
 <translation>به طور پیش فرض سرخط به صورت خودکار ایجاد می شود</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4183"/>
+<location filename="../dialogs/settingsdialog.ui" line="4162"/>
 <source>The shortcut to create a new note asks for a headline</source>
 <translation>میانبر برای ایجاد یک یادداشت جدید یک سرخط می خواهد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4209"/>
+<location filename="../dialogs/settingsdialog.ui" line="4188"/>
 <source>Automatically close the note folder database to prevent problems with sync tools</source>
 <translation>بستن خودکار پایگاه داده پوشه یادداشت برای جلوگیری از بروز مشکل با ابزارهای همگام سازی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4212"/>
+<location filename="../dialogs/settingsdialog.ui" line="4191"/>
 <source>Automatically close the note folder database</source>
 <translation>بستن خودکار پایگاه داده پوشه یادداشت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4280"/>
+<location filename="../dialogs/settingsdialog.ui" line="4259"/>
 <source>Search engine</source>
 <translation>موتور جستجو</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4302"/>
+<location filename="../dialogs/settingsdialog.ui" line="4281"/>
 <source>Message boxes</source>
 <translation>صندوق های پیغام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4311"/>
+<location filename="../dialogs/settingsdialog.ui" line="4290"/>
 <location filename="../dialogs/settingsdialog.cpp" line="3774"/>
 <source>Reset message boxes</source>
 <translation>بازنشانی صندوق های پیغام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4498"/>
+<location filename="../dialogs/settingsdialog.ui" line="4477"/>
 <location filename="../dialogs/settingsdialog.cpp" line="3840"/>
 <location filename="../dialogs/settingsdialog.cpp" line="3859"/>
 <source>Import settings</source>
 <translation>ورود تنظیمات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4505"/>
+<location filename="../dialogs/settingsdialog.ui" line="4484"/>
 <location filename="../dialogs/settingsdialog.cpp" line="3806"/>
 <source>Export settings</source>
 <translation>خروج تنظیمات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4653"/>
+<location filename="../dialogs/settingsdialog.ui" line="4632"/>
 <source>Open issue assistant</source>
 <translation>باز کردن دستیار مسئله</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4620"/>
+<location filename="../dialogs/settingsdialog.ui" line="4599"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;
 &lt;head/&gt;
@@ -6614,32 +6641,32 @@ QOwnNotesAPI
 &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4972"/>
+<location filename="../dialogs/settingsdialog.ui" line="4951"/>
 <source>Ignore code font size to allow zooming</source>
 <translation>چشم پوشی از اندازه فونت کد برای مجاز کردن بزرگ نمایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4892"/>
+<location filename="../dialogs/settingsdialog.ui" line="4871"/>
 <source>Rendering</source>
 <translation>نمایان سازی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4958"/>
+<location filename="../dialogs/settingsdialog.ui" line="4937"/>
 <source>Enable underline rendering</source>
 <translation>فعال کردن نمایان سازی خط زیرین</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5365"/>
+<location filename="../dialogs/settingsdialog.ui" line="5344"/>
 <source>Fully highlight blockquotes</source>
 <translation>نقل و قول های کاملاً برجسته</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5391"/>
+<location filename="../dialogs/settingsdialog.ui" line="5370"/>
 <source>Note-edit cursor width:</source>
 <translation>پهنای مکان نمای ویرایش یادداشت:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5438"/>
+<location filename="../dialogs/settingsdialog.ui" line="5417"/>
 <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
 <translation>فعال سازی حالت ویم (برخی از میانبرهای QOwnNotes کار نخواهند کرد)</translation>
 </message>
@@ -6659,12 +6686,12 @@ QOwnNotesAPI
 <translation>صفحه گذرواژه اپ سرور اون کلاود خود را باز کنید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2698"/>
+<location filename="../dialogs/settingsdialog.ui" line="2677"/>
 <source>Māori</source>
 <translation>مائوری</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2346"/>
+<location filename="../dialogs/settingsdialog.ui" line="2325"/>
 <source>Malay</source>
 <translation>مالایی</translation>
 </message>
@@ -6719,22 +6746,12 @@ QOwnNotesAPI
 <translation>فعال سازی پشتیبانی Nextcloud Deck</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1513"/>
-<source>Board Id:</source>
-<translation>شناسه بورد:</translation>
-</message>
-<message>
-<location filename="../dialogs/settingsdialog.ui" line="1520"/>
-<source>Stack Id:</source>
-<translation>شناسه استک:</translation>
-</message>
-<message>
-<location filename="../dialogs/settingsdialog.ui" line="1939"/>
+<location filename="../dialogs/settingsdialog.ui" line="1918"/>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
 <translation>شما می توانید برای مدیریت لیست های انجام دادنی به سرور اون کلود خود یا سرور CalDAV عمومی دسترسی داشته باشید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2297"/>
+<location filename="../dialogs/settingsdialog.ui" line="2276"/>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>در صورت تمایل برای کمک به ترجمه QOwnNotes یا به روزرسانی ترجمه موجود لطفاً این مطلب را بخوانید:
 &lt;a href="%1"&gt;
@@ -6742,177 +6759,177 @@ QOwnNotesAPI
 &lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2654"/>
+<location filename="../dialogs/settingsdialog.ui" line="2633"/>
 <source>Khmer</source>
 <translation>خمر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2863"/>
+<location filename="../dialogs/settingsdialog.ui" line="2842"/>
 <source>Shona</source>
 <translation>شونا</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2874"/>
+<location filename="../dialogs/settingsdialog.ui" line="2853"/>
 <source>Sinhala</source>
 <translation>سینهالی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2929"/>
+<location filename="../dialogs/settingsdialog.ui" line="2908"/>
 <source>Thai</source>
 <translation>تایلندی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2940"/>
+<location filename="../dialogs/settingsdialog.ui" line="2919"/>
 <source>Vietnamese</source>
 <translation>ویتنامی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2962"/>
+<location filename="../dialogs/settingsdialog.ui" line="2941"/>
 <source>Xhosa</source>
 <translation>خوسایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2995"/>
+<location filename="../dialogs/settingsdialog.ui" line="2974"/>
 <source>Yiddish</source>
 <translation>ییدیش</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3006"/>
+<location filename="../dialogs/settingsdialog.ui" line="2985"/>
 <source>Zulu</source>
 <translation>زولو</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3062"/>
+<location filename="../dialogs/settingsdialog.ui" line="3041"/>
 <source>Search for language</source>
 <translation>جستجوی زبان</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3425"/>
+<location filename="../dialogs/settingsdialog.ui" line="3404"/>
 <source>Action name</source>
 <translation>نام فعالیت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3430"/>
+<location filename="../dialogs/settingsdialog.ui" line="3409"/>
 <source>Local shortcut</source>
 <translation>میانبر محلی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3435"/>
+<location filename="../dialogs/settingsdialog.ui" line="3414"/>
 <source>Global shortcut</source>
 <translation>میانبر جهانی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4047"/>
+<location filename="../dialogs/settingsdialog.ui" line="4026"/>
 <source>Disable this if you want to launch the application without opening a note</source>
 <translation>اگر می خواهید برنامه را بدون باز کردن یادداشت راه‌اندازی کنید، این را غیرفعال کنید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4050"/>
+<location filename="../dialogs/settingsdialog.ui" line="4029"/>
 <source>Open last accessed note at application startup</source>
 <translation>باز کردن آخرین یادداشت در دسترس هنگام راه‌اندازی برنامه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4232"/>
+<location filename="../dialogs/settingsdialog.ui" line="4211"/>
 <source>Start application in read-only mode</source>
 <translation>آغاز به کار برنامه در حالت فقط خواندنی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4308"/>
+<location filename="../dialogs/settingsdialog.ui" line="4287"/>
 <source>Forget all "Don't ask again" choices in message boxes</source>
 <translation>همه گزینه های «دوباره سؤال نکن» را در کادر پیام‌ها نادیده بگیر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4341"/>
+<location filename="../dialogs/settingsdialog.ui" line="4320"/>
 <source>Note file extensions</source>
 <translation>افزونه های پرونده یادداشت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4379"/>
+<location filename="../dialogs/settingsdialog.ui" line="4358"/>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
 <translation>پرونده‌های حاوی افزونه‌های پرونده مذکور به عنوان یادداشت ها شناخته می شوند و افزونه پرونده منتخب برای یادداشت های جدید استفاده خواهند شد.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4389"/>
+<location filename="../dialogs/settingsdialog.ui" line="4368"/>
 <source>Add a new note file extension</source>
 <translation>افزونه پرونده یادداشت جدیدی اضافه کنید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4403"/>
+<location filename="../dialogs/settingsdialog.ui" line="4382"/>
 <source>Remove selected note file extension</source>
 <translation>افزونه پرونده یادداشت منتخب را حذف کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4534"/>
+<location filename="../dialogs/settingsdialog.ui" line="4513"/>
 <source>Checks the disk database integrity and fixes problems</source>
 <translation>جامعیت پایگاه داده دیسک را بررسی کرده و اشکالات را برطرف می کند</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4537"/>
+<location filename="../dialogs/settingsdialog.ui" line="4516"/>
 <source>Check integrity</source>
 <translation>بررسی جامعیت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4544"/>
+<location filename="../dialogs/settingsdialog.ui" line="4523"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
 <translation>مراقب باشید که ایجاد دوباره پایگاه داده، موارد انجام دادنی حافظه نهان و پوشه ها و اسکریپت های یادداشت پیکر بندی شده را نیز حذف می کند!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4627"/>
+<location filename="../dialogs/settingsdialog.ui" line="4606"/>
 <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>گیت هاب نیازی به دو فضا در انتهای خط برای نقطه سر خط ندارد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4650"/>
+<location filename="../dialogs/settingsdialog.ui" line="4629"/>
 <source>This is the best way to open an issue</source>
 <translation>این بهترین روش برای باز کردن یک مسئله است</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4664"/>
+<location filename="../dialogs/settingsdialog.ui" line="4643"/>
 <source>Please use this in the issue tracker</source>
 <translation>لطفاً از این مورد در ایشو ترکر استفاده کنید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4667"/>
+<location filename="../dialogs/settingsdialog.ui" line="4646"/>
 <source>&amp;Copy debug information to clipboard</source>
 <translation>&amp;رونوشت اطلاعات اشکال زدایی به کلیپ بورد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4678"/>
+<location filename="../dialogs/settingsdialog.ui" line="4657"/>
 <source>Please don't use this in the issue tracker</source>
 <translation>لطفاً در ایشو ترکر از این مورد استفاده نکنید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4898"/>
+<location filename="../dialogs/settingsdialog.ui" line="4877"/>
 <source>Time to wait before refreshing the preview after typing:</source>
 <translation>زمان انتظار قبل از بازآوری پیش نمایش پس از وارد کردن اطلاعات:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4905"/>
+<location filename="../dialogs/settingsdialog.ui" line="4884"/>
 <source>Reset the debounce time</source>
 <translation>بازنشانی زمان Debounce</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4919"/>
+<location filename="../dialogs/settingsdialog.ui" line="4898"/>
 <source>0ms means don't wait for the typing to stop</source>
 <translation>0ms به معنی عدم انتظار برای وارد کردن اطلاعات برای توقف است</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4951"/>
+<location filename="../dialogs/settingsdialog.ui" line="4930"/>
 <source>Use editor highlighting styles also for the preview</source>
 <translation>استفاده از سبک های برجسته ویرایشگر همچنین برای پیش نمایش</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4982"/>
+<location filename="../dialogs/settingsdialog.ui" line="4961"/>
 <source>Exporting</source>
 <translation>خارج کردن</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4988"/>
+<location filename="../dialogs/settingsdialog.ui" line="4967"/>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
 <translation>استفاده از طراحی خروج داخلی برای خارج کردن PDF و چاپ پیش نمایش</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5296"/>
+<location filename="../dialogs/settingsdialog.ui" line="5275"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;
 &lt;head/&gt;
@@ -6928,144 +6945,144 @@ QOwnNotesAPI
 &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5334"/>
+<location filename="../dialogs/settingsdialog.ui" line="5313"/>
 <source>Note that disabling this will also disable the navigation panel!</source>
 <translation>توجه داشته باشید که غیرفعالسازی این گزینه پنل مسیریابی را نیز غیرفعال خواهد کرد!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5431"/>
+<location filename="../dialogs/settingsdialog.ui" line="5410"/>
 <source>Disable cursor blinking</source>
 <translation>غیرفعال کردن چشمک زدن مکان نما</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5452"/>
+<location filename="../dialogs/settingsdialog.ui" line="5431"/>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>حذف خودکار فضاهای مؤخر در متن یادداشت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5414"/>
+<location filename="../dialogs/settingsdialog.ui" line="5393"/>
 <source>Show line numbers</source>
 <translation>نشان دادن شماره خطوط</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5493"/>
+<location filename="../dialogs/settingsdialog.ui" line="5472"/>
 <source>Tabs and Indents</source>
 <translation>زبانه ها و تورفتگی ها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5501"/>
+<location filename="../dialogs/settingsdialog.ui" line="5480"/>
 <source>Use tab character instead of spaces</source>
 <translation>استفاده از نویسه زبانه به جای فضاها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5508"/>
+<location filename="../dialogs/settingsdialog.ui" line="5487"/>
 <source>Indent:</source>
 <translation>تورفتگی:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5906"/>
-<location filename="../dialogs/settingsdialog.ui" line="5915"/>
+<location filename="../dialogs/settingsdialog.ui" line="5885"/>
+<location filename="../dialogs/settingsdialog.ui" line="5894"/>
 <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>عبارات باقاعده از زیر پوشه های یادداشت برای چشم پوشی، جدا شده با "؛"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5761"/>
+<location filename="../dialogs/settingsdialog.ui" line="5740"/>
 <source>Ignored note files</source>
 <translation>پرونده های یادداشت چشم پوشی شده</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5758"/>
-<location filename="../dialogs/settingsdialog.ui" line="5767"/>
+<location filename="../dialogs/settingsdialog.ui" line="5737"/>
+<location filename="../dialogs/settingsdialog.ui" line="5746"/>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
 <translation>عبارات باقاعده از پرونده های یادداشت برای چشم پوشی، جدا شده با "؛"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5909"/>
+<location filename="../dialogs/settingsdialog.ui" line="5888"/>
 <source>Ignored subfolders</source>
 <translation>از زیر پوشه ها چشم پوشی شد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5925"/>
+<location filename="../dialogs/settingsdialog.ui" line="5904"/>
 <source>Reset ignored subfolders</source>
 <translation>بازنشانی زیر پوشه های چشم پوشی شده</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5961"/>
+<location filename="../dialogs/settingsdialog.ui" line="5940"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
 <translation>بازیابی زبانه های یادداشت باز در راه اندازی برنامه و هنگامی که پوشه های یادداشت تغییر می کنند</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5984"/>
+<location filename="../dialogs/settingsdialog.ui" line="5963"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
 <translation>انتخاب خودکار اقلام موجود در پنل ناوبری هنگام تغییر موقعیت مکان نما</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6053"/>
+<location filename="../dialogs/settingsdialog.ui" line="6032"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
 <translation>مخفی کردن "تعداد یادداشت" با برچسب ها (عملکرد را افزایش می دهد)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6089"/>
+<location filename="../dialogs/settingsdialog.ui" line="6068"/>
 <source>Show the number of matches in each note</source>
 <translation>نمایش تعداد انطباق ها در هر یادداشت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6488"/>
+<location filename="../dialogs/settingsdialog.ui" line="6467"/>
 <source>Command snippets</source>
 <translation>تکه کدهای دستور</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6497"/>
+<location filename="../dialogs/settingsdialog.ui" line="6476"/>
 <source>Tag name for commands notes</source>
 <translation>نام برچسب برای یادداشت های دستورات</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6504"/>
+<location filename="../dialogs/settingsdialog.ui" line="6483"/>
 <source>Commands tag:</source>
 <translation>برچسب دستورات:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6524"/>
+<location filename="../dialogs/settingsdialog.ui" line="6503"/>
 <source>Commands note name:</source>
 <translation>نام یادداشت دستورات:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6534"/>
+<location filename="../dialogs/settingsdialog.ui" line="6513"/>
 <source>Note name for adding new commands</source>
 <translation>نام یادداشت برای افزودن دستورات جدید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6574"/>
+<location filename="../dialogs/settingsdialog.ui" line="6553"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
 <translation>شما می توانید از &lt;a href="%1"&gt;برنامه تحت وب QOwnNotes&lt;/a&gt; استفاده کنید تا از طریق اینترنت قادر به درج تصاویر از تلفن همراه خود در QOwnNotes در دسکتاپ خود باشید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6611"/>
+<location filename="../dialogs/settingsdialog.ui" line="6590"/>
 <source>QOwnNotes web application</source>
 <translation>برنامه تحت وب QOwnNotes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6640"/>
+<location filename="../dialogs/settingsdialog.ui" line="6619"/>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation>یک ارتباط وب سوکت با این سرور بر قرار می شود تا به عنوان پلی میان برنامه تحت وب QOwnNotes و برنامه دسکتاپ QOwnNotes عمل کند.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6701"/>
+<location filename="../dialogs/settingsdialog.ui" line="6680"/>
 <source>Server URL:</source>
 <translation>URL سرور:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6758"/>
+<location filename="../dialogs/settingsdialog.ui" line="6737"/>
 <source>Show QR code</source>
 <translation>نمایش کیو آر کد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6650"/>
+<location filename="../dialogs/settingsdialog.ui" line="6629"/>
 <source>Security token:</source>
 <translation>توکن امنیتی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6453"/>
+<location filename="../dialogs/settingsdialog.ui" line="6432"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
 <translation>&lt;a href="%1"&gt;
 افزونه مرورگر همراه وب
@@ -7081,222 +7098,222 @@ QOwnNotesAPI
 نصب کنید تا از QOwnNotes به عنوان وب کلیپر یا برای مدیریت نشانک ها استفاده کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6469"/>
+<location filename="../dialogs/settingsdialog.ui" line="6448"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
 <translation>&lt;a href="%1"&gt;مدیر تکه کد خط فرمان&lt;/a&gt; را دانلود کنید تا از خط فرمان QOwnNotes قادر به اجرای تکه کدهای دستور ذخیره شده در یادداشت ها باشید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6511"/>
+<location filename="../dialogs/settingsdialog.ui" line="6490"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>شما می توانید از یادداشت های دارای برچسب خاص برای ذخیره سازی تکه کدهای دستور قابل اجرا از مدیر تکه کد خط فرمان استفاده کنید. برای اطلاعات بیشتر در مورد چیدمان تکه کد دستور، &lt;a href="%1"&gt;اینجا&lt;/a&gt; کلیک کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6708"/>
+<location filename="../dialogs/settingsdialog.ui" line="6687"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
 <translation>شما باید این توکن را در برنامه تحت وب QOwnNotes وارد کنید تا قادر به برقراری ارتباط با برنامه دسکتاپ QOwnNotes باشید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6718"/>
+<location filename="../dialogs/settingsdialog.ui" line="6697"/>
 <source>Copy security token to clipboard</source>
 <translation>رونوشت برداری از توکن امنیتی به کلیپ بورد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6671"/>
+<location filename="../dialogs/settingsdialog.ui" line="6650"/>
 <source>Generate new security token</source>
 <translation>ایجاد توکن امنیتی جدید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6732"/>
+<location filename="../dialogs/settingsdialog.ui" line="6711"/>
 <source>Reset the URL to default</source>
 <translation>بازنشانی URL به حالت پیش فرض</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6561"/>
+<location filename="../dialogs/settingsdialog.ui" line="6540"/>
 <source>QOwnNotes web application support</source>
 <translation>پشتیبانی برنامه تحت وب QOwnNotes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6567"/>
+<location filename="../dialogs/settingsdialog.ui" line="6546"/>
 <source>Enable web application support</source>
 <translation>فعالسازی پشتیبانی برنامه تحت وب</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5722"/>
-<location filename="../dialogs/settingsdialog.ui" line="6775"/>
+<location filename="../dialogs/settingsdialog.ui" line="5701"/>
+<location filename="../dialogs/settingsdialog.ui" line="6754"/>
 <source>Note list panel</source>
 <translation>پنل لیست یادداشت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5816"/>
+<location filename="../dialogs/settingsdialog.ui" line="5795"/>
 <source>Show notes in the note list with preview</source>
 <translation>نمایش یادداشت ها در لیست یادداشت با پیش نمایش</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6781"/>
+<location filename="../dialogs/settingsdialog.ui" line="6760"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
 <translation>استفاده از درخت یادداشت با همه زیر پوشه ها به جای یک لیست یادداشت (اگر برای پوشه یادداشت روشن شده اند)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6099"/>
+<location filename="../dialogs/settingsdialog.ui" line="6078"/>
 <source>Note folder panel</source>
 <translation>پنل پوشه یادداشت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6105"/>
+<location filename="../dialogs/settingsdialog.ui" line="6084"/>
 <source>Show note folders as buttons instead of in a select box</source>
 <translation>نمایش پوشه های یادداشت به صورت دکمه هایی به جای صندوق انتخاب</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6211"/>
+<location filename="../dialogs/settingsdialog.ui" line="6190"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
 <translation>فعال سازی سطل زباله محلی برای نگهداری رونوشت یادداشت های حذف شده</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6247"/>
+<location filename="../dialogs/settingsdialog.ui" line="6226"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
 <translation>پنل ها می توانند در &lt;i&gt; پنجره / پنل های &lt;/i&gt; منوی اصلی روشن یا خاموش شوند و شما نیز می توانید &lt;i&gt;فضاهای کاری&lt;/i&gt; متفاوت را برای پیکربندی های پنلی متفاوت پیکربندی کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6324"/>
+<location filename="../dialogs/settingsdialog.ui" line="6303"/>
 <source>Bookmarks</source>
 <translation>نشانک ها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6330"/>
-<location filename="../dialogs/settingsdialog.ui" line="6494"/>
+<location filename="../dialogs/settingsdialog.ui" line="6309"/>
+<location filename="../dialogs/settingsdialog.ui" line="6473"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
 <translation>یادداشت ها با این برچسب برای واکشی نشانک ها استفاده می شوند</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6333"/>
+<location filename="../dialogs/settingsdialog.ui" line="6312"/>
 <source>Tag name for bookmarks notes</source>
 <translation>نام برچسب برای یادداشت های نشانک ها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6340"/>
+<location filename="../dialogs/settingsdialog.ui" line="6319"/>
 <source>Bookmarks tag:</source>
 <translation>برچسب نشانک ها:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6347"/>
+<location filename="../dialogs/settingsdialog.ui" line="6326"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>افزونه مرورگر به طور پیش فرض تمام پیوندهای یادداشت کنونی را نشان می دهد. همچنین می توانید با یک برچسب معین، آن را مجاب کنید پیوندهای ویژه نشانک یادداشت ها را نشان دهد. برای اطلاعات بیشتر در مورد چیدمان پیوند نشانک &lt;a href="%1"&gt;اینجا&lt;/a&gt; کلیک کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6360"/>
+<location filename="../dialogs/settingsdialog.ui" line="6339"/>
 <source>Bookmarks note name:</source>
 <translation>نام یادداشت نشانک ها:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6367"/>
-<location filename="../dialogs/settingsdialog.ui" line="6531"/>
+<location filename="../dialogs/settingsdialog.ui" line="6346"/>
+<location filename="../dialogs/settingsdialog.ui" line="6510"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
 <translation>از این یادداشت برای افزودن نشانک های جدید از افزونه مرورگر استفاده می شود</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6370"/>
+<location filename="../dialogs/settingsdialog.ui" line="6349"/>
 <source>Note name for adding new bookmarks</source>
 <translation>نام یادداشت برای افزودن نشانک های جدید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6380"/>
+<location filename="../dialogs/settingsdialog.ui" line="6359"/>
 <source>Web socket server</source>
 <translation>سرور سوکت وب</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6386"/>
+<location filename="../dialogs/settingsdialog.ui" line="6365"/>
 <source>Socket server port:</source>
 <translation>پورت سرور سوکت:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6406"/>
+<location filename="../dialogs/settingsdialog.ui" line="6385"/>
 <source>Reset the socket server port</source>
 <translation>بازنشانی پورت سرور سوکت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6420"/>
-<location filename="../dialogs/settingsdialog.ui" line="6657"/>
+<location filename="../dialogs/settingsdialog.ui" line="6399"/>
+<location filename="../dialogs/settingsdialog.ui" line="6636"/>
 <source>Show security token</source>
 <translation>نمایش توکن امنیتی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6440"/>
+<location filename="../dialogs/settingsdialog.ui" line="6419"/>
 <source>Web socket server support</source>
 <translation>پشتیبانی از سرور سوکت وب</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6446"/>
+<location filename="../dialogs/settingsdialog.ui" line="6425"/>
 <source>Enable socket server</source>
 <translation>فعال سازی سرور سوکت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5945"/>
+<location filename="../dialogs/settingsdialog.ui" line="5924"/>
 <source>Note edit panel</source>
 <translation>پنل ویرایش یادداشت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5951"/>
+<location filename="../dialogs/settingsdialog.ui" line="5930"/>
 <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
 <translation>اگر این غیرفعال باشد، می توانید طرح بندی های پنلی پیچیده تری ایجاد کنید، اما در صورت تغییر اندازه پنجره، تمام پنل ها تغییر اندازه خواهند داد.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5954"/>
+<location filename="../dialogs/settingsdialog.ui" line="5933"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
 <translation>در صورت تغییر اندازه پنجره یا سایر پنل ها، از پنل ویرایش یادداشت به عنوان ابزارک مرکزی ثابت استفاده کنید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6076"/>
+<location filename="../dialogs/settingsdialog.ui" line="6055"/>
 <source>Note search panel</source>
 <translation>پنل جستجوی یادداشت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6082"/>
+<location filename="../dialogs/settingsdialog.ui" line="6061"/>
 <source>Disable auto-completion of previous searches</source>
 <translation>غیرفعال کردن تکمیل خودکار جستجوهای قبلی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5971"/>
+<location filename="../dialogs/settingsdialog.ui" line="5950"/>
 <source>Navigation panel</source>
 <translation>پنل جهت یابی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5977"/>
+<location filename="../dialogs/settingsdialog.ui" line="5956"/>
 <source>Hide navigation item search bar</source>
 <translation>مخفی کردن نوار جستجوی مورد جهت یابی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6119"/>
+<location filename="../dialogs/settingsdialog.ui" line="6098"/>
 <source>Local trash settings</source>
 <translation>تنظیمات سطل آشغال محلی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6153"/>
+<location filename="../dialogs/settingsdialog.ui" line="6132"/>
 <source>Remove trashed notes after:</source>
 <translation>حذف یادداشت های حذف شده پس از:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6160"/>
+<location filename="../dialogs/settingsdialog.ui" line="6139"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
 <translation> روزها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6179"/>
+<location filename="../dialogs/settingsdialog.ui" line="6158"/>
 <source>Automatically remove trashed notes after a certain time</source>
 <translation>حذف خودکار یادداشت های حذف شده پس از یک مدت معین</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6205"/>
+<location filename="../dialogs/settingsdialog.ui" line="6184"/>
 <source>Local trash support</source>
 <translation>پشتیبانی از سطل زباله محلی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6228"/>
+<location filename="../dialogs/settingsdialog.ui" line="6207"/>
 <source>Layout selector</source>
 <translation>گزینشگر طرح بندی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6234"/>
+<location filename="../dialogs/settingsdialog.ui" line="6213"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
 <translation>می توانید یک طرح بندی جدید در اینجا تنظیم کنید. به خاطر داشته باشید که همیشه می توانید موقعیت پنل ها را با دکمه
 &lt;i&gt;
@@ -7305,130 +7322,130 @@ QOwnNotesAPI
 اصلاح کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5476"/>
+<location filename="../dialogs/settingsdialog.ui" line="5455"/>
 <source>Reset the cursor width</source>
 <translation>بازنشانی پهنای مکان نما</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5596"/>
+<location filename="../dialogs/settingsdialog.ui" line="5575"/>
 <source>External git log command to show the git versions of a note</source>
 <translation>فرمان git log خارجی برای نمایش نسخه های گیت یک یادداشت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5602"/>
+<location filename="../dialogs/settingsdialog.ui" line="5581"/>
 <source>Enter a command to be used to show a git log (like for example "gitk")</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>فرمانی را وارد کنید تا برای نمایش git log استفاده شود (مانند مثال "gitk")</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5622"/>
+<location filename="../dialogs/settingsdialog.ui" line="5601"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>در صورت استفاده از این تنظیمات، با کلیک راست کردن روی یک یادداشت، منوی جدیدی برای نمایش نسخه های گیت دریافت خواهید کرد.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5728"/>
+<location filename="../dialogs/settingsdialog.ui" line="5707"/>
 <source>Show all notes of a tag including the notes of their children-tags</source>
 <translation>نمایش تمام یادداشت های یک برچسب از جمله یادداشت های بچه برچسب های آنها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5809"/>
+<location filename="../dialogs/settingsdialog.ui" line="5788"/>
 <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
 <translation>نمایش تمام یادداشت ها در یک پوشه از جمله زیر پوشه های آنها (فقط در صورت روشن بودن زیر پوشه ها کار می کند)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5384"/>
+<location filename="../dialogs/settingsdialog.ui" line="5363"/>
 <source>Highlight the current line</source>
 <translation>برجسته کردن خط کنونی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5689"/>
+<location filename="../dialogs/settingsdialog.ui" line="5668"/>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>فراموش نکنید که برای پوشه های یادداشت خود پشتیبانی گیت را فعال کنید و نام و آدرس پست الکترونیک خود را برای مشتری گیت خود پیکربندی کنید. به عنوان مثال با این دستورات ترمینال:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5994"/>
+<location filename="../dialogs/settingsdialog.ui" line="5973"/>
 <source>Tags panel</source>
 <translation>پنل برچسب ها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5783"/>
-<location filename="../dialogs/settingsdialog.ui" line="5869"/>
-<location filename="../dialogs/settingsdialog.ui" line="6023"/>
+<location filename="../dialogs/settingsdialog.ui" line="5762"/>
+<location filename="../dialogs/settingsdialog.ui" line="5848"/>
+<location filename="../dialogs/settingsdialog.ui" line="6002"/>
 <source>Order</source>
 <translation>سفارش</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5792"/>
-<location filename="../dialogs/settingsdialog.ui" line="5875"/>
-<location filename="../dialogs/settingsdialog.ui" line="6029"/>
+<location filename="../dialogs/settingsdialog.ui" line="5771"/>
+<location filename="../dialogs/settingsdialog.ui" line="5854"/>
+<location filename="../dialogs/settingsdialog.ui" line="6008"/>
 <source>Ascending</source>
 <translation>صعودی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5799"/>
-<location filename="../dialogs/settingsdialog.ui" line="5882"/>
-<location filename="../dialogs/settingsdialog.ui" line="6036"/>
+<location filename="../dialogs/settingsdialog.ui" line="5778"/>
+<location filename="../dialogs/settingsdialog.ui" line="5861"/>
+<location filename="../dialogs/settingsdialog.ui" line="6015"/>
 <source>Descending</source>
 <translation>نزولی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5735"/>
-<location filename="../dialogs/settingsdialog.ui" line="5839"/>
-<location filename="../dialogs/settingsdialog.ui" line="6000"/>
+<location filename="../dialogs/settingsdialog.ui" line="5714"/>
+<location filename="../dialogs/settingsdialog.ui" line="5818"/>
+<location filename="../dialogs/settingsdialog.ui" line="5979"/>
 <source>Sort</source>
 <translation>مرتب سازی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5469"/>
+<location filename="../dialogs/settingsdialog.ui" line="5448"/>
 <source>Only use editor width setting in distraction free mode</source>
 <translation>استفاده از تنها تنظیمات پهنای ویرایشگر در حالت بدون مزاحمت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5741"/>
-<location filename="../dialogs/settingsdialog.ui" line="5845"/>
-<location filename="../dialogs/settingsdialog.ui" line="6006"/>
+<location filename="../dialogs/settingsdialog.ui" line="5720"/>
+<location filename="../dialogs/settingsdialog.ui" line="5824"/>
+<location filename="../dialogs/settingsdialog.ui" line="5985"/>
 <source>Alphabetical</source>
 <translation>الفبایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6013"/>
+<location filename="../dialogs/settingsdialog.ui" line="5992"/>
 <source>By last change / use</source>
 <translation>براساس آخرین تغییر / استفاده</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6046"/>
+<location filename="../dialogs/settingsdialog.ui" line="6025"/>
 <source>Hide 'Find or create tag' search</source>
 <translation>مخفی کردن جستجوی "یافتن یا ایجاد برچسب"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5826"/>
+<location filename="../dialogs/settingsdialog.ui" line="5805"/>
 <source>Note subfolders panel</source>
 <translation>پنل زیر پوشه های یادداشت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5832"/>
+<location filename="../dialogs/settingsdialog.ui" line="5811"/>
 <source>Show with full path</source>
 <translation>نمایش با مسیر کامل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5748"/>
-<location filename="../dialogs/settingsdialog.ui" line="5852"/>
+<location filename="../dialogs/settingsdialog.ui" line="5727"/>
+<location filename="../dialogs/settingsdialog.ui" line="5831"/>
 <source>By last change</source>
 <translation>براساس آخرین تغییر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5862"/>
+<location filename="../dialogs/settingsdialog.ui" line="5841"/>
 <source>Show root folder name</source>
 <translation>نمایش نام پوشه ریشه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5892"/>
+<location filename="../dialogs/settingsdialog.ui" line="5871"/>
 <source>Hide 'Find or create note subfolder' search</source>
 <translation>مخفی کردن جستجوی "یافتن یا ایجاد زیر پوشه یادداشت"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5899"/>
+<location filename="../dialogs/settingsdialog.ui" line="5878"/>
 <source>Display note subfolders as full tree</source>
 <translation>نمایش زیر پوشه های یادداشت به صورت درخت کامل</translation>
 </message>
@@ -7438,39 +7455,39 @@ QOwnNotesAPI
 <translation>جستجوی مخزن اسکریپت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5612"/>
+<location filename="../dialogs/settingsdialog.ui" line="5591"/>
 <source>You optionally can use "%notePath%" for the path of the note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>شما در صورت تمایل می توانید برای مسیر یادداشت از "%notePath%" استفاده کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5635"/>
+<location filename="../dialogs/settingsdialog.ui" line="5614"/>
 <source>Git client</source>
 <translation>مشتری گیت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5651"/>
+<location filename="../dialogs/settingsdialog.ui" line="5630"/>
 <source>Path to git executable:</source>
 <translation>مسیر اجراپذیر گیت:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5641"/>
+<location filename="../dialogs/settingsdialog.ui" line="5620"/>
 <source>Path to git client, leave empty for default</source>
 <translation>مسیر مشتری گیت، به طور پیش فرض خالی بگذارید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5560"/>
+<location filename="../dialogs/settingsdialog.ui" line="5539"/>
 <source>Commit interval</source>
 <translation>ثبت فاصله زمانی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5566"/>
+<location filename="../dialogs/settingsdialog.ui" line="5545"/>
 <source>sec</source>
 <extracomment>seconds</extracomment>
 <translation>ثانیه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5586"/>
+<location filename="../dialogs/settingsdialog.ui" line="5565"/>
 <source>git commit interval time [sec]</source>
 <translation>فاصله زمانی ثبت گیت [sec]</translation>
 </message>
@@ -7485,303 +7502,303 @@ QOwnNotesAPI
 <translation>پیش نمایش</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1961"/>
+<location filename="../dialogs/settingsdialog.ui" line="1940"/>
 <source>Which calendar backend do you want to use?</source>
 <translation>از کدام بک اند تقویم می خواهید استفاده کنید؟</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1994"/>
+<location filename="../dialogs/settingsdialog.ui" line="1973"/>
 <source>For most current ownCloud and Nextcloud installations</source>
 <translation>برای اکثر چیدمان های کنونی اون کلاود و نکست کلاود</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1974"/>
+<location filename="../dialogs/settingsdialog.ui" line="1953"/>
 <source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>برای نسخه های قدیمی تر اون کلاود که در آن تنظیم پیش فرض کار نمی کند</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="1977"/>
+<location filename="../dialogs/settingsdialog.ui" line="1956"/>
 <source>Legacy ownCloud calendar</source>
 <translation>تقویم اون کلاود ارثی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2010"/>
+<location filename="../dialogs/settingsdialog.ui" line="1989"/>
 <source>CalDAV server settings</source>
 <translation>تنظیمات سرور CalDAV</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2019"/>
+<location filename="../dialogs/settingsdialog.ui" line="1998"/>
 <source>Calendar base url:</source>
 <translation>URL پایه تقویم:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2041"/>
+<location filename="../dialogs/settingsdialog.ui" line="2020"/>
 <source>Please enter the CalDAV base url to your calendar.</source>
 <translation>لطفاً URL پایه CalDAV را در تقویم خود وارد کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2111"/>
+<location filename="../dialogs/settingsdialog.ui" line="2090"/>
 <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
 <translation>لطفاً گذرواژه مربوط به نام کاربری CalDAV خود را وارد کنید. &lt;br/&gt; در حال حاضر گذرواژه با سایر تنظیمات ذخیره و رمزنگاری می شود، اما خیلی ایمن نیست.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2412"/>
+<location filename="../dialogs/settingsdialog.ui" line="2391"/>
 <source>Czech</source>
 <translation>چکی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2786"/>
+<location filename="../dialogs/settingsdialog.ui" line="2765"/>
 <source>Brazilian Portuguese</source>
 <translation>پرتغالی برزیل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2973"/>
+<location filename="../dialogs/settingsdialog.ui" line="2952"/>
 <source>Ukrainian</source>
 <translation>اوکراینی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3978"/>
+<location filename="../dialogs/settingsdialog.ui" line="3957"/>
 <source>The name</source>
 <translation>نام</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4132"/>
+<location filename="../dialogs/settingsdialog.ui" line="4111"/>
 <source>Maximum height:</source>
 <translation>حداکثر ارتفاع:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4105"/>
+<location filename="../dialogs/settingsdialog.ui" line="4084"/>
 <source>Maximum width:</source>
 <translation>حداکثر پهنا:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4067"/>
+<location filename="../dialogs/settingsdialog.ui" line="4046"/>
 <source>Scale images down when inserted into notes</source>
 <translation>کاهش اندازه تصاویر هنگام درج در یادداشت ها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2588"/>
+<location filename="../dialogs/settingsdialog.ui" line="2567"/>
 <source>Croatian</source>
 <translation>کرواتی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3886"/>
+<location filename="../dialogs/settingsdialog.ui" line="3865"/>
 <source>Path to your QML file</source>
 <translation>مسیر پرونده QML شما</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3800"/>
+<location filename="../dialogs/settingsdialog.ui" line="3779"/>
 <source>Script name</source>
 <translation>نام اسکریپت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3661"/>
+<location filename="../dialogs/settingsdialog.ui" line="3640"/>
 <source>Description:</source>
 <translation>شرح:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3743"/>
+<location filename="../dialogs/settingsdialog.ui" line="3722"/>
 <source>Version:</source>
 <translation>نسخه:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3704"/>
+<location filename="../dialogs/settingsdialog.ui" line="3683"/>
 <source>Repository:</source>
 <translation>مخزن:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3681"/>
+<location filename="../dialogs/settingsdialog.ui" line="3660"/>
 <source>Author(s):</source>
 <translation>نویسنده(ها):</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4037"/>
+<location filename="../dialogs/settingsdialog.ui" line="4016"/>
 <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
 <translation>اگر می خواهید تمام اصلاحات خارجی را هنگام ویرایش یادداشت کنونی بپذیرید، این را علامت بزنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4040"/>
+<location filename="../dialogs/settingsdialog.ui" line="4019"/>
 <source>Accept all external modifications of the current note</source>
 <translation>پذیرفتن تمام اصلاحات خارجی یادداشت کنونی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4152"/>
+<location filename="../dialogs/settingsdialog.ui" line="4131"/>
 <source>Use UNIX newline instead of native newline characters</source>
 <translation>استفاده از نوخط یونیکس به جای نویسه های نوخط همسان</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4077"/>
+<location filename="../dialogs/settingsdialog.ui" line="4056"/>
 <source>Restore cursor position when opening a note</source>
 <translation>بازیابی موقعیت مکان نما هنگام باز کردن یادداشت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5120"/>
+<location filename="../dialogs/settingsdialog.ui" line="5099"/>
 <source>Apply toolbar configuration</source>
 <translation>اعمال پیکربندی نوار ابزار</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5134"/>
+<location filename="../dialogs/settingsdialog.ui" line="5113"/>
 <source>Reset toolbars</source>
 <translation>بازنشانی نوارهای ابزار</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5162"/>
+<location filename="../dialogs/settingsdialog.ui" line="5141"/>
 <source>Enable logging to file</source>
 <translation>فعال سازی واقعه نگاری پرونده</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5169"/>
+<location filename="../dialogs/settingsdialog.ui" line="5148"/>
 <source>Clear log file</source>
 <translation>پاک کردن پرنده ورود</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5180"/>
+<location filename="../dialogs/settingsdialog.ui" line="5159"/>
 <source>Fake old version number to trigger update</source>
 <translation>شماره نسخه قدیمی جعلی برای تریگر آپدیت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5208"/>
+<location filename="../dialogs/settingsdialog.ui" line="5187"/>
 <source>Log file path:</source>
 <translation>مسیر پرونده ورود:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5270"/>
+<location filename="../dialogs/settingsdialog.ui" line="5249"/>
 <source>Here you can set your own time format for inserting the current time into a note.</source>
 <translation>در اینجا می توانید قالب زمانی خود را برای درج زمان کنونی در یادداشت تنظیم کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5273"/>
+<location filename="../dialogs/settingsdialog.ui" line="5252"/>
 <source>Insert current time</source>
 <translation>درج زمان کنونی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5279"/>
+<location filename="../dialogs/settingsdialog.ui" line="5258"/>
 <source>Time format:</source>
 <translation>قالب زمانی:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5286"/>
+<location filename="../dialogs/settingsdialog.ui" line="5265"/>
 <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
 <translation>قالب زمانی سفارشی خود را وارد کنید. برای مثال "dd.MM.yyyy hh:mm"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5378"/>
+<location filename="../dialogs/settingsdialog.ui" line="5357"/>
 <source>Editor options</source>
 <translation>گزینه های ویرایشگر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5445"/>
+<location filename="../dialogs/settingsdialog.ui" line="5424"/>
 <source>Enable automatic closing of brackets and markdown formatting characters</source>
 <translation>فعال سازی بستن خودکار براکت ها و نویسه های قالب بندی مارک داون</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5421"/>
+<location filename="../dialogs/settingsdialog.ui" line="5400"/>
 <source>You have to use the backspace key to remove the opening character</source>
 <translation>شما باید از کلید پس بر برای حذف نویسه باز استفاده کنید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5424"/>
+<location filename="../dialogs/settingsdialog.ui" line="5403"/>
 <source>Enable automatic removal of matching closing characters</source>
 <translation>فعال سازی حذف خودکار نویسه های بسته همتاسازی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2044"/>
+<location filename="../dialogs/settingsdialog.ui" line="2023"/>
 <source>Your CalDAV calendar base url</source>
 <translation>URL پایه تقویم CalDAV شما</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2076"/>
+<location filename="../dialogs/settingsdialog.ui" line="2055"/>
 <source>Please enter the username of your CalDAV server.</source>
 <translation>لطفاً نام کاربری سرور CalDAV خود را وارد کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2079"/>
+<location filename="../dialogs/settingsdialog.ui" line="2058"/>
 <source>Your CalDAV username</source>
 <translation>نام کاربری CalDAV شما</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2117"/>
+<location filename="../dialogs/settingsdialog.ui" line="2096"/>
 <source>Your CalDAV password</source>
 <translation>گذرواژه CalDAV شما</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2164"/>
+<location filename="../dialogs/settingsdialog.ui" line="2143"/>
 <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
 <translation>این باعث می شود دفعه دیگر که کادر گفتگوی انجام دادنی خود را باز می کنید، همه موارد لیست انجام دادنی از سرور شما مجدداً بارگذاری شود.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2167"/>
+<location filename="../dialogs/settingsdialog.ui" line="2146"/>
 <source>Empty calendar item cache</source>
 <translation>خالی کردن حافظه نهان مورد تقویم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2190"/>
+<location filename="../dialogs/settingsdialog.ui" line="2169"/>
 <source>Click here to reload the list of calendars from your calendar server.</source>
 <translation>برای بارگذاری مجدد لیست تقویم ها از سرور تقویم خود، اینجا کلیک کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2196"/>
+<location filename="../dialogs/settingsdialog.ui" line="2175"/>
 <source>&amp;Reload calendar list</source>
 <translation>&amp;بارگذاری مجدد لیست تقویم</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3105"/>
-<location filename="../dialogs/settingsdialog.ui" line="3215"/>
+<location filename="../dialogs/settingsdialog.ui" line="3084"/>
+<location filename="../dialogs/settingsdialog.ui" line="3194"/>
 <source>You may need to restart the application to let these changes take effect</source>
 <translation>شاید لازم باشد برنامه را مجدداً راه‌اندازی کنید تا این تغییرات اعمال شود</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3250"/>
+<location filename="../dialogs/settingsdialog.ui" line="3229"/>
 <source>Toolbar icon size:</source>
 <translation>اندازه شمایل نوار ابزار:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3240"/>
+<location filename="../dialogs/settingsdialog.ui" line="3219"/>
 <source>List and tree item height:</source>
 <translation>لیست و ارتفاع مورد درخت:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3273"/>
+<location filename="../dialogs/settingsdialog.ui" line="3252"/>
 <source>Reset the icon size</source>
 <translation>بازنشانی اندازه شمایل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3287"/>
+<location filename="../dialogs/settingsdialog.ui" line="3266"/>
 <source>Reset the item height</source>
 <translation>بازنشانی ارتفاع مورد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4965"/>
+<location filename="../dialogs/settingsdialog.ui" line="4944"/>
 <source>View text right to left (RTL)</source>
 <translation>مشاهده متن از راست به چپ (RTL)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3411"/>
+<location filename="../dialogs/settingsdialog.ui" line="3390"/>
 <source>Search for shortcut</source>
 <translation>جستجوی میانبر</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="2207"/>
+<location filename="../dialogs/settingsdialog.ui" line="2186"/>
 <source>Ignore calendars that don't support todo items</source>
 <translation>چشم پوشی از تقویم هایی که از موارد انجام دادنی پشتیبانی نمی کنند</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3039"/>
+<location filename="../dialogs/settingsdialog.ui" line="3018"/>
 <source>Arabic</source>
 <translation>عربی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3189"/>
+<location filename="../dialogs/settingsdialog.ui" line="3168"/>
 <source>Icons</source>
 <translation>شمایل ها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3198"/>
+<location filename="../dialogs/settingsdialog.ui" line="3177"/>
 <source>Use internal icon theme instead of system icon theme</source>
 <translation>استفاده از پوسته شمایل داخلی به جای پوسته شمایل سامانه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="3835"/>
+<location filename="../dialogs/settingsdialog.ui" line="3814"/>
 <source>Script path:</source>
 <translation>مسیر اسکریپت:</translation>
 </message>
@@ -7796,59 +7813,59 @@ QOwnNotesAPI
 <translation>مجاز کردن نام پرونده یادداشت برای متفاوت بودن با سرخط</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4027"/>
+<location filename="../dialogs/settingsdialog.ui" line="4006"/>
 <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
 <translation>اگر می خواهید از تمام اصلاحات خارجی هنگام ویرایش یادداشت کنونی چشم پوشی کنید، این را علامت بزنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4030"/>
+<location filename="../dialogs/settingsdialog.ui" line="4009"/>
 <source>Ignore all external modifications of the current note</source>
 <translation>چشم پوشی از تمام اصلاحات خارجی یادداشت کنونی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4149"/>
+<location filename="../dialogs/settingsdialog.ui" line="4128"/>
 <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
 <translation>در صورت بروز مشکل در نوخط ها در اپ یادداشت های اون کلاود و یا نکست کلاود، می توانید این را به عنوان مثال در ویندوز استفاده کنید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4242"/>
+<location filename="../dialogs/settingsdialog.ui" line="4221"/>
 <source>App instance</source>
 <translation>نمونه برنامه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4248"/>
+<location filename="../dialogs/settingsdialog.ui" line="4227"/>
 <source>Only allow one app instance at the same time</source>
 <translation>مجاز کردن همزمان تنها یک نمونه برنامه</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4426"/>
+<location filename="../dialogs/settingsdialog.ui" line="4405"/>
 <source>Path to external editor:</source>
 <translation>مسیر ویرایشگر خارجی:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4264"/>
+<location filename="../dialogs/settingsdialog.ui" line="4243"/>
 <source>Don't show the update dialog automatically</source>
 <translation>عدم نمایش خودکار کادر گفتگوی بروزرسانی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4724"/>
-<location filename="../dialogs/settingsdialog.ui" line="5004"/>
+<location filename="../dialogs/settingsdialog.ui" line="4703"/>
+<location filename="../dialogs/settingsdialog.ui" line="4983"/>
 <source>Fonts</source>
 <translation>قلم ها</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4747"/>
-<location filename="../dialogs/settingsdialog.ui" line="4789"/>
-<location filename="../dialogs/settingsdialog.ui" line="5027"/>
-<location filename="../dialogs/settingsdialog.ui" line="5055"/>
+<location filename="../dialogs/settingsdialog.ui" line="4726"/>
+<location filename="../dialogs/settingsdialog.ui" line="4768"/>
+<location filename="../dialogs/settingsdialog.ui" line="5006"/>
+<location filename="../dialogs/settingsdialog.ui" line="5034"/>
 <source>Set a new font</source>
 <translation>تنظیم یک فونت جدید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4758"/>
-<location filename="../dialogs/settingsdialog.ui" line="4803"/>
-<location filename="../dialogs/settingsdialog.ui" line="5041"/>
-<location filename="../dialogs/settingsdialog.ui" line="5086"/>
+<location filename="../dialogs/settingsdialog.ui" line="4737"/>
+<location filename="../dialogs/settingsdialog.ui" line="4782"/>
+<location filename="../dialogs/settingsdialog.ui" line="5020"/>
+<location filename="../dialogs/settingsdialog.ui" line="5065"/>
 <source>Reset font</source>
 <translation>بازنشانی فونت</translation>
 </message>
@@ -7858,14 +7875,14 @@ QOwnNotesAPI
 <translation>اشکال زدایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4588"/>
+<location filename="../dialogs/settingsdialog.ui" line="4567"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2133"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4072"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4071"/>
 <source>Debug information</source>
 <translation>اطلاعات اشکال زدایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4594"/>
+<location filename="../dialogs/settingsdialog.ui" line="4573"/>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;
 &lt;head/&gt;
@@ -7892,37 +7909,37 @@ QOwnNotesAPI
 &lt;/html&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="4681"/>
+<location filename="../dialogs/settingsdialog.ui" line="4660"/>
 <source>&amp;Save debug information</source>
 <translation>&amp;ذخیره سازی اطلاعات اشکال زدایی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="466"/>
+<location filename="../dialogs/settingsdialog.cpp" line="467"/>
 <source>hostname of proxy server</source>
 <translation>نام میزبان سرور پراکسی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="467"/>
+<location filename="../dialogs/settingsdialog.cpp" line="468"/>
 <source>username for proxy server</source>
 <translation>نام کاربری سرور پراکسی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="468"/>
+<location filename="../dialogs/settingsdialog.cpp" line="469"/>
 <source>password for proxy server</source>
 <translation>گذرواژه مربوط به سرور پراکسی</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="470"/>
+<location filename="../dialogs/settingsdialog.cpp" line="471"/>
 <source>HTTP(S) proxy</source>
 <translation>پراکسی (HTTP(S</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="471"/>
+<location filename="../dialogs/settingsdialog.cpp" line="472"/>
 <source>SOCKS5 proxy</source>
 <translation>پراکسی SOCKS5</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="579"/>
+<location filename="../dialogs/settingsdialog.cpp" line="580"/>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
 <translation>مسیر یادداشت &lt;b&gt;%1&lt;/b&gt; موجود در سرور</translation>
 </message>
@@ -8081,19 +8098,29 @@ Connection error message: </source>
 <translation>برنامه پس از ورود مجدداً راه‌اندازی خواهد شد.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4073"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4072"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>اطلاعات اشکال زدایی در کلیپ بورد رونوشت شد.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4092"/>
 <source>The integrity of the disk database is valid.</source>
 <translation>جامعیت پایگاه داده دیسک معتبر است.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4097"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4096"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation>جامعیت پایگاه داده دیسک معتبر نیست!</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="4272"/>
+<source>Board Id: %1</source>
+<translation type="unfinished">Board Id: %1</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.cpp" line="4284"/>
+<source>Stack Id: %1</source>
+<translation type="unfinished">Stack Id: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2704"/>
@@ -8101,12 +8128,12 @@ Connection error message: </source>
 <translation>یافتن اسکریپت در مخزن اسکریپت</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="268"/>
+<location filename="../dialogs/settingsdialog.cpp" line="269"/>
 <source>Menu bar</source>
 <translation>نوار منو</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="269"/>
+<location filename="../dialogs/settingsdialog.cpp" line="270"/>
 <source>Show menu bar item</source>
 <translation>نمایش مورد نوار منو</translation>
 </message>
@@ -8247,12 +8274,12 @@ Connection error message: </source>
 <translation>آیا واقعاً می خواهید ابطالات همه صندوق های پیغام را بازنشانی کنید؟</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="105"/>
+<location filename="../dialogs/settingsdialog.cpp" line="106"/>
 <source>New script</source>
 <translation>اسکریپت جدید</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="109"/>
+<location filename="../dialogs/settingsdialog.cpp" line="110"/>
 <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
 <translation>می توانید مشتری گیت خود را از اینجا بارگیری کنید:
 &lt;a href="%url"&gt;
@@ -8260,42 +8287,42 @@ Connection error message: </source>
 &lt;/a&gt;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="423"/>
+<location filename="../dialogs/settingsdialog.cpp" line="424"/>
 <source>enabled</source>
 <translation>فعال شد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="423"/>
+<location filename="../dialogs/settingsdialog.cpp" line="424"/>
 <source>disabled</source>
 <translation>غیرفعال شد</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="426"/>
+<location filename="../dialogs/settingsdialog.cpp" line="427"/>
 <source>Portable mode is currently:</source>
 <translation>حالت قابل حمل حال حاضر:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="428"/>
+<location filename="../dialogs/settingsdialog.cpp" line="429"/>
 <source>In portable mode</source>
 <translation>در حالت قابل حمل</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="429"/>
+<location filename="../dialogs/settingsdialog.cpp" line="430"/>
 <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>پایگاه داده اس کیو ال لایت داخلی و تنظیمات در داخل یک پوشه &lt;code&gt;داده&lt;/code&gt; در محل دودویی ذخیره می شوند</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="432"/>
+<location filename="../dialogs/settingsdialog.cpp" line="433"/>
 <source>the settings will be stored in an ini file</source>
 <translation>تنظیمات در یک پرونده ini ذخیره می شوند</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="433"/>
+<location filename="../dialogs/settingsdialog.cpp" line="434"/>
 <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
 <translation>پوشه های یادداشت، مسیرهای اسکریپت و مسیر ویرایشگر خارجی به طور خودکار در پوشه &lt;code&gt;داده&lt;/code&gt; ذخیره می شوند تا پوشه های یادداشت صحیح، اسکریپت ها و ویرایشگر خارجی صرف نظر از مکان کنونی چیدمان QOwnNotes شما بارگذاری شوند</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="443"/>
+<location filename="../dialogs/settingsdialog.cpp" line="444"/>
 <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
 <translation>اگر QOwnNotes را با پارامتر &lt;code&gt;--قابل حمل&lt;/code&gt; اجرا کنید، فعال می شود.</translation>
 </message>
@@ -8326,7 +8353,7 @@ Your notes will stay intact!</source>
 <translation>&amp;لغو</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="449"/>
+<location filename="../dialogs/settingsdialog.cpp" line="450"/>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>شما یک پرونده
 &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt;
