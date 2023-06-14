@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.6.5
+- the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
+  was updated to version 23.6.0 to support Nextcloud 27 (for [#44](https://github.com/pbek/qownnotesapi/issues/44))
+
 ## 23.6.4
 - improve **Nextcloud Deck** API compatibility with wonky Nextcloud servers
   (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789))
