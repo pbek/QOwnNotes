@@ -7398,7 +7398,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1940"/>
 <source>Which calendar backend do you want to use?</source>
-<translation>Welches Kalender Backend benutzen Sie?</translation>
+<translation>Welches Kalender-Backend benutzen Sie?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1973"/>
