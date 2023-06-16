@@ -58,5 +58,6 @@ class NavigationWidget : public QTreeWidget {
     int _cursorPosition;
 
     QTreeWidgetItem *findSuitableParentItem(int elementType) const;
-    int findItemIndexforCursorPosition(int position) const;
+    int findItemIndexForCursorPosition(int position) const;
+    static QString stripMarkdown(const QString &input);
 };

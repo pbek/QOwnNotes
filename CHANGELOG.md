@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 23.6.5
+- **Markdown is now stripped** out of the heading text in the **navigation panel** to
+  improve readability (for [#2791](https://github.com/pbek/QOwnNotes/issues/2791))
 - there now is an action to **copy the absolute path of the current note** to the
   clipboard in the *Edit / Extra* menu and the note list context menu
 - the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi) was updated

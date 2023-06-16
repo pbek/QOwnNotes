@@ -100,7 +100,7 @@ QVector<Node> NavigationWidget::parseDocument(const QTextDocument *const documen
 }
 
 void NavigationWidget::selectItemForCursorPosition(int position) {
-    int itemIndex = findItemIndexforCursorPosition(position);
+    int itemIndex = findItemIndexForCursorPosition(position);
 
     QTreeWidgetItem *itemToSelect{nullptr};
     if (itemIndex >= 0) {
@@ -113,12 +113,35 @@ void NavigationWidget::selectItemForCursorPosition(int position) {
     setCurrentItem(itemToSelect);
 }
 
-int NavigationWidget::findItemIndexforCursorPosition(int position) const {
+int NavigationWidget::findItemIndexForCursorPosition(int position) const {
     auto fwdIt =
         std::lower_bound(_navigationTreeNodes.begin(), _navigationTreeNodes.end(), position,
                          [](const Node &node, int position) { return node.pos <= position; });
 
     return fwdIt - std::begin(_navigationTreeNodes) - 1;
+}
+
+QString NavigationWidget::stripMarkdown(const QString& input)
+{
+    // Regular expressions for different Markdown syntax patterns
+    static QRegularExpression boldRegex(R"(\*{2}([^*]+)\*{2})");           // **bold**
+    static QRegularExpression italicRegex(R"(\*{1}([^*]+)\*{1})");         // *italic*
+    static QRegularExpression strikethroughRegex(R"(\~{2}([^~]+)\~{2})");  // ~~strikethrough~~
+    static QRegularExpression linkRegex(R"(\[([^]]+)\]\(([^)]+)\))");      // [link](url)
+    static QRegularExpression angleBracketLinkRegex(R"(<([^>]+)>)");       // <http://link>
+    static QRegularExpression codeRegex(R"(`([^`]+)`+)");                  // `code`
+
+    // Replace each Markdown pattern with an empty string
+    QString strippedText = input;
+    // boldRegex goes first, because italicRegex needs to match the remaining "*bold*" pattern
+    strippedText.replace(boldRegex, "\\1");
+    strippedText.replace(italicRegex, "\\1");
+    strippedText.replace(strikethroughRegex, "\\1");
+    strippedText.replace(linkRegex, "\\1");
+    strippedText.replace(angleBracketLinkRegex, "\\1");
+    strippedText.replace(codeRegex, "\\1");
+
+    return strippedText;
 }
 
 void NavigationWidget::buildNavTree(const QVector<Node> &nodes) {
@@ -134,7 +157,9 @@ void NavigationWidget::buildNavTree(const QVector<Node> &nodes) {
         const int pos = node.pos;
 
         auto *item = new QTreeWidgetItem();
-        item->setText(0, node.text);
+
+        // Strip out Markdown syntax from the headline text
+        item->setText(0, stripMarkdown(node.text));
         item->setData(0, Qt::UserRole, pos);
         item->setToolTip(0, tr("headline %1").arg(elementType - MarkdownHighlighter::H1 + 1));
 
