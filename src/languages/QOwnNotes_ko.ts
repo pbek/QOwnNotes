@@ -2074,123 +2074,123 @@ File: QOwnNotes_en.ts</translation>
 <translation>도움말(&amp;H)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1150"/>
+<location filename="../mainwindow.ui" line="1151"/>
 <source>Editor width in distraction free mode</source>
 <translation>산만하지 않은 모드의 편집기 너비</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1153"/>
+<location filename="../mainwindow.ui" line="1154"/>
 <source>Editor width</source>
 <translation>편집기 너비</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1244"/>
+<location filename="../mainwindow.ui" line="1245"/>
 <source>Custom actions</source>
 <translation>사용자 지정 작업</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1264"/>
+<location filename="../mainwindow.ui" line="1265"/>
 <source>main toolbar</source>
 <translation>기본 도구 모음</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1298"/>
+<location filename="../mainwindow.ui" line="1299"/>
 <source>&amp;Quit</source>
 <translation>종료(&amp;Q)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1313"/>
+<location filename="../mainwindow.ui" line="1314"/>
 <source>&amp;Setup note folders</source>
 <translation>노트 폴더 설정(&amp;S)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1322"/>
+<location filename="../mainwindow.ui" line="1323"/>
 <source>&amp;Find note</source>
 <translation>노트 찾기(&amp;F)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1334"/>
+<location filename="../mainwindow.ui" line="1335"/>
 <source>&amp;Remove current note</source>
 <translation>현재 노트 제거(&amp;R)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1358"/>
+<location filename="../mainwindow.ui" line="1359"/>
 <source>&amp;New note</source>
 <translation>새 노트(&amp;N)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1370"/>
+<location filename="../mainwindow.ui" line="1371"/>
 <source>Check for &amp;updates</source>
 <translation>업데이트 확인(&amp;U)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1382"/>
+<location filename="../mainwindow.ui" line="1383"/>
 <source>Post questions, feature requests or issues</source>
 <translation>질문, 기능 요청 또는 문제 게시</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1393"/>
+<location filename="../mainwindow.ui" line="1394"/>
 <source>Alphabetical</source>
 <translation>알파벳순</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1396"/>
+<location filename="../mainwindow.ui" line="1397"/>
 <source>Sort alphabetical</source>
 <translation>알파벳순 정렬</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1404"/>
+<location filename="../mainwindow.ui" line="1405"/>
 <source>By date</source>
 <translation>날짜별</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1407"/>
+<location filename="../mainwindow.ui" line="1408"/>
 <source>Sort by date</source>
 <translation>날짜별로 정렬</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1431"/>
+<location filename="../mainwindow.ui" line="1432"/>
 <source>Show note &amp;versions</source>
 <translation>노트 버전 표시(&amp;V)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1434"/>
+<location filename="../mainwindow.ui" line="1435"/>
 <source>Show note versions on server</source>
 <translation>서버에 노트 버전 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1446"/>
+<location filename="../mainwindow.ui" line="1447"/>
 <source>Show trashed notes on server</source>
 <translation>서버에 쓰레기 노트 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1451"/>
-<location filename="../mainwindow.cpp" line="9396"/>
+<location filename="../mainwindow.ui" line="1452"/>
+<location filename="../mainwindow.cpp" line="9398"/>
 <source>Select &amp;all notes</source>
 <translation>모든 노트 선택(&amp;A)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1472"/>
+<location filename="../mainwindow.ui" line="1473"/>
 <source>&amp;Find in current note</source>
 <translation>현재 노트에서 찾기(&amp;F)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1475"/>
+<location filename="../mainwindow.ui" line="1476"/>
 <source>Find text in current note</source>
 <translation>Find text in current note</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1488"/>
+<location filename="../mainwindow.ui" line="1489"/>
 <source>&amp;Duplicate text</source>
 <translation>텍스트 복제(&amp;D)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1500"/>
+<location filename="../mainwindow.ui" line="1501"/>
 <source>&amp;Back in note history</source>
 <translation>노트 내역으로 돌아가기(&amp;B)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1416"/>
+<location filename="../mainwindow.ui" line="1417"/>
 <source>&amp;Settings</source>
 <translation>설정(&amp;S)</translation>
 </message>
@@ -2270,645 +2270,656 @@ File: QOwnNotes_en.ts</translation>
 <translation>추가 기능</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1071"/>
+<location filename="../mainwindow.ui" line="1072"/>
 <source>Edit</source>
 <translation>편집</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1084"/>
+<location filename="../mainwindow.ui" line="1085"/>
 <source>Versioning</source>
 <translation>버전 관리</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1095"/>
+<location filename="../mainwindow.ui" line="1096"/>
 <source>Encryption</source>
 <translation>암호화</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1107"/>
+<location filename="../mainwindow.ui" line="1108"/>
 <source>Languages</source>
 <translation>언어</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1112"/>
+<location filename="../mainwindow.ui" line="1113"/>
 <source>Spelling backend</source>
 <translation>맟춤법 백엔드</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1139"/>
+<location filename="../mainwindow.ui" line="1140"/>
 <source>To&amp;do</source>
 <translation>할 일(&amp;D)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1146"/>
+<location filename="../mainwindow.ui" line="1147"/>
 <source>&amp;Window</source>
 <translation>창(&amp;W)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1163"/>
+<location filename="../mainwindow.ui" line="1164"/>
 <location filename="../mainwindow.cpp" line="757"/>
 <source>Workspaces</source>
 <translation>작업 공간</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1168"/>
+<location filename="../mainwindow.ui" line="1169"/>
 <source>Panels</source>
 <translation>패널</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1173"/>
+<location filename="../mainwindow.ui" line="1174"/>
 <source>Toolbars</source>
 <translation>도구 모음</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1178"/>
+<location filename="../mainwindow.ui" line="1179"/>
 <source>Show</source>
 <extracomment>To show or hide stuff</extracomment>
 <translation>표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1193"/>
+<location filename="../mainwindow.ui" line="1194"/>
 <source>Workspace</source>
 <translation>작업 공간</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1202"/>
+<location filename="../mainwindow.ui" line="1203"/>
 <source>Jump to</source>
 <translation>이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1240"/>
+<location filename="../mainwindow.ui" line="1241"/>
 <source>&amp;Scripting</source>
 <translation>스크립팅(&amp;S)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1346"/>
+<location filename="../mainwindow.ui" line="1347"/>
 <source>About &amp;QOwnNotes…</source>
 <translation>QOwnNotes 정보</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1385"/>
+<location filename="../mainwindow.ui" line="1386"/>
 <source>Post questions, feature requests or problems with the help of the issue assistant</source>
 <translation>문제 해결 담당자의 도움을 받아 질문, 기능 요청 또는 문제를 게시합니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1443"/>
+<location filename="../mainwindow.ui" line="1444"/>
 <source>Show remote trash</source>
 <translation>원격 휴지통 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1460"/>
+<location filename="../mainwindow.ui" line="1461"/>
 <source>Insert text &amp;link</source>
 <translation>텍스트 링크 삽입(&amp;L)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1463"/>
+<location filename="../mainwindow.ui" line="1464"/>
 <source>Ctrl+L</source>
 <translation>Ctrl+L</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1480"/>
-<location filename="../mainwindow.ui" line="1483"/>
+<location filename="../mainwindow.ui" line="1481"/>
+<location filename="../mainwindow.ui" line="1484"/>
 <source>Auto format table</source>
 <translation>자동 형식 표</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1512"/>
+<location filename="../mainwindow.ui" line="1513"/>
 <source>Forward in note history</source>
 <translation>노트 내역에서 앞으로</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1524"/>
+<location filename="../mainwindow.ui" line="1525"/>
 <source>Show shortcuts</source>
 <translation>단축키 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1533"/>
+<location filename="../mainwindow.ui" line="1534"/>
 <source>&amp;Knowledge base</source>
 <translation>지식 자료(&amp;K)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1542"/>
+<location filename="../mainwindow.ui" line="1543"/>
 <source>Insert current &amp;time</source>
 <translation>현재 시간 삽입(&amp;T)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1554"/>
+<location filename="../mainwindow.ui" line="1555"/>
 <source>Show &amp;Todo List</source>
 <translation>할 일 목록 표시(&amp;T)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1566"/>
+<location filename="../mainwindow.ui" line="1567"/>
 <source>&amp;Export note as PDF (preview)</source>
 <translation>노트를 PDF로 내보내기 (미리보기)(&amp;E)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1569"/>
+<location filename="../mainwindow.ui" line="1570"/>
 <source>Export note as PDF (preview)</source>
 <translation>노트를 PDF로 내보내기 (미리보기)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1578"/>
+<location filename="../mainwindow.ui" line="1579"/>
 <source>&amp;Export note as PDF (text)</source>
 <translation>노트를 PDF로 내보내기 (텍스트)(&amp;E)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1587"/>
+<location filename="../mainwindow.ui" line="1588"/>
 <source>&amp;Print note (text)</source>
 <translation>노트 인쇄 (텍스트)(&amp;P)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1611"/>
+<location filename="../mainwindow.ui" line="1612"/>
 <source>Insert &amp;image</source>
 <translation>이미지 삽입(&amp;I)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1614"/>
+<location filename="../mainwindow.ui" line="1615"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
 <translation>이미지 삽입 (이미지가 현재 노트 폴더의 '미디어' 폴더에 복사됩니다)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1626"/>
+<location filename="../mainwindow.ui" line="1627"/>
 <source>Show &amp;changelog</source>
 <translation>변경 로그 표시(&amp;C)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1635"/>
+<location filename="../mainwindow.ui" line="1636"/>
 <source>&amp;Encrypt note</source>
 <translation>노트 암호화(&amp;E)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1644"/>
+<location filename="../mainwindow.ui" line="1645"/>
 <source>Edit encrypted note</source>
 <translation>암호화된 노트 편집</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1656"/>
+<location filename="../mainwindow.ui" line="1657"/>
 <source>Decrypt note</source>
 <translation>노트 암호 해독</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1665"/>
+<location filename="../mainwindow.ui" line="1666"/>
 <source>&amp;Open note in external editor</source>
 <translation>외부 편집기에서 노트 열기(&amp;O)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1686"/>
+<location filename="../mainwindow.ui" line="1687"/>
 <source>&amp;Get involved</source>
 <translation>참여하기(&amp;G)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1695"/>
+<location filename="../mainwindow.ui" line="1696"/>
 <source>Insert &amp;code block</source>
 <translation>코드 블록 삽입(&amp;C)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1731"/>
+<location filename="../mainwindow.ui" line="1732"/>
 <source>&amp;Distraction free mode</source>
 <translation>산만하지 않은 모드(&amp;D)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1734"/>
+<location filename="../mainwindow.ui" line="1735"/>
 <source>Distraction free mode, you can leave it with a button on the bottom right</source>
 <translation>산만하지 않은 모드, 오른쪽 하단에 버튼으로 남겨 둘 수 있습니다.</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1745"/>
+<location filename="../mainwindow.ui" line="1746"/>
 <source>Show &amp;toolbar</source>
 <translation>도구 모음 표시(&amp;T)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1753"/>
+<location filename="../mainwindow.ui" line="1754"/>
 <source>Narrow</source>
 <translation>좁게</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1764"/>
+<location filename="../mainwindow.ui" line="1765"/>
 <source>Medium</source>
 <translation>중간</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1775"/>
+<location filename="../mainwindow.ui" line="1776"/>
 <source>Wide</source>
 <translation>넓게</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1786"/>
+<location filename="../mainwindow.ui" line="1787"/>
 <source>Full</source>
 <translation>전체</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1798"/>
+<location filename="../mainwindow.ui" line="1799"/>
 <source>Paste html or media</source>
 <translation>HTML 또는 미디어 붙여넣기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1801"/>
-<location filename="../mainwindow.ui" line="1804"/>
+<location filename="../mainwindow.ui" line="1802"/>
+<location filename="../mainwindow.ui" line="1805"/>
 <source>Paste images, notes and html from the clipboard</source>
 <translation>클립보드에서 이미지, 노트 및 html 붙여넣기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1816"/>
+<location filename="../mainwindow.ui" line="1817"/>
 <source>Show note in &amp;file manager</source>
 <translation>파일 관리자에 노트 표시(&amp;F)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1828"/>
+<location filename="../mainwindow.ui" line="1829"/>
 <source>Format text &amp;bold</source>
 <translation>굵은 텍스트 형식(&amp;B)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1840"/>
+<location filename="../mainwindow.ui" line="1841"/>
 <source>Format text &amp;italic</source>
 <translation>기울임꼴 텍스트 형식(&amp;I)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1852"/>
+<location filename="../mainwindow.ui" line="1853"/>
 <source>&amp;Increase note text size</source>
 <translation>노트 텍스트 크기 증가(&amp;I)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1864"/>
+<location filename="../mainwindow.ui" line="1865"/>
 <source>&amp;Decrease note text size</source>
 <translation>노트 텍스트 크기 감소(&amp;D)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1876"/>
+<location filename="../mainwindow.ui" line="1877"/>
 <source>&amp;Reset note text size</source>
 <translation>노트 텍스트 크기 재설정(&amp;R)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1888"/>
+<location filename="../mainwindow.ui" line="1889"/>
 <source>&amp;Add tag to note</source>
 <translation>노트에 태그 추가(&amp;A)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1900"/>
+<location filename="../mainwindow.ui" line="1901"/>
 <source>&amp;Reload note folder</source>
 <translation>노트 폴더 다시 불러오기(&amp;R)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1972"/>
+<location filename="../mainwindow.ui" line="1973"/>
 <source>Show log</source>
 <translation>로그 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1981"/>
+<location filename="../mainwindow.ui" line="1982"/>
 <source>Export note as HTML</source>
 <translation>노트를 HTML로 내보내기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1993"/>
-<location filename="../mainwindow.ui" line="1996"/>
+<location filename="../mainwindow.ui" line="1994"/>
+<location filename="../mainwindow.ui" line="1997"/>
 <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
 <translation>#qownnotes IRC (Kiwi) 채널을 엽니다. 응답을 받으려면 온라인 상태를 유지해야 합니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2060"/>
+<location filename="../mainwindow.ui" line="2061"/>
 <source>Cycle text case</source>
 <translation>텍스트 대소문자 주기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2133"/>
+<location filename="../mainwindow.ui" line="2134"/>
 <source>Show note list under tag panel</source>
 <translation>태그 패널 아래에 노트 목록 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2151"/>
+<location filename="../mainwindow.ui" line="2152"/>
 <source>Find notes in all tags / subfolders</source>
 <translation>모든 태그/하위 폴더에서 노트 찾기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2172"/>
+<location filename="../mainwindow.ui" line="2173"/>
 <source>Import notes from text files</source>
 <translation>텍스트 파일에서 노트 가져오기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2193"/>
-<location filename="../mainwindow.ui" line="2196"/>
+<location filename="../mainwindow.ui" line="2194"/>
+<location filename="../mainwindow.ui" line="2197"/>
 <source>Open the Telegram group</source>
 <translation>Telegram 그룹 열기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2208"/>
-<location filename="../mainwindow.ui" line="2211"/>
+<location filename="../mainwindow.ui" line="2209"/>
+<location filename="../mainwindow.ui" line="2212"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
 <extracomment>"Element" as in the chat service</extracomment>
 <translation>QOwnNotes 매트릭스 (요소) 룸 열기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2238"/>
+<location filename="../mainwindow.ui" line="2239"/>
 <source>Unlock panels</source>
 <translation>패널 잠금 해제</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2247"/>
-<location filename="../mainwindow.cpp" line="10313"/>
+<location filename="../mainwindow.ui" line="2248"/>
+<location filename="../mainwindow.cpp" line="10317"/>
 <source>Remove current workspace</source>
 <translation>현재 작업 공간 제거</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2256"/>
+<location filename="../mainwindow.ui" line="2257"/>
 <source>Add new workspace</source>
 <translation>새 작업 공간 추가</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2265"/>
+<location filename="../mainwindow.ui" line="2266"/>
 <source>Rename current workspace</source>
 <translation>현재 작업 공간 이름 바꾸기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2274"/>
+<location filename="../mainwindow.ui" line="2275"/>
 <source>Switch to previous workspace</source>
 <translation>이전 작업 공간으로 전환</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2282"/>
+<location filename="../mainwindow.ui" line="2283"/>
 <source>Show all panels</source>
 <translation>모든 패널 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2291"/>
+<location filename="../mainwindow.ui" line="2292"/>
 <source>Find action</source>
 <translation>동작 찾기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2294"/>
-<location filename="../mainwindow.ui" line="2297"/>
+<location filename="../mainwindow.ui" line="2295"/>
+<location filename="../mainwindow.ui" line="2298"/>
 <source>Find an action from the menu</source>
 <translation>메뉴에서 동작 찾기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2309"/>
+<location filename="../mainwindow.ui" line="2310"/>
 <source>Insert table</source>
 <translation>표 삽입</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2321"/>
+<location filename="../mainwindow.ui" line="2322"/>
 <source>Insert block &amp;quote</source>
 <translation>블록 따옴표 삽입(&amp;Q)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2329"/>
-<location filename="../mainwindow.ui" line="2332"/>
+<location filename="../mainwindow.ui" line="2330"/>
+<location filename="../mainwindow.ui" line="2333"/>
 <source>Search selected text on the web</source>
 <translation>웹에서 선택한 텍스트 검색</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2340"/>
+<location filename="../mainwindow.ui" line="2341"/>
 <source>Delete line</source>
 <translation>줄 삭제</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2348"/>
+<location filename="../mainwindow.ui" line="2349"/>
 <source>Delete word</source>
 <translation>단어 삭제</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2356"/>
+<location filename="../mainwindow.ui" line="2357"/>
 <source>Copy note headline</source>
 <translation>노트 표제 복사</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2368"/>
-<location filename="../mainwindow.cpp" line="9375"/>
+<location filename="../mainwindow.ui" line="2369"/>
+<location filename="../mainwindow.cpp" line="9376"/>
 <source>Open note in different window</source>
 <translation>다른 창에서 노트 열기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2380"/>
+<location filename="../mainwindow.ui" line="2381"/>
 <source>Save modified notes</source>
 <translation>수정된 노트 저장</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2391"/>
+<location filename="../mainwindow.ui" line="2392"/>
 <source>Ascending</source>
 <translation>오름차순</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2399"/>
+<location filename="../mainwindow.ui" line="2400"/>
 <source>Descending</source>
 <translation>내림차순</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2408"/>
-<location filename="../mainwindow.cpp" line="9380"/>
+<location filename="../mainwindow.ui" line="2409"/>
+<location filename="../mainwindow.cpp" line="9382"/>
 <source>Show note git versions</source>
 <translation>노트 Git 버전 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2417"/>
+<location filename="../mainwindow.ui" line="2418"/>
 <source>Find scripts in script repository</source>
 <translation>스크립트 저장소에서 스크립트 찾기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2429"/>
+<location filename="../mainwindow.ui" line="2430"/>
 <source>Script settings</source>
 <translation>스크립트 설정</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2438"/>
+<location filename="../mainwindow.ui" line="2439"/>
 <source>Insert attachment</source>
 <translation>첨부 파일 삽입</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2465"/>
+<location filename="../mainwindow.ui" line="2466"/>
 <source>Check for script updates</source>
 <translation>스크립트 업데이트 확인</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2474"/>
+<location filename="../mainwindow.ui" line="2475"/>
 <source>Show local trash</source>
 <translation>로컬 휴지통 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2479"/>
-<location filename="../mainwindow.ui" line="2482"/>
+<location filename="../mainwindow.ui" line="2480"/>
+<location filename="../mainwindow.ui" line="2483"/>
 <source>Jump to note edit panel</source>
 <translation>노트 편집 패널로 이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2494"/>
+<location filename="../mainwindow.ui" line="2495"/>
 <source>Manage stored attachments</source>
 <translation>저장된 첨부 파일 관리</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2499"/>
+<location filename="../mainwindow.ui" line="2500"/>
 <source>Jump to note subfolder panel</source>
 <translation>노트 하위 폴더 패널로 이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2507"/>
+<location filename="../mainwindow.ui" line="2508"/>
 <source>Jump to tags panel</source>
 <translation>태그 패널로 이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2515"/>
+<location filename="../mainwindow.ui" line="2516"/>
 <source>Jump to note list panel</source>
 <translation>노트 목록 패널로 이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2523"/>
+<location filename="../mainwindow.ui" line="2524"/>
 <source>Activate context menu</source>
 <translation>상황에 맞는 메뉴 활성화</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2531"/>
+<location filename="../mainwindow.ui" line="2532"/>
 <source>Import bookmarks from server</source>
 <translation>서버에서 북마크 가져오기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2536"/>
-<location filename="../mainwindow.ui" line="2539"/>
+<location filename="../mainwindow.ui" line="2537"/>
+<location filename="../mainwindow.ui" line="2540"/>
 <source>Toggle full-screen mode</source>
 <translation>전체 화면 모드 전환</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2550"/>
+<location filename="../mainwindow.ui" line="2551"/>
 <source>Typewriter mode</source>
 <translation>타자기 모드</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2563"/>
+<location filename="../mainwindow.ui" line="2564"/>
 <source>Check spelling</source>
 <translation>맞춤법 검사</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2571"/>
-<location filename="../mainwindow.cpp" line="11262"/>
+<location filename="../mainwindow.ui" line="2572"/>
+<location filename="../mainwindow.cpp" line="11266"/>
 <source>Automatically detect</source>
 <translation>자동 검색</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2576"/>
+<location filename="../mainwindow.ui" line="2577"/>
 <source>Manage dictionaries</source>
 <translation>사전 관리</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2584"/>
+<location filename="../mainwindow.ui" line="2585"/>
 <source>Custom</source>
 <translation>사용자 지정</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2587"/>
+<location filename="../mainwindow.ui" line="2588"/>
 <source>5</source>
 <translation>5</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2592"/>
+<location filename="../mainwindow.ui" line="2593"/>
 <source>Show/Hide application</source>
 <translation>응용 프로그램 표시/숨기기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2601"/>
+<location filename="../mainwindow.ui" line="2602"/>
 <source>Previous note tab</source>
 <translation>이전 노트 탭</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2613"/>
+<location filename="../mainwindow.ui" line="2614"/>
 <source>Next note tab</source>
 <translation>다음 노트 탭</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2625"/>
+<location filename="../mainwindow.ui" line="2626"/>
 <source>Close current note tab</source>
 <translation>현재 노트 탭 닫기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2637"/>
+<location filename="../mainwindow.ui" line="2638"/>
 <source>New note in new tab</source>
 <translation>새 탭의 새 노트</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2645"/>
+<location filename="../mainwindow.ui" line="2646"/>
 <source>Toggle note stickiness of current tab</source>
 <translation>현재 탭의 노트 고정 기능 전환</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2654"/>
+<location filename="../mainwindow.ui" line="2655"/>
 <source>Format text underline</source>
 <translation>텍스트 밑줄 형식</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2662"/>
+<location filename="../mainwindow.ui" line="2663"/>
 <source>Jump to navigation panel</source>
 <translation>탐색 패널로 이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2674"/>
+<location filename="../mainwindow.ui" line="2675"/>
 <source>Insert &amp;note link</source>
 <translation>노트 링크 삽입(&amp;N)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2677"/>
+<location filename="../mainwindow.ui" line="2678"/>
 <source>Ctrl+Shift+L</source>
 <translation>Ctrl+Shift+L</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2686"/>
+<location filename="../mainwindow.ui" line="2687"/>
 <source>Import notes from Joplin</source>
 <translation>Joplin에서 노트 가져오기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2691"/>
+<location filename="../mainwindow.ui" line="2692"/>
 <source>Toggle always-on-top mode</source>
 <translation>상시 작동 모드 전환</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2700"/>
+<location filename="../mainwindow.ui" line="2701"/>
 <source>&amp;Load Todo List items</source>
 <translation>할 일 목록 항목 불러오기(&amp;L)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2709"/>
+<location filename="../mainwindow.ui" line="2710"/>
 <source>Insert Nextcloud Deck card link</source>
 <translation>Nextcloud 데크 카드 링크 삽입</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1911"/>
+<location filename="../mainwindow.ui" line="2718"/>
+<source>Copy absolute path to note to clipboard</source>
+<translation type="unfinished">Copy absolute path to note to clipboard</translation>
+</message>
+<message>
+<location filename="../mainwindow.ui" line="2721"/>
+<location filename="../mainwindow.cpp" line="9378"/>
+<source>Copy absolute note path to clipboard</source>
+<translation type="unfinished">Copy absolute note path to clipboard</translation>
+</message>
+<message>
+<location filename="../mainwindow.ui" line="1912"/>
 <source>Use &amp;vertical preview layout</source>
 <translation>세로 미리보기 레이아웃 사용(&amp;V)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1914"/>
-<location filename="../mainwindow.ui" line="1917"/>
+<location filename="../mainwindow.ui" line="1915"/>
+<location filename="../mainwindow.ui" line="1918"/>
 <source>The note edit panel will be above the preview panel</source>
 <translation>노트 편집 패널이 미리보기 패널 위에 있습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1926"/>
+<location filename="../mainwindow.ui" line="1927"/>
 <source>Replace in current note</source>
 <translation>현재 노트에서 바꾸기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1934"/>
+<location filename="../mainwindow.ui" line="1935"/>
 <source>Autocomplete, solve equation or open URL</source>
 <translation>자동 완성, 방정식 풀기 또는 URL 열기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1937"/>
+<location filename="../mainwindow.ui" line="1938"/>
 <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
 <translation>현재 줄에 있는 '(2+3)*6='와 같은 간단한 방정식을 풀어보세요</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1945"/>
+<location filename="../mainwindow.ui" line="1946"/>
 <source>Select note folder</source>
 <translation>노트 폴더 선택</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1960"/>
+<location filename="../mainwindow.ui" line="1961"/>
 <source>Reload scripting engine</source>
 <translation>스크립트 엔진 다시 불러오기</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2181"/>
+<location filename="../mainwindow.ui" line="2182"/>
 <source>Manage stored image files</source>
 <translation>저장된 이미지 파일 관리</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2223"/>
-<location filename="../mainwindow.ui" line="2226"/>
+<location filename="../mainwindow.ui" line="2224"/>
+<location filename="../mainwindow.ui" line="2227"/>
 <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
 <translation>Qownnotes Gitter 룸을 엽니다. 로그인하려면 GitHub 또는 Twitter 계정이 필요하지만 오프라인 메시지를 받을 수 있습니다</translation>
 </message>
@@ -2923,83 +2934,83 @@ File: QOwnNotes_en.ts</translation>
 <translation>노트 작업…</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1599"/>
+<location filename="../mainwindow.ui" line="1600"/>
 <source>&amp;Print note (preview)</source>
 <translation>노트 인쇄 (미리보기)(&amp;P)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1677"/>
+<location filename="../mainwindow.ui" line="1678"/>
 <source>&amp;Export note as Markdown file</source>
 <translation>노트를 마크다운 파일로 내보내기(&amp;E)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1707"/>
+<location filename="../mainwindow.ui" line="1708"/>
 <source>Move down in note list</source>
 <translation>노트 목록에서 아래로 이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1719"/>
+<location filename="../mainwindow.ui" line="1720"/>
 <source>Move up in note list</source>
 <translation>노트 목록에서 위로 이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2005"/>
+<location filename="../mainwindow.ui" line="2006"/>
 <source>Insert headline from note filename</source>
 <translation>노트 파일 이름에서 표제 삽입</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2019"/>
+<location filename="../mainwindow.ui" line="2020"/>
 <source>Use softwrap in note editor and preview</source>
 <translation>노트 편집기 및 미리보기에서 소프트랩 사용</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2027"/>
+<location filename="../mainwindow.ui" line="2028"/>
 <source>Show status bar</source>
 <translation>상태 표시줄 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2042"/>
+<location filename="../mainwindow.ui" line="2043"/>
 <source>Share note</source>
 <translation>노트 공유</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2072"/>
+<location filename="../mainwindow.ui" line="2073"/>
 <source>Markdown cheatsheet</source>
 <translation>마크다운 치트시트</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2081"/>
+<location filename="../mainwindow.ui" line="2082"/>
 <source>Strike out text</source>
 <translation>취소선 텍스트</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2092"/>
+<location filename="../mainwindow.ui" line="2093"/>
 <source>Use one column mode</source>
 <translation>하나의 열 모드 사용</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2095"/>
-<location filename="../mainwindow.ui" line="2098"/>
+<location filename="../mainwindow.ui" line="2096"/>
+<location filename="../mainwindow.ui" line="2099"/>
 <source>Use a one column minimal mode (like NVAlt)</source>
 <translation>단일 열 최소 모드 사용 (NValt 등)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2110"/>
+<location filename="../mainwindow.ui" line="2111"/>
 <source>Show menu bar</source>
 <translation>메뉴 모음 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2122"/>
+<location filename="../mainwindow.ui" line="2123"/>
 <source>Split note at cursor position</source>
 <translation>커서 위치에서 노트 분할</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2142"/>
+<location filename="../mainwindow.ui" line="2143"/>
 <source>Donate</source>
 <translation>기부</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2163"/>
+<location filename="../mainwindow.ui" line="2164"/>
 <source>Import notes from Evernote</source>
 <translation>Evernote에서 노트 가져오기</translation>
 </message>
@@ -3019,8 +3030,8 @@ Restore current note?</source>
 <location filename="../mainwindow.cpp" line="5289"/>
 <location filename="../mainwindow.cpp" line="5309"/>
 <location filename="../mainwindow.cpp" line="6589"/>
-<location filename="../mainwindow.cpp" line="9461"/>
-<location filename="../mainwindow.cpp" line="11608"/>
+<location filename="../mainwindow.cpp" line="9465"/>
+<location filename="../mainwindow.cpp" line="11612"/>
 <source>&amp;Cancel</source>
 <translation>취소(&amp;C)</translation>
 </message>
@@ -3342,14 +3353,19 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>임시 이미지 저장 중</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11605"/>
+<location filename="../mainwindow.cpp" line="11609"/>
 <source>Nextcloud Deck support disabled!</source>
 <translation>Next Cloud Deck 지원이 비활성화되었습니다!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11606"/>
+<location filename="../mainwindow.cpp" line="11610"/>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation>Next Cloud 데크 지원이 활성화되지 않았거나 설정이 잘못되었습니다.&lt;br /&gt;설정에서 &lt;strong&gt;Nextcloud&lt;/strong&gt; 구성을 확인하십시오!</translation>
+</message>
+<message>
+<location filename="../mainwindow.cpp" line="11628"/>
+<source>Note path '%1' was copied to the clipboard</source>
+<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6420"/>
@@ -3420,44 +3436,44 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>노트의 하위 폴더로 이동</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9368"/>
+<location filename="../mainwindow.cpp" line="9369"/>
 <source>Open selected notes in tabs</source>
 <translation>탭에서 선택한 노트 열기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10850"/>
+<location filename="../mainwindow.cpp" line="10854"/>
 <source>A script update was found!</source>
 <translation>스크립트 업데이트를 찾았습니다!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10855"/>
+<location filename="../mainwindow.cpp" line="10859"/>
 <source>Script updates</source>
 <translation>스크립트 업데이트</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10856"/>
+<location filename="../mainwindow.cpp" line="10860"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>스크립트 저장소에서 스크립트에 대한 업데이트를 찾았습니다! 업데이트하시겠습니까?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10876"/>
+<location filename="../mainwindow.cpp" line="10880"/>
 <source>No script updates were found</source>
 <translation>스크립트 업데이트를 찾을 수 없습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11510"/>
+<location filename="../mainwindow.cpp" line="11514"/>
 <source>Toggle note stickiness</source>
 <translation>노트 고정 전환
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11515"/>
+<location filename="../mainwindow.cpp" line="11519"/>
 <source>Close other note tabs</source>
 <translation>다른 노트 탭 닫기</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9260"/>
-<location filename="../mainwindow.cpp" line="9446"/>
+<location filename="../mainwindow.cpp" line="9450"/>
 <source>Rename note</source>
 <translation>노트 이름 바꾸기</translation>
 </message>
@@ -3507,50 +3523,50 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>선택한 노트에서 태그 제거(&amp;R)...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9446"/>
+<location filename="../mainwindow.cpp" line="9450"/>
 <source>Name:</source>
 <translation>이름:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9457"/>
+<location filename="../mainwindow.cpp" line="9461"/>
 <source>Note renaming not enabled!</source>
 <translation>노트 이름 변경이 활성화되지 않았습니다!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10090"/>
+<location filename="../mainwindow.cpp" line="10094"/>
 <source>Create new workspace</source>
 <translation>새 작업 공간 만들기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10090"/>
-<location filename="../mainwindow.cpp" line="10351"/>
+<location filename="../mainwindow.cpp" line="10094"/>
+<location filename="../mainwindow.cpp" line="10355"/>
 <source>Workspace name:</source>
 <translation>작업 공간 이름:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10207"/>
+<location filename="../mainwindow.cpp" line="10211"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>전체</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10214"/>
+<location filename="../mainwindow.cpp" line="10218"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>최소</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10314"/>
+<location filename="../mainwindow.cpp" line="10318"/>
 <source>Remove the current workspace?</source>
 <translation>현재 작업 공간을 제거하시겠습니까?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10351"/>
+<location filename="../mainwindow.cpp" line="10355"/>
 <source>Rename workspace</source>
 <translation>작업 공간 이름 바꾸기</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10504"/>
+<location filename="../mainwindow.cpp" line="10508"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3558,47 +3574,47 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10770"/>
+<location filename="../mainwindow.cpp" line="10774"/>
 <source>Disallow all note editing</source>
 <translation>모든 노트 편집 허용 안 함</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10788"/>
+<location filename="../mainwindow.cpp" line="10792"/>
 <source>Note editing disabled</source>
 <translation>노트 편집 사용 안 함</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10789"/>
+<location filename="../mainwindow.cpp" line="10793"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
 <translation>노트 편집이 현재 비활성화되어 있습니다. 다시 허용하시겠습니까?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11020"/>
+<location filename="../mainwindow.cpp" line="11024"/>
 <source>Select text files to import</source>
 <translation>가져올 텍스트 파일 선택</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11049"/>
+<location filename="../mainwindow.cpp" line="11053"/>
 <source>Importing: %1</source>
 <translation>가져오기: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11111"/>
+<location filename="../mainwindow.cpp" line="11115"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>노트 표제 '%1'이(가) 클립보드에 복사되었습니다</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11197"/>
+<location filename="../mainwindow.cpp" line="11201"/>
 <source>Leave full-screen mode</source>
 <translation>전체 화면 모드 종료</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11372"/>
+<location filename="../mainwindow.cpp" line="11376"/>
 <source>Custom editor width</source>
 <translation>사용자 정의 편집기 너비</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11372"/>
+<location filename="../mainwindow.cpp" line="11376"/>
 <source>Characters:</source>
 <translation>문자:</translation>
 </message>
@@ -3610,13 +3626,13 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2453"/>
-<location filename="../mainwindow.cpp" line="10771"/>
+<location filename="../mainwindow.ui" line="2454"/>
+<location filename="../mainwindow.cpp" line="10775"/>
 <source>Allow all note editing</source>
 <translation>모든 노트 편집 허용</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1234"/>
+<location filename="../mainwindow.ui" line="1235"/>
 <source>&amp;Tag</source>
 <translation>태그(&amp;T)</translation>
 </message>
@@ -3761,7 +3777,7 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5008"/>
-<location filename="../mainwindow.cpp" line="11034"/>
+<location filename="../mainwindow.cpp" line="11038"/>
 <source>Cancel</source>
 <translation>취소</translation>
 </message>
@@ -3787,27 +3803,27 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9374"/>
+<location filename="../mainwindow.cpp" line="9375"/>
 <source>Open note in external editor</source>
 <translation>외부 편집기에서 노트 열기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9376"/>
+<location filename="../mainwindow.cpp" line="9377"/>
 <source>Show note in file manager</source>
 <translation>파일 관리자에 노트 표시</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9458"/>
+<location filename="../mainwindow.cpp" line="9462"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>노트의 이름을 변경하려면 노트 파일 이름을 표제와 다르게 허용하는 옵션을 활성화해야 합니다.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9633"/>
+<location filename="../mainwindow.cpp" line="9637"/>
 <source>Create a new folder</source>
 <translation>새 폴더 만들기</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9633"/>
+<location filename="../mainwindow.cpp" line="9637"/>
 <source>Folder name:</source>
 <translation>폴더 이름:</translation>
 </message>
@@ -4125,14 +4141,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <location filename="../mainwindow.cpp" line="5274"/>
 <location filename="../mainwindow.cpp" line="5289"/>
 <location filename="../mainwindow.cpp" line="5309"/>
-<location filename="../mainwindow.cpp" line="9461"/>
-<location filename="../mainwindow.cpp" line="11608"/>
+<location filename="../mainwindow.cpp" line="9465"/>
+<location filename="../mainwindow.cpp" line="11612"/>
 <source>Open &amp;settings</source>
 <translation>설정 열기(&amp;S)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1695"/>
-<location filename="../mainwindow.cpp" line="11174"/>
+<location filename="../mainwindow.cpp" line="11178"/>
 <source>leave</source>
 <translation>나가기</translation>
 </message>
@@ -4165,7 +4181,7 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <context>
 <name>NavigationWidget</name>
 <message>
-<location filename="../widgets/navigationwidget.cpp" line="139"/>
+<location filename="../widgets/navigationwidget.cpp" line="164"/>
 <source>headline %1</source>
 <translation>표제 %1</translation>
 </message>
@@ -4236,22 +4252,22 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <context>
 <name>NextcloudDeckService</name>
 <message>
-<location filename="../services/nextclouddeckservice.cpp" line="113"/>
+<location filename="../services/nextclouddeckservice.cpp" line="117"/>
 <source>Error while creating card</source>
 <translation>카드를 만드는 중 오류 발생</translation>
 </message>
 <message>
-<location filename="../services/nextclouddeckservice.cpp" line="114"/>
+<location filename="../services/nextclouddeckservice.cpp" line="118"/>
 <source>Creating a card failed with status code %1 and message: %2</source>
 <translation>상태 코드 %1 및 메시지 %2으로 카드를 만들지 못했습니다</translation>
 </message>
 <message>
-<location filename="../services/nextclouddeckservice.cpp" line="226"/>
+<location filename="../services/nextclouddeckservice.cpp" line="230"/>
 <source>Error while loading boards</source>
 <translation>보드를 로드하는 중 오류 발생</translation>
 </message>
 <message>
-<location filename="../services/nextclouddeckservice.cpp" line="227"/>
+<location filename="../services/nextclouddeckservice.cpp" line="231"/>
 <source>Loading the boards failed with status code %1 and message: %2</source>
 <translation>보드를 로드하지 못했습니다. 상태 코드 %1 및 메시지: %2</translation>
 </message>

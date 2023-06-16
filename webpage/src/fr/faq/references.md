@@ -179,6 +179,18 @@ Ce que d'autres personnes ont dit à propos de QOwnNotes…
 - [QOwnNotes绿色版 21.7.12 | 强大的免费笔记软件 – 软件No1](https://www.rjno1.com/qownnotes/)
 - [QOwnNotes est très versatile ! - L'utilitaire de prise de notes le plus convivial et le plus facile à maîtriser ! - YouTube](https://www.youtube.com/watch?v=WFoRQf31-h0)
 - [Présentation à propos de QOwnNotes par stevelitt](http://troubleshooters.com/linux/presentations/golug_qownnotes/golug_qownnotes.pdf)
+- [QownNotes – De la prise de notes chiffrées sur votre cloud personnel](https://korben.info/qownnotes.html)
+- [The BEST Linux NOTE TAKING APPS - Invidious](https://yewtu.be/_d7kosQ0Ji4) 5:37
+- [BEST apps for NOTE TAKING on LINUX in 2022 - YouTube](https://youtu.be/_d7kosQ0Ji4?t=337)
+- [Записная книжка на ПК - QOwnNotes 22.4.0 Portable скачать через торрент](https://prog-top.net/office/19820-zapisnaja-knizhka-na-pk-qownnotes-201111-build-790-portable.html)
+- [Serie - Strukturierte Notizen: QOwnNotes](https://gnulinux.ch/serie-strukturierte-notizen-qownnotes)
+- [How to Install QOwnNotes on Ubuntu 22.04 | 20.04 - LinuxCapable](https://www.linuxcapable.com/install-qownnotes-on-ubuntu-linux/)
+- [How To Install QOwnNotes on Ubuntu 22.04 LTS - idroot](https://idroot.us/install-qownnotes-ubuntu-22-04/)
+- [BEST apps for NOTE TAKING on LINUX in 2022 - YouTube](https://youtu.be/_d7kosQ0Ji4?t=338)
+- [10 Best Note-Taking Apps for Linux Desktop](https://www.tecmint.com/note-taking-apps-linux/)
+- [4 programas para substituir o Bloco de notas | TecMasters](https://tecmasters.com.br/4-programas-para-substituir-o-bloco-de-notas/)
+- [Alex 🇮🇹 💛 🇷🇺: "Many believe that #Obsidian was the first app bui…" - PKM.social](https://pkm.social/@alexl/110174199123018040)
+- [QOwnNotes | Free Note Organizer Tool](https://mrfreetools.com/tool/qownnotes/)
 
 ## Mentions
 
@@ -282,6 +294,17 @@ Ce que d'autres personnes ont dit à propos de QOwnNotes…
 - [Inspire Writer - Voxcaster](https://www.vox.me.uk/post/2020/04/inspire-writer/)
 - [OneNote für Windows: Microsoft arbeitet an einziger, einheitlicher App](https://stadt-bremerhaven.de/onenote-fuer-windows-microsoft-arbeitet-an-einziger-einheitlicher-app)
 - [Typora es un bonito y potente editor de texto multiplataforma compatible con Markdown y MathJax](https://www.genbeta.com/ofimatica/typora-es-un-bonito-y-potente-editor-de-texto-multiplataforma-compatible-con-markdown-y-mathjax)
+- [Typora is no longer free. Is there a good alternative or replacement? : freesoftware](https://www.reddit.com/r/freesoftware/comments/r6kir3/typora_is_no_longer_free_is_there_a_good/)
+- [Running PlantUML from Other Tools](https://plantuml.com/en/running)
+- [Way to quick add notes? - #13 by ShaneNZ - Resolved help - Obsidian Forum](https://forum.obsidian.md/t/way-to-quick-add-notes/5301/13)
+- [Plaintext productivity on Windows : programming](https://www.reddit.com/r/programming/comments/tjct7i/plaintext_productivity_on_windows/)
+- <https://2ch.life/s/res/3074720.html>
+- [A rich note taking application written in QT : kde](https://www.reddit.com/r/kde/comments/7u88ji/a_rich_note_taking_application_written_in_qt/)
+- [Trying to implement Zettelkasten - on windows — Zettelkasten Forum](https://forum.zettelkasten.de/discussion/comment/3693/#Comment_3693)
+- [Which is the best encrypted and open-source notes taking application with markdown support? : webdev](https://www.reddit.com/r/webdev/comments/wmhoea/which_is_the_best_encrypted_and_opensource_notes/)
+- [Reddit - Dive into anything](https://www.reddit.com/r/privacytoolsIO/comments/g1z01w/guide_to_how_to_restore_your_privacy_huge_list/)
+- [Editing text and markdown in Nextcloud - #2 by just - 🍱 Features & apps - Nextcloud community](https://help.nextcloud.com/t/editing-text-and-markdown-in-nextcloud/138197/2)
+- [How did you choose between Joplin, Foam, Trilium, Obsidian, Logseq, Roam? | Hacker News](https://news.ycombinator.com/item?id=33069621)
 
 ## QOwnNotes sous d'autres systèmes d'exploitation
 

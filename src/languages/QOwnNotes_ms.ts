@@ -2071,123 +2071,123 @@
 <translation>&amp;Bantuan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1150"/>
+<location filename="../mainwindow.ui" line="1151"/>
 <source>Editor width in distraction free mode</source>
 <translation>Lebar editor dalam mod percuma gangguan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1153"/>
+<location filename="../mainwindow.ui" line="1154"/>
 <source>Editor width</source>
 <translation>Lebar editor</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1244"/>
+<location filename="../mainwindow.ui" line="1245"/>
 <source>Custom actions</source>
 <translation>Tindakan tersuai</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1264"/>
+<location filename="../mainwindow.ui" line="1265"/>
 <source>main toolbar</source>
 <translation>bar alat utama</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1298"/>
+<location filename="../mainwindow.ui" line="1299"/>
 <source>&amp;Quit</source>
 <translation>&amp;Berhenti</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1313"/>
+<location filename="../mainwindow.ui" line="1314"/>
 <source>&amp;Setup note folders</source>
 <translation>&amp;Folder folder persediaan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1322"/>
+<location filename="../mainwindow.ui" line="1323"/>
 <source>&amp;Find note</source>
 <translation>&amp;Cari nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1334"/>
+<location filename="../mainwindow.ui" line="1335"/>
 <source>&amp;Remove current note</source>
 <translation>&amp;Alih keluar nota semasa</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1358"/>
+<location filename="../mainwindow.ui" line="1359"/>
 <source>&amp;New note</source>
 <translation>&amp;Nota baru</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1370"/>
+<location filename="../mainwindow.ui" line="1371"/>
 <source>Check for &amp;updates</source>
 <translation>Menyemak &amp;kemas kini</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1382"/>
+<location filename="../mainwindow.ui" line="1383"/>
 <source>Post questions, feature requests or issues</source>
 <translation>Siarkan soalan, permintaan atau isu ciri</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1393"/>
+<location filename="../mainwindow.ui" line="1394"/>
 <source>Alphabetical</source>
 <translation>Abjad</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1396"/>
+<location filename="../mainwindow.ui" line="1397"/>
 <source>Sort alphabetical</source>
 <translation>Isih mengikut abjad</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1404"/>
+<location filename="../mainwindow.ui" line="1405"/>
 <source>By date</source>
 <translation>Sehingga kini</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1407"/>
+<location filename="../mainwindow.ui" line="1408"/>
 <source>Sort by date</source>
 <translation>Isih mengikut tarikh</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1431"/>
+<location filename="../mainwindow.ui" line="1432"/>
 <source>Show note &amp;versions</source>
 <translation>Tunjukkan &amp;versi nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1434"/>
+<location filename="../mainwindow.ui" line="1435"/>
 <source>Show note versions on server</source>
 <translation>Tunjukkan versi nota pada pelayan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1446"/>
+<location filename="../mainwindow.ui" line="1447"/>
 <source>Show trashed notes on server</source>
 <translation>Tunjukkan nota yang dibazirkan pada pelayan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1451"/>
-<location filename="../mainwindow.cpp" line="9396"/>
+<location filename="../mainwindow.ui" line="1452"/>
+<location filename="../mainwindow.cpp" line="9398"/>
 <source>Select &amp;all notes</source>
 <translation>Pilih &amp;semua nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1472"/>
+<location filename="../mainwindow.ui" line="1473"/>
 <source>&amp;Find in current note</source>
 <translation>&amp;Cari dalam nota semasa</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1475"/>
+<location filename="../mainwindow.ui" line="1476"/>
 <source>Find text in current note</source>
 <translation>Cari teks dalam nota semasa</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1488"/>
+<location filename="../mainwindow.ui" line="1489"/>
 <source>&amp;Duplicate text</source>
 <translation>&amp;Teks pendua</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1500"/>
+<location filename="../mainwindow.ui" line="1501"/>
 <source>&amp;Back in note history</source>
 <translation>&amp;Kembali dalam sejarah nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1416"/>
+<location filename="../mainwindow.ui" line="1417"/>
 <source>&amp;Settings</source>
 <translation>&amp;Tetapan</translation>
 </message>
@@ -2267,645 +2267,656 @@
 <translation>Tambahan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1071"/>
+<location filename="../mainwindow.ui" line="1072"/>
 <source>Edit</source>
 <translation>Edit</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1084"/>
+<location filename="../mainwindow.ui" line="1085"/>
 <source>Versioning</source>
 <translation>Versioning</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1095"/>
+<location filename="../mainwindow.ui" line="1096"/>
 <source>Encryption</source>
 <translation>Penyulitan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1107"/>
+<location filename="../mainwindow.ui" line="1108"/>
 <source>Languages</source>
 <translation>Bahasa</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1112"/>
+<location filename="../mainwindow.ui" line="1113"/>
 <source>Spelling backend</source>
 <translation>Backend ejaan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1139"/>
+<location filename="../mainwindow.ui" line="1140"/>
 <source>To&amp;do</source>
 <translation>Untuk &amp; lakukan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1146"/>
+<location filename="../mainwindow.ui" line="1147"/>
 <source>&amp;Window</source>
 <translation>&amp;Tetingkap</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1163"/>
+<location filename="../mainwindow.ui" line="1164"/>
 <location filename="../mainwindow.cpp" line="757"/>
 <source>Workspaces</source>
 <translation>Ruang kerja</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1168"/>
+<location filename="../mainwindow.ui" line="1169"/>
 <source>Panels</source>
 <translation>Panel</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1173"/>
+<location filename="../mainwindow.ui" line="1174"/>
 <source>Toolbars</source>
 <translation>Bar alat</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1178"/>
+<location filename="../mainwindow.ui" line="1179"/>
 <source>Show</source>
 <extracomment>To show or hide stuff</extracomment>
 <translation>Tunjukkan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1193"/>
+<location filename="../mainwindow.ui" line="1194"/>
 <source>Workspace</source>
 <translation>Ruang kerja</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1202"/>
+<location filename="../mainwindow.ui" line="1203"/>
 <source>Jump to</source>
 <translation>Lompat ke</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1240"/>
+<location filename="../mainwindow.ui" line="1241"/>
 <source>&amp;Scripting</source>
 <translation>&amp;Skrip</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1346"/>
+<location filename="../mainwindow.ui" line="1347"/>
 <source>About &amp;QOwnNotes…</source>
 <translation>Mengenai &amp;QOwnNotes ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1385"/>
+<location filename="../mainwindow.ui" line="1386"/>
 <source>Post questions, feature requests or problems with the help of the issue assistant</source>
 <translation>Siarkan soalan, permintaan ciri atau masalah dengan bantuan pembantu isu</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1443"/>
+<location filename="../mainwindow.ui" line="1444"/>
 <source>Show remote trash</source>
 <translation>Paparkan sampah jauh</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1460"/>
+<location filename="../mainwindow.ui" line="1461"/>
 <source>Insert text &amp;link</source>
 <translation type="unfinished">Insert text &amp;link</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1463"/>
+<location filename="../mainwindow.ui" line="1464"/>
 <source>Ctrl+L</source>
 <translation type="unfinished">Ctrl+L</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1480"/>
-<location filename="../mainwindow.ui" line="1483"/>
+<location filename="../mainwindow.ui" line="1481"/>
+<location filename="../mainwindow.ui" line="1484"/>
 <source>Auto format table</source>
 <translation>Jadual format auto</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1512"/>
+<location filename="../mainwindow.ui" line="1513"/>
 <source>Forward in note history</source>
 <translation>Teruskan dalam sejarah nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1524"/>
+<location filename="../mainwindow.ui" line="1525"/>
 <source>Show shortcuts</source>
 <translation>Tunjukkan pintasan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1533"/>
+<location filename="../mainwindow.ui" line="1534"/>
 <source>&amp;Knowledge base</source>
 <translation>&amp;Asas pengetahuan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1542"/>
+<location filename="../mainwindow.ui" line="1543"/>
 <source>Insert current &amp;time</source>
 <translation>Masukkan masa &amp;semasa</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1554"/>
+<location filename="../mainwindow.ui" line="1555"/>
 <source>Show &amp;Todo List</source>
 <translation>Papar &amp;Senarai Todo</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1566"/>
+<location filename="../mainwindow.ui" line="1567"/>
 <source>&amp;Export note as PDF (preview)</source>
 <translation>&amp;Nota eksport sebagai PDF (pratonton)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1569"/>
+<location filename="../mainwindow.ui" line="1570"/>
 <source>Export note as PDF (preview)</source>
 <translation>Nota eksport sebagai PDF (pratonton)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1578"/>
+<location filename="../mainwindow.ui" line="1579"/>
 <source>&amp;Export note as PDF (text)</source>
 <translation>&amp;Nota eksport sebagai PDF (teks)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1587"/>
+<location filename="../mainwindow.ui" line="1588"/>
 <source>&amp;Print note (text)</source>
 <translation>&amp;Nota cetak (teks)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1611"/>
+<location filename="../mainwindow.ui" line="1612"/>
 <source>Insert &amp;image</source>
 <translation>Masukkan &amp;imej</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1614"/>
+<location filename="../mainwindow.ui" line="1615"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
 <translation>Sisipkan imej (imej akan disalin ke folder `media` dalam folder nota semasa)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1626"/>
+<location filename="../mainwindow.ui" line="1627"/>
 <source>Show &amp;changelog</source>
 <translation>Tunjukkan &amp;changelog</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1635"/>
+<location filename="../mainwindow.ui" line="1636"/>
 <source>&amp;Encrypt note</source>
 <translation>&amp;Menyulitkan nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1644"/>
+<location filename="../mainwindow.ui" line="1645"/>
 <source>Edit encrypted note</source>
 <translation>Edit nota yang disulitkan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1656"/>
+<location filename="../mainwindow.ui" line="1657"/>
 <source>Decrypt note</source>
 <translation>Nyahsulit nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1665"/>
+<location filename="../mainwindow.ui" line="1666"/>
 <source>&amp;Open note in external editor</source>
 <translation>&amp;Terbuka nota dalam editor luaran</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1686"/>
+<location filename="../mainwindow.ui" line="1687"/>
 <source>&amp;Get involved</source>
 <translation>&amp;Melibatkan diri</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1695"/>
+<location filename="../mainwindow.ui" line="1696"/>
 <source>Insert &amp;code block</source>
 <translation>Sekat &amp;blok kod</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1731"/>
+<location filename="../mainwindow.ui" line="1732"/>
 <source>&amp;Distraction free mode</source>
 <translation>&amp;Mod bebas gangguan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1734"/>
+<location filename="../mainwindow.ui" line="1735"/>
 <source>Distraction free mode, you can leave it with a button on the bottom right</source>
 <translation>Mod bebas gangguan, anda boleh tinggalkannya dengan butang di bahagian bawah kanan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1745"/>
+<location filename="../mainwindow.ui" line="1746"/>
 <source>Show &amp;toolbar</source>
 <translation>Tunjukkan &amp;bar alat</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1753"/>
+<location filename="../mainwindow.ui" line="1754"/>
 <source>Narrow</source>
 <translation>Sempit</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1764"/>
+<location filename="../mainwindow.ui" line="1765"/>
 <source>Medium</source>
 <translation>Sederhana</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1775"/>
+<location filename="../mainwindow.ui" line="1776"/>
 <source>Wide</source>
 <translation>Luas</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1786"/>
+<location filename="../mainwindow.ui" line="1787"/>
 <source>Full</source>
 <translation>Penuh</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1798"/>
+<location filename="../mainwindow.ui" line="1799"/>
 <source>Paste html or media</source>
 <translation>Tampalkan html atau media</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1801"/>
-<location filename="../mainwindow.ui" line="1804"/>
+<location filename="../mainwindow.ui" line="1802"/>
+<location filename="../mainwindow.ui" line="1805"/>
 <source>Paste images, notes and html from the clipboard</source>
 <translation>Tampal imej, nota dan html dari papan klip</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1816"/>
+<location filename="../mainwindow.ui" line="1817"/>
 <source>Show note in &amp;file manager</source>
 <translation>Tunjukkan nota dalam &amp;pengurus fail</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1828"/>
+<location filename="../mainwindow.ui" line="1829"/>
 <source>Format text &amp;bold</source>
 <translation>Format teks &amp;berani</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1840"/>
+<location filename="../mainwindow.ui" line="1841"/>
 <source>Format text &amp;italic</source>
 <translation>Format teks &amp;italik</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1852"/>
+<location filename="../mainwindow.ui" line="1853"/>
 <source>&amp;Increase note text size</source>
 <translation>&amp;Meningkatkan saiz teks nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1864"/>
+<location filename="../mainwindow.ui" line="1865"/>
 <source>&amp;Decrease note text size</source>
 <translation>&amp;Meningkatkan saiz teks nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1876"/>
+<location filename="../mainwindow.ui" line="1877"/>
 <source>&amp;Reset note text size</source>
 <translation>&amp;Tetapkan semula saiz teks nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1888"/>
+<location filename="../mainwindow.ui" line="1889"/>
 <source>&amp;Add tag to note</source>
 <translation>&amp;Tambah tag kepada nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1900"/>
+<location filename="../mainwindow.ui" line="1901"/>
 <source>&amp;Reload note folder</source>
 <translation>&amp;Folder nota muat semula</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1972"/>
+<location filename="../mainwindow.ui" line="1973"/>
 <source>Show log</source>
 <translation>Tunjukkan log</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1981"/>
+<location filename="../mainwindow.ui" line="1982"/>
 <source>Export note as HTML</source>
 <translation>Nota eksport sebagai HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1993"/>
-<location filename="../mainwindow.ui" line="1996"/>
+<location filename="../mainwindow.ui" line="1994"/>
+<location filename="../mainwindow.ui" line="1997"/>
 <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
 <translation type="unfinished">Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2060"/>
+<location filename="../mainwindow.ui" line="2061"/>
 <source>Cycle text case</source>
 <translation>Kes teks kitaran</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2133"/>
+<location filename="../mainwindow.ui" line="2134"/>
 <source>Show note list under tag panel</source>
 <translation>Tunjukkan senarai nota di bawah panel tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2151"/>
+<location filename="../mainwindow.ui" line="2152"/>
 <source>Find notes in all tags / subfolders</source>
 <translation>Tunjukkan nota senarai di bawah panel panel</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2172"/>
+<location filename="../mainwindow.ui" line="2173"/>
 <source>Import notes from text files</source>
 <translation>Nota nota daripada fail teks</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2193"/>
-<location filename="../mainwindow.ui" line="2196"/>
+<location filename="../mainwindow.ui" line="2194"/>
+<location filename="../mainwindow.ui" line="2197"/>
 <source>Open the Telegram group</source>
 <translation>Buka kumpulan Telegram</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2208"/>
-<location filename="../mainwindow.ui" line="2211"/>
+<location filename="../mainwindow.ui" line="2209"/>
+<location filename="../mainwindow.ui" line="2212"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
 <extracomment>"Element" as in the chat service</extracomment>
 <translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2238"/>
+<location filename="../mainwindow.ui" line="2239"/>
 <source>Unlock panels</source>
 <translation>Buka panel</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2247"/>
-<location filename="../mainwindow.cpp" line="10313"/>
+<location filename="../mainwindow.ui" line="2248"/>
+<location filename="../mainwindow.cpp" line="10317"/>
 <source>Remove current workspace</source>
 <translation>Alih keluar ruang kerja semasa</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2256"/>
+<location filename="../mainwindow.ui" line="2257"/>
 <source>Add new workspace</source>
 <translation>Tambah ruang kerja baru</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2265"/>
+<location filename="../mainwindow.ui" line="2266"/>
 <source>Rename current workspace</source>
 <translation>Namakan semula ruang kerja semasa</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2274"/>
+<location filename="../mainwindow.ui" line="2275"/>
 <source>Switch to previous workspace</source>
 <translation>Beralih ke ruang kerja sebelumnya</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2282"/>
+<location filename="../mainwindow.ui" line="2283"/>
 <source>Show all panels</source>
 <translation>Tunjukkan semua panel</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2291"/>
+<location filename="../mainwindow.ui" line="2292"/>
 <source>Find action</source>
 <translation>Cari tindakan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2294"/>
-<location filename="../mainwindow.ui" line="2297"/>
+<location filename="../mainwindow.ui" line="2295"/>
+<location filename="../mainwindow.ui" line="2298"/>
 <source>Find an action from the menu</source>
 <translation>Cari tindakan dari menu</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2309"/>
+<location filename="../mainwindow.ui" line="2310"/>
 <source>Insert table</source>
 <translation>Masukkan jadual</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2321"/>
+<location filename="../mainwindow.ui" line="2322"/>
 <source>Insert block &amp;quote</source>
 <translation>Masukkan &amp;petikan blok</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2329"/>
-<location filename="../mainwindow.ui" line="2332"/>
+<location filename="../mainwindow.ui" line="2330"/>
+<location filename="../mainwindow.ui" line="2333"/>
 <source>Search selected text on the web</source>
 <translation>Cari teks terpilih di web</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2340"/>
+<location filename="../mainwindow.ui" line="2341"/>
 <source>Delete line</source>
 <translation>Padamkan baris</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2348"/>
+<location filename="../mainwindow.ui" line="2349"/>
 <source>Delete word</source>
 <translation>Padam perkataan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2356"/>
+<location filename="../mainwindow.ui" line="2357"/>
 <source>Copy note headline</source>
 <translation>Salin tajuk nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2368"/>
-<location filename="../mainwindow.cpp" line="9375"/>
+<location filename="../mainwindow.ui" line="2369"/>
+<location filename="../mainwindow.cpp" line="9376"/>
 <source>Open note in different window</source>
 <translation>Buka nota di tetingkap yang berbeza</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2380"/>
+<location filename="../mainwindow.ui" line="2381"/>
 <source>Save modified notes</source>
 <translation>Simpan nota yang diubahsuai</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2391"/>
+<location filename="../mainwindow.ui" line="2392"/>
 <source>Ascending</source>
 <translation>Menaik</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2399"/>
+<location filename="../mainwindow.ui" line="2400"/>
 <source>Descending</source>
 <translation>Menurun</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2408"/>
-<location filename="../mainwindow.cpp" line="9380"/>
+<location filename="../mainwindow.ui" line="2409"/>
+<location filename="../mainwindow.cpp" line="9382"/>
 <source>Show note git versions</source>
 <translation>Tunjukkan nota versi git</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2417"/>
+<location filename="../mainwindow.ui" line="2418"/>
 <source>Find scripts in script repository</source>
 <translation>Cari skrip dalam repositori skrip</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2429"/>
+<location filename="../mainwindow.ui" line="2430"/>
 <source>Script settings</source>
 <translation>Tetapan skrip</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2438"/>
+<location filename="../mainwindow.ui" line="2439"/>
 <source>Insert attachment</source>
 <translation>Masukkan lampiran</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2465"/>
+<location filename="../mainwindow.ui" line="2466"/>
 <source>Check for script updates</source>
 <translation>Semak kemas kini skrip</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2474"/>
+<location filename="../mainwindow.ui" line="2475"/>
 <source>Show local trash</source>
 <translation>Tunjukkan sampah tempatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2479"/>
-<location filename="../mainwindow.ui" line="2482"/>
+<location filename="../mainwindow.ui" line="2480"/>
+<location filename="../mainwindow.ui" line="2483"/>
 <source>Jump to note edit panel</source>
 <translation>Lompat ke panel edit nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2494"/>
+<location filename="../mainwindow.ui" line="2495"/>
 <source>Manage stored attachments</source>
 <translation type="unfinished">Manage stored attachments</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2499"/>
+<location filename="../mainwindow.ui" line="2500"/>
 <source>Jump to note subfolder panel</source>
 <translation>Lompat ke panel subfolder ambil perhatian</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2507"/>
+<location filename="../mainwindow.ui" line="2508"/>
 <source>Jump to tags panel</source>
 <translation>Lompat ke panel tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2515"/>
+<location filename="../mainwindow.ui" line="2516"/>
 <source>Jump to note list panel</source>
 <translation>Lompat ke panel senarai nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2523"/>
+<location filename="../mainwindow.ui" line="2524"/>
 <source>Activate context menu</source>
 <translation>Aktifkan menu konteks</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2531"/>
+<location filename="../mainwindow.ui" line="2532"/>
 <source>Import bookmarks from server</source>
 <translation>Import penanda halaman dari pelayan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2536"/>
-<location filename="../mainwindow.ui" line="2539"/>
+<location filename="../mainwindow.ui" line="2537"/>
+<location filename="../mainwindow.ui" line="2540"/>
 <source>Toggle full-screen mode</source>
 <translation>Togol mod skrin penuh</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2550"/>
+<location filename="../mainwindow.ui" line="2551"/>
 <source>Typewriter mode</source>
 <translation>Mod taip taip</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2563"/>
+<location filename="../mainwindow.ui" line="2564"/>
 <source>Check spelling</source>
 <translation>Semak ejaan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2571"/>
-<location filename="../mainwindow.cpp" line="11262"/>
+<location filename="../mainwindow.ui" line="2572"/>
+<location filename="../mainwindow.cpp" line="11266"/>
 <source>Automatically detect</source>
 <translation>Mengesan secara automatik</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2576"/>
+<location filename="../mainwindow.ui" line="2577"/>
 <source>Manage dictionaries</source>
 <translation>Uruskan kamus</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2584"/>
+<location filename="../mainwindow.ui" line="2585"/>
 <source>Custom</source>
 <translation>Custom</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2587"/>
+<location filename="../mainwindow.ui" line="2588"/>
 <source>5</source>
 <translation>5</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2592"/>
+<location filename="../mainwindow.ui" line="2593"/>
 <source>Show/Hide application</source>
 <translation>Прикажи / Сокриј апликација</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2601"/>
+<location filename="../mainwindow.ui" line="2602"/>
 <source>Previous note tab</source>
 <translation>Tab nota sebelumnya</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2613"/>
+<location filename="../mainwindow.ui" line="2614"/>
 <source>Next note tab</source>
 <translation>Tab nota seterusnya</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2625"/>
+<location filename="../mainwindow.ui" line="2626"/>
 <source>Close current note tab</source>
 <translation>Tutup tab nota semasa</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2637"/>
+<location filename="../mainwindow.ui" line="2638"/>
 <source>New note in new tab</source>
 <translation>Nota baru di tab baru</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2645"/>
+<location filename="../mainwindow.ui" line="2646"/>
 <source>Toggle note stickiness of current tab</source>
 <translation>Togol kekemasan nota tab semasa</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2654"/>
+<location filename="../mainwindow.ui" line="2655"/>
 <source>Format text underline</source>
 <translation>Format garis bawah teks</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2662"/>
+<location filename="../mainwindow.ui" line="2663"/>
 <source>Jump to navigation panel</source>
 <translation type="unfinished">Jump to navigation panel</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2674"/>
+<location filename="../mainwindow.ui" line="2675"/>
 <source>Insert &amp;note link</source>
 <translation type="unfinished">Insert &amp;note link</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2677"/>
+<location filename="../mainwindow.ui" line="2678"/>
 <source>Ctrl+Shift+L</source>
 <translation type="unfinished">Ctrl+Shift+L</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2686"/>
+<location filename="../mainwindow.ui" line="2687"/>
 <source>Import notes from Joplin</source>
 <translation type="unfinished">Import notes from Joplin</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2691"/>
+<location filename="../mainwindow.ui" line="2692"/>
 <source>Toggle always-on-top mode</source>
 <translation type="unfinished">Toggle always-on-top mode</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2700"/>
+<location filename="../mainwindow.ui" line="2701"/>
 <source>&amp;Load Todo List items</source>
 <translation type="unfinished">&amp;Load Todo List items</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2709"/>
+<location filename="../mainwindow.ui" line="2710"/>
 <source>Insert Nextcloud Deck card link</source>
 <translation type="unfinished">Insert Nextcloud Deck card link</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1911"/>
+<location filename="../mainwindow.ui" line="2718"/>
+<source>Copy absolute path to note to clipboard</source>
+<translation type="unfinished">Copy absolute path to note to clipboard</translation>
+</message>
+<message>
+<location filename="../mainwindow.ui" line="2721"/>
+<location filename="../mainwindow.cpp" line="9378"/>
+<source>Copy absolute note path to clipboard</source>
+<translation type="unfinished">Copy absolute note path to clipboard</translation>
+</message>
+<message>
+<location filename="../mainwindow.ui" line="1912"/>
 <source>Use &amp;vertical preview layout</source>
 <translation>Gunakan &amp;susun atur pratonton menegak</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1914"/>
-<location filename="../mainwindow.ui" line="1917"/>
+<location filename="../mainwindow.ui" line="1915"/>
+<location filename="../mainwindow.ui" line="1918"/>
 <source>The note edit panel will be above the preview panel</source>
 <translation>Panel edit nota akan berada di atas panel pratonton</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1926"/>
+<location filename="../mainwindow.ui" line="1927"/>
 <source>Replace in current note</source>
 <translation>Gantikan dalam nota semasa</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1934"/>
+<location filename="../mainwindow.ui" line="1935"/>
 <source>Autocomplete, solve equation or open URL</source>
 <translation>Autolengkap, selesaikan persamaan atau buka URL</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1937"/>
+<location filename="../mainwindow.ui" line="1938"/>
 <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
 <translation>Selesaikan persamaan mudah seperti '(2 + 3) * 6 =' dalam baris semasa</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1945"/>
+<location filename="../mainwindow.ui" line="1946"/>
 <source>Select note folder</source>
 <translation>Pilih folder nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1960"/>
+<location filename="../mainwindow.ui" line="1961"/>
 <source>Reload scripting engine</source>
 <translation>Muat semula enjin skrip</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2181"/>
+<location filename="../mainwindow.ui" line="2182"/>
 <source>Manage stored image files</source>
 <translation type="unfinished">Manage stored image files</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2223"/>
-<location filename="../mainwindow.ui" line="2226"/>
+<location filename="../mainwindow.ui" line="2224"/>
+<location filename="../mainwindow.ui" line="2227"/>
 <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
 <translation>Buka bilik Greetnotes Gitter, anda memerlukan akaun GitHub atau Twitter untuk log masuk, tetapi anda boleh mendapatkan mesej luar talian</translation>
 </message>
@@ -2920,84 +2931,84 @@
 <translation>Nota operasi ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1599"/>
+<location filename="../mainwindow.ui" line="1600"/>
 <source>&amp;Print note (preview)</source>
 <translation>&amp;Nota cetak (pratonton)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1677"/>
+<location filename="../mainwindow.ui" line="1678"/>
 <source>&amp;Export note as Markdown file</source>
 <translation type="unfinished">&amp;Export note as Markdown file</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1707"/>
+<location filename="../mainwindow.ui" line="1708"/>
 <source>Move down in note list</source>
 <translation>Turun dalam senarai nota
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1719"/>
+<location filename="../mainwindow.ui" line="1720"/>
 <source>Move up in note list</source>
 <translation>Naik senarai nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2005"/>
+<location filename="../mainwindow.ui" line="2006"/>
 <source>Insert headline from note filename</source>
 <translation>Masukkan tajuk dari nama fail nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2019"/>
+<location filename="../mainwindow.ui" line="2020"/>
 <source>Use softwrap in note editor and preview</source>
 <translation>Gunakan softwrap dalam editor nota dan pratonton</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2027"/>
+<location filename="../mainwindow.ui" line="2028"/>
 <source>Show status bar</source>
 <translation>Tunjukkan bar status</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2042"/>
+<location filename="../mainwindow.ui" line="2043"/>
 <source>Share note</source>
 <translation>Tunjukkan status bar</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2072"/>
+<location filename="../mainwindow.ui" line="2073"/>
 <source>Markdown cheatsheet</source>
 <translation>Cheatsheet markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2081"/>
+<location filename="../mainwindow.ui" line="2082"/>
 <source>Strike out text</source>
 <translation>Tekan teks</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2092"/>
+<location filename="../mainwindow.ui" line="2093"/>
 <source>Use one column mode</source>
 <translation>Gunakan satu mod lajur</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2095"/>
-<location filename="../mainwindow.ui" line="2098"/>
+<location filename="../mainwindow.ui" line="2096"/>
+<location filename="../mainwindow.ui" line="2099"/>
 <source>Use a one column minimal mode (like NVAlt)</source>
 <translation>Gunakan mod minimal satu lajur (seperti NVAlt)</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2110"/>
+<location filename="../mainwindow.ui" line="2111"/>
 <source>Show menu bar</source>
 <translation>Tunjukkan bar menu</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2122"/>
+<location filename="../mainwindow.ui" line="2123"/>
 <source>Split note at cursor position</source>
 <translation>Masukkan nota pada kedudukan kursor</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2142"/>
+<location filename="../mainwindow.ui" line="2143"/>
 <source>Donate</source>
 <translation>Dermakan</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2163"/>
+<location filename="../mainwindow.ui" line="2164"/>
 <source>Import notes from Evernote</source>
 <translation>Nota nota daripada Evernote</translation>
 </message>
@@ -3017,8 +3028,8 @@ Pulihkan nota semasa?</translation>
 <location filename="../mainwindow.cpp" line="5289"/>
 <location filename="../mainwindow.cpp" line="5309"/>
 <location filename="../mainwindow.cpp" line="6589"/>
-<location filename="../mainwindow.cpp" line="9461"/>
-<location filename="../mainwindow.cpp" line="11608"/>
+<location filename="../mainwindow.cpp" line="9465"/>
+<location filename="../mainwindow.cpp" line="11612"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Batalkan</translation>
 </message>
@@ -3340,14 +3351,19 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
 <translation>Menyimpan imej sementara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11605"/>
+<location filename="../mainwindow.cpp" line="11609"/>
 <source>Nextcloud Deck support disabled!</source>
 <translation type="unfinished">Nextcloud Deck support disabled!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11606"/>
+<location filename="../mainwindow.cpp" line="11610"/>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+</message>
+<message>
+<location filename="../mainwindow.cpp" line="11628"/>
+<source>Note path '%1' was copied to the clipboard</source>
+<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6420"/>
@@ -3418,43 +3434,43 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
 <translation>Lompat ke subfolder nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9368"/>
+<location filename="../mainwindow.cpp" line="9369"/>
 <source>Open selected notes in tabs</source>
 <translation type="unfinished">Open selected notes in tabs</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10850"/>
+<location filename="../mainwindow.cpp" line="10854"/>
 <source>A script update was found!</source>
 <translation>Kemas kini skrip dijumpai!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10855"/>
+<location filename="../mainwindow.cpp" line="10859"/>
 <source>Script updates</source>
 <translation>Kemas kini skrip</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10856"/>
+<location filename="../mainwindow.cpp" line="10860"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>Kemas kini skrip anda terdapat di repositori skrip! Adakah anda mahu mengemas kini mereka?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10876"/>
+<location filename="../mainwindow.cpp" line="10880"/>
 <source>No script updates were found</source>
 <translation>Tiada kemas kini skrip dijumpai</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11510"/>
+<location filename="../mainwindow.cpp" line="11514"/>
 <source>Toggle note stickiness</source>
 <translation>Togol kekemasan nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11515"/>
+<location filename="../mainwindow.cpp" line="11519"/>
 <source>Close other note tabs</source>
 <translation>Tutup tab nota lain</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9260"/>
-<location filename="../mainwindow.cpp" line="9446"/>
+<location filename="../mainwindow.cpp" line="9450"/>
 <source>Rename note</source>
 <translation>Namakan semula nota</translation>
 </message>
@@ -3504,50 +3520,50 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
 <translation>&amp;Alih keluar tag dari nota yang dipilih ...</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9446"/>
+<location filename="../mainwindow.cpp" line="9450"/>
 <source>Name:</source>
 <translation>Nama:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9457"/>
+<location filename="../mainwindow.cpp" line="9461"/>
 <source>Note renaming not enabled!</source>
 <translation>Nota nama semula tidak didayakan!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10090"/>
+<location filename="../mainwindow.cpp" line="10094"/>
 <source>Create new workspace</source>
 <translation>Buat ruang kerja baru</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10090"/>
-<location filename="../mainwindow.cpp" line="10351"/>
+<location filename="../mainwindow.cpp" line="10094"/>
+<location filename="../mainwindow.cpp" line="10355"/>
 <source>Workspace name:</source>
 <translation>Nama ruang kerja:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10207"/>
+<location filename="../mainwindow.cpp" line="10211"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>penuh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10214"/>
+<location filename="../mainwindow.cpp" line="10218"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>yang minimum</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10314"/>
+<location filename="../mainwindow.cpp" line="10318"/>
 <source>Remove the current workspace?</source>
 <translation>Keluarkan ruang kerja semasa?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10351"/>
+<location filename="../mainwindow.cpp" line="10355"/>
 <source>Rename workspace</source>
 <translation>Namakan semula ruang kerja</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="10504"/>
+<location filename="../mainwindow.cpp" line="10508"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3555,47 +3571,47 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10770"/>
+<location filename="../mainwindow.cpp" line="10774"/>
 <source>Disallow all note editing</source>
 <translation>Tidak membenarkan semua penyunting nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10788"/>
+<location filename="../mainwindow.cpp" line="10792"/>
 <source>Note editing disabled</source>
 <translation type="unfinished">Note editing disabled</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10789"/>
+<location filename="../mainwindow.cpp" line="10793"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
 <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11020"/>
+<location filename="../mainwindow.cpp" line="11024"/>
 <source>Select text files to import</source>
 <translation>Pilih fail teks untuk diimport</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11049"/>
+<location filename="../mainwindow.cpp" line="11053"/>
 <source>Importing: %1</source>
 <translation>Mengimport: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11111"/>
+<location filename="../mainwindow.cpp" line="11115"/>
 <source>Note headline '%1' was copied to the clipboard</source>
 <translation>Catatan tajuk '%1' telah disalin ke papan keratan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11197"/>
+<location filename="../mainwindow.cpp" line="11201"/>
 <source>Leave full-screen mode</source>
 <translation>Biarkan mod skrin penuh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11372"/>
+<location filename="../mainwindow.cpp" line="11376"/>
 <source>Custom editor width</source>
 <translation>Lebar editor tersuai</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11372"/>
+<location filename="../mainwindow.cpp" line="11376"/>
 <source>Characters:</source>
 <translation>Watak:</translation>
 </message>
@@ -3607,13 +3623,13 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="2453"/>
-<location filename="../mainwindow.cpp" line="10771"/>
+<location filename="../mainwindow.ui" line="2454"/>
+<location filename="../mainwindow.cpp" line="10775"/>
 <source>Allow all note editing</source>
 <translation>Benarkan semua penyuntingan nota</translation>
 </message>
 <message>
-<location filename="../mainwindow.ui" line="1234"/>
+<location filename="../mainwindow.ui" line="1235"/>
 <source>&amp;Tag</source>
 <translation>&amp;Tag</translation>
 </message>
@@ -3758,7 +3774,7 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5008"/>
-<location filename="../mainwindow.cpp" line="11034"/>
+<location filename="../mainwindow.cpp" line="11038"/>
 <source>Cancel</source>
 <translation>Batalkan</translation>
 </message>
@@ -3784,27 +3800,27 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9374"/>
+<location filename="../mainwindow.cpp" line="9375"/>
 <source>Open note in external editor</source>
 <translation>Terbuka nota dalam editor luaran</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9376"/>
+<location filename="../mainwindow.cpp" line="9377"/>
 <source>Show note in file manager</source>
 <translation>Tunjukkan nota dalam pengurus fail</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9458"/>
+<location filename="../mainwindow.cpp" line="9462"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>Sekiranya anda mahu menamakan semula nota anda, anda perlu mengaktifkan pilihan untuk membolehkan nama fail nota berbeza daripada tajuk utama.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9633"/>
+<location filename="../mainwindow.cpp" line="9637"/>
 <source>Create a new folder</source>
 <translation>Buat folder baru</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9633"/>
+<location filename="../mainwindow.cpp" line="9637"/>
 <source>Folder name:</source>
 <translation>Nama folder:</translation>
 </message>
@@ -4123,14 +4139,14 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
 <location filename="../mainwindow.cpp" line="5274"/>
 <location filename="../mainwindow.cpp" line="5289"/>
 <location filename="../mainwindow.cpp" line="5309"/>
-<location filename="../mainwindow.cpp" line="9461"/>
-<location filename="../mainwindow.cpp" line="11608"/>
+<location filename="../mainwindow.cpp" line="9465"/>
+<location filename="../mainwindow.cpp" line="11612"/>
 <source>Open &amp;settings</source>
 <translation>Buka &amp;tetapan</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1695"/>
-<location filename="../mainwindow.cpp" line="11174"/>
+<location filename="../mainwindow.cpp" line="11178"/>
 <source>leave</source>
 <translation>cuti</translation>
 </message>
@@ -4164,7 +4180,7 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
 <context>
 <name>NavigationWidget</name>
 <message>
-<location filename="../widgets/navigationwidget.cpp" line="139"/>
+<location filename="../widgets/navigationwidget.cpp" line="164"/>
 <source>headline %1</source>
 <translation>tajuk utama %1</translation>
 </message>
@@ -4235,22 +4251,22 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
 <context>
 <name>NextcloudDeckService</name>
 <message>
-<location filename="../services/nextclouddeckservice.cpp" line="113"/>
+<location filename="../services/nextclouddeckservice.cpp" line="117"/>
 <source>Error while creating card</source>
 <translation type="unfinished">Error while creating card</translation>
 </message>
 <message>
-<location filename="../services/nextclouddeckservice.cpp" line="114"/>
+<location filename="../services/nextclouddeckservice.cpp" line="118"/>
 <source>Creating a card failed with status code %1 and message: %2</source>
 <translation type="unfinished">Creating a card failed with status code %1 and message: %2</translation>
 </message>
 <message>
-<location filename="../services/nextclouddeckservice.cpp" line="226"/>
+<location filename="../services/nextclouddeckservice.cpp" line="230"/>
 <source>Error while loading boards</source>
 <translation type="unfinished">Error while loading boards</translation>
 </message>
 <message>
-<location filename="../services/nextclouddeckservice.cpp" line="227"/>
+<location filename="../services/nextclouddeckservice.cpp" line="231"/>
 <source>Loading the boards failed with status code %1 and message: %2</source>
 <translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
 </message>
@@ -8365,7 +8381,7 @@ Nota anda akan kekal utuh!</translation>
 <location filename="../libraries/sonnet/src/core/loader.cpp" line="331"/>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
