@@ -1061,6 +1061,7 @@ p, li { white-space: pre-wrap; }
        <normaloff>:/icons/breeze-qownnotes/16x16/split.svg</normaloff>:/icons/breeze-qownnotes/16x16/split.svg</iconset>
      </property>
      <addaction name="actionCopy_headline"/>
+     <addaction name="actionCopy_path_to_note_to_clipboard"/>
      <addaction name="actionSearch_text_on_the_web"/>
      <addaction name="actionAutocomplete"/>
      <addaction name="actionSplit_note_at_cursor_position"/>
@@ -2712,6 +2713,14 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Ctrl+Alt+D</string>
    </property>
   </action>
+  <action name="actionCopy_path_to_note_to_clipboard">
+   <property name="text">
+    <string>Copy path to note to clipboard</string>
+   </property>
+   <property name="toolTip">
+    <string>Copy absolute note path to clipboard</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -2766,8 +2775,8 @@ p, li { white-space: pre-wrap; }
  </tabstops>
  <resources>
   <include location="breeze-dark-qownnotes.qrc"/>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>
