@@ -2867,7 +2867,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2718"/>
-        <source>Copy path to note to clipboard</source>
+        <source>Copy absolute path to note to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
