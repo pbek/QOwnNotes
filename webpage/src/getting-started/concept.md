@@ -11,12 +11,14 @@ graph TB
     subgraph Your Nextcloud server
         qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
         nc-notes-app("Nextcloud Notes")-->ncs
+        nc-deck-app("Nextcloud Deck")-->ncs
     end
 
     nc-notes-mob("Nextcloud Notes mobile app")-->nc-notes-app
     qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
     qon-->ncs
+    qon-->nc-deck-app
     sync-->ncs
     qon-.->qon-web-api("api.qownnotes.org")
     qon-web-api-->github("GitHub")
@@ -31,6 +33,7 @@ graph TB
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
+    click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
     click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
     click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
@@ -118,6 +121,10 @@ Use [**Nextcloud Notes**](https://github.com/nextcloud/notes) to edit your notes
 ::: warning
 Keep in mind that Nextcloud Notes currently only supports up to one level of subfolders.
 :::
+
+## Nextcloud Deck server app
+
+You can use QOwnNotes to quickly create **cards** in [**Nextcloud Deck**](https://github.com/nextcloud/deck).
 
 ## Nextcloud Notes mobile app
 
