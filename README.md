@@ -108,6 +108,7 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
   automatically renamed, if the first line changes
     - this feature can also be turned off, and you can use any filename you like
 - manage your Nextcloud / ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
+- create [Nextcloud Deck](https://apps.nextcloud.com/apps/deck) cards and links to them in your notes
 - **encryption of notes** (AES-256 is built in, or you can use custom encryption methods like
   **[Keybase.io](https://keybase.io)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) or
   **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml)))
