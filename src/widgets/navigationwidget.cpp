@@ -124,12 +124,12 @@ int NavigationWidget::findItemIndexForCursorPosition(int position) const {
 QString NavigationWidget::stripMarkdown(const QString& input)
 {
     // Regular expressions for different Markdown syntax patterns
-    static QRegularExpression boldRegex(R"(\*{2}([^*]+)\*{2})");           // **bold**
-    static QRegularExpression italicRegex(R"(\*{1}([^*]+)\*{1})");         // *italic*
-    static QRegularExpression strikethroughRegex(R"(\~{2}([^~]+)\~{2})");  // ~~strikethrough~~
-    static QRegularExpression linkRegex(R"(\[([^]]+)\]\(([^)]+)\))");      // [link](url)
-    static QRegularExpression angleBracketLinkRegex(R"(<([^>]+)>)");       // <http://link>
-    static QRegularExpression codeRegex(R"(`([^`]+)`+)");                  // `code`
+    static const QRegularExpression boldRegex(R"(\*{2}([^*]+)\*{2})");           // **bold**
+    static const QRegularExpression italicRegex(R"(\*{1}([^*]+)\*{1})");         // *italic*
+    static const QRegularExpression strikethroughRegex(R"(\~{2}([^~]+)\~{2})");  // ~~strikethrough~~
+    static const QRegularExpression linkRegex(R"(\[([^]]+)\]\(([^)]+)\))");      // [link](url)
+    static const QRegularExpression angleBracketLinkRegex(R"(<([^>]+)>)");       // <http://link>
+    static const QRegularExpression codeRegex(R"(`([^`]+)`+)");                  // `code`
 
     // Replace each Markdown pattern with an empty string
     QString strippedText = input;
