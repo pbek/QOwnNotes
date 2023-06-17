@@ -17,7 +17,7 @@ The tests will be run automatically when the QOwnNotes packages is updated in th
 You can look or contribute to the tests at [qownnotes.nix](https://github.com/NixOS/nixpkgs/blob/master/nixos/tests/qownnotes.nix).
 
 With the [nixpkgs repository](https://github.com/NixOS/nixpkgs/) checked out you can run
-the tests easily isolated in a QEMO VM with the help of [nix](https://nixos.org):
+the tests easily isolated in a QEMU VM with the help of [nix](https://nixos.org):
 
 ```bash
 nix-build . -A nixosTests.qownnotes
