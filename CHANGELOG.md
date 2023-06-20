@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 23.6.6
+- [qc](https://github.com/qownnotes/qc) v0.5.0 was released
+  - the last executed command is now stored and can be executed again via `qc exec --last`
+    (for [#9](https://github.com/qownnotes/qc/issues/9))
+  - neovim is now also used to edit the config file
+
 ## 23.6.5
 - **Markdown is now stripped** out of the heading text in the **navigation panel** to
   improve readability (for [#2791](https://github.com/pbek/QOwnNotes/issues/2791))
