@@ -2,6 +2,8 @@
 
 ## 23.6.6
 - some menu text was adapted to be more readable
+- added more German, Arabic, Korean, Dutch, Ukrainian translation (thank you sdicke,
+  noureddin, venusgirl, stephanp, prolinuxua)
 - [qc](https://github.com/qownnotes/qc) v0.5.0 was released
   - the last executed command is now stored and can be executed again via `qc exec --last`
     (for [#9](https://github.com/qownnotes/qc/issues/9))

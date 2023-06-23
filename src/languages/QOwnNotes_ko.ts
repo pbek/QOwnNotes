@@ -2867,14 +2867,9 @@ File: QOwnNotes_en.ts</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2718"/>
-<source>Copy absolute path to note to clipboard</source>
-<translation type="unfinished">Copy absolute path to note to clipboard</translation>
-</message>
-<message>
-<location filename="../mainwindow.ui" line="2721"/>
 <location filename="../mainwindow.cpp" line="9378"/>
-<source>Copy absolute note path to clipboard</source>
-<translation type="unfinished">Copy absolute note path to clipboard</translation>
+<source>Copy absolute path of note</source>
+<translation>절대 노트 경로 복사</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1912"/>
@@ -3365,7 +3360,7 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <location filename="../mainwindow.cpp" line="11628"/>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>노트 '%1' 경로가 클립보드에 복사되었습니다</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6420"/>

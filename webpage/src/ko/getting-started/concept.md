@@ -3,35 +3,38 @@
 ```mermaid
 graph TB
     subgraph Your computer
-        qon((QOwnNotes))-->md{{"마크다운 파일"}}
-        sync("Nextcloud 동기화")-->md
-        qon-comp("브라우저 확장")-->qon
-        qc("명령줄 스니펫 관리자")-->qon
+        qon((QOwnNotes))-->md{{"Markdown files"}}
+        sync("Nextcloud Sync")-->md
+        qon-comp("Browser extension")-->qon
+        qc("Command-line snippet manager")-->qon
     end
     subgraph Your Nextcloud server
-        qon-api("QOwnNotesApi")-->ncs[("Nextcloud 서버")]
-        nc-notes-app("Nextcloud 노트")-->ncs
+        qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
+        nc-notes-app("Nextcloud Notes")-->ncs
+        nc-deck-app("Nextcloud Deck")-->ncs
     end
 
-    nc-notes-mob("Nextcloud 노트 모바일 앱")-->nc-notes-app
-    qon-web-app("QOwnNotes 웹 응용 프로그램")-->qon
+    nc-notes-mob("Nextcloud Notes mobile app")-->nc-notes-app
+    qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
     qon-->ncs
+    qon-->nc-deck-app
     sync-->ncs
     qon-.->qon-web-api("api.qownnotes.org")
     qon-web-api-->github("GitHub")
 
     style qon fill:#d0d0ff,stroke:#333,stroke-width:4px
-    click qon "/getting-started/concept.html#qownnotes" "데스크톱 컴퓨터에서 노트를 관리하기 위한 QOwnNotes 데스크톱 응용 프로그램"
-    click md "/getting-started/concept.html#markdown-note-files" "노트 폴더의 마크다운, 미디어 및 첨부 파일"
-    click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "마크다운 파일 및 웹 클리퍼로 책갈피를 관리하기 위한 QOwnNotes 브라우저 확장명"
-    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes 명령줄 스니펫 관리자"
-    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "노트를 서버와 동기화하는 Nextcloud 데스크톱 동기화 클라이언트"
+    click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
+    click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
+    click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
+    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
+    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
     click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
-    click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "서버 측 휴지통 및 노트 버전에 액세스하는 QOwnNotesAPI Nextcloud 앱"
-    click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "웹에서 노트를 관리하는 Nextcloud 노트 서버 앱"
-    click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "휴대 전화에서 노트를 관리하는 Nextcloud 노트 모바일 앱"
-    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "휴대폰에서 사진을 보내는 QOwnNotes 웹 앱"
+    click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
+    click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
+    click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
+    click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
+    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
     click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
 
@@ -113,9 +116,15 @@ Nextcloud 노트는 현재 최대 한 수준의 하위 폴더만 지원합니다
 
 
 
+## Nextcloud 노트 서버 앱
+
+You can use QOwnNotes to quickly create **cards** in [**Nextcloud Deck**](https://github.com/nextcloud/deck).
+
+
+
 ## Nextcloud 노트 모바일 앱
 
-**모바일 장치**에서 Nextcloud / ownCloud 노트에 액세스하려면 다양한 앱을 사용할 수 있습니다.
+To access your Nextcloud / ownCloud notes from your **mobile device** you can use different apps.
 
 
 
@@ -123,7 +132,7 @@ Nextcloud 노트는 현재 최대 한 수준의 하위 폴더만 지원합니다
 
 - [Android용 Nextcloud 노트](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (타사 제품)
 
-::: 팁 또한 *Synchronize Ultimate* 또는 *FolderSync*와 같은 동기화 도구를 사용하여 노트 파일을 동기화하고 *neutriNotes*와 같은 소프트웨어를 사용하여 노트를 편집할 수 있습니다. :::
+::: tip You could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files and use software like *neutriNotes* to edit your notes. :::
 
 
 
@@ -131,17 +140,17 @@ Nextcloud 노트는 현재 최대 한 수준의 하위 폴더만 지원합니다
 
 - [iOS용 클라우드 노트](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (타사 제품)
 
-::: 팁 WebDAV를 통해 [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662)을 사용하고 노트를 동기화할 수도 있습니다. [Nextcloud, QOwnNotes 및 Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)으로 노트 필기에 대한 좋은 자습서가 있습니다
+::: tip You can also use [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) and sync your notes via WebDAV, there is a good tutorial at [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks) :::
 
 
 
 ## api.qownnotes.org
 
-사용 가능한 응용프로그램의 새 버전이 있는지 확인하기 위해 QOwnNotes에서 제공하는 온라인 서비스입니다.
+This is an online service provided by QOwnNotes to check if there is a new release of the application available.
 
-이것은 GitHub과 대화하고 최신 릴리스를 확인하며, 적합한 다운로드 URL을 얻고 현재 html로 사용 중인 QOwnNotes 버전과 비교하여 변경 로그의 변경 사항을 컴파일하여 업데이트 대화 상자에 표시합니다.
+It is talking to GitHub and checks for the latest release, gets a suited download url and compiles the changes from the changelog compared to the version of QOwnNotes you are currently using as html to show in the update dialog.
 
-또한 이전 버전의 QOwnNotes에 대한 [릴리스 RSS 피드](http://api.qownnotes.org/rss/app-releases) 및 기존 업데이트 확인 API 구현도 제공합니다.
+In addition, it also provides the [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) and an implementation of the legacy update checking api for older versions of QOwnNotes.
 
 ::: 팁 [api.qownnotes.org](https://api.qownnotes.org)의 소스 코드는 [GitHub](https://github.com/qownnotes/api)에서 액세스할 수 있습니다. :::
 
@@ -149,6 +158,6 @@ Nextcloud 노트는 현재 최대 한 수준의 하위 폴더만 지원합니다
 
 ## QOwnNotes 웹 앱
 
-[app.qownnotes.org](https://app.qownnotes.org/)의 **웹 응용 프로그램**을 통해 휴대 전화의 사진을 바탕 화면의 QOwnNotes에 있는 현재 노트에 삽입할 수 있습니다.
+You can insert photos from your mobile phone into the current note in QOwnNotes on your desktop via the **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
 
-::: 팁 자세한 내용은 [QOwnNotes 웹 앱](web-app.md)을 참조하세요. :::
+::: 팁 자세한 내용은 [QOwnNotes 웹 앱](web-app.md)을 참조하십시오. :::

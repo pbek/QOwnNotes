@@ -1514,7 +1514,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopyhon</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -2873,14 +2873,9 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2718"/>
-<source>Copy absolute path to note to clipboard</source>
-<translation type="unfinished">Copy absolute path to note to clipboard</translation>
-</message>
-<message>
-<location filename="../mainwindow.ui" line="2721"/>
 <location filename="../mainwindow.cpp" line="9378"/>
-<source>Copy absolute note path to clipboard</source>
-<translation type="unfinished">Copy absolute note path to clipboard</translation>
+<source>Copy absolute path of note</source>
+<translation type="unfinished">Copy absolute path of note</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1912"/>

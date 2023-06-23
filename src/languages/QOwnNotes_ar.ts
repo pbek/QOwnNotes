@@ -1535,7 +1535,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>انسخ</translation>
+<translation>نسخة</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -2915,14 +2915,9 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2718"/>
-<source>Copy absolute path to note to clipboard</source>
-<translation type="unfinished">Copy absolute path to note to clipboard</translation>
-</message>
-<message>
-<location filename="../mainwindow.ui" line="2721"/>
 <location filename="../mainwindow.cpp" line="9378"/>
-<source>Copy absolute note path to clipboard</source>
-<translation type="unfinished">Copy absolute note path to clipboard</translation>
+<source>Copy absolute path of note</source>
+<translation>انسخ مسار الملاحظة المطلق</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1912"/>
@@ -3483,7 +3478,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="11628"/>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>تم نسخ مسار الملاحظة «%1» إلى الحافظة</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6420"/>

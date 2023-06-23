@@ -2872,14 +2872,9 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2718"/>
-<source>Copy absolute path to note to clipboard</source>
-<translation type="unfinished">Copy absolute path to note to clipboard</translation>
-</message>
-<message>
-<location filename="../mainwindow.ui" line="2721"/>
 <location filename="../mainwindow.cpp" line="9378"/>
-<source>Copy absolute note path to clipboard</source>
-<translation type="unfinished">Copy absolute note path to clipboard</translation>
+<source>Copy absolute path of note</source>
+<translation>Absoluut pad van notitie kopiëren</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1912"/>
@@ -3384,7 +3379,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <location filename="../mainwindow.cpp" line="11628"/>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>Notitiepad '%1' is naar het klembord gekopieerd</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6420"/>

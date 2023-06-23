@@ -11,12 +11,14 @@ graph TB
     subgraph Your Nextcloud server
         qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
         nc-notes-app("Nextcloud Notes")-->ncs
+        nc-deck-app("Nextcloud Deck")-->ncs
     end
 
     nc-notes-mob("Nextcloud Notes mobile app")-->nc-notes-app
     qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
     qon-->ncs
+    qon-->nc-deck-app
     sync-->ncs
     qon-.->qon-web-api("api.qownnotes.org")
     qon-web-api-->github("GitHub")
@@ -31,6 +33,7 @@ graph TB
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
+    click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
     click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
     click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
@@ -109,16 +112,20 @@ graph TB
 به خاطر داشته باشید که در حال حاضر Nextcloud Notes تنها یک سطح از زیر پوشه ها را پشتیبانی می کند.
 :::
 
-## برنامه تلفن همراه Nextcloud Notes
+## Nextcloud Deck server app
 
-برای دسترسی به یادداشت های نکست کلود یا اون کلود تان از **تلفن همراه** خود می توانید برنامه های مختلفی را به کار ببندید.
+You can use QOwnNotes to quickly create **cards** in [**Nextcloud Deck**](https://github.com/nextcloud/deck).
+
+## Nextcloud Notes mobile app
+
+To access your Nextcloud / ownCloud notes from your **mobile device** you can use different apps.
 
 ### اندروید
 
 - [Nextcloud Notes برای اندروید](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (شخص ثالث)
 
 ::: tip
-همچنین می توانید برای همگام سازی پرونده‌های یادداشت تان از هر ابزار همگام سازی مانند *Synchronize Ultimate* یا *FolderSync* استفاده کنید و برای ویرایش یادداشت هایتان نرم افزاری مانند *neutriNotes* را بکار گیرید.
+You could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files and use software like *neutriNotes* to edit your notes.
 :::
 
 ### iOS
@@ -126,25 +133,25 @@ graph TB
 - [ CloudNotes برای iOS ](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (شخص ثالث)
 
 ::: tip
-علاوه بر این، می توانید از [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) استفاده کرده و یادداشت های خود را از طریق WebDAV همگام سازی کنید. در [یادداشت برداری با نکست کلود، QOwnNotes و Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks) آموزش مناسبی در نظر گرفته شده است.
+You can also use [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) and sync your notes via WebDAV, there is a good tutorial at [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
 :::
 
 ## api.qownnotes.org
 
-یک سرویس آنلاین توسط QOwnNotes در نظر گرفته شده ‌است تا در دسترس قرار گرفتن نسخه جدیدی از برنامه را بررسی کند.
+This is an online service provided by QOwnNotes to check if there is a new release of the application available.
 
-در مقایسه با نسخه QOwnNote که در حال حاضر از آن به صورت html برای نمایش کادر بروز رسانی استفاده می کنید، با گیت هاب تعامل کرده، آخرین نسخه را بررسی کرده، URL مناسب برای بارگیری را دریافت کرده و تغییرات را از گزارش تغییرات گردآوری می کند.
+It is talking to GitHub and checks for the latest release, gets a suited download url and compiles the changes from the changelog compared to the version of QOwnNotes you are currently using as html to show in the update dialog.
 
-بعلاوه، [پخش خبرنامه](http://api.qownnotes.org/rss/app-releases) و یک پیاده سازی از API بررسی بروز رسانی پیشینه برای نسخه های قدیمی تر QOwnNotes را هم فراهم می کند.
+In addition, it also provides the [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) and an implementation of the legacy update checking api for older versions of QOwnNotes.
 
 ::: tip
-شما می توانید به کد منبع مربوط به [api.qownnotes.org](https://api.qownnotes.org) در [گیت هاب](https://github.com/qownnotes/api) دسترسی داشته باشید.
+You can access the source code for [api.qownnotes.org](https://api.qownnotes.org) on [GitHub](https://github.com/qownnotes/api).
 :::
 
-## برنامه تحت وب QOwnNotes
+## QOwnNotes Web App
 
-شما می توانید تصاویر تلفن همراه خود را در یادداشت کنونی QOwnNotes در دسکتاپ خود از طریق **برنامه تحت وب** در [app.qownnotes.org](https://app.qownnotes.org/) درج کنید.
+You can insert photos from your mobile phone into the current note in QOwnNotes on your desktop via the **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
 
 ::: tip
-برای اطلاعات بیشتر لطفاً [برنامه تحت وب QOwnNotes](web-app.md) را ملاحظه کنید.
+Please visit [QOwnNotes Web App](web-app.md) for more information.
 :::

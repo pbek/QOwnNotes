@@ -1307,7 +1307,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="232"/>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>Шрифт:</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="279"/>
@@ -1524,7 +1524,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Копіювати</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -1548,17 +1548,17 @@
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="45"/>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Копіювати</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="51"/>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>Копіювати посилання</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="58"/>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>Скинути масштабування</translation>
 </message>
 </context>
 <context>
@@ -1660,7 +1660,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="48"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>Імпорт тек</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
@@ -1690,7 +1690,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>Імпорт міток</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="182"/>
@@ -2863,7 +2863,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2663"/>
 <source>Jump to navigation panel</source>
-<translation type="unfinished">Jump to navigation panel</translation>
+<translation>Перейти до панелі навігації</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2675"/>
@@ -2897,14 +2897,9 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2718"/>
-<source>Copy absolute path to note to clipboard</source>
-<translation type="unfinished">Copy absolute path to note to clipboard</translation>
-</message>
-<message>
-<location filename="../mainwindow.ui" line="2721"/>
 <location filename="../mainwindow.cpp" line="9378"/>
-<source>Copy absolute note path to clipboard</source>
-<translation type="unfinished">Copy absolute note path to clipboard</translation>
+<source>Copy absolute path of note</source>
+<translation type="unfinished">Copy absolute path of note</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1912"/>
@@ -8513,7 +8508,7 @@ Your notes will stay intact!</source>
 <location filename="../libraries/sonnet/src/core/loader.cpp" line="331"/>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>

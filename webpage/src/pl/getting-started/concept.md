@@ -11,12 +11,14 @@ graph TB
     subgraph Your Nextcloud server
         qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
         nc-notes-app("Nextcloud Notes")-->ncs
+        nc-deck-app("Nextcloud Deck")-->ncs
     end
 
     nc-notes-mob("Nextcloud Notes mobile app")-->nc-notes-app
     qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
     qon-->ncs
+    qon-->nc-deck-app
     sync-->ncs
     qon-.->qon-web-api("api.qownnotes.org")
     qon-web-api-->github("GitHub")
@@ -31,6 +33,7 @@ graph TB
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
+    click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
     click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
     click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
@@ -109,16 +112,20 @@ Użyj [**Nextcloud Notes**](https://github.com/nextcloud/notes), aby edytować s
 Należy pamiętać, że program Nextcloud Notes obsługuje obecnie tylko jeden poziom podfolderów.
 :::
 
-## Aplikacja mobilna Nextcloud Notes
+## Nextcloud Deck server app
 
-Aby uzyskać dostęp do notatek Nextcloud / ownCloud z **urządzenia mobilnego**, możesz korzystać z różnych aplikacji.
+You can use QOwnNotes to quickly create **cards** in [**Nextcloud Deck**](https://github.com/nextcloud/deck).
+
+## Nextcloud Notes mobile app
+
+To access your Nextcloud / ownCloud notes from your **mobile device** you can use different apps.
 
 ### Android
 
 - [Nextcloud Notes dla Androida](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (inna firma)
 
 ::: tip
-Możesz także użyć dowolnego narzędzia do synchronizacji, takiego jak *Synchronize Ultimate* lub *FolderSync*, aby zsynchronizować pliki notatek i użyć oprogramowania takiego jak *neutriNotes* do edycji swoich notatek.
+You could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files and use software like *neutriNotes* to edit your notes.
 :::
 
 ### iOS
@@ -126,25 +133,25 @@ Możesz także użyć dowolnego narzędzia do synchronizacji, takiego jak *Synch
 - [CloudNotes na iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (inna firma)
 
 ::: tip
-Możesz także użyć [Notatników](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) i zsynchronizuj swoje notatki przez WebDAV, jest dobry samouczek pod adresem [Robienie notatek z Nextcloud, QOwnNotes i Notatnikami](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
+You can also use [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) and sync your notes via WebDAV, there is a good tutorial at [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
 :::
 
 ## api.qownnotes.org
 
-Jest to usługa online świadczona przez QOwnNotes w celu sprawdzenia, czy jest dostępna nowa wersja aplikacji.
+This is an online service provided by QOwnNotes to check if there is a new release of the application available.
 
-Rozmawia z GitHubem i sprawdza najnowsze wydanie, pobiera odpowiedni adres URL pobierania i kompiluje zmiany z dziennika zmian w porównaniu z wersją QOwnNotes, której obecnie używasz jako html, aby wyświetlić w oknie dialogowym aktualizacji.
+It is talking to GitHub and checks for the latest release, gets a suited download url and compiles the changes from the changelog compared to the version of QOwnNotes you are currently using as html to show in the update dialog.
 
-Ponadto zapewnia również [kanał informacyjny RSS wydania](http://api.qownnotes.org/rss/app-releases) oraz implementację starszego interfejsu API sprawdzającego aktualizacje dla starszych wersji QOwnNotes.
+In addition, it also provides the [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) and an implementation of the legacy update checking api for older versions of QOwnNotes.
 
 ::: tip
-Możesz uzyskać dostęp do kodu źródłowego [api.qownnotes.org](https://api.qownnotes.org) w [GitHub](https://github.com/qownnotes/api).
+You can access the source code for [api.qownnotes.org](https://api.qownnotes.org) on [GitHub](https://github.com/qownnotes/api).
 :::
 
 ## QOwnNotes Web App
 
-Możesz wstawić zdjęcia z telefonu komórkowego do bieżącej notatki w QOwnNotes na komputerze za pomocą **aplikacji internetowej** na [app.qownnotes.org](https://app.qownnotes.org/).
+You can insert photos from your mobile phone into the current note in QOwnNotes on your desktop via the **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
 
 ::: tip
-Odwiedź [Aplikację internetową QOwnNotes](web-app.md), aby uzyskać więcej informacji.
+Please visit [QOwnNotes Web App](web-app.md) for more information.
 :::

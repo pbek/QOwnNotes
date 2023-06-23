@@ -148,31 +148,32 @@ Unisciti al nostro [Gruppo Telegram](https://t.me/QOwnNotes) per discutere, impa
 [Comprendere il concetto di QOwnNotes](concept.md)
 
 ## Caratteristiche
-- Nella maggior parte dei casi puoi usare i tuoi **file di testo o markdown esistenti**, senza bisogno di importarli
+- You can use your **existing text or markdown files**, no need for an import
 - QOwnNotes è scritto in C++ ed è ottimizzato a basso **consumo di risorse** (nessuna CPU e app Electron affamata di memoria)
 - **Importa Evernote e Joplin**
-- **Compatibile** con l'applicazione Notes di **Nextcloud / ownCloud** e **mobile** e Nextcloud Text
-- Supporta la **condivisione di note** sul tuo server **ownCloud** / **Nextcloud**
-- Gestisci i tuoi **elenchi di cose da fare** (**attività Nextcloud** o **Tasks Plus** / **Calendar Plus**) Nextcloud / ownCloud o usa un altro **Server CalDAV** su cui sincronizzare le tue attività
-- Le **versioni** precedenti delle tue note possono essere **ripristinate** dal tuo server **Nextcloud / ownCloud**
-- Le **note cancellate** possono essere **ripristinate** dal tuo server **Nextcloud / ownCloud**
-- Le **modifiche esterne** ai file delle note sono **monitorate** (le note o l'elenco delle note sono ricaricate)
-- Supporta l'**etichettatura gerarchica delle note** e **sottocartelle delle note**
-- **Cifratura** opzionale delle note. È disponibile AES-256 oppure puoi usare metodi di cifratura personalizzabili come **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) o **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
-- La **cartella note** può essere **scelta liberamente** (è possibile utilizzare più cartelle note)
-- Puoi **cercare parti di parole** nelle note e i risultati di ricerca sono evidenziati nelle note
-- [**Estensione del browser**](browser-extension.md) per **aggiungere note dal testo selezionato**, **catturare schermate** o **gestire i tuoi segnalibri**
-- Supporta il [**il controllo ortografico**](../editor/spellchecking.md)
-- **Modalità portatile** per portare in giro QOwnNotes su chiavette USB
-- **Supporto per script** e un [**repository di script**](https://github.com/qownnotes/scripts) online in cui è possibile installare script all'interno dell'applicazione
-- **Modalità Vim**
-- [Applicazione web](web-app.md) per **inserire foto dal tuo telefono cellulare** nella nota corrente di QOwnNotes sul tuo desktop
+- **Compatible** with the [Notes](https://apps.nextcloud.com/apps/notes) application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
+- Create **[Nextcloud Deck](https://apps.nextcloud.com/apps/deck) cards** and link to them in your notes
+- Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
+- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
+- Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
+- **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
+- **External changes** of note files are **watched** (notes or note list are reloaded)
+- Support for **hierarchical note tagging** and **note subfolders**
+- Optional **encryption** of notes, AES-256 is built in, or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
+- The **notes folder** can be **freely chosen** (multiple note folders can be used)
+- **Searching parts of words** in notes is possible and search results are highlighted in the notes
+- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
+- [**Spellchecking**](../editor/spellchecking.md) support
+- **Portable mode** for carrying QOwnNotes around on USB sticks
+- **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
+- **Vim mode**
+- **[Web application](web-app.md)** to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
 
 ## Aspetto
 - **Evidenziazione del markdown** delle note e **modalità di anteprima del markdown**
 - **Supporto per temi in modalità scura**
-- **Supporto per temi** per l'evidenziazione della **sintassi del markdown**
+- **Theming support** for the **Markdown syntax highlighting**
 - Tutti i **pannelli possono essere posizionati dove vuoi**, possono anche essere **separati** o essere **impilati** (completamente agganciabili)
 - Supporto per **icone del tema freedesktop**, puoi usare QOwnNotes con le tue **icone desktop native** e con il tuo **tema desktop scuro** preferito
 - **Modalità senza distrazioni**, **Modalità a schermo intero** e **Modalità macchina da scrivere**
