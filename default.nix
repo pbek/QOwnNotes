@@ -23,7 +23,7 @@ in
 stdenv.mkDerivation {
   inherit pname appname version;
 
-  src = ./src;
+  src = builtins.path { path = ./src; name = "qownnotes"; };
 
   nativeBuildInputs = [
     qmake

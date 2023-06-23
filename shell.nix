@@ -2,6 +2,7 @@
   pkgs.mkShell {
     # nativeBuildInputs is usually what you want -- tools you need to run
     nativeBuildInputs = with pkgs; with qt6; [
+      gnumake
       crowdin-cli
       cmakeWithGui
       qmake
