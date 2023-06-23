@@ -2867,13 +2867,8 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2718"/>
-        <source>Copy absolute path to note to clipboard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="2721"/>
         <location filename="../mainwindow.cpp" line="9378"/>
-        <source>Copy absolute note path to clipboard</source>
+        <source>Copy absolute path of note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

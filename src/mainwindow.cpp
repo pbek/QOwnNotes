@@ -9375,7 +9375,7 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos, bool multiNoteMenu
         openInExternalEditorAction = noteMenu.addAction(tr("Open note in external editor"));
         openNoteWindowAction = noteMenu.addAction(tr("Open note in different window"));
         showInFileManagerAction = noteMenu.addAction(tr("Show note in file manager"));
-        copyNotePathToClipboardAction = noteMenu.addAction(tr("Copy absolute note path to clipboard"));
+        copyNotePathToClipboardAction = noteMenu.addAction(tr("Copy absolute path of note"));
 
         showNoteGitLogAction = new QAction(this);
         if (Utils::Git::isCurrentNoteFolderUseGit() && Utils::Git::hasLogCommand()) {

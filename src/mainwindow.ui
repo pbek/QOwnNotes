@@ -2715,10 +2715,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionCopy_path_to_note_to_clipboard">
    <property name="text">
-    <string>Copy absolute path to note to clipboard</string>
-   </property>
-   <property name="toolTip">
-    <string>Copy absolute note path to clipboard</string>
+    <string>Copy absolute path of note</string>
    </property>
   </action>
  </widget>
