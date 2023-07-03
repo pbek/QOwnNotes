@@ -155,23 +155,23 @@
 - Nextcloud / ownCloud **할 일 목록** (**Nextcloud 작업** 또는 **Tasks Plus** / **Calendar Plus**)를 관리하거나 다른 **CalDAV 서버**를 사용하여 작업을 동기화할 수 있습니다
 - 이전 **버전** 의 노트를 **Nextcloud / ownCloud**에서 **복원**할 수 있습니다
 - **폐기된 노트**는 **Nextcloud / ownCloud** 서버에서 **복원**할 수 있습니다
-- **External changes** of note files are **watched** (notes or note list are reloaded)
-- Support for **hierarchical note tagging** and **note subfolders**
-- Optional **encryption** of notes, AES-256 is built in, or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
-- The **notes folder** can be **freely chosen** (multiple note folders can be used)
-- **Searching parts of words** in notes is possible and search results are highlighted in the notes
-- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
+- 노트 파일의 **외부 변경 사항**이 **감시**됩니다 (노트 또는 노트 목록이 다시 로드됨)
+- **계층적 노트 태깅** 및 **노트 하위 폴더** 지원
+- AES-256은 노트 **암호화** 옵션으로 내장되어 있거나 **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) 또는 **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))과 같은 사용자 지정 암호화 방법을 사용할 수 있습니다
+- **노트 폴더**는 **자유롭게 선택**할 수 있습니다 (여러 개의 노트 폴더를 사용할 수 있음)
+- 노트에서 **단어의 일부를 검색**할 수 있으며 검색 결과가 노트에서 강조 표시됩니다
+- **선택한 텍스트에서 노트 추가**, **스크린샷 만들기** 또는 **북마크를 관리**하는 [**브라우저 확장**](browser-extension.md)
 - [**맞춤법 검사**](../editor/spellchecking.md) 지원
-- **Portable mode** for carrying QOwnNotes around on USB sticks
-- **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
+- USB 스틱에 QOwnNotes를 휴대하기 위한 **휴대용 모드**
+- **스크립트 지원** 및 응용 프로그램 내부에 스크립트를 설치할 수 있는 온라인 [**스크립트 저장소**](https://github.com/qownnotes/scripts)
 - **Vim 모드**
-- **[Web application](web-app.md)** to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
+- 바탕 화면의 QOwnNotes에서 **휴대폰의 사진을 현재 노트에 삽입**하는 **[웹 응용 프로그램](web-app.md)**
 
 
 ## 외관
 - 노트의 **마크다운 강조 표시** 및 **마크다운 미리 보기 모드**
 - **어두운 모드 테마 지원**
-- **Theming support** for the **Markdown syntax highlighting**
+- **마크다운 구문 강조**에 대한 **디밍 지원**
 - 모든 **패널은 원하는 위치에 배치**할 수 있으며, **플로팅** 또는 **스택** (완전 도킹 가능) 도 가능합니다
 - **무료 데스크톱 테마 아이콘 **을 지원하므로  **기본 바탕 화면 아이콘 ** 및 즐겨찾는 **어두운 바탕 화면 테마**와 함께 QOnNotes를 사용할 수 있습니다
 - **무장애 모드**, **전체 화면 모드** 및 **타이프라이터 모드**

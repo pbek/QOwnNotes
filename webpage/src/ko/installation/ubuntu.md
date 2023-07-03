@@ -1,12 +1,12 @@
-# Install on Ubuntu Linux, elementary OS and Linux Mint
+# Ubuntu Linux, elementary OS 및 Linux Mint에 설치
 
-## Ubuntu Linux 18.04 or newer, elementary OS, Linux Mint 18 or newer
+## Ubuntu Linux 18.04 이상, 기본 OS, Linux Mint 18 이상
 
-Install **QOwnNotes** on **Ubuntu Linux** (minimum 18.04) using the PPA repository.
+PPA 저장소를 사용하여 **Ubuntu Linux** (최소 18.04)에 **QOwnNotes**를 설치합니다.
 
-Note that there are also packages for ARM in the repository, in case you want to use QOwnNotes on a **Raspberry Pi**.
+**Raspberry Pi**에서 QOnNotes를 사용하려는 경우 저장소에 ARM용 패키지도 있습니다.
 
-Open a terminal and enter the following lines to add the repository and install QOwnNotes.
+터미널을 열고 다음 행을 입력하여 저장소를 추가하고 QOwnNotes를 설치합니다.
 
 ```bash
 sudo add-apt-repository ppa:pbek/qownnotes
@@ -14,11 +14,11 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
+[직접 다운로드](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
 
-## QOwnNotes Qt6 Preview
+## QOwnNotes Qt6 미리보기
 
-If you already want to try the Qt6 packages and are on Ubuntu 22.04 or newer you can use this repository:
+이미 Qt6 패키지를 사용하고 Ubuntu 22.04 이상 버전에 있는 경우 다음 저장소를 사용할 수 있습니다:
 
 ```bash
 # Remove Qt5 PPA in case you had it installed
@@ -32,13 +32,13 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
+[직접 다운로드](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
-문제가 발견되면 [GitHub의 QOWNNotes 문제](https://github.com/pbek/QOwnNotes/issues)에 보고하십시오!
+문제가 발견되면 [GitHub의 QOwnNotes문제](https://github.com/pbek/QOwnNotes/issues)에 보고하십시오!
 
-## Older Ubuntu Linux distributions and derivatives
+## 이전 Ubuntu Linux 배포 및 파생 제품
 
-[GitHub에서 QOWNNotes 릴리즈](https://github.com/pbek/QOwnNotes/releases)의 AppImage를 사용하는 것이 좋습니다.
+[GitHub에서 QOwnNotes 릴리즈](https://github.com/pbek/QOwnNotes/releases)의 AppImage를 사용하는 것이 좋습니다.
 
 그런 다음 파일에 대한 실행 권한을 변경할 수 있습니다:
 
@@ -46,9 +46,9 @@ sudo apt-get install qownnotes
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-나중에 앱 이미지를 실행하여 QOnNotes를 실행할 수 있습니다.
+나중에 앱 이미지를 실행하여 QOwnNotes를 실행할 수 있습니다.
 
-## OBS Repository
+## OBS 저장소
 
 또한 Ubuntu Launchpad에서 더 이상 업데이트되지 않은 Ubuntu 버전에서 QOwnNotes를 사용할 수 있으며 [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop)에서 저장소를 사용할 수 있습니다.
 
@@ -60,7 +60,7 @@ chmod a+x QOwnNotes-*.AppImage
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
 ```
 
-다음 셸 명령을 실행하여 리포지토리를 추가하고 여기서 QOwnNotes를 설치합니다.
+다음 셸 명령을 실행하여 저장소를 추가하고 여기서 QOwnNotes를 설치합니다.
 
 ```bash
 sudo su -

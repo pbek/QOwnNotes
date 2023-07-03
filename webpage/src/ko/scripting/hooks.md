@@ -1,60 +1,60 @@
 # Hooks
 
-onNoteStored
+NoteStored에서
 ------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * This function is called when a note gets stored to disk
- * You cannot modify stored notes, that would be a mess since
- * you are most likely editing them by hand at the same time
+ * 이 기능은 노트가 디스크에 저장될 때 호출됩니다
+ * 저장된 노트는 수정할 수 없습니다. 수작업으로 수정할 가능성이 
+ * 높기 때문에 혼란스러울 수 있습니다.
  *
  * @param {NoteApi} note - the note object of the stored note
  */
 function onNoteStored(note);
 ```
 
-예를 들어 [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml)을 확인해 보십시오.
+[on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml) 예제를 살펴보는 것이 좋습니다.
 
 noteOpenedHook
 --------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * This function is called after a note was opened
+ * 이 함수는 노트가 열린 후에 호출됩니다
  *
  * @param {NoteApi} note - the note object that was opened
  */
 function noteOpenedHook(note);
 ```
 
-예를 들어 [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml)을 확인해 보십시오.
+[on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml) 예제를 살펴보는 것이 좋습니다.
 
 noteDoubleClickedHook
 ---------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * This function is called after a note was double clicked
+ * 함수는 노트를 더블클릭한 후 호출됩니다
  *
  * @param {NoteApi} note - the note object that was clicked
  */
 function noteDoubleClickedHook(note);
 ```
 
-예를 들어 [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-open.qml)을 확인해 보십시오.
+[external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-open.qml) 예제를 살펴보는 것이 좋습니다.
 
 insertMediaHook
 ---------------
 
-This function is called when a media file is inserted into the current note.
+이 기능은 현재 노트에 미디어 파일을 삽입할 때 호출됩니다.
 
-If this function is defined in multiple scripts, then the first script that returns a non-empty string wins.
+이 함수가 여러 스크립트에 정의된 경우 비어 있지 않은 문자열을 반환하는 첫 번째 스크립트가 승리합니다.
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
  * @param fileName string the file path of the source media file before it was copied to the media folder
@@ -64,16 +64,16 @@ If this function is defined in multiple scripts, then the first script that retu
 function insertMediaHook(fileName, markdownText);
 ```
 
-예를 들어 [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml)을 확인해 보십시오.
+[example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) 예제를 살펴보는 것이 좋습니다.
 
 insertAttachmentHook
 --------------------
 
-This function is called when an attachment file is inserted into the current note.
+이 기능은 첨부 파일이 현재 노트에 삽입될 때 호출됩니다.
 
-If this function is defined in multiple scripts, then the first script that returns a non-empty string wins.
+이 함수가 여러 스크립트에 정의된 경우 비어 있지 않은 문자열을 반환하는 첫 번째 스크립트가 승리합니다.
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
  * @param fileName string the file path of the source attachment file before it was copied to the attachment folder
@@ -83,15 +83,15 @@ If this function is defined in multiple scripts, then the first script that retu
 function insertAttachmentHook(fileName, markdownText);
 ```
 
-예를 들어 [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml)을 확인해 보십시오.
+[example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) 예제를 살펴보는 것이 좋습니다.
 
 insertingFromMimeDataHook
 -------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * This function is called when html or a media file is pasted to a note with `Ctrl + Shift + V`
+ * 이 함수는 `Ctrl + Shift + V`를 사용해 노트에 HTML 또는 미디어 파일을 붙여넣을 때 호출됩니다
  *
  * @param text text of the QMimeData object
  * @param html html of the QMimeData object
@@ -100,23 +100,23 @@ insertingFromMimeDataHook
 function insertingFromMimeDataHook(text, html);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml), [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) or [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-text-from-5pm-mail.qml).
+[example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml), [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) 또는 [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-text-from-5pm-mail.qml) 예제를 살펴보는 것이 좋습니다.
 
 handleNoteTextFileNameHook
 --------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * This function is called when a note gets stored to disk if
- * "Allow note file name to be different from headline" is enabled
- * in the settings
+ * 이 함수는 노트가 디스크에 저장될 때 다음과 같은 경우에 호출됩니다
+ * 설정에서 "노트 파일 이름을 제목과 다르게 허용"이 활성화되어
+ * 있습니다
  *
- * It allows you to modify the name of the note file
- * Keep in mind that you have to care about duplicate names yourself!
+ * 노트 파일의 이름을 수정할 수 있습니다
+ * 중복된 이름은 직접 관리해야 한다는 점을 명심하세요!
  *
- * Return an empty string if the file name of the note should
- * not be modified
+ * 노트의 파일 이름을 수정하지 않아야 하는 경우
+ * 빈 문자열 반환
  *
  * @param {NoteApi} note - the note object of the stored note
  * @return {string} the file name of the note
@@ -124,19 +124,19 @@ handleNoteTextFileNameHook
 function handleNoteTextFileNameHook(note);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) or [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
+[example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) 또는 [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml) 예제를 살펴보는 것이 좋습니다.
 
 handleNoteNameHook
 ------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * This function is called when the note name is determined for a note
+ * 이 기능은 노트에 대한 노트 이름이 결정될 때 호출됩니다
  *
- * It allows you to modify the name of the note that is viewed
+ * 표시된 노트의 이름을 수정할 수 있습니다
  *
- * Return an empty string if the name of the note should not be modified
+ * 노트 이름을 수정하지 않아야 하는 경우 빈 문자열 반환
  *
  * @param {NoteApi} note - the note object of the stored note
  * @return {string} the name of the note
@@ -144,23 +144,23 @@ handleNoteNameHook
 function handleNoteNameHook(note);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
+[example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) 예제를 살펴보는 것이 좋습니다.
 
-It may not be a good idea to use this hook if the setting to use the file name as note name is active.
+파일 이름을 노트 이름으로 사용하도록 설정이 활성화되어 있는 경우, 이 훅을 사용하는 것이 좋지 않을 수 있습니다.
 
 handleNewNoteHeadlineHook
 -------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * This function is called before a note is created
+ * 노트를 만들기 전에 이 함수를 호출합니다
  *
- * It allows you to modify the headline of the note before it is created
- * Note that you have to take care about a unique note name, otherwise
- * the new note will not be created, it will just be found in the note list
+ * 노트를 만들기 전에 노트의 헤드라인을 수정할 수 있습니다
+ * 고유한 노트 이름에 주의해야 합니다. 그렇지 않으면
+ * 새 노트가 생성되지 않고 노트 목록에서만 찾을 수 있습니다
  *
- * You can use this function for creating note templates
+ * 노트 템플릿을 만드는 데 이 기능을 사용할 수 있습니다
  *
  * @param headline text that would be used to create the headline
  * @return {string} the headline of the note
@@ -168,22 +168,22 @@ handleNewNoteHeadlineHook
 function handleNewNoteHeadlineHook(headline);
 ```
 
-You may want to take a look at the example [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml).
+[custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml) 예제를 살펴보는 것이 좋습니다.
 
 preNoteToMarkdownHtmlHook
 -------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * This function is called before the markdown html of a note is generated
+ * 이 함수는 노트의 마크다운 HTML이 생성되기 전에 호출됩니다
  *
- * It allows you to modify what is passed to the markdown to html converter
+ * 마크다운으로 전달되는 내용을 HTML 변환기로 수정할 수 있습니다
  *
- * The function can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
- * to its graphical representation for the preview
+ * 예를 들어 이 함수는 여러 스크립트에서 미리보기를 위해 코드 (LaTeX 수학 또는 인어)를
+ * 그래픽 표현으로 렌더링하는 데 사용할 수 있습니다
  *
- * The note will not be changed in this process
+ * 이 과정에서 노트는 변경되지 않습니다
  *
  * @param {NoteApi} note - the note object
  * @param {string} markdown - the markdown that is about to being converted to html
@@ -193,20 +193,20 @@ preNoteToMarkdownHtmlHook
 function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
 
-You may want to take a look at the example [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
+[preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml) 예제를 살펴보는 것이 좋습니다.
 
 noteToMarkdownHtmlHook
 ----------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * This function is called when the markdown html of a note is generated
+ * 이 함수는 노트의 마크다운 html이 생성될 때 호출됩니다
  *
- * It allows you to modify this html
- * This is for example called before by the note preview
+ * 이 html을 수정할 수 있습니다
+ * 예를 들어 노트 미리 보기에서 이전에 호출됩니다
  *
- * The function can be used in multiple scripts to modify the html of the preview
+ * 이 함수는 미리보기의 html을 수정하기 위해 여러 스크립트에서 사용될 수 있습니다
  *
  * @param {NoteApi} note - the note object
  * @param {string} html - the html that is about to being rendered
@@ -216,17 +216,17 @@ noteToMarkdownHtmlHook
 function noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) or [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
+[example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) 또는 [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml) 예제를 살펴보는 것이 좋습니다.
 
-Please refer to the [Supported HTML Subset](http://doc.qt.io/qt-5/richtext-html-subset.html) documentation for a list of all supported css styles.
+지원되는 모든 css 스타일 목록은 [지원되는 HTML 하위 집합 문서](http://doc.qt.io/qt-5/richtext-html-subset.html)를 참조하세요.
 
 encryptionHook
 --------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * This function is called when text has to be encrypted or decrypted
+ * 이 함수는 텍스트를 암호화하거나 해독해야 할 때 호출됩니다
  *
  * @param text string the text to encrypt or decrypt
  * @param password string the password
@@ -236,20 +236,20 @@ encryptionHook
 function encryptionHook(text, password, decrypt);
 ```
 
-You may want to take a look at the example [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml) or [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-rot13.qml).
+[encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml) 또는 [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-rot13.qml)의 예를 살펴볼 수 있습니다.
 
 noteTaggingHook
 ---------------
 
-You can implement your own note tagging mechanism for example with special text in your note like `@tag1`, `@tag2`, `@tag3`.
+예를 들어 노트에 `@tag1`, `@tag2`, `@tag3`와 같은 특수 텍스트를 사용하여 고유한 노트 태그 지정 메커니즘을 구현할 수 있습니다.
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * Handles note tagging for a note
+ * 노트에 대한 노트 태그 지정 처리
  *
- * This function is called when tags are added to, removed from or renamed in
- * a note or the tags of a note should be listed
+ * 이 기능은 노트에 태그가 추가, 제거 또는 이름 변경되거나 노트의 태그가
+ * 나열되어야 할 때 호출됩니다
  *
  * @param note
  * @param action can be "add", "remove", "rename" or "list"
@@ -260,40 +260,40 @@ You can implement your own note tagging mechanism for example with special text 
 function noteTaggingHook(note, action, tagName, newTagName);
 ```
 
--   as soon as a script is activated that implements the new function `noteTaggingHook` note tagging will be handled by that function
--   following features should work via the QOwnNotes user interface
-    -   initially importing tags like `@tag` from your notes and overwriting your current tag assignment
-        -   you will not lose your tags tree, just the former assignment to notes
-        -   you can still move tags into other tags
-        -   if more than one tag has the same name in your tag tree the first hit will be assigned
-    -   adding a tag to a note will add the tag to the note text
-    -   removing a tag from a note will remove the tag from the note text
-    -   removing of tags in the tag list will remove those tags from your notes
-    -   renaming of tags in the tag list will rename those tags in your notes
-    -   bulk tagging of notes in the note list will add those tags to your notes
-    -   bulk removing of tags from notes in the note list will remove those tags from your notes
-    -   the application will trigger a series of `add` and `remove` actions for all selected tags and their children on all notes if tags are moved in the tag panel
+-   새 기능을 구현하는 스크립트가 활성화되는 즉시 `noteTaggingHook`후크 노트 태그 지정은 해당 기능으로 처리됩니다
+-   다음 기능은 QOwnNotes 사용자 인터페이스를 통해 작동해야 합니다
+    -   처음에 노트에서 `@tag` 와 같은 태그를 가져오고 현재 태그 할당을 덮어씁니다
+        -   태그 트리를 잃지 않고 노트에 대한 이전 할당만 손실됩니다
+        -   여전히 태그를 다른 태그로 이동할 수 있습니다
+        -   태그 트리에 같은 이름의 태그가 둘 이상 있는 경우 첫 번째 히트가 할당됩니다
+    -   노트에 태그를 추가하면 노트 텍스트에 태그가 추가됩니다
+    -   노트에서 태그를 제거하면 노트 텍스트에서 태그가 제거됩니다
+    -   태그 목록에서 태그를 제거하면 노트에서 해당 태그가 제거됩니다
+    -   태그 목록의 태그 이름을 바꾸면 노트의 태그 이름이 바뀝니다
+    -   노트 목록에 있는 노트에 대량 태그를 지정하면 해당 태그가 노트에 추가됩니다
+    -   노트 목록의 노트에서 태그를 대량으로 제거하면 노트에서 태그가 제거됩니다
+    -   태그 패널에서 태그가 이동된 경우 응용 프로그램은 선택한 모든 태그와 모든 노트의 하위 태그에 대해 일련의 `추가` 및 `제거` 작업을 트리거합니다
 
-You may want to take a look at the example [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) to implement your own tagging mechanism.
+[note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) 예제를 보고 자체 태그 메커니즘을 구현할 수 있습니다.
 
-::: warning Make sure your `list` action is really fast, because it will be executed for every note every time the note folder is reloaded! :::
+::: 경고 노트 폴더를 다시 로드할 때마다 모든 노트에 대해 목록 작업이 실행되므로 `목록` 작업이 매우 빠릅니다! :::
 
 noteTaggingByObjectHook
 ----------------------
 
-Similarly to [noteTaggingHook](#notetagginghook) you can implement your own note tagging mechanism, but you are not bound to tag names in the tag tree root. This way you can make use of the whole tag tree instead of only a tag list.
+[noteTaggingHook](#notetagginghook)과 유사하게 자신만의 노트 태그 지정 메커니즘을 구현할 수 있지만, 태그 트리 루트의 이름에 태그를 지정할 필요는 없습니다. 이렇게 하면 태그 목록만 사용하는 대신 전체 태그 트리를 사용할 수 있습니다.
 
-With `noteTaggingByObjectHook` you get a `TagApi` object as parameter, instead of a tag name. And as result for the `list` action you need to provide a list of tag ids.
+`noteTaggingByObjectHook`을 사용하면 태그 이름 대신 `TagApi` 개체를 매개 변수로 얻을 수 있습니다. 따라서 목록 작업의 경우 태그 Id `목록`을 제공해야 합니다.
 
-This also means you need to create missing tags yourself to be able to provide a list of already existing tag ids for the `list` action.
+또한 목록 작업에 대해 이미 존재하는 태그 Id `목록`을 제공하려면 누락된 태그를 직접 만들어야 합니다.
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * Handles note tagging for a note
+ * 노트에 대한 노트 태그 지정 처리
  *
- * This function is called when tags are added to, removed from or renamed in
- * a note or the tags of a note should be listed
+ * 이 기능은 노트에 태그가 추가, 제거 또는 이름 변경되거나 노트의 태그가
+ * 나열되어야 할 때 호출됩니다
  *
  * @param note
  * @param action can be "add", "remove", "rename" or "list"
@@ -304,32 +304,32 @@ This also means you need to create missing tags yourself to be able to provide a
 function noteTaggingByObjectHook(note, action, tag, newTagName);
 ```
 
-You may want to take a look at the example [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) to implement your own tagging mechanism.
+고유한 태그 지정 메커니즘을 구현하기 위해 [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) 예제를 살펴볼 수 있습니다.
 
 autocompletionHook
 ------------------
 
-You can return a list of strings to be added to the autocompletion list when the autocompletion is invoked (for example by pressing <kbd>Ctrl + Space</kbd>).
+자동 완성이 호출될 때 자동 완성 목록에 추가할 문자열 목록을 반환할 수 있습니다 (예를들면 <kbd>Ctrl + 스페이스 누르기</kbd>).
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * Calls the autocompletionHook function for all script components
- * This function is called when autocompletion is invoked in a note
+ * 자동 완성을 호출합니다모든 스크립트 구성 요소에 대한 후크 기능
+ * 이 함수는 노트에서 자동 완성이 호출될 때 호출됩니다
  *
  * @return QStringList of text for the autocomplete list
  */
 function callAutocompletionHook();
 ```
 
-You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
+[autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml) 예제를 살펴볼 수 있습니다.
 
 websocketRawDataHook
 --------------------
 
-This hook is called when data is sent from the QOwnNotes Web Companion browser extension via the web browser's context menu.
+이 후크는 웹 브라우저의 상황에 맞는 메뉴를 통해 QOwnNotes Web Companion 브라우저 확장에서 데이터를 전송할 때 호출됩니다.
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
  * @param requestType can be "page" or "selection"
@@ -342,18 +342,18 @@ This hook is called when data is sent from the QOwnNotes Web Companion browser e
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
 
-You may want to take a look at the examples [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-new-note.qml) and [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
+[websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-new-note.qml) 및 [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml)의 예를 살펴볼 수 있습니다.
 
 onDetachedProcessCallback
 -------------------------
 
-This hook is called when a script thread of [startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background) is done executing.
+[startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background)의 스크립트 스레드 실행이 완료되면 이 후크가 호출됩니다.
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * This function is called when a script thread is done executing.
- * Hint: thread[1]==0 helps to determine if a bulk of started processes for a certain identifier is done.
+ * 이 함수는 스크립트 스레드 실행이 완료되면 호출됩니다.
+ 힌트: thread[1]==0은 특정 식별자에 대해 시작된 프로세스의 대부분이 수행되었는지 여부를 확인하는 데 도움이 됩니다.
  *
  * @param {QString} callbackIdentifier - the provided id when calling startDetachedProcess()
  * @param {QString} resultSet - the result of the process
@@ -363,32 +363,32 @@ This hook is called when a script thread of [startDetachedProcess](methods-and-o
 function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
 ```
 
-You may want to take a look at the example [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml).
+[callback-example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml) 예제를 살펴볼 수 있습니다.
 
 windowStateChangedHook
 --------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * This function is called after a WindowStateChange event was triggered
+ * 이 함수는 WindowStateChange 이벤트가 트리거된 후 호출됩니다
  *
  * @param {QString} windowState - the new window state, parameter value can be "minimized", "maximized", "fullscreen", "active" or "nostate"
  */
 function windowStateChangedHook(windowState);
 ```
 
-You may want to take a look at the example [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/window-state-changed.qml).
+[window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/window-state-changed.qml) 예제를 살펴볼 수 있습니다.
 
 workspaceSwitchedHook
 ----------------------
 
-This hook is called when workspaces are switched.
+이 후크는 작업 공간이 전환될 때 호출됩니다.
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```js
 /**
- * This function is called when workspaces are switched
+ * 이 기능은 작업 공간이 전환될 때 호출됩니다
  *
  * @param oldUuid old uuid of workspace
  * @param newUuid new uuid of workspace
@@ -396,4 +396,4 @@ This hook is called when workspaces are switched.
 function workspaceSwitchedHook(oldUuid, newUuid);
 ```
 
-You may want to take a look at the example [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/workspaces.qml).
+[websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/workspaces.qml) 예제를 살펴볼 수 있습니다.

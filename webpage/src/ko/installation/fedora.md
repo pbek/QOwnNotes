@@ -1,10 +1,10 @@
-# Install on Fedora Linux
+# Fedora Linux에 설치
 
-There are QOwnNotes repositories for **Fedora 28 and higher**.
+**Fedora 28 이상**에 대한 QOwnNotes저장소가 있습니다.
 
-## On systems with config-manager dnf plugin
+## Config-manager dnf 플러그인이 있는 시스템
 
-Run the following shell commands as root to add the repository.
+다음 셸 명령을 루트로 실행하여 저장소를 추가합니다.
 
 ```bash
 dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
@@ -13,26 +13,26 @@ dnf makecache
 dnf install qownnotes
 ```
 
-::: tip You may need to accept the repo key before you can download from it.
+::: 팁 repo 키에서 다운로드하기 전에 repo 키를 수락해야 할 수도 있습니다.
 
-If you have troubles import the key yourself with:
+문제가 있는 경우 다음을 사용하여 직접 키를 가져옵니다:
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
 ```
 :::
 
-## Legacy install method
+## 레거시 설치 방법
 
-Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
+Fedora 버전이 `config-manager` 플러그인을 지원하지 않는 경우 이 방법을 사용하여 이러한 명령을 루트로 실행합니다.
 
-Run the following shell commands as root to trust the repository.
+다음 셸 명령을 루트로 실행하여 저장소를 신뢰합니다.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
 ```
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+다음 셸 명령을 루트로 실행하여 리포지토리를 추가하고 여기서 QOwnNotes를 설치합니다.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -49,4 +49,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36) (this example link is for Fedora 36)
+[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36) (이 예제 링크는 Fedora 36용)

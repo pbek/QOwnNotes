@@ -1,13 +1,13 @@
-# Methods and objects QOwnNotes provides
+# QOwnNotes에서 제공하는 메서드 및 개체
 
-Starting an external program in the background
+백그라운드에서 외부 프로그램 시작
 ----------------------------------------------
 
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * QML wrapper to start a detached process
+ * 분리된 프로세스를 시작하기 위한 QML 래퍼
  *
  * @param executablePath the path of the executable
  * @param parameters a list of parameter strings
@@ -22,15 +22,15 @@ bool startDetachedProcess(QString executablePath, QStringList parameters,
                             QByteArray processData, QString workingDirectory);
 ```
 
-### Example
+### 예제
 
-Simple example:
+간단한 예:
 
 ```js
 script.startDetachedProcess("/path/to/my/program", ["my parameter"]);
 ```
 
-Running a lot of processes:
+많은 프로세스 실행:
 
 ```js
 for (var i = 0; i < 100; i++) {
@@ -45,17 +45,17 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
 }
 ```
 
-You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml), [callback.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml) or [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/execute-command-after-note-update.qml).
+[custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml), [callback.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml) 또는 [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/execute-command-after-note-update.qml) 예제를 살펴볼 수 있습니다.
 
-You also might want to take a look at the [onDetachedProcessCallback](hooks.html#ondetachedprocesscallback) hook.
+또한 [onDetachedProcessCallback](hooks.html#ondetachedprocesscallback) 후크에 대해서도 살펴볼 수 있습니다.
 
-Starting an external program and wait for the output
+외부 프로그램 시작 및 출력 대기
 ----------------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * QML wrapper to start a synchronous process
+ * 동기 프로세스를 시작하기 위한 QML 래퍼
  *
  * @param executablePath the path of the executable
  * @param parameters a list of parameter strings
@@ -65,17 +65,17 @@ Starting an external program and wait for the output
 QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data, QString workingDirectory);
 ```
 
-### Example
+### 예제
 ```js
 var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data", "/path/to/execute/in");
 ```
 
-You may want to take a look at the example [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml).
+[encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)의 예를 살펴볼 수 있습니다.
 
-Getting the path of the current note folder
+현재 노트 폴더의 경로를 가져오기
 -------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
  * QML wrapper to get the current note folder path
@@ -85,58 +85,58 @@ Getting the path of the current note folder
 QString currentNoteFolderPath();
 ```
 
-### Example
+### 예제
 ```js
 var path = script.currentNoteFolderPath();
 ```
 
-You may want to take a look at the example [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/absolute-media-links.qml).
+[absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/absolute-media-links.qml)의 예를 살펴볼 수 있습니다.
 
-Getting the current note
+현재 노트 가져오기
 ------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * QML wrapper to get the current note
+ * 현재 노트를 가져오는 QML 래퍼
  *
  * @returns {NoteApi} the current note object
  */
 NoteApi currentNote();
 ```
 
-### Example
+### 예제
 ```js
 var note = script.currentNote();
 ```
 
-You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
+[custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) 예제를 살펴볼 수 있습니다.
 
-Logging to the log widget
+로그 위젯에 로깅
 -------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * QML wrapper to log to the log widget
+ * 로그 위젯에 로깅하기 위한 QML 래퍼
  *
  * @param text
  */
 void log(QString text);
 ```
 
-### Example
+### 예제
 ```js
 script.log("my text");
 ```
 
-Downloading an url to a string
+문자열에 Url 다운로드
 ------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * QML wrapper to download an url and returning it as text
+ * QML 래퍼를 사용하여 URL을 다운로드하고 텍스트로 반환하는 방법
  *
  * @param url
  * @return {QString} the content of the downloaded url
@@ -144,21 +144,21 @@ Downloading an url to a string
 QString downloadUrlToString(QUrl url);
 ```
 
-### Example
+### 예제
 ```js
 var html = script.downloadUrlToString("https://www.qownnotes.org");
 ```
 
-You may want to take a look at the example [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
+[insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml)의 예를 살펴볼 수 있습니다.
 
-Downloading an url to the media folder
+미디어 폴더로 Url 다운로드
 --------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * QML wrapper to download an url to the media folder and returning the media
- * url or the markdown image text of the media relative to the current note
+ * QML 래퍼를 사용해 미디어 폴더로 URL을 다운로드하고 현재 노트와 관련된
+ * 미디어 URL 또는 미디어의 마크다운 이미지 텍스트를 반환
  *
  * @param {QString} url
  * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
@@ -167,17 +167,17 @@ Downloading an url to the media folder
 QString downloadUrlToMedia(QUrl url, bool returnUrlOnly);
 ```
 
-### Example
+### 예제
 ```js
 var markdown = script.downloadUrlToMedia("http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)}");
 ```
 
-You may want to take a look at the example [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/paste-latex-image.qml).
+[paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/paste-latex-image.qml) 예제를 살펴볼 수 있습니다.
 
-Inserting a media file into the media folder
+미디어 폴더에 미디어 파일 삽입
 --------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
  * QML wrapper to insert a media file into the media folder and returning
@@ -191,17 +191,17 @@ QString ScriptingService::insertMediaFile(QString mediaFilePath,
                                         bool returnUrlOnly);
 ```
 
-### Example
+### 예제
 ```js
 var markdown = script.insertMediaFile("/path/to/your/image.png");
 ```
 
-You may want to take a look at the example [scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml).
+[scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml)의 예제를 살펴볼 수 있습니다.
 
-Inserting an attachment file into the attachments folder
+첨부파일 폴더에 첨부파일 삽입
 --------------------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
  * QML wrapper to insert an attachment file into the `attachments` folder and
  * returning the attachment url or the markdown text of the attachment
@@ -218,17 +218,17 @@ QString ScriptingService::insertAttachmentFile(const QString &attachmentFilePath
                                                bool returnUrlOnly);
 ```
 
-### Example
+### 예제
 ```js
 var markdown = script.insertAttachmentFile("/path/to/your/file.png");
 ```
 
-Regenerating the note preview
+노트 미리보기 재생성
 -----------------------------
 
-Refreshes the note preview.
+노트 미리 보기를 새로 고칩니다.
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
  * Regenerates the note preview
@@ -236,20 +236,20 @@ Refreshes the note preview.
 QString ScriptingService::regenerateNotePreview();
 ```
 
-### Example
+### 예제
 ```js
 script.regenerateNotePreview();
 ```
 
-You may want to take a look at the example [scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml).
+[scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml)의 예제를 살펴볼 수 있습니다.
 
-Registering a custom action
+사용자 지정 작업 등록
 ---------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Registers a custom action
+ * 사용자 지정 작업을 등록
  *
  * @param identifier the identifier of the action
  * @param menuText the text shown in the menu
@@ -274,11 +274,11 @@ void ScriptingService::registerCustomAction(QString identifier,
                                             bool useInNoteListContextMenu);
 ```
 
-::: tip You can also assign local and global shortcuts to your custom actions in the *Shortcuts settings*. :::
+::: 팁 *단축키설정*에서 사용자 지정 작업에 로컬 및 전역 단축키를 할당할 수도 있습니다. :::
 
-::: warning Keep in mind that [freedesktop theme icons](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html) are mostly available only under Linux. So if you really want to use an icon under macOS or Windows you need to provide one with your script. To get the path of your script to set a proper path for your icon you can use the [scriptDirPath property](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script). :::
+::: 경고 [무료 데스크톱 테마 아이콘](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html)은 대부분 Linux에서만 사용할 수 있습니다. 따라서 macOS나 Windows에서 아이콘을 사용하려면 스크립트와 함께 아이콘을 제공해야 합니다. 스크립트 경로를 통해 아이콘에 대한 올바른 경로를 설정하려면 [scriptDirPath property](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script)을 사용합니다. :::
 
-### Example
+### 예제
 
 ```js
 import QtQml 2.0
@@ -286,7 +286,7 @@ import QOwnNotesTypes 1.0
 
 Script {
     /**
-     * Initializes the custom actions
+     * 사용자 지정 작업 초기화
      */
     function init() {
         // add a custom action without a button
@@ -327,17 +327,17 @@ Script {
 }
 ```
 
-For some more examples please see [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
+더 많은 예제는 [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml)을 참조하세요.
 
-::: tip You can also trigger a custom action after the application was started with the parameter `--action customAction_<identifier>`. For more information please take a look at [Trigger menu actions after startup](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup). :::
+::: 팁 매개변수 `--action customAction_<identifier>`을 사용하여 애플리케이션이 시작된 후 사용자 지정 동작을 트리거할 수도 있습니다. 자세한 내용은 [ 시작 후 트리거 메뉴 동작](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup)을 참조하십시오. :::
 
-Registering a label
+레이블 등록
 -------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Registers a label to write to
+ * 쓸 레이블을 등록
  *
  * @param identifier the identifier of the label
  * @param text the text shown in the label (optional)
@@ -345,7 +345,7 @@ Registering a label
 void ScriptingService::registerLabel(QString identifier, QString text);
 ```
 
-### Example
+### 예제
 ```js
 script.registerLabel("html-label", "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='https://www.qownnotes.org'>link to a website</a>.");
 
@@ -356,17 +356,17 @@ script.registerLabel("counter-label");
 
 레이블은 *스크립트 패널*에 표시되며, *창 / 패널* 메뉴에서 활성화해야 합니다.
 
-You can use both plain text or html in the labels. The text will be selectable and links can be clicked.
+레이블에는 일반 텍스트 또는 html을 모두 사용할 수 있습니다. 텍스트를 선택할 수 있고 링크를 클릭할 수 있습니다.
 
-You may then want to take a look at the example script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
+그런 다음 스크립트 [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml) 예제를 살펴볼 수 있습니다.
 
-Setting the text of a registered label
+등록된 레이블의 텍스트 설정
 --------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Sets the text of a registered label
+ * 등록된 레이블의 텍스트를 설정
  *
  * @param identifier the identifier of the label
  * @param text the text shown in the label
@@ -374,34 +374,34 @@ Setting the text of a registered label
 void ScriptingService::setLabelText(QString identifier, QString text);
 ```
 
-### Example
+### 예제
 ```js
 script.setLabelText("counter-label", "counter text");
 ```
 
-You can use both plain text or html in the labels. The text will be selectable and links can be clicked.
+레이블에는 일반 텍스트 또는 html을 모두 사용할 수 있습니다. 텍스트를 선택할 수 있고 링크를 클릭할 수 있습니다.
 
-You may then want to take a look at the example script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
+그런 다음 스크립트 [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml) 예제를 살펴볼 수 있습니다.
 
-Creating a new note
+새 노트 만들기
 -------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Creates a new note
+ * 새 노트 만들기
  *
  * @param text the note text
  */
 void ScriptingService::createNote(QString text);
 ```
 
-### Example
+### 예제
 ```js
 script.createNote("My note headline\n===\n\nMy text");
 ```
 
-You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
+[custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) 예제를 살펴볼 수 있습니다.
 
 ::: 팁 노트 제목에 따라 노트 파일 이름이 결정된다는 것을 해제한 경우, 다음과 같이 노트 파일 이름을 직접 변경해야 합니다:
 
@@ -411,128 +411,128 @@ note.renameNoteFile('your-filename');
 ```
 :::
 
-Accessing the clipboard
+클립보드 액세스
 -----------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Returns the content of the clipboard as text or html
+ * 클립보드의 내용을 텍스트 또는 html로 반환
  *
  * @param asHtml returns the clipboard content as html instead of text
  */
 QString ScriptingService::clipboard(bool asHtml);
 ```
 
-### Example
+### 예제
 ```js
 var clipboardText = script.clipboard();
 var clipboardHtml = script.clipboard(true);
 ```
 
-You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
+[custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) 예제를 살펴볼 수도 있습니다.
 
-Write text to the note text edit
+노트 텍스트 편집에 텍스트 쓰기
 --------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Writes text to the current cursor position in the note text edit
+ * 노트 텍스트 편집의 현재 커서 위치에 텍스트 쓰기
  *
  * @param text
  */
 void ScriptingService::noteTextEditWrite(QString text);
 ```
 
-### Example
+### 예제
 ```js
-// write text to the note text edit
+// 노트에 텍스트 쓰기 텍스트 편집
 script.noteTextEditWrite("My custom text");
 ```
 
-You might want to look at the custom action `transformTextRot13` in the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
+[custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) 예제에서 사용자 지정 작업 `transformTextRot13`을 살펴볼 수 있습니다.
 
-You can use this together with `noteTextEditSelectAll` to overwrite the whole text of the current note.
+이 기능을 `noteTextEditSelectAll`과 함께 사용해 현재 노트의 전체 텍스트를 덮어쓸 수 있습니다.
 
-Read the selected text in the note text edit
+노트 텍스트 편집에서 선택한 텍스트 읽기
 --------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Reads the selected text in the note text edit
+ * 노트 텍스트 편집에서 선택한 텍스트를 읽기
  *
  * @return
  */
 QString ScriptingService::noteTextEditSelectedText();
 ```
 
-### Example
+### 예제
 ```js
-// read the selected text from the note text edit
+// 노트 텍스트 편집에서 선택한 텍스트 읽기
 var text = script.noteTextEditSelectedText();
 ```
 
-You might want to look at the custom action `transformTextRot13` in the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
+[custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml) 예제에서 사용자 지정 작업 `transformTextRot13`을 살펴볼 수 있습니다.
 
-Select all text in the note text edit
+노트 텍스트 편집에서 모든 텍스트 선택
 -------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Selects all text in the note text edit
+ * 노트 텍스트 편집에서 모든 텍스트를 선택
  */
 void ScriptingService::noteTextEditSelectAll();
 ```
 
-### Example
+### 예제
 ```js
 script.noteTextEditSelectAll();
 ```
 
-You can use this together with `noteTextEditWrite` to overwrite the whole text of the current note.
+이 기능을 `noteTextEditWrite`와 함께 사용해 현재 노트의 전체 텍스트를 덮어쓸 수 있습니다.
 
-Select the current line in the note text edit
+노트 텍스트 편집에서 현재 줄 선택
 ---------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Selects the current line in the note text edit
+ * 노트 텍스트 편집에서 현재 줄 선택
  */
 void ScriptingService::noteTextEditSelectCurrentLine();
 ```
 
-### Example
+### 예제
 ```js
 script.noteTextEditSelectCurrentLine();
 ```
 
-Select the current word in the note text edit
+노트 텍스트 편집에서 현재 단어 선택
 ---------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Selects the current word in the note text edit
+ * 노트 텍스트 편집에서 현재 단어 선택
  */
 void ScriptingService::noteTextEditSelectCurrentWord();
 ```
 
-### Example
+### 예제
 ```js
 script.noteTextEditSelectCurrentWord();
 ```
 
-Set the currently selected text in the note text edit
+노트 텍스트 편집에서 현재 선택한 텍스트 설정
 -----------------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Sets the currently selected text in the note text edit
+ * 노트 텍스트 편집에서 현재 선택한 텍스트 설정
  *
  * @param start
  * @param end
@@ -540,94 +540,94 @@ Set the currently selected text in the note text edit
 void ScriptingService::noteTextEditSetSelection(int start, int end);
 ```
 
-### Example
+### 예제
 ```js
-// expands the current selection by one character
+// 현재 선택 영역을 한 문자씩 확장
 script.noteTextEditSetSelection(
     script.noteTextEditSelectionStart() - 1,
     script.noteTextEditSelectionEnd() + 1);
 ```
 
-Get the start position of the current selection in the note text edit
+노트 텍스트 편집에서 현재 선택 영역의 시작 위치를 가져오기
 ---------------------------------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Returns the start position of the current selection in the note text edit
+ * 노트 텍스트 편집에서 현재 선택 영역의 시작 위치를 반환
  */
 int ScriptingService::noteTextEditSelectionStart();
 ```
 
-### Example
+### 예제
 ```js
 script.log(script.noteTextEditSelectionStart());
 ```
 
-Get the end position of the current selection in the note text edit
+노트 텍스트 편집에서 현재 선택 영역의 끝 위치를 가져오기
 -------------------------------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Returns the end position of the current selection in the note text edit
+ * 노트 텍스트 편집에서 현재 선택 영역의 끝 위치를 반환
  */
 int ScriptingService::noteTextEditSelectionEnd();
 ```
 
-### Example
+### 예제
 ```js
 script.log(script.noteTextEditSelectionEnd());
 ```
 
-Set the text cursor in the note text edit to a certain position
+노트 텍스트 편집의 텍스트 커서를 특정 위치로 설정
 ---------------------------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Sets the text cursor in the note text edit to a certain position
- * 0 would be the beginning of the note
- * special case: -1 would be the end of the note
+ * 노트 텍스트 편집의 텍스트 커서를 특정 위치로 설정
+ * 0은 노트의 시작
+ * 특수한 경우: -1이 노트의 끝
  *
  * @param position
  */
 void ScriptingService::noteTextEditSetCursorPosition(int position);
 ```
 
-### Example
+### 예제
 ```js
-// jump to the 11th character in the note
+// 노트의 11번째 문자로 이동
 script.noteTextEditSetCursorPosition(10);
 
-// jump to the end of the note
+// 노트 끝으로 이동
 script.noteTextEditSetCursorPosition(-1);
 ```
 
-Get the current position of the text cursor in the note text edit
+노트 텍스트 편집에서 텍스트 커서의 현재 위치 가져오기
 -----------------------------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Returns the current position of the text cursor in the note text edit
- * 0 would be the beginning of the note
+ * 노트 텍스트 편집에서 텍스트 커서의 현재 위치를 반환
+ * 0은 노트의 시작
  */
 int ScriptingService::noteTextEditCursorPosition();
 ```
 
-### Example
+### 예제
 ```js
 script.log(script.noteTextEditCursorPosition());
 ```
 
-Read the current word from the note text edit
+노트 텍스트 편집에서 현재 단어 읽기
 ---------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Reads the current word in the note text edit
+ * 노트 텍스트 편집에서 현재 단어를 읽기
  *
  * @param withPreviousCharacters also get more characters at the beginning
  *                               to get characters like "@" that are not
@@ -637,60 +637,60 @@ Read the current word from the note text edit
 QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 ```
 
-### Example
+### 예제
 ```js
-// read the current word in the note text edit
+// 노트 텍스트 편집에서 현재 단어 읽기
 var text = script.noteTextEditCurrentWord();
 ```
 
-You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
+[autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml) 예제를 살펴보는 것이 좋습니다.
 
-Check whether platform is Linux, OS X or Windows
+플랫폼이 Linux, OS X 또는 Windows인지 확인
 ------------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 bool ScriptingService::platformIsLinux();
 bool ScriptingService::platformIsOSX();
 bool ScriptingService::platformIsWindows();
 ```
 
-### Example
+### 예제
 ```js
 if (script.platformIsLinux()) {
     // Will be executed only if under Linux
 }
 ```
 
-Tag the current note
+현재 노트에 태그 지정
 --------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Tags the current note with a tag named tagName
+ * tagName이라는 태그로 현재 노트에 태그를 지정
  *
  * @param tagName
  */
 void ScriptingService::tagCurrentNote(QString tagName);
 ```
 
-### Example
+### 예제
 ```js
-// add a "favorite" tag to the current note
+// 현재 노트에 "즐겨찾기" 태그 추가
 script.tagCurrentNote("favorite");
 ```
 
-You might want to look at the custom action `favoriteNote` in the example [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/favorite-note.qml).
+[favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/favorite-note.qml) 예제에서 사용자 지정 작업 `favoriteNote`를 살펴볼 수 있습니다.
 
-Create or fetch a tag by its name breadcrumb list
+이름을 기준으로 태그 만들기 또는 가져오기 브레드크럼 목록
 -------------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Fetches or creates a tag by its "breadcrumb list" of tag names
- * Element nameList[0] would be highest in the tree (with parentId: 0)
+ * 태그 이름의 "breadcrumb 목록"을 기준으로 태그를 가져오거나 만들기
+ * 요소 nameList[0]은 트리에서 가장 높은 위치에 있을 것입니다 (parentId: 0).
  *
  * @param nameList
  * @param createMissing {bool} if true (default) all missing tags will be created
@@ -700,21 +700,21 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
     const QStringList &nameList, bool createMissing);
 ```
 
-### Example
+### 예제
 ```js
-// creates all tags until the 3rd level and returns the tag object for
-// tag "level3", which would look like that in the tag tree:
+// 세번째 수준까지 모든 태그를 생성하고 태그 트리에서 다음과 같이 표시되는
+// "level3" 태그에 대한 태그 개체를 반환합니다:
 // level1 > level2 > level3
 var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
 ```
 
-Search for tags by name
+이름으로 태그 검색
 -----------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Fetches all tags by doing a substring search on the name field
+ * 이름 필드에서 하위 문자열 검색을 수행하여 모든 태그를 가져오기
  *
  * @param name {QString} name to search for
  * @return {QStringList} list of tag names
@@ -722,31 +722,31 @@ Search for tags by name
 QStringList ScriptingService::searchTagsByName(QString name);
 ```
 
-### Example
+### 예제
 ```js
-// searches for all tags with the word game in it
+// game이라는 단어가 포함된 모든 태그를 검색
 var tags = script.searchTagsByName("game");
 ```
 
-You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
+[autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml) 예제를 살펴보는 것이 좋습니다.
 
-Search for notes by note text
+노트 텍스트로 노트 검색
 -----------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Returns a list of note ids of all notes with a certain text in the note text
+ * 노트 텍스트에 특정 텍스트가 있는 모든 노트의 노트 ID 목록을 반환
  *
- * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
- * can only transfer the note ids
+ * 유감스럽게도 QML에서 QList<NoteApi*>를 사용하는 쉬운 방법이 없으므로
+ * 노트 ID만 전송할 수 있습니다
  *
  * @return {QList<int>} list of note ids
  */
 QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
 ```
 
-### Example
+### 예제
 ```js
 var noteIds = script.fetchNoteIdsByNoteTextPart("mytext");
 
@@ -757,67 +757,67 @@ noteIds.forEach(function (noteId){
 });
 ```
 
-You may want to take a look at the example [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/unique-note-id.qml).
+[unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/unique-note-id.qml) 예시를 살펴보는 것도 좋습니다.
 
-Add a custom stylesheet
+사용자 지정 스타일시트 추가
 -----------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Adds a custom stylesheet to the application
+ * 응용프로그램에 사용자 지정 스타일시트 추가
  *
  * @param stylesheet
  */
 void ScriptingService::addStyleSheet(QString stylesheet);
 ```
 
-### Example
+### 예제
 ```js
-// make the text in the note list bigger
+// 노트 목록의 텍스트를 더 크게 만들기
 script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
 ```
 
-You may want to take a look at the example [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-stylesheet.qml).
+[custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-stylesheet.qml) 예제를 살펴보는 것이 좋습니다.
 
-You can get the widget names from the `*.ui` files, for example the main window is [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui).
+`*.ui` 파일에서 위젯 이름을 가져올 수 있습니다. 예를 들어 기본 창이 [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui)이 됩니다.
 
-The Qt documentation (for example [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)) can help you to see how the widgets are related to each other (search for `Inherits` on the pages).
+Qt 문서 (예: [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html))를 통해 위젯이 서로 어떻게 관련되어 있는지 확인할 수 있습니다 (페이지에서 `상속` 검색).
 
-The base widget for almost everything is [QWidget](https://doc.qt.io/qt-5/qwidget.html). So just styling `QWidget` with for example `QWidget {background-color: black; color: white;}` would mean everything has a black background color and a white foreground color.
+거의 모든 것의 기본 위젯은 [QWidget](https://doc.qt.io/qt-5/qwidget.html)입니다. 예를 들어 `QWidget` `QWidget {background-color: black; color: white;}`로 QWidget을 스타일링하면 모든 배경색이 검정색이고 전경색이 흰색이 됩니다.
 
-::: tip The [style.qss](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle/style.qss) of [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle) might also be a good reference for styles you can change. :::
+::: 팁 [style.qss](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle/style.qss)의 [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle)도 변경할 수 있는 스타일에 대한 좋은 참고 자료가 될 수 있습니다. :::
 
-Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) for a reference of what styles are available.
+사용 가능한 스타일에 대한 참조는 [스타일 시트 참조](http://doc.qt.io/qt-5/stylesheet-reference.html)를 참조하세요.
 
-If you want to inject styles into html preview to alter the way notes are previewed please look at [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
+HTML 미리 보기에 스타일을 삽입해 노트가 미리 보는 방식을 변경하고 싶으시다면 [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook)을 참고하세요.
 
-::: tip If you actually want to see how the dialogs look and what their names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it. :::
+::: 팁 대화 상자가 실제로 어떻게 생겼는지, 대화 상자의 이름이 무엇인지 확인하려면 [Qt Creator](https://www.qt.io/product/development-tools)를 다운로드하고 `*.ui` 파일을 열면 됩니다. :::
 
-Reloading the scripting engine
+스크립팅 엔진 다시 불러오기
 ------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Reloads the scripting engine
+ * 스크립팅 엔진을 다시 로드
  */
 void ScriptingService::reloadScriptingEngine();
 ```
 
-### Example
+### 예제
 ```js
-// reload the scripting engine
+// 스크립팅 엔진을 다시 로드
 script.reloadScriptingEngine();
 ```
 
-Fetching a note by its file name
+파일 이름으로 노트 가져오기
 --------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Fetches a note by its file name
+ * 파일 이름을 기준으로 노트를 가져오기
  *
  * @param fileName string the file name of the note (mandatory)
  * @param noteSubFolderId integer id of the note subfolder
@@ -827,19 +827,19 @@ NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
                                                 int noteSubFolderId);
 ```
 
-### Example
+### 예제
 ```js
-// fetch note by file name
+// 파일 이름으로 노트 가져오기
 script.fetchNoteByFileName("my note.md");
 ```
 
-Fetching a note by its id
+ID로 노트 가져오기
 -------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Fetches a note by its id
+ * Id로 노트를 가져오기
  *
  * @param id int the id of the note
  * @return NoteApi*
@@ -847,21 +847,21 @@ Fetching a note by its id
 NoteApi* ScriptingService::fetchNoteById(int id);
 ```
 
-### Example
+### 예제
 ```js
-// fetch note by id
+// ID로 노트 가져오기
 script.fetchNoteById(243);
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
+[export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml) 예시를 살펴보는 것이 좋습니다.
 
-Checking if a note exists by its file name
+파일 이름으로 노트가 있는지 확인하기
 ------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Checks if a note file exists by its file name
+ * 파일 이름으로 노트 파일이 있는지 확인
  *
  * @param fileName string the file name of the note (mandatory)
  * @param ignoreNoteId integer id of a note to ignore in the check
@@ -873,21 +873,21 @@ bool ScriptingService::noteExistsByFileName(QString fileName,
                                             int noteSubFolderId);
 ```
 
-### Example
+### 예제
 ```js
-// check if note exists, but ignore the id of "note"
+// 노트가 있는지 확인하지만 "note"의 ID는 무시합니다
 script.noteExistsByFileName("my note.md", note.id);
 ```
 
-You may want to take a look at the example [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
+[use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml)의 예를 살펴볼 수 있습니다.
 
-Copying text into the clipboard
+클립보드로 텍스트 복사
 -------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Copies text into the clipboard as plain text or html mime data
+ * 텍스트를 일반 텍스트 또는 HTML MIME 데이터로 클립보드에 복사
  *
  * @param text string text to put into the clipboard
  * @param asHtml bool if true the text will be set as html mime data
@@ -895,18 +895,18 @@ Copying text into the clipboard
 void ScriptingService::setClipboardText(QString text, bool asHtml);
 ```
 
-### Example
+### 예제
 ```js
-// copy text to the clipboard
+// 텍스트를 클립보드에 복사
 script.setClipboardText("text to copy");
 ```
 
-You may want to take a look at the example [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/selected-markdown-to-bbcode.qml).
+[selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/selected-markdown-to-bbcode.qml) 예를 살펴볼 수 있습니다.
 
-Jumping to a note
+노트로 이동
 -----------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
  * 노트 목록에 노트가 표시되는 경우 현재 노트를
@@ -917,7 +917,7 @@ Jumping to a note
 void ScriptingService::setCurrentNote(NoteApi *note, bool asTab = false);
 ```
 
-### Example
+### 예제
 ```js
 // 노트로 이동
 script.setCurrentNote(note);
@@ -926,15 +926,15 @@ script.setCurrentNote(note);
 script.setCurrentNote(note, true);
 ```
 
-You may want to take a look at the example [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/journal-entry.qml).
+[journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/journal-entry.qml) 예제를 살펴볼 수 있습니다.
 
-Jumping to a note subfolder
+노트 하위 폴더로 이동
 ---------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Jumps to a note subfolder
+ * 노트 하위 폴더로 이동
  *
  * @param noteSubFolderPath {QString} path of the subfolder, relative to the note folder
  * @param separator {QString} separator between parts of the path, default "/"
@@ -944,24 +944,24 @@ bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
                                             QString separator);
 ```
 
-### Example
+### 예제
 ```js
-// jump to the note subfolder "a sub folder"
+// 노트 하위 폴더 "a sub folder"로 이동
 script.jumpToNoteSubFolder("a sub folder");
 
-// jump to the note subfolder "sub" inside of "a sub folder"
+// "a sub folder"의 "sub" 노트 하위 폴더로 이동
 script.jumpToNoteSubFolder("a sub folder/sub");
 ```
 
-::: tip You can create a new note subfolder in the current subfolder by calling [`mainWindow.createNewNoteSubFolder`](classes.html#example-2). :::
+::: 팁 [`mainWindow.createNewNoteSubFolder`](classes.html#example-2)를 호출하여 현재 하위 폴더에 새 노트 하위 폴더를 만들 수 있습니다. :::
 
-Showing an information message box
+정보 메시지 상자 표시
 ----------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Shows an information message box
+ * 정보 메시지 상자 표시
  *
  * @param text
  * @param title (optional)
@@ -969,21 +969,21 @@ Showing an information message box
 void ScriptingService::informationMessageBox(QString text, QString title);
 ```
 
-### Example
+### 예제
 ```js
-// show a information message box
+// 정보 메시지 상자 표시
 script.informationMessageBox("The text I want to show", "Some optional title");
 ```
 
-Showing a question message box
+질문 메시지 상자 표시
 ------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Shows a question message box
+ * 질문 메시지 상자 표시
  *
- * For information about buttons see:
+ * 버튼에 대한 자세한 내용은 다음을 참조하십시오:
  * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
  *
  * @param text
@@ -996,26 +996,26 @@ int ScriptingService::questionMessageBox(
         QString text, QString title, int buttons, int defaultButton);
 ```
 
-### Example
+### 예제
 ```js
-// show a question message box with an apply and a help button
-// see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+// 응용 프로그램 및 도움말 버튼이 있는 질문 메시지 상자 표시
+// 참조: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
 var result = script.questionMessageBox(
     "The text I want to show", "Some optional title", 0x01000000|0x02000000, 0x02000000);
 script.log(result);
 ```
 
-For information about buttons see [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
+버튼에 대한 자세한 내용은 [표준 버튼](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum)를 참조하십시오.
 
-You may also want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml).
+[input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml) 예제도 살펴볼 수 있습니다.
 
-Showing an open file dialog
+열려 있는 파일 대화 상자 표시
 ---------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Shows an open file dialog
+ * 열려 있는 파일 대화 상자 표시
  *
  * @param caption (optional)
  * @param dir (optional)
@@ -1026,19 +1026,19 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
                                             QString filter);
 ```
 
-### Example
+### 예제
 ```js
-// show an open file dialog
+// 열려 있는 파일 대화 상자 표시
 var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
 ```
 
-Showing a save file dialog
+파일 저장 대화 상자 표시
 --------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Shows a save file dialog
+ * 파일 저장 대화 상자 표시
  *
  * @param caption (optional)
  * @param dir (optional)
@@ -1049,22 +1049,22 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
                                             QString filter);
 ```
 
-### Example
+### 예제
 ```js
-// show a save file dialog
+// 파일 저장 대화 상자 표시
 var fileName = script.getSaveFileName("Please select HTML file to save", "output.html", "HTML (*.html)");
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
+[export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml) 예제를 살펴볼 수 있습니다.
 
-Registering script settings variables
+스크립트 설정 변수를 등록
 -------------------------------------
 
-You need to define your settings variables as properties in your script and register them in a property named `settingsVariables`.
+스크립트에서 설정 변수를 속성으로 정의하고 `settingsVariables`라는 속성에 등록해야 합니다.
 
-The user can then set these properties in the script settings.
+그런 다음 스크립트 설정에서 이러한 속성을 설정할 수 있습니다.
 
-### Example
+### 예제
 ```js
 // 등록된 변수를 정의해야 나중에 액세스할 수 있습니다
 property string myString;
@@ -1135,15 +1135,15 @@ property variant settingsVariables: [
 ];
 ```
 
-In addition you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
+또한 다음과 같은 특수 함수 `registerSettingsVariables()`를 사용하여 `settingsVariables`를 재정의할 수 있습니다:
 
-### Example
+### 예제
 ```js
 /**
- * Registers the settings variables again
+ * 설정 변수를 다시 등록
  *
- * Use this method if you want to use code to override your variables, like setting
- * default values depending on the operating system.
+ * 운영 체제에 따라 기본값을 설정하는 것과 같이 코드를 사용하여 변수를
+ * 재정의하려면 이 방법을 사용하십시오.
  */
 function registerSettingsVariables() {
     if (script.platformIsWindows()) {
@@ -1153,17 +1153,17 @@ function registerSettingsVariables() {
 }
 ```
 
-You may also want to take a look at the example [variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/variables.qml).
+[variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/variables.qml) 예제를 살펴볼 수도 있습니다.
 
-Storing and loading persistent variables
+지속 변수 저장 및 로드
 ----------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Stores a persistent variable
- * These variables are accessible globally over all scripts
- * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
+ * 영구 변수 저장
+ * 이러한 변수는 모든 스크립트에서 전역적으로 액세스할 수 있습니다
+ * 키에 "PersistentVariablesTest/myVar"와 같은 의미 있는 접두사를 사용하십시오
  *
  * @param key {QString}
  * @param value {QVariant}
@@ -1172,8 +1172,8 @@ void ScriptingService::setPersistentVariable(const QString &key,
                                                 const QVariant &value);
 
 /**
- * Loads a persistent variable
- * These variables are accessible globally over all scripts
+ * 지속 변수 로드
+ * 이러한 변수는 모든 스크립트에서 전역적으로 액세스할 수 있습니다
  *
  * @param key {QString}
  * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
@@ -1183,26 +1183,26 @@ QVariant ScriptingService::getPersistentVariable(const QString &key,
                                                     const QVariant &defaultValue);
 ```
 
-### Example
+### 예제
 ```js
-// store persistent variable
+// 영구 변수 저장
 script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 
-// load and log persistent variable
+// 영구 변수 로드 및 로그
 script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothing here yet"));
 ```
 
-Please make sure to use a meaningful prefix in your key like `PersistentVariablesTest/myVar` because the variables are accessible from all scripts.
+모든 스크립트에서 변수에 액세스할 수 있으므로 `PersistentVariablesTest/myVar`와 같이 키에 의미 있는 접두사를 사용해야 합니다.
 
-You may also want to take a look at the example [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/persistent-variables.qml).
+[persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/persistent-variables.qml) 예제를 살펴볼 수도 있습니다.
 
-Loading application settings variables
+응용 프로그램 설정 변수 로드
 --------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Loads an application settings variable
+ * 응용 프로그램 설정 변수 로드
  *
  * @param key {QString}
  * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
@@ -1212,23 +1212,23 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
                                                             const QVariant &defaultValue);
 ```
 
-### Example
+### 예제
 ```js
-// load and log an application settings variable
+// 응용 프로그램 설정 변수 로드 및 로깅
 script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
 ```
 
-Keep in mind that settings actually can be empty, you have to take care about that yourself. `defaultValue` is only used if the setting doesn't exist at all.
+설정은 실제로 비어 있을 수 있으므로 직접 관리해야 한다는 점을 명심하세요. `defaultValue`은 설정이 전혀 존재하지 않는 경우에만 사용됩니다.
 
-Creating a cache directory
+캐시 디렉터리 만들기
 --------------------------
 
-You can cache files at the default cache location of your system.
+시스템의 기본 캐시 위치에 파일을 캐시할 수 있습니다.
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Returns a cache directory for a script
+ * 스크립트의 캐시 디렉터리 반환
  *
  * @param {QString} subDir the subfolder to create and use
  * @return {QString} the cache dir path
@@ -1236,21 +1236,21 @@ You can cache files at the default cache location of your system.
 QString ScriptingService::cacheDir(const QString &subDir) const;
 ```
 
-### Example
+### 예제
 ```js
-// create the cache directory for my-script-id
+// my-script-id에 대한 캐시 디렉터리 만들기
 var cacheDirForScript = script.cacheDir("my-script-id");
 ```
 
-Clearing a cache directory
+캐시 디렉터리 지우기
 --------------------------
 
-You can clear the cache directory of your script by passing its name to clearCacheDir().
+clearCacheDir()에 이름을 전달하여 스크립트의 캐시 디렉터리를 지울 수 있습니다.
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Clears the cache directory for a script
+ * 스크립트의 캐시 디렉터리 지우기
  *
  * @param {QString} subDir the subfolder to clear
  * @return {bool} true on success
@@ -1258,24 +1258,24 @@ You can clear the cache directory of your script by passing its name to clearCac
 bool ScriptingService::clearCacheDir(const QString &subDir) const;
 ```
 
-### Example
+### 예제
 ```js
-// clear cache directory of my-script-id 
+// my-script-id 의 캐시 디렉터리 지우기 
 script.clearCacheDir("my-script-id");
 ```
 
-Reading the path to the directory of your script
+스크립트 디렉토리의 경로를 읽기
 ------------------------------------------------
 
-If you need to get the path to the directory where your script is placed to for example load other files you have to register a `property string scriptDirPath;`. This property will be set with the path to the script's directory.
+예를 들어 다른 파일을 로드하기 위해 스크립트가 있는 디렉터리의 경로를 가져와야 하는 경우 스크립트가 있는 디렉터리의 문자열 `property string scriptDirPath;` 속성을 등록해야 합니다. 이 속성은 스크립트의 디렉터리 경로로 설정됩니다.
 
-### Example
+### 예제
 ```js
 import QtQml 2.0
 import QOwnNotesTypes 1.0
 
 Script {
-    // the path to the script's directory will be set here
+    // 스크립트의 디렉터리 경로가 여기에 설정됩니다
     property string scriptDirPath;
 
     function init() {
@@ -1284,14 +1284,14 @@ Script {
 }
 ```
 
-Converting path separators to native ones
+경로 구분 기호를 기본 경로 구분 기호로 변환
 -----------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Returns path with the '/' separators converted to separators that are
- * appropriate for the underlying operating system.
+ * '/' 구분 기호가 기본 운영 체제에 적합한 구분 기호로
+ * 변환된 경로를 반환합니다.
  *
  * On Windows, toNativeDirSeparators("c:/winnt/system32") returns
  * "c:\winnt\system32".
@@ -1302,19 +1302,19 @@ Converting path separators to native ones
 QString ScriptingService::toNativeDirSeparators(QString path);
 ```
 
-### Example
+### 예제
 ```js
-// will return "c:\winnt\system32" on Windows
+// Windows에서 "c:\winnt\system32"를 반환
 script.log(script.toNativeDirSeparators("c:/winnt/system32"));
 ```
 
-Converting path separators from native ones
+기본 경로 구분 기호에서 경로 구분 기호 변환
 -------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Returns path using '/' as file separator.
+ * '/'을(를) 파일 구분 기호로 사용하여 경로를 반환합니다.
  * On Windows, for instance, fromNativeDirSeparators("c:\\winnt\\system32")
  * returns "c:/winnt/system32".
  *
@@ -1324,80 +1324,80 @@ Converting path separators from native ones
 QString ScriptingService::fromNativeDirSeparators(QString path);
 ```
 
-### Example
+### 예제
 ```js
-// will return "c:/winnt/system32" on Windows
+// Windows에서 "c:/winnt/system32"를 반환
 script.log(script.fromNativeDirSeparators("c:\\winnt\\system32"));
 ```
 
-Getting the native directory separator
+기본 디렉토리 구분자를 가져오기
 --------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Returns the native directory separator "/" or "\" on Windows
+ * Windows에서 네이티브 디렉터리 구분 기호 "/" 또는 "\"를 반환
  *
  * @return
  */
 QString ScriptingService::dirSeparator();
 ```
 
-### Example
+### 예제
 ```js
-// will return "\" on Windows
+// Windows에서 "\"를 반환
 script.log(script.dirSeparator());
 ```
 
-Getting a list of the paths of all selected notes
+선택한 모든 노트의 경로 목록 가져오기
 -------------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Returns a list of the paths of all selected notes
+ * 선택한 모든 노트의 경로 목록 반환
  *
  * @return {QStringList} list of selected note paths
  */
 QStringList ScriptingService::selectedNotesPaths();
 ```
 
-### Example
+### 예제
 ```js
-// returns a list of the paths of all selected notes
+// 선택한 모든 노트의 경로 목록 반환
 script.log(script.selectedNotesPaths());
 ```
 
-You may want to take a look at the example [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-diff.qml).
+[external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-diff.qml) 예시를 살펴보는 것이 좋습니다.
 
-Getting a list of the ids of all selected notes
+선택한 모든 노트의 ID 목록 가져오기
 -----------------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Returns a list of the ids of all selected notes
+ * 선택한 모든 노트의 ID 목록 반환
  *
  * @return {QList<int>} list of selected note ids
  */
 QList<int> ScriptingService::selectedNotesIds();
 ```
 
-### Example
+### 예제
 ```js
-// returns a list of the ids of all selected notes
+// 선택한 모든 노트의 Id 목록 반환
 script.log(script.selectedNotesIds());
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
+[export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml) 예시를 살펴보는 것이 좋습니다.
 
-Triggering a menu action
+메뉴 작업 트리거
 ------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Triggers a menu action
+ * 메뉴 작업을 트리거
  *
  * @param objectName {QString} object name of the action to trigger
  * @param checked {QString} only trigger the action if checked-state is
@@ -1406,26 +1406,26 @@ Triggering a menu action
 void ScriptingService::triggerMenuAction(QString objectName, QString checked);
 ```
 
-### Example
+### 예제
 ```js
-// toggle the read-only mode
+// 읽기 전용 모드 전환
 script.triggerMenuAction("actionAllow_note_editing");
 
 // disable the read-only mode
 script.triggerMenuAction("actionAllow_note_editing", 1);
 ```
 
-You may want to take a look at the example [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/disable-readonly-mode.qml).
+[disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/disable-readonly-mode.qml) 예제를 살펴보는 것이 좋습니다.
 
-::: tip You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Just search for the English menu title. Note that these texts can change over time. :::
+::: 팁 메뉴 동작의 개체 이름은 [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui)에서 가져올 수 있습니다. 영문 메뉴 제목을 검색하면 됩니다. 이 텍스트는 시간이 지남에 따라 변경될 수 있습니다. :::
 
-Opening an input dialog with a select box
+선택 상자를 사용하여 입력 대화 상자 열기
 -----------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Opens an input dialog with a select box
+ * 선택 상자가 있는 입력 대화 상자 열기
  *
  * @param title {QString} title of the dialog
  * @param label {QString} label text of the dialog
@@ -1439,22 +1439,22 @@ QString ScriptingService::inputDialogGetItem(
         int current, bool editable);
 ```
 
-### Example
+### 예제
 ```js
 var result = script.inputDialogGetItem(
     "combo box", "Please select an item", ["Item 1", "Item 2", "Item 3"]);
 script.log(result);
 ```
 
-You may want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml).
+[input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml) 예제를 살펴볼 수 있습니다.
 
-Opening an input dialog with a line edit
+줄 편집을 사용하여 입력 대화 상자 열기
 ----------------------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Opens an input dialog with a line edit
+ * 줄 편집이 있는 입력 대화 상자를 열기
  *
  * @param title {QString} title of the dialog
  * @param label {QString} label text of the dialog
@@ -1465,39 +1465,39 @@ QString ScriptingService::inputDialogGetText(
         const QString &title, const QString &label, const QString &text);
 ```
 
-### Example
+### 예제
 ```js
 var result = script.inputDialogGetText(
     "line edit", "Please enter a name", "current text");
 script.log(result);
 ```
 
-Checking if a file exists
+파일이 있는지 확인하기
 -------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Check if a file exists
+ * 파일이 있는지 확인
  * @param filePath
  * @return
  */
 bool ScriptingService::fileExists(QString &filePath);
 ```
 
-### Example
+### 예제
 ```js
 var result = script.fileExists(filePath);
 script.log(result);
 ```
 
-Reading text from a file
+파일에서 텍스트 읽기
 ------------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Read text from a file
+ * 파일에서 텍스트 읽기
  *
  * @param filePath {QString} path of the file to load
  * @param codec {QString} file encoding (default: UTF-8)
@@ -1506,7 +1506,7 @@ Reading text from a file
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
 ```
 
-### Example
+### 예제
 ```js
 if(script.fileExists(filePath)){
     var data = script.readFromFile(filePath);
@@ -1515,13 +1515,13 @@ if(script.fileExists(filePath)){
 ```
 
 
-Writing text to a file
+파일에 텍스트 쓰기
 ----------------------
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Writes a text to a file
+ * 파일에 텍스트 쓰기
  *
  * @param filePath {QString}
  * @param data {QString}
@@ -1531,34 +1531,34 @@ Writing text to a file
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### Example
+### 예제
 ```js
 var result = script.writeToFile(filePath, html);
 script.log(result);
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
+[export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml) 예제를 살펴볼 수 있습니다.
 
-Working with websockets
+웹 소켓 작업
 -----------------------
 
-You can remotely control QOwnNotes by using `WebSocketServer`.
+`WebSocketServer`를 사용하여 QOwnNotes를 원격으로 제어할 수 있습니다.
 
-Please take a look at the example [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-server.qml). You can test the socket server by connecting to it on [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
+[websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-server.qml) 예제를 참조하십시오. [Websockettest](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345)에서 소켓 서버에 연결하여 테스트할 수 있습니다.
 
-You can also listen to sockets with `WebSocket`. Please take look at the example [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-client.qml).
+`WebSocket`으로 소켓을 들을 수도 있습니다. [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-client.qml) 예제를 참조하십시오.
 
-Keep in mind that you need to have Qt's QML `websocket` library installed to use this. For example under Ubuntu Linux you can install `qml-module-qtwebsockets`.
+이를 사용하려면 Qt의 QML `websocket` 라이브러리가 설치되어 있어야 합니다. 예를 들어 Ubuntu Linux에서 `qml-module-qtwebsockets`을 설치할 수 있습니다.
 
-Adding a highlighting rule for the editor
+편집기에 대한 강조 표시 규칙 추가
 -----------------------------------------
 
-You can directly inject highlighting rules into the editor by defining regular expressions and assigning them to a highlighting state.
+정규식을 정의하고 강조 표시 상태에 할당하여 강조 표시 규칙을 편집기에 직접 주입할 수 있습니다.
 
-### Method call and parameters
+### 메서드 호출 및 매개 변수
 ```cpp
 /**
- * Adds a highlighting rule to the syntax highlighter of the editor
+ * 편집기의 구문 강조 표시에 강조 표시 규칙을 추가
  *
  * @param pattern {QString} the regular expression pattern to highlight
  * @param shouldContain {QString} a string that must be contained in the highlighted text for the pattern to be parsed
@@ -1573,47 +1573,47 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
                                            int maskedGroup);
 ```
 
-### Highlighting states
+### 강조 표시 상태
 
-| Name                       | Nr. |
-| -------------------------- | --- |
-| NoState                    | -1  |
-| Link                       | 0   |
-| Image                      | 3   |
-| CodeBlock                  | 4   |
-| CodeBlockComment           | 5   |
-| Italic                     | 7   |
-| Bold                       | 8   |
-| List                       | 9   |
-| Comment                    | 11  |
-| H1                         | 12  |
-| H2                         | 13  |
-| H3                         | 14  |
-| H4                         | 15  |
-| H5                         | 16  |
-| H6                         | 17  |
-| BlockQuote                 | 18  |
-| HorizontalRuler            | 21  |
-| Table                      | 22  |
-| InlineCodeBlock            | 23  |
-| MaskedSyntax               | 24  |
-| CurrentLineBackgroundColor | 25  |
-| BrokenLink                 | 26  |
-| FrontmatterBlock           | 27  |
-| TrailingSpace              | 28  |
-| CheckBoxUnChecked          | 29  |
-| CheckBoxChecked            | 30  |
-| StUnderline                | 31  |
+| 이름        | 번호 |
+| --------- | -- |
+| 상태 없음     | -1 |
+| 링크        | 0  |
+| 이미지       | 3  |
+| 코드 블록     | 4  |
+| 코드 블록 주석  | 5  |
+| 기울임꼴      | 7  |
+| 굵게        | 8  |
+| 목록        | 9  |
+| 주석        | 11 |
+| H1        | 12 |
+| H2        | 13 |
+| H3        | 14 |
+| H4        | 15 |
+| H5        | 16 |
+| H6        | 17 |
+| 블럭 따옴표    | 18 |
+| 수평 눈금자    | 21 |
+| 표         | 22 |
+| 들여쓰기코드블록  | 23 |
+| 마스크된 구문   | 24 |
+| 현재 줄 배경색  | 25 |
+| 끊어진 링크    | 26 |
+| 프론트매터블록   | 27 |
+| 후행 공간     | 28 |
+| 확인란 선택 취소 | 29 |
+| 확인란 선택됨   | 30 |
+| 세인트 밑줄    | 31 |
 
-### Example
+### 예제
 ```js
-// Highlight a text line like "BLOCK: some text" as blockquote (state 18)
+// 블록: 일부 텍스트와 같은 텍스트 줄을 블록 따옴표 (상태 18)로 강조 표시
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);
 
-// Mask out (state 24) all characters after 32 characters in a line
-// capturingGroup 1 means the expression from the first bracketed part of the pattern will be highlighted
-// maskedGroup -1 means that no masking should be done
+// 한 줄에서 32자 이후의 모든 문자를 마스크 아웃(상태 24)합니다
+// 은 패턴의 첫 번째 괄호로 묶인 부분의 표현식이 강조 표시됨을 의미합니다
+// 은 마스킹을 수행하지 않아야 함을 의미합니다
 script.addHighlightingRule("^.{32}(.+)", "", 24, 1, -1);
 ```
 
-You can also take a look at the examples in [highlighting.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/highlighting.qml).
+또한 [highlighting.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/highlighting.qml)의 예를 볼 수 있습니다.

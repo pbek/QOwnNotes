@@ -1,5 +1,5 @@
-# Install on FreeBSD
+# FreeBSD에 설치
 
-There is a community-created package for **FreeBSD** by *Matthew Stobbs* at [QOwnNotes FreeBSD port](https://svnweb.freebsd.org/ports/head/deskutils/qownnotes).
+[QOwnNotes FreeBSD 포트](https://svnweb.freebsd.org/ports/head/deskutils/qownnotes)에는 *Matthew Stobbs* 에 의해 **FreeBSD**를 위한 커뮤니티 생성 패키지가 있습니다.
 
-A big thank you to Matthew!
+Matthew에게 큰 감사를 드립니다!

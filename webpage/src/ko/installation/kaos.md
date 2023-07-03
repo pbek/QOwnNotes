@@ -1,8 +1,8 @@
-# Install on KaOS Linux
+# KaOS Linux에 설치
 
-There is a community maintained package `qownnotes` at the [KaOS Community Packages](https://github.com/KaOS-Community-Packages/qownnotes) repository.
+[KaOS Community Packages](https://github.com/KaOS-Community-Packages/qownnotes) 저장소에는 커뮤니티 유지보수 패키지 `qownnotes`가 있습니다.
 
-You can install it by typing:
+다음을 입력하여 설치할 수 있습니다:
 
 ```bash
 kcp -i qownnotes
