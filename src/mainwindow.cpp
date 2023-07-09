@@ -11617,6 +11617,13 @@ void MainWindow::on_actionInsert_Nextcloud_Deck_card_triggered()
     }
 
     auto *dialog = new NextcloudDeckDialog(this);
+
+    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
+    QString selectedText = textEdit->textCursor().selectedText();
+    if (!selectedText.isEmpty()) {
+        dialog->setTitle(selectedText);
+    }
+
     dialog->exec();
 }
 

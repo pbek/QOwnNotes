@@ -76,3 +76,7 @@ void NextcloudDeckDialog::on_titleLineEdit_textChanged(const QString &arg1) {
 void NextcloudDeckDialog::on_dueDateTimeCheckBox_toggled(bool checked) {
     ui->dueDateTimeEdit->setEnabled(checked);
 }
+
+void NextcloudDeckDialog::setTitle(const QString& title) {
+    ui->titleLineEdit->setText(title);
+}

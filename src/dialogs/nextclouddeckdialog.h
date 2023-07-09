@@ -16,6 +16,7 @@ class NextcloudDeckDialog : public MasterDialog
 public:
     explicit NextcloudDeckDialog(QWidget *parent = nullptr);
     ~NextcloudDeckDialog();
+    void setTitle(const QString& title);
 
 private slots:
     void on_saveButton_clicked();

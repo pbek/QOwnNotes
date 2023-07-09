@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.7.0
+- when you now select text in a note that text will be used as title when you
+  open the **Nextcloud Deck** dialog (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789))
+
 ## 23.6.6
 - some menu text was adapted to be more readable
 - added more German, Arabic, Korean, Dutch, Ukrainian translation (thank you sdicke,
