@@ -5637,7 +5637,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <item row="0" column="2">
                  <widget class="QToolButton" name="setGitPathToolButton">
                   <property name="toolTip">
-                   <string>set external editor</string>
+                   <string>Select the path of the git binary</string>
                   </property>
                   <property name="text">
                    <string/>

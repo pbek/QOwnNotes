@@ -3371,7 +3371,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11628"/>
+        <location filename="../mainwindow.cpp" line="11635"/>
         <source>Note path &apos;%1&apos; was copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5950,7 +5950,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4422"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5640"/>
         <source>set external editor</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6883,6 +6882,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="5740"/>
         <source>Ignored note files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="5640"/>
+        <source>Select the path of the git binary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
