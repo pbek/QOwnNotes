@@ -19,7 +19,8 @@
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=1.1.3.2
 
-BRANCH=main
+#BRANCH=main
+BRANCH=release
 #BRANCH=master
 
 PROJECT_PATH="/tmp/QOwnNotes-tuxfamily-$$"
