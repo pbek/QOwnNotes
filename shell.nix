@@ -9,6 +9,10 @@
       qttools
       wrapQtAppsHook
       pkg-config
+
+      # for ./build-systems/github/build-github-src.sh
+      coreutils
+      gh
     ];
 
     buildInputs = with pkgs; with qt6; [

@@ -11,7 +11,7 @@ RUN apt-get -y install bash tmuxinator \
          libqt5websockets5-dev libqt5x11extras5-dev \
          qt6-base-dev qt6-declarative-dev libqt6svg6-dev libqt6websockets6-dev \
          libqt6svg6 libqt6svgwidgets6 libqt6websockets6 libqt6core5compat6 \
-         libqt6core5compat6-dev
+         libqt6core5compat6-dev gh
 
 # QOwnNotes repo is supposed to be mounted to /QOwnNotes
 RUN useradd -ms /bin/bash release

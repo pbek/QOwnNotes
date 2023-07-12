@@ -1,6 +1,11 @@
 # QOwnNotes Changelog
 
 ## 23.7.1
+- since the [TuxFamily](https://www.tuxfamily.org/) upload server has been very
+  unreliable and down for several days, we have now switched to GitHub releases
+  as hosting service for the source archive (for [#2799](https://github.com/pbek/QOwnNotes/issues/2799))
+  - the format of the source archive URL now looks like:
+    `https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`
 - a tooltip typo in the *Git Settings* was fixed
 
 ## 23.7.0

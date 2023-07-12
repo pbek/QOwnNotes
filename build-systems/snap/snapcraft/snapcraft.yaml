@@ -53,7 +53,7 @@ plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
 
 parts:
   qownnotes:
-    source: https://download.tuxfamily.org/qownnotes/src/qownnotes-VERSION-STRING.tar.xz
+    source: https://github.com/pbek/QOwnNotes/releases/download/vVERSION-STRING/qownnotes-VERSION-STRING.tar.xz
     source-checksum: sha256/ARCHIVE-SHA256
     # see https://snapcraft.io/docs/qmake-plugin
     plugin: qmake

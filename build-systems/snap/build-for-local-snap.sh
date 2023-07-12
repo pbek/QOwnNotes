@@ -8,7 +8,7 @@
 # snapcraft login
 #
 # The QOwnNotes repository for Launchpad Snap relies on our source archive on
-# https://download.tuxfamily.org/qownnotes/src/
+# https://github.com/pbek/QOwnNotes/releases
 #
 
 

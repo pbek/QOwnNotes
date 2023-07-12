@@ -5,7 +5,7 @@
 # https://github.com/pbek/qownnotes-slackbuilds
 #
 # The QOwnNotes repository for Slackware relies on our source archive on
-# https://download.tuxfamily.org/qownnotes/src/
+# https://github.com/pbek/QOwnNotes/releases
 #
 
 
@@ -21,13 +21,13 @@ PROJECT_PATH="/tmp/QOwnNotes-slackware-$$"
 _QQwnNotesCheckSumVarFile="/tmp/QOwnNotes.checksum.vars"
 
 if [[ ! -f ${_QQwnNotesCheckSumVarFile} ]]; then
-	echo "${_QQwnNotesCheckSumVarFile} doesn't exist. build-tuxfamily-src.sh must be run ahead of build script!"
+	echo "${_QQwnNotesCheckSumVarFile} doesn't exist. build-github-src.sh must be run ahead of build script!"
 	exit 1
 fi
 
 source ${_QQwnNotesCheckSumVarFile}
 
-# check checksum variable from build-systems/tuxfamily/build-tuxfamily-src.sh
+# check checksum variable from build-systems/github/build-github-src.sh
 if [ -z ${QOWNNOTES_ARCHIVE_MD5} ]; then
     echo "QOWNNOTES_ARCHIVE_MD5 was not set!"
 	exit 1

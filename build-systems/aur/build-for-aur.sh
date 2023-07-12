@@ -7,11 +7,11 @@
 # https://wiki.archlinux.org/index.php/Arch_User_Repository#Creating_a_new_package
 #
 # The QOwnNotes repository for AUR relies on our source archive on
-# https://download.tuxfamily.org/qownnotes/src/
+# https://github.com/pbek/QOwnNotes/releases
 #
 
 # Uncomment as workaround to run locally
-#QOWNNOTES_ARCHIVE_SHA256=$(curl https://download.tuxfamily.org/qownnotes/src/qownnotes-23.2.1.tar.xz.sha256)
+#QOWNNOTES_ARCHIVE_SHA256=$(curl https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz.sha256)
 #echo QOWNNOTES_ARCHIVE_SHA256="${QOWNNOTES_ARCHIVE_SHA256}" > /tmp/QOwnNotes.checksum.vars
 
 # uncomment this if you want to force a version
@@ -27,13 +27,13 @@ CUR_DIR=$(pwd)
 _QQwnNotesCheckSumVarFile="/tmp/QOwnNotes.checksum.vars"
 
 if [[ ! -f ${_QQwnNotesCheckSumVarFile} ]]; then
-	echo "${_QQwnNotesCheckSumVarFile} doesn't exist. build-tuxfamily-src.sh must be run ahead of build script!"
+	echo "${_QQwnNotesCheckSumVarFile} doesn't exist. build-github-src.sh must be run ahead of build script!"
 	exit 1
 fi
 
 source ${_QQwnNotesCheckSumVarFile}
 
-# check checksum variable from build-systems/tuxfamily/build-tuxfamily-src.sh
+# check checksum variable from build-systems/github/build-github-src.sh
 if [ -z ${QOWNNOTES_ARCHIVE_SHA256} ]; then
     echo "QOWNNOTES_ARCHIVE_SHA256 was not set!"
 	exit 1

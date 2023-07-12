@@ -15,11 +15,10 @@ fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-echo "Upload source archive to TuxFamily, be aware that it usually can take a minute until the files are accessible via https://download.tuxfamily.org/qownnotes/src"
+echo "Upload source archive to GitHub release..."
 
-# Upload source archive to TuxFamily, be aware that it usually can take a
-# minute until the files are accessible via https://download.tuxfamily.org/qownnotes/src
-"$DIR/tuxfamily/build-tuxfamily-src.sh"
+# Upload source archive to GitHub release
+"$DIR/github/build-github-src.sh"
 
 # check if exit code was 0
 rc=$?; if [[ $rc != 0 ]]; then exit $rc; fi
