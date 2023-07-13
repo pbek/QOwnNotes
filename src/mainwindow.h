@@ -414,6 +414,8 @@ class MainWindow : public QMainWindow {
 
     void noteViewUpdateTimerSlot();
 
+    void autoReadOnlyModeTimerSlot();
+
     void gitCommitCurrentNoteFolder();
 
     void noteTextSliderValueChanged(int value, bool force = false);
@@ -732,6 +734,7 @@ public:
     QTimer *noteSaveTimer;
     QTimer *_frequentPeriodicTimer;
     QTimer *_noteViewUpdateTimer;
+    QTimer *_autoReadOnlyModeTimer;
     QTimer *_gitCommitTimer;
     QTimer *_todoListTimer;
     bool _noteViewNeedsUpdate;
@@ -1096,4 +1099,5 @@ public:
     void automaticScriptUpdateCheck();
     void updateJumpToActionsAvailability();
     int getNoteTabIndex(int noteId) const;
+    bool startAutoReadOnlyModeIfEnabled();
 };

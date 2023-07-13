@@ -862,6 +862,8 @@ void SettingsDialog::storeSettings() {
                       ui->automaticNoteFolderDatabaseClosingCheckBox->isChecked());
     settings.setValue(QStringLiteral("legacyLinking"), ui->legacyLinkingCheckBox->isChecked());
     settings.setValue(QStringLiteral("startInReadOnlyMode"), ui->startInReadOnlyModeCheckBox->isChecked());
+    settings.setValue(QStringLiteral("autoReadOnlyMode"), ui->autoReadOnlyModeCheckBox->isChecked());
+    settings.setValue(QStringLiteral("autoReadOnlyModeTimeout"), ui->autoReadOnlyModeTimeoutSpinBox->value());
 
     settings.setValue(QStringLiteral("webSocketServerService/port"),
                       ui->webSocketServerServicePortSpinBox->value());
@@ -1309,6 +1311,8 @@ void SettingsDialog::readSettings() {
         Utils::Misc::doAutomaticNoteFolderDatabaseClosing());
     ui->legacyLinkingCheckBox->setChecked(settings.value(QStringLiteral("legacyLinking")).toBool());
     ui->startInReadOnlyModeCheckBox->setChecked(settings.value(QStringLiteral("startInReadOnlyMode")).toBool());
+    ui->autoReadOnlyModeCheckBox->setChecked(settings.value(QStringLiteral("autoReadOnlyMode")).toBool());
+    ui->autoReadOnlyModeTimeoutSpinBox->setValue(settings.value(QStringLiteral("autoReadOnlyModeTimeout"), 30).toInt());
 
     ui->webSocketServerServicePortSpinBox->setValue(WebSocketServerService::getSettingsPort());
     ui->bookmarksTagLineEdit->setText(WebSocketServerService::getBookmarksTag());

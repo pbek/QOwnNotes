@@ -265,6 +265,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+PgUp")), this);
     connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionPrevious_Note_triggered);
 
+    _autoReadOnlyModeTimer = new QTimer(this);
+    _autoReadOnlyModeTimer->setSingleShot(true);
+    connect(_autoReadOnlyModeTimer, &QTimer::timeout, this, &MainWindow::autoReadOnlyModeTimerSlot);
+
     // read the settings (shortcuts have to be defined before that)
     readSettings();
 
@@ -2334,7 +2338,7 @@ void MainWindow::readSettings() {
         settings.remove(QStringLiteral("GAnalytics-cid"));
     }
 
-    // let us select a folder if we haven't find one in the settings
+    // let us select a folder if we haven't found one in the settings
     if (this->notesPath.isEmpty()) {
         selectOwnCloudNotesFolder();
     }
@@ -2421,6 +2425,23 @@ void MainWindow::readSettings() {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     });
 #endif
+
+    // Enable/disable auto read-only mode
+    if (!startAutoReadOnlyModeIfEnabled()) {
+        _autoReadOnlyModeTimer->stop();
+    }
+}
+
+bool MainWindow::startAutoReadOnlyModeIfEnabled() {
+    QSettings settings;
+
+    if (settings.value(QStringLiteral("autoReadOnlyMode")).toBool()) {
+        _autoReadOnlyModeTimer->start(settings.value(QStringLiteral("autoReadOnlyModeTimeout")).toInt() * 1000);
+
+        return true;
+    }
+
+    return false;
 }
 
 /**
@@ -2887,6 +2908,16 @@ void MainWindow::noteViewUpdateTimerSlot() {
         _noteViewNeedsUpdate = false;
     }
     _noteViewUpdateTimer->start(2000);
+}
+
+void MainWindow::autoReadOnlyModeTimerSlot() {
+    // Disable note editing if it was enabled
+    if (ui->actionAllow_note_editing->isChecked()) {
+        ui->actionAllow_note_editing->trigger();
+    }
+
+    // Start timer again
+    startAutoReadOnlyModeIfEnabled();
 }
 
 void MainWindow::storeUpdatedNotesToDisk() {
@@ -5349,6 +5380,8 @@ void MainWindow::on_noteTextEdit_textChanged() {
     if (debounceTime > 0) {
         _noteViewUpdateTimer->start(debounceTime);
     }
+
+    startAutoReadOnlyModeIfEnabled();
 }
 
 void MainWindow::noteTextEditTextWasUpdated() {

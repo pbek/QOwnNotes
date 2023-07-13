@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 23.7.2
+- there now is a new checkbox in the *General Settings* to automatically enable read-only mode
+  after a certain amount of time of inactivity (for [#2802](https://github.com/pbek/QOwnNotes/issues/2802))
+- added more Korean, Dutch translation (thank you venusgirl, stephanp)
+
 ## 23.7.1
 - since the [TuxFamily](https://www.tuxfamily.org/) upload server has been very
   unreliable and down for several days, we have now switched to GitHub releases
