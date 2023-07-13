@@ -21,7 +21,8 @@ PROJECT_PATH="/tmp/QOwnNotes-github-$$"
 set -e
 
 echo "Check if we have a GitHub token (login if not)..."
-gh auth status || gh auth login
+# insecure storage is needed for the GitHub token to be in a file we can mount into the docker container
+gh auth status || gh auth login --insecure-storage
 
 echo "Started the GitHub packaging process, using latest '$BRANCH' git tree"
 
