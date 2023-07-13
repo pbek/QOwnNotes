@@ -39,8 +39,8 @@ make
 
 ## ملفات الكود المصدري المضغوطة
 
-يمكنك العثور على الملفات المضغوطة لكود QOwnNotes المصدري في [أرشيف مصادر QOwnNotes](https://download.tuxfamily.org/qownnotes/src/).
+You will find source archives of QOwnNotes on [QOwnNotes source archive](https://github.com/pbek/QOwnNotes/releases).
 
 يمكن الوصول إلى الملفات المضغوطة للكود المصدري برابط مثل هذا:
 
-`https://download.tuxfamily.org/qownnotes/src/qownnotes-20.10.1.tar.xz`
+`https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`

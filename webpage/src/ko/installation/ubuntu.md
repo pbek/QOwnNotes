@@ -21,20 +21,20 @@ sudo apt-get install qownnotes
 이미 Qt6 패키지를 사용하고 Ubuntu 22.04 이상 버전에 있는 경우 다음 저장소를 사용할 수 있습니다:
 
 ```bash
-# Remove Qt5 PPA in case you had it installed
+# Qt5 PPA를 설치한 경우 제거
 sudo add-apt-repository --remove ppa:pbek/qownnotes
 
-# Add Qt6 PPA
+# Qt6 PPA 추가
 sudo add-apt-repository ppa:pbek/qownnotes-qt6
 
-# Install QOwnNotes
+# QOwnNotes 설치
 sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
 [직접 다운로드](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
-문제가 발견되면 [GitHub의 QOwnNotes문제](https://github.com/pbek/QOwnNotes/issues)에 보고하십시오!
+문제가 발견되면 [GitHub의 QOwnNotes 문제](https://github.com/pbek/QOwnNotes/issues)에 보고하십시오!
 
 ## 이전 Ubuntu Linux 배포 및 파생 제품
 

@@ -39,8 +39,8 @@ Se vuoi contribuire con il codice sorgente al progetto, invia le tue richieste p
 
 ## Archivio sorgente
 
-Troverai gli archivi sorgente di QOwnNotes in [archivio sorgente QOwnNotes](https://download.tuxfamily.org/qownnotes/src/).
+You will find source archives of QOwnNotes on [QOwnNotes source archive](https://github.com/pbek/QOwnNotes/releases).
 
 Gli archivi sorgente saranno accessibili in questo modo:
 
-`https://download.tuxfamily.org/qownnotes/src/qownnotes-20.10.1.tar.xz`
+`https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`

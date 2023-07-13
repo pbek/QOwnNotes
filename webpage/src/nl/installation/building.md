@@ -39,8 +39,8 @@ Als u broncode aan het project wilt bijdragen, dient u uw pull-verzoeken in naar
 
 ## Bronarchief
 
-U vindt bronarchieven van QOwnNotes op [QOwnNotes bronarchief](https://download.tuxfamily.org/qownnotes/src/).
+U kunt de broncode-archieven van QOwnNotes vinden op [QOwnNotes source archive](https://github.com/pbek/QOwnNotes/releases).
 
 De bronarchieven zullen als volgt toegankelijk zijn:
 
-`https://download.tuxfamily.org/qownnotes/src/qownnotes-20.10.1.tar.xz`
+`https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`

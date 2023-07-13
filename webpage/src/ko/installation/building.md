@@ -37,8 +37,8 @@ make
 
 ## 원본 보관소
 
-[QOwnNotes 원본 보관소](https://download.tuxfamily.org/qownnotes/src/)에서 QOwnNotes 원본 보관소을 찾을 수 있습니다.
+[QOwnNotes 소스 보관함](https://github.com/pbek/QOwnNotes/releases) 에서 QOwnNotes 소스 보관함을 찾을 수 있습니다.
 
 소스 아카이브는 다음과 같이 액세스할 수 있습니다:
 
-`https://download.tuxfamily.org/qownnotes/src/qownnotes-20.10.1.tar.xz`
+`https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`
