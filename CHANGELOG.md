@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.7.3
+- added a **new editor color schema** *Revontuli* by @Akselmo
+  (for [#2804](https://github.com/pbek/QOwnNotes/issues/2804))
+
 ## 23.7.2
 - there now is a new checkbox in the *General Settings* to automatically enable read-only mode
   after a certain amount of time of inactivity (for [#2802](https://github.com/pbek/QOwnNotes/issues/2802))
