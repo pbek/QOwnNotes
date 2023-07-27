@@ -6750,7 +6750,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4239"/>
 <source>When inactive, enter read-only mode automatically after:</source>
-<translation type="unfinished">When inactive, enter read-only mode automatically after:</translation>
+<translation>Wenn inaktiv, dann gehe automatisch in den Nur-Lese-Modus nach:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4246"/>

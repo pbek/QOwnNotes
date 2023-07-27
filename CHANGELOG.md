@@ -3,6 +3,8 @@
 ## 23.7.3
 - added a **new editor color schema** *Revontuli* by @Akselmo
   (for [#2804](https://github.com/pbek/QOwnNotes/issues/2804))
+- added more German, Croatian, Korean, Dutch translation (thank you rakekniven,
+  milotype, sdicke, venusgirl, stephanp)
 
 ## 23.7.2
 - there now is a new checkbox in the *General Settings* to automatically enable read-only mode

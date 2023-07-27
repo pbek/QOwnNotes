@@ -1519,7 +1519,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopiraj</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -4249,22 +4249,22 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="20"/>
 <source>-10min</source>
-<translation type="unfinished">-10min</translation>
+<translation>−10 min</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="27"/>
 <source>+10min</source>
-<translation type="unfinished">+10min</translation>
+<translation>+10 min</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="34"/>
 <source>+1d</source>
-<translation type="unfinished">+1d</translation>
+<translation>+1 dan</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="54"/>
 <source>-1d</source>
-<translation type="unfinished">-1d</translation>
+<translation>−1 dan</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="14"/>
@@ -4279,27 +4279,27 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="98"/>
 <source>&amp;Save</source>
-<translation type="unfinished">&amp;Save</translation>
+<translation>&amp;Spremi</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="115"/>
 <source>+1h</source>
-<translation type="unfinished">+1h</translation>
+<translation>+1 sat</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="122"/>
 <source>Title</source>
-<translation type="unfinished">Title</translation>
+<translation>Naslov</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="129"/>
 <source>-1h</source>
-<translation type="unfinished">-1h</translation>
+<translation>−1 sat</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="136"/>
 <source>Description:</source>
-<translation type="unfinished">Description:</translation>
+<translation>Opis:</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="143"/>
@@ -6798,7 +6798,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <location filename="../dialogs/settingsdialog.ui" line="4246"/>
 <source> sec</source>
 <extracomment>short for seconds</extracomment>
-<translation type="unfinished"> sec</translation>
+<translation> s</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4344"/>
@@ -8470,7 +8470,7 @@ Vaše bilješke će ostati netaknute!</translation>
 <location filename="../libraries/sonnet/src/core/loader.cpp" line="331"/>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
