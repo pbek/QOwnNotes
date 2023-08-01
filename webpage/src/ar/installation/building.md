@@ -39,7 +39,7 @@ make
 
 ## ملفات الكود المصدري المضغوطة
 
-You will find source archives of QOwnNotes on [QOwnNotes source archive](https://github.com/pbek/QOwnNotes/releases).
+يمكنك العثور على الملفات المضغوطة لكود QOwnNotes المصدري في [أرشيف مصادر QOwnNotes](https://github.com/pbek/QOwnNotes/releases).
 
 يمكن الوصول إلى الملفات المضغوطة للكود المصدري برابط مثل هذا:
 
