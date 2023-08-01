@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 23.8.0
+- the warning `scroll event from unregistered device`, which is triggered by for
+  example by plugging a YubiKey in or out is now ignored in the *Log panel*
+  (for [#2808](https://github.com/pbek/QOwnNotes/issues/2808))
+
 ## 23.7.3
 - added a **new editor color schema** *Revontuli* by @Akselmo
   (for [#2804](https://github.com/pbek/QOwnNotes/issues/2804))
