@@ -4,6 +4,7 @@
 - the warning `scroll event from unregistered device`, which is triggered by for
   example by plugging a YubiKey in or out is now ignored in the *Log panel*
   (for [#2808](https://github.com/pbek/QOwnNotes/issues/2808))
+- added more Arabic translation (thank you noureddin)
 
 ## 23.7.3
 - added a **new editor color schema** *Revontuli* by @Akselmo
