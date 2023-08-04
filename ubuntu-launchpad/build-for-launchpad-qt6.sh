@@ -16,7 +16,7 @@ BRANCH=main
 #BRANCH=release
 
 # https://wiki.ubuntu.com/Releases
-UBUNTU_RELEASES=( "kinetic" "lunar" "jammy" "mantic" )
+UBUNTU_RELEASES=( "lunar" "jammy" "mantic" )
 
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
