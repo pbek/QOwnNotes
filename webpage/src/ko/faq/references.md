@@ -54,7 +54,7 @@ QOwnNotes에 대해 다른 사람들이 한 말입니다…
 - [QOwnNotes：一款记录笔记和待办事项的应用，集成 ownCloud 云服务-软件 ◆ 分享|Linux.中国-开源社区](https://linux.cn/article-7769-1.html)
 - [Chocolatey에 QOwnNotes](https://chocolatey.org/packages/qownnotes)
 - [Evernote 다음은 무엇입니까? QOnNotes 검토. | JawFodder](http://www.jawfodder.com/what-comes-after-evernote-a-qownnotes-review/)
-- [Nextcloud, QOwnNotes및 Notebooks으로 메모하기](https://lifemeetscode.com/blog/2017/05/03/taking-notes-nextcloud-qownnotes-notebooks/)
+- [Nextcloud, QOwnNotes및 노트북으로 메모하기](https://lifemeetscode.com/blog/2017/05/03/taking-notes-nextcloud-qownnotes-notebooks/)
     - [Notebooks](http://www.notebooksapp.com/)을 사용하여 iOS에서 WebDAV를 통해 노트 동기화
 - [계층적 메모: 응용 프로그램 : Linux](https://www.reddit.com/r/linux/comments/5me4wv/hierarchical_note_taking_applications/)
 - [QownNotes - 개인 클라우드에 암호화된 노트 작성 - Korben](https://korben.info/qownnotes.html)
@@ -66,10 +66,10 @@ QOwnNotes에 대해 다른 사람들이 한 말입니다…
 - [Qownnotes | Framalibre](https://framalibre.org/content/qownnotes)
 - [QOwnNotes - opensource offline аналог Evernote — Talks — Форум](https://www.linux.org.ru/forum/talks/13382351)
 - [QOwnNotes - Συγγραφή και διαχείριση σημειώσεων](http://www.freewaretips.gr/programs/qownnotes)
-- [QOwnNotes - A To-Do List Manager with Markdown and OwnCloud Support](https://www.fossmint.com/qownnotes-a-to-do-list-with-markdown-owncloud-support/)
-- [Joplin – A note-taking and to-do app with builds for desktop, mobile, terminal | Hacker News](https://news.ycombinator.com/item?id=15815040)
+- [QOwnNotes - 마크다운 및 자체 클라우드 지원을 통한 작업관리 목록 관리자](https://www.fossmint.com/qownnotes-a-to-do-list-with-markdown-owncloud-support/)
+- [Joplin – 데스크톱, 모바일, 단말기용 빌드가 포함된 노트 필기 및 할 일 앱 | 해커 뉴스](https://news.ycombinator.com/item?id=15815040)
 - <http://www.thumbapps.org/2017/07/QOwnNotes-portable-text-markdown-editor-and-todo-list-manager.html>
-    - They also have created their own `QOwnNotesPortable_17.06.6_Build_3071.paf` [HOW TO INSTALL QOWNNOTES IN UBUNTU 16.04 - A NOTE TAKING SOFTWARE FOR LINUX](http://www.elinuxbook.com/install-qownnotes-in-ubuntu-16-04-a-note-taking-software-for-linux/)
+    - 또한 자체적으로 `QOwnNotesPortable_17.06.6_Build_3071.paf`을 만들었습니다 [UBUNTU 16.04에 Qownnotes를 설치하는 방법 - Linux용 참고 소프트웨어 ](http://www.elinuxbook.com/install-qownnotes-in-ubuntu-16-04-a-note-taking-software-for-linux/)
 - [QOwnNotes A Great Note Taking App For Linux - LinuxAndUbuntu - Linux News | Apps Reviews | Linux Tutorials HowTo](http://www.linuxandubuntu.com/home/qownnotes-a-great-note-taking-app-for-linux)
 - [Solus Users Receive Linux Kernel 4.8.10 and Vivaldi 1.5, QOwnNotes Lands as Well](http://news.softpedia.com/news/solus-users-receive-linux-kernel-4-8-10-and-vivaldi-1-5-qownnotes-lands-as-well-510481.shtml)
 - **[Notizverwaltung : QOwnNotes 17.09.6 | c't Magazin](https://www.heise.de/ct/ausgabe/2017-21-Notizverwaltung-QOwnNotes-17-09-6-3840130.html)**

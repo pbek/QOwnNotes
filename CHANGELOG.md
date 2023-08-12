@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## Next
+- added more German, Spanish, Croatian translation (thank you rakekniven, rooyca, xpertmind)
+
 ## 23.8.0
 - the warning `scroll event from unregistered device`, which is triggered by for
   example by plugging a YubiKey in or out is now ignored in the *Log panel*

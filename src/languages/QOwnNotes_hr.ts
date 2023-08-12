@@ -1738,7 +1738,7 @@
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="84"/>
 <source>The application will be restarted afterward.</source>
-<translation type="unfinished">The application will be restarted afterward.</translation>
+<translation>Nakon toga aplikacija će se ponovno pokrenuti.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="143"/>
@@ -4304,7 +4304,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="143"/>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Datum dospijeća</translation>
 </message>
 </context>
 <context>
@@ -4312,12 +4312,12 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="117"/>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Greška kod izrade kartice</translation>
 </message>
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="118"/>
 <source>Creating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating a card failed with status code %1 and message: %2</translation>
+<translation>Izrada kartice nije uspjela as oznakom statusa %1 i porukom: %2</translation>
 </message>
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="230"/>

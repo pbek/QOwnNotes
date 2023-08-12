@@ -3813,7 +3813,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <location filename="../mainwindow.cpp" line="8816"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
-<numerusform>%n ausgewählte Notiz in Unterordner &lt;strong&gt;%2&lt;/strong&gt; verschieben?</numerusform>
+<numerusform>%n ausgewählte Notiz in Unterordner &lt;strong&gt;%2&lt;/strong&gt; kopieren?</numerusform>
 <numerusform>%n ausgewählte Notizen in Unterordner &lt;strong&gt;%2&lt;/strong&gt; verschieben?</numerusform>
 </translation>
 </message>
