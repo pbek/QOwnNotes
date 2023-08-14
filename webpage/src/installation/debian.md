@@ -1,5 +1,32 @@
 # Install on Debian Linux
 
+## Debian 12.0
+
+Run the following shell commands to trust the repository.
+
+```bash
+SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
+sudo mkdir -p "$(dirname "${SIGNED_BY}")"
+curl --silent --show-error --location http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_12/Release.key | gpg --dearmor | sudo tee "${SIGNED_BY}" > /dev/null
+sudo chmod u=rw,go=r "${SIGNED_BY}"
+```
+
+Run the following shell commands to add the repository and install QOwnNotes from there.
+
+```bash
+SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
+ARCHITECTURE="$(dpkg --print-architecture)"
+echo "deb [arch=${ARCHITECTURE} signed-by=${SIGNED_BY}] http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_12/ /" | sudo tee /etc/apt/sources.list.d/qownnotes.list > /dev/null
+sudo apt update
+sudo apt install qownnotes
+```
+
+::: tip
+If you use this repository for other Debian Linux versions please make sure that you have **Qt** installed at least at **version 5.15**.
+:::
+
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_12)
+
 ## Debian 11.0
 
 Run the following shell commands to trust the repository.
