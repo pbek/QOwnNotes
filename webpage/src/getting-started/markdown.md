@@ -93,7 +93,7 @@ If you press <kbd>Enter</kbd> at the end of a list a new list item will be creat
 
 Links can be created to webpages and to other notes. There are multiple ways to create links for each.
 
-### External Links
+### External links
 ```markdown
 [I'm an inline-style link](https://www.google.com)
 
@@ -107,7 +107,7 @@ http://www.example.com or <http://www.example.com>
 [1]: https://www.qownnotes.org
 ```
 
-### Internal Links
+### Internal links
 ```markdown
 [I link to the Journal.md note](Journal.md)
 
