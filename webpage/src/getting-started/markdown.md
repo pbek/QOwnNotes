@@ -91,7 +91,9 @@ If you press <kbd>Enter</kbd> at the end of a list a new list item will be creat
 
 ## Links
 
-There are multiple ways to create links.
+Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+
+### External links
 
 ```markdown
 [I'm an inline-style link](https://www.google.com)
@@ -100,10 +102,18 @@ There are multiple ways to create links.
 
 [You can use numbers for reference-style link definitions][1]
 
-URLs and URLs in angle brackets will automatically get turned into links in the preview. 
+Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
 http://www.example.com or <http://www.example.com>
 
 [1]: https://www.qownnotes.org
+```
+
+### Internal links
+
+```markdown
+[I link to the Journal.md note](Journal.md)
+
+<Journal.md> works similarly.
 ```
 
 ::: tip
