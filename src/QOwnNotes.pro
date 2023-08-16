@@ -405,7 +405,11 @@ unix {
       desktop.files += PBE.QOwnNotes.desktop
   }
 
-  i18n.path = $$DATADIR/qt5/translations
+  lessThan(QT_MAJOR_VERSION, 6) {
+      i18n.path = $$DATADIR/qt5/translations
+  } else {
+      i18n.path = $$DATADIR/qt6/translations
+  }
   i18n.files += languages/*.qm
 
   icons.path = $$DATADIR/icons/hicolor
