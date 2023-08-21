@@ -4,6 +4,8 @@
 - there now is a software repository for **Debian Linux 12.0**
   - please visit the [Debian installation page](https://www.qownnotes.org/installation#Debian)
     for instructions
+- the translation path was updated to `qt6/translations` instead of `qt5/translations` when building
+  for Qt6 with qmake (for [#2813](https://github.com/pbek/QOwnNotes/issues/2813), thank you, @charliewolf)
 - added more German, Spanish, Croatian translation (thank you rakekniven, rooyca, xpertmind)
 
 ## 23.8.0
