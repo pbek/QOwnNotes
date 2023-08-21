@@ -1,4 +1,7 @@
-.PHONY: translations-download translations-upload translations-update-files nix-build nix-build-force
+.PHONY: translations-build translations-download translations-upload translations-update-files nix-build nix-build-force
+
+translations-build:
+	lrelease src/QOwnNotes.pro
 
 translations-download:
 	./scripts/download_translations.sh
