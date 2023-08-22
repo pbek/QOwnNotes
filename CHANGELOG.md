@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## Next
+## 23.8.1
 - there now is a software repository for **Debian Linux 12.0**
   - please visit the [Debian installation page](https://www.qownnotes.org/installation#Debian)
     for instructions
