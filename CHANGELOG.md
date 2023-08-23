@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.8.2
+- added a **new editor color schema** *Atom Mellow Dark* by @davuses
+  (for [#2817](https://github.com/pbek/QOwnNotes/issues/2817))
+
 ## 23.8.1
 - there now is a software repository for **Debian Linux 12.0**
   - please visit the [Debian installation page](https://www.qownnotes.org/installation#Debian)
