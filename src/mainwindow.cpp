@@ -7451,17 +7451,23 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent, cons
     const QString name = tag._name;
     auto hideCount = QSettings().value("tagsPanelHideNoteCount", false).toBool();
 
-    int count = 0;
+    int linkCount = 0;
+    QVector<int> linkedNoteIds;
+    bool isMultipleTags = false;
+
     if (!hideCount) {
         const QVector<int> tagIdListToCount = Tag::isTaggingShowNotesRecursively()
                                                   ? Tag::fetchTagIdsRecursivelyByParentId(tagId)
                                                   : QVector<int>{tag._id};
+        isMultipleTags = tagIdListToCount.count() > 1;
         const auto selectedSubFolderItems = ui->noteSubFolderTreeWidget->selectedItems();
         const bool showNotesFromAllSubFolders = this->_showNotesFromAllNoteSubFolders;
         const bool isShowNotesRecursively =
             NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively();
 
         if (selectedSubFolderItems.count() > 1) {
+            linkedNoteIds.reserve(tagIdListToCount.size());
+
             for (const int tagIdToCount : tagIdListToCount) {
                 for (QTreeWidgetItem *folderItem : selectedSubFolderItems) {
                     int id = folderItem->data(0, Qt::UserRole).toInt();
@@ -7471,19 +7477,44 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent, cons
                         continue;
                     }
 
-                    count = Tag::countLinkedNoteFileNamesForNoteSubFolder(
-                        tagIdToCount, folder, showNotesFromAllSubFolders, isShowNotesRecursively);
+                    if (!isMultipleTags) {
+                        linkCount = Tag::countLinkedNoteFileNamesForNoteSubFolder(
+                            tagIdToCount, folder, showNotesFromAllSubFolders, isShowNotesRecursively);
+                    } else {
+                        linkedNoteIds << Tag::fetchAllLinkedNoteIdsForFolder(
+                            tagIdToCount,
+                            folder, showNotesFromAllSubFolders,
+                            isShowNotesRecursively);
+                    }
                 }
             }
         } else {
             for (const int tagToCount : tagIdListToCount) {
-                count = Tag::countLinkedNoteFileNames(tagToCount, showNotesFromAllSubFolders,
-                                                      isShowNotesRecursively);
+                if (!isMultipleTags) {
+                    linkCount = Tag::countLinkedNoteFileNames(tagToCount, showNotesFromAllSubFolders,
+                                                          isShowNotesRecursively);
+                } else {
+                    linkedNoteIds << Tag::fetchAllLinkedNoteIds(
+                        tagToCount,
+                        showNotesFromAllSubFolders,
+                        isShowNotesRecursively);
+                }
             }
         }
     }
 
-    const int linkCount = count;
+    if (isMultipleTags) {
+        // remove duplicate note ids
+        QVector<int> uniqueLinkedNoteIds;
+        for (const int &value : linkedNoteIds) {
+            if (!uniqueLinkedNoteIds.contains(value)) {
+                uniqueLinkedNoteIds.append(value);
+            }
+        }
+
+        linkCount = uniqueLinkedNoteIds.count();
+    }
+
     const QString toolTip =
         tr("Show all notes tagged with '%1' (%2)").arg(name, QString::number(linkCount));
     auto *item = new QTreeWidgetItem();
