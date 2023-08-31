@@ -148,7 +148,8 @@ jobs:
           rm linuxdeploy-plugin-qt-x86_64.AppImage
           ls -hal *.AppImage
           find -iname "*.AppImage"
-          mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage
+          # It's ok if no file needs to be renamed
+          mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage ||:
           sha256sum ${{env.EXECUTABLE}}-x86_64.AppImage > ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
           ls -hal *.AppImage
           find -iname "*.AppImage"
