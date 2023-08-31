@@ -2869,13 +2869,13 @@
 <message>
 <location filename="../mainwindow.ui" line="2710"/>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Insérer un lien vers une carte NextCloud Deck</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2718"/>
 <location filename="../mainwindow.cpp" line="9411"/>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Copier le chemin d'accès absolu de la note</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1912"/>
@@ -4237,12 +4237,12 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="14"/>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Insérer un lien vers une carte NextCloud Deck</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="95"/>
 <source>Create card and insert link into current note</source>
-<translation type="unfinished">Create card and insert link into current note</translation>
+<translation>Créer une carte et insérer son lien dans la note courante</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="98"/>
@@ -8445,7 +8445,7 @@ Vos notes resteront intactes!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
 <source>Used in notes:</source>
-<translation>Megjegyzésekben használják:</translation>
+<translation>Utilisé(e) dans la/les note(s) :</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="312"/>
@@ -8596,7 +8596,7 @@ Vos notes resteront intactes!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="165"/>
 <source>Find image</source>
-<translation>Kép keresése</translation>
+<translation>Trouver une image</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="126"/>
@@ -8646,7 +8646,7 @@ Vos notes resteront intactes!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="234"/>
 <source>Used in notes:</source>
-<translation>Megjegyzésekben használják:</translation>
+<translation>Utilisé(e) dans la/les note(s) :</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="116"/>

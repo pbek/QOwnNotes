@@ -4,6 +4,7 @@
 - when all notes of a tag, including the notes of their child-tags are shown in the
   note list the numbers of notes per tag are now calculated correctly in the tag tree
   (for [#2819](https://github.com/pbek/QOwnNotes/issues/2819))
+- added more French translation (thank you chocolatine)
 
 ## 23.8.2
 - added a **new editor color schema** *Atom Mellow Dark* by @davuses
