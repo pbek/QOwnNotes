@@ -8,7 +8,7 @@
 
 EAPI=7
 
-inherit qmake-utils eutils desktop
+inherit qmake-utils desktop
 
 DESCRIPTION="A plain-text file markdown note taking with Nextcloud/ownCloud integration"
 HOMEPAGE="https://www.qownnotes.org/"

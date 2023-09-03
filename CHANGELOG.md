@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 23.9.1
+- the Gentoo process should run again (for [#2821](https://github.com/pbek/QOwnNotes/issues/2821))
+
 ## 23.9.0
 - when all notes of a tag, including the notes of their child-tags are shown in the
   note list the numbers of notes per tag are now calculated correctly in the tag tree
