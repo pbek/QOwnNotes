@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 23.9.1
+- URLs with their title are not loaded anymore, if the note-link shortcut was used
+  with the link-dialog (for [#2833](https://github.com/pbek/QOwnNotes/issues/2833))
 - the Gentoo process should run again (for [#2821](https://github.com/pbek/QOwnNotes/issues/2821))
 
 ## 23.9.0

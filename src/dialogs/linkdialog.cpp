@@ -50,13 +50,15 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
 
     ui->notesListWidget->setCurrentRow(0);
 
-    QClipboard *clipboard = QApplication::clipboard();
-    const QString text = clipboard->text();
-    const QUrl url(text);
+    if (page == LinkDialog::TextLinkPage) {
+        QClipboard *clipboard = QApplication::clipboard();
+        const QString text = clipboard->text();
+        const QUrl url(text);
 
-    // set text from clipboard
-    if (url.isValid() && !url.scheme().isEmpty()) {
-        ui->urlEdit->setText(text);
+        // set text from clipboard
+        if (url.isValid() && !url.scheme().isEmpty()) {
+            ui->urlEdit->setText(text);
+        }
     }
 
     setupFileUrlMenu();
