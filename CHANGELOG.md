@@ -4,6 +4,7 @@
 - URLs with their title are not loaded anymore, if the note-link shortcut was used
   with the link-dialog (for [#2833](https://github.com/pbek/QOwnNotes/issues/2833))
 - the Gentoo process should run again (for [#2821](https://github.com/pbek/QOwnNotes/issues/2821))
+- added more Slovenian, Ukrainian, Turkish translation (thank you salamelek, eugeneuvin, rgucluer)
 
 ## 23.9.0
 - when all notes of a tag, including the notes of their child-tags are shown in the

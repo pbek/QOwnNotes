@@ -2,39 +2,39 @@
 
 ## Our Pledge
 
-We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
+Nosotros como miembros, contribuidores y líderes nos comprometemos a hacer que la participación en nuestra comunidad sea una experiencia libre de acoso para todos. Sin importar la edad, tipo de cuerpo, cualquier tipo de discapacidad, etnia, características sexuales, idea y expresión de género, nivel de experiencia, educación, estatus socioeconómico, nacionalidad, apariencia personal, raza, casta, color, religión, identidad u orientación sexual.
 
-We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
+Nos comprometemos a actuar e interactuar de manera que contribuyan a una comunidad abierta, diversa, inclusiva y saludable.
 
 ## Nuestros estándares
 
-Examples of behavior that contributes to a positive environment for our community include:
+Ejemplos de conductas que contribuyen a un entorno positivo para nuestra comunidad son:
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the overall community
+* Demostrar empatía y amabilidad hacia los demás
+* Respetar las opiniones, puntos de vista y experiencias ajenas
+* Aportar y aceptar comentarios constructivos
+* Aceptar la responsabilidad de nuestros errores, disculparse por ellos ante los afectados y aprender de la experiencia
+* Enfocarse en lo que es mejor, no para nosotros como individuos, pero para la comunidad en general
 
-Examples of unacceptable behavior include:
+Ejemplos de conductas inaceptables son:
 
-* The use of sexualized language or imagery, and sexual attention or advances of any kind
-* Trolling, insulting or derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or email address, without their explicit permission
-* Other conduct which could reasonably be considered inappropriate in a professional setting
+* El uso de lenguaje o imágenes sexualizadas, insinuaciones sexuales o de cualquier tipo
+* Molestar, insultar o usar comentarios insultantes o despectivos y ataques personales o políticos
+* Acoso público o privado
+* Publicar información privada de otras personas como, dirección física o de correo electrónico sin la previa autorización de la persona
+* Cualquier otra conducta que pueda ser considerada inapropiada en un ambiente profesional
 
-## Enforcement Responsibilities
+## Responsabilidades de Ejecución
 
-Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
+Líderes de comunidad son responsables de clarificar y aplicar nuestros estándares de comportamiento y tomarán acciones correctivas justas y apropiadas ante cualquier comportamiento que ellos consideren inapropiado, amenazante, ofensivo o nocivo.
 
-Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.
+Líderes de comunidad tienen el derecho y la responsabilidad de remover, editar o rechazar comentarios, "commits", código, ediciones de la wiki, problemas y otras contribuciones que no estén alineadas con el código de conducta y comunicaran las razones de su moderación cuando sea apropiado.
 
-## Scope
+## Alcance
 
-This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
+Este código de conducta aplica a todos los espacios dentro de la comunidad y también cuando una persona está representando a la comunidad en espacios públicos. Ejemplos de un representante de nuestra comunidad comprende usar una dirección de correo electrónico oficial, publicación en una red social a través de una cuenta oficial o actuar como representante designado en un evento, ya sea online o presencial.
 
-## Enforcement
+## Ejecución
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement (see *Contact* menu on [www.qownnotes.org](https://www.qownnotes.org/)). All complaints will be reviewed and investigated promptly and fairly.
 

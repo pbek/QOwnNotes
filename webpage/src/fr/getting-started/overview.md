@@ -148,7 +148,7 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 [Comprendre le concept de QOwnNotes](concept.md)
 
 ## Caractéristiques
-- You can use your **existing text or markdown files**, no need for an import
+- Vous pouvez utiliser vos **fichiers texte ou Markdown existants**, pas besoin de les importer
 - QOwnNotes est écrit en C++ et optimisé pour une **faible consommation des ressources** (ce n'est pas une app Electron gourmande en CPU et en mémoire)
 - **Import depuis Evernote et Joplin**
 - **Compatible** with the [Notes](https://apps.nextcloud.com/apps/notes) application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text

@@ -33,7 +33,7 @@
 <message>
 <location filename="../dialogs/attachmentdialog.ui" line="26"/>
 <source>Path to file or URL</source>
-<translation>Pot do datoteke ali URL-ja</translation>
+<translation>Pot do datoteke ali URL</translation>
 </message>
 <message>
 <location filename="../dialogs/attachmentdialog.ui" line="36"/>
@@ -730,7 +730,7 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
 <source>Number of imported notes</source>
-<translation type="unfinished">Number of imported notes</translation>
+<translation>Število vnesenih napisov</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="148"/>
@@ -879,17 +879,17 @@ Atributi opombe</translation>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>Uporabi FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished">Read .vimrc from location:</translation>
+<translation>Beri .vimrc iz lokacije:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished">Show position of text marks</translation>
+<translation>Prikaži pozicijo besednih oznak</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
@@ -904,23 +904,23 @@ Atributi opombe</translation>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>Začetek vrstice</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished">Tabulator size:</translation>
+<translation>Velikost tabulatorja:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished">Smart tabulators</translation>
+<translation>Pametni tabulatorji</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished">Highlight search results</translation>
+<translation>Poudarite rezultate iskanja</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
@@ -930,7 +930,7 @@ Atributi opombe</translation>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished">Expand tabulators</translation>
+<translation>Razširi tabulatorje</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
@@ -940,47 +940,47 @@ Atributi opombe</translation>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished">Incremental search</translation>
+<translation>Inkrementalno iskanje</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished">Use search dialog</translation>
+<translation>Uporabi dialog za iskanje</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished">Use smartcase</translation>
+<translation>Uporabi smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished">Use ignorecase</translation>
+<translation>Uporabi ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished">Use wrapscan</translation>
+<translation>Uporabi wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished">Use tildeop</translation>
+<translation>Uporabi tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished">Show partial command</translation>
+<translation>Prikaži delni ukaz</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>Prikaži številke vrstic glede na kazalec</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished">Blinking cursor</translation>
+<translation>Utripajoči kazalec</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
@@ -1000,37 +1000,37 @@ Atributi opombe</translation>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished">Use Vim-style Editing</translation>
+<translation>Uporabi urejanje v slogu Vim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>Prikaže številke vrstic, na katerih leži kazalec.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
+<translation>Ne interpretira zaporedij tipk, kot je Ctrl-S v FakeVimu, temveč jih obravnava kot običajne bližnjice. To omogoča lažji dostop do osnovnih funkcij v zameno izgube nekaterih funkcij FakeVima.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
+<translation>Ne interpretira nekaterih pritiskov tipk v načinu vstavljanja, tako da je mogoče kodo pravilno dopolniti in razširiti.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished">Vim tabstop option.</translation>
+<translation>Vim tabstop možnost.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
+<translation>Pustite prazno, če želite uporabiti privzeto pot, tj. %USERPROFILE%\_vimrc na Windows-u ali ~/.vimrc.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>Privzeto: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1070,12 +1070,12 @@ Atributi opombe</translation>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4700"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>Vnesite Meta-Shift-Y, Meta-Shift-Y za izhod iz načina FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4702"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
+<translation>Za izhod iz načina FakeVim vnesite Alt-Y, Alt-Y.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6297"/>
@@ -1308,7 +1308,7 @@ Atributi opombe</translation>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="232"/>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>Pisava:</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="279"/>
@@ -1373,7 +1373,7 @@ Atributi opombe</translation>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
 <source>Underlined text</source>
-<translation type="unfinished">Underlined text</translation>
+<translation>Podčrtano besedilo</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
@@ -1484,7 +1484,7 @@ Atributi opombe</translation>
 <location filename="../widgets/fontcolorwidget.cpp" line="226"/>
 <source>Masked syntax</source>
 <comment>text that will highlighted in a way that it's barely visible</comment>
-<translation>Prikriti sintaksa</translation>
+<translation>Prikrita sintaksa</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="232"/>
@@ -1525,7 +1525,7 @@ Atributi opombe</translation>
 <location filename="../widgets/fontcolorwidget.cpp" line="513"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopiraj</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="626"/>
@@ -1549,17 +1549,17 @@ Atributi opombe</translation>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="45"/>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Kopiraj</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="51"/>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>Kopiraj povezavo</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="58"/>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>Ponastavi povečavo</translation>
 </message>
 </context>
 <context>
@@ -1656,27 +1656,27 @@ Atributi opombe</translation>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Joplin vnos</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="48"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>Vnesi mape</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>Prosim izberite "RAW - Joplin Export Directory", iz katerega želite uvoziti napise:</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="37"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>Izberite mapo</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>Vnesite slike</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="30"/>
@@ -1686,22 +1686,22 @@ Atributi opombe</translation>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="115"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Uvozite napise</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>Uvozite oznake</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="182"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>Če imate samo datoteko "JEX - Joplin Export File", izvlecite vsebino te datoteke v mapo in jo izberite.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="142"/>
 <source>Import metadata</source>
-<translation type="unfinished">Import metadata</translation>
+<translation>Uvoz metapodatkov</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="74"/>
@@ -3554,7 +3554,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="7341"/>
 <source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
+<translation>Prikaži vse napise (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7488"/>
@@ -4337,27 +4337,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="115"/>
 <source>+1h</source>
-<translation type="unfinished">+1h</translation>
+<translation>+1h</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="122"/>
 <source>Title</source>
-<translation type="unfinished">Title</translation>
+<translation>Naslov</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="129"/>
 <source>-1h</source>
-<translation type="unfinished">-1h</translation>
+<translation>-1h</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="136"/>
 <source>Description:</source>
-<translation type="unfinished">Description:</translation>
+<translation>Opis:</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="143"/>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Rok</translation>
 </message>
 </context>
 <context>
@@ -4365,12 +4365,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="117"/>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Napaka pri ustvarjanju kartice</translation>
 </message>
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="118"/>
 <source>Creating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating a card failed with status code %1 and message: %2</translation>
+<translation>Ustvarjanje kartice ni uspelo s kodo stanja %1 in sporočilom: %2</translation>
 </message>
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="230"/>
@@ -4485,48 +4485,48 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="130"/>
 <source>show notes in folder '%1' (%2)</source>
-<translation type="unfinished">show notes in folder '%1' (%2)</translation>
+<translation>prikaži napise v mapi '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="165"/>
 <source>All notes</source>
-<translation type="unfinished">All notes</translation>
+<translation>Vsi napisi</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="163"/>
 <source>Show notes from all note subfolders (%1)</source>
-<translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+<translation>Prikaži napise iz vseh podmap (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="183"/>
 <source>Show notes in note root folder (%1)</source>
-<translation type="unfinished">Show notes in note root folder (%1)</translation>
+<translation>Prikaži napise v glavni mapi za opombe (%1)</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="191"/>
 <source>Note folder</source>
-<translation type="unfinished">Note folder</translation>
+<translation>Mapa napisov</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="268"/>
 <source>New subfolder</source>
-<translation type="unfinished">New subfolder</translation>
+<translation>Nova podmapa</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="276"/>
 <source>Rename subfolder</source>
-<translation type="unfinished">Rename subfolder</translation>
+<translation>Preimenuj podmapo</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="283"/>
 <location filename="../widgets/notesubfoldertree.cpp" line="339"/>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>Odstrani izbrane mape</translation>
 </message>
 <message>
 <location filename="../widgets/notesubfoldertree.cpp" line="290"/>
 <source>Show folder in file manager</source>
-<translation type="unfinished">Show folder in file manager</translation>
+<translation>Prikaži mape v upravitelju datotek</translation>
 </message>
 <message numerus="yes">
 <location filename="../widgets/notesubfoldertree.cpp" line="340"/>
