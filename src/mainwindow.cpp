@@ -5071,17 +5071,17 @@ void MainWindow::handleTextNoteLinking(int page) {
         const QString url = dialog->getURL();
         const QString linkName = dialog->getLinkName();
         const QString linkDescription = dialog->getLinkDescription();
-        // remove ] characters, because they will break markdown links
+        // remove "]" characters, because they will break Markdown links
         QString noteName = dialog->getSelectedNoteName().remove("]");
 
         if ((!noteName.isEmpty()) || (!url.isEmpty())) {
             QString newText;
             QString chosenLinkName =
                 linkName.isEmpty() ? textEdit->textCursor().selectedText() : linkName;
-            // remove ] characters, because they will break markdown links
+            // remove "]" characters, because they will break Markdown links
             chosenLinkName.remove("]");
 
-            // if user has entered an url
+            // if user has entered a URL
             if (!url.isEmpty()) {
                 newText = !chosenLinkName.isEmpty()
                               ? QStringLiteral("[") + chosenLinkName + QStringLiteral("](") + url +
