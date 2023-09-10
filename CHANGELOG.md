@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.9.2
+- the font size in the preview will now change immediately when the font size in
+  the note text edit changes (for [#2836](https://github.com/pbek/QOwnNotes/issues/2836))
+
 ## 23.9.1
 - URLs with their title are not loaded anymore, if the note-link shortcut was used
   with the link-dialog (for [#2833](https://github.com/pbek/QOwnNotes/issues/2833))

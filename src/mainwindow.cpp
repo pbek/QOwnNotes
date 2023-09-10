@@ -544,6 +544,13 @@ void MainWindow::initNotePreviewAndTextEdits() {
     ui->encryptedNoteTextEdit->installEventFilter(this);
     ui->encryptedNoteTextEdit->viewport()->installEventFilter(this);
 
+    // Allow to update the preview if the zoom level of the note text edits change
+    // Using regenerateNotePreview(), refreshNotePreview(true) or ui->noteTextView->repaint() didn't work
+    connect(ui->noteTextEdit, &QOwnNotesMarkdownTextEdit::zoomIn, this, &MainWindow::forceRegenerateNotePreview);
+    connect(ui->noteTextEdit, &QOwnNotesMarkdownTextEdit::zoomOut, this, &MainWindow::forceRegenerateNotePreview);
+    connect(ui->encryptedNoteTextEdit, &QOwnNotesMarkdownTextEdit::zoomIn, this, &MainWindow::forceRegenerateNotePreview);
+    connect(ui->encryptedNoteTextEdit, &QOwnNotesMarkdownTextEdit::zoomOut, this, &MainWindow::forceRegenerateNotePreview);
+
 #ifdef USE_QLITEHTML
     _notePreviewWidget = new HtmlPreviewWidget(this);
     if (!ui->noteViewFrame->layout()) ui->noteViewFrame->setLayout(new QVBoxLayout);
