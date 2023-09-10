@@ -1342,7 +1342,7 @@ void MainWindow::updatePanelMenu() {
 
     updateJumpToActionsAvailability();
 
-    // update the preview in case it was disable previously
+    // update the preview in case it was disabled previously
     if (_notePreviewDockWidget->isVisible()) {
         setNoteTextFromNote(&currentNote, true);
     }
@@ -1406,7 +1406,7 @@ void MainWindow::togglePanelVisibility(const QString &objectName) {
     // filter notes again according to new widget state
     filterNotes();
 
-    // Ensure we have latest note preview
+    // Ensure we have the latest note preview
     if (dockWidget == _notePreviewDockWidget && dockWidget->isVisible()) {
         _noteViewNeedsUpdate = true;
         refreshNotePreview();
