@@ -1,6 +1,6 @@
 # Código de conducta
 
-## Our Pledge
+## Nuestro Compromiso
 
 Nosotros como miembros, contribuidores y líderes nos comprometemos a hacer que la participación en nuestra comunidad sea una experiencia libre de acoso para todos. Sin importar la edad, tipo de cuerpo, cualquier tipo de discapacidad, etnia, características sexuales, idea y expresión de género, nivel de experiencia, educación, estatus socioeconómico, nacionalidad, apariencia personal, raza, casta, color, religión, identidad u orientación sexual.
 
@@ -36,45 +36,45 @@ Este código de conducta aplica a todos los espacios dentro de la comunidad y ta
 
 ## Ejecución
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement (see *Contact* menu on [www.qownnotes.org](https://www.qownnotes.org/)). All complaints will be reviewed and investigated promptly and fairly.
+Casos de abuso, acoso o alguna otra forma de comportamiento inapropiado puede ser reportado a los líderes de la comunidad responsables de ejecución a través de la pestaña contacto (*Contacto* [www.qownnotes.org](https://www.qownnotes.org/)). Todas las reclamaciones serán revisadas e investigadas inmediatamente y de manera justa.
 
-All community leaders are obligated to respect the privacy and security of the reporter of any incident.
+Todos los líderes de la comunidad están obligados a respetar la privacidad y seguridad del informador en cualquier tipo de incidente.
 
-## Enforcement Guidelines
+## Directrices de Ejecución
 
-Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:
+Líderes de la comunidad seguirán las directrices de impacto comunitario para determinar las consecuencias de cualquier acción que ellos consideren una violación de este código de conducta:
 
 ### 1. Corrección
 
-**Community Impact**: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.
+**Impacto en la comunidad:**: Uso de lenguaje inapropiado o comportamiento considerado poco profesional o mal recibido en la comunidad.
 
-**Consequence**: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.
+**Consecuencia**: Una advertencia escrita en privado de parte de los líderes de la comunidad, explicando la naturaleza de la infracción y porque el comportamiento es inapropiado. Una disculpa pública puede ser pedida.
 
 ### 2. Advertencia
 
-**Community Impact**: A violation through a single incident or series of actions.
+**Impacto en la comunidad:**: Una violación a través de un incidente o una serie de acciones.
 
-**Consequence**: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.
+**Consecuencia**: Una advertencia con consecuencias por un comportamiento continuado. Ninguna interacción con las personas involucradas, Esto incluye interacciones no solicitadas con los ejecutantes del código de conducta por un tiempo determinado. Esto incluye evitar interacciones en espacios comunitarios y canales externos como las redes sociales. La infracción de estas condiciones puede dar lugar a un bloqueo temporal o permanente.
 
-### 3. Temporary Ban
+### 3. Bloqueo Temporal
 
-**Community Impact**: A serious violation of community standards, including sustained inappropriate behavior.
+**Impacto en la comunidad**: Una violación grave de las normas de la comunidad, incluyendo comportamiento inapropiado sostenido.
 
-**Consequence**: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.
+**Consecuencia**: Prohibición temporal de cualquier tipo de interacción o comunicación pública con la comunidad durante un periodo de tiempo determinado. Ninguna interacción sea de carácter público o privada con las personas involucradas, Esto incluye interacciones no solicitadas con los encargados hacer cumplir el código de conducta por un tiempo determinado. La infracción de estas condiciones puede dar lugar a un bloqueo temporal o permanente.
 
-### 4. Permanent Ban
+### 4. Bloqueo Permanente
 
-**Community Impact**: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.
+**Impacto en la comunidad**: Demostrar un patrón de violación de las normas comunidad, incluido el comportamiento inadecuado sostenido, el acoso a un individuo, o agresión o menosprecio contra a diferentes clases de individuos.
 
-**Consequence**: A permanent ban from any sort of public interaction within the community.
+**Consecuencia**: Prohibición permanente de cualquier tipo de interacción pública dentro de la comunidad.
 
-## Attribution
+## Atribución
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 2.1, available at [https://www.contributor-covenant.org/version/2/1/code_of_conduct.html][v2.1].
+Este Código de Conducta es una adaptación del [Pacto del Colaborador][homepage] versión 2.1, disponible en [https://www.contributor-covenant.org/version/2/1/code_of_conduct.html][v2.1].
 
-Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcement ladder][Mozilla CoC].
+Las directrices de impacto comunitario se inspiran en [la normativa de aplicación del código de conducta de Mozilla][Mozilla CoC].
 
-For answers to common questions about this code of conduct, see the FAQ at [https://www.contributor-covenant.org/faq][FAQ]. Translations are available at [https://www.contributor-covenant.org/translations][translations].
+Para obtener respuestas a las preguntas más habituales sobre este código de conducta, consulte las preguntas frecuentes en [https://www.contributor-covenant.org/faq][FAQ]. Las traducciones están disponibles en [https://www.contributor-covenant.org/translations][translations].
 
 [homepage]: https://www.contributor-covenant.org
 [v2.1]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html

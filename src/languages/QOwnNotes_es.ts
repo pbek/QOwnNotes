@@ -2869,13 +2869,13 @@
 <message>
 <location filename="../mainwindow.ui" line="2710"/>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Insertar el enlace de la tarjeta Nextcloud Deck</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2718"/>
 <location filename="../mainwindow.cpp" line="9411"/>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Copiar la ruta absoluta de la nota</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1912"/>
@@ -3369,17 +3369,17 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <location filename="../mainwindow.cpp" line="11642"/>
 <source>Nextcloud Deck support disabled!</source>
-<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+<translation>¡Soporte Nextcloud Deck desactivado!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="11643"/>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>¡Soporte Nextcloud Deck no está activo o la configuración es inválida.&lt;br /&gt; Por favor compruebe la configuración de su &lt;strong&gt;Nextcloud&lt;/strong&gt; en la pestaña de configuraciones!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="11668"/>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>La ruta de la nota '%1' fue copiada al portapapeles</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6453"/>
@@ -4216,62 +4216,62 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="20"/>
 <source>-10min</source>
-<translation type="unfinished">-10min</translation>
+<translation>-10min</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="27"/>
 <source>+10min</source>
-<translation type="unfinished">+10min</translation>
+<translation>+10min</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="34"/>
 <source>+1d</source>
-<translation type="unfinished">+1d</translation>
+<translation>+1d</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="54"/>
 <source>-1d</source>
-<translation type="unfinished">-1d</translation>
+<translation>-1d</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="14"/>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Insertar el enlace de la tarjeta Nextcloud Deck</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="95"/>
 <source>Create card and insert link into current note</source>
-<translation type="unfinished">Create card and insert link into current note</translation>
+<translation>Crear tarjeta e insertar enlace en la nota actual</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="98"/>
 <source>&amp;Save</source>
-<translation type="unfinished">&amp;Save</translation>
+<translation>Guardar</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="115"/>
 <source>+1h</source>
-<translation type="unfinished">+1h</translation>
+<translation>+1h</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="122"/>
 <source>Title</source>
-<translation type="unfinished">Title</translation>
+<translation>Título</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="129"/>
 <source>-1h</source>
-<translation type="unfinished">-1h</translation>
+<translation>-1h</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="136"/>
 <source>Description:</source>
-<translation type="unfinished">Description:</translation>
+<translation>Descripción:</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="143"/>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Fecha de vencimiento</translation>
 </message>
 </context>
 <context>
@@ -4279,22 +4279,22 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="117"/>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Error mientras estaba creando la tarjeta</translation>
 </message>
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="118"/>
 <source>Creating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating a card failed with status code %1 and message: %2</translation>
+<translation>La creación de una tarjeta ha fallado con el código de estado %1 y el mensaje: %2</translation>
 </message>
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="230"/>
 <source>Error while loading boards</source>
-<translation type="unfinished">Error while loading boards</translation>
+<translation>Error mientras estaba cargando los tableros</translation>
 </message>
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="231"/>
 <source>Loading the boards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
+<translation>La carga de los tableros ha fallado con el código de estado %1 y el mensaje: %2</translation>
 </message>
 </context>
 <context>
@@ -5298,7 +5298,7 @@ Are the folder and the file writeable?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
 <source>To search for a script please enter your query text.</source>
-<translation type="unfinished">To search for a script please enter your query text.</translation>
+<translation>Para buscar un guion, introduzca el texto de la consulta.</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
@@ -6205,7 +6205,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1500"/>
 <source>Stack:</source>
-<translation type="unfinished">Stack:</translation>
+<translation>Pila:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1905"/>
@@ -6644,7 +6644,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1436"/>
 <source>Enable QOwnNotesAPI app support</source>
-<translation type="unfinished">Enable QOwnNotesAPI app support</translation>
+<translation>Habilitar la aplicación QOwnNotesAPI</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1449"/>
@@ -6659,7 +6659,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1484"/>
 <source>Enable Nextcloud Deck support</source>
-<translation type="unfinished">Enable Nextcloud Deck support</translation>
+<translation>Activar el soporte Nextcloud Deck</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1918"/>
@@ -6749,13 +6749,13 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4239"/>
 <source>When inactive, enter read-only mode automatically after:</source>
-<translation type="unfinished">When inactive, enter read-only mode automatically after:</translation>
+<translation>Cuando está inactivo, entra en modo de sólo lectura automáticamente después:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4246"/>
 <source> sec</source>
 <extracomment>short for seconds</extracomment>
-<translation type="unfinished"> sec</translation>
+<translation> segundo</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4344"/>
@@ -7990,12 +7990,12 @@ Mensaje de error de conexión: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4276"/>
 <source>Board Id: %1</source>
-<translation type="unfinished">Board Id: %1</translation>
+<translation>Tablero Id: '%1'</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4288"/>
 <source>Stack Id: %1</source>
-<translation type="unfinished">Stack Id: %1</translation>
+<translation>Pila id: '%1'</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2708"/>
@@ -8415,7 +8415,7 @@ Your notes will stay intact!</source>
 <location filename="../libraries/sonnet/src/core/loader.cpp" line="331"/>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
