@@ -214,7 +214,7 @@ class MainWindow : public QMainWindow {
 
     class QOwnNotesMarkdownTextEdit *noteTextEdit();
 
-    void refreshNotePreview();
+    void refreshNotePreview(bool force = false);
 
     Q_INVOKABLE bool removeNoteTab(int index) const;
 

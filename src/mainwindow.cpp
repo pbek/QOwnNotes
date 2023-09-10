@@ -1408,8 +1408,7 @@ void MainWindow::togglePanelVisibility(const QString &objectName) {
 
     // Ensure we have the latest note preview
     if (dockWidget == _notePreviewDockWidget && dockWidget->isVisible()) {
-        _noteViewNeedsUpdate = true;
-        refreshNotePreview();
+        refreshNotePreview(true);
     }
 }
 
@@ -9669,7 +9668,13 @@ NoteSubFolderTree *MainWindow::noteSubFolderTree() { return ui->noteSubFolderTre
 
 QOwnNotesMarkdownTextEdit *MainWindow::noteTextEdit() { return ui->noteTextEdit; }
 
-void MainWindow::refreshNotePreview() { _noteViewUpdateTimer->start(1); }
+void MainWindow::refreshNotePreview(bool force) {
+    if (force) {
+        _noteViewNeedsUpdate = true;
+    }
+
+    _noteViewUpdateTimer->start(1);
+}
 
 /**
  * Searches for note sub folders in the note sub folder tree widget
