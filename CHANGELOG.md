@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 23.9.3
+- in the *Editor fonts & colors* settings the default color schemes are now ordered
+  alphabetically, with the two default schemes in front (for [#2840](https://github.com/pbek/QOwnNotes/issues/2840))
+  - the custom schemes are still placed at the back of the list
+  - this should improve readability
+
 ## 23.9.2
 - the font size in the preview will now change immediately when the font size in
   the note text edit changes (for [#2836](https://github.com/pbek/QOwnNotes/issues/2836))
