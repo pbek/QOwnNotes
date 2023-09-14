@@ -23,5 +23,9 @@
       qt5compat
       botan2
     ];
+
+    shellHook = ''
+        echo "qmake:  $(qmake  --version)"
+      '';
 }
 
