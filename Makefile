@@ -17,3 +17,14 @@ nix-build:
 
 nix-build-force:
 	nix-build -E '((import <nixpkgs> {}).qt6Packages.callPackage (import ./default.nix) { })' --check
+
+src-build:
+	mkdir -p build-QOwnNotes; cd build-QOwnNotes && qmake "CONFIG+=debug USE_SYSTEM_BOTAN=1" ../src/QOwnNotes.pro && make
+
+src-clean:
+	rm -rf build-QOwnNotes
+
+src-run:
+	./build-QOwnNotes/QOwnNotes
+
+src-build-run: src-build src-run
