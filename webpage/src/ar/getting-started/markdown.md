@@ -90,19 +90,29 @@ _مسطر_
 
 ## الروابط
 
-توجد عدة طرق لإنشاء روابط.
+Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+
+### External links
 
 ```markdown
-[أنا رابط مُعرَّف في مكاني](https://www.google.com)
+[I'm an inline-style link](https://www.google.com)
 
-[أنا رابط مُعرَّف في مكاني ولي عنوان](https://www.google.com "الصفحة الرئيسية لـGoogle")
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
-[يمكنك استخدام الأرقام لتعريف الروابط بأسلوب المراجع][1]
+[You can use numbers for reference-style link definitions][1]
 
-الروابط المجردة والروابط المحاطة بأقواس زاويّة ستُحوّل آليًا إلى روابط في المعاينة. 
+Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
 http://www.example.com أو <http://www.example.com>
 
 [1]: https://www.qownnotes.org
+```
+
+### Internal links
+
+```markdown
+[I link to the Journal.md note](Journal.md)
+
+<Journal.md> works similarly.
 ```
 
 ::: tip
@@ -113,12 +123,12 @@ http://www.example.com أو <http://www.example.com>
 يمكنك ضغط <kbd>Ctrl + Space</kbd> والمؤشر على رابط في محرر الملاحظات لفتحه.
 :::
 
-### الإشارات المرجعية
+### Bookmarks
 
 الإشارات المرجعية المستخدمة في [إضافة المتصفح رفيقة ويب QOwnNotes](./browser-extension.md) تستخدم روابط في قوائم.
 
 ```markdown
-- [اسم صفحة الوب](https://www.example.com) #وسم١ #وسم٢ شيء من الوصف والوسوم
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 ```
 
 ## الصور
@@ -126,7 +136,7 @@ http://www.example.com أو <http://www.example.com>
 يمكن تضمين الصور في QOwnNotes. وستظهر في المعاينة.
 
 ```markdown
-![نص بديل](media/my-image.jpg)
+![alt text](media/my-image.jpg)
 ```
 
 ::: tip
@@ -139,7 +149,7 @@ http://www.example.com أو <http://www.example.com>
 ## الأكواد المضمّنة وكتل الأكواد
 
 ```markdown
-`الأكواد` المضمّنة في السطر حولها `فاصلة عُليا مائلة` (زر `ذ` في تخطيط لوحة المفاتيح الإنجليزي الشائع، أو `Shift + ع` في التخطيط العربي الشائع).
+Inline `code` has `back-ticks around` it.
 ```
 
 ::: tip
@@ -148,44 +158,42 @@ http://www.example.com أو <http://www.example.com>
 
 كتل الأكواد إما أن تكون مُسوّرة بسطرين كلٍ منهما به ثلاث فاصلات عُليا مائلة، وإما أن تكون سطورها مبدوءة بأربع مسافات.
 
-### سور المسافات الأربعة
+### 4-Spaces fence
 
 أضف أربع مسافات في بداية كل سطر من سطور كودك لتنسيقه ككتلة كود.
 
 ```markdown
-    <div dir="ltr">s = "كود بمسافات بادئة"
-    print s</div>
+    s = "Code with space indent"
+    print s
 ```
 
-### سور الفاصلات العليا المائلة
+### Backtick fence
 
 يمكنك أيضا استخدام ثلاث فاصلات عليا مائلة لإنشاء كتلة كود.
 ~~~markdown
 ```
-الكود يأتي هنا
-الكود يأتي هنا
+Code goes here
+Code goes here
 ```
 ~~~
 
 ::: tip
-يمكنك استخدام [الاختصار](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> على
-عدد من السطور المحددة أو في سطر فارغ لإنشاء كتلة كود. 
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
+multiple selected lines of text or in an empty line to create a code block. 
 :::
 
-### سور الفاصلات مع تلوين الأكواد
+### Backtick fence with code highlighting
 
-يوجد كذلك شيء من التلوين النحوي لكتل الأكواد في QOwnNotes.
+There also is some syntax highlighting with code blocks in QOwnNotes.
 
-<div dir="ltr">
 ~~~markdown
 ```bash
-# أنا تعليق
+# I am a comment
 cd Notes
-</div>
 ```
 ~~~
 
-اللغات المدعومة حاليا (ومعرِّفات كتل الأكواد) هي:
+Currently, supported languages (and code block identifiers) are:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -219,26 +227,26 @@ cd Notes
 * YAML, `yml`
 * YAML, `yaml`
 
-## الجداول
+## Tables
 
-الجداول ليست جزءًا من جوهر مواصفات ماركداون، لكن معاينة QOwnNotes تدعمها. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
-```markdown
-يمكن استخدام النقطتين الرأسيتين لمحاذاة الأعمدة.
+~~~markdown
+Colons can be used to align columns.
 
-| الجداول        | رائعة           | حقا  |
+| Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| العمود الثالث      | محاذى لليمين | $1600 |
-| العمود الثاني      | ممركز      |   $12 |
-| خطوط الحمار الوحشي | جميلة وأنيقة      |    $1 |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
-يجب فصل كل خلية ترويسة بثلاث شرطات على الأقل.
+There must be at least 3 dashes separating each header cell.
 
-يمكنك أيضا استخدام ماركداون داخل خلايا الجداول.
+You can also use inline Markdown.
 
-| ماركداون | أقل | جمالا |
+| Markdown | Less | Pretty |
 | --- | --- | --- |
-| *ما زال* | `يُعرض` | **بإتقان** |
+| *Still* | `renders` | **nicely** |
 | 1 | 2 | 3 |
 ~~~
 
@@ -251,12 +259,12 @@ cd Notes
 ## كتل الاقتباس
 
 ```markdown
-> كتل الاقتباس مفيدة جدا في رسائل البريد الإلكتروني لمحاكاة الرد على نص.
-> هذا السطر جزء من نفس الاقتباس.
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
 
-كسر الاقتباس.
+Quote break.
 
-> هذا سطر طويل جدا ولكنه سيُنسّق بشكل سليم كاقتباس عندما يلتف إلى السطور التالية. ياه يا فتى، لنستمر في الكتابة حتى نضمن أن هذا بالطول الكافي لكي يلتف فعلا عند الجميع. ياه، يمكنك *وضع* **ماركداون** داخل كتلة اقتباس. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 ```
 
 ::: tip
@@ -270,19 +278,19 @@ cd Notes
 توجد ثلاث طرق للحصول على مسطرة أفقية: الشَرطات، والشرطات السفلية، والنجوم.
 
 ```markdown
-ثلاث أو أكثر...
+Three or more...
 
-شرطات
+Hyphens
 
 ---
 
-شرطات سفلية
-
-___
-
-نجوم
+Asterisks
 
 ***
+
+Underscores
+
+___
 ```
 
 ## فصل السطور
@@ -296,12 +304,12 @@ ___
 :::
 
 ```markdown
-إليك سطر لنبدأ به.
+Here's a line for us to start with.
 
-هذا السطر مفصول عن سابقه بسطرين جديدين، لذا فإنه يكون *فقرة منفصلة*.
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 
-وأيضا هذا السطر يبدأ فقرة منفصلة، لكن...  
-هذا السطر مفصول فقط بمسافتين وسطر جديد واحد، لذا فإنه سطر منفصل في *نفس الفقرة*.
+This line is also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the *same paragraph*.
 ```
 
 ::: tip
@@ -313,9 +321,9 @@ ___
 لا تظهر التعليقات في المعاينة.
 
 ```markdown
-[comment]: # (لن يظهر هذا التعليق في المعاينة)
+[comment]: # (This comment will not appear in the preview)
 
-<!-- تعليقات هتمل مخفية أيضا -->
+<!-- HTML comments are also hidden -->
 ```
 
 ::: tip
@@ -327,8 +335,8 @@ ___
 يمكنك إنشاء قوائم مهام بسيطة باستخدام قوائم مربعات الاختيار.
 
 ```markdown
-- [x] تم
-- [ ] افعل
+- [x] done
+- [ ] todo
 ```
 
 ::: tip
@@ -341,13 +349,13 @@ ___
 
 ```markdown
 ---
-title: اسمٌ ما
-description: شيءٌ من الوصف
+title: Some name
+description: Some description
 ---
 
-# العنوان الرئيسي للملاحظة يبدأ هنا
+# Note headline starts here
 
-شيءٌ من النص
+Some text
 ```
 
 اسم ملف الملاحظة في هذا المثال سيكون `العنوان الرئيسي للملاحظة يبدأ هنا.md`.

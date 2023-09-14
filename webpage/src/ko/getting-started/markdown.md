@@ -81,19 +81,32 @@ _밑줄_
 </h2>
 
 <p spaces-before="0">
-  링크를 만드는 방법은 여러 가지가 있습니다.
+  Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
 </p>
 
-<pre><code class="markdown">[인라인 스타일의 링크](https://www.google.com)
+<h3 spaces-before="0">
+  External links
+</h3>
 
-[제목이 있는 인라인 스타일 링크](https://www.google.com "Google's Homepage")
+<pre><code class="markdown">[I'm an inline-style link](https://www.google.com)
 
-[참조 스타일 링크 정의에 숫자를 사용할 수 있습니다][1]
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
-각 괄호 안의 URL과 URL은 미리보기에서 자동으로 링크로 바뀝니다. 
+[You can use numbers for reference-style link definitions][1]
+
+Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
 http://www.example.com 또는 &lt;http://www.example.com&gt;
 
 [1]: https://www.qownnotes.org
+</code></pre>
+
+<h3 spaces-before="0">
+  Internal links
+</h3>
+
+<pre><code class="markdown">[I link to the Journal.md note](Journal.md)
+
+&lt;Journal.md&gt; works similarly.
 </code></pre>
 
 <p spaces-before="0">
@@ -109,14 +122,14 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </p>
 
 <h3 spaces-before="0">
-  북마크
+  Bookmarks
 </h3>
 
 <p spaces-before="0">
   <a href="./browser-extension.md">QOwnNotes Web Companion 브라우저 확장</a>에서 사용되는 북마크는 목록의 연결을 사용합니다.
 </p>
 
-<pre><code class="markdown">- [웹페이지 이름](https://www.example.com) #tag1 #tag2 일부 설명 및 태그
+<pre><code class="markdown">- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 </code></pre>
 
 <h2 spaces-before="0">
@@ -143,7 +156,7 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
   인라인 코드 및 코드 블록
 </h2>
 
-<pre><code class="markdown">인라인 `코드`는 주변에 백 틱이 있습니다.
+<pre><code class="markdown">Inline `code` has `back-ticks around` it.
 </code></pre>
 
 <p spaces-before="0">
@@ -155,19 +168,19 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </p>
 
 <h3 spaces-before="0">
-  4칸 울타리
+  4-Spaces fence
 </h3>
 
 <p spaces-before="0">
   코드 앞에 공백 4개를 추가하여 코드 블록으로 표시합니다.
 </p>
 
-<pre><code class="markdown">    s = "공백 들여쓰기 코드"
+<pre><code class="markdown">    s = "Code with space indent"
     print s
 </code></pre>
 
 <h3 spaces-before="0">
-  백틱 울타리
+  Backtick fence
 </h3>
 
 <p spaces-before="0">
@@ -178,28 +191,28 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
   ~~~markdown
 </p>
 
-<pre><code>코드는 여기로 이동합니다
-코드는 여기로 이동합니다
+<pre><code>Code goes here
+Code goes here
 </code></pre>
 
 <pre><code>
-::: 팁
- [shortcut](./shortcuts.md) &lt;kbd>Ctrl + Shift + C&lt;/kbd>를 선택한
- 여러 텍스트 행 또는 빈 행에서 사용하여 코드 블록을 만들 수 있습니다. 
+::: tip
+You can use the [shortcut](./shortcuts.md) &lt;kbd>Ctrl + Shift + C&lt;/kbd> on
+multiple selected lines of text or in an empty line to create a code block. 
 :::
 
-### 코드 강조 표시가 있는 울타리를 뒤로 젖힙니다
+### Backtick fence with code highlighting
 
-QOwnNotes에는 코드 블록으로 강조 표시된 구문이 있습니다.
+There also is some syntax highlighting with code blocks in QOwnNotes.
 
 ~~~markdown
 ```bash
-# 주석
+# I am a comment
 cd Notes
 </code></pre>
 
 <pre><code>
-현재 지원되는 언어 (및 코드 블록 식별자)는 다음과 같습니다:
+Currently, supported languages (and code block identifiers) are:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -233,24 +246,24 @@ cd Notes
 * YAML, `yml`
 * YAML, `yaml`
 
-## 표
+## Tables
 
-표은 핵심 마크다운 사양의 일부는 아니지만 QOwnNotes 미리보기는 표를 지원합니다. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
 ~~~markdown
-콜론을 사용하여 열을 정렬할 수 있습니다.
+Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| 열 3 은      | 오른쪽 정렬 | $1600 |
-| 열 2 는      | 가운데      |   $12 |
-| 얼룩말 줄무늬 | 깔끔하다      |    $1 |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
-각 머리말 셀을 구분하는 대시가 3개 이상 있어야 합니다.
+There must be at least 3 dashes separating each header cell.
 
-인라인 마크다운을 사용할 수도 있습니다.
+You can also use inline Markdown.
 
-| 마크다운 | 더 적은 | 예쁘다 |
+| Markdown | Less | Pretty |
 | --- | --- | --- |
 | *Still* | `renders` | **nicely** |
 | 1 | 2 | 3 |
@@ -268,12 +281,12 @@ cd Notes
   블럭 따옴표
 </h2>
 
-<pre><code class="markdown">&gt; 이메일에서 블록 따옴표는 회신 텍스트를 에뮬레이트하는 데 매우 유용합니다.
-&gt; 이 줄은 같은 인용구의 일부입니다.
+<pre><code class="markdown">&gt; Blockquotes are very handy in email to emulate reply text.
+&gt; This line is part of the same quote.
 
-따옴표로 묶습니다.
+Quote break.
 
-&gt; 줄 바꿈이 끝날 때도 여전히 적절하게 따옴표로 묶일 수 있는 매우 긴 줄입니다. 오 이런, 이것이 모두를 위해 실제로 포장하기에 충분히 긴지 확인하기 위해 계속해서 편지를 쓰자. 블록 따옴표에 **Markdown**을 넣을 수 있습니다. 
+&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 </code></pre>
 
 <p spaces-before="0">
@@ -292,17 +305,17 @@ cd Notes
   수평 규칙을 얻는 세 가지 방법이 있습니다: 하이픈, 별표 또는 밑줄을 사용할 수 있습니다.
 </p>
 
-<pre><code class="markdown">세 개 이상...
+<pre><code class="markdown">Three or more...
 
-하이픈
+Hyphens
 
 ---
 
-별표
+Asterisks
 
 ***
 
-밑줄
+Underscores
 
 ___
 </code></pre>
@@ -327,12 +340,12 @@ ___
   ::: 팁 <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>으로 공백 2개와 줄 바꿈을 입력할 수 있습니다. :::
 </p>
 
-<pre><code class="markdown">여기 우리가 시작해야 할 대사가 있습니다.
+<pre><code class="markdown">Here's a line for us to start with.
 
-이 줄은 위의 줄과 두 줄의 새 줄로 구분되므로 *별도의 문단*이 됩니다.
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 
-이 행은 또한 별도의 단락으로 시작합니다. 하지만...  
-이 줄은 두 개의 후행 공백과 하나의 새 줄로만 구분되므로 *동일한 문단*에서 별도의 줄입니다.
+This line is also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the *same paragraph*.
 </code></pre>
 
 <p spaces-before="0">
@@ -349,8 +362,9 @@ ___
   설명은 미리보기에 표시되지 않습니다.
 </p>
 
-<pre><code class="markdown">[comment]: # (이 설명은 미리보기에 나타나지 않습니다)
-&lt;!-- HTML 주석도 숨겨집니다 --&gt;
+<pre><code class="markdown">[comment]: # (This comment will not appear in the preview)
+
+&lt;!-- HTML comments are also hidden --&gt;
 </code></pre>
 
 <p spaces-before="0">
@@ -367,8 +381,8 @@ ___
   확인란 목록을 사용하여 간단한 작업관리 목록을 작성할 수 있습니다.
 </p>
 
-<pre><code class="markdown">- [x] 완료
-- [ ] 할 일
+<pre><code class="markdown">- [x] done
+- [ ] todo
 </code></pre>
 
 <p spaces-before="0">
@@ -386,13 +400,13 @@ ___
 </p>
 
 <pre><code class="markdown">---
-title: 일부 이름
-description: 일부 설명
+title: Some name
+description: Some description
 ---
 
-# 참고 헤드라인은 여기서 시작합니다
+# Note headline starts here
 
-일부 텍스트
+Some text
 </code></pre>
 
 <p spaces-before="0">

@@ -1,72 +1,72 @@
 # Übersetzung
 
-Vielen Dank für Ihre Hilfe!
+Vielen Dank für deine Hilfe!
 
 Wie kann ich bei der Übersetzung von QOwnNotes helfen?
 
-## Melden Sie sich bei Crowdin an, um QOwnNotes zu übersetzen
+## Melde dich bei Crowdin an, um QOwnNotes zu übersetzen
 
 ![crowdin](/img/crowdin.png)
 
 **Crowdin** ist eine beliebte Lokalisierungsverwaltungsplattform für mobile Apps, Web, Desktop-Software und zugehörige Assets.
 
-Sie können sich unter [Crowdin](https://crowdin.com/project/qownnotes/invite) und anmelden und **QOwnNotes** mit einfachen Tools in Ihre Sprache **übersetzen**.
+Du kannst dich bei [Crowdin](https://crowdin.com/project/qownnotes/invite) anmelden und **QOwnNotes** mit einfachen Tools in deine Sprache **übersetzen**.
 
 **[QOwnNotes auf Crowdin](https://crowdin.com/project/qownnotes/invite)**
 
-[Schreiben Sie dem Projektinhaber einfach eine Nachricht auf Crowdin](https://crowdin.com/profile/pbek) oder als [GitHub-Ausgabe](https://github.com/pbek/QOwnNotes/issues), wenn Sie QOwnNotes in eine neue Sprache übersetzen möchten.
+[Schreibe dem Projektinhaber einfach eine Nachricht auf Crowdin](https://crowdin.com/profile/pbek) oder als [GitHub-Issue](https://github.com/pbek/QOwnNotes/issues), wenn du QOwnNotes in eine neue Sprache übersetzen möchtest.
 
-Wenn Sie **vorhandene Sprachen** um neue Übersetzungen erweitern möchten, können Sie dies sofort tun.
+Wenn du **vorhandene Sprachen** um neue Übersetzungen erweitern möchtest, kannst du das sofort tun.
 
 ## Korrekturlesen
 
-Wenn Sie ein ausgezeichneter oder sogar Muttersprachler einer bereits übersetzten Sprache sind, die noch nicht Korrektur gelesen wurde, sind wir Ihnen dankbar, wenn Sie dazu beitragen, die QOwnNotes-Erfahrung zuverlässiger und komfortabler zu gestalten, indem Sie nicht genehmigte Übersetzungen überprüfen und gegebenenfalls korrigieren. Sie müssen den Eigentümer um die Erlaubnis bitten, Korrektor für Ihre Sprache zu sein.
+Falls du Muttersprachler einer Sprache bist, oder eine Sprache exzellent beherrschst, die bisher noch nicht Korrektur gelesen wurde, sind wir dir sehr dankbar, wenn du dazu beitragen würdest, die QOwnNotes-Erfahrungen zuverlässiger und angenehmer zu gestalten, indem du die noch nicht genehmigten Übersetzungen überprüfst und gegebenenfalls korrigierst. Um Korrektor für deine Sprache zu werden, musst du den Projektinhaber um Erlaubnis bitten.
 
-Klicken Sie hier um zu sehen, ob Ihre Sprache zu den bereits Übersetzten gehört!
+Klicke hier um zu sehen, ob deine Sprache zu den bereits Übersetzten gehört!
 
 [QOwnNotes auf Crowdin](https://translate.qownnotes.org/)
 
-Sobald Sie den [Projektinhaber auf Crowdin kontaktiert haben](https://crowdin.com/profile/pbek) und die Erlaubnis zum Korrekturlesen in Ihrer Sprache erhalten haben, können Sie loslegen!
+Sobald du den [Projektinhaber auf Crowdin kontaktiert hast](https://crowdin.com/profile/pbek) und die Erlaubnis zum Korrekturlesen in deiner Sprache erhalten hast, kannst du loslegen!
 
 ## Allgemeine Hinweise
 
-Bitte beachten Sie die folgenden Hinweise zu Ihrer Arbeit am Projekt.
+Bitte beachte folgende Hinweise zu deiner Arbeit am Projekt.
 
 ### Genauigkeit
 
-Bitte lokalisieren Sie mit größtmöglicher Genauigkeit und achten Sie dabei auf die Beherrschung Ihrer Zielsprache.
+Bitte lokalisiere mit größtmöglicher Genauigkeit und achte dabei auf den Lesefluss deiner Zielsprache.
 
 ### Präzision
 
 Das Ziel muss die Quelle genau und ohne Auslassungen oder Hinzufügungen von Teilen der Zeichenfolge darstellen.
 
-### Context
+### Kontext
 
-Wenn Sie mehr Kontext oder Hilfe bei einer bestimmten Zeichenfolge benötigen und zufällig eine andere Sprache kennen, können Sie die Sprache ändern und sehen, was andere Übersetzer aus dem Segment gemacht haben. Aber zögern Sie nicht, rechts auf der Seite eine Nachricht zu hinterlassen und um Klärung zu bitten.
+Wenn du mehr Kontext oder Hilfe bei einer bestimmten Zeichenfolge benötigst und zufällig eine andere Sprache kennst, kannst du die Sprache ändern und sehen, was andere Übersetzer aus dem Segment gemacht haben. Aber zögere nicht, rechts auf der Seite eine Nachricht zu hinterlassen und um Klärung zu bitten.
 
 ### Häufig verwendete Schlüsselbegriffe
 
 Es ist notwendig, für die häufig verwendeten Schlüsselbegriffe die gleichen Übersetzungen zu prüfen und zu verwenden, z. B. "Notiz" muss immer auf die gleiche Weise übersetzt werden.
 
-Wenn `trashed notes` auf Deutsch mit `gelöschte Notizen` übersetzt wurde, verwenden Sie immer diesen Ausdruck. Eine Ausnahme davon ist, wenn Sie grammatikalisch oder sprachlich gebunden sind, eine Alternative zu verwenden.
+Wenn `trashed notes` auf Deutsch mit `gelöschte Notizen` übersetzt wurde, verwenden Sie immer diesen Ausdruck. Eine Ausnahme davon ist, wenn du grammatikalisch oder sprachlich gebunden bist, eine Alternative zu verwenden.
 
 ![screenshot](/img/crowdin/screenshot-7.png)
 
-Um alle identischen Ausdrücke zu finden, durchsuchen Sie Crowdin, um zu sehen, ob alle Vorkommen eines Begriffs tatsächlich dieselbe Übersetzung haben. Sie können eine bessere Übersetzung vorschlagen und über die anderen abstimmen.
+Um alle identischen Ausdrücke zu finden, durchsuche Crowdin, um zu sehen, ob alle Vorkommen eines Begriffs tatsächlich dieselbe Übersetzung haben. Du kannst eine bessere Übersetzung vorschlagen und über die anderen abstimmen.
 
-Lokalisieren Sie alle Vorkommen so identisch wie möglich.
+Lokalisiere alle Vorkommen so identisch wie möglich.
 
 `Notiz` sollte auf jeden Fall immer nur eine Übersetzung haben.
 
 ### Plural Formen
 
-Für Plural fügen Sie bitte jeweils die entsprechende Übersetzung in den entsprechenden Block ein.
+Füge bitte für den Plural jeweils die angemessene Übersetzung in den entsprechenden Block ein.
 
 ![screenshot](/img/crowdin/screenshot-4.png)
 
 ### Variablen
 
-Die `%1`-Variablen müssen ohne Leerzeichen geschrieben werden. In RTL-Sprachen können Sie die Variablen entweder aus dem Original einfügen oder in Ihre Übersetzung schreiben.
+Die `%1`-Variablen müssen ohne Leerzeichen geschrieben werden. In linksläufigen Sprachen kannst du die Variablen entweder aus dem Original einfügen oder in deine Übersetzung schreiben.
 
 ![screenshot](/img/crowdin/screenshot-1.png)
 
@@ -76,7 +76,7 @@ Die `%1`-Variablen müssen ohne Leerzeichen geschrieben werden. In RTL-Sprachen 
 
 ### Zugangsschlüssel
 
-Verwenden Sie `&` vor jedem Buchstaben, der in einer Verknüpfung verwendet werden soll, kann derselbe wie im Original sein, muss es aber nicht.
+Verwende `&` vor jedem Buchstaben, der in einer Verknüpfung verwendet werden soll, die dieselbe wie im Original sein kann, aber nicht muss.
 
 ![screenshot](/img/crowdin/screenshot-4.png)
 
@@ -88,14 +88,14 @@ Strings wie `::: tip`, `::: warning` und `::: info` in der Dokumentation sind Ma
 
 Einige Segmente, die wir in der Dokumentation nicht übersetzen:
 
-- Übersetzen Sie niemals Codes oder Links; Tags müssen so belassen werden, wie sie sind und ohne zusätzliche Leerzeichen, (wie das manche maschinellen Übersetzungen tun, dann müssen diese Zeichen händisch entfernt werden)
-- Wir übersetzen Datum und Uhrzeit nicht (leer lassen)
+- Übersetze niemals Codes oder Links; Tags müssen so belassen werden, wie sie sind (und ohne zusätzliche Leerzeichen, wie das manche maschinellen Übersetzungen tun; dann müssen diese Zeichen händisch entfernt werden)
+- Datum und Uhrzeit übersetzen wir nicht (leer lassen)
 - Und wir übersetzen auch keine Referenzen (die QON in zahlreichen Sprachen bekommen hat), Sie können dieses Kapitel einfach überspringen.
 
 ## Übersetzen und Korrekturlesen kann spannend sein!
 
-Sie setzen sich mit der Sprache dieser Software auseinander, lernen neue Begriffe und erhalten viele Insider-Informationen rund um das Projekt.
+Du wirst dich mit der Sprache dieser Software auseinandersetzen, neue Begriffe lernen und viele Insider-Informationen rund um das Projekt erhalten.
 
-Wenn Sie also bereit sind, beim Korrekturlesen der Übersetzung in Ihrer Sprache zu helfen, wenden Sie sich an [Patrizio](https://crowdin.com/profile/pbek) und fragen Sie nach, wenn Sie Fragen haben und/oder die Rechte für das Korrekturlesen in Ihrer Muttersprache erhalten möchten.
+Wenn du also bereit bist, beim Korrekturlesen der Übersetzung in deiner Sprache zu helfen, wende dich an [Patrizio](https://crowdin.com/profile/pbek) und erkundige dich, wenn du Fragen hast und/oder die Rechte für das Korrekturlesen in deiner Muttersprache erhalten möchtest.
 
 Vielen Dank für Deine Hilfe! 🙂

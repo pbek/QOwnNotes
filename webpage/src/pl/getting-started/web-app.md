@@ -10,7 +10,7 @@ Zdjęcia z telefonu komórkowego można wstawiać do bieżącej notatki w aplika
 
 Aplikacja internetowa w telefonie komunikuje się z aplikacją komputerową QOwnNotes przez Internet. Komunikacja pomiędzy QOwnNotes a serwisem internetowym jest **transportowo szyfrowana**. Żadne obrazy nie będą przechowywane na serwerze.
 
-Istnieje strona ustawień **aplikacja internetowa** aby dodać obsługę aplikacji sieci Web.
+There is a settings page **Web application** to add support for the web application.
 
 ![Ustawienia aplikacji internetowej QOwnNotes](/img/blog/web-application-settings.png "Skonfiguruj komunikację z aplikacją internetową")
 

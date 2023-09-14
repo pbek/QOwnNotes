@@ -10,7 +10,7 @@ A mobiltelefonról származó fotókat beillesztheti az asztali QOwnNotes aktuá
 
 A telefonon található webalkalmazás az interneten keresztül kommunikál a QOwnNotes asztali alkalmazásával. A QOwnNotes és a webszolgáltatás közötti kommunikáció ** szállítás titkosított **. Nem tárol képeket a szerveren.
 
-A webalkalmazás támogatásának megadásához volt egy beállítási oldal **Webalkalmazás**.
+There is a settings page **Web application** to add support for the web application.
 
 ![QOwnNotes webalkalmazás beállításai](/img/blog/web-application-settings.png "A kommunikáció beállítása a webalkalmazáshoz")
 

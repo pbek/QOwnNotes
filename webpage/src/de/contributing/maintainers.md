@@ -1,4 +1,4 @@
-# Betreuer
+# Betreiber
 
 ## Kernentwicklungsteam
 
@@ -10,4 +10,4 @@
 
 Siehe [QOwnNotes auf Crowdin](https://crowdin.com/project/qownnotes/activity_stream)
 
-Wenn Sie bei der Übersetzung von QOwnNotes helfen möchten, besuchen Sie bitte [Übersetzung](translation.md).
+Wenn du bei der Übersetzung von QOwnNotes helfen möchtest, besuchen Sie bitte die Seite [Übersetzung](translation.md).

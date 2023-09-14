@@ -10,7 +10,7 @@ U kunt foto's van uw mobiele telefoon invoegen in de huidige notitie in QOwnNote
 
 De webtoepassing op uw telefoon communiceert via internet met uw QOwnNotes-desktoptoepassing. De communicatie tussen QOwnNotes en de webservice is **transport versleuteld**. Er worden geen afbeeldingen op de server opgeslagen.
 
-Er was een instellingenpagina **Webapplicatie** om ondersteuning voor de webapplicatie toe te voegen.
+There is a settings page **Web application** to add support for the web application.
 
 ![QOwnNotes Web Application-instellingen](/img/blog/web-application-settings.png "Setup communicatie naar webapplicatie")
 

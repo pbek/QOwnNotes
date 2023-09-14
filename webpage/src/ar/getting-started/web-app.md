@@ -10,7 +10,7 @@ image: /img/blog/web-application-settings.png
 
 يتواصل تطبيق الويب على محمولك مع تطبيق QOwnNotes على حاسوبك عبر الإنترنت. التواصل بين QOwnNotes وخدمة الويب **مشفر**. لا صور يتم تخزينها على الخادم.
 
-كانت توجد صفحة إعدادات **تطبيق الويب** لتفعيل دعم تطبيق الويب.
+There is a settings page **Web application** to add support for the web application.
 
 ![إعدادات تطبيق ويب QOwnNotes](/img/blog/web-application-settings.png "إعداد التواصل مع تطبيق الويب")
 

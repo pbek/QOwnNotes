@@ -9,7 +9,7 @@ Ermöglicht das Ausschneiden von einer Browserseite und das Verwalten von Browse
 ::: tip
 Info
 - QOwnNotes muss ausgeführt werden, damit die Web Companion-Browsererweiterung funktioniert.
-- Keine Internetverbindung erforderlich. Die Browsererweiterungen funktionieren **offline**.
+- Es ist keine Internetverbindung erforderlich. Die Browsererweiterungen funktionieren **offline**.
 :::
 
 ## Installation
@@ -17,7 +17,7 @@ Info
 1. Holen Sie sich die Erweiterung
     - [Chrome-Webstore](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
     - [Firefox-Add-ons-Seite](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-    - Sie finden die Erweiterung auch unter [GitHub](https://github.com/qownnotes/web-companion/).
+    - Sie finden die Erweiterung auch auf [GitHub](https://github.com/qownnotes/web-companion/).
 2. Fügen Sie das Sicherheitstoken hinzu, um die Erweiterung zu konfigurieren.
     - Wenn Sie zum ersten Mal auf das Symbol der QOwnNotes-Browsererweiterung klicken, erhalten Sie ein Dialogfeld mit einem Sicherheitstoken. Kopieren Sie das Token.
     - Gehen Sie zum Speicherort der Erweiterungsverwaltung Ihres Browsers. Klicken Sie auf die Details der QOwnNotes-Erweiterung.
@@ -39,14 +39,14 @@ Der Web Clipper ist auch skriptfähig! Schauen Sie sich den [websocketRawDataHoo
 
 Wenn Sie die volle Kontrolle über Ihre Browser-Lesezeichen haben und **sie in verschiedenen Browsern und Betriebssystemen verwenden möchten**, dann ist die QOwnNotes-Browsererweiterung genau das Richtige für Sie.
 
-Standardmäßig zeigt die Browsererweiterung alle **Links der aktuellen Notiz** in einem Popup an, wenn Sie in Ihrem Browser auf das QOwnNotes-Symbol klicken. Diese Links erhalten einen `current` Tag.
+Standardmäßig zeigt die Browsererweiterung alle **Links der aktuellen Notiz** in einem Popup an, wenn Sie in Ihrem Browser auf das QOwnNotes-Symbol klicken. Diese Links erhalten ein `current` Schlagwort.
 
-Sie können **Ihre Lesezeichen auch in Notizen** mit dem Notiz-Tag `Lesezeichen` verwalten (in den Einstellungen änderbar). Diese Links können auch Tags und eine Beschreibung enthalten, die in der Browsererweiterung angezeigt wird.
+Sie können **Ihre Lesezeichen auch in Notizen** mit dem Notiz-Schlagwort `bookmarks` verwalten (in den Einstellungen änderbar). Diese Links können auch Schlagworte und eine Beschreibung enthalten, die in der Browsererweiterung angezeigt wird.
 
-Neue Lesezeichen werden in einer Notiz namens `Lesezeichen` gespeichert (in den Einstellungen änderbar).
+Neue Lesezeichen werden in einer Notiz namens `Bookmarks` gespeichert (in den Einstellungen änderbar).
 
 ::: tip
-Sie können Ihre Browser-Lesezeichen auch mit der Web-Companion-Browser-Erweiterung in QOwnNotes importieren!
+Sie können Ihre Browser-Lesezeichen auch mit der Web-Companion-Browsererweiterung in QOwnNotes importieren!
 :::
 
 ### Syntax von Lesezeichen-Links

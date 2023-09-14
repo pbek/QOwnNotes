@@ -5,6 +5,7 @@
   alphabetically, with the two default schemes in front (for [#2840](https://github.com/pbek/QOwnNotes/issues/2840))
   - the custom schemes are still placed at the back of the list
   - this should improve readability
+- added more German translation (thank you bumpsy)
 
 ## 23.9.2
 - the font size in the preview will now change immediately when the font size in

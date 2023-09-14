@@ -1,11 +1,11 @@
 # Nach Notizen suchen
 
-Um nach Notizen oder Text in Notizen zu suchen, können Sie die Verknüpfung verwenden <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>F</kbd> (bzw <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> unter macOS), um zum *Suchfeld für Notizen* zu springen.
+Um nach Notizen oder Text in Notizen zu suchen, können Sie die Verknüpfung <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>F</kbd> verwenden (oder <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> unter macOS), um zum *Suchfeld für Notizen* zu springen.
 
 Es gibt verschiedene Möglichkeiten, nach Notizen zu suchen:
 
-- `Notizbuch` sucht nach Notizen mit dem Wort `Notiz` oder `Buch` im Dateinamen oder im Notiztext
-- `"Notizbuch"` sucht nach Notizen mit genau dem Text `Notizbuch` im Dateinamen oder Notiztext
-- `n:Buch` oder `Name:Buch` sucht nach Notizen, wobei `Buch` nur in der Notiz enthalten ist Name oder Dateiname
+- `Notiz Buch` sucht nach Notizen mit dem Wort `Notiz` oder `Buch` im Dateinamen oder im Notiztext
+- `"Notiz buch"` sucht nach Notizen mit genau dem Text `Notiz buch` im Dateinamen oder Notiztext
+- `n:Buch` oder `Name:Buch` sucht nach Notizen, wobei `Buch` nur im Name der Notiz oder im Dateinamen enthalten ist
 
 ![Suchen](/img/searching.png)

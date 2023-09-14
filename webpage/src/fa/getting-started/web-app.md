@@ -10,7 +10,7 @@ image: /img/blog/web-application-settings.png
 
 برنامه تحت وب در تلفن شما از طریق اینترنت با برنامه دسکتاپ QOwnNotes ارتباط برقرار می کند. ارتباط بین QOwnNotes و خدمات وب به صورت **انتقال رمزنگاری شده** می باشد. هیچ تصویری در سرور ذخیره نمی شود.
 
-صفحه تنظیمات **برنامه تحت وب** جهت افزودن پشتیبانی مربوط به برنامه تحت وب در دسترس قرار دارد.
+There is a settings page **Web application** to add support for the web application.
 
 ![تنظیمات برنامه تحت وب QOwnNotes](/img/blog/web-application-settings.png "ارتباط راه اندازی با برنامه تحت وب")
 

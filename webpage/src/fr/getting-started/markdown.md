@@ -90,19 +90,29 @@ Si vous appuyez sur <kbd>Entrée</kbd> à la fin d'une liste, un nouvel élémen
 
 ## Liens
 
-Il existe plusieurs façons de créer des liens.
+Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+
+### External links
 
 ```markdown
-[Je suis un lien de style en ligne] (https://www.google.com)
+[I'm an inline-style link](https://www.google.com)
 
-[Je suis un lien de style en ligne avec titre] (https://www.google.com "Page d'accueil de Google")
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
-[Vous pouvez utiliser des nombres pour les définitions de liens de style référence][1]
+[You can use numbers for reference-style link definitions][1]
 
-Les URL et URL entre crochets angulaires seront automatiquement transformées en liens dans l'aperçu. 
+Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
 http://www.example.com ou <http://www.example.com>
 
 [1]: https://www.qownnotes.org
+```
+
+### Internal links
+
+```markdown
+[I link to the Journal.md note](Journal.md)
+
+<Journal.md> works similarly.
 ```
 
 ::: tip
@@ -113,12 +123,12 @@ L'utilisation de <kbd>Ctrl + Maj + X</kbd> fera apparaître une boîte de dialog
 Vous pouvez appuyer sur <kbd>Ctrl + Espace</kbd> pendant que le curseur se trouve sur un lien dans l'édition de note pour suivre le lien.
 :::
 
-### Signets
+### Bookmarks
 
 Les signets utilisés par [l'extension de navigateur QOwnNotes Web Companion](./browser-extension.md) utilisent des liens dans des listes.
 
 ```markdown
-- [Nom de la page Web] (https://www.example.com) #tag1 #tag2 une description et des balises
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 ```
 
 ## Images
@@ -139,7 +149,7 @@ Vous pouvez également coller directement une image du presse-papiers dans votre
 ## Code en ligne et blocs de code
 
 ```markdown
-Le «code» en ligne a des «back-ticks autour».
+Inline `code` has `back-ticks around` it.
 ```
 
 ::: tip
@@ -148,41 +158,42 @@ Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd>Ctrl + Maj + C</kbd> su
 
 Les blocs de code sont délimités par des lignes avec trois contre-graduations ou sont indentés avec quatre espaces.
 
-### Clôture 4 espaces
+### 4-Spaces fence
 
 Ajoutez quatre espaces devant votre code pour le marquer comme bloc de code.
 
 ```markdown
-    s = "Code avec espace en retrait"
+    s = "Code with space indent"
     print s
 ```
 
-### Clôture Backtick
+### Backtick fence
 
 Vous pouvez également utiliser trois backticks pour créer un bloc de code.
 ~~~markdown
 ```
-Le code va ici
-Le code va ici
+Code goes here
+Code goes here
 ```
 ~~~
 
 ::: tip
-Vous pouvez utiliser le [raccourci] (./ shortcuts.md) <kbd>Ctrl + Maj + C</kbd> sur plusieurs lignes de texte sélectionnées ou dans une ligne vide pour créer un bloc de code. 
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
+multiple selected lines of text or in an empty line to create a code block. 
 :::
 
-### Clôture Backtick avec mise en évidence du code
+### Backtick fence with code highlighting
 
-Il y a aussi une coloration syntaxique avec des blocs de code dans QOwnNotes.
+There also is some syntax highlighting with code blocks in QOwnNotes.
 
-~~~ markdown
-``` bash
-# Je suis un commentaire
+~~~markdown
+```bash
+# I am a comment
 cd Notes
 ```
 ~~~
 
-Les languages (et identifiants de blocs de code) actuellement pris en charge sont :
+Currently, supported languages (and code block identifiers) are:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -216,26 +227,26 @@ Les languages (et identifiants de blocs de code) actuellement pris en charge son
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tableaux
+## Tables
 
-Les tableaux ne font pas partie des spécifications originales de Markdown mais le mode de prévisualisation de QOwnNotes les prend en charge. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
 ~~~markdown
-Les double-points peuvent être utilisés pour aligner le contenu des colonnes.
+Colons can be used to align columns.
 
-| Les Tables | Sont | Chouettes |
-| ------------- |: -------------: | -----: |
-| col 3 est | alignée à droite | 1600 $ |
-| col 2 est | centrée | 12 $ |
-| rayures zébrées | sont soignées | 1 $ |
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
-Il doit y avoir au moins 3 tirets séparant chaque cellule d'en-tête.
+There must be at least 3 dashes separating each header cell.
 
-Vous pouvez également utiliser le Markdown en ligne.
+You can also use inline Markdown.
 
-| Markdown | Moins | Jolie |
+| Markdown | Less | Pretty |
 | --- | --- | --- |
-| *Encore* | `rend` | **bien** |
+| *Still* | `renders` | **nicely** |
 | 1 | 2 | 3 |
 ~~~
 
@@ -248,12 +259,12 @@ Utilisez <kbd>Ctrl + Espace</kbd> dans un tableau de démarquage pour le formate
 ## Blocs de citation
 
 ```markdown
-> Les blockquotes sont très pratiques dans les e-mails pour émuler le texte de réponse.
-> Cette ligne fait partie du même devis.
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
 
-Citation pause.
+Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh mon garçon, continuons à écrire pour nous assurer que cela est assez long pour que tout le monde puisse en profiter. Oh, vous pouvez *mettre* **Markdown** dans un blockquote. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 ```
 
 ::: tip
@@ -267,29 +278,17 @@ Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd>Ctrl + Maj + B</kbd> po
 Il existe trois façons d'obtenir une règle horizontale: traits d'union, astérisques ou traits de soulignement.
 
 ```markdown
-Trois ou plus ...
+Three or more...
 
-Traits d'union
-
----
-
-Astérisques
-
-***
-
-Soulignements
-
-___
-
-Traits d'union
+Hyphens
 
 ---
 
-Astérisques
+Asterisks
 
 ***
 
-Soulignements
+Underscores
 
 ___
 ```
@@ -305,12 +304,12 @@ Vous pouvez insérer deux espaces et un retour à la ligne avec <kbd>⇧ Shift</
 :::
 
 ```markdown
-Voici une ligne pour nous de commencer.
+Here's a line for us to start with.
 
-Cette ligne est séparée de celle ci-dessus par deux nouvelles lignes, ce sera donc un *paragraphe séparé*.
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 
-Cette ligne commence également un paragraphe séparé, mais ...
-Cette ligne n'est séparée que par deux espaces de fin et un seul saut de ligne, c'est donc une ligne distincte dans le *même paragraphe*.
+This line is also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the *same paragraph*.
 ```
 
 ::: tip
@@ -322,9 +321,9 @@ Les espaces de fin sont mis en évidence par défaut dans l'éditeur.
 Les commentaires ne sont pas affichés dans l'aperçu.
 
 ```markdown
-[comment]: # (Ce commentaire n'apparaîtra pas dans l'aperçu)
+[comment]: # (This comment will not appear in the preview)
 
-<! - Les commentaires HTML sont également masqués ->
+<!-- HTML comments are also hidden -->
 ```
 
 ::: tip
@@ -336,8 +335,8 @@ Un bloc de commentaire HTML en tête d'une note sera également ignoré dans la 
 Vous pouvez créer des listes de tâches simples avec des listes de cases à cocher.
 
 ```markdown
-- [x] fait
-- [ ] à faire
+- [x] done
+- [ ] todo
 ```
 
 ::: tip
@@ -350,13 +349,13 @@ Dans QOwnNotes, vous pouvez utiliser un « frontmatter » (par exemple YAML) pou
 
 ```markdown
 ---
-title: un nom
-description: une description
+title: Some name
+description: Some description
 ---
 
-# Le titre de la note commence ici
+# Note headline starts here
 
-Du texte
+Some text
 ```
 
 Le nom de fichier de cet exemple de note serait `L'en-tête de la note commence ici.md`.

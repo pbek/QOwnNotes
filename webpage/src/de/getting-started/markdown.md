@@ -47,7 +47,7 @@ Sie können die [Tastenkombination](./shortcuts.md) <kbd>Strg + B</kbd> verwende
 
 ## Unterstreichen
 
-Es gibt auch eine optionale Einstellung zum Aktivieren des Unterstreichungs-Hervorhebung in den *Preview settings*.
+Es gibt auch eine optionale Einstellung in den *Vorschau-Einstellungen*, um das Unterstreichen zu aktivieren.
 
 ```markdown
 _unterstreichen_
@@ -72,7 +72,7 @@ Sie können den [shortcut](./shortcuts.md) <kbd>Alt + Shift + S</kbd> verwenden,
 Es gibt viele Möglichkeiten, Listen zu erstellen.
 
 ```markdown
-1. Als Erstes bestimmter Listeneintrag
+1. Erster geordneter Listeneintrag
 2. Ein weiterer Eintrag
    * Ungeordnete Unterliste.
 1. Tatsächliche Zahlen spielen keine Rolle, nur dass es eine Zahl ist!
@@ -90,35 +90,45 @@ Wenn Sie am Ende einer Liste die <kbd>Enter</kbd> -Taste drücken, wird ein neue
 
 ## Links
 
-Es gibt mehrere Möglichkeiten, Links zu erstellen.
+Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+
+### External links
 
 ```markdown
-[Ich bin ein Inline-Link] (https://www.google.com)
+[I'm an inline-style link](https://www.google.com)
 
-[Ich bin ein Inline-Link mit Titel] (https://www.google.com "Googles Homepage")
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
-[Sie können Zahlen für Referenzdefinitionen im Referenzstil verwenden] [1]
+[You can use numbers for reference-style link definitions][1]
 
-URLs und URLs in spitzen Klammern werden in der Vorschau automatisch in Links umgewandelt. 
+Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
 http://www.example.com oder <http://www.example.com>
 
 [1]: https://www.qownnotes.org
 ```
 
+### Internal links
+
+```markdown
+[I link to the Journal.md note](Journal.md)
+
+<Journal.md> works similarly.
+```
+
 ::: tip
 Sie können den [shortcut](./shortcuts.md) <kbd>Ctrl + L</kbd> verwenden: **Erstellen Sie Links zu Webseiten oder anderen Notizen**.
 
-Wenn Sie <kbd>Strg + Umschalt + X</kbd> verwenden, wird ein Dialogfeld angezeigt, durch den Sie in Ihre Notiz **Anhänge einfügen** können.
+Wenn Sie <kbd>Strg + Umschalt + X</kbd> verwenden, wird ein Dialogfeld angezeigt, durch das Sie in Ihre Notiz **Anhänge einfügen** können.
 
 Sie können <kbd>Strg + Leertaste</kbd> drücken, während sich der Cursor auf einem Link in der Notizbearbeitung befindet, um dem Link zu folgen.
 :::
 
-### Lesezeichen
+### Bookmarks
 
 Die von der [QOwnNotes Web Companion-Browsererweiterung](./browser-extension.md) verwendeten Lesezeichen verwenden Links in Listen.
 
 ```markdown
-- [Name der Webseite] (https://www.example.com) #tag1 #tag2 einige Beschreibungen und Tags
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 ```
 
 ## Bilder
@@ -139,7 +149,7 @@ Sie können ein Bild auch direkt aus der Zwischenablage mit <kbd>Strg + Umschalt
 ## Inline-Code und Code-Blöcke
 
 ```markdown
-Inline-`Code` hat `Back-Ticks`.
+Inline `code` has `back-ticks around` it.
 ```
 
 Sie können die [Verknüpfung](./shortcuts.md) <kbd>Strg + Umschalt + C</kbd> für ausgewählten Inline-Text oder nur innerhalb von Text verwenden, um einen Inline-Codeblock zu erstellen.
@@ -147,42 +157,43 @@ Sie können die [Verknüpfung](./shortcuts.md) <kbd>Strg + Umschalt + C</kbd> f�
 
 Codeblöcke werden entweder durch Zeilen mit drei Back-Ticks eingezäunt oder mit vier Leerzeichen eingerückt.
 
-### Code-Blöcke mit vier führenden Leerzeichen
+### 4-Spaces fence
 
 Fügen Sie vier Leerzeichen vor Ihrem Code hinzu, um ihn als Codeblock zu markieren.
 
 ```markdown
-    s = "Code mit Leerzeicheneinzug"
-     drucken s
+    s = "Code with space indent"
+    print s
 ```
 
-### Code-Blöcke mit Backticks
+### Backtick fence
 
 Sie können auch drei Backticks verwenden, um einen Codeblock zu erstellen.
 ~~~markdown
 ```
-Code wird hierhin geschrieben
-Code wird hierhin geschrieben
+Code goes here
+Code goes here
 ```
 ~~~
 
 ::: tip
-Sie können die Verknüpfung [shortcut](./shortcuts.md) <kbd>Strg + Umschalt + C</kbd> in mehreren ausgewählten Textzeilen oder in einer leeren Zeile verwenden, um einen Codeblock zu erstellen.
- 
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
+multiple selected lines of text or in an empty line to create a code block. 
 :::
 
-### Backtick-Zaun mit Code-Hervorhebung
+### Backtick fence with code highlighting
 
-Es gibt auch einige Syntaxhervorhebungen mit Codeblöcken in QOwnNotes.
+There also is some syntax highlighting with code blocks in QOwnNotes.
 
 ~~~markdown
 ```bash
-# Ich bin ein Kommentar
+# I am a comment
 cd Notes
 ```
 ~~~
 
-Derzeit unterstützte Sprachen (und Codeblock-IDs) sind:
+Currently, supported languages (and code block identifiers) are:
+
 * BASh scripting, `bash`
 * C, `c`
 * C++, `cpp`
@@ -215,12 +226,12 @@ Derzeit unterstützte Sprachen (und Codeblock-IDs) sind:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tabellen
+## Tables
 
-Tabellen sind nicht Teil der Kern-Markdown-Spezifikation, aber die QOwnNotes-Vorschau unterstützt sie. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
 ~~~markdown
-Doppelpunkte können zum Ausrichten von Spalten verwendet werden.
+Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
@@ -228,13 +239,13 @@ Doppelpunkte können zum Ausrichten von Spalten verwendet werden.
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-Es müssen mindestens 3 Striche vorhanden sein, die jede Kopfzelle trennen.
+There must be at least 3 dashes separating each header cell.
 
-Sie können auch Inline-Markdown verwenden.
+You can also use inline Markdown.
 
-| Abschlag | Weniger | Hübsch |
+| Markdown | Less | Pretty |
 | --- | --- | --- |
-| `Rendert` | *immer noch* | **schön** |
+| *Still* | `renders` | **nicely** |
 | 1 | 2 | 3 |
 ~~~
 
@@ -247,12 +258,12 @@ Verwenden Sie <kbd>Strg + Leertaste</kbd> in einer Markdown-Tabelle, um sie auto
 ## Zitat-Blöcke
 
 ```markdown
-> Blockzitate sind in E-Mails sehr praktisch, um sich in Antworttexten auf einen zitierten Textteil zu beziehen.
-> Diese Zeile ist Teil desselben Zitats.
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
 
-Zitatpause.
+Quote break.
 
-> Dies ist eine sehr lange Zeile, die beim Umbruch immer noch richtig zitiert wird. Oh Mann, lass uns weiter schreiben, um sicherzustellen, dass dies lang genug ist, um tatsächlich für alle umgebrochen zu werden. Oh, du kannst **Markdown** in ein Blockquote *setzen*. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 ```
 
 ::: tip
@@ -263,20 +274,20 @@ Sie können die [ Verknüpfung ](./shortcuts.md) <kbd> Strg + Umschalt + B </kbd
 
 ## Horizontale Linie
 
-Es gibt drei Möglichkeiten, um eine horizontale Regel zu erhalten: Bindestriche, Sternchen oder Unterstriche.
+Es gibt drei Möglichkeiten, um eine horizontale Linie zu erhalten: Bindestriche, Sternchen oder Unterstriche.
 
 ```markdown
-Drei oder mehr ...
+Three or more...
 
-Bindestriche
+Hyphens
 
 ---
 
-Sternchen
+Asterisks
 
 ***
 
-Unterstriche
+Underscores
 
 ___
 ```
@@ -292,12 +303,12 @@ Mit <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> können Sie zwei Leerzeichen und ei
 :::
 
 ```markdown
-Hier ist eine Zeile, mit der wir beginnen sollten.
+Here's a line for us to start with.
 
-Diese Zeile ist durch zwei Zeilenumbrüche von der obigen getrennt, sodass es sich um einen *separaten Absatz* handelt.
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 
-Diese Zeile beginnt auch einen separaten Absatz, aber ...
-Diese Zeile wird nur durch zwei nachgestellte Leerzeichen und eine einzelne neue Zeile getrennt, sodass es sich um eine separate Zeile im *gleichen Absatz* handelt.
+This line is also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the *same paragraph*.
 ```
 
 ::: tip
@@ -309,18 +320,18 @@ Nachgestellte Leerzeichen werden im Editor standardmäßig hervorgehoben.
 Kommentare werden in der Vorschau nicht angezeigt.
 
 ```markdown
-[Kommentar]: # (Dieser Kommentar wird nicht in der Vorschau angezeigt.)
+[comment]: # (This comment will not appear in the preview)
 
-<! - HTML-Kommentare sind ebenfalls ausgeblendet - >
+<!-- HTML comments are also hidden -->
 ```
 
 ::: tip
 Ein führender HTML-Kommentarblock in einer Notiz wird bei der automatischen Generierung von Notizdateinamen ebenfalls ignoriert.
 :::
 
-## Kontrollkästchenlisten
+## Checkboxlisten
 
-Sie können einfache Aufgabenlisten mit Kontrollkästchenlisten erstellen.
+Sie können einfache To-do-Listen mit Checkboxlisten erstellen.
 
 ```markdown
 - [x] done
@@ -328,22 +339,22 @@ Sie können einfache Aufgabenlisten mit Kontrollkästchenlisten erstellen.
 ```
 
 ::: tip
-Sie können Kontrollkästchen in der Vorschau aktivieren / deaktivieren.
+Sie können Checkboxen in der Vorschau abhaken / aufheben.
 :::
 
-## Inhaltsübersicht
+## Präambel
 
-In QOwnNotes können Sie eine Frontmatter (z.B. YAML) verwenden, um zusätzliche Metainformationen hinzuzufügen. Es wird **nicht in der Vorschau angezeigt** und **stört die automatische Generierung von Notizendateinamen** nicht.
+In QOwnNotes können Sie eine Präambel (z.B. YAML) verwenden, um zusätzliche Metainformationen hinzuzufügen. Es wird **nicht in der Vorschau angezeigt** und **stört die automatische Generierung von Notizendateinamen** nicht.
 
 ```markdown
 ---
-Titel: Ein Name
-Beschreibung: Ein wenig Beschreibung
+title: Some name
+description: Some description
 ---
 
-# Notiz Überschrift beginnt hier
+# Note headline starts here
 
-Etwas Text
+Some text
 ```
 
-Der Dateiname dieser Beispielnotiz lautet `. Die Überschrift der Notiz beginnt hier.md `.
+Der Dateiname dieser Beispielnotiz würde lauten: `Die Überschrift der Notiz beginnt hier.md `.

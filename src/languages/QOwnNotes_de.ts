@@ -1591,7 +1591,7 @@
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
 <source>Don't copy image to media folder</source>
-<translation>Bild nicht in den Mediaordner kopieren</translation>
+<translation>Bild nicht in den Medienordner kopieren</translation>
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="56"/>
@@ -1680,7 +1680,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
-<translation>Tags importieren</translation>
+<translation>Schlagworte importieren</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="182"/>
@@ -1733,7 +1733,7 @@
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="84"/>
 <source>The application will be restarted afterward.</source>
-<translation type="unfinished">The application will be restarted afterward.</translation>
+<translation>Die Anwendung wird anschließend neu gestartet.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="143"/>
@@ -2431,7 +2431,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1615"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-<translation>Bild einfügen (kopiert das Bild in den Ordner "Medien" im aktuellen Notizenordner)</translation>
+<translation>Bild einfügen (kopiert das Bild in den Ordner "media" im aktuellen Notizenordner)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1627"/>
@@ -3371,12 +3371,12 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <location filename="../mainwindow.cpp" line="11642"/>
 <source>Nextcloud Deck support disabled!</source>
-<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+<translation>Nextcloud Deck Unterstützung deaktiviert!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="11643"/>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>Die Nextcloud Deck Unterstützung ist nicht aktiviert oder die Einstellungen sind ungültig.&lt;br /&gt; Bitte überprüfe deine &lt;strong&gt;Nextcloud&lt;/strong&gt;konfiguration in den Einstellungen!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="11668"/>
@@ -3602,7 +3602,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <location filename="../mainwindow.cpp" line="10826"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
-<translation>Das Bearbeiten von Notizen ist aktuell gesperrt. Möchten Sie es wieder erlauben?</translation>
+<translation>Das Bearbeiten von Notizen ist aktuell deaktiviert. Möchten Sie es wieder aktivieren?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="11057"/>
@@ -6615,7 +6615,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="276"/>
 <source>Browser extension / command snippets</source>
-<translation>Browsererweiterung / Befehlsausschnitte</translation>
+<translation>Browsererweiterung / Befehlsschnipsel</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
@@ -6625,7 +6625,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="348"/>
 <source>Experimental</source>
-<translation type="unfinished">Experimental</translation>
+<translation>experimentell</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="831"/>
@@ -6645,7 +6645,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1436"/>
 <source>Enable QOwnNotesAPI app support</source>
-<translation type="unfinished">Enable QOwnNotesAPI app support</translation>
+<translation>Aktiviere QOwnNotesAPI App-Unterstützung</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1449"/>
@@ -6660,7 +6660,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1484"/>
 <source>Enable Nextcloud Deck support</source>
-<translation type="unfinished">Enable Nextcloud Deck support</translation>
+<translation>Aktiviere Nextcloud Deck Unterstützung</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1918"/>
@@ -6745,7 +6745,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4049"/>
 <source>Start application in read-only mode</source>
-<translation type="unfinished">Start application in read-only mode</translation>
+<translation>Starte die Anwendung im "Lesen"-Modus</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4239"/>
@@ -6756,7 +6756,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <location filename="../dialogs/settingsdialog.ui" line="4246"/>
 <source> sec</source>
 <extracomment>short for seconds</extracomment>
-<translation type="unfinished"> sec</translation>
+<translation>Sek.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4344"/>

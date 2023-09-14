@@ -1,16 +1,16 @@
-# Command-line Snippet Manager
+# Befehlszeilen-Snippet-Manager
 
 Sie können den [QOwnNotes-Befehlszeilen-Snippet-Manager](https://github.com/qownnotes/qc) verwenden, um **Befehlsschnipsel, die in Notizen** in QOwnNotes gespeichert sind, über die Befehlszeile auszuführen.
 
 ![qc](/img/qc.png)
 
-Sie können **Notizen mit einem speziellen Tag** verwenden, um **Befehls-Snippets** zu speichern, die Sie **über den Befehlszeilen-Snippet-Manager** ausführen können.
+Sie können **Notizen mit einem speziellen Schlagwort** verwenden, um **Befehls-Snippets** zu speichern, die Sie **über den Befehlszeilen-Snippet-Manager ausführen ** können.
 
 ![commands](/img/commands.png)
 
 ## Installation
 
-Besuchen Sie die Seite [Neueste Version](https://github.com/qownnotes/qc/releases/latest) und laden Sie die gewünschte Version herunter.
+Besuchen Sie die Seite mit der [neuesten Version](https://github.com/qownnotes/qc/releases/latest) und laden Sie die gewünschte Version herunter.
 
 ::: tip
 Wenn Sie [jq](https://stedolan.github.io/jq) installiert haben, können Sie dieses Snippet auch verwenden, um beispielsweise das neueste Linux AMD64 AppImage unter `/usr/local/bin/qc` herunterzuladen und zu installieren:
@@ -28,17 +28,17 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ## Abhängigkeiten
 
-[fzf](https://github.com/junegunn/fzf) (fuzzy search) or [peco](https://github.com/peco/peco) (älter, aber eher standardmäßig installiert) notwendig zu installieren, wenn nach Befehlen in der Befehlszeile gesucht werden soll.
+[fzf](https://github.com/junegunn/fzf) (fuzzy search) oder [peco](https://github.com/peco/peco) (älter, aber eher standardmäßig installiert) müssen installiert sein, wenn in der Befehlszeile nach Befehlen gesucht werden soll.
 
 ::: tip
 Standardmäßig wird `fzf` für die Suche verwendet, aber Sie können `peco` verwenden, indem Sie es mit `qc configure` einstellen.
 :::
 
-## Aufstellen
+## Setup
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Bevor Sie den Snippet-Manager verwenden, müssen Sie den *Web-Socket-Server* (2) in den Einstellungen *Browsererweiterung / Befehlsschnipsel* (1) in QOwnNotes aktivieren.
+Bevor Sie den Snippet-Manager verwenden, müssen Sie den *Socket-Server* (2) in den Einstellungen *Browsererweiterung / Befehlsschnipsel* (1) in QOwnNotes aktivieren.
 
 Dann müssen Sie das Sicherheitstoken vorzeigen (3) und kopieren (4).
 
@@ -57,7 +57,7 @@ token = "yourtokenhere"
 ```
 
 ::: tip
-In den QOwnNotes-Einstellungen können Sie auch festlegen, welches Notiz-Tag verwendet werden soll, um in Notizen nach Befehlen zu suchen. Standardmäßig wird das Tag `commands` verwendet.
+In den QOwnNotes-Einstellungen können Sie auch festlegen, welches Notiz-Schlagwort verwendet werden soll, um in Notizen nach Befehlen zu suchen. Standardmäßig wird das Tag `commands` verwendet.
 :::
 
 ## Syntax von Befehlsschnipseln

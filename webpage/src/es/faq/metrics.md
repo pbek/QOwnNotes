@@ -2,11 +2,11 @@
 
 ## ¿Por qué son útiles las métricas?
 
-QOwnNotes (como en la propia aplicación) es **desarrollado por una ya veces dos personas en su tiempo libre**.
+QOwnNotes (como en la propia aplicación) es **desarrollado por una y a veces dos personas en su tiempo libre**.
 
-Los lanzamientos se crean para muchas plataformas y distribuciones (a menudo, versiones muy antiguas de las mismas). Mantenerlas es mucho trabajo.
+Se crean versiones para muchas plataformas y distribuciones (a menudo versiones muy antiguas). Mantenerlas es mucho trabajo.
 
-Las métricas son la única fuente confiable de información sobre las versiones de plataformas y distribuciones en las que se ejecuta QOwnNotes. También muestran qué funciones son las más populares, de modo que se pueden tomar decisiones sobre qué versiones retirar, qué funciones necesitan más trabajo y cuáles apenas se usan.
+Las métricas son la única fuente confiable de información en qué versiones de plataformas y distribuciones QOwnNotes funciona. También muestran qué funciones son las más populares, de modo que se pueden tomar decisiones sobre qué versiones retirar, qué funciones necesitan más trabajo y cuáles apenas se usan.
 
 Lo mismo se aplica a la selección de idiomas preferidos por parte del usuario, lo que promueve la mejora de las traducciones correspondientes.
 
@@ -36,7 +36,7 @@ Puede desactivarlos la primera vez que inicie la aplicación en el cuadro de di�
 
 ## ¿Por qué las métricas no están desactivadas de forma predeterminada?
 
-Los valores predeterminados son rey. Desactivar las métricas de forma predeterminada no generaría ninguna métrica significativa.
+Los valores predeterminados son rey. Desactivar las métricas por defecto daría como resultado la ausencia total de métricas significativas.
 
 A la mayoría de la gente no le importan las métricas. Aquellos que se preocupan por las métricas y no quieren votar con sus métricas sobre en qué se trabaja o qué se admite, pueden desactivarlas fácilmente en el primer inicio de la aplicación.
 

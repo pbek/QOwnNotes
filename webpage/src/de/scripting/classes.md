@@ -37,10 +37,10 @@ script.log (note.fileCreated.toISOString ());
 script.log (note.fileLastModified.getFullYear ());
 
 // benennt eine Notiz in "new name.md" um
-note.renameNoteFile ("neuer Name");
+note.renameNoteFile ("new name");
 
 // prüfe ob es einen anderen Namen der Notendatei als die Überschrift haben darf
-script.log (note.allowDifferentFileName ());
+script.log (note.allowDifferentFileName());
 ```
 
 NoteSubFolder
@@ -64,22 +64,22 @@ class NoteSubFolderApi {
 ```js
 var noteSubFolderQmlObj = Qt.createQmlObject("import QOwnNotesTypes 1.0; NoteSubFolder{}", mainWindow, "noteSubFolder");
 
-// print all subfolder names
+// gib alle Unterordnernamen aus
 noteSubFolderQmlObj.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
     script.log(nsf.name);
 });
 
-// get the active note subfolder
+// hole den aktuellen Notiz-Unterordner
 var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
 
-// print the full and relative path of the active note subfolder
+// gib den vollständigen und relativen Pfad des aktuellen Notiz-Unterordners aus
 script.log(noteSubFolder.fullPath());
 script.log(noteSubFolder.relativePath());
 
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// iterate through notes in note subfolder
+// iteriere durch die Notizen im Notizen-Unterordner
 for (var idx in noteSubFolder.notes) {
     var note = noteSubFolder.notes[idx];
 }
@@ -104,19 +104,19 @@ class TagApi {
 ```js
 // Vergessen Sie nicht, "import QOwnNotesTypes 1.0" am Anfang Ihres Skripts zu verwenden!
 
-// Fetch tag "home"
+// hole das Schlagwort "home"
 var tag = script.getTagByNameBreadcrumbList(["home"]);
-// Fetch all notes tagged with the tag
+// hole alle Notizen mit dem Schlagwort
 var notes = tag.notes;
 
-// Iterate through notes of the tag
+// iteriere durch die Notizen des Schlagwortes
 for (var idx in notes) {
     var note = notes[idx];
     script.log(note.name);
 }
 ```
 
-You'll find more examples where TagApi is used in [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
+Sie können weitere Beispiele unter [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) finden, wo die TagApi benutzt wird.
 
 HauptFenster
 ----------
@@ -129,55 +129,55 @@ class MainWindow {
     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
             bool forceBuild = false, bool forceLoad = false);
     Q_INVOKABLE void focusNoteTextEdit();
-    // Creates a new note subfolder in the current subfolder
+    // Erstellt einen neuen Notiz-Unterordner im aktuellen Unterordner
     Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
-    // Inserts html in the current note as markdown
-    // This method also downloads remote images and transforms "data:image"
-    // urls to local images stored in the media directory
+    // Fügt HTML in die aktuelle Notiz als Markdown ein
+    // Diese Methode läd auch remote Bilder herunter und transformiert "data:image"
+    // URLs zu lokalen Bildern, die im Medienverzeichnis gespeichert sind
     Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
-    // Reloads the current note by id
-    // This is useful when the path or filename of the current note changed
+    // Lädt die aktuelle Notiz per ID neu
+    // Das ist sinnvoll, wenn der Pfad oder der Dateiname der aktuellen Notiz geändert wurde
     Q_INVOKABLE void reloadCurrentNoteByNoteId();
-    // Returns the list of workspace UUIDs
+    // Gibt die List der Arbeitsumgebungs UUIDs aus
     Q_INVOKABLE QStringList getWorkspaceUuidList();
-    // Returns the UUID of a workspace, passing in the workspace name
+    // Gibt die UUID einer Arbeitsumgebung aus, indem der Name der Arbeitsumgebung eingegeben wird
     Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
-    // Sets the current workspace by UUID
+    // Legt die aktuelle Arbeitsumgebung per UUID fest
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
-    // Closes a note tab on a specific index (returns true if successful)
+    // Schließt einen Notiz-Tab mit einem speziellen Index (gibt bei Erfolg true aus)
     Q_INVOKABLE bool removeNoteTab(int index);
-    // Returns a list of note ids that are opened in tabs
+    // Gibt eine Liste von Notiz-IDs aus, die in Tabs geöffnet werden
     Q_INVOKABLE QList<int> getNoteTabNoteIdList();
-    // Jumps to a tag in the tag tree
+    // Springt zu einem Schlagwort im Schlagwortbaum
     Q_INVOKABLE bool jumpToTag(int tagId);
 };
 ```
 
 ### Beispiel
 ```js
-// Force a reload of the note list
+// Erzwinge das Neuladen der Notizliste
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creates a new note subfolder "My fancy folder" in the current subfolder
+// Erstellt einen neuen Unterordner "My fancy folder" im aktuellen Unterordner
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Inserts html in the current note as markdown
+// Fügt HTML in die aktuelle Notiz als Markdown ein
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Set 'Edit' workspace as current workspace
+// Legt "Edit"-Arbeitsumgebung als aktuelle Arbeitsumgebung fest
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 
-// Jump to the tag "test" in the tag tree
-// There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
+// Springt zum Schlagwort "test" im Schlagwortbaum
+// Es gibt ein Beispiel auf https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 
-// Get all notes that are opened in tabs
+// Erhalte alle Notizen, die in Tabs geöffnet sind
 var noteIds = mainWindow.getNoteTabNoteIdList();
 noteIds.forEach(function (noteId){
     var note = script.fetchNoteById(noteId);
 
-    // do something with the note
+    // mach was mit der Notiz
 });
 
 ```

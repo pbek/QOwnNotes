@@ -13,7 +13,7 @@ The web application on your phone communicates with your QOwnNotes desktop appli
 The communication between QOwnNotes and the web service is **transport encrypted**.
 No images will be stored on the server.
 
-There was a settings page **Web application** to add support for the web application.
+There is a settings page **Web application** to add support for the web application.
 
 ![QOwnNotes Web Application settings](/img/blog/web-application-settings.png "Setup communication to web application")
 

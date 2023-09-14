@@ -90,19 +90,29 @@ Ha megnyomja az <kbd>Enter</kbd> gombot a lista végén, akkor egy új listaelem
 
 ## Linkek
 
-A linkek létrehozásának többféle módja van.
+Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+
+### External links
 
 ```markdown
-[Inline stílusú link vagyok] (https://www.google.com)
+[I'm an inline-style link](https://www.google.com)
 
-[Inline stílusú link vagyok címmel] (https://www.google.com "Google kezdőlapja")
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
-[Használhat számokat hivatkozási stílusú hivatkozások meghatározásához] [1]
+[You can use numbers for reference-style link definitions][1]
 
-Az URL-ek és a szögletes zárójelben lévő URL-ek automatikusan linkekké alakulnak az előnézetben. 
+Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
 http://www.example.com or <http://www.example.com>
 
 [1]: https://www.qownnotes.org
+```
+
+### Internal links
+
+```markdown
+[I link to the Journal.md note](Journal.md)
+
+<Journal.md> works similarly.
 ```
 
 ::: tip
@@ -113,12 +123,12 @@ A <kbd>Ctrl + Shift + X</kbd> használatával megjelenik egy párbeszédpanel, a
 Nyomja meg a <kbd>Ctrl + szóköz</kbd> billentyűt, miközben a kurzor a jegyzet szerkesztésében egy linken van, hogy kövesse a linket.
 :::
 
-### Könyvjelzők
+### Bookmarks
 
 A [QOwnNotes Web Companion böngészőbővítmény](./browser-extension.md) által használt könyvjelzők hivatkozásokat használnak a listákban.
 
 ```markdown
-- [Webpage name] (https://www.example.com) # tag1 # tag2 néhány leírás és címke
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 ```
 
 ## Képek
@@ -139,7 +149,7 @@ A vágólapról közvetlenül beilleszthet egy képet a jegyzetébe a <kbd>Ctrl 
 ## Beépített kód és kódblokkok
 
 ```markdown
-A soron belüli `kód` rendelkezik `back-tics`-el.
+Inline `code` has `back-ticks around` it.
 ```
 
 ::: tip
@@ -148,41 +158,42 @@ Használhatja a [parancsikont](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> a kiv
 
 A kódblokkok vagy három hátsó pipával ellátott vonalakkal vannak elhatárolva, vagy négy szóközzel vannak behúzva.
 
-### 4-Spaces kerítés
+### 4-Spaces fence
 
 Tegyen négy szóközt a kód elé, hogy kódblokkként jelölje meg.
 
 ```markdown
-    s = "Kód szóközzel"
-     nyomtatás s
+    s = "Code with space indent"
+    print s
 ```
 
-### Backtick kerítés
+### Backtick fence
 
 Három backticket is használhat egy kódblokk létrehozásához.
 ~~~markdown
 ```
-A kód ide írandó
-A kód ide írandó
+Code goes here
+Code goes here
 ```
 ~~~
 
 ::: tip
-Kódblokk létrehozásához használhatja a [shortcut] (./shortcuts.md) <kbd>Ctrl + Shift + C </kbd>elemeket több kijelölt szövegsoron vagy egy üres sorban. 
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
+multiple selected lines of text or in an empty line to create a code block. 
 :::
 
-### Backtick kerítés kódkiemeléssel
+### Backtick fence with code highlighting
 
-Van néhány szintaxis kiemelés a kódblokkokkal a QOwnNotes-ban.
+There also is some syntax highlighting with code blocks in QOwnNotes.
 
-~~~ leírás
-"bash
-# Kommentár vagyok
+~~~markdown
+```bash
+# I am a comment
 cd Notes
 ```
 ~~~
 
-A jelenleg támogatott nyelvek (és kódblokk-azonosítók) a következők:
+Currently, supported languages (and code block identifiers) are:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -216,12 +227,12 @@ A jelenleg támogatott nyelvek (és kódblokk-azonosítók) a következők:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Táblázatok
+## Tables
 
-A táblázatok nem részei a Markdown alapvető specifikációinak, de a QOwnNotes előnézet támogatja őket. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
 ~~~markdown
-A kettőspontok használhatók az oszlopok igazításához.
+Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
@@ -229,13 +240,13 @@ A kettőspontok használhatók az oszlopok igazításához.
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-Legalább 3 kötőjelnek kell elválasztania az egyes fejléccellákat.
+There must be at least 3 dashes separating each header cell.
 
-Használhatja az inline Markdown funkciót is.
+You can also use inline Markdown.
 
-| Markdown | Kevésbé | Szép |
+| Markdown | Less | Pretty |
 | --- | --- | --- |
-| *Még* | `mindíg` | **szép** |
+| *Still* | `renders` | **nicely** |
 | 1 | 2 | 3 |
 ~~~
 
@@ -248,12 +259,12 @@ Használja a <kbd>Ctrl + szóköz</kbd>t egy jelölési táblázatban az automat
 ## Idézetek
 
 ```markdown
-> A blokk idézetek nagyon hasznosak az e-mailben a válaszszöveg utánzásához.
-> Ez a sor ugyanannak az idézetnek a része.
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
 
-Idézet szünet.
+Quote break.
 
-> Ez egy nagyon hosszú sor, amelyet még mindig megfelelően idézünk, amikor megtörik. Ó, fiú, írjunk tovább, hogy megbizonyosodjunk arról, hogy ez elég hosszú ahhoz, hogy mindenkinek beburkolhasson. Ó, *beteheti* a **Markdown**-t egy blokk idézetbe. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 ```
 
 ::: tip
@@ -267,17 +278,17 @@ Használhatja a [parancsikont](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> a sz�
 Három módon lehet vízszintes szabályt kapni: kötőjel, csillag vagy aláhúzás.
 
 ```markdown
-Három vagy több ...
+Three or more...
 
-Kötőjelek
+Hyphens
 
 ---
 
-Csillagok
+Asterisks
 
 ***
 
-Aláhúzások
+Underscores
 
 ___
 ```
@@ -293,12 +304,12 @@ Két szóközt és egy újsort írhat be a <kbd>⇧ Shift</kbd> + <kbd>Return</k
 :::
 
 ```markdown
-Itt egy sor, amellyel kezdhetjük.
+Here's a line for us to start with.
 
-Ezt a sort két új sor választja el a fentiektől, tehát *külön bekezdés* lesz.
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 
-Ez a sor egy külön bekezdést is elkezd, de ...
-Ezt a sort csak két zárójel és egyetlen új sor választja el, tehát külön sor az *ugyanabban a bekezdésben*.
+This line is also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the *same paragraph*.
 ```
 
 ::: tip
@@ -310,9 +321,9 @@ A szóközöket a szerkesztő alapértelmezés szerint kiemeli.
 A jegyzet nem jelenik meg az előnézetben.
 
 ```markdown
-[comment]: # (Ez a megjegyzés nem jelenik meg az előnézetben)
+[comment]: # (This comment will not appear in the preview)
 
-<!-- A HTML megjegyzések is el vannak rejtve -->
+<!-- HTML comments are also hidden -->
 ```
 
 ::: tip
@@ -324,8 +335,8 @@ A jegyzetek vezető html megjegyzésblokkja az automatikus jegyzetfájl-generál
 Létrehozhat egyszerű todo listákat jelölőnégyzet listákkal.
 
 ```markdown
-- [x] kész
-- [ ] tennivaló
+- [x] done
+- [ ] todo
 ```
 
 ::: tip
@@ -338,13 +349,13 @@ A QOwnNotes alkalmazásban frontmatterrel (pl. YAML) adhat további meta-inform�
 
 ```markdown
 ---
-cím: Valami név
-leírás: Néhány leírás
+title: Some name
+description: Some description
 ---
 
-# A megjegyzés címsora itt kezdődik
+# Note headline starts here
 
-Némi szöveg
+Some text
 ```
 
 Ennek a példafájlnak a neve `Note headline starts here.md` lenne.

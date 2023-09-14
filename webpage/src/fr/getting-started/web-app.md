@@ -10,7 +10,7 @@ Vous pouvez insérer des photos depuis votre téléphone mobile vers la note cou
 
 L'application Web sur votre téléphone communique avec votre application de bureau QOwnNotes via Internet. La communication entre QOwnNotes et le service Web est **chiffrée**. Aucune image ne sera stockée sur le serveur.
 
-Il y avait une page de paramètres **Application Web** pour ajouter la prise en charge de l'application Web.
+There is a settings page **Web application** to add support for the web application.
 
 ![Paramètres de l'application Web QOwnNotes](/img/blog/web-application-settings.png "Configurer la communication avec l'application Web")
 

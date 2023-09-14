@@ -90,7 +90,9 @@ Jeśli naciśniesz <kbd>Enter</kbd> na końcu listy, zostanie utworzony nowy ele
 
 ## Łączy
 
-Istnieje wiele sposobów tworzenia linków.
+Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+
+### External links
 
 ```markdown
 [I'm an inline-style link](https://www.google.com)
@@ -99,10 +101,18 @@ Istnieje wiele sposobów tworzenia linków.
 
 [You can use numbers for reference-style link definitions][1]
 
-Adresy URL i adresy URL w nawiasach ostrych zostaną automatycznie przekształcone w linki w podglądzie. 
+Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
 http://www.example.com or <http://www.example.com>
 
 [1]: https://www.qownnotes.org
+```
+
+### Internal links
+
+```markdown
+[I link to the Journal.md note](Journal.md)
+
+<Journal.md> works similarly.
 ```
 
 ::: tip
@@ -113,12 +123,12 @@ Użycie klawiszy <kbd>Ctrl + Shift + X</kbd> spowoduje wyświetlenie okna dialog
 Możesz nacisnąć klawisze <kbd>Ctrl + spacja</kbd>, gdy kursor znajduje się na łączu w edycji notatki, aby podążać za linkiem.
 :::
 
-### Zakładki
+### Bookmarks
 
 Zakładki używane przez rozszerzenie przeglądarki [QOwnNotes Web Companion](./browser-extension.md) używają łączy na listach.
 
 ```markdown
-- [Nazwa strony internetowej] (https://www.example.com) #tag1 #tag2 jakiś opis i tagi
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 ```
 
 ## Obrazy
@@ -139,7 +149,7 @@ Możesz także wkleić obraz ze schowka bezpośrednio do notatki za pomocą <kbd
 ## Kod wbudowany i bloki kodu
 
 ```markdown
-Wbudowany „kod” ma „wsteczne kleszcze”.
+Inline `code` has `back-ticks around` it.
 ```
 
 ::: tip
@@ -148,7 +158,7 @@ Możesz użyć [skrótu](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> na zaznaczo
 
 Bloki kodu są albo odgrodzone liniami z trzema znacznikami wstecznymi, albo wcięte czterema spacjami.
 
-### Ogrodzenie 4-polowe
+### 4-Spaces fence
 
 Dodaj cztery spacje przed kodem, aby oznaczyć go jako blok kodu.
 
@@ -157,24 +167,24 @@ Dodaj cztery spacje przed kodem, aby oznaczyć go jako blok kodu.
     print s
 ```
 
-### Ogrodzenie Backtick
+### Backtick fence
 
 Możesz także użyć trzech lewych apostrofów, aby utworzyć blok kodu.
 ~~~markdown
 ```
-Kod idzie tutaj
-Kod idzie tutaj
+Code goes here
+Code goes here
 ```
 ~~~
 
 ::: tip
-Możesz użyć [skrótu](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> na
-wiele wybranych wierszy tekstu lub w pustym wierszu, aby utworzyć blok kodu. 
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
+multiple selected lines of text or in an empty line to create a code block. 
 :::
 
-### Tylne ogrodzenie z podświetleniem kodu
+### Backtick fence with code highlighting
 
-W QOwnNotes jest również podświetlanie składni za pomocą bloków kodu.
+There also is some syntax highlighting with code blocks in QOwnNotes.
 
 ~~~markdown
 ```bash
@@ -183,7 +193,7 @@ cd Notes
 ```
 ~~~
 
-Obecnie obsługiwane języki (i identyfikatory bloków kodu) to:
+Currently, supported languages (and code block identifiers) are:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -217,12 +227,12 @@ Obecnie obsługiwane języki (i identyfikatory bloków kodu) to:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tabele
+## Tables
 
-Tabele nie są częścią rdzenia specyfikacji Markdown, ale podgląd QOWNOTES ich obsługuje. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
 ~~~markdown
-Dwukropków można używać do wyrównywania kolumn.
+Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
@@ -232,7 +242,7 @@ Dwukropków można używać do wyrównywania kolumn.
 
 There must be at least 3 dashes separating each header cell.
 
-Możesz także użyć wbudowanego Markdowna.
+You can also use inline Markdown.
 
 | Markdown | Less | Pretty |
 | --- | --- | --- |
@@ -249,12 +259,12 @@ Użyj <kbd>Ctrl + spacja</kbd> wewnątrz tabeli przecen, aby automatycznie ją s
 ## Cytaty blokowe
 
 ```markdown
-> Cytaty blokowe są bardzo przydatne w wiadomościach e-mail do emulacji tekstu odpowiedzi.
-> Ten wiersz jest częścią tego samego cytatu.
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
 
-Przerwa na wycenę.
+Quote break.
 
-> Jest to bardzo długa linijka, która nadal będzie poprawnie cytowana, gdy zostanie zawinięta. Och chłopcze, piszmy dalej, aby upewnić się, że to wystarczająco długo, aby rzeczywiście zapakować dla wszystkich. Och, możesz *wstawić* **Markdown** do cytatu blokowego. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 ```
 
 ::: tip
@@ -268,17 +278,19 @@ Możesz użyć [skrótu](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd>, aby zaznac
 Istnieją trzy sposoby uzyskania reguły horyzontalnej: łączniki, gwiazdki lub podkreślenia.
 
 ```markdown
-Trzy lub więcej ...
+Three or more...
 
-Myślniki
+Hyphens
 
 ---
 
-Gwiazdki
+Asterisks
 
 ***
 
-Podkreślenia
+Underscores
+
+___
 ```
 
 ## Podziały wierszy
@@ -292,13 +304,12 @@ Możesz wprowadzić dwie spacje i nowy wiersz za pomocą <kbd>⇧ Shift</kbd> + 
 :::
 
 ```markdown
-Oto kwestia, od której możemy zacząć.
+Here's a line for us to start with.
 
-Ten wiersz jest oddzielony od poprzedniego dwoma znakami nowego wiersza, więc będzie to *oddzielny akapit*.
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 
-Ta linia również zaczyna się osobnym akapitem, ale...
-Ta linia jest oddzielona tylko dwoma końcowymi spacjami i pojedynczym znakiem nowej linii, 
-więc jest oddzielną linią w *tym samym akapicie*.
+This line is also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the *same paragraph*.
 ```
 
 ::: tip
@@ -310,9 +321,9 @@ Spacje końcowe są domyślnie podświetlone w edytorze.
 Komentarze nie są wyświetlane w podglądzie.
 
 ```markdown
-[comment]: # (Ten komentarz nie pojawi się w podglądzie)
+[comment]: # (This comment will not appear in the preview)
 
-<!-- HTML komentarze są również ukryte -->
+<!-- HTML comments are also hidden -->
 ```
 
 ::: tip
@@ -338,13 +349,13 @@ W QOwnNotes możesz użyć frontmatera (np.YAML), aby dodać dodatkowe meta info
 
 ```markdown
 ---
-tytuł: Jakieś imię
-opis: Jakiś opis
+title: Some name
+description: Some description
 ---
 
-# Nagłówek notatki zaczyna się tutaj
+# Note headline starts here
 
-Jakiś tekst
+Some text
 ```
 
 Nazwa pliku tej przykładowej notatki byłaby następująca: `Nagłówek notatki zaczyna się tutaj.md`.

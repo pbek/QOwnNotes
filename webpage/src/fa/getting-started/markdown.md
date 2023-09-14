@@ -90,19 +90,29 @@ _خط زیرین_
 
 ## پیوندها
 
-روش های متعددی برای ایجاد پیوند وجود دارد.
+Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+
+### External links
 
 ```markdown
-[من یک پیوند سبک توکار هستم](https://www.google.com)
+[I'm an inline-style link](https://www.google.com)
 
-[من یک پیوند سبک توکار به همراه عنوان هستم]((https://www.google.com "Google's Homepage")
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
-[می توانید از اعداد برای تعریف های پیوند سبک مرجع استفاده کنید][1]
+[You can use numbers for reference-style link definitions][1]
 
-URLها و URLهای موجود در براکت های زاویه دار به طور خودکار به پیوندهای واقع در پیش نمایش تبدیل می شوند. 
+Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
 http://www.example.com or <http://www.example.com>
 
 [1]: https://www.qownnotes.org
+```
+
+### Internal links
+
+```markdown
+[I link to the Journal.md note](Journal.md)
+
+<Journal.md> works similarly.
 ```
 
 ::: tip
@@ -113,12 +123,12 @@ http://www.example.com or <http://www.example.com>
 می توانید با فشار دادن <kbd>Ctrl + Space</kbd> و در حالی که مکان نما را بر روی پیوند در ویرایش یادداشت نگه داشته اید، پیوند را دنبال کنید.
 :::
 
-### نشانک ها
+### Bookmarks
 
 نشانک های بکار رفته توسط [ افزونه مرورگر همراه وب QOwnNotes ](./browser-extension.md) از پیوندهای موجود در لیست ها استفاده می کنند.
 
 ```markdown
-- [نام صفحه وب](https://www.example.com) #برچسب1 #برچسب2 برخی از توضیحات و برچسب ها
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 ```
 
 ## تصاویر
@@ -126,7 +136,7 @@ http://www.example.com or <http://www.example.com>
 امکان تعبیه تصاویر در QOwnNotes وجود دارد. آنها در پیش نمایش نشان داده می شوند.
 
 ```markdown
-![متن جایگزین تصویر](media/my-image.jpg)
+![alt text](media/my-image.jpg)
 ```
 
 ::: tip
@@ -139,7 +149,7 @@ http://www.example.com or <http://www.example.com>
 ## کد توکار و کد بلاک ها
 
 ```markdown
-"کد" توکار دارای "بک تیک هایی" در اطرافش است.
+Inline `code` has `back-ticks around` it.
 ```
 
 ::: tip
@@ -148,43 +158,43 @@ http://www.example.com or <http://www.example.com>
 
 بلوک های کد یا با خطوط دارای سه بک تیک محصور شده یا با چهار فاصله دچار فرورفتگی می شوند.
 
-### 4 حصار فاصله
+### 4-Spaces fence
 
 چهار فاصله در جلوی کدتان برای نشان دار کردن آن به عنوان کد بلاک اضافه کنید.
 
 ```markdown
-    s = " کد با فرورفتگی فاصله"
+    s = "Code with space indent"
     print s
 ```
 
-### حصار بک تیک
+### Backtick fence
 
 علاوه بر این می توانید از سه بک تیک برای ایجاد یک کد پلاک استفاده کنید.
 ~~~مارک داون
 ```
-کد اینجا وارد می شود
-کد اینجا وارد می شود
+Code goes here
+Code goes here
 ```
 ~~~
 
 ::: tip
-شما می توانید از [shortcut] (./shortcuts.md) <0
-<kbd>Ctrl + Shift + C</kbd>
-برای ایجاد یک کد بلاک در چندین خط منتخب از متن یا در یک خط خالی استفاده کنید. 
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
+multiple selected lines of text or in an empty line to create a code block. 
 :::
 
-### حصار بک تیک با برجسته سازی کد
+### Backtick fence with code highlighting
 
-مقداری برجسته سازی چیدمان با کد پلاک ها در QOwnNotes نیز وجود دارد.
+There also is some syntax highlighting with code blocks in QOwnNotes.
 
-~~~مارک داون
-```بش
-# یک توضیح هستم
+~~~markdown
+```bash
+# I am a comment
 cd Notes
 ```
 ~~~
 
-زبان های پشتیبانی شده (و شناسه های کد بلاک) فعلی عبارتند از:
+Currently, supported languages (and code block identifiers) are:
+
 * BASh scripting, `bash`
 * C, `c`
 * C++, `cpp`
@@ -217,27 +227,26 @@ cd Notes
 * YAML, `yml`
 * YAML, `yaml`
 
+## Tables
 
-## جداول
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
-جداول بخشی از مشخصات مارک داون اصلی نیستند اما پیش نمایش QOwnNotes آنها را پشتیبانی می کند. 
+~~~markdown
+Colons can be used to align columns.
 
-~~~مارک داون
-علامت دو نقطه می تواند برای تراز کردن ستون ها بکار رود.
-
-| جداول        | جالب           | هستند  |
+| Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| ستون 3      | راست چین است | $1600 |
-| ستون 2      | وسط چین است      |   $12 |
-| خطوط گورخری | منظم هستند      |    $1 |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
-باید حداقل سه خط تیره که هر سلول سربرگ را جدا می کند، وجود داشته باشد.
+There must be at least 3 dashes separating each header cell.
 
-همچنین می توانید از مارک داون توکار استفاده کنید.
+You can also use inline Markdown.
 
-| مارک داون| کمتر| جذاب |
+| Markdown | Less | Pretty |
 | --- | --- | --- |
-| *همچنان* | `به خوبی` | **نمایان سازی می کند** |
+| *Still* | `renders` | **nicely** |
 | 1 | 2 | 3 |
 ~~~
 
@@ -250,12 +259,12 @@ cd Notes
 ## نقل قول های بلند
 
 ```markdown
-> نقل قول های بلند در پست الکترونیکی برای شبیه سازی متن پاسخ بسیار سودمند هستند.
-> این خط بخشی از همان نقل قول است.
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
 
-قطع نقل قول.
+Quote break.
 
-> این خط بسیار طولانی است که هنگامی که از یک سطر یا ستون به سطر یا ستون بعدی حرکت می کند، همچنان به درستی نقل می شود. وای پسر اجازه دهید به نوشتن ادامه دهیم تا مطمئن شویم که این خط به اندازه کافی طولانی است تا به درستی برای هر کسی بین سطرها و ستون ها حرکت کند. اوه، می توانید **مارک داون** را در یک نقل قول بلند *جای دهید*. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 ```
 
 ::: tip
@@ -269,17 +278,17 @@ cd Notes
 سه راه برای رسم یک خط افقی جدا کننده وجود دارد: خط ربط، ستاره یا زیرین خط.
 
 ```markdown
-سه یا بیشتر...
+Three or more...
 
-خط ربط
+Hyphens
 
 ---
 
-ستاره
+Asterisks
 
 ***
 
-زیرین خط
+Underscores
 
 ___
 ```
@@ -295,12 +304,12 @@ ___
 :::
 
 ```markdown
-در اینجا برای شروع خطی در اختیار ما گذاشته شده است.
+Here's a line for us to start with.
 
-این خط به وسیله دو خط نو از مورد فوق جدا می شود و یک *پاراگراف مجزا* خواهد بود.
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 
-این خط یک پاراگراف مجزا را نیز شروع می کند اما...  
-این خط تنها با دو فاصله مؤخر و یک خط نوی منفرد جدا می شود و یک خط مجزا در *همان پاراگراف* است.
+This line is also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the *same paragraph*.
 ```
 
 ::: tip
@@ -312,9 +321,9 @@ ___
 توضیحات در پیش نمایش نشان داده نمی شود.
 
 ```markdown
-[comment]: # (این توضیح در پیش نمایش ظاهر نخواهد شد)
+[comment]: # (This comment will not appear in the preview)
 
-<!-- توضیحات HTML نیز پنهان هستند -->
+<!-- HTML comments are also hidden -->
 ```
 
 ::: tip
@@ -326,8 +335,8 @@ ___
 شما می توانید لیست های ساده انجام دادنی را با لیست های صندوق بررسی ایجاد کنید.
 
 ```markdown
-- [x] انجام شده
-- [ ] انجام دادنی
+- [x] done
+- [ ] todo
 ```
 
 ::: tip
@@ -340,13 +349,13 @@ ___
 
 ```markdown
 ---
-عنوان: یک نام
-توضیح: مقداری توضیح
+title: Some name
+description: Some description
 ---
 
-# سرخط یادداشت از اینجا آغاز می شود
+# Note headline starts here
 
-مقداری متن
+Some text
 ```
 
 نام پرونده این یادداشت نمونه `Note headline starts here.md`خواهد بود.

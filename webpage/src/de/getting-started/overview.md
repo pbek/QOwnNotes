@@ -139,7 +139,7 @@
 
 <v-divider />
 
-[QOwnNotes](https://www.qownnotes.org/) ist die **Open Source** (GPL) -Nur-Text-Datei-**Markdown-Notizanwendung** für **GNU/ Linux**, **MacOS** und **Windows**, die (optional) mit der [**Notizenanwendung**](https://github.com/nextcloud/notes) von [Nextcloud](https://nextcloud.com/) und [ownCloud](https://owncloud.org/) zusammenarbeitet.
+[QOwnNotes](https://www.qownnotes.org/) ist die **Open Source** (GPL) Klartextdatei-**Markdown-Notizanwendung** für **GNU/Linux**, **MacOS** und **Windows**, die (optional) mit der [**Notizenanwendung**](https://github.com/nextcloud/notes) von [Nextcloud](https://nextcloud.com/) und [ownCloud](https://owncloud.org/) zusammenarbeitet.
 
 ::: tip
 Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutieren, zu lernen und sich mit der QOwnNotes-Community zu verbinden.
@@ -147,34 +147,34 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 
 [Verstehen Sie das Konzept von QOwnNotes](concept.md)
 
-## Eigenschaften
-- You can use your **existing text or markdown files**, no need for an import
+## Features
+- Sie können Ihre bereits **vorhandenen Text- oder Markdowndateien** verwenden; kein Import nötig
 - QOwnNotes ist in C++ geschrieben und für **geringen Ressourcenverbrauch** optimiert (keine CPU- und speicherhungrige Electron-App)
 - **Evernote- und Joplin-Import**
-- **Compatible** with the [Notes](https://apps.nextcloud.com/apps/notes) application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
-- Create **[Nextcloud Deck](https://apps.nextcloud.com/apps/deck) cards** and link to them in your notes
-- Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
-- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
-- Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
-- **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
-- **External changes** of note files are **watched** (notes or note list are reloaded)
-- Support for **hierarchical note tagging** and **note subfolders**
-- Optional **encryption** of notes, AES-256 is built in, or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
-- The **notes folder** can be **freely chosen** (multiple note folders can be used)
-- **Searching parts of words** in notes is possible and search results are highlighted in the notes
-- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
-- [**Spellchecking**](../editor/spellchecking.md) support
-- **Portable mode** for carrying QOwnNotes around on USB sticks
-- **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
+- **Kompatibel** mit der [Notes](https://apps.nextcloud.com/apps/notes)-App von **Nextcloud / ownCloud** und **Mobile** und Nextcloud Text
+- Erstellen Sie **[Nextcloud Deck](https://apps.nextcloud.com/apps/deck) Karten** und verlinken Sie sie in Ihren Notizen
+- Unterstützt das **Teilen von Notizen** auf Ihrem **ownCloud** / **Nextcloud** Server
+- Verwalten Sie Ihre Nextcloud / ownCloud **To-do-Listen** (**Nextcloud tasks** oder **Tasks Plus** / **Calendar Plus**) oder verwenden Sie einen anderen **CalDAV**, um Ihre Aufgaben darauf zu synchronisieren
+- Ältere **Versionen** Ihrer Notizen können von Ihrem **Nextcloud / ownCloud**-Server **wiederhergestellt** werden
+- **Gelöschte Notizen** können von Ihrem **Nextcloud / ownCloud**-Server **wiederhergestellt** werden
+- **Externe Änderungen** von Notizdateien werden **überwacht** (Notizen oder Notizliste werden neu geladen)
+- Unterstützung für **hierarchische Notizschlagwörter** und **Notiz-Unterordner**
+- Optionale **Verschlüsselung** von Notizen; AES-256 ist integriert, oder Sie benutzen benutzerdefinierte Verschlüsselungsmethoden wie **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) oder **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
+- Der **Notizenordner** kann **frei gewählt** werden (mehrere Notizenordner können verwendet werden)
+- **Das Suchen von Wortstücken** in Notizen ist möglich und Suchergebnisse werden in den Notizen hervorgehoben
+- [**Browsererweiterung**](browser-extension.md) um **Notizen aus ausgewähltem text hinzuzufügen**, **Screenshots zu erstellen** oder **um Ihre Lesezeichen zu verwalten**
+- [**Rechtschreibprüfung**](../editor/spellchecking.md) wird unterstützt
+- **Portabler Modus** um QOwnNotes auf USB-Sticks mitzunehmen
+- **Skriptunterstützung** und ein online [**Skriptverzeichnis**](https://github.com/qownnotes/scripts), wo Sie Skripte in der App installieren können
 - **Vim-Modus**
-- **[Web application](web-app.md)** to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
+- **[Web-App](web-app.md)** um **Fotos von Ihrem mobilen Telefon** in Notizen auf QOwnNote auf Ihrem Desktop einzufügen
 
 
 ## Aussehen
 - **Markdown-Hervorhebung** von Notizen und ein **Markdown-Vorschaumodus**
 - **Unterstützung für Schemata im Dunkelmodus**
-- **Theming support** for the **Markdown syntax highlighting**
-- Alle **Panels können platziert werden, wo immer Sie möchten**, sie können sogar **schweben** oder **gestapelt werden** (vollständig andockbar).
+- **Schemata-Unterstützung** für die Hervorhebung von **Markdown-Syntax**
+- Alle **Schaltflächen können platziert werden, wo immer Sie möchten**, sie können sogar **schweben** oder **gestapelt werden** (vollständig dockbar)
 - Unterstützung für **Freedesktop-Schemasymbole**. Sie können QOwnNotes mit Ihren **originalen Desktop-Symbolen** und mit Ihrem bevorzugten **dunklen Desktop-Design** verwenden
 - **Ablenkungsfreier Modus**, **Vollbildmodus** und **Schreibmaschinenmodus**
 - **Zeilennummern**

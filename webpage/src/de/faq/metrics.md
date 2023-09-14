@@ -2,11 +2,11 @@
 
 ## Warum sind Metriken nützlich?
 
-QOwnNotes (wie auch die Anwendung selbst) wird **von einer und manchmal auch von zwei Personen in ihrer Freizeit entwickelt**.
+QOwnNotes (im Sinne der Anwendung selbst) wird **von einer und manchmal auch von zwei Personen in ihrer Freizeit entwickelt**.
 
-Releases werden für viele Plattformen und Distributionen erstellt (oft sehr alte Versionen davon). Sie aufrechtzuerhalten ist viel Arbeit.
+Releases werden für viele (häufig sehr alte Versionen von) Plattformen und Distributionen erstellt. Sie aufrechtzuerhalten ist viel Arbeit.
 
-Die Metriken sind die einzige zuverlässige Informationsquelle darüber, auf welchen Versionen von Plattformen und Distributionen QOwnNotes ausgeführt wird. Sie zeigen auch, welche Features am beliebtesten sind, sodass Entscheidungen getroffen werden können, welche Versionen ausgemustert werden, welche Features mehr Arbeit benötigen und welche kaum genutzt werden.
+Die Metriken sind die einzige zuverlässige Informationsquelle darüber, auf welchen Versionen von Plattformen und Distributionen QOwnNotes ausgeführt wird. Sie zeigen auch, welche Features am beliebtesten sind, sodass Entscheidungen darüber getroffen werden können, welche Versionen ausgemustert werden, welche Features mehr Arbeit benötigen und welche kaum genutzt werden.
 
 Gleiches gilt für die Auswahl der bevorzugten Sprachen durch den Benutzer, die die Verbesserung der entsprechenden Übersetzungen fördert.
 
@@ -16,13 +16,13 @@ Die Metriken werden an einen selbst gehosteten [Matomo](https://matomo.org/)-Ser
 
 ## Wie werden Metriken erfasst?
 
-Metriken werden nach Erhalt auf dem Matomo-Server **anonymisiert** (z. B. IP-Adresse entfernt).
+Metriken werden nach Erhalt auf dem Matomo-Server **anonymisiert** (z.B. werden IP-Adressen entfernt).
 
-Es werden keine persönlichen Informationen, wie von Ihnen eingegebene Texte oder Notiznamen gesammelt oder auf dem Server gespeichert!
+Es werden keine persönlichen Informationen, wie von Ihnen eingegebene Texte oder Notiznamen, gesammelt oder auf dem Server gespeichert!
 
 ## Was wird gesammelt?
 
-Dabei werden einige grundlegende Informationen wie Bildschirmauflösung, Betriebssystem und Version von QOwnNotes übertragen.
+Einige grundlegende Informationen wie Bildschirmauflösung, Betriebssystem und QOwnNotes-Version werden übertragen.
 
 Darüber hinaus werden beispielsweise Ereignisse an den Server gesendet, wenn Aktionen in den Anwendungen verwendet werden.
 

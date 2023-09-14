@@ -102,7 +102,7 @@ class TagApi {
 
 ### Ejemplo
 ```js
-// Don't forget to use "import QOwnNotesTypes 1.0" at the top of your script!
+// ¡No te olvides de usar “import QOwnNotesTypes 1.0” en la parte superior de tu script!
 
 // Fetch tag "home"
 var tag = script.getTagByNameBreadcrumbList(["home"]);
@@ -116,9 +116,9 @@ for (var idx in notes) {
 }
 ```
 
-You'll find more examples where TagApi is used in [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
+Puedes encontrar mas ejemplos donde se usa TagApi en [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
 
-MainWindow
+Ventana Principal
 ----------
 
 ### Propiedades y métodos
@@ -155,29 +155,29 @@ class MainWindow {
 
 ### Ejemplo
 ```js
-// Force a reload of the note list
+// Forzar una recarga de la lista de notas
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creates a new note subfolder "My fancy folder" in the current subfolder
+// Crea una nueva subcarpeta de notas "My fancy folder" en la sub carpeta actual
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Inserts html in the current note as markdown
+// Inserta html en la nota actual como markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
 // Set 'Edit' workspace as current workspace
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 
-// Jump to the tag "test" in the tag tree
-// There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
+// Salta a la etiqueta "test" en el árbol de etiquetas
+// Hay un ejemplo en 
+https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 
-// Get all notes that are opened in tabs
+// Obtener todas las notas de las pestañs que están abiertas 
 var noteIds = mainWindow.getNoteTabNoteIdList();
 noteIds.forEach(function (noteId){
     var note = script.fetchNoteById(noteId);
-
-    // do something with the note
+    // Haz algo con la nota
 });
 
 ```
