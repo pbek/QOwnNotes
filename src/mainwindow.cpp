@@ -2046,7 +2046,7 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
         return NoteDiffDialog::Reload;
     }
 
-    const QString text1 = this->ui->noteTextEdit->toPlainText();
+    const QString text1 = this->ui->noteTextEdit->document()->toRawText();
 
     changedNote.updateNoteTextFromDisk();
     const QString text2 = changedNote.getNoteText();
@@ -2764,7 +2764,7 @@ void MainWindow::notesWereModified(const QString &str) {
             }
 
             // fetch current text
-            const QString noteTextEditText = this->ui->noteTextEdit->toPlainText();
+            const QString noteTextEditText = this->ui->noteTextEdit->document()->toRawText();
 
             // skip dialog if text of note file on disk text from note text
             // edit are equal or similar
@@ -2799,7 +2799,7 @@ void MainWindow::notesWereModified(const QString &str) {
 
                     // the note text has to be stored newly because the
                     // external change is already in the note table entry
-                    currentNote.storeNewText(ui->noteTextEdit->toPlainText());
+                    currentNote.storeNewText(ui->noteTextEdit->document()->toRawText());
                     currentNote.storeNoteTextFileToDisk();
                 } break;
 
@@ -2832,7 +2832,7 @@ void MainWindow::notesWereModified(const QString &str) {
                 const QSignalBlocker blocker(this->noteDirectoryWatcher);
                 Q_UNUSED(blocker)
 
-                QString text = this->ui->noteTextEdit->toPlainText();
+                QString text = this->ui->noteTextEdit->document()->toRawText();
                 note.storeNewText(std::move(text));
 
                 // store note to disk again
@@ -5397,7 +5397,7 @@ void MainWindow::noteTextEditTextWasUpdated() {
     // we are transforming line feeds, because in some instances Windows
     // managed to sneak some "special" line feeds in
     const QString noteTextFromDisk = Utils::Misc::transformLineFeeds(note.getNoteText());
-    QString text = Utils::Misc::transformLineFeeds(ui->noteTextEdit->toPlainText());
+    QString text = Utils::Misc::transformLineFeeds(ui->noteTextEdit->document()->toRawText());
 
     // store the note to the database if the note text differs from the one
     // on the disk or the note was already modified but not stored to disk
@@ -6676,7 +6676,7 @@ void MainWindow::on_encryptedNoteTextEdit_textChanged() {
     // this also triggers when formatting is applied / syntax highlighting
     // changes!
     //    if
-    //    (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText()))
+    //    (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->document()->toRawText()))
     //    {
     //        handleNoteTextChanged();
     //    }
@@ -11443,7 +11443,7 @@ void MainWindow::on_encryptedNoteTextEdit_modificationChanged(bool arg1) {
 
     ui->encryptedNoteTextEdit->document()->setModified(false);
 
-    if (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText())) {
+    if (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->document()->toRawText())) {
         handleNoteTextChanged();
     }
 }
