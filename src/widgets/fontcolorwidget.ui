@@ -133,7 +133,11 @@
        </widget>
       </item>
       <item row="0" column="0">
-       <widget class="QComboBox" name="colorSchemeComboBox"/>
+       <widget class="QComboBox" name="colorSchemeComboBox">
+        <property name="maxVisibleItems">
+         <number>15</number>
+        </property>
+       </widget>
       </item>
       <item row="0" column="4">
        <widget class="QPushButton" name="importSchemeButton">

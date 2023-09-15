@@ -3,6 +3,8 @@
 ## 23.9.4
 - the font size in the preview will now change immediately when the font size in
   the note text edit is reset (for [#2836](https://github.com/pbek/QOwnNotes/issues/2836))
+- amount of items in the schema drop-down in the *Editor fonts & colors* settings
+  was increased to 15 to make it easier to see the schemes (for [#2841](https://github.com/pbek/QOwnNotes/issues/2841))
 
 ## 23.9.3
 - in the *Editor fonts & colors* settings the default color schemes are now ordered
