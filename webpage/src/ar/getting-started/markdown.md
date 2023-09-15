@@ -90,7 +90,7 @@ _مسطر_
 
 ## الروابط
 
-Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+Two of the simpler uses for links are pointing to webpages or other notes. There are multiple ways each of these links can look.
 
 ### External links
 
@@ -156,7 +156,7 @@ Inline `code` has `backticks around` it.
 يمكنك استخدام [الاختصار](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> على نص محدد، أو مجرد داخل نص، لجعله كود مضمّن.
 :::
 
-كتل الأكواد إما أن تكون مُسوّرة بسطرين كلٍ منهما به ثلاث فاصلات عُليا مائلة، وإما أن تكون سطورها مبدوءة بأربع مسافات.
+Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
 
 ### 4-Spaces fence
 

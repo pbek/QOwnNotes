@@ -90,7 +90,7 @@ Jeśli naciśniesz <kbd>Enter</kbd> na końcu listy, zostanie utworzony nowy ele
 
 ## Łączy
 
-Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+Two of the simpler uses for links are pointing to webpages or other notes. There are multiple ways each of these links can look.
 
 ### External links
 
@@ -156,7 +156,7 @@ Inline `code` has `backticks around` it.
 Możesz użyć [skrótu](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> na zaznaczonym tekście wbudowanym lub bezpośrednio w tekście, aby utworzyć wbudowany blok kodu.
 :::
 
-Bloki kodu są albo odgrodzone liniami z trzema znacznikami wstecznymi, albo wcięte czterema spacjami.
+Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
 
 ### 4-Spaces fence
 

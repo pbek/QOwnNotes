@@ -90,7 +90,7 @@ Ha megnyomja az <kbd>Enter</kbd> gombot a lista végén, akkor egy új listaelem
 
 ## Linkek
 
-Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+Two of the simpler uses for links are pointing to webpages or other notes. There are multiple ways each of these links can look.
 
 ### External links
 
@@ -156,7 +156,7 @@ Inline `code` has `backticks around` it.
 Használhatja a [parancsikont](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> a kiválasztott szöveges szövegen vagy közvetlenül a szöveg belsejében, hogy létrehozzon egy inline kódblokkot.
 :::
 
-A kódblokkok vagy három hátsó pipával ellátott vonalakkal vannak elhatárolva, vagy négy szóközzel vannak behúzva.
+Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
 
 ### 4-Spaces fence
 

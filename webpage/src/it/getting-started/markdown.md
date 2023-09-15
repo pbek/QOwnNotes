@@ -90,7 +90,7 @@ Se si preme <kbd>Invio</kbd> alla fine di un elenco verrà creato un nuovo eleme
 
 ## Collegamenti
 
-Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+Two of the simpler uses for links are pointing to webpages or other notes. There are multiple ways each of these links can look.
 
 ### External links
 
@@ -156,7 +156,7 @@ Inline `code` has `backticks around` it.
 Puoi utilizzare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Maiusc + C</kbd> sul testo in linea selezionato o solo all'interno del testo per creare un blocco di codice in linea.
 :::
 
-I blocchi di codice sono delimitati da linee con tre apici inversi o sono rientrati con quattro spazi.
+Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
 
 ### 4-Spaces fence
 

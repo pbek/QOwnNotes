@@ -90,7 +90,7 @@ _خط زیرین_
 
 ## پیوندها
 
-Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+Two of the simpler uses for links are pointing to webpages or other notes. There are multiple ways each of these links can look.
 
 ### External links
 
@@ -156,7 +156,7 @@ Inline `code` has `backticks around` it.
 می توانید برای ایجاد یک کد بلاک توکار از [میانبر](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> در متن توکار منتخب یا درست در داخل متن استفاده کنید.
 :::
 
-بلوک های کد یا با خطوط دارای سه بک تیک محصور شده یا با چهار فاصله دچار فرورفتگی می شوند.
+Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
 
 ### 4-Spaces fence
 

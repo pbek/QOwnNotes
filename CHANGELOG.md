@@ -8,6 +8,7 @@
 - in the *Note main menu* the menu item to `Setup note folders` was renamed to
   `Setup note folders / subfolders` in an attempt to make note subfolders more accessible
   (for [#2843](https://github.com/pbek/QOwnNotes/issues/2843))
+- added more German, Dutch, Korean translation (thank you bumpsy, stephanp, venusgirl)
 
 ## 23.9.3
 - in the *Editor fonts & colors* settings the default color schemes are now ordered

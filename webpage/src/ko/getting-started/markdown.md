@@ -81,7 +81,7 @@ _밑줄_
 </h2>
 
 <p spaces-before="0">
-  Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+  Two of the simpler uses for links are pointing to webpages or other notes. There are multiple ways each of these links can look.
 </p>
 
 <h3 spaces-before="0">
@@ -164,7 +164,7 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </p>
 
 <p spaces-before="0">
-  코드 블록은 세 개의 백 틱이 있는 선으로 울타리를 두르거나 네 개의 공백으로 들여씁니다.
+  Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
 </p>
 
 <h3 spaces-before="0">

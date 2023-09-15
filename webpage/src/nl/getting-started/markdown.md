@@ -36,25 +36,25 @@ Standaard creëert QOwnNotes de **bestandsnaam van een notitie** uit de **kop 1*
 ## Nadruk
 
 ```markdown
-Nadruk, ook bekend als cursief, met *asterisken*.
+Nadruk, ook bekend als cursief, met *asterisks*.
 
-Sterke nadruk, ook bekend als vetgedrukt, met **sterretjes**.
+Sterke nadruk, ook bekend als vetgedrukt, met **asterisks**.
 ```
 
 ::: tip
-U kunt de [shortcut](./shortcuts.md) <kbd>Ctrl + B</kbd> gebruiken om tekst vetgedrukt te maken en <kbd>Ctrl + I</kbd> om deze cursief te maken.
+U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + B</kbd> gebruiken om tekst vetgedrukt te maken en <kbd>Ctrl + I</kbd> om deze cursief te maken.
 :::
 
 ## Onderstrepen
 
-Er is ook een optionele instelling om onderstrepen te renderen in de *Preview settings*.
+Er is ook een optionele instelling om onderstreping we te geven in de *Voorbeeldweergave instellingen*.
 
 ```markdown
 _underline_
 ```
 
 ::: tip
-U kunt de [ shortcut](./shortcuts.md) <kbd>Ctrl + U</kbd> gebruiken om een tekst te onderstrepen.
+U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + U</kbd> gebruiken om een tekst te onderstrepen.
 :::
 
 ## Doorhalen
@@ -64,7 +64,7 @@ U kunt de [ shortcut](./shortcuts.md) <kbd>Ctrl + U</kbd> gebruiken om een tekst
 ```
 
 ::: tip
-U kunt de [shortcut](./shortcuts.md) <kbd>Alt + Shift + S</kbd> gebruiken om een tekst door te halen.
+U kunt de [sneltoets](./shortcuts.md) <kbd>Alt + Shift + S</kbd> gebruiken om een tekst door te halen.
 :::
 
 ## Lijsten
@@ -72,14 +72,14 @@ U kunt de [shortcut](./shortcuts.md) <kbd>Alt + Shift + S</kbd> gebruiken om een
 Er zijn veel manieren om lijsten te maken.
 
 ```markdown
-1. Eerste bestelde lijstitem
+1. Eerste geordende lijstitem
 2. Een ander item
    * Ongeordende sublijst.
 1. Werkelijke cijfers doen er niet toe, alleen dat het een nummer is
-   1. Geordende sublijst (werkt alleen in de editor, niet in de preview)
+   1. Geordende sublijst (werkt alleen in de editor, niet in de voorbeeldweergave)
 4. En nog een item.
 
-* Ongeordende lijst kan asterisken gebruiken
+* Ongeordende lijst kan asterisks gebruiken
 - Of minnen
 + Of plussen
 ```
@@ -88,11 +88,11 @@ Er zijn veel manieren om lijsten te maken.
 Als u aan het einde van een lijst op <kbd>Enter</kbd> drukt, wordt een nieuw lijstitem aangemaakt.
 :::
 
-## Links
+## Koppelingen
 
-Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+Twee van de eenvoudigere toepassingen voor koppelingen zijn het verwijzen naar webpagina's of andere notities. Er zijn meerdere manieren waarop elk van deze koppelingen eruit kan zien.
 
-### External links
+### Externe koppelingen
 
 ```markdown
 [I'm an inline-style link](https://www.google.com)
@@ -101,18 +101,18 @@ Two of the simpler uses links can be put to is in pointing to webpages and other
 
 [You can use numbers for reference-style link definitions][1]
 
-Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
+Gewone URL's en URL's tussen hoekhaken worden automatisch omgezet tot koppelingen in de voorbeeldweergave. 
 http://www.example.com or <http://www.example.com>
 
 [1]: https://www.qownnotes.org
 ```
 
-### Internal links
+### Interne koppelingen
 
 ```markdown
 [I link to the Journal.md note](Journal.md)
 
-<Journal.md> works similarly.
+<Journal.md> werkt op dezelfde wijze.
 ```
 
 ::: tip
@@ -120,12 +120,12 @@ U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + L</kbd> gebruiken om **links n
 
 Als u <kbd>Ctrl + Shift + X</kbd> gebruikt, wordt een dialoogvenster geopend waarmee u **bijlagen** in uw notitie kunt invoegen.
 
-U kunt op <kbd>Ctrl + spatiebalk</kbd> drukken terwijl de cursor op een link in de notitiebewerking staat om de link te volgen.
+U kunt op <kbd>Ctrl + spatiebalk</kbd> drukken terwijl de cursor op een koppeling in de notitiebewerking staat om deze te volgen.
 :::
 
-### Bookmarks
+### Bladwijzers
 
-De bladwijzers die worden gebruikt door de [QOwnNotes Web Companion-browserextensie](./browser-extension.md) gebruiken links in lijsten.
+De bladwijzers die worden gebruikt door de [QOwnNotes Web Companion-browserextensie](./browser-extension.md) gebruiken koppelingen in lijsten.
 
 ```markdown
 - [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
@@ -156,7 +156,7 @@ Inline `code` has `backticks around` it.
 U kunt de [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> op geselecteerde inline-tekst of gewoon binnen tekst gebruiken om een inline-codeblok te maken.
 :::
 
-Codeblokken zijn ofwel omheind door regels met drie achterste vinkjes, of zijn ingesprongen met vier spaties.
+Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
 
 ### 4-Spaces fence
 

@@ -10,7 +10,7 @@ Sie können Fotos von Ihrem Mobiltelefon über die **Webanwendung** auf [app.qow
 
 Die Webanwendung auf Ihrem Telefon kommuniziert über das Internet mit Ihrer QOwnNotes-Desktopanwendung. Die Kommunikation zwischen QOwnNotes und dem Webdienst ist **transportverschlüsselt**. Es werden keine Bilder auf dem Server gespeichert.
 
-There is a settings page **Web application** to add support for the web application.
+Es gibt die Einstellungsseite **Webanwendung**, um Unterstützung für die Webanwendung hinzuzufügen.
 
 ![QOwnNotes Webanwendungseinstellungen](/img/blog/web-application-settings.png "Richten Sie die Kommunikation zur Webanwendung ein")
 

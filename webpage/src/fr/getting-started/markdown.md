@@ -90,7 +90,7 @@ Si vous appuyez sur <kbd>Entrée</kbd> à la fin d'une liste, un nouvel élémen
 
 ## Liens
 
-Two of the simpler uses links can be put to is in pointing to webpages and other notes. There are multiple ways each of these can be done.
+Two of the simpler uses for links are pointing to webpages or other notes. There are multiple ways each of these links can look.
 
 ### External links
 
@@ -156,7 +156,7 @@ Inline `code` has `backticks around` it.
 Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd>Ctrl + Maj + C</kbd> sur texte en ligne sélectionné ou juste à l'intérieur du texte pour créer un bloc de code en ligne.
 :::
 
-Les blocs de code sont délimités par des lignes avec trois contre-graduations ou sont indentés avec quatre espaces.
+Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
 
 ### 4-Spaces fence
 
