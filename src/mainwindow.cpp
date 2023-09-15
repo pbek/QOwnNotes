@@ -7247,6 +7247,9 @@ void MainWindow::on_action_Reset_note_text_size_triggered() {
                             "the font size is reset by 'Reset note text size'")
                              .arg(fontSize),
                          3000);
+
+    // Allow to update the preview if the zoom level of the note text edits change
+    forceRegenerateNotePreview();
 }
 
 /**
