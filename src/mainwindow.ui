@@ -1311,7 +1311,10 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/folder-sync.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder-sync.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Setup note folders</string>
+    <string>&amp;Setup note folders / subfolders</string>
+   </property>
+   <property name="toolTip">
+    <string>Setup note folders / subfolders</string>
    </property>
   </action>
   <action name="action_Find_note">
