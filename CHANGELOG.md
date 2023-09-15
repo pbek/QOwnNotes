@@ -5,7 +5,7 @@
   the note text edit is reset (for [#2836](https://github.com/pbek/QOwnNotes/issues/2836))
 - amount of items in the schema drop-down in the *Editor fonts & colors* settings
   was increased to 15 to make it easier to see the schemes (for [#2841](https://github.com/pbek/QOwnNotes/issues/2841))
-- In the *Note main menu* the menu item to `Setup note folders` was renamed to
+- in the *Note main menu* the menu item to `Setup note folders` was renamed to
   `Setup note folders / subfolders` in an attempt to make note subfolders more accessible
   (for [#2843](https://github.com/pbek/QOwnNotes/issues/2843))
 
