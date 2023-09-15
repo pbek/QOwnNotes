@@ -149,7 +149,7 @@ Puoi anche incollare direttamente un'immagine dagli appunti nella tua nota con <
 ## Codice in linea e blocchi di codice
 
 ```markdown
-Inline `code` has `back-ticks around` it.
+Inline `code` has `backticks around` it.
 ```
 
 ::: tip

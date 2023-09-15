@@ -122,12 +122,12 @@ http://www.example.com or <http://www.example.com>
 ## Inline code and code blocks
 
 ```markdown
-Inline `code` has `back-ticks around` it.
+Inline `code` has `backticks around` it.
 ```
 
-Inline `code` has `back-ticks around` it.
+Inline `code` has `backticks around` it.
 
-Blocks of code are either fenced by lines with three back-ticks, or are indented with four spaces.
+Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
 
 ### 4-Spaces fence
 

@@ -149,7 +149,7 @@ Możesz także wkleić obraz ze schowka bezpośrednio do notatki za pomocą <kbd
 ## Kod wbudowany i bloki kodu
 
 ```markdown
-Inline `code` has `back-ticks around` it.
+Inline `code` has `backticks around` it.
 ```
 
 ::: tip

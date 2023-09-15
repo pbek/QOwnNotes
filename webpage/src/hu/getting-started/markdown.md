@@ -149,7 +149,7 @@ A vágólapról közvetlenül beilleszthet egy képet a jegyzetébe a <kbd>Ctrl 
 ## Beépített kód és kódblokkok
 
 ```markdown
-Inline `code` has `back-ticks around` it.
+Inline `code` has `backticks around` it.
 ```
 
 ::: tip

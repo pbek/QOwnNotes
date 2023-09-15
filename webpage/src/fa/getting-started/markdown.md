@@ -149,7 +149,7 @@ http://www.example.com or <http://www.example.com>
 ## کد توکار و کد بلاک ها
 
 ```markdown
-Inline `code` has `back-ticks around` it.
+Inline `code` has `backticks around` it.
 ```
 
 ::: tip

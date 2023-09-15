@@ -149,7 +149,7 @@ U kunt ook rechtstreeks een afbeelding van het klembord in uw notitie plakken me
 ## Inline code en codeblokken
 
 ```markdown
-Inline `code` has `back-ticks around` it.
+Inline `code` has `backticks around` it.
 ```
 
 ::: tip

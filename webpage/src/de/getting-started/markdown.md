@@ -149,13 +149,13 @@ Sie können ein Bild auch direkt aus der Zwischenablage mit <kbd>Strg + Umschalt
 ## Inline-Code und Code-Blöcke
 
 ```markdown
-Inline `code` has `back-ticks around` it.
+Inline `code` has `backticks around` it.
 ```
 
 Sie können die [Verknüpfung](./shortcuts.md) <kbd>Strg + Umschalt + C</kbd> für ausgewählten Inline-Text oder nur innerhalb von Text verwenden, um einen Inline-Codeblock zu erstellen.
 :::
 
-Codeblöcke werden entweder durch Zeilen mit drei Back-Ticks eingezäunt oder mit vier Leerzeichen eingerückt.
+Codeblöcke werden entweder durch Zeilen mit drei backticks eingezäunt oder mit vier Leerzeichen eingerückt.
 
 ### 4-Spaces fence
 

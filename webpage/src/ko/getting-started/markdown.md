@@ -156,7 +156,7 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
   인라인 코드 및 코드 블록
 </h2>
 
-<pre><code class="markdown">Inline `code` has `back-ticks around` it.
+<pre><code class="markdown">Inline `code` has `backticks around` it.
 </code></pre>
 
 <p spaces-before="0">

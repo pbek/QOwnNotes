@@ -149,7 +149,7 @@ Vous pouvez également coller directement une image du presse-papiers dans votre
 ## Code en ligne et blocs de code
 
 ```markdown
-Inline `code` has `back-ticks around` it.
+Inline `code` has `backticks around` it.
 ```
 
 ::: tip

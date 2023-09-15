@@ -155,7 +155,7 @@ You can also directly paste an image from the clipboard into your note with <kbd
 ## Inline code and code blocks
 
 ```markdown
-Inline `code` has `back-ticks around` it.
+Inline `code` has `backticks around` it.
 ```
 
 ::: tip
@@ -163,7 +163,7 @@ You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
 selected inline text or just inside of text to create an inline code block. 
 :::
 
-Blocks of code are either fenced by lines with three back-ticks, or are indented with four spaces.
+Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
 
 ### 4-Spaces fence
 

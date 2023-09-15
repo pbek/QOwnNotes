@@ -149,14 +149,14 @@ También puede pegar directamente una imagen del portapapeles en su nota con <kb
 ## Código en línea y bloques de código
 
 ```markdown
-Inline `code` has `back-ticks around` it.
+Inline `code` has `backticks around` it.
 ```
 
 ::: tip
 Puede usar el [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> en texto en línea seleccionado o solo dentro del texto para crear un bloque de código en línea.
 :::
 
-Blocks of code are either fenced by lines with three back-ticks, or are indented with four spaces.
+Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
 
 ### 4-Spaces fence
 

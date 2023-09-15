@@ -149,7 +149,7 @@ http://www.example.com أو <http://www.example.com>
 ## الأكواد المضمّنة وكتل الأكواد
 
 ```markdown
-Inline `code` has `back-ticks around` it.
+Inline `code` has `backticks around` it.
 ```
 
 ::: tip
