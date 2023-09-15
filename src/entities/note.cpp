@@ -1562,21 +1562,25 @@ bool Note::handleNoteTextFileName() {
         static const QRegularExpression re(
             QStringLiteral(
                 R"(^---((\r\n)|(\n\r)|\r|\n).+?((\r\n)|(\n\r)|\r|\n)---((\r\n)|(\n\r)|\r|\n))"),
-            QRegularExpression::DotMatchesEverythingOption);
+            QRegularExpression::DotMatchesEverythingOption | QRegularExpression::UseUnicodePropertiesOption);
         noteText.remove(re);
     }
 
     // remove html comment from start of markdown text
     if (noteText.startsWith(QLatin1String("<!--"))) {
         static const QRegularExpression re(QStringLiteral(R"(^<!--.+?-->((\r\n)|(\n\r)|\r|\n))"),
-                                           QRegularExpression::DotMatchesEverythingOption);
+                                           QRegularExpression::DotMatchesEverythingOption | QRegularExpression::UseUnicodePropertiesOption);
         noteText.remove(re);
     }
 
     // split the text into a string list
-    static const QRegularExpression re(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)"));
+    static const QRegularExpression re(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)"), QRegularExpression::UseUnicodePropertiesOption);
     const QStringList noteTextLines = noteText.trimmed().split(re);
     const int noteTextLinesCount = noteTextLines.count();
+
+    qDebug() << __func__ << " - 'noteTextLinesCount': " << noteTextLinesCount;
+
+    qDebug() << __func__ << " - 'noteTextLines': " << noteTextLines;
 
     // do nothing if there is no text
     if (noteTextLinesCount == 0) {
