@@ -8,7 +8,7 @@
 
 EAPI=7
 
-inherit qmake-utils desktop
+inherit qmake-utils desktop xdg-utils
 
 DESCRIPTION="A plain-text file markdown note taking with Nextcloud/ownCloud integration"
 HOMEPAGE="https://www.qownnotes.org/"
@@ -64,4 +64,12 @@ src_install() {
 	doicon -s 96 "images/icons/96x96/apps/QOwnNotes.png"
 	doicon -s scalable "images/icons/scalable/apps/QOwnNotes.svg"
 	doins PBE.QOwnNotes.desktop
+}
+
+pkg_postinst() {
+	xdg_icon_cache_update
+}
+
+pkg_postrm() {
+	xdg_icon_cache_update
 }
