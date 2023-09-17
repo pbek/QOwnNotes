@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.9.5
+- the Gentoo build process was improved (for [#2821](https://github.com/pbek/QOwnNotes/issues/2821),
+  thank you, @FireUnderTheMountain)
+
 ## 23.9.4
 - the font size in the preview will now change immediately when the font size in
   the note text edit is reset (for [#2836](https://github.com/pbek/QOwnNotes/issues/2836))
@@ -25,7 +29,7 @@
 ## 23.9.1
 - URLs with their title are not loaded anymore, if the note-link shortcut was used
   with the link-dialog (for [#2833](https://github.com/pbek/QOwnNotes/issues/2833))
-- the Gentoo process should run again (for [#2821](https://github.com/pbek/QOwnNotes/issues/2821))
+- the Gentoo build process should run again (for [#2821](https://github.com/pbek/QOwnNotes/issues/2821))
 - added more Slovenian, Ukrainian, Turkish translation (thank you salamelek, eugeneuvin, rgucluer)
 
 ## 23.9.0
