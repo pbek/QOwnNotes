@@ -25,7 +25,7 @@ jobs:
       # copy screenshots and changelog to webpage folder
     - run: cp ../screenshots src/.vuepress/public -R; cp ../CHANGELOG.md src/changelog.md
     - name: Set up QEMU
-      uses: docker/setup-qemu-action@v2
+      uses: docker/setup-qemu-action@v3
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
     - name: Login to DockerHub
