@@ -958,7 +958,7 @@ bool ScriptingService::callHandleNoteDoubleClickedHook(Note *note) {
  * @param pageTitle the page title of the webpage where the request was made
  * @param rawData the data that was transmitted, html for requestType "page" or plain text for
  * requestType "selection"
- * @param screenshotDataUrl the data url of the screenshot if the webpage where the request was made
+ * @param screenshotDataUrl the data url of the screenshot of the webpage where the request was made
  * @return true if data was handled by a hook
  */
 bool ScriptingService::callHandleWebsocketRawDataHook(const QString &requestType,
