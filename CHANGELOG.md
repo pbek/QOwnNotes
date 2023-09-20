@@ -1,14 +1,14 @@
 # QOwnNotes Changelog
 
-## Next
+## 23.9.5
+- links from the clipboard are now trimmed in the link dialog
+  (for [#2726](https://github.com/pbek/QOwnNotes/issues/2726))
+- the Gentoo build process was improved (for [#2821](https://github.com/pbek/QOwnNotes/issues/2821),
+  thank you, @FireUnderTheMountain)
 - [qc](https://github.com/qownnotes/qc) v0.5.1 was released
   - the last selected command is now only stored when there actually was a
     command selected and the dialog wasn't quit without selecting a command
     (for [#9](https://github.com/qownnotes/qc/issues/9))
-
-## 23.9.5
-- the Gentoo build process was improved (for [#2821](https://github.com/pbek/QOwnNotes/issues/2821),
-  thank you, @FireUnderTheMountain)
 
 ## 23.9.4
 - the font size in the preview will now change immediately when the font size in
