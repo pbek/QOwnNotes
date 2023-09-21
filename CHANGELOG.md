@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 23.9.5
+- an issue with importing the content of notes from Evernote with the `evernote-export4`
+  format was fixed (for [#2856](https://github.com/pbek/QOwnNotes/issues/2856))
 - links from the clipboard are now trimmed in the link dialog
   (for [#2726](https://github.com/pbek/QOwnNotes/issues/2726))
 - the Gentoo build process was improved (for [#2821](https://github.com/pbek/QOwnNotes/issues/2821),

@@ -139,7 +139,16 @@ Note EvernoteImportDialog::parseNote(QXmlStreamReader &xml, bool importMetaData)
                 xml.readNext();
                 content = xml.text().toString().trimmed();
 
-                // We don't need that with QXMLStreamReader any more!
+                // Evernote now seems to place whitespaces in front of CDATA for the content,
+                // those whitespaces are then used as content by QXmlStreamReader
+                // We try to get around that by reading the next token of the XML
+                // See: https://github.com/pbek/QOwnNotes/issues/2856
+                if (content.isEmpty() && !xml.isCDATA()) {
+                    xml.readNext();
+                    content = xml.text().toString().trimmed();
+                }
+
+                // We don't need that with QXMLStreamReader anymore!
 //                Utils::Misc::unescapeEvernoteImportText(content);
 
                 qDebug() << __func__ << " - 'content': " << content;
