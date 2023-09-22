@@ -1,6 +1,6 @@
-# Installieren Sie unter Ubuntu Linux, Elementary OS und Linux Mint
+# Installieren unter Ubuntu Linux, Elementary OS und Linux Mint
 
-## Ubuntu Linux 18.04 oder neuer, elementares Betriebssystem, Linux Mint 18 oder neuer
+## Ubuntu Linux 18.04 oder neuer, elementary OS, Linux Mint 18 oder neuer
 
 Installieren Sie **QOwnNotes** unter **Ubuntu Linux** (mindestens 18.04) mithilfe des PPA-Repositorys.
 
@@ -18,49 +18,49 @@ sudo apt-get install qownnotes
 
 ## QOwnNotes Qt6 Preview
 
-If you already want to try the Qt6 packages and are on Ubuntu 22.04 or newer you can use this repository:
+Falls Sie schon die Qt6-Pakete ausprobieren möchten, und Ubuntu 22.04 oder neuer benutzen, können Sie dieses Repository verwenden:
 
 ```bash
-# Remove Qt5 PPA in case you had it installed
+# Entfernt Qt5 PPA, falls Sie das installiert hatten
 sudo add-apt-repository --remove ppa:pbek/qownnotes
 
-# Add Qt6 PPA
+# Fügt Qt6 PPA hinzu
 sudo add-apt-repository ppa:pbek/qownnotes-qt6
 
-# Install QOwnNotes
+# Installiert QOwnNotes
 sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
 [Direkter Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
-If you find any issues please report them on [QOwnNotes Issues on GitHub](https://github.com/pbek/QOwnNotes/issues)!
+Falls Ihnen irgendwelche Probleme auffallen, melden Sie sie bitte unter [QOwnNotes Issues auf GitHub](https://github.com/pbek/QOwnNotes/issues)!
 
-## Older Ubuntu Linux distributions and derivatives
+## Ältere Ubuntu Linux-Distributionen und -Derivate
 
-Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).
+Am Besten probieren Sie das AppImage von [QOwnNotes Versionen auf GitHub](https://github.com/pbek/QOwnNotes/releases).
 
-Then you can change the execute-permissions on the file:
+Dann können Sie die Ausführungsberechtigungen für die Datei ändern:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Afterward you should be able to execute the AppImage to run QOwnNotes.
+Danach sollten Sie das AppImage ausführen können, um QOwnNotes zu starten.
 
 ## OBS-Repository
 
-You may also be able to use the QOwnNotes on Ubuntu versions that aren't any more updated on Ubuntu Launchpad then you can use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
+Eventuell können Sie QOwnNotes auch auf Ubuntu-Versionen nutzen, die nicht mehr auf dem Ubuntu Launchpad aktualisiert werden. Dann können Sie Repositories des [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) verwenden.
 
-Below are example calls for the xUbuntu 16.10 repository.
+Unten sind Beispiel-Calls für das xUbuntu 16.10 Repository.
 
-Run the following shell command to trust the repository.
+Führen Sie die folgenden Befehle aus, um dem Repository zu vertrauen.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
 ```
 
-Run the following shell commands to add the repository and install QOwnNotes from there.
+Führen Sie die folgenden Shell-Befehle aus, um das Repository hinzuzufügen und von dort aus QOwnNotes zu installieren.
 
 ```bash
 sudo su -
@@ -69,4 +69,4 @@ apt-get update
 apt-get install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)
+[Direkter Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)

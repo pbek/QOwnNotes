@@ -395,7 +395,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="75"/>
 <source>Gurani</source>
-<translation type="unfinished">Gurani</translation>
+<translation>Гуарански</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
@@ -460,7 +460,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
 <source>Latgalian</source>
-<translation type="unfinished">Latgalian</translation>
+<translation>Латгалски</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
@@ -650,7 +650,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="135"/>
 <source>Venda</source>
-<translation type="unfinished">Venda</translation>
+<translation>Венда</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="136"/>
@@ -989,7 +989,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished">Backspace:</translation>
+<translation>Изтриване назад:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
@@ -1514,7 +1514,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="533"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Копирай</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="646"/>
@@ -1665,27 +1665,27 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>Импорт на изображения</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="30"/>
 <source>%v of %m file(s) imported</source>
-<translation type="unfinished">%v of %m file(s) imported</translation>
+<translation>%v от %m файла са импортирани</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="115"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Импорт на бележки</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>Импорт на тагове</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="182"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>Ако имате само "JEX - Joplin Export File", моля разархивирайте съдържанието му в директория и я изберете.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="142"/>
@@ -1695,7 +1695,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="74"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW - Joplin Export директория</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
@@ -1705,7 +1705,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="74"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>Изберете "RAW - Joplin Export директория" за импорт</translation>
 </message>
 </context>
 <context>
@@ -1733,7 +1733,7 @@
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="84"/>
 <source>The application will be restarted afterward.</source>
-<translation type="unfinished">The application will be restarted afterward.</translation>
+<translation>Приложението ще бъде рестартирано след това.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="143"/>
@@ -2375,7 +2375,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1467"/>
 <source>Ctrl+L</source>
-<translation type="unfinished">Ctrl+L</translation>
+<translation>Ctrl+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1484"/>
@@ -2742,7 +2742,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2498"/>
 <source>Manage stored attachments</source>
-<translation type="unfinished">Manage stored attachments</translation>
+<translation>Управление на съхранените прикачени файлове</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2503"/>
@@ -2852,17 +2852,17 @@
 <message>
 <location filename="../mainwindow.ui" line="2678"/>
 <source>Insert &amp;note link</source>
-<translation type="unfinished">Insert &amp;note link</translation>
+<translation>Вмъкваене на връзка към &amp;бележка</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2681"/>
 <source>Ctrl+Shift+L</source>
-<translation type="unfinished">Ctrl+Shift+L</translation>
+<translation>Ctrl+Shift+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2690"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>Импорт на бележки от Joplin</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2695"/>
@@ -3308,7 +3308,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="6734"/>
 <source>Export attached files</source>
-<translation type="unfinished">Export attached files</translation>
+<translation>Експорт на прикачените файлове</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6735"/>
@@ -3463,7 +3463,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="9442"/>
 <source>Open selected notes in tabs</source>
-<translation type="unfinished">Open selected notes in tabs</translation>
+<translation>Отвори избраните бележки в табове</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10933"/>
@@ -3504,12 +3504,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="7350"/>
 <source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
+<translation>Покажи всички бележки (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7528"/>
 <source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+<translation>Покажи всички бележки, маркирани с „%1“ (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9335"/>
@@ -3606,12 +3606,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="10871"/>
 <source>Note editing disabled</source>
-<translation type="unfinished">Note editing disabled</translation>
+<translation>Редактирането на бележки е забранено</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10872"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
-<translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+<translation>В момента редактирането на бележки е забранено, искате ли да го разрешите отново?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="11103"/>
@@ -3991,7 +3991,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="620"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>Действие в менюто &lt;code&gt;%1&lt;/code&gt; не е открито! Изписано ли е правилно?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="781"/>
@@ -4227,22 +4227,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="20"/>
 <source>-10min</source>
-<translation type="unfinished">-10min</translation>
+<translation>-10 минути</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="27"/>
 <source>+10min</source>
-<translation type="unfinished">+10min</translation>
+<translation>+10 минути</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="34"/>
 <source>+1d</source>
-<translation type="unfinished">+1d</translation>
+<translation>+1 ден</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="54"/>
 <source>-1d</source>
-<translation type="unfinished">-1d</translation>
+<translation>-1 ден</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="14"/>

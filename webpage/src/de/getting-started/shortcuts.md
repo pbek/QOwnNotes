@@ -7,7 +7,7 @@
 - <kbd>Strg</kbd> + <kbd>N</kbd> erstellt eine neue Notiz mit dem aktuellen Datum und der aktuellen Uhrzeit im Namen
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>N</kbd> erstellt eine neue Notiz in einem neuen Tab
 - Mit <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>F</kbd> können Sie nach Notizen suchen (im Namen der Notiz und ihren Inhalten)
-- Mit <kbd>Alt</kbd> + <kbd>F</kbd> können Sie in allen Schalgwörtern / Unterordnern nach Notizen suchen
+- Mit <kbd>Alt</kbd> + <kbd>F</kbd> können Sie in allen Schlagwörtern / Unterordnern nach Notizen suchen
 - <kbd>Alt</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>P</kbd> wechselt zum vorherigen Arbeitsbereich
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>E</kbd> bearbeitet eine verschlüsselte Notiz
 - <kbd>Alt</kbd> + <kbd>R</kbd> entfernt die aktuelle Notiz
@@ -15,7 +15,7 @@
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>T</kbd> öffnet die To-do-Liste
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>O</kbd> öffnet die aktuelle Notiz in einem externen Editor
 - <kbd>Alt</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>O</kbd> öffnet die aktuelle Notiz in einer Ansicht
-- <kbd>Alt</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>F</kbd> zeigt die aktuelle Notiz im Dateimanager
+- <kbd>Alt</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>F</kbd> zeigt die aktuelle Notiz im Datei-Explorer
 - <kbd>Alt</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>E</kbd> aktiviert oder deaktiviert die Bearbeitung von Notizen
 - <kbd>Alt</kbd> + <kbd>Pfeil nach oben</kbd> springt zur vorherigen sichtbaren Notiz
     - die alternative Tastenkombination ist <kbd>Strg</kbd> + <kbd>Bild nach oben</kbd>
@@ -62,7 +62,7 @@
 
 - <kbd>Strg</kbd> + <kbd>Klicken</kbd> Sie auf einen Link, um ihn zu öffnen
 - Mit <kbd>Strg</kbd> + <kbd>F</kbd> können Sie in der aktuellen Notiz suchen
-    - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd>  um zum vorherigen und nächsten Element zu springen
+    - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd> um zum vorherigen und nächsten Element zu springen
     - <kbd>Esc</kbd> schließt die Suchleiste
 - Mit <kbd>Strg</kbd> + <kbd>R</kbd> können Sie in der aktuellen Notiz suchen und ersetzen
 - <kbd>Strg</kbd> + <kbd>D</kbd> dupliziert die aktuelle Zeile oder den ausgewählten Text

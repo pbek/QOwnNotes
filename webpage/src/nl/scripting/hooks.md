@@ -334,13 +334,13 @@ Deze hook wordt aangeroepen wanneer gegevens worden verzonden vanuit de QOwnNote
 ### Methodeaanroep en parameters
 ```js
 /**
-  * @param requestType kan "pagina" of "selectie" zijn
-  * @param pageUrl de url van de webpagina waar het verzoek is gedaan
-  * @param page Titel de paginatitel van de webpagina waar het verzoek is gedaan
-  * @param rawData de gegevens die zijn verzonden, html voor requestType "page" of platte tekst voor requestType "selection"
-  * @param screenshotDataUrl de data-url van de screenshot als de webpagina waar het verzoek is gedaan
-  * @return waar als gegevens werden afgehandeld door een haak
-  */
+ * @param requestType can be "page" or "selection"
+ * @param pageUrl the url of the webpage where the request was made
+ * @param pageTitle the page title of the webpage where the request was made
+ * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
+ * @param screenshotDataUrl the data url of the screenshot of the webpage where the request was made
+ * @return true if data was handled by a hook
+ */
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
 

@@ -1,6 +1,6 @@
 # التثبيت على دبيان
 
-## Debian 12.0
+## دبيان 12.0
 
 نفّذ الأوامر التالية في الطرفية لاستيثاق المستودع.
 
@@ -22,12 +22,12 @@ sudo apt install qownnotes
 ```
 
 ::: tip
-If you use this repository for other Debian Linux versions please make sure that you have **Qt** installed at least at **version 5.15**.
+إذا استخدمت هذا المستودع مع نسخة أخرى من دبيان، فنرجو التأكد من أن **Qt** **النسخة 5.15** على الأقل مثبتة لديك.
 :::
 
 [تنزيل مباشر](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_12)
 
-## Debian 11.0
+## دبيان 11.0
 
 نفّذ الأوامر التالية في الطرفية لاستيثاق المستودع.
 
@@ -49,12 +49,12 @@ sudo apt install qownnotes
 ```
 
 ::: tip
-If you use this repository for other Debian Linux versions please make sure that you have **Qt** installed at least at **version 5.11**.
+إذا استخدمت هذا المستودع مع نسخة أخرى من دبيان، فنرجو التأكد من أن **Qt** **النسخة 5.11** على الأقل مثبتة لديك.
 :::
 
 [تنزيل مباشر](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_11)
 
-## Debian 10.0
+## دبيان 10.0
 
 نفّذ الأوامر التالية في الطرفية لاستيثاق المستودع.
 
@@ -71,20 +71,20 @@ sudo apt-get install qownnotes
 ```
 
 ::: tip
-If you use this repository for other Debian Linux versions please make sure that you have **Qt** installed at least at **version 5.8**.
+إذا استخدمت هذا المستودع مع نسخة أخرى من دبيان، فنرجو التأكد من أن **Qt** **النسخة 5.8** على الأقل مثبتة لديك.
 :::
 
 [تنزيل مباشر](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10)
 
-## Debian 9.0
+## دبيان 9.0
 
-Run the following shell commands to trust the repository.
+نفّذ الأوامر التالية في الطرفية لاستيثاق المستودع.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -
 ```
 
-Run the following shell commands to add the repository and install QOwnNotes from there.
+نفّذ الأوامر التالية في الطرفية لإضافة المستودع وتثبيت QOwnNotes منه.
 
 ```bash
 sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/ /' >> /etc/apt/sources.list.d/qownnotes.list"
@@ -93,7 +93,7 @@ sudo apt-get install qownnotes
 ```
 
 ::: tip
-If you use this repository for other Debian Linux versions please make sure that you have **Qt** installed at least at **version 5.5**.
+إذا استخدمت هذا المستودع مع نسخة أخرى من دبيان، فنرجو التأكد من أن **Qt** **النسخة 5.5** على الأقل مثبتة لديك.
 :::
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)
+[تنزيل مباشر](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)

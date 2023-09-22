@@ -6,7 +6,7 @@
 <message>
 <location filename="../dialogs/aboutdialog.ui" line="14"/>
 <source>About QOwnNotes</source>
-<translation type="unfinished">About QOwnNotes</translation>
+<translation>கீயுசுயகுறிப்பு பற்றி</translation>
 </message>
 </context>
 <context>
@@ -15,7 +15,7 @@
 <location filename="../dialogs/actiondialog.ui" line="14"/>
 <location filename="../dialogs/actiondialog.ui" line="46"/>
 <source>Find action</source>
-<translation type="unfinished">Find action</translation>
+<translation>செயல் கண்டுபிடி</translation>
 </message>
 </context>
 <context>
@@ -38,7 +38,7 @@
 <message>
 <location filename="../dialogs/attachmentdialog.ui" line="36"/>
 <source>Select file</source>
-<translation type="unfinished">Select file</translation>
+<translation>கோப்புத் தேர்வு</translation>
 </message>
 <message>
 <location filename="../dialogs/attachmentdialog.ui" line="46"/>
@@ -2345,12 +2345,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1314"/>
 <source>&amp;Setup note folders / subfolders</source>
-<translation type="unfinished">&amp;Setup note folders / subfolders</translation>
+<translation>குறிப்பு கோப்புறைகள் / உபகோப்புறைகள் அமை</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1317"/>
 <source>Setup note folders / subfolders</source>
-<translation type="unfinished">Setup note folders / subfolders</translation>
+<translation>குறிப்பு கோப்புறைகள் / உபகோப்புறைகள் அமை</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1350"/>

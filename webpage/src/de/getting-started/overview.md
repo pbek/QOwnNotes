@@ -148,7 +148,7 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 [Verstehen Sie das Konzept von QOwnNotes](concept.md)
 
 ## Features
-- Sie können Ihre bereits **vorhandenen Text- oder Markdowndateien** verwenden; kein Import nötig
+- Sie können Ihre **bereits vorhandenen Text- oder Markdowndateien** verwenden; kein Import nötig
 - QOwnNotes ist in C++ geschrieben und für **geringen Ressourcenverbrauch** optimiert (keine CPU- und speicherhungrige Electron-App)
 - **Evernote- und Joplin-Import**
 - **Kompatibel** mit der [Notes](https://apps.nextcloud.com/apps/notes)-App von **Nextcloud / ownCloud** und **Mobile** und Nextcloud Text
@@ -162,7 +162,7 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 - Optionale **Verschlüsselung** von Notizen; AES-256 ist integriert, oder Sie benutzen benutzerdefinierte Verschlüsselungsmethoden wie **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) oder **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
 - Der **Notizenordner** kann **frei gewählt** werden (mehrere Notizenordner können verwendet werden)
 - **Das Suchen von Wortstücken** in Notizen ist möglich und Suchergebnisse werden in den Notizen hervorgehoben
-- [**Browsererweiterung**](browser-extension.md) um **Notizen aus ausgewähltem text hinzuzufügen**, **Screenshots zu erstellen** oder **um Ihre Lesezeichen zu verwalten**
+- [**Browsererweiterung**](browser-extension.md) um **Notizen aus ausgewähltem Text hinzuzufügen**, **Screenshots zu erstellen** oder **um Ihre Lesezeichen zu verwalten**
 - [**Rechtschreibprüfung**](../editor/spellchecking.md) wird unterstützt
 - **Portabler Modus** um QOwnNotes auf USB-Sticks mitzunehmen
 - **Skriptunterstützung** und ein online [**Skriptverzeichnis**](https://github.com/qownnotes/scripts), wo Sie Skripte in der App installieren können

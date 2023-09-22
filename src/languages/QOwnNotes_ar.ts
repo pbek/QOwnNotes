@@ -2382,12 +2382,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1314"/>
 <source>&amp;Setup note folders / subfolders</source>
-<translation type="unfinished">&amp;Setup note folders / subfolders</translation>
+<translation>إ&amp;عداد مجلدات الملاحظات أو المجلدات الفرعية</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1317"/>
 <source>Setup note folders / subfolders</source>
-<translation type="unfinished">Setup note folders / subfolders</translation>
+<translation>إعداد مجلدات الملاحظات أو المجلدات الفرعية</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1350"/>
@@ -8405,7 +8405,7 @@ Connection error message: </source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="444"/>
 <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-<translation>سيتم تفعيله إذا شغّلت برنامج QOwnNotes مع المُعامِل &lt;code dir="ltr"&gt;--portable&lt;/code&gt; (محمول).</translation>
+<translation>سيتم تفعيله إذا شغّلت برنامج QOwnNotes مع المُعامِل &lt;code&gt;‪--portable‬&lt;/code&gt; (محمول).</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2146"/>

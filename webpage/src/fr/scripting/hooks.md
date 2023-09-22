@@ -334,14 +334,14 @@ Ce hook est appelé lorsque des données sont envoyées depuis l'extension de na
 ### Appel de méthode et paramètres
 ```js
 /**
- * @param requestType peut être "page" ou "selection"
- * @param pageUrl l'URL de la page Web sur laquelle la demande a été effectuée
- * @param pageTitrer le titre de la page Web où la demande a été faite
- * @param rawData les données qui ont été transmises, HTML pour requestType "page" ou texte brut pour requestType "selection"
- * @param screenshotDataUrl l'URL des données de la capture d'écran si la page Web où la demande a été faite
- * @return true si les données ont été gérées par un hook
+ * @param requestType can be "page" or "selection"
+ * @param pageUrl the url of the webpage where the request was made
+ * @param pageTitle the page title of the webpage where the request was made
+ * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
+ * @param screenshotDataUrl the data url of the screenshot of the webpage where the request was made
+ * @return true if data was handled by a hook
  */
-function callHandleWebsocketRawDataHook (requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
+function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil aux exemples [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-new-note.qml) et [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).

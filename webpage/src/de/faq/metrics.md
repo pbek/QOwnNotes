@@ -4,7 +4,7 @@
 
 QOwnNotes (im Sinne der Anwendung selbst) wird **von einer und manchmal auch von zwei Personen in ihrer Freizeit entwickelt**.
 
-Releases werden für viele (häufig sehr alte Versionen von) Plattformen und Distributionen erstellt. Sie aufrechtzuerhalten ist viel Arbeit.
+Versionen werden für viele (häufig sehr alte Versionen von) Plattformen und Distributionen erstellt. Sie aufrechtzuerhalten ist viel Arbeit.
 
 Die Metriken sind die einzige zuverlässige Informationsquelle darüber, auf welchen Versionen von Plattformen und Distributionen QOwnNotes ausgeführt wird. Sie zeigen auch, welche Features am beliebtesten sind, sodass Entscheidungen darüber getroffen werden können, welche Versionen ausgemustert werden, welche Features mehr Arbeit benötigen und welche kaum genutzt werden.
 

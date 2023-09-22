@@ -25,7 +25,7 @@ rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fed
 
 ## Legacy-Installationsmethode
 
-Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
+Verwenden Sie diese Methode, falls Ihre Fedora-Version das `config-manager` dnf-Plugin nicht unterstützt.
 
 Führen Sie die folgenden Shell-Befehle als root aus, um dem Repository zu vertrauen.
 

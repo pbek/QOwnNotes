@@ -1,6 +1,6 @@
 # QOwnNotes erstellen
 
-## Von GitHub aus bauen
+## Mit GitHub bauen
 
 Sie können QOwnNotes auch selbst aus dem Quellcode erstellen.
 
@@ -12,35 +12,35 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Then download [Qt Creator](https://www.qt.io/download-open-source), you will also need the packages `qtwebsockets` and `qt5compat` to build QOwnNotes with Qt6 (only `qtwebsockets` for Qt5). If you build under Windows, you want to stick to *MinGw 64-bit*.
+Laden Sie dann [Qt Creator](https://www.qt.io/download-open-source) herunter. Sie werden auch die Pakete `qtwebsockets` und `qt5compat` brauchen, um QOwnNotes mit Qt6 zu bauen (`qtwebsockets` reicht für Qt5). Wenn Sie QOwnNotes unter Windows bauen, bleiben Sie am besten bei *MinGw 64-bit*.
 
-Afterward open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
+Öffnen Sie danach die Projektdatei `src/QOwnNotes.pro` und klicken Sie auf **Build** / **Build Project QOwnNotes**.
 
-Or you can build it directly in your terminal:
+Sie können es auch direkt aus dem Terminal bauen:
 
 ```bash
 cd src
 
-# build binary translation files if you want another language than English
+# erstellt Binary-Überseztungsdateien, wenn Sie eine andere Sprache als Englisch möchten
 lrelease QOwnNotes.pro
 
-# prepare build process and build the application
+# bereite Build-Prozess vor und baue die Anwendung
 qmake
 make
 ```
 
-Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
+Zögern Sie nicht, diesem Projekt Quellcode beizutragen, Vorschläge zu machen oder auf der [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues) Probleme zu melden.
 
-Visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
+Besuchen Sie [QOwnNotes auf GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-If you want to contribute source code to the project please make your pull requests to the  `main` branch.
+Falls Sie dem Projekt Quellcode beitragen möchten, führen Sie Ihre Pull-Anfrage bitte im `main`-Branch durch.
 :::
 
 ## Quellarchiv
 
-You will find source archives of QOwnNotes on [QOwnNotes source archive](https://github.com/pbek/QOwnNotes/releases).
+Quellarchive von QOwnNotes finden Sie unter [QOwnNotes Quellarchiv](https://github.com/pbek/QOwnNotes/releases).
 
-The source archives will be accessible like that:
+Auf die Quellarchive kann so zugegriffen werden:
 
 `https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`

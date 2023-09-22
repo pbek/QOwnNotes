@@ -724,7 +724,7 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
 <source>Number of imported notes</source>
-<translation type="unfinished">Number of imported notes</translation>
+<translation>Numărul de note importate</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="148"/>
@@ -872,17 +872,17 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>Folosește FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished">Read .vimrc from location:</translation>
+<translation>Citește .vimrc din locația:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished">Show position of text marks</translation>
+<translation>Arată poziția marcajelor de text</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
@@ -897,23 +897,23 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>Început de linie</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished">Tabulator size:</translation>
+<translation>Mărimea tabulatorului:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished">Smart tabulators</translation>
+<translation>Tabulator inteligent</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished">Highlight search results</translation>
+<translation>Evidențiază rezultatele căutării</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
@@ -923,57 +923,57 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished">Expand tabulators</translation>
+<translation>Extinde Tabulatorul</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished">Automatic indentation</translation>
+<translation>Indentare automată</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished">Incremental search</translation>
+<translation>Căutare incrementală</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished">Use search dialog</translation>
+<translation>Folosește caseta de căutare</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished">Use smartcase</translation>
+<translation>Folosește smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished">Use ignorecase</translation>
+<translation>Ignoră ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished">Use wrapscan</translation>
+<translation>Folosește wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished">Use tildeop</translation>
+<translation>Folosește tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished">Show partial command</translation>
+<translation>Afișează comanda parțială</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>Afișează numerele de linie relative la cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished">Blinking cursor</translation>
+<translation>Cursor care clipește</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
@@ -983,17 +983,17 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished">Backspace:</translation>
+<translation>Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished">Keyword characters:</translation>
+<translation>Caractere cheie:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished">Use Vim-style Editing</translation>
+<translation>Folosește editare de tip Vim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
@@ -1013,17 +1013,17 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished">Vim tabstop option.</translation>
+<translation>Opțiunea tabstop Vim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
+<translation>Lasă câmpul necompletat pentru a folosi calea implicită, adică %USERPROFILE%\_vimrc pentru Windows, ~/.vimrc in caz contrar.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>În mod implicit: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1063,12 +1063,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4700"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>Apasă Meta-Shift-Y, Meta-Shift-Y pentru a ieși din modul FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4702"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
+<translation>Apasă Alt-Y, Alt-Y pentru a ieși din modul FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6297"/>
@@ -1296,7 +1296,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="236"/>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>Font:</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="283"/>
@@ -1361,7 +1361,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
 <source>Underlined text</source>
-<translation type="unfinished">Underlined text</translation>
+<translation>Text subliniat</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="220"/>
@@ -1513,7 +1513,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="533"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Copiază</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="646"/>
@@ -1537,17 +1537,17 @@
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="45"/>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Copiază</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="51"/>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>Copiază linkul</translation>
 </message>
 <message>
 <location filename="../widgets/htmlpreviewwidget.cpp" line="58"/>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>Resetează zoomul</translation>
 </message>
 </context>
 <context>
@@ -1628,7 +1628,7 @@
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
 <source>Minimum 8 characters</source>
-<translation type="unfinished">Minimum 8 characters</translation>
+<translation>Minim 8 caractere</translation>
 </message>
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1636,7 +1636,7 @@
 <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
 <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
 <source>Minimum 10 characters</source>
-<translation type="unfinished">Minimum 10 characters</translation>
+<translation>Minim 10 caractere</translation>
 </message>
 </context>
 <context>
@@ -1644,52 +1644,52 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Importă Joplin</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="48"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>Importă foldere</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>Va rugam selectați folderul al "RAW - Joplin Export Directory", din care doriți să importați notele:</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="37"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>Selectează dosarul</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>Importă imagini</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="30"/>
 <source>%v of %m file(s) imported</source>
-<translation type="unfinished">%v of %m file(s) imported</translation>
+<translation>%v din %m fișier(e) importate</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="115"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Importă notițele</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>Importă etichetele</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="182"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>Dacă ai un fișier de tip "JEX - Joplin Export File", extrage conținutul acelui fișier si selectează acel folder.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="142"/>
 <source>Import metadata</source>
-<translation type="unfinished">Import metadata</translation>
+<translation>Importă metadata</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="74"/>
@@ -3408,7 +3408,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <message>
 <location filename="../mainwindow.cpp" line="11714"/>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>Calea notiței '%1' a fost copiata in clipboard</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6459"/>
@@ -3482,7 +3482,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <message>
 <location filename="../mainwindow.cpp" line="9442"/>
 <source>Open selected notes in tabs</source>
-<translation type="unfinished">Open selected notes in tabs</translation>
+<translation>Deschide notele selectate în file</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10933"/>
@@ -3528,12 +3528,12 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <message>
 <location filename="../mainwindow.cpp" line="7350"/>
 <source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
+<translation>Afișați toate notele (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7528"/>
 <source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+<translation>Arată toate notele etichetate cu '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9335"/>
@@ -3631,12 +3631,12 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <message>
 <location filename="../mainwindow.cpp" line="10871"/>
 <source>Note editing disabled</source>
-<translation type="unfinished">Note editing disabled</translation>
+<translation>Editarea notițelor este dezactivată</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10872"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
-<translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+<translation>Editarea notelor este în prezent dezactivată. Doriți să o permiteți din nou?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="11103"/>
@@ -4019,12 +4019,12 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <message>
 <location filename="../mainwindow.cpp" line="619"/>
 <source>Action not found!</source>
-<translation type="unfinished">Action not found!</translation>
+<translation>Acțiunea nu a fost găsita!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="620"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>Nu s-a putut găsi acțiunea din meniu &lt;code&gt;%1&lt;/code&gt;! Ești sigur/ă ca ai scris-o corect?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="781"/>
@@ -4198,12 +4198,12 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <message>
 <location filename="../mainwindow.cpp" line="7037"/>
 <source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
+<translation>Lipeste &amp;HTML ca markdown</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7038"/>
 <source>Paste as &amp;text file attachment</source>
-<translation type="unfinished">Paste as &amp;text file attachment</translation>
+<translation>Lipeste ca atașament de fișier &amp;text</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7093"/>
@@ -4264,22 +4264,22 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="20"/>
 <source>-10min</source>
-<translation type="unfinished">-10min</translation>
+<translation>-10min</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="27"/>
 <source>+10min</source>
-<translation type="unfinished">+10min</translation>
+<translation>+10min</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="34"/>
 <source>+1d</source>
-<translation type="unfinished">+1d</translation>
+<translation>+1z</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="54"/>
 <source>-1d</source>
-<translation type="unfinished">-1d</translation>
+<translation>-1z</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="14"/>
@@ -4294,32 +4294,32 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="98"/>
 <source>&amp;Save</source>
-<translation type="unfinished">&amp;Save</translation>
+<translation>&amp;Salvează</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="115"/>
 <source>+1h</source>
-<translation type="unfinished">+1h</translation>
+<translation>+1h</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="122"/>
 <source>Title</source>
-<translation type="unfinished">Title</translation>
+<translation>Titlu</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="129"/>
 <source>-1h</source>
-<translation type="unfinished">-1h</translation>
+<translation>-1h</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="136"/>
 <source>Description:</source>
-<translation type="unfinished">Description:</translation>
+<translation>Descriere:</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="143"/>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Pană în data de</translation>
 </message>
 </context>
 <context>
@@ -4327,7 +4327,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="117"/>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Eroare în timpul creării cardului</translation>
 </message>
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="118"/>
@@ -8165,7 +8165,7 @@ Mesaj de eroare de conectare: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3392"/>
 <source>Calendar cache emptied</source>
-<translation>Cache-ul de calendare golit</translation>
+<translation>Cache-ul calendarului golit</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3393"/>
@@ -9759,12 +9759,12 @@ Acest lucru nu poate fi anulat!</translation>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="319"/>
 <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-<translation>Dacă doriți să puteți accesa versiunile de note și notele trasate pe serverul dvs. propriuCloud, puteți configura acum QOwnNotes. Puteți să o faceți și mai târziu.</translation>
+<translation>Dacă doriți să puteți accesa versiunile notelor și notele șterse de pe serverul ownCloud, puteți configura acum QOwnNotes pentru acest lucru. De asemenea, puteți face acest lucru și mai târziu.</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="349"/>
 <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-<translation>În orice caz, aveți nevoie de clientul de sincronizare propriuCloud (sau de orice alt client de sincronizare) pentru a vă sincroniza notele cu propriul serverCloud.</translation>
+<translation>În orice caz, aveți nevoie de clientul de sincronizare ownCloud (sau de orice alt client de sincronizare) pentru a vă sincroniza notele cu propriul server ownCloud.</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="391"/>

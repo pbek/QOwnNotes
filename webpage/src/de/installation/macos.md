@@ -1,16 +1,16 @@
-# Unter macOS™ installieren
+# Installieren unter macOS™
 
-Laden Sie das neueste **macOS-Disk-Image** von [QOwnNotes Releases auf GitHub](https://github.com/pbek/QOwnNotes/releases) herunter. Öffnen Sie es und ziehen Sie die App **QOwnNotes** in Ihren **Anwendungsordner**.
+Laden Sie das neueste **macOS-Disk-Image** von [QOwnNotes Versionen auf GitHub](https://github.com/pbek/QOwnNotes/releases) herunter. Öffnen Sie es und ziehen Sie die App **QOwnNotes** in Ihren **Anwendungsordner**.
 
-Klicken Sie beim ersten Mal mit der rechten Maustaste auf die Anwendung und **öffnen** Sie QOwnNotes.
+Klicken Sie beim ersten Mal mit der rechten Maustaste auf die Anwendung und **Öffnen** Sie QOwnNotes.
 
 ::: warning
-Wenn Sie die Fehlermeldung erhalten, `QOwnNotes.app kann nicht geöffnet werden, da der Entwickler nicht überprüft werden kann `, müssen Sie Ihre macOS **Sicherheitseinstellungen** besuchen und auf `Trotzdem öffnen` klicken.
+Wenn Sie die Fehlermeldung erhalten `QOwnNotes.app kann nicht geöffnet werden, da der Entwickler nicht überprüft werden kann` erhalten, müssen Sie Ihre macOS **Sicherheitseinstellungen** besuchen und auf `Trotzdem öffnen` klicken.
 :::
 
 ## Homebrew
 
-Unter [Homebrew](https://formulae.brew.sh/cask/qownnotes) befindet sich ein von der Gemeinschaft gepflegtes Fass mit QOwnNotes.
+Unter [Homebrew](https://formulae.brew.sh/cask/qownnotes) befindet sich ein von der Community gepflegtes Cask mit QOwnNotes.
 
 Sie können es installieren mit:
 

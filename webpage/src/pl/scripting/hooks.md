@@ -334,14 +334,14 @@ Ten zaczep jest wywoływany, gdy dane są wysyłane z przeglądarki QOwnNotes We
 ### Wywołanie metody i parametry
 ```js
 /**
-  * @param requestType może być „strona” lub „wybór”
-  * @param pageUrl adres URL strony, na której zgłoszono żądanie
-  * @param pageTitle tytuł strony, na której zgłoszono żądanie
-  * @param rawData dane, które zostały przesłane, html dla requestType „strona” lub zwykły tekst dla requestType „selection”
-  * @param screenshotDataUrl adres URL danych zrzutu ekranu, jeśli strona internetowa, na której zgłoszono żądanie
-  * @return true, jeśli dane były obsługiwane przez hak
-  */
-funkcja callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
+ * @param requestType can be "page" or "selection"
+ * @param pageUrl the url of the webpage where the request was made
+ * @param pageTitle the page title of the webpage where the request was made
+ * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
+ * @param screenshotDataUrl the data url of the screenshot of the webpage where the request was made
+ * @return true if data was handled by a hook
+ */
+function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
 
 Może zechcesz rzucić okiem na przykład [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-new-note.qml) i [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).

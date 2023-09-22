@@ -1,4 +1,4 @@
-# Installieren Sie unter Raspberry Pi OS
+# Installieren unter Raspberry Pi OS
 
 ## Raspberry Pi OS 11
 

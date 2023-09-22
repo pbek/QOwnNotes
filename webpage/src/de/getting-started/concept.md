@@ -44,7 +44,7 @@ graph TB
 - Es kann mit Ihrem Nextcloud / ownCloud-Server **kommunizieren, um Notizen** öffentlich mit anderen Personen zu teilen
 - Sie können auch auf Ihrem Nextcloud / ownCloud-Server über die [QOwnNotesApi Nextcloud-App](#qownnotesapi-nextcloud-app) auf Ihren **Notizverlauf und Papierkorb** zugreifen
 - Auf To-do-Listen auf Ihrem Nextcloud / ownCloud-Server kann über QOwnNotes zugegriffen werden
-- Median- / Anhangsdateien werden **nicht von QOwnNotes synchronisiert!**
+- Medien- / Anhangsdateien werden **nicht von QOwnNotes synchronisiert**!
     - Die Dateisynchronisierung ist ein komplexes Unterfangen. Es gibt bereits großartige Dateisynchronisierungslösungen (siehe [Nextcloud Desktop Sync Client](#nextcloud-desktop-sync-client)).
 
 

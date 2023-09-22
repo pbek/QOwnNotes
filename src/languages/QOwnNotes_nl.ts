@@ -2342,12 +2342,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1314"/>
 <source>&amp;Setup note folders / subfolders</source>
-<translation type="unfinished">&amp;Setup note folders / subfolders</translation>
+<translation>Notitiemappen / submappen in&amp;stellen</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1317"/>
 <source>Setup note folders / subfolders</source>
-<translation type="unfinished">Setup note folders / subfolders</translation>
+<translation>Notitiemappen / submappen instellen</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1350"/>

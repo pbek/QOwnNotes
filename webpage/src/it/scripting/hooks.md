@@ -357,16 +357,12 @@ Questo hook viene chiamato quando i dati vengono inviati dall'estensione del bro
 ### Chiamata al metodo e parametri
 ```js
 /**
- * @param requestType può essere "page" o "selection"
- * @param pageUrl l'URL della pagina web in cui è stata effettuata la
- *                richiesta
- * @param pageTitle il titolo della pagina web in cui è stata effettuata
- *                  la richiesta
- * @param rawData i dati che sono stati trasmessi, html per requestType
- *                "page" o testo normale per requestType "selezione"
- * @param screenshotDataUrl l'URL dei dati dello screenshot se la pagina
- *                          web in cui è stata effettuata la richiesta
- * @return true se i dati sono stati gestiti da un hook
+ * @param requestType can be "page" or "selection"
+ * @param pageUrl the url of the webpage where the request was made
+ * @param pageTitle the page title of the webpage where the request was made
+ * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
+ * @param screenshotDataUrl the data url of the screenshot of the webpage where the request was made
+ * @return true if data was handled by a hook
  */
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```

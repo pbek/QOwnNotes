@@ -90,7 +90,7 @@ Einige Segmente, die wir in der Dokumentation nicht übersetzen:
 
 - Übersetze niemals Codes oder Links; Tags müssen so belassen werden, wie sie sind (und ohne zusätzliche Leerzeichen, wie das manche maschinellen Übersetzungen tun; dann müssen diese Zeichen händisch entfernt werden)
 - Datum und Uhrzeit übersetzen wir nicht (leer lassen)
-- Und wir übersetzen auch keine Referenzen (die QON in zahlreichen Sprachen bekommen hat), Sie können dieses Kapitel einfach überspringen.
+- Und wir übersetzen auch keine Referenzen (die QOwnNotes in zahlreichen Sprachen bekommen hat). Sie können dieses Kapitel einfach überspringen
 
 ## Übersetzen und Korrekturlesen kann spannend sein!
 

@@ -8,7 +8,7 @@ QOwnNotes verfügt über eine integrierte **Wörterbuchverwaltung** (im *Bearbei
 
 - Unter **Linux** können Sie die Hunspell-Wörterbücher für Ihre Sprache mit dem pkg-Manager Ihrer Distribution installieren
     - Wenn Sie zusätzliche Sprachdateien hinzufügen müssen, können Sie dies in `~/.local/share/hunspell` oder `/usr/share/hunspell` tun.
-    - Wenn Sie das Snap-Package von QOwnNotes verwenden, können Sie auch `~/hunspell` für Sprachdateien verwenden, da der Snap nicht auf `~/.local` zugreifen kann
+    - Wenn Sie das Snap-Paket von QOwnNotes verwenden, können Sie auch `~/hunspell` für Sprachdateien verwenden, da der Snap nicht auf `~/.local` zugreifen kann
 
 - Unter **Windows** müssen Sie Hunspell-Wörterbücher für Ihre Sprache in einen Ordner `dicts` kopieren, der sich in Ihrem QOwnNotes-Anwendungsordner oder in `C:\Benutzer\[username]\dicts` befindet
     - Sie können Wörterbücher aus [LibreOffice-Wörterbüchern](https://github.com/LibreOffice/dictionaries) herunterladen

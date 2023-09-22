@@ -2339,12 +2339,12 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <location filename="../mainwindow.ui" line="1314"/>
 <source>&amp;Setup note folders / subfolders</source>
-<translation type="unfinished">&amp;Setup note folders / subfolders</translation>
+<translation>노트 폴더 / 하위 폴더 설정(&amp;S)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1317"/>
 <source>Setup note folders / subfolders</source>
-<translation type="unfinished">Setup note folders / subfolders</translation>
+<translation>노트 폴더 / 하위 폴더 설정</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1350"/>

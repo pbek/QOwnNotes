@@ -335,12 +335,12 @@ Este enlace se llama cuando se envían datos desde la extensión del navegador Q
 ### Parámetros y llamada al método
 ```js
 /**
-  * @param requestType puede ser "página" o "selección"
-  * @param pageUrl la URL de la página web donde se realizó la solicitud
-  * @param pageTitle el título de la página web donde se realizó la solicitud
-  * @param rawData los datos que se transmitieron, html para requestType "página" o texto sin formato para requestType "selección"
-  * @param screenshotDataUrl la URL de datos de la captura de pantalla si la página web donde se realizó la solicitud
-  * @return verdadero si los datos fueron manejados por un gancho
+ * @param requestType can be "page" or "selection"
+ * @param pageUrl the url of the webpage where the request was made
+ * @param pageTitle the page title of the webpage where the request was made
+ * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
+ * @param screenshotDataUrl the data url of the screenshot of the webpage where the request was made
+ * @return true if data was handled by a hook
  */
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```

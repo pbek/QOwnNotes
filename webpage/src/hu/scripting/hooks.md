@@ -333,12 +333,12 @@ Ezt a horgot akkor hívják meg, amikor az adatokat a QOwnNotes Web Companion b�
 ### Módszerhívás és paraméterek
 ```js
 /**
-  * @param requestType lehet "oldal" vagy "kiválasztás"
-  * @param pageUrl annak a weboldalnak az URL-jét, ahová a kérelmet benyújtották
-  * @param pageCímezze meg annak a weboldalnak az oldal címét, ahol a kérést benyújtották
-  * @param rawData a továbbított adatok, html a requestType "page" vagy sima szöveg esetén a requestType "selection"
-  * @param screenshotDataUrl a képernyőkép adat URL-jét, ha az a weboldal, ahol a kérelmet benyújtották
-  * @return true, ha az adatokat horog kezelte
+ * @param requestType can be "page" or "selection"
+ * @param pageUrl the url of the webpage where the request was made
+ * @param pageTitle the page title of the webpage where the request was made
+ * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
+ * @param screenshotDataUrl the data url of the screenshot of the webpage where the request was made
+ * @return true if data was handled by a hook
  */
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```

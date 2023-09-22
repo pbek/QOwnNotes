@@ -81,7 +81,7 @@ _밑줄_
 </h2>
 
 <p spaces-before="0">
-  Two of the simpler uses for links are pointing to webpages or other notes. There are multiple ways each of these links can look.
+  링크를 쉽게 사용할 수 있는 두 가지 방법은 웹 페이지나 기타 노트를 가리킵니다. 이러한 링크는 여러 가지 방법으로 볼 수 있습니다.
 </p>
 
 <h3 spaces-before="0">
@@ -156,7 +156,7 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
   인라인 코드 및 코드 블록
 </h2>
 
-<pre><code class="markdown">Inline `code` has `backticks around` it.
+<pre><code class="markdown">인라인 '코드' 주위에 '백틱'이 있습니다.
 </code></pre>
 
 <p spaces-before="0">
@@ -164,7 +164,7 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </p>
 
 <p spaces-before="0">
-  Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
+  코드 블록은 세 개의 백 틱이 있는 선으로 울타리를 두르거나 네 개의 공백으로 들여씁니다.
 </p>
 
 <h3 spaces-before="0">

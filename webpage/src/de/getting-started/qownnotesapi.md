@@ -20,8 +20,8 @@ Verwenden Sie Ihren **Nextcloud** / **ownCloud** **Sync-Client**, um **Ihre Noti
 
 ## Was QOwnNotesAPI macht
 
-- Zugriff auf Ihre gelöschten Notizen
-- Zugriff auf Ihre Notizversionen
+- Auf Ihre gelöschten Notizen zugreifen
+- Auf Ihre Notizversionen zugreifen
 
 ## Was QOwnNotesAPI nicht macht
 

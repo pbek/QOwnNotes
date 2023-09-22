@@ -1,4 +1,4 @@
-# Unter Void-Linux installieren
+# Installieren unter Void Linux
 
 Mit [qownnotes srcpkg](https://github.com/void-linux/void-packages/tree/master/srcpkgs/qownnotes) gibt es ein von der Community erstelltes Paket für **Void Linux**, das wie folgt installiert werden kann:
 

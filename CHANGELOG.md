@@ -11,6 +11,9 @@
   - the last selected command is now only stored when there actually was a
     command selected and the dialog wasn't quit without selecting a command
     (for [#9](https://github.com/qownnotes/qc/issues/9))
+- added more German, Bulgarian, Tamil, Dutch, Bosnian, Arabic, Turkish, Korean,
+  Romanian translation (thank you bumpsy, m.angelov, tamilneram.github.io,
+  stephanp, noureddin, rgucluer, venusgirl, ioancroitor)
 
 ## 23.9.4
 - the font size in the preview will now change immediately when the font size in

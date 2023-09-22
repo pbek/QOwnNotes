@@ -1,4 +1,4 @@
-# Installieren Sie unter Slackware Linux
+# Installieren unter Slackware Linux
 
 ## Slackware 14.2
 
@@ -13,7 +13,7 @@ slackpkg update
 slackpkg install libproxy js185-1.0.0-x86_64-1
 ```
 
-Anschließend können Sie das QOwnNotes-Slackbuilds-Repository auschecken und die Anwendung erstellen.
+Anschließend können Sie das QOwnNotes-Slackbuilds-Repository auschecken und die Anwendung aufbauen.
 
 ```bash
 cd /tmp
@@ -33,7 +33,7 @@ cd /tmp wget "http://bear.alienbase.nl/mirrors/people/alien/sbrepos/14.1/x86_64/
 sudo installpkg qt5-5.5.1-x86_64-4alien.txz
 ```
 
-Anschließend können Sie das QOwnNotes-Slackbuilds-Repository auschecken und die Anwendung erstellen.
+Anschließend können Sie das QOwnNotes-Slackbuilds-Repository auschecken und die Anwendung aufbauen.
 
 ```bash
 cd /tmp

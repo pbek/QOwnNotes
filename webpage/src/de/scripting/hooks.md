@@ -57,10 +57,10 @@ Wenn diese Funktion in mehreren Skripten definiert ist, gewinnt das erste Skript
 ### Methodenaufruf und Parameter
 ```js
 /**
-  * @param fileName string Der Dateipfad der Quellmediendatei, bevor sie in den Medienordner kopiert wurde
-  * @param markdownText string Der Markdown-Text der Mediendatei, z.B. ![my-image](media/my-image-4101461585.jpg)
-  * @return string der neue Markdown-Text der Mediendatei
-  */
+ * @param fileName string Der Dateipfad der Quellmediendatei, bevor sie in den Medienordner kopiert wurde
+ * @param markdownText string Der Markdown-Text der Mediendatei, z.B. ![my-image](media/my-image-4101461585.jpg)
+ * @return string Der neue Markdown-Text der Mediendatei
+ */
 function insertMediaHook(fileName, markdownText);
 ```
 
@@ -287,41 +287,41 @@ noteTaggingByObjectHook
 
 Mit `noteTaggingByObjectHook` erhalten Sie anstelle eines Schlagwortnamens ein`TagApi `-Objekt als Parameter. Als Ergebnis für die Aktion `list` müssen Sie eine Liste der Schlagwort-IDs bereitstellen.
 
-Dies bedeutet auch, dass Sie fehlende Tags selbst erstellen müssen, um eine Liste bereits vorhandener Tag-IDs für die Aktion `Liste` bereitstellen zu können.
+Dies bedeutet auch, dass Sie fehlende Schlagworte selbst erstellen müssen, um eine Liste bereits vorhandener Schlagwort-IDs für die Aktion `list` bereitstellen zu können.
 
 ### Methodenaufruf und Parameter
 ```js
 /**
-  * Behandelt das Markieren von Notizen für eine Notiz
-  *
-  * Diese Funktion wird aufgerufen, wenn Tags hinzugefügt, entfernt oder umbenannt werden
-  * Eine Notiz oder die Tags einer Notiz sollten aufgelistet sein
-  *
-  * @param note
-  * @param Aktion kann "Hinzufügen", "Entfernen", "Umbenennen" oder "Liste" sein.
-  * @ param-Tag, das hinzugefügt, entfernt oder umbenannt werden soll
-  * @param newTagName Tag-Name, in den umbenannt werden soll, wenn action = "umbenennen"
-  * @return note text string oder string-list of tag ids (wenn action = "list")
-  */
+ * Kümmert sich um das das Markieren von Notizen für eine Notiz
+ *
+ * Diese Funktion wird aufgerufen, wenn Schlagworte in einer Notiz hinzugefügt, entfernt
+ * oder umbenannt werden oder die Schlagworte einer Notiz aufgelistet werden sollen
+ *
+ * @param note
+ * @param action kann "add", "remove", "rename" oder "list" sein.
+ * @param Schlagwort, das hinzugefügt, entfernt oder umbenannt werden soll
+ * @param newTagName Schlagwort-Name, in den umbenannt werden soll, wenn action = "rename"
+ * @return note Text-string oder string-Liste von Schlagwort-IDs (wenn action = "list")
+ */
 function noteTaggingByObjectHook(note, action, tag, newTagName);
 ```
 
-You may want to take a look at the example [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) to implement your own tagging mechanism.
+Schauen Sie sich dazu das Beispiel auf [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) an, wie Sie Ihren eigenen Schlagwort-Mechanismus implementieren können.
 
 autocompletionHook
 ------------------
 
-Sie können eine Liste von Zeichenfolgen zurückgeben, die der Autovervollständigungsliste hinzugefügt werden sollen, wenn diese automatisch vervollständigt wird (z.B. durch Drücken von <kbd>Ctrl + Space</kbd>).
+Sie können eine Liste von Zeichenfolgen zurückgeben, die der Autovervollständigungsliste hinzugefügt werden sollen, wenn Autovervollständigung aufgerufen wird (z.B. durch Drücken von <kbd>Strg + Leertaste</kbd>).
 
 ### Methodenaufruf und Parameter
 ```js
 /**
-  * Ruft die AutocompletionHook-Funktion für alle Skriptkomponenten auf
-  * Diese Funktion wird aufgerufen, wenn die automatische Vervollständigung in einer Notiz aufgerufen wird
-  *
-  * @return QStringListe des Textes für die Autovervollständigungsliste
-  */
-Funktion callAutocompletionHook ();
+ * Ruft die AutocompletionHook-Funktion für alle Skriptkomponenten auf
+ * Diese Funktion wird aufgerufen, wenn die automatische Vervollständigung in einer Notiz aufgerufen wird
+ *
+ * @return QStringListe des Textes für die Autovervollständigungsliste
+ */
+function callAutocompletionHook ();
 ```
 
 Schauen Sie sich dazu das Beispiel auf [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml) an.
@@ -334,12 +334,12 @@ Dieser Hook wird aufgerufen, wenn Daten von der QOwnNotes Web Companion-Browsere
 ### Methodenaufruf und Parameter
 ```js
 /**
- * @param requestType kann "Seite" oder "Auswahl" sein
- * @param pageUrl die Url der Webseite, auf der die Anfrage gestellt wurde
- * @param pageTitle der Seitentitel der Webseite, auf der die Anfrage gestellt wurde
- * @param rawData die übertragenen Daten, html für requestType „page“ oder Klartext für requestType „selection“
- * @param screenshotDataUrl die Daten-Url des Screenshots, wenn die Webseite, auf der die Anfrage gestellt wurde
- * @return true, wenn Daten von einem Hook verarbeitet wurden
+ * @param requestType kann "page" oder "selection" sein
+ * @param pageUrl die URL der Webseite, wo die Anfrage gestellt wurde
+ * @param pageTitle der Titel der Webseite, wo die Anfrage gestellt wurde
+ * @param rawData die übertragenen Daten, HTML für requestType "page" oder Klartext für requestType "selection"
+ * @param screenshotDataUrl die Daten-URL des Screenshots der Webseite, wo die Anfrage gestellt wurde
+ * @return true wenn Daten durch einen Hook gelaufen sind
  */
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
@@ -354,15 +354,15 @@ Dieser Hook wird aufgerufen, wenn ein Skript-Thread von [startDetachedProcess](m
 ### Methodenaufruf und Parameter
 ```js
 /**
- * Diese Funktion wird aufgerufen, wenn ein Skript-Thread ausgeführt wurde.
- * Hinweis: Thread [1]==0 hilft festzustellen, ob ein Großteil der gestarteten Prozesse für einen bestimmten Bezeichner ausgeführt wird.
+ * Diese Funktion wird aufgerufen, wenn ein Skript-Thread fertig ausgeführt wurde.
+ * Hinweis: thread[1]==0 hilft festzustellen, ob ein Großteil der gestarteten Prozesse für einen bestimmten Identifier fertig ausgeführt wurde.
  *
-  * @param {QString} callbackIdentifier - die beim Aufruf von startDetachedProcess () angegebene ID
-  * @param {QString} resultSet - das Ergebnis des Prozesses
-  * @param {QVariantList} cmd - das gesamte Befehlsarray [0-ausführbarer Pfad, 1-Parameter, 2-exitCode]
-  * @param {QVariantList} Thread - das Thread-Informationsarray [0-übergebener CallbackParameter, 1 verbleibende Threads für diesen Bezeichner]
-  */
-Funktion onDetachedProcessCallback (callbackIdentifier, resultSet, cmd, thread);
+ * @param {QString} callbackIdentifier - die beim Aufruf von startDetachedProcess() angegebene ID
+ * @param {QString} resultSet - das Ergebnis des Prozesses
+ * @param {QVariantList} cmd - das gesamte Befehlsarray [0-ausführbarer Pfad, 1-Parameter, 2-exitCode]
+ * @param {QVariantList} thread - das Thread-Informationsarray [0-übergebener CallbackParameter, 1-verbleibende Threads für diesen Bezeichner]
+ */
+function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
 ```
 
 Schauen Sie sich dazu das Beispiel auf [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml) an.
@@ -373,11 +373,11 @@ windowStateChangedHook
 ### Methodenaufruf und Parameter
 ```js
 /**
-  * Diese Funktion wird aufgerufen, nachdem ein WindowStateChange-Ereignis ausgelöst wurde
-  *
-  * @param {QString} windowState - Der neue Fensterstatus, Parameterwert kann "minimiert", "maximiert", "Vollbild", "aktiv" oder "nostate" sein.
-  */
-Funktion windowStateChangedHook (windowState);
+ * Diese Funktion wird aufgerufen, nachdem ein WindowStateChange-Ereignis ausgelöst wurde
+ *
+ * @param {QString} windowState - Der neue Fensterstatus; Parameterwert kann "minimized", "maximized", "fullscreen", "active" oder "nostate" sein.
+ */
+function windowStateChangedHook(windowState);
 ```
 
 Schauen Sie sich dazu das Beispiel auf [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/window-state-changed.qml) an.
@@ -385,15 +385,15 @@ Schauen Sie sich dazu das Beispiel auf [window-state-changed.qml](https://github
 workspaceSwitchedHook
 ----------------------
 
-Dieser Hook wird aufgerufen, wenn Workspaces gewechselt werden.
+Dieser Hook wird aufgerufen, wenn Arbeitsbereiche gewechselt werden.
 
 ### Methodenaufruf und Parameter
 ```js
 /**
- * Diese Funktion wird aufgerufen, wenn Workspaces umgeschaltet werden
+ * Diese Funktion wird aufgerufen, wenn Arbeitsbereiche gewechselt werden
  *
- * @param oldUuid old uuid of workspace
- * @param newUuid new uuid of workspace
+ * @param oldUuid Alte Arbeitsbereich-UUID
+ * @param newUuid Neue Arbeitsbereich-UUID
  */
 function workspaceSwitchedHook(oldUuid, newUuid);
 ```

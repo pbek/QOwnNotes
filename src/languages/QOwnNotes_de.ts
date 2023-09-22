@@ -1514,7 +1514,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="533"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopie</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="646"/>
@@ -2345,12 +2345,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1314"/>
 <source>&amp;Setup note folders / subfolders</source>
-<translation type="unfinished">&amp;Setup note folders / subfolders</translation>
+<translation>&amp;Notizordner / Unterordner einstellen</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1317"/>
 <source>Setup note folders / subfolders</source>
-<translation type="unfinished">Setup note folders / subfolders</translation>
+<translation>Notizordner / Unterordner einstellen</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1350"/>
@@ -2870,12 +2870,12 @@
 <message>
 <location filename="../mainwindow.ui" line="2704"/>
 <source>&amp;Load Todo List items</source>
-<translation type="unfinished">&amp;Load Todo List items</translation>
+<translation>&amp;To-do-Listenelement laden</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2713"/>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Nextcloud Deck-Kartenlink einfügen</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2721"/>
@@ -3386,7 +3386,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <location filename="../mainwindow.cpp" line="11714"/>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>Notizenpfad '%1' wurde in die Zwischenablage kopiert</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6459"/>
@@ -4243,17 +4243,17 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="14"/>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Nextcloud Deck-Kartenlink einfügen</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="95"/>
 <source>Create card and insert link into current note</source>
-<translation type="unfinished">Create card and insert link into current note</translation>
+<translation>Karte erstellen und Link in aktuelle Notiz einfügen</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="98"/>
 <source>&amp;Save</source>
-<translation type="unfinished">&amp;Save</translation>
+<translation>&amp;Speichern</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="115"/>
@@ -4286,22 +4286,22 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="117"/>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Fehler beim Erstellen der Karte</translation>
 </message>
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="118"/>
 <source>Creating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating a card failed with status code %1 and message: %2</translation>
+<translation>Erstellen einer Karte fehlgeschlagen mit Status-Code %1 und Nachricht: %2</translation>
 </message>
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="230"/>
 <source>Error while loading boards</source>
-<translation type="unfinished">Error while loading boards</translation>
+<translation>Fehler beim Boards laden</translation>
 </message>
 <message>
 <location filename="../services/nextclouddeckservice.cpp" line="231"/>
 <source>Loading the boards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
+<translation>Laden des Boards fehlgeschlagen mit Status-Code %1 und Nachricht: %2</translation>
 </message>
 </context>
 <context>
@@ -5304,7 +5304,7 @@ Are the folder and the file writeable?</source>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
 <source>To search for a script please enter your query text.</source>
-<translation type="unfinished">To search for a script please enter your query text.</translation>
+<translation>Um nach einem Skript zu suchen, bitte Suchtext eingeben.</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
@@ -6645,7 +6645,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1394"/>
 <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
-<translation type="unfinished">You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</translation>
+<translation>Dieser Pfad ist in den &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt;-Einstellungen zu finden</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1436"/>
@@ -6750,18 +6750,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4049"/>
 <source>Start application in read-only mode</source>
-<translation>Starte die Anwendung im "Lesen"-Modus</translation>
+<translation>Starte die Anwendung im Nur-Lesen-Modus</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4239"/>
 <source>When inactive, enter read-only mode automatically after:</source>
-<translation>Wenn inaktiv, dann gehe automatisch in den Nur-Lese-Modus nach:</translation>
+<translation>Wenn inaktiv, dann gehe automatisch in den Nur-Lesen-Modus nach:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4246"/>
 <source> sec</source>
 <extracomment>short for seconds</extracomment>
-<translation>Sek.</translation>
+<translation> Sek.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4344"/>
@@ -6912,7 +6912,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5697"/>
 <source>Select the path of the git binary</source>
-<translation type="unfinished">Select the path of the git binary</translation>
+<translation>Den Pfad des Git-Binary auswählen</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5794"/>
@@ -6988,7 +6988,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6676"/>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+<translation>Eine Websocket-Verbindung wird zu diesem Server geöffnet um als Brücke zwischen der QOwnNotes Web-App und der QOwnNotes Desktopanwendung zu dienen.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6737"/>
@@ -7828,7 +7828,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="580"/>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
-<translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
+<translation>Notizenpfad &lt;b&gt;%1&lt;/b&gt; auf Server gefunden</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="1366"/>
@@ -7999,12 +7999,12 @@ Fehlermeldung: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4276"/>
 <source>Board Id: %1</source>
-<translation type="unfinished">Board Id: %1</translation>
+<translation>Board-ID: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4288"/>
 <source>Stack Id: %1</source>
-<translation>Stack ID: %1</translation>
+<translation>Stack-ID: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2708"/>
