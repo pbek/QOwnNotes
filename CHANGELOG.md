@@ -5,6 +5,8 @@
   from Evernote was fixed (for [#2859](https://github.com/pbek/QOwnNotes/issues/2859))
 - the missing qtconcurrent package was added to the Gentoo build process
   (for [#2857](https://github.com/pbek/QOwnNotes/pull/2857), thank you, @FireUnderTheMountain)
+- the `!` character will now also be highlighted in the note text edit for images
+  (for [#192](https://github.com/pbek/qmarkdowntextedit/pull/192), thank you, @tim-gromeyer)
 
 ## 23.9.5
 - an issue with importing the content of notes from Evernote with the `evernote-export4`
