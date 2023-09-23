@@ -123,6 +123,8 @@ Note EvernoteImportDialog::parseNote(QXmlStreamReader &xml, bool importMetaData)
     QString content;
     QStringList tagNames;
     _metaDataTableText.clear();
+    _mediaFileDataHash.clear();
+    _attachmentFileDataHash.clear();
 
     xml.readNext();
 
