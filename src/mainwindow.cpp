@@ -11485,6 +11485,10 @@ void MainWindow::on_noteEditTabWidget_currentChanged(int index) {
         return;
     }
 
+    // Allow the subfolder of the note to be selected in the subfolder list
+    // See: https://github.com/pbek/QOwnNotes/issues/2861
+    setShowNotesFromAllNoteSubFolders(false);
+
     setCurrentNoteFromNoteId(noteId);
     widget->setLayout(ui->noteEditTabWidgetLayout);
 

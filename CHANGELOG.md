@@ -3,6 +3,9 @@
 ## 23.9.7
 - Evernote notes with malformed XML will now stop the import process when importing
   them in the Evernote import (for [#2858](https://github.com/pbek/QOwnNotes/issues/2858))
+- the `All notes` selection in the subfolder panel will now be unset when
+  clicking a note tab, so that the subfolder of a note can be selected
+  (for [#2861](https://github.com/pbek/QOwnNotes/issues/2861))
 
 ## 23.9.6
 - an issue with duplicate imported media files and attachments when importing notes
