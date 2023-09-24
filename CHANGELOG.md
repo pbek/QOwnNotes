@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.9.7
+- Evernote notes with malformed XML will now stop the import process when importing
+  them in the Evernote import (for [#2858](https://github.com/pbek/QOwnNotes/issues/2858))
+
 ## 23.9.6
 - an issue with duplicate imported media files and attachments when importing notes
   from Evernote was fixed (for [#2859](https://github.com/pbek/QOwnNotes/issues/2859))

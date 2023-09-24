@@ -4,6 +4,7 @@
 #include <entities/notesubfolder.h>
 #include <entities/tag.h>
 #include <utils/misc.h>
+#include <utils/gui.h>
 
 #include <QCryptographicHash>
 #include <QDebug>
@@ -180,6 +181,14 @@ Note EvernoteImportDialog::parseNote(QXmlStreamReader &xml, bool importMetaData)
                     parseMetaDataItem(xml);
                 }
             }
+        } else if (xml.tokenType() == QXmlStreamReader::Invalid) {
+            // Stop parsing on invalid tokens
+            // See: https://github.com/pbek/QOwnNotes/issues/2858
+            Utils::Gui::warning(this, tr("Invalid XML!"),
+                                tr("Invalid XML found in note <b>%1</b>! The import might be stopped at this point.")
+                                    .arg(title),
+                                "evernote-import-invalid-xml");
+            break;
         }
 
         xml.readNext();
