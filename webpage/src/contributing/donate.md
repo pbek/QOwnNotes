@@ -56,3 +56,17 @@ You can **donate Ethereum ETC** to this Ethereum ETC address:
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D
 ```
+
+## Privacy Coins
+
+You can **donate Monero XMR** to this Monero XMR address:
+
+```
+QOwnNotes Monero Address
+```
+
+You can **donate Pirate Chain ARRR** to this Pirate Chain ARRR address:
+
+```
+QOwnNotes Pirate Chain Address
+```
