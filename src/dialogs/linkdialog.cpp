@@ -52,7 +52,9 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
 
     if (page == LinkDialog::TextLinkPage) {
         QClipboard *clipboard = QApplication::clipboard();
-        const QString text = clipboard->text().trimmed();
+        const QString text = clipboard->text()
+                                 .remove(QStringLiteral("\n"))
+                                 .trimmed();
         const QUrl url(text);
 
         // set text from clipboard
