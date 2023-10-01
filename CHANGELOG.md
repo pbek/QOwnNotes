@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.10.0
+- newlines are now removed from links from the clipboard in the link dialog
+  (for [#2726](https://github.com/pbek/QOwnNotes/issues/2726))
+
 ## 23.9.7
 - Evernote notes with malformed XML will now stop the import process when importing
   them in the Evernote import (for [#2858](https://github.com/pbek/QOwnNotes/issues/2858))
