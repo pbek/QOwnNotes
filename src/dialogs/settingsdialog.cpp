@@ -915,6 +915,9 @@ void SettingsDialog::storePanelSettings() {
     settings.setValue(QStringLiteral("noteSubfoldersPanelShowFullPath"),
                       ui->noteSubfoldersPanelShowFullPathCheckBox->isChecked());
 
+    settings.setValue(QStringLiteral("noteSubfoldersPanelTabsUnsetAllNotesSelection"),
+                      ui->noteSubfoldersPanelTabsUnsetAllNotesSelectionCheckBox->isChecked());
+
     ui->noteSubfoldersPanelSortAlphabeticalRadioButton->isChecked()
         ? settings.setValue(QStringLiteral("noteSubfoldersPanelSort"), SORT_ALPHABETICAL)
         : settings.setValue(QStringLiteral("noteSubfoldersPanelSort"), SORT_BY_LAST_CHANGE);
@@ -1421,6 +1424,9 @@ void SettingsDialog::readPanelSettings() {
         ui->noteSubfoldersPanelShowRootFolderNameCheckBox->setChecked(false);
         ui->noteSubfoldersPanelShowFullPathCheckBox->setEnabled(false);
     }
+
+    ui->noteSubfoldersPanelTabsUnsetAllNotesSelectionCheckBox->setChecked(
+        settings.value(QStringLiteral("noteSubfoldersPanelTabsUnsetAllNotesSelection")).toBool());
 
     ui->noteSubfoldersPanelShowFullPathCheckBox->setChecked(
         settings.value(QStringLiteral("noteSubfoldersPanelShowFullPath")).toBool());

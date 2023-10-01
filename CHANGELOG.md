@@ -7,6 +7,9 @@
   import instead of the root folder (for [#2863](https://github.com/pbek/QOwnNotes/issues/2863))
 - the seconds of the selected time will now be set to 0 instead of the current seconds
   of the time in the Nextcloud Deck dialog (for [#2789](https://github.com/pbek/QOwnNotes/issues/2789))
+- there now is a setting for the feature to unset the `All notes` selection in
+  the subfolder panel when clicking a note tab in the *Panels settings*
+  (for [#2861](https://github.com/pbek/QOwnNotes/issues/2861))
 
 ## 23.9.7
 - Evernote notes with malformed XML will now stop the import process when importing
