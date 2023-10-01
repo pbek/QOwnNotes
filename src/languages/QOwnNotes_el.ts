@@ -763,112 +763,122 @@
 <translation>Εισαγωγή συνημμένων</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="66"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="67"/>
 <source>Enex files</source>
 <translation>Aρχεία enex</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="67"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="68"/>
 <source>Select Evernote enex file to import</source>
 <translation>Επιλέξτε το αρχείο enex Evernote για εισαγωγή</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="272"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="190"/>
+<source>Invalid XML!</source>
+<translation type="unfinished">Invalid XML!</translation>
+</message>
+<message>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="191"/>
+<source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
+<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+</message>
+<message>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="295"/>
 <source>Basic attributes</source>
 <translation>Βασικά χαρακτηριστικά</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="273"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="296"/>
 <source>Created date</source>
 <translation>Ημερομηνία δημιουργίας</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="274"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="297"/>
 <source>Updated date</source>
 <translation>Ημερομηνία ενημέρωσης</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="276"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="299"/>
 <source>Note attributes</source>
 <translation>Χαρακτηριστικά σημείωσης</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="277"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="300"/>
 <source>Subject date</source>
 <translation>Ημερομηνία θέματος</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="279"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="302"/>
 <source>Latitude</source>
 <translation>Γεωγραφικό πλάτος</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="281"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="304"/>
 <source>Longitude</source>
 <translation>Γεωγραφικό μήκος</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="283"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="306"/>
 <source>Altitude</source>
 <translation>Υψόμετρο</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="285"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="308"/>
 <source>Author</source>
 <translation>Συγγραφέας</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="287"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="310"/>
 <source>Source</source>
 <translation>Πηγή</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="289"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="312"/>
 <source>Source URL</source>
 <translation>URL πηγής</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="291"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="314"/>
 <source>Source application</source>
 <translation>Εφαρμογή πηγής</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="294"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="317"/>
 <source>Reminder order</source>
 <translation>Σειρά υπενθύμισης</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="296"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="319"/>
 <source>Reminder time</source>
 <translation>Χρόνος υπενθύμισης</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="298"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="321"/>
 <source>Reminder done time</source>
 <translation>Χρόνος ολοκλήρωσης υπενθύμισης</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="301"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="324"/>
 <source>Place name</source>
 <translation>Όνομα τοποθεσίας</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="303"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="326"/>
 <source>Content class</source>
 <translation>Κατηγορία περιεχομένου</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="305"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="328"/>
 <source>Application data</source>
 <translation>Δεδομένα εφαρμογής</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="705"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="728"/>
 <source>Attribute</source>
 <translation>Χαρακτηριστικό</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="705"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="728"/>
 <source>Value</source>
 <translation>Τιμή</translation>
 </message>
@@ -1514,7 +1524,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="533"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Αντιγραφή</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="646"/>
@@ -1866,14 +1876,14 @@
 <translation>Αναζήτηση σημείωσης προς σύνδεση</translation>
 </message>
 <message>
-<location filename="../dialogs/linkdialog.cpp" line="297"/>
-<location filename="../dialogs/linkdialog.cpp" line="372"/>
+<location filename="../dialogs/linkdialog.cpp" line="299"/>
+<location filename="../dialogs/linkdialog.cpp" line="374"/>
 <source>Select file to link to</source>
 <translation>Επιλέξτε αρχείο για σύνδεση</translation>
 </message>
 <message>
-<location filename="../dialogs/linkdialog.cpp" line="334"/>
-<location filename="../dialogs/linkdialog.cpp" line="378"/>
+<location filename="../dialogs/linkdialog.cpp" line="336"/>
+<location filename="../dialogs/linkdialog.cpp" line="380"/>
 <source>Select directory to link to</source>
 <translation>Επιλέξτε τον κατάλογο στον οποίο θέλετε να συνδεθείτε</translation>
 </message>
@@ -3042,7 +3052,7 @@ Restore current note?</source>
 <location filename="../mainwindow.cpp" line="5346"/>
 <location filename="../mainwindow.cpp" line="6628"/>
 <location filename="../mainwindow.cpp" line="9538"/>
-<location filename="../mainwindow.cpp" line="11691"/>
+<location filename="../mainwindow.cpp" line="11697"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Ακύρωση</translation>
 </message>
@@ -3378,17 +3388,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Αποθήκευση προσωρινής εικόνας</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11688"/>
+<location filename="../mainwindow.cpp" line="11694"/>
 <source>Nextcloud Deck support disabled!</source>
 <translation type="unfinished">Nextcloud Deck support disabled!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11689"/>
+<location filename="../mainwindow.cpp" line="11695"/>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11714"/>
+<location filename="../mainwindow.cpp" line="11720"/>
 <source>Note path '%1' was copied to the clipboard</source>
 <translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
 </message>
@@ -3487,12 +3497,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Βρέθηκε ενημέρωση σεναρίου (δέσμης ενεργειών)!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11593"/>
+<location filename="../mainwindow.cpp" line="11599"/>
 <source>Toggle note stickiness</source>
 <translation>Εναλλαγή κολλώδους σημείωσης</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11598"/>
+<location filename="../mainwindow.cpp" line="11604"/>
 <source>Close other note tabs</source>
 <translation>Κλείσιμο των υπολοίπων καρτελών σημειώσεων</translation>
 </message>
@@ -4180,7 +4190,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../mainwindow.cpp" line="5326"/>
 <location filename="../mainwindow.cpp" line="5346"/>
 <location filename="../mainwindow.cpp" line="9538"/>
-<location filename="../mainwindow.cpp" line="11691"/>
+<location filename="../mainwindow.cpp" line="11697"/>
 <source>Open &amp;settings</source>
 <translation>Άνοιγμα &amp;ρυθμίσεων</translation>
 </message>
@@ -4828,17 +4838,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Η εντολή &lt;code&gt;%1&lt;/code&gt; με παραμέτρους &lt;code&gt;%2&lt;/code&gt; απέτυχε!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4029"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4035"/>
 <source>New connection</source>
 <translation>Νέα σύνδεση</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4221"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4227"/>
 <source>Login flow succeeded</source>
 <translation type="unfinished">Login flow succeeded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4222"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4228"/>
 <source>Username and password were set successfully!</source>
 <translation type="unfinished">Username and password were set successfully!</translation>
 </message>
@@ -5910,7 +5920,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4083"/>
 <location filename="../dialogs/settingsdialog.ui" line="5618"/>
-<location filename="../dialogs/settingsdialog.ui" line="6185"/>
+<location filename="../dialogs/settingsdialog.ui" line="6192"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>Ενδέχεται να αντιμετωπίσετε προβλήματα συγχρονισμού με παλαιότερες εκδόσεις του συγχρονισμού του ownCloud όταν υπολείπεστε κατά πολύ των 10 δευτερολέπτων.
@@ -5933,10 +5943,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4557"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2118"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2127"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4095"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4099"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2124"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2133"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4101"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4105"/>
 <source>Database</source>
 <translation>Βάση δεδομένων</translation>
 </message>
@@ -5957,7 +5967,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4512"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2190"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2196"/>
 <source>Clear app data and exit</source>
 <translation>Εκκαθάριση δεδομένων εφαρμογής και έξοδος</translation>
 </message>
@@ -6553,20 +6563,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4347"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3778"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3784"/>
 <source>Reset message boxes</source>
 <translation>Επαναφορά πλαισίων μηνυμάτων</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4534"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3844"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3863"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3850"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3869"/>
 <source>Import settings</source>
 <translation>Εισαγωγή ρυθμίσεων</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4541"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3810"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3816"/>
 <source>Export settings</source>
 <translation>Εξαγωγή ρυθμίσεων</translation>
 </message>
@@ -6917,8 +6927,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Εσοχή:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5942"/>
-<location filename="../dialogs/settingsdialog.ui" line="5951"/>
+<location filename="../dialogs/settingsdialog.ui" line="5905"/>
+<location filename="../dialogs/settingsdialog.ui" line="5914"/>
 <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>Τακτικές εκφράσεις υποφακέλων σημειώσεων προς παράβλεψη, διαχωρισμένες με "·"
 </translation>
@@ -6940,140 +6950,145 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5945"/>
+<location filename="../dialogs/settingsdialog.ui" line="5908"/>
 <source>Ignored subfolders</source>
 <translation>Παράλειψη υποφακέλων
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5961"/>
+<location filename="../dialogs/settingsdialog.ui" line="5924"/>
 <source>Reset ignored subfolders</source>
 <translation>Επαναφορά υποφακέλων που έχουν παραλειφθεί 
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5997"/>
+<location filename="../dialogs/settingsdialog.ui" line="5978"/>
+<source>Clicking a note tab unsets 'All notes' selection</source>
+<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="6004"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
 <translation>Επαναφέρετε τις ανοιχτές καρτέλες σημειώσεων κατά την εκκίνηση της εφαρμογής και όταν αλλάζουν οι φάκελοι σημειώσεων</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6020"/>
+<location filename="../dialogs/settingsdialog.ui" line="6027"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
 <translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6089"/>
+<location filename="../dialogs/settingsdialog.ui" line="6096"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
 <translation>Απόκρυψη 'καταμέτρησης σημειώσεων' με ετικέτες (αυξάνει την απόδοση)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6125"/>
+<location filename="../dialogs/settingsdialog.ui" line="6132"/>
 <source>Show the number of matches in each note</source>
 <translation>Εμφάνιση του αριθμού αντιστοιχιών σε κάθε σημείωση</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6524"/>
+<location filename="../dialogs/settingsdialog.ui" line="6531"/>
 <source>Command snippets</source>
 <translation type="unfinished">Command snippets</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6533"/>
+<location filename="../dialogs/settingsdialog.ui" line="6540"/>
 <source>Tag name for commands notes</source>
 <translation type="unfinished">Tag name for commands notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6540"/>
+<location filename="../dialogs/settingsdialog.ui" line="6547"/>
 <source>Commands tag:</source>
 <translation type="unfinished">Commands tag:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6560"/>
+<location filename="../dialogs/settingsdialog.ui" line="6567"/>
 <source>Commands note name:</source>
 <translation type="unfinished">Commands note name:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6570"/>
+<location filename="../dialogs/settingsdialog.ui" line="6577"/>
 <source>Note name for adding new commands</source>
 <translation type="unfinished">Note name for adding new commands</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6610"/>
+<location filename="../dialogs/settingsdialog.ui" line="6617"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
 <translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6647"/>
+<location filename="../dialogs/settingsdialog.ui" line="6654"/>
 <source>QOwnNotes web application</source>
 <translation type="unfinished">QOwnNotes web application</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6676"/>
+<location filename="../dialogs/settingsdialog.ui" line="6683"/>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6737"/>
+<location filename="../dialogs/settingsdialog.ui" line="6744"/>
 <source>Server URL:</source>
 <translation type="unfinished">Server URL:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6794"/>
+<location filename="../dialogs/settingsdialog.ui" line="6801"/>
 <source>Show QR code</source>
 <translation type="unfinished">Show QR code</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6686"/>
+<location filename="../dialogs/settingsdialog.ui" line="6693"/>
 <source>Security token:</source>
 <translation type="unfinished">Security token:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6489"/>
+<location filename="../dialogs/settingsdialog.ui" line="6496"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
 <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6505"/>
+<location filename="../dialogs/settingsdialog.ui" line="6512"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
 <translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6547"/>
+<location filename="../dialogs/settingsdialog.ui" line="6554"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6744"/>
+<location filename="../dialogs/settingsdialog.ui" line="6751"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
 <translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6754"/>
+<location filename="../dialogs/settingsdialog.ui" line="6761"/>
 <source>Copy security token to clipboard</source>
 <translation type="unfinished">Copy security token to clipboard</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6707"/>
+<location filename="../dialogs/settingsdialog.ui" line="6714"/>
 <source>Generate new security token</source>
 <translation type="unfinished">Generate new security token</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6768"/>
+<location filename="../dialogs/settingsdialog.ui" line="6775"/>
 <source>Reset the URL to default</source>
 <translation type="unfinished">Reset the URL to default</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6597"/>
+<location filename="../dialogs/settingsdialog.ui" line="6604"/>
 <source>QOwnNotes web application support</source>
 <translation type="unfinished">QOwnNotes web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6603"/>
+<location filename="../dialogs/settingsdialog.ui" line="6610"/>
 <source>Enable web application support</source>
 <translation type="unfinished">Enable web application support</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5758"/>
-<location filename="../dialogs/settingsdialog.ui" line="6811"/>
+<location filename="../dialogs/settingsdialog.ui" line="6818"/>
 <source>Note list panel</source>
 <translation>Πίνακας λίστας σημειώσεων</translation>
 </message>
@@ -7083,171 +7098,171 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Εμφάνιση σημειώσεων στη λίστα σημειώσεων με προεπισκόπηση</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6817"/>
+<location filename="../dialogs/settingsdialog.ui" line="6824"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
 <translation>Αντί για λίστα σημειώσεων χρησιμοποιήστε δέντρο σημειώσεων με όλους τους υποφακέλους (εάν είναι ενεργοποιημένοι για τον φάκελο σημειώσεων)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6135"/>
+<location filename="../dialogs/settingsdialog.ui" line="6142"/>
 <source>Note folder panel</source>
 <translation>Πίνακας φακέλου σημειώσεων</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6141"/>
+<location filename="../dialogs/settingsdialog.ui" line="6148"/>
 <source>Show note folders as buttons instead of in a select box</source>
 <translation>Εμφάνιση των φακέλων σημειώσεων ως κουμπιών αντί σε ένα πλαίσιο επιλογής</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6247"/>
+<location filename="../dialogs/settingsdialog.ui" line="6254"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
 <translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6283"/>
+<location filename="../dialogs/settingsdialog.ui" line="6290"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
 <translation>Τα πλαίσια μπορούν να ενεργοποιηθούν και να απενεργοποιηθούν στο κύριο μενού &lt;i&gt; Window / Panels &lt;/ i&gt; και μπορείτε επίσης να διαμορφώσετε διαφορετικά &lt;i&gt; Workspaces &lt;/ i&gt; για διαφορετικές διαμορφώσεις πλαισίων.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6360"/>
+<location filename="../dialogs/settingsdialog.ui" line="6367"/>
 <source>Bookmarks</source>
 <translation>Σελιδοδείκτες</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6366"/>
-<location filename="../dialogs/settingsdialog.ui" line="6530"/>
+<location filename="../dialogs/settingsdialog.ui" line="6373"/>
+<location filename="../dialogs/settingsdialog.ui" line="6537"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
 <translation>Οι σημειώσεις με αυτήν την ετικέτα θα χρησιμοποιηθούν για την ανάκτηση σελιδοδεικτών</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6369"/>
+<location filename="../dialogs/settingsdialog.ui" line="6376"/>
 <source>Tag name for bookmarks notes</source>
 <translation>Όνομα ετικέτας για σημειώσεις σελιδοδεικτών</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6376"/>
+<location filename="../dialogs/settingsdialog.ui" line="6383"/>
 <source>Bookmarks tag:</source>
 <translation>Ετικέτα σελιδοδεικτών:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6383"/>
+<location filename="../dialogs/settingsdialog.ui" line="6390"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>Από προεπιλογή, η επέκταση του προγράμματος περιήγησης εμφανίζει όλους τους συνδέσμους της τρέχουσας σημείωσης. Μπορείτε επίσης να το κάνετε να εμφανίζει συνδέσμους ειδικών σελιδοδεικτών για σημειώσεις με συγκεκριμένη ετικέτα. Για περισσότερες πληροφορίες σχετικά με τη σύνταξη συνδέσμων σελιδοδεικτών, κάντε κλικ  &lt;a href="%1"&gt; εδώ &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6396"/>
+<location filename="../dialogs/settingsdialog.ui" line="6403"/>
 <source>Bookmarks note name:</source>
 <translation>Ονομασία σημείωσης σελιδοδεικτών:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6403"/>
-<location filename="../dialogs/settingsdialog.ui" line="6567"/>
+<location filename="../dialogs/settingsdialog.ui" line="6410"/>
+<location filename="../dialogs/settingsdialog.ui" line="6574"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
 <translation>Αυτή η σημείωση θα χρησιμοποιηθεί για την προσθήκη νέων σελιδοδεικτών από την επέκταση του προγράμματος περιήγησης</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6406"/>
+<location filename="../dialogs/settingsdialog.ui" line="6413"/>
 <source>Note name for adding new bookmarks</source>
 <translation>Ονομασία σημείωσης για την προσθήκη νέων σελιδοδεικτών</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6416"/>
+<location filename="../dialogs/settingsdialog.ui" line="6423"/>
 <source>Web socket server</source>
 <translation>Διακομιστής υποδοχής δικτύου</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6422"/>
+<location filename="../dialogs/settingsdialog.ui" line="6429"/>
 <source>Socket server port:</source>
 <translation>Θύρα διακομιστή υποδοχής:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6442"/>
+<location filename="../dialogs/settingsdialog.ui" line="6449"/>
 <source>Reset the socket server port</source>
 <translation type="unfinished">Reset the socket server port</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6456"/>
-<location filename="../dialogs/settingsdialog.ui" line="6693"/>
+<location filename="../dialogs/settingsdialog.ui" line="6463"/>
+<location filename="../dialogs/settingsdialog.ui" line="6700"/>
 <source>Show security token</source>
 <translation>Εμφάνιση αδειοδοτικού ασφαλείας</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6476"/>
+<location filename="../dialogs/settingsdialog.ui" line="6483"/>
 <source>Web socket server support</source>
 <translation>Υποστήριξη διακομιστή υποδοχής δικτύου</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6482"/>
+<location filename="../dialogs/settingsdialog.ui" line="6489"/>
 <source>Enable socket server</source>
 <translation>Ενεργοποιήστε τον διακομιστή υποδοχής</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5981"/>
+<location filename="../dialogs/settingsdialog.ui" line="5988"/>
 <source>Note edit panel</source>
 <translation>Πίνακας επεξεργασίας σημειώσεων</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5987"/>
+<location filename="../dialogs/settingsdialog.ui" line="5994"/>
 <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
 <translation>Αν αυτό είναι απενεργοποιημένο, μπορείτε να δημιουργήσετε πιο σύνθετες διατάξεις πίνακα, αλλά όλα τα πλαίσια θα αλλάξουν σε μέγεθος αν αλλάξει το μέγεθος του παραθύρου</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5990"/>
+<location filename="../dialogs/settingsdialog.ui" line="5997"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
 <translation>Χρησιμοποιήστε τον πίνακα επεξεργασίας σημειώσεων ως σταθερό κεντρικό γραφικό στοιχείο για αλλαγή μεγέθους σε περίπτωση αλλαγής μεγέθους του παραθύρου ή άλλων πλαισίων</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6112"/>
+<location filename="../dialogs/settingsdialog.ui" line="6119"/>
 <source>Note search panel</source>
 <translation>Πίνακας αναζήτησης σημειώσεων</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6118"/>
+<location filename="../dialogs/settingsdialog.ui" line="6125"/>
 <source>Disable auto-completion of previous searches</source>
 <translation>Απενεργοποίηση αυτόματης συμπλήρωσης προηγούμενων αναζητήσεων</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6007"/>
+<location filename="../dialogs/settingsdialog.ui" line="6014"/>
 <source>Navigation panel</source>
 <translation>Πίνακας πλοήγησης</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6013"/>
+<location filename="../dialogs/settingsdialog.ui" line="6020"/>
 <source>Hide navigation item search bar</source>
 <translation>Απόκρυψη γραμμής αναζήτησης στοιχείου πλοήγησης</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6155"/>
+<location filename="../dialogs/settingsdialog.ui" line="6162"/>
 <source>Local trash settings</source>
 <translation>Ρυθμίσεις τοπικού κάδου απορριμμάτων</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6189"/>
+<location filename="../dialogs/settingsdialog.ui" line="6196"/>
 <source>Remove trashed notes after:</source>
 <translation>Καταργήστε τις σημειώσεις του κάδου απορριμάτων μετά από:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6196"/>
+<location filename="../dialogs/settingsdialog.ui" line="6203"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
 <translation>μέρες</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6215"/>
+<location filename="../dialogs/settingsdialog.ui" line="6222"/>
 <source>Automatically remove trashed notes after a certain time</source>
 <translation>Αυτόματη κατάργηση σημειώσεων του κάδου απορριμάτων μετά από ορισμένο χρονικό διάστημα</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6241"/>
+<location filename="../dialogs/settingsdialog.ui" line="6248"/>
 <source>Local trash support</source>
 <translation>Υποστήριξη τοπικού κάδου απορριμάτων</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6264"/>
+<location filename="../dialogs/settingsdialog.ui" line="6271"/>
 <source>Layout selector</source>
 <translation>Επιλογέας διάταξης</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6270"/>
+<location filename="../dialogs/settingsdialog.ui" line="6277"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
 <translation>Μπορείτε να ορίσετε μια νέα διάταξη εδώ. Λάβετε υπόψη ότι πάντα μπορείτε να τροποποιήσετε τη θέση των πινάκων με το κουμπί &lt;i&gt;Ξεκλείδωμα πινάκων&lt;/i&gt;.</translation>
 </message>
@@ -7294,35 +7309,35 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Μην ξεχάσετε να ενεργοποιήσετε την υποστήριξη git για τους φακέλους σημειώσεων και να διαμορφώσετε το όνομα και τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας για τον πελάτη git, για παράδειγμα με αυτές τις εντολές τερματικού:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6030"/>
+<location filename="../dialogs/settingsdialog.ui" line="6037"/>
 <source>Tags panel</source>
 <translation>Πίνακας ετικετών</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5819"/>
-<location filename="../dialogs/settingsdialog.ui" line="5905"/>
-<location filename="../dialogs/settingsdialog.ui" line="6059"/>
+<location filename="../dialogs/settingsdialog.ui" line="5955"/>
+<location filename="../dialogs/settingsdialog.ui" line="6066"/>
 <source>Order</source>
 <translation>Σειρά</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5828"/>
-<location filename="../dialogs/settingsdialog.ui" line="5911"/>
-<location filename="../dialogs/settingsdialog.ui" line="6065"/>
+<location filename="../dialogs/settingsdialog.ui" line="5961"/>
+<location filename="../dialogs/settingsdialog.ui" line="6072"/>
 <source>Ascending</source>
 <translation>Αύξουσα</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5835"/>
-<location filename="../dialogs/settingsdialog.ui" line="5918"/>
-<location filename="../dialogs/settingsdialog.ui" line="6072"/>
+<location filename="../dialogs/settingsdialog.ui" line="5968"/>
+<location filename="../dialogs/settingsdialog.ui" line="6079"/>
 <source>Descending</source>
 <translation>Φθίνουσα</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5771"/>
-<location filename="../dialogs/settingsdialog.ui" line="5875"/>
-<location filename="../dialogs/settingsdialog.ui" line="6036"/>
+<location filename="../dialogs/settingsdialog.ui" line="5868"/>
+<location filename="../dialogs/settingsdialog.ui" line="6043"/>
 <source>Sort</source>
 <translation>Ταξινόμηση</translation>
 </message>
@@ -7333,18 +7348,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5777"/>
-<location filename="../dialogs/settingsdialog.ui" line="5881"/>
-<location filename="../dialogs/settingsdialog.ui" line="6042"/>
+<location filename="../dialogs/settingsdialog.ui" line="5874"/>
+<location filename="../dialogs/settingsdialog.ui" line="6049"/>
 <source>Alphabetical</source>
 <translation>Αλφαβητική</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6049"/>
+<location filename="../dialogs/settingsdialog.ui" line="6056"/>
 <source>By last change / use</source>
 <translation>Κατά την τελευταία αλλαγή / χρήση</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6082"/>
+<location filename="../dialogs/settingsdialog.ui" line="6089"/>
 <source>Hide 'Find or create tag' search</source>
 <translation>Απόκρυψη αναζήτησης 'Εύρεση ή δημιουργία ετικετών'</translation>
 </message>
@@ -7354,33 +7369,33 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Πίνακας υποφακέλων σημειώσεων</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5868"/>
+<location filename="../dialogs/settingsdialog.ui" line="5898"/>
 <source>Show with full path</source>
 <translation>Εμφάνιση με πλήρη διαδρομή</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5784"/>
-<location filename="../dialogs/settingsdialog.ui" line="5888"/>
+<location filename="../dialogs/settingsdialog.ui" line="5881"/>
 <source>By last change</source>
 <translation>Κατά την τελευταία αλλαγή </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5898"/>
+<location filename="../dialogs/settingsdialog.ui" line="5941"/>
 <source>Show root folder name</source>
 <translation>Εμφάνιση ονόματος ριζικού φακέλου</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5928"/>
+<location filename="../dialogs/settingsdialog.ui" line="5948"/>
 <source>Hide 'Find or create note subfolder' search</source>
 <translation>Απόκρυψη αναζήτησης 'Εύρεση ή δημιουργία υποφακέλου σημειώσεων'</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5935"/>
+<location filename="../dialogs/settingsdialog.ui" line="5891"/>
 <source>Display note subfolders as full tree</source>
 <translation>Εμφάνιση υποφακέλων σημειώσεων ως πλήρες δέντρο</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2704"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2710"/>
 <source>Search script repository</source>
 <translation>Αναζήτηση στο αποθετήριο σεναρίου (δέσμης ενεργειών)</translation>
 </message>
@@ -7806,8 +7821,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4624"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2137"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4075"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2143"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4081"/>
 <source>Debug information</source>
 <translation>Πληροφορίες αποσφαλμάτωσης</translation>
 </message>
@@ -7852,17 +7867,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1366"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1369"/>
 <source>Automatic (needs restart)</source>
 <translation>Αυτόματο (χρειάζεται επανεκκίνηση)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1654"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1660"/>
 <source>Shortcut already assigned</source>
 <translation>Η συντομεύση έχει ήδη εκχωριστεί</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1847"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1853"/>
 <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -7871,7 +7886,7 @@ QOwnNotesAPI version: %2</source>
 Έκδοση QOwnNotesAPI: %2</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1859"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1865"/>
 <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -7882,153 +7897,153 @@ Connection error message: </source>
 Μήνυμα σφάλματος σύνδεσης: </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2128"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2134"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
 <translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2138"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2144"/>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Παρακαλώ μην χρησιμοποιείς αυτό στον ανιχνευτή θεμάτων, αντέγραψε την πληροφορία εκσφαλμάτωσης κατευθείαν στο θέμα.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2145"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2151"/>
 <source>Markdown files</source>
 <translation>Αρχεία markdown </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2172"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2178"/>
 <source>Disable usage tracking</source>
 <translation>Απενεργοποιήστε την παρακολούθηση χρήσης</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2173"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2179"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Τα ανώνυμα δεδομένα χρήσης βοηθούν να αποφασίσετε ποια μέρη του QOwnNotes θα βελτιωθούν στη συνέχεια και να εντοπίσετε και να διορθώσετε σφάλματα. &lt;br /&gt; Παρακαλώ απενεργοποιήστε το μόνο αν πραγματικά δεν μπορείτε να ζήσετε με αυτό. Επιθυμείτε πραγματικά απενεργοποίηση της παρακολούθησης χρήσης;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2398"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2404"/>
 <source>new folder</source>
 <translation>νέος φάκελος</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2430"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2436"/>
 <source>Remove note folder</source>
 <translation>Κατάργηση φακέλου σημειώσεων</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2431"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2437"/>
 <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Κατάργηση του τρέχοντος φακέλου σημειώσεων &lt;strong&gt;%1&lt;/strong&gt;;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2506"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2512"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>Παρακαλώ επιλέξτε τον φάκελο στον οποίο θα αποθηκευτούν οι σημειώσεις σας</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2540"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2546"/>
 <source>Loading folders from server</source>
 <translation>Φόρτωση φακέλων από τον διακομιστή</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2555"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2561"/>
 <source>No more folders were found in the current folder</source>
 <translation>Δεν βρέθηκαν άλλοι φάκελοι στον τρέχοντα φάκελο</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2623"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2629"/>
 <source>Loading folders in '%1' from server</source>
 <translation>Φόρτωση φακέλων στο '%1' από τον διακομιστή</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2690"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2696"/>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
 <translation>Ρίξτε μια ματιά στη &lt;a href="%1"&gt; τεκμηρίωση δέσμης ενεργειών (scripting) &lt;/a&gt; για να ξεκινήσετε γρήγορα.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2694"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2700"/>
 <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
 <translation>Εάν χρειάζεστε πρόσβαση σε μια συγκεκριμένη λειτουργία στο QOwnNotes, παρακαλείσθε να ανοίξετε ένα ζήτημα στη &lt;a href="%1"&gt;σελίδα ζητημάτων του QOwnNotes&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2712"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2718"/>
 <source>Check for script updates</source>
 <translation>Ελέγξτε για ενημερώσεις σεναρίων (δεσμών ενεργειών)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2717"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2723"/>
 <source>Add local script</source>
 <translation>Προσθήκη τοπικού σεναρίου (τοπικής δέσμης ενεργειών)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2720"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2726"/>
 <source>Add an existing, local script</source>
 <translation>Προσθήκη υπάρχουσας, τοπικής δέσμης ενεργειών</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3060"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3066"/>
 <source>Please enter a new note file extension:</source>
 <translation type="unfinished">Please enter a new note file extension:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3092"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3098"/>
 <source>Markdown file</source>
 <translation type="unfinished">Markdown file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3094"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3100"/>
 <source>Plain text file</source>
 <translation type="unfinished">Plain text file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3112"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3118"/>
 <source>Remove note file extension</source>
 <translation type="unfinished">Remove note file extension</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3809"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3862"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3815"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3868"/>
 <source>INI files</source>
 <translation>Αρχεία INI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3845"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3851"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>Επιθυμείτε πραγματικά να εισάγετε ρυθμίσεις; Οι τρέχουσες ρυθμίσεις θα καταργηθούν και ενδέχεται να μην είναι δυνατή η επαναφορά όλων των ρυθμίσεων, όπως οι ρυθμίσεις του φακέλου σημειώσεων και των σεναρίων/δεσμών ενεργειών που χρησιμοποιούσατε. Θα χρειαστεί επίσης να προσαρμόσετε κάποιες ρυθμίσεις, ειδικά σε όλες τις πλατφόρμες, αλλά οι σημειώσεις σας θα παραμείνουν άθικτες!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3851"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3857"/>
 <source>The application will be restarted after the import.</source>
 <translation>Η εφαρμογή θα επανεκκινηθεί μετά την εισαγωγή.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4076"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4082"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>Τα στοιχεία αποσφαλμάτωσης αντιγράφηκαν στο πρόχειρο.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4096"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4102"/>
 <source>The integrity of the disk database is valid.</source>
 <translation>Η ακεραιότητα της βάσης δεδομένων δίσκου είναι έγκυρη.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4100"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4106"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation>Η ακεραιότητα της βάσης δεδομένων δίσκου δεν είναι έγκυρη!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4276"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4282"/>
 <source>Board Id: %1</source>
 <translation type="unfinished">Board Id: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4288"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4294"/>
 <source>Stack Id: %1</source>
 <translation type="unfinished">Stack Id: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2708"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2714"/>
 <source>Find a script in the script repository</source>
 <translation>Εύρεση σεναρίου (δέσμης ενεργειών) στο αποθετήριο σεναρίων</translation>
 </message>
@@ -8043,136 +8058,136 @@ Connection error message: </source>
 <translation>Εμφάνιση στοιχείου γραμμής μενού</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1541"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1581"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1547"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1587"/>
 <source>Undefined shortcut</source>
 <translation>Απροσδιόριστη συντόμευση
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1544"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1584"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1550"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1590"/>
 <source>Assign a new shortcut</source>
 <translation>Εκχωρήστε μια νέα συντόμευση
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1544"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1585"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1550"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1591"/>
 <source>Reset to default shortcut</source>
 <translation>Επαναφορά στην προεπιλεγμένη συντόμευση
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1560"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1566"/>
 <source>Clear shortcut</source>
 <translation>Εκκαθάριση συντόμευσης</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1655"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1661"/>
 <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
 <translation>Η συντόμευση &lt;strong&gt;%1&lt;/strong&gt; έχει ήδη εκχωρηθεί στο &lt;strong&gt;%2&lt;/strong&gt;! Θέλετε να μεταβείτε στη συντόμευση;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2795"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2801"/>
 <source>Remove script</source>
 <translation>Κατάργηση σεναρίου (δέσμης ενεργειών)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2796"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2802"/>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Κατάργηση της τρέχουσας δέσμης ενεργειών &lt;strong&gt;%1&lt;/strong&gt;;</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2845"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2851"/>
 <source>QML files</source>
 <translation>Αρχεία QML</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2846"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2852"/>
 <source>Please select your QML file</source>
 <translation>Παρακαλώ επιλέξτε το δικό σας αρχείο QML</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2935"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2941"/>
 <source>Open repository</source>
 <translation>Άνοιγμα αποθετηρίου</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2991"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2997"/>
 <source>Your script seems to be valid</source>
 <translation>Η δέσμη ενεργειών σας φαίνεται να είναι έγκυρη</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2992"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2998"/>
 <source>There were script errors:
 %1</source>
 <translation>Υπήρχαν σφάλματα σεναρίου (δέσμης ενεργειών):
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3059"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3065"/>
 <source>File extension</source>
 <translation>Επέκταση αρχείου</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3113"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3119"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
 <translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3392"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3398"/>
 <source>Calendar cache emptied</source>
 <translation>Η κρυφή μνήμη του ημερολογίου άδειασε</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3393"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3399"/>
 <source>Your calendar cache was emptied.</source>
 <translation>Η κρυφή μνήμη του ημερολογίου σας άδειασε.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3469"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3475"/>
 <source>Reset toolbars and exit</source>
 <translation>Επαναφορά γραμμών εργαλείων και έξοδος</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3470"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3476"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>Επιθυμείτε πραγματικά να επαναφέρετε όλες τις γραμμές εργαλείων; Η εφαρμογή θα κλείσει κατά τη διαδικασία, οι προεπιλεγμένες γραμμές εργαλείων θα αποκατασταθούν όταν την επανεκκινήσετε.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3474"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3480"/>
 <source>Reset and &amp;exit</source>
 <translation>Επαναφορά και &amp;έξοδος</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3633"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3639"/>
 <source>Log file cleared</source>
 <translation>Το αρχείο καταγραφής διαγράφηκε</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3634"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3640"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Το αρχείο καταγραφής &lt;strong&gt;%1&lt;/strong&gt; διαγράφηκε.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3671"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3677"/>
 <source>Executable files</source>
 <translation>Εκτελέσιμα αρχεία </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3671"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3673"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3677"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3679"/>
 <source>All files</source>
 <translation>Όλα τα αρχεία</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3681"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3687"/>
 <source>Please select the path of your git executable</source>
 <translation>Παρακαλούμε επιλέξτε την διαδρομή του εκτελέσιμου αρχείου git</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3779"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3785"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>Επιθυμείτε πραγματικά να επαναφέρετε την παράκαμψη όλων των παραθύρων μηνυμάτων;</translation>
 </message>
@@ -8227,12 +8242,12 @@ Connection error message: </source>
 <translation>Θα ενεργοποιηθεί αν εκτελέσετε το QOwnNotes με την παράμετρο &lt;code&gt;-- φορητή&lt;/code&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2146"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2152"/>
 <source>Save debug information</source>
 <translation>Αποθήκευση στοιχείων αποσφαλμάτωσης</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2191"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2197"/>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -8241,14 +8256,14 @@ Your notes will stay intact!</source>
 Οι σημειώσεις σας θα παραμείνουν άθικτες!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2194"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2200"/>
 <source>Clear and &amp;exit</source>
 <translation>Εκκαθάριση και έξοδος</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2122"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2194"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3474"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2128"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2200"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3480"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Ακύρωση</translation>
 </message>
@@ -8258,17 +8273,17 @@ Your notes will stay intact!</source>
 <translation>Θα βρείτε ένα αρχείο &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; στη διαδρομή - φάκελο του προγράμματος, για να ξεκινήσετε το QOwnNotes σε φορητή λειτουργία.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2119"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2125"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Επιθυμείτε πραγματικά να διαγράψετε την τοπική βάση δεδομένων; Αυτό θα αφαιρέσει επίσης τους διαμορφωμένους φακέλους σημειώσεων και τα στοιχεία εκκρεμών εργασιών σας που είναι αποθηκευμένα στην κρυφή μνήμη!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2122"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2128"/>
 <source>Clear &amp;database</source>
 <translation>Εκκαθάριση &amp;βάσης δεδομένων</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2317"/>
 <source>Select editor application</source>
 <translation>Επιλέξτε την εφαρμογή επεξεργαστή</translation>
 </message>

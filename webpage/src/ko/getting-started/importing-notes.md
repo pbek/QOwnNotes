@@ -2,25 +2,27 @@
 
 ## Evernote
 
-`노트 / 가져오기` 메뉴에서 Evernote 가져오기 대화 상자를 찾을 수 있습니다.
+`노트 / 가져오기`메뉴에서 *Enex*파일을 가져올 수 있는 Evernote 가져오기 대화상자가 있습니다.
+
+이미지, 첨부 파일, 태그, 기본 형식 및 메타데이터도 가져옵니다.
 
 ## Joplin
 
-` 노트 / 가져오기 ` 메뉴에서 Joplin 가져오기 대화상자를 찾을 수 있습니다.
+`노트 /가져오기` 메뉴에서 도달할 수 있는 Joplin 가져오기 대화상자가 있습니다.
 
 ## Tomboy
 
-[Trombone](https://github.com/samba/trombone)이라는 스크립트를 사용하여 Tomboy 노트를 가져올 수 있습니다.
+Tomboy 노트는 [Trombone](https://github.com/samba/trombone)이라는 스크립트를 사용하여 가져올 수 있습니다.
 
-스크립트가 작동하도록 python2를 설치할 수 있습니다. 그러면 Tomboy 노트가 Evernote `.enex` 파일로 변환되어 QOnNotes로 가져올 수 있습니다.
+python2를 설치하여 스크립트가 작동되도록 할 수도 있습니다. 그러면 Tomboy 노트가 Evernote `.enex` 파일로 변환되고, 그러면 QOwnN 노트로 가져올 수 있습니다.
 
-이 작업을 원하는 사람은 먼저 Python2가 설치되어 있는지 확인하고 `python-is-python2`도 설치할 수 있습니다 (나중에 제거할 수 있습니다):
+이 작업을 수행하려면 먼저 Python2가 설치되어 있는지 확인하고 `python-is-python2`도 설치할 수 있습니다 (나중에 제거할 수 있음):
 
 ```bash
 sudo apt install python2 python-is-python2
 ```
 
-GitHub에서 trombone 파일을 다운로드하여 압축을 풀고 해당 폴더로 이동합니다:
+GitHub에서 trombone 파일을 다운로드한 후 압축을 풀고 폴더로 이동합니다:
 
 ```bash
 cd ~/Downloads/trombone-master

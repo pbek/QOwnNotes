@@ -763,112 +763,122 @@
 <translation>Kawemakapiri taapiri</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="66"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="67"/>
 <source>Enex files</source>
 <translation>Kōnae Enex</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="67"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="68"/>
 <source>Select Evernote enex file to import</source>
 <translation>Tīpakohia te konae ene Evernote hei kawemai</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="272"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="190"/>
+<source>Invalid XML!</source>
+<translation type="unfinished">Invalid XML!</translation>
+</message>
+<message>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="191"/>
+<source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
+<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+</message>
+<message>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="295"/>
 <source>Basic attributes</source>
 <translation>Ngā tohu taketake</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="273"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="296"/>
 <source>Created date</source>
 <translation>Te ra i hangaia</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="274"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="297"/>
 <source>Updated date</source>
 <translation>Te rā i whakahoutia</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="276"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="299"/>
 <source>Note attributes</source>
 <translation>Tirohia nga ahuatanga</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="277"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="300"/>
 <source>Subject date</source>
 <translation>Te kaupapa kaupapa</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="279"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="302"/>
 <source>Latitude</source>
 <translation>Koreraua</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="281"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="304"/>
 <source>Longitude</source>
 <translation>Rangiora</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="283"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="306"/>
 <source>Altitude</source>
 <translation>Te Hike</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="285"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="308"/>
 <source>Author</source>
 <translation>Kaituhi</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="287"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="310"/>
 <source>Source</source>
 <translation>Pūpuna</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="289"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="312"/>
 <source>Source URL</source>
 <translation>URL Pūtake</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="291"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="314"/>
 <source>Source application</source>
 <translation>Tono rauemi</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="294"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="317"/>
 <source>Reminder order</source>
 <translation>Te raupapa whakamahara</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="296"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="319"/>
 <source>Reminder time</source>
 <translation>Te wa whakamahara</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="298"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="321"/>
 <source>Reminder done time</source>
 <translation>Whakamaumahihia te wa</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="301"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="324"/>
 <source>Place name</source>
 <translation>Ingoa o te waahi</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="303"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="326"/>
 <source>Content class</source>
 <translation>Akomanga ihirangi</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="305"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="328"/>
 <source>Application data</source>
 <translation>Raraunga tono</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="705"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="728"/>
 <source>Attribute</source>
 <translation>Huihui</translation>
 </message>
 <message>
-<location filename="../dialogs/evernoteimportdialog.cpp" line="705"/>
+<location filename="../dialogs/evernoteimportdialog.cpp" line="728"/>
 <source>Value</source>
 <translation>Te uara</translation>
 </message>
@@ -1509,7 +1519,7 @@
 <location filename="../widgets/fontcolorwidget.cpp" line="533"/>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kake</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="646"/>
@@ -1861,14 +1871,14 @@
 <translation>Rapua he tuhipoka hei hono ki</translation>
 </message>
 <message>
-<location filename="../dialogs/linkdialog.cpp" line="297"/>
-<location filename="../dialogs/linkdialog.cpp" line="372"/>
+<location filename="../dialogs/linkdialog.cpp" line="299"/>
+<location filename="../dialogs/linkdialog.cpp" line="374"/>
 <source>Select file to link to</source>
 <translation>Tīpakohia te konae hei hono ki</translation>
 </message>
 <message>
-<location filename="../dialogs/linkdialog.cpp" line="334"/>
-<location filename="../dialogs/linkdialog.cpp" line="378"/>
+<location filename="../dialogs/linkdialog.cpp" line="336"/>
+<location filename="../dialogs/linkdialog.cpp" line="380"/>
 <source>Select directory to link to</source>
 <translation>Tīpakohia te whaiaronga hei hono atu ki</translation>
 </message>
@@ -3028,7 +3038,7 @@ Whakaora i te tuhipoka o naianei?</translation>
 <location filename="../mainwindow.cpp" line="5346"/>
 <location filename="../mainwindow.cpp" line="6628"/>
 <location filename="../mainwindow.cpp" line="9538"/>
-<location filename="../mainwindow.cpp" line="11691"/>
+<location filename="../mainwindow.cpp" line="11697"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Whakakore</translation>
 </message>
@@ -3350,17 +3360,17 @@ Mena ka whakahohea te paraihe i runga i to ake kaiwhakahaere server ka taea e ko
 <translation>Te penapena whakaahua poto</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11688"/>
+<location filename="../mainwindow.cpp" line="11694"/>
 <source>Nextcloud Deck support disabled!</source>
 <translation type="unfinished">Nextcloud Deck support disabled!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11689"/>
+<location filename="../mainwindow.cpp" line="11695"/>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11714"/>
+<location filename="../mainwindow.cpp" line="11720"/>
 <source>Note path '%1' was copied to the clipboard</source>
 <translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
 </message>
@@ -3458,12 +3468,12 @@ Mena ka whakahohea te paraihe i runga i to ake kaiwhakahaere server ka taea e ko
 <translation type="unfinished">No script updates were found</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11593"/>
+<location filename="../mainwindow.cpp" line="11599"/>
 <source>Toggle note stickiness</source>
 <translation type="unfinished">Toggle note stickiness</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11598"/>
+<location filename="../mainwindow.cpp" line="11604"/>
 <source>Close other note tabs</source>
 <translation type="unfinished">Close other note tabs</translation>
 </message>
@@ -4140,7 +4150,7 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
 <location filename="../mainwindow.cpp" line="5326"/>
 <location filename="../mainwindow.cpp" line="5346"/>
 <location filename="../mainwindow.cpp" line="9538"/>
-<location filename="../mainwindow.cpp" line="11691"/>
+<location filename="../mainwindow.cpp" line="11697"/>
 <source>Open &amp;settings</source>
 <translation>Tautuhi &amp;tuwhera</translation>
 </message>
@@ -4783,17 +4793,17 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
 <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4029"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4035"/>
 <source>New connection</source>
 <translation>Hononga hou</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4221"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4227"/>
 <source>Login flow succeeded</source>
 <translation type="unfinished">Login flow succeeded</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4222"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4228"/>
 <source>Username and password were set successfully!</source>
 <translation type="unfinished">Username and password were set successfully!</translation>
 </message>
@@ -5861,7 +5871,7 @@ I tenei wa ka rongohia te kupuhipa me te taapiri me etahi atu tautuhinga, engari
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4083"/>
 <location filename="../dialogs/settingsdialog.ui" line="5618"/>
-<location filename="../dialogs/settingsdialog.ui" line="6185"/>
+<location filename="../dialogs/settingsdialog.ui" line="6192"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>Ka taea pea e koe te whakarereke i nga raru me nga putanga tawhito ake o te mea ake o te iCloud iCloud ka heke noa iho i raro iho i te 10 hekona.
@@ -5884,10 +5894,10 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4557"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2118"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2127"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4095"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4099"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2124"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2133"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4101"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4105"/>
 <source>Database</source>
 <translation>Pātengi Raraunga</translation>
 </message>
@@ -5908,7 +5918,7 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4512"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2190"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2196"/>
 <source>Clear app data and exit</source>
 <translation>Kui te raraunga taupānga me te putanga</translation>
 </message>
@@ -6501,20 +6511,20 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4347"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3778"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3784"/>
 <source>Reset message boxes</source>
 <translation>Tautuhi i nga pouaka karere</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4534"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3844"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3863"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3850"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3869"/>
 <source>Import settings</source>
 <translation>Tautuhinga kawemai</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4541"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3810"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3816"/>
 <source>Export settings</source>
 <translation>Tautuhinga Kaweake</translation>
 </message>
@@ -6865,8 +6875,8 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 <translation>Tuuturu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5942"/>
-<location filename="../dialogs/settingsdialog.ui" line="5951"/>
+<location filename="../dialogs/settingsdialog.ui" line="5905"/>
+<location filename="../dialogs/settingsdialog.ui" line="5914"/>
 <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation type="unfinished">Regular expressions of note subfolders to ignore, separated by ";"</translation>
 </message>
@@ -6887,138 +6897,143 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 <translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5945"/>
+<location filename="../dialogs/settingsdialog.ui" line="5908"/>
 <source>Ignored subfolders</source>
 <translation type="unfinished">Ignored subfolders</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5961"/>
+<location filename="../dialogs/settingsdialog.ui" line="5924"/>
 <source>Reset ignored subfolders</source>
 <translation type="unfinished">Reset ignored subfolders</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5997"/>
+<location filename="../dialogs/settingsdialog.ui" line="5978"/>
+<source>Clicking a note tab unsets 'All notes' selection</source>
+<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+</message>
+<message>
+<location filename="../dialogs/settingsdialog.ui" line="6004"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
 <translation type="unfinished">Restore open note tabs at application startup and when note folders are switched</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6020"/>
+<location filename="../dialogs/settingsdialog.ui" line="6027"/>
 <source>Auto-select items in navigation panel when changing cursor position</source>
 <translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6089"/>
+<location filename="../dialogs/settingsdialog.ui" line="6096"/>
 <source>Hide 'Note count' with tags (increases performance)</source>
 <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6125"/>
+<location filename="../dialogs/settingsdialog.ui" line="6132"/>
 <source>Show the number of matches in each note</source>
 <translation>Whakaatuhia te maha o nga taatai ki ia tuhipoka</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6524"/>
+<location filename="../dialogs/settingsdialog.ui" line="6531"/>
 <source>Command snippets</source>
 <translation type="unfinished">Command snippets</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6533"/>
+<location filename="../dialogs/settingsdialog.ui" line="6540"/>
 <source>Tag name for commands notes</source>
 <translation type="unfinished">Tag name for commands notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6540"/>
+<location filename="../dialogs/settingsdialog.ui" line="6547"/>
 <source>Commands tag:</source>
 <translation type="unfinished">Commands tag:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6560"/>
+<location filename="../dialogs/settingsdialog.ui" line="6567"/>
 <source>Commands note name:</source>
 <translation type="unfinished">Commands note name:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6570"/>
+<location filename="../dialogs/settingsdialog.ui" line="6577"/>
 <source>Note name for adding new commands</source>
 <translation type="unfinished">Note name for adding new commands</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6610"/>
+<location filename="../dialogs/settingsdialog.ui" line="6617"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
 <translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6647"/>
+<location filename="../dialogs/settingsdialog.ui" line="6654"/>
 <source>QOwnNotes web application</source>
 <translation type="unfinished">QOwnNotes web application</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6676"/>
+<location filename="../dialogs/settingsdialog.ui" line="6683"/>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6737"/>
+<location filename="../dialogs/settingsdialog.ui" line="6744"/>
 <source>Server URL:</source>
 <translation type="unfinished">Server URL:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6794"/>
+<location filename="../dialogs/settingsdialog.ui" line="6801"/>
 <source>Show QR code</source>
 <translation type="unfinished">Show QR code</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6686"/>
+<location filename="../dialogs/settingsdialog.ui" line="6693"/>
 <source>Security token:</source>
 <translation type="unfinished">Security token:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6489"/>
+<location filename="../dialogs/settingsdialog.ui" line="6496"/>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
 <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6505"/>
+<location filename="../dialogs/settingsdialog.ui" line="6512"/>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
 <translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6547"/>
+<location filename="../dialogs/settingsdialog.ui" line="6554"/>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6744"/>
+<location filename="../dialogs/settingsdialog.ui" line="6751"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
 <translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6754"/>
+<location filename="../dialogs/settingsdialog.ui" line="6761"/>
 <source>Copy security token to clipboard</source>
 <translation type="unfinished">Copy security token to clipboard</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6707"/>
+<location filename="../dialogs/settingsdialog.ui" line="6714"/>
 <source>Generate new security token</source>
 <translation type="unfinished">Generate new security token</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6768"/>
+<location filename="../dialogs/settingsdialog.ui" line="6775"/>
 <source>Reset the URL to default</source>
 <translation type="unfinished">Reset the URL to default</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6597"/>
+<location filename="../dialogs/settingsdialog.ui" line="6604"/>
 <source>QOwnNotes web application support</source>
 <translation type="unfinished">QOwnNotes web application support</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6603"/>
+<location filename="../dialogs/settingsdialog.ui" line="6610"/>
 <source>Enable web application support</source>
 <translation type="unfinished">Enable web application support</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5758"/>
-<location filename="../dialogs/settingsdialog.ui" line="6811"/>
+<location filename="../dialogs/settingsdialog.ui" line="6818"/>
 <source>Note list panel</source>
 <translation>Tohu rarangi raarangi</translation>
 </message>
@@ -7028,171 +7043,171 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 <translation>Whakaatuhia nga tuhipoka kei te raarangi tuhipoka me te arokite</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6817"/>
+<location filename="../dialogs/settingsdialog.ui" line="6824"/>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
 <translation>Engari kaua te raarangi tuhi ka whakamahi i tetahi raarangi tuhipoka me nga mea-iti katoa (mena ka huri ki te raarangi tuhi)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6135"/>
+<location filename="../dialogs/settingsdialog.ui" line="6142"/>
 <source>Note folder panel</source>
 <translation>Paatene kōpaki kōpaki</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6141"/>
+<location filename="../dialogs/settingsdialog.ui" line="6148"/>
 <source>Show note folders as buttons instead of in a select box</source>
 <translation>Whakaatuhia nga kōpaki tuhipoka hei papi hei utu mo te pouaka whiriwhiri</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6247"/>
+<location filename="../dialogs/settingsdialog.ui" line="6254"/>
 <source>Enable local trash to keep a copy of trashed notes</source>
 <translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6283"/>
+<location filename="../dialogs/settingsdialog.ui" line="6290"/>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
 <translation>Ka taea te huri i nga Panui ki te &lt;i&gt; Matapihi / Panui &lt;/i&gt; tahua matua a ka taea hoki e koe te whakariterite i nga momo ahurewa &lt;/i&gt; mo nga taaputanga rarangi rereke.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6360"/>
+<location filename="../dialogs/settingsdialog.ui" line="6367"/>
 <source>Bookmarks</source>
 <translation>Tohuwhera</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6366"/>
-<location filename="../dialogs/settingsdialog.ui" line="6530"/>
+<location filename="../dialogs/settingsdialog.ui" line="6373"/>
+<location filename="../dialogs/settingsdialog.ui" line="6537"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
 <translation>Ka whakamahia nga tohu me tenei tohu tohu ki nga tohu tohuwhiri</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6369"/>
+<location filename="../dialogs/settingsdialog.ui" line="6376"/>
 <source>Tag name for bookmarks notes</source>
 <translation>Ingoa tohu mo nga raarangi tohuwāhi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6376"/>
+<location filename="../dialogs/settingsdialog.ui" line="6383"/>
 <source>Bookmarks tag:</source>
 <translation>Tohu tohuwāhi:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6383"/>
+<location filename="../dialogs/settingsdialog.ui" line="6390"/>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
 <translation>Na te taunoa, ka whakaatu te taapiri tirotiro i nga hononga katoa o te tuhipoka o naianei. Ka taea hoki e koe te whakaatu i nga hono tohu tohuwha motuhake o nga tuhipoka me etahi tohu. Mo te roanga atu o nga korero mo te paahono hononga hono tohutoro &lt;a href="%1"&gt; konei &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6396"/>
+<location filename="../dialogs/settingsdialog.ui" line="6403"/>
 <source>Bookmarks note name:</source>
 <translation>Ingoa tohu tohuwāhi:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6403"/>
-<location filename="../dialogs/settingsdialog.ui" line="6567"/>
+<location filename="../dialogs/settingsdialog.ui" line="6410"/>
+<location filename="../dialogs/settingsdialog.ui" line="6574"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
 <translation>Ka whakamahia tenei tuhipoka hei taapiri i nga maakete hou mai i te toronga tirotiro</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6406"/>
+<location filename="../dialogs/settingsdialog.ui" line="6413"/>
 <source>Note name for adding new bookmarks</source>
 <translation>Ingoa ingoa mo te taapiri i nga tohuwaka hou</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6416"/>
+<location filename="../dialogs/settingsdialog.ui" line="6423"/>
 <source>Web socket server</source>
 <translation>Tūmau Tukutuku tukutuku</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6422"/>
+<location filename="../dialogs/settingsdialog.ui" line="6429"/>
 <source>Socket server port:</source>
 <translation>Tauira tūmau takirua:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6442"/>
+<location filename="../dialogs/settingsdialog.ui" line="6449"/>
 <source>Reset the socket server port</source>
 <translation type="unfinished">Reset the socket server port</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6456"/>
-<location filename="../dialogs/settingsdialog.ui" line="6693"/>
+<location filename="../dialogs/settingsdialog.ui" line="6463"/>
+<location filename="../dialogs/settingsdialog.ui" line="6700"/>
 <source>Show security token</source>
 <translation>Whakaatuhia te tohu haumaru</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6476"/>
+<location filename="../dialogs/settingsdialog.ui" line="6483"/>
 <source>Web socket server support</source>
 <translation>Tautoko tūmau Tukutuku</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6482"/>
+<location filename="../dialogs/settingsdialog.ui" line="6489"/>
 <source>Enable socket server</source>
 <translation>Whakahohea te tūmau taki</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5981"/>
+<location filename="../dialogs/settingsdialog.ui" line="5988"/>
 <source>Note edit panel</source>
 <translation>Tirohia te röputu whakatika</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5987"/>
+<location filename="../dialogs/settingsdialog.ui" line="5994"/>
 <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
 <translation>Ki te he monokia tenei ka taea e koe te hanga i nga whakatakotoranga panui matatini, engari ka huri ano nga panui katoa mena ka huri noa te matapihi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5990"/>
+<location filename="../dialogs/settingsdialog.ui" line="5997"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
 <translation>Whakamahia te rarangi whakatika panui kia rite ki te raarangi pokepokea hei whakanikoi mena ka huri ano te matapihi me etahi atu panui</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6112"/>
+<location filename="../dialogs/settingsdialog.ui" line="6119"/>
 <source>Note search panel</source>
 <translation>Tirohia te ripa rapu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6118"/>
+<location filename="../dialogs/settingsdialog.ui" line="6125"/>
 <source>Disable auto-completion of previous searches</source>
 <translation>Monokia te whakaoti i nga rapunga o mua</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6007"/>
+<location filename="../dialogs/settingsdialog.ui" line="6014"/>
 <source>Navigation panel</source>
 <translation>Paewhiri Whakatere</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6013"/>
+<location filename="../dialogs/settingsdialog.ui" line="6020"/>
 <source>Hide navigation item search bar</source>
 <translation>Hunaia te pae rapu tirotiro</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6155"/>
+<location filename="../dialogs/settingsdialog.ui" line="6162"/>
 <source>Local trash settings</source>
 <translation>Tautuhinga ipu paru</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6189"/>
+<location filename="../dialogs/settingsdialog.ui" line="6196"/>
 <source>Remove trashed notes after:</source>
 <translation>Tangohia nga korero kua whawhati i muri:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6196"/>
+<location filename="../dialogs/settingsdialog.ui" line="6203"/>
 <source> days</source>
 <extracomment>seconds</extracomment>
 <translation>rā</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6215"/>
+<location filename="../dialogs/settingsdialog.ui" line="6222"/>
 <source>Automatically remove trashed notes after a certain time</source>
 <translation>Tango aunoatia nga tuhaha kua pakaru i muri i etahi wa</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6241"/>
+<location filename="../dialogs/settingsdialog.ui" line="6248"/>
 <source>Local trash support</source>
 <translation>Te tautoko a nga waka paru</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6264"/>
+<location filename="../dialogs/settingsdialog.ui" line="6271"/>
 <source>Layout selector</source>
 <translation>Kaitoko Kaitiaki</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6270"/>
+<location filename="../dialogs/settingsdialog.ui" line="6277"/>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
 <translation>Ka taea e koe te whakarite i te tahora hou konei. Kia maumahara ka taea e koe te whakarereke i te turanga o nga rarangi panui me te paatene &lt;i&gt; Wewete pananga &lt;/i&gt;.</translation>
 </message>
@@ -7239,35 +7254,35 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 <translation>Kaua e wareware kia taea ai te tautoko mo o kōpaki rekoata me te whirihora i to ingoa me to wahitau imeera mo to kiritaki gitara, hei tauira me enei whakahau kāpeka:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6030"/>
+<location filename="../dialogs/settingsdialog.ui" line="6037"/>
 <source>Tags panel</source>
 <translation>Paewhiri Tags</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5819"/>
-<location filename="../dialogs/settingsdialog.ui" line="5905"/>
-<location filename="../dialogs/settingsdialog.ui" line="6059"/>
+<location filename="../dialogs/settingsdialog.ui" line="5955"/>
+<location filename="../dialogs/settingsdialog.ui" line="6066"/>
 <source>Order</source>
 <translation>Tono</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5828"/>
-<location filename="../dialogs/settingsdialog.ui" line="5911"/>
-<location filename="../dialogs/settingsdialog.ui" line="6065"/>
+<location filename="../dialogs/settingsdialog.ui" line="5961"/>
+<location filename="../dialogs/settingsdialog.ui" line="6072"/>
 <source>Ascending</source>
 <translation>Te pikinga ki</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5835"/>
-<location filename="../dialogs/settingsdialog.ui" line="5918"/>
-<location filename="../dialogs/settingsdialog.ui" line="6072"/>
+<location filename="../dialogs/settingsdialog.ui" line="5968"/>
+<location filename="../dialogs/settingsdialog.ui" line="6079"/>
 <source>Descending</source>
 <translation>Te tohe</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5771"/>
-<location filename="../dialogs/settingsdialog.ui" line="5875"/>
-<location filename="../dialogs/settingsdialog.ui" line="6036"/>
+<location filename="../dialogs/settingsdialog.ui" line="5868"/>
+<location filename="../dialogs/settingsdialog.ui" line="6043"/>
 <source>Sort</source>
 <translation>Kōmaka</translation>
 </message>
@@ -7278,18 +7293,18 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5777"/>
-<location filename="../dialogs/settingsdialog.ui" line="5881"/>
-<location filename="../dialogs/settingsdialog.ui" line="6042"/>
+<location filename="../dialogs/settingsdialog.ui" line="5874"/>
+<location filename="../dialogs/settingsdialog.ui" line="6049"/>
 <source>Alphabetical</source>
 <translation>Arawaka</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6049"/>
+<location filename="../dialogs/settingsdialog.ui" line="6056"/>
 <source>By last change / use</source>
 <translation>Na te huringa whakamutunga / whakamahi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="6082"/>
+<location filename="../dialogs/settingsdialog.ui" line="6089"/>
 <source>Hide 'Find or create tag' search</source>
 <translation>Hunaia te 'Rapua te hanga tohu ranei' rapunga</translation>
 </message>
@@ -7299,33 +7314,33 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 <translation>Tirohia nga papaa-tuupapa iti</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5868"/>
+<location filename="../dialogs/settingsdialog.ui" line="5898"/>
 <source>Show with full path</source>
 <translation>Whakaatuhia me te ara tonu</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5784"/>
-<location filename="../dialogs/settingsdialog.ui" line="5888"/>
+<location filename="../dialogs/settingsdialog.ui" line="5881"/>
 <source>By last change</source>
 <translation>Na te hurihanga whakamutunga</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5898"/>
+<location filename="../dialogs/settingsdialog.ui" line="5941"/>
 <source>Show root folder name</source>
 <translation>Whakaatuhia te ingoa kōpaki pakiaka</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5928"/>
+<location filename="../dialogs/settingsdialog.ui" line="5948"/>
 <source>Hide 'Find or create note subfolder' search</source>
 <translation>Hunaia te rapu, te hanga ranei i te kaiwhakarato tuhipoka</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.ui" line="5935"/>
+<location filename="../dialogs/settingsdialog.ui" line="5891"/>
 <source>Display note subfolders as full tree</source>
 <translation>Whakaatuhia nga mokamoka tuhi hei rakau tonu tonu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2704"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2710"/>
 <source>Search script repository</source>
 <translation>Rapua te tuhinga tuhi</translation>
 </message>
@@ -7751,8 +7766,8 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4624"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2137"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4075"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2143"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4081"/>
 <source>Debug information</source>
 <translation>Nga korero whakamarama</translation>
 </message>
@@ -7797,17 +7812,17 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 <translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1366"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1369"/>
 <source>Automatic (needs restart)</source>
 <translation>Aunoa (me whakaoho ano)</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1654"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1660"/>
 <source>Shortcut already assigned</source>
 <translation>Pepe poto kua tohaina</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1847"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1853"/>
 <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -7816,7 +7831,7 @@ Putanga kaituku: %1
 Putanga QOwnNotesAPI: %2</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1859"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1865"/>
 <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -7827,153 +7842,153 @@ Me matua whakairihia ano hoki te QOwnNotesAPI taupānga!
 Karere o te hononga honohono:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2128"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2134"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
 <translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2138"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2144"/>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Tena koa kaua e whakamahia tenei i te kaiwhaiwhai take, kape i nga tuhinga korero whaimana ki roto i te take.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2145"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2151"/>
 <source>Markdown files</source>
 <translation>Nga konae tohu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2172"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2178"/>
 <source>Disable usage tracking</source>
 <translation>Disable usage tracking</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2173"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2179"/>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Ko nga raraunga whakamahinga Ingoa ka awhina ki te whakatau he aha nga waahanga o te QOwnNotes kia pai ake me te kimi me te whakatika i nga pepeke?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2398"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2404"/>
 <source>new folder</source>
 <translation>kōpaki hōu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2430"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2436"/>
 <source>Remove note folder</source>
 <translation>Tango kōpaki tuhipoka</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2431"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2437"/>
 <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Tangohia te kōpaki tuhipoka o nāianei &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2506"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2512"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>Tohua koa te kōpaki i reira e penapena ai o tuhi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2540"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2546"/>
 <source>Loading folders from server</source>
 <translation>Te uta i nga kōpaki mai i te tūmau</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2555"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2561"/>
 <source>No more folders were found in the current folder</source>
 <translation>Kaore ano i kitea he kopaki i te kōpaki o ināianei</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2623"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2629"/>
 <source>Loading folders in '%1' from server</source>
 <translation>Te uta i nga kōpaki i te '%1' mai i te tūmau</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2690"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2696"/>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
 <translation>Tirohia te &lt;a href="%1"&gt; Tuhinga tuhinga tuhi &lt;/a&gt; kia tere ai te tere.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2694"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2700"/>
 <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
 <translation>Mena ka hiahia koe ki te whakauru ki tetahi mahi i roto i te QOwnNotes me whakatuwhera he take ki te &lt;a href="%1"&gt; QOwnNotes page page &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2712"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2718"/>
 <source>Check for script updates</source>
 <translation>Tirohia nga whakahou script</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2717"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2723"/>
 <source>Add local script</source>
 <translation>Taapirihia te whaikorero a-rohe</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2720"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2726"/>
 <source>Add an existing, local script</source>
 <translation>Tāpirihia he hōtuhi tawhito me te rohe</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3060"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3066"/>
 <source>Please enter a new note file extension:</source>
 <translation type="unfinished">Please enter a new note file extension:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3092"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3098"/>
 <source>Markdown file</source>
 <translation type="unfinished">Markdown file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3094"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3100"/>
 <source>Plain text file</source>
 <translation type="unfinished">Plain text file</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3112"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3118"/>
 <source>Remove note file extension</source>
 <translation type="unfinished">Remove note file extension</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3809"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3862"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3815"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3868"/>
 <source>INI files</source>
 <translation>Kōnae INI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3845"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3851"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>Kei te hiahia tika koe ki te kawemai i nga tautuhinga? Ko nga tautuhinga o tenei wa ka nekehia atu, kaore nga whakanekeneke katoa e whakahoki mai, penei i nga tautuhinga kōpaki pukapuka me nga tuhinga e whakamahia ana e koe. Me whakatika ano e koe etahi tautuhinga, ina koa puta noa i nga papaaho, engari ka noho tonu o tuhinga.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3851"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3857"/>
 <source>The application will be restarted after the import.</source>
 <translation>Ka whakaatuhia ano te tono i muri i te kawemai.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4076"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4082"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>Ka whakaatuhia ano te tono i muri i te kawemai.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4096"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4102"/>
 <source>The integrity of the disk database is valid.</source>
 <translation type="unfinished">The integrity of the disk database is valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4100"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4106"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation type="unfinished">The integrity of the disk database is not valid!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4276"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4282"/>
 <source>Board Id: %1</source>
 <translation type="unfinished">Board Id: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4288"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4294"/>
 <source>Stack Id: %1</source>
 <translation type="unfinished">Stack Id: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2708"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2714"/>
 <source>Find a script in the script repository</source>
 <translation>Rapua he kape kei roto i te kape tuhi</translation>
 </message>
@@ -7988,136 +8003,136 @@ Karere o te hononga honohono:</translation>
 <translation>Whakaatuhia te tahua pae tahua</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1541"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1581"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1547"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1587"/>
 <source>Undefined shortcut</source>
 <translation>Nga mahinga poto
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1544"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1584"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1550"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1590"/>
 <source>Assign a new shortcut</source>
 <translation>Whakaritehia he ruu poto
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1544"/>
-<location filename="../dialogs/settingsdialog.cpp" line="1585"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1550"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1591"/>
 <source>Reset to default shortcut</source>
 <translation>Tautuhi ki te kati poto poto
 </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1560"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1566"/>
 <source>Clear shortcut</source>
 <translation>Clearkui te kati poto</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="1655"/>
+<location filename="../dialogs/settingsdialog.cpp" line="1661"/>
 <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
 <translation>Ko te kati poto &lt;strong&gt;%1&lt;/strong&gt; kua tautuhia ki te &lt;strong&gt;%2&lt;/strong&gt;! Kei te hiahia koe ki te peke ki te kati poto?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2795"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2801"/>
 <source>Remove script</source>
 <translation>Tango tuhinga</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2796"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2802"/>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Tango i te hōtuhi o nāianei &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2845"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2851"/>
 <source>QML files</source>
 <translation>Nga konae QML</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2846"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2852"/>
 <source>Please select your QML file</source>
 <translation>Tohua koa taau konae QML</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2935"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2941"/>
 <source>Open repository</source>
 <translation>Whakatuwherahia te maakete</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2991"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2997"/>
 <source>Your script seems to be valid</source>
 <translation>Ko to tuhi ki te whakaatu he mana</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2992"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2998"/>
 <source>There were script errors:
 %1</source>
 <translation>He hapa o nga tuhi:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3059"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3065"/>
 <source>File extension</source>
 <translation>Whakawhanake konae</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3113"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3119"/>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
 <translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3392"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3398"/>
 <source>Calendar cache emptied</source>
 <translation>Parakore te momotuhi maramataka</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3393"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3399"/>
 <source>Your calendar cache was emptied.</source>
 <translation>Kua ururua tō maramataka maramataka.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3469"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3475"/>
 <source>Reset toolbars and exit</source>
 <translation>Tautuhi i nga taputapu taputapu me nga putanga</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3470"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3476"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>Kei te hiahia mau ano koe ki te tautuhi taputapu katoa? Ka tutakina te tono i roto i te mahinga, ka whakahokia mai nga taonga taputapu taunoa i te wa ka tiimata ano koe.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3474"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3480"/>
 <source>Reset and &amp;exit</source>
 <translation>Tautuhi me te &amp;puta atu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3633"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3639"/>
 <source>Log file cleared</source>
 <translation>Kua tae te konae</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3634"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3640"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Ko te konae rangatoko &lt;strong&gt;%1&lt;/strong&gt; I murua.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3671"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3677"/>
 <source>Executable files</source>
 <translation>Nga konae kawe</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3671"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3673"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3677"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3679"/>
 <source>All files</source>
 <translation>Nga konae katoa</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3681"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3687"/>
 <source>Please select the path of your git executable</source>
 <translation>Tīpakohia koa te huarahi o to kaihoroi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3779"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3785"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>Kei te hiahia mau koe ki te tautuhi i nga raarangi whakaheke o nga pouaka karere katoa?</translation>
 </message>
@@ -8172,12 +8187,12 @@ Karere o te hononga honohono:</translation>
 <translation>ko te pātengi raraunga sqlite o roto me nga tautuhinga ka penapena ki roto i te kōpaki &lt;code&gt; Raraunga &lt;/code&gt; ki te waahi o te maakete</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2146"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2152"/>
 <source>Save debug information</source>
 <translation>Aukuhia nga korero kaitirotiro</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2191"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2197"/>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -8186,14 +8201,14 @@ Your notes will stay intact!</source>
 Ka noho tonu o au tuhinga ki roto!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2194"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2200"/>
 <source>Clear and &amp;exit</source>
 <translation>Me maama me &amp;putanga</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2122"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2194"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3474"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2128"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2200"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3480"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Whakakore</translation>
 </message>
@@ -8203,17 +8218,17 @@ Ka noho tonu o au tuhinga ki roto!</translation>
 <translation>Ka kite koe i te &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; i to ara tuku mo te tiimata ki te QOwnNotes i te aratau kawe.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2119"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2125"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Kei te hiahia tika koe ki te horoi i te papanga raraunga o te rohe? Ka whakakorea ano hoki e koe nga kōpaki tuhipoka kua whirihorahia me o taonga tohe ki a koe!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2122"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2128"/>
 <source>Clear &amp;database</source>
 <translation>Maama me te &amp;papamahi</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2317"/>
 <source>Select editor application</source>
 <translation>Tīpakohia te tono ētita</translation>
 </message>

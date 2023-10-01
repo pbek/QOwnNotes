@@ -2,25 +2,27 @@
 
 ## Evernote
 
-W menu `Notatka / Importuj` znajduje się okno dialogowe importowania Evernote.
+There is an Evernote import dialog you can reach in the `Note / Import` menu to import *Enex* files.
+
+Images, attachments, tags, basic formatting and metadata will be imported as well.
 
 ## Joplin
 
-Istnieje okno dialogowe importu Joplin, do którego można przejść w menu `Notatka / Importuj`.
+There is a Joplin import dialog you can reach in the `Note / Import` menu.
 
 ## Tomboy
 
-Możesz zaimportować swoje notatki Tomboy za pomocą skryptu o nazwie [Trombone](https://github.com/samba/trombone).
+You can import your Tomboy Notes using a script called [Trombone](https://github.com/samba/trombone).
 
-Możesz zainstalować python2, aby skrypt działał. Konwertuje twoje notatki Tomboy do pliku Evernote `.enex`, który następnie możesz zaimportować do QOwnNotes.
+You might install python2 to make the script work. It will convert your Tomboy notes to an Evernote `.enex` file, which then you are able to import to QOwnNotes.
 
-Dla każdego, kto chce to zrobić, najpierw upewnij się, że masz zainstalowany Python2 i możesz również zainstalować `python-is-python2` (możesz to później usunąć):
+For anyone wanting to do this, first make sure you have Python2 installed and you might want to also install `python-is-python2` (you can remove that later):
 
 ```bash
 sudo apt install python2 python-is-python2
 ```
 
-Pobierz plik puzonu z GitHub, rozpakuj i wskocz do tego folderu:
+Download the trombone file from GitHub, extract and jump into that folder:
 
 ```bash
 cd ~/Downloads/trombone-master
@@ -29,18 +31,18 @@ sudo make
 sudo make install
 ```
 
-Następnie przejdź do folderu, w którym znajdują się twoje notatki chłopca:
+Then cd into the folder where your tomboy notes are:
 
 ```bash
  cd ~/.local/share/tomboy/
 ```
 
-Następnie uruchom to:
+Then run this:
 
 ```bash
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex
 ```
 
-Jeśli otrzymujesz błędy Unicode dotyczące określonych notatek, po prostu usuń każdą notatkę i ponownie uruchom konwersję, aż pojawi się komunikat `Zapisywanie...`. Będziesz mieć plik o nazwie `EXPORT.enex`, który można następnie zaimportować do QOwnNotes.
+If you get unicode errors about specific notes, just remove each note and run the conversion again until it gives a message saying `Saving...` . You will have a file called `EXPORT.enex` which can then be imported into QOwnNotes.
 
-Podczas importu do QOwnNotes możesz odznaczyć wszystkie atrybuty do zaimportowania, z wyjątkiem być może daty utworzenia / modyfikacji, ponieważ Tomboy nie ma tych funkcji.
+During the import into QOwnNotes you might uncheck all of the attributes to import except maybe the creation/modification date, since Tomboy does not have those features.

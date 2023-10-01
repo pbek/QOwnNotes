@@ -2,25 +2,27 @@
 
 ## Evernote
 
-Er is een Evernote-importdialoog die u kunt bereiken in het menu `Notitie / Importeren`.
+Er is een Evernote-importdialoog welke u kunt bereiken in het menu ` Notitie / Importeren ` om * Enex* -bestanden te importeren.
+
+Afbeeldingen, bijlagen, labels, basisopmaak en metagegevens worden ook geïmporteerd.
 
 ## Joplin
 
-Er is een Joplin-importdialoogvenster dat u kunt bereiken in het menu `Opmerking / Import`.
+Er is een Joplin-importdialoog welke u kunt bereiken in het menu `Notitie / Importeren `.
 
 ## Tomboy
 
-U kunt uw Tomboy-notities importeren met behulp van een script genaamd [Trombone](https://github.com/samba/trombone).
+U kunt uw Tomboy-notities importeren met een script genaamd [Trombone](https://github.com/samba/trombone).
 
-U zou python2 kunnen installeren om het script te laten werken. Het converteert je Tomboy-notities naar een Evernote `.enex` -bestand, dat je vervolgens kunt importeren in QOwnNotes.
+U kunt python2 installeren om het script te laten werken. Het converteert uw Tomboy-notities naar een Evernote `.enex ` -bestand die u vervolgens kunt importeren in QOwnNotes.
 
-Voor iedereen die dit wil doen, zorg er eerst voor dat Python2 is geïnstalleerd en misschien wil je ook ` python-is-python2 ` installeren (je kunt dat later verwijderen):
+Voor iedereen die dit wil doen, zorg er eerst voor dat Python2 is geïnstalleerd en misschien wilt u ook `python-is-python2` installeren (dat kan later verwijderd worden):
 
 ```bash
 sudo apt install python2 python-is-python2
 ```
 
-Download het trombone-bestand van GitHub, pak het uit en spring naar die map:
+Download het trombone-bestand van GitHub, pak het uit en navigeer naar die map:
 
 ```bash
 cd ~/Downloads/trombone-master
@@ -29,7 +31,7 @@ sudo make
 sudo make install
 ```
 
-Cd dan naar de map waar je tomboy-aantekeningen zijn:
+CD dan in de map waar zich de tomboy-notities bevinden:
 
 ```bash
  cd ~/.local/share/tomboy/
@@ -41,6 +43,6 @@ Voer dan dit uit:
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex
 ```
 
-Als u unicode-fouten krijgt over specifieke opmerkingen, verwijdert u gewoon elke notitie en voert u de conversie opnieuw uit totdat er een bericht verschijnt met de melding `Saving...`. Je hebt een bestand met de naam `EXPORT.enex` dat vervolgens kan worden geïmporteerd in QOwnNotes.
+Indien er unicode-fouten optreden over specifieke notities? Verwijder dan gewoon elke notitie en voer de conversie opnieuw uit totdat deze het bericht geeft `Opslaan...` . Dit levert een bestand met de naam `EXPORT.enex` dat vervolgens in QOwnNotes kan worden geïmporteerd.
 
-Tijdens het importeren in QOwnNotes kunt u alle te importeren attributen uitschakelen, behalve misschien de aanmaak- / wijzigingsdatum, aangezien Tomboy deze functies niet heeft.
+Tijdens de import in QOwnNotes kunt u alle te importeren attributen uitschakelen, behalve misschien de aanmaak- / wijzigingsdatum aangezien Tomboy die kenmerken niet heeft.

@@ -10,6 +10,8 @@
 - there now is a setting for the feature to unset the `All notes` selection in
   the subfolder panel when clicking a note tab in the *Panels settings*
   (for [#2861](https://github.com/pbek/QOwnNotes/issues/2861))
+- added more Arabic, Slovenian, Dutch, German, Korean translation (thank you
+  noureddin, salamelek, stephanp, bumpsy, venusgirl)
 
 ## 23.9.7
 - Evernote notes with malformed XML will now stop the import process when importing
