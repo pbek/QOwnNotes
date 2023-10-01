@@ -25,6 +25,8 @@ void NextcloudDeckDialog::on_saveButton_clicked() {
 
     auto *dateTime = new QDateTime(ui->dueDateTimeEdit->dateTime());
     dateTime->setTimeZone(QTimeZone::systemTimeZone());
+    // We want to set the seconds to 0
+    dateTime->setTime(dateTime->time().addSecs(0 - dateTime->time().second()));
     const QString &title = ui->titleLineEdit->text();
     int cardId = nextcloudDeckService.createCard(title,
                                     ui->descriptionTextEdit->toPlainText(),
