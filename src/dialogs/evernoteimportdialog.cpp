@@ -120,6 +120,9 @@ Note EvernoteImportDialog::parseNote(QXmlStreamReader &xml, bool importMetaData)
         return note;
     }
 
+    // Import the note to the current note subfolder
+    note.setNoteSubFolderId(NoteSubFolder::activeNoteSubFolderId());
+
     QString title;
     QString content;
     QStringList tagNames;

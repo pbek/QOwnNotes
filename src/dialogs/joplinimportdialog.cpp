@@ -290,6 +290,10 @@ bool JoplinImportDialog::importNote(const QString& id, const QString& text,
         noteText.split(QRegularExpression("^id: " + id + "$", QRegularExpression::MultilineOption));
 
     Note note = Note();
+
+    // Import the note to the current note subfolder
+    note.setNoteSubFolderId(NoteSubFolder::activeNoteSubFolderId());
+
     QString newNoteText;
 
     // add metadata as frontmatter

@@ -3,6 +3,8 @@
 ## 23.10.0
 - newlines are now removed from links from the clipboard in the link dialog
   (for [#2726](https://github.com/pbek/QOwnNotes/issues/2726))
+- notes are now imported to the current note subfolder in the Evernote and Joplin
+  import instead of the root folder (for [#2863](https://github.com/pbek/QOwnNotes/issues/2863))
 
 ## 23.9.7
 - Evernote notes with malformed XML will now stop the import process when importing
