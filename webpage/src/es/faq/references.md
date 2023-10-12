@@ -294,7 +294,7 @@ Lo que otras personas dijeron sobre QOwnNotes ...
 - [Inspire Writer - Voxcaster](https://www.vox.me.uk/post/2020/04/inspire-writer/)
 - [OneNote für Windows: Microsoft arbeitet an einziger, einheitlicher App](https://stadt-bremerhaven.de/onenote-fuer-windows-microsoft-arbeitet-an-einziger-einheitlicher-app)
 - [Typora es un bonito y potente editor de texto multiplataforma compatible con Markdown y MathJax](https://www.genbeta.com/ofimatica/typora-es-un-bonito-y-potente-editor-de-texto-multiplataforma-compatible-con-markdown-y-mathjax)
-- [Typora is no longer free. Is there a good alternative or replacement? : freesoftware](https://www.reddit.com/r/freesoftware/comments/r6kir3/typora_is_no_longer_free_is_there_a_good/)
+- [Typora ya no es gratuito. ¿Existe una buena alternativa o reemplazo? : freesoftware](https://www.reddit.com/r/freesoftware/comments/r6kir3/typora_is_no_longer_free_is_there_a_good/)
 - [Running PlantUML from Other Tools](https://plantuml.com/en/running)
 - [Way to quick add notes? - #13 by ShaneNZ - Resolved help - Obsidian Forum](https://forum.obsidian.md/t/way-to-quick-add-notes/5301/13)
 - [Plaintext productivity on Windows : programming](https://www.reddit.com/r/programming/comments/tjct7i/plaintext_productivity_on_windows/)

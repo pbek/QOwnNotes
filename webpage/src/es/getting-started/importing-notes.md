@@ -37,7 +37,7 @@ Then cd into the folder where your tomboy notes are:
  cd ~/.local/share/tomboy/
 ```
 
-Then run this:
+A continuación, ejecute:
 
 ```bash
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex

@@ -775,12 +775,12 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.cpp" line="190"/>
 <source>Invalid XML!</source>
-<translation type="unfinished">Invalid XML!</translation>
+<translation>Geçersiz XML!</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.cpp" line="191"/>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+<translation>&lt;b&gt;%1&lt;/b&gt; notunda geçersiz XML bulundu! İçe aktarma bu aşamada durdurulabilir.</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.cpp" line="295"/>
@@ -954,7 +954,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished">Use search dialog</translation>
+<translation>Arama iletişim kutusunu kullan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
@@ -1639,7 +1639,7 @@
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
 <source>Minimum 8 characters</source>
-<translation type="unfinished">Minimum 8 characters</translation>
+<translation>En az 8 karakter</translation>
 </message>
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1647,7 +1647,7 @@
 <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
 <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
 <source>Minimum 10 characters</source>
-<translation type="unfinished">Minimum 10 characters</translation>
+<translation>En az 10 karakter</translation>
 </message>
 </context>
 <context>
@@ -1655,67 +1655,67 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Joplin İçe Aktar</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="48"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>Klasörleri içe aktar</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>İçe aktarmak istediğiniz "RAW - Joplin Export Directory" seçiniz:</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="37"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>Klasör seçiniz</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>Resimleri içe aktar</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="30"/>
 <source>%v of %m file(s) imported</source>
-<translation type="unfinished">%v of %m file(s) imported</translation>
+<translation>%m dosyanın %v kadarı içe aktarıldı</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="115"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Notları içe aktar</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>Etiketleri içe aktar</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="182"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>Elinizde sadece "JEX - Joplin Export File" varsa, dosyanın içeriğini bir klasöre çıkartın ve o klasörü seçin.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="142"/>
 <source>Import metadata</source>
-<translation type="unfinished">Import metadata</translation>
+<translation>Üstveriyi içe aktar</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="74"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW - Joplin Dışa Aktarma Klasörü</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>Ekleri içe aktar</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="74"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>İçe aktarmak için 'RAW - Joplin Dışa Aktarma Klasörü' seçin</translation>
 </message>
 </context>
 <context>
@@ -1848,7 +1848,7 @@
 <message>
 <location filename="../dialogs/linkdialog.ui" line="160"/>
 <source>Search for a heading to link to</source>
-<translation type="unfinished">Search for a heading to link to</translation>
+<translation>Bağlantı yapmak için bir başlık ara</translation>
 </message>
 <message>
 <location filename="../dialogs/linkdialog.ui" line="184"/>
@@ -4246,62 +4246,62 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="20"/>
 <source>-10min</source>
-<translation type="unfinished">-10min</translation>
+<translation>-10dak</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="27"/>
 <source>+10min</source>
-<translation type="unfinished">+10min</translation>
+<translation>+10dak</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="34"/>
 <source>+1d</source>
-<translation type="unfinished">+1d</translation>
+<translation>+1gün</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="54"/>
 <source>-1d</source>
-<translation type="unfinished">-1d</translation>
+<translation>-1gün</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="14"/>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Nextcloud Deck kart bağlantısı ekle</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="95"/>
 <source>Create card and insert link into current note</source>
-<translation type="unfinished">Create card and insert link into current note</translation>
+<translation>Kart yarat ve etkin nota bağlantı ekle</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="98"/>
 <source>&amp;Save</source>
-<translation type="unfinished">&amp;Save</translation>
+<translation>Kaydet</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="115"/>
 <source>+1h</source>
-<translation type="unfinished">+1h</translation>
+<translation>+1saat</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="122"/>
 <source>Title</source>
-<translation type="unfinished">Title</translation>
+<translation>Başlık</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="129"/>
 <source>-1h</source>
-<translation type="unfinished">-1h</translation>
+<translation>-1saat</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="136"/>
 <source>Description:</source>
-<translation type="unfinished">Description:</translation>
+<translation>Açıklama:</translation>
 </message>
 <message>
 <location filename="../dialogs/nextclouddeckdialog.ui" line="143"/>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Son tarih</translation>
 </message>
 </context>
 <context>
@@ -5335,7 +5335,7 @@ Klasör ve dosya yazılabilir mi?</translation>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
 <source>To search for a script please enter your query text.</source>
-<translation type="unfinished">To search for a script please enter your query text.</translation>
+<translation>Bir betik aramak için, lütfen sorgu ifadenizi giriniz.</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
@@ -6970,7 +6970,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5978"/>
 <source>Clicking a note tab unsets 'All notes' selection</source>
-<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+<translation>Bir not sekmesine tıklanması 'Tüm notlar' seçimini iptal eder</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6004"/>

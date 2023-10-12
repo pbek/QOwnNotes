@@ -6908,7 +6908,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5978"/>
 <source>Clicking a note tab unsets 'All notes' selection</source>
-<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+<translation>노트 탭을 누르면 '모든 노트' 선택을 해제합니다</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6004"/>

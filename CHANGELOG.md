@@ -3,6 +3,8 @@
 ## 23.10.1
 - a fakevim fix for building with Qt 6.6.0 was added
   (for [#2878](https://github.com/pbek/QOwnNotes/pull/2878), thank you, @NickCao)
+- added more Arabic, Spanish, Turkish, Korean, Tamil, German, Dutch translation
+  (thank you noureddin, fitojb, rgucluer, venusgirl, tamilneram.github.io, bumpsy, stephanp)
 
 ## 23.10.0
 - newlines are now removed from links from the clipboard in the link dialog

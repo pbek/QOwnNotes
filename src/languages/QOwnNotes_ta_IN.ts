@@ -23,7 +23,7 @@
 <message>
 <location filename="../dialogs/attachmentdialog.ui" line="14"/>
 <source>Insert attachment</source>
-<translation type="unfinished">Insert attachment</translation>
+<translation>இணைப்பைச் செருகவும்</translation>
 </message>
 <message>
 <location filename="../dialogs/attachmentdialog.ui" line="20"/>
@@ -6945,7 +6945,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5978"/>
 <source>Clicking a note tab unsets 'All notes' selection</source>
-<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+<translation>குறிப்பு தாவலைக் கிளிக் செய்வதன் மூலம் 'அனைத்து குறிப்புகள்' தேர்வு அமைக்கப்படவில்லை</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6004"/>

@@ -775,12 +775,12 @@
 <message>
 <location filename="../dialogs/evernoteimportdialog.cpp" line="190"/>
 <source>Invalid XML!</source>
-<translation type="unfinished">Invalid XML!</translation>
+<translation>El XML no es válido.</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.cpp" line="191"/>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+<translation>Se encontró XML no válido en la nota &lt;b&gt;%1&lt;/b&gt;. La importación podría detenerse a este punto.</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.cpp" line="295"/>
@@ -6942,7 +6942,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5978"/>
 <source>Clicking a note tab unsets 'All notes' selection</source>
-<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+<translation>Al pulsar en una pestaña de nota se desmarca la selección «Todas las notas»</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6004"/>

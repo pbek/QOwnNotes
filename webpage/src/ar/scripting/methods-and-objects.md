@@ -1148,7 +1148,7 @@ property variant settingsVariables: [
 ];
 ```
 
-In addition you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
+ويمكنك أيضا تغطية `settingsVariables` بالدالة الخاصة `registerSettingsVariables()` مثل:
 
 ### مثال
 ```js
@@ -1205,7 +1205,7 @@ script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothing here yet"));
 ```
 
-Please make sure to use a meaningful prefix in your key like `PersistentVariablesTest/myVar` because the variables are accessible from all scripts.
+أسبِق أسماء متغيراتك المستديمة بعبارة مميزة، مثل: `PersistentVariablesTest/myVar` لأن جميع البُريمجات تستطيع الوصول إلى جميع المتغيرات المستديمة.
 
 ربما تحب أيضا أن تلقي نظرة على المثال [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/persistent-variables.qml).
 
@@ -1280,7 +1280,7 @@ script.clearCacheDir("my-script-id");
 قراءة مسار مجلد بُريمجك
 ------------------------------------------------
 
-إذا احتجت إلى الحصول على مسار المجلد الذي يقع بُريمِجك فيه، لتحميل ملفات أخرى مثلا، عليك تسجيل الخاصية النصية `scriptDirPath` (بالكود `property string scriptDirPath;`). ستُضبط هذه الخاصية إلى مسار مجلد بُريمِجك.
+إذا احتجت إلى الحصول على مسار المجلد الذي يقع بُريمِجك فيه، لتحميل ملفات أخرى مثلا، عليك تسجيل الخاصية النصية `scriptDirPath` (بالكود <code dir="ltr">property string scriptDirPath;</code>). ستُضبط هذه الخاصية إلى مسار مجلد بُريمِجك.
 
 ### مثال
 ```js

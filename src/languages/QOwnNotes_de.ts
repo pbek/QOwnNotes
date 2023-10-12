@@ -6943,7 +6943,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5978"/>
 <source>Clicking a note tab unsets 'All notes' selection</source>
-<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+<translation>Das Anklicken eines Notiztabs hebt die "Alle Notizen"-Auswahl auf</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6004"/>

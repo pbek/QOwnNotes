@@ -1,6 +1,6 @@
 # الخطاطيف
 
-onNoteStored (عند حفظ الملاحظة)
+onNoteStored (خطاف حفظ الملاحظة)
 ------------
 
 ### نداء الدالة ومُعامِلاتها
@@ -148,21 +148,23 @@ handleNoteNameHook (خطاف التعامل مع اسم الملاحظة)
 ### نداء الدالة ومُعامِلاتها
 ```js
 /**
- * This function is called when the note name is determined for a note
+ * تُنادى هذه الدالة عندما يتحدد اسم الملاحظة
  *
- * It allows you to modify the name of the note that is viewed
+ * وتسمح لك بتعديل اسمها المعروض
  *
- * Return an empty string if the name of the note should not be modified
+ * أعد سلسلة نصية فارغة إذا كان اسم الملاحظة لا يحتاج تغيير
  *
- * @param {NoteApi} note - the note object of the stored note
- * @return {string} the name of the note
+ * @param {NoteApi} note
+ *       كائن الملاحظة الخاص بالملاحظة المخزنة
+ * @return {string}
+ *        سلسلة نصية: اسم الملاحظة
  */
 function handleNoteNameHook(note);
 ```
 
 ربما تحب أن تلقي نظرة على المثال [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
-It may not be a good idea to use this hook if the setting to use the file name as note name is active.
+ليس مستحسنا استخدام هذا الخطاف إذا فعّل المستخدم خيار السماح لاسم الملف أن يختلف عن اسم الملاحظة.
 
 handleNewNoteHeadlineHook (خطاف التعامل مع عنوان الملاحظة الجديدة)
 -------------------------
