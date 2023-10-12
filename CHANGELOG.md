@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.10.1
+- a fakevim fix for building with Qt 6.6.0 was added
+  (for [#2878](https://github.com/pbek/QOwnNotes/pull/2878), thank you, @NickCao)
+
 ## 23.10.0
 - newlines are now removed from links from the clipboard in the link dialog
   (for [#2726](https://github.com/pbek/QOwnNotes/issues/2726))

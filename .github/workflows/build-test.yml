@@ -38,7 +38,7 @@ jobs:
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
-        qt-version: ['5.9.9', '5.13.2', '5.14.2', '5.15.2', '6.2.0', '6.4.2', '6.5.0']
+        qt-version: ['5.9.9', '5.13.2', '5.14.2', '5.15.2', '6.2.0', '6.4.2', '6.5.0', '6.6.0']
         experimental: [false]
         exclude:
           # Failing SSL Tests
@@ -54,6 +54,9 @@ jobs:
           # we want to do it with "experimental: true"
           - os: windows-2019
             qt-version: '6.5.0'
+            experimental: false
+          - os: windows-2019
+            qt-version: '6.6.0'
             experimental: false
           # Qt installation times out too often
 #          - os: windows-2019
@@ -77,6 +80,9 @@ jobs:
             experimental: true
           - os: windows-2019
             qt-version: '6.5.0'
+            experimental: true
+          - os: windows-2019
+            qt-version: '6.6.0'
             experimental: true
           # Snapcraft
           - os: ubuntu-20.04
