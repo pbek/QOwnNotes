@@ -6,4 +6,4 @@ bash:
 	docker-compose exec dev bash -c "cd /app && bash"
 
 dev:
-	yarn run dev
+	npm run dev

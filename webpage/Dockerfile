@@ -3,7 +3,7 @@
 FROM node:20-alpine as node
 COPY . /app
 WORKDIR /app
-RUN yarn install
+RUN npm install
 RUN ./scripts/run-build.sh
 
 FROM nginx:latest
