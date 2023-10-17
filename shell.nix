@@ -9,6 +9,7 @@
       qttools
       wrapQtAppsHook
       pkg-config
+      libclang  # for clang-format
 
       # for ./build-systems/github/build-github-src.sh
       coreutils
