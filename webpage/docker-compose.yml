@@ -1,7 +1,7 @@
 version: '3'
 services:
   dev:
-    image: node:12
+    image: node:20
     volumes:
       - .:/app
     user: 1000:1000

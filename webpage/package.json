@@ -9,8 +9,8 @@
   },
   "repository": "/qownnotes-webpage",
   "scripts": {
-    "dev": "vuepress dev src",
-    "build": "cp ../screenshots src/.vuepress/public -R; cp ../CHANGELOG.md src/changelog.md; vuepress build src; sed -E 's/^<html /&dir=\"rtl\" /' -i `find src/.vuepress/dist/fa -name '*.html'`; sed -E 's/^<html /&dir=\"rtl\" /' -i `find src/.vuepress/dist/ar -name '*.html'`"
+    "dev": "./scripts/run-dev.sh",
+    "build": "./scripts/run-build.sh"
   },
   "license": "MIT",
   "devDependencies": {
