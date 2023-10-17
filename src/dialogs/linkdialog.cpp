@@ -10,11 +10,11 @@
 #include <QKeyEvent>
 #include <QMenu>
 #include <QNetworkAccessManager>
+#include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QRegularExpression>
 #include <QSettings>
 #include <QTimer>
-#include <QNetworkReply>
 
 #include "ui_linkdialog.h"
 
@@ -52,9 +52,7 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
 
     if (page == LinkDialog::TextLinkPage) {
         QClipboard *clipboard = QApplication::clipboard();
-        const QString text = clipboard->text()
-                                 .remove(QStringLiteral("\n"))
-                                 .trimmed();
+        const QString text = clipboard->text().remove(QStringLiteral("\n")).trimmed();
         const QUrl url(text);
 
         // set text from clipboard
@@ -243,10 +241,10 @@ QString LinkDialog::getTitleFromHtml(const QString &html) {
  * Shows the download progress
  */
 void LinkDialog::downloadProgress(qint64 bytesReceived, qint64 bytesTotal) {
-    ui->downloadProgressBar->setMaximum(static_cast<int>(bytesTotal/1000));
-    ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived/1000));
-    ui->downloadProgressBar->setToolTip(Utils::Misc::toHumanReadableByteSize(bytesReceived) + " / " +
-                                   Utils::Misc::toHumanReadableByteSize(bytesTotal));
+    ui->downloadProgressBar->setMaximum(static_cast<int>(bytesTotal / 1000));
+    ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived / 1000));
+    ui->downloadProgressBar->setToolTip(Utils::Misc::toHumanReadableByteSize(bytesReceived) +
+                                        " / " + Utils::Misc::toHumanReadableByteSize(bytesTotal));
 }
 
 /**
@@ -363,7 +361,6 @@ void LinkDialog::on_urlEdit_textChanged(const QString &arg1) {
 
     // try to get the title of the webpage if no link name was set
     if (url.scheme().startsWith(QStringLiteral("http")) && ui->nameLineEdit->text().isEmpty()) {
-
         startTitleFetchRequest(url);
     }
 }
@@ -419,7 +416,7 @@ void LinkDialog::on_tabWidget_currentChanged(int index) {
     }
 }
 
-void LinkDialog::startTitleFetchRequest(const QUrl& url) {
+void LinkDialog::startTitleFetchRequest(const QUrl &url) {
     ui->downloadProgressBar->show();
     QNetworkRequest networkRequest(url);
 

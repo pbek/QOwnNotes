@@ -486,8 +486,9 @@ QDebug operator<<(QDebug dbg, const Script &script) {
 }
 
 QDebug operator<<(QDebug dbg, const ScriptInfoJson &scriptInfoJson) {
-    dbg.nospace() << "ScriptInfoJson: <name>" << scriptInfoJson.name << " <identifier>" << scriptInfoJson.identifier << " <version>"
-                  << scriptInfoJson.version << " <description>" << scriptInfoJson.description;
+    dbg.nospace() << "ScriptInfoJson: <name>" << scriptInfoJson.name << " <identifier>"
+                  << scriptInfoJson.identifier << " <version>" << scriptInfoJson.version
+                  << " <description>" << scriptInfoJson.description;
     return dbg.space();
 }
 
@@ -571,9 +572,7 @@ ScriptInfoJson::ScriptInfoJson(const QJsonObject &jsonObject) {
     appVersionSupported = VersionNumber(VERSION) >= VersionNumber(minAppVersion);
 }
 
-bool ScriptInfoJson::isEmpty() const {
-    return identifier.isEmpty();
-}
+bool ScriptInfoJson::isEmpty() const { return identifier.isEmpty(); }
 
 /**
  * Returns the URL of the info.json file of the script repository

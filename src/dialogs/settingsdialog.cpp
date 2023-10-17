@@ -861,9 +861,12 @@ void SettingsDialog::storeSettings() {
     settings.setValue(QStringLiteral("automaticNoteFolderDatabaseClosing"),
                       ui->automaticNoteFolderDatabaseClosingCheckBox->isChecked());
     settings.setValue(QStringLiteral("legacyLinking"), ui->legacyLinkingCheckBox->isChecked());
-    settings.setValue(QStringLiteral("startInReadOnlyMode"), ui->startInReadOnlyModeCheckBox->isChecked());
-    settings.setValue(QStringLiteral("autoReadOnlyMode"), ui->autoReadOnlyModeCheckBox->isChecked());
-    settings.setValue(QStringLiteral("autoReadOnlyModeTimeout"), ui->autoReadOnlyModeTimeoutSpinBox->value());
+    settings.setValue(QStringLiteral("startInReadOnlyMode"),
+                      ui->startInReadOnlyModeCheckBox->isChecked());
+    settings.setValue(QStringLiteral("autoReadOnlyMode"),
+                      ui->autoReadOnlyModeCheckBox->isChecked());
+    settings.setValue(QStringLiteral("autoReadOnlyModeTimeout"),
+                      ui->autoReadOnlyModeTimeoutSpinBox->value());
 
     settings.setValue(QStringLiteral("webSocketServerService/port"),
                       ui->webSocketServerServicePortSpinBox->value());
@@ -1313,9 +1316,12 @@ void SettingsDialog::readSettings() {
     ui->automaticNoteFolderDatabaseClosingCheckBox->setChecked(
         Utils::Misc::doAutomaticNoteFolderDatabaseClosing());
     ui->legacyLinkingCheckBox->setChecked(settings.value(QStringLiteral("legacyLinking")).toBool());
-    ui->startInReadOnlyModeCheckBox->setChecked(settings.value(QStringLiteral("startInReadOnlyMode")).toBool());
-    ui->autoReadOnlyModeCheckBox->setChecked(settings.value(QStringLiteral("autoReadOnlyMode")).toBool());
-    ui->autoReadOnlyModeTimeoutSpinBox->setValue(settings.value(QStringLiteral("autoReadOnlyModeTimeout"), 30).toInt());
+    ui->startInReadOnlyModeCheckBox->setChecked(
+        settings.value(QStringLiteral("startInReadOnlyMode")).toBool());
+    ui->autoReadOnlyModeCheckBox->setChecked(
+        settings.value(QStringLiteral("autoReadOnlyMode")).toBool());
+    ui->autoReadOnlyModeTimeoutSpinBox->setValue(
+        settings.value(QStringLiteral("autoReadOnlyModeTimeout"), 30).toInt());
 
     ui->webSocketServerServicePortSpinBox->setValue(WebSocketServerService::getSettingsPort());
     ui->bookmarksTagLineEdit->setText(WebSocketServerService::getBookmarksTag());
@@ -1368,9 +1374,7 @@ void SettingsDialog::loadInterfaceStyleComboBox() const {
     ui->interfaceStyleComboBox->clear();
     ui->interfaceStyleComboBox->addItem(tr("Automatic (needs restart)"));
 
-    Q_FOREACH (QString style, QStyleFactory::keys()) {
-        ui->interfaceStyleComboBox->addItem(style);
-    }
+    Q_FOREACH (QString style, QStyleFactory::keys()) { ui->interfaceStyleComboBox->addItem(style); }
 
     QSettings settings;
     QString interfaceStyle = settings.value(QStringLiteral("interfaceStyle")).toString();
@@ -2955,9 +2959,7 @@ void SettingsDialog::reloadCurrentScriptPage() {
             // scriptSettingsFrame
             QList<ScriptSettingWidget *> widgets =
                 ui->scriptSettingsFrame->findChildren<ScriptSettingWidget *>();
-            Q_FOREACH (ScriptSettingWidget *widget, widgets) {
-                delete widget;
-            }
+            Q_FOREACH (ScriptSettingWidget *widget, widgets) { delete widget; }
 
             foreach (QVariant variable, variables) {
                 QMap<QString, QVariant> varMap = variable.toMap();
@@ -3244,9 +3246,7 @@ void SettingsDialog::on_shortcutSearchLineEdit_textChanged(const QString &arg1) 
         }
     } else {
         // show all items otherwise
-        Q_FOREACH (QTreeWidgetItem *item, allItems) {
-            item->setHidden(false);
-        }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) { item->setHidden(false); }
     }
 }
 
@@ -3575,9 +3575,7 @@ void SettingsDialog::on_searchLineEdit_textChanged(const QString &arg1) {
         }
     } else {
         // show all items otherwise
-        Q_FOREACH (QTreeWidgetItem *item, allItems) {
-            item->setHidden(false);
-        }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) { item->setHidden(false); }
     }
 }
 
@@ -3836,9 +3834,7 @@ void SettingsDialog::on_exportSettingsButton_clicked() {
             QSettings settings;
 
             const QStringList keys = settings.allKeys();
-            Q_FOREACH (QString key, keys) {
-                exportSettings.setValue(key, settings.value(key));
-            }
+            Q_FOREACH (QString key, keys) { exportSettings.setValue(key, settings.value(key)); }
         }
     }
 }
@@ -4257,8 +4253,7 @@ void SettingsDialog::on_noteTextViewRefreshDebounceTimeResetButton_clicked() {
     ui->noteTextViewRefreshDebounceTimeSpinBox->setValue(600);
 }
 
-void SettingsDialog::on_appNextcloudDeckCheckBox_toggled(bool checked)
-{
+void SettingsDialog::on_appNextcloudDeckCheckBox_toggled(bool checked) {
     ui->nextcloudDeckFrame->setVisible(checked);
     _selectedCloudConnection.setNextcloudDeckEnabled(checked);
     loadNextcloudDeckStackTreeWidget();
@@ -4302,7 +4297,8 @@ void SettingsDialog::loadNextcloudDeckStackTreeWidget() {
     ui->nextcloudDeckStackTreeWidget->expandAll();
 }
 
-void SettingsDialog::on_nextcloudDeckStackTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+void SettingsDialog::on_nextcloudDeckStackTreeWidget_currentItemChanged(QTreeWidgetItem *current,
+                                                                        QTreeWidgetItem *previous) {
     Q_UNUSED(previous)
 
     if (current == nullptr) {
@@ -4310,5 +4306,6 @@ void SettingsDialog::on_nextcloudDeckStackTreeWidget_currentItemChanged(QTreeWid
     }
 
     _selectedCloudConnection.setNextcloudDeckStackId(current->data(0, Qt::UserRole).toInt());
-    _selectedCloudConnection.setNextcloudDeckBoardId(current->parent()->data(0, Qt::UserRole).toInt());
+    _selectedCloudConnection.setNextcloudDeckBoardId(
+        current->parent()->data(0, Qt::UserRole).toInt());
 }

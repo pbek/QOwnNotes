@@ -89,8 +89,7 @@ void FontColorWidget::initSchemaSelector() {
     // QMaps are sorted by key automatically
     QMap<QString, QString> defaultSchemaNameKeys;
 
-    const QSettings& defaultSchemaSettings =
-        Utils::Schema::schemaSettings->defaultSchemaSettings();
+    const QSettings& defaultSchemaSettings = Utils::Schema::schemaSettings->defaultSchemaSettings();
 
     // Gather the default schema names and keys in correctly sorted order
     Q_FOREACH (const QString& schemaKey, _defaultSchemaKeys) {
@@ -810,8 +809,7 @@ void FontColorWidget::on_fontSizeAdaptionSpinBox_valueChanged(int value) {
  * Opens a new GitHub issue to share a schema
  */
 void FontColorWidget::on_shareSchemaPushButton_clicked() {
-    QDesktopServices::openUrl(
-        QUrl("https://github.com/pbek/QOwnNotes/issues/new/choose"));
+    QDesktopServices::openUrl(QUrl("https://github.com/pbek/QOwnNotes/issues/new/choose"));
 }
 
 /**

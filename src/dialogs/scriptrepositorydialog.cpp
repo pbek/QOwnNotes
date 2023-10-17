@@ -70,7 +70,8 @@ bool ScriptRepositoryDialog::loadScriptRepositoryMetaData() {
     }
 
     _lastScriptMetaDataCacheUpdateTime = QDateTime::currentDateTime();
-    const auto url = QUrl("https://github.com/qownnotes/scripts/releases/download/metadata-index/index.json");
+    const auto url =
+        QUrl("https://github.com/qownnotes/scripts/releases/download/metadata-index/index.json");
 
     int statusCode;
     auto arr = Utils::Misc::downloadUrlWithStatusCode(url, statusCode);
@@ -169,10 +170,10 @@ void ScriptRepositoryDialog::parseScriptRepositoryMetaData(const QByteArray &arr
     _scriptMetaDataJsonTextCache.clear();
     qDebug() << "Found scripts: " + QString::number(jsonArray.count());
 
-    for (const auto& value : jsonArray) {
+    for (const auto &value : jsonArray) {
         ScriptInfoJson infoJson(value.toObject());
 
-//        qDebug() << "Found script: " + infoJson.identifier;
+        //        qDebug() << "Found script: " + infoJson.identifier;
 
         // We are ignoring the example-script
         if (infoJson.identifier == QLatin1String("example-script")) {
@@ -180,7 +181,7 @@ void ScriptRepositoryDialog::parseScriptRepositoryMetaData(const QByteArray &arr
         }
 
         // Debug
-//        infoJson.version = "1.0.8";
+        //        infoJson.version = "1.0.8";
 
         // We store the ScriptInfoJson in a cache for the user interface
         _scriptMetaDataCache.insert(infoJson.identifier, infoJson);
@@ -191,9 +192,12 @@ void ScriptRepositoryDialog::parseScriptRepositoryMetaData(const QByteArray &arr
         QString strJson = QLatin1String(docByteArray);
 
         // Debug
-//        strJson.replace(QLatin1String(R"("version":"0.0.5")"), QLatin1String(R"("version":"1.0.8")"));
-//        strJson.replace(QLatin1String(R"("version":"0.0.4")"), QLatin1String(R"("version":"1.0.8")"));
-//        strJson.replace(QLatin1String(R"("version":"1.0.5")"), QLatin1String(R"("version":"1.0.8")"));
+        //        strJson.replace(QLatin1String(R"("version":"0.0.5")"),
+        //        QLatin1String(R"("version":"1.0.8")"));
+        //        strJson.replace(QLatin1String(R"("version":"0.0.4")"),
+        //        QLatin1String(R"("version":"1.0.8")"));
+        //        strJson.replace(QLatin1String(R"("version":"1.0.5")"),
+        //        QLatin1String(R"("version":"1.0.8")"));
 
         _scriptMetaDataJsonTextCache.insert(infoJson.identifier, strJson);
     }

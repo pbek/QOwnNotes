@@ -3,8 +3,8 @@
 #include <entities/note.h>
 #include <entities/notesubfolder.h>
 #include <entities/tag.h>
-#include <utils/misc.h>
 #include <utils/gui.h>
+#include <utils/misc.h>
 
 #include <QCryptographicHash>
 #include <QDebug>
@@ -132,7 +132,8 @@ Note EvernoteImportDialog::parseNote(QXmlStreamReader &xml, bool importMetaData)
 
     xml.readNext();
 
-    while (!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == QStringLiteral("note"))) {
+    while (!(xml.tokenType() == QXmlStreamReader::EndElement &&
+             xml.name() == QStringLiteral("note"))) {
         if (xml.tokenType() == QXmlStreamReader::StartElement) {
             if (xml.name() == QStringLiteral("title")) {
                 xml.readNext();
@@ -155,12 +156,13 @@ Note EvernoteImportDialog::parseNote(QXmlStreamReader &xml, bool importMetaData)
                 }
 
                 // We don't need that with QXMLStreamReader anymore!
-//                Utils::Misc::unescapeEvernoteImportText(content);
+                //                Utils::Misc::unescapeEvernoteImportText(content);
 
                 qDebug() << __func__ << " - 'content': " << content;
             }
 
-            if ((ui->imageImportCheckBox->isChecked() || ui->attachmentImportCheckBox->isChecked()) &&
+            if ((ui->imageImportCheckBox->isChecked() ||
+                 ui->attachmentImportCheckBox->isChecked()) &&
                 xml.name() == QStringLiteral("resource")) {
                 xml.readNext();
 
@@ -188,7 +190,8 @@ Note EvernoteImportDialog::parseNote(QXmlStreamReader &xml, bool importMetaData)
             // Stop parsing on invalid tokens
             // See: https://github.com/pbek/QOwnNotes/issues/2858
             Utils::Gui::warning(this, tr("Invalid XML!"),
-                                tr("Invalid XML found in note <b>%1</b>! The import might be stopped at this point.")
+                                tr("Invalid XML found in note <b>%1</b>! The import might be "
+                                   "stopped at this point.")
                                     .arg(title),
                                 "evernote-import-invalid-xml");
             break;
@@ -585,7 +588,8 @@ void EvernoteImportDialog::importImages(const Note &note, QString &content) {
  * @param content
  */
 void EvernoteImportDialog::parseResource(QXmlStreamReader &xml) {
-    if (xml.tokenType() != QXmlStreamReader::StartElement && xml.name() == QStringLiteral("resource")) {
+    if (xml.tokenType() != QXmlStreamReader::StartElement &&
+        xml.name() == QStringLiteral("resource")) {
         return;
     }
 
@@ -598,7 +602,8 @@ void EvernoteImportDialog::parseResource(QXmlStreamReader &xml) {
     bool isImage = false;
     Q_UNUSED(isImage)
 
-    while (!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == QStringLiteral("resource"))) {
+    while (!(xml.tokenType() == QXmlStreamReader::EndElement &&
+             xml.name() == QStringLiteral("resource"))) {
         if (xml.tokenType() == QXmlStreamReader::StartElement) {
             // Parse the mime data of the object
             if (xml.name() == QStringLiteral("mime")) {
@@ -644,13 +649,14 @@ void EvernoteImportDialog::parseResource(QXmlStreamReader &xml) {
                 xml.readNext();
                 data = xml.text().toString().trimmed();
 
-//                qDebug() << __func__ << " - 'data': " << data;
+                //                qDebug() << __func__ << " - 'data': " << data;
             }
 
             if (xml.name() == QStringLiteral("resource-attributes")) {
                 xml.readNext();
 
-                while (!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == QStringLiteral("resource-attributes"))) {
+                while (!(xml.tokenType() == QXmlStreamReader::EndElement &&
+                         xml.name() == QStringLiteral("resource-attributes"))) {
                     if (xml.tokenType() == QXmlStreamReader::StartElement) {
                         if (xml.name() == QStringLiteral("file-name")) {
                             xml.readNext();
@@ -706,13 +712,15 @@ void EvernoteImportDialog::parseMetaDataItem(QXmlStreamReader &xml, bool isNoteA
     if (attribute.isEmpty()) {
         return;
     }
-    
+
     QString name = _metaDataAttributeHash[attributeName];
-    _metaDataTableText += QStringLiteral("| ") + name + (" | ") + attribute + QStringLiteral(" |\n");
+    _metaDataTableText +=
+        QStringLiteral("| ") + name + (" | ") + attribute + QStringLiteral(" |\n");
 }
 
 void EvernoteImportDialog::parseNoteAttributes(QXmlStreamReader &xml) {
-    while (!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == QStringLiteral("note-attributes"))) {
+    while (!(xml.tokenType() == QXmlStreamReader::EndElement &&
+             xml.name() == QStringLiteral("note-attributes"))) {
         if (xml.tokenType() == QXmlStreamReader::StartElement) {
             parseMetaDataItem(xml, true);
         }
@@ -726,10 +734,9 @@ QString EvernoteImportDialog::compileMetaDataText() {
     }
 
     return "| " + tr("Attribute") + " | " + tr("Value") +
-               " |\n"
-               "|---|---|\n" +
-               _metaDataTableText +
-               QStringLiteral("\n");
+           " |\n"
+           "|---|---|\n" +
+           _metaDataTableText + QStringLiteral("\n");
 }
 
 void EvernoteImportDialog::determineMetaDataAttributes() {

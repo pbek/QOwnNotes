@@ -322,8 +322,8 @@ void DictionaryManagerDialog::downloadProgress(qint64 bytesReceived, qint64 byte
         bytesTotal = 4194304;
     }
 
-    ui->downloadProgressBar->setMaximum(static_cast<int>(bytesTotal/1000));
-    ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived/1000));
+    ui->downloadProgressBar->setMaximum(static_cast<int>(bytesTotal / 1000));
+    ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived / 1000));
     ui->downloadSizeLabel->setText(Utils::Misc::toHumanReadableByteSize(bytesReceived) + " / " +
                                    Utils::Misc::toHumanReadableByteSize(bytesTotal));
 }

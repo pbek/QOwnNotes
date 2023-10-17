@@ -48,9 +48,8 @@
 #include <QTimer>
 #include <QUrl>
 #include <QUuid>
-#include <QtGui/QIcon>
 #include <QXmlStreamReader>
-
+#include <QtGui/QIcon>
 #include <utility>
 #if (QT_VERSION < QT_VERSION_CHECK(5, 6, 0))
 #include <QHostInfo>
@@ -972,7 +971,8 @@ QByteArray Utils::Misc::downloadUrl(const QUrl &url, bool usePost, QByteArray po
     return downloadUrlWithStatusCode(url, statusCode, usePost, std::move(postData));
 }
 
-QByteArray Utils::Misc::downloadUrlWithStatusCode(const QUrl &url, int &returnStatusCode, bool usePost, QByteArray postData) {
+QByteArray Utils::Misc::downloadUrlWithStatusCode(const QUrl &url, int &returnStatusCode,
+                                                  bool usePost, QByteArray postData) {
     auto *manager = new QNetworkAccessManager();
     QEventLoop loop;
     QTimer timer;
@@ -1761,12 +1761,12 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                                               cloudConnection.getAccountId(), withGitHubLineBreaks);
 
         if (cloudConnection.getNextcloudDeckEnabled()) {
-            output += prepareDebugInformationLine(QStringLiteral("Nextcloud Deck boardId"),
-                                                  QString::number(cloudConnection.getNextcloudDeckBoardId()),
-                                                  withGitHubLineBreaks);
-            output += prepareDebugInformationLine(QStringLiteral("Nextcloud Deck stackId"),
-                                                  QString::number(cloudConnection.getNextcloudDeckStackId()),
-                                                  withGitHubLineBreaks);
+            output += prepareDebugInformationLine(
+                QStringLiteral("Nextcloud Deck boardId"),
+                QString::number(cloudConnection.getNextcloudDeckBoardId()), withGitHubLineBreaks);
+            output += prepareDebugInformationLine(
+                QStringLiteral("Nextcloud Deck stackId"),
+                QString::number(cloudConnection.getNextcloudDeckStackId()), withGitHubLineBreaks);
         }
     }
 
@@ -2403,7 +2403,6 @@ QString Utils::Misc::testEvernoteImportText(const QString &data) {
 
                 while (!(xml.tokenType() == QXmlStreamReader::EndElement &&
                          xml.name() == QStringLiteral("note"))) {
-
                     if (xml.tokenType() == QXmlStreamReader::StartElement) {
                         if (xml.name() == QStringLiteral("content")) {
                             xml.readNext();

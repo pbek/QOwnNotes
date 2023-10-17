@@ -1147,13 +1147,13 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
                 return true;
             } else if (!Utils::Misc::isNoteEditingAllowed()) {
                 const auto noModifierKeys = QList<int>()
-                            << Qt::Key_Return << Qt::Key_Enter << Qt::Key_Space << Qt::Key_Backspace
-                            << Qt::Key_Delete << Qt::Key_Tab << Qt::Key_Backtab << Qt::Key_Minus
-                            << Qt::Key_ParenLeft << Qt::Key_BraceLeft << Qt::Key_BracketLeft
-                            << Qt::Key_Plus << Qt::Key_Comma << Qt::Key_Period;
+                                            << Qt::Key_Return << Qt::Key_Enter << Qt::Key_Space
+                                            << Qt::Key_Backspace << Qt::Key_Delete << Qt::Key_Tab
+                                            << Qt::Key_Backtab << Qt::Key_Minus << Qt::Key_ParenLeft
+                                            << Qt::Key_BraceLeft << Qt::Key_BracketLeft
+                                            << Qt::Key_Plus << Qt::Key_Comma << Qt::Key_Period;
 
-                const auto controlModifierKeys = QList<int>()
-                                      << Qt::Key_V << Qt::Key_Space;
+                const auto controlModifierKeys = QList<int>() << Qt::Key_V << Qt::Key_Space;
 
                 // show notification if user tries to edit a note while
                 // note editing is turned off

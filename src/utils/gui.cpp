@@ -123,9 +123,7 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget, const QStrin
         }
     } else {
         // show all items otherwise
-        Q_FOREACH (QTreeWidgetItem *item, allItems) {
-            item->setHidden(false);
-        }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) { item->setHidden(false); }
     }
 }
 
@@ -152,9 +150,7 @@ void Utils::Gui::searchForTextInListWidget(QListWidget *listWidget, const QStrin
         }
     } else {
         // show all items otherwise
-        Q_FOREACH (QListWidgetItem *item, allItems) {
-            item->setHidden(false);
-        }
+        Q_FOREACH (QListWidgetItem *item, allItems) { item->setHidden(false); }
     }
 }
 

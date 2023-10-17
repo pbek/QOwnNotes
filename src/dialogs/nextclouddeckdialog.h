@@ -9,16 +9,15 @@ namespace Ui {
 class NextcloudDeckDialog;
 }
 
-class NextcloudDeckDialog : public MasterDialog
-{
+class NextcloudDeckDialog : public MasterDialog {
     Q_OBJECT
 
-public:
+   public:
     explicit NextcloudDeckDialog(QWidget *parent = nullptr);
     ~NextcloudDeckDialog();
-    void setTitle(const QString& title);
+    void setTitle(const QString &title);
 
-private slots:
+   private slots:
     void on_saveButton_clicked();
 
     void on_add1HourButton_clicked();
@@ -37,8 +36,8 @@ private slots:
 
     void on_dueDateTimeCheckBox_toggled(bool checked);
 
-private:
+   private:
     Ui::NextcloudDeckDialog *ui;
 };
 
-#endif // NEXTCLOUDDECKDIALOG_H
+#endif    // NEXTCLOUDDECKDIALOG_H

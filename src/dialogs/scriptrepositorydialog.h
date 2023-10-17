@@ -1,7 +1,9 @@
 #pragma once
 
 #include <entities/script.h>
+
 #include <QDateTime>
+
 #include "masterdialog.h"
 
 namespace Ui {

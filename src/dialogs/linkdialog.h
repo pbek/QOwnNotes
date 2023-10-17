@@ -57,5 +57,5 @@ class LinkDialog : public MasterDialog {
     void setupFileUrlMenu();
     void loadNoteHeadings() const;
     void doAccept();
-    void startTitleFetchRequest(const QUrl& url);
+    void startTitleFetchRequest(const QUrl &url);
 };

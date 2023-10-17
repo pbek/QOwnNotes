@@ -230,12 +230,13 @@ void IssueAssistantDialog::on_postButton_clicked() {
     QClipboard *clipboard = QApplication::clipboard();
     clipboard->setText(ui->bodyPlainTextEdit->toPlainText());
 
-    QUrl url("https://github.com/pbek/QOwnNotes/issues/new?"
-             "labels=Type%3A+Support&title=" +
-             QUrl::toPercentEncoding(ui->submitTitleLineEdit->text()) + "&body=" +
-             QUrl::toPercentEncoding("Please paste the text from the issue "
-                                     "assistant here. It should be already in "
-                                     "your clipboard."));
+    QUrl url(
+        "https://github.com/pbek/QOwnNotes/issues/new?"
+        "labels=Type%3A+Support&title=" +
+        QUrl::toPercentEncoding(ui->submitTitleLineEdit->text()) + "&body=" +
+        QUrl::toPercentEncoding("Please paste the text from the issue "
+                                "assistant here. It should be already in "
+                                "your clipboard."));
 
     // we cannot add the body, this would make the url too long
     //    + "&body=" +

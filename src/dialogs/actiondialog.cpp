@@ -27,9 +27,7 @@ void ActionDialog::refreshUi() {
     QList<QMenu *> menuList =
         _menuBar->findChildren<QMenu *>(QString(), Qt::FindDirectChildrenOnly);
 
-    Q_FOREACH (QMenu *menu, menuList) {
-        buildActionTreeForMenu(menu);
-    }
+    Q_FOREACH (QMenu *menu, menuList) { buildActionTreeForMenu(menu); }
 
     ui->actionTreeWidget->setRootIsDecorated(false);
     ui->actionTreeWidget->expandAll();
@@ -64,9 +62,7 @@ void ActionDialog::buildActionTreeForMenu(QMenu *menu, QTreeWidgetItem *parentIt
     QList<QMenu *> menuList = menu->findChildren<QMenu *>(QString(), Qt::FindDirectChildrenOnly);
 
     // build the tree for that sub-menu
-    Q_FOREACH (QMenu *subMenu, menuList) {
-        buildActionTreeForMenu(subMenu, menuItem);
-    }
+    Q_FOREACH (QMenu *subMenu, menuList) { buildActionTreeForMenu(subMenu, menuItem); }
 
     // add all actions to the tree widget item
     Q_FOREACH (QAction *action, menu->actions()) {

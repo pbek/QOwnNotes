@@ -100,7 +100,8 @@ QString appendSingleAppInstanceTextIfNeeded(QString text = "");
 void needRestart();
 bool downloadUrlToFile(const QUrl &url, QFile *file);
 QByteArray downloadUrl(const QUrl &url, bool usePost = false, QByteArray postData = nullptr);
-QByteArray downloadUrlWithStatusCode(const QUrl &url, int &returnStatusCode, bool usePost = false, QByteArray postData = nullptr);
+QByteArray downloadUrlWithStatusCode(const QUrl &url, int &returnStatusCode, bool usePost = false,
+                                     QByteArray postData = nullptr);
 QString genericCSS();
 QHash<int, SearchEngine> getSearchEnginesHashMap();
 int getDefaultSearchEngineId();

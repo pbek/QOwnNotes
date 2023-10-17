@@ -209,10 +209,10 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
  * Shows the download progress
  */
 void UpdateDialog::releaseDownloadProgress(qint64 bytesReceived, qint64 bytesTotal) {
-    ui->downloadProgressBar->setMaximum(static_cast<int>(bytesTotal/1000));
-    ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived/1000));
-    ui->downloadProgressBar->setToolTip(Utils::Misc::toHumanReadableByteSize(bytesReceived) + " / " +
-                                        Utils::Misc::toHumanReadableByteSize(bytesTotal));
+    ui->downloadProgressBar->setMaximum(static_cast<int>(bytesTotal / 1000));
+    ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived / 1000));
+    ui->downloadProgressBar->setToolTip(Utils::Misc::toHumanReadableByteSize(bytesReceived) +
+                                        " / " + Utils::Misc::toHumanReadableByteSize(bytesTotal));
 }
 
 /**
@@ -475,7 +475,8 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
 
     // make the new AppImage executable (2nd attempt)
     if (!appFile.setPermissions(appFile.permissions() | QFileDevice::ExeOwner)) {
-        qCritical() << __func__ << " - 'appFile' could not be made executable after update: " << appPath;
+        qCritical() << __func__
+                    << " - 'appFile' could not be made executable after update: " << appPath;
 
         QMessageBox::critical(nullptr, tr("Permission error"),
                               tr("The app file '%1' could not be made executable! "

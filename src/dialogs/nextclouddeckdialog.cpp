@@ -1,13 +1,13 @@
 #include "nextclouddeckdialog.h"
 
-#include "services/nextclouddeckservice.h"
-#include "ui_nextclouddeckdialog.h"
-#include "mainwindow.h"
 #include <QTimeZone>
 
-NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent) :
-    MasterDialog(parent),
-    ui(new Ui::NextcloudDeckDialog) {
+#include "mainwindow.h"
+#include "services/nextclouddeckservice.h"
+#include "ui_nextclouddeckdialog.h"
+
+NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::NextcloudDeckDialog) {
     ui->setupUi(this);
     ui->dueDateTimeEdit->setDateTime(QDateTime::currentDateTime());
     ui->saveButton->setEnabled(false);
@@ -15,9 +15,7 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent) :
     ui->titleLineEdit->setFocus();
 }
 
-NextcloudDeckDialog::~NextcloudDeckDialog() {
-    delete ui;
-}
+NextcloudDeckDialog::~NextcloudDeckDialog() { delete ui; }
 
 void NextcloudDeckDialog::on_saveButton_clicked() {
     ui->saveButton->setEnabled(false);
@@ -28,13 +26,13 @@ void NextcloudDeckDialog::on_saveButton_clicked() {
     // We want to set the seconds to 0
     dateTime->setTime(dateTime->time().addSecs(0 - dateTime->time().second()));
     const QString &title = ui->titleLineEdit->text();
-    int cardId = nextcloudDeckService.createCard(title,
-                                    ui->descriptionTextEdit->toPlainText(),
-                                    ui->dueDateTimeCheckBox->isChecked() ? dateTime : nullptr);
+    int cardId =
+        nextcloudDeckService.createCard(title, ui->descriptionTextEdit->toPlainText(),
+                                        ui->dueDateTimeCheckBox->isChecked() ? dateTime : nullptr);
 
     if (cardId > 0) {
-        auto linkText = QString("[%1](%2)").arg(
-            title, nextcloudDeckService.getCardLinkForId(cardId));
+        auto linkText =
+            QString("[%1](%2)").arg(title, nextcloudDeckService.getCardLinkForId(cardId));
 
 #ifndef INTEGRATION_TESTS
         MainWindow *mainWindow = MainWindow::instance();
@@ -79,6 +77,4 @@ void NextcloudDeckDialog::on_dueDateTimeCheckBox_toggled(bool checked) {
     ui->dueDateTimeEdit->setEnabled(checked);
 }
 
-void NextcloudDeckDialog::setTitle(const QString& title) {
-    ui->titleLineEdit->setText(title);
-}
+void NextcloudDeckDialog::setTitle(const QString &title) { ui->titleLineEdit->setText(title); }

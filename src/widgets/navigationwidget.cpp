@@ -121,15 +121,15 @@ int NavigationWidget::findItemIndexForCursorPosition(int position) const {
     return fwdIt - std::begin(_navigationTreeNodes) - 1;
 }
 
-QString NavigationWidget::stripMarkdown(const QString& input)
-{
+QString NavigationWidget::stripMarkdown(const QString &input) {
     // Regular expressions for different Markdown syntax patterns
-    static const QRegularExpression boldRegex(R"(\*{2}([^*]+)\*{2})");           // **bold**
-    static const QRegularExpression italicRegex(R"(\*{1}([^*]+)\*{1})");         // *italic*
-    static const QRegularExpression strikethroughRegex(R"(\~{2}([^~]+)\~{2})");  // ~~strikethrough~~
-    static const QRegularExpression linkRegex(R"(\[([^]]+)\]\(([^)]+)\))");      // [link](url)
-    static const QRegularExpression angleBracketLinkRegex(R"(<([^>]+)>)");       // <http://link>
-    static const QRegularExpression codeRegex(R"(`([^`]+)`+)");                  // `code`
+    static const QRegularExpression boldRegex(R"(\*{2}([^*]+)\*{2})");      // **bold**
+    static const QRegularExpression italicRegex(R"(\*{1}([^*]+)\*{1})");    // *italic*
+    static const QRegularExpression strikethroughRegex(
+        R"(\~{2}([^~]+)\~{2})");                                               // ~~strikethrough~~
+    static const QRegularExpression linkRegex(R"(\[([^]]+)\]\(([^)]+)\))");    // [link](url)
+    static const QRegularExpression angleBracketLinkRegex(R"(<([^>]+)>)");     // <http://link>
+    static const QRegularExpression codeRegex(R"(`([^`]+)`+)");                // `code`
 
     // Replace each Markdown pattern with an empty string
     QString strippedText = input;

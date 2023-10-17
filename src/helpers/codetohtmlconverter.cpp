@@ -154,7 +154,8 @@ QString CodeToHtmlConverter::process(StringView input) const {
             break;
         case CodeForth:
             loadForthData(types, keywords, builtin, literals, others);
-            comment = QLatin1Char('\\');;
+            comment = QLatin1Char('\\');
+            ;
             break;
         default:
             output += escapeString(input);

@@ -1,9 +1,9 @@
 #include "nextclouddeckservice.h"
 
 #include <QEventLoop>
+#include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
-#include <QJsonArray>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QTimeZone>
@@ -14,7 +14,8 @@
 #include "utils/gui.h"
 #include "utils/misc.h"
 
-NextcloudDeckService::NextcloudDeckService(QObject* parent, int cloudConnectionId) : QObject(parent) {
+NextcloudDeckService::NextcloudDeckService(QObject* parent, int cloudConnectionId)
+    : QObject(parent) {
     if (cloudConnectionId == -1) {
         cloudConnectionId = CloudConnection::currentCloudConnection().getId();
     }
@@ -26,8 +27,7 @@ NextcloudDeckService::NextcloudDeckService(QObject* parent, int cloudConnectionI
 }
 
 bool NextcloudDeckService::isEnabledAndValid() {
-    return isEnabled() &&
-           this->cloudConnection.getNextcloudDeckBoardId() > 0 &&
+    return isEnabled() && this->cloudConnection.getNextcloudDeckBoardId() > 0 &&
            this->cloudConnection.getNextcloudDeckStackId() > 0;
 }
 
@@ -36,11 +36,10 @@ bool NextcloudDeckService::isEnabled() {
            this->cloudConnection.getNextcloudDeckEnabled();
 }
 
-int NextcloudDeckService::createCard(const QString& title,
-                                      const QString& description,
-                                      QDateTime* dueDateTime) {
+int NextcloudDeckService::createCard(const QString& title, const QString& description,
+                                     QDateTime* dueDateTime) {
     int cardId = -1;
-    auto *manager = new QNetworkAccessManager();
+    auto* manager = new QNetworkAccessManager();
     QEventLoop loop;
     QTimer timer;
 
@@ -52,9 +51,8 @@ int NextcloudDeckService::createCard(const QString& title,
     // 10 sec timeout for the request
     timer.start(10000);
 
-    QUrl url(serverUrl + "/index.php/apps/deck/api/v1.1/boards/" +
-             QString::number(this->boardId) + "/stacks/" +
-             QString::number(this->stackId) + "/cards");
+    QUrl url(serverUrl + "/index.php/apps/deck/api/v1.1/boards/" + QString::number(this->boardId) +
+             "/stacks/" + QString::number(this->stackId) + "/cards");
     qDebug() << __func__ << " - 'url': " << url;
 
     QJsonObject bodyJson;
@@ -86,7 +84,7 @@ int NextcloudDeckService::createCard(const QString& title,
 #endif
 
     QByteArray data;
-    QNetworkReply *reply;
+    QNetworkReply* reply;
 
     networkRequest.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     networkRequest.setRawHeader("OCS-APIRequest", "true");
@@ -133,8 +131,8 @@ int NextcloudDeckService::createCard(const QString& title,
 QString NextcloudDeckService::getCardLinkForId(int cardId) {
     qDebug() << __func__ << " - 'boardId': " << this->boardId;
 
-    return QStringLiteral("%1/index.php/apps/deck/#/board/%2/card/%3").arg(
-        this->serverUrl, QString::number(this->boardId), QString::number(cardId));
+    return QStringLiteral("%1/index.php/apps/deck/#/board/%2/card/%3")
+        .arg(this->serverUrl, QString::number(this->boardId), QString::number(cardId));
 }
 
 void NextcloudDeckService::addAuthHeader(QNetworkRequest& networkRequest) {
@@ -146,7 +144,7 @@ void NextcloudDeckService::addAuthHeader(QNetworkRequest& networkRequest) {
 }
 
 QList<NextcloudDeckService::Board> NextcloudDeckService::getBoards() {
-    auto *manager = new QNetworkAccessManager();
+    auto* manager = new QNetworkAccessManager();
     QEventLoop loop;
     QTimer timer;
 
@@ -172,7 +170,7 @@ QList<NextcloudDeckService::Board> NextcloudDeckService::getBoards() {
 #endif
 
     QByteArray data;
-    QNetworkReply *reply;
+    QNetworkReply* reply;
 
     networkRequest.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     networkRequest.setRawHeader("OCS-APIRequest", "true");

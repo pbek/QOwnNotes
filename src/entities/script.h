@@ -25,7 +25,7 @@ class ScriptInfoJson {
    public:
     explicit ScriptInfoJson();
     explicit ScriptInfoJson(const QJsonObject& jsonObject);
-    friend QDebug operator<<(QDebug dbg, const ScriptInfoJson &bookmark);
+    friend QDebug operator<<(QDebug dbg, const ScriptInfoJson& bookmark);
 
     QString name;
     QString identifier;
