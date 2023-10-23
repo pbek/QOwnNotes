@@ -106,7 +106,7 @@ jobs:
     # https://github.com/jurplel/install-qt-action
     - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.9.9' )
       name: Install Qt 5.9 on Windows
-      uses: jurplel/install-qt-action@v3
+      uses: jurplel/install-qt-action@v4
       with:
         version: ${{ matrix.qt-version }}
         arch: win32_mingw53
@@ -114,14 +114,14 @@ jobs:
         aqtversion: '==0.9.4'
     - if: contains( matrix.os, 'windows') && ( ( matrix.qt-version == '5.13.2' ) || ( matrix.qt-version == '5.14.2' ) )
       name: Install Qt on Windows
-      uses: jurplel/install-qt-action@v3
+      uses: jurplel/install-qt-action@v4
       with:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw73
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: contains( matrix.os, 'windows') && matrix.qt-version == '5.15.2'
       name: Install Qt 5.15.2 on Windows
-      uses: jurplel/install-qt-action@v3
+      uses: jurplel/install-qt-action@v4
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
@@ -129,7 +129,7 @@ jobs:
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: contains( matrix.os, 'windows') && matrix.qt-version == '6.2.0'
       name: Install Qt Qt 6.2.0 on Windows
-      uses: jurplel/install-qt-action@v3
+      uses: jurplel/install-qt-action@v4
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
@@ -138,7 +138,7 @@ jobs:
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && matrix.qt-version != '6.2.0'
       name: Install Qt 6 on Windows
-      uses: jurplel/install-qt-action@v3
+      uses: jurplel/install-qt-action@v4
       with:
         aqtversion: '==2.1.*'
         version: ${{ matrix.qt-version }}
@@ -147,14 +147,14 @@ jobs:
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: false == contains( matrix.os, 'windows') && false == startsWith( matrix.qt-version, '6.' )
       name: Install Qt < 6 on Linux/macOS
-      uses: jurplel/install-qt-action@v3
+      uses: jurplel/install-qt-action@v4
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: false == contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
       name: Install Qt 6 on Linux/macOS
-      uses: jurplel/install-qt-action@v3
+      uses: jurplel/install-qt-action@v4
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}

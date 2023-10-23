@@ -106,7 +106,7 @@ jobs:
           key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
 
       - name: '⚙️ Install Qt'
-        uses: jurplel/install-qt-action@v3
+        uses: jurplel/install-qt-action@v4
         with:
           version: ${{env.QT_VERSION}}
           modules: ${{env.QT_MODULES}}
@@ -201,7 +201,7 @@ jobs:
 #          path: ../Qt
 #          key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
 #      - name: '⚙️ Install Qt'
-#        uses: jurplel/install-qt-action@v3
+#        uses: jurplel/install-qt-action@v4
 #        with:
 #          version: ${{env.QT_VERSION}}
 #          modules: ${{env.QT_MODULES}}
