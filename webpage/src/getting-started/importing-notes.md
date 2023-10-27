@@ -10,6 +10,20 @@ Images, attachments, tags, basic formatting and metadata will be imported as wel
 
 There is a Joplin import dialog you can reach in the `Note / Import` menu.
 
+## Google Keep
+
+> Download Keep tasks using Google Takeout
+> 
+> Extract archive
+> 
+> Download keep_to_markdown.py to directory next to extracted Keep folder
+> 
+>     python keep_to_markdown.py Keep out/
+> 
+> Replace Keep by the folder containing notes in JSON format. The out folder will be created if it doesn't exist.
+
+From https://gitlab.com/-/snippets/2002921
+
 ## Tomboy
 
 You can import your Tomboy Notes using a script called [Trombone](https://github.com/samba/trombone).
@@ -18,7 +32,8 @@ You might install python2 to make the script work. It will convert your Tomboy n
 which then you are able to import to QOwnNotes.
 
 For anyone wanting to do this, first make sure you have Python2 installed and you might want to also install
-`python-is-python2` (you can remove that later):
+`python-is-python2` (you can remove that later). This may be easier/safer in a chroot or Docker container, if you
+have that option (will be documented here later).
 
 ```bash
 sudo apt install python2 python-is-python2
