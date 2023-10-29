@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## Next
+- links will now be highlighted in headlines in the note text edit
+  (for [#196](https://github.com/pbek/qmarkdowntextedit/pull/196), thank you, @tim-gromeyer)
+  - this, of course, only makes sense if you allow the note filename to be
+    different from the headline
+
 ## 23.10.1
 - a fakevim fix for building with Qt 6.6.0 was added
   (for [#2878](https://github.com/pbek/QOwnNotes/pull/2878), thank you, @NickCao)
