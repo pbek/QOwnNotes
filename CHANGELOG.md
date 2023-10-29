@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## Next
-- links will now be highlighted in headlines in the note text edit
+- links will now be highlighted in headings in the note text edit
   (for [#196](https://github.com/pbek/qmarkdowntextedit/pull/196), thank you, @tim-gromeyer)
   - this, of course, only makes sense if you allow the note filename to be
     different from the headline
