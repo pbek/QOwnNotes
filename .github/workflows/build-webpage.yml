@@ -27,7 +27,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - id: files
-      uses: masesgroup/retrieve-changed-files@v2
+      uses: masesgroup/retrieve-changed-files@v3
       with:
         format: 'csv'
     - name: Use Node.js
