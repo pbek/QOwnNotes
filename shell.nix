@@ -10,6 +10,7 @@
       wrapQtAppsHook
       pkg-config
       libclang  # for clang-format
+      xmlstarlet # for download-icons.sh
 
       # for ./build-systems/github/build-github-src.sh
       coreutils
