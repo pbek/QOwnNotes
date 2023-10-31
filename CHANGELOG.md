@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
-## Next
+## 23.11.0
+- there now is a new PasswordLineEdit component that is now used for entering
+  passwords in all dialogs (for [#2893](https://github.com/pbek/QOwnNotes/issues/2893))
+  - it allows to also show the password
 - links will now be highlighted in headings in the note text edit
   (for [#196](https://github.com/pbek/qmarkdowntextedit/pull/196), thank you, @tim-gromeyer)
   - this, of course, only makes sense if you allow the note filename to be

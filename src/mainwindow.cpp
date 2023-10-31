@@ -6560,7 +6560,7 @@ void MainWindow::on_action_Encrypt_note_triggered() {
         auto *dialog = new PasswordDialog(this, labelText, true);
         const int dialogResult = dialog->exec();
 
-        // if the user didn't pressed ok return
+        // if the user didn't press ok return
         if (dialogResult != QDialog::Accepted) {
             return;
         }

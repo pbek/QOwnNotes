@@ -198,6 +198,7 @@ SOURCES += main.cpp\
     widgets/label.cpp \
     widgets/qrcodewidget.cpp \
     widgets/lineedit.cpp \
+    widgets/passwordlineedit.cpp \
     widgets/qtexteditsearchwidget.cpp \
     widgets/scriptlistwidget.cpp \
     widgets/notefolderlistwidget.cpp \
@@ -307,6 +308,7 @@ HEADERS  += mainwindow.h \
     widgets/label.h \
     widgets/qrcodewidget.h \
     widgets/lineedit.h \
+    widgets/passwordlineedit.h \
     widgets/qtexteditsearchwidget.h \
     widgets/scriptlistwidget.h \
     widgets/notefolderlistwidget.h \

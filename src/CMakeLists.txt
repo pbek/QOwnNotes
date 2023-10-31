@@ -349,6 +349,8 @@ set(SOURCE_FILES
     widgets/qrcodewidget.h
     widgets/lineedit.cpp
     widgets/lineedit.h
+    widgets/passwordlineedit.cpp
+    widgets/passwordlineedit.h
     widgets/scriptsettingwidget.cpp
     widgets/scriptsettingwidget.h
     widgets/scriptsettingwidget.ui

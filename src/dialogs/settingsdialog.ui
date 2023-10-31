@@ -1204,7 +1204,7 @@
                    </widget>
                   </item>
                   <item row="8" column="1">
-                   <widget class="QLineEdit" name="passwordEdit">
+                   <widget class="PasswordLineEdit" name="passwordEdit">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                       <horstretch>0</horstretch>
@@ -1675,7 +1675,7 @@
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLineEdit" name="passwordLineEdit">
+                       <widget class="PasswordLineEdit" name="passwordLineEdit">
                         <property name="text">
                          <string/>
                         </property>
@@ -2073,7 +2073,7 @@
                  </widget>
                 </item>
                 <item row="2" column="1">
-                 <widget class="QLineEdit" name="calDavPasswordEdit">
+                 <widget class="PasswordLineEdit" name="calDavPasswordEdit">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -6865,6 +6865,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
  </widget>
  <customwidgets>
   <customwidget>
+   <class>PasswordLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">widgets/passwordlineedit.h</header>
+  </customwidget>
+  <customwidget>
    <class>QOwnNotesMarkdownTextEdit</class>
    <extends>QPlainTextEdit</extends>
    <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
@@ -7085,8 +7090,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>
