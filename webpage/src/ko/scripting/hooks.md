@@ -332,7 +332,7 @@ websocketRawDataHook
 ### 메서드 호출 및 매개 변수
 ```js
 /**
- * @param requestType can be "page" or "selection"
+ * @param requestType은 "page" 또는 "selection"일 수 있습니다
  * @param pageUrl the url of the webpage where the request was made
  * @param pageTitle the page title of the webpage where the request was made
  * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"

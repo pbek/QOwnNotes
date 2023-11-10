@@ -10,11 +10,15 @@
       wrapQtAppsHook
       pkg-config
       libclang  # for clang-format
-      xmlstarlet # for download-icons.sh
+      xmlstarlet # for download-icons.sh and download_translations.sh
 
       # for ./build-systems/github/build-github-src.sh
       coreutils
       gh
+
+      # for shell scripts
+      findutils
+      gnused
     ];
 
     buildInputs = with pkgs; with qt6; [

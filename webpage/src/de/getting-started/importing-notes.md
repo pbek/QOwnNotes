@@ -10,19 +10,34 @@ Bilder, Anhänge, Schlagworte, grundlegende Formatierungen und Metadaten werden 
 
 Es gibt einen Joplin-Importdialog, den Sie über die Menüpunkte `Notiz / Import` erreichen können.
 
+## Google Keep
+
+> Download Keep tasks using Google Takeout
+> 
+> Extract archive
+> 
+> Download keep_to_markdown.py to directory next to extracted Keep folder
+> 
+>     python keep_to_markdown.py Keep out/
+>     
+> 
+> Replace Keep by the folder containing notes in JSON format. The out folder will be created if it doesn't exist.
+
+From https://gitlab.com/-/snippets/2002921
+
 ## Tomboy
 
-Sie können Ihre Tomboy-Notizen importieren, indem Sie ein Skript namens [Trombone](https://github.com/samba/trombone) verwenden.
+You can import your Tomboy Notes using a script called [Trombone](https://github.com/samba/trombone).
 
-Möglicherweise müssen sie Python 3 installieren, damit das Skript funktioniert. Es konvertiert Ihre Tomboy-Notizen zu einer Evernote `.enex`-Datei, die Sie dann nach QOwnNotes importieren können.
+You might install python2 to make the script work. It will convert your Tomboy notes to an Evernote `.enex` file, which then you are able to import to QOwnNotes.
 
-Falls Sie das machen möchten, gehen Sie zunächst sicher, dass Sie Python 2 installiert haben. Vielleicht möchten Sie auch `python-is-python2` installieren (Sie können es später wieder entfernen):
+For anyone wanting to do this, first make sure you have Python2 installed and you might want to also install `python-is-python2` (you can remove that later). This may be easier/safer in a chroot or Docker container, if you have that option (will be documented here later).
 
 ```bash
 sudo apt install python2 python-is-python2
 ```
 
-Laden Sie die Trombone-Datei von GitHub herunter, extrahieren Sie sie und springen Sie in den Ordner:
+Download the trombone file from GitHub, extract and jump into that folder:
 
 ```bash
 cd ~/Downloads/trombone-master
@@ -31,18 +46,18 @@ sudo make
 sudo make install
 ```
 
-Navigieren Sie dann mit cd in den Ordner, wo Ihre Tomboy-Notizen sind:
+Then cd into the folder where your tomboy notes are:
 
 ```bash
  cd ~/.local/share/tomboy/
 ```
 
-Führen Sie dann folgendes aus:
+Then run this:
 
 ```bash
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex
 ```
 
-Falls Sie Unicode-Fehler für gewisse Notizen erhalten, entfernen Sie einfach jede Notiz einzeln und führen die Konvertierung erneut aus, bis eine Nachricht `Saving...` angezeigt wird. Sie haben dann eine Datei namens `EXPORT.enex`, die dann nach QOwnNotes importiert werden kann.
+If you get unicode errors about specific notes, just remove each note and run the conversion again until it gives a message saying `Saving...` . You will have a file called `EXPORT.enex` which can then be imported into QOwnNotes.
 
-Währen der Importierung nach QOwnNotes sollten Sie eventuell den Import der Attribute deaktivieren, außer vielleicht dem Erstellungs-/Modifizierungsdatum, da Tomboy diese Funktionen nicht unterstützt.
+During the import into QOwnNotes you might uncheck all of the attributes to import except maybe the creation/modification date, since Tomboy does not have those features.

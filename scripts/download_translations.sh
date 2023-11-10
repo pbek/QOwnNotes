@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # Use this script in $ProjectFileDir$ to download the translations from Crowdin
 #
@@ -83,6 +83,12 @@ mv QOwnNotes_bs_BA.ts QOwnNotes_bs.ts
 mv QOwnNotes_mk_MK.ts QOwnNotes_mk.ts
 mv QOwnNotes_ko_KR.ts QOwnNotes_ko.ts
 mv QOwnNotes_et_EE.ts QOwnNotes_et.ts
+# Delete until there is some translation
+rm QOwnNotes_be_BY.ts
+
+# Remove the location XML tag blocks, because they take up a lot of space and change all the time
+echo "Remove location XML blocks in translation files..."
+find ./*.ts -type f ! -name QOwnNotes_en.ts -exec xmlstarlet ed -L -d "//location" {} \;
 
 # crowdin changes all whitespaces at every download, so we want to remove the
 # leading whitespaces in all (but the source) translation files to save space
@@ -93,7 +99,7 @@ popd || exit 1
 
 echo "Remove all translated webpage folders, but German, Hungarian, Persian and Dutch..."
 # Remove all active languages here!
-find webpage/src -type d -regextype posix-egrep -regex ".+src\/(am|bg|bn|bs|ca|ceb|cs|da|el|et|eu|fi|fil|ga|gl|ha|he|hi|hil|hr|id|is|ja|km|ku|lt|lv|mi|mk|ms|no|pa|pcm|pt|ro|ru|si|sk|sl|sn|sq|sr|sv|ta|th|tl|tlh|tr|uk|ur|uz|vi|xh|yi|zh|zu)$" -exec rm -Rf "{}" \;
+find webpage/src -type d -regextype posix-egrep -regex ".+src\/(am|be|bg|bn|bs|ca|ceb|cs|da|el|et|eu|fi|fil|ga|gl|ha|he|hi|hil|hr|id|is|ja|km|ku|lt|lv|mi|mk|ms|no|pa|pcm|pt|ro|ru|si|sk|sl|sn|sq|sr|sv|ta|th|tl|tlh|tr|uk|ur|uz|vi|xh|yi|zh|zu)$" -exec rm -Rf "{}" \;
 
 
 #

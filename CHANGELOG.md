@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 23.11.1
+- added more Japanese, Arabic, Czech, Spanish, Tamil, Korean, Dutch, Slovenian,
+  German translation (thank you yateno, noureddin, vojtaanton, fitojb,
+  tamilneram.github.io, venusgirl, stephanp, salamelek, rakekniven, nlpz404)
+
 ## 23.11.0
 - there now is a new PasswordLineEdit component that is now used for entering
   passwords in all dialogs (for [#2893](https://github.com/pbek/QOwnNotes/issues/2893))
