@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 23.11.2
+- more not very useful internal warnings are now ignored in the log panel
+  - `QFont::setPointSizeF: Point size <= 0`
+  - `QTextCursor::setPosition: Position`
+
 ## 23.11.1
 - added more Japanese, Arabic, Czech, Spanish, Tamil, Korean, Dutch, Slovenian,
   German translation (thank you yateno, noureddin, vojtaanton, fitojb,
