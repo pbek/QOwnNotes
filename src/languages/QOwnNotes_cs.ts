@@ -2931,11 +2931,11 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <source>Note editing disabled</source>
-<translation type="unfinished">Note editing disabled</translation>
+<translation>Editování poznámky vypnuto</translation>
 </message>
 <message>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
-<translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+<translation>Editace poznámky je vypnuta, chcete ji zapnout znovu?</translation>
 </message>
 <message>
 <source>Select text files to import</source>
@@ -3445,19 +3445,19 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <name>NextcloudDeckDialog</name>
 <message>
 <source>-10min</source>
-<translation type="unfinished">-10min</translation>
+<translation>-10minut</translation>
 </message>
 <message>
 <source>+10min</source>
-<translation type="unfinished">+10min</translation>
+<translation>+10minut</translation>
 </message>
 <message>
 <source>+1d</source>
-<translation type="unfinished">+1d</translation>
+<translation>+1den</translation>
 </message>
 <message>
 <source>-1d</source>
-<translation type="unfinished">-1d</translation>
+<translation>-1den</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
@@ -3469,34 +3469,34 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <source>&amp;Save</source>
-<translation type="unfinished">&amp;Save</translation>
+<translation>&amp;Uložit</translation>
 </message>
 <message>
 <source>+1h</source>
-<translation type="unfinished">+1h</translation>
+<translation>+1h</translation>
 </message>
 <message>
 <source>Title</source>
-<translation type="unfinished">Title</translation>
+<translation>Název</translation>
 </message>
 <message>
 <source>-1h</source>
-<translation type="unfinished">-1h</translation>
+<translation>-1h</translation>
 </message>
 <message>
 <source>Description:</source>
-<translation type="unfinished">Description:</translation>
+<translation>Popis:</translation>
 </message>
 <message>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Datum do</translation>
 </message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Chyba při vytváření karty</translation>
 </message>
 <message>
 <source>Creating a card failed with status code %1 and message: %2</source>
@@ -3504,11 +3504,11 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <source>Error while loading boards</source>
-<translation type="unfinished">Error while loading boards</translation>
+<translation>Chyba při načítání tabule</translation>
 </message>
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
+<translation>Načítání tabule selhalo s kódem statusu %1 a zprávou %2</translation>
 </message>
 </context>
 <context>
@@ -3788,11 +3788,11 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <name>PasswordLineEdit</name>
 <message>
 <source>Show password</source>
-<translation type="unfinished">Show password</translation>
+<translation>Ukázat heslo</translation>
 </message>
 <message>
 <source>Hide password</source>
-<translation type="unfinished">Hide password</translation>
+<translation>Skrýt heslo</translation>
 </message>
 </context>
 <context>
@@ -3847,11 +3847,11 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <source>Image file exists</source>
-<translation type="unfinished">Image file exists</translation>
+<translation>Soubor obrázku existuje</translation>
 </message>
 <message>
 <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
-<translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
+<translation>Soubor obrázku existuje v složce médií, chcete použít existující místo vytváření nového?</translation>
 </message>
 <message numerus="yes">
 <source>…and %n more note(s)</source>

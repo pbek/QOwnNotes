@@ -960,11 +960,11 @@
 </message>
 <message>
 <source>Search hit BOTTOM without match for: %1</source>
-<translation>بحث بالأسفل دون التطابق مع: %1</translation>
+<translation>وصل البحث إلى النهاية بغير إيجاد: %1</translation>
 </message>
 <message>
 <source>Search hit TOP without match for: %1</source>
-<translation>بحث بالأعلى دون التطابق مع: %1</translation>
+<translation>وصل البحث إلى البداية بغير إيجاد: %1</translation>
 </message>
 <message numerus="yes">
 <source>%n lines indented.</source>
