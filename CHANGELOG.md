@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 23.11.3
+- a PPA for Ubuntu 24.04 (Noble Numbat) was added
+
 ## 23.11.2
 - more not very useful internal warnings are now ignored in the log panel
   - `QFont::setPointSizeF: Point size <= 0`
