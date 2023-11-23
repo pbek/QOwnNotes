@@ -337,6 +337,8 @@ QString NoteFolder::currentLocalPath() {
     path = Utils::Misc::removeIfEndsWith(std::move(path), QDir::separator());
     path = Utils::Misc::removeIfEndsWith(std::move(path), QString{Utils::Misc::dirSeparator()});
 
+    qDebug() << __func__ << " - 'currentLocalPath': " << path;
+
     return path;
 }
 
