@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 23.11.3
+- if the current note is encrypted, read-only or the doesn't exist any more now
+  some menu actions are also disabled to prevent writing to the note text edit
+  (for [#2904](https://github.com/pbek/QOwnNotes/issues/2904))
 - a PPA for Ubuntu 24.04 (Noble Numbat) was added
 
 ## 23.11.2

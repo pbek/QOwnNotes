@@ -3825,6 +3825,18 @@ void MainWindow::updateCurrentNoteTextHash() {
             .toHex());
 }
 
+void MainWindow::updateActionUiEnabled() {
+    const bool allowEditing = !ui->noteTextEdit->isReadOnly();
+
+    setMenuEnabled(ui->menuEditNote, allowEditing);
+    setMenuEnabled(ui->menuInsert, allowEditing);
+    setMenuEnabled(ui->menuFormat, allowEditing);
+    ui->actionPaste_image->setEnabled(allowEditing);
+    ui->actionReplace_in_current_note->setEnabled(allowEditing);
+    ui->actionAutocomplete->setEnabled(allowEditing);
+    ui->actionSplit_note_at_cursor_position->setEnabled(allowEditing);
+}
+
 /**
  * Sets the note text edit to readonly if the note does not exist or the
  * note file is not writable or the note is encrypted
@@ -3836,6 +3848,9 @@ void MainWindow::updateNoteTextEditReadOnly() {
     if (ui->noteTextEdit->isVisible() && currentNote.hasEncryptedNoteText()) {
         ui->noteTextEdit->setReadOnly(true);
     }
+
+    // Also update the other UI elements
+    updateActionUiEnabled();
 
     ui->noteTextEdit->setTextInteractionFlags(ui->noteTextEdit->textInteractionFlags() |
                                               Qt::TextSelectableByKeyboard);
@@ -10842,14 +10857,7 @@ void MainWindow::on_actionAllow_note_editing_triggered(bool checked) {
     settings.setValue(QStringLiteral("allowNoteEditing"), checked);
 
     updateNoteTextEditReadOnly();
-    setMenuEnabled(ui->menuEditNote, checked);
-    setMenuEnabled(ui->menuInsert, checked);
-    setMenuEnabled(ui->menuFormat, checked);
     setMenuEnabled(ui->menuEncryption, checked);
-    ui->actionPaste_image->setEnabled(checked);
-    ui->actionReplace_in_current_note->setEnabled(checked);
-    ui->actionAutocomplete->setEnabled(checked);
-    ui->actionSplit_note_at_cursor_position->setEnabled(checked);
     _readOnlyButton->setHidden(checked);
 
     ui->actionAllow_note_editing->setText(checked ? tr("Disallow all note editing")

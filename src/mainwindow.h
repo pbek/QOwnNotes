@@ -1100,4 +1100,5 @@ class MainWindow : public QMainWindow {
     void updateJumpToActionsAvailability();
     int getNoteTabIndex(int noteId) const;
     bool startAutoReadOnlyModeIfEnabled();
+    void updateActionUiEnabled();
 };
