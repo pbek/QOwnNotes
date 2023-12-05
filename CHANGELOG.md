@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## Next
+- the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi) was updated
+  to version 23.12.0 to **support Nextcloud 28** (for [#46](https://github.com/pbek/qownnotesapi/issues/46))
+
 ## 23.11.3
 - if the current note is encrypted, read-only or the doesn't exist any more now
   some menu actions are also disabled to prevent writing to the note text edit
