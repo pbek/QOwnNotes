@@ -1,8 +1,10 @@
 # QOwnNotes Changelog
 
-## Next
+## 23.12.0
 - the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi) was updated
   to version 23.12.0 to **support Nextcloud 28** (for [#46](https://github.com/pbek/qownnotesapi/issues/46))
+- a regression with falsely highlighting of links in 4-Spaces fence code blocks was fixed
+  (for [#199](https://github.com/pbek/qmarkdowntextedit/issue/199), thank you, @tim-gromeyer)
 
 ## 23.11.3
 - if the current note is encrypted, read-only or the doesn't exist any more now
