@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 23.12.1
+- reverted link fix of last release because of [#201](https://github.com/pbek/qmarkdowntextedit/issue/201)
+
 ## 23.12.0
 - the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi) was updated
   to version 23.12.0 to **support Nextcloud 28** (for [#46](https://github.com/pbek/qownnotesapi/issues/46))
