@@ -629,10 +629,10 @@ QString Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(QString path) {
 }
 
 /**
- * Converts html tags to markdown
+ * Converts html tags to Markdown
  *
  * @param text
- * @return markdown text
+ * @return Markdown text
  */
 QString Utils::Misc::htmlToMarkdown(QString text) {
     // replace Windows line breaks
@@ -656,7 +656,7 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
                                    QRegularExpression::CaseInsensitiveOption |
                                        QRegularExpression::DotMatchesEverythingOption));
 
-    // replace some html tags with markdown
+    // replace some html tags with Markdown
     text.replace(QRegularExpression(QStringLiteral("<strong.*?>(.+?)<\\/strong>"),
                                     QRegularExpression::CaseInsensitiveOption |
                                         QRegularExpression::DotMatchesEverythingOption),
@@ -756,8 +756,8 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
 
     // TODO
     // to ensure the clicking behavior of checkboxes,
-    // line numbers of checkboxes in the original markdown text
-    // should be provided by the markdown parser
+    // line numbers of checkboxes in the original Markdown text
+    // should be provided by the Markdown parser
 
     text.replace(re3, listTag % QStringLiteral("\\1&#10005;"));
 
@@ -1506,7 +1506,7 @@ QString Utils::Misc::toHumanReadableByteSize(qint64 size) {
 }
 
 /**
- * @brief Prepares the debug information to output it as markdown
+ * @brief Prepares the debug information to output it as Markdown
  * @param headline
  * @param data
  */
@@ -2357,7 +2357,7 @@ void Utils::Misc::transformEvernoteImportText(QString &content, bool withCleanup
     // convert remaining special characters
     content = Utils::Misc::unescapeHtml(std::move(content));
 
-    // convert html tags to markdown
+    // convert html tags to Markdown
     content = Utils::Misc::htmlToMarkdown(std::move(content));
 
     if (withCleanup) {

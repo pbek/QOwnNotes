@@ -516,7 +516,7 @@ bool Utils::Gui::toggleCheckBoxAtCursor(QPlainTextEdit *textEdit) {
 }
 
 /**
- * Automatically formats a markdown table in a text edit
+ * Automatically formats a Markdown table in a text edit
  *
  * @param textEdit
  */

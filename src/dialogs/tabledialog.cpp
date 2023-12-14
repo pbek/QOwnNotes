@@ -70,7 +70,7 @@ void TableDialog::updateMaxItems() {
 }
 
 /**
- * Creates the table markdown code
+ * Creates the table Markdown code
  */
 void TableDialog::on_buttonBox_accepted() {
     switch (ui->tabWidget->currentIndex()) {
@@ -81,7 +81,7 @@ void TableDialog::on_buttonBox_accepted() {
 
         default:
         case Tab::CreateTab:
-            // create the markdown table
+            // create the Markdown table
             createMarkdownTable();
             break;
     }
@@ -128,7 +128,7 @@ void TableDialog::importCSV() {
 }
 
 /**
- * Creates the markdown table
+ * Creates the Markdown table
  */
 void TableDialog::createMarkdownTable() {
     if ((ui->rowSpinBox->value() == 0) || (ui->columnSpinBox->value() == 0)) {

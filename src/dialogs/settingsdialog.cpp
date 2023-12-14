@@ -2141,7 +2141,7 @@ void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
 }
 
 /**
- * @brief Stores the debug information to a markdown file
+ * @brief Stores the debug information to a Markdown file
  */
 void SettingsDialog::on_saveDebugInfoButton_clicked() {
     Utils::Gui::information(this, tr("Debug information"),
@@ -2268,7 +2268,7 @@ void SettingsDialog::on_noteTextEditCodeResetButton_clicked() {
 }
 
 /**
- * Resets the font for the note markdown view
+ * Resets the font for the note Markdown view
  */
 void SettingsDialog::on_noteTextViewResetButton_clicked() {
     QTextBrowser textView;
@@ -2277,7 +2277,7 @@ void SettingsDialog::on_noteTextViewResetButton_clicked() {
 }
 
 /**
- * Resets the font for the note markdown code view
+ * Resets the font for the note Markdown code view
  */
 void SettingsDialog::on_noteTextViewCodeResetButton_clicked() {
     noteTextViewCodeFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);

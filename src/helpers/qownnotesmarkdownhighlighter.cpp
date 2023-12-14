@@ -10,7 +10,7 @@
  * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
  * for more details.
  *
- * QPlainTextEdit markdown highlighter
+ * QPlainTextEdit Markdown highlighter
  */
 
 #include "qownnotesmarkdownhighlighter.h"
@@ -44,7 +44,7 @@ void QOwnNotesMarkdownHighlighter::updateCurrentNote(Note *note) {
 }
 
 /**
- * Does the markdown highlighting
+ * Does the Markdown highlighting
  * We need to override this method so our highlightMarkdown gets called
  *
  * @param text
@@ -57,7 +57,7 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     setCurrentBlockState(HighlighterState::NoState);
     currentBlock().setUserState(HighlighterState::NoState);
 
-    // do the markdown highlighting before the spellcheck highlighting
+    // do the Markdown highlighting before the spellcheck highlighting
     // if we do it afterward, it overwrites the spellcheck highlighting
     MarkdownHighlighter::highlightMarkdown(text);
     if (text.contains(QLatin1String("note://")) ||

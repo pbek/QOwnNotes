@@ -784,7 +784,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(ScriptComponent *s
 
 /**
  * Calls the noteToMarkdownHtmlHook function for all script components
- * This function is called when the markdown html of a note is generated
+ * This function is called when the Markdown html of a note is generated
  */
 QString ScriptingService::callNoteToMarkdownHtmlHook(Note *note, const QString &html,
                                                      const bool forExport) {
@@ -808,7 +808,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHook(Note *note, const QString &
 
 /**
  * Calls the preNoteToMarkdownHtmlHook function for all script components
- * This function is called before the markdown html of a note is generated
+ * This function is called before the Markdown html of a note is generated
  */
 QString ScriptingService::callPreNoteToMarkdownHtmlHook(Note *note, const QString &markdown,
                                                         const bool forExport) {
@@ -1386,12 +1386,12 @@ QString ScriptingService::downloadUrlToString(const QUrl &url) {
 
 /**
  * QML wrapper to download an url to the media folder and returning the media
- * url or the markdown image text of the media relative to the current note
+ * url or the Markdown image text of the media relative to the current note
  *
  * @param {QString} url
  * @param {bool} returnUrlOnly if true only the media url will be returned
  * (default false)
- * @return {QString} the media markdown or url
+ * @return {QString} the media Markdown or url
  */
 QString ScriptingService::downloadUrlToMedia(const QUrl &url, bool returnUrlOnly) {
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
@@ -1402,13 +1402,13 @@ QString ScriptingService::downloadUrlToMedia(const QUrl &url, bool returnUrlOnly
 
 /**
  * QML wrapper to insert a media file into the media folder and returning
- * the media url or the markdown image text of the media relative to the current
+ * the media url or the Markdown image text of the media relative to the current
  * note
  *
  * @param {QString} mediaFilePath
  * @param {bool} returnUrlOnly if true only the media url will be returned
  * (default false)
- * @return {QString} the media markdown or url
+ * @return {QString} the media Markdown or url
  */
 QString ScriptingService::insertMediaFile(const QString &mediaFilePath, bool returnUrlOnly) {
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
@@ -1425,11 +1425,11 @@ QString ScriptingService::insertMediaFile(const QString &mediaFilePath, bool ret
 
 /**
  * QML wrapper to insert an attachment file into the "attachments" folder and
- * returning the attachment url or the markdown text of the attachment
+ * returning the attachment url or the Markdown text of the attachment
  * relative to the current note
  *
  * @param {QString} attachmentFilePath
- * @param {QString} fileName to use in the markdown
+ * @param {QString} fileName to use in the Markdown
  * @param {bool} returnUrlOnly if true only the attachment url will be returned
  * (default false)
  * @return {QString} the attachment markdown or url

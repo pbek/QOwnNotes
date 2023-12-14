@@ -57,7 +57,7 @@ LogWidget::LogWidget(QWidget *parent)
     const bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
     ui->logTextEdit->initSearchFrame(ui->logTextEditSearchFrame, darkMode);
 
-    // turn off markdown highlighting
+    // turn off Markdown highlighting
     ui->logTextEdit->setHighlightingEnabled(false);
     ui->logTextEdit->disableSpellChecking();
 

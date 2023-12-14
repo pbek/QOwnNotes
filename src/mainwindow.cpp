@@ -3701,7 +3701,7 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
     this->_lastNoteId = this->currentNote.getId();
     this->currentNote = note;
 
-    // for places we can't get the current note id, like the markdown
+    // for places we can't get the current note id, like the Markdown
     // highlighter
     qApp->setProperty("currentNoteId", noteId);
 
@@ -4322,7 +4322,7 @@ void MainWindow::askForEncryptedNotePasswordIfNeeded(const QString &additionalTe
             const QString password = dialog->password();
             if (!password.isEmpty()) {
                 // set the password so it can be decrypted
-                // for the markdown view
+                // for the Markdown view
                 currentNote.setCryptoPassword(password);
                 currentNote.store();
             }
@@ -5503,7 +5503,7 @@ void MainWindow::filterNotes(bool searchForText) {
 bool MainWindow::isTagsEnabled() { return _taggingDockWidget->isVisible(); }
 
 /**
- * Checks if the markdown view is enabled
+ * Checks if the Markdown view is enabled
  */
 bool MainWindow::isMarkdownViewEnabled() {
     QSettings settings;
@@ -6326,7 +6326,7 @@ void MainWindow::on_actionInsert_current_time_triggered() {
 void MainWindow::on_actionShow_Todo_List_triggered() { openTodoDialog(); }
 
 /**
- * @brief Exports the current note as PDF (markdown)
+ * @brief Exports the current note as PDF (Markdown)
  */
 void MainWindow::on_action_Export_note_as_PDF_markdown_triggered() {
     auto doc = getDocumentForPreviewExport();
@@ -6359,7 +6359,7 @@ QTextDocument *MainWindow::getDocumentForPreviewExport() {
 }
 
 /**
- * @brief Prints the current note (markdown)
+ * @brief Prints the current note (Markdown)
  */
 void MainWindow::on_action_Print_note_markdown_triggered() {
     auto doc = getDocumentForPreviewExport();
@@ -6435,7 +6435,7 @@ bool MainWindow::insertMedia(QFile *file, QString title) {
 
     if (!text.isEmpty()) {
         ScriptingService *scriptingService = ScriptingService::instance();
-        // attempts to ask a script for another markdown text
+        // attempts to ask a script for another Markdown text
         text = scriptingService->callInsertMediaHook(file, text);
         qDebug() << __func__ << " - 'text': " << text;
 
@@ -6728,7 +6728,7 @@ void MainWindow::on_action_Open_note_in_external_editor_triggered() {
 }
 
 /**
- * Exports the current note as markdown file
+ * Exports the current note as Markdown file
  */
 void MainWindow::on_action_Export_note_as_markdown_triggered() {
     FileDialog dialog(QStringLiteral("NoteMarkdownExport"));
@@ -6954,7 +6954,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
             if (fileInfo.isReadable()) {
                 auto *file = new QFile(path);
 
-                // only allow markdown and text files to be copied as note
+                // only allow Markdown and text files to be copied as note
                 if (isValidNoteFile(file)) {
                     const NoteSubFolder noteSubFolder = NoteSubFolder::activeNoteSubFolder();
                     const QString noteSubFolderPath = noteSubFolder.fullPath();
@@ -7013,7 +7013,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
 
             message +=
                 tr("Skipped copying of %n note(s) "
-                   "(no markdown or text file or not readable)",
+                   "(no Markdown or text file or not readable)",
                    "", skipCount);
         }
 
@@ -7053,7 +7053,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
         const QPoint globalPos = textEdit->mapToGlobal(rect.bottomRight());
         QMenu menu;
 
-        QAction *htmlAction = menu.addAction(tr("Paste &HTML as markdown"));
+        QAction *htmlAction = menu.addAction(tr("Paste &HTML as Markdown"));
         QAction *textAttachmentAction = menu.addAction(tr("Paste as &text file attachment"));
         QAction *selectedItem = menu.exec(globalPos);
 
@@ -7067,11 +7067,11 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
 }
 
 /**
- * Inserts html as markdown in the current note
+ * Inserts html as Markdown in the current note
  * Images are also downloaded
  */
 void MainWindow::insertHtmlAsMarkdownIntoCurrentNote(QString html) {
-    // convert html tags to markdown
+    // convert html tags to Markdown
     html = Utils::Misc::htmlToMarkdown(std::move(html));
 
     // match image tags
@@ -7099,12 +7099,12 @@ void MainWindow::insertHtmlAsMarkdownIntoCurrentNote(QString html) {
 
             showStatusBarMessage(tr("Downloading %1").arg(imageUrl.toString()), 0);
 
-            // download the image and get the media markdown code for it
+            // download the image and get the media Markdown code for it
             markdownCode = currentNote.downloadUrlToMedia(imageUrl);
         }
 
         if (!markdownCode.isEmpty()) {
-            // replace the image tag with markdown code
+            // replace the image tag with Markdown code
             html.replace(imageTag, markdownCode);
         }
     }

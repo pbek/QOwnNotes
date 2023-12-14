@@ -1,7 +1,7 @@
 {
   "name": "qownnotes-webpage",
   "version": "0.0.1",
-  "description": "Open source markdown note taking for Linux, macOS and Windows, that works together with Nextcloud Notes",
+  "description": "Open source Markdown note taking for Linux, macOS and Windows, that works together with Nextcloud Notes",
   "main": "index.js",
   "authors": {
     "name": "Patrizio Bekerle",

@@ -1557,7 +1557,7 @@ bool Note::modifyNoteTextFileNameFromQMLHook() {
 bool Note::handleNoteTextFileName() {
     QString noteText = _noteText;
 
-    // remove frontmatter from start of markdown text
+    // remove frontmatter from start of Markdown text
     if (noteText.startsWith(QLatin1String("---"))) {
         static const QRegularExpression re(
             QStringLiteral(
@@ -1566,7 +1566,7 @@ bool Note::handleNoteTextFileName() {
         noteText.remove(re);
     }
 
-    // remove html comment from start of markdown text
+    // remove html comment from start of Markdown text
     if (noteText.startsWith(QLatin1String("<!--"))) {
         static const QRegularExpression re(QStringLiteral(R"(^<!--.+?-->((\r\n)|(\n\r)|\r|\n))"),
                                            QRegularExpression::DotMatchesEverythingOption);
@@ -1589,7 +1589,7 @@ bool Note::handleNoteTextFileName() {
         return false;
     }
 
-    // remove a leading "# " for markdown headlines
+    // remove a leading "# " for Markdown headlines
     static const QRegularExpression headlinesRE(QStringLiteral("^#\\s"));
     name.remove(headlinesRE);
 
@@ -1782,7 +1782,7 @@ QString Note::getNoteUrlForLinkingTo(const Note &note, bool forceLegacy) const {
 
         // if one of the link characters `<>()` were found in the note url use
         // the legacy way of linking because otherwise the "url" would break the
-        // markdown link
+        // Markdown link
         static const QRegularExpression re(QRegularExpression(R"([<>()])"));
         if (noteUrl.contains(re)) {
             noteUrl = getNoteUrlForLinkingTo(note, true);
@@ -2209,7 +2209,7 @@ bool Note::removeNoteFile() {
 }
 
 /**
- * @brief Returns html rendered markdown of the note text
+ * @brief Returns html rendered Markdown of the note text
  * @param notesPath for transforming relative local urls to absolute ones
  * @param maxImageWidth defined maximum image width (ignored if forExport is
  * true)
@@ -2338,7 +2338,7 @@ static std::vector<ImageSize> *getImageSizeCache() {
 }
 
 /**
- * Converts a markdown string for a note to html
+ * Converts a Markdown string for a note to html
  *
  * @param str
  * @param notesPath
@@ -2371,7 +2371,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
     windowsSlash = "/";
 #endif
 
-    // remove frontmatter from markdown text
+    // remove frontmatter from Markdown text
     if (str.startsWith(QLatin1String("---"))) {
         static const QRegularExpression re(
             QStringLiteral(
@@ -2387,7 +2387,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
                         QRegularExpression::escape(notesPath) + QStringLiteral("/\\2\\3"));
 
     // transform images without "file://" urls to file-urls (but we better do
-    // that in the html, not the markdown!)
+    // that in the html, not the Markdown!)
     //    str.replace(
     //            QRegularExpression(R"((\!\[.*\]\()((?!file:\/\/).+)(\)))"),
     //            "\\1file://" + windowsSlash +
@@ -2397,7 +2397,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
     QRegularExpressionMatchIterator i;
 
     // Try to replace links like <my-note.md> or <file.pdf> with proper file
-    // links We need to do that in the markdown because Hoedown would not create
+    // links We need to do that in the Markdown because Hoedown would not create
     // a link tag This is a "has not '\w+:\/\/' in it" regular expression see:
     // http://stackoverflow.com/questions/406230/regular-expression-to-match-line-that-doesnt-contain-a-word
     // TODO: maybe we could do that per QTextBlock to check if it's done in comment blocks?
@@ -2422,7 +2422,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
     // attachment links! We are using `{1,500}` instead of `+` because there
     // were crashes with regular expressions running wild
     // TODO: In theory we could convert relative note links in the html (and not
-    // in the markdown) to prevent troubles with code blocks
+    // in the Markdown) to prevent troubles with code blocks
     i = QRegularExpression(QStringLiteral(R"(\[(.*?)\]\((((?!\w+:\/\/)[^<>]){1,500}?)\))"))
             .globalMatch(str);
 
@@ -2442,7 +2442,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
                                            QStringLiteral(")"));
     }
 
-    // check if there is a script that wants to modify the markdown
+    // check if there is a script that wants to modify the Markdown
     const QString preScriptResult =
         ScriptingService::instance()->callPreNoteToMarkdownHtmlHook(this, str, forExport);
 
@@ -2491,7 +2491,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
     }
 
     // transform images without "file://" urls to file-urls
-    // Note: this is currently handled above in markdown
+    // Note: this is currently handled above in Markdown
     //       if we want to activate this code again we need to take care of
     //       remote http(s) links to images! see:
     //       https://github.com/pbek/QOwnNotes/issues/1286
@@ -3393,7 +3393,7 @@ QString Note::createNoteHeader(const QString &name) {
 }
 
 /**
- * Returns the markdown of the inserted media file into a note
+ * Returns the Markdown of the inserted media file into a note
  */
 QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine, bool returnUrlOnly,
                                      QString title) const {
@@ -3512,7 +3512,7 @@ QString Note::attachmentUrlStringForFileName(const QString &fileName) const {
 }
 
 /**
- * Returns the markdown of the inserted attachment file into a note
+ * Returns the Markdown of the inserted attachment file into a note
  */
 QString Note::getInsertAttachmentMarkdown(QFile *file, QString title, bool returnUrlOnly,
                                           QString fileBaseName) const {
@@ -3561,7 +3561,7 @@ QString Note::getInsertAttachmentMarkdown(QFile *file, QString title, bool retur
 }
 
 /**
- * Downloads an url to the media folder and returns the markdown code or the
+ * Downloads an url to the media folder and returns the Markdown code or the
  * url for it relative to the note
  *
  * @param url
@@ -3594,7 +3594,7 @@ QString Note::downloadUrlToMedia(const QUrl &url, bool returnUrlOnly) {
     if (tempFile->open()) {
         // download the image to the temporary file
         if (Utils::Misc::downloadUrlToFile(url, tempFile)) {
-            // copy image to media folder and generate markdown code for
+            // copy image to media folder and generate Markdown code for
             // the image
             text = getInsertMediaMarkdown(tempFile, true, returnUrlOnly);
         }
@@ -3606,7 +3606,7 @@ QString Note::downloadUrlToMedia(const QUrl &url, bool returnUrlOnly) {
 }
 
 /**
- * Imports an image from a base64 string and returns the markdown code
+ * Imports an image from a base64 string and returns the Markdown code
  *
  * @param data
  * @param imageSuffix
@@ -3645,7 +3645,7 @@ QString Note::importMediaFromBase64(QString &data, QString imageSuffix) const {
 
 /**
  * Tries to import a media file into the note and returns the code for the
- * markdown image tag
+ * Markdown image tag
  */
 QString Note::importMediaFromDataUrl(const QString &dataUrl) {
     if (dataUrl.contains(QLatin1String("data:image/"), Qt::CaseInsensitive)) {

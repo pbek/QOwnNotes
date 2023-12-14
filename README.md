@@ -30,7 +30,7 @@
 
 
 [QOwnNotes](https://www.qownnotes.org) is the **open source notepad** with
-[**markdown support**](https://github.com/pbek/QOwnNotes/blob/main/src/demonotes/Markdown%20Cheatsheet.md)
+[**Markdown support**](https://github.com/pbek/QOwnNotes/blob/main/src/demonotes/Markdown%20Cheatsheet.md)
 and **todo list manager** for **GNU/Linux**, **macOS** and **Windows**,
 that works together with [**Nextcloud Notes**](https://github.com/Nextcloud/notes)
 and [**ownCloud Notes**](https://github.com/owncloud/notes).

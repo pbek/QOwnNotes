@@ -529,7 +529,7 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
         return;
     }
 
-    // attempt a markdown table auto-format
+    // attempt a Markdown table auto-format
     if (Utils::Gui::autoFormatTableAtCursor(this)) {
         return;
     }
@@ -802,7 +802,7 @@ void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData *source) {
 }
 
 /**
- * Handles the settings of the markdown textedit
+ * Handles the settings of the Markdown textedit
  */
 void QOwnNotesMarkdownTextEdit::updateSettings() {
     // we need a blocker, otherwise the "change" events will fire
@@ -840,7 +840,7 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
 
     // highlighting is always disabled for logTextEdit
     if (objectName() != QStringLiteral("logTextEdit")) {
-        // enable or disable markdown highlighting
+        // enable or disable Markdown highlighting
         bool highlightingEnabled =
             settings.value(QStringLiteral("markdownHighlightingEnabled"), true).toBool();
 
