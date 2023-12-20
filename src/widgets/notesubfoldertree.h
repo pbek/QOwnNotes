@@ -21,6 +21,7 @@ class NoteSubFolderTree : public QTreeWidget {
 
     static QMenu *contextMenu(QTreeWidget *parent);
 
+   public Q_SLOTS:
     void onItemExpanded(QTreeWidgetItem *item);
 
    private Q_SLOTS:
