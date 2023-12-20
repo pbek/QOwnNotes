@@ -2,11 +2,11 @@
 
 ## 23.12.3
 - the speed of link highlighting in lists starting with 4 spaces or more was improved
-  [(for [#201](https://github.com/pbek/qmarkdowntextedit/issues/201))
+  (for [#201](https://github.com/pbek/qmarkdowntextedit/issues/201))
 
 ## 23.12.2
 - link highlighting in lists starting with 4 spaces or more was fixed
-  [(for [#201](https://github.com/pbek/qmarkdowntextedit/issues/201))
+  (for [#201](https://github.com/pbek/qmarkdowntextedit/issues/201))
 
 ## 23.12.1
 - reverted link fix of last release because of [#201](https://github.com/pbek/qmarkdowntextedit/issues/201)
