@@ -2123,6 +2123,8 @@ void MainWindow::loadNoteDirectoryList() {
 
         ui->noteSubFolderTreeWidget->buildTreeForParentItem(noteFolderItem);
         noteFolderItem->setExpanded(true);
+        connect(ui->noteTreeWidget, &QTreeWidget::itemExpanded, ui->noteSubFolderTreeWidget, &NoteSubFolderTree::onItemExpanded);
+        connect(ui->noteTreeWidget, &QTreeWidget::itemCollapsed, ui->noteSubFolderTreeWidget, &NoteSubFolderTree::onItemExpanded);
 
         itemCount = Note::countAll();
     } else {
