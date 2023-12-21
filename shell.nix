@@ -19,6 +19,7 @@
       # for shell scripts
       findutils
       gnused
+      ripgrep
     ];
 
     buildInputs = with pkgs; with qt6; [

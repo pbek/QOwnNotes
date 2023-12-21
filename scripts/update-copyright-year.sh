@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # Use this script to update all copyright years in the source and license files
 #
@@ -39,7 +39,7 @@ echo
 echo Updating qmarkdowntextedit...
 echo
 pushd src/libraries/qmarkdowntextedit || exit 1
-git checkout main || exit 2
+git checkout develop || exit 2
 git pull
 popd || exit 3
 
@@ -51,7 +51,7 @@ sed -E "s/$1 Patrizio/$2 Patrizio/" -i $(find src -name '*.c' -o -name '*.cpp' -
 echo
 echo "Are there any $1 entries left? (should return nothing)"
 echo
-grep -r "$1 Patrizio" .
+rg "$1 Patrizio" .
 
 echo
 echo "Commit message: \"Update year from $1 to $2\""
