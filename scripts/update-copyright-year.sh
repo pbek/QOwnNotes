@@ -54,5 +54,5 @@ echo
 rg "$1 Patrizio" .
 
 echo
-echo "Commit message: \"Update year from $1 to $2\""
+echo "Commit message: \"doc: update year from $1 to $2\""
 echo
