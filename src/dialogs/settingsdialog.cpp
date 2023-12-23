@@ -234,6 +234,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
             SLOT(needRestart()));
     connect(ui->enableSocketServerCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->enableWebApplicationCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
+    connect(ui->enableNoteTreeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->webAppServerUrlLineEdit, SIGNAL(textChanged(QString)), this, SLOT(needRestart()));
     connect(ui->webAppTokenLineEdit, SIGNAL(textChanged(QString)), this, SLOT(needRestart()));
     //    connect(ui->layoutWidget, SIGNAL(settingsStored()),
