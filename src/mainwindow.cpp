@@ -8990,7 +8990,7 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
     // update the preview-slider
     noteTextSliderValueChanged(textEdit->verticalScrollBar()->value(), true);
 
-    // set focus back to the navigation widget so you can use the
+    // set focus back to the navigation widget, so you can use the
     // keyboard to navigate
     ui->navigationWidget->setFocus();
 }
