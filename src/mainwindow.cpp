@@ -506,6 +506,10 @@ void MainWindow::initTreeWidgets() {
             &MainWindow::onMultipleSubfoldersSelected);
     connect(ui->noteSubFolderTreeWidget, &NoteSubFolderTree::currentSubFolderChanged, this,
             &MainWindow::onCurrentSubFolderChanged);
+    if (NoteFolder::isCurrentNoteTreeEnabled()) {
+        connect(ui->noteTreeWidget, &QTreeWidget::itemExpanded, ui->noteSubFolderTreeWidget, &NoteSubFolderTree::onItemExpanded);
+        connect(ui->noteTreeWidget, &QTreeWidget::itemCollapsed, ui->noteSubFolderTreeWidget, &NoteSubFolderTree::onItemExpanded);
+    }
 }
 
 void MainWindow::initNotePreviewAndTextEdits() {
