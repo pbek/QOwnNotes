@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 23.12.4
+- the collapse-state for the note tree in the experimental note tree mode is now stored
+  (for [#790](https://github.com/pbek/QOwnNotes/issues/790), thank you, @discapes)
+
 ## 23.12.3
 - the speed of link highlighting in lists starting with 4 spaces or more was improved
   (for [#201](https://github.com/pbek/qmarkdowntextedit/issues/201))
