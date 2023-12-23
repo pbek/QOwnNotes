@@ -112,7 +112,11 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
 
         // jump to the Markdown heading in the note that is represented by the url fragment
         if (!fragment.isEmpty()) {
-            mw->doSearchInNote("\"## " + fragment + "\"");
+            // Search with a regular expression for the fragment to make sure
+            // we are searching for the full heading
+            auto searchTerm = QStringLiteral("## ") + QRegularExpression::escape(fragment) +
+                              QStringLiteral("$");
+            mw->activeNoteTextEdit()->doSearch(searchTerm, QPlainTextEditSearchWidget::RegularExpressionMode);
             mw->activeNoteTextEdit()->searchWidget()->deactivate();
         }
     } else {

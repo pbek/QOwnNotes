@@ -6,6 +6,7 @@
 - toggling the experimental note tree mode in the settings now requires a restart
   of the application, to make sure the panels are initialized correctly
   (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
+- the matching of the correct heading in note links was improved
 
 ## 23.12.3
 - the speed of link highlighting in lists starting with 4 spaces or more was improved
