@@ -2690,13 +2690,6 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <numerusform>Ezin izan dira %n ohar kopiatu (ziurrenik lehendik zegoen)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>%n oharraren kopia jauzi egin da (ez da marka edo testu-fitxategia edo ez da irakurgarria)</numerusform>
-<numerusform>Aurretik %n oharrak kopiatuz (markaketa edo testu-fitxategia ez edo irakurgarria ez da)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Aldi baterako irudia gordetzen</translation>
@@ -2799,6 +2792,17 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <message>
 <source>Rename note</source>
 <translation>Aldatu izena berriro</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3324,10 +3328,6 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <translation>Kontuan titularra</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3822,16 +3822,16 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7672,10 +7672,6 @@ Hau ezin da desegin!</translation>
 <translation>Ongi etorri QOwnNotes-era</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>testu arruntaren markaketa oharra ownCloud integrazioarekin</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Atzera</translation>
 </message>
@@ -7722,6 +7718,10 @@ Hau ezin da desegin!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Hautatu non gorde nahi dituzun oharrak:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

@@ -2733,15 +2733,6 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Nie udało się skopiować %n notatki (najprawdopodobniej już istnieje)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Pominięto kopiowanie %n notatki (brak markdown lub pliku tekstowego lub możliwości odczytu)</numerusform>
-<numerusform>Pominięto kopiowanie %n notatek (brak markdown lub pliku tekstowego lub możliwości odczytu)</numerusform>
-<numerusform>Pominięto kopiowanie %n notatek (brak markdown lub pliku tekstowego lub możliwości odczytu)</numerusform>
-<numerusform>Pominięto kopiowanie %n notatki (brak markdown lub pliku tekstowego lub możliwości odczytu)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Zapisywanie tymczasowego obrazu</translation>
@@ -2845,6 +2836,19 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message>
 <source>Rename note</source>
 <translation>Zmień nazwę notatki</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3394,10 +3398,6 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <translation>Nagłówek notatki</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>Wklej &amp;HTML jako Markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>Wklej jako załącznik do pliku tekstowego</translation>
 </message>
@@ -3900,16 +3900,16 @@ Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone foldery?&lt;ul&gt;&lt;li&gt;
 <translation>Wykryto tryb ciemny</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Wygląda na to, że masz włączony tryb ciemny w systemie operacyjnym. Czy chcesz także włączyć tryb ciemny w QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>Wykryto tryb jasny</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Wygląda na to, że masz włączony tryb jasny w systemie operacyjnym. Czy chcesz także włączyć tryb jasny w QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7744,10 +7744,6 @@ Nie można tego cofnąć!</translation>
 <translation>Witamy w QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>zapisywanie notatek w formacie zwykłego pliku tekstowego z językiem znaczników markdown, zintegrowane z ownCloud</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>Wstecz</translation>
 </message>
@@ -7794,6 +7790,10 @@ Nie można tego cofnąć!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Zaznacz gdzie chcesz zapisywać notatki:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

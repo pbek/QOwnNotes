@@ -2660,12 +2660,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>未能复制 %n 个笔记（很可能已经存在）</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>跳过复制 %n 个笔记 (没有 markdown 或文本文件不可读)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>保存临时图像</translation>
@@ -2767,6 +2761,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Rename note</source>
 <translation>重命名笔记</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3280,10 +3284,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>备注标题</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>粘贴 HTML 为 Markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>粘贴为文本附件文件</translation>
 </message>
@@ -3775,16 +3775,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>检测到暗色模式</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>你的 Windows 系统看起来使用暗色模式。是否将 QOwnNotes 调至暗色模式？</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>检测到亮色模式</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>你的 Windows 系统看起来使用亮色模式。是否在 OwnNotes 中关闭暗色模式？</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7595,10 +7595,6 @@ This cannot be undone!</source>
 <translation>欢迎使用 QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>纯文本文件 markdown 笔记，具有 ownCloud 集成</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>返回(&amp;B)</translation>
 </message>
@@ -7645,6 +7641,10 @@ This cannot be undone!</source>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>请选择要将笔记保存在何处:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

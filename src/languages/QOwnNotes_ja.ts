@@ -2674,12 +2674,6 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <numerusform>%n 個のノートのコピーに失敗しました (おそらくすでに存在します)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>%n 個のノートのコピーをスキップしました (markdown、プレーンテキスト ファイルでないか、読み込めません)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>一時画像の保存中</translation>
@@ -2785,6 +2779,16 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <source>Rename note</source>
 <translation>ノートの名前変更</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3299,10 +3303,6 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <translation>ノートのタイトル</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3798,16 +3798,16 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <translation>ダークモードが検出されました</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>お使いのWindowsシステムはダークモードを使用しているようです。 QOwnNotesでダークモードもオンにしますか？</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>ライトモードが検出されました</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>お使いのWindowsシステムはライトモードを使用しているようです。 QOwnNotesでダークモードもオフにしますか？</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7645,10 +7645,6 @@ This cannot be undone!</source>
 <translation>QOwnNotes にようこそ</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>ownCloud統合で使用するプレーンテキストファイルのマークダウンメモ</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>戻る(&amp;B)</translation>
 </message>
@@ -7695,6 +7691,10 @@ This cannot be undone!</source>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>ノートを保存するフォルダーを選択してください:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

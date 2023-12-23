@@ -2693,13 +2693,6 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <numerusform>Ba a iya yin kwafin %n bayanin kulas ba (ana iya yiwuwa tuni)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Skipped kwafa na %n bayanin kula (babu alamar rubutu ko fayil ɗin rubutu ko ba'a iya karantawa)</numerusform>
-<numerusform>Skipped kwafa na %n bayanin kulas (babu alamar rubutu ko fayil ɗin rubutu ko ba'a iya karantawa)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Ajiye hoto na ɗan lokaci</translation>
@@ -2804,6 +2797,17 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <message>
 <source>Rename note</source>
 <translation>Sake suna bayanin kula</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3330,10 +3334,6 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <translation>Bayanin kula</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3830,16 +3830,16 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7674,10 +7674,6 @@ Ba za a sake yin wannan ba!</translation>
 <translation>Maraba da zuwa QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>rubutun bayanin kula a bayyane-bayanin kula tare da haɗin kai ownCloud</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Koma baya</translation>
 </message>
@@ -7724,6 +7720,10 @@ Ba za a sake yin wannan ba!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Da fatan za a zabi inda kake son adana bayanan ka:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

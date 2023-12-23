@@ -2680,13 +2680,6 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <numerusform>Ha fallat la còpia de %n nota(es) (la majoria existeixen ja)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Omesa la còpia de %n nota(es) (no hi ha cap fitxer markdown o de text o no és legible)</numerusform>
-<numerusform>Omesa la còpia de %n nota(es) (no hi ha cap fitxer markdown o de text o no és legible)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Desant imatge temporal</translation>
@@ -2788,6 +2781,17 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <source>Rename note</source>
 <translation>Canvia el nom de la nota</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3313,10 +3317,6 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <translation>Títol de la nota</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>Copia l'&amp;HTML com a markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>Copia com un adjunt de fitxer de &amp;text</translation>
 </message>
@@ -3811,16 +3811,16 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <translation>Mode fosc detectat</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Sembla que el vostre Windows usa el mode fosc. Voleu habilitar el mode fosc també a QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>Mode clar detectat</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Sembla que el vostre Windows usa el mode clar. Voleu deshabilitar el mode fosc a QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7646,10 +7646,6 @@ Això no es pot desfer!</translation>
 <translation>Benvinguts/des a QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>integració de fitxers de notes en text pla i markdown amb ownCloud</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>Enrere</translation>
 </message>
@@ -7696,6 +7692,10 @@ Això no es pot desfer!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Seleccioneu on voleu desar les vostres notes:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

@@ -2693,13 +2693,6 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
 <numerusform>Falha ao copiar %n notas (provavelmente já existe)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Cópia ignorada da nota %n (sem remarcação ou arquivo de texto ou não legível)</numerusform>
-<numerusform>Cópia ignorada de %n notas (sem remarcação ou arquivo de texto ou não legível)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Salvando a imagem temporária</translation>
@@ -2807,6 +2800,17 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
 <message>
 <source>Rename note</source>
 <translation>Renomear nota</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3332,10 +3336,6 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
 <translation>Título da nota</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3832,16 +3832,16 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
 <translation>Detetado modo escuro</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Parece que o sistema Windows está a utilizar o modo escuro. deseja ativar este modo para QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>Detetado modo claro</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Parece que o sistema Windows está a utilizar o modo claro. deseja ativar este modo para QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7682,10 +7682,6 @@ Isso não poderá ser desfeito!</translation>
 <translation>Bem-vindo ao QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>anotação de redução de arquivo de texto sem formatação com integração ownCloud</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Anterior</translation>
 </message>
@@ -7732,6 +7728,10 @@ Isso não poderá ser desfeito!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Selecione onde deseja armazenar suas anotações:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

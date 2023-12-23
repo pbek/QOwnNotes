@@ -2695,13 +2695,6 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
 <numerusform>Produciuse un fallo ao copiar %n notas (o máis probable é que xa exista)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Copiado omitido de %n nota (non hai ningunha marca ou ficheiro de texto ou non é lexible)</numerusform>
-<numerusform>Copiado por omisión de %n notas (non hai ningunha descrición nin ficheiro de texto)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Gardando imaxe temporal</translation>
@@ -2808,6 +2801,17 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
 <message>
 <source>Rename note</source>
 <translation>Renomear nota</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3334,10 +3338,6 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
 <translation>Título de nota</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3835,16 +3835,16 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7685,10 +7685,6 @@ Isto non se pode desfacer!</translation>
 <translation>Benvido a QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>nota de descarte de ficheiro de texto simple coa integración de ownCloud</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Atrás</translation>
 </message>
@@ -7735,6 +7731,10 @@ Isto non se pode desfacer!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Selecciona onde queres gardar as túas notas:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

@@ -2687,13 +2687,6 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <numerusform>Non è stato possibile copiare %n note (probabilmente perché già esistenti)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Saltata la copia di %n nota (markdown o file di testo inesistente o non leggibile)</numerusform>
-<numerusform>Saltata la copia di %n note (markdown o file di testo inesistenti o non leggibili)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Salvataggio immagine temporanea</translation>
@@ -2795,6 +2788,17 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <source>Rename note</source>
 <translation>Rinomina nota</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3320,10 +3324,6 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <translation>Titolo della nota</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>Incolla &amp;HTML come markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>Incolla come file di &amp;testo allegato</translation>
 </message>
@@ -3818,16 +3818,16 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <translation>Modalità scura individuata</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Il suo sistema Windows sembra essere in modalità scura. Vuoi attivare la modalità scura anche in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>Modalità chiara individuata</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Il suo sistema Windows sembra essere in modalità chiara. Vuoi disattivare la modalità scura anche in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7651,10 +7651,6 @@ Non sarà possibile annullare l'operazione!</translation>
 <translation>Benvenuto in QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>il blocco degli appunti in formato di testo markdown con integrazione per ownCloud</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Indietro</translation>
 </message>
@@ -7701,6 +7697,10 @@ Non sarà possibile annullare l'operazione!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Selezionare dove si desidera memorizzare le proprie note:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

@@ -7,6 +7,8 @@
   of the application, to make sure the panels are initialized correctly
   (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
 - the matching of the correct heading in note links was improved
+- added more Dutch, Tamil, Arabic, Korean, Czech translation (thank you stephanp,
+  tamilneram.github.io, noureddin, venusgirl, dedkus)
 
 ## 23.12.3
 - the speed of link highlighting in lists starting with 4 spaces or more was improved

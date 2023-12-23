@@ -2689,13 +2689,6 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <numerusform>%n Notizen konnten nicht kopiert werden (wahrscheinlich bereits vorhanden)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Kopieren einer Notiz wurde übersprungen (keine Markdown-/Textdatei oder unlesbar)</numerusform>
-<numerusform>Kopieren von %n Notizen wurde übersprungen (keine Markdown-/Textdatei oder unlesbar)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Temporäres Bild speichern</translation>
@@ -2797,6 +2790,17 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <source>Rename note</source>
 <translation>Notiz umbenennen</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3322,10 +3326,6 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <translation>Notiz-Überschrift</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>&amp;HTML als Markdown einfügen</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>Als Textdateianhang einfügen</translation>
 </message>
@@ -3820,16 +3820,16 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <translation>Dunkelmodus erkannt</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Ihr Windows-System scheint den Dunkelmodus zu verwenden. Möchten Sie auch den Dunkelmodus in QOwnNotes einschalten?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>Heller Modus erkannt</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Ihr Windows-System scheint den hellen Modus zu verwenden. Möchten Sie auch den hellen Modus in QOwnNotes einschalten?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -6702,7 +6702,7 @@ Your notes will stay intact!</source>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7650,10 +7650,6 @@ Kann nicht rückgängig gemacht werden!</translation>
 <translation>Willkommen zu QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>das Klartext-Notizen-Programm mit Markdown-Unterstützung und ownCloud-Integration</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Zurück</translation>
 </message>
@@ -7700,6 +7696,10 @@ Kann nicht rückgängig gemacht werden!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Bitte wählen Sie den Ort aus, an dem Ihre Notizen gespeichert werden sollen:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

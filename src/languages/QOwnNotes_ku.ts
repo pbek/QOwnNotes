@@ -2689,13 +2689,6 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 <numerusform>Famîleya %n nîşanaê ya têkildar (bi guman jixwe heyî) nehat</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Kopkirina %n notayê (bê nîşankirin an pelê nivîsê tune an nayê xwendin)</numerusform>
-<numerusform>Kopkirina %n notayês (bê nîşankirin an pelê nivîsê tune an nayê xwendin)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Wêneyê demkî xilas dibe</translation>
@@ -2802,6 +2795,17 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 <message>
 <source>Rename note</source>
 <translation>Têbînî rename</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3329,10 +3333,6 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 <translation>Sernavê nîşanê</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3827,16 +3827,16 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7683,10 +7683,6 @@ Hûn her dem dikarin paş nîşan û guhertoyên wê paşde bikin. &lt;/p&gt;</t
 <translation>Ji bo QOwnNotes hatî</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>nîşana nîşana pelê sade ya nîşankirinê bi yekkirina ownCloud re bigirin</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Paş</translation>
 </message>
@@ -7733,6 +7729,10 @@ Hûn her dem dikarin paş nîşan û guhertoyên wê paşde bikin. &lt;/p&gt;</t
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Ji kerema xwe hilbijêrin ka hûn dixwazin nîşanên xwe hilînin:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

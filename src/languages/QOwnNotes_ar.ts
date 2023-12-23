@@ -2782,17 +2782,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>فشل في نسخ %n من الملاحظات (على الأرجح أنها موجودة مسبقاً)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>تم تخطي نسخ %n من الملاحظات (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
-<numerusform>تم تخطي نسخ %n من الملاحظات (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
-<numerusform>تم تجاوز نسخ %n من الملاحظات (لا يوجد ملف نصي أو markdown أو أنه غير مقروء)</numerusform>
-<numerusform>تم تخطي نسخ %n من الملاحظات (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
-<numerusform>تم تخطي نسخ %n من الملاحظات (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
-<numerusform>تم تخطي نسخ %n من الملاحظات (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>حفظ الصورة المؤقته</translation>
@@ -2894,6 +2883,21 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Rename note</source>
 <translation>إعادة تسمية الملاحظة</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation>
+<numerusform>لقد تجاوز نسخ %n ملاحظة (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
+<numerusform>لقد تجاوز نسخ %n ملاحظة (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
+<numerusform>لقد تجاوز نسخ %n ملاحظاتين (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
+<numerusform>لقد تجاوز نسخ %n ملاحظات (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
+<numerusform>لقد تجاوز نسخ %n ملاحظة (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
+<numerusform>لقد تجاوز نسخ %n من الملاحظات (لا يوجد ملف نصي أو ماركداون أو أنه غير مقروء)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation>أ&amp;لصق محتوى HTML بصيغة ماركداون</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3467,10 +3471,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>عنوان الملاحظة</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>أ&amp;لصق محتوى HTML بصيغة ماركداون</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>ألصق كملف &amp;نصي مرفق</translation>
 </message>
@@ -3982,16 +3982,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>تم اكتشاف الوضع المظلم</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
 <translation>يبدو أن نظام وندوز الخاص بك يستخدم الوضع المظلم. هل تريد أيضا تفعيل الوضع المظلم في QOwnNotes؟</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation>يبدو أن نظام وندوز الخاص بك يستخدم الوضع المضيء. هل تريد أيضا تعطيل الوضع المظلم في QOwnNotes؟</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>تم اكتشاف الوضع المضيء</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>يبدو أن نظام وندوز الخاص بك يستخدم الوضع المضيء. هل تريد أيضا تعطيل الوضع المظلم في QOwnNotes؟</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7866,10 +7866,6 @@ This cannot be undone!</source>
 <translation>أهلاً بكم في كيو-أون-نوتس</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>تطبيق لتدوين الملاحظات كملفات نصية مجردة بصيغة ماركداون ويتكامل مع ownCloud</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>رجوع</translation>
 </message>
@@ -7916,6 +7912,10 @@ This cannot be undone!</source>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>اختر رجاءاً المكان الذي تريد تخزين ملاحظاتك فيه:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation>تطبيق لتدوين الملاحظات في ملفات نصية مجردة بصيغة ماركداون ويتكامل مع ownCloud</translation>
 </message>
 <message>
 <source>Show subfolders</source>

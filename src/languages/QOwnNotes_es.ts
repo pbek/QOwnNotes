@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Copiar</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -2687,13 +2687,6 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <numerusform>Error al copiar %n notas (probablemente ya existen)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Se omitió copiar %n nota (no es archivo de texto o markdown, o no es legible)</numerusform>
-<numerusform>Se omitió copiar %n notas (no son archivos de texto o markdown, o no son legibles)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Guardando imagen temporal</translation>
@@ -2795,6 +2788,17 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Rename note</source>
 <translation>Renombrar nota</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3320,10 +3324,6 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>Título de la nota</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>Pegar como archivo adjunto de &amp;texto</translation>
 </message>
@@ -3819,16 +3819,16 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>Se detectó el modo oscuro</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>El sistema Windows parece utilizar el modo oscuro. ¿Quiere activarlo también en QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>Se detectó el modo claro</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>El sistema Windows parece utilizar el modo claro. ¿Quiere activarlo también en QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -6698,7 +6698,7 @@ Your notes will stay intact!</source>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7645,10 +7645,6 @@ This cannot be undone!</source>
 <translation>Bienvenido a QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>bloc de notas en archivos de texto plano con formato markdown e integración con ownCloud</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Atrás</translation>
 </message>
@@ -7695,6 +7691,10 @@ This cannot be undone!</source>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Por favor seleccione dónde almacenar sus notas:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

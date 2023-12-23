@@ -2689,13 +2689,6 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 <numerusform>Kunne ikke kopiere %n-noter (sandsynligvis allerede eksisterende)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Skipet kopiering af %n note (ingen markering eller tekstfil eller ikke læsbar)</numerusform>
-<numerusform>Overspringet kopiering af %n noter (ingen markering eller tekstfil eller ikke læsbar)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Gem midlertidigt billede</translation>
@@ -2801,6 +2794,17 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 <message>
 <source>Rename note</source>
 <translation>Omdøb notat</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3326,10 +3330,6 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 <translation>Note overskrift</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>マークダウンとしてHTMLを貼り付けます</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>テキストファイルの添付ファイルとして貼り付けます</translation>
 </message>
@@ -3825,16 +3825,16 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 <translation>ダークモードが検出されました</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Dit Windows-system ser ud til at bruge den mørke tilstand. Vil du også slå mørk tilstand til i QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>Lystilstand registreret</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Dit Windows-system ser ud til at bruge lystilstanden. Vil du også slå mørk tilstand fra i QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7673,10 +7673,6 @@ Dette kan ikke fortrydes!</translation>
 <translation>Velkommen til QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>plain-text fil markdown notat tager med ownCloud integration</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Tilbage</translation>
 </message>
@@ -7723,6 +7719,10 @@ Dette kan ikke fortrydes!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Vælg venligst, hvor du vil gemme dine noter:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

@@ -1235,7 +1235,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopie</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1947,7 +1947,7 @@
 </message>
 <message>
 <source>&amp;Knowledge base</source>
-<translation>&amp; Znalostní báze</translation>
+<translation>&amp;Znalostní báze</translation>
 </message>
 <message>
 <source>Insert current &amp;time</source>
@@ -2240,7 +2240,7 @@
 </message>
 <message>
 <source>Toggle full-screen mode</source>
-<translation>Pantaila osoko modua aldatu</translation>
+<translation>Přepnout režim celé obrazovky</translation>
 </message>
 <message>
 <source>Typewriter mode</source>
@@ -2321,7 +2321,7 @@
 </message>
 <message>
 <source>&amp;Load Todo List items</source>
-<translation type="unfinished">&amp;Load Todo List items</translation>
+<translation>&amp;Nahrát seznam položek Todo</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
@@ -2732,15 +2732,6 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>Nepodařilo se zkopírovat poznámky %n (pravděpodobně již existující)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Přeskočené kopírování poznámky %n (bez označení nebo textového souboru nebo nečitelné)</numerusform>
-<numerusform>Přeskočené kopírování poznámek %n (bez označení nebo textového souboru nebo nečitelné)</numerusform>
-<numerusform>Přeskočené kopírování poznámek %n (bez označení nebo textového souboru nebo nečitelné)</numerusform>
-<numerusform>Přeskočené kopírování poznámek %n (bez označení nebo textového souboru nebo nečitelné)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Ukládání dočasného obrázku</translation>
@@ -2844,6 +2835,19 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <message>
 <source>Rename note</source>
 <translation>Přejmenovat poznámku</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -2951,7 +2955,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <source>Leave full-screen mode</source>
-<translation>Utzi pantaila osoko modua</translation>
+<translation>Opustit režim celé obrazovky</translation>
 </message>
 <message>
 <source>Custom editor width</source>
@@ -3392,10 +3396,6 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <message>
 <source>Note headline</source>
 <translation>Poznámka nadpis</translation>
-</message>
-<message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>Vložte &amp;HTML jako Markdown</translation>
 </message>
 <message>
 <source>Paste as &amp;text file attachment</source>
@@ -3901,16 +3901,16 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <translation>Zjištěný tmavý režim</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Vypadá to, že váš systém Windows používá tmavý režim. Chcete tmavý režim zapnout i pro QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>Zjištěný světlý režim</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Vypadá to, že váš systém Windows používá světlý režim. Chcete i pro QOwnNotes vypnout tmavý režim?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -5375,7 +5375,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <source>Experimental</source>
-<translation type="unfinished">Experimental</translation>
+<translation>Experimentální</translation>
 </message>
 <message>
 <source>This also allows note files to be renamed</source>
@@ -7763,10 +7763,6 @@ To nelze vrátit zpět!</translation>
 <translation>Vítejte v QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>prostý textový soubor s poznámkou s vlastní integrací</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Předchozí</translation>
 </message>
@@ -7813,6 +7809,10 @@ To nelze vrátit zpět!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Prosím vyberte kam chcete ukládat vaše poznámky:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

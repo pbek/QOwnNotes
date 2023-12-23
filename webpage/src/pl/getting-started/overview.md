@@ -159,7 +159,7 @@ Dołącz do naszej [grupy telegramów](https://t.me/QOwnNotes), aby dyskutować,
 - **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
 - **External changes** of note files are **watched** (notes or note list are reloaded)
 - Support for **hierarchical note tagging** and **note subfolders**
-- Optional **encryption** of notes, AES-256 is built in, or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
+- Optional **encryption** of notes, AES-256 is built in, or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml))
 - The **notes folder** can be **freely chosen** (multiple note folders can be used)
 - **Searching parts of words** in notes is possible and search results are highlighted in the notes
 - [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**

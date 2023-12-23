@@ -2693,13 +2693,6 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 <numerusform>Nuk arriti të kopjojë %n shënimes (ka shumë të ngjarë tashmë ekzistuese)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Kopjimi i kopjimit të shënimit %n (pa shënjime ose skedar teksti ose nuk lexohet)</numerusform>
-<numerusform>Kopjimi i kopjuar i %n shënimeve (pa shënjime ose skedar teksti ose nuk lexohet)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Ruajtja e imazhit të përkohshëm</translation>
@@ -2802,6 +2795,17 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 <message>
 <source>Rename note</source>
 <translation>Riemërtoni shënimin</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3327,10 +3331,6 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 <translation>Titulli i shënimit</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3827,16 +3827,16 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7675,10 +7675,6 @@ Shënimi do të rikthehet në serverin tuaj të fshehtë me të gjitha versionet
 <translation>Mirësevini në QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>shënim shënimi i skedarit me tekst të thjeshtë duke marrë integrimin e vetCloud</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;prapa</translation>
 </message>
@@ -7725,6 +7721,10 @@ Shënimi do të rikthehet në serverin tuaj të fshehtë me të gjitha versionet
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Ju lutemi zgjidhni ku doni të ruani shënimet tuaja:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

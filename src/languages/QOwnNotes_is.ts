@@ -2695,13 +2695,6 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <numerusform>Ekki tókst að afrita %n athugasemdar (líklega þegar til)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Afrit af %n athugasemd sleppt (engin merking eða textaskrá eða ekki læsileg)</numerusform>
-<numerusform>Afrit af %n athugasemdum sleppt (engin merking eða textaskrá eða ekki læsileg)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Vistar tímabundna mynd</translation>
@@ -2809,6 +2802,17 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <message>
 <source>Rename note</source>
 <translation>Endurnefna athugasemd</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3335,10 +3339,6 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <translation>Athugið fyrirsögn</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3837,16 +3837,16 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7688,10 +7688,6 @@ Ekki er hægt að afturkalla þetta!</translation>
 <translation>Velkomið að QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>skýringartexta með látlausri skrá með ownCloud samþættingu</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Til baka</translation>
 </message>
@@ -7738,6 +7734,10 @@ Ekki er hægt að afturkalla þetta!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Veldu hvar þú vilt geyma glósurnar þínar:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

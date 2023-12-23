@@ -2669,12 +2669,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <numerusform>%n개의 노트를 복사하지 못했습니다 (이미 존재할 가능성이 높음)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>%n개의 노트 복사를 건너뛰기 (마크다운 또는 텍스트 파일이 없거나 읽을 수 없음)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>임시 이미지 저장 중</translation>
@@ -2777,6 +2771,16 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Rename note</source>
 <translation>노트 이름 바꾸기</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation>
+<numerusform>%n 노트 복사를 건너뛰었습니다 (마크다운 또는 텍스트 파일이 없거나 읽을 수 없음)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation>HTML을 마크다운으로 붙여넣기(&amp;H)</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3290,10 +3294,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>노트 표제</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>HTML을 마크다운으로 붙여넣기(&amp;H)</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>텍스트 파일 첨부로 붙여넣기(&amp;T)</translation>
 </message>
@@ -3785,16 +3785,16 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>어두운 모드가 감지됨</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Windows 시스템에서 어두운 모드를 사용하는 것 같습니다. QOWNNotes에서도 어두운 모드를 켜시겠습니까?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation>Windows 시스템이 어두운 모드인 것 같습니다. QOwnNotes에서도 어두운 모드를 켜시겠습니까?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation>Windows 시스템이 밝은 모드인 것 같습니다. QOwnNotes에서도 밝은 모드를 끄시겠습니까?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>밝은 모드가 감지됨</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Windows 시스템에서 밝은모드를 사용하는 것 같습니다. QOWNNotes에서도 어두운 모드를 해제하시겠습니까?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7614,10 +7614,6 @@ This cannot be undone!</source>
 <translation>QOWNNotes에 오신 것을 환영합니다</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>ownCloud 통합을 사용한 일반 텍스트 파일 마크다운 노트</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>뒤로(&amp;B)</translation>
 </message>
@@ -7664,6 +7660,10 @@ This cannot be undone!</source>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>노트를 저장할 위치를 선택하십시오:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation>ownCloud 통합을 통한 일반 텍스트 파일 마크다운 메모</translation>
 </message>
 <message>
 <source>Show subfolders</source>

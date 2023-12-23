@@ -2692,13 +2692,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Копирането на %n бележки не можа (най-вероятно вече съществува)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Пропуснато копиране на %n бележка (без маркиране или текстов файл или не четим)</numerusform>
-<numerusform>Пропуснато копиране на %n бележки (без маркиране или текстов файл или не четим)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Записване на временно изображение</translation>
@@ -2801,6 +2794,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Rename note</source>
 <translation>Преименуване на бележка</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3326,10 +3330,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Забележете заглавието</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>Поставете &amp;HTML като markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3827,16 +3827,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Открит е тъмен режим</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Вашата Windows система изглежда използва тъмния режим. Искате ли също да включите тъмния режим в QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>Открит е светъл режим</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Вашата Windows система изглежда използва светъл режим. Искате ли също да изключите тъмния режим в QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7680,10 +7680,6 @@ This cannot be undone!</source>
 <translation>Добре дошли в QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>забележка за маркиране на обикновен текст, като се включва с интегрирането на ownCloud</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;обратно</translation>
 </message>
@@ -7730,6 +7726,10 @@ This cannot be undone!</source>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Моля, изберете къде искате да съхранявате бележките си:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

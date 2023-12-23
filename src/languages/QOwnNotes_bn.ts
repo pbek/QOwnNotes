@@ -2689,13 +2689,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>%n নোট(গুলো) অনুলিপি করতে ব্যর্থ হয়েছে (সম্ভবত ইতিমধ্যেই)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>অনুলিপি %n নোট(গুলো) (কোন markdown বা টেক্সট ফাইল বা অপঠিত) এড়িয়ে চলেছে</numerusform>
-<numerusform>অনুলিপি %n নোট(গুলো) (কোন markdown বা টেক্সট ফাইল বা অপঠিত) এড়িয়ে চলেছে</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>অস্থায়ী চিত্র সংরক্ষণ</translation>
@@ -2798,6 +2791,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Rename note</source>
 <translation>নোট পুনরায় নামকরণ করুন</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3323,10 +3327,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>উল্লেখ্য শিরোনাম</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3821,16 +3821,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7675,10 +7675,6 @@ This cannot be undone!</source>
 <translation>QOwnNotes এ স্বাগতম</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>ownCloud ইন্টিগ্রেশন সঙ্গে প্লেইন-টেক্সট ফাইল markdown নোট নেওয়া</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;পেছনে</translation>
 </message>
@@ -7725,6 +7721,10 @@ This cannot be undone!</source>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>আপনি যেখানে আপনার নোটগুলি সংরক্ষণ করতে চান তা নির্বাচন করুন:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

@@ -2667,12 +2667,6 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
 <numerusform>Gagal menyalin nota %n (kemungkinan besar sudah ada)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Melangkau penyalinan nota %n (tiada markah atau fail teks atau tidak boleh dibaca)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Menyimpan imej sementara</translation>
@@ -2774,6 +2768,16 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
 <message>
 <source>Rename note</source>
 <translation>Namakan semula nota</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3288,10 +3292,6 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
 <translation>Nota tajuk</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3786,16 +3786,16 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7620,10 +7620,6 @@ Versi nota di pelayan ownCloud anda tidak akan dipulihkan dan nota akan kekal di
 <translation>Selamat datang ke QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>nota tanda fail fail teks biasa dengan integrasi ownCloud</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Kembali</translation>
 </message>
@@ -7670,6 +7666,10 @@ Versi nota di pelayan ownCloud anda tidak akan dipulihkan dan nota akan kekal di
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Sila pilih di mana anda mahu menyimpan nota anda:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

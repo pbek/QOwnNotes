@@ -2672,12 +2672,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>បានបរាជ័យក្នុងការចម្លងកំណត់ចំណាំ %n (ភាគច្រើនមានរួចហើយ)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>រំលងការចម្លងនៃកំណត់ចំណាំ %n (គ្មានការកត់ចំណាំឬឯកសារអត្ថបទឬមិនអាចអានបាន)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>រក្សាទុករូបភាពបណ្ដោះអាសន្ន</translation>
@@ -2780,6 +2774,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Rename note</source>
 <translation>ប្តូរឈ្មោះចំណាំ</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3294,10 +3298,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>ចំណងជើងចំណងជើង</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3793,16 +3793,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7632,10 +7632,6 @@ This cannot be undone!</source>
 <translation>សូមស្វាគមន៍មកកាន់ QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>កំណត់សំគាល់ការកត់សំគាល់ឯកសារអត្ថបទធម្មតាដោយប្រើសមាហរណកម្មផ្ទាល់ខ្លួន</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;ថយក្រោយ</translation>
 </message>
@@ -7682,6 +7678,10 @@ This cannot be undone!</source>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>សូមជ្រើសរើសកន្លែងដែលអ្នកចង់រក្សាទុកកំណត់ចំណាំរបស់អ្នក៖</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

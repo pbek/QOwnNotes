@@ -2705,14 +2705,6 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <numerusform>Neuspjelo kopiranje %n bilješki (vjerojatno već postoje)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Preskočeno kopiranje %n bilješke (nema oznaku ili je tekst datoteke nečitak)</numerusform>
-<numerusform>Izostavljeno kopiranje %n bilješki (nemaju oznaku ili su tekstovi datoteke nečitki)</numerusform>
-<numerusform>Izostavljeno kopiranje %n bilješki (nemaju oznaku ili su tekstovi datoteke nečitki)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Spremanje privremene slike</translation>
@@ -2815,6 +2807,18 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>Rename note</source>
 <translation>Preimenuj bilješku</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3353,10 +3357,6 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <translation>Naslov bilješke</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>Zalijepite HTML kao markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>Zalijepi kao privitak tekstualne datoteke</translation>
 </message>
@@ -3854,16 +3854,16 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <translation>Otkriven je tamni način rada</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Čini se da vaš Windows sustav koristi tamni način rada. Želite li također uključiti tamni način rada u QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>Otkriven je svjetlosni način rada</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Čini se da vaš Windows sustav koristi svjetlosni način rada. Želite li također isključiti tamni način rada u QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -6753,7 +6753,7 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7707,10 +7707,6 @@ This cannot be undone!</source>
 <translation>Dobrodošli u QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>plain-text file markdown note uz vlastitu integraciju</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Natrag</translation>
 </message>
@@ -7757,6 +7753,10 @@ This cannot be undone!</source>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Odaberite gdje želite pohraniti svoje bilješke:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

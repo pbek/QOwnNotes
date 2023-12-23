@@ -2689,13 +2689,6 @@ Uma udoti unikwe amandla kwiseva yakho ownCloud kufanele ukwazi ukubuyisela laph
 <numerusform>Yehlulekile ukukopisha amanothi angu-%n (okungenzeka ukuthi sele akhona)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Ukukopisha okweqiwe kwenothi le-%n (alikho uphawu noma ifayela lombhalo noma alifundeki)</numerusform>
-<numerusform>Ukopishe ukweqa kwamanothi we-%n (akukho ukumaka noma ifayela lombhalo noma akufundeki)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Igcina isithombe sesikhashana</translation>
@@ -2797,6 +2790,17 @@ Uma udoti unikwe amandla kwiseva yakho ownCloud kufanele ukwazi ukubuyisela laph
 <message>
 <source>Rename note</source>
 <translation>Qamba kabusha inothi</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3326,10 +3330,6 @@ Sicela ubheke ukucushwa kwakho kwe- &lt;strong&gt; Todo &lt;/strong&gt; kuzilung
 <translation>Qaphela inhloko</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3827,16 +3827,16 @@ Sicela ubheke ukucushwa kwakho kwe- &lt;strong&gt; Todo &lt;/strong&gt; kuzilung
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7685,10 +7685,6 @@ Ungahlala ubuyisela inothi nezinguqulo zalo ngokuhamba kwesikhathi. &lt;/p&gt;</
 <translation>Uyemukelwa kuma-QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>plain-text ifayela markdown inothi ukungenisa nge ownCloud ukuhlanganiswa</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Emuva</translation>
 </message>
@@ -7735,6 +7731,10 @@ Ungahlala ubuyisela inothi nezinguqulo zalo ngokuhamba kwesikhathi. &lt;/p&gt;</
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Sicela ukhethe lapho ufuna ukugcina amanothi akho:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

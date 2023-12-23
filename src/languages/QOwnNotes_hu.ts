@@ -2687,13 +2687,6 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <numerusform>Nem sikerült %n (valószínűleg már meglévő) jegyzetet másolni</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Kihagyott %n jegyzet másolását (nincs markdown vagy szöveges fájl vagy nem olvasható)</numerusform>
-<numerusform>Kihagyott %n jegyzet másolását (nincs markdown vagy szöveges fájl vagy nem olvasható)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Kép mentése</translation>
@@ -2795,6 +2788,17 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <message>
 <source>Rename note</source>
 <translation>Jegyzet átnevezése</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3320,10 +3324,6 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <translation>Jegyzet főcím</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>&amp;HTML beillesztése leértékelésként</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>Beillesztés &amp;szöveges fájl mellékletként</translation>
 </message>
@@ -3818,16 +3818,16 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <translation>Sötét mód észlelve</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Úgy tűnik, hogy a Windows rendszere sötét módot használ. A sötét módot is be szeretné kapcsolni a QOwnNotes szolgáltatásban?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>Fénymódot észlelt</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Úgy tűnik, hogy a Windows rendszere a világos módot használja. A QOwnNotes alkalmazásban is ki szeretné kapcsolni a sötét módot?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7652,10 +7652,6 @@ Nem lehet visszavonni!</translation>
 <translation>A QOwnNotes üdvözli!</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>egyszerű szöveges fájlmegjegyzési jegyzet, amely saját integrációval rendelkezik</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Vissza</translation>
 </message>
@@ -7702,6 +7698,10 @@ Nem lehet visszavonni!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Kérjük, válassza ki, hol szeretné tárolni a jegyzeteit:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

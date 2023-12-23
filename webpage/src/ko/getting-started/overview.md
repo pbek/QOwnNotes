@@ -157,7 +157,7 @@
 - **폐기된 노트**는 **Nextcloud / ownCloud** 서버에서 **복원**할 수 있습니다
 - 노트 파일의 **외부 변경 사항**이 **감시**됩니다 (노트 또는 노트 목록이 다시 로드됨)
 - **계층적 노트 태깅** 및 **노트 하위 폴더** 지원
-- AES-256은 노트 **암호화** 옵션으로 내장되어 있거나 **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) 또는 **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))과 같은 사용자 지정 암호화 방법을 사용할 수 있습니다
+- 노트의 옵션인 ** 암호화 **가 내장되어 있거나, **[Keybase.io ](https://keybase.io/)**([ encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) 또는 ** PGP**([ encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml))와 같은 사용자 지정 암호화 방법을 사용할 수 있습니다
 - **노트 폴더**는 **자유롭게 선택**할 수 있습니다 (여러 개의 노트 폴더를 사용할 수 있음)
 - 노트에서 **단어의 일부를 검색**할 수 있으며 검색 결과가 노트에서 강조 표시됩니다
 - **선택한 텍스트에서 노트 추가**, **스크린샷 만들기** 또는 **북마크를 관리**하는 [**브라우저 확장**](browser-extension.md)

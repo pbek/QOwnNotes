@@ -2692,13 +2692,6 @@ Ngaba ufuna ukuphelisa inqaku lakho?</translation>
 <numerusform>Ayiphumelelanga ukukopa %n inqakuii (uninzi lwazo sele lukhona)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Ukukhuphela ikopi ye-%n inqaku (akukho phawu luphawu okanye ifayile yombhalo okanye engafundekiyo)</numerusform>
-<numerusform>Ukukhuphela ikopi ye-%n amanqaku (akukho phawu luphawu okanye ifayile yombhalo okanye engafundekiyo)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Gcina umfanekiso okwethutyana</translation>
@@ -2800,6 +2793,17 @@ Ngaba ufuna ukuphelisa inqaku lakho?</translation>
 <message>
 <source>Rename note</source>
 <translation>Qamba kwakhona inqaku</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3327,10 +3331,6 @@ Nceda ujonge uqwalaselo lwakho lwe &lt;strong&gt; Todo &lt;/strong&gt; kuseto!</
 <translation>Inqaku lesihloko</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3825,16 +3825,16 @@ Nceda ujonge uqwalaselo lwakho lwe &lt;strong&gt; Todo &lt;/strong&gt; kuseto!</
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7681,10 +7681,6 @@ Unokuhlala uyibuyisela inqaku kunye neenguqulelo zalo kamva. &lt;/p&gt;</transla
 <translation>Wamkelekile kwi-QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>Inqaku lokucacisa ifayile engabonakaliyo ngokuthatha intsebenzo yakho ownCloud</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Buyela</translation>
 </message>
@@ -7731,6 +7727,10 @@ Unokuhlala uyibuyisela inqaku kunye neenguqulelo zalo kamva. &lt;/p&gt;</transla
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Nceda ukhethe apho ufuna ukugcina amanqaku akho:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

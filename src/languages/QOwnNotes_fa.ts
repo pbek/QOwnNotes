@@ -2690,13 +2690,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>رونوشت برداری از یادداشت (های) %n (به احتمال زیاد موجود) انجام نشد</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>انصراف از رونوشت برداری از %n یادداشت (بدون مارک داون یا پرونده متنی یا غیرقابل خواندن)</numerusform>
-<numerusform>انصراف از رونوشت برداری از یادداشت (های) %n (بدون مارک داون یا پرونده متنی یا غیرقابل خواندن)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>ذخیره کردن تصویر موقت</translation>
@@ -2799,6 +2792,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Rename note</source>
 <translation>تغییر نام یادداشت</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3324,10 +3328,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>سرخط یادداشت</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>چسباندن &amp;HTML به صورت مارک داون</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>چسباندن به صورت پیوست پرونده متنی&amp;</translation>
 </message>
@@ -3826,16 +3826,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>حالت تاریک تشخیص داده شد</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>به نظر می رسد سیستم ویندوز شما از حالت تاریک استفاده می کند. آیا به فعال کردن حالت تاریک در QOwnNotes نیز تمایل دارید؟</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>حالت روشن تشخیص داده شد</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>به نظر می رسد سیستم ویندوز شما از حالت روشن استفاده می کند. آیا به غیرفعال کردن حالت تاریک در QOwnNotes نیز تمایل دارید؟</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7830,10 +7830,6 @@ This cannot be undone!</source>
 <translation>به QOwnNotes خوش آمدید</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>ردیابی یادداشت مارک داون پرونده متن ساده به انضمام اون کلاود</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;برگشت به عقب</translation>
 </message>
@@ -7880,6 +7876,10 @@ This cannot be undone!</source>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>لطفاً مکانی را که می خواهید یادداشت های خود را در آن ذخیره کنید انتخاب کنید:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

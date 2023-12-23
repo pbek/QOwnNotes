@@ -159,7 +159,7 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 - **Gewiste notities** kunnen worden **hersteld** vanaf uw **Nextcloud / ownCloud** server
 - **Externe wijzigingen** van notitiebestanden worden **bewaakt** (notities of notitielijsten worden opnieuw geladen)
 - Ondersteuning voor **hiërarchische labeling van notities** en **notitie-submappen**
-- Optionele **encryptie** van notities. AES-256 is ingebouwd of u kunt aangepaste coderingsmethoden gebruiken zoals **[Keybase.io](https://keybase.io/) ** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-keybase.qml)) of **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/doc/scripting/encryption-pgp.qml))
+- Optionele **versleuteling** van notities. AES-256 is ingebouwd, of u kunt aangepaste coderingsmethoden gebruiken zoals **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) of **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml))
 - De **Notites-map** is **vrij te kiezen** (meerdere mappen met notities zijn ook mogelijk)
 - **Het zoeken naar delen van woorden** in notities is mogelijk en zoekresultaten worden gemarkeerd in de notities
 - [**Browser-extensie**](browser-extension.md) om **notities toe te voegen uit geselecteerde tekst**, **maak schermopnamen** of **beheer uw bladwijzers**

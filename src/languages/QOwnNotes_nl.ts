@@ -2639,7 +2639,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Markdown files</source>
-<translation>Markdown bestanden</translation>
+<translation>Markdown-bestanden</translation>
 </message>
 <message>
 <source>Export attached files</source>
@@ -2685,13 +2685,6 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>
 <numerusform>Kan notitie niet kopiëren (waarschijnlijk reeds bestaand)</numerusform>
 <numerusform>Kan notities niet kopiëren (waarschijnlijk reeds bestaand)</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Kopiëren van %n notitie overgeslagen (geen markdown of tekst bestand, of niet leesbaar)</numerusform>
-<numerusform>Kopiëren van %n notities overgeslagen (geen markdown of tekst bestand, of niet leesbaar)</numerusform>
 </translation>
 </message>
 <message>
@@ -2796,6 +2789,17 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <source>Rename note</source>
 <translation>Notitienaam wijzigen</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation>
+<numerusform>Kopiëren van %n notitie(s) overgeslagen (geen Markdown- of tekstbestand of niet leesbaar)</numerusform>
+<numerusform>Kopiëren van %n notities overgeslagen (geen Markdown- of tekstbestand of niet leesbaar)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation>&amp;HTML plakken als Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3321,10 +3325,6 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>Notitie kop</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation>&amp;HTML plakken als afwaardering</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>Plakken als &amp;tekstbestandsbijlage</translation>
 </message>
@@ -3358,7 +3358,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Export current note as Markdown file</source>
-<translation>Export huidige notitie als Markdown bestand</translation>
+<translation>Export huidige notitie als Markdown-bestand</translation>
 </message>
 </context>
 <context>
@@ -3821,16 +3821,16 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>Donkere modus gedetecteerd</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Uw Windows-systeem lijkt de donkere modus te gebruiken. Wil je ook de donkere modus inschakelen in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation>Uw Windows-systeem lijkt in donkere modus te zijn. Wilt u ook de donkere modus inschakelen in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation>Uw Windows-systeem lijkt in de lichte modus te staan. Wilt u ook de donkere modus uitschakelen in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation>Lichtmodus gedetecteerd</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Uw Windows-systeem lijkt de lichtmodus te gebruiken. Wil je de donkere modus ook uitschakelen in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -3976,7 +3976,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>No equation was found in front of the cursor</source>
-<translation>Er is geen vergelijking gevonden voor de cursorlokatie</translation>
+<translation>Er is geen vergelijking gevonden voor de cursorlocatie</translation>
 </message>
 <message>
 <source>Result for equation: %1 = %2</source>
@@ -4584,7 +4584,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Enable markdown highlighting</source>
-<translation>Markdown markeren inschakelen</translation>
+<translation>Markdown markering inschakelen</translation>
 </message>
 <message>
 <source>Interface language</source>
@@ -6054,7 +6054,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Enable automatic closing of brackets and markdown formatting characters</source>
-<translation>Inschakelen automatische sluiting van haken en markdown opmaaktekens</translation>
+<translation>Inschakelen automatische sluiting van haken en Markdown opmaaktekens</translation>
 </message>
 <message>
 <source>You have to use the backspace key to remove the opening character</source>
@@ -6265,7 +6265,7 @@ Verbinding foutbericht: </translation>
 </message>
 <message>
 <source>Markdown files</source>
-<translation>Markdown bestanden</translation>
+<translation>Markdown-bestanden</translation>
 </message>
 <message>
 <source>Disable usage tracking</source>
@@ -6329,7 +6329,7 @@ Verbinding foutbericht: </translation>
 </message>
 <message>
 <source>Markdown file</source>
-<translation>Markdown bestand</translation>
+<translation>Markdown-bestand</translation>
 </message>
 <message>
 <source>Plain text file</source>
@@ -7659,10 +7659,6 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 <translation>Welkom bij QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>notatie in platte tekst voor het noteren van notities met ownCloud-integratie</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Terug</translation>
 </message>
@@ -7709,6 +7705,10 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Selecteer waar je je notities wilt opslaan:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation>Notities met Markdown in standaard tekstbestand met ownCloud-integratie</translation>
 </message>
 <message>
 <source>Show subfolders</source>

@@ -2689,13 +2689,6 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 <numerusform>%n märkuse kopeerimine ebaõnnestus (tõenäoliselt juba olemas)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>%n märkme vahelejätmine kopeerimine (märgistust või tekstifaili pole või pole loetav)</numerusform>
-<numerusform>%n märkme vahelejätmine kopeerimine (märgistust või tekstifaili pole või pole loetav)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Ajutise pildi salvestamine</translation>
@@ -2802,6 +2795,17 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 <message>
 <source>Rename note</source>
 <translation>Pange noot ümber</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3328,10 +3332,6 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 <translation>Pange tähele pealkirja</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3828,16 +3828,16 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7678,10 +7678,6 @@ Seda ei saa olematuks teha!</translation>
 <translation>Tere tulemast teenusesse QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>lihtteksti failide märkimise märkuste tegemine koos ownCloudi integreerimisega</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Tagasi</translation>
 </message>
@@ -7728,6 +7724,10 @@ Seda ei saa olematuks teha!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Valige, kuhu soovite oma märkmeid salvestada:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

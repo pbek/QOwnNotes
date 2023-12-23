@@ -2695,13 +2695,6 @@ Agar axlat o'zingizning ownCloud serveringizda yoqilgan bo'lsa, ularni o'sha erd
 <numerusform>%n qaydlar ni nusxalashda xatolik yuz berdi (ehtimol allaqachon mavjud)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>%n qayd ni o'tkazib yuborish (hech qanday belgi yoki matnli fayl yo'q yoki o'qilmaydi)</numerusform>
-<numerusform>%n qaydlar ni o'tkazib yuborish (hech qanday belgi yoki matnli fayl yo'q yoki o'qilmaydi)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Vaqtinchalik rasm saqlanmoqda</translation>
@@ -2809,6 +2802,17 @@ Agar axlat o'zingizning ownCloud serveringizda yoqilgan bo'lsa, ularni o'sha erd
 <message>
 <source>Rename note</source>
 <translation>Qaydni qayta nomlash</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3335,10 +3339,6 @@ Agar axlat o'zingizning ownCloud serveringizda yoqilgan bo'lsa, ularni o'sha erd
 <translation>Eslatma sarlavhasi</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3841,16 +3841,16 @@ Agar axlat o'zingizning ownCloud serveringizda yoqilgan bo'lsa, ularni o'sha erd
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7694,10 +7694,6 @@ Buni bekor qilib bo‘lmaydi!</translation>
 <translation>QOwnNotes-ga xush kelibsiz</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>ownCloud integratsiyasi bilan tekis matnli fayl Markdown Ahamiyat bering olish</translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Orqaga</translation>
 </message>
@@ -7744,6 +7740,10 @@ Buni bekor qilib bo‘lmaydi!</translation>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>O'z qaydlaringizni qaerda saqlamoqchi ekaningizni tanlang:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

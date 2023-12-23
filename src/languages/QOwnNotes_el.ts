@@ -2693,13 +2693,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Αποτυχία αντιγραφής %n σημείωσης(-ειώσεων) (πιθανότατα υπάρχει ήδη)</numerusform>
 </translation>
 </message>
-<message numerus="yes">
-<source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-<translation>
-<numerusform>Παράλειψη αντιγραφής %n σημείωσης(-ειώσεων) (δεν υπάρχει αρχείο markdown ή αρχείο κειμένου ή δεν είναι αναγνώσιμη)</numerusform>
-<numerusform>Παράλειψη αντιγραφής %n σημείωσης(-ειώσεων) (δεν υπάρχει αρχείο markdown ή αρχείο κειμένου ή δεν αναγνώσιμη)</numerusform>
-</translation>
-</message>
 <message>
 <source>Saving temporary image</source>
 <translation>Αποθήκευση προσωρινής εικόνας</translation>
@@ -2802,6 +2795,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Rename note</source>
 <translation>Mετονομασία σημείωσης</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3328,10 +3332,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Τίτλος σημείωσης</translation>
 </message>
 <message>
-<source>Paste &amp;HTML as markdown</source>
-<translation type="unfinished">Paste &amp;HTML as markdown</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3828,16 +3828,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Dark mode detected</translation>
 </message>
 <message>
-<source>Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
+<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
-</message>
-<message>
-<source>Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -7676,10 +7676,6 @@ This cannot be undone!</source>
 <translation>Καλώς ήρθατε στο QOwnNotes</translation>
 </message>
 <message>
-<source>plain-text file markdown note taking with ownCloud integration</source>
-<translation>λήψη σημειώσεων σε αρχεία απλού κειμένου διαμόρφωσης markdown με ενσωματωμένη λειτουργικότητα ownCloud </translation>
-</message>
-<message>
 <source>&amp;Back</source>
 <translation>&amp;Πίσω</translation>
 </message>
@@ -7726,6 +7722,10 @@ This cannot be undone!</source>
 <message>
 <source>Please select where you want to store your notes:</source>
 <translation>Παρακαλούμε επιλέξτε το μέρος όπου θέλετε να αποθηκεύσετε τις σημειώσεις σας:</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>
