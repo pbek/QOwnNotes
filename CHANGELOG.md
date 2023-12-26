@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## Next
+- there now is a software repository for **Fedora 39**
+  - please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html)
+    for instructions
+
+
 ## 23.12.4
 - the collapse-state for the note tree in the experimental note tree mode is now stored
   (for [#790](https://github.com/pbek/QOwnNotes/issues/790), thank you, @discapes)
