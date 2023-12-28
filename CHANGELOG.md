@@ -1,10 +1,11 @@
 # QOwnNotes Changelog
 
-## Next
+## 23.12.5
+- note bookmarks will now be persisted and restored when the application starts
+  (for [#2933](https://github.com/pbek/QOwnNotes/issues/2933))
 - there now is a software repository for **Fedora 39**
   - please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html)
     for instructions
-
 
 ## 23.12.4
 - the collapse-state for the note tree in the experimental note tree mode is now stored

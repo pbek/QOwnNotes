@@ -2443,6 +2443,8 @@ void MainWindow::readSettings() {
     if (!startAutoReadOnlyModeIfEnabled()) {
         _autoReadOnlyModeTimer->stop();
     }
+
+    loadNoteBookmarks();
 }
 
 bool MainWindow::startAutoReadOnlyModeIfEnabled() {
@@ -6785,8 +6787,23 @@ void MainWindow::storeNoteBookmark(int slot) {
     NoteHistoryItem item = NoteHistoryItem(&currentNote, ui->noteTextEdit);
     noteBookmarks[slot] = item;
 
+    QSettings().setValue(QStringLiteral("NoteBookmark%1").arg(slot),
+                         QVariant::fromValue(item));
+
     showStatusBarMessage(tr("Bookmarked note position at slot %1").arg(QString::number(slot)),
                          3000);
+}
+
+void MainWindow::loadNoteBookmarks() {
+    QSettings settings;
+
+    for (int i = 0; i <= 9; i++) {
+        QVariant bookmark = settings.value(QStringLiteral("NoteBookmark%1").arg(i));
+
+        if (bookmark.isValid()) {
+            noteBookmarks[i] = bookmark.value<NoteHistoryItem>();
+        }
+    }
 }
 
 /**

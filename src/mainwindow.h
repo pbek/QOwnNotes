@@ -172,6 +172,8 @@ class MainWindow : public QMainWindow {
 
     void linkTagNameToCurrentNote(const QString &tagName, bool linkToSelectedNotes = false);
 
+    void loadNoteBookmarks();
+
     Q_INVOKABLE void reloadTagTree();
 
     Q_INVOKABLE void reloadNoteSubFolderTree();
