@@ -18,7 +18,8 @@
 let
   pname = "qownnotes";
   appname = "QOwnNotes";
-  version = builtins.head (builtins.match "#define VERSION \"([0-9.]+)\"" (builtins.readFile ./src/version.h));
+#  version = builtins.head (builtins.match "#define VERSION \"([0-9.]+)\"" (builtins.readFile ./src/version.h));
+  version = "local-build";
 in
 stdenv.mkDerivation {
   inherit pname appname version;
