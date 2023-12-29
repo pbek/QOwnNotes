@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.1.0
+- the script update check at startup now runs in a separate thread to not block
+  the application startup (for [#2934](https://github.com/pbek/QOwnNotes/issues/2934))
+
 ## 23.12.5
 - note bookmarks will now be persisted and restored when the application starts
   (for [#2933](https://github.com/pbek/QOwnNotes/issues/2933))

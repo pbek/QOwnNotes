@@ -23,8 +23,11 @@ class ScriptRepositoryDialog : public MasterDialog {
     Script getLastInstalledScript();
 
     void searchForUpdates();
+    void searchForUpdatesForScripts(const QList<Script>& scripts);
+
    signals:
     void updateFound();
+    void noUpdateFound();
 
    private slots:
     void on_scriptTreeWidget_currentItemChanged(QTreeWidgetItem *current,

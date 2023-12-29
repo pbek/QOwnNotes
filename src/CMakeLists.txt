@@ -85,6 +85,7 @@ find_package(Qt5 COMPONENTS REQUIRED
     PrintSupport
     WebSockets
     Qml
+    Concurrent
 )
 if(UNIX)
     find_package(Qt5 COMPONENTS REQUIRED X11Extras)
@@ -563,6 +564,7 @@ target_link_libraries(QOwnNotes PRIVATE
     Qt5::PrintSupport
     Qt5::WebSockets
     Qt5::Qml
+    Qt5::Concurrent
     QHotkey::QHotkey
     Botan::Botan
     fakevim

@@ -48,6 +48,7 @@
 #include <widgets/notetreewidgetitem.h>
 
 #include <QAbstractEventDispatcher>
+#include <QtConcurrent>
 #include <QActionGroup>
 #include <QClipboard>
 #include <QColorDialog>
@@ -10953,9 +10954,15 @@ void MainWindow::automaticScriptUpdateCheck() {
     _scriptUpdateFound = false;
     auto *dialog = new ScriptRepositoryDialog(this, true);
 
-    // show a dialog once if a script update was found
+    // Show a message once if no script update were found
+    // We need to do that in a slot, because you can't use a timer in a separate thread
+    QObject::connect(dialog, &ScriptRepositoryDialog::noUpdateFound, this, [this]() {
+        showStatusBarMessage(tr("No script updates were found"), 3000);
+    });
+
+    // Show a dialog once if a script update was found
     QObject::connect(dialog, &ScriptRepositoryDialog::updateFound, this, [this]() {
-        // we only want to run this once
+        // We only want to run this once
         if (_scriptUpdateFound) {
             return;
         }
@@ -10963,7 +10970,7 @@ void MainWindow::automaticScriptUpdateCheck() {
         _scriptUpdateFound = true;
         showStatusBarMessage(tr("A script update was found!"), 4000);
 
-        // open the update question dialog in another thread so the dialog
+        // Open the update question dialog in another thread so the dialog
         // can be deleted meanwhile
         QTimer::singleShot(100, this, [this]() {
             if (Utils::Gui::question(this, tr("Script updates"),
@@ -10975,19 +10982,20 @@ void MainWindow::automaticScriptUpdateCheck() {
         });
     });
 
-    // Search for script updates after the "updateFound" signal was connected
-    // We need to do that in a separate step now, because the update check was so fast
-    // that the signal was not connected yet
-    dialog->searchForUpdates();
+    // Sqlite isn't available in a separate thread, so we need to fetch the scripts before that
+    auto scripts = Script::fetchAll();
 
-    // delete the dialog after 10 sec
-    QTimer::singleShot(10000, this, [this, dialog]() {
+    // Search for script updates in the background after the "updateFound" signal was connected
+    QFuture<void> future = QtConcurrent::run([this, dialog, scripts]() {
+        qDebug() << "start searchForUpdates";
+        dialog->searchForUpdatesForScripts(scripts);
+        qDebug() << "done searchForUpdates";
+
+        // Delete the dialog afterward
         delete (dialog);
 
         if (_scriptUpdateFound) {
             _scriptUpdateFound = false;
-        } else {
-            showStatusBarMessage(tr("No script updates were found"), 3000);
         }
     });
 #endif

@@ -129,10 +129,7 @@ void ScriptRepositoryDialog::addScriptTreeWidgetItem(const ScriptInfoJson &scrip
     ui->scriptTreeWidget->resizeColumnToContents(0);
 }
 
-/**
- * Searches for script updates
- */
-void ScriptRepositoryDialog::searchForUpdates() {
+void ScriptRepositoryDialog::searchForUpdatesForScripts(const QList<Script>& scripts) {
     ui->searchScriptEdit->hide();
     setWindowTitle(tr("Script updates"));
     ui->overviewLabel->setText(tr("All scripts are up-to-date."));
@@ -141,11 +138,15 @@ void ScriptRepositoryDialog::searchForUpdates() {
     ui->scriptTreeWidget->clear();
     enableOverview(true);
     loadScriptRepositoryMetaData();
+    bool scriptUpdateFound = false;
 
-    Q_FOREACH (Script script, Script::fetchAll()) {
+    Q_FOREACH (Script script, scripts) {
         if (!script.isScriptFromRepository()) {
             continue;
         }
+
+        // May not show up in the log dialog when run in another thread
+        qDebug() << "Checking for script update: " << script.remoteScriptUrl();
 
         auto infoJson = _scriptMetaDataCache.value(script.getIdentifier());
         VersionNumber remoteVersion = VersionNumber(infoJson.version);
@@ -157,10 +158,22 @@ void ScriptRepositoryDialog::searchForUpdates() {
             continue;
         }
 
+        scriptUpdateFound = true;
         emit updateFound();
         addScriptTreeWidgetItem(scriptInfoJson);
         ui->selectFrame->show();
     }
+
+    if (!scriptUpdateFound) {
+        emit noUpdateFound();
+    }
+}
+
+/**
+ * Searches for script updates
+ */
+void ScriptRepositoryDialog::searchForUpdates() {
+    searchForUpdatesForScripts(Script::fetchAll());
 }
 
 void ScriptRepositoryDialog::parseScriptRepositoryMetaData(const QByteArray &arr) {
