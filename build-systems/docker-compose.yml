@@ -18,3 +18,9 @@ services:
       - ../secrets/hosts.yml:/home/release/.config/gh/hosts.yml
 #      - ../secrets/id_rsa:/home/release/.ssh/id_rsa:ro
 #      - ../secrets/id_rsa.pub:/home/release/.ssh/id_rsa.pub:ro
+    # fakeroot became terribly slow
+    # this helped: https://github.com/moby/moby/issues/45436#issuecomment-1528445371
+    ulimits:
+      nofile:
+        soft: 1024
+        hard: 1048576
