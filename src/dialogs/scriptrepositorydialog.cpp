@@ -74,6 +74,7 @@ bool ScriptRepositoryDialog::loadScriptRepositoryMetaData() {
         QUrl("https://github.com/qownnotes/scripts/releases/download/metadata-index/index.json");
 
     int statusCode;
+    // This should have a 10-second timeout
     auto arr = Utils::Misc::downloadUrlWithStatusCode(url, statusCode);
 
     if (statusCode != 200) {
@@ -158,8 +159,11 @@ void ScriptRepositoryDialog::searchForUpdatesForScripts(const QList<Script>& scr
             continue;
         }
 
+        if (!scriptUpdateFound) {
+            emit updateFound();
+        }
+
         scriptUpdateFound = true;
-        emit updateFound();
         addScriptTreeWidgetItem(scriptInfoJson);
         ui->selectFrame->show();
     }

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.1.1
+- a crash on certain systems at startup after the script update check was fixed
+  (for [#2937](https://github.com/pbek/QOwnNotes/issues/2937))
+
 ## 24.1.0
 - the script update check at startup now runs in a separate thread to not block
   the application startup (for [#2934](https://github.com/pbek/QOwnNotes/issues/2934))

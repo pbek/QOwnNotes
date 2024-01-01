@@ -10951,17 +10951,26 @@ void MainWindow::on_actionCheck_for_script_updates_triggered() {
  */
 void MainWindow::automaticScriptUpdateCheck() {
 #if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
+    // Sqlite isn't available in a separate thread, so we need to fetch the scripts before that
+    auto scripts = Script::fetchAll();
+
+    // We don't need to check for updates if there are no scripts
+    if (scripts.isEmpty()) {
+        return;
+    }
+
     _scriptUpdateFound = false;
     auto *dialog = new ScriptRepositoryDialog(this, true);
 
     // Show a message once if no script update were found
     // We need to do that in a slot, because you can't use a timer in a separate thread
-    QObject::connect(dialog, &ScriptRepositoryDialog::noUpdateFound, this, [this]() {
+    QObject::connect(dialog, &ScriptRepositoryDialog::noUpdateFound, this, [this, dialog]() {
         showStatusBarMessage(tr("No script updates were found"), 3000);
+        delete(dialog);
     });
 
     // Show a dialog once if a script update was found
-    QObject::connect(dialog, &ScriptRepositoryDialog::updateFound, this, [this]() {
+    QObject::connect(dialog, &ScriptRepositoryDialog::updateFound, this, [this, dialog]() {
         // We only want to run this once
         if (_scriptUpdateFound) {
             return;
@@ -10969,30 +10978,23 @@ void MainWindow::automaticScriptUpdateCheck() {
 
         _scriptUpdateFound = true;
         showStatusBarMessage(tr("A script update was found!"), 4000);
+        delete(dialog);
 
-        // Open the update question dialog in another thread so the dialog
-        // can be deleted meanwhile
-        QTimer::singleShot(100, this, [this]() {
-            if (Utils::Gui::question(this, tr("Script updates"),
-                                     tr("Updates to your scripts were found in the script "
-                                        "repository! Do you want to update them?"),
-                                     "auto-script-update") == QMessageBox::Yes) {
-                on_actionCheck_for_script_updates_triggered();
-            }
-        });
+        if (Utils::Gui::question(this, tr("Script updates"),
+                                 tr("Updates to your scripts were found in the script "
+                                    "repository! Do you want to update them?"),
+                                 "auto-script-update") == QMessageBox::Yes) {
+            on_actionCheck_for_script_updates_triggered();
+        }
     });
 
-    // Sqlite isn't available in a separate thread, so we need to fetch the scripts before that
-    auto scripts = Script::fetchAll();
-
     // Search for script updates in the background after the "updateFound" signal was connected
+    // We must not do a `delete (dialog)` in the new thread, that was causing a crash on some systems
+    // See https://github.com/pbek/QOwnNotes/issues/2937
     QFuture<void> future = QtConcurrent::run([this, dialog, scripts]() {
         qDebug() << "start searchForUpdates";
         dialog->searchForUpdatesForScripts(scripts);
         qDebug() << "done searchForUpdates";
-
-        // Delete the dialog afterward
-        delete (dialog);
 
         if (_scriptUpdateFound) {
             _scriptUpdateFound = false;
@@ -11061,6 +11063,7 @@ void MainWindow::on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int 
     Q_UNUSED(item)
     Q_UNUSED(column)
 
+    // call a script hook that a new note was double-clicked
     const bool hookFound =
         ScriptingService::instance()->callHandleNoteDoubleClickedHook(&currentNote);
 
