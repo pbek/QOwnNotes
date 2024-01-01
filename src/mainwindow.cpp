@@ -11061,7 +11061,6 @@ void MainWindow::on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int 
     Q_UNUSED(item)
     Q_UNUSED(column)
 
-    // call a script hook that a new note was double clicked
     const bool hookFound =
         ScriptingService::instance()->callHandleNoteDoubleClickedHook(&currentNote);
 
