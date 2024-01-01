@@ -12,15 +12,16 @@
  */
 
 #include "passwordlineedit.h"
+
 #include <QAction>
 
 PasswordLineEdit::PasswordLineEdit(QWidget *parent) : QLineEdit(parent) {
     setEchoMode(QLineEdit::Password);
 
-    static const auto visibleIcon = QIcon::fromTheme(QStringLiteral("view-visible"),
-                                                     QIcon(":/icons/breeze-qownnotes/16x16/view-visible.svg"));
-    static const auto hiddenIcon = QIcon::fromTheme(QStringLiteral("view-hidden"),
-                                                     QIcon(":/icons/breeze-qownnotes/16x16/view-hidden.svg"));
+    static const auto visibleIcon = QIcon::fromTheme(
+        QStringLiteral("view-visible"), QIcon(":/icons/breeze-qownnotes/16x16/view-visible.svg"));
+    static const auto hiddenIcon = QIcon::fromTheme(
+        QStringLiteral("view-hidden"), QIcon(":/icons/breeze-qownnotes/16x16/view-hidden.svg"));
     static const auto visibleText = tr("Show password");
     static const auto hiddenText = tr("Hide password");
 

@@ -661,7 +661,9 @@ void TodoDialog::on_newItemEdit_textChanged() {
         }
     } else {
         // show all items otherwise
-        Q_FOREACH (QTreeWidgetItem *item, allItems) { item->setHidden(false); }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) {
+            item->setHidden(false);
+        }
     }
 
     // let's highlight the text from the search line edit

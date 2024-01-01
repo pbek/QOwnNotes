@@ -1375,7 +1375,9 @@ void SettingsDialog::loadInterfaceStyleComboBox() const {
     ui->interfaceStyleComboBox->clear();
     ui->interfaceStyleComboBox->addItem(tr("Automatic (needs restart)"));
 
-    Q_FOREACH (QString style, QStyleFactory::keys()) { ui->interfaceStyleComboBox->addItem(style); }
+    Q_FOREACH (QString style, QStyleFactory::keys()) {
+        ui->interfaceStyleComboBox->addItem(style);
+    }
 
     QSettings settings;
     QString interfaceStyle = settings.value(QStringLiteral("interfaceStyle")).toString();
@@ -2960,7 +2962,9 @@ void SettingsDialog::reloadCurrentScriptPage() {
             // scriptSettingsFrame
             QList<ScriptSettingWidget *> widgets =
                 ui->scriptSettingsFrame->findChildren<ScriptSettingWidget *>();
-            Q_FOREACH (ScriptSettingWidget *widget, widgets) { delete widget; }
+            Q_FOREACH (ScriptSettingWidget *widget, widgets) {
+                delete widget;
+            }
 
             foreach (QVariant variable, variables) {
                 QMap<QString, QVariant> varMap = variable.toMap();
@@ -3247,7 +3251,9 @@ void SettingsDialog::on_shortcutSearchLineEdit_textChanged(const QString &arg1) 
         }
     } else {
         // show all items otherwise
-        Q_FOREACH (QTreeWidgetItem *item, allItems) { item->setHidden(false); }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) {
+            item->setHidden(false);
+        }
     }
 }
 
@@ -3576,7 +3582,9 @@ void SettingsDialog::on_searchLineEdit_textChanged(const QString &arg1) {
         }
     } else {
         // show all items otherwise
-        Q_FOREACH (QTreeWidgetItem *item, allItems) { item->setHidden(false); }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) {
+            item->setHidden(false);
+        }
     }
 }
 
@@ -3835,7 +3843,9 @@ void SettingsDialog::on_exportSettingsButton_clicked() {
             QSettings settings;
 
             const QStringList keys = settings.allKeys();
-            Q_FOREACH (QString key, keys) { exportSettings.setValue(key, settings.value(key)); }
+            Q_FOREACH (QString key, keys) {
+                exportSettings.setValue(key, settings.value(key));
+            }
         }
     }
 }

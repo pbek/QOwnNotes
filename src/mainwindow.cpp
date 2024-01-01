@@ -48,7 +48,6 @@
 #include <widgets/notetreewidgetitem.h>
 
 #include <QAbstractEventDispatcher>
-#include <QtConcurrent>
 #include <QActionGroup>
 #include <QClipboard>
 #include <QColorDialog>
@@ -91,6 +90,7 @@
 #include <QTreeWidgetItem>
 #include <QUuid>
 #include <QWidgetAction>
+#include <QtConcurrent>
 #include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
 #include <memory>
 #include <utility>
@@ -508,8 +508,10 @@ void MainWindow::initTreeWidgets() {
     connect(ui->noteSubFolderTreeWidget, &NoteSubFolderTree::currentSubFolderChanged, this,
             &MainWindow::onCurrentSubFolderChanged);
     if (NoteFolder::isCurrentNoteTreeEnabled()) {
-        connect(ui->noteTreeWidget, &QTreeWidget::itemExpanded, ui->noteSubFolderTreeWidget, &NoteSubFolderTree::onItemExpanded);
-        connect(ui->noteTreeWidget, &QTreeWidget::itemCollapsed, ui->noteSubFolderTreeWidget, &NoteSubFolderTree::onItemExpanded);
+        connect(ui->noteTreeWidget, &QTreeWidget::itemExpanded, ui->noteSubFolderTreeWidget,
+                &NoteSubFolderTree::onItemExpanded);
+        connect(ui->noteTreeWidget, &QTreeWidget::itemCollapsed, ui->noteSubFolderTreeWidget,
+                &NoteSubFolderTree::onItemExpanded);
     }
 }
 
@@ -640,7 +642,9 @@ void MainWindow::triggerStartupMenuAction() {
  */
 void MainWindow::initGlobalKeyboardShortcuts() {
     // deleting old global shortcut assignments
-    foreach (QHotkey *hotKey, _globalShortcuts) { delete hotKey; }
+    foreach (QHotkey *hotKey, _globalShortcuts) {
+        delete hotKey;
+    }
 
     _globalShortcuts.clear();
     QSettings settings;
@@ -6788,8 +6792,7 @@ void MainWindow::storeNoteBookmark(int slot) {
     NoteHistoryItem item = NoteHistoryItem(&currentNote, ui->noteTextEdit);
     noteBookmarks[slot] = item;
 
-    QSettings().setValue(QStringLiteral("NoteBookmark%1").arg(slot),
-                         QVariant::fromValue(item));
+    QSettings().setValue(QStringLiteral("NoteBookmark%1").arg(slot), QVariant::fromValue(item));
 
     showStatusBarMessage(tr("Bookmarked note position at slot %1").arg(QString::number(slot)),
                          3000);
@@ -10966,7 +10969,7 @@ void MainWindow::automaticScriptUpdateCheck() {
     // We need to do that in a slot, because you can't use a timer in a separate thread
     QObject::connect(dialog, &ScriptRepositoryDialog::noUpdateFound, this, [this, dialog]() {
         showStatusBarMessage(tr("No script updates were found"), 3000);
-        delete(dialog);
+        delete (dialog);
     });
 
     // Show a dialog once if a script update was found
@@ -10978,7 +10981,7 @@ void MainWindow::automaticScriptUpdateCheck() {
 
         _scriptUpdateFound = true;
         showStatusBarMessage(tr("A script update was found!"), 4000);
-        delete(dialog);
+        delete (dialog);
 
         if (Utils::Gui::question(this, tr("Script updates"),
                                  tr("Updates to your scripts were found in the script "
@@ -10989,8 +10992,8 @@ void MainWindow::automaticScriptUpdateCheck() {
     });
 
     // Search for script updates in the background after the "updateFound" signal was connected
-    // We must not do a `delete (dialog)` in the new thread, that was causing a crash on some systems
-    // See https://github.com/pbek/QOwnNotes/issues/2937
+    // We must not do a `delete (dialog)` in the new thread, that was causing a crash on some
+    // systems, see https://github.com/pbek/QOwnNotes/issues/2937
     QFuture<void> future = QtConcurrent::run([this, dialog, scripts]() {
         qDebug() << "start searchForUpdates";
         dialog->searchForUpdatesForScripts(scripts);

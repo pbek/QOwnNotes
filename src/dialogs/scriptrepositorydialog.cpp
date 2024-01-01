@@ -130,7 +130,7 @@ void ScriptRepositoryDialog::addScriptTreeWidgetItem(const ScriptInfoJson &scrip
     ui->scriptTreeWidget->resizeColumnToContents(0);
 }
 
-void ScriptRepositoryDialog::searchForUpdatesForScripts(const QList<Script>& scripts) {
+void ScriptRepositoryDialog::searchForUpdatesForScripts(const QList<Script> &scripts) {
     ui->searchScriptEdit->hide();
     setWindowTitle(tr("Script updates"));
     ui->overviewLabel->setText(tr("All scripts are up-to-date."));
@@ -176,9 +176,7 @@ void ScriptRepositoryDialog::searchForUpdatesForScripts(const QList<Script>& scr
 /**
  * Searches for script updates
  */
-void ScriptRepositoryDialog::searchForUpdates() {
-    searchForUpdatesForScripts(Script::fetchAll());
-}
+void ScriptRepositoryDialog::searchForUpdates() { searchForUpdatesForScripts(Script::fetchAll()); }
 
 void ScriptRepositoryDialog::parseScriptRepositoryMetaData(const QByteArray &arr) {
     QJsonDocument doc = QJsonDocument::fromJson(arr);

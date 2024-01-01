@@ -23,7 +23,7 @@ class ScriptRepositoryDialog : public MasterDialog {
     Script getLastInstalledScript();
 
     void searchForUpdates();
-    void searchForUpdatesForScripts(const QList<Script>& scripts);
+    void searchForUpdatesForScripts(const QList<Script> &scripts);
 
    signals:
     void updateFound();

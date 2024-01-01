@@ -12,8 +12,7 @@
 
 ToolbarContainer::ToolbarContainer(QToolBar *toolbar)
     : name(toolbar->objectName()), title(toolbar->windowTitle()) {
-    foreach (QAction *a, toolbar->actions())
-        actions.push_back(a->objectName());
+    foreach (QAction *a, toolbar->actions()) actions.push_back(a->objectName());
 }
 
 QToolBar *ToolbarContainer::create(QMainWindow *w) const {

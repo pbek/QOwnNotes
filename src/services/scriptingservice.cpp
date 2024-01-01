@@ -1950,7 +1950,9 @@ QList<int> ScriptingService::selectedNotesIds() const {
     MainWindow *mainWindow = MainWindow::instance();
 
     if (mainWindow != nullptr) {
-        Q_FOREACH (Note note, mainWindow->selectedNotes()) { selectedNotesIds << note.getId(); }
+        Q_FOREACH (Note note, mainWindow->selectedNotes()) {
+            selectedNotesIds << note.getId();
+        }
     }
 #endif
 

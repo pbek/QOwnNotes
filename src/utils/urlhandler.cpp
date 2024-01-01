@@ -114,9 +114,10 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
         if (!fragment.isEmpty()) {
             // Search with a regular expression for the fragment to make sure
             // we are searching for the full heading
-            auto searchTerm = QStringLiteral("## ") + QRegularExpression::escape(fragment) +
-                              QStringLiteral("$");
-            mw->activeNoteTextEdit()->doSearch(searchTerm, QPlainTextEditSearchWidget::RegularExpressionMode);
+            auto searchTerm =
+                QStringLiteral("## ") + QRegularExpression::escape(fragment) + QStringLiteral("$");
+            mw->activeNoteTextEdit()->doSearch(searchTerm,
+                                               QPlainTextEditSearchWidget::RegularExpressionMode);
             mw->activeNoteTextEdit()->searchWidget()->deactivate();
         }
     } else {
