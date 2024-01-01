@@ -77,6 +77,10 @@ QOWNNOTES_ARCHIVE_SHA256=`sha256sum ${archiveFile} | awk '{ print $1 }' | tee ${
 QOWNNOTES_ARCHIVE_SHA512=`sha512sum ${archiveFile} | awk '{ print $1 }' | tee ${archiveFile}.sha512`
 QOWNNOTES_ARCHIVE_SIZE=`stat -c "%s" ${archiveFile}`
 
+# also create checksum files that are compatible with sha256sum and sha512sum
+sha256sum ${archiveFile} > ${archiveFile}.sha256sum
+sha512sum ${archiveFile} > ${archiveFile}.sha512sum
+
 echo ""
 echo "Sums:"
 echo $QOWNNOTES_ARCHIVE_MD5

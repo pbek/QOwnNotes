@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 24.1.2
+- in new releases the sourcecode `tar.xz` file will now also have a `.sha256sum`
+  and a `.sha512sum` file, that is compatible with `sha256sum` and `sha512sum`   
+  (for [#2938](https://github.com/pbek/QOwnNotes/issues/2938))
+
 ## 24.1.1
 - a crash on certain systems at startup after the script update check was fixed
   (for [#2937](https://github.com/pbek/QOwnNotes/issues/2937))
