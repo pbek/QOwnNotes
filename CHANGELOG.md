@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 24.1.2
-- in new releases the sourcecode `tar.xz` file will now also have a `.sha256sum`
+- in new releases, the source code `tar.xz` file will now also have a `.sha256sum`
   and a `.sha512sum` file, that is compatible with `sha256sum` and `sha512sum`   
   (for [#2938](https://github.com/pbek/QOwnNotes/issues/2938))
 
