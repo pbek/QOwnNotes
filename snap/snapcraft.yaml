@@ -1,6 +1,5 @@
 name: qownnotes
 version: git
-version-script: cat src/version.h | sed "s/[^0-9,.]//g"
 summary: Plain-text file markdown note taking with Nextcloud/ownCloud integration
 grade: stable
 confinement: strict
@@ -76,6 +75,7 @@ parts:
       lrelease QOwnNotes.pro
       # make -j $(nproc)
       # make install
+      snapcraftctl set-version "$(cat version.h | sed 's/[^0-9,.]//g')"
       cd ..
       snapcraftctl build
     build-packages:
