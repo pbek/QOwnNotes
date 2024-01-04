@@ -59,13 +59,11 @@ parts:
     # see https://snapcraft.io/docs/qmake-plugin
     plugin: qmake
     qmake-parameters:
+      - ./src
       - CONFIG+=release
       - CONFIG+=snapcraft
     override-build: |
-      find /build/qownnotes/parts/qownnotes/src/
-      git clone https://github.com/pbek/QOwnNotes.git --recurse-submodules --depth=1
-      mv QOwnNotes/src /build/qownnotes/parts/qownnotes/src
-      cd /build/qownnotes/parts/qownnotes/src
+      cd /build/qownnotes/parts/qownnotes/src/src
       export QT_SELECT=qt5
       >&2 pwd
       >&2 find
@@ -77,6 +75,7 @@ parts:
       # make -j $(nproc)
       # make install
       snapcraftctl set-version "$(cat version.h | sed 's/[^0-9,.]//g')"
+      cd ..
       snapcraftctl build
     build-packages:
       - qttools5-dev
