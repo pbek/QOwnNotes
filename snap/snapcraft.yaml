@@ -63,7 +63,8 @@ parts:
       - CONFIG+=snapcraft
     override-build: |
       git clone https://github.com/pbek/QOwnNotes.git --recurse-submodules --depth=1
-      cd QOwnNotes/src
+      mv QOwnNotes/src /build/qownnotes/parts/qownnotes/src
+      cd /build/qownnotes/parts/qownnotes/src
       export QT_SELECT=qt5
       >&2 pwd
       >&2 find
