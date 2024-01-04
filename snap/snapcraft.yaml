@@ -13,7 +13,7 @@ description: |
 
 apps:
   qownnotes:
-    command: desktop-launch $SNAP/usr/bin/QOwnNotes -style=Breeze --snap
+    command: "desktop-launch $SNAP/usr/bin/QOwnNotes -style=Breeze --snap"
     environment:
         DISABLE_WAYLAND: 1
         QT_QPA_PLATFORMTHEME: gtk3
