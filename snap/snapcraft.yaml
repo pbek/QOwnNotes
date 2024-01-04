@@ -63,10 +63,11 @@ parts:
       - CONFIG+=release
       - CONFIG+=snapcraft
     override-build: |
+      git clone https://github.com/pbek/QOwnNotes.git --recurse-submodules --depth=1
+      cd QOwnNotes/src
       export QT_SELECT=qt5
       >&2 pwd
       >&2 find
-      cd src
       # remove the default desktop file
       rm PBE.QOwnNotes.desktop
       echo "#define RELEASE \"Snapcraft.io\"" > release.h
