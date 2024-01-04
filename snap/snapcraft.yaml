@@ -59,7 +59,7 @@ parts:
     # see https://snapcraft.io/docs/qmake-plugin
     plugin: qmake
     qmake-parameters:
-      - ./src
+      - ./src/QOwnNotes.pro
       - CONFIG+=release
       - CONFIG+=snapcraft
     override-build: |
