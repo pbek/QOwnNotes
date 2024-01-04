@@ -59,9 +59,9 @@ parts:
     # see https://snapcraft.io/docs/qmake-plugin
     plugin: qmake
     qmake-parameters:
-      - ./src/QOwnNotes.pro
       - CONFIG+=release
       - CONFIG+=snapcraft
+    qmake-project-file: ./src/QOwnNotes.pro
     override-build: |
       cd /build/qownnotes/parts/qownnotes/src/src
       export QT_SELECT=qt5
