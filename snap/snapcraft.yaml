@@ -59,7 +59,6 @@ parts:
     # see https://snapcraft.io/docs/qmake-plugin
     plugin: qmake
     qmake-parameters:
-      - ./src
       - CONFIG+=release
       - CONFIG+=snapcraft
     override-build: |
@@ -76,7 +75,6 @@ parts:
       # make -j $(nproc)
       # make install
       snapcraftctl set-version "$(cat version.h | sed 's/[^0-9,.]//g')"
-      cd ..
       snapcraftctl build
     build-packages:
       - qttools5-dev
