@@ -3,7 +3,8 @@ version: "VERSION-STRING"
 summary: Plain-text file markdown note taking with Nextcloud/ownCloud integration
 grade: stable
 confinement: strict
-base: core22
+# There is no qmake plugin in core22!
+base: core20
 description: |
   QOwnNotes is the open source (GPL) plain-text file markdown note taking app
   for GNU/Linux, macOS and Windows, that (optionally) works together with the
@@ -12,7 +13,8 @@ description: |
 
 apps:
   qownnotes:
-    command: desktop-launch $SNAP/usr/bin/QOwnNotes -style=Breeze --snap
+    # "=" is not allowed in the command anymore in core20
+    command: "./wrapper.sh"
     environment:
         DISABLE_WAYLAND: 1
         QT_QPA_PLATFORMTHEME: gtk3
@@ -58,11 +60,12 @@ parts:
     # see https://snapcraft.io/docs/qmake-plugin
     plugin: qmake
     qt-version: qt5
-#    qmake-parameters:
-    options:
+    qmake-parameters:
       - CONFIG+=release
       - CONFIG+=snapcraft
+    qmake-project-file: ./src/QOwnNotes.pro
     override-build: |
+      cd /build/qownnotes/parts/qownnotes/src/src
       export QT_SELECT=qt5
       rm PBE.QOwnNotes.desktop
       echo "#define RELEASE \"Launchpad Snap\"" > release.h
@@ -113,8 +116,9 @@ parts:
         - shared-mime-info
         - libqt5gui5
         - libgdk-pixbuf2.0-0
+        - libgtk2.0-0 # snapcraft was complaining about missing libgtk-x11-2.0.so.0
         - libqt5svg5 # for loading icon themes which are svg
-        - appmenu-qt5
+#        - appmenu-qt5
         - locales-all
         - xdg-user-dirs
         - fcitx-frontend-qt5
@@ -134,3 +138,9 @@ parts:
       plugin: nil
       stage-packages:
         - qt5-gtk-platformtheme
+
+  scripts:
+    plugin: dump
+    source: snap/local
+    stage:
+      - wrapper.sh
