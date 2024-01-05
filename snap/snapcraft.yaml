@@ -1,5 +1,6 @@
 name: qownnotes
 version: git
+adopt-info: qownnotes
 summary: Plain-text file markdown note taking with Nextcloud/ownCloud integration
 grade: stable
 confinement: strict
@@ -65,9 +66,9 @@ parts:
       - CONFIG+=release
       - CONFIG+=snapcraft
     qmake-project-file: ./src/QOwnNotes.pro
-    override-pull: |
-      snapcraftctl pull
-      snapcraftctl set-version "$(cat src/version.h | sed 's/[^0-9,.]//g')"
+#    override-pull: |
+#      snapcraftctl pull
+#      snapcraftctl set-version "$(cat src/version.h | sed 's/[^0-9,.]//g')"
     override-build: |
       cd /build/qownnotes/parts/qownnotes/src/src
       export QT_SELECT=qt5
@@ -80,6 +81,7 @@ parts:
       lrelease QOwnNotes.pro
       # make -j $(nproc)
       # make install
+      snapcraftctl set-version "$(cat version.h | sed 's/[^0-9,.]//g')"
       cd ..
       snapcraftctl build
     build-packages:
