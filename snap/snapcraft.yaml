@@ -15,7 +15,7 @@ apps:
   qownnotes:
 #    command: "desktop-launch $SNAP/usr/bin/QOwnNotes -style=Breeze --snap"
     # "=" is not allowed in the command anymore in core20
-    command: "desktop-launch $SNAP/usr/bin/QOwnNotes --snap"
+    command: "bin/desktop-launch $SNAP/usr/bin/QOwnNotes --snap"
     environment:
         DISABLE_WAYLAND: 1
         QT_QPA_PLATFORMTHEME: gtk3
