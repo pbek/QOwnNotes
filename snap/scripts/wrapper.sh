@@ -1,3 +1,3 @@
 #!/bin/env bash
 
-usr/bin/QOwnNotes -style=Breeze --snap
+bin/desktop-launch $SNAP/usr/bin/QOwnNotes -style=Breeze --snap
