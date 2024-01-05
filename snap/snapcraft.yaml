@@ -1,5 +1,5 @@
 name: qownnotes
-version: git
+#version: git
 adopt-info: qownnotes
 summary: Plain-text file markdown note taking with Nextcloud/ownCloud integration
 grade: stable
