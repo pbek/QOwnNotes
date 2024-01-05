@@ -14,9 +14,7 @@ description: |
 
 apps:
   qownnotes:
-#    command: "desktop-launch $SNAP/usr/bin/QOwnNotes -style=Breeze --snap"
     # "=" is not allowed in the command anymore in core20
-#    command: "bin/desktop-launch $SNAP/usr/bin/QOwnNotes --snap"
     command: "./wrapper.sh"
     environment:
         DISABLE_WAYLAND: 1
@@ -66,11 +64,9 @@ parts:
       - CONFIG+=release
       - CONFIG+=snapcraft
     qmake-project-file: ./src/QOwnNotes.pro
-#    override-pull: |
-#      snapcraftctl pull
-#      snapcraftctl set-version "$(cat src/version.h | sed 's/[^0-9,.]//g')"
     override-build: |
-      cd /build/qownnotes/parts/qownnotes/src/src
+#      cd /build/qownnotes/parts/qownnotes/src/src
+      cd src
       export QT_SELECT=qt5
       >&2 pwd
       >&2 find
