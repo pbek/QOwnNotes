@@ -148,6 +148,6 @@ parts:
 
   scripts:
     plugin: dump
-    source: snap/scripts
+    source: snap/local
     stage:
       - wrapper.sh
