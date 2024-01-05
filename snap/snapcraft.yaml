@@ -65,8 +65,7 @@ parts:
       - CONFIG+=snapcraft
     qmake-project-file: ./src/QOwnNotes.pro
     override-build: |
-      cd src
-      # cd /build/qownnotes/parts/qownnotes/src/src
+      cd /build/qownnotes/parts/qownnotes/src/src
       export QT_SELECT=qt5
       >&2 pwd
       >&2 find
