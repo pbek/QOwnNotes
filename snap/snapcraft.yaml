@@ -17,7 +17,7 @@ apps:
 #    command: "desktop-launch $SNAP/usr/bin/QOwnNotes -style=Breeze --snap"
     # "=" is not allowed in the command anymore in core20
 #    command: "bin/desktop-launch $SNAP/usr/bin/QOwnNotes --snap"
-    command: "wrapper.sh"
+    command: "./wrapper.sh"
     environment:
         DISABLE_WAYLAND: 1
         QT_QPA_PLATFORMTHEME: gtk3
@@ -150,3 +150,9 @@ parts:
     plugin: nil
     stage-packages:
       - qt5-gtk-platformtheme
+
+  scripts:
+    plugin: dump
+    source: snap/scripts
+    stage:
+      - wrapper.sh
