@@ -5,7 +5,7 @@ summary: Plain-text file markdown note taking with Nextcloud/ownCloud integratio
 grade: stable
 confinement: strict
 # There is no qmake plugin in core22!
-base: core20
+base: core22
 description: |
   QOwnNotes is the open source (GPL) plain-text file markdown note taking app
   for GNU/Linux, macOS and Windows, that (optionally) works together with the
@@ -59,11 +59,12 @@ parts:
     source: .
 #    source: https://github.com/pbek/qownnotes.git
     # see https://snapcraft.io/docs/qmake-plugin
-    plugin: qmake
-    qmake-parameters:
-      - CONFIG+=release
-      - CONFIG+=snapcraft
-    qmake-project-file: ./src/QOwnNotes.pro
+#    plugin: qmake
+    plugin: make
+#    qmake-parameters:
+#      - CONFIG+=release
+#      - CONFIG+=snapcraft
+#    qmake-project-file: ./src/QOwnNotes.pro
     override-build: |
       cd /build/qownnotes/parts/qownnotes/src/src
       export QT_SELECT=qt5
@@ -76,10 +77,14 @@ parts:
       lrelease QOwnNotes.pro
       # make -j $(nproc)
       # make install
-      snapcraftctl set-version "$(cat version.h | sed 's/[^0-9,.]//g')"
+      qmake CONFIG+=release CONFIG+=snapcraft QOwnNotes.pro
+      # snapcraftctl set-version "$(cat version.h | sed 's/[^0-9,.]//g')"
+      craftctl set-version "$(cat version.h | sed 's/[^0-9,.]//g')"
       cd ..
-      snapcraftctl build
+      # snapcraftctl build
+      craftctl default
     build-packages:
+      - qt5-qmake
       - qttools5-dev
       - build-essential
       - qtdeclarative5-dev
