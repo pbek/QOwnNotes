@@ -133,6 +133,7 @@ parts:
         - locales-all
         - xdg-user-dirs
         - fcitx-frontend-qt5
+        - libglib2.0-0
 
   plasma-integration:
     plugin: nil
