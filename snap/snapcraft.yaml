@@ -79,8 +79,7 @@ parts:
       # make install
       qmake CONFIG+=release CONFIG+=snapcraft QOwnNotes.pro
       # snapcraftctl set-version "$(cat version.h | sed 's/[^0-9,.]//g')"
-      snapcraftctl set-version "$(cat version.h | sed 's/[^0-9,.]//g')"
-      cd ..
+      snapcraftctl set version "$(cat version.h | sed 's/[^0-9,.]//g')"
       # snapcraftctl build
       craftctl default
     build-packages:
