@@ -133,7 +133,7 @@ parts:
         - locales-all
         - xdg-user-dirs
         - fcitx-frontend-qt5
-        - libglib2.0-0
+        - libglib2.0-0 # we need this or under Gnome the file chooser will crash the app!
 
   plasma-integration:
     plugin: nil
