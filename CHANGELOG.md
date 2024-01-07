@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 24.1.2
+- the Snap version of QOwnNotes was (in a Herculean effort) migrated from Core18 to Core22
+  to cause less problems on Ubuntu 23.10 systems (for [#2876](https://github.com/pbek/QOwnNotes/issues/2876)) 
 - in new releases, the source code `tar.xz` file will now also have a `.sha256sum`
   and a `.sha512sum` file, that is compatible with `sha256sum` and `sha512sum`   
   (for [#2938](https://github.com/pbek/QOwnNotes/issues/2938))
