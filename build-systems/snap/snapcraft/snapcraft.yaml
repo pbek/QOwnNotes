@@ -4,7 +4,7 @@ summary: Plain-text file markdown note taking with Nextcloud/ownCloud integratio
 grade: stable
 confinement: strict
 # There is no qmake plugin in core22!
-base: core20
+base: core22
 description: |
   QOwnNotes is the open source (GPL) plain-text file markdown note taking app
   for GNU/Linux, macOS and Windows, that (optionally) works together with the
@@ -58,21 +58,24 @@ parts:
     source: https://github.com/pbek/QOwnNotes/releases/download/vVERSION-STRING/qownnotes-VERSION-STRING.tar.xz
     source-checksum: sha256/ARCHIVE-SHA256
     # see https://snapcraft.io/docs/qmake-plugin
-    plugin: qmake
-    qt-version: qt5
-    qmake-parameters:
-      - CONFIG+=release
-      - CONFIG+=snapcraft
-    qmake-project-file: ./src/QOwnNotes.pro
+#    plugin: qmake
+    plugin: make
+#    qmake-parameters:
+#      - CONFIG+=release
+#      - CONFIG+=snapcraft
+#    qmake-project-file: ./src/QOwnNotes.pro
     override-build: |
       cd /build/qownnotes/parts/qownnotes/src/src
       export QT_SELECT=qt5
+      # remove the default desktop file
       rm PBE.QOwnNotes.desktop
       echo "#define RELEASE \"Launchpad Snap\"" > release.h
       lrelease QOwnNotes.pro
-      cd ..
-      snapcraftctl build
+      qmake CONFIG+=release CONFIG+=snapcraft QOwnNotes.pro
+      craftctl default
+      make install INSTALL_ROOT="${CRAFT_PART_INSTALL}"
     build-packages:
+      - qt5-qmake
       - qttools5-dev
       - build-essential
       - qtdeclarative5-dev
@@ -108,7 +111,7 @@ parts:
         - dpkg-dev
       stage-packages:
         - libxkbcommon0
-        - ttf-ubuntu-font-family
+#        - ttf-ubuntu-font-family
         - dmz-cursor-theme
         - light-themes
         - adwaita-icon-theme
@@ -116,28 +119,29 @@ parts:
         - shared-mime-info
         - libqt5gui5
         - libgdk-pixbuf2.0-0
-        - libgtk2.0-0 # snapcraft was complaining about missing libgtk-x11-2.0.so.0
+#        - libgtk2.0-0 # snapcraft was complaining about missing libgtk-x11-2.0.so.0
         - libqt5svg5 # for loading icon themes which are svg
 #        - appmenu-qt5
         - locales-all
         - xdg-user-dirs
         - fcitx-frontend-qt5
+        - libglib2.0-0
 
   plasma-integration:
     plugin: nil
     stage-packages:
-      #    - plasma-integration # causes the KDE file selector to be used that didn't work
+#      - plasma-integration # causes the KDE file selector to be used that didn't work
       - kde-style-breeze
       - breeze-icon-theme
-    #    - kio # runtime slaves for kio, but does not seem to work
+#      - kio # runtime slaves for kio, but does not seem to work
     prime:
       - "-usr/share/wallpapers/*"
       - "-usr/share/fonts/*"
 
   qt5-gtk-platform:
-      plugin: nil
-      stage-packages:
-        - qt5-gtk-platformtheme
+    plugin: nil
+    stage-packages:
+      - qt5-gtk-platformtheme
 
   scripts:
     plugin: dump
