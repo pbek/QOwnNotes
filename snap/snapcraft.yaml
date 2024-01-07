@@ -81,6 +81,7 @@ parts:
       snapcraftctl set-version "$(cat version.h | sed 's/[^0-9,.]//g')"
       # snapcraftctl build
       craftctl default
+      make install INSTALL_ROOT="${CRAFT_PART_INSTALL}"
     build-packages:
       - qt5-qmake
       - qttools5-dev
