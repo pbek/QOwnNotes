@@ -85,7 +85,7 @@ jobs:
             qt-version: '6.6.0'
             experimental: true
           # Snapcraft
-          - os: ubuntu-20.04
+          - os: ubuntu-22.04
             qt-version: '5.15.2'
             experimental: false
     steps:
