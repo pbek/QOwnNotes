@@ -56,7 +56,7 @@ plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
 
 parts:
   qownnotes:
-    source: .
+    source: src
 #    source: https://github.com/pbek/qownnotes.git
     # see https://snapcraft.io/docs/qmake-plugin
 #    plugin: qmake
