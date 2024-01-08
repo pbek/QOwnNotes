@@ -65,7 +65,6 @@ parts:
 #      - CONFIG+=snapcraft
 #    qmake-project-file: ./src/QOwnNotes.pro
     override-build: |
-      cd /build/qownnotes/parts/qownnotes/src/src
       export QT_SELECT=qt5
       # remove the default desktop file
       rm PBE.QOwnNotes.desktop
