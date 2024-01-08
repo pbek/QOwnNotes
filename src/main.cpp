@@ -300,8 +300,17 @@ bool mainStartupMisc(const QStringList &arguments) {
     NoteFolder::migrateToNoteFolders();
 
     if (parser.isSet(dumpSettingsOption)) {
-        fprintf(stdout, "%s\n", Utils::Misc::generateDebugInformation().toLocal8Bit().constData());
-        exit(0);
+        const auto dump = Utils::Misc::generateDebugInformation();
+
+        // Copy dump to the clipboard (doesn't seem to work yet when the app is quit)
+        QClipboard *clipboard = QApplication::clipboard();
+        clipboard->setText(dump);
+        QCoreApplication::processEvents();
+
+        // Print the dump to stdout and copy it to the clipboard
+        fprintf(stdout, "%s\n", dump.toLocal8Bit().constData());
+
+        return false;
     }
 
     return true;
