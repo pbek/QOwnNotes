@@ -2212,7 +2212,7 @@ void SettingsDialog::on_clearAppDataAndExitButton_clicked() {
         // remove the log file
         removeLogFile();
 
-        // make sure no settings get written after after are quitting
+        // make sure no settings get written after are quitting
         qApp->setProperty("clearAppDataAndExit", true);
         qApp->quit();
     }
