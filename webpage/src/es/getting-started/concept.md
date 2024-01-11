@@ -112,9 +112,9 @@ Utilice [**Nextcloud Notes**](https://github.com/nextcloud/notes) para editar su
 Tenga en cuenta que Nextcloud Notes actualmente solo admite hasta un nivel de subcarpetas.
 :::
 
-## Nextcloud Deck server app
+## Aplicación de Nextcloud Deck para servidores
 
-You can use QOwnNotes to quickly create **cards** in [**Nextcloud Deck**](https://github.com/nextcloud/deck).
+Es posible utilizar QOwnNotes para crear con rapidez **tarjetas** en [**Nextcloud Deck**](https://github.com/nextcloud/deck).
 
 ## Nextcloud Notes mobile app
 
@@ -138,20 +138,20 @@ You can also use [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and
 
 ## api.qownnotes.org
 
-This is an online service provided by QOwnNotes to check if there is a new release of the application available.
+Este es un servicio en línea provisto por QOwnNotes para comprobar, vía internet, si existe una versión nueva de la aplicación.
 
-It is talking to GitHub and checks for the latest release, gets a suited download url and compiles the changes from the changelog compared to the version of QOwnNotes you are currently using as html to show in the update dialog.
+Se comunica con GitHub y comprueba si existe una versión más reciente, obtiene un URL de descarga adecuado y compila los cambios del registro de novedades comparado con la versión de QOwnNotes que está utilizando actualmente en formato HTML para su visualización en el cuadro de diálogo Actualización.
 
-In addition, it also provides the [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) and an implementation of the legacy update checking api for older versions of QOwnNotes.
+Además, brinda el [suministro RSS de versiones](http://api.qownnotes.org/rss/app-releases) y una implementación de la API heredada de comprobación de actualizaciones para las versiones anteriores de QOwnNotes.
 
 ::: tip
-You can access the source code for [api.qownnotes.org](https://api.qownnotes.org) on [GitHub](https://github.com/qownnotes/api).
+Se puede acceder al código fuente de [api.qownnotes.org](https://api.qownnotes.org) en [GitHub](https://github.com/qownnotes/api).
 :::
 
-## QOwnNotes Web App
+## Aplicación web de QOwnNotes
 
-You can insert photos from your mobile phone into the current note in QOwnNotes on your desktop via the **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
+Es posible insertar fotografías de su teléfono móvil en la nota actual en QOwnNotes en su equipo de escritorio por medio de la **aplicación web** disponible en [app.qownnotes.org](https://app.qownnotes.org/).
 
 ::: tip
-Please visit [QOwnNotes Web App](web-app.md) for more information.
+Visite la [aplicación web de QOwnNotes](web-app.md) para conocer más.
 :::

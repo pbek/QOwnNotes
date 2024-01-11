@@ -29,6 +29,24 @@ Możesz uruchomić aplikację poprzez wiersz poleceń na różnych systemach ope
 | macOS             | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes`      |
 | Windows           | `QOwnNotes.exe`                                             |
 
+::: tip
+To directly copy the settings dump to the clipboard to post in a [GitHub issue](https://github.com/pbek/QOwnNotes/issues) you can use `xclip` or `xsel` on Linux, `pbcopy` on macOS and `clip` on Windows:
+
+```bash
+# Copy the settings dump to the clipboard with xclip on Linux
+QOwnNotes --dump-settings | xclip -selection clipboard
+
+# Copy the settings dump to the clipboard with xsel on Linux
+QOwnNotes --dump-settings | xsel --clipboard
+
+# Copy the settings dump to the clipboard with pbcopy on macOS
+QOwnNotes --dump-settings | pbcopy
+
+# Copy the settings dump to the clipboard with clip on Windows
+QOwnNotes --dump-settings | clip
+```
+:::
+
 ## Wyzwalaj akcje menu po uruchomieniu
 
 Za pomocą parametru `--action <name>` możesz wywołać akcje menu po uruchomieniu aplikacji.

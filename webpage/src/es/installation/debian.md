@@ -96,4 +96,4 @@ sudo apt-get install qownnotes
 If you use this repository for other Debian Linux versions please make sure that you have **Qt** installed at least at **version 5.5**.
 :::
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)
+[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)

@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Copiar</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1888,11 +1888,11 @@
 </message>
 <message>
 <source>&amp;Setup note folders / subfolders</source>
-<translation type="unfinished">&amp;Setup note folders / subfolders</translation>
+<translation>&amp;Configurar carpetas/subcarpetas de notas</translation>
 </message>
 <message>
 <source>Setup note folders / subfolders</source>
-<translation type="unfinished">Setup note folders / subfolders</translation>
+<translation>Configurar carpetas/subcarpetas de notas</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2297,7 +2297,7 @@
 </message>
 <message>
 <source>&amp;Load Todo List items</source>
-<translation type="unfinished">&amp;Load Todo List items</translation>
+<translation>&amp;Cargar elementos de lista de pendientes</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
@@ -2791,14 +2791,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
-<translation type="unfinished">
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<translation>
+<numerusform>Se omitió la copia de %n nota (no hay ningún archivo de texto o Markdown legible)</numerusform>
+<numerusform>Se omitió la copia de %n notas (no hay ningún archivo de texto o Markdown legible)</numerusform>
 </translation>
 </message>
 <message>
 <source>Paste &amp;HTML as Markdown</source>
-<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+<translation>Pegar &amp;HTML como Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3820,11 +3820,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>El sistema Windows parece ejecutarse en modo oscuro. ¿Quiere activar también el modo oscuro en QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>El sistema Windows parece ejecutarse en modo claro. ¿Quiere activar también el modo claro en QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
@@ -5504,7 +5504,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Select the path of the git binary</source>
-<translation type="unfinished">Select the path of the git binary</translation>
+<translation>Seleccione la ruta al binario de Git</translation>
 </message>
 <message>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
@@ -6698,7 +6698,7 @@ Your notes will stay intact!</source>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>

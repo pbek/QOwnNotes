@@ -29,6 +29,24 @@ QOwnNotes --session test
 | ماك أو إس    | `<span dir="ltr">/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes</span>` |
 | ويندوز       | `QOwnNotes.exe`                                                                     |
 
+::: tip
+لنسخ تفريغ الإعدادات إلى الحافظة مباشرةً لنشره في [مسألة أو مشكلة على GitHub](https://github.com/pbek/QOwnNotes/issues)، يمكنك استخدام `xclip` أو `xsel` على لينكس، أو `pbcopy` على macOS، أو `clip` على Windows:
+
+```bash
+# Copy the settings dump to the clipboard with xclip on Linux
+QOwnNotes --dump-settings | xclip -selection clipboard
+
+# Copy the settings dump to the clipboard with xsel on Linux
+QOwnNotes --dump-settings | xsel --clipboard
+
+# Copy the settings dump to the clipboard with pbcopy on macOS
+QOwnNotes --dump-settings | pbcopy
+
+# Copy the settings dump to the clipboard with clip on Windows
+QOwnNotes --dump-settings | clip
+```
+:::
+
 ## تنفيذ إجراءات قائمة بعد التشغيل
 
 باستخدام المُعامِل <code dir="ltr">--action &lt;اسم&gt;</code>، يمكنك تنفيذ إجراءات قائمة بعد تشغيل التطبيق.

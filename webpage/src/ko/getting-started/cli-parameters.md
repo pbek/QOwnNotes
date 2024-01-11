@@ -28,6 +28,22 @@ QOwnNotes --session test
 | macOS   | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes` |
 | Windows | `QOwnNotes.exe`                                        |
 
+::: 팁 설정 덤프를 클립보드에 직접 복사하여 게시하려면 [GitHub 이슈](https://github.com/pbek/QOwnNotes/issues)는 리눅스에서는 `xclip` 또는</code> `xsel` 을, macOS에서는 `pbcopy`를, Windows에서는 `clip</1> 을 사용할 수 있습니다:</p>
+
+<pre><code class="bash">#Linux에서 xclip을 사용하여 설정 덤프를 클립보드로 복사
+QOwnNotes --dump-settings | xclip -selection clipboard
+
+# Linux에서 xsel을 사용하여 설정 덤프를 클립보드로 복사
+QOwnNotes --dump-settings | xsel --clipboard
+
+# macOS에서 pbcopy를 사용하여 설정 덤프를 클립보드로 복사
+QOwnNotes --dump-settings | pbcopy
+
+# Windows에서 clip으로 설정 덤프를 클립보드로 복사
+QOwnNotes --dump-settings | clip
+`</pre>
+:::
+
 ## 시작 후 메뉴 작업 트리거
 
 파라미터 `--action <name>` 을 사용하여 응용 프로그램이 시작된 후 메뉴 동작을 트리거할 수 있습니다.

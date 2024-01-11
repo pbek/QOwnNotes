@@ -29,6 +29,24 @@ Puede ejecutar la aplicación en la interfaz de línea de comandos de manera dif
 | macOS             | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes`     |
 | Windows           | `QOwnNotes.exe`                                            |
 
+::: tip
+Para copiar directamente el volcado de configuración en el portapapeles para luego publicarlo como un [informe de GitHub](https://github.com/pbek/QOwnNotes/issues), puede utilizar `xclip` o `xsel` en Linux, `pbcopy` en macOS y `clip` en Windows:
+
+```bash
+# Copiar el volcado de configuración en el portapapeles con xclip en Linux
+QOwnNotes --dump-settings | xclip -selection clipboard
+
+# Copiar el volcado de configuración en el portapapeles con xsel en Linux
+QOwnNotes --dump-settings | xsel --clipboard
+
+# Copiar el volcado de configuración en el portapapeles con pbcopy en macOS
+QOwnNotes --dump-settings | pbcopy
+
+# Copiar el volcado de configuración en el portapapeles con clip en LinuxWindows
+QOwnNotes --dump-settings | clip
+```
+:::
+
 ## Activar acciones del menú después del inicio
 
 Con el parámetro ` --action <name> ` puede activar acciones de menú después de que se inicie la aplicación.
@@ -40,7 +58,7 @@ QOwnNotes --action actionShow_Todo_List
 ```
 
 ::: tip
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Simplemente busque el título del menú en inglés. Tenga en cuenta que estos textos pueden cambiar con el tiempo.
+Puede obtener los nombres de objeto de la acción de menú en [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Simplemente busque el título del menú en inglés. Tenga en cuenta que estos textos pueden cambiar con el tiempo.
 :::
 
 Para activar [acciones de secuencia de comandos](../scripting/methods-and-objects.md#registering-a-custom-action), utilice `customAction_` seguido del identificador de la acción personalizada. El identificador de la acción personalizada es el primer parámetro de la llamada `script.registerCustomAction` en el script.

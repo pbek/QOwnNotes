@@ -2,9 +2,9 @@
 
 ## Evernote
 
-There is an Evernote import dialog you can reach in the `Note / Import` menu to import *Enex* files.
+Dispone de un cuadro de diálogo de importación desde Evernote que puede abrir mediante el menú `Nota▸Importar` para importar archivos *Enex*.
 
-Images, attachments, tags, basic formatting and metadata will be imported as well.
+Se importarán asimismo las imágenes, los archivos adjuntos, las etiquetas, el formato básico y los metadatos.
 
 ## Joplin
 

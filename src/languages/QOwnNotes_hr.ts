@@ -622,7 +622,7 @@
 </message>
 <message>
 <source>Invalid XML!</source>
-<translation type="unfinished">Invalid XML!</translation>
+<translation>Neispravan XML!</translation>
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
@@ -1229,7 +1229,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopiraj</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -2810,15 +2810,15 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
-<translation type="unfinished">
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<translation>
+<numerusform>Preskočeno kopiranje %n bilješke (nema Markdown oznaka ili tekstualne datoteke ili se ne može čitati)</numerusform>
+<numerusform>Preskočeno kopiranje %n bilješke (nema Markdown oznaka ili tekstualne datoteke ili se ne može čitati)</numerusform>
+<numerusform>Preskočeno kopiranje %n bilješki (nema Markdown oznaka ili tekstualne datoteke ili se ne može čitati)</numerusform>
 </translation>
 </message>
 <message>
 <source>Paste &amp;HTML as Markdown</source>
-<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+<translation>Umetni &amp;HTML kao Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3745,11 +3745,11 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <name>PasswordLineEdit</name>
 <message>
 <source>Show password</source>
-<translation type="unfinished">Show password</translation>
+<translation>Pokaži lozinku</translation>
 </message>
 <message>
 <source>Hide password</source>
-<translation type="unfinished">Hide password</translation>
+<translation>Sakrij lozinku</translation>
 </message>
 </context>
 <context>
@@ -5322,7 +5322,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Experimental</source>
-<translation type="unfinished">Experimental</translation>
+<translation>Eksperimentalno</translation>
 </message>
 <message>
 <source>This also allows note files to be renamed</source>
@@ -6753,7 +6753,7 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>

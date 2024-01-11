@@ -3,6 +3,8 @@
 ## 24.1.3
 - you now can also use <kbd>Ctrl</kbd> + <kbd>=</kbd> to increase the text size
   in the note text edit (for [#2941](https://github.com/pbek/QOwnNotes/issues/2941))
+- added more Croatian, Spanish, Dutch, Korean translation (thank you milotype,
+  fitojb, stephanp, venusgirl)
 
 ## 24.1.2
 - the Snap version of QOwnNotes was (in a Herculean effort) migrated from Core18 to Core22

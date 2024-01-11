@@ -163,8 +163,8 @@
 - The **notes folder** can be **freely chosen** (multiple note folders can be used)
 - **Searching parts of words** in notes is possible and search results are highlighted in the notes
 - [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
-- [**Spellchecking**](../editor/spellchecking.md) support
-- **Portable mode** for carrying QOwnNotes around on USB sticks
+- Compatibilidad con [**revisores ortográficos**](../editor/spellchecking.md)
+- **Modo portátil** para llevarse consigo QOwnNotes en memorias USB
 - **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
 - **Modo Vim**
 - **[Web application](web-app.md)** to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop

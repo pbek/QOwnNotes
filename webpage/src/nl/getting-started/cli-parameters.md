@@ -29,6 +29,25 @@ U kunt de toepassing op de opdrachtregelinterface op verschillende besturingssys
 | macOS             | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes`       |
 | Windows           | `QOwnNotes.exe`                                              |
 
+::: tip
+Om de instellingendump rechtstreeks naar het klembord te kopiëren en dit te gebruiken bij de melding van een [GitHub-probleem](https://github.com/pbek/QOwnNotes/issues) kunt u `xclip</1 gebruiken>
+of <code>xsel` op Linux, `pbcopy` op macOS en `clip` op Windows:
+
+```bash
+# Kopieer de instellingendump naar het klembord met xclip op Linux
+QOwnNotes --dump-settings | xclip -selection clipboard
+
+# Kopieer de instellingen dump naar het klembord met xsel op Linux
+QOwnNotes --dump-settings | xclip -selection clipboard
+
+# Kopieer de instellingendump naar het klembord met pbcopy op macOS
+QOwnNotes --dump-settings | pbcopy
+
+# Kopieer de instellingendump naar het klembord met clip op Windows
+QOwnNotes --dump-settings | clip
+```
+:::
+
 ## Menuacties activeren na opstarten
 
 Met de parameter `--action <name>` kunt u menuacties activeren nadat de applicatie is gestart.
