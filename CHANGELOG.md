@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.1.3
+- you now can also use <kbd>Ctrl</kbd> + <kbd>=</kbd> to increase the text size
+  in the note text edit (for [#2941](https://github.com/pbek/QOwnNotes/issues/2941))
+
 ## 24.1.2
 - the Snap version of QOwnNotes was (in a Herculean effort) migrated from Core18 to Core22
   to cause less problems on Ubuntu 23.10 systems (for [#2876](https://github.com/pbek/QOwnNotes/issues/2876)) 

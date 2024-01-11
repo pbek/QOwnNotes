@@ -177,6 +177,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     connect(ui->noteEditTabWidget->tabBar(), &QWidget::customContextMenuRequested, this,
             &MainWindow::showNoteEditTabWidgetContextMenu);
 
+    // Set the two shortcuts for the "increase note text size" action
+    const QList<QKeySequence> shortcuts = {QKeySequence(Qt::CTRL + Qt::Key_Plus), QKeySequence(Qt::CTRL + Qt::Key_Equal)};
+    ui->action_Increase_note_text_size->setShortcuts(shortcuts);
+
     initTreeWidgets();
 
     initNotePreviewAndTextEdits();
