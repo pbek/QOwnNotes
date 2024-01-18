@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.1.4
+- the spellchecking menu will now also be shown on already selected words
+  (for [#2946](https://github.com/pbek/QOwnNotes/issues/2946))
+
 ## 24.1.3
 - you now can also use <kbd>Ctrl</kbd> + <kbd>=</kbd> to increase the text size
   in the note text edit (for [#2941](https://github.com/pbek/QOwnNotes/issues/2941))
