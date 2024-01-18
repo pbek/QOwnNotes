@@ -19,6 +19,7 @@ apps:
     environment:
         DISABLE_WAYLAND: 1
         QT_QPA_PLATFORMTHEME: gtk3
+        GIT_EXEC_PATH: $SNAP/usr/lib/git-core
     # see https://docs.snapcraft.io/reference/interfaces
     plugs:
       - x11
@@ -104,6 +105,7 @@ parts:
       - libqt5websockets5
       - libqt5x11extras5
       - qtwayland5
+      - git-core
     stage:
       - -usr/share/pkgconfig
     after: [desktop-qt5]
