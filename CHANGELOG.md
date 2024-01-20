@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.1.5
+- the Snap version of QOwnNotes is now able to use git
+  (for [#1306](https://github.com/pbek/QOwnNotes/issues/1306))
+
 ## 24.1.4
 - the spellchecking menu will now also be shown on already selected words
   (for [#2946](https://github.com/pbek/QOwnNotes/issues/2946))
