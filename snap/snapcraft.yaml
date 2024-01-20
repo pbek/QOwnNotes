@@ -20,6 +20,11 @@ apps:
         DISABLE_WAYLAND: 1
         QT_QPA_PLATFORMTHEME: gtk3
         GIT_EXEC_PATH: $SNAP/usr/lib/git-core
+        GIT_AUTHOR_NAME: "QOwnNotes"
+        GIT_AUTHOR_EMAIL: "snap@qownnotes.git"
+        GIT_COMMITTER_NAME: "QOwnNotes"
+        GIT_COMMITTER_EMAIL: "snap@qownnotes.git"
+        EMAIL: "snap@qownnotes.git"
     # see https://docs.snapcraft.io/reference/interfaces
     plugs:
       - x11
