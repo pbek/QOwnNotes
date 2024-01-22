@@ -145,7 +145,7 @@ Token BreakTokenizerPrivate::next()
     }
 
     itemPosition++;
-    const auto &textBreak = this->breaks().at(itemPosition);
+    const auto textBreak = this->breaks().at(itemPosition);
     int st = textBreak.start;
     int len = textBreak.length;
 
