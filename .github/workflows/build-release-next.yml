@@ -100,7 +100,7 @@ jobs:
 
       - name: '⚙️ Cache Qt'
         id: cache-qt
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ../Qt
           key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
@@ -196,7 +196,7 @@ jobs:
 ###          snapcraft_token: ${{ secrets.SNAP_TOKEN_GH }}
 #      - name: '⚙️ Cache Qt'
 #        id: cache-qt
-#        uses: actions/cache@v3
+#        uses: actions/cache@v4
 #        with:
 #          path: ../Qt
 #          key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
