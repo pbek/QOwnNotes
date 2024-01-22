@@ -92,7 +92,7 @@ jobs:
 
       - name: '⚙️ Cache Qt'
         id: cache-qt
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ../Qt
           key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
@@ -195,7 +195,7 @@ jobs:
 
       - name: '⚙️ Cache Qt'
         id: cache-qt
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ../Qt
           key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
@@ -263,7 +263,7 @@ jobs:
 
       - name: '⚙️ Cache Qt'
         id: cache-qt
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ../Qt
           key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
@@ -344,7 +344,7 @@ jobs:
       # https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
       - name: '⚙️ Cache Qt'
         id: cache-qt
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ../Qt
           key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
