@@ -12,6 +12,9 @@ QT       += core gui widgets sql svg network xml printsupport qml websockets con
 
 CONFIG += with_aspell
 
+# Build on macOS with both architectures
+QMAKE_APPLE_DEVICE_ARCHS = x86_64 arm64
+
 # enable pch for DEV_MODE
 # put any dev specific options here
 CONFIG(DEV_MODE) {
