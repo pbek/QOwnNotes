@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 24.1.5
+- an attempt was made to fix the issue that shortcut settings table columns
+  didn't get resized to fit the containing text on some computers
+  (for [#2950](https://github.com/pbek/QOwnNotes/issues/2950))
 - the Snap version of QOwnNotes is now able to use git
   (for [#1306](https://github.com/pbek/QOwnNotes/issues/1306))
 

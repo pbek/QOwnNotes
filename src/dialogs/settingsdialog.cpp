@@ -1612,10 +1612,6 @@ void SettingsDialog::loadShortcutSettings() {
             menuItem->setExpanded(true);
         }
     }
-
-    ui->shortcutTreeWidget->resizeColumnToContents(0);
-    ui->shortcutTreeWidget->resizeColumnToContents(1);
-    ui->shortcutTreeWidget->resizeColumnToContents(2);
 }
 
 /**
@@ -3264,8 +3260,15 @@ void SettingsDialog::on_settingsTreeWidget_currentItemChanged(QTreeWidgetItem *c
 
     ui->settingsStackedWidget->setCurrentIndex(currentIndex);
 
-    if (currentIndex == SettingsPages::LayoutPage) {
-        ui->layoutWidget->resizeLayoutImage();
+    switch (currentIndex) {
+        case SettingsPages::LayoutPage:
+            ui->layoutWidget->resizeLayoutImage();
+            break;
+        case SettingsPages::ShortcutPage:
+            ui->shortcutTreeWidget->resizeColumnToContents(0);
+            ui->shortcutTreeWidget->resizeColumnToContents(1);
+            ui->shortcutTreeWidget->resizeColumnToContents(2);
+            break;
     }
 }
 
