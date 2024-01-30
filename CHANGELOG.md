@@ -6,6 +6,11 @@
   (for [#2950](https://github.com/pbek/QOwnNotes/issues/2950))
 - the Snap version of QOwnNotes is now able to use git
   (for [#1306](https://github.com/pbek/QOwnNotes/issues/1306))
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  is currently rewritten in Vue.js 3 with Vite and QUASAR with BEX to get rid of
+  all the legacy libraries that need Node.js 14 to build the project
+  (for [#56](https://github.com/qownnotes/web-companion/issues/56))
+  - you can watch the progress on the [GitHub issue](https://github.com/qownnotes/web-companion/issues/56)
 
 ## 24.1.4
 - the spellchecking menu will now also be shown on already selected words
