@@ -41,7 +41,7 @@ zellij --layout releaser.kdl attach deploy-qownnotes -c
 
 exit
 
-# fallback if tmuxinator doesn't work
+# fallback if zellij doesn't work
 ../ubuntu-launchpad/build-for-launchpad.sh
 ../ubuntu-launchpad/build-for-launchpad-qt6.sh
 ../obs/build-for-obs.sh
