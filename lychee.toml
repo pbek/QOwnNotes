@@ -1,0 +1,16 @@
+# lychee --base . './**/*.md' --exclude github\.com --exclude \.onion --exclude itunes\.apple\.com --exclude twitter\.com --exclude-path webpage/node_modules/ --exclude-path webpage/src/*/*/references\.md
+exclude = ['github.com', '\.onion', 'itunes\.apple\.com', 'twitter\.com']
+exclude_path = [
+    'webpage/node_modules/',
+    'webpage/src/faq/references.md',
+    'webpage/src/ar/faq/references.md',
+    'webpage/src/de/faq/references.md',
+    'webpage/src/es/faq/references.md',
+    'webpage/src/fa/faq/references.md',
+    'webpage/src/fr/faq/references.md',
+    'webpage/src/hu/faq/references.md',
+    'webpage/src/it/faq/references.md',
+    'webpage/src/ko/faq/references.md',
+    'webpage/src/nl/faq/references.md',
+    'webpage/src/pl/faq/references.md',
+]
