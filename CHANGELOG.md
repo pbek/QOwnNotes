@@ -1949,8 +1949,8 @@
 - Windows 10 pdf export issues are now fixed (for [#2015](https://github.com/pbek/QOwnNotes/issues/2015))
 - added more translation (thank you amirkbrpr, zmni, afischer211, rawfreeamy, mguerra, gregory.k)
 - two new translations were integrated into the webpage (for [#1859](https://github.com/pbek/QOwnNotes/issues/1859))
-  - [QOwnNotes webpage in Hungarian](www.qownnotes.org/hu)
-  - [QOwnNotes webpage in Persian](www.qownnotes.org/fa)
+  - [QOwnNotes webpage in Hungarian](https://www.qownnotes.org/hu)
+  - [QOwnNotes webpage in Persian](https://www.qownnotes.org/fa)
 
 ## 21.1.7
 - fixed line wraps in code blocks in the preview (for [#2017](https://github.com/pbek/QOwnNotes/issues/2017))
@@ -5417,7 +5417,7 @@
 - added a new cli parameter `--dump-settings` that prints out a dump of the 
   settings and other information about the application and environment in GitHub
   Markdown and exits the application
-    - the documentation page [Command line interface parameters](http://docs.qownnotes.org/en/develop/cli-parameters.html)
+    - the documentation page [Command line interface parameters](https://www.qownnotes.org/getting-started/cli-parameters.html)
       was updated
 - the **Find action** dialog now searches for every entered word in an `or`-fashion
   (for [#1007](https://github.com/pbek/QOwnNotes/issues/1007))
@@ -7717,7 +7717,7 @@
     - the mono-space code font is used for it
     - you can change the highlighting color and other styles in the settings
 - there now is a **Solus package** for QOwnNotes in the Solus main repository
-    - see [Solus package for QOwnNotes](https://www.qownnotes.org/Blog/Solus-package-for-QOwnNotes)
+    - see [Solus package for QOwnNotes](https://www.qownnotes.org/blog/2016-11-23-Solus-package-for-QOwnNotes.html)
       for more information
 - Nextcloud support is now mentioned a bit more often
 - to save memory the log output will now only be written to the log
@@ -10207,7 +10207,7 @@
 ## 0.77
 - the icon size in the main toolbar was set to a fixed `38x38` to try to prevent high-dpi problems in KDE Plasma
 - `libqt5sql5-sqlite` was added to the dependencies for the Ubuntu PPA build and the Ubuntu deb-package (for [#30](https://github.com/pbek/QOwnNotes/issues/30))
-- if you don't want to miss a single version of QOwnNotes you might want to take a look at [New release version RSS feed](https://www.qownnotes.org/Blog/New-release-version-RSS-feed)
+- if you don't want to miss a single version of QOwnNotes you might want to take a look at [New release version RSS feed](https://www.qownnotes.org/blog/2016-01-09-New-release-version-RSS-feed.html)
 
 ## 0.76
 - the Windows version of QOwnNotes now also includes the OpenSSL library, please report if you have any problems on the [QOwnNotes issue page](https://github.com/pbek/QOwnNotes/issues))
