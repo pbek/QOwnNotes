@@ -10,9 +10,9 @@
 
 **Crowdin** هي منصة شهيرة لإدارة التوطينات لتطبيقات المحمول والويب والحواسيب والمحتويات المرتبطة.
 
-تستطيع التسجيل في [Crowdin](https://crowdin.com/project/qownnotes/invite) و **ترجمة** **QOwnNotes** إلى لغتك بأدوات سهلة
+تستطيع التسجيل في [Crowdin](https://crowdin.com/project/qownnotes) و **ترجمة** **QOwnNotes** إلى لغتك بأدوات سهلة
 
-**[QOwnNotes على Crowdin](https://crowdin.com/project/qownnotes/invite)**
+**[QOwnNotes على Crowdin](https://crowdin.com/project/qownnotes)**
 
 فقط [أرسل رسالة إلى مالك المشروع على Crowdin](https://crowdin.com/profile/pbek) أو أنشئ [طلبا على GitHub](https://github.com/pbek/QOwnNotes/issues) إذا أردت ترجمة QOwnNotes إلى لغة جديدة.
 

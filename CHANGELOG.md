@@ -9856,7 +9856,7 @@
 
 ## 1.1.6
 - added **Spanish translation** (a big thank you to moblesmarti!)
-    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/invite)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
       to make QOwnNotes available in more languages
 - added more Hungarian translation (thank you Fabijenna)
 - you can now **paste html** in notes with <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + 
@@ -9867,7 +9867,7 @@
 
 ## 1.1.5
 - added more German, Hungarian and Dutch translation (thank you Fabijenna)
-    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/invite)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
       to make QOwnNotes available in more languages
 - fixed some typos
 - added several fixes for Windows

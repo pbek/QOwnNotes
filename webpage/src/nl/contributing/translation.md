@@ -10,9 +10,9 @@ Hoe kan ik helpen bij het vertalen van QOwnNotes?
 
 **Crowdin** is een populair lokalisatiebeheerplatform voor mobiele apps, internet, desktopsoftware en aanverwante middelen.
 
-U kunt zich aanmelden bij [Crowdin](https://crowdin.com/project/qownnotes/invite) en **vertalen** **QOwnNotes** naar uw taal met eenvoudige tools.
+U kunt zich aanmelden bij [Crowdin](https://crowdin.com/project/qownnotes) en **vertalen** **QOwnNotes** naar uw taal met eenvoudige tools.
 
-**[QOwnNotes op Crowdin](https://crowdin.com/project/qownnotes/invite)**
+**[QOwnNotes op Crowdin](https://crowdin.com/project/qownnotes)**
 
 [Stuur de projecteigenaar gewoon een bericht op Crowdin](https://crowdin.com/profile/pbek) of als een [GitHub-probleem](https://github.com/pbek/QOwnNotes/issues) als je QOwnNotes naar een nieuwe taal wilt vertalen.
 

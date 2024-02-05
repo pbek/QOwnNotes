@@ -129,7 +129,7 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 	- [Your help](https://www.qownnotes.org/contributing/translation.html) is
 	  very much appreciated to improve these translations or to translate
 	  QOwnNotes in more languages
-	- Join the fun at **[Crowdin](https://crowdin.com/project/qownnotes/invite)**
+	- Join the fun at **[Crowdin](https://crowdin.com/project/qownnotes)**
 	  to **help** with the **translations**
 
 ## Installation

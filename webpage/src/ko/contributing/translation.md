@@ -10,9 +10,9 @@ QOWNNotes 번역을 어떻게 도와드릴까요?
 
 **Crowdin **은 모바일 앱, 웹, 데스크톱 소프트웨어 및 관련 자산을 위한 인기 있는 현지화 관리 플랫폼입니다.
 
-[Crowdin](https://crowdin.com/project/qownnotes/invite)에서 등록하고 쉬운 도구를 사용하여 **QOwnNotes** 를 사용자 언어로 **번역**할 수 있습니다.
+[Crowdin](https://crowdin.com/project/qownnotes)에서 등록하고 쉬운 도구를 사용하여 **QOwnNotes** 를 사용자 언어로 **번역**할 수 있습니다.
 
-**[Crowdin에서 QOwnNotes](https://crowdin.com/project/qownnotes/invite)**
+**[Crowdin에서 QOwnNotes](https://crowdin.com/project/qownnotes)**
 
 QOwnNotes를 새로운 언어로 번역하려면 [프로젝트 소유자에게 Crowdin](https://crowdin.com/profile/pbek) 또는 [GitHub issue](https://github.com/pbek/QOwnNotes/issues) 로 메시지를 전달하십시오.
 

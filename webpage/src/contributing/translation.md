@@ -11,10 +11,10 @@ How can I help to translate QOwnNotes?
 **Crowdin** is a popular Localization Management Platform for mobile apps, web,
 desktop software and related assets.
 
-You can sign up at [Crowdin](https://crowdin.com/project/qownnotes/invite) and
+You can sign up at [Crowdin](https://crowdin.com/project/qownnotes) and
 **translate** **QOwnNotes** to your language with easy tools.
 
-**[QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/invite)**
+**[QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)**
 
 Just [drop the project owner a message on Crowdin](https://crowdin.com/profile/pbek)
 or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues) if you want to

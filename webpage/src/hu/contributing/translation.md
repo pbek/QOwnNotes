@@ -10,9 +10,9 @@ Hogyan segíthetek a QOwnNotes fordításában?
 
 A **Crowdin** egy népszerű Lokalizációkezelési felületen a mobilalkalmazásokhoz, webes, asztali szoftverekhez és kapcsolódó eszközökhez.
 
-Regisztrálhat a [Crowdin](https://crowdin.com/project/qownnotes/invite) oldalon, és **lefordíthatja** **QOwnNotes** az Ön nyelvére egyszerű eszközökkel.
+Regisztrálhat a [Crowdin](https://crowdin.com/project/qownnotes) oldalon, és **lefordíthatja** **QOwnNotes** az Ön nyelvére egyszerű eszközökkel.
 
-**[QOwnNotes a Crowdinról](https://crowdin.com/project/qownnotes/invite)**
+**[QOwnNotes a Crowdinról](https://crowdin.com/project/qownnotes)**
 
 Csak [küldjön üzenetet a projekt tulajdonosának a Crowdin](https://crowdin.com/profile/pbek) on vagy [GitHub kérdésként](https://github.com/pbek/QOwnNotes/issues), ha új nyelvre szeretné fordítani a QOwnNotes programot.
 

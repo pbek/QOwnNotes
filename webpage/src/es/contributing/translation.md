@@ -10,9 +10,9 @@
 
 **Crowdin** es una popular plataforma de gestión de localización para aplicaciones móviles, web, software de escritorio y activos relacionados.
 
-Puede registrarse en [Crowdin](https://crowdin.com/project/qownnotes/invite) y **traducir** **QOwnNotes** a su idioma con herramientas sencillas.
+Puede registrarse en [Crowdin](https://crowdin.com/project/qownnotes) y **traducir** **QOwnNotes** a su idioma con herramientas sencillas.
 
-**[QOwnNotes en Crowdin](https://crowdin.com/project/qownnotes/invite)**
+**[QOwnNotes en Crowdin](https://crowdin.com/project/qownnotes)**
 
 Simplemente [envíe un mensaje al propietario del proyecto en Crowdin](https://crowdin.com/profile/pbek) o como un [problema de GitHub](https://github.com/pbek/QOwnNotes/issues) si desea traducir QOwnNotes a un nuevo idioma.
 
