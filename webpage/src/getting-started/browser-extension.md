@@ -28,6 +28,18 @@ Allows for clipping from a browser page and managing browser bookmarks across br
 
 Right-click on a webpage or selected text to use the **web-clipper** functionality. There you can also create a new note with a **screenshot** of the current webpage.
 
+::: warning Info
+If the web clipper doesn't work, please check if the QOwnNotes desktop application is
+running, and the Web Companion browser extension is configured with the security token.
+
+Also, make sure you accepted the consent dialog, when you first clicked the extension
+icon in the browser toolbar.
+
+If you are using Firefox, you also need to make sure that you have turned on the optional
+permission `Access your data for all websites` in the *Permission* extension settings,
+otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+:::
+
 ::: tip
 The web clipper is also scriptable! Take a look at the [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) if you want to control what you clip from webpages.
 :::
@@ -38,7 +50,7 @@ The web clipper is also scriptable! Take a look at the [websocketRawDataHook](..
 
 If you want full control over your browser bookmarks and **use them across different browsers and operating systems** then the QOwnNotes browser extension is for you.
 
-By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
+By default, the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
 
 You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
 
