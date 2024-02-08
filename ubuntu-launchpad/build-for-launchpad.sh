@@ -80,6 +80,8 @@ tar -czf $qownnotesSrcDir.orig.tar.gz $qownnotesSrcDir
 
 changelogPath=debian/changelog
 
+# check if the signing key is available
+gpg --list-secret-keys
 
 # build for every Ubuntu release
 for ubuntuRelease in "${UBUNTU_RELEASES[@]}"
