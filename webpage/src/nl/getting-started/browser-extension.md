@@ -29,6 +29,13 @@ Info
 
 Klik met de rechtermuisknop op een webpagina of geselecteerde tekst om de **webclipper** -functionaliteit te gebruiken. Daar kun je ook een nieuwe notitie maken met een **screenshot** van de huidige webpagina.
 
+::: waarschuwing Info Als de webclipper niet werkt, controleer dan of de QOwnNotes-desktopapplicatie wel actief is en de browserextensie Web Companion is geconfigureerd met het beveiligingstoken.
+
+Zorg er ook voor dat u het toestemmingsdialoogvenster hebt geaccepteerd toen u voor het eerst op het extensiepictogram in de browserwerkbalk klikte.
+
+Als u Firefox gebruikt, moet u er ook voor zorgen dat u de optionele toestemming hebt ingeschakeld. ` Toegang tot uw gegevens voor alle websites ` in de * Toestemming * extensieinstellingen, anders krijgt u mogelijk een foutmelding ` TypeError: chrome.tabs.captureVisibleTab is geen functie `.
+:::
+
 ::: tip
 De webclipper is ook scriptbaar! Bekijk de [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) als je wilt bepalen wat je van webpagina's knipt.
 :::
@@ -39,7 +46,7 @@ De webclipper is ook scriptbaar! Bekijk de [websocketRawDataHook](../scripting/h
 
 Als u volledige controle wilt over uw browserbladwijzers en **ze wilt gebruiken in verschillende browsers en besturingssystemen**, dan is de QOwnNotes-browserextensie iets voor u.
 
-Standaard toont de browserextensie alle **links van de huidige notitie** in een pop-up wanneer u op het QOwnNotes-pictogram in uw browser klikt. Deze links krijgen een tag `current`.
+Standaard toont de browserextensie alle ** links van de huidige notitie** in een pop-up wanneer u op het QOwnNotes-pictogram in uw browser klikt. Deze links krijgen een tag `current`.
 
 U kunt ook **uw bladwijzers in notities beheren** met de notitietag `bladwijzers` (wijzigbaar in de instellingen). Deze links kunnen ook tags en een beschrijving hebben die in de browserextensie wordt weergegeven.
 

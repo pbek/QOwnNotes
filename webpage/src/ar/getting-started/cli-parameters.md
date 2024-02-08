@@ -33,16 +33,16 @@ QOwnNotes --session test
 لنسخ تفريغ الإعدادات إلى الحافظة مباشرةً لنشره في [مسألة أو مشكلة على GitHub](https://github.com/pbek/QOwnNotes/issues)، يمكنك استخدام `xclip` أو `xsel` على لينكس، أو `pbcopy` على macOS، أو `clip` على Windows:
 
 ```bash
-# Copy the settings dump to the clipboard with xclip on Linux
+# انسخ تفريغ الإعدادات إلى الحافظة على لينكس باستخدام xclip
 QOwnNotes --dump-settings | xclip -selection clipboard
 
-# Copy the settings dump to the clipboard with xsel on Linux
+# انسخ تفريغ الإعدادات إلى الحافظة على لينكس باستخدام xsel
 QOwnNotes --dump-settings | xsel --clipboard
 
-# Copy the settings dump to the clipboard with pbcopy on macOS
+# انسخ تفريغ الإعدادات إلى الحافظة على ماك باستخدام pbcopy
 QOwnNotes --dump-settings | pbcopy
 
-# Copy the settings dump to the clipboard with clip on Windows
+# انسخ تفريغ الإعدادات إلى الحافظة على ويندوز باستخدام clip
 QOwnNotes --dump-settings | clip
 ```
 :::

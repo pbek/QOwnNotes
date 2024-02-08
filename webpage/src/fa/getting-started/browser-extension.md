@@ -29,6 +29,14 @@ Info
 
 به منظور استفاده کارآمد از **وب کلیپر** بر روی یک صفحه وب یا متن منتخب کلیک راست کنید.  علاوه بر این، می توانید یک یادداشت جدید را با **نماگرفتی** از صفحه وب کنونی ایجاد نمایید.
 
+::: warning
+Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
+
+Also, make sure you accepted the consent dialog, when you first clicked the extension icon in the browser toolbar.
+
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the *Permission* extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+:::
+
 ::: tip
 وب کلیپر هم قابل اسکریپت نویسی می باشد! در صورت تمایل به کنترل آنچه که از صفحات وب برش می زنید، نگاهی به [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) بیندازید.
 :::
@@ -39,7 +47,7 @@ Info
 
 در صورت تمایل به کنترل کامل نشانک های مرورگر خود و **استفاده از آنها در مرورگرها و سیستم عامل های مختلف** می‌توانید از افزونه مرورگر QOwnNotes بهره گیرید.
 
-هنگام کلیک روی شمایل QOwnNotes در مرورگرتان، افزونه مرورگر به صورت پیش فرض همه **پیوند های یادداشت کنونی** را در یک پنجره پاپ آپ نشان می دهد. این پیوندها یک برچسب `کنونی` می گیرند.
+By default, the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. این پیوندها یک برچسب `کنونی` می گیرند.
 
 همچنین می توانید با `نشانک های` برچسب یادداشت (قابل تغییر در تنظیمات) **نشانک های خود را در یادداشت ها مدیریت کنید**. این پیوند ها همچنین برچسب ها و توضیحی دارند که در افزونه مرورگر نشان داده می شود.
 

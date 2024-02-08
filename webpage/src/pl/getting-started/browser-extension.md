@@ -29,6 +29,14 @@ Info
 
 Aby użyć funkcji **wycinania fragmentów stron (web-clipper)**, kliknij prawym przyciskiem myszy stronę sieci Web lub zaznaczony tekst. W tym miejscu możesz też utworzyć nową notatkę ze **zrzutem ekranu** bieżącej strony sieci Web.
 
+::: warning
+Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
+
+Also, make sure you accepted the consent dialog, when you first clicked the extension icon in the browser toolbar.
+
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the *Permission* extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+:::
+
 ::: tip
 Nożyczki sieciowe są również skryptowalne! Spójrz na [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook), jeśli chcesz kontrolować, co wycinasz ze stron internetowych.
 :::
@@ -39,7 +47,7 @@ Nożyczki sieciowe są również skryptowalne! Spójrz na [websocketRawDataHook]
 
 Jeśli chcesz mieć pełną kontrolę nad zakładkami przeglądarki i **używać ich w różnych przeglądarkach i systemach operacyjnych**, rozszerzenie przeglądarki QOwnNotes jest dla Ciebie.
 
-Domyślnie po kliknięciu ikony QOwnNotes w przeglądarce rozszerzenie wyświetli wszystkie **linki dla bieżącej notatki** w wyskakującym okienku. Te linki zostaną otagowane jako `current` (bieżące).
+By default, the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. Te linki zostaną otagowane jako `current` (bieżące).
 
 Możesz też **zarządzać zakładkami w notatkach** za pomocą tagu notatki `bookmarks` (zakładki – można go zmienić w ustawieniach). Linki te również mogą być opatrzone tagami i opisem, które zostaną wyświetlone w rozszerzeniu przeglądarki.
 

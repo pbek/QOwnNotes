@@ -10,7 +10,7 @@
 
 ** کراودین ** یک پلتفرم مدیریت متمرکز سازی محبوب برای برنامه های تلفن همراه، وب، نرم‌افزار رومیزی و متعلقات آنها می باشد
 
-می توانید با ثبت نام در [ کراودین ](https://crowdin.com/project/qownnotes) ** QOwnNotes ** را با ابزارهای ساده به زبان خود ** ترجمه **کنید.
+You can sign up at [Crowdin](https://crowdin.com/project/qownnotes) and **translate** **QOwnNotes** to your language with easy tools.
 
 **[QOwnNotes در کراودین](https://crowdin.com/project/qownnotes)**
 

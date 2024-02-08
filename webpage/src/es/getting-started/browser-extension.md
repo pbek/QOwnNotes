@@ -29,6 +29,14 @@ Información
 
 Haga clic con el botón derecho en una página web o en el texto seleccionado para usar la funcionalidad **web-clipper**. Allí también puede crear una nueva nota con una ** captura de pantalla** de la página web actual.
 
+::: warning
+Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
+
+Además, asegúrese de aceptar el cuadro de diálogo de consentimiento, que se muestra la primera vez que pulsa sobre el icono de la extensión en la barra de herramientas del navegador.
+
+Si utiliza Firefox, también debe cerciorarse de que ha activado el permiso opcional `Acceder a sus datos en todos los sitios web` en la configuración *Permisos* de la extensión, o de lo contrario podría recibir el error `TypeError: chrome.tabs.captureVisibleTab no es una función`.
+:::
+
 ::: tip
 ¡El cortador web también es programable! Eche un vistazo a [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) si desea controlar lo que recorta de las páginas web.
 :::
@@ -39,7 +47,7 @@ Haga clic con el botón derecho en una página web o en el texto seleccionado pa
 
 Si desea tener un control total sobre los marcadores de su navegador y ** usarlos en diferentes navegadores y sistemas operativos **, entonces la extensión del navegador QOwnNotes es para usted.
 
-De forma predeterminada, la extensión del navegador mostrará todos los enlaces ** de la nota actual** en una ventana emergente cuando haga clic en el icono QOwnNotes en su navegador. Estos enlaces obtendrán una etiqueta `current`.
+De manera predeterminada, la extensión del navegador mostrará todos los **enlaces de la nota actual** en una ventana emergente cuando pulse en el icono QOwnNotes en su navegador. Estos enlaces obtendrán una etiqueta `current`.
 
 También puede **administrar sus marcadores en notas** con la etiqueta de nota `marcadores` (modificable en la configuración). Estos enlaces también pueden tener etiquetas y una descripción que se mostrará en la extensión del navegador.
 

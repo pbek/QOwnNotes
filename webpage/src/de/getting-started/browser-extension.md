@@ -29,6 +29,14 @@ Info
 
 Klicken Sie mit der rechten Maustaste auf eine Webseite oder einen ausgewählten Text, um die Funktion **Web-Clipper** zu verwenden. Dort können Sie auch eine neue Notiz mit einem ** Screenshot ** der aktuellen Webseite erstellen.
 
+::: warning
+Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
+
+Also, make sure you accepted the consent dialog, when you first clicked the extension icon in the browser toolbar.
+
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the *Permission* extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+:::
+
 ::: tip
 Der Web Clipper ist auch skriptfähig! Schauen Sie sich den [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) an, wenn Sie steuern möchten, was Sie von Webseiten ausschneiden.
 :::
@@ -39,7 +47,7 @@ Der Web Clipper ist auch skriptfähig! Schauen Sie sich den [websocketRawDataHoo
 
 Wenn Sie die volle Kontrolle über Ihre Browser-Lesezeichen haben und **sie in verschiedenen Browsern und Betriebssystemen verwenden möchten**, dann ist die QOwnNotes-Browsererweiterung genau das Richtige für Sie.
 
-Standardmäßig zeigt die Browsererweiterung alle **Links der aktuellen Notiz** in einem Popup an, wenn Sie in Ihrem Browser auf das QOwnNotes-Symbol klicken. Diese Links erhalten ein `current` Schlagwort.
+By default, the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. Diese Links erhalten ein `current` Schlagwort.
 
 Sie können **Ihre Lesezeichen auch in Notizen** mit dem Notiz-Schlagwort `bookmarks` verwalten (in den Einstellungen änderbar). Diese Links können auch Schlagworte und eine Beschreibung enthalten, die in der Browsererweiterung angezeigt wird.
 

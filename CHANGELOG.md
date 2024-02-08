@@ -11,6 +11,7 @@
   the subfolder and tag list (for [#2949](https://github.com/pbek/QOwnNotes/issues/2949))
   - those menu items are only enabled if their respective panels are visible
   - you can set shortcuts for them in the *Shortcuts settings*
+- added more Dutch, Arabic translation (thank you stephanp, noureddin)
 
 ## 24.1.5
 - an attempt was made to fix the issue that *Shortcuts settings* table columns

@@ -1221,7 +1221,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopie</translation>
+<translation>Kopiëren</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -2305,6 +2305,22 @@
 <message>
 <source>Copy absolute path of note</source>
 <translation>Absoluut pad van notitie kopiëren</translation>
+</message>
+<message>
+<source>Move up in subfolder list</source>
+<translation>Omhoog verplaatsen in submappenlijst</translation>
+</message>
+<message>
+<source>Move down in subfolder list</source>
+<translation>Omlaag verplaatsen in submappenlijst</translation>
+</message>
+<message>
+<source>Move up in tag list</source>
+<translation>Omhoog verplaatsen in labelslijst</translation>
+</message>
+<message>
+<source>Move down in tag list</source>
+<translation>Omlaag verplaatsen in labelslijst</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>

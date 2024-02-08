@@ -2,7 +2,7 @@
 
 ## مستودع مستخدمي آرتش (AUR)
 
-Alternatively there also is an official package for QOwnNotes on AUR, it is called `qownnotes`.
+بدلا من استخدام pacman، توجد أيضا حزمة رسمية من QOwnNotes في AUR؛ تسمى `qownnotes`.
 
 ستجدها هنا: [QOwnNotes على AUR](https://aur.archlinux.org/packages/qownnotes)
 

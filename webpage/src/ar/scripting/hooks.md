@@ -42,7 +42,7 @@ noteDoubleClickedHook (خطاف النقر المزدوج على ملاحظة)
 /**
  * تُنادى هذه الدالة عند النقر المزدوج على ملاحظة
  *
- * @param {NoteApi} note - the note object that was clicked
+ * @param {NoteApi} note
  *       كائن الملاحظة الخاص بالملاحظة التي نقر المستخدم عليها
  */
 function noteDoubleClickedHook(note);
@@ -240,18 +240,22 @@ function noteToMarkdownHtmlHook(note, html, forExport);
 
 برجاء الاطلاع على توثيق [الجزء المدعوم من HTML](http://doc.qt.io/qt-5/richtext-html-subset.html) لقائمة بجميع خصائص CSS المدعومة.
 
-encryptionHook (خطاف التشفير)
+encryptionHook (خطاف التعمية)
 --------------
 
 ### نداء الدالة ومُعامِلاتها
 ```js
 /**
- * This function is called when text has to be encrypted or decrypted
+ * تُنادى هذه الدالة عند الاحتياج إلى تعمية نص أو فك تعميته
  *
- * @param text string the text to encrypt or decrypt
- * @param password string the password
+ * @param text
+ *       سلسلة نصية: النص الذي سيُعمّى أو ستُفك تعميته
+ * @param password
+ *       سلسلة نصية: كلمة المرور
  * @param decrypt bool if false encryption is demanded, if true decryption is demanded
- * @return the encrypted decrypted text
+ *       قيمة منطقية: «صادق» إذا كان المطلوب فك التعمية، و«كاذب» إذا كان المطلوب التعمية
+ * @return
+ *       سلسلة نصية: النص المعّمى أو المفكوكة تعميته
  */
 function encryptionHook(text, password, decrypt);
 ```

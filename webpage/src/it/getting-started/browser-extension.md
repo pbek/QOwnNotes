@@ -29,6 +29,14 @@ Info
 
 Fai clic con il pulsante destro del mouse su una pagina web o sul testo selezionato per usare la funzionalità **web-clipper**. Lì puoi anche creare una nuova nota con uno **screenshot** della pagina web corrente.
 
+::: warning
+Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
+
+Also, make sure you accepted the consent dialog, when you first clicked the extension icon in the browser toolbar.
+
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the *Permission* extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+:::
+
 ::: tip
 Il web clipper è anche scriptabile! Dai un'occhiata a [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) se desideri controllare ciò che ritagli dalle pagine web.
 :::
@@ -39,7 +47,7 @@ Il web clipper è anche scriptabile! Dai un'occhiata a [websocketRawDataHook](..
 
 Se vuoi il pieno controllo dei tuoi segnalibri del browser e **usarli tra diversi browser e sistemi operativi**, allora l'estensione del browser di QOwnNotes fa per te.
 
-Per impostazione predefinita, l'estensione del browser mostrerà tutti i **collegamenti della nota corrente** in un popup quando fai clic sull'icona QOwnNotes nel tuo browser. Questi collegamenti avranno l'etichetta `corrente`.
+By default, the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. Questi collegamenti avranno l'etichetta `corrente`.
 
 Puoi anche **gestire i tuoi segnalibri nelle note** con l'etichetta `segnalibri` (modificabile nelle impostazioni). Questi collegamenti possono anche avere etichette e una descrizione che verrà mostrata nell'estensione del browser.
 

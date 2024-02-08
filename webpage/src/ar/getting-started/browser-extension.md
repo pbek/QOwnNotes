@@ -28,6 +28,14 @@ image: /img/bookmarks.png
 
 انقر بزر الفأرة الأيمن على صفحة ويب أو حدد نصًّا حتى تستخدم وظيفة **مقص الويب**. يمكنك كذلك إنشاء ملاحظة جديدة **بلقطة شاشة** من صفحة الويب الحالية.
 
+::: warning
+Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
+
+Also, make sure you accepted the consent dialog, when you first clicked the extension icon in the browser toolbar.
+
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the *Permission* extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+:::
+
 ::: tip
 مقص الويب قابل للبرمجة أيضا! ألقِ نظرة على [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) إذا أردت التحكم في ما تقصه من صفحات الويب.
 :::
@@ -38,7 +46,7 @@ image: /img/bookmarks.png
 
 إذا أردت تحكمًا كاملًا في إشارات المتصفح المرجعية الخاصة بك وتريد **استخدامها عبر متصفحات وأنظمة تشغيل مختلفة** فإن إضافة متصفح QOwnNotes من أجلك.
 
-ستُظهر إضافة المتصفح بشكل افتراضي جميع **روابط الملاحظة الحالية** في نافذة منبثقة عندما تضغط على أيقونة QOwnNotes في متصفحك. سيكون لهذه الروابط الوسم `current`.
+ستُظهر إضافة المتصفح مبدئيا جميع **روابط الملاحظة الحالية** في نافذة منبثقة عندما تضغط على أيقونة QOwnNotes في متصفحك. سيكون لهذه الروابط الوسم `current`.
 
 يمكنك أيضا **إدارة إشاراتك المرجعية في ملاحظات** ذات الوسم `bookmarks` (والذي يمكن تغييره في الإعدادات). يمكن أن تعطى لهذه الروابط وسومًا ووصفًا ليظهروا في إضافة المتصفح.
 

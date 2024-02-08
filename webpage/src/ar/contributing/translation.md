@@ -10,7 +10,7 @@
 
 **Crowdin** هي منصة شهيرة لإدارة التوطينات لتطبيقات المحمول والويب والحواسيب والمحتويات المرتبطة.
 
-تستطيع التسجيل في [Crowdin](https://crowdin.com/project/qownnotes) و **ترجمة** **QOwnNotes** إلى لغتك بأدوات سهلة
+يمكنك التسجيل في [Crowdin](https://crowdin.com/project/qownnotes) و**ترجمة** **QOwnNotes** إلى لغتك باستخدام أدوات سهلة.
 
 **[QOwnNotes على Crowdin](https://crowdin.com/project/qownnotes)**
 

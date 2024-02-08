@@ -10,7 +10,7 @@ Jak mogę pomóc w tłumaczeniu QOwnNotes?
 
 **Crowdin** to popularna platforma do zarządzania procesem lokalizacji takich zasobów, jak aplikacje mobilne, zasoby sieci Web, oprogramowanie komputerowe i tym podobne.
 
-Możesz zarejestrować się na stronie [Crowdin](https://crowdin.com/project/qownnotes) i **przetłumaczyć** **QOwnNotes** na swój język za pomocą prostych narzędzi.
+You can sign up at [Crowdin](https://crowdin.com/project/qownnotes) and **translate** **QOwnNotes** to your language with easy tools.
 
 **[QOwnNotes w Crowdin](https://crowdin.com/project/qownnotes)**
 

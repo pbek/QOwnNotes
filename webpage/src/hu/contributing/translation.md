@@ -10,7 +10,7 @@ Hogyan segíthetek a QOwnNotes fordításában?
 
 A **Crowdin** egy népszerű Lokalizációkezelési felületen a mobilalkalmazásokhoz, webes, asztali szoftverekhez és kapcsolódó eszközökhez.
 
-Regisztrálhat a [Crowdin](https://crowdin.com/project/qownnotes) oldalon, és **lefordíthatja** **QOwnNotes** az Ön nyelvére egyszerű eszközökkel.
+You can sign up at [Crowdin](https://crowdin.com/project/qownnotes) and **translate** **QOwnNotes** to your language with easy tools.
 
 **[QOwnNotes a Crowdinról](https://crowdin.com/project/qownnotes)**
 

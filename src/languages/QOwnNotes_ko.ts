@@ -2302,6 +2302,22 @@ File: QOwnNotes_en.ts</translation>
 <translation>절대 노트 경로 복사</translation>
 </message>
 <message>
+<source>Move up in subfolder list</source>
+<translation type="unfinished">Move up in subfolder list</translation>
+</message>
+<message>
+<source>Move down in subfolder list</source>
+<translation type="unfinished">Move down in subfolder list</translation>
+</message>
+<message>
+<source>Move up in tag list</source>
+<translation type="unfinished">Move up in tag list</translation>
+</message>
+<message>
+<source>Move down in tag list</source>
+<translation type="unfinished">Move down in tag list</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>세로 미리보기 레이아웃 사용(&amp;V)</translation>
 </message>

@@ -2308,6 +2308,22 @@
 <translation>Copiar la ruta absoluta de la nota</translation>
 </message>
 <message>
+<source>Move up in subfolder list</source>
+<translation type="unfinished">Move up in subfolder list</translation>
+</message>
+<message>
+<source>Move down in subfolder list</source>
+<translation type="unfinished">Move down in subfolder list</translation>
+</message>
+<message>
+<source>Move up in tag list</source>
+<translation type="unfinished">Move up in tag list</translation>
+</message>
+<message>
+<source>Move down in tag list</source>
+<translation type="unfinished">Move down in tag list</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Plantilla de vista &amp;vertical</translation>
 </message>

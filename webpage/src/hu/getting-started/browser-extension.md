@@ -29,6 +29,14 @@ Információ
 
 Kattintson a jobb gombbal egy weboldalra vagy a kiválasztott szövegre a ** web-clipper** funkció használatához. Itt új jegyzetet is létrehozhat az aktuális weboldal **képernyőkép** jével.
 
+::: warning
+Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
+
+Also, make sure you accepted the consent dialog, when you first clicked the extension icon in the browser toolbar.
+
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the *Permission* extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+:::
+
 ::: tip
 A webleíró is szkriptelhető! Vessen egy pillantást a [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) oldalra, ha szeretné szabályozni, hogy mit is klipel a weboldalakról.
 :::
@@ -39,7 +47,7 @@ A webleíró is szkriptelhető! Vessen egy pillantást a [websocketRawDataHook](
 
 Ha teljes irányítást szeretne a böngésző könyvjelzői felett, és **különböző böngészőkben és operációs rendszerekben használni szeretné őket**, akkor a QOwnNotes böngészőbővítmény az Ön számára készült.
 
-Alapértelmezés szerint a böngészőbővítmény egy felugró ablakban megjeleníti az aktuális **jegyzet összes linkjét**, amikor a böngészőben a QOwnNotes ikonra kattint. Ezek a linkek egy `current` címkét kapnak.
+By default, the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. Ezek a linkek egy `current` címkét kapnak.
 
 A ** könyvjelzőket jegyzetekben is kezelheti** a `bookmarks` (a beállításokban módosítható) jegyzetcímkével. Ezek a linkek címkékkel és leírással is rendelkezhetnek, amelyek a böngésző kiterjesztésében jelennek meg.
 

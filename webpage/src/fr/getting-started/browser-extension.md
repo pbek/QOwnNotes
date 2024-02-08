@@ -30,6 +30,14 @@ QOwnNotes doit être en cours d'exécution pour que l'extension de navigateur We
 
 Cliquez avec le bouton droit sur une page Web ou sur du texte sélectionné pour utiliser la fonctionnalité **web-clipper**. Vous pouvez ici également créer une nouvelle note avec une **capture d'écran** de la page Web actuelle.
 
+::: warning
+Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
+
+Also, make sure you accepted the consent dialog, when you first clicked the extension icon in the browser toolbar.
+
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the *Permission* extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+:::
+
 ::: tip
 Le Web Clipper est également scriptable ! Jetez un œil à [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) si vous souhaitez contrôler ce que vous récupérez dans les pages Web.
 :::
@@ -40,7 +48,7 @@ Le Web Clipper est également scriptable ! Jetez un œil à [websocketRawDataHoo
 
 Si vous souhaitez un contrôle total sur les favoris de votre navigateur et **les utiliser sur différents navigateurs et systèmes d'exploitation**, l'extension de navigateur QOwnNotes est faite pour vous.
 
-Par défaut, l'extension de navigateur affichera tous les **liens de la note actuelle** dans une fenêtre contextuelle lorsque vous cliquez sur l'icône QOwnNotes dans votre navigateur. Ces liens seront étiquettés `current`.
+By default, the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. Ces liens seront étiquettés `current`.
 
 Vous pouvez également **gérer vos favoris dans des notes** avec l'étiquette de note `bookmarks` (personnalisable dans les paramètres). Ces liens peuvent également avoir des étiquettes et une description qui seront affichées dans l'extension de navigateur.
 

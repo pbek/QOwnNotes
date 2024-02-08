@@ -1245,7 +1245,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>نسخة</translation>
+<translation>انسخ</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -2350,6 +2350,22 @@
 <translation>انسخ مسار الملاحظة المطلق</translation>
 </message>
 <message>
+<source>Move up in subfolder list</source>
+<translation>انتقل لأعلى في قائمة المجلدات الفرعية</translation>
+</message>
+<message>
+<source>Move down in subfolder list</source>
+<translation>انتقل لأسفل في قائمة المجلدات الفرعية</translation>
+</message>
+<message>
+<source>Move up in tag list</source>
+<translation>انتقل لأعلى في قائمة الوسوم</translation>
+</message>
+<message>
+<source>Move down in tag list</source>
+<translation>انتقل لأسفل في قائمة الوسوم</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>استخدم مخطط المعاينة ال&amp;رأسي</translation>
 </message>
@@ -2403,11 +2419,11 @@
 </message>
 <message>
 <source>Move down in note list</source>
-<translation>انتقل لأسفل في قائمة الملاحظة</translation>
+<translation>انتقل لأسفل في قائمة الملاحظات</translation>
 </message>
 <message>
 <source>Move up in note list</source>
-<translation>انتقل لأعلى في قائمة الملاحظة</translation>
+<translation>انتقل لأعلى في قائمة الملاحظات</translation>
 </message>
 <message>
 <source>Insert headline from note filename</source>
@@ -5826,7 +5842,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Note list panel</source>
-<translation>لوحة قائمة الملاحظة</translation>
+<translation>لوحة قائمة الملاحظات</translation>
 </message>
 <message>
 <source>Show notes in the note list with preview</source>

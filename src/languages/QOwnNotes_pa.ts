@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>ਕਾੱਪੀ</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -2311,6 +2311,22 @@
 <message>
 <source>Copy absolute path of note</source>
 <translation type="unfinished">Copy absolute path of note</translation>
+</message>
+<message>
+<source>Move up in subfolder list</source>
+<translation type="unfinished">Move up in subfolder list</translation>
+</message>
+<message>
+<source>Move down in subfolder list</source>
+<translation type="unfinished">Move down in subfolder list</translation>
+</message>
+<message>
+<source>Move up in tag list</source>
+<translation type="unfinished">Move up in tag list</translation>
+</message>
+<message>
+<source>Move down in tag list</source>
+<translation type="unfinished">Move down in tag list</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
