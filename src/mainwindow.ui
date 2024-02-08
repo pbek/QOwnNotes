@@ -820,9 +820,12 @@
            </property>
            <property name="html">
             <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="acceptRichText">
@@ -859,7 +862,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1383</width>
-     <height>34</height>
+     <height>31</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuQOwnNotes">
@@ -899,8 +902,7 @@ p, li { white-space: pre-wrap; }
       <string>Import</string>
      </property>
      <property name="icon">
-      <iconset theme="document-import">
-       <normaloff>.</normaloff>.</iconset>
+      <iconset theme="document-import"/>
      </property>
      <addaction name="actionImport_notes_from_Evernote"/>
      <addaction name="actionImport_notes_from_Joplin"/>
@@ -921,6 +923,10 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionNext_note"/>
      <addaction name="actionPrevious_note_tab"/>
      <addaction name="actionNext_note_tab"/>
+     <addaction name="actionMove_up_in_subfolder_list"/>
+     <addaction name="actionMove_down_in_subfolder_list"/>
+     <addaction name="actionMove_up_in_tag_list"/>
+     <addaction name="actionMove_down_in_tag_list"/>
      <addaction name="actionClose_current_note_tab"/>
      <addaction name="actionToggle_note_stickiness_of_current_tab"/>
     </widget>
@@ -2721,6 +2727,42 @@ p, li { white-space: pre-wrap; }
     <string>Copy absolute path of note</string>
    </property>
   </action>
+  <action name="actionMove_up_in_subfolder_list">
+   <property name="icon">
+    <iconset theme="go-up" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Move up in subfolder list</string>
+   </property>
+  </action>
+  <action name="actionMove_down_in_subfolder_list">
+   <property name="icon">
+    <iconset theme="go-down" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Move down in subfolder list</string>
+   </property>
+  </action>
+  <action name="actionMove_up_in_tag_list">
+   <property name="icon">
+    <iconset theme="go-up" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Move up in tag list</string>
+   </property>
+  </action>
+  <action name="actionMove_down_in_tag_list">
+   <property name="icon">
+    <iconset theme="go-down" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Move down in tag list</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -2774,9 +2816,9 @@ p, li { white-space: pre-wrap; }
   <tabstop>noteTextView</tabstop>
  </tabstops>
  <resources>
+  <include location="images.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
-  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -7,6 +7,10 @@
     - also both the Chrome and Firefox extensions are now using manifest version 3
     - the minimum version for Firefox was raised to 109, because of manifest version 3
     - more translations were added
+- there are now new menu items in the *Note / Navigation* menu to move up/down in
+  the subfolder and tag list (for [#2949](https://github.com/pbek/QOwnNotes/issues/2949))
+  - those menu items are only enabled if their respective panels are visible
+  - you can set shortcuts for them in the *Shortcuts settings*
 
 ## 24.1.5
 - an attempt was made to fix the issue that *Shortcuts settings* table columns

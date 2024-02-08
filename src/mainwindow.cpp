@@ -11014,6 +11014,11 @@ void MainWindow::updateJumpToActionsAvailability() {
     ui->actionJump_to_note_list_panel->setEnabled(ui->notesListFrame->isVisible());
     ui->actionJump_to_note_subfolder_panel->setEnabled(ui->noteSubFolderFrame->isVisible());
     ui->actionJump_to_tags_panel->setEnabled(ui->tagFrame->isVisible());
+
+    ui->actionMove_up_in_subfolder_list->setEnabled(ui->noteSubFolderFrame->isVisible());
+    ui->actionMove_down_in_subfolder_list->setEnabled(ui->noteSubFolderFrame->isVisible());
+    ui->actionMove_up_in_tag_list->setEnabled(ui->tagFrame->isVisible());
+    ui->actionMove_down_in_tag_list->setEnabled(ui->tagFrame->isVisible());
 }
 
 void MainWindow::on_actionShow_local_trash_triggered() {
@@ -11766,4 +11771,24 @@ void MainWindow::on_actionCopy_path_to_note_to_clipboard_triggered() {
     QClipboard *clipboard = QApplication::clipboard();
     clipboard->setText(path);
     showStatusBarMessage(tr("Note path '%1' was copied to the clipboard").arg(path), 3000);
+}
+
+void MainWindow::on_actionMove_up_in_subfolder_list_triggered() {
+    auto *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Up, Qt::NoModifier);
+    QApplication::postEvent(ui->noteSubFolderTreeWidget, event);
+}
+
+void MainWindow::on_actionMove_down_in_subfolder_list_triggered() {
+    auto *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Down, Qt::NoModifier);
+    QApplication::postEvent(ui->noteSubFolderTreeWidget, event);
+}
+
+void MainWindow::on_actionMove_up_in_tag_list_triggered() {
+    auto *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Up, Qt::NoModifier);
+    QApplication::postEvent(ui->tagTreeWidget, event);
+}
+
+void MainWindow::on_actionMove_down_in_tag_list_triggered() {
+    auto *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Down, Qt::NoModifier);
+    QApplication::postEvent(ui->tagTreeWidget, event);
 }
