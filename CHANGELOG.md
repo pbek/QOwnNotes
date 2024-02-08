@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 24.2.0
+- the **QOwnNotes web-companion browser extension** was completely rewritten in
+  **Vue.js 3 with Vite using QUASAR with BEX** (for [#56](https://github.com/qownnotes/web-companion/issues/56))
+    - more information about the browser extension at [web-companion](https://www.qownnotes.org/getting-started/browser-extension.html)
+    - also both the Chrome and Firefox extensions are now using manifest version 3
+    - the minimum version for Firefox was raised to 109, because of manifest version 3
+    - more translations were added
+
 ## 24.1.5
 - an attempt was made to fix the issue that *Shortcuts settings* table columns
   didn't get resized to fit the containing text on some computers
