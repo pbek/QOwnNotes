@@ -18,13 +18,15 @@ Bookmark::Bookmark() {
     name = QString();
     tags = QStringList();
     description = QString();
+    markdown = QString();
 }
 
-Bookmark::Bookmark(QString url, QString name, QStringList tagList, QString description) {
+Bookmark::Bookmark(QString url, QString name, QStringList tagList, QString description, QString markdown) {
     this->url = std::move(url);
     this->name = std::move(name);
     this->tags = std::move(tagList);
     this->description = std::move(description);
+    this->markdown = std::move(markdown);
 }
 
 QJsonObject Bookmark::jsonObject() const {
@@ -33,12 +35,14 @@ QJsonObject Bookmark::jsonObject() const {
     bookmarkObject.insert(QStringLiteral("url"), QJsonValue::fromVariant(url));
     bookmarkObject.insert(QStringLiteral("tags"), QJsonValue::fromVariant(tags));
     bookmarkObject.insert(QStringLiteral("description"), QJsonValue::fromVariant(description));
+    bookmarkObject.insert(QStringLiteral("markdown"), QJsonValue::fromVariant(markdown));
+
     return bookmarkObject;
 }
 
 QDebug operator<<(QDebug dbg, const Bookmark &bookmark) {
     dbg.nospace() << "Bookmark: <name>" << bookmark.name << " <url>" << bookmark.url << " <tags>"
-                  << bookmark.tags << " <description>" << bookmark.description;
+                  << bookmark.tags << " <description>" << bookmark.description << " <markdown>" << bookmark.markdown;
     return dbg.space();
 }
 
@@ -62,6 +66,7 @@ QVector<Bookmark> Bookmark::parseBookmarks(const QString &text, bool withBasicUr
 
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
+        QString markdown = match.captured(0);
         QString name = match.captured(1);
         QString url = match.captured(2);
         QString additionalText = match.captured(3);
@@ -89,7 +94,7 @@ QVector<Bookmark> Bookmark::parseBookmarks(const QString &text, bool withBasicUr
             tags << QStringLiteral("current");
         }
 
-        auto bookmark = Bookmark(url, name, tags, description);
+        auto bookmark = Bookmark(url, name, tags, description, markdown);
         bookmark.mergeInList(bookmarks);
     }
 

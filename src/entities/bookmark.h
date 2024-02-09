@@ -13,7 +13,7 @@ class Bookmark {
    public:
     Bookmark();
     explicit Bookmark(QString url, QString name = QString(), QStringList tagList = QStringList(),
-                      QString description = QString());
+                      QString description = QString(), QString markdown = QString());
     friend QDebug operator<<(QDebug dbg, const Bookmark &bookmark);
     QJsonObject jsonObject() const;
     static QVector<Bookmark> parseBookmarks(const QString &text, bool withBasicUrls = false);
@@ -32,4 +32,5 @@ class Bookmark {
     QString url;
     QStringList tags;
     QString description;
+    QString markdown;
 };

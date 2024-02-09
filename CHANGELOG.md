@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 24.2.1
+- support was added for the new **QOwnNotes Web Companion browser extension** 2024.2.2
+  to allow deleting of bookmarks (for [#57](https://github.com/qownnotes/web-companion/issues/57))
+- added more Croatian, Arabic translation (thank you milotype, noureddin)
+
 ## 24.2.0
 - the **QOwnNotes web-companion browser extension** was completely rewritten in
   **Vue.js 3 with Vite using QUASAR with BEX** (for [#56](https://github.com/qownnotes/web-companion/issues/56))

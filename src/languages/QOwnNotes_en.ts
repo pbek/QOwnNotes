@@ -9605,8 +9605,16 @@ This cannot be undone!</source>
             <numerusform></numerusform>
         </translation>
     </message>
+    <message numerus="yes">
+        <location filename="../services/websocketserverservice.cpp" line="273"/>
+        <source>Bookmark deleted from %n notes(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="437"/>
+        <location filename="../services/websocketserverservice.cpp" line="490"/>
         <source>%1 was disconnected from QOwnNotes server</source>
         <translation type="unfinished"></translation>
     </message>

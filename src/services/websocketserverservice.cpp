@@ -261,6 +261,21 @@ void WebSocketServerService::processMessage(const QString &message) {
 
         pSender->sendTextMessage(jsonText);
 #endif
+    } else if (type == QLatin1String("deleteBookmark")) {
+        MainWindow *mainWindow = MainWindow::instance();
+        if (mainWindow == nullptr) {
+            return;
+        }
+
+        const int noteCount = deleteBookmark(jsonObject);
+
+        pSender->sendTextMessage(
+            flashMessageJsonText(tr("Bookmark deleted from %n notes(s)", "", noteCount)));
+
+        // Reload current note in case the bookmark was deleted from the current note
+        mainWindow->reloadCurrentNoteByNoteId(true);
+#ifndef INTEGRATION_TESTS
+#endif
     } else {
         QJsonObject resultObject;
         resultObject.insert(QStringLiteral("type"), QJsonValue::fromVariant("unknownMessage"));
@@ -316,6 +331,44 @@ QJsonArray WebSocketServerService::createBookmarks(const QJsonObject &jsonObject
     }
 
     return bookmarkList;
+}
+
+/**
+ * Deletes a bookmark (as Markdown) from all notes tagged as bookmarks
+ *
+ * @param jsonObject
+ * @return
+ */
+int WebSocketServerService::deleteBookmark(const QJsonObject &jsonObject) {
+    // Get the "data" object first
+    QJsonObject dataObject = jsonObject.value("data").toObject();
+
+    // Get the "markdown" attribute from the "data" object
+    QString markdown = dataObject.value("markdown").toString().trimmed();
+
+    if (markdown.isEmpty()) {
+        return 0;
+    }
+
+    // Search for the Markdown text in all notes with the "bookmarks" tag
+    Tag tag = Tag::fetchByName(getBookmarksTag());
+    QVector<Note> noteList = tag.fetchAllLinkedNotes();
+    int noteCount = 0;
+
+    for (Note &note : noteList) {
+        auto noteText = note.getNoteText();
+        if (noteText.contains(markdown)) {
+            // Remove the bookmark from the note (try "\n" and without "\n")
+            noteText.remove(markdown + QStringLiteral("\n"));
+            noteText.remove(markdown);
+            note.setNoteText(noteText);
+            note.store();
+            note.storeNoteTextFileToDisk();
+            noteCount++;
+        }
+    }
+
+    return noteCount;
 }
 
 QString WebSocketServerService::getBookmarksJsonText() {
