@@ -7637,6 +7637,13 @@ This cannot be undone!</translation>
 <numerusform>%n bookmark(s) created</numerusform>
 </translation>
 </message>
+<message numerus="yes">
+<source>Bookmark deleted from %n notes(s)</source>
+<translation type="unfinished">
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+</translation>
+</message>
 <message>
 <source>%1 was disconnected from QOwnNotes server</source>
 <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>

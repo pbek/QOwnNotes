@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kwafa</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -6742,7 +6742,7 @@ Bayanan kula ku za su zauna lafiya!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7657,6 +7657,13 @@ Ba za a sake yin wannan ba!</translation>
 <translation>
 <numerusform>%n alamar shafi halitta</numerusform>
 <numerusform>%n alamar shafi halitta</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Bookmark deleted from %n notes(s)</source>
+<translation type="unfinished">
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
 </translation>
 </message>
 <message>

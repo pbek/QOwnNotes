@@ -626,7 +626,7 @@
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+<translation>Pronađen je neispravni XML u bilješci &lt;b&gt;%1&lt;/b&gt;! Uvoz će se možda ovdje prekinuti.</translation>
 </message>
 <message>
 <source>Basic attributes</source>
@@ -1229,7 +1229,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopiraj</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1897,11 +1897,11 @@
 </message>
 <message>
 <source>&amp;Setup note folders / subfolders</source>
-<translation type="unfinished">&amp;Setup note folders / subfolders</translation>
+<translation>&amp;Postavi mape/podmape za bilješke</translation>
 </message>
 <message>
 <source>Setup note folders / subfolders</source>
-<translation type="unfinished">Setup note folders / subfolders</translation>
+<translation>Postavi mape/podmape za bilješke</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2306,7 +2306,7 @@
 </message>
 <message>
 <source>&amp;Load Todo List items</source>
-<translation type="unfinished">&amp;Load Todo List items</translation>
+<translation>&amp;Učitaj stavke popisa zadataka</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
@@ -2314,7 +2314,7 @@
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Kopiraj apsolutnu putanju bilješke</translation>
 </message>
 <message>
 <source>Move up in subfolder list</source>
@@ -2735,7 +2735,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>Putanja bilješke „%1” je kopirana u međuspremnik</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3479,11 +3479,11 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Error while loading boards</source>
-<translation type="unfinished">Error while loading boards</translation>
+<translation>Greška tijekom učitavanja ploča</translation>
 </message>
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
+<translation>Učitavanje ploča nije uspjelo s kodom stanja %1 i porukom: %2</translation>
 </message>
 </context>
 <context>
@@ -5662,7 +5662,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Copy security token to clipboard</source>
-<translation>Kopirajte sigurnosni token u međuspremnik</translation>
+<translation>Kopiraj sigurnosni token u međuspremnik</translation>
 </message>
 <message>
 <source>Generate new security token</source>
@@ -6422,7 +6422,7 @@ Poruka o pogrešci veze: </translation>
 </message>
 <message>
 <source>Board Id: %1</source>
-<translation type="unfinished">Board Id: %1</translation>
+<translation>ID ploče: %1</translation>
 </message>
 <message>
 <source>Stack Id: %1</source>
@@ -7690,6 +7690,14 @@ This cannot be undone!</source>
 <numerusform>Izrađeno je %n oznaka</numerusform>
 <numerusform>Izrađeno je %n oznaka</numerusform>
 <numerusform>Izrađeno je %n oznaka</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Bookmark deleted from %n notes(s)</source>
+<translation type="unfinished">
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
 </translation>
 </message>
 <message>

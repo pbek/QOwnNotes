@@ -1229,7 +1229,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopiraj</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -6777,7 +6777,7 @@ Bilješke će ostati netaknute!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7699,6 +7699,14 @@ Ovo se ne može poništiti!</translation>
 <numerusform>%n adresa stvorio</numerusform>
 <numerusform>%n oznake su stvorene</numerusform>
 <numerusform>%n oznake su stvorene</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Bookmark deleted from %n notes(s)</source>
+<translation type="unfinished">
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
 </translation>
 </message>
 <message>

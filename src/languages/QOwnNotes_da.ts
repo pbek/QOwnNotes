@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopi</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -6737,7 +6737,7 @@ Dine noter forbliver intakte!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7656,6 +7656,13 @@ Dette kan ikke fortrydes!</translation>
 <translation>
 <numerusform>%n bogmærke oprettet</numerusform>
 <numerusform>%n bogmærker oprettet</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Bookmark deleted from %n notes(s)</source>
+<translation type="unfinished">
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
 </translation>
 </message>
 <message>

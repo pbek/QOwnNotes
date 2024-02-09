@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Copiar</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -7628,6 +7628,13 @@ This cannot be undone!</source>
 <translation>
 <numerusform>%n marcador creado</numerusform>
 <numerusform>%n marcadores creados</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Bookmark deleted from %n notes(s)</source>
+<translation type="unfinished">
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
 </translation>
 </message>
 <message>

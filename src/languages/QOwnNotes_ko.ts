@@ -1222,7 +1222,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>복사</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -7597,6 +7597,12 @@ This cannot be undone!</source>
 <source>%n bookmark(s) created</source>
 <translation>
 <numerusform>%n개의 북마크가 생성되었습니다</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Bookmark deleted from %n notes(s)</source>
+<translation type="unfinished">
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
 </translation>
 </message>
 <message>

@@ -1245,7 +1245,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>انسخ</translation>
+<translation>نسخة</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -7849,6 +7849,17 @@ This cannot be undone!</source>
 <numerusform>تم إنشاء %n من الإشارات المرجعية</numerusform>
 <numerusform>تم إنشاء %n من الإشارات المرجعية</numerusform>
 <numerusform>تم إنشاء %n من الإشارات المرجعية</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Bookmark deleted from %n notes(s)</source>
+<translation>
+<numerusform>حُذِفت الإشارة المرجعية من %n ملاحظة</numerusform>
+<numerusform>حُذِفت الإشارة المرجعية من %n ملاحظة</numerusform>
+<numerusform>حُذِفت الإشارة المرجعية من %n ملاحظتين</numerusform>
+<numerusform>حُذِفت الإشارة المرجعية من %n ملاحظات</numerusform>
+<numerusform>حُذِفت الإشارة المرجعية من %n ملاحظة</numerusform>
+<numerusform>حُذِفت الإشارة المرجعية من %n ملاحظة</numerusform>
 </translation>
 </message>
 <message>

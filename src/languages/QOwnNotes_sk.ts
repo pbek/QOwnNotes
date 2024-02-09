@@ -1234,7 +1234,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kópia</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -6834,7 +6834,7 @@ Vaše poznámky zostanú nedotknuté!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7755,6 +7755,15 @@ To nie je možné vrátiť späť!</translation>
 <numerusform>Počet vytvorených záložiek: %n</numerusform>
 <numerusform>Počet vytvorených záložiek: %n</numerusform>
 <numerusform>Počet vytvorených záložiek: %n</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Bookmark deleted from %n notes(s)</source>
+<translation type="unfinished">
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n notes(s)</numerusform>
 </translation>
 </message>
 <message>
