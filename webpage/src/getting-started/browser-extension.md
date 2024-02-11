@@ -21,6 +21,7 @@ Allows for clipping from a browser page and managing browser bookmarks across br
     - The first time you click on the QOwnNotes browser extension icon you will receive a dialog box with a security token. Copy the token.
     - Go to your browser's extension management location. Click into the QOwnNotes extension details.
     - Paste the token into the Security Token field.
+3. To use the private mode, you need to allow the extension to run in private windows in the extension settings.
 
 ## Web clipper
 
