@@ -22,6 +22,7 @@ Információ
     - Amikor először kattint a QOwnNotes böngészőbővítmény ikonjára, megjelenik egy párbeszédpanel egy biztonsági tokennel. Másolja a tokent.
     - Nyissa meg a böngésző bővítménykezelési helyét. Kattintson a QOwnNotes bővítmény részleteire.
     - Illessze be a tokent a Biztonsági Token mezőbe.
+3. To use the private mode, you need to allow the extension to run in private windows in the extension settings.
 
 ## Web clipper
 

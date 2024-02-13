@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 24.2.2
+- added more Croatian, Korean, Swedish, Dutch, Italian translation (thank you
+  milotype, venusgirl, dzenan, stephanp, gryp2)
 ## 24.2.1
 - support was added for the new **QOwnNotes Web Companion browser extension** 2024.2.2
   to allow deleting of bookmarks (for [#57](https://github.com/qownnotes/web-companion/issues/57))

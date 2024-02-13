@@ -22,6 +22,7 @@ Info
     - De eerste keer dat u op het QOwnNotes-pictogram voor de browserextensie klikt, ontvangt u een dialoogvenster met een beveiligingstoken. Kopieer de token.
     - Ga naar de locatie voor extensiebeheer van uw browser. Klik in de details van de QOwnNotes-extensie.
     - Plak het token in het veld Beveiligingstoken.
+3. Om de privémodus te gebruiken, moet u in de extensie-instellingen toestemming verlenen om de extensie in privévensters te laten draaien.
 
 ## Webclipper
 

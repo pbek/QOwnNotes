@@ -21,6 +21,7 @@ image: /img/bookmarks.png
     - المرة الأولى التي ستنقر فيها على أيقونة إضافة المتصفح QOwnNotes، سيظهر لك صندوق حواري فيه رمز أمان. انسخ الرمز.
     - اذهب إلى مكان إدارة الإضافات في متصفحك. انقر على تفاصيل إضافة QOwnNotes.
     - ألصق الرمز إلى خانة رمز الأمان.
+3. لاستعمال الوضع الخصوصي، عليك السماح للإضافة بالعمل في النوافذ الخصوصية، في إعدادات الإضافة.
 
 ## مقص الويب
 
@@ -29,11 +30,11 @@ image: /img/bookmarks.png
 انقر بزر الفأرة الأيمن على صفحة ويب أو حدد نصًّا حتى تستخدم وظيفة **مقص الويب**. يمكنك كذلك إنشاء ملاحظة جديدة **بلقطة شاشة** من صفحة الويب الحالية.
 
 ::: warning
-Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
+Info إن لم يعمل مقص الويب، فتأكد أن تطبيق QOwnNotes الحاسوبي مفتوح، وأن رمز الأمان مضبوط في إضافة المتصفح الرفيقة.
 
-Also, make sure you accepted the consent dialog, when you first clicked the extension icon in the browser toolbar.
+وتأكد كذلك أنك قبلت تجميع بيانات المستخدم عندما ضغطت على أيقونة الإضافة أول مرة في شريط المتصفح.
 
-If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the *Permission* extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+وإذا كنت تستخدم فيرفكس، فتحتاج كذلك أن تتأكد أنك فعّلت الصلاحية الاختيارية `الوصول إلى بياناتك لكل المواقع` في إعدادات *صلاحيات* الإضافة، وإلا فقد تقابل الخطأ: `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::
 
 ::: tip

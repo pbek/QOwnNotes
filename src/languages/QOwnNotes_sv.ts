@@ -1223,7 +1223,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopiera</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1331,7 +1331,7 @@
 </message>
 <message>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>Importera mappar</translation>
 </message>
 <message>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
@@ -2827,7 +2827,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>Paste &amp;HTML as Markdown</source>
-<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+<translation>Klistra in &amp;HTML som Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3425,7 +3425,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>&amp;Save</source>
-<translation type="unfinished">&amp;Save</translation>
+<translation>&amp;Spara</translation>
 </message>
 <message>
 <source>+1h</source>
@@ -3441,7 +3441,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>Description:</source>
-<translation type="unfinished">Description:</translation>
+<translation>Beskrivning:</translation>
 </message>
 <message>
 <source>Due date</source>
@@ -3553,7 +3553,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>All notes</source>
-<translation type="unfinished">All notes</translation>
+<translation>Alla anteckningar</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
@@ -3718,7 +3718,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 <name>PasswordDialog</name>
 <message>
 <source>Please enter your password</source>
-<translation>Vänligen fyll i ditt lösenord</translation>
+<translation>Ange ditt lösenord</translation>
 </message>
 <message>
 <source>Enter your password:</source>
@@ -3741,7 +3741,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 <name>PasswordLineEdit</name>
 <message>
 <source>Show password</source>
-<translation type="unfinished">Show password</translation>
+<translation>Visa lösenord</translation>
 </message>
 <message>
 <source>Hide password</source>
@@ -4107,7 +4107,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>Replace with</source>
-<translation>Ersätta med</translation>
+<translation>Ersätt med</translation>
 </message>
 <message>
 <source>Replace:</source>
@@ -4433,7 +4433,7 @@ Vill du installera det i alla fall?</translation>
 </message>
 <message>
 <source>&amp;Add folder</source>
-<translation>Lägg till m&amp;app</translation>
+<translation>&amp;Lägg till mapp</translation>
 </message>
 <message>
 <source>&amp;Remove folder</source>
@@ -5424,7 +5424,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
 <message>
 <source> sec</source>
 <extracomment>short for seconds</extracomment>
-<translation type="unfinished"> sec</translation>
+<translation> sek</translation>
 </message>
 <message>
 <source>Forget all "Don't ask again" choices in message boxes</source>
@@ -6581,7 +6581,7 @@ Dina anteckningar kommer att förbli intakta!</translation>
 </message>
 <message>
 <source>&amp;Cancel</source>
-<translation>&amp;Annullera</translation>
+<translation>&amp;Avbryt</translation>
 </message>
 <message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
@@ -6758,7 +6758,7 @@ Dina anteckningar kommer att förbli intakta!</translation>
 </message>
 <message>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>Radera</translation>
 </message>
 <message>
 <source>Stored attachments</source>
@@ -6920,7 +6920,7 @@ Dina anteckningar kommer att förbli intakta!</translation>
 </message>
 <message>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>Radera</translation>
 </message>
 <message>
 <source>Refresh</source>

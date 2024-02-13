@@ -22,6 +22,7 @@ Información
     - La primera vez que haga clic en el ícono de la extensión del navegador QOwnNotes, recibirá un cuadro de diálogo con un token de seguridad. Copie la ficha.
     - Vaya a la ubicación de administración de extensiones de su navegador. Haga clic en los detalles de la extensión QOwnNotes.
     - Pegue el token en el campo Token de seguridad.
+3. To use the private mode, you need to allow the extension to run in private windows in the extension settings.
 
 ## Cortadora web
 

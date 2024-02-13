@@ -1222,7 +1222,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>복사</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -2303,19 +2303,19 @@ File: QOwnNotes_en.ts</translation>
 </message>
 <message>
 <source>Move up in subfolder list</source>
-<translation type="unfinished">Move up in subfolder list</translation>
+<translation>하위 폴더 목록에서 위로 이동</translation>
 </message>
 <message>
 <source>Move down in subfolder list</source>
-<translation type="unfinished">Move down in subfolder list</translation>
+<translation>하위 폴더 목록에서 아래로 이동</translation>
 </message>
 <message>
 <source>Move up in tag list</source>
-<translation type="unfinished">Move up in tag list</translation>
+<translation>태그 목록에서 위로 이동</translation>
 </message>
 <message>
 <source>Move down in tag list</source>
-<translation type="unfinished">Move down in tag list</translation>
+<translation>태그 목록에서 아래로 이동</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -7601,8 +7601,8 @@ This cannot be undone!</source>
 </message>
 <message numerus="yes">
 <source>Bookmark deleted from %n notes(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<translation>
+<numerusform>%n개의 노트에서 북마크 삭제</numerusform>
 </translation>
 </message>
 <message>

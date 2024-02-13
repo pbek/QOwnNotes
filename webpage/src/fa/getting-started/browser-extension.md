@@ -22,6 +22,7 @@ Info
     - نخستین باری که روی آیکون افزونه مرورگر QOwnNotes کلیک کنید، کادر محاوره ای دارای توکن امنیتی دریافت خواهید کرد. رونوشت برداری توکن.
     - به مکان مدیریت افزونه مرورگر خود بروید. روی جزئیات افزونه QOwnNotes کلیک کنید.
     - توکن را در قسمت توکن امنیتی بچسبانید.
+3. To use the private mode, you need to allow the extension to run in private windows in the extension settings.
 
 ## وب کلیپر
 

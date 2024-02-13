@@ -22,6 +22,7 @@ Info
     - Po pierwszym kliknięciu ikony rozszerzenia przeglądarki QOwnNotes pojawi się okno dialogowe z tokenem bezpieczeństwa. Skopiuj token.
     - Przejdź do lokalizacji zarządzania rozszerzeniami przeglądarki. Kliknij w szczegóły rozszerzenia QOwnNotes.
     - Wklej token w polu Token bezpieczeństwa.
+3. To use the private mode, you need to allow the extension to run in private windows in the extension settings.
 
 ## Schowek sieciowy
 

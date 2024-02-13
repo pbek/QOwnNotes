@@ -22,6 +22,7 @@ Info
     - Wenn Sie zum ersten Mal auf das Symbol der QOwnNotes-Browsererweiterung klicken, erhalten Sie ein Dialogfeld mit einem Sicherheitstoken. Kopieren Sie das Token.
     - Gehen Sie zum Speicherort der Erweiterungsverwaltung Ihres Browsers. Klicken Sie auf die Details der QOwnNotes-Erweiterung.
     - Fügen Sie das Token in das Feld Sicherheitstoken ein.
+3. To use the private mode, you need to allow the extension to run in private windows in the extension settings.
 
 ## Web clipper
 

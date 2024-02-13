@@ -23,6 +23,7 @@ QOwnNotes doit être en cours d'exécution pour que l'extension de navigateur We
     - Une boîte de dialogue contenant un jeton de sécurité sera affichée la première fois que vous cliquerez sur l'extension de navigateur QOwnNotes. Copiez le jeton.
     - Ouvrez l'emplacement de gestion des extensions de votre navigateur. Cliquez sur les détails de l'extension QOwnNotes.
     - Copiez le jeton dans le champ "Jeton de sécurité".
+3. To use the private mode, you need to allow the extension to run in private windows in the extension settings.
 
 ## Clipper Web
 
