@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 24.2.2
+- the spellchecker is now correctly turned off in inline code blocks, when there are more of one
+  in one line (for [#2955](https://github.com/pbek/QOwnNotes/issues/2955), thank you, @Waqar144)
 - added more Croatian, Korean, Swedish, Dutch, Italian translation (thank you
   milotype, venusgirl, dzenan, stephanp, gryp2)
 - a new release of the **QOwnNotes Web Companion browser extension** 2024.2.4 was released
