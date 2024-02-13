@@ -1,20 +1,27 @@
 layout {
-  pane split_direction="horizontal" {
-      # Those need more space, because of the signature key entry dialog
-      pane split_direction="vertical" {
-        pane name="launchpad" command="../ubuntu-launchpad/build-for-launchpad.sh"
-        pane name="launchpad-qt6" command="../ubuntu-launchpad/build-for-launchpad-qt6.sh"
-      }
-      pane split_direction="vertical" {
-        pane name="obs" command="../obs/build-for-obs.sh"
-        pane name="aur" command="aur/build-for-aur.sh"
-        pane name="gentoo" command="gentoo/build-for-gentoo.sh"
-        pane name="slackware" command="slackware/build-for-slackware.sh"
-        pane name="snap" command="snap/build-for-launchpad-snap.sh"
-        pane focus=true
-      }
+  tab split_direction="vertical" {
+    // Those need more space, because of the signature key entry dialog
+    pane name="launchpad" command="../ubuntu-launchpad/build-for-launchpad.sh"
+    pane name="launchpad-qt6" command="../ubuntu-launchpad/build-for-launchpad-qt6.sh"
+    pane size=1 borderless=true {
+      plugin location="zellij:status-bar"
+    }
   }
-  pane size=1 borderless=true {
-    plugin location="zellij:status-bar"
+  tab split_direction="horizontal" {
+    pane split_direction="vertical" {
+      pane name="obs" command="../obs/build-for-obs.sh"
+      pane name="aur" command="aur/build-for-aur.sh"
+    }
+    pane split_direction="vertical" {
+      pane name="gentoo" command="gentoo/build-for-gentoo.sh"
+      pane name="slackware" command="slackware/build-for-slackware.sh"
+    }
+    pane split_direction="vertical" {
+      pane name="snap" command="snap/build-for-launchpad-snap.sh"
+      pane focus=true
+    }
+    pane size=1 borderless=true {
+      plugin location="zellij:status-bar"
+    }
   }
 }
