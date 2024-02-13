@@ -3,6 +3,15 @@
 ## 24.2.2
 - added more Croatian, Korean, Swedish, Dutch, Italian translation (thank you
   milotype, venusgirl, dzenan, stephanp, gryp2)
+- a new release of the **QOwnNotes Web Companion browser extension** 2024.2.4 was released
+  - the minimum height of the popup was raised to 300px to allow
+    dialogs to be shown fully if there is little content
+  - now only a delete button is shown in the bookmarks list if the bookmark
+    can be deleted (for [#57](https://github.com/qownnotes/web-companion/issues/57))
+  - fixed a problem where links without name couldn't be opened when the link directly was clicked
+  - there now is a new private mode switch, that allows opening bookmarks in
+    a private window (for [#58](https://github.com/qownnotes/web-companion/issues/58))
+
 ## 24.2.1
 - support was added for the new **QOwnNotes Web Companion browser extension** 2024.2.2
   to allow deleting of bookmarks (for [#57](https://github.com/qownnotes/web-companion/issues/57))
