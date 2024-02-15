@@ -10,6 +10,10 @@ PasswordDialog::PasswordDialog(QWidget *parent, const QString &labelText, bool d
 
     ui->setupUi(this);
 
+    // Set focus to the password line edit manually, because focus by tab order
+    // was not working for release builds
+    ui->passwordLineEdit->setFocus();
+
     ui->passwordLineEdit2->setVisible(doubleEnterPassword);
     ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(!doubleEnterPassword);
     ui->errorLabel->setVisible(false);

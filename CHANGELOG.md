@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.2.3
+- it was made sure, that the first password field gets the focus in password
+  dialogs, if the tab order doesn't work properly
+
 ## 24.2.2
 - the spellchecker is now correctly turned off in inline code blocks, when there are more of one
   in one line (for [#2955](https://github.com/pbek/QOwnNotes/issues/2955), thank you, @Waqar144)
