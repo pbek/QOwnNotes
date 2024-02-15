@@ -1,13 +1,20 @@
 layout {
-  tab split_direction="vertical" {
-    // Those need more space, because of the signature key entry dialog
-    pane name="launchpad" command="../ubuntu-launchpad/build-for-launchpad.sh"
-    pane name="launchpad-qt6" command="../ubuntu-launchpad/build-for-launchpad-qt6.sh"
+  tab split_direction="horizontal" {
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+    pane split_direction="vertical" {
+      pane name="arch" command="arch/build-for-arch.sh"
+      pane name="fedora" command="fedora/build-for-fedora.sh"
+    }
     pane size=1 borderless=true {
       plugin location="zellij:status-bar"
     }
   }
   tab split_direction="horizontal" {
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
     pane split_direction="vertical" {
       pane name="obs" command="../obs/build-for-obs.sh"
       pane name="aur" command="aur/build-for-aur.sh"
