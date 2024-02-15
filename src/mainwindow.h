@@ -155,6 +155,10 @@ class MainWindow : public QMainWindow {
 
     QAction *findAction(const QString &objectName);
 
+    void editEncryptedNote();
+
+    void editEncryptedNoteAsync();
+
     void addCustomAction(const QString &identifier, const QString &menuText,
                          const QString &buttonText, const QString &icon,
                          bool useInNoteEditContextMenu = false, bool hideButtonInToolbar = false,

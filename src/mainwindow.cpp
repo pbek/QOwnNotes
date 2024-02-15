@@ -6678,6 +6678,14 @@ void MainWindow::on_actionDecrypt_note_triggered() {
  * Lets the user edit an encrypted note text in a 2nd text edit
  */
 void MainWindow::on_actionEdit_encrypted_note_triggered() {
+    editEncryptedNote();
+}
+
+void MainWindow::editEncryptedNoteAsync() {
+    QTimer::singleShot(0, this, &MainWindow::editEncryptedNote);
+}
+
+void MainWindow::editEncryptedNote() {
     currentNote.refetch();
     if (!currentNote.hasEncryptedNoteText()) {
         return;
