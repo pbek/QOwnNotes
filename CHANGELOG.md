@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 24.2.3
+- support was added for the **QOwnNotes Web Companion browser extension**
+  to also allow deleting of bookmarks in the current note
+  (for [#57](https://github.com/qownnotes/web-companion/issues/57))
 - it was made sure, that the first password field gets the focus in password
   dialogs, if the tab order doesn't work properly
 

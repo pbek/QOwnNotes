@@ -368,6 +368,20 @@ int WebSocketServerService::deleteBookmark(const QJsonObject &jsonObject) {
         }
     }
 
+    // Remove the Markdown text in the current note
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != nullptr) {
+        auto textBefore = mainWindow->activeNoteTextEdit()->toPlainText();
+        auto textAfter = textBefore;
+        textAfter.remove(markdown + QStringLiteral("\n"));
+        textAfter.remove(markdown);
+
+        if (textBefore != textAfter) {
+            mainWindow->activeNoteTextEdit()->setPlainText(textAfter);
+            noteCount++;
+        }
+    }
+
     return noteCount;
 }
 
