@@ -479,7 +479,17 @@ int CodeToHtmlConverter::highlightComment(StringView input, QString &output, int
             endPos += 2;
         }
     }
-    output += setFormat(input.mid(i, endPos - i), Format::Comment);
+
+    auto commentEndPos = endPos - i;
+    if (commentEndPos >= -1) {
+        output += setFormat(input.mid(i, commentEndPos), Format::Comment);
+    } else {
+        // Emergency escape, if someone enters a misplaced comment marker
+        // directly before the closing mark of the code block
+        // See: https://github.com/pbek/QOwnNotes/issues/2959
+        return i;
+    };
+
     i = endPos;
     // escape the endline
     if (endPos < input.length()) output += escape(input.at(endPos));

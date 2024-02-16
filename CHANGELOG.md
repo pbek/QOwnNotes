@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.2.4
+- fixed a crash, when someone enters a misplaced comment marker directly before
+  the closing mark of the code block (for [#2959](https://github.com/pbek/QOwnNotes/issues/2959))
+
 ## 24.2.3
 - support was added for the **QOwnNotes Web Companion browser extension**
   to also allow deleting of bookmarks in the current note
