@@ -1,8 +1,10 @@
+// https://zellij.dev/documentation/creating-a-layout
 layout {
-  tab split_direction="horizontal" {
+  tab name="Launchpad" focus=true split_direction="horizontal" {
     pane size=1 borderless=true {
         plugin location="zellij:tab-bar"
     }
+    // Those need more space, because of the signature key entry dialog
     pane split_direction="vertical" {
       pane name="launchpad" command="../ubuntu-launchpad/build-for-launchpad.sh"
       pane name="launchpad-qt6" command="../ubuntu-launchpad/build-for-launchpad-qt6.sh"
@@ -11,7 +13,7 @@ layout {
       plugin location="zellij:status-bar"
     }
   }
-  tab split_direction="horizontal" {
+  tab name="OBS, AUR, Gentoo, Slackware, Snap" split_direction="horizontal" {
     pane size=1 borderless=true {
         plugin location="zellij:tab-bar"
     }
