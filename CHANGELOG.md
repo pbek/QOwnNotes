@@ -2,8 +2,9 @@
 
 ## 24.2.5
 - fixed another crash, when someone enters a misplaced comment marker directly before
-  the closing mark of the code block with the starting marker directly before that
+  the closing mark of the code block, with the starting marker directly before that
   (for [#2962](https://github.com/pbek/QOwnNotes/issues/2962))
+- the [md4c](https://github.com/qownnotes/md4c) library fork was updated
 
 ## 24.2.4
 - fixed a crash, when someone enters a misplaced comment marker directly before
