@@ -481,7 +481,7 @@ int CodeToHtmlConverter::highlightComment(StringView input, QString &output, int
     }
 
     auto commentEndPos = endPos - i;
-    if (commentEndPos >= -1) {
+    if (commentEndPos >= 0) {
         output += setFormat(input.mid(i, commentEndPos), Format::Comment);
     } else {
         // Emergency escape, if someone enters a misplaced comment marker

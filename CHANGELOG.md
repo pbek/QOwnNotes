@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 24.2.5
+- fixed another crash, when someone enters a misplaced comment marker directly before
+  the closing mark of the code block with the starting marker directly before that
+  (for [#2962](https://github.com/pbek/QOwnNotes/issues/2962))
+
 ## 24.2.4
 - fixed a crash, when someone enters a misplaced comment marker directly before
   the closing mark of the code block (for [#2959](https://github.com/pbek/QOwnNotes/issues/2959))
