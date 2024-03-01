@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.2.6
+- try to fix an issue that the desktop icon is not shown under KDE Plasma 6 in Wayland
+  (for [#2976](https://github.com/pbek/QOwnNotes/issues/2976))
+
 ## 24.2.5
 - fixed another crash, when someone enters a misplaced comment marker directly before
   the closing mark of the code block, with the starting marker directly before that
