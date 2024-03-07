@@ -1076,8 +1076,8 @@ QMenu *QOwnNotesMarkdownTextEdit::spellCheckContextMenu(QPoint pos) {
     wordSelectCursor.movePosition(QTextCursor::NextCharacter, QTextCursor::KeepAnchor,
                                   selectedWord.size());
 
-    const bool wordIsMisspelled = isMouseCursorInsideWord &&
-                                  spellchecker->isActive() && !selectedWord.isEmpty() &&
+    const bool wordIsMisspelled = isMouseCursorInsideWord && spellchecker->isActive() &&
+                                  !selectedWord.isEmpty() &&
                                   spellchecker->isWordMisspelled(selectedWord);
 
     if (!wordIsMisspelled) {

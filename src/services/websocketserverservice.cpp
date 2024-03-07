@@ -371,10 +371,10 @@ int WebSocketServerService::deleteBookmark(const QJsonObject &jsonObject) {
     // Remove the Markdown text in the current note
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != nullptr) {
-//        auto note = mainWindow->getCurrentNote();
-//        auto textBefore = note.hasEncryptedNoteText() && note.canDecryptNoteText()
-//                           ? note.fetchDecryptedNoteText()
-//                           : note.getNoteText();
+        //        auto note = mainWindow->getCurrentNote();
+        //        auto textBefore = note.hasEncryptedNoteText() && note.canDecryptNoteText()
+        //                           ? note.fetchDecryptedNoteText()
+        //                           : note.getNoteText();
         auto textBefore = mainWindow->activeNoteTextEdit()->toPlainText();
         auto textAfter = textBefore;
         // Remove the bookmark from the note (try "\n" and without "\n")
@@ -382,7 +382,7 @@ int WebSocketServerService::deleteBookmark(const QJsonObject &jsonObject) {
         textAfter.remove(markdown);
 
         if (textBefore != textAfter) {
-//            note.setDecryptedNoteText(textAfter);
+            //            note.setDecryptedNoteText(textAfter);
             mainWindow->allowNoteEditing();
             mainWindow->activeNoteTextEdit()->setPlainText(textAfter);
             noteCount++;

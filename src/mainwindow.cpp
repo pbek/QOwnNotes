@@ -178,7 +178,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
             &MainWindow::showNoteEditTabWidgetContextMenu);
 
     // Set the two shortcuts for the "increase note text size" action
-    const QList<QKeySequence> shortcuts = {QKeySequence(Qt::CTRL + Qt::Key_Plus), QKeySequence(Qt::CTRL + Qt::Key_Equal)};
+    const QList<QKeySequence> shortcuts = {QKeySequence(Qt::CTRL + Qt::Key_Plus),
+                                           QKeySequence(Qt::CTRL + Qt::Key_Equal)};
     ui->action_Increase_note_text_size->setShortcuts(shortcuts);
 
     initTreeWidgets();
@@ -6677,9 +6678,7 @@ void MainWindow::on_actionDecrypt_note_triggered() {
 /**
  * Lets the user edit an encrypted note text in a 2nd text edit
  */
-void MainWindow::on_actionEdit_encrypted_note_triggered() {
-    editEncryptedNote();
-}
+void MainWindow::on_actionEdit_encrypted_note_triggered() { editEncryptedNote(); }
 
 void MainWindow::editEncryptedNoteAsync() {
     QTimer::singleShot(0, this, &MainWindow::editEncryptedNote);

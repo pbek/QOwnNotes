@@ -21,7 +21,8 @@ Bookmark::Bookmark() {
     markdown = QString();
 }
 
-Bookmark::Bookmark(QString url, QString name, QStringList tagList, QString description, QString markdown) {
+Bookmark::Bookmark(QString url, QString name, QStringList tagList, QString description,
+                   QString markdown) {
     this->url = std::move(url);
     this->name = std::move(name);
     this->tags = std::move(tagList);
@@ -42,7 +43,8 @@ QJsonObject Bookmark::jsonObject() const {
 
 QDebug operator<<(QDebug dbg, const Bookmark &bookmark) {
     dbg.nospace() << "Bookmark: <name>" << bookmark.name << " <url>" << bookmark.url << " <tags>"
-                  << bookmark.tags << " <description>" << bookmark.description << " <markdown>" << bookmark.markdown;
+                  << bookmark.tags << " <description>" << bookmark.description << " <markdown>"
+                  << bookmark.markdown;
     return dbg.space();
 }
 
