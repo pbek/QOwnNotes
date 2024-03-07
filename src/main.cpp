@@ -259,8 +259,9 @@ bool mainStartupMisc(const QStringList &arguments) {
     // let the user select another one
     if (!notesPath.isEmpty() && !dir.exists()) {
         if (QMessageBox::question(nullptr, QObject::tr("Note folder not found!"),
-                                  QObject::tr("Your note folder was not found any more! Do you "
-                                              "want to select a new one?")) != QMessageBox::Yes) {
+                                  QObject::tr("Your note folder <b>%1</b> was not found any more! "
+                                              "Do you want to select a new one?")
+                                      .arg(notesPath)) != QMessageBox::Yes) {
             return false;
         }
 
