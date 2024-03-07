@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 24.3.0
-- in the `Note folder not found!` dialog the missing note folder path will now be shown
+- in the `Note folder not found!` dialog, the missing note folder path will now be shown
   (for [#2975](https://github.com/pbek/QOwnNotes/issues/2975))
 
 ## 24.2.6
