@@ -3,6 +3,8 @@
 ## 24.3.0
 - in the `Note folder not found!` dialog, the missing note folder path will now be shown
   (for [#2975](https://github.com/pbek/QOwnNotes/issues/2975))
+- added more German, Italian, Arabic, Swedish, Brazilian Portuguese, Chinese Simplified
+  translation (thank you bumpsy, marcoxbresciani, techman, dzenan, mateus_b, crwd9931)
 
 ## 24.2.6
 - try to fix an issue that the desktop icon is not shown under KDE Plasma 6 in Wayland

@@ -626,7 +626,7 @@
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+<translation>XML non valido trovato nella nota &lt;b&gt;%1&lt;/b&gt;! L'importazione sarà fermata a questo punto.</translation>
 </message>
 <message>
 <source>Basic attributes</source>
@@ -2713,11 +2713,11 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>Il supporto di Nextcloud Deck non è abilitato o le impostazioni non sono valide.&lt;br /&gt;Controlla la configurazione di &lt;strong&gt;Nextcloud&lt;/strong&gt; nelle impostazioni!</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>Il percorso della nota '%1' è stato copiato negli appunti</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -2807,14 +2807,14 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
-<translation type="unfinished">
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<translation>
+<numerusform>Saltata la copia di %n note (nessun file di testo o markdown o non leggibile)</numerusform>
+<numerusform>Saltata la copia di %n note (markdown o file di testo inesistenti o non leggibili)</numerusform>
 </translation>
 </message>
 <message>
 <source>Paste &amp;HTML as Markdown</source>
-<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+<translation>Incolla &amp;HTML come markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3387,23 +3387,23 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <name>NextcloudDeckDialog</name>
 <message>
 <source>-10min</source>
-<translation type="unfinished">-10min</translation>
+<translation>-10min</translation>
 </message>
 <message>
 <source>+10min</source>
-<translation type="unfinished">+10min</translation>
+<translation>+10min</translation>
 </message>
 <message>
 <source>+1d</source>
-<translation type="unfinished">+1d</translation>
+<translation>+1g</translation>
 </message>
 <message>
 <source>-1d</source>
-<translation type="unfinished">-1d</translation>
+<translation>-1g</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Inserisci il link alla scheda Nextcloud Deck</translation>
 </message>
 <message>
 <source>Create card and insert link into current note</source>
@@ -3411,27 +3411,27 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <source>&amp;Save</source>
-<translation type="unfinished">&amp;Save</translation>
+<translation>&amp;Salva</translation>
 </message>
 <message>
 <source>+1h</source>
-<translation type="unfinished">+1h</translation>
+<translation>+1h</translation>
 </message>
 <message>
 <source>Title</source>
-<translation type="unfinished">Title</translation>
+<translation>Titolo</translation>
 </message>
 <message>
 <source>-1h</source>
-<translation type="unfinished">-1h</translation>
+<translation>-1h</translation>
 </message>
 <message>
 <source>Description:</source>
-<translation type="unfinished">Description:</translation>
+<translation>Descrizione:</translation>
 </message>
 <message>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Scadenza</translation>
 </message>
 </context>
 <context>
@@ -3727,11 +3727,11 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <name>PasswordLineEdit</name>
 <message>
 <source>Show password</source>
-<translation type="unfinished">Show password</translation>
+<translation>Mostra password</translation>
 </message>
 <message>
 <source>Hide password</source>
-<translation type="unfinished">Hide password</translation>
+<translation>Nascondi password</translation>
 </message>
 </context>
 <context>
@@ -3835,11 +3835,11 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Il suo sistema Windows sembra essere in modalità scura. Vuoi attivare la modalità scura anche in QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Il suo sistema Windows sembra essere in modalità chiara. Vuoi disattivare la modalità scura anche in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
@@ -3890,8 +3890,8 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <translation>Cartella note non trovata!</translation>
 </message>
 <message>
-<source>Your note folder was not found any more! Do you want to select a new one?</source>
-<translation>Non è stata trovata la cartella note! Vuoi selezionarne un altra?</translation>
+<source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
+<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -4256,7 +4256,7 @@ La cartella e il file sono scrivibili?</translation>
 </message>
 <message>
 <source>To search for a script please enter your query text.</source>
-<translation type="unfinished">To search for a script please enter your query text.</translation>
+<translation>Per cercare uno script inserisci il testo della tua query.</translation>
 </message>
 <message>
 <source>Minimum app version:</source>
@@ -5295,7 +5295,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Experimental</source>
-<translation type="unfinished">Experimental</translation>
+<translation>Sperimentale</translation>
 </message>
 <message>
 <source>This also allows note files to be renamed</source>
@@ -5311,7 +5311,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Enable QOwnNotesAPI app support</source>
-<translation type="unfinished">Enable QOwnNotesAPI app support</translation>
+<translation>Abilita il supporto all'app QOwnNotesAPI</translation>
 </message>
 <message>
 <source>If your password doesn't work, create an app password (button on the right)</source>
@@ -5323,7 +5323,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
-<translation type="unfinished">Enable Nextcloud Deck support</translation>
+<translation>Abilita il supporto a Nextcloud Deck</translation>
 </message>
 <message>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
@@ -5395,12 +5395,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>When inactive, enter read-only mode automatically after:</source>
-<translation type="unfinished">When inactive, enter read-only mode automatically after:</translation>
+<translation>Quando inattivo, entra in modalità sola lettura automaticamente dopo:</translation>
 </message>
 <message>
 <source> sec</source>
 <extracomment>short for seconds</extracomment>
-<translation type="unfinished"> sec</translation>
+<translation> sec</translation>
 </message>
 <message>
 <source>Forget all "Don't ask again" choices in message boxes</source>
@@ -5520,7 +5520,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Select the path of the git binary</source>
-<translation type="unfinished">Select the path of the git binary</translation>
+<translation>Seleziona il percorso del binario git</translation>
 </message>
 <message>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
@@ -6719,7 +6719,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7723,7 +7723,7 @@ Non sarà possibile annullare l'operazione!</translation>
 </message>
 <message>
 <source>Plain-text file Markdown note-taking with ownCloud integration</source>
-<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
+<translation>Il blocco degli appunti in formato di testo markdown con integrazione per ownCloud</translation>
 </message>
 <message>
 <source>Show subfolders</source>

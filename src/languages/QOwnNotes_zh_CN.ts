@@ -1216,7 +1216,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>复制</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1876,11 +1876,11 @@
 </message>
 <message>
 <source>&amp;Setup note folders / subfolders</source>
-<translation type="unfinished">&amp;Setup note folders / subfolders</translation>
+<translation>设置笔记文件夹 / 子文件夹(&amp;S)</translation>
 </message>
 <message>
 <source>Setup note folders / subfolders</source>
-<translation type="unfinished">Setup note folders / subfolders</translation>
+<translation>设置笔记文件夹 / 子文件夹</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2293,23 +2293,23 @@
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>复制笔记的绝对路径</translation>
 </message>
 <message>
 <source>Move up in subfolder list</source>
-<translation type="unfinished">Move up in subfolder list</translation>
+<translation>在子文件夹列表中上移</translation>
 </message>
 <message>
 <source>Move down in subfolder list</source>
-<translation type="unfinished">Move down in subfolder list</translation>
+<translation>在子文件夹列表中下移</translation>
 </message>
 <message>
 <source>Move up in tag list</source>
-<translation type="unfinished">Move up in tag list</translation>
+<translation>在标签列表中上移</translation>
 </message>
 <message>
 <source>Move down in tag list</source>
-<translation type="unfinished">Move down in tag list</translation>
+<translation>在标签列表中下移</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2690,7 +2690,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>笔记路径 '%1' 已复制到剪切板</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -2780,13 +2780,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
-<translation type="unfinished">
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<translation>
+<numerusform>跳过 %n 条笔记的复制（未找到或者无法读取 Markdown 和文本文件）</numerusform>
 </translation>
 </message>
 <message>
 <source>Paste &amp;HTML as Markdown</source>
-<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+<translation>粘贴 HTML 为 Markdown (&amp;H)</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3371,7 +3371,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>&amp;Save</source>
-<translation type="unfinished">&amp;Save</translation>
+<translation>保存(&amp;S)</translation>
 </message>
 <message>
 <source>+1h</source>
@@ -3686,11 +3686,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>PasswordLineEdit</name>
 <message>
 <source>Show password</source>
-<translation type="unfinished">Show password</translation>
+<translation>显示密码</translation>
 </message>
 <message>
 <source>Hide password</source>
-<translation type="unfinished">Hide password</translation>
+<translation>隐藏密码</translation>
 </message>
 </context>
 <context>
@@ -3792,11 +3792,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>当前 Windows 系统似乎处于深色模式，需要打开 QOwnNotes 的深色模式吗？</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>当前 Windows 系统似乎处于亮色模式，需要关闭 QOwnNotes 的深色模式吗？</translation>
 </message>
 <message>
 <source>Light mode detected</source>
@@ -3847,8 +3847,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>找不到笔记文件夹！</translation>
 </message>
 <message>
-<source>Your note folder was not found any more! Do you want to select a new one?</source>
-<translation>找不到您的笔记文件夹！ 您要选择一个新的吗？</translation>
+<source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
+<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -5350,7 +5350,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>When inactive, enter read-only mode automatically after:</source>
-<translation type="unfinished">When inactive, enter read-only mode automatically after:</translation>
+<translation>在空闲一定时间后，自动进入只读模式：</translation>
 </message>
 <message>
 <source> sec</source>
@@ -6666,7 +6666,7 @@ Your notes will stay intact!</source>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>

@@ -3907,8 +3907,8 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
 <translation>Cherechedzo dura haina kuwanikwa!</translation>
 </message>
 <message>
-<source>Your note folder was not found any more! Do you want to select a new one?</source>
-<translation>Yako folda chikwangwani haina kuwanikwa futi! Iwe unoda kusarudza imwe nyowani here?</translation>
+<source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
+<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -6758,7 +6758,7 @@ Zvawakanyora zvichagara zvakatsiga!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>

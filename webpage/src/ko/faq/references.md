@@ -2,6 +2,7 @@
 
 QOwnNotes에 대해 다른 사람들이 한 말입니다…
 
+- [Notes: ditching Joplin and back to a simpler solution using QOwnNotes on FreeBSD](https://www.ncartron.org/notes-ditching-joplin-and-back-to-a-simpler-solution.html)
 - <http://qownnotes.findmysoft.com/>
 - [Pro-Linux: QOwnNotes에 대한 정보](http://www.pro-linux.de/cgi-bin/DBApp/check.cgi?ShowApp..20415.100)
 - [무료 및 오픈 소스 리소스 교육자: 메모 소프트웨어](http://freeandopensourcesineducation.blogspot.co.at/2016/01/note-taking-software.html)

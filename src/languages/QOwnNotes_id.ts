@@ -1220,7 +1220,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Salin</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -3870,8 +3870,8 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 <translation>Folder catatan tidak ditemukan!</translation>
 </message>
 <message>
-<source>Your note folder was not found any more! Do you want to select a new one?</source>
-<translation>Folder catatan Anda tidak ditemukan! Apakah Anda ingin memilih yang baru?</translation>
+<source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
+<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -6709,7 +6709,7 @@ Catatan Anda akan tetap utuh!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>

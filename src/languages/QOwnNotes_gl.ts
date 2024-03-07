@@ -1225,7 +1225,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Copiar</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -3907,8 +3907,8 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
 <translation>Non se atopou o cartafol de notas!</translation>
 </message>
 <message>
-<source>Your note folder was not found any more! Do you want to select a new one?</source>
-<translation>Xa non se atopou a túa carpeta de notas. ¿Quere seleccionar un novo?</translation>
+<source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
+<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -6753,7 +6753,7 @@ As túas notas permanecerán intactas!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>

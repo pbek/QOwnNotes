@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopieren</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -2816,7 +2816,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Paste &amp;HTML as Markdown</source>
-<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+<translation>&amp;HTML als Markdown einfügen</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3729,11 +3729,11 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <name>PasswordLineEdit</name>
 <message>
 <source>Show password</source>
-<translation type="unfinished">Show password</translation>
+<translation>Passwort anzeigen</translation>
 </message>
 <message>
 <source>Hide password</source>
-<translation type="unfinished">Hide password</translation>
+<translation>Passwort verbergen</translation>
 </message>
 </context>
 <context>
@@ -3892,8 +3892,8 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <translation>Notizordner kann nicht gefunden werden!</translation>
 </message>
 <message>
-<source>Your note folder was not found any more! Do you want to select a new one?</source>
-<translation>Ihr Notizordner konnte nicht mehr gefunden werden! Möchten Sie einen Neuen auswählen?</translation>
+<source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
+<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -6718,7 +6718,7 @@ Your notes will stay intact!</source>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7638,7 +7638,7 @@ Kann nicht rückgängig gemacht werden!</translation>
 <message numerus="yes">
 <source>Bookmark deleted from %n notes(s)</source>
 <translation type="unfinished">
-<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Lesezeichen aus %n Notiz(en) gelöscht</numerusform>
 <numerusform>Bookmark deleted from %n notes(s)</numerusform>
 </translation>
 </message>

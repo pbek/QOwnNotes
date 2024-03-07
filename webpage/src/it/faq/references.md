@@ -2,6 +2,7 @@
 
 Cosa hanno detto gli altri su QOwnNotes ...
 
+- [Notes: ditching Joplin and back to a simpler solution using QOwnNotes on FreeBSD](https://www.ncartron.org/notes-ditching-joplin-and-back-to-a-simpler-solution.html)
 - <http://qownnotes.findmysoft.com/>
 - [Pro-Linux: Informationen zu QOwnNotes](http://www.pro-linux.de/cgi-bin/DBApp/check.cgi?ShowApp..20415.100)
 - [Educators for free and open source resources: Note taking software](http://freeandopensourcesineducation.blogspot.co.at/2016/01/note-taking-software.html)
@@ -181,7 +182,7 @@ Cosa hanno detto gli altri su QOwnNotes ...
 - [Presentation about QOwnNotes by stevelitt](http://troubleshooters.com/linux/presentations/golug_qownnotes/golug_qownnotes.pdf)
 - [QownNotes – De la prise de notes chiffrées sur votre cloud personnel](https://korben.info/qownnotes.html)
 - [The BEST Linux NOTE TAKING APPS - Invidious](https://yewtu.be/_d7kosQ0Ji4) 5:37
-- [BEST apps for NOTE TAKING on LINUX in 2022 - YouTube](https://youtu.be/_d7kosQ0Ji4?t=337)
+- [MIGLIORE app per NOTE su LINUX nel 2022 - YouTube](https://youtu.be/_d7kosQ0Ji4?t=337)
 - [Записная книжка на ПК - QOwnNotes 22.4.0 Portable скачать через торрент](https://prog-top.net/office/19820-zapisnaja-knizhka-na-pk-qownnotes-201111-build-790-portable.html)
 - [Serie - Strukturierte Notizen: QOwnNotes](https://gnulinux.ch/serie-strukturierte-notizen-qownnotes)
 - [How to Install QOwnNotes on Ubuntu 22.04 | 20.04 - LinuxCapable](https://www.linuxcapable.com/install-qownnotes-on-ubuntu-linux/)

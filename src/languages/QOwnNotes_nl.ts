@@ -1221,7 +1221,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopie</translation>
+<translation>Kopiëren</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -3893,8 +3893,8 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>Notitiemap niet gevonden!</translation>
 </message>
 <message>
-<source>Your note folder was not found any more! Do you want to select a new one?</source>
-<translation>Uw notitiemap is niet meer gevonden! Wilt u een nieuwe selecteren?</translation>
+<source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
+<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -6728,7 +6728,7 @@ Je notities zullen intact blijven!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>

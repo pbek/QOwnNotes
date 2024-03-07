@@ -3889,8 +3889,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Note folder not found!</translation>
 </message>
 <message>
-<source>Your note folder was not found any more! Do you want to select a new one?</source>
-<translation type="unfinished">Your note folder was not found any more! Do you want to select a new one?</translation>
+<source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
+<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>

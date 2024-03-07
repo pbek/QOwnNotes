@@ -3906,8 +3906,8 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 <translation>Obs! Mappen hittades inte!</translation>
 </message>
 <message>
-<source>Your note folder was not found any more! Do you want to select a new one?</source>
-<translation>Din anteckningsmapp hittades inte längre! Vill du välja en ny?</translation>
+<source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
+<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -5619,7 +5619,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
 </message>
 <message>
 <source>Show QR code</source>
-<translation type="unfinished">Show QR code</translation>
+<translation>Visa QR-kod</translation>
 </message>
 <message>
 <source>Security token:</source>
@@ -6747,7 +6747,7 @@ Dina anteckningar kommer att förbli intakta!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7535,7 +7535,7 @@ Detta kan inte göras ogjort!</translation>
 </message>
 <message>
 <source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
+<translation>Avbryt</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

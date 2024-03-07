@@ -2,6 +2,7 @@
 
 Co inni mówią o QOwnNotes:
 
+- [Notes: ditching Joplin and back to a simpler solution using QOwnNotes on FreeBSD](https://www.ncartron.org/notes-ditching-joplin-and-back-to-a-simpler-solution.html)
 - <http://qownnotes.findmysoft.com/>
 - [Pro-Linux: Informacje o QOwnNotes](http://www.pro-linux.de/cgi-bin/DBApp/check.cgi?ShowApp..20415.100)
 - [Post o oprogramowaniu do robienia notatek na blogu „Educators for free and open source resources”](http://freeandopensourcesineducation.blogspot.co.at/2016/01/note-taking-software.html)
