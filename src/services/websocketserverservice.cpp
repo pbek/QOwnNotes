@@ -216,6 +216,14 @@ void WebSocketServerService::processMessage(const QString &message) {
 
         pSender->sendTextMessage(
             flashMessageJsonText(tr("%n bookmark(s) created", "", bookmarkList.count())));
+
+        // Reload current note if the bookmark was deleted from the current note
+        MainWindow *mainWindow = MainWindow::instance();
+        if (mainWindow != nullptr) {
+            if (getBookmarksNoteName() == mainWindow->getCurrentNote().getName()) {
+                mainWindow->reloadCurrentNoteByNoteId(true);
+            }
+        }
     } else if (type == QLatin1String("switchNoteFolder")) {
 #ifndef INTEGRATION_TESTS
         MainWindow *mainWindow = MainWindow::instance();
