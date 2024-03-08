@@ -1357,7 +1357,7 @@
 </message>
 <message>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation>Ha csak "JEX - Joplin Export File" -je van, kérjük, bontsa ki a fájl tartalmát egy könyvtárba, és válassza ki azt.</translation>
+<translation>Als je gewoon een "JEX - Joplin Export File" hebt, pak dan de inhoud van dat bestand uit naar een map en selecteer die map.</translation>
 </message>
 <message>
 <source>Import metadata</source>
@@ -3760,7 +3760,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Renamed note-file was removed: %1</source>
-<translation>Hernoemde Opmerking-bestand werd verwijderd: %1</translation>
+<translation>Hernoemde Notities-bestand werd verwijderd: %1</translation>
 </message>
 <message>
 <source>Could not remove renamed note-file: %1 - Error message: %2</source>
@@ -3776,13 +3776,13 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Note file path changed</source>
-<translation>Opmerking bestandspad gewijzigd</translation>
+<translation>Notitiesbestandspad gewijzigd</translation>
 </message>
 <message numerus="yes">
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
-<numerusform>Er is een wijziging van het notitiepad gedetecteerd. Wilt u alle exemplaren van &lt;strong&gt;%1 &lt;/strong&gt; links vervangen door &lt;strong&gt;%2 &lt;/strong&gt; en links met bestandsnaam &lt;strong&gt;%3 &lt;/strong&gt; door &lt;strong&gt;%4 &lt;/ strong &gt; in &lt;strong&gt;%n &lt;/strong&gt; notitiebestand?</numerusform>
-<numerusform>Er is een wijziging van het notitiepad gedetecteerd. Wilt u alle exemplaren van &lt;strong&gt;%1 &lt;/strong&gt; links vervangen door &lt;strong&gt;%2 &lt;/strong&gt; en links met bestandsnaam &lt;strong&gt;%3 &lt;/strong&gt; door &lt;strong&gt;%4 &lt;/ strong &gt; in &lt;strong&gt;%n &lt;/strong&gt; notitiebestand?</numerusform>
+<numerusform>Er is een wijziging van het notitiepad gedetecteerd. Wilt u alle exemplaren van &lt;strong&gt;%1&lt;/strong&gt; links vervangen door &lt;strong&gt;%2&lt;/strong&gt; en links met bestandsnaam &lt;strong&gt;%3&lt;/strong&gt; door &lt;strong&gt;%4&lt;/strong &gt; in &lt;strong&gt;%n&lt;/strong&gt; notitiebestand?</numerusform>
+<numerusform>Er is een wijziging van het notitiepad gedetecteerd. Wilt u alle exemplaren van &lt;strong&gt;%1&lt;/strong&gt; links vervangen door &lt;strong&gt;%2&lt;/strong&gt; en links met bestandsnaam &lt;strong&gt;%3&lt;/strong&gt; door &lt;strong&gt;%4&lt;/strong &gt; in &lt;strong&gt;%n&lt;/strong&gt; notitiebestand?</numerusform>
 </translation>
 </message>
 <message>
@@ -3797,7 +3797,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>... en %n meer opmerking</numerusform>
-<numerusform>... en %n meer opmerkingen</numerusform>
+<numerusform>... en nog %n notities</numerusform>
 </translation>
 </message>
 <message>
@@ -3838,11 +3838,11 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Uw Windows-systeem lijkt in donkere modus te zijn. Wilt u ook de donkere modus inschakelen in QOwnNotes?</translation>
+<translation>Jouw Windows-systeem lijkt in donkere modus te staan. Wil je in QOwnNotes ook de donkere modus instellen?</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Uw Windows-systeem lijkt in de lichte modus te staan. Wilt u ook de donkere modus uitschakelen in QOwnNotes?</translation>
+<translation>Jouw Windows-systeem lijkt in de lichte modus te staan. Wil je in QOwnNotes ook de donkere modus uitschakelen in QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
@@ -3870,7 +3870,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
-<translation>Het commando &lt;code&gt;%1&lt;/code&gt; met argumenten &lt;code&gt;%2&lt;/code&gt; is mislukt!</translation>
+<translation>De opdracht &lt;code&gt;%1&lt;/code&gt; met argumenten &lt;code&gt;%2&lt;/code&gt; is mislukt!</translation>
 </message>
 <message>
 <source>New connection</source>
@@ -3894,7 +3894,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
-<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
+<translation>De notitiemap &lt;b&gt;%1&lt;/b&gt; is niet meer aangetroffen! Wil je een nieuwe selecteren?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -3910,8 +3910,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-<translation>Map met naam &lt;b&gt;%1 &lt;/b&gt; kan niet worden gemaakt, omdat deze in de lijst met genegeerde submappen staat! Je kunt dat wijzigen in de &lt;i&gt; Panels-instellingen &lt;/i&gt;.
-</translation>
+<translation>Map met naam &lt;b&gt;%1 &lt;/b&gt; kan niet worden gemaakt, omdat deze in de lijst met genegeerde submappen staat! Je kunt dat wijzigen in de &lt;i&gt; Panels-instellingen &lt;/i&gt;.</translation>
 </message>
 <message>
 <source>File name changed</source>
@@ -6728,7 +6727,7 @@ Je notities zullen intact blijven!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
