@@ -3,6 +3,7 @@
 ## 24.3.2
 - Now more platform information will be added to the `Platform` debug information,
   like `xcb` and `wayland`
+  - And information about the available database drivers was added
 
 ## 24.3.1
 - If the current note was the bookmarks note and a browser bookmark was added the

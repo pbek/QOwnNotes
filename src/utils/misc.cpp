@@ -1636,6 +1636,9 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     output +=
         prepareDebugInformationLine(QStringLiteral("Enabled scripts"),
                                     QString::number(Script::countEnabled()), withGitHubLineBreaks);
+    output += prepareDebugInformationLine(QStringLiteral("Database drivers"),
+                                          QSqlDatabase::drivers().join(QStringLiteral(", ")),
+                                          withGitHubLineBreaks);
 
     // add information about the server
     output += QStringLiteral("\n## Server Info\n\n");
