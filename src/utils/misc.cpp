@@ -1551,8 +1551,10 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                                           withGitHubLineBreaks);
     output += prepareDebugInformationLine(QStringLiteral("Build number"), QString::number(BUILD),
                                           withGitHubLineBreaks);
-    output += prepareDebugInformationLine(QStringLiteral("Platform"), QString(PLATFORM),
-                                          withGitHubLineBreaks);
+    output += prepareDebugInformationLine(
+        QStringLiteral("Platform"),
+        QStringLiteral("%1 (%2)").arg(PLATFORM, QGuiApplication::platformName()),
+        withGitHubLineBreaks);
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     output += prepareDebugInformationLine(QStringLiteral("Operating System"),

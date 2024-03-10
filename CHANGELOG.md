@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.3.2
+- Now more platform information will be added to the `Platform` debug information,
+  like `xcb` and `wayland`
+
 ## 24.3.1
 - If the current note was the bookmarks note and a browser bookmark was added the
   current note will now be reloaded (for [#2980](https://github.com/pbek/QOwnNotes/issues/2980)) 
