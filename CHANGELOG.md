@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 24.3.2
+- The creation of not existing linked notes was fixed for Windows
+  (for [#2899](https://github.com/pbek/QOwnNotes/issues/2899))
 - Now more platform information will be added to the `Platform` debug information,
   like `xcb` and `wayland`
   - And information about the available database drivers was added
