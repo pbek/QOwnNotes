@@ -35,5 +35,8 @@ src-build-run: src-build src-run
 clang-format:
 	./scripts/clang-format-project.sh
 
+fix-linting:
+	make clang-format
+
 link-check:
 	lychee './**/*.md'
