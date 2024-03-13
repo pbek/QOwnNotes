@@ -3258,7 +3258,12 @@ QString Note::fileUrlInCurrentNoteFolderToRelativePath(const QUrl &url) {
 #ifdef Q_OS_WIN32
     // Let's stay with "canonicalFilePath" on Windows in case there is any issue
     // in portable mode
-    path = fileInfo.canonicalFilePath();
+    // path = fileInfo.canonicalFilePath();
+
+    // fileInfo.canonicalFilePath() didn't work when creating new notes when clicking
+    // on links to note that were not found (at least in non-portable mode)
+    // See: https://github.com/pbek/QOwnNotes/issues/2899
+    path = fileInfo.absoluteFilePath();
 #else
     // Don't resolve symbolic links
     path = fileInfo.absoluteFilePath();
