@@ -85,28 +85,27 @@ _밑줄_
 </p>
 
 <h3 spaces-before="0">
-  External links
+  외부 링크
 </h3>
 
-<pre><code class="markdown">[I'm an inline-style link](https://www.google.com)
+<pre><code class="markdown">[저는 인라인 스타일 링크입니다](https://www.google.com)
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+[저는 제목이 있는 인라인 스타일 링크입니다](https://www.google.com "Google's Homepage")
 
-[You can use numbers for reference-style link definitions][1]
+[참조 스타일 링크 정의에 숫자를 사용할 수 있습니다][1]
 
-Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
+각 괄호 안의 일반 URL과 URL은 미리보기에서 자동으로 링크로 바뀝니다. 
 http://www.example.com 또는 &lt;http://www.example.com&gt;
 
 [1]: https://www.qownnotes.org
 </code></pre>
 
 <h3 spaces-before="0">
-  Internal links
+  내부 링크
 </h3>
 
-<pre><code class="markdown">[I link to the Journal.md note](Journal.md)
-
-&lt;Journal.md&gt; works similarly.
+<pre><code class="markdown">[Journal.md 노트에 링크합니다] (Journal.md)
+&lt;Journal.md&gt; 비슷하게 작동합니다.
 </code></pre>
 
 <p spaces-before="0">
@@ -122,14 +121,14 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </p>
 
 <h3 spaces-before="0">
-  Bookmarks
+  북마크
 </h3>
 
 <p spaces-before="0">
   <a href="./browser-extension.md">QOwnNotes Web Companion 브라우저 확장</a>에서 사용되는 북마크는 목록의 연결을 사용합니다.
 </p>
 
-<pre><code class="markdown">- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
+<pre><code class="markdown">- [웹페이지 이름](https://www.example.com) #tag1 #tag2 일부 설명 및 태그
 </code></pre>
 
 <h2 spaces-before="0">
@@ -168,19 +167,19 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </p>
 
 <h3 spaces-before="0">
-  4-Spaces fence
+  4-공간 울타리
 </h3>
 
 <p spaces-before="0">
   코드 앞에 공백 4개를 추가하여 코드 블록으로 표시합니다.
 </p>
 
-<pre><code class="markdown">    s = "Code with space indent"
+<pre><code class="markdown">    s = "공백 들여쓰기 코드"
     print s
 </code></pre>
 
 <h3 spaces-before="0">
-  Backtick fence
+  백틱 울타리
 </h3>
 
 <p spaces-before="0">
@@ -191,28 +190,28 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
   ~~~markdown
 </p>
 
-<pre><code>Code goes here
-Code goes here
+<pre><code>코드는 여기에 있습니다
+코드는 여기에 있습니다
 </code></pre>
 
 <pre><code>
-::: tip
-You can use the [shortcut](./shortcuts.md) &lt;kbd>Ctrl + Shift + C&lt;/kbd> on
-multiple selected lines of text or in an empty line to create a code block. 
+::: 팁
+ [shortcut](./shortcuts.md) &lt;kbd>Ctrl + Shift + C&lt;/kbd>를 선택한
+ 여러 텍스트 행 또는 빈 행에서 사용하여 코드 블록을 만들 수 있습니다. 
 :::
 
-### Backtick fence with code highlighting
+### 코드 강조 표시가 있는 백틱 울타리
 
-There also is some syntax highlighting with code blocks in QOwnNotes.
+QOwnNotes에는 코드 블록을 사용하여 구문을 강조 표시하는 기능도 있습니다.
 
-~~~markdown
-```bash
-# I am a comment
+~~ 마크다운
+'''bash
+# 저는 주석입니다
 cd Notes
 </code></pre>
 
 <pre><code>
-Currently, supported languages (and code block identifiers) are:
+현재 지원되는 언어 (및 코드 블록 식별자) 는 다음과 같습니다:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -246,24 +245,24 @@ Currently, supported languages (and code block identifiers) are:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tables
+# 표
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+표는 핵심 마크다운 사양의 일부가 아니지만 QOwnNotes 미리보기는 표를 지원합니다. 
 
-~~~markdown
-Colons can be used to align columns.
+~~ 마크다운
+열을 정렬하는 데 콜론을 사용할 수 있습니다.
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| 열 3 은      | 오른쪽 정렬 | $1600 |
+| 열 2 는      | 가운데      |   $12 |
+| 얼룩말 줄무늬 | 깔끔하다      |    $1 |
 
-There must be at least 3 dashes separating each header cell.
+각 머리말 셀을 구분하는 대시가 3개 이상 있어야 합니다.
 
-You can also use inline Markdown.
+인라인 마크다운을 사용할 수도 있습니다.
 
-| Markdown | Less | Pretty |
+| 마크다운 | 더 적은 | 예쁜 |
 | --- | --- | --- |
 | *Still* | `renders` | **nicely** |
 | 1 | 2 | 3 |
@@ -281,12 +280,12 @@ You can also use inline Markdown.
   블럭 따옴표
 </h2>
 
-<pre><code class="markdown">&gt; Blockquotes are very handy in email to emulate reply text.
-&gt; This line is part of the same quote.
+<pre><code class="markdown">&gt; 이메일에서 블록 따옴표는 회신 텍스트를 에뮬레이트하는 데 매우 유용합니다.
+&gt; 이 줄은 같은 인용구의 일부입니다.
 
-Quote break.
+따옴표로 묶습니다.
 
-&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+&gt; 줄 바꿈이 끝날 때도 여전히 적절하게 따옴표로 묶일 수 있는 매우 긴 줄입니다. 모든 사람이 실제로 감싸기에 충분한 길이인지 확인하기 위해 계속 작성해 보겠습니다. 아, 블록 따옴표에 **마크다운**을 *입력*할 수 있습니다. 
 </code></pre>
 
 <p spaces-before="0">
@@ -305,17 +304,17 @@ Quote break.
   수평 규칙을 얻는 세 가지 방법이 있습니다: 하이픈, 별표 또는 밑줄을 사용할 수 있습니다.
 </p>
 
-<pre><code class="markdown">Three or more...
+<pre><code class="markdown">3개 이상...
 
-Hyphens
+하이픈
 
 ---
 
-Asterisks
+별표
 
 ***
 
-Underscores
+밑줄
 
 ___
 </code></pre>
@@ -340,12 +339,12 @@ ___
   ::: 팁 <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>으로 공백 2개와 줄 바꿈을 입력할 수 있습니다. :::
 </p>
 
-<pre><code class="markdown">Here's a line for us to start with.
+<pre><code class="markdown">여기부터 시작할 수 있는 줄이 있습니다.
 
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+이 줄은 위의 줄과 두 줄로 분리되어 있으므로 *별도의 단락*이 될 것입니다.
 
-This line is also begins a separate paragraph, but...  
-This line is only separated by two trailing spaces and a single newline, so it's a separate line in the *same paragraph*.
+이 행은 또한 별도의 단락으로 시작합니다. 하지만...  
+이 줄은 두 개의 후행 공백과 하나의 새 줄로만 구분되므로 *동일한 문단*에서 별도의 줄입니다.
 </code></pre>
 
 <p spaces-before="0">
@@ -362,9 +361,8 @@ This line is only separated by two trailing spaces and a single newline, so it's
   설명은 미리보기에 표시되지 않습니다.
 </p>
 
-<pre><code class="markdown">[comment]: # (This comment will not appear in the preview)
-
-&lt;!-- HTML comments are also hidden --&gt;
+<pre><code class="markdown">[comment]: # (이 설명은 미리보기에 나타나지 않습니다)
+&lt;!-- HTML 주석도 숨겨집니다 --&gt;
 </code></pre>
 
 <p spaces-before="0">
@@ -381,8 +379,8 @@ This line is only separated by two trailing spaces and a single newline, so it's
   확인란 목록을 사용하여 간단한 작업관리 목록을 작성할 수 있습니다.
 </p>
 
-<pre><code class="markdown">- [x] done
-- [ ] todo
+<pre><code class="markdown">- [x] 완료
+- [ ] 할 일
 </code></pre>
 
 <p spaces-before="0">
@@ -400,13 +398,13 @@ This line is only separated by two trailing spaces and a single newline, so it's
 </p>
 
 <pre><code class="markdown">---
-title: Some name
-description: Some description
+제목: 일부 이름
+description: 일부 설명
 ---
 
-# Note headline starts here
+# 노트 헤드라인이 여기에서 시작됩니다
 
-Some text
+일부 텍스트
 </code></pre>
 
 <p spaces-before="0">

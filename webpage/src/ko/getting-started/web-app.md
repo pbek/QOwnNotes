@@ -10,7 +10,7 @@ image: /img/blog/web-application-settings.png
 
 전화기의 웹 응용프로그램은 인터넷을 통해 QOnNotes 데스크탑 응용프로그램과 통신합니다. QOnNotes와 웹 서비스 간의 통신은 **전송 암호화**되어 있습니다. 서버에 이미지가 저장되지 않습니다.
 
-There is a settings page **Web application** to add support for the web application.
+웹 응용 프로그램에 대한 지원을 추가하기 위한 설정 페이지 **웹 응용 프로그램**이 있습니다.
 
 ![QOownNotes 웹 응용프로그램 설정](/img/blog/web-application-settings.png "웹 응용 프로그램에 대한 통신 설정")
 

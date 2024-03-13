@@ -333,11 +333,11 @@ websocketRawDataHook
 ```js
 /**
  * @param requestType은 "page" 또는 "selection"일 수 있습니다
- * @param pageUrl the url of the webpage where the request was made
- * @param pageTitle the page title of the webpage where the request was made
- * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
- * @param screenshotDataUrl the data url of the screenshot of the webpage where the request was made
- * @return true if data was handled by a hook
+ * @param page요청이 이루어진 웹페이지의 Url
+ * @param page요청이 이루어진 웹페이지의 페이지 제목
+ * @paramrawData 전송된 데이터, request용 html "page" 또는 request용 평문Type "selection"
+ * @param screenshotDataUrl 요청이 이루어진 웹 페이지의 스크린샷의 데이터 Url
+ * @후크에 의해 데이터가 처리된 경우 true를 반환합니다
  */
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
