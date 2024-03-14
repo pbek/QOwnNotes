@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.3.3
+- added a **new editor color schema** *VSCodium* by @nkahe
+  (for [#2982](https://github.com/pbek/QOwnNotes/issues/2982))
+
 ## 24.3.2
 - The creation of not existing linked notes was fixed for Windows
   (for [#2899](https://github.com/pbek/QOwnNotes/issues/2899))
