@@ -152,5 +152,6 @@ QIcon tagIcon();
 void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, const Tag &tag);
 void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, int tag);
 bool enableDockWidgetQuestion(QDockWidget *dockWidget);
+void fixDarkModeIcons(QWidget *widget);
 }    // namespace Gui
 }    // namespace Utils

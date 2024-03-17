@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 16 16"
+   style="enable-background:new 0 0 16 16;"
+   xml:space="preserve"
+   sodipodi:docname="cleartext.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"><metadata
+   id="metadata15"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs13" /><sodipodi:namedview
+   pagecolor="#010101"
+   bordercolor="#dddddd"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="918"
+   id="namedview11"
+   showgrid="false"
+   inkscape:zoom="33.14563"
+   inkscape:cx="1.0250743"
+   inkscape:cy="9.2813006"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill:none;}
+</style>
+
+<circle
+   style="fill:#fdfdfd;fill-opacity:1;stroke:none;stroke-width:0.0875;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   id="path873"
+   cx="8"
+   cy="8"
+   r="7"
+   inkscape:label="circle" /><rect
+   id="rect19"
+   width="2.0723703"
+   height="9.2413387"
+   x="10.277523"
+   y="-4.6206694"
+   style="fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.101216;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   transform="rotate(44.999999)"
+   inkscape:label="rect2" /><rect
+   id="rect19-6"
+   width="2.0723705"
+   height="9.2413378"
+   x="-1.0361853"
+   y="6.6930394"
+   style="fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.101217;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   transform="rotate(-45)"
+   inkscape:label="rect1"
+   sodipodi:insensitive="true" /></svg>

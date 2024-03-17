@@ -19,6 +19,7 @@
 #include <entities/tag.h>
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 
+#include <QAction>
 #include <QApplication>
 #include <QCheckBox>
 #include <QClipboard>
@@ -27,6 +28,7 @@
 #include <QDialogButtonBox>
 #include <QDockWidget>
 #include <QListWidget>
+#include <QLineEdit>
 #include <QMessageBox>
 #include <QPlainTextEdit>
 #include <QProcess>
@@ -1206,4 +1208,23 @@ bool Utils::Gui::enableDockWidgetQuestion(QDockWidget *dockWidget) {
 
     dockWidget->setVisible(true);
     return true;
+}
+
+/**
+ * Fixes the icons of the dark mode
+ * @param widget
+ */
+void Utils::Gui::fixDarkModeIcons(QWidget *widget) {
+    const bool darkMode = QSettings().value(QStringLiteral("darkMode")).toBool();
+
+    if (!darkMode) {
+        return;
+    }
+
+    foreach(QLineEdit *lineEdit, widget->findChildren<QLineEdit *>()) {
+        auto action = lineEdit->findChild<QAction *>("_q_qlineeditclearaction");
+        if (action) {
+            action->setIcon(QIcon(QStringLiteral(":/images/cleartext-dark.svg")));
+        }
+    }
 }

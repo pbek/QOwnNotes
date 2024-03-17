@@ -1599,6 +1599,8 @@ void MainWindow::initStyling() {
     // hide the combo box if it looses focus if it should not be viewed
     connect(ui->noteFolderComboBox, &ComboBox::focusOut, this,
             &MainWindow::hideNoteFolderComboBoxIfNeeded);
+
+    Utils::Gui::fixDarkModeIcons(this);
 }
 
 /**
