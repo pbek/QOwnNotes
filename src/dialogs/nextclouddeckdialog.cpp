@@ -9,6 +9,7 @@
 NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent)
     : MasterDialog(parent), ui(new Ui::NextcloudDeckDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     ui->dueDateTimeEdit->setDateTime(QDateTime::currentDateTime());
     ui->saveButton->setEnabled(false);
     ui->dueDateTimeCheckBox->setChecked(true);

@@ -17,6 +17,7 @@
 IssueAssistantDialog::IssueAssistantDialog(QWidget *parent)
     : MasterDialog(parent), ui(new Ui::IssueAssistantDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     ui->backButton->setEnabled(false);
     ui->nextButton->setEnabled(false);
 

@@ -23,6 +23,7 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml, const QS
                            const QString &releaseVersionString)
     : MasterDialog(parent), ui(new Ui::UpdateDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     ui->downloadProgressBar->hide();
 
 #if !defined(Q_OS_WIN)

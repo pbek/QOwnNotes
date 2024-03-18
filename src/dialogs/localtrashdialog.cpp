@@ -31,6 +31,7 @@ class LocalTrashTreeWidgetItem : public QTreeWidgetItem {
 LocalTrashDialog::LocalTrashDialog(QWidget *parent)
     : MasterDialog(parent), ui(new Ui::LocalTrashDialog) {
     ui->setupUi(this);
+    afterSetupUI();
 
     // init the note browser search frame
     ui->noteBrowser->initSearchFrame(ui->noteBrowserSearchFrame);

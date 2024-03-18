@@ -22,6 +22,7 @@
 EvernoteImportDialog::EvernoteImportDialog(QWidget *parent)
     : MasterDialog(parent), ui(new Ui::EvernoteImportDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     setupMetaDataTreeWidgetItems();
     resetNoteCount();
     _mediaFileDataHash.clear();

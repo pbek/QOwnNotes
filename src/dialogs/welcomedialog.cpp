@@ -14,6 +14,7 @@
 
 WelcomeDialog::WelcomeDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::WelcomeDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     ui->layoutWidget->setManualSettingsStoring(false);
 
     // replace ownCloud text

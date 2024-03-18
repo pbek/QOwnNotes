@@ -12,6 +12,7 @@ ActionDialog::ActionDialog(QMenuBar *menuBar, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::ActionDialog) {
     _menuBar = menuBar;
     ui->setupUi(this);
+    afterSetupUI();
     refreshUi();
 }
 

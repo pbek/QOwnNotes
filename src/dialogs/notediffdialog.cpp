@@ -13,6 +13,7 @@
 NoteDiffDialog::NoteDiffDialog(QWidget *parent, const QString &html)
     : MasterDialog(parent), ui(new Ui::NoteDiffDialog) {
     ui->setupUi(this);
+    afterSetupUI();
 
     _notificationButtonGroup = new QButtonGroup(this);
     _notificationButtonGroup->addButton(ui->ignoreAllExternalChangesCheckBox);

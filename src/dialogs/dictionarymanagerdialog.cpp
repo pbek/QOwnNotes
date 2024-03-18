@@ -18,6 +18,7 @@
 DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent)
     : MasterDialog(parent), ui(new Ui::DictionaryManagerDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     setupMainSplitter();
 
     _networkManager = new QNetworkAccessManager(this);

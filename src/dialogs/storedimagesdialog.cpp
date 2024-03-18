@@ -22,6 +22,7 @@
 StoredImagesDialog::StoredImagesDialog(QWidget *parent)
     : MasterDialog(parent), ui(new Ui::StoredImagesDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     ui->fileTreeWidget->installEventFilter(this);
     ui->noteTreeWidget->installEventFilter(this);
 

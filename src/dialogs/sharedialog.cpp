@@ -11,6 +11,7 @@
 ShareDialog::ShareDialog(const Note &note, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::ShareDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     this->note = note;
 
     // update the share link checkbox and link url line edit

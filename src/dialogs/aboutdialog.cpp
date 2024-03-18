@@ -13,6 +13,7 @@
 
 AboutDialog::AboutDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::AboutDialog) {
     ui->setupUi(this);
+    afterSetupUI();
 
     // load the about.html
     QFile f(QStringLiteral(":/html/about.html"));

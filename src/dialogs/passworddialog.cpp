@@ -9,6 +9,7 @@ PasswordDialog::PasswordDialog(QWidget *parent, const QString &labelText, bool d
     _doubleEnterPassword = doubleEnterPassword;
 
     ui->setupUi(this);
+    afterSetupUI();
 
     // Set focus to the password line edit manually, because focus by tab order
     // was not working for release builds

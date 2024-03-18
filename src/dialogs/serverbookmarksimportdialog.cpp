@@ -12,6 +12,7 @@
 ServerBookmarksImportDialog::ServerBookmarksImportDialog(const QJSValue &bookmarks, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::ServerBookmarksImportDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     ui->infoLabel->clear();
 
     // init the iterator for the versions

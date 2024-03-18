@@ -8,8 +8,9 @@
 #include "ui_websockettokendialog.h"
 
 WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent)
-    : QDialog(parent), ui(new Ui::WebSocketTokenDialog) {
+    : MasterDialog(parent), ui(new Ui::WebSocketTokenDialog) {
     ui->setupUi(this);
+    afterSetupUI();
 
     QSettings settings;
     QString token = settings.value(QStringLiteral("webSocketServerService/token")).toString();

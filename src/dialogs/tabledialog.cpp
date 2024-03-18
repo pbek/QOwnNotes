@@ -12,6 +12,7 @@
 
 TableDialog::TableDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::TableDialog) {
     ui->setupUi(this);
+    afterSetupUI();
 
     // ignore the return key so we can better edit text in the table
     setIgnoreReturnKey(true);

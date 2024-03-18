@@ -3,11 +3,13 @@
 
 #include <QDialog>
 
+#include "masterdialog.h"
+
 namespace Ui {
 class WebSocketTokenDialog;
 }
 
-class WebSocketTokenDialog : public QDialog {
+class WebSocketTokenDialog : public MasterDialog {
     Q_OBJECT
 
    public:

@@ -13,6 +13,7 @@
 AttachmentDialog::AttachmentDialog(QWidget *parent)
     : MasterDialog(parent), ui(new Ui::AttachmentDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     ui->fileEdit->setFocus();
     ui->downloadButton->hide();
     ui->downloadFrame->hide();

@@ -12,6 +12,7 @@
 
 NoteDialog::NoteDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::NoteDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     ui->textEdit->initSearchFrame(ui->searchFrame);
     ui->textEdit->setReadOnly(true);
     ui->tabWidget->setCurrentIndex(QSettings().value("NoteDialog/tabWidgetIndex").toInt());

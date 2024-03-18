@@ -60,6 +60,7 @@
 SettingsDialog::SettingsDialog(int page, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
+    afterSetupUI();
 
     bool fromWelcomeDialog = parent->objectName() == QLatin1String("WelcomeDialog");
 

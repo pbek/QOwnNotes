@@ -1,7 +1,12 @@
 # QOwnNotes Changelog
 
+## 24.3.4
+- For the dark-mode there now is a new icon for the clear button for all line edits,
+  like the note search field, in the main window and all dialogs
+  (for [#2986](https://github.com/pbek/QOwnNotes/issues/2986))
+
 ## 24.3.3
-- added a **new editor color schema** *VSCodium* by @nkahe
+- Added a **new editor color schema** *VSCodium* by @nkahe
   (for [#2982](https://github.com/pbek/QOwnNotes/issues/2982))
 
 ## 24.3.2

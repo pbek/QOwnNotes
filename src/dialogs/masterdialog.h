@@ -31,6 +31,8 @@ class MasterDialog : public QDialog {
 
     virtual void keyPressEvent(QKeyEvent *keyEvent) override;
 
+    void afterSetupUI();
+
    public:
     void setIgnoreReturnKey(bool ignore);
 };

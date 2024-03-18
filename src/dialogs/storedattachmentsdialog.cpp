@@ -25,6 +25,7 @@
 StoredAttachmentsDialog::StoredAttachmentsDialog(QWidget *parent)
     : MasterDialog(parent), ui(new Ui::StoredAttachmentsDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     ui->infoFrame->setEnabled(false);
     ui->fileTreeWidget->installEventFilter(this);
 

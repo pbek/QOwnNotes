@@ -20,6 +20,7 @@
 TodoDialog::TodoDialog(const QString &taskUid, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::TodoDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     setupUi();
 
     connect(ui->todoItemTreeWidget, &TodoItemTreeWidget::calendarItemUpdated, this,

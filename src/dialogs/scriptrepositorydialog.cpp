@@ -26,6 +26,7 @@
 ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent, bool checkForUpdates)
     : MasterDialog(parent), ui(new Ui::ScriptRepositoryDialog) {
     ui->setupUi(this);
+    afterSetupUI();
     setupMainSplitter();
 
     _codeSearchUrl = QLatin1String("https://api.github.com/search/code");

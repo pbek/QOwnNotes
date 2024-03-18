@@ -7,12 +7,17 @@
 #include <QSettings>
 
 #include "services/metricsservice.h"
+#include "utils/gui.h"
 
 MasterDialog::MasterDialog(QWidget *parent) : QDialog(parent) { installEventFilter(this); }
 
 void MasterDialog::closeEvent(QCloseEvent *event) {
     //    storeGeometrySettings();
     QDialog::closeEvent(event);
+}
+
+void MasterDialog::afterSetupUI() {
+    Utils::Gui::fixDarkModeIcons(this);
 }
 
 void MasterDialog::resizeEvent(QResizeEvent *event) {
