@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.3.5
+- Now text between two asterisks in in-line code blocks in a bullet point list gets
+  highlighted correctly (for [#2972](https://github.com/pbek/QOwnNotes/issues/2972), thank you, @Waqar144)
+
 ## 24.3.4
 - For the dark-mode there now is a new icon for the clear button for all line edits,
   like the note search field, in the main window and all dialogs
