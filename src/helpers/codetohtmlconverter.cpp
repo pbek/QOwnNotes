@@ -159,7 +159,7 @@ QString CodeToHtmlConverter::process(StringView input) const {
             ;
             break;
         case CodeSystemVerilog:
-            loadSQLData(types, keywords, builtin, literals, others);
+            loadSystemVerilogData(types, keywords, builtin, literals, others);
             break;
         default:
             output += escapeString(input);
