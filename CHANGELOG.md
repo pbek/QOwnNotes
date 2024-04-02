@@ -4,7 +4,7 @@
 - Added System Verilog support to the note edit code block syntax highlighter
   (for [#2997](https://github.com/pbek/QOwnNotes/pull/2997), thank you, @maya-doshi)
 - The [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi) was updated
-  to version 23.4.0 to **support Nextcloud 29** (for [#48](https://github.com/pbek/qownnotesapi/issues/48))
+  to version 24.4.0 to **support Nextcloud 29** (for [#48](https://github.com/pbek/qownnotesapi/issues/48))
 
 ## 24.3.5
 - Now text between two asterisks in in-line code blocks in a bullet point list gets
