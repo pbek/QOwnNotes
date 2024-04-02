@@ -50,7 +50,8 @@ void CodeToHtmlConverter::initCodeLangs() Q_DECL_NOTHROW {
         {QStringLiteral("xml"), CodeToHtmlConverter::CodeXML},
         {QStringLiteral("yml"), CodeToHtmlConverter::CodeYAML},
         {QStringLiteral("yaml"), CodeToHtmlConverter::CodeYAML},
-        {QStringLiteral("forth"), CodeToHtmlConverter::CodeForth}};
+        {QStringLiteral("forth"), CodeToHtmlConverter::CodeForth},
+        {QStringLiteral("systemverilog"), CodeToHtmlConverter::CodeSystemVerilog}};
 }
 
 QString CodeToHtmlConverter::process(const QString &input) const {
@@ -156,6 +157,9 @@ QString CodeToHtmlConverter::process(StringView input) const {
             loadForthData(types, keywords, builtin, literals, others);
             comment = QLatin1Char('\\');
             ;
+            break;
+        case CodeSystemVerilog:
+            loadSystemVerilogData(types, keywords, builtin, literals, others);
             break;
         default:
             output += escapeString(input);

@@ -50,7 +50,8 @@ class CodeToHtmlConverter {
         CodeCMake,
         CodeMake,
         CodeNix,
-        CodeForth
+        CodeForth,
+        CodeSystemVerilog
     };
 
    public:
