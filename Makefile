@@ -21,6 +21,9 @@ nix-build-trace:
 nix-build-force:
 	nix-build -E '((import <nixpkgs> {}).qt6Packages.callPackage (import ./default.nix) { })' --check
 
+nix-run:
+	./result/bin/QOwnNotes --session test &
+
 src-build:
 	mkdir -p build-QOwnNotes; cd build-QOwnNotes && qmake "CONFIG+=debug USE_SYSTEM_BOTAN=1" ../src/QOwnNotes.pro && make
 
