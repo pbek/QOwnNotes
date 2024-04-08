@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## Next
+- There was a new release of the **QOwnNotes Web Companion browser extension** 2024.4.0
+  - the "running away" of the Preferences dialog was fixed under Firefox when
+    using a zoom-level over 100% (for [#63](https://github.com/qownnotes/web-companion/issues/63))
+  - update dependencies
+  - add more translations
+
 ## 24.4.0
 - Added System Verilog support to the note edit code block syntax highlighter
   (for [#2997](https://github.com/pbek/QOwnNotes/pull/2997), thank you, @maya-doshi)
