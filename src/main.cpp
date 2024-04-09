@@ -1,5 +1,7 @@
+#include <iostream>
 #include <services/databaseservice.h>
 #include <services/metricsservice.h>
+#include <utils/cli.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
 #include <utils/schema.h>
@@ -89,8 +91,10 @@ inline void loadMacTranslations(QTranslator &translatorOSX, QTranslator &transla
  * Does the miscellaneous startup
  * If false is returned the app is supposed to quit
  */
-bool mainStartupMisc(const QStringList &arguments) {
+int mainStartupMisc(const QStringList &arguments) {
     QCommandLineParser parser;
+    QList<QCommandLineOption> allOptions;
+
     parser.setApplicationDescription("QOwnNotes " + QString(VERSION));
     const QCommandLineOption helpOption = parser.addHelpOption();
     const QCommandLineOption portableOption(
@@ -137,12 +141,40 @@ bool mainStartupMisc(const QStringList &arguments) {
         "name");
     parser.addOption(actionOption);
 
+    const QCommandLineOption completionOption(
+        QStringList() << "completion",
+        QCoreApplication::translate("main", "Generate shell completion code. Supports `fish`, `bash`, `zsh`."),
+        "shell"
+    );
+    parser.addOption(completionOption);
+
+    allOptions << helpOption << portableOption << dumpSettingsOption << versionOption
+               << allowMultipleInstancesOption << clearSettingsOption << sessionOption
+               << actionOption << completionOption;
+
     // just parse the arguments, we want no error handling
     parser.parse(arguments);
 
     // show the help page if the help parameter was provided
     if (parser.isSet(helpOption)) {
         parser.showHelp();
+    }
+
+    // Check for completion option and generate script
+    if (parser.isSet(completionOption)) {
+        QString shell = parser.value(completionOption);
+        if (shell == "fish") {
+            Utils::Cli::generateFishCompletionScript(allOptions, QStringLiteral("QOwnNotes"));
+        } else if (shell == "bash") {
+            Utils::Cli::generateBashCompletionScript(allOptions, QStringLiteral("QOwnNotes"));
+        } else if (shell == "zsh") {
+            Utils::Cli::generateZshCompletionScript(allOptions, QStringLiteral("QOwnNotes"));
+        } else {
+            std::cerr << "Unsupported shell type specified." << std::endl;
+            return 1;
+        }
+
+        return 0; // Exit after generating the completion script
     }
 
     QSettings settings;
@@ -262,7 +294,7 @@ bool mainStartupMisc(const QStringList &arguments) {
                                   QObject::tr("Your note folder <b>%1</b> was not found any more! "
                                               "Do you want to select a new one?")
                                       .arg(notesPath)) != QMessageBox::Yes) {
-            return false;
+            return 1;
         }
 
         notesPath = QFileDialog::getExistingDirectory(
@@ -272,7 +304,7 @@ bool mainStartupMisc(const QStringList &arguments) {
         dir = QDir(notesPath);
 
         if (notesPath.isEmpty() || !dir.exists()) {
-            return false;
+            return 1;
         }
 
         settings.setValue(QStringLiteral("notesPath"), notesPath);
@@ -293,7 +325,7 @@ bool mainStartupMisc(const QStringList &arguments) {
             settings.clear();
             DatabaseService::removeDiskDatabase();
 
-            return false;
+            return 0;
         }
     }
 
@@ -311,10 +343,10 @@ bool mainStartupMisc(const QStringList &arguments) {
         // Print the dump to stdout and copy it to the clipboard
         fprintf(stdout, "%s\n", dump.toLocal8Bit().constData());
 
-        return false;
+        return 0;
     }
 
-    return true;
+    return -1;
 }
 
 /**
@@ -594,9 +626,9 @@ int main(int argc, char *argv[]) {
         loadMacTranslations(translatorOSX, translatorOSX2, translatorOSX3, translatorOSX4,
                             QCoreApplication::applicationDirPath(), locale);
 #endif
-        const bool result = mainStartupMisc(arguments);
-        if (!result) {
-            return 0;
+        const int result = mainStartupMisc(arguments);
+        if (result != -1) {
+            return result;
         }
 
         MainWindow w;
@@ -653,9 +685,9 @@ int main(int argc, char *argv[]) {
                             QCoreApplication::applicationDirPath(), locale);
 #endif
 
-        const bool result = mainStartupMisc(arguments);
-        if (!result) {
-            return 0;
+        const int result = mainStartupMisc(arguments);
+        if (result != -1) {
+            return result;
         }
 
         MainWindow w;

@@ -169,6 +169,7 @@ SOURCES += main.cpp\
     utils/misc.cpp \
     utils/git.cpp \
     utils/gui.cpp \
+    utils/cli.cpp \
     utils/schema.cpp \
     dialogs/welcomedialog.cpp \
     dialogs/issueassistantdialog.cpp \
@@ -275,6 +276,7 @@ HEADERS  += mainwindow.h \
     utils/misc.h \
     utils/git.h \
     utils/gui.h \
+    utils/cli.h \
     utils/schema.h \
     dialogs/welcomedialog.h \
     dialogs/issueassistantdialog.h \

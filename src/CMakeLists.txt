@@ -374,6 +374,8 @@ set(SOURCE_FILES
     utils/misc.h
     utils/git.cpp
     utils/git.h
+    utils/cli.cpp
+    utils/cli.h
     utils/gui.cpp
     utils/gui.h
     utils/schema.cpp
