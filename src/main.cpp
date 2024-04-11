@@ -1,4 +1,3 @@
-#include <iostream>
 #include <services/databaseservice.h>
 #include <services/metricsservice.h>
 #include <utils/cli.h>
@@ -13,6 +12,7 @@
 #include <QStyleFactory>
 #include <QTranslator>
 #include <QtGui>
+#include <iostream>
 
 #include "dialogs/welcomedialog.h"
 #include "entities/notefolder.h"
@@ -143,9 +143,9 @@ int mainStartupMisc(const QStringList &arguments) {
 
     const QCommandLineOption completionOption(
         QStringList() << "completion",
-        QCoreApplication::translate("main", "Generate shell completion code. Supports `fish`, `bash`, `zsh`."),
-        "shell"
-    );
+        QCoreApplication::translate(
+            "main", "Generate shell completion code. Supports `fish`, `bash`, `zsh`."),
+        "shell");
     parser.addOption(completionOption);
 
     allOptions << helpOption << portableOption << dumpSettingsOption << versionOption
@@ -174,7 +174,7 @@ int mainStartupMisc(const QStringList &arguments) {
             return 1;
         }
 
-        return 0; // Exit after generating the completion script
+        return 0;    // Exit after generating the completion script
     }
 
     QSettings settings;

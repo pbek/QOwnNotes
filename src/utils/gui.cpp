@@ -27,8 +27,8 @@
 #include <QDebug>
 #include <QDialogButtonBox>
 #include <QDockWidget>
-#include <QListWidget>
 #include <QLineEdit>
+#include <QListWidget>
 #include <QMessageBox>
 #include <QPlainTextEdit>
 #include <QProcess>
@@ -1221,7 +1221,7 @@ void Utils::Gui::fixDarkModeIcons(QWidget *widget) {
         return;
     }
 
-    foreach(QLineEdit *lineEdit, widget->findChildren<QLineEdit *>()) {
+    foreach (QLineEdit *lineEdit, widget->findChildren<QLineEdit *>()) {
         auto action = lineEdit->findChild<QAction *>("_q_qlineeditclearaction");
         if (action) {
             action->setIcon(QIcon(QStringLiteral(":/images/cleartext-dark.svg")));

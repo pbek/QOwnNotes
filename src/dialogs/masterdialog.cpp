@@ -16,9 +16,7 @@ void MasterDialog::closeEvent(QCloseEvent *event) {
     QDialog::closeEvent(event);
 }
 
-void MasterDialog::afterSetupUI() {
-    Utils::Gui::fixDarkModeIcons(this);
-}
+void MasterDialog::afterSetupUI() { Utils::Gui::fixDarkModeIcons(this); }
 
 void MasterDialog::resizeEvent(QResizeEvent *event) {
     // save the geometry of the dialog
