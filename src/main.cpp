@@ -144,7 +144,7 @@ int mainStartupMisc(const QStringList &arguments) {
     const QCommandLineOption completionOption(
         QStringList() << "completion",
         QCoreApplication::translate(
-            "main", "Generate shell completion code. Supports `fish`, `bash`, `zsh`."),
+            "main", "Generate shell completion code. Supports `fish`, `bash`."),
         "shell");
     parser.addOption(completionOption);
 
@@ -167,8 +167,8 @@ int mainStartupMisc(const QStringList &arguments) {
             Utils::Cli::generateFishCompletionScript(allOptions, QStringLiteral("QOwnNotes"));
         } else if (shell == "bash") {
             Utils::Cli::generateBashCompletionScript(allOptions, QStringLiteral("QOwnNotes"));
-        } else if (shell == "zsh") {
-            Utils::Cli::generateZshCompletionScript(allOptions, QStringLiteral("QOwnNotes"));
+//        } else if (shell == "zsh") {
+//            Utils::Cli::generateZshCompletionScript(allOptions, QStringLiteral("QOwnNotes"));
         } else {
             std::cerr << "Unsupported shell type specified." << std::endl;
             return 1;

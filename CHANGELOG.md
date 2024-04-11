@@ -1,6 +1,11 @@
 # QOwnNotes Changelog
 
-## Next
+## 24.4.1
+- There now is a new cli parameter `--completion <name>` that generates shell completion
+  code for `fish` and `bash` (for [#3003](https://github.com/pbek/QOwnNotes/issues/3003))
+  - for example `QOwnNotes --completion fish` will generate fish shell completion code
+  - for more information please take a look at
+    [Cli parameters](https://www.qownnotes.org/getting-started/cli-parameters.html)
 - There was a new release of the **QOwnNotes Web Companion browser extension** 2024.4.0
   - the "running away" of the Preferences dialog was fixed under Firefox when
     using a zoom-level over 100% (for [#63](https://github.com/qownnotes/web-companion/issues/63))
