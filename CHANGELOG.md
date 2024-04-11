@@ -7,10 +7,11 @@
   - for more information please take a look at
     [Cli parameters](https://www.qownnotes.org/getting-started/cli-parameters.html)
 - There was a new release of the **QOwnNotes Web Companion browser extension** 2024.4.0
-  - the "running away" of the Preferences dialog was fixed under Firefox when
+  - The "running away" of the Preferences dialog was fixed under Firefox when
     using a zoom-level over 100% (for [#63](https://github.com/qownnotes/web-companion/issues/63))
-  - update dependencies
-  - add more translations
+  - Update dependencies
+  - Add more translations
+- Added more French translation (thank you jd-develop)
 
 ## 24.4.0
 - Added System Verilog support to the note edit code block syntax highlighter

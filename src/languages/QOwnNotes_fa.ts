@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>رونوشت</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -6877,7 +6877,7 @@ Your notes will stay intact!</source>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7970,6 +7970,10 @@ This cannot be undone!</source>
 <message>
 <source>Triggers a menu action after the application was started.</source>
 <translation>پس از اینکه برنامه شروع به کار کرد، یک منو اکشن را راه‌اندازی کنید.</translation>
+</message>
+<message>
+<source>Generate shell completion code. Supports `fish`, `bash`.</source>
+<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

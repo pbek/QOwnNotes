@@ -1234,7 +1234,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopiuj</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -7886,6 +7886,10 @@ Nie można tego cofnąć!</translation>
 <message>
 <source>Triggers a menu action after the application was started.</source>
 <translation>Włącza menu działania po uruchomienia aplikacji.</translation>
+</message>
+<message>
+<source>Generate shell completion code. Supports `fish`, `bash`.</source>
+<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

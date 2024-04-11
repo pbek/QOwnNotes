@@ -12,6 +12,7 @@ Les paramètres suivants peuvent être utilisés dans l'interface en ligne de co
 | `--session <name>`     | Exécute l'application dans un contexte de paramètres et de fichiers internes différent                                                                        |
 | `--allow-multiple-instances` | Autorise l'exécution simultanée de plusieurs instances de QOwnNotes, même si cela est interdit dans les paramètres                                            |
 | `--action <name>`      | Déclenche une action de menu après le démarrage de l'application (voir ci-dessous)                                                                            |
+| `--completion <name>`  | Generate shell completion code. Supports `fish`, `bash`.                                                                                                      |
 
 ::: tip
 Si vous rencontrez des problèmes avec votre installation de QOwnNotes, vous pouvez démarrer l'application avec de nouveaux paramètres sans perdre vos paramètres actuels en utilisant le paramètre `--session`.

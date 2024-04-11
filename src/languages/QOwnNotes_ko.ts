@@ -1222,7 +1222,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>복사</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -7753,6 +7753,10 @@ This cannot be undone!</source>
 <message>
 <source>Triggers a menu action after the application was started.</source>
 <translation>응용 프로그램을 시작한 후 메뉴 작업을 트리거합니다.</translation>
+</message>
+<message>
+<source>Generate shell completion code. Supports `fish`, `bash`.</source>
+<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

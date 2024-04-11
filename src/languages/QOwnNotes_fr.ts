@@ -622,7 +622,7 @@
 </message>
 <message>
 <source>Invalid XML!</source>
-<translation type="unfinished">Invalid XML!</translation>
+<translation>XML invalide !</translation>
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Copier</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1399,7 +1399,7 @@
 </message>
 <message>
 <source>The application will be restarted afterward.</source>
-<translation type="unfinished">The application will be restarted afterward.</translation>
+<translation>L’application va être redémarrée.</translation>
 </message>
 <message>
 <source>Minimal</source>
@@ -1888,11 +1888,11 @@
 </message>
 <message>
 <source>&amp;Setup note folders / subfolders</source>
-<translation type="unfinished">&amp;Setup note folders / subfolders</translation>
+<translation>&amp;Paramétrer les dossiers et sous-dossiers de notes</translation>
 </message>
 <message>
 <source>Setup note folders / subfolders</source>
-<translation type="unfinished">Setup note folders / subfolders</translation>
+<translation>Paramétrer les dossiers et sous-dossiers de notes</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2309,19 +2309,19 @@
 </message>
 <message>
 <source>Move up in subfolder list</source>
-<translation type="unfinished">Move up in subfolder list</translation>
+<translation>Monter dans la liste des sous-dossiers</translation>
 </message>
 <message>
 <source>Move down in subfolder list</source>
-<translation type="unfinished">Move down in subfolder list</translation>
+<translation>Descendre dans la liste des sous-dossiers</translation>
 </message>
 <message>
 <source>Move up in tag list</source>
-<translation type="unfinished">Move up in tag list</translation>
+<translation>Monter dans la liste des tags</translation>
 </message>
 <message>
 <source>Move down in tag list</source>
-<translation type="unfinished">Move down in tag list</translation>
+<translation>Descendre dans la liste des tags</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2718,7 +2718,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>Le chemin vers la note ‘%1’ a été copié dans le presse-papier</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -2809,13 +2809,13 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
 <translation type="unfinished">
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>La copie de %n note(s) a été sautée (pas de fichier Markdown ou texte, ou non lisible)</numerusform>
 <numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
 </translation>
 </message>
 <message>
 <source>Paste &amp;HTML as Markdown</source>
-<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+<translation>Coller de l’&amp;HTML en tant que Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3388,19 +3388,19 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <name>NextcloudDeckDialog</name>
 <message>
 <source>-10min</source>
-<translation type="unfinished">-10min</translation>
+<translation>-10 min</translation>
 </message>
 <message>
 <source>+10min</source>
-<translation type="unfinished">+10min</translation>
+<translation>+10 min</translation>
 </message>
 <message>
 <source>+1d</source>
-<translation type="unfinished">+1d</translation>
+<translation>+1 j</translation>
 </message>
 <message>
 <source>-1d</source>
-<translation type="unfinished">-1d</translation>
+<translation>-1 j</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
@@ -3412,27 +3412,27 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>&amp;Save</source>
-<translation type="unfinished">&amp;Save</translation>
+<translation>&amp;Enregistrer</translation>
 </message>
 <message>
 <source>+1h</source>
-<translation type="unfinished">+1h</translation>
+<translation>+1 h</translation>
 </message>
 <message>
 <source>Title</source>
-<translation type="unfinished">Title</translation>
+<translation>Titre</translation>
 </message>
 <message>
 <source>-1h</source>
-<translation type="unfinished">-1h</translation>
+<translation>-1 h</translation>
 </message>
 <message>
 <source>Description:</source>
-<translation type="unfinished">Description:</translation>
+<translation>Description :</translation>
 </message>
 <message>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Date d'échéance</translation>
 </message>
 </context>
 <context>
@@ -3728,11 +3728,11 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <name>PasswordLineEdit</name>
 <message>
 <source>Show password</source>
-<translation type="unfinished">Show password</translation>
+<translation>Montrer le mot de passe</translation>
 </message>
 <message>
 <source>Hide password</source>
-<translation type="unfinished">Hide password</translation>
+<translation>Cacher le mot de passe</translation>
 </message>
 </context>
 <context>
@@ -3836,11 +3836,11 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Votre système Windows semble être en mode sombre. Voulez-vous également activer le mode sombre dans QOwnNotes ?</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Votre système Windows semble être en mode clair. Voulez-vous également désactiver le mode sombre dans QOwnNotes ?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
@@ -3892,7 +3892,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
-<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
+<translation>Votre dossier de notes &lt;b&gt;%1&lt;/b&gt; n’a pas été trouvé ! Voulez-vous en sélectionner un autre ?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -4257,7 +4257,7 @@ Le dossier et le fichier sont-ils accessibles en écriture ?</translation>
 </message>
 <message>
 <source>To search for a script please enter your query text.</source>
-<translation type="unfinished">To search for a script please enter your query text.</translation>
+<translation>Merci d’entrer votre texte de requête pour chercher un script.</translation>
 </message>
 <message>
 <source>Minimum app version:</source>
@@ -4965,7 +4965,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Stack:</source>
-<translation type="unfinished">Stack:</translation>
+<translation>Pile :</translation>
 </message>
 <message>
 <source>Todo settings</source>
@@ -5402,7 +5402,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <source> sec</source>
 <extracomment>short for seconds</extracomment>
-<translation type="unfinished"> sec</translation>
+<translation> sec</translation>
 </message>
 <message>
 <source>Forget all "Don't ask again" choices in message boxes</source>
@@ -5522,7 +5522,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Select the path of the git binary</source>
-<translation type="unfinished">Select the path of the git binary</translation>
+<translation>Sélectionner le chemin vers le binaire git</translation>
 </message>
 <message>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
@@ -5538,7 +5538,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Clicking a note tab unsets 'All notes' selection</source>
-<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+<translation>Cliquer sur l’onglet d’une note désélectionne toutes les notes</translation>
 </message>
 <message>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
@@ -6381,7 +6381,7 @@ Le message d'erreur de connexion est : </translation>
 </message>
 <message>
 <source>Stack Id: %1</source>
-<translation type="unfinished">Stack Id: %1</translation>
+<translation>Identifiant de pile : %1</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
@@ -6721,7 +6721,7 @@ Vos notes resteront intactes!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7645,7 +7645,7 @@ Cela ne peut être annuler !</translation>
 <message numerus="yes">
 <source>Bookmark deleted from %n notes(s)</source>
 <translation type="unfinished">
-<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Signet supprimé de %n note(s)</numerusform>
 <numerusform>Bookmark deleted from %n notes(s)</numerusform>
 </translation>
 </message>
@@ -7797,6 +7797,10 @@ Cela ne peut être annuler !</translation>
 <message>
 <source>Triggers a menu action after the application was started.</source>
 <translation>Déclenche une action de menu après le démarrage de l'application.</translation>
+</message>
+<message>
+<source>Generate shell completion code. Supports `fish`, `bash`.</source>
+<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>
