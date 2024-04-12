@@ -13,6 +13,8 @@
 , wrapQtAppsHook
 , botan2
 , pkg-config
+, xvfb-run
+, installShellFiles
 }:
 
 let
@@ -31,6 +33,8 @@ stdenv.mkDerivation {
     qttools
     wrapQtAppsHook
     pkg-config
+    installShellFiles
+    xvfb-run
   ] ++ lib.optionals stdenv.isDarwin [ makeWrapper ];
 
   buildInputs = [
@@ -46,9 +50,16 @@ stdenv.mkDerivation {
     "USE_SYSTEM_BOTAN=1"
   ];
 
-  postInstall =
+  postInstall = ''
+    installShellCompletion --cmd ${appname} \
+      --bash <(xvfb-run $out/bin/${appname} --completion bash) \
+      --fish <(xvfb-run $out/bin/${appname} --completion fish)
+    installShellCompletion --cmd ${pname} \
+      --bash <(xvfb-run $out/bin/${appname} --completion bash) \
+      --fish <(xvfb-run $out/bin/${appname} --completion fish)
+  ''
   # Create a lowercase symlink for Linux
-  lib.optionalString stdenv.isLinux ''
+  + lib.optionalString stdenv.isLinux ''
     ln -s $out/bin/${appname} $out/bin/${pname}
   ''
   # Wrap application for macOS as lowercase binary
