@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## Next
+## 24.4.2
 - We now assume `--allow-multiple-instances` if `--completion` is used as cli parameter
   (for [#3003](https://github.com/pbek/QOwnNotes/issues/3003))
 - Added more German, Dutch, Korean, Spanish, Swedish translation (thank you
