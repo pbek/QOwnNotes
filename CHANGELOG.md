@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## Next
+- We now assume `--allow-multiple-instances` if `--completion` is used as cli parameter
+  (for [#3003](https://github.com/pbek/QOwnNotes/issues/3003))
+
 ## 24.4.1
 - There now is a new cli parameter `--completion <name>` that generates shell completion
   code for `fish` and `bash` (for [#3003](https://github.com/pbek/QOwnNotes/issues/3003))

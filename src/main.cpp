@@ -452,7 +452,7 @@ int main(int argc, char *argv[]) {
         } else if (arg == QStringLiteral("--clear-settings")) {
             clearSettings = true;
         } else if (arg == QStringLiteral("--help") || arg == QStringLiteral("--dump-settings") ||
-                   arg == QStringLiteral("-h") ||
+                   arg == QStringLiteral("--completion") || arg == QStringLiteral("-h") ||
                    arg == QStringLiteral("--allow-multiple-instances")) {
             allowOnlyOneAppInstance = false;
         } else if (arg == QStringLiteral("--after-update")) {
