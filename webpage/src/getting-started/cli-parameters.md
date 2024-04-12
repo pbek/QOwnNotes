@@ -4,7 +4,7 @@ You can use these parameters on the command line interface (CLI) to control
 the behavior of the application:
 
 | Parameter                    | Description                                                                                                                                |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+|------------------------------| ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--help`                     | Shows the help screen                                                                                                                      |
 | `--version`                  | Prints out the version number of the application                                                                                           |
 | `--portable`                 | Runs the application in portable mode                                                                                                      |
@@ -13,7 +13,7 @@ the behavior of the application:
 | `--session <name>`           | Runs the application in a different context for settings and internal files                                                                |
 | `--allow-multiple-instances` | Allows multiple instances of QOwnNotes to be started even if disallowed in the settings                                                    |
 | `--action <name>`            | Triggers a menu action after the application was started (see below)                                                                       |
-| `--completion <name>`        | Generate shell completion code. Supports `fish`, `bash`.                                                                                   |
+| `--completion <shell>`       | Generate shell completion code. Supports `fish`, `bash`.                                                                                   |
 
 ::: tip
 If you run into troubles with your installation of QOwnNotes you may want start
