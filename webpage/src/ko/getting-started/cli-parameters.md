@@ -12,7 +12,7 @@
 | `--session <name>`     | 설정 및 내부 파일에 대해 다른 컨텍스트에서 응용 프로그램을 실행합니다                               |
 | `--allow-multiple-instances` | 설정에서 허용되지 않는 경우에도 QOnNotes의 여러 인스턴스를 시작할 수 있습니다                       |
 | `--action <name>`      | 응용 프로그램이 시작된 후 메뉴 작업을 트리거합니다 (아래 참조)                                  |
-| `--completion <name>`  | Generate shell completion code. Supports `fish`, `bash`.              |
+| `--completion <shell>` | 셸 완료 코드를 생성합니다. `fish`, `bash`를 지원합니다.                                |
 
 ::: 팁 QOnNotes 설치 시 문제가 발생할 경우 `--session` 매개 변수를 사용하여 현재 설정을 잃지 않고 새로운 설정으로 응용프로그램을 시작할 수 있습니다.
 

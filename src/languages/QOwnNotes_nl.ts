@@ -1221,7 +1221,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopie</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -7801,7 +7801,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 </message>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
-<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
+<translation>Shell-voltooiingscode genereren. Met ondersteuning voor `fish`, `bash`.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

@@ -12,7 +12,7 @@ Puede utilizar estos parámetros en la interfaz de línea de comandos (CLI) para
 | `--session <name>`     | Ejecuta la aplicación en un contexto diferente para la configuración y archivos internos                                                  |
 | `--allow-multiple-instances` | Permite iniciar varias instancias de QOwnNotes aunque no esté permitido en la configuración                                               |
 | `--action <name>`      | Activa una acción de menú después de que se inició la aplicación (vea abajo)                                                              |
-| `--completion <name>`  | Generate shell completion code. Supports `fish`, `bash`.                                                                                  |
+| `--completion <shell>` | Generate shell completion code. Supports `fish`, `bash`.                                                                                  |
 
 ::: tip
 Si tiene problemas con la instalación de QOwnNotes, es posible que desee iniciar la aplicación con una configuración nueva sin perder la configuración actual mediante el parámetro `--session`.

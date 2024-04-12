@@ -12,7 +12,7 @@
 | `‪--session <اسم>`      | يشغل التطبيق في سياق مختلف للإعدادات والملفات الداخلية                                        |
 | `‪--allow-multiple-instances` | يسمح بتشغيل عدة نسخ من تطبيق QOwnNotes حتى في حالة منع ذلك في الإعدادات                       |
 | `‪--action <اسم>`       | ينفذ إجراء قائمة بعد تشغيل التطبيق (انظر بالأسفل)                                             |
-| `--completion <name>`   | Generate shell completion code. Supports `fish`, `bash`.                                      |
+| `--completion <shell>`  | Generate shell completion code. Supports `fish`, `bash`.                                      |
 
 ::: tip
 إذا كنت تواجه مشاكل مع QOwnNotes المثبت لديك، ربما تود أن تشغّل التطبيق بإعدادات جديدة بغير أن تفقد إعداداتك الحالية، باستخدام المُعامل <code dir="ltr">--session</code>.

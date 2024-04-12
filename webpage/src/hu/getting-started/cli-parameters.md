@@ -12,7 +12,7 @@ Ezeket a paramétereket használhatja a parancssori felületen (CLI) az alkalmaz
 | `--session <name>`     | Az alkalmazást a beállításoknál és a belső fájloknál egy különböző környezetben futtat                                                   |
 | `--allow-multiple-instances` | Lehetővé teszi, hogy a QOwnNotes több példányát indítsa, még akkor is, ha a beállításokban nincs engedélyezve                            |
 | `--action <name>`      | Menüműveletet indít el az alkalmazás elindítása után (lásd alább)                                                                        |
-| `--completion <name>`  | Generate shell completion code. Supports `fish`, `bash`.                                                                                 |
+| `--completion <shell>` | Generate shell completion code. Supports `fish`, `bash`.                                                                                 |
 
 ::: tip
 Ha problémái adódnak a QOwnNotes telepítésével, akkor érdemes új beállításokkal indítani az alkalmazást anélkül, hogy elveszítené az aktuális beállításokat a `--session` paraméter használatával.

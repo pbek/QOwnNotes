@@ -1222,7 +1222,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>복사</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -7756,7 +7756,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
-<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
+<translation>셸 완성 코드를 생성합니다. `fish`, `bash`를 지원합니다.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>
