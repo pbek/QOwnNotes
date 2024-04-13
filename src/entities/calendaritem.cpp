@@ -43,6 +43,8 @@ QString CalendarItem::getDescription() { return this->description; }
 
 int CalendarItem::getPriority() { return this->priority; }
 
+int CalendarItem::getProgress() { return this->progress; }
+
 bool CalendarItem::getHasDirtyData() { return this->hasDirtyData; }
 
 QString CalendarItem::getLastModifiedString() { return this->lastModifiedString; }
@@ -77,7 +79,15 @@ void CalendarItem::setAlarmDate(const QDateTime &dateTime) { this->alarmDate = d
 
 void CalendarItem::setPriority(int value) { this->priority = value; }
 
-void CalendarItem::setCompleted(bool value) { this->completed = value; }
+void CalendarItem::setProgress(int value) { this->priority = value; }
+
+void CalendarItem::setCompleted(bool value) {
+    if (value)
+    {
+        setProgress(100);
+    }
+    this->completed = value;
+}
 
 void CalendarItem::updateCompleted(bool value) {
     this->completed = value;
@@ -545,7 +555,7 @@ QString CalendarItem::generateNewICSData() {
     icsDataHash[QStringLiteral("DESCRIPTION")] = description;
     icsDataHash[QStringLiteral("UID")] = uid;
     icsDataHash[QStringLiteral("PRIORITY")] = QString::number(priority);
-    icsDataHash[QStringLiteral("PERCENT-COMPLETE")] = QString::number(completed ? 100 : 0);
+    icsDataHash[QStringLiteral("PERCENT-COMPLETE")] = QString::number(progress);
     icsDataHash[QStringLiteral("STATUS")] = completed ? "COMPLETED" : "NEEDS-ACTION";
     //    icsDataHash["CREATED"] =
     //    created.toUTC().toString(ICS_DATETIME_FORMAT);
@@ -708,7 +718,7 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
                   ? icsDataHash[QStringLiteral("SUMMARY")].trimmed()
                   : QString();
     completed = icsDataHash.contains(QStringLiteral("PERCENT-COMPLETE"))
-                    ? icsDataHash[QStringLiteral("PERCENT-COMPLETE")] == QLatin1String("100")
+                    ? icsDataHash[QStringLiteral("PERCENT-COMPLETE")] == QLatin1String(getProgress())
                     : false;
 
     // also take the completed status into account

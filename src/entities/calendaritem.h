@@ -44,9 +44,11 @@ class CalendarItem {
     QString getRelatedUid() const;
     static CalendarItem fetchByUid(const QString &uid);
     int getPriority();
+    int getProgress();
     QString generateNewICSData();
     QString getICSData();
     void setPriority(int value);
+    void setProgress(int value);
     void setICSData(const QString &text);
     QString getETag();
     QString getLastModifiedString();
@@ -89,6 +91,7 @@ class CalendarItem {
     QString etag;
     QString lastModifiedString;
     int priority;
+    int progress;
     int sortPriority;
     bool hasDirtyData;
     bool completed;

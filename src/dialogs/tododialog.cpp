@@ -403,6 +403,7 @@ void TodoDialog::resetEditFrameControls() {
     ui->summaryEdit->setText(QString());
     ui->descriptionEdit->setPlainText(QString());
     ui->prioritySlider->setValue(0);
+    ui->progressSlider->setValue(0);
     ui->reminderCheckBox->setChecked(false);
     ui->reminderDateTimeEdit->hide();
     ui->saveButton->setEnabled(false);
@@ -446,6 +447,7 @@ void TodoDialog::updateCurrentCalendarItemWithFormData() {
     }
 
     currentCalendarItem.setPriority(priority);
+    currentCalendarItem.setProgress(ui->progressSlider->value());
     currentCalendarItem.setSummary(ui->summaryEdit->text());
     currentCalendarItem.setDescription(ui->descriptionEdit->toPlainText());
     currentCalendarItem.setModified(QDateTime::currentDateTime());
@@ -497,6 +499,11 @@ void TodoDialog::on_prioritySlider_valueChanged(int value) {
     }
 
     ui->prioritySlider->setToolTip("priority: " + priorityText);
+}
+
+
+void TodoDialog::on_progressSlider_valueChanged(int value) {
+    ui->progressSlider->setToolTip("progress: " + QString(value) + "%");
 }
 
 void TodoDialog::on_showCompletedItemsCheckBox_clicked() {
@@ -824,6 +831,10 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *curre
 
         ui->prioritySlider->setValue(priority);
         on_prioritySlider_valueChanged(priority);
+
+        int progress = currentCalendarItem.getProgress();
+        ui->progressSlider->setValue(progress);
+        on_progressSlider_valueChanged(progress);
 
         ui->saveButton->setEnabled(true);
         ui->noteButton->setEnabled(true);
