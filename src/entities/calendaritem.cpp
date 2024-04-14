@@ -501,7 +501,7 @@ bool CalendarItem::store() {
             "completed_date, sort_priority) "
             "VALUES (:summary, :url, :description, :calendar, :uid,"
             " :related_uid, :ics_data, :etag, :last_modified_string, "
-            ":has_dirty_data, :completed, progress, :alarm_date, :priority, "
+            ":has_dirty_data, :completed, :progress, :alarm_date, :priority, "
             ":created, :modified, :completed_date, "
             ":sort_priority)");
     }
