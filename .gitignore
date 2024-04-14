@@ -27,3 +27,4 @@ ui_*.h
 /src/QOwnNotes
 secrets/*
 
+.cache/clangd/index
