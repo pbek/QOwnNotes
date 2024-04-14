@@ -146,6 +146,20 @@
             </layout>
            </widget>
           </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="tagsLabel">
+            <property name="text">
+             <string>Tags</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="tagsLineEdit">
+            <property name="placeholderText">
+             <string>Tags are comma separated: tag1,tag2</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </item>
         <item row="0" column="0" colspan="2">
