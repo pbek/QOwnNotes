@@ -449,6 +449,8 @@ void TodoDialog::updateCurrentCalendarItemWithFormData() {
     currentCalendarItem.setPriority(priority);
     currentCalendarItem.setSummary(ui->summaryEdit->text());
     currentCalendarItem.setDescription(ui->descriptionEdit->toPlainText());
+    // Clean the last comma
+    ui->tagsLineEdit->setText(ui->tagsLineEdit->text().remove(QRegularExpression(", *$")));
     currentCalendarItem.setTags(ui->tagsLineEdit->text());
     currentCalendarItem.setModified(QDateTime::currentDateTime());
     currentCalendarItem.setAlarmDate(
