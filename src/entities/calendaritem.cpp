@@ -79,7 +79,7 @@ void CalendarItem::setAlarmDate(const QDateTime &dateTime) { this->alarmDate = d
 
 void CalendarItem::setPriority(int value) { this->priority = value; }
 
-void CalendarItem::setProgress(int value) { this->priority = value; }
+void CalendarItem::setProgress(int value) { this->progress = value; }
 
 void CalendarItem::setCompleted(bool value) {
     if (value)
