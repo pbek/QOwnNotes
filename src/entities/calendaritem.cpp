@@ -251,6 +251,7 @@ bool CalendarItem::fillFromQuery(const QSqlQuery &query) {
     this->description = query.value(QStringLiteral("description")).toString();
     this->hasDirtyData = query.value(QStringLiteral("has_dirty_data")).toInt() == 1;
     this->completed = query.value(QStringLiteral("completed")).toInt() == 1;
+    this->progress = query.value(QStringLiteral("progress")).toInt();
     this->priority = query.value(QStringLiteral("priority")).toInt();
     this->uid = query.value(QStringLiteral("uid")).toString();
     this->relatedUid = query.value(QStringLiteral("related_uid")).toString();
@@ -484,6 +485,7 @@ bool CalendarItem::store() {
             "description = :description, "
             "has_dirty_data = :has_dirty_data, "
             "completed = :completed, "
+            "progress = :progress, "
             "calendar = :calendar, uid = :uid, related_uid = :related_uid, "
             "ics_data = :ics_data, etag = :etag, "
             "last_modified_string = :last_modified_string, "
@@ -496,12 +498,12 @@ bool CalendarItem::store() {
         query.prepare(
             "INSERT INTO calendarItem "
             "(summary, url, description, calendar, uid, related_uid, ics_data, "
-            "etag, last_modified_string, has_dirty_data, completed, "
+            "etag, last_modified_string, has_dirty_data, completed, progress, "
             "alarm_date, priority, created, modified, "
             "completed_date, sort_priority) "
             "VALUES (:summary, :url, :description, :calendar, :uid,"
             " :related_uid, :ics_data, :etag, :last_modified_string, "
-            ":has_dirty_data, :completed, :alarm_date, :priority, "
+            ":has_dirty_data, :completed, progress, :alarm_date, :priority, "
             ":created, :modified, :completed_date, "
             ":sort_priority)");
     }
@@ -511,6 +513,7 @@ bool CalendarItem::store() {
     query.bindValue(QStringLiteral(":description"), this->description);
     query.bindValue(QStringLiteral(":has_dirty_data"), this->hasDirtyData ? 1 : 0);
     query.bindValue(QStringLiteral(":completed"), this->completed ? 1 : 0);
+    query.bindValue(QStringLiteral(":progress"), this->progress);
     query.bindValue(QStringLiteral(":calendar"), this->calendar);
     query.bindValue(QStringLiteral(":uid"), this->uid);
     query.bindValue(QStringLiteral(":related_uid"), this->relatedUid);
@@ -718,7 +721,7 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
                   ? icsDataHash[QStringLiteral("SUMMARY")].trimmed()
                   : QString();
     completed = icsDataHash.contains(QStringLiteral("PERCENT-COMPLETE"))
-                    ? icsDataHash[QStringLiteral("PERCENT-COMPLETE")] == QLatin1String(getProgress())
+                    ? icsDataHash[QStringLiteral("PERCENT-COMPLETE")] == getProgress()
                     : false;
 
     // also take the completed status into account
@@ -726,6 +729,10 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
         completed = icsDataHash.contains(QStringLiteral("STATUS")) &&
                     icsDataHash[QStringLiteral("STATUS")] == QLatin1String("COMPLETED");
     }
+
+    progress = icsDataHash.contains(QStringLiteral("PERCENT-COMPLETE"))
+                    ? icsDataHash[QStringLiteral("PERCENT-COMPLETE")].toInt()
+                    : 0;
 
     uid = icsDataHash.contains(QStringLiteral("UID")) ? icsDataHash[QStringLiteral("UID")]
                                                       : QString();
