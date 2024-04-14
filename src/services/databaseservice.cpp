@@ -878,6 +878,8 @@ bool DatabaseService::setupTables() {
 
     if (version < 42) {
         queryDisk.exec(QStringLiteral("ALTER TABLE calendarItem ADD progress INTEGER DEFAULT 0"));
+        queryDisk.exec(QStringLiteral("UPDATE calendarItem SET progress = 0 WHERE completed = 0"));
+        queryDisk.exec(QStringLiteral("UPDATE calendarItem SET progress = 100 WHERE completed = 1"));
         version = 42;
     }
 
