@@ -161,6 +161,15 @@
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+            <property name="pageStep">
+             <number>1</number>
+            </property>
            </widget>
           </item>
          </layout>
