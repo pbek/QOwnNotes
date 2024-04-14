@@ -278,7 +278,7 @@ void WebSocketServerService::processMessage(const QString &message) {
         const int noteCount = deleteBookmark(jsonObject);
 
         pSender->sendTextMessage(
-            flashMessageJsonText(tr("Bookmark deleted from %n notes(s)", "", noteCount)));
+            flashMessageJsonText(tr("Bookmark deleted from %n note(s)", "", noteCount)));
 
         // Reload current note in case the bookmark was deleted from the current note
         mainWindow->reloadCurrentNoteByNoteId(true);
