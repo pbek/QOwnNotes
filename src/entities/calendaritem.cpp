@@ -721,7 +721,7 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
                   ? icsDataHash[QStringLiteral("SUMMARY")].trimmed()
                   : QString();
     completed = icsDataHash.contains(QStringLiteral("PERCENT-COMPLETE"))
-                    ? icsDataHash[QStringLiteral("PERCENT-COMPLETE")] == getProgress()
+                    ? icsDataHash[QStringLiteral("PERCENT-COMPLETE")] == QLatin1String("100")
                     : false;
 
     // also take the completed status into account
