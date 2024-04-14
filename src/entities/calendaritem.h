@@ -65,7 +65,6 @@ class CalendarItem {
     void setModified(const QDateTime &dateTime);
     void setCreated(const QDateTime &dateTime);
     void setCompleted(bool value);
-    void updateCompleted(bool value);
     static QList<CalendarItem> fetchAll();
     static void updateAllSortPriorities();
     QDateTime getAlarmDate();

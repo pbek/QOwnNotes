@@ -503,7 +503,7 @@ void TodoDialog::on_prioritySlider_valueChanged(int value) {
 
 
 void TodoDialog::on_progressSlider_valueChanged(int value) {
-    ui->progressSlider->setToolTip("progress: " + QString(value) + "%");
+    ui->progressSlider->setToolTip("progress: " + QString::number(value) + "%");
 }
 
 void TodoDialog::on_showCompletedItemsCheckBox_clicked() {
@@ -855,7 +855,7 @@ void TodoDialog::on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item, int co
 
     CalendarItem calItem = CalendarItem::fetchByUid(uid);
     if (calItem.isFetched()) {
-        calItem.updateCompleted(item->checkState(0) == Qt::Checked);
+        calItem.setCompleted(item->checkState(0) == Qt::Checked);
         calItem.store();
 
         OwnCloudService *ownCloud = OwnCloudService::instance();

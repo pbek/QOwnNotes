@@ -84,17 +84,15 @@ void CalendarItem::setProgress(int value) { this->progress = value; }
 void CalendarItem::setCompleted(bool value) {
     if (value)
     {
+        this->completedDate = QDateTime::currentDateTime();
         setProgress(100);
+    }
+    else {
+        setProgress(0);
     }
     this->completed = value;
 }
 
-void CalendarItem::updateCompleted(bool value) {
-    this->completed = value;
-    if (value) {
-        this->completedDate = QDateTime::currentDateTime();
-    }
-}
 
 /**
  * CalendarItem::addCalendarItemForRequest
@@ -559,7 +557,7 @@ QString CalendarItem::generateNewICSData() {
     icsDataHash[QStringLiteral("UID")] = uid;
     icsDataHash[QStringLiteral("PRIORITY")] = QString::number(priority);
     icsDataHash[QStringLiteral("PERCENT-COMPLETE")] = QString::number(progress);
-    icsDataHash[QStringLiteral("STATUS")] = completed ? "COMPLETED" : "NEEDS-ACTION";
+    icsDataHash[QStringLiteral("STATUS")] = progress == 100 ? "COMPLETED" : "NEEDS-ACTION";
     //    icsDataHash["CREATED"] =
     //    created.toUTC().toString(ICS_DATETIME_FORMAT);
     //    icsDataHash["LAST-MODIFIED"] =
@@ -571,7 +569,7 @@ QString CalendarItem::generateNewICSData() {
         icsDataHash[QStringLiteral("RELATED-TO")] = relatedUid;
     }
 
-    if (completed) {
+    if (progress == 100) {
         //        icsDataHash["COMPLETED"] =
         //                completedDate.toUTC().toString(ICS_DATETIME_FORMAT);
         icsDataHash[QStringLiteral("COMPLETED")] = completedDate.toString(ICS_DATETIME_FORMAT);
@@ -703,7 +701,7 @@ bool CalendarItem::exists() {
 
 bool CalendarItem::isFetched() { return (this->id > 0); }
 
-bool CalendarItem::isCompleted() { return this->completed; }
+bool CalendarItem::isCompleted() { return this->completed || this->progress == 100; }
 
 bool CalendarItem::updateWithICSData(const QString &icsData) {
     this->icsData = icsData;
@@ -720,19 +718,26 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
     summary = icsDataHash.contains(QStringLiteral("SUMMARY"))
                   ? icsDataHash[QStringLiteral("SUMMARY")].trimmed()
                   : QString();
+
+    progress = icsDataHash.contains(QStringLiteral("PERCENT-COMPLETE"))
+                    ? icsDataHash[QStringLiteral("PERCENT-COMPLETE")].toInt()
+                    : 0;
+
     completed = icsDataHash.contains(QStringLiteral("PERCENT-COMPLETE"))
                     ? icsDataHash[QStringLiteral("PERCENT-COMPLETE")] == QLatin1String("100")
                     : false;
 
     // also take the completed status into account
-    if (!completed) {
-        completed = icsDataHash.contains(QStringLiteral("STATUS")) &&
-                    icsDataHash[QStringLiteral("STATUS")] == QLatin1String("COMPLETED");
+    if (icsDataHash.contains(QStringLiteral("STATUS")))
+    {
+        if (progress == 100)
+        {
+            icsDataHash[QStringLiteral("STATUS")] = QLatin1String("COMPLETED");
+        }
+        else {
+            icsDataHash[QStringLiteral("STATUS")] = QLatin1String("NEEDS-ACTION");
+        }
     }
-
-    progress = icsDataHash.contains(QStringLiteral("PERCENT-COMPLETE"))
-                    ? icsDataHash[QStringLiteral("PERCENT-COMPLETE")].toInt()
-                    : 0;
 
     uid = icsDataHash.contains(QStringLiteral("UID")) ? icsDataHash[QStringLiteral("UID")]
                                                       : QString();
