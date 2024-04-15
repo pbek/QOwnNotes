@@ -917,6 +917,10 @@ void TodoDialog::reloadCurrentTags()
     ui->tagCloudLayout->layout()->setSizeConstraint(QLayout::SetFixedSize);
     for (auto tag : _todoTagsList)
     {
+        if (tag.isEmpty())
+        {
+            continue;
+        }
         QPushButton *tagButton = new QPushButton(tag, ui->tagCloudLayout->layout()->widget());
         tagButton->setIcon(QIcon::fromTheme("tag-delete"));
         connect(tagButton, &QPushButton::released, this, [=](){
@@ -931,13 +935,19 @@ void TodoDialog::reloadCurrentTags()
 
 QString TodoDialog::getTagString()
 {
+    // Remove any possible empty items
+    _todoTagsList.removeAll(QString(""));
     return _todoTagsList.join(',');
 }
 
 void TodoDialog::on_tagsLineEdit_returnPressed()
 {
-    _todoTagsList.append(ui->tagsLineEdit->text());
+    auto newTag = ui->tagsLineEdit->text().simplified();
+    if (_todoTagsList.contains(newTag))
+    {
+        return;
+    }
+    _todoTagsList.append(newTag);
     ui->tagsLineEdit->clear();
-    updateCurrentCalendarItemWithFormData();
     reloadCurrentTags();
 }
