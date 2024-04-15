@@ -73,6 +73,7 @@ class TodoDialog : public MasterDialog {
     void searchInDescriptionTextEdit(QString &str);
     void createNewTodoItem(const QString &name = QLatin1String(""),
                            const QString &relatedUid = QLatin1String(""));
+    void cleanTagButtons();
 
    protected:
     bool eventFilter(QObject *obj, QEvent *event) override;

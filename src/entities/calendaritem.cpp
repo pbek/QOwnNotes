@@ -966,7 +966,15 @@ void CalendarItem::generateICSDataHash() {
             lastKey = findFreeHashKey(&icsDataHash, lastKey);
 
             // add new key / value pair to the hash
-            icsDataHash[lastKey] = decodeICSDataLine(match.captured(2));
+            // Categories/tags wont be cleaned since they can have commas in middle of
+            // a category
+            if (lastKey == "CATEGORIES")
+            {
+                icsDataHash[lastKey] = match.captured(2);
+            }
+            else {
+                icsDataHash[lastKey] = decodeICSDataLine(match.captured(2));
+            }
             //            hash.insert( lastKey, decodeICSDataLine(
             //            match.captured(2) ) );
 

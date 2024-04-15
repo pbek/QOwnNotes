@@ -20,6 +20,129 @@
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
     <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QFrame" name="selectFrame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QGridLayout" name="selectLayout">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>1</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item row="3" column="0">
+         <widget class="QProgressBar" name="todoItemLoadingProgressBar">
+          <property name="toolTip">
+           <string>Todo list items are being loaded from the server</string>
+          </property>
+          <property name="value">
+           <number>24</number>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QCheckBox" name="showDueTodayItemsOnlyCheckBox">
+          <property name="toolTip">
+           <string>This doesn't work for sub-items, because they may be hidden by the parent item!</string>
+          </property>
+          <property name="text">
+           <string>Show only items due today</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QFrame" name="frame">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QCheckBox" name="showCompletedItemsCheckBox">
+             <property name="text">
+              <string>Show completed items</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="reloadTodoListButton">
+             <property name="toolTip">
+              <string>Reload the todo list from server</string>
+             </property>
+             <property name="text">
+              <string>Reload…</string>
+             </property>
+             <property name="icon">
+              <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="todoListSelector">
+          <property name="toolTip">
+           <string>select your todo list</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="TodoItemTreeWidget" name="todoItemTreeWidget">
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::InternalMove</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string>Summary</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Due date</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="newItemEdit">
+          <property name="placeholderText">
+           <string>Search or create todo item</string>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
      <item row="1" column="1">
       <widget class="QFrame" name="editFrame">
        <property name="sizePolicy">
@@ -53,11 +176,73 @@
         <property name="bottomMargin">
          <number>0</number>
         </property>
-        <item row="6" column="0" colspan="2">
-         <widget class="QOwnNotesMarkdownTextEdit" name="descriptionEdit">
-          <property name="readOnly">
-           <bool>false</bool>
+        <item row="10" column="0" colspan="2">
+         <widget class="QFrame" name="horizontalFrame">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
           </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="saveButton">
+             <property name="toolTip">
+              <string>Save the current todo item</string>
+             </property>
+             <property name="text">
+              <string>Save</string>
+             </property>
+             <property name="icon">
+              <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
+             </property>
+             <property name="shortcut">
+              <string notr="true">Ctrl+S</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="removeButton">
+             <property name="toolTip">
+              <string>Remove the current todo item</string>
+             </property>
+             <property name="text">
+              <string>Remove</string>
+             </property>
+             <property name="icon">
+              <iconset theme="edit-delete" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
+             </property>
+             <property name="shortcut">
+              <string notr="true">Ctrl+R</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="noteButton">
+             <property name="text">
+              <string>Note…</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
         <item row="8" column="0" colspan="2">
@@ -67,6 +252,19 @@
           </property>
           <property name="lineWidth">
            <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QLineEdit" name="summaryEdit">
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+          <property name="placeholderText">
+           <string>Summary</string>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -146,6 +344,24 @@
             </layout>
            </widget>
           </item>
+          <item row="2" column="1">
+           <layout class="QVBoxLayout" name="tagsLayout">
+            <item>
+             <widget class="QLineEdit" name="tagsLineEdit">
+              <property name="placeholderText">
+               <string>Add new tag</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="tagCloudLayout">
+              <property name="sizeConstraint">
+               <enum>QLayout::SetDefaultConstraint</enum>
+              </property>
+             </layout>
+            </item>
+           </layout>
+          </item>
           <item row="2" column="0">
            <widget class="QLabel" name="tagsLabel">
             <property name="text">
@@ -153,217 +369,12 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="tagsLineEdit">
-            <property name="placeholderText">
-             <string>Tags are comma separated: tag1,tag2</string>
-            </property>
-           </widget>
-          </item>
          </layout>
         </item>
-        <item row="0" column="0" colspan="2">
-         <widget class="QLineEdit" name="summaryEdit">
+        <item row="6" column="0" colspan="2">
+         <widget class="QOwnNotesMarkdownTextEdit" name="descriptionEdit">
           <property name="readOnly">
            <bool>false</bool>
-          </property>
-          <property name="placeholderText">
-           <string>Summary</string>
-          </property>
-          <property name="clearButtonEnabled">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="10" column="0" colspan="2">
-         <widget class="QFrame" name="horizontalFrame">
-          <property name="frameShape">
-           <enum>QFrame::NoFrame</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_4">
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item>
-            <widget class="QPushButton" name="saveButton">
-             <property name="toolTip">
-              <string>Save the current todo item</string>
-             </property>
-             <property name="text">
-              <string>Save</string>
-             </property>
-             <property name="icon">
-              <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
-               <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
-             </property>
-             <property name="shortcut">
-              <string notr="true">Ctrl+S</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="removeButton">
-             <property name="toolTip">
-              <string>Remove the current todo item</string>
-             </property>
-             <property name="text">
-              <string>Remove</string>
-             </property>
-             <property name="icon">
-              <iconset theme="edit-delete" resource="../breeze-qownnotes.qrc">
-               <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
-             </property>
-             <property name="shortcut">
-              <string notr="true">Ctrl+R</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="noteButton">
-             <property name="text">
-              <string>Note…</string>
-             </property>
-             <property name="icon">
-              <iconset resource="../breeze-qownnotes.qrc">
-               <normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</iconset>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QFrame" name="selectFrame">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>1</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <layout class="QGridLayout" name="selectLayout">
-        <property name="leftMargin">
-         <number>0</number>
-        </property>
-        <property name="topMargin">
-         <number>0</number>
-        </property>
-        <property name="rightMargin">
-         <number>1</number>
-        </property>
-        <property name="bottomMargin">
-         <number>0</number>
-        </property>
-        <item row="0" column="0">
-         <widget class="QLineEdit" name="newItemEdit">
-          <property name="placeholderText">
-           <string>Search or create todo item</string>
-          </property>
-          <property name="clearButtonEnabled">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="0">
-         <widget class="QFrame" name="frame">
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item>
-            <widget class="QCheckBox" name="showCompletedItemsCheckBox">
-             <property name="text">
-              <string>Show completed items</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="reloadTodoListButton">
-             <property name="toolTip">
-              <string>Reload the todo list from server</string>
-             </property>
-             <property name="text">
-              <string>Reload…</string>
-             </property>
-             <property name="icon">
-              <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
-               <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="3" column="0">
-         <widget class="QProgressBar" name="todoItemLoadingProgressBar">
-          <property name="toolTip">
-           <string>Todo list items are being loaded from the server</string>
-          </property>
-          <property name="value">
-           <number>24</number>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="TodoItemTreeWidget" name="todoItemTreeWidget">
-          <property name="contextMenuPolicy">
-           <enum>Qt::CustomContextMenu</enum>
-          </property>
-          <property name="dragDropMode">
-           <enum>QAbstractItemView::InternalMove</enum>
-          </property>
-          <property name="sortingEnabled">
-           <bool>true</bool>
-          </property>
-          <column>
-           <property name="text">
-            <string>Summary</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Due date</string>
-           </property>
-          </column>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QComboBox" name="todoListSelector">
-          <property name="toolTip">
-           <string>select your todo list</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0">
-         <widget class="QCheckBox" name="showDueTodayItemsOnlyCheckBox">
-          <property name="toolTip">
-           <string>This doesn't work for sub-items, because they may be hidden by the parent item!</string>
-          </property>
-          <property name="text">
-           <string>Show only items due today</string>
           </property>
          </widget>
         </item>

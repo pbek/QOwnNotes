@@ -1,6 +1,8 @@
 #include "dialogs/tododialog.h"
 
 #include <mainwindow.h>
+#include <qgridlayout.h>
+#include <qnamespace.h>
 #include <services/metricsservice.h>
 #include <utils/gui.h>
 
@@ -403,6 +405,7 @@ void TodoDialog::resetEditFrameControls() {
     ui->summaryEdit->setText(QString());
     ui->descriptionEdit->setPlainText(QString());
     ui->tagsLineEdit->setText(QString());
+    cleanTagButtons();
     ui->prioritySlider->setValue(0);
     ui->reminderCheckBox->setChecked(false);
     ui->reminderDateTimeEdit->hide();
@@ -451,7 +454,8 @@ void TodoDialog::updateCurrentCalendarItemWithFormData() {
     currentCalendarItem.setDescription(ui->descriptionEdit->toPlainText());
     // Clean the last comma
     ui->tagsLineEdit->setText(ui->tagsLineEdit->text().remove(QRegularExpression(", *$")));
-    currentCalendarItem.setTags(ui->tagsLineEdit->text());
+    //TODO remember to uncomment this
+    //currentCalendarItem.setTags(ui->tagsLineEdit->text());
     currentCalendarItem.setModified(QDateTime::currentDateTime());
     currentCalendarItem.setAlarmDate(
         ui->reminderCheckBox->isChecked() ? ui->reminderDateTimeEdit->dateTime() : QDateTime());
@@ -803,6 +807,7 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *curre
         resetEditFrameControls();
         return;
     }
+    cleanTagButtons();
 
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("todo/item/changed"));
 
@@ -813,7 +818,12 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *curre
         ui->summaryEdit->setText(currentCalendarItem.getSummary());
         ui->summaryEdit->setCursorPosition(0);
         ui->descriptionEdit->setPlainText(currentCalendarItem.getDescription());
-        ui->tagsLineEdit->setText(currentCalendarItem.getTags());
+
+        for (auto tag : currentCalendarItem.getTags().split(','))
+        {
+            QPushButton *tagButton = new QPushButton(tag, this);
+            ui->tagCloudLayout->addWidget(tagButton);
+        }
 
         QDateTime alarmDate = currentCalendarItem.getAlarmDate();
         ui->reminderCheckBox->setChecked(alarmDate.isValid());
@@ -887,4 +897,12 @@ void TodoDialog::on_todoItemTreeWidget_customContextMenuRequested(QPoint pos) {
 
 void TodoDialog::on_showDueTodayItemsOnlyCheckBox_clicked() {
     on_showCompletedItemsCheckBox_clicked();
+}
+
+void TodoDialog::cleanTagButtons(){
+    QLayoutItem *child;
+    while ((child = ui->tagCloudLayout->layout()->takeAt( 0 )) != nullptr) {
+        delete child->widget();
+        delete child;
+    }
 }
