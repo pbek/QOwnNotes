@@ -61,6 +61,7 @@ class TodoDialog : public MasterDialog {
     CalendarItem lastCreatedCalendarItem;
     QString _jumpToCalendarItemUid;
     bool _setFocusToDescriptionEdit;
+    QStringList _todoTagsList;
     QTreeWidgetItem *firstVisibleTodoItemTreeItem;
     void setupMainSplitter();
     void storeSettings();
@@ -74,6 +75,8 @@ class TodoDialog : public MasterDialog {
     void createNewTodoItem(const QString &name = QLatin1String(""),
                            const QString &relatedUid = QLatin1String(""));
     void cleanTagButtons();
+    void reloadCurrentTags();
+    QString getTagString();
 
    protected:
     bool eventFilter(QObject *obj, QEvent *event) override;

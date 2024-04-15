@@ -353,12 +353,14 @@
               </property>
              </widget>
             </item>
-            <item>
-             <layout class="QGridLayout" name="tagCloudLayout">
-              <property name="sizeConstraint">
-               <enum>QLayout::SetDefaultConstraint</enum>
-              </property>
-             </layout>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QFrame" name="tagsFrame">
+              <layout class="QHBoxLayout" name="tagCloudLayout">
+               <property name="sizeConstraint">
+                <enum>QLayout::SetMinimumSize</enum>
+               </property>
+              </layout>
+             </widget>
             </item>
            </layout>
           </item>

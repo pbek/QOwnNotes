@@ -549,7 +549,7 @@ QString CalendarItem::generateNewICSData() {
     // update the icsDataHash
     icsDataHash[QStringLiteral("SUMMARY")] = summary;
     icsDataHash[QStringLiteral("DESCRIPTION")] = description;
-    icsDataHash[QStringLiteral("CATEGORIES")] = this->tags;
+    icsDataHash[QStringLiteral("CATEGORIES")] = tags;
     icsDataHash[QStringLiteral("UID")] = uid;
     icsDataHash[QStringLiteral("PRIORITY")] = QString::number(priority);
     icsDataHash[QStringLiteral("PERCENT-COMPLETE")] = QString::number(completed ? 100 : 0);
@@ -733,8 +733,9 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
                       ? icsDataHash[QStringLiteral("DESCRIPTION")]
                       : QString();
 
-    this->tags = icsDataHash.contains(QStringLiteral("CATEGORIES"))
-                      ? icsDataHash[QStringLiteral("CATEGORIES")]
+    //ignore escaped commas
+    tags = icsDataHash.contains(QStringLiteral("CATEGORIES"))
+                      ? icsDataHash[QStringLiteral("CATEGORIES")].toLatin1()
                       : QString();
 
     priority = icsDataHash.contains(QStringLiteral("PRIORITY"))

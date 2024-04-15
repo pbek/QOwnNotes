@@ -2,6 +2,7 @@
 
 #include <mainwindow.h>
 #include <qgridlayout.h>
+#include <qlayout.h>
 #include <qnamespace.h>
 #include <services/metricsservice.h>
 #include <utils/gui.h>
@@ -455,7 +456,7 @@ void TodoDialog::updateCurrentCalendarItemWithFormData() {
     // Clean the last comma
     ui->tagsLineEdit->setText(ui->tagsLineEdit->text().remove(QRegularExpression(", *$")));
     //TODO remember to uncomment this
-    //currentCalendarItem.setTags(ui->tagsLineEdit->text());
+    //currentCalendarItem.setTags(getTagString());
     currentCalendarItem.setModified(QDateTime::currentDateTime());
     currentCalendarItem.setAlarmDate(
         ui->reminderCheckBox->isChecked() ? ui->reminderDateTimeEdit->dateTime() : QDateTime());
@@ -819,11 +820,7 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *curre
         ui->summaryEdit->setCursorPosition(0);
         ui->descriptionEdit->setPlainText(currentCalendarItem.getDescription());
 
-        for (auto tag : currentCalendarItem.getTags().split(','))
-        {
-            QPushButton *tagButton = new QPushButton(tag, this);
-            ui->tagCloudLayout->addWidget(tagButton);
-        }
+        reloadCurrentTags();
 
         QDateTime alarmDate = currentCalendarItem.getAlarmDate();
         ui->reminderCheckBox->setChecked(alarmDate.isValid());
@@ -905,4 +902,34 @@ void TodoDialog::cleanTagButtons(){
         delete child->widget();
         delete child;
     }
+    _todoTagsList.clear();
+}
+
+void TodoDialog::reloadCurrentTags()
+{
+    cleanTagButtons();
+    QRegularExpression commaOnly("(?<!\\\\),");
+    _todoTagsList = currentCalendarItem.getTags().split(commaOnly, Qt::SkipEmptyParts);
+    if (_todoTagsList.empty())
+    {
+        return;
+    }
+    ui->tagCloudLayout->layout()->setSizeConstraint(QLayout::SetFixedSize);
+    for (auto tag : _todoTagsList)
+    {
+        QPushButton *tagButton = new QPushButton(tag, ui->tagCloudLayout->layout()->widget());
+        tagButton->setIcon(QIcon::fromTheme("tag-delete"));
+        connect(tagButton, &QPushButton::released, this, [=](){
+            _todoTagsList.removeOne(tag);
+            reloadCurrentTags();
+        });
+        ui->tagCloudLayout->layout()->addWidget(tagButton);
+    }
+
+}
+
+
+QString TodoDialog::getTagString()
+{
+    return _todoTagsList.join(',');
 }
