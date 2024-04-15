@@ -150,6 +150,8 @@ void TodoDialog::setupUi() {
            "from server"));
     connect(clearCacheAction, SIGNAL(triggered()), this, SLOT(clearCacheAndReloadTodoList()));
 
+    connect(ui->tagsLineEdit, &QLineEdit::returnPressed, this, &TodoDialog::on_tagsLineEdit_returnPressed);
+
     ui->reloadTodoListButton->setMenu(reloadMenu);
 }
 
@@ -455,8 +457,7 @@ void TodoDialog::updateCurrentCalendarItemWithFormData() {
     currentCalendarItem.setDescription(ui->descriptionEdit->toPlainText());
     // Clean the last comma
     ui->tagsLineEdit->setText(ui->tagsLineEdit->text().remove(QRegularExpression(", *$")));
-    //TODO remember to uncomment this
-    //currentCalendarItem.setTags(getTagString());
+    currentCalendarItem.setTags(getTagString());
     currentCalendarItem.setModified(QDateTime::currentDateTime());
     currentCalendarItem.setAlarmDate(
         ui->reminderCheckBox->isChecked() ? ui->reminderDateTimeEdit->dateTime() : QDateTime());
@@ -820,6 +821,8 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *curre
         ui->summaryEdit->setCursorPosition(0);
         ui->descriptionEdit->setPlainText(currentCalendarItem.getDescription());
 
+        QRegularExpression commaOnly("(?<!\\\\),");
+        _todoTagsList = currentCalendarItem.getTags().split(commaOnly, Qt::SkipEmptyParts);
         reloadCurrentTags();
 
         QDateTime alarmDate = currentCalendarItem.getAlarmDate();
@@ -902,14 +905,11 @@ void TodoDialog::cleanTagButtons(){
         delete child->widget();
         delete child;
     }
-    _todoTagsList.clear();
 }
 
 void TodoDialog::reloadCurrentTags()
 {
     cleanTagButtons();
-    QRegularExpression commaOnly("(?<!\\\\),");
-    _todoTagsList = currentCalendarItem.getTags().split(commaOnly, Qt::SkipEmptyParts);
     if (_todoTagsList.empty())
     {
         return;
@@ -932,4 +932,12 @@ void TodoDialog::reloadCurrentTags()
 QString TodoDialog::getTagString()
 {
     return _todoTagsList.join(',');
+}
+
+void TodoDialog::on_tagsLineEdit_returnPressed()
+{
+    _todoTagsList.append(ui->tagsLineEdit->text());
+    ui->tagsLineEdit->clear();
+    updateCurrentCalendarItemWithFormData();
+    reloadCurrentTags();
 }

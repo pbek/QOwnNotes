@@ -53,6 +53,7 @@ class TodoDialog : public MasterDialog {
     void on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
     void on_todoItemTreeWidget_customContextMenuRequested(QPoint pos);
     void on_showDueTodayItemsOnlyCheckBox_clicked();
+    void on_tagsLineEdit_returnPressed();
 
    private:
     Ui::TodoDialog *ui;
