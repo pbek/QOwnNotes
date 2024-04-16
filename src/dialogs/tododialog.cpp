@@ -901,7 +901,7 @@ void TodoDialog::on_showDueTodayItemsOnlyCheckBox_clicked() {
 
 void TodoDialog::cleanTagButtons(){
     QLayoutItem *child;
-    while ((child = ui->tagCloudLayout->layout()->takeAt( 0 )) != nullptr) {
+    while ((child = ui->tagCloudLayout->takeAt( 0 )) != nullptr) {
         delete child->widget();
         delete child;
     }
@@ -910,26 +910,35 @@ void TodoDialog::cleanTagButtons(){
 void TodoDialog::reloadCurrentTags()
 {
     cleanTagButtons();
+    ui->tagsFrame->setVisible(false);
     if (_todoTagsList.empty())
     {
         return;
     }
-    ui->tagCloudLayout->layout()->setSizeConstraint(QLayout::SetFixedSize);
+    ui->tagCloudLayout->setSizeConstraint(QLayout::SetFixedSize);
+    int tagRow = 0;
+    int tagCol = 0;
     for (auto tag : _todoTagsList)
     {
         if (tag.isEmpty())
         {
             continue;
         }
-        QPushButton *tagButton = new QPushButton(tag, ui->tagCloudLayout->layout()->widget());
+        QPushButton *tagButton = new QPushButton(tag, ui->tagCloudLayout->widget());
         tagButton->setIcon(QIcon::fromTheme("tag-delete"));
         connect(tagButton, &QPushButton::released, this, [=](){
             _todoTagsList.removeOne(tag);
             reloadCurrentTags();
         });
-        ui->tagCloudLayout->layout()->addWidget(tagButton);
+        if (tagCol > 3)
+        {
+            tagCol = 0;
+            tagRow++;
+        }
+        ui->tagCloudLayout->addWidget(tagButton, tagRow, tagCol);
+        tagCol++;
     }
-
+    ui->tagsFrame->setVisible(true);
 }
 
 
