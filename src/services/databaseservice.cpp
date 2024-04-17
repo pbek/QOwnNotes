@@ -877,7 +877,7 @@ bool DatabaseService::setupTables() {
     }
 
     if (version < 42) {
-        queryDisk.exec(QStringLiteral("ALTER TABLE calendarItem ADD tags VARCHAR(255)"));
+        queryDisk.exec(QStringLiteral("ALTER TABLE calendarItem ADD tags VARCHAR(512)"));
         version = 42;
     }
 
