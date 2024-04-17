@@ -743,7 +743,7 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
 
     //ignore escaped commas
     tags = icsDataHash.contains(QStringLiteral("CATEGORIES"))
-                      ? icsDataHash[QStringLiteral("CATEGORIES")].toLatin1()
+                      ? icsDataHash[QStringLiteral("CATEGORIES")]
                       : QString();
 
     priority = icsDataHash.contains(QStringLiteral("PRIORITY"))

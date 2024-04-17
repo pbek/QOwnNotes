@@ -944,7 +944,7 @@ QString TodoDialog::getTagString()
     // Remove any possible empty items
     _todoTagsList.removeAll(QString(""));
     _todoTagsList.removeAll(QString(" "));
-    return _todoTagsList.join(',').remove(QRegularExpression(", *$"));
+    return _todoTagsList.join(",").remove(QRegularExpression(", *$"));
 }
 
 void TodoDialog::on_tagsLineEdit_returnPressed()
