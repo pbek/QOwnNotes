@@ -44,6 +44,15 @@ TodoDialog::TodoDialog(const QString &taskUid, QWidget *parent)
     if (!taskUid.isEmpty()) {
         jumpToTask(taskUid);
     }
+
+    _todoTagsScrollArea = new QScrollArea(this);
+    _todoTagsScrollArea->setBackgroundRole(QPalette::Dark);
+    _todoTagsScrollArea->setWidget(ui->tagsFrame);
+    _todoTagsScrollArea->setMaximumHeight(120);
+    ui->tagCloudLayout->setSizeConstraint(QLayout::SetFixedSize);
+    ui->tagsLayout->addWidget(_todoTagsScrollArea);
+    _todoTagsScrollArea->setVisible(false);
+
 }
 
 void TodoDialog::updateCalendarItem(CalendarItem item) {
@@ -901,7 +910,7 @@ void TodoDialog::on_showDueTodayItemsOnlyCheckBox_clicked() {
 
 void TodoDialog::cleanTagButtons(){
     QLayoutItem *child;
-    while ((child = ui->tagCloudLayout->takeAt( 0 )) != nullptr) {
+    while ((child = ui->tagsFrame->layout()->takeAt( 0 )) != nullptr) {
         delete child->widget();
         delete child;
     }
@@ -910,35 +919,26 @@ void TodoDialog::cleanTagButtons(){
 void TodoDialog::reloadCurrentTags()
 {
     cleanTagButtons();
-    ui->tagsFrame->setVisible(false);
+    _todoTagsScrollArea->setVisible(false);
     if (_todoTagsList.empty())
     {
         return;
     }
-    ui->tagCloudLayout->setSizeConstraint(QLayout::SetFixedSize);
-    int tagRow = 0;
-    int tagCol = 0;
     for (auto tag : _todoTagsList)
     {
         if (tag.isEmpty())
         {
             continue;
         }
-        QPushButton *tagButton = new QPushButton(tag, ui->tagCloudLayout->widget());
+        QPushButton *tagButton = new QPushButton(tag, ui->tagsFrame);
         tagButton->setIcon(QIcon::fromTheme("tag-delete"));
         connect(tagButton, &QPushButton::released, this, [=](){
             _todoTagsList.removeOne(tag);
             reloadCurrentTags();
         });
-        if (tagCol > 3)
-        {
-            tagCol = 0;
-            tagRow++;
-        }
-        ui->tagCloudLayout->addWidget(tagButton, tagRow, tagCol);
-        tagCol++;
+        ui->tagsFrame->layout()->addWidget(tagButton);
     }
-    ui->tagsFrame->setVisible(true);
+    _todoTagsScrollArea->setVisible(true);
 }
 
 

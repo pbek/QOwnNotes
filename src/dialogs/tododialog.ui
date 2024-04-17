@@ -355,8 +355,10 @@
             </item>
             <item alignment="Qt::AlignLeft|Qt::AlignTop">
              <widget class="QFrame" name="tagsFrame">
-              <layout class="QGridLayout" name="tagCloudLayout">
-              </layout>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <layout class="QHBoxLayout" name="tagCloudLayout"/>
              </widget>
             </item>
            </layout>

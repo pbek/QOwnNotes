@@ -1,6 +1,7 @@
 #ifndef TODODIALOG_H
 #define TODODIALOG_H
 
+#include <qscrollarea.h>
 #include <QTreeWidgetItem>
 
 #include "entities/calendaritem.h"
@@ -63,6 +64,7 @@ class TodoDialog : public MasterDialog {
     QString _jumpToCalendarItemUid;
     bool _setFocusToDescriptionEdit;
     QStringList _todoTagsList;
+    QScrollArea *_todoTagsScrollArea;
     QTreeWidgetItem *firstVisibleTodoItemTreeItem;
     void setupMainSplitter();
     void storeSettings();
