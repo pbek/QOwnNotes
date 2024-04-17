@@ -463,7 +463,7 @@ void TodoDialog::updateCurrentCalendarItemWithFormData() {
     currentCalendarItem.setPriority(priority);
     currentCalendarItem.setSummary(ui->summaryEdit->text());
     currentCalendarItem.setDescription(ui->descriptionEdit->toPlainText());
-    currentCalendarItem.setTags(getTagString());
+    currentCalendarItem.setTags(getTagString().toLatin1());
     currentCalendarItem.setModified(QDateTime::currentDateTime());
     currentCalendarItem.setAlarmDate(
         ui->reminderCheckBox->isChecked() ? ui->reminderDateTimeEdit->dateTime() : QDateTime());
@@ -943,7 +943,8 @@ QString TodoDialog::getTagString()
 {
     // Remove any possible empty items
     _todoTagsList.removeAll(QString(""));
-    return _todoTagsList.join(',');
+    _todoTagsList.removeAll(QString(" "));
+    return _todoTagsList.join(',').remove(QRegularExpression(", *$"));
 }
 
 void TodoDialog::on_tagsLineEdit_returnPressed()

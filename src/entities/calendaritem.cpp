@@ -549,7 +549,15 @@ QString CalendarItem::generateNewICSData() {
     // update the icsDataHash
     icsDataHash[QStringLiteral("SUMMARY")] = summary;
     icsDataHash[QStringLiteral("DESCRIPTION")] = description;
-    icsDataHash[QStringLiteral("CATEGORIES")] = tags;
+    // If categories are empty, remove the CATEGORIES data
+    // otherwise we get empty tag
+    if (tags.isEmpty()) {
+        icsDataHash.remove(QStringLiteral("CATEGORIES"));
+        icsDataKeyList.removeAll(QStringLiteral("CATEGORIES"));
+    }
+    else {
+        icsDataHash[QStringLiteral("CATEGORIES")] = tags;
+    }
     icsDataHash[QStringLiteral("UID")] = uid;
     icsDataHash[QStringLiteral("PRIORITY")] = QString::number(priority);
     icsDataHash[QStringLiteral("PERCENT-COMPLETE")] = QString::number(completed ? 100 : 0);
