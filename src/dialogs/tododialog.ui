@@ -270,6 +270,18 @@
         </item>
         <item row="1" column="0" colspan="2">
          <layout class="QFormLayout" name="formLayout">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetFixedSize</enum>
+          </property>
+          <property name="fieldGrowthPolicy">
+           <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+          </property>
+          <property name="horizontalSpacing">
+           <number>6</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>6</number>
+          </property>
           <item row="0" column="0">
            <widget class="QLabel" name="priorityLabel">
             <property name="text">
@@ -314,7 +326,16 @@
           </item>
           <item row="1" column="1">
            <widget class="QFrame" name="reminderFrame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetFixedSize</enum>
+             </property>
              <property name="leftMargin">
               <number>0</number>
              </property>
@@ -344,30 +365,50 @@
             </layout>
            </widget>
           </item>
-          <item row="2" column="1">
-           <layout class="QVBoxLayout" name="tagsLayout">
-            <item>
-             <widget class="QLineEdit" name="tagsLineEdit">
-              <property name="placeholderText">
-               <string>Add new tag</string>
-              </property>
-             </widget>
-            </item>
-            <item alignment="Qt::AlignLeft|Qt::AlignTop">
-             <widget class="QFrame" name="tagsFrame">
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <layout class="QHBoxLayout" name="tagCloudLayout"/>
-             </widget>
-            </item>
-           </layout>
-          </item>
           <item row="2" column="0">
            <widget class="QLabel" name="tagsLabel">
             <property name="text">
              <string>Tags</string>
             </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QFrame" name="tagsLayoutFrame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QVBoxLayout" name="tagsLayout">
+             <item>
+              <widget class="QLineEdit" name="tagsLineEdit">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="placeholderText">
+                <string>Add new tag</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignLeft|Qt::AlignTop">
+              <widget class="QFrame" name="tagsFrame">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <layout class="QHBoxLayout" name="tagCloudLayout"/>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>

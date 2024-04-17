@@ -46,9 +46,8 @@ TodoDialog::TodoDialog(const QString &taskUid, QWidget *parent)
     }
 
     _todoTagsScrollArea = new QScrollArea(this);
-    _todoTagsScrollArea->setBackgroundRole(QPalette::Dark);
     _todoTagsScrollArea->setWidget(ui->tagsFrame);
-    _todoTagsScrollArea->setMaximumHeight(120);
+    _todoTagsScrollArea->setMaximumHeight(80);
     ui->tagCloudLayout->setSizeConstraint(QLayout::SetFixedSize);
     ui->tagsLayout->addWidget(_todoTagsScrollArea);
     _todoTagsScrollArea->setVisible(false);
