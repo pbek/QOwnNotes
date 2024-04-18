@@ -927,7 +927,8 @@ void TodoDialog::reloadCurrentTags()
         {
             continue;
         }
-        QPushButton *tagButton = new QPushButton(tag, ui->tagsFrame);
+        // Don't show escaped commas
+        QPushButton *tagButton = new QPushButton(QString(tag).replace("\\,",","), ui->tagsFrame);
         tagButton->setIcon(QIcon::fromTheme("tag-delete"));
         connect(tagButton, &QPushButton::released, this, [=](){
             _todoTagsList.removeOne(tag);
@@ -944,7 +945,13 @@ QString TodoDialog::getTagString()
     // Remove any possible empty items
     _todoTagsList.removeAll(QString(""));
     _todoTagsList.removeAll(QString(" "));
-    return _todoTagsList.join(",").remove(QRegularExpression(", *$"));
+    QString fullTagString;
+    // We can't use regular join since it also joins escaped commas
+    for (const auto &str :_todoTagsList)
+    {
+        fullTagString.append(str + ",");
+    }
+    return fullTagString.remove(QRegularExpression(", *$"));
 }
 
 void TodoDialog::on_tagsLineEdit_returnPressed()
@@ -954,8 +961,8 @@ void TodoDialog::on_tagsLineEdit_returnPressed()
     {
         return;
     }
-    qWarning() << newTag;
-    _todoTagsList.append(newTag);
+    // Escape the commas in tags
+    _todoTagsList.append(QString(newTag).replace(",","\\,"));
     ui->tagsLineEdit->clear();
     reloadCurrentTags();
 }
