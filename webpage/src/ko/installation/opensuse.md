@@ -29,9 +29,19 @@ opi qownnotes
 업데이트를 가져오려면 설치 후 리포지토리를 유지하는 옵션을 선택해야 합니다.
 :::
 
-## openSUSE Leap 15.5
+## openSUSE Leap 15.6
 
 다음 셸 명령을 실행하여 저장소를 추가하고 여기서 QOwnNotes를 설치합니다.
+
+```bash
+zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.6/home:pbek:QOwnNotes.repo
+zypper refresh
+zypper install qownnotes
+```
+
+## openSUSE Leap 15.5
+
+다음 셸 명령을 루트로 실행하여 저장소를 추가하고 여기서QOwnNotes를 설치합니다.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.5/home:pbek:QOwnNotes.repo
@@ -102,7 +112,7 @@ zypper install qownnotes
 
 ## SLE 15
 
-다음 셸 명령을 루트로 실행하여 저장소를 추가하고 여기서QOwnNotes를 설치합니다.
+다음 셸 명령을 root으로 실행하여 리포지토리를 추가하고 거기에서 QOwnNotes를 설치합니다.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_15/home:pbek:QOwnNotes.repo

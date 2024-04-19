@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Khuphela</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -6742,7 +6742,7 @@ Amanqaku akho aya kuhlala eme kakuhle!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7667,10 +7667,10 @@ Unokuhlala uyibuyisela inqaku kunye neenguqulelo zalo kamva. &lt;/p&gt;</transla
 </translation>
 </message>
 <message numerus="yes">
-<source>Bookmark deleted from %n notes(s)</source>
+<source>Bookmark deleted from %n note(s)</source>
 <translation type="unfinished">
-<numerusform>Bookmark deleted from %n notes(s)</numerusform>
-<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<numerusform>Bookmark deleted from %n note(s)</numerusform>
 </translation>
 </message>
 <message>

@@ -1245,7 +1245,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>انسخ</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -4055,7 +4055,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
-<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
+<translation>مجلد ملاحظاتك &lt;b&gt;%1&lt;/b&gt; لم يعد موجودًا! هل تريد تحديد واحدًا آخر؟</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -7852,9 +7852,9 @@ This cannot be undone!</source>
 </translation>
 </message>
 <message numerus="yes">
-<source>Bookmark deleted from %n notes(s)</source>
+<source>Bookmark deleted from %n note(s)</source>
 <translation>
-<numerusform>حُذِفت الإشارة المرجعية من %n ملاحظة</numerusform>
+<numerusform>حُذِفت الإشارة المرجعية من %n ملاحظات</numerusform>
 <numerusform>حُذِفت الإشارة المرجعية من %n ملاحظة</numerusform>
 <numerusform>حُذِفت الإشارة المرجعية من %n ملاحظتين</numerusform>
 <numerusform>حُذِفت الإشارة المرجعية من %n ملاحظات</numerusform>
@@ -8013,7 +8013,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
-<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
+<translation>يولّد أوامر الإكمال الملائمة للصَدفة. يقبل `fish` و `bash`.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

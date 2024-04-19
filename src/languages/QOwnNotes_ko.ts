@@ -7600,7 +7600,7 @@ This cannot be undone!</source>
 </translation>
 </message>
 <message numerus="yes">
-<source>Bookmark deleted from %n notes(s)</source>
+<source>Bookmark deleted from %n note(s)</source>
 <translation>
 <numerusform>%n개의 노트에서 북마크 삭제</numerusform>
 </translation>

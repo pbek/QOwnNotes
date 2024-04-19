@@ -626,7 +626,7 @@
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+<translation>De l’XML invalide a été trouvé dans la note &lt;b&gt;%1&lt;/b&gt; ! L’importation peut être arrêtée maintenant.</translation>
 </message>
 <message>
 <source>Basic attributes</source>
@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Copier</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -2297,7 +2297,7 @@
 </message>
 <message>
 <source>&amp;Load Todo List items</source>
-<translation type="unfinished">&amp;Load Todo List items</translation>
+<translation>Charger des éléments d’une &amp;liste de tâches</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
@@ -2710,15 +2710,15 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
-<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+<translation>Support de Nextcloud Deck désactivé !</translation>
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>Le support de Nextcloud Deck n’est pas activé ou les paramètres sont invalides.&lt;br /&gt;Merci de vérifier votre configuration &lt;strong&gt;Nextcloud&lt;/strong&gt; dans les paramètres !</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation>Le chemin vers la note ‘%1’ a été copié dans le presse-papier</translation>
+<translation>Le chemin vers la note ‘%1’ a été copié dans le presse-papiers</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -2917,7 +2917,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Note headline '%1' was copied to the clipboard</source>
-<translation>Le titre de la note '%1' a été copié dans le presse-papier</translation>
+<translation>Le titre de la note '%1' a été copié dans le presse-papiers</translation>
 </message>
 <message>
 <source>Leave full-screen mode</source>
@@ -3997,11 +3997,11 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>&amp;Link selected text</source>
-<translation>&amp;Link texte sélectionné</translation>
+<translation>Créer un &amp;lien avec le texte sélectionné</translation>
 </message>
 <message>
 <source>Insert &amp;link</source>
-<translation>Insérer un &amp;link</translation>
+<translation>Insérer un &amp;lien</translation>
 </message>
 <message>
 <source>Block &amp;quote selected text</source>
@@ -5313,7 +5313,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Enable QOwnNotesAPI app support</source>
-<translation type="unfinished">Enable QOwnNotesAPI app support</translation>
+<translation>Activer le support de l’application QOwnNotesAPI</translation>
 </message>
 <message>
 <source>If your password doesn't work, create an app password (button on the right)</source>
@@ -5325,7 +5325,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
-<translation type="unfinished">Enable Nextcloud Deck support</translation>
+<translation>Activer le support de Nextcloud Deck</translation>
 </message>
 <message>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
@@ -5397,7 +5397,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>When inactive, enter read-only mode automatically after:</source>
-<translation type="unfinished">When inactive, enter read-only mode automatically after:</translation>
+<translation>Quand inactif, entrer en mode lecture seule automatiquement après :</translation>
 </message>
 <message>
 <source> sec</source>
@@ -6721,7 +6721,7 @@ Vos notes resteront intactes!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7643,10 +7643,10 @@ Cela ne peut être annuler !</translation>
 </translation>
 </message>
 <message numerus="yes">
-<source>Bookmark deleted from %n notes(s)</source>
+<source>Bookmark deleted from %n note(s)</source>
 <translation type="unfinished">
-<numerusform>Signet supprimé de %n note(s)</numerusform>
-<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<numerusform>Bookmark deleted from %n note(s)</numerusform>
 </translation>
 </message>
 <message>
@@ -7729,7 +7729,7 @@ Cela ne peut être annuler !</translation>
 </message>
 <message>
 <source>Plain-text file Markdown note-taking with ownCloud integration</source>
-<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
+<translation>Prise de notes de fichiers Markdown en texte brut avec intégration ownCloud</translation>
 </message>
 <message>
 <source>Show subfolders</source>
@@ -7800,7 +7800,7 @@ Cela ne peut être annuler !</translation>
 </message>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
-<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
+<translation>Génère le code pour l’autocomplétion dans le shell. Supporte `fish`, `bash`.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

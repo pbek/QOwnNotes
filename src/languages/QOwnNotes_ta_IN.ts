@@ -7640,10 +7640,10 @@ This cannot be undone!</translation>
 </translation>
 </message>
 <message numerus="yes">
-<source>Bookmark deleted from %n notes(s)</source>
+<source>Bookmark deleted from %n note(s)</source>
 <translation type="unfinished">
-<numerusform>Bookmark deleted from %n notes(s)</numerusform>
-<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<numerusform>Bookmark deleted from %n note(s)</numerusform>
 </translation>
 </message>
 <message>

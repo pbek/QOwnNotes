@@ -31,6 +31,16 @@ opi qownnotes
 تحتاج إلى تحديد خيار الإبقاء على المستودع بعد التثبيت للحصول على التحديثات.
 :::
 
+## openSUSE Leap 15.6
+
+نفّذ الأوامر التالية في الطرفية بصلاحيات الجذر لإضافة المستودع وتثبيت QOwnNotes منه.
+
+```bash
+zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.6/home:pbek:QOwnNotes.repo
+zypper refresh
+zypper install qownnotes
+```
+
 ## openSUSE Leap 15.5
 
 نفّذ الأوامر التالية في الطرفية بصلاحيات الجذر لإضافة المستودع وتثبيت QOwnNotes منه.

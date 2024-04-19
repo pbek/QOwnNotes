@@ -1,11 +1,14 @@
 # QOwnNotes Changelog
 
+# Next
 - There now is a software repository for **openSUSE Leap 15.6**
   - Please visit the [openSUSE installation page](https://www.qownnotes.org/installation/opensuse.html)
     for instructions
 - There now is a software repository for **Fedora Rawhide**
   - Please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html)
     for instructions
+- Added more Korean, German, Arabic, Dutch, French translation (thank you
+  venusgirl, rakekniven, noureddin, stephanp, jd-develop)
 
 ## 24.4.2
 - We now assume `--allow-multiple-instances` if `--completion` is used as cli parameter

@@ -1221,7 +1221,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopie</translation>
+<translation>Kopiëren</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -7644,7 +7644,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 </translation>
 </message>
 <message numerus="yes">
-<source>Bookmark deleted from %n notes(s)</source>
+<source>Bookmark deleted from %n note(s)</source>
 <translation>
 <numerusform>Bladwijzer verwijderd van %n notitie</numerusform>
 <numerusform>Bladwijzer verwijderd van %n notities</numerusform>

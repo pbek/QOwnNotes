@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopyahin</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -7625,10 +7625,10 @@ Tagahiwalay</translation>
 </translation>
 </message>
 <message numerus="yes">
-<source>Bookmark deleted from %n notes(s)</source>
+<source>Bookmark deleted from %n note(s)</source>
 <translation type="unfinished">
-<numerusform>Bookmark deleted from %n notes(s)</numerusform>
-<numerusform>Bookmark deleted from %n notes(s)</numerusform>
+<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<numerusform>Bookmark deleted from %n note(s)</numerusform>
 </translation>
 </message>
 <message>
