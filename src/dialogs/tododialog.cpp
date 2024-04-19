@@ -928,7 +928,7 @@ void TodoDialog::reloadCurrentTags()
             continue;
         }
         // Don't show escaped commas
-        const QString buttonText = QString(tag).replace("\\\\", "\\").replace("\\,",",");
+        const QString buttonText = QString(tag).replace("\\,",",");
         QPushButton *tagButton = new QPushButton(buttonText, ui->tagsFrame);
         tagButton->setIcon(QIcon::fromTheme("tag-delete"));
         connect(tagButton, &QPushButton::released, this, [=](){

@@ -557,8 +557,8 @@ QString CalendarItem::generateNewICSData() {
         icsDataKeyList.removeAll(QStringLiteral("CATEGORIES"));
     }
     else {
-        // Turn double backslashes into one for categories
-        icsDataHash[QStringLiteral("CATEGORIES")] = tags;
+        // Turn single backslashes into two for categories when uploading
+        icsDataHash[QStringLiteral("CATEGORIES")] = tags.replace("\\", "\\\\");
     }
     icsDataHash[QStringLiteral("UID")] = uid;
     icsDataHash[QStringLiteral("PRIORITY")] = QString::number(priority);
@@ -749,7 +749,7 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
 
     // Turn double backslashes into one for categories
     tags = icsDataHash.contains(QStringLiteral("CATEGORIES"))
-                      ? icsDataHash[QStringLiteral("CATEGORIES")]
+                      ? icsDataHash[QStringLiteral("CATEGORIES")].replace("\\\\", "\\")
                       : QString();
 
     priority = icsDataHash.contains(QStringLiteral("PRIORITY"))
