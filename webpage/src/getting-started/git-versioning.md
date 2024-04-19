@@ -1,6 +1,7 @@
 # Git versioning
 
-You can set up QOwnNotes to automatically commit changes in your note folder locally to git.
+You can set up QOwnNotes to automatically commit changes in your note folder locally
+to a git repository in your note folder.
 
 This can be done in the *Git versioning* settings in the *General settings*. 
 
