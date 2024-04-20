@@ -827,8 +827,9 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *curre
         ui->summaryEdit->setCursorPosition(0);
         ui->descriptionEdit->setPlainText(currentCalendarItem.getDescription());
 
-        QRegularExpression commaOnly("(?<!\\\\),");
-        _todoTagsList = currentCalendarItem.getTags().split(commaOnly, Qt::SkipEmptyParts);
+
+        QRegularExpression nonescapedCommas(R"((?<!,\\),(?!,))");
+        _todoTagsList = currentCalendarItem.getTags().split(nonescapedCommas, Qt::SkipEmptyParts);
         reloadCurrentTags();
 
         QDateTime alarmDate = currentCalendarItem.getAlarmDate();
@@ -927,8 +928,8 @@ void TodoDialog::reloadCurrentTags()
         {
             continue;
         }
-        // Don't show escaped commas
-        const QString buttonText = QString(tag).replace("\\,",",");
+        // Don't show escaped commas or escaped backslashes
+        const QString buttonText = QString(tag).replace("\\,",",").replace("\\\\","\\");
         QPushButton *tagButton = new QPushButton(buttonText, ui->tagsFrame);
         tagButton->setIcon(QIcon::fromTheme("tag-delete"));
         connect(tagButton, &QPushButton::released, this, [=](){
@@ -962,8 +963,8 @@ void TodoDialog::on_tagsLineEdit_returnPressed()
     {
         return;
     }
-    // Escape the commas in tags
-    _todoTagsList.append(QString(newTag).replace(",","\\,"));
+    // Escape the backslashes and commas in tags
+    _todoTagsList.append(QString(newTag).replace("\\","\\\\").replace(",","\\,"));
     ui->tagsLineEdit->clear();
     reloadCurrentTags();
 }

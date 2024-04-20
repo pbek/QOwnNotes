@@ -558,7 +558,7 @@ QString CalendarItem::generateNewICSData() {
     }
     else {
         // Turn single backslashes into two for categories when uploading
-        icsDataHash[QStringLiteral("CATEGORIES")] = tags.replace("\\", "\\\\");
+        icsDataHash[QStringLiteral("CATEGORIES")] = tags;
     }
     icsDataHash[QStringLiteral("UID")] = uid;
     icsDataHash[QStringLiteral("PRIORITY")] = QString::number(priority);
@@ -619,10 +619,10 @@ QString CalendarItem::generateNewICSData() {
         QString line = icsDataHash.value(key);
 
         // commas only have one backslash
-        line.replace(QRegularExpression("\\"), QLatin1String("\\\\"));
-        if (key == QStringLiteral("CATEGORIES"))
+        if (key != QStringLiteral("CATEGORIES"))
         {
-            line.replace(QLatin1String("\\\\,"), QLatin1String("\\,"));
+            //line.replace(QLatin1String("\\\\,"), QLatin1String("\\,"));
+            line.replace(QRegularExpression("\\"), QLatin1String("\\\\"));
         }
         // convert newlines
         line.replace(QLatin1String("\n"), QLatin1String("\\n"));
@@ -749,7 +749,7 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
 
     // Turn double backslashes into one for categories
     tags = icsDataHash.contains(QStringLiteral("CATEGORIES"))
-                      ? icsDataHash[QStringLiteral("CATEGORIES")].replace("\\\\", "\\")
+                      ? icsDataHash[QStringLiteral("CATEGORIES")]
                       : QString();
 
     priority = icsDataHash.contains(QStringLiteral("PRIORITY"))
