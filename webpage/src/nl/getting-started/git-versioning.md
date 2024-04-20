@@ -1,16 +1,14 @@
-# Git versioning
+# Git versiebeheer
 
-You can set up QOwnNotes to automatically commit changes in your note folder locally
-to a git repository in your note folder.
+Je kunt QOwnNotes instellen om wijzigingen in jouw lokale notitiemap automatisch toe te voegen aan een git-opslag in je notitiemap.
 
-This can be done in the _Git versioning_ settings in the _General settings_.
+Dit kan in de instellingen voor _Git versiebeheer_ in de _Algemene instellingen_.
 
 ![git-note-folder-settings](/img/git/settings.png)
 
-You need to have git installed on your system and the git executable needs to be in your PATH or
-you can set the path to the git executable in the _Git versioning_ settings.
+Je moet git geïnstalleerd hebben op je systeem en het Git-uitvoerbare bestand moet in je PATH vermeld staan of je kunt het pad naar het Git-uitvoerbare bestand instellen in de instellingen voor _Git-versiebeheer_.
 
-You also need to turn on git support for each note folder you want to use git versioning with!
+Je moet ook git-ondersteuning inschakelen voor elke notitiemap waar je git-versiebeheer wilt gebruiken!
 
 ![git-note-folder-settings](/img/git/note-folder-settings.png)
 
@@ -18,7 +16,7 @@ You also need to turn on git support for each note folder you want to use git ve
 Don't forget to set your git username and email address in the terminal:
 
 ```bash
-git config --global user.email "your-email@domain.com" git config --global user.name "Your name"
+git config --global user.email "jouw-emailadres@domein.tld" git config --global user.name "jouw naam"
 ```
 
 :::
