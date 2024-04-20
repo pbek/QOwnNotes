@@ -621,8 +621,7 @@ QString CalendarItem::generateNewICSData() {
         // commas only have one backslash
         if (key != QStringLiteral("CATEGORIES"))
         {
-            //line.replace(QLatin1String("\\\\,"), QLatin1String("\\,"));
-            line.replace(QRegularExpression("\\"), QLatin1String("\\\\"));
+            line.replace(QLatin1String("\\"), QLatin1String("\\\\"));
         }
         // convert newlines
         line.replace(QLatin1String("\n"), QLatin1String("\\n"));
