@@ -827,8 +827,8 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *curre
         ui->summaryEdit->setCursorPosition(0);
         ui->descriptionEdit->setPlainText(currentCalendarItem.getDescription());
 
-
-        QRegularExpression nonescapedCommas(R"((?<!,\\),(?!,))");
+        // Absolute monster of a regexp that checks for possible edge cases like \\,\\ and such
+        QRegularExpression nonescapedCommas(R"(((?<!\\),(?!,))|((?<=\\\\),(?=\\\\))|((?<=\\\\),(?=\\)))");
         _todoTagsList = currentCalendarItem.getTags().split(nonescapedCommas, Qt::SkipEmptyParts);
         reloadCurrentTags();
 
