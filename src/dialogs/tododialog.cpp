@@ -829,7 +829,13 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *curre
 
         // Absolute monster of a regexp that checks for possible edge cases like \\,\\ and such
         QRegularExpression nonescapedCommas(R"(((?<!\\),(?!,))|((?<=\\\\),(?=\\\\))|((?<=\\\\),(?=\\)))");
-        _todoTagsList = currentCalendarItem.getTags().split(nonescapedCommas, Qt::SkipEmptyParts);
+
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
+        _todoTagsList = currentCalendarItem.getTags().split(QStringLiteral("."), QString::SkipEmptyParts);
+#else
+        _todoTagsList = currentCalendarItem.getTags().split(QStringLiteral("."), Qt::SkipEmptyParts);
+#endif
+
         reloadCurrentTags();
 
         QDateTime alarmDate = currentCalendarItem.getAlarmDate();
