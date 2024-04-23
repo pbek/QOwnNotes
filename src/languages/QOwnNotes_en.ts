@@ -5290,12 +5290,12 @@ Are the folder and the file writeable?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/databaseservice.cpp" line="927"/>
+        <location filename="../services/databaseservice.cpp" line="932"/>
         <source>Cannot open database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/databaseservice.cpp" line="928"/>
+        <location filename="../services/databaseservice.cpp" line="933"/>
         <source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
 Are the folder and the file writeable?</source>
         <translation type="unfinished"></translation>
@@ -8906,160 +8906,170 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="78"/>
-        <location filename="../dialogs/tododialog.ui" line="85"/>
+        <location filename="../dialogs/tododialog.ui" line="288"/>
+        <location filename="../dialogs/tododialog.ui" line="295"/>
         <source>Priority</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="113"/>
+        <location filename="../dialogs/tododialog.ui" line="323"/>
         <source>Reminder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="157"/>
-        <location filename="../dialogs/tododialog.ui" line="329"/>
+        <location filename="../dialogs/tododialog.ui" line="123"/>
+        <location filename="../dialogs/tododialog.ui" line="264"/>
         <source>Summary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="191"/>
+        <location filename="../dialogs/tododialog.ui" line="206"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="222"/>
+        <location filename="../dialogs/tododialog.ui" line="237"/>
         <source>Note…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="349"/>
+        <location filename="../dialogs/tododialog.ui" line="57"/>
         <source>This doesn&apos;t work for sub-items, because they may be hidden by the parent item!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="352"/>
+        <location filename="../dialogs/tododialog.ui" line="60"/>
         <source>Show only items due today</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="114"/>
+        <location filename="../dialogs/tododialog.cpp" line="124"/>
         <source>Save and insert into note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="208"/>
+        <location filename="../dialogs/tododialog.ui" line="223"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="285"/>
+        <location filename="../dialogs/tododialog.ui" line="82"/>
         <source>Show completed items</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="292"/>
+        <location filename="../dialogs/tododialog.ui" line="89"/>
         <source>Reload the todo list from server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="295"/>
+        <location filename="../dialogs/tododialog.ui" line="92"/>
         <source>Reload…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="260"/>
+        <location filename="../dialogs/tododialog.ui" line="136"/>
         <source>Search or create todo item</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="334"/>
+        <location filename="../dialogs/tododialog.ui" line="371"/>
+        <source>Tags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="393"/>
+        <source>Add new tag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="128"/>
         <source>Due date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="342"/>
+        <location filename="../dialogs/tododialog.ui" line="106"/>
         <source>select your todo list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="188"/>
+        <location filename="../dialogs/tododialog.ui" line="203"/>
         <source>Save the current todo item</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="118"/>
+        <location filename="../dialogs/tododialog.cpp" line="128"/>
         <source>Save the current todo item and insert a link to it into the current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="126"/>
+        <location filename="../dialogs/tododialog.cpp" line="136"/>
         <source>Import the current todo item as new note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="122"/>
+        <location filename="../dialogs/tododialog.cpp" line="132"/>
         <source>Import as note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="205"/>
+        <location filename="../dialogs/tododialog.ui" line="220"/>
         <source>Remove the current todo item</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="309"/>
+        <location filename="../dialogs/tododialog.ui" line="47"/>
         <source>Todo list items are being loaded from the server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="136"/>
+        <location filename="../dialogs/tododialog.cpp" line="146"/>
         <source>Reload from server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="139"/>
+        <location filename="../dialogs/tododialog.cpp" line="149"/>
         <source>Reload tasks from server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="142"/>
+        <location filename="../dialogs/tododialog.cpp" line="152"/>
         <source>Clear cache and reload</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="146"/>
+        <location filename="../dialogs/tododialog.cpp" line="156"/>
         <source>Clear calendar cache and reload tasks from server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="587"/>
+        <location filename="../dialogs/tododialog.cpp" line="603"/>
         <source>Remove todo item</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="588"/>
+        <location filename="../dialogs/tododialog.cpp" line="604"/>
         <source>Remove the selected todo item?
 This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="867"/>
+        <location filename="../dialogs/tododialog.cpp" line="898"/>
         <source>Create sub-task</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="873"/>
+        <location filename="../dialogs/tododialog.cpp" line="904"/>
         <source>Create new sub-task</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="873"/>
+        <location filename="../dialogs/tododialog.cpp" line="904"/>
         <source>Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="874"/>
+        <location filename="../dialogs/tododialog.cpp" line="905"/>
         <source>New sub-task</source>
         <translation type="unfinished"></translation>
     </message>
