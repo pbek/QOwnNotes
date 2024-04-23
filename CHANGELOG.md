@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
-# Next
+## 24.4.3
+- **Tag support** was added to **tasks** in the *Todo dialog*
+  (for [#3007](https://github.com/pbek/QOwnNotes/issues/3007), thank you, @Akselmo)
+  - Tags can be added to and removed from tasks
 - There now is a software repository for **openSUSE Leap 15.6**
   - Please visit the [openSUSE installation page](https://www.qownnotes.org/installation/opensuse.html)
     for instructions
