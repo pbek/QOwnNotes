@@ -1,6 +1,7 @@
 #ifndef TODODIALOG_H
 #define TODODIALOG_H
 
+#include <qscrollarea.h>
 #include <QTreeWidgetItem>
 
 #include "entities/calendaritem.h"
@@ -53,6 +54,7 @@ class TodoDialog : public MasterDialog {
     void on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
     void on_todoItemTreeWidget_customContextMenuRequested(QPoint pos);
     void on_showDueTodayItemsOnlyCheckBox_clicked();
+    void on_tagsLineEdit_returnPressed();
 
    private:
     Ui::TodoDialog *ui;
@@ -61,6 +63,8 @@ class TodoDialog : public MasterDialog {
     CalendarItem lastCreatedCalendarItem;
     QString _jumpToCalendarItemUid;
     bool _setFocusToDescriptionEdit;
+    QStringList _todoTagsList;
+    QScrollArea *_todoTagsScrollArea;
     QTreeWidgetItem *firstVisibleTodoItemTreeItem;
     void setupMainSplitter();
     void storeSettings();
@@ -73,6 +77,9 @@ class TodoDialog : public MasterDialog {
     void searchInDescriptionTextEdit(QString &str);
     void createNewTodoItem(const QString &name = QLatin1String(""),
                            const QString &relatedUid = QLatin1String(""));
+    void cleanTagButtons();
+    void reloadCurrentTags();
+    QString getTagString();
 
    protected:
     bool eventFilter(QObject *obj, QEvent *event) override;

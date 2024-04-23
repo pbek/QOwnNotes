@@ -20,6 +20,129 @@
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
     <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QFrame" name="selectFrame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QGridLayout" name="selectLayout">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>1</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item row="3" column="0">
+         <widget class="QProgressBar" name="todoItemLoadingProgressBar">
+          <property name="toolTip">
+           <string>Todo list items are being loaded from the server</string>
+          </property>
+          <property name="value">
+           <number>24</number>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QCheckBox" name="showDueTodayItemsOnlyCheckBox">
+          <property name="toolTip">
+           <string>This doesn't work for sub-items, because they may be hidden by the parent item!</string>
+          </property>
+          <property name="text">
+           <string>Show only items due today</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QFrame" name="frame">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QCheckBox" name="showCompletedItemsCheckBox">
+             <property name="text">
+              <string>Show completed items</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="reloadTodoListButton">
+             <property name="toolTip">
+              <string>Reload the todo list from server</string>
+             </property>
+             <property name="text">
+              <string>Reload…</string>
+             </property>
+             <property name="icon">
+              <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="todoListSelector">
+          <property name="toolTip">
+           <string>select your todo list</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="TodoItemTreeWidget" name="todoItemTreeWidget">
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::InternalMove</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string>Summary</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Due date</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="newItemEdit">
+          <property name="placeholderText">
+           <string>Search or create todo item</string>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
      <item row="1" column="1">
       <widget class="QFrame" name="editFrame">
        <property name="sizePolicy">
@@ -53,114 +176,6 @@
         <property name="bottomMargin">
          <number>0</number>
         </property>
-        <item row="6" column="0" colspan="2">
-         <widget class="QOwnNotesMarkdownTextEdit" name="descriptionEdit">
-          <property name="readOnly">
-           <bool>false</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="8" column="0" colspan="2">
-         <widget class="QFrame" name="descriptionEditSearchFrame">
-          <property name="frameShape">
-           <enum>QFrame::NoFrame</enum>
-          </property>
-          <property name="lineWidth">
-           <number>0</number>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0" colspan="2">
-         <layout class="QFormLayout" name="formLayout">
-          <item row="0" column="0">
-           <widget class="QLabel" name="priorityLabel">
-            <property name="text">
-             <string>Priority</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QSlider" name="prioritySlider">
-            <property name="toolTip">
-             <string>Priority</string>
-            </property>
-            <property name="statusTip">
-             <string/>
-            </property>
-            <property name="accessibleName">
-             <string extracomment="Priority"/>
-            </property>
-            <property name="minimum">
-             <number>0</number>
-            </property>
-            <property name="maximum">
-             <number>9</number>
-            </property>
-            <property name="pageStep">
-             <number>1</number>
-            </property>
-            <property name="sliderPosition">
-             <number>1</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="reminderLabel">
-            <property name="text">
-             <string>Reminder</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QFrame" name="reminderFrame">
-            <layout class="QHBoxLayout" name="horizontalLayout_3">
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>12</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <item>
-              <widget class="QCheckBox" name="reminderCheckBox">
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QDateTimeEdit" name="reminderDateTimeEdit">
-               <property name="calendarPopup">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item row="0" column="0" colspan="2">
-         <widget class="QLineEdit" name="summaryEdit">
-          <property name="readOnly">
-           <bool>false</bool>
-          </property>
-          <property name="placeholderText">
-           <string>Summary</string>
-          </property>
-          <property name="clearButtonEnabled">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
         <item row="10" column="0" colspan="2">
          <widget class="QFrame" name="horizontalFrame">
           <property name="frameShape">
@@ -230,126 +245,178 @@
           </layout>
          </widget>
         </item>
-       </layout>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QFrame" name="selectFrame">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>1</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <layout class="QGridLayout" name="selectLayout">
-        <property name="leftMargin">
-         <number>0</number>
-        </property>
-        <property name="topMargin">
-         <number>0</number>
-        </property>
-        <property name="rightMargin">
-         <number>1</number>
-        </property>
-        <property name="bottomMargin">
-         <number>0</number>
-        </property>
-        <item row="0" column="0">
-         <widget class="QLineEdit" name="newItemEdit">
+        <item row="8" column="0" colspan="2">
+         <widget class="QFrame" name="descriptionEditSearchFrame">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="lineWidth">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QLineEdit" name="summaryEdit">
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
           <property name="placeholderText">
-           <string>Search or create todo item</string>
+           <string>Summary</string>
           </property>
           <property name="clearButtonEnabled">
            <bool>true</bool>
           </property>
          </widget>
         </item>
-        <item row="5" column="0">
-         <widget class="QFrame" name="frame">
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item>
-            <widget class="QCheckBox" name="showCompletedItemsCheckBox">
-             <property name="text">
-              <string>Show completed items</string>
+        <item row="1" column="0" colspan="2">
+         <layout class="QFormLayout" name="formLayout">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetFixedSize</enum>
+          </property>
+          <property name="fieldGrowthPolicy">
+           <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+          </property>
+          <property name="horizontalSpacing">
+           <number>6</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>6</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="priorityLabel">
+            <property name="text">
+             <string>Priority</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSlider" name="prioritySlider">
+            <property name="toolTip">
+             <string>Priority</string>
+            </property>
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="accessibleName">
+             <string extracomment="Priority"/>
+            </property>
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <number>9</number>
+            </property>
+            <property name="pageStep">
+             <number>1</number>
+            </property>
+            <property name="sliderPosition">
+             <number>1</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="reminderLabel">
+            <property name="text">
+             <string>Reminder</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QFrame" name="reminderFrame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetFixedSize</enum>
              </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="reloadTodoListButton">
-             <property name="toolTip">
-              <string>Reload the todo list from server</string>
+             <property name="leftMargin">
+              <number>0</number>
              </property>
-             <property name="text">
-              <string>Reload…</string>
+             <property name="topMargin">
+              <number>0</number>
              </property>
-             <property name="icon">
-              <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
-               <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+             <property name="rightMargin">
+              <number>12</number>
              </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="reminderCheckBox">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDateTimeEdit" name="reminderDateTimeEdit">
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="tagsLabel">
+            <property name="text">
+             <string>Tags</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QFrame" name="tagsLayoutFrame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QVBoxLayout" name="tagsLayout">
+             <item>
+              <widget class="QLineEdit" name="tagsLineEdit">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="placeholderText">
+                <string>Add new tag</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignLeft|Qt::AlignTop">
+              <widget class="QFrame" name="tagsFrame">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <layout class="QHBoxLayout" name="tagCloudLayout"/>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
         </item>
-        <item row="3" column="0">
-         <widget class="QProgressBar" name="todoItemLoadingProgressBar">
-          <property name="toolTip">
-           <string>Todo list items are being loaded from the server</string>
-          </property>
-          <property name="value">
-           <number>24</number>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="TodoItemTreeWidget" name="todoItemTreeWidget">
-          <property name="contextMenuPolicy">
-           <enum>Qt::CustomContextMenu</enum>
-          </property>
-          <property name="dragDropMode">
-           <enum>QAbstractItemView::InternalMove</enum>
-          </property>
-          <property name="sortingEnabled">
-           <bool>true</bool>
-          </property>
-          <column>
-           <property name="text">
-            <string>Summary</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Due date</string>
-           </property>
-          </column>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QComboBox" name="todoListSelector">
-          <property name="toolTip">
-           <string>select your todo list</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0">
-         <widget class="QCheckBox" name="showDueTodayItemsOnlyCheckBox">
-          <property name="toolTip">
-           <string>This doesn't work for sub-items, because they may be hidden by the parent item!</string>
-          </property>
-          <property name="text">
-           <string>Show only items due today</string>
+        <item row="6" column="0" colspan="2">
+         <widget class="QOwnNotesMarkdownTextEdit" name="descriptionEdit">
+          <property name="readOnly">
+           <bool>false</bool>
           </property>
          </widget>
         </item>

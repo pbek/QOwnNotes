@@ -1,6 +1,9 @@
 #include "dialogs/tododialog.h"
 
 #include <mainwindow.h>
+#include <qgridlayout.h>
+#include <qlayout.h>
+#include <qnamespace.h>
 #include <services/metricsservice.h>
 #include <utils/gui.h>
 
@@ -41,6 +44,14 @@ TodoDialog::TodoDialog(const QString &taskUid, QWidget *parent)
     if (!taskUid.isEmpty()) {
         jumpToTask(taskUid);
     }
+
+    _todoTagsScrollArea = new QScrollArea(this);
+    _todoTagsScrollArea->setWidget(ui->tagsFrame);
+    _todoTagsScrollArea->setMaximumHeight(80);
+    ui->tagCloudLayout->setSizeConstraint(QLayout::SetFixedSize);
+    ui->tagsLayout->addWidget(_todoTagsScrollArea);
+    _todoTagsScrollArea->setVisible(false);
+
 }
 
 void TodoDialog::updateCalendarItem(CalendarItem item) {
@@ -146,6 +157,8 @@ void TodoDialog::setupUi() {
         tr("Clear calendar cache and reload tasks "
            "from server"));
     connect(clearCacheAction, SIGNAL(triggered()), this, SLOT(clearCacheAndReloadTodoList()));
+
+    connect(ui->tagsLineEdit, &QLineEdit::returnPressed, this, &TodoDialog::on_tagsLineEdit_returnPressed);
 
     ui->reloadTodoListButton->setMenu(reloadMenu);
 }
@@ -402,6 +415,8 @@ void TodoDialog::clearTodoList() {
 void TodoDialog::resetEditFrameControls() {
     ui->summaryEdit->setText(QString());
     ui->descriptionEdit->setPlainText(QString());
+    ui->tagsLineEdit->setText(QString());
+    cleanTagButtons();
     ui->prioritySlider->setValue(0);
     ui->reminderCheckBox->setChecked(false);
     ui->reminderDateTimeEdit->hide();
@@ -448,6 +463,7 @@ void TodoDialog::updateCurrentCalendarItemWithFormData() {
     currentCalendarItem.setPriority(priority);
     currentCalendarItem.setSummary(ui->summaryEdit->text());
     currentCalendarItem.setDescription(ui->descriptionEdit->toPlainText());
+    currentCalendarItem.setTags(getTagString());
     currentCalendarItem.setModified(QDateTime::currentDateTime());
     currentCalendarItem.setAlarmDate(
         ui->reminderCheckBox->isChecked() ? ui->reminderDateTimeEdit->dateTime() : QDateTime());
@@ -799,6 +815,7 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *curre
         resetEditFrameControls();
         return;
     }
+    cleanTagButtons();
 
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("todo/item/changed"));
 
@@ -809,6 +826,17 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *curre
         ui->summaryEdit->setText(currentCalendarItem.getSummary());
         ui->summaryEdit->setCursorPosition(0);
         ui->descriptionEdit->setPlainText(currentCalendarItem.getDescription());
+
+        // Absolute monster of a regexp that checks for possible edge cases like \\,\\ and such
+        QRegularExpression nonescapedCommas(R"(((?<!\\),(?!,))|((?<=\\\\),(?=\\\\))|((?<=\\\\),(?=\\)))");
+
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
+        _todoTagsList = currentCalendarItem.getTags().split(QStringLiteral("."), QString::SkipEmptyParts);
+#else
+        _todoTagsList = currentCalendarItem.getTags().split(QStringLiteral("."), Qt::SkipEmptyParts);
+#endif
+
+        reloadCurrentTags();
 
         QDateTime alarmDate = currentCalendarItem.getAlarmDate();
         ui->reminderCheckBox->setChecked(alarmDate.isValid());
@@ -882,4 +910,67 @@ void TodoDialog::on_todoItemTreeWidget_customContextMenuRequested(QPoint pos) {
 
 void TodoDialog::on_showDueTodayItemsOnlyCheckBox_clicked() {
     on_showCompletedItemsCheckBox_clicked();
+}
+
+void TodoDialog::cleanTagButtons(){
+    QLayoutItem *child;
+    while ((child = ui->tagsFrame->layout()->takeAt( 0 )) != nullptr) {
+        delete child->widget();
+        delete child;
+    }
+}
+
+void TodoDialog::reloadCurrentTags()
+{
+    cleanTagButtons();
+    _todoTagsScrollArea->setVisible(false);
+    if (_todoTagsList.empty())
+    {
+        return;
+    }
+    for (const auto &tag : _todoTagsList)
+    {
+        if (tag.isEmpty())
+        {
+            continue;
+        }
+        // Don't show escaped commas or escaped backslashes
+        const QString buttonText = QString(tag).replace("\\,",",").replace("\\\\","\\");
+        QPushButton *tagButton = new QPushButton(buttonText, ui->tagsFrame);
+        tagButton->setIcon(QIcon::fromTheme("tag-delete"));
+        connect(tagButton, &QPushButton::released, this, [=](){
+            _todoTagsList.removeOne(tag);
+            reloadCurrentTags();
+        });
+        ui->tagsFrame->layout()->addWidget(tagButton);
+    }
+    _todoTagsScrollArea->setVisible(true);
+}
+
+
+QString TodoDialog::getTagString()
+{
+    // Remove any possible empty items
+    _todoTagsList.removeAll(QString(""));
+    _todoTagsList.removeAll(QString(" "));
+    QString fullTagString;
+    // We can't use regular join since it also joins escaped commas
+    for (const auto &str :_todoTagsList)
+    {
+        fullTagString.append(str + ",");
+    }
+    return fullTagString.remove(QRegularExpression(", *$"));
+}
+
+void TodoDialog::on_tagsLineEdit_returnPressed()
+{
+    const auto newTag = ui->tagsLineEdit->text().simplified();
+    if (_todoTagsList.contains(newTag) || newTag.isEmpty())
+    {
+        return;
+    }
+    // Escape the backslashes and commas in tags
+    _todoTagsList.append(QString(newTag).replace("\\","\\\\").replace(",","\\,"));
+    ui->tagsLineEdit->clear();
+    reloadCurrentTags();
 }

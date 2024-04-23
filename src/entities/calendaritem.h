@@ -37,6 +37,7 @@ class CalendarItem {
     QString getCalendar();
     QString getSummary();
     QString getDescription();
+    QString getTags();
     void setSummary(const QString &text);
     void setDescription(const QString &text);
     bool updateWithICSData(const QString &icsData);
@@ -63,6 +64,7 @@ class CalendarItem {
     void setModified(const QDateTime &dateTime);
     void setCreated(const QDateTime &dateTime);
     void setCompleted(bool value);
+    void setTags(QString tags);
     void updateCompleted(bool value);
     static QList<CalendarItem> fetchAll();
     static void updateAllSortPriorities();
@@ -92,6 +94,7 @@ class CalendarItem {
     int sortPriority;
     bool hasDirtyData;
     bool completed;
+    QString tags;
     QDateTime alarmDate;
     QDateTime created;
     QDateTime modified;
