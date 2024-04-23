@@ -51,7 +51,6 @@ TodoDialog::TodoDialog(const QString &taskUid, QWidget *parent)
     ui->tagCloudLayout->setSizeConstraint(QLayout::SetFixedSize);
     ui->tagsLayout->addWidget(_todoTagsScrollArea);
     _todoTagsScrollArea->setVisible(false);
-
 }
 
 void TodoDialog::updateCalendarItem(CalendarItem item) {
@@ -158,7 +157,8 @@ void TodoDialog::setupUi() {
            "from server"));
     connect(clearCacheAction, SIGNAL(triggered()), this, SLOT(clearCacheAndReloadTodoList()));
 
-    connect(ui->tagsLineEdit, &QLineEdit::returnPressed, this, &TodoDialog::on_tagsLineEdit_returnPressed);
+    connect(ui->tagsLineEdit, &QLineEdit::returnPressed, this,
+            &TodoDialog::on_tagsLineEdit_returnPressed);
 
     ui->reloadTodoListButton->setMenu(reloadMenu);
 }
@@ -828,12 +828,15 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *curre
         ui->descriptionEdit->setPlainText(currentCalendarItem.getDescription());
 
         // Absolute monster of a regexp that checks for possible edge cases like \\,\\ and such
-        QRegularExpression nonescapedCommas(R"(((?<!\\),(?!,))|((?<=\\\\),(?=\\\\))|((?<=\\\\),(?=\\)))");
+        QRegularExpression nonescapedCommas(
+            R"(((?<!\\),(?!,))|((?<=\\\\),(?=\\\\))|((?<=\\\\),(?=\\)))");
 
 #if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
-        _todoTagsList = currentCalendarItem.getTags().split(QStringLiteral("."), QString::SkipEmptyParts);
+        _todoTagsList =
+            currentCalendarItem.getTags().split(QStringLiteral("."), QString::SkipEmptyParts);
 #else
-        _todoTagsList = currentCalendarItem.getTags().split(QStringLiteral("."), Qt::SkipEmptyParts);
+        _todoTagsList =
+            currentCalendarItem.getTags().split(QStringLiteral("."), Qt::SkipEmptyParts);
 #endif
 
         reloadCurrentTags();
@@ -912,33 +915,29 @@ void TodoDialog::on_showDueTodayItemsOnlyCheckBox_clicked() {
     on_showCompletedItemsCheckBox_clicked();
 }
 
-void TodoDialog::cleanTagButtons(){
+void TodoDialog::cleanTagButtons() {
     QLayoutItem *child;
-    while ((child = ui->tagsFrame->layout()->takeAt( 0 )) != nullptr) {
+    while ((child = ui->tagsFrame->layout()->takeAt(0)) != nullptr) {
         delete child->widget();
         delete child;
     }
 }
 
-void TodoDialog::reloadCurrentTags()
-{
+void TodoDialog::reloadCurrentTags() {
     cleanTagButtons();
     _todoTagsScrollArea->setVisible(false);
-    if (_todoTagsList.empty())
-    {
+    if (_todoTagsList.empty()) {
         return;
     }
-    for (const auto &tag : _todoTagsList)
-    {
-        if (tag.isEmpty())
-        {
+    for (const auto &tag : _todoTagsList) {
+        if (tag.isEmpty()) {
             continue;
         }
         // Don't show escaped commas or escaped backslashes
-        const QString buttonText = QString(tag).replace("\\,",",").replace("\\\\","\\");
+        const QString buttonText = QString(tag).replace("\\,", ",").replace("\\\\", "\\");
         QPushButton *tagButton = new QPushButton(buttonText, ui->tagsFrame);
         tagButton->setIcon(QIcon::fromTheme("tag-delete"));
-        connect(tagButton, &QPushButton::released, this, [=](){
+        connect(tagButton, &QPushButton::released, this, [=]() {
             _todoTagsList.removeOne(tag);
             reloadCurrentTags();
         });
@@ -947,30 +946,25 @@ void TodoDialog::reloadCurrentTags()
     _todoTagsScrollArea->setVisible(true);
 }
 
-
-QString TodoDialog::getTagString()
-{
+QString TodoDialog::getTagString() {
     // Remove any possible empty items
     _todoTagsList.removeAll(QString(""));
     _todoTagsList.removeAll(QString(" "));
     QString fullTagString;
     // We can't use regular join since it also joins escaped commas
-    for (const auto &str :_todoTagsList)
-    {
+    for (const auto &str : _todoTagsList) {
         fullTagString.append(str + ",");
     }
     return fullTagString.remove(QRegularExpression(", *$"));
 }
 
-void TodoDialog::on_tagsLineEdit_returnPressed()
-{
+void TodoDialog::on_tagsLineEdit_returnPressed() {
     const auto newTag = ui->tagsLineEdit->text().simplified();
-    if (_todoTagsList.contains(newTag) || newTag.isEmpty())
-    {
+    if (_todoTagsList.contains(newTag) || newTag.isEmpty()) {
         return;
     }
     // Escape the backslashes and commas in tags
-    _todoTagsList.append(QString(newTag).replace("\\","\\\\").replace(",","\\,"));
+    _todoTagsList.append(QString(newTag).replace("\\", "\\\\").replace(",", "\\,"));
     ui->tagsLineEdit->clear();
     reloadCurrentTags();
 }

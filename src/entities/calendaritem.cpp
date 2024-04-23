@@ -555,8 +555,7 @@ QString CalendarItem::generateNewICSData() {
     if (tags.isEmpty()) {
         icsDataHash.remove(QStringLiteral("CATEGORIES"));
         icsDataKeyList.removeAll(QStringLiteral("CATEGORIES"));
-    }
-    else {
+    } else {
         // Turn single backslashes into two for categories when uploading
         icsDataHash[QStringLiteral("CATEGORIES")] = tags;
     }
@@ -619,8 +618,7 @@ QString CalendarItem::generateNewICSData() {
         QString line = icsDataHash.value(key);
 
         // commas only have one backslash
-        if (key != QStringLiteral("CATEGORIES"))
-        {
+        if (key != QStringLiteral("CATEGORIES")) {
             line.replace(QLatin1String("\\"), QLatin1String("\\\\"));
         }
         // convert newlines
@@ -748,8 +746,8 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
 
     // Turn double backslashes into one for categories
     tags = icsDataHash.contains(QStringLiteral("CATEGORIES"))
-                      ? icsDataHash[QStringLiteral("CATEGORIES")]
-                      : QString();
+               ? icsDataHash[QStringLiteral("CATEGORIES")]
+               : QString();
 
     priority = icsDataHash.contains(QStringLiteral("PRIORITY"))
                    ? icsDataHash[QStringLiteral("PRIORITY")].toInt()
@@ -982,11 +980,9 @@ void CalendarItem::generateICSDataHash() {
             // add new key / value pair to the hash
             // Categories/tags wont be cleaned since they can have commas in middle of
             // a category
-            if (lastKey == "CATEGORIES")
-            {
+            if (lastKey == "CATEGORIES") {
                 icsDataHash[lastKey] = match.captured(2);
-            }
-            else {
+            } else {
                 icsDataHash[lastKey] = decodeICSDataLine(match.captured(2));
             }
             //            hash.insert( lastKey, decodeICSDataLine(
