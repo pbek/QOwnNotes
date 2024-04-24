@@ -7138,6 +7138,14 @@ Your notes will stay intact!</translation>
 <translation type="unfinished">Search or create todo item</translation>
 </message>
 <message>
+<source>Tags</source>
+<translation type="unfinished">Tags</translation>
+</message>
+<message>
+<source>Add new tag</source>
+<translation type="unfinished">Add new tag</translation>
+</message>
+<message>
 <source>Due date</source>
 <translation type="unfinished">Due date</translation>
 </message>

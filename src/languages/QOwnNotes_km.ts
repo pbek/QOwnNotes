@@ -1219,7 +1219,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>ចម្លង</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -6702,7 +6702,7 @@ Your notes will stay intact!</source>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7114,6 +7114,14 @@ Your notes will stay intact!</source>
 <message>
 <source>Search or create todo item</source>
 <translation>ស្វែងរកឬបង្កើតធាតុដែលត្រូវធ្វើ</translation>
+</message>
+<message>
+<source>Tags</source>
+<translation type="unfinished">Tags</translation>
+</message>
+<message>
+<source>Add new tag</source>
+<translation type="unfinished">Add new tag</translation>
 </message>
 <message>
 <source>Due date</source>

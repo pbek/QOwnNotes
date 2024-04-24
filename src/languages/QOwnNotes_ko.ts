@@ -1222,7 +1222,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>복사</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -7097,6 +7097,14 @@ Your notes will stay intact!</source>
 <message>
 <source>Search or create todo item</source>
 <translation>할 일 항목 검색 또는 작성</translation>
+</message>
+<message>
+<source>Tags</source>
+<translation type="unfinished">Tags</translation>
+</message>
+<message>
+<source>Add new tag</source>
+<translation type="unfinished">Add new tag</translation>
 </message>
 <message>
 <source>Due date</source>

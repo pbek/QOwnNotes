@@ -1245,7 +1245,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>انسخ</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -7347,6 +7347,14 @@ Your notes will stay intact!</source>
 <message>
 <source>Search or create todo item</source>
 <translation>إيجاد أو إنشاء عنصر قائمة مهام</translation>
+</message>
+<message>
+<source>Tags</source>
+<translation type="unfinished">Tags</translation>
+</message>
+<message>
+<source>Add new tag</source>
+<translation type="unfinished">Add new tag</translation>
 </message>
 <message>
 <source>Due date</source>

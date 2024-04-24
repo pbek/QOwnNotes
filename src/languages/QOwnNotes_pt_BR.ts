@@ -1219,7 +1219,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Copiar</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -6717,7 +6717,7 @@ sufixos "ise"</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7131,6 +7131,14 @@ sufixos "ise"</translation>
 <message>
 <source>Search or create todo item</source>
 <translation>Procurar ou criar uma tarefa</translation>
+</message>
+<message>
+<source>Tags</source>
+<translation type="unfinished">Tags</translation>
+</message>
+<message>
+<source>Add new tag</source>
+<translation type="unfinished">Add new tag</translation>
 </message>
 <message>
 <source>Due date</source>

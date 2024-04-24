@@ -1221,7 +1221,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopiëren</translation>
+<translation>Kopie</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -7141,6 +7141,14 @@ Je notities zullen intact blijven!</translation>
 <message>
 <source>Search or create todo item</source>
 <translation>Zoek of maak takenlijst item</translation>
+</message>
+<message>
+<source>Tags</source>
+<translation>Labels</translation>
+</message>
+<message>
+<source>Add new tag</source>
+<translation>Nieuw label toevoegen</translation>
 </message>
 <message>
 <source>Due date</source>

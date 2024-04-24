@@ -3,6 +3,8 @@
 ## 24.4.4
 - Tag support for multiple tags was fixed for tasks in the *Todo dialog*
   (for [#2998](https://github.com/pbek/QOwnNotes/issues/2998), thank you, @Akselmo)
+- Added more Dutch translation (thank you, stephanp)
+
 ## 24.4.3
 - **Tag support** was added to **tasks** in the *Todo dialog*
   (for [#2998](https://github.com/pbek/QOwnNotes/issues/2998), thank you, @Akselmo)

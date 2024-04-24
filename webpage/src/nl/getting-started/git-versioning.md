@@ -16,7 +16,8 @@ Je moet ook git-ondersteuning inschakelen voor elke notitiemap waar je git-versi
 Don't forget to set your git username and email address in the terminal:
 
 ```bash
-git config --global user.email "jouw-emailadres@domein.tld" git config --global user.name "jouw naam"
+git config --global user.email "jouw-email@domein.tld"
+git config --global user.name "Jouw Naam"
 ```
 
 :::

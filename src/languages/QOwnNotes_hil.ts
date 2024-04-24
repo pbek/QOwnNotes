@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopyhon</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -7131,6 +7131,14 @@ Your notes will stay intact!</translation>
 <message>
 <source>Search or create todo item</source>
 <translation type="unfinished">Search or create todo item</translation>
+</message>
+<message>
+<source>Tags</source>
+<translation type="unfinished">Tags</translation>
+</message>
+<message>
+<source>Add new tag</source>
+<translation type="unfinished">Add new tag</translation>
 </message>
 <message>
 <source>Due date</source>
