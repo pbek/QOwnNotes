@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## Next
+- There now is a software repository for **Fedora 40**
+  - Please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html)
+    for instructions
+
 ## 24.4.4
 - Tag support for multiple tags was fixed for tasks in the *Todo dialog*
   (for [#2998](https://github.com/pbek/QOwnNotes/issues/2998), thank you, @Akselmo)
