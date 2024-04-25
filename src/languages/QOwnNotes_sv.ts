@@ -585,7 +585,7 @@
 </message>
 <message>
 <source>Number of imported notes</source>
-<translation type="unfinished">Number of imported notes</translation>
+<translation>Antal importerade anteckningar</translation>
 </message>
 <message>
 <source>Select file</source>
@@ -621,11 +621,11 @@
 </message>
 <message>
 <source>Invalid XML!</source>
-<translation type="unfinished">Invalid XML!</translation>
+<translation>Ogiltig XML!</translation>
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+<translation>Ogiltig XML hittades på anteckningen &lt;b&gt;%1&lt;/b&gt;! Importen kan stoppas vid denna tidpunkt.</translation>
 </message>
 <message>
 <source>Basic attributes</source>
@@ -712,7 +712,7 @@
 <name>FakeVim</name>
 <message>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>Använd FakeVim</translation>
 </message>
 <message>
 <source>Read .vimrc from location:</source>
@@ -732,7 +732,7 @@
 </message>
 <message>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>Början av raden</translation>
 </message>
 <message>
 <source>Tabulator size:</source>
@@ -832,7 +832,7 @@
 </message>
 <message>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>Standard: %1</translation>
 </message>
 <message>
 <source>Unknown option: %1</source>
@@ -1049,7 +1049,7 @@
 </message>
 <message>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>Teckensnitt:</translation>
 </message>
 <message>
 <source>Share schema</source>
@@ -2290,7 +2290,7 @@
 </message>
 <message>
 <source>Ctrl+Shift+L</source>
-<translation type="unfinished">Ctrl+Shift+L</translation>
+<translation>Ctrl+Shift+L</translation>
 </message>
 <message>
 <source>Import notes from Joplin</source>
@@ -2831,11 +2831,11 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
+<translation>Visa alla anteckningar (%1)</translation>
 </message>
 <message>
 <source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+<translation>Visa alla anteckningar taggade med '%1' (%2)</translation>
 </message>
 <message>
 <source>Allows you to rename the filename of the note</source>
@@ -3401,19 +3401,19 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 <name>NextcloudDeckDialog</name>
 <message>
 <source>-10min</source>
-<translation type="unfinished">-10min</translation>
+<translation>-10min</translation>
 </message>
 <message>
 <source>+10min</source>
-<translation type="unfinished">+10min</translation>
+<translation>+10min</translation>
 </message>
 <message>
 <source>+1d</source>
-<translation type="unfinished">+1d</translation>
+<translation>+1d</translation>
 </message>
 <message>
 <source>-1d</source>
-<translation type="unfinished">-1d</translation>
+<translation>-1d</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
@@ -3429,7 +3429,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>+1h</source>
-<translation type="unfinished">+1h</translation>
+<translation>+1t</translation>
 </message>
 <message>
 <source>Title</source>
@@ -3437,7 +3437,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>-1h</source>
-<translation type="unfinished">-1h</translation>
+<translation>-1t</translation>
 </message>
 <message>
 <source>Description:</source>
@@ -3549,7 +3549,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 <name>NoteSubFolderTree</name>
 <message>
 <source>show notes in folder '%1' (%2)</source>
-<translation type="unfinished">show notes in folder '%1' (%2)</translation>
+<translation>visa anteckningar i mappen '%1' (%2)</translation>
 </message>
 <message>
 <source>All notes</source>
@@ -3557,19 +3557,19 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
-<translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+<translation>Visa anteckningar från alla anteckning undermappar (%1)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
-<translation type="unfinished">Show notes in note root folder (%1)</translation>
+<translation>Visa anteckningar i anteckning rotmappen (%1)</translation>
 </message>
 <message>
 <source>Note folder</source>
-<translation type="unfinished">Note folder</translation>
+<translation>Anteckning mapp</translation>
 </message>
 <message>
 <source>New subfolder</source>
-<translation type="unfinished">New subfolder</translation>
+<translation>Ny undermapp</translation>
 </message>
 <message>
 <source>Rename subfolder</source>
@@ -3599,11 +3599,11 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 <name>OwnCloudService</name>
 <message>
 <source>incorrect</source>
-<translation type="unfinished">incorrect</translation>
+<translation>oriktig</translation>
 </message>
 <message>
 <source>not connected</source>
-<translation type="unfinished">not connected</translation>
+<translation>ej ansluten</translation>
 </message>
 <message>
 <source>Username / password error</source>
@@ -3615,7 +3615,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>ok</source>
-<translation type="unfinished">ok</translation>
+<translation>ok</translation>
 </message>
 <message>
 <source>not correct</source>
@@ -3851,11 +3851,11 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Din Windows-dator verkar att vara i mörkt läge. Vill du också sätta på mörkt läge i QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Din Windows-dator verkar att vara i ljusläge. Vill du också sätta av mörkt läge i QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
@@ -3863,11 +3863,11 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Din Linux-dator verkar att vara i mörkt läge. Vill du också sätta på mörkt läge i QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Din Linux-dator verkar att vara i ljusläge. Vill du också sätta av mörkt läge i QOwnNotes?/translation>
 </message>
 <message>
 <source>Panel disabled</source>
@@ -6766,7 +6766,7 @@ Dina anteckningar kommer att förbli intakta!</translation>
 </message>
 <message>
 <source>Used in notes:</source>
-<translation type="unfinished">Used in notes:</translation>
+<translation>Används i anteckningar:</translation>
 </message>
 <message>
 <source>Find attachment</source>
@@ -6877,7 +6877,7 @@ Dina anteckningar kommer att förbli intakta!</translation>
 </message>
 <message>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>&amp;Öppna anteckningen</translation>
 </message>
 </context>
 <context>
