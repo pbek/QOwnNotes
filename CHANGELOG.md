@@ -2094,7 +2094,7 @@
   (for [#2018](https://github.com/pbek/QOwnNotes/pull/2018), thank you @Waqar144)
   - you can reach the dialog with the shortcut <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd>
 - the links and names of the messenger `Riot` got renamed to `Element` since the project was rebranded
-  - you can reach the [QOwnNotes Matrix room](https://app.element.io/#/room/#qownnotes:matrix.org)
+  - you can reach the [QOwnNotes Matrix room](https://matrix.to/#/#qownnotes:matrix.org)
     via its new link
 
 ## 21.1.5

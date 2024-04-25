@@ -4,7 +4,7 @@
 
 - ميّز [QOwnNotes بنجمة على **GitHub**](https://github.com/pbek/QOwnNotes)
 - انضم إلى [مجموعة **QOwnNotes على تيليجرام** ](https://t.me/QOwnNotes)
-- انضم إلى [غرفة **QOwnNotes على ماتركس**](https://app.element.io/#/room/#qownnotes:matrix.org)
+- انضم إلى [غرفة **QOwnNotes على ماتركس**](https://matrix.to/#/#qownnotes:matrix.org)
 - انضم إلى [قناة **<span dir="ltr">#qownnotes</span> على IRC**](https://web.libera.chat/#qownnotes) على Libera.Chat
 - انضم إلى [غرفة **qownnotes على Gitter**](https://gitter.im/qownnotes/qownnotes)
 - سجّل إعجابك [بصفحة QOwnNotes على **فيسبوك**](https://www.facebook.com/QOwnNotes/)

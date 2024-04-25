@@ -4,7 +4,7 @@ QOwnNotes에 참여하는 다양한 방법
 
 - [**GitHub**의 QOwnNotes](https://github.com/pbek/QOwnNotes) 별
 - [**QOwnNotes Telegram** 그룹](https://t.me/QOwnNotes)에 가입
-- [**QOwnNotes Matrix** room](https://app.element.io/#/room/#qownnotes:matrix.org)에 가입
+- [**QOwnNotes Matrix** room](https://matrix.to/#/#qownnotes:matrix.org)에 가입
 - Libera.Chat에서 [**#qownnotes IRC** 채널](https://web.libera.chat/#qownnotes)에 가입
 - [**qownnotes Gitter** room](https://gitter.im/qownnotes/qownnotes)에 가입
 - [**Facebook**에서 QOwnNotes ](https://www.facebook.com/QOwnNotes/)좋아요

@@ -4,7 +4,7 @@
 
 - [ به QOwnNotes در ** گیت هاب **](https://github.com/pbek/QOwnNotes) ستاره دهید
 - به [ گروه ** تلگرام QOwnNotes ** ](https://t.me/QOwnNotes) بپیوندید
-- به [اتاق **ماتریکس QOwnNotes**](https://app.element.io/#/room/#qownnotes:matrix.org) بپیوندید
+- به [اتاق **ماتریکس QOwnNotes**](https://matrix.to/#/#qownnotes:matrix.org) بپیوندید
 - به [ کانال ** #qownnotes IRC ** ](https://web.libera.chat/#qownnotes) در Libera.Chat بپیوندید
 - به [ اتاق ** گیتر QOwnNotes ** ](https://gitter.im/qownnotes/qownnotes) بپیوندید
 - [ QOwnNotes را در ** فیس بوک ** ](https://www.facebook.com/QOwnNotes/) لایک کنید
