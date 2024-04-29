@@ -358,6 +358,10 @@ script.setLabelText("counter-label", "counter text");
 
 You may then want to take a look at the example script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
 
+::: tip
+The scripting label also supports **external links**, as well as **internal links** to notes, tasks, deck cards and more. You might get a grasp of what's supported by taking a look at [URL handling](https://github.com/pbek/QOwnNotes/blob/964acf69b6382f8ee8252c640c5048f8f4644622/src/utils/urlhandler.cpp#L16-L75).
+:::
+
 Creazione di una nuova nota
 -------------------
 
@@ -1122,7 +1126,7 @@ property variant settingsVariables: [
 
 Inoltre puoi sovrascrivere `settingsVariables` con una funzione speciale `registerSettingsVariables()` come questa:
 
-### Esempio
+### Example
 ```js
 /**
   * Registra nuovamente le variabili delle impostazioni

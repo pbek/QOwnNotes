@@ -389,6 +389,10 @@ Sie können sowohl einfachen Text als auch HTML in den Labels verwenden. Der Tex
 
 Schauen Sie sich das Beispielskript auf [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml) an.
 
+::: tip
+The scripting label also supports **external links**, as well as **internal links** to notes, tasks, deck cards and more. You might get a grasp of what's supported by taking a look at [URL handling](https://github.com/pbek/QOwnNotes/blob/964acf69b6382f8ee8252c640c5048f8f4644622/src/utils/urlhandler.cpp#L16-L75).
+:::
+
 Neue Notiz erstellen
 -------------------
 
@@ -1150,7 +1154,7 @@ property variant settingsVariables: [
 
 Darüber hinaus können Sie die `settingsVariables` mit einer speziellen Funktion `registerSettingsVariables()` wie folgt überschreiben:
 
-### Beispiel
+### Example
 ```js
 /**
  * Registriert die Einstellungsvariablen erneut

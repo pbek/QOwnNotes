@@ -389,6 +389,10 @@ You can use both plain text or html in the labels. The text will be selectable a
 
 ربما تحب أن تلقي نظرة على مثال البُريمج [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
 
+::: tip
+The scripting label also supports **external links**, as well as **internal links** to notes, tasks, deck cards and more. You might get a grasp of what's supported by taking a look at [URL handling](https://github.com/pbek/QOwnNotes/blob/964acf69b6382f8ee8252c640c5048f8f4644622/src/utils/urlhandler.cpp#L16-L75).
+:::
+
 إنشاء ملاحظة جديدة
 -------------------
 
@@ -1150,7 +1154,7 @@ property variant settingsVariables: [
 
 ويمكنك أيضا تغطية `settingsVariables` بالدالة الخاصة `registerSettingsVariables()` مثل:
 
-### مثال
+### Example
 ```js
 /**
  * Registers the settings variables again

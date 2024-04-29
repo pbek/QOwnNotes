@@ -1,16 +1,14 @@
-# Git versioning
+# إدارة الإصدارات عبر git
 
-You can set up QOwnNotes to automatically commit changes in your note folder locally
-to a git repository in your note folder.
+يمكن ضبط QOwnNotes ليتابع التعديلات التي تتم في مجلد ملاحظاتك ويودعها آليًّا في مستودع git في مجلد ملاحظاتك.
 
-This can be done in the _Git versioning_ settings in the _General settings_.
+يمكن ضبطه من إعدادات «إدارة الإصدارات عبر git» في شاشة الإعدادات «عام».
 
 ![git-note-folder-settings](/img/git/settings.png)
 
-You need to have git installed on your system and the git executable needs to be in your PATH or
-you can set the path to the git executable in the _Git versioning_ settings.
+تحتاج إلى وجود git مثبتًّا على نظامك، وأن يكون في المسارات التنفيذية (PATH) وإلا فحدد مسار ملفه التنفيذي في إعدادات «إدارة الإصدارات عبر git».
 
-You also need to turn on git support for each note folder you want to use git versioning with!
+تحتاج كذلك إلى تفعيل دعم git في كل مجلد ملاحظات تريد إداراته عبر git!
 
 ![git-note-folder-settings](/img/git/note-folder-settings.png)
 

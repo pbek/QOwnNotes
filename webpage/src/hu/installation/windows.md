@@ -1,9 +1,9 @@
 # Telepítse a Microsoft Windows™ rendszerre
 
-Töltse le a legfrissebb **Windows-archívumot** a [QOwnNotes Releases on GitHub webhelyről](https://github.com/pbek/QOwnNotes/releases), és csomagolja ki bárhová. Nincs szükség telepítésre!
+Download the latest **Windows archive** from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases) (look for a file called `QOwnNotes.zip`) and unzip it to anywhere you like. Nincs szükség telepítésre!
 
 ::: warning
-Ha az **automatikus frissítőt** szeretné használni, kérjük, győződjön meg arról, hogy kicsomagolja-e egy olyan helyre, ahol a felhasználói fiók rendelkezik írási hozzáféréssel. Alapértelmezés szerint a felhasználói fiókjának valószínűleg nincs **írási hozzáférése** olyan helyekhez, mint a `C:\Program Files (x86)` vagy a `C:\Program Files`.
+Ha az **automatikus frissítőt** szeretné használni, kérjük, győződjön meg arról, hogy kicsomagolja-e egy olyan helyre, ahol a felhasználói fiók rendelkezik írási hozzáféréssel. By default, your user account most likely **doesn't have write access** to places like `C:\Program Files (x86)` or `C:\Program Files`.
 :::
 
 Ezután közvetlenül futtathatja a `QOwnNotes.exe` fájlt a `QOwnNotes` mappából, nincs szükség telepítésre.

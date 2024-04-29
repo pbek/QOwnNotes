@@ -1,9 +1,9 @@
 # التثبيت على ميكروسوفت ويندوز
 
-قم بتنزيل **الملف المضغوط لويندوز** من [إصدارات QOwnNotes على GitHub](https://github.com/pbek/QOwnNotes/releases) واستخرجه إلى أي مكانٍ تشاء. لا حاجة إلى تثبيت أي شيء!
+Download the latest **Windows archive** from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases) (look for a file called `QOwnNotes.zip`) and unzip it to anywhere you like. لا حاجة إلى تثبيت أي شيء!
 
 ::: warning
-إذا أردت استخدام **التحديث التلقائي** فنرجو التأكد من استخراجه إلى مكان مسموح لحسابك بالكتابة فيه. بشكل افتراضي حسابك غالبا **ليس لديه إذن الكتابة** في مجلدات مثل <code dir="ltr">C:\Program Files (x86)</code> أو <code dir="ltr">C:\Program Files</code>.
+إذا أردت استخدام **التحديث التلقائي** فنرجو التأكد من استخراجه إلى مكان مسموح لحسابك بالكتابة فيه. By default, your user account most likely **doesn't have write access** to places like `C:\Program Files (x86)` or `C:\Program Files`.
 :::
 
 يمكنك إذًا تشغيل `QOwnNotes.exe` من مجلد `QOwnNotes` مباشرةً؛ لا حاجة إلى تثبيت أي شيء.

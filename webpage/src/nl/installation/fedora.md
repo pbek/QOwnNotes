@@ -19,8 +19,9 @@ Mogelijk moet u de repo-sleutel accepteren voordat u deze kunt downloaden.
 Als je problemen hebt met het zelf importeren van de sleutel met:
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+Houd er rekening mee dat het gedeelte "Fedora_40" in de bovenstaande code de versie van Fedora moet weerspiegelen die jij gebruikt (d.w.z. "Fedora_39", "Fedora_38" enz.)
 :::
 
 ## Legacy installatiemethode
@@ -30,10 +31,11 @@ Gebruik deze methode als je Fedora-versie de `config-manager` dnf-plug-in niet o
 Voer de volgende shell-opdrachten uit als root om de repository te vertrouwen.
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+Nogmaals: merk op dat het gedeelte "Fedora_40" in de bovenstaande code de versie van Fedora moet weerspiegelen die jij gebruikt (d.w.z. "Fedora_39", "Fedora_38" enz.)
 
-Voer de volgende shell-opdrachten uit als root om de repository toe te voegen en vanaf daar QOwnNotes te installeren.
+Voer vervolgens de volgende shell-opdrachten uit als root om de repository toe te voegen en vanaf daar QOwnNotes te installeren.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -50,4 +52,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Directe download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36) (deze voorbeeldlink is voor Fedora 36)
+[Directe download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (deze voorbeeldlink is voor Fedora 40)

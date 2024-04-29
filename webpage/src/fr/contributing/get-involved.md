@@ -4,7 +4,7 @@ Les différentes façons de s'impliquer avec QOwnNotes
 
 - Étoile [QOwnNotes sur **GitHub**](https://github.com/pbek/QOwnNotes)
 - Rejoignez le [groupe **QOwnNotes Telegram**](https://t.me/QOwnNotes)
-- Rejoignez la [salle **QOwnNotes Matrix**](https://matrix.to/#/#qownnotes:matrix.org)
+- Join the [**QOwnNotes Matrix** room](https://matrix.to/#/#qownnotes:matrix.org)
 - Rejoignez le canal IRC [**#qownnotes**](https://web.libera.chat/#qownnotes) sur Libera.Chat
 - Rejoignez la [salle **qownnotes Gitter**](https://gitter.im/qownnotes/qownnotes)
 - Aimez [ QOwnNotes sur **Facebook** ](https://www.facebook.com/QOwnNotes/)

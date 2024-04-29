@@ -9,6 +9,7 @@
 - There now is a software repository for **Fedora 40**
   - Please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html)
     for instructions
+- Added more Arabic translation (thank you, noureddin)
 
 ## 24.4.4
 - Tag support for multiple tags was fixed for tasks in the *Todo dialog*

@@ -18,9 +18,9 @@ dnf install qownnotes
 문제가 있는 경우 다음을 사용하여 직접 키를 가져옵니다:
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
-:::
+Please note that the portion "Fedora_40" in the above code should reflect the version of Fedora you are using (i.e. "Fedora_39", "Fedora_38" etc.) :::
 
 ## 레거시 설치 방법
 
@@ -29,10 +29,11 @@ Fedora 버전이 `config-manager` 플러그인을 지원하지 않는 경우 이
 다음 셸 명령을 루트로 실행하여 저장소를 신뢰합니다.
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+Again: note that the portion "Fedora_40" in the above code should reflect the version of Fedora you are using (i.e. "Fedora_39", "Fedora_38" etc.)
 
-다음 셸 명령을 루트로 실행하여 리포지토리를 추가하고 여기서 QOwnNotes를 설치합니다.
+Then run the following shell commands as root to add the repository and install QOwnNotes from there.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -49,4 +50,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36) (이 예제 링크는 Fedora 36용)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (this example link is for Fedora 40)

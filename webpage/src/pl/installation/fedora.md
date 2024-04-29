@@ -19,8 +19,9 @@ Uruchom następujące polecenia powłoki jako root, aby dodać repozytorium.
 Jeśli masz problemy, zaimportuj klucz samodzielnie za pomocą:
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+Please note that the portion "Fedora_40" in the above code should reflect the version of Fedora you are using (i.e. "Fedora_39", "Fedora_38" etc.)
 :::
 
 ## Starsza metoda instalacji
@@ -30,10 +31,11 @@ Użyj tej metody, jeśli twoja wersja Fedory nie obsługuje wtyczki dnf `config-
 Uruchom następujące polecenia powłoki jako root, aby zaufać repozytorium.
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+Again: note that the portion "Fedora_40" in the above code should reflect the version of Fedora you are using (i.e. "Fedora_39", "Fedora_38" etc.)
 
-Uruchom następujące polecenia powłoki jako root, aby dodać repozytorium i zainstalować QOwnNotes stamtąd.
+Then run the following shell commands as root to add the repository and install QOwnNotes from there.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -50,4 +52,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Bezpośrednie pobieranie](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36) (ten przykładowy link dotyczy Fedory 36)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (this example link is for Fedora 40)

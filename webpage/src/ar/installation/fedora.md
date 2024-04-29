@@ -19,8 +19,9 @@ dnf install qownnotes
 إذا واجهت مشاكل، يمكنك استيراد المفتاح بنفسك بالأمر:
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+لاحظ أن "Fedora_40" في الأمر السابق يجب أن تغيّرها إلى ما يناسب نسخة توزيعتك (أي "Fedora_39" أو "Fedora_38" إلخ).
 :::
 
 ## على الأنظمة الأقدم
@@ -30,10 +31,11 @@ rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fed
 نفّذ الأمر التالي في الطرفية بصلاحيات الجذر لاستيثاق المستودع.
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+مجددا، لاحظ أن "Fedora_40" في الأمر السابق يجب أن تغيّرها إلى ما يناسب نسخة توزيعتك (أي "Fedora_39" أو "Fedora_38" إلخ).
 
-نفّذ الأوامر التالية في الطرفية بصلاحيات الجذر لإضافة المستودع وتثبيت QOwnNotes منه.
+ثم نفّذ الأوامر التالية في الطرفية بصلاحيات الجذر لإضافة المستودع وتثبيت QOwnNotes منه.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -50,4 +52,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[تنزيل مباشر](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_36) (هذا الرابط المثال هو لفيدورا 36)
+[تنزيل مباشر](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (هذا الرابط مثال على فيدورا 40)

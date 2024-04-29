@@ -1,9 +1,9 @@
 # نصب سیستم عامل ویندوز مایکروسافت
 
-آخرین نسخه **بایگانی ویندوز** را از [انتشار های QOwnNotes در گیت هاب](https://github.com/pbek/QOwnNotes/releases) بارگیری نموده و هر جایی که دوست دارید آن را از حالت فشرده خارج کنید. هیچ نیازی به نصب نیست!
+Download the latest **Windows archive** from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases) (look for a file called `QOwnNotes.zip`) and unzip it to anywhere you like. هیچ نیازی به نصب نیست!
 
 ::: warning
-در صورت تمایل به استفاده از **بروز رسان خودکار**، لطفاً مطمئن شوید که آن هر جایی که حساب کاربری شما دسترسی نوشتاری دارد، از حالت فشرده خارج شده باشد. به صورت پیش فرض حساب کاربری شما به احتمال زیاد **دسترسی نوشتاری** برای قرار گرفتن در آدرس هایی نظیر `C:\Program Files (x86)` یا `C:\Program Files` را ندارد.
+در صورت تمایل به استفاده از **بروز رسان خودکار**، لطفاً مطمئن شوید که آن هر جایی که حساب کاربری شما دسترسی نوشتاری دارد، از حالت فشرده خارج شده باشد. By default, your user account most likely **doesn't have write access** to places like `C:\Program Files (x86)` or `C:\Program Files`.
 :::
 
 در این صورت می ‌توانید `QOwnNotes.exe` را از پوشه `QOwnNotes` خود به طور مستقیم و بدون نیاز به نصب اجرا کنید.

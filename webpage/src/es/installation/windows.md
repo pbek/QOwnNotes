@@ -1,8 +1,8 @@
 # Instalar en Microsoft Windows ™
 
-Descargue el último **archivo de Windows** de [versiones de QOwnNotes en GitHub](https://github.com/pbek/QOwnNotes/releases) y descomprímalo en cualquier lugar que desee. ¡No se necesita instalación!
+Download the latest **Windows archive** from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases) (look for a file called `QOwnNotes.zip`) and unzip it to anywhere you like. ¡No se necesita instalación!
 
-::: advertencia Si desea utilizar el **actualizador automático**, asegúrese de descomprimirlo en un lugar donde su cuenta de usuario tenga acceso de escritura. De forma predeterminada, es muy probable que su cuenta de usuario **no tenga acceso de escritura** a lugares como `C:\Archivos de programa (x86)` o `C:\Archivos de programa`.
+::: advertencia Si desea utilizar el **actualizador automático**, asegúrese de descomprimirlo en un lugar donde su cuenta de usuario tenga acceso de escritura. By default, your user account most likely **doesn't have write access** to places like `C:\Program Files (x86)` or `C:\Program Files`.
 :::
 
 Luego, puede ejecutar directamente `QOwnNotes.exe` desde su carpeta `QOwnNotes`, no se requiere instalación.
