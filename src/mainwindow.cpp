@@ -10056,11 +10056,23 @@ void MainWindow::addCustomAction(const QString &identifier, const QString &menuT
  */
 void MainWindow::addScriptingLabel(const QString &identifier, const QString &text) {
     _scriptingDockWidget->show();
-    QLabel *label = new QLabel(text, _scriptingDockWidget);
-    label->setOpenExternalLinks(true);
+    auto *label = new QLabel(text, _scriptingDockWidget);
+    // It seems that if set to true QLabel::linkActivated doesn't trigger anymore!
+    label->setOpenExternalLinks(false);
     label->setTextInteractionFlags(Qt::TextSelectableByMouse | Qt::LinksAccessibleByMouse);
     label->setWordWrap(true);
     label->setObjectName(QStringLiteral("scriptingLabel-") + identifier);
+
+    connect(label, &QLabel::linkActivated, this, [this](const QString &link){
+        // Check for internal links and open them
+        if (UrlHandler::isUrlSchemeLocal(QUrl(link))) {
+            openLocalUrl(link);
+        } else {
+            QDesktopServices::openUrl(QUrl(link));
+            return;
+        }
+    });
+
     ui->scriptingScrollAreaLayout->addWidget(label);
 }
 

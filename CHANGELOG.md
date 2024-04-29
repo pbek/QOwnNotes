@@ -1,6 +1,11 @@
 # QOwnNotes Changelog
 
-## Next
+## 24.4.5
+- [Scripting labels](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-a-label)
+  now support external links as well as internal links to notes, tasks, deck cards, etc.
+  (for [#3017](https://github.com/pbek/QOwnNotes/issues/3017))
+  - For more information about what's supported see
+    [Setting the text of a registered label](https://www.qownnotes.org/scripting/methods-and-objects.html#setting-the-text-of-a-registered-label)
 - There now is a software repository for **Fedora 40**
   - Please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html)
     for instructions
