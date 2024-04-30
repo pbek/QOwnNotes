@@ -170,10 +170,11 @@ jobs:
       run: |
         cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
         ../bin/tests/tests -platform minimal -txt
+    # qmake fix: https://stackoverflow.com/questions/77136519/qmake-failing-with-sdk-14-ventura-13-5-2
     - if: contains( matrix.os, 'macos')
       name: Do macOS tests
       run: |
-        cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
+        cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS -early QMAKE_DEFAULT_LIBDIRS=$(xcrun -show-sdk-path)/usr/lib && make -s -j 8
         ../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
     - if: contains( matrix.os, 'windows') && (startsWith( matrix.qt-version, '5.' ) || matrix.qt-version == '6.2.0')
       name: Do Qt5 / Qt 6.2.0 Windows tests
@@ -211,10 +212,15 @@ jobs:
       # Build QOwnNotes
       #
 
-    - if: true && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && !contains( matrix.os, 'ubuntu-22')
+    - if: true && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && !contains( matrix.os, 'ubuntu-22') && !contains( matrix.os, 'macos')
       name: Build QOwnNotes
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j 8
+    # qmake fix: https://stackoverflow.com/questions/77136519/qmake-failing-with-sdk-14-ventura-13-5-2
+    - if: contains( matrix.os, 'macos')
+      name: Build QOwnNotes for macOS with qmake fix
+      run: |
+        lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE -early QMAKE_DEFAULT_LIBDIRS=$(xcrun -show-sdk-path)/usr/lib && make -j 8
 #    - if: contains( matrix.os, 'ubuntu-22')
 #      name: Build QOwnNotes Ubuntu 20.04
 #      run: |
