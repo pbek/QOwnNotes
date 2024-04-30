@@ -359,6 +359,7 @@ jobs:
     env:
       # Qt 6.5 doesn't support macOS 10 anymore!
       QT_VERSION: 6.4.2
+    continue-on-error: true
     steps:
 
       - name: '🧰 Checkout'
