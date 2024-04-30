@@ -369,12 +369,14 @@ jobs:
           echo "VERSION=${VERSION}"
           printenv
 
+      # qmake workaround: https://bugreports.qt.io/browse/QTBUG-117225?focusedId=754625&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-754625
+      # See https://github.com/pbek/QOwnNotes/issues/3018
       - name: '🚧 Compile application'
         run: |
           echo "#define RELEASE \"GitHub Actions\"" > release.h
           lrelease QOwnNotes.pro
           #ls ${Qt5_Dir}/bin
-          ${{env.QMAKE}}
+          ${{env.QMAKE}} -early QMAKE_DEFAULT_LIBDIRS=$(xcrun -show-sdk-path)/usr/lib
           make -j ${{env.CORES}}
           ../build-systems/github/macos/create-dmg.sh
 

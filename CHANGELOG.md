@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 24.5.0
+- The macOS release build is now fixed again (for [#3018](https://github.com/pbek/QOwnNotes/issues/3018))
+
 ## 24.4.5
 - [Scripting labels](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-a-label)
   now support external links as well as internal links to notes, tasks, deck cards, etc.
