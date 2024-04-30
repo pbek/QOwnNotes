@@ -176,7 +176,7 @@ jobs:
       run: |
         cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
         ../bin/tests/tests -platform minimal -txt
-    # qmake fix: https://stackoverflow.com/questions/77136519/qmake-failing-with-sdk-14-ventura-13-5-2
+    # qmake workaround: https://bugreports.qt.io/browse/QTBUG-117225?focusedId=754625&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-754625
     - if: contains( matrix.os, 'macos')
       name: Do macOS tests
       run: |
@@ -222,7 +222,7 @@ jobs:
       name: Build QOwnNotes
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j 8
-    # qmake fix: https://stackoverflow.com/questions/77136519/qmake-failing-with-sdk-14-ventura-13-5-2
+    # qmake workaround: https://bugreports.qt.io/browse/QTBUG-117225?focusedId=754625&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-754625
     - if: contains( matrix.os, 'macos')
       name: Build QOwnNotes for macOS with qmake fix
       run: |
