@@ -91,7 +91,7 @@ jobs:
     needs: create_release
     runs-on: ubuntu-20.04
     env:
-      QT_VERSION: 6.6.3
+      QT_VERSION: 6.5.0
       BUILD_DIR: build
     name: '🐧 AppImage Ubuntu 20.04'
     steps:
@@ -191,7 +191,7 @@ jobs:
     needs: create_release
     runs-on: ubuntu-latest
     env:
-      QT_VERSION: 6.6.3
+      QT_VERSION: 6.5.0
     continue-on-error: true
     name: '🐧 Snap Ubuntu 18.04'
     steps:
@@ -275,7 +275,7 @@ jobs:
     runs-on: windows-2019
     env:
       # Qt 6.5 windeployqt doesn't deploy DLLs!
-      QT_VERSION: 6.4.3
+      QT_VERSION: 6.4.2
     continue-on-error: true
     steps:
 
@@ -358,7 +358,7 @@ jobs:
     runs-on: macos-latest
     env:
       # Qt 6.5 doesn't support macOS 10 anymore!
-      QT_VERSION: 6.4.3
+      QT_VERSION: 6.4.2
     steps:
 
       - name: '🧰 Checkout'
