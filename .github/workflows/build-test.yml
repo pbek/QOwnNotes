@@ -38,7 +38,7 @@ jobs:
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
-        qt-version: ['5.9.9', '5.13.2', '5.14.2', '5.15.2', '6.2.0', '6.4.2', '6.5.0', '6.6.0']
+        qt-version: ['5.9.9', '5.13.2', '5.14.2', '5.15.2', '6.2.4', '6.4.3', '6.5.3', '6.6.3', '6.7.1']
         experimental: [false]
         exclude:
           # Failing SSL Tests
@@ -49,14 +49,17 @@ jobs:
             qt-version: '5.9.9'
           # we want to do it with "experimental: true"
           - os: windows-2019
-            qt-version: '6.4.2'
+            qt-version: '6.4.3'
             experimental: false
           # we want to do it with "experimental: true"
           - os: windows-2019
-            qt-version: '6.5.0'
+            qt-version: '6.5.3'
             experimental: false
           - os: windows-2019
-            qt-version: '6.6.0'
+            qt-version: '6.6.3'
+            experimental: false
+          - os: windows-2019
+            qt-version: '6.7.1'
             experimental: false
           # Qt installation times out too often
 #          - os: windows-2019
@@ -76,13 +79,16 @@ jobs:
 #            qt-version: '6.3.0'
 #            experimental: true
           - os: windows-2019
-            qt-version: '6.4.2'
+            qt-version: '6.4.3'
             experimental: true
           - os: windows-2019
-            qt-version: '6.5.0'
+            qt-version: '6.5.3'
             experimental: true
           - os: windows-2019
-            qt-version: '6.6.0'
+            qt-version: '6.6.3'
+            experimental: true
+          - os: windows-2019
+            qt-version: '6.7.1'
             experimental: true
           # Snapcraft
           - os: ubuntu-22.04
@@ -127,8 +133,8 @@ jobs:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: contains( matrix.os, 'windows') && matrix.qt-version == '6.2.0'
-      name: Install Qt Qt 6.2.0 on Windows
+    - if: contains( matrix.os, 'windows') && matrix.qt-version == '6.2.4'
+      name: Install Qt Qt 6.2.4 on Windows
       uses: jurplel/install-qt-action@v3
       with:
         aqtversion: '==2.0.0'
@@ -136,7 +142,7 @@ jobs:
         arch: win64_mingw81
         modules: qtwebsockets qt5compat
         cache: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && matrix.qt-version != '6.2.0'
+    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && matrix.qt-version != '6.2.4'
       name: Install Qt 6 on Windows
       uses: jurplel/install-qt-action@v3
       with:
@@ -176,8 +182,8 @@ jobs:
       run: |
         cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS -early QMAKE_DEFAULT_LIBDIRS=$(xcrun -show-sdk-path)/usr/lib && make -s -j 8
         ../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
-    - if: contains( matrix.os, 'windows') && (startsWith( matrix.qt-version, '5.' ) || matrix.qt-version == '6.2.0')
-      name: Do Qt5 / Qt 6.2.0 Windows tests
+    - if: contains( matrix.os, 'windows') && (startsWith( matrix.qt-version, '5.' ) || matrix.qt-version == '6.2.4')
+      name: Do Qt5 / Qt 6.2.4 Windows tests
       run: |
         cd ..\tests
         qmake DEFINES+=INTEGRATION_TESTS
@@ -196,7 +202,7 @@ jobs:
         windeployqt --debug tests.exe
         # echo test2
         .\tests.exe -txt
-    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && matrix.qt-version != '6.2.0'
+    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && matrix.qt-version != '6.2.4'
       name: Do Qt 6.3+ Windows tests
       run: |
         cd ..\tests
