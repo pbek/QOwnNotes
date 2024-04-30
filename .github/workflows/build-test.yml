@@ -47,6 +47,10 @@ jobs:
           # tests.exe not found
           - os: windows-2019
             qt-version: '5.9.9'
+          # we want to do it Qt 6.2.3
+          - os: windows-2019
+            qt-version: '6.2.4'
+            experimental: false
           # we want to do it with "experimental: true"
           - os: windows-2019
             qt-version: '6.4.3'
@@ -89,6 +93,9 @@ jobs:
 #          - os: macos-latest
 #            qt-version: '6.3.0'
 #            experimental: true
+          - os: windows-2019
+            qt-version: '6.2.3'
+            experimental: false
           - os: windows-2019
             qt-version: '6.4.3'
             experimental: true
