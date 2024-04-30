@@ -58,6 +58,20 @@ jobs:
           - os: windows-2019
             qt-version: '6.6.3'
             experimental: false
+          # Qt6 builds of macOS are currently breaking because of the workaround for https://bugreports.qt.io/browse/QTBUG-117225
+          # See https://github.com/pbek/QOwnNotes/issues/3018
+          - os: macos-latest
+            qt-version: '6.2.4'
+            experimental: false
+          - os: macos-latest
+            qt-version: '6.4.3'
+            experimental: false
+          - os: macos-latest
+            qt-version: '6.5.3'
+            experimental: false
+          - os: macos-latest
+            qt-version: '6.6.3'
+            experimental: false
           # Qt installation times out too often
 #          - os: windows-2019
 #            qt-version: '5.13.2'
@@ -82,6 +96,20 @@ jobs:
             qt-version: '6.5.3'
             experimental: true
           - os: windows-2019
+            qt-version: '6.6.3'
+            experimental: true
+          # Qt6 builds of macOS are currently breaking because of the workaround for https://bugreports.qt.io/browse/QTBUG-117225
+          # See https://github.com/pbek/QOwnNotes/issues/3018
+          - os: macos-latest
+            qt-version: '6.2.4'
+            experimental: true
+          - os: macos-latest
+            qt-version: '6.4.3'
+            experimental: true
+          - os: macos-latest
+            qt-version: '6.5.3'
+            experimental: true
+          - os: macos-latest
             qt-version: '6.6.3'
             experimental: true
           # Snapcraft
@@ -171,6 +199,7 @@ jobs:
         cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
         ../bin/tests/tests -platform minimal -txt
     # qmake workaround: https://bugreports.qt.io/browse/QTBUG-117225?focusedId=754625&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-754625
+    # See https://github.com/pbek/QOwnNotes/issues/3018
     - if: contains( matrix.os, 'macos')
       name: Do macOS tests
       run: |
@@ -217,6 +246,7 @@ jobs:
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j 8
     # qmake workaround: https://bugreports.qt.io/browse/QTBUG-117225?focusedId=754625&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-754625
+    # See https://github.com/pbek/QOwnNotes/issues/3018
     - if: contains( matrix.os, 'macos')
       name: Build QOwnNotes for macOS with qmake fix
       run: |
