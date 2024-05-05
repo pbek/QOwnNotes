@@ -1,5 +1,16 @@
 # Instalar en Slackware Linux
 
+## Slackware 15.0 (current 20240505)
+
+Las dependencias indicadas en [qownnotes.info](https://github.com/pbek/QOwnNotes/blob/main/build-systems/slackware/qownnotes.info) ya están en "current". Si al clonar no hay un directorio específico para la 15, se puede emplear el script de la versión 14.2:
+
+```bash
+cd /tmp
+git clone https://github.com/pbek/qownnotes-slackbuilds.git
+cd qownnotes-slackbuilds/14.2/qownnotes
+./dobuild.sh
+```
+
 ## Slackware 14.2
 
 Primero debe instalar Qt 5, libxkbcommon, libproxy y js185.
