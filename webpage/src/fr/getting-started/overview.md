@@ -166,7 +166,7 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 - [**Spellchecking**](../editor/spellchecking.md) support
 - **Portable mode** for carrying QOwnNotes around on USB sticks
 - **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
-- **Vim mode**
+- **Mode Vim**
 - **[Web application](web-app.md)** to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
 

@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Copie</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -2297,7 +2297,7 @@
 </message>
 <message>
 <source>&amp;Load Todo List items</source>
-<translation>Charger des éléments d’une &amp;liste de tâches</translation>
+<translation>Charger des éléments d’une &amp;liste des tâches</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
@@ -2808,9 +2808,9 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
-<translation type="unfinished">
-<numerusform>La copie de %n note(s) a été sautée (pas de fichier Markdown ou texte, ou non lisible)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<translation>
+<numerusform>La copie de %n note a été sautée (pas de fichier Markdown ou texte, ou non lisible)</numerusform>
+<numerusform>La copie de %n notes a été sautée (pas de fichier Markdown ou texte, ou non lisible)</numerusform>
 </translation>
 </message>
 <message>
@@ -3439,19 +3439,19 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <name>NextcloudDeckService</name>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Erreur lors de la création de la carte</translation>
 </message>
 <message>
 <source>Creating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating a card failed with status code %1 and message: %2</translation>
+<translation>La création de la carte a échoué avec le code de statut %1 et le message : %2</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
-<translation type="unfinished">Error while loading boards</translation>
+<translation>Erreur lors du chargement des tableaux</translation>
 </message>
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
+<translation>Le chargement des tableaux a échoué avec le code de statut %1 et le message : %2</translation>
 </message>
 </context>
 <context>
@@ -4816,7 +4816,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Find setting</source>
-<translation>Recherche de paramètre</translation>
+<translation>Rechercher dans les paramètres</translation>
 </message>
 <message>
 <source>Layout</source>
@@ -6377,7 +6377,7 @@ Le message d'erreur de connexion est : </translation>
 </message>
 <message>
 <source>Board Id: %1</source>
-<translation type="unfinished">Board Id: %1</translation>
+<translation>Identifiant de tableau : %1</translation>
 </message>
 <message>
 <source>Stack Id: %1</source>
@@ -7138,11 +7138,11 @@ Vos notes resteront intactes!</translation>
 </message>
 <message>
 <source>Tags</source>
-<translation type="unfinished">Tags</translation>
+<translation>Tags</translation>
 </message>
 <message>
 <source>Add new tag</source>
-<translation type="unfinished">Add new tag</translation>
+<translation>Ajouter un nouveau tag</translation>
 </message>
 <message>
 <source>Due date</source>
@@ -7652,9 +7652,9 @@ Cela ne peut être annuler !</translation>
 </message>
 <message numerus="yes">
 <source>Bookmark deleted from %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<translation>
+<numerusform>Signet supprimé de %n note</numerusform>
+<numerusform>Signet supprimé de %n notes</numerusform>
 </translation>
 </message>
 <message>

@@ -3,6 +3,7 @@
 ## 24.5.1
 - In the note editor, the line-number font size will now grow with the editor font size
   (for [#3019](https://github.com/pbek/QOwnNotes/issues/3019))
+- Added more French translation (thank you, jd-develop)
 
 ## 24.5.0
 - The macOS release build is now fixed again (for [#3018](https://github.com/pbek/QOwnNotes/issues/3018))

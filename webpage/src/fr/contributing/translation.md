@@ -8,13 +8,13 @@ Comment puis-je aider à traduire QOwnNotes?
 
 ![crowdin](/img/crowdin.png)
 
-**Crowdin** est une plate-forme de gestion de localisation populaire pour les applications mobiles, le Web, les logiciels de bureau et les ressources associées.
+**Crowdin** est une plate-forme de gestion de traductions populaire pour les applications mobiles, le Web, les logiciels de bureau et les ressources associées.
 
-You can sign up at [Crowdin](https://crowdin.com/project/qownnotes) and **translate** **QOwnNotes** to your language with easy tools.
+Vous pouvez vous inscrire sur [Crowdin](https://crowdin.com/project/qownnotes) et **traduire** **QOwnNotes** en votre langue avec des outils faciles à prendre en main.
 
 **[QOwnNotes sur Crowdin](https://crowdin.com/project/qownnotes)**
 
-Il suffit de [envoyer un message au propriétaire du projet sur Crowdin](https://crowdin.com/profile/pbek) ou en tant que [problème GitHub](https://github.com/pbek/QOwnNotes/issues) si vous souhaitez traduire QOwnNotes dans une nouvelle langue.
+Il suffit d’[envoyer un message au propriétaire du projet sur Crowdin](https://crowdin.com/profile/pbek) ou en tant qu’[Issue GitHub](https://github.com/pbek/QOwnNotes/issues) si vous souhaitez traduire QOwnNotes dans une nouvelle langue.
 
 Si vous souhaitez ajouter de nouvelles traductions aux **langues existantes**, vous pouvez le faire immédiatement.
 
@@ -22,19 +22,19 @@ Si vous souhaitez ajouter de nouvelles traductions aux **langues existantes**, v
 
 Si vous êtes un excellent locuteur ou même natif d'une langue déjà traduite qui n'a pas encore été relue, nous vous remercions de contribuer à rendre l'expérience QOwnNotes plus fiable et plus pratique en vérifiant et si nécessaire, en corrigeant les traductions non approuvées. Vous devez demander au propriétaire la permission d'être un relecteur pour votre langue.
 
-Cliquez ici pour voir si votre langue fait partie des langues traduites!
+Cliquez ici pour voir si votre langue fait partie des langues traduites !
 
 [QOwnNotes sur Crowdin](https://translate.qownnotes.org/)
 
-Une fois que vous avez [contacté le propriétaire du projet sur Crowdin](https://crowdin.com/profile/pbek) et obtenu l’autorisation de relire dans votre langue, vous êtes prêt à commencer!
+Une fois que vous avez [contacté le propriétaire du projet sur Crowdin](https://crowdin.com/profile/pbek) et obtenu l’autorisation de relire dans votre langue, vous êtes prêt à commencer !
 
 ## Conseils généraux
 
 Veuillez prendre en compte quelques éléments lorsque vous travaillez sur le projet.
 
-### Précision
+### Exactitude
 
-Veuillez localiser avec une précision maximale tout en veillant à la maîtrise de votre langue cible.
+Veuillez traduire avec une exactitude maximale tout en veillant à la maîtrise de votre langue cible.
 
 ### Précision
 
@@ -52,15 +52,15 @@ Si `notes trashed` est `fichiers supprimés` en français, vous le traduisez tou
 
 ![copie d'écran](/img/crowdin/screenshot-7.png)
 
-Afin de trouver toutes les expressions identiques, recherchez Crowdin pour voir si toutes les occurrences d'un terme ont effectivement la même traduction, si vous connaissez mieux, et ce n'est pas le cas, vous pouvez suggérer une meilleure traduction et voter pour la meilleure/correcte traduction .
+Afin de trouver toutes les expressions identiques, recherchez dans Crowdin pour voir si toutes les occurrences d'un terme ont effectivement la même traduction. Si vous voulez proposer mieux, vous pouvez suggérer une meilleure traduction et voter pour la meilleure traduction / la traduction la plus correcte.
 
-Localisez toutes les occurrences de la manière la plus identique possible.
+Traduisez toutes les occurrences de la manière la plus identique possible.
 
-`Remarque` doit toujours avoir une seule traduction.
+`Note` doit toujours avoir une seule traduction.
 
 ### Formes du pluriel
 
-Pour le pluriel, veuillez ajouter la traduction appropriée chacun dans le bloc correspondant.
+Pour le pluriel, veuillez ajouter la traduction appropriée dans le bloc correspondant.
 
 ![copie d'écran](/img/crowdin/screenshot-4.png)
 
