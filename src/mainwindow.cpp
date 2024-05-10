@@ -5819,8 +5819,8 @@ void MainWindow::on_action_Find_note_triggered() {
     this->ui->searchLineEdit->setFocus();
     this->ui->searchLineEdit->selectAll();
 
-//    auto openAiService = new OpenAiService(this);
-//    Q_UNUSED(openAiService)
+    //    auto openAiService = new OpenAiService(this);
+    //    Q_UNUSED(openAiService)
 }
 
 //
@@ -10067,7 +10067,7 @@ void MainWindow::addScriptingLabel(const QString &identifier, const QString &tex
     label->setWordWrap(true);
     label->setObjectName(QStringLiteral("scriptingLabel-") + identifier);
 
-    connect(label, &QLabel::linkActivated, this, [this](const QString &link){
+    connect(label, &QLabel::linkActivated, this, [this](const QString &link) {
         // Check for internal links and open them
         if (UrlHandler::isUrlSchemeLocal(QUrl(link))) {
             openLocalUrl(link);
