@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 24.5.2
-- a PPA for Ubuntu 24.10 (Oracular Oriole) was added
+- A PPA for Ubuntu 24.10 (Oracular Oriole) was added
 
 ## 24.5.1
 - In the note editor, the line-number font size will now grow with the editor font size
