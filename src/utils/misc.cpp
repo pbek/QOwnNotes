@@ -1813,6 +1813,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                                  "ownCloud/todoCalendarCalDAVPassword",
                                  "PiwikClientId",
                                  "networking/proxyPassword",
+                                 "ai/groqApiKey",
                                  "webSocketServerService/token",
                                  "webAppClientService/token"};
 

@@ -884,6 +884,9 @@ void SettingsDialog::storeSettings() {
     settings.setValue(QStringLiteral("webAppClientService/serverUrl"),
                       ui->webAppServerUrlLineEdit->text());
     settings.setValue(QStringLiteral("webAppClientService/token"), ui->webAppTokenLineEdit->text());
+
+    settings.setValue(QStringLiteral("ai/groqApiKey"),
+                      CryptoService::instance()->encryptToString(ui->groqApiKeyLineEdit->text()));
 }
 
 /**
@@ -1334,6 +1337,9 @@ void SettingsDialog::readSettings() {
 
     ui->webAppServerUrlLineEdit->setText(WebAppClientService::getServerUrl());
     ui->webAppTokenLineEdit->setText(WebAppClientService::getOrGenerateToken());
+
+    ui->groqApiKeyLineEdit->setText(CryptoService::instance()->decryptToString(
+        settings.value(QStringLiteral("ai/groqApiKey")).toString()));
 }
 
 /**
@@ -4323,4 +4329,8 @@ void SettingsDialog::on_nextcloudDeckStackTreeWidget_currentItemChanged(QTreeWid
     _selectedCloudConnection.setNextcloudDeckStackId(current->data(0, Qt::UserRole).toInt());
     _selectedCloudConnection.setNextcloudDeckBoardId(
         current->parent()->data(0, Qt::UserRole).toInt());
+}
+
+void SettingsDialog::on_groqApiKeyWebButton_clicked() {
+    QDesktopServices::openUrl(QUrl(QStringLiteral("https://console.groq.com/keys")));
 }

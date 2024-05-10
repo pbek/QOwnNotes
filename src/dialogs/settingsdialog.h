@@ -324,6 +324,8 @@ class SettingsDialog : public MasterDialog {
     void on_nextcloudDeckStackTreeWidget_currentItemChanged(QTreeWidgetItem *current,
                                                             QTreeWidgetItem *previous);
 
+    void on_groqApiKeyWebButton_clicked();
+
    private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;

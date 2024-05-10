@@ -6856,32 +6856,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </layout>
            </widget>
            <widget class="QWidget" name="aiPage">
-            <layout class="QGridLayout" name="gridLayout_86">
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <item row="0" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_32">
+             <item>
               <widget class="QGroupBox" name="groupBox_40">
                <property name="title">
                 <string>API keys</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_85">
-                <property name="rightMargin">
-                 <number>3</number>
-                </property>
                 <item row="0" column="2">
                  <widget class="QToolButton" name="groqApiKeyWebButton">
                   <property name="toolTip">
-                   <string>Create API Key</string>
+                   <string>Create Groq API key</string>
                   </property>
                   <property name="text">
                    <string notr="true">…</string>
@@ -6903,27 +6888,30 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  </widget>
                 </item>
                 <item row="0" column="1">
-                 <widget class="QLineEdit" name="groqApiKeyLineEdit">
+                 <widget class="PasswordLineEdit" name="groqApiKeyLineEdit">
+                  <property name="placeholderText">
+                   <string>API key</string>
+                  </property>
                   <property name="clearButtonEnabled">
                    <bool>true</bool>
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="1">
-                 <spacer name="verticalSpacer_21">
-                  <property name="orientation">
-                   <enum>Qt::Orientation::Vertical</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
                </layout>
               </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_21">
+               <property name="orientation">
+                <enum>Qt::Orientation::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </widget>

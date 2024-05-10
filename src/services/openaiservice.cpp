@@ -13,11 +13,15 @@
 */
 
 #include "openaiservice.h"
-#include <QJsonObject>
-#include <QJsonDocument>
+
 #include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QNetworkRequest>
+#include <QSettings>
 #include <utility>
+
+#include "cryptoservice.h"
 
 using namespace std;
 
@@ -25,7 +29,8 @@ QT_USE_NAMESPACE
 
 OpenAiService::OpenAiService(QObject* parent)
     : QObject(parent) {
-    auto apiKey = "secret";
+    QSettings settings;
+    auto apiKey = CryptoService::instance()->decryptToString(settings.value(QStringLiteral("ai/groqApiKey")).toString());
     auto _completer = new OpenAiCompleter(
         apiKey,
         "llama3-8b-8192",
