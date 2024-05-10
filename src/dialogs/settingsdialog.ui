@@ -297,6 +297,18 @@
            </item>
            <item>
             <property name="text">
+             <string>AI</string>
+            </property>
+            <property name="whatsThis">
+             <string notr="true">22</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../breeze-dark-qownnotes.qrc">
+              <normaloff>:/icons/breeze-dark-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-dark-qownnotes/16x16/text-html.svg</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
              <string>General</string>
             </property>
             <property name="whatsThis">
@@ -421,7 +433,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>7</number>
+            <number>22</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -6840,6 +6852,78 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 </size>
                </property>
               </spacer>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="aiPage">
+            <layout class="QGridLayout" name="gridLayout_86">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QGroupBox" name="groupBox_40">
+               <property name="title">
+                <string>API keys</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_85">
+                <property name="rightMargin">
+                 <number>3</number>
+                </property>
+                <item row="0" column="2">
+                 <widget class="QToolButton" name="groqApiKeyWebButton">
+                  <property name="toolTip">
+                   <string>Create API Key</string>
+                  </property>
+                  <property name="text">
+                   <string notr="true">…</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="text-html" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="groqApiKeyHeadlineLabel">
+                  <property name="text">
+                   <string>Groq API key:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="groqApiKeyLineEdit">
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <spacer name="verticalSpacer_21">
+                  <property name="orientation">
+                   <enum>Qt::Orientation::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
              </item>
             </layout>
            </widget>

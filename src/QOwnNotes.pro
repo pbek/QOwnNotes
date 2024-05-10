@@ -165,6 +165,7 @@ SOURCES += main.cpp\
     services/scriptingservice.cpp \
     services/websocketserverservice.cpp \
     services/webappclientservice.cpp \
+    services/openaiservice.cpp \
     dialogs/masterdialog.cpp \
     utils/misc.cpp \
     utils/git.cpp \
@@ -272,6 +273,7 @@ HEADERS  += mainwindow.h \
     dialogs/passworddialog.h \
     services/metricsservice.h \
     services/cryptoservice.h \
+    services/openaiservice.h \
     dialogs/masterdialog.h \
     utils/misc.h \
     utils/git.h \

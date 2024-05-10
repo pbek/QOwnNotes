@@ -288,6 +288,8 @@ set(SOURCE_FILES
     services/cryptoservice.h
     services/scriptingservice.cpp
     services/scriptingservice.h
+    services/openaiservice.cpp
+    services/openaiservice.h
     libraries/piwiktracker/piwiktracker.h
     libraries/piwiktracker/piwiktracker.cpp
     libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget_p.h

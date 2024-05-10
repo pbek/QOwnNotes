@@ -115,6 +115,7 @@
 #include "services/databaseservice.h"
 #include "services/metricsservice.h"
 #include "services/nextclouddeckservice.h"
+#include "services/openaiservice.h"
 #include "services/owncloudservice.h"
 #include "services/updateservice.h"
 #include "services/webappclientservice.h"
@@ -5817,6 +5818,9 @@ void MainWindow::on_action_Find_note_triggered() {
     changeDistractionFreeMode(false);
     this->ui->searchLineEdit->setFocus();
     this->ui->searchLineEdit->selectAll();
+
+//    auto openAiService = new OpenAiService(this);
+//    Q_UNUSED(openAiService)
 }
 
 //
