@@ -1168,6 +1168,14 @@ void MainWindow::initToolbars() {
     _encryptionToolbar->setObjectName(QStringLiteral("encryptionToolbar"));
     addToolBar(_encryptionToolbar);
 
+    _aiBackendGroup = new QActionGroup(ui->menuAI_backend);
+    _aiModelGroup = new QActionGroup(ui->menuAI_model);
+
+    _aiToolbar = new QToolBar(tr("AI toolbar"), this);
+    _aiToolbar->addAction(ui->actionEnable_AI);
+    _aiToolbar->setObjectName(QStringLiteral("aiToolbar"));
+    addToolBar(_aiToolbar);
+
     _windowToolbar = new QToolBar(tr("window toolbar"), this);
     updateWindowToolbar();
     _windowToolbar->setObjectName(QStringLiteral("windowToolbar"));
@@ -2583,6 +2591,7 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
         _customActionToolbar->setIconSize(size);
         _insertingToolbar->setIconSize(size);
         _encryptionToolbar->setIconSize(size);
+        _aiToolbar->setIconSize(size);
         _windowToolbar->setIconSize(size);
         _quitToolbar->setIconSize(size);
     }

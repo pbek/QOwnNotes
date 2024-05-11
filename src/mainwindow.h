@@ -763,6 +763,7 @@ class MainWindow : public QMainWindow {
     QToolBar *_customActionToolbar;
     QToolBar *_insertingToolbar;
     QToolBar *_encryptionToolbar;
+    QToolBar *_aiToolbar;
     QToolBar *_windowToolbar;
     QToolBar *_quitToolbar;
     bool _noteViewIsRegenerated;
@@ -803,6 +804,8 @@ class MainWindow : public QMainWindow {
     QWidget *_logDockTitleBarWidget;
     QWidget *_scriptingDockTitleBarWidget;
     QComboBox *_workspaceComboBox;
+    QComboBox *_aiBackendComboBox;
+    QComboBox *_aiModelComboBox;
     QFrame *_noteFolderDockWidgetFrame;
     bool _useNoteFolderButtons;
     bool _noteFolderDockWidgetWasVisible;
@@ -824,6 +827,8 @@ class MainWindow : public QMainWindow {
     WebAppClientService *_webAppClientService;
     QActionGroup *_languageGroup;
     QActionGroup *_spellBackendGroup;
+    QActionGroup *_aiBackendGroup;
+    QActionGroup *_aiModelGroup;
     bool _brokenTagNoteLinksRemoved = false;
 
 #ifdef USE_QLITEHTML

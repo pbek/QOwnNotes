@@ -1119,6 +1119,16 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <string>Spelling backend</string>
      </property>
     </widget>
+    <widget class="QMenu" name="menuAI_backend">
+     <property name="title">
+      <string>AI backend</string>
+     </property>
+    </widget>
+    <widget class="QMenu" name="menuAI_model">
+     <property name="title">
+      <string>AI model</string>
+     </property>
+    </widget>
     <addaction name="menuEditNote"/>
     <addaction name="action_Remove_note"/>
     <addaction name="separator"/>
@@ -1140,6 +1150,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <addaction name="menuSpelling_backend"/>
     <addaction name="menuLanguages"/>
     <addaction name="actionManage_dictionaries"/>
+    <addaction name="separator"/>
+    <addaction name="actionEnable_AI"/>
+    <addaction name="menuAI_backend"/>
+    <addaction name="menuAI_model"/>
    </widget>
    <widget class="QMenu" name="menuTodo">
     <property name="title">
@@ -2761,6 +2775,24 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="text">
     <string>Move down in tag list</string>
+   </property>
+  </action>
+  <action name="actionEnable_AI">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Enable AI support</string>
+   </property>
+  </action>
+  <action name="actionasd">
+   <property name="text">
+    <string>asd</string>
+   </property>
+  </action>
+  <action name="actionasd_2">
+   <property name="text">
+    <string>asd</string>
    </property>
   </action>
  </widget>
