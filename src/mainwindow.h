@@ -528,6 +528,10 @@ class MainWindow : public QMainWindow {
 
     void onWorkspaceComboBoxCurrentIndexChanged(int index);
 
+    void onAiBackendComboBoxCurrentIndexChanged(int index);
+
+    void onAiModelComboBoxCurrentIndexChanged(int index);
+
     void on_actionRemove_current_workspace_triggered();
 
     void on_actionRename_current_workspace_triggered();
@@ -1120,4 +1124,5 @@ class MainWindow : public QMainWindow {
     int getNoteTabIndex(int noteId) const;
     bool startAutoReadOnlyModeIfEnabled();
     void updateActionUiEnabled();
+    void buildAiToolbarAndActions();
 };

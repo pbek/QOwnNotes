@@ -1172,7 +1172,6 @@ void MainWindow::initToolbars() {
     _aiModelGroup = new QActionGroup(ui->menuAI_model);
 
     _aiToolbar = new QToolBar(tr("AI toolbar"), this);
-    _aiToolbar->addAction(ui->actionEnable_AI);
     _aiToolbar->setObjectName(QStringLiteral("aiToolbar"));
     addToolBar(_aiToolbar);
 
@@ -2466,6 +2465,8 @@ void MainWindow::readSettings() {
     }
 
     loadNoteBookmarks();
+
+    buildAiToolbarAndActions();
 }
 
 bool MainWindow::startAutoReadOnlyModeIfEnabled() {
@@ -10320,6 +10321,30 @@ void MainWindow::onWorkspaceComboBoxCurrentIndexChanged(int index) {
 }
 
 /**
+ * Sets the AI backend when the AI backend combo box index has changed
+ */
+void MainWindow::onAiBackendComboBoxCurrentIndexChanged(int index) {
+    Q_UNUSED(index)
+
+    const QString backendId = _aiBackendComboBox->currentData().toString();
+    QSettings settings;
+    settings.setValue(QStringLiteral("ai/currentBackend"), backendId);
+
+    // TODO: Re-populate the model combo box and menu
+}
+
+/**
+ * Sets the AI model when the AI model combo box index has changed
+ */
+void MainWindow::onAiModelComboBoxCurrentIndexChanged(int index) {
+    Q_UNUSED(index)
+
+    const QString modelId = _aiBackendComboBox->currentData().toString();
+    QSettings settings;
+    settings.setValue(QStringLiteral("ai/currentModel"), modelId);
+}
+
+/**
  * Sets a new current workspace
  */
 void MainWindow::setCurrentWorkspace(const QString &uuid) {
@@ -11825,4 +11850,35 @@ void MainWindow::on_actionMove_up_in_tag_list_triggered() {
 void MainWindow::on_actionMove_down_in_tag_list_triggered() {
     auto *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Down, Qt::NoModifier);
     QApplication::postEvent(ui->tagTreeWidget, event);
+}
+
+void MainWindow::buildAiToolbarAndActions() {
+    _aiToolbar->clear();
+    _aiToolbar->addAction(ui->actionEnable_AI);
+
+    _aiBackendComboBox = new QComboBox(this);
+    connect(_aiBackendComboBox,
+            static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this,
+            &MainWindow::onAiBackendComboBoxCurrentIndexChanged);
+    _aiBackendComboBox->setToolTip(tr("AI backends"));
+    _aiBackendComboBox->setObjectName(QStringLiteral("aiBackendComboBox"));
+
+    _aiModelComboBox = new QComboBox(this);
+    connect(_aiModelComboBox,
+            static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this,
+            &MainWindow::onAiModelComboBoxCurrentIndexChanged);
+    _aiModelComboBox->setToolTip(tr("AI models"));
+    _aiModelComboBox->setObjectName(QStringLiteral("aiModelComboBox"));
+
+    auto *aiBackendWidgetAction = new QWidgetAction(this);
+    aiBackendWidgetAction->setDefaultWidget(_aiBackendComboBox);
+    aiBackendWidgetAction->setObjectName(QStringLiteral("actionAiBackendComboBox"));
+    aiBackendWidgetAction->setText(tr("AI backend selector"));
+    _aiToolbar->addAction(aiBackendWidgetAction);
+
+    auto *aiModelWidgetAction = new QWidgetAction(this);
+    aiModelWidgetAction->setDefaultWidget(_aiModelComboBox);
+    aiModelWidgetAction->setObjectName(QStringLiteral("actionAiModelComboBox"));
+    aiModelWidgetAction->setText(tr("AI model selector"));
+    _aiToolbar->addAction(aiModelWidgetAction);
 }
