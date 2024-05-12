@@ -2781,6 +2781,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset theme="network-server-database"/>
+   </property>
    <property name="text">
     <string>Enable AI support</string>
    </property>
