@@ -95,8 +95,8 @@ jobs:
 #            experimental: true
           # Other 6.2 releases didn't work
           - os: windows-2019
-            qt-version: '6.2.0'
-            experimental: false
+            qt-version: '6.2.4'
+            experimental: true
           - os: windows-2019
             qt-version: '6.4.3'
             experimental: true
