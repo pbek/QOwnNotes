@@ -2782,7 +2782,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset theme="network-server-database"/>
+    <iconset theme="network-server-database">
+     <normalon>:/icons/breeze-qownnotes/16x16/network-server-database.svg</normalon>
+    </iconset>
    </property>
    <property name="text">
     <string>Enable AI support</string>

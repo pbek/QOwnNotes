@@ -303,8 +303,9 @@
              <string notr="true">22</string>
             </property>
             <property name="icon">
-             <iconset resource="../breeze-dark-qownnotes.qrc">
-              <normaloff>:/icons/breeze-dark-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-dark-qownnotes/16x16/text-html.svg</iconset>
+             <iconset theme="network-server-database">
+              <normalon>:/icons/breeze-qownnotes/16x16/network-server-database.svg</normalon>
+             </iconset>
             </property>
            </item>
            <item>
