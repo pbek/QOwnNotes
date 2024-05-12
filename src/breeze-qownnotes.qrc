@@ -36,6 +36,7 @@
     <file alias="16x16/go-down.svg">icons/breeze-qownnotes/16x16/go-down.svg</file>
     <file alias="16x16/go-up.svg">icons/breeze-qownnotes/16x16/go-up.svg</file>
     <file alias="16x16/applications-system.svg">icons/breeze-qownnotes/16x16/applications-system.svg</file>
+    <file alias="16x16/network-server-database.svg">icons/breeze-qownnotes/16x16/network-server-database.svg</file>
     <file alias="16x16/resource-calendar-insert.svg">icons/breeze-qownnotes/16x16/resource-calendar-insert.svg</file>
     <file alias="16x16/view-task.svg">icons/breeze-qownnotes/16x16/view-task.svg</file>
     <file alias="16x16/view-task-child.svg">icons/breeze-qownnotes/16x16/view-task-child.svg</file>
