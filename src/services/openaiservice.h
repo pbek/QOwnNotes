@@ -17,11 +17,18 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QObject>
+#include <QMap>
 
 class OpenAiService : public QObject {
     Q_OBJECT
    public:
     explicit OpenAiService(QObject* parent = nullptr);
+    QStringList getModelsForBackend(const QString& backendId);
+    static OpenAiService* instance();
+   private:
+    QMap<QString, QStringList> backendModels;
+    void initializeBackendModels();
+    static OpenAiService* createInstance(QObject* parent);
 };
 
 class OpenAiCompleter : public QObject {

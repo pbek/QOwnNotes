@@ -10334,6 +10334,16 @@ void MainWindow::onAiBackendComboBoxCurrentIndexChanged(int index) {
 }
 
 /**
+ * Puts items into the AI backend combo box
+ */
+void MainWindow::generateAiBackendComboBox() {
+    _aiBackendComboBox->blockSignals(true);
+    _aiBackendComboBox->clear();
+    _aiBackendComboBox->addItem(QStringLiteral("Groq"), QStringLiteral("groq"));
+    _aiBackendComboBox->blockSignals(false);
+}
+
+/**
  * Sets the AI model when the AI model combo box index has changed
  */
 void MainWindow::onAiModelComboBoxCurrentIndexChanged(int index) {
@@ -10342,6 +10352,19 @@ void MainWindow::onAiModelComboBoxCurrentIndexChanged(int index) {
     const QString modelId = _aiBackendComboBox->currentData().toString();
     QSettings settings;
     settings.setValue(QStringLiteral("ai/currentModel"), modelId);
+}
+
+/**
+ * Puts items into the AI model combo box
+ */
+void MainWindow::generateAiModelComboBox() {
+    _aiModelComboBox->clear();
+    const QString backendId = _aiBackendComboBox->currentData().toString();
+    const auto models = OpenAiService::instance()->getModelsForBackend(backendId);
+
+    foreach(QString model, models) {
+        _aiModelComboBox->addItem(model);
+    }
 }
 
 /**
@@ -11862,6 +11885,7 @@ void MainWindow::buildAiToolbarAndActions() {
             &MainWindow::onAiBackendComboBoxCurrentIndexChanged);
     _aiBackendComboBox->setToolTip(tr("AI backends"));
     _aiBackendComboBox->setObjectName(QStringLiteral("aiBackendComboBox"));
+    generateAiBackendComboBox();
 
     _aiModelComboBox = new QComboBox(this);
     connect(_aiModelComboBox,
@@ -11869,6 +11893,7 @@ void MainWindow::buildAiToolbarAndActions() {
             &MainWindow::onAiModelComboBoxCurrentIndexChanged);
     _aiModelComboBox->setToolTip(tr("AI models"));
     _aiModelComboBox->setObjectName(QStringLiteral("aiModelComboBox"));
+    generateAiModelComboBox();
 
     auto *aiBackendWidgetAction = new QWidgetAction(this);
     aiBackendWidgetAction->setDefaultWidget(_aiBackendComboBox);

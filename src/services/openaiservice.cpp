@@ -19,6 +19,7 @@
 #include <QJsonObject>
 #include <QNetworkRequest>
 #include <QSettings>
+#include <QCoreApplication>
 #include <utility>
 
 #include "cryptoservice.h"
@@ -28,6 +29,7 @@ using namespace std;
 QT_USE_NAMESPACE
 
 OpenAiService::OpenAiService(QObject* parent) : QObject(parent) {
+    initializeBackendModels();
     QSettings settings;
     auto apiKey = CryptoService::instance()->decryptToString(
         settings.value(QStringLiteral("ai/groqApiKey")).toString());
@@ -43,6 +45,50 @@ OpenAiService::OpenAiService(QObject* parent) : QObject(parent) {
         _completer, &OpenAiCompleter::errorOccurred, this,
         [this](const QString& errorString) { qDebug() << "'errorString': " << errorString; });
 }
+
+/**
+ * Fetches the global instance of the class
+ * The instance will be created if it doesn't exist.
+ */
+OpenAiService *OpenAiService::instance() {
+    auto * service = qApp->property("openAiService").value<OpenAiService *>();
+
+    if (service == nullptr) {
+        service = createInstance(nullptr);
+    }
+
+    return service;
+}
+
+/**
+ * Creates a global instance of the class
+ */
+OpenAiService *OpenAiService::createInstance(QObject *parent) {
+    auto *service = new OpenAiService(parent);
+
+    qApp->setProperty("openAiService", QVariant::fromValue<OpenAiService *>(service));
+
+    return service;
+}
+
+void OpenAiService::initializeBackendModels() {
+    backendModels[QStringLiteral("groq")] = QStringList{"llama3-70b-8192", "llama3-8b-8192", "llama2-70b-4096", "mixtral-8x7b-32768", "gemma-7b-it"};
+}
+
+QStringList OpenAiService::getModelsForBackend(const QString& backendId) {
+    // Check if the backendId exists in the map
+    if(backendModels.contains(backendId)) {
+        // If yes, return the associated list of models
+        return backendModels.value(backendId);
+    } else {
+        // If not, return an empty QStringList
+        return {};
+    }
+}
+
+void OpenAiService::setBackendId(const QString& id) { this->backenId = id; }
+void OpenAiService::setModelId(const QString& id) { this->modelId = id; }
+
 
 OpenAiCompleter::OpenAiCompleter(QString apiKey, QString modelId, QString apiBaseUrl,
                                  QObject* parent)

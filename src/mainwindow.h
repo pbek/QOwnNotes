@@ -1125,4 +1125,6 @@ class MainWindow : public QMainWindow {
     bool startAutoReadOnlyModeIfEnabled();
     void updateActionUiEnabled();
     void buildAiToolbarAndActions();
+    void generateAiBackendComboBox();
+    void generateAiModelComboBox();
 };
