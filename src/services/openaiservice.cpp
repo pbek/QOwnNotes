@@ -101,6 +101,8 @@ bool OpenAiService::setBackendId(const QString& id) {
     QSettings settings;
     this->_backendId = id;
     settings.setValue(QStringLiteral("ai/currentBackend"), id);
+    // Reset model id, so it needs to be read again
+    this->_modelId = QString();
 
     return true;
 }
@@ -127,8 +129,6 @@ bool OpenAiService::setModelId(const QString& id) {
     }
 
     this->_modelId = id;
-    // Reset model id, so it needs to be read again
-    this->_modelId = QString();
     QSettings settings;
     settings.setValue(getCurrentModelSettingsKey(), id);
 
