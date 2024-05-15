@@ -144,6 +144,7 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
          text.contains(
              QLatin1String("QFont::setPointSizeF: Point size <= 0")) ||    // we don't even use that
                                                                            // method directly
+         text.contains(QLatin1String("QFont::setPointSize: Point size <= 0")) ||
          text.contains(QLatin1String(
              "scroll event from unregistered device")) ||    // when YubiKey is plugged in or out
          text.contains(QLatin1String("QFileSystemWatcher::removePaths: list is empty")))) {

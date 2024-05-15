@@ -1,6 +1,7 @@
 # QOwnNotes Changelog
 
 ## 24.5.2
+- Try to fix "QFont::setPointSize: Point size <= 0" warnings
 - A PPA for Ubuntu 24.10 (Oracular Oriole) was added
 
 ## 24.5.1
