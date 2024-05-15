@@ -30,6 +30,8 @@ class OpenAiService : public QObject {
     QString getBackendId();
     bool setModelId(const QString& id);
     QString getModelId();
+    static bool setEnabled(bool enabled);
+    static bool getEnabled();
 
    private:
     QMap<QString, QStringList> backendModels;

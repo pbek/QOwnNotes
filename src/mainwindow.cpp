@@ -11892,6 +11892,9 @@ void MainWindow::on_actionMove_down_in_tag_list_triggered() {
 void MainWindow::buildAiToolbarAndActions() {
     _aiToolbar->clear();
     _aiToolbar->addAction(ui->actionEnable_AI);
+    ui->actionEnable_AI->blockSignals(true);
+    ui->actionEnable_AI->setChecked(OpenAiService::getEnabled());
+    ui->actionEnable_AI->blockSignals(false);
 
     _aiBackendComboBox = new QComboBox(this);
     connect(_aiBackendComboBox,
@@ -11922,4 +11925,9 @@ void MainWindow::buildAiToolbarAndActions() {
     aiModelWidgetAction->setObjectName(QStringLiteral("actionAiModelComboBox"));
     aiModelWidgetAction->setText(tr("AI model selector"));
     _aiToolbar->addAction(aiModelWidgetAction);
+}
+
+void MainWindow::on_actionEnable_AI_toggled(bool arg1) {
+    OpenAiService::setEnabled(arg1);
+    qDebug() << __func__ << " - 'checked': " << arg1;
 }

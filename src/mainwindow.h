@@ -706,6 +706,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionMove_down_in_tag_list_triggered();
 
+    void on_actionEnable_AI_toggled(bool arg1);
+
    public:
     /** Settings access **/
     static bool isInDistractionFreeMode();

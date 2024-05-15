@@ -154,6 +154,18 @@ QString OpenAiService::getCurrentModelSettingsKey() {
     return QStringLiteral("ai/") + getBackendId() + QStringLiteral("/") + QStringLiteral("currentModel");
 }
 
+bool OpenAiService::setEnabled(bool enabled) {
+    QSettings settings;
+    settings.setValue(QStringLiteral("ai/enabled"), enabled);
+
+    return true;
+ }
+
+bool OpenAiService::getEnabled() {
+    QSettings settings;
+    return settings.value(QStringLiteral("ai/enabled")).toBool();
+}
+
 OpenAiCompleter::OpenAiCompleter(QString apiKey, QString modelId, QString apiBaseUrl,
                                  QObject* parent)
     : QObject(parent),
