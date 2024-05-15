@@ -885,7 +885,7 @@ void SettingsDialog::storeSettings() {
                       ui->webAppServerUrlLineEdit->text());
     settings.setValue(QStringLiteral("webAppClientService/token"), ui->webAppTokenLineEdit->text());
 
-    settings.setValue(QStringLiteral("ai/groqApiKey"),
+    settings.setValue(QStringLiteral("ai/groq/apiKey"),
                       CryptoService::instance()->encryptToString(ui->groqApiKeyLineEdit->text()));
 }
 
@@ -1339,7 +1339,7 @@ void SettingsDialog::readSettings() {
     ui->webAppTokenLineEdit->setText(WebAppClientService::getOrGenerateToken());
 
     ui->groqApiKeyLineEdit->setText(CryptoService::instance()->decryptToString(
-        settings.value(QStringLiteral("ai/groqApiKey")).toString()));
+        settings.value(QStringLiteral("ai/groq/apiKey")).toString()));
 }
 
 /**

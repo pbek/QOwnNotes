@@ -14,21 +14,30 @@
 
 #pragma once
 
+#include <QMap>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QObject>
-#include <QMap>
 
 class OpenAiService : public QObject {
     Q_OBJECT
    public:
     explicit OpenAiService(QObject* parent = nullptr);
     QStringList getModelsForBackend(const QString& backendId);
+    QStringList getModelsForCurrentBackend();
     static OpenAiService* instance();
+    bool setBackendId(const QString& id);
+    QString getBackendId();
+    bool setModelId(const QString& id);
+    QString getModelId();
+
    private:
     QMap<QString, QStringList> backendModels;
     void initializeBackendModels();
     static OpenAiService* createInstance(QObject* parent);
+    QString _backendId;
+    QString _modelId;
+    QString getCurrentModelSettingsKey();
 };
 
 class OpenAiCompleter : public QObject {

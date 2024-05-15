@@ -14,12 +14,12 @@
 
 #include "openaiservice.h"
 
+#include <QCoreApplication>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QNetworkRequest>
 #include <QSettings>
-#include <QCoreApplication>
 #include <utility>
 
 #include "cryptoservice.h"
@@ -32,7 +32,7 @@ OpenAiService::OpenAiService(QObject* parent) : QObject(parent) {
     initializeBackendModels();
     QSettings settings;
     auto apiKey = CryptoService::instance()->decryptToString(
-        settings.value(QStringLiteral("ai/groqApiKey")).toString());
+        settings.value(QStringLiteral("ai/groq/apiKey")).toString());
     auto _completer = new OpenAiCompleter(
         apiKey, "llama3-8b-8192", "https://api.groq.com/openai/v1/chat/completions", parent);
 
@@ -50,8 +50,8 @@ OpenAiService::OpenAiService(QObject* parent) : QObject(parent) {
  * Fetches the global instance of the class
  * The instance will be created if it doesn't exist.
  */
-OpenAiService *OpenAiService::instance() {
-    auto * service = qApp->property("openAiService").value<OpenAiService *>();
+OpenAiService* OpenAiService::instance() {
+    auto* service = qApp->property("openAiService").value<OpenAiService*>();
 
     if (service == nullptr) {
         service = createInstance(nullptr);
@@ -63,21 +63,28 @@ OpenAiService *OpenAiService::instance() {
 /**
  * Creates a global instance of the class
  */
-OpenAiService *OpenAiService::createInstance(QObject *parent) {
-    auto *service = new OpenAiService(parent);
+OpenAiService* OpenAiService::createInstance(QObject* parent) {
+    auto* service = new OpenAiService(parent);
 
-    qApp->setProperty("openAiService", QVariant::fromValue<OpenAiService *>(service));
+    qApp->setProperty("openAiService", QVariant::fromValue<OpenAiService*>(service));
 
     return service;
 }
 
 void OpenAiService::initializeBackendModels() {
-    backendModels[QStringLiteral("groq")] = QStringList{"llama3-70b-8192", "llama3-8b-8192", "llama2-70b-4096", "mixtral-8x7b-32768", "gemma-7b-it"};
+    backendModels[QStringLiteral("openai")] = QStringList{"gpt-4o", "gpt-4-turbo", "gpt-3.5-turbo", "gpt-4"};
+    backendModels[QStringLiteral("groq")] =
+        QStringList{"llama3-70b-8192", "llama3-8b-8192", "llama2-70b-4096", "mixtral-8x7b-32768",
+                    "gemma-7b-it"};
+}
+
+QStringList OpenAiService::getModelsForCurrentBackend() {
+    return getModelsForBackend(getBackendId());
 }
 
 QStringList OpenAiService::getModelsForBackend(const QString& backendId) {
-    // Check if the backendId exists in the map
-    if(backendModels.contains(backendId)) {
+    // Check if the getBackendId exists in the map
+    if (backendModels.contains(backendId)) {
         // If yes, return the associated list of models
         return backendModels.value(backendId);
     } else {
@@ -86,9 +93,66 @@ QStringList OpenAiService::getModelsForBackend(const QString& backendId) {
     }
 }
 
-void OpenAiService::setBackendId(const QString& id) { this->backenId = id; }
-void OpenAiService::setModelId(const QString& id) { this->modelId = id; }
+bool OpenAiService::setBackendId(const QString& id) {
+    if (this->_backendId == id) {
+        return false;
+    }
 
+    QSettings settings;
+    this->_backendId = id;
+    settings.setValue(QStringLiteral("ai/currentBackend"), id);
+
+    return true;
+}
+
+QString OpenAiService::getBackendId() {
+    // If no backend id is set yet, try to read the settings
+    if (this->_backendId.isEmpty()) {
+        QSettings settings;
+        this->_backendId = settings.value(QStringLiteral("ai/currentBackend"), QStringLiteral("groq")).toString();
+    }
+
+    return this->_backendId;
+}
+
+bool OpenAiService::setModelId(const QString& id) {
+//    if (this->_modelId == id) {
+//        QSettings settings;
+//        this->_modelId = settings.value(getCurrentModelSettingsKey(), id).toString();
+//    }
+
+    // Check if model wasn't changed or doesn't exist
+    if (this->_modelId == id || !backendModels[getBackendId()].contains(id)) {
+        return false;
+    }
+
+    this->_modelId = id;
+    // Reset model id, so it needs to be read again
+    this->_modelId = QString();
+    QSettings settings;
+    settings.setValue(getCurrentModelSettingsKey(), id);
+
+    return true;
+}
+
+QString OpenAiService::getModelId() {
+    // If not set yet try to read the settings
+    if (this->_modelId.isEmpty()) {
+        QSettings settings;
+        this->_modelId = settings.value(getCurrentModelSettingsKey(), backendModels[getBackendId()]).toString();
+    }
+
+    // If still not set get the first of the models
+    if (this->_modelId.isEmpty()) {
+        this->_modelId = getModelsForCurrentBackend().first();
+    }
+
+    return this->_modelId;
+}
+
+QString OpenAiService::getCurrentModelSettingsKey() {
+    return QStringLiteral("ai/") + getBackendId() + QStringLiteral("/") + QStringLiteral("currentModel");
+}
 
 OpenAiCompleter::OpenAiCompleter(QString apiKey, QString modelId, QString apiBaseUrl,
                                  QObject* parent)

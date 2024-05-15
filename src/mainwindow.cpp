@@ -10327,10 +10327,10 @@ void MainWindow::onAiBackendComboBoxCurrentIndexChanged(int index) {
     Q_UNUSED(index)
 
     const QString backendId = _aiBackendComboBox->currentData().toString();
-    QSettings settings;
-    settings.setValue(QStringLiteral("ai/currentBackend"), backendId);
 
-    // TODO: Re-populate the model combo box and menu
+    if (OpenAiService::instance()->setBackendId(backendId)) {
+        generateAiModelComboBox();
+    }
 }
 
 /**
@@ -10339,7 +10339,9 @@ void MainWindow::onAiBackendComboBoxCurrentIndexChanged(int index) {
 void MainWindow::generateAiBackendComboBox() {
     _aiBackendComboBox->blockSignals(true);
     _aiBackendComboBox->clear();
+    _aiBackendComboBox->addItem(QStringLiteral("OpenAI"), QStringLiteral("openai"));
     _aiBackendComboBox->addItem(QStringLiteral("Groq"), QStringLiteral("groq"));
+    Utils::Gui::setComboBoxIndexByUserData(_aiBackendComboBox, OpenAiService::instance()->getBackendId());
     _aiBackendComboBox->blockSignals(false);
 }
 
@@ -10350,21 +10352,30 @@ void MainWindow::onAiModelComboBoxCurrentIndexChanged(int index) {
     Q_UNUSED(index)
 
     const QString modelId = _aiBackendComboBox->currentData().toString();
-    QSettings settings;
-    settings.setValue(QStringLiteral("ai/currentModel"), modelId);
+
+    if (OpenAiService::instance()->setModelId(modelId)) {
+        generateAiModelComboBox();
+    }
 }
 
 /**
  * Puts items into the AI model combo box
  */
 void MainWindow::generateAiModelComboBox() {
+    _aiModelComboBox->blockSignals(true);
     _aiModelComboBox->clear();
-    const QString backendId = _aiBackendComboBox->currentData().toString();
-    const auto models = OpenAiService::instance()->getModelsForBackend(backendId);
+    const auto models = OpenAiService::instance()->getModelsForCurrentBackend();
+    qDebug() << __func__ << " - 'models': " << models;
 
-    foreach(QString model, models) {
+    foreach (QString model, models) {
         _aiModelComboBox->addItem(model);
     }
+
+    qDebug() << __func__ << " - 'OpenAiService::instance()->getModelId()': "
+             << OpenAiService::instance()->getModelId();
+
+    Utils::Gui::setComboBoxIndexByUserData(_aiModelComboBox, OpenAiService::instance()->getModelId());
+    _aiModelComboBox->blockSignals(false);
 }
 
 /**
@@ -11885,6 +11896,7 @@ void MainWindow::buildAiToolbarAndActions() {
             &MainWindow::onAiBackendComboBoxCurrentIndexChanged);
     _aiBackendComboBox->setToolTip(tr("AI backends"));
     _aiBackendComboBox->setObjectName(QStringLiteral("aiBackendComboBox"));
+    _aiBackendComboBox->setInsertPolicy(QComboBox::InsertPolicy::InsertAfterCurrent);
     generateAiBackendComboBox();
 
     _aiModelComboBox = new QComboBox(this);
@@ -11893,6 +11905,7 @@ void MainWindow::buildAiToolbarAndActions() {
             &MainWindow::onAiModelComboBoxCurrentIndexChanged);
     _aiModelComboBox->setToolTip(tr("AI models"));
     _aiModelComboBox->setObjectName(QStringLiteral("aiModelComboBox"));
+    _aiModelComboBox->setInsertPolicy(QComboBox::InsertPolicy::InsertAfterCurrent);
     generateAiModelComboBox();
 
     auto *aiBackendWidgetAction = new QWidgetAction(this);
