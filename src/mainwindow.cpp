@@ -10358,7 +10358,7 @@ void MainWindow::generateAiBackendComboBox() {
 void MainWindow::onAiModelComboBoxCurrentIndexChanged(int index) {
     Q_UNUSED(index)
 
-    const QString modelId = _aiBackendComboBox->currentData().toString();
+    const QString modelId = _aiModelComboBox->currentData().toString();
 
     if (OpenAiService::instance()->setModelId(modelId)) {
         generateAiModelComboBox();
@@ -10372,14 +10372,10 @@ void MainWindow::generateAiModelComboBox() {
     _aiModelComboBox->blockSignals(true);
     _aiModelComboBox->clear();
     const auto models = OpenAiService::instance()->getModelsForCurrentBackend();
-    qDebug() << __func__ << " - 'models': " << models;
 
     foreach (QString model, models) {
-        _aiModelComboBox->addItem(model);
+        _aiModelComboBox->addItem(model, model);
     }
-
-    qDebug() << __func__ << " - 'OpenAiService::instance()->getModelId()': "
-             << OpenAiService::instance()->getModelId();
 
     Utils::Gui::setComboBoxIndexByUserData(_aiModelComboBox, OpenAiService::instance()->getModelId());
     _aiModelComboBox->blockSignals(false);
