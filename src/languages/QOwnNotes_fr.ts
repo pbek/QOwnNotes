@@ -578,7 +578,7 @@
 </message>
 <message>
 <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-<translation>Pour obtenir un fichier enex, vous devez sélectionner une ou plusieurs notes depuis votre application Evernote et cliquer sur "Exporter les notes..." dans le menu Fichier.</translation>
+<translation>Pour obtenir un fichier enex, vous devez sélectionner une ou plusieurs notes depuis votre application Evernote et cliquer sur « Exporter les notes… » dans le menu Fichier.</translation>
 </message>
 <message>
 <source>Please select the Evernote enex file you want to import:</source>
@@ -4006,11 +4006,11 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation>Texte du bloc de citation &amp;quote sélectionné</translation>
+<translation>Transformer le texte sélectionné en bloc de &amp;citation</translation>
 </message>
 <message>
 <source>Insert block &amp;quote</source>
-<translation>Insérer un bloc de citation &amp;quote</translation>
+<translation>Insérer un bloc de &amp;citation</translation>
 </message>
 <message>
 <source>Copy code block</source>

@@ -383,7 +383,7 @@ script.setLabelText("counter-label", "counter text");
 
 그런 다음 스크립트 [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml) 예제를 살펴볼 수 있습니다.
 
-::: tip The scripting label also supports **external links**, as well as **internal links** to notes, tasks, deck cards and more. You might get a grasp of what's supported by taking a look at [URL handling](https://github.com/pbek/QOwnNotes/blob/964acf69b6382f8ee8252c640c5048f8f4644622/src/utils/urlhandler.cpp#L16-L75). :::
+::: 팁 스크립팅 레이블은 또한 ** 외부 링크 **과 노트, 작업, 데크 카드 등에 대한 ** 내부 링크 **을 지원합니다. [URL 처리](https://github.com/pbek/QOwnNotes/blob/964acf69b6382f8ee8252c640c5048f8f4644622/src/utils/urlhandler.cpp#L16-L75)을 보면 무엇이 지원되는지 파악할 수 있습니다. :::
 
 새 노트 만들기
 -------------------
@@ -1139,7 +1139,7 @@ property variant settingsVariables: [
 
 또한 다음과 같은 특수 함수 `registerSettingsVariables()`를 사용하여 `settingsVariables`를 재정의할 수 있습니다:
 
-### Example
+### 예제
 ```js
 /**
  * 설정 변수를 다시 등록

@@ -1,8 +1,8 @@
 # Microsoft Windows™에 설치
 
-Download the latest **Windows archive** from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases) (look for a file called `QOwnNotes.zip`) and unzip it to anywhere you like. 설치할 필요가 없습니다!
+[GitHub의 QOwnNotes Release](https://github.com/pbek/QOwnNotes/releases)에서 최신 **Windows 압축파일** (`QOwnNotes.zip`라는 파일을 찾습니다)를 다운로드한 후 원하는 곳으로 압축을 풉니다. 설치할 필요가 없습니다!
 
-::: 경고 **자동 업데이트 프로그램**을 사용하려면 사용자 계정에 쓰기 권한이 있는 위치로 압축을 풉니다. By default, your user account most likely **doesn't have write access** to places like `C:\Program Files (x86)` or `C:\Program Files`. :::
+::: 경고 **자동 업데이트 프로그램**을 사용하려면 사용자 계정에 쓰기 권한이 있는 위치로 압축을 풉니다. 기본적으로 사용자 계정은 `C:\Program Files(x86)` 또는 `C:\Program Files`과 같은 곳에 대한 **쓰기 액세스 권한이 없을** 가능성이 높습니다. :::
 
 그런 다음 설치가 필요 없이 `QOwnNotes` 폴더에서 `QOwnNotes.exe`를 바로 실행할 수 있습니다.
 

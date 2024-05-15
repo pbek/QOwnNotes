@@ -6,6 +6,7 @@
   (for [#3026](https://github.com/pbek/QOwnNotes/issues/3026))
   - You can add a [Groq](https://groq.com/) API key in the new *AI settings*
 - A PPA for Ubuntu 24.10 (Oracular Oriole) was added
+- Added more French, Korean translation (thank you, jd-develop, venusgirl)
 
 ## 24.5.1
 - In the note editor, the line-number font size will now grow with the editor font size

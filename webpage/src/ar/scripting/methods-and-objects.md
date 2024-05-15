@@ -1154,7 +1154,7 @@ property variant settingsVariables: [
 
 ويمكنك أيضا تغطية `settingsVariables` بالدالة الخاصة `registerSettingsVariables()` مثل:
 
-### Example
+### مثال
 ```js
 /**
  * Registers the settings variables again

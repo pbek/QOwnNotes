@@ -1,6 +1,6 @@
 # Nix를 통해 설치
 
-[NixOS](https://nixos.org/) 및 기타 플랫폼에서 [Nix 패키지 관리자](https://wiki.nixos.org/wiki/Nix_package_manager)와 함께 QOnNotes를 설치할 수 있으며 패키지 이름은 [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes)입니다.
+QOwnNotes를 [NixOS](https://nixos.org/) 및 기타 플랫폼에 [Nix 패키지 관리자](https://wiki.nixos.org/wiki/Nix_package_manager)와 함께 설치할 수 있으며, 패키지 이름은 [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes)입니다.
 
 자세한 내용은 [nix의 QOwnNotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes)를 참조하십시오.
 
