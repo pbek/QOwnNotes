@@ -2466,7 +2466,14 @@ void MainWindow::readSettings() {
 
     loadNoteBookmarks();
 
-    buildAiToolbarAndActions();
+    // TODO: Enable AI actions and toolbar
+    ui->actionEnable_AI->setEnabled(false);
+    ui->menuAI_backend->setEnabled(false);
+    ui->menuAI_model->setEnabled(false);
+    _aiToolbar->setEnabled(false);
+    _aiToolbar->hide();
+    removeToolBar(_aiToolbar);
+//    buildAiToolbarAndActions();
 }
 
 bool MainWindow::startAutoReadOnlyModeIfEnabled() {
