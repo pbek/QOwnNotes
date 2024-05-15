@@ -2,6 +2,9 @@
 
 ## 24.5.2
 - Try to fix "QFont::setPointSize: Point size <= 0" warnings
+- The first part of the upcoming AI support is already visible
+  (for [#3026](https://github.com/pbek/QOwnNotes/issues/3026))
+  - You can add a [Groq](https://groq.com/) API key in the new *AI settings*
 - A PPA for Ubuntu 24.10 (Oracular Oriole) was added
 
 ## 24.5.1
