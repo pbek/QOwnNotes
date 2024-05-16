@@ -2468,8 +2468,8 @@ void MainWindow::readSettings() {
 
     // TODO: Enable AI actions and toolbar
 //    ui->actionEnable_AI->setEnabled(false);
-//    ui->menuAI_backend->setEnabled(false);
-//    ui->menuAI_model->setEnabled(false);
+    ui->menuAI_backend->setEnabled(false);
+    ui->menuAI_model->setEnabled(false);
 //    _aiToolbar->setEnabled(false);
 //    _aiToolbar->hide();
 //    removeToolBar(_aiToolbar);
@@ -5836,8 +5836,8 @@ void MainWindow::on_action_Find_note_triggered() {
     this->ui->searchLineEdit->setFocus();
     this->ui->searchLineEdit->selectAll();
 
-    //    auto openAiService = new OpenAiService(this);
-    //    Q_UNUSED(openAiService)
+    // TODO: Remove AI from here
+//    OpenAiService::instance()->complete("I am a Teapot");
 }
 
 //

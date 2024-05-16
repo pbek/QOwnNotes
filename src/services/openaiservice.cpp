@@ -14,6 +14,7 @@
 
 #include "openaiservice.h"
 
+#include <qstringliteral.h>
 #include <QCoreApplication>
 #include <QJsonArray>
 #include <QJsonDocument>
@@ -29,21 +30,20 @@ using namespace std;
 QT_USE_NAMESPACE
 
 OpenAiService::OpenAiService(QObject* parent) : QObject(parent) {
-    initializeBackendModels();
-    QSettings settings;
-    auto apiKey = CryptoService::instance()->decryptToString(
-        settings.value(QStringLiteral("ai/groq/apiKey")).toString());
-    auto _completer = new OpenAiCompleter(
-        apiKey, "llama3-8b-8192", "https://api.groq.com/openai/v1/chat/completions", parent);
-
-    _completer->complete("Who am I?");
+    initializeBackends();
+    initializeCompleter(parent);
 
     QObject::connect(_completer, &OpenAiCompleter::completed, this,
                      [this](const QString& result) { qDebug() << "'result': " << result; });
-
     QObject::connect(
         _completer, &OpenAiCompleter::errorOccurred, this,
         [this](const QString& errorString) { qDebug() << "'errorString': " << errorString; });
+}
+
+void OpenAiService::initializeCompleter(QObject* parent) {
+    _completer = new OpenAiCompleter(
+        getApiKeyForCurrentBackend(), getModelId(),
+                                     getApiBaseUrlForCurrentBackend(), parent);
 }
 
 /**
@@ -71,22 +71,41 @@ OpenAiService* OpenAiService::createInstance(QObject* parent) {
     return service;
 }
 
-void OpenAiService::initializeBackendModels() {
-    backendModels[QStringLiteral("openai")] = QStringList{"gpt-4o", "gpt-4-turbo", "gpt-3.5-turbo", "gpt-4"};
-    backendModels[QStringLiteral("groq")] =
+void OpenAiService::initializeBackends() {
+    _backendModels[QStringLiteral("openai")] = QStringList{"gpt-4o", "gpt-4-turbo", "gpt-3.5-turbo", "gpt-4"};
+    _backendModels[QStringLiteral("groq")] =
         QStringList{"llama3-70b-8192", "llama3-8b-8192", "llama2-70b-4096", "mixtral-8x7b-32768",
                     "gemma-7b-it"};
+
+    _backendApiBaseUrls[QStringLiteral("openai")] = QStringLiteral("https://api.openai.com/v1/chat/completions");
+    _backendApiBaseUrls[QStringLiteral("groq")] = QStringLiteral("https://api.groq.com/openai/v1/chat/completions");
 }
 
 QStringList OpenAiService::getModelsForCurrentBackend() {
     return getModelsForBackend(getBackendId());
 }
 
+QString OpenAiService::getApiBaseUrlForCurrentBackend() {
+    auto backendId = getBackendId();
+
+    if (_backendApiBaseUrls.contains(backendId)) {
+        return _backendApiBaseUrls.value(backendId);
+    } else {
+        return {};
+    }
+}
+
+QString OpenAiService::getApiKeyForCurrentBackend() {
+    QSettings settings;
+    return CryptoService::instance()->decryptToString(
+        settings.value(getCurrentApiKeySettingsKey()).toString());
+}
+
 QStringList OpenAiService::getModelsForBackend(const QString& backendId) {
     // Check if the getBackendId exists in the map
-    if (backendModels.contains(backendId)) {
+    if (_backendModels.contains(backendId)) {
         // If yes, return the associated list of models
-        return backendModels.value(backendId);
+        return _backendModels.value(backendId);
     } else {
         // If not, return an empty QStringList
         return {};
@@ -103,6 +122,11 @@ bool OpenAiService::setBackendId(const QString& id) {
     settings.setValue(QStringLiteral("ai/currentBackend"), id);
     // Reset model id, so it needs to be read again
     this->_modelId = QString();
+
+    // Set new completer data
+    this->_completer->setApiBaseUrl(getApiBaseUrlForCurrentBackend());
+    this->_completer->setApiKey(getApiKeyForCurrentBackend());
+    this->_completer->setModelId(getModelId());
 
     return true;
 }
@@ -124,13 +148,16 @@ bool OpenAiService::setModelId(const QString& id) {
 //    }
 
     // Check if model wasn't changed or doesn't exist
-    if (this->_modelId == id || !backendModels[getBackendId()].contains(id)) {
+    if (this->_modelId == id || !_backendModels[getBackendId()].contains(id)) {
         return false;
     }
 
     this->_modelId = id;
     QSettings settings;
     settings.setValue(getCurrentModelSettingsKey(), id);
+
+    // Set new completer data
+    this->_completer->setModelId(id);
 
     return true;
 }
@@ -139,7 +166,7 @@ QString OpenAiService::getModelId() {
     // If not set yet try to read the settings
     if (this->_modelId.isEmpty()) {
         QSettings settings;
-        this->_modelId = settings.value(getCurrentModelSettingsKey(), backendModels[getBackendId()]).toString();
+        this->_modelId = settings.value(getCurrentModelSettingsKey(), _backendModels[getBackendId()]).toString();
     }
 
     // If still not set get the first of the models
@@ -154,6 +181,10 @@ QString OpenAiService::getCurrentModelSettingsKey() {
     return QStringLiteral("ai/") + getBackendId() + QStringLiteral("/") + QStringLiteral("currentModel");
 }
 
+QString OpenAiService::getCurrentApiKeySettingsKey() {
+    return QStringLiteral("ai/") + getBackendId() + QStringLiteral("/") + QStringLiteral("apiKey");
+}
+
 bool OpenAiService::setEnabled(bool enabled) {
     QSettings settings;
     settings.setValue(QStringLiteral("ai/enabled"), enabled);
@@ -164,6 +195,10 @@ bool OpenAiService::setEnabled(bool enabled) {
 bool OpenAiService::getEnabled() {
     QSettings settings;
     return settings.value(QStringLiteral("ai/enabled")).toBool();
+}
+
+void OpenAiService::complete(const QString& prompt) {
+    _completer->complete(prompt);
 }
 
 OpenAiCompleter::OpenAiCompleter(QString apiKey, QString modelId, QString apiBaseUrl,
@@ -204,6 +239,8 @@ void OpenAiCompleter::complete(const QString& prompt) {
 
 void OpenAiCompleter::setApiBaseUrl(const QString& url) { this->apiBaseUrl = url; }
 
+void OpenAiCompleter::setApiKey(const QString& key) { this->apiKey = key; }
+
 void OpenAiCompleter::setModelId(const QString& id) { this->modelId = id; }
 
 void OpenAiCompleter::replyFinished(QNetworkReply* reply) {
@@ -214,6 +251,8 @@ void OpenAiCompleter::replyFinished(QNetworkReply* reply) {
 
     QByteArray response_data = reply->readAll();
     QJsonDocument json = QJsonDocument::fromJson(response_data);
+    qDebug() << __func__ << " - 'json': " << json;
+
     QJsonObject jsonObject = json.object();
     QJsonArray choices = jsonObject["choices"].toArray();
 

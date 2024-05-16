@@ -18,29 +18,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QObject>
-
-class OpenAiService : public QObject {
-    Q_OBJECT
-   public:
-    explicit OpenAiService(QObject* parent = nullptr);
-    QStringList getModelsForBackend(const QString& backendId);
-    QStringList getModelsForCurrentBackend();
-    static OpenAiService* instance();
-    bool setBackendId(const QString& id);
-    QString getBackendId();
-    bool setModelId(const QString& id);
-    QString getModelId();
-    static bool setEnabled(bool enabled);
-    static bool getEnabled();
-
-   private:
-    QMap<QString, QStringList> backendModels;
-    void initializeBackendModels();
-    static OpenAiService* createInstance(QObject* parent);
-    QString _backendId;
-    QString _modelId;
-    QString getCurrentModelSettingsKey();
-};
+#include <QSettings>
 
 class OpenAiCompleter : public QObject {
     Q_OBJECT
@@ -50,6 +28,7 @@ class OpenAiCompleter : public QObject {
                              QObject* parent = nullptr);
     void complete(const QString& prompt);
     void setApiBaseUrl(const QString& url);
+    void setApiKey(const QString& key);
     void setModelId(const QString& id);
 
    signals:
@@ -64,4 +43,34 @@ class OpenAiCompleter : public QObject {
     QString apiKey;
     QString apiBaseUrl;    // Store the API base URL
     QString modelId;       // Model ID used for API requests
+};
+
+class OpenAiService : public QObject {
+    Q_OBJECT
+   public:
+    explicit OpenAiService(QObject* parent = nullptr);
+    QStringList getModelsForBackend(const QString& backendId);
+    QStringList getModelsForCurrentBackend();
+    static OpenAiService* instance();
+    bool setBackendId(const QString& id);
+    QString getBackendId();
+    bool setModelId(const QString& id);
+    QString getModelId();
+    static bool setEnabled(bool enabled);
+    static bool getEnabled();
+    void complete(const QString& prompt);
+
+   private:
+    QMap<QString, QStringList> _backendModels;
+    QMap<QString, QString> _backendApiBaseUrls;
+    void initializeBackends();
+    static OpenAiService* createInstance(QObject* parent);
+    QString _backendId;
+    QString _modelId;
+    OpenAiCompleter* _completer = nullptr;
+    QString getCurrentModelSettingsKey();
+    QString getCurrentApiKeySettingsKey();
+    void initializeCompleter(QObject* parent);
+    QString getApiBaseUrlForCurrentBackend();
+    QString getApiKeyForCurrentBackend();
 };
