@@ -43,3 +43,9 @@ fix-linting:
 
 link-check:
 	lychee './**/*.md'
+
+git-apply-qownnotes-patch:
+	git apply ~/Nextcloud/Transfer/qownnotes.patch
+
+git-apply-qmarkdowntextedit-patch:
+	cd ./src/libraries/qmarkdowntextedit && git apply ~/Nextcloud/Transfer/qmarkdowntextedit.patch
