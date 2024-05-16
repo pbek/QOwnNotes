@@ -623,6 +623,17 @@ QString QOwnNotesMarkdownTextEdit::currentWord(bool withPreviousCharacters) cons
     return text.trimmed();
 }
 
+QString QOwnNotesMarkdownTextEdit::currentBlock() const {
+    QTextCursor cursor = textCursor();
+
+    if (!cursor.hasSelection()) {
+        QTextBlock currentBlock = cursor.block();
+        return currentBlock.text();
+    }
+
+    return {};
+}
+
 /**
  * Tries to find words that start with the current word in the note text edit
  *

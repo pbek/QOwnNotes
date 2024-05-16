@@ -30,6 +30,7 @@ class OpenAiCompleter : public QObject {
     void setApiBaseUrl(const QString& url);
     void setApiKey(const QString& key);
     void setModelId(const QString& id);
+    QString completeSync(const QString& prompt);
 
    signals:
     void completed(QString result);
@@ -58,7 +59,8 @@ class OpenAiService : public QObject {
     QString getModelId();
     static bool setEnabled(bool enabled);
     static bool getEnabled();
-    void complete(const QString& prompt);
+    QString complete(const QString& prompt);
+    void setApiKeyForCurrentBackend();
 
    private:
     QMap<QString, QStringList> _backendModels;

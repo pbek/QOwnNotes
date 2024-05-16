@@ -2679,10 +2679,15 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     // reset cloud service instance
     OwnCloudService::instance(true);
 
-    // the notes need to be reloaded and subfolder panel needs to be populated
-    // if subfolders were activated for a note folder in the settings
-    if (!isAppLaunch && NoteFolder::isCurrentShowSubfolders()) {
-        buildNotesIndexAndLoadNoteDirectoryList();
+    if (!isAppLaunch) {
+        // the notes need to be reloaded and subfolder panel needs to be populated
+        // if subfolders were activated for a note folder in the settings
+        if (NoteFolder::isCurrentShowSubfolders()) {
+            buildNotesIndexAndLoadNoteDirectoryList();
+        }
+
+        // Read AI API key, in case the keys changed
+        OpenAiService::instance()->setApiKeyForCurrentBackend();
     }
 
     initGlobalKeyboardShortcuts();
@@ -5837,7 +5842,9 @@ void MainWindow::on_action_Find_note_triggered() {
     this->ui->searchLineEdit->selectAll();
 
     // TODO: Remove AI from here
-//    OpenAiService::instance()->complete("I am a Teapot");
+//    qDebug() << __func__ << " start";
+//    auto result = OpenAiService::instance()->complete("I am a Teapot");
+//    qDebug() << __func__ << " - 'result': " << result;
 }
 
 //

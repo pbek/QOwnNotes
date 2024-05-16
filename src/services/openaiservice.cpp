@@ -15,12 +15,14 @@
 #include "openaiservice.h"
 
 #include <qstringliteral.h>
+
 #include <QCoreApplication>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QNetworkRequest>
 #include <QSettings>
+#include <QTimer>
 #include <utility>
 
 #include "cryptoservice.h"
@@ -65,7 +67,6 @@ OpenAiService* OpenAiService::instance() {
  */
 OpenAiService* OpenAiService::createInstance(QObject* parent) {
     auto* service = new OpenAiService(parent);
-
     qApp->setProperty("openAiService", QVariant::fromValue<OpenAiService*>(service));
 
     return service;
@@ -125,10 +126,14 @@ bool OpenAiService::setBackendId(const QString& id) {
 
     // Set new completer data
     this->_completer->setApiBaseUrl(getApiBaseUrlForCurrentBackend());
-    this->_completer->setApiKey(getApiKeyForCurrentBackend());
+    setApiKeyForCurrentBackend();
     this->_completer->setModelId(getModelId());
 
     return true;
+}
+
+void OpenAiService::setApiKeyForCurrentBackend() {
+    _completer->setApiKey(getApiKeyForCurrentBackend());
 }
 
 QString OpenAiService::getBackendId() {
@@ -197,8 +202,8 @@ bool OpenAiService::getEnabled() {
     return settings.value(QStringLiteral("ai/enabled")).toBool();
 }
 
-void OpenAiService::complete(const QString& prompt) {
-    _completer->complete(prompt);
+QString OpenAiService::complete(const QString& prompt) {
+    return _completer->completeSync(prompt);
 }
 
 OpenAiCompleter::OpenAiCompleter(QString apiKey, QString modelId, QString apiBaseUrl,
@@ -235,6 +240,90 @@ void OpenAiCompleter::complete(const QString& prompt) {
     QByteArray data = doc.toJson();
 
     networkManager->post(request, data);
+}
+
+QString OpenAiCompleter::completeSync(const QString& prompt) {
+    auto *manager = new QNetworkAccessManager();
+    QEventLoop loop;
+    QTimer timer;
+
+    timer.setSingleShot(true);
+
+    QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    QObject::connect(manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
+
+    // 10 sec timeout for the request
+    timer.start(10000);
+
+    QUrl url(apiBaseUrl);
+    QNetworkRequest request(url);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    request.setRawHeader("Authorization", ("Bearer " + apiKey).toUtf8());
+
+    QJsonObject json;
+    json["model"] = modelId;    // Use the modelId set in the constructor or by setModelId
+
+    QJsonArray messagesArray;
+    QJsonObject messageObject;
+    messageObject["role"] = "user";
+    messageObject["content"] = prompt;
+    messagesArray.append(messageObject);
+
+    json["messages"] = messagesArray;
+
+    qDebug() << __func__ << " - 'json': " << json;
+
+    QJsonDocument doc(json);
+    QByteArray data = doc.toJson();
+
+    QNetworkReply *reply = manager->post(request, data);
+    loop.exec();
+
+    // if we didn't get a timeout let us return the content
+    if (timer.isActive()) {
+        if (reply->error()) {
+            // TODO: We need to mark that as an error!
+            return reply->errorString();
+        }
+
+        QByteArray response_data = reply->readAll();
+        QJsonDocument jsonDoc = QJsonDocument::fromJson(response_data);
+        qDebug() << __func__ << " - 'json': " << jsonDoc;
+
+        QJsonObject jsonObject = jsonDoc.object();
+        QJsonArray choices = jsonObject["choices"].toArray();
+
+        // Initializing an empty result string to hold the eventual content.
+        QString text = "";
+
+        // Look through the choices (though typically there's only one)
+        // and parse the nested message content.
+        if (!choices.isEmpty()) {
+            QJsonObject firstChoice = choices[0].toObject();
+
+            // Check if 'message' field exists, ensuring compatibility with the new structure
+            if (firstChoice.contains("message")) {
+                QJsonObject message = firstChoice["message"].toObject();
+                // Check if the role is "assistant" before extracting content
+                if (message["role"].toString() == "assistant") {
+                    text = message["content"].toString();
+                }
+            } else {    // Fallback to directly parse 'text' if present, for backward compatibility or
+                        // other responses
+                text = firstChoice["text"].toString();
+            }
+
+            return text.trimmed();
+        } else {
+            return {};
+        }
+    }
+
+    reply->deleteLater();
+    delete (manager);
+
+    // TODO: How to mark timeouts?
+    return {};
 }
 
 void OpenAiCompleter::setApiBaseUrl(const QString& url) { this->apiBaseUrl = url; }

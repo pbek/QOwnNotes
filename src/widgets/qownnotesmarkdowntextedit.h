@@ -80,6 +80,8 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
      */
     bool autoComplete(QStringList &resultList) const;
 
+    QString currentBlock() const;
+
     QSize minimumSizeHint() const;
 
    protected:

@@ -43,6 +43,7 @@ QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
 #include <QInputDialog>
 #include <QMessageBox>
 
+#include "openaiservice.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 #endif
 
@@ -1333,6 +1334,25 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters) {
 }
 
 /**
+ * Reads the current block in the note text edit
+ *
+ * @return
+ */
+QString ScriptingService::noteTextEditCurrentBlock() {
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
+                                                   QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    return mainWindow != nullptr
+               ? mainWindow->activeNoteTextEdit()->currentBlock()
+               : QString();
+#else
+    return {};
+#endif
+}
+
+/**
  * Tags the current note with a tag named tagName
  *
  * @param tagName
@@ -1382,6 +1402,19 @@ QString ScriptingService::downloadUrlToString(const QUrl &url) {
                                                    QString(__func__));
 
     return Utils::Misc::downloadUrl(url);
+}
+
+/**
+ * QML wrapper to use the AI Completer
+ *
+ * @param prompt
+ * @return {QString} the result of the completer
+ */
+QString ScriptingService::aiComplete(const QString& prompt) {
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
+                                                   QString(__func__));
+
+    return OpenAiService::instance()->complete(prompt);
 }
 
 /**

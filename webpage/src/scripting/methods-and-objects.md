@@ -690,6 +690,26 @@ var text = script.noteTextEditCurrentWord();
 You may want to take a look at the example
 [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
+
+Read the current block from the note text edit
+----------------------------------------------
+
+### Method call and parameters
+```cpp
+/**
+ * Reads the current block in the note text edit
+ *
+ * @return
+ */
+QString ScriptingService::noteTextEditCurrentBlock() {
+```
+
+### Example
+```js
+// read the current block in the note text edit
+var text = script.noteTextEditCurrentBlock();
+```
+
 Check whether platform is Linux, OS X or Windows
 ------------------------------------------------
 

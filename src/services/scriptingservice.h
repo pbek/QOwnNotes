@@ -70,6 +70,7 @@ class ScriptingService : public QObject {
     Q_INVOKABLE void log(QString text);
     Q_INVOKABLE QString downloadUrlToString(const QUrl &url);
     Q_INVOKABLE QString downloadUrlToMedia(const QUrl &url, bool returnUrlOnly = false);
+    Q_INVOKABLE QString aiComplete(const QString &prompt);
     Q_INVOKABLE QString insertMediaFile(const QString &mediaFilePath, bool returnUrlOnly = false);
     Q_INVOKABLE QString insertAttachmentFile(const QString &attachmentFilePath,
                                              const QString &fileName, bool returnUrlOnly);
@@ -92,6 +93,7 @@ class ScriptingService : public QObject {
     Q_INVOKABLE int noteTextEditSelectionStart();
     Q_INVOKABLE int noteTextEditSelectionEnd();
     Q_INVOKABLE QString noteTextEditCurrentWord(bool withPreviousCharacters = false);
+    Q_INVOKABLE QString noteTextEditCurrentBlock();
     Q_INVOKABLE void encryptionDisablePassword();
     Q_INVOKABLE bool platformIsLinux();
     Q_INVOKABLE bool platformIsOSX();
