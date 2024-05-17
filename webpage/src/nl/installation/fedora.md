@@ -21,7 +21,7 @@ Als je problemen hebt met het zelf importeren van de sleutel met:
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
-Houd er rekening mee dat het gedeelte "Fedora_40" in de bovenstaande code de versie van Fedora moet weerspiegelen die jij gebruikt (d.w.z. "Fedora_39", "Fedora_38" enz.)
+Houd er rekening mee dat het gedeelte "Fedora_40" in de bovenstaande code uw gebruikte versie van Fedora moet weerspiegelen (d.w.z. "Fedora_39", "Fedora_38" enz.)
 :::
 
 ## Legacy installatiemethode
@@ -33,7 +33,7 @@ Voer de volgende shell-opdrachten uit als root om de repository te vertrouwen.
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
-Nogmaals: merk op dat het gedeelte "Fedora_40" in de bovenstaande code de versie van Fedora moet weerspiegelen die jij gebruikt (d.w.z. "Fedora_39", "Fedora_38" enz.)
+Nogmaals: merk op dat het gedeelte "Fedora_40" in de bovenstaande code uw gebruikte versie van Fedora moet weerspiegelen (d.w.z. "Fedora_39", "Fedora_38" enz.)
 
 Voer vervolgens de volgende shell-opdrachten uit als root om de repository toe te voegen en vanaf daar QOwnNotes te installeren.
 

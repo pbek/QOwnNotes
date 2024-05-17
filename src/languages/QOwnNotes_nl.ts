@@ -1847,6 +1847,14 @@
 <translation>Spelling backend</translation>
 </message>
 <message>
+<source>AI backend</source>
+<translation>AI-backend</translation>
+</message>
+<message>
+<source>AI model</source>
+<translation>AI-model</translation>
+</message>
+<message>
 <source>To&amp;do</source>
 <translation>To&amp;do</translation>
 </message>
@@ -2323,6 +2331,14 @@
 <translation>Omlaag verplaatsen in labelslijst</translation>
 </message>
 <message>
+<source>Enable AI support</source>
+<translation>AI-ondersteuning activeren</translation>
+</message>
+<message>
+<source>asd</source>
+<translation>asd</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Gebruik &amp;verticale voorvertoningslayout</translation>
 </message>
@@ -2718,6 +2734,22 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
 <translation>Notitiepad '%1' is naar het klembord gekopieerd</translation>
+</message>
+<message>
+<source>AI backends</source>
+<translation>AI-backends</translation>
+</message>
+<message>
+<source>AI models</source>
+<translation>AI-modellen</translation>
+</message>
+<message>
+<source>AI backend selector</source>
+<translation>AI-backend selector</translation>
+</message>
+<message>
+<source>AI model selector</source>
+<translation>AI-model selector</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3256,6 +3288,10 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>werkbalk codering</translation>
 </message>
 <message>
+<source>AI toolbar</source>
+<translation>AI-werkbalk</translation>
+</message>
+<message>
 <source>window toolbar</source>
 <translation>werkbalk venster</translation>
 </message>
@@ -3583,6 +3619,20 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 </context>
 <context>
+<name>OpenAiCompleter</name>
+<message>
+<source>Timeout, while waiting for the AI response</source>
+<translation>Time-out, in afwachting van de AI-reactie</translation>
+</message>
+</context>
+<context>
+<name>OpenAiService</name>
+<message>
+<source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
+<translation>AI-systeem is uitgeschakeld. Schakel het in het hoofdmenu of de AI-werkbalk in.</translation>
+</message>
+</context>
+<context>
 <name>OwnCloudService</name>
 <message>
 <source>incorrect</source>
@@ -3894,7 +3944,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
-<translation>De notitiemap &lt;b&gt;%1&lt;/b&gt; is niet meer aangetroffen! Wil je een nieuwe selecteren?</translation>
+<translation>De notitiemap &lt;b&gt;%1&lt;/b&gt; is niet meer aangetroffen! Wilt u een nieuwe selecteren?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -5298,6 +5348,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>web applicatie</translation>
 </message>
 <message>
+<source>AI</source>
+<translation>AI</translation>
+</message>
+<message>
 <source>Experimental</source>
 <translation>Experimenteel</translation>
 </message>
@@ -5498,6 +5552,30 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>Verwijder automatisch volgspaties in de notitietekst</translation>
+</message>
+<message>
+<source>API keys</source>
+<translation>API-keys</translation>
+</message>
+<message>
+<source>OpenAI API key:</source>
+<translation>OpenAI API-key:</translation>
+</message>
+<message>
+<source>Create Groq API key</source>
+<translation>Groq API-key aanmaken</translation>
+</message>
+<message>
+<source>Create OpenAI API key</source>
+<translation type="unfinished">Create OpenAI API key</translation>
+</message>
+<message>
+<source>Groq API key:</source>
+<translation>Groq API-key:</translation>
+</message>
+<message>
+<source>API key</source>
+<translation>API-key</translation>
 </message>
 <message>
 <source>Show line numbers</source>

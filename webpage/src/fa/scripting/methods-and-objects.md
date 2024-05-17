@@ -656,6 +656,53 @@ var text = script.noteTextEditCurrentWord();
 
 You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
+Read the current block from the note text edit
+----------------------------------------------
+
+### فراخوانی شگرد و پارامترها
+```cpp
+/**
+ * Reads the current block in the note text edit
+ *
+ * @return
+ */
+QString ScriptingService::noteTextEditCurrentBlock();
+```
+
+### مثال
+```js
+// Read the current block in the note text edit
+var text = script.noteTextEditCurrentBlock();
+```
+
+You may want to take a look at the example [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+
+Use a completion prompt on the currently selected AI model
+----------------------------------------------------------
+
+The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model.
+
+The AI system needs to be enabled in the AI toolbar or main menu for this to work.
+
+### فراخوانی شگرد و پارامترها
+```cpp
+/**
+ * QML wrapper to use the AI Completer
+ *
+ * @param prompt
+ * @return {QString} the result of the completer
+ */
+QString ScriptingService::aiComplete(const QString& prompt);
+```
+
+### مثال
+```js
+// Ask the currently selected AI model to complete the prompt
+var text = script.aiComplete("Tell me how do you feel today?");
+```
+
+You may want to take a look at the example [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+
 بررسی اینکه آیا پلتفرم لینوکس، سیستم عامل X یا ویندوز است
 ------------------------------------------------
 
@@ -995,7 +1042,7 @@ script.informationMessageBox("The text I want to show", "Some optional title");
 نمایش صندوق پیغام پرسش
 ------------------------------
 
-### فراخوانی شگرد و پارامترها
+### Method call and parameters
 ```cpp
 /**
  * Shows a question message box
@@ -1043,7 +1090,7 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
                                             QString filter);
 ```
 
-### مثال
+### Example
 ```js
 // show an open file dialog
 var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
@@ -1052,7 +1099,7 @@ var fileName = script.getOpenFileName("Please select an image", "/home/user/imag
 Showing a save file dialog
 --------------------------
 
-### Method call and parameters
+### فراخوانی شگرد و پارامترها
 ```cpp
 /**
  * Shows a save file dialog
@@ -1066,7 +1113,7 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
                                             QString filter);
 ```
 
-### مثال
+### Example
 ```js
 // show a save file dialog
 var fileName = script.getSaveFileName("Please select HTML file to save", "output.html", "HTML (*.html)");
@@ -1081,7 +1128,7 @@ You need to define your settings variables as properties in your script and regi
 
 The user can then set these properties in the script settings.
 
-### Example
+### مثال
 ```js
 // you have to define your registered variables so you can access them later
 property string myString;
@@ -1154,7 +1201,7 @@ property variant settingsVariables: [
 
 In addition you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
 
-### Example
+### مثال
 ```js
 /**
  * Registers the settings variables again
@@ -1216,7 +1263,7 @@ You may also want to take a look at the example [persistent-variables.qml](https
 بارگذاری متغیرهای تنظیمات برنامه
 --------------------------------------
 
-### فراخوانی شگرد و پارامترها
+### Method call and parameters
 ```cpp
 /**
  * Loads an application settings variable
@@ -1264,7 +1311,7 @@ Clearing a cache directory
 
 You can clear the cache directory of your script by passing its name to clearCacheDir().
 
-### Method call and parameters
+### فراخوانی شگرد و پارامترها
 ```cpp
 /**
  * Clears the cache directory for a script
@@ -1537,7 +1584,7 @@ if(script.fileExists(filePath)){
 نوشتن متن در پرونده
 ----------------------
 
-### فراخوانی شگرد و پارامترها
+### Method call and parameters
 ```cpp
 /**
  * Writes a text to a file
@@ -1550,7 +1597,7 @@ if(script.fileExists(filePath)){
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### مثال
+### Example
 ```js
 var result = script.writeToFile(filePath, html);
 script.log(result);
@@ -1574,7 +1621,7 @@ Please take a look at the example [websocket-server.qml](https://github.com/pbek
 
 You can directly inject highlighting rules into the editor by defining regular expressions and assigning them to a highlighting state.
 
-### فراخوانی شگرد و پارامترها
+### Method call and parameters
 ```cpp
 /**
  * Adds a highlighting rule to the syntax highlighter of the editor
@@ -1624,7 +1671,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | کادر انتخاب با علامت   | 30    |
 | StUnderline            | 31    |
 
-### مثال
+### Example
 ```js
 // Highlight a text line like "BLOCK: some text" as blockquote (state 18)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);

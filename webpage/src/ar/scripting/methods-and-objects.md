@@ -656,6 +656,53 @@ var text = script.noteTextEditCurrentWord();
 
 ربما تحب أن تلقي نظرة على المثال [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
+Read the current block from the note text edit
+----------------------------------------------
+
+### نداء الدالة ومُعامِلاتها
+```cpp
+/**
+ * Reads the current block in the note text edit
+ *
+ * @return
+ */
+QString ScriptingService::noteTextEditCurrentBlock();
+```
+
+### مثال
+```js
+// Read the current block in the note text edit
+var text = script.noteTextEditCurrentBlock();
+```
+
+You may want to take a look at the example [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+
+Use a completion prompt on the currently selected AI model
+----------------------------------------------------------
+
+The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model.
+
+The AI system needs to be enabled in the AI toolbar or main menu for this to work.
+
+### نداء الدالة ومُعامِلاتها
+```cpp
+/**
+ * QML wrapper to use the AI Completer
+ *
+ * @param prompt
+ * @return {QString} the result of the completer
+ */
+QString ScriptingService::aiComplete(const QString& prompt);
+```
+
+### مثال
+```js
+// Ask the currently selected AI model to complete the prompt
+var text = script.aiComplete("Tell me how do you feel today?");
+```
+
+You may want to take a look at the example [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+
 معرفة ما إذا كانت المنصة لينكس أم ماك أم ويندوز
 ------------------------------------------------
 
@@ -1537,7 +1584,7 @@ if(script.fileExists(filePath)){
 كتابة نص إلى ملف
 ----------------------
 
-### نداء الدالة ومُعامِلاتها
+### Method call and parameters
 ```cpp
 /**
  * Writes a text to a file
@@ -1550,7 +1597,7 @@ if(script.fileExists(filePath)){
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### مثال
+### Example
 ```js
 var result = script.writeToFile(filePath, html);
 script.log(result);
@@ -1574,7 +1621,7 @@ script.log(result);
 
 يمكنك إضافة قواعد تلوين إلى المحرر مباشرةً، بتعريف تعابير نمطية وإسنادها إلى حالة تلوين.
 
-### نداء الدالة ومُعامِلاتها
+### Method call and parameters
 ```cpp
 /**
  * Adds a highlighting rule to the syntax highlighter of the editor
@@ -1624,7 +1671,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | CheckBoxChecked        | 30    |
 | StUnderline            | 31    |
 
-### مثال
+### Example
 ```js
 // Highlight a text line like "BLOCK: some text" as blockquote (state 18)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);

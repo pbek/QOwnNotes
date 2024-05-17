@@ -655,6 +655,53 @@ var text = script.noteTextEditCurrentWord();
 
 You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
+Read the current block from the note text edit
+----------------------------------------------
+
+### Módszerhívás és paraméterek
+```cpp
+/**
+ * Reads the current block in the note text edit
+ *
+ * @return
+ */
+QString ScriptingService::noteTextEditCurrentBlock();
+```
+
+### Példa
+```js
+// Read the current block in the note text edit
+var text = script.noteTextEditCurrentBlock();
+```
+
+You may want to take a look at the example [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+
+Use a completion prompt on the currently selected AI model
+----------------------------------------------------------
+
+The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model.
+
+The AI system needs to be enabled in the AI toolbar or main menu for this to work.
+
+### Módszerhívás és paraméterek
+```cpp
+/**
+ * QML wrapper to use the AI Completer
+ *
+ * @param prompt
+ * @return {QString} the result of the completer
+ */
+QString ScriptingService::aiComplete(const QString& prompt);
+```
+
+### Példa
+```js
+// Ask the currently selected AI model to complete the prompt
+var text = script.aiComplete("Tell me how do you feel today?");
+```
+
+You may want to take a look at the example [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+
 Ellenőrizze, hogy a platform Linux, OS X vagy Windows
 ------------------------------------------------
 
@@ -1042,7 +1089,7 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
                                             QString filter);
 ```
 
-### Példa
+### Example
 ```js
 // nyitott fájl párbeszédpanel megjelenítése
 var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
@@ -1153,7 +1200,7 @@ property variant settingsVariables: [
 
 Ezenkívül felülírhatja a `settingsVariables` funkciót egy `registerSettingsVariables()` speciális funkcióval, mint ez:
 
-### Example
+### Példa
 ```js
 /**
   * Újra regisztrálja a beállítási változókat
@@ -1536,7 +1583,7 @@ if(script.fileExists(filePath)){
 Szöveg írása fájlba
 ----------------------
 
-### Módszerhívás és paraméterek
+### Method call and parameters
 ```cpp
 /**
   * Szöveget ír egy fájlba
@@ -1549,7 +1596,7 @@ Szöveg írása fájlba
 bool ScriptingService :: writeToFile (const QString & amp; filePath, const QString & amp; adatok, bool createParentDirs);
 ```
 
-### Példa
+### Example
 ```js
 var result = script.writeToFile(filePath, html);
 script.log(result);
@@ -1573,7 +1620,7 @@ Kiemelési szabály hozzáadása a szerkesztőhöz
 
 A kiemelési szabályokat közvetlenül beillesztheti a szerkesztőbe úgy, hogy reguláris kifejezéseket definiál és kiemelési állapothoz rendel.
 
-### Módszerhívás és paraméterek
+### Method call and parameters
 ```cpp
 /**
   * Kiemelési szabályt ad a szerkesztő szintaxiskiemelőjéhez
@@ -1623,7 +1670,7 @@ void ScriptingService::addHighlightingRule(const QString &minta,
 | CheckBoxChecked            | 30  |
 | StUnderline                | 31  |
 
-### Példa
+### Example
 ```js
 // Jelöljön ki egy szövegsort, mint például a „BLOCK: some text”, mint idézőjel (18-as állapot)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);

@@ -647,6 +647,53 @@ var text = script.noteTextEditCurrentWord();
 
 [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml) 예제를 살펴보는 것이 좋습니다.
 
+노트 텍스트 편집에서 현재 블록 읽기
+----------------------------------------------
+
+### 메서드 호출 및 매개 변수
+```cpp
+/**
+ * 노트 텍스트 편집에서 현재 블록 읽기
+ *
+ * @return
+ */
+QString ScriptingService::noteTextEditCurrentBlock();
+```
+
+### 예제
+```js
+// 노트 텍스트 편집에서 현재 블록 읽기
+var text = script.noteTextEditCurrentBlock();
+```
+
+다음 예시를 살펴볼 수 있습니다 [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+
+현재 선택된 AI 모델에서 완료 프롬프트 사용
+----------------------------------------------------------
+
+AI 완료 프롬프트는 현재 선택된 AI 모델에서 완료 프롬프트를 사용할 수 있는 기능입니다.
+
+AI 도구모음 또는 기본 메뉴에서 AI 시스템을 활성화해야 작동할 수 있습니다.
+
+### 메서드 호출 및 매개 변수
+```cpp
+/**
+ * AI Complete를 사용하기 위한 QML 래퍼
+ *
+ * @param prompt
+ * @return {QString} the result of the completer
+ */
+QString ScriptingService::aiComplete(const QString& prompt);
+```
+
+### 예제
+```js
+// 현재 선택한 AI 모델에 요청하여 프롬프트를 완료합니다
+var text = script.aiComplete("Tell me how do you feel today?");
+```
+
+다음 예시를 살펴볼 수 있습니다 [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+
 플랫폼이 Linux, OS X 또는 Windows인지 확인
 ------------------------------------------------
 

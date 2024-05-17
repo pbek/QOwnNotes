@@ -1850,6 +1850,14 @@
 <translation>Stafsetning stuðningur</translation>
 </message>
 <message>
+<source>AI backend</source>
+<translation type="unfinished">AI backend</translation>
+</message>
+<message>
+<source>AI model</source>
+<translation type="unfinished">AI model</translation>
+</message>
+<message>
 <source>To&amp;do</source>
 <translation>Að &amp;gera</translation>
 </message>
@@ -2330,6 +2338,14 @@
 <translation type="unfinished">Move down in tag list</translation>
 </message>
 <message>
+<source>Enable AI support</source>
+<translation type="unfinished">Enable AI support</translation>
+</message>
+<message>
+<source>asd</source>
+<translation type="unfinished">asd</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Notaðu &amp;lóðrétt forsýning</translation>
 </message>
@@ -2726,6 +2742,22 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
 <translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+</message>
+<message>
+<source>AI backends</source>
+<translation type="unfinished">AI backends</translation>
+</message>
+<message>
+<source>AI models</source>
+<translation type="unfinished">AI models</translation>
+</message>
+<message>
+<source>AI backend selector</source>
+<translation type="unfinished">AI backend selector</translation>
+</message>
+<message>
+<source>AI model selector</source>
+<translation type="unfinished">AI model selector</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3269,6 +3301,10 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <translation>dulkóðunarstika</translation>
 </message>
 <message>
+<source>AI toolbar</source>
+<translation type="unfinished">AI toolbar</translation>
+</message>
+<message>
 <source>window toolbar</source>
 <translation>glugga tækjastika</translation>
 </message>
@@ -3596,6 +3632,20 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <message>
 <source>Removed note subfolder: %1</source>
 <translation type="unfinished">Removed note subfolder: %1</translation>
+</message>
+</context>
+<context>
+<name>OpenAiCompleter</name>
+<message>
+<source>Timeout, while waiting for the AI response</source>
+<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+</message>
+</context>
+<context>
+<name>OpenAiService</name>
+<message>
+<source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
+<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
 </message>
 </context>
 <context>
@@ -5320,6 +5370,10 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
 <translation type="unfinished">Web application</translation>
 </message>
 <message>
+<source>AI</source>
+<translation type="unfinished">AI</translation>
+</message>
+<message>
 <source>Experimental</source>
 <translation type="unfinished">Experimental</translation>
 </message>
@@ -5519,6 +5573,30 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
 <message>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>Fjarlægðu slóð bil sjálfkrafa í athugasemdatexta</translation>
+</message>
+<message>
+<source>API keys</source>
+<translation type="unfinished">API keys</translation>
+</message>
+<message>
+<source>OpenAI API key:</source>
+<translation type="unfinished">OpenAI API key:</translation>
+</message>
+<message>
+<source>Create Groq API key</source>
+<translation type="unfinished">Create Groq API key</translation>
+</message>
+<message>
+<source>Create OpenAI API key</source>
+<translation type="unfinished">Create OpenAI API key</translation>
+</message>
+<message>
+<source>Groq API key:</source>
+<translation type="unfinished">Groq API key:</translation>
+</message>
+<message>
+<source>API key</source>
+<translation type="unfinished">API key</translation>
 </message>
 <message>
 <source>Show line numbers</source>
@@ -6752,7 +6830,7 @@ Skýringar þínar haldast óbreyttir!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation>%1 (%2)</translation>
+<translation type="unfinished">%1 (%2)</translation>
 </message>
 </context>
 <context>

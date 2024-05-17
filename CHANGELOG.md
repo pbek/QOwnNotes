@@ -2,6 +2,8 @@
 
 ## 24.5.4
 - Try to fix build on very old build systems (for [#3026](https://github.com/pbek/QOwnNotes/issues/3026))
+- Added more Dutch, Korean, Swedish, French translation (thank you, stephanp,
+  venusgirl, dzenan, tralalax)
 
 ## 24.5.3
 - QOwnNotes now has **AI support**, currently for **[Groq](https://groq.com/)**

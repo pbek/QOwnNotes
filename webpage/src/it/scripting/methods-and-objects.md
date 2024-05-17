@@ -626,6 +626,53 @@ var text = script.noteTextEditCurrentWord();
 
 You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
+Read the current block from the note text edit
+----------------------------------------------
+
+### Chiamata al metodo e parametri
+```cpp
+/**
+ * Reads the current block in the note text edit
+ *
+ * @return
+ */
+QString ScriptingService::noteTextEditCurrentBlock();
+```
+
+### Esempio
+```js
+// Read the current block in the note text edit
+var text = script.noteTextEditCurrentBlock();
+```
+
+You may want to take a look at the example [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+
+Use a completion prompt on the currently selected AI model
+----------------------------------------------------------
+
+The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model.
+
+The AI system needs to be enabled in the AI toolbar or main menu for this to work.
+
+### Chiamata al metodo e parametri
+```cpp
+/**
+ * QML wrapper to use the AI Completer
+ *
+ * @param prompt
+ * @return {QString} the result of the completer
+ */
+QString ScriptingService::aiComplete(const QString& prompt);
+```
+
+### Esempio
+```js
+// Ask the currently selected AI model to complete the prompt
+var text = script.aiComplete("Tell me how do you feel today?");
+```
+
+You may want to take a look at the example [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+
 Controlla se la piattaforma è Linux, OS X o Windows
 ------------------------------------------------
 
@@ -1015,7 +1062,7 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
                                             QString filter);
 ```
 
-### Esempio
+### Example
 ```js
 // mostra una finestra di dialogo del file aperto
 var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
@@ -1126,7 +1173,7 @@ property variant settingsVariables: [
 
 Inoltre puoi sovrascrivere `settingsVariables` con una funzione speciale `registerSettingsVariables()` come questa:
 
-### Example
+### Esempio
 ```js
 /**
   * Registra nuovamente le variabili delle impostazioni
@@ -1510,7 +1557,7 @@ if(script.fileExists(filePath)){
 Scrittura di testo in un file
 ----------------------
 
-### Chiamata al metodo e parametri
+### Method call and parameters
 ```cpp
 /**
  * Scrive un testo in un file
@@ -1523,7 +1570,7 @@ Scrittura di testo in un file
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### Esempio
+### Example
 ```js
 var result = script.writeToFile(filePath, html);
 script.log(result);
@@ -1547,7 +1594,7 @@ Aggiunta di una regola di evidenziazione per l'editor
 
 Puoi inserire direttamente le regole di evidenziazione nell'editor definendo espressioni regolari e assegnandole a uno stato di evidenziazione.
 
-### Chiamata al metodo e parametri
+### Method call and parameters
 ```cpp
 /**
  * Aggiunge una regola di evidenziazione all'evidenziatore della sintassi dell'editor
@@ -1597,7 +1644,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | CheckBoxChecked            | 30  |
 | StUnderline                | 31  |
 
-### Esempio
+### Example
 ```js
 // Evidenzia una riga di testo come "BLOCCO: del testo" come citazione in blocco (stato 18)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);

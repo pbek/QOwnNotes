@@ -390,7 +390,7 @@ U kunt zowel platte tekst als html in de labels gebruiken. De tekst kan worden g
 Misschien wilt u dan het voorbeeldscript bekijken [script-label-demo.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
 
 ::: tip
-The scripting label also supports **external links**, as well as **internal links** to notes, tasks, deck cards and more. You might get a grasp of what's supported by taking a look at [URL handling](https://github.com/pbek/QOwnNotes/blob/964acf69b6382f8ee8252c640c5048f8f4644622/src/utils/urlhandler.cpp#L16-L75).
+Het scriptlabel ondersteunt ook **externe links**, evenals **interne links** naar notities, taken, kaarten en meer. U kunt een idee krijgen van wat wordt ondersteund door een kijkje te nemen in [URL-behandeling](https://github.com/pbek/QOwnNotes/blob/964acf69b6382f8ee8252c640c5048f8f4644622/src/utils/urlhandler.cpp#L16-L75).
 :::
 
 Een nieuwe notitie maken
@@ -655,6 +655,53 @@ var text = script.noteTextEditCurrentWord();
 ```
 
 Misschien wilt u het voorbeeld bekijken [autocompletion.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
+
+Lees het huidige blok van de notitietekstbewerking
+----------------------------------------------
+
+### Methodeaanroep en parameters
+```cpp
+/**
+ * Leest het huidige blok in de notitietekstbewerking
+ *
+ * @return
+ */
+QString ScriptingService::noteTextEditCurrentBlock();
+```
+
+### Voorbeeld
+```js
+// Lees het huidige blok in de notitie tekstbewerking
+var text = script.noteTextEditCurrentBlock();
+```
+
+Bestudeer het voorbeeld eens [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+
+Gebruik een voltooiingsprompt op het geselecteerde AI-model
+----------------------------------------------------------
+
+De AI-voltooiingsprompt is een functie waarmee u een voltooiingsprompt kunt gebruiken op het geselecteerde AI-model.
+
+Om dit te laten werken moet het AI-systeem worden ingeschakeld in de AI-werkbalk of het hoofdmenu.
+
+### Methodeaanroep en parameters
+```cpp
+/**
+ * QML-wrapper om de AI-completering te gebruiken
+ *
+ * @param prompt
+ * @return {QString} the result of the completer
+ */
+QString ScriptingService::aiComplete(const QString& prompt);
+```
+
+### Voorbeeld
+```js
+// Vraag het geselecteerde AI-model om de prompt te voltooien
+var text = script.aiComplete("Tell me how do you feel today?");
+```
+
+Bestudeer het voorbeeld eens [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
 
 Controleer of het platform Linux, OS X of Windows is
 ------------------------------------------------
@@ -1155,7 +1202,7 @@ property variant settingsVariables: [
 
 Bovendien kun je de `settingsVariables` overschrijven met een speciale functie `registerSettingsVariables()` zoals deze:
 
-### Example
+### Voorbeeld
 ```js
 /**
   * Registreert de instellingsvariabelen opnieuw

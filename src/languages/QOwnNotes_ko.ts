@@ -1222,7 +1222,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>복사</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1844,6 +1844,14 @@ File: QOwnNotes_en.ts</translation>
 <translation>맟춤법 백엔드</translation>
 </message>
 <message>
+<source>AI backend</source>
+<translation>AI 백엔드</translation>
+</message>
+<message>
+<source>AI model</source>
+<translation>AI 모델</translation>
+</message>
+<message>
 <source>To&amp;do</source>
 <translation>할 일(&amp;D)</translation>
 </message>
@@ -2318,6 +2326,14 @@ File: QOwnNotes_en.ts</translation>
 <translation>태그 목록에서 아래로 이동</translation>
 </message>
 <message>
+<source>Enable AI support</source>
+<translation>AI 지원 활성화</translation>
+</message>
+<message>
+<source>asd</source>
+<translation>asd</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>세로 미리보기 레이아웃 사용(&amp;V)</translation>
 </message>
@@ -2700,6 +2716,22 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
 <translation>노트 '%1' 경로가 클립보드에 복사되었습니다</translation>
+</message>
+<message>
+<source>AI backends</source>
+<translation>AI 백엔드</translation>
+</message>
+<message>
+<source>AI models</source>
+<translation>AI 모델</translation>
+</message>
+<message>
+<source>AI backend selector</source>
+<translation>AI 백엔드 선택기</translation>
+</message>
+<message>
+<source>AI model selector</source>
+<translation>AI 모델 선택기</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3228,6 +3260,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>암호화 도구 모음</translation>
 </message>
 <message>
+<source>AI toolbar</source>
+<translation>AI 도구모음</translation>
+</message>
+<message>
 <source>window toolbar</source>
 <translation>창 도구 모음</translation>
 </message>
@@ -3548,6 +3584,20 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Removed note subfolder: %1</source>
 <translation>노트 하위 폴더 제거됨: %1</translation>
+</message>
+</context>
+<context>
+<name>OpenAiCompleter</name>
+<message>
+<source>Timeout, while waiting for the AI response</source>
+<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+</message>
+</context>
+<context>
+<name>OpenAiService</name>
+<message>
+<source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
+<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
 </message>
 </context>
 <context>
@@ -5260,6 +5310,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>웹 응용 프로그램</translation>
 </message>
 <message>
+<source>AI</source>
+<translation>AI</translation>
+</message>
+<message>
 <source>Experimental</source>
 <translation>실험적</translation>
 </message>
@@ -5459,6 +5513,30 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>노트 텍스트에서 자동으로 후행 공백 제거</translation>
+</message>
+<message>
+<source>API keys</source>
+<translation>API 키</translation>
+</message>
+<message>
+<source>OpenAI API key:</source>
+<translation type="unfinished">OpenAI API key:</translation>
+</message>
+<message>
+<source>Create Groq API key</source>
+<translation>Groq API 키 생성</translation>
+</message>
+<message>
+<source>Create OpenAI API key</source>
+<translation type="unfinished">Create OpenAI API key</translation>
+</message>
+<message>
+<source>Groq API key:</source>
+<translation>Groq API 키:</translation>
+</message>
+<message>
+<source>API key</source>
+<translation>API 키</translation>
 </message>
 <message>
 <source>Show line numbers</source>

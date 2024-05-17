@@ -1,4 +1,4 @@
-# QOwnNotes Scripting
+# QOwnNotes Scriptage
 
 Un script QOwnNotes est principalement **JavaScript** dans des [fichiers Qt QML](https://doc.qt.io/qt-5/qtqml-index.html).
 
@@ -22,7 +22,7 @@ Vous pouvez placer ces fichiers QML où vous le souhaitez et **les ajouter dans 
 Jetez un œil aux [exemples de scripts](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples) pour démarrer plus rapidement.
 :::
 
-In the **Scripting settings** you can also install scripts directly from the [**Script repository**](https://github.com/qownnotes/scripts). There is a community hosted web-application to search for scripts on [beurt.github.io/QOwnNoteScriptsList](https://beurt.github.io/QOwnNoteScriptsList/).
+Dans les **paramètres de script**, vous pouvez aussi installer des scripts directement depuis leur [**dépôt**](https://github.com/qownnotes/scripts). Il y a un site hébergé par la communauté à : [https://beurt.github.io/QOwnNoteScriptsList](https://beurt.github.io/QOwnNoteScriptsList/) pour chercher des scripts.
 
 Pour les problèmes, questions ou demandes de fonctionnalités pour les scripts du **référentiel de scripts**, veuillez ouvrir un problème sur la [page des problèmes du référentiel de scripts QOwnNotes](https://github.com/qownnotes/scripts/issues).
 
