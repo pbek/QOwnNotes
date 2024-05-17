@@ -10,7 +10,7 @@
   (because you can get free API keys) and **[OpenAI](https://openai.com/)**
   (for [#3026](https://github.com/pbek/QOwnNotes/issues/3026))
   - There is a new **AI toolbar** where can turn the service on, and you can select the AI backend and model
-  - As a first step, there is a new script `ai-autocomplete` in the script repository
+  - As a first step, there is a new script `AI Autocompletion` in the script repository
     that uses the selected AI model to **autocomplete the current block** in the note text edit
   - You can now add a [OpenAI](https://openai.com/) API key in the new *AI settings*
   - Use the new `script.aiComplete(prompt)` scripting command to your own imagination (see below)
