@@ -20,7 +20,6 @@
 #include <QJsonObject>
 #include <QNetworkRequest>
 #include <QSettings>
-#include <QStringLiteral>
 #include <QTimer>
 #include <utility>
 
