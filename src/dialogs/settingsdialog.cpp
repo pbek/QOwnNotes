@@ -887,6 +887,9 @@ void SettingsDialog::storeSettings() {
 
     settings.setValue(QStringLiteral("ai/groq/apiKey"),
                       CryptoService::instance()->encryptToString(ui->groqApiKeyLineEdit->text()));
+
+    settings.setValue(QStringLiteral("ai/openai/apiKey"),
+                      CryptoService::instance()->encryptToString(ui->openAiApiKeyLineEdit->text()));
 }
 
 /**
@@ -1340,6 +1343,9 @@ void SettingsDialog::readSettings() {
 
     ui->groqApiKeyLineEdit->setText(CryptoService::instance()->decryptToString(
         settings.value(QStringLiteral("ai/groq/apiKey")).toString()));
+
+    ui->openAiApiKeyLineEdit->setText(CryptoService::instance()->decryptToString(
+        settings.value(QStringLiteral("ai/openai/apiKey")).toString()));
 }
 
 /**
@@ -4333,4 +4339,8 @@ void SettingsDialog::on_nextcloudDeckStackTreeWidget_currentItemChanged(QTreeWid
 
 void SettingsDialog::on_groqApiKeyWebButton_clicked() {
     QDesktopServices::openUrl(QUrl(QStringLiteral("https://console.groq.com/keys")));
+}
+
+void SettingsDialog::on_openAiApiKeyWebButton_clicked() {
+    QDesktopServices::openUrl(QUrl(QStringLiteral("https://platform.openai.com/api-keys")));
 }

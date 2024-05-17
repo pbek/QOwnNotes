@@ -1,8 +1,26 @@
 # QOwnNotes Changelog
 
+## 24.5.3
+- QOwnNotes now has **AI support**, currently for **[Groq](https://groq.com/)**
+  (because you can get free API keys) and **[OpenAI](https://openai.com/)**
+  (for [#3026](https://github.com/pbek/QOwnNotes/issues/3026))
+  - There is a new **AI toolbar** where can turn the service on, and you can select the AI backend and model
+  - As a first step, there is a new script `ai-autocomplete` in the script repository
+    that uses the selected AI model to **autocomplete the current block** in the note text edit
+  - You can now add a [OpenAI](https://openai.com/) API key in the new *AI settings*
+  - Use the new `script.aiComplete(prompt)` scripting command to your own imagination (see below)
+- There now is a new scripting command `script.aiComplete(prompt)` to use a completion prompt
+  on the currently selected AI model (for [#3026](https://github.com/pbek/QOwnNotes/issues/3026))
+  - For more information please take a look at the
+    [Scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#use-a-completion-prompt-on-the-currently-selected-ai-model)
+- There now is a new scripting command `script.noteTextEditCurrentBlock()` to get
+  the text of the current block (for [#3026](https://github.com/pbek/QOwnNotes/issues/3026))
+  - For more information please take a look at the
+    [Scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#read-the-current-block-from-the-note-text-edit)
+
 ## 24.5.2
 - Try to fix "QFont::setPointSize: Point size <= 0" warnings
-- The first part of the upcoming AI support is already visible
+- The first part of the upcoming **AI support** is already visible
   (for [#3026](https://github.com/pbek/QOwnNotes/issues/3026))
   - You can add a [Groq](https://groq.com/) API key in the new *AI settings*
 - A PPA for Ubuntu 24.10 (Oracular Oriole) was added

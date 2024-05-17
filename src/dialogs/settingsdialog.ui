@@ -6864,7 +6864,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <string>API keys</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_85">
-                <item row="0" column="2">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="groqApiKeyHeadlineLabel">
+                  <property name="text">
+                   <string>Groq API key:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="openAiApiKeyHeadlineLabel">
+                  <property name="text">
+                   <string>OpenAI API key:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="3">
                  <widget class="QToolButton" name="groqApiKeyWebButton">
                   <property name="toolTip">
                    <string>Create Groq API key</string>
@@ -6878,13 +6898,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="0">
-                 <widget class="QLabel" name="groqApiKeyHeadlineLabel">
-                  <property name="text">
-                   <string>Groq API key:</string>
+                <item row="1" column="1">
+                 <widget class="PasswordLineEdit" name="openAiApiKeyLineEdit">
+                  <property name="placeholderText">
+                   <string>API key</string>
                   </property>
-                  <property name="alignment">
-                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QToolButton" name="openAiApiKeyWebButton">
+                  <property name="toolTip">
+                   <string>Create OpenAI API key</string>
+                  </property>
+                  <property name="text">
+                   <string notr="true">…</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="text-html" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</iconset>
                   </property>
                  </widget>
                 </item>

@@ -2466,13 +2466,9 @@ void MainWindow::readSettings() {
 
     loadNoteBookmarks();
 
-    // TODO: Enable AI actions and toolbar
-//    ui->actionEnable_AI->setEnabled(false);
+    // TODO: Enable AI menu, when done
     ui->menuAI_backend->setEnabled(false);
     ui->menuAI_model->setEnabled(false);
-//    _aiToolbar->setEnabled(false);
-//    _aiToolbar->hide();
-//    removeToolBar(_aiToolbar);
     buildAiToolbarAndActions();
 }
 
@@ -5840,11 +5836,6 @@ void MainWindow::on_action_Find_note_triggered() {
     changeDistractionFreeMode(false);
     this->ui->searchLineEdit->setFocus();
     this->ui->searchLineEdit->selectAll();
-
-    // TODO: Remove AI from here
-//    qDebug() << __func__ << " start";
-//    auto result = OpenAiService::instance()->complete("I am a Teapot");
-//    qDebug() << __func__ << " - 'result': " << result;
 }
 
 //
@@ -10355,7 +10346,8 @@ void MainWindow::generateAiBackendComboBox() {
     _aiBackendComboBox->clear();
     _aiBackendComboBox->addItem(QStringLiteral("OpenAI"), QStringLiteral("openai"));
     _aiBackendComboBox->addItem(QStringLiteral("Groq"), QStringLiteral("groq"));
-    Utils::Gui::setComboBoxIndexByUserData(_aiBackendComboBox, OpenAiService::instance()->getBackendId());
+    Utils::Gui::setComboBoxIndexByUserData(_aiBackendComboBox,
+                                           OpenAiService::instance()->getBackendId());
     _aiBackendComboBox->blockSignals(false);
 }
 
@@ -10384,7 +10376,8 @@ void MainWindow::generateAiModelComboBox() {
         _aiModelComboBox->addItem(model, model);
     }
 
-    Utils::Gui::setComboBoxIndexByUserData(_aiModelComboBox, OpenAiService::instance()->getModelId());
+    Utils::Gui::setComboBoxIndexByUserData(_aiModelComboBox,
+                                           OpenAiService::instance()->getModelId());
     _aiModelComboBox->blockSignals(false);
 }
 

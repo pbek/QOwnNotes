@@ -43,8 +43,7 @@ OpenAiService::OpenAiService(QObject* parent) : QObject(parent) {
 }
 
 void OpenAiService::initializeCompleter(QObject* parent) {
-    _completer = new OpenAiCompleter(
-        getApiKeyForCurrentBackend(), getModelId(),
+    _completer = new OpenAiCompleter(getApiKeyForCurrentBackend(), getModelId(),
                                      getApiBaseUrlForCurrentBackend(), parent);
 }
 
@@ -73,13 +72,16 @@ OpenAiService* OpenAiService::createInstance(QObject* parent) {
 }
 
 void OpenAiService::initializeBackends() {
-    _backendModels[QStringLiteral("openai")] = QStringList{"gpt-4o", "gpt-4-turbo", "gpt-3.5-turbo", "gpt-4"};
+    _backendModels[QStringLiteral("openai")] =
+        QStringList{"gpt-4o", "gpt-4-turbo", "gpt-3.5-turbo", "gpt-4"};
     _backendModels[QStringLiteral("groq")] =
         QStringList{"llama3-70b-8192", "llama3-8b-8192", "llama2-70b-4096", "mixtral-8x7b-32768",
                     "gemma-7b-it"};
 
-    _backendApiBaseUrls[QStringLiteral("openai")] = QStringLiteral("https://api.openai.com/v1/chat/completions");
-    _backendApiBaseUrls[QStringLiteral("groq")] = QStringLiteral("https://api.groq.com/openai/v1/chat/completions");
+    _backendApiBaseUrls[QStringLiteral("openai")] =
+        QStringLiteral("https://api.openai.com/v1/chat/completions");
+    _backendApiBaseUrls[QStringLiteral("groq")] =
+        QStringLiteral("https://api.groq.com/openai/v1/chat/completions");
 }
 
 QStringList OpenAiService::getModelsForCurrentBackend() {
@@ -140,17 +142,18 @@ QString OpenAiService::getBackendId() {
     // If no backend id is set yet, try to read the settings
     if (this->_backendId.isEmpty()) {
         QSettings settings;
-        this->_backendId = settings.value(QStringLiteral("ai/currentBackend"), QStringLiteral("groq")).toString();
+        this->_backendId =
+            settings.value(QStringLiteral("ai/currentBackend"), QStringLiteral("groq")).toString();
     }
 
     return this->_backendId;
 }
 
 bool OpenAiService::setModelId(const QString& id) {
-//    if (this->_modelId == id) {
-//        QSettings settings;
-//        this->_modelId = settings.value(getCurrentModelSettingsKey(), id).toString();
-//    }
+    //    if (this->_modelId == id) {
+    //        QSettings settings;
+    //        this->_modelId = settings.value(getCurrentModelSettingsKey(), id).toString();
+    //    }
 
     // Check if model wasn't changed or doesn't exist
     if (this->_modelId == id || !_backendModels[getBackendId()].contains(id)) {
@@ -171,7 +174,8 @@ QString OpenAiService::getModelId() {
     // If not set yet try to read the settings
     if (this->_modelId.isEmpty()) {
         QSettings settings;
-        this->_modelId = settings.value(getCurrentModelSettingsKey(), _backendModels[getBackendId()]).toString();
+        this->_modelId =
+            settings.value(getCurrentModelSettingsKey(), _backendModels[getBackendId()]).toString();
     }
 
     // If still not set get the first of the models
@@ -183,7 +187,8 @@ QString OpenAiService::getModelId() {
 }
 
 QString OpenAiService::getCurrentModelSettingsKey() {
-    return QStringLiteral("ai/") + getBackendId() + QStringLiteral("/") + QStringLiteral("currentModel");
+    return QStringLiteral("ai/") + getBackendId() + QStringLiteral("/") +
+           QStringLiteral("currentModel");
 }
 
 QString OpenAiService::getCurrentApiKeySettingsKey() {
@@ -195,7 +200,7 @@ bool OpenAiService::setEnabled(bool enabled) {
     settings.setValue(QStringLiteral("ai/enabled"), enabled);
 
     return true;
- }
+}
 
 bool OpenAiService::getEnabled() {
     QSettings settings;
@@ -203,6 +208,10 @@ bool OpenAiService::getEnabled() {
 }
 
 QString OpenAiService::complete(const QString& prompt) {
+    if (!getEnabled()) {
+        return tr("AI system is disabled. Please enable it in the main menu or the AI toolbar.");
+    }
+
     return _completer->completeSync(prompt);
 }
 
@@ -243,7 +252,7 @@ void OpenAiCompleter::complete(const QString& prompt) {
 }
 
 QString OpenAiCompleter::completeSync(const QString& prompt) {
-    auto *manager = new QNetworkAccessManager();
+    auto* manager = new QNetworkAccessManager();
     QEventLoop loop;
     QTimer timer;
 
@@ -252,8 +261,8 @@ QString OpenAiCompleter::completeSync(const QString& prompt) {
     QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
     QObject::connect(manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
 
-    // 10 sec timeout for the request
-    timer.start(10000);
+    // 15 sec timeout for the request
+    timer.start(15000);
 
     QUrl url(apiBaseUrl);
     QNetworkRequest request(url);
@@ -276,7 +285,7 @@ QString OpenAiCompleter::completeSync(const QString& prompt) {
     QJsonDocument doc(json);
     QByteArray data = doc.toJson();
 
-    QNetworkReply *reply = manager->post(request, data);
+    QNetworkReply* reply = manager->post(request, data);
     loop.exec();
 
     // if we didn't get a timeout let us return the content
@@ -308,8 +317,8 @@ QString OpenAiCompleter::completeSync(const QString& prompt) {
                 if (message["role"].toString() == "assistant") {
                     text = message["content"].toString();
                 }
-            } else {    // Fallback to directly parse 'text' if present, for backward compatibility or
-                        // other responses
+            } else {    // Fallback to directly parse 'text' if present, for backward compatibility
+                        // or other responses
                 text = firstChoice["text"].toString();
             }
 
@@ -323,7 +332,7 @@ QString OpenAiCompleter::completeSync(const QString& prompt) {
     delete (manager);
 
     // TODO: How to mark timeouts?
-    return {};
+    return tr("Timeout, while waiting for the AI response");
 }
 
 void OpenAiCompleter::setApiBaseUrl(const QString& url) { this->apiBaseUrl = url; }

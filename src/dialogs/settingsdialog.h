@@ -326,6 +326,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_groqApiKeyWebButton_clicked();
 
+    void on_openAiApiKeyWebButton_clicked();
+
    private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;

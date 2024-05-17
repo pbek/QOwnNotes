@@ -690,7 +690,6 @@ var text = script.noteTextEditCurrentWord();
 You may want to take a look at the example
 [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
-
 Read the current block from the note text edit
 ----------------------------------------------
 
@@ -701,14 +700,44 @@ Read the current block from the note text edit
  *
  * @return
  */
-QString ScriptingService::noteTextEditCurrentBlock() {
+QString ScriptingService::noteTextEditCurrentBlock();
 ```
 
 ### Example
 ```js
-// read the current block in the note text edit
+// Read the current block in the note text edit
 var text = script.noteTextEditCurrentBlock();
 ```
+
+You may want to take a look at the example
+[ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+
+Use a completion prompt on the currently selected AI model
+----------------------------------------------------------
+
+The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model.
+
+The AI system needs to be enabled in the AI toolbar or main menu for this to work.
+
+### Method call and parameters
+```cpp
+/**
+ * QML wrapper to use the AI Completer
+ *
+ * @param prompt
+ * @return {QString} the result of the completer
+ */
+QString ScriptingService::aiComplete(const QString& prompt);
+```
+
+### Example
+```js
+// Ask the currently selected AI model to complete the prompt
+var text = script.aiComplete("Tell me how do you feel today?");
+```
+
+You may want to take a look at the example
+[ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
 
 Check whether platform is Linux, OS X or Windows
 ------------------------------------------------

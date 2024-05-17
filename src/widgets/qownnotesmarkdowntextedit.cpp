@@ -625,13 +625,8 @@ QString QOwnNotesMarkdownTextEdit::currentWord(bool withPreviousCharacters) cons
 
 QString QOwnNotesMarkdownTextEdit::currentBlock() const {
     QTextCursor cursor = textCursor();
-
-    if (!cursor.hasSelection()) {
-        QTextBlock currentBlock = cursor.block();
-        return currentBlock.text();
-    }
-
-    return {};
+    QTextBlock currentBlock = cursor.block();
+    return currentBlock.text();
 }
 
 /**

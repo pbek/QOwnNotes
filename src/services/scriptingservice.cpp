@@ -1344,9 +1344,7 @@ QString ScriptingService::noteTextEditCurrentBlock() {
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    return mainWindow != nullptr
-               ? mainWindow->activeNoteTextEdit()->currentBlock()
-               : QString();
+    return mainWindow != nullptr ? mainWindow->activeNoteTextEdit()->currentBlock() : QString();
 #else
     return {};
 #endif
@@ -1410,7 +1408,7 @@ QString ScriptingService::downloadUrlToString(const QUrl &url) {
  * @param prompt
  * @return {QString} the result of the completer
  */
-QString ScriptingService::aiComplete(const QString& prompt) {
+QString ScriptingService::aiComplete(const QString &prompt) {
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
                                                    QString(__func__));
 
