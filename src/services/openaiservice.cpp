@@ -14,14 +14,13 @@
 
 #include "openaiservice.h"
 
-#include <qstringliteral.h>
-
 #include <QCoreApplication>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QNetworkRequest>
 #include <QSettings>
+#include <QStringLiteral>
 #include <QTimer>
 #include <utility>
 
