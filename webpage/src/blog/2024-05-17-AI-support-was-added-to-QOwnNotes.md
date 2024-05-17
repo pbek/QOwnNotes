@@ -10,7 +10,7 @@ order: 20240517000000
 
 <BlogDate v-bind:fm="$frontmatter" />
 
-QOwnNotes now has **AI support**, currently for **[Groq](https://groq.com/)** (because you can get free API keys) and **[OpenAI](https://openai.com/)**!
+QOwnNotes now has **"AI support"**, currently for **[Groq](https://groq.com/)** (because you can get free API keys) and **[OpenAI](https://openai.com/)**! The **OpenAI completion API** was implemented to be used in **scripts**. This way you can do whatever you want with it.
 
 - There is a new **AI toolbar** where can turn the service on, and you can select the AI backend and model
 - As a first step, there is a new script `AI Autocompletion` in the script repository
