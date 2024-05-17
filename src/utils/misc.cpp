@@ -980,7 +980,7 @@ QByteArray Utils::Misc::downloadUrlWithStatusCode(const QUrl &url, int &returnSt
     timer.setSingleShot(true);
 
     QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
-    QObject::connect(manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
+    QObject::connect(manager, SIGNAL(finished(QNetworkReply *)), &loop, SLOT(quit()));
 
     // 10 sec timeout for the request
     timer.start(10000);
