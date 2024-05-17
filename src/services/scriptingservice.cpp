@@ -1409,10 +1409,12 @@ QString ScriptingService::downloadUrlToString(const QUrl &url) {
  * @return {QString} the result of the completer
  */
 QString ScriptingService::aiComplete(const QString &prompt) {
+#ifndef INTEGRATION_TESTS
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
                                                    QString(__func__));
 
     return OpenAiService::instance()->complete(prompt);
+#endif
 }
 
 /**
