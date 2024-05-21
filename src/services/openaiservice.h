@@ -61,10 +61,12 @@ class OpenAiService : public QObject {
     static bool getEnabled();
     QString complete(const QString& prompt);
     void setApiKeyForCurrentBackend();
+    QMap<QString, QString> getBackendNames();
 
    private:
     QMap<QString, QStringList> _backendModels;
     QMap<QString, QString> _backendApiBaseUrls;
+    QMap<QString, QString> _backendNames;
     void initializeBackends();
     static OpenAiService* createInstance(QObject* parent);
     QString _backendId;

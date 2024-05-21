@@ -80,10 +80,17 @@ void OpenAiService::initializeBackends() {
         QStringLiteral("https://api.openai.com/v1/chat/completions");
     _backendApiBaseUrls[QStringLiteral("groq")] =
         QStringLiteral("https://api.groq.com/openai/v1/chat/completions");
+
+    _backendNames[QStringLiteral("groq")] = QStringLiteral("Groq");
+    _backendNames[QStringLiteral("openai")] = QStringLiteral("OpenAI");
 }
 
 QStringList OpenAiService::getModelsForCurrentBackend() {
     return getModelsForBackend(getBackendId());
+}
+
+QMap<QString, QString> OpenAiService::getBackendNames() {
+    return _backendNames;
 }
 
 QString OpenAiService::getApiBaseUrlForCurrentBackend() {

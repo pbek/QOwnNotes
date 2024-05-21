@@ -1129,4 +1129,5 @@ class MainWindow : public QMainWindow {
     void buildAiToolbarAndActions();
     void generateAiBackendComboBox();
     void generateAiModelComboBox();
+    void generateAiBackendMainMenuGroup();
 };

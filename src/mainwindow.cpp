@@ -10344,11 +10344,34 @@ void MainWindow::onAiBackendComboBoxCurrentIndexChanged(int index) {
 void MainWindow::generateAiBackendComboBox() {
     _aiBackendComboBox->blockSignals(true);
     _aiBackendComboBox->clear();
-    _aiBackendComboBox->addItem(QStringLiteral("OpenAI"), QStringLiteral("openai"));
-    _aiBackendComboBox->addItem(QStringLiteral("Groq"), QStringLiteral("groq"));
+    auto backendNames = OpenAiService::instance()->getBackendNames();
+
+    for (const auto& key : backendNames.keys()) {
+        const QString&name = backendNames.value(key);
+        _aiBackendComboBox->addItem(name, key);
+    }
+
     Utils::Gui::setComboBoxIndexByUserData(_aiBackendComboBox,
                                            OpenAiService::instance()->getBackendId());
     _aiBackendComboBox->blockSignals(false);
+}
+
+/**
+ * Puts items into the AI backend main menu group
+ * TODO: Implement MainWindow::generateAiBackendMainMenuGroup
+ */
+void MainWindow::generateAiBackendMainMenuGroup() {
+//    _aiBackendGroup->clear();
+    auto backendNames = OpenAiService::instance()->getBackendNames();
+
+    for (const auto& key : backendNames.keys()) {
+        const QString&name = backendNames.value(key);
+//        _aiBackendGroup->addItem(name, key);
+    }
+
+//    Utils::Gui::setComboBoxIndexByUserData(_aiBackendComboBox,
+//                                           OpenAiService::instance()->getBackendId());
+//    _aiBackendComboBox->blockSignals(false);
 }
 
 /**
@@ -11925,6 +11948,9 @@ void MainWindow::buildAiToolbarAndActions() {
     aiModelWidgetAction->setObjectName(QStringLiteral("actionAiModelComboBox"));
     aiModelWidgetAction->setText(tr("AI model selector"));
     _aiToolbar->addAction(aiModelWidgetAction);
+
+
+//    _aiBackendGroup
 }
 
 void MainWindow::on_actionEnable_AI_toggled(bool arg1) {

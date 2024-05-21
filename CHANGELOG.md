@@ -1,6 +1,7 @@
 # QOwnNotes Changelog
 
 ## 24.5.5
+- Try to fix build on very old build systems again (for [#3026](https://github.com/pbek/QOwnNotes/issues/3026))
 - The scripting command `script.inputDialogGetItem` will now return an empty
   string, if `Cancel` was clicked or `Escape` was pressed
   - For more information please take a look at
