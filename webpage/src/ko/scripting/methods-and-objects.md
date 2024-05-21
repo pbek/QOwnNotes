@@ -1488,6 +1488,8 @@ QString ScriptingService::inputDialogGetItem(
         int current, bool editable);
 ```
 
+`취소`를 클릭하거나 `Escape`을 누르면 빈 문자열이 반환됩니다.
+
 ### 예제
 ```js
 var result = script.inputDialogGetItem(

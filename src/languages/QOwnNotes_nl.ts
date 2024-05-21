@@ -5567,7 +5567,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Create OpenAI API key</source>
-<translation type="unfinished">Create OpenAI API key</translation>
+<translation>OpenAI API-key aanmaken</translation>
 </message>
 <message>
 <source>Groq API key:</source>

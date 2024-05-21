@@ -12,11 +12,11 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-그런 다음 [Qt Creator](https://www.qt.io/download-open-source), 를 다운로드하면 Qt6 (Qt5의 경우 `qtwebsockets` 소켓만 해당) 로 QOwnNotes를 빌드하려면 패키지 `qtwebsockets` 과 `qt5compat`도 필요합니다. Windows에서 빌드할 경우 *MinGw 64-비트*를 고수해야 합니다.
+디버깅을 위해서는 QtCreator를 사용하는 것이 가장 쉽습니다. [Qt Creator](https://www.qt.io/download-qt-installer-oss)를 다운로드할 때 Qt6으로 QOwnNotes를 구축하려면 패키지 `qtwebsockets` 및 `qt5compat` 도 필요합니다 (Qt5의 경우 qtwebsockets 만 해당). Windows에서 빌드할 경우 *MinGw 64-비트*를 고수해야 합니다. 리눅스의 경우 저장소에 QtCreator용 패키지가 있을 가능성이 높습니다.
 
 그런 다음 프로젝트 파일 `src/QOwnNotes.pro`를 열고 **빌드** / **빌드 프로젝트 QOwnNotes**를 클릭합니다.
 
-또는 터미널에서 직접 빌드할 수 있습니다:
+작업 내용을 알고 있으면 터미널에서 직접 QOwnNotes를 작성할 수도 있습니다:
 
 ```bash
 cd src

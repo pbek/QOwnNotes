@@ -1506,6 +1506,8 @@ QString ScriptingService::inputDialogGetItem(
          int bieżący, bool edytowalny);
 ```
 
+An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+
 ### Przykład
 ```js
 var result = script.inputDialogGetItem(

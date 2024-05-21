@@ -2,6 +2,8 @@
 
 ## 24.5.5
 - Try to fix macOS build issue
+- Added more Korean, Dutch translation (thank you, venusgirl, stephanp)
+
 ## 24.5.5
 - Try to fix build on very old build systems again (for [#3026](https://github.com/pbek/QOwnNotes/issues/3026))
 - The scripting command `script.inputDialogGetItem` will now return an empty

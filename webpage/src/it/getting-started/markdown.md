@@ -90,24 +90,24 @@ Se si preme <kbd>Invio</kbd> alla fine di un elenco verrà creato un nuovo eleme
 
 ## Collegamenti
 
-Two of the simpler uses for links are pointing to webpages or other notes. There are multiple ways each of these links can look.
+Due degli usi più semplici sono i collegamenti che puntano a pagine Web o ad altre note. Esistono diversi modi in cui ciascuno di questi collegamenti può apparire.
 
-### External links
+### Collegamenti esterni
 
 ```markdown
-[I'm an inline-style link](https://www.google.com)
+[Sono un collegamento in stile in linea](https://www.google.com)
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+[Sono un collegamento in stile in linea con titolo](https://www.google.com "Home page di Google")
 
-[You can use numbers for reference-style link definitions][1]
+[È possibile utilizzare i numeri per le definizioni dei collegamenti in stile riferimento] [1]
 
-Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
+Gli URL semplici e gli URL tra parentesi angolari verranno automaticamente trasformati in collegamenti nell'anteprima. 
 http://www.example.com oppure <http://www.example.com>
 
 [1]: https://www.qownnotes.org
 ```
 
-### Internal links
+### Collegamenti interni
 
 ```markdown
 [I link to the Journal.md note](Journal.md)
@@ -123,12 +123,12 @@ Usando <kbd>Ctrl + Maiusc + X</kbd> verrà visualizzata una finestra di dialogo 
 Puoi premere <kbd>Ctrl + Spazio</kbd> mentre il cursore si trova su un collegamento nella modifica della nota per seguire il collegamento.
 :::
 
-### Bookmarks
+### Segnalibri
 
 I segnalibri usati dall'estensione del browser [QOwnNotes Web Companion](./browser-extension.md) usano collegamenti in elenchi.
 
 ```markdown
-- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
+- [Nome della pagina web](https://www.example.com) #tag1 #tag2 alcune descrizioni e tag
 ```
 
 ## Immagini
@@ -149,16 +149,16 @@ Puoi anche incollare direttamente un'immagine dagli appunti nella tua nota con <
 ## Codice in linea e blocchi di codice
 
 ```markdown
-Inline `code` has `backticks around` it.
+Il `codice` in linea è circondato da ``backtick''.
 ```
 
 ::: tip
 Puoi utilizzare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Maiusc + C</kbd> sul testo in linea selezionato o solo all'interno del testo per creare un blocco di codice in linea.
 :::
 
-Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
+I blocchi di codice sono delimitati da linee con tre apici inversi o sono rientrati con quattro spazi.
 
-### 4-Spaces fence
+### Delimitazioni con 4 spazi
 
 Aggiungi quattro spazi davanti al codice per contrassegnarlo come blocco di codice.
 
@@ -167,13 +167,13 @@ Aggiungi quattro spazi davanti al codice per contrassegnarlo come blocco di codi
     print s
 ```
 
-### Backtick fence
+### Delimitazioni con apici inversi
 
 Puoi anche usare tre apici inversi per creare un blocco di codice.
 ~~~markdown
 ```
-Code goes here
-Code goes here
+Metti qui il tuo codice sorgente
+Metti qui il tuo codice sorgente
 ```
 ~~~
 

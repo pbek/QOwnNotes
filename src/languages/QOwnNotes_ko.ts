@@ -1222,7 +1222,7 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>복사</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -3590,14 +3590,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <name>OpenAiCompleter</name>
 <message>
 <source>Timeout, while waiting for the AI response</source>
-<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+<translation>AI 응답을 기다리는 동안 시간 초과</translation>
 </message>
 </context>
 <context>
 <name>OpenAiService</name>
 <message>
 <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
+<translation>AI시스템이 비활성화 되었습니다. 기본 메뉴나 AI 도구모음에서 활성화 해주세요.</translation>
 </message>
 </context>
 <context>
@@ -5520,7 +5520,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>OpenAI API key:</source>
-<translation type="unfinished">OpenAI API key:</translation>
+<translation>OpenAI API 키:</translation>
 </message>
 <message>
 <source>Create Groq API key</source>
@@ -5528,7 +5528,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Create OpenAI API key</source>
-<translation type="unfinished">Create OpenAI API key</translation>
+<translation>OpenAI API 키 생성</translation>
 </message>
 <message>
 <source>Groq API key:</source>
