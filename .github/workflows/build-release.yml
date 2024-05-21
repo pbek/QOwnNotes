@@ -350,6 +350,7 @@ jobs:
           key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
 
       - name: '⚙️ Install Qt'
+        # macdeployqt is not found when using jurplel/install-qt-action@v4!
         uses: jurplel/install-qt-action@v3
         with:
           version: ${{env.QT_VERSION}}
