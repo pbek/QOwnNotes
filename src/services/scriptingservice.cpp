@@ -2022,7 +2022,10 @@ QString ScriptingService::inputDialogGetItem(const QString &title, const QString
                                                    QString(__func__));
 
 #ifndef INTEGRATION_TESTS
-    return QInputDialog::getItem(nullptr, title, label, items, current, editable);
+    bool ok;
+    QString result = QInputDialog::getItem(nullptr, title, label, items, current, editable, &ok);
+
+    return ok ? result : QStringLiteral("");
 #else
     Q_UNUSED(title)
     Q_UNUSED(label)

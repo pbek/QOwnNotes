@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 24.5.5
+- The scripting command `script.inputDialogGetItem` will now return an empty
+  string, if `Cancel` was clicked or `Escape` was pressed
+  - For more information please take a look at
+    [Opening an input dialog with a select box](https://www.qownnotes.org/scripting/methods-and-objects.html#opening-an-input-dialog-with-a-select-box)
+
 ## 24.5.4
 - Try to fix build on very old build systems (for [#3026](https://github.com/pbek/QOwnNotes/issues/3026))
 - Added more Dutch, Korean, Swedish, French translation (thank you, stephanp,
