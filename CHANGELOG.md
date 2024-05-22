@@ -9,6 +9,8 @@
   string, if `Cancel` was clicked or `Escape` was pressed
   - For more information please take a look at
     [Opening an input dialog with a line edit](https://www.qownnotes.org/scripting/methods-and-objects.html#opening-an-input-dialog-with-a-line-edit)
+- The macOS build is now also done with `jurplel/install-qt-action@v4` like the Windows,
+  AppImage and Snap builds  (for [#3031](https://github.com/pbek/QOwnNotes/issues/3031))
 
 ## 24.5.6
 - Try to fix macOS build issue
