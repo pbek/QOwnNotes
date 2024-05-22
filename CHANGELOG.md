@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 24.5.5
+## 24.5.6
 - Try to fix macOS build issue
 - Added more Korean, Dutch translation (thank you, venusgirl, stephanp)
 
