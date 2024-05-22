@@ -259,6 +259,7 @@ jobs:
       name: Build QOwnNotes for macOS with qmake fix
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE -early QMAKE_DEFAULT_LIBDIRS=$(xcrun -show-sdk-path)/usr/lib && make -j 8
+        ../build-systems/github/macos/create-dmg.sh
 #    - if: contains( matrix.os, 'ubuntu-22')
 #      name: Build QOwnNotes Ubuntu 20.04
 #      run: |

@@ -1,5 +1,11 @@
 #!/bin/sh
 
+echo "Qt5_Dir ${Qt5_Dir}:"
+find ${Qt5_Dir}
+
+echo "QTDIR ${QTDIR}:"
+find ${QTDIR}
+
 #
 # creating the QOwnNotes.dmg with Applications link for GitHub Actions
 #
