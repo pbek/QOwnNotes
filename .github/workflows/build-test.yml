@@ -163,7 +163,7 @@ jobs:
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
-        arch: win64_mingw81
+        arch: win64_mingw
         modules: qtwebsockets qt5compat
         cache: true
     - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && matrix.qt-version != '6.2.4'
