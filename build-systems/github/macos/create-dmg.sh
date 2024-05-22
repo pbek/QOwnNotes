@@ -2,11 +2,11 @@
 
 env
 
-echo "Qt5_Dir ${Qt5_Dir}:"
-find ${Qt5_Dir}
+echo "Qt5_DIR ${Qt5_DIR}:"
+find ${Qt5_DIR}
 
-echo "QTDIR ${QTDIR}:"
-find ${QTDIR}
+echo "QT_ROOT_DIR ${QT_ROOT_DIR}:"
+find ${QT_ROOT_DIR}
 
 #
 # creating the QOwnNotes.dmg with Applications link for GitHub Actions
@@ -39,8 +39,8 @@ rm -f ${PLIST}-e
 
 # copy translation files to app
 cp languages/*.qm $APP.app/Contents/Resources
-cp ${Qt5_Dir}/translations/qtbase_*.qm $APP.app/Contents/Resources
-#cp ${Qt5_Dir}/translations/qt_*.qm $APP.app/Contents/Resources
+cp ${Qt5_DIR}/translations/qtbase_*.qm $APP.app/Contents/Resources
+#cp ${Qt5_DIR}/translations/qt_*.qm $APP.app/Contents/Resources
 #rm $APP.app/Contents/Resources/qt_help_*.qm
 
 # copy updater script to app
@@ -49,7 +49,7 @@ cp ${Qt5_Dir}/translations/qtbase_*.qm $APP.app/Contents/Resources
 
 # use macdeployqt to deploy the application
 echo "Calling macdeployqt"
-${Qt5_Dir}/bin/macdeployqt ./$APP.app
+${Qt5_DIR}/bin/macdeployqt ./$APP.app
 if [ "$?" -ne "0" ]; then
     echo "Failed to run macdeployqt"
     exit 1
