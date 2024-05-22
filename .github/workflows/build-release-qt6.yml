@@ -101,20 +101,13 @@ jobs:
         with:
           submodules: recursive
 
-      - name: '⚙️ Cache Qt'
-        id: cache-qt
-        uses: actions/cache@v4
-        with:
-          path: ../Qt
-          key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
-
       - name: '⚙️ Install Qt'
         uses: jurplel/install-qt-action@v4
         with:
           version: ${{env.QT_VERSION}}
           modules: ${{env.QT_MODULES}}
           aqtversion: '==2.0.0'
-          cache: ${{steps.cache-qt.outputs.cache-hit}}
+          cache: true
 
       - name: '⚙️ Install dependencies'
         run: |
@@ -207,20 +200,13 @@ jobs:
           export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
-      - name: '⚙️ Cache Qt'
-        id: cache-qt
-        uses: actions/cache@v4
-        with:
-          path: ../Qt
-          key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
-
       - name: '⚙️ Install Qt'
         uses: jurplel/install-qt-action@v4
         with:
           version: ${{env.QT_VERSION}}
           modules: ${{env.QT_MODULES}}
           aqtversion: '==2.0.0'
-          cache: ${{steps.cache-qt.outputs.cache-hit}}
+          cache: true
 
       - name: '⚙️ Printenv'
         shell: bash
@@ -284,13 +270,6 @@ jobs:
         with:
           submodules: recursive
 
-      - name: '⚙️ Cache Qt'
-        id: cache-qt
-        uses: actions/cache@v4
-        with:
-          path: ../Qt
-          key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
-
       - name: '⚙️ Install Qt'
         uses: jurplel/install-qt-action@v4
         with:
@@ -301,7 +280,7 @@ jobs:
           # https://ddalcino.github.io/aqt-list-server/
           arch: win64_mingw
           modules: ${{env.QT_MODULES}}
-          cache: ${{ steps.cache-qt.outputs.cache-hit }}
+          cache: true
 
       - name: '⚙️ Set Env'
         shell: bash
@@ -368,20 +347,13 @@ jobs:
           submodules: recursive
 
       # https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
-      - name: '⚙️ Cache Qt'
-        id: cache-qt
-        uses: actions/cache@v4
-        with:
-          path: ../Qt
-          key: ${{runner.os}}-qtcachedir-${{env.QT_VERSION}}
-
       - name: '⚙️ Install Qt'
         uses: jurplel/install-qt-action@v4
         with:
           version: ${{env.QT_VERSION}}
           modules: ${{env.QT_MODULES}}
           aqtversion: '==2.0.0'
-          cache: ${{steps.cache-qt.outputs.cache-hit}}
+          cache: true
 
       - name: '⚙️ Set Env'
         shell: bash
