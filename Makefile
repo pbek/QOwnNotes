@@ -1,4 +1,5 @@
 .PHONY: translations-build translations-download translations-upload translations-update-files nix-build nix-build-force
+TRANSFER_DIR := $(shell if [ -d "$(HOME)/NextcloudPrivate/Transfer" ]; then echo "$(HOME)/NextcloudPrivate/Transfer"; else echo "$(HOME)/Nextcloud/Transfer"; fi)
 
 translations-build:
 	lrelease src/QOwnNotes.pro
@@ -49,3 +50,11 @@ git-apply-qownnotes-patch:
 
 git-apply-qmarkdowntextedit-patch:
 	cd ./src/libraries/qmarkdowntextedit && git apply ~/Nextcloud/Transfer/qmarkdowntextedit.patch
+
+git-create-patch:
+	@echo "TRANSFER_DIR: ${TRANSFER_DIR}"; \
+	git diff --no-ext-diff --staged --binary > ${TRANSFER_DIR}/qownnotes.patch; \
+	cd src/libraries/qmarkdowntextedit && git diff --no-ext-diff --staged --binary > ${TRANSFER_DIR}/qmarkdowntextedit.patch; \
+	cd ../piwiktracker && git diff --no-ext-diff --staged  --binary > ${TRANSFER_DIR}/piwiktracker.patch; \
+	cd ../qttoolbareditor && git diff --no-ext-diff --staged  --binary > ${TRANSFER_DIR}/qttoolbareditor.patch; \
+	ls -l1t ${TRANSFER_DIR} | head -5
