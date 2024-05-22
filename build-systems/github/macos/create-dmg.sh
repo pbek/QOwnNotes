@@ -1,5 +1,7 @@
 #!/bin/sh
 
+env
+
 echo "Qt5_Dir ${Qt5_Dir}:"
 find ${Qt5_Dir}
 
