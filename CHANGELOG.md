@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 24.5.7
+- There now is a new scripting command `script.inputDialogGetMultiLineText` to open an
+  input dialog with a multi-line text edit
+  - For more information please take a look at
+    [Opening an input dialog with a multi-line text edit](https://www.qownnotes.org/scripting/methods-and-objects.html#opening-an-input-dialog-with-a-multi-line-text-edit)
+- The scripting command `script.inputDialogGetText` will now return an empty
+  string, if `Cancel` was clicked or `Escape` was pressed
+  - For more information please take a look at
+    [Opening an input dialog with a line edit](https://www.qownnotes.org/scripting/methods-and-objects.html#opening-an-input-dialog-with-a-line-edit)
+
 ## 24.5.6
 - Try to fix macOS build issue
 - Added more Korean, Dutch translation (thank you, venusgirl, stephanp)

@@ -2050,7 +2050,36 @@ QString ScriptingService::inputDialogGetText(const QString &title, const QString
                                                    QString(__func__));
 
 #ifndef INTEGRATION_TESTS
-    return QInputDialog::getText(nullptr, title, label, QLineEdit::Normal, text);
+    bool ok;
+    QString result = QInputDialog::getText(nullptr, title, label, QLineEdit::Normal, text, &ok);
+
+    return ok ? result : QStringLiteral("");
+#else
+    Q_UNUSED(title)
+    Q_UNUSED(label)
+    Q_UNUSED(text)
+    return QString();
+#endif
+}
+
+/**
+ * Opens an input dialog with a multi-line text edit
+ *
+ * @param title {QString} title of the dialog
+ * @param label {QString} label text of the dialog
+ * @param text {QString} text in the dialog (optional)
+ * @return
+ */
+QString ScriptingService::inputDialogGetMultiLineText(const QString &title, const QString &label,
+                                                      const QString &text) {
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
+                                                   QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    bool ok;
+    QString result = QInputDialog::getMultiLineText(nullptr, title, label, text, &ok);
+
+    return ok ? result : QStringLiteral("");
 #else
     Q_UNUSED(title)
     Q_UNUSED(label)

@@ -159,6 +159,9 @@ class ScriptingService : public QObject {
     Q_INVOKABLE QString inputDialogGetText(const QString &title, const QString &label,
                                            const QString &text = QString());
 
+    Q_INVOKABLE QString inputDialogGetMultiLineText(const QString &title, const QString &label,
+                                                    const QString &text = QString());
+
     Q_INVOKABLE void setPersistentVariable(const QString &key, const QVariant &value);
 
     Q_INVOKABLE void addHighlightingRule(const QString &pattern, const QString &shouldContain,
