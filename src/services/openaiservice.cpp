@@ -89,9 +89,7 @@ QStringList OpenAiService::getModelsForCurrentBackend() {
     return getModelsForBackend(getBackendId());
 }
 
-QMap<QString, QString> OpenAiService::getBackendNames() {
-    return _backendNames;
-}
+QMap<QString, QString> OpenAiService::getBackendNames() { return _backendNames; }
 
 QString OpenAiService::getApiBaseUrlForCurrentBackend() {
     auto backendId = getBackendId();

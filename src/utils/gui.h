@@ -18,6 +18,7 @@
 
 #include <QFontDialog>
 #include <QMessageBox>
+#include <QtWidgets/QMenu>
 
 class QTreeWidgetItem;
 class QTreeWidget;
@@ -153,5 +154,6 @@ void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, const Tag &tag);
 void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, int tag);
 bool enableDockWidgetQuestion(QDockWidget *dockWidget);
 void fixDarkModeIcons(QWidget *widget);
+QAction *findActionByData(QMenu *menu, const QVariant &data);
 }    // namespace Gui
 }    // namespace Utils

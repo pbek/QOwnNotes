@@ -532,6 +532,8 @@ class MainWindow : public QMainWindow {
 
     void onAiModelComboBoxCurrentIndexChanged(int index);
 
+    void onAiModelGroupChanged(QAction *action);
+
     void on_actionRemove_current_workspace_triggered();
 
     void on_actionRename_current_workspace_triggered();
@@ -652,7 +654,7 @@ class MainWindow : public QMainWindow {
 
     void onLanguageChanged(QAction *action);
 
-    void onBackendChanged(QAction *action);
+    void onSpellBackendChanged(QAction *action);
 
     void on_actionManage_dictionaries_triggered();
 
@@ -833,7 +835,6 @@ class MainWindow : public QMainWindow {
     WebAppClientService *_webAppClientService;
     QActionGroup *_languageGroup;
     QActionGroup *_spellBackendGroup;
-    QActionGroup *_aiBackendGroup;
     QActionGroup *_aiModelGroup;
     bool _brokenTagNoteLinksRemoved = false;
 
@@ -1129,5 +1130,6 @@ class MainWindow : public QMainWindow {
     void buildAiToolbarAndActions();
     void generateAiBackendComboBox();
     void generateAiModelComboBox();
-    void generateAiBackendMainMenuGroup();
+    void generateAiModelMainMenu();
+    void aiModelMainMenuSetCurrentItem();
 };

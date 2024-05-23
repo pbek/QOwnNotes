@@ -1168,7 +1168,6 @@ void MainWindow::initToolbars() {
     _encryptionToolbar->setObjectName(QStringLiteral("encryptionToolbar"));
     addToolBar(_encryptionToolbar);
 
-    _aiBackendGroup = new QActionGroup(ui->menuAI_backend);
     _aiModelGroup = new QActionGroup(ui->menuAI_model);
 
     _aiToolbar = new QToolBar(tr("AI toolbar"), this);
@@ -2465,10 +2464,6 @@ void MainWindow::readSettings() {
     }
 
     loadNoteBookmarks();
-
-    // TODO: Enable AI menu, when done
-    ui->menuAI_backend->setEnabled(false);
-    ui->menuAI_model->setEnabled(false);
     buildAiToolbarAndActions();
 }
 
@@ -10335,6 +10330,7 @@ void MainWindow::onAiBackendComboBoxCurrentIndexChanged(int index) {
 
     if (OpenAiService::instance()->setBackendId(backendId)) {
         generateAiModelComboBox();
+        aiModelMainMenuSetCurrentItem();
     }
 }
 
@@ -10346,8 +10342,8 @@ void MainWindow::generateAiBackendComboBox() {
     _aiBackendComboBox->clear();
     auto backendNames = OpenAiService::instance()->getBackendNames();
 
-    for (const auto& key : backendNames.keys()) {
-        const QString&name = backendNames.value(key);
+    for (const auto &key : backendNames.keys()) {
+        const QString &name = backendNames.value(key);
         _aiBackendComboBox->addItem(name, key);
     }
 
@@ -10357,21 +10353,48 @@ void MainWindow::generateAiBackendComboBox() {
 }
 
 /**
- * Puts items into the AI backend main menu group
- * TODO: Implement MainWindow::generateAiBackendMainMenuGroup
+ * Puts items into the AI model main menu
  */
-void MainWindow::generateAiBackendMainMenuGroup() {
-//    _aiBackendGroup->clear();
-    auto backendNames = OpenAiService::instance()->getBackendNames();
+void MainWindow::generateAiModelMainMenu() {
+    QMap<QString, QString> backendNames = OpenAiService::instance()->getBackendNames();
+    _aiModelGroup->setExclusive(true);
 
-    for (const auto& key : backendNames.keys()) {
-        const QString&name = backendNames.value(key);
-//        _aiBackendGroup->addItem(name, key);
+    for (const auto &backendId : backendNames.keys()) {
+        const QString &backendName = backendNames.value(backendId);
+
+        // Create a submenu for the backend models
+        auto *modelSubMenu = new QMenu(backendName, ui->menuAI_model);
+
+        // Retrieve models for the current backend
+        QStringList models = OpenAiService::instance()->getModelsForBackend(backendId);
+
+        // Add each model as an action to the submenu
+        for (const QString &modelId : models) {
+            auto *modelAction = new QAction(modelId, modelSubMenu);
+            modelAction->setData(QStringList() << backendId << modelId);
+            modelSubMenu->addAction(modelAction);
+            modelAction->setActionGroup(_aiModelGroup);
+            modelAction->setCheckable(true);
+        }
+
+        // Add the submenu to the main menu
+        ui->menuAI_model->addMenu(modelSubMenu);
     }
 
-//    Utils::Gui::setComboBoxIndexByUserData(_aiBackendComboBox,
-//                                           OpenAiService::instance()->getBackendId());
-//    _aiBackendComboBox->blockSignals(false);
+    connect(_aiModelGroup, &QActionGroup::triggered, this, &MainWindow::onAiModelGroupChanged);
+}
+
+void MainWindow::aiModelMainMenuSetCurrentItem() {
+    auto currentBackendId = OpenAiService::instance()->getBackendId();
+    auto currentModelId = OpenAiService::instance()->getModelId();
+    auto action = Utils::Gui::findActionByData(ui->menuAI_model,
+                                               QStringList() << currentBackendId << currentModelId);
+
+    if (action) {
+        _aiModelGroup->blockSignals(true);
+        action->setChecked(true);
+        _aiModelGroup->blockSignals(false);
+    }
 }
 
 /**
@@ -10381,6 +10404,21 @@ void MainWindow::onAiModelComboBoxCurrentIndexChanged(int index) {
     Q_UNUSED(index)
 
     const QString modelId = _aiModelComboBox->currentData().toString();
+
+    if (OpenAiService::instance()->setModelId(modelId)) {
+        generateAiModelComboBox();
+        aiModelMainMenuSetCurrentItem();
+    }
+}
+
+void MainWindow::onAiModelGroupChanged(QAction *action) {
+    const auto data = action->data().toStringList();
+    const auto &backendId = data[0];
+    const auto &modelId = data[1];
+
+    if (OpenAiService::instance()->setBackendId(backendId)) {
+        generateAiBackendComboBox();
+    }
 
     if (OpenAiService::instance()->setModelId(modelId)) {
         generateAiModelComboBox();
@@ -11565,7 +11603,7 @@ void MainWindow::loadSpellingBackends() {
         settings.value(QStringLiteral("spellCheckBackend"), QStringLiteral("Hunspell")).toString();
 
     _spellBackendGroup->setExclusive(true);
-    connect(_spellBackendGroup, &QActionGroup::triggered, this, &MainWindow::onBackendChanged);
+    connect(_spellBackendGroup, &QActionGroup::triggered, this, &MainWindow::onSpellBackendChanged);
 
     QAction *hs = ui->menuSpelling_backend->addAction(QStringLiteral("Hunspell"));
     hs->setCheckable(true);
@@ -11583,7 +11621,7 @@ void MainWindow::loadSpellingBackends() {
     }
 }
 
-void MainWindow::onBackendChanged(QAction *action) {
+void MainWindow::onSpellBackendChanged(QAction *action) {
     QString backend = action->data().toString();
     QSettings settings;
     settings.setValue(QStringLiteral("spellCheckBackend"), backend);
@@ -11949,8 +11987,8 @@ void MainWindow::buildAiToolbarAndActions() {
     aiModelWidgetAction->setText(tr("AI model selector"));
     _aiToolbar->addAction(aiModelWidgetAction);
 
-
-//    _aiBackendGroup
+    generateAiModelMainMenu();
+    aiModelMainMenuSetCurrentItem();
 }
 
 void MainWindow::on_actionEnable_AI_toggled(bool arg1) {

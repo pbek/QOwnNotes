@@ -1119,11 +1119,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <string>Spelling backend</string>
      </property>
     </widget>
-    <widget class="QMenu" name="menuAI_backend">
-     <property name="title">
-      <string>AI backend</string>
-     </property>
-    </widget>
     <widget class="QMenu" name="menuAI_model">
      <property name="title">
       <string>AI model</string>
@@ -1152,7 +1147,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <addaction name="actionManage_dictionaries"/>
     <addaction name="separator"/>
     <addaction name="actionEnable_AI"/>
-    <addaction name="menuAI_backend"/>
     <addaction name="menuAI_model"/>
    </widget>
    <widget class="QMenu" name="menuTodo">

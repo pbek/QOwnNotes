@@ -1228,3 +1228,24 @@ void Utils::Gui::fixDarkModeIcons(QWidget *widget) {
         }
     }
 }
+
+QAction *Utils::Gui::findActionByData(QMenu *menu, const QVariant &data) {
+    // Iterate through all actions in the menu
+    for (QAction *action : menu->actions()) {
+        // Check if the action's data matches the desired data
+        if (action->data() == data) {
+            return action;
+        }
+
+        // Check if the action is a submenu
+        if (QMenu *subMenu = action->menu()) {
+            // Recursively search in the submenu
+            QAction *foundAction = findActionByData(subMenu, data);
+            if (foundAction) {
+                return foundAction;
+            }
+        }
+    }
+    // Return nullptr if no matching action is found
+    return nullptr;
+}

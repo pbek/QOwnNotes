@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.5.8
+- You can now also select an AI model to use in the *Edit* main menu, instead of
+  only in the AI toolbar (for [#3026](https://github.com/pbek/QOwnNotes/issues/3026))
+
 ## 24.5.7
 - There now is a new scripting command `script.inputDialogGetMultiLineText` to open an
   input dialog with a multi-line text edit
