@@ -243,7 +243,7 @@ script.regenerateNotePreview();
 
 Misschien wilt u het voorbeeld bekijken [scribble.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml).
 
-Registering a custom action
+Een aangepaste actie registreren
 ---------------------------
 
 ### Methodeaanroep en parameters
@@ -275,7 +275,7 @@ void ScriptingService :: registerCustomAction (QString identifier,
 ```
 
 ::: tip
-U kunt ook lokale en algemene snelkoppelingen aan uw aangepaste acties toewijzen in de *Shortcuts settings*.
+U kunt ook lokale en algemene snelkoppelingen aan uw aangepaste acties toewijzen in de *Sneltoets-instellingen*.
 :::
 
 ::: warning
@@ -591,7 +591,7 @@ int ScriptingService::noteTextEditSelectionEnd();
 script.log(script.noteTextEditSelectionEnd());
 ```
 
-Set the text cursor in the note text edit to a certain position
+Plaats de tekstcursor op een bepaalde positie in de notitie-bewerking
 ---------------------------------------------------------------
 
 ### Methodeaanroep en parameters
@@ -1506,7 +1506,7 @@ QString ScriptingService::inputDialogGetItem(
         int current, bool editable);
 ```
 
-An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+Er wordt een lege tekenreeks geretourneerd als op `Annuleren` is geklikt of `Escape` is getoetst.
 
 ### Voorbeeld
 ```js
@@ -1534,10 +1534,38 @@ QString ScriptingService::inputDialogGetText(
         const QString &title, const QString &label, const QString &text);
 ```
 
+Er wordt een lege tekenreeks geretourneerd als op `Annuleren` is geklikt of `Escape` is getoetst.
+
 ### Voorbeeld
 ```js
 var result = script.inputDialogGetText(
     "line edit", "Please enter a name", "current text");
+script.log(result);
+```
+
+Een invoerdialoog openen met een tekstbewerking met meerdere regels
+---------------------------------------------------
+
+### Methodeaanroep en parameters
+```cpp
+/**
+ * Opens an input dialog with a multi-line text edit
+ *
+ * @param title {QString} title of the dialog
+ * @param label {QString} label text of the dialog
+ * @param text {QString} text in the dialog (optional)
+ * @return
+ */
+QString ScriptingService::inputDialogGetMultiLineText(
+        const QString &title, const QString &label, const QString &text);
+```
+
+Er wordt een lege tekenreeks geretourneerd als op `Annuleren` is geklikt of `Escape` is getoetst.
+
+### Voorbeeld
+```js
+var result = script.inputDialogGetMultiLineText(
+    "multi-line edit", "Voer een tekst in", "huidige tekst");
 script.log(result);
 ```
 

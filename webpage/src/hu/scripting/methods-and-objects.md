@@ -1532,10 +1532,38 @@ QString ScriptingService::inputDialogGetText(
         const QString &title, const QString &label, const QString &text);
 ```
 
+An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+
 ### Példa
 ```js
 var result = script.inputDialogGetText(
     "line edit", "Kérjük, adjon meg egy nevet", "current text");
+script.log(result);
+```
+
+Opening an input dialog with a multi-line text edit
+---------------------------------------------------
+
+### Módszerhívás és paraméterek
+```cpp
+/**
+ * Opens an input dialog with a multi-line text edit
+ *
+ * @param title {QString} title of the dialog
+ * @param label {QString} label text of the dialog
+ * @param text {QString} text in the dialog (optional)
+ * @return
+ */
+QString ScriptingService::inputDialogGetMultiLineText(
+        const QString &title, const QString &label, const QString &text);
+```
+
+An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+
+### Példa
+```js
+var result = script.inputDialogGetMultiLineText(
+    "multi-line edit", "Please enter a text", "current text");
 script.log(result);
 ```
 
@@ -1561,7 +1589,7 @@ script.log(result);
 Szöveg olvasása egy fájlból
 ------------------------
 
-### Módszerhívás és paraméterek
+### Method call and parameters
 ```cpp
 /**
   * Szöveg olvasása egy fájlból
@@ -1573,7 +1601,7 @@ Szöveg olvasása egy fájlból
 QString ScriptingService::readFromFile (const QString & filePath, const QString & kodek)
 ```
 
-### Példa
+### Example
 ```js
 if(script.fileExists(filePath)){
     var data = script.readFromFile(filePath);

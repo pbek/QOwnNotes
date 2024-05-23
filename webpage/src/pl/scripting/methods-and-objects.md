@@ -1534,6 +1534,8 @@ QString ScriptingService::inputDialogGetText(
          const QString i tytuł, const QString i etykieta, const QString i tekst);
 ```
 
+An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+
 ### Przykład
 ```js
 var result = script.inputDialogGetText(
@@ -1541,10 +1543,36 @@ var result = script.inputDialogGetText(
 script.log(result);
 ```
 
+Opening an input dialog with a multi-line text edit
+---------------------------------------------------
+
+### Wywołanie metody i parametry
+```cpp
+/**
+ * Opens an input dialog with a multi-line text edit
+ *
+ * @param title {QString} title of the dialog
+ * @param label {QString} label text of the dialog
+ * @param text {QString} text in the dialog (optional)
+ * @return
+ */
+QString ScriptingService::inputDialogGetMultiLineText(
+        const QString &title, const QString &label, const QString &text);
+```
+
+An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+
+### Przykład
+```js
+var result = script.inputDialogGetMultiLineText(
+    "multi-line edit", "Please enter a text", "current text");
+script.log(result);
+```
+
 Sprawdzanie, czy plik istnieje
 -------------------------
 
-### Wywołanie metody i parametry
+### Metoda wywołania i parametry
 ```cpp
 /**
  * Sprawdź, czy plik istnieje
@@ -1563,7 +1591,7 @@ script.log(result);
 Czytanie tekstu z pliku
 ------------------------
 
-### Metoda wywołania i parametry
+### Method call and parameters
 ```cpp
 /**
   * Czytaj tekst z pliku
@@ -1575,7 +1603,7 @@ Czytanie tekstu z pliku
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
 ```
 
-### Przykład
+### Example
 ```js
 if(script.fileExists(filePath)){
     var data = script.readFromFile(filePath);

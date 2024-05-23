@@ -1219,7 +1219,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>สำเนา</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1839,10 +1839,6 @@
 <message>
 <source>Spelling backend</source>
 <translation>การสะกดคำแบ็กเอนด์</translation>
-</message>
-<message>
-<source>AI backend</source>
-<translation type="unfinished">AI backend</translation>
 </message>
 <message>
 <source>AI model</source>

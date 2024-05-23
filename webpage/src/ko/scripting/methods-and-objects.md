@@ -1516,10 +1516,38 @@ QString ScriptingService::inputDialogGetText(
         const QString &title, const QString &label, const QString &text);
 ```
 
+`취소`를 클릭하거나 `Escape`을 누르면 빈 문자열이 반환됩니다.
+
 ### 예제
 ```js
 var result = script.inputDialogGetText(
     "line edit", "Please enter a name", "current text");
+script.log(result);
+```
+
+여러 줄의 텍스트 편집으로 입력 대화상자 열기
+---------------------------------------------------
+
+### 메서드 호출 및 매개 변수
+```cpp
+/**
+ * 여러 줄의 텍스트 편집으로 입력 대화 상자 열기
+ *
+ * @param title {QString} title of the dialog
+ * @param label {QString} label text of the dialog
+ * @param text {QString} text in the dialog (optional)
+ * @return
+ */
+QString ScriptingService::inputDialogGetMultiLineText(
+        const QString &title, const QString &label, const QString &text);
+```
+
+`취소`를 클릭하거나 `Escape`을 누르면 빈 문자열이 반환됩니다.
+
+### 예제
+```js
+var result = script.inputDialogGetMultiLineText(
+    "multi-line edit", "Please enter a text", "current text");
 script.log(result);
 ```
 

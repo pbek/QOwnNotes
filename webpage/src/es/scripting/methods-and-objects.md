@@ -1532,10 +1532,38 @@ QString ScriptingService::inputDialogGetText(
         const QString &title, const QString &label, const QString &text);
 ```
 
+Se devolverá una cadena vacía si se pulsa en `Cancelar` o se presiona `Escape`.
+
 ### Ejemplo
 ```js
 var result = script.inputDialogGetText(
     "line edit", "Por favor ingresa un nombre", "current text");
+script.log(result);
+```
+
+Abrir un diálogo de entrada con un editor de texto multirrenglón
+---------------------------------------------------
+
+### Parámetros y llamada al método
+```cpp
+/**
+ * Opens an input dialog with a multi-line text edit
+ *
+ * @param title {QString} title of the dialog
+ * @param label {QString} label text of the dialog
+ * @param text {QString} text in the dialog (optional)
+ * @return
+ */
+QString ScriptingService::inputDialogGetMultiLineText(
+        const QString &title, const QString &label, const QString &text);
+```
+
+An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+
+### Ejemplo
+```js
+var result = script.inputDialogGetMultiLineText(
+    "multi-line edit", "Please enter a text", "current text");
 script.log(result);
 ```
 
@@ -1561,7 +1589,7 @@ script.log(result);
 Leer texto de un archivo
 ------------------------
 
-### Parámetros y llamada al método
+### Method call and parameters
 ```cpp
 /**
  * Leer texto de un archivo
@@ -1573,7 +1601,7 @@ Leer texto de un archivo
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
 ```
 
-### Ejemplo
+### Example
 ```js
 if(script.fileExists(filePath)){
     var data = script.readFromFile(filePath);
@@ -1672,7 +1700,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | CheckBoxChecked            | 30  |
 | StUnderline                | 31  |
 
-### Example
+### Ejemplo
 ```js
 // Highlight a text line like "BLOCK: some text" as blockquote (state 18)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);

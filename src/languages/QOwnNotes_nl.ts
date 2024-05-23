@@ -1221,7 +1221,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopie</translation>
+<translation>Kopiëren</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1845,10 +1845,6 @@
 <message>
 <source>Spelling backend</source>
 <translation>Spelling backend</translation>
-</message>
-<message>
-<source>AI backend</source>
-<translation>AI-backend</translation>
 </message>
 <message>
 <source>AI model</source>

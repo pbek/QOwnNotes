@@ -1844,10 +1844,6 @@ File: QOwnNotes_en.ts</translation>
 <translation>맟춤법 백엔드</translation>
 </message>
 <message>
-<source>AI backend</source>
-<translation>AI 백엔드</translation>
-</message>
-<message>
 <source>AI model</source>
 <translation>AI 모델</translation>
 </message>

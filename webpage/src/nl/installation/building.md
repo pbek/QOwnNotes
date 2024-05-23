@@ -1,4 +1,4 @@
-# Building QOwnNotes
+# QOwnNotes bouwen
 
 ## Bouwen vanuit GitHub
 
@@ -12,11 +12,11 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-For debugging, it's easiest to use QtCreator. When downloading [Qt Creator](https://www.qt.io/download-qt-installer-oss), you will also need the packages `qtwebsockets` and `qt5compat` to build QOwnNotes with Qt6 (only `qtwebsockets` for Qt5). If you build under Windows, you want to stick to *MinGw 64-bit*. On Linux, you most likely have a package for QtCreator in your repository.
+Voor foutopsporing is het het gemakkelijkst om QtCreator te gebruiken. Bij het downloaden van [Qt Creator](https://www.qt.io/download-qt-installer-oss), zul je ook de pakketten `qtwebsockets` en `qt5compat` nodig hebben om QOwnNotes met Qt6 te bouwen (alleen`qtwebsockets` voor Qt5). Als je onder Windows bouwt, blijf dan bij *MinGw 64-bit*. Op Linux heb je waarschijnlijk een pakket voor QtCreator in je repository.
 
-Afterward open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
+Open daarna het projectbestand `src/QOwnNotes.pro` en klik op **Build** / **Build Project QOwnNotes**.
 
-If you k now what you are doing, you can also build QOwnNotes directly in your terminal:
+Als je weet wat je doet, kun je ook QOwnNotes rechtstreeks in je terminal bouwen:
 
 ```bash
 cd src
@@ -29,7 +29,7 @@ qmake
 make
 ```
 
-Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
+Voel je vrij om broncode aan dit project bij te dragen, suggesties te doen of meld problemen met de [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
 
 Bezoek [QOwnNotes op GitHub](https://github.com/pbek/QOwnNotes).
 

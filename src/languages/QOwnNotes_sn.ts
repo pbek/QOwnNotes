@@ -1853,10 +1853,6 @@
 <translation>Chiperengo backend</translation>
 </message>
 <message>
-<source>AI backend</source>
-<translation type="unfinished">AI backend</translation>
-</message>
-<message>
 <source>AI model</source>
 <translation type="unfinished">AI model</translation>
 </message>
