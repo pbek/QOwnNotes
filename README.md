@@ -97,6 +97,7 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 - **tabbing support** for editing notes
 - scripting support and an online [script repository](https://github.com/qownnotes/scripts)
   where you can install scripts inside the application
+- implementation of the **[OpenAI completion API](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** to be used in scripts
 - [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
   to a add notes from the selected text and other features
 	- visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)

@@ -10,14 +10,24 @@ order: 20240517000000
 
 <BlogDate v-bind:fm="$frontmatter" />
 
-QOwnNotes now has **"AI support"**, currently for **[Groq](https://groq.com/)** (because you can get free API keys) and **[OpenAI](https://openai.com/)**! The **OpenAI completion API** was implemented to be used in **scripts**. This way you can do whatever you want with it.
+QOwnNotes now has **"AI support"** as part of [#3026](https://github.com/pbek/QOwnNotes/issues/3026),
+currently for **[Groq](https://groq.com/)** (because you can get free API keys) and **[OpenAI](https://openai.com/)**!
 
-- There is a new **AI toolbar** where can turn the service on, and you can select the AI backend and model
+The **OpenAI completion API** was implemented to be used in **scripts**.
+This way you can do whatever you want and experiment with it.
+
+- There is a new **AI toolbar** and a section in the **Edit main menu**, where can turn
+  the service on, and you can select the AI backend and model
 - As a first step, there is a new script `AI Autocompletion` in the script repository
   that uses the selected AI model to **autocomplete the current block** in the note text edit
-- You can now add a [OpenAI](https://openai.com/) and [Groq](https://groq.com/) API key in the new *AI settings*
+- You can add an [OpenAI](https://openai.com/) and [Groq](https://groq.com/) API key in the new *AI settings*
 - Use the new `script.aiComplete(prompt)` scripting command to your own imagination
   - For more information please take a look at the
     [Scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#use-a-completion-prompt-on-the-currently-selected-ai-model)
+- In the **script repository**, there is also a new script [AI Autocompletion](https://github.com/qownnotes/scripts/tree/master/ai-autocompletion)
+  that uses the selected AI model to **autocomplete the current selection** in the note text edit,
+  and a new script [AI Text Tool](https://github.com/qownnotes/scripts/tree/master/ai-text-tool)
+  that uses the selected AI model to **process the current selection** in the note text edit,
+  for example to summarize it, to translate it or to fix typos and grammar errors
 
 ![robot-taking-notes](./media/robot-taking-notes.jpg)
