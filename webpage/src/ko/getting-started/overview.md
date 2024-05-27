@@ -164,6 +164,7 @@
 - [**맞춤법 검사**](../editor/spellchecking.md) 지원
 - USB 스틱에 QOwnNotes를 휴대하기 위한 **휴대용 모드**
 - **스크립트 지원** 및 응용 프로그램 내부에 스크립트를 설치할 수 있는 온라인 [**스크립트 저장소**](https://github.com/qownnotes/scripts)
+- 스크립트에 사용할 **[OpenAI 완료 API 구현](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)**
 - **Vim 모드**
 - 바탕 화면의 QOwnNotes에서 **휴대폰의 사진을 현재 노트에 삽입**하는 **[웹 응용 프로그램](web-app.md)**
 

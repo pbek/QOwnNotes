@@ -166,6 +166,7 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 - [**Rechtschreibprüfung**](../editor/spellchecking.md) wird unterstützt
 - **Portabler Modus** um QOwnNotes auf USB-Sticks mitzunehmen
 - **Skriptunterstützung** und ein online [**Skriptverzeichnis**](https://github.com/qownnotes/scripts), wo Sie Skripte in der App installieren können
+- Implementation of the **[OpenAI completion API](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** to be used in scripts
 - **Vim-Modus**
 - **[Web-App](web-app.md)** um **Fotos von Ihrem mobilen Telefon** in Notizen auf QOwnNote auf Ihrem Desktop einzufügen
 

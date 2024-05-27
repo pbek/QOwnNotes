@@ -166,6 +166,7 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 - Ondersteuning voor [**Spellingcontrole**](../editor/spellchecking.md)
 - **Portable modus** om QOwnNotes mee te nemen op USB-sticks
 - Ondersteuning voor **Scripting** en een online [**scriptrepository**](https://github.com/qownnotes/scripts) waar u scripts in de applicatie kunt installeren
+- Implementatie van de **[OpenAI completion API](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** voor het gebruik in scripts
 - **Vim-modus**
 - **[Webapplicatie](web-app.md)** om **foto's van uw mobiele telefoon toe te voegen** in de huidige notitie in QOwnNotes op uw PC/laptop
 
