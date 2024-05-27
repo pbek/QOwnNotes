@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 24.5.9
-- When you now press `Insert` in the note text edit overwrite mode will be toggled
+- When you now press `Insert` in the note text edit, overwrite mode will be toggled
   to directly allow overwriting the current text (for [#3034](https://github.com/pbek/QOwnNotes/issues/3034))
 
 ## 24.5.8
