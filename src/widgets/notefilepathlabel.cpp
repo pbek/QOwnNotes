@@ -25,9 +25,12 @@
 #include "mainwindow.h"
 
 NoteFilePathLabel::NoteFilePathLabel(QWidget *parent) : QLabel(parent) {
-    setText(QStringLiteral(""));
+    setText(QLatin1String());
     setToolTip(tr("Absolute path of note, right-click to open context menu"));
     setContentsMargins(5, 0, 0, 0);
+    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+    // Allows that the label can be resized below it desired width
+    setMinimumWidth(10);
 }
 
 void NoteFilePathLabel::contextMenuEvent(QContextMenuEvent *event) {
@@ -47,7 +50,7 @@ void NoteFilePathLabel::contextMenuEvent(QContextMenuEvent *event) {
 
     QAction *copySubFolderPathAction = nullptr;
     QString subFolderPath;
-    if (noteFolder.isCurrentHasSubfolders()) {
+    if (NoteFolder::isCurrentHasSubfolders()) {
         copySubFolderPathAction = contextMenu.addAction(tr("Copy absolute path of note subfolder"));
         subFolderPath = NoteSubFolder::activeNoteSubFolder().fullPath();
         copySubFolderPathAction->setToolTip(subFolderPath);
@@ -67,3 +70,27 @@ void NoteFilePathLabel::contextMenuEvent(QContextMenuEvent *event) {
         clipboard->setText(noteFolderPath);
     }
 }
+
+void NoteFilePathLabel::resizeEvent(QResizeEvent *event) {
+    QLabel::resizeEvent(event);
+    adjustTextToFit();
+}
+
+void NoteFilePathLabel::setText(const QString &text) {
+    originalText = text;
+    QLabel::setText(text);
+    adjustTextToFit();
+}
+
+void NoteFilePathLabel::adjustTextToFit() {
+    // Get the available width for the label
+    int availableWidth = width();
+
+    // Use QFontMetrics to elide the text if it's too long
+    QFontMetrics metrics(font());
+    QString elidedText = metrics.elidedText(originalText, Qt::ElideLeft, availableWidth);
+
+    // Set the elided text
+    QLabel::setText(elidedText);
+}
+

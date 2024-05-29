@@ -23,7 +23,13 @@ class NoteFilePathLabel : public QLabel {
 
    public:
     explicit NoteFilePathLabel(QWidget *parent = nullptr);
+    void setText(const QString &text);
 
    protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
+    void resizeEvent(QResizeEvent *event) override;
+
+   private:
+    void adjustTextToFit();
+    QString originalText;
 };
