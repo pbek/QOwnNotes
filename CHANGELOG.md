@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 24.5.10
+- The absolute path of the current note will now be shown in the status bar
+  (for [#3023](https://github.com/pbek/QOwnNotes/issues/3023))
+  - If you right-click the text you will get a context menu to copy that path,
+    the path of the note subfolder and the path of the note folder
+
 ## 24.5.9
 - When you now press `Insert` in the note text edit, overwrite mode will be toggled
   to directly allow overwriting the current text (for [#3034](https://github.com/pbek/QOwnNotes/issues/3034))

@@ -363,6 +363,8 @@ set(SOURCE_FILES
     widgets/notetreewidgetitem.cpp
     widgets/notetreewidgetitem.h
     widgets/notetreewidgetitem.ui
+    widgets/notefilepathlabel.cpp
+    widgets/notefilepathlabel.h
     widgets/layoutwidget.cpp
     widgets/layoutwidget.h
     widgets/layoutwidget.ui

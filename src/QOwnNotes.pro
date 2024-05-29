@@ -198,6 +198,7 @@ SOURCES += main.cpp\
     widgets/scriptsettingwidget.cpp \
     api/scriptapi.cpp \
     widgets/label.cpp \
+    widgets/notefilepathlabel.cpp \
     widgets/qrcodewidget.cpp \
     widgets/lineedit.cpp \
     widgets/passwordlineedit.cpp \
@@ -310,6 +311,7 @@ HEADERS  += mainwindow.h \
     widgets/scriptsettingwidget.h \
     api/scriptapi.h \
     widgets/label.h \
+    widgets/notefilepathlabel.h \
     widgets/qrcodewidget.h \
     widgets/lineedit.h \
     widgets/passwordlineedit.h \

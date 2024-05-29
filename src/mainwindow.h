@@ -73,6 +73,7 @@ class FakeVimHandler;
 class WebSocketServerService;
 class QOwnNotesMarkdownTextEdit;
 class CommandBar;
+class NoteFilePathLabel;
 struct TagHeader;
 
 // forward declaration because of "xxx does not name a type"
@@ -763,6 +764,7 @@ class MainWindow : public QMainWindow {
     NoteHistory noteHistory;
     QHash<int, NoteHistoryItem> noteBookmarks;
     QPushButton *_updateAvailableButton;
+    NoteFilePathLabel *_noteFilePathLabel;
     QLabel *_noteEditLineNumberLabel;
     QPushButton *_readOnlyButton;
     QPushButton *_leaveDistractionFreeModeButton;

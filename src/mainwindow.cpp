@@ -44,6 +44,7 @@
 #include <utils/misc.h>
 #include <utils/schema.h>
 #include <widgets/logwidget.h>
+#include <widgets/notefilepathlabel.h>
 #include <widgets/notesubfoldertree.h>
 #include <widgets/notetreewidgetitem.h>
 
@@ -3068,6 +3069,12 @@ void MainWindow::frequentPeriodicChecker() {
  */
 void MainWindow::setupStatusBarWidgets() {
     /*
+     * setup of file path label
+     */
+    _noteFilePathLabel = new NoteFilePathLabel(this);
+    ui->statusBar->addWidget(_noteFilePathLabel);
+
+    /*
      * setup of readonly button
      */
     _readOnlyButton->setText(tr("Read-only"));
@@ -3788,6 +3795,9 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
     // call a script hook that a new note was opened
     ScriptingService::instance()->callHandleNoteOpenedHook(&currentNote);
 
+    // update file path label
+    _noteFilePathLabel->setText(currentNote.fullNoteFilePath().toLatin1().data());
+
     //    putenv(QString("QOWNNOTES_CURRENT_NOTE_PATH=" + currentNote
     //            .fullNoteFilePath()).toLatin1().data());
     //    setenv("QOWNNOTES_CURRENT_NOTE_PATH",
@@ -4030,6 +4040,7 @@ void MainWindow::removeNoteFromNoteTreeWidget(Note &note) const {
  * Resets the current note to the first note
  */
 void MainWindow::resetCurrentNote(bool goToTop) {
+    _noteFilePathLabel->setText(QStringLiteral());
     auto *event =
         new QKeyEvent(QEvent::KeyPress, goToTop ? Qt::Key_Home : Qt::Key_Down, Qt::NoModifier);
     QApplication::postEvent(ui->noteTreeWidget, event);
