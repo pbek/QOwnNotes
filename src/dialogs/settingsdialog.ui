@@ -3346,6 +3346,29 @@
                    </widget>
                   </item>
                   <item>
+                   <widget class="QGroupBox" name="statusBarGroupBox">
+                    <property name="title">
+                     <string>Status bar</string>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_86">
+                     <item row="0" column="0">
+                      <widget class="QCheckBox" name="showStatusBarNotePathCheckBox">
+                       <property name="text">
+                        <string>Show note path</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QCheckBox" name="showStatusBarRelativeNotePathCheckBox">
+                       <property name="text">
+                        <string>Only show relative note path</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
                    <spacer name="verticalSpacer_6">
                     <property name="orientation">
                      <enum>Qt::Vertical</enum>
