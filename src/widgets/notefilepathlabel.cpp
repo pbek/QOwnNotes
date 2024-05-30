@@ -26,13 +26,15 @@
 #include "mainwindow.h"
 
 NoteFilePathLabel::NoteFilePathLabel(QWidget *parent) : QLabel(parent) {
+    // Empty the text
     setText(QLatin1String());
-    setToolTip(tr("Absolute path of note, right-click to open context menu"));
+    // Add a little space on the left
     setContentsMargins(5, 0, 0, 0);
-    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     // Allows that the label can be resized below it desired width
+    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     setMinimumWidth(10);
     setMaximumWidth(600);
+    // We want to use HTML tags
     setTextFormat(Qt::RichText);
 }
 
@@ -44,18 +46,24 @@ void NoteFilePathLabel::updateText() {
 
     const auto note = mainWindow->getCurrentNote();
     const auto separator = Utils::Misc::dirSeparator();
-//    QString notePath = QSettings().value(QStringLiteral("showStatusBarRelativeNotePath")).toBool() ?
-//        note.relativeNoteFilePath() : note.fullNoteFilePath();
-
     QString notePath = Utils::Misc::htmlspecialchars(note.getFileName());
+    const bool darkModeColors = QSettings().value(QStringLiteral("darkModeColors")).toBool();
+    const auto subFolderColor =
+        darkModeColors ? QStringLiteral("#999999") : QStringLiteral("#696969");
+    const auto noteFolderColor =
+        darkModeColors ? QStringLiteral("#707070") : QStringLiteral("#a0a0a0");
 
     const NoteSubFolder noteSubFolder = note.getNoteSubFolder();
     if (noteSubFolder.isFetched()) {
-        // TODO: Adapt color to light/dark theme
-        notePath.prepend("<span style='color: #666666;'>" + Utils::Misc::htmlspecialchars(noteSubFolder.relativePath()) + "</span>" + separator);
+        notePath.prepend(QString("<span style='color: %1;'>%2</span>%3")
+                             .arg(subFolderColor,
+                                  Utils::Misc::htmlspecialchars(noteSubFolder.relativePath()),
+                                  QString(separator)));
     }
 
-    if (!QSettings().value(QStringLiteral("showStatusBarRelativeNotePath")).toBool()) {
+    bool showRelativeNotePath =
+        QSettings().value(QStringLiteral("showStatusBarRelativeNotePath")).toBool();
+    if (!showRelativeNotePath) {
         auto noteFolderPath = NoteFolder::currentLocalPath();
 
 #ifndef Q_OS_WIN
@@ -65,11 +73,14 @@ void NoteFilePathLabel::updateText() {
         }
 #endif
 
-        // TODO: Adapt color to light/dark theme
-        notePath.prepend("<span style='color: #aaaaaa;'>" + Utils::Misc::htmlspecialchars(noteFolderPath) + "</span>" + separator);
+        notePath.prepend(QString("<span style='color: %1;'>%2</span>%3")
+                             .arg(noteFolderColor, Utils::Misc::htmlspecialchars(noteFolderPath),
+                                  QString(separator)));
     }
 
-
+    setToolTip(showRelativeNotePath
+                   ? tr("Relative path of note, right-click to open context menu")
+                   : tr("Absolute path of note, right-click to open context menu"));
     setText(notePath);
 }
 
@@ -93,8 +104,6 @@ void NoteFilePathLabel::contextMenuEvent(QContextMenuEvent *event) {
     if (NoteFolder::isCurrentHasSubfolders()) {
         copySubFolderPathAction = contextMenu.addAction(tr("Copy absolute path of note subfolder"));
         subFolderPath = NoteSubFolder::activeNoteSubFolder().fullPath();
-        qDebug() << __func__ << " - 'subFolderPath': " << subFolderPath;
-
         copySubFolderPathAction->setToolTip(subFolderPath);
     }
 
@@ -115,15 +124,18 @@ void NoteFilePathLabel::contextMenuEvent(QContextMenuEvent *event) {
 
 void NoteFilePathLabel::resizeEvent(QResizeEvent *event) {
     QLabel::resizeEvent(event);
-//    adjustTextToFit();
+    //    adjustTextToFit();
 }
 
 void NoteFilePathLabel::setText(const QString &text) {
     originalText = text;
     QLabel::setText(text);
-//    adjustTextToFit();
+    //    adjustTextToFit();
 }
 
+/**
+ * Unfortunately that doesn't work any more, because of the usage of HTML
+ */
 void NoteFilePathLabel::adjustTextToFit() {
     // Get the available width for the label
     int availableWidth = width();
@@ -135,4 +147,3 @@ void NoteFilePathLabel::adjustTextToFit() {
     // Set the elided text
     QLabel::setText(elidedText);
 }
-

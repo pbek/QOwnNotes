@@ -5,10 +5,12 @@
   (for [#3023](https://github.com/pbek/QOwnNotes/issues/3023))
   - You can turn on and off the display of the path in the status bar in the
     *Interface settings*
-    - There also is an option to only show the relative path
-  - The text will be shortened if there is not enough space to show the complete path 
-  - If you right-click the text you will get a context menu to copy that path,
-    the path of the note subfolder and the path of the note folder
+    - There also is an option to only show the relative path of the note
+  - Different shades are used for the note folder path, the subfolder path and
+    the note file name
+  - The text will be trimmed if there is not enough space to show the complete path
+  - If you right-click the text you will get a context menu to copy the absolute
+    note path, the path of the note subfolder or the path of the note folder
 
 ## 24.5.9
 - When you now press `Insert` in the note text edit, overwrite mode will be toggled
