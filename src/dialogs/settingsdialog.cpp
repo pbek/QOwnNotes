@@ -748,6 +748,12 @@ void SettingsDialog::storeSettings() {
     settings.setValue(QStringLiteral("darkModeIconTheme"),
                       ui->darkModeIconThemeCheckBox->isChecked());
 
+    settings.setValue(QStringLiteral("showStatusBarNotePath"),
+                      ui->showStatusBarNotePathCheckBox->isChecked());
+
+    settings.setValue(QStringLiteral("showStatusBarRelativeNotePath"),
+                      ui->showStatusBarRelativeNotePathCheckBox->isChecked());
+
     settings.setValue(QStringLiteral("internalIconTheme"),
                       ui->internalIconThemeCheckBox->isChecked());
 
@@ -1150,6 +1156,14 @@ void SettingsDialog::readSettings() {
 
     // toggle the dark mode colors check box with the dark mode checkbox
     handleDarkModeCheckBoxToggled();
+
+    ui->showStatusBarNotePathCheckBox->setChecked(
+        settings.value(QStringLiteral("showStatusBarNotePath")).toBool());
+
+    ui->showStatusBarRelativeNotePathCheckBox->setChecked(
+        settings.value(QStringLiteral("showStatusBarRelativeNotePath")).toBool());
+    ui->showStatusBarRelativeNotePathCheckBox->setEnabled(
+        ui->showStatusBarNotePathCheckBox->isChecked());
 
     noteTextEditFont.fromString(
         settings.value(QStringLiteral("MainWindow/noteTextEdit.font")).toString());
@@ -4343,4 +4357,8 @@ void SettingsDialog::on_groqApiKeyWebButton_clicked() {
 
 void SettingsDialog::on_openAiApiKeyWebButton_clicked() {
     QDesktopServices::openUrl(QUrl(QStringLiteral("https://platform.openai.com/api-keys")));
+}
+
+void SettingsDialog::on_showStatusBarNotePathCheckBox_toggled(bool checked) {
+    ui->showStatusBarRelativeNotePathCheckBox->setEnabled(checked);
 }

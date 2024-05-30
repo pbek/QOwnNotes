@@ -328,6 +328,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_openAiApiKeyWebButton_clicked();
 
+    void on_showStatusBarNotePathCheckBox_toggled(bool checked);
+
    private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;

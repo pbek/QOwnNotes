@@ -21,6 +21,7 @@
 #include <QClipboard>
 #include <QDebug>
 #include <QMenu>
+#include <QSettings>
 
 #include "mainwindow.h"
 
@@ -32,6 +33,19 @@ NoteFilePathLabel::NoteFilePathLabel(QWidget *parent) : QLabel(parent) {
     // Allows that the label can be resized below it desired width
     setMinimumWidth(10);
     setMaximumWidth(600);
+}
+
+void NoteFilePathLabel::updateText() {
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow == nullptr) {
+        return;
+    }
+
+    const auto note = mainWindow->getCurrentNote();
+    const QString notePath = QSettings().value(QStringLiteral("showStatusBarRelativeNotePath")).toBool() ?
+        note.relativeNoteFilePath() : note.fullNoteFilePath();
+
+    setText(note.isFetched() ? notePath : QLatin1String());
 }
 
 void NoteFilePathLabel::contextMenuEvent(QContextMenuEvent *event) {

@@ -24,6 +24,7 @@ class NoteFilePathLabel : public QLabel {
    public:
     explicit NoteFilePathLabel(QWidget *parent = nullptr);
     void setText(const QString &text);
+    void updateText();
 
    protected:
     void contextMenuEvent(QContextMenuEvent *event) override;

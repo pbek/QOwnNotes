@@ -277,6 +277,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     _autoReadOnlyModeTimer->setSingleShot(true);
     connect(_autoReadOnlyModeTimer, &QTimer::timeout, this, &MainWindow::autoReadOnlyModeTimerSlot);
 
+    // setup the update available button
+    setupStatusBarWidgets();
+
     // read the settings (shortcuts have to be defined before that)
     readSettings();
 
@@ -308,9 +311,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     createSystemTrayIcon();
 
     buildNotesIndexAndLoadNoteDirectoryList(false, false, false);
-
-    // setup the update available button
-    setupStatusBarWidgets();
 
     this->noteDiffDialog = new NoteDiffDialog();
 
@@ -2653,6 +2653,8 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
 
     ui->noteTextEdit->setPaperMargins();
     ui->encryptedNoteTextEdit->setPaperMargins();
+    _noteFilePathLabel->setVisible(settings.value(QStringLiteral("showStatusBarNotePath")).toBool());
+    _noteFilePathLabel->updateText();
 
     if (_webSocketServerService == nullptr) {
         QTimer::singleShot(250, this, SLOT(initWebSocketServerService()));
@@ -3796,7 +3798,7 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
     ScriptingService::instance()->callHandleNoteOpenedHook(&currentNote);
 
     // update file path label
-    _noteFilePathLabel->setText(currentNote.fullNoteFilePath().toLatin1().data());
+    _noteFilePathLabel->updateText();
 
     //    putenv(QString("QOWNNOTES_CURRENT_NOTE_PATH=" + currentNote
     //            .fullNoteFilePath()).toLatin1().data());
@@ -4040,10 +4042,10 @@ void MainWindow::removeNoteFromNoteTreeWidget(Note &note) const {
  * Resets the current note to the first note
  */
 void MainWindow::resetCurrentNote(bool goToTop) {
-    _noteFilePathLabel->setText(QStringLiteral());
     auto *event =
         new QKeyEvent(QEvent::KeyPress, goToTop ? Qt::Key_Home : Qt::Key_Down, Qt::NoModifier);
     QApplication::postEvent(ui->noteTreeWidget, event);
+    _noteFilePathLabel->setText(QLatin1String());
 }
 
 /**
