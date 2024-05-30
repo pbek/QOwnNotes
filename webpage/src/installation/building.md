@@ -21,7 +21,7 @@ need the packages `qtwebsockets` and `qt5compat` to build QOwnNotes with Qt6
 Afterward open the project file `src/QOwnNotes.pro` and click on
 **Build** / **Build Project QOwnNotes**.
 
-If you k now what you are doing, you can also build QOwnNotes directly in your terminal:
+If you know what you are doing, you can also build QOwnNotes directly in your terminal:
 
 ```bash
 cd src
