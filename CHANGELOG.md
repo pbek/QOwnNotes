@@ -9,7 +9,7 @@
   - Different shades are used for the note folder path, the subfolder path and
     the note file name
   - The text will be trimmed if there is not enough space to show the complete path
-  - If you right-click the text you will get a context menu to copy the absolute
+  - If you right-click the text, you will get a context menu to copy the absolute
     note path, the path of the note subfolder or the path of the note folder
 
 ## 24.5.9
