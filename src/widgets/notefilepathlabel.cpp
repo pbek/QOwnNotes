@@ -33,6 +33,7 @@ NoteFilePathLabel::NoteFilePathLabel(QWidget *parent) : QLabel(parent) {
     // Allows that the label can be resized below it desired width
     setMinimumWidth(10);
     setMaximumWidth(600);
+    setTextFormat(Qt::RichText);
 }
 
 void NoteFilePathLabel::updateText() {
@@ -42,10 +43,34 @@ void NoteFilePathLabel::updateText() {
     }
 
     const auto note = mainWindow->getCurrentNote();
-    const QString notePath = QSettings().value(QStringLiteral("showStatusBarRelativeNotePath")).toBool() ?
-        note.relativeNoteFilePath() : note.fullNoteFilePath();
+    const auto separator = Utils::Misc::dirSeparator();
+//    QString notePath = QSettings().value(QStringLiteral("showStatusBarRelativeNotePath")).toBool() ?
+//        note.relativeNoteFilePath() : note.fullNoteFilePath();
 
-    setText(note.isFetched() ? notePath : QLatin1String());
+    QString notePath = Utils::Misc::htmlspecialchars(note.getFileName());
+
+    const NoteSubFolder noteSubFolder = note.getNoteSubFolder();
+    if (noteSubFolder.isFetched()) {
+        // TODO: Adapt color to light/dark theme
+        notePath.prepend("<span style='color: #666666;'>" + Utils::Misc::htmlspecialchars(noteSubFolder.relativePath()) + "</span>" + separator);
+    }
+
+    if (!QSettings().value(QStringLiteral("showStatusBarRelativeNotePath")).toBool()) {
+        auto noteFolderPath = NoteFolder::currentLocalPath();
+
+#ifndef Q_OS_WIN
+        QString homeDir = QDir::homePath();
+        if (noteFolderPath.startsWith(homeDir)) {
+            noteFolderPath.replace(0, homeDir.length(), "~");
+        }
+#endif
+
+        // TODO: Adapt color to light/dark theme
+        notePath.prepend("<span style='color: #aaaaaa;'>" + Utils::Misc::htmlspecialchars(noteFolderPath) + "</span>" + separator);
+    }
+
+
+    setText(notePath);
 }
 
 void NoteFilePathLabel::contextMenuEvent(QContextMenuEvent *event) {
@@ -68,6 +93,8 @@ void NoteFilePathLabel::contextMenuEvent(QContextMenuEvent *event) {
     if (NoteFolder::isCurrentHasSubfolders()) {
         copySubFolderPathAction = contextMenu.addAction(tr("Copy absolute path of note subfolder"));
         subFolderPath = NoteSubFolder::activeNoteSubFolder().fullPath();
+        qDebug() << __func__ << " - 'subFolderPath': " << subFolderPath;
+
         copySubFolderPathAction->setToolTip(subFolderPath);
     }
 
@@ -88,13 +115,13 @@ void NoteFilePathLabel::contextMenuEvent(QContextMenuEvent *event) {
 
 void NoteFilePathLabel::resizeEvent(QResizeEvent *event) {
     QLabel::resizeEvent(event);
-    adjustTextToFit();
+//    adjustTextToFit();
 }
 
 void NoteFilePathLabel::setText(const QString &text) {
     originalText = text;
     QLabel::setText(text);
-    adjustTextToFit();
+//    adjustTextToFit();
 }
 
 void NoteFilePathLabel::adjustTextToFit() {
