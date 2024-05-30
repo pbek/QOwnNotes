@@ -16,7 +16,7 @@ For debugging, it's easiest to use QtCreator. When downloading [Qt Creator](http
 
 Afterward open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
 
-If you k now what you are doing, you can also build QOwnNotes directly in your terminal:
+If you know what you are doing, you can also build QOwnNotes directly in your terminal:
 
 ```bash
 cd src

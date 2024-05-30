@@ -3656,6 +3656,29 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 </message>
 </context>
 <context>
+<name>NoteFilePathLabel</name>
+<message>
+<source>Relative path of note, right-click to open context menu</source>
+<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+</message>
+<message>
+<source>Absolute path of note, right-click to open context menu</source>
+<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+</message>
+<message>
+<source>Copy absolute path of note</source>
+<translation type="unfinished">Copy absolute path of note</translation>
+</message>
+<message>
+<source>Copy absolute path of note subfolder</source>
+<translation type="unfinished">Copy absolute path of note subfolder</translation>
+</message>
+<message>
+<source>Copy absolute path of note folder</source>
+<translation type="unfinished">Copy absolute path of note folder</translation>
+</message>
+</context>
+<context>
 <name>NotePreviewWidget</name>
 <message>
 <source>Copy image file path</source>
@@ -5566,6 +5589,18 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 <message>
 <source>Search for language</source>
 <translation>Cuardaigh teanga</translation>
+</message>
+<message>
+<source>Status bar</source>
+<translation type="unfinished">Status bar</translation>
+</message>
+<message>
+<source>Show note path</source>
+<translation type="unfinished">Show note path</translation>
+</message>
+<message>
+<source>Only show relative note path</source>
+<translation type="unfinished">Only show relative note path</translation>
 </message>
 <message>
 <source>Action name</source>

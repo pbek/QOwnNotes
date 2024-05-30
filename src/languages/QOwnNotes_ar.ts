@@ -3683,6 +3683,29 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 </context>
 <context>
+<name>NoteFilePathLabel</name>
+<message>
+<source>Relative path of note, right-click to open context menu</source>
+<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+</message>
+<message>
+<source>Absolute path of note, right-click to open context menu</source>
+<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+</message>
+<message>
+<source>Copy absolute path of note</source>
+<translation type="unfinished">Copy absolute path of note</translation>
+</message>
+<message>
+<source>Copy absolute path of note subfolder</source>
+<translation type="unfinished">Copy absolute path of note subfolder</translation>
+</message>
+<message>
+<source>Copy absolute path of note folder</source>
+<translation type="unfinished">Copy absolute path of note folder</translation>
+</message>
+</context>
+<context>
 <name>NotePreviewWidget</name>
 <message>
 <source>Copy image file path</source>
@@ -5626,6 +5649,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>ابحث عن لغة</translation>
 </message>
 <message>
+<source>Status bar</source>
+<translation type="unfinished">Status bar</translation>
+</message>
+<message>
+<source>Show note path</source>
+<translation type="unfinished">Show note path</translation>
+</message>
+<message>
+<source>Only show relative note path</source>
+<translation type="unfinished">Only show relative note path</translation>
+</message>
+<message>
 <source>Action name</source>
 <translation>اسم الإجراء</translation>
 </message>
@@ -6999,7 +7034,7 @@ Your notes will stay intact!</source>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>

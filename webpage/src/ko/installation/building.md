@@ -16,7 +16,7 @@ git submodule update --init
 
 그런 다음 프로젝트 파일 `src/QOwnNotes.pro`를 열고 **빌드** / **빌드 프로젝트 QOwnNotes**를 클릭합니다.
 
-작업 내용을 알고 있으면 터미널에서 직접 QOwnNotes를 작성할 수도 있습니다:
+If you know what you are doing, you can also build QOwnNotes directly in your terminal:
 
 ```bash
 cd src

@@ -701,7 +701,7 @@ QString ScriptingService::aiComplete(const QString& prompt);
 var text = script.aiComplete("Tell me how do you feel today?");
 ```
 
-You may want to take a look at the example [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+ربما تحب أن تلقي نظرة على المثال [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
 
 معرفة ما إذا كانت المنصة لينكس أم ماك أم ويندوز
 ------------------------------------------------
@@ -1542,7 +1542,7 @@ var result = script.inputDialogGetText(
 script.log(result);
 ```
 
-Opening an input dialog with a multi-line text edit
+إظهار حوار لإدخال سطور نصية
 ---------------------------------------------------
 
 ### نداء الدالة ومُعامِلاتها
@@ -1590,7 +1590,7 @@ script.log(result);
 قراءة نص من ملف
 ------------------------
 
-### Method call and parameters
+### نداء الدالة ومُعامِلاتها
 ```cpp
 /**
  * Read text from a file
@@ -1602,7 +1602,7 @@ script.log(result);
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
 ```
 
-### Example
+### مثال
 ```js
 if(script.fileExists(filePath)){
     var data = script.readFromFile(filePath);
@@ -1614,7 +1614,7 @@ if(script.fileExists(filePath)){
 كتابة نص إلى ملف
 ----------------------
 
-### Method call and parameters
+### نداء الدالة ومُعامِلاتها
 ```cpp
 /**
  * Writes a text to a file
@@ -1627,7 +1627,7 @@ if(script.fileExists(filePath)){
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### Example
+### مثال
 ```js
 var result = script.writeToFile(filePath, html);
 script.log(result);
@@ -1651,7 +1651,7 @@ script.log(result);
 
 يمكنك إضافة قواعد تلوين إلى المحرر مباشرةً، بتعريف تعابير نمطية وإسنادها إلى حالة تلوين.
 
-### Method call and parameters
+### نداء الدالة ومُعامِلاتها
 ```cpp
 /**
  * Adds a highlighting rule to the syntax highlighter of the editor
@@ -1701,7 +1701,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | CheckBoxChecked        | 30    |
 | StUnderline            | 31    |
 
-### Example
+### مثال
 ```js
 // Highlight a text line like "BLOCK: some text" as blockquote (state 18)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);
