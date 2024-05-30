@@ -31,6 +31,7 @@ NoteFilePathLabel::NoteFilePathLabel(QWidget *parent) : QLabel(parent) {
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     // Allows that the label can be resized below it desired width
     setMinimumWidth(10);
+    setMaximumWidth(600);
 }
 
 void NoteFilePathLabel::contextMenuEvent(QContextMenuEvent *event) {
