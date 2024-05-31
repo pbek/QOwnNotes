@@ -3509,23 +3509,23 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
-<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+<translation>상대 경로를 마우스 오른쪽 버튼으로 클릭하여 상황에 맞는 메뉴 열기</translation>
 </message>
 <message>
 <source>Absolute path of note, right-click to open context menu</source>
-<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+<translation>절대 경로를 마우스 오른쪽 버튼으로 클릭하여 컨텍스트 메뉴 열기</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>절대 경로 복사</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
-<translation type="unfinished">Copy absolute path of note subfolder</translation>
+<translation>노트 하위 폴더의 절대 경로 복사</translation>
 </message>
 <message>
 <source>Copy absolute path of note folder</source>
-<translation type="unfinished">Copy absolute path of note folder</translation>
+<translation>노트 폴더의 절대 경로 복사</translation>
 </message>
 </context>
 <context>
@@ -5410,15 +5410,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Status bar</source>
-<translation type="unfinished">Status bar</translation>
+<translation>상태 표시줄</translation>
 </message>
 <message>
 <source>Show note path</source>
-<translation type="unfinished">Show note path</translation>
+<translation>노트 경로 표시</translation>
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation type="unfinished">Only show relative note path</translation>
+<translation>상대 노트 경로만 표시</translation>
 </message>
 <message>
 <source>Action name</source>

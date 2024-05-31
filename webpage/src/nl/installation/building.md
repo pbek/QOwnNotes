@@ -16,7 +16,7 @@ Voor foutopsporing is het het gemakkelijkst om QtCreator te gebruiken. Bij het d
 
 Open daarna het projectbestand `src/QOwnNotes.pro` en klik op **Build** / **Build Project QOwnNotes**.
 
-If you know what you are doing, you can also build QOwnNotes directly in your terminal:
+Als u weet wat u doet, kunt u QOwnNotes ook rechtstreeks in uw terminal bouwen:
 
 ```bash
 cd src

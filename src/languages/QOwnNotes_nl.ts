@@ -3540,23 +3540,23 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
-<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+<translation>Relatief pad van notitie, klik met de rechtermuisknop om het contextmenu te openen</translation>
 </message>
 <message>
 <source>Absolute path of note, right-click to open context menu</source>
-<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+<translation>Absoluut pad van notitie, klik met de rechtermuisknop om het contextmenu te openen</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Kopieer het absolute pad van de notitie</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
-<translation type="unfinished">Copy absolute path of note subfolder</translation>
+<translation>Kopieer het absolute pad van de notitiesubmap</translation>
 </message>
 <message>
 <source>Copy absolute path of note folder</source>
-<translation type="unfinished">Copy absolute path of note folder</translation>
+<translation>Kopieer het absolute pad van de notitiemap</translation>
 </message>
 </context>
 <context>
@@ -5448,15 +5448,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Status bar</source>
-<translation type="unfinished">Status bar</translation>
+<translation>Statusbalk</translation>
 </message>
 <message>
 <source>Show note path</source>
-<translation type="unfinished">Show note path</translation>
+<translation>Notitiepad weergeven</translation>
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation type="unfinished">Only show relative note path</translation>
+<translation>Toon alleen het relatieve notitiepad</translation>
 </message>
 <message>
 <source>Action name</source>
