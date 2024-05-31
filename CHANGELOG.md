@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.6.0
+- The absolute path of the current note will now be shown in the status bar
+  by default (for [#3023](https://github.com/pbek/QOwnNotes/issues/3023))
+
 ## 24.5.10
 - The absolute path of the current note will now be shown in the status bar
   (for [#3023](https://github.com/pbek/QOwnNotes/issues/3023))

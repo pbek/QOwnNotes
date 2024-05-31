@@ -1158,7 +1158,7 @@ void SettingsDialog::readSettings() {
     handleDarkModeCheckBoxToggled();
 
     ui->showStatusBarNotePathCheckBox->setChecked(
-        settings.value(QStringLiteral("showStatusBarNotePath")).toBool());
+        settings.value(QStringLiteral("showStatusBarNotePath"), true).toBool());
 
     ui->showStatusBarRelativeNotePathCheckBox->setChecked(
         settings.value(QStringLiteral("showStatusBarRelativeNotePath")).toBool());

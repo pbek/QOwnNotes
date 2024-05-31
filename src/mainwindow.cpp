@@ -2654,7 +2654,7 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     ui->noteTextEdit->setPaperMargins();
     ui->encryptedNoteTextEdit->setPaperMargins();
     _noteFilePathLabel->setVisible(
-        settings.value(QStringLiteral("showStatusBarNotePath")).toBool());
+        settings.value(QStringLiteral("showStatusBarNotePath"), true).toBool());
     _noteFilePathLabel->updateText();
 
     if (_webSocketServerService == nullptr) {
