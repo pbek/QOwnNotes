@@ -7,41 +7,52 @@ $ErrorActionPreference = "Stop"
 
 #dir -s ..\..\Qt
 Write-Host $Env:QT_VERSION
-echo "#define RELEASE ""GitHub Actions""" > release.h
+Write-Output "#define RELEASE ""GitHub Actions""" > release.h
 qmake6 QOwnNotes.pro -r
 lrelease QOwnNotes.pro
 make
-md ..\release
+# Create release directory
+New-Item -Path '..\release' -ItemType 'Directory'
 # copy the binary to our release path
-copy release\QOwnNotes.exe ..\release
+Copy-Item release\QOwnNotes.exe ..\release
 # copy Win64 OpenSSL v1.1.1g DLLs to the release path
-copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll ..\release
-copy ..\build-systems\github\windows\libssl-1_1-x64.dll ..\release
+Copy-Item ..\build-systems\github\windows\libcrypto-1_1-x64.dll ..\release
+Copy-Item ..\build-systems\github\windows\libssl-1_1-x64.dll ..\release
 # copy unzip application for updater
-copy ..\appveyor\unzip.exe ..\release
+Copy-Item ..\appveyor\unzip.exe ..\release
 # copy updater script
-copy ..\appveyor\update.bat ..\release
+Copy-Item ..\appveyor\update.bat ..\release
 # copy portable mode launcher to the release path
-copy ..\appveyor\QOwnNotesPortable.bat ..\release
+Copy-Item ..\appveyor\QOwnNotesPortable.bat ..\release
 # copy translation files
-copy languages\*.qm ..\release
-cd ..\release
+Copy-Item languages\*.qm ..\release
+Set-Location ..\release
 # fetching dependencies of QT app
 # http://doc.qt.io/qt-5/windows-deployment.html
 # Bug in Qt 5.14+: https://stackoverflow.com/questions/61045959/windeployqt-error-unable-to-find-the-platform-plugin
 # Don't use "--release"! (maybe because of debug log?)
 windeployqt --debug QOwnNotes.exe
 # these dlls where missed by windeployqt
-copy ..\..\Qt\$Env:QT_VERSION\mingw_64\bin\libwinpthread-1.dll .
-copy ..\..\Qt\$Env:QT_VERSION\mingw_64\bin\libgcc_s_seh-1.dll .
+Copy-Item ..\..\Qt\$Env:QT_VERSION\mingw_64\bin\libwinpthread-1.dll .
+Copy-Item ..\..\Qt\$Env:QT_VERSION\mingw_64\bin\libgcc_s_seh-1.dll .
 # this dll didn't work when released by windeployqt
 # important: this dll needs to be updated when a new version of Qt is used!
 # search for it in the mingw* folder of your local installation of Qt
 # Update: we are trying a direct copy again
-copy ..\..\Qt\$Env:QT_VERSION\mingw_64\bin\libstdc++-6.dll .
-# create zip archive
-dir
-dir D:\a\QOwnNotes\QOwnNotes\release
+Copy-Item ..\..\Qt\$Env:QT_VERSION\mingw_64\bin\libstdc++-6.dll .
+# Create zip archive
+Get-ChildItem
+Get-ChildItem D:\a\QOwnNotes\QOwnNotes\release
 tree D:\a\QOwnNotes\QOwnNotes\release
 Compress-Archive -Path * -DestinationPath ..\QOwnNotes.zip
-$(CertUtil -hashfile ..\QOwnNotes.zip SHA256)[1] -replace " ","" | Out-File -FilePath ..\QOwnNotes.zip.sha256
+# Get sha256 checksum
+$Checksum = [string] (Get-FileHash -Path '..\QOwnNotes.zip' -Algorithm 'SHA256').'Hash'.ToLower()
+# Create sha256 file with checksum only
+Out-File -FilePath '..\QOwnNotes.zip.sha256' -Encoding 'utf8' -InputObject $Checksum
+# Create sha256 file with name of file
+Out-File -FilePath '..\QOwnNotes.zip.sha256sum' -Encoding 'utf8' -InputObject (
+    [string]::Format(
+        '{0} *QOwnNotes.zip',
+        $Checksum
+    )
+)
