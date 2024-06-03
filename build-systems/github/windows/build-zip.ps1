@@ -39,7 +39,7 @@ Copy-Item ..\..\Qt\5.15.2\mingw81_64\bin\libstdc++-6.dll .
 # Create zip archive
 Compress-Archive -Path * -DestinationPath ..\QOwnNotes.zip
 # Get sha256 checksum
-$Checksum = [string] (Get-FileHash -Path '..\QOwnNotes.zip' -Algorithm 'SHA256').'Hash'.ToLower().Trim()
+$Checksum = [string] (Get-FileHash -Path '..\QOwnNotes.zip' -Algorithm 'SHA256').'Hash'.ToLower()
 # Create sha256 file with checksum only
 Out-File -FilePath '..\QOwnNotes.zip.sha256' -Encoding 'utf8' -InputObject $Checksum
 # Create sha256 file with name of file
