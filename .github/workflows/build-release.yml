@@ -308,8 +308,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: QOwnNotes.zip.clickable.sha256
-          asset_name: QOwnNotes.zip.clickable.sha256
+          asset_path: QOwnNotes.zip.sha256sum
+          asset_name: QOwnNotes.zip.sha256sum
           asset_content_type: text/plain
 
 
