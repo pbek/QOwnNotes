@@ -50,7 +50,7 @@ $Checksum = [string] (Get-FileHash -Path '..\QOwnNotes.zip' -Algorithm 'SHA256')
 # Create sha256 file with checksum only
 Out-File -FilePath '..\QOwnNotes.zip.sha256' -Encoding 'utf8' -InputObject $Checksum
 # Create sha256 file with name of file
-Out-File -FilePath '..\QOwnNotes.zip.clickable.sha256' -Encoding 'utf8' -InputObject (
+Out-File -FilePath '..\QOwnNotes.zip.sha256sum' -Encoding 'utf8' -InputObject (
     [string]::Format(
         '{0} *QOwnNotes.zip',
         $Checksum
