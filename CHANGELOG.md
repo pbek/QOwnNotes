@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 24.6.1
+- When using the `Insert` key in the note text edit to toggle overwrite mode, it
+  now will be made sure that no modifier key is pressed (for [#3038](https://github.com/pbek/QOwnNotes/issues/3038))
 - A sha256sum file for `QOwnNotes.zip` was added to the releases
   (for [#2938](https://github.com/pbek/QOwnNotes/issues/2938), thank you, @o-l-a-v)
 
