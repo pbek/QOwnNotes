@@ -24,6 +24,7 @@
 #include <utility>
 
 #include "cryptoservice.h"
+#include "scriptingservice.h"
 
 using namespace std;
 
@@ -83,6 +84,11 @@ void OpenAiService::initializeBackends() {
 
     _backendNames[QStringLiteral("groq")] = QStringLiteral("Groq");
     _backendNames[QStringLiteral("openai")] = QStringLiteral("OpenAI");
+
+    // TODO: Implement script hook for https://github.com/pbek/QOwnNotes/issues/3037
+    // id, name, baseUrl, apiKey, models
+    const QList<QJsonObject> backends = ScriptingService::instance()->callOpenAiBackendsHook();
+    qDebug() << __func__ << " - 'backends': " << backends;
 }
 
 QStringList OpenAiService::getModelsForCurrentBackend() {

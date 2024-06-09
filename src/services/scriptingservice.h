@@ -179,6 +179,8 @@ class ScriptingService : public QObject {
                                          const QString &separator = QStringLiteral("/"));
     QStringList callAutocompletionHook() const;
 
+    QList<QJsonObject> callOpenAiBackendsHook() const;
+
     Q_INVOKABLE QStringList searchTagsByName(const QString &name) const;
 
     Q_INVOKABLE TagApi *getTagByNameBreadcrumbList(const QStringList &nameList,

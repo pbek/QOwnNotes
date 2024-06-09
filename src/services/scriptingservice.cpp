@@ -585,6 +585,34 @@ QStringList ScriptingService::callAutocompletionHook() const {
 }
 
 /**
+ * Calls the openAiBackendsHook function for all script components
+ * This function is called when OpenAI service is initialized
+ *
+ * @return QList of QJsonObject with the backend information
+ */
+QList<QJsonObject> ScriptingService::callOpenAiBackendsHook() const {
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
+    QList<QJsonObject> results;
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+        QVariant result;
+
+        if (methodExistsForObject(scriptComponent.object, QStringLiteral("openAiBackendsHook()"))) {
+            QMetaObject::invokeMethod(scriptComponent.object, "openAiBackendsHook",
+                                      Q_RETURN_ARG(QVariant, result));
+
+            if (!result.isNull()) {
+                results.append(result.toJsonObject());
+            }
+        }
+    }
+
+    return results;
+}
+
+/**
  * Calls the insertingFromMimeDataHook function for an object
  */
 QString ScriptingService::callInsertingFromMimeDataHookForObject(QObject *object,
