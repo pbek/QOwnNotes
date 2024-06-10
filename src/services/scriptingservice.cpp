@@ -590,9 +590,9 @@ QStringList ScriptingService::callAutocompletionHook() const {
  *
  * @return QList of QJsonObject with the backend information
  */
-QList<QJsonObject> ScriptingService::callOpenAiBackendsHook() const {
+QList<QVariantMap> ScriptingService::callOpenAiBackendsHook() const {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
-    QList<QJsonObject> results;
+    QList<QVariantMap> results;
 
     while (i.hasNext()) {
         i.next();
@@ -602,9 +602,13 @@ QList<QJsonObject> ScriptingService::callOpenAiBackendsHook() const {
         if (methodExistsForObject(scriptComponent.object, QStringLiteral("openAiBackendsHook()"))) {
             QMetaObject::invokeMethod(scriptComponent.object, "openAiBackendsHook",
                                       Q_RETURN_ARG(QVariant, result));
+            // Convert the returned value to QVariantList
+            QVariantList resultList = result.toList();
 
-            if (!result.isNull()) {
-                results.append(result.toJsonObject());
+            for (const QVariant &item : resultList) {
+                QVariantMap itemMap = item.toMap();
+
+                results.append(itemMap);
             }
         }
     }

@@ -53,6 +53,7 @@ class OpenAiService : public QObject {
     QStringList getModelsForBackend(const QString& backendId);
     QStringList getModelsForCurrentBackend();
     static OpenAiService* instance();
+    static void deleteInstance();
     bool setBackendId(const QString& id);
     QString getBackendId();
     bool setModelId(const QString& id);

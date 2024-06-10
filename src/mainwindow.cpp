@@ -289,10 +289,15 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // initialize the dock widgets
     initDockWidgets();
 
+    // Delete the OpenAiService instance again, so we can add backends after the scripts are loaded by initScriptingEngine()
+    OpenAiService::deleteInstance();
+
     // initialize the scripting engine
     // initDockWidgets() has to be called before that so the scripting dock
     // widget is already in place
     initScriptingEngine();
+
+    OpenAiService::instance();
 
     // we need to init global shortcuts after the scriptengine is initialized
     // in case there are global shortcuts for custom actions
@@ -1118,6 +1123,8 @@ void MainWindow::reloadTodoLists() {
  * Initializes the scripting engine
  */
 void MainWindow::initScriptingEngine() {
+    qDebug() << __func__ << " - 'initScriptingEngine'";
+
     ui->menuCustom_actions->hide();
     //    _customActionToolbar->hide();
 

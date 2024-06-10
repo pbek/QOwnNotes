@@ -70,6 +70,10 @@ OpenAiService* OpenAiService::createInstance(QObject* parent) {
     return service;
 }
 
+void OpenAiService::deleteInstance() {
+    qApp->setProperty("openAiService", QVariant::fromValue<OpenAiService*>(nullptr));
+}
+
 void OpenAiService::initializeBackends() {
     _backendModels[QStringLiteral("openai")] =
         QStringList{"gpt-4o", "gpt-4-turbo", "gpt-3.5-turbo", "gpt-4"};
@@ -87,8 +91,18 @@ void OpenAiService::initializeBackends() {
 
     // TODO: Implement script hook for https://github.com/pbek/QOwnNotes/issues/3037
     // id, name, baseUrl, apiKey, models
-    const QList<QJsonObject> backends = ScriptingService::instance()->callOpenAiBackendsHook();
+    const QList<QVariantMap> backends = ScriptingService::instance()->callOpenAiBackendsHook();
     qDebug() << __func__ << " - 'backends': " << backends;
+    qDebug() << __func__ << " - 'backends count': " << backends.count();
+
+    foreach (const QVariantMap& backend, backends) {
+        const QString id = backend["id"].toString();
+        const QString name = backend["name"].toString();
+        const QString baseUrl = backend["baseUrl"].toString();
+        const QString apiKey = backend["apiKey"].toString();
+        const QStringList models = backend["models"].toStringList();
+        qDebug() << __func__ << " - 'id': " << id;
+    }
 }
 
 QStringList OpenAiService::getModelsForCurrentBackend() {

@@ -9,9 +9,11 @@ Script {
         const result = [
             {
                 "id": "my-custom-ai"
+            },
+            {
+                "id": "my-custom-ai2"
             }
         ];
-        script.log('openAiBackends: ' + result);
 
         return result;
     }
