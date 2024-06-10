@@ -5,6 +5,7 @@
   now will be made sure that no modifier key is pressed (for [#3038](https://github.com/pbek/QOwnNotes/issues/3038))
 - A sha256sum file for `QOwnNotes.zip` was added to the releases
   (for [#2938](https://github.com/pbek/QOwnNotes/issues/2938), thank you, @o-l-a-v)
+- Added more Arabic translation (thank you, noureddin)
 
 ## 24.6.0
 - The absolute path of the current note will now be shown in the status bar

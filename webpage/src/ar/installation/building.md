@@ -16,7 +16,7 @@ git submodule update --init
 
 بعدئذٍ، افتح ملف المشروع `src/QOwnNotes.pro` وانقر على **Build** ثم **Build Project QOwnNotes**.
 
-If you know what you are doing, you can also build QOwnNotes directly in your terminal:
+ويمكنك كذلك بناء QOwnNotes من الطرفية إذا كنت تعرف ما تفعل:
 
 ```bash
 cd src

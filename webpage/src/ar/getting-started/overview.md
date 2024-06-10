@@ -166,7 +166,7 @@
 - دعم [**التدقيق الإملائي**](../editor/spellchecking.md)
 - **الوضع المحمول** لحمل QOwnNotes على وحدة تخزين USB والتنقل به
 - **قابلية البرمجة** وكذلك [**مستودع بُريمِجات**](https://github.com/qownnotes/scripts) على الإنترنت، حيث يمكنك تثبيت البُريمِجات من داخل التطبيق
-- Implementation of the **[OpenAI completion API](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** to be used in scripts
+- دعم **[API الإكمال بالذكاء المصطنع من OpenAI](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** لاستعماله في البرمجة
 - **وضع Vim**
 - **[تطبيق ويب](web-app.md)** ليمكنك **إضافة صور من محمولك** إلى الملاحظة الحالية في QOwnNotes على حاسوبك
 

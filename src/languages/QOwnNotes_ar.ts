@@ -1888,7 +1888,7 @@
 </message>
 <message>
 <source>AI model</source>
-<translation type="unfinished">AI model</translation>
+<translation>نموذج الذكاء المصطنع</translation>
 </message>
 <message>
 <source>To&amp;do</source>
@@ -2371,7 +2371,7 @@
 </message>
 <message>
 <source>Enable AI support</source>
-<translation type="unfinished">Enable AI support</translation>
+<translation>تفعيل الذكاء المصطنع</translation>
 </message>
 <message>
 <source>asd</source>
@@ -2828,19 +2828,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>AI backends</source>
-<translation type="unfinished">AI backends</translation>
+<translation>خدمات الذكاء المصطنع</translation>
 </message>
 <message>
 <source>AI models</source>
-<translation type="unfinished">AI models</translation>
+<translation>نماذج الذكاء المصطنع</translation>
 </message>
 <message>
 <source>AI backend selector</source>
-<translation type="unfinished">AI backend selector</translation>
+<translation>محدد خدمة الذكاء المصطنع</translation>
 </message>
 <message>
 <source>AI model selector</source>
-<translation type="unfinished">AI model selector</translation>
+<translation>محدد نموذج الذكاء المصطنع</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3419,7 +3419,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>AI toolbar</source>
-<translation type="unfinished">AI toolbar</translation>
+<translation>شريط أدوات الذكاء المصطنع</translation>
 </message>
 <message>
 <source>window toolbar</source>
@@ -3694,15 +3694,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>انسخ المسار المطلق للملاحظة</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
-<translation type="unfinished">Copy absolute path of note subfolder</translation>
+<translation>انسخ المسار المطلق للمجلد الفرعي للملاحظات</translation>
 </message>
 <message>
 <source>Copy absolute path of note folder</source>
-<translation type="unfinished">Copy absolute path of note folder</translation>
+<translation>انسخ المسار المطلق لمجلد الملاحظات</translation>
 </message>
 </context>
 <context>
@@ -3791,14 +3791,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>OpenAiCompleter</name>
 <message>
 <source>Timeout, while waiting for the AI response</source>
-<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+<translation>انتهت مهلة انتظار رد الذكاء المصطنع</translation>
 </message>
 </context>
 <context>
 <name>OpenAiService</name>
 <message>
 <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
+<translation>نظام الذكاء المصطنع معطل. برجاء تفعيله في القائمة الرئيسية أو من شريط أدوات الذكاء المصطنع.</translation>
 </message>
 </context>
 <context>
@@ -5570,7 +5570,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>AI</source>
-<translation type="unfinished">AI</translation>
+<translation>الذكاء المصطنع</translation>
 </message>
 <message>
 <source>Experimental</source>
@@ -5650,15 +5650,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Status bar</source>
-<translation type="unfinished">Status bar</translation>
+<translation>شريط الحالة</translation>
 </message>
 <message>
 <source>Show note path</source>
-<translation type="unfinished">Show note path</translation>
+<translation>أظهر مسار الملاحظة</translation>
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation type="unfinished">Only show relative note path</translation>
+<translation>لا تظهر إلا المسار النسبي لملاحظات</translation>
 </message>
 <message>
 <source>Action name</source>
@@ -5787,27 +5787,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>API keys</source>
-<translation type="unfinished">API keys</translation>
+<translation>مفاتيح API</translation>
 </message>
 <message>
 <source>OpenAI API key:</source>
-<translation type="unfinished">OpenAI API key:</translation>
+<translation>مفتاح OpenAI API:</translation>
 </message>
 <message>
 <source>Create Groq API key</source>
-<translation type="unfinished">Create Groq API key</translation>
+<translation>أنشئ مفتاح Groq API</translation>
 </message>
 <message>
 <source>Create OpenAI API key</source>
-<translation type="unfinished">Create OpenAI API key</translation>
+<translation>أنشئ مفتاح OpenAI API</translation>
 </message>
 <message>
 <source>Groq API key:</source>
-<translation type="unfinished">Groq API key:</translation>
+<translation>مفتاح Groq API:</translation>
 </message>
 <message>
 <source>API key</source>
-<translation type="unfinished">API key</translation>
+<translation>مفتاح API</translation>
 </message>
 <message>
 <source>Show line numbers</source>

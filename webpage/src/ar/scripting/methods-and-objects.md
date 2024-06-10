@@ -675,7 +675,7 @@ QString ScriptingService::noteTextEditCurrentBlock();
 var text = script.noteTextEditCurrentBlock();
 ```
 
-You may want to take a look at the example [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+ربما تحب أن تلقي نظرة على المثال [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
 
 Use a completion prompt on the currently selected AI model
 ----------------------------------------------------------
@@ -1505,7 +1505,7 @@ QString ScriptingService::inputDialogGetItem(
         int current, bool editable);
 ```
 
-An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+سترجع سلسلة نصية فارغة عند نقر `Cancel` أو ضغط `Escape`.
 
 ### مثال
 ```js
@@ -1533,7 +1533,7 @@ QString ScriptingService::inputDialogGetText(
         const QString &title, const QString &label, const QString &text);
 ```
 
-An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+سترجع سلسلة نصية فارغة عند نقر `Cancel` أو ضغط `Escape`.
 
 ### مثال
 ```js
@@ -1559,7 +1559,7 @@ QString ScriptingService::inputDialogGetMultiLineText(
         const QString &title, const QString &label, const QString &text);
 ```
 
-An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+سترجع سلسلة نصية فارغة عند نقر `Cancel` أو ضغط `Escape`.
 
 ### مثال
 ```js
