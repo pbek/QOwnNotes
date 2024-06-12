@@ -118,6 +118,8 @@ class MainWindow : public QMainWindow {
 
     void triggerStartupMenuAction();
 
+    void reloadOpenAiControls();
+
     void setCurrentNoteText(QString text);
 
     void setCurrentNote(Note note, bool updateNoteText = true, bool updateSelectedNote = true,

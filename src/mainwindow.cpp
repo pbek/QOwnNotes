@@ -297,7 +297,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // widget is already in place
     initScriptingEngine();
 
-    OpenAiService::instance();
+    // Reload the OpenAI controls after the scripting engine is initialized,
+    // so that scripts can add custom backends
+    reloadOpenAiControls();
 
     // we need to init global shortcuts after the scriptengine is initialized
     // in case there are global shortcuts for custom actions
@@ -9109,6 +9111,19 @@ void MainWindow::on_actionReload_scripting_engine_triggered() {
     ScriptingService::instance()->reloadEngine();
     showStatusBarMessage(tr("The scripting engine was reloaded"), 3000);
     forceRegenerateNotePreview();
+
+    // Reload the OpenAI controls, so that scripts can add custom backends
+    reloadOpenAiControls();
+}
+
+void MainWindow::reloadOpenAiControls() {
+        generateAiBackendComboBox();
+        generateAiModelComboBox();
+
+        // TODO: Enable if method can be executed multiple times
+        // generateAiModelMainMenu();
+
+        aiModelMainMenuSetCurrentItem();
 }
 
 /**
@@ -10378,6 +10393,8 @@ void MainWindow::generateAiBackendComboBox() {
  */
 void MainWindow::generateAiModelMainMenu() {
     QMap<QString, QString> backendNames = OpenAiService::instance()->getBackendNames();
+    // TODO: Clear the menu, groupd and events before adding new items
+//    _aiModelGroup->clear();
     _aiModelGroup->setExclusive(true);
 
     for (const auto &backendId : backendNames.keys()) {
@@ -11126,8 +11143,11 @@ void MainWindow::on_actionCheck_for_script_updates_triggered() {
     dialog->exec();
     delete (dialog);
 
-    // reload the scripting engine
+    // Reload the scripting engine
     ScriptingService::instance()->reloadEngine();
+
+    // Reload the OpenAI controls, so that scripts can add custom backends
+    reloadOpenAiControls();
 }
 
 /**
@@ -12008,6 +12028,7 @@ void MainWindow::buildAiToolbarAndActions() {
     aiModelWidgetAction->setText(tr("AI model selector"));
     _aiToolbar->addAction(aiModelWidgetAction);
 
+    // TODO: Enable if we use reloadOpenAiControls()
     generateAiModelMainMenu();
     aiModelMainMenuSetCurrentItem();
 }

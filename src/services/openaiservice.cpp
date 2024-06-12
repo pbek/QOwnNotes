@@ -102,6 +102,16 @@ void OpenAiService::initializeBackends() {
         const QString apiKey = backend["apiKey"].toString();
         const QStringList models = backend["models"].toStringList();
         qDebug() << __func__ << " - 'id': " << id;
+
+        if (id.isEmpty() || name.isEmpty() || baseUrl.isEmpty() || apiKey.isEmpty() ||
+            models.isEmpty()) {
+            continue;
+        }
+
+        // TODO: Take care of apiKey too
+        _backendNames[id] = name;
+        _backendApiBaseUrls[id] = baseUrl;
+        _backendModels[id] = models;
     }
 }
 
@@ -203,7 +213,8 @@ QString OpenAiService::getModelId() {
 
     // If still not set get the first of the models
     if (this->_modelId.isEmpty()) {
-        this->_modelId = getModelsForCurrentBackend().first();
+        const QStringList& models = getModelsForCurrentBackend();
+        this->_modelId = models.isEmpty() ? QStringLiteral("") : models.first();
     }
 
     return this->_modelId;
