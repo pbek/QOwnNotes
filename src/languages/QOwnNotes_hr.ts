@@ -1229,7 +1229,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopiraj</translation>
+<translation>Kopija</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -2322,27 +2322,27 @@
 </message>
 <message>
 <source>Move up in subfolder list</source>
-<translation type="unfinished">Move up in subfolder list</translation>
+<translation>Pomakni se prema gore u popisu podmapa</translation>
 </message>
 <message>
 <source>Move down in subfolder list</source>
-<translation type="unfinished">Move down in subfolder list</translation>
+<translation>Pomakni se prema dolje u popisu podmapa</translation>
 </message>
 <message>
 <source>Move up in tag list</source>
-<translation type="unfinished">Move up in tag list</translation>
+<translation>Pomakni se prema gore u popisu oznaka</translation>
 </message>
 <message>
 <source>Move down in tag list</source>
-<translation type="unfinished">Move down in tag list</translation>
+<translation>Pomakni se prema dolje u popisu oznaka</translation>
 </message>
 <message>
 <source>Enable AI support</source>
-<translation type="unfinished">Enable AI support</translation>
+<translation>Aktiviraj podršku za UI</translation>
 </message>
 <message>
 <source>asd</source>
-<translation type="unfinished">asd</translation>
+<translation>asd</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -3313,7 +3313,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>AI toolbar</source>
-<translation type="unfinished">AI toolbar</translation>
+<translation>UI alatna traka</translation>
 </message>
 <message>
 <source>window toolbar</source>
@@ -5407,7 +5407,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>AI</source>
-<translation type="unfinished">AI</translation>
+<translation>UI</translation>
 </message>
 <message>
 <source>Experimental</source>
@@ -5427,7 +5427,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Enable QOwnNotesAPI app support</source>
-<translation type="unfinished">Enable QOwnNotesAPI app support</translation>
+<translation>Aktiviraj podršku za QOwnNotesAPI aplikaciju</translation>
 </message>
 <message>
 <source>If your password doesn't work, create an app password (button on the right)</source>
@@ -5487,15 +5487,15 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Status bar</source>
-<translation type="unfinished">Status bar</translation>
+<translation>Traka stanja</translation>
 </message>
 <message>
 <source>Show note path</source>
-<translation type="unfinished">Show note path</translation>
+<translation>Prikaži putanju bilješke</translation>
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation type="unfinished">Only show relative note path</translation>
+<translation>Prikaži samo relativnu putanju bilješke</translation>
 </message>
 <message>
 <source>Action name</source>
@@ -5519,7 +5519,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Start application in read-only mode</source>
-<translation type="unfinished">Start application in read-only mode</translation>
+<translation>Pokreni aplikaciju u modusu samo-za-čitanje</translation>
 </message>
 <message>
 <source>When inactive, enter read-only mode automatically after:</source>
@@ -5624,27 +5624,31 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>API keys</source>
-<translation type="unfinished">API keys</translation>
+<translation>API ključevi</translation>
 </message>
 <message>
 <source>OpenAI API key:</source>
-<translation type="unfinished">OpenAI API key:</translation>
+<translation>OpenAI API ključ:</translation>
 </message>
 <message>
 <source>Create Groq API key</source>
-<translation type="unfinished">Create Groq API key</translation>
+<translation>Stvori Groq API ključ</translation>
 </message>
 <message>
 <source>Create OpenAI API key</source>
-<translation type="unfinished">Create OpenAI API key</translation>
+<translation>Stvori OpenAI API ključ</translation>
+</message>
+<message>
+<source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
+<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
 </message>
 <message>
 <source>Groq API key:</source>
-<translation type="unfinished">Groq API key:</translation>
+<translation>Groq API ključ:</translation>
 </message>
 <message>
 <source>API key</source>
-<translation type="unfinished">API key</translation>
+<translation>API ključ</translation>
 </message>
 <message>
 <source>Show line numbers</source>
@@ -6878,7 +6882,7 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7297,11 +7301,11 @@ Vaše bilješke će ostati netaknute!</translation>
 </message>
 <message>
 <source>Tags</source>
-<translation type="unfinished">Tags</translation>
+<translation>Oznake</translation>
 </message>
 <message>
 <source>Add new tag</source>
-<translation type="unfinished">Add new tag</translation>
+<translation>Dodaj novu oznaku</translation>
 </message>
 <message>
 <source>Due date</source>

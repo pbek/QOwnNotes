@@ -399,3 +399,42 @@ function workspaceSwitchedHook(oldUuid, newUuid);
 ```
 
 Może zechcesz rzucić okiem na przykład [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/workspaces.qml).
+
+openAiBackendsHook
+------------------
+
+This hook is called, when the OpenAI service config is reloaded. For example this is also done when the script engine is reloaded.
+
+You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs.
+
+### Method call and parameters
+```js
+/**
+ * This function is called when the OpenAI service config is reloaded
+ * It returns a list of objects with config parameters for new OpenAI backends
+ */
+function openAiBackendsHook() {
+    return [
+        {
+            "id": "my-custom-ai",
+            "name": "My Custom AI",
+            "baseUrl": "http://localhost:5000",
+            "apiKey": "kDFJkjk3asdm",
+            "models": ["gpt-3.5-turbo", "gpt-4.0-turbo"],
+        },
+        {
+            "id": "my-custom-ai2",
+            "name": "My Custom AI 2",
+            "baseUrl": "http://localhost:5001",
+            "apiKey": "lOikf7eNdb9",
+            "models": ["gpt-3.5-turbo2", "gpt-4.0-turbo2"],
+        },
+    ];
+}
+```
+
+::: tip
+You can use [Registering script settings variables](./methods-and-objects.md#registering-script-settings-variables) to store the OpenAI backend settings in the script settings.
+:::
+
+You may want to take a look at the example [custom-openai-backends.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-openai-backends.qml).

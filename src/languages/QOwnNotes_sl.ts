@@ -1235,7 +1235,7 @@ Atributi opombe</translation>
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopiraj</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -5704,6 +5704,10 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 <message>
 <source>Create OpenAI API key</source>
 <translation type="unfinished">Create OpenAI API key</translation>
+</message>
+<message>
+<source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
+<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
 </message>
 <message>
 <source>Groq API key:</source>

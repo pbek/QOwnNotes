@@ -5631,6 +5631,10 @@ ownCloud sync mutengi &lt;/span&gt; &lt;/a&gt;
 <translation type="unfinished">Create OpenAI API key</translation>
 </message>
 <message>
+<source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
+<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
+</message>
+<message>
 <source>Groq API key:</source>
 <translation type="unfinished">Groq API key:</translation>
 </message>

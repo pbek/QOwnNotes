@@ -1221,7 +1221,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation>Kopiëren</translation>
+<translation>Kopie</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -5599,6 +5599,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Create OpenAI API key</source>
 <translation>OpenAI API-key aanmaken</translation>
+</message>
+<message>
+<source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
+<translation>Gebruik de scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; om meer OpenAI API-compatibele backends toe te voegen.</translation>
 </message>
 <message>
 <source>Groq API key:</source>

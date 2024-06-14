@@ -8,6 +8,7 @@
   - Please take a look at the
     [openAiBackendsHook documentation](https://www.qownnotes.org/scripting/hooks.html#openaibackendshook)
     for more information
+- Added more Croatian, Korean, Dutch translation (thank you, milotype, venusgirl, stephanp)
 
 ## 24.6.1
 - When using the `Insert` key in the note text edit to toggle overwrite mode, it
