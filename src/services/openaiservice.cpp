@@ -113,8 +113,7 @@ void OpenAiService::initializeBackends() {
         const QStringList models = backend["models"].toStringList();
         qDebug() << __func__ << " - 'id': " << id;
 
-        if (id.isEmpty() || name.isEmpty() || baseUrl.isEmpty() || apiKey.isEmpty() ||
-            models.isEmpty()) {
+        if (id.isEmpty() || name.isEmpty() || baseUrl.isEmpty() || models.isEmpty()) {
             continue;
         }
 
