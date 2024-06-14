@@ -75,25 +75,33 @@ void OpenAiService::deleteInstance() {
 }
 
 void OpenAiService::initializeBackends() {
+    _backendModels.clear();
     _backendModels[QStringLiteral("openai")] =
         QStringList{"gpt-4o", "gpt-4-turbo", "gpt-3.5-turbo", "gpt-4"};
     _backendModels[QStringLiteral("groq")] =
         QStringList{"llama3-70b-8192", "llama3-8b-8192", "llama2-70b-4096", "mixtral-8x7b-32768",
                     "gemma-7b-it"};
 
+    _backendApiBaseUrls.clear();
     _backendApiBaseUrls[QStringLiteral("openai")] =
         QStringLiteral("https://api.openai.com/v1/chat/completions");
     _backendApiBaseUrls[QStringLiteral("groq")] =
         QStringLiteral("https://api.groq.com/openai/v1/chat/completions");
 
+    _backendApiKeys.clear();
+    QSettings settings;
+    _backendApiKeys[QStringLiteral("groq")] = CryptoService::instance()->decryptToString(
+        settings.value(getApiKeySettingsKeyForBackend(QStringLiteral("groq"))).toString());;
+    _backendApiKeys[QStringLiteral("openai")] = CryptoService::instance()->decryptToString(
+        settings.value(getApiKeySettingsKeyForBackend(QStringLiteral("openai"))).toString());;
+
+    _backendNames.clear();
     _backendNames[QStringLiteral("groq")] = QStringLiteral("Groq");
     _backendNames[QStringLiteral("openai")] = QStringLiteral("OpenAI");
 
-    // TODO: Implement script hook for https://github.com/pbek/QOwnNotes/issues/3037
-    // id, name, baseUrl, apiKey, models
     const QList<QVariantMap> backends = ScriptingService::instance()->callOpenAiBackendsHook();
-    qDebug() << __func__ << " - 'backends': " << backends;
-    qDebug() << __func__ << " - 'backends count': " << backends.count();
+//    qDebug() << __func__ << " - 'backends': " << backends;
+//    qDebug() << __func__ << " - 'backends count': " << backends.count();
 
     foreach (const QVariantMap& backend, backends) {
         const QString id = backend["id"].toString();
@@ -108,9 +116,9 @@ void OpenAiService::initializeBackends() {
             continue;
         }
 
-        // TODO: Take care of apiKey too
         _backendNames[id] = name;
         _backendApiBaseUrls[id] = baseUrl;
+        _backendApiKeys[id] = apiKey;
         _backendModels[id] = models;
     }
 }
@@ -132,9 +140,7 @@ QString OpenAiService::getApiBaseUrlForCurrentBackend() {
 }
 
 QString OpenAiService::getApiKeyForCurrentBackend() {
-    QSettings settings;
-    return CryptoService::instance()->decryptToString(
-        settings.value(getCurrentApiKeySettingsKey()).toString());
+    return _backendApiKeys.value(getBackendId());
 }
 
 QStringList OpenAiService::getModelsForBackend(const QString& backendId) {
@@ -225,8 +231,8 @@ QString OpenAiService::getCurrentModelSettingsKey() {
            QStringLiteral("currentModel");
 }
 
-QString OpenAiService::getCurrentApiKeySettingsKey() {
-    return QStringLiteral("ai/") + getBackendId() + QStringLiteral("/") + QStringLiteral("apiKey");
+QString OpenAiService::getApiKeySettingsKeyForBackend(const QString& backendId) {
+    return QStringLiteral("ai/") + backendId + QStringLiteral("/") + QStringLiteral("apiKey");
 }
 
 bool OpenAiService::setEnabled(bool enabled) {

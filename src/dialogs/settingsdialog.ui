@@ -6959,6 +6959,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               </widget>
              </item>
              <item>
+              <widget class="QLabel" name="openAiScriptingLabel">
+               <property name="text">
+                <string>You can use the scripting hook &lt;a href=&quot;%1&quot;&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</string>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+               <property name="openExternalLinks">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
               <spacer name="verticalSpacer_21">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>

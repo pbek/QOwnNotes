@@ -9117,13 +9117,12 @@ void MainWindow::on_actionReload_scripting_engine_triggered() {
 }
 
 void MainWindow::reloadOpenAiControls() {
-        generateAiBackendComboBox();
-        generateAiModelComboBox();
+    OpenAiService::deleteInstance();
+    generateAiBackendComboBox();
+    generateAiModelComboBox();
+    generateAiModelMainMenu();
 
-        // TODO: Enable if method can be executed multiple times
-        // generateAiModelMainMenu();
-
-        aiModelMainMenuSetCurrentItem();
+    aiModelMainMenuSetCurrentItem();
 }
 
 /**
@@ -10393,9 +10392,7 @@ void MainWindow::generateAiBackendComboBox() {
  */
 void MainWindow::generateAiModelMainMenu() {
     QMap<QString, QString> backendNames = OpenAiService::instance()->getBackendNames();
-    // TODO: Clear the menu, groupd and events before adding new items
-//    _aiModelGroup->clear();
-    _aiModelGroup->setExclusive(true);
+    ui->menuAI_model->clear();
 
     for (const auto &backendId : backendNames.keys()) {
         const QString &backendName = backendNames.value(backendId);
@@ -10418,8 +10415,6 @@ void MainWindow::generateAiModelMainMenu() {
         // Add the submenu to the main menu
         ui->menuAI_model->addMenu(modelSubMenu);
     }
-
-    connect(_aiModelGroup, &QActionGroup::triggered, this, &MainWindow::onAiModelGroupChanged);
 }
 
 void MainWindow::aiModelMainMenuSetCurrentItem() {
@@ -12028,7 +12023,8 @@ void MainWindow::buildAiToolbarAndActions() {
     aiModelWidgetAction->setText(tr("AI model selector"));
     _aiToolbar->addAction(aiModelWidgetAction);
 
-    // TODO: Enable if we use reloadOpenAiControls()
+    _aiModelGroup->setExclusive(true);
+    connect(_aiModelGroup, &QActionGroup::triggered, this, &MainWindow::onAiModelGroupChanged);
     generateAiModelMainMenu();
     aiModelMainMenuSetCurrentItem();
 }

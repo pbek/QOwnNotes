@@ -67,6 +67,7 @@ class OpenAiService : public QObject {
    private:
     QMap<QString, QStringList> _backendModels;
     QMap<QString, QString> _backendApiBaseUrls;
+    QMap<QString, QString> _backendApiKeys;
     QMap<QString, QString> _backendNames;
     void initializeBackends();
     static OpenAiService* createInstance(QObject* parent);
@@ -74,7 +75,7 @@ class OpenAiService : public QObject {
     QString _modelId;
     OpenAiCompleter* _completer = nullptr;
     QString getCurrentModelSettingsKey();
-    QString getCurrentApiKeySettingsKey();
+    static QString getApiKeySettingsKeyForBackend(const QString& backendId);
     void initializeCompleter(QObject* parent);
     QString getApiBaseUrlForCurrentBackend();
     QString getApiKeyForCurrentBackend();

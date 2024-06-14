@@ -303,6 +303,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
         "https://www.qownnotes.org/getting-started/command-line-snippet-manager.html"));
     ui->commandSnippetsNoteNameLabel->hide();
     ui->commandSnippetsNoteNameLineEdit->hide();
+    ui->openAiScriptingLabel->setText(ui->openAiScriptingLabel->text().arg(
+        "https://www.qownnotes.org/scripting/hooks.html#openaibackendshook"));
 
 #ifndef Q_OS_LINUX
     ui->systemIconThemeCheckBox->setHidden(true);

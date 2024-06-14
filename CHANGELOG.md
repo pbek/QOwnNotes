@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 24.6.2
+- A new scripting hook `openAiBackendsHook` was added, that is called when the OpenAI
+  service config is reloaded (for [#3037](https://github.com/pbek/QOwnNotes/issues/3037))
+  - For example this is also done when the script engine is reloaded
+  - You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs
+  - Please take a look at the
+    [openAiBackendsHook documentation](https://www.qownnotes.org/scripting/hooks.html#openaibackendshook)
+    for more information
+
 ## 24.6.1
 - When using the `Insert` key in the note text edit to toggle overwrite mode, it
   now will be made sure that no modifier key is pressed (for [#3038](https://github.com/pbek/QOwnNotes/issues/3038))
