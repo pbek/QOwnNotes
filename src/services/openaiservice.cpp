@@ -91,17 +91,19 @@ void OpenAiService::initializeBackends() {
     _backendApiKeys.clear();
     QSettings settings;
     _backendApiKeys[QStringLiteral("groq")] = CryptoService::instance()->decryptToString(
-        settings.value(getApiKeySettingsKeyForBackend(QStringLiteral("groq"))).toString());;
+        settings.value(getApiKeySettingsKeyForBackend(QStringLiteral("groq"))).toString());
+    ;
     _backendApiKeys[QStringLiteral("openai")] = CryptoService::instance()->decryptToString(
-        settings.value(getApiKeySettingsKeyForBackend(QStringLiteral("openai"))).toString());;
+        settings.value(getApiKeySettingsKeyForBackend(QStringLiteral("openai"))).toString());
+    ;
 
     _backendNames.clear();
     _backendNames[QStringLiteral("groq")] = QStringLiteral("Groq");
     _backendNames[QStringLiteral("openai")] = QStringLiteral("OpenAI");
 
     const QList<QVariantMap> backends = ScriptingService::instance()->callOpenAiBackendsHook();
-//    qDebug() << __func__ << " - 'backends': " << backends;
-//    qDebug() << __func__ << " - 'backends count': " << backends.count();
+    //    qDebug() << __func__ << " - 'backends': " << backends;
+    //    qDebug() << __func__ << " - 'backends count': " << backends.count();
 
     foreach (const QVariantMap& backend, backends) {
         const QString id = backend["id"].toString();

@@ -289,7 +289,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // initialize the dock widgets
     initDockWidgets();
 
-    // Delete the OpenAiService instance again, so we can add backends after the scripts are loaded by initScriptingEngine()
+    // Delete the OpenAiService instance again, so we can add backends after the scripts are loaded
+    // by initScriptingEngine()
     OpenAiService::deleteInstance();
 
     // initialize the scripting engine
