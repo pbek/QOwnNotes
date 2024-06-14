@@ -459,10 +459,11 @@ You may want to take a look at the example
 openAiBackendsHook
 ------------------
 
-This hook is called, when the OpenAI service config is reloaded. For example this is also
-done when the script engine is reloaded.
+This hook is called, when the OpenAI service config is reloaded. For example,
+this is also done when the script engine is reloaded.
 
-You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs.
+You can use it to provide config for custom OpenAI backends, like your own
+OpenAI API compatible LLMs.
 
 ### Method call and parameters
 ```js
