@@ -312,8 +312,6 @@ void ScriptingService::reloadEngine() {
         // Reload the OpenAI controls, so that the scripts can add custom backends
         mainWindow->reloadOpenAiControls();
     }
-#else
-    Q_UNUSED(text)
 #endif
 }
 
@@ -1458,6 +1456,8 @@ QString ScriptingService::aiComplete(const QString &prompt) {
                                                    QString(__func__));
 
     return OpenAiService::instance()->complete(prompt);
+#else
+    Q_UNUSED(prompt)
 #endif
 }
 
