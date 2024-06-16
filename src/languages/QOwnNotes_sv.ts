@@ -1223,7 +1223,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopia</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -5622,6 +5622,10 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
 <translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
+</message>
+<message>
+<source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
+<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
 </message>
 <message>
 <source>Groq API key:</source>

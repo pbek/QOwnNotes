@@ -5611,6 +5611,10 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
 <translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
 </message>
 <message>
+<source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
+<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+</message>
+<message>
 <source>Groq API key:</source>
 <translation type="unfinished">Groq API key:</translation>
 </message>

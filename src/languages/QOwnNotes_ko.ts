@@ -5566,6 +5566,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>스크립팅 후크 &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt;를 사용하여 OpenAI API 호환 백엔드를 추가할 수 있습니다.</translation>
 </message>
 <message>
+<source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
+<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+</message>
+<message>
 <source>Groq API key:</source>
 <translation>Groq API 키:</translation>
 </message>

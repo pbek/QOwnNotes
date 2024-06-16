@@ -5605,6 +5605,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Gebruik de scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; om meer OpenAI API-compatibele backends toe te voegen.</translation>
 </message>
 <message>
+<source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
+<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+</message>
+<message>
 <source>Groq API key:</source>
 <translation>Groq API-key:</translation>
 </message>

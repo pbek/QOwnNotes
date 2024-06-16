@@ -403,7 +403,7 @@ Schauen Sie sich dazu das Beispiel auf [websocket-raw-data-new-note.qml](https:/
 openAiBackendsHook
 ------------------
 
-This hook is called, when the OpenAI service config is reloaded. For example this is also done when the script engine is reloaded.
+This hook is called, when the OpenAI service config is reloaded. For example, this is also done when the script engine is reloaded.
 
 You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs.
 

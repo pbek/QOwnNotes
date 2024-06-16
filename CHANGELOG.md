@@ -12,6 +12,7 @@
   - There now is a script `llama-cpp-integration` in the script repository that
     allows integration with [llama.cpp](https://github.com/ggerganov/llama.cpp) (for [#238](https://github.com/qownnotes/scripts/pull/238), thank you, @eljamm)
   - In the *AI settings* there now also is the script-repository mentioned
+- Added more Swedish, Korean, Dutch translation (thank you, dzenan, venusgirl, stephanp)
 
 ## 24.6.2
 - A new scripting hook `openAiBackendsHook` was added, that is called when the OpenAI

@@ -403,9 +403,9 @@ Misschien wilt u het voorbeeld bekijken [ websocket-raw-data-new-note.qml ](http
 openAiBackendsHook
 ------------------
 
-Deze hook wordt aangeroepen bij het laden van de OpenAI-serviceconfiguratie. Dit wordt bijvoorbeeld ook gedaan bij het laden van de script-engine.
+Deze hook wordt aangeroepen bij het laden van de OpenAI-serviceconfiguratie. Dit wordt bijv. ook gedaan wanneer de scriptengine opnieuw wordt geladen.
 
-U kunt het gebruiken om configuraties te bieden voor aangepaste OpenAI-backends, zoals uw eigen OpenAI API-compatibele LLM's.
+U kunt het gebruiken om configuratie te bieden voor aangepaste OpenAI-backends, zoals uw eigen OpenAI API-compatibele LLM's.
 
 ### Methode-aanroep en parameters
 ```js
