@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 24.6.3
+- Improvements to the new scripting hook `openAiBackendsHook` were made
+  (for [#3037](https://github.com/pbek/QOwnNotes/issues/3037))
+  - The OpenAI UI elements will now be reloaded properly, when the  script-engine
+    is reloaded after a script was installed
+
 ## 24.6.2
 - A new scripting hook `openAiBackendsHook` was added, that is called when the OpenAI
   service config is reloaded (for [#3037](https://github.com/pbek/QOwnNotes/issues/3037))

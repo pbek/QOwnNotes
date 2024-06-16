@@ -9112,9 +9112,6 @@ void MainWindow::on_actionReload_scripting_engine_triggered() {
     ScriptingService::instance()->reloadEngine();
     showStatusBarMessage(tr("The scripting engine was reloaded"), 3000);
     forceRegenerateNotePreview();
-
-    // Reload the OpenAI controls, so that scripts can add custom backends
-    reloadOpenAiControls();
 }
 
 void MainWindow::reloadOpenAiControls() {
@@ -11141,9 +11138,6 @@ void MainWindow::on_actionCheck_for_script_updates_triggered() {
 
     // Reload the scripting engine
     ScriptingService::instance()->reloadEngine();
-
-    // Reload the OpenAI controls, so that scripts can add custom backends
-    reloadOpenAiControls();
 }
 
 /**

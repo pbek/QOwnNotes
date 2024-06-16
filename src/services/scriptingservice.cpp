@@ -303,7 +303,19 @@ void ScriptingService::initComponents() {
 /**
  * Reloads the engine
  */
-void ScriptingService::reloadEngine() { reloadScriptComponents(); }
+void ScriptingService::reloadEngine() {
+    reloadScriptComponents();
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != nullptr) {
+        // Reload the OpenAI controls, so that the scripts can add custom backends
+        mainWindow->reloadOpenAiControls();
+    }
+#else
+    Q_UNUSED(text)
+#endif
+}
 
 /**
  * Returns the registered script variables
