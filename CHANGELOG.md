@@ -5,6 +5,12 @@
   (for [#3037](https://github.com/pbek/QOwnNotes/issues/3037))
   - The OpenAI UI elements will now be reloaded properly, when the  script-engine
     is reloaded after a script was installed
+  - The `apiKey` attribute in the scripting hook is now optional, because local
+    APIs don't need it
+  - There now is a script `ollama-integration` in the script repository that
+    allows integration with [Ollama](https://github.com/ollama/ollama)
+  - There now is a script `llama-cpp-integration` in the script repository that
+    allows integration with [llama.cpp](https://github.com/ggerganov/llama.cpp)
 
 ## 24.6.2
 - A new scripting hook `openAiBackendsHook` was added, that is called when the OpenAI
