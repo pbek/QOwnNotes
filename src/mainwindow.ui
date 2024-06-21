@@ -2784,16 +2784,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <string>Enable AI support</string>
    </property>
   </action>
-  <action name="actionasd">
-   <property name="text">
-    <string>asd</string>
-   </property>
-  </action>
-  <action name="actionasd_2">
-   <property name="text">
-    <string>asd</string>
-   </property>
-  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>

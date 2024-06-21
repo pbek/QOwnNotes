@@ -2917,12 +2917,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2789"/>
-        <location filename="../mainwindow.ui" line="2794"/>
-        <source>asd</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="1929"/>
         <source>Use &amp;vertical preview layout</source>
         <translation type="unfinished"></translation>
