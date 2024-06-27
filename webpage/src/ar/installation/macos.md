@@ -20,4 +20,4 @@ brew install qownnotes
 
 ## Nix
 
-كذلك يمكنك تثبيت QOwnNotes عبر [مدير الحزم Nix](https://nixos.wiki/wiki/Nix_package_manager) على ماك&nbsp;أو&nbsp;إس؛ انظر [التثبيت عبر Nix](./nix.md).
+كذلك يمكنك تثبيت QOwnNotes عبر [مدير الحزم Nix](https://wiki.nixos.org/wiki/Nix_package_manager) على ماك&nbsp;أو&nbsp;إس؛ انظر [التثبيت عبر Nix](./nix.md).
