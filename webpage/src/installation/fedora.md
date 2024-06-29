@@ -54,15 +54,22 @@ dnf install qownnotes
 
 [Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (this example link is for Fedora 40)
 
-## QON Version Updating Notes for Fedora
-### Problems with GPG Keys?
+## QOwnNotes version updating notes for Fedora
 
-Changes in Fedora's cryptographic policies can mean "old" repository keys are not automatically extended.  This can lead to problems _updating_ QOwnNotes.
+### Problems with GPG keys?
 
-If you have a problem with invalid keys (i.e. GPG errors) such as "certificate is not alive" and/or "key is not alive" due to key expiry, this terminal command should delete the expired key:
+Changes in Fedora's cryptographic policies can mean "old" repository keys are not automatically extended.
+This can lead to problems *updating* QOwnNotes.
 
-```sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubkey | grep pbek | cut -f1)```
+If you have a problem with invalid keys (i.e. GPG errors) such as `certificate is not alive`
+and/or `key is not alive` due to key expiry, this terminal command should delete the expired key:
 
-You must then newly _import_ the current key as described in the beginning of these installation instructions.
+```bash
+sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubkey | grep pbek | cut -f1)
+```
 
-Detailed explanation of the command is available on GitHub in a [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) related to this exact issue.
+You must then newly *import* the current key as described in the beginning of these installation instructions.
+
+Detailed explanation of the command is available on GitHub in a
+[topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084)
+related to this exact issue.
