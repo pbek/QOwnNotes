@@ -2,6 +2,13 @@
 
 There are QOwnNotes repositories for **Fedora 28 and higher**.
 
+::: tip
+QOwnNotes is provided in the Fedora repositories.
+That version is generally one or two patch versions behind the master repository available through the instrucitons below.
+For most users you can just issue `dnf install qownnotes` in a terminal window.  If you want the **most up-to-date version**, please continue reading.
+:::
+
+
 ## On systems with config-manager dnf plugin
 
 Run the following shell commands as root to add the repository.
@@ -16,7 +23,7 @@ dnf install qownnotes
 ::: tip
 You may need to accept the repo key before you can download from it.
 
-If you have troubles import the key yourself with:
+If you have any problems, import the key manually with:
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
@@ -54,22 +61,22 @@ dnf install qownnotes
 
 [Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (this example link is for Fedora 40)
 
-## QOwnNotes version updating notes for Fedora
+## QOwnNotes version-updating notes for Fedora
 
 ### Problems with GPG keys?
 
-Changes in Fedora's cryptographic policies can mean "old" repository keys are not automatically extended.
+Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not *automatically* extended.
 This can lead to problems *updating* QOwnNotes.
 
-If you have a problem with invalid keys (i.e. GPG errors) such as `certificate is not alive`
+**Detail:** If you have a problem with invalid keys (i.e. GPG errors) such as `certificate is not alive`
 and/or `key is not alive` due to key expiry, this terminal command should delete the expired key:
 
 ```bash
 sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubkey | grep pbek | cut -f1)
 ```
 
-You must then newly *import* the current key as described in the beginning of these installation instructions.
-
 Detailed explanation of the command is available on GitHub in a
 [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084)
 related to this exact issue.
+
+Once the expired key has been deleted, you must then newly *import* the **current** key manually as described in the beginning of these installation instructions.
