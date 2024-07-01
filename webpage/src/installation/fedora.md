@@ -5,7 +5,7 @@ There are QOwnNotes repositories for **Fedora 28 and higher**.
 ::: tip
 QOwnNotes is provided in the Fedora repositories.
 That version is generally one or two patch versions behind the master repository available through the instrucitons below.
-For most users you can just issue ```dnf install qownnotes``` in a terminal window.  If you want the **most up-to-date version**, please continue reading.
+For most users you can just issue `dnf install qownnotes` in a terminal window.  If you want the **most up-to-date version**, please continue reading.
 :::
 
 
@@ -65,7 +65,7 @@ dnf install qownnotes
 
 ### Problems with GPG keys?
 
-Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not _automatically_ extended.
+Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not *automatically* extended.
 This can lead to problems *updating* QOwnNotes.
 
 **Detail:** If you have a problem with invalid keys (i.e. GPG errors) such as `certificate is not alive`
