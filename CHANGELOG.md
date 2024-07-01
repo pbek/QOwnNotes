@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.7.0
+- Added more French, Croatian, Dutch, Korean translation (thank you, jd-develop,
+  milotype, stephanp, venusgirl)
+
 ## 24.6.3
 - Improvements to the new scripting hook `openAiBackendsHook` were made
   (for [#3037](https://github.com/pbek/QOwnNotes/issues/3037))

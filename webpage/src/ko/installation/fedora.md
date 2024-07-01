@@ -2,9 +2,13 @@
 
 **Fedora 28 이상**에 대한 QOwnNotes저장소가 있습니다.
 
+::: tip QOwnNotes is provided in the [Fedora repositories](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/). That version is generally one or two patch versions behind the master repository available through the instructions below.
+
+For most users you can just issue `dnf install qownnotes` in a terminal window. If you want the **most up-to-date version**, please continue reading. :::
+
 ## Config-manager dnf 플러그인이 있는 시스템
 
-다음 셸 명령을 루트로 실행하여 저장소를 추가합니다.
+Run the following shell commands as root to add the repository.
 
 ```bash
 dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
@@ -13,27 +17,27 @@ dnf makecache
 dnf install qownnotes
 ```
 
-::: 팁 repo 키에서 다운로드하기 전에 repo 키를 수락해야 할 수도 있습니다.
+::: tip You may need to accept the repo key before you can download from it.
 
-문제가 있는 경우 다음을 사용하여 직접 키를 가져옵니다:
+If you have any problems, import the key manually with:
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
-위 코드의 "Fedora_40" 부분은 사용 중인 Fedora 버전 (즉, "Fedora_39", "Fedora_38" 등)을 반영해야 합니다 :::
+Please note that the portion "Fedora_40" in the above code should reflect the version of Fedora you are using (i.e. "Fedora_39", "Fedora_38" etc.) :::
 
 ## 레거시 설치 방법
 
-Fedora 버전이 `config-manager` 플러그인을 지원하지 않는 경우 이 방법을 사용하여 이러한 명령을 루트로 실행합니다.
+Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
 
-다음 셸 명령을 루트로 실행하여 저장소를 신뢰합니다.
+Run the following shell commands as root to trust the repository.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
-다시: 위 코드의 "Fedora_40" 부분은 사용 중인 Fedora 버전 (즉, "Fedora_39", "Fedora_38" 등)을 반영해야 합니다
+Again: note that the portion "Fedora_40" in the above code should reflect the version of Fedora you are using (i.e. "Fedora_39", "Fedora_38" etc.)
 
-그런 다음 다음 다음 셸 명령을 root으로 실행하여 리포지토리를 추가하고 거기에서 QOwnNotes를 설치합니다.
+Then run the following shell commands as root to add the repository and install QOwnNotes from there.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -50,4 +54,20 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (이 예제 링크는 Fedora 40용)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (this example link is for Fedora 40)
+
+## QOwnNotes version-updating notes for Fedora
+
+### Problems with GPG keys?
+
+Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not *automatically* extended. This can lead to problems *updating* QOwnNotes.
+
+**Detail:** If you have a problem with invalid keys (i.e. GPG errors) such as `certificate is not alive` and/or `key is not alive` due to key expiry, this terminal command should delete the expired key:
+
+```bash
+sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubkey | grep pbek | cut -f1)
+```
+
+Detailed explanation of the command is available on GitHub in a [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) related to this exact issue.
+
+Once the expired key has been deleted, you must then newly *import* the **current** key manually as described in the beginning of these installation instructions.

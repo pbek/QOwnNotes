@@ -2347,10 +2347,6 @@
 <translation type="unfinished">Enable AI support</translation>
 </message>
 <message>
-<source>asd</source>
-<translation type="unfinished">asd</translation>
-</message>
-<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Користите &amp;вертикални изглед прегледа</translation>
 </message>

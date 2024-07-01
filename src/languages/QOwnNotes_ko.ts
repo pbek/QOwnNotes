@@ -2326,10 +2326,6 @@ File: QOwnNotes_en.ts</translation>
 <translation>AI 지원 활성화</translation>
 </message>
 <message>
-<source>asd</source>
-<translation>asd</translation>
-</message>
-<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>세로 미리보기 레이아웃 사용(&amp;V)</translation>
 </message>
@@ -5567,7 +5563,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
-<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+<translation>또는 이미 생성된 AI 통합 스크립트를 스크립트 저장소에서 볼 수도 있습니다.</translation>
 </message>
 <message>
 <source>Groq API key:</source>

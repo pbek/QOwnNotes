@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Copie</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1851,7 +1851,7 @@
 </message>
 <message>
 <source>AI model</source>
-<translation type="unfinished">AI model</translation>
+<translation>Modèle d’IA</translation>
 </message>
 <message>
 <source>To&amp;do</source>
@@ -2329,11 +2329,7 @@
 </message>
 <message>
 <source>Enable AI support</source>
-<translation type="unfinished">Enable AI support</translation>
-</message>
-<message>
-<source>asd</source>
-<translation type="unfinished">asd</translation>
+<translation>Activer le support de l’IA</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2734,19 +2730,19 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>AI backends</source>
-<translation type="unfinished">AI backends</translation>
+<translation>Back-ends d’IA</translation>
 </message>
 <message>
 <source>AI models</source>
-<translation type="unfinished">AI models</translation>
+<translation>Modèles d’IA</translation>
 </message>
 <message>
 <source>AI backend selector</source>
-<translation type="unfinished">AI backend selector</translation>
+<translation>Sélecteur de back-end d’IA</translation>
 </message>
 <message>
 <source>AI model selector</source>
-<translation type="unfinished">AI model selector</translation>
+<translation>Sélecteur de modèle d’IA</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3285,7 +3281,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>AI toolbar</source>
-<translation type="unfinished">AI toolbar</translation>
+<translation>Barre d’outils d’IA</translation>
 </message>
 <message>
 <source>window toolbar</source>
@@ -3540,23 +3536,23 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
-<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+<translation>Chemin relatif vers la note, clic droit pour ouvrir le menu contextuel</translation>
 </message>
 <message>
 <source>Absolute path of note, right-click to open context menu</source>
-<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+<translation>Chemin absolu vers la note, clic droit pour ouvrir le menu contextuel</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Copier le chemin absolu vers la note</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
-<translation type="unfinished">Copy absolute path of note subfolder</translation>
+<translation>Copier le chemin absolu vers le sous-dossier de la note</translation>
 </message>
 <message>
 <source>Copy absolute path of note folder</source>
-<translation type="unfinished">Copy absolute path of note folder</translation>
+<translation>Copier le chemin absolu vers le dossier de la note</translation>
 </message>
 </context>
 <context>
@@ -3641,14 +3637,14 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <name>OpenAiCompleter</name>
 <message>
 <source>Timeout, while waiting for the AI response</source>
-<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+<translation>Délai d’attente dépassé lors de l’attente de la réponse de l’IA</translation>
 </message>
 </context>
 <context>
 <name>OpenAiService</name>
 <message>
 <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
+<translation>Le système d’IA est désactivé. Merci de l’activer dans le menu principal ou dans la barre d’outils d’IA.</translation>
 </message>
 </context>
 <context>
@@ -5366,7 +5362,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>AI</source>
-<translation type="unfinished">AI</translation>
+<translation>IA</translation>
 </message>
 <message>
 <source>Experimental</source>
@@ -5446,15 +5442,15 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Status bar</source>
-<translation type="unfinished">Status bar</translation>
+<translation>Barre de statut</translation>
 </message>
 <message>
 <source>Show note path</source>
-<translation type="unfinished">Show note path</translation>
+<translation>Voir le chemin vers la note</translation>
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation type="unfinished">Only show relative note path</translation>
+<translation>Montrer uniquement les chemins relatifs vers les notes</translation>
 </message>
 <message>
 <source>Action name</source>
@@ -5583,35 +5579,35 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>API keys</source>
-<translation type="unfinished">API keys</translation>
+<translation>Clés d’API</translation>
 </message>
 <message>
 <source>OpenAI API key:</source>
-<translation type="unfinished">OpenAI API key:</translation>
+<translation>Clé d’API OpenAI :</translation>
 </message>
 <message>
 <source>Create Groq API key</source>
-<translation type="unfinished">Create Groq API key</translation>
+<translation>Créer une clé d’API Groq</translation>
 </message>
 <message>
 <source>Create OpenAI API key</source>
-<translation type="unfinished">Create OpenAI API key</translation>
+<translation>Créer une clé d’API OpenAI</translation>
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
-<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
+<translation>Vous pouvez utiliser le hook de script &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; pour ajouter plus de back-ends compatibles avec l’API d’OpenAI.</translation>
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
-<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+<translation>Alternativement, vous pouvez aussi regarder dans le dépôt de scripts pour des scripts d’intégration d’IA déjà créés.</translation>
 </message>
 <message>
 <source>Groq API key:</source>
-<translation type="unfinished">Groq API key:</translation>
+<translation>Clé d’API Groq :</translation>
 </message>
 <message>
 <source>API key</source>
-<translation type="unfinished">API key</translation>
+<translation>Clé d’API</translation>
 </message>
 <message>
 <source>Show line numbers</source>
@@ -6838,7 +6834,7 @@ Vos notes resteront intactes!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>

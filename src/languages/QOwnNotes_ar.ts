@@ -2374,10 +2374,6 @@
 <translation>تفعيل الذكاء المصطنع</translation>
 </message>
 <message>
-<source>asd</source>
-<translation type="unfinished">asd</translation>
-</message>
-<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>استخدم مخطط المعاينة ال&amp;رأسي</translation>
 </message>

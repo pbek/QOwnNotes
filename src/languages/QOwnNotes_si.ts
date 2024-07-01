@@ -2332,10 +2332,6 @@
 <translation type="unfinished">Enable AI support</translation>
 </message>
 <message>
-<source>asd</source>
-<translation type="unfinished">asd</translation>
-</message>
-<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>&amp;සිරස් පෙරදසුන පිරිසැලසුම භාවිතා කරන්න</translation>
 </message>

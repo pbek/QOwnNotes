@@ -2331,10 +2331,6 @@
 <translation>AI-ondersteuning activeren</translation>
 </message>
 <message>
-<source>asd</source>
-<translation>asd</translation>
-</message>
-<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Gebruik &amp;verticale voorvertoningslayout</translation>
 </message>
@@ -5606,7 +5602,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
-<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+<translation>Als alternatief kunt u ook in de scriptrepository zoeken naar reeds gemaakte AI-integratiescripts.</translation>
 </message>
 <message>
 <source>Groq API key:</source>

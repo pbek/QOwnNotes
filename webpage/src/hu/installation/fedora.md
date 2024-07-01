@@ -2,9 +2,15 @@
 
 Vannak QOwnNotes tárak a **Fedora 28 és újabb verziókhoz**.
 
+::: tip
+QOwnNotes is provided in the [Fedora repositories](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/). That version is generally one or two patch versions behind the master repository available through the instructions below.
+
+For most users you can just issue `dnf install qownnotes` in a terminal window. If you want the **most up-to-date version**, please continue reading.
+:::
+
 ## A config-manager dnf beépülő modullal rendelkező rendszereken
 
-Futtassa a következő shell parancsokat rootként az adattár hozzáadásához.
+Run the following shell commands as root to add the repository.
 
 ```bash
 dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
@@ -14,9 +20,9 @@ dnf install qownnotes
 ```
 
 ::: tip
-Előfordulhat, hogy el kell fogadnia a repo kulcsot, mielőtt letölthet róla.
+You may need to accept the repo key before you can download from it.
 
-Ha problémái vannak, akkor importálja a kulcsot saját kezüleg:
+If you have any problems, import the key manually with:
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
@@ -26,9 +32,9 @@ Please note that the portion "Fedora_40" in the above code should reflect the ve
 
 ## Régi telepítési módszer
 
-Használja ezt a módszert, ha a Fedora verziója nem támogatja a `config-manager` dnf bővítményt, futtassa ezeket a parancsokat rootként.
+Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
 
-Futtassa a következő shell parancsokat rootként, hogy megbízhasson az adattárban.
+Run the following shell commands as root to trust the repository.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
@@ -53,3 +59,19 @@ dnf install qownnotes
 ```
 
 [Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (this example link is for Fedora 40)
+
+## QOwnNotes version-updating notes for Fedora
+
+### Problems with GPG keys?
+
+Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not *automatically* extended. This can lead to problems *updating* QOwnNotes.
+
+**Detail:** If you have a problem with invalid keys (i.e. GPG errors) such as `certificate is not alive` and/or `key is not alive` due to key expiry, this terminal command should delete the expired key:
+
+```bash
+sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubkey | grep pbek | cut -f1)
+```
+
+Detailed explanation of the command is available on GitHub in a [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) related to this exact issue.
+
+Once the expired key has been deleted, you must then newly *import* the **current** key manually as described in the beginning of these installation instructions.

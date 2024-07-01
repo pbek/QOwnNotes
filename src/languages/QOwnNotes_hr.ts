@@ -2341,10 +2341,6 @@
 <translation>Aktiviraj podršku za UI</translation>
 </message>
 <message>
-<source>asd</source>
-<translation>asd</translation>
-</message>
-<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Upotrijebi &amp;vertikalni pretpregled izgleda</translation>
 </message>
@@ -3572,23 +3568,23 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
-<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+<translation>Relativna putanja bilješke, desni klik za otvaranje kontekstnog izbornika</translation>
 </message>
 <message>
 <source>Absolute path of note, right-click to open context menu</source>
-<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+<translation>Absolutna putanja bilješke, desni klik za otvaranje kontekstnog izbornika</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Kopiraj apsolutnu putanju bilješke</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
-<translation type="unfinished">Copy absolute path of note subfolder</translation>
+<translation>Kopiraj apsolutnu putanju podmape bilješke</translation>
 </message>
 <message>
 <source>Copy absolute path of note folder</source>
-<translation type="unfinished">Copy absolute path of note folder</translation>
+<translation>Kopiraj apsolutnu putanju mape bilješke</translation>
 </message>
 </context>
 <context>
