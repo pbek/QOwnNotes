@@ -3,11 +3,13 @@
 There are QOwnNotes repositories for **Fedora 28 and higher**.
 
 ::: tip
-QOwnNotes is provided in the Fedora repositories.
-That version is generally one or two patch versions behind the master repository available through the instrucitons below.
-For most users you can just issue `dnf install qownnotes` in a terminal window.  If you want the **most up-to-date version**, please continue reading.
-:::
+QOwnNotes is provided in the [Fedora repositories](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/).
+That version is generally one or two patch versions behind the master repository
+available through the instructions below.
 
+For most users you can just issue `dnf install qownnotes` in a terminal window.
+If you want the **most up-to-date version**, please continue reading.
+:::
 
 ## On systems with config-manager dnf plugin
 
@@ -79,4 +81,5 @@ Detailed explanation of the command is available on GitHub in a
 [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084)
 related to this exact issue.
 
-Once the expired key has been deleted, you must then newly *import* the **current** key manually as described in the beginning of these installation instructions.
+Once the expired key has been deleted, you must then newly *import* the **current** key
+manually as described in the beginning of these installation instructions.
