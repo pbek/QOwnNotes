@@ -1,8 +1,8 @@
 # QOwnNotes Changelog
 
 ## Next
-- The [Flatpak](https://github.com/flathub/org.qownnotes.QOwnNotes/) version of
-  QOwnNotes was now approved (for [#3051](https://github.com/pbek/QOwnNotes/issues/3051))
+- The [QOwnNotes Flatpak](https://flathub.org/apps/org.qownnotes.QOwnNotes) is
+  now verified (for [#3051](https://github.com/pbek/QOwnNotes/issues/3051))
 
 ## 24.7.0
 - Added more French, Croatian, Dutch, Korean translation (thank you, jd-develop,
