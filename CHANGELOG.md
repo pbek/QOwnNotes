@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
-## Next
+## 24.7.1
+- This line/column number display was made more readable and a tooltip was added
+  (for [#3053](https://github.com/pbek/QOwnNotes/issues/3053))
 - The [QOwnNotes Flatpak](https://flathub.org/apps/org.qownnotes.QOwnNotes) is
   now verified (for [#3051](https://github.com/pbek/QOwnNotes/issues/3051))
 

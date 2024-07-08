@@ -10813,18 +10813,26 @@ void MainWindow::noteEditCursorPositionChanged() {
     QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
     QTextCursor cursor = textEdit->textCursor();
     QString selectedText = cursor.selectedText();
-    QString text;
 
     this->noteHistory.updateCursorPositionOfNote(currentNote, textEdit);
 
+    QString text = tr("Ln %1, Col %2", "Line / Column")
+               .arg(QString::number(cursor.block().blockNumber() + 1),
+                    QString::number(cursor.positionInBlock() + 1));
+    QString toolTip = tr("Line %1, Column %2")
+               .arg(QString::number(cursor.block().blockNumber() + 1),
+                    QString::number(cursor.positionInBlock() + 1));
+
     if (!selectedText.isEmpty()) {
-        text = tr("%n chars", "characters", selectedText.count()) + "  ";
+        const QString textAdd = QStringLiteral(" (") +
+                tr("%n selected", "Characters selected", selectedText.count()) +
+                QStringLiteral(")");
+        text += textAdd;
+        toolTip += textAdd;
     }
 
-    text += QString::number(cursor.block().blockNumber() + 1) + QStringLiteral(":") +
-            QString::number(cursor.positionInBlock() + 1);
-
     _noteEditLineNumberLabel->setText(text);
+    _noteEditLineNumberLabel->setToolTip(toolTip);
 
     const bool autoSelect =
         QSettings().value(QStringLiteral("navigationPanelAutoSelect"), true).toBool();
