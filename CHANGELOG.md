@@ -5,6 +5,7 @@
   (for [#3053](https://github.com/pbek/QOwnNotes/issues/3053))
 - The [QOwnNotes Flatpak](https://flathub.org/apps/org.qownnotes.QOwnNotes) is
   now verified (for [#3051](https://github.com/pbek/QOwnNotes/issues/3051))
+- Added more Dutch, Korean translation (thank you, stephanp, venusgirl)
 
 ## 24.7.0
 - Added more French, Croatian, Dutch, Korean translation (thank you, jd-develop,

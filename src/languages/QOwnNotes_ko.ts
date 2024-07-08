@@ -2698,6 +2698,22 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>임시 이미지 저장 중</translation>
 </message>
 <message>
+<source>Ln %1, Col %2</source>
+<comment>Line / Column</comment>
+<translation>줄 %1, 열 %2</translation>
+</message>
+<message>
+<source>Line %1, Column %2</source>
+<translation>줄 %1, 열 %2</translation>
+</message>
+<message numerus="yes">
+<source>%n selected</source>
+<comment>Characters selected</comment>
+<translation>
+<numerusform>%n개 선택됨</numerusform>
+</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation>Next Cloud Deck 지원이 비활성화되었습니다!</translation>
 </message>
@@ -2891,13 +2907,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Rename workspace</source>
 <translation>작업 공간 이름 바꾸기</translation>
-</message>
-<message numerus="yes">
-<source>%n chars</source>
-<comment>characters</comment>
-<translation>
-<numerusform>%n개 문자</numerusform>
-</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>

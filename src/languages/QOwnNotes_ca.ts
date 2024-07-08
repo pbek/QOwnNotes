@@ -2709,6 +2709,23 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <translation>Desant imatge temporal</translation>
 </message>
 <message>
+<source>Ln %1, Col %2</source>
+<comment>Line / Column</comment>
+<translation type="unfinished">Ln %1, Col %2</translation>
+</message>
+<message>
+<source>Line %1, Column %2</source>
+<translation type="unfinished">Line %1, Column %2</translation>
+</message>
+<message numerus="yes">
+<source>%n selected</source>
+<comment>Characters selected</comment>
+<translation type="unfinished">
+<numerusform>%n selected</numerusform>
+<numerusform>%n selected</numerusform>
+</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation type="unfinished">Nextcloud Deck support disabled!</translation>
 </message>
@@ -2902,14 +2919,6 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <source>Rename workspace</source>
 <translation>Reanomena l'espai de treball</translation>
-</message>
-<message numerus="yes">
-<source>%n chars</source>
-<comment>characters</comment>
-<translation>
-<numerusform>%n caràcters</numerusform>
-<numerusform>%n caràcters</numerusform>
-</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>

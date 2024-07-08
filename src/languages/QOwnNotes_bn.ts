@@ -2718,6 +2718,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>অস্থায়ী চিত্র সংরক্ষণ</translation>
 </message>
 <message>
+<source>Ln %1, Col %2</source>
+<comment>Line / Column</comment>
+<translation type="unfinished">Ln %1, Col %2</translation>
+</message>
+<message>
+<source>Line %1, Column %2</source>
+<translation type="unfinished">Line %1, Column %2</translation>
+</message>
+<message numerus="yes">
+<source>%n selected</source>
+<comment>Characters selected</comment>
+<translation type="unfinished">
+<numerusform>%n selected</numerusform>
+<numerusform>%n selected</numerusform>
+</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation type="unfinished">Nextcloud Deck support disabled!</translation>
 </message>
@@ -2912,14 +2929,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Rename workspace</source>
 <translation>কর্মক্ষেত্রের নামকরণ করুন</translation>
-</message>
-<message numerus="yes">
-<source>%n chars</source>
-<comment>characters</comment>
-<translation>
-<numerusform>অক্ষর %n</numerusform>
-<numerusform>অক্ষর %n</numerusform>
-</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>

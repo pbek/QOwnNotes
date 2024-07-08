@@ -2716,6 +2716,23 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>tijdelijke afbeelding opslaan</translation>
 </message>
 <message>
+<source>Ln %1, Col %2</source>
+<comment>Line / Column</comment>
+<translation>Rgl %1, Kol %2</translation>
+</message>
+<message>
+<source>Line %1, Column %2</source>
+<translation>Regel %1, Kolom %2</translation>
+</message>
+<message numerus="yes">
+<source>%n selected</source>
+<comment>Characters selected</comment>
+<translation>
+<numerusform>%n geselecteerd</numerusform>
+<numerusform>%n geselecteerd</numerusform>
+</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation>Nextcloud Desk-ondersteuning uitgeschakeld!</translation>
 </message>
@@ -2910,14 +2927,6 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <source>Rename workspace</source>
 <translation>Naam van de werkruimte</translation>
-</message>
-<message numerus="yes">
-<source>%n chars</source>
-<comment>characters</comment>
-<translation>
-<numerusform>%n teken</numerusform>
-<numerusform>%n tekens</numerusform>
-</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>

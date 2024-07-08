@@ -2721,6 +2721,23 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 <translation>Kuchengetedza chenguva pfupi</translation>
 </message>
 <message>
+<source>Ln %1, Col %2</source>
+<comment>Line / Column</comment>
+<translation type="unfinished">Ln %1, Col %2</translation>
+</message>
+<message>
+<source>Line %1, Column %2</source>
+<translation type="unfinished">Line %1, Column %2</translation>
+</message>
+<message numerus="yes">
+<source>%n selected</source>
+<comment>Characters selected</comment>
+<translation type="unfinished">
+<numerusform>%n selected</numerusform>
+<numerusform>%n selected</numerusform>
+</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation type="unfinished">Nextcloud Deck support disabled!</translation>
 </message>
@@ -2914,14 +2931,6 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 <message>
 <source>Rename workspace</source>
 <translation>Dzorerazve nzvimbo yekushanda</translation>
-</message>
-<message numerus="yes">
-<source>%n chars</source>
-<comment>characters</comment>
-<translation type="unfinished">
-<numerusform>%n chars</numerusform>
-<numerusform>%n chars</numerusform>
-</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>

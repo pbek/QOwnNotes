@@ -2746,6 +2746,24 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Чување привремене слике</translation>
 </message>
 <message>
+<source>Ln %1, Col %2</source>
+<comment>Line / Column</comment>
+<translation type="unfinished">Ln %1, Col %2</translation>
+</message>
+<message>
+<source>Line %1, Column %2</source>
+<translation type="unfinished">Line %1, Column %2</translation>
+</message>
+<message numerus="yes">
+<source>%n selected</source>
+<comment>Characters selected</comment>
+<translation type="unfinished">
+<numerusform>%n selected</numerusform>
+<numerusform>%n selected</numerusform>
+<numerusform>%n selected</numerusform>
+</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation type="unfinished">Nextcloud Deck support disabled!</translation>
 </message>
@@ -2946,15 +2964,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Rename workspace</source>
 <translation>Преименовање радног простора</translation>
-</message>
-<message numerus="yes">
-<source>%n chars</source>
-<comment>characters</comment>
-<translation>
-<numerusform>%n цхар</numerusform>
-<numerusform>%n знакова</numerusform>
-<numerusform>%n знакова</numerusform>
-</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>

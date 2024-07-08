@@ -2717,6 +2717,23 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Enregistrement d'une image temporaire</translation>
 </message>
 <message>
+<source>Ln %1, Col %2</source>
+<comment>Line / Column</comment>
+<translation type="unfinished">Ln %1, Col %2</translation>
+</message>
+<message>
+<source>Line %1, Column %2</source>
+<translation type="unfinished">Line %1, Column %2</translation>
+</message>
+<message numerus="yes">
+<source>%n selected</source>
+<comment>Characters selected</comment>
+<translation type="unfinished">
+<numerusform>%n selected</numerusform>
+<numerusform>%n selected</numerusform>
+</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation>Support de Nextcloud Deck désactivé !</translation>
 </message>
@@ -2910,14 +2927,6 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Rename workspace</source>
 <translation>Renommer l’espace de travail</translation>
-</message>
-<message numerus="yes">
-<source>%n chars</source>
-<comment>characters</comment>
-<translation>
-<numerusform>%n caractère</numerusform>
-<numerusform>%n caractères</numerusform>
-</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>

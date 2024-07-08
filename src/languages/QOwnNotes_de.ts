@@ -2718,6 +2718,23 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <translation>Temporäres Bild speichern</translation>
 </message>
 <message>
+<source>Ln %1, Col %2</source>
+<comment>Line / Column</comment>
+<translation type="unfinished">Ln %1, Col %2</translation>
+</message>
+<message>
+<source>Line %1, Column %2</source>
+<translation type="unfinished">Line %1, Column %2</translation>
+</message>
+<message numerus="yes">
+<source>%n selected</source>
+<comment>Characters selected</comment>
+<translation type="unfinished">
+<numerusform>%n selected</numerusform>
+<numerusform>%n selected</numerusform>
+</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation>Nextcloud Deck Unterstützung deaktiviert!</translation>
 </message>
@@ -2911,14 +2928,6 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <source>Rename workspace</source>
 <translation>Arbeitsbereich umbenennen</translation>
-</message>
-<message numerus="yes">
-<source>%n chars</source>
-<comment>characters</comment>
-<translation>
-<numerusform>%n Zeichen</numerusform>
-<numerusform>%n Zeichen</numerusform>
-</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>

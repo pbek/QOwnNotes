@@ -2718,6 +2718,23 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
 <translation>Väliaikaisen kuvan tallentaminen</translation>
 </message>
 <message>
+<source>Ln %1, Col %2</source>
+<comment>Line / Column</comment>
+<translation type="unfinished">Ln %1, Col %2</translation>
+</message>
+<message>
+<source>Line %1, Column %2</source>
+<translation type="unfinished">Line %1, Column %2</translation>
+</message>
+<message numerus="yes">
+<source>%n selected</source>
+<comment>Characters selected</comment>
+<translation type="unfinished">
+<numerusform>%n selected</numerusform>
+<numerusform>%n selected</numerusform>
+</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation type="unfinished">Nextcloud Deck support disabled!</translation>
 </message>
@@ -2917,14 +2934,6 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
 <message>
 <source>Rename workspace</source>
 <translation>Nimeä työtila uudelleen</translation>
-</message>
-<message numerus="yes">
-<source>%n chars</source>
-<comment>characters</comment>
-<translation>
-<numerusform>%n merkkiä</numerusform>
-<numerusform>%n merkkiä</numerusform>
-</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>
