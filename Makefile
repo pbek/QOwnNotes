@@ -58,3 +58,6 @@ git-create-patch:
 	cd ../piwiktracker && git diff --no-ext-diff --staged  --binary > ${TRANSFER_DIR}/piwiktracker.patch; \
 	cd ../qttoolbareditor && git diff --no-ext-diff --staged  --binary > ${TRANSFER_DIR}/qttoolbareditor.patch; \
 	ls -l1t ${TRANSFER_DIR} | head -5
+
+open-crowdin-webpage:
+	xdg-open https://crowdin.com/project/qownnotes/activity-stream
