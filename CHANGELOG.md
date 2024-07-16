@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 24.7.2
+- It was made more clear in the settings dialog how the AI integration can be used
+  (for [#3055](https://github.com/pbek/QOwnNotes/issues/3055))
 - There now is a software repository for **Raspberry Pi OS 12**
   - Please visit the [Raspberry Pi OS installation page](https://www.qownnotes.org/installation/raspberry-pi-os.html#raspberry-pi-os-12)
     for instructions

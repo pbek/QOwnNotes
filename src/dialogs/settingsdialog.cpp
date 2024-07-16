@@ -305,6 +305,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     ui->commandSnippetsNoteNameLineEdit->hide();
     ui->openAiScriptingLabel->setText(ui->openAiScriptingLabel->text().arg(
         "https://www.qownnotes.org/scripting/hooks.html#openaibackendshook"));
+    ui->openAiScriptingLabel3->setText(ui->openAiScriptingLabel3->text().arg(
+        "https://www.qownnotes.org/scripting/methods-and-objects.html#use-a-completion-prompt-on-the-currently-selected-ai-model"));
 
 #ifndef Q_OS_LINUX
     ui->systemIconThemeCheckBox->setHidden(true);
