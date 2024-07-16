@@ -5606,6 +5606,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>OpenAI API-key aanmaken</translation>
 </message>
 <message>
+<source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
+<translation>Om gebruik te maken van de AI-backends, kunt u de opdracht scripting gebruiken &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, of kijk in de scriptrepository voor reeds geschreven scripts.</translation>
+</message>
+<message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
 <translation>Gebruik de scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; om meer OpenAI API-compatibele backends toe te voegen.</translation>
 </message>

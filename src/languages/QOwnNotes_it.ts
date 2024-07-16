@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Copia</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1851,7 +1851,7 @@
 </message>
 <message>
 <source>AI model</source>
-<translation type="unfinished">AI model</translation>
+<translation>Modello IA</translation>
 </message>
 <message>
 <source>To&amp;do</source>
@@ -2329,7 +2329,7 @@
 </message>
 <message>
 <source>Enable AI support</source>
-<translation type="unfinished">Enable AI support</translation>
+<translation>Attiva il supporto IA</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2718,17 +2718,17 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
-<translation type="unfinished">Ln %1, Col %2</translation>
+<translation>Rg %1, Col %2</translation>
 </message>
 <message>
 <source>Line %1, Column %2</source>
-<translation type="unfinished">Line %1, Column %2</translation>
+<translation>Riga %1, Colonna %2</translation>
 </message>
 <message numerus="yes">
 <source>%n selected</source>
 <comment>Characters selected</comment>
 <translation type="unfinished">
-<numerusform>%n selected</numerusform>
+<numerusform>%n selezionata</numerusform>
 <numerusform>%n selected</numerusform>
 </translation>
 </message>
@@ -2746,19 +2746,19 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <source>AI backends</source>
-<translation type="unfinished">AI backends</translation>
+<translation>Backends IA</translation>
 </message>
 <message>
 <source>AI models</source>
-<translation type="unfinished">AI models</translation>
+<translation>Modelli IA</translation>
 </message>
 <message>
 <source>AI backend selector</source>
-<translation type="unfinished">AI backend selector</translation>
+<translation>Selettore backend IA</translation>
 </message>
 <message>
 <source>AI model selector</source>
-<translation type="unfinished">AI model selector</translation>
+<translation>Selettore modello IA</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3289,7 +3289,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <source>AI toolbar</source>
-<translation type="unfinished">AI toolbar</translation>
+<translation>Barra degli strumenti IA</translation>
 </message>
 <message>
 <source>window toolbar</source>
@@ -3444,7 +3444,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <source>Create card and insert link into current note</source>
-<translation type="unfinished">Create card and insert link into current note</translation>
+<translation>Crea una carta e inserisci il link nella nota corrente</translation>
 </message>
 <message>
 <source>&amp;Save</source>
@@ -3475,19 +3475,19 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <name>NextcloudDeckService</name>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Errore durante la creazione della card</translation>
 </message>
 <message>
 <source>Creating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating a card failed with status code %1 and message: %2</translation>
+<translation>La creazione della Card è fallita con codice di stato %1 e messaggio %2</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
-<translation type="unfinished">Error while loading boards</translation>
+<translation>Errore durante la creazione della board</translation>
 </message>
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
+<translation>Il caricamento delle boards è fallito con codice di stato %1 e messaggio %2</translation>
 </message>
 </context>
 <context>
@@ -3544,23 +3544,23 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
-<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+<translation>Percorso relativo delle note, clicca con il tasto destro per aprire il menu contestuale</translation>
 </message>
 <message>
 <source>Absolute path of note, right-click to open context menu</source>
-<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+<translation>Percorso assoluto della nota, clicca con il tasto destro per aprire il menu contestuale</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Copia il percorso assoluto della nota</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
-<translation type="unfinished">Copy absolute path of note subfolder</translation>
+<translation>Copia il percorso assoluto della sottocartella della nota</translation>
 </message>
 <message>
 <source>Copy absolute path of note folder</source>
-<translation type="unfinished">Copy absolute path of note folder</translation>
+<translation>Copia il percorso assoluto della cartella della nota</translation>
 </message>
 </context>
 <context>
@@ -3645,14 +3645,14 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <name>OpenAiCompleter</name>
 <message>
 <source>Timeout, while waiting for the AI response</source>
-<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+<translation>Tempo scaduto aspettando la risposta dell'IA</translation>
 </message>
 </context>
 <context>
 <name>OpenAiService</name>
 <message>
 <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
+<translation>Sistema di IA disattivato. Si prega di attivarlo nel menù principale o nella barra degli strumenti dell'IA.</translation>
 </message>
 </context>
 <context>
@@ -3965,7 +3965,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
-<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
+<translation>Non è stata trovata la cartella delle note &lt;b&gt;%1&lt;/b&gt;. Vuoi selezionarne un'altra?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -5037,7 +5037,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Stack:</source>
-<translation type="unfinished">Stack:</translation>
+<translation>Stack:</translation>
 </message>
 <message>
 <source>Todo settings</source>
@@ -5369,7 +5369,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>AI</source>
-<translation type="unfinished">AI</translation>
+<translation>IA</translation>
 </message>
 <message>
 <source>Experimental</source>
@@ -5449,15 +5449,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Status bar</source>
-<translation type="unfinished">Status bar</translation>
+<translation>Barra di stato</translation>
 </message>
 <message>
 <source>Show note path</source>
-<translation type="unfinished">Show note path</translation>
+<translation>Mostra il percorso della nota</translation>
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation type="unfinished">Only show relative note path</translation>
+<translation>Mostra solo il percorso relativo della nota</translation>
 </message>
 <message>
 <source>Action name</source>
@@ -5586,19 +5586,23 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>API keys</source>
-<translation type="unfinished">API keys</translation>
+<translation>Chiavi API</translation>
 </message>
 <message>
 <source>OpenAI API key:</source>
-<translation type="unfinished">OpenAI API key:</translation>
+<translation>Chiave API OpenAI:</translation>
 </message>
 <message>
 <source>Create Groq API key</source>
-<translation type="unfinished">Create Groq API key</translation>
+<translation>Crea una chiave API per Grog</translation>
 </message>
 <message>
 <source>Create OpenAI API key</source>
-<translation type="unfinished">Create OpenAI API key</translation>
+<translation>Crea una chiave API per OpenAI</translation>
+</message>
+<message>
+<source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
+<translation>Per utilizzare i backends dell'IA puoi o il comando di script &lt;a href="%1"&gt;aiComplete&lt;/a&gt; o cercare nella repository degli script per quelli già scritti.</translation>
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
@@ -5610,11 +5614,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Groq API key:</source>
-<translation type="unfinished">Groq API key:</translation>
+<translation>Chiave API Groq:</translation>
 </message>
 <message>
 <source>API key</source>
-<translation type="unfinished">API key</translation>
+<translation>Chiave API</translation>
 </message>
 <message>
 <source>Show line numbers</source>
@@ -5658,7 +5662,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Clicking a note tab unsets 'All notes' selection</source>
-<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+<translation>Cliccare una scheda della nota deseleziona la sezione 'Tutte le note'</translation>
 </message>
 <message>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
@@ -6497,11 +6501,11 @@ Messaggio di errore: </translation>
 </message>
 <message>
 <source>Board Id: %1</source>
-<translation type="unfinished">Board Id: %1</translation>
+<translation>Id Board: %1</translation>
 </message>
 <message>
 <source>Stack Id: %1</source>
-<translation type="unfinished">Stack Id: %1</translation>
+<translation>Id Stack: %1</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
@@ -6841,7 +6845,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7258,11 +7262,11 @@ Le proprie note non verranno modificate!</translation>
 </message>
 <message>
 <source>Tags</source>
-<translation type="unfinished">Tags</translation>
+<translation>Etichette</translation>
 </message>
 <message>
 <source>Add new tag</source>
-<translation type="unfinished">Add new tag</translation>
+<translation>Aggiungi una nuova etichetta</translation>
 </message>
 <message>
 <source>Due date</source>
@@ -7769,7 +7773,7 @@ Non sarà possibile annullare l'operazione!</translation>
 <message numerus="yes">
 <source>Bookmark deleted from %n note(s)</source>
 <translation type="unfinished">
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<numerusform>Segnalibro eliminato da %n nota(e)</numerusform>
 <numerusform>Bookmark deleted from %n note(s)</numerusform>
 </translation>
 </message>
@@ -7924,7 +7928,7 @@ Non sarà possibile annullare l'operazione!</translation>
 </message>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
-<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
+<translation>Genera un codice di completamento della shell. Supporta 'fish' e 'bash'.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

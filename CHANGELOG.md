@@ -6,6 +6,8 @@
 - There now is a software repository for **Raspberry Pi OS 12**
   - Please visit the [Raspberry Pi OS installation page](https://www.qownnotes.org/installation/raspberry-pi-os.html#raspberry-pi-os-12)
     for instructions
+- Added more Korean, Italian, Russian, Dutch, German translation (thank you, 
+  venusgirl, hermi55, starship10, stephanp, bumpsy)
 
 ## 24.7.1
 - The line/column number display was made more readable and a tooltip was added

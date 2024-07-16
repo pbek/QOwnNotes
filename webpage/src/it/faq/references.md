@@ -180,7 +180,7 @@ Cosa hanno detto gli altri su QOwnNotes ...
 - [QOwnNotes绿色版 21.7.12 | 强大的免费笔记软件 – 软件No1](https://www.rjno1.com/qownnotes/)
 - [QOwnNotes is really versatile! - The user friendliest, easy to use Note Taking App! - YouTube](https://www.youtube.com/watch?v=WFoRQf31-h0)
 - [Presentation about QOwnNotes by stevelitt](http://troubleshooters.com/linux/presentations/golug_qownnotes/golug_qownnotes.pdf)
-- [QownNotes – De la prise de notes chiffrées sur votre cloud personnel](https://korben.info/qownnotes.html)
+- [QownNotes - De la prise de notes chiffrées sur votre cloud personnel - Korben](https://korben.info/qownnotes.html)
 - [The BEST Linux NOTE TAKING APPS - Invidious](https://yewtu.be/_d7kosQ0Ji4) 5:37
 - [MIGLIORE app per NOTE su LINUX nel 2022 - YouTube](https://youtu.be/_d7kosQ0Ji4?t=337)
 - [Записная книжка на ПК - QOwnNotes 22.4.0 Portable скачать через торрент](https://prog-top.net/office/19820-zapisnaja-knizhka-na-pk-qownnotes-201111-build-790-portable.html)

@@ -102,7 +102,7 @@ class TagApi {
 
 ### Esempio
 ```js
-// Don't forget to use "import QOwnNotesTypes 1.0" at the top of your script!
+// Non dimenticarti di usare "import QOwnNotesTypes 1.0" in cima al tuo script!
 
 // Leggi l'etichetta "home"
 var tag = script.getTagByNameBreadcrumbList(["home"]);
@@ -155,29 +155,29 @@ class MainWindow {
 
 ### Esempio
 ```js
-// Force a reload of the note list
+// Forza il ricaricamento della lista delle note
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creates a new note subfolder "My fancy folder" in the current subfolder
-mainWindow.createNewNoteSubFolder("My fancy folder");
+// Crea una nuova sottocartella "La mia cartella elegante" nella cartella corrente
+mainWindow.createNewNoteSubFolder("La mia cartella elegante");
 
-// Inserts html in the current note as markdown
+// Inserisci html nella nota corrente come markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Set 'Edit' workspace as current workspace
-mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
+// Imposta lo spazio di lavoro "modifica" come spazio di lavoro corrente
+mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Modifica"));
 
-// Jump to the tag "test" in the tag tree
+// Salta all'etichetta "test" nell'albero delle etichette
 // There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 
-// Get all notes that are opened in tabs
+// Prendi tutte le note che sono aperte nelle schede
 var noteIds = mainWindow.getNoteTabNoteIdList();
 noteIds.forEach(function (noteId){
     var note = script.fetchNoteById(noteId);
 
-    // do something with the note
+    // Fai qualcosa con le note
 });
 
 ```

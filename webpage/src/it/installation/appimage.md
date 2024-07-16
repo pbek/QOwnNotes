@@ -17,7 +17,7 @@ Quindi puoi modificare i permessi di esecuzione del file:
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Afterward you should be able to execute the AppImage to run QOwnNotes.
+Dopo di che dovresti essere in grado di eseguire il file AppImage per aprire QOwnNotes.
 
 ::: warning
 Se vuoi usare l'**aggiornamento automatico** assicurati di mettere il tuo AppImage in un punto in cui il tuo account utente ha accesso in scrittura, come per esempio da qualche parte nella tua cartella home.

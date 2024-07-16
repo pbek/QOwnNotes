@@ -10,7 +10,7 @@ Puoi inserire foto dal tuo cellulare nella nota corrente in QOwnNotes sul deskto
 
 L'applicazione web sul telefono comunica con l'applicazione desktop QOwnNotes tramite Internet. La comunicazione tra QOwnNotes e il servizio web è **cifrata in transito**. Nessuna immagine verrà archiviata sul server.
 
-There is a settings page **Web application** to add support for the web application.
+C'è la pagina delle impostazioni **Applicazione web** per aggiungere il supporto per le applicazioni web.
 
 ![Impostazioni dell'applicazione web QOwnNotes](/img/blog/web-application-settings.png "Imposta la comunicazione con l'applicazione web")
 

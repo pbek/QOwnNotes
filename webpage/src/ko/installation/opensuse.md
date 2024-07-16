@@ -39,6 +39,8 @@ zypper refresh
 zypper install qownnotes
 ```
 
+[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.6)
+
 ## openSUSE Leap 15.5
 
 다음 셸 명령을 루트로 실행하여 저장소를 추가하고 여기서QOwnNotes를 설치합니다.
@@ -48,6 +50,8 @@ zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNote
 zypper refresh
 zypper install qownnotes
 ```
+
+[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.5)
 
 ## openSUSE Leap 15.4
 

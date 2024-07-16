@@ -110,9 +110,8 @@ http://www.example.com oppure <http://www.example.com>
 ### Collegamenti interni
 
 ```markdown
-[I link to the Journal.md note](Journal.md)
-
-<Journal.md> works similarly.
+[Collego la nota per il diario](Diario.md).
+<Journal.md> Funziona similmente.
 ```
 
 ::: tip
@@ -136,7 +135,7 @@ I segnalibri usati dall'estensione del browser [QOwnNotes Web Companion](./brows
 Le immagini possono essere incorporate in QOwnNotes. Verranno mostrate nell'anteprima.
 
 ```markdown
-![alt text](media/my-image.jpg)
+![testo alternativo](media/la-mia-immagine.jpg)
 ```
 
 ::: tip
@@ -163,7 +162,7 @@ I blocchi di codice sono delimitati da linee con tre apici inversi o sono rientr
 Aggiungi quattro spazi davanti al codice per contrassegnarlo come blocco di codice.
 
 ```markdown
-    s = "Code with space indent"
+    s = "Codice con spazio identato"
     print s
 ```
 
@@ -178,24 +177,23 @@ Metti qui il tuo codice sorgente
 ~~~
 
 ::: tip
-You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
-multiple selected lines of text or in an empty line to create a code block. 
+Puoi usare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> su più linee di testo selezionate o sua una linea vuota per creare un blocco di codice. 
 :::
 
-### Backtick fence with code highlighting
+### Blocco con apice inverso con evidenziazione del codice
 
-There also is some syntax highlighting with code blocks in QOwnNotes.
+C'è anche un po' di evidenziazione della sintassi nei blocchi di codice di QOwnNotes.
 
 ~~~markdown
 ```bash
-# I am a comment
-cd Notes
+# Questo è un commento
+cd Note
 ```
 ~~~
 
-Currently, supported languages (and code block identifiers) are:
+Al momento i linguaggi supportati (e gli identificatori dei codici) sono:
 
-* BASh scripting, `bash`
+* codice BASH, `bash`
 * C, `c`
 * C++, `cpp`
 * C++, `cxx`
@@ -217,7 +215,7 @@ Currently, supported languages (and code block identifiers) are:
 * Python, `python`
 * QML, `qml`
 * Rust, `rust`
-* Shell scripting, `sh`
+* codice Shell, `sh`
 * SQL, `sql`
 * TypeScript, `ts`
 * TypeScript, `typescript`
@@ -227,26 +225,26 @@ Currently, supported languages (and code block identifiers) are:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tables
+## Tabelle
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+Le tabelle non sono parte integrante di Markdown, ma l'anteprima di QOwnNotes le supporta. 
 
 ~~~markdown
-Colons can be used to align columns.
+I due punti possono essere usati per allineare le colonne.
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Le Tabelle              | Sono               | Belle |
+| ----------------------- |:------------------:| -----:|
+| la colonna 3 è          | allineata-a-destra | $1600 |
+| la colonna 2 è          | centrata           |   $12 |
+| Le strisce delle zebre  | sono eccezionali   |    $1 |
 
-There must be at least 3 dashes separating each header cell.
+Ci devono essere almeno tre trattini per separare ogni intestazione per cella.
 
-You can also use inline Markdown.
+Puoi anche usare il Markdown in linea.
 
-| Markdown | Less | Pretty |
+| Markdown | Meno | Carino |
 | --- | --- | --- |
-| *Still* | `renders` | **nicely** |
+| *Tuttavia* | `si mostra` | **correttamente** |
 | 1 | 2 | 3 |
 ~~~
 
@@ -259,12 +257,12 @@ Usa <kbd>Ctrl + Spazio</kbd> all'interno di una tabella di markdown per formatta
 ## Citazioni in blocco
 
 ```markdown
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
+> Le citazioni in blocco sono davvero utili nelle mail per simulare il testo di risposta.
+> Questa linea fa parte della stessa citazione.
 
-Quote break.
+Interruzione della citazione.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> Questa è una linea molto lunga che verrà comunque citata correttamente nonostante venga avvolta. Oh mamma mia, continuiamo a scrivere per essere sicuri sia abbastanza lunga per farla avvolgere a chiunque. Ah, inoltre puoi *inserire* **Markdown** in un blocco di citazione. 
 ```
 
 ::: tip
@@ -278,17 +276,17 @@ Puoi usare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Maiusc + B</kbd> per seg
 Esistono tre modi per ottenere una regola orizzontale: trattini, asterischi o trattini bassi.
 
 ```markdown
-Three or more...
+Tre o più...
 
-Hyphens
+Trattini
 
 ---
 
-Asterisks
+Asterischi
 
 ***
 
-Underscores
+Trattini bassi
 
 ___
 ```
@@ -304,12 +302,12 @@ Puoi inserire due spazi e un a capo con <kbd>⇧ Shift</kbd> + <kbd>Invio</kbd>.
 :::
 
 ```markdown
-Here's a line for us to start with.
+Questa è una riga con cui possiamo cominciare.
 
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+Questa linea è separata dalla precedente con 2 invii.
 
-This line is also begins a separate paragraph, but...  
-This line is only separated by two trailing spaces and a single newline, so it's a separate line in the *same paragraph*.
+Anche questa riga inizia un nuovo paragrafo, ma...  
+Questa riga è separata solo da 2 spazi e un singolo invio, quindi è una riga separata nello *stesso paragrafo*.
 ```
 
 ::: tip
@@ -321,9 +319,9 @@ Gli spazi finali sono evidenziati per impostazione predefinita nell'editor.
 I commenti non vengono visualizzati nell'anteprima.
 
 ```markdown
-[comment]: # (This comment will not appear in the preview)
+[commento]: # (Questo commento non apparirà nell'anteprima)
 
-<!-- HTML comments are also hidden -->
+<!-- Anche i commenti in HTML vengono nascosti -->
 ```
 
 ::: tip
@@ -335,8 +333,8 @@ Anche un blocco di commenti HTML iniziale in una nota verrà ignorato nella gene
 Puoi creare semplici elenchi di cose da fare con elenchi di caselle di controllo.
 
 ```markdown
-- [x] done
-- [ ] todo
+- [x] fatto
+- [ ] da fare
 ```
 
 ::: tip
@@ -349,13 +347,13 @@ In QOwnNotes puoi usare un frontmatter (es.YAML) per aggiungere alcune meta info
 
 ```markdown
 ---
-title: Some name
-description: Some description
+titolo: Un titolo
+descrizione: Qualche descrizione
 ---
 
-# Note headline starts here
+# Il titolo della nota inizia qui
 
-Some text
+Del testo
 ```
 
 Il nome del file di questa nota di esempio sarebbe `Il titolo della nota inizia qui.md`.

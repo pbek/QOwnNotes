@@ -22,7 +22,7 @@ Potete mettere questi documenti QML ovunque preferite e **aggiungerli a QOwnNote
 Dai un'occhiata agli [script di esempio](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples) per iniziare velocemente.
 :::
 
-In the **Scripting settings** you can also install scripts directly from the [**Script repository**](https://github.com/qownnotes/scripts). There is a community hosted web-application to search for scripts on [beurt.github.io/QOwnNoteScriptsList](https://beurt.github.io/QOwnNoteScriptsList/).
+Nelle **impostazioni di Scripting** puoi anche installare script dall' **[archivio degli script</strong>](https://github.com/qownnotes/scripts). C'è un'applicazione web organizzata dalla community per cercare scripts su [beurt.github.io/QOwnNoteScriptsList](https://beurt.github.io/QOwnNoteScriptsList/).</p>
 
 Per problemi, domande o richieste di funzionalità per gli script dal **repository di script**, aprire un problema nella [pagina dei problemi del repository di script QOwnNotes](https://github.com/qownnotes/scripts/issues).
 

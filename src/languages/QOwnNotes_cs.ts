@@ -5697,6 +5697,10 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 <translation type="unfinished">Create OpenAI API key</translation>
 </message>
 <message>
+<source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
+<translation type="unfinished">To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</translation>
+</message>
+<message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
 <translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
 </message>

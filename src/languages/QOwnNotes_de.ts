@@ -1224,7 +1224,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopieren</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1851,7 +1851,7 @@
 </message>
 <message>
 <source>AI model</source>
-<translation type="unfinished">AI model</translation>
+<translation>KI-Modell</translation>
 </message>
 <message>
 <source>To&amp;do</source>
@@ -2330,7 +2330,7 @@
 </message>
 <message>
 <source>Enable AI support</source>
-<translation type="unfinished">Enable AI support</translation>
+<translation>KI-Unterstützung aktivieren</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2720,17 +2720,17 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
-<translation type="unfinished">Ln %1, Col %2</translation>
+<translation>Z. %1, Sp. %2</translation>
 </message>
 <message>
 <source>Line %1, Column %2</source>
-<translation type="unfinished">Line %1, Column %2</translation>
+<translation>Zeile %1, Spalte %2</translation>
 </message>
 <message numerus="yes">
 <source>%n selected</source>
 <comment>Characters selected</comment>
 <translation type="unfinished">
-<numerusform>%n selected</numerusform>
+<numerusform>%n ausgewählt</numerusform>
 <numerusform>%n selected</numerusform>
 </translation>
 </message>
@@ -2752,7 +2752,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>AI models</source>
-<translation type="unfinished">AI models</translation>
+<translation>KI-Modelle</translation>
 </message>
 <message>
 <source>AI backend selector</source>
@@ -5370,7 +5370,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>AI</source>
-<translation type="unfinished">AI</translation>
+<translation>KI</translation>
 </message>
 <message>
 <source>Experimental</source>
@@ -5450,7 +5450,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Status bar</source>
-<translation type="unfinished">Status bar</translation>
+<translation>Statusleiste</translation>
 </message>
 <message>
 <source>Show note path</source>
@@ -5600,6 +5600,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Create OpenAI API key</source>
 <translation type="unfinished">Create OpenAI API key</translation>
+</message>
+<message>
+<source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
+<translation type="unfinished">To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</translation>
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
@@ -6840,7 +6844,7 @@ Your notes will stay intact!</source>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7257,11 +7261,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Tags</source>
-<translation type="unfinished">Tags</translation>
+<translation>Schlagworte</translation>
 </message>
 <message>
 <source>Add new tag</source>
-<translation type="unfinished">Add new tag</translation>
+<translation>Neues Schlagwort hinzufügen</translation>
 </message>
 <message>
 <source>Due date</source>
@@ -7768,7 +7772,7 @@ Kann nicht rückgängig gemacht werden!</translation>
 <message numerus="yes">
 <source>Bookmark deleted from %n note(s)</source>
 <translation type="unfinished">
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<numerusform>Lesezeichen aus %n Notiz(en) gelöscht</numerusform>
 <numerusform>Bookmark deleted from %n note(s)</numerusform>
 </translation>
 </message>
@@ -7852,7 +7856,7 @@ Kann nicht rückgängig gemacht werden!</translation>
 </message>
 <message>
 <source>Plain-text file Markdown note-taking with ownCloud integration</source>
-<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
+<translation>Klartext Markdown Notizen mit ownCloud-Integration</translation>
 </message>
 <message>
 <source>Show subfolders</source>

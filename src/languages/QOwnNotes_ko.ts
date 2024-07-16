@@ -5567,6 +5567,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>OpenAI API 키 생성</translation>
 </message>
 <message>
+<source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
+<translation>AI 백엔드를 사용하려면 스크립트 명령어  &lt;a href="%1"&gt;aiComplete&lt;/a&gt;를 사용하거나 스크립트 저장소에서 이미 작성된 스크립트를 확인할 수 있습니다.</translation>
+</message>
+<message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
 <translation>스크립팅 후크 &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt;를 사용하여 OpenAI API 호환 백엔드를 추가할 수 있습니다.</translation>
 </message>

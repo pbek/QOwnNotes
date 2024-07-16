@@ -22,7 +22,7 @@ Info
     - La prima volta che clicchi sull'icona dell'estensione del browser di QOwnNotes, vedrai una finestra di dialogo col token di sicurezza. Copialo.
     - Vai alla gestione delle tue estensioni del browser. Clicca sui dettagli dell'estensione QOwnNotes.
     - Incolla il token nel campo del token di sicurezza.
-3. To use the private mode, you need to allow the extension to run in private windows in the extension settings.
+3. Per usare la modalità in incognito devi prima consentire all'estensione di funzionare nelle finestre in incognito dalle impostazioni.
 
 ## Strumento di ritaglio web
 

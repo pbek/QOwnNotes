@@ -41,6 +41,8 @@ zypper refresh
 zypper install qownnotes
 ```
 
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.6)
+
 ## openSUSE Leap 15.5
 
 Run the following shell commands as root to add the repository and install QOwnNotes from there.
@@ -50,6 +52,8 @@ zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNote
 zypper refresh
 zypper install qownnotes
 ```
+
+[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.5)
 
 ## openSUSE Leap 15.4
 
@@ -61,7 +65,7 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.4)
+[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/15.4)
 
 ## openSUSE Leap 15.3
 
@@ -110,7 +114,7 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_12_SP3_Backports)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_12_SP3_Backports)
 
 ## SLE 15
 
@@ -122,4 +126,4 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_15)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_15)
