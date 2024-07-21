@@ -12,7 +12,7 @@ Puoi usare questi parametri sull'interfaccia della riga di comando (CLI) per con
 | `--session <name>`     | Esegue l'applicazione in un contesto differente per le impostazioni e i file interni                                                        |
 | `--allow-multiple-instances` | Consente di avviare più istanze di QOwnNotes anche se non consentito nelle impostazioni                                                     |
 | `--action <name>`      | Attiva un'azione di menu dopo l'avvio dell'applicazione (vedi sotto)                                                                        |
-| `--completion <shell>` | Generate shell completion code. Supports `fish`, `bash`.                                                                                    |
+| `--completion <shell>` | Genera un codice per l'autocompilazione nella shell. Supporta `fish` e `bash`.                                                              |
 
 ::: tip
 Se si verificano problemi con l'installazione di QOwnNotes, è possibile avviare l'applicazione con nuove impostazioni senza perdere le impostazioni correnti utilizzando il parametro `--session`.
@@ -31,19 +31,19 @@ QOwnNotes --session test
 | Windows           | `QOwnNotes.exe`                                        |
 
 ::: tip
-To directly copy the settings dump to the clipboard to post in a [GitHub issue](https://github.com/pbek/QOwnNotes/issues) you can use `xclip` or `xsel` on Linux, `pbcopy` on macOS and `clip` on Windows:
+Per copiare direttaemnte le impostazioni di dump nel gestore degli appunti per inserirlo su un post in [GitHub issue](https://github.com/pbek/QOwnNotes/issues) puoi usare `xclip` o `xsel` su Linux, `pbcopy` su macOS e `clip` su Windows:
 
 ```bash
-# Copy the settings dump to the clipboard with xclip on Linux
+# su Linux copia le impostazioni di dump nel gestore degli appunti con xclip 
 QOwnNotes --dump-settings | xclip -selection clipboard
 
-# Copy the settings dump to the clipboard with xsel on Linux
+# su Linux copia le impostazioni di dump nel gestore degli appunti con xsel 
 QOwnNotes --dump-settings | xsel --clipboard
 
-# Copy the settings dump to the clipboard with pbcopy on macOS
+# su MacOS copia le impostazioni di dump nel gestore degli appunti con pbcopy 
 QOwnNotes --dump-settings | pbcopy
 
-# Copy the settings dump to the clipboard with clip on Windows
+# su Windows copia le impostazioni di dump nel gestore degli appunti con clip
 QOwnNotes --dump-settings | clip
 ```
 :::

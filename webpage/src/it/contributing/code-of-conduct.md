@@ -1,8 +1,8 @@
 # Codice di Condotta
 
-## Il nostro impegno
+## Il Nostro Impegno
 
-Noi come membri, collaboratori e dirigenti ci impegnamo a far partecipare chiunque in una community senza molestie, che sia per età, taglia, disabilità visibili e non visibili, etnia, caratteristiche sessuali, identità di genere e espressione, livello di esperienza, educazione, status socio-economico, nazionalità, aspetto fisico, casta, colore o religion.
+Nella promozione di un ambiente aperto e accogliente, noi come membri, collaboratori e dirigenti ci impegnamo a far partecipare chiunque in una community senza molestie, che sia per età, taglia, disabilità visibili e non visibili, etnia, caratteristiche sessuali, identità di genere e espressione, livello di esperienza, educazione, status socio-economico, nazionalità, aspetto fisico, casta, colore o religion.
 
 Ci impegniamo ad agire e interagire in modo tale da contribuire a una community aperta, accogliente, diversa, inclusiva e sana.
 
@@ -54,27 +54,27 @@ I dirigenti della community seguiranno queste linee guida sull'Impatto della Com
 
 **Impatto sulla community**: Una violazione mostrata attraverso un singolo incidente o una serie di azioni.
 
-**Consequence**: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.
+**Conseguenze**: Un avviso con conseguenze per il continuo comportamento. Nessuna interazione con le persone coinvolte, incluse interazioni non richieste con coloro che si occupano di far rispettare il Codice di Condotta per uno periodo di tempo definito. Ciò include evitare interazioni negli spazi della community su canali esterni come social media. La violazione di questi termini comporta un ban temporaneo o permanente.
 
 ### 3. Ban temporaneo
 
-**Community Impact**: A serious violation of community standards, including sustained inappropriate behavior.
+**Impatto sulla community**: Una seria violazione degli standard della community inclusi continui comportamenti inappropriati.
 
-**Consequence**: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.
+**>Conseguenza**: Un ban temporaneo da ogni sorta di interazione o pubblica comunicazione con la community per un determinato periodo di tempo. Durante questo periodo di tempo non è concessa alcuna interazione privata con le persone coinvolte, incluse le interazioni non richieste con coloro che si occupano di far rispettare il Codice di Condotta. La violazione di questi termini potrebbe portare a un ban permanente.
 
 ### 4. Ban permanente
 
-**Community Impact**: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.
+**Impatto sulla community**: Dimostrare un continuo susseguirsi della violazione degli standard della community, inclusi comportamento inappropriato continuo, molestie verso un singolo, aggressione e diffamazione verso una o più classi di individui.
 
-**Consequence**: A permanent ban from any sort of public interaction within the community.
+**Conseguenze**: Un ban permanente da ogni sorta di interazione pubblica con la community.
 
 ## Attribuzione
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 2.1, available at [https://www.contributor-covenant.org/version/2/1/code_of_conduct.html][v2.1].
+Questo Codice di Condotta è stato adattato dal [Contributor Covenant][homepage], versione 2.1, disponibile all'indirizzo [https://www.contributor-covenant.org/version/2/1/code_of_conduct.html][v2.1].
 
-Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcement ladder][Mozilla CoC].
+Le linee guida dell'impatto sulla community sono state ispirate da [Mozilla's code of conduct enforcement ladder][Mozilla CoC].
 
-For answers to common questions about this code of conduct, see the FAQ at [https://www.contributor-covenant.org/faq][FAQ]. Translations are available at [https://www.contributor-covenant.org/translations][translations].
+Per risposte alle domande più comuni riguardo a questo codice condotta, guarda il FAQ all'indirizzo [https://www.contributor-covenant.org/faq][FAQ]. Le traduzioni sono disponibili all'indirizzo [https://www.contributor-covenant.org/translations][translations].
 
 [homepage]: https://www.contributor-covenant.org
 [v2.1]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html

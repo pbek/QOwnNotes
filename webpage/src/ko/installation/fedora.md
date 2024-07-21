@@ -30,7 +30,7 @@ rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fed
 
 Fedora 버전이 `config-manager` dnf 플러그인을 지원하지 않는 경우 이 방법을 사용하여 다음 명령을 루트로 실행합니다.
 
-다음 셸 명령을 root으로 실행하여 리포지토리를 신뢰합니다.
+Run the following shell command as root to trust the repository.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key

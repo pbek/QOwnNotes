@@ -22,7 +22,7 @@ sudo apt install qownnotes
 ```
 
 ::: tip
-If you use this repository for other Debian Linux versions please make sure that you have **Qt** installed at least at **version 5.15**.
+Si utiliza este repositorio en otras versiones de Debian Linux, asegúrese de contar con **Qt** en su **versión 5.15** por lo menos.
 :::
 
 [Descarga Directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_12)
@@ -78,7 +78,7 @@ If you use this repository for other Debian Linux versions please make sure that
 
 ## Debian 9.0
 
-Run the following shell commands to trust the repository.
+Ejecute las órdenes siguientes para marcar el repositorio como de fiar.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -

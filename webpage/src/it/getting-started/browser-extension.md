@@ -31,11 +31,11 @@ Info
 Fai clic con il pulsante destro del mouse su una pagina web o sul testo selezionato per usare la funzionalità **web-clipper**. Lì puoi anche creare una nuova nota con uno **screenshot** della pagina web corrente.
 
 ::: warning
-Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
+Info Se il web clipper non funziona, si prega di controlare che l'applicazione desktop di QOwnNotes sia aperta e che l'estensione web di supporto sia configurata con il token di sicurezza.
 
-Also, make sure you accepted the consent dialog, when you first clicked the extension icon in the browser toolbar.
+Inoltre assicurati di aver accettato il consenso tramite la finestra di avviso che compare quando clicchi l'icona dell'estensione sulla barra degli strumenti del browser.
 
-If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the *Permission* extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+Se stai usando Firefox dovresti accertarti di aver attivato il permesso facoltativo ` Accedere ai dati dei siti web` nelle impostazioni dei *permessi* dell'estensione. Altrimenti potresti riscontrare l'errore `TypeError: chrome.tabs.captureVisibleTab non sta funzionando`.
 :::
 
 ::: tip
@@ -48,7 +48,7 @@ Il web clipper è anche scriptabile! Dai un'occhiata a [websocketRawDataHook](..
 
 Se vuoi il pieno controllo dei tuoi segnalibri del browser e **usarli tra diversi browser e sistemi operativi**, allora l'estensione del browser di QOwnNotes fa per te.
 
-By default, the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. Questi collegamenti avranno l'etichetta `corrente`.
+Di base l'estensione del browser ti permette di mostrare tutti i **collegamenti inseriti sulla nota aperta nell'applicazione** in un popup quandi clicchi sull'icona di QOwnNotes dal browser. Questi collegamenti avranno l'etichetta `corrente`.
 
 Puoi anche **gestire i tuoi segnalibri nelle note** con l'etichetta `segnalibri` (modificabile nelle impostazioni). Questi collegamenti possono anche avere etichette e una descrizione che verrà mostrata nell'estensione del browser.
 

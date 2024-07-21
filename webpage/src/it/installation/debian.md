@@ -21,7 +21,8 @@ sudo apt update
 sudo apt install qownnotes
 ```
 
-::: Suggerimento Se usi questa repository per altre versioni Linux di Debian verifica di avere **Qt** installato almeno alla versione **5.15**.
+::: tip
+Se usi questa repository per altre versioni Linux di Debian verifica di avere **Qt** installato almeno alla versione **5.15**.
 :::
 
 [Download diretto](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_12)
@@ -47,7 +48,8 @@ sudo apt update
 sudo apt install qownnotes
 ```
 
-::: Suggerimento Se usi questa repository per altre versioni Linux di Debian verifica di avere **Qt** installato almeno alla versione **5.11**.
+::: tip
+Se usi questa repository per altre versioni Linux di Debian verifica di avere **Qt** installato almeno alla versione **5.11**.
 :::
 
 [Download diretto](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_11)
@@ -68,7 +70,8 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-::: Suggerimento Se usi questa repository per altre versioni Linux di Debian verifica di avere **Qt** installato almeno alla versione **5.8**.
+::: tip
+Se usi questa repository per altre versioni Linux di Debian verifica di avere **Qt** installato almeno alla versione **5.8**.
 :::
 
 [Download diretto](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10)
@@ -81,7 +84,7 @@ Eseguire i seguenti comandi della shell per considerare attendibile il repositor
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -
 ```
 
-Eseguire i seguenti comandi della shell per aggiungere il repository e installare QOwnNotes da lì.
+Eseguire i seguenti comandi della shell per aggiungere il repository e installare QOwnNotes direttamente da essa.
 
 ```bash
 sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/ /' >> /etc/apt/sources.list.d/qownnotes.list"
@@ -89,7 +92,8 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-::: Suggerimento Se usi questa repository per altre versioni Linux di Debian verifica di avere **Qt** installato almeno alla versione **5.5**.
+::: tip
+Se usi questa repository per altre versioni Linux di Debian verifica di avere **Qt** installato almeno alla versione **5.5**.
 :::
 
 [Download diretto](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)

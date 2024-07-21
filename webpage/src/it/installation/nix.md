@@ -6,7 +6,7 @@ Guarda [QOwnNotes su nix](https://search.nixos.org/packages?channel=unstable&sho
 
 Dopo di che dovresti essere in grado di eseguire QOwnNotes con il comando `qownnotes`.
 
-::: Suggerimento
+::: tip
 Anche il gestore degli snippet della linea di comandi [qc](https://github.com/qownnotes/qc) di QOwnNotes può essere installato con lo [Store di Nix](https://search.nixos.org/packages?channel=unstable&show=qc).
 
 Puoi usare `nix-shell -p qc --run qc` per provarlo.

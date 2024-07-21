@@ -9,8 +9,8 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install flathub org.qownnotes.QOwnNotes
 ```
 
-Afterward you should be able to run QOwnNotes with the command `flatpak run org.qownnotes.QOwnNotes`.
+Successivamente dovresti essere in grado di eseguire QOwnNotes con il comando `flatpak run org.qownnotes.QOwnNotes`.
 
 ::: tip Info
-Please open issues with the Flatpak package on [QOwnNotes Flatpak Issues](https://github.com/flathub/org.qownnotes.QOwnNotes/issues).
+Si prega di riferire le problematiche con il pacchetto di Flatpak su [QOwnNotes Flatpak Issues](https://github.com/flathub/org.qownnotes.QOwnNotes/issues).
 :::

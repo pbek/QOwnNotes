@@ -34,7 +34,7 @@ sudo apt-get install qownnotes
 
 [Download diretto](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
-If you find any issues please report them on [QOwnNotes Issues on GitHub](https://github.com/pbek/QOwnNotes/issues)!
+Nel caso ci fossero problemi si prega di segnalarli sulla sezione [Issues di QOwnNotes s uGiHub](https://github.com/pbek/QOwnNotes/issues)!
 
 ## Vecchie distribuzioni e derivati di Ubuntu Linux
 
@@ -54,13 +54,13 @@ You may also be able to use the QOwnNotes on Ubuntu versions that aren't any mor
 
 Below are example calls for the xUbuntu 16.10 repository.
 
-Run the following shell command to trust the repository.
+Eseguire il seguente comando shell per considerare attendibile il repository.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
 ```
 
-Run the following shell commands to add the repository and install QOwnNotes from there.
+Eseguire i seguenti comandi shell per aggiungere il repository e installare QOwnNotes direttamente da esso.
 
 ```bash
 sudo su -
@@ -69,4 +69,4 @@ apt-get update
 apt-get install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)
+[Download diretto](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)

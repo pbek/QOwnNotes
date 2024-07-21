@@ -19,7 +19,7 @@ Se vuoi accelerare i tempi di costruzione potresti voler leggere [CCACHE and AUR
 ## pacman
 
 ::: warning
-[OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) sembra avere problemi di rilascio su Arch Linux. Best use the AUR or the [AppImage](./appimage.md) for now.
+[OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) sembra avere problemi di rilascio su Arch Linux. Al momento è meglio usare la versione su AUR o [AppImage](./appimage.md).
 :::
 
 Aggiungi le seguenti righe al tuo `/etc/pacman.conf` con `sudo nano /etc/pacman.conf`:

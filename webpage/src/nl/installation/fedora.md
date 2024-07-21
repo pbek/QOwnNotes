@@ -34,7 +34,7 @@ Houd er rekening mee dat het gedeelte "Fedora_40" in de bovenstaande code uw geb
 
 Gebruik deze methode als je Fedora-versie de `config-manager` dnf-plug-in niet ondersteunt, voer deze commando's uit als root.
 
-Voer de volgende shell-opdrachten uit als root om de repository te vertrouwen.
+Run the following shell command as root to trust the repository.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key

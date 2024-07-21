@@ -2719,18 +2719,18 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
-<translation type="unfinished">Ln %1, Col %2</translation>
+<translation>L. %1, Col. %2</translation>
 </message>
 <message>
 <source>Line %1, Column %2</source>
-<translation type="unfinished">Line %1, Column %2</translation>
+<translation>Ligne %1, Colonne %2</translation>
 </message>
 <message numerus="yes">
 <source>%n selected</source>
 <comment>Characters selected</comment>
 <translation type="unfinished">
 <numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
+<numerusform>%n sélectionnés</numerusform>
 </translation>
 </message>
 <message>
@@ -5604,7 +5604,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
-<translation type="unfinished">To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</translation>
+<translation>Pour utiliser les back-ends d’IA, vous pouvez soit utiliser la commande de script &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, ou regarder le dépôt de scripts pour des scripts déjà écrits.</translation>
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>

@@ -90,7 +90,7 @@ Se si preme <kbd>Invio</kbd> alla fine di un elenco verrà creato un nuovo eleme
 
 ## Collegamenti
 
-Due degli usi più semplici sono i collegamenti che puntano a pagine Web o ad altre note. Esistono diversi modi in cui ciascuno di questi collegamenti può apparire.
+Due degli usi più semplici per i collegamenti sono puntare a pagine Web o ad altre note. Esistono diversi modi in cui ciascuno di questi collegamenti può apparire.
 
 ### Collegamenti esterni
 
@@ -111,7 +111,7 @@ http://www.example.com oppure <http://www.example.com>
 
 ```markdown
 [Collego la nota per il diario](Diario.md).
-<Journal.md> Funziona similmente.
+<Journal.md> Funziona similarmente.
 ```
 
 ::: tip
@@ -148,7 +148,7 @@ Puoi anche incollare direttamente un'immagine dagli appunti nella tua nota con <
 ## Codice in linea e blocchi di codice
 
 ```markdown
-Il `codice` in linea è circondato da ``backtick''.
+Il `codice` in linea è circondato da `apici inversi` (Alt gr + ' sulle tastiere italiane).
 ```
 
 ::: tip
@@ -230,7 +230,7 @@ Al momento i linguaggi supportati (e gli identificatori dei codici) sono:
 Le tabelle non sono parte integrante di Markdown, ma l'anteprima di QOwnNotes le supporta. 
 
 ~~~markdown
-I due punti possono essere usati per allineare le colonne.
+I due punti possono essere usati per allineare il contenuto delle colonne.
 
 | Le Tabelle              | Sono               | Belle |
 | ----------------------- |:------------------:| -----:|
@@ -353,7 +353,7 @@ descrizione: Qualche descrizione
 
 # Il titolo della nota inizia qui
 
-Del testo
+Un po' di testo
 ```
 
 Il nome del file di questa nota di esempio sarebbe `Il titolo della nota inizia qui.md`.

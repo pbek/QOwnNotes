@@ -295,7 +295,7 @@ function noteTaggingHook(note, action, tagName, newTagName);
     -   la rimozione collettiva di etichette dalle note nell'elenco delle note rimuoverà tali etichette dalle note
     -   l'applicazione attiverà una serie di azioni `aggiungi` e `rimuovi` per tutte le etichette selezionate e i loro figli su tutte le note se le etichette vengono spostate nel pannello delle etichette
 
-You may want to take a look at the example [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) to implement your own tagging mechanism.
+Potresti voler dare un'occhiata all'esempio [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) per implementare il suo personale sistema di etichettatura.
 
 Assicurati che la tua azione `list` sia veramente veloce, perché sarà eseguita per ogni nota ogni volta che la cartella delle note viene ricaricata!
 :::
@@ -357,12 +357,12 @@ Questo hook viene chiamato quando i dati vengono inviati dall'estensione del bro
 ### Chiamata al metodo e parametri
 ```js
 /**
- * @param requestType can be "page" or "selection"
- * @param pageUrl the url of the webpage where the request was made
- * @param pageTitle the page title of the webpage where the request was made
- * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
- * @param screenshotDataUrl the data url of the screenshot of the webpage where the request was made
- * @return true if data was handled by a hook
+ * @param requestType può essere "page" o "selection"
+ * @param pageUrl l'url della pagina da cui è stata fatta la richiesta
+ * @param pageTitle titolo della pagina da cui è stata fatta la richiesta
+ * @param rawData i dati che sono stati trasmessi, html per le requestType "page" o testo non formattato per le requestType "selection"
+ * @param screenshotDataUrl I dati dell'url della cattura della schermata della la pagina da cui è stata fatta la richiesta
+ * @return true se il dato è stato gestito da un hook
  */
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
@@ -446,8 +446,8 @@ You can use it to provide config for custom OpenAI backends, like your own OpenA
 ### Method call and parameters
 ```js
 /**
- * This function is called when the OpenAI service config is reloaded
- * It returns a list of objects with config parameters for new OpenAI backends
+ * Questa funzione viene richiamata quando la configurazione del servizio OpenAI viene ricaricata
+ * Restituisce una lista di ggetti con i parametri della configurazione per i nuovi backends di OpenAI
  */
 function openAiBackendsHook() {
     return [
