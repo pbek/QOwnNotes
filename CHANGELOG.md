@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.7.3
+- `gpt-4o-mini` was added to the list of available OpenAI models
+  (for [#3057](https://github.com/pbek/QOwnNotes/issues/3057))
+
 ## 24.7.2
 - It was made more clear in the settings dialog how the AI integration can be used
   (for [#3055](https://github.com/pbek/QOwnNotes/issues/3055))

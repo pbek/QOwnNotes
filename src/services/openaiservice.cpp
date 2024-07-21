@@ -77,7 +77,7 @@ void OpenAiService::deleteInstance() {
 void OpenAiService::initializeBackends() {
     _backendModels.clear();
     _backendModels[QStringLiteral("openai")] =
-        QStringList{"gpt-4o", "gpt-4-turbo", "gpt-3.5-turbo", "gpt-4"};
+        QStringList{"gpt-4o", "gpt-4o-mini", "gpt-4-turbo", "gpt-3.5-turbo", "gpt-4"};
     _backendModels[QStringLiteral("groq")] =
         QStringList{"llama3-70b-8192", "llama3-8b-8192", "llama2-70b-4096", "mixtral-8x7b-32768",
                     "gemma-7b-it"};
