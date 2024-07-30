@@ -52,6 +52,7 @@
 #include "scriptrepositorydialog.h"
 #include "services/databaseservice.h"
 #include "services/nextclouddeckservice.h"
+#include "services/openaiservice.h"
 #include "services/owncloudservice.h"
 #include "services/updateservice.h"
 #include "ui_settingsdialog.h"
@@ -96,6 +97,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
         ui->settingsStackedWidget->addWidget(scrollArea);
     }
 
+    ui->groqApiTestButton->setDisabled(true);
+    ui->openAiApiTestButton->setDisabled(true);
     ui->loginFlowCancelButton->hide();
     ui->qrCodeWidget->hide();
     ui->connectionTestLabel->hide();
@@ -4365,4 +4368,30 @@ void SettingsDialog::on_openAiApiKeyWebButton_clicked() {
 
 void SettingsDialog::on_showStatusBarNotePathCheckBox_toggled(bool checked) {
     ui->showStatusBarRelativeNotePathCheckBox->setEnabled(checked);
+}
+
+void SettingsDialog::on_groqApiTestButton_clicked() {
+    OpenAiService *openAiService = OpenAiService::instance();
+    openAiService->setBackendId(QStringLiteral("groq"));
+    openAiService->setModelId(QStringLiteral("llama3-8b-8192"));
+    openAiService->setApiKeyForCurrentBackend(ui->groqApiKeyLineEdit->text());
+    QString result = openAiService->complete("Test");
+    QMessageBox::information(this, tr("Groq API test result"), result);
+}
+
+void SettingsDialog::on_openAiApiTestButton_clicked() {
+    OpenAiService *openAiService = OpenAiService::instance();
+    openAiService->setBackendId(QStringLiteral("openai"));
+    openAiService->setModelId(QStringLiteral("gpt-4o"));
+    openAiService->setApiKeyForCurrentBackend(ui->openAiApiKeyLineEdit->text());
+    QString result = openAiService->complete("Test");
+    QMessageBox::information(this, tr("OpenAI API test result"), result);
+}
+
+void SettingsDialog::on_groqApiKeyLineEdit_textChanged(const QString &arg1) {
+    ui->groqApiTestButton->setDisabled(arg1.isEmpty());
+}
+
+void SettingsDialog::on_openAiApiKeyLineEdit_textChanged(const QString &arg1) {
+    ui->openAiApiTestButton->setDisabled(arg1.isEmpty());
 }

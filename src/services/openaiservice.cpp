@@ -174,8 +174,12 @@ bool OpenAiService::setBackendId(const QString& id) {
     return true;
 }
 
+void OpenAiService::setApiKeyForCurrentBackend(const QString& apiKey) {
+    _completer->setApiKey(apiKey);
+}
+
 void OpenAiService::setApiKeyForCurrentBackend() {
-    _completer->setApiKey(getApiKeyForCurrentBackend());
+    setApiKeyForCurrentBackend(getApiKeyForCurrentBackend());
 }
 
 QString OpenAiService::getBackendId() {

@@ -330,6 +330,14 @@ class SettingsDialog : public MasterDialog {
 
     void on_showStatusBarNotePathCheckBox_toggled(bool checked);
 
+    void on_groqApiTestButton_clicked();
+
+    void on_openAiApiTestButton_clicked();
+
+    void on_groqApiKeyLineEdit_textChanged(const QString &arg1);
+
+    void on_openAiApiKeyLineEdit_textChanged(const QString &arg1);
+
    private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;

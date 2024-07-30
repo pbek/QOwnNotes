@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.8.0
+- In the *AI settings* there now are buttons to test the connection to the AI services
+  (for [#3062](https://github.com/pbek/QOwnNotes/issues/3062))
+
 ## 24.7.3
 - `gpt-4o-mini` was added to the list of available OpenAI models
   (for [#3057](https://github.com/pbek/QOwnNotes/issues/3057))

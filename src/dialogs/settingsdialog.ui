@@ -6887,16 +6887,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <string>API keys</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_85">
-                <item row="0" column="0">
-                 <widget class="QLabel" name="groqApiKeyHeadlineLabel">
-                  <property name="text">
-                   <string>Groq API key:</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-                  </property>
-                 </widget>
-                </item>
                 <item row="1" column="0">
                  <widget class="QLabel" name="openAiApiKeyHeadlineLabel">
                   <property name="text">
@@ -6918,16 +6908,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   <property name="icon">
                    <iconset theme="text-html" resource="../breeze-qownnotes.qrc">
                     <normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="PasswordLineEdit" name="openAiApiKeyLineEdit">
-                  <property name="placeholderText">
-                   <string>API key</string>
-                  </property>
-                  <property name="clearButtonEnabled">
-                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -6955,24 +6935,66 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </property>
                  </widget>
                 </item>
+                <item row="1" column="1">
+                 <widget class="PasswordLineEdit" name="openAiApiKeyLineEdit">
+                  <property name="placeholderText">
+                   <string>API key</string>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="groqApiKeyHeadlineLabel">
+                  <property name="text">
+                   <string>Groq API key:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="4">
+                 <widget class="QToolButton" name="openAiApiTestButton">
+                  <property name="toolTip">
+                   <string>Test connection</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="4">
+                 <widget class="QToolButton" name="groqApiTestButton">
+                  <property name="toolTip">
+                   <string>Test connection</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
                </layout>
               </widget>
              </item>
              <item>
-               <spacer name="aiVerticalSpacer1">
-                <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                  <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                  <size>
-                  <width>20</width>
-                  <height>15</height>
-                  </size>
-                </property>
-               </spacer>
+              <spacer name="aiVerticalSpacer1">
+               <property name="orientation">
+                <enum>Qt::Orientation::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Policy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>15</height>
+                </size>
+               </property>
+              </spacer>
              </item>
              <item>
               <widget class="QLabel" name="openAiScriptingLabel3">
@@ -6988,20 +7010,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               </widget>
              </item>
              <item>
-               <spacer name="aiVerticalSpacer2">
-                <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                  <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                  <size>
-                  <width>20</width>
-                  <height>15</height>
-                  </size>
-                </property>
-               </spacer>
+              <spacer name="aiVerticalSpacer2">
+               <property name="orientation">
+                <enum>Qt::Orientation::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Policy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>15</height>
+                </size>
+               </property>
+              </spacer>
              </item>
              <item>
               <widget class="QLabel" name="openAiScriptingLabel">
