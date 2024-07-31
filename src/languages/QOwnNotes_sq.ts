@@ -5617,6 +5617,18 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
 <translation type="unfinished">Create OpenAI API key</translation>
 </message>
 <message>
+<source>Test connection</source>
+<translation type="unfinished">Test connection</translation>
+</message>
+<message>
+<source>AI backends added via the scripting engine</source>
+<translation type="unfinished">AI backends added via the scripting engine</translation>
+</message>
+<message>
+<source>Test</source>
+<translation type="unfinished">Test</translation>
+</message>
+<message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
 <translation type="unfinished">To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</translation>
 </message>
@@ -6525,6 +6537,22 @@ Mesazhi i gabimit në lidhje:</translation>
 <message>
 <source>Stack Id: %1</source>
 <translation type="unfinished">Stack Id: %1</translation>
+</message>
+<message>
+<source>API test result for %1 (%2)</source>
+<translation type="unfinished">API test result for %1 (%2)</translation>
+</message>
+<message>
+<source>AI backend: %1</source>
+<translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>AI model: %1</source>
+<translation type="unfinished">AI model: %1</translation>
+</message>
+<message>
+<source>Test connection to %1 (%2)</source>
+<translation type="unfinished">Test connection to %1 (%2)</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>

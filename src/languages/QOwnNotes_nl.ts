@@ -5606,6 +5606,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>OpenAI API-key aanmaken</translation>
 </message>
 <message>
+<source>Test connection</source>
+<translation>Verbinding testen</translation>
+</message>
+<message>
+<source>AI backends added via the scripting engine</source>
+<translation>AI backends toegevoegd via de scripting engine</translation>
+</message>
+<message>
+<source>Test</source>
+<translation>Testen</translation>
+</message>
+<message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
 <translation>Om gebruik te maken van de AI-backends, kunt u de opdracht scripting gebruiken &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, of kijk in de scriptrepository voor reeds geschreven scripts.</translation>
 </message>
@@ -6511,6 +6523,22 @@ Verbinding foutbericht: </translation>
 <message>
 <source>Stack Id: %1</source>
 <translation>Stapel Id: %1</translation>
+</message>
+<message>
+<source>API test result for %1 (%2)</source>
+<translation>API testresultaat voor %1 (%2)</translation>
+</message>
+<message>
+<source>AI backend: %1</source>
+<translation>AI-backend: %1</translation>
+</message>
+<message>
+<source>AI model: %1</source>
+<translation>AI-model: %1</translation>
+</message>
+<message>
+<source>Test connection to %1 (%2)</source>
+<translation>Verbinding met %1 (%2) testen</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>

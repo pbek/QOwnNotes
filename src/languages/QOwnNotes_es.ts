@@ -3552,15 +3552,15 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Copiar ruta absoluta de nota</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
-<translation type="unfinished">Copy absolute path of note subfolder</translation>
+<translation>Copiar ruta absoluta de subcarpeta de nota</translation>
 </message>
 <message>
 <source>Copy absolute path of note folder</source>
-<translation type="unfinished">Copy absolute path of note folder</translation>
+<translation>Copiar ruta absoluta de carpeta de nota</translation>
 </message>
 </context>
 <context>
@@ -5453,7 +5453,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Show note path</source>
-<translation type="unfinished">Show note path</translation>
+<translation>Mostrar ruta de nota</translation>
 </message>
 <message>
 <source>Only show relative note path</source>
@@ -5599,6 +5599,18 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <source>Create OpenAI API key</source>
 <translation>Crear clave de API de OpenAI</translation>
+</message>
+<message>
+<source>Test connection</source>
+<translation type="unfinished">Test connection</translation>
+</message>
+<message>
+<source>AI backends added via the scripting engine</source>
+<translation type="unfinished">AI backends added via the scripting engine</translation>
+</message>
+<message>
+<source>Test</source>
+<translation type="unfinished">Test</translation>
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
@@ -6503,6 +6515,22 @@ Mensaje de error de conexión: </translation>
 <message>
 <source>Stack Id: %1</source>
 <translation>Pila id: '%1'</translation>
+</message>
+<message>
+<source>API test result for %1 (%2)</source>
+<translation type="unfinished">API test result for %1 (%2)</translation>
+</message>
+<message>
+<source>AI backend: %1</source>
+<translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>AI model: %1</source>
+<translation type="unfinished">AI model: %1</translation>
+</message>
+<message>
+<source>Test connection to %1 (%2)</source>
+<translation type="unfinished">Test connection to %1 (%2)</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>

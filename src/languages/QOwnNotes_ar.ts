@@ -1245,7 +1245,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>نسخة</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1884,7 +1884,7 @@
 </message>
 <message>
 <source>Spelling backend</source>
-<translation>هجاء الخلفية</translation>
+<translation>محرك التدقيق الإملائي</translation>
 </message>
 <message>
 <source>AI model</source>
@@ -2813,22 +2813,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
-<translation type="unfinished">Ln %1, Col %2</translation>
+<translation>سطر %1، عمود %2</translation>
 </message>
 <message>
 <source>Line %1, Column %2</source>
-<translation type="unfinished">Line %1, Column %2</translation>
+<translation>سطر %1، عمود %2</translation>
 </message>
 <message numerus="yes">
 <source>%n selected</source>
 <comment>Characters selected</comment>
-<translation type="unfinished">
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
+<translation>
+<numerusform>%n محدد</numerusform>
+<numerusform>%n محدد</numerusform>
+<numerusform>%n محددان</numerusform>
+<numerusform>%n محددة</numerusform>
+<numerusform>%n محدد</numerusform>
+<numerusform>%n محدد</numerusform>
 </translation>
 </message>
 <message>
@@ -3691,11 +3691,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
-<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+<translation>المسار النسبي للملاحظة، انقر بالزر الأيمن لفتح قائمة السياق</translation>
 </message>
 <message>
 <source>Absolute path of note, right-click to open context menu</source>
-<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+<translation>المسار المطلق للملاحظة، انقر بالزر الأيمن لفتح قائمة السياق</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
@@ -4305,7 +4305,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Spelling</source>
-<translation>الإملاء</translation>
+<translation>التدقيق الإملائي</translation>
 </message>
 </context>
 <context>
@@ -5807,16 +5807,28 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>أنشئ مفتاح OpenAI API</translation>
 </message>
 <message>
+<source>Test connection</source>
+<translation type="unfinished">Test connection</translation>
+</message>
+<message>
+<source>AI backends added via the scripting engine</source>
+<translation type="unfinished">AI backends added via the scripting engine</translation>
+</message>
+<message>
+<source>Test</source>
+<translation type="unfinished">Test</translation>
+</message>
+<message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
-<translation type="unfinished">To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</translation>
+<translation>لاستخدام خدمات الذكاء المصطنع، عليك استعمال أمر البرمجة &lt;a href="%1"&gt;aiComplete&lt;/a&gt;، أو النظر في مستودع البُريمجات للبريمجات الجاهزة.</translation>
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
-<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
+<translation>يمكنك استعمال خطاف البرمجة &lt;a href="%1"&gt;openAiBackendsHook (خطاف خدمات الذكاء المصطنع)&lt;/a&gt; لإضافة خدمات متوافقة مع OpenAI API.</translation>
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
-<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+<translation>أو بدلا من ذلك يمكنك النظر في مستودع البُريمجات للبريمجات الجاهزة للتكامل مع الذكاء المصطنع.</translation>
 </message>
 <message>
 <source>Groq API key:</source>
@@ -6712,6 +6724,22 @@ Connection error message: </source>
 <message>
 <source>Stack Id: %1</source>
 <translation type="unfinished">Stack Id: %1</translation>
+</message>
+<message>
+<source>API test result for %1 (%2)</source>
+<translation type="unfinished">API test result for %1 (%2)</translation>
+</message>
+<message>
+<source>AI backend: %1</source>
+<translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>AI model: %1</source>
+<translation type="unfinished">AI model: %1</translation>
+</message>
+<message>
+<source>Test connection to %1 (%2)</source>
+<translation type="unfinished">Test connection to %1 (%2)</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>

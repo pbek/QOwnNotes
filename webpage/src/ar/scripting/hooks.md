@@ -428,14 +428,14 @@ function workspaceSwitchedHook(oldUuid, newUuid);
 
 ربما تحب أن تلقي نظرة على المثال [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/workspaces.qml).
 
-openAiBackendsHook
+openAiBackendsHook (خطاف خدمات الذكاء المصطنع)
 ------------------
 
-This hook is called, when the OpenAI service config is reloaded. For example, this is also done when the script engine is reloaded.
+يُنادى هذا الخطاف عند إعادة تحميل تهيئة خدمات OpenAI. يحدث هذا مثلا عند إعادة تحميل محرك البرمجة.
 
-You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs.
+يمكنك استعماله لتهيئة خدمات OpenAI مخصصة، مثل نماذج LLM خاصة بك (على أن تكون متوافقة مع OpenAI API).
 
-### Method call and parameters
+### نداء الدالة ومُعامِلاتها
 ```js
 /**
  * This function is called when the OpenAI service config is reloaded
@@ -462,7 +462,7 @@ function openAiBackendsHook() {
 ```
 
 ::: tip
-You can use [Registering script settings variables](./methods-and-objects.md#registering-script-settings-variables) to store the OpenAI backend settings in the script settings.
+يمكنك الاستفادة من [تسجيل متغيرات إعدادات البُريمج](./methods-and-objects.md#registering-script-settings-variables) لحفظ إعدادات خدمات الذكاء المصطنع ضمن إعدادات البريمج.
 :::
 
-You may want to take a look at the example [custom-openai-backends.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-openai-backends.qml).
+ربما تحب أن تلقي نظرة على المثال [custom-openai-backends.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-openai-backends.qml).

@@ -7,6 +7,8 @@
   to test the connection to those AI services (for [#3064](https://github.com/pbek/QOwnNotes/issues/3064))
 - A highlighting issue in malformed unordered lists was fixed
   (for [#3061](https://github.com/pbek/QOwnNotes/issues/3061), thank you, @Waqar144) 
+- Added more Dutch, Swedish, Italian, Arabic, German, Korean, Spanish translation
+  (thank you, stephanp, dzenan, hermi55, noureddin, rakekniven, venusgirl, fitojb)
 
 ## 24.7.3
 - `gpt-4o-mini` was added to the list of available OpenAI models

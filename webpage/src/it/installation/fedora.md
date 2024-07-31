@@ -3,7 +3,7 @@
 Esistono repository QOwnNotes per **Fedora 28 e versioni successive**.
 
 ::: tip
-QOwnNotes è dato a disposizione sugli [archivi di Fedora](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/). Quella versione è generalmente un paio di versioni arretrata rispetto all'archivio principale ottenibile dalle istruzioni sottostanti.
+QOwnNotes è dato a disposizione sugli [archivi di Fedora](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/). Quella versione è generalmente un paio di versioni arretrata rispetto all'archivio principale ottenibile con le istruzioni sottostanti.
 
 Per la maggior parte degli utenti è sufficiente usare il comando `dnf install qownnotes` in una finestra del terminale. Altrimenti, se si vuole la **versione più aggiornata**, proseguire con la lettura.
 :::
@@ -34,7 +34,7 @@ Si noti che la porzione "Fedora_40" del codice antecedente si riferisce alla ver
 
 Usare questo metodo nel caso in cui la versione di Fedora non supporta il plugin di dnf `config-manager`, in tal caso eseguire i seguenti comandi come root.
 
-Run the following shell command as root to trust the repository.
+Eseguire il seguente comando shell come root per rendere attendibile il repository.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key

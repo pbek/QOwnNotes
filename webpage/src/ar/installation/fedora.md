@@ -3,14 +3,14 @@
 توجد مستودعات QOwnNotes لتوزيعة **فيدورا 28 والأحدث**.
 
 ::: tip
-QOwnNotes is provided in the [Fedora repositories](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/). That version is generally one or two patch versions behind the master repository available through the instructions below.
+يتوفر QOwnNotes في [مستودعات فيدورا](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/). لكن النسخة المتاحة فيها غالبا تكون أقدم رقعةً أو رقعتين من نسخة المستودع المتاحة عبر الشرح التالي.
 
-For most users you can just issue `dnf install qownnotes` in a terminal window. If you want the **most up-to-date version**, please continue reading.
+يمكن لمعظم المستخدمين أن ينفذوا الأمر `dnf install qownnotes` في الطرفية. أما إذا أردت **أحدث نسخة مطلقًا**، فرجاءً تابع القراءة.
 :::
 
 ## على الأنظمة ذات إضافة config-manager لـ&nbsp;dnf
 
-Run the following shell commands as root to add the repository.
+نفّذ الأمر التالي في الطرفية بصلاحيات الجذر لإضافة المستودع.
 
 ```bash
 dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
@@ -20,28 +20,28 @@ dnf install qownnotes
 ```
 
 ::: tip
-You may need to accept the repo key before you can download from it.
+ربما تحتاج إلى قبول مفتاح المستودع قبل التنزيل منه.
 
-If you have any problems, import the key manually with:
+إذا واجهت مشاكل، يمكنك استيراد المفتاح يدويا بالأمر:
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
-Please note that the portion "Fedora_40" in the above code should reflect the version of Fedora you are using (i.e. "Fedora_39", "Fedora_38" etc.)
+لاحظ أن "Fedora_40" في الأمر السابق يجب أن تغيّرها إلى ما يناسب نسخة توزيعتك (أي "Fedora_39" أو "Fedora_38" إلخ).
 :::
 
 ## على الأنظمة الأقدم
 
-Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
+استعمل هذه الطريقة إذا كانت نسختك من فيدورا لا تدعم إضافة `config-manager` لـ&nbsp;dnf.
 
-Run the following shell command as root to trust the repository.
+نفّذ الأمر التالي في الطرفية بصلاحيات الجذر لاستيثاق المستودع.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
-Again: note that the portion "Fedora_40" in the above code should reflect the version of Fedora you are using (i.e. "Fedora_39", "Fedora_38" etc.)
+مجددا، لاحظ أن "Fedora_40" في الأمر السابق يجب أن تغيّرها إلى ما يناسب نسخة توزيعتك (أي "Fedora_39" أو "Fedora_38" إلخ).
 
-Then run the following shell commands as root to add the repository and install QOwnNotes from there.
+ثم نفّذ الأوامر التالية في الطرفية بصلاحيات الجذر لإضافة المستودع وتثبيت QOwnNotes منه.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -58,20 +58,20 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (this example link is for Fedora 40)
+[تنزيل مباشر](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (هذا الرابط مثال على فيدورا 40)
 
-## QOwnNotes version-updating notes for Fedora
+## ملاحظات بخصوص ترقية QOwnNotes على فيدورا
 
-### Problems with GPG keys?
+### مشاكل مع مفاتيح GPG؟
 
-Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not *automatically* extended. This can lead to problems *updating* QOwnNotes.
+التغيير في سياسات فيدورا الأمنية قد يعني أن مفاتيح المستودع «القديمة» (أي المنتهية) لا تُمدّ *آليًّا*. هذا قد يعرقل *ترقية* QOwnNotes.
 
-**Detail:** If you have a problem with invalid keys (i.e. GPG errors) such as `certificate is not alive` and/or `key is not alive` due to key expiry, this terminal command should delete the expired key:
+**التفصيل:** إذا واجهت مشكلة مع المفاتيح التالفة (أيْ أخطاء GPG) بسبب انتهاء المفتاح، مثل `certificate is not alive` أو `key is not alive` أو كليهما، فإن تنفيذ هذا الأمر في الطرفية سيحذف المفتاح المنتهي:
 
 ```bash
 sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubkey | grep pbek | cut -f1)
 ```
 
-Detailed explanation of the command is available on GitHub in a [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) related to this exact issue.
+ستجد شرحًا مفصلًا لهذا الأمر في [نقاش على GitHub](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) بخصوص هذه العلة نفسها.
 
-Once the expired key has been deleted, you must then newly *import* the **current** key manually as described in the beginning of these installation instructions.
+ما إن تحذف المفتاح المنتهي، عليك أن *تستورد* يدويًّا المفتاح **الحالي** من جديد بالطريقة الموصوفة في أول هذا الشرح.

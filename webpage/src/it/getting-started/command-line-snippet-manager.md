@@ -28,7 +28,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ## Dipendenze
 
-[fzf](https://github.com/junegunn/fzf) (fuzzy search) or [peco](https://github.com/peco/peco) (più vecchio, ma più probabile che venga installato per impostazione predefinita) deve essere installato per cercare i comandi sulla riga di comando.
+[fzf](https://github.com/junegunn/fzf) (fuzzy search) or [peco](https://github.com/peco/peco) (più vecchio, ma più probabile che sia installato per impostazione predefinita) deve essere installato per cercare i comandi sulla riga di comando.
 
 ::: tip
 Per impostazione predefinita viene utilizzato `fzf` per la ricerca, ma puoi utilizzare `peco` impostandolo con `qc configure`.
@@ -84,16 +84,16 @@ I blocchi di codice **`bash` o `shell`**, preceduti da un'intestazione 2 o super
     - ma si possono usare i tag: #tag1 #tag2
 
     ```bash
-    eco fai questo
-     eco fallo
+    echo fai questo
+     echo fai quest'altro
     ```
 
 
     ## Fai qualcos'altro con un blocco di codice "sh".
 
     ```sh
-    eco fare qualcos'altro
-     eco fai qualcos'altro
+    echo fare qualcos'altro
+     echo fai qualcos'altro
     ```
 
 L'esempio precedente risulterà in due frammenti di comando, il primo con i due tag `tag1` e `tag2`.

@@ -34,7 +34,7 @@ Please note that the portion "Fedora_40" in the above code should reflect the ve
 
 Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
 
-Run the following shell command as root to trust the repository.
+Ejecute la orden de consola siguiente con privilegios administrativos para marcar el repositorio como de fiar.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key

@@ -148,27 +148,27 @@ Unisciti al nostro [Gruppo Telegram](https://t.me/QOwnNotes) per discutere, impa
 [Comprendere il concetto di QOwnNotes](concept.md)
 
 ## Caratteristiche
-- Puoi usare i tuoi **pre-esistenti files di testo o markdown** senza la necessità di importarli
+- Puoi usare i tuoi **pre-esistenti documenti di testo o markdown** senza la necessità di importarli
 - QOwnNotes è scritto in C++ ed è ottimizzato a basso **consumo di risorse** (nessuna CPU e app Electron affamata di memoria)
 - **Importa Evernote e Joplin**
-- **Compatibile** con l'applicazione [Notes](https://apps.nextcloud.com/apps/notes) di **Nextcloud / Owncloud**, la versione <0>mobile** e Nextcloud Text</p></li>
+- **Compatibilità** con l'applicazione [Notes](https://apps.nextcloud.com/apps/notes) di **Nextcloud / Owncloud**, la versione <0>mobile** e Nextcloud Text</p></li>
 - Crea un **[Nextcloud Deck](https://apps.nextcloud.com/apps/deck) cards** e collegalo alle tue note
 - Supporto per la **condivisione delle note** sul tuo server **ownCLoud** / **Nextcloud**
 - Gestisci la tua **lista delle cose da fare** di Nextcloud / OwnCloud (**Nextcloud tasks** o **Tasks Plus** / **Calendar Plus**) o usa un altro **server CalDAV** per sincronizzare i tuoi incarichi
-- Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
-- **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
-- **External changes** of note files are **watched** (notes or note list are reloaded)
-- Support for **hierarchical note tagging** and **note subfolders**
-- Optional **encryption** of notes, AES-256 is built in, or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml))
+- Le **note cancellate** possono essere **ripristinate** dal tuo server **Nextcloud / ownCloud**
+- ** Le note cestinate** possono essere **ripristrinate** dal tuo server **Nextcloud / ownCloud**
+- Le ** modifiche esterne** ai files delle note vengono **prese in considerazione** (le note o l'elenco di esse vengono aggiornati)
+- Supporto per la **gerarchia dell'etichettatura alle note** e alle **sottocartelle delle note**
+- **Cifratura** opzionale delle note. Sistema AES-256 preinstallato, altrimenti puoi usare il tuo metodo di cifratura come **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) o **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml))
 - La **cartella delle note** può essere **scelta liberamente** (è possibile scegliere più cartelle delle note)
-- **Searching parts of words** in notes is possible and search results are highlighted in the notes
-- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
-- [**Spellchecking**](../editor/spellchecking.md) support
-- **Portable mode** for carrying QOwnNotes around on USB sticks
-- **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
-- Implementation of the **[OpenAI completion API](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** to be used in scripts
+- **La ricerca di parole parziali** nelle note è possibile e i risultati di essa sono evidenziati nelle note
+- [**Estensione browser**](browser-extension.md) per **inserire note da testo selezionato**, **fare catture di schermata** o **gestire i tuoi segnalibri**
+- [**Controllo ortografico**](../editor/spellchecking.md) supportato
+- **Modalità portatile** per portare QOwnNotes con te su una chiavetta USB
+- **Supporto allo scripting** e un [**repository di script**](https://github.com/qownnotes/scripts) online da cui puoi installare script nella tua applicazione
+- Implementazione di **[API per l'autocompilazione di OpenAI](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** per usarla negli scripts
 - **Modalità Vim**
-- **[Web application](web-app.md)** to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop</ul>
+- **[Applicazione web](web-app.md)** per **inserire foto dal tuo telefono cellulare** nella nota corrente di QOwnNotes sul tuo desktop</ul>
 
 
 ## Aspetto

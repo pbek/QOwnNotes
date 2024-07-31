@@ -4,7 +4,7 @@
 
 C'è una voce per importare le note di Evernote che puoi raggiungere in `Nota / Importa ` menù per importare * File Enex di Evernote * files.
 
-Saranno automaticamente importati anche immagini, allegati, etichette, la formattazione standard e i metadati.
+Saranno automaticamente importati anche immagini, allegati, etichette, formattazione standard e i metadati.
 
 ## Joplin
 
@@ -31,7 +31,7 @@ Puoi importare le note di Tomboy tramite uno script chiamato [Trombone](https://
 
 Potresti dover installare python2 per far funzionare lo script. Convertirà le tue note di Tomboy in un file `Enex` di Evernote, che potrai importare su QOwnNotes.
 
-Per chiunque desideri farlo, assicurati prima di aver installato Python2, inoltre potresti dover installare anche `python-is-python2` (puoi rimuoverlo in seguito). Potrebbe essere più facile e sicuro farlo all'interno dell'ambiente chroot o un container Docker, se hai questa possibilità (sarà descritto qui prossimamente).
+Per chiunque desideri farlo, assicurati prima di aver installato Python2, inoltre potresti dover installare anche `python-is-python2` (puoi rimuoverlo in seguito). Potrebbe essere più facile e sicuro farlo all'interno dell'ambiente chroot o in un container Docker, se ne hai possibilità (sarà descritto qui prossimamente).
 
 ```bash
 sudo apt install python2 python-is-python2

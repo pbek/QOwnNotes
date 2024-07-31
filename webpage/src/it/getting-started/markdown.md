@@ -155,9 +155,9 @@ Il `codice` in linea è circondato da `apici inversi` (Alt gr + ' sulle tastiere
 Puoi utilizzare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Maiusc + C</kbd> sul testo in linea selezionato o solo all'interno del testo per creare un blocco di codice in linea.
 :::
 
-I blocchi di codice sono delimitati da linee con tre apici inversi o sono rientrati con quattro spazi.
+I blocchi di codice sono delimitati da linee con tre apici inversi o sono identati con quattro spazi.
 
-### Delimitazioni con 4 spazi
+### Identazione con 4 spazi
 
 Aggiungi quattro spazi davanti al codice per contrassegnarlo come blocco di codice.
 

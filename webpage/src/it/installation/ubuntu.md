@@ -34,25 +34,25 @@ sudo apt-get install qownnotes
 
 [Download diretto](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
-Nel caso ci fossero problemi si prega di segnalarli sulla sezione [Issues di QOwnNotes s uGiHub](https://github.com/pbek/QOwnNotes/issues)!
+Nel caso ci fossero problemi si prega di segnalarli sulla sezione [Issues di QOwnNotes su GiHub](https://github.com/pbek/QOwnNotes/issues)!
 
 ## Vecchie distribuzioni e derivati di Ubuntu Linux
 
-Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).
+In questo caso è più conveniente usare la versione AppImage da [QOwnNotes Releases su GitHub](https://github.com/pbek/QOwnNotes/releases).
 
-Then you can change the execute-permissions on the file:
+Dopo aver scaricato il file AppImage è necessario modificare i permessi di quest ultimo per poterlo eseguire:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Afterward you should be able to execute the AppImage to run QOwnNotes.
+Successivamente dovresti essere in grado di eseguire l'AppImage per avviare QOwnNotes.
 
 ## Repository OBS
 
-You may also be able to use the QOwnNotes on Ubuntu versions that aren't any more updated on Ubuntu Launchpad then you can use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
+Dovresti anche essere in grado di usare QOwnNotes su versioni di Ubuntu che non vengono più aggiornate con l'ausilio di Ubuntu Launchpad, dunque puoi usare i repository da [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 
-Below are example calls for the xUbuntu 16.10 repository.
+Di seguito sono riportati esempi di richiami al repository di xUbuntu 16.10.
 
 Eseguire il seguente comando shell per considerare attendibile il repository.
 

@@ -6,7 +6,7 @@ Questo può essere fatto nelle impostazioni di _Controllo versioni con Git_ sott
 
 ![impostazioni-cartella-note-git](/img/git/settings.png)
 
-Devo avere git installato nel tuo sistema e avere l'eseguibile git impostato nella tua variabile di sistema 'PATH' o puoi impostare quest'ultima nelle impostazioni di _Controllo versioni con Git_.
+E' necessario che tu abbia git installato e avere l'eseguibile git impostato nella tua variabile di sistema 'PATH' o puoi impostare quest'ultima nelle impostazioni di _Controllo versioni con Git_.
 
 Devi anche attivare il supporto a git per ogni cartella delle note con cui vuoi venga effettuato il controllo versioni con Git!
 
