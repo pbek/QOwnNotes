@@ -446,6 +446,10 @@ class SettingsDialog : public MasterDialog {
     void resetOKLabelData();
 
     void loadNextcloudDeckStackTreeWidget();
+
+    void buildAiScriptingTreeWidget();
+
+    void runAiApiTest(QString backend, QString model, QString apiKey = QString());
 };
 
 #endif    // SETTINGSDIALOG_H

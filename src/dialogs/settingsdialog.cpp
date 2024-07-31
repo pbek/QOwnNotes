@@ -99,6 +99,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
 
     ui->groqApiTestButton->setDisabled(true);
     ui->openAiApiTestButton->setDisabled(true);
+    ui->aiScriptingGroupBox->setHidden(true);
     ui->loginFlowCancelButton->hide();
     ui->qrCodeWidget->hide();
     ui->connectionTestLabel->hide();
@@ -3322,6 +3323,10 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
         if (connectionTestCanBeStarted()) {
             on_connectButton_clicked();
         }
+    } else if (index == AiPage) {
+        if (connectionTestCanBeStarted()) {
+            buildAiScriptingTreeWidget();
+        }
     }
 
     // turn off the tasks page if no ownCloud settings are available
@@ -4371,21 +4376,11 @@ void SettingsDialog::on_showStatusBarNotePathCheckBox_toggled(bool checked) {
 }
 
 void SettingsDialog::on_groqApiTestButton_clicked() {
-    OpenAiService *openAiService = OpenAiService::instance();
-    openAiService->setBackendId(QStringLiteral("groq"));
-    openAiService->setModelId(QStringLiteral("llama3-8b-8192"));
-    openAiService->setApiKeyForCurrentBackend(ui->groqApiKeyLineEdit->text());
-    QString result = openAiService->complete("Test");
-    QMessageBox::information(this, tr("Groq API test result"), result);
+    runAiApiTest(QStringLiteral("groq"), QStringLiteral("llama3-8b-8192"), ui->groqApiKeyLineEdit->text());
 }
 
 void SettingsDialog::on_openAiApiTestButton_clicked() {
-    OpenAiService *openAiService = OpenAiService::instance();
-    openAiService->setBackendId(QStringLiteral("openai"));
-    openAiService->setModelId(QStringLiteral("gpt-4o"));
-    openAiService->setApiKeyForCurrentBackend(ui->openAiApiKeyLineEdit->text());
-    QString result = openAiService->complete("Test");
-    QMessageBox::information(this, tr("OpenAI API test result"), result);
+    runAiApiTest(QStringLiteral("openai"), QStringLiteral("gpt-4o"), ui->openAiApiKeyLineEdit->text());
 }
 
 void SettingsDialog::on_groqApiKeyLineEdit_textChanged(const QString &arg1) {
@@ -4394,4 +4389,74 @@ void SettingsDialog::on_groqApiKeyLineEdit_textChanged(const QString &arg1) {
 
 void SettingsDialog::on_openAiApiKeyLineEdit_textChanged(const QString &arg1) {
     ui->openAiApiTestButton->setDisabled(arg1.isEmpty());
+}
+
+void SettingsDialog::runAiApiTest(QString backend, QString model, QString apiKey) {
+    OpenAiService *openAiService = OpenAiService::instance();
+    openAiService->setBackendId(backend);
+    openAiService->setModelId(model);
+    if (!apiKey.isEmpty()) {
+        openAiService->setApiKeyForCurrentBackend(apiKey);
+    }
+    QString result = openAiService->complete("Test");
+    QMessageBox::information(this, tr("API test result for %1 (%2)").arg(backend, model), result);
+}
+
+void SettingsDialog::buildAiScriptingTreeWidget() {
+    OpenAiService *openAiService = OpenAiService::instance();
+    auto backendNames = openAiService->getBackendNames();
+
+    if (backendNames.count() > 2) {
+        ui->aiScriptingTreeWidget->clear();
+        ui->aiScriptingGroupBox->setVisible(true);
+    } else {
+        ui->aiScriptingGroupBox->setVisible(false);
+        return;
+    }
+
+    for (const auto &key : backendNames.keys()) {
+        // Continue on groq and openai
+        if (key == QStringLiteral("groq") || key == QStringLiteral("openai")) {
+            continue;
+        }
+
+        const QString &name = backendNames.value(key);
+
+        auto backendItem = new QTreeWidgetItem(ui->aiScriptingTreeWidget);
+        backendItem->setText(0, name);
+        backendItem->setToolTip(0, tr("AI backend: %1").arg(key));
+        backendItem->setData(0, Qt::UserRole, key);
+        backendItem->setFlags(backendItem->flags() & ~Qt::ItemIsSelectable);
+
+        auto models = openAiService->getModelsForBackend(key);
+        for (const auto &model : models) {
+            auto modelItem = new QTreeWidgetItem(backendItem);
+            modelItem->setText(0, model);
+            modelItem->setToolTip(0, tr("AI model: %1").arg(model));
+            modelItem->setData(0, Qt::UserRole, model);
+            modelItem->setFlags(modelItem->flags() | Qt::ItemIsSelectable);
+
+            // Add test button in new column
+            auto testButton = new QPushButton();
+            testButton->setText(tr("Test"));
+            testButton->setToolTip(tr("Test connection to %1 (%2)").arg(name, model));
+            testButton->setIcon(QIcon::fromTheme(QStringLiteral("network-connect"),
+                                             QIcon(":/icons/breeze-qownnotes/16x16/network-connect.svg")));
+            testButton->setProperty("backend", key);
+            testButton->setProperty("model", model);
+            connect(testButton, &QPushButton::clicked, this, [this, testButton]() {
+                QString backend = testButton->property("backend").toString();
+                QString model = testButton->property("model").toString();
+                runAiApiTest(backend, model);
+            });
+
+            ui->aiScriptingTreeWidget->setItemWidget(modelItem, 1, testButton);
+        }
+
+    }
+
+    ui->aiScriptingTreeWidget->setRootIsDecorated(false);
+    ui->aiScriptingTreeWidget->expandAll();
+    ui->aiScriptingTreeWidget->resizeColumnToContents(0);
+    ui->aiScriptingTreeWidget->resizeColumnToContents(1);
 }

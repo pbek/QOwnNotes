@@ -6880,6 +6880,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </layout>
            </widget>
            <widget class="QWidget" name="aiPage">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <layout class="QVBoxLayout" name="verticalLayout_32">
              <item>
               <widget class="QGroupBox" name="groupBox_40">
@@ -6975,6 +6981,46 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <iconset resource="../breeze-qownnotes.qrc">
                     <normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</iconset>
                   </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="aiScriptingGroupBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="title">
+                <string>AI backends added via the scripting engine</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_87">
+                <item row="0" column="0">
+                 <widget class="QTreeWidget" name="aiScriptingTreeWidget">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <column>
+                   <property name="text">
+                    <string notr="true">Name</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string notr="true">Test</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string></string>
+                   </property>
+                  </column>
                  </widget>
                 </item>
                </layout>
