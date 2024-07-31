@@ -5,6 +5,8 @@
   (for [#3062](https://github.com/pbek/QOwnNotes/issues/3062))
 - In the *AI settings* there now is a list of all AI backends from scripts and buttons
   to test the connection to those AI services (for [#3064](https://github.com/pbek/QOwnNotes/issues/3064))
+- A highlighting issue in malformed unordered lists was fixed
+  (for [#3061](https://github.com/pbek/QOwnNotes/issues/3061), thank you, @Waqar144) 
 
 ## 24.7.3
 - `gpt-4o-mini` was added to the list of available OpenAI models
