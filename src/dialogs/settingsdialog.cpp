@@ -3325,9 +3325,7 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
             on_connectButton_clicked();
         }
     } else if (index == AiPage) {
-        if (connectionTestCanBeStarted()) {
-            buildAiScriptingTreeWidget();
-        }
+        buildAiScriptingTreeWidget();
     }
 
     // turn off the tasks page if no ownCloud settings are available
@@ -4408,6 +4406,7 @@ void SettingsDialog::runAiApiTest(QString backend, QString model, QString apiKey
 void SettingsDialog::buildAiScriptingTreeWidget() {
     OpenAiService *openAiService = OpenAiService::instance();
     auto backendNames = openAiService->getBackendNames();
+    qDebug() << __func__ << " - 'backendNames': " << backendNames;
 
     if (backendNames.count() > 2) {
         ui->aiScriptingTreeWidget->clear();
@@ -4458,7 +4457,6 @@ void SettingsDialog::buildAiScriptingTreeWidget() {
         }
     }
 
-    ui->aiScriptingTreeWidget->setRootIsDecorated(false);
     ui->aiScriptingTreeWidget->expandAll();
     ui->aiScriptingTreeWidget->resizeColumnToContents(0);
     ui->aiScriptingTreeWidget->resizeColumnToContents(1);

@@ -7006,6 +7006,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
+                  <property name="rootIsDecorated">
+                   <bool>false</bool>
+                  </property>
+                  <attribute name="headerVisible">
+                   <bool>false</bool>
+                  </attribute>
                   <column>
                    <property name="text">
                     <string notr="true">Name</string>
@@ -7018,7 +7024,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </column>
                   <column>
                    <property name="text">
-                    <string></string>
+                    <string notr="true">-</string>
                    </property>
                   </column>
                  </widget>
