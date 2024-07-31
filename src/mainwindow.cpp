@@ -10817,16 +10817,16 @@ void MainWindow::noteEditCursorPositionChanged() {
     this->noteHistory.updateCursorPositionOfNote(currentNote, textEdit);
 
     QString text = tr("Ln %1, Col %2", "Line / Column")
-               .arg(QString::number(cursor.block().blockNumber() + 1),
-                    QString::number(cursor.positionInBlock() + 1));
+                       .arg(QString::number(cursor.block().blockNumber() + 1),
+                            QString::number(cursor.positionInBlock() + 1));
     QString toolTip = tr("Line %1, Column %2")
-               .arg(QString::number(cursor.block().blockNumber() + 1),
-                    QString::number(cursor.positionInBlock() + 1));
+                          .arg(QString::number(cursor.block().blockNumber() + 1),
+                               QString::number(cursor.positionInBlock() + 1));
 
     if (!selectedText.isEmpty()) {
         const QString textAdd = QStringLiteral(" (") +
-                tr("%n selected", "Characters selected", selectedText.count()) +
-                QStringLiteral(")");
+                                tr("%n selected", "Characters selected", selectedText.count()) +
+                                QStringLiteral(")");
         text += textAdd;
         toolTip += textAdd;
     }

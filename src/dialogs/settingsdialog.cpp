@@ -310,7 +310,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     ui->openAiScriptingLabel->setText(ui->openAiScriptingLabel->text().arg(
         "https://www.qownnotes.org/scripting/hooks.html#openaibackendshook"));
     ui->openAiScriptingLabel3->setText(ui->openAiScriptingLabel3->text().arg(
-        "https://www.qownnotes.org/scripting/methods-and-objects.html#use-a-completion-prompt-on-the-currently-selected-ai-model"));
+        "https://www.qownnotes.org/scripting/"
+        "methods-and-objects.html#use-a-completion-prompt-on-the-currently-selected-ai-model"));
 
 #ifndef Q_OS_LINUX
     ui->systemIconThemeCheckBox->setHidden(true);
@@ -4376,11 +4377,13 @@ void SettingsDialog::on_showStatusBarNotePathCheckBox_toggled(bool checked) {
 }
 
 void SettingsDialog::on_groqApiTestButton_clicked() {
-    runAiApiTest(QStringLiteral("groq"), QStringLiteral("llama3-8b-8192"), ui->groqApiKeyLineEdit->text());
+    runAiApiTest(QStringLiteral("groq"), QStringLiteral("llama3-8b-8192"),
+                 ui->groqApiKeyLineEdit->text());
 }
 
 void SettingsDialog::on_openAiApiTestButton_clicked() {
-    runAiApiTest(QStringLiteral("openai"), QStringLiteral("gpt-4o"), ui->openAiApiKeyLineEdit->text());
+    runAiApiTest(QStringLiteral("openai"), QStringLiteral("gpt-4o"),
+                 ui->openAiApiKeyLineEdit->text());
 }
 
 void SettingsDialog::on_groqApiKeyLineEdit_textChanged(const QString &arg1) {
@@ -4440,8 +4443,9 @@ void SettingsDialog::buildAiScriptingTreeWidget() {
             auto testButton = new QPushButton();
             testButton->setText(tr("Test"));
             testButton->setToolTip(tr("Test connection to %1 (%2)").arg(name, model));
-            testButton->setIcon(QIcon::fromTheme(QStringLiteral("network-connect"),
-                                             QIcon(":/icons/breeze-qownnotes/16x16/network-connect.svg")));
+            testButton->setIcon(
+                QIcon::fromTheme(QStringLiteral("network-connect"),
+                                 QIcon(":/icons/breeze-qownnotes/16x16/network-connect.svg")));
             testButton->setProperty("backend", key);
             testButton->setProperty("model", model);
             connect(testButton, &QPushButton::clicked, this, [this, testButton]() {
@@ -4452,7 +4456,6 @@ void SettingsDialog::buildAiScriptingTreeWidget() {
 
             ui->aiScriptingTreeWidget->setItemWidget(modelItem, 1, testButton);
         }
-
     }
 
     ui->aiScriptingTreeWidget->setRootIsDecorated(false);
