@@ -11139,13 +11139,7 @@ void MainWindow::setMenuEnabled(QMenu *menu, bool enabled) {
 }
 
 void MainWindow::on_actionCheck_for_script_updates_triggered() {
-    auto *dialog = new ScriptRepositoryDialog(this, true);
-    dialog->searchForUpdates();
-    dialog->exec();
-    delete (dialog);
-
-    // Reload the scripting engine
-    ScriptingService::instance()->reloadEngine();
+    ScriptRepositoryDialog::checkForScriptUpdates(this);
 }
 
 /**

@@ -24,6 +24,7 @@ class ScriptRepositoryDialog : public MasterDialog {
 
     void searchForUpdates();
     void searchForUpdatesForScripts(const QList<Script> &scripts);
+    static void checkForScriptUpdates(QWidget *parent = nullptr);
 
    signals:
     void updateFound();

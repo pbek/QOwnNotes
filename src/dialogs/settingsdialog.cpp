@@ -3778,7 +3778,9 @@ void SettingsDialog::searchScriptInRepository(bool checkForUpdates) {
 /**
  * Opens a dialog to check for script updates
  */
-void SettingsDialog::checkForScriptUpdates() { searchScriptInRepository(true); }
+void SettingsDialog::checkForScriptUpdates() {
+    ScriptRepositoryDialog::checkForScriptUpdates(this);
+}
 
 /**
  * Saves the enabled state of all items and reload the current script page to

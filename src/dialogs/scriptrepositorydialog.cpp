@@ -21,6 +21,7 @@
 #include <QtWidgets/QMessageBox>
 #include <QtWidgets/QSplitter>
 
+#include "services/scriptingservice.h"
 #include "ui_scriptrepositorydialog.h"
 
 ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent, bool checkForUpdates)
@@ -467,3 +468,13 @@ void ScriptRepositoryDialog::on_searchScriptEdit_textChanged(const QString &arg1
 }
 
 Script ScriptRepositoryDialog::getLastInstalledScript() { return _lastInstalledScript; }
+
+void ScriptRepositoryDialog::checkForScriptUpdates(QWidget *parent) {
+    auto *dialog = new ScriptRepositoryDialog(parent, true);
+    dialog->searchForUpdates();
+    dialog->exec();
+    delete (dialog);
+
+    // Reload the scripting engine
+    ScriptingService::instance()->reloadEngine();
+}
