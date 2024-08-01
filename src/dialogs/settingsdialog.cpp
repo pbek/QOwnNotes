@@ -4416,21 +4416,23 @@ void SettingsDialog::buildAiScriptingTreeWidget() {
         return;
     }
 
-    for (const auto &key : backendNames.keys()) {
+    for (const auto &backendId : backendNames.keys()) {
         // Continue on groq and openai
-        if (key == QStringLiteral("groq") || key == QStringLiteral("openai")) {
+        if (backendId == QStringLiteral("groq") || backendId == QStringLiteral("openai")) {
             continue;
         }
 
-        const QString &name = backendNames.value(key);
+        const QString &backendName = backendNames.value(backendId);
 
         auto backendItem = new QTreeWidgetItem(ui->aiScriptingTreeWidget);
-        backendItem->setText(0, name);
-        backendItem->setToolTip(0, tr("AI backend: %1").arg(key));
-        backendItem->setData(0, Qt::UserRole, key);
+        backendItem->setText(0, backendName);
+        backendItem->setToolTip(0, tr("AI backend: %1").arg(backendId));
+        backendItem->setData(0, Qt::UserRole, backendId);
+        backendItem->setText(1, openAiService->getApiBaseUrlForBackend(backendId));
+        backendItem->setToolTip(1, tr("API base URL").arg(backendId));
         backendItem->setFlags(backendItem->flags() & ~Qt::ItemIsSelectable);
 
-        auto models = openAiService->getModelsForBackend(key);
+        auto models = openAiService->getModelsForBackend(backendId);
         for (const auto &model : models) {
             auto modelItem = new QTreeWidgetItem(backendItem);
             modelItem->setText(0, model);
@@ -4441,11 +4443,11 @@ void SettingsDialog::buildAiScriptingTreeWidget() {
             // Add test button in new column
             auto testButton = new QPushButton();
             testButton->setText(tr("Test"));
-            testButton->setToolTip(tr("Test connection to %1 (%2)").arg(name, model));
+            testButton->setToolTip(tr("Test connection to %1 (%2)").arg(backendName, model));
             testButton->setIcon(
                 QIcon::fromTheme(QStringLiteral("network-connect"),
                                  QIcon(":/icons/breeze-qownnotes/16x16/network-connect.svg")));
-            testButton->setProperty("backend", key);
+            testButton->setProperty("backend", backendId);
             testButton->setProperty("model", model);
             connect(testButton, &QPushButton::clicked, this, [this, testButton]() {
                 QString backend = testButton->property("backend").toString();
@@ -4453,11 +4455,17 @@ void SettingsDialog::buildAiScriptingTreeWidget() {
                 runAiApiTest(backend, model);
             });
 
-            ui->aiScriptingTreeWidget->setItemWidget(modelItem, 1, testButton);
+            ui->aiScriptingTreeWidget->setItemWidget(modelItem, 2, testButton);
         }
     }
 
     ui->aiScriptingTreeWidget->expandAll();
     ui->aiScriptingTreeWidget->resizeColumnToContents(0);
     ui->aiScriptingTreeWidget->resizeColumnToContents(1);
+    ui->aiScriptingTreeWidget->resizeColumnToContents(2);
+}
+
+void SettingsDialog::on_searchScriptRepositoryButton_clicked() {
+    searchScriptInRepository();
+    buildAiScriptingTreeWidget();
 }

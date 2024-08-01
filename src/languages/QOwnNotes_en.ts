@@ -4560,7 +4560,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>OpenAiCompleter</name>
     <message>
-        <location filename="../services/openaiservice.cpp" line="380"/>
+        <location filename="../services/openaiservice.cpp" line="382"/>
         <source>Timeout, while waiting for the AI response</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4568,7 +4568,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>OpenAiService</name>
     <message>
-        <location filename="../services/openaiservice.cpp" line="257"/>
+        <location filename="../services/openaiservice.cpp" line="259"/>
         <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7023,64 +7023,69 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6893"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7093"/>
+        <source>Search script repository for AI integration scripts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="7120"/>
         <source>API keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6899"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7126"/>
         <source>OpenAI API key:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6909"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7136"/>
         <source>Create Groq API key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6923"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7150"/>
         <source>Create OpenAI API key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6967"/>
-        <location filename="../dialogs/settingsdialog.ui" line="6978"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7194"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7205"/>
         <source>Test connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6998"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7014"/>
         <source>AI backends added via the scripting engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4443"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4445"/>
         <source>Test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="7054"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6937"/>
         <source>To make use of the AI backends, you can either use the scripting command &lt;a href=&quot;%1&quot;&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="7083"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6966"/>
         <source>You can use the scripting hook &lt;a href=&quot;%1&quot;&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="7096"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6995"/>
         <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6957"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7184"/>
         <source>Groq API key:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6937"/>
-        <location filename="../dialogs/settingsdialog.ui" line="6947"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7164"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7174"/>
         <source>API key</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7570,6 +7575,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="7090"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2749"/>
         <source>Search script repository</source>
         <translation type="unfinished"></translation>
@@ -8223,12 +8229,17 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4437"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4432"/>
+        <source>API base URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="4439"/>
         <source>AI model: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4444"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4446"/>
         <source>Test connection to %1 (%2)</source>
         <translation type="unfinished"></translation>
     </message>

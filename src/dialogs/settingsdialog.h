@@ -338,6 +338,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_openAiApiKeyLineEdit_textChanged(const QString &arg1);
 
+    void on_searchScriptRepositoryButton_clicked();
+
    private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;

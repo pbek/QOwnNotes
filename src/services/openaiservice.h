@@ -64,6 +64,7 @@ class OpenAiService : public QObject {
     void setApiKeyForCurrentBackend();
     void setApiKeyForCurrentBackend(const QString& apiKey);
     QMap<QString, QString> getBackendNames();
+    QString getApiBaseUrlForBackend(const QString& backendId);
 
    private:
     QMap<QString, QStringList> _backendModels;
