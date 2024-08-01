@@ -4,6 +4,8 @@
 - In the *AI settings* in the list of AI backends from scripts now also the API base
   URL will be shown (for [#3064](https://github.com/pbek/QOwnNotes/issues/3064))
   - In addition, a button to search the *Script repository* was added
+- A problem with the script settings for some users in the `Ollama AI backend integration`
+  script was fixed (for [#3052](https://github.com/pbek/QOwnNotes/issues/3052))
 ## 24.8.0
 - In the *AI settings* there now are buttons to test the connection to the AI services
   (for [#3062](https://github.com/pbek/QOwnNotes/issues/3062))
