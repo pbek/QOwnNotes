@@ -5604,6 +5604,10 @@ Eyona ndlela yokuthumela imiba isebenzise umncedisi wemiba ngokucinezela i-span 
 <translation>Zishenxise ngokuzenzekelayo iindawo zokuhamba kwitrafti</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation type="unfinished">API keys</translation>
 </message>
@@ -6549,6 +6553,10 @@ Ngaba ngokwenene ukhubaza umkhondo wokusetyenziswa?</translation>
 <message>
 <source>AI backend: %1</source>
 <translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>

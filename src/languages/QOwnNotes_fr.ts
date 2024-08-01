@@ -5587,6 +5587,10 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <translation>Supprimer automatiquement les espaces en fin de ligne dans le texte de la note</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation>Clés d’API</translation>
 </message>
@@ -6528,6 +6532,10 @@ Le message d'erreur de connexion est : </translation>
 <message>
 <source>AI backend: %1</source>
 <translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>

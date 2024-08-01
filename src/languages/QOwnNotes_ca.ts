@@ -5580,6 +5580,10 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
 <translation>Eliminar automàticament els espais sobrants a la nota de text</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation type="unfinished">API keys</translation>
 </message>
@@ -6521,6 +6525,10 @@ Missatge de l'error de connexió: </translation>
 <message>
 <source>AI backend: %1</source>
 <translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>

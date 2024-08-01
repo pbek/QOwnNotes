@@ -5552,6 +5552,10 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation type="unfinished">API keys</translation>
 </message>
@@ -6493,6 +6497,10 @@ Karere o te hononga honohono:</translation>
 <message>
 <source>AI backend: %1</source>
 <translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>

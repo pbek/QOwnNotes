@@ -5590,6 +5590,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Verwijder automatisch volgspaties in de notitietekst</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation>Scriptrepository doorzoeken op AI-integratiescripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation>API-keys</translation>
 </message>
@@ -6531,6 +6535,10 @@ Verbinding foutbericht: </translation>
 <message>
 <source>AI backend: %1</source>
 <translation>AI-backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation>API basis-URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>

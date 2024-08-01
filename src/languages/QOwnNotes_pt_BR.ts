@@ -5581,6 +5581,10 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <translation>Automaticamente remova os espaços adicionais na nota</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation type="unfinished">API keys</translation>
 </message>
@@ -6522,6 +6526,10 @@ Mensagem de erro: </translation>
 <message>
 <source>AI backend: %1</source>
 <translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>

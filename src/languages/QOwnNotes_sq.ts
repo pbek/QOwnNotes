@@ -5601,6 +5601,10 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
 <translation>Hiqni automatikisht hapësirat gjurmuese në tekstin e shënimit</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation type="unfinished">API keys</translation>
 </message>
@@ -6545,6 +6549,10 @@ Mesazhi i gabimit në lidhje:</translation>
 <message>
 <source>AI backend: %1</source>
 <translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>

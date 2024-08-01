@@ -5571,6 +5571,10 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 <translation>Qayd matni bo'sh joylarini avtomatik ravishda olib tashlang</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation type="unfinished">API keys</translation>
 </message>
@@ -6516,6 +6520,10 @@ Thông báo lỗi kết nối: </translation>
 <message>
 <source>AI backend: %1</source>
 <translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>

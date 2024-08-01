@@ -5612,6 +5612,10 @@ Abre o asistente de emisión de temas &lt;/ span&gt; na parte inferior. &lt;/ P&
 <translation>Elimina automaticamente os espazos pendentes do texto das notas</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation type="unfinished">API keys</translation>
 </message>
@@ -6557,6 +6561,10 @@ Mensaxe de erro de conexión: </translation>
 <message>
 <source>AI backend: %1</source>
 <translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>

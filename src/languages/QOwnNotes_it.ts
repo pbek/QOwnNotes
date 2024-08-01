@@ -5585,6 +5585,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Rimuovi automaticamente gli spazi in coda al testo della nota</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation>Chiavi API</translation>
 </message>
@@ -6526,6 +6530,10 @@ Messaggio di errore: </translation>
 <message>
 <source>AI backend: %1</source>
 <translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>

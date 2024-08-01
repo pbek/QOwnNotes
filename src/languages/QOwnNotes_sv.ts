@@ -5609,6 +5609,10 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
 <translation>Ta automatiskt bort spårutrymmen i anteckningen</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation>API-nycklar</translation>
 </message>
@@ -6551,6 +6555,10 @@ Connection error message: </source>
 <message>
 <source>AI backend: %1</source>
 <translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>

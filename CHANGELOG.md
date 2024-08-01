@@ -8,6 +8,7 @@
   script was fixed (for [#3052](https://github.com/pbek/QOwnNotes/issues/3052))
 - The `Check for script updates` sub-button in the *Scripting settings* was fixed
   (for [#3066](https://github.com/pbek/QOwnNotes/issues/3066))
+- Added more Dutch translation (thank you, stephanp)
 
 ## 24.8.0
 - In the *AI settings* there now are buttons to test the connection to the AI services

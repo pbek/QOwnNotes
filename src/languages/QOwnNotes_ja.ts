@@ -5570,6 +5570,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>ノートテキストの末尾のスペースを自動的に削除する</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation type="unfinished">API keys</translation>
 </message>
@@ -6516,6 +6520,10 @@ QOwnNotesAPI アプリをインストールして有効にする必要もあり�
 <message>
 <source>AI backend: %1</source>
 <translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>

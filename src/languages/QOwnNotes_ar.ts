@@ -5791,6 +5791,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>إزالة المسافات الزائدة بعد نهاية السطر من نص الملاحظة تلقائيًا</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation>مفاتيح API</translation>
 </message>
@@ -6732,6 +6736,10 @@ Connection error message: </source>
 <message>
 <source>AI backend: %1</source>
 <translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>

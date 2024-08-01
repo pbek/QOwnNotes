@@ -5569,6 +5569,10 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 <translation>Secara otomatis menghapus spasi tambahan dalam teks catatan</translation>
 </message>
 <message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
 <source>API keys</source>
 <translation type="unfinished">API keys</translation>
 </message>
@@ -6513,6 +6517,10 @@ Pesan kesalahan koneksi: </translation>
 <message>
 <source>AI backend: %1</source>
 <translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>
