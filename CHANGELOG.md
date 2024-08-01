@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.8.2
+- In the *AI settings* a design glitch was fixed for the *Dark mode*
+  (for [#3064](https://github.com/pbek/QOwnNotes/issues/3064))
+
 ## 24.8.1
 - In the *AI settings* in the list of AI backends from scripts now also the API base
   URL will be shown (for [#3064](https://github.com/pbek/QOwnNotes/issues/3064))

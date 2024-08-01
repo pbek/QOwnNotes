@@ -6924,12 +6924,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  <height>100</height>
                 </size>
                </property>
-               <property name="frameShape">
-                <enum>QFrame::Shape::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Shadow::Raised</enum>
-               </property>
                <layout class="QVBoxLayout" name="verticalLayout_32">
                 <item>
                  <widget class="QLabel" name="openAiScriptingLabel3">
@@ -7071,12 +7065,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
              </item>
              <item row="10" column="0">
               <widget class="QFrame" name="frame_7">
-               <property name="frameShape">
-                <enum>QFrame::Shape::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Shadow::Raised</enum>
-               </property>
                <layout class="QHBoxLayout" name="horizontalLayout_15">
                 <item>
                  <widget class="QPushButton" name="searchScriptRepositoryButton">
