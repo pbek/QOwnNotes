@@ -3,6 +3,9 @@
 ## 24.8.2
 - In the *AI settings* a design glitch was fixed for the *Dark mode*
   (for [#3064](https://github.com/pbek/QOwnNotes/issues/3064))
+- The highlighting changes from [#3061](https://github.com/pbek/QOwnNotes/issues/3061)
+  where reverted, because they break highlighting of certain heading 1 and 2 in Qt 5.15.2
+  (for [#3065](https://github.com/pbek/QOwnNotes/issues/3065))
 
 ## 24.8.1
 - In the *AI settings* in the list of AI backends from scripts now also the API base
