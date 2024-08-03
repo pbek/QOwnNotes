@@ -3,9 +3,23 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-qt515.url = "github:nixos/nixpkgs/72bbea9db7d727ed044e60b5f5febc60a3c5c955";
+    systems.url = "github:nix-systems/default";
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs = {
+    self,
+    nixpkgs,
+    nixpkgs-qt515,
+#    systems,
+  }: let
+    systems = [ "x86_64-linux" ];
+    eachSystem = nixpkgs.lib.genAttrs (import systems);
+  in {
+    packages = eachSystem (system: {
+      qownnotes-qt5 = nixpkgs.${system}.legacyPackages.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { };
+      qownnotes-qt515 = nixpkgs-qt515.${system}.legacyPackages.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { };
+    });
 
     devShell.x86_64-linux =
     with import nixpkgs {
