@@ -11,9 +11,9 @@ target_sources(botan PRIVATE
     botanwrapper.cpp
 )
 
-find_package(Qt5 REQUIRED COMPONENTS Core)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
 
-target_link_libraries(botan PUBLIC Qt5::Core)
+target_link_libraries(botan PUBLIC Qt${QT_VERSION_MAJOR}::Core)
 
 target_include_directories(botan PUBLIC ${CMAKE_CURRENT_LIST_DIR})
 
