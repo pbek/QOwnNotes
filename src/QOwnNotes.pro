@@ -108,6 +108,7 @@ lessThan(QT_MAJOR_VERSION, 6) {
         QMAKE_CXXFLAGS += "-std=c++11"
     }
 } else {
+    win32:CONFIG += entrypoint
     CONFIG += c++17
 }
 

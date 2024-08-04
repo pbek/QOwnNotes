@@ -261,7 +261,7 @@ jobs:
     runs-on: windows-2019
     env:
       # Qt 6.5 windeployqt doesn't deploy DLLs!
-      QT_VERSION: 6.4.2
+      QT_VERSION: 6.6.1
     continue-on-error: true
     steps:
 
@@ -278,7 +278,6 @@ jobs:
           # https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_650/qt.qt6.650.win64_mingw/
           # https://aqtinstall.readthedocs.io/en/latest/getting_started.html
           # https://ddalcino.github.io/aqt-list-server/
-          arch: win64_mingw
           modules: ${{env.QT_MODULES}}
           cache: true
 
@@ -287,6 +286,9 @@ jobs:
         run: |
           export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
+
+      - name: Make sure MSVC is found
+        uses: ilammy/msvc-dev-cmd@v1
 
       - name: '⚙️ Printenv'
         shell: bash

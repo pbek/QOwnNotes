@@ -34,8 +34,8 @@ rm -f ${PLIST}-e
 
 # copy translation files to app
 cp languages/*.qm $APP.app/Contents/Resources
-cp ${Qt6_DIR}/translations/qtbase_*.qm $APP.app/Contents/Resources
-#cp ${Qt6_DIR}/translations/qt_*.qm $APP.app/Contents/Resources
+cp ${QT_ROOT_DIR}/translations/qtbase_*.qm $APP.app/Contents/Resources
+#cp ${QT_ROOT_DIR}/translations/qt_*.qm $APP.app/Contents/Resources
 #rm $APP.app/Contents/Resources/qt_help_*.qm
 
 # copy updater script to app
@@ -44,7 +44,7 @@ cp ${Qt6_DIR}/translations/qtbase_*.qm $APP.app/Contents/Resources
 
 # use macdeployqt to deploy the application
 echo "Calling macdeployqt"
-${Qt6_DIR}/bin/macdeployqt ./$APP.app
+${QT_ROOT_DIR}/bin/macdeployqt ./$APP.app
 # Qt 6.4.2 can't find macdeployqt6
 #${Qt6_DIR}/bin/macdeployqt6 ./$APP.app
 #macdeployqt ./$APP.app
