@@ -21,14 +21,18 @@
 #ifndef KSPELL_HUNSPELLDICT_H
 #define KSPELL_HUNSPELLDICT_H
 
-#include "spellerplugin_p.h"
 #include "hunspell/src/hunspell/hunspell.hxx"
+#include "spellerplugin_p.h"
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#include <QStringDecoder>
+#include <QStringEncoder>
+#else
 #include <QTextCodec>
+#endif
 
-class HunspellDict : public Sonnet::SpellerPlugin
-{
-public:
+class HunspellDict : public Sonnet::SpellerPlugin {
+   public:
     explicit HunspellDict(const QString &lang, QString path);
     ~HunspellDict() override;
     bool isCorrect(const QString &word) const override;
@@ -40,11 +44,16 @@ public:
     bool addToPersonal(const QString &word) override;
     bool addToSession(const QString &word) override;
 
-private:
+   private:
     QByteArray toDictEncoding(const QString &word) const;
 
     Hunspell *m_speller = nullptr;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    mutable QStringEncoder m_encoder;
+    mutable QStringDecoder m_decoder;
+#else
     QTextCodec *m_codec = nullptr;
+#endif
 };
 
 #endif

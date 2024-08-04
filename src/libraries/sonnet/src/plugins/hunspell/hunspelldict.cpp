@@ -21,22 +21,21 @@
 
 #include "hunspelldict.h"
 
-//#include "config-hunspell.h"
-#include "hunspelldebug.h"
+// #include "config-hunspell.h"
+#include <utils/misc.h>
 
+#include <QDir>
 #include <QFile>
 #include <QFileInfo>
-#include <QDir>
-#include <QTextStream>
 #include <QStandardPaths>
-#include <utils/misc.h>
 #include <QStringBuilder>
+#include <QTextStream>
+
+#include "hunspelldebug.h"
 
 using namespace Sonnet;
 
-HunspellDict::HunspellDict(const QString &lang, QString path)
-    : SpellerPlugin(lang)
-{
+HunspellDict::HunspellDict(const QString &lang, QString path) : SpellerPlugin(lang) {
 #ifdef HUNSPELL_DEBUG_ON
     qCDebug(SONNET_HUNSPELL) << "Loading dictionary for" << lang << "from" << path;
 #endif
@@ -47,18 +46,35 @@ HunspellDict::HunspellDict(const QString &lang, QString path)
     QString dictionary = path + QStringLiteral(".dic");
     QString aff = path + QStringLiteral(".aff");
     if (QFileInfo::exists(dictionary) && QFileInfo::exists(aff)) {
-
-        m_speller
-                = new Hunspell(aff.toLocal8Bit().constData(), dictionary.toLocal8Bit().constData());
+        m_speller =
+            new Hunspell(aff.toLocal8Bit().constData(), dictionary.toLocal8Bit().constData());
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+        m_decoder = QStringDecoder(m_speller->get_dic_encoding());
+        if (!m_decoder.isValid()) {
+            qCWarning(SONNET_HUNSPELL)
+                << "Failed to find a text codec for name" << m_speller->get_dic_encoding()
+                << "defaulting to locale text codec";
+            m_decoder = QStringDecoder(QStringDecoder::System);
+            Q_ASSERT(m_decoder.isValid());
+        }
+        m_encoder = QStringEncoder(m_speller->get_dic_encoding());
+        if (!m_encoder.isValid()) {
+            qCWarning(SONNET_HUNSPELL)
+                << "Failed to find a text codec for name" << m_speller->get_dic_encoding()
+                << "defaulting to locale text codec";
+            m_encoder = QStringEncoder(QStringEncoder::System);
+            Q_ASSERT(m_encoder.isValid());
+        }
+#else
 
         m_codec = QTextCodec::codecForName(m_speller->get_dic_encoding());
         if (!m_codec) {
-            qWarning() << "Failed to find a text codec for name"
-                                       << m_speller->get_dic_encoding()
-                                       << "defaulting to locale text codec";
+            qWarning() << "Failed to find a text codec for name" << m_speller->get_dic_encoding()
+                       << "defaulting to locale text codec";
             m_codec = QTextCodec::codecForLocale();
             Q_ASSERT(m_codec);
         }
+#endif
 
     } else {
         qWarning() << "Unable to find dictionary for" << lang << "in path" << path;
@@ -68,8 +84,8 @@ HunspellDict::HunspellDict(const QString &lang, QString path)
     }
     QString userDic;
     if (Utils::Misc::isInPortableMode()) {
-        userDic = Utils::Misc::portableDataPath() + QLatin1Char('/')
-                + QLatin1String(".hunspell_") % lang;
+        userDic =
+            Utils::Misc::portableDataPath() + QLatin1Char('/') + QLatin1String(".hunspell_") % lang;
     } else {
         userDic = QDir::home().filePath(QLatin1String(".hunspell_") % lang);
     }
@@ -84,8 +100,7 @@ HunspellDict::HunspellDict(const QString &lang, QString path)
             QString word = userDicIn.readLine();
             if (word.contains(QLatin1Char('/'))) {
                 QStringList wordParts = word.split(QLatin1Char('/'));
-                m_speller->add_with_affix(toDictEncoding(wordParts.at(
-                                                             0)).constData(),
+                m_speller->add_with_affix(toDictEncoding(wordParts.at(0)).constData(),
                                           toDictEncoding(wordParts.at(1)).constData());
             }
             if (word.at(0) == QLatin1Char('*')) {
@@ -102,22 +117,23 @@ HunspellDict::HunspellDict(const QString &lang, QString path)
 #endif
 }
 
-HunspellDict::~HunspellDict()
-{
-    delete m_speller;
-}
+HunspellDict::~HunspellDict() { delete m_speller; }
 
-QByteArray HunspellDict::toDictEncoding(const QString &word) const
-{
+QByteArray HunspellDict::toDictEncoding(const QString &word) const {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    if (m_encoder.isValid()) {
+        return m_encoder.encode(word);
+    }
+#else
     if (m_codec) {
         return m_codec->fromUnicode(word);
     }
+#endif
     return {};
 }
 
-bool HunspellDict::isCorrect(const QString &word) const
-{
-   // qCDebug(SONNET_HUNSPELL) << " isCorrect :" << word;
+bool HunspellDict::isCorrect(const QString &word) const {
+    // qCDebug(SONNET_HUNSPELL) << " isCorrect :" << word;
     if (!m_speller) {
         return false;
     }
@@ -126,8 +142,7 @@ bool HunspellDict::isCorrect(const QString &word) const
     return result;
 }
 
-QStringList HunspellDict::suggest(const QString &word) const
-{
+QStringList HunspellDict::suggest(const QString &word) const {
     if (!m_speller) {
         return QStringList();
     }
@@ -135,14 +150,20 @@ QStringList HunspellDict::suggest(const QString &word) const
     QStringList lst;
 
     const auto suggestions = m_speller->suggest(toDictEncoding(word).toStdString());
-    std::for_each (suggestions.begin(), suggestions.end(), [this, &lst](const std::string &suggestion) {
-            lst << m_codec->toUnicode(suggestion.c_str()); });
-
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    for_each(suggestions.begin(), suggestions.end(), [this, &lst](const std::string &suggestion) {
+        lst << m_decoder.decode(suggestion.c_str());
+    });
+#else
+    std::for_each(suggestions.begin(), suggestions.end(),
+                  [this, &lst](const std::string &suggestion) {
+                      lst << m_codec->toUnicode(suggestion.c_str());
+                  });
+#endif
     return lst;
 }
 
-bool HunspellDict::storeReplacement(const QString &bad, const QString &good)
-{
+bool HunspellDict::storeReplacement(const QString &bad, const QString &good) {
     Q_UNUSED(bad)
     Q_UNUSED(good)
     if (!m_speller) {
@@ -154,18 +175,17 @@ bool HunspellDict::storeReplacement(const QString &bad, const QString &good)
     return false;
 }
 
-bool HunspellDict::addToPersonal(const QString &word)
-{
+bool HunspellDict::addToPersonal(const QString &word) {
     if (!m_speller) {
         return false;
     }
     m_speller->add(toDictEncoding(word).constData());
-    //QString userDic = QDir::home().filePath(QLatin1String(".hunspell_"));
-    //QString userDic = QDir::home().filePath(QLatin1String(".hunspell_") % language());
+    // QString userDic = QDir::home().filePath(QLatin1String(".hunspell_"));
+    // QString userDic = QDir::home().filePath(QLatin1String(".hunspell_") % language());
     QString userDic;
     if (Utils::Misc::isInPortableMode()) {
-        userDic = Utils::Misc::portableDataPath() + QLatin1Char('/')
-                           + QLatin1String(".hunspell_") % language();
+        userDic = Utils::Misc::portableDataPath() + QLatin1Char('/') +
+                  QLatin1String(".hunspell_") % language();
     } else {
         userDic = QDir::home().filePath(QLatin1String(".hunspell_") % language());
     }
@@ -180,8 +200,7 @@ bool HunspellDict::addToPersonal(const QString &word)
     return false;
 }
 
-bool HunspellDict::addToSession(const QString &word)
-{
+bool HunspellDict::addToSession(const QString &word) {
     if (!m_speller) {
         return false;
     }

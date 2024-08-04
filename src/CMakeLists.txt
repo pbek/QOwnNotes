@@ -1,6 +1,17 @@
 cmake_minimum_required(VERSION 3.2.2)
 project(QOwnNotes)
 
+# BEGIN options
+option(QON_QT6_BUILD "Build QOwnNotes with Qt6" OFF)
+# END options
+
+if (QON_QT6_BUILD)
+    set(QT_VERSION_MAJOR 6)
+    set(QT_DEFAULT_MAJOR_VERSION 6)
+else()
+    set(QT_VERSION_MAJOR 5)
+endif()
+
 # include some Botan settings
 add_subdirectory(libraries/botan)
 #include sonnet core directory, required for building plugins
@@ -34,7 +45,7 @@ if (UNIX)
         )
     else()
         target_compile_options(QOwnNotes PRIVATE
-            -Wall -Wextra -pedantic
+            -Wall -Wextra -pedantic -Wno-error=deprecated-declarations
         )
     endif()
 
@@ -72,8 +83,10 @@ if (USE_QLITEHTML)
     add_subdirectory(libraries/qlitehtml)
 endif()
 
+message("Using Qt version ${QT_VERSION_MAJOR}")
+set(QT_NO_CREATE_VERSIONLESS_FUNCTIONS ON)
 
-find_package(Qt5 COMPONENTS REQUIRED
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS REQUIRED
     LinguistTools
     Core
     Widgets
@@ -87,10 +100,11 @@ find_package(Qt5 COMPONENTS REQUIRED
     Qml
     Concurrent
 )
-if(UNIX)
-    find_package(Qt5 COMPONENTS REQUIRED X11Extras)
-    find_package( X11 REQUIRED )
-endif()
+
+# if(UNIX)
+#     find_package(Qt5 COMPONENTS REQUIRED X11Extras)
+#     find_package( X11 REQUIRED )
+# endif()
 
 find_program(CCACHE_FOUND ccache)
 
@@ -535,15 +549,20 @@ SET(QON_TS_FILES
     languages/QOwnNotes_et.ts
 )
 
-qt5_add_translation(QON_QM_FILES ${QON_TS_FILES})
+if (QON_QT6_BUILD)
+    qt6_add_translation(QON_QM_FILES ${QON_TS_FILES})
+else()
+    qt5_add_translation(QON_QM_FILES ${QON_TS_FILES})
+endif()
+
 add_custom_target(translations DEPENDS ${QON_QM_FILES})
 
 if(NOT QT_TRANSLATIONS_DIR)
     # If this directory is missing, we are in a Qt5 environment.
     # Extract the qmake executable location
-    get_target_property(QT5_QMAKE_EXECUTABLE Qt5::qmake IMPORTED_LOCATION)
+    get_target_property(QT_QMAKE_EXECUTABLE Qt${QT_VERSION_MAJOR}::qmake IMPORTED_LOCATION)
     # Ask Qt5 where to put the translations
-    execute_process( COMMAND ${QT5_QMAKE_EXECUTABLE} -query QT_INSTALL_TRANSLATIONS
+    execute_process( COMMAND ${QT_QMAKE_EXECUTABLE} -query QT_INSTALL_TRANSLATIONS
             OUTPUT_VARIABLE qt_translations_dir OUTPUT_STRIP_TRAILING_WHITESPACE )
     # make sure we have / and not \ as qmake gives on windows
     file( TO_CMAKE_PATH "${qt_translations_dir}" qt_translations_dir)
@@ -562,27 +581,27 @@ target_sources(QOwnNotes PRIVATE
 
 # The Qt5::Widgets target will also link Qt::Gui and Qt::Core targets
 target_link_libraries(QOwnNotes PRIVATE
-    Qt5::Widgets
-    Qt5::Sql
-    Qt5::Svg
-    Qt5::Network
-    Qt5::Xml
-    Qt5::PrintSupport
-    Qt5::WebSockets
-    Qt5::Qml
-    Qt5::Concurrent
+    Qt${QT_VERSION_MAJOR}::Widgets
+    Qt${QT_VERSION_MAJOR}::Sql
+    Qt${QT_VERSION_MAJOR}::Svg
+    Qt${QT_VERSION_MAJOR}::Network
+    Qt${QT_VERSION_MAJOR}::Xml
+    Qt${QT_VERSION_MAJOR}::PrintSupport
+    Qt${QT_VERSION_MAJOR}::WebSockets
+    Qt${QT_VERSION_MAJOR}::Qml
+    Qt${QT_VERSION_MAJOR}::Concurrent
     QHotkey::QHotkey
     Botan::Botan
     fakevim
     Google::DiffMatchPatch
     md4c-html
 )
-if(UNIX)
-    target_link_libraries(QOwnNotes PRIVATE
-        Qt5::X11Extras
-        ${X11_LIBRARIES}
-    )
-endif()
+# if(UNIX)
+#     target_link_libraries(QOwnNotes PRIVATE
+#         Qt5::X11Extras
+#         ${X11_LIBRARIES}
+#     )
+# endif()
 
 if (USE_QLITEHTML)
     target_link_libraries(QOwnNotes PRIVATE

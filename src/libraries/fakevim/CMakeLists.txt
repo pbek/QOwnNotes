@@ -30,7 +30,11 @@ include(cmake/pkg-config.cmake)
 
 # Files with Q_OBJECT macros to pass to moc utility
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-qt5_wrap_cpp(${bin}_mocced "fakevim/fakevimhandler.h")
+if (QT_VERSION_MAJOR EQUAL 6)
+    qt6_wrap_cpp(${bin}_mocced "fakevim/fakevimhandler.h")
+else()
+    qt5_wrap_cpp(${bin}_mocced "fakevim/fakevimhandler.h")
+endif()
 target_sources(${bin} PRIVATE ${${bin}_mocced})
 
 target_compile_definitions(${bin} PRIVATE
