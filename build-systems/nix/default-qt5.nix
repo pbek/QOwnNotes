@@ -8,7 +8,6 @@
 , qtsvg
 , qtwayland
 , qtwebsockets
-, qt5compat
 , makeWrapper
 , wrapQtAppsHook
 , botan2
@@ -26,7 +25,7 @@ in
 stdenv.mkDerivation {
   inherit pname appname version;
 
-  src = builtins.path { path = ./src; name = "qownnotes"; };
+  src = builtins.path { path = ../../src; name = "qownnotes"; };
 
   nativeBuildInputs = [
     qmake
@@ -42,7 +41,6 @@ stdenv.mkDerivation {
     qtdeclarative
     qtsvg
     qtwebsockets
-    qt5compat
     botan2
   ] ++ lib.optionals stdenv.isLinux [ qtwayland ];
 
