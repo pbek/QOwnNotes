@@ -8,7 +8,6 @@
 , qtsvg
 , qtwayland
 , qtwebsockets
-, qt5compat
 , makeWrapper
 , wrapQtAppsHook
 , botan2
@@ -42,7 +41,6 @@ stdenv.mkDerivation {
     qtdeclarative
     qtsvg
     qtwebsockets
-    qt5compat
     botan2
   ] ++ lib.optionals stdenv.isLinux [ qtwayland ];
 
