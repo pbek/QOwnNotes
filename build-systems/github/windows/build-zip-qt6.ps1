@@ -8,8 +8,9 @@ $ErrorActionPreference = "Stop"
 #dir -s ..\..\Qt
 Write-Host $Env:QT_VERSION
 Write-Output "#define RELEASE ""GitHub Actions""" > release.h
-qmake6 QOwnNotes.pro -r
+qmake6 CONFIG+=release QOwnNotes.pro -r
 lrelease QOwnNotes.pro
+set CL=/MP
 nmake
 # Create release directory
 New-Item -Path '..\release' -ItemType 'Directory'
@@ -30,8 +31,7 @@ Set-Location ..\release
 # fetching dependencies of QT app
 # http://doc.qt.io/qt-5/windows-deployment.html
 # Bug in Qt 5.14+: https://stackoverflow.com/questions/61045959/windeployqt-error-unable-to-find-the-platform-plugin
-# Don't use "--release"! (maybe because of debug log?)
-windeployqt --debug QOwnNotes.exe
+windeployqt -core -gui -widgets -sql -svg -network -xml -printsupport -qml -websockets -concurrent QOwnNotes.exe
 
 # Create zip archive
 Get-ChildItem
