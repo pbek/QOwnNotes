@@ -7179,7 +7179,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <item row="1" column="4">
                  <widget class="QToolButton" name="openAiApiTestButton">
                   <property name="toolTip">
-                   <string>Test connection</string>
+                   <string comment="&quot;Test&quot; as verb">Test connection</string>
                   </property>
                   <property name="icon">
                    <iconset resource="../breeze-qownnotes.qrc">
@@ -7190,7 +7190,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <item row="0" column="4">
                  <widget class="QToolButton" name="groqApiTestButton">
                   <property name="toolTip">
-                   <string>Test connection</string>
+                   <string comment="&quot;Test&quot; as verb">Test connection</string>
                   </property>
                   <property name="icon">
                    <iconset resource="../breeze-qownnotes.qrc">

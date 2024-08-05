@@ -4444,7 +4444,7 @@ void SettingsDialog::buildAiScriptingTreeWidget() {
 
             // Add test button in new column
             auto testButton = new QPushButton();
-            testButton->setText(tr("Test"));
+            testButton->setText(tr("Test", "verb"));
             testButton->setToolTip(tr("Test connection to %1 (%2)").arg(backendName, model));
             testButton->setIcon(
                 QIcon::fromTheme(QStringLiteral("network-connect"),
