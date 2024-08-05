@@ -2728,8 +2728,8 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message numerus="yes">
 <source>%n selected</source>
 <comment>Characters selected</comment>
-<translation type="unfinished">
-<numerusform>%n selected</numerusform>
+<translation>
+<numerusform>%n sélectionné</numerusform>
 <numerusform>%n sélectionnés</numerusform>
 </translation>
 </message>
@@ -5588,7 +5588,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
-<translation type="unfinished">Search script repository for AI integration scripts</translation>
+<translation>Rechercher des scripts d’intégration d’IA dans le dépôt de scripts</translation>
 </message>
 <message>
 <source>API keys</source>
@@ -5608,15 +5608,12 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Test connection</source>
+<comment>"Test" as verb</comment>
 <translation type="unfinished">Test connection</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
-<translation type="unfinished">AI backends added via the scripting engine</translation>
-</message>
-<message>
-<source>Test</source>
-<translation type="unfinished">Test</translation>
+<translation>Back-ends d’IA ajoutés depuis le moteur de script</translation>
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
@@ -6527,19 +6524,24 @@ Le message d'erreur de connexion est : </translation>
 </message>
 <message>
 <source>API test result for %1 (%2)</source>
-<translation type="unfinished">API test result for %1 (%2)</translation>
+<translation>Résultat de test d’API pour %1 (%2)</translation>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation type="unfinished">AI backend: %1</translation>
+<translation>Back-end d’IA : %1</translation>
 </message>
 <message>
 <source>API base URL</source>
-<translation type="unfinished">API base URL</translation>
+<translation>URL de base d’API</translation>
 </message>
 <message>
 <source>AI model: %1</source>
-<translation type="unfinished">AI model: %1</translation>
+<translation>Modèle d’IA : %1</translation>
+</message>
+<message>
+<source>Test</source>
+<comment>verb</comment>
+<translation type="unfinished">Test</translation>
 </message>
 <message>
 <source>Test connection to %1 (%2)</source>

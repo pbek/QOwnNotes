@@ -5649,15 +5649,12 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Test connection</source>
+<comment>"Test" as verb</comment>
 <translation type="unfinished">Test connection</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
 <translation type="unfinished">AI backends added via the scripting engine</translation>
-</message>
-<message>
-<source>Test</source>
-<translation type="unfinished">Test</translation>
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
@@ -6585,6 +6582,11 @@ Poruka o pogrešci veze: </translation>
 <message>
 <source>AI model: %1</source>
 <translation type="unfinished">AI model: %1</translation>
+</message>
+<message>
+<source>Test</source>
+<comment>verb</comment>
+<translation type="unfinished">Test</translation>
 </message>
 <message>
 <source>Test connection to %1 (%2)</source>

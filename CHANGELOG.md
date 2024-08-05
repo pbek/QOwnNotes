@@ -4,6 +4,7 @@
 - A highlighting issue in malformed unordered lists was fixed again, while not
   breaking settext headers for Qt 5.15.2 (for [#3061](https://github.com/pbek/QOwnNotes/issues/3061)
   and [#3065](https://github.com/pbek/QOwnNotes/issues/3065))
+- Added more French, Korean, German translation (thank you, jd-develop, venusgirl, rakekniven)
 
 ## 24.8.2
 - In the *AI settings* a design glitch was fixed for the *Dark mode*

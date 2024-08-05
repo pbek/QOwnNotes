@@ -5611,15 +5611,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Test connection</source>
+<comment>"Test" as verb</comment>
 <translation>Verbinding testen</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
 <translation>AI backends toegevoegd via de scripting engine</translation>
-</message>
-<message>
-<source>Test</source>
-<translation>Testen</translation>
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
@@ -6543,6 +6540,11 @@ Verbinding foutbericht: </translation>
 <message>
 <source>AI model: %1</source>
 <translation>AI-model: %1</translation>
+</message>
+<message>
+<source>Test</source>
+<comment>verb</comment>
+<translation>Testen</translation>
 </message>
 <message>
 <source>Test connection to %1 (%2)</source>
