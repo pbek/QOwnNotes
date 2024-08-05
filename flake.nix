@@ -3,23 +3,25 @@
 
           inputs = {
             nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-            nixpkgs-qt515.url = "github:nixos/nixpkgs/72bbea9db7d727ed044e60b5f5febc60a3c5c955";
+            nixpkgs-qt5153.url = "github:nixos/nixpkgs/72bbea9db7d727ed044e60b5f5febc60a3c5c955";
         #    systems.url = "github:nix-systems/default";
           };
 
           outputs = {
             self,
             nixpkgs,
-            nixpkgs-qt515,
+            nixpkgs-qt5153,
           }:
           let
             system = "x86_64-linux";
             pkgs = nixpkgs.legacyPackages.${system};
-            pkgs-qt515 = nixpkgs-qt515.legacyPackages.${system};
+            pkgs-qt5153 = nixpkgs-qt5153.legacyPackages.${system};
           in {
             packages.${system} = {
+              qownnotes-qt6 = pkgs.qt6Packages.callPackage  (import ./default.nix) { };
               qownnotes-qt5 = pkgs.libsForQt5.callPackage  (import ./build-systems/nix/default-qt5.nix) { };
-              qownnotes-qt515 = pkgs-qt515.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { };
+              qownnotes-qt5153 = pkgs-qt5153.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { };
+              default = pkgs.qt6Packages.callPackage  (import ./default.nix) { };
             };
 
     devShell.x86_64-linux =

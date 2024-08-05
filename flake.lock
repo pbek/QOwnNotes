@@ -16,7 +16,7 @@
         "type": "github"
       }
     },
-    "nixpkgs-qt515": {
+    "nixpkgs-qt5153": {
       "locked": {
         "lastModified": 1655700315,
         "narHash": "sha256-N13cUhpyUlsbTugxwpUGrpaqJVLf4zsSZY1flJOO0kA=",
@@ -35,7 +35,7 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
-        "nixpkgs-qt515": "nixpkgs-qt515"
+        "nixpkgs-qt5153": "nixpkgs-qt5153"
       }
     }
   },

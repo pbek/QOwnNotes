@@ -16,6 +16,12 @@ translations-update-files:
 nix-build:
 	nix-build -E '((import <nixpkgs> {}).qt6Packages.callPackage (import ./default.nix) { })'
 
+nix-build-qt5:
+	nix build '.?submodules=1#qownnotes-qt5'
+
+nix-build-qt5153:
+	nix build '.?submodules=1#qownnotes-qt5153'
+
 nix-build-trace:
 	nix-build -E '((import <nixpkgs> {}).qt6Packages.callPackage (import ./default.nix) { })' --show-trace
 
