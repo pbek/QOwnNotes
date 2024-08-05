@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2.2)
+cmake_minimum_required(VERSION 3.5)
 project(Botan)
 
 option(BUILD_WITH_SYSTEM_BOTAN "Build using system installed Botan 2 crypto library" OFF)
