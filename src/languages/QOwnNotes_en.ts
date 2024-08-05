@@ -2796,7 +2796,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2589"/>
-        <location filename="../mainwindow.cpp" line="11594"/>
+        <location filename="../mainwindow.cpp" line="11588"/>
         <source>Automatically detect</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3070,7 +3070,7 @@ Restore current note?</source>
         <location filename="../mainwindow.cpp" line="5421"/>
         <location filename="../mainwindow.cpp" line="6703"/>
         <location filename="../mainwindow.cpp" line="9640"/>
-        <location filename="../mainwindow.cpp" line="11946"/>
+        <location filename="../mainwindow.cpp" line="11940"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3418,37 +3418,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11943"/>
+        <location filename="../mainwindow.cpp" line="11937"/>
         <source>Nextcloud Deck support disabled!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11944"/>
+        <location filename="../mainwindow.cpp" line="11938"/>
         <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11969"/>
+        <location filename="../mainwindow.cpp" line="11963"/>
         <source>Note path &apos;%1&apos; was copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="12003"/>
+        <location filename="../mainwindow.cpp" line="11997"/>
         <source>AI backends</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="12012"/>
+        <location filename="../mainwindow.cpp" line="12006"/>
         <source>AI models</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="12020"/>
+        <location filename="../mainwindow.cpp" line="12014"/>
         <source>AI backend selector</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="12026"/>
+        <location filename="../mainwindow.cpp" line="12020"/>
         <source>AI model selector</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3526,32 +3526,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11183"/>
+        <location filename="../mainwindow.cpp" line="11177"/>
         <source>A script update was found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11186"/>
+        <location filename="../mainwindow.cpp" line="11180"/>
         <source>Script updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11187"/>
+        <location filename="../mainwindow.cpp" line="11181"/>
         <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11171"/>
+        <location filename="../mainwindow.cpp" line="11165"/>
         <source>No script updates were found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11850"/>
+        <location filename="../mainwindow.cpp" line="11844"/>
         <source>Toggle note stickiness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11855"/>
+        <location filename="../mainwindow.cpp" line="11849"/>
         <source>Close other note tabs</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3678,32 +3678,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11352"/>
+        <location filename="../mainwindow.cpp" line="11346"/>
         <source>Select text files to import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11381"/>
+        <location filename="../mainwindow.cpp" line="11375"/>
         <source>Importing: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11443"/>
+        <location filename="../mainwindow.cpp" line="11437"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11529"/>
+        <location filename="../mainwindow.cpp" line="11523"/>
         <source>Leave full-screen mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11704"/>
+        <location filename="../mainwindow.cpp" line="11698"/>
         <source>Custom editor width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11704"/>
+        <location filename="../mainwindow.cpp" line="11698"/>
         <source>Characters:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3870,7 +3870,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5120"/>
-        <location filename="../mainwindow.cpp" line="11366"/>
+        <location filename="../mainwindow.cpp" line="11360"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4242,13 +4242,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <location filename="../mainwindow.cpp" line="5401"/>
         <location filename="../mainwindow.cpp" line="5421"/>
         <location filename="../mainwindow.cpp" line="9640"/>
-        <location filename="../mainwindow.cpp" line="11946"/>
+        <location filename="../mainwindow.cpp" line="11940"/>
         <source>Open &amp;settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1742"/>
-        <location filename="../mainwindow.cpp" line="11506"/>
+        <location filename="../mainwindow.cpp" line="11500"/>
         <source>leave</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4945,17 +4945,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4083"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4085"/>
         <source>New connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4275"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4277"/>
         <source>Login flow succeeded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4276"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4278"/>
         <source>Username and password were set successfully!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5405,14 +5405,14 @@ Are the folder and the file writeable?</source>
     </message>
     <message>
         <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="316"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="317"/>
         <source>Installs the script</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="315"/>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="375"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="316"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="376"/>
         <source>Install</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5452,103 +5452,103 @@ Are the folder and the file writeable?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="136"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="137"/>
         <source>Script updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="137"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="138"/>
         <source>All scripts are up-to-date.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="288"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="289"/>
         <source>Authors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="288"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="289"/>
         <source>Author</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="291"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="292"/>
         <source>Supported platforms</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="291"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="292"/>
         <source>Supported platform</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="294"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="295"/>
         <source>Open repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="304"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="305"/>
         <source>Update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="305"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="306"/>
         <source>Updates the script</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="307"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="308"/>
         <source>Reinstall</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="308"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="309"/>
         <source>Reinstalls the script</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="372"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="373"/>
         <source>Platform not supported!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="373"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="374"/>
         <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="375"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="376"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="381"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="382"/>
         <source>Update app</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="382"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="383"/>
         <source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="448"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="449"/>
         <source>Install successful</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="449"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="450"/>
         <source>The script was successfully installed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="456"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="457"/>
         <source>Download failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="457"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="458"/>
         <source>The script could not be downloaded!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6045,8 +6045,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <location filename="../dialogs/settingsdialog.ui" line="4593"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2163"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2172"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="4149"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="4153"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4151"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4155"/>
         <source>Database</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6659,20 +6659,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4383"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3832"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3834"/>
         <source>Reset message boxes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4570"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3898"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3917"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3900"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3919"/>
         <source>Import settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4577"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3864"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3866"/>
         <source>Export settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7023,69 +7023,65 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="7093"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7081"/>
         <source>Search script repository for AI integration scripts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="7120"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7108"/>
         <source>API keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="7126"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7114"/>
         <source>OpenAI API key:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="7136"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7124"/>
         <source>Create Groq API key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="7150"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7138"/>
         <source>Create OpenAI API key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="7194"/>
-        <location filename="../dialogs/settingsdialog.ui" line="7205"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7182"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7193"/>
         <source>Test connection</source>
+        <comment>&quot;Test&quot; as verb</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="7014"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7008"/>
         <source>AI backends added via the scripting engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4445"/>
-        <source>Test</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6937"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6931"/>
         <source>To make use of the AI backends, you can either use the scripting command &lt;a href=&quot;%1&quot;&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6966"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6960"/>
         <source>You can use the scripting hook &lt;a href=&quot;%1&quot;&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6995"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6989"/>
         <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="7184"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7172"/>
         <source>Groq API key:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="7164"/>
-        <location filename="../dialogs/settingsdialog.ui" line="7174"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7152"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7162"/>
         <source>API key</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7575,7 +7571,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="7090"/>
+        <location filename="../dialogs/settingsdialog.ui" line="7078"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2749"/>
         <source>Search script repository</source>
         <translation type="unfinished"></translation>
@@ -8003,7 +7999,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4660"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2182"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="4129"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4131"/>
         <source>Debug information</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8178,68 +8174,74 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3863"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3916"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3865"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3918"/>
         <source>INI files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3899"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3901"/>
         <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3905"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3907"/>
         <source>The application will be restarted after the import.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4130"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4132"/>
         <source>The debug information was copied to the clipboard.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4150"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4152"/>
         <source>The integrity of the disk database is valid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4154"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4156"/>
         <source>The integrity of the disk database is not valid!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4329"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4331"/>
         <source>Board Id: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4341"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4343"/>
         <source>Stack Id: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4403"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4405"/>
         <source>API test result for %1 (%2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4429"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4431"/>
         <source>AI backend: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4432"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4434"/>
         <source>API base URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4439"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4441"/>
         <source>AI model: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="4446"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="4447"/>
+        <source>Test</source>
+        <comment>verb</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="4448"/>
         <source>Test connection to %1 (%2)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8384,7 +8386,7 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3833"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3835"/>
         <source>Do you really want to reset the overrides of all message boxes?</source>
         <translation type="unfinished"></translation>
     </message>
