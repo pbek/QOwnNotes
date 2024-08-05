@@ -22,6 +22,12 @@ nix-build-qt5:
 nix-build-qt5153:
 	nix build '.?submodules=1#qownnotes-qt5153'
 
+nix-build-qt5-force:
+	nix build '.?submodules=1#qownnotes-qt5' --rebuild
+
+nix-build-qt5153-force:
+	nix build '.?submodules=1#qownnotes-qt5153' --rebuild
+
 nix-build-trace:
 	nix-build -E '((import <nixpkgs> {}).qt6Packages.callPackage (import ./default.nix) { })' --show-trace
 
