@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2.2)
+cmake_minimum_required(VERSION 3.5)
 project(QOwnNotes)
 
 # BEGIN options
@@ -12,6 +12,12 @@ else()
     set(QT_VERSION_MAJOR 5)
 endif()
 
+# put the QOwnNotes.exe in build directory
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+
+# for intellisence
+set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
+
 # include some Botan settings
 add_subdirectory(libraries/botan)
 #include sonnet core directory, required for building plugins
@@ -19,6 +25,8 @@ include_directories(libraries/sonnet/src/core)
 #some hunspell settings for windows
 include(libraries/sonnet/src/plugins/hunspell/hunspell/CMakeLists.txt)
 
+# noneed for md2html
+set(BUILD_MD2HTML_EXECUTABLE FALSE)
 add_subdirectory(libraries/md4c)
 
 add_executable(QOwnNotes "")
@@ -100,11 +108,6 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS REQUIRED
     Qml
     Concurrent
 )
-
-# if(UNIX)
-#     find_package(Qt5 COMPONENTS REQUIRED X11Extras)
-#     find_package( X11 REQUIRED )
-# endif()
 
 find_program(CCACHE_FOUND ccache)
 
@@ -596,12 +599,6 @@ target_link_libraries(QOwnNotes PRIVATE
     Google::DiffMatchPatch
     md4c-html
 )
-# if(UNIX)
-#     target_link_libraries(QOwnNotes PRIVATE
-#         Qt5::X11Extras
-#         ${X11_LIBRARIES}
-#     )
-# endif()
 
 if (USE_QLITEHTML)
     target_link_libraries(QOwnNotes PRIVATE
