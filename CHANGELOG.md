@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 24.8.4
+- The AppImage release was fixed after a linuxdeploy issue
+  (for [#3073](https://github.com/pbek/QOwnNotes/issues/3073))
 ## 24.8.3
 - A highlighting issue in malformed unordered lists was fixed again, while not
   breaking settext headers for Qt 5.15.2 (for [#3061](https://github.com/pbek/QOwnNotes/issues/3061)
