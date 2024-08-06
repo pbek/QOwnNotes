@@ -46,6 +46,7 @@ stdenv.mkDerivation {
 
   cmakeFlags = [
     "-DUSE_SYSTEM_BOTAN=1"
+    "-DBUILD_WITH_SYSTEM_BOTAN=1"
   ];
 
   postInstall = ''
