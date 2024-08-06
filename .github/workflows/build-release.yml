@@ -173,7 +173,7 @@ jobs:
     env:
       QT_VERSION: 6.5.0
       BUILD_DIR: build
-    name: '🐧 AppImage Ubuntu 20.04'
+    name: '🐧 AppImage Qt 6.5.0'
     steps:
 
       - name: '🧰 Checkout'
