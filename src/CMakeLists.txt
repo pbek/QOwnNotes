@@ -27,7 +27,8 @@ include(libraries/sonnet/src/plugins/hunspell/hunspell/CMakeLists.txt)
 
 # noneed for md2html
 set(BUILD_MD2HTML_EXECUTABLE FALSE)
-add_subdirectory(libraries/md4c)
+set(BUILD_SHARED_LIBS OFF)
+add_subdirectory(libraries/md4c EXCLUDE_FROM_ALL)
 
 add_executable(QOwnNotes "")
 
@@ -75,20 +76,20 @@ set(BUILD_SHARED_LIBS OFF)
 # Disable building tests inside QHotKey library
 set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 set(QHOTKEY_EXAMPLES OFF)
-add_subdirectory(libraries/qhotkey)
+add_subdirectory(libraries/qhotkey EXCLUDE_FROM_ALL)
 
 # FakeVim library
 set(CREATE_STATIC_LIBRARY ON)
 if(MSVC)
     add_compile_definitions(FAKEVIM_STATIC_DEFINE QTCREATOR_UTILS_STATIC_LIB)
 endif()
-add_subdirectory(libraries/fakevim)
-add_subdirectory(libraries/diff_match_patch)
+add_subdirectory(libraries/fakevim EXCLUDE_FROM_ALL)
+add_subdirectory(libraries/diff_match_patch EXCLUDE_FROM_ALL)
 
 option(USE_QLITE_HTML "Build using QLiteHtml for preview" OFF)
 if (USE_QLITEHTML)
     add_definitions(-DUSE_QLITEHTML=1)
-    add_subdirectory(libraries/qlitehtml)
+    add_subdirectory(libraries/qlitehtml EXCLUDE_FROM_ALL)
 endif()
 
 message("Using Qt version ${QT_VERSION_MAJOR}")
@@ -560,22 +561,6 @@ endif()
 
 add_custom_target(translations DEPENDS ${QON_QM_FILES})
 
-if(NOT QT_TRANSLATIONS_DIR)
-    # If this directory is missing, we are in a Qt5 environment.
-    # Extract the qmake executable location
-    get_target_property(QT_QMAKE_EXECUTABLE Qt${QT_VERSION_MAJOR}::qmake IMPORTED_LOCATION)
-    # Ask Qt5 where to put the translations
-    execute_process( COMMAND ${QT_QMAKE_EXECUTABLE} -query QT_INSTALL_TRANSLATIONS
-            OUTPUT_VARIABLE qt_translations_dir OUTPUT_STRIP_TRAILING_WHITESPACE )
-    # make sure we have / and not \ as qmake gives on windows
-    file( TO_CMAKE_PATH "${qt_translations_dir}" qt_translations_dir)
-    set( QT_TRANSLATIONS_DIR ${qt_translations_dir} CACHE PATH
-            "The location of the Qt translations" FORCE)
-endif()
-
-install(FILES ${QON_QM_FILES}
-        DESTINATION ${QT_TRANSLATIONS_DIR})
-
 target_sources(QOwnNotes PRIVATE
     ${SOURCE_FILES}
     ${RESOURCE_FILES}
@@ -620,8 +605,15 @@ if(MSVC)
     )
 endif()
 
-# Sonnet support if we can get it to run in the future
-#find_package(KF5Sonnet)
-#target_link_libraries(KF5::SonnetCore KF5::SonnetUi)
-
 add_compile_definitions(QAPPLICATION_CLASS=QApplication)
+
+## Installation
+
+install(TARGETS QOwnNotes DESTINATION bin)
+install(DIRECTORY images/icons DESTINATION share/icons/hicolor)
+install(FILES PBE.QOwnNotes.desktop DESTINATION share/applications)
+if (QON_QT6_BUILD)
+    install(FILES ${QON_QM_FILES} DESTINATION share/qt6/translations)
+else()
+    install(FILES ${QON_QM_FILES} DESTINATION share/qt5/translations)
+endif()
