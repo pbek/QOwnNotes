@@ -3,6 +3,9 @@
 ## 24.8.4
 - The AppImage release was fixed after a linuxdeploy issue
   (for [#3073](https://github.com/pbek/QOwnNotes/issues/3073))
+- A Qt6 version of the AppImage was added to the releases for testing purposes as
+  `QOwnNotes-x86_64-Qt6.AppImage` (for [#3074](https://github.com/pbek/QOwnNotes/issues/3074))
+
 ## 24.8.3
 - A highlighting issue in malformed unordered lists was fixed again, while not
   breaking settext headers for Qt 5.15.2 (for [#3061](https://github.com/pbek/QOwnNotes/issues/3061)

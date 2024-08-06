@@ -165,6 +165,89 @@ jobs:
           asset_content_type: text/plain
 
   #
+  # AppImage Qt6 build
+  #
+  build-appimage-qt6:
+    needs: create_release
+    runs-on: ubuntu-20.04
+    env:
+      QT_VERSION: 6.5.0
+      BUILD_DIR: build
+    name: '🐧 AppImage Ubuntu 20.04'
+    steps:
+
+      - name: '🧰 Checkout'
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: '⚙️ Install Qt'
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{env.QT_VERSION}}
+          modules: ${{env.QT_MODULES}}
+          aqtversion: '==2.0.0'
+          cache: true
+
+      - name: '⚙️ Install dependencies'
+        run: |
+          sudo apt-get update
+          # sudo apt-get install libgl1-mesa-dev libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libzstd-dev
+          sudo apt install desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxkbcommon-x11-0
+      - name: '🚧 Compile application'
+        run: |
+          echo "#define RELEASE \"AppImage\"" > release.h
+          ${{env.QMAKE}} ${{env.QMAKE_PROJECT}} CONFIG+=release PREFIX=/usr
+          lrelease QOwnNotes.pro
+          make -j${{env.CORES}}
+      - name: '⚙️ Install linuxdeploy'
+        run: |
+          wget https://github.com/linuxdeploy/linuxdeploy/releases/download/1-alpha-20240109-1/linuxdeploy-x86_64.AppImage
+          wget https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/1-alpha-20240109-1/linuxdeploy-plugin-qt-x86_64.AppImage
+          chmod +x linuxdeploy-x86_64.AppImage
+          chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
+      - name: '📦 Create AppImage'
+        run: |
+          export QMAKE=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/bin/${{env.QMAKE}}
+          export PATH=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/libexec:$PATH
+          cp ../icons/icon.png QOwnNotes.png
+          ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} -e ${{env.UNIXNAME}} -i ${{env.UNIXNAME}}.png -d PBE.QOwnNotes.desktop --plugin qt
+          mkdir -p ${{env.BUILD_DIR}}/usr/plugins/iconengines && cp -r ${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/plugins/iconengines/libqsvgicon.so ${{env.BUILD_DIR}}/usr/plugins/iconengines
+          mkdir -p ${{env.BUILD_DIR}}/usr/languages && cp -r languages/*.qm ${{env.BUILD_DIR}}/usr/languages
+          cp -rL ${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/lib/libQt6QmlWorkerScript.so.6 ${{env.BUILD_DIR}}/usr/lib
+          find ${{env.BUILD_DIR}}
+          ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} --output appimage
+          rm linuxdeploy-x86_64.AppImage
+          rm linuxdeploy-plugin-qt-x86_64.AppImage
+          ls -hal *.AppImage
+          find -iname "*.AppImage"
+          # It's ok if no file needs to be renamed
+          mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage ||:
+          sha256sum ${{env.EXECUTABLE}}-x86_64.AppImage > ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
+          ls -hal *.AppImage
+          find -iname "*.AppImage"
+          pwd
+
+      - name: '📤 Release AppImage Qt6 for Linux'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: ./src/QOwnNotes-x86_64.AppImage
+          asset_name: QOwnNotes-x86_64-Qt6.AppImage
+          asset_content_type: application/vnd.appimage
+      - name: '📤 Release AppImage Qt6 sha256sum'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: ./src/QOwnNotes-x86_64.AppImage.sha256sum
+          asset_name: QOwnNotes-x86_64-Qt6.AppImage.sha256sum
+          asset_content_type: text/plain
+
+  #
   # Snap build
   #
   build-snap:
