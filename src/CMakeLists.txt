@@ -420,7 +420,7 @@ set(SOURCE_FILES
     entities/bookmark.h entities/bookmark.cpp
     entities/commandsnippet.h entities/commandsnippet.cpp)
 
-if(NOT APPLE)
+# spellchecker
 list(APPEND SOURCE_FILES
     libraries/sonnet/src/plugins/hunspell/hunspellclient.cpp
     libraries/sonnet/src/plugins/hunspell/hunspellclient.h
@@ -472,16 +472,6 @@ list(APPEND SOURCE_FILES
     libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/xmlparser.cxx
     libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/xmlparser.hxx
 )
-endif()
-
-if (APPLE)
-   list(APPEND SOURCE_FILES
-    libraries/sonnet/src/plugins/nsspellchecker/nsspellcheckerclient.h
-    libraries/sonnet/src/plugins/nsspellchecker/nsspellcheckerclient.mm
-    libraries/sonnet/src/plugins/nsspellchecker/nsspellcheckerdebug.cpp
-    libraries/sonnet/src/plugins/nsspellchecker/nsspellcheckerdebug.h
-    libraries/sonnet/src/plugins/nsspellchecker/nsspellcheckerdict.h
-    libraries/sonnet/src/plugins/nsspellchecker/nsspellcheckerdict.mm)
 endif()
 
 # Translation files
