@@ -5,6 +5,8 @@
   (for [#3073](https://github.com/pbek/QOwnNotes/issues/3073))
 - A Qt6 version of the AppImage was added to the releases for testing purposes as
   `QOwnNotes-x86_64-Qt6.AppImage` (for [#3074](https://github.com/pbek/QOwnNotes/issues/3074))
+- A styling issue in the *AI Settings* in releases using Qt 5.15.2 was fixed
+  (for [#3075](https://github.com/pbek/QOwnNotes/issues/3075))
 
 ## 24.8.3
 - A highlighting issue in malformed unordered lists was fixed again, while not

@@ -73,3 +73,6 @@ git-create-patch:
 
 open-crowdin-webpage:
 	xdg-open https://crowdin.com/project/qownnotes/activity-stream
+
+fix-settings-ui-file:
+	./scripts/fix-settings-ui-file.sh

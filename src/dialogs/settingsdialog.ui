@@ -57,10 +57,10 @@
          </sizepolicy>
         </property>
         <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
+         <enum>QFrame::Shape::NoFrame</enum>
         </property>
         <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
+         <enum>QFrame::Shadow::Raised</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_13">
          <property name="leftMargin">
@@ -406,10 +406,10 @@
          </sizepolicy>
         </property>
         <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
+         <enum>QFrame::Shape::NoFrame</enum>
         </property>
         <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
+         <enum>QFrame::Shadow::Raised</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_12">
          <property name="leftMargin">
@@ -465,10 +465,10 @@
                    </sizepolicy>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::NoFrame</enum>
+                   <enum>QFrame::Shape::NoFrame</enum>
                   </property>
                   <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
+                   <enum>QFrame::Shadow::Raised</enum>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_20">
                    <property name="leftMargin">
@@ -498,20 +498,20 @@
                       <bool>true</bool>
                      </property>
                      <property name="dragDropMode">
-                      <enum>QAbstractItemView::InternalMove</enum>
+                      <enum>QAbstractItemView::DragDropMode::InternalMove</enum>
                      </property>
                      <property name="defaultDropAction">
-                      <enum>Qt::TargetMoveAction</enum>
+                      <enum>Qt::DropAction::TargetMoveAction</enum>
                      </property>
                     </widget>
                    </item>
                    <item row="1" column="0">
                     <widget class="QFrame" name="frame">
                      <property name="frameShape">
-                      <enum>QFrame::NoFrame</enum>
+                      <enum>QFrame::Shape::NoFrame</enum>
                      </property>
                      <property name="frameShadow">
-                      <enum>QFrame::Plain</enum>
+                      <enum>QFrame::Shadow::Plain</enum>
                      </property>
                      <layout class="QGridLayout" name="gridLayout_23">
                       <property name="leftMargin">
@@ -540,7 +540,7 @@
                       <item row="0" column="0">
                        <spacer name="horizontalSpacer">
                         <property name="orientation">
-                         <enum>Qt::Horizontal</enum>
+                         <enum>Qt::Orientation::Horizontal</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -576,19 +576,19 @@
                    </sizepolicy>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::NoFrame</enum>
+                   <enum>QFrame::Shape::NoFrame</enum>
                   </property>
                   <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
+                   <enum>QFrame::Shadow::Raised</enum>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_22">
                    <item row="12" column="0" colspan="2">
                     <widget class="QFrame" name="noteFolderRemotePathTreeWidgetFrame">
                      <property name="frameShape">
-                      <enum>QFrame::NoFrame</enum>
+                      <enum>QFrame::Shape::NoFrame</enum>
                      </property>
                      <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
+                      <enum>QFrame::Shadow::Raised</enum>
                      </property>
                      <layout class="QGridLayout" name="gridLayout_25">
                       <property name="leftMargin">
@@ -606,7 +606,7 @@
                       <item row="2" column="0">
                        <widget class="QFrame" name="frame_3">
                         <property name="frameShape">
-                         <enum>QFrame::NoFrame</enum>
+                         <enum>QFrame::Shape::NoFrame</enum>
                         </property>
                         <layout class="QGridLayout" name="gridLayout_26">
                          <property name="leftMargin">
@@ -638,7 +638,7 @@
                          <item row="0" column="0">
                           <spacer name="horizontalSpacer_2">
                            <property name="orientation">
-                            <enum>Qt::Horizontal</enum>
+                            <enum>Qt::Orientation::Horizontal</enum>
                            </property>
                            <property name="sizeHint" stdset="0">
                             <size>
@@ -693,10 +693,10 @@
                    <item row="13" column="0">
                     <widget class="QFrame" name="noteFolderVerticalSpacerFrame">
                      <property name="frameShape">
-                      <enum>QFrame::NoFrame</enum>
+                      <enum>QFrame::Shape::NoFrame</enum>
                      </property>
                      <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
+                      <enum>QFrame::Shadow::Raised</enum>
                      </property>
                      <layout class="QGridLayout" name="gridLayout_27">
                       <property name="leftMargin">
@@ -717,7 +717,7 @@
                          <enum>Qt::Vertical</enum>
                         </property>
                         <property name="sizeType">
-                         <enum>QSizePolicy::Expanding</enum>
+                         <enum>QSizePolicy::Policy::Expanding</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -892,7 +892,7 @@
                    <bool>true</bool>
                   </property>
                   <property name="textInteractionFlags">
-                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                   <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
@@ -903,7 +903,6 @@
               <widget class="QGroupBox" name="ownCloudGroupBox">
                <property name="font">
                 <font>
-                 <weight>50</weight>
                  <bold>false</bold>
                  <kerning>true</kerning>
                 </font>
@@ -912,7 +911,7 @@
                 <string>Your ownCloud server</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
                </property>
                <property name="flat">
                 <bool>false</bool>
@@ -1027,7 +1026,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <weight>50</weight>
                     <bold>false</bold>
                     <kerning>true</kerning>
                    </font>
@@ -1039,13 +1037,13 @@
                    <string>Error Message</string>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                   <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
                   </property>
                   <property name="wordWrap">
                    <bool>true</bool>
                   </property>
                   <property name="textInteractionFlags">
-                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                   <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
@@ -1110,7 +1108,7 @@
                      <string>Connection name:</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -1139,7 +1137,7 @@
                      <string>ownCloud server url:</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -1177,7 +1175,7 @@
                      <string>Username:</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -1212,7 +1210,7 @@
                      <string>Password:</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -1234,7 +1232,7 @@
                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                     <property name="echoMode">
-                     <enum>QLineEdit::Password</enum>
+                     <enum>QLineEdit::EchoMode::Password</enum>
                     </property>
                     <property name="placeholderText">
                      <string>Your ownCloud password</string>
@@ -1295,7 +1293,7 @@
                      <string>unknown</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -1312,7 +1310,7 @@
                      <string>unknown</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -1329,7 +1327,7 @@
                      <string>unknown</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -1346,7 +1344,7 @@
                      <string>unknown</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -1363,7 +1361,7 @@
                      <string>unknown</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -1380,7 +1378,7 @@
                      <string>unknown</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -1397,7 +1395,7 @@
                      <string>unknown</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -1410,7 +1408,7 @@
                      <string>notes path found on server</string>
                     </property>
                     <property name="textInteractionFlags">
-                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                     <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                     </property>
                    </widget>
                   </item>
@@ -1433,7 +1431,7 @@
                      <enum>Qt::Vertical</enum>
                     </property>
                     <property name="sizeType">
-                     <enum>QSizePolicy::Fixed</enum>
+                     <enum>QSizePolicy::Policy::Fixed</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -1693,7 +1691,7 @@
                          <string/>
                         </property>
                         <property name="echoMode">
-                         <enum>QLineEdit::Password</enum>
+                         <enum>QLineEdit::EchoMode::Password</enum>
                         </property>
                         <property name="clearButtonEnabled">
                          <bool>true</bool>
@@ -1934,7 +1932,7 @@
                    <bool>true</bool>
                   </property>
                   <property name="textInteractionFlags">
-                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                   <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
@@ -2003,7 +2001,7 @@
                </property>
                <layout class="QFormLayout" name="formLayout_2">
                 <property name="fieldGrowthPolicy">
-                 <enum>QFormLayout::ExpandingFieldsGrow</enum>
+                 <enum>QFormLayout::FieldGrowthPolicy::ExpandingFieldsGrow</enum>
                 </property>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_19">
@@ -2011,7 +2009,7 @@
                    <string>Calendar base url:</string>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -2046,7 +2044,7 @@
                    <string>Username:</string>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -2081,7 +2079,7 @@
                    <string>Password:</string>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -2103,7 +2101,7 @@
                    <string>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</string>
                   </property>
                   <property name="echoMode">
-                   <enum>QLineEdit::Password</enum>
+                   <enum>QLineEdit::EchoMode::Password</enum>
                   </property>
                   <property name="placeholderText">
                    <string>Your CalDAV password</string>
@@ -2137,7 +2135,7 @@
                 <item row="2" column="3">
                  <spacer name="horizontalSpacer_8">
                   <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
+                   <enum>Qt::Orientation::Horizontal</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
@@ -2253,10 +2251,10 @@
                <item row="1" column="0">
                 <widget class="QFrame" name="frame_4">
                  <property name="frameShape">
-                  <enum>QFrame::NoFrame</enum>
+                  <enum>QFrame::Shape::NoFrame</enum>
                  </property>
                  <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
+                  <enum>QFrame::Shadow::Raised</enum>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_11">
                   <property name="leftMargin">
@@ -3067,10 +3065,10 @@
                <item row="1" column="1" rowspan="3">
                 <widget class="QFrame" name="frame_2">
                  <property name="frameShape">
-                  <enum>QFrame::NoFrame</enum>
+                  <enum>QFrame::Shape::NoFrame</enum>
                  </property>
                  <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
+                  <enum>QFrame::Shadow::Raised</enum>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_8">
                   <property name="leftMargin">
@@ -3232,7 +3230,7 @@
                         <string>List and tree item height:</string>
                        </property>
                        <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                        </property>
                       </widget>
                      </item>
@@ -3242,14 +3240,14 @@
                         <string>Toolbar icon size:</string>
                        </property>
                        <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                        </property>
                       </widget>
                      </item>
                      <item row="0" column="4">
                       <spacer name="horizontalSpacer_3">
                        <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
+                        <enum>Qt::Orientation::Horizontal</enum>
                        </property>
                        <property name="sizeHint" stdset="0">
                         <size>
@@ -3332,7 +3330,7 @@
                      <item>
                       <spacer name="horizontalSpacer_15">
                        <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
+                        <enum>Qt::Orientation::Horizontal</enum>
                        </property>
                        <property name="sizeHint" stdset="0">
                         <size>
@@ -3486,7 +3484,7 @@
                    </sizepolicy>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::NoFrame</enum>
+                   <enum>QFrame::Shape::NoFrame</enum>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_31">
                    <property name="leftMargin">
@@ -3516,20 +3514,20 @@
                       <bool>true</bool>
                      </property>
                      <property name="dragDropMode">
-                      <enum>QAbstractItemView::InternalMove</enum>
+                      <enum>QAbstractItemView::DragDropMode::InternalMove</enum>
                      </property>
                      <property name="defaultDropAction">
-                      <enum>Qt::TargetMoveAction</enum>
+                      <enum>Qt::DropAction::TargetMoveAction</enum>
                      </property>
                     </widget>
                    </item>
                    <item row="1" column="0">
                     <widget class="QFrame" name="frame_5">
                      <property name="frameShape">
-                      <enum>QFrame::NoFrame</enum>
+                      <enum>QFrame::Shape::NoFrame</enum>
                      </property>
                      <property name="frameShadow">
-                      <enum>QFrame::Plain</enum>
+                      <enum>QFrame::Shadow::Plain</enum>
                      </property>
                      <layout class="QGridLayout" name="gridLayout_32">
                       <property name="leftMargin">
@@ -3569,7 +3567,7 @@
                       <item row="0" column="0">
                        <spacer name="horizontalSpacer_4">
                         <property name="orientation">
-                         <enum>Qt::Horizontal</enum>
+                         <enum>Qt::Orientation::Horizontal</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -3594,10 +3592,10 @@
                    </sizepolicy>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::NoFrame</enum>
+                   <enum>QFrame::Shape::NoFrame</enum>
                   </property>
                   <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
+                   <enum>QFrame::Shadow::Raised</enum>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_36">
                    <property name="leftMargin">
@@ -3621,16 +3619,16 @@
                       </sizepolicy>
                      </property>
                      <property name="frameShape">
-                      <enum>QFrame::NoFrame</enum>
+                      <enum>QFrame::Shape::NoFrame</enum>
                      </property>
                      <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
+                      <enum>QFrame::Shadow::Raised</enum>
                      </property>
                      <layout class="QGridLayout" name="gridLayout_33">
                       <item row="2" column="0">
                        <widget class="QScrollArea" name="scrollArea">
                         <property name="horizontalScrollBarPolicy">
-                         <enum>Qt::ScrollBarAlwaysOff</enum>
+                         <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
                         </property>
                         <property name="widgetResizable">
                          <bool>true</bool>
@@ -3640,8 +3638,8 @@
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>360</width>
-                           <height>532</height>
+                           <width>431</width>
+                           <height>588</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">
@@ -3661,7 +3659,7 @@
                           <item row="2" column="0">
                            <widget class="QFrame" name="scriptRepositoryItemFrame">
                             <property name="frameShape">
-                             <enum>QFrame::NoFrame</enum>
+                             <enum>QFrame::Shape::NoFrame</enum>
                             </property>
                             <layout class="QGridLayout" name="gridLayout_52">
                              <property name="leftMargin">
@@ -3703,7 +3701,7 @@
                              <item row="3" column="1">
                               <spacer name="horizontalSpacer_7">
                                <property name="orientation">
-                                <enum>Qt::Horizontal</enum>
+                                <enum>Qt::Orientation::Horizontal</enum>
                                </property>
                                <property name="sizeHint" stdset="0">
                                 <size>
@@ -3729,10 +3727,10 @@
                                 <string notr="true">Version</string>
                                </property>
                                <property name="textFormat">
-                                <enum>Qt::PlainText</enum>
+                                <enum>Qt::TextFormat::PlainText</enum>
                                </property>
                                <property name="textInteractionFlags">
-                                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                                <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                                </property>
                               </widget>
                              </item>
@@ -3748,7 +3746,7 @@
                                 <bool>true</bool>
                                </property>
                                <property name="textInteractionFlags">
-                                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                                <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                                </property>
                               </widget>
                              </item>
@@ -3784,7 +3782,7 @@
                           <item row="5" column="0">
                            <widget class="QFrame" name="scriptSettingsFrame">
                             <property name="frameShape">
-                             <enum>QFrame::NoFrame</enum>
+                             <enum>QFrame::Shape::NoFrame</enum>
                             </property>
                             <layout class="QGridLayout" name="gridLayout_54">
                              <property name="leftMargin">
@@ -3822,7 +3820,7 @@
                           <item row="4" column="0">
                            <widget class="QFrame" name="localScriptItemFrame">
                             <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
+                             <enum>QFrame::Shadow::Raised</enum>
                             </property>
                             <layout class="QGridLayout" name="gridLayout_53">
                              <property name="leftMargin">
@@ -3840,7 +3838,7 @@
                                 <bool>true</bool>
                                </property>
                                <property name="textInteractionFlags">
-                                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                                <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                                </property>
                               </widget>
                              </item>
@@ -3905,7 +3903,7 @@
                              <item row="4" column="2">
                               <spacer name="horizontalSpacer_5">
                                <property name="orientation">
-                                <enum>Qt::Horizontal</enum>
+                                <enum>Qt::Orientation::Horizontal</enum>
                                </property>
                                <property name="sizeHint" stdset="0">
                                 <size>
@@ -3921,10 +3919,10 @@
                           <item row="3" column="0">
                            <widget class="QFrame" name="repositoryScriptItemFrame">
                             <property name="frameShape">
-                             <enum>QFrame::NoFrame</enum>
+                             <enum>QFrame::Shape::NoFrame</enum>
                             </property>
                             <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
+                             <enum>QFrame::Shadow::Raised</enum>
                             </property>
                             <layout class="QGridLayout" name="gridLayout_81">
                              <property name="leftMargin">
@@ -3946,7 +3944,7 @@
                              <item row="0" column="1">
                               <spacer name="horizontalSpacer_18">
                                <property name="orientation">
-                                <enum>Qt::Horizontal</enum>
+                                <enum>Qt::Orientation::Horizontal</enum>
                                </property>
                                <property name="sizeHint" stdset="0">
                                 <size>
@@ -3966,10 +3964,10 @@
                       <item row="6" column="0" colspan="2">
                        <widget class="QFrame" name="frame_6">
                         <property name="frameShape">
-                         <enum>QFrame::NoFrame</enum>
+                         <enum>QFrame::Shape::NoFrame</enum>
                         </property>
                         <property name="frameShadow">
-                         <enum>QFrame::Raised</enum>
+                         <enum>QFrame::Shadow::Raised</enum>
                         </property>
                         <layout class="QGridLayout" name="gridLayout_34">
                          <property name="leftMargin">
@@ -4137,10 +4135,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   <item row="13" column="0" colspan="2">
                    <widget class="QFrame" name="imageScalingFrame">
                     <property name="frameShape">
-                     <enum>QFrame::NoFrame</enum>
+                     <enum>QFrame::Shape::NoFrame</enum>
                     </property>
                     <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
+                     <enum>QFrame::Shadow::Raised</enum>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_45">
                      <property name="leftMargin">
@@ -4165,7 +4163,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                      <item row="0" column="2">
                       <spacer name="horizontalSpacer_10">
                        <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
+                        <enum>Qt::Orientation::Horizontal</enum>
                        </property>
                        <property name="sizeHint" stdset="0">
                         <size>
@@ -4235,7 +4233,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                      <string/>
                     </property>
                     <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
+                     <enum>Qt::LayoutDirection::LeftToRight</enum>
                     </property>
                     <property name="minimum">
                      <number>1</number>
@@ -4251,10 +4249,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   <item row="16" column="0" colspan="2">
                    <widget class="QFrame" name="autoReadOnlyModeFrame">
                     <property name="frameShape">
-                     <enum>QFrame::NoFrame</enum>
+                     <enum>QFrame::Shape::NoFrame</enum>
                     </property>
                     <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
+                     <enum>QFrame::Shadow::Raised</enum>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_84">
                      <property name="leftMargin">
@@ -4292,7 +4290,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                      <item row="0" column="2">
                       <spacer name="horizontalSpacer_19">
                        <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
+                        <enum>Qt::Orientation::Horizontal</enum>
                        </property>
                        <property name="sizeHint" stdset="0">
                         <size>
@@ -4435,7 +4433,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   <item row="2" column="2">
                    <spacer name="horizontalSpacer_6">
                     <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
+                     <enum>Qt::Orientation::Horizontal</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -4682,7 +4680,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <string/>
                   </property>
                   <property name="textInteractionFlags">
-                   <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                   <set>Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
@@ -4709,7 +4707,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <item row="4" column="0" colspan="7">
                  <widget class="QFrame" name="debugInfoTextEditSearchFrame">
                   <property name="frameShape">
-                   <enum>QFrame::NoFrame</enum>
+                   <enum>QFrame::Shape::NoFrame</enum>
                   </property>
                   <property name="lineWidth">
                    <number>0</number>
@@ -4761,7 +4759,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <item row="6" column="3" colspan="4">
                  <spacer name="horizontalSpacer_14">
                   <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
+                   <enum>Qt::Orientation::Horizontal</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
@@ -4802,7 +4800,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <string>Default font:</string>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -4844,7 +4842,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <string>Code font:</string>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -4889,10 +4887,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
              <item>
               <widget class="FontColorWidget" name="editorFontColorWidget">
                <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
+                <enum>QFrame::Shape::NoFrame</enum>
                </property>
                <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
+                <enum>QFrame::Shadow::Raised</enum>
                </property>
               </widget>
              </item>
@@ -4913,9 +4911,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                </property>
                <property name="html">
                 <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-size:9pt;&quot;&gt;portable mode information will be loaded here&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <property name="openExternalLinks">
@@ -5007,7 +5008,7 @@ p, li { white-space: pre-wrap; }
                 <item row="4" column="3">
                  <spacer name="horizontalSpacer_17">
                   <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
+                   <enum>Qt::Orientation::Horizontal</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
@@ -5089,7 +5090,7 @@ p, li { white-space: pre-wrap; }
                    <string>Code font:</string>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -5148,7 +5149,7 @@ p, li { white-space: pre-wrap; }
                    <string>Default font:</string>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -5176,7 +5177,7 @@ p, li { white-space: pre-wrap; }
              <item row="1" column="3">
               <spacer name="horizontalSpacer_9">
                <property name="orientation">
-                <enum>Qt::Horizontal</enum>
+                <enum>Qt::Orientation::Horizontal</enum>
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
@@ -5218,7 +5219,7 @@ p, li { white-space: pre-wrap; }
              <item row="1" column="2">
               <spacer name="horizontalSpacer_12">
                <property name="orientation">
-                <enum>Qt::Horizontal</enum>
+                <enum>Qt::Orientation::Horizontal</enum>
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
@@ -5256,10 +5257,10 @@ p, li { white-space: pre-wrap; }
              <item row="2" column="0" colspan="4">
               <widget class="QFrame" name="logFileFrame">
                <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
+                <enum>QFrame::Shape::NoFrame</enum>
                </property>
                <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
+                <enum>QFrame::Shadow::Raised</enum>
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout_7">
                 <property name="leftMargin">
@@ -5287,14 +5288,14 @@ p, li { white-space: pre-wrap; }
                    <string notr="true">&lt;log file&gt;</string>
                   </property>
                   <property name="textInteractionFlags">
-                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                   <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_11">
                   <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
+                   <enum>Qt::Orientation::Horizontal</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
@@ -5413,10 +5414,10 @@ p, li { white-space: pre-wrap; }
                 <item row="1" column="1" colspan="2">
                  <widget class="QFrame" name="markdownHighlightingFrame">
                   <property name="frameShape">
-                   <enum>QFrame::NoFrame</enum>
+                   <enum>QFrame::Shape::NoFrame</enum>
                   </property>
                   <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
+                   <enum>QFrame::Shadow::Raised</enum>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_22">
                    <property name="leftMargin">
@@ -5463,14 +5464,14 @@ p, li { white-space: pre-wrap; }
                    <string>Note-edit cursor width:</string>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
                 <item row="7" column="3">
                  <spacer name="horizontalSpacer_13">
                   <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
+                   <enum>Qt::Orientation::Horizontal</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
@@ -5594,7 +5595,7 @@ p, li { white-space: pre-wrap; }
                   <item row="1" column="2">
                    <spacer name="horizontalSpacer_16">
                     <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
+                     <enum>Qt::Orientation::Horizontal</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -5684,7 +5685,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <string extracomment="Please don't translate &quot;%notePath%&quot;">You optionally can use &quot;%notePath%&quot; for the path of the note.</string>
                   </property>
                   <property name="textInteractionFlags">
-                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                   <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
@@ -5694,7 +5695,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <string extracomment="Please don't translate &quot;%notePath%&quot;">If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</string>
                   </property>
                   <property name="textInteractionFlags">
-                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                   <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
@@ -5723,7 +5724,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <string>Path to git executable:</string>
                   </property>
                   <property name="textFormat">
-                   <enum>Qt::AutoText</enum>
+                   <enum>Qt::TextFormat::AutoText</enum>
                   </property>
                  </widget>
                 </item>
@@ -5751,7 +5752,7 @@ git config --global user.name &quot;Your name&quot;</string>
                    <bool>true</bool>
                   </property>
                   <property name="textInteractionFlags">
-                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                   <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
@@ -5771,7 +5772,7 @@ git config --global user.name &quot;Your name&quot;</string>
                    <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download text entered in source code…&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                   <property name="textFormat">
-                   <enum>Qt::RichText</enum>
+                   <enum>Qt::TextFormat::RichText</enum>
                   </property>
                   <property name="openExternalLinks">
                    <bool>true</bool>
@@ -6201,10 +6202,10 @@ git config --global user.name &quot;Your name&quot;</string>
                 <item row="1" column="0">
                  <widget class="QFrame" name="localTrashClearFrame">
                   <property name="frameShape">
-                   <enum>QFrame::NoFrame</enum>
+                   <enum>QFrame::Shape::NoFrame</enum>
                   </property>
                   <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
+                   <enum>QFrame::Shadow::Raised</enum>
                   </property>
                   <layout class="QHBoxLayout" name="horizontalLayout_8">
                    <property name="spacing">
@@ -6382,7 +6383,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
              <item row="2" column="0">
               <widget class="QFrame" name="browserExtensionFrame">
                <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
+                <enum>QFrame::Shape::NoFrame</enum>
                </property>
                <layout class="QGridLayout" name="gridLayout_71">
                 <property name="leftMargin">
@@ -6538,7 +6539,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <bool>true</bool>
                   </property>
                   <property name="textInteractionFlags">
-                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                   <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
@@ -6554,7 +6555,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <bool>true</bool>
                   </property>
                   <property name="textInteractionFlags">
-                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                   <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
@@ -6659,7 +6660,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <bool>true</bool>
                   </property>
                   <property name="textInteractionFlags">
-                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                   <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
@@ -6669,7 +6670,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
              <item row="1" column="0">
               <widget class="QFrame" name="webAppFrame">
                <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
+                <enum>QFrame::Shape::NoFrame</enum>
                </property>
                <layout class="QGridLayout" name="gridLayout_77">
                 <property name="leftMargin">
@@ -6702,7 +6703,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                       <number>32</number>
                      </property>
                      <property name="echoMode">
-                      <enum>QLineEdit::Password</enum>
+                      <enum>QLineEdit::EchoMode::Password</enum>
                      </property>
                     </widget>
                    </item>
@@ -6890,7 +6891,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
              <item row="2" column="0">
               <spacer name="aiVerticalSpacer1">
                <property name="orientation">
-                <enum>Qt::Orientation::Vertical</enum>
+                <enum>Qt::Vertical</enum>
                </property>
                <property name="sizeType">
                 <enum>QSizePolicy::Policy::Fixed</enum>
@@ -6906,7 +6907,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
              <item row="11" column="0">
               <spacer name="verticalSpacer_21">
                <property name="orientation">
-                <enum>Qt::Orientation::Vertical</enum>
+                <enum>Qt::Vertical</enum>
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
@@ -6941,7 +6942,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <item>
                  <spacer name="aiVerticalSpacer2">
                   <property name="orientation">
-                   <enum>Qt::Orientation::Vertical</enum>
+                   <enum>Qt::Vertical</enum>
                   </property>
                   <property name="sizeType">
                    <enum>QSizePolicy::Policy::Fixed</enum>
@@ -6970,7 +6971,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <item>
                  <spacer name="aiVerticalSpacer2_3">
                   <property name="orientation">
-                   <enum>Qt::Orientation::Vertical</enum>
+                   <enum>Qt::Vertical</enum>
                   </property>
                   <property name="sizeType">
                    <enum>QSizePolicy::Policy::Fixed</enum>
@@ -7050,7 +7051,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
              <item row="7" column="0">
               <spacer name="aiVerticalSpacer2_2">
                <property name="orientation">
-                <enum>Qt::Orientation::Vertical</enum>
+                <enum>Qt::Vertical</enum>
                </property>
                <property name="sizeType">
                 <enum>QSizePolicy::Policy::Fixed</enum>
@@ -7074,11 +7075,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="text">
-                   <string>Search script repository</string>
-                  </property>
                   <property name="toolTip">
                    <string>Search script repository for AI integration scripts</string>
+                  </property>
+                  <property name="text">
+                   <string>Search script repository</string>
                   </property>
                   <property name="icon">
                    <iconset theme="QIcon::ThemeIcon::EditFind" resource="../breeze-qownnotes.qrc">
@@ -7214,10 +7215,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
    <item row="1" column="0">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+      <enum>Qt::Orientation::Horizontal</enum>
      </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
      </property>
     </widget>
    </item>
