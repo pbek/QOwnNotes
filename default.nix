@@ -1,7 +1,7 @@
 { lib
 , stdenv
 , fetchurl
-, qmake
+, cmake
 , qttools
 , qtbase
 , qtdeclarative
@@ -28,7 +28,7 @@ stdenv.mkDerivation {
   src = builtins.path { path = ./src; name = "qownnotes"; };
 
   nativeBuildInputs = [
-    qmake
+    cmake
     qttools
     wrapQtAppsHook
     pkg-config
@@ -44,8 +44,8 @@ stdenv.mkDerivation {
     botan2
   ] ++ lib.optionals stdenv.isLinux [ qtwayland ];
 
-  qmakeFlags = [
-    "USE_SYSTEM_BOTAN=1"
+  cmakeFlags = [
+    "-DUSE_SYSTEM_BOTAN=1"
   ];
 
   postInstall = ''
