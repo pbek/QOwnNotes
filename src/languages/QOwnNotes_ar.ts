@@ -5792,7 +5792,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
-<translation type="unfinished">Search script repository for AI integration scripts</translation>
+<translation>ابحث عن بُريمجات الذكاء المصطنع في مستودع البريمجات</translation>
 </message>
 <message>
 <source>API keys</source>
@@ -5813,11 +5813,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
-<translation type="unfinished">Test connection</translation>
+<translation>اختبر الاتصال</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
-<translation type="unfinished">AI backends added via the scripting engine</translation>
+<translation>خدمات الذكاء المصطنع المضافة عبر محرك البرمجة</translation>
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
@@ -6728,11 +6728,11 @@ Connection error message: </source>
 </message>
 <message>
 <source>API test result for %1 (%2)</source>
-<translation type="unfinished">API test result for %1 (%2)</translation>
+<translation>نتيجة اختبار API لخدمة %1 (نموذج %2)</translation>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation type="unfinished">AI backend: %1</translation>
+<translation>خدمة الذكاء المصطنع: %1</translation>
 </message>
 <message>
 <source>API base URL</source>
@@ -6740,16 +6740,16 @@ Connection error message: </source>
 </message>
 <message>
 <source>AI model: %1</source>
-<translation type="unfinished">AI model: %1</translation>
+<translation>نموذج الذكاء المصطنع: %1</translation>
 </message>
 <message>
 <source>Test</source>
 <comment>verb</comment>
-<translation type="unfinished">Test</translation>
+<translation>اختبر</translation>
 </message>
 <message>
 <source>Test connection to %1 (%2)</source>
-<translation type="unfinished">Test connection to %1 (%2)</translation>
+<translation>اختبر الاتصال مع خدمة %1 (نموذج %2)</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>

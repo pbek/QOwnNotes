@@ -5609,7 +5609,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
-<translation type="unfinished">Test connection</translation>
+<translation>Tester la connexion</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
@@ -6541,11 +6541,11 @@ Le message d'erreur de connexion est : </translation>
 <message>
 <source>Test</source>
 <comment>verb</comment>
-<translation type="unfinished">Test</translation>
+<translation>Tester</translation>
 </message>
 <message>
 <source>Test connection to %1 (%2)</source>
-<translation type="unfinished">Test connection to %1 (%2)</translation>
+<translation>Tester la connexion à %1 (%2)</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
