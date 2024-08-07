@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 project(QOwnNotes)
 
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+
 # BEGIN options
 option(QON_QT6_BUILD "Build QOwnNotes with Qt6" OFF)
 # END options
