@@ -472,7 +472,6 @@ list(APPEND SOURCE_FILES
     libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/xmlparser.cxx
     libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/xmlparser.hxx
 )
-endif()
 
 # Translation files
 SET(QON_TS_FILES
