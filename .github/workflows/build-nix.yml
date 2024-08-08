@@ -1,0 +1,37 @@
+name: 🏗️ Build QOwnNotes for Nix
+
+on:
+  push:
+    branches-ignore:
+      - release
+    tags-ignore:
+      - '*'
+    paths:
+      - 'src/**'
+      - 'default.nix'
+      - 'build-systems/nix/**'
+      - '.github/workflows/build-test.yml'
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'default.nix'
+      - 'build-systems/nix/**'
+      - '.github/workflows/build-test.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        make-step: ['nix-build', 'nix-build-cmake-qt5']
+    steps:
+      - name: ⚙️ Install Nix
+        uses: cachix/install-nix-action@v20
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+      - name: 🧰 Checkout code
+        uses: actions/checkout@v3
+      - name: 🚧 Build nix package
+        run: make ${{ matrix.make-step }}
