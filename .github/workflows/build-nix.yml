@@ -32,6 +32,8 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixos-unstable
       - name: 🧰 Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - name: 🚧 Build nix package
         run: make ${{ matrix.make-step }}
