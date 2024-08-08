@@ -4,7 +4,7 @@
     nativeBuildInputs = with pkgs; with qt6; [
       gnumake
       crowdin-cli
-      cmakeWithGui
+      cmake
       qmake
       qttools
       wrapQtAppsHook
