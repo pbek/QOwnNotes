@@ -54,12 +54,12 @@ stdenv.mkDerivation {
   ];
 
   postInstall = ''
-    installShellCompletion --cmd ${appname} \
-      --bash <(xvfb-run $out/bin/${appname} --completion bash) \
-      --fish <(xvfb-run $out/bin/${appname} --completion fish)
-    installShellCompletion --cmd ${pname} \
-      --bash <(xvfb-run $out/bin/${appname} --completion bash) \
-      --fish <(xvfb-run $out/bin/${appname} --completion fish)
+#    installShellCompletion --cmd ${appname} \
+#      --bash <(xvfb-run $out/bin/${appname} --completion bash) \
+#      --fish <(xvfb-run $out/bin/${appname} --completion fish)
+#    installShellCompletion --cmd ${pname} \
+#      --bash <(xvfb-run $out/bin/${appname} --completion bash) \
+#      --fish <(xvfb-run $out/bin/${appname} --completion fish)
   ''
   # Create a lowercase symlink for Linux
   + lib.optionalString stdenv.isLinux ''
