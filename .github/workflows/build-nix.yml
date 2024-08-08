@@ -21,6 +21,7 @@ on:
 
 jobs:
   build:
+    name: 🏗️ Build ${{ matrix.make-step }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
