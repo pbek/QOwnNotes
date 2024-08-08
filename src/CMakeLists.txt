@@ -5,6 +5,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 # BEGIN options
 option(QON_QT6_BUILD "Build QOwnNotes with Qt6" OFF)
+option(DEV_MODE "Build QOwnNotes in developer mode" OFF)
 # END options
 
 if (QON_QT6_BUILD)
@@ -27,11 +28,6 @@ include_directories(libraries/sonnet/src/core)
 #some hunspell settings for windows
 include(libraries/sonnet/src/plugins/hunspell/hunspell/CMakeLists.txt)
 
-# noneed for md2html
-set(BUILD_MD2HTML_EXECUTABLE FALSE)
-set(BUILD_SHARED_LIBS OFF)
-add_subdirectory(libraries/md4c EXCLUDE_FROM_ALL)
-
 add_executable(QOwnNotes "")
 
 if (CMAKE_BUILD_TYPE MATCHES Debug)
@@ -49,7 +45,7 @@ set_target_properties(QOwnNotes PROPERTIES
     AUTORCC ON
 )
 
-if (UNIX)
+if (UNIX AND DEV_MODE)
     if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
         target_compile_options(QOwnNotes PRIVATE
             -Wall -Wextra -pedantic -Wno-gnu-zero-variadic-macro-arguments -Wno-error=deprecated-declarations
@@ -475,6 +471,13 @@ list(APPEND SOURCE_FILES
     libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/xmlparser.hxx
 )
 
+# md4c
+list(APPEND SOURCE_FILES
+    libraries/md4c/src/md4c.c
+    libraries/md4c/src/md4c-html.c
+    libraries/md4c/src/entity.c
+)
+
 # Translation files
 SET(QON_TS_FILES
     languages/QOwnNotes_en.ts
@@ -573,7 +576,6 @@ target_link_libraries(QOwnNotes PRIVATE
     Botan::Botan
     fakevim
     Google::DiffMatchPatch
-    md4c-html
 )
 
 if (USE_QLITEHTML)
