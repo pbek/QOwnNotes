@@ -164,7 +164,7 @@ jobs:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
         arch: win64_mingw
-        modules: qtwebsockets qt5compat
+        modules: qtwebsockets
         cache: true
     - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && matrix.qt-version != '6.2.4'
       name: Install Qt 6 on Windows
@@ -173,7 +173,7 @@ jobs:
         aqtversion: '==2.1.*'
         version: ${{ matrix.qt-version }}
         arch: win64_mingw
-        modules: qtwebsockets qt5compat
+        modules: qtwebsockets
         cache: true
     - if: false == contains( matrix.os, 'windows') && false == startsWith( matrix.qt-version, '6.' )
       name: Install Qt < 6 on Linux/macOS
@@ -188,7 +188,7 @@ jobs:
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
-        modules: qtwebsockets qt5compat
+        modules: qtwebsockets
         cache: true
 
       #

@@ -35,7 +35,7 @@ env:
   QMAKE_PROJECT: "QOwnNotes.pro"
   PUBLISHER: "Patrizio Bekerle"
   REPO_DIR: "/home/runner/work/QOwnNotes"
-  QT_MODULES: "qtwebsockets qt5compat"
+  QT_MODULES: "qtwebsockets"
   QMAKE: qmake6
   CORES: 16
 

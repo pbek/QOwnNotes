@@ -28,7 +28,6 @@
       qtwebsockets
       qtdeclarative
       qtsvg
-      qt5compat
       botan2
     ];
 
