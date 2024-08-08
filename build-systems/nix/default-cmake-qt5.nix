@@ -26,7 +26,7 @@ in
 stdenv.mkDerivation {
   inherit pname appname version;
 
-  src = builtins.path { path = ./src; name = "qownnotes"; };
+  src = builtins.path { path = ../../src; name = "qownnotes"; };
 
   nativeBuildInputs = [
     cmake
