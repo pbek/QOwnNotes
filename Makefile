@@ -16,6 +16,9 @@ translations-update-files:
 nix-build:
 	nix-build -E '((import <nixpkgs> {}).qt6Packages.callPackage (import ./default.nix) { })'
 
+nix-build-cmake-qt5:
+	nix-build -E '((import <nixpkgs> {}).libsForQt5.callPackage (import ./build-systems/nix/default-cmake-qt5.nix) { })'
+
 nix-build-qt5:
 	nix build '.?submodules=1#qownnotes-qt5'
 
