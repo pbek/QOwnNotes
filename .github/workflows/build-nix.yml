@@ -10,13 +10,13 @@ on:
       - 'src/**'
       - 'default.nix'
       - 'build-systems/nix/**'
-      - '.github/workflows/build-test.yml'
+      - '.github/workflows/build-nix.yml'
   pull_request:
     paths:
       - 'src/**'
       - 'default.nix'
       - 'build-systems/nix/**'
-      - '.github/workflows/build-test.yml'
+      - '.github/workflows/build-nix.yml'
   workflow_dispatch:
 
 jobs:
