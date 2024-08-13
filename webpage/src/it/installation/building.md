@@ -12,7 +12,7 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Per il debugging, la strada più facile è usando QtCreator. Oltre a scaricare [Qt Creator](https://www.qt.io/download-qt-installer-oss) avrai anche bisogno dei pacchetti `qtwebsockets` e `qt5compact` per fare il build di QOwnNotes con Qt6 (Altrimenti per Qt5 è sufficiente `qtwebsockets`). Se fai un build in Windows, cerca di usare *MinGw 64-bit*. Su linux, molto probabilmente, hai il pacchetto per QtCreator nella tua repository.
+Per il debugging, la strada più facile è usando QtCreator. When downloading [Qt Creator](https://www.qt.io/download-qt-installer-oss), you will also need the package `qtwebsockets` to build QOwnNotes with Qt6. Se fai un build in Windows, cerca di usare *MinGw 64-bit*. Su linux, molto probabilmente, hai il pacchetto per QtCreator nella tua repository.
 
 Successivamente apri il file del progetto `src/QOwnNotes.pro` e clicca su **Build**/**Build Project QOwnNotes**.
 

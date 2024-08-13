@@ -7789,6 +7789,12 @@ This cannot be undone!</source>
 <numerusform>Bookmark deleted from %n note(s)</numerusform>
 </translation>
 </message>
+<message numerus="yes">
+<source>Bookmark edited in %n note(s)</source>
+<translation type="unfinished">
+<numerusform>Bookmark edited in %n note(s)</numerusform>
+</translation>
+</message>
 <message>
 <source>%1 was disconnected from QOwnNotes server</source>
 <translation>%1 已從 QOwnNotes 伺服器中斷連線</translation>

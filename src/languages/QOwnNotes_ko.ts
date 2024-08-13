@@ -7777,6 +7777,12 @@ This cannot be undone!</source>
 <numerusform>%n개의 노트에서 북마크 삭제</numerusform>
 </translation>
 </message>
+<message numerus="yes">
+<source>Bookmark edited in %n note(s)</source>
+<translation type="unfinished">
+<numerusform>Bookmark edited in %n note(s)</numerusform>
+</translation>
+</message>
 <message>
 <source>%1 was disconnected from QOwnNotes server</source>
 <translation>%1이(가) QOownNotes 서버에서 연결이 끊어졌습니다</translation>

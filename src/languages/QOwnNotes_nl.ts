@@ -7822,6 +7822,13 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 <numerusform>Bladwijzer verwijderd van %n notities</numerusform>
 </translation>
 </message>
+<message numerus="yes">
+<source>Bookmark edited in %n note(s)</source>
+<translation>
+<numerusform>Bladwijzer bewerkt in %n notitie(s)</numerusform>
+<numerusform>Bladwijzer bewerkt in %n notities</numerusform>
+</translation>
+</message>
 <message>
 <source>%1 was disconnected from QOwnNotes server</source>
 <translation>%1 was losgekoppeld van de QOwnNotes-server</translation>

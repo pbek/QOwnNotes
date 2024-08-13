@@ -7941,6 +7941,15 @@ Tai negali būti anuliuota!</translation>
 <numerusform>Bookmark deleted from %n note(s)</numerusform>
 </translation>
 </message>
+<message numerus="yes">
+<source>Bookmark edited in %n note(s)</source>
+<translation type="unfinished">
+<numerusform>Bookmark edited in %n note(s)</numerusform>
+<numerusform>Bookmark edited in %n note(s)</numerusform>
+<numerusform>Bookmark edited in %n note(s)</numerusform>
+<numerusform>Bookmark edited in %n note(s)</numerusform>
+</translation>
+</message>
 <message>
 <source>%1 was disconnected from QOwnNotes server</source>
 <translation>%1 buvo atjungtas nuo QOwnNotes serverio</translation>

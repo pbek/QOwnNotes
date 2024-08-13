@@ -6,6 +6,7 @@
 - Support was added for the **QOwnNotes Web Companion browser extension**
   to also allow editing of markdown line bookmarks
   (for [#65](https://github.com/qownnotes/web-companion/issues/65))
+- Added more Dutch translation (thank you, stephanp)
 
 ## 24.8.4
 - The AppImage release was fixed after a linuxdeploy issue

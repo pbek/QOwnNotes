@@ -7786,6 +7786,12 @@ Ka taea e koe te whakahoki tonu i te tuhipoka me ona waahanga a muri ake nei. &l
 <numerusform>Bookmark deleted from %n note(s)</numerusform>
 </translation>
 </message>
+<message numerus="yes">
+<source>Bookmark edited in %n note(s)</source>
+<translation type="unfinished">
+<numerusform>Bookmark edited in %n note(s)</numerusform>
+</translation>
+</message>
 <message>
 <source>%1 was disconnected from QOwnNotes server</source>
 <translation>Kua katihia te %1 mai i te kaiwhakarato QOwnNotes</translation>
