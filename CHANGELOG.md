@@ -3,6 +3,10 @@
 ## 24.8.5
 - The CMake build process was adapted to be production ready and to be used in Nix
   (for [#3076](https://github.com/pbek/QOwnNotes/issues/3076))
+- Support was added for the **QOwnNotes Web Companion browser extension**
+  to also allow editing of markdown line bookmarks
+  (for [#65](https://github.com/qownnotes/web-companion/issues/65))
+
 ## 24.8.4
 - The AppImage release was fixed after a linuxdeploy issue
   (for [#3073](https://github.com/pbek/QOwnNotes/issues/3073))

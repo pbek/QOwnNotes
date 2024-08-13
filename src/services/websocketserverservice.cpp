@@ -282,8 +282,19 @@ void WebSocketServerService::processMessage(const QString &message) {
 
         // Reload current note in case the bookmark was deleted from the current note
         mainWindow->reloadCurrentNoteByNoteId(true);
-#ifndef INTEGRATION_TESTS
-#endif
+    } else if (type == QLatin1String("editBookmark")) {
+        MainWindow *mainWindow = MainWindow::instance();
+        if (mainWindow == nullptr) {
+            return;
+        }
+
+        const int noteCount = editBookmark(jsonObject);
+
+        pSender->sendTextMessage(
+            flashMessageJsonText(tr("Bookmark edited in %n note(s)", "", noteCount)));
+
+        // Reload current note in case the bookmark was edited in the current note
+        mainWindow->reloadCurrentNoteByNoteId(true);
     } else {
         QJsonObject resultObject;
         resultObject.insert(QStringLiteral("type"), QJsonValue::fromVariant("unknownMessage"));
@@ -391,6 +402,64 @@ int WebSocketServerService::deleteBookmark(const QJsonObject &jsonObject) {
 
         if (textBefore != textAfter) {
             //            note.setDecryptedNoteText(textAfter);
+            mainWindow->allowNoteEditing();
+            mainWindow->activeNoteTextEdit()->setPlainText(textAfter);
+            noteCount++;
+
+            auto note = mainWindow->getCurrentNote();
+            if (note.hasEncryptedNoteText()) {
+                mainWindow->editEncryptedNoteAsync();
+            }
+        }
+    }
+
+    return noteCount;
+}
+
+/**
+ * Edits a bookmark (as Markdown) in all notes tagged as bookmarks
+ *
+ * @param jsonObject
+ * @return
+ */
+int WebSocketServerService::editBookmark(const QJsonObject &jsonObject) {
+    // Get the "data" object first
+    QJsonObject dataObject = jsonObject.value("data").toObject();
+
+    // Get the "markdown" attribute from the "data" object
+    QString markdown = dataObject.value("markdown").toString().trimmed();
+    QString newMarkdown = dataObject.value("newMarkdown").toString().trimmed();
+
+    if (markdown.isEmpty() || newMarkdown.isEmpty()) {
+        return 0;
+    }
+
+    // Search for the Markdown text in all notes with the "bookmarks" tag
+    Tag tag = Tag::fetchByName(getBookmarksTag());
+    QVector<Note> noteList = tag.fetchAllLinkedNotes();
+    int noteCount = 0;
+
+    for (Note &note : noteList) {
+        auto noteText = note.getNoteText();
+        if (noteText.contains(markdown)) {
+            // Replace the bookmark in the note (try "\n" and without "\n")
+            noteText.replace(markdown + QStringLiteral("\n"), newMarkdown + QStringLiteral("\n"));
+            note.setNoteText(noteText);
+            note.store();
+            note.storeNoteTextFileToDisk();
+            noteCount++;
+        }
+    }
+
+    // Replace the Markdown text in the current note
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != nullptr) {
+        auto textBefore = mainWindow->activeNoteTextEdit()->toPlainText();
+        auto textAfter = textBefore;
+        // Replace the bookmark in the note (try "\n" and without "\n")
+        textAfter.replace(markdown + QStringLiteral("\n"), newMarkdown + QStringLiteral("\n"));
+
+        if (textBefore != textAfter) {
             mainWindow->allowNoteEditing();
             mainWindow->activeNoteTextEdit()->setPlainText(textAfter);
             noteCount++;

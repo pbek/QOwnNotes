@@ -51,6 +51,8 @@ class WebSocketServerService : public QObject {
 
     static int deleteBookmark(const QJsonObject &jsonObject);
 
+    static int editBookmark(const QJsonObject &jsonObject);
+
    private slots:
     void onNewConnection();
     void processMessage(const QString &message);
