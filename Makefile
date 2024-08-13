@@ -61,10 +61,10 @@ link-check:
 	lychee './**/*.md'
 
 git-apply-qownnotes-patch:
-	git apply ~/Nextcloud/Transfer/qownnotes.patch
+	git apply ${TRANSFER_DIR}/qownnotes.patch
 
 git-apply-qmarkdowntextedit-patch:
-	cd ./src/libraries/qmarkdowntextedit && git apply ~/Nextcloud/Transfer/qmarkdowntextedit.patch
+	cd ./src/libraries/qmarkdowntextedit && git apply ${TRANSFER_DIR}/qmarkdowntextedit.patch
 
 git-create-patch:
 	@echo "TRANSFER_DIR: ${TRANSFER_DIR}"; \
