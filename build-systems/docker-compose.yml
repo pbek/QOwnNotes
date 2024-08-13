@@ -6,18 +6,19 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - ..:/QOwnNotes
       # doesn't work out of the box with CryFS, see https://stackoverflow.com/a/67108158/1581487
-      - ../secrets/.oscrc:/home/release/.oscrc
-      - ../secrets/.dput.cf:/home/release/.dput.cf:ro
-      - ../secrets/github_rsa:/home/release/.ssh/id_rsa:ro
-      - ../secrets/github_rsa.pub:/home/release/.ssh/id_rsa.pub:ro
-      - ../secrets/aur_rsa:/home/release/.ssh/aur_rsa:ro
-      - ../secrets/aur_rsa.pub:/home/release/.ssh/aur_rsa.pub:ro
-      - ../secrets/known_hosts:/home/release/.ssh/known_hosts
-      - ../secrets/known_hosts.old:/home/release/.ssh/known_hosts.old
-      - ../secrets/private.pgp:/home/release/private.pgp
-      - ../secrets/hosts.yml:/home/release/.config/gh/hosts.yml
-#      - ../secrets/id_rsa:/home/release/.ssh/id_rsa:ro
-#      - ../secrets/id_rsa.pub:/home/release/.ssh/id_rsa.pub:ro
+      - ../secrets/.oscrc:/home/ubuntu/.oscrc
+      - ../secrets/.dput.cf:/home/ubuntu/.dput.cf:ro
+      - ../secrets/github_rsa:/home/ubuntu/.ssh/id_rsa:ro
+      - ../secrets/github_rsa.pub:/home/ubuntu/.ssh/id_rsa.pub:ro
+      - ../secrets/aur_rsa:/home/ubuntu/.ssh/aur_rsa:ro
+      - ../secrets/aur_rsa.pub:/home/ubuntu/.ssh/aur_rsa.pub:ro
+      - ../secrets/known_hosts:/home/ubuntu/.ssh/known_hosts
+      - ../secrets/known_hosts.old:/home/ubuntu/.ssh/known_hosts.old
+      - ../secrets/private.pgp:/home/ubuntu/private.pgp
+      - ../secrets/gh/hosts.yml:/home/ubuntu/.config/gh/hosts.yml
+      - ../secrets/gh/config.yml:/home/ubuntu/.config/gh/config.yml
+#      - ../secrets/id_rsa:/home/ubuntu/.ssh/id_rsa:ro
+#      - ../secrets/id_rsa.pub:/home/ubuntu/.ssh/id_rsa.pub:ro
     # fakeroot became terribly slow
     # this helped: https://github.com/moby/moby/issues/45436#issuecomment-1528445371
     ulimits:
