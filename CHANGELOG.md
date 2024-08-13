@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 24.8.5
+- The CMake build process was adapted to be production ready and to be used in Nix
+  (for [#3076](https://github.com/pbek/QOwnNotes/issues/3076))
 ## 24.8.4
 - The AppImage release was fixed after a linuxdeploy issue
   (for [#3073](https://github.com/pbek/QOwnNotes/issues/3073))
