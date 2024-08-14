@@ -46,9 +46,7 @@ stdenv.mkDerivation {
 
   cmakeFlags = [
     "-DQON_QT6_BUILD=ON"
-    "-DUSE_SYSTEM_BOTAN=1"
     "-DBUILD_WITH_SYSTEM_BOTAN=ON"
-    "-DQT_TRANSLATIONS_DIR=./translations"
   ];
 
   postInstall = ''
