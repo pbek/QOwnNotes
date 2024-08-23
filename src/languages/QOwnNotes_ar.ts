@@ -8036,13 +8036,13 @@ This cannot be undone!</source>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
+<translation>
+<numerusform>عدّلت الإشارة المرجعية من %n ملاحظة</numerusform>
+<numerusform>عدّلت الإشارة المرجعية من %n ملاحظة</numerusform>
+<numerusform>عدّلت الإشارة المرجعية من %n ملاحظتين</numerusform>
+<numerusform>عدّلت الإشارة المرجعية من %n ملاحظات</numerusform>
+<numerusform>عدّلت الإشارة المرجعية من %n ملاحظة</numerusform>
+<numerusform>عدّلت الإشارة المرجعية من %n ملاحظة</numerusform>
 </translation>
 </message>
 <message>

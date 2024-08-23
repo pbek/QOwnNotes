@@ -2,9 +2,9 @@
 
 ## البناء من GitHub
 
-يمكنك كذلك بناء QOwnNotes بنفسك من الكود المصدري.
+يمكنك كذلك بناء QOwnNotes بنفسك من المصدر البرمجي.
 
-استنسخ الكود مباشرةً من مستودع git:
+استنسخ المصدر مباشرةً من مستودع جت:
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b release
@@ -12,7 +12,7 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-للتنقيح، من الأسهل استعمال QtCreator. When downloading [Qt Creator](https://www.qt.io/download-qt-installer-oss), you will also need the package `qtwebsockets` to build QOwnNotes with Qt6. وإذا كنت تبني على ويندوز، ربما تفضل البقاء مع *MinGw 64-bit*. على لينكس، غالبا ستجد QtCreator في مستودعات توزيعتك.
+للتنقيح، من الأسهل استعمال QtCreator. عند تنزيل [Qt Creator](https://www.qt.io/download-qt-installer-oss)، ستحتاج كذلك إلى حزمة `qtwebsockets` لبناء QOwnNotes على Qt6. وإذا كنت تبني على ويندوز، ربما تفضل البقاء مع *MinGw 64-bit*. على لينكس، غالبا ستجد QtCreator في مستودعات توزيعتك.
 
 بعدئذٍ، افتح ملف المشروع `src/QOwnNotes.pro` وانقر على **Build** ثم **Build Project QOwnNotes**.
 
@@ -34,12 +34,12 @@ make
 قم بزيارة [QOwnNotes على GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-إذا أردت المساهمة في المشروع بكود مصدري، برجاء عمل طلبات السحب على فرع `main`.
+إذا أردت المساهمة في المشروع بمصدر برمجي، نرجو إنشاء طلبات الجذب إلى الفرع `main`.
 :::
 
-## ملفات الكود المصدري المضغوطة
+## ملفات المصدر البرمجي المضغوطة
 
-يمكنك العثور على الملفات المضغوطة لكود QOwnNotes المصدري في [أرشيف مصادر QOwnNotes](https://github.com/pbek/QOwnNotes/releases).
+يمكنك العثور على الملفات المضغوطة لمصدر QOwnNotes في [أرشيف مصادر QOwnNotes](https://github.com/pbek/QOwnNotes/releases).
 
 يمكن الوصول إلى الملفات المضغوطة للكود المصدري برابط مثل هذا:
 

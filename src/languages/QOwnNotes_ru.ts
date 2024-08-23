@@ -586,7 +586,7 @@
 </message>
 <message>
 <source>Number of imported notes</source>
-<translation type="unfinished">Number of imported notes</translation>
+<translation>Количество импортированных заметок</translation>
 </message>
 <message>
 <source>Select file</source>
@@ -622,11 +622,11 @@
 </message>
 <message>
 <source>Invalid XML!</source>
-<translation type="unfinished">Invalid XML!</translation>
+<translation>Недопустимый XML!</translation>
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+<translation>В заметке &lt;b&gt;%1&lt;/b&gt; обнаружен недопустимый XML! На данном этапе возможна остановка импорта.</translation>
 </message>
 <message>
 <source>Basic attributes</source>
@@ -713,127 +713,127 @@
 <name>FakeVim</name>
 <message>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>Использовать FakeVim</translation>
 </message>
 <message>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished">Read .vimrc from location:</translation>
+<translation>Выполнить чтение .vimrc по следующему адресу:</translation>
 </message>
 <message>
 <source>Show position of text marks</source>
-<translation type="unfinished">Show position of text marks</translation>
+<translation>Показывать положение меток текста</translation>
 </message>
 <message>
 <source>Pass control keys</source>
-<translation type="unfinished">Pass control keys</translation>
+<translation>Передавать нажатия клавиш управления</translation>
 </message>
 <message>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished">Pass keys in insert mode</translation>
+<translation>Передавать нажатия клавиш в режиме вставки</translation>
 </message>
 <message>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>Начало строки</translation>
 </message>
 <message>
 <source>Tabulator size:</source>
-<translation type="unfinished">Tabulator size:</translation>
+<translation>Размер табулятора:</translation>
 </message>
 <message>
 <source>Smart tabulators</source>
-<translation type="unfinished">Smart tabulators</translation>
+<translation>Интеллектуальные табуляторы</translation>
 </message>
 <message>
 <source>Highlight search results</source>
-<translation type="unfinished">Highlight search results</translation>
+<translation>Выделять результаты поиска</translation>
 </message>
 <message>
 <source>Shift width:</source>
-<translation type="unfinished">Shift width:</translation>
+<translation>Ширина сдвига:</translation>
 </message>
 <message>
 <source>Expand tabulators</source>
-<translation type="unfinished">Expand tabulators</translation>
+<translation>Разворачивать табуляторы</translation>
 </message>
 <message>
 <source>Automatic indentation</source>
-<translation type="unfinished">Automatic indentation</translation>
+<translation>Автоматическая расстановка отступов</translation>
 </message>
 <message>
 <source>Incremental search</source>
-<translation type="unfinished">Incremental search</translation>
+<translation>Инкрементный поиск</translation>
 </message>
 <message>
 <source>Use search dialog</source>
-<translation type="unfinished">Use search dialog</translation>
+<translation>Использовать диалог поиска</translation>
 </message>
 <message>
 <source>Use smartcase</source>
-<translation type="unfinished">Use smartcase</translation>
+<translation>Использовать smartcase</translation>
 </message>
 <message>
 <source>Use ignorecase</source>
-<translation type="unfinished">Use ignorecase</translation>
+<translation>Использовать ignorecase</translation>
 </message>
 <message>
 <source>Use wrapscan</source>
-<translation type="unfinished">Use wrapscan</translation>
+<translation>Использовать wrapscan</translation>
 </message>
 <message>
 <source>Use tildeop</source>
-<translation type="unfinished">Use tildeop</translation>
+<translation>Использовать tildeop</translation>
 </message>
 <message>
 <source>Show partial command</source>
-<translation type="unfinished">Show partial command</translation>
+<translation>Показывать частично введённую команду</translation>
 </message>
 <message>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>Показывать номера строк относительно курсора</translation>
 </message>
 <message>
 <source>Blinking cursor</source>
-<translation type="unfinished">Blinking cursor</translation>
+<translation>Мигающий курсор</translation>
 </message>
 <message>
 <source>Scroll offset:</source>
-<translation type="unfinished">Scroll offset:</translation>
+<translation>Смещение прокрутки:</translation>
 </message>
 <message>
 <source>Backspace:</source>
-<translation type="unfinished">Backspace:</translation>
+<translation>Backspace:</translation>
 </message>
 <message>
 <source>Keyword characters:</source>
-<translation type="unfinished">Keyword characters:</translation>
+<translation>Символы ключевых слов:</translation>
 </message>
 <message>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished">Use Vim-style Editing</translation>
+<translation>Использовать редактирование в стиле Vim</translation>
 </message>
 <message>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>Отображает номера строк относительно строки, содержащей текстовый курсор.</translation>
 </message>
 <message>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
+<translation>Не интерпретирует такие последовательности нажатия клавиш, как Ctrl-S в FakeVim, а обрабатывает их как обычные сочетания клавиш. Это упрощает доступ к основным функциям ценой потери некоторых возможностей FakeVim.</translation>
 </message>
 <message>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
+<translation>Не интерпретирует некоторые нажатия клавиш в режиме вставки, чтобы код можно было надлежащим образом завершить и развернуть.</translation>
 </message>
 <message>
 <source>Vim tabstop option.</source>
-<translation type="unfinished">Vim tabstop option.</translation>
+<translation>Опция tabstop Vim.</translation>
 </message>
 <message>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
+<translation>Оставьте пустым, чтобы использовать путь по умолчанию, т.е. %USERPROFILE%\_vimrc в Windows, ~/.vimrc в ином случае.</translation>
 </message>
 <message>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>По умолчанию: %1</translation>
 </message>
 <message>
 <source>Unknown option: %1</source>
@@ -865,7 +865,7 @@
 </message>
 <message>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>Наберите Meta-Shift-Y, Meta-Shift-Y, чтобы выйти из режима FakeVim.</translation>
 </message>
 <message>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
@@ -1060,7 +1060,7 @@
 </message>
 <message>
 <source>Font:</source>
-<translation type="unfinished">Font:</translation>
+<translation>Шрифт:</translation>
 </message>
 <message>
 <source>Share schema</source>
@@ -1112,7 +1112,7 @@
 </message>
 <message>
 <source>Underlined text</source>
-<translation type="unfinished">Underlined text</translation>
+<translation>Подчёркнутый текст</translation>
 </message>
 <message>
 <source>Link</source>
@@ -1234,7 +1234,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Копирование</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1253,15 +1253,15 @@
 <name>HtmlPreviewWidget</name>
 <message>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Копировать</translation>
 </message>
 <message>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>Копировать ссылку</translation>
 </message>
 <message>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>Сбросить масштаб</translation>
 </message>
 </context>
 <context>
@@ -1338,7 +1338,7 @@
 <name>JoplinImportDialog</name>
 <message>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Импорт из Joplin</translation>
 </message>
 <message>
 <source>Import folders</source>
@@ -1362,7 +1362,7 @@
 </message>
 <message>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Импорт заметок</translation>
 </message>
 <message>
 <source>Import tags</source>
@@ -1374,19 +1374,19 @@
 </message>
 <message>
 <source>Import metadata</source>
-<translation type="unfinished">Import metadata</translation>
+<translation>Импортировать метаданные</translation>
 </message>
 <message>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW — каталог экспорта Joplin</translation>
 </message>
 <message>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>Импортировать вложения</translation>
 </message>
 <message>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>Выберите "RAW — каталог экспорта Joplin" для импорта</translation>
 </message>
 </context>
 <context>
@@ -1410,7 +1410,7 @@
 </message>
 <message>
 <source>The application will be restarted afterward.</source>
-<translation type="unfinished">The application will be restarted afterward.</translation>
+<translation>После этого приложение будет перезапущено.</translation>
 </message>
 <message>
 <source>Minimal</source>
@@ -1497,7 +1497,7 @@
 </message>
 <message>
 <source>Search for a heading to link to</source>
-<translation type="unfinished">Search for a heading to link to</translation>
+<translation>Поиск целевого заголовка для ссылки</translation>
 </message>
 <message>
 <source>Enter the name of the link (optional)</source>
@@ -1870,7 +1870,7 @@
 </message>
 <message>
 <source>AI model</source>
-<translation type="unfinished">AI model</translation>
+<translation>Модель ИИ</translation>
 </message>
 <message>
 <source>To&amp;do</source>
@@ -1911,11 +1911,11 @@
 </message>
 <message>
 <source>&amp;Setup note folders / subfolders</source>
-<translation type="unfinished">&amp;Setup note folders / subfolders</translation>
+<translation>&amp;Настройка папок и подпапок заметок</translation>
 </message>
 <message>
 <source>Setup note folders / subfolders</source>
-<translation type="unfinished">Setup note folders / subfolders</translation>
+<translation>Настройка папок и подпапок заметок</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2316,39 +2316,39 @@
 </message>
 <message>
 <source>Toggle always-on-top mode</source>
-<translation type="unfinished">Toggle always-on-top mode</translation>
+<translation>Переключить режим «всегда поверх остальных окон»</translation>
 </message>
 <message>
 <source>&amp;Load Todo List items</source>
-<translation type="unfinished">&amp;Load Todo List items</translation>
+<translation>&amp;Загрузить пункты списка задач</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Вставить ссылку на карточку Nextcloud Deck</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Копировать абсолютный путь к заметке</translation>
 </message>
 <message>
 <source>Move up in subfolder list</source>
-<translation type="unfinished">Move up in subfolder list</translation>
+<translation>Вверх по списку подпапок</translation>
 </message>
 <message>
 <source>Move down in subfolder list</source>
-<translation type="unfinished">Move down in subfolder list</translation>
+<translation>Вниз по списку подпапок</translation>
 </message>
 <message>
 <source>Move up in tag list</source>
-<translation type="unfinished">Move up in tag list</translation>
+<translation>Вверх по списку тегов</translation>
 </message>
 <message>
 <source>Move down in tag list</source>
-<translation type="unfinished">Move down in tag list</translation>
+<translation>Вниз по списку тегов</translation>
 </message>
 <message>
 <source>Enable AI support</source>
-<translation type="unfinished">Enable AI support</translation>
+<translation>Включить поддержку ИИ</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2400,7 +2400,7 @@
 </message>
 <message>
 <source>&amp;Export note as Markdown file</source>
-<translation type="unfinished">&amp;Export note as Markdown file</translation>
+<translation>&amp;Экспорт заметки в формат Markdown</translation>
 </message>
 <message>
 <source>Move down in note list</source>
@@ -2697,7 +2697,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
-<translation type="unfinished">Inserted text as text attachment file</translation>
+<translation>Текст вставлен как файл текстового вложения</translation>
 </message>
 <message>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
@@ -3450,7 +3450,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Paste as &amp;text file attachment</source>
-<translation type="unfinished">Paste as &amp;text file attachment</translation>
+<translation>Вставить как вложение с &amp;текстовым файлом</translation>
 </message>
 <message>
 <source>Downloading images finished</source>
@@ -3496,70 +3496,70 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>NextcloudDeckDialog</name>
 <message>
 <source>-10min</source>
-<translation type="unfinished">-10min</translation>
+<translation>-10 мин</translation>
 </message>
 <message>
 <source>+10min</source>
-<translation type="unfinished">+10min</translation>
+<translation>+10 мин</translation>
 </message>
 <message>
 <source>+1d</source>
-<translation type="unfinished">+1d</translation>
+<translation>+1 д</translation>
 </message>
 <message>
 <source>-1d</source>
-<translation type="unfinished">-1d</translation>
+<translation>-1 д</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Вставить ссылку на карточку Nextcloud Deck</translation>
 </message>
 <message>
 <source>Create card and insert link into current note</source>
-<translation type="unfinished">Create card and insert link into current note</translation>
+<translation>Создать карточку и вставить ссылку в текущую заметку</translation>
 </message>
 <message>
 <source>&amp;Save</source>
-<translation type="unfinished">&amp;Save</translation>
+<translation>&amp;Сохранить</translation>
 </message>
 <message>
 <source>+1h</source>
-<translation type="unfinished">+1h</translation>
+<translation>+1 ч</translation>
 </message>
 <message>
 <source>Title</source>
-<translation type="unfinished">Title</translation>
+<translation>Название</translation>
 </message>
 <message>
 <source>-1h</source>
-<translation type="unfinished">-1h</translation>
+<translation>-1 ч</translation>
 </message>
 <message>
 <source>Description:</source>
-<translation type="unfinished">Description:</translation>
+<translation>Описание:</translation>
 </message>
 <message>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Дата выполнения</translation>
 </message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Ошибка при создании карточки</translation>
 </message>
 <message>
 <source>Creating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating a card failed with status code %1 and message: %2</translation>
+<translation>Не удалось создать карточку, получены код состояния %1 и сообщение: %2</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
-<translation type="unfinished">Error while loading boards</translation>
+<translation>Ошибка при загрузке досок</translation>
 </message>
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
+<translation>Не удалось загрузить доски, получены код состояния %1 и сообщение: %2</translation>
 </message>
 </context>
 <context>
@@ -3616,11 +3616,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
-<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+<translation>Относительный путь к заметке, щёлкните правой кнопкой для открытия контекстного меню</translation>
 </message>
 <message>
 <source>Absolute path of note, right-click to open context menu</source>
-<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+<translation>Абсолютный путь к заметке, щёлкните правой кнопкой для открытия контекстного меню</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
@@ -4185,15 +4185,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Export</source>
-<translation type="unfinished">Export</translation>
+<translation>Экспорт</translation>
 </message>
 <message>
 <source>Export selected text as PDF</source>
-<translation type="unfinished">Export selected text as PDF</translation>
+<translation>Экспорт выделенного текста в PDF</translation>
 </message>
 <message>
 <source>Export selected text as PDF (preview)</source>
-<translation type="unfinished">Export selected text as PDF (preview)</translation>
+<translation>Экспорт выделенного текста в PDF (просмотр)</translation>
 </message>
 <message>
 <source>Custom actions</source>

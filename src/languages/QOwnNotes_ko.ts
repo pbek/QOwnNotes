@@ -7779,8 +7779,8 @@ This cannot be undone!</source>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark edited in %n note(s)</numerusform>
+<translation>
+<numerusform>%n 노트로 편집된 북마크</numerusform>
 </translation>
 </message>
 <message>
