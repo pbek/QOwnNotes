@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 24.8.6
+- Added a **new editor color schema** *Everforest Hard Dark* by @eburakova
+  (for [#3088](https://github.com/pbek/QOwnNotes/issues/3088))
+- Added a **new editor color schema** *Everforest Hard Light* by @eburakova
+  (for [#3089](https://github.com/pbek/QOwnNotes/issues/3089))
 - There was a new release of the **QOwnNotes Web Companion browser extension** 2024.8.0
   - Bookmarks can now be edited in the bookmarks list (for [#65](https://github.com/qownnotes/web-companion/issues/65))
     - This feature needs QOwnNotes 24.8.5 or higher
