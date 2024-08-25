@@ -15,34 +15,7 @@ if(TARGET Botan2::Botan2)
 endif()
 
 find_package(PkgConfig REQUIRED QUIET)
-find_package(PackageHandleStandardArgs REQUIRED QUIET)
 
+pkg_check_modules(Botan2 REQUIRED IMPORTED_TARGET botan-2)
 
-pkg_check_modules(Botan2
-    botan-2
-)
-
-find_library(Botan2_FullLibraryPath
-    ${Botan2_LIBRARIES}
-    PATHS ${Botan2_LIBRARY_DIRS}
-    NO_DEFAULT_PATH
-)
-
-find_package_handle_standard_args(Botan2
-    REQUIRED_VARS Botan2_LIBRARIES Botan2_INCLUDE_DIRS
-    VERSION_VAR Botan2_VERSION
-)
-message("Botan2_INCLUDE_DIRS ${Botan2_INCLUDE_DIRS}")
-
-if(Botan2_FOUND)
-    if(NOT TARGET Botan2::Botan2)
-        add_library(Botan2::Botan2
-            UNKNOWN IMPORTED GLOBAL
-        )
-        set_target_properties(Botan2::Botan2 PROPERTIES
-            INTERFACE_INCLUDE_DIRECTORIES ${Botan2_INCLUDE_DIRS}
-            IMPORTED_LOCATION ${Botan2_FullLibraryPath}
-            LINK_FLAGS ${Botan2_LDFLAGS_OTHER}
-        )
-    endif()
-endif()
+add_library(Botan2::Botan2 ALIAS PkgConfig::Botan2)
