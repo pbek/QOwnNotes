@@ -16,6 +16,10 @@ translations-update-files:
 nix-build:
 	nix-build -E '((import <nixpkgs> {}).qt6Packages.callPackage (import ./default.nix) { })'
 
+# Throws errors while building Qt6
+nix-build-aarch64:
+	nix-build -E '((import <nixpkgs> {}).pkgsCross.aarch64-multiplatform.qt6Packages.callPackage (import ./default.nix) { })'
+
 nix-build-cmake-qt5:
 	nix-build -E '((import <nixpkgs> {}).libsForQt5.callPackage (import ./build-systems/nix/default-cmake-qt5.nix) { })'
 
