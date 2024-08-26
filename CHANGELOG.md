@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## Next
+- The aarch64 CMake build process was fixed (for [#3076](https://github.com/pbek/QOwnNotes/issues/3076))
+
 ## 24.8.6
 - Added a **new editor color schema** *Everforest Hard Dark* by @eburakova
   (for [#3088](https://github.com/pbek/QOwnNotes/issues/3088))
