@@ -4479,8 +4479,9 @@ void MainWindow::startNavigationParser() {
     if (ui->navigationWidget->isVisible()) {
         ui->navigationWidget->parse(activeNoteTextEdit()->document(),
                                     activeNoteTextEdit()->textCursor().position());
-    } else if (ui->backlinkWidget->isVisible())
+    } else if (ui->backlinkWidget->isVisible()) {
         ui->backlinkWidget->findBacklinks(currentNote);
+    }
 }
 
 /**

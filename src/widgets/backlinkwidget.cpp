@@ -12,15 +12,7 @@
  */
 
 #include "backlinkwidget.h"
-
-#include <libraries/qmarkdowntextedit/markdownhighlighter.h>
-
-#include <QDebug>
-#include <QRegularExpression>
-#include <QTextBlock>
-#include <QTextDocument>
 #include <QTreeWidgetItem>
-
 #include "entities/note.h"
 
 BacklinkWidget::BacklinkWidget(QWidget *parent) : QTreeWidget(parent) {

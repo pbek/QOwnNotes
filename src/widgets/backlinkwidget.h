@@ -18,7 +18,6 @@
 
 #include "entities/note.h"
 
-class QTextDocument;
 class QTreeWidgetItem;
 
 class BacklinkWidget : public QTreeWidget {
