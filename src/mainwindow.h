@@ -447,6 +447,8 @@ class MainWindow : public QMainWindow {
 
     void onNavigationWidgetPositionClicked(int position);
 
+    void onBacklinkWidgetNoteClicked(int noteId);
+
     void startNavigationParser();
 
     void onNoteTextViewResize(QSize size, QSize oldSize);
@@ -712,6 +714,8 @@ class MainWindow : public QMainWindow {
     void on_actionMove_down_in_tag_list_triggered();
 
     void on_actionEnable_AI_toggled(bool arg1);
+
+    void on_navigationTabWidget_currentChanged(int index);
 
    public:
     /** Settings access **/

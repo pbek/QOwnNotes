@@ -3382,6 +3382,29 @@ bool Note::handleNoteMoving(const Note &oldNote) {
     return noteIdList.contains(_id);
 }
 
+QList<Note> Note::findBacklinks() const {
+    const QVector<int> noteIdList = this->findLinkedNoteIds();
+    const int noteCount = noteIdList.count();
+
+    if (noteCount == 0) {
+        return {};
+    }
+
+    QList<Note> notes;
+
+    for (const int noteId : noteIdList) {
+        const Note linkedNote = Note::fetch(noteId);
+
+        if (!linkedNote.isFetched()) {
+            continue;
+        }
+
+        notes << linkedNote;
+    }
+
+    return notes;
+}
+
 /**
  * Creates a note headline from a name
  *

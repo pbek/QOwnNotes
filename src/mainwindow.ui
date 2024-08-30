@@ -399,18 +399,81 @@
              </widget>
             </item>
             <item>
-             <widget class="NavigationWidget" name="navigationWidget">
-              <property name="frameShape">
-               <enum>QFrame::Shape::NoFrame</enum>
+             <widget class="QTabWidget" name="navigationTabWidget">
+              <property name="currentIndex">
+               <number>1</number>
               </property>
-              <attribute name="headerVisible">
-               <bool>false</bool>
-              </attribute>
-              <column>
-               <property name="text">
-                <string>Navigation</string>
-               </property>
-              </column>
+              <property name="documentMode">
+               <bool>true</bool>
+              </property>
+              <widget class="QWidget" name="navigationTab">
+               <attribute name="title">
+                <string>Headings</string>
+               </attribute>
+               <layout class="QGridLayout" name="gridLayout_3">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="NavigationWidget" name="navigationWidget">
+                  <property name="frameShape">
+                   <enum>QFrame::Shape::NoFrame</enum>
+                  </property>
+                  <attribute name="headerVisible">
+                   <bool>false</bool>
+                  </attribute>
+                  <column>
+                   <property name="text">
+                    <string>Navigation</string>
+                   </property>
+                  </column>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="backlinkTab">
+               <attribute name="title">
+                <string>Backlinks</string>
+               </attribute>
+               <layout class="QGridLayout" name="gridLayout_5">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="BacklinkWidget" name="backlinkWidget">
+                  <property name="frameShape">
+                   <enum>QFrame::Shape::NoFrame</enum>
+                  </property>
+                  <attribute name="headerVisible">
+                   <bool>false</bool>
+                  </attribute>
+                  <column>
+                   <property name="text">
+                    <string>Navigation</string>
+                   </property>
+                  </column>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
              </widget>
             </item>
            </layout>
@@ -2796,6 +2859,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <class>NavigationWidget</class>
    <extends>QTreeWidget</extends>
    <header location="global">widgets/navigationwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>BacklinkWidget</class>
+   <extends>QTreeWidget</extends>
+   <header location="global">widgets/backlinkwidget.h</header>
   </customwidget>
   <customwidget>
    <class>NotePreviewWidget</class>

@@ -177,6 +177,7 @@ SOURCES += main.cpp\
     dialogs/issueassistantdialog.cpp \
     dialogs/tagadddialog.cpp \
     widgets/navigationwidget.cpp \
+    widgets/backlinkwidget.cpp \
     widgets/notepreviewwidget.cpp \
     api/noteapi.cpp \
     api/notesubfolderapi.cpp \
@@ -286,6 +287,7 @@ HEADERS  += mainwindow.h \
     dialogs/issueassistantdialog.h \
     dialogs/tagadddialog.h \
     widgets/navigationwidget.h \
+    widgets/backlinkwidget.h \
     widgets/notepreviewwidget.h \
     api/noteapi.h \
     api/notesubfolderapi.h \

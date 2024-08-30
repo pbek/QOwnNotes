@@ -346,6 +346,8 @@ set(SOURCE_FILES
     widgets/qownnotesmarkdowntextedit.h
     widgets/navigationwidget.cpp
     widgets/navigationwidget.h
+    widgets/backlinkwidget.cpp
+    widgets/backlinkwidget.h
     widgets/notepreviewwidget.cpp
     widgets/notepreviewwidget.h
     widgets/combobox.cpp

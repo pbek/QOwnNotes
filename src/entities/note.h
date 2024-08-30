@@ -360,6 +360,8 @@ class Note {
 
     static bool applyIgnoredNotesSetting(QStringList &fileNames);
 
+    QList<Note> findBacklinks() const;
+
    protected:
     int _id;
     int _noteSubFolderId;

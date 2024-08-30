@@ -439,6 +439,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // act on position clicks in the navigation widget
     connect(ui->navigationWidget, &NavigationWidget::positionClicked, this,
             &MainWindow::onNavigationWidgetPositionClicked);
+    connect(ui->backlinkWidget, &BacklinkWidget::noteClicked, this,
+            &MainWindow::onBacklinkWidgetNoteClicked);
 
     // reloads all tasks from the ownCloud server
     reloadTodoLists();
@@ -1589,6 +1591,7 @@ void MainWindow::initStyling() {
     ui->noteListSubFrame->setStyleSheet(QString());
     ui->navigationFrame->setStyleSheet(QString());
     ui->noteEditTabWidget->setStyleSheet(QString());
+    ui->navigationTabWidget->setStyleSheet(QString());
     ui->noteViewFrame->setStyleSheet(QString());
 
     // add some margins in OS X to match the styling of the note list
@@ -2718,6 +2721,7 @@ void MainWindow::initTreeWidgetItemHeight() {
     updateTreeWidgetItemHeight(ui->noteTreeWidget, height);
     updateTreeWidgetItemHeight(ui->noteSubFolderTreeWidget, height);
     updateTreeWidgetItemHeight(ui->navigationWidget, height);
+    updateTreeWidgetItemHeight(ui->backlinkWidget, height);
 }
 
 /**
@@ -4470,9 +4474,11 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
  * Starts the parsing for the navigation widget
  */
 void MainWindow::startNavigationParser() {
-    if (ui->navigationWidget->isVisible())
+    if (ui->navigationWidget->isVisible()) {
         ui->navigationWidget->parse(activeNoteTextEdit()->document(),
                                     activeNoteTextEdit()->textCursor().position());
+    } else if (ui->backlinkWidget->isVisible())
+        ui->backlinkWidget->findBacklinks(currentNote);
 }
 
 /**
@@ -9068,6 +9074,13 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
 }
 
 /**
+ * Jumps to the note that was clicked in the backlink widget
+ */
+void MainWindow::onBacklinkWidgetNoteClicked(int noteId) {
+    setCurrentNoteFromNoteId(noteId);
+}
+
+/**
  * Starts a note preview regeneration to resize too large images
  */
 void MainWindow::onNoteTextViewResize(QSize size, QSize oldSize) {
@@ -11468,6 +11481,8 @@ void MainWindow::centerAndResize() {
 void MainWindow::on_navigationLineEdit_textChanged(const QString &arg1) {
     Utils::Gui::searchForTextInTreeWidget(ui->navigationWidget, arg1,
                                           Utils::Gui::TreeWidgetSearchFlag::IntCheck);
+    Utils::Gui::searchForTextInTreeWidget(ui->backlinkWidget, arg1,
+                                          Utils::Gui::TreeWidgetSearchFlag::IntCheck);
 }
 
 const Note &MainWindow::getCurrentNote() { return currentNote; }
@@ -11866,8 +11881,10 @@ void MainWindow::showNoteEditTabWidgetContextMenu(const QPoint &point) {
 void MainWindow::on_actionJump_to_navigation_panel_triggered() {
     if (ui->navigationLineEdit->isVisible()) {
         ui->navigationLineEdit->setFocus();
-    } else {
+    } else if (ui->navigationWidget->isVisible()) {
         ui->navigationWidget->setFocus();
+    } else if (ui->backlinkWidget->isVisible()) {
+        ui->backlinkWidget->setFocus();
     }
 }
 
@@ -12029,4 +12046,10 @@ void MainWindow::buildAiToolbarAndActions() {
 void MainWindow::on_actionEnable_AI_toggled(bool arg1) {
     OpenAiService::setEnabled(arg1);
     qDebug() << __func__ << " - 'checked': " << arg1;
+}
+
+void MainWindow::on_navigationTabWidget_currentChanged(int index) {
+    Q_UNUSED(index)
+
+    startNavigationParser();
 }
