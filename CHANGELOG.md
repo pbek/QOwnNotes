@@ -1,8 +1,10 @@
 # QOwnNotes Changelog
 
 ## 24.9.0
-- There now is a **backlink widget** in the navigation panel to show backlinks
+- There now is a **backlink widget** in the navigation panel to show notes that link
   to the current note (for [#1717](https://github.com/pbek/QOwnNotes/issues/1717))
+  - You can click on the note to open it
+  - You can search through the note names of the backlinks
 - The aarch64 CMake build process was fixed (for [#3076](https://github.com/pbek/QOwnNotes/issues/3076))
 
 ## 24.8.6
