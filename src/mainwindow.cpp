@@ -871,6 +871,8 @@ void MainWindow::initDockWidgets() {
     addDockWidget(Qt::LeftDockWidgetArea, _noteNavigationDockWidget, Qt::Vertical);
     // we want the navigation under the note list
     splitDockWidget(_noteListDockWidget, _noteNavigationDockWidget, Qt::Vertical);
+    // We want to start with the Navigation tab
+    ui->navigationTabWidget->setCurrentIndex(0);
 
     if (!_noteEditIsCentralWidget) {
         _noteEditDockWidget = new QDockWidget(tr("Note edit"), this);
