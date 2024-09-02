@@ -3132,7 +3132,7 @@ QVector<int> Note::findLinkedNoteIds() const {
  * @param baseName
  * @return
  */
-const QString Note::getNoteURL(const QString &baseName) {
+QString Note::getNoteURL(const QString &baseName) {
     return QStringLiteral("note://") + generateTextForLink(baseName);
 }
 

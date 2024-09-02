@@ -386,7 +386,7 @@ class Note {
     static QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText() const;
 
-    static const QString getNoteURL(const QString &baseName);
+    static QString getNoteURL(const QString &baseName);
 
     static const QString getNoteURLFromFileName(const QString &fileName);
 
