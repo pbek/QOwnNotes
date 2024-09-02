@@ -55,18 +55,30 @@ void BacklinkWidget::onItemClicked(QTreeWidgetItem *current, int column) {
  */
 void BacklinkWidget::findBacklinks(Note note) {
     clear();
-    auto notes = note.findBacklinks();
+    QHash<Note, QStringList> reverseLinkNotes = note.findReverseLinkNotes();
 
-    qDebug() << __func__ << " - 'notes count': " << notes.count();
+    // Iterate over reverseLinkNotes
+    for (auto it = reverseLinkNotes.begin(); it != reverseLinkNotes.end(); ++it) {
+        const Note &backlinkNote = it.key();
+        const QStringList &linkTextList = it.value();
 
-    foreach (const Note &backlinkNote, notes) {
-        auto *item = new QTreeWidgetItem();
+        auto *topItem = new QTreeWidgetItem();
 
-        item->setText(0, backlinkNote.getName());
-        item->setData(0, Qt::UserRole, backlinkNote.getId());
-        item->setToolTip(0, tr("Open note"));
+        topItem->setText(0, backlinkNote.getName());
+        // Disable selection for the top items
+        topItem->setFlags(topItem->flags() & ~Qt::ItemIsSelectable);
 
-        addTopLevelItem(item);
+        addTopLevelItem(topItem);
+
+        for (const QString &linkText : linkTextList) {
+            auto *item = new QTreeWidgetItem();
+
+            item->setText(0, linkText);
+            item->setData(0, Qt::UserRole, backlinkNote.getId());
+            item->setToolTip(0, tr("Open note"));
+
+            topItem->addChild(item);
+        }
     }
 
     expandAll();

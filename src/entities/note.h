@@ -362,6 +362,8 @@ class Note {
 
     QList<Note> findBacklinks() const;
 
+    QHash<Note, QStringList> findReverseLinkNotes();
+
    protected:
     int _id;
     int _noteSubFolderId;
@@ -382,6 +384,7 @@ class Note {
     int _shareId;
     unsigned int _sharePermissions;
     bool _hasDirtyData;
+    QHash<Note, QStringList> _backlinkNoteHash;
 
     static QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText() const;
@@ -391,7 +394,14 @@ class Note {
     static const QString getNoteURLFromFileName(const QString &fileName);
 
     void restoreCreatedDate();
+
+    QString findAndReturnString(const QString &text, const QString &pattern);
+
+    void addTextToBacklinkNoteHashIfFound(const Note &note, const QString &text,
+                                          const QString &pattern);
 };
+
+inline uint qHash(const Note &note, uint seed) { return qHash(note.getId(), seed); }
 
 Q_DECLARE_TYPEINFO(Note, Q_MOVABLE_TYPE);
 

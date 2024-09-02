@@ -958,7 +958,7 @@ QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder, int n
 
     // we want to search for the text in the note text and the filename
     for (int i = 0; i < queryStrings.count(); i++) {
-        const QString queryString = queryStrings[i];
+        const QString &queryString = queryStrings[i];
 
         // if we just want to search in the name we use different columns
         // skip encrypted notes if search term is not found in (file) name of note
@@ -3086,7 +3086,7 @@ QVector<int> Note::findLinkedNoteIds() const {
     noteIdList << searchInNotes(QChar('<') + linkText + QChar('>'), true);
     noteIdList << searchInNotes(QStringLiteral("](") + linkText + QStringLiteral(")"), true);
 
-    // search vor legacy links ending with "@"
+    // search for legacy links ending with "@"
     const QString altLinkText = Utils::Misc::appendIfDoesNotEndWith(linkText, QStringLiteral("@"));
     if (altLinkText != linkText) {
         noteIdList << searchInNotes(QChar('<') + altLinkText + QChar('>'), true);
@@ -3124,6 +3124,75 @@ QVector<int> Note::findLinkedNoteIds() const {
     std::sort(noteIdList.begin(), noteIdList.end());
     noteIdList.erase(std::unique(noteIdList.begin(), noteIdList.end()), noteIdList.end());
     return noteIdList;
+}
+
+QString Note::findAndReturnString(const QString &text, const QString &pattern) {
+    return text.contains(pattern) ? pattern : QLatin1String("");
+}
+
+void Note::addTextToBacklinkNoteHashIfFound(const Note &note, const QString &text,
+                                            const QString &pattern) {
+    const QString found = findAndReturnString(text, pattern);
+
+    if (!found.isEmpty()) {
+        if (!_backlinkNoteHash.contains(note)) {
+            _backlinkNoteHash.insert(note, QStringList() << found);
+        } else {
+            _backlinkNoteHash[note] << found;
+        }
+    }
+}
+
+QHash<Note, QStringList> Note::findReverseLinkNotes() {
+    const QVector<int> noteIdList = this->findLinkedNoteIds();
+    const int noteCount = noteIdList.count();
+
+    if (noteCount == 0) {
+        return {};
+    }
+
+    _backlinkNoteHash.clear();
+    const QString noteUrl = getNoteURL(this->getName());
+
+    for (const int noteId : noteIdList) {
+        Note note = Note::fetch(noteId);
+
+        if (!note.isFetched()) {
+            continue;
+        }
+
+        QString noteText = note.getNoteText();
+
+        // search legacy links
+        addTextToBacklinkNoteHashIfFound(note, noteText,
+                                         QStringLiteral("<") + noteUrl + QStringLiteral(">"));
+        addTextToBacklinkNoteHashIfFound(note, noteText,
+                                         QStringLiteral("](") + noteUrl + QStringLiteral(")"));
+
+        // search for legacy links ending with "@"
+        const QString altLinkText =
+            Utils::Misc::appendIfDoesNotEndWith(noteUrl, QStringLiteral("@"));
+        if (altLinkText != noteUrl) {
+            addTextToBacklinkNoteHashIfFound(
+                note, noteText, QStringLiteral("<") + altLinkText + QStringLiteral(">"));
+            addTextToBacklinkNoteHashIfFound(
+                note, noteText, QStringLiteral("](") + altLinkText + QStringLiteral(")"));
+        }
+
+        const QString relativeFilePath =
+            Note::urlEncodeNoteUrl(note.getFilePathRelativeToNote(*this));
+
+        // search for links to the relative file path in note
+        // the "#" is for notes with a fragment (link to heading in note)
+        addTextToBacklinkNoteHashIfFound(
+            note, noteText, QStringLiteral("<") + relativeFilePath + QStringLiteral(">"));
+        addTextToBacklinkNoteHashIfFound(
+            note, noteText, QStringLiteral("](") + relativeFilePath + QStringLiteral(")"));
+        addTextToBacklinkNoteHashIfFound(
+            note, noteText, QStringLiteral("](") + relativeFilePath + QStringLiteral("#"));
+    }
+
+    return _backlinkNoteHash;
 }
 
 /**
