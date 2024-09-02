@@ -12,8 +12,9 @@
  */
 
 #include "backlinkwidget.h"
-#include <QTreeWidgetItem>
 #include "entities/note.h"
+
+#include <QTreeWidgetItem>
 
 BacklinkWidget::BacklinkWidget(QWidget *parent) : QTreeWidget(parent) {
     // we want to handle currentItemChanged because it also works with the keyboard
