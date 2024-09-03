@@ -447,7 +447,7 @@ class MainWindow : public QMainWindow {
 
     void onNavigationWidgetPositionClicked(int position);
 
-    void onBacklinkWidgetNoteClicked(int noteId);
+    void onBacklinkWidgetNoteClicked(int noteId, QString markdown);
 
     void startNavigationParser();
 

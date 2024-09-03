@@ -9079,7 +9079,10 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
 /**
  * Jumps to the note that was clicked in the backlink widget
  */
-void MainWindow::onBacklinkWidgetNoteClicked(int noteId) { setCurrentNoteFromNoteId(noteId); }
+void MainWindow::onBacklinkWidgetNoteClicked(int noteId, QString markdown) {
+    setCurrentNoteFromNoteId(noteId);
+    activeNoteTextEdit()->doSearch(markdown, QPlainTextEditSearchWidget::PlainTextMode);
+}
 
 /**
  * Starts a note preview regeneration to resize too large images

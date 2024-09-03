@@ -33,5 +33,5 @@ class BacklinkWidget : public QTreeWidget {
     void onItemClicked(QTreeWidgetItem *current, int column);
 
    signals:
-    void noteClicked(int position);
+    void noteClicked(int position, const QString &markdown);
 };

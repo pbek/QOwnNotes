@@ -36,7 +36,8 @@ void BacklinkWidget::onCurrentItemChanged(QTreeWidgetItem *current, QTreeWidgetI
         return;
     }
 
-    emit noteClicked(current->data(0, Qt::UserRole).toInt());
+    emit noteClicked(current->data(0, Qt::UserRole).toInt(),
+                     current->data(0, Qt::UserRole + 1).toString());
 }
 
 /**
@@ -49,7 +50,8 @@ void BacklinkWidget::onItemClicked(QTreeWidgetItem *current, int column) {
         return;
     }
 
-    emit noteClicked(current->data(0, Qt::UserRole).toInt());
+    emit noteClicked(current->data(0, Qt::UserRole).toInt(),
+                     current->data(0, Qt::UserRole + 1).toString());
 }
 
 /**
