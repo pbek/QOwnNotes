@@ -3126,24 +3126,45 @@ QVector<int> Note::findLinkedNoteIds() const {
     return noteIdList;
 }
 
-QString Note::findAndReturnString(const QString &text, const QString &pattern) {
-    return text.contains(pattern) ? pattern : QLatin1String("");
+// TODO: Use two parameters instead of patterns
+BacklinkHit Note::findAndReturnBacklinkHit(const QString &text, const QString &pattern) {
+    return text.contains(pattern) ? BacklinkHit(pattern, pattern) : BacklinkHit("", "");
 }
 
-void Note::addTextToBacklinkNoteHashIfFound(const Note &note, const QString &text,
-                                            const QString &pattern) {
-    const QString found = findAndReturnString(text, pattern);
+BacklinkHit Note::findAndReturnBacklinkHit(const QString &text, const QRegularExpression &pattern) {
+    const QRegularExpressionMatch match = pattern.match(text);
+    if (match.hasMatch()) {
+        return BacklinkHit(match.captured(0), match.captured(1));
+    }
 
-    if (!found.isEmpty()) {
+    return BacklinkHit("", "");
+}
+
+void Note::addTextToBacklinkNoteHashIfFound(const Note &note, const QString &pattern) {
+    const BacklinkHit backlinkHit = findAndReturnBacklinkHit(note.getNoteText(), pattern);
+
+    if (!backlinkHit.isEmpty()) {
         if (!_backlinkNoteHash.contains(note)) {
-            _backlinkNoteHash.insert(note, QStringList() << found);
+            _backlinkNoteHash.insert(note, {backlinkHit});
         } else {
-            _backlinkNoteHash[note] << found;
+            _backlinkNoteHash[note] << backlinkHit;
         }
     }
 }
 
-QHash<Note, QStringList> Note::findReverseLinkNotes() {
+void Note::addTextToBacklinkNoteHashIfFound(const Note &note, const QRegularExpression &pattern) {
+    const BacklinkHit backlinkHit = findAndReturnBacklinkHit(note.getNoteText(), pattern);
+
+    if (!backlinkHit.isEmpty()) {
+        if (!_backlinkNoteHash.contains(note)) {
+            _backlinkNoteHash.insert(note, {backlinkHit});
+        } else {
+            _backlinkNoteHash[note] << backlinkHit;
+        }
+    }
+}
+
+QHash<Note, QList<BacklinkHit>> Note::findReverseLinkNotes() {
     const QVector<int> noteIdList = this->findLinkedNoteIds();
     const int noteCount = noteIdList.count();
 
@@ -3161,22 +3182,20 @@ QHash<Note, QStringList> Note::findReverseLinkNotes() {
             continue;
         }
 
-        QString noteText = note.getNoteText();
-
         // search legacy links
-        addTextToBacklinkNoteHashIfFound(note, noteText,
-                                         QStringLiteral("<") + noteUrl + QStringLiteral(">"));
-        addTextToBacklinkNoteHashIfFound(note, noteText,
-                                         QStringLiteral("](") + noteUrl + QStringLiteral(")"));
+        addTextToBacklinkNoteHashIfFound(note, QStringLiteral("<") + noteUrl + QStringLiteral(">"));
+        addTextToBacklinkNoteHashIfFound(
+            note, QRegularExpression(QStringLiteral("\\[(.+)\\]\\(") +
+                                     QRegularExpression::escape(noteUrl) + QStringLiteral("\\)")));
 
         // search for legacy links ending with "@"
         const QString altLinkText =
             Utils::Misc::appendIfDoesNotEndWith(noteUrl, QStringLiteral("@"));
         if (altLinkText != noteUrl) {
             addTextToBacklinkNoteHashIfFound(
-                note, noteText, QStringLiteral("<") + altLinkText + QStringLiteral(">"));
+                note, QStringLiteral("<") + altLinkText + QStringLiteral(">"));
             addTextToBacklinkNoteHashIfFound(
-                note, noteText, QStringLiteral("](") + altLinkText + QStringLiteral(")"));
+                note, QStringLiteral("](") + altLinkText + QStringLiteral(")"));
         }
 
         const QString relativeFilePath =
@@ -3185,11 +3204,15 @@ QHash<Note, QStringList> Note::findReverseLinkNotes() {
         // search for links to the relative file path in note
         // the "#" is for notes with a fragment (link to heading in note)
         addTextToBacklinkNoteHashIfFound(
-            note, noteText, QStringLiteral("<") + relativeFilePath + QStringLiteral(">"));
+            note, QStringLiteral("<") + relativeFilePath + QStringLiteral(">"));
         addTextToBacklinkNoteHashIfFound(
-            note, noteText, QStringLiteral("](") + relativeFilePath + QStringLiteral(")"));
+            note, QRegularExpression(QStringLiteral("\\[(.+)\\]\\(") +
+                                     QRegularExpression::escape(relativeFilePath) +
+                                     QStringLiteral("\\)")));
         addTextToBacklinkNoteHashIfFound(
-            note, noteText, QStringLiteral("](") + relativeFilePath + QStringLiteral("#"));
+            note, QRegularExpression(QStringLiteral("\\[(.+)\\]\\(") +
+                                     QRegularExpression::escape(relativeFilePath) +
+                                     QStringLiteral("#.+\\)")));
     }
 
     return _backlinkNoteHash;

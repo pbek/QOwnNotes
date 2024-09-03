@@ -12,9 +12,11 @@
  */
 
 #include "backlinkwidget.h"
-#include "entities/note.h"
 
 #include <QTreeWidgetItem>
+
+#include "entities/note.h"
+#include "entities/notefolder.h"
 
 BacklinkWidget::BacklinkWidget(QWidget *parent) : QTreeWidget(parent) {
     // we want to handle currentItemChanged because it also works with the keyboard
@@ -55,27 +57,29 @@ void BacklinkWidget::onItemClicked(QTreeWidgetItem *current, int column) {
  */
 void BacklinkWidget::findBacklinks(Note note) {
     clear();
-    QHash<Note, QStringList> reverseLinkNotes = note.findReverseLinkNotes();
+    QHash<Note, QList<BacklinkHit>> reverseLinkNotes = note.findReverseLinkNotes();
 
     // Iterate over reverseLinkNotes
     for (auto it = reverseLinkNotes.begin(); it != reverseLinkNotes.end(); ++it) {
         const Note &backlinkNote = it.key();
-        const QStringList &linkTextList = it.value();
+        const QList<BacklinkHit> &linkTextList = it.value();
 
         auto *topItem = new QTreeWidgetItem();
 
         topItem->setText(0, backlinkNote.getName());
+        topItem->setToolTip(0, backlinkNote.getName());
         // Disable selection for the top items
         topItem->setFlags(topItem->flags() & ~Qt::ItemIsSelectable);
 
         addTopLevelItem(topItem);
 
-        for (const QString &linkText : linkTextList) {
+        for (const BacklinkHit &linkHit : linkTextList) {
             auto *item = new QTreeWidgetItem();
 
-            item->setText(0, linkText);
+            item->setText(0, linkHit.text);
             item->setData(0, Qt::UserRole, backlinkNote.getId());
-            item->setToolTip(0, tr("Open note"));
+            item->setData(0, Qt::UserRole + 1, linkHit.markdown);
+            item->setToolTip(0, tr("Open note and find <i>%1</i>").arg(linkHit.markdown));
 
             topItem->addChild(item);
         }

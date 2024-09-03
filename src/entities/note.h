@@ -13,6 +13,16 @@ class QFile;
 class QUrl;
 class QSqlQuery;
 
+struct BacklinkHit {
+    BacklinkHit(QString markdown, QString text) noexcept
+        : markdown(std::move(markdown)), text(std::move(text)) {}
+
+    bool isEmpty() const noexcept { return markdown.isEmpty() && text.isEmpty(); }
+
+    QString markdown;
+    QString text;
+};
+
 #define NOTE_TEXT_ENCRYPTION_PRE_STRING "<!-- BEGIN ENCRYPTED TEXT --"
 #define NOTE_TEXT_ENCRYPTION_POST_STRING "-- END ENCRYPTED TEXT -->"
 #define BOTAN_SALT "Gj3%36/SmPoe12$snNAs-A-_.),?faQ1@!f32"
@@ -362,7 +372,7 @@ class Note {
 
     QList<Note> findBacklinks() const;
 
-    QHash<Note, QStringList> findReverseLinkNotes();
+    QHash<Note, QList<BacklinkHit>> findReverseLinkNotes();
 
    protected:
     int _id;
@@ -384,7 +394,7 @@ class Note {
     int _shareId;
     unsigned int _sharePermissions;
     bool _hasDirtyData;
-    QHash<Note, QStringList> _backlinkNoteHash;
+    QHash<Note, QList<BacklinkHit>> _backlinkNoteHash;
 
     static QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText() const;
@@ -395,10 +405,12 @@ class Note {
 
     void restoreCreatedDate();
 
-    QString findAndReturnString(const QString &text, const QString &pattern);
+    static BacklinkHit findAndReturnBacklinkHit(const QString &text, const QString &pattern);
+    static BacklinkHit findAndReturnBacklinkHit(const QString &text,
+                                                const QRegularExpression &pattern);
 
-    void addTextToBacklinkNoteHashIfFound(const Note &note, const QString &text,
-                                          const QString &pattern);
+    void addTextToBacklinkNoteHashIfFound(const Note &note, const QString &pattern);
+    void addTextToBacklinkNoteHashIfFound(const Note &note, const QRegularExpression &pattern);
 };
 
 inline uint qHash(const Note &note, uint seed) { return qHash(note.getId(), seed); }
