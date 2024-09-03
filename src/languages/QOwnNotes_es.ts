@@ -82,6 +82,13 @@
 </message>
 </context>
 <context>
+<name>BacklinkWidget</name>
+<message>
+<source>Open note and find &lt;i&gt;%1&lt;/i&gt;</source>
+<translation type="unfinished">Open note and find &lt;i&gt;%1&lt;/i&gt;</translation>
+</message>
+</context>
+<context>
 <name>DictionaryManagerDialog</name>
 <message>
 <source>Dictionary manager</source>
@@ -1656,6 +1663,14 @@
 <message>
 <source>Find navigation item</source>
 <translation>Encontrar el elemento de navegación</translation>
+</message>
+<message>
+<source>Headings</source>
+<translation>Títulos</translation>
+</message>
+<message>
+<source>Backlinks</source>
+<translation>Retroenlaces</translation>
 </message>
 <message>
 <source>Add a tag to the current note</source>
@@ -5457,7 +5472,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation type="unfinished">Only show relative note path</translation>
+<translation>Mostrar solo ruta de nota relativa</translation>
 </message>
 <message>
 <source>Action name</source>

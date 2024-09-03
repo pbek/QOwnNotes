@@ -81,6 +81,13 @@
 </message>
 </context>
 <context>
+<name>BacklinkWidget</name>
+<message>
+<source>Open note and find &lt;i&gt;%1&lt;/i&gt;</source>
+<translation type="unfinished">Open note and find &lt;i&gt;%1&lt;/i&gt;</translation>
+</message>
+</context>
+<context>
 <name>DictionaryManagerDialog</name>
 <message>
 <source>Dictionary manager</source>
@@ -1655,6 +1662,14 @@
 <message>
 <source>Find navigation item</source>
 <translation>Hitta navigationsobjekt</translation>
+</message>
+<message>
+<source>Headings</source>
+<translation type="unfinished">Headings</translation>
+</message>
+<message>
+<source>Backlinks</source>
+<translation type="unfinished">Backlinks</translation>
 </message>
 <message>
 <source>Add a tag to the current note</source>
