@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 24.9.1
+- The **backlink widget** in the navigation panel now also shows the links in the notes
+  to the current note (for [#1717](https://github.com/pbek/QOwnNotes/issues/1717))
+  - By clicking on them, you can open the note and search for the link
+
 ## 24.9.0
 - There now is a **backlink widget** in the navigation panel to show notes that link
   to the current note (for [#1717](https://github.com/pbek/QOwnNotes/issues/1717))
