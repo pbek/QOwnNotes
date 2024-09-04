@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 24.9.2
+- The **backlink widget** link detection was improved
+  (for [#1717](https://github.com/pbek/QOwnNotes/issues/1717))
+  - In checkbox lists the checkboxes will now not be detected as part of the links
+
 ## 24.9.1
 - The **backlink widget** in the navigation panel now also shows the links in the notes
   to the current note (for [#1717](https://github.com/pbek/QOwnNotes/issues/1717))

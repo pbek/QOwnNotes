@@ -3185,7 +3185,7 @@ QHash<Note, QList<BacklinkHit>> Note::findReverseLinkNotes() {
         // search legacy links
         addTextToBacklinkNoteHashIfFound(note, QStringLiteral("<") + noteUrl + QStringLiteral(">"));
         addTextToBacklinkNoteHashIfFound(
-            note, QRegularExpression(QStringLiteral(R"(\[(.+)\]\()") +
+            note, QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
                                      QRegularExpression::escape(noteUrl) + QStringLiteral(R"(\))")));
 
         // search for legacy links ending with "@"
@@ -3206,11 +3206,11 @@ QHash<Note, QList<BacklinkHit>> Note::findReverseLinkNotes() {
         addTextToBacklinkNoteHashIfFound(
             note, QStringLiteral("<") + relativeFilePath + QStringLiteral(">"));
         addTextToBacklinkNoteHashIfFound(
-            note, QRegularExpression(QStringLiteral(R"(\[(.+)\]\()") +
+            note, QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
                                      QRegularExpression::escape(relativeFilePath) +
-                                     QStringLiteral(R"(\))")));
+                                     QStringLiteral(R"(\))"), QRegularExpression::MultilineOption));
         addTextToBacklinkNoteHashIfFound(
-            note, QRegularExpression(QStringLiteral(R"(\[(.+)\]\()") +
+            note, QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
                                      QRegularExpression::escape(relativeFilePath) +
                                      QStringLiteral(R"(#.+\))")));
     }
