@@ -4183,10 +4183,8 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 }
             }
 
-            // set focus to the notes list if Key_Right or Key_Tab were
-            // pressed in the search line edit
-            if ((keyEvent->key() == Qt::Key_Right) || (keyEvent->key() == Qt::Key_Tab) ||
-                downSelectNote) {
+            // set focus to the notes list if Key_Tab was pressed in the search line edit
+            if (keyEvent->key() == Qt::Key_Tab || downSelectNote) {
                 // add the current search text to the saved searches
                 storeSavedSearch();
 

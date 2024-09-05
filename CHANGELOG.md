@@ -4,6 +4,9 @@
 - The **backlink widget** link detection was improved
   (for [#1717](https://github.com/pbek/QOwnNotes/issues/1717))
   - In checkbox lists the checkboxes will now not be detected as part of the links
+  - In the note search line edit, the `Right` arrow key will not make the focus
+    jump to the note list anymore, the `Tab` key is enough to do that
+    (for [#3097](https://github.com/pbek/QOwnNotes/issues/3097))
 
 ## 24.9.1
 - The **backlink widget** in the navigation panel now also shows the links in the notes
