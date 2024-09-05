@@ -3126,18 +3126,25 @@ QVector<int> Note::findLinkedNoteIds() const {
     return noteIdList;
 }
 
-// TODO: Use two parameters instead of patterns
 BacklinkHit Note::findAndReturnBacklinkHit(const QString &text, const QString &pattern) {
     return text.contains(pattern) ? BacklinkHit(pattern, pattern) : BacklinkHit("", "");
 }
 
-BacklinkHit Note::findAndReturnBacklinkHit(const QString &text, const QRegularExpression &pattern) {
-    const QRegularExpressionMatch match = pattern.match(text);
-    if (match.hasMatch()) {
-        return {match.captured(0), match.captured(1)};
+QList<BacklinkHit> Note::findAndReturnBacklinkHit(const QString &text,
+                                                  const QRegularExpression &regex) {
+    QList<BacklinkHit> backlinkHits;
+    QRegularExpressionMatchIterator iterator = regex.globalMatch(text);
+
+    while (iterator.hasNext()) {
+        QRegularExpressionMatch match = iterator.next();
+        QString linkText = match.captured(1);
+        QString linkUrl = match.captured(2);
+        // Do something with the link text and URL
+
+        backlinkHits.append(BacklinkHit(match.captured(0), match.captured(1)));
     }
 
-    return {"", ""};
+    return backlinkHits;
 }
 
 void Note::addTextToBacklinkNoteHashIfFound(const Note &note, const QString &pattern) {
@@ -3153,13 +3160,13 @@ void Note::addTextToBacklinkNoteHashIfFound(const Note &note, const QString &pat
 }
 
 void Note::addTextToBacklinkNoteHashIfFound(const Note &note, const QRegularExpression &pattern) {
-    const BacklinkHit backlinkHit = findAndReturnBacklinkHit(note.getNoteText(), pattern);
+    const auto backlinkHits = findAndReturnBacklinkHit(note.getNoteText(), pattern);
 
-    if (!backlinkHit.isEmpty()) {
+    if (!backlinkHits.isEmpty()) {
         if (!_backlinkNoteHash.contains(note)) {
-            _backlinkNoteHash.insert(note, {backlinkHit});
+            _backlinkNoteHash.insert(note, backlinkHits);
         } else {
-            _backlinkNoteHash[note] << backlinkHit;
+            _backlinkNoteHash[note] << backlinkHits;
         }
     }
 }

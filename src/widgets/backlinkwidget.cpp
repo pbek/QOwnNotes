@@ -17,6 +17,7 @@
 
 #include "entities/note.h"
 #include "entities/notefolder.h"
+#include "utils/gui.h"
 
 BacklinkWidget::BacklinkWidget(QWidget *parent) : QTreeWidget(parent) {
     // we want to handle currentItemChanged because it also works with the keyboard
@@ -69,7 +70,7 @@ void BacklinkWidget::findBacklinks(Note note) {
         auto *topItem = new QTreeWidgetItem();
 
         topItem->setText(0, backlinkNote.getName());
-        topItem->setToolTip(0, backlinkNote.getName());
+        Utils::Gui::setTreeWidgetItemToolTipForNote(topItem, backlinkNote);
         // Disable selection for the top items
         topItem->setFlags(topItem->flags() & ~Qt::ItemIsSelectable);
 
@@ -81,7 +82,8 @@ void BacklinkWidget::findBacklinks(Note note) {
             item->setText(0, linkHit.text);
             item->setData(0, Qt::UserRole, backlinkNote.getId());
             item->setData(0, Qt::UserRole + 1, linkHit.markdown);
-            item->setToolTip(0, tr("Open note and find <i>%1</i>").arg(linkHit.markdown));
+            item->setToolTip(0, tr("Open note and find <code>%1</code>")
+                                    .arg(Utils::Misc::htmlspecialchars(linkHit.markdown)));
 
             topItem->addChild(item);
         }

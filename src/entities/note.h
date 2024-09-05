@@ -406,8 +406,8 @@ class Note {
     void restoreCreatedDate();
 
     static BacklinkHit findAndReturnBacklinkHit(const QString &text, const QString &pattern);
-    static BacklinkHit findAndReturnBacklinkHit(const QString &text,
-                                                const QRegularExpression &pattern);
+    static QList<BacklinkHit> findAndReturnBacklinkHit(const QString &text,
+                                                       const QRegularExpression &regex);
 
     void addTextToBacklinkNoteHashIfFound(const Note &note, const QString &pattern);
     void addTextToBacklinkNoteHashIfFound(const Note &note, const QRegularExpression &pattern);
