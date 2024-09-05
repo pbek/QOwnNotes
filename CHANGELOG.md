@@ -3,7 +3,7 @@
 ## 24.9.2
 - The **backlink widget** link detection and UI was improved
   (for [#1717](https://github.com/pbek/QOwnNotes/issues/1717))
-  - In checkbox lists the checkboxes will now not be detected as part of the link
+  - In checkbox lists, the checkboxes will now not be detected as part of the link
   - Multiple occurrences of similar links can now be detected in notes
   - A problem with the found link not showing up in the tooltips of items was fixed
   - More information for the found notes will now be shown in the tooltip
