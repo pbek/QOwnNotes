@@ -10,6 +10,7 @@
 - In the note search line edit, the `Right` arrow key will not make the focus
   jump to the note list anymore, the `Tab` key is enough to do that
   (for [#3097](https://github.com/pbek/QOwnNotes/issues/3097))
+- Added more Croatian, Dutch, Korean translation (thank you, milotype, stephanp, venusgirl)
 
 ## 24.9.1
 - The **backlink widget** in the navigation panel now also shows the links in the notes

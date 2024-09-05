@@ -84,8 +84,8 @@
 <context>
 <name>BacklinkWidget</name>
 <message>
-<source>Open note and find &lt;i&gt;%1&lt;/i&gt;</source>
-<translation type="unfinished">Open note and find &lt;i&gt;%1&lt;/i&gt;</translation>
+<source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
+<translation>Otvori bilješku i pronađi &lt;code&gt;%1&lt;/code&gt;</translation>
 </message>
 </context>
 <context>
@@ -1675,11 +1675,11 @@
 </message>
 <message>
 <source>Headings</source>
-<translation type="unfinished">Headings</translation>
+<translation>Naslovi</translation>
 </message>
 <message>
 <source>Backlinks</source>
-<translation type="unfinished">Backlinks</translation>
+<translation>Poveznice</translation>
 </message>
 <message>
 <source>Add a tag to the current note</source>
@@ -1875,7 +1875,7 @@
 </message>
 <message>
 <source>AI model</source>
-<translation type="unfinished">AI model</translation>
+<translation>Model UI-a</translation>
 </message>
 <message>
 <source>To&amp;do</source>
@@ -2751,28 +2751,28 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
-<translation type="unfinished">Ln %1, Col %2</translation>
+<translation>Redak %1, stupac %2</translation>
 </message>
 <message>
 <source>Line %1, Column %2</source>
-<translation type="unfinished">Line %1, Column %2</translation>
+<translation>Redak %1, stupac %2</translation>
 </message>
 <message numerus="yes">
 <source>%n selected</source>
 <comment>Characters selected</comment>
-<translation type="unfinished">
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
+<translation>
+<numerusform>%n odabarni</numerusform>
+<numerusform>%n odabarna</numerusform>
+<numerusform>%n odabarnih</numerusform>
 </translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
-<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+<translation>Podrška za Nextcloud Deck je deaktivirana!</translation>
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>Podrška za Nextcloud Deck je deaktivirana ili su postavke neispravne.&lt;br /&gt;Provjeri svoju &lt;strong&gt;Nextcloud&lt;/strong&gt; konfiguraciju u postavkama!</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -2780,19 +2780,19 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>AI backends</source>
-<translation type="unfinished">AI backends</translation>
+<translation>Pozadinske funkcije UI-a</translation>
 </message>
 <message>
 <source>AI models</source>
-<translation type="unfinished">AI models</translation>
+<translation>Modeli UI-a</translation>
 </message>
 <message>
 <source>AI backend selector</source>
-<translation type="unfinished">AI backend selector</translation>
+<translation>Selektor pozadinskih funkcija UI-a</translation>
 </message>
 <message>
 <source>AI model selector</source>
-<translation type="unfinished">AI model selector</translation>
+<translation>Selektor modela UI-a</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -5459,7 +5459,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
-<translation type="unfinished">Enable Nextcloud Deck support</translation>
+<translation>Aktiviraj podršku za Nextcloud Deck</translation>
 </message>
 <message>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
@@ -5665,7 +5665,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
-<translation type="unfinished">Test connection</translation>
+<translation>Provjeri vezu</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
@@ -6584,28 +6584,28 @@ Poruka o pogrešci veze: </translation>
 </message>
 <message>
 <source>API test result for %1 (%2)</source>
-<translation type="unfinished">API test result for %1 (%2)</translation>
+<translation>Rezultat API testa za %1 (%2)</translation>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation type="unfinished">AI backend: %1</translation>
+<translation>Pozadinske funkcije UI-a: %1</translation>
 </message>
 <message>
 <source>API base URL</source>
-<translation type="unfinished">API base URL</translation>
+<translation>Osnovni URL API-ja</translation>
 </message>
 <message>
 <source>AI model: %1</source>
-<translation type="unfinished">AI model: %1</translation>
+<translation>Model UI-a: %1</translation>
 </message>
 <message>
 <source>Test</source>
 <comment>verb</comment>
-<translation type="unfinished">Test</translation>
+<translation>Provjeri</translation>
 </message>
 <message>
 <source>Test connection to %1 (%2)</source>
-<translation type="unfinished">Test connection to %1 (%2)</translation>
+<translation>Provjeri vezu na %1 (%2)</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
@@ -7883,16 +7883,16 @@ This cannot be undone!</source>
 <source>Bookmark deleted from %n note(s)</source>
 <translation type="unfinished">
 <numerusform>Bookmark deleted from %n note(s)</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<numerusform>Oznaka izbrisana iz %n bilješke</numerusform>
+<numerusform>Oznaka izbrisana iz %n bilješki</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
+<translation>
+<numerusform>Oznaka uređena u %n bilješci</numerusform>
+<numerusform>Oznaka uređena u %n bilješke</numerusform>
+<numerusform>Oznaka uređena u %n bilješki</numerusform>
 </translation>
 </message>
 <message>

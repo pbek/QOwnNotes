@@ -84,8 +84,8 @@
 <context>
 <name>BacklinkWidget</name>
 <message>
-<source>Open note and find &lt;i&gt;%1&lt;/i&gt;</source>
-<translation type="unfinished">Open note and find &lt;i&gt;%1&lt;/i&gt;</translation>
+<source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
+<translation type="unfinished">Open note and find &lt;code&gt;%1&lt;/code&gt;</translation>
 </message>
 </context>
 <context>
