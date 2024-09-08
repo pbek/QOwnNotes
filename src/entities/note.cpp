@@ -1798,7 +1798,17 @@ QString Note::getNoteUrlForLinkingTo(const Note &note, bool forceLegacy) const {
  * Example:
  * "Note with one bracket].md" will get "Note%20with%20one%20bracket%5D.md"
  */
-QString Note::urlEncodeNoteUrl(const QString &url) { return QUrl::toPercentEncoding(url); }
+QString Note::urlEncodeNoteUrl(const QString &url, bool escapeSlashes) {
+    auto encoded = QString(QUrl::toPercentEncoding(url));
+
+    // We don't really need to escape slashes in the note url
+    // https://github.com/pbek/QOwnNotes/issues/1717#issuecomment-2336767704
+    if (!escapeSlashes) {
+        encoded.replace(QStringLiteral("%2F"), QStringLiteral("/"));
+    }
+
+    return encoded;
+}
 
 /**
  * Returns the url decoded representation of a string to e.g. fetch a note from
@@ -3105,16 +3115,20 @@ QVector<int> Note::findLinkedNoteIds() const {
             continue;
         }
 
-        const QString relativeFilePath =
-            Note::urlEncodeNoteUrl(note.getFilePathRelativeToNote(*this));
-        const QString noteText = note.getNoteText();
+        // We now don't escape slashes in the relative file path, but previously we did,
+        // so we need to search for both
+        for (bool escapeSlashes : {true, false}) {
+            const QString relativeFilePath =
+                Note::urlEncodeNoteUrl(note.getFilePathRelativeToNote(*this), escapeSlashes);
+            const QString noteText = note.getNoteText();
 
-        // search for links to the relative file path in note
-        // the "#" is for notes with a fragment (link to heading in note)
-        if (noteText.contains(QStringLiteral("<") + relativeFilePath + QStringLiteral(">")) ||
-            noteText.contains(QStringLiteral("](") + relativeFilePath + QStringLiteral(")")) ||
-            noteText.contains(QStringLiteral("](") + relativeFilePath + QStringLiteral("#"))) {
-            noteIdList.append(note.getId());
+            // Search for links to the relative file path in note
+            // The "#" is for notes with a fragment (link to heading in note)
+            if (noteText.contains(QStringLiteral("<") + relativeFilePath + QStringLiteral(">")) ||
+                noteText.contains(QStringLiteral("](") + relativeFilePath + QStringLiteral(")")) ||
+                noteText.contains(QStringLiteral("](") + relativeFilePath + QStringLiteral("#"))) {
+                noteIdList.append(note.getId());
+            }
         }
     }
 
@@ -3206,22 +3220,26 @@ QHash<Note, QList<BacklinkHit>> Note::findReverseLinkNotes() {
                 note, QStringLiteral("](") + altLinkText + QStringLiteral(")"));
         }
 
-        const QString relativeFilePath =
-            Note::urlEncodeNoteUrl(note.getFilePathRelativeToNote(*this));
+        // We now don't escape slashes in the relative file path, but previously we did,
+        // so we need to search for both
+        for (bool escapeSlashes : {true, false}) {
+            const QString relativeFilePath =
+                Note::urlEncodeNoteUrl(note.getFilePathRelativeToNote(*this), escapeSlashes);
 
-        // search for links to the relative file path in note
-        // the "#" is for notes with a fragment (link to heading in note)
-        addTextToBacklinkNoteHashIfFound(
-            note, QStringLiteral("<") + relativeFilePath + QStringLiteral(">"));
-        addTextToBacklinkNoteHashIfFound(
-            note, QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+            // Search for links to the relative file path in note
+            // The "#" is for notes with a fragment (link to heading in note)
+            addTextToBacklinkNoteHashIfFound(
+                note, QStringLiteral("<") + relativeFilePath + QStringLiteral(">"));
+            addTextToBacklinkNoteHashIfFound(
+                note, QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                                             QRegularExpression::escape(relativeFilePath) +
+                                             QStringLiteral(R"(\))"),
+                                         QRegularExpression::MultilineOption));
+            addTextToBacklinkNoteHashIfFound(
+                note, QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
                                          QRegularExpression::escape(relativeFilePath) +
-                                         QStringLiteral(R"(\))"),
-                                     QRegularExpression::MultilineOption));
-        addTextToBacklinkNoteHashIfFound(
-            note, QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
-                                     QRegularExpression::escape(relativeFilePath) +
-                                     QStringLiteral(R"(#.+\))")));
+                                         QStringLiteral(R"(#.+\))")));
+        }
     }
 
     return _backlinkNoteHash;

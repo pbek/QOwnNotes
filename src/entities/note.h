@@ -352,7 +352,7 @@ class Note {
 
     static Utils::Misc::ExternalImageHash *externalImageHash();
 
-    static QString urlEncodeNoteUrl(const QString &url);
+    static QString urlEncodeNoteUrl(const QString &url, bool escapeSlashes = false);
 
     static QString urlDecodeNoteUrl(QString url);
 
