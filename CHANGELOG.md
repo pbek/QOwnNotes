@@ -5,6 +5,7 @@
   renamed, now relative links with `/` and urlencoded `/` (as `%2F`) are both supported
   (for [#1717](https://github.com/pbek/QOwnNotes/issues/1717))
   - The note link dialog will now not urlencode `/` anymore
+- Added more Arabic, Croatian, German translation (thank you, noureddin, milotype, rakekniven)
 
 ## 24.9.2
 - The **backlink widget** link detection and UI was improved

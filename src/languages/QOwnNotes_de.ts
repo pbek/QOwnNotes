@@ -85,7 +85,7 @@
 <name>BacklinkWidget</name>
 <message>
 <source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
-<translation type="unfinished">Open note and find &lt;code&gt;%1&lt;/code&gt;</translation>
+<translation>Notiz öffnen und &lt;code&gt;%1&lt;/code&gt; finden</translation>
 </message>
 </context>
 <context>
@@ -1666,7 +1666,7 @@
 </message>
 <message>
 <source>Headings</source>
-<translation type="unfinished">Headings</translation>
+<translation>Überschriften</translation>
 </message>
 <message>
 <source>Backlinks</source>
@@ -2329,19 +2329,19 @@
 </message>
 <message>
 <source>Move up in subfolder list</source>
-<translation type="unfinished">Move up in subfolder list</translation>
+<translation>In Unterordnerliste nach oben bewegen</translation>
 </message>
 <message>
 <source>Move down in subfolder list</source>
-<translation type="unfinished">Move down in subfolder list</translation>
+<translation>In Unterordnerliste nach unten bewegen</translation>
 </message>
 <message>
 <source>Move up in tag list</source>
-<translation type="unfinished">Move up in tag list</translation>
+<translation>In Schlagwort-Liste nach oben bewegen</translation>
 </message>
 <message>
 <source>Move down in tag list</source>
-<translation type="unfinished">Move down in tag list</translation>
+<translation>In Schlagwort-Liste nach unten bewegen</translation>
 </message>
 <message>
 <source>Enable AI support</source>
@@ -2744,9 +2744,9 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message numerus="yes">
 <source>%n selected</source>
 <comment>Characters selected</comment>
-<translation type="unfinished">
+<translation>
 <numerusform>%n ausgewählt</numerusform>
-<numerusform>%n selected</numerusform>
+<numerusform>%n ausgewählt</numerusform>
 </translation>
 </message>
 <message>
@@ -2763,7 +2763,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>AI backends</source>
-<translation type="unfinished">AI backends</translation>
+<translation>KI-Backends</translation>
 </message>
 <message>
 <source>AI models</source>
@@ -3306,7 +3306,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>AI toolbar</source>
-<translation type="unfinished">AI toolbar</translation>
+<translation>KI-Toolbar</translation>
 </message>
 <message>
 <source>window toolbar</source>
@@ -3561,23 +3561,23 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
-<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+<translation>Relativer Pfad der Notiz, Rechts-Klick um Kontextmenü zu öffnen</translation>
 </message>
 <message>
 <source>Absolute path of note, right-click to open context menu</source>
-<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+<translation>Absoluter Pfad der Notiz, Rechts-Klick um Kontextmenü zu öffnen</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Absoluten Pfad der Notiz kopieren</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
-<translation type="unfinished">Copy absolute path of note subfolder</translation>
+<translation>Absoluten Pfad des Notizunterordners kopieren</translation>
 </message>
 <message>
 <source>Copy absolute path of note folder</source>
-<translation type="unfinished">Copy absolute path of note folder</translation>
+<translation>Absoluten Pfad des Notizordners kopieren</translation>
 </message>
 </context>
 <context>
@@ -3926,11 +3926,11 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Ihr Windows-System scheint den Dunkelmodus zu verwenden. Möchten Sie den Dunkelmodus auch in QOwnNotes einschalten?</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Ihr Windows-System scheint den hellen Modus zu verwenden. Möchten Sie den hellen Modus auch in QOwnNotes einschalten?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
@@ -3982,7 +3982,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
-<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
+<translation>Ihr Notizordner &lt;b&gt;%1&lt;/b&gt; konnte nicht mehr gefunden werden! Möchten Sie einen neuen auswählen?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -5469,7 +5469,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Show note path</source>
-<translation type="unfinished">Show note path</translation>
+<translation>Pfad zu Notizen anzeigen</translation>
 </message>
 <message>
 <source>Only show relative note path</source>
@@ -6555,7 +6555,7 @@ Fehlermeldung: </translation>
 <message>
 <source>Test</source>
 <comment>verb</comment>
-<translation type="unfinished">Test</translation>
+<translation>Test</translation>
 </message>
 <message>
 <source>Test connection to %1 (%2)</source>
@@ -7832,7 +7832,7 @@ Kann nicht rückgängig gemacht werden!</translation>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
 <translation type="unfinished">
-<numerusform>Bookmark edited in %n note(s)</numerusform>
+<numerusform>Lesezeichen in %n Notiz(en) bearbeitet</numerusform>
 <numerusform>Bookmark edited in %n note(s)</numerusform>
 </translation>
 </message>

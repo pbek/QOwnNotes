@@ -85,7 +85,7 @@
 <name>BacklinkWidget</name>
 <message>
 <source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
-<translation type="unfinished">Open note and find &lt;code&gt;%1&lt;/code&gt;</translation>
+<translation>افتح الملاحظة وابحث عن &lt;code&gt;%1&lt;/code&gt;</translation>
 </message>
 </context>
 <context>
@@ -1703,11 +1703,11 @@
 </message>
 <message>
 <source>Headings</source>
-<translation type="unfinished">Headings</translation>
+<translation>العناوين</translation>
 </message>
 <message>
 <source>Backlinks</source>
-<translation type="unfinished">Backlinks</translation>
+<translation>الروابط العكسية</translation>
 </message>
 <message>
 <source>Add a tag to the current note</source>
@@ -5678,7 +5678,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation>لا تظهر إلا المسار النسبي لملاحظات</translation>
+<translation>لا تظهر إلا المسار النسبي للملاحظات</translation>
 </message>
 <message>
 <source>Action name</source>
