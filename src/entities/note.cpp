@@ -3144,9 +3144,9 @@ BacklinkHit Note::findAndReturnBacklinkHit(const QString &text, const QString &p
     return text.contains(pattern) ? BacklinkHit(pattern, pattern) : BacklinkHit("", "");
 }
 
-QList<BacklinkHit> Note::findAndReturnBacklinkHit(const QString &text,
-                                                  const QRegularExpression &regex) {
-    QList<BacklinkHit> backlinkHits;
+QSet<BacklinkHit> Note::findAndReturnBacklinkHit(const QString &text,
+                                                 const QRegularExpression &regex) {
+    QSet<BacklinkHit> backlinkHits;
     QRegularExpressionMatchIterator iterator = regex.globalMatch(text);
 
     while (iterator.hasNext()) {
@@ -3155,7 +3155,7 @@ QList<BacklinkHit> Note::findAndReturnBacklinkHit(const QString &text,
         QString linkUrl = match.captured(2);
         // Do something with the link text and URL
 
-        backlinkHits.append(BacklinkHit(match.captured(0), match.captured(1)));
+        backlinkHits.insert(BacklinkHit(match.captured(0), match.captured(1)));
     }
 
     return backlinkHits;
@@ -3180,12 +3180,12 @@ void Note::addTextToBacklinkNoteHashIfFound(const Note &note, const QRegularExpr
         if (!_backlinkNoteHash.contains(note)) {
             _backlinkNoteHash.insert(note, backlinkHits);
         } else {
-            _backlinkNoteHash[note] << backlinkHits;
+            _backlinkNoteHash[note] = backlinkHits;
         }
     }
 }
 
-QHash<Note, QList<BacklinkHit>> Note::findReverseLinkNotes() {
+QHash<Note, QSet<BacklinkHit>> Note::findReverseLinkNotes() {
     const QVector<int> noteIdList = this->findLinkedNoteIds();
     const int noteCount = noteIdList.count();
 
@@ -3501,7 +3501,7 @@ bool Note::handleNoteMoving(const Note &oldNote) {
     return noteIdList.contains(_id);
 }
 
-QList<Note> Note::findBacklinks() const {
+QSet<Note> Note::findBacklinks() const {
     const QVector<int> noteIdList = this->findLinkedNoteIds();
     const int noteCount = noteIdList.count();
 
@@ -3509,7 +3509,7 @@ QList<Note> Note::findBacklinks() const {
         return {};
     }
 
-    QList<Note> notes;
+    QSet<Note> notes;
 
     for (const int noteId : noteIdList) {
         const Note linkedNote = Note::fetch(noteId);

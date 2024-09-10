@@ -4,6 +4,7 @@
 #include <utils/misc.h>
 
 #include <QDateTime>
+#include <QSet>
 
 class Bookmark;
 class CommandSnippet;
@@ -19,9 +20,19 @@ struct BacklinkHit {
 
     bool isEmpty() const noexcept { return markdown.isEmpty() && text.isEmpty(); }
 
+    // Add operator== for comparison
+    bool operator==(const BacklinkHit &other) const {
+        return markdown == other.markdown && text == other.text;
+    }
+
     QString markdown;
     QString text;
 };
+
+// Add hash function for BacklinkHit
+inline uint qHash(const BacklinkHit &hit, uint seed = 0) {
+    return qHash(hit.markdown, seed) ^ qHash(hit.text, seed);
+}
 
 #define NOTE_TEXT_ENCRYPTION_PRE_STRING "<!-- BEGIN ENCRYPTED TEXT --"
 #define NOTE_TEXT_ENCRYPTION_POST_STRING "-- END ENCRYPTED TEXT -->"
@@ -370,9 +381,9 @@ class Note {
 
     static bool applyIgnoredNotesSetting(QStringList &fileNames);
 
-    QList<Note> findBacklinks() const;
+    QSet<Note> findBacklinks() const;
 
-    QHash<Note, QList<BacklinkHit>> findReverseLinkNotes();
+    QHash<Note, QSet<BacklinkHit>> findReverseLinkNotes();
 
    protected:
     int _id;
@@ -394,7 +405,7 @@ class Note {
     int _shareId;
     unsigned int _sharePermissions;
     bool _hasDirtyData;
-    QHash<Note, QList<BacklinkHit>> _backlinkNoteHash;
+    QHash<Note, QSet<BacklinkHit>> _backlinkNoteHash;
 
     static QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText() const;
@@ -406,8 +417,8 @@ class Note {
     void restoreCreatedDate();
 
     static BacklinkHit findAndReturnBacklinkHit(const QString &text, const QString &pattern);
-    static QList<BacklinkHit> findAndReturnBacklinkHit(const QString &text,
-                                                       const QRegularExpression &regex);
+    static QSet<BacklinkHit> findAndReturnBacklinkHit(const QString &text,
+                                                      const QRegularExpression &regex);
 
     void addTextToBacklinkNoteHashIfFound(const Note &note, const QString &pattern);
     void addTextToBacklinkNoteHashIfFound(const Note &note, const QRegularExpression &pattern);

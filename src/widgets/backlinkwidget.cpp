@@ -60,12 +60,12 @@ void BacklinkWidget::onItemClicked(QTreeWidgetItem *current, int column) {
  */
 void BacklinkWidget::findBacklinks(Note note) {
     clear();
-    QHash<Note, QList<BacklinkHit>> reverseLinkNotes = note.findReverseLinkNotes();
+    auto reverseLinkNotes = note.findReverseLinkNotes();
 
     // Iterate over reverseLinkNotes
     for (auto it = reverseLinkNotes.begin(); it != reverseLinkNotes.end(); ++it) {
         const Note &backlinkNote = it.key();
-        const QList<BacklinkHit> &linkTextList = it.value();
+        const QSet<BacklinkHit> &linkTextList = it.value();
 
         auto *topItem = new QTreeWidgetItem();
 
