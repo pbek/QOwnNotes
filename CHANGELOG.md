@@ -3,6 +3,9 @@
 ## 24.9.4
 - An issue with the **backlink widget** showing duplicate items panel was fixed
   (for [#1717](https://github.com/pbek/QOwnNotes/issues/1717))
+- An issue with the ordered list detection in the heading highlighting was fixed
+  (for [#3101](https://github.com/pbek/QOwnNotes/issues/3101), thank you, @Waqar144)
+
 ## 24.9.3
 - In the **backlink widget** and the automatic link transformation, when notes are
   renamed, now relative links with `/` and urlencoded `/` (as `%2F`) are both supported
