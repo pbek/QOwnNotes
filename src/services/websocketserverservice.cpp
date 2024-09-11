@@ -428,7 +428,10 @@ int WebSocketServerService::editBookmark(const QJsonObject &jsonObject) {
 
     // Get the "markdown" attribute from the "data" object
     QString markdown = dataObject.value("markdown").toString().trimmed();
-    QString newMarkdown = dataObject.value("newMarkdown").toString().trimmed();
+
+    // Make sure there was no newline character in the string
+    // https://github.com/pbek/QOwnNotes/issues/3105
+    QString newMarkdown = dataObject.value("newMarkdown").toString().remove(QChar('\n')).trimmed();
 
     if (markdown.isEmpty() || newMarkdown.isEmpty()) {
         return 0;
