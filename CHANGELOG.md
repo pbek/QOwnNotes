@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.9.5
+- The name detection of links in checkbox list item for bookmarks for the
+  [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was improved (for [#3104](https://github.com/pbek/QOwnNotes/issues/3104))
 ## 24.9.4
 - An issue with the **backlink widget** showing duplicate items panel was fixed
   (for [#1717](https://github.com/pbek/QOwnNotes/issues/1717))
