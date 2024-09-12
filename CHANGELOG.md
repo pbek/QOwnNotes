@@ -5,7 +5,7 @@
   [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was improved (for [#3104](https://github.com/pbek/QOwnNotes/issues/3104))
 - `\n` sent by the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
-  while editing bookmarks will now be automatically removed to not break the
+  while editing, bookmarks will now be automatically removed to not break the
   Markdown link (for [#3105](https://github.com/pbek/QOwnNotes/issues/3105))
 
 ## 24.9.4
