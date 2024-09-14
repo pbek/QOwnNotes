@@ -11295,8 +11295,14 @@ void MainWindow::on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int 
  */
 void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
     qDebug() << __func__;
-    if (ui->noteTreeWidget->selectedItems().size() == 1) {
-        int noteId = ui->noteTreeWidget->selectedItems()[0]->data(0, Qt::UserRole).toInt();
+    const auto &selectedItems = ui->noteTreeWidget->selectedItems();
+    if (selectedItems.size() == 1) {
+        // Don't tread folders as notes
+        if (selectedItems[0]->data(0, Qt::UserRole + 1).toInt() == FolderType) {
+            return;
+        }
+
+        int noteId = selectedItems[0]->data(0, Qt::UserRole).toInt();
         Note note = Note::fetch(noteId);
         bool currentNoteChanged = currentNote.getId() != noteId;
         setCurrentNote(std::move(note), true, false);
