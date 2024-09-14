@@ -1,9 +1,10 @@
 # QOwnNotes Changelog
 
 ## 24.9.6
-- The note selection when selecting a note subfolder in the experimental
+- The accidental note selection when selecting a note subfolder in the experimental
   [note tree mode](https://github.com/pbek/QOwnNotes/issues/790) was fixed
   (for [#3072](https://github.com/pbek/QOwnNotes/issues/3072))
+  - This was also causing the wrong subfolder to be used when a new note was created
 
 ## 24.9.5
 - The name detection of links in checkbox list item for bookmarks for the
