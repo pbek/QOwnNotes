@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 24.9.7
+- The QOwnNotes API <https://api.qownnotes.org> got migrated to PHP 8.2,
+  Symfony 6.4 and API Platform 3.3  for more speed and to be more future-proof
+  (for [#11](https://github.com/qownnotes/api/issues/11))
+
 ## 24.9.6
 - The accidental note selection when selecting a note subfolder in the experimental
   [note tree mode](https://github.com/pbek/QOwnNotes/issues/790) was fixed
