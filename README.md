@@ -5,6 +5,7 @@
 [Issues](https://github.com/pbek/QOwnNotes/issues) |
 [Shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html) |
 [Documentation](https://www.qownnotes.org/getting-started/concept.html) |
+[Privacy Policy](./PRIVACY.md) |
 [Screenshots](https://www.qownnotes.org/getting-started/overview.html) |
 [Nextcloud API](https://apps.nextcloud.com/apps/qownnotesapi) |
 [Nextcloud App Page](https://apps.nextcloud.com/apps/qownnotes) |
