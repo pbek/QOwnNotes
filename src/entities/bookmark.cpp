@@ -102,7 +102,8 @@ QVector<Bookmark> Bookmark::parseBookmarks(const QString &text, bool withBasicUr
 
     if (withBasicUrls) {
         // parse named links like [name](http://my.site.com)
-        i = QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\(([\w-]+://.+?)\))")).globalMatch(text);
+        i = QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\(([\w-]+://.+?)\))"))
+                .globalMatch(text);
 
         while (i.hasNext()) {
             QRegularExpressionMatch match = i.next();
