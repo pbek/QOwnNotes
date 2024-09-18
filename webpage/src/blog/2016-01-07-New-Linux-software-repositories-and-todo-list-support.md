@@ -25,4 +25,4 @@ To manage your todo lists you need [**ownCloud tasks**](https://apps.owncloud.co
 
 Please be encouraged to report any troubles, wishes or ideas you have on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues)!
 
-You may also want to **subscribe** to the **[QOwnNotes RSS Feed](https://www.qownnotes.org/rss/feed/qownnotes-blog)** to get the latest information about the project.
+You may also want to **subscribe** to the **[QOwnNotes RSS Feed](https://www.qownnotes.org/rss.xml)** to get the latest information about the project.

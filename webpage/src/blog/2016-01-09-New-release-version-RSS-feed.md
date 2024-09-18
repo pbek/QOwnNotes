@@ -12,4 +12,4 @@ If you don't want to miss a single version of QOwnNotes you can subscribe to our
 
 And if you don't want to miss every source code commit there is the [QOwnNotes GitHub commit RSS feed](https://github.com/pbek/QOwnNotes/commits/develop.atom).
 
-Of course there also is the **[QOwnNotes blog RSS feed](https://www.qownnotes.org/rss/feed/qownnotes-blog)**, if you want the **latest news** about the project.
+Of course there also is the **[QOwnNotes blog RSS feed](https://www.qownnotes.org/rss.xml)**, if you want the **latest news** about the project.
