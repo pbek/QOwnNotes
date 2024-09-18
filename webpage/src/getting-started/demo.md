@@ -1,5 +1,9 @@
 # QOwnNotes Demo
 
+::: tip Note
+This might not always work, depending on the current state of the demo environment.
+:::
+
 You can try out **QOwnNotes** in your web-browser without installing it by
 following these instructions:
 
