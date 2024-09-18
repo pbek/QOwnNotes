@@ -1,0 +1,12 @@
+# Use `just <recipe>` to run a recipe
+# https://just.systems/man/en/
+
+# By default, run the `--list` command
+default:
+    @just --list
+
+build:
+    docker build -t aqt-list .
+
+run:
+    docker run --rm ./path/file -d aqt-list
