@@ -1,0 +1,22 @@
+// https://zellij.dev/documentation/creating-a-layout
+layout {
+  pane split_direction="vertical" size="65%" {
+    pane {
+      command "lazygit"
+      focus true
+    }
+  }
+  pane split_direction="vertical" size="35%" {
+    pane  {
+      command "npm"
+      args "install"
+    }
+    pane  {
+      command "just"
+      args "dev"
+    }
+  }
+  pane size=1 borderless=true {
+    plugin location="zellij:status-bar"
+  }
+}

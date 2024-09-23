@@ -6,11 +6,23 @@ default:
     @just --list
 
 # Open a bash shell in the dev container
+[group('dev')]
 bash:
     #docker run -it --rm --volume .:/app --user $(id -u) node:12 bash
     #docker-compose run --rm dev bash -c "cd /app && bash"
     docker-compose exec dev bash -c "cd /app && bash"
 
 # Run the development watch build
+[group('dev')]
 dev:
     npm run dev
+
+# Open a terminal with the qownnote-webpage session
+[group('dev')]
+term:
+    zellij --layout term.kdl attach qownnote-webpage -c
+
+# Kill the qownnote-webpage session
+[group('dev')]
+term-kill:
+    zellij delete-session qownnote-webpage -f
