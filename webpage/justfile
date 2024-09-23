@@ -17,6 +17,11 @@ bash:
 dev:
     npm run dev
 
+# Open a browser to the local dev server
+[group('dev')]
+open-browser:
+    xdg-open http://0.0.0.0:8080/
+
 # Open a terminal with the qownnote-webpage session
 [group('dev')]
 term:
