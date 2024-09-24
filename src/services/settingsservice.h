@@ -41,7 +41,7 @@ class SettingsService : public QObject {
     void beginWriteArray(const QString &prefix, int size);
     void setArrayIndex(int i);
     void endArray();
-    int beginReadArray(QString prefix);
+    int beginReadArray(const QString &prefix);
 
     // Delete copy constructor and assignment operator
     SettingsService(const SettingsService &) = delete;
@@ -57,5 +57,5 @@ class SettingsService : public QObject {
     int m_arrayIndex;
     QStringList m_arrayStack;
 
-    static QHash<QString, QVariant> *cache(bool clear = false);
+    static QHash<QString, QVariant> *cache();
 };

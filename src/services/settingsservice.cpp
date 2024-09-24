@@ -21,12 +21,8 @@ SettingsService &SettingsService::instance() {
     return instance;
 }
 
-QHash<QString, QVariant> *SettingsService::cache(bool clear) {
+QHash<QString, QVariant> *SettingsService::cache() {
     static QHash<QString, QVariant> cache;
-
-    if (clear) {
-        cache.clear();
-    }
 
     return &cache;
 }
@@ -73,7 +69,7 @@ void SettingsService::sync() { m_settings.sync(); }
 QStringList SettingsService::allKeys() const { return m_settings.allKeys(); }
 
 void SettingsService::clear() {
-    cache(true);    // Clear the cache
+    cache()->clear();
     m_settings.clear();
 }
 
@@ -109,7 +105,7 @@ void SettingsService::endArray() {
     m_settings.endArray();
 }
 
-int SettingsService::beginReadArray(QString prefix) {
+int SettingsService::beginReadArray(const QString &prefix) {
     m_arrayStack.append(prefix);
     m_arrayIndex = 0;
     return m_settings.beginReadArray(prefix);
