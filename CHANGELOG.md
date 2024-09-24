@@ -2,7 +2,7 @@
 
 ## 24.9.7
 - The QOwnNotes API <https://api.qownnotes.org> got migrated to PHP 8.2,
-  Symfony 6.4 and API Platform 3.3  for more speed and to be more future-proof
+  Symfony 6.4 and API Platform 3.3 for more speed and to be more future-proof
   (for [#11](https://github.com/qownnotes/api/issues/11))
 - The QOwnNotesAPI Nextcloud app was enabled and tested app for Nextcloud 30
   (for [#49](https://github.com/pbek/qownnotesapi/issues/49))
