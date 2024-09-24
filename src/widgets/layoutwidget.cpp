@@ -93,7 +93,7 @@ void LayoutWidget::storeSettings() {
 
     QString layoutIdentifier = ui->layoutComboBox->currentData().toString();
     QString layoutSettingsPrefix = "Layout-" + layoutIdentifier + "/";
-    QSettings settings;
+    SettingsService settings;
     QStringList workspaces = settings.value(QStringLiteral("workspaces")).toStringList();
     QString workspaceIdentifier =
         _manualSettingsStoring ? Utils::Misc::generateRandomString(12) : "initial";

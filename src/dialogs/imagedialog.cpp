@@ -23,7 +23,7 @@ ImageDialog::ImageDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::Ima
     ui->previewFrame->setVisible(false);
     ui->toolFrame->hide();
 
-    QSettings settings;
+    SettingsService settings;
     ui->disableCopyingCheckBox->setChecked(
         settings.value(QStringLiteral("ImageDialog/disableCopying")).toBool());
 
@@ -52,7 +52,7 @@ ImageDialog::ImageDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::Ima
 }
 
 ImageDialog::~ImageDialog() {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("ImageDialog/disableCopying"),
                       ui->disableCopyingCheckBox->isChecked());
 

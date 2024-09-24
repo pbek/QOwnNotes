@@ -94,7 +94,7 @@ void NoteSubFolderTree::buildTreeForParentItem(QTreeWidgetItem *parent) {
         item->setExpanded(isExpanded);
 
         // sort alphabetically, if necessary
-        QSettings settings;
+        SettingsService settings;
         const int sort = settings.value(QStringLiteral("noteSubfoldersPanelSort")).toInt();
         if (sort == SORT_ALPHABETICAL) {
             item->sortChildren(
@@ -124,7 +124,7 @@ QTreeWidgetItem *NoteSubFolderTree::addNoteSubFolder(QTreeWidgetItem *parentItem
                                                      const NoteSubFolder &noteSubFolder) {
     const int id = noteSubFolder.getId();
     const QString name = noteSubFolder.getName();
-    QSettings settings;
+    SettingsService settings;
     const int linkCount = Note::countByNoteSubFolderId(
         id, settings.value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively")).toBool());
     QString toolTip = tr("show notes in folder '%1' (%2)").arg(name, QString::number(linkCount));
@@ -176,7 +176,7 @@ void NoteSubFolderTree::reload() {
     }
 
     // add the "note folder" item
-    QSettings settings;
+    SettingsService settings;
     const int linkCount = Note::countByNoteSubFolderId(
         0, settings.value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively")).toBool());
     const QString toolTip =

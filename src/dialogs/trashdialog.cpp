@@ -126,7 +126,7 @@ void TrashDialog::setupMainSplitter() {
     trashSplitter->addWidget(ui->noteBrowserFrame);
 
     // restore splitter sizes
-    QSettings settings;
+    SettingsService settings;
     QByteArray state = settings.value(QStringLiteral("trashSplitterSizes")).toByteArray();
     trashSplitter->restoreState(state);
 
@@ -136,7 +136,7 @@ void TrashDialog::setupMainSplitter() {
 
 void TrashDialog::storeSettings() {
     // store the splitter sizes
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("trashSplitterSizes"), trashSplitter->saveState());
 }
 

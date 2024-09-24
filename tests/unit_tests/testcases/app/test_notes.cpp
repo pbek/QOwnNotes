@@ -35,7 +35,7 @@ void TestNotes::initTestCase() {
     dir.mkpath(notesPath);
 
     // store notes path for notes
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("notesPath"), notesPath);
 
     // create a note file

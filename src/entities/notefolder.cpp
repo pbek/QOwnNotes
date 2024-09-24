@@ -137,7 +137,7 @@ bool NoteFolder::remove() {
         return false;
     } else {
         // remove the settings of the note folder
-        QSettings settings;
+        SettingsService settings;
         settings.remove(QStringLiteral("NoteHistory-") + QString::number(this->id));
         settings.remove(QStringLiteral("NoteHistoryCurrentIndex-") + QString::number(this->id));
         settings.remove(QStringLiteral("NoteFolder-") + QString::number(this->id));
@@ -249,7 +249,7 @@ bool NoteFolder::exists() const { return NoteFolder::fetch(this->id).id > 0; }
 bool NoteFolder::isFetched() const { return (this->id > 0); }
 
 void NoteFolder::setAsCurrent() const {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("currentNoteFolderId"), id);
 
     // make the path relative to the portable data path if we are in
@@ -270,7 +270,7 @@ bool NoteFolder::isCurrent() const { return currentNoteFolderId() == id; }
  * Returns the id of the current note folder in the settings
  */
 int NoteFolder::currentNoteFolderId() {
-    const QSettings settings;
+    const SettingsService settings;
     return settings.value(QStringLiteral("currentNoteFolderId")).toInt();
 }
 
@@ -327,7 +327,7 @@ QString NoteFolder::currentLocalPath() {
 
     // load notesPath as fallback
     if (path.isEmpty()) {
-        const QSettings settings;
+        const SettingsService settings;
 
         // prepend the portable data path if we are in portable mode
         path = Utils::Misc::prependPortableDataPathIfNeeded(
@@ -399,7 +399,7 @@ bool NoteFolder::isCurrentNoteTreeEnabled() {
  * Suggests a remote path from an old localOwnCloudPath
  */
 QString NoteFolder::suggestRemotePath() {
-    const QSettings settings;
+    const SettingsService settings;
     const QString localOwnCloudPath =
         settings.value(QStringLiteral("ownCloud/localOwnCloudPath")).toString();
 
@@ -428,7 +428,7 @@ QString NoteFolder::fixRemotePath() {
  * Migrate the notesPath and the recentNoteFolders to NoteFolder objects
  */
 bool NoteFolder::migrateToNoteFolders() {
-    QSettings settings;
+    SettingsService settings;
 
     // prepend the portable data path if we are in portable mode
     const QString notesPath = Utils::Misc::prependPortableDataPathIfNeeded(
@@ -529,12 +529,12 @@ bool NoteFolder::isPathNoteFolder(const QString &path) {
 }
 
 void NoteFolder::setSettingsValue(const QString &key, const QVariant &value) {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QString("NoteFolder-%1/%2").arg(QString::number(id), key), value);
 }
 
 QVariant NoteFolder::settingsValue(const QString &key, const QVariant &defaultValue) const {
-    const QSettings settings;
+    const SettingsService settings;
     return settings.value(QString("NoteFolder-%1/%2").arg(QString::number(id), key), defaultValue);
 }
 

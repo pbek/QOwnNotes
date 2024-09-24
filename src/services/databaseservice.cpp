@@ -401,7 +401,7 @@ void DatabaseService::closeDatabaseConnection(QSqlDatabase& db, QSqlQuery& query
 bool DatabaseService::setupTables() {
     QSqlDatabase dbDisk = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery queryDisk(dbDisk);
-    QSettings settings;
+    SettingsService settings;
 
     queryDisk.exec(
         QStringLiteral("CREATE TABLE IF NOT EXISTS appData ("

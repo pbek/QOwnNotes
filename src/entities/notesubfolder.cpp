@@ -452,7 +452,7 @@ NoteSubFolder NoteSubFolder::activeNoteSubFolder() {
  * Saves the expand status of the item
  */
 void NoteSubFolder::saveTreeWidgetExpandState(bool expanded) const {
-    QSettings settings;
+    SettingsService settings;
     const QString settingsKey = treeWidgetExpandStateSettingsKey();
 
     // load the settings
@@ -475,7 +475,7 @@ void NoteSubFolder::saveTreeWidgetExpandState(bool expanded) const {
  * Fetches the expand status of the item
  */
 bool NoteSubFolder::treeWidgetExpandState() const {
-    const QSettings settings;
+    const SettingsService settings;
     const QString settingsKey = treeWidgetExpandStateSettingsKey();
 
     // load the settings
@@ -540,7 +540,7 @@ bool NoteSubFolder::willFolderBeIgnored(const QString& folderName, bool showWarn
         return true;
     }
 
-    const QSettings settings;
+    const SettingsService settings;
     const QStringList ignoredFolderRegExpList =
         settings.value(QStringLiteral("ignoreNoteSubFolders"), IGNORED_NOTE_SUBFOLDERS_DEFAULT)
             .toString()

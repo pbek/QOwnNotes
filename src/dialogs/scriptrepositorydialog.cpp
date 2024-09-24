@@ -15,7 +15,7 @@
 #include <QtCore/QFile>
 #include <QtCore/QJsonArray>
 #include <QtCore/QJsonObject>
-#include <QtCore/QSettings>
+#include "services/settingsservice.h"
 #include <QtMath>
 #include <QtNetwork/QNetworkRequest>
 #include <QtWidgets/QMessageBox>
@@ -232,7 +232,7 @@ void ScriptRepositoryDialog::setupMainSplitter() {
     _mainSplitter->addWidget(ui->infoFrame);
 
     // restore splitter sizes
-    QSettings settings;
+    SettingsService settings;
     QByteArray state =
         settings.value(QStringLiteral("ScriptRepositoryDialog/mainSplitterState")).toByteArray();
     _mainSplitter->restoreState(state);
@@ -244,7 +244,7 @@ void ScriptRepositoryDialog::setupMainSplitter() {
  * Stores the settings
  */
 void ScriptRepositoryDialog::storeSettings() {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("ScriptRepositoryDialog/mainSplitterState"),
                       _mainSplitter->saveState());
 }

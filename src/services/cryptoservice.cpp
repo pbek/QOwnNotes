@@ -9,7 +9,7 @@
 #endif
 
 CryptoService::CryptoService(QObject *parent) : QObject(parent) {
-    QSettings settings;
+    SettingsService settings;
     qint64 cryptoKey = settings.value(QStringLiteral("cryptoKey")).toUInt();
 
     // generate a key if we don't have one

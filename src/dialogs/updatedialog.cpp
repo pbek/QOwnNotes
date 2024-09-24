@@ -126,13 +126,13 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
 
     switch (actionRole) {
         case Skip: {
-            QSettings settings;
+            SettingsService settings;
             settings.setValue(QStringLiteral("skipVersion"), this->releaseVersionString);
             qDebug() << "skip version";
             break;
         }
         case Disable: {
-            QSettings settings;
+            SettingsService settings;
             settings.setValue(QStringLiteral("disableAutomaticUpdateDialog"), true);
             qDebug() << "disable dialog";
             break;

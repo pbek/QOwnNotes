@@ -146,7 +146,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent)
     ui->searchDictionaryEdit->setFocus();
     ui->remoteDictionaryTreeWidget->sortByColumn(0, Qt::AscendingOrder);
 
-    QSettings settings;
+    SettingsService settings;
     const QSignalBlocker blocker(ui->disableExternalDictionariesCheckBox);
     Q_UNUSED(blocker)
     ui->disableExternalDictionariesCheckBox->setChecked(
@@ -192,7 +192,7 @@ void DictionaryManagerDialog::setupMainSplitter() {
     _mainSplitter->addWidget(ui->localDictionariesGroupBox);
 
     // restore splitter sizes
-    QSettings settings;
+    SettingsService settings;
     QByteArray state =
         settings.value(QStringLiteral("DictionaryManagerDialog/mainSplitterState")).toByteArray();
     _mainSplitter->restoreState(state);
@@ -204,7 +204,7 @@ void DictionaryManagerDialog::setupMainSplitter() {
  * Stores the settings
  */
 void DictionaryManagerDialog::storeSettings() {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("DictionaryManagerDialog/mainSplitterState"),
                       _mainSplitter->saveState());
 }
@@ -415,7 +415,7 @@ void DictionaryManagerDialog::on_remoteDictionaryTreeWidget_itemDoubleClicked(QT
 }
 
 void DictionaryManagerDialog::on_disableExternalDictionariesCheckBox_toggled(bool checked) {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("disableExternalDictionaries"), checked);
     qApp->setProperty("needsRestart", true);
 }

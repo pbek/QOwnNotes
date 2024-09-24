@@ -23,7 +23,7 @@ JoplinImportDialog::JoplinImportDialog(QWidget* parent)
     ui->progressBar->setValue(0);
     _importCount = 0;
 
-    QSettings settings;
+    SettingsService settings;
     bool showFolders = NoteFolder::isCurrentShowSubfolders();
 
     if (!showFolders) {
@@ -49,7 +49,7 @@ JoplinImportDialog::JoplinImportDialog(QWidget* parent)
 }
 
 JoplinImportDialog::~JoplinImportDialog() {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("JoplinImport/FolderImportCheckBoxChecked"),
                       ui->folderImportCheckBox->isChecked());
     settings.setValue(QStringLiteral("JoplinImport/TagImportCheckBoxChecked"),

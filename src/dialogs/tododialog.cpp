@@ -171,7 +171,7 @@ void TodoDialog::refreshUi() {
 
     ui->todoItemLoadingProgressBar->hide();
 
-    QSettings settings;
+    SettingsService settings;
 
     {
         const QSignalBlocker blocker(ui->showCompletedItemsCheckBox);
@@ -214,7 +214,7 @@ void TodoDialog::setupMainSplitter() {
     this->mainSplitter->addWidget(ui->editFrame);
 
     // restore splitter sizes
-    QSettings settings;
+    SettingsService settings;
     QByteArray state = settings.value(QStringLiteral("TodoDialog/mainSplitterState")).toByteArray();
     this->mainSplitter->restoreState(state);
 
@@ -228,7 +228,7 @@ void TodoDialog::loadTodoListData() {
     const QSignalBlocker blocker(ui->todoListSelector);
     Q_UNUSED(blocker)
 
-    QSettings settings;
+    SettingsService settings;
     ui->todoListSelector->clear();
     ui->todoListSelector->addItems(
         settings.value(QStringLiteral("ownCloud/todoCalendarEnabledList")).toStringList());
@@ -437,7 +437,7 @@ QTreeWidgetItem *TodoDialog::findTodoItemTreeWidgetItemByUID(const QString &uid)
 }
 
 void TodoDialog::storeSettings() {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("TodoDialog/geometry"), saveGeometry());
     settings.setValue(QStringLiteral("TodoDialog/mainSplitterState"),
                       this->mainSplitter->saveState());
@@ -535,7 +535,7 @@ void TodoDialog::on_saveButton_clicked() {
 
     qDebug() << currentCalendarItem;
 
-    QSettings settings;
+    SettingsService settings;
     if (settings.value(QStringLiteral("closeTodoListAfterSave")).toBool()) {
         close();
     }

@@ -37,7 +37,7 @@ FakeVimProxy::FakeVimProxy(QWidget *widget, QObject *parent) : QObject(parent), 
         }
     }
 
-    QSettings settings;
+    SettingsService settings;
     bool setExpandTab = !settings.value(QStringLiteral("Editor/useTabIndent")).toBool();
     fakeVimSettings()->item("et")->setValue(setExpandTab);
     fakeVimSettings()->item("ts")->setValue(Utils::Misc::indentSize());

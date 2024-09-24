@@ -1058,7 +1058,7 @@ bool Utils::Misc::downloadUrlToFile(const QUrl &url, QFile *file) {
  * @return
  */
 QString Utils::Misc::genericCSS() {
-    QSettings settings;
+    SettingsService settings;
     const bool darkModeColors = settings.value(QStringLiteral("darkModeColors")).toBool();
     QString color = darkModeColors ? QStringLiteral("#ffd694") : QStringLiteral("#fc7600");
     QString cssStyles = QStringLiteral("a {color: ") % color % QStringLiteral("}");
@@ -1139,7 +1139,7 @@ QList<int> Utils::Misc::getSearchEnginesIds() {
  * self-builds if nothing is already set
  */
 void Utils::Misc::presetDisableAutomaticUpdateDialog() {
-    QSettings settings;
+    SettingsService settings;
 
     // disable the automatic update dialog per default for repositories and
     // self-builds
@@ -1278,7 +1278,7 @@ void Utils::Misc::storePrinterSettings(QPrinter *printer, const QString &setting
  * @param settingsKey
  */
 void Utils::Misc::loadPrinterSettings(QPrinter *printer, const QString &settingsKey) {
-    QSettings settings;
+    SettingsService settings;
 
     if (!settings.value(settingsKey).isValid()) {
         return;
@@ -1384,7 +1384,7 @@ bool Utils::Misc::isRestoreCursorPosition() {
  * @return
  */
 bool Utils::Misc::isDarkModeIconTheme() {
-    const QSettings settings;
+    const SettingsService settings;
     const bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
     return settings.value(QStringLiteral("darkModeIconTheme"), darkMode).toBool();
 }
@@ -1533,7 +1533,7 @@ QString Utils::Misc::prepareDebugInformationLine(const QString &headline, QStrin
 }
 
 QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
-    const QSettings settings;
+    const SettingsService settings;
     QString output;
 
     output += QStringLiteral("QOwnNotes Debug Information\n");
@@ -2309,7 +2309,7 @@ QString Utils::Misc::fileExtensionForMimeType(const QString &mimeType) {
 }
 
 void Utils::Misc::switchToDarkOrLightMode(bool darkMode) {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue("darkMode", darkMode);
     settings.setValue("darkModeColors", darkMode);
     settings.setValue("darkModeIconTheme", darkMode);

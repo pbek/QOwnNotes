@@ -11,7 +11,7 @@ ClientProxy::ClientProxy(QObject *parent) : QObject(parent) {}
 
 QNetworkProxy ClientProxy::proxyFromSettings() {
     QNetworkProxy proxy;
-    QSettings settings;
+    SettingsService settings;
     QString proxyHostName = settings.value(QStringLiteral("networking/proxyHostName")).toString();
 
     if (proxyHostName.isEmpty()) {
@@ -36,7 +36,7 @@ QNetworkProxy ClientProxy::proxyFromSettings() {
 }
 
 bool ClientProxy::isUsingSystemDefault() {
-    QSettings settings;
+    SettingsService settings;
     int proxyType =
         settings.value(QStringLiteral("networking/proxyType"), QNetworkProxy::NoProxy).toInt();
     return proxyType == QNetworkProxy::DefaultProxy;
@@ -47,7 +47,7 @@ QString printQNetworkProxy(const QNetworkProxy &proxy) {
 }
 
 void ClientProxy::setupQtProxyFromSettings() {
-    QSettings settings;
+    SettingsService settings;
     int proxyType =
         settings.value(QStringLiteral("networking/proxyType"), QNetworkProxy::NoProxy).toInt();
     QNetworkProxy proxy = proxyFromSettings();

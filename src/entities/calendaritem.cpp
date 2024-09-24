@@ -1092,7 +1092,7 @@ CalendarItem CalendarItem::createNewTodoItem(const QString &summary, const QStri
  * @return
  */
 int CalendarItem::getCurrentCalendarIndex() {
-    QSettings settings;
+    SettingsService settings;
 
     QString todoListSelectorSelectedItem =
         settings.value(QStringLiteral("TodoDialog/todoListSelectorSelectedItem")).toString();
@@ -1117,7 +1117,7 @@ int CalendarItem::getCurrentCalendarIndex() {
  * @return
  */
 QString CalendarItem::getCurrentCalendarUrl() {
-    QSettings settings;
+    SettingsService settings;
 
     int index = getCurrentCalendarIndex();
 

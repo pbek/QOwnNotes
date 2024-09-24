@@ -75,7 +75,7 @@ void OwnCloudService::resetNetworkManagerCookieJar() {
  * @return
  */
 bool OwnCloudService::isOwnCloudSupportEnabled() {
-    QSettings settings;
+    SettingsService settings;
     return settings.value(QStringLiteral("ownCloud/supportEnabled")).toBool();
 }
 
@@ -85,7 +85,7 @@ bool OwnCloudService::isOwnCloudSupportEnabled() {
  * @return
  */
 bool OwnCloudService::isTodoCalendarSupportEnabled() {
-    QSettings settings;
+    SettingsService settings;
     return settings.value(QStringLiteral("todoCalendarSupport"), true).toBool();
 }
 
@@ -95,7 +95,7 @@ bool OwnCloudService::isTodoCalendarSupportEnabled() {
  * @return
  */
 bool OwnCloudService::isTodoSupportEnabled() {
-    QSettings settings;
+    SettingsService settings;
     int calendarBackend =
         settings.value(QStringLiteral("ownCloud/todoCalendarBackend"), DefaultOwnCloudCalendar)
             .toInt();
@@ -112,7 +112,7 @@ bool OwnCloudService::isTodoSupportEnabled() {
 }
 
 void OwnCloudService::readSettings(int cloudConnectionId) {
-    QSettings settings;
+    SettingsService settings;
     CloudConnection cloudConnection = cloudConnectionId != -1
                                           ? CloudConnection::fetch(cloudConnectionId)
                                           : CloudConnection::currentCloudConnection();
@@ -614,7 +614,7 @@ void OwnCloudService::startAppVersionTest() {
  * Ignores ssl errors for a QNetworkReply if allowed
  */
 void OwnCloudService::ignoreSslErrorsIfAllowed(QNetworkReply *reply) {
-    QSettings settings;
+    SettingsService settings;
     if (settings.value(QStringLiteral("networking/ignoreSSLErrors"), true).toBool()) {
         QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply,
                          SLOT(ignoreSslErrors()));
@@ -669,7 +669,7 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName, TodoDialog *d
     this->todoDialog = dialog;
     this->calendarName = calendarName;
 
-    QSettings settings;
+    SettingsService settings;
     QStringList todoCalendarEnabledList =
         settings.value(QStringLiteral("ownCloud/todoCalendarEnabledList")).toStringList();
     int index = todoCalendarEnabledList.indexOf(calendarName);
@@ -1090,7 +1090,7 @@ bool OwnCloudService::hasOwnCloudSettings(bool withEnabledCheck, bool ignoreTabl
         return false;
     }
 
-    QSettings settings;
+    SettingsService settings;
     CloudConnection cloudConnection = CloudConnection::currentCloudConnection(ignoreTableWarning);
 
     QString serverUrl = cloudConnection.getServerUrl();
@@ -1354,7 +1354,7 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
         }
     }
 
-    QSettings settings;
+    SettingsService settings;
     bool ignoreNonTodoCalendars =
         settings.value(QStringLiteral("ownCloud/ignoreNonTodoCalendars"), true).toBool();
 

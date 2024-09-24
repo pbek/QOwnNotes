@@ -96,7 +96,7 @@ void VersionDialog::setupMainSplitter() {
     versionSplitter->addWidget(ui->tabWidget);
 
     // restore splitter sizes
-    QSettings settings;
+    SettingsService settings;
     QByteArray state = settings.value(QStringLiteral("versionSplitterSizes")).toByteArray();
     versionSplitter->restoreState(state);
 
@@ -105,7 +105,7 @@ void VersionDialog::setupMainSplitter() {
 
 void VersionDialog::storeSettings() {
     // store the splitter sizes
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("versionSplitterSizes"), versionSplitter->saveState());
 }
 

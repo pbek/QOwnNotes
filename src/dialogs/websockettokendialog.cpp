@@ -2,7 +2,7 @@
 
 #include <utils/misc.h>
 
-#include <QtCore/QSettings>
+#include "services/settingsservice.h"
 #include <QtGui/QClipboard>
 
 #include "ui_websockettokendialog.h"
@@ -12,7 +12,7 @@ WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent)
     ui->setupUi(this);
     afterSetupUI();
 
-    QSettings settings;
+    SettingsService settings;
     QString token = settings.value(QStringLiteral("webSocketServerService/token")).toString();
 
     if (token.isEmpty()) {
@@ -34,13 +34,13 @@ void WebSocketTokenDialog::on_copyButton_clicked() {
 
 void WebSocketTokenDialog::on_generateButton_clicked() {
     QString token = generateToken();
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("webSocketServerService/token"), token);
     ui->tokenLineEdit->setText(token);
     on_copyButton_clicked();
 }
 
 void WebSocketTokenDialog::on_buttonBox_accepted() {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("webSocketServerService/token"), ui->tokenLineEdit->text());
 }

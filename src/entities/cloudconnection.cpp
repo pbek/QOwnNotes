@@ -90,7 +90,7 @@ CloudConnection CloudConnection::currentCloudConnection(bool ignoreTableWarning)
 }
 
 CloudConnection CloudConnection::currentTodoCalendarCloudConnection() {
-    QSettings settings;
+    SettingsService settings;
     const int id = settings
                        .value(QStringLiteral("ownCloud/todoCalendarCloudConnectionId"),
                               firstCloudConnection().getId())
@@ -351,7 +351,7 @@ bool CloudConnection::migrateToCloudConnections() {
         return false;
     }
 
-    QSettings settings;
+    SettingsService settings;
     const QString serverUrl = settings.value(QStringLiteral("ownCloud/serverUrl")).toString();
     const QString username = settings.value(QStringLiteral("ownCloud/userName")).toString();
     const QString password = CryptoService::instance()->decryptToString(

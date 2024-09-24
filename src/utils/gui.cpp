@@ -323,7 +323,7 @@ QMessageBox::StandardButton Utils::Gui::showMessageBox(
     QWidget *parent, QMessageBox::Icon icon, const QString &title, const QString &text,
     const QString &identifier, QMessageBox::StandardButtons buttons,
     QMessageBox::StandardButton defaultButton, QMessageBox::StandardButtons skipOverrideButtons) {
-    QSettings settings;
+    SettingsService settings;
     const QString settingsKey = "MessageBoxOverride/" + identifier;
     auto overrideButton = static_cast<QMessageBox::StandardButton>(
         settings.value(settingsKey, QMessageBox::NoButton).toInt());
@@ -753,7 +753,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
  * settings
  */
 void Utils::Gui::updateInterfaceFontSize(int fontSize) {
-    QSettings settings;
+    SettingsService settings;
     bool overrideInterfaceFontSize =
         settings.value(QStringLiteral("overrideInterfaceFontSize"), false).toBool();
 
@@ -827,7 +827,7 @@ Note Utils::Gui::getTabWidgetNote(QTabWidget *tabWidget, int index, bool fetchBy
 
 void Utils::Gui::storeNoteTabs(QTabWidget *tabWidget) {
     // check if we want to store note tabs
-    const QSettings settings;
+    const SettingsService settings;
     if (!settings.value(QStringLiteral("restoreNoteTabs"), true).toBool()) {
         return;
     }
@@ -867,7 +867,7 @@ void Utils::Gui::restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout) {
         tabWidget->removeTab(1);
     }
 
-    const QSettings settings;
+    const SettingsService settings;
 
     // check if we want to restore note tabs
     if (settings.value(QStringLiteral("restoreNoteTabs"), true).toBool()) {

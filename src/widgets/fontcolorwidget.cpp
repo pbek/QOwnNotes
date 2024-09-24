@@ -108,7 +108,7 @@ void FontColorWidget::initSchemaSelector() {
         defaultSchemaNameKeys.insert(name, schemaKey);
     }
 
-    QSettings settings;
+    SettingsService settings;
     QString currentSchemaKey =
         settings
             .value(QStringLiteral("Editor/CurrentSchemaKey"),
@@ -405,7 +405,7 @@ void FontColorWidget::setSchemaValue(const QString& key, const QVariant& value, 
         schemaKey = _currentSchemaKey;
     }
 
-    QSettings settings;
+    SettingsService settings;
     settings.beginGroup(schemaKey);
     return settings.setValue(key, value);
 }
@@ -422,7 +422,7 @@ void FontColorWidget::on_colorSchemeComboBox_currentIndexChanged(int index) {
     ui->deleteSchemeButton->setEnabled(!_currentSchemaIsDefault);
     ui->schemeEditFrame->setEnabled(!_currentSchemaIsDefault);
 
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("Editor/CurrentSchemaKey"), _currentSchemaKey);
 
     updateSchemeEditFrame();
@@ -547,7 +547,7 @@ void FontColorWidget::on_copySchemeButton_clicked() {
     }
 
     // add the new color schema to the color schemes list in the settings
-    QSettings settings;
+    SettingsService settings;
     QStringList schemes = settings.value("Editor/ColorSchemes").toStringList();
     schemes << _currentSchemaKey;
     settings.setValue("Editor/ColorSchemes", schemes);
@@ -648,7 +648,7 @@ void FontColorWidget::on_deleteSchemeButton_clicked() {
         return;
     }
 
-    QSettings settings;
+    SettingsService settings;
     settings.beginGroup(_currentSchemaKey);
     // remove the group and all its keys
     settings.remove("");
@@ -775,7 +775,7 @@ void FontColorWidget::on_importSchemeButton_clicked() {
 void FontColorWidget::initFontSelectors() {
     QTextEdit textEdit;
     QFont font = textEdit.font();
-    QSettings settings;
+    SettingsService settings;
     QString fontString = settings.value("MainWindow/noteTextEdit.font").toString();
 
     if (!fontString.isEmpty()) {

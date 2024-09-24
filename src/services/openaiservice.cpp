@@ -89,7 +89,7 @@ void OpenAiService::initializeBackends() {
         QStringLiteral("https://api.groq.com/openai/v1/chat/completions");
 
     _backendApiKeys.clear();
-    QSettings settings;
+    SettingsService settings;
     _backendApiKeys[QStringLiteral("groq")] = CryptoService::instance()->decryptToString(
         settings.value(getApiKeySettingsKeyForBackend(QStringLiteral("groq"))).toString());
     ;
@@ -162,7 +162,7 @@ bool OpenAiService::setBackendId(const QString& id) {
         return false;
     }
 
-    QSettings settings;
+    SettingsService settings;
     this->_backendId = id;
     settings.setValue(QStringLiteral("ai/currentBackend"), id);
     // Reset model id, so it needs to be read again
@@ -187,7 +187,7 @@ void OpenAiService::setApiKeyForCurrentBackend() {
 QString OpenAiService::getBackendId() {
     // If no backend id is set yet, try to read the settings
     if (this->_backendId.isEmpty()) {
-        QSettings settings;
+        SettingsService settings;
         this->_backendId =
             settings.value(QStringLiteral("ai/currentBackend"), QStringLiteral("groq")).toString();
     }
@@ -197,7 +197,7 @@ QString OpenAiService::getBackendId() {
 
 bool OpenAiService::setModelId(const QString& id) {
     //    if (this->_modelId == id) {
-    //        QSettings settings;
+    //        SettingsService settings;
     //        this->_modelId = settings.value(getCurrentModelSettingsKey(), id).toString();
     //    }
 
@@ -207,7 +207,7 @@ bool OpenAiService::setModelId(const QString& id) {
     }
 
     this->_modelId = id;
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(getCurrentModelSettingsKey(), id);
 
     // Set new completer data
@@ -219,7 +219,7 @@ bool OpenAiService::setModelId(const QString& id) {
 QString OpenAiService::getModelId() {
     // If not set yet try to read the settings
     if (this->_modelId.isEmpty()) {
-        QSettings settings;
+        SettingsService settings;
         this->_modelId =
             settings.value(getCurrentModelSettingsKey(), _backendModels[getBackendId()]).toString();
     }
@@ -243,14 +243,14 @@ QString OpenAiService::getApiKeySettingsKeyForBackend(const QString& backendId) 
 }
 
 bool OpenAiService::setEnabled(bool enabled) {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("ai/enabled"), enabled);
 
     return true;
 }
 
 bool OpenAiService::getEnabled() {
-    QSettings settings;
+    SettingsService settings;
     return settings.value(QStringLiteral("ai/enabled")).toBool();
 }
 

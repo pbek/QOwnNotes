@@ -2145,7 +2145,7 @@ void ScriptingService::setPersistentVariable(const QString &key, const QVariant 
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
                                                    QString(__func__));
 
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(
         QStringLiteral(PERSISTENT_VARIABLE_SETTINGS_PREFIX) % QStringLiteral("/") % key, value);
 }
@@ -2163,7 +2163,7 @@ QVariant ScriptingService::getPersistentVariable(const QString &key, const QVari
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
                                                    QString(__func__));
 
-    QSettings settings;
+    SettingsService settings;
     return settings.value(
         QStringLiteral(PERSISTENT_VARIABLE_SETTINGS_PREFIX) % QStringLiteral("/") % key,
         defaultValue);
@@ -2179,7 +2179,7 @@ QVariant ScriptingService::getPersistentVariable(const QString &key, const QVari
  */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
                                                           const QVariant &defaultValue) {
-    QSettings settings;
+    SettingsService settings;
     return settings.value(key, defaultValue);
 }
 

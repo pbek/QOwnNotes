@@ -75,7 +75,7 @@ const QSettings& Utils::Schema::Settings::defaultSchemaSettings() const {
  * @return
  */
 QString Utils::Schema::Settings::currentSchemaKey() const {
-    QSettings settings;
+    SettingsService settings;
     return settings
         .value(QStringLiteral("Editor/CurrentSchemaKey"), _defaultSchemaKeysList.length() > 0
                                                               ? _defaultSchemaKeysList[0]
@@ -324,7 +324,7 @@ QFont Utils::Schema::Settings::getEditorTextFont() const {
         _defaultTextEditFont = QTextEdit().font();
         _defaultFontSet = true;
     }
-    QSettings settings;
+    SettingsService settings;
     QString fontString = settings.value(QStringLiteral("MainWindow/noteTextEdit.font")).toString();
 
     QFont font(_defaultTextEditFont);
@@ -351,7 +351,7 @@ QFont Utils::Schema::Settings::getEditorFixedFont() const {
         _defaultFontSet = true;
     }
 
-    QSettings settings;
+    SettingsService settings;
     QString fontString =
         settings.value(QStringLiteral("MainWindow/noteTextEdit.code.font")).toString();
 

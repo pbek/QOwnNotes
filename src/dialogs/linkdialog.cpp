@@ -285,7 +285,7 @@ void LinkDialog::slotReplyFinished(QNetworkReply *reply) {
  * Selects a local file to link to
  */
 void LinkDialog::addFileUrl() {
-    QSettings settings;
+    SettingsService settings;
     // load last url
     QUrl fileUrl = settings.value(QStringLiteral("LinkDialog/lastSelectedFileUrl")).toUrl();
 
@@ -319,7 +319,7 @@ void LinkDialog::addFileUrl() {
  * Selects a local directory to link to
  */
 void LinkDialog::addDirectoryUrl() {
-    QSettings settings;
+    SettingsService settings;
     // load last url
     QUrl directoryUrl =
         settings.value(QStringLiteral("LinkDialog/lastSelectedDirectoryUrl")).toUrl();

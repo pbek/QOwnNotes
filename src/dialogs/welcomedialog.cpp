@@ -27,7 +27,7 @@ WelcomeDialog::WelcomeDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui:
 
     // if note layout has already been set, we can finish settings in the first
     // step
-    QSettings settings;
+    SettingsService settings;
     _allowFinishButton = settings.contains(QStringLiteral("workspace-initial/windowState"));
     ui->finishButton->setEnabled(_allowFinishButton);
 
@@ -67,7 +67,7 @@ void WelcomeDialog::on_nextButton_clicked() {
     }
 
     if (index == WelcomePages::MetricsPage) {
-        QSettings settings;
+        SettingsService settings;
         settings.setValue(QStringLiteral("appMetrics/notificationShown"), true);
     }
 
@@ -151,7 +151,7 @@ void WelcomeDialog::storeNoteFolderSettings() {
     MetricsService::instance()->sendVisitIfEnabled(
         QStringLiteral("welcome-dialog/note-folder/stored"));
 
-    QSettings settings;
+    SettingsService settings;
 
     // make the path relative to the portable data path if we are in
     // portable mode

@@ -518,7 +518,7 @@ void SettingsDialog::setupProxyPage() {
  * Loads the proxy settings
  */
 void SettingsDialog::loadProxySettings() {
-    QSettings settings;
+    SettingsService settings;
 
     // load current proxy settings
     int type =
@@ -553,7 +553,7 @@ void SettingsDialog::loadProxySettings() {
  * Stores the proxy settings
  */
 void SettingsDialog::storeProxySettings() {
-    QSettings settings;
+    SettingsService settings;
     int proxyType = QNetworkProxy::DefaultProxy;
 
     if (ui->noProxyRadioButton->isChecked()) {
@@ -632,7 +632,7 @@ void SettingsDialog::storeSelectedCloudConnection() {
 }
 
 void SettingsDialog::storeSettings() {
-    QSettings settings;
+    SettingsService settings;
     storeSelectedCloudConnection();
 
     settings.setValue(QStringLiteral("ownCloud/supportEnabled"),
@@ -911,7 +911,7 @@ void SettingsDialog::storeSettings() {
  * @brief Stores the Panel settings
  */
 void SettingsDialog::storePanelSettings() {
-    QSettings settings;
+    SettingsService settings;
     // Notes Panel Options
     ui->notesPanelSortAlphabeticalRadioButton->isChecked()
         ? settings.setValue(QStringLiteral("notesPanelSort"), SORT_ALPHABETICAL)
@@ -991,7 +991,7 @@ void SettingsDialog::storePanelSettings() {
  * Stores the font settings
  */
 void SettingsDialog::storeFontSettings() {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("MainWindow/noteTextEdit.font"), noteTextEditFont.toString());
     settings.setValue(QStringLiteral("MainWindow/noteTextEdit.code.font"),
                       noteTextEditCodeFont.toString());
@@ -1001,7 +1001,7 @@ void SettingsDialog::storeFontSettings() {
 }
 
 void SettingsDialog::readSettings() {
-    QSettings settings;
+    SettingsService settings;
 
     // set current note folder list item
     QListWidgetItem *noteFolderListItem = Utils::Gui::getListWidgetItemWithUserData(
@@ -1375,7 +1375,7 @@ void SettingsDialog::readSettings() {
  * Does the setup for the search engine combo-box
  */
 void SettingsDialog::initSearchEngineComboBox() const {
-    QSettings settings;
+    SettingsService settings;
 
     // Iterates over the search engines and adds them
     // to the combobox
@@ -1415,7 +1415,7 @@ void SettingsDialog::loadInterfaceStyleComboBox() const {
         ui->interfaceStyleComboBox->addItem(style);
     }
 
-    QSettings settings;
+    SettingsService settings;
     QString interfaceStyle = settings.value(QStringLiteral("interfaceStyle")).toString();
 
     if (!interfaceStyle.isEmpty()) {
@@ -1430,7 +1430,7 @@ void SettingsDialog::loadInterfaceStyleComboBox() const {
  * @brief Read the Panel Settings
  */
 void SettingsDialog::readPanelSettings() {
-    QSettings settings;
+    SettingsService settings;
     // Notes Panel Options
     if (settings.value(QStringLiteral("notesPanelSort"), SORT_BY_LAST_CHANGE).toInt() ==
         SORT_ALPHABETICAL) {
@@ -1535,7 +1535,7 @@ void SettingsDialog::loadShortcutSettings() {
         return;
     }
 
-    QSettings settings;
+    SettingsService settings;
     bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
 
     QPalette palette;
@@ -1747,7 +1747,7 @@ QKeySequenceWidget *SettingsDialog::findKeySequenceWidget(const QString &objectN
  * Stores the local and global keyboard shortcut settings
  */
 void SettingsDialog::storeShortcutSettings() {
-    QSettings settings;
+    SettingsService settings;
 
     // loop all top level tree widget items (menus)
     for (int i = 0; i < ui->shortcutTreeWidget->topLevelItemCount(); i++) {
@@ -1981,7 +1981,7 @@ void SettingsDialog::refreshTodoCalendarList(const QList<CalDAVCalendarData> &it
         return;
     }
 
-    QSettings settings;
+    SettingsService settings;
     QStringList todoCalendarEnabledList =
         settings.value(QStringLiteral("ownCloud/todoCalendarEnabledList")).toStringList();
 
@@ -2237,7 +2237,7 @@ void SettingsDialog::on_clearAppDataAndExitButton_clicked() {
                                     "database and exit QOwnNotes?\n\n"
                                     "Your notes will stay intact!"),
                                  tr("Clear and &exit"), tr("&Cancel"), QString(), 1) == 0) {
-        QSettings settings;
+        SettingsService settings;
         settings.clear();
         DatabaseService::removeDiskDatabase();
 
@@ -2478,7 +2478,7 @@ void SettingsDialog::on_noteFolderRemoveButton_clicked() {
                              QStringLiteral("remove-note-folder")) == QMessageBox::Yes) {
         bool wasCurrent = _selectedNoteFolder.isCurrent();
 
-        QSettings settings;
+        SettingsService settings;
 
         // remove saved searches
         QString settingsKey =
@@ -3382,7 +3382,7 @@ void SettingsDialog::initMainSplitter() {
     ui->mainFrame->layout()->addWidget(_mainSplitter);
 
     // restore tag frame splitter state
-    QSettings settings;
+    SettingsService settings;
     QByteArray state =
         settings.value(QStringLiteral("SettingsDialog/mainSplitterState")).toByteArray();
     _mainSplitter->restoreState(state);
@@ -3405,7 +3405,7 @@ void SettingsDialog::closeEvent(QCloseEvent *event) {
  * Stores some data for Utils::Misc::generateDebugInformation
  */
 void SettingsDialog::storeOwncloudDebugData() const {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("ownCloudInfo/appIsValid"), appIsValid);
     settings.setValue(QStringLiteral("ownCloudInfo/notesPathExistsText"), notesPathExistsText);
     settings.setValue(QStringLiteral("ownCloudInfo/serverVersion"), serverVersion);
@@ -3417,7 +3417,7 @@ void SettingsDialog::storeOwncloudDebugData() const {
  * Stores the splitter settings
  */
 void SettingsDialog::storeSplitterSettings() {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("SettingsDialog/mainSplitterState"),
                       _mainSplitter->saveState());
 }
@@ -3468,7 +3468,7 @@ void SettingsDialog::on_toolbarIconSizeResetButton_clicked() {
 }
 
 void SettingsDialog::on_ignoreNonTodoCalendarsCheckBox_toggled(bool checked) {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("ownCloud/ignoreNonTodoCalendars"), checked);
 }
 
@@ -3500,7 +3500,7 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
         ToolbarContainer::updateIconSize(toolbar);
     }
 
-    QSettings settings;
+    SettingsService settings;
 
     // remove the current toolbars
     //    settings.beginGroup("toolbar");
@@ -3526,7 +3526,7 @@ void SettingsDialog::on_resetToolbarPushButton_clicked() {
                                     "default toolbars will be restored when you start it "
                                     "again."),
                                  tr("Reset and &exit"), tr("&Cancel"), QLatin1String(""), 1) == 0) {
-        QSettings settings;
+        SettingsService settings;
 
         // remove all settings in the group
         settings.beginGroup(QStringLiteral("toolbar"));
@@ -3834,7 +3834,7 @@ void SettingsDialog::on_resetMessageBoxesButton_clicked() {
     if (QMessageBox::question(this, tr("Reset message boxes"),
                               tr("Do you really want to reset the overrides of all message "
                                  "boxes?")) == QMessageBox::Yes) {
-        QSettings settings;
+        SettingsService settings;
 
         // remove all settings in the group
         settings.beginGroup(QStringLiteral("MessageBoxOverride"));
@@ -3883,7 +3883,7 @@ void SettingsDialog::on_exportSettingsButton_clicked() {
             exportSettings.setValue(QStringLiteral("SettingsExport/platform"),
                                     QStringLiteral(PLATFORM));
 
-            QSettings settings;
+            SettingsService settings;
 
             const QStringList keys = settings.allKeys();
             Q_FOREACH (QString key, keys) {
@@ -3924,7 +3924,7 @@ void SettingsDialog::on_importSettingsButton_clicked() {
     }
 
     QString fileName = dialog.selectedFile();
-    QSettings settings;
+    SettingsService settings;
     QSettings importSettings(fileName, QSettings::IniFormat);
     settings.clear();
     DatabaseService::removeDiskDatabase();
@@ -3962,13 +3962,13 @@ void SettingsDialog::on_ignoreNoteSubFoldersResetButton_clicked() {
 }
 
 void SettingsDialog::on_interfaceFontSizeSpinBox_valueChanged(int arg1) {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("interfaceFontSize"), arg1);
     Utils::Gui::updateInterfaceFontSize(arg1);
 }
 
 void SettingsDialog::on_overrideInterfaceFontSizeGroupBox_toggled(bool arg1) {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("overrideInterfaceFontSize"), arg1);
     Utils::Gui::updateInterfaceFontSize();
 }
@@ -4109,7 +4109,7 @@ void SettingsDialog::on_cloudConnectionRemoveButton_clicked() {
 
 void SettingsDialog::on_calendarCloudConnectionComboBox_currentIndexChanged(int index) {
     Q_UNUSED(index)
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("ownCloud/todoCalendarCloudConnectionId"),
                       ui->calendarCloudConnectionComboBox->currentData().toInt());
     on_reloadCalendarListButton_clicked();

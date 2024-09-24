@@ -1350,7 +1350,7 @@ Tag Tag::activeTag() { return Tag::fetch(activeTagId()); }
  * Sets the non-darkMode colors as darkMode colors for all tags
  */
 void Tag::migrateDarkColors() {
-    QSettings settings;
+    SettingsService settings;
     const bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
 
     // disable dark mode to get the light color

@@ -53,7 +53,7 @@ void MetricsService::sendVisit(const QString &path, const QString &actionName) {
 }
 
 void MetricsService::sendVisitIfEnabled(const QString &path, const QString &actionName) {
-    QSettings settings;
+    SettingsService settings;
     if (!settings.value(QStringLiteral("appMetrics/disableTracking")).toBool()) {
         sendVisit(path, actionName);
     }
@@ -62,7 +62,7 @@ void MetricsService::sendVisitIfEnabled(const QString &path, const QString &acti
 void MetricsService::sendEventIfEnabled(const QString &path, const QString &eventCategory,
                                         const QString &eventAction, const QString &eventName,
                                         int eventValue) {
-    QSettings settings;
+    SettingsService settings;
     if (!settings.value(QStringLiteral("appMetrics/disableTracking")).toBool()) {
         _piwikTracker->sendEvent(path, eventCategory, eventAction, eventName, eventValue);
     }
@@ -72,7 +72,7 @@ void MetricsService::sendEventIfEnabled(const QString &path, const QString &even
  * Sends a heartbeat if not disabled
  */
 void MetricsService::sendHeartbeat() {
-    QSettings settings;
+    SettingsService settings;
     if (!settings.value(QStringLiteral("appMetrics/disableAppHeartbeat")).toBool()) {
         // send a normal event the first time
         if (_firstHeartbeat) {
@@ -88,7 +88,7 @@ void MetricsService::sendHeartbeat() {
  * Sends locale information
  */
 void MetricsService::sendLocaleEvent() {
-    QSettings settings;
+    SettingsService settings;
     QString eventText = QLocale::system().name();
     QString settingsLocale = settings.value(QStringLiteral("interfaceLanguage")).toString();
     if (!settingsLocale.isEmpty()) {

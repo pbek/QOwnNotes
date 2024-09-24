@@ -125,7 +125,7 @@ void ToolbarContainer::updateToolbar() {
  * @param toolbar
  */
 void ToolbarContainer::updateIconSize(QToolBar *toolbar) {
-    QSettings settings;
+    SettingsService settings;
     int toolBarIconSize = settings.value(QStringLiteral("MainWindow/mainToolBar.iconSize")).toInt();
     QSize size(toolBarIconSize, toolBarIconSize);
     toolbar->setIconSize(size);

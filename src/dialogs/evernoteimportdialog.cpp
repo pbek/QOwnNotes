@@ -30,7 +30,7 @@ EvernoteImportDialog::EvernoteImportDialog(QWidget *parent)
     _metaDataAttributeHash.clear();
     _metaDataTableText.clear();
 
-    QSettings settings;
+    SettingsService settings;
     ui->imageImportCheckBox->setChecked(
         settings.value(QStringLiteral("EvernoteImport/ImageImportCheckBoxChecked"), true).toBool());
     ui->attachmentImportCheckBox->setChecked(
@@ -45,7 +45,7 @@ void EvernoteImportDialog::resetNoteCount() {
 }
 
 EvernoteImportDialog::~EvernoteImportDialog() {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(QStringLiteral("EvernoteImport/ImageImportCheckBoxChecked"),
                       ui->imageImportCheckBox->isChecked());
     settings.setValue(QStringLiteral("EvernoteImport/AttachmentImportCheckBoxChecked"),
@@ -280,7 +280,7 @@ QTreeWidgetItem *EvernoteImportDialog::addMetaDataTreeWidgetItem(const QString &
         item->setData(0, Qt::UserRole, attributeName);
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
 
-        QSettings settings;
+        SettingsService settings;
         auto metaDataUnCheckedList =
             settings.value(QStringLiteral("EvernoteImport/MetaDataUnCheckedList")).toStringList();
         item->setCheckState(
@@ -340,7 +340,7 @@ void EvernoteImportDialog::setupMetaDataTreeWidgetItems() {
 void EvernoteImportDialog::storeMetaDataTreeWidgetItemsCheckedState() {
     QList<QTreeWidgetItem *> items = ui->metaDataTreeWidget->findItems(
         QStringLiteral("*"), Qt::MatchWrap | Qt::MatchWildcard | Qt::MatchRecursive);
-    QSettings settings;
+    SettingsService settings;
     QStringList metaDataUnCheckedList;
 
     Q_FOREACH (QTreeWidgetItem *item, items) {

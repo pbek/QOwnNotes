@@ -37,16 +37,25 @@ class SettingsService : public QObject {
     void beginGroup(const QString &prefix);
     void endGroup();
     QString group() const;
+    QString fileName() const;
+    void beginWriteArray(const QString& prefix, int size);
+    void setArrayIndex(int i);
+    void endArray();
+    int beginReadArray(QString prefix);
 
     // Delete copy constructor and assignment operator
     SettingsService(const SettingsService &) = delete;
     SettingsService &operator=(const SettingsService &) = delete;
 
+    explicit SettingsService(QObject *parent = nullptr);
+    ~SettingsService() override = default;
    private:
-    SettingsService(QObject *parent = nullptr);
-    ~SettingsService() = default;
 
     QSettings m_settings;
-    mutable QHash<QString, QVariant> m_cache;
+//    mutable QHash<QString, QVariant> m_cache;
     QString m_group;
+    QString m_arrayPrefix;
+    int m_arrayIndex;
+
+    static QHash<QString, QVariant>* cache(bool clear = false) ;
 };

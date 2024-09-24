@@ -1196,7 +1196,7 @@ QString Note::defaultNoteFileExtension() {
  * Returns the a list of all note file extensions
  */
 QStringList Note::noteFileExtensionList(const QString &prefix) {
-    const QSettings settings;
+    const SettingsService settings;
     QStringList list = settings.value(QStringLiteral("noteFileExtensionList")).toStringList();
     list.removeDuplicates();
 
@@ -1363,7 +1363,7 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged) {
 
     QFile file(fullNoteFilePath());
     QFile::OpenMode flags = QIODevice::WriteOnly;
-    const QSettings settings;
+    const SettingsService settings;
     const bool useUNIXNewline = settings.value(QStringLiteral("useUNIXNewline")).toBool();
 
     if (!useUNIXNewline) {
@@ -1723,7 +1723,7 @@ bool Note::updateNoteTextFromDisk() {
 }
 
 QString Note::getFullFilePathForFile(const QString &fileName) {
-    const QSettings settings;
+    const SettingsService settings;
 
     // prepend the portable data path if we are in portable mode
     const QString notesPath = Utils::Misc::prependPortableDataPathIfNeeded(
@@ -1771,7 +1771,7 @@ QString Note::getFilePathRelativeToNote(const Note &note) const {
 }
 
 QString Note::getNoteUrlForLinkingTo(const Note &note, bool forceLegacy) const {
-    const QSettings settings;
+    const SettingsService settings;
     QString noteUrl;
 
     if (forceLegacy || settings.value(QStringLiteral("legacyLinking")).toBool()) {
@@ -2369,7 +2369,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
     flags &= ~MD_FLAG_TASKLISTS;
 #endif
 
-    const QSettings settings;
+    const SettingsService settings;
     if (!settings.value(QStringLiteral("MainWindow/noteTextView.underline"), true).toBool()) {
         flags &= ~MD_FLAG_UNDERLINE;
     }
@@ -3622,7 +3622,7 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine, bool returnUr
 
 QString Note::mediaUrlStringForFileName(const QString &fileName) const {
     QString urlString = QLatin1String("");
-    const QSettings settings;
+    const SettingsService settings;
 
     if (settings.value(QStringLiteral("legacyLinking")).toBool()) {
         urlString = QStringLiteral("file://media/") + fileName;
@@ -3641,7 +3641,7 @@ QString Note::mediaUrlStringForFileName(const QString &fileName) const {
 
 QString Note::attachmentUrlStringForFileName(const QString &fileName) const {
     QString urlString = QLatin1String("");
-    const QSettings settings;
+    const SettingsService settings;
 
     if (settings.value(QStringLiteral("legacyLinking")).toBool()) {
         urlString = QStringLiteral("file://attachments/") + fileName;
@@ -3822,7 +3822,7 @@ QString Note::importMediaFromDataUrl(const QString &dataUrl) {
  * @return
  */
 bool Note::scaleDownImageFileIfNeeded(QFile &file) {
-    const QSettings settings;
+    const SettingsService settings;
 
     // load image scaling settings
     const bool scaleImageDown = settings.value(QStringLiteral("imageScaleDown"), false).toBool();
@@ -4007,7 +4007,7 @@ QString Note::getNotePreviewText(bool asHtml, int lines) const {
  * @return
  */
 QString Note::generateMultipleNotesPreviewText(const QVector<Note> &notes) {
-    const QSettings settings;
+    const SettingsService settings;
     const bool darkModeColors = settings.value(QStringLiteral("darkModeColors")).toBool();
     const QString oddBackgroundColor =
         darkModeColors ? QStringLiteral("#444444") : QStringLiteral("#f1f1f1");
@@ -4129,7 +4129,7 @@ QStringList Note::getHeadingList() {
 }
 
 bool Note::applyIgnoredNotesSetting(QStringList &fileNames) {
-    const QSettings settings;
+    const SettingsService settings;
     const QStringList ignoredFileRegExpList =
         settings.value(QStringLiteral("ignoredNoteFiles")).toString().split(QLatin1Char(';'));
 

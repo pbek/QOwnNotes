@@ -29,7 +29,7 @@ void MasterDialog::resizeEvent(QResizeEvent *event) {
  * Stores the geometry of the dialog
  */
 void MasterDialog::storeGeometrySettings() const {
-    QSettings settings;
+    SettingsService settings;
     settings.setValue(getGeometrySettingKey(), saveGeometry());
 }
 
@@ -69,7 +69,7 @@ int MasterDialog::exec() {
  */
 void MasterDialog::handleOpenDialog() {
     // restore the geometry of the dialog
-    QSettings settings;
+    SettingsService settings;
     QByteArray geometryData = settings.value(getGeometrySettingKey()).toByteArray();
 
     // restore the geometry if there is some data
