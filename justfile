@@ -120,8 +120,7 @@ git-apply-qownnotes-patch:
 # Apply a git patch to qmarkdowntextedit
 [group('patches')]
 git-apply-qmarkdowntextedit-patch:
-    cd ./src/libraries/qmarkdowntextedit
-    git apply {{ transferDir }}/qmarkdowntextedit.patch
+    cd ./src/libraries/qmarkdowntextedit && git apply {{ transferDir }}/qmarkdowntextedit.patch
 
 # Create a git patch for the project and some libraries
 [group('patches')]
