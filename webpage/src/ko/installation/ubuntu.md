@@ -50,23 +50,23 @@ chmod a+x QOwnNotes-*.AppImage
 
 ## OBS 저장소
 
-또한 Ubuntu Launchpad에서 더 이상 업데이트되지 않은 Ubuntu 버전에서 QOwnNotes를 사용할 수 있으며 [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop)에서 저장소를 사용할 수 있습니다.
+또한 Ubuntu Launchpad에서 더 이상 업데이트되지 않은 Ubuntu 버전에서도 QOwnNotes를 사용할 수 있으며, 다음과 같이 할 수 있습니다 [ 빌드 서비스 열기](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop)의 저장소를 사용합니다.
 
-다음은 xUbuntu 16.10 저장소에 대한 호출 예제입니다.
+아래는 xUbuntu 20.04 저장소에 대한 예제 호출입니다.
 
 다음 셸 명령을 실행하여 리포지토리를 신뢰합니다.
 
 ```bash
-wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
+wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_20.04/Release.key -O - | sudo apt-key add -
 ```
 
 다음 셸 명령을 실행하여 저장소를 추가하고 여기서 QOwnNotes를 설치합니다.
 
 ```bash
 sudo su -
-sh -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/ /' >> /etc/apt/sources.list.d/qownnotes.list"
+sh -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_20.04/ /' >> /etc/apt/sources.list.d/qownnotes.list"
 apt-get update
 apt-get install qownnotes
 ```
 
-[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)
+[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_20.04)

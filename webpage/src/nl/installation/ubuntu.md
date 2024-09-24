@@ -50,23 +50,23 @@ Daarna zou u de AppImage moeten kunnen uitvoeren om QOwnNotes uit te voeren.
 
 ## OBS Repository
 
-Mogelijk kunt u ook de QOwnNotes gebruiken op Ubuntu-versies die niet meer worden bijgewerkt op Ubuntu Launchpad dan u kunt gebruik de opslagplaatsen van de [ Open Build Service ](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
+Je kunt QOwnNotes ook gebruiken op Ubuntu-versies die niet meer worden bijgewerkt op Ubuntu Launchpad, gebruik dan de repositories van de [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 
-Hieronder staan voorbeeldoproepen voor de xUbuntu 16.10-repository.
+Hieronder staan voorbeeldoproepen voor de xUbuntu 20.04-repository.
 
 Voer de volgende shellopdracht uit om de repository te vertrouwen.
 
 ```bash
-wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
+wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_20.04/Release.key -O - | sudo apt-key add -
 ```
 
 Voer de volgende shell-opdrachten uit om de repository toe te voegen en vanaf daar QOwnNotes te installeren.
 
 ```bash
 sudo su -
-sh -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/ /' >> /etc/apt/sources.list.d/qownnotes.list"
+sh -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_20.04/ /' >> /etc/apt/sources.list.d/qownnotes.list"
 apt-get update
 apt-get install qownnotes
 ```
 
-[Directe download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)
+[Directe download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_20.04)

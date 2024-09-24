@@ -101,22 +101,9 @@ zypper install qownnotes
 
 [직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Tumbleweed)
 
-
-## SLE 12 SP3 Backports
-
-다음 셸 명령을 루트로 실행하여 저장소를 추가하고 여기서QOwnNotes를 설치합니다.
-
-```bash
-zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_12_SP3_Backports/home:pbek:QOwnNotes.repo
-zypper refresh
-zypper install qownnotes
-```
-
-[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_12_SP3_Backports)
-
 ## SLE 15
 
-다음 셸 명령을 root으로 실행하여 리포지토리를 추가하고 거기에서 QOwnNotes를 설치합니다.
+다음 셸 명령을 루트로 실행하여 저장소를 추가하고 여기서QOwnNotes를 설치합니다.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_15/home:pbek:QOwnNotes.repo

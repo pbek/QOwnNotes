@@ -50,23 +50,23 @@ chmod a+x QOwnNotes-*.AppImage
 
 ## مستودع OBS
 
-ربما تستطيع أيضا استخدام QOwnNotes على نسخ أوبنتو التي لم تعد تستقبل تحديثات في المستودع الشخصي، باستخدام مستودعات [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
+You may also be able to use the QOwnNotes on Ubuntu versions that aren't anymore updated on Ubuntu Launchpad then you can use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 
-إليك أمثلة على استخدام مستودع xUbuntu 16.10.
+Below are example calls for the xUbuntu 20.04 repository.
 
 نفّذ الأمر التالي في الطرفية لاستيثاق المستودع.
 
 ```bash
-wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
+wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_20.04/Release.key -O - | sudo apt-key add -
 ```
 
 نفّذ الأوامر التالية في الطرفية لإضافة المستودع وتثبيت QOwnNotes منه.
 
 ```bash
 sudo su -
-sh -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/ /' >> /etc/apt/sources.list.d/qownnotes.list"
+sh -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_20.04/ /' >> /etc/apt/sources.list.d/qownnotes.list"
 apt-get update
 apt-get install qownnotes
 ```
 
-[تنزيل مباشر](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10)
+[تنزيل مباشر](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_20.04)
