@@ -80,7 +80,6 @@
 #include <QRegularExpressionMatchIterator>
 #include <QScreen>
 #include <QScrollBar>
-#include "services/settingsservice.h"
 #include <QShortcut>
 #include <QSystemTrayIcon>
 #include <QTemporaryFile>
@@ -118,6 +117,7 @@
 #include "services/nextclouddeckservice.h"
 #include "services/openaiservice.h"
 #include "services/owncloudservice.h"
+#include "services/settingsservice.h"
 #include "services/updateservice.h"
 #include "services/webappclientservice.h"
 #include "services/websocketserverservice.h"

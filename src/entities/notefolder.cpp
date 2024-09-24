@@ -6,7 +6,6 @@
 #include <QDebug>
 #include <QDir>
 #include <QJsonObject>
-#include "services/settingsservice.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -15,6 +14,7 @@
 #include <QtCore/QJsonDocument>
 
 #include "notesubfolder.h"
+#include "services/settingsservice.h"
 
 NoteFolder::NoteFolder()
     : name(QLatin1String("")), localPath(QLatin1String("")), remotePath(QLatin1String("")) {

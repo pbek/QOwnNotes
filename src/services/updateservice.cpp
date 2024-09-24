@@ -8,7 +8,6 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QObject>
-#include "services/settingsservice.h"
 #include <QUrl>
 #include <QUrlQuery>
 
@@ -16,6 +15,7 @@
 #include "dialogs/updatedialog.h"
 #include "mainwindow.h"
 #include "release.h"
+#include "services/settingsservice.h"
 #include "version.h"
 
 UpdateService::UpdateService(QObject *parent) : QObject(parent) {}

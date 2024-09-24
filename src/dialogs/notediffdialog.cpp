@@ -5,9 +5,9 @@
 #include <QDebug>
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include "services/settingsservice.h"
 #include <QTimer>
 
+#include "services/settingsservice.h"
 #include "ui_notediffdialog.h"
 
 NoteDiffDialog::NoteDiffDialog(QWidget *parent, const QString &html)

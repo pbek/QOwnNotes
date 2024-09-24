@@ -16,6 +16,7 @@
 #include "qownspellchecker.h"
 
 #include <QDebug>
+
 #include "services/settingsservice.h"
 
 QOwnSpellChecker::QOwnSpellChecker() : _spellchecker{new Sonnet::Speller()} {

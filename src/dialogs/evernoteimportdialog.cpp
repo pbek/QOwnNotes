@@ -12,11 +12,11 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
-#include "services/settingsservice.h"
 #include <QTemporaryFile>
 #include <utility>
 
 #include "filedialog.h"
+#include "services/settingsservice.h"
 #include "ui_evernoteimportdialog.h"
 
 EvernoteImportDialog::EvernoteImportDialog(QWidget *parent)

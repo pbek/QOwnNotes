@@ -8,9 +8,9 @@
 #include <QFileDialog>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
-#include "services/settingsservice.h"
 
 #include "filedialog.h"
+#include "services/settingsservice.h"
 #include "ui_joplinimportdialog.h"
 
 JoplinImportDialog::JoplinImportDialog(QWidget* parent)

@@ -2,10 +2,10 @@
 
 #include <libraries/piwiktracker/piwiktracker.h>
 
-#include "services/settingsservice.h"
 #include <utility>
 
 #include "release.h"
+#include "services/settingsservice.h"
 #include "version.h"
 
 MetricsService::MetricsService(QObject *parent) : QObject(parent) {

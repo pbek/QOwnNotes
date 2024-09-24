@@ -1,6 +1,7 @@
 #include "filedialog.h"
 
 #include <QDebug>
+
 #include "services/settingsservice.h"
 
 FileDialog::FileDialog(const QString& name) {

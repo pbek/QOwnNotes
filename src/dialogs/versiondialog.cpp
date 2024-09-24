@@ -6,10 +6,10 @@
 #include <QJSValue>
 #include <QJSValueIterator>
 #include <QPushButton>
-#include "services/settingsservice.h"
 #include <QSplitter>
 
 #include "mainwindow.h"
+#include "services/settingsservice.h"
 #include "ui_versiondialog.h"
 
 VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)

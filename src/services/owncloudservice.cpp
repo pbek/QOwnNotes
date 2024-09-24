@@ -21,7 +21,6 @@
 #include <QNetworkReply>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
-#include "services/settingsservice.h"
 #include <QStringBuilder>
 #include <QTimer>
 #include <QUrlQuery>
@@ -37,6 +36,7 @@
 #include "entities/notesubfolder.h"
 #include "libraries/versionnumber/versionnumber.h"
 #include "mainwindow.h"
+#include "services/settingsservice.h"
 
 const QString OwnCloudService::rootPath = QStringLiteral("/index.php/apps/qownnotesapi/api/v1/");
 const QString OwnCloudService::format = QStringLiteral("json");

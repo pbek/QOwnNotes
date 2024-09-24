@@ -24,8 +24,8 @@
 #include "entities/notefolder.h"
 #include "entities/tag.h"
 #include "metricsservice.h"
-#include "widgets/qownnotesmarkdowntextedit.h"
 #include "services/settingsservice.h"
+#include "widgets/qownnotesmarkdowntextedit.h"
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
 #include <services/scriptingservice.h>

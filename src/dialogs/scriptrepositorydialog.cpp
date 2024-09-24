@@ -15,13 +15,13 @@
 #include <QtCore/QFile>
 #include <QtCore/QJsonArray>
 #include <QtCore/QJsonObject>
-#include "services/settingsservice.h"
 #include <QtMath>
 #include <QtNetwork/QNetworkRequest>
 #include <QtWidgets/QMessageBox>
 #include <QtWidgets/QSplitter>
 
 #include "services/scriptingservice.h"
+#include "services/settingsservice.h"
 #include "ui_scriptrepositorydialog.h"
 
 ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent, bool checkForUpdates)

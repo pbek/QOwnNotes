@@ -13,7 +13,6 @@
 #include <QMenu>
 #include <QMimeData>
 #include <QRegularExpression>
-#include "services/settingsservice.h"
 #include <QTextCursor>
 #include <QTextDocumentFragment>
 
@@ -22,6 +21,7 @@
 #include "libraries/qmarkdowntextedit/linenumberarea.h"
 #include "mainwindow.h"
 #include "services/scriptingservice.h"
+#include "services/settingsservice.h"
 #include "utils/urlhandler.h"
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)

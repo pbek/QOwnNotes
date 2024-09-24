@@ -5,7 +5,6 @@
 
 #include <QDir>
 #include <QRegularExpression>
-#include "services/settingsservice.h"
 #include <QStandardPaths>
 #include <QtCore/QTemporaryFile>
 #include <QtCore/QTextStream>
@@ -15,6 +14,8 @@
 #include <QtWidgets/QMessageBox>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QStatusBar>
+
+#include "services/settingsservice.h"
 
 FakeVimProxy::FakeVimProxy(QWidget *widget, QObject *parent) : QObject(parent), m_widget(widget) {
     using namespace FakeVim::Internal;

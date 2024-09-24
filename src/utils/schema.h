@@ -16,11 +16,12 @@
 
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 
-#include "services/settingsservice.h"
 #include <QString>
 #include <QStringList>
 #include <QTextCharFormat>
 #include <QVariant>
+
+#include "services/settingsservice.h"
 
 namespace Utils {
 

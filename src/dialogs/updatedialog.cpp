@@ -13,10 +13,10 @@
 #include <QNetworkRequest>
 #include <QProcessEnvironment>
 #include <QPushButton>
-#include "services/settingsservice.h"
 #include <QTemporaryFile>
 #include <QUrl>
 
+#include "services/settingsservice.h"
 #include "ui_updatedialog.h"
 
 UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml, const QString &releaseUrl,

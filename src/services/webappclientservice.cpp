@@ -22,12 +22,12 @@
 #include <utils/misc.h>
 
 #include <QJsonDocument>
-#include "services/settingsservice.h"
 #include <QSslError>
 #include <QWebSocket>
 #include <QtWebSockets>
 
 #include "metricsservice.h"
+#include "services/settingsservice.h"
 
 using namespace std;
 

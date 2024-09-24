@@ -16,7 +16,6 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
-#include "services/settingsservice.h"
 #include <QSqlError>
 #include <QSqlRecord>
 #include <QTemporaryFile>
@@ -32,6 +31,7 @@
 #include "libraries/simplecrypt/simplecrypt.h"
 #include "notefolder.h"
 #include "notesubfolder.h"
+#include "services/settingsservice.h"
 #include "tag.h"
 #include "trashitem.h"
 

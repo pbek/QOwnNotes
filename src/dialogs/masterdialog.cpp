@@ -4,9 +4,9 @@
 #include <QGuiApplication>
 #include <QKeyEvent>
 #include <QScreen>
-#include "services/settingsservice.h"
 
 #include "services/metricsservice.h"
+#include "services/settingsservice.h"
 #include "utils/gui.h"
 
 MasterDialog::MasterDialog(QWidget *parent) : QDialog(parent) { installEventFilter(this); }

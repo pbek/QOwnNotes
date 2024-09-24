@@ -33,11 +33,12 @@
 #include <QPlainTextEdit>
 #include <QProcess>
 #include <QPushButton>
-#include "services/settingsservice.h"
 #include <QTextBlock>
 #include <QTextCursor>
 #include <QTreeWidgetItem>
 #include <QVBoxLayout>
+
+#include "services/settingsservice.h"
 
 #define ORDER_ASCENDING 0     // Qt::AscendingOrder // = 0
 #define ORDER_DESCENDING 1    // Qt::DescendingOrder // = 1

@@ -10,7 +10,6 @@
 #include <QDebug>
 #include <QDir>
 #include <QMessageBox>
-#include "services/settingsservice.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -19,6 +18,7 @@
 #include "entities/calendaritem.h"
 #include "mainwindow.h"
 #include "owncloudservice.h"
+#include "services/settingsservice.h"
 
 DatabaseService::DatabaseService() = default;
 

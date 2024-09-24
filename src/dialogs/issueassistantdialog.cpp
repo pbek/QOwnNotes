@@ -6,11 +6,11 @@
 #include <QClipboard>
 #include <QDesktopServices>
 #include <QFileDialog>
-#include "services/settingsservice.h"
 
 #include "QDebug"
 #include "mainwindow.h"
 #include "services/metricsservice.h"
+#include "services/settingsservice.h"
 #include "settingsdialog.h"
 #include "ui_issueassistantdialog.h"
 

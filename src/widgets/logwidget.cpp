@@ -9,9 +9,9 @@
 #include <QMenu>
 #include <QPointer>
 #include <QScrollBar>
-#include "services/settingsservice.h"
 
 #include "mainwindow.h"
+#include "services/settingsservice.h"
 
 #ifndef INTEGRATION_TESTS
 #include "ui_logwidget.h"

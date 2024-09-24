@@ -8,10 +8,10 @@
 #include <QJSValue>
 #include <QJSValueIterator>
 #include <QPushButton>
-#include "services/settingsservice.h"
 #include <QSplitter>
 
 #include "mainwindow.h"
+#include "services/settingsservice.h"
 #include "ui_trashdialog.h"
 
 TrashDialog::TrashDialog(const QJSValue &notes, QWidget *parent)

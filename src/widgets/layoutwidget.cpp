@@ -4,9 +4,9 @@
 #include <utils/misc.h>
 
 #include <QDebug>
-#include "services/settingsservice.h"
 #include <QtWidgets/QMessageBox>
 
+#include "services/settingsservice.h"
 #include "ui_layoutwidget.h"
 
 LayoutWidget::LayoutWidget(QWidget *parent) : QWidget(parent), ui(new Ui::LayoutWidget) {

@@ -21,9 +21,9 @@
 #include <QClipboard>
 #include <QDebug>
 #include <QMenu>
-#include "services/settingsservice.h"
 
 #include "mainwindow.h"
+#include "services/settingsservice.h"
 
 NoteFilePathLabel::NoteFilePathLabel(QWidget *parent) : QLabel(parent) {
     // Empty the text

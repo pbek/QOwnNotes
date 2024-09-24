@@ -8,12 +8,13 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QRegularExpression>
-#include "services/settingsservice.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QSqlRecord>
 #include <QUuid>
+
+#include "services/settingsservice.h"
 
 CalendarItem::CalendarItem() {
     id = 0;

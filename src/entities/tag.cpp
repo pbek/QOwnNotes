@@ -4,7 +4,6 @@
 #include <utils/misc.h>
 
 #include <QDebug>
-#include "services/settingsservice.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -15,6 +14,7 @@
 #include "note.h"
 #include "notefolder.h"
 #include "notesubfolder.h"
+#include "services/settingsservice.h"
 
 Tag::Tag() noexcept : _parentId(0), _priority(0) {}
 

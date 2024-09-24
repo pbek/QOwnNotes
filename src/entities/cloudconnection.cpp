@@ -5,7 +5,6 @@
 
 #include <QDebug>
 #include <QRegularExpression>
-#include "services/settingsservice.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -15,6 +14,7 @@
 
 #include "notefolder.h"
 #include "services/databaseservice.h"
+#include "services/settingsservice.h"
 
 CloudConnection::CloudConnection()
     : name(QString()), serverUrl(QString()), username(QString()), password(QString()) {

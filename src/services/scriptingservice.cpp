@@ -25,7 +25,6 @@ QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QRegularExpression>
-#include "services/settingsservice.h"
 #include <QStandardPaths>
 #include <QStringBuilder>
 #include <QTimer>
@@ -36,6 +35,7 @@ QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
 #include "api/notesubfolderapi.h"
 #include "api/tagapi.h"
 #include "entities/notesubfolder.h"
+#include "services/settingsservice.h"
 
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>

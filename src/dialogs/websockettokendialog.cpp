@@ -2,9 +2,9 @@
 
 #include <utils/misc.h>
 
-#include "services/settingsservice.h"
 #include <QtGui/QClipboard>
 
+#include "services/settingsservice.h"
 #include "ui_websockettokendialog.h"
 
 WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent)

@@ -10,9 +10,9 @@
 #include <QNetworkRequest>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
-#include "services/settingsservice.h"
 #include <QSplitter>
 
+#include "services/settingsservice.h"
 #include "ui_dictionarymanagerdialog.h"
 
 DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent)

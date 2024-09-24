@@ -5,11 +5,11 @@
 #include <QClipboard>
 #include <QDebug>
 #include <QRubberBand>
-#include "services/settingsservice.h"
 #include <QTemporaryFile>
 #include <utility>
 
 #include "filedialog.h"
+#include "services/settingsservice.h"
 #include "ui_imagedialog.h"
 
 ImageDialog::ImageDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::ImageDialog) {

@@ -33,7 +33,6 @@
 #include <QPointer>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
-#include "services/settingsservice.h"
 #include <QSplitter>
 #include <QStatusBar>
 #include <QStyleFactory>
@@ -54,6 +53,7 @@
 #include "services/nextclouddeckservice.h"
 #include "services/openaiservice.h"
 #include "services/owncloudservice.h"
+#include "services/settingsservice.h"
 #include "services/updateservice.h"
 #include "ui_settingsdialog.h"
 #include "version.h"

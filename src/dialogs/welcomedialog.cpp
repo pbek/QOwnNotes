@@ -5,10 +5,10 @@
 #include <QFileDialog>
 #include <QGraphicsScene>
 #include <QMessageBox>
-#include "services/settingsservice.h"
 
 #include "QDebug"
 #include "services/metricsservice.h"
+#include "services/settingsservice.h"
 #include "settingsdialog.h"
 #include "ui_welcomedialog.h"
 

@@ -13,9 +13,9 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QRegularExpression>
-#include "services/settingsservice.h"
 #include <QTimer>
 
+#include "services/settingsservice.h"
 #include "ui_linkdialog.h"
 
 LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)

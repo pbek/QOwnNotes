@@ -25,11 +25,11 @@
 #include <QInputDialog>
 #include <QKeyEvent>
 #include <QMessageBox>
-#include "services/settingsservice.h"
 #include <QTextEdit>
 #include <QTreeWidgetItem>
 #include <QUuid>
 
+#include "services/settingsservice.h"
 #include "ui_fontcolorwidget.h"
 #include "utils/schema.h"
 

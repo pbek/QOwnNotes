@@ -2,13 +2,13 @@
 
 #include <QHeaderView>
 #include <QMenu>
-#include "services/settingsservice.h"
 #include <memory>
 
 #include "entities/notefolder.h"
 #include "entities/notesubfolder.h"
 #include "entities/tag.h"
 #include "mainwindow.h"
+#include "services/settingsservice.h"
 #include "utils/gui.h"
 
 NoteSubFolderTree::NoteSubFolderTree(QWidget *parent) : QTreeWidget(parent) {

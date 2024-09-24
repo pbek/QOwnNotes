@@ -5,11 +5,11 @@
 #include <QDebug>
 #include <QPlainTextEdit>
 #include <QScrollBar>
-#include "services/settingsservice.h"
 #include <utility>
 
 #include "note.h"
 #include "notesubfolder.h"
+#include "services/settingsservice.h"
 
 /*
  * NoteHistoryItem implementation

@@ -19,12 +19,12 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QNetworkRequest>
-#include "services/settingsservice.h"
 #include <QTimer>
 #include <utility>
 
 #include "cryptoservice.h"
 #include "scriptingservice.h"
+#include "services/settingsservice.h"
 
 using namespace std;
 

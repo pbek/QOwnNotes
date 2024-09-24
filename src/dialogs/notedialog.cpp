@@ -5,8 +5,8 @@
 
 #include <QDebug>
 #include <QDesktopServices>
-#include "services/settingsservice.h"
 
+#include "services/settingsservice.h"
 #include "ui_notedialog.h"
 #include "utils/urlhandler.h"
 

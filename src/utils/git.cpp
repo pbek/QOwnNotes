@@ -19,10 +19,10 @@
 #include <QDebug>
 #include <QProcess>
 #include <QStandardPaths>
-#include "services/settingsservice.h"
 
 #include "gui.h"
 #include "misc.h"
+#include "services/settingsservice.h"
 
 /**
  * Checks if the current note folder uses git

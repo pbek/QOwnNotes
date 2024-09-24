@@ -18,6 +18,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QObject>
+
 #include "services/settingsservice.h"
 
 class OpenAiCompleter : public QObject {

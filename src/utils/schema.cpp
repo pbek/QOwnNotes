@@ -18,11 +18,12 @@
 #include <QDebug>
 #include <QFontDatabase>
 #include <QInputDialog>
-#include "services/settingsservice.h"
 #include <QStringList>
 #include <QTextEdit>
 #include <QTreeWidgetItem>
 #include <cmath>
+
+#include "services/settingsservice.h"
 
 Utils::Schema::Settings* Utils::Schema::schemaSettings = nullptr;
 

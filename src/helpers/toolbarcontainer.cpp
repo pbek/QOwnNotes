@@ -6,9 +6,10 @@
 #include <QDebug>
 #include <QMainWindow>
 #include <QMenu>
-#include "services/settingsservice.h"
 #include <QToolBar>
 #include <QWidgetAction>
+
+#include "services/settingsservice.h"
 
 ToolbarContainer::ToolbarContainer(QToolBar *toolbar)
     : name(toolbar->objectName()), title(toolbar->windowTitle()) {

@@ -6,9 +6,9 @@
 #include <QDebug>
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include "services/settingsservice.h"
 #include <QSplitter>
 
+#include "services/settingsservice.h"
 #include "ui_localtrashdialog.h"
 
 class LocalTrashTreeWidgetItem : public QTreeWidgetItem {

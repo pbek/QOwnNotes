@@ -40,7 +40,6 @@
 #include <QProcess>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
-#include "services/settingsservice.h"
 #include <QStringBuilder>
 #include <QTemporaryFile>
 #include <QTextDocument>
@@ -51,6 +50,8 @@
 #include <QXmlStreamReader>
 #include <QtGui/QIcon>
 #include <utility>
+
+#include "services/settingsservice.h"
 #if (QT_VERSION < QT_VERSION_CHECK(5, 6, 0))
 #include <QHostInfo>
 #endif

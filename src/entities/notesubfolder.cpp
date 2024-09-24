@@ -8,13 +8,13 @@
 
 #include <QDebug>
 #include <QDir>
-#include "services/settingsservice.h"
 #include <QSqlError>
 #include <QSqlRecord>
 #include <utility>
 
 #include "note.h"
 #include "notefolder.h"
+#include "services/settingsservice.h"
 #include "tag.h"
 
 NoteSubFolder::NoteSubFolder() : _id{0}, _parentId{0}, _name{QLatin1String("")} {}

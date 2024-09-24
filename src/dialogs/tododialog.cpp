@@ -12,12 +12,12 @@
 #include <QKeyEvent>
 #include <QMenu>
 #include <QMessageBox>
-#include "services/settingsservice.h"
 #include <QShortcut>
 #include <QSplitter>
 
 #include "entities/calendaritem.h"
 #include "services/owncloudservice.h"
+#include "services/settingsservice.h"
 #include "ui_tododialog.h"
 
 TodoDialog::TodoDialog(const QString &taskUid, QWidget *parent)
