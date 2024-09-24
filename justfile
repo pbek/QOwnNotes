@@ -129,8 +129,8 @@ git-create-patch:
     @echo "transferDir: {{ transferDir }}"
     git diff --no-ext-diff --staged --binary > {{ transferDir }}/qownnotes.patch
     cd src/libraries/qmarkdowntextedit && git diff --no-ext-diff --staged --binary > {{ transferDir }}/qmarkdowntextedit.patch
-    cd ../piwiktracker && git diff --no-ext-diff --staged  --binary > {{ transferDir }}/piwiktracker.patch
-    cd ../qttoolbareditor && git diff --no-ext-diff --staged  --binary > {{ transferDir }}/qttoolbareditor.patch
+    cd src/libraries/piwiktracker && git diff --no-ext-diff --staged  --binary > {{ transferDir }}/piwiktracker.patch
+    cd src/libraries/qttoolbareditor && git diff --no-ext-diff --staged  --binary > {{ transferDir }}/qttoolbareditor.patch
     ls -l1t {{ transferDir }} | head -5
 
 # Open the Crowdin webpage
