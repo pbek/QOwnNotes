@@ -15,6 +15,7 @@ sourceBuildTestDir := "build-tests-QOwnNotes"
 
 alias fix-linting := clang-format
 alias linter-fix := clang-format
+alias trace-process := process-trace
 
 # Build the translations
 [group('translations')]
@@ -151,6 +152,11 @@ open-crowdin-webpage:
 [group('linter')]
 fix-settings-ui-file:
     ./scripts/fix-settings-ui-file.sh
+
+# Attach to the QOwnNotes process with lurk
+[group('debug')]
+process-trace:
+    sudo lurk --attach `procs QOwnNotes | fzf --height 40% --layout reverse | awk '{print $1}'`
 
 # Format all justfiles
 [group('linter')]
