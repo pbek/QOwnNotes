@@ -40,7 +40,7 @@
 #include <QProcess>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QStringBuilder>
 #include <QTemporaryFile>
 #include <QTextDocument>

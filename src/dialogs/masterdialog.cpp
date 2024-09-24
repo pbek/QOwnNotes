@@ -4,7 +4,7 @@
 #include <QGuiApplication>
 #include <QKeyEvent>
 #include <QScreen>
-#include <QSettings>
+#include "services/settingsservice.h"
 
 #include "services/metricsservice.h"
 #include "utils/gui.h"

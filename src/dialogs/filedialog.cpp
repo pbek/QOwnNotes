@@ -1,7 +1,7 @@
 #include "filedialog.h"
 
 #include <QDebug>
-#include <QSettings>
+#include "services/settingsservice.h"
 
 FileDialog::FileDialog(const QString& name) {
     if (!name.isEmpty()) {

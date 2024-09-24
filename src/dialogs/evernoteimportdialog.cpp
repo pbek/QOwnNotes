@@ -12,7 +12,7 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QTemporaryFile>
 #include <utility>
 

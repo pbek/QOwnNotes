@@ -5,7 +5,7 @@
 #include <QClipboard>
 #include <QDebug>
 #include <QRubberBand>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QTemporaryFile>
 #include <utility>
 

@@ -10,7 +10,7 @@
 #include <QDebug>
 #include <QDir>
 #include <QMessageBox>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>

@@ -21,7 +21,7 @@
 #include <QPair>
 #include <QPlainTextEdit>
 #include <QRegularExpression>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QString>
 #include <QStringList>
 #include <QSyntaxHighlighter>

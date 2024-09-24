@@ -16,7 +16,7 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QSqlError>
 #include <QSqlRecord>
 #include <QTemporaryFile>

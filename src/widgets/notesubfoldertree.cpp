@@ -2,7 +2,7 @@
 
 #include <QHeaderView>
 #include <QMenu>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <memory>
 
 #include "entities/notefolder.h"

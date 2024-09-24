@@ -12,7 +12,7 @@
 #include <QKeyEvent>
 #include <QMenu>
 #include <QMessageBox>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QShortcut>
 #include <QSplitter>
 

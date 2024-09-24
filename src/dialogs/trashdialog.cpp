@@ -8,7 +8,7 @@
 #include <QJSValue>
 #include <QJSValueIterator>
 #include <QPushButton>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QSplitter>
 
 #include "mainwindow.h"

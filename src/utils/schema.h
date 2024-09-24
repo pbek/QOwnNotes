@@ -16,7 +16,7 @@
 
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QString>
 #include <QStringList>
 #include <QTextCharFormat>

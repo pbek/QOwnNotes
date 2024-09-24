@@ -5,7 +5,7 @@
 #include <QDebug>
 #include <QPlainTextEdit>
 #include <QScrollBar>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <utility>
 
 #include "note.h"

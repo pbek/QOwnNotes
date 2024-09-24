@@ -8,7 +8,7 @@
 
 #include <QDebug>
 #include <QDir>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QSqlError>
 #include <QSqlRecord>
 #include <utility>

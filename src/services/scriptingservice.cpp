@@ -25,7 +25,7 @@ QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QRegularExpression>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QStandardPaths>
 #include <QStringBuilder>
 #include <QTimer>

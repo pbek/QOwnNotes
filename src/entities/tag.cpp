@@ -4,7 +4,7 @@
 #include <utils/misc.h>
 
 #include <QDebug>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>

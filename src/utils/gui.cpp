@@ -33,7 +33,7 @@
 #include <QPlainTextEdit>
 #include <QProcess>
 #include <QPushButton>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QTextBlock>
 #include <QTextCursor>
 #include <QTreeWidgetItem>

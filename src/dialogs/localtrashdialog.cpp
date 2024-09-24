@@ -6,7 +6,7 @@
 #include <QDebug>
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QSplitter>
 
 #include "ui_localtrashdialog.h"

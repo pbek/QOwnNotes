@@ -19,7 +19,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QNetworkRequest>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QTimer>
 #include <utility>
 

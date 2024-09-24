@@ -8,7 +8,7 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QObject>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QUrl>
 #include <QUrlQuery>
 

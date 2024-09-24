@@ -25,7 +25,7 @@
 #include <QInputDialog>
 #include <QKeyEvent>
 #include <QMessageBox>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QTextEdit>
 #include <QTreeWidgetItem>
 #include <QUuid>

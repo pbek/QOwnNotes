@@ -6,7 +6,7 @@
 #include <QDebug>
 #include <QMainWindow>
 #include <QMenu>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QToolBar>
 #include <QWidgetAction>
 

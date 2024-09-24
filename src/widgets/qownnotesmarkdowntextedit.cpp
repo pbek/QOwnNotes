@@ -13,7 +13,7 @@
 #include <QMenu>
 #include <QMimeData>
 #include <QRegularExpression>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QTextCursor>
 #include <QTextDocumentFragment>
 

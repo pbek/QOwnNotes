@@ -6,7 +6,7 @@
 #include <QClipboard>
 #include <QDesktopServices>
 #include <QFileDialog>
-#include <QSettings>
+#include "services/settingsservice.h"
 
 #include "QDebug"
 #include "mainwindow.h"

@@ -13,7 +13,7 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QRegularExpression>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QTimer>
 
 #include "ui_linkdialog.h"

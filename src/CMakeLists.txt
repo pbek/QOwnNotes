@@ -306,6 +306,8 @@ set(SOURCE_FILES
     services/scriptingservice.h
     services/openaiservice.cpp
     services/openaiservice.h
+    services/settingsservice.cpp
+    services/settingsservice.h
     libraries/piwiktracker/piwiktracker.h
     libraries/piwiktracker/piwiktracker.cpp
     libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget_p.h

@@ -13,7 +13,7 @@
 #include <QNetworkRequest>
 #include <QProcessEnvironment>
 #include <QPushButton>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QTemporaryFile>
 #include <QUrl>
 

@@ -21,7 +21,7 @@
 #include <QClipboard>
 #include <QDebug>
 #include <QMenu>
-#include <QSettings>
+#include "services/settingsservice.h"
 
 #include "mainwindow.h"
 

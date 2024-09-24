@@ -9,7 +9,7 @@
 #include <QMenu>
 #include <QPointer>
 #include <QScrollBar>
-#include <QSettings>
+#include "services/settingsservice.h"
 
 #include "mainwindow.h"
 

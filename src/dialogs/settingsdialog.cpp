@@ -33,7 +33,7 @@
 #include <QPointer>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QSplitter>
 #include <QStatusBar>
 #include <QStyleFactory>

@@ -5,7 +5,7 @@
 
 #include <QDebug>
 #include <QRegularExpression>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>

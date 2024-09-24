@@ -5,7 +5,7 @@
 
 #include <QDir>
 #include <QRegularExpression>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QStandardPaths>
 #include <QtCore/QTemporaryFile>
 #include <QtCore/QTextStream>

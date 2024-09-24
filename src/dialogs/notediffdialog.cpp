@@ -5,7 +5,7 @@
 #include <QDebug>
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QTimer>
 
 #include "ui_notediffdialog.h"

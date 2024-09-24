@@ -10,7 +10,7 @@
 #include <QNetworkRequest>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QSplitter>
 
 #include "ui_dictionarymanagerdialog.h"

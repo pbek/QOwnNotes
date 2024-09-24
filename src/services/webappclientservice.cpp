@@ -22,7 +22,7 @@
 #include <utils/misc.h>
 
 #include <QJsonDocument>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QSslError>
 #include <QWebSocket>
 #include <QtWebSockets>

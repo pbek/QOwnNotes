@@ -8,7 +8,7 @@
 #include <QFileDialog>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
-#include <QSettings>
+#include "services/settingsservice.h"
 
 #include "filedialog.h"
 #include "ui_joplinimportdialog.h"

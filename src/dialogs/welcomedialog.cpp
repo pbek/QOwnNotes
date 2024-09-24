@@ -5,7 +5,7 @@
 #include <QFileDialog>
 #include <QGraphicsScene>
 #include <QMessageBox>
-#include <QSettings>
+#include "services/settingsservice.h"
 
 #include "QDebug"
 #include "services/metricsservice.h"

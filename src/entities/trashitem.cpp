@@ -5,7 +5,7 @@
 
 #include <QDebug>
 #include <QDir>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QSqlError>
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)

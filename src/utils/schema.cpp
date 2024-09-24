@@ -18,7 +18,7 @@
 #include <QDebug>
 #include <QFontDatabase>
 #include <QInputDialog>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QStringList>
 #include <QTextEdit>
 #include <QTreeWidgetItem>

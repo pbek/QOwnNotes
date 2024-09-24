@@ -2,7 +2,7 @@
 
 #include <libraries/piwiktracker/piwiktracker.h>
 
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <utility>
 
 #include "release.h"

@@ -1,6 +1,6 @@
 #include "clientproxy.h"
 
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QThreadPool>
 #include <QUrl>
 #include <utility>

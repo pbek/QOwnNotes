@@ -80,7 +80,7 @@
 #include <QRegularExpressionMatchIterator>
 #include <QScreen>
 #include <QScrollBar>
-#include <QSettings>
+#include "services/settingsservice.h"
 #include <QShortcut>
 #include <QSystemTrayIcon>
 #include <QTemporaryFile>
