@@ -13,6 +13,7 @@
  */
 
 #include "settingsservice.h"
+#include <QDebug>
 
 SettingsService::SettingsService(QObject *parent) : QObject(parent), m_settings() {}
 
@@ -49,11 +50,29 @@ void SettingsService::setValue(const QString &key, const QVariant &value) {
 
 void SettingsService::remove(const QString &key) {
     QString fullKey = m_group.isEmpty() ? key : m_group + '/' + key;
+
     if (!m_arrayStack.isEmpty()) {
         fullKey = m_arrayStack.last() + '/' + QString::number(m_arrayIndex) + '/' + fullKey;
     }
-    cache()->remove(fullKey);
-    m_settings.remove(fullKey);
+
+    // Handle group removal
+    if (key.isEmpty() && !m_group.isEmpty()) {
+        // Remove all keys in group in QHash cache
+        for (auto it = cache()->begin(); it != cache()->end();) {
+            if (it.key().startsWith(fullKey)) {
+                it = cache()->erase(it);
+            } else {
+                ++it;
+            }
+        }
+
+        // Remove all keys in group in QSettings
+        m_settings.remove(QLatin1String(""));
+    } else {
+        // Remove single key
+        cache()->remove(fullKey);
+        m_settings.remove(fullKey);
+    }
 }
 
 bool SettingsService::contains(const QString &key) const {
