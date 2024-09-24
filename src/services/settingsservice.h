@@ -38,7 +38,7 @@ class SettingsService : public QObject {
     void endGroup();
     QString group() const;
     QString fileName() const;
-    void beginWriteArray(const QString& prefix, int size);
+    void beginWriteArray(const QString &prefix, int size);
     void setArrayIndex(int i);
     void endArray();
     int beginReadArray(QString prefix);
@@ -49,13 +49,13 @@ class SettingsService : public QObject {
 
     explicit SettingsService(QObject *parent = nullptr);
     ~SettingsService() override = default;
-   private:
 
+   private:
     QSettings m_settings;
-//    mutable QHash<QString, QVariant> m_cache;
     QString m_group;
     QString m_arrayPrefix;
     int m_arrayIndex;
+    QStringList m_arrayStack;
 
-    static QHash<QString, QVariant>* cache(bool clear = false) ;
+    static QHash<QString, QVariant> *cache(bool clear = false);
 };
