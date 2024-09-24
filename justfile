@@ -12,6 +12,7 @@ transferDir := `if [ -d "$HOME/NextcloudPrivate/Transfer" ]; then echo "$HOME/Ne
 # Aliases
 
 alias fix-linting := clang-format
+alias linter-fix := clang-format
 
 # Build the translations
 [group('translations')]
