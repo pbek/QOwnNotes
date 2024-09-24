@@ -8,6 +8,8 @@ default:
 # Variables
 
 transferDir := `if [ -d "$HOME/NextcloudPrivate/Transfer" ]; then echo "$HOME/NextcloudPrivate/Transfer"; else echo "$HOME/Nextcloud/Transfer"; fi`
+sourceBuildDir := "build-QOwnNotes"
+sourceBuildTestDir := "build-tests-QOwnNotes"
 
 # Aliases
 
@@ -87,17 +89,24 @@ nix-run:
 # Build the application direclty from the source
 [group('src-build')]
 src-build:
-    mkdir -p build-QOwnNotes; cd build-QOwnNotes && qmake "CONFIG+=debug USE_SYSTEM_BOTAN=1" ../src/QOwnNotes.pro && make
+    mkdir -p {{ sourceBuildDir }}; cd {{ sourceBuildDir }} && qmake "CONFIG+=debug USE_SYSTEM_BOTAN=1" ../src/QOwnNotes.pro && make -j$(nproc)
+
+# Build the application direclty from the source
+[group('src-build')]
+src-test:
+    mkdir -p {{ sourceBuildTestDir }}; cd {{ sourceBuildTestDir }} && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS ../tests/QOwnNotesTests.pro && make -j$(nproc)
+    ./bin/tests/tests -platform minimal
+    rm -rf {{ sourceBuildTestDir }}
 
 # Clean the build directory
 [group('src-build')]
 src-clean:
-    rm -rf build-QOwnNotes
+    rm -rf {{ sourceBuildDir }}
 
 # Run the built application
 [group('src-build')]
 src-run:
-    ./build-QOwnNotes/QOwnNotes
+    ./{{ sourceBuildDir }}/QOwnNotes
 
 # Build and run the application
 [group('src-build')]
