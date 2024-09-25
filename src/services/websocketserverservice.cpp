@@ -602,25 +602,25 @@ void WebSocketServerService::socketDisconnected() {
 }
 
 QString WebSocketServerService::getBookmarksTag() {
-    return QSettings()
+    return SettingsService()
         .value(QStringLiteral("webSocketServerService/bookmarksTag"), "bookmarks")
         .toString();
 }
 
 QString WebSocketServerService::getBookmarksNoteName() {
-    return QSettings()
+    return SettingsService()
         .value(QStringLiteral("webSocketServerService/bookmarksNoteName"), "Bookmarks")
         .toString();
 }
 
 QString WebSocketServerService::getCommandSnippetsTag() {
-    return QSettings()
+    return SettingsService()
         .value(QStringLiteral("webSocketServerService/commandSnippetsTag"), "commands")
         .toString();
 }
 
 QString WebSocketServerService::getCommandSnippetsNoteName() {
-    return QSettings()
+    return SettingsService()
         .value(QStringLiteral("webSocketServerService/commandSnippetsNoteName"), "Commands")
         .toString();
 }

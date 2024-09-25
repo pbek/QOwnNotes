@@ -2365,7 +2365,8 @@ void MainWindow::readSettings() {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QTimer::singleShot(1, this, [this] {
 #endif
-        restoreGeometry(SettingsService().value(QStringLiteral("MainWindow/geometry")).toByteArray());
+        restoreGeometry(
+            SettingsService().value(QStringLiteral("MainWindow/geometry")).toByteArray());
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     });
 #endif
@@ -6852,7 +6853,8 @@ void MainWindow::storeNoteBookmark(int slot) {
     NoteHistoryItem item = NoteHistoryItem(&currentNote, ui->noteTextEdit);
     noteBookmarks[slot] = item;
 
-    SettingsService().setValue(QStringLiteral("NoteBookmark%1").arg(slot), QVariant::fromValue(item));
+    SettingsService().setValue(QStringLiteral("NoteBookmark%1").arg(slot),
+                               QVariant::fromValue(item));
 
     showStatusBarMessage(tr("Bookmarked note position at slot %1").arg(QString::number(slot)),
                          3000);
@@ -11755,7 +11757,7 @@ void MainWindow::on_noteEditTabWidget_currentChanged(int index) {
 
     // Allow the subfolder of the note to be selected in the subfolder list
     // See: https://github.com/pbek/QOwnNotes/issues/2861
-    if (QSettings()
+    if (SettingsService()
             .value(QStringLiteral("noteSubfoldersPanelTabsUnsetAllNotesSelection"))
             .toBool()) {
         setShowNotesFromAllNoteSubFolders(false);

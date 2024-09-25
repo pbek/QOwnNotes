@@ -739,31 +739,35 @@ void FontColorWidget::on_importSchemeButton_clicked() {
         QStringList fileNames = dialog.selectedFiles();
         if (fileNames.count() > 0) {
             Q_FOREACH (QString fileName, fileNames) {
-                auto* settings = new QSettings();
-                auto* importSettings = new QSettings(fileName, QSettings::IniFormat);
-                QString schemaKey = importSettings->value("Export/SchemaKey").toString();
+                SettingsService settings;
+                QSettings importSettings(fileName, QSettings::IniFormat);
+                QString schemaKey = importSettings.value("Export/SchemaKey").toString();
 
                 // create a new schema key for the import
                 QString uuid = Utils::Misc::createUuidString();
                 _currentSchemaKey = "EditorColorSchema-" + uuid;
 
-                QStringList schemes = settings->value("Editor/ColorSchemes").toStringList();
+                QStringList schemes = settings.value("Editor/ColorSchemes").toStringList();
                 schemes << _currentSchemaKey;
-                settings->setValue("Editor/ColorSchemes", schemes);
-                settings->setValue("Editor/CurrentSchemaKey", _currentSchemaKey);
+                settings.setValue("Editor/ColorSchemes", schemes);
+                settings.setValue("Editor/CurrentSchemaKey", _currentSchemaKey);
 
-                settings->beginGroup(_currentSchemaKey);
-                importSettings->beginGroup(schemaKey);
-                QStringList keys = importSettings->allKeys();
+                settings.beginGroup(_currentSchemaKey);
+                importSettings.beginGroup(schemaKey);
+                QStringList keys = importSettings.allKeys();
 
                 // store the color schema data to the settings
                 Q_FOREACH (QString key, keys) {
-                    QVariant value = importSettings->value(key);
-                    settings->setValue(key, value);
+                    QVariant value = importSettings.value(key);
+                    settings.setValue(key, value);
                 }
 
                 // select the last schema
                 selectLastSchema();
+
+                // just to make sure
+                settings.endGroup();
+                importSettings.endGroup();
             }
         }
     }

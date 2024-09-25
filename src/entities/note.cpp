@@ -1187,7 +1187,7 @@ bool Note::storeNewDecryptedText(QString text) {
  * Returns the default note file extension (`md`, `txt` or custom extensions)
  */
 QString Note::defaultNoteFileExtension() {
-    return QSettings()
+    return SettingsService()
         .value(QStringLiteral("defaultNoteFileExtension"), QStringLiteral("md"))
         .toString();
 }

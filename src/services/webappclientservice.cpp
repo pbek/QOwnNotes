@@ -64,7 +64,7 @@ void WebAppClientService::close() {
 }
 
 QString WebAppClientService::getServerUrl() {
-    return QSettings()
+    return SettingsService()
         .value(QStringLiteral("webAppClientService/serverUrl"), getDefaultServerUrl())
         .toString();
 }

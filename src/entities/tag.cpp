@@ -986,8 +986,9 @@ bool Tag::store() {
  * @return
  */
 QString Tag::colorFieldName() const {
-    return SettingsService().value(QStringLiteral("darkMode")).toBool() ? QStringLiteral("dark_color")
-                                                                  : QStringLiteral("color");
+    return SettingsService().value(QStringLiteral("darkMode")).toBool()
+               ? QStringLiteral("dark_color")
+               : QStringLiteral("color");
 }
 
 /**

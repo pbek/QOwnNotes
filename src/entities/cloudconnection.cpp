@@ -184,7 +184,9 @@ bool CloudConnection::remove() {
     }
 }
 
-void CloudConnection::removeExtraSettings() { QSettings().remove(extraSettingsSettingsKey()); }
+void CloudConnection::removeExtraSettings() {
+    SettingsService().remove(extraSettingsSettingsKey());
+}
 
 QString CloudConnection::extraSettingsSettingsKey() const {
     return QStringLiteral("CloudConnection-") + QString::number(this->id);
@@ -195,7 +197,8 @@ void CloudConnection::setExtraSetting(const QString &key, const QVariant &value)
 }
 
 QVariant CloudConnection::extraSetting(const QString &key, const QVariant &defaultValue) const {
-    return SettingsService().value(extraSettingsSettingsKey() + QStringLiteral("/") + key, defaultValue);
+    return SettingsService().value(extraSettingsSettingsKey() + QStringLiteral("/") + key,
+                                   defaultValue);
 }
 
 CloudConnection CloudConnection::cloudConnectionFromQuery(const QSqlQuery &query) {

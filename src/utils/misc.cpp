@@ -1306,7 +1306,7 @@ bool Utils::Misc::isNoteEditingAllowed() {
  * @return
  */
 bool Utils::Misc::useInternalExportStylingForPreview() {
-    return QSettings()
+    return SettingsService()
         .value(QStringLiteral("MainWindow/noteTextView.useInternalExportStyling"), true)
         .toBool();
 }
@@ -1317,7 +1317,7 @@ bool Utils::Misc::useInternalExportStylingForPreview() {
  * @return
  */
 QString Utils::Misc::previewFontString() {
-    return QSettings()
+    return SettingsService()
         .value(isPreviewUseEditorStyles() ? QStringLiteral("MainWindow/noteTextEdit.font")
                                           : QStringLiteral("MainWindow/noteTextView.font"))
         .toString();
@@ -1329,7 +1329,7 @@ QString Utils::Misc::previewFontString() {
  * @return
  */
 QString Utils::Misc::previewCodeFontString() {
-    return QSettings()
+    return SettingsService()
         .value(isPreviewUseEditorStyles() ? QStringLiteral("MainWindow/noteTextEdit.code.font")
                                           : QStringLiteral("MainWindow/noteTextView.code.font"))
         .toString();
@@ -1341,7 +1341,7 @@ QString Utils::Misc::previewCodeFontString() {
  * @return
  */
 bool Utils::Misc::isPreviewUseEditorStyles() {
-    return QSettings()
+    return SettingsService()
         .value(QStringLiteral("MainWindow/noteTextView.useEditorStyles"), true)
         .toBool();
 }
@@ -2640,7 +2640,7 @@ QString Utils::Misc::createAbsolutePathsInHtml(const QString &html, const QStrin
 }
 
 int Utils::Misc::getPreviewRefreshDebounceTime() {
-    return QSettings()
+    return SettingsService()
         .value(QStringLiteral("MainWindow/noteTextView.refreshDebounceTime"), 600)
         .toInt();
 }
