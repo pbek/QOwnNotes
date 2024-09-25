@@ -48,8 +48,11 @@ void TestSettingsService::testClear() {
     settings.setValue(key, value);
     QVERIFY(settings.contains(key));
     QVERIFY(settings.value(key).toString() == value);
+#ifndef Q_OS_MACOS
+    // Don't test allKeys() on macOS, because it always puts extra keys in the settings
     QVERIFY(settings.allKeys().count() == 1);
     QVERIFY(QSettings().allKeys().count() == 1);
+#endif
 
     // Clear the settings and test if they were removed
     settings.clear();
@@ -57,8 +60,11 @@ void TestSettingsService::testClear() {
     QVERIFY(settings.value(key).toString() != value);
     QVERIFY(!QSettings().contains(key));
     QVERIFY(QSettings().value(key).toString() != value);
+#ifndef Q_OS_MACOS
+    // Don't test allKeys() on macOS, because it always puts extra keys in the settings
     QVERIFY(settings.allKeys().isEmpty());
     QVERIFY(QSettings().allKeys().isEmpty());
+#endif
 }
 
 void TestSettingsService::testGroupRemove() {
