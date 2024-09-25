@@ -29,23 +29,19 @@ QHash<QString, QVariant> *SettingsService::cache() {
 }
 
 QVariant SettingsService::value(const QString &key, const QVariant &defaultValue) const {
-    QString fullKey = m_group.isEmpty() ? key : m_group + '/' + key;
-    if (!m_arrayStack.isEmpty()) {
-        fullKey = m_arrayStack.last() + '/' + QString::number(m_arrayIndex) + '/' + fullKey;
-    }
+    const QString fullKey = getFullKey(key);
+
     if (!cache()->contains(fullKey)) {
         // We are using "key" instead of "fullKey", because QSettings is already
         // in the group if there was one
         cache()->insert(fullKey, m_settings.value(key, defaultValue));
     }
+
     return cache()->value(fullKey);
 }
 
 void SettingsService::setValue(const QString &key, const QVariant &value) {
-    QString fullKey = m_group.isEmpty() ? key : m_group + '/' + key;
-    if (!m_arrayStack.isEmpty()) {
-        fullKey = m_arrayStack.last() + '/' + QString::number(m_arrayIndex) + '/' + fullKey;
-    }
+    const QString fullKey = getFullKey(key);
     cache()->insert(fullKey, value);
 
     // We are using "key" instead of "fullKey", because QSettings is already
@@ -54,11 +50,7 @@ void SettingsService::setValue(const QString &key, const QVariant &value) {
 }
 
 void SettingsService::remove(const QString &key) {
-    QString fullKey = m_group.isEmpty() ? key : m_group + '/' + key;
-
-    if (!m_arrayStack.isEmpty()) {
-        fullKey = m_arrayStack.last() + '/' + QString::number(m_arrayIndex) + '/' + fullKey;
-    }
+    const QString fullKey = getFullKey(key);
 
     // Handle group removal
     if (key.isEmpty() && !m_group.isEmpty()) {
@@ -84,14 +76,21 @@ void SettingsService::remove(const QString &key) {
 }
 
 bool SettingsService::contains(const QString &key) const {
-    QString fullKey = m_group.isEmpty() ? key : m_group + '/' + key;
-    if (!m_arrayStack.isEmpty()) {
-        fullKey = m_arrayStack.last() + '/' + QString::number(m_arrayIndex) + '/' + fullKey;
-    }
+    const QString fullKey = getFullKey(key);
 
     // For m_settings we are using "key" instead of "fullKey", because QSettings
     // is already in the group if there was one
     return cache()->contains(fullKey) || m_settings.contains(key);
+}
+
+QString SettingsService::getFullKey(const QString &key) const {
+    QString fullKey = m_group.isEmpty() ? key : m_group + '/' + key;
+
+    if (!m_arrayStack.isEmpty()) {
+        fullKey = m_arrayStack.last() + '/' + QString::number(m_arrayIndex) + '/' + fullKey;
+    }
+
+    return fullKey;
 }
 
 void SettingsService::sync() { m_settings.sync(); }

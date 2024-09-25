@@ -58,4 +58,5 @@ class SettingsService : public QObject {
     QStringList m_arrayStack;
 
     static QHash<QString, QVariant> *cache();
+    QString getFullKey(const QString &key) const;
 };
