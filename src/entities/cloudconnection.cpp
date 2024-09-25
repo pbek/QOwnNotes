@@ -191,11 +191,11 @@ QString CloudConnection::extraSettingsSettingsKey() const {
 }
 
 void CloudConnection::setExtraSetting(const QString &key, const QVariant &value) {
-    QSettings().setValue(extraSettingsSettingsKey() + QStringLiteral("/") + key, value);
+    SettingsService().setValue(extraSettingsSettingsKey() + QStringLiteral("/") + key, value);
 }
 
 QVariant CloudConnection::extraSetting(const QString &key, const QVariant &defaultValue) const {
-    return QSettings().value(extraSettingsSettingsKey() + QStringLiteral("/") + key, defaultValue);
+    return SettingsService().value(extraSettingsSettingsKey() + QStringLiteral("/") + key, defaultValue);
 }
 
 CloudConnection CloudConnection::cloudConnectionFromQuery(const QSqlQuery &query) {

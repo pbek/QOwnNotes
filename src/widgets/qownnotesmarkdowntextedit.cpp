@@ -134,7 +134,7 @@ void QOwnNotesMarkdownTextEdit::setFormatStyle(MarkdownHighlighter::HighlighterS
  */
 void QOwnNotesMarkdownTextEdit::overrideFontSizeStyle(int fontSize) {
     bool overrideInterfaceFontSize =
-        QSettings().value(QStringLiteral("overrideInterfaceFontSize"), false).toBool();
+        SettingsService().value(QStringLiteral("overrideInterfaceFontSize"), false).toBool();
 
     // remove old style
     QString stylesheet = styleSheet().remove(QRegularExpression(
@@ -209,7 +209,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
 
 #ifdef Q_OS_WIN32
     // set the selection background color to a light blue if not in dark mode
-    if (!QSettings().value(QStringLiteral("darkMode")).toBool()) {
+    if (!SettingsService().value(QStringLiteral("darkMode")).toBool()) {
         // light green (#9be29b) could be another choice, but be aware that
         // this color will be used for mouse and keyboard selections too
         setStyleSheet(styleSheet() +

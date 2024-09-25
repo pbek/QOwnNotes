@@ -912,7 +912,7 @@ QString Utils::Misc::applicationPath() {
 }
 
 QString Utils::Misc::appendSingleAppInstanceTextIfNeeded(QString text) {
-    if (QSettings().value("allowOnlyOneAppInstance").toBool()) {
+    if (SettingsService().value("allowOnlyOneAppInstance").toBool()) {
         text.append(QStringLiteral("\n\n") +
                     QObject::tr("You are using the single app instance mode, that "
                                 "prevents the application be be started a second time. For the "
@@ -1269,7 +1269,7 @@ void Utils::Misc::storePrinterSettings(QPrinter *printer, const QString &setting
     QByteArray byteArr;
     QDataStream os(&byteArr, QIODevice::WriteOnly);
     dataStreamWrite(os, *printer);
-    QSettings().setValue(settingsKey, byteArr.toHex());
+    SettingsService().setValue(settingsKey, byteArr.toHex());
 }
 
 /**
@@ -1297,7 +1297,7 @@ void Utils::Misc::loadPrinterSettings(QPrinter *printer, const QString &settings
  * @return
  */
 bool Utils::Misc::isNoteEditingAllowed() {
-    return QSettings().value(QStringLiteral("allowNoteEditing"), true).toBool();
+    return SettingsService().value(QStringLiteral("allowNoteEditing"), true).toBool();
 }
 
 /**
@@ -1352,7 +1352,7 @@ bool Utils::Misc::isPreviewUseEditorStyles() {
  * @return
  */
 bool Utils::Misc::isSocketServerEnabled() {
-    return QSettings().value(QStringLiteral("enableSocketServer"), true).toBool();
+    return SettingsService().value(QStringLiteral("enableSocketServer"), true).toBool();
 }
 
 /**
@@ -1361,7 +1361,7 @@ bool Utils::Misc::isSocketServerEnabled() {
  * @return
  */
 bool Utils::Misc::isWebAppSupportEnabled() {
-    return QSettings().value(QStringLiteral("enableWebAppSupport"), false).toBool();
+    return SettingsService().value(QStringLiteral("enableWebAppSupport"), false).toBool();
 }
 
 /**
@@ -1376,7 +1376,7 @@ bool Utils::Misc::isRestoreCursorPosition() {
     const bool defaultValue = true;
 #endif
 
-    return QSettings().value(QStringLiteral("restoreCursorPosition"), defaultValue).toBool();
+    return SettingsService().value(QStringLiteral("restoreCursorPosition"), defaultValue).toBool();
 }
 
 /**
@@ -1396,7 +1396,7 @@ bool Utils::Misc::isDarkModeIconTheme() {
  * @return
  */
 bool Utils::Misc::doAutomaticNoteFolderDatabaseClosing() {
-    return QSettings().value(QStringLiteral("automaticNoteFolderDatabaseClosing")).toBool();
+    return SettingsService().value(QStringLiteral("automaticNoteFolderDatabaseClosing")).toBool();
 }
 
 /**
@@ -1405,7 +1405,7 @@ bool Utils::Misc::doAutomaticNoteFolderDatabaseClosing() {
  * @return
  */
 bool Utils::Misc::isNoteListPreview() {
-    return QSettings().value(QStringLiteral("noteListPreview")).toBool();
+    return SettingsService().value(QStringLiteral("noteListPreview")).toBool();
 }
 
 /**
@@ -1414,7 +1414,7 @@ bool Utils::Misc::isNoteListPreview() {
  * @return
  */
 bool Utils::Misc::isEnableNoteTree() {
-    return QSettings().value(QStringLiteral("enableNoteTree")).toBool();
+    return SettingsService().value(QStringLiteral("enableNoteTree")).toBool();
 }
 
 /**
@@ -1423,7 +1423,7 @@ bool Utils::Misc::isEnableNoteTree() {
  * @return
  */
 QString Utils::Misc::indentCharacters() {
-    return QSettings().value("Editor/useTabIndent").toBool()
+    return SettingsService().value("Editor/useTabIndent").toBool()
                ? QStringLiteral("\t")
                : QStringLiteral(" ").repeated(indentSize());
 }
@@ -1433,7 +1433,7 @@ QString Utils::Misc::indentCharacters() {
  *
  * @return
  */
-int Utils::Misc::indentSize() { return QSettings().value("Editor/indentSize", 4).toInt(); }
+int Utils::Misc::indentSize() { return SettingsService().value("Editor/indentSize", 4).toInt(); }
 
 /**
  * Unescapes html special characters
@@ -2437,7 +2437,7 @@ QString Utils::Misc::testEvernoteImportText(const QString &data) {
  * @param msg
  */
 void Utils::Misc::logToFileIfAllowed(QtMsgType msgType, const QString &msg) {
-    if (!QSettings().value(QStringLiteral("Debug/fileLogging")).toBool()) {
+    if (!SettingsService().value(QStringLiteral("Debug/fileLogging")).toBool()) {
         return;
     }
 

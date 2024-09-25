@@ -1019,7 +1019,7 @@ bool Utils::Gui::doWindowsDarkModeCheck() {
     }
 
     bool windowsDarkMode = settings.value("AppsUseLightTheme") == 0;
-    bool appDarkMode = QSettings().value("darkMode").toBool();
+    bool appDarkMode = SettingsService().value("darkMode").toBool();
 
     // Check for Windows dark mode and application default mode
     if (windowsDarkMode && !appDarkMode) {
@@ -1105,7 +1105,7 @@ bool Utils::Gui::doLinuxDarkModeCheck() {
 
     //    const auto result = QString(process.readAllStandardError());
     const int systemColorSchema = QString(process.readAll()).trimmed().right(1).toInt();
-    const bool appDarkMode = QSettings().value("darkMode").toBool();
+    const bool appDarkMode = SettingsService().value("darkMode").toBool();
 
     // Check for Linux dark mode and application default mode
     if (systemColorSchema == 1 && !appDarkMode) {
@@ -1216,7 +1216,7 @@ bool Utils::Gui::enableDockWidgetQuestion(QDockWidget *dockWidget) {
  * @param widget
  */
 void Utils::Gui::fixDarkModeIcons(QWidget *widget) {
-    const bool darkMode = QSettings().value(QStringLiteral("darkMode")).toBool();
+    const bool darkMode = SettingsService().value(QStringLiteral("darkMode")).toBool();
 
     if (!darkMode) {
         return;

@@ -2365,7 +2365,7 @@ void MainWindow::readSettings() {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QTimer::singleShot(1, this, [this] {
 #endif
-        restoreGeometry(QSettings().value(QStringLiteral("MainWindow/geometry")).toByteArray());
+        restoreGeometry(SettingsService().value(QStringLiteral("MainWindow/geometry")).toByteArray());
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     });
 #endif
@@ -2770,7 +2770,7 @@ void MainWindow::notesWereModified(const QString &str) {
     }
 
     // if we should ignore all changes return here
-    if (QSettings().value(QStringLiteral("ignoreAllExternalNoteFolderChanges")).toBool()) {
+    if (SettingsService().value(QStringLiteral("ignoreAllExternalNoteFolderChanges")).toBool()) {
         return;
     }
 
@@ -2933,7 +2933,7 @@ void MainWindow::notesDirectoryWasModified(const QString &str) {
     }
 
     // if we should ignore all changes return here
-    if (QSettings().value(QStringLiteral("ignoreAllExternalNoteFolderChanges")).toBool()) {
+    if (SettingsService().value(QStringLiteral("ignoreAllExternalNoteFolderChanges")).toBool()) {
         return;
     }
 
@@ -3015,7 +3015,7 @@ void MainWindow::storeUpdatedNotesToDisk() {
 
         if (currentNoteChanged) {
             // strip trailing spaces of the current note (if enabled)
-            if (QSettings().value(QStringLiteral("Editor/removeTrailingSpaces")).toBool()) {
+            if (SettingsService().value(QStringLiteral("Editor/removeTrailingSpaces")).toBool()) {
                 const bool wasStripped =
                     currentNote.stripTrailingSpaces(activeNoteTextEdit()->textCursor().position());
 
@@ -6679,7 +6679,7 @@ void MainWindow::updateNoteEncryptionUI() {
 
     // disable spell checker for encrypted text
     const bool checkSpellingEnabled =
-        QSettings().value(QStringLiteral("checkSpelling"), true).toBool();
+        SettingsService().value(QStringLiteral("checkSpelling"), true).toBool();
     const bool spellCheckerShouldBeActive = !hasEncryptedNoteText && checkSpellingEnabled;
 
     // check if the spellchecking state is not as it should be
@@ -6852,7 +6852,7 @@ void MainWindow::storeNoteBookmark(int slot) {
     NoteHistoryItem item = NoteHistoryItem(&currentNote, ui->noteTextEdit);
     noteBookmarks[slot] = item;
 
-    QSettings().setValue(QStringLiteral("NoteBookmark%1").arg(slot), QVariant::fromValue(item));
+    SettingsService().setValue(QStringLiteral("NoteBookmark%1").arg(slot), QVariant::fromValue(item));
 
     showStatusBarMessage(tr("Bookmarked note position at slot %1").arg(QString::number(slot)),
                          3000);
@@ -7562,7 +7562,7 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent, cons
     const int parentId = parent == nullptr ? 0 : parent->data(0, Qt::UserRole).toInt();
     const int tagId = tag._id;
     const QString name = tag._name;
-    auto hideCount = QSettings().value("tagsPanelHideNoteCount", false).toBool();
+    auto hideCount = SettingsService().value("tagsPanelHideNoteCount", false).toBool();
 
     int linkCount = 0;
     QVector<int> linkedNoteIds;
@@ -10852,7 +10852,7 @@ void MainWindow::noteEditCursorPositionChanged() {
     _noteEditLineNumberLabel->setToolTip(toolTip);
 
     const bool autoSelect =
-        QSettings().value(QStringLiteral("navigationPanelAutoSelect"), true).toBool();
+        SettingsService().value(QStringLiteral("navigationPanelAutoSelect"), true).toBool();
     if (autoSelect) {
         selectNavigationItemAtPosition(textEdit->textCursor().block().position());
     }

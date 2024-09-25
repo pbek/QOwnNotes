@@ -47,7 +47,7 @@ void NoteFilePathLabel::updateText() {
     const auto note = mainWindow->getCurrentNote();
     const auto separator = Utils::Misc::dirSeparator();
     QString notePath = Utils::Misc::htmlspecialchars(note.getFileName());
-    const bool darkModeColors = QSettings().value(QStringLiteral("darkModeColors")).toBool();
+    const bool darkModeColors = SettingsService().value(QStringLiteral("darkModeColors")).toBool();
     const auto subFolderColor =
         darkModeColors ? QStringLiteral("#999999") : QStringLiteral("#696969");
     const auto noteFolderColor =
@@ -62,7 +62,7 @@ void NoteFilePathLabel::updateText() {
     }
 
     bool showRelativeNotePath =
-        QSettings().value(QStringLiteral("showStatusBarRelativeNotePath")).toBool();
+        SettingsService().value(QStringLiteral("showStatusBarRelativeNotePath")).toBool();
     if (!showRelativeNotePath) {
         auto noteFolderPath = NoteFolder::currentLocalPath();
 

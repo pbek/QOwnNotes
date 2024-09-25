@@ -489,7 +489,7 @@ bool NoteSubFolder::treeWidgetExpandState() const {
  * Checks if noteSubfoldersPanelShowNotesRecursively is set
  */
 bool NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively() {
-    return QSettings().value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively")).toBool();
+    return SettingsService().value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively")).toBool();
 }
 
 /**

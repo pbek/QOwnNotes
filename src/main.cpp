@@ -377,7 +377,7 @@ void tempLogMessageOutput(QtMsgType type, const QMessageLogContext &context, con
 
     switch (type) {
         case QtDebugMsg:
-            if (QSettings().value(QStringLiteral("Debug/fileLogging")).toBool()) {
+            if (SettingsService().value(QStringLiteral("Debug/fileLogging")).toBool()) {
                 fprintf(stderr, "Debug: %s\n", localMsg.constData());
             }
             Utils::Misc::logToFileIfAllowed(type, msg);

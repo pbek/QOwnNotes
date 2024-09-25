@@ -15,7 +15,7 @@ NoteDialog::NoteDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::NoteD
     afterSetupUI();
     ui->textEdit->initSearchFrame(ui->searchFrame);
     ui->textEdit->setReadOnly(true);
-    ui->tabWidget->setCurrentIndex(QSettings().value("NoteDialog/tabWidgetIndex").toInt());
+    ui->tabWidget->setCurrentIndex(SettingsService().value("NoteDialog/tabWidgetIndex").toInt());
 
     // set the note text view font
     QFont font;
@@ -48,5 +48,5 @@ void NoteDialog::on_noteTextView_anchorClicked(const QUrl &url) {
 }
 
 void NoteDialog::on_tabWidget_currentChanged(int index) {
-    QSettings().setValue("NoteDialog/tabWidgetIndex", index);
+    SettingsService().setValue("NoteDialog/tabWidgetIndex", index);
 }

@@ -162,7 +162,7 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
 
     QString type = logTypeText(logType);
     QColor color = QColor(Qt::black);
-    const bool darkMode = QSettings().value(QStringLiteral("darkMode")).toBool();
+    const bool darkMode = SettingsService().value(QStringLiteral("darkMode")).toBool();
 
     switch (logType) {
         case DebugLogType:

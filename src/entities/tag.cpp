@@ -370,7 +370,7 @@ QStringList Tag::getParentTagNames() {
  * Checks if taggingShowNotesRecursively is set
  */
 bool Tag::isTaggingShowNotesRecursively() {
-    return QSettings().value(QStringLiteral("taggingShowNotesRecursively")).toBool();
+    return SettingsService().value(QStringLiteral("taggingShowNotesRecursively")).toBool();
 }
 
 int Tag::countAllParentId(const int parentId) {
@@ -986,7 +986,7 @@ bool Tag::store() {
  * @return
  */
 QString Tag::colorFieldName() const {
-    return QSettings().value(QStringLiteral("darkMode")).toBool() ? QStringLiteral("dark_color")
+    return SettingsService().value(QStringLiteral("darkMode")).toBool() ? QStringLiteral("dark_color")
                                                                   : QStringLiteral("color");
 }
 

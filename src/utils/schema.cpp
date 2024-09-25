@@ -130,14 +130,14 @@ QVariant Utils::Schema::Settings::getSchemaValue(const QString& key, const QVari
     QVariant value =
         isDefaultSchema
             ? _defaultSchemaSettings.value(schemaKey + QStringLiteral("/") + key, defaultValue)
-            : QSettings().value(schemaKey + QStringLiteral("/") + key, defaultValue);
+            : SettingsService().value(schemaKey + QStringLiteral("/") + key, defaultValue);
 
     if (!value.isValid() && schemaNotSet) {
         QString fallbackSchemaKey =
             isDefaultSchema
                 ? _defaultSchemaSettings.value(schemaKey + QStringLiteral("/FallbackSchema"))
                       .toString()
-                : QSettings().value(schemaKey + QStringLiteral("/FallbackSchema")).toString();
+                : SettingsService().value(schemaKey + QStringLiteral("/FallbackSchema")).toString();
 
         if (!fallbackSchemaKey.isEmpty()) {
             value = getSchemaValue(key, defaultValue, fallbackSchemaKey);
@@ -424,7 +424,7 @@ QString Utils::Schema::getSchemaStyles() {
 
     // enforce blockquotes styles (best effort, may not override all styles of other tags)
     // https://github.com/pbek/QOwnNotes/issues/2669
-    if (QSettings().value(QStringLiteral("fullyHighlightedBlockquotes")).toBool()) {
+    if (SettingsService().value(QStringLiteral("fullyHighlightedBlockquotes")).toBool()) {
         schemaStyles +=
             encodeCssStyleForState(MarkdownHighlighter::BlockQuote, QStringLiteral("blockquote"));
 
