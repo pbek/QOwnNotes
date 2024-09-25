@@ -21,16 +21,20 @@ void TestSettingsService::testSimpleSetAndRead() {
     settings.setValue(key, value1);
     QVERIFY(settings.contains(key));
     QVERIFY(settings.value(key).toString() == value1);
+    QVERIFY(QSettings().value(key).toString() == value1);
 
     // Set and test another value
     settings.setValue(key, value2);
     QVERIFY(settings.value(key).toString() == value2);
+    QVERIFY(QSettings().value(key).toString() == value2);
 
     // Remove the key and test if it was removed
     settings.remove(key);
     QVERIFY(!settings.contains(key));
     QVERIFY(settings.value(key).toString() != value1);
     QVERIFY(settings.value(key).toString() != value2);
+    QVERIFY(QSettings().value(key).toString() != value1);
+    QVERIFY(QSettings().value(key).toString() != value2);
 }
 
 void TestSettingsService::testGroupRemove() {
@@ -43,12 +47,14 @@ void TestSettingsService::testGroupRemove() {
     // Set and test a value in a group manually
     settings.setValue(group + "/" + key, value);
     QVERIFY2(settings.value(group + "/" + key).toString() == value, "Value set failed");
+    QVERIFY2(QSettings().value(group + "/" + key).toString() == value, "QSettings() value set failed");
 
     // Remove the group and test if it was removed
     settings.beginGroup(group);
     settings.remove(QLatin1String(""));
     settings.endGroup();
     QVERIFY2(settings.value(group + "/" + key).toString() != value, "Group remove failed");
+    QVERIFY2(QSettings().value(group + "/" + key).toString() != value, "QSettings() group remove failed");
 }
 
 void TestSettingsService::testGroupRead() {
@@ -61,6 +67,7 @@ void TestSettingsService::testGroupRead() {
     // Set and test a value in a group manually
     settings.setValue(group + "/" + key, value);
     QVERIFY2(settings.value(group + "/" + key).toString() == value, "Value set failed");
+    QVERIFY2(QSettings().value(group + "/" + key).toString() == value, "QSettings value set failed");
 
     // Read the value in the group and test if it was read
     settings.beginGroup(group);
@@ -83,6 +90,7 @@ void TestSettingsService::testGroupSet() {
 
     // Test if the value was set in the group manually
     QVERIFY2(settings.value(group + "/" + key).toString() == value, "Value set failed");
+    QVERIFY2(QSettings().value(group + "/" + key).toString() == value, "QSettings value set failed");
 }
 
 void TestSettingsService::testArraySetAndRead() {
