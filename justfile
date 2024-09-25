@@ -16,6 +16,7 @@ sourceBuildTestDir := "build-tests-QOwnNotes"
 alias fix-linting := clang-format
 alias linter-fix := clang-format
 alias trace-process := process-trace
+alias test := src-test
 
 # Build the translations
 [group('translations')]
