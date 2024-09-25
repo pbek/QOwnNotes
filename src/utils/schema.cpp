@@ -104,7 +104,7 @@ QStringList Utils::Schema::Settings::getSchemaKeys(const QString& schema) const 
         return _defaultSchemaSubkeylists[_defaultSchemaSubkeys[schema]];
     } else {
         QStringList groupKeys;
-        QSettings s;
+        SettingsService s;
         s.beginGroup(schema);
         return s.allKeys();
     }
