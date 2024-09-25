@@ -31,10 +31,34 @@ void TestSettingsService::testSimpleSetAndRead() {
     // Remove the key and test if it was removed
     settings.remove(key);
     QVERIFY(!settings.contains(key));
+    QVERIFY(!QSettings().contains(key));
     QVERIFY(settings.value(key).toString() != value1);
     QVERIFY(settings.value(key).toString() != value2);
     QVERIFY(QSettings().value(key).toString() != value1);
     QVERIFY(QSettings().value(key).toString() != value2);
+}
+
+void TestSettingsService::testClear() {
+    const auto key = QStringLiteral("test-key");
+    const auto value = QStringLiteral("test-value");
+
+    SettingsService settings;
+
+    // Set and test a value
+    settings.setValue(key, value);
+    QVERIFY(settings.contains(key));
+    QVERIFY(settings.value(key).toString() == value);
+    QVERIFY(settings.allKeys().count() == 1);
+    QVERIFY(QSettings().allKeys().count() == 1);
+
+    // Clear the settings and test if they were removed
+    settings.clear();
+    QVERIFY(!settings.contains(key));
+    QVERIFY(settings.value(key).toString() != value);
+    QVERIFY(!QSettings().contains(key));
+    QVERIFY(QSettings().value(key).toString() != value);
+    QVERIFY(settings.allKeys().isEmpty());
+    QVERIFY(QSettings().allKeys().isEmpty());
 }
 
 void TestSettingsService::testGroupRemove() {
@@ -94,24 +118,30 @@ void TestSettingsService::testGroupSet() {
 }
 
 void TestSettingsService::testArraySetAndRead() {
-    const auto key = QStringLiteral("test-array");
+    const auto prefix = QStringLiteral("test-array");
+    const auto key = QStringLiteral("test-key");
     const auto value1 = QStringLiteral("test-value1");
     const auto value2 = QStringLiteral("test-value2");
 
     SettingsService settings;
 
     // Set and test an array value
-    settings.beginWriteArray(key, 2);
+    settings.beginWriteArray(prefix, 2);
     settings.setArrayIndex(0);
     settings.setValue(key, value1);
     settings.setArrayIndex(1);
     settings.setValue(key, value2);
     settings.endArray();
 
-    QVERIFY(settings.beginReadArray(key) == 2);
+    QVERIFY(settings.beginReadArray(prefix) == 2);
     settings.setArrayIndex(0);
     QVERIFY(settings.value(key).toString() == value1);
     settings.setArrayIndex(1);
     QVERIFY(settings.value(key).toString() == value2);
     settings.endArray();
+
+    // Index starts from 1 (see https://doc.qt.io/qt-6/qsettings.html#beginWriteArray)
+    QVERIFY(QSettings().value(prefix + "/1/" + key).toString() == value1);
+    QVERIFY(QSettings().value(prefix + "/2/" + key).toString() == value2);
+    QVERIFY(QSettings().value(prefix + "/size").toInt() == 2);
 }

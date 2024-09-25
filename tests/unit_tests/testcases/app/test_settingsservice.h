@@ -7,6 +7,7 @@ class TestSettingsService : public QObject {
 
    private Q_SLOTS:
     void initTestCase();
+    void testClear();
     void testSimpleSetAndRead();
     void testGroupRemove();
     void testGroupRead();
