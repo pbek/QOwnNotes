@@ -13,6 +13,7 @@
  */
 
 #include "settingsservice.h"
+
 #include <QDebug>
 
 SettingsService::SettingsService(QObject *parent) : QObject(parent), m_settings() {}
@@ -24,7 +25,6 @@ SettingsService &SettingsService::instance() {
 
 QHash<QString, QVariant> *SettingsService::cache() {
     static QHash<QString, QVariant> cache;
-
     return &cache;
 }
 
@@ -34,7 +34,9 @@ QVariant SettingsService::value(const QString &key, const QVariant &defaultValue
         fullKey = m_arrayStack.last() + '/' + QString::number(m_arrayIndex) + '/' + fullKey;
     }
     if (!cache()->contains(fullKey)) {
-        cache()->insert(fullKey, m_settings.value(fullKey, defaultValue));
+        // We are using "key" instead of "fullKey", because QSettings is already
+        // in the group if there was one
+        cache()->insert(fullKey, m_settings.value(key, defaultValue));
     }
     return cache()->value(fullKey);
 }
@@ -45,7 +47,10 @@ void SettingsService::setValue(const QString &key, const QVariant &value) {
         fullKey = m_arrayStack.last() + '/' + QString::number(m_arrayIndex) + '/' + fullKey;
     }
     cache()->insert(fullKey, value);
-    m_settings.setValue(fullKey, value);
+
+    // We are using "key" instead of "fullKey", because QSettings is already
+    // in the group if there was one
+    m_settings.setValue(key, value);
 }
 
 void SettingsService::remove(const QString &key) {
@@ -71,7 +76,10 @@ void SettingsService::remove(const QString &key) {
     } else {
         // Remove single key
         cache()->remove(fullKey);
-        m_settings.remove(fullKey);
+
+        // We are using "key" instead of "fullKey", because QSettings is already
+        // in the group if there was one
+        m_settings.remove(key);
     }
 }
 
@@ -80,7 +88,10 @@ bool SettingsService::contains(const QString &key) const {
     if (!m_arrayStack.isEmpty()) {
         fullKey = m_arrayStack.last() + '/' + QString::number(m_arrayIndex) + '/' + fullKey;
     }
-    return cache()->contains(fullKey) || m_settings.contains(fullKey);
+
+    // For m_settings we are using "key" instead of "fullKey", because QSettings
+    // is already in the group if there was one
+    return cache()->contains(fullKey) || m_settings.contains(key);
 }
 
 void SettingsService::sync() { m_settings.sync(); }
