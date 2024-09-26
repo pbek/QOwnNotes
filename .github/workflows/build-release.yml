@@ -24,6 +24,7 @@ env:
   PUBLISHER: "Patrizio Bekerle"
   REPO_DIR: "/home/runner/work/QOwnNotes"
   QT_MODULES: ""
+  QT6_MODULES: "qtwebsockets"
   QMAKE: qmake
   CORES: 16
 
@@ -171,9 +172,9 @@ jobs:
     needs: create_release
     runs-on: ubuntu-20.04
     env:
-      QT_VERSION: 6.5.0
+      QT_VERSION: 6.5.3
       BUILD_DIR: build
-    name: '🐧 AppImage Qt 6.5.0'
+    name: '🐧 AppImage Qt 6.5.3'
     steps:
 
       - name: '🧰 Checkout'
@@ -185,7 +186,7 @@ jobs:
         uses: jurplel/install-qt-action@v4
         with:
           version: ${{env.QT_VERSION}}
-          modules: ${{env.QT_MODULES}}
+          modules: ${{env.QT6_MODULES}}
           aqtversion: '==2.0.0'
           cache: true
 
