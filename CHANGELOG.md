@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 24.9.7
-- Reading from settings will now be cached in memory to possible speed up the application,
+- Reading from **settings** will now be **cached in memory** to possibly speed up the application,
   hopefully not causing any regressions (for [#3027](https://github.com/pbek/QOwnNotes/issues/3027))
 - The QOwnNotes API <https://api.qownnotes.org> got migrated to PHP 8.2,
   Symfony 6.4 and API Platform 3.3 for more speed and to be more future-proof
