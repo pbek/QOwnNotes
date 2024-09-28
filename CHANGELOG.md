@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.9.8
+- The file size will now be shown in the note list tooltip
+  (for [3120](https://github.com/pbek/QOwnNotes/issues/3120))
+
 ## 24.9.7
 - Reading from **settings** will now be **cached in memory** to possibly speed up the application,
   hopefully not causing any regressions (for [#3027](https://github.com/pbek/QOwnNotes/issues/3027))

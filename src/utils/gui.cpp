@@ -991,8 +991,10 @@ void Utils::Gui::setTreeWidgetItemToolTipForNote(QTreeWidgetItem *item, const No
     QDateTime *fileLastModified =
         (overrideFileLastModified != nullptr) ? overrideFileLastModified : &modified;
 
-    QString toolTipText = QObject::tr("<strong>%1</strong><br />last modified: %2")
-                              .arg(note.getFileName(), fileLastModified->toString());
+    QString toolTipText =
+        QObject::tr("<strong>%1</strong><br />last modified: %2<br />file size: %3")
+            .arg(note.getFileName(), fileLastModified->toString(),
+                 Utils::Misc::toHumanReadableByteSize(note.getFileSize()));
 
     NoteSubFolder noteSubFolder = note.getNoteSubFolder();
     if (noteSubFolder.isFetched()) {
