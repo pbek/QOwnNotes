@@ -1492,18 +1492,24 @@ void Utils::Misc::printInfo(const QString &text) { qInfo() << text; }
  * @return
  */
 QString Utils::Misc::toHumanReadableByteSize(qint64 size) {
-    double num = size;
-    const QStringList list = {"KB", "MB", "GB", "TB"};
+    static const QStringList units = {"bytes", "KB", "MB", "GB", "TB"};
+    constexpr double threshold = 1024.0;
 
-    QStringListIterator i(list);
-    QString unit(QStringLiteral("bytes"));
+    double num = qAbs(static_cast<double>(size));
+    int unitIndex = 0;
 
-    while (num >= 1024.0 && i.hasNext()) {
-        unit = i.next();
-        num /= 1024.0;
+    while (num >= threshold && unitIndex < units.size() - 1) {
+        num /= threshold;
+        ++unitIndex;
     }
 
-    return QString().setNum(num, 'f', 2) + " " + unit;
+    // Handle special case for bytes
+    if (unitIndex == 0) {
+        return QString("%1 %2").arg(size).arg(units[unitIndex]);
+    }
+
+    // Use QString::number for better performance and more control
+    return QString("%1 %2").arg(QString::number(num, 'f', 2), units[unitIndex]);
 }
 
 /**
