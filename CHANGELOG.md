@@ -3,7 +3,7 @@
 ## 24.9.8
 - You can now set the **maximum note file size** in the *Panels settings* to prevent
   the loading of very large notes (for [3118](https://github.com/pbek/QOwnNotes/issues/3118))
-  - Default is 1 MB
+  - Default is 1 MB, files larger than that will not show up in the note list
 - The file size will now be shown in the note list tooltip
   (for [3120](https://github.com/pbek/QOwnNotes/issues/3120))
 
