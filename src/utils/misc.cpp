@@ -2650,3 +2650,7 @@ int Utils::Misc::getPreviewRefreshDebounceTime() {
         .value(QStringLiteral("MainWindow/noteTextView.refreshDebounceTime"), 600)
         .toInt();
 }
+
+int Utils::Misc::getMaximumNoteFileSize() {
+    return SettingsService().value(QStringLiteral("maxNoteFileSize"), 1048576).toInt();
+}

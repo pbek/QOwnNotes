@@ -168,6 +168,7 @@ bool isSimilar(const QString &str1, const QString &str2, int threshold = 3);
 QString getBaseUrlFromUrlString(const QString &urlString, bool withBasePath = false);
 QString createAbsolutePathsInHtml(const QString &html, const QString &url);
 int getPreviewRefreshDebounceTime();
+int getMaximumNoteFileSize();
 }    // namespace Misc
 }    // namespace Utils
 

@@ -5795,6 +5795,13 @@ git config --global user.name &quot;Your name&quot;</string>
                 <string>Note list panel</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_61">
+                <item row="0" column="1" colspan="2">
+                 <widget class="QCheckBox" name="noteSubfoldersPanelShowNotesRecursivelyCheckBox">
+                  <property name="text">
+                   <string>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</string>
+                  </property>
+                 </widget>
+                </item>
                 <item row="1" column="1" colspan="2">
                  <widget class="QCheckBox" name="taggingShowNotesRecursivelyCheckBox">
                   <property name="text">
@@ -5802,7 +5809,74 @@ git config --global user.name &quot;Your name&quot;</string>
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="1">
+                <item row="2" column="1" colspan="2">
+                 <widget class="QCheckBox" name="noteListPreviewCheckBox">
+                  <property name="text">
+                   <string>Show notes in the note list with preview</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1" colspan="2">
+                 <widget class="QFrame" name="maxNoteFileSizeFrame">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="toolTip">
+                   <string>Notes larger than this will not be shown in the note list</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_16">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="maxNoteFileSizeLabel">
+                     <property name="text">
+                      <string>Maximum note file size:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="maxNoteFileSizeSpinBox">
+                     <property name="suffix">
+                      <string notr="true"> KB</string>
+                     </property>
+                     <property name="minimum">
+                      <number>1</number>
+                     </property>
+                     <property name="maximum">
+                      <number>1000000</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="maxNoteFileSizeSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Orientation::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="5" column="1">
                  <widget class="QGroupBox" name="notesPanelSortGroupBox">
                   <property name="title">
                    <string>Sort</string>
@@ -5825,29 +5899,7 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="3" column="1" colspan="2">
-                 <widget class="QGroupBox" name="groupBox_39">
-                  <property name="toolTip">
-                   <string>Regular expressions of note files to ignore, separated by &quot;;&quot;</string>
-                  </property>
-                  <property name="title">
-                   <string>Ignored note files</string>
-                  </property>
-                  <layout class="QHBoxLayout" name="horizontalLayout_14">
-                   <item>
-                    <widget class="QLineEdit" name="ignoredNoteFilesLineEdit">
-                     <property name="placeholderText">
-                      <string>Regular expressions of note files to ignore, separated by &quot;;&quot;</string>
-                     </property>
-                     <property name="clearButtonEnabled">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="4" column="2">
+                <item row="5" column="2">
                  <widget class="QGroupBox" name="notesPanelOrderGroupBox">
                   <property name="enabled">
                    <bool>true</bool>
@@ -5876,18 +5928,26 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="0" column="1" colspan="2">
-                 <widget class="QCheckBox" name="noteSubfoldersPanelShowNotesRecursivelyCheckBox">
-                  <property name="text">
-                   <string>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</string>
+                <item row="4" column="1" colspan="2">
+                 <widget class="QGroupBox" name="groupBox_39">
+                  <property name="toolTip">
+                   <string>Regular expressions of note files to ignore, separated by &quot;;&quot;</string>
                   </property>
-                 </widget>
-                </item>
-                <item row="2" column="1" colspan="2">
-                 <widget class="QCheckBox" name="noteListPreviewCheckBox">
-                  <property name="text">
-                   <string>Show notes in the note list with preview</string>
+                  <property name="title">
+                   <string>Ignored note files</string>
                   </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_14">
+                   <item>
+                    <widget class="QLineEdit" name="ignoredNoteFilesLineEdit">
+                     <property name="placeholderText">
+                      <string>Regular expressions of note files to ignore, separated by &quot;;&quot;</string>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
                 </item>
                </layout>

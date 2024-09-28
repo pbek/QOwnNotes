@@ -3253,6 +3253,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
     int currentCount = 0;
 
     _buildNotesIndexAfterNoteIdList.reserve(files.size());
+    const int maxNoteFileSize = Utils::Misc::getMaximumNoteFileSize();
     // create all notes from the files
     for (QString fileName : Utils::asConst(files)) {
         if (progress.wasCanceled()) {
@@ -3265,6 +3266,12 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 
         // fetching the content of the file
         QFile file(Note::getFullFilePathForFile(fileName));
+
+        if (file.size() > maxNoteFileSize) {
+            qDebug() << "Note file '" << fileName << "' is too large: " << file.size() << " > "
+                     << maxNoteFileSize;
+            continue;
+        }
 
         // update or create a note from the file
         const Note note = Note::updateOrCreateFromFile(file, noteSubFolder, withNoteNameHook);

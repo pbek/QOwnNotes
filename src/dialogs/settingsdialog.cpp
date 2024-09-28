@@ -233,6 +233,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     connect(ui->noteEditCentralWidgetCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->noteFolderButtonsCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->noteListPreviewCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
+    connect(ui->maxNoteFileSizeSpinBox, SIGNAL(valueChanged(int)), this, SLOT(needRestart()));
     connect(ui->vimModeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->disableCursorBlinkingCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->ignoreNoteSubFoldersLineEdit, SIGNAL(textChanged(QString)), this,
@@ -968,6 +969,8 @@ void SettingsDialog::storePanelSettings() {
     settings.setValue(QStringLiteral("taggingShowNotesRecursively"),
                       ui->taggingShowNotesRecursivelyCheckBox->isChecked());
     settings.setValue(QStringLiteral("noteListPreview"), ui->noteListPreviewCheckBox->isChecked());
+    settings.setValue(QStringLiteral("maxNoteFileSize"),
+                      ui->maxNoteFileSizeSpinBox->value() * 1024);
 
     ui->tagsPanelSortAlphabeticalRadioButton->isChecked()
         ? settings.setValue(QStringLiteral("tagsPanelSort"), SORT_ALPHABETICAL)
@@ -1495,6 +1498,7 @@ void SettingsDialog::readPanelSettings() {
     ui->taggingShowNotesRecursivelyCheckBox->setChecked(
         settings.value(QStringLiteral("taggingShowNotesRecursively")).toBool());
     ui->noteListPreviewCheckBox->setChecked(Utils::Misc::isNoteListPreview());
+    ui->maxNoteFileSizeSpinBox->setValue(Utils::Misc::getMaximumNoteFileSize() / 1024);
 
     if (settings.value(QStringLiteral("tagsPanelSort")).toInt() == SORT_ALPHABETICAL) {
         ui->tagsPanelSortAlphabeticalRadioButton->setChecked(true);
