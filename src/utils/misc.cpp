@@ -1946,7 +1946,7 @@ void Utils::Misc::transformNextcloudPreviewImages(QString &html, int maxImageWid
         QRegularExpressionMatch match = i.next();
         const QString imageTag = match.captured(0);
         QString inlineImageTag;
-        int imageWidth;
+        int imageWidth = maxImageWidth;
         ExternalImageHashItem hashItem;
 
         if (externalImageHash->contains(imageTag)) {
@@ -1985,7 +1985,7 @@ void Utils::Misc::transformRemotePreviewImages(QString &html, int maxImageWidth,
         QRegularExpressionMatch match = i.next();
         QString imageTag = match.captured(0);
         QString inlineImageTag;
-        int imageWidth;
+        int imageWidth = maxImageWidth;
         ExternalImageHashItem hashItem;
 
         if (externalImageHash->contains(imageTag)) {
