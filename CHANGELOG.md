@@ -1,10 +1,11 @@
 # QOwnNotes Changelog
 
 ## 24.10.0
-- [qc](https://github.com/qownnotes/qc) v0.6.0 was released
+- [qc](https://github.com/qownnotes/qc) v0.6.1 was released
   - Add support for storing commands in [Atuin](https://atuin.sh/) on execution
     when using the `--atuin` flag (for [#15](https://github.com/qownnotes/qc/issues/15))
-    - This only works for single-line commands
+  - The `--color` flag now shows the command description in a calmer green, instead of red
+    (for [#16](https://github.com/qownnotes/qc/issues/16))
   - Update dependencies
 
 ## 24.9.8
