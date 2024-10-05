@@ -1,5 +1,7 @@
 # QOwnNotes 데모
 
+:: 팁 노트 데모 환경의 현재 상태에 따라 항상 작동하지 않을 수도 있습니다. :::
+
 다음 지침에 따라 **QOwnNotes**를 설치하지 않고도 웹 브라우저에서 사용해 볼 수 있습니다:
 
 1) [Docke로 재생](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop) 링크를 클릭합니다. 2) **로그인/시작** 버튼 (스크린샷 글머리표 **1** 참조)을 클릭하고 Docker 계정으로 로그인합니다 (아직 Docker 계정이 없는 경우 생성해야 함).

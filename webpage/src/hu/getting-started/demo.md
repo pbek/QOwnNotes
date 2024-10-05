@@ -1,5 +1,10 @@
 # QOwnNotes Demo
 
+::: tip
+Note
+This might not always work, depending on the current state of the demo environment.
+:::
+
 A következő utasításokat követve kipróbálhatja a **QOwnNotes** t webböngészőjében telepítés nélkül.
 
 1) Kattintson erre a [Play With Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop) linkre. 2) Kattintson a **Bejelentkezés / Indítás** gombra (lásd a(z) **1** képernyőképet), és jelentkezzen be a Docker-fiókjával (létre kell hoznia, ha még nincs ilyen).

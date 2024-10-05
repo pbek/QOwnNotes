@@ -1,5 +1,10 @@
 # QOwnNotes Demo
 
+::: tip
+Note
+This might not always work, depending on the current state of the demo environment.
+:::
+
 Sie können **QOwnNotes** in Ihrem Webbrowser ohne Installation testen, indem Sie die folgenden Anweisungen befolgen:
 
 1) Gehen Sie auf diesen Link [Play With Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop). 2) Klicken Sie auf die Schaltfläche **Anmelden / Starten** (siehe Screenshot **1**) und melden Sie sich mit Ihrem Docker-Konto an (Sie müssen eines erstellen, wenn Sie noch keins haben).

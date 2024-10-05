@@ -3925,10 +3925,6 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
 </translation>
 </message>
 <message>
-<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;última modificação: %2</translation>
-</message>
-<message>
 <source>&lt;br /&gt;path: %1</source>
 <translation>&lt;br /&gt;caminho: %1</translation>
 </message>
@@ -3947,6 +3943,10 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
 <message>
 <source>Light mode detected</source>
 <translation>Detetado modo claro</translation>
+</message>
+<message>
+<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
+<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -5619,6 +5619,14 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
 <message>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>Remover automaticamente os espaços finais no texto da nota</translation>
+</message>
+<message>
+<source>Notes larger than this will not be shown in the note list</source>
+<translation type="unfinished">Notes larger than this will not be shown in the note list</translation>
+</message>
+<message>
+<source>Maximum note file size:</source>
+<translation type="unfinished">Maximum note file size:</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

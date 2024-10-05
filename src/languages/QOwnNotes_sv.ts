@@ -3927,10 +3927,6 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </translation>
 </message>
 <message>
-<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
-</message>
-<message>
 <source>&lt;br /&gt;path: %1</source>
 <translation type="unfinished">&lt;br /&gt;path: %1</translation>
 </message>
@@ -3949,6 +3945,10 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 <message>
 <source>Light mode detected</source>
 <translation type="unfinished">Light mode detected</translation>
+</message>
+<message>
+<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
+<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -5624,6 +5624,14 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
 <translation>Ta automatiskt bort spårutrymmen i anteckningen</translation>
 </message>
 <message>
+<source>Notes larger than this will not be shown in the note list</source>
+<translation type="unfinished">Notes larger than this will not be shown in the note list</translation>
+</message>
+<message>
+<source>Maximum note file size:</source>
+<translation type="unfinished">Maximum note file size:</translation>
+</message>
+<message>
 <source>Search script repository for AI integration scripts</source>
 <translation type="unfinished">Search script repository for AI integration scripts</translation>
 </message>
@@ -5633,7 +5641,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
 </message>
 <message>
 <source>OpenAI API key:</source>
-<translation type="unfinished">OpenAI API key:</translation>
+<translation>OpenAI API-nyckel:</translation>
 </message>
 <message>
 <source>Create Groq API key</source>
@@ -5769,7 +5777,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
 </message>
 <message>
 <source>Server URL:</source>
-<translation type="unfinished">Server URL:</translation>
+<translation>Server-URL:</translation>
 </message>
 <message>
 <source>Show QR code</source>
@@ -6985,11 +6993,11 @@ Dina anteckningar kommer att förbli intakta!</translation>
 </message>
 <message>
 <source>File size:</source>
-<translation type="unfinished">File size:</translation>
+<translation>Filstorlek:</translation>
 </message>
 <message>
 <source>File type:</source>
-<translation type="unfinished">File type:</translation>
+<translation>Filtyp:</translation>
 </message>
 <message>
 <source>File path:</source>

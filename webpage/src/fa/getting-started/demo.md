@@ -1,5 +1,10 @@
 # حالت نمایشی QOwnNotes
 
+::: tip
+Note
+This might not always work, depending on the current state of the demo environment.
+:::
+
 شما می توانید **QOwnNotes** را در مرورگر خود و بدون نیاز به نصب با دنبال کردن این دستورالعمل ها امتحان کنید:
 
 1) روی این پیوند [بازی با داکر](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop) کلیک کنید. 2) روی دکمه **ورود / شروع** کلیک کرده (گزینه نماگرفت **1**) و با حساب کاربری داکر خود وارد شوید (اگر در حال حاضر فاقد آن هستید باید یکی از آن را ایجاد کنید).

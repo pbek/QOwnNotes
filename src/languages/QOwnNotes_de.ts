@@ -3913,10 +3913,6 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <translation>Auf Registerkarte doppelklicken um Notiz anzuheften</translation>
 </message>
 <message>
-<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;zuletzt bearbeitet: %2</translation>
-</message>
-<message>
 <source>&lt;br /&gt;path: %1</source>
 <translation>&lt;br /&gt;Pfad: %1</translation>
 </message>
@@ -3935,6 +3931,10 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <source>Light mode detected</source>
 <translation>Heller Modus erkannt</translation>
+</message>
+<message>
+<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
+<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -5599,6 +5599,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>Nachfolgende Leerzeichen im Notiztext automatisch entfernen</translation>
+</message>
+<message>
+<source>Notes larger than this will not be shown in the note list</source>
+<translation>Notizen, die größer als dieser Wert sind, werden in der Notizliste nicht angezeigt</translation>
+</message>
+<message>
+<source>Maximum note file size:</source>
+<translation>Maximale Größe einer Notizdatei:</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

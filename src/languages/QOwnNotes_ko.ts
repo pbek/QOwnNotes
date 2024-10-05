@@ -3878,10 +3878,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>노트를 탭에 고정하려면 두 번 클릭</translation>
 </message>
 <message>
-<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;최종수정: %2</translation>
-</message>
-<message>
 <source>&lt;br /&gt;path: %1</source>
 <translation>&lt;br /&gt;경로: %1</translation>
 </message>
@@ -3900,6 +3896,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Light mode detected</source>
 <translation>밝은 모드가 감지됨</translation>
+</message>
+<message>
+<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;마지막 수정: %2&lt;br /&gt;파일 크기: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -5564,6 +5564,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>노트 텍스트에서 자동으로 후행 공백 제거</translation>
+</message>
+<message>
+<source>Notes larger than this will not be shown in the note list</source>
+<translation>이보다 큰 메모는 메모 목록에 표시되지 않습니다</translation>
+</message>
+<message>
+<source>Maximum note file size:</source>
+<translation>최대 노트 파일 크기:</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

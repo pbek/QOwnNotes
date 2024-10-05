@@ -1663,7 +1663,7 @@
 </message>
 <message>
 <source>Headings</source>
-<translation>Kopen</translation>
+<translation>Koppen</translation>
 </message>
 <message>
 <source>Backlinks</source>
@@ -3914,10 +3914,6 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>Dubbelklik om de notitie op het tabblad te plakken</translation>
 </message>
 <message>
-<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;laatst bewerkt: %2</translation>
-</message>
-<message>
 <source>&lt;br /&gt;path: %1</source>
 <translation>&lt;br /&gt;pad: %1</translation>
 </message>
@@ -3936,6 +3932,10 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <source>Light mode detected</source>
 <translation>Lichtmodus gedetecteerd</translation>
+</message>
+<message>
+<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;laatst gewijzigd: %2&lt;br /&gt;bestandsgrootte: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -5603,6 +5603,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>Verwijder automatisch volgspaties in de notitietekst</translation>
+</message>
+<message>
+<source>Notes larger than this will not be shown in the note list</source>
+<translation>Notities die groter zijn dan dit, worden niet weergegeven in de notitielijst</translation>
+</message>
+<message>
+<source>Maximum note file size:</source>
+<translation>Maximale bestandsgrootte van notities:</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

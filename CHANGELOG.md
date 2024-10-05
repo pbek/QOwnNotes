@@ -7,6 +7,8 @@
   - The `--color` flag now shows the command description in a calmer green, instead of red
     (for [#16](https://github.com/qownnotes/qc/issues/16))
   - Update dependencies
+- Added more Chinese Simplified, Dutch, German, Swedish, Korean translation
+  (thank you, huishengli, stephanp, rakekniven, dzenan, venusgirl)
 
 ## 24.9.8
 - You can now set the **maximum note file size** in the *Panels settings* to prevent
