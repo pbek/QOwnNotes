@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 24.10.0
+- [qc](https://github.com/qownnotes/qc) v0.6.0 was released
+  - Add support for storing commands in [Atuin](https://atuin.sh/) on execution
+    when using the `--atuin` flag (for [#15](https://github.com/qownnotes/qc/issues/15))
+    - This only works for single-line commands
+  - Update dependencies
+
 ## 24.9.8
 - You can now set the **maximum note file size** in the *Panels settings* to prevent
   the loading of very large notes (for [3118](https://github.com/pbek/QOwnNotes/issues/3118))
