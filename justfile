@@ -17,6 +17,7 @@ alias fix-linting := clang-format
 alias linter-fix := clang-format
 alias trace-process := process-trace
 alias test := src-test
+alias download-translations := translations-download
 
 # Build the translations
 [group('translations')]
