@@ -29,7 +29,7 @@ jobs:
         just-recipe: ['nix-build', 'nix-build-cmake-qt5']
     steps:
       - name: ⚙️ Install Nix
-        uses: cachix/install-nix-action@v29
+        uses: cachix/install-nix-action@v30
         with:
           nix_path: nixpkgs=channel:nixos-unstable
       - name: 🧰 Checkout code
