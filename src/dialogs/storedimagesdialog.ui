@@ -17,10 +17,10 @@
    <item row="2" column="0" colspan="2">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+      <enum>Qt::Orientation::Horizontal</enum>
      </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::Ok</set>
+      <set>QDialogButtonBox::StandardButton::Ok</set>
      </property>
     </widget>
    </item>
@@ -33,10 +33,10 @@
       </sizepolicy>
      </property>
      <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
+      <enum>QFrame::Shape::NoFrame</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <property name="leftMargin">
@@ -51,90 +51,7 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
-      <item row="2" column="0">
-       <widget class="QProgressBar" name="progressBar">
-        <property name="value">
-         <number>0</number>
-        </property>
-       </widget>
-      </item>
-      <item row="8" column="0">
-       <widget class="QPushButton" name="openFolderButton">
-        <property name="toolTip">
-         <string>Open the media folder</string>
-        </property>
-        <property name="text">
-         <string>Open &amp;folder</string>
-        </property>
-        <property name="icon">
-         <iconset theme="folder" resource="../breeze-dark-qownnotes.qrc">
-          <normaloff>:/icons/breeze-dark-qownnotes/16x16/folder.svg</normaloff>:/icons/breeze-dark-qownnotes/16x16/folder.svg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="0">
-       <widget class="QPushButton" name="openFileButton">
-        <property name="toolTip">
-         <string>Open image externally</string>
-        </property>
-        <property name="text">
-         <string>Open image</string>
-        </property>
-        <property name="icon">
-         <iconset theme="mail-attachment" resource="../breeze-qownnotes.qrc">
-          <normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QTreeWidget" name="fileTreeWidget">
-        <property name="contextMenuPolicy">
-         <enum>Qt::CustomContextMenu</enum>
-        </property>
-        <property name="editTriggers">
-         <set>QAbstractItemView::EditKeyPressed</set>
-        </property>
-        <property name="selectionMode">
-         <enum>QAbstractItemView::ExtendedSelection</enum>
-        </property>
-        <property name="rootIsDecorated">
-         <bool>false</bool>
-        </property>
-        <attribute name="headerVisible">
-         <bool>false</bool>
-        </attribute>
-        <column>
-         <property name="text">
-          <string notr="true">1</string>
-         </property>
-        </column>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QCheckBox" name="checkBox">
-        <property name="toolTip">
-         <string>Only show images that are not used in notes</string>
-        </property>
-        <property name="text">
-         <string>Only show orphaned images</string>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="0">
-       <widget class="QPushButton" name="insertButton">
-        <property name="toolTip">
-         <string>Add selected images to the current note</string>
-        </property>
-        <property name="text">
-         <string>Add to current note</string>
-        </property>
-        <property name="icon">
-         <iconset theme="list-add" resource="../breeze-qownnotes.qrc">
-          <normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0">
+      <item row="5" column="0">
        <widget class="QPushButton" name="deleteButton">
         <property name="toolTip">
          <string>Delete selected images</string>
@@ -169,7 +86,7 @@
         </property>
        </widget>
       </item>
-      <item row="9" column="0">
+      <item row="10" column="0">
        <widget class="QPushButton" name="refreshButton">
         <property name="text">
          <string>Refresh</string>
@@ -177,6 +94,99 @@
         <property name="icon">
          <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
           <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QTreeWidget" name="fileTreeWidget">
+        <property name="contextMenuPolicy">
+         <enum>Qt::ContextMenuPolicy::CustomContextMenu</enum>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::EditTrigger::EditKeyPressed</set>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
+        </property>
+        <property name="rootIsDecorated">
+         <bool>false</bool>
+        </property>
+        <attribute name="headerVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string notr="true">1</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QPushButton" name="insertButton">
+        <property name="toolTip">
+         <string>Add selected images to the current note</string>
+        </property>
+        <property name="text">
+         <string>Add to current note</string>
+        </property>
+        <property name="icon">
+         <iconset theme="list-add" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QPushButton" name="openFolderButton">
+        <property name="toolTip">
+         <string>Open the media folder</string>
+        </property>
+        <property name="text">
+         <string>Open &amp;folder</string>
+        </property>
+        <property name="icon">
+         <iconset theme="folder" resource="../breeze-dark-qownnotes.qrc">
+          <normaloff>:/icons/breeze-dark-qownnotes/16x16/folder.svg</normaloff>:/icons/breeze-dark-qownnotes/16x16/folder.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QCheckBox" name="orphanedCheckBox">
+        <property name="toolTip">
+         <string>Only show images that are not used in notes</string>
+        </property>
+        <property name="text">
+         <string>Only show orphaned images</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QPushButton" name="openFileButton">
+        <property name="toolTip">
+         <string>Open image externally</string>
+        </property>
+        <property name="text">
+         <string>Open image</string>
+        </property>
+        <property name="icon">
+         <iconset theme="mail-attachment" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QCheckBox" name="currentNoteCheckBox">
+        <property name="toolTip">
+         <string>Only show images that are used in the current note</string>
+        </property>
+        <property name="text">
+         <string>Only show from current note</string>
         </property>
        </widget>
       </item>
@@ -192,10 +202,10 @@
       </sizepolicy>
      </property>
      <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
+      <enum>QFrame::Shape::NoFrame</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
       <property name="leftMargin">
@@ -213,7 +223,7 @@
       <item row="1" column="0">
        <widget class="QFrame" name="notesFrame">
         <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
+         <enum>QFrame::Shape::NoFrame</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <property name="leftMargin">
@@ -250,7 +260,7 @@
             </size>
            </property>
            <property name="contextMenuPolicy">
-            <enum>Qt::CustomContextMenu</enum>
+            <enum>Qt::ContextMenuPolicy::CustomContextMenu</enum>
            </property>
            <property name="rootIsDecorated">
             <bool>false</bool>
@@ -287,8 +297,8 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

@@ -300,7 +300,7 @@ class Note {
     QString textToMarkdownHtml(QString str, const QString &notesPath, int maxImageWidth = 980,
                                bool forExport = false, bool base64Images = false);
 
-    QStringList getMediaFileList();
+    QStringList getMediaFileList() const;
 
     bool hasMediaFiles();
 

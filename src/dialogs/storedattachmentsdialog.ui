@@ -23,10 +23,10 @@
       </sizepolicy>
      </property>
      <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
+      <enum>QFrame::Shape::NoFrame</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
       <property name="leftMargin">
@@ -44,7 +44,7 @@
       <item row="4" column="1" colspan="2">
        <widget class="QFrame" name="notesFrame">
         <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
+         <enum>QFrame::Shape::NoFrame</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <property name="leftMargin">
@@ -75,7 +75,7 @@
             </sizepolicy>
            </property>
            <property name="contextMenuPolicy">
-            <enum>Qt::CustomContextMenu</enum>
+            <enum>Qt::ContextMenuPolicy::CustomContextMenu</enum>
            </property>
            <property name="rootIsDecorated">
             <bool>false</bool>
@@ -109,7 +109,7 @@
          <string notr="true">?</string>
         </property>
         <property name="textInteractionFlags">
-         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+         <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
         </property>
        </widget>
       </item>
@@ -119,7 +119,7 @@
          <string notr="true">?</string>
         </property>
         <property name="textInteractionFlags">
-         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+         <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
         </property>
        </widget>
       </item>
@@ -132,13 +132,13 @@
          </sizepolicy>
         </property>
         <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
+         <enum>QFrame::Shape::NoFrame</enum>
         </property>
         <property name="verticalScrollBarPolicy">
-         <enum>Qt::ScrollBarAlwaysOff</enum>
+         <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
         </property>
         <property name="horizontalScrollBarPolicy">
-         <enum>Qt::ScrollBarAlwaysOff</enum>
+         <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
         </property>
         <property name="widgetResizable">
          <bool>true</bool>
@@ -148,8 +148,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>471</width>
-           <height>22</height>
+           <width>394</width>
+           <height>26</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout">
@@ -157,7 +157,7 @@
            <number>0</number>
           </property>
           <property name="sizeConstraint">
-           <enum>QLayout::SetNoConstraint</enum>
+           <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
           </property>
           <property name="leftMargin">
            <number>0</number>
@@ -180,7 +180,7 @@
              <bool>true</bool>
             </property>
             <property name="textInteractionFlags">
-             <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+             <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
             </property>
            </widget>
           </item>
@@ -211,7 +211,7 @@
       <item row="3" column="1" colspan="2">
        <spacer name="verticalSpacer">
         <property name="orientation">
-         <enum>Qt::Vertical</enum>
+         <enum>Qt::Orientation::Vertical</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
@@ -227,10 +227,10 @@
    <item row="1" column="0" colspan="2">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+      <enum>Qt::Orientation::Horizontal</enum>
      </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::Ok</set>
+      <set>QDialogButtonBox::StandardButton::Ok</set>
      </property>
     </widget>
    </item>
@@ -243,10 +243,10 @@
       </sizepolicy>
      </property>
      <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
+      <enum>QFrame::Shape::NoFrame</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <property name="leftMargin">
@@ -261,40 +261,6 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
-      <item row="2" column="0">
-       <widget class="QTreeWidget" name="fileTreeWidget">
-        <property name="contextMenuPolicy">
-         <enum>Qt::CustomContextMenu</enum>
-        </property>
-        <property name="editTriggers">
-         <set>QAbstractItemView::EditKeyPressed</set>
-        </property>
-        <property name="selectionMode">
-         <enum>QAbstractItemView::ExtendedSelection</enum>
-        </property>
-        <property name="rootIsDecorated">
-         <bool>false</bool>
-        </property>
-        <attribute name="headerVisible">
-         <bool>false</bool>
-        </attribute>
-        <column>
-         <property name="text">
-          <string notr="true">1</string>
-         </property>
-        </column>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QFrame" name="frame_2">
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-       </widget>
-      </item>
       <item row="1" column="0">
        <widget class="LineEdit" name="searchLineEdit">
         <property name="styleSheet">
@@ -316,24 +282,7 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="0">
-       <widget class="QCheckBox" name="checkBox">
-        <property name="toolTip">
-         <string>Only show attachments that are not used in notes</string>
-        </property>
-        <property name="text">
-         <string>Only show orphaned attachments</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QProgressBar" name="progressBar">
-        <property name="value">
-         <number>0</number>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="0">
+      <item row="7" column="0">
        <widget class="QPushButton" name="insertButton">
         <property name="toolTip">
          <string>Add selected attachments to the current note</string>
@@ -347,18 +296,14 @@
         </property>
        </widget>
       </item>
-      <item row="7" column="0">
-       <widget class="QPushButton" name="openFileButton">
-        <property name="text">
-         <string>Open &amp;attachment</string>
-        </property>
-        <property name="icon">
-         <iconset theme="mail-attachment" resource="../breeze-qownnotes.qrc">
-          <normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</iconset>
+      <item row="3" column="0">
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>0</number>
         </property>
        </widget>
       </item>
-      <item row="8" column="0">
+      <item row="9" column="0">
        <widget class="QPushButton" name="openFolderButton">
         <property name="toolTip">
          <string>Open the attachments folder</string>
@@ -372,7 +317,18 @@
         </property>
        </widget>
       </item>
-      <item row="5" column="0">
+      <item row="10" column="0">
+       <widget class="QPushButton" name="refreshButton">
+        <property name="text">
+         <string>Refresh</string>
+        </property>
+        <property name="icon">
+         <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
        <widget class="QPushButton" name="deleteButton">
         <property name="toolTip">
          <string>Delete selected attachments</string>
@@ -386,14 +342,68 @@
         </property>
        </widget>
       </item>
-      <item row="9" column="0">
-       <widget class="QPushButton" name="refreshButton">
+      <item row="8" column="0">
+       <widget class="QPushButton" name="openFileButton">
         <property name="text">
-         <string>Refresh</string>
+         <string>Open &amp;attachment</string>
         </property>
         <property name="icon">
-         <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
-          <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+         <iconset theme="mail-attachment" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QFrame" name="frame_2">
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QCheckBox" name="orphanedCheckBox">
+        <property name="toolTip">
+         <string>Only show attachments that are not used in notes</string>
+        </property>
+        <property name="text">
+         <string>Only show orphaned attachments</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QTreeWidget" name="fileTreeWidget">
+        <property name="contextMenuPolicy">
+         <enum>Qt::ContextMenuPolicy::CustomContextMenu</enum>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::EditTrigger::EditKeyPressed</set>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
+        </property>
+        <property name="rootIsDecorated">
+         <bool>false</bool>
+        </property>
+        <attribute name="headerVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string notr="true">1</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QCheckBox" name="currentNoteCheckBox">
+        <property name="toolTip">
+         <string>Only show attachments that are used in the current note</string>
+        </property>
+        <property name="text">
+         <string>Only show from current note</string>
         </property>
        </widget>
       </item>
@@ -410,8 +420,8 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

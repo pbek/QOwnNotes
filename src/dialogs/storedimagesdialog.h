@@ -26,8 +26,6 @@ class StoredImagesDialog : public MasterDialog {
 
     void on_insertButton_clicked();
 
-    void on_checkBox_toggled(bool checked);
-
     void on_searchLineEdit_textChanged(const QString &arg1);
 
     void on_fileTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
@@ -46,9 +44,14 @@ class StoredImagesDialog : public MasterDialog {
 
     void on_openFolderButton_clicked();
 
+    void on_orphanedCheckBox_toggled(bool checked);
+
+    void on_currentNoteCheckBox_toggled(bool checked);
+
    private:
     Ui::StoredImagesDialog *ui;
     bool _orphanedImagesOnly = false;
+    bool _currentNoteOnly = false;
     QHash<QString, QVector<Note>> _fileNoteList;
 
     static QString getFilePath(QTreeWidgetItem *item);

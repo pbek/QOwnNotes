@@ -39,11 +39,26 @@ void StoredImagesDialog::refreshMediaFiles() {
         return;
     }
 
-    QStringList mediaFiles =
-        mediaDir.entryList(QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
-    mediaFiles.removeDuplicates();
+    QStringList mediaFiles;
+    QVector<Note> noteList;
 
-    QVector<Note> noteList = Note::fetchAll();
+    if (_currentNoteOnly) {
+        MainWindow *mainWindow = MainWindow::instance();
+        if (mainWindow == nullptr) {
+            return;
+        }
+
+        const auto note = mainWindow->getCurrentNote();
+        if (note.isFetched()) {
+            mediaFiles = note.getMediaFileList();
+            noteList = { note };
+        }
+    } else {
+        mediaFiles = mediaDir.entryList(QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
+        noteList = Note::fetchAll();
+    }
+
+    mediaFiles.removeDuplicates();
     int noteListCount = noteList.count();
     _fileNoteList.clear();
 
@@ -249,11 +264,6 @@ void StoredImagesDialog::on_insertButton_clicked() {
         textEdit->insertPlainText(imageLink);
     }
 
-    refreshMediaFiles();
-}
-
-void StoredImagesDialog::on_checkBox_toggled(bool checked) {
-    _orphanedImagesOnly = checked;
     refreshMediaFiles();
 }
 
@@ -486,4 +496,28 @@ void StoredImagesDialog::on_openFolderButton_clicked() {
 
     QString filePath = getFilePath(item);
     Utils::Misc::openFolderSelect(filePath);
+}
+
+void StoredImagesDialog::on_orphanedCheckBox_toggled(bool checked)
+{
+    if (checked) {
+        const QSignalBlocker blocker(ui->fileTreeWidget);
+        Q_UNUSED(blocker)
+        ui->currentNoteCheckBox->setChecked(false);
+    }
+
+    _orphanedImagesOnly = checked;
+    refreshMediaFiles();
+}
+
+void StoredImagesDialog::on_currentNoteCheckBox_toggled(bool checked)
+{
+    if (checked) {
+        const QSignalBlocker blocker(ui->fileTreeWidget);
+        Q_UNUSED(blocker)
+        ui->orphanedCheckBox->setChecked(false);
+    }
+
+    _currentNoteOnly = checked;
+    refreshMediaFiles();
 }

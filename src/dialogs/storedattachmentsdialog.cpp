@@ -42,11 +42,26 @@ void StoredAttachmentsDialog::refreshAttachmentFiles() {
         return;
     }
 
-    QStringList attachmentFiles =
-        attachmentsDir.entryList(QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
-    attachmentFiles.removeDuplicates();
+    QStringList attachmentFiles;
+    QVector<Note> noteList;
 
-    QVector<Note> noteList = Note::fetchAll();
+    if (_currentNoteOnly) {
+        MainWindow *mainWindow = MainWindow::instance();
+        if (mainWindow == nullptr) {
+            return;
+        }
+
+        const auto note = mainWindow->getCurrentNote();
+        if (note.isFetched()) {
+            attachmentFiles = note.getAttachmentsFileList();
+            noteList = { note };
+        }
+    } else {
+        attachmentFiles = attachmentsDir.entryList(QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
+        noteList = Note::fetchAll();
+    }
+
+    attachmentFiles.removeDuplicates();
     int noteListCount = noteList.count();
     _fileNoteList.clear();
 
@@ -374,11 +389,6 @@ void StoredAttachmentsDialog::on_noteTreeWidget_itemDoubleClicked(QTreeWidgetIte
     openCurrentNote();
 }
 
-void StoredAttachmentsDialog::on_checkBox_toggled(bool checked) {
-    _orphanedAttachmentsOnly = checked;
-    refreshAttachmentFiles();
-}
-
 void StoredAttachmentsDialog::on_refreshButton_clicked() { refreshAttachmentFiles(); }
 
 void StoredAttachmentsDialog::on_fileTreeWidget_itemChanged(QTreeWidgetItem *item, int column) {
@@ -489,4 +499,28 @@ void StoredAttachmentsDialog::on_noteTreeWidget_customContextMenuRequested(const
     if (selectedItem == openAction) {
         openCurrentNote();
     }
+}
+
+void StoredAttachmentsDialog::on_orphanedCheckBox_toggled(bool checked)
+{
+    if (checked) {
+        const QSignalBlocker blocker(ui->fileTreeWidget);
+        Q_UNUSED(blocker)
+        ui->currentNoteCheckBox->setChecked(false);
+    }
+
+    _orphanedAttachmentsOnly = checked;
+    refreshAttachmentFiles();
+}
+
+void StoredAttachmentsDialog::on_currentNoteCheckBox_toggled(bool checked)
+{
+    if (checked) {
+        const QSignalBlocker blocker(ui->fileTreeWidget);
+        Q_UNUSED(blocker)
+        ui->orphanedCheckBox->setChecked(false);
+    }
+
+    _currentNoteOnly = checked;
+    refreshAttachmentFiles();
 }

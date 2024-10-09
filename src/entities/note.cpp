@@ -466,7 +466,7 @@ bool Note::moveToPath(const QString &destinationPath, const QString &noteFolderP
  * note
  * @return
  */
-QStringList Note::getMediaFileList() {
+QStringList Note::getMediaFileList() const {
     QStringList fileList;
 
     // match image links like ![media-qV920](file://media/608766373.gif)

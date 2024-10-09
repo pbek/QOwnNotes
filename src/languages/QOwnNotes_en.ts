@@ -5015,13 +5015,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="439"/>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="363"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="449"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="373"/>
         <source>File name changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="440"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="450"/>
         <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -5029,7 +5029,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="364"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="374"/>
         <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8697,12 +8697,12 @@ Your notes will stay intact!</source>
 <context>
     <name>StoredAttachmentsDialog</name>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="378"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="334"/>
         <source>Delete selected attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="381"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="337"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8717,47 +8717,57 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="312"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="278"/>
         <source>Find attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="369"/>
         <source>Only show attachments that are not used in notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="372"/>
         <source>Only show orphaned attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="403"/>
+        <source>Only show attachments that are used in the current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="406"/>
+        <source>Only show from current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="288"/>
         <source>Add selected attachments to the current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="342"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="291"/>
         <source>Add to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="353"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="348"/>
         <source>Open &amp;attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="364"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="309"/>
         <source>Open the attachments folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="367"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="312"/>
         <source>Open &amp;folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="392"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="323"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8777,22 +8787,22 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="87"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="102"/>
         <source>Last modified at %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="159"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="174"/>
         <source>Path: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="198"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="213"/>
         <source>Delete selected files</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="199"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="214"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8800,57 +8810,57 @@ Your notes will stay intact!</source>
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="301"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="316"/>
         <source>&amp;Open attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="302"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="317"/>
         <source>&amp;Rename attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="303"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="318"/>
         <source>&amp;Delete attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="304"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="319"/>
         <source>&amp;Add attachments to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="398"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="408"/>
         <source>File doesn&apos;t exist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="399"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="409"/>
         <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="422"/>
         <source>File exists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="423"/>
         <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="423"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="433"/>
         <source>File renaming failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="424"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="434"/>
         <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="480"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="490"/>
         <source>&amp;Open note</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8863,87 +8873,97 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="165"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="82"/>
         <source>Find image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="126"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="127"/>
         <source>Add selected images to the current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="64"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="141"/>
         <source>Open the media folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="67"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="144"/>
         <source>Open &amp;folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="78"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="165"/>
         <source>Open image externally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="81"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="168"/>
         <source>Open image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="129"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="130"/>
         <source>Add to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="140"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="57"/>
         <source>Delete selected images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="143"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="60"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="175"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="92"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="234"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="186"/>
+        <source>Only show images that are used in the current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="189"/>
+        <source>Only show from current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="244"/>
         <source>Used in notes:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="116"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="155"/>
         <source>Only show images that are not used in notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="119"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="158"/>
         <source>Only show orphaned images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="83"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="98"/>
         <source>Last modified at %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="147"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="162"/>
         <source>Path: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="186"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="201"/>
         <source>Delete selected files</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="187"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="202"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8951,57 +8971,57 @@ Your notes will stay intact!</source>
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="323"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="333"/>
         <source>File doesn&apos;t exist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="324"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="334"/>
         <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="346"/>
         <source>File exists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="337"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="347"/>
         <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="347"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="357"/>
         <source>File renaming failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="358"/>
         <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="420"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="430"/>
         <source>&amp;Open image externally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="421"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="431"/>
         <source>&amp;Rename image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="422"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="432"/>
         <source>&amp;Delete images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="423"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="433"/>
         <source>&amp;Add images to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="455"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="465"/>
         <source>&amp;Open note</source>
         <translation type="unfinished"></translation>
     </message>

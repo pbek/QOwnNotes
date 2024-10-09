@@ -37,8 +37,6 @@ class StoredAttachmentsDialog : public MasterDialog {
 
     void on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
 
-    void on_checkBox_toggled(bool checked);
-
     void on_refreshButton_clicked();
 
     void on_fileTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
@@ -47,9 +45,14 @@ class StoredAttachmentsDialog : public MasterDialog {
 
     void on_noteTreeWidget_customContextMenuRequested(const QPoint &pos);
 
+    void on_orphanedCheckBox_toggled(bool checked);
+
+    void on_currentNoteCheckBox_toggled(bool checked);
+
    private:
     Ui::StoredAttachmentsDialog *ui;
     bool _orphanedAttachmentsOnly = false;
+    bool _currentNoteOnly = false;
     QHash<QString, QVector<Note>> _fileNoteList;
 
     static QString getFilePath(QTreeWidgetItem *item);
