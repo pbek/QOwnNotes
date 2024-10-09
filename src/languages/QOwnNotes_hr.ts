@@ -6990,6 +6990,14 @@ Vaše bilješke će ostati netaknute!</translation>
 <translation>Prikaži samo samostalne privitke</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation type="unfinished">Only show attachments that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation>Dodaj odabrane privitke u trenutačnu bilješku</translation>
 </message>
@@ -7135,6 +7143,14 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <source>Refresh</source>
 <translation>Aktualiziraj</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation type="unfinished">Only show images that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
 </message>
 <message>
 <source>Used in notes:</source>

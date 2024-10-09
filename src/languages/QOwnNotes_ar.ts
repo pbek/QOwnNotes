@@ -7146,6 +7146,14 @@ Your notes will stay intact!</source>
 <translation>إظهار المرفقات اليتيمة فقط</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation type="unfinished">Only show attachments that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation>أضف المرفقات المحددة إلى الملاحظة الحالية</translation>
 </message>
@@ -7294,6 +7302,14 @@ Your notes will stay intact!</source>
 <message>
 <source>Refresh</source>
 <translation>إنعاش</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation type="unfinished">Only show images that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
 </message>
 <message>
 <source>Used in notes:</source>

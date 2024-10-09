@@ -6940,6 +6940,14 @@ Le proprie note non verranno modificate!</translation>
 <translation>Mostra solo allegati orfani</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation type="unfinished">Only show attachments that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation>Aggiungi allegati selezionati alla nota corrente</translation>
 </message>
@@ -7084,6 +7092,14 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <source>Refresh</source>
 <translation>Aggiorna</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation type="unfinished">Only show images that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
 </message>
 <message>
 <source>Used in notes:</source>

@@ -2,11 +2,11 @@
 
 Las diversas formas de involucrarse con QOwnNotes
 
-- Destaca [QOwnNotes en** GitHub**](https://github.com/pbek/QOwnNotes)
-- Únase al [grupo **QOwnNotes Telegram**](https://t.me/QOwnNotes)
-- Join the [**QOwnNotes Matrix** room](https://matrix.to/#/#qownnotes:matrix.org)
-- Únase al [**#qownnotes IRC **canal](https://web.libera.chat/#qownnotes) en Libera.Chat
-- Únase a la [**cuadrícula de qownnotes** sala](https://gitter.im/qownnotes/qownnotes)
+- Destaque [QOwnNotes en** GitHub**](https://github.com/pbek/QOwnNotes)
+- Únase al [grupo de **Telegram QOwnNotes**](https://t.me/QOwnNotes)
+- Únase a la [sala de **Matrix de QOwnNotes**](https://matrix.to/#/#qownnotes:matrix.org)
+- Únase al [canal **#qownnotes IRC **](https://web.libera.chat/#qownnotes) en Libera.Chat
+- Únase a la [sala de**Gitter qownnotes**](https://gitter.im/qownnotes/qownnotes)
 - Me gusta [QOwnNotes en **Facebook**](https://www.facebook.com/QOwnNotes/)
 - Siga [QOwnNotes en **Twitter**](https://twitter.com/QOwnNotes)
 - Suscríbase al [QOwnNotes **Blog RSS Feed**](https://feeds.feedburner.com/QOwnNotesBlog)

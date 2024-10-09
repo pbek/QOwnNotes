@@ -6948,6 +6948,14 @@ Je notities zullen intact blijven!</translation>
 <translation>Toon alleen verweesde bijlagen</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation>Alleen bijlagen weergeven die in de huidige notitie worden gebruikt</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation>Alleen weergeven van de huidige notitie</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation>Voeg geselecteerde bijlagen toe aan de huidige notitie</translation>
 </message>
@@ -7092,6 +7100,14 @@ Je notities zullen intact blijven!</translation>
 <message>
 <source>Refresh</source>
 <translation>Vernieuwen</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation>Alleen afbeeldingen weergeven die in de huidige notitie worden gebruikt</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation>Alleen weergeven van de huidige notitie</translation>
 </message>
 <message>
 <source>Used in notes:</source>

@@ -6958,6 +6958,14 @@ Dine noter forbliver intakte!</translation>
 <translation>Vis kun forældreløse vedhæftede filer</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation type="unfinished">Only show attachments that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation>Tilføj valgte vedhæftede filer til den aktuelle note</translation>
 </message>
@@ -7102,6 +7110,14 @@ Dine noter forbliver intakte!</translation>
 <message>
 <source>Refresh</source>
 <translation>Opdater</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation type="unfinished">Only show images that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
 </message>
 <message>
 <source>Used in notes:</source>

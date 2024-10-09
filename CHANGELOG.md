@@ -3,6 +3,8 @@
 ## 24.10.1
 - In the *Stored image files* and the *Stored attachments* dialogs it's now possible
   to only show files of the current note (for [2354](https://github.com/pbek/QOwnNotes/issues/2354))
+- Added more Dutch, Korean, German, Spanish, French translation (thank you,
+  stephanp, venusgirl, rakekniven, alejandromoc, jd-develop)
 
 ## 24.10.0
 - [qc](https://github.com/qownnotes/qc) v0.6.1 was released

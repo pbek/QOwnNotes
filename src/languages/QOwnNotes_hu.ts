@@ -6941,6 +6941,14 @@ A jegyzetek érintetlenül maradnak!</translation>
 <translation>Csak árva mellékleteket mutasson</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation type="unfinished">Only show attachments that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation>A kiválasztott mellékletek hozzáadása az aktuális jegyzethez</translation>
 </message>
@@ -7085,6 +7093,14 @@ A jegyzetek érintetlenül maradnak!</translation>
 <message>
 <source>Refresh</source>
 <translation>Frissítés</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation type="unfinished">Only show images that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
 </message>
 <message>
 <source>Used in notes:</source>

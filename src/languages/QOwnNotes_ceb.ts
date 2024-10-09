@@ -6962,6 +6962,14 @@ Ang imong mga nota magpabilin nga wala'y labot!</translation>
 <translation type="unfinished">Only show orphaned attachments</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation type="unfinished">Only show attachments that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation type="unfinished">Add selected attachments to the current note</translation>
 </message>
@@ -7106,6 +7114,14 @@ Ang imong mga nota magpabilin nga wala'y labot!</translation>
 <message>
 <source>Refresh</source>
 <translation type="unfinished">Refresh</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation type="unfinished">Only show images that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
 </message>
 <message>
 <source>Used in notes:</source>

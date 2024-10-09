@@ -6967,6 +6967,14 @@ Suas Notas estarão intactas!</translation>
 <translation>Mostrar apenas os anexos órfãos</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation type="unfinished">Only show attachments that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation>Adicionar os anexos selecionados na nota atual</translation>
 </message>
@@ -7111,6 +7119,14 @@ Suas Notas estarão intactas!</translation>
 <message>
 <source>Refresh</source>
 <translation>Atualizar</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation type="unfinished">Only show images that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
 </message>
 <message>
 <source>Used in notes:</source>

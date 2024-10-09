@@ -6939,6 +6939,14 @@ Your notes will stay intact!</source>
 <translation>Nur verwaiste Dateianhänge anzeigen</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation>Nur Anhänge anzeigen, die in der aktuellen Notiz verwendet werden</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation>Nur von der aktuellen Notiz anzeigen</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation>Ausgewählte Anhänge zur aktuellen Notiz hinzufügen</translation>
 </message>
@@ -7083,6 +7091,14 @@ Your notes will stay intact!</source>
 <message>
 <source>Refresh</source>
 <translation>Aktualisierung</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation>Nur Bilder anzeigen, die in der aktuellen Notiz verwendet werden</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation>Nur von der aktuellen Notiz anzeigen</translation>
 </message>
 <message>
 <source>Used in notes:</source>

@@ -7042,6 +7042,14 @@ Vaše poznámky zůstanou neporušené!</translation>
 <translation>Zobrazit pouze osiřelé přílohy</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation type="unfinished">Only show attachments that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation>Přidat označené přílohy ke stávající poznámce</translation>
 </message>
@@ -7188,6 +7196,14 @@ Vaše poznámky zůstanou neporušené!</translation>
 <message>
 <source>Refresh</source>
 <translation>Znovu načíst</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation type="unfinished">Only show images that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
 </message>
 <message>
 <source>Used in notes:</source>

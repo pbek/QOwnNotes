@@ -1,12 +1,13 @@
 # Instalación
 
-Vous pouvez installer **QOwnNotes** sur de nombreux systèmes d'exploitation ou [le créer vous-même](building.md).
+Usted puede instalar **QOwnNotes** en varios sistemas operativos o [construirlo por su cuenta](building.md).
 
-If not stated otherwise you can run QOwnNotes afterward by executing `QOwnNotes`.
+Si no se ha indicado lo contrario, tras ello puede ejecutar QOwnNotes por medio de `QOwnNotes`.
 
-Si vous rencontrez des problèmes avec les packages ou les référentiels, veuillez les signaler sur la page [Problèmes de QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
+Si encuentra problemas con los paquetes o repositorios, por favor repórtelos a la [página de problemas de QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
 
-::: Astuce Info
-Jetez un œil dans le menu pour toutes les différentes façons d'installer QOwnNotes
+::: tip
+Información
+Eche un vistazo en el menú para todas las formas diferentes de instalar QOwnNotes
 :::
 

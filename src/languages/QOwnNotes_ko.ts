@@ -6906,6 +6906,14 @@ Your notes will stay intact!</source>
 <translation>고립된 첨부 파일만 표시</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation>현재 노트에 사용되는 첨부 파일만 표시</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation>현재 노트에서만 표시</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation>현재 노트에 선택한 첨부 파일 추가</translation>
 </message>
@@ -7049,6 +7057,14 @@ Your notes will stay intact!</source>
 <message>
 <source>Refresh</source>
 <translation>새로 고침</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation>현재 노트에 사용되는 이미지만 표시</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation>현재 노트에서만 표시</translation>
 </message>
 <message>
 <source>Used in notes:</source>

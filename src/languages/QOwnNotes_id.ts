@@ -6930,6 +6930,14 @@ Catatan Anda akan tetap utuh!</translation>
 <translation>Hanya tampilkan lampiran yang tidak digunakan</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation type="unfinished">Only show attachments that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation>Tambahkan lampiran yang dipilih ke catatan saat ini</translation>
 </message>
@@ -7073,6 +7081,14 @@ Catatan Anda akan tetap utuh!</translation>
 <message>
 <source>Refresh</source>
 <translation>Segarkan</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation type="unfinished">Only show images that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
 </message>
 <message>
 <source>Used in notes:</source>

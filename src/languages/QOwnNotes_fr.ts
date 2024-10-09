@@ -85,7 +85,7 @@
 <name>BacklinkWidget</name>
 <message>
 <source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
-<translation type="unfinished">Open note and find &lt;code&gt;%1&lt;/code&gt;</translation>
+<translation>Ouvrir la note et rechercher &lt;code&gt;%1&lt;/code&gt;</translation>
 </message>
 </context>
 <context>
@@ -3933,7 +3933,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;modifié pour la dernière fois : %2&lt;br /&gt;taille du fichier : %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -5603,11 +5603,11 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
-<translation type="unfinished">Notes larger than this will not be shown in the note list</translation>
+<translation>Les notes plus grandes ne seront pas affichées dans la liste de notes</translation>
 </message>
 <message>
 <source>Maximum note file size:</source>
-<translation type="unfinished">Maximum note file size:</translation>
+<translation>Taille maximum de fichier de note :</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
@@ -6942,6 +6942,14 @@ Vos notes resteront intactes!</translation>
 <translation>Afficher uniquement les pièces jointes orphelines</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation type="unfinished">Only show attachments that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation>Ajouter les pièces jointes sélectionnées à la note actuelle</translation>
 </message>
@@ -7086,6 +7094,14 @@ Vos notes resteront intactes!</translation>
 <message>
 <source>Refresh</source>
 <translation>Rafraîchir</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation type="unfinished">Only show images that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
 </message>
 <message>
 <source>Used in notes:</source>
@@ -7846,9 +7862,9 @@ Cela ne peut être annuler !</translation>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
+<translation>
+<numerusform>Signet modifié dans %n note</numerusform>
+<numerusform>Signet modifié dans %n notes</numerusform>
 </translation>
 </message>
 <message>

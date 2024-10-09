@@ -6965,6 +6965,14 @@ Your notes will stay intact!</source>
 <translation>Εμφάνιση μόνο ορφανών συνημμένων</translation>
 </message>
 <message>
+<source>Only show attachments that are used in the current note</source>
+<translation type="unfinished">Only show attachments that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
+</message>
+<message>
 <source>Add selected attachments to the current note</source>
 <translation>Προσθήκη επιλεγμένων συνημμένων στην τρέχουσα σημείωση</translation>
 </message>
@@ -7109,6 +7117,14 @@ Your notes will stay intact!</source>
 <message>
 <source>Refresh</source>
 <translation>Ανανέωση</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation type="unfinished">Only show images that are used in the current note</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
 </message>
 <message>
 <source>Used in notes:</source>
