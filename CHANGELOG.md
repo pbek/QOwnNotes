@@ -2,7 +2,7 @@
 
 ## 24.10.1
 - In the *Stored image files* and the *Stored attachments* dialogs it's now possible
-  to only show files of the current note (for [2354](https://github.com/pbek/QOwnNotes/issues/2354))
+  to only show files of the current note (for [#2354](https://github.com/pbek/QOwnNotes/issues/2354))
 - Added more Dutch, Korean, German, Spanish, French translation (thank you,
   stephanp, venusgirl, rakekniven, alejandromoc, jd-develop)
 
@@ -18,10 +18,10 @@
 
 ## 24.9.8
 - You can now set the **maximum note file size** in the *Panels settings* to prevent
-  the loading of very large notes (for [3118](https://github.com/pbek/QOwnNotes/issues/3118))
+  the loading of very large notes (for [#3118](https://github.com/pbek/QOwnNotes/issues/3118))
   - Default is 1 MB, files larger than that will not show up in the note list
 - The file size will now be shown in the note list tooltip
-  (for [3120](https://github.com/pbek/QOwnNotes/issues/3120))
+  (for [#3120](https://github.com/pbek/QOwnNotes/issues/3120))
 
 ## 24.9.7
 - Reading from **settings** will now be **cached in memory** to possibly speed up the application,
