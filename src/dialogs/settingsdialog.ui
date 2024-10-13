@@ -5401,13 +5401,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
                 <string>Markdown highlighting</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_35">
-                <item row="1" column="1">
-                 <widget class="QCheckBox" name="fullyHighlightedBlockquotesCheckBox">
-                  <property name="text">
-                   <string>Fully highlight blockquotes</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="0" column="1" colspan="2">
                  <widget class="QCheckBox" name="markdownHighlightingCheckBox">
                   <property name="toolTip">
@@ -5415,6 +5408,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   </property>
                   <property name="text">
                    <string>Enable markdown highlighting</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1" colspan="2">
+                 <widget class="QCheckBox" name="fullyHighlightedBlockquotesCheckBox">
+                  <property name="text">
+                   <string>Fully highlight blockquotes</string>
                   </property>
                  </widget>
                 </item>
