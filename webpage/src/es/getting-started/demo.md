@@ -1,17 +1,17 @@
 # QOwnNotes Demo
 
 ::: tip
-Note
-This might not always work, depending on the current state of the demo environment.
+Nota
+Es posible que esto no siempre funcione, dependiendo del estado actual del entorno de la demostración.
 :::
 
 Puede probar **QOwnNotes** en su navegador web sin instalarlo siguiendo estas instrucciones:
 
-1) Haga clic en este enlace [Jugar con Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop). 2) Haga clic en el botón **Iniciar sesión / Iniciar** (consulte la viñeta de captura de pantalla **1**) e inicie sesión con su cuenta de Docker (debe crear una si aún no tiene una).
+1) Haga clic en este enlace [Reproducir con Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop). 2) Haga clic en el botón **Iniciar sesión / Iniciar** (consulte la viñeta de captura de pantalla **1**) e inicie sesión con su cuenta de Docker (debe crear una si aún no tiene una).
 
 ![screenshot01](/img/demo/playwithdocker01.png)
 
-3) Espere hasta que se cree el recipiente y se haga girar. Entonces debería poder hacer clic en **6080** en la parte superior (vea la viñeta de captura de pantalla **2**). Si recibe un error, espere un poco más e intente hacer clic en *6080* nuevamente, el entorno de escritorio demora un poco en cargarse.
+3) Espere hasta que el contenedor sea creado e iniciado. Entonces debería poder hacer clic en **6080** en la parte superior (vea la viñeta de captura de pantalla **2**). Si recibe un error, espere un poco más e intente hacer clic en *6080* nuevamente, el entorno de escritorio demora un poco en cargarse.
 
 ![screenshot02](/img/demo/playwithdocker02.png)
 

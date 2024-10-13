@@ -36,7 +36,7 @@ Por defecto, QOwnNotes crea el **nombre de archivo de una nota** desde el **enca
 ## Énfasis
 
 ```markdown
-Énfasis, también conocido como cursiva, con *asteriscos*.
+Enfatice, también conocido como cursiva, con *asteriscos*.
 
 Fuerte énfasis, también conocido como negrita, con **asteriscos**.
 ```
@@ -67,7 +67,7 @@ Puede utilizar el [atajo](./shortcuts.md) <kbd>Ctrl + U</kbd> para subrayar un t
 Puedes usar el [atajo](./shortcuts.md) <kbd>Alt + Shift + S</kbd> para tachar un texto.
 :::
 
-## Liza
+## Listas
 
 Hay muchas formas de crear listas.
 
@@ -88,11 +88,11 @@ Hay muchas formas de crear listas.
 Si presiona <kbd>Ingrese</kbd> al final de una lista, se creará un nuevo elemento de lista.
 :::
 
-## Enlace
+## Enlaces
 
 Two of the simpler uses for links are pointing to webpages or other notes. There are multiple ways each of these links can look.
 
-### External links
+### Enlaces externos
 
 ```markdown
 [I'm an inline-style link](https://www.google.com)
@@ -107,7 +107,7 @@ http://www.example.com or <http://www.example.com>
 [1]: https://www.qownnotes.org
 ```
 
-### Internal links
+### Enlaces internos
 
 ```markdown
 [I link to the Journal.md note](Journal.md)
@@ -123,7 +123,7 @@ Usando <kbd>Ctrl + Shift + X</kbd> aparecerá un diálogo que le ayudará a **in
 Puede presionar <kbd>Ctrl + Espacio</kbd> mientras el cursor está en un enlace en la edición de notas para seguir el enlace.
 :::
 
-### Bookmarks
+### Marcadores
 
 Los marcadores utilizados por la extensión de navegador [QOwnNotes Web Companion](./browser-extension.md) utilizan enlaces en listas.
 
@@ -131,7 +131,7 @@ Los marcadores utilizados por la extensión de navegador [QOwnNotes Web Companio
 - [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 ```
 
-## Imagenes
+## Imágenes
 
 Las imágenes se pueden incrustar en QOwnNotes. Ellas se mostrarán en la vista previa.
 

@@ -6,12 +6,12 @@
 
 - <kbd>Ctrl</kbd> + <kbd>N</kbd> crea una nueva nota con la fecha y hora actuales en el nombre
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> crea una nueva nota en una nueva pestaña
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> te permite buscar notas (en el nombre de la nota y su contenido)
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> le permite buscar notas (en el nombre de la nota y su contenido)
 - <kbd>Alt</kbd> + <kbd>F</kbd> le permite buscar notas en todas las etiquetas / subcarpetas
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> cambia al espacio de trabajo anterior
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> edita una nota cifrada
 - <kbd>Alt</kbd> + <kbd>R</kbd> elimina la nota actual
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> checks for updates
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> busca actualizaciones
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> abre la lista de tareas
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> abre la nota actual en un editor externo
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> abre la nota actual en una vista
@@ -32,10 +32,10 @@
 - <kbd>Ctrl</kbd> + <kbd>,</kbd> abre la configuración
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> agrega una nueva etiqueta a una nota
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> recarga la carpeta de notas actual
-- <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> te permite seleccionar una carpeta de notas diferente
+- <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> le permite seleccionar una carpeta de notas diferente
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> recarga el motor de secuencias de comandos
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> oculta o muestra la barra de menú principal
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> te permite buscar acciones
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> le permite buscar acciones
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> guarda manualmente las notas modificadas
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> abre el cuadro de diálogo del repositorio de scripts
 - <kbd>F4</kbd> salta al panel de edición de notas
@@ -61,7 +61,7 @@
 ### En el panel de edición de texto de la nota
 
 - <kbd>Ctrl</kbd> + <kbd>Click</kbd> en un enlace para abrirlo
-- <kbd>Ctrl</kbd> + <kbd>F</kbd> te permite buscar en la nota actual
+- <kbd>Ctrl</kbd> + <kbd>F</kbd> le permite buscar en la nota actual
     - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o <kbd>F3</kbd> y Teclas <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
     - <kbd>Esc</kbd> cierra la barra de búsqueda
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> te permite buscar y reemplazar en la nota actual
@@ -223,7 +223,7 @@
 
 ### En el panel de vista previa de notas
 
-- <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> te permite buscar en la nota actual
+- <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> le permite buscar en la nota actual
     - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o <kbd>F3</kbd> y Teclas <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
     - <kbd>Esc</kbd> cierra la barra de búsqueda
 

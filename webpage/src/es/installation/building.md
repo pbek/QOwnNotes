@@ -4,7 +4,7 @@
 
 También puede crear QOwnNotes usted mismo a partir del código fuente.
 
-Descarga el código directamente desde el repositorio git:
+Obtenga el código directamente desde el repositorio de git:
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b release
@@ -16,25 +16,25 @@ For debugging, it's easiest to use QtCreator. When downloading [Qt Creator](http
 
 Afterward open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
 
-If you know what you are doing, you can also build QOwnNotes directly in your terminal:
+Si sabe lo que está haciendo, también puede construir QOwnNotes directamente desde su terminal:
 
 ```bash
 cd src
 
-# build binary translation files if you want another language than English
+# construir los archivos binarios de traducción si desea algún idioma distinto al inglés
 lrelease QOwnNotes.pro
 
-# prepare build process and build the application
+# preparar el proceso de construcción y construir la aplicación
 qmake
 make
 ```
 
-Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
+No dude en contribuir con el código fuente a este proyecto, realizar sugerencias o informar problemas en la [página de problemas de QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
 
-Visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
+Visitar [QOwnNotes en GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-If you want to contribute source code to the project please make your pull requests to the  `main` branch.
+Si desea contribuir código fuente al proyecto, por favor haga sus pull requests en la rama `main`.
 :::
 
 ## Archivo fuente

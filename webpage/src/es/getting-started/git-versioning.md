@@ -1,4 +1,4 @@
-# Git versioning
+# Control de versiones con Git
 
 You can set up QOwnNotes to automatically commit changes in your note folder locally
 to a git repository in your note folder.
@@ -18,8 +18,8 @@ You also need to turn on git support for each note folder you want to use git ve
 Don't forget to set your git username and email address in the terminal:
 
 ```bash
-git config --global user.email "your-email@domain.com"
-git config --global user.name "Your name"
+git config --global user.email "tu-email@dominio.com"
+git config --global user.name "Tu nombre"
 ```
 
 :::

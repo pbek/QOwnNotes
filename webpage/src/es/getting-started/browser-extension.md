@@ -9,20 +9,20 @@ Permite recortar desde una página del navegador y administrar los marcadores de
 ::: tip
 Información
 - QOwnNotes debe estar ejecutándose para que funcione la extensión del navegador Web Companion.
-- No se necesita conexión a Internet. Las extensiones del navegador funcionan **sin conexión**.
+- No se necesita una conexión a Internet. Las extensiones del navegador funcionan **sin conexión**.
 :::
 
 ## Instalación
 
-1. Obtén la extensión
+1. Obtenga la extensión
     - [Tienda virtual de Chrome](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
     - [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
     - También puede encontrar la extensión en [GitHub](https://github.com/qownnotes/web-companion/).
 2. Agregue el token de seguridad para configurar la extensión.
-    - La primera vez que haga clic en el ícono de la extensión del navegador QOwnNotes, recibirá un cuadro de diálogo con un token de seguridad. Copie la ficha.
+    - La primera vez que haga clic en el ícono de la extensión del navegador QOwnNotes, recibirá un cuadro de diálogo con un token de seguridad. Copie el token.
     - Vaya a la ubicación de administración de extensiones de su navegador. Haga clic en los detalles de la extensión QOwnNotes.
     - Pegue el token en el campo Token de seguridad.
-3. To use the private mode, you need to allow the extension to run in private windows in the extension settings.
+3. Para usar el modo privado, deberá permitir que la extensión se ejecute en ventanas privadas en los ajustes de la extensión.
 
 ## Cortadora web
 

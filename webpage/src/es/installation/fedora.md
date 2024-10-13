@@ -1,6 +1,6 @@
 # Instalar en Fedora Linux
 
-Hay repositorios QOwnNotes para **Fedora 28 y superior**.
+Hay repositorios de QOwnNotes para **Fedora 28 y superior**.
 
 ::: tip
 QOwnNotes is provided in the [Fedora repositories](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/). That version is generally one or two patch versions behind the master repository available through the instructions below.
@@ -58,7 +58,7 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (this example link is for Fedora 40)
+[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (este enlace de ejemplo es para Fedora 40)
 
 ## QOwnNotes version-updating notes for Fedora
 

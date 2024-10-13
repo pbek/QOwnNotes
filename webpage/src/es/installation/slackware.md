@@ -13,7 +13,7 @@ slackpkg update
 slackpkg install libproxy js185-1.0.0-x86_64-1
 ```
 
-Luego, puede consultar el repositorio de slackbuilds de QOwnNotes y crear la aplicación.
+Luego, puede consultar el repositorio de slackbuilds de QOwnNotes y construir la aplicación.
 
 ```bash
 cd /tmp
@@ -26,14 +26,14 @@ Después de eso, puede instalar el paquete generado con `installpkg`.
 
 ## Slackware 14.1
 
-Primero necesitas instalar Qt 5.
+Primero necesita instalar Qt 5.
 
 ```bash
 cd /tmp wget "http://bear.alienbase.nl/mirrors/people/alien/sbrepos/14.1/x86_64/qt5/qt5-5.5.1-x86_64-4alien.txz"
 sudo installpkg qt5-5.5.1-x86_64-4alien.txz
 ```
 
-Luego, puede consultar el repositorio de slackbuilds de QOwnNotes y crear la aplicación.
+Luego, puede consultar el repositorio de slackbuilds de QOwnNotes y construir la aplicación.
 
 ```bash
 cd /tmp
@@ -44,4 +44,4 @@ cd qownnotes-slackbuilds/14.1/qownnotes
 
 Después de eso, puede instalar el paquete generado con `installpkg`.
 
-[QOwnNotes Slackbuild on GitHub](https://github.com/pbek/qownnotes-slackbuilds/)
+[Slackbuild de QOwnNotes en GitHub](https://github.com/pbek/qownnotes-slackbuilds/)

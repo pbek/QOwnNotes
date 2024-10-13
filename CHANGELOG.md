@@ -3,6 +3,7 @@
 ## 24.10.2
 - A small graphical glitch on macOS in the *Markdown highlighting settings* was fixed
   (for [#3130](https://github.com/pbek/QOwnNotes/issues/3130))
+- Added more Spanish translation (thank you, alejandromoc)
 
 ## 24.10.1
 - In the *Stored image files* and the *Stored attachments* dialogs it's now possible

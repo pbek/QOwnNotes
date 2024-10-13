@@ -1,4 +1,4 @@
-# Install on Gentoo Linux
+# Instalar en Gentoo Linux
 
 Agregue el repositorio QOwnNotes con el siguiente comando (consulte [eselect-repository](https://wiki.gentoo.org/wiki/Eselect/Repository)).
 
@@ -12,4 +12,4 @@ Luego puede instalar QOwnNotes de la forma habitual.
 sudo emerge --sync qownnotes-overlay && sudo emerge -av qownnotes
 ```
 
-[Superposición de QOwnNotes en GitHub](https://github.com/qownnotes/gentoo-overlay/)
+[Repositorio (overlay) de QOwnNotes en GitHub](https://github.com/qownnotes/gentoo-overlay/)

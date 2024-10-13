@@ -629,11 +629,11 @@
 </message>
 <message>
 <source>Invalid XML!</source>
-<translation>El XML no es válido.</translation>
+<translation>¡XML no válido!</translation>
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation>Se encontró XML no válido en la nota &lt;b&gt;%1&lt;/b&gt;. La importación podría detenerse a este punto.</translation>
+<translation>Se encontró un XML no válido en la nota &lt;b&gt;%1&lt;/b&gt;. La importación puede detenerse en este punto.</translation>
 </message>
 <message>
 <source>Basic attributes</source>
@@ -7843,16 +7843,16 @@ This cannot be undone!</source>
 </message>
 <message numerus="yes">
 <source>Bookmark deleted from %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<translation>
+<numerusform>Marcador eliminado de %n nota</numerusform>
+<numerusform>Marcador eliminado de %n notas</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
+<translation>
+<numerusform>Marcador editado en %n nota</numerusform>
+<numerusform>Marcador editado en %n notas</numerusform>
 </translation>
 </message>
 <message>

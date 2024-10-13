@@ -1,4 +1,4 @@
-# Installa come AppImage
+# Instalar como AppImage
 
 Puede descargar la última AppImage de la [página de versiones de QOwnNotes](https://github.com/pbek/QOwnNotes/releases). Debe llamarse como `QOwnNotes-x86_64.AppImage` en esa página.
 
@@ -17,7 +17,7 @@ Luego puede cambiar los permisos de ejecución en el archivo:
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Tras hacer esto, debería ser capaz de ejecutar el AppImage ejecutar QOwnNotes.
+Tras hacer esto, debería ser capaz de ejecutar la AppImage para ejecutar QOwnNotes.
 
 ::: warning
 Si desea utilizar el **actualizador automático**, asegúrese de colocar su AppImage en un lugar donde su cuenta de usuario tenga acceso de escritura, como en algún lugar de su directorio de inicio.

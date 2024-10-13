@@ -20,4 +20,4 @@ brew install qownnotes
 
 ## Nix
 
-You can also install QOwnNotes with the [Nix package manager](https://wiki.nixos.org/wiki/Nix_package_manager) under macOS, see [Install via Nix](./nix.md).
+También puede instalar QOwnNotes con el [administrador de paquetes de Nix](https://wiki.nixos.org/wiki/Nix_package_manager) en macOS. Véase [Instalar por medio de Nix](./nix.md).

@@ -14,9 +14,9 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Descarga Directa](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
+[Descarga directa](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
 
-## Disponibilidad preliminar de QOwnNotes Qt6
+## Vista previa de QOwnNotes con Qt6
 
 Si quiere poner a prueba los paquetes Qt6 desde ahora y utiliza Ubuntu 22.04 o más reciente, utilice este repositorio:
 
@@ -40,7 +40,7 @@ Si encuentra cualquier problema, ¡por favor repórtelos en los [problemas de QO
 
 Lo mejor es usar el AppImage de los [lanzamientos de QOwnNotes en GitHub](https://github.com/pbek/QOwnNotes/releases).
 
-Luego puede cambiar los permisos de ejecución en el archivo:
+Tras hacer esto, puede cambiar los permisos de ejecución en el archivo:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
@@ -50,17 +50,17 @@ Tras hacer esto, debería ser capaz de ejecutar el AppImage para ejecutar QOwnNo
 
 ## Repositorio de OBS
 
-You may also be able to use the QOwnNotes on Ubuntu versions that aren't anymore updated on Ubuntu Launchpad then you can use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
+También puede usar QOwnNotes en versiones de Ubuntu que ya no se actualizan más en Ubuntu Launchpad. Luego puede usar los repositorios de [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 
 A continuación se muestran ejemplos de llamadas para el repositorio de xUbuntu 20.04.
 
-Run the following shell command to trust the repository.
+Ejecute la orden de consola siguiente para marcar el repositorio como de fiar.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_20.04/Release.key -O - | sudo apt-key add -
 ```
 
-Run the following shell commands to add the repository and install QOwnNotes from there.
+Ejecute las órdenes de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
 
 ```bash
 sudo su -

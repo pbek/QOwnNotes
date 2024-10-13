@@ -18,11 +18,11 @@ Simplemente [envíe un mensaje al propietario del proyecto en Crowdin](https://c
 
 Si desea agregar nuevas traducciones a **idiomas existentes**, puede hacerlo de inmediato.
 
-## Corrección de pruebas
+## Proofreading
 
 Si es un hablante excelente o incluso nativo de un idioma ya traducido que aún no ha sido corregido, le agradecemos que ayude a que la experiencia de QOwnNotes sea más confiable y conveniente verificando y, si es necesario, corrigiendo las traducciones no aprobadas. Debe pedirle permiso al propietario para ser un corrector de pruebas para su idioma.
 
-Haga clic aquí para ver si su idioma está entre los traducidos.
+¡Haga clic aquí para ver si su idioma está entre los traducidos!
 
 [QOwnNotes en Crowdin](https://translate.qownnotes.org/)
 
@@ -30,11 +30,11 @@ Una vez que [se haya puesto en contacto con el propietario del proyecto en Crowd
 
 ## Consejos generales
 
-Tenga en cuenta algunas cosas mientras trabaja en el proyecto.
+Por favor tenga en cuenta algunas cosas mientras trabaja en el proyecto.
 
 ### Exactitud
 
-Localice con la máxima precisión posible mientras cuida la fluidez en su idioma de destino.
+Por favor localice con la máxima exactitud posible mientras cuida la fluidez en su idioma de destino.
 
 ### Precisión
 
@@ -46,7 +46,7 @@ Si necesita más contexto, o ayuda con una determinada cadena, y sabe otro idiom
 
 ### Términos clave de uso frecuente
 
-Es necesario comprobar y utilizar las mismas traducciones para los términos clave de uso frecuente, por ejemplo, "nota" debe traducirse siempre de la misma manera.
+Es necesario comprobar y utilizar las mismas traducciones para los términos clave de uso frecuente. Por ejemplo, "nota" debe traducirse siempre de la misma manera.
 
 Si `notas en la papelera` es `gelöschte Dateien` en alemán, siempre lo traducirías usando esta expresión. La excepción sería cuando gramaticalmente esté obligado a usar una alternativa, pero manténgalo simple.
 
@@ -60,7 +60,7 @@ Localice todas las ocurrencias de la forma más idéntica posible.
 
 ### Formas plurales
 
-Para el plural, agregue la traducción apropiada cada uno en el bloque correspondiente.
+Para el plural, por favor agregue la traducción apropiada, cada una en el bloque correspondiente.
 
 ![captura de pantalla](/img/crowdin/screenshot-4.png)
 
@@ -89,7 +89,7 @@ Strings wie `::: tip`, `::: warning` und `::: info` in der Dokumentation sind Ma
 Algunos segmentos que no traducimos en la Documentación:
 
 - Nunca traduzca códigos o enlaces, las etiquetas deben dejarse como están (y sin espacios añadidos, ya que algunas traducciones automáticas hacen eso, deben eliminarse)
-- Nosotras no traducimos fecha y hora (dejar en blanco)
+- De nuestra parte no traducimos fecha y hora (dejar en blanco)
 - Y tampoco traducimos las referencias (que QOwnNotes obtuvo en numerosos idiomas de traducción), por lo que simplemente puede omitirlas.
 
 ## ¡Traducir y corregir puede ser emocionante!
@@ -98,4 +98,4 @@ Tratará con el lenguaje de este software, aprenderá nuevos términos y recibir
 
 Si está listo para ayudar a corregir la traducción de su idioma, comuníquese con [Patrizio](https://crowdin.com/profile/pbek) y pregunte si tiene alguna pregunta y/u obtenga los derechos para la revisión en su idioma nativo.
 
-¡Muchas gracias por tu ayuda! 🙂
+¡Muchísimas gracias por su ayuda! 🙂

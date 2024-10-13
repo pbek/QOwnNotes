@@ -1,4 +1,4 @@
-# Instalar en el sistema operativo Raspberry Pi
+# Instalar en Raspberry Pi OS
 
 ## Raspberry Pi OS 12
 
@@ -16,7 +16,7 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Descarga Directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_12)
+[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_12)
 
 ## Raspberry Pi OS 11
 
@@ -34,7 +34,7 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Descarga Directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_11)
+[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_11)
 
 ## Raspberry Pi OS 10
 

@@ -1,9 +1,9 @@
-# Manos
+# Hooks
 
 onNoteStored
 ------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * Esta función se llama cuando una nota se almacena en el disco
@@ -20,7 +20,7 @@ Puede que quiera echar un vistazo al ejemplo [on-note-opened.qml](https://github
 noteOpenedHook
 --------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * Esta función se llama después de que se abrió una nota
@@ -35,7 +35,7 @@ Puede que quiera echar un vistazo al ejemplo [on-note-opened.qml](https://github
 noteDoubleClickedHook
 ---------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * Esta función se llama después de hacer doble clic en una nota
@@ -54,7 +54,7 @@ Esta función se llama cuando se inserta un archivo multimedia en la nota actual
 
 Si esta función se define en varios scripts, entonces gana el primer script que devuelve una cadena no vacía.
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * @param fileName cadena la ruta del archivo de medios de origen antes de que se copiara a la carpeta de medios
@@ -73,7 +73,7 @@ Esta función se llama cuando se inserta un archivo adjunto en la nota actual.
 
 Si esta función se define en varios scripts, entonces gana el primer script que devuelve una cadena no vacía.
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * @param fileName cadena la ruta del archivo adjunto de origen antes de que se copiara a la carpeta de adjuntos
@@ -88,7 +88,7 @@ Puede que quiera echar un vistazo al ejemplo [example.qml](https://github.com/pb
 insertingFromMimeDataHook
 -------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * Esta función se llama cuando se pega html o un archivo multimedia en una nota con `Ctrl + Shift + V`
@@ -106,7 +106,7 @@ Puede que quiera echar un vistazo al ejemplo [example.qml](https://github.com/pb
 handleNoteTextFileNameHook
 --------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * Esta función se llama cuando una nota se almacena en el disco si
@@ -130,7 +130,7 @@ Puede que quiera echar un vistazo al ejemplo [example.qml](https://github.com/pb
 handleNoteNameHook
 ------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * Esta función se llama cuando se determina el nombre de la nota para una nota
@@ -152,7 +152,7 @@ Puede que no sea una buena idea usar este gancho si la configuración para usar 
 handleNewNoteHeadlineHook
 -------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
  * Esta función se llama antes de que se cree una nota.
@@ -174,7 +174,7 @@ Puede que quiera echar un vistazo al ejemplo [custom-new-note-headline.qml](http
 preNoteToMarkdownHtmlHook
 -------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * Esta función se llama antes de que se genere el html de descuento de una nota
@@ -199,7 +199,7 @@ Puede que quiera echar un vistazo al ejemplo [preview-styling.qml](https://githu
 noteToMarkdownHtmlHook
 ----------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * Esta función se llama cuando se genera el html de descuento de una nota
@@ -224,7 +224,7 @@ Consulte el [HTML compatible. Documentación del subconjunto](http://doc.qt.io/q
 encryptionHook
 --------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * Esta función se llama cuando el texto debe cifrarse o descifrarse
@@ -244,7 +244,7 @@ noteTaggingHook
 
 Puede implementar su propio mecanismo de etiquetado de notas, por ejemplo, con texto especial en su nota como `@tag1`, `@tag2`, `@tag3`.
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * Maneja el etiquetado de notas para una nota
@@ -307,7 +307,7 @@ Esto también significa que debe crear usted mismo las etiquetas faltantes para 
 function noteTaggingByObjectHook(note, action, tag, newTagName);
 ```
 
-You may want to take a look at the example [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) to implement your own tagging mechanism.
+Puede que quiera echar un vistazo al ejemplo [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) para implementar su mecanismo de etiquetado propio.
 
 autocompletionHook
 ------------------
@@ -345,7 +345,7 @@ Este enlace se llama cuando se envían datos desde la extensión del navegador Q
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
 
-Puede que quiera echar un vistazo al ejemplo [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-new-note.qml) y [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
+Puede que quiera echar un vistazo a los ejemplos [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-new-note.qml) y [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
 
 onDetachedProcessCallback
 -------------------------
@@ -388,7 +388,7 @@ workspaceSwitchedHook
 
 This hook is called when workspaces are switched.
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
  * This function is called when workspaces are switched
@@ -438,4 +438,4 @@ function openAiBackendsHook() {
 You can use [Registering script settings variables](./methods-and-objects.md#registering-script-settings-variables) to store the OpenAI backend settings in the script settings.
 :::
 
-You may want to take a look at the example [custom-openai-backends.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-openai-backends.qml).
+Puede que quiera echar un vistazo al ejemplo [custom-openai-backends.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-openai-backends.qml).

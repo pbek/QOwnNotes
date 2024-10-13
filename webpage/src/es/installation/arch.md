@@ -2,22 +2,22 @@
 
 ## Repositorio para Usuarios de Arch (AUR)
 
-Alternativamente, también hay un paquete oficial para QOwnNotes en AUR, se llama `qownnotes`.
+Alternativamente, también hay un paquete oficial para QOwnNotes en el AUR. Se llama `qownnotes`.
 
-Lo encontrarás aquí:[QOwnNotes on AUR](https://aur.archlinux.org/packages/qownnotes)
+Lo encontrará aquí: [QOwnNotes en el AUR](https://aur.archlinux.org/packages/qownnotes)
 
-Sincroniza tu base de datos de paquetes e instala el paquete con `yay`:
+Sincronice su base de datos de paquetes e instale el paquete con `yay`:
 
 ```bash
 yay -S qownnotes
 ```
 
-:: tip Si deseas acelerar el tiempo de construcción, es posible que desee leer [CCACHE y AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/).
+:: tip Si desea acelerar el tiempo de construcción, es posible que desee leer [CCACHE y AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/).
 :::
 
 ## pacman
 
-::: advertencia [OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) actualmente, parece tener problemas de compilación en Arch Linux. Mejor utilizar el AUR o la [AppImage](./appimage.md) por ahora.
+::: advertencia [OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) actualmente parece tener problemas de compilación en Arch Linux. Mejor utilizar el AUR o la [AppImage](./appimage.md) por ahora.
 :::
 
 Agregue las siguientes líneas a su `/etc/pacman.conf ` con `sudo nano /etc/pacman.conf`:

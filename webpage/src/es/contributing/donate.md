@@ -20,23 +20,23 @@ Para donativos mensuales, puede utilizar este botón (PayPal se queda una parte)
 
 ## GitHub Sponsors
 
-Puedes **patrocinar en GitHub Sponsors** en [pbek GitHub Sponsors](https://github.com/sponsors/pbek).
+Puede **patrocinar en GitHub Sponsors** en [pbek GitHub Sponsors](https://github.com/sponsors/pbek).
 
 ## Liberapay
 
-Puedes ** donar dinero a través de Liberapay** presionando este botón:
+Puede ** donar dinero a través de Liberapay** presionando este botón:
 
 <a href="https://liberapay.com/pbek/donate"><img alt="Donar mediante Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 
 ## Bitcoin
 
-Puedes **donar Bitcoin BTC** a través de esta dirección de Bitcoin BTC:
+Puede **donar Bitcoin BTC** a través de esta dirección de Bitcoin BTC:
 
 ```
 395NiU7QKpNiayWgRrUEGZDn8Z1ebMx8CH
 ```
 
-Puedes **donar Bitcoin Cash** a través de esta dirección de Bitcoin Cash:
+Puede **donar Bitcoin Cash** a través de esta dirección de Bitcoin Cash:
 
 ```
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
@@ -44,13 +44,13 @@ qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 
 ## Ethereum
 
-Puedes **donar Ethereum ETC** a través de esta dirección de Ethereum ETC:
+Puede **donar Ethereum ETC** a través de esta dirección de Ethereum ETH:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-Puedes **donar Ethereum ETC** a través de esta dirección de Ethereum ETC:
+Puede **donar Ethereum ETC** a través de esta dirección de Ethereum ETC:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

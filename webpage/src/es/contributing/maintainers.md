@@ -10,4 +10,4 @@
 
 Ver [QOwnNotes en Crowdin](https://crowdin.com/project/qownnotes/activity_stream)
 
-Si desea ayudar a traducir QOwnNotes, visite [Traducción](translation.md).
+Si desea ayudar a traducir QOwnNotes, por favor visite [Traducción](translation.md).

@@ -1,4 +1,4 @@
-# Instalar como «snap»
+# Instalar como Snap
 
 Hay un complemento `qownnotes` en la [tienda Snap](https://snapcraft.io/qownnotes).
 
