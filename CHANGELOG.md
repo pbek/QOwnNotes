@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.10.2
+- A small graphical glitch on macOS in the *Markdown highlighting settings* was fixed
+  (for [#3130](https://github.com/pbek/QOwnNotes/issues/3130))
+
 ## 24.10.1
 - In the *Stored image files* and the *Stored attachments* dialogs it's now possible
   to only show files of the current note (for [#2354](https://github.com/pbek/QOwnNotes/issues/2354))

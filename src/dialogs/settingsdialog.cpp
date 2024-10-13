@@ -3848,7 +3848,7 @@ void SettingsDialog::on_resetMessageBoxesButton_clicked() {
 }
 
 void SettingsDialog::on_markdownHighlightingCheckBox_toggled(bool checked) {
-    ui->markdownHighlightingFrame->setEnabled(checked);
+    ui->fullyHighlightedBlockquotesCheckBox->setEnabled(checked);
 }
 
 void SettingsDialog::on_localTrashEnabledCheckBox_toggled(bool checked) {
