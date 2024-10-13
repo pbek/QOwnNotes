@@ -51,7 +51,7 @@ void StoredImagesDialog::refreshMediaFiles() {
         const auto note = mainWindow->getCurrentNote();
         if (note.isFetched()) {
             mediaFiles = note.getMediaFileList();
-            noteList = { note };
+            noteList = {note};
         }
     } else {
         mediaFiles = mediaDir.entryList(QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
@@ -498,8 +498,7 @@ void StoredImagesDialog::on_openFolderButton_clicked() {
     Utils::Misc::openFolderSelect(filePath);
 }
 
-void StoredImagesDialog::on_orphanedCheckBox_toggled(bool checked)
-{
+void StoredImagesDialog::on_orphanedCheckBox_toggled(bool checked) {
     if (checked) {
         const QSignalBlocker blocker(ui->fileTreeWidget);
         Q_UNUSED(blocker)
@@ -510,8 +509,7 @@ void StoredImagesDialog::on_orphanedCheckBox_toggled(bool checked)
     refreshMediaFiles();
 }
 
-void StoredImagesDialog::on_currentNoteCheckBox_toggled(bool checked)
-{
+void StoredImagesDialog::on_currentNoteCheckBox_toggled(bool checked) {
     if (checked) {
         const QSignalBlocker blocker(ui->fileTreeWidget);
         Q_UNUSED(blocker)

@@ -54,10 +54,11 @@ void StoredAttachmentsDialog::refreshAttachmentFiles() {
         const auto note = mainWindow->getCurrentNote();
         if (note.isFetched()) {
             attachmentFiles = note.getAttachmentsFileList();
-            noteList = { note };
+            noteList = {note};
         }
     } else {
-        attachmentFiles = attachmentsDir.entryList(QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
+        attachmentFiles =
+            attachmentsDir.entryList(QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
         noteList = Note::fetchAll();
     }
 
@@ -501,8 +502,7 @@ void StoredAttachmentsDialog::on_noteTreeWidget_customContextMenuRequested(const
     }
 }
 
-void StoredAttachmentsDialog::on_orphanedCheckBox_toggled(bool checked)
-{
+void StoredAttachmentsDialog::on_orphanedCheckBox_toggled(bool checked) {
     if (checked) {
         const QSignalBlocker blocker(ui->fileTreeWidget);
         Q_UNUSED(blocker)
@@ -513,8 +513,7 @@ void StoredAttachmentsDialog::on_orphanedCheckBox_toggled(bool checked)
     refreshAttachmentFiles();
 }
 
-void StoredAttachmentsDialog::on_currentNoteCheckBox_toggled(bool checked)
-{
+void StoredAttachmentsDialog::on_currentNoteCheckBox_toggled(bool checked) {
     if (checked) {
         const QSignalBlocker blocker(ui->fileTreeWidget);
         Q_UNUSED(blocker)
