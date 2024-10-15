@@ -58,3 +58,5 @@ scoop bucket add extras
 scoop update
 scoop install qownnotes
 ```
+
+so thats how you install QOwnNotes on windows
