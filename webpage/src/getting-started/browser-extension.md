@@ -72,3 +72,4 @@ You can also import your browser bookmarks into QOwnNotes with the web companion
 ```
 
 You are able to search for name, url tags or description in the browser extension.
+In the current note all other links inside of text are parsed, but without tags or description.
