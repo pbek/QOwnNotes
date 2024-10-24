@@ -136,6 +136,8 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
          text.contains(QLatin1String("QXcbConnection: XCB error:")) ||
          text.contains(QLatin1String("failed to create compose table")) ||
          text.contains(QLatin1String("OpenType support missing for")) ||
+         text.contains(QLatin1String("Could not find accessible on path:")) ||
+         text.contains(QLatin1String("Accessible invalid: QAccessibleInterface")) ||
          text.contains(QLatin1String("Using QCharRef with an index pointing outside")) ||
          text.contains(QLatin1String("load glyph failed err=")) ||
          text.contains(QLatin1String("[Botan Error]  Invalid CBC padding")) ||

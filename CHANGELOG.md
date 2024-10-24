@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 24.10.3
+- More warnings are now ignored in log dialog for Qt 6.8.0 (for [#3134](https://github.com/pbek/QOwnNotes/issues/3134))
+
 ## 24.10.2
 - A small graphical glitch on macOS in the *Markdown highlighting settings* was fixed
   (for [#3130](https://github.com/pbek/QOwnNotes/issues/3130))
