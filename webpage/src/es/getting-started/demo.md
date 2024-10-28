@@ -1,4 +1,4 @@
-# QOwnNotes Demo
+# Demo de QOwnNotes
 
 ::: tip
 Nota
@@ -19,6 +19,6 @@ Puede probar **QOwnNotes** en su navegador web sin instalarlo siguiendo estas in
 
 ![screenshot03](/img/demo/playwithdocker03.png)
 
-5) Se debe abrir el diálogo de instalación de **QOwnNotes**, haga clic en él y presione *Finalizar* para ver la ventana principal de QOwnNotes.
+5) El diálogo de instalación de **QOwnNotes** debería abrirse. Haga clic en él y presione *Finalizar* para ver la ventana principal de QOwnNotes.
 
 ![screenshot04](/img/demo/playwithdocker04.png)

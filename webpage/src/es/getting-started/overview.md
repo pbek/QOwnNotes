@@ -1,4 +1,4 @@
-# Visión de conjunto
+# Descripción general
 
 <template>
 <v-carousel cycle show-arrows-on-hover>
@@ -113,7 +113,7 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-todo.png" alt="screenshot-todo" />
     <div class="sheet">
-      Administre sus listas de Todo a través de CalDAV
+      Administre sus listas de tareas pendientes a través de CalDAV
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -133,29 +133,29 @@
 
 <v-divider />
 
-**Q** para el [marco Qt](https://www.qt.io/) que se utiliza  
-**Posee** porque eres dueño de tus propias notas  
-**Notas** para las notas que toma
+**Q** es por el [framework Qt](https://www.qt.io/) que se utiliza  
+**Own** es debido a que es dueño de sus propias notas  
+**Notes** es por las notas que redacta
 
 <v-divider />
 
 [QOwnNotes](https://www.qownnotes.org/) es el archivo de texto sin formato de **código abierto** (GPL) **aplicación de toma de notas de rebajas** para **GNU / Linux**, **macOS** y **Windows**, que (opcionalmente) funciona junto con la [**aplicación de notas**](https://github.com/nextcloud/notes) de [Nextcloud](https://nextcloud.com/) y [ownCloud](https://owncloud.org/).
 
 ::: tip
-Únase a nuestro [Telegram Group](https://t.me/QOwnNotes) para discutir, aprender y conectarse con la comunidad QOwnNotes.
+Únase a nuestro [Telegram Group](https://t.me/QOwnNotes) para discutir, aprender y conectarse con la comunidad de QOwnNotes.
 :::
 
 [Comprender el concepto de QOwnNotes](concept.md)
 
 ## Características
-- You can use your **existing text or markdown files**, no need for an import
+- Puede usar sus **archivos de texto o markdown existentes**, sin necesidad de importarlos
 - QOwnNotes está escrito en C ++ y optimizado para **bajo consumo de recursos** (sin CPU y aplicación de Electron que consume mucha memoria)
 - **Importación de Evernote y Joplin**
 - **Compatible** with the [Notes](https://apps.nextcloud.com/apps/notes) application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
 - Create **[Nextcloud Deck](https://apps.nextcloud.com/apps/deck) cards** and link to them in your notes
 - Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
 - Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
-- Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
+- Las versiones **antiguas** de sus notas pueden ser **restauradas** desde su servidor **Nextcloud / ownCloud**
 - **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
 - **External changes** of note files are **watched** (notes or note list are reloaded)
 - Support for **hierarchical note tagging** and **note subfolders**
@@ -181,7 +181,7 @@
 - **Números de línea**
 - **Las diferencias** entre la nota actual y la nota modificada externamente se **se muestran** en un diálogo
 
-## Lenguajes
+## Idioma
 - **Disponible en más de 60 idiomas diferentes** como inglés, alemán, francés, polaco, chino, japonés, ruso, portugués, húngaro, holandés y español
   - [Su ayuda](../contributing/translation.md) es muy apreciada para mejorar estas traducciones o para traducir QOwnNotes en más idiomas.
 

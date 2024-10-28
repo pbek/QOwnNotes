@@ -2,7 +2,7 @@
 
 ## Slackware 14.2
 
-Primero debe instalar Qt 5, libxkbcommon, libproxy y js185.
+Primero necesita instalar Qt 5, libxkbcommon, libproxy y js185.
 
 ```bash
 cd /tmp

@@ -4,7 +4,7 @@
 
 QOwnNotes (como en la propia aplicación) es **desarrollado por una y a veces dos personas en su tiempo libre**.
 
-Se crean versiones para muchas plataformas y distribuciones (a menudo versiones muy antiguas). Mantenerlas es mucho trabajo.
+Los lanzamientos se crean para muchas plataformas y distribuciones (a menudo, versiones muy antiguas de las mismas). Mantenerlas es mucho trabajo.
 
 Las métricas son la única fuente confiable de información en qué versiones de plataformas y distribuciones QOwnNotes funciona. También muestran qué funciones son las más populares, de modo que se pueden tomar decisiones sobre qué versiones retirar, qué funciones necesitan más trabajo y cuáles apenas se usan.
 

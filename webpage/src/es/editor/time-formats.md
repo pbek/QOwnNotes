@@ -21,21 +21,21 @@ Puede utilizar esta página para crear un formato de hora predeterminado persona
 
 ## Expresiones por tiempo
 
-| Expresión  | Salida                                                                |
-| ---------- | --------------------------------------------------------------------- |
-| `h`        | la hora sin cero al principio (0 a 23 o 1 a 12 si se muestra AM/PM)   |
-| `hh`       | la hora con cero al principio (00 a 23 o 01 a 12 si se muestra AM/PM) |
-| `H`        | la hora sin cero al principio (0 a 23, incluso si se muestra AM/PM)   |
-| `HH`       | la hora in cero al principio (00 a 23, incluso si se muestra AM/PM)   |
-| `m`        | el minuto sin cero al principio (0 a 59)                              |
-| `mm`       | el minuto con cero al principio (00 a 59)                             |
-| `s`        | el segundo sin cero al principio (0 a 59)                             |
-| `ss`       | el segundo con cero al principio (00 a 59)                            |
-| `z`        | los milisegundos sin ceros al principio (0 a 999)                     |
-| `zzz`      | los milisegundos con ceros al principio (000 a 999)                   |
-| `AP` o `A` | use AM/PM display. A/AP será reemplazado ya sea por `AM` o `PM`.      |
-| `ap` o `a` | mostrar am/pm. a/ap será reemplazado por `am` o `pm`.                 |
-| `t`        | la zona horaria (por ejemplo `CEST`)                                  |
+| Expresión  | Salida                                                                        |
+| ---------- | ----------------------------------------------------------------------------- |
+| `h`        | la hora sin un cero al principio (0 a 23 o 1 a 12 si se muestra como AM/PM)   |
+| `hh`       | la hora con un cero al principio (00 a 23 o 01 a 12 si se muestra como AM/PM) |
+| `H`        | la hora sin un cero al principio (0 a 23, incluso si se muestra como AM/PM)   |
+| `HH`       | la hora sin un cero al principio (00 a 23, incluso si se muestra como AM/PM)  |
+| `m`        | el minuto sin un cero al principio (0 a 59)                                   |
+| `mm`       | el minuto con un cero al principio (00 a 59)                                  |
+| `s`        | el segundo sin un cero al principio (0 a 59)                                  |
+| `ss`       | el segundo con un cero al principio (00 a 59)                                 |
+| `z`        | los milisegundos sin ceros al principio (0 a 999)                             |
+| `zzz`      | los milisegundos con ceros al principio (000 a 999)                           |
+| `AP` o `A` | mostrar AM/PM. A/AP será reemplazado ya sea por `AM` o `PM`.                  |
+| `ap` o `a` | mostrar am/pm. a/ap será reemplazado por `am` o `pm`.                         |
+| `t`        | la zona horaria (por ejemplo `CEST`)                                          |
 
 ## Ejemplo de formato strings
 

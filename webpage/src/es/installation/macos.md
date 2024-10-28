@@ -1,6 +1,6 @@
 # Instalar en macOS ™
 
-Descargue la última **imagen de disco de macOS** de [QOwnNotes Releases en GitHub](https://github.com/pbek/QOwnNotes/releases), ábrala y arrastre la aplicación **QOwnNotes** a su **carpeta de aplicaciones**.
+Descargue la última **imagen de disco de macOS** desde los[lanzamientos de QOwnNotes en GitHub](https://github.com/pbek/QOwnNotes/releases). Ábrala y arrastre la aplicación **QOwnNotes** a su **carpeta de aplicaciones**.
 
 La primera vez, debe hacer clic derecho en la aplicación y hacer clic en **Abrir** para abrir QOwnNotes.
 

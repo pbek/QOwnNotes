@@ -732,7 +732,7 @@
 </message>
 <message>
 <source>Pass control keys</source>
-<translation>Pasar llaves de control</translation>
+<translation>Pasar claves de control</translation>
 </message>
 <message>
 <source>Pass keys in insert mode</source>
@@ -740,11 +740,11 @@
 </message>
 <message>
 <source>Start of line</source>
-<translation>Inicio de línea</translation>
+<translation>Inicio de la línea</translation>
 </message>
 <message>
 <source>Tabulator size:</source>
-<translation>Tamaño tabulador:</translation>
+<translation>Tamaño del tabulador:</translation>
 </message>
 <message>
 <source>Smart tabulators</source>
@@ -756,7 +756,7 @@
 </message>
 <message>
 <source>Shift width:</source>
-<translation>Cambiar ancho:</translation>
+<translation>Desplazar ancho:</translation>
 </message>
 <message>
 <source>Expand tabulators</source>
@@ -764,7 +764,7 @@
 </message>
 <message>
 <source>Automatic indentation</source>
-<translation>Sangría automática</translation>
+<translation>Identación automática</translation>
 </message>
 <message>
 <source>Incremental search</source>
@@ -804,7 +804,7 @@
 </message>
 <message>
 <source>Scroll offset:</source>
-<translation>Desplazamiento de desplazamiento:</translation>
+<translation>Cantidad de desplazamiento:</translation>
 </message>
 <message>
 <source>Backspace:</source>
@@ -1077,7 +1077,7 @@
 </message>
 <message>
 <source>Italic</source>
-<translation>Oblicua</translation>
+<translation>Cursiva</translation>
 </message>
 <message>
 <source>Adapt font size:</source>
@@ -1269,7 +1269,7 @@
 </message>
 <message>
 <source>Image filename or URL</source>
-<translation>Nombre de la imagen o su URL</translation>
+<translation>Nombre de archivo o URL de la imagen</translation>
 </message>
 <message>
 <source>Path to file or URL</source>
@@ -1473,15 +1473,15 @@
 <name>LinkDialog</name>
 <message>
 <source>Link an url or note</source>
-<translation>Enlazar un LRU o nota</translation>
+<translation>Enlazar una URL o nota</translation>
 </message>
 <message>
 <source>Enter URL</source>
-<translation>Introducir LRU</translation>
+<translation>Introducir URL</translation>
 </message>
 <message>
 <source>Enter an URL to link to</source>
-<translation>Introducir un LRU al que enlazar</translation>
+<translation>Introducir un URL al que enlazar</translation>
 </message>
 <message>
 <source>Select local file or directory to link to</source>
@@ -1666,7 +1666,7 @@
 </message>
 <message>
 <source>Headings</source>
-<translation>Títulos</translation>
+<translation>Encabezados</translation>
 </message>
 <message>
 <source>Backlinks</source>
@@ -1690,11 +1690,11 @@
 </message>
 <message>
 <source>&amp;Help</source>
-<translation>&amp;Ayuda</translation>
+<translation>Ayuda</translation>
 </message>
 <message>
 <source>Editor width in distraction free mode</source>
-<translation>Editar sin distracciones</translation>
+<translation>Ancho del editor en modo sin distracciones</translation>
 </message>
 <message>
 <source>Editor width</source>
@@ -1714,11 +1714,11 @@
 </message>
 <message>
 <source>&amp;Find note</source>
-<translation>&amp;Encontrar nota</translation>
+<translation>Encontrar nota</translation>
 </message>
 <message>
 <source>&amp;Remove current note</source>
-<translation>&amp;Eliminar nota actual</translation>
+<translation>Eliminar nota actual</translation>
 </message>
 <message>
 <source>&amp;New note</source>
@@ -1726,7 +1726,7 @@
 </message>
 <message>
 <source>Check for &amp;updates</source>
-<translation>Comprobar &amp;actualizaciones</translation>
+<translation>Comprobar actualizaciones</translation>
 </message>
 <message>
 <source>Post questions, feature requests or issues</source>
@@ -1766,15 +1766,15 @@
 </message>
 <message>
 <source>&amp;Find in current note</source>
-<translation>Encontrar en esta nota</translation>
+<translation>Encontrar en nota actual</translation>
 </message>
 <message>
 <source>Find text in current note</source>
-<translation>Encontrar texto en esta nota</translation>
+<translation>Encontrar texto en nota actual</translation>
 </message>
 <message>
 <source>&amp;Duplicate text</source>
-<translation>Duplicar texto</translation>
+<translation>&amp;Duplicar texto</translation>
 </message>
 <message>
 <source>&amp;Back in note history</source>
@@ -1782,7 +1782,7 @@
 </message>
 <message>
 <source>&amp;Settings</source>
-<translation>&amp;Ajustes</translation>
+<translation>Configuración</translation>
 </message>
 <message>
 <source>Find or create note sub folder</source>
@@ -1858,7 +1858,7 @@
 </message>
 <message>
 <source>Languages</source>
-<translation>Lenguajes</translation>
+<translation>Idiomas</translation>
 </message>
 <message>
 <source>Spelling backend</source>
@@ -1866,7 +1866,7 @@
 </message>
 <message>
 <source>AI model</source>
-<translation>Modelo IA</translation>
+<translation>Modelo de IA</translation>
 </message>
 <message>
 <source>To&amp;do</source>
@@ -1931,7 +1931,7 @@
 </message>
 <message>
 <source>Ctrl+L</source>
-<translation>Ctrl + L</translation>
+<translation>Ctrl+L</translation>
 </message>
 <message>
 <source>Auto format table</source>
@@ -1951,11 +1951,11 @@
 </message>
 <message>
 <source>Insert current &amp;time</source>
-<translation>Insertar &amp;hora actual</translation>
+<translation>Insertar hora actual</translation>
 </message>
 <message>
 <source>Show &amp;Todo List</source>
-<translation>Mostrar lista de tareas</translation>
+<translation>Mostrar lista de &amp;tareas pendientes</translation>
 </message>
 <message>
 <source>&amp;Export note as PDF (preview)</source>
@@ -1967,7 +1967,7 @@
 </message>
 <message>
 <source>&amp;Export note as PDF (text)</source>
-<translation>Exportar nota como PDF (texto)</translation>
+<translation>&amp;Exportar nota como PDF (texto)</translation>
 </message>
 <message>
 <source>&amp;Print note (text)</source>
@@ -1975,7 +1975,7 @@
 </message>
 <message>
 <source>Insert &amp;image</source>
-<translation>Insertar imagen</translation>
+<translation>Insertar &amp;imagen</translation>
 </message>
 <message>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
@@ -1983,11 +1983,11 @@
 </message>
 <message>
 <source>Show &amp;changelog</source>
-<translation>Mostrar &amp;registro de cambios</translation>
+<translation>Mostrar registro de &amp;cambios</translation>
 </message>
 <message>
 <source>&amp;Encrypt note</source>
-<translation>Cifrar Nota</translation>
+<translation>&amp;Encriptar nota</translation>
 </message>
 <message>
 <source>Edit encrypted note</source>
@@ -2007,7 +2007,7 @@
 </message>
 <message>
 <source>Insert &amp;code block</source>
-<translation>Insertar bloque de código</translation>
+<translation>Insertar bloque de &amp;código</translation>
 </message>
 <message>
 <source>&amp;Distraction free mode</source>
@@ -2168,7 +2168,7 @@
 </message>
 <message>
 <source>Copy note headline</source>
-<translation>Copiar el encabezado de la nota</translation>
+<translation>Copiar el título de la nota</translation>
 </message>
 <message>
 <source>Open note in different window</source>
@@ -2212,7 +2212,7 @@
 </message>
 <message>
 <source>Jump to note edit panel</source>
-<translation>Saltar al panel de edición de notas</translation>
+<translation>Ir al panel de edición de notas</translation>
 </message>
 <message>
 <source>Manage stored attachments</source>
@@ -2296,15 +2296,15 @@
 </message>
 <message>
 <source>Jump to navigation panel</source>
-<translation>Saltar al panel de navegación</translation>
+<translation>Ir al panel de navegación</translation>
 </message>
 <message>
 <source>Insert &amp;note link</source>
-<translation>Insertar y anotar enlace</translation>
+<translation>Insertar enlace a una &amp;nota</translation>
 </message>
 <message>
 <source>Ctrl+Shift+L</source>
-<translation>Ctrl + Mayús + L</translation>
+<translation>Ctrl+Shift+L</translation>
 </message>
 <message>
 <source>Import notes from Joplin</source>
@@ -2316,7 +2316,7 @@
 </message>
 <message>
 <source>&amp;Load Todo List items</source>
-<translation>&amp;Cargar elementos de lista de pendientes</translation>
+<translation>Cargar elementos de la lista de tareas pendientes</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
@@ -2372,7 +2372,7 @@
 </message>
 <message>
 <source>Reload scripting engine</source>
-<translation>Recargar motor de scripting</translation>
+<translation>Recargar motor de secuencia de órdenes</translation>
 </message>
 <message>
 <source>Manage stored image files</source>
@@ -2465,13 +2465,13 @@ Restore current note?</source>
 </message>
 <message>
 <source>&amp;Cancel</source>
-<translation>Cancelar</translation>
+<translation>&amp;Cancelar</translation>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
 <translation>
-<numerusform>nota(s) %n almacenada en disco</numerusform>
-<numerusform>nota(s) %n almacenadas en disco</numerusform>
+<numerusform>%n nota almacenada en el disco</numerusform>
+<numerusform>%n notas almacenadas en el disco</numerusform>
 </translation>
 </message>
 <message>
@@ -2527,7 +2527,7 @@ Restore current note?</source>
 </message>
 <message>
 <source>&amp;Retry</source>
-<translation>Reintentar</translation>
+<translation>&amp;Reintentar</translation>
 </message>
 <message>
 <source>&amp;Exit</source>
@@ -2547,11 +2547,11 @@ Restore current note?</source>
 </message>
 <message>
 <source>Note can't be decrypted!</source>
-<translation>Esta nota no puede ser descifrada!</translation>
+<translation>¡La nota no puede ser descifrada!</translation>
 </message>
 <message>
 <source>It seems that your password is not valid!</source>
-<translation>Parece que la contraseña no es válida!</translation>
+<translation>¡Parece que su contraseña no es válida!</translation>
 </message>
 <message>
 <source>Remove selected notes</source>
@@ -2733,11 +2733,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
-<translation>Reng. %1, col. %2</translation>
+<translation>Línea %1, col. %2</translation>
 </message>
 <message>
 <source>Line %1, Column %2</source>
-<translation>Fila %1, columna %2</translation>
+<translation>Línea %1, columna %2</translation>
 </message>
 <message numerus="yes">
 <source>%n selected</source>
@@ -2749,11 +2749,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
-<translation>¡Soporte Nextcloud Deck desactivado!</translation>
+<translation>¡El soporte de Nextcloud Deck está desactivado!</translation>
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation>¡Soporte Nextcloud Deck no está activo o la configuración es inválida.&lt;br /&gt; Por favor compruebe la configuración de su &lt;strong&gt;Nextcloud&lt;/strong&gt; en la pestaña de configuraciones!</translation>
+<translation>¡El soporte de Nextcloud Deck no está activado o la configuración es inválida!&lt;br /&gt; Por favor, compruebe su configuración de &lt;strong&gt;Nextcloud&lt;/strong&gt; en la pestaña de configuración!</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -2819,7 +2819,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>The scripting engine was reloaded</source>
-<translation>El motor de scripting ha sido actualizado</translation>
+<translation>El motor de secuencia de órdenes ha sido actualizado</translation>
 </message>
 <message>
 <source>HTML files</source>
@@ -2843,7 +2843,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-<translation>¡Se encontraron actualizaciones de sus scripts en el repositorio de scripts! ¿Quieres actualizarlos?</translation>
+<translation>¡Se encontraron actualizaciones de sus scripts en el repositorio de scripts! ¿Desea actualizarlos?</translation>
 </message>
 <message>
 <source>No script updates were found</source>
@@ -2882,7 +2882,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Allows you to rename the filename of the note</source>
-<translation>Permite cambiar el nombre del archivo de la nota</translation>
+<translation>Permite renombrar el nombre del archivo de la nota</translation>
 </message>
 <message>
 <source>&amp;Move notes to…</source>
@@ -2964,7 +2964,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Note headline '%1' was copied to the clipboard</source>
-<translation>La cabecera de la nota '%1' fue copiada al portapapeles</translation>
+<translation>El título de la nota '%1' fue copiada al portapapeles</translation>
 </message>
 <message>
 <source>Leave full-screen mode</source>
@@ -3065,7 +3065,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Show todo lists</source>
-<translation>Mostrar listas de tareas</translation>
+<translation>Mostrar listas de tareas pendientes</translation>
 </message>
 <message>
 <source>Recent tasks</source>
@@ -3137,7 +3137,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-<translation>Si quieres renombrar tu nota, tienes que activar la opción para permitir que el nombre de archivo de la nota sea diferente del título.</translation>
+<translation>Si desea renombrar su nota, debe activar la opción para permitir que el nombre de archivo de la nota sea diferente del título.</translation>
 </message>
 <message>
 <source>Create a new folder</source>
@@ -3173,7 +3173,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-<translation>QOwnNotes registrará los datos de uso anónimos que ayudan a decidir qué partes del QOwnNotes se mejoran y para encontrar y corregir errores. Puede deshabilitar este comportamiento en los ajustes.</translation>
+<translation>QOwnNotes registrará los datos de uso anónimos que ayudan a decidir qué partes del QOwnNotes se mejoran y para encontrar y corregir errores. Puede deshabilitar este comportamiento en la configuración.</translation>
 </message>
 <message>
 <source>&amp;Ok</source>
@@ -3244,7 +3244,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>No selected todo lists!</source>
-<translation>¡No hay listas de tareas seleccionadas!</translation>
+<translation>¡No hay listas de tareas pendientes seleccionadas!</translation>
 </message>
 <message>
 <source>Action not found!</source>
@@ -3417,7 +3417,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>&amp;Decrypt</source>
-<translation>Descifrar</translation>
+<translation>&amp;Descifrar</translation>
 </message>
 <message>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
@@ -3425,14 +3425,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Export current note as Markdown file</source>
-<translation>Exportar la nota actual a Markdown</translation>
+<translation>Exportar la nota actual a un archivo de Markdown</translation>
 </message>
 </context>
 <context>
 <name>NavigationWidget</name>
 <message>
 <source>headline %1</source>
-<translation>Titulo %1</translation>
+<translation>título %1</translation>
 </message>
 </context>
 <context>
@@ -3483,14 +3483,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Due date</source>
-<translation>Fecha de vencimiento</translation>
+<translation>Fecha límite</translation>
 </message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
 <message>
 <source>Error while creating card</source>
-<translation>Error mientras estaba creando la tarjeta</translation>
+<translation>Error durante la creación de la tarjeta</translation>
 </message>
 <message>
 <source>Creating a card failed with status code %1 and message: %2</source>
@@ -3498,7 +3498,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Error while loading boards</source>
-<translation>Error mientras estaba cargando los tableros</translation>
+<translation>Error mientras se estaban cargando los tableros</translation>
 </message>
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
@@ -3559,11 +3559,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
-<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+<translation>Ruta relativa de la nota, clic derecho para abrir el menú contextual</translation>
 </message>
 <message>
 <source>Absolute path of note, right-click to open context menu</source>
-<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+<translation>Ruta absoluta de la nota, clic derecho para abrir el menú contextual</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
@@ -3647,8 +3647,8 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation>
-<numerusform>¿Eliminar la carpeta seleccionada? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; ¡Todos los archivos y carpetas dentro de esta carpeta se eliminarán también!</numerusform>
-<numerusform>¿Eliminar la carpeta seleccionada? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; ¡Todos los archivos y carpetas dentro de esta carpeta se eliminarán también!</numerusform>
+<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; carpeta seleccionada? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;¡Todos los archivos y carpetas dentro de esta carpeta se eliminarán también!</numerusform>
+<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; carpetas seleccionadas? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;¡Todos los archivos y carpetas dentro de estas carpetas se eliminarán también!</numerusform>
 </translation>
 </message>
 <message>
@@ -3660,14 +3660,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <name>OpenAiCompleter</name>
 <message>
 <source>Timeout, while waiting for the AI response</source>
-<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+<translation>Tiempo agotado, al esperar la respuesta de la IA</translation>
 </message>
 </context>
 <context>
 <name>OpenAiService</name>
 <message>
 <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
+<translation>El sistema de IA está deshabilitado. Por favor, habilítelo en el menú principal o en la barra de herramientas de IA.</translation>
 </message>
 </context>
 <context>
@@ -3714,7 +3714,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>not enabled</source>
-<translation>no disponible</translation>
+<translation>desactivado</translation>
 </message>
 <message>
 <source>API app version too low</source>
@@ -3734,7 +3734,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>You need to setup your ownCloud server!</source>
-<translation>¡Tienes que configurar tu servidor ownCloud!</translation>
+<translation>¡Necesita configurar su servidor ownCloud!</translation>
 </message>
 <message>
 <source>Open &amp;settings</source>
@@ -3770,7 +3770,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Error while loading todo lists!</source>
-<translation>Error al cargar las listas de tareas!</translation>
+<translation>¡Error al cargar las listas de tareas pendientes!</translation>
 </message>
 <message>
 <source>Your CalDAV server didn't reply anything!</source>
@@ -3877,7 +3877,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
-<translation>El archivo de imagen ya existe en la carpeta de medios, ¿desea usar el existente en lugar de crear un nuevo archivo?</translation>
+<translation>El archivo de imagen ya existe en la carpeta de medios. ¿Desea usar el existente en lugar de crear un nuevo archivo?</translation>
 </message>
 <message numerus="yes">
 <source>…and %n more note(s)</source>
@@ -3937,11 +3937,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>El sistema Linux parece utilizar el modo oscuro. ¿Quiere activarlo también en QOwnNotes?</translation>
+<translation>Su sistema Linux parece utilizar el modo oscuro. ¿Desea activarlo también en QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>El sistema Linux parece utilizar el modo claro. ¿Quiere activarlo también en QOwnNotes?</translation>
+<translation>Su sistema Linux parece utilizar el modo claro. ¿Desea activarlo también en QOwnNotes?</translation>
 </message>
 <message>
 <source>Panel disabled</source>
@@ -3949,7 +3949,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation>El panel &lt;strong&gt;%1&lt;/strong&gt; está deshabilitado actualmente, ¿desea volver a activarlo para que esta acción funcione?</translation>
+<translation>El panel &lt;strong&gt;%1&lt;/strong&gt; está deshabilitado actualmente. ¿Desea volver a activarlo para que esta acción funcione?</translation>
 </message>
 <message>
 <source>Command failed!</source>
@@ -3997,7 +3997,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-<translation>¡No se puede crear la carpeta &lt;b&gt;%1&lt;/b&gt; porque está en la lista de subcarpetas ignoradas! Puedes modificar esto en los &lt;i&gt;Ajustes de Paneles&lt;/i&gt;.</translation>
+<translation>¡No se puede crear la carpeta &lt;b&gt;%1&lt;/b&gt; porque está en la lista de subcarpetas ignoradas! Puedes modificar esto en la &lt;i&gt;Configuración de Paneles&lt;/i&gt;.</translation>
 </message>
 <message>
 <source>File name changed</source>
@@ -4006,8 +4006,8 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message numerus="yes">
 <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
 <translation>
-<numerusform>%n nota(s) están usando este adjunto. ¿Quieres renombrar también esos adjuntos en la(s) nota(s)?</numerusform>
-<numerusform>%n nota(s) están usando este adjunto. ¿Quieres renombrar también estos adjuntos en la(s) nota(s)?</numerusform>
+<numerusform>%n nota están usando este adjunto. ¿Desea renombrar también esos adjuntos en la nota?</numerusform>
+<numerusform>%n notas están usando este adjunto. ¿Desea renombrar también esos adjuntos en las notas?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4031,7 +4031,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Could not parse login url!</source>
-<translation>No se pudo procesar el URL de acceso.</translation>
+<translation>¡No se pudo procesar la URL de acceso!</translation>
 </message>
 <message>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
@@ -4426,7 +4426,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-<translation>¡Por favor no olvides actualizar tu instalación de QOwnNotes para que este script funcione!</translation>
+<translation>¡Por favor no olvide actualizar su instalación de QOwnNotes para que este script funcione!</translation>
 </message>
 <message>
 <source>Install successful</source>
@@ -4525,7 +4525,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>ownCloud server url:</source>
-<translation>url del servidor ownCloud:</translation>
+<translation>URL del servidor ownCloud:</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -4673,7 +4673,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>You need to restart the application to let this setting take effect</source>
-<translation>Debes reiniciar la aplicación para que este cambio se aplique</translation>
+<translation>Debe reiniciar la aplicación para que este cambio se aplique</translation>
 </message>
 <message>
 <source>Item sizes in the main window</source>
@@ -4785,11 +4785,11 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>You need to reload the scripting engine if you modify a script file</source>
-<translation>Necesita volver a cargar el script engine si modifca un programa</translation>
+<translation>Necesita recargar el motor de secuencia de órdenes si modifica un archivo de script</translation>
 </message>
 <message>
 <source>Reload scripting engine</source>
-<translation>Recargar scripting engine</translation>
+<translation>Recargar motor de secuencia de órdenes</translation>
 </message>
 <message>
 <source>Validate script</source>
@@ -4839,7 +4839,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-<translation>Este botón permite borrar todos los ajustes, eliminar la base de datos local de tareas y salir de QOwnNotes.</translation>
+<translation>Este botón le permite eliminar toda la configuración, eliminar la base de datos local de tareas y salir de QOwnNotes.</translation>
 </message>
 <message>
 <source>Clear app data and exit</source>
@@ -4903,7 +4903,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Find setting</source>
-<translation>Buscar ajuste</translation>
+<translation>Buscar configuración</translation>
 </message>
 <message>
 <source>Layout</source>
@@ -4988,7 +4988,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Por favor, instala la última versión de &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (al menos la versión QOWNNOTESAPI_MIN_VERSION) en tu servidor ownCloud si quieres que QOwnNotes pueda acceder a versiones de nota y papelera.</translation>
+<translation>Por favor, instale la última versión de &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (al menos la versión QOWNNOTESAPI_MIN_VERSION) en su servidor ownCloud si desea que QOwnNotes pueda acceder a las versiones de notas y a las notas en la papelera.</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -5064,7 +5064,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Which cloud connection do you want to use?</source>
-<translation>¿Cuál conexión cloud quieres utilizar?</translation>
+<translation>¿Cuál conexión con la nube desea utilizar?</translation>
 </message>
 <message>
 <source>Select the calendars you want to use for the Todo list</source>
@@ -5240,7 +5240,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-<translation>Quizás también quieras elegir otro esquema de colores en los ajustes del editor para el modo oscuro.</translation>
+<translation>Quizás también quieras elegir otro esquema de colores en la configuración del editor para el modo oscuro.</translation>
 </message>
 <message>
 <source>Enable dark mode icon theme</source>
@@ -5460,7 +5460,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Search for language</source>
-<translation>Buscar un lenguaje</translation>
+<translation>Buscar un idioma</translation>
 </message>
 <message>
 <source>Status bar</source>
@@ -5634,7 +5634,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
-<translation type="unfinished">AI backends added via the scripting engine</translation>
+<translation>Los backends de la IA añadidos mediante el motor de secuencia de órdenes</translation>
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
@@ -5782,7 +5782,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Generate new security token</source>
-<translation>Genere un nuevo token de seguridad</translation>
+<translation>Generar una nueva ficha de seguridad</translation>
 </message>
 <message>
 <source>Reset the URL to default</source>
@@ -5870,7 +5870,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Show security token</source>
-<translation>Mostrar el token de seguridad</translation>
+<translation>Mostrar la ficha de seguridad</translation>
 </message>
 <message>
 <source>Web socket server support</source>
@@ -5910,7 +5910,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Local trash settings</source>
-<translation>Ajustes de la papelera local</translation>
+<translation>Configuración de la papelera local</translation>
 </message>
 <message>
 <source>Remove trashed notes after:</source>
@@ -5969,7 +5969,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-<translation>No olvides habilitar el soporte de git para tus carpetas de notas y configurar tu nombre y dirección de correo electrónico para el cliente de git, por ejemplo con estos comandos en la terminal:</translation>
+<translation>No olvide habilitar el soporte de git para sus carpetas de notas y configurar su nombre y dirección de correo electrónico para el cliente de git. Por ejemplo, por medio de estos comandos en la terminal:</translation>
 </message>
 <message>
 <source>Tags panel</source>
@@ -5993,7 +5993,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Only use editor width setting in distraction free mode</source>
-<translation>Usar ajuste del ancho de editor sólo en el modo libre de distracciones</translation>
+<translation>Usar configuración del ancho de editor sólo en el modo libre de distracciones</translation>
 </message>
 <message>
 <source>Alphabetical</source>
@@ -6227,7 +6227,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>You have to use the backspace key to remove the opening character</source>
-<translation>Debes que usar la tecla retroceso para eliminar el carácter de apertura</translation>
+<translation>Debe utilizar la tecla retroceso para eliminar el carácter de apertura</translation>
 </message>
 <message>
 <source>Enable automatic removal of matching closing characters</source>
@@ -6295,7 +6295,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Ignore calendars that don't support todo items</source>
-<translation>Ignorar calendarios que no soportan tareas</translation>
+<translation>Ignorar calendarios que no soportan elementos pendientes</translation>
 </message>
 <message>
 <source>Arabic</source>
@@ -6331,7 +6331,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-<translation>Puedes utilizar esto por ejemplo bajo Windows si tienes problemas con los saltos de línea en la aplicación de notas de ownCloud / Nextcloud</translation>
+<translation>Puede utilizar esto, por ejemplo, en Windows si tiene problemas con los saltos de línea en la aplicación de notas de ownCloud / Nexcloud</translation>
 </message>
 <message>
 <source>App instance</source>
@@ -6514,7 +6514,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-<translation>¿Deseas realmente importar la configuración? Hacerlo eliminará la configuración actual y puede que no todos los ajustes se restauren, como los ajustes de las carpetas de notas y que scripts estabas usando. También tendrás que ajustar algunos parámetros, especialmente si cambias de plataforma. ¡Pero tus notas permanecerán intactas!</translation>
+<translation>¿Realmente desea importar la configuración? Hacerlo eliminará la configuración actual y puede que no todos los ajustes se restauren, como la configuración de las carpetas de notas y qué scripts estaba usando. También tendrá que ajustar algunos parámetros, especialmente si cambia de plataforma. Sin embargo, ¡sus notas permanecerán intactas!</translation>
 </message>
 <message>
 <source>The application will be restarted after the import.</source>
@@ -6534,23 +6534,23 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>Board Id: %1</source>
-<translation>Tablero Id: '%1'</translation>
+<translation>ID del tablero: %1</translation>
 </message>
 <message>
 <source>Stack Id: %1</source>
-<translation>Pila id: '%1'</translation>
+<translation>ID de la pila: %1</translation>
 </message>
 <message>
 <source>API test result for %1 (%2)</source>
-<translation type="unfinished">API test result for %1 (%2)</translation>
+<translation>Resultado de prueba de la API para %1 (%2)</translation>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation type="unfinished">AI backend: %1</translation>
+<translation>Backend de la IA: %1</translation>
 </message>
 <message>
 <source>API base URL</source>
-<translation type="unfinished">API base URL</translation>
+<translation>URL base de la API</translation>
 </message>
 <message>
 <source>AI model: %1</source>
@@ -6595,7 +6595,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-<translation>¡El atajo &lt;strong&gt;%1&lt;/strong&gt; ya está asignado a &lt;strong&gt;%2&lt;/strong&gt;! ¿Quieres ir al acceso directo?</translation>
+<translation>¡El atajo &lt;strong&gt;%1&lt;/strong&gt; ya está asignado a &lt;strong&gt;%2&lt;/strong&gt;! ¿Desea ir al acceso directo?</translation>
 </message>
 <message>
 <source>Remove script</source>
@@ -6689,7 +6689,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>enabled</source>
-<translation>habilitado</translation>
+<translation>activado</translation>
 </message>
 <message>
 <source>disabled</source>
@@ -6709,7 +6709,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>the settings will be stored in an ini file</source>
-<translation>los ajustes se almacenarán en un archivo ini</translation>
+<translation>la configuración se almacenará en un archivo ini</translation>
 </message>
 <message>
 <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
@@ -6727,7 +6727,7 @@ Mensaje de error de conexión: </translation>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
-<translation>¿Realmente desea borrar todos los ajustes, eliminar la base de datos y salir de QOwnNotes? Las notas permanecerán intactas!</translation>
+<translation>¿Realmente desea eliminar toda la configuración, eliminar la base de datos y salir de QOwnNotes? Las notas permanecerán intactas!</translation>
 </message>
 <message>
 <source>Clear and &amp;exit</source>
@@ -6770,7 +6770,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>The public url of your note</source>
-<translation>La url pública de tu nota</translation>
+<translation>La URL pública de tu nota</translation>
 </message>
 <message>
 <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
@@ -6778,7 +6778,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-<translation>¡Ten en cuenta que aún tienes que sincronizar tus notas con tu servidor mediante la herramienta de sincronización de escritorio de ownCloud para poder compartir notas con otros!</translation>
+<translation>¡Tenga en cuenta que aún debe sincronizar sus notas con su servidor mediante la herramienta de sincronización de escritorio de ownCloud para poder compartir notas con otros!</translation>
 </message>
 </context>
 <context>
@@ -6936,11 +6936,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show attachments that are used in the current note</source>
-<translation type="unfinished">Only show attachments that are used in the current note</translation>
+<translation>Solo mostrar adjuntos que son usados en la nota actual</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>Solo mostrar de la nota actual</translation>
 </message>
 <message>
 <source>Add selected attachments to the current note</source>
@@ -6976,7 +6976,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>File path:</source>
-<translation>Ruta al archivo:</translation>
+<translation>Ruta del archivo:</translation>
 </message>
 <message>
 <source>Last modified at %1</source>
@@ -6993,7 +6993,7 @@ Your notes will stay intact!</source>
 <message numerus="yes">
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation>
-<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; archivos seleccionados?</numerusform>
+<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; archivo seleccionado?</numerusform>
 <numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; archivos seleccionados?</numerusform>
 </translation>
 </message>
@@ -7007,11 +7007,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>&amp;Delete attachments</source>
-<translation>&amp;Eliminar adjuntos</translation>
+<translation>Eliminar adjuntos</translation>
 </message>
 <message>
 <source>&amp;Add attachments to current note</source>
-<translation>Agregar archivos ad&amp;juntos a la nota actual</translation>
+<translation>&amp;Agregar archivos adjuntos a la nota actual</translation>
 </message>
 <message>
 <source>File doesn't exist</source>
@@ -7039,7 +7039,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>&amp;Open note</source>
-<translation>&amp;Nota abierta</translation>
+<translation>Abrir nota</translation>
 </message>
 </context>
 <context>
@@ -7090,11 +7090,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show images that are used in the current note</source>
-<translation type="unfinished">Only show images that are used in the current note</translation>
+<translation>Solo mostrar imágenes usadas en la nota actual</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>Solo mostrar de nota actual</translation>
 </message>
 <message>
 <source>Used in notes:</source>
@@ -7123,7 +7123,7 @@ Your notes will stay intact!</source>
 <message numerus="yes">
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation>
-<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; archivos seleccionados?</numerusform>
+<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; archivo seleccionado?</numerusform>
 <numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; archivos seleccionados?</numerusform>
 </translation>
 </message>
@@ -7145,11 +7145,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>File renaming failed</source>
-<translation>Error al cambiar el nombre del archivo</translation>
+<translation>Error al renombrar el archivo</translation>
 </message>
 <message>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation>¡Error al cambiar el nombre del archivo &lt;strong&gt;%1&lt;/strong&gt;!</translation>
+<translation>¡Error al renombrar el archivo &lt;strong&gt;%1&lt;/strong&gt;!</translation>
 </message>
 <message>
 <source>&amp;Open image externally</source>
@@ -7157,11 +7157,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>&amp;Rename image</source>
-<translation>&amp;Cambiar el nombre de la imagen</translation>
+<translation>&amp;Renombrar imagen</translation>
 </message>
 <message>
 <source>&amp;Delete images</source>
-<translation>&amp;Eliminar imágenes</translation>
+<translation>Eliminar imágenes</translation>
 </message>
 <message>
 <source>&amp;Add images to current note</source>
@@ -7169,7 +7169,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>&amp;Open note</source>
-<translation>&amp;Nota abierta</translation>
+<translation>Abrir nota</translation>
 </message>
 </context>
 <context>
@@ -7302,11 +7302,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation>¡Esto no funciona para los subelementos, porque pueden estar ocultos por el artículo principal!</translation>
+<translation>Esto no funciona para los subelementos, ¡porque pueden estar ocultos por el elemento superior!</translation>
 </message>
 <message>
 <source>Show only items due today</source>
-<translation>Mostrar solo los artículos que vencen hoy</translation>
+<translation>Mostrar solo los elementos que vencen hoy</translation>
 </message>
 <message>
 <source>Save and insert into note</source>
@@ -7318,7 +7318,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Show completed items</source>
-<translation>Mostrar los items completados</translation>
+<translation>Mostrar los elementos completados</translation>
 </message>
 <message>
 <source>Reload the todo list from server</source>
@@ -7330,7 +7330,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Search or create todo item</source>
-<translation>Buscar o crear tarea</translation>
+<translation>Buscar o crear elementos pendientes</translation>
 </message>
 <message>
 <source>Tags</source>
@@ -7350,15 +7350,15 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Save the current todo item</source>
-<translation>Guardar la tarea actual</translation>
+<translation>Guardar el elemento pendiente actual</translation>
 </message>
 <message>
 <source>Save the current todo item and insert a link to it into the current note</source>
-<translation>Guardar la tarea actual e insertar un vínculo a ella en la nota actual</translation>
+<translation>Guardar el elemento pendiente actual e insertar un vínculo a él en la nota actual</translation>
 </message>
 <message>
 <source>Import the current todo item as new note</source>
-<translation>Importar la tarea actual como una nota nueva</translation>
+<translation>Importar el elemento pendiente actual como una nota nueva</translation>
 </message>
 <message>
 <source>Import as note</source>
@@ -7366,7 +7366,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Remove the current todo item</source>
-<translation>Eliminar la tarea actual</translation>
+<translation>Eliminar el elemento pendiente actual</translation>
 </message>
 <message>
 <source>Todo list items are being loaded from the server</source>
@@ -7390,12 +7390,12 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Remove todo item</source>
-<translation>Quitar item de tareas</translation>
+<translation>Eliminar elemento pendiente</translation>
 </message>
 <message>
 <source>Remove the selected todo item?
 This cannot be undone!</source>
-<translation>¿Eliminar la tarea seleccionada? Esto no se puede deshacer!</translation>
+<translation>¿Eliminar el elemento pendiente seleccionado? Esto no se puede deshacer!</translation>
 </message>
 <message>
 <source>Create sub-task</source>
@@ -7588,7 +7588,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Do you want to download the new version?</source>
-<translation>¿Quieres descargar la nueva versión?</translation>
+<translation>¿Desea descargar la nueva versión?</translation>
 </message>
 <message>
 <source>QOwnNotes will be downloaded in your default browser.</source>
@@ -7596,7 +7596,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-<translation>¡Ten en cuenta que QOwnNotes tiene que ejecutarse desde una ubicación donde tengas acceso de escritura para que funcione la actualización automática!</translation>
+<translation>¡Tenga en cuenta que QOwnNotes debe ejecutarse desde una ubicación donde tenga acceso de escritura para que funcione la actualización automática!</translation>
 </message>
 <message>
 <source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
@@ -7612,15 +7612,15 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Just download</source>
-<translation>Sólo descargar</translation>
+<translation>Solo descargar</translation>
 </message>
 <message>
 <source>&amp;Download latest</source>
-<translation>Descargar último</translation>
+<translation>&amp;Descargar la última</translation>
 </message>
 <message>
 <source>&amp;Skip version</source>
-<translation>Versión Skip</translation>
+<translation>Omitir versión</translation>
 </message>
 <message>
 <source>&amp;Disable dialog</source>
@@ -7666,7 +7666,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Do you want to update and restart QOwnNotes?</source>
-<translation>¿Quieres actualizar y reiniciar QOwnNotes?</translation>
+<translation>¿Desea actualizar y reiniciar QOwnNotes?</translation>
 </message>
 <message>
 <source>Error</source>
@@ -7744,7 +7744,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-<translation>Ya terminó la descarga. ¿Quieres actualizar y reiniciar QOwnNotes?</translation>
+<translation>Ya terminó la descarga. ¿Desea actualizar y reiniciar QOwnNotes?</translation>
 </message>
 </context>
 <context>
@@ -7809,7 +7809,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Web app warning</source>
-<translation>Advertencia de aplicación web</translation>
+<translation>Advertencia de la aplicación web</translation>
 </message>
 <message>
 <source>Image received</source>
@@ -7864,19 +7864,19 @@ This cannot be undone!</source>
 <name>WebSocketTokenDialog</name>
 <message>
 <source>Security token</source>
-<translation>Token de seguridad</translation>
+<translation>Ficha de seguridad</translation>
 </message>
 <message>
 <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-<translation>Para permitir a la extensión de navegador de QOwnNotes acceder a tus notas, por favor copia y pega este token de seguridad en la configuración de la extensión de tu navegador:</translation>
+<translation>Para permitir a la extensión de navegador de QOwnNotes acceder a sus notas, por favor copie y pegue esta ficha de seguridad en la configuración de la extensión de su navegador:</translation>
 </message>
 <message>
 <source>Generate new token</source>
-<translation>Generar un nuevo token</translation>
+<translation>Generar una nueva ficha</translation>
 </message>
 <message>
 <source>Copy token</source>
-<translation>Copiar el token</translation>
+<translation>Copiar ficha</translation>
 </message>
 </context>
 <context>
@@ -7923,11 +7923,11 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Open ownCloud settings</source>
-<translation>Abrir ajustes de ownCloud</translation>
+<translation>Abrir configuración de ownCloud</translation>
 </message>
 <message>
 <source>Open network settings</source>
-<translation>Abrir ajustes de red</translation>
+<translation>Abrir configuración de red</translation>
 </message>
 <message>
 <source>Please select where you want to store your notes:</source>
@@ -7955,7 +7955,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Cannot create note path! You have to create the note folder manually!</source>
-<translation>¡No se puede crear ruta a la nota! ¡Tienes que crear manualmente la carpeta de notas!</translation>
+<translation>¡No se puede crear ruta a la nota! ¡Debe crear la carpeta de notas manualmente!</translation>
 </message>
 <message>
 <source>Cannot create note path!</source>
@@ -7994,7 +7994,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Clears the settings and runs the application.</source>
-<translation>Borra los ajustes y ejecuta la aplicación.</translation>
+<translation>Elimina la configuración y ejecuta la aplicación.</translation>
 </message>
 <message>
 <source>Runs the application in a different context for settings and internal files.</source>
@@ -8006,7 +8006,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
-<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
+<translation>Generar código de finalización de shell. Soporta 'fish' y 'bash'.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>
@@ -8014,7 +8014,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-<translation>¡Ya hay en ejecución otra instancia de QOwnNotes! Puede desactivar el modo de instancia única en los ajustes o utilizar el parámetro - permitir - múltiples - instancias.</translation>
+<translation>¡Ya hay en ejecución otra instancia de QOwnNotes! Puede desactivar el modo de instancia única en la configuración o utilizar el parámetro -allow-multiple-instances.</translation>
 </message>
 <message>
 <source>A second instance of QOwnNotes was attempted to be started!</source>

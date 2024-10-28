@@ -31,7 +31,7 @@ Es posible importar sus notas de Tomboy a través de una secuencia de órdenes d
 
 Para que la secuencia de órdenes funcione, puede necesitar instalar python2. Convertirá sus notas de Tomboy en un archivo `.enex` de Evernote, el cual podrá importar en QOwnNotes.
 
-Si desea efectuar este proceso, primero cerciórese de que ha instalado Python2 y, opcionalmente, `python-is-python2` (puede desinstalarlo posteriormente). This may be easier/safer in a chroot or Docker container, if you have that option (will be documented here later).
+Si desea efectuar este proceso, primero cerciórese de que ha instalado Python2 y, opcionalmente, `python-is-python2` (puede desinstalarlo posteriormente). Puede que esto sea más sencillo/seguro en un contenedor chroot o Docker si tiene esa opción (esto será documentado aquí posteriormente).
 
 ```bash
 sudo apt install python2 python-is-python2

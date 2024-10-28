@@ -1,13 +1,13 @@
 # Instalar por medio de Nix
 
-You can install QOwnNotes with the [Nix package manager](https://wiki.nixos.org/wiki/Nix_package_manager) on [NixOS](https://nixos.org/) and other platforms, the package name is [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
+Puede instalar QOwnNotes con el [administrador de paquetes de NIx](https://wiki.nixos.org/wiki/Nix_package_manager) en [NixOS](https://nixos.org/) y otras plataformas. El nombre del paquete es [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
 
-Para mayor información mira [QOwnNotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
+Véase [QOwnNotes en Nix](https://search.nixos.org/packages?channel=unstable&show=qownnotes) para mayor información.
 
-Después será capaz de ejecutar QOwnNotes con la orden `qownnotes`.
+Posteriormente, será capaz de ejecutar QOwnNotes con la orden `qownnotes`.
 
 ::: tip
-El gestor de snippets de línea de comandos QOwnNotes [qc](https://github.com/qownnotes/qc) también puede instalarse a través de [Nix Store](https://search.nixos.org/packages?channel=unstable&show=qc).
+El gestor de snippets de la línea de comandos de QOwnNotes [qc](https://github.com/qownnotes/qc) también puede instalarse a través de [Nix Store](https://search.nixos.org/packages?channel=unstable&show=qc).
 
-You can use `nix-shell -p qc --run qc` to try it out.
+Puede usar `nix-shell -p qc --run qc` para probarlo.
 :::

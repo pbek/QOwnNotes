@@ -10,7 +10,7 @@ Puede utilizar **notas con una etiqueta especial** para almacenar **fragmentos d
 
 ## Instalación
 
-Visite la [página de la última versión](https://github.com/qownnotes/qc/releases/latest) y descargue la versión que necesita.
+Visite la [página del último lanzamiento](https://github.com/qownnotes/qc/releases/latest) y descargue la versión que necesite.
 
 ::: tip
 Si tiene [jq](https://stedolan.github.io/jq) instalado, también puede usar este fragmento para descargar e instalar, por ejemplo, la última AppImage de Linux AMD64 en `/usr/local/bin/qc`:
@@ -80,7 +80,7 @@ Los bloques de código **`bash` o `shell`**, precedidos por un encabezado 2 o su
 
     ## Haz esto con un bloque de código "bash"
 
-    - este texto será ignorado texto
+    - este texto será ignorado
     - pero se pueden usar etiquetas: #tag1 #tag2
 
     ```bash
@@ -89,7 +89,7 @@ Los bloques de código **`bash` o `shell`**, precedidos por un encabezado 2 o su
     ```
 
 
-    ## Haz otra cosa con un bloque de código "sh"
+    ## Realizar otra cosa con un bloque de código "sh"
 
     ```sh
     eco haz otra cosa
@@ -125,11 +125,11 @@ Ejecute `qc configure`.
   websocket_port = 22222    # websocket port in QOwnNotes
 ```
 
-## Terminación de caparazón
+## Completamiento de la consola
 
-Puede generar un código de finalización de shell para su shell con `completado de qc <shell>`.
+Puede generar un código de finalización de shell para su consola con el `completado de qc <shell>`.
 
-Por ejemplo, para el caparazón de pescado puedes usar:
+Por ejemplo, para la consola Fish puede usar:
 
 ```bash
 qc completion fish > ~/.config/fish/completions/qc.fish

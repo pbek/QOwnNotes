@@ -12,7 +12,7 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> edita una nota cifrada
 - <kbd>Alt</kbd> + <kbd>R</kbd> elimina la nota actual
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> busca actualizaciones
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> abre la lista de tareas
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> abre la lista de tareas pendientes
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> abre la nota actual en un editor externo
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> abre la nota actual en una vista
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> muestra la nota actual en el administrador de archivos
@@ -20,14 +20,14 @@
 - <kbd>Alt</kbd> + <kbd>Up</kbd> salta a la nota visible anterior
     - el atajo alternativo es <kbd>Ctrl</kbd> + <kbd>Re Pág</kbd>
 - <kbd>Alt</kbd> + <kbd>Down</kbd> salta a la siguiente nota visible
-    - el atajo alternativo es <kbd>Ctrl</kbd> + <kbd>AvPág</kbd>
+    - el atajo alternativo es <kbd>Ctrl</kbd> + <kbd>Av Pág</kbd>
 - <kbd>Alt</kbd> + <kbd>Re Pág</kbd> salta a la pestaña de la nota anterior
 - <kbd>Alt</kbd> + <kbd>Av Pág</kbd> salta a la siguiente pestaña de nota
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> cierra la pestaña de la nota actual
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> alterna el modo sin distracciones
     - también puedes cerrarlo con <kbd>Esc</kbd>
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> imprime la nota actual como texto
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> alterna el modo sin distracciones
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> imprime la nota actual como markdown
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>V</kbd> pega notas, imágenes y html desde el portapapeles
 - <kbd>Ctrl</kbd> + <kbd>,</kbd> abre la configuración
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> agrega una nueva etiqueta a una nota
@@ -64,11 +64,11 @@
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> le permite buscar en la nota actual
     - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o <kbd>F3</kbd> y Teclas <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
     - <kbd>Esc</kbd> cierra la barra de búsqueda
-- <kbd>Ctrl</kbd> + <kbd>R</kbd> te permite buscar y reemplazar en la nota actual
+- <kbd>Ctrl</kbd> + <kbd>R</kbd> le permite buscar y reemplazar en la nota actual
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplica la línea actual o el texto seleccionado
     - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> hace lo mismo
-- <kbd>Alt</kbd> + <kbd>Backspace</kbd> elimina la línea actual
-- <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> elimina la palabra actual
+- <kbd>Alt</kbd> + <kbd>Retroceso</kbd> elimina la línea actual
+- <kbd>Ctrl</kbd> + <kbd>Retroceso</kbd> elimina la palabra actual
 - <kbd>Ctrl</kbd> + <kbd>L</kbd> abre un cuadro de diálogo para agregar un enlace de texto (también funciona con el texto seleccionado)
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> abre un cuadro de diálogo para agregar un enlace de nota
 - <kbd>Ctrl</kbd> + <kbd>T</kbd> inserta la fecha y hora actuales en un formato específico del usuario
@@ -106,11 +106,11 @@
 
 ### En el panel de vista previa de notas
 
-- <kbd>Ctrl</kbd> + <kbd>F</kbd> te permite buscar en la nota actual
+- <kbd>Ctrl</kbd> + <kbd>F</kbd> le permite buscar en la nota actual
     - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o <kbd>F3</kbd> y Teclas <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
     - <kbd>Esc</kbd> cierra la barra de búsqueda
 
-### En la lista de Todo
+### En la lista de tareas pendientes
 
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> guarda el elemento pendiente actual
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> guarda el elemento de tarea actual y lo inserta en la nota actual
@@ -129,7 +129,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> edita una nota cifrada
 - <kbd>⌃ Ctrl</kbd> + <kbd>R</kbd> elimina la nota actual
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> busca actualizaciones
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> abre la lista de tareas
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> abre la lista de tareas pendientes
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> abre la nota actual en un editor externo
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> abre la nota actual en una vista
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> abre la carpeta de la nota actual en Finder
@@ -142,7 +142,7 @@
 - <kbd>⌥ Alt</kbd> + <kbd>Av Pág</kbd> salta a la siguiente pestaña de nota
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> cierra la pestaña de nota actual
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> alterna el modo sin distracciones
-    - también puedes cerrarlo con <kbd>Esc</kbd>
+    - también puede cerrarlo con <kbd>Esc</kbd>
 - <kbd>⌘ Cmd</kbd> + <kbd>P</kbd> imprime la nota actual como texto
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> imprime la nota actual como rebaja
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>V</kbd> pega notas, imágenes y html desde el portapapeles
@@ -185,7 +185,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> duplica la línea actual o el texto seleccionado
     - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> hace la misma
 - <kbd>⌘ Cmd</kbd> + <kbd>Retroceso</kbd> elimina la línea actual
-- <kbd>⌃ Ctrl</kbd> + <kbd>Backspace</kbd> elimina la palabra actual
+- <kbd>⌃ Ctrl</kbd> + <kbd>Retroceso</kbd> elimina la palabra actual
 - <kbd>⌘ Cmd</kbd> + <kbd>L</kbd> abre un cuadro de diálogo para agregar un enlace de texto (también funciona en el texto seleccionado)
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> abre un cuadro de diálogo para agregar un enlace de nota
 - <kbd>⌘ Cmd</kbd> + <kbd>T</kbd> inserta la fecha y la hora actuales en un formato específico del usuario
@@ -227,7 +227,7 @@
     - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o <kbd>F3</kbd> y Teclas <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
     - <kbd>Esc</kbd> cierra la barra de búsqueda
 
-### En la lista de Todo
+### En la lista de tareas pendientes
 
 - <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> guarda el elemento pendiente actual
 - <kbd>⌘ Cmd</kbd> + <kbd>I</kbd> guarda el elemento pendiente actual y lo inserta en la nota actual

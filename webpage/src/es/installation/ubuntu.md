@@ -18,16 +18,16 @@ sudo apt-get install qownnotes
 
 ## Vista previa de QOwnNotes con Qt6
 
-Si quiere poner a prueba los paquetes Qt6 desde ahora y utiliza Ubuntu 22.04 o más reciente, utilice este repositorio:
+Si desea poner a prueba los paquetes con Qt6 desde ahora y se encuentra en Ubuntu 22.04 o más reciente, puede utilizar este repositorio:
 
 ```bash
-# Quite el PPA de Qt5 si lo ha instalado
+# Eliminar el PPA de Qt5 si lo ha instalado
 sudo add-apt-repository --remove ppa:pbek/qownnotes
 
-# Añada el PPA de Qt6
+# Añadir el PPA de Qt6
 sudo add-apt-repository ppa:pbek/qownnotes-qt6
 
-# Instale QOwnNotes
+# Instalar QOwnNotes
 sudo apt-get update
 sudo apt-get install qownnotes
 ```
@@ -38,7 +38,7 @@ Si encuentra cualquier problema, ¡por favor repórtelos en los [problemas de QO
 
 ## Distribuciones y derivados más antiguos de Ubuntu Linux
 
-Lo mejor es usar el AppImage de los [lanzamientos de QOwnNotes en GitHub](https://github.com/pbek/QOwnNotes/releases).
+Lo mejor es usar la AppImage de los [lanzamientos de QOwnNotes en GitHub](https://github.com/pbek/QOwnNotes/releases).
 
 Tras hacer esto, puede cambiar los permisos de ejecución en el archivo:
 
@@ -46,13 +46,13 @@ Tras hacer esto, puede cambiar los permisos de ejecución en el archivo:
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Tras hacer esto, debería ser capaz de ejecutar el AppImage para ejecutar QOwnNotes.
+Posteriormente, debería ser capaz de ejecutar la AppImage para abrir QOwnNotes.
 
 ## Repositorio de OBS
 
 También puede usar QOwnNotes en versiones de Ubuntu que ya no se actualizan más en Ubuntu Launchpad. Luego puede usar los repositorios de [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 
-A continuación se muestran ejemplos de llamadas para el repositorio de xUbuntu 20.04.
+A continuación se muestran llamadas de ejemplo para el repositorio de xUbuntu 20.04.
 
 Ejecute la orden de consola siguiente para marcar el repositorio como de fiar.
 

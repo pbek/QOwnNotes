@@ -4,7 +4,7 @@ Iniciar un programa externo en segundo plano
 ----------------------------------------------
 
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Envoltorio QML para iniciar un proceso separado
@@ -52,7 +52,7 @@ También es posible que desee echar un vistazo al gancho [onDetachedProcessCallb
 Iniciar un programa externo y esperar la salida
 ----------------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Envoltorio QML para iniciar un proceso síncrono
@@ -75,7 +75,7 @@ Puede que quiera echar un vistazo al ejemplo [encryption-keybase.qml](https://gi
 Obtener la ruta de la carpeta de notas actual
 -------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Envoltorio QML para obtener la ruta de la carpeta de notas actual
@@ -95,7 +95,7 @@ Puede que quiera echar un vistazo al ejemplo [absolute-media-links.qml](https://
 Obtener la nota actual
 ------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Envoltorio QML para obtener la nota actual
@@ -115,7 +115,7 @@ Puede que quiera echar un vistazo al ejemplo [custom-actions.qml](https://github
 Iniciar sesión en el widget de registro
 -------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Envoltorio QML para iniciar sesión en el widget de registro
@@ -133,7 +133,7 @@ script.log("my text");
 Descarga de una URL a una cadena
 ------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Envoltorio QML para descargar una URL y devolverla como texto
@@ -154,7 +154,7 @@ Puede que quiera echar un vistazo al ejemplo [insert-headline-with-link-from-git
 Descarga de una URL a la carpeta multimedia
 --------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Envoltorio QML para descargar una URL a la carpeta de medios y devolver los medios
@@ -177,7 +177,7 @@ Puede que quiera echar un vistazo al ejemplo [paste-latex-image.qml](https://git
 Insertar un archivo multimedia en la carpeta multimedia
 --------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Envoltorio QML para insertar un archivo multimedia en la carpeta multimedia y regresar
@@ -201,7 +201,7 @@ Puede que quiera echar un vistazo al ejemplo [scribble.qml](https://github.com/p
 Insertar un archivo adjunto en la carpeta de archivos adjuntos
 --------------------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
  * QML wrapper to insert an attachment file into the `attachments` folder and
  * returning the attachment url or the markdown text of the attachment
@@ -228,7 +228,7 @@ Regenerando la vista previa de la nota
 
 Actualiza la vista previa de la nota.
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Regenera la vista previa de la nota
@@ -246,7 +246,7 @@ Puede que quiera echar un vistazo al ejemplo [scribble.qml](https://github.com/p
 Registro de una acción personalizada
 ---------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Registra una acción personalizada
@@ -334,13 +334,13 @@ Script {
 Para más ejemplos, por favor revise [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
-También puede activar una acción personalizada después de iniciar la aplicación con el parámetro `--action customAction_<identifier>`. Para obtener más información, consulte [Activar acciones del menú después del inicio](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
+También puede activar una acción personalizada después de iniciar la aplicación con el parámetro `--action customAction_<identifier>`. Para mayor información, por favor consulte [Activar acciones del menú después del inicio](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
 :::
 
 Registrar una etiqueta
 -------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Registra una etiqueta para escribir
@@ -369,7 +369,7 @@ Puede que después quiera echar un vistazo al script de ejemplo [scripting-label
 Configurar el texto de una etiqueta registrada
 --------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Establece el texto de una etiqueta registrada
@@ -393,10 +393,10 @@ Puede que después quiera echar un vistazo al script de ejemplo [scripting-label
 The scripting label also supports **external links**, as well as **internal links** to notes, tasks, deck cards and more. You might get a grasp of what's supported by taking a look at [URL handling](https://github.com/pbek/QOwnNotes/blob/964acf69b6382f8ee8252c640c5048f8f4644622/src/utils/urlhandler.cpp#L16-L75).
 :::
 
-Creando una nota nueva
+Crear una nota nueva
 -------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Crea una nota nueva
@@ -425,7 +425,7 @@ note.renameNoteFile('your-filename');
 Accediendo al portapapeles
 -----------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Devuelve el contenido del portapapeles como texto o html
@@ -446,7 +446,7 @@ Puede que quiera echar un vistazo al ejemplo [custom-actions.qml](https://github
 Escribir texto en la edición de texto de la nota
 --------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Escribe texto en la posición actual del cursor en la edición de texto de la nota
@@ -469,7 +469,7 @@ Puede usar esto junto con `noteTextEditSelectAll` para sobrescribir todo el text
 Leer el texto seleccionado en la edición de texto de la nota
 --------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Lee el texto seleccionado en la edición de texto de la nota
@@ -490,7 +490,7 @@ You might want to look at the custom action `transformTextRot13` in the example 
 Seleccionar todo el texto en la edición de texto de la nota
 -------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 / **
  * Selecciona todo el texto en la edición de texto de la nota
@@ -508,7 +508,7 @@ Puede usar esto junto con `noteTextEditWrite` para sobrescribir todo el texto de
 Seleccione la línea actual en la edición de texto de la nota
 ---------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Selecciona la línea actual en la edición de texto de la nota
@@ -521,10 +521,10 @@ void ScriptingService :: noteTextEditSelectCurrentLine();
 script.noteTextEditSelectCurrentLine();
 ```
 
-Seleccione la palabra actual en la edición de texto de la nota
+Seleccionar la palabra actual en la edición de texto de la nota
 ---------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Selecciona la palabra actual en la edición de texto de nota
@@ -537,10 +537,10 @@ void ScriptingService::noteTextEditSelectCurrentWord();
 script.noteTextEditSelectCurrentWord();
 ```
 
-Establecer el texto seleccionado actualmente en la edición de texto de nota
+Establecer el texto actualmente seleccionado en la edición de texto de nota
 -----------------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Establece el texto seleccionado actualmente en la edición de texto de nota
@@ -562,7 +562,7 @@ script.noteTextEditSetSelection(
 Obtener la posición inicial de la selección actual en la edición de texto de la nota
 ---------------------------------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Devuelve la posición inicial de la selección actual en la edición de texto de nota
@@ -578,7 +578,7 @@ script.log(script.noteTextEditSelectionStart());
 Obtener la posición final de la selección actual en la edición de texto de la nota
 -------------------------------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Devuelve la posición final de la selección actual en la edición de texto de nota
@@ -594,7 +594,7 @@ script.log(script.noteTextEditSelectionEnd());
 Coloque el cursor de texto en la edición de texto de la nota en una posición determinada
 ---------------------------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Establece el cursor de texto en la edición de texto de la nota en una posición determinada
@@ -618,7 +618,7 @@ script.noteTextEditSetCursorPosition(-1);
 Obtener la posición actual del cursor de texto en la edición de texto de la nota
 -----------------------------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Devuelve la posición actual del cursor de texto en la edición de texto de la nota
@@ -635,7 +635,7 @@ script.log(script.noteTextEditCursorPosition());
 Leer la palabra actual desde el editor de texto de notas
 ---------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Lee la palabra actual en la edición de texto de la nota
@@ -659,7 +659,7 @@ Puede que quiera echar un vistazo al ejemplo [autocompletion.qml](https://github
 Read the current block from the note text edit
 ----------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Reads the current block in the note text edit
@@ -684,7 +684,7 @@ The AI completion prompt is a feature that allows you to use a completion prompt
 
 The AI system needs to be enabled in the AI toolbar or main menu for this to work.
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * QML wrapper to use the AI Completer
@@ -706,7 +706,7 @@ Puede que quiera echar un vistazo al ejemplo [ai-autocompletion.qml](https://git
 Compruebe si la plataforma es Linux, OS X o Windows
 ------------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 bool ScriptingService::platformIsLinux();
 bool ScriptingService::platformIsOSX();
@@ -716,14 +716,14 @@ bool ScriptingService::platformIsWindows();
 ### Ejemplo
 ```js
 if (script.platformIsLinux()) {
-    // Will be executed only if under Linux
+    // Solo se ejecutará si se está en Linux
 }
 ```
 
 Etiquetar la nota actual
 --------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Etiqueta la nota actual con una etiqueta llamada tagName
@@ -744,7 +744,7 @@ You might want to look at the custom action `favoriteNote` in the example [favor
 Crear o recuperar una etiqueta por su nombre lista de ruta de navegación
 -------------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Obtiene o crea una etiqueta por su "lista de ruta de navegación" de nombres de etiquetas
@@ -769,7 +769,7 @@ var tag = script.getTagByNameBreadcrumbList (["nivel1", "nivel2", "nivel3"]);
 Buscar etiquetas por nombre
 -----------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Obtiene todas las etiquetas haciendo una búsqueda de subcadenas en el campo de nombre
@@ -790,7 +790,7 @@ Puede que quiera echar un vistazo al ejemplo [autocompletion.qml](https://github
 Buscar notas por texto de nota
 -----------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Devuelve una lista de ID de nota de todas las notas con un texto determinado en el texto de la nota
@@ -819,7 +819,7 @@ Puede que quiera echar un vistazo al ejemplo [unique-note-id.qml](https://github
 Agregar una hoja de estilo personalizada
 -----------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Agrega una hoja de estilo personalizada a la aplicación.
@@ -849,16 +849,16 @@ The [style.qss](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarks
 
 Werfen Sie einen Blick auf die [Stylesheet-Referenz](http://doc.qt.io/qt-5/stylesheet-reference.html), um zu erfahren, welche Stile verfügbar sind.
 
-Wenn Sie Stile in die Html-Vorschau einfügen möchten, um die Vorschau der Notizen zu ändern, sehen Sie sich bitte [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook) an.
+If you want to inject styles into html preview to alter the way notes are previewed please look at [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
 ::: tip
-Wenn Sie tatsächlich sehen möchten, wie die Dialoge aussehen und wie sie heißen, können Sie [Qt Creator](https://www.qt.io/product/development-tools) herunterladen und die darin enthaltenen `*.ui`-Dateien öffnen.
+If you actually want to see how the dialogs look and what their names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it.
 :::
 
 Recarga del motor de secuencias de comandos
 ------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Recarga el motor de secuencias de comandos
@@ -872,10 +872,10 @@ void ScriptingService::reloadScriptingEngine();
 script.reloadScriptingEngine();
 ```
 
-Obteniendo una nota por su nombre de archivo
+Obtener una nota por su nombre de archivo
 --------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Obtiene una nota por su nombre de archivo
@@ -894,10 +894,10 @@ NoteApi * ScriptingService :: fetchNoteByFileName (QString fileName,
 script.fetchNoteByFileName("my note.md");
 ```
 
-Obteniendo una nota por su identificación
+Obtener una nota por su ID
 -------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Ruft eine Notiz anhand ihrer Id ab
@@ -919,7 +919,7 @@ Puede que quiera echar un vistazo al ejemplo [export-notes-as-one-html.qml](http
 Comprobando si una nota existe por su nombre de archivo
 ------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Comprueba si existe un archivo de notas por su nombre de archivo
@@ -945,7 +945,7 @@ Puede que quiera echar un vistazo al ejemplo [use-tag-names-in-filename.qml](htt
 Copiar texto en el portapapeles
 -------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Kopiert Text in die Zwischenablage als Klartext oder HTML-Mime-Daten
@@ -964,10 +964,10 @@ script.setClipboardText("text to copy");
 
 Puede que quiera echar un vistazo al ejemplo [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/selected-markdown-to-bbcode.qml).
 
-Saltando a una nota
+Ir a una nota
 -----------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Sets the current note if the note is visible in the note list
@@ -992,7 +992,7 @@ Puede que quiera echar un vistazo al ejemplo [journal-entry.qml](https://github.
 Saltar a una subcarpeta de notas
 ---------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Salta a una subcarpeta de notas
@@ -1021,7 +1021,7 @@ Puede crear una nueva subcarpeta de notas en la subcarpeta actual llamando a [`m
 Mostrar un cuadro de mensaje de información
 ----------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Muestra un cuadro de mensaje de información
@@ -1038,10 +1038,10 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 script.informationMessageBox ("El texto que quiero mostrar", "Algún título opcional");
 ```
 
-Mostrando un cuadro de mensaje de pregunta
+Mostrar un cuadro de mensaje de pregunta
 ------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Muestra un cuadro de mensaje de pregunta
@@ -1075,7 +1075,7 @@ Puede que quiera echar un vistazo al ejemplo [input-dialogs.qml](https://github.
 Mostrar un cuadro de diálogo de archivo abierto
 ---------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Muestra un cuadro de diálogo de archivo abierto
@@ -1098,7 +1098,7 @@ var fileName = script.getOpenFileName("Por favor seleccione una imagen", "/home/
 Mostrar un cuadro de diálogo para guardar archivo
 --------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Muestra un cuadro de diálogo para guardar archivos
@@ -1221,7 +1221,7 @@ Puede que quiera echar un vistazo al ejemplo [variables.qml](https://github.com/
 Almacenar y cargar variables persistentes
 ----------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Almacena una variable persistente
@@ -1262,7 +1262,7 @@ Puede que quiera echar un vistazo al ejemplo [persistent-variables.qml](https://
 Cargando variables de configuración de la aplicación
 --------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Carga una variable de configuración de la aplicación
@@ -1283,12 +1283,12 @@ script.log(script.getApplicationSettingsVariable ("gitExecutablePath"));
 
 Tenga en cuenta que la configuración en realidad puede estar vacía, debe ocuparse de eso usted mismo. `defaultValue` solo se usa si la configuración no existe en absoluto.
 
-Creando un directorio de caché
+Crear un directorio de caché
 --------------------------
 
 Puede almacenar en caché los archivos en la ubicación de caché predeterminada de su sistema.
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Devuelve un directorio de caché para un script
@@ -1310,7 +1310,7 @@ Borrar un directorio de caché
 
 Sie können das Cache-Verzeichnis Ihres Skripts löschen, indem Sie seinen Namen an clearCacheDir() übergeben.
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Borra el directorio de caché de un script
@@ -1350,7 +1350,7 @@ Script {
 Conversión de separadores de ruta en nativos
 -----------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Devuelve la ruta con los separadores '/' convertidos en separadores que son
@@ -1374,7 +1374,7 @@ script.log(script.toNativeDirSeparators("c:/winnt/system32"));
 Conversión de separadores de ruta de las nativas
 -------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Devuelve la ruta usando '/' como separador de archivos.
@@ -1396,7 +1396,7 @@ script.log(script.fromNativeDirSeparators("c:\\winnt\\system32"));
 Obtener el separador de directorios nativo
 --------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Devuelve el separador de directorio nativo "/" o "\" en Windows
@@ -1415,7 +1415,7 @@ script.log(script.dirSeparator());
 Obtener una lista de las rutas de todas las notas seleccionadas
 -------------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Devuelve una lista de las rutas de todas las notas seleccionadas
@@ -1436,7 +1436,7 @@ Puede que quiera echar un vistazo al ejemplo [external-note-diff.qml](https://gi
 Obtener una lista de los identificadores de todas las notas seleccionadas
 -----------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Gibt eine Liste der IDs aller ausgewählten Notizen zurück
@@ -1457,7 +1457,7 @@ Puede que quiera echar un vistazo al ejemplo [export-notes-as-one-html.qml](http
 Activar una acción de menú
 ------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Activa una acción de menú
@@ -1487,7 +1487,7 @@ You can get the object names of the menu action from [mainwindow.ui](https://git
 Opening an input dialog with a select box
 -----------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
   * Abre un cuadro de diálogo de entrada con un cuadro de selección
@@ -1518,7 +1518,7 @@ Puede que quiera echar un vistazo al ejemplo [input-dialogs.qml](https://github.
 Abrir un diálogo de entrada con una edición de línea
 ----------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Abre un cuadro de diálogo de entrada con una edición de línea.
@@ -1544,7 +1544,7 @@ script.log(result);
 Abrir un diálogo de entrada con un editor de texto multirrenglón
 ---------------------------------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Opens an input dialog with a multi-line text edit
@@ -1567,10 +1567,10 @@ var result = script.inputDialogGetMultiLineText(
 script.log(result);
 ```
 
-Comprobando si existe un archivo
+Comprobar si un archivo existe
 -------------------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Comprobar si existe un archivo
@@ -1634,7 +1634,7 @@ script.log(result);
 
 Puede que quiera echar un vistazo al ejemplo [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Trabajando con websockets
+Trabajar con websockets
 -----------------------
 
 Puede controlar QOwnNotes de forma remota utilizando `WebSocketServer`.
@@ -1677,7 +1677,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | Imagen                     | 3   |
 | CodeBlock                  | 4   |
 | CodeBlockComment           | 5   |
-| Oblicua                    | 7   |
+| Cursiva                    | 7   |
 | Negrita                    | 8   |
 | Liza                       | 9   |
 | Comentario                 | 11  |

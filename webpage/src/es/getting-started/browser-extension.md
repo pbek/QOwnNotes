@@ -15,18 +15,18 @@ Información
 ## Instalación
 
 1. Obtenga la extensión
-    - [Tienda virtual de Chrome](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-    - [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+    - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+    - [Página de complementos para Firefox](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
     - También puede encontrar la extensión en [GitHub](https://github.com/qownnotes/web-companion/).
 2. Agregue el token de seguridad para configurar la extensión.
     - La primera vez que haga clic en el ícono de la extensión del navegador QOwnNotes, recibirá un cuadro de diálogo con un token de seguridad. Copie el token.
     - Vaya a la ubicación de administración de extensiones de su navegador. Haga clic en los detalles de la extensión QOwnNotes.
     - Pegue el token en el campo Token de seguridad.
-3. Para usar el modo privado, deberá permitir que la extensión se ejecute en ventanas privadas en los ajustes de la extensión.
+3. Para usar el modo privado, deberá permitir que la extensión se ejecute en ventanas privadas en la configuración de la extensión.
 
 ## Cortadora web
 
-![cortadora web](/img/web-clipper.png)
+![web-clipper](/img/web-clipper.png)
 
 Haga clic con el botón derecho en una página web o en el texto seleccionado para usar la funcionalidad **web-clipper**. Allí también puede crear una nueva nota con una ** captura de pantalla** de la página web actual.
 
@@ -44,7 +44,7 @@ Si utiliza Firefox, también debe cerciorarse de que ha activado el permiso opci
 
 ## Marcadores
 
-![marcadores](/img/bookmarks.png)
+![bookmarks](/img/bookmarks.png)
 
 Si desea tener un control total sobre los marcadores de su navegador y ** usarlos en diferentes navegadores y sistemas operativos **, entonces la extensión del navegador QOwnNotes es para usted.
 
@@ -52,7 +52,7 @@ De manera predeterminada, la extensión del navegador mostrará todos los **enla
 
 También puede **administrar sus marcadores en notas** con la etiqueta de nota `marcadores` (modificable en la configuración). Estos enlaces también pueden tener etiquetas y una descripción que se mostrará en la extensión del navegador.
 
-Los nuevos marcadores se almacenan en una nota llamada `Marcadore` (también modificable en la configuración).
+Los nuevos marcadores se almacenan en una nota llamada `Marcadores` (también modificable en la configuración).
 
 ::: tip
 ¡También puede importar los marcadores de su navegador a QOwnNotes con la extensión del navegador web complementario!
@@ -61,11 +61,11 @@ Los nuevos marcadores se almacenan en una nota llamada `Marcadore` (también mod
 ### Sintaxis de los enlaces de marcadores
 
 ```markdown
-- [nombre de la página web] (https://www.example.com)
-- [nombre de la página web] (https://www.example.com) #tag1 #tag2
-- [Nombre de la página web] (https://www.example.com) solo una descripción
-- [Nombre de la página web] (https://www.example.com) #tag1 #tag2 alguna descripción y etiquetas
-* [Nombre de la página web] (https://www.example.com) el carácter de lista alternativo también funciona
+- [Nombre de la página web] (https://www.ejemplo.com)
+- [Nombre de la página web] (https://www.ejemplo.com) #etiqueta1 #etiqueta2
+- [Nombre de la página web] (https://www.ejemplo.com) solo una descripción
+- [Nombre de la página web] (https://www.ejemplo.com) #etiqueta1 #etiqueta2 alguna descripción y etiquetas
+* [Nombre de la página web] (https://www.ejemplo.com) el carácter de lista alternativo también funciona
 ```
 
-Puede buscar nombre, etiquetas de Url o descripción en la extensión del navegador.
+Puede buscar nombres, etiquetas de URLs o descripciones en la extensión del navegador.

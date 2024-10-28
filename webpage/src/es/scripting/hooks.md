@@ -1,4 +1,4 @@
-# Hooks
+# Ganchos
 
 onNoteStored
 ------------
@@ -275,7 +275,7 @@ function noteTaggingHook(note, action, tagName, newTagName);
     -   la eliminación masiva de etiquetas de notas en la lista de notas eliminará esas etiquetas de sus notas
     -   la aplicación activará una serie de acciones `agregar` y `eliminar` para todas las etiquetas seleccionadas y sus hijos en todas las notas si las etiquetas se mueven en el panel de etiquetas
 
-You may want to take a look at the example [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) to implement your own tagging mechanism.
+Puede que quiera echar un vistazo al ejemplo [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) para implementar su mecanismo de etiquetamiento propio.
 
 ::: warning
 Asegúrese de que su acción `list` sea realmente rápida, ¡porque se ejecutará para cada nota cada vez que se recargue la carpeta de notas!
@@ -286,11 +286,11 @@ noteTaggingByObjectHook
 
 De manera similar a [noteTaggingHook](#notetagginghook), puede implementar su propio mecanismo de etiquetado de notas, pero no está obligado a etiquetar nombres en la raíz del árbol de etiquetas. De esta forma, puede utilizar todo el árbol de etiquetas en lugar de solo una lista de etiquetas.
 
-Con `noteTaggingByObjectHook` obtienes un objeto `TagApi` como parámetro, en lugar de un nombre de etiqueta. Y como resultado de la acción `list`, debe proporcionar una lista de identificadores de etiquetas.
+Con `noteTaggingByObjectHook`, obtiene un objeto `TagApi` como parámetro, en lugar de un nombre de etiqueta. Y como resultado de la acción `list`, debe proporcionar una lista de identificadores de etiquetas.
 
 Esto también significa que debe crear usted mismo las etiquetas faltantes para poder proporcionar una lista de los identificadores de etiquetas ya existentes para la acción `list`.
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * Maneja el etiquetado de notas para una nota
@@ -314,7 +314,7 @@ autocompletionHook
 
 Puede devolver una lista de cadenas para agregar a la lista de autocompletar cuando se invoca el autocompletado (por ejemplo, presionando <kbd>Ctrl + Espacio</kbd>).
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * Llama a la función autocompletionHook para todos los componentes del script
@@ -330,9 +330,9 @@ Puede que quiera echar un vistazo al ejemplo [autocompletion.qml](https://github
 websocketRawDataHook
 --------------------
 
-Este enlace se llama cuando se envían datos desde la extensión del navegador QOwnNotes Web Companion a través del menú contextual del navegador web.
+Este gancho se llama cuando se envían datos desde la extensión del navegador QOwnNotes Web Companion a través del menú contextual del navegador web.
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
  * @param requestType can be "page" or "selection"
@@ -352,7 +352,7 @@ onDetachedProcessCallback
 
 Este gancho se llama cuando un hilo de script de [startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background) termina de ejecutarse.
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
   * Esta función se llama cuando se termina de ejecutar un hilo de script.
@@ -371,7 +371,7 @@ Puede que quiera echar un vistazo al ejemplo [callback-example.qml](https://gith
 windowStateChangedHook
 --------------
 
-### Parámetros y llamada al método
+### Llamada y parámetros del método
 ```js
 /**
 * Esta función se llama después de que se activara un evento WindowStateChange
@@ -386,7 +386,7 @@ Puede que quiera echar un vistazo al ejemplo [window-state-changed.qml](https://
 workspaceSwitchedHook
 ----------------------
 
-This hook is called when workspaces are switched.
+Este gancho se llama cuando se cambian los espacios de trabajo.
 
 ### Llamada y parámetros del método
 ```js
@@ -404,7 +404,7 @@ Puede que quiera echar un vistazo al ejemplo [websocket-raw-data-new-note.qml](h
 openAiBackendsHook
 ------------------
 
-Este hook se llama cuando el servicio de OpenAI se vuelve a cargar. Por ejemplo, esto también sucede cuando el motor de scripts se vuelve a cargar.
+Este gancho se llama cuando el servicio de OpenAI se vuelve a cargar. Por ejemplo, esto también sucede cuando el motor de scripts se vuelve a cargar.
 
 You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs.
 

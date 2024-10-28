@@ -4,7 +4,7 @@ Esta hoja de referencia de Markdown está pensada como una referencia rápida y 
 
 ## Encabezados
 
-Usa títulos para estructurar tus textos.
+Use encabezados para estructurar sus textos.
 
 ```markdown
 # H1
@@ -102,7 +102,7 @@ Two of the simpler uses for links are pointing to webpages or other notes. There
 [You can use numbers for reference-style link definitions][1]
 
 Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
-http://www.example.com or <http://www.example.com>
+http://www.example.com o <http://www.example.com>
 
 [1]: https://www.qownnotes.org
 ```
@@ -278,7 +278,7 @@ Puede usar el [atajo](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> para marcar te
 Hay tres formas de obtener una regla horizontal: guiones, asteriscos o guiones bajos.
 
 ```markdown
-Three or more...
+Tres o más...
 
 Hyphens
 
@@ -304,12 +304,12 @@ Puede ingresar dos espacios y una nueva línea con <kbd>⇧ Shift</kbd> + <kbd>R
 :::
 
 ```markdown
-Here's a line for us to start with.
+Aquí hay una línea con la cual podemos comenzar.
 
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+Esta línea está separada de la anterior por dos líneas nuevas, por lo que será un *párrafo separado*.
 
-This line is also begins a separate paragraph, but...  
-This line is only separated by two trailing spaces and a single newline, so it's a separate line in the *same paragraph*.
+Esta línea también inicia un párrafo separado pero...
+Esta línea solo está separada por dos espacios finales y una sola línea nueva, por lo que es una línea separada en el *mismo párrafo*.
 ```
 
 ::: tip
@@ -321,9 +321,9 @@ Los espacios finales están resaltados de forma predeterminada en el editor.
 Los comentarios no se muestran en la vista previa.
 
 ```markdown
-[comment]: # (This comment will not appear in the preview)
+[comment]: # (Este comentario no aparecerá en la vista previa)
 
-<!-- HTML comments are also hidden -->
+<!-- Los comentarios de HTML también están ocultos -->
 ```
 
 ::: tip
@@ -335,8 +335,8 @@ Un bloque de comentario html inicial en una nota también se ignorará en la gen
 Puede crear listas de tareas pendientes simples con listas de casillas de verificación.
 
 ```markdown
-- [x] done
-- [ ] todo
+- [x] hecho
+- [ ] por hacer
 ```
 
 ::: tip

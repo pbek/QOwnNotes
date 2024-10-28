@@ -22,13 +22,13 @@ opi qownnotes
 ```
 
 ::: warning
-Esta herramienta efectuará una consulta en la totalidad del servicio OBS, así que cerciórese de elegir `qownnotes`, y no `qownnotes-lang`, si recibe una pregunta.
+Esta herramienta efectuará una consulta en la totalidad del servicio OBS. Por lo tanto, cerciórese de elegir `qownnotes`, y no `qownnotes-lang`, si recibe una pregunta.
 
 Además, compruebe que el repositorio elegido sea el oficial, `home:pbek:QOwnNotes`, y no uno de terceros.
 :::
 
 ::: tip
-Marque la opción para conservar el repositorio tras la instalación y así poder recibir actualizaciones.
+Necesita escoger la opción para conservar el repositorio tras la instalación para poder recibir actualizaciones.
 :::
 
 ## openSUSE Leap 15.6

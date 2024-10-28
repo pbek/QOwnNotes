@@ -3,14 +3,14 @@
 Hay repositorios de QOwnNotes para **Fedora 28 y superior**.
 
 ::: tip
-QOwnNotes is provided in the [Fedora repositories](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/). That version is generally one or two patch versions behind the master repository available through the instructions below.
+QOwnNotes se proporciona en los [repositorios de Fedora](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/). Esa versión generalmente está una o dos versiones de parche detrás del repositorio principal, disponible en las instrucciones a continuación.
 
-For most users you can just issue `dnf install qownnotes` in a terminal window. If you want the **most up-to-date version**, please continue reading.
+Para la mayoría de los usuarios, simplemente puede ejecutar `dnf install qownnotes` en una ventana de terminal. Si desea la **versión más actualizada**, por favor continúe leyendo.
 :::
 
 ## En sistemas con el complemento config-manager de dnf
 
-Run the following shell commands as root to add the repository.
+Ejecute las órdenes de consola siguientes con permisos administrativos para añadir el repositorio.
 
 ```bash
 dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
@@ -20,28 +20,28 @@ dnf install qownnotes
 ```
 
 ::: tip
-You may need to accept the repo key before you can download from it.
+Tal vez necesite aceptar la clave del repositorio antes de poder descargar desde este.
 
-If you have any problems, import the key manually with:
+Si tiene problemas, importe la clave por su propia cuenta con:
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
-Please note that the portion "Fedora_40" in the above code should reflect the version of Fedora you are using (i.e. "Fedora_39", "Fedora_38" etc.)
+Por favor tenga en cuenta que la porción "Fedora_40" en el código anterior debe reflejar la versión de Fedora que está utilizando (por ejemplo "Fedora_39", "Fedora_38", etc.)
 :::
 
 ## Método de instalación heredado
 
-Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
+Utilice este método si su versión de Fedora no admite el complemento `config-manager` de dnf. Ejecute estos comandos como root.
 
 Ejecute la orden de consola siguiente con privilegios administrativos para marcar el repositorio como de fiar.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
-Again: note that the portion "Fedora_40" in the above code should reflect the version of Fedora you are using (i.e. "Fedora_39", "Fedora_38" etc.)
+Nuevamente: tenga en cuenta que la porción "Fedora_40" en el código anterior debe reflejar la versión de Fedora que está utilizando (por ejemplo "Fedora_39", "Fedora_38", etc.)
 
-Then run the following shell commands as root to add the repository and install QOwnNotes from there.
+Tras ello, ejecute las órdenes de consola siguientes con permisos administrativos para añadir el repositorio e instalar QOwnNotes desde allí.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -60,18 +60,18 @@ dnf install qownnotes
 
 [Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (este enlace de ejemplo es para Fedora 40)
 
-## QOwnNotes version-updating notes for Fedora
+## Notas sobre la actualización de versiones de QOwnNotes para Fedora
 
-### Problems with GPG keys?
+### ¿Problemas con claves GPG?
 
-Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not *automatically* extended. This can lead to problems *updating* QOwnNotes.
+Los cambios en las políticas criptográficas de Fedora puede significar que las claves "antiguas" (expiradas) del repositorio no sean extendidas *automáticamente*. Esto puede provocar problemas al *actualizar* QOwnNotes.
 
-**Detail:** If you have a problem with invalid keys (i.e. GPG errors) such as `certificate is not alive` and/or `key is not alive` due to key expiry, this terminal command should delete the expired key:
+**Detalle:** Si tiene un problema con claves inválidas (por ejemplo errores GPG) como que el `certificado no esté activo` y/o que la `clave no esté activa` debido a su expiración, este comando de terminal debería eliminar la clave expirada:
 
 ```bash
 sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubkey | grep pbek | cut -f1)
 ```
 
-Detailed explanation of the command is available on GitHub in a [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) related to this exact issue.
+La explicación detallada del comando se encuentra disponible en GitHub en un [tema](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) relacionado a este mismo problema.
 
-Once the expired key has been deleted, you must then newly *import* the **current** key manually as described in the beginning of these installation instructions.
+Una vez que la clave expirada haya sido eliminada, debe *importar* nuevamente la clave **actual** de forma manual, tal y como se describe al inicio de estas instrucciones de instalación.

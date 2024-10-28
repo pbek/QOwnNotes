@@ -33,14 +33,14 @@ Puede utilizar los métodos de [Date](https://developer.mozilla.org/en-US/docs/W
 
 ### Ejemplo
 ```js
-script.log (note.fileCreated.toISOString ());
-script.log (note.fileLastModified.getFullYear ());
+script.log(note.fileCreated.toISOString());
+script.log(note.fileLastModified.getFullYear());
 
-// cambia el nombre de una nota a "new name.md"
-note.renameNoteFile ("nuevo nombre");
+// renombra una nota a "nuevo nombre.md"
+note.renameNoteFile("nuevo nombre");
 
 // verifica si está permitido tener un nombre de archivo de nota diferente al del título
-script.log (note.allowDifferentFileName ());
+script.log(note.allowDifferentFileName());
 ```
 
 NoteSubFolder
@@ -102,7 +102,7 @@ class TagApi {
 
 ### Ejemplo
 ```js
-// ¡No te olvides de usar “import QOwnNotesTypes 1.0” en la parte superior de tu script!
+// ¡No olvide usar “import QOwnNotesTypes 1.0” en la parte superior de su script!
 
 // Fetch tag "home"
 var tag = script.getTagByNameBreadcrumbList(["home"]);
@@ -116,9 +116,9 @@ for (var idx in notes) {
 }
 ```
 
-Puedes encontrar mas ejemplos donde se usa TagApi en [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
+Puede encontrar mas ejemplos donde se usa TagApi en [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
 
-Ventana Principal
+MainWindow
 ----------
 
 ### Propiedades y métodos

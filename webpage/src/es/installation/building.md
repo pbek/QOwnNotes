@@ -12,9 +12,9 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-For debugging, it's easiest to use QtCreator. When downloading [Qt Creator](https://www.qt.io/download-qt-installer-oss), you will also need the package `qtwebsockets` to build QOwnNotes with Qt6. If you build under Windows, you want to stick to *MinGw 64-bit*. On Linux, you most likely have a package for QtCreator in your repository.
+Para la depuración, es más fácil usar QtCreator. Al descargar [Qt Creator](https://www.qt.io/download-qt-installer-oss), también necesitará el paquete `qtwebsockets` para construir QOwnNotes con Qt6. Si lo construye en Windows, querrá ceñirse a *MinGw 64-bit*. En Linux, lo más probable es que tenga un paquete para QtCreator en su repositorio.
 
-Afterward open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
+Posteriormente, abra el archivo de proyecto `src/QOwnNotes.pro` y haga clic en **Construir** / **Construir Proyecto QOwnNotes**.
 
 Si sabe lo que está haciendo, también puede construir QOwnNotes directamente desde su terminal:
 
@@ -39,8 +39,8 @@ Si desea contribuir código fuente al proyecto, por favor haga sus pull requests
 
 ## Archivo fuente
 
-You will find source archives of QOwnNotes on [QOwnNotes source archive](https://github.com/pbek/QOwnNotes/releases).
+Encontrará los archivos fuente de QOwnNotes en el [archivo fuente de QOwnNotes](https://github.com/pbek/QOwnNotes/releases).
 
-The source archives will be accessible like that:
+Los archivos fuente serán accesibles de esta forma:
 
 `https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`

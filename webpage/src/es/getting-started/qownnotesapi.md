@@ -18,7 +18,7 @@ El intercambio de notas se realiza a través de la API proporcionada por Nextclo
 Utilice su **Nextcloud** / **ownCloud** **cliente de sincronización** para **sincronizar sus notas**, sus notas son simples archivos de rebajas. No es necesario inventar la rueda dos veces. Y también hay personas que utilizan diferentes servicios para sincronizar sus archivos de notas (como Dropbox, Syncthing o Resilio Sync).
 :::
 
-## Qué hace QOwnNotesAPI
+## Lo que QOwnNotesAPI hace
 
 - Accediendo a sus notas en la papelera
 - Acceder a las versiones de sus notas
