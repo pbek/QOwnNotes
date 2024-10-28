@@ -2,6 +2,8 @@
 
 ## 24.10.3
 - More warnings are now ignored in log dialog for Qt 6.8.0 (for [#3134](https://github.com/pbek/QOwnNotes/issues/3134))
+- The contrast of the link color in the light color schema was increased to make
+  it more readable (for [#3139](https://github.com/pbek/QOwnNotes/issues/3139))
 
 ## 24.10.2
 - A small graphical glitch on macOS in the *Markdown highlighting settings* was fixed
