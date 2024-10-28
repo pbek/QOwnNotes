@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.10.4
+- Markdown tables can now be indented with up to three spaces to match the behavior
+  of the preview (for [#3137](https://github.com/pbek/QOwnNotes/issues/3137))
+
 ## 24.10.3
 - More warnings are now ignored in log dialog for Qt 6.8.0 (for [#3134](https://github.com/pbek/QOwnNotes/issues/3134))
 - The contrast of the link color in the light color schema was increased to make
