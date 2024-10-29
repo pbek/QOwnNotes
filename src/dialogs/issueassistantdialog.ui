@@ -380,7 +380,7 @@
           <item row="0" column="0" colspan="2">
            <widget class="QLabel" name="label_4">
             <property name="text">
-             <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Debug-logging was automatically enable. Please make sure that the log output provides useful information by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Refresh&lt;/span&gt; button after you were reproducing your issue.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Debug-logging was automatically enabled. Please make sure that the log output provides useful information by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Refresh&lt;/span&gt; button after you were reproducing your issue.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
