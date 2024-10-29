@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## Next
+- The capturing of indented Markdown tables was improved (for [#3137](https://github.com/pbek/QOwnNotes/issues/3137))
+
 ## 24.10.4
 - Markdown tables can now be indented with up to three spaces to match the behavior
   of the preview (for [#3137](https://github.com/pbek/QOwnNotes/issues/3137))
