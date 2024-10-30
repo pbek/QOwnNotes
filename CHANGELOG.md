@@ -2,7 +2,7 @@
 
 ## 24.10.5
 - The capturing of indented Markdown tables was improved (for [#3137](https://github.com/pbek/QOwnNotes/issues/3137))
-- The actions in the *Find action* dialog is now using the correct font size if you
+- The actions in the *Find action* dialog is now using the correct font size, if you
   are overriding the global interface font size (for [#3145](https://github.com/pbek/QOwnNotes/issues/3145))
 - Added more Russian, Spanish, Dutch, Korean, Swedish translation (thank you,
   catmenmilota, alejandromoc, stephanp, venusgirl, dzenan)
