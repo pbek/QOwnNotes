@@ -28,7 +28,7 @@ If there are any issues with the conversion, feel free to open a ticket at [Gith
 > 
 > Replace Keep by the folder containing notes in JSON format. The out folder will be created if it doesn't exist.
 
-From https://gitlab.com/-/snippets/2002921
+From <https://gitlab.com/-/snippets/2002921>
 
 ## Tomboy
 
