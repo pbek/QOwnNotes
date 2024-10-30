@@ -26,24 +26,39 @@ You will find the authors in the *Script repository*.
 
 
 #### Expected behaviour
+A clear and concise description of what you expected to happen
+and why you think it should be that way.
 
 #### Actual behaviour
+A clear and concise description of what the bug is.
 
 #### Steps to reproduce
+Steps to reproduce the behavior:
+1. ...
+2. ...
+3. ...
+
+#### Screenshots
+If applicable, add screenshots to help explain your problem.
 
 #### Output from the debug section in the settings dialog
 
 <details><summary>Expand</summary>
 
-<!-- Replace this with the output -->
+<!--
+Replace this with the output.
+Please don't use a code-block, the output is already formatted!
+-->
 
 </details>
 
 #### Relevant log output in the Log panel
 
-<!-- You have to enable the Log panel in the Windows menu! -->
-<!-- Please also enable debug output in the options of panel. -->
-<!-- Alternatively you can also turn on a log file in the settings. -->
+<!--
+You have to enable the Log panel in the Windows menu!
+Please also enable debug output in the options of panel.
+Alternatively you can also turn on a log file in the settings.
+-->
 
 <details><summary>Expand</summary>
 
