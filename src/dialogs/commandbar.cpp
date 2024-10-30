@@ -15,6 +15,7 @@
 
 #include "libraries/fuzzy/kfuzzymatcher.h"
 #include "models/commandmodel.h"
+#include "services/settingsservice.h"
 #include "utils/misc.h"
 
 class CommandBarFilterModel : public QSortFilterProxyModel {
@@ -74,7 +75,17 @@ class CommandBarStyleDelegate : public QStyledItemDelegate {
         const QString component = QStringLiteral("<span style=\"color: gray;\">") + strs.at(0) +
                                   QStringLiteral(": </span>");
 
-        doc.setHtml(component + str);
+        str = component + str;
+        SettingsService settings;
+        bool overrideInterfaceFontSize =
+            settings.value(QStringLiteral("overrideInterfaceFontSize"), false).toBool();
+        if (overrideInterfaceFontSize) {
+            str = QStringLiteral("<span style=\"font-size: %1px;\">").arg(
+                      settings.value(QStringLiteral("interfaceFontSize"), 11).toString()) +
+                  str + QStringLiteral("</span>");
+        }
+
+        doc.setHtml(str);
         doc.setDocumentMargin(2);
 
         painter->save();
