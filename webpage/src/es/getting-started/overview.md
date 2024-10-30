@@ -152,7 +152,7 @@
 - QOwnNotes está escrito en C ++ y optimizado para **bajo consumo de recursos** (sin CPU y aplicación de Electron que consume mucha memoria)
 - **Importación de Evernote y Joplin**
 - **Compatible** with the [Notes](https://apps.nextcloud.com/apps/notes) application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
-- Create **[Nextcloud Deck](https://apps.nextcloud.com/apps/deck) cards** and link to them in your notes
+- Cree **tarjetas de [Nextcloud Deck](https://apps.nextcloud.com/apps/deck)** y enlácelas a sus notas
 - Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
 - Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
 - Las versiones **antiguas** de sus notas pueden ser **restauradas** desde su servidor **Nextcloud / ownCloud**

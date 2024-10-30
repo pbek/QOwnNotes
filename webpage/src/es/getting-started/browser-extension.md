@@ -68,4 +68,4 @@ Los nuevos marcadores se almacenan en una nota llamada `Marcadores` (también mo
 * [Nombre de la página web] (https://www.ejemplo.com) el carácter de lista alternativo también funciona
 ```
 
-Puede buscar nombres, etiquetas de URLs o descripciones en la extensión del navegador.
+You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

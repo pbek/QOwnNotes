@@ -68,4 +68,4 @@ Sie können Ihre Browser-Lesezeichen auch mit der Web-Companion-Browsererweiteru
 * [Name der Webseite] (https://www.example.com) das alternative Listenzeichen funktioniert ebenfalls
 ```
 
-Sie können in der Browsererweiterung nach Namen, URL-Tags oder Beschreibungen suchen.
+You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

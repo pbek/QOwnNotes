@@ -68,4 +68,4 @@ A böngésző könyvjelzőit a webkísérő böngésző kiterjesztéssel is impo
 * [Webpage name](https://www.example.com) az alternatív lista karakter is működik
 ```
 
-A böngésző kiterjesztésében kereshet nevet, URL-címkéket vagy leírást.
+You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

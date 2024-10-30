@@ -102,7 +102,7 @@
 - <kbd>Ctrl</kbd> + <kbd>Down</kbd> desplaza el contenido hacia abajo
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Abajo</kbd> mueve la línea actual hacia abajo
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Arriba</kbd> mueve la línea actual hacia arriba
-- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> agrega dos espacios y un carácter de nueva línea para forzar una nueva línea de descuento
+- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> agrega dos espacios y un carácter de nueva línea para forzar una nueva línea de markdown
 
 ### En el panel de vista previa de notas
 
@@ -121,7 +121,7 @@
 
 ### En la ventana principal
 
-- use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o <0>F3</0> y Teclas <0>⇧ Shift</0> + <0>F3</0> para saltar a la coincidencia anterior y siguiente
+- <kbd>⌘ Cmd</kbd> + <kbd>N</kbd> creates a new note with the current date and time in the name
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> crea una nueva nota en una nueva pestaña
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> le permite buscar notas (en el nombre de la nota y su contenido)
 - <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> le permite buscar notas en todas las etiquetas / subcarpetas
@@ -219,7 +219,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>Abajo</kbd> desplaza el contenido hacia abajo
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Down</kbd> mueve la línea actual hacia abajo
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Up</kbd> mueve la línea actual hacia arriba
-- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> agrega dos espacios y un carácter de nueva línea para forzar una nueva línea de descuento
+- <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> agrega dos espacios y un carácter de nueva línea para forzar una nueva línea de markdown
 
 ### En el panel de vista previa de notas
 

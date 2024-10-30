@@ -68,4 +68,4 @@ Puoi anche importare i segnalibri del tuo browser in QOwnNotes con l'estensione 
 * [Nome pagina web](https://www.example.com) funziona anche il carattere lista alternativo
 ```
 
-Puoi cercare nome, etichetta URL o descrizione nell'estensione del browser.
+You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

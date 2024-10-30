@@ -68,4 +68,4 @@ By default, the browser extension will show all **links of the current note** in
 * [نام صفحه وب](https://www.example.com) نویسه لیست جایگزین هم کار می کند
 ```
 
-شما این امکان را دارید که نام، URL برچسب ها یا توضیح را در افزونه مرورگر جستجو کنید.
+You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

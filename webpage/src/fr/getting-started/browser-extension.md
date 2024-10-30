@@ -69,4 +69,4 @@ Vous pouvez également importer les favoris de votre navigateur dans QOwnNotes a
 * [Webpage name](https://www.example.com) le caractère alternatif pour un élément de liste fonctionne également
 ```
 
-Il est possible de rechercher un nom, des étiquettes d'URL ou une description dans l'extension de navigateur.
+You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

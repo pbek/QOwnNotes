@@ -628,7 +628,7 @@
 </message>
 <message>
 <source>Invalid XML!</source>
-<translation type="unfinished">Invalid XML!</translation>
+<translation>Ogiltig XML!</translation>
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
@@ -839,7 +839,7 @@
 </message>
 <message>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>Standard: %1</translation>
 </message>
 <message>
 <source>Unknown option: %1</source>
@@ -1024,7 +1024,7 @@
 </message>
 <message>
 <source>Delete</source>
-<translation>Ta bort</translation>
+<translation>Radera</translation>
 </message>
 <message>
 <source>Export schema</source>
@@ -1845,7 +1845,7 @@
 </message>
 <message>
 <source>Edit</source>
-<translation>&amp;Redigera</translation>
+<translation>Redigera</translation>
 </message>
 <message>
 <source>Versioning</source>
@@ -3834,7 +3834,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>Hide password</source>
-<translation type="unfinished">Hide password</translation>
+<translation>Dölj lösenord</translation>
 </message>
 </context>
 <context>
@@ -5033,7 +5033,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
 </message>
 <message>
 <source>Your ownCloud username</source>
-<translation>Ditt användarnamn för ownCloud</translation>
+<translation>Ditt ownCloud-användarnamn</translation>
 </message>
 <message>
 <source>Password:</source>
@@ -6271,7 +6271,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
 </message>
 <message>
 <source>Your CalDAV username</source>
-<translation>Ditt CalDAV användarnamn</translation>
+<translation>Ditt CalDAV-användarnamn</translation>
 </message>
 <message>
 <source>Your CalDAV password</source>
@@ -7194,7 +7194,7 @@ Dina anteckningar kommer att förbli intakta!</translation>
 </message>
 <message>
 <source>&amp;Delete images</source>
-<translation type="unfinished">&amp;Delete images</translation>
+<translation>&amp;Radera bilder</translation>
 </message>
 <message>
 <source>&amp;Add images to current note</source>

@@ -7031,7 +7031,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>File renaming failed</source>
-<translation>Error al cambiar el nombre del archivo</translation>
+<translation>Error al renombrar el archivo</translation>
 </message>
 <message>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>

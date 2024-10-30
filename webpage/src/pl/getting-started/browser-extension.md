@@ -68,4 +68,4 @@ Możesz też zaimportować zakładki ze swojej przeglądarki do QOwnNotes za pom
 * [Nazwa strony](https://www.example.com) znak listy alternatywnej również działa
 ```
 
-W rozszerzeniu przeglądarki możesz wyszukiwać nazwy, tagi URL i opisy.
+You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

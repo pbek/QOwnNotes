@@ -85,7 +85,7 @@
 <name>BacklinkWidget</name>
 <message>
 <source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
-<translation type="unfinished">Open note and find &lt;code&gt;%1&lt;/code&gt;</translation>
+<translation>Открыть заметку и найти &lt;code&gt;%1&lt;/code&gt;</translation>
 </message>
 </context>
 <context>
@@ -1685,11 +1685,11 @@
 </message>
 <message>
 <source>Headings</source>
-<translation type="unfinished">Headings</translation>
+<translation>Заголовки</translation>
 </message>
 <message>
 <source>Backlinks</source>
-<translation type="unfinished">Backlinks</translation>
+<translation>Обратные ссылки</translation>
 </message>
 <message>
 <source>Add a tag to the current note</source>
@@ -2728,7 +2728,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+<translation>Вы так же хотите экспортировать медиа файлы и приложения к заметке? Файлы могут быть перезаписаны в папке назначения!</translation>
 </message>
 <message>
 <source>Bookmarked note position at slot %1</source>
@@ -2779,33 +2779,33 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
-<translation type="unfinished">Ln %1, Col %2</translation>
+<translation>Лн %1, Клн %2</translation>
 </message>
 <message>
 <source>Line %1, Column %2</source>
-<translation type="unfinished">Line %1, Column %2</translation>
+<translation>Линия %1, Колона %2</translation>
 </message>
 <message numerus="yes">
 <source>%n selected</source>
 <comment>Characters selected</comment>
-<translation type="unfinished">
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
+<translation>
+<numerusform>%n выбрано</numerusform>
+<numerusform>%n выбраны</numerusform>
+<numerusform>%n выбраны</numerusform>
+<numerusform>%n выбранных</numerusform>
 </translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
-<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+<translation>Поддержка Nextcloud Deck прекращена!</translation>
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>Поддержка Nextcloud Deck не включена или настроена неправильно. &lt;br /&gt;Пожалуйста, проверьте свою конфигурацию &lt;strong&gt;Nextcloud&lt;/strong&gt; в настройках!</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>Путь к заметке '%1' был скопирован в буфер обмена</translation>
 </message>
 <message>
 <source>AI backends</source>
@@ -2879,7 +2879,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Open selected notes in tabs</source>
-<translation type="unfinished">Open selected notes in tabs</translation>
+<translation>Открыть выбранные заметки во вкладках</translation>
 </message>
 <message>
 <source>A script update was found!</source>
@@ -2911,16 +2911,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
-<translation type="unfinished">
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<translation>
+<numerusform>Пропущено копирование %n заметки (нет Markdown или текстовый файл нечитаемый)</numerusform>
+<numerusform>Пропущено копирование %n заметок (нет Markdown или текстовый файл нечитаемый)</numerusform>
+<numerusform>Пропущено копирование %n заметок (нет Markdown или текстовый файл нечитаемый)</numerusform>
+<numerusform>Пропущено копирование %n заметок (нет Markdown или текстовый файл нечитаемый)</numerusform>
 </translation>
 </message>
 <message>
 <source>Paste &amp;HTML as Markdown</source>
-<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+<translation>Скопировать &amp;HTML как Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -2928,7 +2928,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+<translation>Показывать все заметки с тегами '%1' (%2)</translation>
 </message>
 <message>
 <source>Allows you to rename the filename of the note</source>
@@ -2998,11 +2998,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note editing disabled</source>
-<translation type="unfinished">Note editing disabled</translation>
+<translation>Редактирование заметки отключено</translation>
 </message>
 <message>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
-<translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+<translation>Редактирование заметки сейчас отключено, вы хотите разрешетить редактирование?</translation>
 </message>
 <message>
 <source>Select text files to import</source>
@@ -3370,7 +3370,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>AI toolbar</source>
-<translation type="unfinished">AI toolbar</translation>
+<translation>Меню AI</translation>
 </message>
 <message>
 <source>window toolbar</source>
@@ -3718,10 +3718,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выделенную папку? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и подпапки также будут удалены!</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных папок? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и подпапки также будут удалены!</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных папок? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и подпапки также будут удалены!</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных папок?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этих папках также будут удалены!</numerusform>
 </translation>
 </message>
@@ -3734,14 +3734,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>OpenAiCompleter</name>
 <message>
 <source>Timeout, while waiting for the AI response</source>
-<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+<translation>Время ожидания ответа от AI истекло</translation>
 </message>
 </context>
 <context>
 <name>OpenAiService</name>
 <message>
 <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
+<translation>AI система отключена. Пожалуйста включите это в главном меню или в меню AI.</translation>
 </message>
 </context>
 <context>
@@ -3890,22 +3890,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>PasswordLineEdit</name>
 <message>
 <source>Show password</source>
-<translation type="unfinished">Show password</translation>
+<translation>Показать пароль</translation>
 </message>
 <message>
 <source>Hide password</source>
-<translation type="unfinished">Hide password</translation>
+<translation>Спрятать пароль</translation>
 </message>
 </context>
 <context>
 <name>QHotkey</name>
 <message>
 <source>Failed to register %1. Error: %2</source>
-<translation type="unfinished">Failed to register %1. Error: %2</translation>
+<translation>Неудачная регистрация %1. Ошибка: %2</translation>
 </message>
 <message>
 <source>Failed to unregister %1. Error: %2</source>
-<translation type="unfinished">Failed to unregister %1. Error: %2</translation>
+<translation>Неудачная отмена регистрации %1. Ошибка: %2</translation>
 </message>
 </context>
 <context>
@@ -3949,11 +3949,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Image file exists</source>
-<translation type="unfinished">Image file exists</translation>
+<translation>Файл изображения уже существует</translation>
 </message>
 <message>
 <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
-<translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
+<translation>Файл изображения уже существует в медиа папке, вы хотите использовать существующую или создать новый файл?</translation>
 </message>
 <message numerus="yes">
 <source>…and %n more note(s)</source>
@@ -3994,39 +3994,39 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Dark mode detected</source>
-<translation type="unfinished">Dark mode detected</translation>
+<translation>Тёмная тема обнаружена</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Похоже, что ваша Windows работает в тёмной теме. Вы хотите переключиться на тёмную тему в QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Похоже, что ваша Windows работает в светлой теме. Вы хотите переключиться на светлую тему в QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
-<translation type="unfinished">Light mode detected</translation>
+<translation>Светлая тема обнаружена</translation>
 </message>
 <message>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;последнее изменение: %2&lt;br /&gt;размер файла: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Похоже, что ваша Linux работает в тёмной теме. Вы хотите переключиться на тёмную тему в QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Похоже, что ваша Linux работает в тёмной теме. Вы хотите переключиться на светлую тему в QOwnNotes?</translation>
 </message>
 <message>
 <source>Panel disabled</source>
-<translation type="unfinished">Panel disabled</translation>
+<translation>Панель отключена</translation>
 </message>
 <message>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
+<translation>Панель &lt;strong&gt;%1&lt;/strong&gt; сейчас отключена, вы хотите включить её обратно, что бы это действие заработало?</translation>
 </message>
 <message>
 <source>Command failed!</source>
@@ -4042,11 +4042,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Login flow succeeded</source>
-<translation type="unfinished">Login flow succeeded</translation>
+<translation>Процесс входа в систему завершен удачно</translation>
 </message>
 <message>
 <source>Username and password were set successfully!</source>
-<translation type="unfinished">Username and password were set successfully!</translation>
+<translation>Имя пользователя и пароль были успешно установлены!</translation>
 </message>
 <message>
 <source>Default</source>
@@ -4058,7 +4058,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
-<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
+<translation>Ваша папка для заметок &lt;b&gt;%1&lt;/b&gt; не найдена! Вы хотите выбрать новую?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -4091,112 +4091,112 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
+<translation>
+<numerusform>%n заметка (заметок) используют это изображение. Вы хотите также переименовать изображение в заметке (заметках)?</numerusform>
+<numerusform>%n заметки используют это изображение. Вы хотите также переименовать изображение в заметках?</numerusform>
+<numerusform>%n заметок используют это изображение. Вы хотите также переименовать изображение в заметках?</numerusform>
+<numerusform>%n заметок используют это изображение. Вы хотите также переименовать изображение в заметках?</numerusform>
 </translation>
 </message>
 <message>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+<translation>Включить подпапки заметок в текущей папке заметок для импорта папок.</translation>
 </message>
 <message>
 <source>Login flow failed</source>
-<translation type="unfinished">Login flow failed</translation>
+<translation>Процесс входа в систему провалился</translation>
 </message>
 <message>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
+<translation>Nextcloud login flow v2 не может быть инициализирован. Убедитесь что Url сервера указан верно и вы используете Nextcloude сервер! &lt;br /&gt;&lt;br /&gt;Если у вас ещё сохраняются проблемы, пожалуйста, создайте пароль приложения вручную на вашей панели администратора сервера.</translation>
 </message>
 <message>
 <source>Could not parse login url!</source>
-<translation type="unfinished">Could not parse login url!</translation>
+<translation>Невозможно провести синтаксический анализ для входа в систему по Url!</translation>
 </message>
 <message>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
+<translation>Вы используете режим одиночного экземпляра приложения, который предотвращает повторный запуск приложения. При следующем запуске приложения режим одиночного экземпляра приложения будет отключен, чтобы приложение можно было перезапустить перед выходом из этого экземпляра.</translation>
 </message>
 <message>
 <source>Note was not found</source>
-<translation type="unfinished">Note was not found</translation>
+<translation>Заметка не найдена</translation>
 </message>
 <message>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-<translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+<translation>Невозможно найти заметку.&lt;br /&gt;Невозможно автоматически создать заметку в локации, потому что подпапки отключены в текущей папке с заметками.</translation>
 </message>
 <message>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+<translation>Заметка не найдена, создать новую заметку &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>Заметка не найдена, создать новую заметку &lt;strong&gt;%1&lt;/strong&gt; по пути &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
 <source>Failed to create note</source>
-<translation type="unfinished">Failed to create note</translation>
+<translation>Не удалось создать заметку</translation>
 </message>
 <message>
 <source>Note creation failed</source>
-<translation type="unfinished">Note creation failed</translation>
+<translation>Создание заметки не удалось</translation>
 </message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
 <message>
 <source>Increased font size to %1 pt</source>
-<translation type="unfinished">Increased font size to %1 pt</translation>
+<translation>Размер шрифта увеличен до %1 пунктов</translation>
 </message>
 <message>
 <source>Decreased font size to %1 pt</source>
-<translation type="unfinished">Decreased font size to %1 pt</translation>
+<translation>Размер шрифта уменьшен до %1 пунктов</translation>
 </message>
 <message>
 <source>An url was opened at the current cursor position</source>
-<translation type="unfinished">An url was opened at the current cursor position</translation>
+<translation>Url будет открыто в текущей позиции курсора</translation>
 </message>
 <message>
 <source>No equation was found in front of the cursor</source>
-<translation type="unfinished">No equation was found in front of the cursor</translation>
+<translation>Уравнение под курсором не обнаружено</translation>
 </message>
 <message>
 <source>Result for equation: %1 = %2</source>
-<translation type="unfinished">Result for equation: %1 = %2</translation>
+<translation>Результат уравнения: %1 = %2</translation>
 </message>
 <message>
 <source>&amp;Link selected text</source>
-<translation type="unfinished">&amp;Link selected text</translation>
+<translation>Сделать выделенный текст &amp;ссылкой</translation>
 </message>
 <message>
 <source>Insert &amp;link</source>
-<translation type="unfinished">Insert &amp;link</translation>
+<translation>Вставить &amp;ссылку</translation>
 </message>
 <message>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation type="unfinished">Block &amp;quote selected text</translation>
+<translation>Сделать выделенный текст как &amp;цитату</translation>
 </message>
 <message>
 <source>Insert block &amp;quote</source>
-<translation type="unfinished">Insert block &amp;quote</translation>
+<translation>Вставить блок &amp;цитаты</translation>
 </message>
 <message>
 <source>Copy code block</source>
-<translation type="unfinished">Copy code block</translation>
+<translation>Скопировать блок кода</translation>
 </message>
 <message>
 <source>Print</source>
-<translation type="unfinished">Print</translation>
+<translation>Печать</translation>
 </message>
 <message>
 <source>Print selected text</source>
-<translation type="unfinished">Print selected text</translation>
+<translation>Печать выбранного текста</translation>
 </message>
 <message>
 <source>Print selected text (preview)</source>
-<translation type="unfinished">Print selected text (preview)</translation>
+<translation>Печать выбранного текста (предпросмотр)</translation>
 </message>
 <message>
 <source>Export</source>
@@ -4212,7 +4212,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Custom actions</source>
-<translation type="unfinished">Custom actions</translation>
+<translation>Пользовательские команды</translation>
 </message>
 <message>
 <source>No suggestions for %1</source>
@@ -4228,7 +4228,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Spelling</source>
-<translation type="unfinished">Spelling</translation>
+<translation>Написание</translation>
 </message>
 </context>
 <context>
@@ -4427,7 +4427,7 @@ Are the folder and the file writeable?</source>
 </message>
 <message>
 <source>To search for a script please enter your query text.</source>
-<translation type="unfinished">To search for a script please enter your query text.</translation>
+<translation>Для поиска в сценарии, пожалуйста, введите текст вашего запроса.</translation>
 </message>
 <message>
 <source>Minimum app version:</source>
@@ -4535,7 +4535,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Please select a directory</source>
-<translation type="unfinished">Please select a directory</translation>
+<translation>Пожалуйста, выберите директорию</translation>
 </message>
 <message>
 <source>Please select a file</source>
@@ -5128,15 +5128,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
-<translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
+<translation>Login flow v2 работает только с Nextcloud, но не с ownCloud. Если у вас возникли проблемы вам необходимо создать пароль приложения вручную.</translation>
 </message>
 <message>
 <source>Login to Nextcloud to grant access</source>
-<translation type="unfinished">Login to Nextcloud to grant access</translation>
+<translation>Войдите в Nextcloud для доступа</translation>
 </message>
 <message>
 <source>Stack:</source>
-<translation type="unfinished">Stack:</translation>
+<translation>Стек:</translation>
 </message>
 <message>
 <source>Todo settings</source>
@@ -5460,7 +5460,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Browser extension / command snippets</source>
-<translation type="unfinished">Browser extension / command snippets</translation>
+<translation>Расширение браузера / фрагменты команд</translation>
 </message>
 <message>
 <source>Web application</source>
@@ -5468,27 +5468,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>AI</source>
-<translation type="unfinished">AI</translation>
+<translation>AI</translation>
 </message>
 <message>
 <source>Experimental</source>
-<translation type="unfinished">Experimental</translation>
+<translation>Экспериментально</translation>
 </message>
 <message>
 <source>This also allows note files to be renamed</source>
-<translation type="unfinished">This also allows note files to be renamed</translation>
+<translation>Это также позволяет переименовать файлы заметок</translation>
 </message>
 <message>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-<translation type="unfinished">You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</translation>
+<translation>Вы можете получить доступ к вашему ownCloud серверу прямо из приложения, например для управления удалёнными заметками и версиями заметок или для общего доступа к заметкам. Это интеграция не синхронизирует заметки. Вам всё ещё необходимо установить клиент ownCloud sync для синхронизации файлов.</translation>
 </message>
 <message>
 <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
-<translation type="unfinished">You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</translation>
+<translation>Вы можете найти этот путь в настройках &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt;</translation>
 </message>
 <message>
 <source>Enable QOwnNotesAPI app support</source>
-<translation type="unfinished">Enable QOwnNotesAPI app support</translation>
+<translation>Включить поддержку QOwnNotesAPI в приложении</translation>
 </message>
 <message>
 <source>If your password doesn't work, create an app password (button on the right)</source>
@@ -5496,15 +5496,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Cancel Nextcloud login</source>
-<translation type="unfinished">Cancel Nextcloud login</translation>
+<translation>Отметить вход в Nextcloud</translation>
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
-<translation type="unfinished">Enable Nextcloud Deck support</translation>
+<translation>Включить поддержку Nextcloud Deck</translation>
 </message>
 <message>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
-<translation type="unfinished">You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</translation>
+<translation>Вы можете получить доступ к вашему ownCloud серверу или к другому CalDAV серверу для управления вашими списками дел.</translation>
 </message>
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
@@ -5548,15 +5548,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Status bar</source>
-<translation type="unfinished">Status bar</translation>
+<translation>Панель состояния</translation>
 </message>
 <message>
 <source>Show note path</source>
-<translation type="unfinished">Show note path</translation>
+<translation>Показать путь к заметке</translation>
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation type="unfinished">Only show relative note path</translation>
+<translation>Показывать только относительный путь к заметке</translation>
 </message>
 <message>
 <source>Action name</source>
@@ -5580,36 +5580,36 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Start application in read-only mode</source>
-<translation type="unfinished">Start application in read-only mode</translation>
+<translation>Запускать приложение в режиме только для чтения</translation>
 </message>
 <message>
 <source>When inactive, enter read-only mode automatically after:</source>
-<translation type="unfinished">When inactive, enter read-only mode automatically after:</translation>
+<translation>Когда отключено, автоматически входить в режим только для чтения после:</translation>
 </message>
 <message>
 <source> sec</source>
 <extracomment>short for seconds</extracomment>
-<translation type="unfinished"> sec</translation>
+<translation> сек</translation>
 </message>
 <message>
 <source>Forget all "Don't ask again" choices in message boxes</source>
-<translation type="unfinished">Forget all "Don't ask again" choices in message boxes</translation>
+<translation>Забыть все "Не спрашивать снова" в окнах сообщений</translation>
 </message>
 <message>
 <source>Note file extensions</source>
-<translation type="unfinished">Note file extensions</translation>
+<translation>Расширение файлов заметок</translation>
 </message>
 <message>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
-<translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
+<translation>Файлы с указанным расширением будут считаться заметками, выбранное разрешение будет использоваться для новых заметок.</translation>
 </message>
 <message>
 <source>Add a new note file extension</source>
-<translation type="unfinished">Add a new note file extension</translation>
+<translation>Добавить новое расширение файла для заметок</translation>
 </message>
 <message>
 <source>Remove selected note file extension</source>
-<translation type="unfinished">Remove selected note file extension</translation>
+<translation>Удалить выбранное расширение файла для заметок</translation>
 </message>
 <message>
 <source>Checks the disk database integrity and fixes problems</source>
@@ -5645,15 +5645,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Time to wait before refreshing the preview after typing:</source>
-<translation type="unfinished">Time to wait before refreshing the preview after typing:</translation>
+<translation>Время ожидание перед перезагрузкой показа после завершения печати:</translation>
 </message>
 <message>
 <source>Reset the debounce time</source>
-<translation type="unfinished">Reset the debounce time</translation>
+<translation>Сбросить время разборки</translation>
 </message>
 <message>
 <source>0ms means don't wait for the typing to stop</source>
-<translation type="unfinished">0ms means don't wait for the typing to stop</translation>
+<translation>0 мс означает что вы не хотите ждать пока завершиться печатанье</translation>
 </message>
 <message>
 <source>Use editor highlighting styles also for the preview</source>
@@ -5673,7 +5673,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Note that disabling this will also disable the navigation panel!</source>
-<translation type="unfinished">Note that disabling this will also disable the navigation panel!</translation>
+<translation>Обратите внимание, отключение этого также отключит навигационную панель!</translation>
 </message>
 <message>
 <source>Disable cursor blinking</source>
@@ -5685,40 +5685,40 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
-<translation type="unfinished">Notes larger than this will not be shown in the note list</translation>
+<translation>Заметки большего размера не будут отображаться в списке заметок</translation>
 </message>
 <message>
 <source>Maximum note file size:</source>
-<translation type="unfinished">Maximum note file size:</translation>
+<translation>Максимальный размер файла заметки:</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
-<translation type="unfinished">Search script repository for AI integration scripts</translation>
+<translation>Искать репозиторий скрипта для интеграции с AI</translation>
 </message>
 <message>
 <source>API keys</source>
-<translation type="unfinished">API keys</translation>
+<translation>Ключи API</translation>
 </message>
 <message>
 <source>OpenAI API key:</source>
-<translation type="unfinished">OpenAI API key:</translation>
+<translation>Ключ OpenAI API:</translation>
 </message>
 <message>
 <source>Create Groq API key</source>
-<translation type="unfinished">Create Groq API key</translation>
+<translation>Создать ключ Groq API</translation>
 </message>
 <message>
 <source>Create OpenAI API key</source>
-<translation type="unfinished">Create OpenAI API key</translation>
+<translation>Создать ключ OpenAI API</translation>
 </message>
 <message>
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
-<translation type="unfinished">Test connection</translation>
+<translation>Тестовое соединение</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
-<translation type="unfinished">AI backends added via the scripting engine</translation>
+<translation>Бэкенд AI добавлен при помощи скриптового движка</translation>
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
@@ -5726,19 +5726,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
-<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
+<translation>Вы можете использовать скриптовый хук &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; для того что бы добавить больше совместимых с OpenAI API бэкендов.</translation>
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
-<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+<translation>В качестве альтернативы вы также можете использовать скрипт репозиторий в уже созданном скрипте интеграции с AI.</translation>
 </message>
 <message>
 <source>Groq API key:</source>
-<translation type="unfinished">Groq API key:</translation>
+<translation>Ключ Groq API:</translation>
 </message>
 <message>
 <source>API key</source>
-<translation type="unfinished">API key</translation>
+<translation>Ключ API</translation>
 </message>
 <message>
 <source>Show line numbers</source>
@@ -5762,15 +5762,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Ignored note files</source>
-<translation type="unfinished">Ignored note files</translation>
+<translation>Игнорировать файлы заметок</translation>
 </message>
 <message>
 <source>Select the path of the git binary</source>
-<translation type="unfinished">Select the path of the git binary</translation>
+<translation>Выбрать путь к двоичному файлу git</translation>
 </message>
 <message>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
-<translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
+<translation>Регулярные выражения файлов заметок, которые следует игнорировать, разделяются символом ";"</translation>
 </message>
 <message>
 <source>Ignored subfolders</source>
@@ -5782,7 +5782,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Clicking a note tab unsets 'All notes' selection</source>
-<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+<translation>Клик по вкладке "Заметки" отменяет выбор "Все заметки"</translation>
 </message>
 <message>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
@@ -5790,7 +5790,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Auto-select items in navigation panel when changing cursor position</source>
-<translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
+<translation>Автоматический выбор элементов в панели навигации когда изменяется положение курсора</translation>
 </message>
 <message>
 <source>Hide 'Note count' with tags (increases performance)</source>
@@ -5802,27 +5802,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Command snippets</source>
-<translation type="unfinished">Command snippets</translation>
+<translation>Фрагменты команд</translation>
 </message>
 <message>
 <source>Tag name for commands notes</source>
-<translation type="unfinished">Tag name for commands notes</translation>
+<translation>Имя тега для заметок с командами</translation>
 </message>
 <message>
 <source>Commands tag:</source>
-<translation type="unfinished">Commands tag:</translation>
+<translation>Тег для команд:</translation>
 </message>
 <message>
 <source>Commands note name:</source>
-<translation type="unfinished">Commands note name:</translation>
+<translation>Имя заметки с командами:</translation>
 </message>
 <message>
 <source>Note name for adding new commands</source>
-<translation type="unfinished">Note name for adding new commands</translation>
+<translation>Имя заметки для добавления новых команд</translation>
 </message>
 <message>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
-<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
+<translation>Вы можете использовать &lt;a href="%1"&gt;веб-приложение QOwnNotes&lt;/a&gt; для вставки изображений в QOwnNotes на ваш компьютер с вашего мобильного устройства через интернет.</translation>
 </message>
 <message>
 <source>QOwnNotes web application</source>
@@ -5830,7 +5830,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+<translation>Будет открыто веб-соединение с этим сервером, которое будет действовать как мост между веб-приложением QOwnNotes и настольным приложением QOwnNotes.</translation>
 </message>
 <message>
 <source>Server URL:</source>
@@ -5846,15 +5846,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
-<translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
+<translation>Установить &lt;a href="%1"&gt;браузерное расширение Web Companion&lt;/a&gt; из &lt;a href="%2"&gt;магазина приложений Chrome&lt;/a&gt; или &lt;a href="%3"&gt;страницы дополнений Firefox&lt;/a&gt; для использования QOwnNotes в качестве веб-клиппера или менеджера закладок.</translation>
 </message>
 <message>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
-<translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
+<translation>Загрузите &lt;a href="%1"&gt;Менеджер фрагментов командной строки&lt;/a&gt;, чтобы выполнять фрагменты команд, сохраненные в заметках в QOwnNotes, из командной строки.</translation>
 </message>
 <message>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+<translation>Вы можете использовать заметки со специальным тегом для хранения фрагментов команд, которые вы можете выполнять из менеджера фрагментов командной строки. Для получения дополнительной информации о синтаксисе фрагментов команд нажмите &lt;a href="%1"&gt;здесь&lt;/a&gt;.</translation>
 </message>
 <message>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
@@ -5902,7 +5902,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Enable local trash to keep a copy of trashed notes</source>
-<translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
+<translation>Включить локальный корзину для хранения копии удалённых заметок</translation>
 </message>
 <message>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
@@ -6483,7 +6483,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
-<translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
+<translation>путь к заметкам &lt;b&gt;%1&lt;/b&gt; найден на сервере</translation>
 </message>
 <message>
 <source>Automatic (needs restart)</source>
@@ -6513,7 +6513,7 @@ Connection error message: </source>
 </message>
 <message>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
+<translation>База данных была повторно инициализирована. Пожалуйста, перезапустите приложение прямо сейчас!</translation>
 </message>
 <message>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
@@ -6581,19 +6581,19 @@ Connection error message: </source>
 </message>
 <message>
 <source>Please enter a new note file extension:</source>
-<translation type="unfinished">Please enter a new note file extension:</translation>
+<translation>Пожалуйста, введите новое расширение файла заметки:</translation>
 </message>
 <message>
 <source>Markdown file</source>
-<translation type="unfinished">Markdown file</translation>
+<translation>Markdown файл</translation>
 </message>
 <message>
 <source>Plain text file</source>
-<translation type="unfinished">Plain text file</translation>
+<translation>Обычный текстовый файл</translation>
 </message>
 <message>
 <source>Remove note file extension</source>
-<translation type="unfinished">Remove note file extension</translation>
+<translation>Удалить расширение файлов заметок</translation>
 </message>
 <message>
 <source>INI files</source>
@@ -6621,36 +6621,36 @@ Connection error message: </source>
 </message>
 <message>
 <source>Board Id: %1</source>
-<translation type="unfinished">Board Id: %1</translation>
+<translation>Id доски: %1</translation>
 </message>
 <message>
 <source>Stack Id: %1</source>
-<translation type="unfinished">Stack Id: %1</translation>
+<translation>Id стека: %1</translation>
 </message>
 <message>
 <source>API test result for %1 (%2)</source>
-<translation type="unfinished">API test result for %1 (%2)</translation>
+<translation>Результат теста API для %1 (%2)</translation>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation type="unfinished">AI backend: %1</translation>
+<translation>Серверные функции: %1</translation>
 </message>
 <message>
 <source>API base URL</source>
-<translation type="unfinished">API base URL</translation>
+<translation>Базовый URL API</translation>
 </message>
 <message>
 <source>AI model: %1</source>
-<translation type="unfinished">AI model: %1</translation>
+<translation>AI модель: %1</translation>
 </message>
 <message>
 <source>Test</source>
 <comment>verb</comment>
-<translation type="unfinished">Test</translation>
+<translation>Тест</translation>
 </message>
 <message>
 <source>Test connection to %1 (%2)</source>
-<translation type="unfinished">Test connection to %1 (%2)</translation>
+<translation>Тест соединения к %1 (%2)</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
@@ -6719,7 +6719,7 @@ Connection error message: </source>
 </message>
 <message>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
-<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+<translation>Вы точно хотите удалить расширение для файлов заметок &lt;strong&gt;%1&lt;/strong&gt;? Вы не сможете больше видеть файлы с этим расширением в листе заметок!</translation>
 </message>
 <message>
 <source>Calendar cache emptied</source>
@@ -6989,7 +6989,7 @@ Your notes will stay intact!</source>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7016,7 +7016,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show attachments that are not used in notes</source>
-<translation type="unfinished">Only show attachments that are not used in notes</translation>
+<translation>Показывать только приложения, которые не используются в заметках</translation>
 </message>
 <message>
 <source>Only show orphaned attachments</source>
@@ -7024,11 +7024,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show attachments that are used in the current note</source>
-<translation type="unfinished">Only show attachments that are used in the current note</translation>
+<translation>Показывать только приложения которые уже используются в текущей заметке</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>Показывать только из текущей заметки</translation>
 </message>
 <message>
 <source>Add selected attachments to the current note</source>
@@ -7180,11 +7180,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show images that are used in the current note</source>
-<translation type="unfinished">Only show images that are used in the current note</translation>
+<translation>Показывать только изображения которые уже используются в текущей заметке</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>Показывать только из текущей заметки</translation>
 </message>
 <message>
 <source>Used in notes:</source>
@@ -7394,11 +7394,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>Это не работает для подпунктов, поскольку они могут быть скрыты родительским элементом!</translation>
 </message>
 <message>
 <source>Show only items due today</source>
-<translation type="unfinished">Show only items due today</translation>
+<translation>Показывать только элементы сегодня</translation>
 </message>
 <message>
 <source>Save and insert into note</source>
@@ -7426,15 +7426,15 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Tags</source>
-<translation type="unfinished">Tags</translation>
+<translation>Теги</translation>
 </message>
 <message>
 <source>Add new tag</source>
-<translation type="unfinished">Add new tag</translation>
+<translation>Добавить новый тег</translation>
 </message>
 <message>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Дата выполнения</translation>
 </message>
 <message>
 <source>select your todo list</source>
@@ -7709,7 +7709,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>&amp;Download latest</source>
-<translation type="unfinished">&amp;Download latest</translation>
+<translation>&amp;Загрузить последнее</translation>
 </message>
 <message>
 <source>&amp;Skip version</source>
@@ -7777,15 +7777,15 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
+<translation>Ваш исполняемый файл QOwnNotes '%1' недоступен для записи. Для обновления он должен быть доступен для записи текущим пользователем.</translation>
 </message>
 <message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
-<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
+<translation>Временный файл '%1' не может быть исполняемым! Вам необходимо заменить '%2' самостоятельно.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
+<translation>Ваш старый исполняемый файл QOwnNotes '%1' не может быть удалён! Вам необходимо заменить его '%2' самостоятельно.</translation>
 </message>
 <message>
 <source>Restart application</source>
@@ -7829,11 +7829,11 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</translation>
+<translation>Ваш старый исполняемый файл QOwnNotes '%1' не может быть заменён новым файлом '%2'! Вам нужно заменить его самостоятельно.</translation>
 </message>
 <message>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation type="unfinished">The app file '%1' could not be made executable! You need to make it executable yourself.</translation>
+<translation>Файл приложения '%1' не может быть исполняемым! Вам необходимо сделать его исполняемым самостоятельно.</translation>
 </message>
 <message>
 <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
@@ -7938,20 +7938,20 @@ This cannot be undone!</source>
 </message>
 <message numerus="yes">
 <source>Bookmark deleted from %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<translation>
+<numerusform>Закладка удалена из %n заметки</numerusform>
+<numerusform>Закладка удалена из %n заметок</numerusform>
+<numerusform>Закладка удалена из %n заметок (заметки)</numerusform>
+<numerusform>Закладка удалена из %n заметок (заметки)</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
+<translation>
+<numerusform>Закладка изменена в %n заметах (заметке)</numerusform>
+<numerusform>Закладка изменена в %n заметках</numerusform>
+<numerusform>Закладка изменена в %n заметках</numerusform>
+<numerusform>Закладка изменена в %n заметках</numerusform>
 </translation>
 </message>
 <message>
@@ -8034,7 +8034,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Plain-text file Markdown note-taking with ownCloud integration</source>
-<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
+<translation>Обычный текстовый файл Markdown заметок с интеграцией ownCloud</translation>
 </message>
 <message>
 <source>Show subfolders</source>
@@ -8085,7 +8085,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Prints out the version number.</source>
-<translation type="unfinished">Prints out the version number.</translation>
+<translation>Выводит номер версии.</translation>
 </message>
 <message>
 <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
@@ -8105,7 +8105,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
-<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
+<translation>Генерирует код завершения оболочки. Поддерживает `fish`, `bash`.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

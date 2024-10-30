@@ -67,4 +67,4 @@ Info إن لم يعمل مقص الويب، فتأكد أن تطبيق QOwnNotes
 * [اسم صفحة الوب](https://www.example.com) رمز عناصر القائمة البديل صالح أيضا
 ```
 
-يمكنك البحث في إضافة المتصفح بالاسم أو وسوم الرابط أو الوصف.
+You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.
