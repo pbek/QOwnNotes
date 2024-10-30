@@ -10,6 +10,12 @@ Images, attachments, tags, basic formatting and metadata will be imported as wel
 
 There is a Joplin import dialog you can reach in the `Note / Import` menu.
 
+## Various Formats
+
+The command line tool "jimmy" can convert various formats to Markdown (such as [Google Keep](https://marph91.github.io/jimmy/formats/google_keep/), [Synology Note Station](https://marph91.github.io/jimmy/formats/synology_note_station/) and [more](https://marph91.github.io/jimmy/)). To preserve as much metadata as possible, it's recommended to apply [additional tweaks](https://marph91.github.io/jimmy/import_instructions/#qownnotes).
+
+If there are any issues with the conversion, feel free to open a ticket at [Github](https://github.com/marph91/jimmy).
+
 ## Google Keep
 
 > Download Keep tasks using Google Takeout
