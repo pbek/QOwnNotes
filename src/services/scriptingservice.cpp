@@ -167,7 +167,6 @@ void ScriptingService::initComponent(const Script &script) {
 QList<QVariant> ScriptingService::registerSettingsVariables(QObject *object, const Script &script) {
     // registerSettingsVariables will override the settingsVariables property
     if (methodExistsForObject(object, QStringLiteral("registerSettingsVariables()"))) {
-        QVariant variables;
         QMetaObject::invokeMethod(object, "registerSettingsVariables");
     }
 
