@@ -530,12 +530,12 @@ bool NoteFolder::isPathNoteFolder(const QString &path) {
 
 void NoteFolder::setSettingsValue(const QString &key, const QVariant &value) {
     SettingsService settings;
-    settings.setValue(QString("NoteFolder-%1/%2").arg(QString::number(id), key), value);
+    settings.setValue(QStringLiteral("NoteFolder-%1/%2").arg(id).arg(key), value);
 }
 
 QVariant NoteFolder::settingsValue(const QString &key, const QVariant &defaultValue) const {
     const SettingsService settings;
-    return settings.value(QString("NoteFolder-%1/%2").arg(QString::number(id), key), defaultValue);
+    return settings.value(QStringLiteral("NoteFolder-%1/%2").arg(id).arg(key), defaultValue);
 }
 
 QDebug operator<<(QDebug dbg, const NoteFolder &noteFolder) {

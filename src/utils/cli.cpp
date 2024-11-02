@@ -106,7 +106,7 @@ void Utils::Cli::generateZshCompletionScript(const QList<QCommandLineOption>& op
             // Check if the option expects a value
             if (!option.valueName().isEmpty()) {
                 // Assume the value can be any string, for specifics you might need to adjust
-                optionPattern += QString("=") + "'[:" + option.description() + ":]'";
+                optionPattern += QStringLiteral("=") + "'[:" + option.description() + ":]'";
             } else {
                 optionPattern += "[:" + option.description() + ":]";
             }

@@ -33,7 +33,7 @@ void NextcloudDeckDialog::on_saveButton_clicked() {
 
     if (cardId > 0) {
         auto linkText =
-            QString("[%1](%2)").arg(title, nextcloudDeckService.getCardLinkForId(cardId));
+            QStringLiteral("[%1](%2)").arg(title, nextcloudDeckService.getCardLinkForId(cardId));
 
 #ifndef INTEGRATION_TESTS
         MainWindow *mainWindow = MainWindow::instance();

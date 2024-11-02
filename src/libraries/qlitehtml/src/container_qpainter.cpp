@@ -381,7 +381,7 @@ static QCursor toQCursor(const QString &c)
         return {Qt::BusyCursor};
     if (c == "zoom-in")
         return {Qt::ArrowCursor}; // ???
-    qWarning(log) << QString("unknown cursor property \"%1\"").arg(c).toUtf8().constData();
+    qWarning(log) << QStringLiteral("unknown cursor property \"%1\"").arg(c).toUtf8().constData();
     return {Qt::ArrowCursor};
 }
 
@@ -630,8 +630,8 @@ void DocumentContainerPrivate::load_image(const litehtml::tchar_t *src,
     const auto qtSrc = QString::fromUtf8(src);
     const auto qtBaseUrl = QString::fromUtf8(baseurl);
     Q_UNUSED(redraw_on_ready)
-    qDebug() << "load_image:" << QString("src = \"%1\";").arg(qtSrc).toUtf8().constData()
-                << QString("base = \"%1\"").arg(qtBaseUrl).toUtf8().constData();
+    qDebug() << "load_image:" << QStringLiteral("src = \"%1\";").arg(qtSrc).toUtf8().constData()
+                << QStringLiteral("base = \"%1\"").arg(qtBaseUrl).toUtf8().constData();
     const QUrl url = resolveUrl(qtSrc, qtBaseUrl);
     if (m_pixmaps.contains(url))
         return;
@@ -650,8 +650,8 @@ void DocumentContainerPrivate::get_image_size(const litehtml::tchar_t *src,
     const auto qtBaseUrl = QString::fromUtf8(baseurl);
     if (qtSrc.isEmpty()) // for some reason that happens
         return;
-    qDebug(log) << "get_image_size:" << QString("src = \"%1\";").arg(qtSrc).toUtf8().constData()
-                << QString("base = \"%1\"").arg(qtBaseUrl).toUtf8().constData();
+    qDebug(log) << "get_image_size:" << QStringLiteral("src = \"%1\";").arg(qtSrc).toUtf8().constData()
+                << QStringLiteral("base = \"%1\"").arg(qtBaseUrl).toUtf8().constData();
     const QPixmap pm = getPixmap(qtSrc, qtBaseUrl);
     sz.width = pm.width();
     sz.height = pm.height();
@@ -1057,9 +1057,9 @@ int DocumentContainer::documentHeight() const
 int DocumentContainer::anchorY(const QString &anchorName) const
 {
     litehtml::element::ptr element = d->m_document->root()->select_one(
-        QString("#%1").arg(anchorName).toStdString());
+        QStringLiteral("#%1").arg(anchorName).toStdString());
     if (!element) {
-        element = d->m_document->root()->select_one(QString("[name=%1]").arg(anchorName).toStdString());
+        element = d->m_document->root()->select_one(QStringLiteral("[name=%1]").arg(anchorName).toStdString());
     }
     if (element)
         return element->get_placement().y;
@@ -1272,7 +1272,7 @@ void DocumentContainer::findText(const QString &text,
 
     QString term = QRegularExpression::escape(text);
     if (flags & QTextDocument::FindWholeWords)
-        term = QString("\\b%1\\b").arg(term);
+        term = QStringLiteral("\\b%1\\b").arg(term);
     const QRegularExpression::PatternOptions patternOptions
         = (flags & QTextDocument::FindCaseSensitively) ? QRegularExpression::NoPatternOption
                                                        : QRegularExpression::CaseInsensitiveOption;

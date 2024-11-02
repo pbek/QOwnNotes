@@ -74,8 +74,8 @@ QString Diff::toString() const {
   QString prettyText = text;
   // Replace linebreaks with Pilcrow signs.
   prettyText.replace('\n', u'\u00b6');
-  return QString("Diff(") + strOperation(operation) + QString(",\"")
-      + prettyText + QString("\")");
+  return QStringLiteral("Diff(") + strOperation(operation) + QStringLiteral(",\"")
+      + prettyText + QStringLiteral("\")");
 }
 
 /**
@@ -125,24 +125,24 @@ bool Patch::isNull() const {
 QString Patch::toString() {
   QString coords1, coords2;
   if (length1 == 0) {
-    coords1 = QString::number(start1) + QString(",0");
+    coords1 = QString::number(start1) + QStringLiteral(",0");
   } else if (length1 == 1) {
     coords1 = QString::number(start1 + 1);
   } else {
-    coords1 = QString::number(start1 + 1) + QString(",")
+    coords1 = QString::number(start1 + 1) + QStringLiteral(",")
         + QString::number(length1);
   }
   if (length2 == 0) {
-    coords2 = QString::number(start2) + QString(",0");
+    coords2 = QString::number(start2) + QStringLiteral(",0");
   } else if (length2 == 1) {
     coords2 = QString::number(start2 + 1);
   } else {
-    coords2 = QString::number(start2 + 1) + QString(",")
+    coords2 = QString::number(start2 + 1) + QStringLiteral(",")
         + QString::number(length2);
   }
   QString text;
-  text = QString("@@ -") + coords1 + QString(" +") + coords2
-      + QString(" @@\n");
+  text = QStringLiteral("@@ -") + coords1 + QStringLiteral(" +") + coords2
+      + QStringLiteral(" @@\n");
   // Escape the body of the patch with %xx notation.
   foreach (Diff aDiff, diffs) {
     switch (aDiff.operation) {
@@ -157,7 +157,7 @@ QString Patch::toString() {
         break;
     }
     text += QString(QUrl::toPercentEncoding(aDiff.text, " !~*'();/?:@&=+$,#"))
-        + QString("\n");
+        + QStringLiteral("\n");
   }
 
   return text;
@@ -1287,15 +1287,15 @@ QString diff_match_patch::diff_prettyHtml(const QList<Diff> &diffs) {
         .replace(">", "&gt;").replace("\n", "&para;<br>");
     switch (aDiff.operation) {
       case INSERT:
-        html += QString("<ins style=\"background:#e6ffe6;\">") + text
-            + QString("</ins>");
+        html += QStringLiteral("<ins style=\"background:#e6ffe6;\">") + text
+            + QStringLiteral("</ins>");
         break;
       case DELETE:
-        html += QString("<del style=\"background:#ffe6e6;\">") + text
-            + QString("</del>");
+        html += QStringLiteral("<del style=\"background:#ffe6e6;\">") + text
+            + QStringLiteral("</del>");
         break;
       case EQUAL:
-        html += QString("<span>") + text + QString("</span>");
+        html += QStringLiteral("<span>") + text + QStringLiteral("</span>");
         break;
     }
   }
@@ -1357,16 +1357,16 @@ QString diff_match_patch::diff_toDelta(const QList<Diff> &diffs) {
       case INSERT: {
         QString encoded = QString(QUrl::toPercentEncoding(aDiff.text,
             " !~*'();/?:@&=+$,#"));
-        text += QString("+") + encoded + QString("\t");
+        text += QStringLiteral("+") + encoded + QStringLiteral("\t");
         break;
       }
       case DELETE:
-        text += QString("-") + QString::number(aDiff.text.length())
-            + QString("\t");
+        text += QStringLiteral("-") + QString::number(aDiff.text.length())
+            + QStringLiteral("\t");
         break;
       case EQUAL:
-        text += QString("=") + QString::number(aDiff.text.length())
-            + QString("\t");
+        text += QStringLiteral("=") + QString::number(aDiff.text.length())
+            + QStringLiteral("\t");
         break;
     }
   }
@@ -1402,7 +1402,7 @@ QList<Diff> diff_match_patch::diff_fromDelta(const QString &text1,
         int n;
         n = param.toInt();
         if (n < 0) {
-          throw QString("Negative number in diff_fromDelta: %1").arg(param);
+          throw QStringLiteral("Negative number in diff_fromDelta: %1").arg(param);
         }
         QString text;
         text = safeMid(text1, pointer, n);
@@ -1415,12 +1415,12 @@ QList<Diff> diff_match_patch::diff_fromDelta(const QString &text1,
         break;
       }
       default:
-        throw QString("Invalid diff operation in diff_fromDelta: %1")
+        throw QStringLiteral("Invalid diff operation in diff_fromDelta: %1")
             .arg(token[0]);
     }
   }
   if (pointer != text1.length()) {
-    throw QString("Delta length (%1) smaller than source text length (%2)")
+    throw QStringLiteral("Delta length (%1) smaller than source text length (%2)")
         .arg(pointer).arg(text1.length());
   }
   return diffs;
@@ -2058,7 +2058,7 @@ QList<Patch> diff_match_patch::patch_fromText(const QString &textline) {
   while (!text.isEmpty()) {
     auto patchHeader = patchHeaderRe.match(text.front());
     if (!patchHeader.hasMatch()) {
-      throw QString("Invalid patch string: %1").arg(text.front());
+      throw QStringLiteral("Invalid patch string: %1").arg(text.front());
     }
 
     patch = Patch();
@@ -2108,7 +2108,7 @@ QList<Patch> diff_match_patch::patch_fromText(const QString &textline) {
         break;
       } else {
         // WTF?
-        throw QString("Invalid patch mode '%1' in: %2").arg(sign).arg(line);
+        throw QStringLiteral("Invalid patch mode '%1' in: %2").arg(sign).arg(line);
         return QList<Patch>();
       }
       text.removeFirst();

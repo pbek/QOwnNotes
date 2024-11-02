@@ -1196,7 +1196,7 @@ QDataStream &Utils::Misc::dataStreamWrite(QDataStream &os, const QPrinter &print
     os << margins.left() << margins.top() << margins.right() << margins.bottom();
 
     Q_ASSERT_X(os.status() == QDataStream::Ok, __FUNCTION__,
-               QString("Stream status = %1").arg(os.status()).toStdString().c_str());
+               QStringLiteral("Stream status = %1").arg(os.status()).toStdString().c_str());
     return os;
 }
 
@@ -1254,7 +1254,7 @@ QDataStream &Utils::Misc::dataStreamRead(QDataStream &is, QPrinter &printer) {
     printer.setPageMargins(margins, QPageLayout::Unit::Millimeter);
 
     Q_ASSERT_X(is.status() == QDataStream::Ok, __FUNCTION__,
-               QString("Stream status = %1").arg(is.status()).toStdString().c_str());
+               QStringLiteral("Stream status = %1").arg(is.status()).toStdString().c_str());
 
     return is;
 }
@@ -1505,11 +1505,11 @@ QString Utils::Misc::toHumanReadableByteSize(qint64 size) {
 
     // Handle special case for bytes
     if (unitIndex == 0) {
-        return QString("%1 %2").arg(size).arg(units[unitIndex]);
+        return QStringLiteral("%1 %2").arg(size).arg(units[unitIndex]);
     }
 
     // Use QString::number for better performance and more control
-    return QString("%1 %2").arg(QString::number(num, 'f', 2), units[unitIndex]);
+    return QStringLiteral("%1 %2").arg(QString::number(num, 'f', 2), units[unitIndex]);
 }
 
 /**
@@ -1962,7 +1962,7 @@ void Utils::Misc::transformNextcloudPreviewImages(QString &html, int maxImageWid
         }
 
         imageWidth = std::min(maxImageWidth, imageWidth);
-        inlineImageTag.replace("/>", QString("width=\"%1\"/>").arg(QString::number(imageWidth)));
+        inlineImageTag.replace("/>", QStringLiteral("width=\"%1\"/>").arg(QString::number(imageWidth)));
 
         html.replace(imageTag, inlineImageTag);
     }
@@ -2000,7 +2000,7 @@ void Utils::Misc::transformRemotePreviewImages(QString &html, int maxImageWidth,
         }
 
         imageWidth = std::min(maxImageWidth, imageWidth);
-        inlineImageTag.replace(">", QString("width=\"%1\">").arg(QString::number(imageWidth)));
+        inlineImageTag.replace(">", QStringLiteral("width=\"%1\">").arg(QString::number(imageWidth)));
         html.replace(imageTag, inlineImageTag);
     }
 }
