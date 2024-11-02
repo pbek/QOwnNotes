@@ -4245,7 +4245,7 @@ void SettingsDialog::on_loginFlowButton_clicked() {
 
         QPointer<SettingsDialog> alive(this);
 
-        auto postData = QString("token=" + token).toLocal8Bit();
+        auto postData = QStringLiteral("token=%1").arg(token).toLocal8Bit();
         auto data = Utils::Misc::downloadUrl(pollUrl, true, postData);
 
         if (!alive) {

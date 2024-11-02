@@ -3827,7 +3827,7 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
     // update file path label
     _noteFilePathLabel->updateText();
 
-    //    putenv(QString("QOWNNOTES_CURRENT_NOTE_PATH=" + currentNote
+    //    putenv(QStringLiteral("QOWNNOTES_CURRENT_NOTE_PATH=%1").arg(currentNote)
     //            .fullNoteFilePath()).toLatin1().data());
     //    setenv("QOWNNOTES_CURRENT_NOTE_PATH",
     //           currentNote.fullNoteFilePath().toLatin1().data(),

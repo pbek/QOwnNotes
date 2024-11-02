@@ -949,7 +949,7 @@ void TodoDialog::reloadCurrentTags() {
 QString TodoDialog::getTagString() {
     // Remove any possible empty items
     _todoTagsList.removeAll(QString(""));
-    _todoTagsList.removeAll(QString(" "));
+    _todoTagsList.removeAll(QStringLiteral(" "));
     QString fullTagString;
     // We can't use regular join since it also joins escaped commas
     for (const auto &str : _todoTagsList) {

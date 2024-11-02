@@ -608,7 +608,7 @@ int main(int argc, char *argv[]) {
 
             // send message if an action was set
             if (!action.isEmpty()) {
-                app.sendMessage(QString("startupAction:" + action).toUtf8());
+                app.sendMessage(QStringLiteral("startupAction:%1").arg(action).toUtf8());
             }
 
             app.exit(0);

@@ -393,7 +393,7 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
                 // set the size of characterAmount times the size of "O"
                 // characters
 #if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
-            int proposedEditorWidth = metrics.width(QString("O").repeated(characterAmount));
+            int proposedEditorWidth = metrics.width(QStringLiteral("O").repeated(characterAmount));
 #else
             int proposedEditorWidth =
                 metrics.horizontalAdvance(QStringLiteral("O").repeated(characterAmount));

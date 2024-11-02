@@ -47,8 +47,8 @@
  #include "diff_match_patch.h"
  int main(int argc, char **argv) {
    diff_match_patch dmp;
-   QString str1 = QString("First string in diff");
-   QString str2 = QString("Second string in diff");
+   QString str1 = QStringLiteral("First string in diff");
+   QString str2 = QStringLiteral("Second string in diff");
 
    QString strPatch = dmp.patch_toText(dmp.patch_make(str1, str2));
    QPair<QString, QVector<bool> > out

@@ -2406,7 +2406,7 @@ void ScriptingService::onScriptThreadDone(ScriptThread *thread) {
  */
 QString ScriptingService::cacheDir(const QString &subDir) const {
     QString cacheDir =
-        QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QString("/scripts/");
+        QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/scripts/");
 
     if (!subDir.isEmpty()) {
         cacheDir = QDir::toNativeSeparators(cacheDir + subDir);
@@ -2428,7 +2428,7 @@ QString ScriptingService::cacheDir(const QString &subDir) const {
  */
 bool ScriptingService::clearCacheDir(const QString &subDir) const {
     QString cacheDir =
-        QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QString("/scripts/");
+        QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/scripts/");
 
     if (!subDir.isEmpty()) {
         cacheDir = QDir::toNativeSeparators(cacheDir + subDir);
