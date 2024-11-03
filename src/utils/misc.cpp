@@ -1962,7 +1962,8 @@ void Utils::Misc::transformNextcloudPreviewImages(QString &html, int maxImageWid
         }
 
         imageWidth = std::min(maxImageWidth, imageWidth);
-        inlineImageTag.replace("/>", QStringLiteral("width=\"%1\"/>").arg(QString::number(imageWidth)));
+        inlineImageTag.replace("/>",
+                               QStringLiteral("width=\"%1\"/>").arg(QString::number(imageWidth)));
 
         html.replace(imageTag, inlineImageTag);
     }
@@ -2000,7 +2001,8 @@ void Utils::Misc::transformRemotePreviewImages(QString &html, int maxImageWidth,
         }
 
         imageWidth = std::min(maxImageWidth, imageWidth);
-        inlineImageTag.replace(">", QStringLiteral("width=\"%1\">").arg(QString::number(imageWidth)));
+        inlineImageTag.replace(">",
+                               QStringLiteral("width=\"%1\">").arg(QString::number(imageWidth)));
         html.replace(imageTag, inlineImageTag);
     }
 }
