@@ -7,9 +7,10 @@
 #include <QJsonObject>
 #include <limits>
 
+#include "services/cryptoservice.h"
 #include "ui_scriptsettingwidget.h"
 
-ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
+ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, const Script &script,
                                          QMap<QString, QVariant> variableMap)
     : QWidget(parent), ui(new Ui::ScriptSettingWidget) {
     ui->setupUi(this);
@@ -73,6 +74,20 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
         }
 
         ui->stringLineEdit->setText(value);
+        ui->stringLineEdit->setEchoMode(QLineEdit::Normal);
+        ui->stringLineEdit->show();
+    } else if (type == "string-secret") {
+        QString value = CryptoService::instance()->decryptToString(
+            QByteArray::fromBase64(jsonObject.value(identifier).toString().toUtf8()));
+//        QString value = CryptoService::instance()->decryptToString(
+//            jsonObject.value(identifier).toString());
+
+        //        if (jsonObject.value(identifier).isUndefined()) {
+        //            value = variableMap["default"].toString();
+        //        }
+
+        ui->stringLineEdit->setText(value);
+        ui->stringLineEdit->setEchoMode(QLineEdit::Password);
         ui->stringLineEdit->show();
     } else if (type == "text") {
         QString value = jsonObject.value(identifier).toString();

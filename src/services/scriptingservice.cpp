@@ -43,6 +43,7 @@ QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
 #include <QInputDialog>
 #include <QMessageBox>
 
+#include "cryptoservice.h"
 #include "openaiservice.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 #endif
@@ -200,6 +201,22 @@ QList<QVariant> ScriptingService::registerSettingsVariables(QObject *object, con
                 }
 
                 object->setProperty(identifier.toUtf8(), value);
+            } else if (type == QStringLiteral("string-secret")) {
+                QString value = jsonObject.value(identifier).toString().toUtf8().toBase64();
+
+                qDebug() << __func__ << " - 'type': " << type;
+                qDebug() << __func__ << " - 'value': " << value;
+                qDebug() << __func__ << " - 'CryptoService::instance()->encryptToString(value)': "
+                         << CryptoService::instance()->encryptToString(value);
+
+                //                if (jsonObject.value(identifier).isUndefined()) {
+                //                    value = variableMap[QStringLiteral("default")].toString();
+                //                }
+
+
+//                object->setProperty(identifier.toUtf8(), value);
+                object->setProperty(identifier.toUtf8(),
+                                    CryptoService::instance()->encryptToString(value));
             } else {
                 QString value = jsonObject.value(identifier).toString();
 
@@ -2405,8 +2422,8 @@ void ScriptingService::onScriptThreadDone(ScriptThread *thread) {
  * @return {QString} the cache dir path
  */
 QString ScriptingService::cacheDir(const QString &subDir) const {
-    QString cacheDir =
-        QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/scripts/");
+    QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) +
+                       QStringLiteral("/scripts/");
 
     if (!subDir.isEmpty()) {
         cacheDir = QDir::toNativeSeparators(cacheDir + subDir);
@@ -2427,8 +2444,8 @@ QString ScriptingService::cacheDir(const QString &subDir) const {
  * @return {bool} true on success
  */
 bool ScriptingService::clearCacheDir(const QString &subDir) const {
-    QString cacheDir =
-        QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/scripts/");
+    QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) +
+                       QStringLiteral("/scripts/");
 
     if (!subDir.isEmpty()) {
         cacheDir = QDir::toNativeSeparators(cacheDir + subDir);

@@ -16,7 +16,7 @@ class ScriptSettingWidget : public QWidget {
     Q_OBJECT
 
    public:
-    explicit ScriptSettingWidget(QWidget *parent, Script script,
+    explicit ScriptSettingWidget(QWidget *parent, const Script &script,
                                  QMap<QString, QVariant> variableMap);
     ~ScriptSettingWidget();
 

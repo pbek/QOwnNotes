@@ -29,6 +29,12 @@ Script {
             "default": "My default value",
         },
         {
+            "identifier": "myStringSecret",
+            "name": "I am a password field",
+            "description": "Please enter a valid string:",
+            "type": "string-secret",
+        },
+        {
             "identifier": "myBoolean",
             "name": "I am a checkbox",
             "description": "Some description",
