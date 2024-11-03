@@ -1259,7 +1259,7 @@ property variant settingsVariables: [
 ];
 ```
 
-In addition you can override the `settingsVariables` with a special
+In addition, you can override the `settingsVariables` with a special
 function `registerSettingsVariables()` like this:
 
 ### Example
@@ -1295,7 +1295,7 @@ Storing and loading persistent variables
  * @param value {QVariant}
  */
 void ScriptingService::setPersistentVariable(const QString &key,
-                                                const QVariant &value);
+                                             const QVariant &value);
 
 /**
  * Loads a persistent variable
@@ -1306,7 +1306,7 @@ void ScriptingService::setPersistentVariable(const QString &key,
  * @return
  */
 QVariant ScriptingService::getPersistentVariable(const QString &key,
-                                                    const QVariant &defaultValue);
+                                                 const QVariant &defaultValue);
 ```
 
 ### Example
@@ -1338,7 +1338,7 @@ Loading application settings variables
  * @return
  */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
-                                                            const QVariant &defaultValue);
+                                                          const QVariant &defaultValue);
 ```
 
 ### Example
