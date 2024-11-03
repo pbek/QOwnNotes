@@ -77,14 +77,16 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, const Script &script,
         ui->stringLineEdit->setEchoMode(QLineEdit::Normal);
         ui->stringLineEdit->show();
     } else if (type == "string-secret") {
-        QString value = CryptoService::instance()->decryptToString(
-            QByteArray::fromBase64(jsonObject.value(identifier).toString().toUtf8()));
-//        QString value = CryptoService::instance()->decryptToString(
-//            jsonObject.value(identifier).toString());
+        QString value;
 
-        //        if (jsonObject.value(identifier).isUndefined()) {
-        //            value = variableMap["default"].toString();
-        //        }
+        if (!jsonObject.value(identifier).isUndefined()) {
+            value = jsonObject.value(identifier).toString();
+
+            // Decrypt the value if the value is not empty
+            if (!value.isEmpty()) {
+                value = CryptoService::instance()->decryptToString(value);
+            }
+        }
 
         ui->stringLineEdit->setText(value);
         ui->stringLineEdit->setEchoMode(QLineEdit::Password);
@@ -163,7 +165,11 @@ void ScriptSettingWidget::storeSettingsVariable(const QJsonValue &value) {
  * @param arg1
  */
 void ScriptSettingWidget::on_stringLineEdit_textChanged(const QString &arg1) {
-    storeSettingsVariable(arg1);
+    if (_variableMap["type"].toString() == "string-secret") {
+        storeSettingsVariable(CryptoService::instance()->encryptToString(arg1));
+    } else {
+        storeSettingsVariable(arg1);
+    }
 }
 
 /**

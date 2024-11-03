@@ -202,21 +202,18 @@ QList<QVariant> ScriptingService::registerSettingsVariables(QObject *object, con
 
                 object->setProperty(identifier.toUtf8(), value);
             } else if (type == QStringLiteral("string-secret")) {
-                QString value = jsonObject.value(identifier).toString().toUtf8().toBase64();
+                QString value;
 
-                qDebug() << __func__ << " - 'type': " << type;
-                qDebug() << __func__ << " - 'value': " << value;
-                qDebug() << __func__ << " - 'CryptoService::instance()->encryptToString(value)': "
-                         << CryptoService::instance()->encryptToString(value);
+                if (!jsonObject.value(identifier).isUndefined()) {
+                    value = jsonObject.value(identifier).toString();
 
-                //                if (jsonObject.value(identifier).isUndefined()) {
-                //                    value = variableMap[QStringLiteral("default")].toString();
-                //                }
+                    // Decrypt the value if the value is not empty
+                    if (!value.isEmpty()) {
+                        value = CryptoService::instance()->decryptToString(value);
+                    }
+                }
 
-
-//                object->setProperty(identifier.toUtf8(), value);
-                object->setProperty(identifier.toUtf8(),
-                                    CryptoService::instance()->encryptToString(value));
+                object->setProperty(identifier.toUtf8(), value);
             } else {
                 QString value = jsonObject.value(identifier).toString();
 
