@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 24.11.0
+- There now is a new script settings for secret variables with the type `string-secret`
+  - Those strings will be stored encrypted
+  - For more information please take a look at the
+    [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-script-settings-variables)
+
 ## 24.10.5
 - The capturing of indented Markdown tables was improved (for [#3137](https://github.com/pbek/QOwnNotes/issues/3137))
 - The actions in the *Find action* dialog is now using the correct font size, if you
