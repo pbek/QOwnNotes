@@ -78,9 +78,12 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, const Script &script,
         ui->stringLineEdit->show();
     } else if (type == "string-secret") {
         QString value;
+        // The secret identifier is the identifier with a "!" in front (so we can mask it in the
+        // settings dump)
+        const QString secretIdentifier = QStringLiteral("!") + identifier;
 
-        if (!jsonObject.value(identifier).isUndefined()) {
-            value = jsonObject.value(identifier).toString();
+        if (!jsonObject.value(secretIdentifier).isUndefined()) {
+            value = jsonObject.value(secretIdentifier).toString();
 
             // Decrypt the value if the value is not empty
             if (!value.isEmpty()) {
@@ -153,6 +156,13 @@ void ScriptSettingWidget::storeSettingsVariable(const QJsonValue &value) {
     _script.refetch();
 
     QString identifier = _variableMap["identifier"].toString();
+
+    // The secret identifier is the identifier with a "!" in front (so we can mask it in the
+    // settings dump)
+    if (_variableMap["type"].toString() == "string-secret") {
+        identifier = QStringLiteral("!") + identifier;
+    }
+
     QJsonObject jsonObject = _script.getSettingsVariablesJsonObject();
     jsonObject.insert(identifier, value);
     _script.setSettingsVariablesJson(jsonObject);

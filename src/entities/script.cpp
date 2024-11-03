@@ -376,7 +376,24 @@ QJsonObject Script::getSettingsVariablesJsonObject() const {
  *
  * @return
  */
-QString Script::getSettingsVariablesJson() const { return settingsVariablesJson; }
+QString Script::getSettingsVariablesJson(bool hideSecrets = false) const {
+    // Iterate settingsVariablesJson and hide secrets if hideSecrets is true
+    // Secrets are keys that start with "!"
+    if (hideSecrets) {
+        QJsonObject json = getSettingsVariablesJsonObject();
+        QJsonObject::iterator i = json.begin();
+        while (i != json.end()) {
+            if (i.key().startsWith(QStringLiteral("!"))) {
+                i.value() = QStringLiteral("********");
+            }
+            ++i;
+        }
+        QJsonDocument jsonResponse(json);
+        return jsonResponse.toJson();
+    }
+
+    return settingsVariablesJson;
+}
 
 /**
  * Returns the path where the script repositories will be stored locally

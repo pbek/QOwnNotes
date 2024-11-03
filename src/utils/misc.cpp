@@ -1795,7 +1795,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                                                   QDir::toNativeSeparators(script.getScriptPath()),
                                                   withGitHubLineBreaks);
             output += prepareDebugInformationLine(QStringLiteral("variablesJson"),
-                                                  script.getSettingsVariablesJson(),
+                                                  script.getSettingsVariablesJson(true),
                                                   withGitHubLineBreaks);
             if (script.isScriptFromRepository()) {
                 ScriptInfoJson infoJson = script.getScriptInfoJson();

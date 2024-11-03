@@ -34,9 +34,9 @@ QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
 #include "api/noteapi.h"
 #include "api/notesubfolderapi.h"
 #include "api/tagapi.h"
+#include "cryptoservice.h"
 #include "entities/notesubfolder.h"
 #include "services/settingsservice.h"
-#include "cryptoservice.h"
 
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
@@ -203,9 +203,12 @@ QList<QVariant> ScriptingService::registerSettingsVariables(QObject *object, con
                 object->setProperty(identifier.toUtf8(), value);
             } else if (type == QStringLiteral("string-secret")) {
                 QString value;
+                // The secret identifier is the identifier with a "!" in front (so we can mask it in
+                // the settings dump)
+                const QString secretIdentifier = QStringLiteral("!") + identifier;
 
-                if (!jsonObject.value(identifier).isUndefined()) {
-                    value = jsonObject.value(identifier).toString();
+                if (!jsonObject.value(secretIdentifier).isUndefined()) {
+                    value = jsonObject.value(secretIdentifier).toString();
 
                     // Decrypt the value if the value is not empty
                     if (!value.isEmpty()) {

@@ -84,7 +84,7 @@ class Script {
     QUrl remoteFileUrl(const QString& fileName) const;
     static bool scriptFromRepositoryExists(const QString& identifier);
     void setSettingsVariablesJson(QString json);
-    QString getSettingsVariablesJson() const;
+    QString getSettingsVariablesJson(bool hideSecrets) const;
     QJsonObject getSettingsVariablesJsonObject() const;
     void setSettingsVariablesJson(const QJsonObject& jsonObject);
     QString getScriptDirPath() const;
