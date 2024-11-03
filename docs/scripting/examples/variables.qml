@@ -8,6 +8,7 @@ import QOwnNotesTypes 1.0
 Script {
     // you have to define your registered variables so you can access them later
     property string myString;
+    property string myStringSecret;
     property bool myBoolean;
     property string myText;
     property int myInt;
@@ -90,6 +91,7 @@ Script {
         // these variables will be set by QOwnNotes from the settings
         // if the user didn't set a variable your default value will be set
         script.log(myString);
+        script.log(myStringSecret);
         script.log(myBoolean);
         script.log(myText);
         script.log(myInt);
