@@ -10,6 +10,12 @@ Se importarán asimismo las imágenes, los archivos adjuntos, las etiquetas, el 
 
 There is a Joplin import dialog you can reach in the `Note / Import` menu.
 
+## Formatos variados
+
+The command line tool [jimmy](https://github.com/marph91/jimmy) can convert various formats to Markdown (such as [Google Keep](https://marph91.github.io/jimmy/formats/google_keep/), [Synology Note Station](https://marph91.github.io/jimmy/formats/synology_note_station/) and [more](https://marph91.github.io/jimmy/)). To preserve as much metadata as possible, it's recommended to apply [additional tweaks](https://marph91.github.io/jimmy/import_instructions/#qownnotes).
+
+If there are any issues with the conversion, feel free to open a ticket at [GitHub](https://github.com/marph91/jimmy/issues).
+
 ## Google Keep
 
 > Descargue las tareas de Keep mediante Google Takeout
@@ -23,7 +29,7 @@ There is a Joplin import dialog you can reach in the `Note / Import` menu.
 > 
 > Reemplace Keep por la carpeta que contiene las notas en formato JSON. La carpeta out se creará si no existiese.
 
-De https://gitlab.com/-/snippets/2002921
+From <https://gitlab.com/-/snippets/2002921>
 
 ## Tomboy
 

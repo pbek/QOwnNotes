@@ -16,7 +16,7 @@ Use encabezados para estructurar sus textos.
 ```
 
 ::: tip
-El **panel de navegación** muestra la estructura de sus títulos.
+El **panel de navegación** muestra la estructura de sus encabezados.
 :::
 
 Alternativamente, para H1 y H2, un estilo de subrayado:
@@ -30,7 +30,7 @@ Alt-H2
 ```
 
 ::: tip
-Por defecto, QOwnNotes crea el **nombre de archivo de una nota** desde el **encabezado1** (h1).
+Por defecto, QOwnNotes crea el **nombre de archivo de una nota** a partir del **encabezado 1** (h1).
 :::
 
 ## Énfasis
@@ -47,10 +47,10 @@ Puede usar el [atajo](./shortcuts.md) <kbd>Ctrl + B</kbd> para poner el texto en
 
 ## Subrayar
 
-También hay una configuración opcional para habilitar la representación de subrayado en la *Configuración de vista previa*.
+También existe una configuración opcional para habilitar la renderización del subrayado en la *Configuración de la vista previa*.
 
 ```markdown
-_underline_
+_subrayado_
 ```
 
 ::: tip
@@ -133,7 +133,7 @@ Los marcadores utilizados por la extensión de navegador [QOwnNotes Web Companio
 
 ## Imágenes
 
-Las imágenes se pueden incrustar en QOwnNotes. Ellas se mostrarán en la vista previa.
+Las imágenes se pueden incrustar en QOwnNotes. Estas se mostrarán en la vista previa.
 
 ```markdown
 ![alt text](media/my-image.jpg)
@@ -153,7 +153,7 @@ Inline `code` has `backticks around` it.
 ```
 
 ::: tip
-Puede usar el [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> en texto en línea seleccionado o solo dentro del texto para crear un bloque de código en línea.
+Puede usar el [atajo](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> en texto en línea seleccionado o solo dentro del texto para crear un bloque de código en línea.
 :::
 
 Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
@@ -253,7 +253,7 @@ You can also use inline Markdown.
 ::: tip
 Presione <kbd>Alt + Shift + T</kbd> para activar un cuadro de diálogo que puede ayudarlo a crear tablas. Incluso puede importar archivos CSV en ese cuadro de diálogo.
 
-Use <kbd>Ctrl + Espacio</kbd> dentro de una tabla de rebajas para formatearla automáticamente.
+Use <kbd>Ctrl + Espacio</kbd> dentro de una tabla de markdown para formatearla automáticamente.
 :::
 
 ## Blockquotes
@@ -275,20 +275,20 @@ Puede usar el [atajo](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> para marcar te
 
 ## Regla horizontal
 
-Hay tres formas de obtener una regla horizontal: guiones, asteriscos o guiones bajos.
+Hay tres formas de crear una regla horizontal: guiones, asteriscos o guiones bajos.
 
 ```markdown
 Tres o más...
 
-Hyphens
+Guiones
 
 ---
 
-Asterisks
+Asteriscos
 
 ***
 
-Underscores
+Guiones bajos
 
 ___
 ```
@@ -321,7 +321,7 @@ Los espacios finales están resaltados de forma predeterminada en el editor.
 Los comentarios no se muestran en la vista previa.
 
 ```markdown
-[comment]: # (Este comentario no aparecerá en la vista previa)
+[comentario]: # (Este comentario no aparecerá en la vista previa)
 
 <!-- Los comentarios de HTML también están ocultos -->
 ```
@@ -349,13 +349,13 @@ En QOwnNotes puede usar un frontmatter (por ejemplo, YAML) para agregar algo de 
 
 ```markdown
 ---
-title: Some name
-description: Some description
+title: Un título
+description: Alguna descripción
 ---
 
-# Note headline starts here
+# El titular de la nota comienza aquí
 
-Some text
+Algún texto
 ```
 
 El nombre de archivo de esta nota de ejemplo sería `El título de la nota comienza aquí.md`.

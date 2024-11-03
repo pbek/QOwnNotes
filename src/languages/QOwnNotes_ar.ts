@@ -5807,11 +5807,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
-<translation type="unfinished">Notes larger than this will not be shown in the note list</translation>
+<translation>الملاحظات التي حجم ملفها أكبر من هذا لن تظهر في قائمة الملاحظات</translation>
 </message>
 <message>
 <source>Maximum note file size:</source>
-<translation type="unfinished">Maximum note file size:</translation>
+<translation>الحجم الأقصى لملف الملاحظة:</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
@@ -7147,11 +7147,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show attachments that are used in the current note</source>
-<translation type="unfinished">Only show attachments that are used in the current note</translation>
+<translation>أظهر فقط المرفقات المستعملة في الملاحظة الحالية</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>أظهر فقط من الملاحظة الحالية</translation>
 </message>
 <message>
 <source>Add selected attachments to the current note</source>
@@ -7305,11 +7305,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show images that are used in the current note</source>
-<translation type="unfinished">Only show images that are used in the current note</translation>
+<translation>أظهر فقط الصور المستعملة في الملاحظة الحالية</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>أظهر فقط من الملاحظة الحالية</translation>
 </message>
 <message>
 <source>Used in notes:</source>

@@ -54,7 +54,7 @@
 
 ### En la lista de notas
 
-- haga doble clic en la nota para abrir la nota en una nueva pestaña (tenga en cuenta que hay un gancho de secuencia de comandos que puede anular la acción de doble clic)
+- haga doble clic en la nota para abrirla en una nueva pestaña (tenga en cuenta que hay un gancho de secuencia de comandos que puede anular la acción del doble clic)
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> selecciona todas las notas (para moverlas, copiarlas o eliminarlas con un clic derecho)
 - <kbd>Tab</kbd> or <kbd>Return</kbd> te permite editar la nota actual
 
@@ -171,7 +171,7 @@
 
 ### En la lista de notas
 
-- haga doble clic en la nota para abrir la nota en una nueva pestaña (tenga en cuenta que hay un gancho de secuencia de comandos que puede anular la acción de doble clic)
+- haga doble clic en la nota para abrirla en una nueva pestaña (tenga en cuenta que hay un gancho de secuencia de comandos que puede anular la acción del doble clic)
 - <kbd>⌘ Cmd</kbd> + <kbd>A</kbd> selecciona todas las notas (para moverlas, copiarlas o eliminarlas con un clic derecho)
 - <kbd>Tab</kbd> or <kbd>Return</kbd> te permite editar la nota actual
 

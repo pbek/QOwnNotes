@@ -10,6 +10,12 @@
 
 يمكنك الوصول إلى صندوق حوار استيراد Joplin من قائمة `ملاحظة > استيراد`.
 
+## صيغ عديدة
+
+تستطيع أداة سطر الأوامر [jimmy](https://github.com/marph91/jimmy) تحويل صيغ عديدة إلى صيغة ماركداون (مثل [Google Keep](https://marph91.github.io/jimmy/formats/google_keep/)، و&nbsp;[Synology Note Station](https://marph91.github.io/jimmy/formats/synology_note_station/)، وغيرهما [الكثير](https://marph91.github.io/jimmy/)). للاحتفاظ بكل ما يمكن من البيانات الوصفية، ننصح بتطبيق [تطويعات إضافية](https://marph91.github.io/jimmy/import_instructions/#qownnotes).
+
+لو واجهتك مشكلة في التحويل، يمكنك إنشاء مسألة في [GitHub](https://github.com/marph91/jimmy/issues).
+
 ## Google Keep
 
 > استخدم Google Takeout لتنزيل مهام Keep
@@ -23,7 +29,7 @@
 > 
 > أبدل الاسم Keep في الأمر باسم المجلد الذي فيه الملاحظات بصيغة JSON. ومجلد out سيُنشأ إذا لم يكن موجودا.
 
-من https://gitlab.com/-/snippets/2002921
+من <https://gitlab.com/-/snippets/2002921>
 
 ## تومبوي
 

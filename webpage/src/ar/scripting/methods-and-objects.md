@@ -1132,6 +1132,7 @@ var fileName = script.getSaveFileName("Please select HTML file to save", "output
 ```js
 // you have to define your registered variables so you can access them later
 property string myString;
+property string myStringSecret;
 property bool myBoolean;
 property string myText;
 property int myInt;
@@ -1151,6 +1152,12 @@ property variant settingsVariables: [
         "description": "Please enter a valid string:",
         "type": "string",
         "default": "My default value",
+    },
+    {
+        "identifier": "myStringSecret",
+        "name": "I am a password field",
+        "description": "Please enter a valid string:",
+        "type": "string-secret",
     },
     {
         "identifier": "myBoolean",
@@ -1199,7 +1206,7 @@ property variant settingsVariables: [
 ];
 ```
 
-ويمكنك أيضا تغطية `settingsVariables` بالدالة الخاصة `registerSettingsVariables()` مثل:
+In addition, you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
 
 ### مثال
 ```js
@@ -1233,7 +1240,7 @@ function registerSettingsVariables() {
  * @param value {QVariant}
  */
 void ScriptingService::setPersistentVariable(const QString &key,
-                                                const QVariant &value);
+                                             const QVariant &value);
 
 /**
  * Loads a persistent variable
@@ -1244,7 +1251,7 @@ void ScriptingService::setPersistentVariable(const QString &key,
  * @return
  */
 QVariant ScriptingService::getPersistentVariable(const QString &key,
-                                                    const QVariant &defaultValue);
+                                                 const QVariant &defaultValue);
 ```
 
 ### مثال
@@ -1273,7 +1280,7 @@ script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothin
  * @return
  */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
-                                                            const QVariant &defaultValue);
+                                                          const QVariant &defaultValue);
 ```
 
 ### مثال

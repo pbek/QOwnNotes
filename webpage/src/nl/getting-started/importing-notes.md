@@ -10,6 +10,12 @@ Afbeeldingen, bijlagen, labels, basisopmaak en metagegevens worden ook geïmport
 
 Er is een Joplin-importdialoog welke u kunt bereiken in het menu `Notitie / Importeren `.
 
+## Verschillende formaten
+
+De opdrachtregel [jimmy](https://github.com/marph91/jimmy) kan verschillende formaten converteren naar Markdown (zoals [Google Keep](https://marph91.github.io/jimmy/formats/google_keep/), [Synology Note Station](https://marph91.github.io/jimmy/formats/synology_note_station/) en [meer](https://marph91.github.io/jimmy/)). Om zoveel mogelijk metadata te behouden, is het raadzaam om [extra aanpassingen](https://marph91.github.io/jimmy/import_instructions/#qownnotes) toe te passen.
+
+Als er problemen zijn met de conversie, open dan gerust een ticket op [GitHub](https://github.com/marph91/jimmy/issues).
+
 ## Google Keep
 
 > Download Keep-taken met Google Takeout
@@ -23,7 +29,7 @@ Er is een Joplin-importdialoog welke u kunt bereiken in het menu `Notitie / Impo
 > 
 > Vervang Keep door de map met notities in JSON-formaat. De out-map wordt aangemaakt als deze niet bestaat.
 
-Van https://gitlab.com/-/snippets/2002921
+Van <https://gitlab.com/-/snippets/2002921>
 
 ## Tomboy
 

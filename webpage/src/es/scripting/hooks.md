@@ -227,13 +227,13 @@ encryptionHook
 ### Llamada y parámetros del método
 ```js
 /**
-  * Esta función se llama cuando el texto debe cifrarse o descifrarse
-  *
-  * @param text cadena el texto para cifrar o descifrar
-  * @param contraseña cadena la contraseña
-  * @param decrypt bool si se exige un cifrado falso, si se exige un descifrado verdadero
-  * @return el texto descifrado cifrado
-  */
+ * Esta función se llama cuando el texto debe cifrarse o descifrarse
+ *
+ * @param text cadena el texto para cifrar o descifrar
+ * @param contraseña cadena la contraseña
+ * @param decrypt bool si es falso, se exige el cifrado; si es verdadero se exige el descifrado
+ * @return el texto cifrado/descifrado
+ */
 function encryptionHook(text, password, decrypt);
 ```
 
@@ -247,17 +247,17 @@ Puede implementar su propio mecanismo de etiquetado de notas, por ejemplo, con t
 ### Llamada y parámetros del método
 ```js
 /**
-  * Maneja el etiquetado de notas para una nota
-  *
-  * Esta función se llama cuando las etiquetas se agregan, eliminan o renombran en
-  * debe incluirse una nota o las etiquetas de una nota
-  *
-  * @param nota
-  * La acción @param puede ser "agregar", "eliminar", "renombrar" o "listar"
-  * @param tagName nombre de la etiqueta que se agregará, eliminará o cambiará de nombre
-  * @param newTagName nombre de la etiqueta a la que se le cambiará el nombre si action = "rename"
-  * @return nota cadena de texto o lista de cadenas de nombres de etiquetas (si acción = "lista")
-  */
+ * Maneja el etiquetado de una nota
+ *
+ * Esta función se llama cuando las etiquetas se agregan, eliminan o renombran en
+ * debe incluirse una nota o las etiquetas de una nota
+ *
+ * @param nota
+ * @param action puede ser "add" (agregar), "remove" (eliminar), "rename" (renombrar) o "list" (listar)
+ * @param tagName nombre de la etiqueta que se agregará, eliminará o cambiará de nombre
+ * @param newTagName nombre de la etiqueta a la que se le cambiará el nombre si action = "rename"
+ * @return cadena de texto o lista de cadenas de nombres de etiquetas de la nota (si action = "list")
+ */
 function noteTaggingHook(note, action, tagName, newTagName);
 ```
 
@@ -391,10 +391,10 @@ Este gancho se llama cuando se cambian los espacios de trabajo.
 ### Llamada y parámetros del método
 ```js
 /**
- * This function is called when workspaces are switched
+ * Esta función se llama cuando se cambian los espacios de trabajo
  *
- * @param oldUuid old uuid of workspace
- * @param newUuid new uuid of workspace
+ * @param oldUuid uuid actual del espacio de trabajo
+ * @param newUuid uuid nuevo del espacio de trabajo
  */
 function workspaceSwitchedHook(oldUuid, newUuid);
 ```

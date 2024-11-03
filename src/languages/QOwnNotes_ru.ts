@@ -748,7 +748,7 @@
 </message>
 <message>
 <source>Smart tabulators</source>
-<translation>Интеллектуальные табуляторы</translation>
+<translation>Умные табуляторы</translation>
 </message>
 <message>
 <source>Highlight search results</source>
@@ -768,7 +768,7 @@
 </message>
 <message>
 <source>Incremental search</source>
-<translation>Инкрементный поиск</translation>
+<translation>Поэтапный поиск</translation>
 </message>
 <message>
 <source>Use search dialog</source>
@@ -1349,7 +1349,7 @@
 </message>
 <message>
 <source>Import folders</source>
-<translation>Импорт заметок</translation>
+<translation>Импорт из папок</translation>
 </message>
 <message>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
@@ -1373,7 +1373,7 @@
 </message>
 <message>
 <source>Import tags</source>
-<translation>Импорт тэгов</translation>
+<translation>Импорт тегов</translation>
 </message>
 <message>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
@@ -1926,11 +1926,11 @@
 </message>
 <message>
 <source>&amp;Setup note folders / subfolders</source>
-<translation>&amp;Настройка папок и подпапок заметок</translation>
+<translation>&amp;Настройка папок / подпапок заметок</translation>
 </message>
 <message>
 <source>Setup note folders / subfolders</source>
-<translation>Настройка папок и подпапок заметок</translation>
+<translation>Настройка папок / подпапок заметок</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2489,10 +2489,10 @@ Restore current note?</source>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation type="unfinished">
+<translation>
 <numerusform>на диск сохранена %n заметка</numerusform>
 <numerusform>на диск сохранены %n заметки</numerusform>
-<numerusform>stored %n note(s) to disk</numerusform>
+<numerusform>на диск сохранены %n заметки</numerusform>
 <numerusform>на диск сохранено %n заметок</numerusform>
 </translation>
 </message>
@@ -2712,7 +2712,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
-<translation>Текст вставлен как файл текстового вложения</translation>
+<translation>Вставить текст как текстовый файл вложения</translation>
 </message>
 <message>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
@@ -2797,7 +2797,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
-<translation>Поддержка Nextcloud Deck прекращена!</translation>
+<translation>Поддержка Nextcloud Deck отключена!</translation>
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
@@ -3314,7 +3314,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Action not found!</source>
-<translation>Команда не найдена!</translation>
+<translation>Действие не найдено!</translation>
 </message>
 <message>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
@@ -3682,7 +3682,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>NoteSubFolderTree</name>
 <message>
 <source>show notes in folder '%1' (%2)</source>
-<translation>показать заметки в папке «%1» (%2)</translation>
+<translation>показать заметки в папке '%1' (%2)</translation>
 </message>
 <message>
 <source>All notes</source>
@@ -3690,7 +3690,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
-<translation>Показать заметки из всех подпапок (%1)</translation>
+<translation>Показать заметки из всех подпапок заметок (%1)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3722,7 +3722,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выделенную папку? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и подпапки также будут удалены!</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных папок? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и подпапки также будут удалены!</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных папок? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и подпапки также будут удалены!</numerusform>
-<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных папок?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этих папках также будут удалены!</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных папок? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и подпапки также будут удалены!</numerusform>
 </translation>
 </message>
 <message>
@@ -3741,7 +3741,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>OpenAiService</name>
 <message>
 <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-<translation>AI система отключена. Пожалуйста включите это в главном меню или в меню AI.</translation>
+<translation>AI система отключена. Пожалуйста, включите это в главном меню или в меню AI.</translation>
 </message>
 </context>
 <context>
@@ -3752,7 +3752,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>not connected</source>
-<translation>Не подключен</translation>
+<translation>не подключен</translation>
 </message>
 <message>
 <source>Username / password error</source>
@@ -3764,7 +3764,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>ok</source>
-<translation>ОК</translation>
+<translation>в норме</translation>
 </message>
 <message>
 <source>not correct</source>
@@ -4018,7 +4018,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Похоже, что ваша Linux работает в тёмной теме. Вы хотите переключиться на светлую тему в QOwnNotes?</translation>
+<translation>Похоже, что ваша Linux работает в светлой теме. Вы хотите переключиться на светлую тему в QOwnNotes?</translation>
 </message>
 <message>
 <source>Panel disabled</source>
@@ -4083,7 +4083,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
 <translation>
-<numerusform>Заметка использует это вложение. Переименовать также это вложение в заметке?</numerusform>
+<numerusform>%n заметка использует это вложение. Переименовать также это вложение в заметке?</numerusform>
 <numerusform>%n заметки используют это вложение. Переименовать также эти вложения в заметках?</numerusform>
 <numerusform>%n заметок используют это вложение. Переименовать также эти вложения в заметках?</numerusform>
 <numerusform>%n заметок используют это вложение. Переименовать также эти вложения в заметках?</numerusform>
@@ -4092,7 +4092,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
 <translation>
-<numerusform>%n заметка (заметок) используют это изображение. Вы хотите также переименовать изображение в заметке (заметках)?</numerusform>
+<numerusform>%n заметка используют это изображение. Вы хотите также переименовать изображение в заметке?</numerusform>
 <numerusform>%n заметки используют это изображение. Вы хотите также переименовать изображение в заметках?</numerusform>
 <numerusform>%n заметок используют это изображение. Вы хотите также переименовать изображение в заметках?</numerusform>
 <numerusform>%n заметок используют это изображение. Вы хотите также переименовать изображение в заметках?</numerusform>
@@ -4167,11 +4167,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>&amp;Link selected text</source>
-<translation>Сделать выделенный текст &amp;ссылкой</translation>
+<translation>Сделать выделенный текст ссы&amp;лкой</translation>
 </message>
 <message>
 <source>Insert &amp;link</source>
-<translation>Вставить &amp;ссылку</translation>
+<translation>Вставить ссы&amp;лку</translation>
 </message>
 <message>
 <source>Block &amp;quote selected text</source>
@@ -4208,11 +4208,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Export selected text as PDF (preview)</source>
-<translation>Экспорт выделенного текста в PDF (просмотр)</translation>
+<translation>Экспорт выделенного текста в PDF (предпросмотр)</translation>
 </message>
 <message>
 <source>Custom actions</source>
-<translation>Пользовательские команды</translation>
+<translation>Пользовательские действия</translation>
 </message>
 <message>
 <source>No suggestions for %1</source>
@@ -5621,7 +5621,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
-<translation>Имейте в виду, что переинициализация базы данных также удалит ваши кэшированные TODO предметы и конфигурированные папки заметок и скриптов!</translation>
+<translation>Имейте в виду, что повторная инициализация базы данных также удалит ваши кэшированные списки задач и конфигурированные папки заметок и скриптов!</translation>
 </message>
 <message>
 <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
@@ -5645,7 +5645,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Time to wait before refreshing the preview after typing:</source>
-<translation>Время ожидание перед перезагрузкой показа после завершения печати:</translation>
+<translation>Время ожидания перед перезагрузкой показа после завершения печати:</translation>
 </message>
 <message>
 <source>Reset the debounce time</source>
@@ -5653,7 +5653,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>0ms means don't wait for the typing to stop</source>
-<translation>0 мс означает что вы не хотите ждать пока завершиться печатанье</translation>
+<translation>0 мс означает что вы не хотите ждать пока завершиться печать остановиться</translation>
 </message>
 <message>
 <source>Use editor highlighting styles also for the preview</source>
@@ -5693,7 +5693,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
-<translation>Искать репозиторий скрипта для интеграции с AI</translation>
+<translation>Искать репозиторий со сценарием для интеграции с AI</translation>
 </message>
 <message>
 <source>API keys</source>
@@ -5782,7 +5782,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Clicking a note tab unsets 'All notes' selection</source>
-<translation>Клик по вкладке "Заметки" отменяет выбор "Все заметки"</translation>
+<translation>Клик по вкладке с заметкой отменяет выбор "Все заметки"</translation>
 </message>
 <message>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
@@ -5902,7 +5902,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Enable local trash to keep a copy of trashed notes</source>
-<translation>Включить локальный корзину для хранения копии удалённых заметок</translation>
+<translation>Включить локальную корзину для хранения копий удалённых заметок</translation>
 </message>
 <message>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
@@ -6633,7 +6633,7 @@ Connection error message: </source>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation>Серверные функции: %1</translation>
+<translation>Серверные функции AI: %1</translation>
 </message>
 <message>
 <source>API base URL</source>
@@ -7008,7 +7008,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Used in notes:</source>
-<translation>Используется в примечаниях:</translation>
+<translation>Используется в заметках:</translation>
 </message>
 <message>
 <source>Find attachment</source>
@@ -7016,7 +7016,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show attachments that are not used in notes</source>
-<translation>Показывать только приложения, которые не используются в заметках</translation>
+<translation>Показывать только вложения, которые не используются в заметках</translation>
 </message>
 <message>
 <source>Only show orphaned attachments</source>
@@ -7024,7 +7024,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show attachments that are used in the current note</source>
-<translation>Показывать только приложения которые уже используются в текущей заметке</translation>
+<translation>Показывать только вложения которые уже используются в текущей заметке</translation>
 </message>
 <message>
 <source>Only show from current note</source>
@@ -7081,7 +7081,7 @@ Your notes will stay intact!</source>
 <message numerus="yes">
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation>
-<numerusform>Удалить выбранный файл?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранный файл?</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файла?</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
@@ -7148,7 +7148,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Open the media folder</source>
-<translation>Откройте папку мультимедиа</translation>
+<translation>Открыть медиа папку</translation>
 </message>
 <message>
 <source>Open &amp;folder</source>
@@ -7188,15 +7188,15 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Used in notes:</source>
-<translation>Используется в примечаниях:</translation>
+<translation>Используется в заметках:</translation>
 </message>
 <message>
 <source>Only show images that are not used in notes</source>
-<translation>Показывать только nt изображения, которые не используются в заметках</translation>
+<translation>Показывать только те изображения, которые не используются в заметках</translation>
 </message>
 <message>
 <source>Only show orphaned images</source>
-<translation>Показывать только потерянные изображения</translation>
+<translation>Показывать только осиротевшие изображения</translation>
 </message>
 <message>
 <source>Last modified at %1</source>
@@ -7213,10 +7213,10 @@ Your notes will stay intact!</source>
 <message numerus="yes">
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранный файл?</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
-<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранныйх файлов?</numerusform>
-<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранныйх файлов?</numerusform>
-<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранныйх файлов?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
 </translation>
 </message>
 <message>
@@ -7398,7 +7398,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Show only items due today</source>
-<translation>Показывать только элементы сегодня</translation>
+<translation>Сегодня должны быть показаны только предметы</translation>
 </message>
 <message>
 <source>Save and insert into note</source>
@@ -7941,14 +7941,14 @@ This cannot be undone!</source>
 <translation>
 <numerusform>Закладка удалена из %n заметки</numerusform>
 <numerusform>Закладка удалена из %n заметок</numerusform>
-<numerusform>Закладка удалена из %n заметок (заметки)</numerusform>
-<numerusform>Закладка удалена из %n заметок (заметки)</numerusform>
+<numerusform>Закладка удалена из %n заметок</numerusform>
+<numerusform>Закладка удалена из %n заметок</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
 <translation>
-<numerusform>Закладка изменена в %n заметах (заметке)</numerusform>
+<numerusform>Закладка изменена в %n заметке</numerusform>
 <numerusform>Закладка изменена в %n заметках</numerusform>
 <numerusform>Закладка изменена в %n заметках</numerusform>
 <numerusform>Закладка изменена в %n заметках</numerusform>

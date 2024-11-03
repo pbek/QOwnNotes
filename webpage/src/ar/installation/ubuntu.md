@@ -50,9 +50,9 @@ chmod a+x QOwnNotes-*.AppImage
 
 ## مستودع OBS
 
-You may also be able to use the QOwnNotes on Ubuntu versions that aren't anymore updated on Ubuntu Launchpad then you can use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
+ربما تستطيع أيضا استخدام QOwnNotes على نسخ أوبنتو التي لم تعد تستقبل تحديثات في المستودع الشخصي، باستخدام مستودعات [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 
-Below are example calls for the xUbuntu 20.04 repository.
+إليك أمثلة على استخدام مستودع xUbuntu 20.04.
 
 نفّذ الأمر التالي في الطرفية لاستيثاق المستودع.
 

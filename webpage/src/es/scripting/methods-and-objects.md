@@ -27,7 +27,7 @@ bool startDetachedProcess(QString executablePath, parámetros QStringList,
 Ejemplo simple:
 
 ```js
-script.startDetachedProcess("/path/to/my/program", ["my parameter"]);
+script.startDetachedProcess("/ruta/a/mi/programa", ["mi parámetro"]);
 ```
 
 Ejecutando muchos procesos:
@@ -67,7 +67,7 @@ QByteArray startSynchronousProcess(QString executablePath, QStringList parameter
 
 ### Ejemplo
 ```js
-var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data", "/path/to/execute/in");
+var result = script.startSynchronousProcess("/ruta/a/mi/programa", ["mi parámetro"], "datos", "/ruta/en/la/cual/ejecutar");
 ```
 
 Puede que quiera echar un vistazo al ejemplo [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml).
@@ -127,7 +127,7 @@ registro vacío (texto QString);
 
 ### Ejemplo
 ```js
-script.log("my text");
+script.log("mi texto");
 ```
 
 Descarga de una URL a una cadena
@@ -193,7 +193,7 @@ QString ScriptingService :: insertMediaFile (QString mediaFilePath,
 
 ### Ejemplo
 ```js
-var markdown = script.insertMediaFile("/path/to/your/image.png");
+var markdown = script.insertMediaFile("/ruta/a/tu/imagen.png");
 ```
 
 Puede que quiera echar un vistazo al ejemplo [scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml).
@@ -220,10 +220,10 @@ QString ScriptingService::insertAttachmentFile(const QString &attachmentFilePath
 
 ### Ejemplo
 ```js
-var markdown = script.insertAttachmentFile("/path/to/your/file.png");
+var markdown = script.insertAttachmentFile("/ruta/a/tu/archivo.png");
 ```
 
-Regenerando la vista previa de la nota
+Regenerar la vista previa de la nota
 -----------------------------
 
 Actualiza la vista previa de la nota.
@@ -418,11 +418,11 @@ If you turned off that your note headline determines the note filename then you 
 
 ```js
 var note = script.currentNote();
-note.renameNoteFile('your-filename');
+note.renameNoteFile('su-nombre-de-archivo');
 ```
 :::
 
-Accediendo al portapapeles
+Acceder al portapapeles
 -----------------------
 
 ### Llamada y parámetros del método
@@ -430,7 +430,7 @@ Accediendo al portapapeles
 /**
  * Devuelve el contenido del portapapeles como texto o html
  *
- * @param asHtml returns the clipboard content as html instead of text
+ * @param asHtml devuelve el contenido del portapapeles como html en vez de texto
  */
 QString ScriptingService::clipboard(bool asHtml);
 ```
@@ -481,7 +481,7 @@ QString ScriptingService::noteTextEditSelectedText();
 
 ### Ejemplo
 ```js
-// leer el texto seleccionado del texto de la nota editar
+// leer el texto seleccionado de la edición de texto de la nota
 var text = script.noteTextEditSelectedText();
 ```
 
@@ -505,7 +505,7 @@ script.noteTextEditSelectAll();
 
 Puede usar esto junto con `noteTextEditWrite` para sobrescribir todo el texto de la nota actual.
 
-Seleccione la línea actual en la edición de texto de la nota
+Seleccionar la línea actual en la edición de texto de la nota
 ---------------------------------------------
 
 ### Llamada y parámetros del método
@@ -591,7 +591,7 @@ int ScriptingService::noteTextEditSelectionEnd();
 script.log(script.noteTextEditSelectionEnd());
 ```
 
-Coloque el cursor de texto en la edición de texto de la nota en una posición determinada
+Establecer el cursor de texto en la edición de texto de la nota en una posición determinada
 ---------------------------------------------------------------
 
 ### Llamada y parámetros del método
@@ -703,7 +703,7 @@ var text = script.aiComplete("Tell me how do you feel today?");
 
 Puede que quiera echar un vistazo al ejemplo [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
 
-Compruebe si la plataforma es Linux, OS X o Windows
+Comprobar si la plataforma es Linux, OS X o Windows
 ------------------------------------------------
 
 ### Llamada y parámetros del método
@@ -837,9 +837,9 @@ script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
 
 Puede que quiera echar un vistazo al ejemplo [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-stylesheet.qml).
 
-You can get the widget names from the `*.ui` files, for example the main window is [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui).
+Puede obtener los nombres de los widgets a partir de los archivos `*.ui`. Por ejemplo, la ventana principal se encuentra en [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui).
 
-Die Qt-Dokumentation (z. B. [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)) kann Ihnen helfen zu sehen, wie die Widgets miteinander in Beziehung stehen (suchen Sie auf den Seiten nach `Inherits`).
+La documentación de Qt (por ejemplo [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)) puede ayudarle a visualizar cómo los widgets se relacionan entre sí (busque `Hereda` en las páginas).
 
 El widget base para casi todo es [QWidget](https://doc.qt.io/qt-5/qwidget.html). Así que simplemente diseña `QWidget` con, por ejemplo, `QWidget {background-color: black; color: blanco;` significaría que todo tiene un color de fondo negro y un color de primer plano blanco.
 
@@ -847,15 +847,15 @@ El widget base para casi todo es [QWidget](https://doc.qt.io/qt-5/qwidget.html).
 The [style.qss](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle/style.qss) of [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle) might also be a good reference for styles you can change.
 :::
 
-Werfen Sie einen Blick auf die [Stylesheet-Referenz](http://doc.qt.io/qt-5/stylesheet-reference.html), um zu erfahren, welche Stile verfügbar sind.
+Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) for a reference of what styles are available.
 
-If you want to inject styles into html preview to alter the way notes are previewed please look at [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
+Si desea inyectar estilos en la vista previa de html para alterar la forma en que se previsualizan las notas, por favor eche un vistazo a [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
 ::: tip
 If you actually want to see how the dialogs look and what their names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it.
 :::
 
-Recarga del motor de secuencias de comandos
+Recargar el motor de secuencia de comandos
 ------------------------------
 
 ### Llamada y parámetros del método
@@ -900,9 +900,9 @@ Obtener una nota por su ID
 ### Llamada y parámetros del método
 ```cpp
 /**
- * Ruft eine Notiz anhand ihrer Id ab
+ * Fetches a note by its id
  *
- * @param id int die Id der Notiz
+ * @param id int the id of the note
  * @return NoteApi*
  */
 NoteApi* ScriptingService::fetchNoteById(int id);
@@ -916,7 +916,7 @@ script.fetchNoteById(243);
 
 Puede que quiera echar un vistazo al ejemplo [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Comprobando si una nota existe por su nombre de archivo
+Comprobar si una nota existe por su nombre de archivo
 ------------------------------------------
 
 ### Llamada y parámetros del método
@@ -948,10 +948,10 @@ Copiar texto en el portapapeles
 ### Llamada y parámetros del método
 ```cpp
 /**
- * Kopiert Text in die Zwischenablage als Klartext oder HTML-Mime-Daten
+ * Copies text into the clipboard as plain text or html mime data
  *
- * @param Textzeichenfolge Text, der in die Zwischenablage eingefügt werden soll
- * @param asHtml bool Wenn wahr, wird der Text als HTML-Mime-Daten gesetzt
+ * @param text string text to put into the clipboard
+ * @param asHtml bool if true the text will be set as html mime data
  */
 void ScriptingService::setClipboardText(QString text, bool asHtml);
 ```
@@ -1131,6 +1131,7 @@ Luego, el usuario puede establecer estas propiedades en la configuración del sc
 ```js
 // you have to define your registered variables so you can access them later
 property string myString;
+property string myStringSecret;
 property bool myBoolean;
 property string myText;
 property int myInt;
@@ -1150,6 +1151,12 @@ property variant settingsVariables: [
         "description": "Please enter a valid string:",
         "type": "string",
         "default": "My default value",
+    },
+    {
+        "identifier": "myStringSecret",
+        "name": "I am a password field",
+        "description": "Please enter a valid string:",
+        "type": "string-secret",
     },
     {
         "identifier": "myBoolean",
@@ -1198,7 +1205,7 @@ property variant settingsVariables: [
 ];
 ```
 
-Además, puede anular las `settingsVariables` con una función especial `registerSettingsVariables ()` como esta:
+In addition, you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
 
 ### Ejemplo
 ```js
@@ -1224,26 +1231,26 @@ Almacenar y cargar variables persistentes
 ### Llamada y parámetros del método
 ```cpp
 /**
-  * Almacena una variable persistente
-  * Estas variables son accesibles globalmente en todos los scripts
-  * Utilice un prefijo significativo en su clave como "PersistentVariablesTest / myVar"
-  *
-  * @param key {QString}
-  * @param value {QVariant}
-  */
-void ScriptingService :: setPersistentVariable (const QString & clave,
-                                                 const QVariant & value);
+ * Stores a persistent variable
+ * These variables are accessible globally over all scripts
+ * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
+ *
+ * @param key {QString}
+ * @param value {QVariant}
+ */
+void ScriptingService::setPersistentVariable(const QString &key,
+                                             const QVariant &value);
 
 /**
  * Loads a persistent variable
  * These variables are accessible globally over all scripts
-  *
-  * @param key {QString}
-  * @param defaultValue {QVariant} valor de retorno si la configuración no existe (opcional)
-  * @regreso
-  * /
+ *
+ * @param key {QString}
+ * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
+ * @return
+ */
 QVariant ScriptingService::getPersistentVariable(const QString &key,
-                                                    const QVariant &defaultValue);
+                                                 const QVariant &defaultValue);
 ```
 
 ### Ejemplo
@@ -1265,14 +1272,14 @@ Cargando variables de configuración de la aplicación
 ### Llamada y parámetros del método
 ```cpp
 /**
-  * Carga una variable de configuración de la aplicación
-  *
-  * @param key {QString}
-  * @param defaultValue {QVariant} valor de retorno si la configuración no existe (opcional)
+ * Loads an application settings variable
+ *
+ * @param key {QString}
+ * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
  * @return
  */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
-                                                            const QVariant &defaultValue);
+                                                          const QVariant &defaultValue);
 ```
 
 ### Ejemplo
@@ -1439,9 +1446,9 @@ Obtener una lista de los identificadores de todas las notas seleccionadas
 ### Llamada y parámetros del método
 ```cpp
 /**
- * Gibt eine Liste der IDs aller ausgewählten Notizen zurück
+ * Returns a list of the ids of all selected notes
  *
- * @return {QList<int>} Liste ausgewählter Notiz-IDs
+ * @return {QList<int>} list of selected note ids
  */
 QList<int> ScriptingService::selectedNotesIds();
 ```
@@ -1460,11 +1467,11 @@ Activar una acción de menú
 ### Llamada y parámetros del método
 ```cpp
 /**
- * Activa una acción de menú
+ * Activa una acción del menú
  *
- * @param objectName {QString} object name of the action to trigger
- * @param checked {QString} only trigger the action if checked-state is
- *                          different than this parameter (optional, can be 0 or 1)
+ * @param objectName {QString} nombre del objeto de la acción a invocar
+ * @param checked {QString} solamente invocar la acción si el estado verificado es
+ *                          diferente a este parámetro (opcional, puede ser 0 o 1)
  */
 void ScriptingService::triggerMenuAction(QString objectName, QString checked);
 ```
@@ -1537,7 +1544,7 @@ Se devolverá una cadena vacía si se pulsa en `Cancelar` o se presiona `Escape`
 ### Ejemplo
 ```js
 var result = script.inputDialogGetText(
-    "line edit", "Por favor ingresa un nombre", "current text");
+    "line edit", "Por favor ingrese un nombre", "current text");
 script.log(result);
 ```
 
@@ -1643,7 +1650,7 @@ Por favor eche un vistazo al ejemplo [websocket-server.qml](https://github.com/p
 
 También puede escuchar sockets con `WebSocket`. Por favor eche un vistazo al ejemplo [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-client.qml).
 
-Tenga en cuenta que debe tener instalada la biblioteca QML `websocket` de Qt para usar esto. Por ejemplo, en Ubuntu Linux puede instalar `módulo-qml-qtwebsockets`.
+Tenga en cuenta que debe tener instalada la biblioteca QML `websocket` de Qt para usar esto. Por ejemplo, en Ubuntu Linux puede instalar `qml-module-qtwebsockets`.
 
 Agregar una regla de resaltado para el editor
 -----------------------------------------
@@ -1668,7 +1675,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
                                            int maskedGroup);
 ```
 
-### Destacando estados
+### Estados del resaltador
 
 | Nombre                     | No. |
 | -------------------------- | --- |

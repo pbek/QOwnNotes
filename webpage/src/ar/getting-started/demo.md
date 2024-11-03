@@ -2,7 +2,7 @@
 
 ::: tip
 Note
-This might not always work, depending on the current state of the demo environment.
+قد لا يعمل هذا أحيانا، حسب حالة بيئة التجربة وقت استخدامها.
 :::
 
 يمكنك تجربة **QOwnNotes** في متصفحك بغير تثبيته، باتباع هذه التعليمات:

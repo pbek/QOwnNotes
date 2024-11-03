@@ -40,7 +40,7 @@ De forma predeterminada, `fzf` se usa para buscar, pero puede usar `peco` config
 
 Antes de usar el administrador de fragmentos, debe habilitar el *servidor de socket web* (2) en la configuración de *fragmentos de comando/extensión del navegador* (1) en QOwnNotes.
 
-Luego, debe mostrar el token de seguridad (3) y copiarlo (4).
+Luego, debe mostrar la ficha de seguridad (3) y copiarla (4).
 
 Ahora abra el archivo de configuración del administrador de fragmentos con:
 
@@ -49,11 +49,11 @@ Ahora abra el archivo de configuración del administrador de fragmentos con:
 control de calidad configurar
 ```
 
-Y coloque el token de seguridad en el atributo `token`:
+Y coloque la ficha de seguridad en el atributo `token`:
 
 ```toml
 [QOwnNotes]
-token = "yourtokenhere"
+token = "su_ficha_aquí"
 ```
 
 ::: tip
@@ -67,13 +67,13 @@ Puede usar **listas desordenadas con bloques de código en línea** para almacen
 Si agrega un `cmd:` antes del bloque de código en línea, el comando también se encontrará en la **nota actual** independientemente de las etiquetas de nota.
 
 ```markdown
-- `echo Soy un comando` Soy una descripción #tag1 #tag2 #tag3
-* `echo yo tambien soy un comando` yo soy una descripcion #tag3 #tag4 #tag5
-- cmd: `echo I se encontrará en la nota actual` Este comando se encontrará en la nota actual independientemente de las etiquetas de nota
+- `echo Soy un comando` Soy una descripción #etiqueta1 #etiqueta2 #etiqueta3
+* `echo Tambien soy un comando` Soy una descripcion #etiqueta3 #etiqueta4 #etiqueta5
+- cmd: `echo Seré encontrado en la nota actual` Este comando se encontrará en la nota actual independientemente de las etiquetas de nota
 
 <!-- Ejemplo para solicitar la entrada del usuario -->
 
-- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
+- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Preguntar por el ID del pull request y realizar checkout al pull request
 ```
 
 Los bloques de código **`bash` o `shell`**, precedidos por un encabezado 2 o superior como descripción, también se pueden usar para fragmentos de comando. Las etiquetas también son compatibles si se encuentran entre el encabezado y el bloque de código.

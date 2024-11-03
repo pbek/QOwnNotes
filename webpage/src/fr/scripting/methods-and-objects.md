@@ -1130,76 +1130,83 @@ L'utilisateur peut ensuite définir ces propriétés dans les paramètres du scr
 
 ### Exemple
 ```js
-// vous devez définir vos variables déclarées pour pouvoir y accéder ultérieurement
-property string maChaine;
-property bool monBooleen;
-property string monTexte;
-property int monInt;
-property string monFichier;
-property string monEmplacement;
-property string maSelection;
+// you have to define your registered variables so you can access them later
+property string myString;
+property string myStringSecret;
+property bool myBoolean;
+property string myText;
+property int myInt;
+property string myFile;
+property string myDirectory;
+property string mySelection;
 
-// déclarez vos variables de paramétrage afin que l'utilisateur puisse les définir dans les paramètres du script
+// register your settings variables so the user can set them in the script settings
 //
-// malheureusement il n'existe pas de QVariantHash dans Qt, nous ne pouvons utiliser que
-// QVariantMap (qui n'a pas d'ordonnancement arbitraire) oo QVariantList (qui peut au moins
-// être ordonné arbitrairement)
+// unfortunately there is no QVariantHash in Qt, we only can use
+// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
+// least can be ordered arbitrarily)
 property variant settingsVariables: [
     {
-        "identifier": "maChaine",
-        "name": "Je sus une édition de ligne",
-        "description": "Veuillez entrer une chaîne valide :",
+        "identifier": "myString",
+        "name": "I am a line edit",
+        "description": "Please enter a valid string:",
         "type": "string",
-        "default": "Ma valeur par défaut",
+        "default": "My default value",
     },
     {
-        "identifier": "monBooleen",
-        "name": "Je suis une case à cocher",
-        "description": "Une description",
-        "text": "Cochez cette case",
+        "identifier": "myStringSecret",
+        "name": "I am a password field",
+        "description": "Please enter a valid string:",
+        "type": "string-secret",
+    },
+    {
+        "identifier": "myBoolean",
+        "name": "I am a checkbox",
+        "description": "Some description",
+        "text": "Check this checkbox",
         "type": "boolean",
         "default": true,
     },
     {
-        "identifier": "monTexte",
-        "name": "Je suis une boîte de texte",
-        "description": "Veuillez entrer votre texte :",
+        "identifier": "myText",
+        "name": "I am textbox",
+        "description": "Please enter your text:",
         "type": "text",
-        "default": "Ceci peut être un texte très long\nsur plusieurs lignes.",
+        "default": "This can be a really long text\nwith multiple lines.",
     },
     {
-        "identifier": "monInt",
-        "name": "Je suis un sélecteur de chiffre",
-        "description": "Veuillez entrer un chiffre :",
+        "identifier": "myInt",
+        "name": "I am a number selector",
+        "description": "Please enter a number:",
         "type": "integer",
         "default": 42,
     },
     {
-        "identifier": "monFichier",
-        "name": "Je suis un sélecteur de fichier",
-        "description": "Veuillez sélectionner le fichier :",
+        "identifier": "myFile",
+        "name": "I am a file selector",
+        "description": "Please select the file:",
         "type": "file",
         "default": "pandoc",
     },
     {
-        "identifier": "monEmplacement",
-        "name": "Je suis un sélecteur d'emplacement",
-        "description": "Veuillez sélectionner un emplacement :",
+        "identifier": "myDirectory",
+        "name": "I am a directory selector",
+        "description": "Please select the directory:",
         "type": "directory",
         "default": "/home",
     },
     {
-        "identifier": "maSelection",
-        "name": "Je suis un sélecteur d'item",
-        "description": "Veuillez sélectionner un item :",
+        "identifier": "mySelection",
+        "name": "I am an item selector",
+        "description": "Please select an item:",
         "type": "selection",
         "default": "option2",
-        "items": {"option1": "Texte pour option 1", "option2": "Texte pour option 2", "option3": "Texte pour option 3"},
+        "items": {"option1": "Text for option 1", "option2": "Text for option 2", "option3": "Text for option 3"},
     }
 ];
 ```
 
-De plus, vous pouvez outrepasser les `settingsVariables` avec une fonction spéciale `registerSettingsVariables ()` comme ceci :
+In addition, you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
 
 ### Exemple
 ```js
@@ -1225,26 +1232,26 @@ Stockage et chargement de variables persistantes
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Stocke une variable persistante
- * Ces variables sont accessibles globalement par l'ensemble des scripts
- * Veuillez utiliser des préfixes explicites dans votre clé comme "PersistentVariablesTest/myVar"
+ * Stores a persistent variable
+ * These variables are accessible globally over all scripts
+ * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
  *
  * @param key {QString}
  * @param value {QVariant}
  */
 void ScriptingService::setPersistentVariable(const QString &key,
-                                                const QVariant &value);
+                                             const QVariant &value);
 
 /**
- * Charge une variable persistante
- * Ces variables sont accessibles globalement par l'ensemble des scripts
+ * Loads a persistent variable
+ * These variables are accessible globally over all scripts
  *
  * @param key {QString}
- * @param defaultValue {QVariant} retourner valeur si le paramètre n'existe pas (optionnel)
+ * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
  * @return
  */
 QVariant ScriptingService::getPersistentVariable(const QString &key,
-                                                    const QVariant &defaultValue);
+                                                 const QVariant &defaultValue);
 ```
 
 ### Exemple
@@ -1266,14 +1273,14 @@ Chargement des variables de paramètres d'application
 ### Appel de méthode et paramètres
 ```cpp
 /**
- * Charger une variable de paramètres d'application
+ * Loads an application settings variable
  *
  * @param key {QString}
- * @param defaultValue {QVariant} retourne valeur si le paramètre n'existe pas (optionnel)
+ * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
  * @return
  */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
-                                                            const QVariant &defaultValue);
+                                                          const QVariant &defaultValue);
 ```
 
 ### Exemple

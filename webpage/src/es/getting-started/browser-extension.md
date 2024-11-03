@@ -19,19 +19,19 @@ Información
     - [Página de complementos para Firefox](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
     - También puede encontrar la extensión en [GitHub](https://github.com/qownnotes/web-companion/).
 2. Agregue el token de seguridad para configurar la extensión.
-    - La primera vez que haga clic en el ícono de la extensión del navegador QOwnNotes, recibirá un cuadro de diálogo con un token de seguridad. Copie el token.
+    - La primera vez que haga clic en el ícono de la extensión del navegador QOwnNotes, recibirá un cuadro de diálogo con una ficha de seguridad. Copie el token.
     - Vaya a la ubicación de administración de extensiones de su navegador. Haga clic en los detalles de la extensión QOwnNotes.
     - Pegue el token en el campo Token de seguridad.
 3. Para usar el modo privado, deberá permitir que la extensión se ejecute en ventanas privadas en la configuración de la extensión.
 
-## Cortadora web
+## Web Clipper
 
 ![web-clipper](/img/web-clipper.png)
 
 Haga clic con el botón derecho en una página web o en el texto seleccionado para usar la funcionalidad **web-clipper**. Allí también puede crear una nueva nota con una ** captura de pantalla** de la página web actual.
 
 ::: warning
-Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
+Información Si web clipper no funciona, por favor revise si la aplicación de QOwnNotes para escritorio está ejecutándose, y si la extensión del navegador Web Companion está configurada con la ficha de seguridad.
 
 Además, asegúrese de aceptar el cuadro de diálogo de consentimiento, que se muestra la primera vez que pulsa sobre el icono de la extensión en la barra de herramientas del navegador.
 
@@ -39,7 +39,7 @@ Si utiliza Firefox, también debe cerciorarse de que ha activado el permiso opci
 :::
 
 ::: tip
-¡El cortador web también es programable! Eche un vistazo a [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) si desea controlar lo que recorta de las páginas web.
+¡Web Clipper también es programable! Eche un vistazo a [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) si desea controlar lo que recorta de las páginas web.
 :::
 
 ## Marcadores

@@ -10,6 +10,12 @@
 
 `노트 /가져오기` 메뉴에서 도달할 수 있는 Joplin 가져오기 대화상자가 있습니다.
 
+## 다양한 형식
+
+명령줄 도구 [jimmy](https://github.com/marph91/jimmy)는 다양한 형식 (예: [Google Keep](https://marph91.github.io/jimmy/formats/google_keep/), [Synology Note Station](https://marph91.github.io/jimmy/formats/synology_note_station/) 및 [more](https://marph91.github.io/jimmy/))을 마크다운으로 변환할 수 있습니다. 가능한 한 많은 메타데이터를 보존하려면 [추가 조정](https://marph91.github.io/jimmy/import_instructions/#qownnotes)을 적용하는 것이 좋습니다.
+
+전환에 문제가 있는 경우 [GitHub](https://github.com/marph91/jimmy/issues)에서 티켓을 자유롭게 개설하세요.
+
 ## Google Keep
 
 > Google 테이크아웃을 사용하여 Keep 작업 다운로드
@@ -23,7 +29,7 @@
 > 
 > JSON 형식의 노트가 들어 있는 폴더로 Keep을 대체합니다. 아웃 폴더가 없으면 아웃 폴더가 생성됩니다.
 
-https://gitlab.com/-/snippets/2002921에서
+<https://gitlab.com/-/snippets/2002921>에서
 
 ## Tomboy
 

@@ -1130,8 +1130,9 @@ Der Benutzer kann diese Eigenschaften dann in den Skripteinstellungen festlegen.
 
 ### Beispiel
 ```js
-// Sie müssen Ihre registirerten Variablen definieren, damit Sie später auf sie zugreifen können
+// you have to define your registered variables so you can access them later
 property string myString;
+property string myStringSecret;
 property bool myBoolean;
 property string myText;
 property int myInt;
@@ -1139,11 +1140,11 @@ property string myFile;
 property string myDirectory;
 property string mySelection;
 
-// Registrieren Sie Ihre Einstellungsvariablen, sodass der Nutzer Sie in den Skripteinstellungen festlegen kann
+// register your settings variables so the user can set them in the script settings
 //
-// es gibt leider kein QVariantHash in Qt, wir können nur
-// QVariantMap (was kein arbiträres sortieren hat) oder QVariantList (was immerhin
-// arbiträr sortiert werden kann) verwenden
+// unfortunately there is no QVariantHash in Qt, we only can use
+// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
+// least can be ordered arbitrarily)
 property variant settingsVariables: [
     {
         "identifier": "myString",
@@ -1151,6 +1152,12 @@ property variant settingsVariables: [
         "description": "Please enter a valid string:",
         "type": "string",
         "default": "My default value",
+    },
+    {
+        "identifier": "myStringSecret",
+        "name": "I am a password field",
+        "description": "Please enter a valid string:",
+        "type": "string-secret",
     },
     {
         "identifier": "myBoolean",
@@ -1199,7 +1206,7 @@ property variant settingsVariables: [
 ];
 ```
 
-Darüber hinaus können Sie die `settingsVariables` mit einer speziellen Funktion `registerSettingsVariables()` wie folgt überschreiben:
+In addition, you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
 
 ### Beispiel
 ```js
@@ -1225,25 +1232,26 @@ Speichern und Laden persistenter Variablen
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Speichert eine persistente Variable
- * Diese Variablen sind global über alle Skripte zugänglich
- * Bitte verwenden Sie ein aussagekräftiges Präfix in Ihrem Schlüssel wie "PersistentVariablesTest/myVar"
+ * Stores a persistent variable
+ * These variables are accessible globally over all scripts
+ * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
  *
  * @param key {QString}
  * @param value {QVariant}
  */
 void ScriptingService::setPersistentVariable(const QString &key,
-                                                const QVariant &value);
+                                             const QVariant &value);
+
 /**
- * Lädt eine persistente Variable
- * Diese Variablen sind global über alle Skripte zugänglich
+ * Loads a persistent variable
+ * These variables are accessible globally over all scripts
  *
  * @param key {QString}
- * @param defaultValue {QVariant} Rückgabewert, falls die Einstellung nicht existiert (optional)
+ * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
  * @return
  */
 QVariant ScriptingService::getPersistentVariable(const QString &key,
-                                                    const QVariant &defaultValue);
+                                                 const QVariant &defaultValue);
 ```
 
 ### Beispiel
@@ -1265,14 +1273,14 @@ Laden von Anwendungseinstellungsvariablen
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Lädt eine Anwendungseinstellungsvariable
+ * Loads an application settings variable
  *
  * @param key {QString}
- * @param defaultValue {QVariant} Rückgabewert, wenn die Einstellung nicht vorhanden ist (optional)
+ * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
  * @return
  */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
-                                                             const QVariant &defaultValue);
+                                                          const QVariant &defaultValue);
 ```
 
 ### Beispiel

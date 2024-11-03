@@ -6,6 +6,7 @@
   - In the settings dump, such variables will be masked with `********`
   - For more information, please take a look at the
     [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-script-settings-variables)
+- Added more Spanish, Arabic, Russian (thank you, alejandromoc, noureddin, catmenmilota)
 
 ## 24.10.5
 - The capturing of indented Markdown tables was improved (for [#3137](https://github.com/pbek/QOwnNotes/issues/3137))

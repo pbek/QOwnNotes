@@ -1133,6 +1133,7 @@ Użytkownik może następnie ustawić te właściwości w ustawieniach skryptu.
 ```js
 // you have to define your registered variables so you can access them later
 property string myString;
+property string myStringSecret;
 property bool myBoolean;
 property string myText;
 property int myInt;
@@ -1152,6 +1153,12 @@ property variant settingsVariables: [
         "description": "Please enter a valid string:",
         "type": "string",
         "default": "My default value",
+    },
+    {
+        "identifier": "myStringSecret",
+        "name": "I am a password field",
+        "description": "Please enter a valid string:",
+        "type": "string-secret",
     },
     {
         "identifier": "myBoolean",
@@ -1200,7 +1207,7 @@ property variant settingsVariables: [
 ];
 ```
 
-Ponadto możesz zastąpić `settingsVariables` specjalną funkcją `registerSettingsVariables()` w następujący sposób:
+In addition, you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
 
 ### Przykład
 ```js
@@ -1226,15 +1233,15 @@ Przechowywanie i ładowanie trwałych zmiennych
 ### Wywołanie metody i parametry
 ```cpp
 /**
-* Przechowuje stałą zmienną
-  * Te zmienne są dostępne globalnie we wszystkich skryptach
-  * Użyj znaczącego prefiksu w swoim kluczu, takiego jak „PersistentVariablesTest/myVar”
+ * Stores a persistent variable
+ * These variables are accessible globally over all scripts
+ * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
  *
  * @param key {QString}
  * @param value {QVariant}
  */
 void ScriptingService::setPersistentVariable(const QString &key,
-                                                const QVariant &value);
+                                             const QVariant &value);
 
 /**
  * Loads a persistent variable
@@ -1245,7 +1252,7 @@ void ScriptingService::setPersistentVariable(const QString &key,
  * @return
  */
 QVariant ScriptingService::getPersistentVariable(const QString &key,
-                                                    const QVariant &defaultValue);
+                                                 const QVariant &defaultValue);
 ```
 
 ### Przykład
@@ -1267,14 +1274,14 @@ You may also want to take a look at the example [persistent-variables.qml](https
 ### Wywołanie metody i parametry
 ```cpp
 /**
- * Ładuje zmienną ustawień aplikacji
+ * Loads an application settings variable
  *
  * @param key {QString}
- * @param defaultValue {QVariant} zwróć wartość, jeśli ustawienie nie istnieje (opcjonalnie)
+ * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
  * @return
  */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
-                                                            const QVariant &defaultValue);
+                                                          const QVariant &defaultValue);
 ```
 
 ### Przykład

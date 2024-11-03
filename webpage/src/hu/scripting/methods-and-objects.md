@@ -1131,6 +1131,7 @@ Ezután a felhasználó beállíthatja ezeket a tulajdonságokat a szkript beál
 ```js
 // you have to define your registered variables so you can access them later
 property string myString;
+property string myStringSecret;
 property bool myBoolean;
 property string myText;
 property int myInt;
@@ -1150,6 +1151,12 @@ property variant settingsVariables: [
         "description": "Please enter a valid string:",
         "type": "string",
         "default": "My default value",
+    },
+    {
+        "identifier": "myStringSecret",
+        "name": "I am a password field",
+        "description": "Please enter a valid string:",
+        "type": "string-secret",
     },
     {
         "identifier": "myBoolean",
@@ -1198,7 +1205,7 @@ property variant settingsVariables: [
 ];
 ```
 
-Ezenkívül felülírhatja a `settingsVariables` funkciót egy `registerSettingsVariables()` speciális funkcióval, mint ez:
+In addition, you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
 
 ### Példa
 ```js
@@ -1224,26 +1231,26 @@ Tartós változók tárolása és betöltése
 ### Módszerhívás és paraméterek
 ```cpp
 /**
-  * Tartós változót tárol
-  * Ezek a változók globálisan elérhetők az összes szkripten
-  * Kérjük, használjon értelmes előtagot a kulcsában, például "PersistentVariablesTest / myVar"
-  *
-  * @param key {QString}
-  * @param defaultValue {QVariant}
-  */
-void ScriptingService::setPersistentVariable (const QString & amp; kulcs,
-                                                 const QVariant &amp);
+ * Stores a persistent variable
+ * These variables are accessible globally over all scripts
+ * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
+ *
+ * @param key {QString}
+ * @param value {QVariant}
+ */
+void ScriptingService::setPersistentVariable(const QString &key,
+                                             const QVariant &value);
 
 /**
-  * Tartós változót tölt be
-  * Ezek a változók globálisan elérhetők az összes szkripten
-  *
-  * @param key {QString}
-  * @param defaultValue {QVariant} visszatérési érték, ha a beállítás nem létezik (nem kötelező)
-  * @Return
-  */
-QVariant ScriptingService::getPersistentVariable (const QString & kulcs,
-                                                     const QVariant & defaultValue);
+ * Loads a persistent variable
+ * These variables are accessible globally over all scripts
+ *
+ * @param key {QString}
+ * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
+ * @return
+ */
+QVariant ScriptingService::getPersistentVariable(const QString &key,
+                                                 const QVariant &defaultValue);
 ```
 
 ### Példa
@@ -1265,14 +1272,14 @@ Az alkalmazás beállításainak változóinak betöltése
 ### Módszerhívás és paraméterek
 ```cpp
 /**
- * Betölti az alkalmazás beállításainak változóját
+ * Loads an application settings variable
  *
  * @param key {QString}
  * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
  * @return
  */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
-                                                            const QVariant &defaultValue);
+                                                          const QVariant &defaultValue);
 ```
 
 ### Példa

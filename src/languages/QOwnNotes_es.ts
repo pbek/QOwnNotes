@@ -1335,7 +1335,7 @@
 <name>JoplinImportDialog</name>
 <message>
 <source>Joplin Import</source>
-<translation>Importación Joplin</translation>
+<translation>Importación de Joplin</translation>
 </message>
 <message>
 <source>Import folders</source>
@@ -3165,7 +3165,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>quit toolbar</source>
-<translation>quitar barra</translation>
+<translation>salir de la barra de herramientas</translation>
 </message>
 <message>
 <source>Page size:</source>
@@ -4681,11 +4681,11 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Markdown highlighting</source>
-<translation>Quitar resaltado</translation>
+<translation>Resaltado de Markdown</translation>
 </message>
 <message>
 <source>Enable markdown highlighting</source>
-<translation>Activar resaltado Markdown</translation>
+<translation>Activar resaltado de Markdown</translation>
 </message>
 <message>
 <source>Interface language</source>
@@ -5240,7 +5240,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-<translation>Quizás también quieras elegir otro esquema de colores en la configuración del editor para el modo oscuro.</translation>
+<translation>Puede que también desee elegir otro esquema de colores del editor en la configuración del editor para el modo oscuro.</translation>
 </message>
 <message>
 <source>Enable dark mode icon theme</source>
@@ -5585,7 +5585,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Quizás quieras dar un vistazo a todos los &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;formatos de hora&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Puede que quiera dar un vistazo a todos los &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;formatos de hora&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; disponibles</translation>
 </message>
 <message>
 <source>Note that disabling this will also disable the navigation panel!</source>
@@ -5762,7 +5762,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
-<translation>Instalar la &lt;a href="%1"&gt;extensión del navegador Web Companion&lt;/a&gt; desde la &lt;a href="%2"&gt;Tienda Web de Chrome&lt;/a&gt; o &lt;a href="%3"&gt;la página de Add-ons de Firefox&lt;/a&gt;para utilizar QOwnNotes como clipper web o para la gestión de favoritos.</translation>
+<translation>Instale la &lt;a href="%1"&gt;extensión del navegador Web Companion&lt;/a&gt; desde la &lt;a href="%2"&gt;Tienda Web de Chrome&lt;/a&gt; o &lt;a href="%3"&gt;la página de Add-ons de Firefox&lt;/a&gt;para utilizar QOwnNotes como web clipper o para la gestión de favoritos.</translation>
 </message>
 <message>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
@@ -6163,7 +6163,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
-<translation>Marca esto si deseas aceptar todas las modificaciones externas mientras estás editando la nota actual.</translation>
+<translation>Marque esto si desea aceptar todas las modificaciones externas mientras edita la nota actual.</translation>
 </message>
 <message>
 <source>Accept all external modifications of the current note</source>
@@ -6323,7 +6323,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-<translation>Marca esto si deseas ignorar todas las modificaciones externas mientras estás editando la nota actual.</translation>
+<translation>Marque esto si deseas ignorar todas las modificaciones externas mientras edita la nota actual.</translation>
 </message>
 <message>
 <source>Ignore all external modifications of the current note</source>
