@@ -36,6 +36,7 @@ QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
 #include "api/tagapi.h"
 #include "entities/notesubfolder.h"
 #include "services/settingsservice.h"
+#include "cryptoservice.h"
 
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
@@ -43,7 +44,6 @@ QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
 #include <QInputDialog>
 #include <QMessageBox>
 
-#include "cryptoservice.h"
 #include "openaiservice.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 #endif
