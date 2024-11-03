@@ -3,8 +3,8 @@
 ## 24.11.0
 - There now is a new script settings for secret variables with the type `string-secret`
   - Those strings will be stored encrypted (but don't depend on that encryption)
-  - In the settings dump such variables will be masked with `********`
-  - For more information please take a look at the
+  - In the settings dump, such variables will be masked with `********`
+  - For more information, please take a look at the
     [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-script-settings-variables)
 
 ## 24.10.5
