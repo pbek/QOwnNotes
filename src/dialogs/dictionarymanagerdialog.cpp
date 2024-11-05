@@ -103,8 +103,8 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent)
     addDictionaryItem(tr("Papiamentu"), QStringLiteral("pap_CW"));
     addDictionaryItem(tr("Persian"), QStringLiteral("fa_IR"));
     addDictionaryItem(tr("Polish"), QStringLiteral("pl_PL"));
-    addDictionaryItem(tr("Portugese (Brazilian)"), QStringLiteral("pt_BR"));
-    addDictionaryItem(tr("Portugese"), QStringLiteral("pt_PT"));
+    addDictionaryItem(tr("Portuguese (Brazilian)"), QStringLiteral("pt_BR"));
+    addDictionaryItem(tr("Portuguese"), QStringLiteral("pt_PT"));
     addDictionaryItem(tr("Romanian"), QStringLiteral("ro"), QStringLiteral("ro_RO"));
     addDictionaryItem(tr("Romansh"), QStringLiteral("rm"));
     addDictionaryItem(tr("Russian"), QStringLiteral("ru_RU"));

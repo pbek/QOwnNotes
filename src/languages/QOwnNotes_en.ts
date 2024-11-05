@@ -218,16 +218,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
-        <source>Portugese (Brazilian)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
-        <source>Portugese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
         <source>Danish</source>
         <translation type="unfinished"></translation>
@@ -535,6 +525,16 @@
     <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
         <source>Persian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
+        <source>Portuguese (Brazilian)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
+        <source>Portuguese</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5580,12 +5580,12 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/scriptsettingwidget.cpp" line="190"/>
+        <location filename="../widgets/scriptsettingwidget.cpp" line="221"/>
         <source>Please select a directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/scriptsettingwidget.cpp" line="191"/>
+        <location filename="../widgets/scriptsettingwidget.cpp" line="222"/>
         <source>Please select a file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5593,7 +5593,7 @@ Do you want to install it anyway?</source>
 <context>
     <name>ScriptingService</name>
     <message>
-        <location filename="../services/scriptingservice.cpp" line="261"/>
+        <location filename="../services/scriptingservice.cpp" line="277"/>
         <source>file doesn&apos;t exist</source>
         <translation type="unfinished"></translation>
     </message>
