@@ -2096,7 +2096,7 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
     //    qDebug() << __func__ << " - 'text1': " << text1;
     //    qDebug() << __func__ << " - 'text2': " << text2;
 
-    diff_match_patch *diff = new diff_match_patch();
+    auto *diff = new diff_match_patch();
     const QList<Diff> diffList = diff->diff_main(text1, text2);
 
     const QString html = diff->diff_prettyHtml(diffList);
