@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 24.11.1
+- The margins are now adapted correctly, when zooming in the note text edit, when
+  the setting that the editor width should only be applied in distraction free mode
+  is disabled (for [#3153](https://github.com/pbek/QOwnNotes/issues/3153))
 - The [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
   was updated to version 24.11.0 to **fix issues with the versioning API**
   (for [#50](https://github.com/pbek/qownnotesapi/issues/50))

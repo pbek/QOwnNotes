@@ -109,6 +109,8 @@ void QOwnNotesMarkdownTextEdit::onZoom(bool in) {
                                              3000);
         }
     }
+
+    setPaperMargins();
 }
 
 /**
