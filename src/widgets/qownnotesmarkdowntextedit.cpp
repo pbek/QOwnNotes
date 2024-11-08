@@ -99,7 +99,7 @@ void QOwnNotesMarkdownTextEdit::onZoom(bool in) {
     const int fontSize = modifyFontSize(mode);
 
     auto mainWindow = MainWindow::instance();
-    if (mainWindow && mainWindow->isInDistractionFreeMode()) {
+    if (mainWindow && MainWindow::isInDistractionFreeMode()) {
         setPaperMargins();
         if (in) {
             mainWindow->showStatusBarMessage(tr("Increased font size to %1 pt").arg(fontSize),
