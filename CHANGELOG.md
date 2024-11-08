@@ -5,7 +5,7 @@
   the setting that the editor width should only be applied in distraction free mode
   is disabled (for [#3153](https://github.com/pbek/QOwnNotes/issues/3153))
 - The [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
-  was updated to version 24.11.0 to **fix issues with the versioning API**
+  was updated to version 24.11.0 to **fix issues with the versioning API in Nextcloud 30**
   (for [#50](https://github.com/pbek/qownnotesapi/issues/50))
 - Added more Spanish, Brazilian Portuguese, Romanian, Dutch, German translation
   (thank you, alejandromoc, ciel.p, ioancroitor, stephanp, rakekniven)
