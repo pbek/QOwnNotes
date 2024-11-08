@@ -1207,6 +1207,7 @@ void OwnCloudService::handleVersionsLoading(QString data) {
 
     // we have to add [], so the string can be parsed as JSON
     data = QStringLiteral("[") % data % QStringLiteral("]");
+    qDebug() << __func__ << " - 'data': " << data;
 
     QJSEngine engine;
     QJSValue result = engine.evaluate(data);
