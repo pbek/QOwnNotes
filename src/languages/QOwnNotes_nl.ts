@@ -177,14 +177,6 @@
 <translation>Gujarati</translation>
 </message>
 <message>
-<source>Portugese (Brazilian)</source>
-<translation>Portugees (Braziliaans)</translation>
-</message>
-<message>
-<source>Portugese</source>
-<translation>Portugees</translation>
-</message>
-<message>
 <source>Danish</source>
 <translation>Deens</translation>
 </message>
@@ -431,6 +423,14 @@
 <message>
 <source>Persian</source>
 <translation>Perzisch</translation>
+</message>
+<message>
+<source>Portuguese (Brazilian)</source>
+<translation>Portugees (Braziliaans)</translation>
+</message>
+<message>
+<source>Portuguese</source>
+<translation>Portugees</translation>
 </message>
 <message>
 <source>Romanian</source>

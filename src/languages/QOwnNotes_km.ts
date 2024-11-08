@@ -179,14 +179,6 @@
 <translation>ហ្គូចាហ្គោ</translation>
 </message>
 <message>
-<source>Portugese (Brazilian)</source>
-<translation>ព័រទុយហ្កាល់ (ប្រេស៊ីល)</translation>
-</message>
-<message>
-<source>Portugese</source>
-<translation>ព័រទុយហ្កាល់</translation>
-</message>
-<message>
 <source>Danish</source>
 <translation>ដាណឺម៉ាក</translation>
 </message>
@@ -433,6 +425,14 @@
 <message>
 <source>Persian</source>
 <translation type="unfinished">Persian</translation>
+</message>
+<message>
+<source>Portuguese (Brazilian)</source>
+<translation type="unfinished">Portuguese (Brazilian)</translation>
+</message>
+<message>
+<source>Portuguese</source>
+<translation type="unfinished">Portuguese</translation>
 </message>
 <message>
 <source>Romanian</source>

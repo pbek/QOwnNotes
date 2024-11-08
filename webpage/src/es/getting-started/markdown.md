@@ -72,16 +72,16 @@ Puedes usar el [atajo](./shortcuts.md) <kbd>Alt + Shift + S</kbd> para tachar un
 Hay muchas formas de crear listas.
 
 ```markdown
-1. Primer elemento de lista ordenado
+1. Primer elemento de lista ordenada
 2. Otro articulo
    * Sublista desordenada.
-1. Los números reales no importan, solo que es un número
+1. Los números reales no importan, solo que sean números
    1. Sublista ordenada (solo funciona en el editor, no en la vista previa)
 4. Y otro artículo.
 
 * La lista desordenada puede usar asteriscos
 - O menos
-+ O ventajas
++ O más
 ```
 
 ::: tip
@@ -90,7 +90,7 @@ Si presiona <kbd>Ingrese</kbd> al final de una lista, se creará un nuevo elemen
 
 ## Enlaces
 
-Two of the simpler uses for links are pointing to webpages or other notes. There are multiple ways each of these links can look.
+Dos de los usos más simples de los enlaces son apuntar a páginas web u otras notas. There are multiple ways each of these links can look.
 
 ### Enlaces externos
 
@@ -110,9 +110,9 @@ http://www.example.com o <http://www.example.com>
 ### Enlaces internos
 
 ```markdown
-[I link to the Journal.md note](Journal.md)
+[Yo enlazo a la nota Diario.md](Diario.md)
 
-<Journal.md> works similarly.
+<Journal.md> funciona de forma similar.
 ```
 
 ::: tip
@@ -128,7 +128,7 @@ Puede presionar <kbd>Ctrl + Espacio</kbd> mientras el cursor está en un enlace 
 Los marcadores utilizados por la extensión de navegador [QOwnNotes Web Companion](./browser-extension.md) utilizan enlaces en listas.
 
 ```markdown
-- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
+- [Nombre de la página web](https://www.ejemplo.com) #etiqueta1 #etiqueta2 alguna descripción y etiquetas
 ```
 
 ## Imágenes
@@ -136,7 +136,7 @@ Los marcadores utilizados por la extensión de navegador [QOwnNotes Web Companio
 Las imágenes se pueden incrustar en QOwnNotes. Estas se mostrarán en la vista previa.
 
 ```markdown
-![alt text](media/my-image.jpg)
+![texto alternativo](media/mi-imagen.jpg)
 ```
 
 ::: tip
@@ -149,14 +149,14 @@ También puede pegar directamente una imagen del portapapeles en su nota con <kb
 ## Código en línea y bloques de código
 
 ```markdown
-Inline `code` has `backticks around` it.
+El `código` en línea tiene `comillas invertidas` a su alrededor.
 ```
 
 ::: tip
 Puede usar el [atajo](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> en texto en línea seleccionado o solo dentro del texto para crear un bloque de código en línea.
 :::
 
-Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
+Los bloques de código están delimitados por líneas con tres comillas invertidas o indentados con cuatro espacios.
 
 ### 4-Spaces fence
 
@@ -172,14 +172,14 @@ Agregue cuatro espacios delante de su código para marcarlo como bloque de códi
 También puede utilizar tres comillas invertidas para crear un bloque de código.
 ~~~markdown
 ```
-Code goes here
-Code goes here
+El código va aquí
+El código va aquí
 ```
 ~~~
 
 ::: tip
-You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
-multiple selected lines of text or in an empty line to create a code block. 
+Puede usar el [atajo] (./ shortcuts.md) <kbd>Ctrl + Shift + C</kbd> en
+varias líneas de texto seleccionadas o en una línea vacía para crear un bloque de código. 
 :::
 
 ### Backtick fence with code highlighting
@@ -188,12 +188,12 @@ There also is some syntax highlighting with code blocks in QOwnNotes.
 
 ~~~markdown
 ```bash
-# I am a comment
-cd Notes
+# Soy un comentario
+cd Notas
 ```
 ~~~
 
-Currently, supported languages (and code block identifiers) are:
+Actualmente, los idiomas admitidos (e identificadores de bloque de código) son:
 
 * BASh scripting, `bash`
 * C, `c`
@@ -227,26 +227,26 @@ Currently, supported languages (and code block identifiers) are:
 * YAML, `yml`
 * YAML, `yaml`
 
-## Tables
+## Tablas
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+Las tablas no forman parte de la especificación principal de Markdown, pero la vista previa de QOwnNotes las admite. 
 
 ~~~markdown
-Colons can be used to align columns.
+Se pueden usar virguillas para alinear columnas.
 
-| Tables        | Are           | Cool  |
+| Las        | Tablas           | Molan |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| la col 3 está      | alineada a la derecha | $1600 |
+| la col 2 is      | centrada      |   $12 |
+| las plecas | son elegantes      |    $1 |
 
-There must be at least 3 dashes separating each header cell.
+Debe haber al menos 3 guiones separando cada celda de encabezado.
 
 You can also use inline Markdown.
 
-| Markdown | Less | Pretty |
+| Markdown | Mola | Menos |
 | --- | --- | --- |
-| *Still* | `renders` | **nicely** |
+| *Sin embargo* | `se muestra` | **correctamente** |
 | 1 | 2 | 3 |
 ~~~
 
@@ -270,7 +270,7 @@ Quote break.
 ::: tip
 Puede decirle a QOwnNotes que resalte completamente las citas en bloque o solo el carácter de la cita en bloque en la *Configuración del editor*
 
-Puede usar el [atajo](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> para marcar texto como cita en bloque.
+Puede usar el [atajo](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> para marcar texto como blockquotes.
 :::
 
 ## Regla horizontal

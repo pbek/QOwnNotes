@@ -179,14 +179,6 @@
 <translation>구자라트어</translation>
 </message>
 <message>
-<source>Portugese (Brazilian)</source>
-<translation>포르투갈어 (브라질)</translation>
-</message>
-<message>
-<source>Portugese</source>
-<translation>포르투갈어</translation>
-</message>
-<message>
 <source>Danish</source>
 <translation>덴마크어</translation>
 </message>
@@ -433,6 +425,14 @@
 <message>
 <source>Persian</source>
 <translation>페르시아어</translation>
+</message>
+<message>
+<source>Portuguese (Brazilian)</source>
+<translation type="unfinished">Portuguese (Brazilian)</translation>
+</message>
+<message>
+<source>Portuguese</source>
+<translation type="unfinished">Portuguese</translation>
 </message>
 <message>
 <source>Romanian</source>

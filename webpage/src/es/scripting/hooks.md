@@ -91,14 +91,13 @@ insertingFromMimeDataHook
 ### Llamada y parámetros del método
 ```js
 /**
-  * Esta función se llama cuando se pega html o un archivo multimedia en una nota con `Ctrl + Shift + V`
-  *
-  * @param texto texto del objeto QMimeData
-  * @param html html del objeto QMimeData
-  * @ devuelve la cadena que se debe insertar en lugar del texto del objeto QMimeData
+ * Esta función se llama cuando se pega html o un archivo multimedia en una nota con `Ctrl + Shift + V`
+ *
+ * @param text texto del objeto QMimeData
+ * @param html html del objeto QMimeData
+ * @return la cadena que debería ser insertada en lugar del texto del objeto QMimeData
  */
 function insertingFromMimeDataHook(text, html);
-
 ```
 
 Puede que quiera echar un vistazo al ejemplo [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml), [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) o [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-text-from-5pm-mail.qml).
@@ -109,20 +108,20 @@ handleNoteTextFileNameHook
 ### Llamada y parámetros del método
 ```js
 /**
-  * Esta función se llama cuando una nota se almacena en el disco si
-  * "Permitir que el nombre del archivo de nota sea diferente del título" está habilitado
-  * en la configuración
-  *
-  * Te permite modificar el nombre del archivo de notas
-  * ¡Tenga en cuenta que usted mismo debe preocuparse por los nombres duplicados!
+ * Esta función se llama cuando una nota se almacena en el disco si
+ * "Permitir que el nombre del archivo de nota sea diferente del título" está habilitado
+ * en la configuración
  *
-  * Devuelve una cadena vacía si el nombre del archivo de la nota debe
-  * no modificarse
+ * Le permite modificar el nombre del archivo de notas
+ * ¡Tenga en cuenta que debe preocuparse por los nombres duplicados por su propia cuenta!
+ *
+ * Devuelve una cadena vacía si el nombre del archivo de la nota
+ * no debe modificarse
 *
-  * @param {NoteApi} nota: el objeto de nota de la nota almacenada
-  * @return {string} el nombre del archivo de la nota
-  */
-function handleNoteTextFileNameHook (nota);
+ * @param {NoteApi} note: el objeto de nota de la nota almacenada
+ * @return {string} el nombre del archivo de la nota
+ */
+function handleNoteTextFileNameHook (note);
 ```
 
 Puede que quiera echar un vistazo al ejemplo [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) o [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
@@ -177,19 +176,19 @@ preNoteToMarkdownHtmlHook
 ### Llamada y parámetros del método
 ```js
 /**
-  * Esta función se llama antes de que se genere el html de descuento de una nota
-  *
-  * Te permite modificar lo que se pasa al convertidor markdown to html
-  *
-  * La función se puede usar, por ejemplo, en múltiples scripts para generar código (como LaTeX math o mermaid)
-  * a su representación gráfica para la vista previa
-  *
-  * La nota no se cambiará en este proceso
+ * Esta función se llama antes de que se genere el HTML de Markdown de una nota
  *
- * @param {NoteApi} note - the note object
- * @param {string} markdown - the markdown that is about to being converted to html
- * @param {bool} forExport - true if the html is used for an export, false for the preview
- * @return {string} the modified markdown or an empty string if nothing should be modified
+ * Le permite modificar lo que pasa al convertidor de Markdown a HTML
+ *
+ * La función se puede usar, por ejemplo, en múltiples secuencias de órdenes para rasterizar código (como LaTeX math o mermaid)
+ * a su representación gráfica para la vista previa
+ *
+ * La nota no será modificada en este proceso
+ *
+ * @param {NoteApi} note - el objeto de la nota
+ * @param {string} markdown - el Markdown que está a punto de ser convertido a HTML
+ * @param {bool} forExport - verdadero si el HTML es usado para un export, falso para la vista previa
+ * @return {string} el Markdown modificado o una cadena vacía si nada debe ser modificado
  */
 function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
@@ -202,24 +201,24 @@ noteToMarkdownHtmlHook
 ### Llamada y parámetros del método
 ```js
 /**
-  * Esta función se llama cuando se genera el html de descuento de una nota
-  *
-  * Te permite modificar este html
-  * Esto es, por ejemplo, llamado antes por la vista previa de la nota
-  *
-  * La función se puede usar en múltiples scripts para modificar el html de la vista previa
-  *
- * @param {NoteApi} note - the note object
- * @param {string} html - the html that is about to being rendered
- * @param {bool} forExport - true if the html is used for an export, false for the preview
- * @return {string} the modified html or an empty string if nothing should be modified
+ * Esta función se llama cuando se genera el HTML de Markdown de una nota
+ *
+ * Le permite modificar este HTML
+ * Esto es, por ejemplo, llamado antes por la vista previa de la nota
+ *
+ * La función se puede usar en múltiples secuencias de órdenes para modificar el HTML de la vista previa
+ *
+ * @param {NoteApi} note - el objeto de la nota
+ * @param {string} html - el HTML que está a punto de ser renderizado
+ * @param {bool} forExport - verdadero si el HTML es usado para un export, falso para la vista previa
+ * @return {string} el HTML modificado o una cadena vacía si nada debe ser modificado
  */
 function noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
 Puede que quiera echar un vistazo al ejemplo [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) o [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
 
-Consulte el [HTML compatible. Documentación del subconjunto](http://doc.qt.io/qt-5/richtext-html-subset.html) para obtener una lista de todos los estilos CSS admitidos.
+Por favor consule la documentación del [Subconjunto de HTML compatible ](http://doc.qt.io/qt-5/richtext-html-subset.html) para obtener una lista de todos los estilos de CSS admitidos.
 
 encryptionHook
 --------------
@@ -242,7 +241,7 @@ Puede que quiera echar un vistazo al ejemplo [encryption-keybase.qml](https://gi
 noteTaggingHook
 ---------------
 
-Puede implementar su propio mecanismo de etiquetado de notas, por ejemplo, con texto especial en su nota como `@tag1`, `@tag2`, `@tag3`.
+Puede implementar su propio mecanismo de etiquetado de notas, por ejemplo, con texto especial en su nota, como `@etiqueta1`, `@etiqueta2`, `@etiqueta3`.
 
 ### Llamada y parámetros del método
 ```js
@@ -263,7 +262,7 @@ function noteTaggingHook(note, action, tagName, newTagName);
 
 -   tan pronto como se active un script que implemente la nueva función `noteTaggingHook` el etiquetado de notas será manejado por esa función
 -   las siguientes funciones deberían funcionar a través de la interfaz de usuario de QOwnNotes
-    -   inicialmente importando etiquetas como `@tag` de sus notas y sobrescribiendo su asignación de etiqueta actual
+    -   inicialmente importando etiquetas como `@etiqueta` de sus notas y sobrescribiendo su asignación de etiqueta actual
         -   no perderá su árbol de etiquetas, solo la asignación anterior a las notas
         -   aún puede mover etiquetas a otras etiquetas
         -   si más de una etiqueta tiene el mismo nombre en su árbol de etiquetas, se asignará el primer resultado

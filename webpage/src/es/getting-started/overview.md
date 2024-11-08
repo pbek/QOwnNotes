@@ -139,7 +139,7 @@
 
 <v-divider />
 
-[QOwnNotes](https://www.qownnotes.org/) es el archivo de texto sin formato de **código abierto** (GPL) **aplicación de toma de notas de rebajas** para **GNU / Linux**, **macOS** y **Windows**, que (opcionalmente) funciona junto con la [**aplicación de notas**](https://github.com/nextcloud/notes) de [Nextcloud](https://nextcloud.com/) y [ownCloud](https://owncloud.org/).
+[QOwnNotes](https://www.qownnotes.org/) es la aplicación de **bloc de notas en formato Markdown** en archivos de texto plano de **código abierto** (GPL) para **GNU/Linux**, **macOS** y **Windows**, que (opcionalmente) funciona junto a las [**aplicaciones de notas**](https://github.com/nextcloud/notes) de [Nextcloud](https://nextcloud.com/) y [ownCloud](https://owncloud.org/).
 
 ::: tip
 Únase a nuestro [Telegram Group](https://t.me/QOwnNotes) para discutir, aprender y conectarse con la comunidad de QOwnNotes.
@@ -151,18 +151,18 @@
 - Puede usar sus **archivos de texto o markdown existentes**, sin necesidad de importarlos
 - QOwnNotes está escrito en C ++ y optimizado para **bajo consumo de recursos** (sin CPU y aplicación de Electron que consume mucha memoria)
 - **Importación de Evernote y Joplin**
-- **Compatible** with the [Notes](https://apps.nextcloud.com/apps/notes) application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
+- **Compatible** con la aplicación de [notas](https://apps.nextcloud.com/apps/notes) de **Nextcloud / ownCloud**, las versiones **móviles** y Nextcloud Text
 - Cree **tarjetas de [Nextcloud Deck](https://apps.nextcloud.com/apps/deck)** y enlácelas a sus notas
 - Soporte para **compartir notas** en su servidor de **ownCloud** / **Nextcloud**
 - Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
-- Las versiones **antiguas** de sus notas pueden ser **restauradas** desde su servidor **Nextcloud / ownCloud**
+- Las versiones **antiguas** de sus notas pueden ser **restauradas** desde su servidor de **Nextcloud / ownCloud**
 - **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
 - **External changes** of note files are **watched** (notes or note list are reloaded)
 - Support for **hierarchical note tagging** and **note subfolders**
 - Optional **encryption** of notes, AES-256 is built in, or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml))
 - La **carpeta de notas** se puede **elegir libremente** (se pueden utilizar múltiples carpetas de notas)
 - Es posible **buscar partes de palabras** en las notas. Los resultados de la búsqueda se resaltan en las notas
-- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
+- [**Extensión del navegador**](browser-extension.md) para **agregar notas a partir del texto seleccionado**, **hacer capturas de pantalla** o **administrar sus marcadores**
 - Compatibilidad con [**revisores ortográficos**](../editor/spellchecking.md)
 - **Modo portátil** para llevar consigo QOwnNotes en memorias USB
 - **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application

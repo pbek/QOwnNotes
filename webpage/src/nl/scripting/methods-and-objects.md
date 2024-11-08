@@ -1207,7 +1207,7 @@ property variant settingsVariables: [
 ];
 ```
 
-In addition, you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
+Daarnaast kunt u de `settingsVariables` als volgt overschrijven met een speciale functie `registerSettingsVariables()`:
 
 ### Voorbeeld
 ```js

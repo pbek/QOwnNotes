@@ -179,14 +179,6 @@
 <translation>Guyaratí</translation>
 </message>
 <message>
-<source>Portugese (Brazilian)</source>
-<translation>Portugués (Brasil)</translation>
-</message>
-<message>
-<source>Portugese</source>
-<translation>Portugués</translation>
-</message>
-<message>
 <source>Danish</source>
 <translation>Danés</translation>
 </message>
@@ -433,6 +425,14 @@
 <message>
 <source>Persian</source>
 <translation>Persa</translation>
+</message>
+<message>
+<source>Portuguese (Brazilian)</source>
+<translation>Portugués (Brasil)</translation>
+</message>
+<message>
+<source>Portuguese</source>
+<translation>Portugués</translation>
 </message>
 <message>
 <source>Romanian</source>
@@ -5642,7 +5642,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
-<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
+<translation>Puede usar el gancho de secuencia de órdenes &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; para añadir más backends compatibles con la API de OpenAI.</translation>
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
@@ -7935,7 +7935,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Plain-text file Markdown note-taking with ownCloud integration</source>
-<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
+<translation>Bloc de notas en archivos de texto plano con formato de Markdown e integración con ownCloud</translation>
 </message>
 <message>
 <source>Show subfolders</source>

@@ -179,14 +179,6 @@
 <translation>Gúisearáitis</translation>
 </message>
 <message>
-<source>Portugese (Brazilian)</source>
-<translation>Portaingéilis (Brasaíle)</translation>
-</message>
-<message>
-<source>Portugese</source>
-<translation>Portaingéilis</translation>
-</message>
-<message>
 <source>Danish</source>
 <translation>Danmhairgis</translation>
 </message>
@@ -433,6 +425,14 @@
 <message>
 <source>Persian</source>
 <translation>Peirsis</translation>
+</message>
+<message>
+<source>Portuguese (Brazilian)</source>
+<translation type="unfinished">Portuguese (Brazilian)</translation>
+</message>
+<message>
+<source>Portuguese</source>
+<translation type="unfinished">Portuguese</translation>
 </message>
 <message>
 <source>Romanian</source>

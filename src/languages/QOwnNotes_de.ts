@@ -179,14 +179,6 @@
 <translation>Gujarati</translation>
 </message>
 <message>
-<source>Portugese (Brazilian)</source>
-<translation>Portugisisch (Brasilien)</translation>
-</message>
-<message>
-<source>Portugese</source>
-<translation>Portugisisch</translation>
-</message>
-<message>
 <source>Danish</source>
 <translation>Dänisch</translation>
 </message>
@@ -433,6 +425,14 @@
 <message>
 <source>Persian</source>
 <translation>Persisch</translation>
+</message>
+<message>
+<source>Portuguese (Brazilian)</source>
+<translation type="unfinished">Portuguese (Brazilian)</translation>
+</message>
+<message>
+<source>Portuguese</source>
+<translation type="unfinished">Portuguese</translation>
 </message>
 <message>
 <source>Romanian</source>
@@ -5614,7 +5614,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>API keys</source>
-<translation type="unfinished">API keys</translation>
+<translation>API-Schlüssel</translation>
 </message>
 <message>
 <source>OpenAI API key:</source>
@@ -5655,7 +5655,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>API key</source>
-<translation type="unfinished">API key</translation>
+<translation>API-Schlüssel</translation>
 </message>
 <message>
 <source>Show line numbers</source>
@@ -6550,7 +6550,7 @@ Fehlermeldung: </translation>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation type="unfinished">AI backend: %1</translation>
+<translation>AI-Backend: %1</translation>
 </message>
 <message>
 <source>API base URL</source>

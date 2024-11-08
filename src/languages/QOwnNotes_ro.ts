@@ -176,14 +176,6 @@
 <translation>Gujarati</translation>
 </message>
 <message>
-<source>Portugese (Brazilian)</source>
-<translation>Portugheză (braziliană)</translation>
-</message>
-<message>
-<source>Portugese</source>
-<translation>Portugheză</translation>
-</message>
-<message>
 <source>Danish</source>
 <translation>Daneză</translation>
 </message>
@@ -432,6 +424,14 @@
 <translation>Persană</translation>
 </message>
 <message>
+<source>Portuguese (Brazilian)</source>
+<translation>Portugheză (braziliană)</translation>
+</message>
+<message>
+<source>Portuguese</source>
+<translation>Portugheză</translation>
+</message>
+<message>
 <source>Romanian</source>
 <translation>Română</translation>
 </message>
@@ -623,11 +623,11 @@
 </message>
 <message>
 <source>Invalid XML!</source>
-<translation type="unfinished">Invalid XML!</translation>
+<translation>XML invalid!</translation>
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+<translation>XML invalid găsit în notița &lt;b&gt;%1&lt;/b&gt;! Importul s-ar putea opri în acest punct.</translation>
 </message>
 <message>
 <source>Basic attributes</source>
@@ -726,11 +726,11 @@
 </message>
 <message>
 <source>Pass control keys</source>
-<translation type="unfinished">Pass control keys</translation>
+<translation>Redirecționare taste control</translation>
 </message>
 <message>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished">Pass keys in insert mode</translation>
+<translation>Redirecționare taste in modul de inserție</translation>
 </message>
 <message>
 <source>Start of line</source>

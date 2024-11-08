@@ -179,14 +179,6 @@
 <translation>ගුජරාටි</translation>
 </message>
 <message>
-<source>Portugese (Brazilian)</source>
-<translation>පෘතුගීසි (බ්‍රසීලියානු)</translation>
-</message>
-<message>
-<source>Portugese</source>
-<translation>පෘතුගීසි</translation>
-</message>
-<message>
 <source>Danish</source>
 <translation>ඩෙන්මාර්ක</translation>
 </message>
@@ -433,6 +425,14 @@
 <message>
 <source>Persian</source>
 <translation>පර්සියානු</translation>
+</message>
+<message>
+<source>Portuguese (Brazilian)</source>
+<translation type="unfinished">Portuguese (Brazilian)</translation>
+</message>
+<message>
+<source>Portuguese</source>
+<translation type="unfinished">Portuguese</translation>
 </message>
 <message>
 <source>Romanian</source>

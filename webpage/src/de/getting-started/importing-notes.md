@@ -10,7 +10,7 @@ Bilder, Anhänge, Schlagworte, grundlegende Formatierungen und Metadaten werden 
 
 Es gibt einen Joplin-Importdialog, den Sie über die Menüpunkte `Notiz / Import` erreichen können.
 
-## Various Formats
+## Verschiedene Formate
 
 The command line tool [jimmy](https://github.com/marph91/jimmy) can convert various formats to Markdown (such as [Google Keep](https://marph91.github.io/jimmy/formats/google_keep/), [Synology Note Station](https://marph91.github.io/jimmy/formats/synology_note_station/) and [more](https://marph91.github.io/jimmy/)). To preserve as much metadata as possible, it's recommended to apply [additional tweaks](https://marph91.github.io/jimmy/import_instructions/#qownnotes).
 

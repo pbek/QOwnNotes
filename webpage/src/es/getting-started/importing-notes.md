@@ -8,13 +8,13 @@ Se importarán asimismo las imágenes, los archivos adjuntos, las etiquetas, el 
 
 ## Joplin
 
-There is a Joplin import dialog you can reach in the `Note / Import` menu.
+Dispone de un diálogo de importación de Joplin al que puede acceder mediante el menú `Nota▸Importar`.
 
 ## Formatos variados
 
-The command line tool [jimmy](https://github.com/marph91/jimmy) can convert various formats to Markdown (such as [Google Keep](https://marph91.github.io/jimmy/formats/google_keep/), [Synology Note Station](https://marph91.github.io/jimmy/formats/synology_note_station/) and [more](https://marph91.github.io/jimmy/)). To preserve as much metadata as possible, it's recommended to apply [additional tweaks](https://marph91.github.io/jimmy/import_instructions/#qownnotes).
+The command line tool [jimmy](https://github.com/marph91/jimmy) can convert various formats to Markdown (such as [Google Keep](https://marph91.github.io/jimmy/formats/google_keep/), [Synology Note Station](https://marph91.github.io/jimmy/formats/synology_note_station/) and [more](https://marph91.github.io/jimmy/)). Para preservar tantos metadatos como sea posible, se recomienda aplicar [ajustes adicionales](https://marph91.github.io/jimmy/import_instructions/#qownnotes).
 
-If there are any issues with the conversion, feel free to open a ticket at [GitHub](https://github.com/marph91/jimmy/issues).
+Si existen problemas con la conversión, siéntatse libre de abrir un boleto en [GitHub](https://github.com/marph91/jimmy/issues).
 
 ## Google Keep
 
@@ -29,13 +29,13 @@ If there are any issues with the conversion, feel free to open a ticket at [GitH
 > 
 > Reemplace Keep por la carpeta que contiene las notas en formato JSON. La carpeta out se creará si no existiese.
 
-From <https://gitlab.com/-/snippets/2002921>
+De <https://gitlab.com/-/snippets/2002921>
 
 ## Tomboy
 
 Es posible importar sus notas de Tomboy a través de una secuencia de órdenes denominada [Trombone](https://github.com/samba/trombone).
 
-Para que la secuencia de órdenes funcione, puede necesitar instalar python2. Convertirá sus notas de Tomboy en un archivo `.enex` de Evernote, el cual podrá importar en QOwnNotes.
+Para que la secuencia de órdenes funcione, puede necesitar instalar python2. Esto convertirá sus notas de Tomboy en un archivo `.enex` de Evernote, el cual podrá importar en QOwnNotes.
 
 Si desea efectuar este proceso, primero cerciórese de que ha instalado Python2 y, opcionalmente, `python-is-python2` (puede desinstalarlo posteriormente). Puede que esto sea más sencillo/seguro en un contenedor chroot o Docker si tiene esa opción (esto será documentado aquí posteriormente).
 
@@ -66,4 +66,4 @@ find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex
 
 Si recibe errores relacionados con Unicode en ciertas notas, simplemente vaya quitándolas y vuelva a ejecutar la conversión hasta que se genere el mensaje `Saving...` («Guardando…»). Obtendrá un archivo con el nombre `EXPORT.enex`, el cual podrá importar en QOwnNotes.
 
-During the import into QOwnNotes you might uncheck all of the attributes to import except maybe the creation/modification date, since Tomboy does not have those features.
+Durante la importación a QOwnNotes, puede desmarcar todos los atributos de la importación excepto la fecha de creación / modificación, ya que Tomboy no contiene esas características.
