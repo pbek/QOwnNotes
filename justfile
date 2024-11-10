@@ -160,6 +160,11 @@ fix-settings-ui-file:
 process-trace:
     sudo lurk --attach `procs QOwnNotes | fzf --height 40% --layout reverse | awk '{print $1}'`
 
+# Generate the icons for the whole project based on icons/icon.svg and icons/icon-dark.svg
+[group('icons')]
+generate-icons:
+    cd icons &&./generate-icons.sh
+
 # Format all justfiles
 [group('linter')]
 just-format:

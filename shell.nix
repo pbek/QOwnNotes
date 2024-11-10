@@ -25,6 +25,7 @@
       findutils
       gnused
       ripgrep
+      librsvg
     ];
 
     buildInputs = with pkgs; with qt6; [
